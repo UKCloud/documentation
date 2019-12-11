@@ -3,8 +3,8 @@ title: Getting Started Guide for Email and Collaboration as a Service | UKCloud 
 description: Provides information to get up and running with Email and Collaboration as a Service
 services: email
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: mperry
+lastreviewed: 28/10/2019
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -159,7 +159,7 @@ To access the Zimbra web client:
 
 1. Go to the following location:
 
-    <https://mail.skyscapecs.net/>
+    <https://mail.ukcloud.com/>
 
     ![Zimbra web client sign in page](images/email-zimbra-web-sign-in.png)
 
@@ -201,15 +201,15 @@ A wide variety of IMAP and POP3 clients are available natively, or for download 
 
 The following settings should work with any application that adheres to the IMAP or POP3 protocol standards. IMAP is the preferred protocol and should be used if available.
 
-**Incoming mail server (IMAP):** mail.skyscapecs.net\
+**Incoming mail server (IMAP):** mail.ukcloud.com\
 **Encrypted connection type:** SSL\
 **IMAP/S port:** 993
 
-**Incoming mail server (POP3):** mail.skyscapecs.net\
+**Incoming mail server (POP3):** mail.ukcloud.com\
 **Encrypted connection type:** SSL\
 **POP3/S port:** 995
 
-**Outgoing mail server (SMTP):** mail.skyscapecs.net\
+**Outgoing mail server (SMTP):** mail.ukcloud.com\
 **Encrypted connection type:** SSL/TLS\
 **SMTP/S port:** 465
 
@@ -227,7 +227,7 @@ To configure Outlook:
 
 5. From the **Account Type** list, select **IMAP**.
 
-6. Set both the **Incoming mail server** and **Outgoing mail server (SMTP)** to `mail.skyscapecs.net`.
+6. Set both the **Incoming mail server** and **Outgoing mail server (SMTP)** to `mail.ukcloud.com`.
 
 7. In the **User Name** field, enter your full email address.
 
@@ -270,13 +270,13 @@ To configure Thunderbird:
 5. Configure the connection as follows:
 
     - **Incoming:** IMAP<br>
-        **Server hostname:** mail.skyscapecs.net<br>
+        **Server hostname:** mail.ukcloud.com<br>
         **Port:** 993<br>
         **SSL:** SSL/TLS<br>
         **Authentication:** Normal Password
 
     - **Outgoing:** SMTP<br>
-        **Server hostname:** mail.skyscapecs.net<br>
+        **Server hostname:** mail.ukcloud.com<br>
         **Port:** 465<br>
         **SSL:** SSL/TLS<br>
         **Authentication:** Normal Password
@@ -311,7 +311,7 @@ To install the Zimbra Connector for Outlook:
 
 6. When prompted, enter the following details:
 
-    - **Server Name** is mail.skyscapecs.net
+    - **Server Name** is mail.ukcloud.com
 
     - Select the **Use Secure Connection** checkbox
 

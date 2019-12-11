@@ -83,7 +83,7 @@ For full details of each of these options, see the relevant service scope docume
 
 ### Disaster recovery
 
-Disaster recovery (DR) capabilities are dependent on the chosen cloud technology, for example Journaling Protection on VMware, TrilioVault on OpenStack or Azure Site Recovery for Azure Stack.
+Disaster recovery (DR) capabilities are dependent on the chosen cloud technology, for example Journaling Protection on VMware, TrilioVault on OpenStack or Azure Site Recovery for Azure Stack Hub.
 
 For full details of each of these options, see the relevant service scope document.
 

@@ -20,7 +20,7 @@ toc_mdlink: other-how-use-webhooks.md
 
 ## Overview
 
-The [UKCloud Service Status page]([status](https://status.ukcloud.com)) enables you to subscribe to updates using webhook notifications. To use these notifications, you need to set up an endpoint to receive and process these notifications. For more information about webhooks, see the Atlassian Statuspage documentation: [Webhook Notifications](https://help.statuspage.io/help/webhook-notifications).
+The [UKCloud Service Status page](https://status.ukcloud.com) enables you to subscribe to updates using webhook notifications. To use these notifications, you need to set up an endpoint to receive and process these notifications. For more information about webhooks, see the Atlassian Statuspage documentation: [Webhook Notifications](https://help.statuspage.io/help/webhook-notifications).
 
 This article provides sample PHP code that processes webhook HTTP POST updates from the UKCloud Service Status page in a JSON object.
 

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a virtual machine scale set using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a virtual machine scale set using the UKCloud Azure Stack Hub portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a virtual machine scale set using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="title" content="How to create a virtual machine scale set using the UKCloud Azure Stack Hub portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,15 +91,15 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-virtual-machine-scale-set-using-the-ukcloud-azure-stack-portal">How to create a virtual machine scale set using the UKCloud Azure Stack portal</h1>
+<h1 id="how-to-create-a-virtual-machine-scale-set-using-the-ukcloud-azure-stack-hub-portal">How to create a virtual machine scale set using the UKCloud Azure Stack Hub portal</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Virtual machine scale sets (VMSS) in Azure Stack are a compute resource that you can use to deploy and manage identical VMs. All virtual machine instances in a scale set are configured in the same way and do not require any provisioning beforehand.</p>
+<p>Virtual machine scale sets (VMSS) in Azure Stack Hub are a compute resource that you can use to deploy and manage identical VMs. All virtual machine instances in a scale set are configured in the same way and do not require any provisioning beforehand.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.</p>
+<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.</p>
 <h2 id="creating-a-new-virtual-machine-scale-set">Creating a new virtual machine scale set</h2>
 <ol>
-<li><p>Log in to the Azure Stack portal.</p>
+<li><p>Log in to the Azure Stack Hub portal.</p>
 <p>For more detailed instructions, see the <a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a>.</p>
 </li>
 <li><p>In the favourites panel, select <strong>Create a resource</strong>.</p>
@@ -118,7 +118,7 @@
 <li><p><strong>Operating system disk image</strong> – The operating system disk image for the virtual machines in the scale set.</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>CentOS 7.2 is currently unsupported on Azure Stack. For more information, see <a href="https://docs.microsoft.com/en-gb/azure-stack/operator/azure-stack-release-notes-known-issues-1904#virtual-machine-scale-set">here</a>.
+<p>CentOS 7.2 is currently unsupported on Azure Stack Hub. For more information, see <a href="https://docs.microsoft.com/en-gb/azure-stack/operator/azure-stack-release-notes-known-issues-1904#virtual-machine-scale-set">here</a>.
 <img src="images/azs-browser-scale-set-unsupported-operating-systems.png" alt="CentOS 7.2 is currently unsupported"></p>
 </div>
 </li>
@@ -126,7 +126,7 @@
 </li>
 <li><p><strong>Resource group</strong> - Select an existing resource group, or create a new one by typing a name for your new resource group.</p>
 </li>
-<li><p><strong>Location</strong> - This will be frn00006, which is the Azure Stack region.</p>
+<li><p><strong>Location</strong> - This will be frn00006, which is the Azure Stack Hub region.</p>
 </li>
 <li><p><strong>Username</strong> – Admin username for the virtual machines.</p>
 </li>
@@ -172,7 +172,7 @@
 <h2 id="modifying-the-instance-count-of-your-scale-set">Modifying the instance count of your scale set</h2>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Auto-scaling is currently unsupported on Azure Stack.</p>
+<p>Auto-scaling is currently unsupported on Azure Stack Hub.</p>
 </div>
 <ol>
 <li><p>In the blade for the scale set, select <strong>Scaling</strong> under <em>Settings</em>.</p>

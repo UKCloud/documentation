@@ -4,7 +4,7 @@ description: Frequently asked questions for Cloud Storage
 services: cloud-storage
 author: Dan Baker
 reviewer:
-lastreviewed: 17/07/2018 16:46:31
+lastreviewed: 20/08/2019 16:46:31
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -62,7 +62,10 @@ It is possible to lock Cloud Storage accounts down so that buckets are only acce
 
 ### Which APIs are supported by the platform?
 
-Our Cloud Storage supports an Elastic Cloud Storage S3-compatible API and the native ATMOS RESTful API.
+Our Cloud Storage supports an Elastic Cloud Storage S3-compatible API or the ATMOS RESTful API.
+
+> [!NOTE]
+> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
 
 Documentation and user manuals for [supported API calls](cs-gs.md) are available from the Knowledge Centre.
 
@@ -191,13 +194,13 @@ Ultimately, it is down to you to select which encryption methodology should be u
 
 ### Can systems on different UKCloud platforms communicate with one another?
 
-UKCloud's Cross Domain Security Zone allows you to use the UKCloud-defined and managed UKCloud Guard or a customer-designed and managed Walled Garden to enable communication between platforms.
+UKCloud's Cross Domain Security Zone allows you to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
 For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md) on the Digital Marketplace.
 
 ### Is there a protective monitoring service?
 
-Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in our [*Protective Monitoring FAQs*](../other/other-faq-promon.md).
+Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
 ## Feedback
 

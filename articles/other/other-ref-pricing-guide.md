@@ -67,7 +67,7 @@ For pricing information for UKCloud services, see the following documents on the
 
   - Cloud Optimisation from UKCloud
 
-- [UKCloud 3rd Party Software Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf)
+- [UKCloud 3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide)
 
     This document provides the pricing for 3rd party products, options and other services:
 
@@ -85,7 +85,7 @@ For pricing information for UKCloud services, see the following documents on the
 
   - Portworx from UKCloud
 
-  - XQ Cyber CyberScore from UKCloud
+  - CyberScore from UKCloud
 
 - [UKCloud Skills Framework for the Information Age (SFIA) UKCloud Rate Card and Definitions](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
 

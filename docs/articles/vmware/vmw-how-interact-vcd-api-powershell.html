@@ -8,7 +8,7 @@
     <title>How to interact with the vCloud REST API using PowerShell and Python | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to interact with the vCloud REST API using PowerShell and Python | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -95,31 +95,29 @@
 
 <h2 id="pre-work">Pre Work</h2>
 <h3 id="useful-links">Useful Links</h3>
-<p>You can look up all of the different object types here:</p>
-<p><a href="http://pubs.vmware.com/vcd-55/index.jsp#doc/index.html">http://pubs.vmware.com/vcd-55/index.jsp#doc/index.html</a></p>
-<h3 id="examples-of-all-typed-queries">Examples of all typed queries</h3>
-<p><a href="http://pubs.vmware.com/vcloud-api-1-5/wwhelp/wwhimpl/js/html/wwhelp.htm#href=api_prog/GUID-43DFF30E-391F-42DC-87B3-5923ABCEB366.html">http://pubs.vmware.com/vcloud-api-1-5/wwhelp/wwhimpl/js/html/wwhelp.htm#href=api_prog/GUID-43DFF30E-391F-42DC-87B3-5923ABCEB366.html</a></p>
+<p>You can find the schema reference for version 32.0 of the vCloud API here:</p>
+<p><a href="https://code.vmware.com/apis/553/vcloud">https://code.vmware.com/apis/553/vcloud</a></p>
 <h3 id="powershell">PowerShell</h3>
-<p>With PowerShell, you will need v3 or higher. To check this, open PowerShell and enter <code>$psversiontable</code> at the prompt. You should see something like the following:</p>
+<p>With PowerShell, you'll need v3 or higher. To check this, open PowerShell and enter <code>$psversiontable</code> at the prompt. You should see something like the following:</p>
 <p><img src="images/powershellandpython1.png" alt="PowerShell version details"></p>
-<p>If <code>PSVersion</code> is less than 3.0, you'll need to upgrade. The v4 package is available here: <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=40855">https://www.microsoft.com/en-gb/download/details.aspx?id=40855</a></p>
+<p>If <code>PSVersion</code> is less than 3.0, you'll need to upgrade. The v4 package is available here: <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=40855">https://www.microsoft.com/en-gb/download/details.aspx?id=40855</a>.</p>
 <h3 id="python">Python</h3>
-<p>You'll need to install Python 2.7: <a href="https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi">https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi</a></p>
-<p>You'll then need to install the package: <a href="http://www.python-requests.org/en/latest/user/install/#install">http://www.python-requests.org/en/latest/user/install/#install</a></p>
+<p>You'll need to install Python 2.7: <a href="https://www.python.org/downloads/release/python-2716/">https://www.python.org/downloads/release/python-2716/</a></p>
+<p>You'll then need to install the package: <a href="https://pypi.org/project/requests/">https://pypi.org/project/requests/</a></p>
 <h3 id="getting-your-credentials">Getting your credentials</h3>
-<p>The first thing you will need to do is login to the portal and get your API credentials:</p>
+<p>The first thing you'll need to do is log in to the Portal and get your API credentials:</p>
 <p><img src="images/api_menu.png" alt="Link to API credentials in the Portal"></p>
-<p>Select API from the menu on the top right, you will then get all of the credentials for each of the vCloud Orgs that you have access to. Note down the username field for the one you are going to interact with.</p>
+<p>Select API from the menu on the top right, you'll then get all of the credentials for each of the vCloud Orgs that you have access to. Note down the username field for the one you are going to interact with.</p>
 <p>For more detailed instructions, see <a href="vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a>.</p>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="powershell-1">PowerShell</h3>
 <ol>
-<li><p>Copy and paste the following script into your PowerShell session:</p>
-<pre><code>$Global:SkyscapeURL = &quot;https://api.vcd.portal.skyscapecloud.com/api&quot;
+<li><p>Copy and paste the following script into a .psm1 file:</p>
+<pre><code class="lang-none">$Global:SkyscapeURL = &quot;https://&lt;API URL from Portal&gt;/api&quot;
 
 $Global:Authorization = &quot;&quot;
 
-$Global:Accept = &quot;application/*+xml;version=5.1&quot;
+$Global:Accept = &quot;application/*+xml;version=32.0&quot;
 
 $Global:xvCloudAuthorization = &quot;&quot;
 
@@ -155,17 +153,18 @@ Function Get-vCloudRequest($EndPoint)
 
 }
 </code></pre>
-<p>You will now have two new functions available to you; <code>New-vCloudLogin</code> and <code>Get-vCloudRequest</code>.</p>
+<p>You'll now have two new functions available to you; <code>New-vCloudLogin</code> and <code>Get-vCloudRequest</code>.</p>
+</li>
+<li><p>In a new PowerShell window, run the following command to import the file:</p>
+<p><code>Import-Module &lt;Path to .psm1 file&gt;</code></p>
 </li>
 <li><p>To log in enter:</p>
-<pre><code>New-vCloudLogin –Username “myuser@org” –Password “yourportalpassword”
-</code></pre>
+<p><code>New-vCloudLogin –Username &quot;myuser@org&quot; –Password &quot;yourportalpassword&quot;</code></p>
 </li>
-<li><p>Use the username that you copied from the Portal earlier and your Portal password. This will login to vCloud and add your authorisation header to a global variable for use in the next function:</p>
-<pre><code>$VMS = Get-vCloudRequest –EndPoint “query?type=vm”
-</code></pre>
+<li><p>Use the username that you copied from the Portal earlier and your Portal password. This will log in to vCloud and add your authorisation header to a global variable for use in the next function:</p>
+<p><code>$VMS = Get-vCloudRequest –EndPoint &quot;query?type=vm&quot;</code></p>
 </li>
-<li><p>This will get the first 25 VMs in your Org and store them in <code>$VMS</code>, which you can inspect. Just enter <code>$vms</code> and see what you get.</p>
+<li><p>This will get the first 25 VMs in your Org and store them in <code>$VMS</code> as an XML output, which you can inspect or export as you want.</p>
 </li>
 </ol>
 <h4 id="other-examples">Other examples</h4>
@@ -176,55 +175,55 @@ Function Get-vCloudRequest($EndPoint)
 <h3 id="python-1">Python</h3>
 <ol>
 <li><p>Save the following into a file, for example: <code>c:\vcloud_demo.py</code>:</p>
-<pre><code>import base64
+<pre><code class="lang-none">import base64
 
 import requests
 
-SkyscapeURL = &quot;https://api.vcd.portal.skyscapecloud.com/api&quot;
+SkyscapeURL = &quot;https://&lt;API URL from portal&gt;/api&quot;
 
 Authorization = &quot;&quot;
 
-Accept = &quot;application/*+xml;version=5.1&quot;
+Accept = &quot;application/*+xml;version=32.0&quot;
 
 xvCloudAuthorization = &quot;&quot;
 
 def New_vCloudLogin(username,password):
 
-    global Authorization
+   global Authorization
 
-    global Accept
+   global Accept
 
-    global SkyscapeURL
+   global SkyscapeURL
 
-    global xvCloudAuthorization
+   global xvCloudAuthorization
 
-    Pair = &quot;{username}:{password}&quot;.format(username=username,password=password)
+   Pair = &quot;{username}:{password}&quot;.format(username=username,password=password)
 
-    EncodedPair = base64.b64encode(Pair)
+   EncodedPair = base64.b64encode(Pair)
 
-    Authorization = &quot;Basic %s&quot; % str(EncodedPair)
+   Authorization = &quot;Basic %s&quot; % str(EncodedPair)
 
-    apiheaders = {&quot;Authorization&quot; : Authorization, &quot;Accept&quot; : Accept}  
+   apiheaders = {&quot;Authorization&quot; : Authorization, &quot;Accept&quot; : Accept}  
 
-    res = requests.post(SkyscapeURL + '/sessions',headers=apiheaders, verify=False)
+   res = requests.post(SkyscapeURL + '/sessions',headers=apiheaders, verify=False)
 
-    xvCloudAuthorization = res.headers['x-vcloud-authorization']
+   xvCloudAuthorization = res.headers['x-vcloud-authorization']
 
 def Get_vCloudRequest(endpoint):
 
-    global Authorization
+   global Authorization
 
-    global Accept
+   global Accept
 
-    global SkyscapeURL
+   global SkyscapeURL
 
-    global xvCloudAuthorization
+   global xvCloudAuthorization
 
-    apiheaders = {&quot;Accept&quot; : Accept, &quot;x-vcloud-authorization&quot; : xvCloudAuthorization}  
+   apiheaders = {&quot;Accept&quot; : Accept, &quot;x-vcloud-authorization&quot; : xvCloudAuthorization}  
 
-    res = requests.get(SkyscapeURL + '/' + endpoint,headers=apiheaders, verify=False)
+   res = requests.get(SkyscapeURL + '/' + endpoint,headers=apiheaders, verify=False)
 
-    return (res.content)
+   return (res.content)
 
 # login to vcloud
 
@@ -240,9 +239,8 @@ print data
 <li><p>Now, click <strong>Start</strong> and enter <code>cmd</code>. This will bring up a command prompt.</p>
 </li>
 <li><p>You can run this script by entering:</p>
-<pre><code>C:\python27\python.exe c:\vcloud_demo.py
-</code></pre>
-<p>The above example will log you into vCloud and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same params as the examples in the Powershell script above.</p>
+<p><code>C:\python27\python.exe c:\vcloud_demo.py</code></p>
+<p>The above example will log you into vCloud and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same parameters as the examples in the PowerShell script above.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>

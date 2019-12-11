@@ -3,8 +3,8 @@ title: How to use the VMware OVF Tool | UKCloud Ltd
 description: Describes how to use the VMware OVF Tool to assist in the distribution of virtual machines and vApps
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: dcoombesukc
+lastreviewed: 18/09/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -31,7 +31,7 @@ The VMware OVF Tool is a conversion program freely downloadable from VMware that
 
 You can download the OVF Tool via the following link:
 
-<https://my.vmware.com/group/vmware/details?downloadGroup=OVFTOOL420&productId=491>
+<https://my.vmware.com/group/vmware/get-download?downloadGroup=OVFTOOL430UPDATE3>
 
 You must have a VMware account to download the tool. You can download the OVF Tool for Windows 32-bit and 64-bit, Linux 32-bit and 64-bit, or Mac OS X.
 
@@ -68,7 +68,9 @@ To import a `.vmx` file:
 
 1. In your UKCloud environment, create a catalog to contain the vApp template.
 
-   ![catalogue](images/ovf-image-1.png)
+   ![Catalog for OVF Tool](images/vmw-vcd-ovf-catalog.png)
+
+   For detailed instructions, see [*How to create a catalog*](vmw-how-create-catalog.md).
 
 2. Make sure you are in the correct directory, that is, the directory containing the file you want to import.
 

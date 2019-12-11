@@ -12,5 +12,9 @@
     href: man-sd-network.md
 - name: Managed Monitoring
   items:
+  - name: Managed Monitoring from UKCloud FAQs
+    href: man-monitoring-faq.md
   - name: Managed Monitoring from UKCloud Service Definition
     href: man-sd-monitoring.md
+  - name: Managed Monitoring from UKCloud Service Scope
+    href: man-monitoring-sco.md

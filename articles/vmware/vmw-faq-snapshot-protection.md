@@ -3,8 +3,8 @@ title: Snapshot Protection FAQs | UKCloud Ltd
 description: Frequently asked questions for Snapshot Protection
 services: vmware
 author: Matt Warner
-reviewer:
-lastreviewed: 25/07/2018 15:32:54
+reviewer: George Smith
+lastreviewed: 23/10/2019 16:00
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -85,7 +85,7 @@ The time it takes to add snapshot protection to a VM varies depending on how man
 
 When the process has completed, the button changes back to green and will indicate the snapshot policy you chose for the VM (**14‑day** or **28‑day**). If the process fails, the button changes to a red **Failed** button. In this situation, contact the UKCloud support team to resolve the issue.
 
-The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00am, but typically within minutes of the close of the backup window.
+The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.
 
 ### Can I change the snapshot policy for my VM at any time?
 
@@ -191,7 +191,7 @@ The UKCloud platform automates the deletion of backups as they reach their reten
 
 ### How and when am I notified of snapshot backup failures?
 
-Backup information, including failures, is updated daily on the UKCloud platform by 10:00am, but typically within minutes of the close of the backup window.
+Backup information, including failures, is updated daily on the UKCloud platform by 10:00, but typically within minutes of the close of the backup window.
 
 For the steps required to access the status of a VM's snapshot backup, see [*How to manage Snapshot Protection for your VMs*](vmw-how-manage-snapshot-protection.md).
 
@@ -219,11 +219,11 @@ UKCloud's proactive corrective measures depend on the nature of the snapshot bac
 
 - Should the failure persist, we may suggest a customer review to try to resolve the issue.
 
-    If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Technical Account Manager or solution architect to work through alternative protection options.
+    If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Service Delivery Manager or solution architect to work through alternative protection options.
 
 ### How and when are reruns scheduled?
 
-Backups are attempted during the hours of 2000 and 0800.
+Backups are attempted during the hours of 20:00 and 08:00.
 
 A backup will not be reattempted in the same backup window, but will be included as normal in the next window.
 

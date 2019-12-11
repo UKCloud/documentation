@@ -3,8 +3,8 @@ title: Availability of Virtual Hardware version 11 | UKCloud Ltd
 description: UKCloud has upgraded UKCloud for VMware to expose Virtual Hardware version 11
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: lthangarajah
+lastreviewed: 11 20/08/2019
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -57,7 +57,7 @@ Prior to upgrading the Virtual Hardware version, you should note the following:
 
 2. In the *Virtual Datacenters* dashboard, select the virtual data centre (VDC) that contains the VM you want to upgrade.
 
-3. In the card for the VM that you want to upgrade, from the **More** menu, select **Upgrade Virtual Hardware Version**.
+3. In the card for the VM that you want to upgrade, from the **Actions** menu, select **Upgrade Virtual Hardware Version**.
 
 4. Click **OK** to complete the upgrade.
 

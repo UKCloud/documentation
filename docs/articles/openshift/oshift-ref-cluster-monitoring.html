@@ -8,7 +8,7 @@
     <title>OpenShift integrated cluster monitoring | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="OpenShift integrated cluster monitoring | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,7 +98,7 @@
 <h3 id="resource">Resource</h3>
 <p>Cluster monitoring is deployed with persistent storage, meaning that the metrics are stored on a persistent volume and can survive a pod being restarted or recreated. By default, each Alertmanager instance is allocated 2GiB and each Prometheus instance is allocated 50GiB. In a standard cluster with two infrastructure nodes this will mean 106GiB of storage will be used for cluster monitoring. If the persistent volumes fill up, or you notice them getting close to being full, you can expand the persistent volumes by following the steps in <a href="https://docs.ukcloud.com/articles/openshift/oshift-how-expand-persistent-vols.html"><em>How to expand OpenShift persistent volumes</em></a> or by raising a Service Request in the UKCloud Portal.</p>
 <h3 id="configuration">Configuration</h3>
-<p>If you'd like to change the behaviour of Alertmanager, for example, have alerts notify somebody by email, you'll need to raise a Service Request with us via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. In the request let us know the cluster and the Alertmanager configuration you'd like to be used and we can then reconfigure the cluster-monitoring using the OpenShift ansible playbooks used to deploy it. If you attempt to edit the configMaps or secrets directly to insert this configuration, the cluster-monitoring operator will detect these changes and restore default values. You can use the following documentation page as a reference when creating Alertmanger config: <a href="https://prometheus.io/docs/alerting/configuration/">https://prometheus.io/docs/alerting/configuration/</a>.</p>
+<p>If you'd like to change the behaviour of Alertmanager, for example, have alerts notify somebody by email, you'll need to raise a Service Request with us via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. In the request let us know the cluster and the Alertmanager configuration you'd like to be used and we can then reconfigure the cluster-monitoring using the OpenShift ansible playbooks used to deploy it. If you attempt to edit the configMaps or secrets directly to insert this configuration, the cluster-monitoring operator will detect these changes and restore default values. You can use the following documentation page as a reference when creating Alertmanager config: <a href="https://prometheus.io/docs/alerting/configuration/">https://prometheus.io/docs/alerting/configuration/</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The OCP 3.11 delivery of the Prometheus Alertmanager only includes a default template. Configurations requiring a specific template should be avoided as they may lead to failures to reconfigure the cluster-monitoring.</p>

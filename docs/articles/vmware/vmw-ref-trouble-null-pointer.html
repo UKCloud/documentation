@@ -8,7 +8,7 @@
     <title>Fixing your advanced gateway if you encounter NullPointerException error | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Fixing your advanced gateway if you encounter NullPointerException error | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -97,9 +97,10 @@
 <p>To complete the steps in this article, you must have access to vCloud Director.</p>
 <p>To fix your edge to enable viewing of its properties:</p>
 <ol>
-<li><p>Right-click your edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+<li><p>In vCloud Director, access the edge gateway settings for the edge with the broken VPN.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a>.</p>
 </li>
-<li><p>In the new tenant portal, select the <strong>Routing</strong> tab.</p>
+<li><p>Select the <strong>Routing</strong> tab.</p>
 </li>
 <li><p>Select <strong>Routing Configuration</strong>.</p>
 </li>
@@ -107,7 +108,7 @@
 </li>
 <li><p>When you're done, click <strong>Save Changes</strong> at the top of the page.</p>
 </li>
-<li><p>Close the tenant portal and attempt to view the properties of the edge gateway in vCloud.</p>
+<li><p>Close vCloud Director and attempt to view the properties of the edge gateway in vCloud.</p>
 <p>You should no longer get the <code>NullPointerException</code> error and the properties should be displayed.</p>
 </li>
 </ol>

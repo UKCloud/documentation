@@ -32,13 +32,13 @@ In the meantime, the lack of support for the UK keyboard should not cause issues
 
 1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
 
-2. In the left navigation panel, click **Virtual Machines**.
+2. In the left navigation panel, select **Virtual Machines**.
 
-    ![Virtual Machines menu option](images/vmw-vcd91-tab-vms.png)
+    ![Virtual Machines menu option](images/vmw-vcd-tab-vms.png)
 
-3. In the card for your VM, select **More**, then **Download VMRC**.
+3. In the card for your VM, select **Actions**, then **Download VMRC**.
 
-    ![Download VMRC menu option for VM](images/vmw-vcd91-mnu-download-vmrc.png)
+    ![Download VMRC menu option for VM](images/vmw-vcd-mnu-download-vmrc.png)
 
 4. Click the **Download** button for the version of the console you want to download (Windows, Mac or Linux).
 
@@ -53,7 +53,7 @@ In the meantime, the lack of support for the UK keyboard should not cause issues
 
 7. In the card for your VM, select **More**, then **Launch VM Remote Console**.
 
-    ![Launch VM Remote Console menu option for VM](images/vmw-vcd91-mnu-launch-vmrc.png)
+    ![Launch VM Remote Console menu option for VM](images/vmw-vcd-mnu-launch-vmrc.png)
 
     The VM Remote Console works correctly with a UK keyboard.
 

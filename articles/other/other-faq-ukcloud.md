@@ -59,27 +59,25 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 [Email and Collaboration as a Service FAQs](../email/email-faq.md)
 
-## Private Cloud for Compute
+## Private Cloud
 
-[Private Cloud for Compute FAQs](../private-compute/prc-faq.md)
+[Private Cloud FAQs](../private-cloud/prc-faq.md)
 
 ## Private Cloud for Storage
 
-[Private Cloud for Storage FAQs](../private-storage/prs-faq.md)
+[Private Cloud for Storage FAQs](../private-cloud/prc-faq-storage.md)
 
 ## Connectivity
 
 [General connectivity FAQs](../connectivity/conn-faq.md)
 
-[Application-tuned DDoS protection FAQs](../connectivity/conn-faq-app-ddos.md)
+[SiteProtect Advanced DDoS Mitigation FAQs](../connectivity/conn-faq-app-ddos.md)
 
 [Bandwidth monitoring FAQs](../connectivity/conn-faq-bandwidth-monitoring.md)
 
 [DDoS mitigation service FAQs](../connectivity/conn-faq-ddos.md)
 
 [Emergency Services Network FAQs](../connectivity/conn-faq-esn.md)
-
-[Global load balancing FAQs](../connectivity/conn-faq-glb.md)
 
 [HSCN connectivity FAQs](../connectivity/conn-faq-hscn.md)
 
@@ -93,6 +91,8 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 [PSN for Policing and enhanced regime FAQs](../connectivity/conn-faq-psn-police.md)
 
+[UltraDNS FAQs](../connectivity/conn-faq-glb.md)
+
 ## Other
 
 [G-Cloud 11 enhancements and additions FAQs](other-faq-g11.md)
@@ -100,8 +100,6 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 [Enterprise & Private Sector FAQs](other-faq-eps.md)
 
 [MISO rebate FAQs](other-faq-miso-rebate.md)
-
-[Protective Monitoring FAQs](other-faq-promon.md)
 
 [Service Level Agreement FAQs](other-faq-sla.md)
 

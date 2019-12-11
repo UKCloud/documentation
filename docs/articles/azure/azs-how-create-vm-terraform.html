@@ -8,7 +8,7 @@
     <title>How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-virtual-machine-using-terraform-on-azure-stack">How to create a virtual machine using Terraform on Azure Stack</h1>
+<h1 id="how-to-create-a-virtual-machine-using-terraform-on-azure-stack-hub">How to create a virtual machine using Terraform on Azure Stack Hub</h1>
 
 <p>This document explains how to create a VM using the <strong>azurestack</strong> Terraform provider with Service Principal Name authentication.</p>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -102,27 +102,27 @@
 <li><a href="https://www.terraform.io/downloads.html">Download Terraform</a></li>
 </ul>
 </li>
-<li><p>An active Azure Stack <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)</p>
+<li><p>An active Azure Stack Hub <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack Hub)</p>
 </li>
 <li><p>Service Principal Name</p>
 <ul>
-<li><a href="azs-how-create-spn-powershell.html">How to create Service Principal Name for Azure Stack in Powershell</a></li>
+<li><a href="azs-how-create-spn-powershell.html">How to create Service Principal Name for Azure Stack Hub in Powershell</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="official-documentation">Official Documentation</h2>
 <ul>
-<li><p><a href="https://www.terraform.io/docs/providers/azurestack">Azure Stack Provider Website</a></p>
+<li><p><a href="https://www.terraform.io/docs/providers/azurestack">Azure Stack Hub Provider Website</a></p>
 </li>
-<li><p><a href="https://github.com/terraform-providers/terraform-provider-azurestack">Azure Stack Provider GitHub Repository</a></p>
+<li><p><a href="https://github.com/terraform-providers/terraform-provider-azurestack">Azure Stack Hub Provider GitHub Repository</a></p>
 </li>
 </ul>
-<h1 id="how-to-use-terraform-with-azure-stack">How to use Terraform with Azure Stack</h1>
+<h1 id="how-to-use-terraform-with-azure-stack-hub">How to use Terraform with Azure Stack Hub</h1>
 <h2 id="authentication">Authentication</h2>
 <p>In order to authenticate with Terraform you will need to have a valid Service Principal Name (SPN) - how to create one is described in the <a href="#prerequisites">Prerequisites</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You only need your Service Principal Name (SPN) to be assigned to your Azure Stack subscription, despite what official Terraform documentation says.</p>
+<p>You only need your Service Principal Name (SPN) to be assigned to your Azure Stack Hub subscription, despite what official Terraform documentation says.</p>
 </div>
 <p>The process of authentication can be handled in one of two ways, either as <strong>Environment Variables</strong> or in the <strong>Provider Block</strong>.</p>
 <p><a href="#example-of-how-variables-are-used-in-terraform">Environment Variables Option</a> - you can create your <strong>Terraform plan</strong> by putting only the plan itself into <code>main.tf</code> and then keeping <code>variables.tf</code> separate. You have to declare the actual values in the <code>terraform.tfvars</code> file. This is the file that you will need to populate with your actual credential details.</p>
@@ -144,7 +144,7 @@ variable &quot;tenant_id&quot; {}
 }
 </code></pre>
 <h4 id="terraformtfvars"><code>terraform.tfvars</code></h4>
-<pre><code class="lang-hcl"># Configure the Azure Stack Provider
+<pre><code class="lang-hcl"># Configure the Azure Stack Hub Provider
 arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
 subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
 client_id       = &quot;{applicationId}&quot;
@@ -153,14 +153,14 @@ tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
 </code></pre>
 <h4 id="argument-reference">Argument reference</h4>
 <ul>
-<li><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be <strong><code>https://management.{region}.{domain}</code></strong>.</li>
+<li><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for your Azure Stack Hub instance. This will be <strong><code>https://management.{region}.{domain}</code></strong>.</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
 <p>For UKCloud, the arm_endpoint is <strong><code>https://management.frn00006.azure.ukcloud.com</code></strong>.</p>
 </div>
 <ul>
-<li><p><code>subscription_id</code> - The ID of your Azure Stack Subscription.</p>
+<li><p><code>subscription_id</code> - The ID of your Azure Stack Hub Subscription.</p>
 </li>
 <li><p><code>client_id</code> - The Application GUID that you configured your Service Principal Name (SPN) to use.</p>
 </li>
@@ -177,7 +177,7 @@ tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
 <p><a href="#example-of-provider-block">Provider Block Option</a> - you can create your <strong>Terraform plan</strong> by putting everything in one <code>main.tf</code> file, which then contains your Provider and variables settings explicitly in said plan.</p>
 <h3 id="example-of-provider-block">Example of Provider Block:</h3>
 <h4 id="maintf-1"><code>main.tf</code></h4>
-<pre><code class="lang-hcl"># Configure the Azure Stack Provider
+<pre><code class="lang-hcl"># Configure the Azure Stack Hub Provider
 provider &quot;azurestack&quot; {
  arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
  subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
@@ -203,12 +203,12 @@ Rest of the file (...)
 <tbody>
 <tr>
 <td>arm_endpoint</td>
-<td>The Azure Resource Manager API endpoint for your Azure Stack instance. This will be https://management.{region}.{domain}.</td>
+<td>The Azure Resource Manager API endpoint for your Azure Stack Hub instance. This will be https://management.{region}.{domain}.</td>
 <td><form oninput="result.value=arm_endpoint.value" id="arm_endpoint" style="display:inline;"><input type="text" id="arm_endpoint" name="arm_endpoint" style="display:inline;" placeholder="https://management.{region}.{domain}"></form></td>
 </tr>
 <tr>
 <td>subscription_id</td>
-<td>The ID of your Azure Stack subscription.</td>
+<td>The ID of your Azure Stack Hub subscription.</td>
 <td><form oninput="result.value=subscription_id.value" id="subscription_id" style="display:inline;"><input type="text" id="subscription_id" name="subscription_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"></form></td>
 </tr>
 <tr>
@@ -223,7 +223,7 @@ Rest of the file (...)
 </tr>
 <tr>
 <td>rg_name</td>
-<td>The name of the resource group you wish to create</td>
+<td>The name of the resource group you want to create</td>
 <td><form oninput="result.value=rg_name.value" id="rg_name" style="display:inline;"><input type="text" id="rg_name" name="rg_name" style="display:inline;" placeholder="MyResourceGroup"></form></td>
 </tr>
 <tr>
@@ -232,23 +232,28 @@ Rest of the file (...)
 <td><form oninput="result.value=tenant_id.value" id="tenant_id" style="display:inline;"><input type="text" id="tenant_id" name="tenant_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"></form></td>
 </tr>
 <tr>
+<td>location</td>
+<td>The name of the Azure/Azure Stack Hub region.</td>
+<td><form oninput="result.value=location.value" id="location" style="display:inline;"><input type="text" id="location" name="location" style="display:inline;" placeholder="frn00006"></form></td>
+</tr>
+<tr>
 <td>vm_count</td>
-<td>The number of VMs you wish to create</td>
+<td>The number of VMs you want to create</td>
 <td><form oninput="result.value=vm_count.value" id="vm_count" style="display:inline;"><input type="text" id="vm_count" name="vm_count" style="display:inline;" placeholder="1"></form></td>
 </tr>
 <tr>
 <td>vm_username</td>
-<td>The username you wish to assign to the VM</td>
+<td>The username you want to assign to the VM</td>
 <td><form oninput="result.value=vm_username.value" id="vm_username" style="display:inline;"><input type="text" id="vm_username" name="vm_username" style="display:inline;" placeholder="user"></form></td>
 </tr>
 <tr>
 <td>vm_password</td>
-<td>The password you wish to assign to the VM</td>
+<td>The password you want to assign to the VM</td>
 <td><form oninput="result.value=vm_password.value" id="vm_password" style="display:inline;"><input type="text" id="vm_password" name="vm_password" style="display:inline;" placeholder="Password123!"></form></td>
 </tr>
 <tr>
 <td>vm_image</td>
-<td>The operating system you wish to use</td>
+<td>The operating system you want to use</td>
 <td><form onchange="result.value=vm_image.value" id="vm_image" style="display: inline;"><select name="vm_image" id="vm_image" style="display: inline;"><option value="OpenLogic/CentOS/6.10/latest">CentOS-based 6.10<option value="OpenLogic/CentOS/6.9/latest">CentOS-based 6.9<option value="OpenLogic/CentOS/7.3/latest">CentOS-based 7.3<option value="OpenLogic/CentOS/7.5/latest" selected="">CentOS-based 7.5<option value="Canonical/UbuntuServer/14.04.5-LTS/latest">Ubuntu Server 14.04 LTS<option value="Canonical/UbuntuServer/16.04-LTS/latest">Ubuntu Server 16.04 LTS<option value="Canonical/UbuntuServer/18.04-LTS/latest">Ubuntu Server 18.04 LTS<option value="MicrosoftWindowsServer/WindowsServerSemiAnnual/Datacenter-Core-1709-with-Containers-smalldisk/latest">Windows Server, version 1709 with Containers - Pay as you use<option value="MicrosoftSQLServer/SQL2016SP1-WS2016/SQLDEV/latest">Free License: SQL Server 2016 SP1 Developer on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/SQLDEV/latest">Free License: SQL Server 2016 SP2 Developer on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/Express/latest">Free License: SQL Server 2016 SP2 Express on Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/SQLDEV/latest">Free SQL Server License: SQL Server 2017 Developer on SLES 12 SP2<option value="MicrosoftSQLServer/SQL2017-WS2016/SQLDEV/latest">Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/Express/latest">Free SQL Server License: SQL Server 2017 Express on SLES 12 SP2<option value="MicrosoftSQLServer/SQL2017-WS2016/Express/latest">Free SQL Server License: SQL Server 2017 Express on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP1-WS2016/Enterprise/latest">SQL Server 2016 SP1 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP1-WS2016/Standard/latest">SQL Server 2016 SP1 Standard on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/Enterprise/latest">SQL Server 2016 SP2 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/Standard/latest">SQL Server 2016 SP2 Standard on Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/Enterprise/latest">SQL Server 2017 Enterprise on SLES 12 SP2<option value="MicrosoftSQLServer/SQL2017-WS2016/Enterprise/latest">SQL Server 2017 Enterprise Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/Standard/latest">SQL Server 2017 Standard on SLES 12 SP2<option value="/MicrosoftSQLServer/SQL2017-WS2016/Standard/latest">SQL Server 2017 Standard on Windows Server 2016<option value="MicrosoftWindowsServer/WindowsServer/2012-Datacenter/latest">Windows Server 2012 Datacenter - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2012-R2-Datacenter/latest">Windows Server 2012 R2 Datacenter - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2016-Datacenter/latest">Windows Server 2016 Datacenter - Pay-as-you-use<option value="MicrosoftWindowsServer/WindowsServer/2016-Datacenter-Server-Core/latest">Windows Server 2016 Datacenter - Server Core - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2016-Datacenter-with-Containers/latest">Windows Server 2016 Datacenter - with Containers - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter/latest">Windows Server 2019 Datacenter<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter-with-Containers/latest">Windows Server 2019 Datacenter with Containers<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter-Core/latest">Windows Server 2019 Datacenter Core<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter-Core-with-Containers/latest">Windows Server 2019 Datacenter Core with Containers</select></form></td>
 </tr>
 <tr>
@@ -266,10 +271,10 @@ Rest of the file (...)
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Windows VM</a>
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Linux VM</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Linux VM</a>
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Windows VM</a>
 </li>
 </ul>
 <section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
@@ -282,27 +287,27 @@ Rest of the file (...)
 <h5>Important</h5>
 <p>This example is only the <code>main.tf</code> file. You will still need the <code>variables.tf</code> and <code>terraform.tfvars</code> files as shown in the following section.</p>
 </div>
-<h3 id="defining-the-required-azure-stack-resources-in-the-maintf-file">Defining the required Azure Stack resources in the <code>main.tf</code> file</h3>
+<h3 id="defining-the-required-azure-stack-hub-resources-in-the-maintf-file">Defining the required Azure Stack Hub resources in the <code>main.tf</code> file</h3>
 <div class="TIP">
 <h5>Tip</h5>
 <p>Resource attributes such as &quot;name&quot; can be hardcoded as opposed to using variables from the external files for the declaration.</p>
 </div>
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
 <ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" data-tab="tabid-a" data-condition="tabid-1" tabindex="0" aria-selected="true">Windows VM with Managed Disks</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Windows VM with Unmanaged Disks</a>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" data-tab="tabid-a" data-condition="tabid-2" tabindex="-1">Windows VM with Managed Disks</a>
 </li>
 <li role="presentation" aria-hidden="true" hidden="hidden">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" data-tab="tabid-a" data-condition="tabid-2" tabindex="-1">Linux VM with Managed Disks</a>
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Windows VM with Unmanaged Disks</a>
 </li>
-<li role="presentation" aria-hidden="true" hidden="hidden">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Linux VM with Unmanaged Disks</a>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" data-tab="tabid-a" data-condition="tabid-1" tabindex="0" aria-selected="true">Linux VM with Managed Disks</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Linux VM with Unmanaged Disks</a>
 </li>
 </ul>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
@@ -315,7 +320,7 @@ provider "azurestack" {
 # Create a resource group
 resource "azurestack_resource_group" "rg" {
   name     = "${var.rg_name}"
-  location = "${element(split(".", var.arm_endpoint), 1)}"
+  location = "${var.location}"
 
   tags = {
     environment = "${var.rg_tag}"
@@ -431,7 +436,7 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 </section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
@@ -444,7 +449,7 @@ provider "azurestack" {
 # Create a resource group
 resource "azurestack_resource_group" "rg" {
   name     = "${var.rg_name}"
-  location = "${element(split(".", var.arm_endpoint), 1)}"
+  location = "${var.location}"
 
   tags = {
     environment = "${var.rg_tag}"
@@ -579,7 +584,7 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 </section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
 <pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
@@ -592,7 +597,7 @@ provider "azurestack" {
 # Create a resource group
 resource "azurestack_resource_group" "rg" {
   name     = "${var.rg_name}"
-  location = "${element(split(".", var.arm_endpoint), 1)}"
+  location = "${var.location}"
 
   tags = {
     environment = "${var.rg_tag}"
@@ -709,7 +714,7 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 </section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
 <pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
@@ -722,7 +727,7 @@ provider "azurestack" {
 # Create a resource group
 resource "azurestack_resource_group" "rg" {
   name     = "${var.rg_name}"
-  location = "${element(split(".", var.arm_endpoint), 1)}"
+  location = "${var.location}"
 
   tags = {
     environment = "${var.rg_tag}"
@@ -867,6 +872,7 @@ resource "azurestack_virtual_machine" "vm" {
   client_secret   = "<output form="client_secret" name="result" style="display: inline;">applicationPassword</output>"
   tenant_id       = "<output form="tenant_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
 
+  location        = "<output form="location" name="result" style="display: inline;">frn00006</output>"
   vm_count        = <output form="vm_count" name="result" style="display: inline;">1</output>
   vm_image_string = "<output form="vm_image" name="result" style="display: inline;">OpenLogic/CentOS/7.5/latest</output>"
   vm_size         = "<output form="vm_size" name="result" style="display: inline;">Standard_DS2_v2</output>"
@@ -908,9 +914,17 @@ resource "azurestack_virtual_machine" "vm" {
     default  = "Password123!"
   }
 
+  variable "location" {
+    type     = "string"
+  }
+
   variable "rg_tag" {
     type    = "string"
     default = "production"
+  }
+
+  variable "rg_name" {
+    type    = "string"
   }
 
   variable "vm_count" {

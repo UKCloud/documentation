@@ -3,8 +3,8 @@ title: UKCloud for Oracle Software | UKCloud Ltd
 description: Home page for UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
-reviewer:
-lastreviewed: 
+reviewer: Sue Highmoor
+lastreviewed: 20/09/2019
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -35,14 +35,12 @@ First, take a look at our [Getting Started Guide](orcl-gs.md) to learn the basic
 <div class="row">
   <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/307495809?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-      </iframe>
+      <iframe src="https://www.youtube.com/embed/juhKzvCV4-g" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://vimeo.com/307495809">Oracle Enterprise Manager Cloud Control 13c Console Overview</a></p>
+    <p><a href="https://www.youtube.com/watch?v=juhKzvCV4-g">Oracle Enterprise Manager Cloud Control 13c Console Overview</a></p>
   </div>
   <div class="col-md-6"></div>
 </div>
-<script src="https://player.vimeo.com/api/player.js"></script>
 
 ## Other resources
 

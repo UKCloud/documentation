@@ -63,11 +63,7 @@ Choose the service level that is the best fit to power your application
 
 ### Storage Gateway (Optional)
 
-Storage Gateways enable simplified access and application integration to Cloud Storage by presenting object storage as a file system
-
-- GeoDrive - A free gateway solution
-
-- CloudArray - A paid for, cloud gateway appliance
+Storage Gateways (for example GeoDrive) enable simplified access and application integration to Cloud Storage by presenting object storage as a file system
 
 ## Pricing and packaging
 

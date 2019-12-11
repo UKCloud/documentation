@@ -24,7 +24,7 @@ This document describes the boundaries of the UKCloud for Microsoft Azure servic
 
 ## About UKCloud for Microsoft Azure
 
-UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform and we deliver this service from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners. The service is based on the Microsoft Azure Stack product, which has been developed by Microsoft as an extension of the Azure public cloud.
+UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform and we deliver this service from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners. The service is based on the Microsoft Azure Stack Hub product, which has been developed by Microsoft as an extension of the Azure public cloud.
 
 ## Service options
 
@@ -44,7 +44,7 @@ Virtual machines (VMs) provide the basic building blocks of compute resource wit
 
 You can find the full list of supported virtual machine sizes [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
-You can deploy VMs using the UKCloud Azure Stack portal and other tooling.
+You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling.
 
 > [!Warning]
 > Each VM contains a temporary disk. The temporary disk provides short-term storage for applications and processes and is intended to only store data such as page or swap files. Data on the temporary disk may be lost during a maintenance event or when you redeploy a VM.
@@ -54,7 +54,7 @@ You can deploy VMs using the UKCloud Azure Stack portal and other tooling.
 There are several ways in which storage can be addressed in UKCloud for Microsoft Azure:
 
 - Azure Blob Storage (Page)
- Page blobs are optimized for representing IaaS disks and supporting random writes that are up to 1 TB in size. An Azure Stack virtual machine attached IaaS disk is a Virtual Hard Disk (VHD) stored as a page blob. At present only unmanaged disks can be offered in the service.
+ Page blobs are optimized for representing IaaS disks and supporting random writes that are up to 1 TB in size. An Azure Stack Hub virtual machine attached IaaS disk is a Virtual Hard Disk (VHD) stored as a page blob. At present only unmanaged disks can be offered in the service.
 
 - Azure Blob Storage (Block)
  Block blobs (generically known as object storage) are optimised for streaming and storing cloud objects, and are a good choice for storing documents, media files, backups, and so on.
@@ -69,7 +69,7 @@ There are several ways in which storage can be addressed in UKCloud for Microsof
  Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless design, making it different from traditional relational databases. With a schemaless data store, it's easy to adapt your data as the needs of your application evolve. Table storage is easy to use, so developers can create applications quickly. Table storage is a key-attribute store, which means that every value in a table is stored with a typed property name. The property name can be used for filtering and specifying selection criteria. A collection of properties and their values comprise an entity. Since table storage is schemaless, two entities in the same table can contain different collections of properties, and those properties can be of different types. You can use table storage to store flexible datasets, such as user data for web applications, address books, device information, and any other type of metadata that your service requires. For today's internet-based applications, NoSQL databases like table storage offer a popular alternative to traditional relational databases. A storage account can contain any number of tables, and a table can contain any number of entities, up to the capacity limit of the storage account.
 
 > [!NOTE]
-> All storage in Azure Stack is taken from a common pool. When designing your service for UKCloud for Microsoft Azure, consider the best usage of your storage. For example, if you have a large object storage requirement, consider using the UKCloud's Cloud storage platform as part of your solution.
+> All storage in Azure Stack Hub is taken from a common pool. When designing your service for UKCloud for Microsoft Azure, consider the best usage of your storage. For example, if you have a large object storage requirement, consider using the UKCloud's Cloud storage platform as part of your solution.
 
 ### Service management
 
@@ -85,7 +85,7 @@ There are several ways in which storage can be addressed in UKCloud for Microsof
 
 UKCloud manages the physical firewalls that face public and secure networks.
 
-You can deploy multiple gateway devices and configure the following using either the UKCloud Azure Stack portal or API:
+You can deploy multiple gateway devices and configure the following using either the UKCloud Azure Stack Hub portal or API:
 
 - Virtual networks – UKCloud for Microsoft Azure enables you to configure virtual private clouds, and create and manage your private address space within Azure. You can configure this via the UI, API or other tooling
 
@@ -128,13 +128,13 @@ The service levels are as follows:
 
 - The UKCloud for Microsoft Azure service is updated regularly with the latest code release from Microsoft - typically, this is once a month and notified via the [UKCloud service status page](https://status.ukcloud.com/) and the [UKCloud Portal](https://portal.ukcloud.com). UKCloud aim to be within two updates from Microsoft, however, we will control the release of the patches into the live service.
 
-- Through the UKCloud Azure Stack portal you can use availability sets so that VMs do not run on the same physical host.
+- Through the UKCloud Azure Stack Hub portal you can use availability sets so that VMs do not run on the same physical host.
 
 - You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies), however, we do not support these customer implementations.
 
 ### Azure Marketplace
 
-UKCloud for Microsoft Azure includes access to a local version of the Azure Marketplace. The Marketplace contains a collection of services, applications, and resources customized for Azure Stack that you can deploy in your environment. Every Marketplace item has:
+UKCloud for Microsoft Azure includes access to a local version of the Azure Marketplace. The Marketplace contains a collection of services, applications, and resources customized for Azure Stack Hub that you can deploy in your environment. Every Marketplace item has:
 
 - An Azure Resource Manager template for resource provisioning
 
@@ -142,7 +142,7 @@ UKCloud for Microsoft Azure includes access to a local version of the Azure Mark
 
 - Formatting information to display the item in the portal
 
-We've pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request additional resources are added, provided they are approved for use on Azure Stack. A full list of available items can be found [here](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items).
+We've pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request additional resources are added, provided they are approved for use on Azure Stack Hub. A full list of available items can be found [here](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items).
 
 You are responsible for ensuring that you have appropriate licensing and support in place for any item deployed from the Marketplace not licensed by UKCloud.
 
@@ -164,7 +164,7 @@ For non-UKCloud issued software, you must obey the licensing requirements of the
 
 ### VM server images
 
-We provide base VM images for the operating systems (OS) for which we provide licensing, along with images for various free Linux distributions (such as Ubuntu, CentOS & Debian). You can access these from the Marketplace available within the UKCloud Azure Stack portal.
+We provide base VM images for the operating systems (OS) for which we provide licensing, along with images for various free Linux distributions (such as Ubuntu, CentOS & Debian). You can access these from the Marketplace available within the UKCloud Azure Stack Hub portal.
 
 You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.
 
@@ -182,9 +182,9 @@ In line with UKCloud's SISP, we provide notification of customer-impacting secur
 
 Users can access, manage and view the UKCloud for Microsoft Azure service, accessing only those features allowed by your role, in any of the following ways:
 
-- **Azure Stack API.** Enables the programmatic creation and management of the services inside the platform.
+- **Azure Stack Hub API.** Enables the programmatic creation and management of the services inside the platform.
 
-- **Azure Stack graphical UI.** Provides a graphical interface to access the Azure Stack environment (depending on assigned permissions).
+- **Azure Stack Hub graphical UI.** Provides a graphical interface to access the Azure Stack Hub environment (depending on assigned permissions).
 
 - **UKCloud Portal.** Access to service reporting and incident and request management.
 
@@ -192,7 +192,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Service reporting
 
-**Visibility.** You can use the UKCloud Azure Stack portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.
+**Visibility.** You can use the UKCloud Azure Stack Hub portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.
 
 **Reporting.** We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal and via the [UKCloud status page](https://status.ukcloud.com/).
 
@@ -204,7 +204,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 **Cloud Architects.** Cloud Architects support you during the design of solutions for the cloud platform. Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
 
-**Technical Account Managers (TAM).** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
+**Service Delivery Managers.** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
 **Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 

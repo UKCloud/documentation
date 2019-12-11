@@ -383,7 +383,7 @@ Unless otherwise specified in the applicable Service Definition, this Appendix d
 
 3.1 A comprehensive secure online portal will provide the most common service management functionality and address most requirements.
 
-3.2 We will allocate a Technical Account Manager (TAM) to provide You with an assigned point of contact. The TAM will provide additional assistance with reporting and incident escalation, at all times following Our ISO 20000-certified ITIL-based process framework.
+3.2 We will allocate a Service Delivery Manager to provide You with an assigned point of contact. The Service Delivery Manager will provide additional assistance with reporting and incident escalation, at all times following Our ISO 20000-certified ITIL-based process framework.
 
 3.3 For organisations that require a managed service, We have a mature and active partner ecosystem that can provide value-added services such as consultancy and ongoing custom managed services. We will make an introduction on request.
 
@@ -498,7 +498,7 @@ We will also create the customer’s Primary Administrator account and send the 
 
 **5. Service management**
 
-5.1 We will allocate a Technical Account Manager (TAM) to provide you with an assigned point of contact. The TAM will provide additional assistance with reporting and incident escalation, at all times following Our ISO20000-certified ITIL-based process framework.
+5.1 We will allocate a Service Delivery Manager to provide you with an assigned point of contact. The Service Delivery Manager will provide additional assistance with reporting and incident escalation, at all times following Our ISO20000-certified ITIL-based process framework.
 
 5.2 For organisations that require a managed service, We have a mature and active partner ecosystem that can provide value-added services such as consultancy, training and on-going custom managed services. We will be pleased to make an introduction on request.
 

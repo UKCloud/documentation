@@ -51,13 +51,13 @@ To access the DFW:
 
 3. In the left navigation panel, click **Security**.
 
-    ![Security menu in vCloud Director](images/vmw-vcd91-mnu-security.png)
+    ![Security menu in vCloud Director](images/vmw-vcd-mnu-security.png)
 
 4. Select the **Security Services** for your VDC, then click **Configure Services**.
 
     Even though other VDC security policies are listed in this section, you cannot launch the configuration until you switch to the relevant VDC. You can confirm which VDC you are in by looking in the top right corner. To go back to all VDCs, click the back arrow.
 
-    ![Configure Services for Security Services](images/vmw-vcd91-btn-configure-services-security.png)
+    ![Configure Services for Security Services](images/vmw-vcd-btn-configure-services-security.png)
 
 5. In the **Distributed Firewall > General** tab of the *Services* dialog box, select **Enable Distributed Firewall**.
 

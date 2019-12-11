@@ -23,10 +23,11 @@ Product | EULA
 --------|-----
 Cisco AppDynamics | <https://www.appdynamics.com/download-eula/>
 CommVault Complete Backup & Recovery | <https://documentation.commvault.com/commvault/v11_sp9/article?p=features/misc/eula.htm>
+CyberScore | N/A
+Hystax Acura Cloud Migration | <https://hystax.com/terms-of-use/>
 HyTrust DataControl | <https://www.hytrust.com/resources/hytrust-datacontrol-eula/>
 Moogsoft AIOps | <https://www.moogsoft.com/eula/>
 Portworx Enterprise | <https://portworx.com/end-user-license-agreement/>
-XQ Cyber CyberScore | N/A
 
 ## Feedback
 

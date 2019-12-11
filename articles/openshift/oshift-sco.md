@@ -111,6 +111,9 @@ Containers in OpenShift by default don’t persist data. Every time an applicati
 **Number of file copies** | 3                        | 3
 **Use cases**             | Web caching<br>Containerised analytics<br>Highly performant, real-time web/mobile applications | Standard, containerised web/mobile applications<br>Storing OpenShift logs and metrics
 
+> [!NOTE]
+> In line with current restrictions on the OpenStack service underpinning OpenShift, you can make/attach 25 additional persistent volume claims (PVCs) to each worker node.
+
 ## Optional extras
 
 To complement your UKCloud for OpenShift service, UKCloud offers the following value-added options:
@@ -166,7 +169,7 @@ UKCloud maintains responsibility for routine patching and upgrades of the OpenSh
 
 ## Service provisioning
 
-You can request UKCloud for OpenShift via your Technical Account Manager (TAM) or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+You can request UKCloud for OpenShift via your Service Delivery Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 Within 5 business days of accepting an order, UKCloud will create the customer’s primary account and send a Welcome Pack, which includes the URL for the UKCloud Portal, and the [Getting Started Guide](oshift-gs.md).
 

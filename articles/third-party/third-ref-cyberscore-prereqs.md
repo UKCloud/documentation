@@ -1,21 +1,21 @@
 ---
-title: XQ Cyber CyberScore scanner deployment environment requirements | UKCloud Ltd
+title: CyberScore scanner deployment environment requirements | UKCloud Ltd
 description: Provides information about environment requirements for deploying the CyberScore scanner
 services: third-party
 author: Sue Highmoor
-reviewer:
-lastreviewed: 
-toc_rootlink: XQ Cyber CyberScore
+reviewer: Sue Highmoor
+lastreviewed: 17/09/2019
+toc_rootlink: CyberScore
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: CyberScore scanner deployment environment requirements
-toc_fullpath: XQ Cyber CyberScore/third-ref-cyberscore-prereqs.md
+toc_fullpath: CyberScore/third-ref-cyberscore-prereqs.md
 toc_mdlink: third-ref-cyberscore-prereqs.md
 ---
 
-# XQ Cyber CyberScore scanner deployment environment requirements
+# CyberScore scanner deployment environment requirements
 
 ## Overview
 
@@ -33,21 +33,21 @@ To install the CyberScore scanner, administrative permission on the virtualised 
 
 The CyberScore scanner talks to the CyberScore service to download the latest vulnerability data and to upload scan results for analysis. To do this, it requires outbound connectivity from within your organisation to the following URLs on ports `80` or `443` unless otherwise specified:
 
-- `github.com`
+- `https://github.com`
 
-- `auth.docker.io`
+- `https://auth.docker.io`
 
-- `registry-1.docker.io`
+- `https://registry-1.docker.io`
 
-- `production.cloudflare.docker.com`
+- `https://production.cloudflare.docker.com`
 
-- `secure-api.cyberscore.com`
+- `https://secure-api.cyberscore.com`
 
-- `heartbeat.cyberscore.com` (`4505-4506/tcp`)
+- `https://updates.cyberscore.com`
 
-- `logging.cyberscore.com` (`5044/tcp` and `443/tcp`)
+- `heartbeat.cyberscore.com` `4505-4506/tcp`
 
-- `updates.cyberscore.com`
+- `logging.cyberscore.com` `5044/tcp` and `443/tcp`
 
 ## Admin credentials for the scanning profile
 

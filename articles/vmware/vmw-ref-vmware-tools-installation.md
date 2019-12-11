@@ -3,8 +3,8 @@ title: VMware Tools installation | UKCloud Ltd
 description: Recommended practices for installing and maintaining VMware tools on the Assured platform
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: George Smith
+lastreviewed: 29/10/2019 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -21,15 +21,15 @@ VMware provide tools which should be installed into any virtual machines running
 
 ## Windows
 
-The VMware tools from windows can be installed directly from within the vCloud director interface.
+1. Browse to the virtual machine within the vApp.
 
-Step 1 - Browse to the virtual machine within the vApp
+2. Identify the VM that requires VMware tools to be installed.
 
-Step 2 - Right click the virtual machine and click install tools
+3. Click the **Actions** drop down and select **Install VMware tools**.
 
-Step 3 - Login to the operating system and follow the wizard to install the tools
+4. Login to the operating system and follow the wizard to install the tools.
 
-Step 4 - Reboot
+5. Reboot.
 
 ## Linux
 
@@ -47,35 +47,35 @@ Installing the VMware tools via vCloud Director requires modules to be built aga
 
 The open-vm-tools is available via the epel repository.
 
-Step 1 - Add epel repository
+1. Add epel repository.
 
-    sudo yum install epel-release
+    `sudo yum install epel-release`
 
-If the command above fails then you can run the following commands dependent on the version you are running:
+    If the command above fails then you can run the following commands dependent on the version you are running:
 
-**Redhat/Centos 5**
+    **Redhat/Centos 5**
 
-    wget http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm sudo rpm -Uvh epel-release-5*.rpm
+    `wget http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm sudo rpm -Uvh epel-release-5*.rpm`
 
-**Redhat/Centos 6**
+    **Redhat/Centos 6**
 
-    wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm sudo rpm -Uvh epel-release-6*.rpm
+    `wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm sudo rpm -Uvh epel-release-6*.rpm`
 
-**Redhat/Centos 7**
+    **Redhat/Centos 7**
 
-    wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm sudo rpm -Uvh epel-release-7*.rpm
+    `wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm sudo rpm -Uvh epel-release-7*.rpm`
 
-Step 2 - Install open-vm-tools
+2. Install open-vm-tools
 
-No reboot is required
+No reboot required.
 
 ## Ubuntu
 
-Step 1 - Install open-vm-tools
+Install open-vm-tools
 
-    sudo apt-get install open-vm-tools
+`sudo apt-get install open-vm-tools`
 
-No reboot required
+No reboot required.
 
 ## Feedback
 

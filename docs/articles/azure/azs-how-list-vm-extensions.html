@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to list VM extensions in Azure Stack using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to list VM extensions in Azure Stack Hub using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to list VM extensions in Azure Stack using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="title" content="How to list VM extensions in Azure Stack Hub using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,11 +91,11 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-list-vm-extensions-in-azure-stack-using-powershell">How to list VM extensions in Azure Stack using PowerShell</h1>
+<h1 id="how-to-list-vm-extensions-in-azure-stack-hub-using-powershell">How to list VM extensions in Azure Stack Hub using PowerShell</h1>
 
-<p>This document explains how to list VM extensions in Azure Stack with PowerShell.</p>
+<p>This document explains how to list VM extensions in Azure Stack Hub with PowerShell.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack Hub user's PowerShell environment</a>.</p>
 <h2 id="declare-variables">Declare variables</h2>
 <p>Enter details below to provide values for the variables in the scripts in this article:</p>
 <table>
@@ -109,7 +109,7 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 </tbody>
@@ -119,13 +119,13 @@
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Register an AzureRM environment that targets your Azure Stack instance
+# Register an AzureRM environment that targets your Azure Stack Hub instance
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Retrieve VM extension list
@@ -135,7 +135,7 @@ Get-AzureRmVmImagePublisher -Location $Location | `
   Format-Table -Property Type, Version -AutoSize
 </code></pre>
 <p>This will produce a table similar to the following:</p>
-<p><img src="images/azs-list-vm-extensions.png" alt="List Azure Stack VM Extensions Output"></p>
+<p><img src="images/azs-list-vm-extensions.png" alt="List Azure Stack Hub VM Extensions Output"></p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 

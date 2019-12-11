@@ -33,7 +33,7 @@ At the end of your free trial, you can seamlessly move to a billed service, leve
 
 Exclusions are:
 
-- Our Cross Domain Security Zone products: UKCloud Guard and Walled Garden
+- Cross Domain Security Zone
 
 - Secure Remote Access
 

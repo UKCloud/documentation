@@ -32,6 +32,8 @@ Web applications can easily interact with the API, but the ability to browse the
 ECS provides two APIs that you can use to manage Cloud Storage: the S3 compatible API and the EMC ECS Atmos API.
 
 > [!NOTE]
+> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API.
+> 
 > If you write content to Cloud Storage using one of the APIs, you cannot subsequently access that content using the other API. Choose carefully which API you want to use before beginning a project, as it will be difficult to move between them.
 
 In this article, we'll look at some of the many applications that enable you to browse an object storage system. We'll look at two categories:
@@ -223,11 +225,7 @@ This article has shown you how to browse Cloud Storage buckets using various dif
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- Cloud Storage Gateways
-
-  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 

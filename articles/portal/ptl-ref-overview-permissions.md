@@ -3,8 +3,8 @@ title: Portal permissions | UKCloud Ltd
 description: A guide to the various permissions available to Portal users and what behaviours they enable
 services: portal
 author: Sue Highmoor
-reviewer:
-lastreviewed: 20/07/2018 12:12:33
+reviewer: aperrett
+lastreviewed: 23/10/2019
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -44,16 +44,16 @@ A contact is just contact details, they may not necessarily have an actual user 
 &nbsp; | Create | Read | Update | Delete | All
 ------ | ------ | ---- | ------ | ------ | ---
 **Contact** | Can create a new contact for that account. | Can view existing contacts in that account. | Can edit existing contacts but cannot create new ones. | Can delete existing contacts. | All of the above.
-**User** | 	Can create a user associated to a contact for that account and assign permissions. | Can view existing users for contacts.	| Can edit existing users and their permissions. | Can delete existing users from contacts. | All of the above.
+**User** | Can create a user associated to a contact for that account and assign permissions. | Can view existing users for contacts. | Can edit existing users and their permissions. | Can delete existing users from contacts. | All of the above.
 
 ## Permissions for Support
 
-Support Permissions dictate whether a user can view and raise support tickets, and whether they can view other users support tickets.
+Support permissions dictate whether a user can view other users support tickets.
 
-&nbsp; | Create | Read | Update | All
------- | ------ | ---- | ------ | ---
-**User support tickets** | Can log their own support tickets in their name. | Can view their own support tickets.	| Can update their own support tickets.	| All of the above.
-**Account support tickets** | Can log their own support tickets. | Can view all tickets logged by users across that account.	| Can update anyone’s support ticket across that account.	| All of the above.
+&nbsp; | Read | Update | All
+------ | ---- | ------ | ---
+**User support tickets** | Can view their own support tickets.| Can update their own support tickets. | All of the above.
+**Account support tickets** | Can view all tickets logged by users across that account. | Can update anyone’s support ticket across that account. | All of the above.
 
 ## Permissions for UKCloud for VMware
 
@@ -69,11 +69,11 @@ The roles exposed are:
 
 - vApp User
 
-- Console Only 
+- Console Only
 
-You can find further details of these roles in Chapter 11 of the vCloud Director Administrator's Guide.
+You can find further details of these roles in the [vCloud Director Administrator's Guide](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html).
 
-In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API - no GUI access. 
+In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API, with no GUI access.
 
 ## Permissions for Cloud Storage
 

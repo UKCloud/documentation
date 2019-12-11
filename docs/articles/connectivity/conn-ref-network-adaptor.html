@@ -8,7 +8,7 @@
     <title>Network Adaptor Issue with Windows Server 2012 and 2012R2s | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Network Adaptor Issue with Windows Server 2012 and 2012R2s | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,6 +98,10 @@
 <p>Symptoms include bluescreens of the operating system, random network dropouts.</p>
 <h2 id="resolution">Resolution</h2>
 <p>The fix is to install VMware Tools and replace the network adaptor with a VMXNET3 adaptor.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Currently, to change the adapter type, you'll need to navigate to the vCloud Director Legacy UI. To do this, in the top-right corner of the vCloud Director Tenant UI, click your user name, then select <strong>Legacy UI</strong>.</p>
+</div>
 <p>There are a couple of things you should be aware of when doing this:</p>
 <ul>
 <li><p>Guest customisation - depending on the settings for each VM, this may cause the server to change its SID. (these can be adjusted when the VM is powered off).</p>

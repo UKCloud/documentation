@@ -14,6 +14,8 @@
   items:
   - name: Configure an instance using cloud-config
     href: ostack-how-cloud-config.md
+  - name: Configure IPsec VPN in OpenStack
+    href: ostack-how-configure-ipsec-vpn.md
   - name: Convert virtual machines
     href: ostack-how-convert-vms.md
   - name: 'Create and deploy a basic Heat template '
@@ -42,6 +44,8 @@
     href: ostack-how-use-api-sso.md
   - name: Use the OpenStack Command Line Client on Microsoft operating systems
     href: ostack-how-use-cli.md
+  - name: Use TrilioVault self-service backup and restoration
+    href: ostack-how-use-triliovault.md
 - name: Reference
   items:
   - name: Auto Scaling for UKCloud for OpenStack

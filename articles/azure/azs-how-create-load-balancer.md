@@ -1,5 +1,5 @@
 ---
-title: How to create a load balancer using the UKCloud Azure Stack portal | UKCloud Ltd
+title: How to create a load balancer using the UKCloud Azure Stack Hub portal | UKCloud Ltd
 description: Provides help for creating a load balancer on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -16,7 +16,7 @@ toc_fullpath: Users/How To/azs-how-create-load-balancer.md
 toc_mdlink: azs-how-create-load-balancer.md
 ---
 
-# How to create a load balancer using the UKCloud Azure Stack portal
+# How to create a load balancer using the UKCloud Azure Stack Hub portal
 
 ## Overview
 
@@ -24,13 +24,13 @@ A load balancer provides scale and availability by spreading incoming requests a
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ## Creating a load balancer
 
 In this section we will create a load balancer with a public IP address.
 
-1. Log in to the Azure Stack portal.
+1. Log in to the Azure Stack Hub portal.
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -64,7 +64,7 @@ In this section we will create a load balancer with a public IP address.
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
      ![Create new load balancer](images/azs-browser-create-load-balancer.PNG)
 
@@ -98,7 +98,7 @@ In this section we will create a virtual network and two virtual machines which 
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
    - **Subnet Name** - The name of the first subnet within the virtual network.
 
@@ -211,7 +211,7 @@ To spread traffic load across the VMs, you must create a back-end address pool. 
 
 ### Create a health probe
 
-When creating a load balancer, you can use a health probe to monitor the status of your application. In Azure Stack, the health probe adds and removes VMs from the load balancer back-end pool based on their current status.
+When creating a load balancer, you can use a health probe to monitor the status of your application. In Azure Stack Hub, the health probe adds and removes VMs from the load balancer back-end pool based on their current status.
 
 1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
 

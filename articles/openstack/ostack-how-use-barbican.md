@@ -38,7 +38,9 @@ Barbican currently supports the following use cases described in this guide:
 - Running a recent version of the OpenStackCLI . To check for an update run:
 
 ```none
+
 pip install --upgrade python-openstackclient
+
 ```
 
 ## Use Cases

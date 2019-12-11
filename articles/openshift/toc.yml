@@ -12,10 +12,14 @@
     href: oshift-gs.md
 - name: How To
   items:
+  - name: Backup, restore and migrate OpenShift resources
+    href: oshift-how-backup-migrate.md
   - name: Build an OpenShift application from a private GitHub repo
     href: oshift-how-build-app-private-repo.md
   - name: Create new users
     href: oshift-how-create-users.md
+  - name: Customise the router error page
+    href: oshift-how-customise-error-page.md
   - name: Expose non-http services externally
     href: oshift-how-expose-nonhttp-services.md
   - name: How to expand OpenShift persistent volumes
@@ -38,8 +42,14 @@
     href: oshift-how-view-router-logs.md
 - name: Reference
   items:
+  - name: Community network proxy configuration
+    href: oshift-ref-no-proxy.md
   - name: Considerations when scaling an OpenShift cluster
     href: oshift-ref-scaling.md
+  - name: Custom dashboards provided with aggregated logging Kibana
+    href: oshift-ref-kibana-dashboards.md
+  - name: DNS zone forwarding in OpenShift clusters
+    href: oshift-ref-dns-zone-forwarding.md
   - name: Lifecycle and patch management
     href: oshift-ref-lifecycle.md
   - name: Making the most of your UKCloud for OpenShift trial

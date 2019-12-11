@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to configure IPsec VPN in OpenStack | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to configure IPsec VPN in OpenStack | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-configure-ipsec-vpn.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-configure-ipsec-vpn-in-openstack">How to configure IPsec VPN in OpenStack</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article provides instructions for deploying an instance into your OpenStack project to function as a VPN endpoint, enabling secure connection:</p>
+<ul>
+<li><p>To other projects</p>
+</li>
+<li><p>To vCloud Director VDCs</p>
+</li>
+<li><p>Back to your own infrastructure in-house</p>
+</li>
+</ul>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>This article uses a pfSense virtual firewall appliance to provide the IPsec VPN endpoint. UKCloud provides a UKCloud for OpenStack image for the pfSense appliance in the public catalog, however, you can upload your own image if you prefer.</p>
+<p>You can find the HEAT templates and other files used in this article in the UKCloud GitHub repository at <a href="https://github.com/UKCloud/vpn-on-openstack">https://github.com/UKCloud/vpn-on-openstack</a>.</p>
+<p>The repository contains the following:</p>
+<ul>
+<li><p><code>pfsense.yaml</code> - A HEAT template to deploy all the resources needed for an IPsec VPN endpoint</p>
+</li>
+<li><p><code>properties.yaml</code> - The HEAT parameters used with the <code>pfsense.yaml</code> template</p>
+</li>
+<li><p><code>infrastructure.yaml</code> - A sample HEAT template to deploy all the prerequisite infrastructure used by the <code>pfsense.yaml</code> template</p>
+</li>
+<li><p><code>vshield-configuration-yaml</code> - A sample configuration to set up a edge gateway as an IPsec endpoint on a VDC</p>
+</li>
+</ul>
+<h3 id="network-infrastructure-requirements">Network infrastructure requirements</h3>
+<p>The <code>pfsense.yaml</code> HEAT template used in this article assumes that you've already started deploying network resources and instances in your OpenStack project, and that you now want to set up an IPsec VPN tunnel to connect your project to external resources.</p>
+<p>It assumes that the following resources already exist:</p>
+<ul>
+<li><p>A network and subnet on which you're creating instances</p>
+</li>
+<li><p>A router to connect your subnet to your internet-facing external network</p>
+</li>
+<li><p>An SSH keypair used to create instances</p>
+</li>
+<li><p>A jumpbox or bastion Linux server instance created on your subnet</p>
+</li>
+<li><p>A floating IP address allocated and assigned to your jumpbox instance</p>
+</li>
+<li><p>A security group allowing inbound SSH access to your jumpbox instance</p>
+</li>
+</ul>
+<p>If you've not already created these resources, we've provided a sample HEAT template (<code>infrastructure.yaml</code>) in the GitHub repository to get you started. This template creates the resources listed above for you, including an internal network with the subnet <code>192.168.1.0/24</code> that uses:</p>
+<ul>
+<li><p>An allocation pool of <code>192.168.1.20-192.168.1.200</code></p>
+</li>
+<li><p>Google's public DNS server: <code>8.8.8.8</code></p>
+</li>
+</ul>
+<p>To deploy the <code>infrastructure.yaml</code> template, pass the following URL directly into the OpenStack Horizon dashboard:</p>
+<p><code>https://raw.githubusercontent.com/UKCloud/vpn-on-openstack/master/infrastructure.yaml</code></p>
+<p><img src="images/ostack-vpn-infrastructure-template.png" alt="Deploying the infrastructure.yaml template"></p>
+<p>Alternatively, you can clone the repository locally and use the OpenStack CLI to create the stack with the following command:</p>
+<p><code>openstack stack create --parameter flavor=t1.small --parameter image=&quot;CentOS 7&quot; --wait -t infrastructure.yaml Infrastructure</code></p>
+<h2 id="setting-up-the-vpn-stack">Setting up the VPN stack</h2>
+<p>The pfSense appliance assumes that if will have at least two network interface controllers (NICs) attached to it: one attached to the WAN and one or more attached to internal networks. To fit this into an existing infrastructure deployed in your project, and to avoid any nasty routing loops, the <code>pfsense.yaml</code> HEAT template creates a new WAN network along with an interface on your existing router. This provides the WAN interface for pfSense and has a floating IP address associated with it for the internet-facing endpoint of the VPN tunnel.</p>
+<p>The LAN interface of the pfSense appliance attaches to your existing internal network. Both WAN and LAN interfaces in the pfSense appliance image in the public catalog are configured for DHCP. This enables the interface to seamlessly configure against your existing infrastructure.</p>
+<p><img src="images/ostack-vpn-networks.png" alt="Network configuration"></p>
+<h3 id="preparing-your-configuration">Preparing your configuration</h3>
+<p>Use the <code>pfsense.yaml</code> and <code>properties.yaml</code> files provided in the UKCloud GitHub repository to prepare your infrastructure.</p>
+<ol>
+<li><p>If you haven't already done so, clone or take a copy of the repository on the UKCloud GitHub:</p>
+<p><a href="https://github.com/UKCloud/vpn-on-openstack">https://github.com/UKCloud/vpn-on-openstack</a></p>
+</li>
+<li><p>Update the <code>properties.yaml</code> files to suit your deployed infrastructure.</p>
+<p>For example, if you used the <code>infrastructure.yaml</code> HEAT template provided to build your core infrastructure, the properties should look similar to the following:</p>
+<pre><code class="lang-none">parameters:
+  key_name: jumpbox_key
+  pfsense_flavor: t1.tiny
+  router: InternetGW
+  internal_network: Internal
+  internal_address: 192.168.1.254
+  internal_net_cidr: 192.168.1.0/24
+  remote_net_cidr: 10.1.1.0/24
+</code></pre>
+<p>where:</p>
+<ul>
+<li><p><code>InternetGW</code> is the name of your router</p>
+</li>
+<li><p><code>Internal</code> is the name of your existing network</p>
+</li>
+<li><p><code>internal_address</code> is the address on your existing network that will be assigned to the LAN interface on the appliance</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The <code>pfsense.yaml</code> HEAT template assumes that your VPN tunnel is connecting to only a single remote network. If you need to route to multiple remote networks, after completing the deployment, you'll need to follow a few more configuration steps. For more information, ask to speak to one of our DevOps consultants or Cloud Architects.</p>
+</div>
+<h3 id="launching-the-stack">Launching the stack</h3>
+<p>Use the OpenStack CLI tools to launch the stack by running the following command:</p>
+<p><code>openstack stack create --enable-rollback -t pfsense.yaml -e properties.yaml --wait VPNStack</code></p>
+<p>You can also launch the stack through the Horizon dashboard by selecting the <code>pfsense.yaml</code> and <code>properties.yaml</code> files appropriately when prompted.</p>
+<p><img src="images/ostack-vpn-launch-stack.png" alt="Launch stack in Horizon dashboard"></p>
+<h2 id="creating-the-vpn-tunnel">Creating the VPN tunnel</h2>
+<h3 id="connecting-to-the-pfsense-ui">Connecting to the pfSense UI</h3>
+<p>When the HEAT template has finished deploying your VPN stack, connect to the pfSense appliance to configure the IPsec tunnel. You can perform some configuration steps through the OpenStack console, or an SSH connection to the appliance, however, most configuration is via the pfSense web UI. The pfSense UI only listens on its LAN interface, so you cannot use it directly via the internet-facing floating IP address on its WAN interface.</p>
+<ol>
+<li><p>Connect to the pfSense UI using SSH port forwarding to tunnel a connection through the jumpbox server connected to the internal network, onto the LAN interface of the pfSense appliance.</p>
+<p>With a command line SSH client, you would typically run the following command:</p>
+<p><code>ssh -i ~/.ssh/jumpbox.pem -l jumpboxuser -L 80:192.168.1.254:80 &lt;jumpbox floating IP address&gt;</code></p>
+<p>where:</p>
+<ul>
+<li><code>192.168.1.254</code> is the address allocated to the LAN interface of the appliance</li>
+</ul>
+<p>If you're using a Windows desktop, you may want to try using PuTTY for the SSH port forwarding.</p>
+</li>
+<li><p>Browse to <code>http://localhost/</code> to open the pfSense <em>Login</em> page.</p>
+<p><img src="images/ostack-vpn-pfsense-login.png" alt="pfSense Login page"></p>
+</li>
+<li><p>Log in with:</p>
+<ul>
+<li><p><strong>Username:</strong> <code>admin</code></p>
+</li>
+<li><p><strong>Password:</strong> If you're using the image provided by UKCloud, the default password is <code>Password123#</code></p>
+</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>You should change the default password when you first log in.</p>
+</div>
+</li>
+</ol>
+<h3 id="setting-up-your-ipsec-tunnel">Setting up your IPsec tunnel</h3>
+<p>For the purposes of this article, we're assuming the following tunnel configuration. You'll need to substitute your own values accordingly:</p>
+<pre><code class="lang-none">OpenStack Network    pfSense                      VPN Endpoint               Remote Network
+-----------------    -------                      ------------               --------------
+                     LAN: 192.168.1.254           LAN: 10.1.1.1
+192.168.1.0/24 &lt;---&gt; WAN: 172.16.1.XXX &lt;--------&gt; WAN: YYY.YYY.YYY.YYY &lt;---&gt; 10.1.1.0/24
+                     Floating IP: XXX.XXX.XXX.XXX
+
+Pre-shared Key: D3v0psD3m0D3v0psD3m0D3v0psD3m0D3v0psD3m0
+</code></pre>
+<ol>
+<li><p>From the menu, select <strong>VPN &gt; IPsec</strong>.</p>
+</li>
+<li><p>On the <em>Tunnels</em> tab, click the <strong>Add P1</strong> button to start configuring this endpoint of the tunnel.</p>
+</li>
+<li><p>In the <em>Edit Phase 1</em> page, set the following values:</p>
+<ul>
+<li><p><strong>Remote Gateway:</strong> YYY.YYY.YYY.YYY</p>
+</li>
+<li><p><strong>Description:</strong> My VPN Connection</p>
+</li>
+<li><p><strong>My identifier:</strong> IP Address XXX.XXX.XXX.XXX</p>
+</li>
+<li><p><strong>Peer identifier:</strong> IP Address: YYY.YYY.YYY.YYY</p>
+</li>
+<li><p><strong>Pre-Shared Key:</strong> D3v0psD3m0D3v0psD3m0D3v0psD3m0D3v0psD3m0</p>
+</li>
+</ul>
+</li>
+<li><p>Save the settings.</p>
+</li>
+<li><p>Click the <strong>Add P2</strong> button to complete the rest of the tunnel configuration.</p>
+</li>
+<li><p>In the <em>Edit Phase 2</em> page, set the following values:</p>
+<ul>
+<li><p><strong>Local Network:</strong> LAN subnet</p>
+</li>
+<li><p><strong>NAT/BINAT translation:</strong> None</p>
+</li>
+<li><p><strong>Remote Network:</strong> Network 10.1.1.0/24</p>
+</li>
+<li><p><strong>Description:</strong> My remote network</p>
+</li>
+</ul>
+</li>
+<li><p>Save the settings.</p>
+<p>The <em>Tunnels</em> page should now look something like the following:</p>
+<p><img src="images/ostack-vpn-pfsense-tunnels.png" alt="Tunnels page"></p>
+</li>
+</ol>
+<h3 id="creating-a-firewall-rule-to-allow-routing-of-returning-traffic">Creating a firewall rule to allow routing of returning traffic</h3>
+<p>The default firewall rules allow outbound traffic from the LAN network. This is sufficient to enable the IPsec tunnel to be established and to also allow traffic from the internal network to be routed across the tunnel. However, to allow returning traffic from the remote network to be routed back to the LAN network, you need to add a new firewall rule.</p>
+<ol>
+<li><p>From the menu, select <strong>Firewall &gt; Rules</strong>.</p>
+</li>
+<li><p>Select the <strong>IPsec</strong> tab.</p>
+<p>For this article, since we're trusting all traffic from the LAN network to the remote network, we just need to add a single rule to accept all traffic from the remote network back into the LAN network. In your environment, you'll probably want to be more specific with your rule definitions.</p>
+</li>
+<li><p>Click one of the <strong>Add</strong> buttons and set the following values:</p>
+<ul>
+<li><p><strong>Action:</strong> Pass</p>
+</li>
+<li><p><strong>Interface:</strong> IPsec</p>
+</li>
+<li><p><strong>Protocol:</strong> any</p>
+</li>
+<li><p><strong>Source:</strong> Network 10.1.1.0/24</p>
+</li>
+<li><p><strong>Destination:</strong> LAN net</p>
+</li>
+<li><p><strong>Description:</strong> Allow all remote traffic</p>
+</li>
+</ul>
+</li>
+<li><p>Save the rule.</p>
+<p>The IPsec tab should now look something like the following:</p>
+<p><img src="images/ostack-vpn-pfsense-firewall.png" alt="Firewall rule"></p>
+</li>
+</ol>
+<h3 id="configuring-a-static-route-for-the-remote-network">Configuring a static route for the remote network</h3>
+<p>The last thing to do to configure your OpenStack project to be able to connect to a remote network over the IPsec VPN is to update your router configuration to add a static route that redirects traffic for the remote network via the pfSense appliance. You can do this by editing the router in the Horizon dashboard, specifying the remote network and the LAN interface of the pfSense appliance.</p>
+<p><img src="images/ostack-vpn-horizon-static-route.png" alt="Static route"></p>
+<p>Alternatively, you can define the same static route using the OpenStack CLI:</p>
+<p>'openstack router set --route destination=10.1.1.0/24,gateway=192.168.1.254 InternetGW`</p>
+<h2 id="configuring-the-second-endpoint">Configuring the second endpoint</h2>
+<p>At this point, you now want to ensure that the other end of the VPN tunnel is also configured. If you are connecting two OpenStack projects, you can repeat the steps above to deploy another pfSense appliance into the remote project.</p>
+<p>Connecting an IPsec tunnel to an edge gateway in a UKCloud for VMware environment can be problematic, as the vCloud Director web console doesn't set the local identifier correctly. You have to use a REST client against the vCloud Director API to manually correct the tunnel configuration. This process is documented in <a href="../vmware/vmw-how-change-ipsec-vpn-api.html"><em>How to change IPsec VPN settings via the vCloud Director API</em></a>.</p>
+<p>However, we also provide a Ruby script in our GitHub repository that you can use, with the <code>vshield-configuration.yaml</code> sample configuration file, to automate the interaction with the vCloud Director API to correctly set up the VPN endpoint from scratch, without having to use the web console. For more information about this script, see <a href="https://github.com/UKCloud/ukcloud-vpn">here</a>.</p>
+<h2 id="check-the-tunnel-status">Check the tunnel status</h2>
+<p>By now, if the configuration of both endpoints match, the IPsec tunnel should already have completed both Phase 1 and Phase 2 negotiations and have established a tunnel. You can check by selecting <strong>Status &gt; IPsec</strong> from the menu.</p>
+<p><img src="images/ostack-vpn-pfsense-ipsec-overview.png" alt="IPsec status"></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

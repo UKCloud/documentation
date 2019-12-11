@@ -1,21 +1,21 @@
 ---
-title: XQ Cyber CyberScore from UKCloud FAQs | UKCloud Ltd
-description: Frequently asked questions for XQ Cyber CyberScore from UKCloud
+title: CyberScore from UKCloud FAQs | UKCloud Ltd
+description: Frequently asked questions for CyberScore from UKCloud
 services: third-party
 author: Sue Highmoor
-reviewer:
-lastreviewed: 
-toc_rootlink: XQ Cyber CyberScore
+reviewer: George Smith
+lastreviewed: 13/11/2019
+toc_rootlink: CyberScore
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: XQ Cyber CyberScore from UKCloud FAQs
-toc_fullpath: XQ Cyber CyberScore/third-faq-cyberscore.md
+toc_title: CyberScore from UKCloud FAQs
+toc_fullpath: CyberScore/third-faq-cyberscore.md
 toc_mdlink: third-faq-cyberscore.md
 ---
 
-# XQ Cyber CyberScore from UKCloud FAQs
+# CyberScore from UKCloud FAQs
 
 <sup>*</sup> All links to CyberScore support documents will require you to log in.
 
@@ -23,11 +23,11 @@ toc_mdlink: third-faq-cyberscore.md
 
 ### What is CyberScore?
 
-CyberScore&trade; is a fully-automated security testing and rating service that scores a virtual machine’s cyber security posture and explains potential impacts. Results are presented in a range of reports and action plans that help customers rank and rate vulnerabilities and identify key remediations. You can run the service as often as required and CyberScore will show your progress over time.
+CyberScore&trade; is a fully-automated security testing and rating service, that scores a virtual machine’s cyber security posture and explains potential impacts. Results are presented in a range of reports and action plans that help customers rank and rate vulnerabilities and identify key remediations. You can run the service as often as required and CyberScore will show your progress over time.
 
 ### What is provided in the service?
 
-For further details on the service, and what is provided, see the [*XQ Cyber CyberScore Service Definition*](third-sd-cyberscore.md).
+For further details on the service, and what is provided, see the [*CyberScore from UKCloud Service Definition*](third-sd-cyberscore.md).
 
 ### Is there an SLA for this service?
 
@@ -49,7 +49,7 @@ You can deploy the CyberScore scanner on VMware (including UKCloud for VMware), 
 
 ### How do I configure the service?
 
-Once you’ve checked the prerequisites (see [*XQ Cyber CyberScore scanner deployment environment requirements*](third-ref-cyberscore-prereqs.md)), download the scanner template from the CyberScore portal, then install and configure the scanner. To help with this process there are [video tutorials](https://secure.cyberscore.com/support/scanner)<sup>*</sup> on the CyberScore Portal.
+Once you’ve checked the prerequisites (see [*CyberScore scanner deployment environment requirements*](third-ref-cyberscore-prereqs.md)), download the scanner template from the CyberScore portal, then install and configure the scanner. To help with this process there are [video tutorials](https://secure.cyberscore.com/support/scanner)<sup>*</sup> on the CyberScore Portal.
 
 ### What t-shirt size is required for the scanner?
 
@@ -79,9 +79,9 @@ You should use CyberScore as part of a strategy to ensure all systems are secure
 
 Yes, we have these sample reports available within our website:
 
-- [Example technical report](https://ukcloud.com/our-products/cyberscore/)
+- [Example technical report](https://ukcloud.com/wp-content/uploads/2019/03/tech-report-sample.pdf)
 
-- [Example Get Well plan](https://ukcloud.com/our-products/cyberscore/)
+- [Example Get Well plan](https://ukcloud.com/wp-content/uploads/2019/03/get-well-plan-sample.pdf)
 
 ### How often do you recommend I scan and analyse my networks?
 
@@ -101,21 +101,15 @@ Vulnerabilities are sorted into Application Patching, OS Patching, Misconfigurat
 
 ### How secure is my data with CyberScore?
 
-To minimise the risk to the client organisation, all vulnerability data is removed from a CyberScore scanner once the data has been successfully uploaded. Exposure of the CyberScore platform to insider threats is minimised by stringently limiting the number of XQ staff with any form of access to the live platform environment.
+To minimise the risk to the client organisation, all vulnerability data is removed from a CyberScore scanner once the data has been successfully uploaded. Exposure of the CyberScore platform to insider threats is minimised by stringently limiting the number of staff with any form of access to the live platform environment.
 
-All cryptographically-derived credentials, such as VPN and SSH certificates, are generated using strong cryptography, contain unique identifiers, and are signed by a central XQ certification authority with a limited period of validity.  These credentials can be immediately revoked using certificate revocation lists distributed to individual devices and endpoints.
+All cryptographically-derived credentials, such as VPN and SSH certificates, are generated using strong cryptography, contain unique identifiers, and are signed by a central certification authority with a limited period of validity.  These credentials can be immediately revoked using certificate revocation lists distributed to individual devices and endpoints.
 
 ## Billing
 
 ### How much does it cost?
 
-Using CyberScore is free and provides your CyberScore and high-level information.
-
-To unlock the full CyberScore data, sort vulnerabilities, generate or share your Get Well plans, patch reports and technical reports, you’ll be required to pay for CyberScore. Full pricing is available in the [3rd Party Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf).
-
-### How many credits will I need to buy?
-
-You'll need a credit for each IP address that is scanned. When clicking **analyse scan**, if you don't have enough credits for the number of IP addresses scanned, a pop up message will appear saying how many credits are needed and gives you the option for buying more credits.
+CyberScore requires an annual subscription, starting from £500. Full pricing for the packages on offer is detailed in the [*UKCloud 3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide).
 
 ### Is there a free trial?
 

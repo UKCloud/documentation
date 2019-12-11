@@ -4,7 +4,7 @@ description: Frequently asked questions for UKCloud for OpenShift
 services: openshift
 author: Matt Warner
 reviewer:
-lastreviewed: 20/07/2018 10:26:58
+lastreviewed: 08/07/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -153,6 +153,10 @@ We will happily work with customers during a trial period to integrate an extern
 ### How do I add extra capacity to my cluster?
 
 To add extra capacity to you cluster, you will need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We hope to provide portal integration to enable customers to be in control of this in the future.
+
+### How many persistent volumes can I claim/attach to each worker node?
+
+In line with current restrictions on the OpenStack service underpinning OpenShift, you can claim/attach 25 additional persistent volume claims (PVCs) to each worker node.
 
 ### Can I have integrated container logging deployed with the platform?
 

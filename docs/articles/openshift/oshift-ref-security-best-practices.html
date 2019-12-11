@@ -8,7 +8,7 @@
     <title>Security best practices for UKCloud for Openshift | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Security best practices for UKCloud for Openshift | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -120,7 +120,7 @@
 <h2 id="creating-and-deploying-vulnerable-container-images">Creating and deploying vulnerable container images</h2>
 <p>Just like traditional software packages, containers also run software, even if they are running that software within a self contained environment of a container. These containers can be built and run using vulnerable software packages/libraries. It is therefore considered good practice to do the following to ensure that you are not introducing vulnerable containers into your clusters:</p>
 <ol>
-<li><p>Only use base images from trusted sources, for example, Red Hat's container registry. Red Hat's containers on Red Hat's container registry are scanned for vulnerabilities and given a security rating. Docker Hub also provides some certified containers that are built using best practices, tested and validated against the Docker Enterprise Edition platform and APIs, pass Dockers security requirements, and are collaboratively supported by Docker and the company responsible for the container. You can also build base containers from scratch using only the software packages you need for your workload. However, building containers from scratch and using just enough of the software packages you need to run for your workload does not guarantee that your base image is going to be free of all possible vulnerabilities as it is possible that some of those software packages could contain vulnerabilities.</p>
+<li><p>Only use base images from trusted sources, such as Red Hat's container registry, that are scanned for vulnerabilities and given a security rating. Docker Hub also provides some certified containers that are built using best practices, tested and validated against the Docker Enterprise Edition platform and APIs, pass Docker's security requirements, and are collaboratively supported by Docker and the company responsible for the container. You can also build base containers from scratch using only the software packages you need for your workload. However, building containers from scratch and using just enough of the software packages you need to run for your workload does not guarantee that your base image is going to be free of all possible vulnerabilities as it is possible that some of those software packages could contain vulnerabilities.</p>
 </li>
 <li><p>Scan your containers with container vulnerability scanning software as part of your build or deployment process. There are numerous tools available to scan containers. These tools give you a security rating on your final container once it's been created from a secure base container. There are a number of tools available to do this, the following is a small sample we're aware of:</p>
 <ul>

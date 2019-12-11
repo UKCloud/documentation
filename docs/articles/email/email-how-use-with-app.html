@@ -8,7 +8,7 @@
     <title>How to use UKCloud's email service with your application | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use UKCloud's email service with your application | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -118,7 +118,7 @@
 <p>A mailbox will be needed for each email address you want to be able to send from, or receive to.</p>
 <h2 id="configuring-a-mailbox-for-use-with-an-application">Configuring a mailbox for use with an application</h2>
 <p>This section takes you through the process of configuring a mailbox on UKCloud's Email and Collaboration platform for use with an application.</p>
-<p>The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <a href="https://mail.skyscapecs.net:7071">https://mail.skyscapecs.net:7071</a></p>
+<p>The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <a href="https://mail.ukcloud.com:9071/zimbraAdmin/">https://mail.ukcloud.com:9071/zimbraAdmin/</a></p>
 <p>Create a new mailbox --- configure the account name and password as you normally would, but make sure you <strong>don't</strong> choose the option to force a password change:</p>
 <p><img src="images/email-console-new-account.png" alt="Create mailbox"></p>
 <p>Configure the remaining options in the New Account wizard to suit, then click <strong>Finish</strong> to complete the mailbox creation.</p>
@@ -126,7 +126,7 @@
 <h3 id="sending-outbound-email">Sending outbound email</h3>
 <p>To send outbound email, your application needs to support SMTP authentication and TLS encryption. Provided this is the case, simply configure the following settings in your application:</p>
 <ul>
-<li><p>SMTP Server/Mail relay host: mail.skyscapecs.net</p>
+<li><p>SMTP Server/Mail relay host: mail.ukcloud.com</p>
 </li>
 <li><p>Port number: 465</p>
 </li>
@@ -145,7 +145,7 @@
 <p>To receive inbound email, your application needs to support POP3 or IMAP4 over TLS.</p>
 <p>Provided this is the case, simply configure the following settings in your application:</p>
 <ul>
-<li><p>Mailbox server: mail.skyscapecs.net</p>
+<li><p>Mailbox server: mail.ukcloud.com</p>
 </li>
 <li><p>Protocol: POP3S or IMAPS</p>
 </li>
@@ -179,7 +179,7 @@
 <pre><code class="lang-none">[smtp]
 accept = 25
 client = yes
-connect = mail.skyscapecs.net:465
+connect = mail.ukcloud.com:465
 ;delay = yes
 </code></pre>
 <p>You can get full documentation, how to and FAQ guides from the stunnel website.</p>

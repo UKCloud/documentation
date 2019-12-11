@@ -8,7 +8,7 @@
     <title>How to create a vApp network | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a vApp network | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,136 +96,144 @@
 <h2 id="overview">Overview</h2>
 <p>In addition to virtual data centre (VDC) networking, you can create individual vApp networks to have even greater control over your network infrastructure.</p>
 <p>vApp networks enable you to create smaller networks within individual vApps that have a vApp edge, similar to the edge gateway on your VDC. Although a vApp edge isn't as feature rich as a VDC edge, it enables you to create firewall and NAT rules to separate your VDC networks from your vApp virtual machines (VMs). This means you can create some quite complex networks to satisfy application needs.</p>
-<p>The example of a vApp network, below, shows the vApp edge.</p>
+<p>The vApp network diagram below shows the vApp edge.</p>
 <p><img src="images/vmw-vapp-network.png" alt="vApp network"></p>
+<h2 id="creating-a-vapp-network">Creating a vApp network</h2>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You cannot create vApp networks in the new vCloud Director 9.1 tenant portal. If your environment uses vCloud Director 9.1, you must first switch to the vCloud Director web console. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
+<p>As you're going to be changing network settings, all VMs within the vApp must be powered off.</p>
 </div>
-<h2 id="creating-a-vapp-network">Creating a vApp network</h2>
-<p>There are two ways to create a vApp network within vCloud Director:</p>
-<ul>
-<li><p><a href="#creating-a-vapp-network-during-vapp-creation"><em>During vApp creation</em></a></p>
-</li>
-<li><p><a href="#creating-a-vapp-network-after-vapp-creation"><em>After vApp creation</em></a></p>
-</li>
-</ul>
-<h3 id="creating-a-vapp-network-during-vapp-creation">Creating a vApp network during vApp creation</h3>
 <ol>
-<li><p>Follow the steps for creating a new vApp as shown in <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a>.</p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains your vApp.</p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
 </li>
-<li><p>When you get to the <em>Configure Virtual Machines</em> page, where you select the network you want your VMs to connect to, from the <strong>Network</strong> list, select <strong>Add Network</strong>.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>The <strong>Add Network</strong> option is at the bottom of the <strong>Network</strong> list, so you may have to scroll down the list to find it.</p>
-</div>
-<p><img src="images/vmw-vcd-vapp-add-network.png" alt="Add Network option"></p>
+<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
+<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
 </li>
-<li><p>On the <em>Network Specification</em> page of the <em>New vApp Network Wizard</em>, fill out the fields as required for your network then click <strong>Next</strong>.</p>
-<p>Some options are pre-populated by default; you can change them if you want.</p>
-<p><img src="images/vmw-vcd-vapp-network-specification.png" alt="Network Specification page of New vApp Network Wizard"></p>
+<li><p>In the card for your vApp, select <strong>Actions</strong>, then <strong>Add network</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-vapp-network.png" alt="Add network menu option"></p>
 </li>
-<li><p>On the <em>General</em> page, enter a <strong>Network name</strong> and <strong>Description</strong>, then click <strong>Next</strong> and <strong>Finish</strong>.</p>
-<p>Your newly created vApp network is now included in the <strong>Network</strong> list.</p>
-<p><img src="images/vmw-vcd-vapp-network-general.png" alt="General page"></p>
+<li><p>In the <em>Add Network</em> dialog box, select <strong>vApp Network</strong>.</p>
+<p><img src="images/vmw-vcd-add-network-vapp.png" alt="Add vApp Network option"></p>
 </li>
-<li><p>Your newly created vApp network is now included in the <strong>Network</strong> list.</p>
-<p><img src="images/vmw-vcd-vapp-new-network.png" alt="Newly created vApp network"></p>
+<li><p>Enter a <strong>Name</strong> and <strong>Description</strong> for the network.</p>
 </li>
-<li><p>If you want to connect multiple VMs within the vApp to the new vApp network, go through and make sure they will all connect to it. When you're done, click <strong>Next</strong>.</p>
+<li><p>In the <em>Address and DNS</em> section, fill out the fields as required for your network.</p>
 </li>
-<li><p>On the <em>Configure Networking</em> page, to connect the vApp network to an external VDC network, from the <strong>Connection</strong> list, select the VDC network that you want to connect to.</p>
-</li>
-<li><p>In the <strong>Routing</strong> column, select whether to apply <strong>NAT</strong> and <strong>Firewall</strong> rules to the vApp edge (you can always change this later), then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-vcd-vapp-vdc-network.png" alt="Configure Networking page of New vApp wizard"></p>
-</li>
-<li><p>On the <em>Ready to Complete</em> page, review your configuration, then click <strong>Finish</strong> to deploy the vApp.</p>
+<li><p>When you're done, click <strong>Add</strong>.</p>
 </li>
 </ol>
-<h3 id="creating-a-vapp-network-after-vapp-creation">Creating a vApp network after vApp creation</h3>
-<p>If you've created a vApp that is connected to a VDC network, and now you want to convert it to a vApp with an internal network:</p>
+<h2 id="connecting-a-vm-to-a-vapp-network">Connecting a VM to a vApp network</h2>
+<p>If your vApp is already populated with VMs that are connected to a VDC network, you may want to move them over to the vApp network.</p>
+<p>To change the network a VM connects to:</p>
 <ol>
-<li><p>On the <strong>My Cloud</strong> tab, double-click the vApp to open it.</p>
+<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
 </li>
-<li><p>As you're going to be changing network settings, all VMs within the vApp must be powered off, so, if necessary, on the <strong>Virtual Machines</strong> tab, right-click each VM and select <strong>Power Off</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-vm-power-off.png" alt="Power Off menu option"></p>
-</li>
-<li><p>Select the <strong>Networking</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-vapp-networking.png" alt="vApp Networking tab"></p>
-</li>
-<li><p>Click the green <strong>+</strong> icon to add a new network.</p>
-<p><img src="images/vmw-vcd-ico-add-vapp-network.png" alt="Add vApp network icon"></p>
-</li>
-<li><p>On the <em>Network Type</em> page of the <em>New vApp Network Wizard</em>, select <strong>vApp network</strong> then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-vcd-vapp-network-type.png" alt="Network Type page of New vApp Network Wizard"></p>
-</li>
-<li><p>On the <em>Network Specification</em> page of the <em>New vApp Network Wizard</em>, fill out the fields as required for your network then click <strong>Next</strong>.</p>
-<p>Some options are pre-populated by default; you can change them if you want.</p>
-<p><img src="images/vmw-vcd-vapp-network-specification2.png" alt="Network Specification page of New vApp Network Wizard"></p>
-</li>
-<li><p>On the <em>General</em> page, enter a <strong>Network name</strong> and <strong>Description</strong>, then click <strong>Next</strong> and <strong>Finish</strong>.</p>
-<p>Your newly created vApp network is now included in the <strong>Network</strong> list.</p>
-<p><img src="images/vmw-vcd-vapp-network-general2.png" alt="General page"></p>
-</li>
-<li><p>To connect the vApp network to an external VDC network, from the <strong>Connection</strong> list, select the VDC network that you want to connect to.</p>
-</li>
-<li><p>In the <strong>Routing</strong> column, select whether to apply <strong>NAT</strong> and <strong>Firewall</strong> rules to the vApp edge (you can always change this later), then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-vcd-vapp-vdc-network2.png" alt="vApp Configure Networking page"></p>
-</li>
-<li><p>When you're done, click <strong>Apply</strong> at the bottom of the page.</p>
-<p><img src="images/vmw-vcd-btn-vapp-networking-apply.png" alt="Apply button"></p>
-</li>
-<li><p>If your vApp is already populated with VMs that are connected to a VDC network, you may want to move them over to the vApp network.</p>
-</li>
-<li><p>To change the network a VM connects to, on the <strong>vApp Diagram</strong> tab, right-click the VM and select <strong>Properties</strong>.</p>
-</li>
-<li><p>In the <em>Virtual Machine Properties</em> dialog box, select the <strong>Hardware</strong> tab.</p>
-<p><img src="images/vmw-vcd-vm-properties.png" alt="Hardware tab of Virtual Machine Properties dialog box"></p>
-</li>
-<li><p>In the <em>NICs</em> section, from the <strong>Networks</strong> list, select the vApp network to connect the VM to.</p>
-<p><img src="images/vmw-vcd-vm-properties-network.png" alt="Select network for VM"></p>
+<li><p>Click each VM, expand <em>Hardware</em> and in the <em>NICs</em> section select the vApp network from the <strong>Network</strong> list.</p>
+<p><img src="images/vmw-vcd-vm-vapp-network.png" alt="VM connected to a vApp network"></p>
 </li>
 <li><p>If you want to dual-home your VM, click the <strong>Add</strong> button to add a second network.</p>
 </li>
-<li><p>When you're done, click <strong>OK</strong>.</p>
-<p>You can go back to the VM properties to see the new IP address assigned to the VM.</p>
+<li><p>When you're done, click <strong>Save</strong>.</p>
+</li>
+<li><p>You can go back to the VM hardware properties to see the new IP address assigned to the VM.</p>
 </li>
 </ol>
 <h2 id="viewing-and-adjusting-vapp-network-settings">Viewing and adjusting vApp network settings</h2>
 <p>When you've created your vApp network and assigned VMs to it, you may want to review the vApp network settings and adjust them if needed.</p>
 <ol>
-<li><p>On the <strong>My Cloud</strong> tab, open the vApp you want to work with then select the <strong>Networking</strong> tab.</p>
-<p><img src="images/vmw-vcd-vapp-vdc-network2.png" alt="vApp Configure Networking page"></p>
+<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 </li>
-<li><p>Right-click the vApp network and select <strong>Configure Services</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-vapp-configure-services.png" alt="Configure Services menu option"></p>
+<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
 </li>
-<li><p>You can now view the default network services and change them if necessary.</p>
+<li><p>Select the <strong>Networks</strong> tab.</p>
+</li>
+<li><p>Click your vApp network to view its network settings.</p>
+</li>
+<li><p>The <strong>General</strong> tab displays general network settings. Click <strong>Edit</strong> to adjust these settings.</p>
+</li>
+<li><p>The <strong>IP Management</strong> tab displays the IP settings for the network, including static pool and DNS and DHCP. Click <strong>Edit</strong> to adjust these settings.</p>
+<p>For more information about enabling DHCP for your vApp network, see <a href="#enabling-dhcp">*Enabling DHCP</a>.</p>
+</li>
+<li><p>The <strong>Services</strong> tab enables you to set up firewall and NAT rules for your network. For more information, see <a href="#creating-firewall-rules"><em>Creating firewall rules</em></a> and <a href="#creating-nat-rules"><em>Creating NAT rules</em></a>.</p>
+</li>
+<li><p>The <strong>Routing</strong> tab enables you to create static routes for your network. For more information, see <a href="#creating-static-routes"><em>Creating static routes</em></a>.</p>
 </li>
 </ol>
 <h3 id="enabling-dhcp">Enabling DHCP</h3>
-<p>DHCP isn't enabled by default. To enable it, on the <em>DHCP</em> page of the <em>Configure Services</em> dialog box, select the <strong>Enable DHCP</strong> check box, enter appropriate information then click <strong>OK</strong>.</p>
-<p><img src="images/vmw-vcd-vapp-configure-services-dhcp.png" alt="DHCP page of Configure Services dialog box"></p>
+<p>DHCP isn't enabled by default.</p>
+<p>To enable DHCP:</p>
+<ol>
+<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
+</li>
+<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
+</li>
+<li><p>Select the <strong>Networks</strong> tab.</p>
+</li>
+<li><p>Click your vApp network to view its network settings.</p>
+</li>
+<li><p>Select the <strong>IP Management</strong> tab then <strong>DHCP</strong>.</p>
+</li>
+<li><p>Click <strong>Edit</strong>.</p>
+<p><img src="images/vmw-vcd-btn-vapp-network-dhcp-edit.png" alt="Edit button for vApp network DHCP"></p>
+</li>
+<li><p>In the <em>Edit network</em> dialog box, select the <strong>Enabled</strong> option.</p>
+</li>
+<li><p>Enter <strong>IP Pool</strong> and lease information for your DHCP addresses then click <strong>Save</strong>.</p>
+<p><img src="images/vmw-vcd-vapp-network-dhcp.png" alt="Edit network settings for DHCP"></p>
+</li>
+</ol>
 <p>For more information about DHCP, see <a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a>.</p>
 <h3 id="creating-firewall-rules">Creating firewall rules</h3>
 <p>There will be a rule in place to allow any traffic to traverse the firewall. You can amend or delete this rule, or create new rules.</p>
-<p><img src="images/vmw-vcd-vapp-configure-services-firewall.png" alt="Firewall page of Configure Services dialog box"></p>
-<p>On the <em>Firewall</em> page of the <em>Configure Services</em> dialog box, select the rule you want to edit, then click <strong>Edit</strong></p>
+<p>To create a firewall rule:</p>
+<p><img src="images/vmw-vcd-vapp-network-firewall.png" alt="vApp network firewall rules"></p>
+<ol>
+<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
+</li>
+<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
+</li>
+<li><p>Select the <strong>Networks</strong> tab.</p>
+</li>
+<li><p>Click your vApp network to view its network settings.</p>
+</li>
+<li><p>Select the <strong>Services</strong> tab.</p>
+</li>
+<li><p>Click <strong>Edit</strong>.</p>
+<p><img src="images/vmw-vcd-btn-vapp-network-firewall-edit.png" alt="Edit button for vApp network firewall rules"></p>
+</li>
+<li><p>On the <strong>Firewall</strong> tab, click <strong>Add</strong>, specify the details for the firewall rule then click <strong>Save</strong>.</p>
+<p><img src="images/vmw-vcd-vapp-network-firewall-add.png" alt="Add firewall rule"></p>
+</li>
+</ol>
 <p>For more about firewall rules, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <h3 id="creating-nat-rules">Creating NAT rules</h3>
-<p>NAT rules, enabled by default, enable mapping between internal VM interfaces and external IP addresses. To edit the mapping rules for a VM:</p>
+<p>NAT rules, enabled by default, enable mapping between internal VM interfaces and external IP addresses.</p>
+<p>To edit the mapping rules for a VM:</p>
 <ol>
-<li><p>On the <em>NAT</em> page of the <em>Configure Services</em> dialog box, select the rule you want to edit and click <strong>Edit</strong>.</p>
-<p><img src="images/vmw-vcd-vapp-configure-services-nat.png" alt="NAT page of Configure Services dialog box"></p>
+<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 </li>
-<li><p>In the <em>Edit IP Translation Rule</em> dialog box, select the VM interface for which you want to edit the NAT rule.</p>
+<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
+</li>
+<li><p>Select the <strong>Networks</strong> tab.</p>
+</li>
+<li><p>Click your vApp network to view its network settings.</p>
+</li>
+<li><p>Select the <strong>Services</strong> tab.</p>
+</li>
+<li><p>Click <strong>Edit</strong>.</p>
+<p><img src="images/vmw-vcd-btn-vapp-network-firewall-edit.png" alt="Edit button for vApp network NAT rules"></p>
+</li>
+<li><p>On the <strong>NAT</strong> tab, click <strong>Add</strong>.</p>
+</li>
+<li><p>In the <strong>VM Interface</strong> field, click the edit (pencil) icon, then select the VM interface for which you want to add the NAT rule.</p>
 </li>
 <li><p>From the <strong>Mapping Mode</strong> list, select the mapping mode.</p>
 <p>The default mapping is <strong>Automatic</strong>. You can change this to <strong>Manual</strong>, in which case, enter an <strong>External IP</strong> address to which the VM can map.</p>
+<p><img src="images/vmw-vcd-vapp-network-nat-add.png" alt="Add NAT rule"></p>
 </li>
-<li><p>When you're done, click <strong>OK</strong>.</p>
-<p>The external IP address will be on the same subnet as the VDC network that connects to the vApp Edge.</p>
-<p><img src="images/vmw-vcd-vapp-ip-translation-rule.png" alt="Edit IP Translation Rule dialog box"></p>
+<li><p>When you're done, click <strong>Save</strong>.</p>
+<p>The external IP address will be on the same subnet as the VDC network that connects to the vApp edge.</p>
 </li>
 </ol>
 <p>For more information about NAT rules, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
@@ -242,20 +250,31 @@
 </ul>
 <p>To add a static route:</p>
 <ol>
-<li><p>On the <em>Static Routing</em> page of the <em>Configure Services</em> dialog box, click <strong>Add</strong></p>
+<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
+</li>
+<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
+</li>
+<li><p>Select the <strong>Networks</strong> tab.</p>
+</li>
+<li><p>Click the first vApp network to view its network settings.</p>
+</li>
+<li><p>Select the <strong>Routing</strong> tab.</p>
+</li>
+<li><p>Click <strong>Add</strong></p>
+<p><img src="images/vmw-vcd-btn-vapp-network-static-route-add.png" alt="Add button for vApp network static route"></p>
 </li>
 <li><p>In the <em>Add Static Route</em> dialog box, enter a <strong>Name</strong> for the static route.</p>
 </li>
 <li><p>Enter the following details:</p>
 <ul>
-<li><p><strong>Network</strong> - The address of the first vApp network to which you're adding a static route</p>
+<li><p><strong>Network CIDR</strong> - The address of the first vApp network to which you're adding a static route</p>
 </li>
 <li><p><strong>Next Hop IP</strong> - The external IP address of that vApp network's router</p>
 </li>
 </ul>
-<p><img src="images/vmw-vcd-vapp-static-route.png" alt="Add Static Route dialog box"></p>
+<p><img src="images/vmw-vcd-vapp-network-static-route.png" alt="Add Static Route dialog box"></p>
 </li>
-<li><p>When you're done, click <strong>OK</strong>.</p>
+<li><p>When you're done, click <strong>Save</strong>.</p>
 </li>
 <li><p>Repeat for the second vApp network.</p>
 </li>
@@ -320,10 +339,21 @@
 <h2 id="vapp-fencing">vApp fencing</h2>
 <p>Fencing a vApp allows identical VMs within different vApps to be powered on without conflict, by isolating the MAC and IP addresses of the VMs. This feature is particularly useful if you are copying vApps or creating catalog images of vApps where these details can't be altered.</p>
 <p>vApp fencing can be done during or after vApp creation. It is done when the VMs within the vApp sit on the VDC network, rather than on their own vApp network.</p>
-<p>To apply vApp fencing during vApp creation, select the <strong>Fence vApp</strong> check box on the <em>Configure Networking</em> page of the <em>New vApp</em> wizard.</p>
-<p><img src="images/vmw-vcd-vapp-fence-new.png" alt="Fence vApp check box in New vApp wizard"></p>
-<p>If you're converting a vApp after creation, on the <strong>My Cloud</strong> tab, open the vApp you want to fence, then, on the <strong>Networking</strong> tab, select the <strong>Fence vApp</strong> checkbox. Make sure you click <strong>Apply</strong> when you're done to save any changes.</p>
-<p><img src="images/vmw-vcd-vapp-fence-convert.png" alt="Fence vApp check box on vApp Networking tab"></p>
+<p>To apply vApp fencing during vApp creation:</p>
+<ol>
+<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
+</li>
+<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
+</li>
+<li><p>Select the <strong>Networks</strong> tab.</p>
+</li>
+<li><p>In the <em>vApp Fencing</em> section, click <strong>Edit</strong>.</p>
+<p><img src="images/vmw-vcd-btn-vapp-network-fence.png" alt="Edit button for vApp network fencing"></p>
+</li>
+<li><p>Select the <strong>Fence vApp</strong> option then click <strong>OK</strong>.</p>
+<p><img src="images/vmw-vcd-vapp-fencing.png" alt="Edit vApp Fencing dialog box"></p>
+</li>
+</ol>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 

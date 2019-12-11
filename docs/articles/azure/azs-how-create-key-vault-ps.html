@@ -8,7 +8,7 @@
     <title>How to create a key vault using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a key vault using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,13 +91,13 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-key-vault-in-azure-stack-with-powershell">How to create a key vault in Azure Stack with PowerShell</h1>
+<h1 id="how-to-create-a-key-vault-in-azure-stack-hub-with-powershell">How to create a key vault in Azure Stack Hub with PowerShell</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Key Vault in Azure Stack helps safeguard cryptographic keys and secrets that cloud applications and services use. By using Key Vault, you can encrypt keys and secrets.</p>
-<p>The following process shows you how to setup a vault within Azure Stack's Key Vault, store a secret in the vault and how to extract the secret.</p>
+<p>Key Vault in Azure Stack Hub helps safeguard cryptographic keys and secrets that cloud applications and services use. By using Key Vault, you can encrypt keys and secrets.</p>
+<p>The following process shows you how to setup a vault within Azure Stack Hub's Key Vault, store a secret in the vault and how to extract the secret.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack Hub user's PowerShell environment</a>.</p>
 <h2 id="creating-a-new-key-vault">Creating a new key vault</h2>
 <h3 id="declare-variables">Declare variables</h3>
 <p>Enter details below to provide values for the variables in the scripts in this article:</p>
@@ -112,7 +112,7 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
@@ -148,7 +148,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Select resource group
@@ -165,7 +165,7 @@ New-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName -Location $
 $SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="result" style="display: inline;">MySecretValue</output>' -AsPlainText -Force
 $SecretName = "<output form="secretname" name="result" style="display: inline;">MySecret</output>"
 
-# Store the secret in Azure Stack Key Vault
+# Store the secret in Azure Stack Hub Key Vault
 $Secret = Set-AzureKeyVaultSecret -VaultName $VaultName -Name $SecretName -SecretValue $SecretValue
 
 # Display URL

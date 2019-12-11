@@ -3,8 +3,8 @@ title: UKCloud for OpenStack | UKCloud Ltd
 description: Home page for OpenStack
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 
+reviewer: Sue Highmoor
+lastreviewed: 20/09/2019
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -35,14 +35,12 @@ First, take a look at our [Getting Started Guide](ostack-gs.md) to learn the bas
 <div class="row">
   <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/305934797?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-      </iframe>
+      <iframe src="https://www.youtube.com/embed/XcQYz--CNiM" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://vimeo.com/305934797">OpenStack Horizon Dashboard Overview</a></p>
+    <p><a href="https://www.youtube.com/watch?v=XcQYz--CNiM">OpenStack Horizon Dashboard Overview</a></p>
   </div>
   <div class="col-md-6"></div>
 </div>
-<script src="https://player.vimeo.com/api/player.js"></script>
 
 ## Other resources
 

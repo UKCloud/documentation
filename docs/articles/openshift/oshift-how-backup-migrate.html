@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to backup, restore and migrate OpenShift resources | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to backup, restore and migrate OpenShift resources | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-backup-migrate.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-backup-restore-and-migrate-openshift-resources">How to backup, restore and migrate OpenShift resources</h1>
+
+<h3 id="overview">Overview</h3>
+<p>Velero is an open-source tool set that provides the ability to backup and restore Kubernetes resources. The GitHub repository is available at: <a href="https://github.com/vmware-tanzu/velero">https://github.com/vmware-tanzu/velero</a>.</p>
+<p>This guide outlines how to:</p>
+<ul>
+<li><p>Install Velero in your cluster (using our Elastic Cloud Storage product as the backup location)</p>
+</li>
+<li><p>Backup and restore namespaces to the same cluster</p>
+</li>
+<li><p>Restore a namespace to a new cluster</p>
+</li>
+</ul>
+<p>Velero offers a tool called restic that enables backup of persistent volume data regardless of provider, however this guide doesn't cover restic as the tool is considered beta-quality. If you'd like to test it you can find more on restic here: <a href="https://velero.io/docs/v1.1.0/restic/">https://velero.io/docs/v1.1.0/restic/</a>.</p>
+<h3 id="installing-velero">Installing Velero</h3>
+<ol>
+<li><p>Download Velero from <a href="https://github.com/vmware-tanzu/velero/releases">https://github.com/vmware-tanzu/velero/releases</a>.</p>
+<p>You can deploy Velero onto OpenShift with the <code>velero install</code> command. To deploy Velero, you'll need compatible object storage: <a href="https://velero.io/docs/v1.1.0/support-matrix/">https://velero.io/docs/v1.1.0/support-matrix/</a>. In this article we use UKCloud's Cloud Storage product.</p>
+</li>
+<li><p>After logging in to the cluster via the CLI, run the following command to configure a <code>yaml</code> file that you can then edit and use to create the Velero deployment in the cluster:</p>
+<p><code>velero install --bucket velero-test --provider aws --secret-file ./secret-file.txt --dry-run -o yaml &gt; deploy-velero.yml</code></p>
+<p><code>secret-file.txt</code> contains the access and secret key for the ECS bucket in the following format:</p>
+<pre><code>[default]
+aws_access_key_id=&lt;key&gt;
+aws_secret_access_key=&lt;key&gt;
+</code></pre>
+</li>
+<li><p>As you're not using AWS at this point, edit the <code>deploy-velero.yaml</code> file, find the <code>BackupStorageLocation</code> and add <code>s3Url</code> and <code>region</code> to the config key mapping. For example:</p>
+<pre><code>- apiVersion: velero.io/v1
+  kind: BackupStorageLocation
+  metadata:
+    creationTimestamp: null
+    labels:
+      component: velero
+    name: default
+    namespace: velero
+  spec:
+    config: {&quot;s3Url&quot;: &quot;https://cas.cor00005.ukcloud.com&quot;,&quot;region&quot;: &quot;us-east-1&quot;}
+    objectStorage:
+      bucket: velero-test
+      prefix: &quot;&quot;
+    provider: aws
+</code></pre>
+</li>
+<li><p>Run:</p>
+<p><code>oc create -f deploy-velero.yml</code></p>
+<p>This deploys a Velero project and the required resources to backup and restore resources in your cluster (excluding persistent volume data).</p>
+</li>
+</ol>
+<h3 id="backing-up-and-restoring-resources">Backing up and restoring resources</h3>
+<p>For the purposes of the example in this article, we tested restoring a deleted namespace, called <code>backup-test</code>, that contains a ruby example build that uses S2I. This application uses a route and no persistent storage.</p>
+<p>To create a backup of the namespace:</p>
+<ol>
+<li><p>Run:</p>
+<p><code>velero backup create test1 --include-namespaces backup-test --wait</code></p>
+</li>
+<li><p>Once you've run this command you can check the backup exists and get some information on it with the following commands:</p>
+<pre><code>velero get backups
+
+velero describe backup test1
+</code></pre>
+</li>
+<li><p>After confirming that the backup exists and was completed successfully you're ready to restore the namespace. To restore the namespace, run the following command:</p>
+<p><code>velero create restore restore1 --from-backup test1</code></p>
+</li>
+<li><p>This recreates the namespace and all resources within it. If you watch the namespace however, you'll see that not everything is recreated correctly. In our example we have a ruby-example build that pulls a GitHub repository and builds an image and deployment from this. The first thing we notice is that a new build is triggered, and it goes directly into pending state. The error message in events is: <code>'MountVolume.SetUp failed for volume &quot;builder-dockercfg-9589h-push&quot; : secrets &quot;builder-dockercfg-9589h&quot; not found'</code>. The problem appears to be that the build is referencing the secret that the builder service account had in the original namespace. However, when the namespace is restored, the builder service account generates a new docker secret. To fix this you'll need to cancel the build, delete the service account to allow it to be recreated and run the build again. In our example, the commands to achieve this are:</p>
+<pre><code>oc cancel-build ruby-ex-1
+
+oc delete build ruby-ex-1
+
+oc delete sa builder
+
+oc start-build ruby-ex
+</code></pre>
+</li>
+<li><p>There may be extra steps needed to restore your namespaces depending on the resources within them. We recommend that you test the restores and document the process required to get it back in a working state.</p>
+</li>
+</ol>
+<h3 id="migrating-resources">Migrating resources</h3>
+<p>Velero also offers the ability to link multiple clusters to the same object storage and migrate resources/namespaces across. All that you need to do is deploy Velero into your second cluster and set the same bucket as its <code>BackupStorageLocation</code>. Backups should then be synched and be restorable into the new cluster.</p>
+<p>For example, to migrate the <code>backup-test</code> namespace from our previous example into a new cluster in a different region:</p>
+<ol>
+<li><p>Log into the new cluster via the CLI on your local machine:</p>
+<p><code>oc login $cluster_url --token=$api_token</code></p>
+</li>
+<li><p>Follow the installation steps to create your deploy file and run:</p>
+<p><code>oc create -f deploy-velero.yml</code></p>
+</li>
+<li><p>Run the following to ensure that the namespaces are connected to the same backup location (you may need to allow a minute or so for backups to sync to your new cluster):</p>
+<p><code>velero get backups</code></p>
+</li>
+<li><p>You should see any backups taken in your first cluster that are in the Object Storage bucket. If you can see them then you will be able to restore them into your new cluster. In our example we have the <code>test1</code> backup from earlier. To restore this backup to the new cluster:</p>
+<p><code>velero create restore migration1 --from-backup test1</code></p>
+</li>
+<li><p>As previously, we'll have to sort out the issue with the builder account's secret. Once this is resolved, we'll have the application running in our new cluster. In our example, we have a route unique to the domain of the cluster, so we need to delete the route and expose the service in the new cluster to create a route pointing to the right DNS record. For any production applications with a route, rather than changing the route itself, you would want to reconfigure your DNS to point to the new cluster IP.</p>
+</li>
+</ol>
+<h3 id="further-information">Further information</h3>
+<p>For further information, see the Velero documentation at:</p>
+<p><a href="https://velero.io/docs/v1.1.0/">https://velero.io/docs/v1.1.0/</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

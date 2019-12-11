@@ -8,7 +8,7 @@
     <title>Portal permissions | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Portal permissions | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -136,12 +136,11 @@
 </tbody>
 </table>
 <h2 id="permissions-for-support">Permissions for Support</h2>
-<p>Support Permissions dictate whether a user can view and raise support tickets, and whether they can view other users support tickets.</p>
+<p>Support permissions dictate whether a user can view other users support tickets.</p>
 <table>
 <thead>
 <tr>
 <th> </th>
-<th>Create</th>
 <th>Read</th>
 <th>Update</th>
 <th>All</th>
@@ -150,14 +149,12 @@
 <tbody>
 <tr>
 <td><strong>User support tickets</strong></td>
-<td>Can log their own support tickets in their name.</td>
 <td>Can view their own support tickets.</td>
 <td>Can update their own support tickets.</td>
 <td>All of the above.</td>
 </tr>
 <tr>
 <td><strong>Account support tickets</strong></td>
-<td>Can log their own support tickets.</td>
 <td>Can view all tickets logged by users across that account.</td>
 <td>Can update anyone’s support ticket across that account.</td>
 <td>All of the above.</td>
@@ -179,8 +176,8 @@
 <li><p>Console Only</p>
 </li>
 </ul>
-<p>You can find further details of these roles in Chapter 11 of the vCloud Director Administrator's Guide.</p>
-<p>In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API - no GUI access.</p>
+<p>You can find further details of these roles in the <a href="https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html">vCloud Director Administrator's Guide</a>.</p>
+<p>In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API, with no GUI access.</p>
 <h2 id="permissions-for-cloud-storage">Permissions for Cloud Storage</h2>
 <p>Users need to be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. The user will also be able to see consumption data for namespaces and buckets.</p>
 <h2 id="permissions-for-ukcloud-for-openstack">Permissions for UKCloud for OpenStack</h2>

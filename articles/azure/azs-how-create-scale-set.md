@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual machine scale set using the UKCloud Azure Stack portal | UKCloud Ltd
+title: How to create a virtual machine scale set using the UKCloud Azure Stack Hub portal | UKCloud Ltd
 description: Provides help for creating a virtual machine scale set on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
@@ -16,19 +16,19 @@ toc_fullpath: Users/How To/azs-how-create-scale-set.md
 toc_mdlink: azs-how-create-scale-set.md
 ---
 
-# How to create a virtual machine scale set using the UKCloud Azure Stack portal
+# How to create a virtual machine scale set using the UKCloud Azure Stack Hub portal
 
 ## Overview
 
-Virtual machine scale sets (VMSS) in Azure Stack are a compute resource that you can use to deploy and manage identical VMs. All virtual machine instances in a scale set are configured in the same way and do not require any provisioning beforehand.
+Virtual machine scale sets (VMSS) in Azure Stack Hub are a compute resource that you can use to deploy and manage identical VMs. All virtual machine instances in a scale set are configured in the same way and do not require any provisioning beforehand.
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ## Creating a new virtual machine scale set
 
-1. Log in to the Azure Stack portal.
+1. Log in to the Azure Stack Hub portal.
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -51,14 +51,14 @@ To complete the steps in this article, you must have appropriate access to a sub
     - **Operating system disk image** – The operating system disk image for the virtual machines in the scale set.
 
         > [!WARNING]
-        > CentOS 7.2 is currently unsupported on Azure Stack. For more information, see [here](https://docs.microsoft.com/en-gb/azure-stack/operator/azure-stack-release-notes-known-issues-1904#virtual-machine-scale-set).
+        > CentOS 7.2 is currently unsupported on Azure Stack Hub. For more information, see [here](https://docs.microsoft.com/en-gb/azure-stack/operator/azure-stack-release-notes-known-issues-1904#virtual-machine-scale-set).
         > ![CentOS 7.2 is currently unsupported](images/azs-browser-scale-set-unsupported-operating-systems.png)
 
     - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
     - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-    - **Location** - This will be frn00006, which is the Azure Stack region.
+    - **Location** - This will be frn00006, which is the Azure Stack Hub region.
 
     - **Username** – Admin username for the virtual machines.
 
@@ -107,7 +107,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 ## Modifying the instance count of your scale set
 
 > [!NOTE]
-> Auto-scaling is currently unsupported on Azure Stack.
+> Auto-scaling is currently unsupported on Azure Stack Hub.
 
 1. In the blade for the scale set, select **Scaling** under *Settings*.
 
