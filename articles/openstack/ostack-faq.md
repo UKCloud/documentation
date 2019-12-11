@@ -4,7 +4,7 @@ description: Frequently asked questions for UKCloud for OpenStack
 services: openstack
 author: Matt Warner
 reviewer: stevedicko
-lastreviewed: 16/08/2019 15:17:17
+lastreviewed: 11/12/2019 15:17:17
 toc_rootlink: FAQs
 toc_sub1:
 toc_sub2:
@@ -99,13 +99,9 @@ This is set at 2.4 GHz across instances.
 
 Currently UKCloud does not offer GPU optimised OpenStack instances.
 
-### Does UKCloud offer encryption on instances?
+### Is encryption of Instances/Compute available for UKCloud for OpenStack?
 
-Not by default but, if it's required, you can implement it using a technology of your choice inside the instance OS.
-
-### Is UKCloud's encryption service available for UKCloud for OpenStack?
-
-Not currently, but we are considering options based upon customer feedback.
+Not currently, but we are considering options based upon customer feedback. Data at Rest Encryption (D@RE) is available on Persistent Volumes, please see the Storage section of this article for further details.
 
 ## Networking
 
@@ -212,9 +208,38 @@ You can allocate additional persistent block storage via the self-service dashbo
 
 No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.
 
-## Are there any know limitations to Block Storage Volumes?
+### Are there any know limitations to Block Storage Volumes?
 
 Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier1 or Tier 2) can be attached to each OpenStack instance.
+
+### Does UKCloud offer encryption on Volumes?
+
+The answer to this depends on which of UKCloud's OpenStack platforms you are using:
+
+| Region              | OpenStack Version                      | LBaaS Supported? |
+|---------------------|----------------------------------------|------------------|
+| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as Red Hat's Newton release does not support native Key Management as a Service (KMaaS) to underpin encryption  |
+| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes |
+
+### What type of Volume encryption is offered?
+
+UKCloud offer OpenStack's native Data  at Rest Encryption (D@RE) as an option on OpenStack Persistent Volumes (Tier 1 / Tier 2 Volumes). D@RE is underpinned by OpenStack's native Key Management as a Service (KMaaS), Barbican.
+
+### What type of encryption on Persistent Volumes is offered?
+
+AES256 encryption is delivered as part of OpenStacks native Data at Rest Encryption.
+
+### Can I manage the keys used to encrypt Persistent Volumes?
+
+No, all key management for UKCloud's native Data at Rest Encryption on Persistent Volumes is managed by the backend Barbican service.
+
+### Can I encrypt my ephemeral storage?
+
+UKCloud does not natively support the encryption of ephemeral storage.
+
+### Can I use my own key management or Hardware Security Module (HSM) solution with Data at Rest Encryption?
+
+UKCloud does not currently support any 3rd party key management services or HSMs as part of its native Data at Rest Encryption on Persistent Volumes.
 
 ### Is Object Storage (OpenStack Swift) available?
 
