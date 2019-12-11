@@ -43,7 +43,7 @@ oc login --server {server} --token {token here}
 
 ## Backing up container directories to your local client
 
-1. Create a directory on your localhost for files to be backed up to:
+1. Create a directory on your local client for files to be backed up to:
 
     ```bash
     mkdir ~/oshiftbackups
