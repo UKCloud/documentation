@@ -115,7 +115,7 @@ oc login --server {server} --token {token here}
 
 In this example, the type of database being backed up is PostgreSQL. Substitute the commands executed in this article (using `oc exec`) with commands that are appropriate to the database type you're using.
 
-1. Create a directory on your localhost for files to be backed up to:
+1. Create a directory on your local client for files to be backed up to:
 
     ```bash
     mkdir ~/oshiftdatabasebackup
