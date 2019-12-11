@@ -41,7 +41,7 @@ oc login --server {server} --token {token here}
 > [!TIP]
 > You can retrieve the `--token` by logging into the OpenShift web interface, clicking your username in the top right and clicking **Copy Login Command**.
 
-## Backing up container directories to your localhost
+## Backing up container directories to your local client
 
 1. Create a directory on your localhost for files to be backed up to:
 
