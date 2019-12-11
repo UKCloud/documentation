@@ -153,7 +153,7 @@ In this example, the type of database being backed up is PostgreSQL. Substitute 
     oc exec postgresql-1-hscwm -- bash -c 'pg_dump sampledb | gzip > /opt/app-root/src/sampledb.gz'
     ```
 
-5. Using `oc rsync`, copy the database backup file contaning the PostgreSQL database files to your localhost:
+5. Using `oc rsync`, copy the database backup file contaning the PostgreSQL database files to your local client:
 
     ```bash
     # oc rsync usage:
