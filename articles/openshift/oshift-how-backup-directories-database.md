@@ -169,7 +169,7 @@ In this example, the type of database being backed up is PostgreSQL. Substitute 
     >
     > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
-Your database is now backed up onto your localhost at `/home/oshiftdatabasebackup`.
+Your database is now backed up onto your local client in `/home/oshiftdatabasebackup`.
 
 ## Restoring a database on OpenShift
 
