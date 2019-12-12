@@ -67,8 +67,6 @@ At G11 we've launched additional tools and services to help customers enhance th
 
 - Cyber Portfolio
 
-  - CyberScore from UKCloud
-
   - HyTrust DataControl from UKCloud
 
   - CloudSOC from UKCloud
