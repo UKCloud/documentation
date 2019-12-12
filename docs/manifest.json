@@ -5054,54 +5054,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openshift/images/oshift-adm-top.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openshift/images/oshift-adm-top.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/openshift/images/oshift-architecture.png",
       "output": {
         "resource": {
           "relative_path": "articles/openshift/images/oshift-architecture.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openshift/images/oshift-desc-node.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openshift/images/oshift-desc-node.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openshift/images/oshift-get-nodes.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openshift/images/oshift-get-nodes.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openshift/images/oshift-get-pv.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openshift/images/oshift-get-pv.png"
         }
       },
       "is_incremental": false,
@@ -5323,7 +5279,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "7pcBP3n//sKyFZsko0qIMw=="
+          "hash": "XnM7RrwL6DvSBj8vXVVdpA=="
         }
       },
       "is_incremental": false,
@@ -5443,7 +5399,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-obtain-usage-metrics.html",
-          "hash": "bmQ4Pe2V1gNyb7j3b9ZHNQ=="
+          "hash": "Bsyl/KgyaBLWb9G9xriJ7A=="
         }
       },
       "is_incremental": false,
@@ -9204,7 +9160,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-g11.html",
-          "hash": "dz2yYPEZ+opsD4CPx8cLHA=="
+          "hash": "QBdyq4fohOB4ZKxwgN7Xog=="
         }
       },
       "is_incremental": false,
@@ -9456,7 +9412,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "dzCkxthA8qgsPl0uiWOYhw=="
+          "hash": "76mJCJk+ywEWyIvTwRer+w=="
         }
       },
       "is_incremental": false,
@@ -9480,7 +9436,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "kS6IVhwc/pVl0OEUnp0IJQ=="
+          "hash": "ORdE+tVc5Vpb9Cp314ZyYQ=="
         }
       },
       "is_incremental": false,
@@ -9552,7 +9508,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "NWx01HJEZuBV051LSFbTzg=="
+          "hash": "oGA8tuTPcYiIcg/QViok1w=="
         }
       },
       "is_incremental": false,
@@ -9588,7 +9544,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "SqxpLeyZa5I8tdV4DJy1tQ=="
+          "hash": "CVrOdYSMQvyRArCygxdwww=="
         }
       },
       "is_incremental": false,
@@ -9612,7 +9568,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "4onDo1aeyJZHacjNpdSqJw=="
+          "hash": "aIZIMoG9+Y12nUrZFrN8Wg=="
         }
       },
       "is_incremental": false,
@@ -11279,83 +11235,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/third-party/images/third-cyberscore-btn-new-vm.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/third-cyberscore-btn-new-vm.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/third-cyberscore-cyber-essentials.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/third-cyberscore-cyber-essentials.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/third-cyberscore-mnu-setup.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/third-cyberscore-mnu-setup.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/third-cyberscore-registration-complete.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/third-cyberscore-registration-complete.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/third-cyberscore-vm-details.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/third-cyberscore-vm-details.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/third-cyberscore-vm-network.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/third-cyberscore-vm-network.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/third-cyberscore-vm.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/third-cyberscore-vm.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/third-party/images/third-moogsoft-overview.png",
       "output": {
         "resource": {
@@ -11377,35 +11256,12 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/vmw-vcd-tab-vms.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/vmw-vcd-tab-vms.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/third-party/third-faq-appdynamics.md",
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-faq-appdynamics.html",
           "hash": "tDOErodq3w4Lx6PeBsXmuQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-faq-cyberscore.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-faq-cyberscore.html",
-          "hash": "/thaGEe6o6wPOJrM9oGNww=="
         }
       },
       "is_incremental": false,
@@ -11425,35 +11281,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-how-deploy-cyberscore-vm.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-how-deploy-cyberscore-vm.html",
-          "hash": "UB6TGwflqV63ABwz5j4aMQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-ref-cyberscore-prereqs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-ref-cyberscore-prereqs.html",
-          "hash": "Uv4h9l27Glx3C+/CSjT4/w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/third-party/third-ref-eula.md",
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-ref-eula.html",
-          "hash": "NO11eNEaYInD78YNT/QXvg=="
+          "hash": "Qd90PdgolNINXLc66yvArw=="
         }
       },
       "is_incremental": false,
@@ -11466,18 +11298,6 @@
         ".html": {
           "relative_path": "articles/third-party/third-sco-appdynamics.html",
           "hash": "VnsBRY2uQSAOjfmeQrkA/Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-sco-cyberscore.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-sco-cyberscore.html",
-          "hash": "xndByt96nGnBoVDzYUJ1sQ=="
         }
       },
       "is_incremental": false,
@@ -11521,18 +11341,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-sd-cyberscore.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-sd-cyberscore.html",
-          "hash": "d4AldS3N5m8NxW3AjTIcqg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/third-party/third-sd-hytrust.md",
       "output": {
         ".html": {
@@ -11568,24 +11376,12 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-vid-cyberscore.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-vid-cyberscore.html",
-          "hash": "SZUSo/UThuvaBg+4DNTAtA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/third-party/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/third-party/toc.html",
-          "hash": "8z3Uuga+K6/Gq6CmaY2aJg=="
+          "hash": "/szWuh9RA7QkLVwV0vsK2Q=="
         }
       },
       "is_incremental": false,
@@ -19711,13 +19507,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19725,10 +19514,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 421,
+          "total_file_count": 415,
           "skipped_file_count": 0
         }
       }
