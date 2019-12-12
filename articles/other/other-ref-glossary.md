@@ -139,12 +139,6 @@ For more information, see the [Cross Domain Security Zone service definition](..
 
 A UKCloud Customer Services role aimed at providing you with any assistance you may require during onboarding and the first 90 days of using a UKCloud service.
 
-### CyberScore from UKCloud
-
-Third-party software available from UKCloud that provides a fully automated, rapid, scalable, cyber security testing and rating service, helping you improve your cyber security by scanning your network, highlighting vulnerabilities and providing advice on how to harden your IT infrastructure.
-
-For more information, see the [CyberScore from UKCloud service definition](../third-party/third-sd-cyberscore.md).
-
 ## D
 
 ### Data centre interconnect (DCI)

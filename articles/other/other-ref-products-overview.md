@@ -137,10 +137,6 @@ Moogsoft AIOps is the pioneering AI platform for IT operations, powered by purpo
 
 This service provides a secure and stable cloud native storage and data management platform for Kubernetes that you can trust to manage data in containers. Kubernetes is the fastest growing open-source project in history, but Kubernetes was not designed with stateful applications like databases in mind. For enterprise applications, these systems have non-negotiable business requirements like high availability, data security, disaster recovery, strict performance SLAs and hybrid/multi-cloud operations. Portworx Enterprise addresses all these requirements enabling the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.
 
-### XQ Cyber CyberScore from UKCloud
-
-CyberScore is a fully automated, rapid, scalable, cyber security testing and rating service. CyberScore helps you improve your cyber security by scanning your network, highlighting vulnerabilities and providing advice on how to harden your IT infrastructure. It is a fully automated service which enables you to dramatically reduce penetration testing costs.
-
 ## Cloud support services
 
 Services to help you set up and maintain your cloud software or hosting services, such as migration services or ongoing support.

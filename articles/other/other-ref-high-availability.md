@@ -62,7 +62,7 @@ High-availability consideration | Notes
 Replicated backup | Enables your services to be backed up and the backup data replicated to another site.
 [Cloud Storage](../cloud-storage/cs-sd.md) | Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).
 [Multi-Cloud Backup Storage](../mcbs/mcbs-gs.md) | Provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, utilizing a technology that is common across backup products, enabling open-source backup applications to utilize the backup service as a target. You can also use MCBS as a remote backup target for your on-premises data.
-Third-Party Software | Provides software from third-party providers, including [CyberScore](../third-party/third-sd-cyberscore.md) and [Moogsoft](../third-party/third-sd-moogsoft.md), to help with cyber security and monitoring.
+Third-Party Software | Provides software from third-party providers, including [Moogsoft](../third-party/third-sd-moogsoft.md) and [Portworx](../third-party/third-sd-portworx.md), to help with cyber security and monitoring.
 [Transition Services](../transition-services/trans-sd.md) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
 
 ## Application design considerations

@@ -79,8 +79,6 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Portworx Enterprise from UKCloud](../third-party/third-sd-portworx.md)
 
-[CyberScore from UKCloud](../third-party/third-sd-cyberscore.md)
-
 ## Pricing Guide
 
 [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)

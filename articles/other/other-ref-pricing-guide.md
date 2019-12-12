@@ -85,8 +85,6 @@ For pricing information for UKCloud services, see the following documents on the
 
   - Portworx from UKCloud
 
-  - CyberScore from UKCloud
-
 - [UKCloud Skills Framework for the Information Age (SFIA) UKCloud Rate Card and Definitions](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
 
     This document outlines:
