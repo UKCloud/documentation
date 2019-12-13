@@ -72,3 +72,5 @@
   items:
   - name: OpenStack Horizon dashboard overview
     href: ostack-vid-overview.md
+  - name: Self-service backup and restoration with TrilioVault
+    href: ostack-vid-trilio.md

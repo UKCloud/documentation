@@ -7530,7 +7530,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "QsiBrGaKBKI12EbzsVUeRA=="
+          "hash": "46QOJTCqyhwbJxBx4WmmsQ=="
         }
       },
       "is_incremental": false,
@@ -7734,7 +7734,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-triliovault.html",
-          "hash": "GIYsJgJSpNSkKY5ecFx4pA=="
+          "hash": "g88uQEsf98z74mCF82t96A=="
         }
       },
       "is_incremental": false,
@@ -7849,12 +7849,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-vid-trilio.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-vid-trilio.html",
+          "hash": "R265W2122YfJ6eVUvDMwJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/openstack/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "8tLAHQA2Z/Ptakhe/RhhAw=="
+          "hash": "WL+Snaax/k0SyRqNS9TapA=="
         }
       },
       "is_incremental": false,
@@ -19524,7 +19536,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 415,
+          "total_file_count": 416,
           "skipped_file_count": 0
         }
       }
