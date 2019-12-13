@@ -1,6 +1,6 @@
 ---
 title: Portal permissions | UKCloud Ltd
-description: A guide to the various permissions available to Portal users and what behaviours they enable
+description: A guide to the various permissions available to Portal users and what behaviour they enable
 services: portal
 author: Sue Highmoor
 reviewer: aperrett
@@ -29,7 +29,7 @@ User gets full administrative privileges across the entire account. This include
 
 ## Permissions for Settings
 
-**Update:** A user can update all of the account settings. This includes changing the security methods applied to the account, such as updating security restrictions to require memorable word, password timeout and 2FA. These users can also change the details of the accounts primary and secondary contacts.
+**Update:** A user can update all of the account settings. This includes changing the security methods applied to the account, such as updating security restrictions to require password timeout and 2FA. These users can also change the details of the account's primary and secondary contacts.
 
 **All:** Presently this offers the same capability the update permission.
 
@@ -39,7 +39,7 @@ Leave these boxes unchecked to deny a user these capabilities.
 
 Contact and user permissions dictate whether the user is able to make changes to who has access to the account, and their role inside of it.
 
-A contact is just contact details, they may not necessarily have an actual user account. To enable a contact to have User access, they must be marked as "active".
+A contact is just contact details, they may not necessarily have an actual user account. To enable a contact to have user access, they must be marked as "active".
 
 &nbsp; | Create | Read | Update | Delete | All
 ------ | ------ | ---- | ------ | ------ | ---
@@ -89,7 +89,7 @@ Users can see financial data for their compute services in My VMs. This includes
 
 ## Permissions for Monitoring
 
-Users with **Read** permissions can view showback information from the Protective Monitoring service on the *My Security Events* page.
+Users with **Read** permissions can view information from the Protective Monitoring service on the *My Security Events* page.
 
 ## Feedback
 
