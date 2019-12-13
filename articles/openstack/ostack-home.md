@@ -43,7 +43,7 @@ First, take a look at our [Getting Started Guide](ostack-gs.md) to learn the bas
     <div style="padding:56.25% 0 0 0;position:relative;">
       <iframe src="https://www.youtube.com/embed/c471rZ2euHQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>  
-    <p><a href="https://www.youtube.com/embed/c471rZ2euHQ">OpenStack Self-Service Backup and Restoration (TrilioVault)</a></p>
+    <p><a href="https://www.youtube.com/watch?v=c471rZ2euHQ">OpenStack Self-Service Backup and Restoration (TrilioVault)</a></p>
   </div>
 </div>
 
