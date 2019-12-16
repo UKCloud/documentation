@@ -30,7 +30,7 @@ The first time you log into the Portal after 2FA is enabled, you'll need to to s
 
 When you first log in to a Portal account that has 2FA enabled, you'll be prompted to set up 2FA:
 
-1. Log in to the UKCloud Portal, providing your user name and password as usual, and memorable word, if required.
+1. Log in to the UKCloud Portal, providing your user name and password as usual.
 
     For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
 

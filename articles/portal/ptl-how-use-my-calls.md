@@ -242,7 +242,7 @@ You can enable new users on your account with access to My Calls.
     > [!NOTE]
     > If you receive an error message, contact UKCloud Customer Support at <support@ukcloud.com>.
 
-4. After you've created the user account, select the **User** tab, select the **Is active?** check box, provide the user with a password and memorable word, then click **Save**.
+4. After you've created the user account, select the **User** tab, select the **Is active?** check box, provide the user with a password, then click **Save**.
 
     ![Edit Contact page](images/ptl-contact-edit.png)
 

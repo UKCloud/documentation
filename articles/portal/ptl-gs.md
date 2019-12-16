@@ -71,11 +71,7 @@ The first thing you need to do is log in.
     > [!NOTE]
     > If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.
 
-3. If your Portal administrator has enabled memorable word authentication, you'll be prompted to enter three randomly-selected letters from your memorable word. (IF this is the first time you've logged in, you'll be prompted to create a memorable word.)
-
-    ![Memorable word dialog box](images/ptl-memorable-word.png)
-
-4. If your Portal administrator has enabled Two-Factor Authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA).
+3. If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA).
 
     ![Two-Factor Authentication dialog box](images/ptl-2fa.png)
 
@@ -98,7 +94,7 @@ Each user account is associated with one or more customer accounts. Within the P
 ![Account menu](images/ptl-mnu-customer-account.png)
 
 > [!NOTE]
-> When you switch between accounts, you may be prompted to enter letters from your memorable word again if this additional security measure has been enabled by your Portal administrator.
+> When you switch between accounts, you may be prompted to enter a 2FA code again if this additional security measure has been enabled by your Portal administrator.
 
 In the toolbar, you can also click your username to access the following options:
 
@@ -111,10 +107,12 @@ In the toolbar, you can also click your username to access the following options
 
 - **Update contact details** - Change your name, email address and telephone numbers. You can also opt to have Portal notifications sent to your email address.
 
-- **Change Password** --- Change your password or memorable word. We recommend that you change your password at least every 90 days (see [*How to reset your UKCloud Portal password or memorable word*](ptl-how-reset-password.md)).
+- **Change Password** - Change your password or memorable word. We recommend that you change your password at least every 90 days (see [*How to reset your UKCloud Portal password or memorable word*](ptl-how-reset-password.md)).
 
     > [!NOTE]
     > Your Portal administrator may have implemented a password expiration period; in which case, you'll be prompted to change your password after the specified number of days.
+
+- **Two-Factor Auth** - Set up two-factor authentication (2FA) for your user account (see [*How to set up two-factor authentication for a user account*](ptl-how-setup-2fa.md)).
 
 - **API** - View the information you need to use the vCloud API (see [*How to access vCloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md)).
 
@@ -207,13 +205,13 @@ When you've finished working in the Portal, we recommend that you log out to pre
 
 ## Using the UKCloud Portal API
 
-The Portal also provides an API to enable you to interact programmatically with your UKCloud environment. For example, you can use the Portal API to create, manage and monitor support tickets, view information about the components of your environment and create compute services, virtual data centres and edge gateways.
+The Portal also provides an API to enable you to interact programmatically with your UKCloud environment. For example, you can use the Portal API to view information about the components of your environment and create compute services, virtual data centres and edge gateways.
 
 The entry point URL for the Portal API is:
 
-https://portal.skyscapecloud.com/api
+`https://portal.skyscapecloud.com/api`
 
-For reference information about the various endpoints offered by the Portal API, see the [*UKCloud Portal API User Guide*](ptl-ref-portal-api.md).
+For reference information about the various endpoints offered by the Portal API, see the [*UKCloud Portal API Reference Guide*](ptl-ref-portal-api.md).
 
 For more information about how to use the API, including examples showing how to use the API to create a VDC and edge gateway, see [*How to use the UKCloud Portal API*](ptl-how-use-api.md).
 
@@ -248,27 +246,7 @@ a UKCloud service.
 
 ### Knowledge Centre
 
-UKCloud's repository of articles created in collaboration with subject matter experts to provide information about how to use our products and services. Article types include:
-
-- **Service Definitions** describe what a service does
-
-- **Service Scopes** provide technical detail for a service or service option
-
-- **Factsheets** provide a brief overview of a service or service option
-
-- **FAQs** answer commonly asked questions about a service or service option
-
-- **Blueprints** explain how our platform helps address business needs
-
-- **Getting Started Guides** step through the basic tasks required to get a service or service option up and running
-
-- **How To Guides** provide step-by-step instructions for performing specific tasks within our platform
-
-- **Quick Ref Guides** to provide general information to help understand a particular aspect of our platform
-
-### memorable word
-
-An optional second level of authentication to provide an additional layer of security for the Portal. Users are prompted to enter random letters from their memorable word after they have entered their log in credentials.
+UKCloud's repository of articles created in collaboration with subject matter experts to provide information about how to use our products and services.
 
 ### My Calls
 
