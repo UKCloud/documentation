@@ -19,6 +19,14 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 1.121.0
+
+Date: 16th December 2019
+
+Feature update
+
+Details: Removed Memorable Word Authentication.
+
 ## Release 1.119.0
 
 Date: 6th November 2019
