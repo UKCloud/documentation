@@ -36,8 +36,6 @@
   items:
   - name: API Reference Guide
     href: ptl-ref-portal-api.md
-  - name: Enable memorable word authentication
-    href: ptl-how-enable-memorable-word.md
   - name: Partitioning projects or end customers using accounts
     href: ptl-ref-multiple-accounts.md
   - name: Portal permissions

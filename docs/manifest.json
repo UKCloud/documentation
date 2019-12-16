@@ -9898,39 +9898,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mem-word-switch.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-mem-word-switch.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mem-word.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-mem-word.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-memorable-word.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-memorable-word.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mnu-add-new-contact.png",
       "output": {
         "resource": {
@@ -10536,39 +10503,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-security-memorable-word-enable.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-security-memorable-word-enable.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-security-memorable-word-exclude.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-security-memorable-word-exclude.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-security-memorable-word-switch.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-security-memorable-word-switch.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-security-password-expiration.png",
       "output": {
         "resource": {
@@ -10672,7 +10606,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "0lmO+yIxXINOD9CdyOCbWg=="
+          "hash": "REgNA/Mm41MReuo7gqFE1A=="
         }
       },
       "is_incremental": false,
@@ -10704,18 +10638,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/portal/ptl-how-enable-memorable-word.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/portal/ptl-how-enable-memorable-word.html",
-          "hash": "zPuuJjlr402BNCe468hXtw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-raise-escalate-service-request.md",
       "output": {
         ".html": {
@@ -10732,7 +10654,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-reset-password.html",
-          "hash": "jiaI+e8lHAGj9/inflleqw=="
+          "hash": "ZJO92i+kwYr8pGP1CNSs7Q=="
         }
       },
       "is_incremental": false,
@@ -10768,7 +10690,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-2fa.html",
-          "hash": "HBXVpWzwrMSrM+Hkxw3hmQ=="
+          "hash": "9m1kLzwZmWtqxo5l2pSD+A=="
         }
       },
       "is_incremental": false,
@@ -10840,7 +10762,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "q/IQ+UVnZt9zjK9iRyDrTw=="
+          "hash": "3x2qNpZjZsUbedo/G6J31Q=="
         }
       },
       "is_incremental": false,
@@ -10876,7 +10798,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-overview-permissions.html",
-          "hash": "NiJZuSS93Mw5fFrcnDlBZA=="
+          "hash": "JkirxUjXXSbDdSpQCbtP1g=="
         }
       },
       "is_incremental": false,
@@ -10900,7 +10822,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-release-notes.html",
-          "hash": "rN4OtVD37g9KgD1ANOjVQQ=="
+          "hash": "lku1vgBxa1DF138JJYKl+Q=="
         }
       },
       "is_incremental": false,
@@ -10924,7 +10846,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-security-settings.html",
-          "hash": "yb5eiLnckMVUiRMyCyVDeQ=="
+          "hash": "mKrlfMPHmWvUR004HYnkdw=="
         }
       },
       "is_incremental": false,
@@ -10936,7 +10858,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-user-access.html",
-          "hash": "E6MMNk+MDyZajiEaSQNnFw=="
+          "hash": "KKO5NK1gyKa8yDufzxo6Pg=="
         }
       },
       "is_incremental": false,
@@ -10960,7 +10882,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "qhonE2MQCGOev15st2pWAg=="
+          "hash": "f8PzXAOz5TMsLC99Dea2nw=="
         }
       },
       "is_incremental": false,
@@ -18159,7 +18081,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "yqMipaav9EYo7HQgBB58PQ=="
+          "hash": "m/jA8MLXLi/xHhS2gFR3uA=="
         }
       },
       "is_incremental": false,
@@ -19519,13 +19441,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19533,10 +19448,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 416,
+          "total_file_count": 415,
           "skipped_file_count": 0
         }
       }
