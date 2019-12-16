@@ -3,8 +3,8 @@ title: SiteProtect Advanced DDoS Mitigation Service Scope | UKCloud Ltd
 description: Outlines important details regarding the SiteProtect Advanced DDoS Mitigation (previously Application-tuned DDoS protection) service
 services: connectivity
 author: Steve Hall
-reviewer:
-lastreviewed: 20/07/2018 18:37:23
+reviewer: hbrunt
+lastreviewed: 16/12/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
