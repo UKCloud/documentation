@@ -35,14 +35,6 @@ Feature update
 
 Details: Added better validation when setting up IP address whitelisting to restrict access to the vCloud Director API.
 
-## Release 1.119.0
-
-Date: 6th November 2019
-
-Feature update
-
-Details: Added better validation when setting up IP address whitelisting to restrict access to the vCloud Director API.
-
 
 ## Release 1.117.0
 
