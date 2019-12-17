@@ -29,7 +29,7 @@ UKCloud provides this service across two security domains, Assured OFFICIAL (for
 
 UKCloud for OpenStack is built using KVM hypervisor technology, a trusted solution for implementing virtualised environments.
 
-### Which Disk formats does UKCloud for OpenStack support?
+### Which disk formats does UKCloud for OpenStack support?
 
 The disk format of a virtual machine image is the format of the underlying disk image. Virtual appliance vendors have different formats for laying out the information contained in a virtual machine disk image.
 
@@ -71,7 +71,7 @@ Instances are contended using the default OpenStack ratios against the following
 
 Yes, as this is a true IaaS cloud service, you have complete control and autonomy over each instance you deploy, and so have full 'root' or administrative access.
 
-### What Instance sizes are available?
+### What instance sizes are available?
 
 UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
 
@@ -101,7 +101,7 @@ Currently UKCloud does not offer GPU optimised OpenStack instances.
 
 ### Does UKCloud offer compute encryption on instances?
 
-Not by default but, if it's required, you can implement it using a technology of your choice inside the instance OS. Data at Rest Encryption (D@RE) is available on Persistent Volumes, please see the Storage section of this article for further details.
+Not by default but, if it's required, you can implement it using a technology of your choice inside the instance OS. Data at Rest Encryption (D@RE) is available on persistent volumes, see the [Storage](#storage) section of this article for further details.
 
 ## Networking
 
@@ -167,7 +167,7 @@ Some government secure networks (such as PSN and HSCN) provide SSL certificates 
 
 The answer to this depends on which of UKCloud's OpenStack platforms you are using:
 
-| Region              | OpenStack Version                      | LBaaS Supported? |
+| Region              | OpenStack version                      | LBaaS supported? |
 |---------------------|----------------------------------------|------------------|
 | COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services. <BR> UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution. |
 | COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes. Uses the [*OpenStack Octavia*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
@@ -218,30 +218,30 @@ You can allocate additional persistent block storage via the self-service dashbo
 
 No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.
 
-### Are there any known limitations to Block Storage Volumes?
+### Are there any known limitations to block storage volumes?
 
 Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier 1 or Tier 2) can be attached to each OpenStack instance.
 
-### Does UKCloud offer encryption on Volumes?
+### Does UKCloud offer encryption on volumes?
 
-The answer to this depends on which of UKCloud's OpenStack platforms you are using:
+The answer to this depends on which of UKCloud's OpenStack services you are using:
 
-| Region              | OpenStack Version                      | LBaaS Supported? |
+| Region              | OpenStack version                      | LBaaS supported? |
 |---------------------|----------------------------------------|------------------|
 | COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as Red Hat's Newton release does not support native Key Management as a Service (KMaaS) to underpin encryption  |
 | COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes |
 
-### What type of Volume encryption is offered?
+### What type of volume encryption is offered?
 
-UKCloud offer OpenStack's native Data  at Rest Encryption (D@RE) as an option on OpenStack Persistent Volumes (Tier 1 / Tier 2 Volumes). D@RE is underpinned by OpenStack's native Key Management as a Service (KMaaS), Barbican.
+UKCloud offers OpenStack's native Data  at Rest Encryption (D@RE) as an option on OpenStack persistent volumes (Tier 1 / Tier 2 Volumes). D@RE is underpinned by OpenStack's native Key Management as a Service (KMaaS), Barbican.
 
-### What type of encryption on Persistent Volumes is offered?
+### What type of encryption on persistent volumes is offered?
 
 AES256 encryption is delivered as part of OpenStacks native Data at Rest Encryption.
 
-### Can I manage the keys used to encrypt Persistent Volumes?
+### Can I manage the keys used to encrypt persistent volumes?
 
-No, all key management for UKCloud's native Data at Rest Encryption on Persistent Volumes is managed by the backend Barbican service.
+No, all key management for UKCloud's native Data at Rest Encryption on persistent volumes is managed by the backend Barbican service.
 
 ### Can I encrypt my ephemeral storage?
 
@@ -249,11 +249,11 @@ UKCloud does not natively support the encryption of ephemeral storage.
 
 ### Can I use my own key management or Hardware Security Module (HSM) solution with Data at Rest Encryption?
 
-UKCloud does not currently support any 3rd party key management services or HSMs as part of its native Data at Rest Encryption on Persistent Volumes.
+UKCloud does not currently support any third-party key management services or HSMs as part of its native Data at Rest Encryption on persistent volumes.
 
-### Is Object Storage (OpenStack Swift) available?
+### Is object storage (OpenStack Swift) available?
 
-Unfortunately, the OpenStack Object Storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible Object Storage service which can be used in conjunction with OpenStack; please visit the Digital Market place or contact your Account Director for further details.
+Unfortunately, the OpenStack object storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible object storage service that can be used in conjunction with OpenStack; see the [*Cloud Storage Service Definition*](../cloud-storage/cs-sd.md) for further details.
 
 ### What is the fastest way of importing large amounts of data onto the UKCloud platform?
 
@@ -283,7 +283,7 @@ OpenStack environments in our Elevated OFFICIAL security domain can be managed v
 
 The answer to this depends on which of UKCloud's OpenStack platforms you are using:
 
-| Region              | OpenStack Version                      | KMaaS Supported? |
+| Region              | OpenStack version                      | KMaaS supported? |
 |---------------------|----------------------------------------|------------------|
 | COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, customers will need to deploy their own Key Management solution. |
 | COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes, using OpenStack's Barbican service. You can find further information [here](https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html). |
