@@ -41,8 +41,8 @@ echo "enter your Portal password"
 read -s password
 
 token=$(curl -X POST "https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token" \
-     -d "username=$username" \
-     -d "password=$password" \
+     --data-urlencode "username=$username" \
+     --data-urlencode "password=$password" \
      -d grant_type=password \
      -d client_id=portal.ukcloud | jq -r '.access_token')
 
