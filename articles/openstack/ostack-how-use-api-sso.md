@@ -51,6 +51,15 @@ export OS_CLIENT_SECRET=""
 export OS_ACCESS_TOKEN_ENDPOINT=""
 ```
 
+If you are using terraform, you will need to append the following to your file
+```bash
+echo "Generating token..."#(optional)
+export OS_TOKEN=$(openstack token issue -c id -f value)
+```
+Note: It is advisable to use a seperate rcfile for use with terraform in order to avoid the following error when trying to use the openstack cli.
+```bash
+__init__() got an unexpected keyword argument 'token'
+```
 
 | Site | Variable | Value|
 | ---  | ---------|------|
