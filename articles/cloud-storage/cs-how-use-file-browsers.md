@@ -130,7 +130,7 @@ S3 Browser is a Windows client for Amazon S3 that you can easily configure to wo
 
 To install and configure S3 Browser:
 
-1. Download [S3 Browser](ttp://s3browser.com/).
+1. Download [S3 Browser](https://s3browser.com/).
 
 2. Execute the installer and follow the prompts in the wizard to complete the installation.
 
