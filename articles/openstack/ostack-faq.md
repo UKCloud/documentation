@@ -237,7 +237,7 @@ UKCloud offers OpenStack's native Data  at Rest Encryption (D@RE) as an option o
 
 ### What type of encryption on persistent volumes is offered?
 
-AES256 encryption is delivered as part of OpenStacks native Data at Rest Encryption.
+AES256 encryption is delivered as part of OpenStack's native Data at Rest Encryption.
 
 ### Can I manage the keys used to encrypt persistent volumes?
 
@@ -253,7 +253,7 @@ UKCloud does not currently support any third-party key management services or HS
 
 ### Is object storage (OpenStack Swift) available?
 
-Unfortunately, the OpenStack object storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible object storage service that can be used in conjunction with OpenStack; see the [*Cloud Storage Service Definition*](../cloud-storage/cs-sd.md) for further details.
+The OpenStack object storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible object storage service that you can use in conjunction with OpenStack; see the [*Cloud Storage Service Definition*](../cloud-storage/cs-sd.md) for further details.
 
 ### What is the fastest way of importing large amounts of data onto the UKCloud platform?
 
