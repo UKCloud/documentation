@@ -73,7 +73,7 @@ Free trials are:
 
 Requesting a trial:
 
-- Request via UKCloud website: <http://www.ukcloud.com/free-trial-sign-up>, where you will need to accept the [trial terms and conditions](https://ukcloud.com/free-trial-terms-and-conditions/)
+- Request via UKCloud website: <https://www.ukcloud.com/free-trial-sign-up>, where you will need to accept the [trial terms and conditions](https://ukcloud.com/free-trial-terms-and-conditions/)
 
 - Your environment is set up
 

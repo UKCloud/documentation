@@ -30,7 +30,7 @@ You can use the Apple iPhone to access your Zimbra account three primary ways:
 
 - Enter IMAP/POP3 email settings
 
-For more information about ActiveSync, go to <http://en.wikipedia.org/wiki/ActiveSync>.
+For more information about ActiveSync, go to <https://en.wikipedia.org/wiki/ActiveSync>.
 
 > [!IMPORTANT]
 > Performing the following steps may delete all of the existing contacts on your iPhone. This is a common problem for iPhone users when creating a new ActiveSync account. You should ensure that you have backed up all of your contacts before proceeding.

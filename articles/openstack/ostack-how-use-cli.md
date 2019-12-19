@@ -46,7 +46,7 @@ All details outlined in this document have been tested against Windows 7 SP1 Ent
 
 1. Download the latest Python 2 release from the Python website:
 
-    <http://python.org/downloads/windows/>
+    <https://python.org/downloads/windows/>
 
     > [!NOTE]
     > The OpenStack client currently only supports Python 2.7, Python 3+ is unsupported).

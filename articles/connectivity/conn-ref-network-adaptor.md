@@ -34,7 +34,7 @@ There are a couple of things you should be aware of when doing this:
 
 - Guest customisation - depending on the settings for each VM, this may cause the server to change its SID. (these can be adjusted when the VM is powered off).
 
-- Windows may require the network configuration to be configured manually, as the old adaptor may still being referenced. There is a [hotfix](http://support.microsoft.com/kb/2526142) from Microsoft which could fix this.
+- Windows may require the network configuration to be configured manually, as the old adaptor may still being referenced. There is a [hotfix](https://support.microsoft.com/kb/2526142) from Microsoft which could fix this.
 
 ## Feedback
 

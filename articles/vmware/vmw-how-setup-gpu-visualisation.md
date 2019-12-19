@@ -298,7 +298,7 @@ To license GRID Virtual GPU on Linux:
 
 For a list of remote desktop applications that utilise GPU acceleration and can support the high resolution and frame rate required by graphically intensive workloads, see the following NVIDIA support page:
 
-<http://nvidia.custhelp.com/app/answers/detail/a_id/4187/~/nvidia-grid-nvenc-availability-for-hardware-accelerated-protocol-encode-%E2%80%93-rgs%2C>
+<https://nvidia.custhelp.com/app/answers/detail/a_id/4187/~/nvidia-grid-nvenc-availability-for-hardware-accelerated-protocol-encode-%E2%80%93-rgs%2C>
 
 We've tested the following applications against our Cloud GPU service to confirm that they work successfully:
 

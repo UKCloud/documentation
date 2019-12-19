@@ -98,7 +98,7 @@ Hyper-V | Generation 1 & 2
 Full duplex internet connection | 5Mb/s minimum
 IPsec VPN | NA
 
-For a complete list of hypervisor features supported when using DRaaS, see the [Interoperability Matrix for All Zerto Software Versions](http://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
+For a complete list of hypervisor features supported when using DRaaS, see the [Interoperability Matrix for All Zerto Software Versions](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
 
 ## Getting Disaster Recovery as a Service up and running
 

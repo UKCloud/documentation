@@ -34,7 +34,7 @@ To submit changes or new articles you must have a GitHub account.
 
 1. Go to the UKCloud Knowledge Centre at:
 
-    <http://docs.ukcloud.com>
+    <https://docs.ukcloud.com>
 
 2. Find the article that you want to edit.
 

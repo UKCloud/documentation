@@ -259,7 +259,7 @@ The OpenStack object storage service (Swift) is not currently available on UKClo
 
 The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for image import/export and 40 Mbit/s for data transferred over FTPS.
 
-For a transfer time calculator, click [here](http://techinternets.com/copy_calc?do).
+For a transfer time calculator, click [here](https://techinternets.com/copy_calc?do).
 
 If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.
 

@@ -28,7 +28,7 @@ Recent releases of the VMware edge gateway networking component have the `TCP_TW
 
 For a further explanation of the reuse and recycle settings, refer to the following link:
 
-<http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html>
+<https://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html>
 
 Due to the implementation of both of these settings by default, there are instances where TCP sockets are closed prematurely. This is particularly noticeable where a large amount of NAT rules or Load balancers are configured on the edge gateway, with moderate to high traffic throughput. Depending on how the client application layer is designed to handle such interruptions in network layer communications, this may manifest to end users as application hangs or crashes.
 

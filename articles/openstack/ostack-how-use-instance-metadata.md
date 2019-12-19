@@ -75,7 +75,7 @@ Heat supports metadata tagging. For more information, see:
 
 You can also use configuration management tools, such as Ansible, to set instance attributes. For more information, see:
 
-<http://docs.ansible.com/ansible/os_server_module.html>
+<https://docs.ansible.com/ansible/os_server_module.html>
 
 ## Feedback
 
