@@ -99,7 +99,7 @@
 <p>UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain and cost, instead of designing to the highest level which may not always be needed.</p>
 <h3 id="what-hypervisor-do-you-use">What hypervisor do you use?</h3>
 <p>UKCloud for OpenStack is built using KVM hypervisor technology, a trusted solution for implementing virtualised environments.</p>
-<h3 id="which-disk-formats-does-ukcloud-for-openstack-support">Which Disk formats does UKCloud for OpenStack support?</h3>
+<h3 id="which-disk-formats-does-ukcloud-for-openstack-support">Which disk formats does UKCloud for OpenStack support?</h3>
 <p>The disk format of a virtual machine image is the format of the underlying disk image. Virtual appliance vendors have different formats for laying out the information contained in a virtual machine disk image.</p>
 <p>Set the disk format for your image to one of the following values:</p>
 <p><strong>aki</strong> - An Amazon kernel image</p>
@@ -124,7 +124,7 @@
 </ul>
 <h3 id="do-i-get-root-access-to-the-instances-i-deploy">Do I get root access to the instances I deploy?</h3>
 <p>Yes, as this is a true IaaS cloud service, you have complete control and autonomy over each instance you deploy, and so have full 'root' or administrative access.</p>
-<h3 id="what-instance-sizes-are-available">What Instance sizes are available?</h3>
+<h3 id="what-instance-sizes-are-available">What instance sizes are available?</h3>
 <p>UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.</p>
 <p>Check the <a href="ostack-sd.html"><em>Service Definition</em></a> for more details on the currently available sizes.</p>
 <h3 id="does-ukcloud-offer-dedicated-bare-metal-host-capabilities-openstack-ironic-with-ukcloud-for-openstack">Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?</h3>
@@ -138,10 +138,8 @@
 <p>This is set at 2.4 GHz across instances.</p>
 <h3 id="does-ukcloud-for-openstack-offer-gpu-optimised-instances">Does UKCloud for OpenStack offer GPU optimised instances?</h3>
 <p>Currently UKCloud does not offer GPU optimised OpenStack instances.</p>
-<h3 id="does-ukcloud-offer-encryption-on-instances">Does UKCloud offer encryption on instances?</h3>
-<p>Not by default but, if it's required, you can implement it using a technology of your choice inside the instance OS.</p>
-<h3 id="is-ukclouds-encryption-service-available-for-ukcloud-for-openstack">Is UKCloud's encryption service available for UKCloud for OpenStack?</h3>
-<p>Not currently, but we are considering options based upon customer feedback.</p>
+<h3 id="does-ukcloud-offer-compute-encryption-on-instances">Does UKCloud offer compute encryption on instances?</h3>
+<p>Not by default but, if it's required, you can implement it using a technology of your choice inside the instance OS. Data at Rest Encryption (D@RE) is available on persistent volumes, see the <a href="#storage">Storage</a> section of this article for further details.</p>
 <h2 id="networking">Networking</h2>
 <h3 id="how-many-ip-addresses-do-i-get">How many IP addresses do I get?</h3>
 <p>You're initially allocated three external IP addresses with each OpenStack project.</p>
@@ -178,8 +176,8 @@
 <thead>
 <tr>
 <th>Region</th>
-<th>OpenStack Version</th>
-<th>LBaaS Supported?</th>
+<th>OpenStack version</th>
+<th>LBaaS supported?</th>
 </tr>
 </thead>
 <tbody>
@@ -226,13 +224,46 @@
 <p>You can allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.</p>
 <h3 id="is-instance-storage-persistent">Is instance storage persistent? </h3>
 <p>No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.</p>
-<h3 id="are-there-any-known-limitations-to-block-storage-volumes">Are there any known limitations to Block Storage Volumes?</h3>
+<h3 id="are-there-any-known-limitations-to-block-storage-volumes">Are there any known limitations to block storage volumes?</h3>
 <p>Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier 1 or Tier 2) can be attached to each OpenStack instance.</p>
-<h3 id="is-object-storage-openstack-swift-available">Is Object Storage (OpenStack Swift) available?</h3>
-<p>Unfortunately, the OpenStack Object Storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible Object Storage service which can be used in conjunction with OpenStack; please visit the Digital Market place or contact your Account Director for further details.</p>
+<h3 id="does-ukcloud-offer-encryption-on-volumes">Does UKCloud offer encryption on volumes?</h3>
+<p>The answer to this depends on which of UKCloud's OpenStack services you are using:</p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>OpenStack version</th>
+<th>LBaaS supported?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COR00005 <br> FRN00006</td>
+<td>OpenStack Platform 10 <br>(Newton Release)</td>
+<td>No, as Red Hat's Newton release does not support native Key Management as a Service (KMaaS) to underpin encryption</td>
+</tr>
+<tr>
+<td>COR00005-2</td>
+<td>OpenStack Platform 13 <br> (Queens Release)</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-type-of-volume-encryption-is-offered">What type of volume encryption is offered?</h3>
+<p>UKCloud offers OpenStack's native Data  at Rest Encryption (D@RE) as an option on OpenStack persistent volumes (Tier 1 / Tier 2 Volumes). D@RE is underpinned by OpenStack's native Key Management as a Service (KMaaS), Barbican.</p>
+<h3 id="what-type-of-encryption-on-persistent-volumes-is-offered">What type of encryption on persistent volumes is offered?</h3>
+<p>AES256 encryption is delivered as part of OpenStack's native Data at Rest Encryption.</p>
+<h3 id="can-i-manage-the-keys-used-to-encrypt-persistent-volumes">Can I manage the keys used to encrypt persistent volumes?</h3>
+<p>No, all key management for UKCloud's native Data at Rest Encryption on persistent volumes is managed by the backend Barbican service.</p>
+<h3 id="can-i-encrypt-my-ephemeral-storage">Can I encrypt my ephemeral storage?</h3>
+<p>UKCloud does not natively support the encryption of ephemeral storage.</p>
+<h3 id="can-i-use-my-own-key-management-or-hardware-security-module-hsm-solution-with-data-at-rest-encryption">Can I use my own key management or Hardware Security Module (HSM) solution with Data at Rest Encryption?</h3>
+<p>UKCloud does not currently support any third-party key management services or HSMs as part of its native Data at Rest Encryption on persistent volumes.</p>
+<h3 id="is-object-storage-openstack-swift-available">Is object storage (OpenStack Swift) available?</h3>
+<p>The OpenStack object storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible object storage service that you can use in conjunction with OpenStack; see the <a href="../cloud-storage/cs-sd.html"><em>Cloud Storage Service Definition</em></a> for further details.</p>
 <h3 id="what-is-the-fastest-way-of-importing-large-amounts-of-data-onto-the-ukcloud-platform">What is the fastest way of importing large amounts of data onto the UKCloud platform?</h3>
 <p>The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for image import/export and 40 Mbit/s for data transferred over FTPS.</p>
-<p>For a transfer time calculator, click <a href="http://techinternets.com/copy_calc?do">here</a>.</p>
+<p>For a transfer time calculator, click <a href="https://techinternets.com/copy_calc?do">here</a>.</p>
 <p>If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.</p>
 <h2 id="management">Management</h2>
 <h3 id="how-do-i-access-my-solutions-via-the-internet">How do I access my solutions via the internet?</h3>
@@ -252,8 +283,8 @@
 <thead>
 <tr>
 <th>Region</th>
-<th>OpenStack Version</th>
-<th>KMaaS Supported?</th>
+<th>OpenStack version</th>
+<th>KMaaS supported?</th>
 </tr>
 </thead>
 <tbody>
