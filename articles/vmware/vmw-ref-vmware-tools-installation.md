@@ -17,7 +17,7 @@ toc_mdlink: vmw-ref-vmware-tools-installation.md
 
 # VMware Tools installation
 
-VMware provide tools which should be installed into any virtual machines running on UKCloud. The tools provide additional features such as automated customisation as well as improved performance by implementing optimised drivers such as storage, network and display. Further information can be found [here](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=340).
+VMware provide tools which should be installed into any virtual machines running on UKCloud. The tools provide additional features such as automated customisation as well as improved performance by implementing optimised drivers such as storage, network and display. Further information can be found [here](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=340).
 
 ## Windows
 

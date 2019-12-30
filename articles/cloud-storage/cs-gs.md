@@ -150,7 +150,7 @@ You may also find the *Elastic Cloud Storage (ECS) Data Access Guide* useful:
 
 The Amazon S3 Authentication Tool for Curl (S3Curl) is a very useful Perl script, developed by Amazon. It's a wrapper for Curl that calculates the required authentication signature automatically for each request. As the authentication signature changes for every request, this allows Curl to interact with the API outside of code, enabling you to validate that your commands are working correctly and view the raw HTML response from the API, which can be useful when troubleshooting.
 
-For more information about S3Curl, see <http://aws.amazon.com/code/128>.
+For more information about S3Curl, see <https://aws.amazon.com/code/128>.
 
 To use S3Curl:
 
@@ -277,7 +277,7 @@ To use S3cmd:
 
 1. Download and extract the S3cmd files from the following location:
 
-    <http://s3tools.org/download>
+    <https://s3tools.org/download>
 
 2. Create the required configuration files by running the following command:
 
@@ -328,7 +328,7 @@ To use S3Express:
 
 1. Download and install the S3Express files from the following location:
 
-    <http://www.s3express.com/>
+    <https://www.s3express.com/>
 
 2. Use the following commands to configure the tool to access Cloud Storage:
 

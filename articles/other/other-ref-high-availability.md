@@ -67,7 +67,7 @@ Third-Party Software | Provides software from third-party providers, including [
 
 ## Application design considerations
 
-If you're designing your application specifically for the cloud, we recommend reviewing the [12-factor cloud application design model](http://12factor.net/).
+If you're designing your application specifically for the cloud, we recommend reviewing the [12-factor cloud application design model](https://12factor.net/).
 
 There are some high-level considerations to think about when deploying to a cloud environment.
 

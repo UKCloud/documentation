@@ -42,7 +42,7 @@ If the above message differs and references “RETAIL”, then the Windows licen
 
 To complete this process you'll need to have your exact version of Windows and cross reference the product key with the distribution on the Microsoft KB.
 
-http://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC 
+https://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC 
 
 You can then update the key and re-activate the VM by typing:
 
@@ -60,7 +60,7 @@ The steps in the attachment should help to successfully rectify the error being 
 
 - You must know the exact version of Windows you are running
 
-- You reference the following Microsoft KB article: http://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC
+- You reference the following Microsoft KB article: https://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC
 
 ## Feedback
 

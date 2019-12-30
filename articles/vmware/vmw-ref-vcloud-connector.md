@@ -46,7 +46,7 @@ For more information, see [*How to access vCloud Director through the vCloud API
 
 ## More information
 
-For more information about vCloud Connector, visit http://www.vmware.com/uk/products/vcloud-connector.
+For more information about vCloud Connector, visit https://www.vmware.com/uk/products/vcloud-connector.
 
 ## Feedback
 
