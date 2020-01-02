@@ -124,13 +124,11 @@ parameters:
 $ echo $VOLUME
 pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e
 </code></pre>
-</li>
-</ol>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The <code>pxctl</code> binary is available within the Portworx container, therefore the easiest way to execute commands against the Portworx cluster is to do so remotely using the <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html"><code>oc exec</code></a> command.</p>
 </div>
-<ol start="2">
+</li>
 <li><p>To reduce command complexity, we will set an environment variable named PX_POD containing the name of a Portworx pod so we can re-use it throughout the article.</p>
 <pre><code class="lang-none">$ PX_POD=$(oc get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
 
