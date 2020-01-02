@@ -42,6 +42,16 @@
     href: oshift-how-use-hawkular-metrics.md
   - name: View your router logs
     href: oshift-how-view-router-logs.md
+  - name: Use Portworx with OpenShift
+    items:
+    - name: Configure Portworx volume replication
+      href: oshift-how-configure-portworx-volume-replication.md
+    - name: Expose non-http services externally
+      href: oshift-how-portworx-snapshots.md
+    - name: Use Portworx encrypted volumes
+      href: oshift-how-use-portworx-encrypted-volumes.md
+    - name: Use Portworx shared volumes
+      href: oshift-how-use-portworx-shared-volumes.md
 - name: Reference
   items:
   - name: Community network proxy configuration

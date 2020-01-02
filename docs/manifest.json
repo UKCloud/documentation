@@ -5347,6 +5347,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-configure-portworx-volume-replication.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-configure-portworx-volume-replication.html",
+          "hash": "biI8aewoX1fwmlv1mh5jtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-create-users.md",
       "output": {
         ".html": {
@@ -5419,6 +5431,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-portworx-snapshots.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-portworx-snapshots.html",
+          "hash": "5Um+Loq6iD81oiIZ05v6fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-publish-routes-on-multiple-networks.md",
       "output": {
         ".html": {
@@ -5460,6 +5484,30 @@
         ".html": {
           "relative_path": "articles/openshift/oshift-how-use-netpol.html",
           "hash": "NinH5UviGY9ffW3MuhY1QA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-use-portworx-encrypted-volumes.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-use-portworx-encrypted-volumes.html",
+          "hash": "KtgPBuzaHhMcjgss2y8ydw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-use-portworx-shared-volumes.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-use-portworx-shared-volumes.html",
+          "hash": "T8N+O+NlpXF03JxaVkSSKA=="
         }
       },
       "is_incremental": false,
@@ -5603,7 +5651,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "dySZp1G0vLE9mzWOuGo9iQ=="
+          "hash": "Lj9/6F9C4wQrpYY5KxeQSA=="
         }
       },
       "is_incremental": false,
@@ -19470,7 +19518,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 416,
+          "total_file_count": 420,
           "skipped_file_count": 0
         }
       }
