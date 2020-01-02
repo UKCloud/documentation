@@ -67,8 +67,8 @@ You can increase or decrease the replication factor for a Portworx volume after 
     pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e
     ```
 
-> [!NOTE]
-> The `pxctl` binary is available within the Portworx container, therefore the easiest way to execute commands against the Portworx cluster is to do so remotely using the [`oc exec`](https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html) command. 
+    > [!NOTE]
+    > The `pxctl` binary is available within the Portworx container, therefore the easiest way to execute commands against the Portworx cluster is to do so remotely using the [`oc exec`](https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html) command. 
 
 2. To reduce command complexity, we will set an environment variable named PX_POD containing the name of a Portworx pod so we can re-use it throughout the article.
 
