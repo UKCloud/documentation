@@ -28,7 +28,7 @@ toc_mdlink: azs-home.md
 UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.
 
 # Azure Stack family announcement
-<b>Azure Stack has become a family of products! Azure Stack is now Azure Stack Hub! You can read more about it [here](http://aka.ms/AzsFamAnnounce).</b>
+<b>Azure Stack has become a family of products! Azure Stack is now Azure Stack Hub! You can read more about it [here](https://aka.ms/AzsFamAnnounce).</b>
 
 ## Let's get started
 

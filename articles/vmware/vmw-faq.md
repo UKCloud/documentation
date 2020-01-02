@@ -100,7 +100,7 @@ This is set at 2GHz for all VMs except Micro sized VMs, which can be restricted 
 
 The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.
 
-For a transfer time calculator, go to: <http://techinternets.com/copy_calc?do>
+For a transfer time calculator, go to: <https://techinternets.com/copy_calc?do>
 
 If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.
 
@@ -212,7 +212,7 @@ The Advanced Management bundle includes Distributed Firewall (DFW), Distributed 
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-You can view these on the [Notifications page](https://portal.ukcloud.com/notifications) of the UKCloud Portal. In addition, you can view Service Status information on the [Service Status page](http://status.ukcloud.com/).
+You can view these on the [Notifications page](https://portal.ukcloud.com/notifications) of the UKCloud Portal. In addition, you can view Service Status information on the [Service Status page](https://status.ukcloud.com/).
 
 ### Do you offer dynamic or static IP addresses?
 
@@ -370,7 +370,7 @@ Horizontal scale can be achieved quickly by adding additional VMs (usually in ju
 
 UKCloud UKCloud for VMware is powered by VMware technology, so is compatible with a wide range of x86/x64 operating systems.
 
-VMware provides a compatibility matrix at: <http://partnerweb.vmware.com/comp_guide2/pdf/VMware_GOS_Compatibility_Guide.pdf>.
+VMware provides a compatibility matrix at: <https://partnerweb.vmware.com/comp_guide2/pdf/VMware_GOS_Compatibility_Guide.pdf>.
 
 You can use the UKCloud catalog of operating systems or upload your own.
 
@@ -456,7 +456,7 @@ Yes, we offer a 30-day free trial so that you can test and evaluate our service 
 
 ### How do I request a trial?
 
-You can request a trial via the UKCloud website: <http://www.ukcloud.com/free-trial-sign-up> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
+You can request a trial via the UKCloud website: <https://www.ukcloud.com/free-trial-sign-up> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
 
 ### What do I do when my trial comes to an end?
 

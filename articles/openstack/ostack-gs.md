@@ -557,15 +557,15 @@ In this Getting Started Guide, you've learned how to use the OpenStack Horizon U
 
 You can find additional information in the following places:
 
-- **OpenStack API** --- For more information about using the API, see the OpenStack documentation at <http://developer.openstack.org/api-guide/quick-start/>
+- **OpenStack API** --- For more information about using the API, see the OpenStack documentation at <https://developer.openstack.org/api-guide/quick-start/>
 
 - **OpenStack Client** --- For more information about using the OpenStack Client, see the OpenStack documentation at <http://docs.openstack.org/user-guide/cli.html>
 
-- **HEAT templates** --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <https://wiki.openstack.org/wiki/Heat> and <http://docs.openstack.org/developer/heat/template_guide/index.html>
+- **HEAT templates** --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <https://wiki.openstack.org/wiki/Heat> and <https://docs.openstack.org/developer/heat/template_guide/index.html>
 
 - **Terraform** --- For information about using Terraform and the OpenStack provider, see the Terraform documentation at <https://www.terraform.io/intro/> and <https://www.terraform.io/docs/providers/openstack/index.html>
 
-- **Ansible** --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack>
+- **Ansible** --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <https://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack>
 
 ## Related videos
 

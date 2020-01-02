@@ -1,6 +1,6 @@
 ---
 title: UKCloud Portal security settings | UKCloud Ltd
-description: Provides information about the various security settings available in the UKCloud Portal, including memorable word, two-factor authentication (2FA) and IP restrictions
+description: Provides information about the various security settings available in the UKCloud Portal, including two-factor authentication (2FA) and IP restrictions
 services: portal
 author: Sue Highmoor
 reviewer:
@@ -28,8 +28,6 @@ The UKCloud Portal provides various settings to enable you to provide additional
 ![Enabled security setting](images/ptl-security-settings-enabled.png)
 
 - **Password expiration** - Set passwords to expire after a specified number of days. This ensures that users change their passwords frequently. For more information, see [*How to set up password expiration*](ptl-how-setup-password-expiration.md).
-
-- **Memorable word authentication** - Add an extra level of authentication whereby users provide letters from a memorable word as well as their password to confirm their identity. For more information, see [*How to enable memorable word authentication*](ptl-how-enable-memorable-word.md).
 
 - **Google two-factor authentication (2FA)** - Add an extra level of authentication whereby users provide a security code from an authenticator app (such as Google Authenticator or Authy) as well as their password to confirm their identity. For more information, see [*How to enable two-factor authentication in the UKCloud Portal*](ptl-how-setup-2fa.md).
 

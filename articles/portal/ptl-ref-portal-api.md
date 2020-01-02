@@ -1910,7 +1910,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
     "attributes":{
       "createdAt": "2016-07-08T10:42:14+01:00",
       "createdBy": "auser@example.com",
-      "state": "approved"",
+      "state": "approved",
       "vdcName": "My VDC",
       "vmType": "POWER",
       "serviceName": "My Compute Sercice"

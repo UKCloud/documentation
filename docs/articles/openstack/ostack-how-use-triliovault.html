@@ -97,16 +97,26 @@
 <p>TrilioVault is a tenant-driven Data Protection-as-a-Service (DPaaS) solution for OpenStack clouds. The TrilioVault solution takes point-in-time backup of workloads and supports multiple recovery options to recover your workloads in case of any outages. This article provides detailed instructions from the [TrilioVault Administration Guide] on the system administration tasks relevant to UKCloud for OpenStack. The target audience of the TrilioVault are OpenStack tenants as well as OpenStack Administrators who are proficient with basic backup and recovery concepts.</p>
 <p>Benefits of this solution include:</p>
 <ul>
-<li>Provides backup and disaster recovery solution for OpenStack.</li>
-<li>Provides multi-tenant, self-service and policy based solution.</li>
-<li>Provides point-in-time backup of data and configuration.</li>
-<li>Provides one-click seamless recovery.</li>
-<li>Provides the flexibility of selectively restoring instances on to same or different networks, different availability zones, regions or different clouds.</li>
-<li>Provides the flexibility of recovering backups on to different clouds.</li>
-<li>Recovery either a single file or a directory either through a web portal or ssh</li>
-<li>In-place restoring a volume or an instance</li>
-<li>Search for files in list of snapshots</li>
-<li>Results in reducing Total Cost of Operation (TCO) with excellent Return on Investment (ROI).</li>
+<li><p>Provides backup and disaster recovery solution for OpenStack.</p>
+</li>
+<li><p>Provides multi-tenant, self-service and policy based solution.</p>
+</li>
+<li><p>Provides point-in-time backup of data and configuration.</p>
+</li>
+<li><p>Provides one-click seamless recovery.</p>
+</li>
+<li><p>Provides the flexibility of selectively restoring instances on to same or different networks, different availability zones, regions or different clouds.</p>
+</li>
+<li><p>Provides the flexibility of recovering backups on to different clouds.</p>
+</li>
+<li><p>Recovery either a single file or a directory either through a web portal or ssh</p>
+</li>
+<li><p>In-place restoring a volume or an instance</p>
+</li>
+<li><p>Search for files in list of snapshots</p>
+</li>
+<li><p>Results in reducing Total Cost of Operation (TCO) with excellent Return on Investment (ROI).</p>
+</li>
 </ul>
 <h2 id="understanding-concepts">Understanding Concepts</h2>
 <p>Before starting to use TrilioVault, it is necessary to know a few commonly used concepts in TrilioVault. Below are some of the important terms in OpenStack and TrilioVault.</p>
@@ -266,7 +276,7 @@
 </tr>
 <tr>
 <td>Full Backup Interval</td>
-<td>Frequency at which Full Backup should be taken. The options are: * Never (The default value selected is Never). * Always (Value 0 means Always). * No. of Days (Number of incremental snapshots to take full backup between 1 and 999). If this option is selected, enter the number provided in the text box.</td>
+<td>Frequency at which Full Backup should be taken. The options are:<ul><li>Never (The default value selected is Never).</li><li>Always (Value 0 means Always).</li><li>No. of Days (Number of incremental snapshots to take full backup between 1 and 999). If this option is selected, enter the number provided in the text box.</li></ul></td>
 </tr>
 <tr>
 <td>Pause at Snapshot</td>
@@ -356,7 +366,7 @@
 </tr>
 <tr>
 <td>Policy</td>
-<td>Displays information of the backup schedule and retention policy. Details such as Scheduler Enabled, Start Date, Start Time, End Date, Repeat every, Next snapshot runs at, Full Backup interval can be seen here. It also displays Number of snapshots to keep. Referto Figure 11 for details.</td>
+<td>Displays information of the backup schedule and retention policy. Details such as Scheduler Enabled, Start Date, Start Time, End Date, Repeat every, Next snapshot runs at, Full Backup interval can be seen here. It also displays Number of snapshots to keep. Refer to Figure 11 for details.</td>
 </tr>
 <tr>
 <td>Misc.</td>
@@ -437,11 +447,11 @@
 <tbody>
 <tr>
 <td>Snapshot Schedule</td>
-<td><ul><li>Schedule Enabled - Displays the value True or False depending upon if it is enabled or not.</li><li>Start Date - Displays the start date of the snapshot schedule.</li><li>Start Time - Displays the start time of the snapshot schedule.</li><li>End Date - Displays the end date of the snapshot schedule.</li><li>Repeat Every - Displays the time interval of the snapshot to be taken.</li><li>Next snapshot runs at	- Displays the time in hours, minutes and seconds after which the next schedule will take place.</li><li>Full Backup interval	- Displays the value of full backup interval.</li></ul></td>
+<td><ul><li>Schedule Enabled - Displays the value True or False depending upon if it is enabled or not.</li><li>Start Date - Displays the start date of the snapshot schedule.</li><li>Start Time - Displays the start time of the snapshot schedule.</li><li>End Date - Displays the end date of the snapshot schedule.</li><li>Repeat Every - Displays the time interval of the snapshot to be taken.</li><li>Next snapshot runs at - Displays the time in hours, minutes and seconds after which the next schedule will take place.</li><li>Full Backup interval - Displays the value of full backup interval.</li></ul></td>
 </tr>
 <tr>
 <td>Retention Policy</td>
-<td><ul><li>Number of snapshots to keep	- Displays the number of snapshots to be retained.</li><li>Number of Days to Retain - Displays the number of days to retain a snapshot.</li></ul></td>
+<td><ul><li>Number of snapshots to keep - Displays the number of snapshots to be retained.</li><li>Number of Days to Retain - Displays the number of days to retain a snapshot.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -728,7 +738,7 @@
 </li>
 <li><p>Associate a floating IP to the launched instance.</p>
 </li>
-<li><p>To mount a snapshot, login to TrilioVault and Navigate to Backups. Click <b><i>WORKLOAD NAME</i></b>, then click Snapshots tab.</p>
+<li><p>To mount a snapshot, login to TrilioVault and Navigate to Backups. Click <em><strong>WORKLOAD NAME</strong></em>, then click Snapshots tab.</p>
 </li>
 <li><p>Click More drop-down, then click Mount Snapshot. Refer to Figure 26 for details.</p>
 <p><img src="images/fig26-mount-snapshot.png" alt="Figure 26: Mounting Snapshot"></p>
@@ -740,7 +750,7 @@
 <p><img src="images/fig27-mount-snapshot-dialog.png" alt="Figure 27: Assigning File Manager Instance to snapshot"></p>
 <p><em>Figure 27: Assigning File Manager Instance to snapshot.</em></p>
 </li>
-<li><p>Access File Manager using <b><i>FLOATING IP</i></b> created in step 3. Refer to Figure 28 for details.</p>
+<li><p>Access File Manager using <em><strong>FLOATING IP</strong></em> created in step 3. Refer to Figure 28 for details.</p>
 <p><img src="images/fig28-file-browser.png" alt="Figure 28: File Manager"></p>
 <p><em>Figure 28: File Manager.</em></p>
 </li>
@@ -788,7 +798,7 @@
 </ol>
 <h4 id="in-place-restore-of-a-filedirectory">In-place restore of a file/directory</h4>
 <p>The previous section explained how to recover a file or directory from a backup by using the snapshot mount command. However, the web portal based file/directory retrieval is cumbersome and is not very friendly for scripting. With this release, the TrilioVault Recovery Manager image is shipped with cloud-init functionality so you can instantiate the recovery manager instance with a key-pair so you can do a password-less ssh session to recovery manager instance. To do an in-place restore of files or directories, the user first performs a snapshot-mount operation on a backup image and uses the recovery manager instance. Once this operation is completed successfully, the user can mount snapshot VM images using sshfs command as shown in the following figure.</p>
-<pre><code>sshfs ubuntu@172.24.4.4:/home/ubuntu/tvault-mounts/mounts mnt
+<pre><code class="lang-none">sshfs ubuntu@172.24.4.4:/home/ubuntu/tvault-mounts/mounts mnt
 </code></pre>
 <p>In the above example, 172.24.4.4 is the floating IP address of recovery manager instance. mnt is the mount point. The mnt point can be browsed for VM images/file systems using standard Linux tools and copy required files.</p>
 <p><img src="images/fig29b-sshfs-mount.png" alt="sshfs Mount"></p>
@@ -834,7 +844,7 @@
 <p><img src="images/fig34-oneclick-restore-delete-vms.png" alt="Figure 34: VM(s) to be Deleted"></p>
 <p><em>Figure 34: VM(s) to be Deleted.</em></p>
 </li>
-<li><p>Login to Horizon dashboard and navigate to Backups. Click <b><i>WORKLOAD NAME</i></b>, and then click Snapshots tab.</p>
+<li><p>Login to Horizon dashboard and navigate to Backups. Click <em><strong>WORKLOAD NAME</strong></em>, and then click Snapshots tab.</p>
 </li>
 <li><p>Click One-click Restore menu option of the corresponding snapshot as shows in Figure 35.</p>
 <p><img src="images/fig35-oneclick-restore.png" alt="Figure 35: Snapshot Selected for One-click Restore"></p>
@@ -923,7 +933,7 @@
 <p><img src="images/fig47-restore-snapshot-details.png" alt="Figure 47: Snapshot Details"></p>
 <p><em>Figure 47: Snapshot Details.</em></p>
 </li>
-<li><p>Navigate to the Restore tab and click <b><i>RESTORE NAME</i></b>. The Restore Details screen as shown in Figure 48 is displayed.</p>
+<li><p>Navigate to the Restore tab and click <em><strong>RESTORE NAME</strong></em>. The Restore Details screen as shown in Figure 48 is displayed.</p>
 <p><img src="images/fig48-restore-restore-details.png" alt="Figure 48: Restore Details"></p>
 <p><em>Figure 48: Restore Details.</em></p>
 <p><strong>Table 15: Restore Details and Description.</strong></p>
@@ -1006,6 +1016,10 @@ To delete a snapshot, follow these steps.</p>
 </ol>
 <h2 id="workload-manager-apicli-documentation">Workload Manager API/CLI Documentation</h2>
 <p>For full documentation regarding using the Workload Manager API/CLI, see the TrilioVault <a href="http://triliodoc.com/openstack/3.0/documentation/sphinx-doc/build/html/apicli.html">Workload Manager API/CLI Documentation</a>.</p>
+<h2 id="related-videos">Related videos</h2>
+<ul>
+<li><a href="ostack-vid-trilio.html"><em>OpenStack self-service backup and restoration with TrilioVault</em></a></li>
+</ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
@@ -1035,7 +1049,7 @@ To delete a snapshot, follow these steps.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

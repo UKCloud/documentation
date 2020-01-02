@@ -115,7 +115,7 @@ We provide an SLA for availability of our core services such as UKCloud for VMwa
 
 ### What is your policy on IP addressing?
 
-We've designed our cloud to give you complete control and autonomy over the private ([RFC 1918](http://tools.ietf.org/html/rfc1918)) IP address space you deploy within your virtual data centre (VDC).
+We've designed our cloud to give you complete control and autonomy over the private ([RFC 1918](https://tools.ietf.org/html/rfc1918)) IP address space you deploy within your virtual data centre (VDC).
 
 You can use the self-managed virtual firewall to implement a VPN tunnel, network address translation (NAT) and load balancing to control how you publish the services within your VDC to external networks.
 

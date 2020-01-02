@@ -36,7 +36,7 @@ Benefits of this solution include:
 ## Caveats
 
 This solution utilises HAProxy and keepalived, both of which are complicated software products. This guide will help you set up UKCloud for OpenStack to enable you to deploy a load-balancing solution based on keepalived and haProxy, but additional tuning and configuration may be required depending on your intended setup. Please take a moment to have a read through the documentation for both the keepalived project -
-<http://www.keepalived.org/documentation.html> and the HAProxy project - <http://www.haproxy.org>.
+<https://www.keepalived.org/documentation.html> and the HAProxy project - <https://www.haproxy.org>.
 
 ## Prerequisites
 

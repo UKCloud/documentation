@@ -51,7 +51,7 @@ The specialist provider of DDoS mitigation is designed to withstand multiple sim
 
 UKCloud subscribe to a tier of service designed to mitigate a specific level of attack. If the attack begins to exceed this level, UKCloud will work with the customer under attack and implement 'null routing' for the targeted IP address to ensure that all other customers continue to benefit from normal service.
 
-<sup>1</sup> <http://www.sans.org/reading-room/whitepapers/analyst/ddos-attacks-advancing-enduring-survey-34700>
+<sup>1</sup> <https://www.sans.org/reading-room/whitepapers/analyst/ddos-attacks-advancing-enduring-survey-34700>
 
 ## Does the DDoS mitigation service protect me against all types of 'denial of service' attacks?
 

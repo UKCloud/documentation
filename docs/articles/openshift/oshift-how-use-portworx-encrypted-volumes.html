@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to enable memorable word authentication | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to use Portworx encrypted volumes | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to enable memorable word authentication | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to use Portworx encrypted volumes | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-how-enable-memorable-word.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-use-portworx-encrypted-volumes.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,66 +91,80 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-enable-memorable-word-authentication">How to enable memorable word authentication</h1>
+<h1 id="how-to-use-portworx-encrypted-volumes">How to use Portworx encrypted volumes</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The UKCloud Portal login process offers an additional level of authentication through a memorable word. If you enable this feature, when users login to the Portal, after entering their password they are also prompted for a random combination of letters from their memorable word.</p>
-<h2 id="enabling-memorable-word-authentication">Enabling memorable word authentication</h2>
-<p>To enable memorable word authentication:</p>
-<ol>
-<li><p>Log in to the UKCloud Portal as an administrator</p>
-<p>For more detailed instructions, see the <a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
-</li>
-<li><p>If necessary, switch to the account for which you want to change the security settings.</p>
-</li>
-<li><p>In the navigation panel, select <strong>Settings</strong>.</p>
-<p><img src="images/ptl-mnu-settings.png" alt="Settings menu option in the UKCloud Portal"></p>
-</li>
-<li><p>On the <em>Settings</em> page, select the <strong>Security Settings</strong> tab.</p>
-<p><img src="images/ptl-settings-tab-security.png" alt="Security Settings tab of the Settings page"></p>
-</li>
-<li><p>Click <strong>Memorable word authentication</strong> to expand the section.</p>
-</li>
-<li><p>Select <strong>Enable memorable word authentication</strong>.</p>
-<p><img src="images/ptl-security-memorable-word-enable.png" alt="Enable memorable word authentication security setting"></p>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-<li><p>To disable memorable word authentication, deselect the <strong>Enable memorable word</strong> check box.</p>
-</li>
-</ol>
-<h2 id="enabling-memorable-word-on-account-switch">Enabling memorable word on account switch</h2>
-<p>You can extend your use of the memorable word feature to also prompt users for letters from their memorable word when they switch to this account from a different account within the Portal.</p>
-<ol>
-<li><p>Select the <strong>Prompt for memorable word check on account switch</strong> check box.</p>
-<p><img src="images/ptl-security-memorable-word-switch.png" alt="Enable memorable word on account switch security setting"></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If you cannot see the <strong>Prompt for memorable word check on account switch</strong> check box, this means that you've not yet enabled memorable word authentication for the account (see <a href="#enabling-memorable-word-authentication"><em>Enabling memorable word authentication</em></a>).</p>
-</div>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-<li><p>To disable memorable word authentication on account switch, deselect the <strong>Prompt for memorable word check on account switch</strong> check box.</p>
-</li>
-</ol>
-<h2 id="excluding-users-from-memorable-word-authentication">Excluding users from memorable word authentication</h2>
-<p>You can disable memorable word authentication on login for specific users if required.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If you've enabled memorable word on account switch, users will still be prompted for letters from their memorable word when switching to the account.</p>
-</div>
-<ol>
-<li><p>In the <em>Excluded users</em> section, click <strong>Add user</strong>.</p>
-</li>
-<li><p>Start entering the email address of the user you want to exclude from memorable word authentication, then select the user from the presented list.</p>
-<p><img src="images/ptl-security-memorable-word-exclude.png" alt="Excluding users from memorable word authentication"></p>
-</li>
-<li><p>Add more users, as required and when you're done, click <strong>Save</strong>.</p>
-</li>
-<li><p>To remove a user from the excluded users list, click <strong>Remove</strong> next to their email address.</p>
-</li>
-</ol>
+<p>Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how you can enable encryption for Portworx volumes.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster (or later) and that you have cluster-admin rights. It also assumes familiarity with <code>oc</code>, the OpenShift command-line client.</p>
+<p>If you're interested in a free 30 day trial of Portworx, raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="encryption-scope">Encryption Scope</h2>
+<p>Portworx uses passphrase encryption to protect volume data, both at rest and in transit, using an AES-256 cipher. Passphrases are stored as OpenShift secrets and you can set them either cluster-wide or per volume. In this article, we'll refer to passphrases as keys.</p>
+<h3 id="cluster-wide">Cluster-wide</h3>
+<p>Where a persistent volume claim (pvc) is created against a storage class that has the parameter <code>secure: &quot;true&quot;</code> set in its spec, the volume is encrypted using a cluster-wide key. Below is an example of a storage class spec that enables volume encryption:</p>
+<pre><code class="lang-none">kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+    name: portworx-repl1-encrypted
+provisioner: kubernetes.io/portworx-volume
+parameters:
+   secure: &quot;true&quot;
+   repl: &quot;1&quot;
+</code></pre>
+<p>You can set the cluster-wide key by using the following command to create a secret:</p>
+<pre><code class="lang-none">$ oc create secret generic px-vol-encryption --from-literal=cluster-wide-secret-key='&lt;desired-key&gt;' -n portworx
+</code></pre>
+<p>You need to pass the name of the key within the <code>px-vol-encryption</code> secret to Portworx, which you can do with the below commands:</p>
+<pre><code class="lang-none">$ PX_POD=$(oc get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
+
+$ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl secrets set-cluster-key --secret cluster-wide-secret-key
+</code></pre>
+<p>Now that you've set the cluster key, any pvc created using a secure storage class will be encrypted with the key. Below is an example of a pvc spec referencing the encrypted storage class created earlier:</p>
+<pre><code class="lang-none">kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-with-cluster-key
+spec:
+  storageClassName: portworx-repl1-encrypted
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+</code></pre>
+<p>Alternatively you can set a pvc to use the cluster key when using a non-secure storage class by adding the following annotation to the pvc spec:</p>
+<pre><code class="lang-none">metadata:
+  annotations:
+    px/secure: &quot;true&quot;
+</code></pre>
+<h3 id="per-volume">Per volume</h3>
+<p>As an alternative to using a cluster-wide key, you can use a secret per persistent volume claim (pvc). You should store the desired key within a secret in the Portworx project and reference it in the pvc spec using the following annotations:</p>
+<pre><code class="lang-none">metadata:
+  annotations:
+    px/secret-name: volume-secrets-name
+    px/secret-namespace: portworx
+    px/secret-key: specific-pvc-key
+</code></pre>
+<p><code>px/secret-name</code> refers to the secret object, <code>px/secret-namespace</code> should be <code>portworx</code> as the Portworx pods have privileges to read secrets in this project and <code>px/secret-key</code> refers to the specific key within the <code>px/secret-name</code> secret.</p>
+<p>Below is an example spec for a pvc that is encrypted using an individual secret:</p>
+<pre><code class="lang-none">kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-with-individual-key
+  annotations:
+    px/secret-name: volume-secrets
+    px/secret-namespace: portworx
+    px/secret-key: pvc-with-individual-key
+spec:
+  storageClassName: portworx-repl1
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+</code></pre>
+<h2 id="further-reading">Further reading</h2>
+<p><a href="https://2.1.docs.portworx.com/key-management/kubernetes-secrets/pvc-encryption-using-annotations/#portworx-encrypted-volumes">https://2.1.docs.portworx.com/key-management/kubernetes-secrets/pvc-encryption-using-annotations/#portworx-encrypted-volumes</a></p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
@@ -180,7 +194,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

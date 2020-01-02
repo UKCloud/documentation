@@ -50,7 +50,7 @@ To work out the number of processors (cores) you need to license within UKCloud,
 
 `Number of cores used = Total number of vCPUs running Oracle Database / 2`
 
-There is a core-factor that needs to be applied when it comes to licensing Oracle database licences. For the purposes of this, use the Intel Xeon core factor in the [Oracle Processor Core Factor Table](http://www.oracle.com/us/corporate/contracts/processor-core-factor-table-070634.pdf).
+There is a core-factor that needs to be applied when it comes to licensing Oracle database licences. For the purposes of this, use the Intel Xeon core factor in the [Oracle Processor Core Factor Table](https://www.oracle.com/us/corporate/contracts/processor-core-factor-table-070634.pdf).
 
 ## Named User Plus
 

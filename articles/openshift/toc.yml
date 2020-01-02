@@ -12,6 +12,8 @@
     href: oshift-gs.md
 - name: How To
   items:
+  - name: Back up and restore container directories and databases
+    href: oshift-how-backup-directories-database.md
   - name: Backup, restore and migrate OpenShift resources
     href: oshift-how-backup-migrate.md
   - name: Build an OpenShift application from a private GitHub repo
@@ -40,6 +42,16 @@
     href: oshift-how-use-hawkular-metrics.md
   - name: View your router logs
     href: oshift-how-view-router-logs.md
+  - name: Use Portworx with OpenShift
+    items:
+    - name: Configure Portworx volume replication
+      href: oshift-how-configure-portworx-volume-replication.md
+    - name: Expose non-http services externally
+      href: oshift-how-portworx-snapshots.md
+    - name: Use Portworx encrypted volumes
+      href: oshift-how-use-portworx-encrypted-volumes.md
+    - name: Use Portworx shared volumes
+      href: oshift-how-use-portworx-shared-volumes.md
 - name: Reference
   items:
   - name: Community network proxy configuration
