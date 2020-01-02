@@ -3,8 +3,8 @@ title: How to use My Calls to raise and monitor support tickets | UKCloud Ltd
 description: Provides an overview of the functionality provided by My Calls
 services: portal
 author: Sue Highmoor
-reviewer: cholford
-lastreviewed: 12/12/2019
+reviewer: Sue Highmoor
+lastreviewed: 02/01/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,7 +20,7 @@ toc_mdlink: ptl-how-use-my-calls.md
 
 ## Overview
 
-My Calls is a one‑stop place, accessed via the UKCloud Portal, to raise new support tickets (incidents and requests) with UKCloud and monitor existing tickets.
+My Calls is your one‑stop place, accessed via the UKCloud Portal, to raise new support tickets (incidents and requests) with UKCloud and monitor existing tickets.
 
 My Calls covers the ITIL standards of:
 
@@ -30,13 +30,13 @@ My Calls covers the ITIL standards of:
 
 ### Intended audience
 
-This article is intended for any UKCloud Portal user who wants to use My Calls to raise or monitor a support ticket. To complete the steps in this article, you must have access to the UKCloud Portal and the following My Calls permissions:
+This article is intended for any UKCloud Portal user who wants to use My Calls to raise or monitor support tickets. To complete the steps in this article, you must be able to log in to the UKCloud Portal with the following My Calls permissions:
 
-- All users with My Calls access can create new support tickets.
+- All users with My Calls access can create new support tickets
 
-- If you have the *My Tickets* permission, you can view and update the tickets that you have created.
+- If you have the *My Tickets* permission, you can view and update the tickets that you've created
 
-- If you have the *Account Tickets* or *My Calls Admin* permissions, you can view and update tickets created by any user across the account.
+- If you have the *Account Tickets* or *My Calls Admin* permission, you can view and update tickets created by any user across the account.
 
 ## Accessing My Calls
 
@@ -48,11 +48,13 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
     ![My Calls menu option in UKCloud Portal](images/ptl-mnu-mycalls.png)
 
-3. For additional security, re-enter your UKCloud Portal user credentials to access My Calls.
+3. Click **Go to My Calls Portal**.
+
+4. For additional security, re-enter your UKCloud Portal user credentials to access My Calls.
 
     ![My Calls login page](images/ptl-mycalls-login.png)
 
-4. If two-factor authentication (2FA) has been enabled for your account, you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here.
+    If two-factor authentication (2FA) has been enabled for your account, you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here.
 
 5. The My Calls home page shows a simple view of all tickets that have been raised.
 
@@ -60,7 +62,7 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
     - **My Tickets** lists the support tickets (incidents and service requests) that you can view, depending on your permissions. These are listed with the newest first. You can use the search tool to find a specific ticket and use filter options to find tickets with a particular status or date.
 
-    - You can raise new incidents and requests using the **New Incident** and **New Service Request** buttons.
+    - You can raise new tickets using the **New Incident** and **New Service Request** buttons.
 
     - Select the **Service Catalog** tab to find incident and service request templates to raise tickets.
 
@@ -69,14 +71,17 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 - If you want to request a new service or make changes to an existing service, [raise a service request ticket](#raising-a-service-request-ticket)
 
 - If you want to report a fault or outage, [raise an incident](#raising-an-incident-ticket)
+  
+    > [!NOTE]
+    > Before reporting an incident, check the [UKCloud Service Status page](https://status.ukcloud.com/) to see if it's a known issue that we're already working on.
 
 ### Raising a service request ticket
 
 1. In My Calls, select the **Service Catalog** tab.
 
-    ![The Service Catalogue tab in My Calls](images/ptl-mycalls-tab-catalog.png)
+    ![The Service Catalog tab in My Calls](images/ptl-mycalls-tab-catalog.png)
 
-2. Search the *Service Catalog* for the request offering you'd like to raise. You can browse by product type or most popular or enter keywords to search for.
+2. Search the *Service Catalog* for the type of request you want to raise. You can browse by product type or most popular, or enter keywords to search for.
 
     ![Service Catalog tab](images/ptl-mycalls-service-catalog.png)
 
@@ -97,11 +102,14 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
 ### Raising an incident ticket
 
+> [!NOTE]
+> Before reporting an incident, check the [UKCloud Service Status page](https://status.ukcloud.com/) to see if it's a known issue that we're already working on.
+
 1. In My Calls, select the **Service Catalog** tab.
 
     ![The Service Catalog tab in My Calls](images/ptl-mycalls-tab-catalog.png)
 
-2. Search the *Service Catalog* for the incident type you'd like to raise. You can browse by product type or most popular or enter keywords to search for.
+2. Search the *Service Catalog* for the type of incident you need to raise. You can browse by product type or most popular or enter keywords to search for.
 
     ![Service Catalog](images/ptl-mycalls-service-catalog.png)
 
@@ -125,7 +133,7 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 After raising a support ticket, you can view the ticket to monitor progress, add more information, add attachments, close or cancel the ticket.
 
 > [!NOTE]
-> The actions you can perform on a ticket depend on your support permissions. You'll always be able to update support tickets that you have raised. If you have the **Account Tickets** or **My Calls Admin** permissions, you can also view and edit tickets raised by other users on the account.
+> The actions you can perform on a ticket depend on your support permissions. You'll always be able to update support tickets that you have raised. If you have the *Account Tickets* or *My Calls Admin* permissions, you can also view and edit tickets raised by other users on the account.
 
 In My Calls, on the **My Tickets** tab, find the ticket you want to view by:
 
@@ -216,7 +224,7 @@ If you need to access older tickets, created using the previous version of My Ca
 
 - For information about how administrators can give Portal users access to My Calls, see [*How to manage My Calls users*](ptl-how-manage-my-calls.md)
 
-- For more information about what you can do in the UKCloud Portal, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
+- For information about what else you can do in the UKCloud Portal, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
 
 ## Related videos
 
