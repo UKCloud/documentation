@@ -12,6 +12,8 @@
     href: oshift-gs.md
 - name: How To
   items:
+  - name: Back up and restore container directories and databases
+    href: oshift-how-backup-directories-database.md
   - name: Backup, restore and migrate OpenShift resources
     href: oshift-how-backup-migrate.md
   - name: Build an OpenShift application from a private GitHub repo

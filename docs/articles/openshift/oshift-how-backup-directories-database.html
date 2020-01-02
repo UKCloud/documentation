@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to back up and restore container directories and databases on OpenShift | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to back up and restore container directories and databases on OpenShift | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-backup-directories-database.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-back-up-and-restore-container-directories-and-databases-on-openshift">How to back up and restore container directories and databases on OpenShift</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article explains how you can back up container directories and databases (specifically <a href="https://www.postgresql.org/">PostgreSQL</a>) to your localhost. It also goes through the process of how to restore from a backup.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>This article assumes that you have a UKCloud for OpenShift envrionment and can access it using the <a href="https://docs.openshift.com/container-platform/3.11/cli_reference/index.html#cli-reference-index">OpenShift Container Platform command line interface</a>.</p>
+<p>This article uses the following two OC CLI commands:</p>
+<ul>
+<li><p><a href="https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html"><code>oc exec</code></a></p>
+</li>
+<li><p><a href="https://docs.openshift.com/container-platform/3.11/dev_guide/copy_files_to_container.html#overview"><code>oc rsync</code></a></p>
+</li>
+</ul>
+<p>Begin by logging into your UKCloud for OpenShift envrionment using the following command:</p>
+<pre><code class="lang-bash">oc login --server {server} --token {token here}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can retrieve the <code>--token</code> by logging into the OpenShift web interface, clicking your username in the top right and clicking <strong>Copy Login Command</strong>.</p>
+</div>
+<h2 id="backing-up-container-directories-to-your-local-client">Backing up container directories to your local client</h2>
+<ol>
+<li><p>Create a directory on your local client for files to be backed up to:</p>
+<pre><code class="lang-bash">mkdir ~/oshiftbackups
+</code></pre>
+</li>
+<li><p>Switch to the project in which the container you want to back up the directory from is located:</p>
+<pre><code class="lang-bash">oc project {project name}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To list all projects use: <code>oc projects</code>.</p>
+</div>
+</li>
+<li><p>Identify the pod in which the container you want to back up resides:</p>
+<pre><code class="lang-bash">oc get pods
+</code></pre>
+</li>
+<li><p>Using <code>oc rsync</code>, copy the directory you want to back up:</p>
+<pre><code class="lang-bash"># oc rsync usage:
+oc rsync {podname}:{path/to/directory} {destination/on/host}
+
+# Example usage:
+oc rsync {podname}:/tmp/files/ ~/oshiftbackups
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you have multiple containers in a pod, use the <code>-c {container name}</code> parameter to specify a specific container name.</p>
+<p>Example: <code>oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}</code></p>
+</div>
+</li>
+</ol>
+<h2 id="uploading-a-directory-to-a-container">Uploading a directory to a container</h2>
+<ol>
+<li><p>Switch to the project in which the container you want to upload the directory to is located:</p>
+<pre><code class="lang-bash">oc project {project name}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To list all projects use: <code>oc projects</code>.</p>
+</div>
+</li>
+<li><p>Identify the pod in which the container you want to upload the directory to resides:</p>
+<pre><code class="lang-bash">oc get pods
+</code></pre>
+</li>
+<li><p>Using <code>oc rsync</code>, upload the directory to the container:</p>
+<pre><code class="lang-bash"># oc rsync usage:
+oc rsync {destination/on/host} {podname}:{path/to/upload}
+
+# Example usage:
+oc rsync ~/oshiftbackups/files mypod-1-hscwm:/tmp/files
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you have multiple containers in a pod, use the <code>-c {container name}</code> parameter to specify a specific container name.</p>
+<p>Example: <code>oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}</code></p>
+</div>
+</li>
+</ol>
+<h2 id="backing-up-a-database-on-openshift">Backing up a database on OpenShift</h2>
+<p>In this example, the type of database being backed up is PostgreSQL. Substitute the commands executed in this article (using <code>oc exec</code>) with commands that are appropriate to the database type you're using.</p>
+<ol>
+<li><p>Create a directory on your local client for files to be backed up to:</p>
+<pre><code class="lang-bash">mkdir ~/oshiftdatabasebackup
+</code></pre>
+</li>
+<li><p>Switch to the project where your database pod is located:</p>
+<pre><code class="lang-bash">oc project {project name}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To list all projects use: <code>oc projects</code>.</p>
+</div>
+</li>
+<li><p>Identify the pod in which the database container you want to backup resides:</p>
+<pre><code class="lang-bash">oc get pods
+
+NAME                           READY    STATUS      RESTARTS    AGE
+postgresql-1-hscwm   1/1           Running    0                   31m
+
+# In this example, the database is running in pod: postgresql-1-hscwm
+</code></pre>
+</li>
+<li><p>Using <code>oc exec</code>, run the following command to execute the PostgreSQL backup command in the container:</p>
+<pre><code class="lang-bash"># Execute a remote command on a container
+# Dump the contents of the database and pipe it into gzip (to create a compressed archive)
+# oc exec usage:
+oc exec {podname} -- bash -c 'pg_dump {databasename} | gzip &gt; /opt/app-root/src/{databasename}.gz'
+
+# Example usage:
+oc exec postgresql-1-hscwm -- bash -c 'pg_dump sampledb | gzip &gt; /opt/app-root/src/sampledb.gz'
+</code></pre>
+</li>
+<li><p>Using <code>oc rsync</code>, copy the database backup file contaning the PostgreSQL database files to your local client:</p>
+<pre><code class="lang-bash"># oc rsync usage:
+oc rsync {podname}:{path/to/directory} {destination/on/host}
+
+# Example usage:
+# This command copies the database backup file to /home/databasebackup
+oc rsync postgresql-1-hscwm:/opt/app-root/src/sampledb.gz ~/oshiftdatabasebackup
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you have multiple containers in a pod, use the <code>-c {container name}</code> parameter to specify a specific container name.</p>
+<p>Example: <code>oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}</code></p>
+</div>
+</li>
+</ol>
+<p>Your database is now backed up onto your local client in <code>/home/oshiftdatabasebackup</code>.</p>
+<h2 id="restoring-a-database-on-openshift">Restoring a database on OpenShift</h2>
+<ol>
+<li><p>Using <code>oc rsync</code>, move the backup of the database onto the container:</p>
+<pre><code class="lang-bash"># Copy the directory (oshiftdatabasebackup) containing the compressed archive to the container mount point
+oc rsync ~/oshiftdatabasebackup {podname}:/var/lib/pgsql/data
+
+# Example usage:
+oc rsync ~/oshiftdatabasebackup postgresql-1-hscwm:/var/lib/pgsql/data
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you have multiple containers in a pod, use the <code>-c {container name}</code> parameter to specify a specific container name.</p>
+<p>Example: <code>oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}</code></p>
+</div>
+</li>
+<li><p>Using <code>oc exec</code>, extract the database archive and restore the database:</p>
+<p>In this example, the type of database being restored is PostgreSQL. Substitute the commands executed in this article (using <code>oc exec</code>) with commands that are appropriate to the database type you're using.</p>
+<pre><code class="lang-bash"># Import the database backup and remove the backup directory from the container
+oc exec {podname} -- bash -c 'gunzip /var/lib/pgsql/data/oshiftdatabasebackup/{databasename}.gz | psql {databasename} &amp;&amp; rm -rf /var/lib/pgsql/data/oshiftdatabasebackup'
+
+# Example usage:
+oc exec postgresql-1-hscwm -- bash -c 'gunzip /var/lib/pgsql/data/oshiftdatabasebackup/sampledb.gz | psql sampledb &amp;&amp; rm -rf /var/lib/pgsql/data/oshiftdatabasebackup'
+</code></pre>
+</li>
+</ol>
+<h2 id="further-information">Further information</h2>
+<ul>
+<li><p><a href="https://blog.openshift.com/transferring-files-in-and-out-of-containers-in-openshift-part-1-manually-copying-files/">Transferring Files In and Out of Containers in OpenShift, Part 1: Manually Copying Files</a></p>
+</li>
+<li><p><a href="https://docs.openshift.com/container-platform/3.11/dev_guide/migrating_applications/database_applications.html">Migrating Database Applications</a></p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
