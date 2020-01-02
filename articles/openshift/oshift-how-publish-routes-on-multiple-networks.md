@@ -141,7 +141,7 @@ $ oc expose svc application-2
 route "application-2" exposed
 # we can apply the label to expose our route on the secondary router with the following command
 $ oc label route application-2 "router-secondary=true"
-route "application-2" labelled
+route "application-2" labeled
 ``` 
 
 By describing the route, we can now see it's been exposed on both routers (see `exposed on` lines below):
