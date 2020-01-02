@@ -81,9 +81,9 @@ You can take on-demand snapshots by creating an OpenShift resource of type `Volu
         requests:
           storage: 2Gi" | oc create -f -
     ```
-> [!INFO]
-> stork-snapshot-sc is a storage class that is created with the cluster. Whenever creating a PVC from a snapshot you will need to create it from this storage class.
 
+    > [!NOTE]
+    > stork-snapshot-sc is a storage class that is created with the cluster. Whenever creating a PVC from a snapshot you will need to create it from this storage class.
 
 ### Across namespaces
 
