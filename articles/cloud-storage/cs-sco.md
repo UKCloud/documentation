@@ -63,10 +63,10 @@ We control the deployed versions of technology on the platform. This covers inte
 
 Users can access, manage and view their Cloud Storage service, in any of the following ways:
 
-- **APIs.** You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the [EMC ECS Data Access Guide](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf) for more information on the features of both APIs.
+- **APIs.** You can use the ECS S3-compatible API. Refer to the [EMC ECS Data Access Guide](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf) for more information on the features of the API.
 
-> [!NOTE]
-> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
+    > [!NOTE]
+    > The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
 
 - **Command Line Interface (CLI).** CLI tools enable access from the command line by translating commands into the relevant API calls.
 

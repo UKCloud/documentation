@@ -93,8 +93,6 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 
 4. On the *Buckets* tab, you can see the following information for each bucket in the selected namespace:
 
-    - The type of bucket: S3 or ATMOS
-
     - The total amount of storage (in GiB) currently consumed by the objects in the bucket
 
     - The number of objects in the bucket
