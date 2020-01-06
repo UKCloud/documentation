@@ -4808,6 +4808,72 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-monitoring-contacts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-monitoring-contacts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-monitoring-devices.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-monitoring-devices.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-monitoring-maintenance.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-monitoring-maintenance.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-monitoring-multiple-upload.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-monitoring-multiple-upload.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-monitoring-multiple-xls.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-monitoring-multiple-xls.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-monitoring-thresholds.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-monitoring-thresholds.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/managed-services/images/ukc-services.png",
       "output": {
         "resource": {
@@ -4824,6 +4890,18 @@
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-faq.html",
           "hash": "+oStdqjFxx6LqdrYtiohaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-monitoring-how-change-config.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-monitoring-how-change-config.html",
+          "hash": "we4vNLXIXTtTbo5VW4E8UA=="
         }
       },
       "is_incremental": false,
@@ -4895,7 +4973,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "4BE3M8bghQJPWGie7ScbLA=="
+          "hash": "RrxOkGc6BAHTC3HKbKuZBA=="
         }
       },
       "is_incremental": false,
@@ -19501,13 +19579,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19518,7 +19589,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 420,
+          "total_file_count": 421,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
