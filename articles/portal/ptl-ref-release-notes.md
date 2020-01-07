@@ -26,8 +26,10 @@ Date: 8th January 2020
 Feature update
 
 Details:
-* Portal password confirmation page on initial secondary account switch
-* Update Knowledge Center articles
+
+- Portal password confirmation page on initial secondary account switch
+
+- Update Knowledge Centre articles
 
 ## Release 1.121.0
 
