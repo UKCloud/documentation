@@ -19,6 +19,18 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 1.122.0
+
+Date: 8th January 2020
+
+Feature update
+
+Details:
+
+- Portal password confirmation page on initial secondary account switch
+
+- Update links to Knowledge Centre articles
+
 ## Release 1.121.0
 
 Date: 16th December 2019
