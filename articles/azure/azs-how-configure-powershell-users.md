@@ -123,9 +123,9 @@ New-AzureRmResourceGroup -Name "MyResourceGroup" -Location $Location
 
 ## Next steps
 
-- [Develop templates for Azure Stack Hub](https://github.com/MicrosoftDocs/azure-stack-docs/blob/master/azure-stack/user/azure-stack-develop-templates.md)
+- [Develop templates for Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-develop-templates)
 
-- [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-stack-docs/blob/master/azure-stack/user/azure-stack-deploy-template-powershell.md)
+- [Deploy templates with PowerShell](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-deploy-template-powershell)
 
 ## Feedback
 
