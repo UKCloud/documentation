@@ -29,7 +29,7 @@ Details:
 
 - Portal password confirmation page on initial secondary account switch
 
-- Update Knowledge Centre articles
+- Update links to Knowledge Centre articles
 
 ## Release 1.121.0
 
