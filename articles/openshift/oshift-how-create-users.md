@@ -4,7 +4,7 @@ description: Shows how to create UKCloud for OpenShift users in the UKCloud Port
 services: openshift
 author: Sue Highmoor
 reviewer:
-lastreviewed: 19/10/2018 07:26:13
+lastreviewed: 07/01/2020
 
 toc_rootlink: How To
 toc_sub1: 
@@ -36,29 +36,6 @@ To create a new user:
     > [!NOTE]
     > You must log in to the Portal as an administrator for the account that includes the OpenStack cluster.
 
-2. After you've created the Portal user, you must raise a Service Request to add the user to the SSO group.
-
-    In the navigation panel, expand **Support**, then select **My Calls**.
-
-    ![My Calls menu option in the UKCloud Portal](images/ptl_mnu-my-calls.png)
-
-3. Select the **Raise a new Support Call** tab.
-
-    ![Raise a new Support Call tab](images/ptl-tab-new-ticket.png)
-
-4. From the **How can we help you?** list, select **I am requesting information on/administration of my service**.
-
-    ![Raise a Service Request](images/ptl-my-calls-request.png)
-
-5. From the **Select Product** list, select **Cloud Native Application Platform (OpenShift)**.
-
-6. From the **What is the nature of your query?** list, select **Uncategorised**.
-
-7. In the **Request Summary** field, enter `Add Portal users to OpenShift SSO group`.
-
-8. In the **Please provide any further details regarding your request** field, enter the name(s) of the user(s), and their username(s), that you want to add to the SSO group, along with the URL of the cluster that you are adding the user(s) to. If you are adding the user(s) to multiple clusters then specify all of the cluster URLs here and it can be completed as one task.
-
-9. When you're done, click **Submit**.
 
 ## Adding a user to an OpenShift cluster
 
