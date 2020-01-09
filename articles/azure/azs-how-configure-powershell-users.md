@@ -29,7 +29,7 @@ Prerequisites from a Windows-based external client.
   > [!NOTE]
   > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
   >
-  > For "legacy" operating systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
+  > For "legacy" operating systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 
 ## Declare variables
 
