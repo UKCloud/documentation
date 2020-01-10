@@ -81,13 +81,9 @@ A VM cannot span across physical hosts so, if you create a VM larger than 50% of
 
 You can over-contend the resources on your Dedicated Compute v2 as you see fit.
 
-## Deployment options
+## Deployment
 
-There are two deployment options for Dedicated Compute v2:
-
-- **UKCloud-defined** - You select a workload type for your VDC based on UKCloud for VMware VM types (ESSENTIAL, POWER or PRIORITY). Any VMs will inherit the characteristics and reservation levels of that service when deployed.
-
-- **Customer-defined** - You can set reservation levels on a per-VM basis.
+Dedicated compute utilises a reservation pool allocation model providing fine-grained control over the performance of workloads that are running in the organization VDC. The reservation pool allocation model is optimal for dedicated workloads.
 
 ## Platform management
 
