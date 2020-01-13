@@ -83,7 +83,7 @@ You can over-contend the resources on your Dedicated Compute v2 as you see fit.
 
 ## Deployment
 
-Dedicated compute utilises a reservation pool allocation model providing fine-grained control over the performance of workloads that are running in the organization VDC. The reservation pool allocation model is optimal for dedicated workloads.
+Dedicated Compute v2 utilises a reservation pool allocation model providing fine-grained control over the performance of workloads that are running in the organisation VDC. The reservation pool allocation model is optimal for dedicated workloads.
 
 ## Platform management
 
