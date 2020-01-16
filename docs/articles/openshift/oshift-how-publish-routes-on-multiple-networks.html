@@ -94,7 +94,7 @@
 <h1 id="how-to-publish-application-routes-to-multiple-networks">How to publish application routes to multiple networks</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This article provides instructions on how to make use of multiple external networks from within an OpenShift cluster. If you've requested an OpenShift cluster with multple networks from UKCloud you'll have multiple data planes - usually one for the internet and one for the community network you’ve requested be added to your deployment. Building applications that listen on these networks is relatively straightforward, but requires some specific configuration to be put in place on your application routes. This guide should help explain how you go about exposing your application on the relevant networks.</p>
+<p>This article provides instructions on how to make use of multiple external networks from within an OpenShift cluster. If you've requested an OpenShift cluster with multiple networks from UKCloud you'll have multiple data planes - usually one for the internet and one for the community network you’ve requested be added to your deployment. Building applications that listen on these networks is relatively straightforward but requires some specific configuration to be put in place on your application routes. This guide should help explain how you go about exposing your application on the relevant networks.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have access to and a working knowledge of <code>oc</code>, the OpenShift command-line client (CLI). For more information, see OpenShift's <a href="https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a>.</p>
 <h2 id="high-level-overview">High level overview</h2>
@@ -112,7 +112,7 @@
 <p>We'll be using some basic example applications to demonstrate publishing routes in each of these three application scenarios.</p>
 <h2 id="process-and-code-examples">Process and code examples</h2>
 <h3 id="scenario-1---traffic-from-the-internet-to-application-1">Scenario 1 - Traffic from the internet to application-1</h3>
-<p>First we'll create a project called <code>routersharding</code> and the three applications to demonstrate with:</p>
+<p>First, we'll create a project called <code>routersharding</code> and the three applications to demonstrate with:</p>
 <pre><code>$ oc new-project routersharding
 Now using project &quot;routersharding&quot; on server &quot;https://console.x-y-zzz-abcdef:8443&quot;.
  
