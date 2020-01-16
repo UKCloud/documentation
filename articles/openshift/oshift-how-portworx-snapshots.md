@@ -11,7 +11,7 @@ toc_sub1: Use Portworx with OpenShift
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Expose non-http services externally
+toc_title: Create and restore Portworx snapshots
 toc_fullpath: How To/Use Portworx with OpenShift/oshift-how-portworx-snapshots.md
 toc_mdlink: oshift-how-portworx-snapshots.md
 ---
