@@ -46,7 +46,7 @@
     items:
     - name: Configure Portworx volume replication
       href: oshift-how-configure-portworx-volume-replication.md
-    - name: Expose non-http services externally
+    - name: Create and restore Portworx snapshots
       href: oshift-how-portworx-snapshots.md
     - name: Use Portworx encrypted volumes
       href: oshift-how-use-portworx-encrypted-volumes.md

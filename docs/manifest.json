@@ -3626,7 +3626,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/dedicated-compute/dc-sco.html",
-          "hash": "Nh80lbNbBILZVWn514OB5Q=="
+          "hash": "eVoS8POLVKDzBQspTRKgWQ=="
         }
       },
       "is_incremental": false,
@@ -5729,7 +5729,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "Lj9/6F9C4wQrpYY5KxeQSA=="
+          "hash": "ELlrjVgYA6HguMz/RT0kHg=="
         }
       },
       "is_incremental": false,
@@ -7812,7 +7812,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-static-ip.html",
-          "hash": "PSK/M3a0yQaeFrl5Sc0NmA=="
+          "hash": "j7/5RB3zUGYpjk0cdqoyTg=="
         }
       },
       "is_incremental": false,
