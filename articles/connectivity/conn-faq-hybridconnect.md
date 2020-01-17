@@ -3,8 +3,8 @@ title: HybridConnect FAQs | UKCloud Ltd
 description: Frequently asked questions for HybridConnect
 services: connectivity
 author: Matt Warner
-reviewer:
-lastreviewed: 20/07/2018 18:37:23
+reviewer: hbrunt
+lastreviewed: 16/12/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
