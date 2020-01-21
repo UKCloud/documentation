@@ -131,7 +131,7 @@ The easiest solution to implement keeps moving parts at a minimum.
 
 - Take one full backup during the weekend, assuming the workload on the database during that period is lower than usual.
 
-A daily job is added to the host crontab, for the Oracle software user. It fires a script to run the RMAN backup session. The job should be fired by a scheduler external to the database. If the database has failed, the job can check whether the database is running before starting. On *nix systems, the cron service is a very reliable service, and easy to use.
+A daily job is added to the host crontab, for the Oracle software user. It fires a script to run the RMAN backup session. The job should be fired by a scheduler external to the database. If the database has failed, the job can check whether the database is running before starting. On \*nix systems, the cron service is a very reliable service, and easy to use.
 
 You can use custom-built shell scripts to fire RMAN jobs, keep a log of backup sessions and build a report to send via email to DBAs or administrators.
 
