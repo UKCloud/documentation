@@ -109,7 +109,7 @@
 </section>
 
 <div class="product-banner">
-  <a class="banner-link" href="https://community.ukcloud.com/?">
-    <img class="banner" src="{{_rel}}styles/assets/banner.png" srcset="{{_rel}}styles/assets/banner.png 2x" width="1436px" alt="{{_appName}}" >
+  <a class="banner-link" href="https://community.ukcloud.com/ideas">
+    <img class="banner" src="{{_rel}}styles/assets/banner.jpg" srcset="{{_rel}}styles/assets/banner.jpg 2x" width="1436px" alt="{{_appName}}" >
   </a>
 </div>
