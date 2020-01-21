@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-users.html",
-          "hash": "5rjehntkg4AFU/o94A+I8A=="
+          "hash": "qxYKzQCcxvLTxafHov6Mxg=="
         }
       },
       "is_incremental": false,
@@ -8469,6 +8469,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-ref-db-backup.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-ref-db-backup.html",
+          "hash": "psJd6WztmK783yX8Q/joSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-ref-licensing.md",
       "output": {
         ".html": {
@@ -8569,7 +8581,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "My0UNapjllhGRwSF/8kdZA=="
+          "hash": "ldGWk21fG9YGS1TwDwyDTA=="
         }
       },
       "is_incremental": false,
@@ -19579,13 +19591,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19593,10 +19598,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 421,
+          "total_file_count": 422,
           "skipped_file_count": 0
         }
       }

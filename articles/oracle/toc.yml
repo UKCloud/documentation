@@ -18,6 +18,8 @@
     href: orcl-how-enable-ha.md
 - name: Reference
   items:
+  - name: Best practice guidelines for Oracle Database backup
+    href: orcl-ref-db-backup.md
   - name: Compatibility with Solaris and AIX
     href: orcl-ref-solaris-aix.md
   - name: Oracle cloud self-service functionality
