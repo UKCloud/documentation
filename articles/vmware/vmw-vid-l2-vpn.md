@@ -18,7 +18,7 @@ toc_mdlink: vmw-vid-l2-vpn.md
 
 # Benefits of VMware L2 VPN
 
-The following video provides a technical explanation of VMware's L2 VPN feature, which forms part of the UKCloud for VMware Enterprise Networking Bundle.
+The following video provides a technical explanation of VMware's L2 VPN feature, which forms part of the UKCloud for VMware Advanced Management bundle.
 
 <div class="row">
   <div class="col-md-10">
