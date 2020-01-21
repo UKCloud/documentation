@@ -265,19 +265,6 @@ If you need to disable a user on your account from accessing My Calls, raise a g
 
 For detailed steps, see [*Raising a service request ticket*](#raising-a-service-request-ticket).
 
-## Accessing old support tickets
-
-If you need to access older tickets, created using the previous version of My Calls, you can use the *My Calls Archive*.
-
-> [!NOTE]
-> To raise new support tickets you must use the new My Calls.
-
-1. In the Portal navigation panel, expand the **Support** option and select **My Calls Archive**.
-
-    ![My Calls Archive menu option in UKCloud Portal](images/ptl-mnu-mycalls-archive.png)
-
-2. For information about how to work with tickets in the My Calls Archive, see [*How to use the My Calls Archive*](ptl-how-use-my-calls-archive.md).
-
 ## Next steps
 
 - For more information about the UKCloud support process, see [*How to raise and escalate incidents and service requests*](ptl-how-raise-escalate-service-request.md).
