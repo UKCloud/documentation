@@ -197,6 +197,24 @@ In *My Calls*, on the **My Tickets** tab, find the ticket you want to view by:
 
     ![Save incident button](images/ptl-mycalls-btn-save-incident-details.png)
 
+## Providing feedback
+
+We value your feedback on your UKCloud customer support experience to help us understand what we're doing right and how we could improve. For each ticket you raise, you have the opportunity to fill in a brief survey to tell us what you think.
+
+To access the survey:
+
+- For service requests tickets - Edit the ticket and select the **Customer Satisfaction Survey** tab then click **Complete new survey**.
+
+  ![Customer Satisfaction Survey tab in service request ticket](images/ptl-mycalls-survey-request.png)
+
+- For incident tickets - Edit the ticket and in the *Survey* section at the bottom of the page, click **Complete new survey**.
+
+  ![Complete new survey link in incident ticket](images/ptl-mycalls-survey-incident.png)
+
+Answer the questions in the survey and when you're done, click **Save**.
+
+![Customer Satisfaction Survey](images/ptl-mycalls-survey.png)
+
 ## Managing My Calls user permissions
 
 If you have the **My Calls Admin** Portal permission, you can manage the permissions level for other My Calls users across your account.
