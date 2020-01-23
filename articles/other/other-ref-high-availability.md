@@ -137,7 +137,7 @@ For information about the data recovery options available for different use case
 
 IPsec site-to-site VPN provides a secure way to share resources across multiple locations. For more information, see [*How to configure IPsec VPN*](../vmware/vmw-how-configure-ipsec-vpn.md).
 
-Alternatively, L2 VPN, available as part of the UKCloud for VMware Enterprise Networking Bundle, enables you to stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can extend your data centre across multiple sites and move your workloads seamlessly between them. For more information, see [*How to configure an L2 VPN*](../vmware/vmw-how-configure-l2-vpn.md).
+Alternatively, L2 VPN, available as part of the UKCloud for VMware Advanced Management bundle, enables you to stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can extend your data centre across multiple sites and move your workloads seamlessly between them. For more information, see [*How to configure an L2 VPN*](../vmware/vmw-how-configure-l2-vpn.md).
 
 ### Cloud Storage
 

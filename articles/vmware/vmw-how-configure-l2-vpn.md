@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-configure-l2-vpn.md
 
 ## Overview
 
-UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Enterprise Networking Bundle (additional charges apply). With L2 VPN you can stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.
+UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Advanced Management bundle (additional charges apply). With L2 VPN you can stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.
 
 L2 VPN is an extension of the edge's SSL functionality. It enables you to configure a tunnel between two sites, extending a logical switch across both sites. The tunnel means that virtual machines (VMs) remain on the same subnet if they are moved between the two sites, enabling you to extend your data centre across multiple sites. An NSX edge at one site can provide all services to VMs on the other site.
 
@@ -42,7 +42,7 @@ UKCloud L2 VPN functionality covers three scenarios:
 
 Before enabling L2 VPN, consider the following:
 
-- You must have purchased the Enterprise Networking Bundle for your UKCloud for VMware service
+- You must have purchased the Advanced Management bundle for your UKCloud for VMware service
 
 - You must have converted your edge gateway to an advanced gateway (see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md))
 

@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-configure-distributed-firewall.md
 
 ## Overview
 
-UKCloud for VMware provides Distributed Firewall (DFW) functionality as part of its Advanced Networking and Enterprise Networking bundles (additional charges apply). DFW enables microsegmentation of networks at the virtual data centre (VDC) level. It can inspect every packet and frame coming to and leaving the VM regardless of the network topology. Packet inspection is done at the VM virtual NIC (vNIC) level, which enables ACLs to be applied closest to the source.
+UKCloud for VMware provides Distributed Firewall (DFW) functionality as part of its Advanced Management bundle (additional charges apply). DFW enables microsegmentation of networks at the virtual data centre (VDC) level. It can inspect every packet and frame coming to and leaving the VM regardless of the network topology. Packet inspection is done at the VM virtual NIC (vNIC) level, which enables ACLs to be applied closest to the source.
 
 You can have a routed or isolated network on a vApp and still use a DFW at the VDC level to complement it. The NSX edge handles North-South bound traffic while the DFW is designed to manage East-West bound traffic.
 

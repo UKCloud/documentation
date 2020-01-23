@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Best practice guidelines for Oracle Database backup | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Best practice guidelines for Oracle Database backup | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-ref-db-backup.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="best-practice-guidelines-for-oracle-database-backup">Best practice guidelines for Oracle Database backup</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article provides some guidelines for setting up and managing Oracle Database backups for workloads on the UKCloud for Oracle Software service.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>This article assumes that you're running an Oracle Database workload using 11<em>g</em> or later on Linux or Windows. It also assumes that databases are production-ready, running in ArchiveLog mode.</p>
+<h3 id="required-details">Required details</h3>
+<p>When planning your database backup architecture, you must meet the following requirements:</p>
+<ul>
+<li><p><strong>Platform</strong> - A virtual machine (VM), running on a virtualisation infrastructure</p>
+</li>
+<li><p><strong>Operating system (OS)</strong> - Linux or Windows</p>
+</li>
+<li><p><strong>Database software</strong> - This article is specifically targeted at Oracle RDBMS</p>
+</li>
+</ul>
+<p>You also need to know the following:</p>
+<ul>
+<li><p><strong>Database installation</strong> - Whether you're using 11<em>g</em> (non-CDB) or 12<em>c</em>+</p>
+</li>
+<li><p><strong>Database size</strong> - The size of the database plus online redo log (ORL)</p>
+</li>
+<li><p><strong>Available space</strong> - Storage volumes provisioned for the database server</p>
+</li>
+<li><p><strong>Recovery time objective (RTO)</strong> - This is the targeted duration of time and a service level within which a business process must be restored after a disaster or disruption in order to avoid unacceptable consequences associated with a break in business continuity -- how much time did it take to recover after notification of business process disruption?</p>
+</li>
+<li><p><strong>Recovery point objective (RPO)</strong> - Defined by business continuity planning, this is the maximum targeted period in which data (transactions) might be lost from an IT service due to a major incident</p>
+</li>
+</ul>
+<h2 id="backup-architecture-guidelines">Backup architecture guidelines</h2>
+<p>Once you've gathered all the <a href="#required-details">Required details</a>, you should consider the following guidelines for the different elements of your environment.</p>
+<h3 id="the-virtual-machine">The virtual machine</h3>
+<p>This is the VM in which the OS is installed.</p>
+<p>The OS should be confined to 25GB, to keep the core small (therefore cheaper and faster to recover the VM). This can scale up to 50GB, depending on your specific requirements, but the smaller the better.</p>
+<p>Use virtual disks for storage:</p>
+<ul>
+<li><p>One main volume for the database itself</p>
+</li>
+<li><p>One volume for the fast recovery area (FRA)</p>
+</li>
+<li><p>One volume to hold backups (depending on need and budget)</p>
+<p>If possible, offload backups to object storage, which is a cheaper alternative for long-term storage</p>
+</li>
+</ul>
+<p>In an ideal scenario, the volume that holds the OS software should be isolated from the volume used for data. The OS volume should also contain the Oracle software.</p>
+<p>If applications are deployed on the database server, you can create and mount one (or more) volumes on <code>/opt/app&lt;nn&gt;,/var/app&lt;nn&gt;,/usr/local/app&lt;nn&gt;,</code> or other mount points depending on your architecture and requirements. This makes volume management, VM recovery and cloning easier and, most importantly, keeps data isolated from other resources.</p>
+<h3 id="the-database">The database</h3>
+<p>The database itself (data files + ORL) is kept on the main data volume, which is usually bigger than the database size, to accommodate database growth and the first copy of the ORL.</p>
+<p>You should use another volume to host the Oracle fast recovery area. This volume may hold a second copy of the ORL and online database backups. If you plan to store one full backup in the fast recovery area, size this volume accordingly.</p>
+<p>Depending on the database size and recovery requirements, you may choose to have more than one volume to store data. Given the Oracle database architecture, you can add data volumes (online to the VM) at any time without downtime.</p>
+<p>As has already been stated, the key is to keep data separated from the OS and and apps data. This configuration makes it easier to manage the database server and removes the need to deal with volumes that are too big or too small when space pressure is critical.</p>
+<p>The suggestion is to keep things simple:</p>
+<ul>
+<li><p>The OS on one volume</p>
+</li>
+<li><p>Data in another volume(s)</p>
+</li>
+<li><p>Backups in another (or offload to object storage)</p>
+</li>
+</ul>
+<h2 id="backup-strategy">Backup strategy</h2>
+<p>Your strategy depends on several factors. Database size could be one of the main drivers because of the storage cost in case of big databases and the time it takes to restore or recover.</p>
+<p>The first decisions to take are when to take a backup (how frequent it should be) and the type of backup (full or incremental).</p>
+<p>A typical backup strategy might be:</p>
+<ul>
+<li><p>Monday to Friday</p>
+<ul>
+<li><p>Daily incremental backups: The nightly backup and maintenance window (big databases)</p>
+</li>
+<li><p>Full database backup: The nightly backup and maintenance window (small databases)</p>
+</li>
+</ul>
+</li>
+<li><p>Saturday and Sunday</p>
+<ul>
+<li><p>Full backup: The weekend maintenance window (big and small databases)</p>
+</li>
+<li><p>Backup management: Backup archiving, backup cleanup, reporting</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Things can change, depending on your requirements. If you need a full backup on a Monday and Friday, just adjust the strategy to suit within the maintenance window to reduce the impact on the normal workload.</p>
+<p>The overall strategy is basically (unless you have specific constraints on availability):</p>
+<ul>
+<li>An incremental backup is taken on a daily basis, with a full backup during the weekend</li>
+</ul>
+<p>When you have specific constraints, you can include the backup strategy in the disaster recovery (DR) strategy:</p>
+<ul>
+<li><p>One primary database is used by the business, with a secondary database used for backup and reporting</p>
+<p>This scenario includes at least two databases: a primary and a secondary/standby, where the secondary is a copy of the primary (physical or logical).</p>
+</li>
+</ul>
+<h3 id="keeping-things-simple">Keeping things simple</h3>
+<p>The easiest solution to implement keeps moving parts at a minimum.</p>
+<ul>
+<li><p>Take one incremental database backup daily. If you're licensed to use Oracle Block Change Tracking, such a backup can be very fast.</p>
+<p>Backups are taken via the Oracle Recovery Manager (RMAN). Backups can be compressed and, optionally, encrypted.</p>
+</li>
+<li><p>Take one full backup during the weekend, assuming the workload on the database during that period is lower than usual.</p>
+</li>
+</ul>
+<p>A daily job is added to the host crontab, for the Oracle software user. It fires a script to run the RMAN backup session. The job should be fired by a scheduler external to the database. If the database has failed, the job can check whether the database is running before starting. On *nix systems, the cron service is a very reliable service, and easy to use.</p>
+<p>You can use custom-built shell scripts to fire RMAN jobs, keep a log of backup sessions and build a report to send via email to DBAs or administrators.</p>
+<p>You can use an external job scheduler, depending on your existing infrastructure.</p>
+<p>You can store RMAN scripts on the VM file system or within the database. You can use an RMAN script to run the daily backup check (crosscheck), find backups that are no longer needed (obsolete) and verify if some files are missing (archived logs). When checks are completed, the actual backup is taken.</p>
+<p>UKCloud can provide more detailed instructions and scripts, but these will need to be specifically defined for each customer. As a multi-cloud provider, UKCloud is responsible for the infrastructure; any intervention inside the OS hosted on a customer VM must be planned and approved.</p>
+<p>You can keep one backup on disk, in the fast recovery area (having allocated enough room on the storage volume), and archive older backups. In an ideal scenario, the last full backup should be kept on disk. When the next full backup is taken, the old ones should be moved to object storage.</p>
+<p>UKCloud is currently working to make an object storage solution available for the UKCloud for Oracle Software service.</p>
+<p>Oracle RMAN is already capable of taking backups directly against Amazon S3-compatible object storage devices.</p>
+<h3 id="when-the-architecture-is-more-articulated">When the architecture is more articulated</h3>
+<p>In a full Oracle Database architecture, there is a primary database and a secondary database. The primary database replicates via Data Guard (physical standby) or GoldenGate (logical standby, real-time), to a secondary database.</p>
+<p>When recovery time can be expanded to several hours, you could implement a custom replication solution as a cheaper alternative to Data Guard:</p>
+<ul>
+<li><p>The primary database produces archived log files. These files are shipped to a secondary database host.</p>
+</li>
+<li><p>The standby host receives the archived log files, logs them into a storage volume and checks integrity after transfer.</p>
+</li>
+<li><p>The standby holds an Oracle Database open in media recovery mode (like dg) and, every time an archived log is shipped, it's automatically applied to the standby.</p>
+</li>
+<li><p>If a primary database failure occurs, the standby receives the last archived redo log and applies it. The database is open with resetlogs, ready to be used.</p>
+</li>
+<li><p>The application (middleware) needs to be pointed to the new database server IP/hostname address.</p>
+</li>
+</ul>
+<p>This procedure (except the middleware bit) is fully automated. The main differences to Data Guard are:</p>
+<ul>
+<li><p>Pro - No broker, easy to implement, cheap to drive.</p>
+</li>
+<li><p>Con - Manual management, replication relies on archived logs to be generated (log switch happens at a higher frequency).</p>
+</li>
+</ul>
+<p>The database backup is taken on the secondary. The same considerations apply, but to the standby. The primary database is not affected by backup jobs, which run on the standby.</p>
+<p>This is a typical Oracle Database setup, with a primary and a standby, where the standby is usually located on a separate host, away from the primary.</p>
+<h3 id="when-things-get-complicated">When things get complicated</h3>
+<p>In a complex architecture, an Oracle Database cluster is built using Real Application Clusters (RAC). When using RAC, you don't need to set the High Availability (HA) feature on Oracle VM Server and can take advantage of hard partitioning, which helps in saving on Database software licensing (given that a full RAC installation requires the Enterprise Edition). The database runs in a cluster with 2+ nodes, using shared storage and an interconnect network. VMs in the cluster can provide high availability. One node in the cluster replicates the database to a second site, which can use either another RAC or a single instance database.</p>
+<p>The same considerations seen before work here: the database backup is taken on the standby database.</p>
+<h3 id="cdb-or-non-cdb">CDB or non-CDB</h3>
+<p>Oracle 12<em>c</em> introduced the multi-tenant option, which changed the way databases are managed with regards to storage and users.</p>
+<p>From a backup perspective, things don't change much. You should still use RMAN to operate backup and recovery.</p>
+<p>A common approach is to use the multi-tenant option, but implementing databases using a single-tenant configuration (one CDB that holds one PDB). The single-tenant option is free of charge; multi-tenancy requires a licence.</p>
+<p>In a cloud environment, with databases running within VMs, Oracle Database 12<em>c</em> single-tenancy seems to be the ideal option.</p>
+<h3 id="backup-metadata-management">Backup metadata management</h3>
+<p>When using RMAN to take database backups, one of the choices you need to make is whether to use a backup catalog or not.</p>
+<p>For small installations, a catalog is not strictly needed. The catalog helps when there is more than one database included in the backup strategy, or the estate, because it holds all the metadata related to the backup sessions in one single place.</p>
+<p>In a complex environment, you should use a central job scheduler to keep track of all the backup (and other type) jobs and targets. This is a host that can communicate with all the database servers, initiate backup sessions, manage backups metadata and generate reports.</p>
+<p>Oracle does offer a solution, Secure Backup, but this is not particularly user-friendly. You can also use Oracle Enterprise Manager (OEM), and you can directly schedule backups in Cloud Control. Or you may choose to develop a custom option to manage backup jobs, backup metadata in the RMAN catalog and generate reports.</p>
+<p>A project to offer a ready-to-use backup solution (easy to implement and use) for the UKCloud for Oracle Software service is under development. This solution relies on an object storage backend to hold long-term backups. It's aim is to provide a simple tool (specifically, a CLI tool, to be embedded in scripts) to manage backup requirements.</p>
+<h3 id="backup-testing">Backup testing</h3>
+<p>You should test and validate backups every six months, or more depending on your own business requirements. This provides certainty that, if a failure occurs, a backup can be safely used to restore and recover the database server's data. If a backup solution is available, as mentioned above, you should be able to schedule such a task.</p>
+<p>To perform backup testing, fire up a VM to manage backup validation, restore and database recovery. The idea is to provide a fully automated tool to test backup integrity and provide an automated procedure for restore and recovery. You pay only for the storage used for the time the restore takes place, if the restore is successful.</p>
+<p>This could be seen as a fire drill for the database, conducted every &lt;n&gt; months, to make sure the procedures are well defined and tested. If something fails, you can adjust the procedure to make sure it will be ready for a real-world scenario.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com/">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
