@@ -113,11 +113,13 @@ Choose the protection required for your application. All customers can use the c
 
 ### Advanced Distributed Networking
 
-Distributed Firewalls create security groups and firewall rules, Distributed Logical Routers for routing East-West traffic with VDCs, and L2 VPN to stretch an L2 subnet between UKCloud zones, UKCloud and on-premises vSphere and between UKCloud and remote branches of vSphere with no NSX
+Advanced distributed networking functionality, available by purchasing the Advanced Management bundle, include
 
-- Advanced Networking Bundle - Distributed Firewall (DFW), Distributed Logical Router (DLR)
+- Distributed Firewalls - create security groups and firewall rules
 
-- Enterprise Networking Bundle - Distributed Firewall (DFW), Distributed Logical Router (DLR), L2 VPN
+- Distributed Logical Routers - for routing East-West traffic with VDCs
+
+- L2 VPN - to stretch an L2 subnet between UKCloud zones, UKCloud and on-premises vSphere and between UKCloud and remote branches of vSphere with no NSX
 
 ### Monitoring, Metrics and Alerting
 

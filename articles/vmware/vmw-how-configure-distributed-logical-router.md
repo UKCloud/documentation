@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-configure-distributed-logical-router.md
 
 ## Overview
 
-UKCloud for VMware provides Distributed Logical Router (DLR) functionality as part of its Advanced Networking bundles (additional charges apply). DLR optimises the routing of east-west traffic within your VDCs, using a hypervisor on the source VM to limit traffic flow to a maximum of two hosts (the source and a destination), without the need to route traffic back through the edge gateway. As well as providing much better performance, DLR can scale up to 1000 routed logical networks (rather than the 10 logical network limit imposed by traditional edge gateway routing).
+UKCloud for VMware provides Distributed Logical Router (DLR) functionality as part of its Advanced Management bundle (additional charges apply). DLR optimises the routing of east-west traffic within your VDCs, using a hypervisor on the source VM to limit traffic flow to a maximum of two hosts (the source and a destination), without the need to route traffic back through the edge gateway. As well as providing much better performance, DLR can scale up to 1000 routed logical networks (rather than the 10 logical network limit imposed by traditional edge gateway routing).
 
 ![Distributed Logical Router overview](images/vmw-dlr-overview.png)
 
@@ -28,7 +28,7 @@ UKCloud for VMware provides Distributed Logical Router (DLR) functionality as pa
 
 Before enabling DLR, consider the following:
 
-- You must have purchased either the Advanced Networking Bundle or Enterprise Networking Bundle for your UKCloud for VMware service
+- You must have purchased the Advanced Management bundle for your UKCloud for VMware service
 - You must have converted your edge gateway to an advanced gateway (see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md))
 - Your advanced gateway must have one free interface for DLR to use for the transit (P2P) network
 - IPv6 is not supported with DLR
