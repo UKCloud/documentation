@@ -94,12 +94,12 @@
 <h1 id="how-to-configure-a-distributed-logical-router">How to configure a Distributed Logical Router</h1>
 
 <h2 id="overview">Overview</h2>
-<p>UKCloud for VMware provides Distributed Logical Router (DLR) functionality as part of its Advanced Networking bundles (additional charges apply). DLR optimises the routing of east-west traffic within your VDCs, using a hypervisor on the source VM to limit traffic flow to a maximum of two hosts (the source and a destination), without the need to route traffic back through the edge gateway. As well as providing much better performance, DLR can scale up to 1000 routed logical networks (rather than the 10 logical network limit imposed by traditional edge gateway routing).</p>
+<p>UKCloud for VMware provides Distributed Logical Router (DLR) functionality as part of its Advanced Management bundle (additional charges apply). DLR optimises the routing of east-west traffic within your VDCs, using a hypervisor on the source VM to limit traffic flow to a maximum of two hosts (the source and a destination), without the need to route traffic back through the edge gateway. As well as providing much better performance, DLR can scale up to 1000 routed logical networks (rather than the 10 logical network limit imposed by traditional edge gateway routing).</p>
 <p><img src="images/vmw-dlr-overview.png" alt="Distributed Logical Router overview"></p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>Before enabling DLR, consider the following:</p>
 <ul>
-<li>You must have purchased either the Advanced Networking Bundle or Enterprise Networking Bundle for your UKCloud for VMware service</li>
+<li>You must have purchased the Advanced Management bundle for your UKCloud for VMware service</li>
 <li>You must have converted your edge gateway to an advanced gateway (see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>)</li>
 <li>Your advanced gateway must have one free interface for DLR to use for the transit (P2P) network</li>
 <li>IPv6 is not supported with DLR</li>
