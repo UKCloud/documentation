@@ -3,8 +3,8 @@ title: How to expand OpenShift persistent volumes | UKCloud Ltd
 description: Outlines methods to expand OpenShift persistent volumes in v3.11 OpenShift clusters.
 services: openshift
 author: Gareth Ellner
-reviewer:
-lastreviewed: 
+reviewer: gsmith
+lastreviewed: 20/11/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
