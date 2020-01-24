@@ -3,8 +3,8 @@ title: How to install and configure OpenVPN | UKCloud Ltd
 description: Details the steps required to obtain, deploy and configure an OpenVPN virtual appliance to obtain remote access to your virtual data centres running on the UKCloud platform
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: lthangarajah
+lastreviewed: 23/08/2019
 
 toc_rootlink: How To
 toc_sub1:
