@@ -1,5 +1,5 @@
 ---
-title: How to monitor your OpenShift cluster | UKCloud Ltd
+title: How to monitor your OpenShift cluster
 description: Explains how to set up a simple system to monitor an OpenShift Cloud Native Application Platform cluster
 services: openshift
 author: Sue Highmoor

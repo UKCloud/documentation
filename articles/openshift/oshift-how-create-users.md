@@ -1,5 +1,5 @@
 ---
-title: How to create new UKCloud for OpenShift users in the UKCloud Portal | UKCloud Ltd
+title: How to create new UKCloud for OpenShift users in the UKCloud Portal
 description: Shows how to create UKCloud for OpenShift users in the UKCloud Portal so that they can benefit from two-factor authentication (2FA)
 services: openshift
 author: Sue Highmoor

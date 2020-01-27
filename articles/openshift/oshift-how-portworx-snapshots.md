@@ -1,5 +1,5 @@
 ---
-title: How to create and restore Portworx snapshots | UKCloud Ltd
+title: How to create and restore Portworx snapshots
 description: Explains how to create and restore the different types of Portworx snapshots
 services: openshift
 author: Kieran O'Neill

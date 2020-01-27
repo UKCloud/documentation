@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenShift | UKCloud Ltd
+title: UKCloud for OpenShift
 description: Home page for UKCloud for OpenShift
 services: openshift
 author: Sue Highmoor

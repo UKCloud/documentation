@@ -1,5 +1,5 @@
 ---
-title: DNS zone forwarding in OpenShift clusters | UKCloud Ltd
+title: DNS zone forwarding in OpenShift clusters
 description: Provides information regarding DNS zone forwarding which can be configured in OpenShift clusters to enhance service discovery on deployments with private networks
 services: openshift
 author: Ben Bacon
