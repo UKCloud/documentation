@@ -1,8 +1,10 @@
 ---
-title: High Performance Compute Service Definition | UKCloud Ltd
+title: High Performance Compute Service Definition
 description: Provides an overview of what is provided by the High Performance Compute (HPC) service
 services: hpc
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:
