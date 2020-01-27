@@ -1,5 +1,5 @@
 ---
-title: Cloud Enablement - VPN solutions Service Scope | UKCloud Ltd
+title: Cloud Enablement - VPN solutions Service Scope
 description: Outlines important details regarding Cloud Enablement for VPN solutions
 services: enablement
 author: Steve Hall

@@ -1,5 +1,5 @@
 ---
-title: Cloud Enablement - Server/Storage Hosting Service Scope | UKCloud Ltd
+title: Cloud Enablement - Server/Storage Hosting Service Scope
 description: outlines important details regarding Cloud enablement for server / storage hosting
 services: enablement
 author: Steve Hall
