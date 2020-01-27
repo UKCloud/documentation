@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for Multi-Cloud Backup Storage | UKCloud Ltd
+title: Getting Started Guide for Multi-Cloud Backup Storage
 description: Provides information to get up and running with Multi-Cloud Backup Storage
 services: mcbs
 author: Steve Dixon

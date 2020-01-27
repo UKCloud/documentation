@@ -1,5 +1,5 @@
 ---
-title: Multi-Cloud Backup Storage FAQs | UKCloud Ltd
+title: Multi-Cloud Backup Storage FAQs
 description: Frequently asked questions for Multi-Cloud Backup Storage
 services: mcbs
 author: Steve Dixon
