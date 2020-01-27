@@ -1,5 +1,5 @@
 ---
-title: Managed Monitoring from UKCloud FAQs | UKCloud Ltd
+title: Managed Monitoring from UKCloud FAQs
 description: Frequently asked questions for Managed Monitoring from UKCloud
 services: managed-services
 author: Steve Dixon
