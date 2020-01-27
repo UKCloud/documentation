@@ -1,5 +1,5 @@
 ---
-title: PSN for Policing and enhanced regime FAQs | UKCloud Ltd
+title: PSN for Policing and enhanced regime FAQs
 description: Frequently asked questions for PSN for Policing and enhanced regime
 services: connectivity
 author: Matt Warner

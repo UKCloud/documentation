@@ -1,5 +1,5 @@
 ---
-title: Bandwidth monitoring FAQs | UKCloud Ltd
+title: Bandwidth monitoring FAQs
 description: Frequently asked questions for bandwidth monitoring
 services: connectivity
 author: Matt Warner

@@ -1,5 +1,5 @@
 ---
-title: UltraDNS FAQs | UKCloud Ltd
+title: UltraDNS FAQs
 description: Frequently asked questions for UltraDNS (previously Global Load Balancing)
 services: connectivity
 author: Matt Warner
