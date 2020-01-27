@@ -374,7 +374,10 @@ VMware provides a compatibility matrix at: <https://partnerweb.vmware.com/comp_g
 
 You can use the UKCloud catalog of operating systems or upload your own.
 
-We offer Windows Server Windows 2012, Windows 2016, Red Hat Enterprise Linux and CentOS. Please note that Windows Server 2008 is now out of support and we highly recommend that you upgrade to either Windows Server 2012, or Windows Server 2016. 
+We offer Windows Server Windows 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.
+
+> [!NOTE]
+> As of 14 January 2020, Windows Server 2008 is out of support. We highly recommend that you upgrade to Windows Server 2012 or Windows Server 2016. 
 
 In addition, we provide access to common templates provided by the Bitnami service such as Drupal, Joomla, LAMP and Wordpress.
 
