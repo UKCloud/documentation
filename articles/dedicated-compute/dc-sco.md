@@ -1,5 +1,5 @@
 ---
-title: Dedicated Compute v2 Service Scope | UKCloud Ltd
+title: Dedicated Compute v2 Service Scope
 description: Outlines important details regarding Dedicated Compute v2
 services: dedicated-compute
 author: Steve Hall
