@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Microsoft Azure Service Scope | UKCloud Ltd
+title: UKCloud for Microsoft Azure Service Scope
 description: Outlines important details regarding UKCloud for Microsoft Azure
 services: azure-stack
 author: Mario Fedato

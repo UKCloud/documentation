@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Microsoft Azure FAQs | UKCloud Ltd
+title: UKCloud for Microsoft Azure FAQs
 description: Frequently asked questions for UKCloud for Microsoft Azure
 services: azure-stack
 author: Matt Warner

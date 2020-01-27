@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual machine scale set using the UKCloud Azure Stack Hub portal | UKCloud Ltd
+title: How to create a virtual machine scale set using the UKCloud Azure Stack Hub portal
 description: Provides help for creating a virtual machine scale set on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
