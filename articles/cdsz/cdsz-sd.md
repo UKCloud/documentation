@@ -1,5 +1,5 @@
 ---
-title: Cross Domain Security Zone Service Definition | UKCloud Ltd
+title: Cross Domain Security Zone Service Definition
 description: Provides an overview of what is provided by the Cross Domain Security Zone (CDSZ) service
 services: cdsz
 author: Sue Highmoor
