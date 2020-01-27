@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenStack | UKCloud Ltd
+title: UKCloud for OpenStack
 description: Home page for OpenStack
 services: openstack
 author: Sue Highmoor

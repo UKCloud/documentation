@@ -1,5 +1,5 @@
 ---
-title: (Video) OpenStack self-service backup and restoration with TrilioVault | UKCloud Ltd
+title: (Video) OpenStack self-service backup and restoration with TrilioVault
 description: Shows a video that provides an overview of the self-service backup and restoration feature provided by TrilioVault
 services: openstack
 author: Sue Highmoor

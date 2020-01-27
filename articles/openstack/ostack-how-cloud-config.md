@@ -1,5 +1,5 @@
 ---
-title: How to configure an OpenStack instance using cloud-config | UKCloud Ltd
+title: How to configure an OpenStack instance using cloud-config
 description: Describes how to use cloud-config (user-data) to configure an OpenStack instance
 services: openstack
 author: Steve Relf

@@ -1,5 +1,5 @@
 ---
-title: How to move resources between OpenStack regions | UKCloud Ltd
+title: How to move resources between OpenStack regions
 description: Helps you understand how you can move resources between OpenStack regions
 services: openstack
 author: Sue Highmoor
