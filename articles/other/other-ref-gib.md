@@ -1,5 +1,5 @@
 ---
-title: Understanding the difference between GB and GiB | UKCloud Ltd
+title: Understanding the difference between GB and GiB
 description: Explains the difference between GB and GiB and why it's important
 services: other
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: How to configure a load balancer | UKCloud Ltd
+title: How to configure a load balancer
 description: Shows how to configure a load balancer within vCloud Director
 services: vmware
 author: Sue Highmoor

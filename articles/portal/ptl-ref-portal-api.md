@@ -1,5 +1,5 @@
 ---
-title: UKCloud Portal API Reference Guide | UKCloud Ltd
+title: UKCloud Portal API Reference Guide
 description: Shows how to interact with the UKCloud Portal via use of an application programming interface (API)
 services: portal
 author: Sue Highmoor

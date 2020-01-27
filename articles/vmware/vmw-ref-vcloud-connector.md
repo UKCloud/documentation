@@ -1,5 +1,5 @@
 ---
-title: VMware vCloud Connector | UKCloud Ltd
+title: VMware vCloud Connector
 description: Covers the use of VMware vCloud Connector with the UKCloud platform
 services: vmware
 author: Sue Highmoor

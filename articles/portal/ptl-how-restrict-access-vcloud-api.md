@@ -1,5 +1,5 @@
 ---
-title: How to restrict access to the vCloud API | UKCloud Ltd
+title: How to restrict access to the vCloud API
 description: Shows how to create a whitelist of IP addresses to restrict access to the vCloud API
 services: portal
 author: Sue Highmoor

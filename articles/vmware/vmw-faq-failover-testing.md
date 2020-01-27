@@ -1,5 +1,5 @@
 ---
-title: Service failover testing FAQs | UKCloud Ltd
+title: Service failover testing FAQs
 description: Details service failover test related Frequently Asked Questions (FAQs)
 services: vmware
 author: Sue Highmoor

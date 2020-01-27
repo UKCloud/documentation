@@ -1,5 +1,5 @@
 ---
-title: How to install a REST client to access the vCloud API | UKCloud Ltd
+title: How to install a REST client to access the vCloud API
 description: Provides a step by step guide to installing the RESTClient in Mozilla Firefox so that you can access the vCloud API
 services: vmware
 author: Sue Highmoor

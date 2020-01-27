@@ -1,5 +1,5 @@
 ---
-title: How to view your VMs in the UKCloud Portal | UKCloud Ltd
+title: How to view your VMs in the UKCloud Portal
 description: Shows how to view your virtual machines within the UKCloud portal
 services: vmware
 author: Sue Highmoor

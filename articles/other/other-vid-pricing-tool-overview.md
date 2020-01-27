@@ -1,5 +1,5 @@
 ---
-title: UKCloud Pricing Estimation Tool overview video | UKCloud Ltd
+title: UKCloud Pricing Estimation Tool overview video
 description: Shows a video that provides an overview of the Pricing Estimation Tool
 services: other
 author: Dan Baker

@@ -1,5 +1,5 @@
 ---
-title: TCP_TW_REUSE and TCP_TW_RECYCLE settings | UKCloud Ltd
+title: TCP_TW_REUSE and TCP_TW_RECYCLE settings
 description: Describes the role of TCP_TW_reuse and TCP_TW_recycle settings on edge gateways, and how these may affect TCP connections in some scenarios.
 services: vmware
 author: Sue Highmoor

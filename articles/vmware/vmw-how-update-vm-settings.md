@@ -1,5 +1,5 @@
 ---
-title: How to view and update virtual machine settings | UKCloud Ltd
+title: How to view and update virtual machine settings
 description: Describes how to view and update the different virtual machine (VM) settings in vCloud Director
 services: vmware
 author: Sue Highmoor

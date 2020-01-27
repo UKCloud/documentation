@@ -1,5 +1,5 @@
 ---
-title: How to increase block storage for a virtual machine | UKCloud Ltd
+title: How to increase block storage for a virtual machine
 description: Describes how to increase the block storage available to a virtual machine (VM)
 services: vmware
 author: Sue Highmoor

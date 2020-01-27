@@ -1,5 +1,5 @@
 ---
-title: Comparison of UKCloud for VMware against hyperscalers  | UKCloud Ltd
+title: Comparison of UKCloud for VMware against hyperscalers 
 description: Analyses the performance of UKCloud for VMware and compares it against hyperscalers
 services: vmware
 author: Sue Highmoor

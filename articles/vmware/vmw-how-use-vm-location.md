@@ -1,5 +1,5 @@
 ---
-title: How to use VM location in vCloud Director | UKCloud Ltd
+title: How to use VM location in vCloud Director
 description: Demonstrates how to use the VM location function within vCloud Director to show the logical location of a specific virtual machine in your organisation
 services: vmware
 author: Sue Highmoor

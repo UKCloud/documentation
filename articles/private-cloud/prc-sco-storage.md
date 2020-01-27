@@ -1,5 +1,5 @@
 ---
-title: Private Cloud for Storage Service Scope | UKCloud Ltd
+title: Private Cloud for Storage Service Scope
 description: Outlines important details regarding Private Cloud for Storage
 services: private-cloud
 author: Sue Highmoor

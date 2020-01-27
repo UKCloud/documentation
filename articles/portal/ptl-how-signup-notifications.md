@@ -1,5 +1,5 @@
 ---
-title: How to sign up for Portal notifications | UKCloud Ltd
+title: How to sign up for Portal notifications
 description: Explains how you can opt in to receive UKCloud Portal notifications by email
 services: portal
 author: Sue Highmoor

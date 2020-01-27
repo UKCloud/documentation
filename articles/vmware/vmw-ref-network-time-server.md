@@ -1,5 +1,5 @@
 ---
-title: Network Time Protocol server access | UKCloud Ltd
+title: Network Time Protocol server access
 description: This guide shows you how to configure access to the Network Time Protocol (NTP) server within vCloud Director
 services: vmware
 author: Sue Highmoor

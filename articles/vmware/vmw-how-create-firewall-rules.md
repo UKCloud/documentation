@@ -1,5 +1,5 @@
 ---
-title: How to create firewall rules | UKCloud Ltd
+title: How to create firewall rules
 description: Shows how to create firewall rules within vCloud Director
 services: vmware
 author: Sue Highmoor

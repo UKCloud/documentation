@@ -1,5 +1,5 @@
 ---
-title: Credit card payment FAQs | UKCloud Ltd
+title: Credit card payment FAQs
 description: Frequently asked questions for paying for UKCloud services using a credit or debit card
 services: other
 author: Sue Highmoor

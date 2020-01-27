@@ -1,5 +1,5 @@
 ---
-title: Understanding sites, regions and zones | UKCloud Ltd
+title: Understanding sites, regions and zones
 description: Explains how we've designed the UKCloud platform using sites, regions and zones to enable you to design a highly-available and disaster-tolerant cloud solution
 services: other
 author: Sue Highmoor

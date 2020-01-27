@@ -1,5 +1,5 @@
 ---
-title: How to create a routed VDC network | UKCloud Ltd
+title: How to create a routed VDC network
 description: Shows how to create a routed VDC network within vCloud Director
 services: vmware
 author: Sue Highmoor

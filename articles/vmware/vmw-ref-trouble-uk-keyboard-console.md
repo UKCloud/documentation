@@ -1,5 +1,5 @@
 ---
-title: UK keyboard layout not supported in Web Console | UKCloud Ltd
+title: UK keyboard layout not supported in Web Console
 description: Intended for customers who are experiencing issues when using a UK keyboard to interact with the VMware Web Console
 services: vmware
 author: Sue Highmoor

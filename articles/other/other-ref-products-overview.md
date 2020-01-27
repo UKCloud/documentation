@@ -1,5 +1,5 @@
 ---
-title: UKCloud products and services | UKCloud Ltd
+title: UKCloud products and services
 description: Provides overview information of the various products and services offered by UKCloud
 services: other
 author: Sue Highmoor

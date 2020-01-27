@@ -1,5 +1,5 @@
 ---
-title: Windows Server activation | UKCloud Ltd
+title: Windows Server activation
 description: A point of reference regarding activating Windows Server against UKCloud's Key Management Server (KMS), along with how to resolve any failures
 services: other
 author: Sue Highmoor

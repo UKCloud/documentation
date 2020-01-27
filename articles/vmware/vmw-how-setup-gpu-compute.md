@@ -1,5 +1,5 @@
 ---
-title: How to set up Cloud GPU Compute for UKCloud for VMware | UKCloud Ltd
+title: How to set up Cloud GPU Compute for UKCloud for VMware
 description: Provides information to get up and running with Cloud GPU Compute for UKCloud for VMware
 services: vmware
 author: Sue Highmoor

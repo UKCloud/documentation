@@ -1,5 +1,5 @@
 ---
-title: How to license Microsoft applications/software on the UKCloud platform | UKCloud Ltd
+title: How to license Microsoft applications/software on the UKCloud platform
 description: This guide will explain how Microsoft software such as Server and SQL is licensed on the UKCloud platform
 services: vmware
 author: Steve Hall

@@ -1,5 +1,5 @@
 ---
-title: Monitoring the UKCloud platform | UKCloud Ltd
+title: Monitoring the UKCloud platform
 description: Explains what UKCloud monitors and how we manage alerts created by the monitoring system
 services: other
 author: Sue Highmoor

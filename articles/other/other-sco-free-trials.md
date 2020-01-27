@@ -1,5 +1,5 @@
 ---
-title: Free trials Service Scope | UKCloud Ltd
+title: Free trials Service Scope
 description: Outlines important details regarding free trials
 services: other
 author: Steve Hall

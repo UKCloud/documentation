@@ -1,5 +1,5 @@
 ---
-title: Customer administration page | UKCloud Ltd
+title: Customer administration page
 description: Explains where you can find information to help you administer your environment
 services: other
 author: Matt Warner

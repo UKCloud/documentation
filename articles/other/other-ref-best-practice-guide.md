@@ -1,5 +1,5 @@
 ---
-title: Best practice customer guide | UKCloud Ltd
+title: Best practice customer guide
 description: Provides useful best practice information and other helpful advice to ensure good performance from our products
 services: vmware
 author: Dan Baker

@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for Secure Remote Access | UKCloud Ltd
+title: Getting Started Guide for Secure Remote Access
 description: Provides information to get up and running with Secure Remote Access
 services: sra
 author: Sue Highmoor

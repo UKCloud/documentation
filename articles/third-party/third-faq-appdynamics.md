@@ -1,5 +1,5 @@
 ---
-title: Cisco AppDynamics from UKCloud FAQs | UKCloud Ltd
+title: Cisco AppDynamics from UKCloud FAQs
 description: Frequently asked questions for Cisco AppDynamics from UKCloud
 services: third-party
 author: Sue Highmoor

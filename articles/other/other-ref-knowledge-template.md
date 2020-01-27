@@ -1,5 +1,5 @@
 ---
-title: UKCloud Knowledge Centre article template | UKCloud Ltd
+title: UKCloud Knowledge Centre article template
 description: Provides a template to help when you're creating new UKCloud Knowledge Centre articles
 services: other
 author: Sue Highmoor

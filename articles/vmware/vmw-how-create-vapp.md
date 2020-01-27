@@ -1,5 +1,5 @@
 ---
-title: How to create a vApp | UKCloud Ltd
+title: How to create a vApp
 description: Shows you how to create create vApps from scratch within vCloud Director
 services: vmware
 author: Sue Highmoor

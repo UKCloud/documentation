@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual protection group | UKCloud Ltd
+title: How to create a virtual protection group
 description: This guide describes how to create a virtual protection group (VPG) for Disaster Recovery as a Service, Journaling Protection or Migration to the Cloud
 services: vmware
 author: Steve Hall

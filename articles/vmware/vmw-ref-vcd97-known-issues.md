@@ -1,5 +1,5 @@
 ---
-title: vCloud Director 9.7 known issues | UKCloud Ltd
+title: vCloud Director 9.7 known issues
 description: This article describes some of the issues you may encounter when using vCloud Director 9.7 with UKCloud for VMware
 services: vmware
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: How to use the My Calls Archive | UKCloud Ltd
+title: How to use the My Calls Archive
 description: Provides an overview of the the My Calls Archive area of the UKCloud Portal for accessing older support tickets
 services: portal
 author: Sue Highmoor

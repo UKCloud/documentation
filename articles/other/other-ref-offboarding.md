@@ -1,5 +1,5 @@
 ---
-title: Terminating your UKCloud services | UKCloud Ltd
+title: Terminating your UKCloud services
 description: Provides useful information for offboarding UKCloud services, including key customer and UKCloud responsibilities
 services: other
 author: Sue Highmoor

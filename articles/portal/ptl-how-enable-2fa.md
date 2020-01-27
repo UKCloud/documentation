@@ -1,5 +1,5 @@
 ---
-title: How to enable two-factor authentication in the UKCloud Portal | UKCloud Ltd
+title: How to enable two-factor authentication in the UKCloud Portal
 description: Describes how to enable two-factor authentication (2FA) for a UKCloud Portal account
 services: portal
 author: Sue Highmoor

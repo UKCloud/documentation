@@ -1,5 +1,5 @@
 ---
-title: Secure Remote Access Service Scope | UKCloud Ltd
+title: Secure Remote Access Service Scope
 description: Outlines important details regarding UKCloud's Secure Remote Access (SRA) service
 services: sra
 author: Bart Challis

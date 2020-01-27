@@ -1,5 +1,5 @@
 ---
-title: Dedicated Compute v1 Service Scope | UKCloud Ltd
+title: Dedicated Compute v1 Service Scope
 description: Outlines important details regarding Dedicated Compute v1
 services: vmware
 author: Steve Hall
