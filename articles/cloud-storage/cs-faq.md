@@ -1,5 +1,5 @@
 ---
-title: Cloud Storage FAQs | UKCloud Ltd
+title: Cloud Storage FAQs
 description: Frequently asked questions for Cloud Storage
 services: cloud-storage
 author: Dan Baker
