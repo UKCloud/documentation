@@ -174,8 +174,6 @@ The Portal navigation panel provides access to all the functionality available i
 
   - My Calls (see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md))
 
-  - My Calls Archive (see [*How to use the My Calls Archive*](ptl-how-use-my-calls-archive.md))
-
   - Service status information (see [*How to view the UKCloud Service Status page*](../other/other-how-view-status-info.md))
 
 - **Tools** - Provides access to:
