@@ -29,7 +29,7 @@ Prerequisites from a Windows-based external client.
   > [!NOTE]
   > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
   >
-  > For "legacy" operating systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
+  > For "legacy" operating systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 
 ## Declare variables
 
@@ -123,9 +123,9 @@ New-AzureRmResourceGroup -Name "MyResourceGroup" -Location $Location
 
 ## Next steps
 
-- [Develop templates for Azure Stack Hub](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+- [Develop templates for Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-develop-templates)
 
-- [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
+- [Deploy templates with PowerShell](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-deploy-template-powershell)
 
 ## Feedback
 

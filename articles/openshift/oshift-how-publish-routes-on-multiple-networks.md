@@ -3,8 +3,8 @@ title: How to publish application routes to multiple networks | UKCloud Ltd
 description: Describes the process and commands required to publish routes to different external networks available from an OpenShift cluster.
 services: openshift
 author: Steve Mulholland
-reviewer:
-lastreviewed: 21/12/2018 13:49:11
+reviewer: George Smith
+lastreviewed: 20/11/2019 
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-publish-routes-on-multiple-networks.md
 
 ## Overview
 
-This article provides instructions on how to make use of multiple external networks from within an OpenShift cluster. If you've requested an OpenShift cluster with multple networks from UKCloud you'll have multiple data planes - usually one for the internet and one for the community network you’ve requested be added to your deployment. Building applications that listen on these networks is relatively straightforward, but requires some specific configuration to be put in place on your application routes. This guide should help explain how you go about exposing your application on the relevant networks.
+This article provides instructions on how to make use of multiple external networks from within an OpenShift cluster. If you've requested an OpenShift cluster with multiple networks from UKCloud you'll have multiple data planes - usually one for the internet and one for the community network you’ve requested be added to your deployment. Building applications that listen on these networks is relatively straightforward but requires some specific configuration to be put in place on your application routes. This guide should help explain how you go about exposing your application on the relevant networks.
 
 ### Intended audience
 
@@ -46,7 +46,7 @@ We'll be using some basic example applications to demonstrate publishing routes 
 
 ### Scenario 1 - Traffic from the internet to application-1
 
-First we'll create a project called `routersharding` and the three applications to demonstrate with:
+First, we'll create a project called `routersharding` and the three applications to demonstrate with:
 
 ```
 $ oc new-project routersharding

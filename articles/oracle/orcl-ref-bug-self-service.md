@@ -3,8 +3,8 @@ title: Oracle cloud self-service functionality (bug notification) | UKCloud Ltd
 description: Contains information about changes to the self-service functionality for UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 15:17:17
+reviewer: bchallis
+lastreviewed: 24/01/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

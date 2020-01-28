@@ -12,6 +12,8 @@
     href: man-sd-network.md
 - name: Managed Monitoring
   items:
+  - name: Change your service configuration
+    href: man-monitoring-how-change-config.md
   - name: Managed Monitoring from UKCloud FAQs
     href: man-monitoring-faq.md
   - name: Managed Monitoring from UKCloud Service Definition

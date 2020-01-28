@@ -24,7 +24,7 @@ It will guide you through the process of:
 
 - Obtaining an ARM Template
 
-- Deploying an [ARM Template for SQL Always On](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha)
+- Deploying an [ARM Template for SQL Always On](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-alwayson)
 
 ## What is an ARM Template?
 
@@ -54,7 +54,7 @@ Prerequisites from a Windows-based external client are:
 
 ## Download SQL Always On template from GitHub
 
-SQL Always On Repository - [sql-2016-ha](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha)
+SQL Always On Repository - [sql-2016-ha](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-alwayson)
 
 > [!NOTE]
 > This will download just sql-2016-ha folder from the repository instead of downloading all of it.

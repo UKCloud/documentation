@@ -3,8 +3,8 @@ title: How to create a new user in the UKCloud Portal | UKCloud Ltd
 description: Shows how to create users in the UKCloud Portal
 services: portal
 author: Sue Highmoor
-reviewer:
-lastreviewed: 05/04/2019 13:57:21
+reviewer: mperry
+lastreviewed: 13/11/2019
 
 toc_rootlink: How To
 toc_sub1: 

@@ -4,7 +4,7 @@ description: Explains how to use the self-service Snapshot Protection tool to ad
 services: vmware
 author: Steve Hall
 reviewer: George Smith
-lastreviewed: 22/10/2018 12:05:00
+lastreviewed: 22/10/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

@@ -3,8 +3,8 @@ title: Compatibility with Solaris and AIX | UKCloud Ltd
 description: Provides advice on how to migrate your applications to UKCloud for Oracle Software depending on the Oracle platform you're using
 services: oracle
 author: Sue Highmoor
-reviewer:
-lastreviewed: 12/10/2018 17:42:06
+reviewer: bchallis
+lastreviewed: 24/01/2020
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -30,15 +30,15 @@ Use the diagram below to determine if your current platform is compatible with o
 
 ## Solaris x86
 
-As Solaris x86 is compatible with virtualisation, it's possible to bring your Solaris workload to our Oracle cloud. We provide a Solaris x86 template for you to use to build your Oracle virtual machines.
+Solaris x86 is compatible with our x86 Oracle cloud service so you can bring your Solaris workload to us. We provide a Solaris x86 template for you to use to build your Oracle virtual machines.
 
 You may need to talk to your Service Delivery Manager or Cloud Architect to help with the specifics of the project.
 
 ## Solaris SPARC
 
-SPARC is a flavour of Solaris that requires SPARC servers to function. However, it may be possible to transform your workload to be compatible with OVM by converting it to Solaris x86.
+We support Solaris on our Oracle SPARC cloud so you can bring your Solaris SPARC workloads to us without needing to transform them.
 
-If you want to use UKCloud for Oracle Software with SPARC, contact your Service Delivery Manager or Cloud Architect to discuss how you could achieve this.
+If you want to use UKCloud for Oracle Software with SPARC, contact your Service Delivery Manager or Cloud Architect to help with the specifics of the project.
 
 ## AIX
 

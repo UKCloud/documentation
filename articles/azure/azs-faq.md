@@ -78,7 +78,7 @@ While UKCloud for Microsoft Azure is developed by Microsoft, some services will 
 
 ### Does UKCloud offer an SLA for this service?
 
-The SLA for this service is 99.95%. For further details, review the [*UKCloud for Microsoft Azure Service Definition*[azs-sd.md].
+The SLA for this service is 99.95%. For further details, review the [*UKCloud for Microsoft Azure Service Definition*](azs-sd.md).
 
 ### Where can I find additional resources to assist me in administering my UKCloud for Microsoft Azure environment?
 

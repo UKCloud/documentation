@@ -65,7 +65,7 @@ With these addresses, you can establish:
 
 - A VPN - an IPsec VPN can be established between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
 
-For PSN connections to either of our cloud platforms, the PSN Authority has provided us with a [limited allocation of PSN IP addresses](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/81660/PSN-IP-Address-Allocation-Guidance-v1-4.pdf). The PSN Authority requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN Authority. UKCloud will work with customers to facilitate the allocation of their PSN IP addresses to their services hosted on our cloud platforms.
+For PSN connections to either of our cloud platforms, the PSN Authority has provided us with a [limited allocation of PSN IP addresses](https://www.gov.uk/government/publications/public-services-network-psn-ip-address-allocation). The PSN Authority requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN Authority. UKCloud will work with customers to facilitate the allocation of their PSN IP addresses to their services hosted on our cloud platforms.
 
 With the PSN IP addresses, you can establish:
 
@@ -101,7 +101,7 @@ We continue to work with our service providers and technology partners to ensure
 
 UKCloud operates high-bandwidth (multi-Gigabit), low-latency (typically sub-5ms round-trip time) dark fibre connectivity between our two data centres. It's highly resilient as it takes diverse northerly and southerly routes.
 
-This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses [CAS(T) compliant](http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx) circuits; and within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN service.
+This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses CAS(T) compliant circuits and, within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN service.
 
 ## If I have reserved bandwidth, how do I uplift this?
 
