@@ -1,5 +1,5 @@
 ---
-title: How to create a service principal name (SPN) for Azure Stack Hub using the Azure portal | UKCloud Ltd
+title: How to create an SPN for Azure Stack Hub using the Azure portal
 description: Learn how to create a service principal name (SPN) to manage your Azure Stack Hub resources using the Azure portal
 services: azure-stack
 author: Bailey Lawson
@@ -18,7 +18,7 @@ toc_mdlink: azs-how-create-spn-portal.md
 
 # How to create a service principal name for Azure Stack Hub using the Azure portal
 
-This document explains how to create a service principal name to manage Azure and Azure Stack Hub using the Azure portal.
+This document explains how to create a service principal name (SPN) to manage Azure and Azure Stack Hub using the Azure portal.
 
 It will guide you through the creation of:
 
@@ -32,7 +32,7 @@ It will guide you through the creation of:
 
 ## What is a service principal name?
 
-An Azure service principal name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
+An Azure SPN is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
 
 To log in and manage your resources via SPN you'll need to create an Azure application and then assign an SPN to it. Only then will you be able to perform tasks against your environment.
 
