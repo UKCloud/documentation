@@ -22,11 +22,11 @@ toc_mdlink: ostack-how-use-hystax.md
 
 Hystax Acura offers a fully automated and reliable way to lift-and-shift all types of OpenStack workloads without experiencing downtime or complications arising from large-scale migration. Hystax supports all popular OpenStack distributions including UKCloud's Red Hat OpenStack.
 
-Hystax offers sustainable solution to achieve zero downtime during OpenStack migration process. The instance keeps running throughout the migration that is important when it is not possible to stop the applications running on the instance. Overcome common transfer challenges like high costs, long transfer times and security concerns – all in a single product; Lift-and-shift of workloads to chosen OpenStack distribution is more manageable than ever before.
+Hystax offers a sustainable solution to achieve zero downtime during OpenStack migration process. The instance keeps running throughout the migration that is important when it is not possible to stop the applications running on the instance. Overcome common transfer challenges like high costs, long transfer times and security concerns – all in a single product; Lift-and-shift of workloads to a chosen OpenStack distribution is more manageable than ever before.
 
 ## Prerequisites
 
-In order for OpenStack customers to utilise Hystax Acura cloud migration services they will first need to have a Hystax user account provisioned in the Hystax Acura Control Panel. Hystax user accounts can be created by raising a Service Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+In order for OpenStack customers to utilise Hystax Acura cloud migration services, they will first need to have a Hystax user account provisioned in the Hystax Acura Control Panel. Hystax user accounts can be created by raising a Service Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Understanding Concepts
 
@@ -34,10 +34,10 @@ Before starting to use Hystax Acura, it is necessary to know a few commonly used
 
 ### Hystax Acura Control Panel
 
-Hystax Acura Control Panel is a management portal deployed and managed by UKCloud. The Hystax Acura Control Panel allows an OpenStack users to create and manage all their workload migration requirements.
+Hystax Acura Control Panel is a management portal deployed and managed by UKCloud. The Hystax Acura Control Panel allows an OpenStack user to create and manage all their workload migration requirements.
 
 > [!NOTE]
-> All Hystax components are deployed and contained within UKCloud's infrastructure. No customer data is shared or transmitted to any 3rd party
+> All Hystax components are deployed and contained within UKCloud's infrastructure. No customer data is shared or transmitted to any 3rd party.
 
 ### Hystax Acura Agents
 
@@ -71,17 +71,17 @@ To perform cloud migration you need to complete the following steps:
 
 ![Figure 4: Start Replication](images/hystax4.jpg)
  
-6. To change replication schedule, navigate to Replication schedule under a machine settings or Bulk actions. Refer to http://docs.hystax.com/dr_overview.html#edit-replication-schedule for more information on configuring the settings.
+6. To change the replication schedule, navigate to Replication schedule under a machine settings or bulk actions. Refer to http://docs.hystax.com/dr_overview.html#edit-replication-schedule for more information on configuring the settings.
  
 ### RUN MIGRATION FLOW 
  
-7. Migration is based on Migration Plans which are scenarios of what need to be migrated and in what order. Refer to http://docs.hystax.com/dr_overview.html#disaster-recovery-plans for more information about Migration Plans. To create a Migration Plan click Add on Migration Plans region.
+7. Migration is based on Migration Plans which are scenarios of what needs to be migrated and in what order. Refer to http://docs.hystax.com/dr_overview.html#disaster-recovery-plans for more information about Migration Plans. To create a Migration Plan click Add on Migration Plans region.
 
 ![Figure 5: Hystax Migration Plans](images/hystax5.jpg)
  
-8. While creating a Migration Plan orchestration is available under Basic and Expert modes. Basic mode helps to generate a plan with standard settings, expert mode is a JSON script with more powerful settings described under http://docs.hystax.com/dr_overview.html#dr-plan-syntax.
+8. While creating a Migration Plan, orchestration is available under Basic and Expert modes. Basic mode helps to generate a plan with standard settings, expert mode is a JSON script with more powerful settings described under http://docs.hystax.com/dr_overview.html#dr-plan-syntax.
    
-9.  Add all the machines need to be migrated, place them into ranks, set correct IP addresses, networks and boot delays.
+9.  Add all the machines which need to be migrated, place them into ranks, set correct IP addresses, networks and boot delays.
 
 ![Figure 6: Plans](images/hystax6.jpg)
  
@@ -89,11 +89,11 @@ To perform cloud migration you need to complete the following steps:
 
 ![Figure 7: Run Plans](images/hystax7.jpg)
  
-11. On a third step select a restore point for the migration by selecting Restore point time. For all of the machines selected the closest snapshot in the past will be taken. Click Run Migration to start the process.
+11. Select a restore point for the migration by selecting Restore point time. For all of the machines selected the closest snapshot in the past will be taken. Click Run Migration to start the process.
 
 ![Figure 8: Restore Point Time](images/hystax8.jpg)
  
-12. When a migration is running you can see and control its status on the Cloud Site page available via customer dashboard.
+12. When a migration is running, you can see and control its status on the Cloud Site page available via customer dashboard.
 
 ![Figure 9: Hystax Acura Status](images/hystax9.jpg)
  
