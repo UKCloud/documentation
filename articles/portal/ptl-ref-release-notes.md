@@ -19,6 +19,20 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 1.124.0
+
+Date: 30th January 2020
+
+Feature update
+
+Details:
+
+- Display 2FA seed on setup
+
+- Remove the 2FA page when logged in
+
+- Implement SSO login (feature flagged) 
+
 ## Release 1.122.0
 
 Date: 8th January 2020
