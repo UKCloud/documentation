@@ -31,8 +31,6 @@ Details:
 
 - Remove the 2FA page when logged in
 
-- Implement SSO login (feature flagged) 
-
 ## Release 1.122.0
 
 Date: 8th January 2020
