@@ -118,6 +118,20 @@
 <p>Yes, Email and Collaboration as a Service is available on both the Assured and Elevated OFFICIAL security domains.</p>
 <h2 id="can-i-use-email-and-collaboration-over-closed-networks-such-as-psn-hscn-or-janet">Can I use Email and Collaboration over closed networks such as PSN, HSCN or Janet?</h2>
 <p>Yes, you can connect via PSN, Janet and HSCN; via legacy GCF networks including PNN; or by HybridConnect using your own dedicated circuits such as CPS-encrypted tunnels, leased lines or MPLS.</p>
+<h2 id="how-can-i-configure-my-email-server-to-use-the-psn-email-relays-mtas">How can I configure my email server to use the PSN email relays (MTAs)?</h2>
+<p>There are several configuration options for using the PSN email relays. These can provide either resiliency across multiple PSN relays or give you an opportunity to just use a single relay (in case of maintenance on the other).</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For Email services in regions 1, 2, 7 and 8, you’ll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.</p>
+</div>
+<ul>
+<li><p>Create a local host file entry on your mail system or a DNS entry on your internal DNS server with a name of your choice that is configured with both PSN relay IP addresses.</p>
+</li>
+<li><p>Configure your email system to use both of the PSN relay IP addresses as a RelayHost.</p>
+</li>
+<li><p>Configure your email system to use just one of the PSN relay IP addresses. This could be useful if there's any maintenance work happening that could affect the second IP address.</p>
+</li>
+</ul>
 <h2 id="is-the-service-pan-government-accredited">Is the service Pan Government Accredited?</h2>
 <p>UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.</p>
 <p>We are now required to self-assess our services, with customers then responsible for assessing and selecting the most appropriate cloud services which meet their individual security requirements.</p>
