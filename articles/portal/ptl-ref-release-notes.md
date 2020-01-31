@@ -27,9 +27,9 @@ Feature update
 
 Details:
 
-- Display plain text 2FA seed during setup process. Allowing customers that cannot use the QR code directly, to manually copy and paste this into desktop based password management apps.
+- Display plain text 2FA seed during setup process, enabling customers who cannot use the QR code directly to manually copy and paste the code into desktop based password management apps.
 
-- Security enhancement, removed the 2FA page when logged in.
+- Security enhancement. Removed the 2FA page when logged in.
 
 ## Release 1.122.0
 
