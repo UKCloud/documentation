@@ -59,9 +59,9 @@ Additionally, the service will also alert if a customer's journal exceeds 75% in
 
 Journaling Protection only works for VM's currently on the platform -- it will only capture data whilst a VM is turned on. If a VM is deleted in vCloud Director -- Journaling Protection will IMMEDIATELY delete the associated journal.
 
-### What SLA do you offer on Journaling Protection Service?
+### What SLA do you offer on Journaling Protection?
 
-UKCloud do not offer an SLA around the VMs protected by UKCloud's Journaling Protection solution. However, the status of journaled VM's is monitored continuously, and the UKCloud support team investigates all failures or service degradation.
+UKCloud do not offer an SLA around the VMs protected by UKCloud's Journaling Protection solution. However, the status of journaled VMs is monitored continuously, and the UKCloud support team investigates all failures or service degradation.
 
 ### Other
 
