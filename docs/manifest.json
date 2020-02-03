@@ -3800,7 +3800,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-faq.html",
-          "hash": "W5wO9OIOoBGB1KhK3fWf3A=="
+          "hash": "XHtqv8TEU68AwWDcEe3mJw=="
         }
       },
       "is_incremental": false,
@@ -10114,17 +10114,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mnu-mycalls-archive.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-mnu-mycalls-archive.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mnu-mycalls.png",
       "output": {
         "resource": {
@@ -10158,17 +10147,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-my-calls-cancel.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-my-calls-cancel.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-my-calls-incident.png",
       "output": {
         "resource": {
@@ -10184,50 +10162,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-my-calls-request.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-my-calls-search.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-my-calls-search.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-my-calls-show-entries.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-my-calls-show-entries.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-my-calls-subscribe.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-my-calls-subscribe.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-my-calls-view-ticket.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-my-calls-view-ticket.png"
         }
       },
       "is_incremental": false,
@@ -10510,6 +10444,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-survey-incident.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-survey-incident.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-survey-request.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-survey-request.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-survey.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-survey.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mycalls-tab-admin.png",
       "output": {
         "resource": {
@@ -10756,7 +10723,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "67M7bal0kbds9tYrbABXhA=="
+          "hash": "tMYT+8l/Rz4PY8x0uK1U0Q=="
         }
       },
       "is_incremental": false,
@@ -10896,23 +10863,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/portal/ptl-how-use-my-calls-archive.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/portal/ptl-how-use-my-calls-archive.html",
-          "hash": "HjnlMYfi5T3Pg+MhmxJTgQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-use-my-calls.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "SAGarWKKeaMVkT+LTFurEg=="
+          "hash": "5P537sn+pZwBl1LGgOXuaA=="
         }
       },
       "is_incremental": false,
@@ -10972,7 +10927,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-release-notes.html",
-          "hash": "th7c3B0VdT3ZeEx3zBM22Q=="
+          "hash": "PPb9jeUi+WPc0s+1C1U2jg=="
         }
       },
       "is_incremental": false,
@@ -11032,7 +10987,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "f8PzXAOz5TMsLC99Dea2nw=="
+          "hash": "4iCTDXgHhxDIBf1mvOnLnQ=="
         }
       },
       "is_incremental": false,
@@ -19598,17 +19553,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 421,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 422,
           "skipped_file_count": 0
         }
       }

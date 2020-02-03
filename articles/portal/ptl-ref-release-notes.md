@@ -19,6 +19,18 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 1.124.0
+
+Date: 30th January 2020
+
+Feature update
+
+Details:
+
+- Display plain text 2FA seed during setup process, enabling customers who cannot use the QR code directly to manually copy and paste the code into desktop based password management apps.
+
+- Security enhancement. Removed the 2FA page when logged in.
+
 ## Release 1.122.0
 
 Date: 8th January 2020
