@@ -1,5 +1,5 @@
 ---
-title: Private Cloud for Storage FAQs | UKCloud Ltd
+title: Private Cloud for Storage FAQs
 description: Frequently asked questions for Private Cloud for Storage
 services: private-cloud
 author: Matt Warner

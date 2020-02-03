@@ -1,5 +1,5 @@
 ---
-title: How to configure custom script extensions for new and existing VMs on Azure Stack Hub | UKCloud Ltd
+title: How to configure custom script extensions for new and existing VMs on Azure Stack Hub
 description: Describes how to configure custom script extensions for new and existing VMs on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand

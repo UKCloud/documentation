@@ -1,5 +1,5 @@
 ---
-title: Private Cloud for Oracle Software Service Scope | UKCloud Ltd
+title: Private Cloud for Oracle Software Service Scope
 description: Outlines important details regarding Private Cloud for Oracle Software
 services: private-cloud
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: SiteProtect Advanced DDoS Mitigation FAQs | UKCloud Ltd
+title: SiteProtect Advanced DDoS Mitigation FAQs
 description: Frequently asked questions for SiteProtect Advanced DDoS Mitigation (previously Application-tuned DDoS protection)
 services: connectivity
 author: Matt Warner

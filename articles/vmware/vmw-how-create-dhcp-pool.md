@@ -1,5 +1,5 @@
 ---
-title: How to create a DHCP pool | UKCloud Ltd
+title: How to create a DHCP pool
 description: Shows how to configure DHCP within vCloud Director
 services: vmware
 author: Sue Highmoor

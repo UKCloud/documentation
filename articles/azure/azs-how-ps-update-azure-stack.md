@@ -1,5 +1,5 @@
 ---
-title: How to perform an Azure Stack Hub Update | UKCloud Ltd
+title: How to perform an Azure Stack Hub Update
 description: Azure Stack Hub update procedure guide for support
 services: azure-stack
 author: Chris Black

@@ -1,5 +1,5 @@
 ---
-title: Private Cloud Service Scope | UKCloud Ltd
+title: Private Cloud Service Scope
 description: Outlines important details regarding Private Cloud
 services: private-cloud
 author: Sue Highmoor

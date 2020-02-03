@@ -1,5 +1,5 @@
 ---
-title: Enterprise & Private Sector FAQs | UKCloud Ltd
+title: Enterprise & Private Sector FAQs
 description: Frequently asked questions for Enterprise & Private Sector
 services: other
 author: Sue Highmoor

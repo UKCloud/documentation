@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Oracle Software Service Scope | UKCloud Ltd
+title: UKCloud for Oracle Software Service Scope
 description: Outlines important details regarding UKCloud for Oracle Software
 services: oracle
 author: Steve Hall

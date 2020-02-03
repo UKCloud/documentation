@@ -1,5 +1,5 @@
 ---
-title: Portal user access | UKCloud Ltd
+title: Portal user access
 description: Guidance on UKCloud's Portal user access processes and procedures
 services: portal
 author: Sue Highmoor

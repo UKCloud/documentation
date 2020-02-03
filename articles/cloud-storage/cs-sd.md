@@ -1,8 +1,10 @@
 ---
-title: Cloud Storage Service Definition | UKCloud Ltd
+title: Cloud Storage Service Definition
 description: Provides an overview of what is provided by the Cloud Storage service
 services: cloud-storage
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:

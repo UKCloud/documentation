@@ -1,5 +1,5 @@
 ---
-title: Journaling Protection Service Scope | UKCloud Ltd
+title: Journaling Protection Service Scope
 description: Outlines important details regarding the Journaling Protection service, powered by Zerto
 services: vmware
 author: Steve Hall

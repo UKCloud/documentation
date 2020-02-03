@@ -1,5 +1,5 @@
 ---
-title: System Center on the UKCloud platform | UKCloud Ltd
+title: System Center on the UKCloud platform
 description: Explains how System Center software can be used on the UKCloud platform 
 services: vmware
 author: Sue Highmoor

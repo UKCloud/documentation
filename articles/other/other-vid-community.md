@@ -1,5 +1,5 @@
 ---
-title: UKCloud Community overview video | UKCloud Ltd
+title: UKCloud Community overview video
 description: Shows a video that describes the UKCloud Community and provides a tour around the site
 services: other
 author: Sue Highmoor

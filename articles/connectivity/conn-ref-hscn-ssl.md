@@ -1,5 +1,5 @@
 ---
-title: HSCN and SSL certificates | UKCloud Ltd
+title: HSCN and SSL certificates
 description: Outlines how you can get SSL certificates for web services hosted on HSCN
 services: connectivity
 author: Sue Highmoor

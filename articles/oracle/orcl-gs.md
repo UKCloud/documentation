@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for UKCloud for Oracle Software | UKCloud Ltd
+title: Getting Started Guide for UKCloud for Oracle Software
 description: Provides information to get up and running with UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor

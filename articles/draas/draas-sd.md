@@ -1,8 +1,10 @@
 ---
-title: Disaster Recovery as a Service Service Definition | UKCloud Ltd
+title: Disaster Recovery as a Service Service Definition
 description: Provides an overview of what is provided by the Disaster Recovery as a Service (DRaaS) service
 services: draas
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:

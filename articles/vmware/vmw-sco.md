@@ -1,5 +1,5 @@
 ---
-title: UKCloud for VMware Service Scope | UKCloud Ltd
+title: UKCloud for VMware Service Scope
 description: Outlines important details regarding UKCloud for VMware
 services: vmware
 author: Steve Hall

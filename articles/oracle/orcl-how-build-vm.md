@@ -1,5 +1,5 @@
 ---
-title: How to build an Oracle virtual machine | UKCloud Ltd
+title: How to build an Oracle virtual machine
 description: Shows how to build an Oracle virtual machine with UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor

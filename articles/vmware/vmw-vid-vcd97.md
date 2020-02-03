@@ -1,5 +1,5 @@
 ---
-title: vCloud Director 9.7 useful videos | UKCloud Ltd
+title: vCloud Director 9.7 useful videos
 description: Shows videos that provide useful information about vCloud Director 9.7
 services: vmware
 author: Sue Highmoor

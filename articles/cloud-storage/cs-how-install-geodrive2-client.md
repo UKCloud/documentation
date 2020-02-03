@@ -1,5 +1,5 @@
 ---
-title: How to install the GeoDrive Client 2.0| UKCloud Ltd
+title: How to install the GeoDrive Client 2.0
 description: Installation Guide for the GeoDrive Client 2.0
 services: cloud-storage
 author: Dan Baker

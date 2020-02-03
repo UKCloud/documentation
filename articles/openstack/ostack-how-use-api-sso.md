@@ -1,5 +1,5 @@
 ---
-title: How to use the OpenStack API using an SSO enabled user | UKCloud Ltd
+title: How to use the OpenStack API using an SSO enabled user
 description: Explains the changes needed to make use of the OpenStack API with an SSO enabled user.
 services: openstack
 author: Steve Relf

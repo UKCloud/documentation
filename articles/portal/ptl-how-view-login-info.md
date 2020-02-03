@@ -1,5 +1,5 @@
 ---
-title: How to view login information | UKCloud Ltd
+title: How to view login information
 description: Explains how to access a report of who has logged into your environment
 services: portal
 author: Sue Highmoor

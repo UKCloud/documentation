@@ -1,5 +1,5 @@
 ---
-title: Disaster Recovery as a Service FAQs | UKCloud Ltd
+title: Disaster Recovery as a Service FAQs
 description: Frequently asked questions for Disaster Recovery as a Service (Powered by Zerto)
 services: draas
 author: Matt Warner

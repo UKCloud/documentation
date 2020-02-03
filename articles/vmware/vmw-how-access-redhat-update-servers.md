@@ -1,5 +1,5 @@
 ---
-title: How to access Red Hat update servers | UKCloud Ltd
+title: How to access Red Hat update servers
 description: Shows you how to access Red Hat updates using Red Hat Update Infrastructure (RHUI)
 services: vmware
 author: Sue Highmoor

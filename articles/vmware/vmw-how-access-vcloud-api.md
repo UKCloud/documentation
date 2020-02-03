@@ -1,5 +1,5 @@
 ---
-title: How to access vCloud Director through the vCloud API | UKCloud Ltd
+title: How to access vCloud Director through the vCloud API
 description: Describes how to get started with the vCloud API
 services: vmware
 author: Sue Highmoor

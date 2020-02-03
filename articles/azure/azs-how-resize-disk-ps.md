@@ -1,5 +1,5 @@
 ---
-title: How to resize a disk using PowerShell | UKCloud Ltd
+title: How to resize a disk using PowerShell
 description: Provides help for resizing a disk using PowerShell on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson

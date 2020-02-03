@@ -1,5 +1,5 @@
 ---
-title: High availability on the UKCloud platform | UKCloud Ltd
+title: High availability on the UKCloud platform
 description: Describes how the UKCloud platform supports the development of highly available applications
 services: other
 author: Sue Highmoor

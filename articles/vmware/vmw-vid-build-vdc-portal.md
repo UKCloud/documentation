@@ -1,5 +1,5 @@
 ---
-title: (Video) Building a virtual data centre using the UKCloud Portal | UKCloud Ltd
+title: (Video) Building a virtual data centre using the UKCloud Portal
 description: Provides a short video tutorial for how to build a virtual data centre (VDC) using the UKCloud Portal
 services: vmware
 author: Sue Highmoor

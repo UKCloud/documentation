@@ -1,5 +1,5 @@
 ---
-title: UKCloud for VMware FAQs | UKCloud Ltd
+title: UKCloud for VMware FAQs
 description: Frequently asked questions for UKCloud for VMware
 services: vmware
 author: Matt Warner

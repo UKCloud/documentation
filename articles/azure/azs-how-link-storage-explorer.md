@@ -1,5 +1,5 @@
 ---
-title: How to link Azure Storage Explorer to Azure Stack Hub | UKCloud Ltd
+title: How to link Azure Storage Explorer to Azure Stack Hub
 description: Provides help for linking Azure Storage Explorer to Azure Stack Hub
 services: azure-stack
 author: David Woffendin

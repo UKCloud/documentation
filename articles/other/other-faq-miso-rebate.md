@@ -1,5 +1,5 @@
 ---
-title: MISO rebate FAQs | UKCloud Ltd
+title: MISO rebate FAQs
 description: Frequently asked questions for MISO rebate
 services: other
 author: Matt Warner

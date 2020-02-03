@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual machine from a template | UKCloud Ltd
+title: How to create a virtual machine from a template
 description: Shows how to create virtual machines from a template within vCloud Director
 services: vmware
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual machine using Azure CLI | UKCloud Ltd
+title: How to create a virtual machine using Azure CLI
 description: Provides help for creating a virtual machine on UKCloud for Microsoft Azure using Azure CLI
 services: azure-stack
 author: Bailey Lawson

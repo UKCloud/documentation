@@ -1,5 +1,5 @@
 ---
-title: Cross Domain Security Zone Service Scope | UKCloud Ltd
+title: Cross Domain Security Zone Service Scope
 description: Outlines important details regarding UKCloud's Cross Domain Security Zone (CDSZ)
 services: cdsz
 author: Bart Challis

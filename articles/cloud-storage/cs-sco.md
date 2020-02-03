@@ -1,5 +1,5 @@
 ---
-title: Cloud Storage Service Scope | UKCloud Ltd
+title: Cloud Storage Service Scope
 description: Outlines important details regarding Cloud Storage
 services: cloud-storage
 author: Steve Hall

@@ -1,5 +1,5 @@
 ---
-title: UKCloud complaints procedure | UKCloud Ltd
+title: UKCloud complaints procedure
 description: Provides an overview of what to do if you have a complaint about our service
 services: other
 author: Sue Highmoor

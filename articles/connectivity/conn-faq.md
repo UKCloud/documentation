@@ -1,5 +1,5 @@
 ---
-title: General connectivity FAQs | UKCloud Ltd
+title: General connectivity FAQs
 description: Frequently asked questions for general connectivity
 services: connectivity
 author: Matt Warner

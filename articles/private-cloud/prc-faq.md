@@ -1,5 +1,5 @@
 ---
-title: Private Cloud FAQs | UKCloud Ltd
+title: Private Cloud FAQs
 description: Frequently asked questions for Private Cloud
 services: private-cloud
 author: Matt Warner

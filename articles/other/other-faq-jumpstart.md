@@ -1,5 +1,5 @@
 ---
-title: Jumpstart FAQs | UKCloud Ltd
+title: Jumpstart FAQs
 description: Frequently asked questions about UKCloud's Jumpstart service
 services: other
 author: Vrush Sumanoharan

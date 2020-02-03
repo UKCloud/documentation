@@ -1,5 +1,5 @@
 ---
-title: Introduction to the OpenStack dashboard | UKCloud Ltd
+title: Introduction to the OpenStack dashboard
 description: Provides an outline of the options available in the OpenStack dashboard user interface used to drive UKCloud for Openstack
 services: openstack
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: UKCloud Service Definitions and Pricing Guide | UKCloud Ltd
+title: UKCloud Service Definitions and Pricing Guide
 description: List of Service Definitions for UKCloud services, including terms and conditions, SFIA rate card, and pricing guide
 services: Other
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: UKCloud Pricing Guides and SFIA Rate Card | UKCloud Ltd
+title: UKCloud Pricing Guides and SFIA Rate Card
 description: Provides links to the UKCloud Pricing Guides and SFIA Rate Card
 services: other
 author: Sue Highmoor

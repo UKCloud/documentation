@@ -1,5 +1,5 @@
 ---
-title: How to change IPsec VPN settings via the vCloud API | UKCloud Ltd
+title: How to change IPsec VPN settings via the vCloud API
 description: Provides a step by step guide to manipulating the IPsec VPN configuration applied to an edge gateway via the vCloud Director API
 services: vmware
 author: Sue Highmoor

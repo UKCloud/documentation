@@ -1,5 +1,5 @@
 ---
-title: How to use the Hawkular Metrics API | UKCloud Ltd
+title: How to use the Hawkular Metrics API
 description: Shows how to structure basic queries to the Hawkular Metrics API in order to get resource statistics back
 services: openshift
 author: Kieran O'Neill

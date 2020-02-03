@@ -1,5 +1,5 @@
 ---
-title: Understanding your invoice evidence file | UKCloud Ltd
+title: Understanding your invoice evidence file
 description: Describes the recent changes to the evidence file provided with your UKCloud invoice
 services: other
 author: Sue Highmoor

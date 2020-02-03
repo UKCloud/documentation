@@ -1,5 +1,5 @@
 ---
-title: UKCloud services by region | UKCloud Ltd
+title: UKCloud services by region
 description: Shows the regions in each UKCloud site and lists the services and connectivity options that are available in each of those regions
 services: other
 author: Sue Highmoor

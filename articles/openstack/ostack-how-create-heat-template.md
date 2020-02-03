@@ -1,5 +1,5 @@
 ---
-title: How to create and deploy a basic Heat template  | UKCloud Ltd
+title: How to create and deploy a basic Heat template 
 description: Instructions on how to deploy a basic heat template
 services: openstack
 author: Bryce Nicholls

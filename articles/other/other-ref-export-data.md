@@ -1,5 +1,5 @@
 ---
-title: Methods for exporting data | UKCloud Ltd
+title: Methods for exporting data
 description: Provides some general information in relation to the methods available to customers to export data away from UKCloud when needed
 services: other
 author: Sue Highmoor

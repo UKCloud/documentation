@@ -1,5 +1,5 @@
 ---
-title: Cisco AppDynamics from UKCloud Service Scope | UKCloud Ltd
+title: Cisco AppDynamics from UKCloud Service Scope
 description: Outlines important details regarding Cisco AppDynamics from UKCloud
 services: third-party
 author: Sue Highmoor

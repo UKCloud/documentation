@@ -1,5 +1,5 @@
 ---
-title: Smart Hands Service Scope | UKCloud Ltd
+title: Smart Hands Service Scope
 description: Outlines important details regarding the Smart Hands service
 services: enablement
 author: Steve Hall

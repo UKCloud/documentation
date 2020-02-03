@@ -1,5 +1,5 @@
 ---
-title: Network Adaptor Issue with Windows Server 2012 and 2012R2s | UKCloud Ltd
+title: Network Adaptor Issue with Windows Server 2012 and 2012R2s
 description: Describes known issues with the e1000 and e1000e adaptors when using Microsoft Server 2012
 services: connectivity
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: How to share your ideas in the UKCloud Community | UKCloud Ltd
+title: How to share your ideas in the UKCloud Community
 description: Provides information about how to use the Ideas area of the UKCloud Community to send us your feedback
 services: other
 author: Sue Highmoor

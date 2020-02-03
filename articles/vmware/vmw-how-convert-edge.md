@@ -1,5 +1,5 @@
 ---
-title: How to convert your edge to an advanced gateway | UKCloud Ltd
+title: How to convert your edge to an advanced gateway
 description: This article describes how to convert an edge gateway to an advanced gateway to access advanced functionality
 services: vmware
 author: Steve Hall

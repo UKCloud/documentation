@@ -1,5 +1,5 @@
 ---
-title: Requesting Janet connectivity to your UKCloud workloads | UKCloud Ltd
+title: Requesting Janet connectivity to your UKCloud workloads
 description: Explains the process for requesting Janet connectivity to your existing VDC
 services: connectivity
 author: Sue Highmoor

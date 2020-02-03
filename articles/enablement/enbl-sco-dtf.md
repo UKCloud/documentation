@@ -1,5 +1,5 @@
 ---
-title: Data Transfer Facility Service Scope | UKCloud Ltd
+title: Data Transfer Facility Service Scope
 description: Outlines important details regarding the Data Transfer Facility
 services: enablement
 author: Steve Hall

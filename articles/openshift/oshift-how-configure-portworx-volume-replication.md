@@ -1,5 +1,5 @@
 ---
-title: How to configure Portworx replication | UKCloud Ltd
+title: How to configure Portworx replication
 description: Explains how to configure volume replication in a Portworx integrated OpenShift cluster
 services: openshift
 author: Ben Bacon

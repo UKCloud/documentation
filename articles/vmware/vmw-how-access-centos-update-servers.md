@@ -1,5 +1,5 @@
 ---
-title: How to access CentOS Update servers | UKCloud Ltd
+title: How to access CentOS Update servers
 description: Shows you how to access CentOS updates within vCloud Director
 services: vmware
 author: Sue Highmoor

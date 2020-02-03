@@ -1,5 +1,5 @@
 ---
-title: Protection for Distributed Denial of Service (DDoS) attacks | UKCloud Ltd
+title: Protection for Distributed Denial of Service (DDoS) attacks
 description: This article provides information regarding UKCloud's protection against Distributed Denial of Service (DDoS) attacks
 services: connectivity
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: UKCloud Terms & Conditions for G-Cloud 11 | UKCloud Ltd
+title: UKCloud Terms & Conditions for G-Cloud 11
 description: Provides an overview of what is provided by the UKCloud for Microsoft Azure service
 services: azure-stack
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: PSN connectivity FAQs | UKCloud Ltd
+title: PSN connectivity FAQs
 description: Frequently asked questions for PSN connectivity
 services: connectivity
 author: Matt Warner

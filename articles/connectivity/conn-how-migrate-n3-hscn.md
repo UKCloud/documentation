@@ -1,5 +1,5 @@
 ---
-title: How to migrate from N3 to HSCN | UKCloud Ltd
+title: How to migrate from N3 to HSCN
 description: This article describes UKCloud's migration strategy for HSCN
 services: migration
 author: Dan Baker

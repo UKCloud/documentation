@@ -1,5 +1,5 @@
 ---
-title: How to retrieve your Windows password on UKCloud for OpenStack | UKCloud Ltd
+title: How to retrieve your Windows password on UKCloud for OpenStack
 description: Describes how to retrieve the password for an OpenStack instance that uses a Windows image
 services: openstack
 author: Sue Highmoor

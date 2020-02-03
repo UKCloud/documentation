@@ -1,5 +1,5 @@
 ---
-title: How to use the Azure Stack Hub API | UKCloud Ltd
+title: How to use the Azure Stack Hub API
 description: Describes how to use the Azure Stack Hub API with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: How to permit outbound access to internet hosts in deployments with government community network connectivity | UKCloud Ltd
+title: How to permit outbound access to internet hosts in deployments with government community network connectivity
 description: Outlines methods to securely permit access to internet hosts in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon

@@ -1,8 +1,10 @@
 ---
-title: UKCloud Dedicated Compute v2 Service Definition | UKCloud Ltd
+title: UKCloud Dedicated Compute v2 Service Definition
 description: Provides an overview of what is provided by the UKCloud Dedicated Compute v2 service
 services: dedicated-compute
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:

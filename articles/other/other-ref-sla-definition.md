@@ -1,5 +1,5 @@
 ---
-title: SLA definition | UKCloud Ltd
+title: SLA definition
 description: Definition of the UKCloud Service Level Agreement (SLA)
 services: other
 author: Sue Highmoor

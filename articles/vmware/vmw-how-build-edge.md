@@ -1,5 +1,5 @@
 ---
-title: How to build an edge gateway using the UKCloud Portal | UKCloud Ltd
+title: How to build an edge gateway using the UKCloud Portal
 description: Describes how to use the UKCloud Portal to build an edge gateway
 services: vmware
 author: Sue Highmoor

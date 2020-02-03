@@ -1,5 +1,5 @@
 ---
-title: Email and Collaboration as a Service FAQs | UKCloud Ltd
+title: Email and Collaboration as a Service FAQs
 description: Frequently asked questions for Email and Collaboration as a Service
 services: email
 author: Matt Warner
@@ -61,6 +61,19 @@ Yes, Email and Collaboration as a Service is available on both the Assured and E
 ## Can I use Email and Collaboration over closed networks such as PSN, HSCN or Janet?
 
 Yes, you can connect via PSN, Janet and HSCN; via legacy GCF networks including PNN; or by HybridConnect using your own dedicated circuits such as CPS-encrypted tunnels, leased lines or MPLS.
+
+## How can I configure my email server to use the PSN email relays (MTAs)?
+
+There are several configuration options for using the PSN email relays. These can provide either resiliency across multiple PSN relays or give you an opportunity to just use a single relay (in case of maintenance on the other).
+
+> [!NOTE]
+> For Email services in regions 1, 2, 7 and 8, you’ll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.
+
+- Create a local host file entry on your mail system or a DNS entry on your internal DNS server with a name of your choice that is configured with both PSN relay IP addresses.
+
+- Configure your email system to use both of the PSN relay IP addresses as a RelayHost.
+
+- Configure your email system to use just one of the PSN relay IP addresses. This could be useful if there's any maintenance work happening that could affect the second IP address.
 
 ## Is the service Pan Government Accredited?
 

@@ -1,5 +1,5 @@
 ---
-title: HybridConnect FAQs | UKCloud Ltd
+title: HybridConnect FAQs
 description: Frequently asked questions for HybridConnect
 services: connectivity
 author: Matt Warner
