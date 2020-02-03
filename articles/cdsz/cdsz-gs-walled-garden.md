@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for the Cross Domain Security Zone Walled Garden
+title: Getting Started Guide for the Cross Domain Security Zone
 description: Provides information to get up and running with the Cross Domain Security Zone
 services: cdsz
 author: Sue Highmoor
@@ -11,12 +11,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Cross Domain Security Zone Walled Garden
+toc_title: Cross Domain Security Zone
 toc_fullpath: Getting Started/cdsz-gs-walled-garden.md
 toc_mdlink: cdsz-gs-walled-garden.md
 ---
 
-# Getting Started Guide for the Cross Domain Security Zone Walled Garden
+# Getting Started Guide for the Cross Domain Security Zone
 
 ## Overview
 

@@ -1,5 +1,5 @@
 ---
-title: How to create new UKCloud for OpenShift users in the UKCloud Portal
+title: How to create an OpenShift user in the UKCloud Portal
 description: Shows how to create UKCloud for OpenShift users in the UKCloud Portal so that they can benefit from two-factor authentication (2FA)
 services: openshift
 author: Sue Highmoor
@@ -11,12 +11,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create new users
+toc_title: Create a new user
 toc_fullpath: How To/oshift-how-create-users.md
 toc_mdlink: oshift-how-create-users.md
 ---
 
-# How to create new UKCloud for OpenShift users in the UKCloud Portal
+# How to create an OpenShift user in the UKCloud Portal
 
 ## Overview
 

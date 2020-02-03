@@ -1,5 +1,5 @@
 ---
-title: How to obtain usage metrics to use for OpenShift capacity management
+title: How to obtain usage metrics for OpenShift capacity management
 description: Shows you how to obtain various statistics about your UKCloud for OpenShift cluster that you can use to help with capacity management
 services: openshift
 author: Sue Highmoor
@@ -11,12 +11,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Obtain usage metrics to use for OpenShift capacity management
+toc_title: Obtain usage metrics for OpenShift capacity management
 toc_fullpath: How To/oshift-how-obtain-usage-metrics.md
 toc_mdlink: oshift-how-obtain-usage-metrics.md
 ---
 
-# How to obtain usage metrics to use for OpenShift capacity management
+# How to obtain usage metrics for OpenShift capacity management
 
 ## Overview
 

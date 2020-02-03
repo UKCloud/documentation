@@ -1,5 +1,5 @@
 ---
-title: How to license Windows VMs using the UKCloud Key Management Server
+title: How to license Windows VMs using the UKCloud KMS
 description: Shows how to register virtual machines with the KMS within vCloud Director
 services: vmware
 author: Sue Highmoor
@@ -11,7 +11,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: License Windows VMs using the UKCloud Key Management Server
+toc_title: License Windows VMs using the UKCloud KMS
 toc_fullpath: How To/vmw-how-setup-kms.md
 toc_mdlink: vmw-how-setup-kms.md
 ---

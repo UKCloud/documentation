@@ -1,5 +1,5 @@
 ---
-title: How to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell
+title: How to deploy a Site Recovery template to Azure Stack Hub
 description: Learn how to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell
 services: azure-stack
 author: Bailey Lawson
