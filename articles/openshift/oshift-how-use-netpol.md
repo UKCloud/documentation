@@ -1,5 +1,5 @@
 ---
-title: How to use NetworkPolicy objects to connect services between projects | UKCloud Ltd
+title: How to use NetworkPolicy objects to connect services between projects
 description: Shows how to create a basic NetworkPolicy object to connect services in two projects
 services: openshift
 author: Kieran O'Neill

@@ -1,5 +1,5 @@
 ---
-title: Oracle Enterprise Manager Cloud Control console overview video | UKCloud Ltd
+title: Oracle Enterprise Manager Cloud Control console overview video
 description: Shows a video that provides an introduction to the Oracle Enterprise Manager (OEM) Cloud Control 13c Console
 services: oracle
 author: Sue Highmoor

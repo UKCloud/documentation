@@ -1,5 +1,5 @@
 ---
-title: How to set up two-factor authentication for a user account | UKCloud Ltd
+title: How to set up two-factor authentication for a user account
 description: Describes how to set up two-factor authentication (2FA) for a user account
 services: portal
 author: Sue Highmoor

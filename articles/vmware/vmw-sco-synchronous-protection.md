@@ -1,5 +1,5 @@
 ---
-title: Synchronous Protection Service Scope | UKCloud Ltd
+title: Synchronous Protection Service Scope
 description: Outlines important details regarding the Synchronous Protection service
 services: vmware
 author: Steve Hall

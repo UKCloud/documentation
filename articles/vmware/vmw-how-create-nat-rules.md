@@ -1,5 +1,5 @@
 ---
-title: How to create NAT rules | UKCloud Ltd
+title: How to create NAT rules
 description: Shows how to configure network address translation within vCloud Director
 services: vmware
 author: Sue Highmoor

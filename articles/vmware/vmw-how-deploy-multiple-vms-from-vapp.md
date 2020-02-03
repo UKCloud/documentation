@@ -1,5 +1,5 @@
 ---
-title: How to deploy multiple VMs from a vApp template simultaneously using the API | UKCloud Ltd
+title: How to deploy multiple VMs from a vApp template simultaneously using the API
 description: Outlines the options for deploying multiple VMs simultaneously from a single vApp template
 services: vmware
 author: Sue Highmoor

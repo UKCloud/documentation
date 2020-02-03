@@ -1,5 +1,5 @@
 ---
-title: GeoDrive Client 2.0 overview video | UKCloud Ltd
+title: GeoDrive Client 2.0 overview video
 description: Shows a video that provides an overview of the GeoDrive Client 2.0
 services: cloud-storage
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: How to convert virtual machines to run in OpenStack | UKCloud Ltd
+title: How to convert virtual machines to run in OpenStack
 description: Outlines the process for importing virtual machines from other clouds and running them on OpenStack's KVM hypervisor using virt-v2v
 services: openstack
 author: Sue Highmoor

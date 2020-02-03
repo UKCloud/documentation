@@ -1,5 +1,5 @@
 ---
-title: How to set up password expiration | UKCloud Ltd
+title: How to set up password expiration
 description: Shows how to ensure that users regularly change their passwords by having passwords expire after a specified number of days
 services: portal
 author: Sue Highmoor

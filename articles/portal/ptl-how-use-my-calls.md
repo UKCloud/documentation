@@ -1,5 +1,5 @@
 ---
-title: How to use My Calls in the UKCloud Portal | UKCloud Ltd
+title: How to use My Calls in the UKCloud Portal
 description: Provides an overview of the My Calls area of the UKCloud Portal
 services: portal
 author: Sue Highmoor

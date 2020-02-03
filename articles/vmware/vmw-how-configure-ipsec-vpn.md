@@ -1,5 +1,5 @@
 ---
-title: How to configure IPsec VPN | UKCloud Ltd
+title: How to configure IPsec VPN
 description: Shows how to configure IPsec VPN within vCloud Director
 services: vmware
 author: Sue Highmoor

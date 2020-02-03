@@ -1,5 +1,5 @@
 ---
-title: Service Level Agreement FAQs | UKCloud Ltd
+title: Service Level Agreement FAQs
 description: Frequently asked questions for Service Level Agreements
 services: other
 author: Matt Warner

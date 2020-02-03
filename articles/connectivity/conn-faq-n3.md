@@ -1,5 +1,5 @@
 ---
-title: N3 connectivity FAQs | UKCloud Ltd
+title: N3 connectivity FAQs
 description: Frequently asked questions for N3 Connectivity
 services: connectivity
 author: Matt Warner

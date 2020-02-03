@@ -1,5 +1,5 @@
 ---
-title: Availability of Virtual Hardware version 11 | UKCloud Ltd
+title: Availability of Virtual Hardware version 11
 description: UKCloud has upgraded UKCloud for VMware to expose Virtual Hardware version 11
 services: vmware
 author: Sue Highmoor

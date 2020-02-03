@@ -1,5 +1,5 @@
 ---
-title: How to create an isolated VDC network | UKCloud Ltd
+title: How to create an isolated VDC network
 description: Shows how to create an isolated VDC network within vCloud Director
 services: vmware
 author: Sue Highmoor

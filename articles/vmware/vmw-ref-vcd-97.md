@@ -1,5 +1,5 @@
 ---
-title: Changes in vCloud Director 9.7 | UKCloud Ltd
+title: Changes in vCloud Director 9.7
 description: Outlines the steps required to prepare for the upcoming upgrade to vCloud Director 9.7
 services: vmware
 author: Sue Highmoor

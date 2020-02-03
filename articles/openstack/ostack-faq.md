@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenStack FAQs | UKCloud Ltd
+title: UKCloud for OpenStack FAQs
 description: Frequently asked questions for UKCloud for OpenStack
 services: openstack
 author: Matt Warner

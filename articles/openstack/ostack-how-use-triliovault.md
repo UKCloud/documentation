@@ -1,5 +1,5 @@
 ---
-title: How to use TrilioVault self-service backup and restoration within OpenStack | UKCloud Ltd
+title: How to use TrilioVault self-service backup and restoration within OpenStack
 description: Provides information on how to use TrilioVault within your OpenStack environment
 services: openstack
 author: Steve Dixon

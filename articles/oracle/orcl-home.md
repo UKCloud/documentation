@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Oracle Software | UKCloud Ltd
+title: UKCloud for Oracle Software
 description: Home page for UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor

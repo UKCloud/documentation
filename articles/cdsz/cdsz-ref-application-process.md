@@ -1,5 +1,5 @@
 ---
-title: UKCloud Cross Domain Security Zone application process | UKCloud Ltd
+title: UKCloud Cross Domain Security Zone application process
 description: Outlines the application process for the UKCloud Cross Domain Security Zone
 services: cdsz
 author: Sue Highmoor

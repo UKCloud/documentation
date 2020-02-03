@@ -1,5 +1,5 @@
 ---
-title: Invoice and billing FAQs | UKCloud Ltd
+title: Invoice and billing FAQs
 description: Frequently asked questions about invoicing and billing
 services: other
 author: Sue Highmoor

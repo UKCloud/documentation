@@ -1,5 +1,5 @@
 ---
-title: External security review testing | UKCloud Ltd
+title: External security review testing
 description: Provides an overview of the processes surrounding the request of External Security Review Testing or Penetration Testing
 services: other
 author: Sue Highmoor

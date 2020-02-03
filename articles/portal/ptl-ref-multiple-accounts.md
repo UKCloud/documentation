@@ -1,5 +1,5 @@
 ---
-title: Partitioning projects or end customers using UKCloud accounts | UKCloud Ltd
+title: Partitioning projects or end customers using UKCloud accounts
 description: 
 services: portal
 author: Sophie Wake

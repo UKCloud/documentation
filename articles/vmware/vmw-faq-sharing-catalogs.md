@@ -1,5 +1,5 @@
 ---
-title: Sharing catalogs FAQs | UKCloud Ltd
+title: Sharing catalogs FAQs
 description: Frequently asked questions for sharing catalogs
 services: vmware
 author: Sue Highmoor

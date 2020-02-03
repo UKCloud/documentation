@@ -1,5 +1,5 @@
 ---
-title: Services at a glance | UKCloud Ltd
+title: Services at a glance
 description: Provides a top level comparison for our main products
 services: other
 author: Steve Hall

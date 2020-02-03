@@ -1,5 +1,5 @@
 ---
-title: Fixing your advanced gateway if you encounter NullPointerException error | UKCloud Ltd
+title: Fixing your advanced gateway if you encounter NullPointerException error
 description: Intended for customers who are experiencing the NullPointerException error when attempting to view their edge gateway properties
 services: vmware
 author: Sue Highmoor

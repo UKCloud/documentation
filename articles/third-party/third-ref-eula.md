@@ -1,5 +1,5 @@
 ---
-title: 3rd party software EULA information | UKCloud Ltd
+title: 3rd party software EULA information
 description: Provides links to EULA information for 3rd party software
 services: third-party
 author: Sue Highmoor

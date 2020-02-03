@@ -1,5 +1,5 @@
 ---
-title: HSCN connectivity FAQs | UKCloud Ltd
+title: HSCN connectivity FAQs
 description: Frequently asked questions for HSCN Connectivity
 services: connectivity
 author: Matt Warner

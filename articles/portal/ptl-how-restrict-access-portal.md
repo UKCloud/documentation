@@ -1,5 +1,5 @@
 ---
-title: How to restrict access to the UKCloud Portal | UKCloud Ltd
+title: How to restrict access to the UKCloud Portal
 description: Shows how to create a whitelist of IP addresses to restrict access to the UKCloud Portal
 services: portal
 author: Sue Highmoor

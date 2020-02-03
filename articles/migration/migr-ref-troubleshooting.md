@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Migration to the Cloud | UKCloud Ltd
+title: Troubleshooting Migration to the Cloud
 description: This article describes some of the issues you may encounter when using UKCloud's Workload Migration to the Cloud service (powered by Zerto)
 services: migration
 author: Dan Baker

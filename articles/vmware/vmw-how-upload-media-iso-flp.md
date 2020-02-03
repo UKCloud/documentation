@@ -1,5 +1,5 @@
 ---
-title: How to upload ISO or FLP media | UKCloud Ltd
+title: How to upload ISO or FLP media
 description: Shows you how to upload ISO (CD/DVD) and FLP (floppy disk) media within vCloud Director
 services: vmware
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: Custom dashboards provided with aggregated logging Kibana | UKCloud Ltd
+title: Custom dashboards provided with aggregated logging Kibana
 description: Explains the data provided in our custom Kibana dashboards and how you can use that data.
 services: openshift
 author: Kieran O'Neill

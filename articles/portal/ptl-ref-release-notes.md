@@ -1,5 +1,5 @@
 ---
-title: Portal release notes | UKCloud Ltd
+title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor

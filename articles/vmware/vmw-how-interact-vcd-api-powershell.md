@@ -1,5 +1,5 @@
 ---
-title: How to interact with the vCloud REST API using PowerShell and Python | UKCloud Ltd
+title: How to interact with the vCloud REST API using PowerShell and Python
 description: A brief introduction on how to start interacting with the vCloud Director REST API with PowerShell and Python
 services: vmware
 author: Sue Highmoor

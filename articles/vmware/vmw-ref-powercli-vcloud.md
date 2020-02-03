@@ -1,5 +1,5 @@
 ---
-title: PowerCLI command for interacting with the vCloud API | UKCloud Ltd
+title: PowerCLI command for interacting with the vCloud API
 description: Details the PowerCLI command to use when interacting with the vCloud API from PowerCLI
 services: vmware
 author: Sue Highmoor

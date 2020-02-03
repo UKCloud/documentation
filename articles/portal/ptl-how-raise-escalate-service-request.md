@@ -1,5 +1,5 @@
 ---
-title: How to raise and escalate incident and service request tickets with customer support | UKCloud Ltd
+title: How to raise and escalate incident and service request tickets with customer support
 description: Provides an overview of the process for raising incidents and service requests with UKCloud customer support (helpdesk), as well as how to escalate them if necessary
 services: other
 author: Sue Highmoor

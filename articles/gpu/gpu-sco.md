@@ -1,5 +1,5 @@
 ---
-title: Cloud GPU Service Scope | UKCloud Ltd
+title: Cloud GPU Service Scope
 description: Outlines important details regarding Cloud GPU
 services: gpu
 author: Steve Hall

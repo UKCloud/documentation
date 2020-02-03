@@ -1,5 +1,5 @@
 ---
-title: Secure Remote Access FAQs | UKCloud Ltd
+title: Secure Remote Access FAQs
 description: Frequently asked questions for Secure Remote Access
 services: sra
 author: Matt Warner

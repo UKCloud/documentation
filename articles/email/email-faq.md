@@ -1,5 +1,5 @@
 ---
-title: Email and Collaboration as a Service FAQs | UKCloud Ltd
+title: Email and Collaboration as a Service FAQs
 description: Frequently asked questions for Email and Collaboration as a Service
 services: email
 author: Matt Warner

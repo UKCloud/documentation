@@ -1,5 +1,5 @@
 ---
-title: Moogsoft AIOps from UKCloud Service Scope | UKCloud Ltd
+title: Moogsoft AIOps from UKCloud Service Scope
 description: Outlines important details regarding Moogsoft AIOps from UKCloud
 services: third-party
 author: Sue Highmoor

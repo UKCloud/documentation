@@ -1,5 +1,5 @@
 ---
-title: How to use Portworx encrypted volumes | UKCloud Ltd
+title: How to use Portworx encrypted volumes
 description: Explains how to use encrypted volumes in a Portworx integrated OpenShift cluster
 services: openshift
 author: Ben Bacon

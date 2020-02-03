@@ -1,5 +1,5 @@
 ---
-title: Bring Your Own Firewall Service Scope | UKCloud Ltd
+title: Bring Your Own Firewall Service Scope
 description: Outlines important details regarding Bring Your Own Firewall
 services: other
 author: Steve Hall

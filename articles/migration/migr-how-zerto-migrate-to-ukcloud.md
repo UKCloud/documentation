@@ -1,5 +1,5 @@
 ---
-title: How to migrate your workloads to the UKCloud platform | UKCloud Ltd
+title: How to migrate your workloads to the UKCloud platform
 description: Describes how to migrate your existing workloads from your local, on-premises environment onto our cloud platform
 services: migration
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for Email and Collaboration as a Service | UKCloud Ltd
+title: Getting Started Guide for Email and Collaboration as a Service
 description: Provides information to get up and running with Email and Collaboration as a Service
 services: email
 author: Sue Highmoor

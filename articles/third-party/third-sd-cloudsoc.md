@@ -1,8 +1,10 @@
 ---
-title: CloudSOC from UKCloud Service Definition | UKCloud Ltd
+title: CloudSOC from UKCloud Service Definition
 description: Provides an overview of what is provided by the CloudSOC from UKCloud service
 services: third-party
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: CloudSOC
 toc_sub1: 
 toc_sub2:

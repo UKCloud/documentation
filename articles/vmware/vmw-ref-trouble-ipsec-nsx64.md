@@ -1,5 +1,5 @@
 ---
-title: Fixing your IPsec VPN following upgrade to NSX 6.4 | UKCloud Ltd
+title: Fixing your IPsec VPN following upgrade to NSX 6.4
 description: Describes how to resolve issues with IPsec VPN after upgrading to NSX 6.4
 services: vmware
 author: Sue Highmoor

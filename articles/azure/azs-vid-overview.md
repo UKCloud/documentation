@@ -1,5 +1,5 @@
 ---
-title: UKCloud Azure Stack Hub portal overview video | UKCloud Ltd
+title: UKCloud Azure Stack Hub portal overview video
 description: Shows a video that provides an overview of the UKCloud Azure Stack Hub portal
 services: azure-stack
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: Data centre advance notice requirements | UKCloud Ltd
+title: Data centre advance notice requirements
 description: Referencing the Data Centre's advanced notice requirements
 services: other
 author: Matt Warner

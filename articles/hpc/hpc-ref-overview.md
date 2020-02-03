@@ -1,5 +1,5 @@
 ---
-title: Understanding High Performance Compute | UKCloud Ltd
+title: Understanding High Performance Compute
 description: Provides an overview of UKCloud's High Performance Compute service
 services: hpc
 author: Sue Highmoor

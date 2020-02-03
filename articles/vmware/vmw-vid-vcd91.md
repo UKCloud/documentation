@@ -1,5 +1,5 @@
 ---
-title: vCloud Director 9.1 overview video | UKCloud Ltd
+title: vCloud Director 9.1 overview video
 description: Shows a video that provides an overview of the vCloud Director 9.1 user interface
 services: vmware
 author: Sue Highmoor

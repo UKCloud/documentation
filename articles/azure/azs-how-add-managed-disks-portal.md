@@ -1,5 +1,5 @@
 ---
-title: How to add a managed disk to a virtual machine using the UKCloud Azure Stack Hub portal | UKCloud Ltd
+title: How to add a managed disk to a virtual machine using the UKCloud Azure Stack Hub portal
 description: Provides help adding managed disks to a virtual machine on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel

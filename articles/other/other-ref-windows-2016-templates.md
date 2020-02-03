@@ -1,5 +1,5 @@
 ---
-title: Windows Server 2016 templates | UKCloud Ltd
+title: Windows Server 2016 templates
 description: This article explains the current status and availability of Windows Server 2016 templates on UKCloud compute services.
 services: x-platform
 author: Sue Highmoor

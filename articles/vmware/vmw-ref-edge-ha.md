@@ -1,5 +1,5 @@
 ---
-title: Edge gateways and high availability | UKCloud Ltd
+title: Edge gateways and high availability
 description: Covers the challenges and considerations of enabling High availability (HA) on the edge gateway devices
 services: vmware
 author: Sue Highmoor

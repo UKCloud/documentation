@@ -1,5 +1,5 @@
 ---
-title: Known bugs with the UKCloud Pricing Estimation Tool | UKCloud Ltd
+title: Known bugs with the UKCloud Pricing Estimation Tool
 description: Known bugs with the UKCloud Pricing Estimation Tool
 services: other
 author: Dan Baker

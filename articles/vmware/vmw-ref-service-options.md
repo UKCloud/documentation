@@ -1,5 +1,5 @@
 ---
-title: UKCloud for VMware options | UKCloud Ltd
+title: UKCloud for VMware options
 description: Provides information about the different choices you can make when building your UKCloud for VMware service
 services: vmware
 author: Sue Highmoor

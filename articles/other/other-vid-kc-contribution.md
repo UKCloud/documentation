@@ -1,5 +1,5 @@
 ---
-title: Editing Knowledge Centre articles video | UKCloud Ltd
+title: Editing Knowledge Centre articles video
 description: Shows a video that explains how to edit Knowledge Centre articles within GitHub
 services: other
 author: Sue Highmoor

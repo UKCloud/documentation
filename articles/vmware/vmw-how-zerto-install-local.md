@@ -1,5 +1,5 @@
 ---
-title: How to install and configure Zerto in your local environment | UKCloud Ltd
+title: How to install and configure Zerto in your local environment
 description: This guide describes the steps you need to perform in your local environment to set up Zerto
 services: vmware
 author: Steve Hall

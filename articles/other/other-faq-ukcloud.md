@@ -1,5 +1,5 @@
 ---
-title: UKCloud FAQs | UKCloud Ltd
+title: UKCloud FAQs
 description: List of FAQs on UKCloud services, technology, connections and processes
 services: Other
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for Cloud Storage | UKCloud Ltd
+title: Getting Started Guide for Cloud Storage
 description: Provides information to get up and running with Cloud Storage
 services: cloud-storage
 author: Sue Highmoor

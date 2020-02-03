@@ -1,8 +1,10 @@
 ---
-title: Private Cloud for Oracle Software Service Definition | UKCloud Ltd
+title: Private Cloud for Oracle Software Service Definition
 description: Provides an overview of what is provided by the Private Cloud for Oracle Software service
 services: private-cloud
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:

@@ -1,5 +1,5 @@
 ---
-title: Journaling Protection FAQs | UKCloud Ltd
+title: Journaling Protection FAQs
 description: Frequently asked questions for Journaling Protection (powered by Zerto)
 services: vmware
 author: Matt Warner

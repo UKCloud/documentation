@@ -1,5 +1,5 @@
 ---
-title: Snapshot Protection Service Scope | UKCloud Ltd
+title: Snapshot Protection Service Scope
 description: Outlines important details regarding the Snapshot Protection service
 services: vmware
 author: Steve Hall

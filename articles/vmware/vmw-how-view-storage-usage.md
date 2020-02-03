@@ -1,5 +1,5 @@
 ---
-title: How to view storage profile usage | UKCloud Ltd
+title: How to view storage profile usage
 description: Explains how to view your storage usage in vCloud Director using the API
 services: vmware
 author: Sue Highmoor

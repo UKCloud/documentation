@@ -1,5 +1,5 @@
 ---
-title: Considerations when scaling an OpenShift cluster | UKCloud Ltd
+title: Considerations when scaling an OpenShift cluster
 description: Provides information on things to consider when scaling a cluster
 services: openshift
 author: Kieran O'Neill

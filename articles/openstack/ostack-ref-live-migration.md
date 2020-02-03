@@ -1,5 +1,5 @@
 ---
-title: OpenStack live migrations | UKCloud Ltd
+title: OpenStack live migrations
 description: Describes the process for performing live migrations to enable maintenance activity on OpenStack hypervisor servers
 services: openstack
 author: Sue Highmoor

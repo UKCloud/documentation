@@ -1,5 +1,5 @@
 ---
-title: Synchronous Protection FAQs | UKCloud Ltd
+title: Synchronous Protection FAQs
 description: Frequently asked questions for Synchronous Protection
 services: vmware
 author: Matt Warner

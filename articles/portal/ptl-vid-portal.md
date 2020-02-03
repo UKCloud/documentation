@@ -1,5 +1,5 @@
 ---
-title: UKCloud Portal overview video | UKCloud Ltd
+title: UKCloud Portal overview video
 description: Shows a video that provides an overview of the UKCloud Portal user interface
 services: portal
 author: Sue Highmoor

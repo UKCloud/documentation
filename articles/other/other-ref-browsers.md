@@ -1,5 +1,5 @@
 ---
-title: System requirements for services on the UKCloud platform | UKCloud Ltd
+title: System requirements for services on the UKCloud platform
 description: Provides information about system requirements, including browser versions, for various services on the UKCloud platform
 services: other
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: UKCloud glossary | UKCloud Ltd
+title: UKCloud glossary
 description: Provides definitions of commonly used UKCloud terms
 services: other
 author: Hannah Ferris

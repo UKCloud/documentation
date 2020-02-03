@@ -1,5 +1,5 @@
 ---
-title: Naming virtual machines | UKCloud Ltd
+title: Naming virtual machines
 description: Explains the new naming convention for virtual machines (VMs) in UKCloud for VMware
 services: vmware
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: UKCloud Community competition terms and conditions | UKCloud Ltd
+title: UKCloud Community competition terms and conditions
 description: Full terms and conditions for the UKCloud Competition competition running during Meet the Team on 10th September 2019
 services: other
 author: Sue Highmoor

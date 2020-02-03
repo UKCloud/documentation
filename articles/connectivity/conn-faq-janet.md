@@ -1,5 +1,5 @@
 ---
-title: Janet connectivity FAQs | UKCloud Ltd
+title: Janet connectivity FAQs
 description: Frequently asked questions for Janet connectivity
 services: connectivity
 author: Matt Warner

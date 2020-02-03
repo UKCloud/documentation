@@ -1,5 +1,5 @@
 ---
-title: Portal permissions | UKCloud Ltd
+title: Portal permissions
 description: A guide to the various permissions available to Portal users and what behaviour they enable
 services: portal
 author: Sue Highmoor

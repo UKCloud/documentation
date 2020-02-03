@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for UKCloud for OpenShift | UKCloud Ltd
+title: Getting Started Guide for UKCloud for OpenShift
 description: Provides information to get up and running with UKCloud for OpenShift
 services: openshift
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: Snapshot Protection FAQs | UKCloud Ltd
+title: Snapshot Protection FAQs
 description: Frequently asked questions for Snapshot Protection
 services: vmware
 author: Matt Warner

@@ -1,5 +1,5 @@
 ---
-title: Internet - permitted standard ports in regions 1 and 2  | UKCloud Ltd
+title: Internet - permitted standard ports in regions 1 and 2 
 description: Shows the whitelist of standard internet ports on the UKCloud managed perimeter firewalls
 services: connectivity
 author: Sue Highmoor

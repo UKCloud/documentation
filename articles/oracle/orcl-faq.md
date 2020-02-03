@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Oracle Software FAQs | UKCloud Ltd
+title: UKCloud for Oracle Software FAQs
 description: Frequently asked questions for UKCloud for Oracle Software
 services: oracle
 author: Matt Warner

@@ -1,5 +1,5 @@
 ---
-title: Cloud economics | UKCloud Ltd
+title: Cloud economics
 description: One of the core benefits of true cloud services is the utility price models that they are based on. This pricing is designed to facilitate new levels of agility, flexibility and scalability in stark contrast to traditional solutions
 services: other
 author: Matt Warner
