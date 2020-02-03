@@ -8,7 +8,7 @@
     href: ptl-how-create-users.md
   - name: Enable 2FA in the Portal
     href: ptl-how-enable-2fa.md
-  - name: Raise and escalate incident and service request tickets
+  - name: Raise and escalate support tickets
     href: ptl-how-raise-escalate-service-request.md
   - name: Reset your UKCloud Portal password or memorable word
     href: ptl-how-reset-password.md

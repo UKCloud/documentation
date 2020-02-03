@@ -18,7 +18,7 @@
     href: oshift-how-backup-migrate.md
   - name: Build an OpenShift application from a private GitHub repo
     href: oshift-how-build-app-private-repo.md
-  - name: Create new users
+  - name: Create a new user
     href: oshift-how-create-users.md
   - name: Customise the router error page
     href: oshift-how-customise-error-page.md
@@ -28,7 +28,7 @@
     href: oshift-how-expand-persistent-vols.md
   - name: Monitor your OpenShift cluster
     href: oshift-how-monitor-cluster.md
-  - name: Obtain usage metrics to use for OpenShift capacity management
+  - name: Obtain usage metrics for OpenShift capacity management
     href: oshift-how-obtain-usage-metrics.md
   - name: Permit outbound internet access in deployments with government community network connectivity
     href: oshift-how-add-domains-proxy-whitelist.md

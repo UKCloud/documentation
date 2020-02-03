@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a service principal name (SPN) for Azure Stack Hub using Azure CLI | UKCloud Knowledge Centre </title>
+    <title>How to create an SPN for Azure Stack Hub using Azure CLI </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a service principal name (SPN) for Azure Stack Hub using Azure CLI | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to create an SPN for Azure Stack Hub using Azure CLI ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -93,7 +93,7 @@
                   
 <h1 id="how-to-create-a-service-principal-name-for-azure-stack-hub-using-azure-cli">How to create a service principal name for Azure Stack Hub using Azure CLI</h1>
 
-<p>This document explains how to create a service principal name to manage Azure and Azure Stack Hub using Azure CLI.</p>
+<p>This document explains how to create a service principal name (SPN) to manage Azure and Azure Stack Hub using Azure CLI.</p>
 <p>It will guide you through the creation of:</p>
 <ul>
 <li><p>an Azure application</p>
@@ -106,7 +106,7 @@
 </li>
 </ul>
 <h2 id="what-is-a-service-principal-name">What is a service principal name?</h2>
-<p>An Azure service principal name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.</p>
+<p>An Azure SPN is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.</p>
 <p>To log in and manage your resources via SPN you'll need to create an Azure application and then assign SPN to it. Only then will you be able to perform tasks against your environment.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
@@ -274,7 +274,7 @@ az group delete --name rg01 -y</code></pre>
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              <strong></strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       

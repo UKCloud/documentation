@@ -20,10 +20,10 @@
       href: azs-how-convert-to-managed-disks-ps.md
     - name: Create a load balancer
       href: azs-how-create-load-balancer.md
-    - name: Create a scale set
-      href: azs-how-create-scale-set.md
     - name: Create a Service Fabric cluster
       href: azs-how-create-service-fabric-portal.md
+    - name: Create a VM scale set
+      href: azs-how-create-scale-set.md
     - name: Create an Azure Kubernetes Service cluster
       href: azs-how-create-aks.md
     - name: Deploy an Azure Site Recovery template to Azure Stack Hub - PowerShell
