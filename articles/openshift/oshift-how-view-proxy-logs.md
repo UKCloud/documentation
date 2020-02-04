@@ -34,7 +34,7 @@ In multi-network 3.11 clusters, we run a proxy service on the control plane load
 
 As a customer, while you don't have direct access to the proxy logs, we send them through to a set of fluentd pods in a project called `proxy-showback`. These logs are then forwarded on to the clusters' aggregated logging and you can view them in the Kibana dashboard in the `openshift-logging` project, usually available on kibana.<cluster_domain_suffix>
 
-Set a filter of `kubernetes_namespace_name: "squid-showback"` to filter only for the logs from the pods receiving the proxy logs and show only the message. You can then query the message field for the particular IP/endpoint you're looking for. From here you can see if it's being denied and update the whitelist as needed.
+Set a filter of `kubernetes_namespace_name: "proxy-showback"` to filter only for the logs from the pods receiving the proxy logs and show only the message. You can then query the message field for the particular IP/endpoint you're looking for. From here you can see if it's being denied and update the whitelist as needed.
 
 ## Further reading
 
