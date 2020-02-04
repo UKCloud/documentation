@@ -49,11 +49,11 @@ To allow several IP addresses through to the route, separate each IP with a spac
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10 192.168.1.11 192.168.1.12"
 
-To allow a network CIDR through to the route, declare the network CIDR as so:
+To allow a CIDR block through to the route, declare the CIDR block as so:
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10/24"
 
-You can even use a mix of IP addresses and a network CIDR:
+You can even use a mix of IP addresses and a CIDR block:
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10 180.5.61.153 192.168.1.0/24 10.0.0.0/8"
 
