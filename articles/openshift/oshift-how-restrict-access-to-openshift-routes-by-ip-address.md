@@ -34,7 +34,7 @@ After creating and exposing a route in OpenShift in the usual manner, you can th
   
 You apply the annotation to a route in the following manner:
   
-    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=<ip_address>
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="<ip_address>"
 
 > [!IMPORTANT]
 > You must do this for every route that you wish to apply the whitelisting to.
