@@ -25,12 +25,6 @@ At UKCloud, we strive to ensure that our products deliver the most value to your
 
 This section provides some best practices to ensure you get the most out of UKCloud for VMware.
 
-### Updating old edge gateways
-
-To use the latest version of our vCloud product, it's important that you're using the most up to date edge gateway. Older edges are unsupported and not compatible with our latest products and could cause performance issues and disruption to your service.
-
-You can find out the latest version of the edge you're using in our vCentre. To upgrade your edge, see [*How to upgrade your edge gateway*](../vmware/vmw-how-upgrade-edge.md).
-
 ### Removing out of date snapshots
 
 Snapshot Protection automatically takes an image of the protected VM every 24 hours and stores the image outside the core platform for either 14 or 28 days, depending on your chosen snapshot retention profile.

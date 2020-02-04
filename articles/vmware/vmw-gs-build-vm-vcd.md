@@ -38,7 +38,7 @@ You should have received your UKCloud Portal login credentials from your Portal 
 
 You should have created a compute service and VDC within your account. For more information, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md#creating-your-ukcloud-for-vmware-estate).
 
-You should also have created an edge gateway, which enables communication between your VDC and the outside world. For more information, see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md). The steps in this guide assume that you've converted your edge gateway to an advanced edge. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
+You should also have created an edge gateway, which enables communication between your VDC and the outside world. For more information, see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md).
 
 ## Create a network
 

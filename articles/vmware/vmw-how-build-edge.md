@@ -84,8 +84,6 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
 
 ## Next steps
 
-After you create your edge gateway, we recommend that you convert it to an advanced gateway to access the latest vCloud Director functionality. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
-
 For information about how to configure your new edge gateway, see:
 
 - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
