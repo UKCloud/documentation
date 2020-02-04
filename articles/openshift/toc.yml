@@ -40,6 +40,8 @@
     href: oshift-how-use-netpol.md
   - name: Use the Hawkular Metrics API
     href: oshift-how-use-hawkular-metrics.md
+  - name: View proxy logs in a multi-network OpenShift cluster
+    href: oshift-how-view-proxy-logs.md
   - name: View your router logs
     href: oshift-how-view-router-logs.md
   - name: Use Portworx with OpenShift
