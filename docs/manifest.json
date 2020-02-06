@@ -4410,6 +4410,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-bigcolo.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-bigcolo.html",
+          "hash": "petpt3xStT1e0gb3Z5GLwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-sco-capscpa.md",
       "output": {
         ".html": {
@@ -4717,7 +4729,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "ebjmUTvh7JzMDb3g1qmqnA=="
+          "hash": "bUUphkkLVZZ7xD1KUZX4yw=="
         }
       },
       "is_incremental": false,
@@ -19575,7 +19587,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 422,
+          "total_file_count": 423,
           "skipped_file_count": 0
         }
       }

@@ -4,6 +4,8 @@
     href: enbl-ref-services.md
 - name: Service Scope
   items:
+  - name: Big Cloud Enablement Service Scope
+    href: enbl-sco-bigcolo.md
   - name: Cloud Enablement - CAPS/CPA-approved VPN Service Scope
     href: enbl-sco-capscpa.md
   - name: Cloud Enablement - Server/Storage Hosting Service Scope
