@@ -45,7 +45,7 @@ To allow a single IP address through to the route, use the following:
   
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10"
 
-To allow several IP addresses through to the route, separate each IP with a space:
+To allow several IP addresses through to the route, separate each IP with a space (do not use commas to separate IPs):
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10 192.168.1.11 192.168.1.12"
 
