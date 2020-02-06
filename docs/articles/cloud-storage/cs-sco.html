@@ -117,13 +117,12 @@
 <h2 id="platform-management">Platform management</h2>
 <p>Users can access, manage and view their Cloud Storage service, in any of the following ways:</p>
 <ul>
-<li><strong>APIs.</strong> You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">EMC ECS Data Access Guide</a> for more information on the features of both APIs.</li>
-</ul>
+<li><p><strong>APIs.</strong> You can use the ECS S3-compatible API. Refer to the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">EMC ECS Data Access Guide</a> for more information on the features of the API.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>
 </div>
-<ul>
+</li>
 <li><p><strong>Command Line Interface (CLI).</strong> CLI tools enable access from the command line by translating commands into the relevant API calls.</p>
 </li>
 <li><p><strong>Storage Gateways.</strong> These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see <a href="cs-how-install-geodrive2-client.html"><em>How to install the GeoDrive Client 2.0</em></a>.</p>
