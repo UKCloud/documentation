@@ -4,7 +4,7 @@ description: Shows the regions in each UKCloud site and lists the services and c
 services: other
 author: Sue Highmoor
 reviewer: Sue Highmoor
-lastreviewed: 16/09/2019
+lastreviewed: 06/02/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,7 +17,17 @@ toc_mdlink: other-ref-services-by-region.md
 
 # UKCloud services by region
 
-## Farnborough
+## Overview
+
+This articles provides a quick reference for which services are available in the different UKCloud regions.
+
+## Sites, regions and zones
+
+The diagram below illustrates the locations of the different regions and zones on the UKCloud platform.
+
+![Sites, regions and zones on the UKCloud platform](images/other-sites-regions-zones.png)
+
+## Services in Farnborough
 
 ### Region 1 (00001)
 
@@ -57,7 +67,7 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownCo
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
-## Corsham
+## Services in Corsham
 
 ### Region 2 (00002)
 
