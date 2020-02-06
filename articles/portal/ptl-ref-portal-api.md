@@ -3074,6 +3074,9 @@ Returns an array of VMotion events for the last 12 hours.
 
 Returns billing information for Cloud Storage.
 
+> [!NOTE]
+> To retrieve Cloud Storage billing information for an account, you must have the **API** Permissions for Billing. For more information, see [*Portal permissions*](ptl-ref-overview-permissions.md).
+
 ### API version
 
 v1
@@ -3139,6 +3142,9 @@ Returns a CSV report for the whole month specified including the date provided.
 Returns a CSV containing billing data for the period given.
 
 For more information about this CSV, see [*Understanding your invoice evidence file*](../other/other-ref-invoice-evidence-file.md) and the [*Invoice and billing FAQs*](../other/other-faq-billing.md).
+
+> [!NOTE]
+> To retrieve billing information for an account, you must have the **API** Permissions for Billing. For more information, see [*Portal permissions*](ptl-ref-overview-permissions.md).
 
 ### API version
 
