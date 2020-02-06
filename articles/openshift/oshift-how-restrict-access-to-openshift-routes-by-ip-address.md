@@ -2,9 +2,9 @@
 title: How to restrict access to OpenShift routes by IP address
 description: Restrict access to OpenShift routes by IP address
 services: openshift
-author: Kieran O'Neill
-reviewer:
-lastreviewed: 11/12/2019 10:46:43
+author: Mudasar Hussain
+reviewer: Kieran O'Neill
+lastreviewed: 04/02/2020 10:46:43
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -34,7 +34,7 @@ After creating and exposing a route in OpenShift in the usual manner, you can th
   
 You apply the annotation to a route in the following manner:
   
-    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=<ip_address>
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="<ip_address>"
 
 > [!IMPORTANT]
 > You must do this for every route that you wish to apply the whitelisting to.
@@ -43,19 +43,19 @@ You apply the annotation to a route in the following manner:
 
 To allow a single IP address through to the route, use the following:
   
-    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=192.168.1.10
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10"
 
-To allow several IP addresses through to the route, separate each IP with a space:
+To allow several IP addresses through to the route, separate each IP with a space (do not use commas to separate IPs):
 
-    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=192.168.1.10 192.168.1.11 192.168.1.12
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10 192.168.1.11 192.168.1.12"
 
-To allow a network CIDR through to the route, declare the network CIDR as so:
+To allow a CIDR block through to the route, declare the CIDR block as so:
 
-    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=192.168.1.10/24
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10/24"
 
-You can even use a mix of IP addresses and a network CIDR:
+You can even use a mix of IP addresses and a CIDR block:
 
-    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=192.168.1.10 180.5.61.153 192.168.1.0/24 10.0.0.0/8
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10 180.5.61.153 192.168.1.0/24 10.0.0.0/8"
 
 To delete the IPs from the annotation, you can run the command:
     
@@ -63,11 +63,10 @@ To delete the IPs from the annotation, you can run the command:
 
 ## More information
 
-For further infomation, see the following: [Openshift Documentation](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html)
+For further information, see the following: [OpenShift Documentation](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html)
 
 > [!IMPORTANT]
 > This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled. 
-
 
 ## Feedback
 
