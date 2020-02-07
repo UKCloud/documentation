@@ -3,8 +3,8 @@ title: Resetting Two-Factor Authentication for Single Sign On
 description: Explains how to reset Two-Factor Authentication (2FA) to prepare for Single Sign On (SSO)
 services: portal
 author: Sue Highmoor
-reviewer:
-lastreviewed: 27/09/2018 10:01:12
+reviewer: wllewellyn
+lastreviewed: 07/02/2020
 
 toc_rootlink: Reference
 toc_sub1:
