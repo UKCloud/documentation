@@ -374,7 +374,7 @@ VMware provides a compatibility matrix at: <https://partnerweb.vmware.com/comp_g
 
 You can use the UKCloud catalog of operating systems or upload your own.
 
-We offer Windows Server Windows 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.
+We offer Windows Server 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.
 
 > [!NOTE]
 > As of 14 January 2020, Windows Server 2008 is out of support. We highly recommend that you upgrade to Windows Server 2012 or Windows Server 2016. 
