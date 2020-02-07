@@ -32,7 +32,7 @@ Follow the steps provided:
 
 1. Open the app that you use to generate the 2FA code and remove the existing UKCloud entry.
 
-2. Scan the QR code or copy the seed provided in the Portal to add the new UKCloud entry.
+2. Scan the QR code or copy the security key provided in the Portal to add the new UKCloud entry.
 
 3. Enter the six digit code generated in your authenticator app into the field in the Portal.
 
