@@ -3,8 +3,8 @@ title: How to set up two-factor authentication for a user account
 description: Describes how to set up two-factor authentication (2FA) for a user account
 services: portal
 author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 08/11/2019
+reviewer: wllewellyn
+lastreviewed: 07/02/2020
 
 toc_rootlink: How To
 toc_sub1:
