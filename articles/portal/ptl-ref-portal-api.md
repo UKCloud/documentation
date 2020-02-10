@@ -121,7 +121,7 @@ curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.sky
 Returns a list of up to 10 VMs.
 
 > [!NOTE]
-> While the billing information returned by this endpoint is retained for backward compatibility it is no longer accurate. For accurate billing information, use [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv).
+> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
 
 ### API version
 
@@ -400,7 +400,7 @@ Returns an array of accounts with the ID and name.
 Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.
 
 > [!NOTE]
-> While the billing information returned by this endpoint is retained for backward compatibility it is no longer accurate. For accurate billing information, use [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv).
+> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
 
 ### API version
 
@@ -834,7 +834,7 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
 Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).
 
 > [!NOTE]
-> While the billing information returned by this endpoint is retained for backward compatibility it is no longer accurate. For accurate billing information, use [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv).
+> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
 
 ### API version
 
