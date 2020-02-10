@@ -26,7 +26,7 @@ If a user loses or replaces the device where their authenticator app is installe
 
 ### Intended audience
 
-This article is intended for Portal administrators who need to reset a Portal user's 2FA.
+This article is intended for Portal administrators who need to reset a Portal user's 2FA. The administrator must have set up 2FA on their own account to be able to carry out the steps in this article.
 
 ## Resetting 2FA for a user account
 
