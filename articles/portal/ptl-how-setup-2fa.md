@@ -26,6 +26,13 @@ If your Portal administrator has enabled two-factor authentication (2FA) in the 
 
 The first time you log into the Portal after 2FA is enabled, you'll need to to set up 2FA for your user account by registering your account with an authenticator app, such as Google Authenticator.
 
+> [!NOTE]
+> If at any point you need to reset 2FA on your user account, for example if you lose or replace your phone, contact your Portal administrator. After your administrator resets your 2FA, the next time you log in to the Portal, you'll need to set up 2FA again.
+
+### Intended audience
+
+This article is intended for any Portal user who needs to set up 2FA to log in to the Portal.
+
 ## Setting up 2FA
 
 When you first log in to a Portal account that has 2FA enabled, you'll be prompted to set up 2FA:
