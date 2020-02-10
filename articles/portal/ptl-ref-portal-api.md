@@ -118,7 +118,10 @@ curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.sky
 
 ## GET /api/my_vm
 
-Returns a list of up to 10 VMs with billing data.
+Returns a list of up to 10 VMs.
+
+> [!NOTE]
+> While the billing information returned by this endpoint is retained for backward compatibility it is no longer accurate. For accurate billing information, use [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv).
 
 ### API version
 
@@ -395,6 +398,9 @@ Returns an array of accounts with the ID and name.
 ## GET /api/accounts/:account_id/compute_services
 
 Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.
+
+> [!NOTE]
+> While the billing information returned by this endpoint is retained for backward compatibility it is no longer accurate. For accurate billing information, use [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv).
 
 ### API version
 
@@ -826,6 +832,9 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
 ## GET /api/accounts/:account_id/compute_services/:vorg_id
 
 Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).
+
+> [!NOTE]
+> While the billing information returned by this endpoint is retained for backward compatibility it is no longer accurate. For accurate billing information, use [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv).
 
 ### API version
 
@@ -3073,9 +3082,6 @@ Returns an array of VMotion events for the last 12 hours.
 ## GET /api/billing/cloud-storage-report
 
 Returns billing information for Cloud Storage.
-
-> [!NOTE]
-> To retrieve Cloud Storage billing information for an account, you must have the **API** Permissions for Billing. For more information, see [*Portal permissions*](ptl-ref-overview-permissions.md).
 
 ### API version
 
