@@ -32,6 +32,8 @@
     href: ostack-how-recover-instance.md
   - name: Manage UKCloud for OpenStack accounts in the UKCloud Portal
     href: ostack-how-manage-accounts-portal.md
+  - name: Migrate workloads on OpenStack using Hystax Acura
+    href: ostack-how-use-hystax.md
   - name: Move resources between OpenStack regions
     href: ostack-how-move-resources.md
   - name: Retrieve your Windows password on UKCloud for OpenStack
