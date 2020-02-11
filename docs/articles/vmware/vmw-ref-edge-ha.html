@@ -8,7 +8,7 @@
     <title>Edge gateways and high availability </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Edge gateways and high availability ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,7 +96,7 @@
 <p>The edge gateway device that sits on each customer VDC is currently not highly available (HA) by default on UKCloud.</p>
 <p>UKCloud has trialled the use of HA enabled edge gateway devices with customers on our platform. After an extended period of testing, we have observed that in certain scenarios the two devices can get out of sync and move into an active-active or passive-passive state (or flip-flopping between the two), causing connectivity issues that disrupts applications running inside the VDCs.</p>
 <p>In light of this, UKCloud does not recommend that customers have HA enabled on the edge gateway device.</p>
-<p>If you would like to investigate other methods of implementing HA into your solutions and the options available on UKCloud, this <a href="https://ukcloud.com/wp-content/uploads/2018/08/ukcloud_blueprint_ukc-gen-101_high-availability-and-disaster-recovery-options.pdf"><em>High Availability Blueprint</em></a> contains some useful advice. Alternatively, please contact your Account Manager who can arrange a session with one of our Cloud Architects.</p>
+<p>If you would like to investigate other methods of implementing HA into your solutions and the options available on UKCloud, see <a href="../other/other-ref-high-availability.html"><em>High availability on the UKCloud platform</em></a>. Alternatively, please contact your Account Manager who can arrange a session with one of our Cloud Architects.</p>
 <p>We are continuing to investigate with our partners at VMware to resolve this challenge.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
@@ -136,7 +136,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong></strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -144,12 +144,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -159,5 +166,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

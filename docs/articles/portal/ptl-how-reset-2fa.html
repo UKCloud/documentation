@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Resetting Two-Factor Authentication for Single Sign On </title>
+    <title>How to reset two-factor authentication for a user account </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Resetting Two-Factor Authentication for Single Sign On ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="title" content="How to reset two-factor authentication for a user account ">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-ref-reset-2fa-sso.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-how-reset-2fa.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,26 +91,29 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="resetting-two-factor-authentication-for-single-sign-on">Resetting Two-Factor Authentication for Single Sign On</h1>
+<h1 id="how-to-reset-two-factor-authentication-for-a-user-account">How to reset two-factor authentication for a user account</h1>
 
-<p>With the introduction of our new UKCloud Single Sign On service, we require all Portal users currently using Two-Factor Authentication (2FA) to reset their 2FA token. Single Sign On is an exciting new service that enables us to provide:</p>
-<ul>
-<li><p>Unified logon across our major multi-cloud offerings, including VMware, OpenStack and OpenShift</p>
-</li>
-<li><p>Roll out of 2FA for technology stacks where this has not previously been an option</p>
-</li>
-</ul>
-<p>If your Portal administrator has enabled 2FA on your Portal account and you scanned the QR code before August 1 2018, then next time you log in after October 1 2018 you'll see the following information:</p>
-<p><img src="images/ptl-2fa-reset.png" alt="Reset Two-Factor Authentication dialog box"></p>
-<p>Follow the steps provided:</p>
+<h2 id="overview">Overview</h2>
+<p>If two-factor authentication (2FA) is enabled for the UKCloud Portal, users must use an authenticator app to generate a code to enter, as well as their user name and password, when logging in to the Portal.</p>
+<p>If a user loses or replaces the device where their authenticator app is installed, they will be unable to generate the required code and therefore be unable to log in to the Portal. In this situation, an administrator must reset the user's 2FA so that they can set up 2FA on a different device.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article is intended for Portal administrators who need to reset a Portal user's 2FA. The administrator must have set up 2FA on their own account to be able to carry out the steps in this article.</p>
+<h2 id="resetting-2fa-for-a-user-account">Resetting 2FA for a user account</h2>
 <ol>
-<li><p>Open the app that you use to generate the 2FA code and remove the existing UKCloud entry.</p>
+<li><p>Log in to the UKCloud Portal as a Portal administrator.</p>
+<p>For more detailed instructions, see the <a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
 </li>
-<li><p>Scan the QR code provided in the Portal to add the new UKCloud entry.</p>
+<li><p>If necessary, switch to the account to which the user belongs.</p>
 </li>
-<li><p>Enter the six digit code generated in your authenticator app into the field in the Portal.</p>
+<li><p>In the navigation panel, expand <strong>Contacts</strong>, then select <strong>All Contacts</strong>.</p>
+<p><img src="images/ptl-mnu-all-contacts.png" alt="All contacts menu option in the UKCloud Portal"></p>
 </li>
-<li><p>You will then be logged into the Portal and the next time you attempt to log in, you'll be prompted for your 2FA code as usual.</p>
+<li><p>Locate the user account and click the <strong>Reset 2FA</strong> button.</p>
+<p><img src="images/ptl-contact-reset-2fa.png" alt="Reset 2FA button"></p>
+</li>
+<li><p>In the <em>Confirm</em> dialog box, click <strong>Yes</strong> to continue.</p>
+</li>
+<li><p>The next time the user attempts to log in, they'll be prompted to set up their 2FA again. For more information, see <a href="ptl-how-setup-2fa.html"><em>How to set up two-factor authentication for a user account</em></a>.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
@@ -151,7 +154,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong></strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -159,12 +162,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -174,5 +184,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>
