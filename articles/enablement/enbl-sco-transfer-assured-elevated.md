@@ -67,13 +67,13 @@ The following documents contain more information about the CDSZ and the service 
 
 - [*Getting Started Guide for the Cross Domain Security Zone Walled Garden*](../cdsz/cdsz-gs-walled-garden.md)
 
-- [*Cross Domain Service Scope*](..cdsz/cdsz-sco.md)
+- [*Cross Domain Service Scope*](../cdsz/cdsz-sco.md)
 
 - [*Cross Domain Security Zone FAQs*](../cdsz/cdsz-faq.md)
 
 - [*UKCloud Cross Domain Security Zone application process*](../cdsz/cdsz-ref-application-process.md)
 
-- [*Cross Domain Security Zone Blueprint*](..cdsz/cdsz-ref-bp-overview.md)
+- [*Cross Domain Security Zone Blueprint*](../cdsz/cdsz-ref-bp-overview.md)
 
 ## Feedback
 
