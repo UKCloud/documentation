@@ -4,6 +4,12 @@
 <script type="text/javascript" src="{{_rel}}styles/docfx.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/main.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/highlight.js"></script>
+<!-- Enable Terraform syntax highlighting -->
+<script type="text/javascript" src="{{_rel}}styles/terraform.js"></script>
+<script type="text/javascript">
+  hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+  hljs.initHighlightingOnLoad();
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
