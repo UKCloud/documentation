@@ -57,17 +57,17 @@ The process of authentication can be handled in one of two ways, either as **Env
 
 #### `variables.tf`
 
-  ```hcl
+  <pre><code class="tf">
   variable "arm_endpoint" {}
   variable "subscription_id" {}
   variable "client_id" {}
   variable "client_secret" {}
   variable "tenant_id" {}
-  ```
+  </code></pre>
 
 #### `main.tf`
 
-  ```hcl
+  <pre><code class="tf">
   provider "azurestack" {
     arm_endpoint    = "${var.arm_endpoint}"
     subscription_id = "${var.subscription_id}"
@@ -75,18 +75,18 @@ The process of authentication can be handled in one of two ways, either as **Env
     client_secret   = "${var.client_secret}"
     tenant_id       = "${var.tenant_id}"
   }
-  ```
+  </code></pre>
 
 #### `terraform.tfvars`
 
-  ```hcl
+  <pre><code class="tf">
   # Configure the Azure Stack Hub Provider
   arm_endpoint    = "https://management.{region}.{domain}"
   subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
   client_id       = "{applicationId}"
   client_secret   = "{applicationSecret}"
   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-  ```
+  </code></pre>
 
 #### Argument reference
 
@@ -112,7 +112,7 @@ The process of authentication can be handled in one of two ways, either as **Env
 
 ### Example of Provider Block:
 #### `main.tf`
- ```hcl
+ <pre><code class="tf">
  # Configure the Azure Stack Hub Provider
  provider "azurestack" {
   arm_endpoint    = "https://management.{region}.{domain}"
@@ -122,7 +122,7 @@ The process of authentication can be handled in one of two ways, either as **Env
   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
 }
 Rest of the file (...)
-```
+</code></pre>
 
 Official [Variables Guide](https://www.terraform.io/intro/getting-started/variables.html)
 
@@ -165,7 +165,7 @@ The examples that follow show how to create VMs using Terraform. The code change
 
 ### [Windows VM with Managed Disks](#tab/tabid-a/tabid-2)
 
-<pre><code class="language-hcl">
+<pre><code class="tf">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
@@ -295,7 +295,7 @@ resource "azurestack_virtual_machine" "vm" {
 
 ### [Windows VM with Unmanaged Disks](#tab/tabid-b/tabid-2)
 
-<pre><code class="language-hcl">
+<pre><code class="tf">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
@@ -440,11 +440,11 @@ resource "azurestack_virtual_machine" "vm" {
 
   tags = "${azurestack_resource_group.rg.tags}"
 }
-</pre></code>
+</code></pre>
 
 ### [Linux VM with Managed Disks](#tab/tabid-a/tabid-1)
 
-<pre><code class="language-hcl">
+<pre><code class="tf">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
@@ -575,7 +575,7 @@ resource "azurestack_virtual_machine" "vm" {
 
 ### [Linux VM with Unmanaged Disks](#tab/tabid-b/tabid-1)
 
-<pre><code class="language-hcl">
+<pre><code class="tf">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
@@ -721,13 +721,13 @@ resource "azurestack_virtual_machine" "vm" {
 
   tags = "${azurestack_resource_group.rg.tags}"
 }
-</pre></code>
+</code></pre>
 
 ***
 
 ### Assign values to the variables in the `terraform.tfvars` file through the table found at the top of the document
 
-<pre><code class="language-hcl">
+<pre><code class="tf">
   arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
   subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
   client_id       = "<output form="client_id" name="result" style="display: inline;">applicationId</output>"
@@ -747,7 +747,7 @@ resource "azurestack_virtual_machine" "vm" {
 
 ### Declare the variables here in the `variables.tf` file for use in the main script
 
-<pre><code class="language-hcl">
+<pre><code class="tf">
   variable "arm_endpoint" {
     type = "string"
   }
