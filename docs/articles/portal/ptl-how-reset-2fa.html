@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to set up two-factor authentication for a user account </title>
+    <title>How to reset two-factor authentication for a user account </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to set up two-factor authentication for a user account ">
+    <meta name="title" content="How to reset two-factor authentication for a user account ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-how-setup-2fa.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-how-reset-2fa.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,37 +91,31 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-set-up-two-factor-authentication-for-a-user-account">How to set up two-factor authentication for a user account</h1>
+<h1 id="how-to-reset-two-factor-authentication-for-a-user-account">How to reset two-factor authentication for a user account</h1>
 
 <h2 id="overview">Overview</h2>
-<p>If your Portal administrator has enabled two-factor authentication (2FA) in the UKCloud Portal, you must enter a randomly generated code, as well as your user name and password, when logging in to the Portal.</p>
-<p><img src="images/ptl-2fa.png" alt="Two-Factor Authentication dialog box in the UKCloud Portal"></p>
-<p>The first time you log into the Portal after 2FA is enabled, you'll need to to set up 2FA for your user account by registering your account with an authenticator app, such as Google Authenticator.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If at any point you need to reset 2FA on your user account, for example if you lose or replace your phone, contact your Portal administrator. After your administrator resets your 2FA, the next time you log in to the Portal, you'll need to set up 2FA again.</p>
-</div>
+<p>If two-factor authentication (2FA) is enabled for the UKCloud Portal, users must use an authenticator app to generate a code to enter, as well as their user name and password, when logging in to the Portal.</p>
+<p>If a user loses or replaces the device where their authenticator app is installed, they will be unable to generate the required code and therefore be unable to log in to the Portal. In this situation, an administrator must reset the user's 2FA so that they can set up 2FA on a different device.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>This article is intended for any Portal user who needs to set up 2FA to log in to the Portal.</p>
-<h2 id="setting-up-2fa">Setting up 2FA</h2>
-<p>When you first log in to a Portal account that has 2FA enabled, you'll be prompted to set up 2FA:</p>
+<p>This article is intended for Portal administrators who need to reset a Portal user's 2FA. The administrator must have set up 2FA on their own account to be able to carry out the steps in this article.</p>
+<h2 id="resetting-2fa-for-a-user-account">Resetting 2FA for a user account</h2>
 <ol>
-<li><p>Log in to the UKCloud Portal, providing your user name and password as usual.</p>
+<li><p>Log in to the UKCloud Portal as a Portal administrator.</p>
 <p>For more detailed instructions, see the <a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
 </li>
-<li><p>Install an authenticator app if you don't already have one which is compatible with the UKCloud Portal. We've tested 2FA with Google Authenticator, which is a smart phone app, and Authy, which is available as a smart phone app, desktop app or Chrome plug-in. Other authenticator apps may also be compatible but have not been tested. Once you've installed the authenticator app, scan the QR code or copy the security key.</p>
-<p>This is a one-off set up and does not need to be repeated as part of the normal Portal log-in process.</p>
-<p><img src="images/ptl-2fa-setup.png" alt="Configure your two-factor authentication dialog box"></p>
+<li><p>If necessary, switch to the account to which the user belongs.</p>
 </li>
-<li><p>When you've installed and set up your authenticator app, enter the 6 digit code provided by the app in the <em>Configure your two-factor authentication</em> dialog box and click <strong>Confirm code</strong> to log in to the Portal.</p>
+<li><p>In the navigation panel, expand <strong>Contacts</strong>, then select <strong>All Contacts</strong>.</p>
+<p><img src="images/ptl-mnu-all-contacts.png" alt="All contacts menu option in the UKCloud Portal"></p>
 </li>
-<li><p>For future logins to the Portal, use your authenticator app to generate a 2FA code to confirm your identity and complete the log in process.</p>
+<li><p>Locate the user account and click the <strong>Reset 2FA</strong> button.</p>
+<p><img src="images/ptl-contact-reset-2fa.png" alt="Reset 2FA button"></p>
+</li>
+<li><p>In the <em>Confirm</em> dialog box, click <strong>Yes</strong> to continue.</p>
+</li>
+<li><p>The next time the user attempts to log in, they'll be prompted to set up their 2FA again. For more information, see <a href="ptl-how-setup-2fa.html"><em>How to set up two-factor authentication for a user account</em></a>.</p>
 </li>
 </ol>
-<h2 id="related-videos">Related videos</h2>
-<ul>
-<li><a href="ptl-vid-portal.html"><em>UKCloud Portal overview video</em></a></li>
-</ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 

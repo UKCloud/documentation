@@ -9574,7 +9574,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-external-security-review-testing.html",
-          "hash": "tx+Du/12kDTahwrZ+4ahDw=="
+          "hash": "j4IL/NQvClG7Q+5Lv5z04Q=="
         }
       },
       "is_incremental": false,
@@ -9951,17 +9951,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-2fa-reset.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-2fa-reset.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-2fa-setup.png",
       "output": {
         "resource": {
@@ -10021,6 +10010,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-contact-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-contact-reset-2fa.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-contact-reset-2fa.png"
         }
       },
       "is_incremental": false,
@@ -10791,6 +10791,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-how-reset-2fa.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-how-reset-2fa.html",
+          "hash": "QeCF9KbWt0kwct/Ftyim9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-reset-password.md",
       "output": {
         ".html": {
@@ -10831,7 +10843,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-2fa.html",
-          "hash": "bw7xJb2EWkKkgJ80+KvcMg=="
+          "hash": "YkJWKcuituQehTnEbwYEfg=="
         }
       },
       "is_incremental": false,
@@ -10959,18 +10971,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/portal/ptl-ref-reset-2fa-sso.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/portal/ptl-ref-reset-2fa-sso.html",
-          "hash": "y+OWD5yNNqua0byH4nLHww=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-ref-security-settings.md",
       "output": {
         ".html": {
@@ -11011,7 +11011,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "PUbSSuVkCqIb6A/LpnzNQA=="
+          "hash": "j+mdGm4aW9/2Z15qUC9Prg=="
         }
       },
       "is_incremental": false,
@@ -19038,7 +19038,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-edge-ha.html",
-          "hash": "NZafEAF2ain6CHFY6GeeUg=="
+          "hash": "Rn1uaXHCgUJH+fHB+jXWkQ=="
         }
       },
       "is_incremental": false,
@@ -19374,7 +19374,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-journaling-protection.html",
-          "hash": "OBkXH9a0mzOYbO0vMh3z7g=="
+          "hash": "ozpRXiUK3A1B7CHDQWexyg=="
         }
       },
       "is_incremental": false,
@@ -19570,16 +19570,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
