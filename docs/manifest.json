@@ -4481,12 +4481,38 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-transfer-assured-elevated.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-transfer-assured-elevated.html",
+          "hash": "uuNqut0JttQCQKgRhxjMmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-sco-vpn.md",
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-vpn.html",
           "hash": "RGSwIASDJ85EKX1PUbr8dQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/cdsz-example-setup.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/cdsz-example-setup.png"
         }
       },
       "is_incremental": false,
@@ -4729,7 +4755,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "bUUphkkLVZZ7xD1KUZX4yw=="
+          "hash": "NYgVDOweC2SpiGliw7XQww=="
         }
       },
       "is_incremental": false,
@@ -19587,7 +19613,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 423,
+          "total_file_count": 424,
           "skipped_file_count": 0
         }
       }
