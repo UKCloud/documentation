@@ -482,7 +482,7 @@ You can find pricing details in the OpenStack section of the [UKCloud Pricing Gu
 
 ### Are there any additional fees for the TrilioVault self-service backup and restoration service?
 
-This service utilises UKCloud's [*Multi-Cloud Backup Storage*](../mcbs/mcbs-sd.md) (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+This service utilises UKCloud's [*Multi-Cloud Backup Storage*](../other/other-sd-mcbs.md) (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
 
 ### Can I use my own backup software?
 
