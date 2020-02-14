@@ -11572,12 +11572,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/third-party/third-vid-cloudsoc-intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/third-party/third-vid-cloudsoc-intro.html",
+          "hash": "6wO+6I3upltMHZdMo9B7Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/third-party/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/third-party/toc.html",
-          "hash": "/szWuh9RA7QkLVwV0vsK2Q=="
+          "hash": "aEG7foYAGhomOqH7+PG0Kw=="
         }
       },
       "is_incremental": false,
@@ -19720,7 +19732,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 425,
+          "total_file_count": 426,
           "skipped_file_count": 0
         }
       }
