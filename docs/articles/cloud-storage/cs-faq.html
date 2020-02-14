@@ -108,9 +108,9 @@
 <h3 id="how-do-i-access-the-platform">How do I access the platform?</h3>
 <p>The service is Application Programming Interface (API) accessible, so is an ideal target for customer applications. It can also be used by existing systems.</p>
 <p>In addition, the platform can be accessed using a variety of software tools such as cloud storage gateways, file browsers and other software products.</p>
-<p>Documentation on ways to interact with the platform is available from the <a href="cs-gs.html">Knowledge Centre</a>.</p>
-<h3 id="is-data-accessible-via-the-psn-assured-connection-also-accessible-via-the-internet">Is data accessible via the PSN Assured connection also accessible via the internet?</h3>
-<p>Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it is not possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.</p>
+<p>Documentation on ways to interact with the platform is available in the <a href="cs-gs.html"><em>Getting Started Guide for Cloud Storage</em></a>.</p>
+<h3 id="is-data-accessible-via-the-psn-connection-also-accessible-via-the-internet">Is data accessible via the PSN connection also accessible via the internet?</h3>
+<p>Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN and internet connections. Although it is not possible to bridge between these connections, any objects placed in Cloud Storage via PSN will also be accessible via the internet using the appropriate customer credentials.</p>
 <h3 id="can-i-restrict-cloud-storage-access-to-specific-networks">Can I restrict Cloud Storage access to specific networks?</h3>
 <p>It is possible to lock Cloud Storage accounts down so that buckets are only accessible via a single network (for example HSCN, PSN, Janet), but we cannot lock down a bucket to a customer-specified source IP address or range.</p>
 <div class="IMPORTANT">
@@ -118,20 +118,16 @@
 <p>As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a Service Request through <a href="https://portal.skyscapecloud.com/support/ivanti">https://portal.skyscapecloud.com/support/ivanti</a>. Alternatively, you can contact support by phone or email.</p>
 </div>
 <h3 id="which-apis-are-supported-by-the-platform">Which APIs are supported by the platform?</h3>
-<p>Our Cloud Storage supports an Elastic Cloud Storage S3-compatible API or the ATMOS RESTful API.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>
-</div>
-<p>Documentation and user manuals for <a href="cs-gs.html">supported API calls</a> are available from the Knowledge Centre.</p>
+<p>Our Cloud Storage supports an Elastic Cloud Storage S3-compatible API.</p>
+<p>Documentation for supported API calls is available in the <a href="cs-gs.html"><em>Getting Started Guide for Cloud Storage</em></a>.</p>
 <h3 id="how-frequently-can-i-back-up-data">How frequently can I back up data?</h3>
 <p>The frequency of data backup is defined and managed by your organisation administrator.</p>
 <p>UKCloud's object storage is however highly durable and can automatically recover from disk and node failure, negating the need for a backup.</p>
 <h3 id="what-reports-can-i-get-about-storage-usage">What reports can I get about storage usage? </h3>
 <p>We provide tools for monitoring used capacity and storage growth via the UKCloud Portal.</p>
 <h3 id="what-software-tools-are-provided">What software tools are provided? </h3>
-<p>UKCloud does not provide software tools for accessing the platform as storage is accessed via APIs, supporting S3 and Native ATMOS.</p>
-<p>You can however directly connect any S3 compatible tools to your storage (for example, S3 Browser and Cyberduck).</p>
+<p>UKCloud does not provide software tools for accessing the platform as storage is accessed via APIs, supporting S3.</p>
+<p>You can however directly connect any S3-compatible tools to your storage (for example, S3 Browser and Cyberduck).</p>
 <h3 id="how-do-i-create-new-cloud-storage-users">How do I create new Cloud Storage users?</h3>
 <p>You can create additional users in the UKCloud Portal. For more information, see <a href="cs-how-create-user.html"><em>How to create a new Cloud Storage user in the UKCloud Portal</em></a>.</p>
 <h2 id="support">Support</h2>
@@ -147,7 +143,7 @@
 <p>Cloud Storage fully supports standard REST API commands (Post, Put, Get, Delete, and Head).</p>
 <p>Cloud Storage's RESTful APIs support the use of HTML forms to create and update objects.</p>
 <h3 id="is-cloud-storage-object-synchronisation-for-example-protection-offered-at-each-vm-type-synchronous-or-asynchronous">Is Cloud Storage object synchronisation (for example, protection offered at each VM type) synchronous or asynchronous?</h3>
-<p>Protection is asynchronous - a single copy is created, and subsequent copies of the data are created when bandwidth allows.</p>
+<p>Protection is asynchronous; a single copy is created, and subsequent copies of the data are created when bandwidth allows.</p>
 <p>During busy periods, this protection can take longer to complete.</p>
 <h2 id="onboarding">Onboarding</h2>
 <h3 id="how-can-i-get-started-with-the-service">How can I get started with the service?</h3>
@@ -159,13 +155,17 @@
 <h3 id="what-is-the-smallest-unit-of-time-i-will-be-billed-for">What is the smallest unit of time I will be billed for?</h3>
 <p>Storage is billed on a per-GiB per-month basis, and is based on utilisation of the storage platform across the month. The minimum amount of time is one month.</p>
 <h3 id="how-is-my-storage-bill-calculated">How is my storage bill calculated?</h3>
-<p>Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. The charge for the total storage is based on a tiering basis as per the <a href="cs-sd.html"><em>Service Definition</em></a>. When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.</p>
+<p>Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. The charge for the total storage is based on a tiering basis as per the <a href="cs-sd.html"><em>Cloud Storage Service Definition</em></a>. When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.</p>
 <p>As an example, if you use 520TiB of storage in a month, your charges are calculated as:</p>
 <ul>
-<li>250TiB x £0.0200 = £5,000</li>
-<li>250TiB x £0.0180 = £4,500</li>
-<li>20TiB x £0.0162 = £324</li>
-<li>Total cost = £9,824</li>
+<li><p>250TiB x £0.0200 = £5,000</p>
+</li>
+<li><p>250TiB x £0.0180 = £4,500</p>
+</li>
+<li><p>20TiB x £0.0162 = £324</p>
+</li>
+<li><p>Total cost = £9,824</p>
+</li>
 </ul>
 <h3 id="how-can-i-view-billing-information">How can I view billing information?</h3>
 <p>Billing information is provided in an evidence file on the first working day of the month for your previous months spend.</p>
@@ -196,7 +196,7 @@
 <p>Ultimately, it is down to you to select which encryption methodology should be used and understand the possible risks involved.</p>
 <h3 id="can-systems-on-different-ukcloud-platforms-communicate-with-one-another">Can systems on different UKCloud platforms communicate with one another?</h3>
 <p>UKCloud's Cross Domain Security Zone allows you to use a customer-designed and managed Walled Garden to enable communication between platforms.</p>
-<p>For more information, see the <a href="../cdsz/cdsz-sd.html"><em>Cross Domain Security Zone Service Definition</em></a> on the Digital Marketplace.</p>
+<p>For more information, see the <a href="../cdsz/cdsz-sd.html"><em>Cross Domain Security Zone Service Definition</em></a>.</p>
 <h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
 <p>Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in <a href="../other/other-ref-promon.html"><em>Protective Monitoring from UKCloud</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
@@ -237,7 +237,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong></strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -245,12 +245,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -260,5 +267,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

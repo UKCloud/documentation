@@ -10,6 +10,8 @@
     href: ptl-how-enable-2fa.md
   - name: Raise and escalate support tickets
     href: ptl-how-raise-escalate-service-request.md
+  - name: Reset 2FA for a user account
+    href: ptl-how-reset-2fa.md
   - name: Reset your UKCloud Portal password or memorable word
     href: ptl-how-reset-password.md
   - name: Restrict access to the Portal
@@ -42,8 +44,6 @@
     href: ptl-ref-release-notes.md
   - name: Portal user access
     href: ptl-ref-user-access.md
-  - name: Resetting Two-Factor Authentication for SSO
-    href: ptl-ref-reset-2fa-sso.md
   - name: UKCloud Portal security settings
     href: ptl-ref-security-settings.md
 - name: Videos

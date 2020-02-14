@@ -59,9 +59,9 @@ Additionally, the service will also alert if a customer's journal exceeds 75% in
 
 Journaling Protection only works for VM's currently on the platform -- it will only capture data whilst a VM is turned on. If a VM is deleted in vCloud Director -- Journaling Protection will IMMEDIATELY delete the associated journal.
 
-### What SLA do you offer on snapshot success?
+### What SLA do you offer on Journaling Protection?
 
-UKCloud do not offer an SLA around the VMs protected by UKCloud's Journaling Protection solution. However, the status of journaled VM's is monitored continuously, and the UKCloud support team investigates all failures or service degradation.
+UKCloud do not offer an SLA around the VMs protected by UKCloud's Journaling Protection solution. However, the status of journaled VMs is monitored continuously, and the UKCloud support team investigates all failures or service degradation.
 
 ### Other
 
@@ -90,10 +90,6 @@ Customers of the Journaling Protection service are able to self-manage their pro
 UKCloud have disabled some areas of the self-service portal as they are for services we do not presently support. These include:
 
 - Backup to external systems. At present, customers are unable to export their journal to external backup targets (such as UKCloud Cloud Storage). We have identified a compliance issue with this solution which we are working to address. Until this is addressed, the feature will remain unavailable.
-
-Additionally, the following scenario cannot be supported:
-
-- Organisation network IP subnets can only be different in the protected and recovery sites if IP Pool or DHCP address assignment is used in both sites. If manually assigned IPs are used in the protected site, the configured recovery organisation network on the recovery site must have the same IP subnet as on the protected site.
 
 ## Alerting and reporting
 

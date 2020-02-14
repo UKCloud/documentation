@@ -117,13 +117,12 @@
 <h2 id="platform-management">Platform management</h2>
 <p>Users can access, manage and view their Cloud Storage service, in any of the following ways:</p>
 <ul>
-<li><strong>APIs.</strong> You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">EMC ECS Data Access Guide</a> for more information on the features of both APIs.</li>
-</ul>
+<li><p><strong>APIs.</strong> You can use the ECS S3-compatible API. Refer to the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">EMC ECS Data Access Guide</a> for more information on the features of the API.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>
 </div>
-<ul>
+</li>
 <li><p><strong>Command Line Interface (CLI).</strong> CLI tools enable access from the command line by translating commands into the relevant API calls.</p>
 </li>
 <li><p><strong>Storage Gateways.</strong> These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see <a href="cs-how-install-geodrive2-client.html"><em>How to install the GeoDrive Client 2.0</em></a>.</p>
@@ -242,7 +241,7 @@ notice of the Planned Maintenance.</p>
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong></strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -250,12 +249,19 @@ notice of the Planned Maintenance.</p>
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -265,5 +271,6 @@ notice of the Planned Maintenance.</p>
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

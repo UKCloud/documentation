@@ -3,8 +3,8 @@ title: How to publish application routes to multiple networks
 description: Describes the process and commands required to publish routes to different external networks available from an OpenShift cluster.
 services: openshift
 author: Steve Mulholland
-reviewer: George Smith
-lastreviewed: 20/11/2019 
+reviewer: Gareth Ellner
+lastreviewed: 29/01/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -23,7 +23,7 @@ This article provides instructions on how to make use of multiple external netwo
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to and a working knowledge of `oc`, the OpenShift command-line client (CLI). For more information, see OpenShift's [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html).
+To complete the steps in this guide you must have access to and a working knowledge of `oc`, the OpenShift command-line client (CLI). For more information, see OpenShift's [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html).
 
 
 ## High level overview
@@ -346,7 +346,7 @@ The above shows both the routes we've created in this demo now on `router-second
 
 ## Further reading
 
-OpenShift documentation on router sharding: https://docs.openshift.com/container-platform/3.9/architecture/networking/routes.html#router-sharding
+OpenShift documentation on router sharding: https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html#router-sharding
 
 OpenShift blog post on router sharding: https://blog.openshift.com/openshift-router-sharding-for-production-and-development-traffic/
 
