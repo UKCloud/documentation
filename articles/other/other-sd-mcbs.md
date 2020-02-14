@@ -1,7 +1,7 @@
 ---
 title: Multi-Cloud Backup Storage Service Definition
 description: Provides an overview of what is provided by the Multi-Cloud Backup Storage service
-services: mcbs
+services: other
 author: Sue Highmoor
 reviewer:
 lastreviewed: 02/07/2019
@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Multi-Cloud Backup Storage Service Definition
-toc_fullpath: Service Definition/mcbs-sd.md
-toc_mdlink: mcbs-sd.md
+toc_fullpath: Service Definition/other-sd-mcbs.md
+toc_mdlink: other-sd-mcbs.md
 ---
 
 # Multi-Cloud Backup Storage Service Definition

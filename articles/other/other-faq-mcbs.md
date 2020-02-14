@@ -1,16 +1,18 @@
 ---
 title: Multi-Cloud Backup Storage FAQs
 description: Frequently asked questions for Multi-Cloud Backup Storage
-services: mcbs
+services: other
 author: Steve Dixon
+reviewer:
+lastreviewed: 13/02/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Multi-Cloud Backup Storage FAQs
-toc_fullpath: FAQs/mcbs-faq.md
-toc_mdlink: mcbs-faq.md
+toc_fullpath: FAQs/other-faq-mcbs.md
+toc_mdlink: other-faq-mcbs.md
 ---
 
 # Multi-Cloud Backup Storage FAQs
@@ -29,7 +31,7 @@ DD Boost offers an extensive range of extensions via Dell EMC's Data Protection 
 
 Extension | Supported Applications | Further Information
 ----------|------------------------|--------------------
-Dell EMC Microsoft Application Agent | Exchange, SQL Server | <a href="https://www.emc.com/collateral/TechnicalDocument/docu91897.pdf" target="_blank">HERE</a>
+Dell EMC Microsoft Application Agent | Exchange, SQL Server | <a href="https://www.dellemc.com/en-us/collaterals/unauth/technical-guides-support-information/2019/09/docu95754.pdf" target="_blank">HERE</a>
 Dell EMC Data Domain&reg; Boost for OpenStorage | OpenStorage | <a href="https://www.emc.com/collateral/TechnicalDocument/docu85193.pdf" target="_blank">HERE</a>
 Dell EMC Data Domain Boost for Partner Integration | Dell NetVault Backup, Dell vRanger Pro, EMC Avamar, EMC Database application agent for DD Boost for Enterprise Applications and ProtectPoint, EMC Microsoft application agent for DD Boost for Enterprise Applications, EMC NetWorker, Hewlett-Packard HP Data Protector, Pivotal Greenplum Data Computing Appliance, Quest NetVault, Quest vRanger Pro, Veeam Backup and Replication, VMware vSphere Data Protection Advanced (VDPA)| <a href="https://www.emc.com/collateral/TechnicalDocument/docu85192.pdf" target="_blank">HERE</a>
 Dell EMC Oracle RMAN Agent | Oracle RMAN | <a href="https://www.emc.com/collateral/TechnicalDocument/docu86478.pdf" target="_blank">HERE</a>
