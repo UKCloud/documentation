@@ -1,26 +1,27 @@
 ---
-title: Getting Started Guide for Multi-Cloud Backup Storage
+title: How to connect to MCBS using Data Domain BoostFS
 description: Provides information to get up and running with Multi-Cloud Backup Storage
-services: mcbs
+services: other
 author: Steve Dixon
-
-toc_rootlink: Getting Started
+reviewer:
+lastreviewed: 13/02/2020
+toc_rootlink: How To
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Multi-Cloud Backup Storage
-toc_fullpath: Getting Started/mcbs-gs.md
-toc_mdlink: mcbs-gs.md
+toc_title: Connect to MCBS using Data Domain BoostFS
+toc_fullpath: How To/other-how-connect-mcbs.md
+toc_mdlink: other-how-connect-mcbs.md
 ---
 
-# Getting Started Guide for Multi-Cloud Backup Storage
+# How to connect to Multi-Cloud Backup Storage using Data Domain Boost Filesystem
 
 ## Overview
 
 The UKCloud Multi-Cloud Backup Storage (MCBS) service provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, utilising a technology that is common across backup products, and compatible with certain file systems, enabling open-source backup applications to utilise the backup service as a target. You can also use Multi-Cloud Backup Storage as a remote backup target for your on-premises data.
 
-UKCloud's Multi-Cloud Backup Storage is based on Dell EMC's Data Domain Boost&trade; (DD Boost) technology, which offers an extensive range of extensions for services such as Oracle, Microsoft SQL, Microsoft Exchange and a wide array of backup server applications to help support performance-optimised, off-site, multi-cloud backups. A full list of DD Boost extensions can be found in our [*Multi-Cloud Backup Storage FAQs*](mcbs-faq.md).
+UKCloud's Multi-Cloud Backup Storage is based on Dell EMC's Data Domain Boost&trade; (DD Boost) technology, which offers an extensive range of extensions for services such as Oracle, Microsoft SQL, Microsoft Exchange and a wide array of backup server applications to help support performance-optimised, off-site, multi-cloud backups. A full list of DD Boost extensions can be found in our [*Multi-Cloud Backup Storage FAQs*](other-faq-mcbs.md).
 
 ### Intended audience
 
@@ -44,7 +45,7 @@ Multi-Cloud Backup Storage:
 
 - Can replicate backups to give high levels of data durability and availability, eliminating the need for managing a second backup location
 
-You can find a full list of DD Boost extensions in our [*Multi-Cloud Backup Storage FAQs*](mcbs-faq.md).
+You can find a full list of DD Boost extensions in our [*Multi-Cloud Backup Storage FAQs*](other-faq-mcbs.md).
 
 ### Use cases
 

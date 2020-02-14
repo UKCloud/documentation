@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting Started Guide for Multi-Cloud Backup Storage </title>
+    <title>Multi-Cloud Backup Storage FAQs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Getting Started Guide for Multi-Cloud Backup Storage ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="title" content="Multi-Cloud Backup Storage FAQs ">
+    <meta name="generator" content="docfx 2.46.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/mcbs/mcbs-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-faq-mcbs.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,144 +91,79 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="getting-started-guide-for-multi-cloud-backup-storage">Getting Started Guide for Multi-Cloud Backup Storage</h1>
+<h1 id="multi-cloud-backup-storage-faqs">Multi-Cloud Backup Storage FAQs</h1>
 
-<h2 id="overview">Overview</h2>
+<h2 id="service">Service</h2>
+<h3 id="what-is-the-service">What is the service?</h3>
 <p>The UKCloud Multi-Cloud Backup Storage (MCBS) service provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, utilising a technology that is common across backup products, and compatible with certain file systems, enabling open-source backup applications to utilise the backup service as a target. You can also use Multi-Cloud Backup Storage as a remote backup target for your on-premises data.</p>
-<p>UKCloud's Multi-Cloud Backup Storage is based on Dell EMC's Data Domain Boost™ (DD Boost) technology, which offers an extensive range of extensions for services such as Oracle, Microsoft SQL, Microsoft Exchange and a wide array of backup server applications to help support performance-optimised, off-site, multi-cloud backups. A full list of DD Boost extensions can be found in our <a href="mcbs-faq.html"><em>Multi-Cloud Backup Storage FAQs</em></a>.</p>
-<h3 id="intended-audience">Intended audience</h3>
-<p>This document is for backup administrators who:</p>
-<ul>
-<li><p>Are comfortable using an API or command line tools</p>
-</li>
-<li><p>Have signed-up for UKCloud's Multi-Cloud Backup Storage service</p>
-</li>
-<li><p>Have been issued their Multi-Cloud Backup Storage credentials</p>
-</li>
-</ul>
-<h2 id="multi-cloud-backup-storage">Multi-Cloud Backup Storage</h2>
-<p>Multi-Cloud Backup Storage:</p>
-<ul>
-<li><p>Lets you pay for what you use, scaling indefinitely and on demand, removing the complexity of capacity management</p>
-</li>
-<li><p>Natively enables deduplication, reducing the cost and management of on-premises storage solutions</p>
-</li>
-<li><p>Provides easy access to backup storage from any backup application via DD Boost and BoostFS; using Boost protocol vastly simplifies the integration of backup applications and Boost-aware databases with a cloud-based backup target by removing the need to rely on file servers or cloud storage gateways</p>
-</li>
-<li><p>Can replicate backups to give high levels of data durability and availability, eliminating the need for managing a second backup location</p>
-</li>
-</ul>
-<p>You can find a full list of DD Boost extensions in our <a href="mcbs-faq.html"><em>Multi-Cloud Backup Storage FAQs</em></a>.</p>
-<h3 id="use-cases">Use cases</h3>
-<p>The low cost of Multi-Cloud Backup Storage per GB, as well as its backup-optimised performance and almost unlimited scalability, means there's a large variety of use cases for it. For example, it's ideal for data archives, backups, databases and log files because of its:</p>
-<ul>
-<li><p>Lower overhead of managing backup infrastructure</p>
-</li>
-<li><p>Lower Recovery Time Objective (RTO) for backup recovery through more granular or application aware backup applications</p>
-</li>
-<li><p>Quicker database recovery, directly from backup target into database</p>
-</li>
-<li><p>Greater control over backups using your own self-service backup applications</p>
-</li>
-</ul>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>When you request your Multi-Cloud Backup Storage service, UKCloud Support creates the following within your account:</p>
-<ul>
-<li><p>Storage unit (a Multi-Cloud Backup Storage enabled storage pool)</p>
-</li>
-<li><p>API endpoint (see below)</p>
-</li>
-<li><p>API username</p>
-</li>
-<li><p>API key (password)</p>
-</li>
-</ul>
-<p>These details form the structure of the personalised credentials you'll need to access your Multi-Cloud Backup Storage service.</p>
+<p>UKCloud's Multi-Cloud Backup Storage is based on Dell EMC's Data Domain Boost™ (DD Boost) software, which provides advanced integration between leading backup and enterprise applications and Data Domain systems. With DD Boost, parts of the deduplication process are distributed to the backup server or application server, enabling client-side deduplication so only unique data segments are sent to the Data Domain system. This enables 50% faster backups and reduces network bandwidth requirements by 80 to 98%. DD Boost provides advanced load balancing and failover, which further improves throughput and resiliency. In addition, Data Domain systems can grant secure access to multiple DD Boost users per system for data protection-as-a-service in private and public cloud deployments. Providing DD Boost users secure access to their data lays the foundation for logical data isolation enabling secure multi-tenancy on a Data Domain system in DD Boost environments.</p>
+<p>DD Boost offers an extensive range of extensions via Dell EMC's Data Protection Suite for services such as Oracle, Microsoft SQL, Microsoft Exchange and a wide array of backup server applications to help support performance-optimised, off-site, multi-cloud backups.</p>
+<h2 id="what-data-protection-suite-extensions-are-available">What Data Protection Suite extensions are available?</h2>
 <table>
 <thead>
 <tr>
-<th> </th>
-<th>MCBS API endpoint</th>
+<th>Extension</th>
+<th>Supported Applications</th>
+<th>Further Information</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Corsham (Assured)</strong></td>
-<td></td>
+<td>Dell EMC Microsoft Application Agent</td>
+<td>Exchange, SQL Server</td>
+<td><a href="https://www.dellemc.com/en-us/collaterals/unauth/technical-guides-support-information/2019/09/docu95754.pdf" target="_blank">HERE</a></td>
 </tr>
 <tr>
-<td>Internet</td>
-<td>TBC - Q2'19</td>
+<td>Dell EMC Data Domain® Boost for OpenStorage</td>
+<td>OpenStorage</td>
+<td><a href="https://www.emc.com/collateral/TechnicalDocument/docu85193.pdf" target="_blank">HERE</a></td>
 </tr>
 <tr>
-<td>PSN Assured</td>
-<td>TBC</td>
+<td>Dell EMC Data Domain Boost for Partner Integration</td>
+<td>Dell NetVault Backup, Dell vRanger Pro, EMC Avamar, EMC Database application agent for DD Boost for Enterprise Applications and ProtectPoint, EMC Microsoft application agent for DD Boost for Enterprise Applications, EMC NetWorker, Hewlett-Packard HP Data Protector, Pivotal Greenplum Data Computing Appliance, Quest NetVault, Quest vRanger Pro, Veeam Backup and Replication, VMware vSphere Data Protection Advanced (VDPA)</td>
+<td><a href="https://www.emc.com/collateral/TechnicalDocument/docu85192.pdf" target="_blank">HERE</a></td>
 </tr>
 <tr>
-<td>HSCN</td>
-<td>TBC</td>
-</tr>
-<tr>
-<td><strong>Farnborough (Assured)</strong></td>
-<td></td>
-</tr>
-<tr>
-<td>Internet</td>
-<td><code>mcbs.frn00013.ukcloud.com</code></td>
-</tr>
-<tr>
-<td>PSN Assured</td>
-<td>TBC</td>
-</tr>
-<tr>
-<td>HSCN</td>
-<td>TBC</td>
+<td>Dell EMC Oracle RMAN Agent</td>
+<td>Oracle RMAN</td>
+<td><a href="https://www.emc.com/collateral/TechnicalDocument/docu86478.pdf" target="_blank">HERE</a></td>
 </tr>
 </tbody>
 </table>
-<p>Contact UKCloud Support if you are unsure which endpoint to use.</p>
-<h2 id="connecting-to-multi-cloud-backup-storage-using-data-domain-boost-filesystem-boostfs-using-microsoft-windows">Connecting to Multi-Cloud Backup Storage using Data Domain Boost Filesystem (BoostFS) using Microsoft Windows</h2>
-<p>For authentication we use local accounts, so you need to create a lockbox to store the password and key values for the account. Details on how to create your configuration file, lockbox and mount your storage follow.</p>
-<h3 id="create-configuration-file">Create configuration file</h3>
-<p><code>boostfs.conf</code> contains static configuration that can be used to help connect to your service, key items to configure:</p>
-<pre><code class="lang-none">[global]
-# Data Domain Hostname or IP address
-data-domain-system=mcbs.frn00013.ukcloud.com` (assumes connection to Farnborough Internet API endpoint)
-
-# Storage Unit
-storage-unit={customer storage unit}` (Name of the storage unit as provided in your MCBS credentials)
-
-# Lockbox path (default: C:\BoostFS\Lockbox\boostfs.lockbox)
-# lockbox-path=C:\lockbox-name
-
-[\\mcbs.frn00013.ukcloud.com\{customer storage unit}]
-# Drive Letter specifies the Windows drive to map to this UNC mount point
-drive-letter=G:
-</code></pre>
-<h3 id="create-lockbox">Create lockbox</h3>
-<ol>
-<li><p>Provide the username and storage unit name for access:</p>
-<p><code>C:\Program Files\BoostFS&gt; boostfs.exe lockbox set -u {username} -d mcbs.frn00013.ukcloud.com -s {customer storage unit} -l C:\BoostFS\LockBox\boostfs.lockbox</code></p>
-</li>
-<li><p>Enter your API key (password).</p>
-</li>
-<li><p>Once created you can use this to mount a drive or folder for use with BoostFS.</p>
-</li>
-</ol>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We provide your API key, {username}, {customer storage unit} and API endpoint as part of your MCBS credentials. Contact UKCloud Support if you're unsure of any of these details.</p>
-</div>
-<h3 id="mount-storage-to-local-machine">Mount storage to local machine</h3>
-<p><code>boostfs.exe mount \\mcbs.frn00013.ukcloud.com\{customer storage unit}</code></p>
-<p>This will attempt to mount the volume on the drive G as per the configuration.</p>
-<h2 id="further-data-domain-boost-filesystem-boostfs-information">Further Data Domain Boost Filesystem (BoostFS) information</h2>
+<h2 id="what-is-data-domain-boost-filesystem-boostfs">What is Data Domain Boost Filesystem (BoostFS)?</h2>
+<p>Should an explicit Data Protection Suite extension not be available for your specific application or workload, Data Domain offers Boost Filesystem (BoostFS). This provides a general file-system interface from within Microsoft Windows or Linux to the DD Boost library, allowing standard backup applications to take advantage of DD Boost features.</p>
+<h3 id="what-are-the-advantages-of-boostfs">What are the advantages of BoostFS?</h3>
+<p>By leveraging the DD Boost technology, BoostFS:</p>
 <ul>
-<li><p>For Microsoft Windows, see the Dell EMC BoostFS for Windows Configuration Guide HERE</p>
+<li><p>Helps reduce bandwidth</p>
 </li>
-<li><p>For Linux, see the Dell EMC BoostFS for Linux Configuration Guide HERE</p>
+<li><p>Can improve backup-times</p>
+</li>
+<li><p>Offers load-balancing</p>
+</li>
+<li><p>Allows in-flight encryption</p>
+</li>
+<li><p>Supports the Data Domain multi-tenancy feature set</p>
 </li>
 </ul>
+<p>As a file server system implementation, the BoostFS workflow is similar to CIFS but also leverages the DD Boost protocol. In addition, BoostFS improves backup times compared to CIFS and various copy-based solutions.</p>
+<p>BoostFS supports single-node Data Domain systems, high-availability (HA) systems, Extended Retention systems, Data Domain Virtual Edition, and Extended Distance Protection.</p>
+<h3 id="which-applications-support-boostfs">Which applications support BoostFS?</h3>
+<p>As of BoostFS 1.3:</p>
+<ul>
+<li><p>Commvault Simpana versions 10 and 11</p>
+</li>
+<li><p>Microsoft SQL Server 2012 and 2016 (Windows only)</p>
+</li>
+<li><p>MySQL Community 5.6. and 5.7</p>
+</li>
+<li><p>MySQL Enterprise Manager 5.6 and 5.7</p>
+</li>
+<li><p>MongoDB Community 2.6, 3.0, and 3.2</p>
+</li>
+</ul>
+<h3 id="how-many-copies-of-the-data-are-made-and-where-are-they-stored">How many copies of the data are made, and where are they stored?</h3>
+<p>Three copies of the data can be stored in the opposite site as to the original data. For example, if the data is stored in the Farnborough site, then the copies will be stored in the Corsham site. This increases the resiliency of the data as the sites are  100km apart.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
