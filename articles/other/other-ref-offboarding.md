@@ -3,8 +3,8 @@ title: Terminating your UKCloud services
 description: Provides useful information for offboarding UKCloud services, including key customer and UKCloud responsibilities
 services: other
 author: Sue Highmoor
-reviewer:
-lastreviewed: 06/12/2018 16:00:29
+reviewer: Sue Highmoor
+lastreviewed: 14/02/2020
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -20,7 +20,7 @@ toc_mdlink: other-ref-offboarding.md
 
 ## Overview
 
-UKCloud is easy to adopt, easy to use and easy to leave, so our intention is to make the service termination process, sometimes referred to as offboarding, as simple as possible.
+UKCloud is easy to adopt, easy to use and easy to leave, so our intention is to make the service termination process, sometimes referred to as offboarding or deprovisioning, as simple as possible.
 
 This article clearly outlines customer and UKCloud responsibilities for terminating your UKCloud services.
 
@@ -197,6 +197,21 @@ Customer responsibilities | UKCloud responsibilities
 Customer-provided private networks | External network connections
 Customer-provided IP ranges | Allocated IP ranges
 Customer co-lo'd kit | Private VLANs/VRFs
+
+#### [Cloud Enablement](#tab/tabid-16)
+
+Customer responsibilities | UKCloud responsibilities
+--------------------------|-------------------------
+Remove customer equipment from Cloud Enablement bays | Escort customer to remove equipment from Cloud Enablement bays
+&nbsp; | Remove physical and logical networking
+
+#### [Big Cloud Enablement](#tab/tabid-17)
+
+Customer responsibilities | UKCloud responsibilities
+--------------------------|-------------------------
+Remove customer equipment from Big Cloud Enablement racks | Escort customer to remove equipment from Big Cloud Enablement racks
+&nbsp; | Remove logical networking config
+&nbsp; | Remove physical networking if UKCloud-provided
 
 ***
 
