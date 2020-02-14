@@ -40,8 +40,8 @@ This article is designed to provide you with a top level comparison for our main
 **Cross Domain Security Zone**         | No         | £500, 1 month                             | 5 days          | 30 days
 **Secure Remote Access**               | No         | Monthly, £350                             | 5 days          | 30 days
 **Cloud GPU**                          | No         | 1 hour, £0.08                             | 10 days         | 30 days
-**Cloud Enablement**                   | VPN: £2,000 Server/storage: Depends on solution | 1 month | Depends on solution | 30 days
-**Big Cloud Enablement**               | 12 month: £5,000 per rack 36 month: £0 per rack | 12 months | Depends on solution | 30 days (termination cost: Remainder of contract)
+**Cloud Enablement**                   | VPN: £2,000, Server/storage: Depends on solution | 1 month | Depends on solution | 30 days
+**Big Cloud Enablement**               | 12 month: £5,000 per rack, 36 month: £0 per rack | 12 months | Depends on solution | 30 days (termination cost: Remainder of contract)
 
 ## [VM sizing, billing and trials](#tab/tabid-2)
 
