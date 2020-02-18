@@ -1856,7 +1856,7 @@ v1
 Parameter name | Description | Type | Mandatory (Default)
 ---------------|-------------|------|--------------------
 vmType | The type of VM workloads used in the VDC</br>Valid values:</br>- POWER</br>- ESSENTIAL</br>- PRIORITY | String | Y
-name | The name of the VDC<br>The name can be up to 32 characters long and can include any character except + | String | Y
+name | The name of the VDC<br>The name can be up to 32 characters long and can include any alphanumeric character | String | Y
 
 #### URI parameters
 
