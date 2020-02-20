@@ -229,7 +229,9 @@ The answer to this depends on which of UKCloud's OpenStack services you are usin
 | Region              | OpenStack version                      | LBaaS supported? |
 |---------------------|----------------------------------------|------------------|
 | COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as Red Hat's Newton release does not support native Key Management as a Service (KMaaS) to underpin encryption  |
-| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes |
+| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* |
+
+<i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i>
 
 ### What type of volume encryption is offered?
 
