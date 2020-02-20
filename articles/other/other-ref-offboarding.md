@@ -7,7 +7,7 @@ reviewer: Sue Highmoor
 lastreviewed: 14/02/2020
 
 toc_rootlink: Reference
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -32,7 +32,7 @@ The notice required to terminate UKCloud services varies depending on the servic
 
 You can request the termination of one or more services within your account. In this case, the termination is restricted to the chargeable items within that service (for example, a VMware environment within a customer account).
 
-If you want to terminate your whole account with UKCloud, you must raise separate termination requests for each service associated with your customer contract. The final stage of the termination of a complete customer account will be the decommissioning of the last UKCloud Portal user, decommissioning of all customer reports and termination of the ability to access customer ticket details and service reports through the Portal.
+If you want to terminate your whole account with UKCloud, you must raise separate termination requests for each service associated with your customer contract. The final stage of the termination of a complete customer account will be the decommissioning of the last UKCloud Portal user, decommissioning of all customer reports and termination of the ability to access customer ticket details through the Portal.
 
 ## Customer responsibilities
 
