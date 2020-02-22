@@ -36,12 +36,7 @@ function getViewSourceHref(item, gitContribute, gitUrlPattern) {
 }
 
 function getImproveTheDocHref(item, gitContribute, gitUrlPattern) {
-    if (!item) return '';
-    if (!item.documentation || !item.documentation.remote) {
-        return getNewFileUrl(item, gitContribute, gitUrlPattern);
-    } else {
-        return getRemoteUrl(item.documentation.remote, item.documentation.startLine + 1, gitContribute, gitUrlPattern);
-    }
+    return "https://github.com/UKCloud/documentation/blob/master/" + item.path
 }
 
 function processSeeAlso(item) {
