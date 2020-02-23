@@ -1,46 +1,102 @@
-- name: About
-  items:
-  - name: UKCloud for Oracle Software
-    href: orcl-home.md
-- name: FAQs
-  items:
-  - name: UKCloud for Oracle Software FAQs
-    href: orcl-faq.md
-- name: Getting Started
-  items:
-  - name: UKCloud for Oracle Software
-    href: orcl-gs.md
-- name: How To
-  items:
-  - name: Build an Oracle virtual machine
-    href: orcl-how-build-vm.md
-  - name: Enable high availability for your Oracle VMs
-    href: orcl-how-enable-ha.md
-- name: Reference
-  items:
-  - name: Best practice guidelines for Oracle Database backup
-    href: orcl-ref-db-backup.md
-  - name: Compatibility with Solaris and AIX
-    href: orcl-ref-solaris-aix.md
-  - name: Oracle cloud self-service functionality
-    href: orcl-ref-bug-self-service.md
-  - name: Oracle licensing on the UKCloud platform
-    href: orcl-ref-licensing.md
-  - name: RAC on UKCloud for Oracle Software
-    href: orcl-ref-rac.md
-  - name: UKCloud for Oracle Software templates
-    href: orcl-ref-templates.md
-  - name: VM compatibility with UKCloud for Oracle Software
-    href: orcl-ref-vm-compatibility.md
-- name: Service Definition
-  items:
-  - name: UKCloud for Oracle Software Service Definition
-    href: orcl-sd.md
-- name: Service Scope
-  items:
-  - name: UKCloud for Oracle Software Service Scope
-    href: orcl-sco.md
-- name: Videos
-  items:
-  - name: OEM Cloud Control console overview
-    href: orcl-vid-overview.md
+[
+  {
+    "name": "About",
+    "items": [
+      {
+        "name": "UKCloud for Oracle Software",
+        "href": "orcl-home.md"
+      }
+    ]
+  },
+  {
+    "name": "FAQs",
+    "items": [
+      {
+        "name": "UKCloud for Oracle Software FAQs",
+        "href": "orcl-faq.md"
+      }
+    ]
+  },
+  {
+    "name": "Getting Started",
+    "items": [
+      {
+        "name": "UKCloud for Oracle Software",
+        "href": "orcl-gs.md"
+      }
+    ]
+  },
+  {
+    "name": "How To",
+    "items": [
+      {
+        "name": "Build an Oracle virtual machine",
+        "href": "orcl-how-build-vm.md"
+      },
+      {
+        "name": "Enable high availability for your Oracle VMs",
+        "href": "orcl-how-enable-ha.md"
+      }
+    ]
+  },
+  {
+    "name": "Reference",
+    "items": [
+      {
+        "name": "Best practice guidelines for Oracle Database backup",
+        "href": "orcl-ref-db-backup.md"
+      },
+      {
+        "name": "Compatibility with Solaris and AIX",
+        "href": "orcl-ref-solaris-aix.md"
+      },
+      {
+        "name": "Oracle cloud self-service functionality",
+        "href": "orcl-ref-bug-self-service.md"
+      },
+      {
+        "name": "Oracle licensing on the UKCloud platform",
+        "href": "orcl-ref-licensing.md"
+      },
+      {
+        "name": "RAC on UKCloud for Oracle Software",
+        "href": "orcl-ref-rac.md"
+      },
+      {
+        "name": "UKCloud for Oracle Software templates",
+        "href": "orcl-ref-templates.md"
+      },
+      {
+        "name": "VM compatibility with UKCloud for Oracle Software",
+        "href": "orcl-ref-vm-compatibility.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Definition",
+    "items": [
+      {
+        "name": "UKCloud for Oracle Software Service Definition",
+        "href": "orcl-sd.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Scope",
+    "items": [
+      {
+        "name": "UKCloud for Oracle Software Service Scope",
+        "href": "orcl-sco.md"
+      }
+    ]
+  },
+  {
+    "name": "Videos",
+    "items": [
+      {
+        "name": "OEM Cloud Control console overview",
+        "href": "orcl-vid-overview.md"
+      }
+    ]
+  }
+]

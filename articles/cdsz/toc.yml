@@ -1,26 +1,60 @@
-- name: FAQs
-  items:
-  - name: Cross Domain Security Zone FAQs
-    href: cdsz-faq.md
-- name: Getting Started
-  items:
-  - name: Cross Domain Security Zone
-    href: cdsz-gs-walled-garden.md
-- name: How To
-  items:
-  - name: Access UKCloud services from Walled Garden and Secure Remote Access
-    href: cdsz-how-access-services-walled-garden.md
-- name: Reference
-  items:
-  - name: Cross Domain Security Zone Blueprint
-    href: cdsz-ref-bp-overview.md
-  - name: UKCloud Cross Domain Security Zone application process
-    href: cdsz-ref-application-process.md
-- name: Service Definition
-  items:
-  - name: Cross Domain Security Zone Service Definition
-    href: cdsz-sd.md
-- name: Service Scope
-  items:
-  - name: Cross Domain Security Zone Service Scope
-    href: cdsz-sco.md
+[
+  {
+    "name": "FAQs",
+    "items": [
+      {
+        "name": "Cross Domain Security Zone FAQs",
+        "href": "cdsz-faq.md"
+      }
+    ]
+  },
+  {
+    "name": "Getting Started",
+    "items": [
+      {
+        "name": "Cross Domain Security Zone",
+        "href": "cdsz-gs-walled-garden.md"
+      }
+    ]
+  },
+  {
+    "name": "How To",
+    "items": [
+      {
+        "name": "Access UKCloud services from Walled Garden and Secure Remote Access",
+        "href": "cdsz-how-access-services-walled-garden.md"
+      }
+    ]
+  },
+  {
+    "name": "Reference",
+    "items": [
+      {
+        "name": "Cross Domain Security Zone Blueprint",
+        "href": "cdsz-ref-bp-overview.md"
+      },
+      {
+        "name": "UKCloud Cross Domain Security Zone application process",
+        "href": "cdsz-ref-application-process.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Definition",
+    "items": [
+      {
+        "name": "Cross Domain Security Zone Service Definition",
+        "href": "cdsz-sd.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Scope",
+    "items": [
+      {
+        "name": "Cross Domain Security Zone Service Scope",
+        "href": "cdsz-sco.md"
+      }
+    ]
+  }
+]

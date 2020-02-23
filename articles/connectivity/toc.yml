@@ -1,68 +1,143 @@
-- name: FAQs
-  items:
-  - name: Bandwidth monitoring FAQs
-    href: conn-faq-bandwidth-monitoring.md
-  - name: DDoS mitigation service FAQs
-    href: conn-faq-ddos.md
-  - name: Emergency Services Network FAQs
-    href: conn-faq-esn.md
-  - name: General connectivity FAQs
-    href: conn-faq.md
-  - name: HSCN connectivity FAQs
-    href: conn-faq-hscn.md
-  - name: HybridConnect FAQs
-    href: conn-faq-hybridconnect.md
-  - name: Janet connectivity FAQs
-    href: conn-faq-janet.md
-  - name: N3 connectivity FAQs
-    href: conn-faq-n3.md
-  - name: PSN connectivity FAQs
-    href: conn-faq-psn.md
-  - name: PSN for Policing and enhanced regime FAQs
-    href: conn-faq-psn-police.md
-  - name: SiteProtect Advanced DDoS Mitigation FAQs
-    href: conn-faq-app-ddos.md
-  - name: UltraDNS FAQs
-    href: conn-faq-glb.md
-- name: How To
-  items:
-  - name: Migrate from N3 to HSCN
-    href: conn-how-migrate-n3-hscn.md
-- name: Reference
-  items:
-  - name: DDoS mitigation causing VPN failures and slow applications
-    href: conn-ref-ddos-mitigation.md
-  - name: HSCN and SSL certificates
-    href: conn-ref-hscn-ssl.md
-  - name: HybridConnect vs CrownConnect
-    href: conn-ref-hybrid-crown-connect.md
-  - name: Internet - permitted standard ports in regions 1 and 2
-    href: conn-ref-internet-permitted-ports.md
-  - name: Internet access to the Elevated OFFICIAL security domain
-    href: conn-ref-internet-access-elevated.md
-  - name: Networks fair use policy
-    href: conn-ref-networks-fair-use.md
-  - name: Protection for Distributed Denial of Service (DDoS) attacks
-    href: conn-ref-ddos-protection.md
-  - name: PSN Assured - permitted standard ports
-    href: conn-ref-psn-permitted-ports.md
-  - name: PSN connection compliance
-    href: conn-ref-psn-connection.md
-  - name: PSN flattening
-    href: conn-ref-psn-flattening.md
-  - name: Requesting Janet connectivity
-    href: conn-ref-janet.md
-  - name: Telecommunications Service Provider engagement
-    href: conn-ref-telco-enagagement.md
-  - name: Understanding PSN core services
-    href: conn-ref-psn-core-services.md
-- name: Service Scope
-  items:
-  - name: SiteProtect Advanced DDoS Mitigation Service Scope
-    href: conn-sco-app-ddos.md
-  - name: UltraDNS Service Scope
-    href: conn-sco-glb.md
-- name: Troubleshooting
-  items:
-  - name: Network Adaptor Issue
-    href: conn-ref-network-adaptor.md
+[
+  {
+    "name": "FAQs",
+    "items": [
+      {
+        "name": "Bandwidth monitoring FAQs",
+        "href": "conn-faq-bandwidth-monitoring.md"
+      },
+      {
+        "name": "DDoS mitigation service FAQs",
+        "href": "conn-faq-ddos.md"
+      },
+      {
+        "name": "Emergency Services Network FAQs",
+        "href": "conn-faq-esn.md"
+      },
+      {
+        "name": "General connectivity FAQs",
+        "href": "conn-faq.md"
+      },
+      {
+        "name": "HSCN connectivity FAQs",
+        "href": "conn-faq-hscn.md"
+      },
+      {
+        "name": "HybridConnect FAQs",
+        "href": "conn-faq-hybridconnect.md"
+      },
+      {
+        "name": "Janet connectivity FAQs",
+        "href": "conn-faq-janet.md"
+      },
+      {
+        "name": "N3 connectivity FAQs",
+        "href": "conn-faq-n3.md"
+      },
+      {
+        "name": "PSN connectivity FAQs",
+        "href": "conn-faq-psn.md"
+      },
+      {
+        "name": "PSN for Policing and enhanced regime FAQs",
+        "href": "conn-faq-psn-police.md"
+      },
+      {
+        "name": "SiteProtect Advanced DDoS Mitigation FAQs",
+        "href": "conn-faq-app-ddos.md"
+      },
+      {
+        "name": "UltraDNS FAQs",
+        "href": "conn-faq-glb.md"
+      }
+    ]
+  },
+  {
+    "name": "How To",
+    "items": [
+      {
+        "name": "Migrate from N3 to HSCN",
+        "href": "conn-how-migrate-n3-hscn.md"
+      }
+    ]
+  },
+  {
+    "name": "Reference",
+    "items": [
+      {
+        "name": "DDoS mitigation causing VPN failures and slow applications",
+        "href": "conn-ref-ddos-mitigation.md"
+      },
+      {
+        "name": "HSCN and SSL certificates",
+        "href": "conn-ref-hscn-ssl.md"
+      },
+      {
+        "name": "HybridConnect vs CrownConnect",
+        "href": "conn-ref-hybrid-crown-connect.md"
+      },
+      {
+        "name": "Internet - permitted standard ports in regions 1 and 2",
+        "href": "conn-ref-internet-permitted-ports.md"
+      },
+      {
+        "name": "Internet access to the Elevated OFFICIAL security domain",
+        "href": "conn-ref-internet-access-elevated.md"
+      },
+      {
+        "name": "Networks fair use policy",
+        "href": "conn-ref-networks-fair-use.md"
+      },
+      {
+        "name": "PSN Assured - permitted standard ports",
+        "href": "conn-ref-psn-permitted-ports.md"
+      },
+      {
+        "name": "PSN connection compliance",
+        "href": "conn-ref-psn-connection.md"
+      },
+      {
+        "name": "PSN flattening",
+        "href": "conn-ref-psn-flattening.md"
+      },
+      {
+        "name": "Protection for Distributed Denial of Service (DDoS) attacks",
+        "href": "conn-ref-ddos-protection.md"
+      },
+      {
+        "name": "Requesting Janet connectivity",
+        "href": "conn-ref-janet.md"
+      },
+      {
+        "name": "Telecommunications Service Provider engagement",
+        "href": "conn-ref-telco-enagagement.md"
+      },
+      {
+        "name": "Understanding PSN core services",
+        "href": "conn-ref-psn-core-services.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Scope",
+    "items": [
+      {
+        "name": "SiteProtect Advanced DDoS Mitigation Service Scope",
+        "href": "conn-sco-app-ddos.md"
+      },
+      {
+        "name": "UltraDNS Service Scope",
+        "href": "conn-sco-glb.md"
+      }
+    ]
+  },
+  {
+    "name": "Troubleshooting",
+    "items": [
+      {
+        "name": "Network Adaptor Issue",
+        "href": "conn-ref-network-adaptor.md"
+      }
+    ]
+  }
+]

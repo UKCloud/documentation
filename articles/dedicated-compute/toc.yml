@@ -1,8 +1,20 @@
-- name: Service Definition
-  items:
-  - name: UKCloud Dedicated Compute v2 Service Definition
-    href: dc-sd.md
-- name: Service Scope
-  items:
-  - name: Dedicated Compute v2 Service Scope
-    href: dc-sco.md
+[
+  {
+    "name": "Service Definition",
+    "items": [
+      {
+        "name": "UKCloud Dedicated Compute v2 Service Definition",
+        "href": "dc-sd.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Scope",
+    "items": [
+      {
+        "name": "Dedicated Compute v2 Service Scope",
+        "href": "dc-sco.md"
+      }
+    ]
+  }
+]

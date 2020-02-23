@@ -1,20 +1,47 @@
-- name: FAQs
-  items:
-  - name: Disaster Recovery as a Service FAQs
-    href: draas-faq.md
-- name: Getting Started
-  items:
-  - name: Disaster Recovery as a Service
-    href: draas-gs.md
-- name: Reference
-  items:
-  - name: Troubleshooting Disaster Recovery to the Cloud
-    href: draas-ref-troubleshooting.md
-- name: Service Definition
-  items:
-  - name: Disaster Recovery as a Service Service Definition
-    href: draas-sd.md
-- name: Service Scope
-  items:
-  - name: Disaster Recovery as a Service Service Scope
-    href: draas-sco.md
+[
+  {
+    "name": "FAQs",
+    "items": [
+      {
+        "name": "Disaster Recovery as a Service FAQs",
+        "href": "draas-faq.md"
+      }
+    ]
+  },
+  {
+    "name": "Getting Started",
+    "items": [
+      {
+        "name": "Disaster Recovery as a Service",
+        "href": "draas-gs.md"
+      }
+    ]
+  },
+  {
+    "name": "Reference",
+    "items": [
+      {
+        "name": "Troubleshooting Disaster Recovery to the Cloud",
+        "href": "draas-ref-troubleshooting.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Definition",
+    "items": [
+      {
+        "name": "Disaster Recovery as a Service Service Definition",
+        "href": "draas-sd.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Scope",
+    "items": [
+      {
+        "name": "Disaster Recovery as a Service Service Scope",
+        "href": "draas-sco.md"
+      }
+    ]
+  }
+]

@@ -1,4 +1,11 @@
-- name: Service Definition
-  items:
-  - name: UKCloud Transition Services Service Definition
-    href: trans-sd.md
+[
+  {
+    "name": "Service Definition",
+    "items": [
+      {
+        "name": "UKCloud Transition Services Service Definition",
+        "href": "trans-sd.md"
+      }
+    ]
+  }
+]

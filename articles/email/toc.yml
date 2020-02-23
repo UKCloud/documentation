@@ -1,22 +1,50 @@
-- name: FAQs
-  items:
-  - name: Email and Collaboration as a Service FAQs
-    href: email-faq.md
-- name: Getting Started
-  items:
-  - name: Email and Collaboration as a Service
-    href: email-gs.md
-- name: How To
-  items:
-  - name: Set up Email and Collaboration on an iPhone or iPad
-    href: email-how-setup-iphone.md
-  - name: Set up Email on Android, Windows or Blackberry
-    href: email-how-setup-android.md
-  - name: Use UKCloud's email service with your application
-    href: email-how-use-with-app.md
-- name: Reference
-  items:
-  - name: Fair use policy
-    href: email-ref-fair-use.md
-  - name: Upgrade to Email and Collaboration as a Service
-    href: email-ref-upgrade-to-86.md
+[
+  {
+    "name": "FAQs",
+    "items": [
+      {
+        "name": "Email and Collaboration as a Service FAQs",
+        "href": "email-faq.md"
+      }
+    ]
+  },
+  {
+    "name": "Getting Started",
+    "items": [
+      {
+        "name": "Email and Collaboration as a Service",
+        "href": "email-gs.md"
+      }
+    ]
+  },
+  {
+    "name": "How To",
+    "items": [
+      {
+        "name": "Set up Email and Collaboration on an iPhone or iPad",
+        "href": "email-how-setup-iphone.md"
+      },
+      {
+        "name": "Set up Email on Android, Windows or Blackberry",
+        "href": "email-how-setup-android.md"
+      },
+      {
+        "name": "Use UKCloud's email service with your application",
+        "href": "email-how-use-with-app.md"
+      }
+    ]
+  },
+  {
+    "name": "Reference",
+    "items": [
+      {
+        "name": "Fair use policy",
+        "href": "email-ref-fair-use.md"
+      },
+      {
+        "name": "Upgrade to Email and Collaboration as a Service",
+        "href": "email-ref-upgrade-to-86.md"
+      }
+    ]
+  }
+]

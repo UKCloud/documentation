@@ -1,8 +1,20 @@
-- name: FAQs
-  items:
-  - name: Cloud GPU FAQs
-    href: gpu-faq.md
-- name: Service Scope
-  items:
-  - name: Cloud GPU Service Scope
-    href: gpu-sco.md
+[
+  {
+    "name": "FAQs",
+    "items": [
+      {
+        "name": "Cloud GPU FAQs",
+        "href": "gpu-faq.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Scope",
+    "items": [
+      {
+        "name": "Cloud GPU Service Scope",
+        "href": "gpu-sco.md"
+      }
+    ]
+  }
+]

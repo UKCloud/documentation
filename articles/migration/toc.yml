@@ -1,12 +1,29 @@
-- name: How To
-  items:
-  - name: Migrate your workloads to the UKCloud platform
-    href: migr-how-zerto-migrate-to-ukcloud.md
-- name: Service Definition
-  items:
-  - name: Migration to the Cloud Service Definition
-    href: migr-sd.md
-- name: Troubleshooting
-  items:
-  - name: Troubleshooting Migration to the Cloud
-    href: migr-ref-troubleshooting.md
+[
+  {
+    "name": "How To",
+    "items": [
+      {
+        "name": "Migrate your workloads to the UKCloud platform",
+        "href": "migr-how-zerto-migrate-to-ukcloud.md"
+      }
+    ]
+  },
+  {
+    "name": "Service Definition",
+    "items": [
+      {
+        "name": "Migration to the Cloud Service Definition",
+        "href": "migr-sd.md"
+      }
+    ]
+  },
+  {
+    "name": "Troubleshooting",
+    "items": [
+      {
+        "name": "Troubleshooting Migration to the Cloud",
+        "href": "migr-ref-troubleshooting.md"
+      }
+    ]
+  }
+]
