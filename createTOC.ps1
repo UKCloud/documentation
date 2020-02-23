@@ -30,20 +30,6 @@ param (
     $Source = "$PWD\articles\"
 )
 
-# Install and Import YAML Parser module: powershell-yaml
-try {
-    Import-Module -Name powershell-yaml -ErrorAction "Stop"
-}
-catch {
-    try {
-        Install-Module -Name powershell-yaml -ErrorAction "Stop" -Force
-    }
-    catch {
-        Write-Error -Message $_.Exception.Message
-        break
-    }
-}
-
 # Declare Articles Folder based on current directory
 #$ArticlesFolder = "$PWD\articles\"
 $ArticlesFolder = $Source
@@ -52,9 +38,7 @@ $FoldersFromBase = Get-ChildItem -Directory -Path $ArticlesFolder
 Write-Host "Found $($FoldersFromBase.count) Folders in $($ArticlesFolder)"
 
 # For every folder in Articles folder declare BaseFolder
-ForEach ($FolderB in $FoldersFromBase) {
-
-    $BaseFolder = "$PWD\articles\$FolderB"
+ForEach ($BaseFolder in $FoldersFromBase) {
 
     # Filter for only MarkDown files
     $FiletypeFilter = "*.md"
@@ -83,7 +67,7 @@ ForEach ($FolderB in $FoldersFromBase) {
 
     # Sort Objects so that Rootlink Users is first shown.
     If ($TOCArrayPropertiesCustom.Rootlink -like "Users" -or $TOCArrayPropertiesCustom.Rootlink -like "Operators") {
-        $SortedCustom = $TOCArrayPropertiesCustom | Sort-Object -Property Rootlink -Descending | Sort-Object -Property Sub1, Sub2, Sub3, Sub4, Title, MDlink
+        $SortedCustom = $TOCArrayPropertiesCustom | Sort-Object -Property Rootlink -Descending  | Sort-Object -Property Sub1, Sub2, Sub3, Sub4, Title, MDlink
     }
     Else {
         $SortedCustom = $TOCArrayPropertiesCustom | Sort-Object -Property Rootlink -Descending | Sort-Object -Property Rootlink, Sub1, Sub2, Sub3, Sub4, Title, MDlink
@@ -271,8 +255,8 @@ ForEach ($FolderB in $FoldersFromBase) {
         We have to use -> ConvertTo-Yaml -Data $TOCStruct -OutFile $BaseFolder\toc.yml -Force
     #>
 
-    $CaptureYamlOut = ConvertTo-Yaml -Data $TOCStruct
-    ConvertTo-Yaml -Data $TOCStruct -OutFile $BaseFolder\toc.yml -Force
+    $CaptureJSONOut = ConvertTo-Json -InputObject $TOCStruct -Depth 100
+    $CaptureJSONOut | Out-File (Join-Path -Path $BaseFolder -ChildPath 'toc.yml') -Force
     Write-Host "Created new toc.yml file under $BaseFolder"
-    Write-Verbose -Message $CaptureYamlOut
+    Write-Verbose -Message $CaptureJSONOut
 }
