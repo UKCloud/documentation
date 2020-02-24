@@ -118,7 +118,10 @@ curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.sky
 
 ## GET /api/my_vm
 
-Returns a list of up to 10 VMs with billing data.
+Returns a list of up to 10 VMs.
+
+> [!NOTE]
+> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
 
 ### API version
 
@@ -395,6 +398,9 @@ Returns an array of accounts with the ID and name.
 ## GET /api/accounts/:account_id/compute_services
 
 Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.
+
+> [!NOTE]
+> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
 
 ### API version
 
@@ -826,6 +832,9 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
 ## GET /api/accounts/:account_id/compute_services/:vorg_id
 
 Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).
+
+> [!NOTE]
+> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
 
 ### API version
 
@@ -3139,6 +3148,9 @@ Returns a CSV report for the whole month specified including the date provided.
 Returns a CSV containing billing data for the period given.
 
 For more information about this CSV, see [*Understanding your invoice evidence file*](../other/other-ref-invoice-evidence-file.md) and the [*Invoice and billing FAQs*](../other/other-faq-billing.md).
+
+> [!NOTE]
+> To retrieve billing information for an account, you must have the **API** Permissions for Billing. For more information, see [*Portal permissions*](ptl-ref-overview-permissions.md).
 
 ### API version
 
