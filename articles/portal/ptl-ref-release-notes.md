@@ -27,7 +27,7 @@ Feature update
 
 Details:
 
-- When requesting a password reset, users that are locked will be sent an email telling them that
+- When requesting a password reset, users that are locked will be sent an email telling them that their account is locked
 
 ## Release 1.126.0
 
