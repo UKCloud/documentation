@@ -185,7 +185,7 @@ Users can access, manage and view the SRA service, accessing only those features
 
 - **vCloud Director tenant portal.** Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions).
 
-- **UKCloud Portal.** Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.
+- **UKCloud Portal.** Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.
 
 You cannot access the underlying infrastructure. This includes (but isn’t limited to) the hardware and the vSphere environment.
 
@@ -193,11 +193,7 @@ You cannot access the underlying infrastructure. This includes (but isn’t limi
 
 ### Visibility
 
-We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal.
-
-### Reporting
-
-All service reporting is done via the UKCloud Portal.
+Maintenance notifications and Service Status reports are delivered through the Portal.
 
 ### Billing
 
@@ -277,7 +273,7 @@ UKCloud will adhere to the following in terms of maintenance windows:
 
     b) carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
 
-    If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+    If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
 
 ## Supporting documents and resources
 
