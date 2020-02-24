@@ -644,10 +644,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-browser-add-in-security-rule.PNG",
+      "source_relative_path": "articles/azure/images/azs-browser-add-in-security-rule.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-browser-add-in-security-rule.PNG"
+          "relative_path": "articles/azure/images/azs-browser-add-in-security-rule.png"
         }
       },
       "is_incremental": false,
@@ -842,10 +842,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-browser-create-load-balancer.PNG",
+      "source_relative_path": "articles/azure/images/azs-browser-create-load-balancer.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-browser-create-load-balancer.PNG"
+          "relative_path": "articles/azure/images/azs-browser-create-load-balancer.png"
         }
       },
       "is_incremental": false,
@@ -5725,10 +5725,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/boot_times.PNG",
+      "source_relative_path": "articles/openstack/images/boot_times.png",
       "output": {
         "resource": {
-          "relative_path": "articles/openstack/images/boot_times.PNG"
+          "relative_path": "articles/openstack/images/boot_times.png"
         }
       },
       "is_incremental": false,
@@ -6484,10 +6484,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/mongodb.PNG",
+      "source_relative_path": "articles/openstack/images/mongodb.png",
       "output": {
         "resource": {
-          "relative_path": "articles/openstack/images/mongodb.PNG"
+          "relative_path": "articles/openstack/images/mongodb.png"
         }
       },
       "is_incremental": false,
@@ -6495,10 +6495,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/network_performance.PNG",
+      "source_relative_path": "articles/openstack/images/network_performance.png",
       "output": {
         "resource": {
-          "relative_path": "articles/openstack/images/network_performance.PNG"
+          "relative_path": "articles/openstack/images/network_performance.png"
         }
       },
       "is_incremental": false,
@@ -7078,10 +7078,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-horizon-sso-login.PNG",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-sso-login.png",
       "output": {
         "resource": {
-          "relative_path": "articles/openstack/images/ostack-horizon-sso-login.PNG"
+          "relative_path": "articles/openstack/images/ostack-horizon-sso-login.png"
         }
       },
       "is_incremental": false,
@@ -7705,10 +7705,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/random_io.PNG",
+      "source_relative_path": "articles/openstack/images/random_io.png",
       "output": {
         "resource": {
-          "relative_path": "articles/openstack/images/random_io.PNG"
+          "relative_path": "articles/openstack/images/random_io.png"
         }
       },
       "is_incremental": false,
@@ -7716,10 +7716,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/sequential_io.PNG",
+      "source_relative_path": "articles/openstack/images/sequential_io.png",
       "output": {
         "resource": {
-          "relative_path": "articles/openstack/images/sequential_io.PNG"
+          "relative_path": "articles/openstack/images/sequential_io.png"
         }
       },
       "is_incremental": false,
@@ -11643,10 +11643,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/Request_Headers_dialog_box_2.PNG",
+      "source_relative_path": "articles/vmware/images/Request_Headers_dialog_box_2.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/Request_Headers_dialog_box_2.PNG"
+          "relative_path": "articles/vmware/images/Request_Headers_dialog_box_2.png"
         }
       },
       "is_incremental": false,
@@ -12743,10 +12743,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/tier_1_comparison.PNG",
+      "source_relative_path": "articles/vmware/images/tier_1_comparison.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/tier_1_comparison.PNG"
+          "relative_path": "articles/vmware/images/tier_1_comparison.png"
         }
       },
       "is_incremental": false,
