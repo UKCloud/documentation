@@ -214,51 +214,6 @@ Returns a response with a list of up to 10 VMs
 }
 ```
 
-## My Calls API (Removed)
-
-> [!IMPORTANT]
-> With the move to the new [My Calls](https://portal.skyscapecloud.com/support/ivanti) service management tool, this functionality is no longer available.
-
-### GET /api/my_calls
-
-Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).
-
-### GET /api/my_calls/:ticket_id
-
-Returns a single ticket and its updates and changes.
-
-### PUT /api/my_calls/:ticket_id
-
-Adds a new note to a ticket.
-
-### POST /api/my_calls
-
-Adds a new ticket.
-
-### PUT /api/my_calls/:ticket_id/subscribe
-
-Subscribes a user to a ticket.
-
-### PUT /api/my_calls/:ticket_id/unsubscribe
-
-Unsubscribes a user from a ticket.
-
-### PUT /api/my_calls/:ticket_id/reopen
-
-Reopens a ticket.
-
-### PUT /api/my_calls/:ticket_id/change_owner
-
-Change the owner of a ticket.
-
-### PUT /api/my_calls/:ticket_id/cancel
-
-Cancels a ticket.
-
-### PUT /api/my_calls/:ticket_id/close
-
-Closes a ticket.
-
 ## GET /api/ping
 
 An endpoint to test API functionality.
@@ -2392,160 +2347,6 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 }
 ```
 
-## GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways
-
-Returns basic information about the edge gateways in the specified account under the specified VDC.
-
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-None
-
-#### Parameters
-
-None
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  account_id | The ID of your account | String | Y
-  vorg_id | The ID of the vOrg in which the edge gateway resides | String | Y
-  vdc_urn | The full URN of the VDC in which the edge gateway resides, including the urn:vcloud:vdc: prefix | String | Y
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-401 Unauthorized --- The user could not be authenticated
-
-403 Forbidden --- The user does not have permissions for the vOrg
-
-404 Not Found --- The user does not have access to the account, the account does not exist or the vOrg does not exist
-
-#### Response body
-
-If the call returns an empty list, check that the specified VDC URN is correct.
-
-  Attribute | Type | Value | Example
-  ----------|------|-------|--------
-  type | String | EdgeGateway | &nbsp;
-  id | String | The ID of the edge gateway | urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c
-  name | String | The name of the edge gateway | My Edge - nft00002i2 SL3
-
-#### Example response
-
-```
-{
-    "data": [
-        {
-            "type": "EdgeGateway",
-            "id": "urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c",
-            "attributes": {
-                "name": "My Edge - nft00002i2 SL3"
-            }
-        }
-    ]
-}
-```
-
-### JSON schema
-
-```
-{
-    "title":"GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways",
-    "description":"The edge-gateways within this VDC.",
-    "oneOf": [
-        {
-            "$ref": "#/definitions/success"
-        },
-        {
-            "$ref": "#/definitions/failure"
-        }
-    ],
-    "definitions": {
-        "success": {
-            "type": "object",
-            "required": [
-                "data"
-            ],
-            "properties": {
-                "data": {
-                    "$ref": "#/definitions/data"
-                }
-            }
-        },
-        "failure": {
-            "$ref": "#/definitions/error"
-        },
-        "data":{
-            "type":"array",
-            "items":{
-                "title":"Edge Gateways",
-                "type":"object",
-                "properties":{
-                    "id":{
-                        "type":"string",
-                        "pattern":"^urn:vcloud:gateway:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$"
-                    },
-                    "type":{
-                        "type":"string",
-                        "enum":["EdgeGateway"]
-                    },
-                    "attributes":{
-                        "type": "object",
-                        "properties":{
-                            "name": {
-                                "type":"string"
-                            }
-                        },
-                        "required":[
-                            "name"
-                        ]
-                    }
-                },
-                "required":[
-                    "id",
-                    "type",
-                    "attributes"
-                ]
-            }
-        },
-        "error": {
-            "type": "object",
-            "properties": {
-                "error": {
-                    "description": "A short, human-readable summary of the problem.",
-                    "type": "string"
-                },
-                "detail": {
-                    "description": "A human-readable explanation of the problem.",
-                    "type": "string"
-                }
-            },
-            "required":[
-                "error"
-            ]
-        }
-    }
-}
-```
-
 ## POST /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways
 
 Creates an edge gateway in the specified account under the specified organisation and VDC.
@@ -3260,6 +3061,193 @@ Returns a CSV report for the period specified.
   LicencePricePerHour               | Hourly price of any licenses attached to this VM
   LicenceTotalPrice                 | Price of any licenses attached to this VM
   TotalPrice                        | Total price of this VM
+
+## Deprecated endpoints
+
+The following endpoints are deprecated and may be removed in the future.
+
+### GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways
+
+Returns basic information about the edge gateways in the specified account under the specified VDC.
+
+#### API version
+
+v1
+
+#### Request
+
+##### Request body
+
+None
+
+##### Parameters
+
+None
+
+##### URI parameters
+
+  Parameter name | Description | Type | Mandatory (Default)
+  ---------------|-------------|------|--------------------
+  account_id | The ID of your account | String | Y
+  vorg_id | The ID of the vOrg in which the edge gateway resides | String | Y
+  vdc_urn | The full URN of the VDC in which the edge gateway resides, including the urn:vcloud:vdc: prefix | String | Y
+
+##### Example request (Curl)
+
+```bash
+curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways
+```
+
+#### Response
+
+##### Successful HTTP response
+
+200 OK --- The request was successful
+
+##### Unsuccessful HTTP response
+
+401 Unauthorized --- The user could not be authenticated
+
+403 Forbidden --- The user does not have permissions for the vOrg
+
+404 Not Found --- The user does not have access to the account, the account does not exist or the vOrg does not exist
+
+##### Response body
+
+If the call returns an empty list, check that the specified VDC URN is correct.
+
+  Attribute | Type | Value | Example
+  ----------|------|-------|--------
+  type | String | EdgeGateway | &nbsp;
+  id | String | The ID of the edge gateway | urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c
+  name | String | The name of the edge gateway | My Edge - nft00002i2 SL3
+
+##### Example response
+
+```
+{
+    "data": [
+        {
+            "type": "EdgeGateway",
+            "id": "urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c",
+            "attributes": {
+                "name": "My Edge - nft00002i2 SL3"
+            }
+        }
+    ]
+}
+```
+
+#### JSON schema
+
+```
+{
+    "title":"GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways",
+    "description":"The edge-gateways within this VDC.",
+    "oneOf": [
+        {
+            "$ref": "#/definitions/success"
+        },
+        {
+            "$ref": "#/definitions/failure"
+        }
+    ],
+    "definitions": {
+        "success": {
+            "type": "object",
+            "required": [
+                "data"
+            ],
+            "properties": {
+                "data": {
+                    "$ref": "#/definitions/data"
+                }
+            }
+        },
+        "failure": {
+            "$ref": "#/definitions/error"
+        },
+        "data":{
+            "type":"array",
+            "items":{
+                "title":"Edge Gateways",
+                "type":"object",
+                "properties":{
+                    "id":{
+                        "type":"string",
+                        "pattern":"^urn:vcloud:gateway:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$"
+                    },
+                    "type":{
+                        "type":"string",
+                        "enum":["EdgeGateway"]
+                    },
+                    "attributes":{
+                        "type": "object",
+                        "properties":{
+                            "name": {
+                                "type":"string"
+                            }
+                        },
+                        "required":[
+                            "name"
+                        ]
+                    }
+                },
+                "required":[
+                    "id",
+                    "type",
+                    "attributes"
+                ]
+            }
+        },
+        "error": {
+            "type": "object",
+            "properties": {
+                "error": {
+                    "description": "A short, human-readable summary of the problem.",
+                    "type": "string"
+                },
+                "detail": {
+                    "description": "A human-readable explanation of the problem.",
+                    "type": "string"
+                }
+            },
+            "required":[
+                "error"
+            ]
+        }
+    }
+}
+```
+
+## Removed endpoints
+
+The following endpoints have been removed from the Portal API.
+
+### My Calls
+
+> [!IMPORTANT]
+> With the move to the new [My Calls](https://portal.skyscapecloud.com/support/ivanti) service management tool, the My Calls API functionality is no longer available.
+
+- GET /api/my_calls Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).
+
+- GET /api/my_calls/:ticket_id - Returns a single ticket and its updates and changes.
+
+- PUT /api/my_calls/:ticket_id - Adds a new note to a ticket.
+
+- POST /api/my_calls - Adds a new ticket.
+
+- PUT /api/my_calls/:ticket_id/subscribe - Subscribes a user to a ticket.
+
+- PUT /api/my_calls/:ticket_id/unsubscribe - Unsubscribes a user from a ticket.
+
+- PUT /api/my_calls/:ticket_id/reopen - Reopens a ticket.
+
+- PUT /api/my_calls/:ticket_id/change_owner - Change the owner of a ticket.
+
+- PUT /api/my_calls/:ticket_id/cancel - Cancels a ticket.
+
+- PUT /api/my_calls/:ticket_id/close - Closes a ticket.
 
 ## Further information
 

@@ -41,12 +41,6 @@ UKCloud support staff can change the VPN config back to DH-2 on a temporary basi
 
 Follow the steps below to convert your edge to an advanced gateway and configure your VPN back to DH-2. To complete these steps, you must have access to the UKCloud Portal and vCloud Director.
 
-## Convert your edge to an advanced gateway
-
-To be able to set your VPN to the desired DH setting, you first need to convert your edge to an advanced gateway.
-
-To convert your edge to an advanced gateway, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md) before attempting to continue with the steps below.
-
 ## Change your VPN settings
 
 To change the DH setting on your broken VPN:
