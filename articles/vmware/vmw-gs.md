@@ -157,7 +157,7 @@ After creating your compute service, the next step is to create one or more VDCs
 4. Enter a **VDC Name**.
 
     > [!TIP]
-    > The name can be up to 32 characters long and can include any character except +.
+    > The name can be up to 32 characters long and can include any character except `+`, `(` or `)`.
 
     ![Build VDC page](images/vmw-portal-build-vdc.png)
 
