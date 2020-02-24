@@ -3,8 +3,8 @@ title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
-reviewer:
-lastreviewed: 20/07/2018 12:12:33
+reviewer: wllewellyn
+lastreviewed: 24/02/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -27,7 +27,7 @@ Feature update
 
 Details:
 
-- When requesting a password reset, users that are locked will be sent an email telling them that their account is locked
+- When requesting a password reset, users with locked accounts will be sent an email informing them that their account is locked
 
 ## Release 1.126.0
 
