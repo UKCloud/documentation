@@ -3,8 +3,8 @@ title: Portal permissions
 description: A guide to the various permissions available to Portal users and what behaviour they enable
 services: portal
 author: Sue Highmoor
-reviewer: aperrett
-lastreviewed: 23/10/2019
+reviewer: Gsmith
+lastreviewed: 25/02/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -22,6 +22,9 @@ toc_mdlink: ptl-ref-overview-permissions.md
 System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.
 
 ![Portal permissions page](images/portal_permissions.png)
+
+> [!NOTE]
+> Selecting API only is not a permission level by itself. You are still required to choose one of the following Admin, Catalogue Author, vApp Author, vApp User or Console Only. 
 
 ## User is admin?
 
