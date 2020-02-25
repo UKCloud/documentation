@@ -4474,7 +4474,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-smart-hands.html",
-          "hash": "D+lhW1TBbdXcUao0+/4NMw=="
+          "hash": "RlCBNu2/wFUG1s0Vl6WL1w=="
         }
       },
       "is_incremental": false,
@@ -7742,7 +7742,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "GDW4ScRMfeMYFMR6iBwm/Q=="
+          "hash": "h5TWz9w1LrjWcMxhdT4WRA=="
         }
       },
       "is_incremental": false,
@@ -19533,17 +19533,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 424,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 424,
           "skipped_file_count": 0
         }
       }
