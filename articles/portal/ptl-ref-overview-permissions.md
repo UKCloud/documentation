@@ -23,7 +23,7 @@ System administrators are presented with several options to control user permiss
 
 ![Portal permissions page](images/portal_permissions.png)
 
-> [!NOTE]
+> [NOTE]
 > Selecting API only is not a permission level by itself. You are still required to choose one of the following Admin, Catalogue Author, vApp Author, vApp User or Console Only. 
 
 ## User is admin?
