@@ -8,6 +8,8 @@
     href: ptl-how-create-users.md
   - name: Enable 2FA in the Portal
     href: ptl-how-enable-2fa.md
+  - name: Manage My Calls users
+    href: ptl-how-manage-my-calls.md
   - name: Raise and escalate support tickets
     href: ptl-how-raise-escalate-service-request.md
   - name: Reset 2FA for a user account
@@ -26,7 +28,7 @@
     href: ptl-how-signup-notifications.md
   - name: Unlock a user account
     href: ptl-how-unlock-account.md
-  - name: Use My Calls in the UKCloud Portal
+  - name: Use My Calls to raise and monitor support tickets
     href: ptl-how-use-my-calls.md
   - name: Use the UKCloud Portal API
     href: ptl-how-use-api.md
