@@ -41,7 +41,7 @@ Yes. Our HybridConnect service option allows customers and partners to provide t
 
 ## Which UKCloud data centre has Janet connectivity?
 
-Both our Corsham and Farnborough sites have Janet connectivity
+Both our Corsham and Farnborough sites have Janet connectivity.
 
 ## How do I get a Janet connection via the UKCloud Assured OFFICIAL security domain?
 
