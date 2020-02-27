@@ -49,6 +49,8 @@ To create a new user:
 
 6. After you've created the user account, you can grant the user access to the different services available in the account. This process varies depending on the service:
 
+    - [*How to manage My Calls users*](ptl-how-manage-my-calls.md)
+
     - [*How to manage permissions for vCloud Director*](../vmware/vmw-how-manage-vcd-permissions.md)
 
     - [*How to create new UKCloud for OpenStack users in the UKCloud Portal*](../openstack/ostack-how-create-users.md)
