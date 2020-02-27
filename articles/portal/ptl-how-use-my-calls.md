@@ -4,7 +4,7 @@ description: Provides an overview of the functionality provided by My Calls
 services: portal
 author: Sue Highmoor
 reviewer: Sue Highmoor
-lastreviewed: 02/01/2020
+lastreviewed: 27/02/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -32,11 +32,9 @@ My Calls covers the ITIL standards of:
 
 This article is intended for any UKCloud Portal user who wants to use My Calls to raise or monitor support tickets. To complete the steps in this article, you must be able to log in to the UKCloud Portal with the following My Calls permissions:
 
-- All users with My Calls access can create new support tickets
+- If you have the *My Tickets* permission, you can create new support tickets and view and update the tickets that you've created
 
-- If you have the *My Tickets* permission, you can view and update the tickets that you've created
-
-- If you have the *Account Tickets* or *My Calls Admin* permission, you can view and update tickets created by any user across the account.
+- If you have the *Account Tickets* or *My Calls Admin* permission, you can create new support tickets and view and update any ticket raised (including those raised by other users)
 
 ## Accessing My Calls
 
