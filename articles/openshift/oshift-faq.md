@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenShift FAQs | UKCloud Ltd
+title: UKCloud for OpenShift FAQs
 description: Frequently asked questions for UKCloud for OpenShift
 services: openshift
 author: Matt Warner

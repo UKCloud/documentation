@@ -1,5 +1,5 @@
 ---
-title: How to configure the Azure Stack Hub operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd
+title: How to configure the Azure Stack Hub operator's PowerShell environment
 description: Configure the Azure Stack Hub operator's PowerShell environment
 services: azure-stack
 author: Chris Black

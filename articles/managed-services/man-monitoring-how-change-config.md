@@ -1,5 +1,5 @@
 ---
-title: How to change your service configuration for Managed Monitoring from UKCloud  | UKCloud Ltd
+title: How to change your service configuration for Managed Monitoring from UKCloud
 description: Describes how to change monitored items, thresholds, contact information and maintenance window details for your Managed Monitoring from UKCloud service
 services: managed-services
 author: plopezcatalan

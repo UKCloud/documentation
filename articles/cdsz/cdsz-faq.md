@@ -1,5 +1,5 @@
 ---
-title: Cross Domain Security Zone FAQs | UKCloud Ltd
+title: Cross Domain Security Zone FAQs
 description: Frequently asked questions for Cross Domain Security Zone
 services: cdsz
 author: Matt Warner

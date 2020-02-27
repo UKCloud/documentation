@@ -1,5 +1,5 @@
 ---
-title: How to view Cloud Storage information in the UKCloud Portal | UKCloud Ltd
+title: How to view Cloud Storage information in the UKCloud Portal
 description: Describes how to access information about your Cloud Storage service in the UKCloud Portal
 services: cloud-storage
 author: Sue Highmoor
@@ -92,8 +92,6 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
     ![Buckets button](images/cs-portal-btn-buckets.png)
 
 4. On the *Buckets* tab, you can see the following information for each bucket in the selected namespace:
-
-    - The type of bucket: S3 or ATMOS
 
     - The total amount of storage (in GiB) currently consumed by the objects in the bucket
 

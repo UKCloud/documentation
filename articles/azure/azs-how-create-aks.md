@@ -1,5 +1,5 @@
 ---
-title: How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack Hub portal | UKCloud Ltd
+title: How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack Hub portal
 description: Create an Azure Kubernetes Service cluster using Azure Stack Hub
 services: azure-stack
 author: Bailey Lawson

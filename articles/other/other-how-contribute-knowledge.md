@@ -1,5 +1,5 @@
 ---
-title: How to contribute to the UKCloud Knowledge Centre | UKCloud Ltd
+title: How to contribute to the UKCloud Knowledge Centre
 description: Describes how to submit changes to articles in the UKCloud Knowledge Centre and how to create new articles
 services: other
 author: Sue Highmoor

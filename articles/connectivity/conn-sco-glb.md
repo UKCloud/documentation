@@ -1,5 +1,5 @@
 ---
-title: UltraDNS Service Scope | UKCloud Ltd
+title: UltraDNS Service Scope
 description: Outlines important details regarding the UltraDNS service (previously Global Load Balancing)
 services: connectivity
 author: Steve Hall

@@ -1,5 +1,5 @@
 ---
-title: How to create a static route | UKCloud Ltd
+title: How to create a static route
 description: Shows how to configure static routing within vCloud Director
 services: vmware
 author: Sue Highmoor

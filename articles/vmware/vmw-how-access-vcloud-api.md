@@ -1,5 +1,5 @@
 ---
-title: How to access vCloud Director through the vCloud API | UKCloud Ltd
+title: How to access vCloud Director through the vCloud API
 description: Describes how to get started with the vCloud API
 services: vmware
 author: Sue Highmoor
@@ -102,7 +102,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
 10. In the **Value** field enter `application/*+xml;version=32.0` and then click **Okay**.
 
-    ![Request Headers dialog box](images/Request_Headers_dialog_box_2.PNG)
+    ![Request Headers dialog box](images/Request_Headers_dialog_box_2.png)
 
 11. The *Headers* section should now be displayed, containing the Accept header.
 

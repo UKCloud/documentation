@@ -1,5 +1,5 @@
 ---
-title: Fix for customers unable to upload and download vApps or catalog items | UKCloud Ltd
+title: Fix for customers unable to upload and download vApps or catalog items
 description: This is a step by step guide for customers unable to upload or download catalog items
 services: vmware
 author: Sue Highmoor

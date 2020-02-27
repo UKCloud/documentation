@@ -1,8 +1,10 @@
 ---
-title: UKCloud for Oracle Software Service Definition | UKCloud Ltd
+title: UKCloud for Oracle Software Service Definition
 description: Provides an overview of what is provided by the UKCloud for Oracle Software service
 services: oracle
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:
@@ -99,7 +101,7 @@ Choose the local protection required for your application in the event of a loca
 
 UKCloud for Oracle Softwatre doesn't include infrastructure level backup and restore or remote protection products. Instead we offer an underpinning infrastructure that can support technologies that are compatible with Oracle VMs such as Oracle Data Guard and Oracle RMAN data protection solutions
 
-- Multi Cloud Backup Storage - Compatible with Oracle RMAN and other DDBoost aware backup applicatons. See the [*Multi-Cloud Backup Storage Service Definition*](../mcbs/mcbs-sd.md) for more info
+- Multi Cloud Backup Storage - Compatible with Oracle RMAN and other DDBoost aware backup applicatons. See the [*Multi-Cloud Backup Storage Service Definition*](../other/other-sd-mcbs.md) for more info
 
 - Second Oracle region - Use Oracle Data Guard or other Oracle compatible replication technologies to create a DR environment in a second Oracle region
 

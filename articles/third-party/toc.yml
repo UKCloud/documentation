@@ -8,6 +8,8 @@
     href: third-sco-appdynamics.md
 - name: CloudSOC
   items:
+  - name: CloudSOC case study (video)
+    href: third-vid-cloudsoc-intro.md
   - name: CloudSOC from UKCloud Service Definition
     href: third-sd-cloudsoc.md
 - name: HyTrust DataControl

@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenShift Service Scope | UKCloud Ltd
+title: UKCloud for OpenShift Service Scope
 description: Outlines important details regarding UKCloud for OpenShift
 services: openshift
 author: Sue Highmoor

@@ -60,8 +60,6 @@
     href: vmw-how-configure-ipsec-vpn.md
   - name: Connect to the UKCloud Windows Server Update Services (WSUS)
     href: vmw-how-connect-windows-update.md
-  - name: Convert your edge to an advanced gateway
-    href: vmw-how-convert-edge.md
   - name: Create a catalog
     href: vmw-how-create-catalog.md
   - name: Create a DHCP pool
@@ -104,9 +102,9 @@
     href: vmw-how-install-rhui-vm.md
   - name: Interact with the vCloud REST API using PowerShell and Python
     href: vmw-how-interact-vcd-api-powershell.md
-  - name: License Microsoft applications/software on the UKCloud platform
+  - name: License Microsoft software on the UKCloud platform
     href: vmw-how-license-microsoft.md
-  - name: License Windows VMs using the UKCloud Key Management Server
+  - name: License Windows VMs using the UKCloud KMS
     href: vmw-how-setup-kms.md
   - name: Locate your virtual data centre on the UKCloud platform
     href: vmw-how-locate-vdc.md
@@ -132,8 +130,6 @@
     href: vmw-how-setup-gpu-visualisation.md
   - name: Switch to the Legacy UI
     href: vmw-how-switch-web-console.md
-  - name: Upgrade your edge gateway
-    href: vmw-how-upgrade-edge.md
   - name: Upload ISO or FLP media
     href: vmw-how-upload-media-iso-flp.md
   - name: Use affinity and anti-affinity rules

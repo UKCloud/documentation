@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for the UKCloud Portal | UKCloud Ltd
+title: Getting Started Guide for the UKCloud Portal
 description: Provides information to get up and running with the UKCloud Portal
 services: portal
 author: Sue Highmoor
@@ -139,8 +139,6 @@ The Portal navigation panel provides access to all the functionality available i
   - **Login History** - Lists everyone who has logged in to the Portal over the last 30 days (see [*Viewing login information*](ptl-how-view-login-info.md)).
 
   - **VMware Cloud Build History** - Lists recent compute service, VDC and edge gateway builds initiated from the Portal and the Portal API (see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md) and [*How to build an edge gateway*](../vmware/vmw-how-build-edge.md)).
-
-  - **Service Reports** - Lists all the service reports for the account. Click a link to download a PDF file of a specific report. Service reports provide information about the your VMs, support tickets and service availability.
 
   - **Backup Summary** - Provides access to summary reports of Snapshot Protection status for each of the account's compute services (see [*How to manage Snapshot Protection for your VMs*](../vmware/vmw-how-manage-snapshot-protection.md)).
 

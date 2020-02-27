@@ -12,12 +12,16 @@
     href: other-faq-jumpstart.md
   - name: MISO rebate FAQs
     href: other-faq-miso-rebate.md
+  - name: Multi-Cloud Backup Storage FAQs
+    href: other-faq-mcbs.md
   - name: Service Level Agreement FAQs
     href: other-faq-sla.md
   - name: UKCloud FAQs
     href: other-faq-ukcloud.md
 - name: How To
   items:
+  - name: Connect to MCBS using Data Domain BoostFS
+    href: other-how-connect-mcbs.md
   - name: Contribute to the UKCloud Knowledge Centre
     href: other-how-contribute-knowledge.md
   - name: Remove access rights from Single Sign-On users
@@ -96,6 +100,10 @@
     href: other-ref-invoice-evidence-file.md
   - name: Windows Server 2016 templates
     href: other-ref-windows-2016-templates.md
+- name: Service Definition
+  items:
+  - name: Multi-Cloud Backup Storage Service Definition
+    href: other-sd-mcbs.md
 - name: Service Scope
   items:
   - name: Free trials Service Scope

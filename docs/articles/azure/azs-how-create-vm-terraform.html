@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a virtual machine using Terraform </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to create a virtual machine using Terraform ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -128,29 +128,32 @@
 <p><a href="#example-of-how-variables-are-used-in-terraform">Environment Variables Option</a> - you can create your <strong>Terraform plan</strong> by putting only the plan itself into <code>main.tf</code> and then keeping <code>variables.tf</code> separate. You have to declare the actual values in the <code>terraform.tfvars</code> file. This is the file that you will need to populate with your actual credential details.</p>
 <h3 id="example-of-how-variables-are-used-in-terraform">Example of how variables are used in Terraform:</h3>
 <h4 id="variablestf"><code>variables.tf</code></h4>
-<pre><code class="lang-hcl">variable &quot;arm_endpoint&quot; {}
-variable &quot;subscription_id&quot; {}
-variable &quot;client_id&quot; {}
-variable &quot;client_secret&quot; {}
-variable &quot;tenant_id&quot; {}
-</code></pre>
+  <pre><code class="tf">
+  variable "arm_endpoint" {}
+  variable "subscription_id" {}
+  variable "client_id" {}
+  variable "client_secret" {}
+  variable "tenant_id" {}
+  </code></pre>
 <h4 id="maintf"><code>main.tf</code></h4>
-<pre><code class="lang-hcl">provider &quot;azurestack&quot; {
-  arm_endpoint    = &quot;${var.arm_endpoint}&quot;
-  subscription_id = &quot;${var.subscription_id}&quot;
-  client_id       = &quot;${var.client_id}&quot;
-  client_secret   = &quot;${var.client_secret}&quot;
-  tenant_id       = &quot;${var.tenant_id}&quot;
-}
-</code></pre>
+  <pre><code class="tf">
+  provider "azurestack" {
+    arm_endpoint    = "${var.arm_endpoint}"
+    subscription_id = "${var.subscription_id}"
+    client_id       = "${var.client_id}"
+    client_secret   = "${var.client_secret}"
+    tenant_id       = "${var.tenant_id}"
+  }
+  </code></pre>
 <h4 id="terraformtfvars"><code>terraform.tfvars</code></h4>
-<pre><code class="lang-hcl"># Configure the Azure Stack Hub Provider
-arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
-subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
-client_id       = &quot;{applicationId}&quot;
-client_secret   = &quot;{applicationSecret}&quot;
-tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
-</code></pre>
+  <pre><code class="tf">
+  # Configure the Azure Stack Hub Provider
+  arm_endpoint    = "https://management.{region}.{domain}"
+  subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+  client_id       = "{applicationId}"
+  client_secret   = "{applicationSecret}"
+  tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+  </code></pre>
 <h4 id="argument-reference">Argument reference</h4>
 <ul>
 <li><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for your Azure Stack Hub instance. This will be <strong><code>https://management.{region}.{domain}</code></strong>.</li>
@@ -177,13 +180,14 @@ tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
 <p><a href="#example-of-provider-block">Provider Block Option</a> - you can create your <strong>Terraform plan</strong> by putting everything in one <code>main.tf</code> file, which then contains your Provider and variables settings explicitly in said plan.</p>
 <h3 id="example-of-provider-block">Example of Provider Block:</h3>
 <h4 id="maintf-1"><code>main.tf</code></h4>
-<pre><code class="lang-hcl"># Configure the Azure Stack Hub Provider
-provider &quot;azurestack&quot; {
- arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
- subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
- client_id       = &quot;{applicationId}&quot;
- client_secret   = &quot;{applicationPassword}&quot;
- tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+ <pre><code class="tf">
+ # Configure the Azure Stack Hub Provider
+ provider "azurestack" {
+  arm_endpoint    = "https://management.{region}.{domain}"
+  subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+  client_id       = "{applicationId}"
+  client_secret   = "{applicationPassword}"
+  tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
 }
 Rest of the file (...)
 </code></pre>
@@ -308,7 +312,7 @@ Rest of the file (...)
 </li>
 </ul>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="language-hcl">
+<pre><code class="tf">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
@@ -437,7 +441,7 @@ resource "azurestack_virtual_machine" "vm" {
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="language-hcl">
+<pre><code class="tf">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
@@ -585,7 +589,7 @@ resource "azurestack_virtual_machine" "vm" {
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
-<pre><code class="language-hcl">
+<pre><code class="tf">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
@@ -715,7 +719,7 @@ resource "azurestack_virtual_machine" "vm" {
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
-<pre><code class="language-hcl">
+<pre><code class="tf">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
@@ -865,7 +869,7 @@ resource "azurestack_virtual_machine" "vm" {
 </section>
 </div>
 <h3 id="assign-values-to-the-variables-in-the-terraformtfvars-file-through-the-table-found-at-the-top-of-the-document">Assign values to the variables in the <code>terraform.tfvars</code> file through the table found at the top of the document</h3>
-<pre><code class="language-hcl">
+<pre><code class="tf">
   arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
   subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
   client_id       = "<output form="client_id" name="result" style="display: inline;">applicationId</output>"
@@ -883,7 +887,7 @@ resource "azurestack_virtual_machine" "vm" {
   admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"
 </code></pre>
 <h3 id="declare-the-variables-here-in-the-variablestf-file-for-use-in-the-main-script">Declare the variables here in the <code>variables.tf</code> file for use in the main script</h3>
-<pre><code class="language-hcl">
+<pre><code class="tf">
   variable "arm_endpoint" {
     type = "string"
   }
@@ -1019,7 +1023,7 @@ commands will detect it and remind you to do so if necessary.
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -1027,12 +1031,19 @@ commands will detect it and remind you to do so if necessary.
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -1042,5 +1053,6 @@ commands will detect it and remind you to do so if necessary.
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

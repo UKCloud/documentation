@@ -1,5 +1,5 @@
 ---
-title: How to create a load balancer using the UKCloud Azure Stack Hub portal | UKCloud Ltd
+title: How to create a load balancer for Azure Stack Hub
 description: Provides help for creating a load balancer on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -16,7 +16,7 @@ toc_fullpath: Users/How To/azs-how-create-load-balancer.md
 toc_mdlink: azs-how-create-load-balancer.md
 ---
 
-# How to create a load balancer using the UKCloud Azure Stack Hub portal
+# How to create a load balancer for Azure Stack Hub
 
 ## Overview
 
@@ -66,7 +66,7 @@ In this section we will create a load balancer with a public IP address.
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
-     ![Create new load balancer](images/azs-browser-create-load-balancer.PNG)
+     ![Create new load balancer](images/azs-browser-create-load-balancer.png)
 
 6. Click **Create**.
 
@@ -181,7 +181,7 @@ In this section we will create NSG rules to allow inbound traffic.
 
    - **Description** - A description of the security rule.
   
-    ![Add an inbound security rule](images/azs-browser-add-in-security-rule.PNG)
+    ![Add an inbound security rule](images/azs-browser-add-in-security-rule.png)
 
 6. Click **Add**.
 

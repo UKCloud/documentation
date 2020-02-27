@@ -1,13 +1,13 @@
 ---
-title: How to set up two-factor authentication for a user account | UKCloud Ltd
+title: How to set up two-factor authentication for a user account
 description: Describes how to set up two-factor authentication (2FA) for a user account
 services: portal
 author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 08/11/2019
+reviewer: wllewellyn
+lastreviewed: 07/02/2020
 
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -26,6 +26,13 @@ If your Portal administrator has enabled two-factor authentication (2FA) in the 
 
 The first time you log into the Portal after 2FA is enabled, you'll need to to set up 2FA for your user account by registering your account with an authenticator app, such as Google Authenticator.
 
+> [!NOTE]
+> If at any point you need to reset 2FA on your user account, for example if you lose or replace your phone, contact your Portal administrator. After your administrator resets your 2FA, the next time you log in to the Portal, you'll need to set up 2FA again.
+
+### Intended audience
+
+This article is intended for any Portal user who needs to set up 2FA to log in to the Portal.
+
 ## Setting up 2FA
 
 When you first log in to a Portal account that has 2FA enabled, you'll be prompted to set up 2FA:
@@ -34,7 +41,7 @@ When you first log in to a Portal account that has 2FA enabled, you'll be prompt
 
     For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
 
-2. Install an authenticator app if you don't already have one which is compatible with the UKCloud Portal. We've tested 2FA with Google Authenticator, which is a smart phone app, and Authy, which is available as a smart phone app, desktop app or Chrome plug-in. Other authenticator apps may also be compatible but have not been tested. Once you've installed the authenticator app, scan the QR code.
+2. Install an authenticator app if you don't already have one which is compatible with the UKCloud Portal. We've tested 2FA with Google Authenticator, which is a smart phone app, and Authy, which is available as a smart phone app, desktop app or Chrome plug-in. Other authenticator apps may also be compatible but have not been tested. Once you've installed the authenticator app, scan the QR code or copy the security key.
 
     This is a one-off set up and does not need to be repeated as part of the normal Portal log-in process.
 

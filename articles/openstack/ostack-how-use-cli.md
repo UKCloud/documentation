@@ -1,5 +1,5 @@
 ---
-title: How to use the OpenStack Command Line Client on Microsoft operating systems | UKCloud Ltd
+title: How to use the OpenStackClient on Microsoft operating systems
 description: Outlines how to use the OpenStack Command Line Client on a Microsoft operating system using Windows PowerShell
 services: openstack
 author: Sue Highmoor
@@ -11,16 +11,16 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Use the OpenStack Command Line Client on Microsoft operating systems
+toc_title: Use the OpenStackClient on Microsoft operating systems
 toc_fullpath: How To/ostack-how-use-cli.md
 toc_mdlink: ostack-how-use-cli.md
 ---
 
-# How to use the OpenStack Command Line Client on Microsoft operating systems
+# How to use the OpenStackClient on Microsoft operating systems
 
 ## Overview
 
-OpenStack has been designed and built specifically for the Linux community utilising the Python programming language. Despite this, it's still possible to use the OpenStack Command Line Client on a Microsoft operating system using PowerShell, and this document outlines the six simple steps to achieve this.
+OpenStack has been designed and built specifically for the Linux community utilising the Python programming language. Despite this, it's still possible to use the OpenStack Command Line Client (OpenStackClient) on a Microsoft operating system using PowerShell, and this document outlines the six simple steps to achieve this.
 
 1. [Install Python runtime and libraries](#install-python-runtime-and-libraries)
 

@@ -1,8 +1,10 @@
 ---
-title: Migration to the Cloud Service Definition | UKCloud Ltd
+title: Migration to the Cloud Service Definition
 description: Provides an overview of what is provided by the Migration to the Cloud service
 services: migration
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:

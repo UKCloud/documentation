@@ -1,5 +1,5 @@
 ---
-title: Upgrade to Email and Collaboration as a Service | UKCloud Ltd
+title: Upgrade to Email and Collaboration as a Service
 description: Outlines the improvements UKCloud's upgrade to its Email and Collaboration as a Service to Zimbra 8.6.0 will deliver
 services: email
 author: Sue Highmoor

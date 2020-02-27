@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Tier 1 storage | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Tier 1 storage </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Tier 1 storage | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Tier 1 storage ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -109,7 +109,7 @@
 <p>Tier 1 storage sits on enterprise-class technology, so still benefits from the feature set available on the standard Tier 2 storage. However, there are a few subtle changes that increase the performance of workloads sitting on Tier 1 storage.</p>
 <ul>
 <li><p>By removing the NL-SAS layer and using a two-tier pool of performance media (SAS and SSD), the negative effect of tiering on the consistent performance of data is reduced. This is because even workloads that are accessed infrequently are serviced by faster spinning media (see the figure below).</p>
-<p><img src="images/tier_1_comparison.PNG" alt="Tier 2 vs. Tier 1 storage"></p>
+<p><img src="images/tier_1_comparison.png" alt="Tier 2 vs. Tier 1 storage"></p>
 </li>
 <li><p>By increasing the ratio of SSD to SAS, we ensure that a higher proportion of customer data can sit on enterprise flash, rather than on spinning media. So workload IO is serviced a lot quicker.</p>
 </li>
@@ -198,7 +198,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -206,12 +206,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -221,5 +228,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

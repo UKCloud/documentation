@@ -1,5 +1,5 @@
 ---
-title: S3-compatible API examples for Cloud Storage | UKCloud Ltd
+title: S3-compatible API examples for Cloud Storage
 description: Provides links to examples of how to use the S3-compatible API with UKCloud’s Cloud Storage service
 services: cloud-storage
 author: Sue Highmoor

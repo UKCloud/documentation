@@ -1,5 +1,5 @@
 ---
-title: UKCloud Portal security settings | UKCloud Ltd
+title: UKCloud Portal security settings
 description: Provides information about the various security settings available in the UKCloud Portal, including two-factor authentication (2FA) and IP restrictions
 services: portal
 author: Sue Highmoor

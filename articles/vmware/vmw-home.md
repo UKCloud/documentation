@@ -1,5 +1,5 @@
 ---
-title: UKCloud for VMware | UKCloud Ltd
+title: UKCloud for VMware
 description: Home page for UKCloud for VMware
 services: vmware
 author: Sue Highmoor

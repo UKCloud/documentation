@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting Started Guide for Cloud Storage | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Getting Started Guide for Cloud Storage </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Getting Started Guide for Cloud Storage | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Getting Started Guide for Cloud Storage ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -118,25 +118,14 @@ and provides information about some command-line tools that you can use to inter
 <li><p>Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery</p>
 </li>
 </ul>
-<p>ECS provides two APIs that you can use to manage your cloud storage: the S3‑compatible API and the EMC ECS Atmos API.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If you write content to cloud storage using one of the APIs, you cannot subsequently access that content using the other API. Choose carefully which API you want to use before beginning a project, as it will be difficult to move between them.</p>
-</div>
-<p>The key differences between the two APIs are:</p>
-<ul>
-<li><p>The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the <em>S3 Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>).</p>
-</li>
-<li><p>The ECS Atmos API provides backward compatibility with the EMC Atmos platform. It offers access to the majority of the features of the platform with certain exceptions as listed in the <em>Atmos Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>.</p>
-</li>
-</ul>
+<p>ECS provides an APIs that you can use to manage your cloud storage. The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the <em>S3 Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>).</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>
 </div>
 <h3 id="cloud-storage-use-cases">Cloud Storage use cases</h3>
-<p>The low cost of cloud storage per GB, as well as its almost unlimited scalability, means there's a large variety of use cases for it. For example, it's ideal for data archives, backups, log files, and media repositories.</p>
-<p>We anticipate that most web applications can make good use of cloud storage for static content, such as images and downloadable binaries. Storing these items in cloud storage—rather than in primary storage attached to web servers, inside the database or on a traditional file share—can provide significant benefits in terms of cost savings, agility and performance.</p>
+<p>The low cost of cloud storage per GiB, as well as its almost unlimited scalability, means there's a large variety of use cases for it. For example, it's ideal for data archives, backups, log files, and media repositories.</p>
+<p>We anticipate that most web applications can make good use of cloud storage for static content, such as images and downloadable binaries. Storing these items in cloud storage (rather than in primary storage attached to web servers, inside the database or on a traditional file share), can provide significant benefits in terms of cost savings, agility and performance.</p>
 <p>For example, with an internet-facing application that enables users to download forms and guides in PDF, these items are often stored in primary storage attached to the web servers, which creates several challenges:</p>
 <ul>
 <li><p>Whenever a PDF is updated, the updated copy must be replicated to all web servers</p>
@@ -154,74 +143,48 @@ and provides information about some command-line tools that you can use to inter
 </li>
 <li><p>End users connect directly to cloud storage to download PDFs, bypassing the web servers and associated network infrastructure</p>
 </li>
-<li><p>Objects are stored only once, and at a much lower price per GB, which substantially reduces the overall cost of storage</p>
+<li><p>Objects are stored only once, and at a much lower price per GiB, which substantially reduces the overall cost of storage</p>
 </li>
 </ul>
 <p>The same principles apply to other static content, such as images and (especially) videos. The more workload you can offload onto an external system such as cloud storage, the leaner your application infrastructure
 can become.</p>
 <p>There are often questions around how best to implement this. Ultimately, it's up to the application developers, but a popular approach is as follows:</p>
 <ol>
-<li><p>Handle content uploads and creation on the web servers.</p>
+<li><p>Handle content uploads and creation on the web servers</p>
 </li>
-<li><p>Perform any required modifications or transformations using on-demand processing servers (usually from a message queue).</p>
+<li><p>Perform any required modifications or transformations using on-demand processing servers (usually from a message queue)</p>
 </li>
-<li><p>Write the content into cloud storage, storing the resulting object IDs, external URLs and any other relevant metadata in the application database.</p>
+<li><p>Write the content into cloud storage, storing the resulting object IDs, external URLs and any other relevant metadata in the application database</p>
 </li>
 </ol>
 <p>This process provides a relatively simple transition to cloud storage. The application still knows about all the objects, but rather than retrieving, for example, a relative path for an item from the database, its entire URL is retrieved, pointing to cloud storage.</p>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>When you request your Cloud Storage service, UKCloud Support creates a namespace in the specified account. If you have requested an Atmos subtenant, this is also created.</p>
-<p>To create S3 buckets, use any S3-compliant tool. To create additional namespaces or Atmos subtenants, you must raise a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. You can have S3 buckets and Atmos subtentants in the same namespace.</p>
-<p>Cloud Storage provides different API endpoints to access your storage, depending on the UKCloud site and connectivity type you are using. Make sure you use the correct endpoint to ensure the best possible
-performance for your solution.</p>
+<p>When you request your Cloud Storage service, UKCloud Support creates a namespace in the specified account.</p>
+<p>To create S3 buckets, use any S3-compliant tool. To create additional namespaces, you must raise a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>Cloud Storage provides different API endpoints to access your storage, depending on the UKCloud site and connectivity type you are using. Make sure you use the correct endpoint to ensure the best possible performance for your solution.</p>
 <table>
 <thead>
 <tr>
 <th> </th>
-<th>S3 API endpoint</th>
-<th>Atmos API endpoint</th>
+<th>Corsham (Assured)</th>
+<th>Farnborough (Assured)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Corsham (Assured)</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>Internet</td>
 <td><code>cas.cor00005.ukcloud.com</code></td>
-<td><code>atmos.cas.cor00005.ukcloud.com</code></td>
+<td><code>cas.frn00006.ukcloud.com</code></td>
 </tr>
 <tr>
-<td>PSN Assured</td>
+<td>PSN</td>
 <td><code>cas.cor00005.psnassured.ukcloud.com</code></td>
-<td><code>atmos.cas.cor00005.psnassured.ukcloud.com</code></td>
+<td><code>cas.frn00006.psnassured.ukcloud.com</code></td>
 </tr>
 <tr>
 <td>HSCN</td>
 <td><code>cas.cor00005.ukcloud.thirdparty.nhs.uk/</code></td>
-<td><code>atmos.cas.cor00005.ukcloud.thirdparty.nhs.uk/</code></td>
-</tr>
-<tr>
-<td><strong>Farnborough (Assured)</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Internet</td>
-<td><code>cas.frn00006.ukcloud.com</code></td>
-<td><code>atmos.cas.frn00006.ukcloud.com</code></td>
-</tr>
-<tr>
-<td>PSN Assured</td>
-<td><code>cas.frn00006.psnassured.ukcloud.com</code></td>
-<td><code>atmos.cas.frn00006.psnassured.ukcloud.com</code></td>
-</tr>
-<tr>
-<td>HSCN</td>
 <td><code>cas.frn00006.ukcloud.thirdparty.nhs.uk/</code></td>
-<td><code>atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/</code></td>
 </tr>
 </tbody>
 </table>
@@ -250,12 +213,12 @@ performance for your solution.</p>
 <p><a href="https://github.com/UKCloud/s3curl">https://github.com/UKCloud/s3curl</a></p>
 </li>
 <li><p>Install the following required dependency:</p>
-<pre><code>sudo apt-get install libdigest-hmac-perl
+<pre><code class="lang-none">sudo apt-get install libdigest-hmac-perl
 yum install perl-Digest-HMAC
 </code></pre>
 </li>
 <li><p>Create a file named .s3curl in the home directory containing your credentials. For example:</p>
-<pre><code>%awsSecretAccessKeys = (
+<pre><code class="lang-none">%awsSecretAccessKeys = (
     UKCloud =&gt; {
         id =&gt; '&lt;user_id&gt;',
         key =&gt; '&lt;secret_key&gt;',
@@ -266,12 +229,12 @@ yum install perl-Digest-HMAC
 <ul>
 <li><p><code>user_id</code> is your User ID (you can find this in the Storage section of the UKCloud Portal)</p>
 </li>
-<li><p><code>secret_key</code> is your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)</p>
+<li><p><code>secret_key</code> is your secret key (if you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)</p>
 </li>
 </ul>
 </li>
 <li><p>Change the permissions, otherwise the Perl script will refuse to run.</p>
-<pre><code>chmod 600 .s3curl
+<pre><code class="lang-none">chmod 600 .s3curl
 </code></pre>
 </li>
 <li><p>Make the following small modification to the script itself so that it will work correctly with ECS:</p>
@@ -279,16 +242,15 @@ yum install perl-Digest-HMAC
 <li><p>Open the <code>s3curl.pl</code> file in your preferred editor (for example, vim or nano).</p>
 </li>
 <li><p>Scroll down until you find the following comment:</p>
-<pre><code># begin customizing here
+<pre><code class="lang-none"># begin customizing here
 </code></pre>
 </li>
 <li><p>The S3 endpoints are defined below this line, so add your Cloud Storage host name to this list as follows:</p>
-<pre><code>my @endpoints = ('&lt;api_endpoint&gt;', 's3.amazonaws.com', ...
+<pre><code class="lang-none">my @endpoints = ('&lt;api_endpoint&gt;', 's3.amazonaws.com', ...
 </code></pre>
 <p>For example:</p>
-<pre><code>#begin customizing here
-my @endpoints = ('cas.cor00005.ukcloud.com',
-'s3.amazonaws.com', ...
+<pre><code class="lang-none">#begin customizing here
+my @endpoints = ('cas.cor00005.ukcloud.com', 's3.amazonaws.com', ...
 </code></pre>
 </li>
 <li><p>Save the file.</p>
@@ -296,38 +258,20 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 </ul>
 </li>
 <li><p>S3Curl is now ready to use, so you can call it as follows:</p>
-<pre><code>perl s3curl.pl --id UKCloud -- &lt;curl_arguments&gt;
+<pre><code class="lang-none">perl s3curl.pl --id UKCloud -- &lt;curl_arguments&gt;
 </code></pre>
 <p>The <code>curl_arguments</code> need to contain the host name and port number. For example, to list your buckets, you could use:</p>
-<pre><code>perl s3curl.pl --id UKCloud -- https://cas.cor00005.ukcloud.com/
+<pre><code class="lang-none">perl s3curl.pl --id UKCloud -- https://cas.cor00005.ukcloud.com/
 </code></pre>
 <p>Or to delete a file named <code>Lighthouse.jpg</code> in <code>/bucket2</code>:</p>
-<pre><code>perl s3curl.pl --id UKCloud -- -X DELETE https://cas.cor00005.ukcloud.com/bucket2/Lighthouse.jpg
+<pre><code class="lang-none">perl s3curl.pl --id UKCloud -- -X DELETE https://cas.cor00005.ukcloud.com/bucket2/Lighthouse.jpg
 </code></pre>
 </li>
 </ol>
-<h2 id="using-the-ecs-atmos-api">Using the ECS Atmos API</h2>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>
-</div>
-<p>The Atmos API is at:</p>
-<p><code>https://&lt;api_endpoint&gt;</code></p>
-<p>Check which <code>api_endpoint</code> to use in <a href="#before-you-begin">Before you begin</a>, for example:</p>
-<p><code>https://atmos.cas.cor00005.ukcloud.com</code></p>
-<p>To help get you started, download the appropriate <em>Atmos SDK</em> from the following location:</p>
-<p><a href="https://community.emc.com/docs/DOC-27910">https://community.emc.com/docs/DOC-27910</a></p>
-<p>The SDK provides bindings for all popular languages, as well as some quick start guides.</p>
-<p>You can find the full API reference in the <em>EMC Atmos Programmer's Guide</em>, which you can download from the following location (or the UKCloud Knowledge Centre):</p>
-<p><a href="https://www.emc.com/collateral/TechnicalDocument/docu68370.pdf">https://www.emc.com/collateral/TechnicalDocument/docu68370.pdf</a></p>
-<p>For details of the supported and unsupported Atmos operations on ECS, see:</p>
-<p><a href="https://www.emc.com/techpubs/ecs/ecs_atmos_supported_features-1.htm">https://www.emc.com/techpubs/ecs/ecs_atmos_supported_features-1.htm</a></p>
-<p>You may also find the <em>Elastic Cloud Storage (ECS)</em> <em>Data Access Guide</em> useful:</p>
-<p><a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf</a></p>
 <h2 id="using-a-command-line-interface">Using a command-line interface</h2>
 <p>Interacting with Cloud Storage via the API directly is ideal for web-based applications, but having access from the command line can help developers with testing and provide scripting access to Cloud Storage.</p>
-<p>Command‑line interface (CLI) tools enable access from the command line by translating commands into the relevant API calls. There are lots of CLI tools to choose from --- this guide examines two for the S3 API: one each for Linux and Windows. Remember that the APIs are not interchangeable, so if you use the Atmos API in your application, you won't be able to see the data using the S3 CLI.</p>
-<h3 id="using-s3cmd-----a-linux-cli-for-the-s3-api">Using S3cmd --- a Linux CLI for the S3 API</h3>
+<p>Command‑line interface (CLI) tools enable access from the command line by translating commands into the relevant API calls. There are lots of CLI tools to choose from; this article examines two for the S3 API: one each for Linux and Windows.</p>
+<h3 id="using-s3cmd---a-linux-cli">Using S3cmd - (a Linux CLI)</h3>
 <p>S3cmd is an open-source tool for Linux, written in Python.</p>
 <p>To use S3cmd:</p>
 <ol>
@@ -335,46 +279,46 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 <p><a href="https://s3tools.org/download">https://s3tools.org/download</a></p>
 </li>
 <li><p>Create the required configuration files by running the following command:</p>
-<pre><code>s3cmd ---configure
+<pre><code class="lang-none">s3cmd --configure
 </code></pre>
 </li>
 <li><p>When prompted, provide the following information:</p>
 <ul>
-<li><p>Access Key --- your User ID (you can find this in the Storage section of the UKCloud Portal)</p>
+<li><p>Access Key - your User ID (you can find this in the Storage section of the UKCloud Portal)</p>
 </li>
-<li><p>Secret Key --- your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)</p>
+<li><p>Secret Key - your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)</p>
 </li>
-<li><p>Encryption password --- create a secure password</p>
+<li><p>Encryption password - create a secure password</p>
 </li>
-<li><p>Path to GPG program --- as appropriate for your system</p>
+<li><p>Path to GPG program - as appropriate for your system</p>
 </li>
-<li><p>Use HTTPS protocol --- Yes</p>
+<li><p>Use HTTPS protocol - Yes</p>
 </li>
 </ul>
 </li>
 <li><p>You'll be prompted to test the connection. After the test, even if it fails, save the configuration, which will be written to <code>~/.s3cfg</code>.</p>
 </li>
 <li><p>Edit the <code>~/.s3cfg</code> file and confirm that the <code>host_base</code> and <code>host_bucket</code> lines look like the following:</p>
-<p><code>host_base</code> = <code>&lt;api_endpoint&gt;</code></p>
-<p><code>host_bucket</code> = <code>%(bucket)s.&lt;api_endpoint&gt;</code></p>
+<p><code>host_base = &lt;api_endpoint&gt;</code></p>
+<p><code>host_bucket = %(bucket)s.&lt;api_endpoint&gt;</code></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Ensure that you use the appropriate <code>api_endpoint</code>, as shown in <a href="#before-you-begin">Before you begin</a>, for example:<br>
-<code>host_base</code> = <code>cas.cor00005.ukcloud.com</code></br>
-<code>host_bucket</code> = <code>%(bucket)s.cas.cor00005.ukcloud.com</code></p>
+<code>host_base = cas.cor00005.ukcloud.com</code></br>
+<code>host_bucket = %(bucket)s.cas.cor00005.ukcloud.com</code></p>
 </div>
 </li>
 <li><p>Save the file.</p>
 </li>
 <li><p>The S3cmd tool is now ready to use. To list your buckets, run the following command:</p>
-<pre><code>s3cmd ls
+<pre><code class="lang-none">s3cmd ls
 </code></pre>
 </li>
 <li><p>You can find detailed instructions for using the tool in the accompanying README file.</p>
 </li>
 </ol>
-<h3 id="using-s3express----a-windows-cli-for-the-s3-api">Using S3Express--- a Windows CLI for the S3 API</h3>
-<p>S3Express is a lightweight command-line tool for Windows that is self-contained in a single executable. It's a licensed product, with free trials also available.</p>
+<h3 id="using-s3express-a-windows-cli">Using S3Express (a Windows CLI)</h3>
+<p>S3Express is a lightweight command-line tool for Windows, which is self-contained in a single executable. It's a licensed product, with free trials also available.</p>
 <p>To use S3Express:</p>
 <ol>
 <li><p>Download and install the S3Express files from the following location:</p>
@@ -395,7 +339,7 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 </ul>
 </li>
 <li><p>The S3Express tool is now ready to use. To list your buckets, run the following command:</p>
-<pre><code>ls
+<pre><code class="lang-none">ls
 </code></pre>
 </li>
 <li><p>For detailed instructions, refer to the Windows help file, which is installed along with the tool.</p>
@@ -418,8 +362,6 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 </li>
 <li><p>View information about the buckets within a namespace, including:</p>
 <ul>
-<li><p>API Type: Atmos or S3</p>
-</li>
 <li><p>Storage consumed by the bucket</p>
 </li>
 <li><p>Number of objects in the bucket</p>
@@ -429,7 +371,7 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 <li><p>View a graphical representation of the storage consumed by a bucket over the last 30 days</p>
 </li>
 </ul>
-<p><strong>More information!</strong> <a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a></p>
+<p>For more information, see <a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a>.</p>
 <p>To access your Cloud Storage service in the UKCloud Portal:</p>
 <ol>
 <li><p>Log in to the UKCloud Portal and select your account.</p>
@@ -459,18 +401,48 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 </ul>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to Cloud Storage.</p>
-<p><strong>Atmos</strong>  An object-based cloud storage platform developed by EMC.</p>
-<p><strong>bucket</strong>  A container for objects within a namespace.</p>
-<p><strong>Cloud Storage</strong>  UKCloud's secure and highly adaptable storage platform designed to
-address a wide variety of use cases. Cloud Storage is based on object storage technology that is natively optimised for cloud storage in terms of scale, resilience and accessibility.</p>
-<p><strong>Elastic Cloud Storage (ECS)</strong>  A next-generation object-based storage platform developed by EMC.</p>
-<p><strong>namespace</strong>  A construct used to ensure that objects are uniquely named in a
-multi-tenant environment.</p>
-<p><strong>object storage</strong>  A method of storing unstructured data as objects (file + metadata) in non-hierarchical containers or buckets. Each object has a unique identifier to enable the object to be easily retrieved without knowing its exact location.</p>
-<p><strong>S3</strong>  The de-facto API standard for object storage.</p>
-<p><strong>secret key</strong>  A method of providing authenticated access to objects in Cloud Storage.</p>
-<p><strong>subtenant</strong>  A construct used to create a multi-tenant environment within Cloud
-Storage.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>bucket</strong></td>
+<td>A container for objects within a namespace.</td>
+</tr>
+<tr>
+<td><strong>Cloud Storage</strong></td>
+<td>UKCloud's secure and highly adaptable storage platform designed to address a wide variety of use cases. Cloud Storage is based on object storage technology that is natively optimised for cloud storage in terms of scale, resilience and accessibility.</td>
+</tr>
+<tr>
+<td><strong>Elastic Cloud Storage (ECS)</strong></td>
+<td>A next-generation object-based storage platform developed by EMC.</td>
+</tr>
+<tr>
+<td><strong>namespace</strong></td>
+<td>A construct used to ensure that objects are uniquely named in a multi-tenant environment.</td>
+</tr>
+<tr>
+<td><strong>object storage</strong></td>
+<td>A method of storing unstructured data as objects (file + metadata) in non-hierarchical containers or buckets. Each object has a unique identifier to enable the object to be easily retrieved without knowing its exact location.</td>
+</tr>
+<tr>
+<td><strong>S3</strong></td>
+<td>The de-facto API standard for object storage.</td>
+</tr>
+<tr>
+<td><strong>secret key</strong></td>
+<td>A method of providing authenticated access to objects in Cloud Storage.</td>
+</tr>
+<tr>
+<td><strong>subtenant</strong></td>
+<td>A construct used to create a multi-tenant environment within Cloud Storage.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
@@ -509,7 +481,7 @@ Storage.</p>
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -517,12 +489,19 @@ Storage.</p>
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -532,5 +511,6 @@ Storage.</p>
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

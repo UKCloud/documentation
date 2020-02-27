@@ -1,5 +1,5 @@
 ---
-title: OpenStack public image versioning | UKCloud Ltd
+title: OpenStack public image versioning
 description: Describes how image versioning works in the UKCloud public catalog for UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor

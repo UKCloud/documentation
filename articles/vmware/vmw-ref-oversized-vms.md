@@ -1,5 +1,5 @@
 ---
-title: Oversized VMs on UKCloud for VMware | UKCloud Ltd
+title: Oversized VMs on UKCloud for VMware
 description: Advisory statement on UKCloud's position on VMs that exceed the maximum configuration
 services: vmware
 author: Sue Highmoor

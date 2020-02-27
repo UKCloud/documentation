@@ -1,5 +1,5 @@
 ---
-title: Protective Monitoring from UKCloud | UKCloud Ltd
+title: Protective Monitoring from UKCloud
 description: Provides information about UKCloud's Protective Monitoring service
 services: other
 author: Sue Highmoor

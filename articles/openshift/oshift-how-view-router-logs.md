@@ -1,5 +1,5 @@
 ---
-title: How to view your OpenShift router logs | UKCloud Ltd
+title: How to view your OpenShift router logs
 description: Explains how to view the logs on the OpenShift routers
 services: openshift
 author: Gareth Ellner

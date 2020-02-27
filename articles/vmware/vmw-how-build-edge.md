@@ -1,5 +1,5 @@
 ---
-title: How to build an edge gateway using the UKCloud Portal | UKCloud Ltd
+title: How to build an edge gateway using the UKCloud Portal
 description: Describes how to use the UKCloud Portal to build an edge gateway
 services: vmware
 author: Sue Highmoor
@@ -83,8 +83,6 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
     ![Build VDC Status - failed](images/vmw-portal-build-edge-fail.png)
 
 ## Next steps
-
-After you create your edge gateway, we recommend that you convert it to an advanced gateway to access the latest vCloud Director functionality. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
 
 For information about how to configure your new edge gateway, see:
 

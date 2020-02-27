@@ -1,5 +1,5 @@
 ---
-title: Portal permissions | UKCloud Ltd
+title: Portal permissions
 description: A guide to the various permissions available to Portal users and what behaviour they enable
 services: portal
 author: Sue Highmoor
@@ -85,7 +85,7 @@ Users need to be granted access to the relevant OpenStack project. Once access i
 
 ## Permissions for Billing
 
-Users can see financial data for their compute services in My VMs. This includes spend to date and estimated spend for the month.
+Users with **API** permissions can retrieve billing information using the Portal API. For more information, see the *GET /api/billing/billing-csv* section of the [*UKCloud Portal API Reference Guide*](ptl-ref-portal-api.md).
 
 ## Permissions for Monitoring
 

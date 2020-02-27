@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Microsoft Azure | UKCloud Ltd
+title: UKCloud for Microsoft Azure
 description: Home page for UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor

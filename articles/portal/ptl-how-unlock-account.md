@@ -1,5 +1,5 @@
 ---
-title: How to unlock a user account | UKCloud Ltd
+title: How to unlock a user account
 description: Explains how a Portal administrator can unlock a Portal user account
 services: portal
 author: Sue Highmoor

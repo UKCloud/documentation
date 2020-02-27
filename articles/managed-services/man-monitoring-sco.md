@@ -1,5 +1,5 @@
 ---
-title: Managed Monitoring from UKCloud Service Scope | UKCloud Ltd
+title: Managed Monitoring from UKCloud Service Scope
 description: Outlines important details regarding the Managed Monitoring from UKCloud service
 services: managed-services
 author: Steve Dixon

@@ -1,8 +1,10 @@
 ---
-title: Cisco AppDynamics from UKCloud Service Definition | UKCloud Ltd
+title: Cisco AppDynamics from UKCloud Service Definition
 description: Provides an overview of what is provided by the Cisco AppDynamics from UKCloud service
 services: third-party
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Cisco AppDynamics
 toc_sub1: 
 toc_sub2:

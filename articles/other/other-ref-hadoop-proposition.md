@@ -1,5 +1,5 @@
 ---
-title: Big Data & Hadoop Service Proposition | UKCloud Ltd
+title: Big Data & Hadoop Service Proposition
 description: Outlines UKCloud's positioning around the delivery of Hadoop and Big Data solutions
 services: other
 author: Sue Highmoor

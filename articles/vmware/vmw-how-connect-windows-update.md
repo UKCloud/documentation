@@ -1,5 +1,5 @@
 ---
-title: How to connect to the UKCloud Windows Server Update Services (WSUS) | UKCloud Ltd
+title: How to connect to the UKCloud Windows Server Update Services (WSUS)
 description: Shows how to connect to the UKCloud Windows Update Services within vCloud Director
 services: vmware
 author: Sue Highmoor

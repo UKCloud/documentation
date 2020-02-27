@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Changes in vCloud Director 9.7 | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Changes in vCloud Director 9.7 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Changes in vCloud Director 9.7 | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Changes in vCloud Director 9.7 ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -95,13 +95,8 @@
 
 <h2 id="overview">Overview</h2>
 <p>After the recent upgrades to vCloud Director 9.7, there are some things you might need to take into consideration.</p>
-<h2 id="upgrade-to-advanced-edge-gateways">Upgrade to advanced edge gateways</h2>
-<p>vCloud Director 9.7 supports only advanced edge gateways. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>The conversion process will cause the gateway to redeploy. Therefore, you should schedule the conversion during an outage window.</p>
-</div>
-<p>As part of the upgrades, UKCloud requested that any edge gateways be upgraded before 31st May 2019. UKCloud will convert any remaining standard edge gateways at our convenience.</p>
+<h2 id="advanced-edge-gateways">Advanced edge gateways</h2>
+<p>vCloud Director 9.7 supports only advanced edge gateways. As part of the upgrades, UKCloud requested that any edge gateways be upgraded before 31st May 2019.</p>
 <h2 id="changes-to-apis">Changes to APIs</h2>
 <p>vCloud Director 9.7 supports vCloud API version 32.0. For information the changes to the vCloud API for this version, see <a href="https://code.vmware.com/apis/553/doc/diff/index.html"><em>vCloud API Schema Differences</em></a>.</p>
 <p>vCloud Director 9.7 is the last release of vCloud Director to support vCloud API 20. The 20 version of the API is deprecated in this release and will not be supported in future releases.</p>
@@ -145,7 +140,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -153,12 +148,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -168,5 +170,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

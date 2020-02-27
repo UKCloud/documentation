@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Oracle Software templates | UKCloud Ltd
+title: UKCloud for Oracle Software templates
 description: Lists the Oracle VM templates that UKCloud provides by default with UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor

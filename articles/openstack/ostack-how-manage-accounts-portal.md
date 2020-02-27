@@ -1,5 +1,5 @@
 ---
-title: How to manage UKCloud for OpenStack accounts in the UKCloud Portal | UKCloud Ltd
+title: How to manage UKCloud for OpenStack accounts in the UKCloud Portal
 description: Shows how Portal administrators can use the UKCloud Portal to create user accounts and set access permissions for UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor

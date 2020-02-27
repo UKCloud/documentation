@@ -1,5 +1,5 @@
 ---
-title: Virtual machine disk limits and considerations | UKCloud Ltd
+title: Virtual machine disk limits and considerations
 description: Defines UKCloud's recommended soft limits regarding disk capacity and any associated operational considerations
 services: vmware
 author: Sue Highmoor

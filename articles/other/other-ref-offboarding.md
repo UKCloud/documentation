@@ -1,13 +1,13 @@
 ---
-title: Terminating your UKCloud services | UKCloud Ltd
+title: Terminating your UKCloud services
 description: Provides useful information for offboarding UKCloud services, including key customer and UKCloud responsibilities
 services: other
 author: Sue Highmoor
-reviewer:
-lastreviewed: 06/12/2018 16:00:29
+reviewer: Sue Highmoor
+lastreviewed: 14/02/2020
 
 toc_rootlink: Reference
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -20,7 +20,7 @@ toc_mdlink: other-ref-offboarding.md
 
 ## Overview
 
-UKCloud is easy to adopt, easy to use and easy to leave, so our intention is to make the service termination process, sometimes referred to as offboarding, as simple as possible.
+UKCloud is easy to adopt, easy to use and easy to leave, so our intention is to make the service termination process, sometimes referred to as offboarding or deprovisioning, as simple as possible.
 
 This article clearly outlines customer and UKCloud responsibilities for terminating your UKCloud services.
 
@@ -32,7 +32,7 @@ The notice required to terminate UKCloud services varies depending on the servic
 
 You can request the termination of one or more services within your account. In this case, the termination is restricted to the chargeable items within that service (for example, a VMware environment within a customer account).
 
-If you want to terminate your whole account with UKCloud, you must raise separate termination requests for each service associated with your customer contract. The final stage of the termination of a complete customer account will be the decommissioning of the last UKCloud Portal user, decommissioning of all customer reports and termination of the ability to access customer ticket details and service reports through the Portal.
+If you want to terminate your whole account with UKCloud, you must raise separate termination requests for each service associated with your customer contract. The final stage of the termination of a complete customer account will be the decommissioning of the last UKCloud Portal user, decommissioning of all customer reports and termination of the ability to access customer ticket details through the Portal.
 
 ## Customer responsibilities
 
@@ -197,6 +197,21 @@ Customer responsibilities | UKCloud responsibilities
 Customer-provided private networks | External network connections
 Customer-provided IP ranges | Allocated IP ranges
 Customer co-lo'd kit | Private VLANs/VRFs
+
+#### [Cloud Enablement](#tab/tabid-16)
+
+Customer responsibilities | UKCloud responsibilities
+--------------------------|-------------------------
+Remove customer equipment from Cloud Enablement bays | Escort customer to remove equipment from Cloud Enablement bays
+&nbsp; | Remove physical and logical networking
+
+#### [Big Cloud Enablement](#tab/tabid-17)
+
+Customer responsibilities | UKCloud responsibilities
+--------------------------|-------------------------
+Remove customer equipment from Big Cloud Enablement racks | Escort customer to remove equipment from Big Cloud Enablement racks
+&nbsp; | Remove logical networking config
+&nbsp; | Remove physical networking if UKCloud-provided
 
 ***
 

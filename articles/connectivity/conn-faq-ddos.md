@@ -1,5 +1,5 @@
 ---
-title: DDoS mitigation service FAQs | UKCloud Ltd
+title: DDoS mitigation service FAQs
 description: Frequently asked questions for our DDoS mitigation service
 services: connectivity
 author: Matt Warner

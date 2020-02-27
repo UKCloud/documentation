@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to publish application routes to multiple networks | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to publish application routes to multiple networks </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to publish application routes to multiple networks | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to publish application routes to multiple networks ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -96,7 +96,7 @@
 <h2 id="overview">Overview</h2>
 <p>This article provides instructions on how to make use of multiple external networks from within an OpenShift cluster. If you've requested an OpenShift cluster with multiple networks from UKCloud you'll have multiple data planes - usually one for the internet and one for the community network you’ve requested be added to your deployment. Building applications that listen on these networks is relatively straightforward but requires some specific configuration to be put in place on your application routes. This guide should help explain how you go about exposing your application on the relevant networks.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide you must have access to and a working knowledge of <code>oc</code>, the OpenShift command-line client (CLI). For more information, see OpenShift's <a href="https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a>.</p>
+<p>To complete the steps in this guide you must have access to and a working knowledge of <code>oc</code>, the OpenShift command-line client (CLI). For more information, see OpenShift's <a href="https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a>.</p>
 <h2 id="high-level-overview">High level overview</h2>
 <p>Firstly, an explanation of what gets deployed: the cluster will have front-end load balancers that sit outside OpenShift, which essentially do TCP passthrough of incoming traffic to the OpenShift routers deployed inside your cluster. As a cluster administrator, you can see the OpenShift routers by viewing the <code>default</code> project. You'll also have another set of routers that run on the community network facing nodes that provide termination of inbound traffic from the community network.</p>
 <p><img src="images/oshift-sharding-network-flows.png" alt="High-level overview of inbound data flows"></p>
@@ -363,7 +363,7 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
 <p>If you want to expose applications on a private network, the above logic still applies. The only differences are that the deployment config for the router is called <code>router-private</code> and the route label required to expose your routes is <code>router-private=true</code>.</p>
 </div>
 <h2 id="further-reading">Further reading</h2>
-<p>OpenShift documentation on router sharding: <a href="https://docs.openshift.com/container-platform/3.9/architecture/networking/routes.html#router-sharding">https://docs.openshift.com/container-platform/3.9/architecture/networking/routes.html#router-sharding</a></p>
+<p>OpenShift documentation on router sharding: <a href="https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html#router-sharding">https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html#router-sharding</a></p>
 <p>OpenShift blog post on router sharding: <a href="https://blog.openshift.com/openshift-router-sharding-for-production-and-development-traffic/">https://blog.openshift.com/openshift-router-sharding-for-production-and-development-traffic/</a></p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
@@ -403,7 +403,7 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -411,12 +411,19 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -426,5 +433,6 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

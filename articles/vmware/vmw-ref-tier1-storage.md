@@ -1,5 +1,5 @@
 ---
-title: Tier 1 storage | UKCloud Ltd
+title: Tier 1 storage
 description: Provides an overview of Tier 1 block storage
 services: vmware
 author: Sue Highmoor

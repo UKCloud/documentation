@@ -1,5 +1,5 @@
 ---
-title: How to create a Service Fabric cluster using the UKCloud Azure Stack Hub portal | UKCloud Ltd
+title: How to create a Service Fabric cluster using the UKCloud Azure Stack Hub portal
 description: Provides help for creating a Service Fabric cluster on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson

@@ -1,5 +1,5 @@
 ---
-title: How to access the Zerto Self-Service Portal | UKCloud Ltd
+title: How to access the Zerto Self-Service Portal
 description: Describes how to access the Zerto Self-Service Portal (ZSSP) to manage Disaster Recovery to the Cloud, Journaling Protection and Workload Migration
 services: vmware
 author: Sue Highmoor

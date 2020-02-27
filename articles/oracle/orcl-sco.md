@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Oracle Software Service Scope | UKCloud Ltd
+title: UKCloud for Oracle Software Service Scope
 description: Outlines important details regarding UKCloud for Oracle Software
 services: oracle
 author: Steve Hall
@@ -176,7 +176,7 @@ Users can access, manage and view the UKCloud for Oracle Software service, acces
 
 - **vCloud Director Graphical UI.** Provides a graphical interface to access the vCloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).
 
-- **UKCloud Portal.** Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.
+- **UKCloud Portal.** Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.
 
@@ -186,9 +186,7 @@ UKCloud do not currently provide migration services, however customers are free 
 
 ## Service reporting
 
-**Visibility.** We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the portal.
-
-**Service reporting.** All service reporting is done via the UKCloud Portal.
+**Visibility.** Maintenance notifications and Service Status reports are delivered through the portal.
 
 **Billing.** Billing is issued on a monthly basis where you will be billed for your total monthly consumption.
 
@@ -230,7 +228,7 @@ UKCloud will adhere to the following in terms of maintenance windows:
 
 "Planned Maintenance" means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, if you will be affected then UKCloud shall provide you with at least fourteen (14) days' notice of the Planned Maintenance.
 
-If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For OVMs, this time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For OVMs, this time will be excluded from the availability calculation.
 
 "Emergency Maintenance" means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud will:
 
@@ -238,7 +236,7 @@ a) provide affected customers with at least six (6) hours' advanced notice and;
 
 b) carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
 
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
 
 ## Supporting documents and resources
 

@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Microsoft Azure Service Scope | UKCloud Ltd
+title: UKCloud for Microsoft Azure Service Scope
 description: Outlines important details regarding UKCloud for Microsoft Azure
 services: azure-stack
 author: Mario Fedato
@@ -186,7 +186,7 @@ Users can access, manage and view the UKCloud for Microsoft Azure service, acces
 
 - **Azure Stack Hub graphical UI.** Provides a graphical interface to access the Azure Stack Hub environment (depending on assigned permissions).
 
-- **UKCloud Portal.** Access to service reporting and incident and request management.
+- **UKCloud Portal.** Access to incident and request management.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware.
 
@@ -194,7 +194,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 **Visibility.** You can use the UKCloud Azure Stack Hub portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.
 
-**Reporting.** We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal and via the [UKCloud status page](https://status.ukcloud.com/).
+**Reporting.** Maintenance notifications and Service Status reports are delivered through the Portal and via the [UKCloud status page](https://status.ukcloud.com/).
 
 **Billing.** We provide you with monthly bills covering your monthly spend.
 
@@ -246,7 +246,7 @@ a)  provide affected customers with at least six (6) hours' advance notice and
 
 b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
 
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
 
 ## Supporting documents and resources
 

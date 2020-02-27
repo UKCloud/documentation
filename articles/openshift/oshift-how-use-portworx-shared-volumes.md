@@ -1,5 +1,5 @@
 ---
-title: How to use Portworx shared volumes | UKCloud Ltd
+title: How to use Portworx shared volumes
 description: Explains how to use shared volumes in a Portworx integrated OpenShift cluster
 services: openshift
 author: Ben Bacon

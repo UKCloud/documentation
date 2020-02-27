@@ -1,5 +1,5 @@
 ---
-title: Command-line clients for UKCloud for OpenStack | UKCloud Ltd
+title: Command-line clients for UKCloud for OpenStack
 description: Collects the help content from the OpenStack command-line clients, for reference
 services: openstack
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: How to use OpenStack instance metadata | UKCloud Ltd
+title: How to use OpenStack instance metadata
 description: Shows you how to add metadata to an instance and how to retrieve instance metadata
 services: openstack
 author: Sue Highmoor

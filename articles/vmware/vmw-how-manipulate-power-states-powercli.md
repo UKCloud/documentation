@@ -1,5 +1,5 @@
 ---
-title: How to manipulate power states with PowerCLI | UKCloud Ltd
+title: How to manipulate power states with PowerCLI
 description: Describes how to manipulate power states with PowerCLI
 services: vmware
 author: Sue Highmoor

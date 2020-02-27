@@ -1,5 +1,5 @@
 ---
-title: How to configure an L2 VPN | UKCloud Ltd
+title: How to configure an L2 VPN
 description: Describes how to configure your Layer 2 VPN (L2 VPN), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
@@ -43,8 +43,6 @@ UKCloud L2 VPN functionality covers three scenarios:
 Before enabling L2 VPN, consider the following:
 
 - You must have purchased the Advanced Management bundle for your UKCloud for VMware service
-
-- You must have converted your edge gateway to an advanced gateway (see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md))
 
 - This service takes up one of your allocated IP addresses (primary or secondary)
 
@@ -208,13 +206,9 @@ If the source site is not backed by NSX, you can deploy a standalone edge as the
 
     For more information, see the following VMware article: [Configure Standalone Edge as L2 VPN Client](https://pubs.vmware.com/NSX-61/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-C9E2B0E4-F1C1-44A7-B142-F814F801FA42.html).
 
-2. Convert the edge gateway to an advanced gateway.
+2. Create a port group and convert it to a sub interface.
 
-    For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
-
-3. Create a port group and convert it to a sub interface.
-
-4. You can now set up your L2 VPN by following the steps below, using the standalone edge as the source edge gateway.
+3. You can now set up your L2 VPN by following the steps below, using the standalone edge as the source edge gateway.
 
     - [*Creating certificates*](#creating-certificates)
 

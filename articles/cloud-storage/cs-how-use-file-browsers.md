@@ -1,5 +1,5 @@
 ---
-title: How to use file browsers with Cloud Storage | UKCloud Ltd
+title: How to use file browsers with Cloud Storage
 description: Using file browsers with Cloud Storage
 services: cloud-storage
 author: Dan Baker
@@ -29,13 +29,10 @@ Web applications can easily interact with the API, but the ability to browse the
 
 - Easy maintenance and housekeeping of the objects in the storage system
 
-ECS provides two APIs that you can use to manage Cloud Storage: the S3 compatible API and the EMC ECS Atmos API.
+ECS provides an S3-compatible API that you can use to manage Cloud Storage.
 
 > [!NOTE]
 > The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API.
-
-> [!IMPORTANT]
-> If you write content to Cloud Storage using one of the APIs, you cannot subsequently access that content using the other API. Choose carefully which API you want to use before beginning a project, as it will be difficult to move between them.
 
 In this article, we'll look at a couple of the many applications that enable you to browse an object storage system.
 

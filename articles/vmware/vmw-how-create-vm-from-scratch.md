@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual machine from scratch | UKCloud Ltd
+title: How to create a virtual machine from scratch
 description: Shows how to create virtual machines from scratch within vCloud Director
 services: vmware
 author: Sue Highmoor

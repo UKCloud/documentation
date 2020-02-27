@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenStack FAQs | UKCloud Ltd
+title: UKCloud for OpenStack FAQs
 description: Frequently asked questions for UKCloud for OpenStack
 services: openstack
 author: Matt Warner
@@ -170,7 +170,9 @@ The answer to this depends on which of UKCloud's OpenStack platforms you are usi
 | Region              | OpenStack version                      | LBaaS supported? |
 |---------------------|----------------------------------------|------------------|
 | COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services. <BR> UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution. |
-| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes. Uses the [*OpenStack Octavia*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
+| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* - Uses the [OpenStack Octavia](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
+  
+<i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i>
 
 ### Can I deploy my own load balancer?
 
@@ -226,10 +228,12 @@ Due to a current constraint within the OpenStack project, a maximum total of 25 
 
 The answer to this depends on which of UKCloud's OpenStack services you are using:
 
-| Region              | OpenStack version                      | LBaaS supported? |
+| Region              | OpenStack version                      | Encrypted volumes supported? |
 |---------------------|----------------------------------------|------------------|
 | COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as Red Hat's Newton release does not support native Key Management as a Service (KMaaS) to underpin encryption  |
-| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes |
+| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* |
+
+<i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i>
 
 ### What type of volume encryption is offered?
 
@@ -482,7 +486,7 @@ You can find pricing details in the OpenStack section of the [UKCloud Pricing Gu
 
 ### Are there any additional fees for the TrilioVault self-service backup and restoration service?
 
-This service utilises UKCloud's [*Multi-Cloud Backup Storage*](../mcbs/mcbs-sd.md) (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+This service utilises UKCloud's [*Multi-Cloud Backup Storage*](../other/other-sd-mcbs.md) (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
 
 ### Can I use my own backup software?
 

@@ -1,5 +1,5 @@
 ---
-title: Cloud GPU FAQs | UKCloud Ltd
+title: Cloud GPU FAQs
 description: Frequently asked questions for Cloud GPU
 services: gpu
 author: Matt Warner

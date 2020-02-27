@@ -1,5 +1,5 @@
 ---
-title: Cloud Enablement services | UKCloud Ltd
+title: Cloud Enablement services
 description: Lists the cloud enablement services provided by UKCloud
 services: enablement
 author: Sue Highmoor

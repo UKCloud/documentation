@@ -1,5 +1,5 @@
 ---
-title: OpenShift integrated cluster monitoring | UKCloud Ltd
+title: OpenShift integrated cluster monitoring
 description: Provides information on the Prometheus monitoring stack deployed with OpenShift v3.11
 services: openshift
 author: Kieran O'Neill

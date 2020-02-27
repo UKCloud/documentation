@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Journaling Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Journaling Protection Service Scope </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Journaling Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Journaling Protection Service Scope ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -122,8 +122,8 @@
 </ul>
 <p>Additionally, the service will also alert if a customer's journal exceeds 75% in size of the original VM. This alert is utilised to understand if the customer's solution is being protected adequately.</p>
 <p>Journaling Protection only works for VM's currently on the platform -- it will only capture data whilst a VM is turned on. If a VM is deleted in vCloud Director -- Journaling Protection will IMMEDIATELY delete the associated journal.</p>
-<h3 id="what-sla-do-you-offer-on-snapshot-success">What SLA do you offer on snapshot success?</h3>
-<p>UKCloud do not offer an SLA around the VMs protected by UKCloud's Journaling Protection solution. However, the status of journaled VM's is monitored continuously, and the UKCloud support team investigates all failures or service degradation.</p>
+<h3 id="what-sla-do-you-offer-on-journaling-protection">What SLA do you offer on Journaling Protection?</h3>
+<p>UKCloud do not offer an SLA around the VMs protected by UKCloud's Journaling Protection solution. However, the status of journaled VMs is monitored continuously, and the UKCloud support team investigates all failures or service degradation.</p>
 <h3 id="other">Other</h3>
 <p>The service is not backed by service credits.</p>
 <p>On occasion, planned maintenance may disrupt the operation of the Journaling Protection service. This may lead to the service being unavailable, or a temporary increase to the RPO a customer may be able to achieve on the platform.</p>
@@ -147,10 +147,6 @@
 <p>UKCloud have disabled some areas of the self-service portal as they are for services we do not presently support. These include:</p>
 <ul>
 <li>Backup to external systems. At present, customers are unable to export their journal to external backup targets (such as UKCloud Cloud Storage). We have identified a compliance issue with this solution which we are working to address. Until this is addressed, the feature will remain unavailable.</li>
-</ul>
-<p>Additionally, the following scenario cannot be supported:</p>
-<ul>
-<li>Organisation network IP subnets can only be different in the protected and recovery sites if IP Pool or DHCP address assignment is used in both sites. If manually assigned IPs are used in the protected site, the configured recovery organisation network on the recovery site must have the same IP subnet as on the protected site.</li>
 </ul>
 <h2 id="alerting-and-reporting">Alerting and reporting</h2>
 <p>The self-service portal provides live real time reporting of your solution and the current level of protection being provided to your vApp.</p>
@@ -206,7 +202,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -214,12 +210,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -229,5 +232,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

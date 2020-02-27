@@ -1,8 +1,10 @@
 ---
-title: UKCloud for Microsoft Azure Service Definition | UKCloud Ltd
+title: UKCloud for Microsoft Azure Service Definition
 description: Provides an overview of what is provided by the UKCloud for Microsoft Azure service
 services: azure-stack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 01/07/2019
 toc_rootlink: Users
 toc_sub1: Service Definition
 toc_sub2:

@@ -1,5 +1,5 @@
 ---
-title: How to use the VMware OVF Tool | UKCloud Ltd
+title: How to use the VMware OVF Tool
 description: Describes how to use the VMware OVF Tool to assist in the distribution of virtual machines and vApps
 services: vmware
 author: Steve Hall

@@ -1,5 +1,5 @@
 ---
-title: Telecommunications Service Provider engagement | UKCloud Ltd
+title: Telecommunications Service Provider engagement
 description: Outlines the engagement process, demarcation points and responsibilities of all parties  regarding provisioning connectivity into UKCloud via HybridConnect
 services: connectivity
 author: Sue Highmoor

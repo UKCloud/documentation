@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to configure an L2 VPN | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to configure an L2 VPN </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to configure an L2 VPN | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to configure an L2 VPN ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -112,8 +112,6 @@
 <p>Before enabling L2 VPN, consider the following:</p>
 <ul>
 <li><p>You must have purchased the Advanced Management bundle for your UKCloud for VMware service</p>
-</li>
-<li><p>You must have converted your edge gateway to an advanced gateway (see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>)</p>
 </li>
 <li><p>This service takes up one of your allocated IP addresses (primary or secondary)</p>
 </li>
@@ -265,9 +263,6 @@
 <li><p>Download <code>NSX-l2vpn-client.ovf</code> and deploy the standalone edge.</p>
 <p>For more information, see the following VMware article: <a href="https://pubs.vmware.com/NSX-61/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-C9E2B0E4-F1C1-44A7-B142-F814F801FA42.html">Configure Standalone Edge as L2 VPN Client</a>.</p>
 </li>
-<li><p>Convert the edge gateway to an advanced gateway.</p>
-<p>For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-</li>
 <li><p>Create a port group and convert it to a sub interface.</p>
 </li>
 <li><p>You can now set up your L2 VPN by following the steps below, using the standalone edge as the source edge gateway.</p>
@@ -325,7 +320,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -333,12 +328,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -348,5 +350,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

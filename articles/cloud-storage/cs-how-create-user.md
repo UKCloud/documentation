@@ -1,5 +1,5 @@
 ---
-title: How to create a new Cloud Storage user in the UKCloud Portal | UKCloud Ltd
+title: How to create a new Cloud Storage user in the UKCloud Portal
 description: Describes how to create a new Cloud Storage user in the UKCloud Portal
 services: cloud-storage
 author: Sue Highmoor

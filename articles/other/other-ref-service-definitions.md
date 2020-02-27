@@ -1,5 +1,5 @@
 ---
-title: UKCloud Service Definitions and Pricing Guide | UKCloud Ltd
+title: UKCloud Service Definitions and Pricing Guide
 description: List of Service Definitions for UKCloud services, including terms and conditions, SFIA rate card, and pricing guide
 services: Other
 author: Sue Highmoor
@@ -55,7 +55,7 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Migration to the Cloud](../migration/migr-sd.md)
 
-[Multi-Cloud Backup Storage](../mcbs/mcbs-sd.md)
+[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md)
 
 [Private Cloud](../private-cloud/prc-sd.md)
 

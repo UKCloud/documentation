@@ -1,5 +1,5 @@
 ---
-title: G-Cloud 11 - Our enhancements and additions | UKCloud Ltd
+title: G-Cloud 11 - Our enhancements and additions
 description: Frequently asked questions (FAQs) for our G-Cloud 11 services
 services: other
 author:  Sue Highmoor

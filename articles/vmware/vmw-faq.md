@@ -1,5 +1,5 @@
 ---
-title: UKCloud for VMware FAQs | UKCloud Ltd
+title: UKCloud for VMware FAQs
 description: Frequently asked questions for UKCloud for VMware
 services: vmware
 author: Matt Warner
@@ -374,7 +374,10 @@ VMware provides a compatibility matrix at: <https://partnerweb.vmware.com/comp_g
 
 You can use the UKCloud catalog of operating systems or upload your own.
 
-We offer Windows Server 2008 R2 Enterprise, Windows 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.
+We offer Windows Server 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.
+
+> [!NOTE]
+> On 14 January 2020, Microsoft ended support for Windows Server 2008, therefore we highly recommend that you upgrade to Windows Server 2012 or Windows Server 2016 to remain secure. 
 
 In addition, we provide access to common templates provided by the Bitnami service such as Drupal, Joomla, LAMP and Wordpress.
 

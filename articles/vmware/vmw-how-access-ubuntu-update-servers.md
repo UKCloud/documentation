@@ -1,5 +1,5 @@
 ---
-title: How to access Ubuntu update servers  | UKCloud Ltd
+title: How to access Ubuntu update servers 
 description: This guide shows you how to configure access to Ubuntu update servers from within vCloud Director
 services: vmware
 author: Sue Highmoor

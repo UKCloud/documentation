@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenStack Service Scope | UKCloud Ltd
+title: UKCloud for OpenStack Service Scope
 description: Outlines important details regarding Cloud Native Infrastructure
 services: openstack
 author: Steve Hall

@@ -1,5 +1,5 @@
 ---
-title: How to access syslog data for your advanced gateway | UKCloud Ltd
+title: How to access syslog data for your advanced gateway
 description: Explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your advanced gateway
 services: vmware
 author: Sue Highmoor

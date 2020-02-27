@@ -1,5 +1,5 @@
 ---
-title: Managing your UKCloud for VMware environment using the UKCloud Portal API | UKCloud Ltd
+title: Managing your UKCloud for VMware environment using the UKCloud Portal API
 description: Explains how changes to the platform architecture affect how you use the Portal API when working with solutions that span multiple regions
 services: vmware
 author: Sue Highmoor

@@ -1,5 +1,5 @@
 ---
-title: PSN flattening | UKCloud Ltd
+title: PSN flattening
 description: Provides information about plans to flatten the PSN Assured and PSN Protected networks
 services: connectivity
 author: Sue Highmoor

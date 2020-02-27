@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual machine scale set using the UKCloud Azure Stack Hub portal | UKCloud Ltd
+title: How to create a VM scale set
 description: Provides help for creating a virtual machine scale set on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
@@ -11,7 +11,7 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create a scale set
+toc_title: Create a VM scale set
 toc_fullpath: Users/How To/azs-how-create-scale-set.md
 toc_mdlink: azs-how-create-scale-set.md
 ---

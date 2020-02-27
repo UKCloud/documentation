@@ -1,8 +1,10 @@
 ---
-title: HyTrust DataControl from UKCloud Service Definition | UKCloud Ltd
+title: HyTrust DataControl from UKCloud Service Definition
 description: Provides an overview of what is provided by the HyTrust DataControl from UKCloud service
 services: third-party
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: HyTrust DataControl
 toc_sub1: 
 toc_sub2:

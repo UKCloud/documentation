@@ -1,8 +1,10 @@
 ---
-title: Moogsoft AIOps from UKCloud Service Definition | UKCloud Ltd
+title: Moogsoft AIOps from UKCloud Service Definition
 description: Provides an overview of what is provided by the Moogsoft AIOps from UKCloud service
 services: third-party
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Moogsoft AIOps
 toc_sub1: 
 toc_sub2:

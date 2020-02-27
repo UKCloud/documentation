@@ -1,5 +1,5 @@
 ---
-title: How to configure a Distributed Logical Router | UKCloud Ltd
+title: How to configure a Distributed Logical Router
 description: Describes how to configure a Distributed Logical Router (DLR), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
@@ -29,7 +29,6 @@ UKCloud for VMware provides Distributed Logical Router (DLR) functionality as pa
 Before enabling DLR, consider the following:
 
 - You must have purchased the Advanced Management bundle for your UKCloud for VMware service
-- You must have converted your edge gateway to an advanced gateway (see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md))
 - Your advanced gateway must have one free interface for DLR to use for the transit (P2P) network
 - IPv6 is not supported with DLR
 - L2 VPN is not supported on a distributed VDC network

@@ -1,29 +1,29 @@
 ---
-title: How to create new UKCloud for OpenShift users in the UKCloud Portal | UKCloud Ltd
+title: How to create an OpenShift user in the UKCloud Portal
 description: Shows how to create UKCloud for OpenShift users in the UKCloud Portal so that they can benefit from two-factor authentication (2FA)
 services: openshift
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/10/2018 07:26:13
+reviewer: Kieran O'Neill
+lastreviewed: 12/12/2019 07:26:13
 
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create new users
+toc_title: Create a new user
 toc_fullpath: How To/oshift-how-create-users.md
 toc_mdlink: oshift-how-create-users.md
 ---
 
-# How to create new UKCloud for OpenShift users in the UKCloud Portal
+# How to create an OpenShift user in the UKCloud Portal
 
 ## Overview
 
 If your cluster is using OpenShift Container Platform 3.10 or later, you can create users in the UKCloud Portal so that users need to remember only one lot of credentials and can also take advantage of two-factor authentication (2FA) that is provided via the Portal.
 
 > [!NOTE]
-> If your cluster is using an earlier version of OpenShift Container Platform, you must create users within OpenShift. For more information see the OpenShift [*Managing Users*](https://docs.openshift.com/container-platform/3.9/admin_guide/manage_users.html) documentation.
+> If your cluster is using an earlier version of OpenShift Container Platform, you must create users within OpenShift. For more information see the OpenShift [*Managing Users*](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_users.html) documentation.
 
 ## Creating a new OpenShift user
 

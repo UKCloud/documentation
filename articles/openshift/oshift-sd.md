@@ -1,8 +1,10 @@
 ---
-title: UKCloud for OpenShift Service Definition | UKCloud Ltd
+title: UKCloud for OpenShift Service Definition
 description: Provides an overview of what is provided by the UKCloud for OpenShift service
 services: openshift
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:
