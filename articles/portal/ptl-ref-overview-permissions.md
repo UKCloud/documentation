@@ -57,7 +57,7 @@ Support permissions dictate whether a user can view other users support tickets.
 
 ## Permissions for UKCloud for VMware
 
-Compute service permissions are based on the vCloud Director RBAC (role based access control) permissions. These roles are applied on a service by service basis - for example someone might be a Catalogue Author of one service, and a Console Only user in a second service.
+UKCloud for VMware service permissions are based on the vCloud Director RBAC (role based access control) permissions. These roles are applied on a service by service basis - for example someone might be a Catalogue Author of one service, and a Console Only user in a second service.
 
 The roles exposed are:
 
