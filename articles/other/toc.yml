@@ -26,8 +26,6 @@
     href: other-how-contribute-knowledge.md
   - name: Remove access rights from Single Sign-On users
     href: other-how-delete-sso-user.md
-  - name: Share your ideas in the UKCloud Community
-    href: other-how-share-ideas.md
   - name: Use the UKCloud Pricing Estimation Tool
     href: other-how-use-pricing-tool.md
   - name: Use webhooks to receive service status notifications
@@ -114,5 +112,3 @@
     href: other-vid-kc-contribution.md
   - name: Pricing Estimation Tool overview video
     href: other-vid-pricing-tool-overview.md
-  - name: UKCloud Community overview video
-    href: other-vid-community.md
