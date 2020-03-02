@@ -85,6 +85,6 @@ First, take a look at our [Getting Started Guide](vmw-gs.md) to learn the basics
 
 Find answers to common questions in our [UKCloud for VMware FAQ](vmw-faq.md).
 
-## Join the conversation
+## Get in touch
 
-Visit the <a href="https://community.ukcloud.com">UKCloud Community</a> to join the conversation about digital transformation in the UK Public Sector. If you have an idea for how we could improve any of our services, use the <a href="https://community.ukcloud.com/ideas">Ideas</a> section or watch out for regular feedback challenges from our Product Management team. You can also read blogs, watch webinars, sign up to upcoming events and find a Partner to help deliver your project.
+We want to know what you think. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

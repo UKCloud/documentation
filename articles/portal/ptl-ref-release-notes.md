@@ -3,8 +3,8 @@ title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
-reviewer: wllewellyn
-lastreviewed: 24/02/2020
+reviewer: ccampbell
+lastreviewed: 25/02/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,16 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 1.128.0
+
+Date: 25th February 2020
+
+Feature update
+
+Details:
+
+- Removal of the account service reports
 
 ## Release 1.127.0
 
@@ -947,4 +957,4 @@ Details: Fixes to "My VMs" and export improvements to notifications
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
