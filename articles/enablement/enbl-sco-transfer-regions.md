@@ -15,7 +15,7 @@ toc_fullpath: Service Scope/enbl-sco-transfer-regions.md
 toc_mdlink: enbl-sco-transfer-regions.md
 ---
 
-# Data Transfer - VMware Region to Region Service Scope
+# Data Transfer - Region to Region Service Scope
 
 ## About this document
 
@@ -34,7 +34,7 @@ Customers wanting to transfer UKCloud for VMware workloads between regions on th
 
 ## Implementation
 
-To transfer UKCloud for VMware workloads between regions, customers must use the Zerto recovery tool, which will be provisioned and set up for their use to transfer the workloads. This tool is made available free of charge for 10 working days for the migration only. Zerto is also available for UKCloud for VMware workloads for Journaling Protection at additional cost – which is outside of the functionality provided for this specific Region to Region transfer service.
+To transfer UKCloud for VMware workloads between regions, customers must use the Zerto recovery tool, which will be provisioned and set up for their use to transfer the workloads. This tool is made available free of charge for 10 working days for the migration only. Zerto is also available for UKCloud for VMware workloads for Journaling Protection at additional cost – which is outside of the functionality provided for this specific Data Transfer - Region to Region service.
 
 > [!IMPORTANT]
 > While the data transfer service is free of charge for 10 working days, customers will be charged for all compute and storage resources that are consumed in both the source and target regions. It is the customer's responsibility to ensure that the compute and storage in the source region is deleted once the transfer is complete in order to avoid unnecessary charges.
@@ -51,7 +51,7 @@ If you need to transfer workloads between security domains (Assured and Elevated
 
 The actual Zerto transfer service will be provided without charge for the transfer of workloads, with the following restrictions:
 
-- The service is free of charge for the first 10 working days. After  10 working days, the service will be charged as per the standard Journaling Protection costs in the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+- The service is free of charge for the first 10 working days. After 10 working days, the service will be charged as per the standard Journaling Protection costs in the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
 
 - Customers are required to inform UKCloud via a service request to confirm that the transfer is complete. The service will then be stopped, which will prevent further billing.
 
