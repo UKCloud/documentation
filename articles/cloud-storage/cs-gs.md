@@ -3,8 +3,8 @@ title: Getting Started Guide for Cloud Storage
 description: Provides information to get up and running with Cloud Storage
 services: cloud-storage
 author: Sue Highmoor
-reviewer:
-lastreviewed: 03/01/2020
+reviewer: nwayman
+lastreviewed: 24/02/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
