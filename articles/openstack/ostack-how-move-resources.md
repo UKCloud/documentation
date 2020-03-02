@@ -4,7 +4,7 @@ description: Helps you understand how you can move resources between OpenStack r
 services: openstack
 author: Sue Highmoor
 reviewer: scassidy
-lastreviewed: 08/01/2019
+lastreviewed: 08/01/2020
 
 toc_rootlink: How To
 toc_sub1:
