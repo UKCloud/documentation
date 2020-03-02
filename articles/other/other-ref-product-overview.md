@@ -3,8 +3,8 @@ title: Services at a glance
 description: Provides a top level comparison for our main products
 services: other
 author: Steve Hall
-reviewer:
-lastreviewed: 05/10/2018 10:55:30
+reviewer: Sue Highmoor
+lastreviewed: 14/02/2020
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -40,6 +40,8 @@ This article is designed to provide you with a top level comparison for our main
 **Cross Domain Security Zone**         | No         | £500, 1 month                             | 5 days          | 30 days
 **Secure Remote Access**               | No         | Monthly, £350                             | 5 days          | 30 days
 **Cloud GPU**                          | No         | 1 hour, £0.08                             | 10 days         | 30 days
+**Cloud Enablement**                   | VPN: £2,000, Server/storage: Depends on solution | 1 month | Depends on solution | 30 days
+**Big Cloud Enablement**               | 12 month: £5,000 per rack, 36 month: £0 per rack | 12 months | Depends on solution | 30 days (termination cost: Remainder of contract)
 
 ## [VM sizing, billing and trials](#tab/tabid-2)
 
@@ -61,6 +63,8 @@ This article is designed to provide you with a top level comparison for our main
 **Cross Domain Security Zone**         | 1 vCPU, 2 GiB   | 12vCPU, 128 GiB   | monthly for baseline, hourly for VM         | No
 **Secure Remote Access**               | 1 vCPU, 2 GiB   | 12vCPU, 128 GiB   | Monthly for licenses, hourly for VM         | No
 **Cloud GPU**                          | N/A             | N/A               | per hour (per month for HPC)                | Yes
+**Cloud Enablement**                   | N/A             | N/A               | monthly                                     | No
+**Big Cloud Enablement**               | N/A             | N/A               | monthly                                     | No
 
 ## [SLA, service credits and maintenance](#tab/tabid-3)
 
@@ -82,6 +86,8 @@ This article is designed to provide you with a top level comparison for our main
 **Cross Domain Security Zone**         | 99.90%                                       | 10% of monthly spend                                                 | 1% per 1% or part thereof below 9.90% | Excluded
 **Secure Remote Access**               | 99.90%                                       | 10% of monthly spend                                                 | 1% per 1% or part thereof below 9.90% | Included
 **Cloud GPU**                          | 99.90%                                       | 3% of monthly spend per 5% below SLA                                 | 1% per 1% or part thereof below 9.90% | Excluded
+**Cloud Enablement**                   | N/A                                          | N/A                                                                  | N/A                                   | N/A
+**Big Cloud Enablement**               | N/A                                          | N/A                                                                  | N/A                                   | N/A
 
 ## [Discount schemes](#tab/tabid-4)
 
@@ -103,9 +109,11 @@ This article is designed to provide you with a top level comparison for our main
 **Cross Domain Security Zone**         | Commitment, Cloud credits
 **Secure Remote Access**               | Commitment, Cloud credits
 **Cloud GPU**                          | Commitment, Annual subscription, Cloud credits
+**Cloud Enablement**                   | N/A
+**Big Cloud Enablement**               | N/A
 
 ***
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

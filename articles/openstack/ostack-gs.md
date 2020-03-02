@@ -47,7 +47,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 
     If you selected **UKCloud SSO** click **Connect**. You'll be redirected to the SSO login page, where you can enter your username and password and click **Log in**.
 
-    ![SSO Login Page](images/ostack-horizon-sso-login.PNG)
+    ![SSO Login Page](images/ostack-horizon-sso-login.png)
 
     If you've set up two-factor authentication (2FA) in the Portal, you'll be prompted for a 2FA code.
 
@@ -611,4 +611,4 @@ network mounted onto the host hypervisor.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

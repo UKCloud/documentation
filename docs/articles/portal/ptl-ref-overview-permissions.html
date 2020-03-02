@@ -8,7 +8,7 @@
     <title>Portal permissions </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Portal permissions ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -162,7 +162,7 @@
 </tbody>
 </table>
 <h2 id="permissions-for-ukcloud-for-vmware">Permissions for UKCloud for VMware</h2>
-<p>Compute service permissions are based on the vCloud director RBAC (role based access control permissions). These roles are applied on a service by service basis - for example someone might be a catalogue author of one service, and a console only user in a secondary service.</p>
+<p>UKCloud for VMware service permissions are based on the vCloud Director RBAC (role based access control) permissions. These roles are applied on a service by service basis - for example someone might be a Catalogue Author of one service, and a Console Only user in a second service.</p>
 <p>The roles exposed are:</p>
 <ul>
 <li><p>Admin</p>
@@ -177,17 +177,21 @@
 </li>
 </ul>
 <p>You can find further details of these roles in the <a href="https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html">vCloud Director Administrator's Guide</a>.</p>
-<p>In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API, with no GUI access.</p>
+<p>In addition, UKCloud have created an API Only role that restricts users with vCloud Director permissions to accessing vCloud Director solely via the API, with no GUI access.</p>
+<blockquote>
+<p>[NOTE]
+The API Only role must be selected in addition to one of the vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.</p>
+</blockquote>
 <h2 id="permissions-for-cloud-storage">Permissions for Cloud Storage</h2>
 <p>Users need to be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. The user will also be able to see consumption data for namespaces and buckets.</p>
 <h2 id="permissions-for-ukcloud-for-openstack">Permissions for UKCloud for OpenStack</h2>
 <p>Users need to be granted access to the relevant OpenStack project. Once access is granted, the user can access the Horizon dashboard for the project.</p>
 <h2 id="permissions-for-billing">Permissions for Billing</h2>
-<p>Users can see financial data for their compute services in My VMs. This includes spend to date and estimated spend for the month.</p>
+<p>Users with <strong>API</strong> permissions can retrieve billing information using the Portal API. For more information, see the <em>GET /api/billing/billing-csv</em> section of the <a href="ptl-ref-portal-api.html"><em>UKCloud Portal API Reference Guide</em></a>.</p>
 <h2 id="permissions-for-monitoring">Permissions for Monitoring</h2>
 <p>Users with <strong>Read</strong> permissions can view information from the Protective Monitoring service on the <em>My Security Events</em> page.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">

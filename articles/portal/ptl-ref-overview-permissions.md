@@ -3,8 +3,8 @@ title: Portal permissions
 description: A guide to the various permissions available to Portal users and what behaviour they enable
 services: portal
 author: Sue Highmoor
-reviewer: aperrett
-lastreviewed: 23/10/2019
+reviewer: Gsmith
+lastreviewed: 25/02/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -57,7 +57,7 @@ Support permissions dictate whether a user can view other users support tickets.
 
 ## Permissions for UKCloud for VMware
 
-Compute service permissions are based on the vCloud director RBAC (role based access control permissions). These roles are applied on a service by service basis - for example someone might be a catalogue author of one service, and a console only user in a secondary service.
+UKCloud for VMware service permissions are based on the vCloud Director RBAC (role based access control) permissions. These roles are applied on a service by service basis - for example someone might be a Catalogue Author of one service, and a Console Only user in a second service.
 
 The roles exposed are:
 
@@ -73,7 +73,10 @@ The roles exposed are:
 
 You can find further details of these roles in the [vCloud Director Administrator's Guide](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html).
 
-In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API, with no GUI access.
+In addition, UKCloud have created an API Only role that restricts users with vCloud Director permissions to accessing vCloud Director solely via the API, with no GUI access.
+
+> [NOTE]
+> The API Only role must be selected in addition to one of the vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
 
 ## Permissions for Cloud Storage
 
@@ -85,7 +88,7 @@ Users need to be granted access to the relevant OpenStack project. Once access i
 
 ## Permissions for Billing
 
-Users can see financial data for their compute services in My VMs. This includes spend to date and estimated spend for the month.
+Users with **API** permissions can retrieve billing information using the Portal API. For more information, see the *GET /api/billing/billing-csv* section of the [*UKCloud Portal API Reference Guide*](ptl-ref-portal-api.md).
 
 ## Permissions for Monitoring
 
@@ -93,4 +96,4 @@ Users with **Read** permissions can view information from the Protective Monitor
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

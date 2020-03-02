@@ -337,7 +337,7 @@ For more information, see the [Moogsoft AIOps from UKCloud service definition](.
 
 A UKCloud IaaS service that provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, based on Dell EMC's Data Domain Boost™ (DD Boost) technology, enabling open-source backup applications to utilise the backup service as a target. You can also use Multi-Cloud Backup Storage as a remote backup target for your on-premises data.
 
-For more information, see the [Multi-Cloud Backup Storage service definition](../mcbs/mcbs-sd.md).
+For more information, see the [Multi-Cloud Backup Storage service definition](../other/other-sd-mcbs.md).
 
 ### Multi-Cloud for Tier 2
 
@@ -665,4 +665,4 @@ A distinct hardware installation within a region, utilising common networking in
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -374,7 +374,10 @@ VMware provides a compatibility matrix at: <https://partnerweb.vmware.com/comp_g
 
 You can use the UKCloud catalog of operating systems or upload your own.
 
-We offer Windows Server 2008 R2 Enterprise, Windows 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.
+We offer Windows Server 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.
+
+> [!NOTE]
+> On 14 January 2020, Microsoft ended support for Windows Server 2008, therefore we highly recommend that you upgrade to Windows Server 2012 or Windows Server 2016 to remain secure. 
 
 In addition, we provide access to common templates provided by the Bitnami service such as Drupal, Joomla, LAMP and Wordpress.
 
@@ -606,4 +609,4 @@ Protective Monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

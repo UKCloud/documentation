@@ -3,10 +3,10 @@ title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
-reviewer:
-lastreviewed: 20/07/2018 12:12:33
+reviewer: ccampbell
+lastreviewed: 25/02/2020
 toc_rootlink: Reference
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -18,6 +18,38 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 1.128.0
+
+Date: 25th February 2020
+
+Feature update
+
+Details:
+
+- Removal of the account service reports
+
+## Release 1.127.0
+
+Date: 18th February 2020
+
+Feature update
+
+Details:
+
+- When requesting a password reset, users with locked accounts will be sent an email informing them that their account is locked
+
+## Release 1.126.0
+
+Date: 14th February 2020
+
+Feature update
+
+Details:
+
+- Remove inaccurate My VMs cost data
+
+- Remove Edge Gateway tab from My VMs tab
 
 ## Release 1.124.0
 
@@ -281,7 +313,7 @@ Date: 7th March 2018
 
 Bug fix and feature updates
 
-Details: Added list of customer specific events to blank events page. Pagination for events list page. Added correct latest status for each customer specific event. Added total log scans for past 24 hours. Fixed My VMs page displaying missing information. Added search box to customer specific events page. Added message when search on customer specific events returns no results. Added Sovereign Azure page to the navigation. 
+Details: Added list of customer specific events to blank events page. Pagination for events list page. Added correct latest status for each customer specific event. Added total log scans for past 24 hours. Fixed My VMs page displaying missing information. Added search box to customer specific events page. Added message when search on customer specific events returns no results. Added Sovereign Azure page to the navigation.
 
 ## Release 1.66.0
 
@@ -329,7 +361,7 @@ Date: 19th July 2017
 
 Feature update
 
-Details: Set elevated mail server details. 
+Details: Set elevated mail server details.
 
 ## Release 1.59.0
 
@@ -377,7 +409,7 @@ Date: 17th May 2017
 
 Feature updates
 
-Details: The 'List All Articles' button in the Knowledge Centre has now been moved to the top of the categories menu for better visibility. 
+Details: The 'List All Articles' button in the Knowledge Centre has now been moved to the top of the categories menu for better visibility.
 
 ## Release 1.55.0
 
@@ -385,13 +417,13 @@ Date: 2nd May 2017
 
 Feature updates
 
-Details: Internet Bandwidth consumption showback available to all customers. Please see the Bandwidth Monitoring FAQ document in the Knowledge Centre for more details. 
+Details: Internet Bandwidth consumption showback available to all customers. Please see the Bandwidth Monitoring FAQ document in the Knowledge Centre for more details.
 
 ## Release 1.54.0
 
 Date: 27th April 2017
 
-Feature updates and bug fixes 
+Feature updates and bug fixes
 
 Details: Updated Edge Gateway IPSec configuration User Interface. Based upon customer feedback we have organised the SLA report by creation date, found within the Reports section of the Portal.  
 
@@ -457,7 +489,7 @@ Date: 16th February 2017
 
 Bug fixes
 
-Details: Patch updates fixing an issue raised by Release 1.48.0 
+Details: Patch updates fixing an issue raised by Release 1.48.0
 
 ## Release 1.48.0
 
@@ -505,7 +537,7 @@ Date: 23rd December 2016
 
 Bug fix
 
-Details: Corrected wording for retention policy forms. 
+Details: Corrected wording for retention policy forms.
 
 ## Release 1.45.1
 
@@ -545,7 +577,7 @@ Date: 23rd November 2016
 
 Feature updates  
 
-Details: Allow customers to filter articles in the Knowledge Centre by the subject, "UKCloud for OpenStack". Replacement of sidekiq functionality to make backup policy changes and start using rabbit mq with the new avamar-worker. 
+Details: Allow customers to filter articles in the Knowledge Centre by the subject, "UKCloud for OpenStack". Replacement of sidekiq functionality to make backup policy changes and start using rabbit mq with the new avamar-worker.
 
 ## Release 1.42.0
 
@@ -561,7 +593,7 @@ Date: 23rd November 2016
 
 Feature update    
 
-Details: Support added for client-side zipping in the Portal and uploading files to landesk which allows customers to upload screenshots, logs and other files to tickets. 
+Details: Support added for client-side zipping in the Portal and uploading files to landesk which allows customers to upload screenshots, logs and other files to tickets.
 
 ## Release 1.40.0
 
@@ -569,7 +601,7 @@ Date: 23rd November 2016
 
 Functionality updates   
 
-Details: Addition of OpenStack support for sending user creation requests, password changes and assigning/unassigning OpenStack projects. Addition of article type GUIDs to the lookup files for the creation of new article types. 
+Details: Addition of OpenStack support for sending user creation requests, password changes and assigning/unassigning OpenStack projects. Addition of article type GUIDs to the lookup files for the creation of new article types.
 
 ## Release 1.39.0
 
@@ -577,7 +609,7 @@ Date: 17th November 2016
 
 Functionality updates    
 
-Details: Adding tests to Contacts model to ensure emails will not be duplicated when users create new contacts. Adding the admin portal API back and the ability to alter a backup policy. Addition of a VM backup whitelist table to enable tracking of which VMS are being backed up. Addition of the ability to get and update AvamarAudit records via the admin API. 
+Details: Adding tests to Contacts model to ensure emails will not be duplicated when users create new contacts. Adding the admin portal API back and the ability to alter a backup policy. Addition of a VM backup whitelist table to enable tracking of which VMS are being backed up. Addition of the ability to get and update AvamarAudit records via the admin API.
 
 ## Release 1.38.2
 
@@ -585,7 +617,7 @@ Date: 15th November 2016
 
 Maintenance release    
 
-Details: Movement of errbit host and API key configs to environment variables as part of the containerisation project. 
+Details: Movement of errbit host and API key configs to environment variables as part of the containerisation project.
 
 ## Release 1.38.1
 
@@ -593,7 +625,7 @@ Date: 11th November 2016
 
 Functionality update    
 
-Details: Addition of a button to allow customers to mark all notifications as read. 
+Details: Addition of a button to allow customers to mark all notifications as read.
 
 ## Release 1.38.0
 
@@ -609,7 +641,7 @@ Date: 1st November 2016
 
 Bug fixes and functionality updates    
 
-Details: Rewrite of Knowledge Centre article categories to reflect G-Cloud 8 changes. Bug fixes in the Knowledge Centre CSS to allow customers to view changes made to the stylesheets. 
+Details: Rewrite of Knowledge Centre article categories to reflect G-Cloud 8 changes. Bug fixes in the Knowledge Centre CSS to allow customers to view changes made to the stylesheets.
 
 ## Release 1.37.2
 
@@ -633,7 +665,7 @@ Date: 17th October 2016
 
 Maintenance release    
 
-Details: Maintenance release for support 
+Details: Maintenance release for support
 
 ## Release 1.36.2
 
@@ -641,7 +673,7 @@ Date: 10th October 2016
 
 New feature    
 
-Details: Ability to add password confirmation checks to the edit-user forms in the front and back end 
+Details: Ability to add password confirmation checks to the edit-user forms in the front and back end
 
 ## Release 1.36.1
 
@@ -649,7 +681,7 @@ Date: 3rd October 2016
 
 Bug fix   
 
-Details: Fixes bug preventing edge gateway deployments in the Portal API 
+Details: Fixes bug preventing edge gateway deployments in the Portal API
 
 ## Release 1.36.0
 
@@ -657,7 +689,7 @@ Date: 3rd October 2016
 
 Maintenance release   
 
-Details: Maintenance release for support 
+Details: Maintenance release for support
 
 ## Release 1.35.0
 
@@ -671,7 +703,7 @@ Details: New API to show DRS (vMotion) event to the user. Allow users to alter a
 
 Date: 28th September 2016
 
-New Features 
+New Features
 
 Details: Ability to print ticket details via the Actions menu. Ability to print contacts within accounts
 
@@ -681,7 +713,7 @@ Date: 22nd September 2016
 
 Maintenance release
 
-Details: Maintenance release for support 
+Details: Maintenance release for support
 
 ## Release 1.33.0
 
@@ -689,7 +721,7 @@ Date: 21st September 2016
 
 Bug fix/feature release
 
-Details: Improved notification flows when Portal notifications are added/updated, Ability to self-close Service Requests by customer within the portal & enable Snapshot Protection Self-management  - find KC article entitled “Snapshot Protection (backup)” for further details on how to use the feature 
+Details: Improved notification flows when Portal notifications are added/updated, Ability to self-close Service Requests by customer within the portal & enable Snapshot Protection Self-management  - find KC article entitled “Snapshot Protection (backup)” for further details on how to use the feature
 
 ## Release 1.32.0
 
@@ -721,7 +753,7 @@ Date: 31st August 2016
 
 Minor fixes
 
-Details: Fix bug in backup management by increasing the read timeout when making requests to the Avamar service. Improve user experience interacting with backup management. 
+Details: Fix bug in backup management by increasing the read timeout when making requests to the Avamar service. Improve user experience interacting with backup management.
 
 ## Release 1.31.0
 
@@ -729,7 +761,7 @@ Date: 24th August 2016
 
 Minor fixes
 
-Details: Allow Mob Phone field to store more than 11 characters. Rebranding to UKCloud 
+Details: Allow Mob Phone field to store more than 11 characters. Rebranding to UKCloud
 
 ## Release 1.30.5
 
@@ -737,15 +769,15 @@ Date: 17th August 2016
 
 Maintenance Release
 
-Details: Maintenance release for support 
+Details: Maintenance release for support
 
 ## Release 1.30.4
 
 Date: 12th August 2016
 
-Feature 
+Feature
 
-Details: CSV export of 'My-VMs' to be an HTML table display 
+Details: CSV export of 'My-VMs' to be an HTML table display
 
 ## Release 1.30.3
 
@@ -753,7 +785,7 @@ Date: 11th August 2016
 
 Minor fixes
 
-Details: Contact details validation around Email address and Contact Name 
+Details: Contact details validation around Email address and Contact Name
 
 ## Release 1.30.2
 
@@ -761,7 +793,7 @@ Date: 10th August 2016
 
 Minor fixes
 
-Details: Ideas URL rebrand, Validation to input fields, Javascript disabled warning 
+Details: Ideas URL rebrand, Validation to input fields, Javascript disabled warning
 
 ## Release 1.30
 
@@ -925,4 +957,4 @@ Details: Fixes to "My VMs" and export improvements to notifications
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

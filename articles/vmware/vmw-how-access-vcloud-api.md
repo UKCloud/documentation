@@ -102,7 +102,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
 10. In the **Value** field enter `application/*+xml;version=32.0` and then click **Okay**.
 
-    ![Request Headers dialog box](images/Request_Headers_dialog_box_2.PNG)
+    ![Request Headers dialog box](images/Request_Headers_dialog_box_2.png)
 
 11. The *Headers* section should now be displayed, containing the Accept header.
 
@@ -135,4 +135,4 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

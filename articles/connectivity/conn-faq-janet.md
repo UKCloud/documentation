@@ -41,7 +41,7 @@ Yes. Our HybridConnect service option allows customers and partners to provide t
 
 ## Which UKCloud data centre has Janet connectivity?
 
-Currently only our Farnborough site is connected to Janet. However, customers whose environments are in Corsham can still connect via our secure data centre interconnectivity. We are working on making Janet connectivity available in our Corsham site and will keep all customers updated when the circuit is ready for service.
+Both our Corsham and Farnborough sites have Janet connectivity.
 
 ## How do I get a Janet connection via the UKCloud Assured OFFICIAL security domain?
 
@@ -89,4 +89,4 @@ UKCloud will set up new connections to the Janet network for you free of charge.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

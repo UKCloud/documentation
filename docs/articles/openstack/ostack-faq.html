@@ -8,7 +8,7 @@
     <title>UKCloud for OpenStack FAQs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for OpenStack FAQs ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -189,10 +189,11 @@
 <tr>
 <td>COR00005-2</td>
 <td>OpenStack Platform 13 <br> (Queens Release)</td>
-<td>Yes. Uses the <a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia"><em>OpenStack Octavia</em></a> project.</td>
+<td>In Beta* - Uses the <a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia">OpenStack Octavia</a> project.</td>
 </tr>
 </tbody>
 </table>
+<p><i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i></p>
 <h3 id="can-i-deploy-my-own-load-balancer">Can I deploy my own load balancer?</h3>
 <p>Yes, you can deploy your own load balancing virtual appliance provided it is compatible with KVM hypervisor and OpenStack.</p>
 <h3 id="do-you-have-an-ipsec-vpn-connection-for-uploading-sensitive-data">Do you have an IPSEC VPN connection for uploading sensitive data?</h3>
@@ -233,7 +234,7 @@
 <tr>
 <th>Region</th>
 <th>OpenStack version</th>
-<th>LBaaS supported?</th>
+<th>Encrypted volumes supported?</th>
 </tr>
 </thead>
 <tbody>
@@ -245,10 +246,11 @@
 <tr>
 <td>COR00005-2</td>
 <td>OpenStack Platform 13 <br> (Queens Release)</td>
-<td>Yes</td>
+<td>In Beta*</td>
 </tr>
 </tbody>
 </table>
+<p><i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i></p>
 <h3 id="what-type-of-volume-encryption-is-offered">What type of volume encryption is offered?</h3>
 <p>UKCloud offers OpenStack's native Data  at Rest Encryption (D@RE) as an option on OpenStack persistent volumes (Tier 1 / Tier 2 Volumes). D@RE is underpinned by OpenStack's native Key Management as a Service (KMaaS), Barbican.</p>
 <h3 id="what-type-of-encryption-on-persistent-volumes-is-offered">What type of encryption on persistent volumes is offered?</h3>
@@ -406,7 +408,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <p>UKCloud charges a nominal monthly fee per instance being protected by this service. UKCloud charges by the whole month for any part month consumption of this service.</p>
 <p>You can find pricing details in the OpenStack section of the <a href="https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf">UKCloud Pricing Guide</a>.</p>
 <h3 id="are-there-any-additional-fees-for-the-triliovault-self-service-backup-and-restoration-service">Are there any additional fees for the TrilioVault self-service backup and restoration service?</h3>
-<p>This service utilises UKCloud's <a href="../mcbs/mcbs-sd.html"><em>Multi-Cloud Backup Storage</em></a> (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the <a href="https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf">UKCloud Pricing Guide</a>.</p>
+<p>This service utilises UKCloud's <a href="../other/other-sd-mcbs.html"><em>Multi-Cloud Backup Storage</em></a> (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the <a href="https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf">UKCloud Pricing Guide</a>.</p>
 <h3 id="can-i-use-my-own-backup-software">Can I use my own backup software?</h3>
 <p>Yes, you simply install appropriate backup software within your project and specify the backup location.</p>
 <p>A typical scenario would involve using a commercial backup solution (such as Symantec NetBackup, CommVault or EMC NetWorker) that points to a cloud storage service such as our Cloud Storage.</p>
@@ -443,7 +445,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
 <p>Protective monitoring is included for our IaaS platform and follows GPG 13.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">

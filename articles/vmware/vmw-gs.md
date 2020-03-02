@@ -157,7 +157,7 @@ After creating your compute service, the next step is to create one or more VDCs
 4. Enter a **VDC Name**.
 
     > [!TIP]
-    > The name can be up to 32 characters long and can include any character except +.
+    > The name can be up to 32 characters long and can include any character except `+`, `(` or `)`.
 
     ![Build VDC page](images/vmw-portal-build-vdc.png)
 
@@ -284,4 +284,4 @@ resource requirements and the UKCloud platform optimises its placement to ensure
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

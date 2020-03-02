@@ -44,8 +44,6 @@ Before enabling L2 VPN, consider the following:
 
 - You must have purchased the Advanced Management bundle for your UKCloud for VMware service
 
-- You must have converted your edge gateway to an advanced gateway (see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md))
-
 - This service takes up one of your allocated IP addresses (primary or secondary)
 
 - L2 VPN can be enabled only on a routed Org VDC network
@@ -208,13 +206,9 @@ If the source site is not backed by NSX, you can deploy a standalone edge as the
 
     For more information, see the following VMware article: [Configure Standalone Edge as L2 VPN Client](https://pubs.vmware.com/NSX-61/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-C9E2B0E4-F1C1-44A7-B142-F814F801FA42.html).
 
-2. Convert the edge gateway to an advanced gateway.
+2. Create a port group and convert it to a sub interface.
 
-    For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
-
-3. Create a port group and convert it to a sub interface.
-
-4. You can now set up your L2 VPN by following the steps below, using the standalone edge as the source edge gateway.
+3. You can now set up your L2 VPN by following the steps below, using the standalone edge as the source edge gateway.
 
     - [*Creating certificates*](#creating-certificates)
 
@@ -229,4 +223,4 @@ If the source site is not backed by NSX, you can deploy a standalone edge as the
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
