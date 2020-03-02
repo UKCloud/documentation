@@ -24,7 +24,7 @@ UKCloud's Cloud Storage service is an object storage solution based on Dell EMC 
 Amazon's S3 API.
 
 This Getting Started Guide covers the tasks you need to perform to get Cloud Storage up and running in your environment. It also looks at common use cases for API‑based object storage within web applications
-and provides information about some command-line tools that you can use to interact with the storage APIs.
+and provides information about some command-line tools that you can use to interact with the storage API.
 
 ### Intended audience
 
@@ -40,7 +40,7 @@ Cloud Storage:
 
 - Removes the complexity of capacity management by utilising a pay‑as‑you‑go model, so you pay for what you use, when you use it, scaling indefinitely and on demand
 
-- Natively enables application deduplication and redundancy to ensure the highest level of data availability, while reducing the cost and management of on-premises storage solutions
+- Natively provides application redundancy to ensure the highest level of data availability, while reducing the cost and management of on-premises storage solutions
 
 - Provides easy access to storage anywhere, any time, to any device, using HTTP(S) to simplify the integration of object storage systems into cloud‑based solutions by removing the need to rely on the availability of web, file or FTP servers
 
@@ -48,7 +48,7 @@ Cloud Storage:
 
 - Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery
 
-ECS provides an APIs that you can use to manage your cloud storage. The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the *S3 Supported Features* chapter of the [*Elastic Cloud Storage (ECS) Data Access Guide*](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf)).
+ECS provides an API that you can use to manage your cloud storage. The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the *S3 Supported Features* chapter of the [*Elastic Cloud Storage (ECS) Data Access Guide*](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf)).
 
 > [!NOTE]
 > The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API

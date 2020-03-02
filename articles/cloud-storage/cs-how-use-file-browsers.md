@@ -3,8 +3,8 @@ title: How to use file browsers with Cloud Storage
 description: Using file browsers with Cloud Storage
 services: cloud-storage
 author: Dan Baker
-reviewer: Sue Highmoor
-lastreviewed: 02/01/2020
+reviewer: nwayman
+lastreviewed: 24/02/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
