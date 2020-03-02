@@ -121,7 +121,7 @@ Date: 18th July 2019
 
 Feature update
 
-Details: Updated links to support the launch of the new UKCloud Communities platorm (https://community.ukcloud.com) which also includes changes to UKCloud Ideas.
+Details: Updated links to support the launch of the new UKCloud Communities platform which also includes changes to UKCloud Ideas.
 
 ## Release 1.109.1
 
