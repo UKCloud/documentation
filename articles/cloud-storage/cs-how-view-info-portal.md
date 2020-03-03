@@ -3,8 +3,8 @@ title: How to view Cloud Storage information in the UKCloud Portal
 description: Describes how to access information about your Cloud Storage service in the UKCloud Portal
 services: cloud-storage
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: nwayman
+lastreviewed: 24/02/2020
 
 toc_rootlink: How To
 toc_sub1:
