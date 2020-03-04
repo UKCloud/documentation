@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-operators.html",
-          "hash": "HD7bAhS2jxv32tzfWiYRIw=="
+          "hash": "y6txy9kJ59xDueNHJ22R6A=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-users.html",
-          "hash": "TEy2Zl6Uvg73C/S0ER/B+A=="
+          "hash": "NEANFiq4se+Sj3cf2B+zHg=="
         }
       },
       "is_incremental": false,
