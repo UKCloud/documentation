@@ -58,7 +58,7 @@ Install-Module -Name AzureRM.BootStrapper -Verbose
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
 Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
-Install-Module -Name AzureStack -RequiredVersion 1.7.2 -Verbose
+Install-Module -Name AzureStack -RequiredVersion 1.8.0 -Verbose
 </code></pre>
 
 ### Enable additional storage features
