@@ -28,6 +28,7 @@ Feature update
 Details:
 
 - OpenStack dropdown now shows all accessible regions, regardless of permission type
+
 - Change background image on login page
 
 ## Release 1.128.0
