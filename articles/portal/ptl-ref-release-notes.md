@@ -19,6 +19,18 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 1.129.0
+
+Date: 4th March 2020
+
+Feature update
+
+Details:
+
+- OpenStack dropdown now shows all accessible regions, regardless of permission type
+
+- Change background image on login page
+
 ## Release 1.128.0
 
 Date: 25th February 2020
