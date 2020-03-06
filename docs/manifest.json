@@ -7958,7 +7958,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-hystax.html",
-          "hash": "29eZt1ScggVuqw7kbBbw8Q=="
+          "hash": "hp1D3t3ZPPae3rRvtH9E4w=="
         }
       },
       "is_incremental": false,
@@ -8062,6 +8062,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-sco-hystax.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-sco-hystax.html",
+          "hash": "1PPAlUJbNNuKMWjl+fQpGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-sco.md",
       "output": {
         ".html": {
@@ -8114,7 +8126,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "iasQExN2fI5E6FeCf5Tl5w=="
+          "hash": "ykZpGQtG+v3WCfZOO57ujA=="
         }
       },
       "is_incremental": false,
@@ -19464,7 +19476,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 422,
+          "total_file_count": 423,
           "skipped_file_count": 0
         }
       }

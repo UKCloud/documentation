@@ -160,7 +160,32 @@
 <p><img src="images/hystax10.jpg" alt="Hystax Status Success"></p>
 </li>
 </ol>
-<h2 id="further-support">Further Support</h2>
+<h2 id="known-issues">Known issues</h2>
+<p>The Hystax Acura service is under constant development. The following are the known issues in the current release of the software, which should be resolved in the next release.</p>
+<h3 id="creation-of-new-persistent-volumes-on-target-instances">Creation of new persistent volumes on target instances</h3>
+<p>When the Hystax migration completes, the disk of the resulting new/target instances will use persistent volumes and snapshots. This may result in extra monthly storage costs.</p>
+<h3 id="migrating-ubuntu-workloads">Migrating Ubuntu workloads</h3>
+<p>Due to the way in which the Hystax software works, you may experience issues migrating an Ubuntu server/instance with the default disk mount settings. In Ubuntu, the root risk (<code>/</code>) is mounted by label (that is, in <code>/etc/fstab</code> there is a setting that states <code>LABEL=&quot;….&quot;</code> for the &quot;<code>/</code>&quot; disk).</p>
+<p>You need to modify this to use the UUID or device name (for example, <code>/dev/vdb1</code>).</p>
+<p>Run the following steps on a default Ubuntu setup for a successful migration:</p>
+<ol>
+<li><p>Ensure <code>/etc/fstab</code> refers to the boot and root disks using <code>UUID=&quot;&quot;</code> or <code>/dev/vda1</code>, and so on, and not by <code>LABEL=&quot;&quot;</code> (you can retrieve the device name using the <code>lsblk</code> command and return the UUID using the <code>blkid</code> command).</p>
+</li>
+<li><p>After changing <code>/etc/fstab</code> (if required), run <code>update-grub</code> as the root user.</p>
+</li>
+<li><p>Install the Hystax source agent (<code>hlragent</code>) as per instructions given on the Hystax Acura server (Web UI).</p>
+</li>
+<li><p>Reboot the Ubuntu instance.</p>
+</li>
+<li><p>At this point the Ubuntu instance is ready to be replicated and migrated.</p>
+</li>
+</ol>
+<h3 id="migrating-microsoft-windows-workloads">Migrating Microsoft Windows workloads</h3>
+<h4 id="error-when-creating-and-running-a-migration-plan-in-the-acura-user-interface">Error when creating and running a migration plan in the Acura user interface</h4>
+<p>When creating and running a migration plan in the Acura user interface, you may encounter an error relating to a malformed mac-address. To resolve this go to the <strong>Expert</strong> tab in the <em>Edit Migration Plan</em> interface and remove any lines that contain <code>&quot;&quot;mac&quot;: &quot;…..&quot;</code>. After doing this save and re-run the migration plan and the issue will be resolved.</p>
+<h4 id="user-management">User management</h4>
+<p>When a Microsoft Windows instance is migrated and first created on the destination cloud, the administrator user password will be reset to a random different value. Before a migration is run, ensure the source server has a local user with sufficient administration privileges that enable you to login and administer the server (possibly change the administrator password back if required).</p>
+<h2 id="further-support">Further support</h2>
 <p>Should you experience any issues in using Hystax Acura or with your migrations, our support team is on hand to assist via a Support Request in the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>

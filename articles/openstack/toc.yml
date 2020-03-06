@@ -68,6 +68,8 @@
     href: ostack-sd.md
 - name: Service Scope
   items:
+  - name: Hystax Acura Workload Migration Service Scope
+    href: ostack-sco-hystax.md
   - name: UKCloud for OpenStack Service Scope
     href: ostack-sco.md
 - name: Videos
