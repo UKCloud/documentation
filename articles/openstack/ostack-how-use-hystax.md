@@ -4,7 +4,7 @@ description: Provides information on how to use Hystax Acura to move workloads w
 services: openstack
 author: Steve Dixon
 reviewer:
-lastreviewed: 30/01/2020
+lastreviewed: 04/03/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -105,7 +105,43 @@ To perform cloud migration you need to complete the following steps:
 
     ![Hystax Status Success](images/hystax10.jpg)
 
-## Further Support
+## Known issues
+
+The Hystax Acura service is under constant development. The following are the known issues in the current release of the software, which should be resolved in the next release.
+
+### Creation of new persistent volumes on target instances
+
+When the Hystax migration completes, the disk of the resulting new/target instances will use persistent volumes and snapshots. This may result in extra monthly storage costs.
+
+### Migrating Ubuntu workloads
+
+Due to the way in which the Hystax software works, you may experience issues migrating an Ubuntu server/instance with the default disk mount settings. In Ubuntu, the root risk (`/`) is mounted by label (that is, in `/etc/fstab` there is a setting that states `LABEL="…."` for the "`/`" disk).
+
+You need to modify this to use the UUID or device name (for example, `/dev/vdb1`). 
+
+Run the following steps on a default Ubuntu setup for a successful migration:
+
+1. Ensure `/etc/fstab` refers to the boot and root disks using `UUID=""` or `/dev/vda1`, and so on, and not by `LABEL=""` (you can retrieve the device name using the `lsblk` command and return the UUID using the `blkid` command).
+
+2. After changing `/etc/fstab` (if required), run `update-grub` as the root user.
+
+3. Install the Hystax source agent (`hlragent`) as per instructions given on the Hystax Acura server (Web UI).
+
+4. Reboot the Ubuntu instance.
+
+5. At this point the Ubuntu instance is ready to be replicated and migrated.
+
+### Migrating Microsoft Windows workloads
+
+#### Error when creating and running a migration plan in the Acura user interface
+
+When creating and running a migration plan in the Acura user interface, you may encounter an error relating to a malformed mac-address. To resolve this go to the **Expert** tab in the *Edit Migration Plan* interface and remove any lines that contain `""mac": "….."`. After doing this save and re-run the migration plan and the issue will be resolved.
+
+#### User management
+
+When a Microsoft Windows instance is migrated and first created on the destination cloud, the administrator user password will be reset to a random different value. Before a migration is run, ensure the source server has a local user with sufficient administration privileges that enable you to login and administer the server (possibly change the administrator password back if required).
+
+## Further support
 
 Should you experience any issues in using Hystax Acura or with your migrations, our support team is on hand to assist via a Support Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
