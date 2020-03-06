@@ -3334,7 +3334,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-ddos-mitigation.html",
-          "hash": "25a6xCCBtsh7qhOb1+gTpg=="
+          "hash": "5VEvnaHB0RtmTuxoRdKd7Q=="
         }
       },
       "is_incremental": false,
@@ -8583,7 +8583,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-db-backup.html",
-          "hash": "ZlFhKHLAfJ2MCi6kPhBi1g=="
+          "hash": "7UwevCbU8sX0rdyslaceMg=="
         }
       },
       "is_incremental": false,
@@ -9344,7 +9344,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-g11.html",
-          "hash": "bDvGkRYBVbBUILKAkv6T7Q=="
+          "hash": "SQYeenFZA9qKvLnUVgdPZw=="
         }
       },
       "is_incremental": false,
@@ -9520,18 +9520,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-community-competition.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-community-competition.html",
-          "hash": "gYC0Oahiti+THqdh8FMLLg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-complaints.md",
       "output": {
         ".html": {
@@ -9608,7 +9596,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "XzeilumaBC/Feglvq1V4Rw=="
+          "hash": "WZnJPK3s1WKnH2F9zrE+rg=="
         }
       },
       "is_incremental": false,
@@ -9752,7 +9740,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-promon.html",
-          "hash": "b8ZV3nA1vZxWarVAiivZmA=="
+          "hash": "on4h2dReu9b8s8svfiH0Iw=="
         }
       },
       "is_incremental": false,
@@ -9920,7 +9908,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "eil6uflZlAG4VNh/CKfbvw=="
+          "hash": "YHQCPf7vw+8cP4e1fv/wTA=="
         }
       },
       "is_incremental": false,
@@ -11029,7 +11017,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-release-notes.html",
-          "hash": "Z3iGhKqfDWBCN6iVVYjWrw=="
+          "hash": "nM0pvRz9rc13rcWCGu/S1Q=="
         }
       },
       "is_incremental": false,
@@ -18087,7 +18075,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "ycFQYOXHpTfLBA3aynGV9Q=="
+          "hash": "SQd1NvY677/wU+7Tj0TeSw=="
         }
       },
       "is_incremental": false,
@@ -19466,17 +19454,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 422,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 423,
           "skipped_file_count": 0
         }
       }
