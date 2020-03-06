@@ -114,7 +114,7 @@ Alternatively, you can implement encryption using the technology of your choice 
 
 ### Is UKCloud's encryption service available for UKCloud for VMware?
 
-Not currently as a service (see above). We're considering this as an option, so please provide feedback via the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+Not currently as a service (see above). We're considering this as an option, so please provide feedback by sending an email to <feedback@ukcloud.com>.
 
 ### Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast-provisioned ones?
 

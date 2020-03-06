@@ -66,7 +66,7 @@ Any threat information listed on the *Security Events* page is also raised as a 
 
 Currently, the *Security Events* page only includes information for internet connectivity to UKCloud for VMware in the Assured OFFICIAL security domain. All other services are still supported by UKCloud's Protective Monitoring service and our security team will inform you of security incidents for those other services via My Calls.
 
-If you'd like to request that other services are included on the *Security Events* page, post an idea on the [UKCloud Community](https://community.ukcloud.com/ideas).
+If you'd like to request that other services are included on the *Security Events* page, send an email to <feedback@ukcloud.com>.
 
 ### Example security incidents
 

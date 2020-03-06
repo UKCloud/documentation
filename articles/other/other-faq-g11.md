@@ -145,7 +145,7 @@ We can now offer customers management of their workloads running in Microsoft Pu
 
 ### What is happening to End User Compute?
 
-This has been removed from sale. However we'll continue to investigate options around End User Compute/Virtual Desktop, so if you have any ideas or feedback on this topic, let us know via the [UKCloud Community](https://community.ukcloud.com/ideas).
+This has been removed from sale. However we'll continue to investigate options around End User Compute/Virtual Desktop, so if you have any ideas or feedback on this topic, let us know by emailing <feedback@ukcloud.com>.
 
 ### What is happening to Email and Collaboration as a service?
 

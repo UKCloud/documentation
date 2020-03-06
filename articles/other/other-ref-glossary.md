@@ -307,7 +307,7 @@ UKCloud’s repository of articles created in collaboration with subject matter 
 
 ## L
 
-Let us know your thoughts and ideas by posting on the [UKCloud Community](https://community.ukcloud.com/ideas).
+Let us know your thoughts and ideas by sending an email to <feedback@ukcloud.com>.
 
 ## M
 
@@ -545,12 +545,6 @@ For more information, see the [Transition Services service definition](../transi
 
 ## U
 
-### UKCloud Community
-
-A site where you can share information about delivering digital transformation within the UK Public Sector. UKCloud regularly updates the Community with blogs, videos, webinars and event information. You can also request to join private groups to gain early access to BETA functionality. The Ideas section of the Community provides a place for you to let us know what you'd like to see on our platform.
-
-*See:* <https://community.ukcloud.com>
-
 ### UKCloud for Microsoft Azure
 
 A UKCloud IaaS service that harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment.
@@ -592,12 +586,6 @@ The UKCloud Guard has been removed from sale. However, customers can still take 
 A division of UKCloud that is dedicated to health and care, research and life sciences and the pharmaceutical sector. Working with an ecosystem of expert health sector technology partners, we can help you move seamlessly to the cloud, giving you the choice and flexibility of a range of secure, cost-effective technology platforms that are open and interoperable.
 
 *See:* <https://ukcloudhealth.com/>
-
-### UKCloud Ideas
-
-An area of the UKCloud Community where you can share your ideas and suggestions with us, as well as see highlights of what is upcoming on our development roadmap. You can also vote and comment on existing ideas, which allows us to understand the importance of the idea and provide further information or direction. Ideas with the most votes will be given a higher priority on the roadmap.
-
-*See:* <https://community.ukcloud.com/ideas>
 
 ### UKCloudX
 
@@ -647,7 +635,7 @@ For more information, see the [Cross Domain Security Zone service definition](..
 
 ## Y
 
-You can read interesting blogs and posts, post your ideas and find out about upcoming events at the [UKCloud Community](https://community.ukcloud.com).
+You can find documentation about how to work with our products at the [UKCloud Knowledge Centre](https://docs.ukcloud.com).
 
 ## Z
 
