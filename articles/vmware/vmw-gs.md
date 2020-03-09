@@ -2,7 +2,7 @@
 title: Getting Started Guide for UKCloud for VMware
 description: Provides information to get up and running with UKCloud for VMware
 services: vmware
-author: Sue Highmoor
+author: shighmoor
 reviewer:
 lastreviewed: 10/07/2018 12:06:26
 
