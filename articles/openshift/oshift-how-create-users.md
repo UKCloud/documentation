@@ -3,8 +3,8 @@ title: How to create an OpenShift user in the UKCloud Portal
 description: Shows how to create UKCloud for OpenShift users in the UKCloud Portal so that they can benefit from two-factor authentication (2FA)
 services: openshift
 author: Sue Highmoor
-reviewer: Kieran O'Neill
-lastreviewed: 12/12/2019 07:26:13
+reviewer: Matt Gough
+lastreviewed: 12/03/2020
 
 toc_rootlink: How To
 toc_sub1: 
@@ -72,9 +72,11 @@ To create a new user:
 
     g. When you're done, click **Review & Submit**.
 
-7. When the Service Request is resolved, the identified users can log in to the OpenShift web console and CLI using their UKCloud Portal credentials.
+7. When the Service Request is resolved, the identified users can log in to the OpenStack Horizon dashboard and CLI using their UKCloud Portal credentials, if the project are based in the Corsham region.
 
-    If you've enabled two-factor authentication (2FA) in the account that includes the OpenShift cluster and users have set up 2FA for their user accounts, they will be prompted to provide a 2FA code when logging in to OpenShift.
+If you've enabled two-factor authentication (2FA) in the account that includes the OpenStack project, and users have set up 2FA for their user accounts, they will be prompted to provide a 2FA code when logging in.
+
+For a project sitting in the Farnborough OpenStack region, the credentials are separate from the user's portal credentials and sent to you via SMS by UKCloud support to the phone number associated with the account in the portal.
 
 ## Feedback
 
