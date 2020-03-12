@@ -3,8 +3,8 @@ title: How to install Red Hat Update Infrastructure on an existing OpenStack ins
 description: Shows you how to update your existing OpenStack Instances to target UKCloud's approved Red Hat Update Infrastructure (RHUI)
 services: openstack
 author: Sue Highmoor
-reviewer: scassidy
-lastreviewed: 08/01/2019
+reviewer: Matt Gough
+lastreviewed: 12/03/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -29,7 +29,7 @@ This update service replaces the previous repositories, which are no longer upda
 
 There are two pre-requisites for performing this operation:
 
-- The host can resolve to the RHUI DNS records (contact Customer Support for the IP addresses and domain names for these records). You can achieve this by configuring an A record on your local DNS, or configuring an `/etc/hosts` file with the appropriate information. For Internet connectivity, the required domain name is in public DNS.
+- The host can resolve to the RHUI DNS records (contact Customer Support for the IP addresses and domain names for these records). You can achieve this by configuring an A record on your local DNS or configuring  an `/etc/hosts` file with the appropriate information. For Internet connectivity, the required domain name is in public DNS.
 
 - All hosts using the service must be able to access the local RHUA server on port 443 (HTTPS). Ensure that the configured Security Groups allow outbound connectivity on port 443. If you have any questions on this, contact UKCloud Support.
 
@@ -86,13 +86,13 @@ The primary issues you may encounter are:
 
 ### DNS Failure
 
-Check the DNS lookup is working and you have the correct entry for Assured and Elevated.
+Check the DNS lookup is working, and you have the correct entry for Assured.
 
 ### 443 not accessible
 
-1. Check your firewall configuration, including local firewalls (`iptables`) and edge gateway.
+1. Check your firewall configuration, including local firewalls (iptables) and security groups applied to instances.
 
-2. Ensure you have the correct destination IP entry for Assured or Elevated.
+2.	Ensure you have the correct destination IP entry.
 
 ### Incorrect version
 
