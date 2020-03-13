@@ -19,7 +19,7 @@ toc_mdlink: ostack-how-install-rhui.md
 
 ## Overview
 
-Red Hat Update Infrastructure (RHUI) provides automatic updates to our Red Hat customers on our Assured OFFICIAL and Elevated OFFICIAL security domains. This provides benefits such as the reliable availability of patch updates and Red Hat approved OS templates.
+Red Hat Update Infrastructure (RHUI) enables automatic updates to our Red Hat customers, providing benefits such as the reliable availability of patch updates and Red Hat approved OS templates.
 
 This article provides advice on how to update your existing Red Hat instances (virtual machines) to target UKCloud's approved RHUI.
 
