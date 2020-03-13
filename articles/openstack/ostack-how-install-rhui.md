@@ -32,13 +32,13 @@ There are two prerequisites for performing this operation:
 - All hosts using the service must be able to access the local RHUA server on port 443 (HTTPS). Ensure that the configured Security Groups allow outbound connectivity on port 443. If you have any questions on this, contact UKCloud Support.
 
 ## Installation
- 
+
 You can find the installer RPM files in an ISO image. Before you can mount this to an existing instance, you'll need to create a volume from the image.
 
 1. In the Horizon Web UI, locate the image `UKCloud-RHUI-Standard-Assured.iso`, click the action button and select **Create Volume**.
 
     ![Create Volume](images/ostack-rhui-image.png)
-	
+
 2. Use the default settings presented by the dialog to copy the ISO to a 1GB Tier 2 volume, and click **Create Volume**.
 
     ![Create Volume Dialog](images/ostack-rhui-volumecreate.png)
@@ -46,11 +46,11 @@ You can find the installer RPM files in an ISO image. Before you can mount this 
 3. Locate the Red Hat instance where you want to install RHUI support and select **Attach Volume**.
 
     ![Instance Action Menu](images/ostack-rhui-volumeattach.png)
-	
+
 4. Select the newly created volume and then click **Attach Volume**.
 
     ![Attach Volume Dialog](images/ostack-rhui-volumeattachdialog.png)
-	
+
 5. Select the instance name and check at the bottom of the Instance Overview to see that the volume is attached, and what its device name is.
 
     ![Volume Attach Status](images/ostack-rhui-volumelocation.png)
