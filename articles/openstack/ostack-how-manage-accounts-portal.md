@@ -20,9 +20,9 @@ toc_mdlink: ostack-how-manage-accounts-portal.md
 
 ## Overview
 
-This guide shows how UKCloud Portal administrators can use the Portal to create user accounts for UKCloud for OpenStack and set access permissions.
+This article shows how UKCloud Portal administrators can use the Portal to create user accounts for UKCloud for OpenStack and set access permissions.
 
-The guide also shows how OpenStack users can reset their own passwords in the Portal to activate account replication and synchronise their Portal and OpenStack passwords.
+The article also shows how OpenStack users can reset their own passwords in the Portal to activate account replication and synchronise their Portal and OpenStack passwords.
 
 ### Intended audience
 
@@ -59,8 +59,8 @@ To create a new OpenStack user:
 
 ## Assigning and revoking OpenStack permissions
 
-> [NOTE]
-    > This section is    only relevant for the OSP-10 Corsham Openstack;region 5. The URL for this region is https://cor00005.cni.ukcloud.com. For help adding and removingusers to Openstack Farnborough, region 6, and Corsham, region 5-2, please contact UKCloud support.
+> [!NOTE]
+> This section is only relevant for OpenStack environments in Region 5 (Corsham) using OSP-10 (`https://cor00005.cni.ukcloud.com`). For help adding and removing users to OpenStack environments in Region 6 (Farnborough) and Region 5-2 (Corsham), contact UKCloud Support.
 
 To enable a user to work with an OpenStack project you must assign them permission to access the project. You can also revoke permission to remove a user's OpenStack access.
 
@@ -85,9 +85,9 @@ To assign or revoke OpenStack permissions:
     > [!TIP]
     > You may need to scroll down the **Permissions** tab to get to the *UKCloud for OpenStack* section.
 
-6. For the project to which you want to grant the user access, select the check box for project. Deselect the check box to revoke access permissions.
+6. For the project to which you want to grant the user access, select the check box for project.
 
-    > [NOTE]
+    > [!NOTE]
     > If you grant a user access to a region in which the project is not available, the user will not be able to log in to that OpenStack region.
 
     Deselect the check box to revoke access permissions.
@@ -102,8 +102,9 @@ To assign or revoke OpenStack permissions:
 8. The first time a new OpenStack user accesses their account, they must reset their UKCloud Portal password as shown in [Synchronising your OpenStack password](#synchronising-your-openstack-password).
 
 ## Synchronising your OpenStack password
-> [NOTE]
-    > This section is    only relevant for the OSP-10 Corsham Openstack;region 5. The URL for this region is https://cor00005.cni.ukcloud.com.
+
+> [!NOTE]
+> This section is only relevant for OpenStack environments in Region 5 (Corsham) using OSP-10 (`https://cor00005.cni.ukcloud.com`).
 
 The first time you log in to UKCloud Portal to access your OpenStack projects, you must reset your password to activate account replication and synchronise your Portal and OpenStack passwords.
 
@@ -149,7 +150,7 @@ To access OpenStack:
 ## Removing a Corsham Region 5 OpenStack account via the UKCloud Portal
 
 > [!NOTE]
-    > This section is    only relevant for the OSP-10 Corsham Openstack;region 5. For help removing users from Farnborough, Region 6, and Corsham, Region 5-2 contact UKCloud support.
+> This section is only relevant for OpenStack environments in Region 5 (Corsham). For help removing users from OpenStack environments in Region 6 (Farnborough) and Region 5-2 (Corsham), contact UKCloud Support.
 
 If you want to remove an OpenStack user account, you must first revoke the user's permissions to all OpenStack projects before deleting the account.
 
