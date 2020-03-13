@@ -7809,12 +7809,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "invalid-yaml-header"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-create-heat-template.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-create-heat-template.html",
-          "hash": "WnsZdJXeM+Q2cETTzBBoKA=="
+          "hash": "UTmEzhwa7YeD26n8iDYDsQ=="
         }
       },
       "is_incremental": false,
@@ -7850,7 +7853,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-install-rhui.html",
-          "hash": "BhdymQtOdTLSX0r5Hnwjug=="
+          "hash": "mG6Nvc+UjvrNpXKlOWvFig=="
         }
       },
       "is_incremental": false,

@@ -94,47 +94,46 @@
 <h1 id="how-to-install-red-hat-update-infrastructure-on-an-existing-openstack-instance">How to install Red Hat Update Infrastructure on an existing OpenStack instance</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This article provides advice on how to update your existing Red Hat virtual machines (VMs) to target UKCloud's approved Red Hat Update Infrastructure (RHUI).</p>
-<p>As of July 2015, UKCloud implemented an RHUI to provide automatic updates to our Red Hat customers on our Assured OFFICIAL and Elevated OFFICIAL security domains. This provides benefits such as the reliable availability of patch updates and Red Hat approved OS templates.</p>
-<p>This update service replaces the previous repositories, which are no longer updated and were retired on the 31 August 2015.</p>
+<p>Red Hat Update Infrastructure (RHUI) enables automatic updates to our Red Hat customers, providing benefits such as the reliable availability of patch updates and Red Hat approved OS templates.</p>
+<p>This article provides advice on how to update your existing Red Hat instances (virtual machines) to target UKCloud's approved RHUI.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>There are two pre-requisites for performing this operation:</p>
+<p>There are two prerequisites for performing this operation:</p>
 <ul>
-<li><p>The host can resolve to the RHUI DNS records (contact Customer Support for the IP addresses and domain names for these records). You can achieve this by configuring an A record on your local DNS, or configuring an <code>/etc/hosts</code> file with the appropriate information. For Internet connectivity, the required domain name is in public DNS.</p>
+<li><p>The host can resolve to the RHUI DNS records (contact Customer Support for the IP addresses and domain names for these records). You can achieve this by configuring an A record on your local DNS or configuring  an <code>/etc/hosts</code> file with the appropriate information. For internet connectivity, the required domain name is in public DNS.</p>
 </li>
 <li><p>All hosts using the service must be able to access the local RHUA server on port 443 (HTTPS). Ensure that the configured Security Groups allow outbound connectivity on port 443. If you have any questions on this, contact UKCloud Support.</p>
 </li>
 </ul>
 <h2 id="installation">Installation</h2>
-<p>You can find the installer RPM files in an ISO image. Before this can be mounted to an existing Instance, you will need to create a volume from the image.</p>
+<p>You can find the installer RPM files in an ISO image. Before you can mount this to an existing instance, you'll need to create a volume from the image.</p>
 <ol>
-<li><p>In the Horizon Web UI, locate the image <code>UKCloud-RHUI-Standard-Assured.iso</code>, click the action button and select <strong>Create Volume</strong>:</p>
+<li><p>In the Horizon Web UI, locate the image <code>UKCloud-RHUI-Standard-Assured.iso</code>, click the action button and select <strong>Create Volume</strong>.</p>
 <p><img src="images/ostack-rhui-image.png" alt="Create Volume"></p>
 </li>
-<li><p>Use the default settings presented by the dialog to copy the ISO to a 1GB TIER2 volume, and click <strong>Create Volume</strong>:</p>
+<li><p>Use the default settings presented by the dialog to copy the ISO to a 1GB Tier 2 volume, and click <strong>Create Volume</strong>.</p>
 <p><img src="images/ostack-rhui-volumecreate.png" alt="Create Volume Dialog"></p>
 </li>
-<li><p>Locate the Red Hat Instance where you wish to install RHUI support and select <strong>Attach Volume</strong>:</p>
+<li><p>Locate the Red Hat instance where you want to install RHUI support and select <strong>Attach Volume</strong>.</p>
 <p><img src="images/ostack-rhui-volumeattach.png" alt="Instance Action Menu"></p>
 </li>
-<li><p>Select the newly created volume and then click <strong>Attach Volume</strong>:</p>
+<li><p>Select the newly created volume and then click <strong>Attach Volume</strong>.</p>
 <p><img src="images/ostack-rhui-volumeattachdialog.png" alt="Attach Volume Dialog"></p>
 </li>
-<li><p>Select the Instance name and check at the bottom of the Instance Overview to see that the volume is attached, and what its device name is:</p>
+<li><p>Select the instance name and check at the bottom of the Instance Overview to see that the volume is attached, and what its device name is.</p>
 <p><img src="images/ostack-rhui-volumelocation.png" alt="Volume Attach Status"></p>
 </li>
-<li><p>As root, mount the volume inside the VM, using the device name from step 5:</p>
+<li><p>As root, mount the volume inside the VM, using the device name from step 5.</p>
 <p><img src="images/ostack-rhui-mount.png" alt="Mount inside OS"></p>
 </li>
 <li><p>Install the relevant RPM.</p>
 <p>For example, for RHEL7: <code>rpm -ivh IL2-Client-RHEL7-Standard-2.0-1.noarch.rpm</code>.</p>
 </li>
 <li><p>Clean yum:</p>
-<pre><code>yum clean all
+<pre><code class="lang-none">yum clean all
 </code></pre>
 </li>
 <li><p>Test the RHUI is working:</p>
-<pre><code>yum update
+<pre><code class="lang-none">yum update
 </code></pre>
 </li>
 <li><p>The first time you update from RHUI you may be prompted to accept the following two certificates:</p>
@@ -149,12 +148,12 @@
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>The primary issues you may encounter are:</p>
 <h3 id="dns-failure">DNS Failure</h3>
-<p>Check the DNS lookup is working and you have the correct entry for Assured and Elevated.</p>
+<p>Check the DNS lookup is working and you have the correct entry for Assured.</p>
 <h3 id="443-not-accessible">443 not accessible</h3>
 <ol>
-<li><p>Check your firewall configuration, including local firewalls (<code>iptables</code>) and edge gateway.</p>
+<li><p>Check your firewall configuration, including local firewalls (iptables) and security groups applied to instances.</p>
 </li>
-<li><p>Ensure you have the correct destination IP entry for Assured or Elevated.</p>
+<li><p>Ensure you have the correct destination IP entry.</p>
 </li>
 </ol>
 <h3 id="incorrect-version">Incorrect version</h3>
