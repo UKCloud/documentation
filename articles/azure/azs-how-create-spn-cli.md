@@ -46,9 +46,9 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 ## Official Documentation
 
-- [Service Principal Name commands for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2018-03-01-hybrid)
+- [Service Principal Name commands for 2019-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2018-03-01-hybrid)
 
-- [Create an Azure Service Principal Name with Azure CLI 2.0 for 2018-03-01-hybrid profile](azs-how-create-spn-cli.md)
+- [Create an Azure Service Principal Name with Azure CLI 2.0 for 2019-03-01-hybrid profile](azs-how-create-spn-cli.md)
 
 ## Overview of the creation process for Azure Stack Hub SPN
 
@@ -85,7 +85,7 @@ Enter details below to provide values for the variables in the scripts in this a
 ## Create service principal name for Azure Stack Hub with **Set Password**
 
 <pre><code class="lang-azurecli hljs"># Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result2" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result3" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result2" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result3" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2019-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
