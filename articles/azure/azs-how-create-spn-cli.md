@@ -46,7 +46,10 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 ## Official Documentation
 
-- [Service Principal Name commands for 2019-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2018-03-01-hybrid)
+- [Service Principal Name commands for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2018-03-01-hybrid)
+
+    > [!NOTE]
+    > There is currently no document for the 2019-03-01-hybrid profile.
 
 - [Create an Azure Service Principal Name with Azure CLI 2.0 for 2019-03-01-hybrid profile](azs-how-create-spn-cli.md)
 
