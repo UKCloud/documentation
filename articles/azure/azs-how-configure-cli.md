@@ -152,9 +152,9 @@ There are some known issues that you must be aware of when using CLI in Azure St
 
 - The CLI interactive mode i.e the `az interactive` command is not yet supported in Azure Stack Hub.
 
-- To get the list of virtual machine images available in Azure Stack Hub, use the `az vm images list --all` command instead of the `az vm image list` command. Specifying the `--all` option makes sure that response returns only the images that are available in your Azure Stack Hub environment.
+- To get the list of virtual machine images available in Azure Stack Hub, use the `az vm image list --all` command instead of the `az vm image list` command. Specifying the `--all` option makes sure that response returns only the images that are available in your Azure Stack Hub environment.
 
-- Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack Hub. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm images list` command.
+- Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack Hub. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm image list -all` command.
 
 ## Feedback
 
