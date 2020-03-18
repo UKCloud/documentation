@@ -69,9 +69,9 @@ To create a new user:
 
     g. When you're done, click **Review & Submit**.
 
-7. When the Service Request is    resolved, the identified users can login to the OpenStack Horizon dashboard and CLI using theirUKCloud Portal credentials, if   the project are based in the Corsham region.
+7. When the Service Request is resolved, if the project is based in the Corsham region, the identified users can login to the OpenStack Horizon dashboard and CLI using their UKCloud Portal credentials.
 
-    For a   project sitting in the Farnborough Openstack region, the credentials are separate from the users portal credentials and sent to you via SMS by UKCloud support to the phone number associated with the account in the portal.
+    For a project in the Farnborough region, the users' OpenStack credentials are separate from their Portal credentials and are sent to you via SMS by UKCloud Support to the phone number associated with the account in the Portal.
 
     For more information about logging in to the Horizon dashboard, see the [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md).
 
