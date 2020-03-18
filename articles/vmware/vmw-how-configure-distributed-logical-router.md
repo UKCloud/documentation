@@ -75,8 +75,6 @@ To enable distributed routing, you must use the vCloud Director Web Console.
 
 After you've enabled distributed routing, you can create your distributed networks. You can create up to 1000 distributed networks per edge gateway.
 
-# [In vCloud Director 9.7](#tab/tabid-1)
-
 1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
 
 2. In the left navigation panel, select **Networks**.
@@ -117,39 +115,6 @@ After you've enabled distributed routing, you can create your distributed networ
     For more detailed instructions, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
 
 13. When you're done, click **Finish**.
-
-# [In vCloud Director 9.1](#tab/tabid-2)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
-
-2. In the left navigation panel, select **Network**.
-
-    ![Network tab in vCloud Director](images/vmw-vcd91-tab-network.png)
-
-3. Click **Add**.
-
-    ![Add network button](images/vmw-vcd91-btn-add-network.png)
-
-4. In the *Add Org VDC Network* dialog box, select **Routed network connecting to an existing edge gateway**.
-
-    ![Routed network option](images/vmw-vcd91-add-network-routed-option.png)
-
-5. Select the **Edge Gateway** that you want your network to connect to.
-
-    > [!NOTE]
-    > The edge must be an advanced gateway and must have distributed routing enabled.
-
-6. From the **Interface type** list, select **Distributed**.
-
-    ![Distributed network option](images/vmw-vcd91-dlr-add-network-distributed.png)
-
-7. Complete the remaining fields in the dialog box as you would for any other routed network.
-
-    For more detailed instructions, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
-
-8. When you're done, click **Save**.
-
-***
 
 ## Feedback
 
