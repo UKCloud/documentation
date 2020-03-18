@@ -3,8 +3,8 @@ title: How to create an SPN for Azure Stack Hub using Azure CLI
 description: Learn how to create service principal name (SPN) to manage your Azure Stack Hub using Azure CLI
 services: azure-stack
 author: Chris Black
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 18/03/2020 11:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -51,7 +51,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 - [Create an Azure Service Principal Name with Azure CLI 2.0 for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-2018-03-01-hybrid)
 
 > [!NOTE]
-> There is currently no document for the 2019-03-01-hybrid profile for either of the above documents.
+> There is currently no documentation for the 2019-03-01-hybrid profile.
 
 ## Overview of the creation process for Azure Stack Hub SPN
 
