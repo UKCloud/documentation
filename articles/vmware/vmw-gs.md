@@ -198,11 +198,11 @@ After you've created your compute service and VDC, you can start to build up you
 
 4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
 
-    **More information!** [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)
+    For more information, see [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md).
 
 5. To return to the UKCloud Portal, click your user name in the top right corner, and select **Log out**.
 
-    ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-link.png)
+    ![vCloud Director Logout option](images/vmw-vcd-logout-link.png)
 
 ## Next steps
 
