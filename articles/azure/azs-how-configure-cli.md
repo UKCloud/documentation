@@ -24,8 +24,8 @@ In this article, we will guide you through the process of installing and using t
 
 [Azure CLI command reference for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-2018-03-01-hybrid)
 
-    > [!NOTE]
-    > There is currently no document for the 2019-03-01-hybrid profile.
+> [!NOTE]
+> There is currently no document for the 2019-03-01-hybrid profile.
 
 [Deploy templates with Azure CLI](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-deploy-template-command-line)
 
