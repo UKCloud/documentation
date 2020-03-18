@@ -3,8 +3,8 @@ title: How to create new UKCloud for OpenStack users in the UKCloud Portal
 description: Shows how to create UKCloud for OpenStack users in the UKCloud Portal so that they can benefit from two-factor authentication (2FA)
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/10/2018 07:26:13
+reviewer: Matt Gough
+lastreviewed: 18/03/2020
 
 toc_rootlink: How To
 toc_sub1: 
@@ -69,9 +69,9 @@ To create a new user:
 
     g. When you're done, click **Review & Submit**.
 
-7. When the Service Request is resolved, the identified users can log in to the OpenStack Horizon dashboard and CLI using their UKCloud Portal credentials.
+7. When the Service Request is    resolved, the identified users can login to the OpenStack Horizon dashboard and CLI using theirUKCloud Portal credentials, if   the project are based in the Corsham region.
 
-    If you've enabled two-factor authentication (2FA) in the account that includes the OpenStack project, and users have set up 2FA for their user accounts, they will be prompted to provide a 2FA code when logging in.
+    For a   project sitting in the Farnborough Openstack region, the credentials are separate from the users portal credentials and sent to you via SMS by UKCloud support to the phone number associated with the account in the portal.
 
     For more information about logging in to the Horizon dashboard, see the [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md).
 
