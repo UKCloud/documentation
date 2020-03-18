@@ -228,8 +228,6 @@
     href: vmw-ref-trouble-null-pointer.md
   - name: Fixing your IPsec VPN following upgrade to NSX 6.4
     href: vmw-ref-trouble-ipsec-nsx64.md
-  - name: UK keyboard layout not supported in Web Console
-    href: vmw-ref-trouble-uk-keyboard-console.md
 - name: Videos
   items:
   - name: Benefits of VMware L2 VPN
@@ -240,8 +238,6 @@
     href: vmw-vid-wsus.md
   - name: Licensing Windows VMs using the KMS
     href: vmw-vid-licensing-kms.md
-  - name: vCloud Director 9.1 overview
-    href: vmw-vid-vcd91.md
   - name: vCloud Director 9.7
     href: vmw-vid-vcd97.md
   - name: VMware Distributed Firewall
