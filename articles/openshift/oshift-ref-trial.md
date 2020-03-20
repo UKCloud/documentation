@@ -3,8 +3,8 @@ title: Making the most of your UKCloud for OpenShift trial
 description: Provides information to get up and running with UKCloud for OpenShift trials
 services: openshift
 author: Mudasar Hussain
-reviewer:
-lastreviewed: 08/03/2019 16:01:29
+reviewer: Ben Bacon
+lastreviewed: 20/03/2020 14:26:00
 
 toc_rootlink: Reference
 toc_sub1:
@@ -32,9 +32,9 @@ OpenShift provides a platform-as-a-service, which means that you don't need to w
 
 With UKCloud for OpenShift, you have administrator access to your cluster, giving you the control you need to create, deploy and administer your environment as you see fit.
 
-All OpenShift deployments get a Foundation Pack, which includes the management and orchestration planes. These are essentially three master nodes, two infrastructure nodes and load balancers for the control and data planes.
+All OpenShift deployments get a Foundation Pack, which includes the management and orchestration planes. These are essentially three master nodes, three infrastructure nodes and load balancers for the control and data planes.
 
-During a trial, each cluster is also provisioned with two small Runtime Packs. These are essentially two OpenStack VMs running RedHat Atomic OS with 16GB RAM, 2vCPUs and 100GB disks each. This is also the minimum number of Runtime Packs UKCloud recommends in each OpenShift deployment in order to provide minimal resilience and enable interruption free patching. After the trial phase it is possible to deploy larger and more nodes for your cluster.
+During a trial, each cluster is also provisioned with two small Runtime Packs. These are essentially two OpenStack VMs running RedHat Atomic OS with 16GB RAM, two vCPUs and 100GB disks each. This is also the minimum number of Runtime Packs UKCloud recommends in each OpenShift deployment in order to provide minimal resilience and enable interruption free patching. After the trial phase it is possible to deploy larger and more nodes for your cluster.
 
 **OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/3.11/architecture/index.html)
 
