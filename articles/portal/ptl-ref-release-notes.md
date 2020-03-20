@@ -4,7 +4,7 @@ description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
 reviewer: ccampbell
-lastreviewed: 25/02/2020
+lastreviewed: 20/03/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,16 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 1.132.0
+
+Date: 20th March 2020
+
+Feature update
+
+Details:
+
+- Improved success messaging when locking user accounts. 
 
 ## Release 1.129.0
 
