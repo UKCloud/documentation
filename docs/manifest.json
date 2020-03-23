@@ -485,6 +485,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-use-ukc-csp.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-use-ukc-csp.html",
+          "hash": "I3BnHCYtrRLtuhMY73gDfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-ref-known-issues.md",
       "output": {
         ".html": {
@@ -513,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sco.html",
-          "hash": "fPGGFWAKncH5GHmDGpiTVg=="
+          "hash": "HZC9PfcOP0cyiEtpnVA5rg=="
         }
       },
       "is_incremental": false,
@@ -2067,7 +2079,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "WnDXegngObh1gNO9n1s2KQ=="
+          "hash": "dC1VgOSx6gLM0xu3C9Xigw=="
         }
       },
       "is_incremental": false,
@@ -4494,6 +4506,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-transfer-regions.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-transfer-regions.html",
+          "hash": "I4tGdT1b6XpCYw5pLCSTDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-sco-vpn.md",
       "output": {
         ".html": {
@@ -4752,7 +4776,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "NYgVDOweC2SpiGliw7XQww=="
+          "hash": "TK5t28y72kEXEv1Q7uNu3A=="
         }
       },
       "is_incremental": false,
@@ -19452,7 +19476,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 421,
+          "total_file_count": 423,
           "skipped_file_count": 0
         }
       }

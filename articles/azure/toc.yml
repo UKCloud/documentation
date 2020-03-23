@@ -44,6 +44,8 @@
       href: azs-how-retrieve-quota-ps.md
     - name: Use the Azure Stack Hub API
       href: azs-how-use-azure-api.md
+    - name: Use UKCloud as your public Azure CSP
+      href: azs-how-use-ukc-csp.md
     - name: Add a Managed Disk to a VM
       items:
       - name: Add a managed disk to a VM - Portal
