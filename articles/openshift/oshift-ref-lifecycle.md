@@ -3,8 +3,8 @@ title: UKCloud for OpenShift lifecycle and patch management
 description: Provides an overview of how UKCloud manages the patching and lifecycle support of its OpenShift service
 services: openshift
 author: Steve Dixon
-reviewer:
-lastreviewed: 07/03/2019 11:51:21
+reviewer: Ben Bacon
+lastreviewed: 20/03/2019 16:59:00
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -35,12 +35,12 @@ Although Red Hat officially fully support each major _**X**_ version of the Open
 
 ### Upgrades of major _**X**_ and minor _**Y**_ versions
 
-Currently, UKCloud does not offer in-place upgrades. This provides you with total flexiblility to upgrade at a time convenient to you, as well as providing the ability to test existing code and applications against any new versions prior to moving in to production.
+Currently, UKCloud does not offer in-place upgrades. This provides you with total flexibility to upgrade at a time convenient to you, as well as providing the ability to test existing code and applications against any new versions prior to moving in to production.
 
 To facilitate any upgrades, UKCloud will deploy a new environment to customers based on the latest tested and approved release of OpenShift free of charge for thirty days in order to conduct any testing and migrate workloads over to the new environment. At the end of thirty days, UKCloud will shut down and remove the old environment to prevent any double-charging.
 
 > [!NOTE]
-> UKCloud will actively work with you during this period to help ensure a smooth migration and will not turn off any old environments until until you advise us that it's safe to do so.
+> UKCloud will actively work with you during this period to help ensure a smooth migration and will not turn off any old environments until you advise us that it's safe to do so.
 
 ### Patching within current version
 
