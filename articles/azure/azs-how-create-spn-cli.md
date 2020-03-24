@@ -3,8 +3,8 @@ title: How to create an SPN for Azure Stack Hub using Azure CLI
 description: Learn how to create service principal name (SPN) to manage your Azure Stack Hub using Azure CLI
 services: azure-stack
 author: Chris Black
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 18/03/2020 11:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -18,17 +18,17 @@ toc_mdlink: azs-how-create-spn-cli.md
 
 # How to create a service principal name for Azure Stack Hub using Azure CLI
 
-This document explains how to create a service principal name (SPN) to manage Azure and Azure Stack Hub using Azure CLI.
+This article explains how to create a service principal name (SPN) to manage Azure and Azure Stack Hub using Azure CLI.
 
 It will guide you through the creation of:
 
-- an Azure application
+- An Azure application
 
-- a service principal name
+- A service principal name
 
-- role assignment
+- Role assignment
 
-- permissions
+- Permissions
 
 ## What is a service principal name?
 
@@ -48,7 +48,10 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 - [Service Principal Name commands for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2018-03-01-hybrid)
 
-- [Create an Azure Service Principal Name with Azure CLI 2.0 for 2018-03-01-hybrid profile](azs-how-create-spn-cli.md)
+- [Create an Azure Service Principal Name with Azure CLI 2.0 for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-2018-03-01-hybrid)
+
+> [!NOTE]
+> There is currently no documentation for the 2019-03-01-hybrid profile.
 
 ## Overview of the creation process for Azure Stack Hub SPN
 
@@ -80,12 +83,11 @@ Enter details below to provide values for the variables in the scripts in this a
 | Username               | Your AAD username                                                             | <form oninput="result.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
 | Password               | Your AAD password                                                             | <form oninput="result.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"/></form> |
 | SPN Name               | The name of the SPN to be created                                             | <form oninput="result.value=spnname.value" id="spnname" style="display: inline;"><input type="text" id="spnname" name="spnname" style="display: inline;" placeholder="ServicePrincipalName"/></form> |
-| SPN Password           | The password of the SPN to be created                                         | <form oninput="result.value=spnpass.value" id="spnpass" style="display: inline;"><input type="text" id="spnpass" name="spnpass" style="display: inline;" placeholder="Password1234!"/></form> |
 
 ## Create service principal name for Azure Stack Hub with **Set Password**
 
 <pre><code class="lang-azurecli hljs"># Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result2" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result3" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result2" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result3" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2019-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
@@ -99,9 +101,9 @@ az ad sp create-for-rbac --name "<output form="spnname" name="result" style="dis
 # This command will output five values
 #  {
 #    "appId": "00000000-0000-0000-0000-000000000000",
-#    "displayName": "azure-cli-2017-06-05-10-41-15",
-#    "name": "http://azure-cli-2017-06-05-10-41-15",
-#    "password": "Password1234!",
+#    "displayName": "ServicePrincipalName",
+#    "name": "http://ServicePrincipalName",
+#    "password": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
 #    "tenant": "00000000-0000-0000-0000-000000000000"
 #  }
 
@@ -124,21 +126,9 @@ az group delete --name rg01 -y</code></pre>
 >
 > TENANT_ID=tenant
 
-> [!TIP]
-> You can also run the `create-for-rbac` command without password and then you can pick the automatically generated password from the output variable:
->
-> ```azurecli
-> az ad sp create-for-rbac --name "ServicePrincipalName" --role="Owner"
-> {
-> "appId": "00000000-0000-0000-0000-000000000000",
-> "displayName": "azure-cli-2017-06-05-10-41-15",
-> "name": "http://azure-cli-2017-06-05-10-41-15",
-> "password": "0000-0000-0000-0000-000000000000",
-> "tenant": "00000000-0000-0000-0000-000000000000"
-> }
-> ```
->
-> This is yet another difference between PowerShell creation as there is no auto-generation of passwords built-in
+> [!NOTE]
+> As shown above, the `create-for-rbac` command automatically generates a SPN password for you.
+> This is yet another difference between creating a SPN via PowerShell as there is no auto-generation of a SPN password built-in.
 
 ## Feedback
 

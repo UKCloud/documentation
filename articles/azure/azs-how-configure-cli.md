@@ -24,10 +24,13 @@ In this article, we will guide you through the process of installing and using t
 
 [Azure CLI command reference for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-2018-03-01-hybrid)
 
+> [!NOTE]
+> There is currently no document for the 2019-03-01-hybrid profile.
+
 [Deploy templates with Azure CLI](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-deploy-template-command-line)
 
 > [!IMPORTANT]
-> Azure Stack Hub works with very specific **API Profiles** - you need to use `2018-03-01-hybrid` in order to interact with it. The biggest caveat is that it only support as small subset of commands from the `latest profile`.
+> Azure Stack Hub works with very specific **API Profiles** - you need to use `2019-03-01-hybrid` to interact with it. The biggest caveat is that it only supports a small subset of commands from the `latest profile`.
 
 ## Install CLI
 
@@ -79,7 +82,7 @@ Use the following steps to connect to Azure Stack Hub:
 3. Update your environment configuration to use the Azure Stack Hub specific API version profile. To update the configuration, run the following command:
 
    ```azurecli
-   az cloud update --profile 2018-03-01-hybrid
+   az cloud update --profile 2019-03-01-hybrid
    ```
 
 4. Sign in to your Azure Stack Hub environment by using the `az login` command. You can sign in to the Azure Stack Hub environment either as a user or as a [service principal](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects).
@@ -123,7 +126,7 @@ Use the following steps to connect to Azure Stack Hub:
 ## Connect to Azure Stack Hub - Quick Reference Guide
 
 <pre><code class="lang-azurecli hljs"># Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result7" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result8" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result9" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result7" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result8" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result9" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2019-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
@@ -149,9 +152,9 @@ There are some known issues that you must be aware of when using CLI in Azure St
 
 - The CLI interactive mode i.e the `az interactive` command is not yet supported in Azure Stack Hub.
 
-- To get the list of virtual machine images available in Azure Stack Hub, use the `az vm images list --all` command instead of the `az vm image list` command. Specifying the `--all` option makes sure that response returns only the images that are available in your Azure Stack Hub environment.
+- To get the list of virtual machine images available in Azure Stack Hub, use the `az vm image list --all` command instead of the `az vm image list` command. Specifying the `--all` option makes sure that response returns only the images that are available in your Azure Stack Hub environment.
 
-- Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack Hub. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm images list` command.
+- Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack Hub. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm image list -all` command.
 
 ## Feedback
 
