@@ -4,7 +4,7 @@ description: Provides information on things to consider when scaling a cluster
 services: openshift
 author: Kieran O'Neill
 reviewer: Ben Bacon
-lastreviewed: 20/03/2020 14:49:00
+lastreviewed: 20/03/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -21,7 +21,7 @@ toc_mdlink: oshift-ref-scaling.md
 
 With your UKCloud for OpenShift cluster we deploy a number of infrastructure applications by default. These are quality of service features that are intended to help you with administration, management and application development within your cluster. Examples include the EFK stack, Hawkular Metrics, the integrated registry, the service catalog and, with v3.11 deployments onwards, Prometheus and Grafana.
 
-These applications run their components on the infrastructure nodes (these are the nodes with the naming convention worker-infra). Your cluster comes out of the box with three of these nodes and each has 16GB of memory and two vCPUs. This provides an adequate amount of resource and good level of resiliency for the infrastructure components to support a production deployment. If you're looking to scale out the cluster to a larger size and start running more intensive applications or builds, these nodes may not be enough. For example, the more applications and nodes you have in your environment, the more logs will be gathered off the nodes by fluentd and sent off to Elasticsearch for indexing. This will result in significantly higher resource usage. In the same vein, the more pods and nodes are running in your environment, the more stats Hawkular Metrics will be gathering and storing in the Cassandra database.
+These applications run their components on the infrastructure nodes (these are the nodes with the naming convention worker-infra). Your cluster comes out of the box with three of these nodes and each has 16GB of memory and two vCPUs. This provides an adequate amount of resource and good level of resiliency for the infrastructure components to support a production deployment. If you're looking to scale out the cluster to a larger size and start running more intensive applications or builds, these nodes may not be enough. For example, the more applications and nodes you have in your environment, the more logs will be gathered off the nodes by fluentd and sent off to Elasticsearch for indexing. This will result in significantly higher resource usage. In the same vein, the more pods and nodes that are running in your environment, the more stats Hawkular Metrics will be gathering and storing in the Cassandra database.
 
 #### Recommendations
 
