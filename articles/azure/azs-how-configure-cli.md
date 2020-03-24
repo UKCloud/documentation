@@ -30,7 +30,7 @@ In this article, we will guide you through the process of installing and using t
 [Deploy templates with Azure CLI](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-deploy-template-command-line)
 
 > [!IMPORTANT]
-> Azure Stack Hub works with very specific **API Profiles** - you need to use `2019-03-01-hybrid` in order to interact with it. The biggest caveat is that it only support as small subset of commands from the `latest profile`.
+> Azure Stack Hub works with very specific **API Profiles** - you need to use `2019-03-01-hybrid` to interact with it. The biggest caveat is that it only supports a small subset of commands from the `latest profile`.
 
 ## Install CLI
 
