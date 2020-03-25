@@ -91,7 +91,7 @@ To start the Azure CLI docker container run the following command:
 > ```
 > Ensure Docker Desktop on Windows is set to **Linux containers**.
 
-This command will execute an interactive terminal session inside the container and remove the container on exit.
+This command will execute an interactive terminal session inside the container and remove it on exit.
 
 You will now be in the container's interactive terminal session and see the following prompt: `bash-5.0#`.
 
