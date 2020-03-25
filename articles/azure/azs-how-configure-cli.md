@@ -34,7 +34,7 @@ In this article, we will guide you through the process of installing and using t
 
 ## Install CLI
 
-# [Locally](#tab/tabid-1)
+# [Local workstation](#tab/tabid-1)
 
 Sign in to your development workstation and install CLI. Azure Stack Hub requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli) article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:
 
