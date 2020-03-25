@@ -64,7 +64,7 @@ Sign in to your development workstation and install CLI. Azure Stack Hub require
 
 You should see the version of Azure CLI and other dependent libraries that are installed on your computer.
 
-# [Docker](#tab/tabid-2)
+# [Docker Container](#tab/tabid-2)
 
 If you have [Docker](https://www.docker.com/) installed on your workstation, Microsoft provide a Azure CLI container which can be used instead of installing dependencies locally.
 
