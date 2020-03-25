@@ -4,7 +4,7 @@ description: Learn how to use the cross-platform command-line interface (CLI) to
 services: azure-stack
 author: Chris Black
 reviewer: Daniel Brennand
-lastreviewed: 25/03/2020 11:23:00
+lastreviewed: 25/03/2020 17:03:00
 
 toc_rootlink: Users
 toc_sub1: How To
