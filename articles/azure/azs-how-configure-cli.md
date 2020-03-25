@@ -75,6 +75,15 @@ To start the Azure CLI docker container run the following command:
    ```
 
 > [!NOTE]
+> The above command will automatically pull the container image from Microsoft's container registry.
+>
+> If you experience issues with pulling the image, run the following command:
+>
+> ```azurecli
+> docker pull mcr.microsoft.com/azure-cli
+> ```
+
+> [!CAUTION]
 > If you are running Docker Desktop on Windows and receive the following error:
 > 
 > ```cmd
