@@ -39,7 +39,7 @@ In this article, we will guide you through the process of installing and using t
 Sign in to your development workstation and install CLI. Azure Stack Hub requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli) article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:
 
    ```azurecli
-      az --version
+      bash-5.0# az --version
       azure-cli                          2.2.0
 
       command-modules-nspkg              2.0.3
@@ -89,7 +89,7 @@ You will now be in the container's interactive terminal session and see the foll
 You can run `az --version` to verify the Azure CLI is working correctly:
 
 ```azurecli
-   az --version
+   bash-5.0# az --version
    azure-cli                          2.2.0
 
    command-modules-nspkg              2.0.3
