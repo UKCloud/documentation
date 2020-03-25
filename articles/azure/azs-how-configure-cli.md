@@ -40,6 +40,26 @@ Sign in to your development workstation and install CLI. Azure Stack Hub require
 
    ```azurecli
       az --version
+      azure-cli                          2.2.0
+
+      command-modules-nspkg              2.0.3
+      core                               2.2.0
+      nspkg                              3.0.4
+      telemetry                          1.0.4
+
+      Python location '/usr/local/bin/python'
+      Extensions directory '/root/.azure/cliextensions'
+
+      Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
+      [GCC 8.3.0]
+
+      Legal docs and information: aka.ms/AzureCliLegal
+
+
+
+      Your CLI is up-to-date.
+
+      Please let us know how we are doing: https://aka.ms/clihats
    ```
 
 You should see the version of Azure CLI and other dependent libraries that are installed on your computer.
@@ -66,7 +86,31 @@ This command will execute an interactive terminal session inside the container a
 
 You will now be in the container's interactive terminal session and see the following prompt: `bash-5.0#`.
 
-You can run `az --version` to verify the Azure CLI is working correctly.
+You can run `az --version` to verify the Azure CLI is working correctly:
+
+```azurecli
+   az --version
+   azure-cli                          2.2.0
+
+   command-modules-nspkg              2.0.3
+   core                               2.2.0
+   nspkg                              3.0.4
+   telemetry                          1.0.4
+
+   Python location '/usr/local/bin/python'
+   Extensions directory '/root/.azure/cliextensions'
+
+   Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
+   [GCC 8.3.0]
+
+   Legal docs and information: aka.ms/AzureCliLegal
+
+
+
+   Your CLI is up-to-date.
+
+   Please let us know how we are doing: https://aka.ms/clihats
+```
 
 ***
 
