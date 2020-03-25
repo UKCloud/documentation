@@ -211,7 +211,7 @@ Use the following steps to connect to Azure Stack Hub:
       ```
 
       > [!NOTE]
-      > The final line shows that the profile set above and the Azure Stack Hub user profile is active.
+      > The final line shows that the user profile has been updated and is active.
 
 6. To list command subgroups run:
 
