@@ -81,12 +81,13 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Ensure all counters are selected and click **Add the selected performance counters**.
 
+        > [!NOTE]
+        > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
+
     - Click **Save**.
 
         ![Performance counters](images/azs-browser-example-performance-counters.png)
 
-        > [!NOTE]
-        > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
 
 4. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
