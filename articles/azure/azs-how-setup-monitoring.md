@@ -60,7 +60,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         - A **Location** to host the workspace in
 
         > [!NOTE]
-        > See [here](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics) for supported locations for Azure Monitor for VMs.
+        > Azure Monitor for VMs supports a Log Analytics workspace in the these [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics).
 
         - A **Pricing tier** to use
 
