@@ -65,7 +65,7 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
 6. The *Edge Gateway Build Status* page displays information about the edge gateway you're building and lets you know how the build is progressing.
 
     > [!TIP]
-    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to Reports > VMware Cloud Build History in the UKCloud Portal.
+    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by expanding **Reports** in the Portal navigation panel and selecting **VMware Cloud Build History**.
 
     ![Build Edge Gateway Status page](images/vmw-portal-build-edge-gateway-status.png)
 
