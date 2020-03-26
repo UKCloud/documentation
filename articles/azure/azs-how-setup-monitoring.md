@@ -95,6 +95,8 @@ To complete the steps in this article, you must have appropriate access to a sub
     > [!WARNING]
     > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
 
+# [Portal](#tab/tabid-a)
+
 6. Click **Add** at the top, select the extension **Azure Monitor Dependency Agent**, click **Create** and then **OK**.
 
     > [!WARNING]
@@ -102,9 +104,58 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 7. Click **Add** at the top, select the extension **Azure Monitor, Update and Configuration Management** and then click **Create**.
 
+    - Provide the extension with the **Workspace ID** and **Primary Key** values (noted down previously).
+
     ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.png)
 
-    - Provide the extension with the **Workspace ID** and **Primary Key** values (noted down previously).
+# [PowerShell](#tab/tabid-b)
+
+6. Execute the following PowerShell script to setup the **Azure Monitor Dependency Agent** and **Azure Monitor, Update and Configuration Management** extensions.
+
+    ### Declare variables
+
+    Enter details below to provide values for the variables in the following script in this article:
+
+    | Variable name   | Variable description                                               | Input            |
+    |-----------------|--------------------------------------------------------------------|------------------|
+    | \$VMName    | The name of the virtual machine                 | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="AzureStackHubVM"/></form> |
+    | \$ResourceGroupName        | Name of the resource group which the VM resides in                           | <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+    | \$WorkspaceKey        | The log analytics workspace primary key                           | <form oninput="result.value=workspacekey.value" id="workspacekey" style="display: inline;"><input type="text" id="workspacekey" name="workspacekey" style="display: inline;" placeholder="2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ=="/></form> |
+    | \$WorkspaceId        | The log analytics workspace ID                           | <form oninput="result.value=workspaceid.value" id="workspaceid" style="display: inline;"><input type="text" id="workspaceid" name="workspaceid" style="display: inline;" placeholder="a40470ef-d8a0-4d37-ba13-274d4649a674"/></form> |
+
+    <pre><code class="language-PowerShell"># Declare variables
+    $ResourceGroupName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+    $VMName = "<output form="vmname" name="result" style="display: inline;">AzureStackHubVM</output>"
+    $WorkspaceKey = "<output form="workspacekey" name="result" style="display: inline;">2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ==</output>"
+    $PublicSettings = "{'workspaceId': '<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>'}"
+    $ProtectedSettings = "{'workspaceKey': `'$WorkspaceKey`'}"
+    $Location = (Get-AzureRmLocation).Location
+
+    $VM = Get-AzureRmVM -ResourceGroupName $ResourceGroupName -VMName $VMName
+
+    # Deploy DependencyAgent extension
+    Set-AzureRmVMExtension -ExtensionName "DependencyAgent" `
+    -ResourceGroupName $VM.ResourceGroupName `
+    -VMName $VM.Name `
+    -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
+    -ExtensionType "DependencyAgentLinux" `
+    -TypeHandlerVersion 9.7 `
+    -Location $Location `
+    -Verbose
+
+    # Deploy Microsoft.EnterpriseCloud.Monitoring extension
+    Set-AzureRmVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
+    -ResourceGroupName $VM.ResourceGroupName `
+    -VMName $VM.Name `
+    -Publisher "Microsoft.EnterpriseCloud.Monitoring" `
+    -ExtensionType "OmsAgentForLinux" `
+    -TypeHandlerVersion 1.12 `
+    -SettingString $PublicSettings `
+    -ProtectedSettingString $ProtectedSettings `
+    -Location $Location `
+    -Verbose</code></pre>
+
+***
 
 8. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
 
