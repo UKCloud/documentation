@@ -60,7 +60,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         - A **Location** to host the workspace in
 
         > [!NOTE]
-        > The currently supported locations are: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
+        > See [here](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics) for supported locations for Azure Monitor for VMs.
 
         - A **Pricing tier** to use
 
