@@ -1,6 +1,6 @@
 ---
-title: How to configure Azure Monitor for VMs on Azure Stack | UKCloud Ltd
-description: Describes how to configure Azure Monitor for VMs on Azure Stack
+title: How to configure Azure Monitor for VMs on Azure Stack Hub | UKCloud Ltd
+description: Describes how to configure Azure Monitor for VMs on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
 reviewer:
@@ -11,24 +11,24 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Configure Azure Monitor for VMs on Azure Stack
+toc_title: Configure Azure Monitor for VMs on Azure Stack Hub
 toc_fullpath: Users/How To/azs-how-setup-monitoring.md
 toc_mdlink: azs-how-setup-monitoring.md
 ---
 
-# How to configure Azure Monitor for VMs on Azure Stack | UKCloud Ltd
+# How to configure Azure Monitor for VMs on Azure Stack Hub | UKCloud Ltd
 
 ## Overview
 
 Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive, and otherwise take action on the metrics and logs coming from resources in Azure.
 
-This article will enable the following solutions for Azure Stack VMs:
+This article will enable the following solutions for Azure Stack Hub VMs:
 
 -  [Azure Monitor for VMs](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-overview)
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack Hub portal.
 
 ## Enabling Azure Monitor for VMs
 
@@ -88,7 +88,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         > [!NOTE]
         > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
 
-4. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
+4. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
 5. Navigate to the VM that you want to enable Azure Monitor on and under *Settings*, select the *Extensions* blade.
 
