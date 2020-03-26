@@ -90,12 +90,12 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
+# [Portal](#tab/tabid-a)
+
 5. Navigate to the VM that you want to enable Azure Monitor on and under *Settings*, select the *Extensions* blade.
 
     > [!WARNING]
     > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
-
-# [Portal](#tab/tabid-a)
 
 6. Click **Add** at the top, select the extension **Azure Monitor Dependency Agent**, click **Create** and then **OK**.
 
@@ -119,9 +119,11 @@ To complete the steps in this article, you must have appropriate access to a sub
     | Variable name   | Variable description                                               | Input            |
     |-----------------|--------------------------------------------------------------------|------------------|
     | \$VMName    | The name of the virtual machine                 | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="AzureStackHubVM"/></form> |
-    | \$ResourceGroupName        | Name of the resource group which the VM resides in                           | <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+    | \$ResourceGroupName        | Name of the resource group which the VM resides in                           | <form oninput="result.value=resourcegroup.value;result1.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
     | \$WorkspaceKey        | The log analytics workspace primary key                           | <form oninput="result.value=workspacekey.value" id="workspacekey" style="display: inline;"><input type="text" id="workspacekey" name="workspacekey" style="display: inline;" placeholder="2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ=="/></form> |
     | \$WorkspaceId        | The log analytics workspace ID                           | <form oninput="result.value=workspaceid.value" id="workspaceid" style="display: inline;"><input type="text" id="workspaceid" name="workspaceid" style="display: inline;" placeholder="a40470ef-d8a0-4d37-ba13-274d4649a674"/></form> |
+    | \$NetworkSecurityGroupName        | The name of the network security group to apply the inbound port 443 rule to                           | <form oninput="result.value=networksecuritygroupname.value" id="networksecuritygroupname" style="display: inline;"><input type="text" id="networksecuritygroupname" name="networksecuritygroupname" style="display: inline;" placeholder="AzureStackHubVMNSG"/></form> |
+
 
     <pre><code class="language-PowerShell"># Declare variables
     $ResourceGroupName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
@@ -130,8 +132,12 @@ To complete the steps in this article, you must have appropriate access to a sub
     $PublicSettings = "{'workspaceId': '<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>'}"
     $ProtectedSettings = "{'workspaceKey': `'$WorkspaceKey`'}"
     $Location = (Get-AzureRmLocation).Location
-
+    
+    # Get the virtual machine to apply the custom script extensions to
     $VM = Get-AzureRmVM -ResourceGroupName $ResourceGroupName -VMName $VMName
+
+    # Obtain network security group, create the port 443 inbound network security group rule and apply the rule to it
+    Get-AzureRmNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzureRmNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzureRmNetworkSecurityGroup
 
     # Deploy DependencyAgent extension
     Set-AzureRmVMExtension -ExtensionName "DependencyAgent" `
