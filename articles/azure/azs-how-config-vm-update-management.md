@@ -1,6 +1,6 @@
 ---
-title: How to configure VM updates and management on Azure Stack | UKCloud Ltd
-description: Describes how to use Azure Monitor to configure VM updates and management on Azure Stack
+title: How to configure VM updates and management on Azure Stack Hub | UKCloud Ltd
+description: Describes how to use Azure Monitor to configure VM updates and management on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
 reviewer: 
@@ -16,13 +16,13 @@ toc_fullpath: Users/How To/azs-how-config-vm-update-management.md
 toc_mdlink: azs-how-config-vm-update-management.md
 ---
 
-# How to configure VM updates and management on Azure Stack | UKCloud Ltd
+# How to configure VM updates and management on Azure Stack Hub | UKCloud Ltd
 
 ## Overview
 
 Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive, and otherwise take action on the metrics and logs coming from resources in Azure.
 
-This article will enable the following solutions for Azure Stack VMs:
+This article will enable the following solutions for Azure Stack Hub VMs:
 
 - [Azure Monitor for VMs](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-overview)
 
@@ -34,7 +34,7 @@ This article will enable the following solutions for Azure Stack VMs:
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack Hub portal.
 
 ## Enabling VM Update & Management
 
@@ -66,7 +66,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         - A **Location** to host the workspace in.
 
         > [!NOTE]
-        > The currently supported locations are: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
+        > See [here](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics) for supported locations for Azure Monitor for VMs.
 
         - A **Pricing tier** to use.
 
@@ -127,7 +127,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         > [!TIP]
         > Leave the public Azure portal open; you'll need to use it again later.
 
-5. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
+5. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
 6. Navigate to the VM that you want to enable Update & Management on and under *Settings*, select the *Extensions* blade.
 
@@ -160,7 +160,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         `Heartbeat | where OSType == "Linux" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
 
-    - If your VM shows in the results, you have successfully linked your VM from Azure Stack to your Log Analytics workspace [(see here for more information)](https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded).
+    - If your VM shows in the results, you have successfully linked your VM from Azure Stack Hub to your Log Analytics workspace [(see here for more information)](https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded).
 
 10. Navigate to the *Automation Account*. In the new blade, under *Update Management*, select **Update Management**.
 
