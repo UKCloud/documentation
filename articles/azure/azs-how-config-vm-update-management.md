@@ -114,7 +114,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         > [!NOTE]
         > The error "Azure Classic Run As account creation error" may occur. This **DOES NOT** affect the process.
 
-4. Once deployed, navigate to the *Automation Account*. In the new blade, under *Configuration Management*, select the solution to enable (**Inventory & Change Tracking** or **Update Management**).
+4. Once deployed, navigate to the *Automation Account*. In the new blade, under *Configuration Management*, select the solution to enable (**Inventory** or **Change Tracking**).
 
     - Select the Log Analytics workspace to link the automation account to.
 
@@ -122,7 +122,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Wait for the deployment to complete.
 
-    - Repeat step 4 for both **Inventory & Change Tracking** and **Update Management**.
+    - Repeat step 4 for both **Update Management** under *Update Management*.
 
         > [!TIP]
         > Leave the public Azure portal open; you'll need to use it again later.
