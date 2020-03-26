@@ -3,8 +3,8 @@ title: How to build an edge gateway using the UKCloud Portal
 description: Describes how to use the UKCloud Portal to build an edge gateway
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: Gurcharan Sohal 
+lastreviewed: 26/03/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -41,10 +41,7 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
     For more detailed steps, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
 2. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service in which you want to create the edge gateway.
-
-    > [!NOTE]
-    > To create an edge gateway using the Portal, the compute service must be in region 5 or 6.
-
+    
     ![Compute services menu option](images/vmw-portal-mnu-select-compute-service.png)
 
 3. From the **Actions** menu, select **Build Edge Gateway**.
@@ -68,7 +65,7 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
 6. The *Edge Gateway Build Status* page displays information about the edge gateway you're building and lets you know how the build is progressing.
 
     > [!TIP]
-    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *VMware Cloud Build History* report.
+    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by expanding **Reports** in the Portal navigation panel and selecting **VMware Cloud Build History**.
 
     ![Build Edge Gateway Status page](images/vmw-portal-build-edge-gateway-status.png)
 
