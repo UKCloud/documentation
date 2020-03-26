@@ -155,6 +155,8 @@ To complete the steps in this article, you must have appropriate access to a sub
     -Location $Location `
     -Verbose</code></pre>
 
+7. Continue to step 8.
+
 ***
 
 8. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
