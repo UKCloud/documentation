@@ -2954,7 +2954,7 @@ For more information about this CSV, see [*Understanding your invoice evidence f
 > To retrieve billing information for an account, you must have the **API** Permissions for Billing. For more information, see [*Portal permissions*](ptl-ref-overview-permissions.md).
 
 > [!TIP]
-> Usage is rated on a daily basis, so you only need to call this endpoint once a day to get the latest costs.
+> Usage data is updated on a daily basis, so you only need to call this endpoint once a day to get the latest cost information. For example, you might call the endpoint at 06:00 to get the costs from the previous day.
 
 ### API version
 
