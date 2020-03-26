@@ -4,7 +4,7 @@ description: Describes how to use Azure Monitor to configure VM updates and mana
 services: azure-stack
 author: Daniel Brennand
 reviewer: 
-lastreviewed: 
+lastreviewed: 26/03/2020 17:09:00
 
 toc_rootlink: Users
 toc_sub1: How To
