@@ -156,7 +156,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - `Heartbeat | where OSType == "VMTYPE" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
 
-    - Example for Linux VM: 
+    - Example for Linux VM:
 
         `Heartbeat | where OSType == "Linux" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
 
@@ -176,7 +176,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Click **Enable**.
 
-    - Repeat step 10 for **Inventory & Change Tracking**.
+    - Repeat step 10 for **Inventory** and **Change Tracking**.
 
     - Everything is now enabled. The API is called every 15 minutes to query for the last update time to determine whether the status has changed. If the status has changed, a compliance scan is initiated.
 
@@ -191,7 +191,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Update and Management compliance example](images/azs-browser-example-update-management-compliant-ok.png)
 
-12. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines (preview)**. You will see three usage analytics tabs (**Health**, **Performance** and **Map**) for the VMs you have enabled **VM updates and management** on.
+12. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**. You will see three usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **VM updates and management** on.
 
     ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
 
@@ -200,4 +200,4 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
