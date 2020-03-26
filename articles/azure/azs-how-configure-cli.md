@@ -3,8 +3,8 @@ title: How to configure the Azure Stack Hub user's Azure CLI environment | Based
 description: Learn how to use the cross-platform command-line interface (CLI) to manage and deploy resources on Azure Stack Hub
 services: azure-stack
 author: Chris Black
-reviewer: Alexa Evans
-lastreviewed: 08/07/2019 16:00:00
+reviewer: Daniel Brennand
+lastreviewed: 25/03/2020 17:03:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -34,13 +34,94 @@ In this article, we will guide you through the process of installing and using t
 
 ## Install CLI
 
+# [Local workstation](#tab/tabid-1)
+
 Sign in to your development workstation and install CLI. Azure Stack Hub requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli) article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:
 
-```azurecli
-az --version
-```
+   ```azurecli
+      bash-5.0# az --version
+      azure-cli                          2.2.0
+
+      command-modules-nspkg              2.0.3
+      core                               2.2.0
+      nspkg                              3.0.4
+      telemetry                          1.0.4
+
+      Python location '/usr/local/bin/python'
+      Extensions directory '/root/.azure/cliextensions'
+
+      Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
+      [GCC 8.3.0]
+
+      Legal docs and information: aka.ms/AzureCliLegal
+
+
+
+      Your CLI is up-to-date.
+
+      Please let us know how we are doing: https://aka.ms/clihats
+   ```
 
 You should see the version of Azure CLI and other dependent libraries that are installed on your computer.
+
+# [Docker container](#tab/tabid-2)
+
+If you have [Docker](https://www.docker.com/) installed on your workstation, Microsoft provides an Azure CLI container that you can use instead of installing dependencies locally.
+
+To start the Azure CLI docker container, run the following command:
+
+   ```azurecli
+      docker run -it --rm mcr.microsoft.com/azure-cli
+   ```
+
+> [!NOTE]
+> The above command will automatically pull the container image from Microsoft's container registry.
+>
+> If you experience issues with pulling the image, run the following command:
+>
+> ```azurecli
+> docker pull mcr.microsoft.com/azure-cli
+> ```
+
+> [!CAUTION]
+> If you are running Docker Desktop on Windows and receive the following error:
+> 
+> ```cmd
+> C:\Program Files\Docker\Docker\Resources\bin\docker.exe: image operating system "linux" cannot be used on this platform.
+> ```
+> Ensure Docker Desktop on Windows is set to **Linux containers**.
+
+This command will execute an interactive terminal session inside the container and remove it on exit.
+
+You will now be in the container's interactive terminal session and see the following prompt: `bash-5.0#`.
+
+You can run `az --version` to verify the Azure CLI is working correctly:
+
+```azurecli
+   bash-5.0# az --version
+   azure-cli                          2.2.0
+
+   command-modules-nspkg              2.0.3
+   core                               2.2.0
+   nspkg                              3.0.4
+   telemetry                          1.0.4
+
+   Python location '/usr/local/bin/python'
+   Extensions directory '/root/.azure/cliextensions'
+
+   Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
+   [GCC 8.3.0]
+
+   Legal docs and information: aka.ms/AzureCliLegal
+
+
+
+   Your CLI is up-to-date.
+
+   Please let us know how we are doing: https://aka.ms/clihats
+```
+
+***
 
 ## Declare variables
 
@@ -95,6 +176,17 @@ Use the following steps to connect to Azure Stack Hub:
       > [!NOTE]
       > If your user account has multi-factor authentication enabled, you can use the `az login` command without providing the `-u` parameter. Running the command gives you a URL and a code that you must use to authenticate.
 
+      > [!CAUTION]
+      > If the user is not present in the domain that you are attempting to login to, you must specify the `--tenant` parameter.
+      > For example, if your guest user is `user@contoso.onmicrosoft.com` and the domain is `fabrikam@onmicrosoft.com` the command will be as follows:
+      >
+      > ```azurecli
+      > az login --tenant fabrikam@onmicrosoft.com
+      > To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code xxxxxxxxx to authenticate.
+      > ```
+      >
+      > At the user authentication page, sign in with your guest user `user@contoso.onmicrosoft.com`.
+
    - Sign in as a *service principal*: Before you sign in, create a service principal through [the public Azure portal](azs-how-create-spn-portal.md), [PowerShell](azs-how-create-spn-powershell.md) or [CLI](azs-how-create-spn-cli.md) and assign it a role. Now, sign in by using the following command:
 
       ```azurecli
@@ -108,8 +200,18 @@ Use the following steps to connect to Azure Stack Hub:
 5. Verify that your environment is set correctly and that AzureStackUser is the active cloud.
 
       ```azurecli
-      az cloud list --output table
+      bash-5.0# az cloud list --output table
+      IsActive    Name               Profile
+      ----------  -----------------  -----------------
+      False       AzureCloud         latest
+      False       AzureChinaCloud    latest
+      False       AzureUSGovernment  latest
+      False       AzureGermanCloud   latest
+      True        AzureStackUser     2019-03-01-hybrid
       ```
+
+      > [!NOTE]
+      > The final line shows that the user profile has been updated and is active.
 
 6. To list command subgroups run:
 
