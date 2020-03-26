@@ -78,7 +78,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Once deployment is complete, navigate to the resource group you placed the Log Analytics workspace in.
 
-    - Select the newly created workspace. On the new blade, under *Settings*, select **Advanced settings**, **Connected Sources** and then **Windows Servers** or **Linux Servers** depending on the VM type you want to add analytics to.
+    - Click the newly created workspace. On the new blade, under *Settings*, select **Advanced settings**, **Connected Sources** and then **Windows Servers** or **Linux Servers** depending on the VM type you want to add analytics to.
 
     - Note down the **Workspace ID** and **Primary Key** values.
 
