@@ -176,7 +176,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Click **Enable**.
 
-    - Repeat step 10 for **Inventory** and **Change Tracking**.
+    - Repeat step 10 for **Inventory**.
 
     - Everything is now enabled. The API is called every 15 minutes to query for the last update time to determine whether the status has changed. If the status has changed, a compliance scan is initiated.
 
