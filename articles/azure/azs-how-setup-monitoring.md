@@ -95,15 +95,18 @@ To complete the steps in this article, you must have appropriate access to a sub
     > [!WARNING]
     > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
 
-6. Click **Add** at the top, select the extension **Azure Monitor, Update and Configuration Management** and then click **Create**.
+6. Click **Add** at the top, select the extension **Azure Monitor Dependency Agent**, click **Create** and then **OK**.
+
+    > [!WARNING]
+    > Wait for the deployment to finish before continuing.
+
+7. Click **Add** at the top, select the extension **Azure Monitor, Update and Configuration Management** and then click **Create**.
 
     ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.png)
 
     - Provide the extension with the **Workspace ID** and **Primary Key** values (noted down previously).
 
-    - Repeat step 6 for the **Azure Monitor Dependency Agent**.
-
-7. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines (preview)**. You will see three usage analytics tabs (**Health**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+8. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines (preview)**. You will see three usage analytics tabs (**Health**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
 
    ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
 
@@ -112,4 +115,4 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
