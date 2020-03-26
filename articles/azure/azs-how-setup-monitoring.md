@@ -106,7 +106,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Provide the extension with the **Workspace ID** and **Primary Key** values (noted down previously).
 
-8. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines (preview)**. You will see three usage analytics tabs (**Health**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+8. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
+
+    - You will see three usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+
+9. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**.
+
+10. A prompt will appear to upgrade the workspace, click **Upgrade**. In the new blade, click **Upgrade** again.
+
+11. Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled **Azure Monitor for VMs** on.
 
    ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
 
