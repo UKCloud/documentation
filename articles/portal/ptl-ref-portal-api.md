@@ -2946,12 +2946,15 @@ Returns a CSV report for the whole month specified including the date provided.
 
 ## GET /api/billing/billing-csv
 
-Returns a CSV containing billing data for the period given.
+Returns a CSV containing billing data for the month specified.
 
 For more information about this CSV, see [*Understanding your invoice evidence file*](../other/other-ref-invoice-evidence-file.md) and the [*Invoice and billing FAQs*](../other/other-faq-billing.md).
 
 > [!NOTE]
 > To retrieve billing information for an account, you must have the **API** Permissions for Billing. For more information, see [*Portal permissions*](ptl-ref-overview-permissions.md).
+
+> [!TIP]
+> Usage is rated on a daily basis, so you only need to call this endpoint once a day to get the latest costs.
 
 ### API version
 
