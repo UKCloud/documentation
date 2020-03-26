@@ -88,7 +88,6 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         ![Performance counters](images/azs-browser-example-performance-counters.png)
 
-
 4. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
 5. Navigate to the VM that you want to enable Azure Monitor on and under *Settings*, select the *Extensions* blade.
