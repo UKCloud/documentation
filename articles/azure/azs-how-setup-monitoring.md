@@ -110,7 +110,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 # [PowerShell](#tab/tabid-b)
 
-6. Execute the following PowerShell script to setup the **Azure Monitor Dependency Agent** and **Azure Monitor, Update and Configuration Management** extensions.
+5. Execute the following PowerShell script to setup the **Azure Monitor Dependency Agent** and **Azure Monitor, Update and Configuration Management** extensions.
 
     ### Declare variables
 
@@ -161,7 +161,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     -Location $Location `
     -Verbose</code></pre>
 
-7. Continue to step 8.
+6. Continue to step 8.
 
 ***
 
