@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-cli.html",
-          "hash": "h1Z83c2MC2euNlO5OpfjVg=="
+          "hash": "xVFF0vasstMvAEyn0SH+AQ=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-cli.html",
-          "hash": "pZnnzl1xiX4AbgNOcob2sQ=="
+          "hash": "nm6zlz3XPK4vf5OGJj6pNg=="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-ps.html",
-          "hash": "rOlIeBhN5woZcAo7X2xblg=="
+          "hash": "k0ycDTtUGoQNhCerHVccOQ=="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-terraform.html",
-          "hash": "1HiJ/+OECqK10swrnuek8w=="
+          "hash": "wi3BavAJyOEJFy0GwSBWJw=="
         }
       },
       "is_incremental": false,
@@ -4450,7 +4450,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-dtf.html",
-          "hash": "+Zd8gDykK4nQY3tW/sofZw=="
+          "hash": "ckvXeAyNiIJztN8j1BbiZA=="
         }
       },
       "is_incremental": false,
@@ -5681,7 +5681,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-scaling.html",
-          "hash": "YvpUflmO4298wz+DWJVA5A=="
+          "hash": "e7ke6FCMHc1DCiRxFkV25Q=="
         }
       },
       "is_incremental": false,
@@ -5705,7 +5705,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-trial.html",
-          "hash": "9YduEAKN5C+esMIL/Rj9yA=="
+          "hash": "jaCF6f5d5vc/tfV74P5fxA=="
         }
       },
       "is_incremental": false,
@@ -18034,6 +18034,28 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/zertomanupdate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/zertomanupdate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/zertopageupdate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/zertopageupdate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/vmware/toc.yml",
       "output": {
@@ -18255,7 +18277,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-build-edge.html",
-          "hash": "CiAruqwLzn2DQGNzMNoPKQ=="
+          "hash": "LyC9qg460cNjIDgDYm/ljw=="
         }
       },
       "is_incremental": false,
@@ -18819,7 +18841,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-access-zssp.html",
-          "hash": "dGnh5BTQ/Lj4E+G/mHWMig=="
+          "hash": "a2FnLJRJ2lJil9JvbyS1PA=="
         }
       },
       "is_incremental": false,
