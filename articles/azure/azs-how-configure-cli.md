@@ -66,9 +66,9 @@ You should see the version of Azure CLI and other dependent libraries that are i
 
 # [Docker container](#tab/tabid-2)
 
-If you have [Docker](https://www.docker.com/) installed on your workstation, Microsoft provides an Azure CLI container which can be used instead of installing dependencies locally.
+If you have [Docker](https://www.docker.com/) installed on your workstation, Microsoft provides an Azure CLI container that you can use instead of installing dependencies locally.
 
-To start the Azure CLI docker container run the following command:
+To start the Azure CLI docker container, run the following command:
 
    ```azurecli
       docker run -it --rm mcr.microsoft.com/azure-cli
