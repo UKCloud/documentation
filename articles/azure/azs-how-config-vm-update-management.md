@@ -122,7 +122,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Wait for the deployment to complete.
 
-    - Repeat step 4 for both **Update Management** under *Update Management*.
+    - Repeat step 4 for **Update Management** under *Update Management*.
 
         > [!TIP]
         > Leave the public Azure portal open; you'll need to use it again later.
