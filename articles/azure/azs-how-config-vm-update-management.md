@@ -191,14 +191,22 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Update and Management compliance example](images/azs-browser-example-update-management-compliant-ok.png)
 
-12. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**. You will see three usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **VM updates and management** on.
+12. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
+
+    - You will see three usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+
+13. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**.
+
+14. A prompt will appear to upgrade the workspace, click **Upgrade**. In the new blade, click **Upgrade** again.
+
+15. Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled **Azure Monitor for VMs** on.
 
     ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
 
     ![Monitor map example](images/azs-browser-example-monitor-map.png)
 
     > [!NOTE]
-    > It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure monitor enabled VMs.
+    > It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure Monitor enabled VMs.
 
 ## Feedback
 
