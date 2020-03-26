@@ -141,9 +141,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     > [!WARNING]
     > Wait for the deployment to finish before continuing.
 
-8. Click **Add** at the top, select the extension **Azure Monitor, Update and Configuration Management** and then click **Create**.
-
-    - Provide the extension with the **Workspace ID** and **Primary Key** values (noted down previously).
+    - Repeat this step for the **Azure Monitor, Update and Configuration Management** extension. Providing the extension with the **Workspace ID** and **Primary Key** values (noted down previously) when prompted.
 
     ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.png)
 
