@@ -1,6 +1,6 @@
 ---
-title: How to create a service principal name (SPN) for Azure Stack using PowerShell | UKCloud Ltd
-description: Learn how to create a service principal name (SPN) to manage your Azure Stack using PowerShell
+title: How to create a service principal name (SPN) for Azure Stack Hub using PowerShell | UKCloud Ltd
+description: Learn how to create a service principal name (SPN) to manage your Azure Stack Hub using PowerShell
 services: azure-stack
 author: Chris Black
 reviewer: Daniel Brennand
@@ -16,9 +16,9 @@ toc_fullpath: Users/How To/Create a Service Principal Name (SPN)/azs-how-create-
 toc_mdlink: azs-how-create-spn-powershell.md
 ---
 
-# How to create a service principal name for Azure Stack using PowerShell
+# How to create a service principal name for Azure Stack Hub using PowerShell
 
-This document explains how to create a service principal name to manage Azure and Azure Stack using PowerShell.
+This document explains how to create a service principal name to manage Azure and Azure Stack Hub using PowerShell.
 
 It will guide you through the creation of:
 
@@ -42,7 +42,7 @@ Prerequisites from a Windows-based external client are:
 
 - PowerShell 5.1, AzureStack and Azure AD PowerShell Modules
 
-  - [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md)
+  - [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md)
 
   - Azure AD PowerShell Module:
 
@@ -60,26 +60,26 @@ Enter details below to provide values for the variables in the scripts in this a
 |----------------------------|---------------------------------------------------------------|-----------------------------------------|
 | \$PublicAzureAdminUsername       | The username of a user with admin privileges for public Azure | <form oninput="result.value=azureusername.value" id="azureusername" style="display: inline;"><input type="text" id="azureusername" name="azureusername" style="display: inline;" placeholder="user"/></form> |
 | \$PublicAzureAdminPassword   | The password of a user with admin privileges for public Azure | <form oninput="result.value=azurepassword.value" id="azurepassword" style="display: inline;"><input type="text" id="azurepassword" name="azurepassword" style="display: inline;" placeholder="Password123!"/></form> |
-| \$AzureStackUsernameAdmin         | The username of a user with admin privileges for Azure Stack  | <form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user"/></form> |
-| \$AzureStackUserPasswordAdmin     | The password of a user with admin privileges for Azure Stack  | <form oninput="result.value=azspassword.value;result2.value=azspassword.value" id="azspassword" style="display: inline;"><input type="text" id="azspassword" name="azspassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$AzureStackUsernameAdmin         | The username of a user with admin privileges for Azure Stack Hub  | <form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user"/></form> |
+| \$AzureStackUserPasswordAdmin     | The password of a user with admin privileges for Azure Stack Hub  | <form oninput="result.value=azspassword.value;result2.value=azspassword.value" id="azspassword" style="display: inline;"><input type="text" id="azspassword" name="azspassword" style="display: inline;" placeholder="Password123!"/></form> |
 | \$AppName                  | The name of the SPN to be created                             | <form oninput="result.value=appname.value;result2.value=appname.value" id="appname" style="display: inline;"><input type="text" id="appname" name="appname" style="display: inline;" placeholder="TestApp"/></form> |
 | \$AppURL                   | The homepage URL of the SPN to be created                     | <form oninput="result.value=appurl.value;result2.value=appurl.value" id="appurl" style="display: inline;"><input type="text" id="appurl" name="appurl" style="display: inline;" placeholder="https://test.app"/></form> |
 | \$AppPassword     | The app password for the SPN  | <form oninput="result.value=apppassword.value;result2.value=apppassword.value" id="apppassword" style="display: inline;"><input type="text" id="apppassword" name="apppassword" style="display: inline;" placeholder="(New-Guid).Guid"/></form> |
 | \$TenantDomain             | Your Azure Active Directory tenant domain                     | <form oninput="result.value=tenantdomain.value;result2.value=tenantdomain.value" id="tenantdomain" style="display: inline;"><input type="text" id="tenantdomain" name="tenantdomain" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
-| \$ArmEndpoint              | The Azure Resource Manager endpoint for Azure Stack           | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$ArmEndpoint              | The Azure Resource Manager endpoint for Azure Stack Hub           | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$PublicAzureResourceGroup | Resource group to be created in public Azure to test the SPN  | <form oninput="result.value=publicazurerg.value" id="publicazurerg" style="display: inline;"><input type="text" id="publicazurerg" name="publicazurerg" style="display: inline;" placeholder="RGTest01"/></form> |
-| \$AzureStackResourceGroup  | Resource group to be created in Azure Stack to test the SPN   | <form oninput="result.value=azurestackrg.value;result2.value=azurestackrg.value" id="azurestackrg" style="display: inline;"><input type="text" id="azurestackrg" name="azurestackrg" style="display: inline;" placeholder="RGTest01"/></form> |
+| \$AzureStackResourceGroup  | Resource group to be created in Azure Stack Hub to test the SPN   | <form oninput="result.value=azurestackrg.value;result2.value=azurestackrg.value" id="azurestackrg" style="display: inline;"><input type="text" id="azurestackrg" name="azurestackrg" style="display: inline;" placeholder="RGTest01"/></form> |
 | \$PublicAzureRegion        | Region in public Azure to create the test resource group in   | <form oninput="result.value=azureregion.value" id="azureregion" style="display: inline;"><input type="text" id="azureregion" name="azureregion" style="display: inline;" placeholder="ukwest"/></form> |
 | \$PublicAzureRole          | Role to assign SPN in public Azure                            | <form oninput="result.value=publicazurerole.value" id="publicazurerole" style="display: inline;"><input type="text" id="publicazurerole" name="publicazurerole" style="display: inline;" placeholder="Owner"/></form> |
-| \$AzureStackRole           | Role to assign SPN in Azure Stack                             | <form oninput="result.value=azurestackrole.value;result2.value=azurestackrole.value" id="azurestackrole" style="display: inline;"><input type="text" id="azurestackrole" name="azurestackrole" style="display: inline;" placeholder="Owner"/></form> |
+| \$AzureStackRole           | Role to assign SPN in Azure Stack Hub                             | <form oninput="result.value=azurestackrole.value;result2.value=azurestackrole.value" id="azurestackrole" style="display: inline;"><input type="text" id="azurestackrole" name="azurestackrole" style="display: inline;" placeholder="Owner"/></form> |
 
 ## Create a service principal name
 
-## [Public Azure and Azure Stack SPN](#tab/tabid-1)
+## [Public Azure and Azure Stack Hub SPN](#tab/tabid-1)
 
-### Overview of the creation process for public Azure and Azure Stack SPN
+### Overview of the creation process for public Azure and Azure Stack Hub SPN
 
-The following steps outline the process for the [Azure and Azure Stack Hub SPN creation code](#Azure-and-Azure-Stack-SPN-creation-code).
+The following steps outline the process for the [Azure and Azure Stack Hub Hub SPN creation code](#Azure-and-Azure-Stack-SPN-creation-code).
 
 1. Declare your variables accordingly.
 
@@ -99,19 +99,19 @@ The following steps outline the process for the [Azure and Azure Stack Hub SPN c
 
 9. Remove the resource group you just created from the public Azure.
 
-10. Create your Azure Stack environment.
+10. Create your Azure Stack Hub environment.
 
-11. Log in to your Azure Stack *Subscription* with administrator user credentials (needs to have **Owner** role).
+11. Log in to your Azure Stack Hub *Subscription* with administrator user credentials (needs to have **Owner** role).
 
-12. Assign the appropriate **Role** to your Azure application inside your Azure Stack *Subscription*.
+12. Assign the appropriate **Role** to your Azure application inside your Azure Stack Hub *Subscription*.
 
-13. Log in to your Azure Stack *Subscription* using the SPN account.
+13. Log in to your Azure Stack Hub *Subscription* using the SPN account.
 
-14. Create a new resource group using the SPN account in Azure Stack.
+14. Create a new resource group using the SPN account in Azure Stack Hub.
 
-15. Remove the resource group you just created from Azure Stack.
+15. Remove the resource group you just created from Azure Stack Hub.
 
-### Azure and Azure Stack SPN creation code
+### Azure and Azure Stack Hub SPN creation code
 
 <pre><code class="language-PowerShell"># Declare variables
 $AppName = "<output form="appname" name="result" style="display: inline;">TestApp</output>"
@@ -200,36 +200,36 @@ New-AzureRmResourceGroup -Name $PublicAzureResourceGroup -Location $PublicAzureR
 # Remove test resource group
 Remove-AzureRmResourceGroup -Name $PublicAzureResourceGroup -Force
 
-# Create Azure Stack environment so that you can log in to it
+# Create Azure Stack Hub environment so that you can log in to it
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
-# Create your Azure Stack Admin (Subscription Owner) credentials
+# Create your Azure Stack Hub Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
 $AzureStackUsernameAdmin = "<output form="azsusername" name="result" style="display: inline;">user</output>@$TenantDomain"
 $AzureStackUserPasswordAdmin = ConvertTo-SecureString -String "<output form="azspassword" name="result" style="display: inline;">Password123!</output>" -AsPlainText -Force
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
-# Login to Azure Stack as Admin (Subscription Owner)
+# Login to Azure Stack Hub as Admin (Subscription Owner)
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCredAdmin
 
 # Find application details from Azure AD
 $AzureStackApp = Get-AzureRmADApplication -DisplayNameStartWith $AppGet.DisplayName
 
-# Find Object Id of your Service Principal Name in Azure Stack
+# Find Object Id of your Service Principal Name in Azure Stack Hub
 $SPNAzureStackGet = Get-AzureRmADServicePrincipal -SearchString $AzureStackApp.DisplayName
 $SPNAzureStackGet
 
-# Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack
+# Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack Hub
 New-AzureRmRoleAssignment -RoleDefinitionName $AzureStackRole -ServicePrincipalName $AzureStackApp.ApplicationId.Guid | Out-Null
 Get-AzureRmRoleAssignment -ObjectId $SPNAzureStackGet.Id.Guid
 
-# Log in to Azure Stack using SPN account
+# Log in to Azure Stack Hub using SPN account
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $SPNCreds -ServicePrincipal -TenantId $TenantDomain
 
 # Pull location from environment
 $Location = (Get-AzureRmLocation).Location
 
-# Test your SPN account by creating a new resource group in Azure Stack
+# Test your SPN account by creating a new resource group in Azure Stack Hub
 New-AzureRmResourceGroup -Name $AzureStackResourceGroup -Location $Location
 
 # Remove test resource group
@@ -247,15 +247,15 @@ $SPN = [PSCustomObject]@{
 Write-Output -InputObject "SPN credentials are: $SPN"
 </code></pre>
 
-## [Azure Stack SPN](#tab/tabid-2)
+## [Azure Stack Hub SPN](#tab/tabid-2)
 
-### Overview of the creation process for Azure Stack SPN
+### Overview of the creation process for Azure Stack Hub SPN
 
 1. Declare your variables accordingly.
 
-2. Create your Azure Stack environment.
+2. Create your Azure Stack Hub environment.
 
-3. Log in to your Azure Stack *Subscription* with administrator user credentials (needs to have **Owner** role).
+3. Log in to your Azure Stack Hub *Subscription* with administrator user credentials (needs to have **Owner** role).
 
 4. Create your Azure application.
 
@@ -263,13 +263,13 @@ Write-Output -InputObject "SPN credentials are: $SPN"
 
 6. Assign the appropriate **Role** to your service principal name.
 
-7. Log in to your Azure Stack *Subscription* using the SPN account.
+7. Log in to your Azure Stack Hub *Subscription* using the SPN account.
 
-8. Create a new resource group using the SPN account in Azure Stack.
+8. Create a new resource group using the SPN account in Azure Stack Hub.
 
-9. Remove the resource group you just created from Azure Stack.
+9. Remove the resource group you just created from Azure Stack Hub.
 
-### Azure Stack SPN creation code
+### Azure Stack Hub SPN creation code
 
 <pre><code class="language-PowerShell"># Declare variables
 $AppName = "<output form="appname" name="result2" style="display: inline;">TestApp</output>"
@@ -281,16 +281,16 @@ $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline
 $AzureStackResourceGroup = "<output form="azurestackrg" name="result2" style="display: inline;">RGTest01</output>"
 $AzureStackRole = "<output form="azurestackrole" name="result2" style="display: inline;">Owner</output>"
 
-# Create Azure Stack environment so that you can log in to it
+# Create Azure Stack Hub environment so that you can log in to it
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
-# Create your Azure Stack admin (Subscription Owner) credentials
+# Create your Azure Stack Hub admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
 $AzureStackUsernameAdmin = "<output form="azsusername" name="result2" style="display: inline;">user</output>@$TenantDomain"
 $AzureStackUserPasswordAdmin = ConvertTo-SecureString -String "<output form="azspassword" name="result2" style="display: inline;">Password123!</output>" -AsPlainText -Force
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
-# Login to Azure Stack as admin (Subscription Owner) and Azure AD
+# Login to Azure Stack Hub as admin (Subscription Owner) and Azure AD
 Connect-AzureAD -Credential $AzureStackCredAdmin -TenantId $TenantDomain
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCredAdmin
 
@@ -325,13 +325,13 @@ catch {
 # Note: (Username is "ApplicationId")
 $AzureStackCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AppGet.AppId, $AppPasswordSecure
 
-# Log in to Azure Stack using SPN account
+# Log in to Azure Stack Hub using SPN account
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCred -ServicePrincipal -TenantId $TenantDomain
 
 # Pull location from environment
 $AzureStackRegion = (Get-AzureRmLocation).Location
 
-# Test your SPN account by creating a new resource group in Azure Stack
+# Test your SPN account by creating a new resource group in Azure Stack Hub
 New-AzureRmResourceGroup -Name $AzureStackResourceGroup -Location $AzureStackRegion
 
 ## Remove test resource group
