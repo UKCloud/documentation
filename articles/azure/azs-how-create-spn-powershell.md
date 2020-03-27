@@ -334,10 +334,10 @@ $AzureStackCred = New-Object -TypeName System.Management.Automation.PSCredential
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCred -ServicePrincipal -TenantId $TenantDomain
 
 # Pull location from environment
-$AzureStackRegion = (Get-AzureRmLocation).Location
+$Location = (Get-AzureRmLocation).Location
 
 # Test your SPN account by creating a new resource group in Azure Stack Hub
-New-AzureRmResourceGroup -Name $AzureStackResourceGroup -Location $AzureStackRegion
+New-AzureRmResourceGroup -Name $AzureStackResourceGroup -Location $Location
 
 ## Remove test resource group
 Remove-AzureRmResourceGroup -Name $AzureStackResourceGroup -Force
