@@ -60,9 +60,7 @@ To create a firewall rule:
 6. For the **New Rule**, specify a **Name**.
 
 > [!NOTE]
-
 > The Firewall rules above are just an example we do not advise you use Any, Any, Any, Accept.
-
 
     ![New firewall rule](images/vmw-vcd-edge-firewall-new-rule.png)
 
