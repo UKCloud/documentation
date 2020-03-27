@@ -67,7 +67,7 @@ To obtain an access token:
         - AzureCLI - `04b07795-8ddb-461a-bbee-02f9e1bf7b46`.
 
     - **resource** - The endpoint of the resource that the token will be used to access. For example:
-    `https://management.frn00006.azure.ukcloud.com/90ada28c-5aed-4248-90c7-0538504217f1`.
+    `https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1`.
 
        >[!NOTE]
        > You can obtain the resource endpoint by querying the Azure Stack Hub management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
@@ -90,7 +90,7 @@ To obtain an access token:
     --data-urlencode "grant_type=password" \
     --data-urlencode "username=admin@ukcloud.onmicrosoft.com" \
     --data-urlencode 'password=Password12345' \
-    --data-urlencode "resource=https://management.frn00006.azure.ukcloud.com/90ada28c-5aed-4248-90c7-0538504217f1"
+    --data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
     ```
 
     ### [PowerShell](#tab/tabid-2)
@@ -103,7 +103,7 @@ To obtain an access token:
     $AuthRequestBody = @{
         "grant_type" = "password"
         "client_id" = "1950a258-227b-4e31-a9cf-717495945fc2"
-        "resource" = "https://management.frn00006.azure.ukcloud.com/90ada28c-5aed-4248-90c7-0538504217f1"
+        "resource" = "https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
         "username" = $UserName
         "password" = $UserPassword
     }
@@ -126,7 +126,7 @@ To obtain an access token:
       "ext_expires_in": "0",
       "expires_on": "1512574780",
       "not_before": "1512570880",
-      "resource": "https://management.frn00006.azure.ukcloud.com/90ada28c-5aed-4248-90c7-0538504217f1",
+      "resource": "https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1",
       "access_token": "eyJ0eXAiOi...truncated for readability...",
       "refresh_token": "AQABAAAAAA...truncated for readability..."
     }
