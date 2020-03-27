@@ -204,15 +204,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 8. Once the deployment is finished, head back to the public Azure portal and navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VM Type` Servers*.
 
-    - You will see **`x` **`VM Type` COMPUTERS CONNECTED**, depending on how many VMs you linked to the workspace.
+    - You will see **_`x VM Type`_ COMPUTERS CONNECTED**, depending on how many VMs you linked to the workspace.
 
         ![Log Analytics workspace computers connected](images/azs-browser-log-analytics-workspace-computers-connected.png)
 
-    - Click **`x` `VM Type` COMPUTERS CONNECTED**. This will bring up the logs for that specific VM type.
+    - Click **_`x` `VM Type`_ COMPUTERS CONNECTED**. This will bring up the logs for that specific VM type.
 
     - Change the time range to **Last 30 minutes**.
 
-9. Execute the following log query, passing in your `VM Type`:
+9. Execute the following log query, passing in your *`VM Type`*:
 
     - `Heartbeat | where OSType == "VMTYPE" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
 
@@ -224,7 +224,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 10. Navigate to the *Automation Account*. In the new blade, under *Update Management*, select **Update Management**.
 
-    - You will see the following prompt:
+    - You'll see the following prompt:
 
         ![Enable log example](images/azs-browser-example-log-enable.png)
 
@@ -253,7 +253,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 12. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
 
-    - You will see two usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+    - You'll see two usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
 
 13. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**.
 
