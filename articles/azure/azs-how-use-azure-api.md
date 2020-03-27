@@ -74,7 +74,7 @@ To obtain an access token:
        >
        > For example, to find the endpoint for the `users` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2016-05-01`.
 
-    - **username** - The Azure Stack Hub AAD account. For example: `azurestackadmin@ukcloud.onmicrosoft.com`.
+    - **username** - The Azure Stack Hub AAD account. For example: `user@contoso.onmicrosoft.com`.
 
     - **password** - The password for the Azure Stack Hub AAD account.
 
