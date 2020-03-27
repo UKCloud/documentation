@@ -116,7 +116,7 @@ The following steps outline the process for the [Azure and Azure Stack Hub Hub S
 <pre><code class="language-PowerShell"># Declare variables
 $AppName = "<output form="appname" name="result" style="display: inline;">TestApp</output>"
 $AppURL = "<output form="appurl" name="result" style="display: inline;">https://test.app</output>"
-$AppPassword = "<output form="apppassword" name="result" style="display: inline;">(New-Guid).Guid</output>"
+$AppPassword = <output form="apppassword" name="result2" style="display: inline;">(New-Guid).Guid</output>
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
 $TenantDomain = "<output form="tenantdomain" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
@@ -274,7 +274,7 @@ Write-Output -InputObject "SPN credentials are: $SPN"
 <pre><code class="language-PowerShell"># Declare variables
 $AppName = "<output form="appname" name="result2" style="display: inline;">TestApp</output>"
 $AppURL = "<output form="appurl" name="result2" style="display: inline;">https://test.app</output>"
-$AppPassword = "<output form="apppassword" name="result2" style="display: inline;">(New-Guid).Guid</output>"
+$AppPassword = <output form="apppassword" name="result2" style="display: inline;">(New-Guid).Guid</output>
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
 $TenantDomain = "<output form="tenantdomain" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
