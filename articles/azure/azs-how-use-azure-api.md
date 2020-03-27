@@ -56,9 +56,9 @@ To obtain an access token:
 
         Other options for specific scenarios are:
 
-        - LegacyPowerShell - `0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*`.
-
         - PowerShell - `1950a258-227b-4e31-a9cf-717495945fc2`.
+
+        - LegacyPowerShell - `0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*`.
 
         - WindowsAzureActiveDirectory - `00000002-0000-0000-c000-000000000000`.
 
@@ -72,7 +72,7 @@ To obtain an access token:
        >[!NOTE]
        > You can obtain the resource endpoint by querying the Azure Stack Hub management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
        >
-       > For example, to find the endpoint for the `users` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2016-05-01`.
+       > For example, to find the endpoint for the `users` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2017-12-01`.
 
     - **username** - The Azure Stack Hub AAD account. For example: `user@contoso.onmicrosoft.com`.
 
@@ -81,40 +81,50 @@ To obtain an access token:
     > [!NOTE]
     > Ensure you format the request body using Content-Type `x-www-form-urlencoded`.
 
-    ### [Bash](#tab/tabid-1)
+### Declare variables
 
-    ```bash
-    curl -X "POST" "https://login.windows.net/160f539f-8571-4c96-9361-797645c24e75/oauth2/token" \
-    -H "Content-Type: application/x-www-form-urlencoded" \
-    --data-urlencode "client_id=1950a258-227b-4e31-a9cf-717495945fc2" \
-    --data-urlencode "grant_type=password" \
-    --data-urlencode "username=admin@ukcloud.onmicrosoft.com" \
-    --data-urlencode 'password=Password12345' \
-    --data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
-    ```
+Enter details below to provide values for the variables in the scripts in this article:
 
-    ### [PowerShell](#tab/tabid-2)
+| Variable name           | Variable description                                                                       | Input            |
+|-------------------------|--------------------------------------------------------------------------------------------|------------------|
+| \$Tenant           | The tenant ID or domain to authenticate to                                      | <form oninput="result.value=tenant.value;result2.value=tenant.value;result3.value=tenant.value" id="tenant" style="display: inline;"><input type="text" id="tenant" name="tenant" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
+| \$AzureStackUsername         | The username of a user for Azure Stack Hub  | <form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user"/></form> |
+| \$AzureStackUserPassword     | The password of a user for Azure Stack Hub  | <form oninput="result.value=azspassword.value;result2.value=azspassword.value" id="azspassword" style="display: inline;"><input type="text" id="azspassword" name="azspassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$ClientID     | The application ID to authenticate against the Azure Stack Hub API   | <form oninput="result.value=clientid.value;result2.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="1950a258-227b-4e31-a9cf-717495945fc2"/></form> |
 
-    ```powershell
-    # Declare variables
-    $TenantID = "<TenantID>"
-    $UserName = "<UserName>@$TenantID"
-    $UserPassword = "<Password>"
-    $AuthRequestBody = @{
-        "grant_type" = "password"
-        "client_id" = "1950a258-227b-4e31-a9cf-717495945fc2"
-        "resource" = "https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
-        "username" = $UserName
-        "password" = $UserPassword
-    }
+### [Bash](#tab/tabid-1)
 
-    # Send POST request to Azure REST authentication/login endpoint to retrieve access token.
-    $AuthResp = Invoke-RestMethod -Method "POST" -Uri "https://login.microsoftonline.com/$TenantID/oauth2/token" -Body $AuthRequestBody -ContentType "application/x-www-form-urlencoded"
+<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token. 
+curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" \
+-H "Content-Type: application/x-www-form-urlencoded" \
+--data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" \
+--data-urlencode "grant_type=password" \
+--data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user</output>@<output form="tenant" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>" \
+--data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" \
+--data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
+</code></pre>
 
-    $AuthResp
-    ```
+### [PowerShell](#tab/tabid-2)
 
-    ***
+<pre><code class="language-PowerShell"># Declare variables
+$Tenant = "<output form="tenant" name="result3" style="display: inline;">contoso.onmicrosoft.com</output>"
+$UserName = "<output form="azsusername" name="result2" style="display: inline;">user</output>@$Tenant"
+$UserPassword = "<output form="azspassword" name="result2" style="display: inline;">Password123!</output>"
+$AuthRequestBody = @{
+    "grant_type" = "password"
+    "client_id" = "<output form="clientid" name="result2" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>"
+    "resource" = "https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
+    "username" = $UserName
+    "password" = $UserPassword
+}
+
+# Send POST request to Azure REST authentication/login endpoint to retrieve access token.
+$AuthResp = Invoke-RestMethod -Method "POST" -Uri "https://login.microsoftonline.com/$Tenant/oauth2/token" -Body $AuthRequestBody -ContentType "application/x-www-form-urlencoded"
+
+$AuthResp
+</code></pre>
+
+***
 
 3. If the authentication is successful, the endpoint returns an access token. For example:
 
@@ -137,7 +147,7 @@ To obtain an access token:
     ### [Bash](#tab/tabid-3)
 
     ```bash
-    curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01'
+    curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
     ```
 
     ### [PowerShell](#tab/tabid-4)
@@ -147,7 +157,7 @@ To obtain an access token:
     $AuthHeader = @{"Authorization" = "Bearer $($AuthResp.access_token)"}
 
     # Query the Azure Stack Hub API for subscriptions
-    Invoke-RestMethod -Method "GET" -Uri "https://management.frn00006.azure.ukcloud.com/subscriptions" -Headers $AuthHeader -Body @{"api-version" = "2016-05-01"} -ContentType "application/x-www-form-urlencoded"
+    Invoke-RestMethod -Method "GET" -Uri "https://management.frn00006.azure.ukcloud.com/subscriptions" -Headers $AuthHeader -Body @{"api-version" = "2017-12-01"} -ContentType "application/x-www-form-urlencoded"
     ```
 
     ***
@@ -169,11 +179,11 @@ where:
 - **query-string** provides additional parameters, such as the API version or resource selection criteria.
 
     >[!NOTE]
-    > For Bash, you can add the **query-string** to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01`. <br>For PowerShell, you can provide a **query-string** in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2016-05-01"}`.
+    > For Bash, you can add the **query-string** to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01`. <br>For PowerShell, you can provide a **query-string** in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2017-12-01"}`.
 
 The syntax of an Azure Stack Hub request URI is:
 
-`https://management.frn00006.azure.ukcloud.com/<subscription-id>/resourcegroups/<resource-group>/providers/<provider>/<resource-path>&api-version=<api-version>?<filter-expression>`
+`https://management.frn00006.azure.ukcloud.com/<subscription-id>/<resource-group>/<provider>/<resource-path>&api-version=<api-version>?<filter-expression>`
 
 where:
 
@@ -185,13 +195,12 @@ where:
 
 - `resource-path` is the resource you want to query
 
+- `api-version` is the version of the Azure Stack Hub API being called, for example `api-version=2017-12-01`
+
 - `filter-expression` is an optional list of arguments to filter the results of the query
 
-- `api-version` is the version of the Azure Stack Hub API being called, for example `api-version=2016-05-01`
-
 For example, the following API call returns a list of all virtual machines in the specified Azure Stack Hub subscription:
-
-`https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/providers/providers/Microsoft.Compute/virtualMachines?api-version=2016-05-01"`
+`https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/providers/Microsoft.Compute/virtualMachines?api-version=2017-12-01"`
 
 ## Next steps
 
