@@ -245,7 +245,10 @@ $SPN = [PSCustomObject]@{
     TenantId       = $SubId.TenantId
 }
 
-Write-Output -InputObject "SPN credentials are: $SPN"
+# Present SPN credentials
+foreach ($Item in $SPN) {
+    Write-Output -InputObject $Item
+}
 </code></pre>
 
 ## [Azure Stack Hub SPN](#tab/tabid-2)
@@ -348,7 +351,10 @@ $SPN = [PSCustomObject]@{
     TenantId       = $SubId.TenantId
 }
 
-Write-Output -InputObject "SPN credentials are: $SPN"
+# Present SPN credentials
+foreach ($Item in $SPN) {
+    Write-Output -InputObject $Item
+}
 </code></pre>
 
 ***
