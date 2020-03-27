@@ -3,8 +3,8 @@ title: How to create a service principal name (SPN) for Azure Stack using PowerS
 description: Learn how to create a service principal name (SPN) to manage your Azure Stack using PowerShell
 services: azure-stack
 author: Chris Black
-reviewer: BaileyLawson
-lastreviewed: 10/05/2019 10:00:00
+reviewer: Daniel Brennand
+lastreviewed: 27/03/2020 10:38:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -64,6 +64,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzureStackUserPasswordAdmin     | The password of a user with admin privileges for Azure Stack  | <form oninput="result.value=azspassword.value;result2.value=azspassword.value" id="azspassword" style="display: inline;"><input type="text" id="azspassword" name="azspassword" style="display: inline;" placeholder="Password123!"/></form> |
 | \$AppName                  | The name of the SPN to be created                             | <form oninput="result.value=appname.value;result2.value=appname.value" id="appname" style="display: inline;"><input type="text" id="appname" name="appname" style="display: inline;" placeholder="TestApp"/></form> |
 | \$AppURL                   | The homepage URL of the SPN to be created                     | <form oninput="result.value=appurl.value;result2.value=appurl.value" id="appurl" style="display: inline;"><input type="text" id="appurl" name="appurl" style="display: inline;" placeholder="https://test.app"/></form> |
+| \$AppPassword     | The app password for the SPN  | <form oninput="result.value=apppassword.value;result2.value=apppassword.value" id="apppassword" style="display: inline;"><input type="text" id="apppassword" name="apppassword" style="display: inline;" placeholder="(New-Guid).Guid"/></form> |
 | \$TenantDomain             | Your Azure Active Directory tenant domain                     | <form oninput="result.value=tenantdomain.value;result2.value=tenantdomain.value" id="tenantdomain" style="display: inline;"><input type="text" id="tenantdomain" name="tenantdomain" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
 | \$ArmEndpoint              | The Azure Resource Manager endpoint for Azure Stack           | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$PublicAzureResourceGroup | Resource group to be created in public Azure to test the SPN  | <form oninput="result.value=publicazurerg.value" id="publicazurerg" style="display: inline;"><input type="text" id="publicazurerg" name="publicazurerg" style="display: inline;" placeholder="RGTest01"/></form> |
@@ -77,6 +78,8 @@ Enter details below to provide values for the variables in the scripts in this a
 ## [Public Azure and Azure Stack SPN](#tab/tabid-1)
 
 ### Overview of the creation process for public Azure and Azure Stack SPN
+
+The following steps outline the process for the [Azure and Azure Stack Hub SPN creation code](#Azure-and-Azure-Stack-SPN-creation-code).
 
 1. Declare your variables accordingly.
 
@@ -113,7 +116,7 @@ Enter details below to provide values for the variables in the scripts in this a
 <pre><code class="language-PowerShell"># Declare variables
 $AppName = "<output form="appname" name="result" style="display: inline;">TestApp</output>"
 $AppURL = "<output form="appurl" name="result" style="display: inline;">https://test.app</output>"
-$AppPassword = (New-Guid).Guid
+$AppPassword = "<output form="apppassword" name="result" style="display: inline;">(New-Guid).Guid</output>"
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
 
 $TenantDomain = "<output form="tenantdomain" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
@@ -276,7 +279,7 @@ Write-Output -InputObject "SPN credentials are: $SPN"
 <pre><code class="language-PowerShell"># Declare variables
 $AppName = "<output form="appname" name="result2" style="display: inline;">TestApp</output>"
 $AppURL = "<output form="appurl" name="result2" style="display: inline;">https://test.app</output>"
-$AppPassword = (New-Guid).Guid
+$AppPassword = "<output form="apppassword" name="result2" style="display: inline;">(New-Guid).Guid</output>"
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
 
 $TenantDomain = "<output form="tenantdomain" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
