@@ -17,7 +17,7 @@ toc_mdlink: ostack-sco-triliovault.md
 
 # Self Service Backup and Restoration (TrilioVault) Service Scope
 
-## General 
+## General
 
 This article explains what is and isn't included in the scope of the OpenStack Self Service Backup and Restoration (TrilioVault) service option.
 
@@ -51,7 +51,11 @@ As a fully self-service function, customers can invoke their own restorations of
 
 TrilioVault is chargeable based on the number of instances protected and the capacity utilised to store the data.
 
-No protection products are automatically applied to instances running on the UKCloud platform, therefore you must explicitly select the protection option that best meets your requirements.
+[!NOTE] The TrilioVault platform leverages cinder snapshots to get the data backed up. It initiates a snapshot for the initial full backup and leaves the snapshot there to use as the differential for the next incremental backup.  At any given time, there could be up to two snapshots visible per volume being backed up.  At the end of the backup, there should only be one left behind (used for next incremental). In short we would not recommend deleting any TrilioVault snapshots as this will impact upon the performance of your backup routine.
+
+## How can TrilioVault be used as a Disaster Recovery (DR) tool?
+
+By default, TrilioVault is not a DR tool, however in the event UKCloud declares a DR scenario in your primary datacentre, we can repoint TrilioVault to make your backup target site also become the recovery site, ensuring we can restore any and all workloads to a secondary datacentre in the event of a diaster event in your primary datacentre.
 
 ## Frequency and timing
 
@@ -82,6 +86,8 @@ The UKCloud support team can help provide customers with the support around inve
 On occasion, planned maintenance of the OpenStack platform will take precedence over this service. If there's a potential disruption, we'll highlight this to you via the service status page and UKCloud Portal notifications system.
 
 ## Additional data protection services
+
+[!NOTE] No protection products are automatically applied to instances running on the UKCloud platform, therefore you must explicitly select the protection option that best meets your requirements.
 
 UKCloud for OpenStack also offers self-service snapshot protection natively from within the platform should you not require the advanced features of TrilioVault.
 
