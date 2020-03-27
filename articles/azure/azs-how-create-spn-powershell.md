@@ -136,7 +136,7 @@ Connect-AzureAD -Credential $PublicAzureAdminCreds -TenantId $TenantDomain
 Connect-AzureRmAccount -Credential $PublicAzureAdminCreds
 
 # List subscriptions
-$SubId = Get-AzureRmSubscription | Select-Object -Property "SubscriptionId", "TenantId"
+$SubId = Get-AzureRmSubscription | Select-Object -Property SubscriptionId, TenantId
 
 # Set context to be your active subscription
 Get-AzureRmSubscription -SubscriptionId $SubId.SubscriptionId -TenantId $SubId.TenantId | Set-AzureRmContext
