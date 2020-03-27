@@ -44,7 +44,7 @@ Prerequisites from a Windows-based external client are:
 
   - [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md)
 
-  - Azure AD PowerShell Module. To install:
+  - Azure AD PowerShell Module:
 
     ```powershell
     Install-Module -Name AzureAD -Force -Verbose
@@ -118,16 +118,11 @@ $AppName = "<output form="appname" name="result" style="display: inline;">TestAp
 $AppURL = "<output form="appurl" name="result" style="display: inline;">https://test.app</output>"
 $AppPassword = "<output form="apppassword" name="result" style="display: inline;">(New-Guid).Guid</output>"
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
-
 $TenantDomain = "<output form="tenantdomain" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
-
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
-
 $PublicAzureResourceGroup = "<output form="publicazurerg" name="result" style="display: inline;">RGTest01</output>"
 $AzureStackResourceGroup = "<output form="azurestackrg" name="result" style="display: inline;">RGTest01</output>"
-
 $PublicAzureRegion = "<output form="azureregion" name="result" style="display: inline;">ukwest</output>"
-
 $PublicAzureRole = "<output form="publicazurerole" name="result" style="display: inline;">Owner</output>"
 $AzureStackRole = "<output form="azurestackrole" name="result" style="display: inline;">Owner</output>"
 
