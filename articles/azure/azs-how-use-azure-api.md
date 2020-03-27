@@ -3,8 +3,8 @@ title: How to use the Azure Stack Hub API
 description: Describes how to use the Azure Stack Hub API with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: Daniel Brennand
+lastreviewed: 27/03/2020 18:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
