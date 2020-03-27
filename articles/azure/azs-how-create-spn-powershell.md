@@ -276,13 +276,9 @@ $AppName = "<output form="appname" name="result2" style="display: inline;">TestA
 $AppURL = "<output form="appurl" name="result2" style="display: inline;">https://test.app</output>"
 $AppPassword = "<output form="apppassword" name="result2" style="display: inline;">(New-Guid).Guid</output>"
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
-
 $TenantDomain = "<output form="tenantdomain" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
-
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
-
 $AzureStackResourceGroup = "<output form="azurestackrg" name="result2" style="display: inline;">RGTest01</output>"
-
 $AzureStackRole = "<output form="azurestackrole" name="result2" style="display: inline;">Owner</output>"
 
 # Create Azure Stack environment so that you can log in to it
