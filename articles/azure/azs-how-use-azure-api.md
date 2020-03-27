@@ -108,7 +108,7 @@ To obtain an access token:
         "password" = $UserPassword
     }
 
-    # Send POST to Azure REST authentication/login endpoint to retrieve access token.
+    # Send POST request to Azure REST authentication/login endpoint to retrieve access token.
     $AuthResp = Invoke-RestMethod -Method "POST" -Uri "https://login.microsoftonline.com/$TenantID/oauth2/token" -Body $AuthRequestBody -ContentType "application/x-www-form-urlencoded"
 
     $AuthResp
