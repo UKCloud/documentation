@@ -18,7 +18,7 @@ toc_mdlink: azs-how-create-spn-powershell.md
 
 # How to create a service principal name for Azure Stack Hub using PowerShell
 
-This document explains how to create a service principal name to manage Azure and Azure Stack Hub using PowerShell.
+This article explains how to create a service principal name (SPN) to manage Azure and Azure Stack Hub using PowerShell.
 
 It will guide you through the creation of:
 
@@ -32,7 +32,7 @@ It will guide you through the creation of:
 
 ## What is a service principal name?
 
-An Azure service principal name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
+An Azure SPN is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
 
 To log in and manage your resources via SPN you'll need to create an Azure application and then assign SPN to it. Only then will you be able to perform tasks against your environment.
 
@@ -116,7 +116,7 @@ The following steps outline the process for the [Azure and Azure Stack Hub Hub S
 <pre><code class="language-PowerShell"># Declare variables
 $AppName = "<output form="appname" name="result" style="display: inline;">TestApp</output>"
 $AppURL = "<output form="appurl" name="result" style="display: inline;">https://test.app</output>"
-$AppPassword = <output form="apppassword" name="result2" style="display: inline;">(New-Guid).Guid</output>
+$AppPassword = <output form="apppassword" name="result" style="display: inline;">(New-Guid).Guid</output>
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
 $TenantDomain = "<output form="tenantdomain" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
