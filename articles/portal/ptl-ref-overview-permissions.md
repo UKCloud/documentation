@@ -4,7 +4,7 @@ description: A guide to the various permissions available to Portal users and wh
 services: portal
 author: Sue Highmoor
 reviewer: Gsmith
-lastreviewed: 25/02/2020
+lastreviewed: 27/03/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -21,7 +21,8 @@ toc_mdlink: ptl-ref-overview-permissions.md
 
 System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.
 
-![Portal permissions page](images/portal_permissions.png)
+> [!NOTE]
+> For further details in relation to managing My Calls users, please see [*How to manage My Calls users] (ptl-how-manage-my-calls.md).
 
 ## User is admin?
 
