@@ -8098,6 +8098,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-sco-triliovault.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-sco-triliovault.html",
+          "hash": "ZEbY4jJVvsksHyVJ0kzcJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-sco.md",
       "output": {
         ".html": {
@@ -8150,7 +8162,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "ykZpGQtG+v3WCfZOO57ujA=="
+          "hash": "4yM5WeUfEAI/2DHg9NCbxQ=="
         }
       },
       "is_incremental": false,
@@ -19498,7 +19510,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 423,
+          "total_file_count": 424,
           "skipped_file_count": 0
         }
       }

@@ -2,2539 +2,2545 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-home.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-add-managed-disks-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-configure-cli.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-configure-custom-script-extension.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-configure-powershell-operators.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-configure-powershell-users.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-convert-to-managed-disks-ps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-aks.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-key-vault-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-key-vault-ps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-load-balancer.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-S2S-VPN-azurestack-to-azure.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-S2S-VPN-ps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-scale-set.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-service-fabric-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-spn-cli.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-spn-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-spn-powershell.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-vm-cli.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-vm-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-vm-ps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-create-vm-terraform.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-deploy-asdk.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-deploy-asr-template-powershell.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-deploy-sql-template-powershell.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-identify-global-admins.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-link-storage-explorer.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-list-vm-extensions.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-manage-azure-group.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-move-vm-new-vnet-ps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-ps-update-azure-stack.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-resize-disk-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-resize-disk-ps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-retrieve-quota-ps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-use-azure-api.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-how-use-ukc-csp.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-ref-known-issues.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-ref-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/azure/azs-vid-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cdsz/cdsz-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cdsz/cdsz-gs-walled-garden.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cdsz/cdsz-how-access-services-walled-garden.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cdsz/cdsz-ref-application-process.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cdsz/cdsz-ref-bp-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cdsz/cdsz-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cdsz/cdsz-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-how-create-user.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-how-install-geodrive2-client.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-how-reset-secret-key.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-how-use-ecs-python-boto.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-how-use-file-browsers.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-how-view-info-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-ref-s3-examples.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/cloud-storage/cs-vid-geodrive2-client-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-app-ddos.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-bandwidth-monitoring.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-ddos.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-esn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-glb.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-hscn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-hybridconnect.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-janet.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-n3.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-psn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-faq-psn-police.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-how-migrate-n3-hscn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-ddos-mitigation.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-ddos-protection.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-hscn-ssl.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-hybrid-crown-connect.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-internet-access-elevated.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-internet-permitted-ports.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-janet.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-network-adaptor.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-networks-fair-use.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-psn-connection.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-psn-core-services.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-psn-flattening.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-psn-permitted-ports.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-ref-telco-enagagement.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-sco-app-ddos.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/connectivity/conn-sco-glb.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/dedicated-compute/dc-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/dedicated-compute/dc-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/draas/draas-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/draas/draas-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/draas/draas-ref-troubleshooting.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/draas/draas-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/draas/draas-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/email/email-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/email/email-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/email/email-how-setup-android.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/email/email-how-setup-iphone.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/email/email-how-use-with-app.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/email/email-ref-fair-use.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/email/email-ref-upgrade-to-86.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-ref-services.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-sco-bigcolo.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-sco-capscpa.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-sco-dtf.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-sco-hosting.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-sco-mtf-nas.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-sco-smart-hands.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-sco-transfer-assured-elevated.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-sco-transfer-regions.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/enablement/enbl-sco-vpn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/gpu/gpu-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/gpu/gpu-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/hpc/hpc-ref-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/hpc/hpc-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/managed-services/man-monitoring-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/managed-services/man-monitoring-how-change-config.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/managed-services/man-monitoring-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/managed-services/man-sd-compute.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/managed-services/man-sd-monitoring.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/managed-services/man-sd-network.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/managed-services/man-sd-optimisation.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/migration/migr-how-zerto-migrate-to-ukcloud.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/migration/migr-ref-troubleshooting.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/migration/migr-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-home.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-add-domains-proxy-whitelist.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-backup-directories-database.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-backup-migrate.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-build-app-private-repo.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-configure-portworx-volume-replication.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-create-users.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-customise-error-page.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-expand-persistent-vols.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-expose-nonhttp-services.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-monitor-cluster.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-obtain-usage-metrics.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-portworx-snapshots.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-publish-routes-on-multiple-networks.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-restrict-access-to-openshift-routes-by-ip-address.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-use-hawkular-metrics.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-use-netpol.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-use-portworx-encrypted-volumes.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-use-portworx-shared-volumes.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-view-proxy-logs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-how-view-router-logs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-ref-cluster-monitoring.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-ref-dns-zone-forwarding.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-ref-kibana-dashboards.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-ref-lifecycle.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-ref-no-proxy.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-ref-scaling.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-ref-security-best-practices.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-ref-trial.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openshift/oshift-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-home.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-cloud-config.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-configure-ipsec-vpn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-convert-vms.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-create-heat-template.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-create-load-balancer.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-create-users.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-install-rhui.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-manage-accounts-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-move-resources.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-recover-instance.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-retrieve-windows-password.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-static-ip.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-use-api-sso.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-use-cli.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-use-hystax.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-use-instance-metadata.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-how-use-triliovault.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-ref-auto-scaling.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-ref-cli-clients.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-ref-dashboard.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-ref-live-migration.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-ref-public-image-versioning.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-ref-ukcloud-outperforms.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-sco-hystax.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://docs.ukcloud.com/articles/openstack/ostack-sco-triliovault.html</loc>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-vid-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/openstack/ostack-vid-trilio.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-home.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-how-build-vm.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-how-enable-ha.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-ref-bug-self-service.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-ref-db-backup.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-ref-licensing.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-ref-rac.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-ref-solaris-aix.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-ref-templates.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-ref-vm-compatibility.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/oracle/orcl-vid-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-faq-billing.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-faq-credit-card.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-faq-eps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-faq-g11.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-faq-jumpstart.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-faq-mcbs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-faq-miso-rebate.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-faq-sla.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-faq-ukcloud.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-how-connect-mcbs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-how-delete-sso-user.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-how-use-pricing-tool.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-how-use-webhooks.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-how-view-status-info.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-best-practice-guide.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-browsers.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-cloud-economics.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-complaints.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-customer-admin.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-dc-notice.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-export-data.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-external-security-review-testing.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-gib.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-glossary.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-hadoop-proposition.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-high-availability.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-idam.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-invoice-evidence-file.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-knowledge-guidelines.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-knowledge-template.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-offboarding.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-pricing-guide.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-pricing-tool-bugs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-product-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-products-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-promon.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-service-definitions.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-services-by-zone.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-sites-regions-zones.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-srz-table.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-terms-and-conditions.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-ukcloud-monitoring.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-ref-windows-2016-templates.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-sco-free-trials.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-sd-mcbs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-vid-kc-contribution.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/other/other-vid-pricing-tool-overview.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-create-users.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-enable-2fa.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-manage-my-calls.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-raise-escalate-service-request.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-reset-2fa.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-reset-password.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-restrict-access-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-restrict-access-vcloud-api.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-setup-2fa.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-setup-password-expiration.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-signup-notifications.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-unlock-account.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-use-api.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-use-my-calls.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-how-view-login-info.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-ref-multiple-accounts.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-ref-overview-permissions.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-ref-portal-api.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-ref-release-notes.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-ref-security-settings.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-ref-user-access.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/portal/ptl-vid-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/private-cloud/prc-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/private-cloud/prc-faq-storage.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/private-cloud/prc-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/private-cloud/prc-sco-orcl.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/private-cloud/prc-sco-storage.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/private-cloud/prc-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/private-cloud/prc-sd-orcl.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/private-cloud/prc-sd-storage.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/sra/sra-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/sra/sra-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/sra/sra-how-add-remove-users.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/sra/sra-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/sra/sra-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-faq-appdynamics.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-faq-moogsoft.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-ref-eula.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-sco-appdynamics.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-sco-moogsoft.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-sd-appdynamics.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-sd-cloudsoc.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-sd-hytrust.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-sd-moogsoft.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-sd-portworx.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/third-party/third-vid-cloudsoc-intro.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/transition-services/trans-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-faq.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-faq-failover-testing.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-faq-journaling-protection.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-faq-sharing-catalogs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-faq-snapshot-protection.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-faq-synchronous-protection.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-gs.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-gs-build-vm-vcd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-gs-journaling.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-home.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-access-centos-update-servers.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-access-edge.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-access-redhat-update-servers.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-access-syslog-data.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-access-syslog-data-adv.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-access-ubuntu-update-servers.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-access-vcloud-api.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-build-edge.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-change-ipsec-vpn-api.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-configure-distributed-firewall.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-configure-distributed-logical-router.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-configure-ipsec-vpn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-configure-l2-vpn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-configure-load-balancer.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-connect-windows-update.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-catalog.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-dhcp-pool.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-firewall-rules.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-isolated-network.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-nat-rules.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-routed-network.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-static-route.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-vapp.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-vapp-network.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-vm-from-scratch.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-create-vm-from-template.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-deploy-multiple-vms-from-vapp.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-find-ip-addresses.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-increase-storage.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-install-openvpn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-install-rhui-vm.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-install-vcloud-api-rest-client.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-interact-vcd-api-powershell.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-license-microsoft.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-license-red-hat.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-locate-vdc.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-manage-snapshot-protection.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-manage-vapp-permissions.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-manage-vcd-permissions.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-manipulate-power-states-powercli.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-migrate-vapp.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-portal-view-vms.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-ps-export-edge-data.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-retrieve-utilisation-metrics.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-setup-gpu-compute.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-setup-gpu-visualisation.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-setup-kms.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-switch-web-console.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-update-vm-settings.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-upload-media-iso-flp.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-use-affinity-rules.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-use-ovf-tool.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-use-vm-location.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-view-storage-usage.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-zerto-access-zssp.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-zerto-create-vpg.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-zerto-install-local.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-zerto-migrate-between-regions.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-how-zerto-perform-failover.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-access-to-vms.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-advanced-networking.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-byof-working-firewalls.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-cloning-vapps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-comparison-hyperscalers.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-connectivity-options.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-edge-ha.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-fix-unable-to-vapps.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-ipsec-vpn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-managing-portal-api.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-naming-vms.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-nested-hypervisors.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-network-time-server.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-oversized-vms.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-powercli-vcloud.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-rhui.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-service-options.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-shared-secret-issues.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-system-center.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-tier1-storage.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-trouble-ipsec-nsx64.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-trouble-null-pointer.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-twreuse.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-vcd-97.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-vcd97-known-issues.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-vcloud-connector.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-virtual-hardware-v11.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-vm-data-recovery.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-vmdk-limits.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-vmware-tools-installation.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-ref-windows-server-activation.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-sco.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-sco-byof.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-sco-dedicated-compute.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-sco-journaling-protection.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-sco-snapshot-protection.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-sco-synchronous-protection.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-sd.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-vid-build-vdc-portal.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-vid-dfw.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-vid-l2-vpn.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-vid-licensing-kms.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-vid-vcd97.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/articles/vmware/vmw-vid-wsus.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/CONTRIBUTING.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/index.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.ukcloud.com/README.html</loc>
-    <lastmod>2020-03-26T02:48:24+00:00</lastmod>
+    <lastmod>2020-03-27T12:17:52+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
