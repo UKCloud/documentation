@@ -1,5 +1,5 @@
 ---
-title: Connecting a VM to UKCloud's Windows Server Update Services (WSUS) video | UKCloud Ltd
+title: Connecting a VM to UKCloud's Windows Server Update Services (WSUS) video
 description: Provides a short video tutorial for how to register your Windows Server based virtual machine with the UKCloud Windows Server Update Services (WSUS)
 services: vmware
 author: Sue Highmoor
@@ -34,4 +34,4 @@ In this short tutorial video, our Cloud Support Engineer steps you through the p
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

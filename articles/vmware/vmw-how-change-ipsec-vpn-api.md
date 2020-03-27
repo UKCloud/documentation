@@ -1,5 +1,5 @@
 ---
-title: How to change IPsec VPN settings via the vCloud API | UKCloud Ltd
+title: How to change IPsec VPN settings via the vCloud API
 description: Provides a step by step guide to manipulating the IPsec VPN configuration applied to an edge gateway via the vCloud Director API
 services: vmware
 author: Sue Highmoor
@@ -76,7 +76,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
 9. In the *Request Header* dialog box, in the **Name** field, enter `Accept`
 
-10. In the **Value** field enter `application/*+xml;version=5.5` and then click **Okay**.
+10. In the **Value** field enter `application/*+xml;version=32.0` and then click **Okay**.
 
     ![Request Headers dialog box](images/vmw-restclient-request-headers.png)
 
@@ -335,4 +335,4 @@ If you need any further assistance, or if you want to discuss any aspect of this
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

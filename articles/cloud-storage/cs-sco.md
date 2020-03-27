@@ -1,5 +1,5 @@
 ---
-title: Cloud Storage Service Scope | UKCloud Ltd
+title: Cloud Storage Service Scope
 description: Outlines important details regarding Cloud Storage
 services: cloud-storage
 author: Steve Hall
@@ -63,10 +63,10 @@ We control the deployed versions of technology on the platform. This covers inte
 
 Users can access, manage and view their Cloud Storage service, in any of the following ways:
 
-- **APIs.** You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the [EMC ECS Data Access Guide](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf) for more information on the features of both APIs.
+- **APIs.** You can use the ECS S3-compatible API. Refer to the [EMC ECS Data Access Guide](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf) for more information on the features of the API.
 
-> [!NOTE]
-> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
+    > [!NOTE]
+    > The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
 
 - **Command Line Interface (CLI).** CLI tools enable access from the command line by translating commands into the relevant API calls.
 
@@ -126,7 +126,7 @@ You can request a migration through a Service Request. Migrations may be between
 
 **Service Delivery Managers.** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf).
+**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -163,7 +163,7 @@ a)  provide affected customers with at least six (6) hours' advance notice and
 
 b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
 
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
 
 ## Supporting documents and resources
 
@@ -183,4 +183,4 @@ The following documents contain more information about Cloud Storage and the ser
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

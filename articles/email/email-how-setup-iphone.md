@@ -1,5 +1,5 @@
 ---
-title: How to set up Email and Collaboration on an iPhone or iPad | UKCloud Ltd
+title: How to set up Email and Collaboration on an iPhone or iPad
 description: Provides information on how to set up the UKCloud Email and Collaboration service on an iPhone or iPad
 services: email
 author: Sue Highmoor
@@ -30,7 +30,7 @@ You can use the Apple iPhone to access your Zimbra account three primary ways:
 
 - Enter IMAP/POP3 email settings
 
-For more information about ActiveSync, go to <http://en.wikipedia.org/wiki/ActiveSync>.
+For more information about ActiveSync, go to <https://en.wikipedia.org/wiki/ActiveSync>.
 
 > [!IMPORTANT]
 > Performing the following steps may delete all of the existing contacts on your iPhone. This is a common problem for iPhone users when creating a new ActiveSync account. You should ensure that you have backed up all of your contacts before proceeding.
@@ -186,4 +186,4 @@ Now the server will send you a text message when you receive a new email. Text m
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

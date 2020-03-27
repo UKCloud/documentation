@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use Portworx shared volumes </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use Portworx shared volumes ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-use-portworx-shared-volumes.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-use-portworx-shared-volumes">How to use Portworx shared volumes</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how to create shared volumes.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster (or later) and that you have cluster-admin rights. It also assumes familiarity with <code>oc</code>, the OpenShift command-line client.</p>
+<p>If you're interested in a free 30 day trial of Portworx, raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="shared-volumes">Shared volumes</h2>
+<p>Portworx enables persistent volumes to be mounted to multiple containers across multiple nodes.</p>
+<h2 id="storage-classes">Storage classes</h2>
+<p>We create a number of storage classes when provisioning an OpenShift cluster with the Portworx integration. The following example shows a storage class from which shared persistent volume claims (pvc) with a single replica can be provisioned:</p>
+<pre><code class="lang-none">kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+    name: portworx-repl1-shared
+provisioner: com.openstorage.pxd
+parameters:
+   repl: &quot;1&quot;
+   shared: &quot;true&quot;
+</code></pre>
+<p>If you want to use different attributes to the pre-provisioned storage classes, include the following values within the spec:</p>
+<pre><code class="lang-none">provisioner: com.openstorage.pxd
+parameters:
+	shared: &quot;true&quot;
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Within OpenShift, Portworx shared volumes make use of the Container Storage Interface (CSI) via the <code>com.openstorage.pxd</code> provisioner. OpenShift 3.11 uses v0.3 of the CSI spec, which is a beta release, so use of shared volumes is not recommended within a production environment.</p>
+</div>
+<h2 id="creating-a-persistent-volume-claim">Creating a persistent volume claim</h2>
+<p>The following example shows a persistent volume claim (pvc) spec using a shared storage class. Note the <code>ReadWriteMany</code> access mode:</p>
+<pre><code class="lang-none">kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+   name: pvc-shared
+   annotations:
+     volume.beta.kubernetes.io/storage-class: portworx-repl1-shared
+spec:
+   accessModes:
+     - ReadWriteMany
+   resources:
+     requests:
+       storage: 10Gi
+</code></pre>
+<p>Once you've created the pvc, verify that its status shows as <code>Bound</code> to confirm it has been provisioned by Portworx:</p>
+<pre><code class="lang-none">$ oc get pvc
+NAME             STATUS    VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS            AGE
+pvc-shared   Bound     pvc-3654b857-efa1-11e9-8422-fa163e52fd0e   10Gi       RWX            portworx-repl1-shared   1m
+</code></pre>
+<p>You can also verify that the persistent volume backing the pvc has been created:</p>
+<pre><code class="lang-none">$ oc get pv $(oc get pvc pvc-shared -o custom-columns=VOLUME:.spec.volumeName --no-headers)
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                     STORAGECLASS            REASON    AGE
+pvc-3654b857-efa1-11e9-8422-fa163e52fd0e   10Gi       RWX            Delete           Bound     portworxdemo/pvc-shared   portworx-repl1-shared             2m
+</code></pre>
+<h2 id="verifying-a-shared-volume">Verifying a shared volume</h2>
+<p>You can verify that a shared persistent volume is working as expected by creating two deployments that schedule to different nodes and mount the same volume. The following example assumes that you've created a shared volume named <code>pvc-shared</code>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The below file contains two separate <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/deployments/how_deployments_work.html#creating-a-deployment-configuration">Deployments</a>, as can be identified by the YAML document separator <code>---</code>. Each spec is near-identical, with the only difference being the command that the pod continually loops.</p>
+<p><a href="https://docs.openshift.com/container-platform/3.11/admin_guide/scheduling/node_affinity.html#admin-guide-configuring-affinity"><code>nodeAffinity</code></a> is an affinity type used to determine which node a pod should be scheduled to, in this instance we only want the pod to be scheduled to compute nodes so the <code>requiredDuringSchedulingIgnoredDuringExecution</code> rule is used to check that a node contains the <code>node-role.kubernetes.io/compute</code> label, which is a label only applied to nodes with the compute role.</p>
+<p><a href="https://docs.openshift.com/container-platform/3.11/admin_guide/scheduling/pod_affinity.html#admin-guide-sched-affinity-pod-config"><code>podAntiAffinity</code></a> is used to keep pods separate from one another. For each deployment the created pod is labelled with: <code>app: portworx-sharedvolumedemo</code>. The <code>preferredDuringSchedulingIgnoredDuringExecution</code> rule then checks when scheduling a new pod whether an existing pod has already been scheduled to the same node with the previous stated label. If it does, an alternate node will be selected if there is sufficient available resources.</p>
+<p>You can view OpenShift object definitions using the <a href="https://blog.openshift.com/oc-command-newbies"><code>oc explain</code></a> command. More specifically to identify fields under the Deployment spec key, you would use: <code>oc explain deployment.spec</code>.</p>
+</div>
+<ol>
+<li><p>On your machine, create a file named <code>sharedvolumedemo.yaml</code> with the following contents:</p>
+<pre><code class="lang-none">apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: portworx-sharedvolumedemo-a
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: portworx-sharedvolumedemo
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/compute
+                operator: Exists
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - portworx-sharedvolumedemo
+              topologyKey: kubernetes.io/hostname
+      volumes:
+      - name: shared-data
+        persistentVolumeClaim:
+          claimName: pvc-shared
+      containers:
+      - name: debian-container
+        image: debian
+        volumeMounts:
+        - name: shared-data
+          mountPath: /pod-data
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: &quot;250m&quot;
+          requests:
+            cpu: &quot;250m&quot;
+        command: [&quot;/bin/sh&quot;]
+        args:
+          - &quot;-c&quot;
+          - &gt;
+            while true; do
+              sleep 300;
+            done
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: portworx-sharedvolumedemo-b
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: portworx-sharedvolumedemo
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/compute
+                operator: Exists
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - portworx-sharedvolumedemo
+              topologyKey: kubernetes.io/hostname
+      volumes:
+      - name: shared-data
+        persistentVolumeClaim:
+          claimName: pvc-shared
+      containers:
+      - name: debian-container
+        image: debian
+        volumeMounts:
+        - name: shared-data
+          mountPath: /pod-data
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: &quot;250m&quot;
+          requests:
+            cpu: &quot;250m&quot;
+        command: [&quot;/bin/sh&quot;]
+        args:
+          - &quot;-c&quot;
+          - &gt;
+            while true; do
+              date &gt;&gt; /pod-data/sharedfile;
+              echo Hello from the second pod &gt;&gt; /pod-data/sharedfile;
+              sleep 1;
+            done
+</code></pre>
+</li>
+<li><p>You can now create the deployments with the command: <code>oc create -f sharedvolumedemo.yaml</code>, which should output the following:</p>
+<pre><code class="lang-none">deployment.extensions/portworx-sharedvolumedemo-a created
+deployment.extensions/portworx-sharedvolumedemo-b created
+</code></pre>
+</li>
+<li><p>Once the deployments have been created, retrieve the pod names that have been created by the ReplicaSet and verify that these have been scheduled to different nodes:</p>
+<pre><code class="lang-none">$ oc get pods -o wide
+NAME                                           READY     STATUS    RESTARTS   AGE       IP            NODE                            NOMINATED NODE
+portworx-sharedvolumedemo-a-5c5f975f5-sbphh    1/1       Running   0          38s       10.128.4.8    worker-tenant-m-2.portworx-demo   &lt;none&gt;
+portworx-sharedvolumedemo-b-57896c87dd-t55vs   1/1       Running   0          38s       10.131.0.10   worker-tenant-m-0.portworx-demo   &lt;none&gt;
+</code></pre>
+</li>
+<li><p>The <code>b</code> pod writes the current datetime and a message to a file every minute on the mounted shared volume. With the <code>a</code> pod, you can tail this same file on the shared volume to verify that the volume is mounted to multiple pods across multiple nodes:</p>
+<pre><code class="lang-none">$ date
+Wed Oct 16 11:36:45 UTC 2019
+$ oc exec portworx-sharedvolumedemo-a-5c5f975f5-sbphh -- /usr/bin/tail -n 4 /pod-data/sharedfile
+Wed Oct 16 11:36:45 UTC 2019
+Hello from the second pod
+Wed Oct 16 11:36:46 UTC 2019
+Hello from the second pod
+</code></pre>
+</li>
+</ol>
+<h2 id="further-reading">Further reading</h2>
+<p><a href="https://docs.portworx.com/concepts/shared-volumes/">https://docs.portworx.com/concepts/shared-volumes/</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

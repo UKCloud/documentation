@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to change your service configuration for Managed Monitoring from UKCloud </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to change your service configuration for Managed Monitoring from UKCloud ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/managed-services/man-monitoring-how-change-config.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-change-your-service-configuration-for-managed-monitoring-from-ukcloud">How to change your service configuration for Managed Monitoring from UKCloud</h1>
+
+<h2 id="overview">Overview</h2>
+<p>With Managed Monitoring from UKCloud, our Network Operations Centre (NOC) monitors your devices, receiving and reacting to any abnormal events, only escalating those events that genuinely require your attention.</p>
+<p>When we first provision the service, we set it up with default thresholds for the devices you've selected to monitor, unless you specified different thresholds in your initial request. At any time, you can raise a Service Request to change these thresholds and other service configuration details.</p>
+<p>This article provides information about the default monitoring thresholds and alerting procedures and shows you how to change your service configuration.</p>
+<h2 id="managed-monitoring-from-ukcloud-default-configuration">Managed Monitoring from UKCloud default configuration</h2>
+<h3 id="default-monitoring-thresholds">Default monitoring thresholds</h3>
+<p>Managed Monitoring thresholds determine when alerts are raised against your monitored devices. The following table shows the default thresholds used by the service. If you want to use different thresholds you can identify these in your initial request or change them later.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Alert type</th>
+<th>Default threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Processor load</td>
+<td>Major Alert</td>
+<td>80%</td>
+</tr>
+<tr>
+<td>Processor load</td>
+<td>Critical Alert</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>Available memory</td>
+<td>Major Alert</td>
+<td>85%</td>
+</tr>
+<tr>
+<td>Available memory</td>
+<td>Critical Alert</td>
+<td>95%</td>
+</tr>
+<tr>
+<td>Swap space used</td>
+<td>Major Alert</td>
+<td>80%</td>
+</tr>
+<tr>
+<td>Global disk space used</td>
+<td>Major Alert</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>Global disk space used</td>
+<td>Critical</td>
+<td>85%</td>
+</tr>
+<tr>
+<td>Specific Filesystem disk space used</td>
+<td>Major Alert</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>Specific Filesystem disk space used</td>
+<td>Critical Alert</td>
+<td>85%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default-alert-handling-procedures">Default alert handling procedures</h3>
+<p>If a threshold is exceeded, a major or critical alert is raised as appropriate. The procedure followed for these alerts is dependent on the alert type and whether you have identified the device as critical. The following table shows the default alert handling procedures for the different alert types and criticality.</p>
+<table>
+<thead>
+<tr>
+<th>Alert type</th>
+<th>Critical item</th>
+<th>UKCloud action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Major Alert</td>
+<td>No</td>
+<td><ol><li>Incident logged against the escalation contact via the UKCloud Portal.</li><li>Email notification to escalation contact with ticket details.</li><li>Ticket remains as &quot;Waiting for Customer&quot; until customer acknowledges and closes the incident via the UKCloud Portal.</li></ol></td>
+</tr>
+<tr>
+<td>Major Alert</td>
+<td>Yes</td>
+<td>As above.</td>
+</tr>
+<tr>
+<td>Critical Alert</td>
+<td>No</td>
+<td>As above.</td>
+</tr>
+<tr>
+<td>Critical Alert</td>
+<td>Yes</td>
+<td><ol><li>Incident logged against the escalation contact via the UKCloud Portal.</li><li>Email notification to escalation contact with ticket details.</li><li>Ticket remains as &quot;Waiting for Customer&quot; until customer acknowledges and closes the incident via the UKCloud Portal.</li><li>Phone call to escalation contact, if no response then voicemail and update ticket with voicemail details.</li><ol></ol></ol></td>
+</tr>
+</tbody>
+</table>
+<h2 id="making-changes-to-your-service-configuration">Making changes to your service configuration</h2>
+<p>To make any changes to your Managed Monitoring from UKCloud service, you must log a Service Request via the UKCloud Portal. For general information about raising a Service Request, see <a href="../portal/ptl-how-use-my-calls.html"><em>How to use My Calls in the UKCloud Portal</em></a>.</p>
+<p>If you want to make changes to more than one item, you'll be provided with a link to download a spreadsheet to specify the list of items that need amending. When filling out the spreadsheet, ensure that you fill in the correct tab, depending on the change required. If you want to download the file ahead of raising the request, click <a href="https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-257%20Managed%20Monitoring%20from%20UKCloud%20-%20%20make%20changes%20to%20my%20service.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1608414781&amp;Signature=jHVncOCED%2FOxxgc%2FKpKSGnJqQV8%3D">here</a>. You can attach the file to the request offering before submitting to UKCloud.</p>
+<p>You can change the following service configurations:</p>
+<ul>
+<li><p><a href="#adding-or-removing-a-monitored-device">Add or remove a monitored device</a></p>
+</li>
+<li><p><a href="#changing-escalation-contact-information">Change escalation contact information</a></p>
+</li>
+<li><p><a href="#changing-monitoring-thresholds">Change monitoring thresholds</a></p>
+</li>
+<li><p><a href="#providing-notification-of-maintenance-windows">Provide advance notice of maintenance windows</a></p>
+</li>
+</ul>
+<h3 id="adding-or-removing-a-monitored-device">Adding or removing a monitored device</h3>
+<p>If there's a new device that you want to add to your Managed Monitoring from UKCloud service, or if there's a device that you no longer want to be monitored, you can let us know by raising a Service Request.</p>
+<ol>
+<li><p>In My Calls, raise a ticket using the <strong>Add or Remove Monitored Devices</strong> Managed Monitoring template.</p>
+</li>
+<li><p>From the <strong>Action</strong> list, select:</p>
+<ul>
+<li><p><strong>Add New Device</strong> to add a device to the service</p>
+</li>
+<li><p><strong>Remove Existing Device</strong> to remove an item from the service</p>
+</li>
+<li><p><strong>Add New Device and Remove Existing</strong> if you want to both add and remove devices</p>
+</li>
+</ul>
+</li>
+<li><p>If you want to add or remove multiple devices, from the <strong>Add / Remove a Single Device?</strong> list, select <strong>No</strong>.</p>
+<p>For more information about adding or removing multiple devices, see <a href="#filling-out-the-managed-monitoring-spreadsheet">Filling out the Managed Monitoring spreadsheet</a>.</p>
+</li>
+<li><p>If you're adding or removing a single device, in the <strong>Device Name</strong> field, enter the name of the device you want to add or remove.</p>
+</li>
+<li><p>In the <strong>Device IP Address</strong> field, enter the IP address of the device.</p>
+</li>
+<li><p>From the <strong>Critical Item?</strong> list, specify whether or not the device is critical to your environment.</p>
+<p>The critical status of a device determines the procedure followed when an alert is raised, as described in <a href="#default-alert-handling-procedures"><em>Default alert handling procedures</em></a>.</p>
+</li>
+<li><p>In the <strong>Effective From</strong> field, use the data picker to specify when you want the item to be added or removed.</p>
+</li>
+<li><p>In the <strong>Your Reference</strong> field, if you have any reference of your own that you'd like to record against the request (for example, your own ticket number, project ID or change record number), you can record it here.</p>
+</li>
+<li><p>Enter any <strong>Additional Details</strong> as necessary.</p>
+<p><img src="images/man-monitoring-devices.png" alt="Add or Remove Monitored Devices"></p>
+</li>
+<li><p>When you're done, click <strong>Review &amp; Submit</strong> then <strong>Submit</strong>.</p>
+<p>As per our standard customer service targets, we aim to resolve your request within two working days.</p>
+</li>
+</ol>
+<h3 id="changing-escalation-contact-information">Changing escalation contact information</h3>
+<p>It's important that you keep the escalation contact information held for your Managed Monitoring service up to date to ensure that the correct person is contacted if we need to escalate an alert.</p>
+<ol>
+<li><p>In My Calls, raise a ticket using the <strong>Add or Remove Escalation Contacts</strong> Managed Monitoring template.</p>
+</li>
+<li><p>From the <strong>Action</strong> field, select:</p>
+<ul>
+<li><p><strong>Add new contact</strong> to add a new escalation contact for your Managed Monitoring service</p>
+</li>
+<li><p><strong>Remove existing contact</strong> to remove a contact from your Managed Monitoring service</p>
+</li>
+<li><p><strong>Add a New Contact and Remove an Existing Contact</strong> if you want to both add and remove contacts</p>
+</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you want to change the details of an existing contact, select <strong>Add new contact</strong> and specify in the <strong>Additional Details</strong> field which details have changed.</p>
+</div>
+</li>
+<li><p>If you want to add or remove multiple contacts, from the <strong>Add / Remove a Single Contact?</strong> list, select <strong>No</strong>.</p>
+<p>For more information about adding or removing multiple contacts, see <a href="#filling-out-the-managed-monitoring-spreadsheet">Filling out the Managed Monitoring spreadsheet</a>.</p>
+</li>
+<li><p>If you're adding or removing a single contact, in the <strong>Contact Name</strong> field, enter the name of the contact you want to add or remove.</p>
+</li>
+<li><p>Enter a <strong>Job Title</strong> and <strong>Role</strong> for the contact.</p>
+</li>
+<li><p>In the <strong>Contact Number</strong> field, enter the telephone number to use to call this contact if an escalation occurs.</p>
+</li>
+<li><p>In the <strong>Your Reference</strong> field, if you have any reference of your own that you'd like to record against the request (for example, your own ticket number, project ID or change record number), you can record it here.</p>
+</li>
+<li><p>Enter any <strong>Additional Details</strong> as necessary.</p>
+<p><img src="images/man-monitoring-contacts.png" alt="Add or Remove Escalation Contacts"></p>
+</li>
+<li><p>When you're done, click <strong>Review &amp; Submit</strong> then <strong>Submit</strong>.</p>
+</li>
+</ol>
+<h3 id="changing-monitoring-thresholds">Changing monitoring thresholds</h3>
+<p>Monitoring thresholds determine under which circumstances alerts are escalated to you for your attention. The Managed Monitoring from UKCloud service defines default thresholds, but you can change these by raising a Service Request.</p>
+<ol>
+<li><p>In My Calls, raise a ticket using the <strong>Change Thresholds</strong> Managed Monitoring template.</p>
+</li>
+<li><p>If you want to change thresholds for multiple devices, from the <strong>Change Thresholds on a Single Device?</strong> list, select <strong>No</strong>.</p>
+<p>For more information about changing thresholds for multiple devices, see <a href="#filling-out-the-managed-monitoring-spreadsheet">Filling out the Managed Monitoring spreadsheet</a>.</p>
+</li>
+<li><p>If you're changing thresholds for a single device, in the <strong>Device Name</strong> field, enter the name of the device for which you want to change the thresholds.</p>
+</li>
+<li><p>In the <strong>Device IP Address</strong> field, enter the IP address of the device.</p>
+</li>
+<li><p>Enter the thresholds for the following, as required:</p>
+<ul>
+<li><p>Processor Load (Major and Critical Alerts)</p>
+</li>
+<li><p>Available Memory (Major and Critical Alerts)</p>
+</li>
+<li><p>Swap Space Used (Critical Alerts)</p>
+</li>
+<li><p>Global Disk Space Used (Major and Critical Alerts)</p>
+</li>
+<li><p>Specific Filesystem Disk Space Used (Major and Critical Alerts)</p>
+</li>
+</ul>
+</li>
+<li><p>In the <strong>Your Reference</strong> field, if you have any reference of your own that you'd like to record against the request (for example, your own ticket number, project ID or change record number), you can record it here.</p>
+</li>
+<li><p>Enter any <strong>Additional Details</strong> as necessary.</p>
+<p><img src="images/man-monitoring-thresholds.png" alt="Change Thresholds"></p>
+</li>
+<li><p>When you're done, click <strong>Review &amp; Submit</strong> then <strong>Submit</strong>.</p>
+</li>
+</ol>
+<h3 id="providing-notification-of-maintenance-windows">Providing notification of maintenance windows</h3>
+<p>If you're planning maintenance that will affect a monitored device, provide details of the maintenance window, including any instructions for how we should deal with alerts that occur during the maintenance period.</p>
+<ol>
+<li><p>In My Calls, raise a ticket using the <strong>Maintenance Window</strong> Managed Monitoring template.</p>
+</li>
+<li><p>If you want to inform us of maintenance windows on multiple devices, from the <strong>Maintenance Window on a Single Device?</strong> list, select <strong>No</strong>.</p>
+<p>For more information about notifying us of maintenance windows on multiple devices, see <a href="#filling-out-the-managed-monitoring-spreadsheet">Filling out the Managed Monitoring spreadsheet</a>.</p>
+</li>
+<li><p>If you're adding maintenance information for a single device, in the <strong>Device Name</strong> field, enter the name of the device to which the maintenance window applies.</p>
+</li>
+<li><p>In the <strong>Device IP Address</strong> field, enter the IP address of the device.</p>
+</li>
+<li><p>In the <strong>Start Date / Time</strong> field, use the data picker to specify the beginning of the maintenance window.</p>
+</li>
+<li><p>In the <strong>End Date / Time</strong> field, use the date picker to specify the end of the maintenance window.</p>
+</li>
+<li><p>In the <strong>Reason for Maintenance</strong> field, enter details of what kind of maintenance is taking place during the specified period.</p>
+</li>
+<li><p>In the <strong>Special Instructions for UKCloud during the Maintenance Window</strong> field, let us know how you want us to respond to alerts during the maintenance window.</p>
+<p><img src="images/man-monitoring-maintenance.png" alt="Maintenance Window"></p>
+</li>
+<li><p>When you're done, click <strong>Review &amp; Submit</strong> then <strong>Submit</strong>.</p>
+</li>
+</ol>
+<h3 id="filling-out-the-managed-monitoring-spreadsheet">Filling out the Managed Monitoring spreadsheet</h3>
+<p>If you want to change the configuration of multiple devices or contacts, rather than raising a separate Service Request for each device or contact, you can use the Managed Monitoring spreadsheet to specify all the changes you want to make in a single place.</p>
+<ol>
+<li><p>In My Calls, raise a ticket using the appropriate Managed Monitoring template.</p>
+</li>
+<li><p>In the appropriate list, specify that you want to make changes to multiple devices or contacts.</p>
+<p>For example, if you want add multiple escalation contacts for your service, raise a ticket using the <strong>Add or Remove Escalation Contacts</strong> template and select <strong>No</strong> from the <strong>Add / Remove a Single Contact?</strong> list.</p>
+</li>
+<li><p>You'll be provided with a link to the Managed Monitoring spreadsheet (UKC-FRM-257). Click the link to download the file.</p>
+<p><img src="images/man-monitoring-multiple-xls.png" alt="Link to download Managed Monitoring spreadsheet"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you want to download the spreadsheet in advance, you can download it from <a href="https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-257%20Managed%20Monitoring%20from%20UKCloud%20-%20%20make%20changes%20to%20my%20service.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1608414781&amp;Signature=jHVncOCED%2FOxxgc%2FKpKSGnJqQV8%3D">here</a>.</p>
+</div>
+</li>
+<li><p>Fill out the appropriate tabs of the spreadsheet, depending on the configuration changes you want to make.</p>
+<ul>
+<li><p>Default Thresholds - For information only; do not change the contents of this tab</p>
+</li>
+<li><p>Default Handling Procedures - For information only; do not change the contents of this tab</p>
+</li>
+<li><p>Add Devices to Monitoring - Provide details of any devices you want to add to your Managed Monitoring service</p>
+</li>
+<li><p>Remove Devices from Monitoring - Provide details of any devices you want to remove from your Managed Monitoring service</p>
+</li>
+<li><p>Add Remove Escalation Contact - Provide details of any escalation contacts you want to add or remove</p>
+</li>
+<li><p>Change Thresholds - Provide details of any changes you want to make to monitoring thresholds</p>
+</li>
+<li><p>Maintenance Window Notification - Provide details of maintenance windows that will affect your monitored devices</p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Only provide details in one tab. If you want to make different types of changes (for example, adding devices and changing thresholds), raise a Service Request for each type of change, with a separate spreadsheet for each.</p>
+</div>
+</li>
+<li><p>When you've finished completing the spreadsheet, in your ticket, either click <strong>Select files</strong> and browse to the completed spreadsheet or drag the spreadsheet into the template.</p>
+<p><img src="images/man-monitoring-multiple-upload.png" alt="Upload Managed Monitoring spreadsheet"></p>
+</li>
+<li><p>When you're done, click  <strong>Review &amp; Submit</strong> then <strong>Submit</strong>.</p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

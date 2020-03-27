@@ -1,10 +1,10 @@
 ---
-title: Cloud Enablement - CAPS/CPA-approved VPN Service Scope | UKCloud Ltd
+title: Cloud Enablement - CAPS/CPA-approved VPN Service Scope
 description: Outlines important details regarding Cloud Enablement services available for CAPS and CPA-approved (or equivalent standard) VPN solutions.
 services: enablement
 author: Steve Hall
-reviewer:
-lastreviewed: 23/07/2018 11:55:40
+reviewer: hbrunt
+lastreviewed: 16/12/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -115,4 +115,4 @@ If, in the unlikely event of a power failure, you would like your hardware resta
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

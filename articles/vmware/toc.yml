@@ -60,8 +60,6 @@
     href: vmw-how-configure-ipsec-vpn.md
   - name: Connect to the UKCloud Windows Server Update Services (WSUS)
     href: vmw-how-connect-windows-update.md
-  - name: Convert your edge to an advanced gateway
-    href: vmw-how-convert-edge.md
   - name: Create a catalog
     href: vmw-how-create-catalog.md
   - name: Create a DHCP pool
@@ -92,6 +90,8 @@
     href: vmw-how-ps-export-edge-data.md
   - name: Find your allocated external IP addresses
     href: vmw-how-find-ip-addresses.md
+  - name: Increase block storage for a VM
+    href: vmw-how-increase-storage.md
   - name: Install a REST client to access the vCloud API
     href: vmw-how-install-vcloud-api-rest-client.md
   - name: Install and configure OpenVPN
@@ -102,9 +102,9 @@
     href: vmw-how-install-rhui-vm.md
   - name: Interact with the vCloud REST API using PowerShell and Python
     href: vmw-how-interact-vcd-api-powershell.md
-  - name: License Microsoft applications/software on the UKCloud platform
+  - name: License Microsoft software on the UKCloud platform
     href: vmw-how-license-microsoft.md
-  - name: License Windows VMs using the UKCloud Key Management Server
+  - name: License Windows VMs using the UKCloud KMS
     href: vmw-how-setup-kms.md
   - name: Locate your virtual data centre on the UKCloud platform
     href: vmw-how-locate-vdc.md
@@ -124,10 +124,12 @@
     href: vmw-how-retrieve-utilisation-metrics.md
   - name: Securely manage permissions for a specific vApp
     href: vmw-how-manage-vapp-permissions.md
+  - name: Set up Cloud GPU Compute for VMware
+    href: vmw-how-setup-gpu-compute.md
+  - name: Set up Cloud GPU Visualisation for VMware
+    href: vmw-how-setup-gpu-visualisation.md
   - name: Switch to the Legacy UI
     href: vmw-how-switch-web-console.md
-  - name: Upgrade your edge gateway
-    href: vmw-how-upgrade-edge.md
   - name: Upload ISO or FLP media
     href: vmw-how-upload-media-iso-flp.md
   - name: Use affinity and anti-affinity rules
@@ -150,6 +152,8 @@
     href: vmw-ref-advanced-networking.md
   - name: Availability of Virtual Hardware version 11
     href: vmw-ref-virtual-hardware-v11.md
+  - name: Changes in vCloud Director 9.7
+    href: vmw-ref-vcd-97.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
   - name: Comparison of UKCloud for VMware against hyperscalers
@@ -170,12 +174,10 @@
     href: vmw-ref-nested-hypervisors.md
   - name: Network Time Protocol server access
     href: vmw-ref-network-time-server.md
-  - name: Oversized VMs on the UKCloud platform
+  - name: Oversized VMs on UKCloud for VMware
     href: vmw-ref-oversized-vms.md
   - name: PowerCLI command for interacting with the vCloud API
     href: vmw-ref-powercli-vcloud.md
-  - name: Preparing for vCloud Director 9.7 upgrade
-    href: vmw-ref-vcd-97.md
   - name: Red Hat Update Infrastructure overview
     href: vmw-ref-rhui.md
   - name: Shared Secret Length Issues IPSec VPN
@@ -226,18 +228,16 @@
     href: vmw-ref-trouble-null-pointer.md
   - name: Fixing your IPsec VPN following upgrade to NSX 6.4
     href: vmw-ref-trouble-ipsec-nsx64.md
-  - name: UK keyboard layout not supported in Web Console
-    href: vmw-ref-trouble-uk-keyboard-console.md
 - name: Videos
   items:
   - name: Benefits of VMware L2 VPN
     href: vmw-vid-l2-vpn.md
+  - name: Build a VDC using the Portal
+    href: vmw-vid-build-vdc-portal.md
   - name: Connecting a VM to WSUS
     href: vmw-vid-wsus.md
   - name: Licensing Windows VMs using the KMS
     href: vmw-vid-licensing-kms.md
-  - name: vCloud Director 9.1 overview
-    href: vmw-vid-vcd91.md
   - name: vCloud Director 9.7
     href: vmw-vid-vcd97.md
   - name: VMware Distributed Firewall

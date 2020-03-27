@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenStack | UKCloud Ltd
+title: UKCloud for OpenStack
 description: Home page for OpenStack
 services: openstack
 author: Sue Highmoor
@@ -30,7 +30,7 @@ First, take a look at our [Getting Started Guide](ostack-gs.md) to learn the bas
   <div class="col-md-3"><ul><li><p><a href="ostack-how-recover-instance.md">Recover from failure</a></p></li></ul></div>
 </div>
 
-## OpenStack Horizon overview
+## Useful videos
 
 <div class="row">
   <div class="col-md-6">
@@ -39,7 +39,12 @@ First, take a look at our [Getting Started Guide](ostack-gs.md) to learn the bas
     </div>
     <p><a href="https://www.youtube.com/watch?v=XcQYz--CNiM">OpenStack Horizon Dashboard Overview</a></p>
   </div>
-  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://www.youtube.com/embed/c471rZ2euHQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>  
+    <p><a href="https://www.youtube.com/watch?v=c471rZ2euHQ">OpenStack Self-Service Backup and Restoration (TrilioVault)</a></p>
+  </div>
 </div>
 
 ## Other resources
@@ -60,6 +65,6 @@ First, take a look at our [Getting Started Guide](ostack-gs.md) to learn the bas
 
 Find answers to common questions in our [UKCloud for OpenStack FAQ](ostack-faq.md).
 
-## Join the conversation
+## Get in touch
 
-Visit the <a href="https://community.ukcloud.com">UKCloud Community</a> to join the conversation about digital transformation in the UK Public Sector. If you have an idea for how we could improve any of our services, use the <a href="https://community.ukcloud.com/ideas">Ideas</a> section or watch out for regular feedback challenges from our Product Management team. You can also read blogs, watch webinars, sign up to upcoming events and find a Partner to help deliver your project.
+We want to know what you think. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

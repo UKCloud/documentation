@@ -1,5 +1,5 @@
 ---
-title: Customer administration page | UKCloud Ltd
+title: Customer administration page
 description: Explains where you can find information to help you administer your environment
 services: other
 author: Matt Warner
@@ -27,17 +27,15 @@ The below links should help you with administering your environment, however ple
 
 [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md)
 
-VMware vCloud Director API Programming Guide [9.1](https://code.vmware.com/doc/preview?id=6899) | [9.7]
+[VMware vCloud Director API Programming Guide](https://code.vmware.com/docs/8072/vcloud-director-api-programming-guide)
 
-VMware vCloud Director Administrator's Guide [9.1](https://docs.vmware.com/en/vCloud-Director/9.0/com.vmware.vcloud.admin.doc/GUID-3A4FBE1E-6BDB-4AE4-93F8-D23A8DCBD1F1.html) | [9.7](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-3A4FBE1E-6BDB-4AE4-93F8-D23A8DCBD1F1.html)
+[VMware vCloud Director Administrator's Guide](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-3A4FBE1E-6BDB-4AE4-93F8-D23A8DCBD1F1.html)
 
-VMware vCloud Director User's Guide [9.1](https://docs.vmware.com/en/vCloud-Director/9.0/com.vmware.vcloud.user.doc/GUID-D078FBD8-4704-4FB9-B112-C79349CC47DB.html) | [9.7](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.user.doc/GUID-D078FBD8-4704-4FB9-B112-C79349CC47DB.html)
+[VMware vCloud Director User's Guide](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.user.doc/GUID-D078FBD8-4704-4FB9-B112-C79349CC47DB.html)
 
-VMware vCloud Director Tenant Portal Guide [9.1](https://docs.vmware.com/en/vCloud-Director/9.1/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html) | [9.7](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html)
+[VMware vCloud Director Tenant Portal Guide](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html)
 
-[Configuring Edge Gateway Services in vCloud Director (9.1)](https://docs.vmware.com/en/vCloud-Director/9.1/com.vmware.vcloud.admin.doc/GUID-99A1DA05-AF6B-4F22-842E-92394B50F9A8.html)
-
-[Advanced Networking Capabilities for vCloud Director Tenants (9.7)](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-FA1B782D-7E76-4AB9-9EB9-E0A11401BEB0.html)
+[Advanced Networking Capabilities for vCloud Director Tenants](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-FA1B782D-7E76-4AB9-9EB9-E0A11401BEB0.html)
 
 ## UKCloud for OpenStack
 
@@ -69,4 +67,4 @@ VMware vCloud Director Tenant Portal Guide [9.1](https://docs.vmware.com/en/vClo
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

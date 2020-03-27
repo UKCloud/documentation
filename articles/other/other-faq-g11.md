@@ -1,5 +1,5 @@
 ---
-title: G-Cloud 11 - Our enhancements and additions | UKCloud Ltd
+title: G-Cloud 11 - Our enhancements and additions
 description: Frequently asked questions (FAQs) for our G-Cloud 11 services
 services: other
 author:  Sue Highmoor
@@ -66,8 +66,6 @@ Cloud Optimisation from UKCloud draws on our expertise in optimising and managin
 At G11 we've launched additional tools and services to help customers enhance their cloud applications. The products can help across a broad range of requirements including:
 
 - Cyber Portfolio
-
-  - CyberScore from UKCloud
 
   - HyTrust DataControl from UKCloud
 
@@ -147,7 +145,7 @@ We can now offer customers management of their workloads running in Microsoft Pu
 
 ### What is happening to End User Compute?
 
-This has been removed from sale. However we'll continue to investigate options around End User Compute/Virtual Desktop, so if you have any ideas or feedback on this topic, let us know via the [UKCloud Community](https://community.ukcloud.com/ideas).
+This has been removed from sale. However we'll continue to investigate options around End User Compute/Virtual Desktop, so if you have any ideas or feedback on this topic, let us know by emailing <feedback@ukcloud.com>.
 
 ### What is happening to Email and Collaboration as a service?
 
@@ -167,4 +165,4 @@ This service has been replaced by Dedicated Compute v2 for new installations.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: MISO rebate FAQs | UKCloud Ltd
+title: MISO rebate FAQs
 description: Frequently asked questions for MISO rebate
 services: other
 author: Matt Warner
@@ -55,4 +55,4 @@ The MISO rebate that we offer to our partners will be limited to 0.5%, irrespect
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

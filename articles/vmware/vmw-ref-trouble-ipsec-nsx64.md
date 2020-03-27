@@ -1,5 +1,5 @@
 ---
-title: Fixing your IPsec VPN following upgrade to NSX 6.4 | UKCloud Ltd
+title: Fixing your IPsec VPN following upgrade to NSX 6.4
 description: Describes how to resolve issues with IPsec VPN after upgrading to NSX 6.4
 services: vmware
 author: Sue Highmoor
@@ -41,12 +41,6 @@ UKCloud support staff can change the VPN config back to DH-2 on a temporary basi
 
 Follow the steps below to convert your edge to an advanced gateway and configure your VPN back to DH-2. To complete these steps, you must have access to the UKCloud Portal and vCloud Director.
 
-## Convert your edge to an advanced gateway
-
-To be able to set your VPN to the desired DH setting, you first need to convert your edge to an advanced gateway.
-
-To convert your edge to an advanced gateway, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md) before attempting to continue with the steps below.
-
 ## Change your VPN settings
 
 To change the DH setting on your broken VPN:
@@ -75,4 +69,4 @@ To change the DH setting on your broken VPN:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

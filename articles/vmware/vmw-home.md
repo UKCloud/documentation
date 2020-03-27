@@ -1,10 +1,10 @@
 ---
-title: UKCloud for VMware | UKCloud Ltd
+title: UKCloud for VMware
 description: Home page for UKCloud for VMware
 services: vmware
 author: Sue Highmoor
 reviewer: Sue Highmoor
-lastreviewed: 20/09/2019
+lastreviewed: 21/11/2019
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -59,6 +59,12 @@ First, take a look at our [Getting Started Guide](vmw-gs.md) to learn the basics
     </div>
     <p><a href="https://www.youtube.com/watch?v=bFB74pj_00E">Licensing Windows VMs using the KMS</a></p>
   </div>
+  <div class="col-md-6">
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://www.youtube.com/embed/bnpF3B6XmOQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://www.youtube.com/watch?v=bnpF3B6XmOQ">Building a virtual data centre</a></p>
+  </div>
 </div>
 
 ## Other resources
@@ -79,6 +85,6 @@ First, take a look at our [Getting Started Guide](vmw-gs.md) to learn the basics
 
 Find answers to common questions in our [UKCloud for VMware FAQ](vmw-faq.md).
 
-## Join the conversation
+## Get in touch
 
-Visit the <a href="https://community.ukcloud.com">UKCloud Community</a> to join the conversation about digital transformation in the UK Public Sector. If you have an idea for how we could improve any of our services, use the <a href="https://community.ukcloud.com/ideas">Ideas</a> section or watch out for regular feedback challenges from our Product Management team. You can also read blogs, watch webinars, sign up to upcoming events and find a Partner to help deliver your project.
+We want to know what you think. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

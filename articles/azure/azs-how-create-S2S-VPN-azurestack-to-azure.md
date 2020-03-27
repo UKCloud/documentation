@@ -1,5 +1,5 @@
 ---
-title: How to create a site-to-site connection between Azure Stack and Public Azure using the UKCloud Azure Stack portal
+title: How to create a site-to-site connection between Azure Stack Hub and Public Azure using the UKCloud Azure Stack Hub portal
 description: Create a site-to-site (S2S) VPN gateway connection from an on-premises network to UKCloud for Microsoft Azure 
 services: azure-stack
 author: Daniel Brennand
@@ -11,40 +11,40 @@ toc_sub1: How To
 toc_sub2: Create a Site-to-Site VPN Connection
 toc_sub3:
 toc_sub4:
-toc_title: Create a site-to-site VPN connection between Azure Stack and Public Azure - Portal
+toc_title: Create a site-to-site VPN connection between Azure Stack Hub and Public Azure - Portal
 toc_fullpath: Users/How To/Create a VPN connection/azs-how-create-S2S-VPN-azurestack-to-azure.md
 toc_mdlink: azs-how-create-S2S-VPN-azurestack-to-azure.md
 ---
 
-# How to create a site-to-site VPN connection between Azure Stack and Public Azure using the UKCloud Azure Stack portal
+# How to create a site-to-site VPN connection between Azure Stack Hub and Public Azure using the UKCloud Azure Stack Hub portal
 
 ## Overview
 
-This article shows you how to use the Azure Stack and Public Azure portals to create a site-to-site VPN between your UKCloud for Microsoft Azure environment and Public Azure environment.
+This article shows you how to use the Azure Stack Hub and Public Azure portals to create a site-to-site VPN between your UKCloud for Microsoft Azure environment and Public Azure environment.
 
 ### Intended audience
 
-To complete the steps in this article, you must have appropriate access to a subscription in both the Azure Stack and Public Azure portals.
+To complete the steps in this article, you must have appropriate access to a subscription in both the Azure Stack Hub and Public Azure portals.
 
 ## Process Overview
 
-To create a site-to-site VPN connection between Azure Stack and Public Azure, you should perform the following steps:
+To create a site-to-site VPN connection between Azure Stack Hub and Public Azure, you should perform the following steps:
 
-1. [Set up VPN on the Azure Stack side](#set-up-vpn-on-the-azure-stack-side)
+1. [Set up VPN on the Azure Stack Hub side](#set-up-vpn-on-the-azure-stack-hub-side)
 2. [Set up VPN on the Public Azure side](#set-up-vpn-on-the-public-azure-side)
-3. [Update local gateway IPs](#update-the-local-gateway-ips-in-azure-stack-and-public-azure)
+3. [Update local gateway IPs](#update-the-local-gateway-ips-in-azure-stack-hub-and-public-azure)
 4. [Verify the VPN connection](#verify-the-vpn-connection)
 
-## Set up VPN on the Azure Stack side
+## Set up VPN on the Azure Stack Hub side
 
-### Create a virtual network in Azure Stack
+### Create a virtual network in Azure Stack Hub
 
 First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through a virtual network gateway.
 
 > [!NOTE]
 > You cannot associate a virtual network with more than one gateway.
 
-1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
+1. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
 2. In the favourites panel, select **Create a resource**.
 
@@ -68,7 +68,7 @@ First, you'll need to create a virtual network. This virtual network will be abl
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
    - **Subnet Name** - The name of the first subnet within the virtual network.
 
@@ -84,7 +84,7 @@ First, you'll need to create a virtual network. This virtual network will be abl
 
 9. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
 
-### Create the gateway subnet in Azure Stack
+### Create the gateway subnet in Azure Stack Hub
 
 To associate a virtual network with a gateway, it must first contain a valid gateway subnet. The following steps outline how to create a gateway subnet.
 
@@ -96,7 +96,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
 4. Fill in the **Address range** and add a route table if required, then click **OK**. The subnet should now have appeared.
 
-### Create the VPN gateway in Azure Stack
+### Create the VPN gateway in Azure Stack Hub
 
 1. In the favourites panel, select **Create a resource**.
 
@@ -114,7 +114,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **Name** - The name of the virtual network gateway.
 
-   - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRoute gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
+   - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRoute gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack Hub SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
 
    - **Virtual Network** - This is the virtual network that you created earlier.
 
@@ -130,13 +130,13 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **Resource Group** - The virtual network gateway will be created in the same resource group as the chosen virtual network.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
      ![Create new virtual network gateway](images/azs-browser-create-vnetwork-gateway.png)
 
 5. Click **Create**.
 
-### Create the local network gateway in Azure Stack
+### Create the local network gateway in Azure Stack Hub
 
 The local network gateway refers to your on-premises network. The following steps outline how to create a local network gateway:
 
@@ -166,11 +166,11 @@ The local network gateway refers to your on-premises network. The following step
 
    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
      ![Create new local network gateway](images/azs-browser-create-lnetwork-gateway.png)
 
-### Create the VPN connection in Azure Stack
+### Create the VPN connection in Azure Stack Hub
 
 Create the site-to-site VPN connection between your virtual network gateway and your public Azure VPN:
 
@@ -198,7 +198,7 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
    - **Resource Group** - The resource group cannot be changed if you are adding a connection for an existing peer.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
      ![Add new connection](images/azs-browser-add-connection.png)
 
@@ -308,7 +308,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **VPN type** - The type of VPN you can choose depends on the make and model of your VPN device, and the kind of VPN connection you intend to create. Choose a route-based gateway if you intend to use point-to-site, inter-virtual network, or multiple site-to-site connections; if you are creating a VPN type gateway to coexist with an ExpressRoute gateway; or if you need to use IKEv2. Policy-based gateways support only IKEv1.
 
-   - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRoute gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
+   - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRoute gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack Hub SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
 
    - **Virtual Network** - This is the virtual network that you created earlier in Public Azure.
 
@@ -369,7 +369,7 @@ The local network gateway refers to your on-premises network. The following step
 
 ### Create the VPN connection in Public Azure
 
-Create the site-to-site VPN connection between your virtual network gateway and your Azure Stack VPN:
+Create the site-to-site VPN connection between your virtual network gateway and your Azure Stack Hub VPN:
 
 1. Navigate to your virtual network gateway by clicking **All services**, then select **Virtual network gateways** under the networking section.
 
@@ -405,13 +405,13 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
 6. Click **OK**.
 
-## Update the local gateway IPs in Azure Stack and Public Azure
+## Update the local gateway IPs in Azure Stack Hub and Public Azure
 
-To establish the connection you will need to identify the public IPs that you created in Azure Stack and Public Azure, and then update both local gateways.
+To establish the connection you will need to identify the public IPs that you created in Azure Stack Hub and Public Azure, and then update both local gateways.
 
 ### Update the local gateway IPs in Public Azure
 
-1. In the Azure Stack portal, navigate to the *Connections* blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *Networking* section.
+1. In the Azure Stack Hub portal, navigate to the *Connections* blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *Networking* section.
 
     ![All services connections networking section](images/azs-browser-all-services-connections-networking.png)
 
@@ -435,39 +435,39 @@ To establish the connection you will need to identify the public IPs that you cr
 
     ![Azure Public local network gateway](images/azs-public-browser-local-gateway-configuration-button.png)
 
-8. Change the **IP address** field to the IP taken from the Azure Stack connection.
+8. Change the **IP address** field to the IP taken from the Azure Stack Hub connection.
 
     ![Azure Public local gateway public IP address](images/azs-public-browser-local-gateway-ip.png)
 
 9. Click **Save**.
 
-### Update the local Gateway IPs in Azure Stack
+### Update the local Gateway IPs in Azure Stack Hub
 
 1. In the Public Azure portal, navigate to the Connections blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *Networking* section.
 
     ![Connections button under all services in public Azure](images/azs-public-browser-services-connections-button.png)
 
-2. Select the VPN connection you created in [Create the VPN connection in Azure Stack](#create-the-vpn-connection-in-azure-stack).
+2. Select the VPN connection you created in [Create the VPN connection in Azure Stack Hub](#create-the-vpn-connection-in-azure-stack-hub).
 
 3. Make a note of the public IP. You can find this in the *Virtual network gateway* section.
 
     ![Public IP of virtual network gateway in Public Azure](images/azs-public-browser-connection-ip.png)
 
-4. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
+4. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
 5. Navigate to the *Local Network Gateway* blade by clicking **All services** in the favourites panel, then selecting **Local network gateways** under the *Networking* section.
 
-    ![Azure Stack portal local network gateway](images/azs-browser-local-network-gateway-all-services.png)
+    ![Azure Stack Hub portal local network gateway](images/azs-browser-local-network-gateway-all-services.png)
 
-6. Select the local network gateway that you created in [Create the local network gateway in Azure Stack](#create-the-local-network-gateway-in-azure-stack)
+6. Select the local network gateway that you created in [Create the local network gateway in Azure Stack Hub](#create-the-local-network-gateway-in-azure-stack-hub)
 
 7. In the *Local Network Gateway* blade, under *Settings*, select **Configuration**.
 
-    ![Azure Stack local network gateway configuration](images/azs-browser-local-network-gateway-configuration.png)
+    ![Azure Stack Hub local network gateway configuration](images/azs-browser-local-network-gateway-configuration.png)
 
 8. Change the **IP address** field to the IP taken from the Public Azure connection.
 
-    ![Azure Stack local network gateway IP address](images/azs-browser-local-network-gateway-ip-address.png)
+    ![Azure Stack Hub local network gateway IP address](images/azs-browser-local-network-gateway-ip-address.png)
 
 9. Click **Save**.
 
@@ -475,24 +475,24 @@ To establish the connection you will need to identify the public IPs that you cr
 
 After configuring the VPN device on your local network, you can verify the VPN connection with the following steps:
 
-1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
+1. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
 2. Navigate to your virtual network gateway by clicking **All services** in the favourites panel, then selecting **Virtual network gateways** under the *Networking* section.
 
-    ![Azure Stack virtual network gateways](images/azs-browser-virtual-network-gateway-all-services.png)
+    ![Azure Stack Hub virtual network gateways](images/azs-browser-virtual-network-gateway-all-services.png)
 
 3. Select your virtual network gateway from the list.
 
 4. In the blade for your virtual network gateway, select **Connections** under the *Settings* section.
 
-    ![Azure Stack virtual network gateway connections](images/azs-browser-virtual-network-gateway-connections.png)
+    ![Azure Stack Hub virtual network gateway connections](images/azs-browser-virtual-network-gateway-connections.png)
 
 5. Select your connection from the list.
 
 6. In the blade of your connection, you can view more information. The connection status will be **Connected** if there is a successful connection.
 
-    ![Azure Stack virtual network gateway connection status](images/azs-browser-virtual-network-gateway-connected.png)
+    ![Azure Stack Hub virtual network gateway connection status](images/azs-browser-virtual-network-gateway-connected.png)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

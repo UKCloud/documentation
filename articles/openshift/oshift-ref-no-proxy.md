@@ -1,5 +1,5 @@
 ---
-title: Community network proxy configuration | UKCloud Ltd
+title: Community network proxy configuration
 description: Provides information regarding proxy environment variables in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon

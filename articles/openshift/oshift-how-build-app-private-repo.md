@@ -1,10 +1,10 @@
 ---
-title: How to build an OpenShift application from a private GitHub repository | UKCloud Ltd
+title: How to build an OpenShift application from a private GitHub repository
 description: Shows how to build an OpenShift application where the source code is in a private GitHub repository secured with an SSH key pair
 services: openshift
 author: Andy Watkins
-reviewer:
-lastreviewed: 26/09/2018 14:17:35
+reviewer: Kieran O'Neill
+lastreviewed: 12/11/2019 16:51:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -117,10 +117,10 @@ oc new-app --template <app-name>
 
 - [blog.openshift.com](https://blog.openshift.com/using-ssh-key-for-s2i-builds/)
 
-- [blog.lucywyman.me](http://blog.lucywyman.me/deploy-private-git-repo-to-openshift.html)
+- [blog.lucywyman.me](https://blog.lucywyman.me/deploy-private-git-repo-to-openshift.html)
 
 - [Openshift documentation on source-clone-secrets](https://docs.openshift.com/container-platform/latest/dev_guide/builds/build_inputs.html#source-clone-secrets)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

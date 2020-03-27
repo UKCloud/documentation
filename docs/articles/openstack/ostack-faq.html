@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>UKCloud for OpenStack FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>UKCloud for OpenStack FAQs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="UKCloud for OpenStack FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="UKCloud for OpenStack FAQs ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -99,7 +99,7 @@
 <p>UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain and cost, instead of designing to the highest level which may not always be needed.</p>
 <h3 id="what-hypervisor-do-you-use">What hypervisor do you use?</h3>
 <p>UKCloud for OpenStack is built using KVM hypervisor technology, a trusted solution for implementing virtualised environments.</p>
-<h3 id="which-disk-formats-does-ukcloud-for-openstack-support">Which Disk formats does UKCloud for OpenStack support?</h3>
+<h3 id="which-disk-formats-does-ukcloud-for-openstack-support">Which disk formats does UKCloud for OpenStack support?</h3>
 <p>The disk format of a virtual machine image is the format of the underlying disk image. Virtual appliance vendors have different formats for laying out the information contained in a virtual machine disk image.</p>
 <p>Set the disk format for your image to one of the following values:</p>
 <p><strong>aki</strong> - An Amazon kernel image</p>
@@ -124,7 +124,7 @@
 </ul>
 <h3 id="do-i-get-root-access-to-the-instances-i-deploy">Do I get root access to the instances I deploy?</h3>
 <p>Yes, as this is a true IaaS cloud service, you have complete control and autonomy over each instance you deploy, and so have full 'root' or administrative access.</p>
-<h3 id="what-instance-sizes-are-available">What Instance sizes are available?</h3>
+<h3 id="what-instance-sizes-are-available">What instance sizes are available?</h3>
 <p>UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.</p>
 <p>Check the <a href="ostack-sd.html"><em>Service Definition</em></a> for more details on the currently available sizes.</p>
 <h3 id="does-ukcloud-offer-dedicated-bare-metal-host-capabilities-openstack-ironic-with-ukcloud-for-openstack">Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?</h3>
@@ -138,10 +138,8 @@
 <p>This is set at 2.4 GHz across instances.</p>
 <h3 id="does-ukcloud-for-openstack-offer-gpu-optimised-instances">Does UKCloud for OpenStack offer GPU optimised instances?</h3>
 <p>Currently UKCloud does not offer GPU optimised OpenStack instances.</p>
-<h3 id="does-ukcloud-offer-encryption-on-instances">Does UKCloud offer encryption on instances?</h3>
-<p>Not by default but, if it's required, you can implement it using a technology of your choice inside the instance OS.</p>
-<h3 id="is-ukclouds-encryption-service-available-for-ukcloud-for-openstack">Is UKCloud's encryption service available for UKCloud for OpenStack?</h3>
-<p>Not currently, but we are considering options based upon customer feedback.</p>
+<h3 id="does-ukcloud-offer-compute-encryption-on-instances">Does UKCloud offer compute encryption on instances?</h3>
+<p>Not by default but, if it's required, you can implement it using a technology of your choice inside the instance OS. Data at Rest Encryption (D@RE) is available on persistent volumes, see the <a href="#storage">Storage</a> section of this article for further details.</p>
 <h2 id="networking">Networking</h2>
 <h3 id="how-many-ip-addresses-do-i-get">How many IP addresses do I get?</h3>
 <p>You're initially allocated three external IP addresses with each OpenStack project.</p>
@@ -178,8 +176,8 @@
 <thead>
 <tr>
 <th>Region</th>
-<th>OpenStack Version</th>
-<th>LBaaS Supported?</th>
+<th>OpenStack version</th>
+<th>LBaaS supported?</th>
 </tr>
 </thead>
 <tbody>
@@ -191,10 +189,11 @@
 <tr>
 <td>COR00005-2</td>
 <td>OpenStack Platform 13 <br> (Queens Release)</td>
-<td>Yes. Uses the <a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia"><em>OpenStack Octavia</em></a> project.</td>
+<td>In Beta* - Uses the <a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia">OpenStack Octavia</a> project.</td>
 </tr>
 </tbody>
 </table>
+<p><i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i></p>
 <h3 id="can-i-deploy-my-own-load-balancer">Can I deploy my own load balancer?</h3>
 <p>Yes, you can deploy your own load balancing virtual appliance provided it is compatible with KVM hypervisor and OpenStack.</p>
 <h3 id="do-you-have-an-ipsec-vpn-connection-for-uploading-sensitive-data">Do you have an IPSEC VPN connection for uploading sensitive data?</h3>
@@ -226,13 +225,47 @@
 <p>You can allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.</p>
 <h3 id="is-instance-storage-persistent">Is instance storage persistent? </h3>
 <p>No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.</p>
-<h3 id="are-there-any-known-limitations-to-block-storage-volumes">Are there any known limitations to Block Storage Volumes?</h3>
+<h3 id="are-there-any-known-limitations-to-block-storage-volumes">Are there any known limitations to block storage volumes?</h3>
 <p>Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier 1 or Tier 2) can be attached to each OpenStack instance.</p>
-<h3 id="is-object-storage-openstack-swift-available">Is Object Storage (OpenStack Swift) available?</h3>
-<p>Unfortunately, the OpenStack Object Storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible Object Storage service which can be used in conjunction with OpenStack; please visit the Digital Market place or contact your Account Director for further details.</p>
+<h3 id="does-ukcloud-offer-encryption-on-volumes">Does UKCloud offer encryption on volumes?</h3>
+<p>The answer to this depends on which of UKCloud's OpenStack services you are using:</p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>OpenStack version</th>
+<th>Encrypted volumes supported?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COR00005 <br> FRN00006</td>
+<td>OpenStack Platform 10 <br>(Newton Release)</td>
+<td>No, as Red Hat's Newton release does not support native Key Management as a Service (KMaaS) to underpin encryption</td>
+</tr>
+<tr>
+<td>COR00005-2</td>
+<td>OpenStack Platform 13 <br> (Queens Release)</td>
+<td>In Beta*</td>
+</tr>
+</tbody>
+</table>
+<p><i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i></p>
+<h3 id="what-type-of-volume-encryption-is-offered">What type of volume encryption is offered?</h3>
+<p>UKCloud offers OpenStack's native Data  at Rest Encryption (D@RE) as an option on OpenStack persistent volumes (Tier 1 / Tier 2 Volumes). D@RE is underpinned by OpenStack's native Key Management as a Service (KMaaS), Barbican.</p>
+<h3 id="what-type-of-encryption-on-persistent-volumes-is-offered">What type of encryption on persistent volumes is offered?</h3>
+<p>AES256 encryption is delivered as part of OpenStack's native Data at Rest Encryption.</p>
+<h3 id="can-i-manage-the-keys-used-to-encrypt-persistent-volumes">Can I manage the keys used to encrypt persistent volumes?</h3>
+<p>No, all key management for UKCloud's native Data at Rest Encryption on persistent volumes is managed by the backend Barbican service.</p>
+<h3 id="can-i-encrypt-my-ephemeral-storage">Can I encrypt my ephemeral storage?</h3>
+<p>UKCloud does not natively support the encryption of ephemeral storage.</p>
+<h3 id="can-i-use-my-own-key-management-or-hardware-security-module-hsm-solution-with-data-at-rest-encryption">Can I use my own key management or Hardware Security Module (HSM) solution with Data at Rest Encryption?</h3>
+<p>UKCloud does not currently support any third-party key management services or HSMs as part of its native Data at Rest Encryption on persistent volumes.</p>
+<h3 id="is-object-storage-openstack-swift-available">Is object storage (OpenStack Swift) available?</h3>
+<p>The OpenStack object storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible object storage service that you can use in conjunction with OpenStack; see the <a href="../cloud-storage/cs-sd.html"><em>Cloud Storage Service Definition</em></a> for further details.</p>
 <h3 id="what-is-the-fastest-way-of-importing-large-amounts-of-data-onto-the-ukcloud-platform">What is the fastest way of importing large amounts of data onto the UKCloud platform?</h3>
 <p>The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for image import/export and 40 Mbit/s for data transferred over FTPS.</p>
-<p>For a transfer time calculator, click <a href="http://techinternets.com/copy_calc?do">here</a>.</p>
+<p>For a transfer time calculator, click <a href="https://techinternets.com/copy_calc?do">here</a>.</p>
 <p>If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.</p>
 <h2 id="management">Management</h2>
 <h3 id="how-do-i-access-my-solutions-via-the-internet">How do I access my solutions via the internet?</h3>
@@ -252,8 +285,8 @@
 <thead>
 <tr>
 <th>Region</th>
-<th>OpenStack Version</th>
-<th>KMaaS Supported?</th>
+<th>OpenStack version</th>
+<th>KMaaS supported?</th>
 </tr>
 </thead>
 <tbody>
@@ -375,7 +408,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <p>UKCloud charges a nominal monthly fee per instance being protected by this service. UKCloud charges by the whole month for any part month consumption of this service.</p>
 <p>You can find pricing details in the OpenStack section of the <a href="https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf">UKCloud Pricing Guide</a>.</p>
 <h3 id="are-there-any-additional-fees-for-the-triliovault-self-service-backup-and-restoration-service">Are there any additional fees for the TrilioVault self-service backup and restoration service?</h3>
-<p>This service utilises UKCloud's <a href="../mcbs/mcbs-sd.html"><em>Multi-Cloud Backup Storage</em></a> (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the <a href="https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf">UKCloud Pricing Guide</a>.</p>
+<p>This service utilises UKCloud's <a href="../other/other-sd-mcbs.html"><em>Multi-Cloud Backup Storage</em></a> (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the <a href="https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf">UKCloud Pricing Guide</a>.</p>
 <h3 id="can-i-use-my-own-backup-software">Can I use my own backup software?</h3>
 <p>Yes, you simply install appropriate backup software within your project and specify the backup location.</p>
 <p>A typical scenario would involve using a commercial backup solution (such as Symantec NetBackup, CommVault or EMC NetWorker) that points to a cloud storage service such as our Cloud Storage.</p>
@@ -412,7 +445,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
 <p>Protective monitoring is included for our IaaS platform and follows GPG 13.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -440,7 +473,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -449,7 +482,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -457,12 +490,19 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -472,5 +512,6 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

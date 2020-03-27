@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to view your VMs in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to view your VMs in the UKCloud Portal </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to view your VMs in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="How to view your VMs in the UKCloud Portal ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,9 +94,7 @@
 <h1 id="how-to-view-your-vms-in-the-ukcloud-portal">How to view your VMs in the UKCloud Portal</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps, edge gateways and bandwidth monitoring.</p>
-<p>If your system administrator has enabled billing for your account, you can also look at near real-time costs; both current month-to-date and an estimated monthly cost. You can see costs on a per-VM and per-vApp
-basis.</p>
+<p>The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps and bandwidth monitoring.</p>
 <h2 id="accessing-the-my-vms-page">Accessing the My VMs page</h2>
 <p>To go to the My VMs page:</p>
 <ol>
@@ -109,12 +107,12 @@ basis.</p>
 <li><p>Click the <strong>My VMs</strong> tab.</p>
 <p><img src="images/ptl-tab-myvms.png" alt="My VMs tab in the UKCloud Portal"></p>
 </li>
-<li><p>From the <strong>Currently viewing for VDC</strong> list, select the virtual data centre (VDC) you want to work with to see its settings and, if billing is enabled, estimated and actual costs.</p>
+<li><p>From the <strong>Currently viewing for VDC</strong> list, select the virtual data centre (VDC) you want to work with to see its settings.</p>
 <p><img src="images/ptl-myvms-select-vdc.png" alt="Select VDC"></p>
 </li>
 </ol>
 <h2 id="viewing-information-about-vapps">Viewing information about vApps</h2>
-<p>The <strong>vApps</strong> tab shows a list of the vApps within the selected VDC. The information displayed includes the number of VMs within the vApp and the cost associated with the vApp, which can be shown in either month-to-date or estimated monthly cost.</p>
+<p>The <strong>vApps</strong> tab shows a list of the vApps within the selected VDC. The information displayed includes the number of VMs within the vApp.</p>
 <p><img src="images/ptl-myvms-vapps.png" alt="vApps tab of the My VMs page"></p>
 <ol>
 <li><p>Select the <strong>vApps</strong> tab.</p>
@@ -127,9 +125,9 @@ basis.</p>
 </li>
 <li><p>One useful property that you can see is the backup status.</p>
 <p>In the example above, there is no backup policy for these VMs so the backup icon is greyed out. If backups are successful there will be a green icon, if backups have failed there will be a red icon.</p>
+<p>If you need to manage your backups for a VM, click the <strong>Manage</strong> button. For more information, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
 </li>
 <li><p>Click a VM name to see additional information about it, including backup logs.</p>
-<p>If you need to manage your backups for a VM, click the <strong>Manage</strong> button. For more information, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
 </li>
 <li><p>Click <strong>Back to vApps</strong> to return to the main <em>My VMs</em> page.</p>
 </li>
@@ -146,23 +144,11 @@ basis.</p>
 <li><p>Click <strong>Back to VMs</strong> to return to the main <em>My VMs</em> page.</p>
 </li>
 </ol>
-<h2 id="viewing-information-about-edge-gateways">Viewing information about edge gateways</h2>
-<p>The <strong>Edge Gateways</strong>  tab shows the version of the edge gateways in your VDCs.</p>
-<ol>
-<li><p>Select the <strong>Edge Gateway</strong> tab.</p>
-</li>
-<li><p>From the <strong>Select Edge</strong> list, select the edge gateway you want to look at.</p>
-</li>
-<li><p>The <strong>VM version</strong> field shows the version of the selected edge gateway.</p>
-</li>
-<li><p>For information about how to upgrade your edge gateway to the latest version, see <a href="vmw-how-upgrade-edge.html"><em>How to upgrade your edge gateway</em></a></p>
-</li>
-</ol>
 <h2 id="viewing-bandwidth-monitoring-information">Viewing bandwidth monitoring information</h2>
 <p>The <strong>Bandwidth Monitoring</strong> tab displays bandwidth statistics for the edge gateways within your VDCs.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Bandwidth Monitoring is not available on the Elevated OFFICIAL security platform.</p>
+<p>Bandwidth Monitoring is not available for the Elevated OFFICIAL security domain.</p>
 </div>
 <ol>
 <li><p>Select the <strong>Bandwidth Monitoring</strong> tab.</p>
@@ -177,7 +163,7 @@ basis.</p>
 VMs.</p>
 <p>For more information about snapshot protection, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -205,7 +191,7 @@ VMs.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -214,7 +200,7 @@ VMs.</p>
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -222,12 +208,19 @@ VMs.</p>
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -237,5 +230,6 @@ VMs.</p>
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

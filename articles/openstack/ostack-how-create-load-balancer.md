@@ -1,5 +1,5 @@
 ---
-title: How to create load balancing services on UKCloud for OpenStack | UKCloud Ltd
+title: How to create load balancing services on UKCloud for OpenStack
 description: Provides information to deploy a load balancing solution (LBaaS) within your OpenStack environment
 services: openstack
 author: Sue Highmoor
@@ -36,7 +36,7 @@ Benefits of this solution include:
 ## Caveats
 
 This solution utilises HAProxy and keepalived, both of which are complicated software products. This guide will help you set up UKCloud for OpenStack to enable you to deploy a load-balancing solution based on keepalived and haProxy, but additional tuning and configuration may be required depending on your intended setup. Please take a moment to have a read through the documentation for both the keepalived project -
-<http://www.keepalived.org/documentation.html> and the HAProxy project - <http://www.haproxy.org>.
+<https://www.keepalived.org/documentation.html> and the HAProxy project - <https://www.haproxy.org>.
 
 ## Prerequisites
 
@@ -346,4 +346,4 @@ To meet the [*UKCloud for OpenStack Service Definition*](ostack-sd.md) commitmen
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

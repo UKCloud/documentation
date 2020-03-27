@@ -1,5 +1,5 @@
 ---
-title: How to create a Service Fabric cluster using the UKCloud Azure Stack portal | UKCloud Ltd
+title: How to create a Service Fabric cluster using the UKCloud Azure Stack Hub portal
 description: Provides help for creating a Service Fabric cluster on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -16,23 +16,23 @@ toc_fullpath: Users/How To/azs-how-create-service-fabric-portal.md
 toc_mdlink: azs-how-create-service-fabric-portal.md
 ---
 
-# How to create a Service Fabric cluster using the UKCloud Azure Stack portal
+# How to create a Service Fabric cluster using the UKCloud Azure Stack Hub portal
 
 ## Overview
 
-Azure Stack Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers. Service Fabric also addresses the significant challenges in developing and managing cloud native applications. Developers and administrators can avoid complex infrastructure problems and focus on implementing mission-critical, demanding workloads that are scalable, reliable, and manageable. Service Fabric represents the next-generation platform for building and managing these enterprise-class, tier-1, cloud-scale applications running in containers.
+Azure Stack Hub Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers. Service Fabric also addresses the significant challenges in developing and managing cloud native applications. Developers and administrators can avoid complex infrastructure problems and focus on implementing mission-critical, demanding workloads that are scalable, reliable, and manageable. Service Fabric represents the next-generation platform for building and managing these enterprise-class, tier-1, cloud-scale applications running in containers.
 
-The following process shows you how to setup a Service Fabric cluster using the Azure Stack portal.
+The following process shows you how to setup a Service Fabric cluster using the Azure Stack Hub portal.
 
 ## Prerequisites
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ## Creating a new key vault
 
 Before creating a Service Fabric cluster, it is necessary to create a key vault to store the certificates for the cluster. These certificates are used in Service Fabric to provide authentication and encryption to secure various aspects of a cluster and its applications. You can find more information about these certificates [here](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-security#x509-certificates-and-service-fabric).
 
-1. Log in to the Azure Stack portal.
+1. Log in to the Azure Stack Hub portal.
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -56,7 +56,7 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   - **Location** - This will be `frn00006`, which is the Azure Stack region.
+   - **Location** - This will be `frn00006`, which is the Azure Stack Hub region.
 
    - **Access policies** - Configure who can access the key vault and what permissions they have.
 
@@ -164,7 +164,7 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group. Note that to create a Service Fabric cluster, the resource group must contain no other resources.
 
-   - **Location** - This will be `frn00006`, which is the Azure Stack region.
+   - **Location** - This will be `frn00006`, which is the Azure Stack Hub region.
 
    ![Create Service Fabric cluster > Basics](images/azs-browser-create-sf-basics.png)
 
@@ -219,4 +219,4 @@ You also need the thumbprint of the certificate(s). For information about how to
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

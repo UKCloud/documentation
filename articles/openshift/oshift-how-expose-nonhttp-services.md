@@ -1,10 +1,10 @@
 ---
-title: How to expose non-http services externally | UKCloud Ltd
+title: How to expose non-http services externally
 description: Explains how to expose services outside of your OpenShift cluster without using HTTP or HTTPS
 services: openshift
 author: Kieran O'Neill
-reviewer:
-lastreviewed: 26/02/2019 10:11:16
+reviewer: gsmith
+lastreviewed: 20/11/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -89,4 +89,4 @@ OpenShift documentation on ipfailover: <https://docs.openshift.com/container-pla
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

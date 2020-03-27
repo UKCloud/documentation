@@ -1,10 +1,10 @@
 ---
-title: Cloud Enablement services | UKCloud Ltd
+title: Cloud Enablement services
 description: Lists the cloud enablement services provided by UKCloud
 services: enablement
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 17:56:05
+reviewer: hbrunt
+lastreviewed: 16/12/2019
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -39,4 +39,4 @@ Other enablement services that we provide to help you work with our cloud platfo
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

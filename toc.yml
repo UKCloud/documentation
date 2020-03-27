@@ -38,8 +38,6 @@
     topicHref: articles/managed-services/man-sd-compute.md
   - name: Migration to the Cloud 
     topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
-  - name: Multi-Cloud Backup Storage
-    topicHref: articles/mcbs/mcbs-gs.md
   - name: Private Cloud
     topicHref: articles/private-cloud/prc-sd.md
   - name: Secure Remote Access

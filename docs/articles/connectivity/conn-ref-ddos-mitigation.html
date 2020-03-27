@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DDoS mitigation causing VPN failures and slow applications | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>DDoS mitigation causing VPN failures and slow applications </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="DDoS mitigation causing VPN failures and slow applications | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="DDoS mitigation causing VPN failures and slow applications ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,15 +96,26 @@
 <h2 id="overview">Overview</h2>
 <p>UKCloud utilises a hybrid solution Distributed Denial of Service (DDoS) mitigation service to help protect customers against DDoS attacks. The hybrid service comprises local DDoS mitigation appliances to mitigate smaller attacks, failing over to the cloud if attacks exceed local capacity. For more information on this specific service, see <a href="conn-faq-ddos.html"><em>DDoS mitigation service FAQ</em></a>.</p>
 <h2 id="issue">Issue</h2>
-<p>Although DDoS mitigation is a valuable service, there are some considerations to be aware of that could impact your environment if not accounted for, for example by causing VPN failures or slow applications. These may not be apparent in normal local operation of the DDoS service, but only come to light when larger attacks are mitigated via the cloud. This is because during cloud mitigation traffic is tunnelled, adding IP overhead. This could potentially cause packet fragmentation, resulting in the issues mentioned above.</p>
+<p>Although DDoS mitigation is a valuable service, there are some considerations to be aware of that could impact your environment if not accounted for, for example by causing VPN failures or slow applications.</p>
+<p>These may not be apparent in normal local operation of the DDoS service, but only come to light when larger attacks are mitigated via the cloud. This is because, during cloud mitigation, traffic is tunnelled, adding IP overhead. This could potentially cause packet fragmentation, resulting in the issues mentioned above.</p>
 <h2 id="recommendation">Recommendation</h2>
-<p>We recommend that, as a proactive measure, you adjust the Maximum Transmission Unit (MTU) settings of your IPsec VPN connection from the default (~1500) to a fixed value between 1350 and 1400. You can do this using the vCloud Director GUI or by using the vCloud Director API (for more information, see <a href="../vmware/vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a> (GUI) or <a href="../vmware/vmw-how-change-ipsec-vpn-api.html"><em>How to change IPSEC VPN settings via the vCloud Director API</em></a>). If you are still experiencing connection issues, raise a support request via the UKCloud Portal.</p>
+<p>To avoid issues related to fragmentation, UKCloud recommends the following settings/protocols:</p>
+<ul>
+<li><p>MTU - As a proactive measure, adjust the Maximum Transmission Unit (MTU) settings of your IPsec VPN connection from the default (~1500) to a fixed value between 1350 and 1426.</p>
+<p>You can do this using the vCloud Director GUI or by using the vCloud Director API (for more information, see <a href="../vmware/vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a> (GUI) or <a href="../vmware/vmw-how-change-ipsec-vpn-api.html"><em>How to change IPSEC VPN settings via the vCloud Director API</em></a>).</p>
+</li>
+<li><p>IKE - UKCloud recommends using IKEv2, which supports fragmentation.</p>
+</li>
+<li><p>Authentication method - If using certificate-based VPNs, UKCloud recommends using ECDSA over RSA. ECDSA signatures are smaller (avoiding fragmentation) and computationally more efficient.</p>
+</li>
+</ul>
+<p>If you're still experiencing connection issues, raise a support request via the UKCloud Portal.</p>
 <h2 id="explanation">Explanation</h2>
-<p>MTU is the maximum size of data that can be sent in a single frame. It is typically set at the data link layer by the Ethernet protocol. Most devices have a default MTU size of 1500 bytes.</p>
+<p>MTU is the maximum size of data that can be sent in a single frame. It's typically set at the data link layer by the Ethernet protocol. Most devices have a default MTU size of 1500 bytes.</p>
 <p>IP facilitates delivery across networks using IP datagrams (which encapsulate the TCP or UDP message). IP datagrams can accommodate different MTU sizes, for example, by fragmenting a datagram that is larger than the MTU into smaller packages that can then be forwarded. However, some applications may set a DF (Do not Fragment) bit, meaning that the datagram cannot be fragmented. If these packets are larger than the MTU, they are dropped.</p>
-<p>Normally, traffic to UKCloud comes directly and is unlikely to be fragmented. However, if DDoS cloud mitigation is initiated, traffic is tunnelled to UKCloud from our DDoS provider. The tunnel adds an overhead to the IP packet, meaning that the packet could become greater than the MTU and need to be fragmented. Fragmented packets add extra overhead and can cause delay as they need to be broken up and reassembled. Also, if just one packet of the fragmented datagram is lost, the entire datagram must be retransmitted. In addition, for applications that have the DF bit set, packets that exceed the MTU will be dropped.</p>
+<p>Fragmented packets add extra overhead and can cause delay as they need to be broken up and reassembled. Also, if just one packet of the fragmented datagram is lost, the entire datagram must be retransmitted.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -132,7 +143,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -141,7 +152,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -149,12 +160,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -164,5 +182,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

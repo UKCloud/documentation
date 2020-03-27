@@ -1,10 +1,10 @@
 ---
-title: How to create a new user in the UKCloud Portal | UKCloud Ltd
+title: How to create a new user in the UKCloud Portal
 description: Shows how to create users in the UKCloud Portal
 services: portal
 author: Sue Highmoor
-reviewer:
-lastreviewed: 05/04/2019 13:57:21
+reviewer: mperry
+lastreviewed: 13/11/2019
 
 toc_rootlink: How To
 toc_sub1: 
@@ -22,7 +22,7 @@ toc_mdlink: ptl-how-create-users.md
 
 You can create users in the UKCloud Portal to enable them to work with UKCloud services.
 
-## Creating a new OpenStack user
+## Creating a new user
 
 To create a new user:
 
@@ -49,6 +49,8 @@ To create a new user:
 
 6. After you've created the user account, you can grant the user access to the different services available in the account. This process varies depending on the service:
 
+    - [*How to manage My Calls users*](ptl-how-manage-my-calls.md)
+
     - [*How to manage permissions for vCloud Director*](../vmware/vmw-how-manage-vcd-permissions.md)
 
     - [*How to create new UKCloud for OpenStack users in the UKCloud Portal*](../openstack/ostack-how-create-users.md)
@@ -59,4 +61,4 @@ To create a new user:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

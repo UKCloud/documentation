@@ -1,5 +1,5 @@
 ---
-title: Cloud GPU FAQs | UKCloud Ltd
+title: Cloud GPU FAQs
 description: Frequently asked questions for Cloud GPU
 services: gpu
 author: Matt Warner
@@ -57,11 +57,19 @@ Yes. To take advantage of the Cloud GPU service, you must also have UKCloud for 
 
 ### Does UKCloud require specific NVIDIA driver versions?
 
-Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts. For information about installing drivers, see the *Getting Started Guide* for [*GPU Compute*](gpu-gs-compute.md#installing-nvidia-drivers) or [*GPU Visualisation*](gpu-gs-visualisation.md#installing-nvidia-drivers).
+Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts. For information about installing drivers, see [*How to set up Cloud GPU Compute for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-compute.md#installing-nvidia-drivers) or [*How to set up Cloud GPU Visualisation for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-visualisation.md#installing-nvidia-drivers).
 
 ### Which compute services support Cloud GPU?
 
 Currently, Cloud GPU only supports environments provisioned on UKCloud for VMware in regions 5 and 6. There are future plans to enable the service on UKCloud for OpenStack and High Performance Compute.
+
+### How do I set up Cloud GPU for UKCloud for VMware?
+
+For information about how to set up Cloud GPU for UKCloud for VMware, see:
+
+- [*How to set up Cloud GPU Compute for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-compute.md)
+
+- [*How to set up Cloud GPU Visualisation for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-visualisation.md)
 
 ### How is it billed?
 
@@ -95,4 +103,4 @@ If you're planning on using GPU for Compute then you would need a new VM as a di
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

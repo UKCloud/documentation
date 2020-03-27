@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create and restore Portworx snapshots </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create and restore Portworx snapshots ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-portworx-snapshots.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-and-restore-portworx-snapshots">How to create and restore Portworx snapshots</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Portworx is a cloud-native storage solution that is now available as an add-on to our OpenShift offering. This article describes how to use Portworx within OpenShift to create on-demand or scheduled snapshots of persistent volumes and how to restore them.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article assumes you have access to a Portworx-enabled OpenShift 3.11 or greater cluster and that you have cluster-admin rights. It also assumes familiarity with <code>oc</code>, the OpenShift command-line client.</p>
+<p>If you're interested in a free 30 day trial of Portworx, raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="pre-requisites">Pre-Requisites</h2>
+<p>This article uses PVCs backed by volumes provisioned by portworx. For information on creating PVCs backed by portworx please see <a href="https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/">https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/</a></p>
+<h2 id="creating-on-demand-snapshots">Creating on-demand snapshots</h2>
+<h3 id="same-namespace">Same namespace</h3>
+<p>You can take on-demand snapshots by creating an OpenShift resource of type <code>VolumeSnapshot</code> using the <code>oc</code> command line tools.</p>
+<ol>
+<li><p>Assuming you have a PVC named <code>test-snapshot-pvc</code>, provisioned by Portworx in the <code>test-snapshot-1</code> namespace, to snapshot this you would run the following:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: test-snapshot-1
+  namespace: test-snapshot-1
+spec:
+  persistentVolumeClaimName: test-snapshot-pvc&quot; | oc create -f -
+</code></pre>
+</li>
+<li><p>To verify that the snapshot was created describe the <code>volumeSnapshot</code> object, find the name of the related <code>volumeSnapshotData</code> object and describe that to ensure it was created successfully:</p>
+<pre><code class="lang-none">oc describe volumesnapshot test-snapshot-1
+
+&quot;Snapshot Data Name:            k8s-volume-snapshot-e292b115-eb4b-11e9-9d81-0a580a830007&quot;
+
+
+oc describe volumesnapshotdata k8s-volume-snapshot-e292b115-eb4b-11e9-9d81-0a580a830007
+
+&quot;Message:               Snapshot created successfully and it is ready&quot;
+</code></pre>
+</li>
+<li><p>To restore the snapshot you need to create a PVC that references it. You do this by adding an annotation: <code>snapshot.alpha.kubernetes.io/snapshot: &lt;snapshot-name&gt;</code> to your PVC spec. The storage class must be <code>stork-snapshot-sc</code>:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-restore-1
+  namespace: test-snapshot-1
+  annotations:
+    snapshot.alpha.kubernetes.io/snapshot: test-snapshot-1
+spec:
+  accessModes:
+     - ReadWriteOnce
+  storageClassName: stork-snapshot-sc
+  resources:
+    requests:
+      storage: 2Gi&quot; | oc create -f -
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>stork-snapshot-sc is a storage class that is created with the cluster. Whenever creating a PVC from a snapshot you will need to create it from this storage class.</p>
+</div>
+</li>
+</ol>
+<h3 id="across-namespaces">Across namespaces</h3>
+<p>You can also restore snapshots to different namespaces, however you must declare the namespaces that you want to restore the snapshot to at the time of creation via an annotation. You must also declare the source namespace via annotation on the PVC object that you create from the snapshot.</p>
+<ol>
+<li><p>The following example snapshots the same volume in the <code>test-snapshot-1</code> namespace with the intention of restoring it to the <code>test-snapshot-2</code> namespace:</p>
+<pre><code class="lang-none"> echo &quot;apiVersion: volumesnapshot.external-storage.k8s.io/v1
+ kind: VolumeSnapshot
+ metadata:
+   name: test-namespace-migrate
+   namespace: test-snapshot-1
+ annotations:
+     stork/snapshot-restore-namespaces: 'test-snapshot-2'
+ spec:
+   persistentVolumeClaimName: test-snapshot-pvc&quot; | oc create -f -
+</code></pre>
+</li>
+<li><p>You can verify the snapshot was created successfully by running the same <code>describe</code> commands from the <a href="#same-namespace">same namespace</a> section.</p>
+</li>
+<li><p>To restore this snapshot in the <code>test-snapshot-2</code> namespace, create a PVC object in the <code>test-snapshot-2</code> namespace that references the snapshot and has the <code>stork.libopenstorage.org/snapshot-source-namespace: &lt;source-namespace&gt;</code> annotation:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-migrate-restore
+  namespace: test-snapshot-2
+  annotations:
+    snapshot.alpha.kubernetes.io/snapshot: test-namespace-migrate
+    stork.libopenstorage.org/snapshot-source-namespace: 'test-snapshot-1'
+spec:
+  accessModes:
+     - ReadWriteOnce
+  storageClassName: stork-snapshot-sc
+  resources:
+    requests:
+      storage: 2Gi&quot; | oc create -f -
+</code></pre>
+</li>
+</ol>
+<h3 id="group-snapshot">Group snapshot</h3>
+<p>Portworx has the ability to take a group snapshot of all PVCs that match a specified label. This is useful to ensure backups of multiple PVCs are taken at the same time. To take a group snapshot, use the <code>GroupVolumeSnapshot</code> resource. The following example creates three PVCs with the same label and leverages the <code>GroupVolumeSnapshot</code> resource to back them up:</p>
+<pre><code class="lang-none">for i in {0..2}
+do
+echo &quot;apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: group-snapshot-test-$i
+  namespace: test-snapshot-1
+  annotations: 
+    volume.beta.kubernetes.io/storage-class: portworx-repl1
+  labels:
+    purpose: &quot;group-test&quot;
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi&quot; | oc create -f -
+done
+</code></pre>
+<ol>
+<li><p>Create the <code>GroupVolumeSnapshot</code> resource targeting the label of your desired PVCs, in our example, the label <code>purpose=group-test</code>:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: stork.libopenstorage.org/v1alpha1
+kind: GroupVolumeSnapshot
+metadata:
+  name: test-groupsnapshot
+spec:
+  pvcSelector:
+    matchLabels:
+      purpose: group-test&quot; | oc create -f -
+</code></pre>
+</li>
+<li><p>This will create a <code>VolumeSnapshot</code> object for each PVC that it matches. To find the name of the volume snapshots you can describe the <code>GroupVolumeSnapshot</code> object:</p>
+<pre><code class="lang-none">oc describe groupvolumesnapshot | grep &quot;Volume Snapshot Name&quot;
+
+    Volume Snapshot Name:  test-groupsnapshot-group-snapshot-test-2-61d7ca5e-ee87-11e9-8422-fa163e52fd0e
+    Volume Snapshot Name:  test-groupsnapshot-group-snapshot-test-1-61d7ca5e-ee87-11e9-8422-fa163e52fd0e
+    Volume Snapshot Name:  test-groupsnapshot-group-snapshot-test-0-61d7ca5e-ee87-11e9-8422-fa163e52fd0e
+</code></pre>
+</li>
+<li><p>To restore any of the PVCs, create a PVC object and insert the relevant snapshot name:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-restore-1
+  namespace: test-snapshot-1
+  annotations:
+    snapshot.alpha.kubernetes.io/snapshot: &lt;snapshot name&gt;
+spec:
+  accessModes:
+     - ReadWriteOnce
+  storageClassName: stork-snapshot-sc
+  resources:
+    requests:
+      storage: 2Gi&quot; | oc create -f -
+</code></pre>
+</li>
+</ol>
+<h3 id="cloud-snapshots">Cloud snapshots</h3>
+<p>Portworx enables you to backup snapshots to cloud storage. We can provide a bucket for the cluster on our Cloud Storage service and set up a cloud credential that you can use. If you'd like to configure snapshots to be sent to your own storage, see <a href="https://docs.portworx.com/reference/cli/credentials/#overview">https://docs.portworx.com/reference/cli/credentials/#overview</a> for how to set this up.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To find the ID of the cloud credentials provided with your cluster run:
+<code>PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')</code>
+<code>kubectl exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl credentials list</code>
+This gets the name of a portworx pod and executes a pxctl credential list inside it.</p>
+</div>
+<ol>
+<li><p>Create a PVC to use for the cloudsnap:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: test-cloudsnap
+  namespace: test-snapshot-1
+  annotations: 
+    volume.beta.kubernetes.io/storage-class: portworx-repl1
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi&quot; | oc create -f -
+</code></pre>
+</li>
+<li><p>To create a cloud snapshot, create a <code>VolumeSnapshot</code> object with the <code>portworx/snapshot-type=cloud</code> annotation:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: test-cloudsnap
+  namespace: test-snapshot-1
+  annotations:
+    portworx/snapshot-type: cloud
+spec:
+  persistentVolumeClaimName: test-cloudsnap&quot; | oc create -f -
+</code></pre>
+<p>You can also provide the cloud credentials for your chosen cloud storage in the <code>portworx/cloud-cred-id</code> annotation, however this is only necessary when there are multiple cloud storage destinations. In our Portworx clusters out of the box you won't need to specify this but it would look like the below:</p>
+<pre><code class="lang-none">apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: test-cloudsnap
+  namespace: test-snapshot-1
+  annotations:
+    portworx/snapshot-type: cloud
+    portworx/cloud-cred-id: &lt;cloud-cred-id&gt;
+spec:
+  persistentVolumeClaimName: test-cloudsnap
+</code></pre>
+</li>
+<li><p>The restore process is exactly the same as the local on-demand snapshots: create a PVC in the <code>stork-snapshot-sc</code> storage class and give it the <code>snapshot.alpha.kubernetes.io/snapshot</code> annotation with the name of the taken snapshot:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: cloudsnap-restore
+  annotations:
+    snapshot.alpha.kubernetes.io/snapshot: test-cloudsnap
+spec:
+  accessModes:
+     - ReadWriteOnce
+  storageClassName: stork-snapshot-sc
+  resources:
+    requests:
+      storage: 2Gi&quot; | oc create -f -
+</code></pre>
+</li>
+</ol>
+<h2 id="creating-scheduled-snapshots">Creating scheduled snapshots</h2>
+<p>You can create snapshot schedules that take recurring backups at a certain time each day, week, month or at a specified interval. For more information on each of the options see <a href="https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-snapshots/scheduled/">https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-snapshots/scheduled/</a>.</p>
+<p>The following example creates a daily policy that creates snapshots at a certain time each day:</p>
+<ol>
+<li><p>Create some <code>SchedulePolicy</code> objects. These objects are referenced in storage classes and any PVCs created from that storage class will have all schedule policies applied:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: stork.libopenstorage.org/v1alpha1
+kind: SchedulePolicy
+metadata:
+  name: daily
+policy:
+  daily:
+    time: '10:00PM'
+    retain: 3&quot; | oc create -f -
+</code></pre>
+<pre><code class="lang-none">echo &quot;apiVersion: stork.libopenstorage.org/v1alpha1
+kind: SchedulePolicy
+metadata:
+  name: ten-minute
+policy:
+  interval:
+    intervalMinutes: 10
+    retain: 3&quot; | oc create -f -
+</code></pre>
+</li>
+<li><p>Create a storage class that references one or more schedule policies to backup PVCs locally every ten minutes and at 10:00PM daily to cloud-storage:</p>
+<pre><code class="lang-none">echo &quot;kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+    name: test-schedule
+provisioner: kubernetes.io/portworx-volume
+parameters:
+   repl: '1'
+   snapshotschedule.stork.libopenstorage.org/default-schedule: |
+     schedulePolicyName: ten-minute
+     annotations:
+       portworx/snapshot-type: local
+   snapshotschedule.stork.libopenstorage.org/daily-schedule: |
+     schedulePolicyName: daily
+     annotations:
+       portworx/snapshot-type: cloud&quot; | oc create -f -
+</code></pre>
+</li>
+<li><p>Create a PVC from the storage class:</p>
+<pre><code class="lang-none">echo &quot;apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: test-schedule
+spec:
+  accessModes:
+     - ReadWriteOnce
+  storageClassName: test-schedule
+  resources:
+    requests:
+      storage: 2Gi&quot; | oc create -f -
+</code></pre>
+</li>
+<li><p>This should create some <code>volumeSnapshotSchedules</code>, for example:</p>
+<pre><code class="lang-none">oc get volumesnapshotschedules
+
+NAME                             AGE
+test-schedule-daily-schedule     1m
+test-schedule-default-schedule   1m
+</code></pre>
+</li>
+<li><p>You can run a describe on these objects to ensure that they have created successfully and will be able to take snapshots. If a creation is unsuccessful you will see the reason why in the events section of your describe. An example of a successful creation is:</p>
+</li>
+</ol>
+<pre><code>Name:         test-schedule-default-schedule
+Namespace:    portworx-uat
+Labels:       &lt;none&gt;
+Annotations:  portworx/snapshot-type=local
+API Version:  stork.libopenstorage.org/v1alpha1
+Kind:         VolumeSnapshotSchedule
+Metadata:
+  Creation Timestamp:  2019-10-22T15:54:02Z
+  Generation:          1
+  Owner References:
+    API Version:     v1
+    Kind:            PersistentVolumeClaim
+    Name:            test-schedule
+    UID:             243ecfab-f4e4-11e9-a977-fa163ec75c17
+  Resource Version:  67635247
+  Self Link:         /apis/stork.libopenstorage.org/v1alpha1/namespaces/portworx-uat/volumesnapshotschedules/test-schedule-default-schedule
+  UID:               2b424719-f4e4-11e9-a34e-fa163e60d86d
+Spec:
+  Post Exec Rule:
+  Pre Exec Rule:
+  Reclaim Policy:        Retain
+  Schedule Policy Name:  ten-minute
+  Suspend:               &lt;nil&gt;
+  Template:
+    Spec:
+      Persistent Volume Claim Name:  test-schedule
+      Snapshot Data Name:
+Status:
+  Items:
+    Interval:
+      Creation Timestamp:  2019-10-22T15:54:02Z
+      Finish Timestamp:    2019-10-22T15:54:32Z
+      Name:                test-schedule-default-schedule-interval-2019-10-22-155402
+      Status:              Ready
+Events:
+  Type    Reason  Age   From   Message
+  ----    ------  ----  ----   -------
+  Normal  Ready   9s    stork  Scheduled snapshot (test-schedule-default-schedule-interval-2019-10-22-155402) completed successfully
+</code></pre>
+<h2 id="further-reading">Further reading</h2>
+<p>There are more snapshot types and options that can be used, these are detailed in the Portworx documentation here: <a href="https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-snapshots/">https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-snapshots/</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to resize a disk using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to resize a disk using PowerShell </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to resize a disk using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="How to resize a disk using PowerShell ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -103,7 +103,7 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this article you must have the appropriate permissions on the resource you are trying to access.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack Hub user's PowerShell environment</a>.</p>
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
 <ul role="tablist">
 <li role="presentation">
@@ -127,12 +127,12 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
 <td>$RGName</td>
-<td>Name of the resource group which the VM is inside in Azure Stack</td>
+<td>Name of the resource group which the VM is inside in Azure Stack Hub</td>
 <td><form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="MyResourceGroup"></form></td>
 </tr>
 <tr>
@@ -162,12 +162,12 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint2.value;result2.value=armendpoint2.value" id="armendpoint2" style="display: inline;"><input type="text" id="armendpoint2" name="armendpoint2" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
 <td>$RGName</td>
-<td>Name of the resource group which the VM is inside in Azure Stack</td>
+<td>Name of the resource group which the VM is inside in Azure Stack Hub</td>
 <td><form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="MyResourceGroup"></form></td>
 </tr>
 <tr>
@@ -212,7 +212,7 @@
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -241,7 +241,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -269,7 +269,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint2" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -299,7 +299,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint2" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -380,7 +380,7 @@ Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&q
 </section>
 </div>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -408,7 +408,7 @@ Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&q
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -417,7 +417,7 @@ Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&q
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -425,12 +425,19 @@ Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&q
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -440,5 +447,6 @@ Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&q
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

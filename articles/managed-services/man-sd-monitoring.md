@@ -1,8 +1,10 @@
 ---
-title: Managed Monitoring from UKCloud Service Definition | UKCloud Ltd
+title: Managed Monitoring from UKCloud Service Definition
 description: Provides an overview of what is provided by the Managed Monitoring from UKCloud service
 services: managed-services
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Managed Monitoring
 toc_sub1: 
 toc_sub2:
@@ -83,4 +85,4 @@ For full terms and conditions including onboarding and responsibilities, please 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

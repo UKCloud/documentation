@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>General connectivity FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>General connectivity FAQs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="General connectivity FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="General connectivity FAQs ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,7 +98,7 @@
 <p>Our Assured OFFICAL cloud platform follows best commercial practice, so certain insecure traffic types are restricted. In general, it's good practice to connect to your Assured OFFICIAL solution via an IPsec VPN (using commercial-grade encryption) which you configure via your self-managed virtual firewall. Within the VPN tunnel, you can use any protocol, giving you maximum flexibility. You can also configure your solution to allow other traffic encrypted using SSL or TLS. Use of non-encrypted traffic should be minimised.</p>
 <p>As our Assured OFFICIAL cloud platform is PSN accredited, you can also connect to your solution via our resilient and scalable PSN service connections. Alternatively, you can use HybridConnect options by, for example, installing your own CAS(T)-compliant private circuit.</p>
 <h2 id="can-i-connect-to-my-solution-using-ssl-vpn">Can I connect to my solution using SSL VPN?</h2>
-<p>Our Assured OFFICAL and Elevated OFFICAL cloud platforms both support SSL VPN (configured by UKCloud by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal), but we don't recommend it other than for occasional remote administration purposes by a small number of administrators. If you need more extensive use of SSL VPN, we recommend you deploy a dedicated VPN appliance, such as OpenVPN.</p>
+<p>Our Assured OFFICAL and Elevated OFFICAL security domains both support SSL VPN (configured from within the edge gateway), but we don't recommend it other than for occasional remote administration purposes by a small number of administrators. If you need more extensive use of SSL VPN, we recommend you deploy a dedicated VPN appliance, such as OpenVPN.</p>
 <h2 id="can-i-use-ukcloud-as-a-transit-or-gateway-between-different-connections">Can I use UKCloud as a transit or gateway between different connections?</h2>
 <p>No. Our cloud platforms are designed so that all traffic either originates or terminates within our platform. We can't facilitate routing between connections. If your solution needs to service users on different networks, this will need to be implemented, managed and accredited within your application or an authorised gateway service.</p>
 <h2 id="do-you-provide-an-sla-on-internetpsnhscnjanet-connectivity">Do you provide an SLA on internet/PSN/HSCN/Janet connectivity?</h2>
@@ -111,7 +111,7 @@
 <p>For more open networks such as the internet, we use multiple connectivity providers to further mitigate the impact of a service failure on the part an individual connectivity provider. Even so, failure scenarios can still occur beyond the UKCloud boundary, which can affect the service that customers receive (for example, congestion on the internet, localised failures within the provider's network or their peering agreement).</p>
 <p>We plan to introduce secondary PSN connectivity providers to implement similar resilience but, as PSN services are delivered as managed connections, we cannot directly control the PSN routers.</p>
 <h2 id="what-is-your-policy-on-ip-addressing">What is your policy on IP addressing?</h2>
-<p>We've designed our cloud to give you complete control and autonomy over the private (<a href="http://tools.ietf.org/html/rfc1918">RFC 1918</a>) IP address space you deploy within your virtual data centre (VDC). You can use the self-managed virtual firewall to implement a VPN tunnel, network address translation (NAT) and load balancing to control how you publish the services within your VDC to external networks.</p>
+<p>We've designed our cloud to give you complete control and autonomy over the private (<a href="https://tools.ietf.org/html/rfc1918">RFC 1918</a>) IP address space you deploy within your virtual data centre (VDC). You can use the self-managed virtual firewall to implement a VPN tunnel, network address translation (NAT) and load balancing to control how you publish the services within your VDC to external networks.</p>
 <p>For the UKCloud Assured OFFICIAL cloud platform, we allocate at least five usable <a href="https://www.ripe.net/internet-coordination/ipv4-exhaustion">RIPE IPv4 addresses</a> which are fully routable on the internet.</p>
 <p>With these addresses, you can establish:</p>
 <ul>
@@ -122,7 +122,7 @@
 <li><p>A VPN - an IPsec VPN can be established between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.</p>
 </li>
 </ul>
-<p>For PSN connections to either of our cloud platforms, the PSN Authority has provided us with a <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/81660/PSN-IP-Address-Allocation-Guidance-v1-4.pdf">limited allocation of PSN IP addresses</a>. The PSN Authority requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN Authority. UKCloud will work with customers to facilitate the allocation of their PSN IP addresses to their services hosted on our cloud platforms.</p>
+<p>For PSN connections to either of our cloud platforms, the PSN Authority has provided us with a <a href="https://www.gov.uk/government/publications/public-services-network-psn-ip-address-allocation">limited allocation of PSN IP addresses</a>. The PSN Authority requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN Authority. UKCloud will work with customers to facilitate the allocation of their PSN IP addresses to their services hosted on our cloud platforms.</p>
 <p>With the PSN IP addresses, you can establish:</p>
 <ul>
 <li><p>Source NAT - all outbound traffic to other resources on the PSN will appear to come from one of these IPv4 addresses.</p>
@@ -150,7 +150,7 @@
 <p>We continue to work with our service providers and technology partners to ensure our platform is ready for IPv6 addressing.</p>
 <h2 id="how-are-the-two-ukcloud-data-centres-connected">How are the two UKCloud data centres connected?</h2>
 <p>UKCloud operates high-bandwidth (multi-Gigabit), low-latency (typically sub-5ms round-trip time) dark fibre connectivity between our two data centres. It's highly resilient as it takes diverse northerly and southerly routes.</p>
-<p>This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses <a href="http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx">CAS(T) compliant</a> circuits; and within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN service.</p>
+<p>This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses CAS(T) compliant circuits and, within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN service.</p>
 <h2 id="if-i-have-reserved-bandwidth-how-do-i-uplift-this">If I have reserved bandwidth, how do I uplift this?</h2>
 <p>We actively monitor and manage our connections to ensure there is appropriate connectivity to the platform. Customers looking to provide 'guaranteed' connection capacity should include a HybridConnect leased line in their solution.</p>
 <h2 id="can-ukcloud-help-me-if-i-dont-have-a-suitable-connection-for-the-elevated-official-cloud-platform">Can UKCloud help me if I don't have a suitable connection for the Elevated OFFICIAL cloud platform?</h2>
@@ -194,7 +194,7 @@
 <p>Like all our connectivity options, there is no set bandwidth cap on our VRFs, and we will capacity manage our VRF network in order to ensure our customers can consume as much as required, however we do operate a Networks Fair Use Policy which protects all our users of the networks from being impacted by particularly spiky/unpredictable network loads. To that end, if a customer thinks that they will use large amounts of bandwidth we always appreciate a heads-up so we can proactively increase bandwidth of the network in order to avoid having to lean on any policy to protect all our users.</p>
 <p>Outside of the VRF, customers may need to consider the impact of things such as IPSec VPN tunnels over the VRF, which decrease the bandwidth of the network because of Edge throughput limits.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -222,7 +222,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -231,7 +231,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -239,12 +239,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -254,5 +261,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

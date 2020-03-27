@@ -1,10 +1,10 @@
 ---
-title: How to use file browsers with Cloud Storage | UKCloud Ltd
+title: How to use file browsers with Cloud Storage
 description: Using file browsers with Cloud Storage
 services: cloud-storage
 author: Dan Baker
-reviewer:
-lastreviewed: 16/10/2018 11:28:45
+reviewer: nwayman
+lastreviewed: 24/02/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -29,20 +29,17 @@ Web applications can easily interact with the API, but the ability to browse the
 
 - Easy maintenance and housekeeping of the objects in the storage system
 
-ECS provides two APIs that you can use to manage Cloud Storage: the S3 compatible API and the EMC ECS Atmos API.
+ECS provides an S3-compatible API that you can use to manage Cloud Storage.
 
 > [!NOTE]
 > The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API.
-> 
-> If you write content to Cloud Storage using one of the APIs, you cannot subsequently access that content using the other API. Choose carefully which API you want to use before beginning a project, as it will be difficult to move between them.
 
-In this article, we'll look at some of the many applications that enable you to browse an object storage system. We'll look at two categories:
-
-- [Windows applications](#windows-applications)
-
-- [Internet browser access](#internet-browser-access)
+In this article, we'll look at a couple of the many applications that enable you to browse an object storage system.
 
 The inclusion of applications in this article should not be taken as an endorsement or recommendation of them by UKCloud. However, we have tested them with our Cloud Storage service and verified that they work correctly.
+
+> [!NOTE]
+> While there are S3 browser extensions available, none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.
 
 ## API endpoints
 
@@ -68,11 +65,7 @@ S3 API endpoints:
 
 Contact UKCloud support if you are unsure which endpoint to use.
 
-## Windows applications
-
-This section takes you through installing and configuring two applications: Cyberduck and S3 Browser.
-
-### Cyberduck
+## Cyberduck
 
 Cyberduck is an open source cross platform file browser for HTTP based object storage solutions. It utilises the S3 endpoints to establish connectivity with the ECS platform over HTTPS.
 
@@ -82,7 +75,7 @@ To install and configure Cyberduck:
 
 2. Install Cyberduck using either the default settings or specifying your own configuration.
 
-3. Download the [Cloud Storage Cyberduck profile](https://developer-content.emc.com/downloads/jive_attach_proxy.htm?ecnCommID=3939&ecnCommName=ECS%20-%20Elastic%20Cloud%20Storage&ecnAttachmentName=EMC%20ECS%20S3%20(HTTPS%20with%20AWS2).cyberduckprofile&ecnContainerURL=/docs/DOC-27683&reqURL=/servlet/JiveServlet/download/27683-11-131318/EMC%20ECS%20S3%20(HTTPS%20with%20AWS2).cyberduckprofile).
+3. Download the Cloud Storage Cyberduck profile from [Connecting to ECS with Cyberduck](https://community.emc.com/docs/DOC-27683).
 
     > [!NOTE]
     > If you download this profile using a browser, ensure the file name is `.cyberduckprofile`.
@@ -122,15 +115,15 @@ To install and configure Cyberduck:
 
     ![Cyberduck interface](images/cs-file-browsers-6.png)
 
-10. For additional information, see [*Connecting to ECS with Cyberduck*](https://community.emc.com/docs/DOC-27683).
+10. For additional information, see [Connecting to ECS with Cyberduck](https://community.emc.com/docs/DOC-27683).
 
-### S3 Browser
+## S3 Browser
 
 S3 Browser is a Windows client for Amazon S3 that you can easily configure to work with the S3 compatible API on Cloud Storage. It’s free for personal use; a licence fee is payable for business use.
 
 To install and configure S3 Browser:
 
-1. Download [S3 Browser](ttp://s3browser.com/).
+1. Download [S3 Browser](https://s3browser.com/).
 
 2. Execute the installer and follow the prompts in the wizard to complete the installation.
 
@@ -155,69 +148,9 @@ To install and configure S3 Browser:
     > [!NOTE]
     > Not all S3 features are implemented by the ECS S3 compatible API, so some functionality may not work. However, common file operations (create, read, write and delete) all work well.
 
-## Internet browser access
-
-This section takes you through installing and configuring browser access that enables users to browse the contents of Cloud Storage using a web browser.
-
-EMC provides an HTML5 application that you can install in your Atmos bucket to generate a URL that enables you to share the bucket with other users who require access to cloud storage.
-
-   > [!NOTE]
-   > If you have multiple buckets under the same endpoint, you can provide access to them all from a single URL. However, if you have multiple buckets hosted in both Cloud Storage regions, you'll need to install the application in both regions and access is via a different URL for each region.
-
-S3 extensions are also available for browsers, but none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.
-
-### Atmos HTML5 application
-   >
-   > [!NOTE]
-   > For installation and initial configuration of the Atmos HTML5 application, you will need the following Prerequisite information:
-   >
-   > Atmos Access Key - in the form of SubtennantID/User
-   >
-   > Atmos Secret Key - Shared Secret Key
-   >
-   > A folder within an existing bucket or new bucket to host the GUI files, for example /<bucket_name>/HTML5UI/ or /HTML5UI/
-
-To install and configure the Atmos HTML5 application:
-
-1. Download and extract the [Atmos HTML5 application](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/AtmosHTML5.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1575471403&Signature=49Xss9swLLmSPmkAyruywkscUas%3D).
-
-2. **On Windows:** Open a command prompt, navigate to the extracted files and run the following command: `upload.bat WebContent\main.html /<bucket_name>/<optional_path>/`.
-
-    **On Linux:** Open a terminal prompt, or from the CLI, navigate to the extracted files and run the following command: `upload.sh WebContent\main.html /<bucket_name>/<optional_path>/`.
-
-3. The installer script will run and prompt for the following information:
-
-    - Atmos host name, which is the UKCloud endpoint URL for your selected storage bucket for example `atmos.cas.frn00006.ukcloud.com`
-
-    - Atmos port - Enter 443.
-
-    - Atmos UID - Enter your selected storage bucket's Atmos access key for example `a554f348g57f48729c0247r9730e29a1/10-10-10-89431b-1`
-
-    - Atmos secret - Enter your selected storage bucket's shared secret key.
-
-4. When you have provided all the required information, the installer will connect to the bucket and upload the files to the requested folder. Once the script has finished, it will output a URL that you should copy to your clipboard and then keep somewhere safe.
-
-5. Enter the generated URL into your browser and, when connecting for the first time, the application will prompt you to specify an account UID and shared secret for the account that you want to access. After you enter the UID and secret, you can test the credentials using the test button. If the test is successful, click OK to add the credentials to the application and you can then access the bucket.
-
-    ![Atmos HTML5 Add account interface](images/cs-file-browsers-html5-2.png)
-
-6. If you want to add more cloud storage accounts that are located at the same Cloud Storage endpoint, you can add them to the application using the cog icon in the top right-hand corner.
-
-7. You can now:
-
-    - Browse the buckets and files stored in your account
-
-    - Use the toolbar buttons to upload files
-
-    - Double-click items to download them
-
-    - Access other operations for selected items through the toolbar buttons
-
-    ![Atmos HTML5 Application interface](images/cs-file-browsers-html5-1.png)
-
 ## Next steps
 
-This article has shown you how to browse Cloud Storage buckets using various different applications. For more information about how to use the service, see the following articles:
+This article has shown you how to browse Cloud Storage buckets using a couple of different applications. For more information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
 
@@ -231,4 +164,4 @@ This article has shown you how to browse Cloud Storage buckets using various dif
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

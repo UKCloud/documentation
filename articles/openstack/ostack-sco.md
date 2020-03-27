@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenStack Service Scope | UKCloud Ltd
+title: UKCloud for OpenStack Service Scope
 description: Outlines important details regarding Cloud Native Infrastructure
 services: openstack
 author: Steve Hall
@@ -136,7 +136,7 @@ Customers with requirements beyond these limits can raise a service request via 
 
 Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier 1 or Tier 2) can be attached to each OpenStack instance.
 
-## Platform operation request lLimits
+## Platform operation request limits
 
 Although designed to be a large-scale cloud platform, we strongly advise that when performing operations/requests against UKCloud for OpenStack you perform these actions in batches of no more than 30 (for example, only creating batches of up to 30 new instances in a single request). Additional requests can then be made to the platform for subsequent batches.
 
@@ -154,4 +154,4 @@ We are actively working on delivering these features.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

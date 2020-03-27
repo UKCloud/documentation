@@ -1,5 +1,5 @@
 ---
-title: General connectivity FAQs | UKCloud Ltd
+title: General connectivity FAQs
 description: Frequently asked questions for general connectivity
 services: connectivity
 author: Matt Warner
@@ -27,7 +27,7 @@ As our Assured OFFICIAL cloud platform is PSN accredited, you can also connect t
 
 ## Can I connect to my solution using SSL VPN?
 
-Our Assured OFFICAL and Elevated OFFICAL cloud platforms both support SSL VPN (configured by UKCloud by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal), but we don't recommend it other than for occasional remote administration purposes by a small number of administrators. If you need more extensive use of SSL VPN, we recommend you deploy a dedicated VPN appliance, such as OpenVPN.
+Our Assured OFFICAL and Elevated OFFICAL security domains both support SSL VPN (configured from within the edge gateway), but we don't recommend it other than for occasional remote administration purposes by a small number of administrators. If you need more extensive use of SSL VPN, we recommend you deploy a dedicated VPN appliance, such as OpenVPN.
 
 ## Can I use UKCloud as a transit or gateway between different connections?
 
@@ -53,7 +53,7 @@ We plan to introduce secondary PSN connectivity providers to implement similar r
 
 ## What is your policy on IP addressing?
 
-We've designed our cloud to give you complete control and autonomy over the private ([RFC 1918](http://tools.ietf.org/html/rfc1918)) IP address space you deploy within your virtual data centre (VDC). You can use the self-managed virtual firewall to implement a VPN tunnel, network address translation (NAT) and load balancing to control how you publish the services within your VDC to external networks.
+We've designed our cloud to give you complete control and autonomy over the private ([RFC 1918](https://tools.ietf.org/html/rfc1918)) IP address space you deploy within your virtual data centre (VDC). You can use the self-managed virtual firewall to implement a VPN tunnel, network address translation (NAT) and load balancing to control how you publish the services within your VDC to external networks.
 
 For the UKCloud Assured OFFICIAL cloud platform, we allocate at least five usable [RIPE IPv4 addresses](https://www.ripe.net/internet-coordination/ipv4-exhaustion) which are fully routable on the internet.
 
@@ -65,7 +65,7 @@ With these addresses, you can establish:
 
 - A VPN - an IPsec VPN can be established between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
 
-For PSN connections to either of our cloud platforms, the PSN Authority has provided us with a [limited allocation of PSN IP addresses](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/81660/PSN-IP-Address-Allocation-Guidance-v1-4.pdf). The PSN Authority requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN Authority. UKCloud will work with customers to facilitate the allocation of their PSN IP addresses to their services hosted on our cloud platforms.
+For PSN connections to either of our cloud platforms, the PSN Authority has provided us with a [limited allocation of PSN IP addresses](https://www.gov.uk/government/publications/public-services-network-psn-ip-address-allocation). The PSN Authority requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN Authority. UKCloud will work with customers to facilitate the allocation of their PSN IP addresses to their services hosted on our cloud platforms.
 
 With the PSN IP addresses, you can establish:
 
@@ -101,7 +101,7 @@ We continue to work with our service providers and technology partners to ensure
 
 UKCloud operates high-bandwidth (multi-Gigabit), low-latency (typically sub-5ms round-trip time) dark fibre connectivity between our two data centres. It's highly resilient as it takes diverse northerly and southerly routes.
 
-This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses [CAS(T) compliant](http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx) circuits; and within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN service.
+This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses CAS(T) compliant circuits and, within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN service.
 
 ## If I have reserved bandwidth, how do I uplift this?
 
@@ -159,4 +159,4 @@ Outside of the VRF, customers may need to consider the impact of things such as 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

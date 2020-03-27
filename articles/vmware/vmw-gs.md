@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for UKCloud for VMware | UKCloud Ltd
+title: Getting Started Guide for UKCloud for VMware
 description: Provides information to get up and running with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
@@ -32,10 +32,6 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 
 You should have received your UKCloud Portal login credentials from your Customer Success Manager (CSM).
 
-We recommend that you use the Mozilla Firefox ESR 32-bit browser as this is supported by both the UKCloud Portal and by the Web Console for the version of vCloud Director used by UKCloud for VMware.
-
-**More information!** [*Browser requirements for services on the UKCloud Platform*](../other/other-ref-browsers.md)
-
 ## Introductions to UKCloud for VMware
 
 We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable, and gives you the flexibility to use different service levels, VM sizes, security domains, connectivity and data protection options.
@@ -65,11 +61,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 
     If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.
 
-3. If your Portal administrator has enabled memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)
-
-    ![Memorable word dialog box](images/vmw-portal-memorable-word.png)
-
-4. If your Portal administrator has enabled Two-Factor Authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)
+3. If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)
 
     ![Two-Factor Authentication dialog box](images/vmw-portal-2fa.png)
 
@@ -165,7 +157,7 @@ After creating your compute service, the next step is to create one or more VDCs
 4. Enter a **VDC Name**.
 
     > [!TIP]
-    > The name can be up to 32 characters long and can include any character except +.
+    > The name can be up to 32 characters long and can include any character except `+`, `(` or `)`.
 
     ![Build VDC page](images/vmw-portal-build-vdc.png)
 
@@ -206,11 +198,11 @@ After you've created your compute service and VDC, you can start to build up you
 
 4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
 
-    **More information!** [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)
+    For more information, see [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md).
 
 5. To return to the UKCloud Portal, click your user name in the top right corner, and select **Log out**.
 
-    ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-link.png)
+    ![vCloud Director Logout option](images/vmw-vcd-logout-link.png)
 
 ## Next steps
 
@@ -292,4 +284,4 @@ resource requirements and the UKCloud platform optimises its placement to ensure
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

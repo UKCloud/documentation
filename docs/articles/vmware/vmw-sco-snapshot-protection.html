@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Snapshot Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Snapshot Protection Service Scope </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Snapshot Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="Snapshot Protection Service Scope ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -111,16 +111,16 @@
 <p>No protection products are automatically applied to VMs running on the UKCloud platform, therefore you must explicitly select the protection option that best meets your requirements.</p>
 <h2 id="frequency-and-timing">Frequency and timing</h2>
 <p>Snapshots are scheduled to occur once in a 24-hour period.</p>
-<p>Snapshots take place 365 days of the year and are started inside the UKCloud‑defined window: 2000-0800. Snapshots are not started before 2000 or after 0800.</p>
+<p>Snapshots take place 365 days of the year and are started inside the UKCloud‑defined window: 20:00-08:00. Snapshots are not started before 20:00 or after 08:00.</p>
 <p>We cannot guarantee the time at which your VM will have a snapshot taken inside this window; the time may also vary from day to day. The time of a snapshot is reported via the UKCloud Portal the next day.</p>
-<p>There's a system hard stop at 0900, at which time any active snapshots are cancelled.</p>
+<p>There's a system hard stop at 09:00, at which time any active snapshots are cancelled.</p>
 <h3 id="success-rate">Success rate</h3>
 <p>We do not guarantee successful snapshots.</p>
 <p>We can provide you with guidance on suitable candidates for Snapshot Protection (data change rate/size).</p>
 <p>VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your Service Delivery Manager if this scenario applies to one or more of your VMs.</p>
 <p>VM snapshots may be attempted more than once to obtain successful status.</p>
 <p>Only the final state will count in our calculations.</p>
-<p>Any snapshots still in progress at 0900 are considered as failed.</p>
+<p>Any snapshots still in progress at 09:00 are considered as failed.</p>
 <p>Partial snapshots and those with errors count as failed.</p>
 <h3 id="reruns">Reruns</h3>
 <p>We may attempt to rerun a failed snapshot inside the window, depending on the failure code.</p>
@@ -130,9 +130,9 @@
 <p>It isn't always possible to rerun an automated VM snapshot, if this service doesn't meet your own protection requirements, we can also offer Journaling Protection options.</p>
 <p>If none of these services meet your requirements, you can also implement and manage your own protection solution.</p>
 <p>The UKCloud Cloud Storage platform may be an appropriate target for self‑managed solutions using software such as CommVault and NetWorker.</p>
-<h3 id="other">Other</h3>
 <p>The service is not backed by service credits.</p>
-<p>On occasion, planned maintenance will take precedence over VM snapshots. If there's a potential disruption, we'll highlight this to you via the service <a href="http://status.ukcloud.com/">status page</a> and UKCloud Portal notifications system.</p>
+<h3 id="planned-maintenance">Planned maintenance</h3>
+<p>On occasion, planned maintenance will take precedence over VM snapshots. If there's a potential disruption, we'll highlight this to you via the service <a href="https://status.ukcloud.com/">status page</a> and UKCloud Portal notifications system.</p>
 <h2 id="snapshot-management">Snapshot management</h2>
 <p>You can make changes to your Snapshot Protection via the UKCloud Portal. You can:</p>
 <ul>
@@ -146,7 +146,7 @@
 </li>
 </ul>
 <h2 id="alerting-and-reporting">Alerting and reporting</h2>
-<p>Information about your backups is reported on the UKCloud Portal. Reports are updated daily and are available by 1000, but typically within minutes of the close of the backup window.</p>
+<p>Information about your backups is reported on the UKCloud Portal. Reports are updated daily and are available by 10:00, but typically within minutes of the close of the backup window.</p>
 <p>Reports are available covering every day of the retention period (14 or 28 days as appropriate).</p>
 <p>Alerting on individual VMs is not provided.</p>
 <h2 id="restores">Restores</h2>
@@ -181,7 +181,7 @@
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -209,7 +209,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -218,7 +218,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -226,12 +226,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -241,5 +248,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

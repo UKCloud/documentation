@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a virtual machine using Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a virtual machine using Azure CLI </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a virtual machine using Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="How to create a virtual machine using Azure CLI ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -95,10 +95,10 @@
 
 <h2 id="overview">Overview</h2>
 <p>With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications.
-As UKCloud for Microsoft Azure is built on UKCloud’s assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle,
+As UKCloud for Microsoft Azure is built on UKCloud's assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle,
 VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure your Azure CLI environment is set up as detailed in <a href="azs-how-configure-cli.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Before you begin, ensure your Azure CLI environment is set up as detailed in <a href="azs-how-configure-cli.html">Configure the Azure Stack Hub user's Azure CLI environment</a>.</p>
 <h2 id="creating-a-virtual-machine">Creating a virtual machine</h2>
 <p>When you've created the resource group, you must choose which image template to use for your VM. To obtain a list of available images run the following command:</p>
 <pre><code class="lang-azurecli">az vm image list --all --output table
@@ -174,7 +174,7 @@ SQL2017-Ubuntu1604   MicrosoftSQLServer      Web                                
 <tr>
 <td>--image</td>
 <td>The image template to deploy the virtual machine from</td>
-<td><form onchange="result.value=vmimage.value" id="vmimage" style="display: inline;"><select name="vmimage" id="vmimage" style="display: inline;"><option value="Canonical:UbuntuServer:14.04.5-LTS:14.04.20180818">Ubuntu Server 14.04 LTS<option value="Canonical:UbuntuServer:16.04-LTS:16.04.20180831">Ubuntu Server 16.04 LTS<option value="Canonical:UbuntuServer:18.04-LTS:18.04.20180911">Ubuntu Server 18.04 LTS<option value="OpenLogic:CentOS:6.9:6.9.20180118">CentOS-based 6.9<option value="OpenLogic:CentOS:6.10:6.10.20180803">CentOS-based 6.10<option value="OpenLogic:CentOS:7.3:7.3.20170925">CentOS-based 7.3<option value="OpenLogic:CentOS:7.5:7.5.20180815" selected="">CentOS-based 7.5<option value="RedHat:RHEL:7.5:7.5.20182111">Red Hat Enterprise Linux 7.5<option value="KaliLinux:KaliServer:14.04.12-LTS:1.0.0">Kali Linux<option value="MicrosoftWindowsServer:WindowsServer:2012-Datacenter:3.127.20180216">Windows Server 2012 Datacenter - Pay as you use<option value="MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:4.127.20180912">Windows Server 2012 R2 Datacenter - Pay as you use<option value="MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20180912">Windows Server 2016 Datacenter - Pay-as-you-use<option value="MicrosoftWindowsServer:WindowsServer:2016-Datacenter-with-Containers:2016.127.20180912 ">Windows Server 2016 Datacenter - with Containers - Pay as you use<option value="MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:2016.127.20180717">Windows Server 2016 Datacenter - Server Core - Pay as you use<option value="MicrosoftWindowsServer:WindowsServer:2019-Datacenter:2019.127.20190521">Windows Server 2019 Datacenter<option value="MicrosoftWindowsServer:WindowsServer:2019-Datacenter-with-Containers:2019.127.20190521">Windows Server 2019 Datacenter with Containers<option value="MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core:2019.127.20190521">Windows Server 2019 Datacenter Core<option value="MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core-with-Containers:2019.127.20190521">Windows Server 2019 Datacenter Core with Containers<option value="MicrosoftWindowsServer:WindowsServerSemiAnnual:Datacenter-Core-1709-with-Containers-smalldisk:1709.30.20180912">Windows Server, version 1709 with Containers - Pay as you use<option value="MicrosoftSQLServer:SQL2016SP1-WS2016:SQLDEV:13.1.900310">Free License: SQL Server 2016 SP1 Developer on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP1-WS2016:Standard:13.1.900310">SQL Server 2016 SP1 Standard on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP1-WS2016:Enterprise:13.1.900310">SQL Server 2016 SP1 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP2-WS2016:SQLDEV:13.1.900310 ">Free License: SQL Server 2016 SP2 Developer on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP2-WS2016:Express:13.1.900310">Free License: SQL Server 2016 SP2 Express on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP2-WS2016:Standard:13.1.900310">SQL Server 2016 SP2 Standard on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP2-WS2016:Enterprise:13.1.900310">SQL Server 2016 SP2 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-WS2016:SQLDEV:14.0.1000204">Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-WS2016:Express:14.0.1000320">Free SQL Server License: SQL Server 2017 Express on Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-WS2016:Standard:14.0.1000320">SQL Server 2017 Standard on Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-WS2016:Enterprise:14.0.1000320">SQL Server 2017 Enterprise Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-SLES12SP2:SQLDEV:14.0.1000320">Free SQL Server License: SQL Server 2017 Developer on SLES 12 SP2<option value="MicrosoftSQLServer:SQL2017-SLES12SP2:Express:14.0.1000320">Free SQL Server License: SQL Server 2017 Express on SLES 12 SP2<option value="MicrosoftSQLServer:SQL2017-SLES12SP2:Standard:14.0.1000320">SQL Server 2017 Standard on SLES 12 SP2<option value="MicrosoftSQLServer:SQL2017-SLES12SP2:Enterprise:14.0.1000320">SQL Server 2017 Enterprise on SLES 12 SP2</select></form></td>
+<td><form onchange="result.value=vmimage.value" id="vmimage" style="display: inline;"><select name="vmimage" id="vmimage" style="display: inline;"><option value="Canonical:UbuntuServer:14.04.5-LTS:14.04.20180818">Ubuntu Server 14.04 LTS<option value="Canonical:UbuntuServer:16.04-LTS:16.04.20180831">Ubuntu Server 16.04 LTS<option value="Canonical:UbuntuServer:18.04-LTS:18.04.20180911">Ubuntu Server 18.04 LTS<option value="OpenLogic:CentOS:6.9:6.9.20180118">CentOS-based 6.9<option value="OpenLogic:CentOS:6.10:6.10.20180803">CentOS-based 6.10<option value="OpenLogic:CentOS:7.3:7.3.20170925">CentOS-based 7.3<option value="OpenLogic:CentOS:7.5:7.5.20180815" selected="">CentOS-based 7.5<option value="credativ:Debian:9:9.0.201807160">Debian 9 &quot;Stretch&quot;<option value="RedHat:RHEL:7.5:7.5.20182111">Red Hat Enterprise Linux 7.5<option value="KaliLinux:KaliServer:14.04.12-LTS:1.0.0">Kali Linux<option value="MicrosoftWindowsServer:WindowsServer:2012-Datacenter:3.127.20180216">Windows Server 2012 Datacenter - Pay as you use<option value="MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:4.127.20180912">Windows Server 2012 R2 Datacenter - Pay as you use<option value="MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20180912">Windows Server 2016 Datacenter - Pay-as-you-use<option value="MicrosoftWindowsServer:WindowsServer:2016-Datacenter-with-Containers:2016.127.20180912 ">Windows Server 2016 Datacenter - with Containers - Pay as you use<option value="MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:2016.127.20180717">Windows Server 2016 Datacenter - Server Core - Pay as you use<option value="MicrosoftWindowsServer:WindowsServer:2019-Datacenter:2019.127.20190521">Windows Server 2019 Datacenter<option value="MicrosoftWindowsServer:WindowsServer:2019-Datacenter-with-Containers:2019.127.20190521">Windows Server 2019 Datacenter with Containers<option value="MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core:2019.127.20190521">Windows Server 2019 Datacenter Core<option value="MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core-with-Containers:2019.127.20190521">Windows Server 2019 Datacenter Core with Containers<option value="MicrosoftWindowsServer:WindowsServerSemiAnnual:Datacenter-Core-1709-with-Containers-smalldisk:1709.30.20180912">Windows Server, version 1709 with Containers - Pay as you use<option value="MicrosoftSQLServer:SQL2016SP1-WS2016:SQLDEV:13.1.900310">Free License: SQL Server 2016 SP1 Developer on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP1-WS2016:Standard:13.1.900310">SQL Server 2016 SP1 Standard on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP1-WS2016:Enterprise:13.1.900310">SQL Server 2016 SP1 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP2-WS2016:SQLDEV:13.1.900310 ">Free License: SQL Server 2016 SP2 Developer on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP2-WS2016:Express:13.1.900310">Free License: SQL Server 2016 SP2 Express on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP2-WS2016:Standard:13.1.900310">SQL Server 2016 SP2 Standard on Windows Server 2016<option value="MicrosoftSQLServer:SQL2016SP2-WS2016:Enterprise:13.1.900310">SQL Server 2016 SP2 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-WS2016:SQLDEV:14.0.1000204">Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-WS2016:Express:14.0.1000320">Free SQL Server License: SQL Server 2017 Express on Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-WS2016:Standard:14.0.1000320">SQL Server 2017 Standard on Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-WS2016:Enterprise:14.0.1000320">SQL Server 2017 Enterprise Windows Server 2016<option value="MicrosoftSQLServer:SQL2017-SLES12SP2:SQLDEV:14.0.1000320">Free SQL Server License: SQL Server 2017 Developer on SLES 12 SP2<option value="MicrosoftSQLServer:SQL2017-SLES12SP2:Express:14.0.1000320">Free SQL Server License: SQL Server 2017 Express on SLES 12 SP2<option value="MicrosoftSQLServer:SQL2017-SLES12SP2:Standard:14.0.1000320">SQL Server 2017 Standard on SLES 12 SP2<option value="MicrosoftSQLServer:SQL2017-SLES12SP2:Enterprise:14.0.1000320">SQL Server 2017 Enterprise on SLES 12 SP2</select></form></td>
 </tr>
 <tr>
 <td>--admin-username</td>
@@ -207,7 +207,7 @@ SQL2017-Ubuntu1604   MicrosoftSQLServer      Web                                
   "resourceGroup": "<output form="resourcegroup" name="result4" style="display: inline;">MyResourceGroup</output>"
 }</code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -235,7 +235,7 @@ SQL2017-Ubuntu1604   MicrosoftSQLServer      Web                                
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -244,7 +244,7 @@ SQL2017-Ubuntu1604   MicrosoftSQLServer      Web                                
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -252,12 +252,19 @@ SQL2017-Ubuntu1604   MicrosoftSQLServer      Web                                
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -267,5 +274,6 @@ SQL2017-Ubuntu1604   MicrosoftSQLServer      Web                                
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

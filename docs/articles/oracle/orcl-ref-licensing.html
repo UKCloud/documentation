@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Oracle licensing on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Oracle licensing on the UKCloud platform </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Oracle licensing on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="Oracle licensing on the UKCloud platform ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,42 +94,46 @@
 <h1 id="oracle-licensing-on-the-ukcloud-platform">Oracle licensing on the UKCloud platform</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Due to the licensing rules regarding Oracle, it is not possible to install and run Oracle software on the UKCloud public cloud platform. However, there are currently two ways for customers to install and run Oracle software with UKCloud:</p>
-<ul>
-<li><p><strong>Private Cloud for Compute</strong>. This is a dedicated hardware solution that limits the number of cores, RAM and storage that would require Oracle licensing. Note that this may not be financially efficient for all customers, and this will be a bare metal environment that has not been prepared for Oracle.</p>
-</li>
-<li><p><strong>UKCloud for Oracle Software</strong>. This is a solution specifically designed to host Oracle solutions on a separate platform. This enables Oracle licensing to be used correctly, and is also financially efficient.</p>
-</li>
-</ul>
-<p>The remainder of this article is regarding general Oracle licensing.</p>
+<p>Due to the licensing rules regarding Oracle, it is not possible to install and run processor-based Oracle software on UKCloud for VMware, UKCloud for OpenStack or UKCloud for Microsoft Azure. However, you can use UKCloud for Oracle Software to run Oracle applications and databases. This is a solution specifically designed using Oracle VM hypervisor technology to enable Oracle licensing to be used correctly. It is also financially efficient as you only need to license software for resources used.</p>
+<p>However, you still need to be mindful of Oracle licensing when using UKCloud for Oracle Software. UKCloud can resell all Oracle software and support contracts and can provide advice where required to help.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Licensing rules from vendors such as Oracle can change frequently and so customers should validate their specific requirement with Oracle at the time of ordering. This information is correct as of June 2015.</p>
+<p>Licensing rules from vendors such as Oracle can change frequently, so you should validate your specific requirements with Oracle at the time of ordering. The information in this article is correct as of November 2019.</p>
 </div>
-<p>For customers wishing to licence Oracle software on virtual machines within the UKCloud platform, there are some important issues to consider with regards to the four licensing options available which are described below.</p>
-<h2 id="named-user">Named User</h2>
-<p>By implementing this licensing option, the customer can run as many Oracle servers as they want for a fixed fee ‘per named user’. As this licence model is independent of the size or number of servers, it is preferable for use in multi-tenant cloud environments such as the UKCloud platform.</p>
-<p>UKCloud appreciate that this solution may not be valid for customers that already have ‘per processor” licensing.</p>
-<h2 id="per-processor">Per Processor</h2>
-<p>This type of licence allows the customer to have as many users as they need for a fixed cost ‘per processor’ that the servers run on.</p>
-<p>In a traditional physical or virtualised estate, it is possible to isolate a small subset of the overall physical servers to specifically run Oracle. In this way, only those specific servers need to be licensed for Oracle.</p>
-<p>In most multi-tenant cloud environments such as the UKCloud platform, the per processor virtual machines can run on any physical server and so, practically, Oracle requires all of those servers to be licensed – which is simply not cost effective.</p>
-<p>Oracle software within a cloud based environment can also be licensed via the per-processor option if the cloud environment is running Oracle Virtual Machine (OVM) as the hypervisor. However, due to the design of the cloud environment, this is not something UKCloud can provide or support.</p>
-<p>Oracle has negotiated an agreement with a few public cloud providers (at the time of writing, only Amazon Web Services and Microsoft Azure) to allow customers to license only specific host servers, but this is not yet a widely available licensing agreement.</p>
-<h3 id="dedicated-compute-platform">Dedicated Compute platform</h3>
-<p>Customers can take advantage of the 'per processor' licensing model, by using the UKCloud Dedicated Compute platform which will provide the customer with a set hardware configuration. The Dedicated Compute option enables a customer to specify a dedicated hardware cluster of a certain number of physical servers, and this option can help customers who need more certainty as to the configuration and capacity of the cluster which underpins part of their application, whilst being also able to accommodate the compromises of having a dedicated cluster with regards to reduced levels of agility and flexibility.</p>
-<h2 id="application-specific-full-use-licensing">Application Specific Full Use Licensing</h2>
+<p>If you want to license Oracle software on virtual machines within the UKCloud platform, there are some important issues to consider with regards to the licensing options available, which are described below.</p>
+<h2 id="per-host-x86">Per host (x86)</h2>
+<p>Oracle Enterprise Linux (OEL) is a free x86 operating system (OS) that Oracle provides for customers to run Oracle software on. While the OS itself is free to use, the support associated with the OS is not free, and is charged per-host being used. In a cloud environment, this cost model is a bit of a challenge as we have many hosts and customers will not be using all of them for their workloads. So, to work out how many support contracts you should get for OEL, you should use the following formula:</p>
+<p><code>Number of cores used = Total number of vCPUs running OEL (i.e., add up all OEL VMs vCPUs) / 2</code></p>
+<p><code>Number of hosts you need OEL support contracts for (rounded up to nearest whole number) = Number of cores used / 20 (the number of useable cores per host)</code></p>
+<h2 id="per-processor">Per processor</h2>
+<p>This type of licence is typical of Oracle Database (both Enterprise and Standard) and enables you to have as many users as you need for a fixed cost ‘per processor’ that the servers run on.</p>
+<p>As UKCloud runs Oracle VM (OVM) as the hypervisor technology for UKCloud for Oracle Software, you can simply license the processors (cores) that you require for your application and database VMs, rather than <em>all</em> the processors within the cluster.</p>
+<p>The VMs are pinned to host cores to maintain licence compliance so you should be aware of licensing implications of using features such as High Availability (HA) or clustering technologies, such as Real Application Clusters (RAC). With the HA feature (see <a href="orcl-how-enable-ha.html"><em>How to enable high availability for your Oracle VMs</em></a>), VMs will power off in the event of a host failure and will be restarted on another host in the cluster. Typically, processor-based licences will allow a certain number of 'failover days' per year (typically 10 days), including maintenance scenarios, so you should be aware of this number and remove VMs from any HA policy if your VM has moved due to maintenance or server downtime for close to the number of days stated in the licence agreement.</p>
+<p>If you're replicating using technologies like RAC, you'll need to make sure you're licensing enough processors to cover the additional VMs within the cluster.</p>
+<p>To work out the number of processors (cores) you need to license within UKCloud, perform the following simple calculation:</p>
+<p><code>Number of cores used = Total number of vCPUs running Oracle Database / 2</code></p>
+<p>There is a core-factor that needs to be applied when it comes to licensing Oracle database licences. For the purposes of this, use the Intel Xeon core factor in the <a href="https://www.oracle.com/us/corporate/contracts/processor-core-factor-table-070634.pdf">Oracle Processor Core Factor Table</a>.</p>
+<h2 id="named-user-plus">Named User Plus</h2>
+<p>By implementing this licensing option, you may achieve better economics, but this option is generally only applicable when the application or database is used by a known, limited pool of users. You should also be able quantify how many people are accessing these databases and be aware if that user base grows beyond the user you have got licensed. There are some complexities here around minimum numbers of users and cores within the various database options, so make sure you follow the guidance on licensing published by Oracle. For databases, you can find this in the <a href="https://www.oracle.com/assets/databaselicensing-070584.pdf">Database Licensing</a> document.</p>
+<p>Our Cloud Architects can help you understand the most cost-effective method for licensing.</p>
+<h2 id="special-agreements">Special agreements</h2>
+<p>In certain circumstances an organisation may have a special agreement with Oracle. Generally, these are big government or private organisations who have gone through serious negotiations to get those agreements - an example of this being a Perpetual Licence Agreement (PULA), which enables an organisation to consume as many Oracle licences for particular software as they require. If you have a special agreement with Oracle, let us know as it comes with benefits such as live VM migration, which generally isn't allowed in other scenarios.</p>
+<h2 id="application-specific-full-use-licensing">Application Specific Full Use licensing</h2>
 <p>An Application Specific Full Use (ASFU) licence is a restricted type of licence sold by a Solution Provider in conjunction with its third-party Application Package.</p>
-<p>For example, you can buy an ASFU licence from SAP AG to use Oracle with the SAP/R3 system. This licence would then be application specific and cannot be used for anything else.</p>
+<p>For example, you can buy an ASFU licence from SAP AG to use Oracle with the SAP/R3 system. This licence would then be application-specific and cannot be used for anything else.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The ASFU licensing option is outside the scope of UKCloud control.</p>
+</div>
 <h2 id="embedded-software-license">Embedded Software License</h2>
 <p>An Embedded Software License (ESL) is a very restrictive licence type available from Independent Software Vendors (ISVs) who embed Oracle technology into their product. An end-user may not even be aware that the software package contains Oracle technology and should not be able to access it directly as a developer or system administrator.</p>
 <p>An example of this licensing model in use may be a Point of Sale system that requires a database to log transactions.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The ASFU and ESL licensing options are outside the scope of UKCloud control.</p>
+<p>The ESL licensing option is outside the scope of UKCloud control.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -157,7 +161,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -166,7 +170,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -174,12 +178,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -189,5 +200,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

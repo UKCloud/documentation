@@ -1,5 +1,5 @@
 ---
-title: How to configure a Distributed Firewall | UKCloud Ltd
+title: How to configure a Distributed Firewall
 description: Describes how to configure a Distributed Firewall (DFW), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-configure-distributed-firewall.md
 
 ## Overview
 
-UKCloud for VMware provides Distributed Firewall (DFW) functionality as part of its Advanced Networking and Enterprise Networking bundles (additional charges apply). DFW enables microsegmentation of networks at the virtual data centre (VDC) level. It can inspect every packet and frame coming to and leaving the VM regardless of the network topology. Packet inspection is done at the VM virtual NIC (vNIC) level, which enables ACLs to be applied closest to the source.
+UKCloud for VMware provides Distributed Firewall (DFW) functionality as part of its Advanced Management bundle (additional charges apply). DFW enables microsegmentation of networks at the virtual data centre (VDC) level. It can inspect every packet and frame coming to and leaving the VM regardless of the network topology. Packet inspection is done at the VM virtual NIC (vNIC) level, which enables ACLs to be applied closest to the source.
 
 You can have a routed or isolated network on a vApp and still use a DFW at the VDC level to complement it. The NSX edge handles North-South bound traffic while the DFW is designed to manage East-West bound traffic.
 
@@ -198,4 +198,4 @@ Security groups enable you to categorise based on the access level required. If 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

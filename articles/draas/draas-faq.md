@@ -1,10 +1,10 @@
 ---
-title: Disaster Recovery as a Service FAQs | UKCloud Ltd
+title: Disaster Recovery as a Service FAQs
 description: Frequently asked questions for Disaster Recovery as a Service (Powered by Zerto)
 services: draas
 author: Matt Warner
-reviewer:
-lastreviewed: 02/08/2018 16:00:52
+reviewer: gmartin
+lastreviewed: 30/08/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -37,7 +37,7 @@ When you perform a test recovery, any VMs recovered are charged at the prices as
 
 ### What VMware and Hyper-V versions are supported for recovery on UKCloud?
 
-For information about the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (6.5U4) on the UKCloud platform, see the [Interoperability Matrix for All Zerto Versions](http://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
+For information about the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform, see the [Interoperability Matrix for All Zerto Software Versions](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
 
 The hypervisor management plane (such as VMware vCenter server) must be installed for Zerto to be compatible with your environment - this means that free hypervisor versions may not be supported.
 
@@ -87,4 +87,4 @@ Yes, once you've tested or performed a live failover you can failback onto your 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

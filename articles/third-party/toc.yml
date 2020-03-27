@@ -8,22 +8,10 @@
     href: third-sco-appdynamics.md
 - name: CloudSOC
   items:
+  - name: CloudSOC case study (video)
+    href: third-vid-cloudsoc-intro.md
   - name: CloudSOC from UKCloud Service Definition
     href: third-sd-cloudsoc.md
-- name: CyberScore
-  items:
-  - name: CyberScore from UKCloud FAQs
-    href: third-faq-cyberscore.md
-  - name: CyberScore from UKCloud Service Definition
-    href: third-sd-cyberscore.md
-  - name: CyberScore from UKCloud Service Scope
-    href: third-sco-cyberscore.md
-  - name: CyberScore overview video
-    href: third-vid-cyberscore.md
-  - name: CyberScore scanner deployment environment requirements
-    href: third-ref-cyberscore-prereqs.md
-  - name: Deploy a CyberScore scanner VM - vCloud Director
-    href: third-how-deploy-cyberscore-vm.md
 - name: HyTrust DataControl
   items:
   - name: HyTrust DataControl from UKCloud Service Definition

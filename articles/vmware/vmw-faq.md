@@ -1,5 +1,5 @@
 ---
-title: UKCloud for VMware FAQs | UKCloud Ltd
+title: UKCloud for VMware FAQs
 description: Frequently asked questions for UKCloud for VMware
 services: vmware
 author: Matt Warner
@@ -100,7 +100,7 @@ This is set at 2GHz for all VMs except Micro sized VMs, which can be restricted 
 
 The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.
 
-For a transfer time calculator, go to: <http://techinternets.com/copy_calc?do>
+For a transfer time calculator, go to: <https://techinternets.com/copy_calc?do>
 
 If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.
 
@@ -114,7 +114,7 @@ Alternatively, you can implement encryption using the technology of your choice 
 
 ### Is UKCloud's encryption service available for UKCloud for VMware?
 
-Not currently as a service (see above). We're considering this as an option, so please provide feedback via the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+Not currently as a service (see above). We're considering this as an option, so please provide feedback by sending an email to <feedback@ukcloud.com>.
 
 ### Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast-provisioned ones?
 
@@ -212,7 +212,7 @@ The Advanced Management bundle includes Distributed Firewall (DFW), Distributed 
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-You can view these on the [Notifications page](https://portal.ukcloud.com/notifications) of the UKCloud Portal. In addition, you can view Service Status information on the [Service Status page](http://status.ukcloud.com/).
+You can view these on the [Notifications page](https://portal.ukcloud.com/notifications) of the UKCloud Portal. In addition, you can view Service Status information on the [Service Status page](https://status.ukcloud.com/).
 
 ### Do you offer dynamic or static IP addresses?
 
@@ -370,11 +370,14 @@ Horizontal scale can be achieved quickly by adding additional VMs (usually in ju
 
 UKCloud UKCloud for VMware is powered by VMware technology, so is compatible with a wide range of x86/x64 operating systems.
 
-VMware provides a compatibility matrix at: <http://partnerweb.vmware.com/comp_guide2/pdf/VMware_GOS_Compatibility_Guide.pdf>.
+VMware provides a compatibility matrix at: <https://partnerweb.vmware.com/comp_guide2/pdf/VMware_GOS_Compatibility_Guide.pdf>.
 
 You can use the UKCloud catalog of operating systems or upload your own.
 
-We offer Windows Server 2008 R2 Enterprise, Windows 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.
+We offer Windows Server 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.
+
+> [!NOTE]
+> On 14 January 2020, Microsoft ended support for Windows Server 2008, therefore we highly recommend that you upgrade to Windows Server 2012 or Windows Server 2016 to remain secure. 
 
 In addition, we provide access to common templates provided by the Bitnami service such as Drupal, Joomla, LAMP and Wordpress.
 
@@ -456,7 +459,7 @@ Yes, we offer a 30-day free trial so that you can test and evaluate our service 
 
 ### How do I request a trial?
 
-You can request a trial via the UKCloud website: <http://www.ukcloud.com/free-trial-sign-up> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
+You can request a trial via the UKCloud website: <https://www.ukcloud.com/free-trial-sign-up> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
 
 ### What do I do when my trial comes to an end?
 
@@ -606,4 +609,4 @@ Protective Monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

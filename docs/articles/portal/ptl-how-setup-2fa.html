@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to set up two-factor authentication in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to set up two-factor authentication for a user account </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to set up two-factor authentication in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="How to set up two-factor authentication for a user account ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,38 +91,26 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-set-up-two-factor-authentication-in-the-ukcloud-portal">How to set up two-factor authentication in the UKCloud Portal</h1>
+<h1 id="how-to-set-up-two-factor-authentication-for-a-user-account">How to set up two-factor authentication for a user account</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To provide additional security, you may want to set up two-factor authentication (2FA) in the UKCloud Portal. 2FA in the Portal requires that users enter a randomly generated code, as well as their user name and and password, when logging in to the Portal. This service is free of charge.</p>
+<p>If your Portal administrator has enabled two-factor authentication (2FA) in the UKCloud Portal, you must enter a randomly generated code, as well as your user name and password, when logging in to the Portal.</p>
 <p><img src="images/ptl-2fa.png" alt="Two-Factor Authentication dialog box in the UKCloud Portal"></p>
-<p>To set up 2FA, a Portal administrator must first enable 2FA for the Portal account. After enabling 2FA for the account, the next time a user attempts to log in, they will be prompted to set up 2FA for their user account by registering their Portal account with an authenticator app, such as Google Authenticator.</p>
-<h2 id="enabling-2fa-in-the-ukcloud-portal-administrators">Enabling 2FA in the UKCloud Portal (administrators)</h2>
-<p>If you are a Portal administrator, you can enable 2FA for an account so that users must provide a 2FA code when they log in as well as their user name and password.</p>
-<p>To enable 2FA:</p>
-<ol>
-<li><p>Log in to the UKCloud Portal as an administrator.</p>
-<p>For more detailed instructions, see the <a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
-</li>
-<li><p>In the navigation panel, click <strong>Settings</strong>.</p>
-</li>
-<li><p>Select the <strong>Security Settings</strong> tab.</p>
-</li>
-<li><p>Expand the <em>Google Two-Factor Authentication (2FA)</em> section.</p>
-</li>
-<li><p>Select the <strong>Enable Google Two-Factor Authentication (2FA)</strong> check box.</p>
-<p><img src="images/ptl-2fa-enable.png" alt="Enable 2FA"></p>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-</ol>
-<h2 id="setting-up-2fa-for-a-user-account-all-users">Setting up 2FA for a user account (all users)</h2>
+<p>The first time you log into the Portal after 2FA is enabled, you'll need to to set up 2FA for your user account by registering your account with an authenticator app, such as Google Authenticator.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If at any point you need to reset 2FA on your user account, for example if you lose or replace your phone, contact your Portal administrator. After your administrator resets your 2FA, the next time you log in to the Portal, you'll need to set up 2FA again.</p>
+</div>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article is intended for any Portal user who needs to set up 2FA to log in to the Portal.</p>
+<h2 id="setting-up-2fa">Setting up 2FA</h2>
 <p>When you first log in to a Portal account that has 2FA enabled, you'll be prompted to set up 2FA:</p>
 <ol>
-<li><p>Log in to the UKCloud Portal, providing your user name and password as usual and memorable word, if required.</p>
+<li><p>Log in to the UKCloud Portal, providing your user name and password as usual.</p>
 <p>For more detailed instructions, see the <a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
 </li>
-<li><p>Per the instructions in the <em>Configure your two-factor authentication</em> dialog box, install an authenticator app and scan the provided QR code.</p>
+<li><p>Install an authenticator app if you don't already have one which is compatible with the UKCloud Portal. We've tested 2FA with Google Authenticator, which is a smart phone app, and Authy, which is available as a smart phone app, desktop app or Chrome plug-in. Other authenticator apps may also be compatible but have not been tested. Once you've installed the authenticator app, scan the QR code or copy the security key.</p>
+<p>This is a one-off set up and does not need to be repeated as part of the normal Portal log-in process.</p>
 <p><img src="images/ptl-2fa-setup.png" alt="Configure your two-factor authentication dialog box"></p>
 </li>
 <li><p>When you've installed and set up your authenticator app, enter the 6 digit code provided by the app in the <em>Configure your two-factor authentication</em> dialog box and click <strong>Confirm code</strong> to log in to the Portal.</p>
@@ -135,7 +123,7 @@
 <li><a href="ptl-vid-portal.html"><em>UKCloud Portal overview video</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -163,7 +151,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -172,7 +160,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -180,12 +168,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -195,5 +190,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for UKCloud for Microsoft Azure | UKCloud Ltd
+title: Getting Started Guide for UKCloud for Microsoft Azure
 description: Provides information to get up and running with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
@@ -26,19 +26,19 @@ This Getting Started Guide provides you with the information you need to get up 
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to the UKCloud Azure Stack portal.
+To complete the steps in this guide you must have access to the UKCloud Azure Stack Hub portal.
 
 ## Introduction to UKCloud for Microsoft Azure
 
 At UKCloud, we understand that there is no "one cloud fits all" solution. There are usually many factors to consider when looking to move your applications to the cloud, including existing technology investment and skills. Additionally, while some applications can easily move to the public cloud, there are others that for various reasons (latency, connectivity, security, regulation) must run on-premises.
 
-Microsoft Azure Stack is an extension of Azure that provides on-premises Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS), enabling you to leverage the benefits of cloud in an on-premises environment. UKCloud for Microsoft Azure brings the advantages of the Microsoft Cloud platform to our assured UK-sovereign platform, helping you realise the benefits that a true hybrid cloud environment has to offer, while balancing the right amount of flexibility and control.
+Microsoft Azure Stack Hub is an extension of Azure that provides on-premises Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS), enabling you to leverage the benefits of cloud in an on-premises environment. UKCloud for Microsoft Azure brings the advantages of the Microsoft Cloud platform to our assured UK-sovereign platform, helping you realise the benefits that a true hybrid cloud environment has to offer, while balancing the right amount of flexibility and control.
 
 With UKCloud for Microsoft Azure you can:
 
 - Leverage existing Azure investment, knowledge and skills
 
-- Use Azure Stack alongside other technologies, for example, VMware, OpenStack or Oracle
+- Use Azure Stack Hub alongside other technologies, for example, VMware, OpenStack or Oracle
 
 - Connect to government community networks, including PSN, HSCN, Janet and RLI
 
@@ -117,21 +117,21 @@ After providing the above details, you should receive a welcome email shortly fr
 
 ***
 
-## Logging in to the UKCloud Azure Stack portal
+## Logging in to the UKCloud Azure Stack Hub portal
 
-To manage UKCloud for Microsoft Azure, you need to log in to the Azure Stack portal. The portal provides access to all your Azure resources.
+To manage UKCloud for Microsoft Azure, you need to log in to the Azure Stack Hub portal. The portal provides access to all your Azure resources.
 
-To log in to the Azure Stack portal:
+To log in to the Azure Stack Hub portal:
 
-1. In your browser, go to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
+1. In your browser, go to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
 2. In the login dialog box, enter the email address for your account and click **Next**, or pick your account.
 
 3. Enter your password and click **Sign in**.
 
-4. After you log in, you'll see the main Azure Stack portal home page.
+4. After you log in, you'll see the main Azure Stack Hub portal home page.
 
-    ![Azure Stack portal home page](images/azs-portal-home.png)
+    ![Azure Stack Hub portal home page](images/azs-portal-home.png)
 
     On this page, you'll see:
 
@@ -157,7 +157,7 @@ Your UKCloud for Microsoft Azure environment is provisioned with a subscription 
 
 ## Customising your favourites
 
-In the Azure Stack portal, down the left-hand side, you can see a list of your favourite resources. You can customise this list to include the resources that you access most frequently.
+In the Azure Stack Hub portal, down the left-hand side, you can see a list of your favourite resources. You can customise this list to include the resources that you access most frequently.
 
 1. In the favourites list, click the **More services** link.
 
@@ -191,11 +191,11 @@ In the Azure Stack portal, down the left-hand side, you can see a list of your f
 
 ## Customising and adding dashboards
 
-An Azure Stack dashboard consists of tiles that provide access to the resources available to your subscription. You can create multiple dashboards to provide different views of your resources.
+An Azure Stack Hub dashboard consists of tiles that provide access to the resources available to your subscription. You can create multiple dashboards to provide different views of your resources.
 
 To customise a dashboard:
 
-1. In the Azure Stack portal, select the dashboard that you want to customise.
+1. In the Azure Stack Hub portal, select the dashboard that you want to customise.
 
     ![Select dashboard](images/azs-portal-select-dashboard.png)
 
@@ -233,7 +233,7 @@ To customise a dashboard:
 
 ## Granting users access to UKCloud for Microsoft Azure
 
-To work with UKCloud for Microsoft Azure, users must have the appropriate Azure Stack permissions. We provide the following three groups to get you started:
+To work with UKCloud for Microsoft Azure, users must have the appropriate Azure Stack Hub permissions. We provide the following three groups to get you started:
 
 - **AzureStackOperators** - Members of this group have Owner permissions and have full access to all resources and can manage access to resources
 
@@ -270,7 +270,7 @@ For more information, including steps for setting up the Azure CLI with UKCloud 
 
 - [Configure AzureCLI Environment](azs-how-configure-cli.md)
 
-## Configuring the Azure Stack PowerShell client
+## Configuring the Azure Stack Hub PowerShell client
 
 You can use PowerShell to manage your Azure resources. For example, you can create virtual machines and deploy Azure Resource Manager templates.
 
@@ -280,7 +280,7 @@ For more information, including steps and scripts for setting up Azure PowerShel
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for Microsoft Azure and the UKCloud Azure Stack portal. For more information about UKCloud for Microsoft Azure, see the following articles in the Knowledge Centre:
+In this Getting Started Guide, you've learned the basics about UKCloud for Microsoft Azure and the UKCloud Azure Stack Hub portal. For more information about UKCloud for Microsoft Azure, see the following articles in the Knowledge Centre:
 
 - [*Understanding UKCloud for Microsoft Azure*](azs-ref-overview.md)
 
@@ -290,15 +290,15 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 - [*How to create an Azure user group*](azs-how-manage-azure-group.md)
 
-- [*How to use the Azure Stack API*](azs-how-use-azure-api.md)
+- [*How to use the Azure Stack Hub API*](azs-how-use-azure-api.md)
 
 ## Related videos
 
-- [*Microsoft Azure Stack Portal overview video*](azs-vid-overview.md)
+- [*Microsoft Azure Stack Hub Portal overview video*](azs-vid-overview.md)
 
 ## Related repositories
 
-- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack)
+- [*UKCloud Azure Stack Hub Repository*](https://github.com/UKCloud/AzureStack)
 
 ## Glossary
 
@@ -306,13 +306,13 @@ This section provides a glossary of terms specific to UKCloud for Microsoft Azur
 
 **Azure Active Directory**&nbsp;&nbsp;The service that provides identify management within UKCloud for Microsoft Azure.
 
-**Cloud operator**&nbsp;&nbsp;An entity that provides services, via subscriptions, on Azure Stack. UKCloud is a cloud operator.
+**Cloud operator**&nbsp;&nbsp;An entity that provides services, via subscriptions, on Azure Stack Hub. UKCloud is a cloud operator.
 
 **Microsoft Azure**&nbsp;&nbsp;Microsoft's public cloud service.
 
-**Microsoft Azure Stack**&nbsp;&nbsp;An extension of Azure that provides cloud computing to an on-premises environment.
+**Microsoft Azure Stack Hub**&nbsp;&nbsp;An extension of Azure that provides cloud computing to an on-premises environment.
 
-**Resource**&nbsp;&nbsp;An object within Azure Stack, such as a virtual machine, network or storage.
+**Resource**&nbsp;&nbsp;An object within Azure Stack Hub, such as a virtual machine, network or storage.
 
 **Resource group**&nbsp;&nbsp;A collection of resources, services and applications.
 
@@ -320,8 +320,8 @@ This section provides a glossary of terms specific to UKCloud for Microsoft Azur
 
 **UKCloud for Microsoft Azure**&nbsp;&nbsp;A UKCloud IaaS and PaaS service that works as an extension of Microsoft's own Azure public cloud, delivered from our assured sovereign data centres.
 
-**Tenant**&nbsp;&nbsp;An entity that consumes services from cloud operators in Azure Stack.
+**Tenant**&nbsp;&nbsp;An entity that consumes services from cloud operators in Azure Stack Hub.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

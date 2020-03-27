@@ -1,5 +1,5 @@
 ---
-title: VMware Distributed Firewall video | UKCloud Ltd
+title: VMware Distributed Firewall video
 description: Shows a video that provides an technical explanation of VMware's Distributed Firewall (DFW)
 services: vmware
 author: Sue Highmoor
@@ -17,7 +17,7 @@ toc_mdlink: vmw-vid-dfw.md
 
 # VMware Distributed Firewall video
 
-The following video provides a technical explanation of VMware's Distributed Firewall, which forms part of UKCloud for VMware's advanced networking bundle.
+The following video provides a technical explanation of VMware's Distributed Firewall, which forms part of UKCloud for VMware's Advanced Management bundle.
 
 <div class="row">
   <div class="col-md-10">
@@ -34,4 +34,4 @@ The following video provides a technical explanation of VMware's Distributed Fir
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

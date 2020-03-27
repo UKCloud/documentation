@@ -1,5 +1,5 @@
 ---
-title: UKCloud Pricing Guides and SFIA Rate Card | UKCloud Ltd
+title: UKCloud Pricing Guides and SFIA Rate Card
 description: Provides links to the UKCloud Pricing Guides and SFIA Rate Card
 services: other
 author: Sue Highmoor
@@ -85,8 +85,6 @@ For pricing information for UKCloud services, see the following documents on the
 
   - Portworx from UKCloud
 
-  - CyberScore from UKCloud
-
 - [UKCloud Skills Framework for the Information Age (SFIA) UKCloud Rate Card and Definitions](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
 
     This document outlines:
@@ -99,4 +97,4 @@ For pricing information for UKCloud services, see the following documents on the
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

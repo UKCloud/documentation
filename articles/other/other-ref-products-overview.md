@@ -1,5 +1,5 @@
 ---
-title: UKCloud products and services | UKCloud Ltd
+title: UKCloud products and services
 description: Provides overview information of the various products and services offered by UKCloud
 services: other
 author: Sue Highmoor
@@ -21,7 +21,7 @@ toc_mdlink: other-ref-products-overview.md
 
 ### UKCloud for Microsoft Azure
 
-This compute service can be powered by either a UKCloud-based Microsoft Azure Stack, or Azure Public Cloud depending on your needs. The UKCloud-based version of Azure Stack offers similar features and functionality, but with native connectivity to government networks, a trusted community and our security assurance.
+This compute service can be powered by either a UKCloud-based Microsoft Azure Stack Hub, or Azure Public Cloud depending on your needs. The UKCloud-based version of Azure Stack Hub offers similar features and functionality, but with native connectivity to government networks, a trusted community and our security assurance.
 
 ### UKCloud for OpenShift
 
@@ -137,10 +137,6 @@ Moogsoft AIOps is the pioneering AI platform for IT operations, powered by purpo
 
 This service provides a secure and stable cloud native storage and data management platform for Kubernetes that you can trust to manage data in containers. Kubernetes is the fastest growing open-source project in history, but Kubernetes was not designed with stateful applications like databases in mind. For enterprise applications, these systems have non-negotiable business requirements like high availability, data security, disaster recovery, strict performance SLAs and hybrid/multi-cloud operations. Portworx Enterprise addresses all these requirements enabling the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.
 
-### XQ Cyber CyberScore from UKCloud
-
-CyberScore is a fully automated, rapid, scalable, cyber security testing and rating service. CyberScore helps you improve your cyber security by scanning your network, highlighting vulnerabilities and providing advice on how to harden your IT infrastructure. It is a fully automated service which enables you to dramatically reduce penetration testing costs.
-
 ## Cloud support services
 
 Services to help you set up and maintain your cloud software or hosting services, such as migration services or ongoing support.
@@ -161,7 +157,7 @@ A service that helps you review your current usage or understand how to optimise
 
 #### Cloud Transformation Service
 
-This service provides the help you might need to adopt and harness the power of cloud native transformation. Cloud native applications fully utilise the features of platforms such as OpenStack, OpenShift and Azure Stack. This transformation service provides the expertise to introduce teams to new ways of developing and deploying applications.
+This service provides the help you might need to adopt and harness the power of cloud native transformation. Cloud native applications fully utilise the features of platforms such as OpenStack, OpenShift and Azure Stack Hub. This transformation service provides the expertise to introduce teams to new ways of developing and deploying applications.
 
 ### Software-based support services
 
@@ -171,4 +167,4 @@ Cloud Optimisation from UKCloud draws on our expertise in optimising and managin
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

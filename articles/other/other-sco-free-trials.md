@@ -1,5 +1,5 @@
 ---
-title: Free trials Service Scope | UKCloud Ltd
+title: Free trials Service Scope
 description: Outlines important details regarding free trials
 services: other
 author: Steve Hall
@@ -73,7 +73,7 @@ Free trials are:
 
 Requesting a trial:
 
-- Request via UKCloud website: <http://www.ukcloud.com/free-trial-sign-up>, where you will need to accept the [trial terms and conditions](https://ukcloud.com/free-trial-terms-and-conditions/)
+- Request via UKCloud website: <https://www.ukcloud.com/free-trial-sign-up>, where you will need to accept the [trial terms and conditions](https://ukcloud.com/free-trial-terms-and-conditions/)
 
 - Your environment is set up
 
@@ -93,4 +93,4 @@ Ending your trial
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

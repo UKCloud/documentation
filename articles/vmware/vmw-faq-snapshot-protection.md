@@ -1,5 +1,5 @@
 ---
-title: Snapshot Protection FAQs | UKCloud Ltd
+title: Snapshot Protection FAQs
 description: Frequently asked questions for Snapshot Protection
 services: vmware
 author: Matt Warner
@@ -145,11 +145,11 @@ For the steps required to do this, see [*How to manage Snapshot Protection for y
 
 The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE and is available on both UKCloud platforms: Assured OFFICIAL (formerly IL2) and Elevated OFFICIAL (formerly IL3).
 
-### Do large VMs (2 TiB+) affect snapshot backups?
+### Do large VMs affect snapshot backups?
 
-Yes. Snapshot‑based backups are not supported for large VMs with high change rates, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up.
+For regions 1, 2, 7 or 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size.
 
-You must take an alternative backup approach with VMs of this size.
+For regions 5 or 6, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.
 
 ### Can I restrict the automated VM snapshot backup to specific files or directories?
 
@@ -262,4 +262,4 @@ Protection products are not automatically applied to VMs running on the UKCloud 
 ## Feedback
 
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to use NetworkPolicy objects to connect services between projects | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to use NetworkPolicy objects to connect services </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to use NetworkPolicy objects to connect services between projects | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="title" content="How to use NetworkPolicy objects to connect services ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,7 +96,7 @@
 <h2 id="overview">Overview</h2>
 <p>In OpenShift v3.11 clusters deployed from mid-February 2019, the default SDN plugin has been changed from ovs-multitenant to ovs-networkpolicy. This gives you the ability to create NetworkPolicy objects which allow granular control over the flow of communication between the pods, services and projects inside your cluster.</p>
 <p>By default, we create a NetworkPolicy object, named <code>allow-from-same-and-privileged-namespaces</code>, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.</p>
-<p>This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kuberenetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the <code>oc label</code> commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.</p>
+<p>This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kubernetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the <code>oc label</code> commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.</p>
 <h2 id="verifying-the-cluster-sdn">Verifying the cluster SDN</h2>
 <p>In order to verify if the cluster has the ovs-networkpolicy SDN you can use the following command:</p>
 <p><code>oc get clusternetwork</code></p>
@@ -153,7 +153,7 @@ spec:
         matchLabels:
           database: &quot;true&quot;
 </code></pre>
-<p>We now have a template for a NetworkPolicy object that matches any pods labeled <code>role=webserver</code> inside the webserver project and allows them to communicate out to any projects labeled <code>database=true</code>. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:</p>
+<p>We now have a template for a NetworkPolicy object that matches any pods labelled <code>role=webserver</code> inside the webserver project and allows them to communicate out to any projects labelled <code>database=true</code>. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:</p>
 <pre><code>apiVersion: extensions/v1beta1
 kind: NetworkPolicy
 metadata:
@@ -169,7 +169,7 @@ spec:
         matchLabels:
           webserver: &quot;true&quot;
 </code></pre>
-<p>This object is created in the database project and matches any pods in the project with the label <code>role=database</code> and allows ingress traffic from any project labeled <code>webserver=true</code>. To achieve our desired outcome, we need to label our webserver project as follows:</p>
+<p>This object is created in the database project and matches any pods in the project with the label <code>role=database</code> and allows ingress traffic from any project labelled <code>webserver=true</code>. To achieve our desired outcome, we need to label our webserver project as follows:</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The cluster administrator role is required to add labels to namespaces.</p>
@@ -187,7 +187,7 @@ spec:
 <p>To get a full understanding of the capabilities and options of a NetworkPolicy object we recommend reading: <a href="https://kubernetes.io/docs/concepts/services-networking/network-policies">https://kubernetes.io/docs/concepts/services-networking/network-policies</a></p>
 <p>Documentation on efficient NetworkPolicy rules: <a href="https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-using-networkpolicy-efficiently">https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-using-networkpolicy-efficiently</a></p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -215,7 +215,7 @@ spec:
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -224,7 +224,7 @@ spec:
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -232,12 +232,19 @@ spec:
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -247,5 +254,6 @@ spec:
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

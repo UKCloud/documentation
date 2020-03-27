@@ -1,5 +1,5 @@
 ---
-title: How to use webhooks to receive service status notifications | UKCloud Ltd
+title: How to use webhooks to receive service status notifications
 description: Describes how to processes HTTP POST updates provided by webhooks from the UKCloud Service Status page
 services: other
 author: Sue Highmoor
@@ -20,7 +20,7 @@ toc_mdlink: other-how-use-webhooks.md
 
 ## Overview
 
-The [UKCloud Service Status page]([status](https://status.ukcloud.com)) enables you to subscribe to updates using webhook notifications. To use these notifications, you need to set up an endpoint to receive and process these notifications. For more information about webhooks, see the Atlassian Statuspage documentation: [Webhook Notifications](https://help.statuspage.io/help/webhook-notifications).
+The [UKCloud Service Status page](https://status.ukcloud.com) enables you to subscribe to updates using webhook notifications. To use these notifications, you need to set up an endpoint to receive and process these notifications. For more information about webhooks, see the Atlassian Statuspage documentation: [Webhook Notifications](https://help.statuspage.io/help/webhook-notifications).
 
 This article provides sample PHP code that processes webhook HTTP POST updates from the UKCloud Service Status page in a JSON object.
 
@@ -112,4 +112,4 @@ if(isset($statusObject->incident)){
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

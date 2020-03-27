@@ -1,5 +1,5 @@
 ---
-title: How to create an isolated VDC network | UKCloud Ltd
+title: How to create an isolated VDC network
 description: Shows how to create an isolated VDC network within vCloud Director
 services: vmware
 author: Sue Highmoor
@@ -28,9 +28,7 @@ There are two network flavours, isolated and routed:
 
 - A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. Creation of routed networks is described in [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
 
-The steps for creating an isolated VDC network depend on the version of vCloud Director available in your environment.
-
-## [vCloud Director 9.7](#tab/tabid-1)
+## Creating an isolated network
 
 1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to create the network.
 
@@ -72,46 +70,10 @@ The steps for creating an isolated VDC network depend on the version of vCloud D
 
 12. On the *Ready to Complete* page, review your selections then click **Finish**.
 
-## [vCloud Director 9.1](#tab/tabid-2)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to create the network.
-
-2. In the left navigation panel, select **Network**.
-
-    ![Network tab in vCloud Director](images/vmw-vcd91-tab-network.png)
-
-3. Click the **Add** button.
-
-    ![Add network button](images/vmw-vcd91-btn-add-network.png)
-
-4. In the *Add Org VDC Network* dialog box, from the **Type** radio buttons, select **Isolated network within this Virtual Data Center**.
-
-    ![Add Org VDC Network dialog box with Isolated network selected](images/vmw-vcd91-add-network-isolated.png)
-
-5. Confirm that you're creating the network in the correct **Org VDC**.
-
-6. Enter a **Name** and **Description** for the network.
-
-7. If you want to make the network shareable with other VDCs, select the **Share this network with other VDCs in this organization** check box.
-
-8. Create a network **Gateway address** and **Network mask**, and add a **DNS** if possible.
-
-9. The **Static IP Pool** is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network.
-
-    In the Static IP Pool field, enter a range of addresses to be consumed by the VMs connecting to the network, then click **Add**.
-
-    As an example, if you give the gateway address as `192.168.1.1`, you may then want to create a **Static IP Pool** of `192.168.1.10-192.168.1.100`. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.
-
-    ![Static IP Pool](images/vmw-vcd91-network-ip-pool.png)
-
-10. When you're done, click **Save**.
-
-***
-
 ## Next steps
 
 Now you've created your network to connect your VDC with the outside world, may want to configure your edge gateway to control what traffic is allowed into and out of your VDC. You may also wan to start building some VMs. For a quick guide on how to do this, see [*How to build a virtual machine with UKCloud for VMware*](vmw-gs-build-vm-vcd.md).
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

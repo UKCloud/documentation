@@ -1,5 +1,5 @@
 ---
-title: UKCloud Knowledge Centre article template | UKCloud Ltd
+title: UKCloud Knowledge Centre article template
 description: Provides a template to help when you're creating new UKCloud Knowledge Centre articles
 services: other
 author: Sue Highmoor
@@ -211,4 +211,4 @@ Looks like:
 
 Each article should end with a feedback section that includes the following text:
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
