@@ -1,29 +1,29 @@
 ---
-title: How to create new UKCloud for OpenShift users in the UKCloud Portal | UKCloud Ltd
+title: How to create an OpenShift user in the UKCloud Portal
 description: Shows how to create UKCloud for OpenShift users in the UKCloud Portal so that they can benefit from two-factor authentication (2FA)
 services: openshift
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/10/2018 07:26:13
+reviewer: Kieran O'Neill
+lastreviewed: 12/12/2019 07:26:13
 
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create new users
+toc_title: Create a new user
 toc_fullpath: How To/oshift-how-create-users.md
 toc_mdlink: oshift-how-create-users.md
 ---
 
-# How to create new UKCloud for OpenShift users in the UKCloud Portal
+# How to create an OpenShift user in the UKCloud Portal
 
 ## Overview
 
 If your cluster is using OpenShift Container Platform 3.10 or later, you can create users in the UKCloud Portal so that users need to remember only one lot of credentials and can also take advantage of two-factor authentication (2FA) that is provided via the Portal.
 
 > [!NOTE]
-> If your cluster is using an earlier version of OpenShift Container Platform, you must create users within OpenShift. For more information see the OpenShift [*Managing Users*](https://docs.openshift.com/container-platform/3.9/admin_guide/manage_users.html) documentation.
+> If your cluster is using an earlier version of OpenShift Container Platform, you must create users within OpenShift. For more information see the OpenShift [*Managing Users*](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_users.html) documentation.
 
 ## Creating a new OpenShift user
 
@@ -56,23 +56,21 @@ To create a new user:
 
     ![My Calls menu option in the UKCloud Portal](images/ptl_mnu-my-calls.png)
 
-    b. Select the **Raise a new Support Call** tab.
+    b. Click **Go to My Calls Portal**.
 
-    ![Raise a new Support Call tab](images/ptl-tab-new-ticket.png)
+    c. Click **New Service Request**.
 
-    c. From the **How can we help you?** list, select **I am requesting information on/administration of my service**.
+    d. Select **Generic Service Request**.
 
-    ![Raise a Service Request](images/ptl-my-calls-request.png)
+    e. From the **UKCloud Service** list, select **UKCloud for OpenStack**.
 
-    d. From the **Select Product** list, select **Cloud Native Application Platform (OpenShift)**.
+    f. In the **Additional Details** field, enter `Add Portal users to OpenShift cluster` and provide the following information:
 
-    e. From the **What is the nature of your query?** list, select **Uncategorised**.
+      - The name(s) of the user(s), and their username(s), that you want to add to the OpenShift cluster.
 
-    f. In the **Request Summary** field, enter `Add Portal users to OpenShift cluster`.
+      - The URL of the cluster that the user(s) should be added to. If there are multiple clusters the user(s) needs adding to then specify all of the cluster URLs here and it can be completed as one task.
 
-    g. In the **Please provide any further details regarding your request** field, enter the name(s) of the user(s), and their username(s), that you want to add to the OpenShift cluster, along with the URL of the cluster that the user(s) should be added to. If there are multiple clusters the user(s) needs adding to then specify all of the cluster URLs here and it can be completed as one task.
-
-    h. When you're done, click **Submit**.
+    g. When you're done, click **Review & Submit**.
 
 7. When the Service Request is resolved, the identified users can log in to the OpenShift web console and CLI using their UKCloud Portal credentials.
 
@@ -80,4 +78,4 @@ To create a new user:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

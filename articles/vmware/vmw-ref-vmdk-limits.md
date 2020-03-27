@@ -1,5 +1,5 @@
 ---
-title: Virtual machine disk limits and considerations | UKCloud Ltd
+title: Virtual machine disk limits and considerations
 description: Defines UKCloud's recommended soft limits regarding disk capacity and any associated operational considerations
 services: vmware
 author: Sue Highmoor
@@ -42,9 +42,9 @@ UKCloud strongly recommends, where possible, to scale environments horizontally 
 
 References:
 
-http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1012384
-http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1025279
+https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1012384
+https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1025279
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: G-Cloud 11 - Our enhancements and additions | UKCloud Ltd
+title: G-Cloud 11 - Our enhancements and additions
 description: Frequently asked questions (FAQs) for our G-Cloud 11 services
 services: other
 author:  Sue Highmoor
@@ -67,8 +67,6 @@ At G11 we've launched additional tools and services to help customers enhance th
 
 - Cyber Portfolio
 
-  - XQ Cyber CyberScore from UKCloud
-
   - HyTrust DataControl from UKCloud
 
   - CloudSOC from UKCloud
@@ -125,7 +123,7 @@ We've also made a couple of name changes to connectivity products:
 
 We've added a new instance size to the portfolio: p1.medium. This instance comes with 12 vCPU, 128 GiB RAM and 60 GiB of ephemeral storage. Please view the [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for further information.
 
-Based on customer demand, we've now added a new backup and restoration tool from TrilioVault. For early access, speak to your Technical Account Manager.
+Based on customer demand, we've now added a new backup and restoration tool from TrilioVault. For early access, speak to your Service Delivery Manager.
 
 ### What’s new in Cloud Storage?
 
@@ -147,7 +145,7 @@ We can now offer customers management of their workloads running in Microsoft Pu
 
 ### What is happening to End User Compute?
 
-This has been removed from sale. However we'll continue to investigate options around End User Compute/Virtual Desktop, so if you have any ideas or feedback on this topic, let us know via the [UKCloud Community](https://community.ukcloud.com/ideas).
+This has been removed from sale. However we'll continue to investigate options around End User Compute/Virtual Desktop, so if you have any ideas or feedback on this topic, let us know by emailing <feedback@ukcloud.com>.
 
 ### What is happening to Email and Collaboration as a service?
 
@@ -155,7 +153,7 @@ This has been removed from sale. However, we'll continue to support and maintain
 
 ### What is happening to Synchronous Protection?
 
-This has been removed from sale. Existing customers with Synchronous Protection can continue to use it. However, the UKCloud team recommend the use of Journaling Protection as it is a powerful self-service replication and recovery tool that can improve organisational resilience. If you wish to change your backup and recovery solutions, please speak to your Technical Account Manager.
+This has been removed from sale. Existing customers with Synchronous Protection can continue to use it. However, the UKCloud team recommend the use of Journaling Protection as it is a powerful self-service replication and recovery tool that can improve organisational resilience. If you wish to change your backup and recovery solutions, please speak to your Service Delivery Manager.
 
 ### What is happening to the UKCloud Guard?
 
@@ -167,4 +165,4 @@ This service has been replaced by Dedicated Compute v2 for new installations.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>UKCloud for OpenStack Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>UKCloud for OpenStack Service Scope </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="UKCloud for OpenStack Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="title" content="UKCloud for OpenStack Service Scope ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -120,6 +120,12 @@
 </li>
 <li><p>Neutron Networking Services</p>
 </li>
+<li><p>Barbican Key Management Services (<em>Excludes COR00005 &amp; FRN00006 Regions</em>)</p>
+</li>
+<li><p>Octavia Load Balancing as a Service (<em>Excludes COR00005 &amp; FRN00006 Regions</em>)</p>
+</li>
+<li><p>Self-service backup and restoration, powered by TrilioVault (*Generally available November 2019)</p>
+</li>
 </ul>
 <p>UKCloud will look to add additional OpenStack projects to this service through future releases.</p>
 <h2 id="default-setup">Default setup</h2>
@@ -209,7 +215,7 @@
 <h2 id="platform-management">Platform management</h2>
 <p>UKCloud for OpenStack is managed directly by the customer, using OpenStack's Horizon dashboard, the UKCloud Portal, and APIs associated with both.</p>
 <h2 id="service-provisioning">Service provisioning</h2>
-<p>You can request UKCloud for OpenStack via your Technical Account Manager or by using the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>You can request UKCloud for OpenStack via your Service Delivery Manager or by using the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <p>Within 4 business hours of accepting an order, UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Portal, and the Getting Started Guide.</p>
 <h2 id="customer-responsibilities">Customer responsibilities</h2>
 <p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.</p>
@@ -238,19 +244,23 @@
 </li>
 </ul>
 <p>Customers with requirements beyond these limits can raise a service request via <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> to have these limits per project considered for raising.</p>
-<h2 id="platform-operation-request-limits">Platform Operation Request Limits</h2>
+<h2 id="block-storage-volume-limits">Block storage volume limits</h2>
+<p>Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier 1 or Tier 2) can be attached to each OpenStack instance.</p>
+<h2 id="platform-operation-request-limits">Platform operation request limits</h2>
 <p>Although designed to be a large-scale cloud platform, we strongly advise that when performing operations/requests against UKCloud for OpenStack you perform these actions in batches of no more than 30 (for example, only creating batches of up to 30 new instances in a single request). Additional requests can then be made to the platform for subsequent batches.</p>
 <h2 id="published-features-not-currently-available">Published features not currently available</h2>
 <p>The following features published in the <a href="ostack-sd.html"><em>UKCloud for OpenStack Service Definition</em></a> are not currently available:</p>
 <ul>
-<li><p>Janet &amp; RLI connectivity</p>
+<li><p>RLI connectivity</p>
 </li>
 <li><p>UKCloud provided Red Hat licences</p>
 </li>
+<li><p>OpenStack within UKCloud's Elevated security domain</p>
+</li>
 </ul>
-<p>We are actively working on delivering these features and aim to have them delivered by Q4 2018.</p>
+<p>We are actively working on delivering these features.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -278,7 +288,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -287,7 +297,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -295,12 +305,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -310,5 +327,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create new UKCloud for OpenShift users in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create an OpenShift user in the UKCloud Portal </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create new UKCloud for OpenShift users in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="title" content="How to create an OpenShift user in the UKCloud Portal ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,13 +91,13 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-new-ukcloud-for-openshift-users-in-the-ukcloud-portal">How to create new UKCloud for OpenShift users in the UKCloud Portal</h1>
+<h1 id="how-to-create-an-openshift-user-in-the-ukcloud-portal">How to create an OpenShift user in the UKCloud Portal</h1>
 
 <h2 id="overview">Overview</h2>
 <p>If your cluster is using OpenShift Container Platform 3.10 or later, you can create users in the UKCloud Portal so that users need to remember only one lot of credentials and can also take advantage of two-factor authentication (2FA) that is provided via the Portal.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If your cluster is using an earlier version of OpenShift Container Platform, you must create users within OpenShift. For more information see the OpenShift <a href="https://docs.openshift.com/container-platform/3.9/admin_guide/manage_users.html"><em>Managing Users</em></a> documentation.</p>
+<p>If your cluster is using an earlier version of OpenShift Container Platform, you must create users within OpenShift. For more information see the OpenShift <a href="https://docs.openshift.com/container-platform/3.11/admin_guide/manage_users.html"><em>Managing Users</em></a> documentation.</p>
 </div>
 <h2 id="creating-a-new-openshift-user">Creating a new OpenShift user</h2>
 <p>To create a new user:</p>
@@ -123,22 +123,25 @@
 <li><p>After you've created the user account, you must raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal to grant the user access to the OpenShift cluster.</p>
 <p>a. In the navigation panel, expand <strong>Support</strong>, then select <strong>My Calls</strong>.</p>
 <p><img src="images/ptl_mnu-my-calls.png" alt="My Calls menu option in the UKCloud Portal"></p>
-<p>b. Select the <strong>Raise a new Support Call</strong> tab.</p>
-<p><img src="images/ptl-tab-new-ticket.png" alt="Raise a new Support Call tab"></p>
-<p>c. From the <strong>How can we help you?</strong> list, select <strong>I am requesting information on/administration of my service</strong>.</p>
-<p><img src="images/ptl-my-calls-request.png" alt="Raise a Service Request"></p>
-<p>d. From the <strong>Select Product</strong> list, select <strong>Cloud Native Application Platform (OpenShift)</strong>.</p>
-<p>e. From the <strong>What is the nature of your query?</strong> list, select <strong>Uncategorised</strong>.</p>
-<p>f. In the <strong>Request Summary</strong> field, enter <code>Add Portal users to OpenShift cluster</code>.</p>
-<p>g. In the <strong>Please provide any further details regarding your request</strong> field, enter the name(s) of the user(s), and their username(s), that you want to add to the OpenShift cluster, along with the URL of the cluster that the user(s) should be added to. If there are multiple clusters the user(s) needs adding to then specify all of the cluster URLs here and it can be completed as one task.</p>
-<p>h. When you're done, click <strong>Submit</strong>.</p>
+<p>b. Click <strong>Go to My Calls Portal</strong>.</p>
+<p>c. Click <strong>New Service Request</strong>.</p>
+<p>d. Select <strong>Generic Service Request</strong>.</p>
+<p>e. From the <strong>UKCloud Service</strong> list, select <strong>UKCloud for OpenStack</strong>.</p>
+<p>f. In the <strong>Additional Details</strong> field, enter <code>Add Portal users to OpenShift cluster</code> and provide the following information:</p>
+<ul>
+<li><p>The name(s) of the user(s), and their username(s), that you want to add to the OpenShift cluster.</p>
+</li>
+<li><p>The URL of the cluster that the user(s) should be added to. If there are multiple clusters the user(s) needs adding to then specify all of the cluster URLs here and it can be completed as one task.</p>
+</li>
+</ul>
+<p>g. When you're done, click <strong>Review &amp; Submit</strong>.</p>
 </li>
 <li><p>When the Service Request is resolved, the identified users can log in to the OpenShift web console and CLI using their UKCloud Portal credentials.</p>
 <p>If you've enabled two-factor authentication (2FA) in the account that includes the OpenShift cluster and users have set up 2FA for their user accounts, they will be prompted to provide a 2FA code when logging in to OpenShift.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -166,7 +169,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -175,7 +178,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -183,12 +186,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -198,5 +208,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to use the Azure Stack API | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to use the Azure Stack Hub API </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to use the Azure Stack API | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="title" content="How to use the Azure Stack Hub API ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,15 +91,15 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-use-the-azure-stack-api">How to use the Azure Stack API</h1>
+<h1 id="how-to-use-the-azure-stack-hub-api">How to use the Azure Stack Hub API</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The Azure Stack API enables you to interact programmatically with your UKCloud for Microsoft Azure environment. For example, you can use API calls to manage your UKCloud for Microsoft Azure tenancy.</p>
-<p>This guide shows you how to get started with the Azure Stack API.</p>
+<p>The Azure Stack Hub API enables you to interact programmatically with your UKCloud for Microsoft Azure environment. For example, you can use API calls to manage your UKCloud for Microsoft Azure tenancy.</p>
+<p>This guide shows you how to get started with the Azure Stack Hub API.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have the appropriate permissions on the resource you are trying to access.</p>
 <h2 id="authenticating-to-the-api">Authenticating to the API</h2>
-<p>Azure Stack API authentication uses access tokens to validate requests.</p>
+<p>Azure Stack Hub API authentication uses access tokens to validate requests.</p>
 <p>To obtain an access token:</p>
 <ol>
 <li><p>Send a POST request to the Azure REST authentication/login endpoint:</p>
@@ -135,12 +135,12 @@
 </li>
 <li><p><code>resource</code> - The endpoint of the resource the token will be used to access, for example,
 <code>https://management.ukcloud.onmicrosoft.com/4de154de-a8a8-4017-af41-df619da68154</code></p>
-<p>You can obtain the resource endpoint by querying the Azure Stack management metadata endpoint. The resource endpoint is returned in the <code>audiences</code> section of the response.</p>
+<p>You can obtain the resource endpoint by querying the Azure Stack Hub management metadata endpoint. The resource endpoint is returned in the <code>audiences</code> section of the response.</p>
 <p>For example, to find the endpoint for the <code>operators</code> resource send a request to <code>https://adminmanagement.&lt;region&gt;.&lt;AzureStackdomain&gt;/metadata/endpoints?api-version=2015-01-01</code></p>
 </li>
-<li><p><code>username</code> - The Azure Stack AAD account, for example <code>azurestackadmin@ukcloud.onmicrosoft.com</code></p>
+<li><p><code>username</code> - The Azure Stack Hub AAD account, for example <code>azurestackadmin@ukcloud.onmicrosoft.com</code></p>
 </li>
-<li><p><code>password</code> - The password for the Azure Stack AAD account</p>
+<li><p><code>password</code> - The password for the Azure Stack Hub AAD account</p>
 </li>
 <li><p><code>scope</code> - optional, such as <code>openid</code> to get the ID token</p>
 </li>
@@ -187,7 +187,7 @@
 </code></pre>
 </li>
 </ol>
-<h2 id="calling-azure-stack-api-endpoints">Calling Azure Stack API endpoints</h2>
+<h2 id="calling-azure-stack-hub-api-endpoints">Calling Azure Stack Hub API endpoints</h2>
 <p>A REST request URI consists of:</p>
 <p><code>&lt;URI-scheme&gt;://&lt;URI-host&gt;/&lt;resource-path&gt;?&lt;query-string&gt;</code></p>
 <p>where:</p>
@@ -201,7 +201,7 @@
 <li><p><code>query-string</code> provides additional simple parameters, such as the API version or resource selection criteria.</p>
 </li>
 </ul>
-<p>The syntax of an Azure Stack request URI is:</p>
+<p>The syntax of an Azure Stack Hub request URI is:</p>
 <p><code>https://management.local.azurestack.external/&lt;subscription-id&gt;/resourcegroups/&lt;resource-group&gt;/providers/&lt;provider&gt;/&lt;resource-path&gt;?&lt;filter-expression&gt;&amp;api-version=&lt;api-version&gt;</code></p>
 <p>where:</p>
 <ul>
@@ -215,7 +215,7 @@
 </li>
 <li><p><code>filter-expression</code> is an optional list of arguments to filter the results of the query</p>
 </li>
-<li><p><code>api-version</code> is the version of the Azure Stack API being called, for example <code>api-version=2016-05-01</code></p>
+<li><p><code>api-version</code> is the version of the Azure Stack Hub API being called, for example <code>api-version=2016-05-01</code></p>
 </li>
 </ul>
 <p>For example, the following API call returns information about region health:</p>
@@ -233,10 +233,10 @@
 </li>
 <li><p><a href="https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-v2-protocols-oauth-code">https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-v2-protocols-oauth-code</a></p>
 </li>
-<li><p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/azure-stack-provider-resource-api.md">https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/azure-stack-provider-resource-api.md</a></p>
+<li><p><a href="https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api">https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api</a></p>
 </li>
 </ul>
-<p>There is not currently an API reference guide for Azure Stack Users; however, there is an Admin API guide that you can find <a href="%22https://docs.microsoft.com/en-us/rest/api/azure-stack/%22">here</a>. We'll update this guide when one becomes available.</p>
+<p>There is not currently an API reference guide for Azure Stack Hub Users; however, there is an Admin API guide that you can find <a href="https://docs.microsoft.com/en-us/rest/api/azure-stack/">here</a>. We'll update this guide when one becomes available.</p>
 <p>For more information about UKCloud for Microsoft Azure, see:</p>
 <ul>
 <li><p><a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a></p>
@@ -245,7 +245,7 @@
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -273,7 +273,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -282,7 +282,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -290,12 +290,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -305,5 +312,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

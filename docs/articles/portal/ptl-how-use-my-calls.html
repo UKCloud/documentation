@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to use My Calls in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to use My Calls to raise and monitor support tickets | UKCloud Ltd </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to use My Calls in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="title" content="How to use My Calls to raise and monitor support tickets | UKCloud Ltd ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,11 +91,11 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-use-my-calls-in-the-ukcloud-portal">How to use My Calls in the UKCloud Portal</h1>
+<h1 id="how-to-use-my-calls-to-raise-and-monitor-support-tickets">How to use My Calls to raise and monitor support tickets</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The <em>My Calls</em> area of the UKCloud Portal is a one‑stop place to raise new support tickets (incidents and requests) with UKCloud and monitor existing tickets.</p>
-<p><em>My Calls</em> covers the ITIL standards of:</p>
+<p>My Calls is your one‑stop place, accessed via the UKCloud Portal, to raise new support tickets (incidents and requests) with UKCloud and monitor existing tickets.</p>
+<p>My Calls covers the ITIL standards of:</p>
 <ul>
 <li><p>Raising faults and outages (incidents)</p>
 </li>
@@ -103,45 +103,13 @@
 </li>
 </ul>
 <h3 id="intended-audience">Intended audience</h3>
-<p>This guide is intended for any UKCloud Portal user who wants to use <em>My Calls</em> to raise or monitor a support ticket. To complete the steps in this article, you must have access to the UKCloud Portal with the appropriate Portal permissions for Support. The tasks you can perform will depend on the level of permissions you have.</p>
-<table>
-<thead>
-<tr>
-<th> </th>
-<th>Create</th>
-<th>Read</th>
-<th>Update</th>
-<th>All</th>
-<th>Manage My Calls</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>My Tickets</strong></td>
-<td>Log your own support tickets in your name</td>
-<td>View your own support tickets</td>
-<td>Update your own support tickets</td>
-<td>All Create, Read and Update privileges on your own tickets</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td><strong>Account Tickets</strong></td>
-<td>Log your own support tickets</td>
-<td>View all tickets logged by users across the account</td>
-<td>Update any support ticket across the account</td>
-<td>All Create, Read and Update privileges on tickets across the account</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td><strong>My Calls Admin</strong></td>
-<td>Log your own support tickets</td>
-<td>View all tickets logged by users across the account</td>
-<td>Update any support ticket across the account</td>
-<td>All Create, Read and Update privileges on tickets across the account</td>
-<td>Ability to update user permissions in My Calls across the account</td>
-</tr>
-</tbody>
-</table>
+<p>This article is intended for any UKCloud Portal user who wants to use My Calls to raise or monitor support tickets. To complete the steps in this article, you must be able to log in to the UKCloud Portal with the following My Calls permissions:</p>
+<ul>
+<li><p>If you have the <em>My Tickets</em> permission, you can create new support tickets and view and update the tickets that you've created</p>
+</li>
+<li><p>If you have the <em>Account Tickets</em> or <em>My Calls Admin</em> permission, you can create new support tickets and view and update any ticket raised (including those raised by other users)</p>
+</li>
+</ul>
 <h2 id="accessing-my-calls">Accessing My Calls</h2>
 <ol>
 <li><p>Log in to the UKCloud Portal.</p>
@@ -150,17 +118,18 @@
 <li><p>In the Portal navigation panel, expand the <strong>Support</strong> option and select <strong>My Calls</strong>.</p>
 <p><img src="images/ptl-mnu-mycalls.png" alt="My Calls menu option in UKCloud Portal"></p>
 </li>
+<li><p>Click <strong>Go to My Calls Portal</strong>.</p>
+</li>
 <li><p>For additional security, re-enter your UKCloud Portal user credentials to access My Calls.</p>
 <p><img src="images/ptl-mycalls-login.png" alt="My Calls login page"></p>
-</li>
-<li><p>If two-factor authentication (2FA) has been enabled for your account, you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here.</p>
+<p>If two-factor authentication (2FA) has been enabled for your account, you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here.</p>
 </li>
 <li><p>The My Calls home page shows a simple view of all tickets that have been raised.</p>
 <p><img src="images/ptl-mycalls-home.png" alt="My Calls home page"></p>
 <ul>
 <li><p><strong>My Tickets</strong> lists the support tickets (incidents and service requests) that you can view, depending on your permissions. These are listed with the newest first. You can use the search tool to find a specific ticket and use filter options to find tickets with a particular status or date.</p>
 </li>
-<li><p>You can raise new incidents and requests using the <strong>New Incident</strong> and <strong>New Service Request</strong> buttons.</p>
+<li><p>You can raise new tickets using the <strong>New Incident</strong> and <strong>New Service Request</strong> buttons.</p>
 </li>
 <li><p>Select the <strong>Service Catalog</strong> tab to find incident and service request templates to raise tickets.</p>
 </li>
@@ -172,14 +141,18 @@
 <li><p>If you want to request a new service or make changes to an existing service, <a href="#raising-a-service-request-ticket">raise a service request ticket</a></p>
 </li>
 <li><p>If you want to report a fault or outage, <a href="#raising-an-incident-ticket">raise an incident</a></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Before reporting an incident, check the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a> to see if it's a known issue that we're already working on.</p>
+</div>
 </li>
 </ul>
 <h3 id="raising-a-service-request-ticket">Raising a service request ticket</h3>
 <ol>
-<li><p>In <em>My Calls</em>, select the <strong>Service Catalog</strong> tab.</p>
-<p><img src="images/ptl-mycalls-tab-catalog.png" alt="The Service Catalogue tab in My Calls"></p>
+<li><p>In My Calls, select the <strong>Service Catalog</strong> tab.</p>
+<p><img src="images/ptl-mycalls-tab-catalog.png" alt="The Service Catalog tab in My Calls"></p>
 </li>
-<li><p>Search the <em>Service Catalog</em> for the request offering you'd like to raise. You can browse by product type or most popular or enter keywords to search for.</p>
+<li><p>Search the <em>Service Catalog</em> for the type of request you want to raise. You can browse by product type or most popular, or enter keywords to search for.</p>
 <p><img src="images/ptl-mycalls-service-catalog.png" alt="Service Catalog tab"></p>
 </li>
 <li><p>Select the service request template that you want to use.</p>
@@ -190,41 +163,45 @@
 </li>
 <li><p>When you're done, click <strong>Review &amp; Submit</strong>. You can then edit the information in your request or submit it.</p>
 <p><img src="images/ptl-mycalls-btn-request-submit.png" alt="Review &amp; Submit button"></p>
+</li>
+</ol>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You're automatically subscribed to any tickets that you create.</p>
 </div>
-</li>
-</ol>
 <h3 id="raising-an-incident-ticket">Raising an incident ticket</h3>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Before reporting an incident, check the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a> to see if it's a known issue that we're already working on.</p>
+</div>
 <ol>
-<li><p>In <em>My Calls</em>, select the <strong>Service Catalog</strong> tab.</p>
+<li><p>In My Calls, select the <strong>Service Catalog</strong> tab.</p>
 <p><img src="images/ptl-mycalls-tab-catalog.png" alt="The Service Catalog tab in My Calls"></p>
 </li>
-<li><p>Search the <em>Service Catalog</em> for the incident type you'd like to raise. You can browse by product type or most popular or enter keywords to search for.</p>
+<li><p>Search the <em>Service Catalog</em> for the type of incident you need to raise. You can browse by product type or most popular or enter keywords to search for.</p>
 <p><img src="images/ptl-mycalls-service-catalog.png" alt="Service Catalog"></p>
 </li>
 <li><p>Select the incident template that you want to use (for example, <strong>VMWare Incident</strong>).</p>
 <p><img src="images/ptl-mycalls-template-incident.png" alt="Incident template"></p>
 </li>
-<li><p>Complete the fields in the form with as much information as possible, Including any mandatory fields, which are marked with a red asterisk. This is so that our Support Team can address your ticket promptly.</p>
+<li><p>Complete the fields in the form with as much information as possible, including any mandatory fields, which are marked with a red asterisk. This is so that our Support Team can address your ticket promptly.</p>
 <p><img src="images/ptl-mycalls-new-incident.png" alt="Reporting an incident"></p>
 </li>
 <li><p>When you're done, click <strong>Save Incident</strong></p>
 <p><img src="images/ptl-mycalls-btn-save-incident.png" alt="Save Incident button"></p>
+</li>
+</ol>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You're automatically subscribed to any tickets that you create.</p>
 </div>
-</li>
-</ol>
 <h2 id="accessing-an-existing-support-ticket">Accessing an existing support ticket</h2>
 <p>After raising a support ticket, you can view the ticket to monitor progress, add more information, add attachments, close or cancel the ticket.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The actions you can perform on a ticket depend on your support permissions. You'll always be able to update support tickets that you have raised. If you have the <strong>Account Tickets</strong> or <strong>My Calls Admin</strong> permissions, you can also view and edit tickets raised by other users on the account.</p>
+<p>The actions you can perform on a ticket depend on your support permissions. You'll always be able to update support tickets that you have raised. If you have the <em>Account Tickets</em> or <em>My Calls Admin</em> permissions, you can also view and edit tickets raised by other users on the account.</p>
 </div>
-<p>In <em>My Calls</em>, on the <strong>My Tickets</strong> tab, find the ticket you want to view by:</p>
+<p>In My Calls, on the <strong>My Tickets</strong> tab, find the ticket you want to view by:</p>
 <ul>
 <li><p>Browsing through the list of tickets. By default, tickets are listed with the newest first.</p>
 </li>
@@ -285,81 +262,26 @@
 <p><img src="images/ptl-mycalls-btn-save-incident-details.png" alt="Save incident button"></p>
 </li>
 </ol>
-<h2 id="managing-my-calls-user-permissions">Managing My Calls user permissions</h2>
-<p>If you have the <strong>My Calls Admin</strong> Portal permission, you can manage the permissions level for other My Calls users across your account.</p>
-<ol>
-<li><p>In <em>My Calls</em>, select the <strong>Role Administration</strong> tab.</p>
-<p><img src="images/ptl-mycalls-tab-admin.png" alt="The My Items tab in My Calls"></p>
+<h2 id="providing-feedback">Providing feedback</h2>
+<p>We value your feedback on your UKCloud customer support experience to help us understand what we're doing right and how we could improve. For each ticket you raise, you have the opportunity to fill in a brief survey to tell us what you think.</p>
+<p>To access the survey:</p>
+<ul>
+<li><p>For service requests tickets - Edit the ticket and select the <strong>Customer Satisfaction Survey</strong> tab then click <strong>Complete new survey</strong>.</p>
+<p><img src="images/ptl-mycalls-survey-request.png" alt="Customer Satisfaction Survey tab in service request ticket"></p>
 </li>
-<li><p>From the list of users, select the user that you want to edit.</p>
-<p><img src="images/ptl-mycalls-user.png" alt="Select user"></p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>You can filter the list of users or use the search field to find a specific user.</p>
-</div>
+<li><p>For incident tickets - Edit the ticket and in the <em>Survey</em> section at the bottom of the page, click <strong>Complete new survey</strong>.</p>
+<p><img src="images/ptl-mycalls-survey-incident.png" alt="Complete new survey link in incident ticket"></p>
 </li>
-<li><p>Select the permission level you want to apply to the user: My Tickets, Account Tickets or My Calls Admin.</p>
-<p>The options offered will depend on the current role assigned to the user. Each user can have only one permission level, so the role you select here replaces any previous permissions.</p>
-<p><img src="images/ptl-mycalls-btn-roles.png" alt="Assign roles to users"></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>For details of what the different permission levels mean, see the table in the <a href="#intended-audience">Intended audience</a> section.</p>
-</div>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-</ol>
-<h2 id="setting-up-a-new-my-calls-user">Setting up a new My Calls user</h2>
-<p>You can enable new users on your account with access to My Calls.</p>
-<ol>
-<li><p>In the UKCloud Portal navigation panel, expand the <strong>Contacts</strong> option and select <strong>All Contacts</strong>.</p>
-<p><img src="images/ptl-mnu-all-contacts.png" alt="All Contacts menu option in UKCloud Portal"></p>
-</li>
-<li><p>From the <strong>Actions</strong> menu, select <strong>Add new contact</strong>.</p>
-<p><img src="images/ptl-mnu-add-new-contact.png" alt="Add new contact"></p>
-</li>
-<li><p>On the <em>New Contact</em> page, provide the user's name and contact information, then click <strong>Save</strong>.</p>
-<p><img src="images/ptl-new-contact.png" alt="New Contact page"></p>
-<blockquote>
-<p>![NOTE]
-If you receive an error message, contact UKCloud Customer Support at <a href="mailto:support@ukcloud.com">support@ukcloud.com</a>.</p>
-</blockquote>
-</li>
-<li><p>After you've created the user account, select the <strong>User</strong> tab, select the <strong>Is active?</strong> check box, provide the user with a password and memorable word, then click <strong>Save</strong>.</p>
-<p><img src="images/ptl-contact-edit.png" alt="Edit Contact page"></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>It takes about 15 minutes for the user to be available within the Portal.</p>
-</div>
-</li>
-<li><p>To provide the user with access to My Calls, you must raise a service request using the <strong>Setting up a user in My Calls</strong> offering in the Service Catalog.</p>
-<p>For detailed steps, see <a href="#raising-a-service-request-ticket"><em>Raising a service request ticket</em></a>.</p>
-</li>
-<li><p>When UKCloud Support have set up the user in My Calls, you can manage their permission level to give them the appropriate access.</p>
-<p>For detailed steps, see <a href="#managing-my-calls-user-permissions"><em>Managing My Calls user permissions</em></a>.</p>
-</li>
-</ol>
-<h2 id="disabling-a-new-my-calls-user">Disabling a new My Calls user</h2>
-<p>If you need to disable a user on your account from accessing My Calls, raise a generic service request.</p>
-<p>For detailed steps, see <a href="#raising-a-service-request-ticket"><em>Raising a service request ticket</em></a>.</p>
-<h2 id="accessing-old-support-tickets">Accessing old support tickets</h2>
-<p>If you need to access older tickets, created using the previous version of My Calls, you can use the <em>My Calls Archive</em>.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>To raise new support tickets you must use the new My Calls.</p>
-</div>
-<ol>
-<li><p>In the Portal navigation panel, expand the <strong>Support</strong> option and select <strong>My Calls Archive</strong>.</p>
-<p><img src="images/ptl-mnu-mycalls-archive.png" alt="My Calls Archive menu option in UKCloud Portal"></p>
-</li>
-<li><p>For information about how to work with tickets in the My Calls Archive, see <a href="ptl-how-use-my-calls-archive.html"><em>How to use the My Calls Archive</em></a>.</p>
-</li>
-</ol>
+</ul>
+<p>Answer the questions in the survey and when you're done, click <strong>Save</strong>.</p>
+<p><img src="images/ptl-mycalls-survey.png" alt="Customer Satisfaction Survey"></p>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li><p>For more information about the UKCloud support process, see <a href="ptl-how-raise-escalate-service-request.html"><em>How to raise and escalate incidents and service requests</em></a>.</p>
+<li><p>For more information about the UKCloud support process, see <a href="ptl-how-raise-escalate-service-request.html"><em>How to raise and escalate incidents and service requests</em></a></p>
 </li>
-<li><p>For more information about what you can do in the UKCloud Portal, see the <a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+<li><p>For information about how administrators can give Portal users access to My Calls, see <a href="ptl-how-manage-my-calls.html"><em>How to manage My Calls users</em></a></p>
+</li>
+<li><p>For information about what else you can do in the UKCloud Portal, see the <a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></p>
 </li>
 </ul>
 <h2 id="related-videos">Related videos</h2>
@@ -367,7 +289,7 @@ If you receive an error message, contact UKCloud Customer Support at <a href="ma
 <li><a href="ptl-vid-portal.html"><em>UKCloud Portal overview video</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -395,7 +317,7 @@ If you receive an error message, contact UKCloud Customer Support at <a href="ma
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -404,7 +326,7 @@ If you receive an error message, contact UKCloud Customer Support at <a href="ma
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -412,12 +334,19 @@ If you receive an error message, contact UKCloud Customer Support at <a href="ma
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -427,5 +356,6 @@ If you receive an error message, contact UKCloud Customer Support at <a href="ma
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

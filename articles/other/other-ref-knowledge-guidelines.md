@@ -1,5 +1,5 @@
 ---
-title: UKCloud Knowledge Centre guidelines | UKCloud Ltd
+title: UKCloud Knowledge Centre guidelines
 description: Provides guidelines for what to consider when creating and editing Knowledge Centre articles
 services: other
 author: Sue Highmoor
@@ -92,7 +92,7 @@ where:
 If you're creating a new article, you must make sure that it includes the appropriate metadata. The metadata ensures that the article is included properly in the Knowledge Centre and helps with internet searches. Include the following metadata at the top of the article:
 
 ``` none
-title: UKCloud Knowledge Centre guidelines | UKCloud Ltd
+title: UKCloud Knowledge Centre guidelines
 description: Provides guidelines for what to consider when creating and editing Knowledge Centre articles
 services: other
 author: A Name
@@ -315,4 +315,4 @@ Looks like:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

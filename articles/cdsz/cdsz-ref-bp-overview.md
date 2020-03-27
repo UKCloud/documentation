@@ -1,5 +1,5 @@
 ---
-title: Cross Domain Security Zone Blueprint | UKCloud Ltd
+title: Cross Domain Security Zone Blueprint
 description: Provides an overview of the UKCloud Cross Domain Security Zone 
 services: cdsz
 author: Sue Highmoor
@@ -92,7 +92,7 @@ Listed below are the controls we believe UKCloud and customer SIROs will expect 
 
 The UKCloud Cross Domain Security Zone enables customers to securely transfer data between the UKCloud Assured OFFICIAL security domain and the UKCloud Elevated OFFICIAL security domain using NCSC-approved cross-domain security patterns.
 
-There were three options available within the Cross Domain Security Zone product set, however the UKCloud Guard is due to be retired from sale so there are now two service options available:
+There are two service options available:
 
 - Secure Remote Access. We provide a self-service remote access solution so that customers who do not have a PSN or RLI connection to their business premises may have a method of managing their environments within Elevated OFFICIAL. Note that this is for management purposes only, and not for end-user access to the Elevated security domain. This service is not covered within this Blueprint.
 
@@ -218,7 +218,7 @@ The approval process is shown below. More information is available in the [*UKCl
 
 Step | Description
 -----|------------
-1 Initial Contact | Customer contacts UKCloud to register interest in the CDSZ service. This can be through [My Calls](https://portal.skyscapecloud.com/support/ivanti) or direct contact with a Sales representative, Technical Account Manager (TAM) or Cloud Architect.
+1 Initial Contact | Customer contacts UKCloud to register interest in the CDSZ service. This can be through [My Calls](https://portal.skyscapecloud.com/support/ivanti) or direct contact with a Sales representative, Service Delivery Manager or Cloud Architect.
 2a Self-Assessment | Customer creates the document pack to illustrate the solution design and provide evidence that all necessary sign-offs and compliance have been obtained.
 2b Assurance Wrap Review | Customer creates the document pack with assistance from the UKCloud compliance team and Cloud Architect.
 3 Design Review | Customer presents the technical solution to the Cloud Architect for advice and feedback.
@@ -242,4 +242,4 @@ When you apply for a Cross Domain Security Zone service, you must provide the fo
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

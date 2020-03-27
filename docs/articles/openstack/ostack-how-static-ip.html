@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create static IPs for OpenStack instances  | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create static IPs for OpenStack instances </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create static IPs for OpenStack instances  | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="title" content="How to create static IPs for OpenStack instances ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -103,148 +103,139 @@
 </div>
 <ol>
 <li><p>Create a network by entering the following command in the OpenStack CLI:</p>
-<pre><code>$ openstack network create testnet
+<pre><code class="lang-none">openstack network create testnet
 </code></pre>
 <p>This command will return the following:</p>
-<pre><code>+---------------------------+--------------------------------------+
-| Field                     | Value                                |
-+---------------------------+--------------------------------------+
-| admin_state_up            | UP                                   |
-| availability_zone_hints   |                                      |
-| availability_zones        |                                      |
-| created_at                | 2018-09-05T12:20:30Z                 |
-| description               |                                      |
-| dns_domain                | None                                 |
-| id                        | dd4f624a-1101-4b01-a388-308c5972742a |
-| ipv4_address_scope        | None                                 |
-| ipv6_address_scope        | None                                 |
-| is_default                | None                                 |
-| is_vlan_transparent       | None                                 |
-| mtu                       | 1446                                 |
-| name                      | testnet                              |
-| port_security_enabled     | True                                 |
-| project_id                | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     |
-| provider:network_type     | None                                 |
-| provider:physical_network | None                                 |
-| provider:segmentation_id  | None                                 |
-| qos_policy_id             | None                                 |
-| revision_number           | 3                                    |
-| router:external           | Internal                             |
-| segments                  | None                                 |
-| shared                    | False                                |
-| status                    | ACTIVE                               |
-| subnets                   |                                      |
-| tags                      |                                      |
-| updated_at                | 2018-09-05T12:20:30Z                 |
-+---------------------------+--------------------------------------+
+<pre><code class="lang-none">+-------------------------+--------------------------------------+
+ Field                   | Value                                |
++-------------------------+--------------------------------------+
+| admin_state_up          | UP                                   |
+| availability_zone_hints |                                      |
+| availability_zones      |                                      |
+| created_at              | 2020-01-07T15:42:48Z                 |
+| description             |                                      |
+| headers                 |                                      |
+| id                      | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
+| ipv4_address_scope      | None                                 |
+| ipv6_address_scope      | None                                 |
+| mtu                     | 1446                                 |
+| name                    | testnet                              |
+| port_security_enabled   | True                                 |
+| project_id              | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     |
+| project_id              | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     |
+| qos_policy_id           | None                                 |
+| revision_number         | 3                                    |
+| router:external         | Internal                             |
+| shared                  | False                                |
+| status                  | ACTIVE                               |
+| subnets                 |                                      |
+| tags                    | []                                   |
+| updated_at              | 2020-01-07T15:42:48Z                 |
++-------------------------+--------------------------------------+
 </code></pre>
 </li>
 <li><p>Create a subnet and attach to the network:</p>
-<pre><code>$ openstack subnet create --network testnet --subnet-range 10.1.1.0/24 testnet-sub
+<pre><code class="lang-none">openstack subnet create --network testnet --subnet-range 10.1.1.0/24 testnet-sub
 </code></pre>
 <p>This command will return the following:</p>
-<pre><code>+-------------------+--------------------------------------+
+<pre><code class="lang-none">+-------------------+--------------------------------------+
 | Field             | Value                                |
 +-------------------+--------------------------------------+
 | allocation_pools  | 10.1.1.2-10.1.1.254                  |
 | cidr              | 10.1.1.0/24                          |
-| created_at        | 2018-09-05T12:22:46Z                 |
+| created_at        | 2020-01-07T15:44:18Z                 |
 | description       |                                      |
 | dns_nameservers   |                                      |
 | enable_dhcp       | True                                 |
 | gateway_ip        | 10.1.1.1                             |
+| headers           |                                      |
 | host_routes       |                                      |
-| id                | fc333721-47c8-4445-871b-d261eb195b41 |
+| id                | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
 | ip_version        | 4                                    |
 | ipv6_address_mode | None                                 |
 | ipv6_ra_mode      | None                                 |
 | name              | testnet-sub                          |
-| network_id        | dd4f624a-1101-4b01-a388-308c5972742a |
+| network_id        | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
+| project_id        | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     |
 | project_id        | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     |
 | revision_number   | 2                                    |
-| segment_id        | None                                 |
-| service_types     |                                      |
+| service_types     | []                                   |
 | subnetpool_id     | None                                 |
-| tags              |                                      |
-| updated_at        | 2018-09-05T12:22:46Z                 |
+| updated_at        | 2020-01-07T15:44:18Z                 |
 +-------------------+--------------------------------------+
 </code></pre>
 </li>
 <li><p>Create a port and attach to the network &amp; subnet:</p>
-<pre><code>$ openstack port create --network testnet --fixed-ip subnet=testnet-sub,ip-address=10.1.1.10 test-static-ip-1
+<pre><code class="lang-none">openstack port create --network testnet --fixed-ip subnet=testnet-sub,ip-address=10.1.1.10 test-static-ip-1
 </code></pre>
 <p>This command will return the following:</p>
-<pre><code>+-----------------------+--------------------------------------------------------------------------+
+<pre><code class="lang-none">+-----------------------+--------------------------------------------------------------------------+
 | Field                 | Value                                                                    |
 +-----------------------+--------------------------------------------------------------------------+
 | admin_state_up        | UP                                                                       |
 | allowed_address_pairs |                                                                          |
-| binding_host_id       | None                                                                     |
-| binding_profile       | None                                                                     |
-| binding_vif_details   | None                                                                     |
-| binding_vif_type      | None                                                                     |
 | binding_vnic_type     | normal                                                                   |
-| created_at            | 2018-09-05T12:26:55Z                                                     |
-| data_plane_status     | None                                                                     |
+| created_at            | 2020-01-07T15:45:38Z                                                     |
 | description           |                                                                          |
 | device_id             |                                                                          |
 | device_owner          |                                                                          |
-| dns_assignment        | None                                                                     |
-| dns_domain            | None                                                                     |
-| dns_name              | None                                                                     |
 | extra_dhcp_opts       |                                                                          |
-| fixed_ips             | ip_address='10.1.1.10', subnet_id='fc333721-47c8-4445-871b-d261eb195b41' |
-| id                    | f6c6ace7-3e33-4159-a0ce-f9d70ba69bf2                                     |
-| mac_address           | fa:16:3e:4f:70:b6                                                        |
+| fixed_ips             | ip_address='10.1.1.10', subnet_id='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' |
+| headers               |                                                                          |
+| id                    | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx                                     |
+| mac_address           | xx:xx:xx:xx:xx:xx                                                        |
 | name                  | test-static-ip-1                                                         |
-| network_id            | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                         |
+| network_id            | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx                                     |
 | port_security_enabled | True                                                                     |
+| project_id            | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                         |
 | project_id            | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                         |
 | qos_policy_id         | None                                                                     |
 | revision_number       | 5                                                                        |
-| security_group_ids    | 01ea0a6f-1a39-4196-b798-47db89499379                                     |
+| security_groups       | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx                                     |
 | status                | DOWN                                                                     |
-| tags                  |                                                                          |
-| trunk_details         | None                                                                     |
-| updated_at            | 2018-09-05T12:26:55Z                                                     |
+| updated_at            | 2020-01-07T15:45:38Z                                                     |
 +-----------------------+--------------------------------------------------------------------------+
 </code></pre>
 </li>
 <li><p>Launch an instance with the static IP attached:</p>
-<pre><code>$ openstack server create --flavor t1.nano --port test-static-ip-1 --image cirros ukc-test --wait
+<pre><code class="lang-none">openstack server create --flavor t1.tiny --nic port-id=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --image cirros --wait test-instance1
 </code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To retrieve the <code>port-id</code>, use the <code>openstack port list</code> command.</p>
+</div>
 <p>This command will return the following:</p>
-<pre><code>+-----------------------------+----------------------------------------------------------+`
-| Field                       | Value                                                    |`
-+-----------------------------+----------------------------------------------------------+`
-| OS-DCF:diskConfig           | MANUAL                                                   |`
-| OS-EXT-AZ:availability_zone | availability.zone                                        |`
-| OS-EXT-STS:power_state      | Running                                                  |`
-| OS-EXT-STS:task_state       | None                                                     |`
-| OS-EXT-STS:vm_state         | active                                                   |`
-| OS-SRV-USG:launched_at      | 2018-09-05T12:36:32.000000                               |`
-| OS-SRV-USG:terminated_at    | None                                                     |`
-| accessIPv4                  |                                                          |`
-| accessIPv6                  |                                                          |`
-| addresses                   | testnet=10.1.1.10                                        |`
-| adminPass                   | adminPass                                                |`
-| config_drive                |                                                          |`
-| created                     | 2018-09-05T12:36:25Z                                     |`
-| flavor                      | t1.nano (flavor-id)                                      |`
-| hostId                      | host-id                                                  |`
-| id                          | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                         |`
-| image                       | cirros (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    )            |`
-| key_name                    | None                                                     |`
-| name                        | ukc-test                                                 |`
-| progress                    | 0                                                        |`
-| project_id                  | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                         |`
-| properties                  |                                                          |`
-| security_groups             | name='default'                                           |`
-| status                      | ACTIVE                                                   |`
-| updated                     | 2018-09-05T12:36:32Z                                     |`
-| user_id                     | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                         |`
-| volumes_attached            |                                                          |`
-+-----------------------------+----------------------------------------------------------+`
+<pre><code class="lang-none">+--------------------------------------+----------------------------------------------------------+
+| Field                                | Value                                                    |
++--------------------------------------+----------------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                                   |
+| OS-EXT-AZ:availability_zone          | 0000c-2                                                  |
+| OS-EXT-STS:power_state               | Running                                                  |
+| OS-EXT-STS:task_state                | None                                                     |
+| OS-EXT-STS:vm_state                  | active                                                   |
+| OS-SRV-USG:launched_at               | 2020-01-07T15:48:20.000000                               |
+| OS-SRV-USG:terminated_at             | None                                                     |
+| accessIPv4                           |                                                          |
+| accessIPv6                           |                                                          |
+| addresses                            | testnet=10.1.1.10                                        |
+| adminPass                            | cxATS5Zjp6Hv                                             |
+| config_drive                         |                                                          |
+| created                              | 2020-01-07T15:48:13Z                                     |
+| flavor                               | t1.tiny (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)           |
+| hostId                               | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| id                                   | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx                     |
+| image                                | cirros (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)            |
+| key_name                             | None                                                     |
+| name                                 | test-instance1                                           |
+| os-extended-volumes:volumes_attached | []                                                       |
+| progress                             | 0                                                        |
+| project_id                           | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                         |
+| properties                           |                                                          |
+| security_groups                      | [{u'name': u'default'}]                                  |
+| status                               | ACTIVE                                                   |
+| updated                              | 2020-01-07T15:48:20Z                                     |
+| user_id                              | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                         |
++--------------------------------------+----------------------------------------------------------+
 </code></pre>
 </li>
 </ol>
@@ -252,7 +243,7 @@
 <p>The following Red Hat document provides more options for configuring ports when using UKCloud for OpenStack.</p>
 <p><a href="https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/port.html"><em>Red Hat OpenStack Platform 10 Command-Line Interface Reference for configuring ports</em></a></p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -280,7 +271,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -289,7 +280,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -297,12 +288,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -312,5 +310,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

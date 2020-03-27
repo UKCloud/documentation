@@ -1,11 +1,10 @@
 ---
-title: VMware Distributed Firewall video | UKCloud Ltd
+title: VMware Distributed Firewall video
 description: Shows a video that provides an technical explanation of VMware's Distributed Firewall (DFW)
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 21/12/2018 15:47:05
-
+reviewer: Sue Highmoor
+lastreviewed: 20/09/2019
 toc_rootlink: Videos
 toc_sub1: 
 toc_sub2:
@@ -18,11 +17,16 @@ toc_mdlink: vmw-vid-dfw.md
 
 # VMware Distributed Firewall video
 
-The following video provides a technical explanation of VMware's Distributed Firewall, which forms part of UKCloud for VMware's advanced networking bundle.
+The following video provides a technical explanation of VMware's Distributed Firewall, which forms part of UKCloud for VMware's Advanced Management bundle.
 
-<iframe src="https://player.vimeo.com/video/307686299" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-[Advanced Features: Distributed Firewall](https://vimeo.com/307686299) on [Vimeo](https://vimeo.com/ukcloud)
+<div class="row">
+  <div class="col-md-10">
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://www.youtube.com/embed/uLocAqDFBbw" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://www.youtube.com/watch?v=uLocAqDFBbw">What is the VMware Distributed Firewall?</a> on <a href="https://www.youtube.com/channel/UCnlFUyOWcS4iE_HK-ZEcNGw">YouTube</a>
+  </div>
+</div>
 
 ## Related articles
 
@@ -30,4 +34,4 @@ The following video provides a technical explanation of VMware's Distributed Fir
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

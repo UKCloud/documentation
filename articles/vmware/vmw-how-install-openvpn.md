@@ -1,10 +1,10 @@
 ---
-title: How to install and configure OpenVPN | UKCloud Ltd
+title: How to install and configure OpenVPN
 description: Details the steps required to obtain, deploy and configure an OpenVPN virtual appliance to obtain remote access to your virtual data centres running on the UKCloud platform
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: lthangarajah
+lastreviewed: 23/08/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -35,7 +35,7 @@ This article details the steps required to obtain, deploy and configure an OpenV
 
 To secure your environment, we recommend that you deploy the OpenVPN appliance into a new, routed VDC network. Ideally, no other virtual machines (VMs) should connect to this network. This enables you to tightly control access from VPN clients to the VMs in your environment using firewall rules on the edge gateway. However, if you're approaching the network interface limit of your edge gateway, it's possible to deploy the OpenVPN appliance into an existing network.
 
-**More information!** [*How to create a routed VDC network*](vmw-how-create-routed-network.md)
+For more information, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
 
 ### Configuring the edge gateway
 
@@ -51,7 +51,7 @@ After you've created the network, you'll need to configure the edge gateway to c
 
 - One or more firewall rules to allow access from trusted environments to the OpenVPN appliance on the admin port (`943` by default, but can be changed).
 
-**More information!** [*How to create NAT rules*](vmw-how-create-nat-rules.md) and [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
+For more information, see [*How to create NAT rules*](vmw-how-create-nat-rules.md) and [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
 
 ## Obtaining the latest OpenVPN appliance
 
@@ -61,19 +61,15 @@ To ensure you're running the latest release of OpenVPN, we recommend that you do
 
     <https://swupdate.openvpn.org/appliances/AS2.ova>
 
-2. In vCloud Director, select the **Catalogs** tab.
+2. In vCloud Director, click the menu icon and select **Libraries**.
 
-3. In the left navigation panel, select **My Organization's Catalogs**.
-
-4. Open the catalog you'd like to add the appliance to, or create a new catalog.
-
-5. Click the **Upload** button and upload the OVA file to the catalog.
+3. To upload the OVA file to a catalog, see [*How to create a catalog*](vmw-how-create-catalog.md).
 
 ## Deploying the OpenVPN appliance
 
 To deploy the OpenVPN appliance:
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to depoly the OpenVPN appliance.
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to deploy the OpenVPN appliance.
 
 2. In the left navigation panel, select **vApps**.
 
@@ -85,15 +81,13 @@ To deploy the OpenVPN appliance:
 
 4. Select the OVA that you downloaded then click **Next**.
 
-5. Review the details of the OVA to confirm that it's the right images then click **Next**.
+5. Review the details of the OVA to confirm that it's the right image then click **Next**.
 
-6. The appliance will be deployed as a single VM inside a vApp. Provide a name for the vApp then click **Next**.
+6. The appliance will be deployed as a single VM inside a vApp. Provide a **Name** and (optinal) **Description** for the vApp then click **Next**.
 
 7. Provide a valid NetBIOS host name and your desired storage policy then click **Next**.
 
-8. Configure the network by selecting **Switch to advanced networking workflow**.
-
-    ![Configure Networking page of Create vApp from OVF wizard](images/vmw-vcd-tp-vapp-from-ovf-network.png)
+8. Configure the network by selecting **Switch to the advanced networking workflow**.
 
 9. Select the network adapter type, network and IP pool assignment (**Manual**) then click **Next**.
 
@@ -321,4 +315,4 @@ If you have any issues regarding the updating or support of Microsoft Server, co
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

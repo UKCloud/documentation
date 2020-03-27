@@ -1,6 +1,6 @@
 ---
-title: How to use the Azure Stack API | UKCloud Ltd
-description: Describes how to use the Azure Stack API with UKCloud for Microsoft Azure
+title: How to use the Azure Stack Hub API
+description: Describes how to use the Azure Stack Hub API with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
 reviewer: BaileyLawson
@@ -11,28 +11,28 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Use the Azure Stack API
+toc_title: Use the Azure Stack Hub API
 toc_fullpath: Users/How To/azs-how-use-azure-api.md
 toc_mdlink: azs-how-use-azure-api.md
 ---
 
-# How to use the Azure Stack API
+# How to use the Azure Stack Hub API
 
 ## Overview
 
-The Azure Stack API enables you to interact programmatically with your UKCloud for Microsoft Azure environment. For example, you can use API calls to manage your UKCloud for Microsoft Azure tenancy.
+The Azure Stack Hub API enables you to interact programmatically with your UKCloud for Microsoft Azure environment. For example, you can use API calls to manage your UKCloud for Microsoft Azure tenancy.
 
-This article shows you how to get started with the Azure Stack API.
+This article shows you how to get started with the Azure Stack Hub API.
 
-When interacting with Azure Stack resources via the API, you must specify an API version. You can find a full list of supported API versions [here](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-profiles-azure-resource-manager-versions).
+When interacting with Azure Stack Hub resources via the API, you must specify an API version. You can find a full list of supported API versions [here](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-profiles-azure-resource-manager-versions).
 
 ### Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription on Azure Stack and permissions on the resources you are trying to access.
+To complete the steps in this article, you must have appropriate access to a subscription on Azure Stack Hub and permissions on the resources you are trying to access.
 
 ## Authenticating to the API
 
-Azure Stack API authentication uses access tokens to validate requests.
+Azure Stack Hub API authentication uses access tokens to validate requests.
 
 To obtain an access token:
 
@@ -70,13 +70,13 @@ To obtain an access token:
     `https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1`.
 
        >[!NOTE]
-       > You can obtain the resource endpoint by querying the Azure Stack management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
+       > You can obtain the resource endpoint by querying the Azure Stack Hub management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
        >
        > For example, to find the endpoint for the `users` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2016-05-01`.
 
-    - **username** - The Azure Stack AAD account. For example: `azurestackadmin@ukcloud.onmicrosoft.com`.
+    - **username** - The Azure Stack Hub AAD account. For example: `azurestackadmin@ukcloud.onmicrosoft.com`.
 
-    - **password** - The password for the Azure Stack AAD account.
+    - **password** - The password for the Azure Stack Hub AAD account.
 
     > [!NOTE]
     > Ensure you format the request body using Content-Type `x-www-form-urlencoded`.
@@ -146,13 +146,13 @@ To obtain an access token:
     # Add access token to header object for subsequent API requests
     $AuthHeader = @{"Authorization" = "Bearer $($AuthResp.access_token)"}
 
-    # Query the Azure Stack API for subscriptions
+    # Query the Azure Stack Hub API for subscriptions
     Invoke-RestMethod -Method "GET" -Uri "https://management.frn00006.azure.ukcloud.com/subscriptions" -Headers $AuthHeader -Body @{"api-version" = "2016-05-01"} -ContentType "application/x-www-form-urlencoded"
     ```
 
     ***
 
-## Calling Azure Stack API endpoints
+## Calling Azure Stack Hub API endpoints
 
 A REST request URI consists of:
 
@@ -164,14 +164,14 @@ where:
 
 - **URI-host** is the domain name or IP address of the server where the REST service endpoint is hosted. For example: `management.frn00006.azure.ukcloud.com`.
 
-- **resource-path** is the resource or resource collection, which may include multiple segments used by the service in determining the selection of those resources. For example: `/subscriptions` is the resource path to obtain information about Azure Stack subscriptions.
+- **resource-path** is the resource or resource collection, which may include multiple segments used by the service in determining the selection of those resources. For example: `/subscriptions` is the resource path to obtain information about Azure Stack Hub subscriptions.
 
 - **query-string** provides additional parameters, such as the API version or resource selection criteria.
 
     >[!NOTE]
     > For Bash, you can add the **query-string** to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01`. <br>For PowerShell, you can provide a **query-string** in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2016-05-01"}`.
 
-The syntax of an Azure Stack request URI is:
+The syntax of an Azure Stack Hub request URI is:
 
 `https://management.frn00006.azure.ukcloud.com/<subscription-id>/resourcegroups/<resource-group>/providers/<provider>/<resource-path>&api-version=<api-version>?<filter-expression>`
 
@@ -187,9 +187,9 @@ where:
 
 - `filter-expression` is an optional list of arguments to filter the results of the query
 
-- `api-version` is the version of the Azure Stack API being called, for example `api-version=2016-05-01`
+- `api-version` is the version of the Azure Stack Hub API being called, for example `api-version=2016-05-01`
 
-For example, the following API call returns a list of all virtual machines in the specified Azure Stack subscription:
+For example, the following API call returns a list of all virtual machines in the specified Azure Stack Hub subscription:
 
 `https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/providers/providers/Microsoft.Compute/virtualMachines?api-version=2016-05-01"`
 
@@ -201,7 +201,7 @@ For general information about the Azure API, see the *Azure REST API Reference* 
 
 In particular, you may find the following documents useful:
 
-- [Azure Stack REST API](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-rest-api-use)
+- [Azure Stack Hub REST API](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-rest-api-use)
 
 - [AD protocols oauth](https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-protocols-oauth-code)
 
@@ -209,9 +209,9 @@ In particular, you may find the following documents useful:
 
 - [AD V2 protocol oauth](https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)
 
-- [Azure Stack resource provider API](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api)
+- [Azure Stack Hub resource provider API](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api)
 
-This is guidance for Azure Stack users. Currently, there is no official API reference guide for Azure Stack users; however, there is an admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when an API guide becomes available.
+This is guidance for Azure Stack Hub users. Currently, there is no official API reference guide for Azure Stack Hub users; however, there is an admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when an API guide becomes available.
 
 For more information about UKCloud for Microsoft Azure, see:
 
@@ -221,4 +221,4 @@ For more information about UKCloud for Microsoft Azure, see:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

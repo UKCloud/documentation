@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to configure an L2 VPN | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to configure an L2 VPN </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to configure an L2 VPN | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="title" content="How to configure an L2 VPN ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@
 <h1 id="how-to-configure-an-l2-vpn">How to configure an L2 VPN</h1>
 
 <h2 id="overview">Overview</h2>
-<p>UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Enterprise Networking Bundle (additional charges apply). With L2 VPN you can stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.</p>
+<p>UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Advanced Management bundle (additional charges apply). With L2 VPN you can stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.</p>
 <p>L2 VPN is an extension of the edge's SSL functionality. It enables you to configure a tunnel between two sites, extending a logical switch across both sites. The tunnel means that virtual machines (VMs) remain on the same subnet if they are moved between the two sites, enabling you to extend your data centre across multiple sites. An NSX edge at one site can provide all services to VMs on the other site.</p>
 <p>UKCloud L2 VPN functionality covers three scenarios:</p>
 <ul>
@@ -111,15 +111,22 @@
 <h2 id="before-you-begin">Before you begin</h2>
 <p>Before enabling L2 VPN, consider the following:</p>
 <ul>
-<li>You must have purchased the Enterprise Networking Bundle for your UKCloud for VMware service</li>
-<li>You must have converted your edge gateway to an advanced gateway (see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>)</li>
-<li>This service takes up one of your allocated IP addresses (primary or secondary)</li>
-<li>L2 VPN can be enabled only on a routed Org VDC network</li>
-<li>You cannot use SSL VPN on any edge gateway running L2 VPN</li>
-<li>You may encounter issues with IPsec VPN</li>
-<li>You cannot use load balancers using HTTPS on primary or secondary edge gateway addresses once L2 VPN is enabled</li>
-<li>You'll need to change any existing NAT and firewall rules using the primary or secondary IP of the edge for HTTPS</li>
-<li>If your remote site does not have vSphere or NSX, you'll need to deploy a standalone edge as the L2 VPN client (see <a href="#deploying-a-standalone-edge-as-an-l2-vpn-client"><em>Deploying a standalone edge as an L2 VPN client</em></a>)</li>
+<li><p>You must have purchased the Advanced Management bundle for your UKCloud for VMware service</p>
+</li>
+<li><p>This service takes up one of your allocated IP addresses (primary or secondary)</p>
+</li>
+<li><p>L2 VPN can be enabled only on a routed Org VDC network</p>
+</li>
+<li><p>You cannot use SSL VPN on any edge gateway running L2 VPN</p>
+</li>
+<li><p>You may encounter issues with IPsec VPN</p>
+</li>
+<li><p>You cannot use load balancers using HTTPS on primary or secondary edge gateway addresses once L2 VPN is enabled</p>
+</li>
+<li><p>You'll need to change any existing NAT and firewall rules using the primary or secondary IP of the edge for HTTPS</p>
+</li>
+<li><p>If your remote site does not have vSphere or NSX, you'll need to deploy a standalone edge as the L2 VPN client (see <a href="#deploying-a-standalone-edge-as-an-l2-vpn-client"><em>Deploying a standalone edge as an L2 VPN client</em></a>)</p>
+</li>
 </ul>
 <h2 id="configuring-l2-vpn">Configuring L2 VPN</h2>
 <p>To set up L2 VPN, you need to configure an L2 VPN server on the destination edge and an L2 VPN client on the source edge. You must then enable the L2 VPN service on both the server and the client. If one of the sites that you want to stretch is not backed by NSX, you can deploy a standalone edge as the L2 VPN client on that site (see <a href="#deploying-a-standalone-edge-as-an-l2-vpn-client"><em>Deploying a standalone edge as an L2 VPN client</em></a>).</p>
@@ -132,11 +139,12 @@
 <p>To stretch the subnet across the two sites, make sure you use the desired address space on both networks.</p>
 </div>
 </li>
-<li><p>For each network, select the network and click <strong>Convert To</strong>.</p>
-<p><img src="images/vmw-vcd91-l2vpn-btn-convert-network.png" alt="Convert network option"></p>
+<li><p>For each network, select the network and, on the <em>General</em> tab, click <strong>Edit</strong></p>
 </li>
-<li><p>Select <strong>Convert to Subinterface</strong> to connect the network as a subinterface to the trunk interface on the attached gateway, then click <strong>OK</strong>.</p>
-<p><img src="images/vmw-vcd91-l2vpn-btn-convert-interface.png" alt="Convert Interface dialog box"></p>
+<li><p>In the <em>Edit network</em> dialog box, select the <strong>Connection</strong> tab.</p>
+</li>
+<li><p>From the <strong>Interface Type</strong> list, select <strong>Subinterface</strong> to connect the network as a subinterface to the trunk interface on the attached gateway, then click <strong>Save</strong>.</p>
+<p><img src="images/vmw-vcd-network-subinterface.png" alt="Convert network to subinterface"></p>
 </li>
 <li><p>To be able to move, your VMs need to be able to access your new network, so you need to attach them to it.</p>
 </li>
@@ -178,7 +186,7 @@
 <li><p>In the <em>Service Certificate Details</em> section, click <strong>Change Server Certificate</strong>.</p>
 <p><img src="images/vmw-vcd91-l2vpn-server-cert.png" alt="L2 VPN server certificate details"></p>
 </li>
-<li><p>Enable the <strong>Validate Server Certificate</strong> toggle, select the certificate you created earlier then click <strong>OK</strong>.</p>
+<li><p>Select the <strong>Validate Server Certificate</strong> option, select the certificate you created earlier then click <strong>OK</strong>.</p>
 </li>
 <li><p>Click <strong>Save changes</strong>.</p>
 </li>
@@ -239,7 +247,7 @@
 </li>
 <li><p>For <strong>L2VPN Mode</strong>, select <strong>Server</strong>.</p>
 </li>
-<li><p>Enable the <strong>Enabled</strong> toggle.</p>
+<li><p>Select the <strong>Enabled</strong> option.</p>
 <p><img src="images/vmw-vcd91-l2vpn-enable.png" alt="Enable L2 VPN"></p>
 </li>
 <li><p>Click <strong>Save changes</strong>.</p>
@@ -254,9 +262,6 @@
 <ol>
 <li><p>Download <code>NSX-l2vpn-client.ovf</code> and deploy the standalone edge.</p>
 <p>For more information, see the following VMware article: <a href="https://pubs.vmware.com/NSX-61/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-C9E2B0E4-F1C1-44A7-B142-F814F801FA42.html">Configure Standalone Edge as L2 VPN Client</a>.</p>
-</li>
-<li><p>Convert the edge gateway to an advanced gateway.</p>
-<p>For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
 </li>
 <li><p>Create a port group and convert it to a sub interface.</p>
 </li>
@@ -278,7 +283,7 @@
 <p>Make sure you change any existing NAT rules to use other addresses.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -306,7 +311,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -315,7 +320,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -323,12 +328,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -338,5 +350,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

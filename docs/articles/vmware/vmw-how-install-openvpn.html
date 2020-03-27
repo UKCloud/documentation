@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to install and configure OpenVPN | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to install and configure OpenVPN </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to install and configure OpenVPN | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="title" content="How to install and configure OpenVPN ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -104,7 +104,7 @@
 <h2 id="preparing-your-virtual-data-centre">Preparing your virtual data centre</h2>
 <h3 id="create-a-new-vdc-network">Create a new VDC network</h3>
 <p>To secure your environment, we recommend that you deploy the OpenVPN appliance into a new, routed VDC network. Ideally, no other virtual machines (VMs) should connect to this network. This enables you to tightly control access from VPN clients to the VMs in your environment using firewall rules on the edge gateway. However, if you're approaching the network interface limit of your edge gateway, it's possible to deploy the OpenVPN appliance into an existing network.</p>
-<p><strong>More information!</strong> <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a></p>
+<p>For more information, see <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
 <h3 id="configuring-the-edge-gateway">Configuring the edge gateway</h3>
 <p>After you've created the network, you'll need to configure the edge gateway to control access to the VMs in your environment by creating:</p>
 <ul>
@@ -119,26 +119,22 @@
 <li><p>One or more firewall rules to allow access from trusted environments to the OpenVPN appliance on the admin port (<code>943</code> by default, but can be changed).</p>
 </li>
 </ul>
-<p><strong>More information!</strong> <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
+<p>For more information, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <h2 id="obtaining-the-latest-openvpn-appliance">Obtaining the latest OpenVPN appliance</h2>
 <p>To ensure you're running the latest release of OpenVPN, we recommend that you download the latest version of the appliance directly from the OpenVPN website:</p>
 <ol>
 <li><p>Go to the following location to download the latest OVA file:</p>
 <p><a href="https://swupdate.openvpn.org/appliances/AS2.ova">https://swupdate.openvpn.org/appliances/AS2.ova</a></p>
 </li>
-<li><p>In vCloud Director, select the <strong>Catalogs</strong> tab.</p>
+<li><p>In vCloud Director, click the menu icon and select <strong>Libraries</strong>.</p>
 </li>
-<li><p>In the left navigation panel, select <strong>My Organization's Catalogs</strong>.</p>
-</li>
-<li><p>Open the catalog you'd like to add the appliance to, or create a new catalog.</p>
-</li>
-<li><p>Click the <strong>Upload</strong> button and upload the OVA file to the catalog.</p>
+<li><p>To upload the OVA file to a catalog, see <a href="vmw-how-create-catalog.html"><em>How to create a catalog</em></a>.</p>
 </li>
 </ol>
 <h2 id="deploying-the-openvpn-appliance">Deploying the OpenVPN appliance</h2>
 <p>To deploy the OpenVPN appliance:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to depoly the OpenVPN appliance.</p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to deploy the OpenVPN appliance.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 <p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
@@ -148,14 +144,13 @@
 </li>
 <li><p>Select the OVA that you downloaded then click <strong>Next</strong>.</p>
 </li>
-<li><p>Review the details of the OVA to confirm that it's the right images then click <strong>Next</strong>.</p>
+<li><p>Review the details of the OVA to confirm that it's the right image then click <strong>Next</strong>.</p>
 </li>
-<li><p>The appliance will be deployed as a single VM inside a vApp. Provide a name for the vApp then click <strong>Next</strong>.</p>
+<li><p>The appliance will be deployed as a single VM inside a vApp. Provide a <strong>Name</strong> and (optinal) <strong>Description</strong> for the vApp then click <strong>Next</strong>.</p>
 </li>
 <li><p>Provide a valid NetBIOS host name and your desired storage policy then click <strong>Next</strong>.</p>
 </li>
-<li><p>Configure the network by selecting <strong>Switch to advanced networking workflow</strong>.</p>
-<p><img src="images/vmw-vcd-tp-vapp-from-ovf-network.png" alt="Configure Networking page of Create vApp from OVF wizard"></p>
+<li><p>Configure the network by selecting <strong>Switch to the advanced networking workflow</strong>.</p>
 </li>
 <li><p>Select the network adapter type, network and IP pool assignment (<strong>Manual</strong>) then click <strong>Next</strong>.</p>
 </li>
@@ -367,7 +362,7 @@ certificates necessary to establish a VPN connection.</p>
 <h2 id="more-help">More help</h2>
 <p>If you have any issues regarding the updating or support of Microsoft Server, contact the UKCloud support team by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -395,7 +390,7 @@ certificates necessary to establish a VPN connection.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -404,7 +399,7 @@ certificates necessary to establish a VPN connection.</p>
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -412,12 +407,19 @@ certificates necessary to establish a VPN connection.</p>
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -427,5 +429,6 @@ certificates necessary to establish a VPN connection.</p>
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a site-to-site VPN connection using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a site-to-site VPN connection using PowerShell </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a site-to-site VPN connection using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="title" content="How to create a site-to-site VPN connection using PowerShell ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -102,7 +102,7 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide, you must have appropriate access to subscriptions in UKCloud for Microsoft Azure and public Azure.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html"><em>Configure the Azure Stack user's PowerShell environment</em></a>.</p>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html"><em>Configure the Azure Stack Hub user's PowerShell environment</em></a>.</p>
 <h2 id="declare-variables">Declare variables</h2>
 <p>Enter details below to provide values for the variables in the scripts in this article:</p>
 <table>
@@ -116,52 +116,52 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
 <td>$AzsRGName</td>
-<td>Name of resource group to create in Azure Stack</td>
+<td>Name of resource group to create in Azure Stack Hub</td>
 <td><form oninput="result.value=AzsRGName.value" id="AzsRGName" style="display: inline;"><input type="text" id="AzsRGName" name="AzsRGName" style="display: inline;" placeholder="S2S-VPN"></form></td>
 </tr>
 <tr>
 <td>$AzsVNetName</td>
-<td>Name of virtual network to create in Azure Stack</td>
+<td>Name of virtual network to create in Azure Stack Hub</td>
 <td><form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;"><input type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="S2S-VNet"></form></td>
 </tr>
 <tr>
 <td>$AzsVNetRange</td>
-<td>Address space of virtual network to create in Azure Stack in CIDR notation</td>
+<td>Address space of virtual network to create in Azure Stack Hub in CIDR notation</td>
 <td><form oninput="result.value=AzsVNetRange.value" id="AzsVNetRange" style="display: inline;"><input type="text" id="AzsVNetRange" name="AzsVNetRange" style="display: inline;" placeholder="10.1.0.0/16"></form></td>
 </tr>
 <tr>
 <td>$AzsSubnetRange</td>
-<td>Address space of virtual network subnet to create in Azure Stack in CIDR notation</td>
+<td>Address space of virtual network subnet to create in Azure Stack Hub in CIDR notation</td>
 <td><form oninput="result.value=AzsSubnetRange.value" id="AzsSubnetRange" style="display: inline;"><input type="text" id="AzsSubnetRange" name="AzsSubnetRange" style="display: inline;" placeholder="10.1.0.0/24"></form></td>
 </tr>
 <tr>
 <td>$AzsGWSubnetRange</td>
-<td>Address space of virtual network gateway subnet to create in Azure Stack in CIDR notation</td>
+<td>Address space of virtual network gateway subnet to create in Azure Stack Hub in CIDR notation</td>
 <td><form oninput="result.value=AzsGWSubnetRange.value" id="AzsGWSubnetRange" style="display: inline;"><input type="text" id="AzsGWSubnetRange" name="AzsGWSubnetRange" style="display: inline;" placeholder="10.1.1.0/24"></form></td>
 </tr>
 <tr>
 <td>$AzsPublicIPName</td>
-<td>Name of public IP to create in Azure Stack</td>
+<td>Name of public IP to create in Azure Stack Hub</td>
 <td><form oninput="result.value=AzsPublicIPName.value" id="AzsPublicIPName" style="display: inline;"><input type="text" id="AzsPublicIPName" name="AzsPublicIPName" style="display: inline;" placeholder="S2S-IP"></form></td>
 </tr>
 <tr>
 <td>$AzsVirtualGWName</td>
-<td>Name of virtual network gateway to create in Azure Stack</td>
+<td>Name of virtual network gateway to create in Azure Stack Hub</td>
 <td><form oninput="result.value=AzsVirtualGWName.value" id="AzsVirtualGWName" style="display: inline;"><input type="text" id="AzsVirtualGWName" name="AzsVirtualGWName" style="display: inline;" placeholder="S2S-VNG"></form></td>
 </tr>
 <tr>
 <td>$AzsLocalGWName</td>
-<td>Name of local network gateway to create in Azure Stack</td>
+<td>Name of local network gateway to create in Azure Stack Hub</td>
 <td><form oninput="result.value=AzsLocalGWName.value" id="AzsLocalGWName" style="display: inline;"><input type="text" id="AzsLocalGWName" name="AzsLocalGWName" style="display: inline;" placeholder="S2S-LNG"></form></td>
 </tr>
 <tr>
 <td>$AzsGWConnectionName</td>
-<td>Name of virtual network gateway connection to create in Azure Stack</td>
+<td>Name of virtual network gateway connection to create in Azure Stack Hub</td>
 <td><form oninput="result.value=AzsGWConnectionName.value" id="AzsGWConnectionName" style="display: inline;"><input type="text" id="AzsGWConnectionName" name="AzsGWConnectionName" style="display: inline;" placeholder="S2S-Connection"></form></td>
 </tr>
 <tr>
@@ -221,7 +221,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="create-site-to-site-vpn-connection-from-azure-stack-to-public-azure">Create site-to-site VPN connection from Azure Stack to public Azure</h2>
+<h2 id="create-site-to-site-vpn-connection-from-azure-stack-hub-to-public-azure">Create site-to-site VPN connection from Azure Stack Hub to public Azure</h2>
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Declare Variables
 $AzsRGName = "<output form="AzsRGName" name="result" style="display: inline;">S2S-RG</output>"
@@ -245,7 +245,7 @@ $AzureLocalGWName = "<output form="AzureLocalGWName" name="result" style="displa
 $AzureGWConnectionName = "<output form="AzureGWConnectionName" name="result" style="display: inline;">S2S-Connection</output>"
 $SharedKey = "<output form="SharedKey" name="result" style="display: inline;">Password123!</output>"
 
-# Azure Stack
+# Azure Stack Hub
 
 ## Login
 ### Declare endpoint
@@ -256,7 +256,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 $AzsContext = (Connect-AzureRmAccount -EnvironmentName "AzureStackUser").Context
 ### Retrieve Access token
 $AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object -FilterScript { $_.TenantId -eq $AzsContext.Tenant.Id } | Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
-### Get location of Azure Stack
+### Get location of Azure Stack Hub
 $AzsLocation = (Get-AzureRmLocation).Location
 
 ## Create resource group
@@ -334,7 +334,7 @@ $AzureVirtualGWConnection = New-AzureRmVirtualNetworkGatewayConnection -Resource
 ## Retrieve public IP address of virtual network gateway
 $AzurePublicIP = Get-AzureRmPublicIpAddress -ResourceGroupName $AzureRGName -Name $AzurePublicIPName
 
-# Azure Stack
+# Azure Stack Hub
 ## Reconnect to environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -AccessToken $AzsAccessToken -AccountId $AzsContext.Account.Id
 
@@ -344,9 +344,9 @@ $AzsLocalGW.GatewayIpAddress = $AzurePublicIP.IpAddress
 ## Update the local network gateway
 Set-AzureRmLocalNetworkGateway -LocalNetworkGateway $AzsLocalGW
 </code></pre>
-<p>After a short amount of time, the connection between Azure Stack and public Azure should change to <strong>Connected</strong>.</p>
+<p>After a short amount of time, the connection between Azure Stack Hub and public Azure should change to <strong>Connected</strong>.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -374,7 +374,7 @@ Set-AzureRmLocalNetworkGateway -LocalNetworkGateway $AzsLocalGW
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -383,7 +383,7 @@ Set-AzureRmLocalNetworkGateway -LocalNetworkGateway $AzsLocalGW
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -391,12 +391,19 @@ Set-AzureRmLocalNetworkGateway -LocalNetworkGateway $AzsLocalGW
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -406,5 +413,6 @@ Set-AzureRmLocalNetworkGateway -LocalNetworkGateway $AzsLocalGW
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

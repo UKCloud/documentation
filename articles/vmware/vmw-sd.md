@@ -1,8 +1,10 @@
 ---
-title: UKCloud for VMware Service Definition | UKCloud Ltd
+title: UKCloud for VMware Service Definition
 description: Provides an overview of what is provided by the UKCloud for VMware service
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:
@@ -113,11 +115,13 @@ Choose the protection required for your application. All customers can use the c
 
 ### Advanced Distributed Networking
 
-Distributed Firewalls create security groups and firewall rules, Distributed Logical Routers for routing East-West traffic with VDCs, and L2 VPN to stretch an L2 subnet between UKCloud zones, UKCloud and on-premises vSphere and between UKCloud and remote branches of vSphere with no NSX
+Advanced distributed networking functionality, available by purchasing the Advanced Management bundle, include
 
-- Advanced Networking Bundle - Distributed Firewall (DFW), Distributed Logical Router (DLR)
+- Distributed Firewalls - create security groups and firewall rules
 
-- Enterprise Networking Bundle - Distributed Firewall (DFW), Distributed Logical Router (DLR), L2 VPN
+- Distributed Logical Routers - for routing East-West traffic with VDCs
+
+- L2 VPN - to stretch an L2 subnet between UKCloud zones, UKCloud and on-premises vSphere and between UKCloud and remote branches of vSphere with no NSX
 
 ### Monitoring, Metrics and Alerting
 
@@ -190,4 +194,4 @@ For full terms and conditions including onboarding and responsibilities, please 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

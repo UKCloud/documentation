@@ -1,5 +1,5 @@
 ---
-title: How to contribute to the UKCloud Knowledge Centre | UKCloud Ltd
+title: How to contribute to the UKCloud Knowledge Centre
 description: Describes how to submit changes to articles in the UKCloud Knowledge Centre and how to create new articles
 services: other
 author: Sue Highmoor
@@ -34,7 +34,7 @@ To submit changes or new articles you must have a GitHub account.
 
 1. Go to the UKCloud Knowledge Centre at:
 
-    <http://docs.ukcloud.com>
+    <https://docs.ukcloud.com>
 
 2. Find the article that you want to edit.
 
@@ -85,4 +85,4 @@ If you want to suggest significant changes to the Knowledge Centre, raise an iss
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

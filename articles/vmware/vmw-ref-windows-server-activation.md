@@ -1,5 +1,5 @@
 ---
-title: Windows Server activation | UKCloud Ltd
+title: Windows Server activation
 description: A point of reference regarding activating Windows Server against UKCloud's Key Management Server (KMS), along with how to resolve any failures
 services: other
 author: Sue Highmoor
@@ -42,7 +42,7 @@ If the above message differs and references “RETAIL”, then the Windows licen
 
 To complete this process you'll need to have your exact version of Windows and cross reference the product key with the distribution on the Microsoft KB.
 
-http://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC 
+https://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC 
 
 You can then update the key and re-activate the VM by typing:
 
@@ -60,8 +60,8 @@ The steps in the attachment should help to successfully rectify the error being 
 
 - You must know the exact version of Windows you are running
 
-- You reference the following Microsoft KB article: http://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC
+- You reference the following Microsoft KB article: https://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

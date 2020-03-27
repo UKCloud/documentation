@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Mass Transfer Facility - NAS Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Mass Transfer Facility Service Scope </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Mass Transfer Facility - NAS Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="title" content="Mass Transfer Facility Service Scope ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,10 +91,10 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="mass-transfer-facility---nas-service-scope">Mass Transfer Facility - NAS Service Scope</h1>
+<h1 id="mass-transfer-facility---service-scope">Mass Transfer Facility - Service Scope</h1>
 
 <h2 id="about-the-facility">About the facility</h2>
-<p>Our Mass Transfer Facility (MTF) enables you to move virtualised environments, in the form of VMs, into and out of your UKCloud environment using your own network attached storage (NAS) device. You can use our MTF to move VMs:</p>
+<p>Our Mass Transfer Facility (MTF) enables you to move virtualised environments, in the form of VMs, into and out of your UKCloud environment using your own network attached storage (NAS) device, hard disk drives (HDDs) or USB drives. You can use our MTF to move VMs:</p>
 <ul>
 <li><p>Into or out of your virtual data centre (VDC)</p>
 </li>
@@ -104,7 +104,12 @@
 </li>
 </ul>
 <p>It's useful if, for example, you don't have enough network bandwidth for large VMs or volumes of VMs, or if you haven't got a Cross Domain Security Zone service in place.</p>
+<h3 id="nas">NAS</h3>
 <p>Your NAS will be securely installed in the MTF bay and connected into your compute environment.</p>
+<h3 id="hdd">HDD</h3>
+<p>Your HDD is securely installed in an eSATA enclosure and connected to our NAS device in the Mass Trasfer bay. Our NAS is connected into your compute environment to carry out the transfer. Your HDD must be compatible with our eSATA enclosure: 3.5&quot; SATA NAS hard drive, optimised for use in one to five-bay enclosures and formatted as NTFS, Fat32, EXT3, EXT4 or HFS Plus (exFat is not currently supported).</p>
+<h3 id="usb">USB</h3>
+<p>Your USB will be connected to our NAS device in the Mass Transfer bay. Our NAS is connected into your compute environment to carry out the transfer.</p>
 <h2 id="scheduling-your-transfer">Scheduling your transfer</h2>
 <p>To schedule a transfer, raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal, providing us with at least 10 days' notice. You should also arrange delivery of your NAS device to the UKCloud office, quoting the SR number, no later than the working day before the scheduled transfer day.</p>
 <p>When raising the SR, please provide the following:</p>
@@ -121,6 +126,9 @@
 </li>
 <li><p>Data centre location</p>
 </li>
+</ul>
+<h3 id="nas-only">NAS only</h3>
+<ul>
 <li><p>Make and model of the NAS</p>
 </li>
 <li><p>Login credentials for the NAS, so that we can configure it for the transfer</p>
@@ -128,20 +136,20 @@
 <li><p>Network connection details (IPs) to connect to the device</p>
 </li>
 </ul>
-<h2 id="before-sending-us-your-nas">Before sending us your NAS</h2>
-<p>Your SIRO, other person responsible for your IT security, or compliance officer must provide confirmation that your device is free of any viruses or malware.</p>
-<p>We'll send you a form to fill in and send back to us by email before sending the NAS, to ensure there are no issues ahead of its delivery.</p>
+<h2 id="before-sending-us-your-device">Before sending us your device</h2>
+<p>Your SIRO, compliance officer or other person responsible for your IT security, must provide confirmation that your device is free of any viruses or malware.</p>
+<p>We'll send you a form to fill in and send back to us by email before sending the NAS, HDD or USB, to ensure there are no issues ahead of its delivery.</p>
 <h2 id="booking-conditions">Booking conditions</h2>
 <p>This service is based on the transfer of whole VMs, not individual files. Your VMs can be in OVF or OVA format. The hardware version must be 9 or lower, and you need to remove any network cards and any mounted media files such as ISOs from the VM's hardware configuration prior to the creation of the OVA or OVF files.</p>
-<p>Use of the Mass Transfer Facility is charged per the current <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf"><em>SFIA Rate Card</em></a>, based on the IT Operations 'Enable' rate and a minimum of half of a business day to cover the time taken to set up, manage the transfer and detach the NAS.</p>
+<p>Use of the Mass Transfer Facility is charged per the current Standard Rate Card and Definitions, based on the Service Management 'Enable' rate, which is currently £750 per day. You will only be billed for the time it takes for the engineer to set up, manage and detach the device. Due to the nature of the service and the time to transfer data, you will not be charged for the time it takes to transfer the data. We reserve the right to add additional charges should any remediation work be required during the process. The minimum charge is half of a business day, which is currently £375.</p>
 <h2 id="anticipated-transfer-speeds">Anticipated transfer speeds</h2>
-<p>VM are transferred to and from your VDC over a 1GB connection running at approximately 110mbps. We have established that it's quicker to upload/download many smaller VMs are than fewer large ones.</p>
+<p>VMs are transferred to and from your VDC over a 1GB connection running at approximately 110mbps. We have established that it's quicker to upload/download many smaller VMs than fewer large ones.</p>
 <p>VMs will be put into batches that can be completed during the business day. This will continue until the transfer is completed.</p>
 <h2 id="after-transfer-completion">After transfer completion</h2>
 <p>Once we've transferred your VMs into your VDC or out of your VDC in the format that they arrived in, it's your responsibility to set up / reconfigure your environment in the way you want to use it. This includes, for example, catalogues, templates and networking.</p>
-<p>We'll contact you to check that the transfer has been successful before we remove the NAS from the enclosure and advise you when you can arrange to collect your device.</p>
+<p>We'll contact you to check that the transfer has been successful before we remove the device from the enclosure and advise you when you can arrange to collect your device.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -169,7 +177,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -178,7 +186,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -186,12 +194,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -201,5 +216,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

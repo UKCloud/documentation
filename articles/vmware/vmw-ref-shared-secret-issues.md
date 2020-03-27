@@ -1,5 +1,5 @@
 ---
-title: Shared Secret Length Issues IPSec VPN - Watchguard/Sonicwall | UKCloud Ltd
+title: Shared Secret Length Issues IPSec VPN - Watchguard/Sonicwall
 description: Outlines a potential issue and it's resolution for using an IPsec VPN tunnel with Watchguard or Sonicwall devices
 services: vmware
 author: Sue Highmoor
@@ -31,4 +31,4 @@ From testing, we recommend that you reduce the shared secret to the minimum 32 c
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

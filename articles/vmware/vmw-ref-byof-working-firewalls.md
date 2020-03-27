@@ -1,5 +1,5 @@
 ---
-title: Bring Your Own Firewall - Known working and non-working firewalls | UKCloud Ltd
+title: Bring Your Own Firewall - Known working and non-working firewalls
 description: This guide provides information about firewall technology that is known to work or not work on the UKCloud platform.
 services: vmware
 author: Sue Highmoor
@@ -61,10 +61,10 @@ This product is not supported in vCloud Director and therefore will not work on 
 
 For more information, see:
 
-- <http://www.cisco.com/c/en/us/td/docs/security/asa/asa93/asav/quick-start/asav-quick/asav-vmware.html>
+- <https://www.cisco.com/c/en/us/td/docs/security/asa/asa93/asav/quick-start/asav-quick/asav-vmware.html>
 
-- <http://www.cisco.com/c/en/us/td/docs/security/asa/compatibility/asamatrx.html>
+- <https://www.cisco.com/c/en/us/td/docs/security/asa/compatibility/asamatrx.html>
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: UKCloud Portal API Reference Guide | UKCloud Ltd
+title: UKCloud Portal API Reference Guide
 description: Shows how to interact with the UKCloud Portal via use of an application programming interface (API)
 services: portal
 author: Sue Highmoor
@@ -118,7 +118,10 @@ curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.sky
 
 ## GET /api/my_vm
 
-Returns a list of up to 10 VMs with billing data.
+Returns a list of up to 10 VMs.
+
+> [!NOTE]
+> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
 
 ### API version
 
@@ -210,51 +213,6 @@ Returns a response with a list of up to 10 VMs
   }
 }
 ```
-
-## My Calls API (Removed)
-
-> [!IMPORTANT]
-> With the move to the new [My Calls](https://portal.skyscapecloud.com/support/ivanti) service management tool, this functionality is no longer available.
-
-### GET /api/my_calls
-
-Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).
-
-### GET /api/my_calls/:ticket_id
-
-Returns a single ticket and its updates and changes.
-
-### PUT /api/my_calls/:ticket_id
-
-Adds a new note to a ticket.
-
-### POST /api/my_calls
-
-Adds a new ticket.
-
-### PUT /api/my_calls/:ticket_id/subscribe
-
-Subscribes a user to a ticket.
-
-### PUT /api/my_calls/:ticket_id/unsubscribe
-
-Unsubscribes a user from a ticket.
-
-### PUT /api/my_calls/:ticket_id/reopen
-
-Reopens a ticket.
-
-### PUT /api/my_calls/:ticket_id/change_owner
-
-Change the owner of a ticket.
-
-### PUT /api/my_calls/:ticket_id/cancel
-
-Cancels a ticket.
-
-### PUT /api/my_calls/:ticket_id/close
-
-Closes a ticket.
 
 ## GET /api/ping
 
@@ -395,6 +353,9 @@ Returns an array of accounts with the ID and name.
 ## GET /api/accounts/:account_id/compute_services
 
 Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.
+
+> [!NOTE]
+> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
 
 ### API version
 
@@ -826,6 +787,9 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
 ## GET /api/accounts/:account_id/compute_services/:vorg_id
 
 Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).
+
+> [!NOTE]
+> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
 
 ### API version
 
@@ -1856,7 +1820,7 @@ v1
 Parameter name | Description | Type | Mandatory (Default)
 ---------------|-------------|------|--------------------
 vmType | The type of VM workloads used in the VDC</br>Valid values:</br>- POWER</br>- ESSENTIAL</br>- PRIORITY | String | Y
-name | The name of the VDC<br>The name can be up to 32 characters long and can include any character except + | String | Y
+ name | The name of the VDC<br />The name can be up to 32 characters long and can include any character except `+`, `(` or `)` | String | Y
 
 #### URI parameters
 
@@ -1910,7 +1874,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
     "attributes":{
       "createdAt": "2016-07-08T10:42:14+01:00",
       "createdBy": "auser@example.com",
-      "state": "approved"",
+      "state": "approved",
       "vdcName": "My VDC",
       "vmType": "POWER",
       "serviceName": "My Compute Sercice"
@@ -2380,160 +2344,6 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
       ]
     }
   }
-}
-```
-
-## GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways
-
-Returns basic information about the edge gateways in the specified account under the specified VDC.
-
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-None
-
-#### Parameters
-
-None
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  account_id | The ID of your account | String | Y
-  vorg_id | The ID of the vOrg in which the edge gateway resides | String | Y
-  vdc_urn | The full URN of the VDC in which the edge gateway resides, including the urn:vcloud:vdc: prefix | String | Y
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-401 Unauthorized --- The user could not be authenticated
-
-403 Forbidden --- The user does not have permissions for the vOrg
-
-404 Not Found --- The user does not have access to the account, the account does not exist or the vOrg does not exist
-
-#### Response body
-
-If the call returns an empty list, check that the specified VDC URN is correct.
-
-  Attribute | Type | Value | Example
-  ----------|------|-------|--------
-  type | String | EdgeGateway | &nbsp;
-  id | String | The ID of the edge gateway | urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c
-  name | String | The name of the edge gateway | My Edge - nft00002i2 SL3
-
-#### Example response
-
-```
-{
-    "data": [
-        {
-            "type": "EdgeGateway",
-            "id": "urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c",
-            "attributes": {
-                "name": "My Edge - nft00002i2 SL3"
-            }
-        }
-    ]
-}
-```
-
-### JSON schema
-
-```
-{
-    "title":"GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways",
-    "description":"The edge-gateways within this VDC.",
-    "oneOf": [
-        {
-            "$ref": "#/definitions/success"
-        },
-        {
-            "$ref": "#/definitions/failure"
-        }
-    ],
-    "definitions": {
-        "success": {
-            "type": "object",
-            "required": [
-                "data"
-            ],
-            "properties": {
-                "data": {
-                    "$ref": "#/definitions/data"
-                }
-            }
-        },
-        "failure": {
-            "$ref": "#/definitions/error"
-        },
-        "data":{
-            "type":"array",
-            "items":{
-                "title":"Edge Gateways",
-                "type":"object",
-                "properties":{
-                    "id":{
-                        "type":"string",
-                        "pattern":"^urn:vcloud:gateway:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$"
-                    },
-                    "type":{
-                        "type":"string",
-                        "enum":["EdgeGateway"]
-                    },
-                    "attributes":{
-                        "type": "object",
-                        "properties":{
-                            "name": {
-                                "type":"string"
-                            }
-                        },
-                        "required":[
-                            "name"
-                        ]
-                    }
-                },
-                "required":[
-                    "id",
-                    "type",
-                    "attributes"
-                ]
-            }
-        },
-        "error": {
-            "type": "object",
-            "properties": {
-                "error": {
-                    "description": "A short, human-readable summary of the problem.",
-                    "type": "string"
-                },
-                "detail": {
-                    "description": "A human-readable explanation of the problem.",
-                    "type": "string"
-                }
-            },
-            "required":[
-                "error"
-            ]
-        }
-    }
 }
 ```
 
@@ -3136,9 +2946,15 @@ Returns a CSV report for the whole month specified including the date provided.
 
 ## GET /api/billing/billing-csv
 
-Returns a CSV containing billing data for the period given.
+Returns a CSV containing billing data for the month specified.
 
 For more information about this CSV, see [*Understanding your invoice evidence file*](../other/other-ref-invoice-evidence-file.md) and the [*Invoice and billing FAQs*](../other/other-faq-billing.md).
+
+> [!NOTE]
+> To retrieve billing information for an account, you must have the **API** Permissions for Billing. For more information, see [*Portal permissions*](ptl-ref-overview-permissions.md).
+
+> [!TIP]
+> Usage data is updated on a daily basis, so you only need to call this endpoint once a day to get the latest cost information. For example, you might call the endpoint at 06:00 each day to get the costs from the previous day.
 
 ### API version
 
@@ -3249,10 +3065,197 @@ Returns a CSV report for the period specified.
   LicenceTotalPrice                 | Price of any licenses attached to this VM
   TotalPrice                        | Total price of this VM
 
+## Deprecated endpoints
+
+The following endpoints are deprecated and may be removed in the future.
+
+### GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways
+
+Returns basic information about the edge gateways in the specified account under the specified VDC.
+
+#### API version
+
+v1
+
+#### Request
+
+##### Request body
+
+None
+
+##### Parameters
+
+None
+
+##### URI parameters
+
+  Parameter name | Description | Type | Mandatory (Default)
+  ---------------|-------------|------|--------------------
+  account_id | The ID of your account | String | Y
+  vorg_id | The ID of the vOrg in which the edge gateway resides | String | Y
+  vdc_urn | The full URN of the VDC in which the edge gateway resides, including the urn:vcloud:vdc: prefix | String | Y
+
+##### Example request (Curl)
+
+```bash
+curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways
+```
+
+#### Response
+
+##### Successful HTTP response
+
+200 OK --- The request was successful
+
+##### Unsuccessful HTTP response
+
+401 Unauthorized --- The user could not be authenticated
+
+403 Forbidden --- The user does not have permissions for the vOrg
+
+404 Not Found --- The user does not have access to the account, the account does not exist or the vOrg does not exist
+
+##### Response body
+
+If the call returns an empty list, check that the specified VDC URN is correct.
+
+  Attribute | Type | Value | Example
+  ----------|------|-------|--------
+  type | String | EdgeGateway | &nbsp;
+  id | String | The ID of the edge gateway | urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c
+  name | String | The name of the edge gateway | My Edge - nft00002i2 SL3
+
+##### Example response
+
+```
+{
+    "data": [
+        {
+            "type": "EdgeGateway",
+            "id": "urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c",
+            "attributes": {
+                "name": "My Edge - nft00002i2 SL3"
+            }
+        }
+    ]
+}
+```
+
+#### JSON schema
+
+```
+{
+    "title":"GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways",
+    "description":"The edge-gateways within this VDC.",
+    "oneOf": [
+        {
+            "$ref": "#/definitions/success"
+        },
+        {
+            "$ref": "#/definitions/failure"
+        }
+    ],
+    "definitions": {
+        "success": {
+            "type": "object",
+            "required": [
+                "data"
+            ],
+            "properties": {
+                "data": {
+                    "$ref": "#/definitions/data"
+                }
+            }
+        },
+        "failure": {
+            "$ref": "#/definitions/error"
+        },
+        "data":{
+            "type":"array",
+            "items":{
+                "title":"Edge Gateways",
+                "type":"object",
+                "properties":{
+                    "id":{
+                        "type":"string",
+                        "pattern":"^urn:vcloud:gateway:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$"
+                    },
+                    "type":{
+                        "type":"string",
+                        "enum":["EdgeGateway"]
+                    },
+                    "attributes":{
+                        "type": "object",
+                        "properties":{
+                            "name": {
+                                "type":"string"
+                            }
+                        },
+                        "required":[
+                            "name"
+                        ]
+                    }
+                },
+                "required":[
+                    "id",
+                    "type",
+                    "attributes"
+                ]
+            }
+        },
+        "error": {
+            "type": "object",
+            "properties": {
+                "error": {
+                    "description": "A short, human-readable summary of the problem.",
+                    "type": "string"
+                },
+                "detail": {
+                    "description": "A human-readable explanation of the problem.",
+                    "type": "string"
+                }
+            },
+            "required":[
+                "error"
+            ]
+        }
+    }
+}
+```
+
+## Removed endpoints
+
+The following endpoints have been removed from the Portal API.
+
+### My Calls
+
+> [!IMPORTANT]
+> With the move to the new [My Calls](https://portal.skyscapecloud.com/support/ivanti) service management tool, the My Calls API functionality is no longer available.
+
+- GET /api/my_calls Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).
+
+- GET /api/my_calls/:ticket_id - Returns a single ticket and its updates and changes.
+
+- PUT /api/my_calls/:ticket_id - Adds a new note to a ticket.
+
+- POST /api/my_calls - Adds a new ticket.
+
+- PUT /api/my_calls/:ticket_id/subscribe - Subscribes a user to a ticket.
+
+- PUT /api/my_calls/:ticket_id/unsubscribe - Unsubscribes a user from a ticket.
+
+- PUT /api/my_calls/:ticket_id/reopen - Reopens a ticket.
+
+- PUT /api/my_calls/:ticket_id/change_owner - Change the owner of a ticket.
+
+- PUT /api/my_calls/:ticket_id/cancel - Cancels a ticket.
+
+- PUT /api/my_calls/:ticket_id/close - Closes a ticket.
+
 ## Further information
 
 If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

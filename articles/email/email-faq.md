@@ -1,5 +1,5 @@
 ---
-title: Email and Collaboration as a Service FAQs | UKCloud Ltd
+title: Email and Collaboration as a Service FAQs
 description: Frequently asked questions for Email and Collaboration as a Service
 services: email
 author: Matt Warner
@@ -21,6 +21,9 @@ toc_mdlink: email-faq.md
 
 Email and Collaboration as a Service provides a range of productivity tools, including email, calendaring and tasks, which help an organisation's end users to work in a secure, efficient and effective way.
 
+> [!NOTE]
+> Email and Collaboration as a Service has been removed from sale. We'll continue to support and maintain this service for current customers. For new customers looking for a secure email service, please engage with our partner team at <partners@ukcloud.com>.
+
 ## What makes up Email and Collaboration as a Service?
 
 UKCloud manages the underlying infrastructure and application, ensuring the integrity of the email solution and mailbox availability. The customer is responsible for customising and managing the solution in terms of users, devices and client applications.
@@ -31,19 +34,7 @@ The service is charged per mailbox per month (or part thereof) which includes 1G
 
 ## Does UKCloud offer a free trial?
 
-Yes, we appreciate you might have various concerns about the suitability of our service to run your specific workloads. As we're confident that our service will exceed your expectations, we offer a 30-day free trial so that you can test and evaluate our service without commitment. Your trial provides you with a live environment on the UKCloud platform to test our services and verify whether they are suited to your needs.
-
-Before your trial, a Cloud Architect will engage with you to identify the goals you're working towards, to help ensure that your trial meets those goals.
-
-Throughout the trial period, a Customer Success Manager (CSM) will provide support for any issues you may encounter or questions you may have.
-
-At the end of your free trial, you can seamlessly move to a billed service, leveraging any of the work you've already completed in the live trial environment.
-
-Please note, this is for up to 500 users in a single organisation on request.
-
-## How do I request for a free trial?
-
-You can request a trial via the [UKCloud website](http://www.ukcloud.com/free-trial-sign-up) and accept the trial terms and conditions. Your environment will then be set up and you will receive trial credits to the equivalent of £500.
+No. As Email and Collaboration has been removed from sale, a free trial is no longer available.
 
 ## What happens when my trial comes to an end?
 
@@ -63,13 +54,26 @@ As the solution is delivered from UK data centres by a UK company, your data doe
 
 UKCloud manages and supports the platform in the UK. Depending on the mail client you choose, it may be supported by the third-party provider and not covered under our SLA. Wherever possible, UKCloud will also work with Zimbra to help resolve any compatibility issues.
 
-## Can I use Email and Collaboration in the UKCloud Elevated (previously PGA IL3) environment?
+## Can I use Email and Collaboration in the UKCloud Elevated security domain?
 
-Yes, Email and Collaboration as a Service is available on both the Assured and Elevated OFFICIAL platforms.
+Yes, Email and Collaboration as a Service is available on both the Assured and Elevated OFFICIAL security domains.
 
 ## Can I use Email and Collaboration over closed networks such as PSN, HSCN or Janet?
 
 Yes, you can connect via PSN, Janet and HSCN; via legacy GCF networks including PNN; or by HybridConnect using your own dedicated circuits such as CPS-encrypted tunnels, leased lines or MPLS.
+
+## How can I configure my email server to use the PSN email relays (MTAs)?
+
+There are several configuration options for using the PSN email relays. These can provide either resiliency across multiple PSN relays or give you an opportunity to just use a single relay (in case of maintenance on the other).
+
+> [!NOTE]
+> For Email services in regions 1, 2, 7 and 8, you’ll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.
+
+- Create a local host file entry on your mail system or a DNS entry on your internal DNS server with a name of your choice that is configured with both PSN relay IP addresses.
+
+- Configure your email system to use both of the PSN relay IP addresses as a RelayHost.
+
+- Configure your email system to use just one of the PSN relay IP addresses. This could be useful if there's any maintenance work happening that could affect the second IP address.
 
 ## Is the service Pan Government Accredited?
 
@@ -139,6 +143,10 @@ Yes, as standard, the service offers a dumpster folder which retains items (such
 
 Briefcase is a document storing and sharing function that allows users to upload files to the mail store, so that they can access those files from anywhere via the Email and Collaboration as a Service mail client.
 
+## What are the default Class of Service settings?
+
+A Class of Service exists for each e-mail domain and defines the features, access privileges and default preferences that a new user account receives. For existing accounts, if a setting has been specified within the client’s Preferences tab, it will take precedence; otherwise the Class of Service setting will be applied. All new accounts will inherit the settings from the Class of Service. For information about the default Class of Service settings, or to request that a setting is changed from the default, raise a Service Request via the My Calls section of the UKCloud Portal.
+
 ## How long does it take to get the solution up and running?
 
 Within five days of accepting your order, we'll create your primary administrator account and send you a welcome pack, which includes the URL for the UKCloud Portal, mailbox services and associated authentication details.
@@ -191,4 +199,4 @@ Yes, this can be created for you on request. You'll need to raise a Service Requ
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
