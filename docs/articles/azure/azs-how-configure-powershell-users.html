@@ -8,7 +8,7 @@
     <title>How to configure the Azure Stack Hub user's PowerShell environment </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure the Azure Stack Hub user's PowerShell environment ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -149,17 +149,7 @@ Install-Module -Name AzureRM.BootStrapper -Verbose
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
 Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
-Install-Module -Name AzureStack -RequiredVersion 1.8.0 -Verbose
-</code></pre>
-<h3 id="enable-additional-storage-features">Enable additional storage features</h3>
-<pre><code class="language-PowerShell"># Install the Azure.Storage module version 4.5.0
-Install-Module -Name Azure.Storage -RequiredVersion 4.5.0 -AllowClobber -Force -Verbose
-
-# Install the AzureRm.Storage module version 5.0.4
-Install-Module -Name AzureRM.Storage -RequiredVersion 5.0.4 -AllowClobber -Force -Verbose
-
-# Remove incompatible storage module installed by AzureRM.Storage
-Uninstall-Module Azure.Storage -RequiredVersion 4.6.1 -Force -Verbose
+Install-Module -Name AzureStack -RequiredVersion 1.8.1 -Verbose
 </code></pre>
 <h2 id="configure-the-user-environment-and-sign-in-to-azure-stack-hub">Configure the user environment and sign in to Azure Stack Hub</h2>
 <h3 id="azure-active-directory-aad-based-deployments">Azure Active Directory (AAD) based deployments</h3>
