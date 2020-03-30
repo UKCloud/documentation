@@ -223,6 +223,8 @@ To complete the steps in this article, you must have appropriate access to a sub
     - Example for Linux VM:
 
         `Heartbeat | where OSType == "Linux" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
+    
+        ![Log analytics query example](images/azs-browser-log-analytics-workspace-query-example.png)
 
     - If your VM shows in the results, you have successfully linked your VM from Azure Stack Hub to your Log Analytics workspace [(see here for more information)](https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded).
 
