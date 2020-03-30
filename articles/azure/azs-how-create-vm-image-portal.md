@@ -102,6 +102,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 6. Click **OK** and wait for the generalisation process to complete.
 
+    > [!TIP]
+    > The process is completed once your VM is in a stopped state.
+
 ### [Linux](#tab/tabid-b/tabid-1)
 
 1. Log in to your Linux VM using secure shell (SSH).
