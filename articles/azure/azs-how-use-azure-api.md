@@ -38,45 +38,45 @@ To obtain an access token:
 
 1. Send a POST request to the Azure REST authentication/login endpoint:
 
-    `https://login.microsoftonline.com/<tenant_id>/oauth2/token`.
+    `https://login.microsoftonline.com/<tenant_id>/oauth2/token`
 
     where **tenant_id** is one of the following:
 
-    - Your tenant domain. For example: `ukcloud.onmicrosoft.com`, `ukcloud.com`, `example.mydomain.com`.
+    - Your tenant domain, for example: `ukcloud.onmicrosoft.com`, `ukcloud.com`, `example.mydomain.com`
 
-    - Your tenant ID. For example: `8eaef023-2b34-4da1-9baa-8bc8c9d6a490`.
+    - Your tenant ID, for example: `8eaef023-2b34-4da1-9baa-8bc8c9d6a490`
 
-    - The default value for tenant independent keys: `common`.
+    - The default value for tenant independent keys: `common`
 
 2. Pass the following parameters in the request body:
 
-    - **grant_type** - The type of authentication scheme to use: `password`.
+    - **grant_type** - The type of authentication scheme to use: `password`
 
-    - **client_id** - Hard-coded to a default value of `1950a258-227b-4e31-a9cf-717495945fc2`.
+    - **client_id** - Hard-coded to a default value of `1950a258-227b-4e31-a9cf-717495945fc2`
 
         Other options for specific scenarios are:
 
-        - PowerShell - `1950a258-227b-4e31-a9cf-717495945fc2`.
+        - PowerShell - `1950a258-227b-4e31-a9cf-717495945fc2`
 
-        - LegacyPowerShell - `0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*`.
+        - LegacyPowerShell - `0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*`
 
-        - WindowsAzureActiveDirectory - `00000002-0000-0000-c000-000000000000`.
+        - WindowsAzureActiveDirectory - `00000002-0000-0000-c000-000000000000`
 
-        - VisualStudio - `872cd9fa-d31f-45e0-9eab-6e460a02d1f1`.
+        - VisualStudio - `872cd9fa-d31f-45e0-9eab-6e460a02d1f1`
 
-        - AzureCLI - `04b07795-8ddb-461a-bbee-02f9e1bf7b46`.
+        - AzureCLI - `04b07795-8ddb-461a-bbee-02f9e1bf7b46`
 
-    - **resource** - The endpoint of the resource that the token will be used to access. For example:
-    `https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1`.
+    - **resource** - The endpoint of the resource that the token will be used to access, for example:
+    `https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1`
 
        >[!NOTE]
        > You can obtain the resource endpoint by querying the Azure Stack Hub management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
        >
        > For example, to find the endpoint for the `users` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2017-12-01`.
 
-    - **username** - The Azure Stack Hub AAD account. For example: `user@contoso.onmicrosoft.com`.
+    - **username** - The Azure Stack Hub AAD account, for example: `user@contoso.onmicrosoft.com`
 
-    - **password** - The password for the Azure Stack Hub AAD account.
+    - **password** - The password for the Azure Stack Hub AAD account
 
     > [!NOTE]
     > Ensure you format the request body using Content-Type `x-www-form-urlencoded`.
@@ -126,7 +126,7 @@ $AuthResp
 
 ***
 
-3. If the authentication is successful, the endpoint returns an access token. For example:
+3. If the authentication is successful, the endpoint returns an access token, for example:
 
     ```json
     {
@@ -142,7 +142,7 @@ $AuthResp
     }
     ```
 
-5. You must include this token in the Authorization header of each subsequent API request. For example:
+5. You must include this token in the Authorization header of each subsequent API request, for example:
 
     ### [Bash](#tab/tabid-3)
 
@@ -170,13 +170,13 @@ A REST request URI consists of:
 
 where:
 
-- **URI-scheme** is the protocol used to transmit the request. For example `http` or `https`.
+- **URI-scheme** is the protocol used to transmit the request, for example `http` or `https`
 
-- **URI-host** is the domain name or IP address of the server where the REST service endpoint is hosted. For example: `management.frn00006.azure.ukcloud.com`.
+- **URI-host** is the domain name or IP address of the server where the REST service endpoint is hosted, for example: `management.frn00006.azure.ukcloud.com`
 
-- **resource-path** is the resource or resource collection, which may include multiple segments used by the service in determining the selection of those resources. For example: `/subscriptions` is the resource path to obtain information about Azure Stack Hub subscriptions.
+- **resource-path** is the resource or resource collection, which may include multiple segments used by the service in determining the selection of those resources, for example: `/subscriptions` is the resource path to obtain information about Azure Stack Hub subscriptions
 
-- **query-string** provides additional parameters, such as the API version or resource selection criteria.
+- **query-string** provides additional parameters, such as the API version or resource selection criteria
 
     >[!NOTE]
     > For Bash, you can add the **query-string** to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01`. <br>For PowerShell, you can provide a **query-string** in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2017-12-01"}`.
