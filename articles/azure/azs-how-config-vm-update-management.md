@@ -251,9 +251,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Update and Management compliance example](images/azs-browser-example-update-management-compliant-ok.png)
 
-12. In public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
+12. In public Azure, on the top left, click the hamburger icon and select **Monitor**.
 
-    - You'll see two usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+    ![Public Azure Hamburger menu](images/azs-browser-public-azure-hamburger-menu-monitor.png)
+
+    - In the new blade under *Insights*, click **Virtual Machines**.
+
+    - You will see two usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+
+    ![Public Azure monitor virtual machines](images/azs-browser-public-azure-monitor-virtual-machines.png)
 
 13. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**:
 
