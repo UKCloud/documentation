@@ -187,17 +187,17 @@ The syntax of an Azure Stack Hub request URI is:
 
 where:
 
-- `subscription-id` is your tenant subscription ID
+- **subscription-id** is your tenant subscription ID
 
-- `resource-group` is the resource group you want to query
+- **resource-group** is the resource group you want to query
 
-- `provider` is the provider you want to query
+- **provider** is the provider you want to query
 
-- `resource-path` is the resource you want to query
+- **resource-path** is the resource you want to query
 
-- `api-version` is the version of the Azure Stack Hub API being called, for example `api-version=2017-12-01`
+- **api-version** is the version of the Azure Stack Hub API being called, for example: `api-version=2017-12-01`
 
-- `filter-expression` is an optional list of arguments to filter the results of the query
+- **filter-expression** is an optional list of arguments to filter the results of the query
 
 For example, the following API call returns a list of all virtual machines in the specified Azure Stack Hub subscription:
 
