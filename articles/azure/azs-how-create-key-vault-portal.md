@@ -4,7 +4,7 @@ description: Provides help for creating a key vault on UKCloud for Microsoft Azu
 services: azure-stack
 author: Bailey Lawson
 reviewer: William Turner
-lastreviewed: 30/03/2020 13:15:00
+lastreviewed: 30/03/2020
 
 toc_rootlink: Users
 toc_sub1: How To
