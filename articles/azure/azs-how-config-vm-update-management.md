@@ -1,24 +1,28 @@
 ---
-title: How to configure VM updates and management on Azure Stack Hub | UKCloud Ltd
-description: Describes how to use Azure Monitor to configure VM updates and management on Azure Stack Hub
+title: How to configure VM update management on Azure Stack Hub
+description: Describes how to use Azure Monitor to configure VM update management on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
-reviewer: 
-lastreviewed: 26/03/2020 17:09:00
+reviewer: Chris Black
+lastreviewed: 30/03/2020 12:55:00
 
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Configure VM updates and management
+toc_title: Configure VM update management
 toc_fullpath: Users/How To/azs-how-config-vm-update-management.md
 toc_mdlink: azs-how-config-vm-update-management.md
 ---
 
-# How to configure VM updates and management on Azure Stack Hub | UKCloud Ltd
+# How to configure VM update management on Azure Stack Hub
 
 ## Overview
+
+> [!TIP]
+> Azure Stack Hub has built-in Azure Monitor capabilities.
+> You can find out more about them in the following article [Use Azure Monitor on Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-metrics-azure-data).
 
 Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive, and otherwise take action on the metrics and logs coming from resources in Azure.
 
@@ -47,28 +51,28 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Click **Create a resource**.
 
-    - In the search bar, search for `log analytics`.
+    - In the search bar, search for `log analytics`
 
         ![Log Analytics search](images/azs-browser-search-log-analytics.png)
 
-    - Click **Log Analytics**.
+    - Click **Log Analytics**
 
-    - Click **Create**.
+    - Click **Create**
 
     - Provide the following:
 
-        - A name for the **Log Analytics Workspace**. Example: `DefaultLAWorkspace`.
+        - A name for the **Log Analytics Workspace**. Example: `DefaultLAWorkspace`
 
-        - A **Subscription** to link the workspace to.
+        - A **Subscription** to link the workspace to
 
-        - A **Resource group** to host the workspace in.
+        - A **Resource group** to host the workspace in
 
-        - A **Location** to host the workspace in.
+        - A **Location** to host the workspace in
 
         > [!NOTE]
         > Azure Monitor for VMs supports a Log Analytics workspace in the these [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics).
 
-        - A **Pricing tier** to use.
+        - A **Pricing tier** to use
 
         The following example shows the blade with all items filled out:
 
