@@ -260,22 +260,22 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Public Azure Hamburger menu](images/azs-browser-public-azure-hamburger-menu-monitor.png)
 
-    - In the new blade under *Insights*, click **Virtual Machines**.
+13. In the new blade under *Insights*, click **Virtual Machines**.
 
-    - You will see three usage analytics tabs (**Get Started**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+14. You will see three usage analytics tabs (**Get Started**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
 
-        > [!NOTE]
-        > The **Get Started** tab does **not** show Azure Stack Hub VMs.
+    > [!NOTE]
+    > The **Get Started** tab does **not** show Azure Stack Hub VMs.
 
-        ![Public Azure monitor virtual machines](images/azs-browser-public-azure-monitor-virtual-machines.png)
+    ![Public Azure monitor virtual machines](images/azs-browser-public-azure-monitor-virtual-machines.png)
 
-13. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**:
+15. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**:
 
     ![Public Azure Hybrid switch](images/azs-browser-hybrid-switch.png)
 
-14. A prompt will appear to upgrade the workspace, click **Upgrade**. In the new blade, click **Upgrade** again.
+16. A prompt will appear to upgrade the workspace, click **Upgrade**. In the new blade, click **Upgrade** again.
 
-15. Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled **Azure Monitor for VMs** on.
+17. Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled **Azure Monitor for VMs** on.
 
     ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
     
