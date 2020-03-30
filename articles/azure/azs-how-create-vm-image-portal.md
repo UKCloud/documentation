@@ -36,7 +36,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 ## [2. Creating the image](#tab/tabid-2)
 
 > [!WARNING]
-> Capturing a VM image will make it unusable and cannot be undone.
+> Capturing a VM image will make it unusable and **cannot** be undone.
 
 1. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com/).
 
