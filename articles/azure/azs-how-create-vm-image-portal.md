@@ -56,29 +56,31 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 7. Select **Automatically delete this virtual machine after creating the image**.
 
-8. Click **Create**.
+8. Enter the VM name in the field **Type the virtual machine name**.
+
+9. Click **Create**.
 
     ![Create VM image](images/azs-browser-create-image.png)
 
-9. Wait for the image creation process to finish.
+10. Wait for the image creation process to finish.
 
-10. Once complete, your VM image will appear in the resource group you selected in step 6.
+11. Once complete, your VM image will appear in the resource group you selected in step 6.
 
     ![Custom image resource group](images/azs-browser-custom-image-resource-group.png)
 
-11. Click the VM image.
+12. Click the VM image.
 
-12. In the *new* page, click **Create VM**.
+13. In the *new* page, click **Create VM**.
 
-13. Enter a **Name**, **Username**, **Authentication type**, **Password** and **Resource group** for the new VM. Click **OK**.
+14. Enter a **Name**, **Username**, **Authentication type**, **Password** and **Resource group** for the new VM. Click **OK**.
 
-14. Select a VM size. Click **Select**.
+15. Select a VM size. Click **Select**.
 
-15. In *Configure optional features*, under *Select public inbound ports*, select the ports you want to open.
+16. In *Configure optional features*, under *Select public inbound ports*, select the ports you want to open.
 
-16. Click **OK**.
+17. Click **OK**.
 
-17. Review the *Summary* blade and click **OK**. The new VM will now begin deployment.
+18. Review the *Summary* blade and click **OK**. The new VM will now begin deployment.
 
 ![Custom image VM summary](images/azs-browser-custom-image-vm-summary.png)
 
