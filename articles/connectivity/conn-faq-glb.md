@@ -1,43 +1,43 @@
 ---
-title: Global load balancing FAQs | UKCloud Ltd
-description: Frequently asked questions for Global Load Balancing
+title: UltraDNS FAQs
+description: Frequently asked questions for UltraDNS (previously Global Load Balancing)
 services: connectivity
 author: Matt Warner
-reviewer:
-lastreviewed: 20/07/2018 18:37:23
+reviewer: hbrunt
+lastreviewed: 16/12/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Global load balancing FAQs
+toc_title: UltraDNS FAQs
 toc_fullpath: FAQs/conn-faq-glb.md
 toc_mdlink: conn-faq-glb.md
 ---
 
-# Global load balancing FAQs
+# UltraDNS FAQs
 
-## What is Global load balancing?
+## What is UltraDNS?
 
-This service is aimed at providing a secure and reliable managed DNS service to help businesses enable and protect their online presence. It ensures the highest level of website availability and optimal performance, with built-in security for superior protection that is scalable to future demands.
+The UltraDNS service (previously Global Load Balancing) is aimed at providing a secure and reliable managed DNS service to help businesses enable and protect their online presence. It ensures the highest level of website availability and optimal performance, with built-in security for superior protection that is scalable to future demands.
 
-It enables customers to direct Internet traffic between multiple end-points which can be across different sites or different platforms.
+It enables customers to direct internet traffic between multiple end-points, which can be across different sites or different platforms.
 
-## Who supplies the Global Load Balancing service?
+## Who supplies the UltraDNS service?
 
-UKCloud have partnered with Neustar for the provision of this service along with the additional option of Application-tuned DDoS protection for a complete traffic protection solution.
+UKCloud has partnered with Neustar for the provision of this service along with the additional option of [*SiteProtect Advanced DDoS Mitigation*](conn-sco-app-ddos.md) for a complete traffic protection solution.
 
 ## Who are Neustar?
 
-Neustar, Inc. (NYSE: NSR) was founded in 1996 and are a trusted, neutral provider of real-time information and analysis to the internet, telecommunications, entertainment, advertising and marketing industries throughout the world. In the data arena, Neustar provides real-time information and analytics for over 6 billion physical and virtual addresses, and provides instantaneous answers to more than 27 billion queries from the Internet each day and answer over 300 thousand questions every second.
+Neustar, Inc. (NYSE: NSR) was founded in 1996 and is a trusted, neutral provider of real-time information and analysis to the internet, telecommunications, entertainment, advertising and marketing industries throughout the world. In the data arena, Neustar provides real-time information and analytics for over 6 billion physical and virtual addresses, and provides instantaneous answers to more than 27 billion queries from the internet each day and answer over 300 thousand questions every second.
 
 ## How do I manage the service?
 
-Once the service has been provisioned, access details will be supplied for the web-based customer portal. This will allow you to supply all relevant information and adjust the settings of the service to suit your needs, such as; expected traffic, traffic preferences and actions upon a server or group of servers being unavailable or under-performing.
+Once the service has been provisioned, we will send you access details for the web-based customer portal. This enables you to supply all relevant information and adjust the settings of the service to suit your needs, such as expected traffic, traffic preferences and actions to take when a server or group of servers becomes unavailable or experiences performance issues.
 
 ## How do I get support?
 
-Support is made available by either Neustar directly.
+Support is made available by Neustar directly.
 
 ## Is there a charge for this service?
 
@@ -57,4 +57,4 @@ DNS is architected to provide disruption-free transition.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

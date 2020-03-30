@@ -1,5 +1,5 @@
 ---
-title: How to create new UKCloud for OpenStack users in the UKCloud Portal | UKCloud Ltd
+title: How to create new UKCloud for OpenStack users in the UKCloud Portal
 description: Shows how to create UKCloud for OpenStack users in the UKCloud Portal so that they can benefit from two-factor authentication (2FA)
 services: openstack
 author: Sue Highmoor
@@ -47,29 +47,27 @@ To create a new user:
 
     ![New Contact page](images/ptl-new-contact.png)
 
-6. After you've created the user account, you must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to grant the user access to the OpenStack project. Or your can use the self service IDAM API, information on how to use it can be seen here  [*Understanding UKCloud's Identity & Access Management API*](../other/other-ref-idam.md)
+6. After you've created the user account, you must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to grant the user access to the OpenStack project. Or you can use the self service IDAM API, for more information, see [*Understanding UKCloud's Identity & Access Management API*](../other/other-ref-idam.md).
 
     a. In the navigation panel, expand **Support**, then select **My Calls**.
 
     ![My Calls menu option in the UKCloud Portal](images/ptl_mnu-my-calls.png)
 
-    b. Select the **Raise a new Support Call** tab.
+    b. Click **Go to My Calls Portal**.
 
-    ![Raise a new Support Call tab](images/ptl-tab-new-ticket.png)
+    c. Click **New Service Request**.
 
-    c. From the **How can we help you?** list, select **I am requesting information on/administration of my service**.
+    d. Select **Generic Service Request**.
 
-    ![Raise a Service Request](images/ptl-my-calls-request.png)
+    e. From the **UKCloud Service** list, select **UKCloud for OpenStack**.
 
-    d. From the **Select Product** list, select the **Cloud Native Infrastructure (OpenStack)**.
+    f. In the **Additional Details** field, enter `Add Portal users to OpenStack project` and provide the following information:
 
-    e. From the **What is the nature of your query?** list, select **Uncategorised**.
+      - The name(s) of the user(s), and their username(s), that you want to add to the OpenStack project.
 
-    f. In the **Request Summary** field, enter `Add Portal users to OpenStack project`.
+      - The URL of the project that the user(s) should be added to. If there are multiple projects the user(s) need adding to, then specify all of the project URLs here and it can be completed in one task.
 
-    g. In the **Please provide any further details regarding your request** field, enter the name(s) of the user(s), and their username(s), that you want to add to the OpenStack project, along with the URL of the project that the user(s) should be added to. If there are multiple projects the user(s) need adding to, then specify all of the project URLs here and it can be completed in one task.
-
-    h. When you're done, click **Submit**.
+    g. When you're done, click **Review & Submit**.
 
 7. When the Service Request is resolved, the identified users can log in to the OpenStack Horizon dashboard and CLI using their UKCloud Portal credentials.
 
@@ -79,4 +77,4 @@ To create a new user:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

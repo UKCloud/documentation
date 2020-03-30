@@ -1,5 +1,5 @@
 ---
-title: How the UKCloud OpenStack platform outperforms hyperscalers | UKCloud Ltd
+title: How the UKCloud OpenStack platform outperforms hyperscalers
 description: Analyses the performance of UKCloud for OpenStack and compares it against hyperscalers
 services: openstack
 author: Sue Highmoor
@@ -164,4 +164,4 @@ We are continuously investigating ways to improve the performance of our UKCloud
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

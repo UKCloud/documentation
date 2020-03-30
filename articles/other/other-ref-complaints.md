@@ -1,5 +1,5 @@
 ---
-title: UKCloud complaints procedure | UKCloud Ltd
+title: UKCloud complaints procedure
 description: Provides an overview of what to do if you have a complaint about our service
 services: other
 author: Sue Highmoor
@@ -34,4 +34,4 @@ All complaints are logged and independently assessed by the Customer Services te
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

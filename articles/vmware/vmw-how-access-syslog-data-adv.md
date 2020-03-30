@@ -1,5 +1,5 @@
 ---
-title: How to access syslog data for your advanced gateway | UKCloud Ltd
+title: How to access syslog data for your advanced gateway
 description: Explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your advanced gateway
 services: vmware
 author: Sue Highmoor
@@ -183,8 +183,8 @@ After setting up your syslog collector, you need to make sure that your NSX edge
 `loadbalancer[5899]: [073ab562-9147-428c-bf0c-33139c6ec51e]: xx.xxx.xxx.xxx:51699 [23/May/2016:14:43:38.242] TEST_CONN_8040_1625_HTTP TEST CONN_UAT_8040_1625_HTTP/TEST CONN_UAT_8040_1625_HTTP_192.168.32.15 0/0/0/1/1 200 2127 - - --VN 12/5/4/2/0 0/0 "GET /OA_MEDIA/FNDSSCORP.gif HTTP/1.1"`
 
 Refer to
-<http://cbonte.github.io/haproxy-dconv/1.5/configuration.html#8> for information about how to interpret the load balancer logs.
+<https://cbonte.github.io/haproxy-dconv/1.5/configuration.html#8> for information about how to interpret the load balancer logs.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -4,7 +4,7 @@
     href: cdsz-faq.md
 - name: Getting Started
   items:
-  - name: Cross Domain Security Zone Walled Garden
+  - name: Cross Domain Security Zone
     href: cdsz-gs-walled-garden.md
 - name: How To
   items:
@@ -20,3 +20,7 @@
   items:
   - name: Cross Domain Security Zone Service Definition
     href: cdsz-sd.md
+- name: Service Scope
+  items:
+  - name: Cross Domain Security Zone Service Scope
+    href: cdsz-sco.md

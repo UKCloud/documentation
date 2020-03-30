@@ -1,6 +1,6 @@
 ---
-title: How to create a service principal name (SPN) for Azure Stack using the Azure portal | UKCloud Ltd
-description: Learn how to create a service principal name (SPN) to manage your Azure Stack resources using the Azure portal
+title: How to create an SPN for Azure Stack Hub using the Azure portal
+description: Learn how to create a service principal name (SPN) to manage your Azure Stack Hub resources using the Azure portal
 services: azure-stack
 author: Bailey Lawson
 reviewer: BaileyLawson
@@ -16,9 +16,9 @@ toc_fullpath: Users/How To/Create a Service Principal Name (SPN)/azs-how-create-
 toc_mdlink: azs-how-create-spn-portal.md
 ---
 
-# How to create a service principal name for Azure Stack using the Azure portal
+# How to create a service principal name for Azure Stack Hub using the Azure portal
 
-This document explains how to create a service principal name to manage Azure and Azure Stack using the Azure portal.
+This document explains how to create a service principal name (SPN) to manage Azure and Azure Stack Hub using the Azure portal.
 
 It will guide you through the creation of:
 
@@ -32,7 +32,7 @@ It will guide you through the creation of:
 
 ## What is a service principal name?
 
-An Azure service principal name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
+An Azure SPN is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
 
 To log in and manage your resources via SPN you'll need to create an Azure application and then assign an SPN to it. Only then will you be able to perform tasks against your environment.
 
@@ -80,9 +80,9 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 5. Copy the displayed value for the key and store it somewhere secure. This value is referred to as the SPN Client Secret.
 
-## Configure role-based access control for the SPN on Azure Stack
+## Configure role-based access control for the SPN on Azure Stack Hub
 
-1. Log in to the UKCloud Azure Stack portal.
+1. Log in to the UKCloud Azure Stack Hub portal.
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -108,4 +108,4 @@ The SPN will now have the appropriate permissions assigned to it and is ready fo
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

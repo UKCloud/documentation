@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DDoS mitigation service FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>DDoS mitigation service FAQs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="DDoS mitigation service FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="title" content="DDoS mitigation service FAQs ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,31 +96,31 @@
 <h2 id="what-is-ukclouds-approach-to-mitigating-ddos-attacks">What is UKCloud's approach to mitigating DDoS attacks?</h2>
 <p>UKCloud has selected one of the leading providers of DDoS mitigation services and has implemented a hybrid solution. The service comprises both local DDoS mitigation appliances to mitigate smaller attacks, and the ability to leverage additional terabit scale global scrubbing centres if attacks threaten to exceed local capacity. This approach provides a balance between protection against DDoS attacks, without having some of the issues that are seen with an always-on solution (such as affecting legitimate traffic and VPN tunnels) or a manually invoked on-demand solution (where time to mitigate can be excessively long).</p>
 <p>This mitigation service enhances UKCloud's current ability to absorb typical sized DDoS attacks by providing an additional layer of defence against larger and more complex volumetric DDoS attacks. UKCloud utilises a combination of specialist DDoS mitigation appliances hosted within our data centres and terabit scale scrubbing centres that together implement a suite of DDoS countermeasures as appropriate. This, along with superior incident reporting, enables UKCloud to provide you with the details you need when reporting to GovCERT.</p>
-<p>You are advised to ensure that suitable application specific protection is in place to mitigate threats at the application layer, such as advanced persistent threats. For this purpose, you can procure an application-tuned DNS based DDoS mitigation solution via UKCloud's Digital Marketplace services. For more information, see <a href="conn-faq-app-ddos.html"><em>Application-tuned DDoS protection FAQs</em></a>.</p>
+<p>You are advised to ensure that suitable application specific protection is in place to mitigate threats at the application layer, such as advanced persistent threats. For this purpose, you can procure an advanced DDoS mitigation solution. For more information, see <a href="conn-faq-app-ddos.html"><em>SiteProtect Advanced DDoS Mitigation FAQs</em></a>.</p>
 <h2 id="ddos-mitigation-services-are-expensive-will-ukcloud-be-passing-these-costs-onto-customers">DDoS mitigation services are expensive, will UKCloud be passing these costs onto customers?</h2>
 <p>No. UKCloud is committed to continually investing in our platform to ensure that it delivers the highest levels of security, availability and scalability. We believe that customers should expect their cloud service providers to deliver increased value and lower prices over time, and this is just one example of how UKCloud demonstrates this belief to our customers and partners.</p>
 <h2 id="what-is-the-likelihood-that-legitimate-traffic-will-be-blocked-by-the-ddos-mitigation-service">What is the likelihood that legitimate traffic will be blocked by the DDoS mitigation service?</h2>
 <p>This is commonly referred to as a 'false positive', where the DDoS mitigation technology incorrectly identifies legitimate traffic as an attack.</p>
 <p>Due to the nature of the UKCloud service, normal interactions between your application and end users will be no different from how they are today. In the event of the UKCloud hosted DDoS mitigation appliances identifying an abnormal load, our specialist DDoS mitigation partner will deploy appropriate countermeasures.</p>
-<p>Impact on legitimate traffic has been a high priority consideration during our evaluation process and we are confident that the specialist provider of DDoS mitigation has appropriate controls across people, process and technology to make the likelihood of false positives almost zero.</p>
+<p>Impact on legitimate traffic was a high priority consideration during our evaluation process and we are confident that the specialist provider of DDoS mitigation has appropriate controls across people, process and technology to make the likelihood of false positives almost zero.</p>
 <p>That said, if your system is subject to a sustained, high volume attack, UKCloud may choose to deploy specific countermeasures against the attacked IP address (and sometimes adjacent IP addresses), which would affect both the attack traffic and legitimate traffic to that specific IP address. UKCloud will use all reasonable endeavours to contact affected customers if we take this action.</p>
 <h2 id="what-additional-latency-will-be-incurred-through-ukclouds-use-of-the-ddos-mitigation-service">What additional latency will be incurred through UKCloud's use of the DDoS mitigation service?</h2>
 <p>In normal operation (that is, traffic passing directly through UKCloud hosted DDoS mitigation appliances without requiring countermeasures), there is negligible additional latency to inbound or outbound traffic (rated at less than 80 microseconds).</p>
 <p>During a DDoS attack, there is negligible additional latency to outbound traffic, but inbound traffic will experience some additional latency, which will vary depending on the mitigation measure being taken. For example, when traffic is redirected through the specialist DDoS scrubbing centres, a sub-10 ms additional latency, caused by BGP routing, will affect inbound traffic to the scrubbing centre, and we expect there to be an additional 10 ms latency affecting only traffic to the IP addresses under attack (incurred by DDoS mitigation technology within the scrubbing centre). So, customers targeted by the attack should experience additional inbound latency of about 20 ms, whereas all other customers should experience lower additional latency of sub-10 ms.</p>
 <h2 id="what-is-the-largest-attack-that-the-ddos-mitigation-service-can-withstand">What is the largest attack that the DDoS mitigation service can withstand?</h2>
-<p>The specialist provider of DDoS mitigation is designed to withstand multiple simultaneous DDoS attacks. The service is continually being expanded in line with traffic volumes and the capacity of the scrubbing centres currently exceeds 1500 Gbit/s. The typical DDoS attack [1] is less than 2 Gbit/s but attacks of 50 to 60 Gbit/s are not uncommon and some attacks are beginning to exceed 100 Gbit/s.</p>
+<p>The specialist provider of DDoS mitigation is designed to withstand multiple simultaneous DDoS attacks. The service is continually being expanded in line with traffic volumes and the capacity of the scrubbing centres currently exceeds 1500 Gbit/s. The typical DDoS attack<sup>1</sup> is less than 2 Gbit/s but attacks of 50 to 60 Gbit/s are not uncommon and some attacks are beginning to exceed 100 Gbit/s.</p>
 <p>UKCloud subscribe to a tier of service designed to mitigate a specific level of attack. If the attack begins to exceed this level, UKCloud will work with the customer under attack and implement 'null routing' for the targeted IP address to ensure that all other customers continue to benefit from normal service.</p>
-<p>[1] <a href="http://www.sans.org/reading-room/whitepapers/analyst/ddos-attacks-advancing-enduring-survey-34700">http://www.sans.org/reading-room/whitepapers/analyst/ddos-attacks-advancing-enduring-survey-34700</a></p>
+<p><sup>1</sup> <a href="https://www.sans.org/reading-room/whitepapers/analyst/ddos-attacks-advancing-enduring-survey-34700">https://www.sans.org/reading-room/whitepapers/analyst/ddos-attacks-advancing-enduring-survey-34700</a></p>
 <h2 id="does-the-ddos-mitigation-service-protect-me-against-all-types-of-denial-of-service-attacks">Does the DDoS mitigation service protect me against all types of 'denial of service' attacks?</h2>
 <p>No. The service is designed to specifically neutralise the impact of highly distributed, volumetric, network layer attacks as these types of attacks most commonly cause 'collateral damage' and 'noisy neighbour' symptoms. The service is not designed to protect specific customers and applications against low-and-slow attacks, advanced persistent threats or application layer threats.</p>
 <p>Further, if your service is subject to a particularly high volume attack, it is possible that UKCloud will deploy specific countermeasures against your targeted IP address that could effectively make the IP address inaccessible to legitimate users of your service.</p>
-<p>To ensure you are protected against all types of denial of service attacks, UKCloud recommends that you consider mitigating these application specific threat vectors via appropriate solutions such as Web Application Firewalls, Content Delivery Networks, robust domain name services, and so on. For this purpose, you can procure an application-tuned DNS based DDoS mitigation solution via UKCloud's Digital Marketplace services. For more information, see <a href="conn-faq-app-ddos.html"><em>Application-tuned DDoS protection FAQs</em></a>.</p>
+<p>To ensure you are protected against all types of denial of service attacks, UKCloud recommends that you consider mitigating these application specific threat vectors via appropriate solutions such as Web Application Firewalls, Content Delivery Networks, robust domain name services, and so on. For this purpose, you can procure an advanced DNS based DDoS mitigation solution. For more information, see <a href="conn-faq-app-ddos.html"><em>SiteProtect Advanced DDoS Mitigation FAQs FAQs</em></a>.</p>
 <h2 id="what-gives-ukcloud-the-right-to-null-route-traffic-to-my-service">What gives UKCloud the right to 'null route' traffic to my service?</h2>
 <p>In common with most cloud service providers and hosting organisations, the Terms &amp; Conditions (for example, G-Cloud Terms of Business) that all customers agree to as part of the provision of our services entitles UKCloud to suspend a customer's right to access or use all or any part of the services immediately upon notice to you if we determine that your use of the services: creates a security risk to the Services or any third party and / or may adversely impact the Services or the systems or Content of any other of our other Customers.</p>
 <h2 id="can-i-use-my-own-ddos-mitigation-service-if-i-have-more-extensive-requirements">Can I use my own DDoS mitigation service if I have more extensive requirements?</h2>
-<p>Yes. Indeed UKCloud recommend that customers review their preparedness for DDoS attacks and other attacks such as advanced persistent threats and application layer threats. As an example, some customers choose to use a Content Delivery Network or DNS based DDoS mitigation service to provide additional protection against application layer and DNS layer attacks. Such a solution can absorb and mitigate customer specific attacks before the attack traffic hits the UKCloud platform. UKCloud customers are also able to procure an application tuned DNS based DDoS mitigation solution via UKCloud's Digital Marketplace services. For more information, see <a href="conn-faq-app-ddos.html"><em>Application-tuned DDoS protection FAQs</em></a>.</p>
+<p>Yes. Indeed UKCloud recommends that customers review their preparedness for DDoS attacks and other attacks such as advanced persistent threats and application layer threats. As an example, some customers choose to use a Content Delivery Network or DNS based DDoS mitigation service to provide additional protection against application layer and DNS layer attacks. Such a solution can absorb and mitigate customer specific attacks before the attack traffic hits the UKCloud platform. UKCloud customers are also able to procure an advanced DDoS mitigation solution. For more information, see <a href="conn-faq-app-ddos.html"><em>SiteProtect Advanced DDoS Mitigation FAQs</em></a>.</p>
 <h2 id="does-the-use-of-these-third-party-ddos-mitigation-services-affect-ukclouds-status-as-a-psn-accredited-service-provider">Does the use of these third party DDoS mitigation services affect UKCloud's status as a PSN Accredited service provider?</h2>
-<p>No. UKCloud has consulted with CESG and CERT-UK during our evaluation of the options. As it stands, traffic passed over the internet can be routed through various systems and countries by BGP, the native routing protocol of the internet. You are advised to ensure that your systems use appropriate encryption (for example, SSL, TLS or IPsec) to protect the confidentiality and integrity of your data. These same controls ensure security is maintained even when that data is passed through the scrubbing centres.</p>
+<p>No. UKCloud consulted with NCSC and CERT-UK during our evaluation of the options. As it stands, traffic passed over the internet can be routed through various systems and countries by BGP, the native routing protocol of the internet. You are advised to ensure that your systems use appropriate encryption (for example, SSL, TLS or IPsec) to protect the confidentiality and integrity of your data. These same controls ensure security is maintained even when that data is passed through the scrubbing centres.</p>
 <p>As with many ISPs, the DDoS mitigation service is not provided by a UK sovereign organisation.</p>
 <p>Consistent with Principle 8 of the Data Protection Act, no citizen data is transferred to a non-EEA country; rather data packets may merely transit a specialist scrubbing centre located outside the EEA.</p>
 <h2 id="if-a-ddos-attack-results-in-a-period-of-unavailability-will-i-be-able-to-claim-service-credits">If a DDoS attack results in a period of unavailability, will I be able to claim service credits?</h2>
@@ -128,7 +128,7 @@
 <h2 id="what-reporting-will-i-get-as-part-of-this-service">What reporting will I get as part of this service?</h2>
 <p>If you experience a DDoS attack, you will be informed individually by UKCloud once the attack has been detected by the DDoS mitigation service. When the attack has ended, UKCloud will share a detailed report containing information on the size and duration of the attack, where the attack came from (IPs and autonomous systems) and the type of attack traffic detected (for example, ports and protocols).</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -156,7 +156,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -165,7 +165,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -173,12 +173,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -188,5 +195,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

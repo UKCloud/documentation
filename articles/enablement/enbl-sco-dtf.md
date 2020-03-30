@@ -1,10 +1,10 @@
 ---
-title: Data Transfer Facility Service Scope | UKCloud Ltd
+title: Data Transfer Facility Service Scope
 description: Outlines important details regarding the Data Transfer Facility
 services: enablement
 author: Steve Hall
-reviewer:
-lastreviewed: 23/07/2018 11:55:40
+reviewer: Edward Corfield
+lastreviewed: 24/03/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -27,7 +27,7 @@ Our Data Transfer Facility enables customers to use the secure network connectio
 
 It's useful if, for example, you don't have enough network bandwidth, or you're waiting for appropriately accredited connectivity to be installed.
 
-If you want to bring in more than 500GiB of VMs, we also offer a Mass Transfer facility, see the appropriate Service Scope for [NAS](enbl-sco-mtf-nas.md) or [HDD](enbl-sco-mtf-hdd.md).
+If you want to bring in more than 500GiB of VMs, we also offer a [Mass Transfer facility](enbl-sco-mtf-nas.md).
 
 ## Booking and booking conditions
 
@@ -76,8 +76,6 @@ You'll have access to a PC connected to our Assured or Elevated platform, as spe
 It's expected that you or a third party working on your behalf will be able to complete the data transfer or system management activities without any help from UKCloud.
 
 To help make your day comfortable, the Data Transfer Facility has:
-
-- An Xbox One - you can bring your own compatible games
 
 - Tea and coffee making facilities, a microwave and a fridge in the kitchen next door
 
@@ -177,13 +175,13 @@ FTPS (Data) - 989 | &nbsp; | &nbsp;
 
 By default the Assured data upload PC is connected to your environment's internet gateway. You can connect from the PC to an external IP in your environment. The IP address of the data upload pc can be added to a firewall rule in your environment to secure access
 
-Access to environments on other networks (e.g HSCN or PSN) will require additional configuration. Please discuss this with your Cloud Delivery Manager or TAM if required
+Access to environments on other networks (e.g HSCN or PSN) will require additional configuration. Please discuss this with your Service Delivery Manager if required
 
 ## Platform performance
 
 The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.
 
-For a transfer time calculator, go to <http://techinternets.com/copy_calc?do>.
+For a transfer time calculator, go to <https://techinternets.com/copy_calc?do>.
 
 If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TB of data in a day.
 
@@ -244,4 +242,4 @@ If the issue doesn't directly relate to the Data Transfer Facility, you'll need 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

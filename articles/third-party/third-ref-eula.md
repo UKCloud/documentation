@@ -1,5 +1,5 @@
 ---
-title: 3rd party software EULA information | UKCloud Ltd
+title: 3rd party software EULA information
 description: Provides links to EULA information for 3rd party software
 services: third-party
 author: Sue Highmoor
@@ -23,11 +23,11 @@ Product | EULA
 --------|-----
 Cisco AppDynamics | <https://www.appdynamics.com/download-eula/>
 CommVault Complete Backup & Recovery | <https://documentation.commvault.com/commvault/v11_sp9/article?p=features/misc/eula.htm>
+Hystax Acura Cloud Migration | <https://hystax.com/terms-of-use/>
 HyTrust DataControl | <https://www.hytrust.com/resources/hytrust-datacontrol-eula/>
 Moogsoft AIOps | <https://www.moogsoft.com/eula/>
 Portworx Enterprise | <https://portworx.com/end-user-license-agreement/>
-XQ Cyber CyberScore | N/A
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

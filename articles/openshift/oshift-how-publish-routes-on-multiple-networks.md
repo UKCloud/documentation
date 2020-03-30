@@ -1,10 +1,10 @@
 ---
-title: How to publish application routes to multiple networks | UKCloud Ltd
+title: How to publish application routes to multiple networks
 description: Describes the process and commands required to publish routes to different external networks available from an OpenShift cluster.
 services: openshift
 author: Steve Mulholland
-reviewer:
-lastreviewed: 21/12/2018 13:49:11
+reviewer: Gareth Ellner
+lastreviewed: 29/01/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,11 +19,11 @@ toc_mdlink: oshift-how-publish-routes-on-multiple-networks.md
 
 ## Overview
 
-This article provides instructions on how to make use of multiple external networks from within an OpenShift cluster. If you've requested an OpenShift cluster with multple networks from UKCloud you'll have multiple data planes - usually one for the internet and one for the community network you’ve requested be added to your deployment. Building applications that listen on these networks is relatively straightforward, but requires some specific configuration to be put in place on your application routes. This guide should help explain how you go about exposing your application on the relevant networks.
+This article provides instructions on how to make use of multiple external networks from within an OpenShift cluster. If you've requested an OpenShift cluster with multiple networks from UKCloud you'll have multiple data planes - usually one for the internet and one for the community network you’ve requested be added to your deployment. Building applications that listen on these networks is relatively straightforward but requires some specific configuration to be put in place on your application routes. This guide should help explain how you go about exposing your application on the relevant networks.
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to and a working knowledge of `oc`, the OpenShift command-line client (CLI). For more information, see OpenShift's [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html).
+To complete the steps in this guide you must have access to and a working knowledge of `oc`, the OpenShift command-line client (CLI). For more information, see OpenShift's [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html).
 
 
 ## High level overview
@@ -46,7 +46,7 @@ We'll be using some basic example applications to demonstrate publishing routes 
 
 ### Scenario 1 - Traffic from the internet to application-1
 
-First we'll create a project called `routersharding` and the three applications to demonstrate with:
+First, we'll create a project called `routersharding` and the three applications to demonstrate with:
 
 ```
 $ oc new-project routersharding
@@ -346,10 +346,10 @@ The above shows both the routes we've created in this demo now on `router-second
 
 ## Further reading
 
-OpenShift documentation on router sharding: https://docs.openshift.com/container-platform/3.9/architecture/networking/routes.html#router-sharding
+OpenShift documentation on router sharding: https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html#router-sharding
 
 OpenShift blog post on router sharding: https://blog.openshift.com/openshift-router-sharding-for-production-and-development-traffic/
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

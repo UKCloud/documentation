@@ -1,10 +1,10 @@
 ---
-title: Synchronous Protection FAQs | UKCloud Ltd
+title: Synchronous Protection FAQs
 description: Frequently asked questions for Synchronous Protection
 services: vmware
 author: Matt Warner
-reviewer:
-lastreviewed: 02/08/2018 16:00:52
+reviewer: Guy Martin
+lastreviewed: 22/03/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -103,4 +103,4 @@ Synchronous Protection with Geo-resilience comes with 14-day Snapshot Protection
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for Journaling Protection | UKCloud Ltd
+title: Getting Started Guide for Journaling Protection
 description: Provides information to get up and running with Journaling Protection in UKCloud for VMware
 services: vmware
 author: Sue Highmoor
@@ -151,4 +151,4 @@ Protection solution.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

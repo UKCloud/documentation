@@ -1,10 +1,10 @@
 ---
-title: How to view your VMs in the UKCloud Portal | UKCloud Ltd
+title: How to view your VMs in the UKCloud Portal
 description: Shows how to view your virtual machines within the UKCloud portal
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: Sue Highmoor
+lastreviewed: 04/02/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,10 +20,7 @@ toc_mdlink: vmw-how-portal-view-vms.md
 
 ## Overview
 
-The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps, edge gateways and bandwidth monitoring.
-
-If your system administrator has enabled billing for your account, you can also look at near real-time costs; both current month-to-date and an estimated monthly cost. You can see costs on a per-VM and per-vApp
-basis.
+The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps and bandwidth monitoring.
 
 ## Accessing the My VMs page
 
@@ -41,13 +38,13 @@ To go to the My VMs page:
 
     ![My VMs tab in the UKCloud Portal](images/ptl-tab-myvms.png)
 
-4. From the **Currently viewing for VDC** list, select the virtual data centre (VDC) you want to work with to see its settings and, if billing is enabled, estimated and actual costs.
+4. From the **Currently viewing for VDC** list, select the virtual data centre (VDC) you want to work with to see its settings.
 
     ![Select VDC](images/ptl-myvms-select-vdc.png)
 
 ## Viewing information about vApps
 
-The **vApps** tab shows a list of the vApps within the selected VDC. The information displayed includes the number of VMs within the vApp and the cost associated with the vApp, which can be shown in either month-to-date or estimated monthly cost.
+The **vApps** tab shows a list of the vApps within the selected VDC. The information displayed includes the number of VMs within the vApp.
 
 ![vApps tab of the My VMs page](images/ptl-myvms-vapps.png)
 
@@ -65,9 +62,9 @@ The **vApps** tab shows a list of the vApps within the selected VDC. The informa
 
     In the example above, there is no backup policy for these VMs so the backup icon is greyed out. If backups are successful there will be a green icon, if backups have failed there will be a red icon.
 
-5. Click a VM name to see additional information about it, including backup logs.
-
     If you need to manage your backups for a VM, click the **Manage** button. For more information, see [*How to manage Snapshot Protection for your VMs*](vmw-how-manage-snapshot-protection.md).
+
+5. Click a VM name to see additional information about it, including backup logs.
 
 6. Click **Back to vApps** to return to the main *My VMs* page.
 
@@ -85,24 +82,12 @@ The **VMs** tab displays a list of all VMs within your environment.
 
 3. Click **Back to VMs** to return to the main *My VMs* page.
 
-## Viewing information about edge gateways
-
-The **Edge Gateways**  tab shows the version of the edge gateways in your VDCs.
-
-1. Select the **Edge Gateway** tab.
-
-2. From the **Select Edge** list, select the edge gateway you want to look at.
-
-3. The **VM version** field shows the version of the selected edge gateway.
-
-4. For information about how to upgrade your edge gateway to the latest version, see [*How to upgrade your edge gateway*](vmw-how-upgrade-edge.md)
-
 ## Viewing bandwidth monitoring information
 
 The **Bandwidth Monitoring** tab displays bandwidth statistics for the edge gateways within your VDCs.
 
 > [!NOTE]
-> Bandwidth Monitoring is not available on the Elevated OFFICIAL security platform.
+> Bandwidth Monitoring is not available for the Elevated OFFICIAL security domain.
 
 1. Select the **Bandwidth Monitoring** tab.
 
@@ -119,4 +104,4 @@ For more information about snapshot protection, see [*How to manage Snapshot Pro
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

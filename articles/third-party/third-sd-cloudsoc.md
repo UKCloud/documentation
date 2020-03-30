@@ -1,8 +1,10 @@
 ---
-title: CloudSOC from UKCloud Service Definition | UKCloud Ltd
+title: CloudSOC from UKCloud Service Definition
 description: Provides an overview of what is provided by the CloudSOC from UKCloud service
 services: third-party
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: CloudSOC
 toc_sub1: 
 toc_sub2:
@@ -75,7 +77,7 @@ Have the alerts from your monitored estate triaged and managed by highly trained
 
 ## Pricing and packaging
 
-Pricing from £1.96 per asset per month. Full pricing with all options including licensing and connectivity is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf). Customer will need to also purchase the appropriate UKCloud infrastructure to host the CloudSOC solution.
+Pricing from £1.96 per asset per month. Full pricing with all options including licensing and connectivity is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide). Customer will need to also purchase the appropriate UKCloud infrastructure to host the CloudSOC solution.
 
 ## Free trial
 
@@ -99,4 +101,4 @@ For full terms and conditions including onboarding and responsibilities, please 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

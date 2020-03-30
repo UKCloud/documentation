@@ -1,5 +1,5 @@
 ---
-title: Private Cloud Service Scope | UKCloud Ltd
+title: Private Cloud Service Scope
 description: Outlines important details regarding Private Cloud
 services: private-cloud
 author: Sue Highmoor
@@ -59,7 +59,7 @@ When you have accepted the design and provided a purchase order, we'll start to 
 
 Your compute solution can be:
 
-- Based on VMware, OpenStack, Azure Stack or Oracle
+- Based on VMware, OpenStack, Azure Stack Hub or Oracle
 
 - Located in either or both of our two sites - Farnborough and Corsham, or in a CHDC
 
@@ -167,7 +167,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
 - Providing you with visibility of capacity utilisation to ensure capacity planning can be effectively performed
 
-- Your assigned Technical Account Manager will attend any required service reviews and project progress calls that you need
+- Your assigned Service Delivery Manager will attend any required service reviews and project progress calls that you need
 
 - Notifying you of any maintenance windows and agreeing a suitable time to implement
 
@@ -219,8 +219,8 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
 ## To progress further
 
-For further information, contact your Technical Account Manager to request more information or to place an order.
+For further information, contact your Service Delivery Manager to request more information or to place an order.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

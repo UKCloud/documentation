@@ -1,5 +1,5 @@
 ---
-title: How to build a virtual machine with UKCloud for VMware | UKCloud Ltd
+title: How to build a virtual machine with UKCloud for VMware
 description: Describes how to get up and running with UKCloud for VMware by showing you how to use vCloud Director to quickly spin up a virtual machine from scratch and connect it to the internet (Assured OFFICIAL security domain only)
 services: vmware
 author: Sue Highmoor
@@ -38,7 +38,7 @@ You should have received your UKCloud Portal login credentials from your Portal 
 
 You should have created a compute service and VDC within your account. For more information, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md#creating-your-ukcloud-for-vmware-estate).
 
-You should also have created an edge gateway, which enables communication between your VDC and the outside world. For more information, see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md). The steps in this guide assume that you've converted your edge gateway to an advanced edge. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
+You should also have created an edge gateway, which enables communication between your VDC and the outside world. For more information, see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md).
 
 ## Create a network
 
@@ -319,4 +319,4 @@ If you want a more comprehensive guide to the platform, take a look at the [*vCl
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

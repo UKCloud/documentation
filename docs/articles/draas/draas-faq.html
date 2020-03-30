@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Disaster Recovery as a Service FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Disaster Recovery as a Service FAQs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Disaster Recovery as a Service FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="title" content="Disaster Recovery as a Service FAQs ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -97,100 +97,38 @@
 <h3 id="what-is-disaster-recovery-as-a-service">What is Disaster Recovery as a Service?</h3>
 <p>Disaster Recovery as a Service (powered by Zerto) can help you improve organisational resilience. It enables rapid migration of applications between your local VMware or Hyper-V based VMs and UKCloud for VMware disaster recovery-enabled regions.</p>
 <h3 id="can-i-protect-parts-of-my-application">Can I protect parts of my application?</h3>
-<p>Yes, you can configure your protection groups, which can include multiple VMs. This allows you to protect whole applications or just the parts that are mission critical and you just can't afford to lose. Each protection group has synchronised recovery points to simplify your recovery processes.</p>
+<p>Yes, you can configure your protection groups, which can include multiple VMs. This enables you to protect whole applications or just the parts that are mission critical and you just can't afford to lose. Each protection group has synchronised recovery points to simplify your recovery processes.</p>
 <h3 id="can-i-carry-out-a-test-failover">Can I carry out a test failover?</h3>
 <p>Yes, you can test running applications on the UKCloud platform to ensure failover is working as intended. Please note that these failover tests will not affect your active applications.</p>
 <h3 id="what-is-the-cost-to-test-failover">What is the cost to test failover?</h3>
-<p>When you perform a test recovery, any VMs recovered are charged at the prices associated with recovered VM sizes. See the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a> for details on VM prices. It is important to note that you will continue to be charged as long as the failover test is active. Once the failover test is stopped, you will no longer be charged for the VMs.</p>
+<p>When you perform a test recovery, any VMs recovered are charged at the prices associated with recovered VM sizes. See the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a> for details on VM prices. It's important to note that you will continue to be charged as long as the failover test is active. Once the failover test is stopped, you will no longer be charged for the VMs.</p>
 <h3 id="what-vmware-and-hyper-v-versions-are-supported-for-recovery-on-ukcloud">What VMware and Hyper-V versions are supported for recovery on UKCloud?</h3>
-<p>The following table lists the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (4.5U4) on the UKCloud platform:</p>
-<table>
-<thead>
-<tr>
-<th>Product</th>
-<th>Supported Version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Management Plane</strong></td>
-<td> </td>
-</tr>
-<tr>
-<td>VMWare vCenter</td>
-<td>4.0U1 -- 6.0U2</td>
-</tr>
-<tr>
-<td>Microsoft SCVMM</td>
-<td>2012 R2 and Server Core: Update  Rollup 6-11 (recommended) 2012 R2 and Server Core: RTM</td>
-</tr>
-<tr>
-<td><strong>Hosts</strong></td>
-<td> </td>
-</tr>
-<tr>
-<td>VMWare ESX/ESXi</td>
-<td>4.0U1-4.0U3, 4.0U4, 4.1-6.0U1,6.0U2</td>
-</tr>
-<tr>
-<td>Microsoft Hyper-V</td>
-<td>2012 R2 and Server Core</td>
-</tr>
-<tr>
-<td><strong>Virtual Machines Hardware Version</strong></td>
-<td> </td>
-</tr>
-<tr>
-<td>VMWare</td>
-<td>Up to Version 10</td>
-</tr>
-<tr>
-<td>Hyper-V</td>
-<td>Generation 1&amp;2</td>
-</tr>
-<tr>
-<td><strong>Disaster Recovery as a Service</strong></td>
-<td> </td>
-</tr>
-<tr>
-<td><em>Connectivity</em></td>
-<td> </td>
-</tr>
-<tr>
-<td>Full Duplex Internet connection</td>
-<td>5Mb/s minimum</td>
-</tr>
-<tr>
-<td>IPSEC VPN</td>
-<td>NA</td>
-</tr>
-</tbody>
-</table>
+<p>For information about the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform, see the <a href="https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf">Interoperability Matrix for All Zerto Software Versions</a>.</p>
 <p>The hypervisor management plane (such as VMware vCenter server) must be installed for Zerto to be compatible with your environment - this means that free hypervisor versions may not be supported.</p>
 <h3 id="is-the-zerto-protection-technology-available-for-physical-servers">Is the Zerto protection technology available for physical servers?</h3>
 <p>The Zerto technology that underpins the Disaster Recovery as a Service service only supports virtual machines. Physical hardware is not part of the product support.</p>
-<h3 id="is-the-zerto-license-included">Is the Zerto license included?</h3>
+<h3 id="is-the-zerto-licence-included">Is the Zerto licence included?</h3>
 <p>Yes, all licensing for Zerto used within Disaster Recovery as a Service is included.</p>
 <p>The price of Disaster Recovery as a Service is based on the storage tier that the VM is being replicated to. For more information please see the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
 <h3 id="what-connectivity-options-do-i-have">What connectivity options do I have?</h3>
-<p>All UKCloud connectivity options are available including Internet, PSN, HSCN, Janet and RLI.</p>
+<p>All UKCloud connectivity options are available including internet, PSN, HSCN, Janet and RLI.</p>
 <h3 id="can-i-replicate-into-the-ukcloud-elevated-environment">Can I replicate into the UKCloud Elevated environment?</h3>
 <p>If you currently have a PSN connection in your primary site, then you would be able to replicate over PSN into the UKCloud Elevated environment. However, if you do not have a PSN connection at your primary site but would like to replicate into the Elevated environment, you can use an encrypted private line to do so. Contact your Cloud Architect for more details on this.</p>
-<h3 id="how-do-i-invoke-a-recovery-if-my-zerto-console-becomes-unavailable">How do I invoke a recovery if my Zerto console becomes unavailable?</h3>
-<p>Once the initial configuration has been done using the Zerto Portal on the customer infrastructure, all additional configurations and management can be done using the Zerto Portal within the UKCloud Portal which includes invoking failover and any testing.</p>
+<h3 id="how-do-i-invoke-a-recovery-if-my-local-zerto-console-becomes-unavailable">How do I invoke a recovery if my local Zerto console becomes unavailable?</h3>
+<p>Once the initial configuration has been done using the Zerto Portal on the customer infrastructure, all additional configurations and management, including invoking failover and any testing, can be done in the UKCloud target environment, accessing the Zerto Portal via the UKCloud Portal.</p>
 <h3 id="is-there-a-way-to-include-appliance-storage">Is there a way to include appliance storage?</h3>
 <p>Disaster Recovery as a Service addresses server-attached disks, however for appliance storage this is not currently possible. The Zerto technology will be able to replicate if the storage (file or block) is presented to a VM as a virtual disk.</p>
 <h3 id="how-is-it-billed">How is it billed?</h3>
-<p>The pricing for Disaster Recovery as a Service is simple. You only pay for the data you have allocated to your local VMs. So, for example if your existing VMs use 100GiB of UKCloud protected storage, that's all you'll pay UKCloud to protect based on the Tier of storage and retention period chosen.</p>
+<p>The pricing for Disaster Recovery as a Service is simple. You only pay for the data you have allocated to your local VMs. So, for example if your existing VMs use 100GiB of UKCloud protected storage, that's all you'll pay UKCloud to protect based on the tier of storage and retention period chosen.</p>
 <h3 id="how-do-i-modify-replication-in-the-ukcloud-elevated-environment">How do I modify replication in the UKCloud Elevated environment?</h3>
 <p>Zerto replication to the UKCloud Assured environment can be controlled from the internet-facing Zerto Portal, however replication into the UKCloud Elevated environment can only be controlled via the Elevated Zerto Portal. To access the Elevated Zerto Portal, you need to be connected to it via the PSN, RLI, private encrypted connection or our Secure Remote Access (SRA) service.</p>
 <h3 id="does-ukcloud-install-the-zerto-software-in-my-data-centre">Does UKCloud install the Zerto software in my data centre?</h3>
 <p>No, you are responsible for the installation and configuration of the Zerto software within your data centre. Additionally, you must ensure that the software version of Zerto running locally is the same as that running within UKCloud.</p>
-<p>UKCloud will make the appropriate Zerto software versions available via the Knowledge Centre.</p>
+<p>UKCloud will make the appropriate Zerto software versions available.</p>
 <h3 id="can-i-failback-to-my-own-data-centre-or-third-party-data-centre">Can I failback to my own data centre or third party data centre?</h3>
-<p>Yes, once you have tested or performed a live failover you can failback onto your own infrastructure using the self-service Zerto portal.</p>
+<p>Yes, once you've tested or performed a live failover you can failback onto your own infrastructure using the self-service Zerto Portal.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -218,7 +156,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -227,7 +165,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -235,12 +173,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -250,5 +195,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

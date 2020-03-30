@@ -1,5 +1,5 @@
 ---
-title: How to convert a virtual machine to use managed disks using PowerShell | UKCloud Ltd
+title: How to convert a virtual machine to use managed disks using PowerShell
 description: Provides help for converting a virtual machine from unmanaged to managed disks on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -27,14 +27,14 @@ For more information, see [Introduction to Azure managed disks](https://docs.mic
 The following article shows you how to convert a virtual machine from unmanaged to managed disks on UKCloud for Microsoft Azure.
 
 > [!WARNING]
-> At the time of writing, the [ConvertTo-AzureRmVMManagedDisk](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/convertto-azurermvmmanageddisk?view=azurermps-6.13.0) cmdlet is not supported on Azure Stack and will result in your VM becoming unmanageable. Follow the process below to convert your unmanaged disks safely.
+> At the time of writing, the [ConvertTo-AzureRmVMManagedDisk](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/convertto-azurermvmmanageddisk?view=azurermps-6.13.0) cmdlet is not supported on Azure Stack Hub and will result in your VM becoming unmanageable. Follow the process below to convert your unmanaged disks safely.
 
 > [!WARNING]
 > Running the script below will result in downtime for your virtual machine as it needs to be removed then recreated.
 
 ## Prerequisites
 
-Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
+Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md).
 
 ## Converting a virtual machine to use managed disks
 
@@ -44,7 +44,7 @@ Enter details below to provide values for the variables in the following script 
 
 | Variable name   | Variable description                                               | Input            |
 |-----------------|--------------------------------------------------------------------|------------------|
-| \$ArmEndpoint   | The Azure Resource Manager endpoint for Azure Stack                | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$ArmEndpoint   | The Azure Resource Manager endpoint for Azure Stack Hub                | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$RGName        | Name of the resource group that the VM exists in                   | <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$VMName        | Name of the virtual machine to convert to use managed disks        | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
 
@@ -63,7 +63,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 ## Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input Variables
@@ -131,4 +131,4 @@ Write-Output -InputObject "The virtual machine has been created successfully"
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

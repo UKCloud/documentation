@@ -1,5 +1,5 @@
 ---
-title: How to remove access rights from Single Sign-On users | UKCloud Ltd
+title: How to remove access rights from Single Sign-On users
 description: Describes the process for removing access from Single Sign-On (SSO) users
 services: other
 author: Sue Highmoor
@@ -122,4 +122,4 @@ The process for using the IDAM API to remove access rights from an SSO user is a
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

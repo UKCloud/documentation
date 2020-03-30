@@ -1,5 +1,5 @@
 ---
-title: Secure Remote Access FAQs | UKCloud Ltd
+title: Secure Remote Access FAQs
 description: Frequently asked questions for Secure Remote Access
 services: sra
 author: Matt Warner
@@ -41,9 +41,35 @@ Yes. UKCloud SRA is available only to customers purchasing other UKCloud service
 
 The assurance requirements related to this service mean that we're unable to provide a trial for this service.
 
+### How are licence packs applied for each of my SRA instances?
+
+Licence packs are applied on a per-SRA basis; that is, if you have two separate SRA instances (for example, one per site), then you'd need to have two separate licence packs.
+
 ### Does UKCloud provide the managed devices for using the SRA service?
 
 No. We don't provide them, but we have partners who can provide the managed devices and other services if required.
+
+### If I plan to use SRA and a Walled Garden, can I use a single Walled Garden for both?
+
+It's best to use two separate Walled Gardens within the Cross Domain Secure Zone, to ensure compliance requirements are met.
+
+You can design a solution to use a single Walled Garden infrastructure, but you're likely to require a more intensive review during the assurance wrap process.
+
+You'll still be billed for both services.
+
+### Can I connect to multiple virtual data centres (VDCs) from a single Walled Garden?
+
+Yes. You only need to implement a single instance of SRA, as a bastion host can provide gateway services to more than one VDC. The assurance wrap process will outline the scope of connected services.
+
+If you want to add additional services to your SRA service, you'll need to review your existing compliance documentation via the assurance wrap.
+
+### Can I use the UKCloud's SRA solution from outside the UK?
+
+No. The nature of the UKCloud solution is that you must be using it from known endpoints inside the UK.
+
+If you have international access requirements, please contact your account manager to discuss alternative options.
+
+## Application process
 
 ### What is the process for applying for an SRA solution?
 
@@ -153,26 +179,6 @@ When the SRA service is in operation, you are responsible for ensuring continuin
 
 The UKCloud SIRO is ultimately responsible for deciding which solutions and configurations are allowed.
 
-### If I plan to use SRA and a Walled Garden, can I use a single Walled Garden for both?
-
-It's best to use two separate Walled Gardens within the Cross Domain Secure Zone, to ensure compliance requirements are met.
-
-You can design a solution to use a single Walled Garden infrastructure, but you're likely to require a more intensive review during the assurance wrap process.
-
-You'll still be billed for both services.
-
-### Can I connect to multiple virtual data centres (VDCs) from a single Walled Garden?
-
-Yes. You only need to implement a single instance of SRA, as a bastion host can provide gateway services to more than one VDC. The assurance wrap process will outline the scope of connected services.
-
-If you want to add additional services to your SRA service, you'll need to review your existing compliance documentation via the assurance wrap.
-
-### Can I use the UKCloud's SRA solution from outside the UK?
-
-No. The nature of the UKCloud solution is that you must be using it from known endpoints inside the UK.
-
-If you have international access requirements, please contact your account manager to discuss alternative options.
-
 ## Certificates
 
 ### How long do SRA certificates last for?
@@ -193,7 +199,7 @@ For renewals, it's important you give us at least two weeks' notice to prevent a
 
 Yes. To renew or revoke your certificates in bulk, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke multiple SRA Certificates" option.
 
-Attach the Secure Remote Access bulk renewal/revoke form containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.
+Attach the Secure Remote Access bulk renewal/revoke form (available [here](https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-172%20UKCloud%20SRAS%20form.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1601391869&Signature=6Ri2onNvL6EjyKq0paFznAl4PT4%3D)) containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.
 
 For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.
 
@@ -233,6 +239,14 @@ SRA prices include:
 
 - A small VM to use as a bastion host (additional costs apply for larger or additional VMs)
 
+### How will I be billed for the licences I use?
+
+We use consumption-based billing for licences, and these are in packs. You'll be billed for the tier you use in that month (that is, the number of active certificates you have for your devices).
+
+For example, if you usually operate with nine certificates for an SRA instance, you'd be billed for a 10-pack of licences. If, one month, you run a project that requires three more certificates for additional engineers, you'd be billed for a 25-pack of licences for that month. When you go back to nine certificates for your usual engineer access, you'd go back to being billed for a 10-pack of licences.
+
+For more information about the different licence packs, see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+
 ## Security
 
 ### Why does use of CPA-approved solutions to access the UKCloud Elevated OFFICIAL environment via the internet require approval by the UKCloud SIRO?
@@ -267,4 +281,4 @@ Consider PSN-compliant remote access services if you require access to the broad
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: UKCloud Cross Domain Security Zone application process | UKCloud Ltd
+title: UKCloud Cross Domain Security Zone application process
 description: Outlines the application process for the UKCloud Cross Domain Security Zone
 services: cdsz
 author: Sue Highmoor
@@ -41,7 +41,7 @@ The following table provides more detail about each stage:
 
 Stage | Name | Description
 ----- | ---- | -----------
-1 | Initial Contact | Customer contacts UKCloud to register interest in CDSZ service. This can be through [My Calls](https://portal.skyscapecloud.com/support/ivanti) or direct contact with a Sales representative, Technical Account Manager (TAM) or Cloud Architect.
+1 | Initial Contact | Customer contacts UKCloud to register interest in CDSZ service. This can be through [My Calls](https://portal.skyscapecloud.com/support/ivanti) or direct contact with a Sales representative, Service Delivery Manager or Cloud Architect.
 2a | Self-Assessment | Customer creates document pack to illustrate the solution design and provide evidence that all necessary sign-offs and compliance have been obtained.
 2b | Assurance Wrap Review | Customer creates document pack with assistance from the UKCloud compliance team and Cloud Architect.
 3 | Design Review | Customer presents the technical solution to Cloud Architect for advice and feedback.
@@ -68,9 +68,9 @@ When you apply for a CDSZ service, you must provide the following documents to s
 
 If you want to use the CDSZ, you can initiate the application process in one of two ways:
 
-- Raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti), specifying the relevant CDSZ product (Walled Garden or Secure Remote Access). One of our Sales representatives, TAMs, or Cloud Architects will arrange a call to discuss your requirements and then close the Service Request.
+- Raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti), specifying the relevant CDSZ product (Walled Garden or Secure Remote Access). One of our Sales representatives, Service Delivery Managers, or Cloud Architects will arrange a call to discuss your requirements and then close the Service Request.
 
-- Contact one of our Sales representatives, TAMs, or Cloud Architects directly to arrange a call to discuss your requirements.
+- Contact one of our Sales representatives, Service Delivery Managers, or Cloud Architects directly to arrange a call to discuss your requirements.
 
 During your initial conversation, our Cloud Architect will discuss your proposed implementation and help determine the best approach for your situation:
 
@@ -141,7 +141,7 @@ When your service has been provisioned, you can implement your proposed solution
 
 ## Stage 6: On-going compliance
 
-On an annual basis, UKCloud requires evidence of on-going compliance. You will be contacted by your Technical Account Manager (TAM) to review the existing documents and inform us if any of the details or approvals have changed.
+On an annual basis, UKCloud requires evidence of on-going compliance. You will be contacted by your Service Delivery Manager to review the existing documents and inform us if any of the details or approvals have changed.
 
 If you're connecting to a PSN Protected enabled VDC, proof of PSN compliance (a copy of PSN CoCo or PSN CoP) must be provided on a yearly basis.
 
@@ -151,4 +151,4 @@ If, after examination of the existing documents, you identify that there have be
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

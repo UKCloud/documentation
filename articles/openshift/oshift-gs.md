@@ -1,10 +1,10 @@
 ---
-title: Getting Started Guide for UKCloud for OpenShift | UKCloud Ltd
+title: Getting Started Guide for UKCloud for OpenShift
 description: Provides information to get up and running with UKCloud for OpenShift
 services: openshift
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: Kieran O'Neill
+lastreviewed: 12/11/2019 16:34:00
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -61,7 +61,7 @@ containers.
 
 ![OpenShift pods and containers](images/oshift-pods-containers.png)
 
-**OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/3.9/architecture/index.html) and [*Container Security Guide*](https://docs.openshift.com/container-platform/3.9/security/index.html)
+**OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/3.11/architecture/index.html) and [*Container Security Guide*](https://docs.openshift.com/container-platform/3.11/security/index.html)
 
 ## Before you begin
 
@@ -71,13 +71,13 @@ As part of your onboarding, UKCloud will provide you with a URL and credentials 
 
 In addition, we recommend the installation of the OpenShift CLI on your device.
 
-**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html)
+**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html)
 
 ## Initial environment
 
-UKCloud will provision you with an OpenShift Foundation Pack, providing you with 32GiB of container resources to deploy your applications.
+UKCloud will provision you with an OpenShift Foundation Pack, providing 48GiB of container resources to run the management applications and 48GiB of container resources to run the management services.
 
-You can expand your cluster by requesting Runtime Packs. Runtime Packs come in three sizes: small (16GiB 2vCPU), medium (32GiB 4vCPU) and large (64GiB 8vCPU) and are deployed by UKCloud via a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+To deploy applications to your cluster you'll need to request Runtime Packs at deployment time. Runtime Packs come in three sizes: small (16GiB 2vCPU), medium (32GiB 4vCPU) and large (64GiB 8vCPU). If you'd like to expand an existing cluster you can request this via a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Using the web console
 
@@ -90,7 +90,7 @@ If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later,
 
 If your OpenShift cluster uses an earlier version of OCP, you will need to use your separate OpenShift credentials to log in to the console.
 
-**OpenShift documentation:** [*Web Console Walkthrough*](https://docs.openshift.com/container-platform/3.9/getting_started/developers_console.html)
+**OpenShift documentation:** [*Web Console Walkthrough*](https://docs.openshift.com/container-platform/3.11/getting_started/developers_console.html)
 
 ## Using the command-line interface
 
@@ -101,33 +101,33 @@ If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later,
 Alternatively, you can obtain the CLI login command (including login token) from the OpenShift console by clicking your user name and selecting **Copy Login Command**.
 
 > [!NOTE]
-> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Service Accounts*](https://docs.openshift.com/container-platform/3.9/dev_guide/service_accounts.html) documentation.
+> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Service Accounts*](https://docs.openshift.com/container-platform/3.11/dev_guide/service_accounts.html) documentation.
 
-**OpenShift documentation:** [*Basic Walkthrough Using the CLI*](https://docs.openshift.com/container-platform/3.9/getting_started/developers_cli.html) and [*CLI Reference*](https://docs.openshift.com/container-platform/3.9/cli_reference/index.html)
+**OpenShift documentation:** [*Basic Walkthrough Using the CLI*](https://docs.openshift.com/container-platform/3.11/getting_started/developers_cli.html) and [*CLI Reference*](https://docs.openshift.com/container-platform/3.11/cli_reference/index.html)
 
 ## Using the API
 
-The OpenShift Container Platform distribution of Kubernetes includes the Kubernetes v1 REST API and the OpenShift v1 REST API. These are RESTful APIs accessible via HTTP(s) on the OpenShift Container Platform master servers.
+ The OpenShift Container Platform distribution of Kubernetes includes the Kubernetes v1 REST API and the OpenShift v1 REST API. These are RESTful APIs accessible via HTTPS on the OpenShift Container Platform master servers.
 
 These REST APIs can be used to manage end-user applications, the cluster, and the users of the cluster.
 
-**OpenShift documentation:** [*REST API Reference*](https://docs.openshift.com/container-platform/3.9/rest_api/index.html)
+**OpenShift documentation:** [*REST API Reference*](https://docs.openshift.com/container-platform/3.11/rest_api/index.html)
 
 ## Developing and deploying applications
 
 OpenShift Container Platform is designed for building and deploying applications. You can begin your application's development from scratch using OpenShift Container Platform directly or develop locally then use OpenShift Container Platform to deploy your fully developed application.
 
-**OpenShift documentation:** [*Developer Guide*](https://docs.openshift.com/container-platform/3.9/dev_guide/index.html)
+**OpenShift documentation:** [*Developer Guide*](https://docs.openshift.com/container-platform/3.11/dev_guide/index.html)
 
 ## Creating and using images
 
 Containers in OpenShift Container Platform are based on Docker-formatted container images. An image is a binary that includes all the requirements for running a single container, as well as metadata describing its needs and capabilities. Containers only have access to resources defined in the image unless you give the container additional access when creating it.
 
-**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/3.9/creating_images/index.html) and [*Using images*](https://docs.openshift.com/container-platform/3.9/using_images/index.html)
+**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/3.11/creating_images/index.html) and [*Using images*](https://docs.openshift.com/container-platform/3.11/using_images/index.html)
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform 3.9 Documentation*](https://docs.openshift.com/container-platform/3.9/welcome/index.html)
+In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform 3.11 Documentation*](https://docs.openshift.com/container-platform/3.11/welcome/index.html)
 
 ## Glossary
 
@@ -157,4 +157,4 @@ This section provides a glossary of terms specific to UKCloud for OpenShift.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

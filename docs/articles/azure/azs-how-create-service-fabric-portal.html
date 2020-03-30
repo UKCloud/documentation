@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a Service Fabric cluster using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a Service Fabric cluster using the UKCloud Azure Stack Hub portal </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a Service Fabric cluster using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="title" content="How to create a Service Fabric cluster using the UKCloud Azure Stack Hub portal ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,17 +91,17 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-service-fabric-cluster-using-the-ukcloud-azure-stack-portal">How to create a Service Fabric cluster using the UKCloud Azure Stack portal</h1>
+<h1 id="how-to-create-a-service-fabric-cluster-using-the-ukcloud-azure-stack-hub-portal">How to create a Service Fabric cluster using the UKCloud Azure Stack Hub portal</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Azure Stack Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers. Service Fabric also addresses the significant challenges in developing and managing cloud native applications. Developers and administrators can avoid complex infrastructure problems and focus on implementing mission-critical, demanding workloads that are scalable, reliable, and manageable. Service Fabric represents the next-generation platform for building and managing these enterprise-class, tier-1, cloud-scale applications running in containers.</p>
-<p>The following process shows you how to setup a Service Fabric cluster using the Azure Stack portal.</p>
+<p>Azure Stack Hub Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers. Service Fabric also addresses the significant challenges in developing and managing cloud native applications. Developers and administrators can avoid complex infrastructure problems and focus on implementing mission-critical, demanding workloads that are scalable, reliable, and manageable. Service Fabric represents the next-generation platform for building and managing these enterprise-class, tier-1, cloud-scale applications running in containers.</p>
+<p>The following process shows you how to setup a Service Fabric cluster using the Azure Stack Hub portal.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.</p>
+<p>To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack Hub portal.</p>
 <h2 id="creating-a-new-key-vault">Creating a new key vault</h2>
 <p>Before creating a Service Fabric cluster, it is necessary to create a key vault to store the certificates for the cluster. These certificates are used in Service Fabric to provide authentication and encryption to secure various aspects of a cluster and its applications. You can find more information about these certificates <a href="https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-security#x509-certificates-and-service-fabric">here</a>.</p>
 <ol>
-<li><p>Log in to the Azure Stack portal.</p>
+<li><p>Log in to the Azure Stack Hub portal.</p>
 <p>For more detailed instructions, see the <a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a>.</p>
 </li>
 <li><p>In the favourites panel, select <strong>Create a resource</strong>.</p>
@@ -110,7 +110,7 @@
 <li><p>In the <em>New</em> blade, select <strong>Security + Identity</strong>.</p>
 <p><img src="images/azs-browser-new-security.png" alt="Security option in New blade"></p>
 </li>
-<li><p>In the <em>New</em> blade, select <strong>Key Vault</strong>.</p>
+<li><p>In the <em>Security + Identity</em> blade, select <strong>Key Vault</strong>.</p>
 <p><img src="images/azs-browser-new-key-vault.png" alt="New Key Vault"></p>
 </li>
 <li><p>In the <em>Create key vault</em> blade, enter the following information:</p>
@@ -121,7 +121,7 @@
 </li>
 <li><p><strong>Resource Group</strong> - Select an existing resource group, or create a new one by typing a name for your new resource group.</p>
 </li>
-<li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the location of the Azure Stack.</p>
+<li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the Azure Stack Hub region.</p>
 </li>
 <li><p><strong>Access policies</strong> - Configure who can access the key vault and what permissions they have.</p>
 <p><img src="images/azs-browser-create-key-vault.png" alt="Create new key vault"></p>
@@ -136,7 +136,7 @@
 </ol>
 <h3 id="adding-a-certificate-to-the-key-vault">Adding a certificate to the key vault</h3>
 <ol>
-<li><p>Once the key vault has been deployed, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security + Identity</em> section.</p>
+<li><p>Once the key vault has been deployed, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security</em> section.</p>
 </li>
 <li><p>Select your key vault from the list.</p>
 </li>
@@ -169,11 +169,11 @@
 <h3 id="gathering-key-vault-and-certificate-information">Gathering key vault and certificate information</h3>
 <p>During configuration of the Service Fabric cluster, you must provide several details relating to the key vault and certificates. You must also configure access to the key vault for virtual machines and the Azure Resource Manager.</p>
 <ol>
-<li><p>Once you have deployed the key vault, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security + Identity</em> section.</p>
+<li><p>Once you have deployed the key vault, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security</em> section.</p>
 </li>
 <li><p>Select your key vault from the list.</p>
 </li>
-<li><p>In the <em>Settings</em> section of the key vault's blade, select <strong>Access Properties</strong>.</p>
+<li><p>In the <em>Settings</em> section of the key vault's blade, select <strong>Access policies</strong>.</p>
 </li>
 <li><p>On the <em>Access policies</em> page, click <strong>Click to show advanced access policies</strong>.</p>
 </li>
@@ -229,7 +229,7 @@
 </li>
 <li><p><strong>Resource Group</strong> - Select an existing resource group, or create a new one by typing a name for your new resource group. Note that to create a Service Fabric cluster, the resource group must contain no other resources.</p>
 </li>
-<li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the location of the Azure Stack.</p>
+<li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the Azure Stack Hub region.</p>
 </li>
 </ul>
 <p><img src="images/azs-browser-create-sf-basics.png" alt="Create Service Fabric cluster &gt; Basics"></p>
@@ -262,7 +262,7 @@
 <ul>
 <li><p><strong>Source Key Vault</strong> - The resource ID of the key vault that you gathered in the previous section. This should be in the format of <strong><code>/subscriptions/&lt;SubscriptionId&gt;/resourceGroups/&lt;ResourceGroupName&gt;/providers/Microsoft.KeyVault/vaults/&lt;VaultName&gt;</code></strong>.</p>
 </li>
-<li><p><strong>Cluster Certificate URL</strong> - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of <strong><code>https://&lt;VaultEndpoint&gt;/secrets/\&lt;SecretName&gt;/&lt;SecretVersion&gt;</code></strong>.</p>
+<li><p><strong>Cluster Certificate URL</strong> - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of <strong><code>https://&lt;VaultEndpoint&gt;/secrets/&lt;SecretName&gt;/&lt;SecretVersion&gt;</code></strong>.</p>
 </li>
 <li><p><strong>Cluster Certificate thumbprint</strong> - Cluster certificate thumbprint that you gathered earlier. For example, <strong><code>1742635FBCC5F9A442582516A7292523686DE3D7</code></strong>.</p>
 </li>
@@ -271,7 +271,7 @@
 </li>
 <li><p><strong>Server Certificate thumbprint</strong> - Server certificate thumbprint that you gathered earlier. For example, <strong><code>1742635FBCC5F9A442582516A7292523686DE3D7</code></strong>.</p>
 </li>
-<li><p><strong>Use Reverse Proxy Certificate</strong> - You may specify a SSL certificate to be used by the reverse proxy you have enabled. Doing so will cause the reverse proxy to communicate using HTTPS. If no certificate is specified, then the reverse proxy will communicate using HTTP instead.</p>
+<li><p><strong>Use Reverse Proxy Certificate</strong> - You may specify an SSL certificate to be used by the reverse proxy you have enabled. Doing so will cause the reverse proxy to communicate using HTTPS. If no certificate is specified, then the reverse proxy will communicate using HTTP instead.</p>
 </li>
 <li><p><strong>Admin Client Certificate Thumbprints</strong> - Comma separated list of admin client certificate thumbprints. For example, <strong><code>1742635FBCC5F9A442582516A7292523686DE3D7,0272251171BA32CEC7938A65B8A6A553AA2D3283</code></strong>.</p>
 </li>
@@ -287,7 +287,7 @@
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -315,7 +315,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -324,7 +324,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -332,12 +332,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -347,5 +354,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

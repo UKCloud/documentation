@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Snapshot Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Snapshot Protection FAQs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Snapshot Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="title" content="Snapshot Protection FAQs ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -145,7 +145,7 @@
 <h3 id="how-long-does-it-take-before-the-first-snapshot-is-taken">How long does it take before the first snapshot is taken?</h3>
 <p>The time it takes to add snapshot protection to a VM varies depending on how many other requests are in the queue. While the request is processed, the button in the <strong>Snapshot Protection</strong> column changes to an amber <strong>Processing</strong> button.</p>
 <p>When the process has completed, the button changes back to green and will indicate the snapshot policy you chose for the VM (<strong>14‑day</strong> or <strong>28‑day</strong>). If the process fails, the button changes to a red <strong>Failed</strong> button. In this situation, contact the UKCloud support team to resolve the issue.</p>
-<p>The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00am, but typically within minutes of the close of the backup window.</p>
+<p>The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.</p>
 <h3 id="can-i-change-the-snapshot-policy-for-my-vm-at-any-time">Can I change the snapshot policy for my VM at any time?</h3>
 <p>Yes, there are no restrictions. After your changes have been processed, they will be applied to the snapshot taken in the next backup window.</p>
 <h3 id="how-are-my-automated-vm-snapshots-restored">How are my automated VM snapshots restored?</h3>
@@ -175,9 +175,9 @@
 <p>For the steps required to do this, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
 <h3 id="what-type-of-data-is-the-automated-vm-snapshot-backup-solution-suitable-for">What type of data is the automated VM snapshot backup solution suitable for?</h3>
 <p>The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE and is available on both UKCloud platforms: Assured OFFICIAL (formerly IL2) and Elevated OFFICIAL (formerly IL3).</p>
-<h3 id="do-large-vms-2-tib-affect-snapshot-backups">Do large VMs (2 TiB+) affect snapshot backups?</h3>
-<p>Yes. Snapshot‑based backups are not supported for large VMs with high change rates, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up.</p>
-<p>You must take an alternative backup approach with VMs of this size.</p>
+<h3 id="do-large-vms-affect-snapshot-backups">Do large VMs affect snapshot backups?</h3>
+<p>For regions 1, 2, 7 or 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size.</p>
+<p>For regions 5 or 6, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.</p>
 <h3 id="can-i-restrict-the-automated-vm-snapshot-backup-to-specific-files-or-directories">Can I restrict the automated VM snapshot backup to specific files or directories?</h3>
 <p>No, this is not currently possible. You can implement your own protection solution if this is a requirement.</p>
 <h3 id="where-is-the-protected-data-stored">Where is the protected data stored?</h3>
@@ -202,7 +202,7 @@
 <h3 id="if-a-vm-is-deleted-how-long-will-existing-snapshot-backups-be-retained">If a VM is deleted, how long will existing snapshot backups be retained?</h3>
 <p>The UKCloud platform automates the deletion of backups as they reach their retention date. Therefore, 14 or 28 days after the VM is deleted, depending on your chosen profile, the last snapshot backup will automatically be removed from the platform and consequently be unavailable for restore.</p>
 <h3 id="how-and-when-am-i-notified-of-snapshot-backup-failures">How and when am I notified of snapshot backup failures?</h3>
-<p>Backup information, including failures, is updated daily on the UKCloud platform by 10:00am, but typically within minutes of the close of the backup window.</p>
+<p>Backup information, including failures, is updated daily on the UKCloud platform by 10:00, but typically within minutes of the close of the backup window.</p>
 <p>For the steps required to access the status of a VM's snapshot backup, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
 <p>Note that we do not presently provide real-time alerting on individual VMs.</p>
 <h3 id="what-is-the-process-for-dealing-with-failures">What is the process for dealing with failures?</h3>
@@ -224,11 +224,11 @@
 <li><p>We'll conduct an investigation into the snapshot backup failure, and take appropriate mitigation steps.</p>
 </li>
 <li><p>Should the failure persist, we may suggest a customer review to try to resolve the issue.</p>
-<p>If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Technical Account Manager or solution architect to work through alternative protection options.</p>
+<p>If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Service Delivery Manager or solution architect to work through alternative protection options.</p>
 </li>
 </ul>
 <h3 id="how-and-when-are-reruns-scheduled">How and when are reruns scheduled?</h3>
-<p>Backups are attempted during the hours of 2000 and 0800.</p>
+<p>Backups are attempted during the hours of 20:00 and 08:00.</p>
 <p>A backup will not be reattempted in the same backup window, but will be included as normal in the next window.</p>
 <p>If a snapshot backup attempt is returned as a failure this will be reported to the UKCloud support team, and any remedial actions will be in place for the backup attempt in the next window.</p>
 <h3 id="how-is-the-automated-vm-snapshot-backup-service-charged">How is the automated VM snapshot backup service charged?</h3>
@@ -252,7 +252,7 @@
 <h3 id="are-snapshot-policies-automatically-applied-to-vms">Are Snapshot policies automatically applied to VMs?</h3>
 <p>Protection products are not automatically applied to VMs running on the UKCloud platform, therefore you must explicitly select the protection option that best meets your requirements.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -280,7 +280,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -289,7 +289,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -297,12 +297,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -312,5 +319,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

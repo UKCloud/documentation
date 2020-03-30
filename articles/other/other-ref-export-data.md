@@ -1,5 +1,5 @@
 ---
-title: Methods for exporting data | UKCloud Ltd
+title: Methods for exporting data
 description: Provides some general information in relation to the methods available to customers to export data away from UKCloud when needed
 services: other
 author: Sue Highmoor
@@ -25,9 +25,9 @@ This guide provides some general information about how you can export data away 
 
 You can package and export your data in a number of different ways, however we recommend that you read the following documents:
 
-- [Blueprint: Exporting and importing vApps and vApp templates](https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-136-exporting-and-importing-vapps-and-vapp-templates-blueprint-v2.pdf) - A technical case for transfer of data in UKCloud for VMware
+- [How to use the VMware OVF Tool](../vmware/vmw-how-use-ovf-tool.md) - Provides guidance on using the OVF tool, which you can use to export data from VMware
 
-- [Getting Started Guide for Cloud Storage](../cloud-storage/cs-gs.md) - Covers the use APIs for access to our storage service
+- [Getting Started Guide for Cloud Storage](../cloud-storage/cs-gs.md) - Covers the use of APIs for accessing our storage service
 
 ## Exporting data
 
@@ -63,4 +63,4 @@ Where you have hosted equipment at a UKCloud data centre for part of the solutio
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

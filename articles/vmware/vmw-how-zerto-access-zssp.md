@@ -1,10 +1,10 @@
 ---
-title: How to access the Zerto Self-Service Portal | UKCloud Ltd
+title: How to access the Zerto Self-Service Portal
 description: Describes how to access the Zerto Self-Service Portal (ZSSP) to manage Disaster Recovery to the Cloud, Journaling Protection and Workload Migration
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: Gurcharan Sohal
+lastreviewed: 24/03/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -47,7 +47,7 @@ The ZSSP you use depends on what you are trying to do:
 - To create a VPG for Journaling Protection, use the ZSSP in the zone where the VMs you are protecting are located
 
     > [!NOTE]
-    > To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment.
+    > To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment. For the latest version of ZVM, contact UKCloud Customer Support.
 
 - To perform a test or live failover for Disaster Recovery to the Cloud, Journaling Protection or Workload Migration, use the ZSSP in the zone where your target VDC (for recovery or migration) is located
 
@@ -74,14 +74,14 @@ If you want to create a VPG for Journaling Protection, run a test or live failov
 
 4. Enter your log in credentials, including your **ZORG** name.
 
-    ![Zerto log in page](images/vmw-zerto-login.png)
+    ![Zerto log in page](images/zertomanupdate.png)
 
     > [!NOTE]
     > These credentials are different from the ones you use to log in to the UKCloud Portal. If you're not sure what they are, raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti).
 
 5. After you log in, you'll see the main ZSSP page.
 
-    ![Zerto dashboard](images/vmw-zerto-dashboard.png)
+    ![Zerto dashboard](images/zertopageupdate.png)
 
 ## Next steps
 
@@ -97,4 +97,4 @@ After you have logged in to the ZSSP, you can:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

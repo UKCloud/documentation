@@ -1,10 +1,10 @@
 ---
-title: Cloud Storage FAQs | UKCloud Ltd
+title: Cloud Storage FAQs
 description: Frequently asked questions for Cloud Storage
 services: cloud-storage
 author: Dan Baker
 reviewer:
-lastreviewed: 17/07/2018 16:46:31
+lastreviewed: 20/08/2019 16:46:31
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -47,24 +47,24 @@ The service is Application Programming Interface (API) accessible, so is an idea
 
 In addition, the platform can be accessed using a variety of software tools such as cloud storage gateways, file browsers and other software products.
 
-Documentation on ways to interact with the platform is available from the [Knowledge Centre](cs-gs.md).
+Documentation on ways to interact with the platform is available in the [*Getting Started Guide for Cloud Storage*](cs-gs.md).
 
-### Is data accessible via the PSN Assured connection also accessible via the internet?
+### Is data accessible via the PSN connection also accessible via the internet?
 
-Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it is not possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.
+Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN and internet connections. Although it is not possible to bridge between these connections, any objects placed in Cloud Storage via PSN will also be accessible via the internet using the appropriate customer credentials.
 
 ### Can I restrict Cloud Storage access to specific networks?
 
 It is possible to lock Cloud Storage accounts down so that buckets are only accessible via a single network (for example HSCN, PSN, Janet), but we cannot lock down a bucket to a customer-specified source IP address or range.
 
 > [!IMPORTANT]
-> As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a Service Request through https://portal.skyscapecloud.com/support/ivanti. Alternatively, you can contact support by phone or email.
+> As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a Service Request through <https://portal.skyscapecloud.com/support/ivanti>. Alternatively, you can contact support by phone or email.
 
 ### Which APIs are supported by the platform?
 
-Our Cloud Storage supports an Elastic Cloud Storage S3-compatible API and the native ATMOS RESTful API.
+Our Cloud Storage supports an Elastic Cloud Storage S3-compatible API.
 
-Documentation and user manuals for [supported API calls](cs-gs.md) are available from the Knowledge Centre.
+Documentation for supported API calls is available in the [*Getting Started Guide for Cloud Storage*](cs-gs.md).
 
 ### How frequently can I back up data?
 
@@ -78,9 +78,9 @@ We provide tools for monitoring used capacity and storage growth via the UKCloud
 
 ### What software tools are provided? 
 
-UKCloud does not provide software tools for accessing the platform as storage is accessed via APIs, supporting S3 and Native ATMOS.
+UKCloud does not provide software tools for accessing the platform as storage is accessed via APIs, supporting S3.
 
-You can however directly connect any S3 compatible tools to your storage (for example, S3 Browser and Cyberduck).
+You can however directly connect any S3-compatible tools to your storage (for example, S3 Browser and Cyberduck).
 
 ### How do I create new Cloud Storage users? 
 
@@ -112,7 +112,7 @@ Cloud Storage's RESTful APIs support the use of HTML forms to create and update 
 
 ### Is Cloud Storage object synchronisation (for example, protection offered at each VM type) synchronous or asynchronous?
 
-Protection is asynchronous - a single copy is created, and subsequent copies of the data are created when bandwidth allows.
+Protection is asynchronous; a single copy is created, and subsequent copies of the data are created when bandwidth allows.
 
 During busy periods, this protection can take longer to complete.
 
@@ -136,13 +136,16 @@ Storage is billed on a per-GiB per-month basis, and is based on utilisation of t
 
 ### How is my storage bill calculated?
 
-Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. The charge for the total storage is based on a tiering basis as per the [*Service Definition*](cs-sd.md). When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.
+Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. The charge for the total storage is based on a tiering basis as per the [*Cloud Storage Service Definition*](cs-sd.md). When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.
 
 As an example, if you use 520TiB of storage in a month, your charges are calculated as:
 
 - 250TiB x £0.0200 = £5,000
+
 - 250TiB x £0.0180 = £4,500
+
 - 20TiB x £0.0162 = £324
+
 - Total cost = £9,824
 
 ### How can I view billing information?
@@ -191,14 +194,14 @@ Ultimately, it is down to you to select which encryption methodology should be u
 
 ### Can systems on different UKCloud platforms communicate with one another?
 
-UKCloud's Cross Domain Security Zone allows you to use the UKCloud-defined and managed UKCloud Guard or a customer-designed and managed Walled Garden to enable communication between platforms.
+UKCloud's Cross Domain Security Zone allows you to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
-For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md) on the Digital Marketplace.
+For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md).
 
 ### Is there a protective monitoring service?
 
-Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in our [*Protective Monitoring FAQs*](../other/other-faq-promon.md).
+Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

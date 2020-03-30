@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Secure Remote Access FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Secure Remote Access FAQs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Secure Remote Access FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="title" content="Secure Remote Access FAQs ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -111,8 +111,21 @@
 <p>Yes. UKCloud SRA is available only to customers purchasing other UKCloud services such as UKCloud for VMware, Cloud Storage or UKCloud for OpenShift.</p>
 <h3 id="is-a-free-trial-available-for-the-service">Is a free trial available for the service?</h3>
 <p>The assurance requirements related to this service mean that we're unable to provide a trial for this service.</p>
+<h3 id="how-are-licence-packs-applied-for-each-of-my-sra-instances">How are licence packs applied for each of my SRA instances?</h3>
+<p>Licence packs are applied on a per-SRA basis; that is, if you have two separate SRA instances (for example, one per site), then you'd need to have two separate licence packs.</p>
 <h3 id="does-ukcloud-provide-the-managed-devices-for-using-the-sra-service">Does UKCloud provide the managed devices for using the SRA service?</h3>
 <p>No. We don't provide them, but we have partners who can provide the managed devices and other services if required.</p>
+<h3 id="if-i-plan-to-use-sra-and-a-walled-garden-can-i-use-a-single-walled-garden-for-both">If I plan to use SRA and a Walled Garden, can I use a single Walled Garden for both?</h3>
+<p>It's best to use two separate Walled Gardens within the Cross Domain Secure Zone, to ensure compliance requirements are met.</p>
+<p>You can design a solution to use a single Walled Garden infrastructure, but you're likely to require a more intensive review during the assurance wrap process.</p>
+<p>You'll still be billed for both services.</p>
+<h3 id="can-i-connect-to-multiple-virtual-data-centres-vdcs-from-a-single-walled-garden">Can I connect to multiple virtual data centres (VDCs) from a single Walled Garden?</h3>
+<p>Yes. You only need to implement a single instance of SRA, as a bastion host can provide gateway services to more than one VDC. The assurance wrap process will outline the scope of connected services.</p>
+<p>If you want to add additional services to your SRA service, you'll need to review your existing compliance documentation via the assurance wrap.</p>
+<h3 id="can-i-use-the-ukclouds-sra-solution-from-outside-the-uk">Can I use the UKCloud's SRA solution from outside the UK?</h3>
+<p>No. The nature of the UKCloud solution is that you must be using it from known endpoints inside the UK.</p>
+<p>If you have international access requirements, please contact your account manager to discuss alternative options.</p>
+<h2 id="application-process">Application process</h2>
 <h3 id="what-is-the-process-for-applying-for-an-sra-solution">What is the process for applying for an SRA solution?</h3>
 <p>You can find the information you need in the UKCloud Portal Knowledge Centre.</p>
 <p>If you're new to UKCloud, you should contact the UKCloud sales team to discuss your requirements.</p>
@@ -205,16 +218,6 @@
 <p>When the SRA service is in operation, you are responsible for ensuring continuing compliance with Security Operating procedures (SyOps) and other security obligations.</p>
 <h3 id="who-makes-the-final-decision-to-allow-or-deny-the-use-of-sra">Who makes the final decision to allow or deny the use of SRA?</h3>
 <p>The UKCloud SIRO is ultimately responsible for deciding which solutions and configurations are allowed.</p>
-<h3 id="if-i-plan-to-use-sra-and-a-walled-garden-can-i-use-a-single-walled-garden-for-both">If I plan to use SRA and a Walled Garden, can I use a single Walled Garden for both?</h3>
-<p>It's best to use two separate Walled Gardens within the Cross Domain Secure Zone, to ensure compliance requirements are met.</p>
-<p>You can design a solution to use a single Walled Garden infrastructure, but you're likely to require a more intensive review during the assurance wrap process.</p>
-<p>You'll still be billed for both services.</p>
-<h3 id="can-i-connect-to-multiple-virtual-data-centres-vdcs-from-a-single-walled-garden">Can I connect to multiple virtual data centres (VDCs) from a single Walled Garden?</h3>
-<p>Yes. You only need to implement a single instance of SRA, as a bastion host can provide gateway services to more than one VDC. The assurance wrap process will outline the scope of connected services.</p>
-<p>If you want to add additional services to your SRA service, you'll need to review your existing compliance documentation via the assurance wrap.</p>
-<h3 id="can-i-use-the-ukclouds-sra-solution-from-outside-the-uk">Can I use the UKCloud's SRA solution from outside the UK?</h3>
-<p>No. The nature of the UKCloud solution is that you must be using it from known endpoints inside the UK.</p>
-<p>If you have international access requirements, please contact your account manager to discuss alternative options.</p>
 <h2 id="certificates">Certificates</h2>
 <h3 id="how-long-do-sra-certificates-last-for">How long do SRA certificates last for?</h3>
 <p>SRA certificates last for 12 months. You'll need to renew certificates no later than two weeks before the certificates expire to avoid any interruption to your service.</p>
@@ -225,7 +228,7 @@
 <p>For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.</p>
 <h3 id="can-i-renew-or-revoke-my-certificates-in-bulk">Can I renew or revoke my certificates in bulk?</h3>
 <p>Yes. To renew or revoke your certificates in bulk, raise a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal, selecting the &quot;Renew and/or Revoke multiple SRA Certificates&quot; option.</p>
-<p>Attach the Secure Remote Access bulk renewal/revoke form containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.</p>
+<p>Attach the Secure Remote Access bulk renewal/revoke form (available <a href="https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-172%20UKCloud%20SRAS%20form.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1601391869&amp;Signature=6Ri2onNvL6EjyKq0paFznAl4PT4%3D">here</a>) containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.</p>
 <p>For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.</p>
 <h3 id="what-are-my-responsibilities-for-this-service">What are my responsibilities for this service?</h3>
 <p>You need to maintain a list of your certificates and advise us if you need to request new or additional certificates as well as needing any to be revoked.</p>
@@ -256,6 +259,10 @@
 <li><p>A small VM to use as a bastion host (additional costs apply for larger or additional VMs)</p>
 </li>
 </ul>
+<h3 id="how-will-i-be-billed-for-the-licences-i-use">How will I be billed for the licences I use?</h3>
+<p>We use consumption-based billing for licences, and these are in packs. You'll be billed for the tier you use in that month (that is, the number of active certificates you have for your devices).</p>
+<p>For example, if you usually operate with nine certificates for an SRA instance, you'd be billed for a 10-pack of licences. If, one month, you run a project that requires three more certificates for additional engineers, you'd be billed for a 25-pack of licences for that month. When you go back to nine certificates for your usual engineer access, you'd go back to being billed for a 10-pack of licences.</p>
+<p>For more information about the different licence packs, see the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
 <h2 id="security">Security</h2>
 <h3 id="why-does-use-of-cpa-approved-solutions-to-access-the-ukcloud-elevated-official-environment-via-the-internet-require-approval-by-the-ukcloud-siro">Why does use of CPA-approved solutions to access the UKCloud Elevated OFFICIAL environment via the internet require approval by the UKCloud SIRO?</h3>
 <p>UKCloud offers two ways to connect to the UKCloud platform's Elevated OFFICIAL security domain via a CPA-approved (or equivalent standard) solution:</p>
@@ -277,7 +284,7 @@
 <p>No. The UKCloud SRA service is designed to facilitate connectivity to services hosted on the UKCloud platform only.</p>
 <p>Consider PSN-compliant remote access services if you require access to the broader PSN.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -305,7 +312,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -314,7 +321,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -322,12 +329,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -337,5 +351,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

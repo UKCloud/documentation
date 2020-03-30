@@ -1,5 +1,5 @@
 ---
-title: Understanding connectivity options in UKCloud for VMware | UKCloud Ltd
+title: Understanding connectivity options in UKCloud for VMware
 description: Describes the two different architecture designs used in UKCloud for VMware so that you can better understand your environment and more effectively design your solutions
 services: vmware
 author: Sue Highmoor
@@ -93,7 +93,7 @@ Networking in the Elevated platform is very similar to the Assured platform. All
 
 #### PSN Protected
 
-In the diagram above, Customer 1's PSN Protected connection is routed to their NFT sitting in the multi-tenant NFW. This then provides the onward connection to Customer 1's edge. The same NFT also handles the connections in from Cross Domain Security Zone products (Walled Garden, UKCloud Guard and SRA).
+In the diagram above, Customer 1's PSN Protected connection is routed to their NFT sitting in the multi-tenant NFW. This then provides the onward connection to Customer 1's edge. The same NFT also handles the connections in from Cross Domain Security Zone products (Walled Garden and SRA).
 
 It's worth noting that UKCloud translates the PSN Protected IP address to one of the external IP ranges that are available on the edge. Your users will target the PSN Protected IP address, however you'll see only your UKCloud allocated external range on your edge, so it's important to know what your PSN Protected IP has been translated to.
 
@@ -243,7 +243,7 @@ In the Elevated platform:
 
 - For RLI you'll need to get approval from the MOD
 
-- For Cross Domain Security Zone services (Walled Garden, UKCloud Guard or SRA) you'll need to get the authorisation from your end-customer IA as well as the UKCloud SIRO
+- For Cross Domain Security Zone services (Walled Garden or SRA) you'll need to get the authorisation from your end-customer IA as well as the UKCloud SIRO
 
 The application processes haven't changed for any of these services, however it's important to be mindful about how you may have to design your architecture based on the network architecture you'll be deployed on. As an example, when connecting to the N3 network, you'll need to ensure that the N3 and internet networks aren't bridged. With the Cloud Fabric architecture and NFT architecture (shown in the two diagrams below respectively), you should ensure that VMs are not connected to both the internet and to N3
 at the same time.
@@ -254,4 +254,4 @@ at the same time.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

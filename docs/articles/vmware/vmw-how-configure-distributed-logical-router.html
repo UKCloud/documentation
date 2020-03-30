@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to configure a Distributed Logical Router | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to configure a Distributed Logical Router </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to configure a Distributed Logical Router | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="title" content="How to configure a Distributed Logical Router ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,13 +94,12 @@
 <h1 id="how-to-configure-a-distributed-logical-router">How to configure a Distributed Logical Router</h1>
 
 <h2 id="overview">Overview</h2>
-<p>UKCloud for VMware provides Distributed Logical Router (DLR) functionality as part of its Advanced Networking bundles (additional charges apply). DLR optimises the routing of east-west traffic within your VDCs, using a hypervisor on the source VM to limit traffic flow to a maximum of two hosts (the source and a destination), without the need to route traffic back through the edge gateway. As well as providing much better performance, DLR can scale up to 1000 routed logical networks (rather than the 10 logical network limit imposed by traditional edge gateway routing).</p>
+<p>UKCloud for VMware provides Distributed Logical Router (DLR) functionality as part of its Advanced Management bundle (additional charges apply). DLR optimises the routing of east-west traffic within your VDCs, using a hypervisor on the source VM to limit traffic flow to a maximum of two hosts (the source and a destination), without the need to route traffic back through the edge gateway. As well as providing much better performance, DLR can scale up to 1000 routed logical networks (rather than the 10 logical network limit imposed by traditional edge gateway routing).</p>
 <p><img src="images/vmw-dlr-overview.png" alt="Distributed Logical Router overview"></p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>Before enabling DLR, consider the following:</p>
 <ul>
-<li>You must have purchased either the Advanced Networking Bundle or Enterprise Networking Bundle for your UKCloud for VMware service</li>
-<li>You must have converted your edge gateway to an advanced gateway (see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>)</li>
+<li>You must have purchased the Advanced Management bundle for your UKCloud for VMware service</li>
 <li>Your advanced gateway must have one free interface for DLR to use for the transit (P2P) network</li>
 <li>IPv6 is not supported with DLR</li>
 <li>L2 VPN is not supported on a distributed VDC network</li>
@@ -140,17 +139,6 @@
 </ol>
 <h2 id="creating-a-distributed-network">Creating a distributed network</h2>
 <p>After you've enabled distributed routing, you can create your distributed networks. You can create up to 1000 distributed networks per edge gateway.</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">In vCloud Director 9.7</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">In vCloud Director 9.1</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
-
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select your VDC.</p>
 </li>
@@ -189,40 +177,8 @@
 <li><p>When you're done, click <strong>Finish</strong>.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select your VDC.</p>
-</li>
-<li><p>In the left navigation panel, select <strong>Network</strong>.</p>
-<p><img src="images/vmw-vcd91-tab-network.png" alt="Network tab in vCloud Director"></p>
-</li>
-<li><p>Click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd91-btn-add-network.png" alt="Add network button"></p>
-</li>
-<li><p>In the <em>Add Org VDC Network</em> dialog box, select <strong>Routed network connecting to an existing edge gateway</strong>.</p>
-<p><img src="images/vmw-vcd91-add-network-routed-option.png" alt="Routed network option"></p>
-</li>
-<li><p>Select the <strong>Edge Gateway</strong> that you want your network to connect to.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The edge must be an advanced gateway and must have distributed routing enabled.</p>
-</div>
-</li>
-<li><p>From the <strong>Interface type</strong> list, select <strong>Distributed</strong>.</p>
-<p><img src="images/vmw-vcd91-dlr-add-network-distributed.png" alt="Distributed network option"></p>
-</li>
-<li><p>Complete the remaining fields in the dialog box as you would for any other routed network.</p>
-<p>For more detailed instructions, see <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -250,7 +206,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -259,7 +215,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -267,12 +223,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -282,5 +245,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>
