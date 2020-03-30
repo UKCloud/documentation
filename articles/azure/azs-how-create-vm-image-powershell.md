@@ -49,6 +49,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$VMName        | Name of the virtual machine to be created                          | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
 | \$ImageName    | The name of the new custom image to be created                 | <form oninput="result.value=imagename.value" id="imagename" style="display: inline;"><input type="text" id="imagename" name="imagename" style="display: inline;" placeholder="MyCustomImage"/></form> |
 | \$NewVMName        | Name of the new virtual machine to be created                          | <form oninput="result.value=newvmname.value" id="newvmname" style="display: inline;"><input type="text" id="newvmname" name="newvmname" style="display: inline;" placeholder="MyNewVMFromImage"/></form> |
+| \$Size        | The size of the new virtual machine to be created                          | <form oninput="result.value=size.value" id="size" style="display: inline;"><input type="text" id="size" name="size" style="display: inline;" placeholder="Standard_DS2_v2"/></form> |
 | \$VNetName      | Name of the virtual network to be created                        | <form oninput="result.value=vnetname.value" id="vnetname" style="display: inline;"><input type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="MyVNetwork"/></form> |
 | \$SubnetName    | Name of the subnet                                  | <form oninput="result.value=subnetname.value" id="subnetname" style="display: inline;"><input type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="MySubnet"/></form> |
 | \$NSGName       | Name of the network security group to be created                   | <form oninput="result.value=nsgname.value" id="nsgname" style="display: inline;"><input type="text" id="nsgname" name="nsgname" style="display: inline;" placeholder="MyNSG"/></form> |
@@ -100,6 +101,7 @@ $Image = New-AzureRmImage -ResourceGroupName $RGName -ImageName $ImageName -Imag
 
 # Declare variables to create a new VM from the image
 $NewVMName = "<output form="newvmname" name="result" style="display: inline;">MyNewVMFromImage</output>"
+$Size = "<output form="size" name="result" style="display: inline;">Standard_DS2_v2</output>"
 $VNetName = "<output form="vnetname" name="result" style="display: inline;">MyVNetwork</output>"
 $SubnetName = "<output form="subnetname" name="result" style="display: inline;">MySubnet</output>"
 $NSGName = "<output form="nsgname" name="result" style="display: inline;">MyNSG</output>"
@@ -109,16 +111,15 @@ $Password = "<output form="vmpassword" name="result" style="display: inline;">Pa
 $Credential = New-Object -TypeName PSCredential($Username, $Password)
 
 # Get image to check OS type.
-$Image = Get-AzureRmImage | Where-Object { $_.Name -like $ImageName }
+$Image = Get-AzureRmImage | Where-Object -FilterScript { $_.Name -like $ImageName }
 
-# If Windows, open RDP port and provision correct size 
+# Depending on the OS type, open either an RDP or SSH port and provision correct size.
 if ($Image.StorageProfile.OsDisk.OsType -like "Windows") {
     $OpenPorts = 3389
     if (-not $Size) {
         $Size = "Standard_DS2_v2"
     }
 }
-# OsType is Linux and open SSH port and provision correct size
 else {
     $OpenPorts = 22
     if (-not $Size) {
