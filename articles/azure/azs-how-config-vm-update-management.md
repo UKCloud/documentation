@@ -49,7 +49,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Create a *Log Analytics workspace* in your Azure subscription:
 
-    - Click **Create a resource**.
+    - Click **Create a resource**
 
     - In the search bar, search for `log analytics`
 
@@ -101,17 +101,17 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. Create and configure an *Automation Account*:
 
-    - Click **Create a resource**.
+    - Click **Create a resource**
 
-    - Search for `automation`.
+    - Search for `automation`
 
-    - Select **Automation** and then click **Create**.
+    - Select **Automation** and then click **Create**
 
         ![Automation Account](images/azs-browser-search-automation-account.png)
 
-    - Choose a **Name**, **Subscription**, **Resource group**, **Location** and ensure **Create Azure Run As account** is set to **Yes**.
+    - Choose a **Name**, **Subscription**, **Resource group**, **Location** and ensure **Create Azure Run As account** is set to **Yes**
 
-    - Click **Create**.
+    - Click **Create**
 
         ![Add Automation Account](images/azs-browser-add-automation-account.png)
 
@@ -120,16 +120,16 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. Once deployed, navigate to the *Automation Account*. In the new blade, under *Configuration Management*, select the solution to enable (**Inventory** or **Change Tracking**).
 
-    - Select the Log Analytics workspace to link the automation account to.
+    - Select the Log Analytics workspace to link the automation account to
 
-    - Click **Enable**.
+    - Click **Enable**
 
-    - Wait for the deployment to complete.
+    - Wait for the deployment to complete
 
-    - Repeat step 4 for **Update Management** under *Update Management*.
+    - Repeat step 4 for **Update Management** under *Update Management*
 
         > [!TIP]
-        > Leave the public Azure portal open; you'll need to use it again later.
+        > Leave the public Azure portal open; you will need to use it again later.
 
 5. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
@@ -161,8 +161,8 @@ To complete the steps in this article, you must have appropriate access to a sub
     |-----------------|--------------------------------------------------------------------|------------------|
     | \$VMName    | The name of the virtual machine                 | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="AzureStackHubVM"/></form> |
     | \$ResourceGroupName        | Name of the resource group which the VM resides in                           | <form oninput="result.value=resourcegroup.value;result1.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
-    | \$WorkspaceKey        | The log analytics workspace primary key                           | <form oninput="result.value=workspacekey.value" id="workspacekey" style="display: inline;"><input type="text" id="workspacekey" name="workspacekey" style="display: inline;" placeholder="2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ=="/></form> |
-    | \$WorkspaceId        | The log analytics workspace ID                           | <form oninput="result.value=workspaceid.value" id="workspaceid" style="display: inline;"><input type="text" id="workspaceid" name="workspaceid" style="display: inline;" placeholder="a40470ef-d8a0-4d37-ba13-274d4649a674"/></form> |
+    | \$WorkspaceKey        | The log analytics workspace primary key                           | <form oninput="result.value=workspacekey.value" id="workspacekey" style="display: inline;"><input type="text" id="workspacekey" name="workspacekey" style="display: inline;" placeholder="2Fzno02qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ=="/></form> |
+    | \$WorkspaceId        | The log analytics workspace ID                           | <form oninput="result.value=workspaceid.value" id="workspaceid" style="display: inline;"><input type="text" id="workspaceid" name="workspaceid" style="display: inline;" placeholder="a40470ff-d8a0-4d37-ba13-274d4649a674"/></form> |
     | \$NetworkSecurityGroupName        | The name of the network security group to apply the inbound port 443 rule to                           | <form oninput="result.value=networksecuritygroupname.value" id="networksecuritygroupname" style="display: inline;"><input type="text" id="networksecuritygroupname" name="networksecuritygroupname" style="display: inline;" placeholder="AzureStackHubVMNSG"/></form> |
 
 
@@ -228,7 +228,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 10. Navigate to the *Automation Account*. In the new blade, under *Update Management*, select **Update Management**.
 
-    - You'll see the following prompt:
+    - You will see the following prompt:
 
         ![Enable log example](images/azs-browser-example-log-enable.png)
 
