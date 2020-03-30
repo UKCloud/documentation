@@ -89,19 +89,16 @@ if ($VM) {
     Set-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Generalized
 }
 else {
-    Write-Error -Message "VM with name $VMName does not exist in resource group $RGName"
+    Write-Error -Message "VM with name: $VMName does not exist in resource group: $RGName"
     break
 }
 
-# Get VM details again
-$VM = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
-
-# Create image
+# Create VM image
 Write-Output -InputObject "Creating image of VM: $VMName"
 $ImageConfig = New-AzureRmImageConfig -Location $Location -SourceVirtualMachineId $VM.Id
 $Image = New-AzureRmImage -ResourceGroupName $RGName -ImageName $ImageName -Image $ImageConfig
 
-# Declare variables
+# Declare variables to create a new VM from the image
 $NewVMName = "<output form="newvmname" name="result" style="display: inline;">MyNewVMFromImage</output>"
 $VNetName = "<output form="vnetname" name="result" style="display: inline;">MyVNetwork</output>"
 $SubnetName = "<output form="subnetname" name="result" style="display: inline;">MySubnet</output>"
@@ -109,7 +106,7 @@ $NSGName = "<output form="nsgname" name="result" style="display: inline;">MyNSG<
 $PublicIPName = "<output form="publicipname" name="result" style="display: inline;">MyPublicIP</output>"
 $Username = "<output form="vmusername" name="result" style="display: inline;">MyUser</output>"
 $Password = "<output form="vmpassword" name="result" style="display: inline;">Password123!</output>" | ConvertTo-SecureString -Force -AsPlainText
-$Credential = New-Object PSCredential($Username, $Password)
+$Credential = New-Object -TypeName PSCredential($Username, $Password)
 
 # Get image to check OS type.
 $Image = Get-AzureRmImage | Where-Object { $_.Name -like $ImageName }
