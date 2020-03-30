@@ -45,19 +45,19 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Create a Log Analytics workspace in your Azure subscription:
 
-    - Click **Create a resource**.
+    - Click **Create a resource**
 
-    - In the search bar, search for `log analytics`.
+    - In the search bar, search for `log analytics`
 
         ![Log Analytics search](images/azs-browser-search-log-analytics.png)
 
-    - Click **Log Analytics**.
+    - Click **Log Analytics**
 
-    - Click **Create**.
+    - Click **Create**
 
     - Provide the following:
 
-        - A name for the **Log Analytics Workspace**, for example: `DefaultLAWorkspace`
+        - A **unique** name for the **Log Analytics Workspace**, for example: `DefaultLAWorkspace`
 
         - A **Subscription** to link the workspace to
 
