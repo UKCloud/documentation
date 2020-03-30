@@ -79,7 +79,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 ### Overview of the creation process for public Azure and Azure Stack Hub SPN
 
-The following steps outline the process for the [Azure and Azure Stack Hub Hub SPN creation code](#Azure-and-Azure-Stack-SPN-creation-code).
+The following steps outline the process for the [Azure and Azure Stack Hub SPN creation code](###azure-and-azure-stack-hub-spn-creation-code).
 
 1. Declare your variables accordingly.
 
