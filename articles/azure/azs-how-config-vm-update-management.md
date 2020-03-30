@@ -92,8 +92,8 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         - Ensure all counters are selected, then click **Add the selected performance counters**.
 
-        > [!NOTE]
-        > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
+            > [!NOTE]
+            > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
 
         - Click **Save**.
 
