@@ -4,7 +4,7 @@ description: Describes how to configure Azure Monitor for VMs on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
 reviewer: Chris Black
-lastreviewed: 30/03/2020 11:09:00
+lastreviewed: 30/03/2020
 
 toc_rootlink: Users
 toc_sub1: How To
