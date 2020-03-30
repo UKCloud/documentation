@@ -100,10 +100,10 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Windows sysprep example](images/azs-windows-sys-prep.png)
 
-6. Click **OK** and wait for the generalisation process to complete.
+6. Click **OK** and wait for the VM to shutdown. Your RDP session will be closed.
 
     > [!TIP]
-    > The process is completed once your VM is in a stopped state.
+    > The generalisation process is complete once your VM is in a stopped state.
 
 ### [Linux](#tab/tabid-b/tabid-1)
 
