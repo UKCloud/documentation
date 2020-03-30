@@ -162,7 +162,10 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 3. Run the following command: `shutdown && waagent -deprovision+user -force`
 
-4. Wait for the VM to shutdown. Your session will be closed.
+4. Wait for the VM to shutdown. Your SSH session will be closed.
+
+    > [!TIP]
+    > The generalisation process is complete once your VM is in a stopped state.
 
 ***
 
