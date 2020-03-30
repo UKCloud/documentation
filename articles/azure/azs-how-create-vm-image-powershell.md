@@ -152,7 +152,10 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
     ![Windows sysprep example](images/azs-windows-sys-prep.png)
 
-6. Select **OK** and wait for the generalisation process to complete.
+6. Click **OK** and wait for the VM to shutdown. Your RDP session will be closed.
+
+    > [!TIP]
+    > The generalisation process is complete once your VM is in a stopped state.
 
 ### [Linux](#tab/tabid-b/tabid-1)
 
