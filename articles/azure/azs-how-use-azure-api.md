@@ -174,12 +174,12 @@ where:
 
 - **URI-host** is the domain name or IP address of the server where the REST service endpoint is hosted, for example: `management.frn00006.azure.ukcloud.com`
 
-- **resource-path** is the resource or resource collection, which may include multiple segments used by the service in determining the selection of those resources, for example: `/subscriptions` is the resource path to obtain information about Azure Stack Hub subscriptions
+- **resource path** is the resource or resource collection used by the service in determining the selection of those resources (the path may include multiple segments), for example: `/subscriptions` is the resource path to obtain information about Azure Stack Hub subscriptions
 
 - **query-string** provides additional parameters, such as the API version or resource selection criteria
 
-    >[!NOTE]
-    > For Bash, you can add the **query-string** to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01`. <br>For PowerShell, you can provide a **query-string** in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2017-12-01"}`.
+    > [!NOTE]
+    > For Bash, you can add the **query-string** to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01`. <br>For PowerShell, you can provide a **query-string** in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2017-12-01"}`
 
 The syntax of an Azure Stack Hub request URI is:
 
