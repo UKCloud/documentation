@@ -266,7 +266,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         > [!NOTE]
         > The **Get Started** tab does **not** show Azure Stack Hub VMs.
 
-    ![Public Azure monitor virtual machines](images/azs-browser-public-azure-monitor-virtual-machines.png)
+        ![Public Azure monitor virtual machines](images/azs-browser-public-azure-monitor-virtual-machines.png)
 
 13. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**:
 
