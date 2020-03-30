@@ -277,6 +277,8 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
    - **Idle timeout** - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.
 
+   - **Floating IP** - Can be enabled to change the IP address mapping scheme to allow for additional flexibility, see [here](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-multivip-overview) for further details.
+
     ![Add a load balancing rule](images/azs-browser-add-lb-rule.png)
 
 6. Click **OK**.
