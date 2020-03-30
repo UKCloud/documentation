@@ -1,5 +1,5 @@
 ---
-title: How to create a custom image from a VM on Azure Stack using PowerShell | UKCloud Ltd
+title: How to create a custom image from a VM on Azure Stack Hub using PowerShell
 description: Provides details on how to create a custom image from a VM using Powershell
 services: azure-stack
 author: Daniel Brennand
@@ -16,17 +16,17 @@ toc_fullpath: Users/How To/azs-how-create-vm-image-powershell.md
 toc_mdlink: azs-how-create-vm-image-powershell.md
 ---
 
-# How to create a custom image from a VM on Azure Stack using PowerShell
+# How to create a custom image from a VM on Azure Stack Hub using PowerShell
 
 ## Overview
 
 You can create an image resource from a generalised virtual machine (VM) that is stored as either a managed disk or an unmanaged disk in a storage account. You can then use the image to create multiple VMs.
 
-This article explains how to create a custom image from a VM on Azure Stack, which you can then use to deploy other VMs.
+This article explains how to create a custom image from a VM on Azure Stack Hub, which you can then use to deploy other VMs.
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ## [1. Generalise your VM](#tab/tabid-1)
 
@@ -44,7 +44,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name   | Variable description                                               | Input            |
 |-----------------|--------------------------------------------------------------------|------------------|
-| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack                 | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack Hub                 | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$RGName        | Name of the resource group                            | <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$VMName        | Name of the virtual machine to be created                          | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
 | \$ImageName    | The name of the new custom image to be created                 | <form oninput="result.value=imagename.value" id="imagename" style="display: inline;"><input type="text" id="imagename" name="imagename" style="display: inline;" placeholder="MyCustomImage"/></form> |
@@ -69,7 +69,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Declare variables
