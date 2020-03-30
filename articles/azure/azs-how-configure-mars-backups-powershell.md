@@ -90,8 +90,8 @@ Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script..."
 $OutPath = Join-Path -Path $ModulePath -ChildPath $ModuleName
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1" -OutFile $OutPath
 
-# Run the AzureBackupConfig script
-Write-Output -InputObject "Running AzureBackupConfig with provided parameters"
+# Run the AzureBackupConfig.ps1 script
+Write-Output -InputObject "Running AzureBackupConfig.ps1 with provided parameters"
 . "$ModulePath\$ModuleName" -ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow
 </code></pre>
 
@@ -130,7 +130,7 @@ $ScriptArguments = "<output form="scriptargs" name="result" style="display: inli
 $CommandToExecute = "pwsh $CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Linux VM
-Write-Output -InputObject "Adding custom script extension to existing virtual machine"
+Write-Output -InputObject "Adding custom script extension to VM: $VMName"
 $Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
@@ -170,7 +170,7 @@ $ScriptArguments = "<output form="scriptargs" name="result2" style="display: inl
 $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Windows VM
-Write-Output -InputObject "Adding custom script extension to VM"
+Write-Output -InputObject "Adding custom script extension to VM: $VMName"
 Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 
