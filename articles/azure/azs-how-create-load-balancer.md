@@ -3,8 +3,8 @@ title: How to create a load balancer for Azure Stack Hub
 description: Provides help for creating a load balancer on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 30/03/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -54,15 +54,17 @@ In this section we will create a load balancer with a public IP address.
 
    - **Public IP Address** - The public IP address that will be assigned to this load balancer. To create a new public IP address:
 
-     - Click **Public IP address** on the **Create load balancer** blade.
+     - Select the **Create new** option under the **Public IP address** variable.
 
-     - Select **Create new** on the **Choose public IP address** blade.
+     - Enter a name for the public IP address.
 
-     - Enter a name for the public IP address and click **OK**.
+     - Expand the **Configure public IP address** dropdown.
+
+     - Under **Assignment**, select either the **Dynamic** or **Static** option. It is recommended to select the **Static** option when creating a load balancer.
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
