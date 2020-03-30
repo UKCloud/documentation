@@ -175,7 +175,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - You will see two usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
 
-9. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**.
+9. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**:
+
+    ![Public Azure Hybrid switch](images/azs-browser-hybrid-switch.png)
 
 10. A prompt will appear to upgrade the workspace, click **Upgrade**. In the new blade, click **Upgrade** again.
 
