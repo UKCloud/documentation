@@ -171,7 +171,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ***
 
-8. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
+8. In public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
 
     - You will see two usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
 
