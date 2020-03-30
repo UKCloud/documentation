@@ -144,13 +144,13 @@ $AuthResp
 
 5. You must include this token in the Authorization header of each subsequent API request, for example:
 
-    ### [Bash](#tab/tabid-3)
+    ### [Bash](#tab/tabid-1)
 
     ```bash
     curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
     ```
 
-    ### [PowerShell](#tab/tabid-4)
+    ### [PowerShell](#tab/tabid-2)
 
     ```powershell
     # Add access token to header object for subsequent API requests
