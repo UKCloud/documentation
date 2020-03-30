@@ -76,7 +76,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
             ![Log Analytics workspace creation](images/azs-browser-example-log-analytics-workspace.png)
 
-            The example above shows the blade with all items filled out.
+            *The example above shows the blade with all items filled out.*
 
         - Click **OK** once finished. The Log Analytics workspace will now begin deploying. A notification will appear in the top right of the portal.
     
