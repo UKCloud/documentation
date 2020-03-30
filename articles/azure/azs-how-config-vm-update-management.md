@@ -86,7 +86,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     
         - Note down the **Workspace ID** and **Primary Key** values.
 
-       ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
+           ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
         - Within *Advanced settings*, select the *Data* blade and click **Windows Performance Counters** or **Linux Performance Counters**.
 
@@ -97,7 +97,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         - Click **Save**.
 
-        ![Performance counters](images/azs-browser-example-performance-counters.png)
+            ![Performance counters](images/azs-browser-example-performance-counters.png)
 
 3. Create and configure an *Automation Account*:
 
@@ -147,7 +147,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Repeat this step for the **Azure Monitor, Update and Configuration Management** extension. Providing the extension with the **Workspace ID** and **Primary Key** values (noted down previously) when prompted.
 
-    ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.png)
+        ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.png)
 
 # [PowerShell](#tab/tabid-b)
 
