@@ -22,7 +22,7 @@ toc_mdlink: ptl-ref-overview-permissions.md
 System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.
 
 > [!NOTE]
-> For further details in relation to managing My Calls users, please see [*How to manage My Calls users] (ptl-how-manage-my-calls.md).
+> For further details about managing My Calls users, see [*How to manage My Calls users*](ptl-how-manage-my-calls.md).
 
 ## User is admin?
 
