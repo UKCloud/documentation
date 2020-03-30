@@ -200,6 +200,7 @@ where:
 - `filter-expression` is an optional list of arguments to filter the results of the query
 
 For example, the following API call returns a list of all virtual machines in the specified Azure Stack Hub subscription:
+
 `https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/providers/Microsoft.Compute/virtualMachines?api-version=2017-12-01"`
 
 ## Next steps
