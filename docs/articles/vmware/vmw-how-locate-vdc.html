@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to locate your virtual data centre on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to locate your virtual data centre on the UKCloud platform </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to locate your virtual data centre on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="How to locate your virtual data centre on the UKCloud platform ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -105,20 +105,14 @@
 </li>
 </ul>
 <p>This guide describes how to use vCloud Director to find out where your VDC is within the UKCloud platform. You can use the vCloud Director UI or the API.</p>
-<p>The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the <a href="https://portal.skyscapecloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal.</p>
-<h2 id="finding-the-location-of-a-vdc-via-the-portal">Finding the location of a VDC via the Portal</h2>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You cannot view VDC metadata in the new vCloud Director 9.1 tenant portal. If your environment uses vCloud Director 9.1, you must first switch to the vCloud Director web console. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
-</div>
+<p>The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="finding-the-location-of-a-vdc-using-the-vcloud-director-tenant-ui">Finding the location of a VDC using the vCloud Director Tenant UI</h2>
 <ol>
-<li><p>In vCloud Director, click <strong>Administration</strong>.</p>
-<p><img src="images/locate-image-3.png" alt="Administration"></p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that you want to locate.</p>
+<p>For more detailed instructions on accessing vCloud Director, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
 </li>
-<li><p>Right-click the VDC and select <strong>Properties</strong>.</p>
-</li>
-<li><p>Click the <strong>Metadata</strong> tab.</p>
-<p><img src="images/locate-image-4.png" alt="Metadata"></p>
+<li><p>In the left navigation panel, select <strong>Metadata</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-vdc-metadata.png" alt="VDC Metadata menu option"></p>
 </li>
 <li><p>The following fields indicate the location of your VDC:</p>
 <ul>
@@ -126,13 +120,13 @@
 </li>
 <li><p><strong>provider-region</strong> - indicates the region in which your VDC is located, for example <strong>1</strong> or <strong>5</strong>.</p>
 </li>
-<li><p><strong>provider-zone</strong> - indicates the zone in which your VDC is located, for example <strong>1(AF1)</strong> or <strong>B</strong></p>
+<li><p><strong>provider-zone</strong> - indicates the zone in which your VDC is located, for example <strong>1(AF2)</strong> or <strong>B</strong></p>
 </li>
 </ul>
-<p><img src="images/locate-image-5.png" alt="Metadata information"></p>
+<p><img src="images/vmw-vcd-vdc-location-metadata.png" alt="VDC location metadata"></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If you set up your VDC to use synchronous protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:</p>
+<p>If you set up your VDC to use Synchronous Protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:</p>
 <ul>
 <li><strong>provider-protection-synchronous</strong> is <strong>Yes</strong></li>
 <li><strong>provider-site</strong> - indicates that your VDC is stretched across both sites: <strong>Farnborough or Corsham</strong></li>
@@ -140,16 +134,16 @@
 <li><strong>provider-zone</strong> - indicates that your VDC is stretched across multiple zones, for example <strong>1(AE1) or 2(AE2)</strong></li>
 </ul>
 </div>
-<p>You can use VM Location to locate individual VMs within the VDC. For more information, see <a href="https://portal.ukcloud.com/support/knowledge_centre/4e69cbb9-b56c-4af6-a775-88c9fc11eefa">How to use VM Location in vCloud Director</a>.</p>
+<p>You can use VM location to locate individual VMs within the VDC. For more information, see <a href="vmw-how-use-vm-location.html"><em>How to use VM location in vCloud Director</em></a>.</p>
 </li>
 <li><p>When you're done, click <strong>Cancel</strong>.</p>
 </li>
 </ol>
-<h2 id="finding-the-location-of-a-vdc-via-the-vcloud-director-api">Finding the location of a VDC via the vCloud Director API</h2>
-<p>You can also find the location of your VDC by calling the vCloud Director API. For more information about the vCloud Director API, see <a href="https://code.vmware.com/apis/287/vcloud">vCloud Director API Guide</a>.</p>
+<h2 id="finding-the-location-of-a-vdc-using-the-vcloud-director-api">Finding the location of a VDC using the vCloud Director API</h2>
+<p>You can also find the location of your VDC by calling the vCloud Director API. For more information about the vCloud Director API, see <a href="https://code.vmware.com/apis/553/vcloud-director">vCloud Director API Guide</a>.</p>
 <p>For example, to retrieve all the metadata for a specified VDC, call the <code>GET /vcd/&lt;id&gt;/metadata</code> endpoint.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -177,7 +171,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -186,7 +180,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -194,12 +188,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -209,5 +210,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

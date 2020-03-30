@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>UKCloud for Oracle Software Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>UKCloud for Oracle Software Service Scope </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="UKCloud for Oracle Software Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="UKCloud for Oracle Software Service Scope ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -104,7 +104,7 @@
 <p><strong>Account.</strong> We use accounts to separate financial ownership. An account could represent an organisation, a customer contract, or a specific project. An account can also have several UKCloud services associated with it, such as UKCloud for Oracle, Cloud Storage and UKCloud for OpenStack.</p>
 <p>You can also use accounts to separate users based on access requirements or permissions.</p>
 <p><strong>Organisation.</strong> This represents your UKCloud for Oracle Software service inside Oracle Enterprise Manager and on the UKCloud Portal. There is a 1:1 mapping of service to Organisation.</p>
-<p><strong>Oracle Tenant.</strong> An Oracle Tenant is where you define your workload type and build your OVMs. You can create Oracle Tenants via a service request.</p>
+<p><strong>Oracle Tenant.</strong> An Oracle Tenant is where you define your workload type and build your OVMs. You can create Oracle Tenants by raising a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h2 id="service-configuration">Service configuration</h2>
 <p>The UKCloud for Oracle Software infrastructure is uncontended and configured to optimise the performance and availability of Oracle workloads. There is only one service configuration on the UKCloud for Oracle Software platform, ensuring that OVMs are pinned to cores to stop OVM movement that would unbalance applications.</p>
 <p>Customers can self-configure OVMs by the number of cores, and amount of memory and storage needed. OVMs can be reconfigured to adjust resources in line with changing performance requirements.</p>
@@ -146,7 +146,7 @@ backups.</p>
 <h2 id="service-background">Service background</h2>
 <p>UKCloud for Oracle Software is underpinned by Oracle compute infrastructure. UKCloud manage the physical infrastructure and utilise our partner, Infomentum, to provide support and management from the hypervisor level and above.</p>
 <p>Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager.</p>
-<p>VM creation is currently available via service request to ensure that the platform remains balanced — this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see <a href="orcl-ref-bug-self-service.html"><em>Oracle cloud self-service funtionality</em></a>.</p>
+<p>VM creation is currently available via service request to ensure that the platform remains balanced — this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see <a href="orcl-ref-bug-self-service.html"><em>Oracle cloud self-service funtionality</em></a>.</p>
 <p>All service requests will be triaged by UKCloud. We reserve the right to escalate a request to Infomentum for support. If you have not have a managed service contract with Infomentum, please do not contact them directly.</p>
 <p>UKCloud actively capacity-manages the cloud platform to ensure you have access to the resources you request.</p>
 <p>The UKCloud platform is designed using sites, regions and zones. The relationship between them is shown below:</p>
@@ -169,9 +169,9 @@ backups.</p>
 <p><strong>Update services.</strong> We make update repositories available for OVM containers. We don't provide software update facilities for non-UKCloud licensed software, including all Oracle applications or databases.</p>
 <p><strong>Anti-virus.</strong> We do not provide anti-virus software as part of the service.</p>
 <h2 id="networks">Networks</h2>
-<p><strong>Internet-facing solutions.</strong> You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.</p>
-<p><strong>PSN-facing solutions.</strong> You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with shared bandwidth (uncapped).</p>
-<p><strong>Janet and HSCN solutions.</strong> You have one usable IP address, but you can request additional IP addresses via a Service Request.</p>
+<p><strong>Internet-facing solutions.</strong> You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.</p>
+<p><strong>PSN-facing solutions.</strong> You should raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with shared bandwidth (uncapped).</p>
+<p><strong>Janet and HSCN solutions.</strong> You have one usable IP address, but you can request additional IP addresses by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <p>UKCloud for Oracle Software does not have a native external connectivity functionality. Therefore, UKCloud have enabled customers to manage connectivity rules, such as firewall, IPsec VPN and NAT functionality, through a VMware NSX Edge. This Edge is provisioned within the UKCloud for VMware environment and is managed using either the UKCloud Portal GUI or API.</p>
 <p>This Edge can be an existing edge in a customer's UKCloud for VMware environment, or can be provisioned as a completely new entity, specific for Oracle.</p>
 <h2 id="nsx-edge">NSX Edge</h2>
@@ -192,21 +192,20 @@ backups.</p>
 </li>
 <li><p><strong>vCloud Director Graphical UI.</strong> Provides a graphical interface to access the vCloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).</p>
 </li>
-<li><p><strong>UKCloud Portal.</strong> Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.</p>
+<li><p><strong>UKCloud Portal.</strong> Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.</p>
 </li>
 </ul>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.</p>
 <h2 id="service-migration">Service migration</h2>
 <p>UKCloud do not currently provide migration services, however customers are free to bring their own migration tools and utilise them within the UKCloud for Oracle Software environment.</p>
 <h2 id="service-reporting">Service reporting</h2>
-<p><strong>Visibility.</strong> We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the portal.</p>
-<p><strong>Service reporting.</strong> All service reporting is done via the UKCloud Portal.</p>
+<p><strong>Visibility.</strong> Maintenance notifications and Service Status reports are delivered through the portal.</p>
 <p><strong>Billing.</strong> Billing is issued on a monthly basis where you will be billed for your total monthly consumption.</p>
 <h2 id="customer-service">Customer service</h2>
 <p><strong>Customer Success Manager (CSM).</strong> For the first 90 days of the service, you have access to a UKCloud CSM who will help you with your adoption of the UKCloud UKCloud for Oracle Software service. This includes finding relevant systems and how to use UKCloud tools and processes.</p>
 <p><strong>Cloud Architects.</strong> UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing Oracle solutions.</p>
-<p><strong>Technical Account Managers (TAM).</strong> You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.</p>
-<p><strong>Support.</strong> After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the <a href="https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf"><em>Customer Engagement Factsheet</em></a>.</p>
+<p><strong>Service Delivery Managers.</strong> You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.</p>
+<p><strong>Support.</strong> After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the <a href="https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf"><em>Customer Engagement Factsheet</em></a>.</p>
 <h2 id="customer-responsibilities">Customer responsibilities</h2>
 <ul>
 <li><p>You are responsible for assessing whether the UKCloud UKCloud for Oracle Software platform can support the various requirements of your application.</p>
@@ -222,16 +221,16 @@ backups.</p>
 <h2 id="service-provisioning">Service provisioning</h2>
 <p>Within four (4) working hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a welcome pack  which includes the URL for the UKCloud Customer Portal, and the getting started guide.</p>
 <p>UKCloud and Infomentum will provision the Oracle Tenant environment. UKCloud will request information such as private subnets before creating the environment. Once the build is complete, UKCloud will provide you with access to provision Oracle virtual machines and Oracle networks.</p>
-<p>UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the <a href="http://docs.ukcloud.com/"><em>UKCloud Knowledge Centre</em></a>.</p>
+<p>UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the <a href="https://docs.ukcloud.com/"><em>UKCloud Knowledge Centre</em></a>.</p>
 <p>In addition, you will be assigned a Customer Success Manager (CSM) to provide any assistance required during the first 90 days of the service. UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.</p>
 <h2 id="service-constraints">Service constraints</h2>
 <p>UKCloud will adhere to the following in terms of maintenance windows:</p>
 <p>&quot;Planned Maintenance&quot; means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, if you will be affected then UKCloud shall provide you with at least fourteen (14) days' notice of the Planned Maintenance.</p>
-<p>If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For OVMs, this time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.</p>
+<p>If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For OVMs, this time will be excluded from the availability calculation.</p>
 <p>&quot;Emergency Maintenance&quot; means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud will:</p>
 <p>a) provide affected customers with at least six (6) hours' advanced notice and;</p>
 <p>b) carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.</p>
-<p>If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.</p>
+<p>If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.</p>
 <h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
 <p>The following documents contain more information about UKCloud for Oracle Software and the service options:</p>
 <ul>
@@ -245,7 +244,7 @@ backups.</p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -273,7 +272,7 @@ backups.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -282,7 +281,7 @@ backups.</p>
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -290,12 +289,19 @@ backups.</p>
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -305,5 +311,6 @@ backups.</p>
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

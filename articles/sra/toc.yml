@@ -14,3 +14,7 @@
   items:
   - name: Secure Remote Access Service Definition
     href: sra-sd.md
+- name: Service Scope
+  items:
+  - name: Secure Remote Access Service Scope
+    href: sra-sco.md

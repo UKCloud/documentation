@@ -1,5 +1,5 @@
 ---
-title: How to use the OpenStack Command Line Client on Microsoft operating systems | UKCloud Ltd
+title: How to use the OpenStackClient on Microsoft operating systems
 description: Outlines how to use the OpenStack Command Line Client on a Microsoft operating system using Windows PowerShell
 services: openstack
 author: Sue Highmoor
@@ -11,16 +11,16 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Use the OpenStack Command Line Client on Microsoft operating systems
+toc_title: Use the OpenStackClient on Microsoft operating systems
 toc_fullpath: How To/ostack-how-use-cli.md
 toc_mdlink: ostack-how-use-cli.md
 ---
 
-# How to use the OpenStack Command Line Client on Microsoft operating systems
+# How to use the OpenStackClient on Microsoft operating systems
 
 ## Overview
 
-OpenStack has been designed and built specifically for the Linux community utilising the Python programming language. Despite this, it's still possible to use the OpenStack Command Line Client on a Microsoft operating system using PowerShell, and this document outlines the six simple steps to achieve this.
+OpenStack has been designed and built specifically for the Linux community utilising the Python programming language. Despite this, it's still possible to use the OpenStack Command Line Client (OpenStackClient) on a Microsoft operating system using PowerShell, and this document outlines the six simple steps to achieve this.
 
 1. [Install Python runtime and libraries](#install-python-runtime-and-libraries)
 
@@ -46,7 +46,7 @@ All details outlined in this document have been tested against Windows 7 SP1 Ent
 
 1. Download the latest Python 2 release from the Python website:
 
-    <http://python.org/downloads/windows/>
+    <https://python.org/downloads/windows/>
 
     > [!NOTE]
     > The OpenStack client currently only supports Python 2.7, Python 3+ is unsupported).
@@ -194,4 +194,4 @@ The community regularly releases updates to the OpenStack CLI, therefore we sugg
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Oracle Software Service Scope | UKCloud Ltd
+title: UKCloud for Oracle Software Service Scope
 description: Outlines important details regarding UKCloud for Oracle Software
 services: oracle
 author: Steve Hall
@@ -39,7 +39,7 @@ You can also use accounts to separate users based on access requirements or perm
 
 **Organisation.** This represents your UKCloud for Oracle Software service inside Oracle Enterprise Manager and on the UKCloud Portal. There is a 1:1 mapping of service to Organisation.
 
-**Oracle Tenant.** An Oracle Tenant is where you define your workload type and build your OVMs. You can create Oracle Tenants via a service request.
+**Oracle Tenant.** An Oracle Tenant is where you define your workload type and build your OVMs. You can create Oracle Tenants by raising a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Service configuration
 
@@ -102,7 +102,7 @@ UKCloud for Oracle Software is underpinned by Oracle compute infrastructure. UKC
 
 Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager.
 
-VM creation is currently available via service request to ensure that the platform remains balanced &mdash; this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see [*Oracle cloud self-service funtionality*](orcl-ref-bug-self-service.md).
+VM creation is currently available via service request to ensure that the platform remains balanced &mdash; this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see [*Oracle cloud self-service funtionality*](orcl-ref-bug-self-service.md).
 
 All service requests will be triaged by UKCloud. We reserve the right to escalate a request to Infomentum for support. If you have not have a managed service contract with Infomentum, please do not contact them directly.
 
@@ -138,11 +138,11 @@ As the underlying platform is powered by OVM technology, you can either transfer
 
 ## Networks
 
-**Internet-facing solutions.** You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+**Internet-facing solutions.** You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.
 
-**PSN-facing solutions.** You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with shared bandwidth (uncapped).
+**PSN-facing solutions.** You should raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with shared bandwidth (uncapped).
 
-**Janet and HSCN solutions.** You have one usable IP address, but you can request additional IP addresses via a Service Request.
+**Janet and HSCN solutions.** You have one usable IP address, but you can request additional IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 UKCloud for Oracle Software does not have a native external connectivity functionality. Therefore, UKCloud have enabled customers to manage connectivity rules, such as firewall, IPsec VPN and NAT functionality, through a VMware NSX Edge. This Edge is provisioned within the UKCloud for VMware environment and is managed using either the UKCloud Portal GUI or API.
 
@@ -176,7 +176,7 @@ Users can access, manage and view the UKCloud for Oracle Software service, acces
 
 - **vCloud Director Graphical UI.** Provides a graphical interface to access the vCloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).
 
-- **UKCloud Portal.** Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.
+- **UKCloud Portal.** Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.
 
@@ -186,9 +186,7 @@ UKCloud do not currently provide migration services, however customers are free 
 
 ## Service reporting
 
-**Visibility.** We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the portal.
-
-**Service reporting.** All service reporting is done via the UKCloud Portal.
+**Visibility.** Maintenance notifications and Service Status reports are delivered through the portal.
 
 **Billing.** Billing is issued on a monthly basis where you will be billed for your total monthly consumption.
 
@@ -198,9 +196,9 @@ UKCloud do not currently provide migration services, however customers are free 
 
 **Cloud Architects.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing Oracle solutions.
 
-**Technical Account Managers (TAM).** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
+**Service Delivery Managers.** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf).
+**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -220,7 +218,7 @@ Within four (4) working hours of accepting an order (shorter deployment times ar
 
 UKCloud and Infomentum will provision the Oracle Tenant environment. UKCloud will request information such as private subnets before creating the environment. Once the build is complete, UKCloud will provide you with access to provision Oracle virtual machines and Oracle networks.
 
-UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the [*UKCloud Knowledge Centre*](http://docs.ukcloud.com/).
+UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the [*UKCloud Knowledge Centre*](https://docs.ukcloud.com/).
 
 In addition, you will be assigned a Customer Success Manager (CSM) to provide any assistance required during the first 90 days of the service. UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.
 
@@ -230,7 +228,7 @@ UKCloud will adhere to the following in terms of maintenance windows:
 
 "Planned Maintenance" means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, if you will be affected then UKCloud shall provide you with at least fourteen (14) days' notice of the Planned Maintenance.
 
-If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For OVMs, this time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For OVMs, this time will be excluded from the availability calculation.
 
 "Emergency Maintenance" means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud will:
 
@@ -238,7 +236,7 @@ a) provide affected customers with at least six (6) hours' advanced notice and;
 
 b) carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
 
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
 
 ## Supporting documents and resources
 
@@ -254,4 +252,4 @@ The following documents contain more information about UKCloud for Oracle Softwa
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

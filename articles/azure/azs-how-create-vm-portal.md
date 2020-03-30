@@ -1,10 +1,10 @@
 ---
-title: How to create a virtual machine using the UKCloud Azure Stack portal | UKCloud Ltd
+title: How to create a VM using the UKCloud Azure Stack Hub portal
 description: Create a virtual machine in UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 26/03/2020 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -16,23 +16,23 @@ toc_fullpath: Users/How To/Create a Virtual Machine/azs-how-create-vm-portal.md
 toc_mdlink: azs-how-create-vm-portal.md
 ---
 
-# How to create a virtual machine using the UKCloud Azure Stack portal
+# How to create a virtual machine using the UKCloud Azure Stack Hub portal
 
 ## Overview
 
-With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications. As UKCloud for Microsoft Azure is built on UKCloud’s assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle, VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.
+With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications. As UKCloud for Microsoft Azure is built on UKCloud's assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle, VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ## Creating a virtual machine
 
-VMs provide the basic compute building blocks in Azure Stack. You can create VMs using the Azure Stack Marketplace, which provides access to pre-created images to quickly deploy the VMs you need to build your applications. Microsoft makes Azure Marketplace images available for Azure Stack once they have passed an accreditation process. If you cannot find the image you require in the Azure Stack Marketplace please raise a support call via the UKCloud portal and if possible we will make your requested image available in Azure Stack Marketplace.
+VMs provide the basic compute building blocks in Azure Stack Hub. You can create VMs using the Azure Stack Hub Marketplace, which provides access to pre-created images to quickly deploy the VMs you need to build your applications. Microsoft makes Azure Marketplace images available for Azure Stack Hub once they have passed an accreditation process. If you cannot find the image you require in the Azure Stack Hub Marketplace please raise a support call via the UKCloud portal and if possible we will make your requested image available in Azure Stack Hub Marketplace.
 
 **To create a VM from the Azure Marketplace:**
 
-1. Log in to the Azure Stack portal.
+1. Log in to the Azure Stack Hub portal.
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -103,8 +103,8 @@ For more information about UKCloud for Microsoft Azure, see:
 
 ## Related videos
 
-- [*UKCloud Azure Stack portal overview video*](azs-vid-overview.md)
+- [*UKCloud Azure Stack Hub portal overview video*](azs-vid-overview.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

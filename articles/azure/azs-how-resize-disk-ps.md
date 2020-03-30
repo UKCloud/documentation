@@ -1,5 +1,5 @@
 ---
-title: How to resize a disk using PowerShell | UKCloud Ltd
+title: How to resize a disk using PowerShell
 description: Provides help for resizing a disk using PowerShell on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -33,7 +33,7 @@ To complete the steps in this article you must have the appropriate permissions 
 
 ## Prerequisites
 
-Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
+Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md).
 
 ## [Resizing an OS disk](#tab/tabid-1)
 
@@ -43,8 +43,8 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name           | Variable description                                                                       | Input            |
 |-------------------------|--------------------------------------------------------------------------------------------|------------------|
-| \$ArmEndpoint           | The Azure Resource Manager endpoint for Azure Stack                                        | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
-| \$RGName                | Name of the resource group which the VM is inside in Azure Stack                           | <form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+| \$ArmEndpoint           | The Azure Resource Manager endpoint for Azure Stack Hub                                        | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$RGName                | Name of the resource group which the VM is inside in Azure Stack Hub                           | <form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$VMName                | Name of the VM with the disk you are trying to resize                                      | <form oninput="result.value=VMNameInput.value; result2.value=VMNameInput.value" id="VMName" style="display: inline;"><input type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="MyVM"/></form> |
 | \$Disk.DiskSizeGB       | The new disk size in gigabytes. **Note**: The maximum size allowed for OS disks is 2048 GB | <form oninput="result.value=DiskSizeInput.value; result2.value=DiskSizeInput.value" id="DiskSize" style="display: inline;"><input type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="200"/></form> |
 
@@ -56,8 +56,8 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name           | Variable description                                                                       | Input            |
 |-------------------------|--------------------------------------------------------------------------------------------|------------------|
-| \$ArmEndpoint  | The Azure Resource Manager endpoint for Azure Stack                                                 | <form oninput="result.value=armendpoint2.value;result2.value=armendpoint2.value" id="armendpoint2" style="display: inline;"><input type="text" id="armendpoint2" name="armendpoint2" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
-| \$RGName                | Name of the resource group which the VM is inside in Azure Stack                           | <form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+| \$ArmEndpoint  | The Azure Resource Manager endpoint for Azure Stack Hub                                                 | <form oninput="result.value=armendpoint2.value;result2.value=armendpoint2.value" id="armendpoint2" style="display: inline;"><input type="text" id="armendpoint2" name="armendpoint2" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$RGName                | Name of the resource group which the VM is inside in Azure Stack Hub                           | <form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$VMName                | Name of the VM with the disk you are trying to resize                                      | <form oninput="result.value=VMNameInput2.value; result2.value=VMNameInput2.value" id="VMName2" style="display: inline;"><input type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="MyVM"/></form> |
 | \$Disk.DiskSizeGB       | The new disk size in gigabytes. | <form oninput="result.value=DiskSizeInput2.value; result2.value=DiskSizeInput2.value" id="DiskSize2" style="display: inline;"><input type="text" id="DiskSizeInput2" name="DiskSizeInput2" style="display: inline;" placeholder="200"/></form> |
 | \$DiskLun               | The LUN (Logical Unit Number) of the disk you are trying to resize                         | <form oninput="result.value=LUNInput.value; result2.value=LUNInput.value" id="LUN" style="display: inline;"><input type="text" id="LUNInput" name="LUNInput" style="display: inline;" placeholder="0"/></form> |
@@ -73,7 +73,7 @@ From your PowerShell window:
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -103,7 +103,7 @@ From your PowerShell window:
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -132,7 +132,7 @@ From your PowerShell window:
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint2" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -163,7 +163,7 @@ From your PowerShell window:
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint2" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -232,4 +232,4 @@ No further action is required.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: How to configure a Distributed Logical Router | UKCloud Ltd
+title: How to configure a Distributed Logical Router
 description: Describes how to configure a Distributed Logical Router (DLR), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-configure-distributed-logical-router.md
 
 ## Overview
 
-UKCloud for VMware provides Distributed Logical Router (DLR) functionality as part of its Advanced Networking bundles (additional charges apply). DLR optimises the routing of east-west traffic within your VDCs, using a hypervisor on the source VM to limit traffic flow to a maximum of two hosts (the source and a destination), without the need to route traffic back through the edge gateway. As well as providing much better performance, DLR can scale up to 1000 routed logical networks (rather than the 10 logical network limit imposed by traditional edge gateway routing).
+UKCloud for VMware provides Distributed Logical Router (DLR) functionality as part of its Advanced Management bundle (additional charges apply). DLR optimises the routing of east-west traffic within your VDCs, using a hypervisor on the source VM to limit traffic flow to a maximum of two hosts (the source and a destination), without the need to route traffic back through the edge gateway. As well as providing much better performance, DLR can scale up to 1000 routed logical networks (rather than the 10 logical network limit imposed by traditional edge gateway routing).
 
 ![Distributed Logical Router overview](images/vmw-dlr-overview.png)
 
@@ -28,8 +28,7 @@ UKCloud for VMware provides Distributed Logical Router (DLR) functionality as pa
 
 Before enabling DLR, consider the following:
 
-- You must have purchased either the Advanced Networking Bundle or Enterprise Networking Bundle for your UKCloud for VMware service
-- You must have converted your edge gateway to an advanced gateway (see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md))
+- You must have purchased the Advanced Management bundle for your UKCloud for VMware service
 - Your advanced gateway must have one free interface for DLR to use for the transit (P2P) network
 - IPv6 is not supported with DLR
 - L2 VPN is not supported on a distributed VDC network
@@ -76,8 +75,6 @@ To enable distributed routing, you must use the vCloud Director Web Console.
 
 After you've enabled distributed routing, you can create your distributed networks. You can create up to 1000 distributed networks per edge gateway.
 
-# [In vCloud Director 9.7](#tab/tabid-1)
-
 1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
 
 2. In the left navigation panel, select **Networks**.
@@ -119,39 +116,6 @@ After you've enabled distributed routing, you can create your distributed networ
 
 13. When you're done, click **Finish**.
 
-# [In vCloud Director 9.1](#tab/tabid-2)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
-
-2. In the left navigation panel, select **Network**.
-
-    ![Network tab in vCloud Director](images/vmw-vcd91-tab-network.png)
-
-3. Click **Add**.
-
-    ![Add network button](images/vmw-vcd91-btn-add-network.png)
-
-4. In the *Add Org VDC Network* dialog box, select **Routed network connecting to an existing edge gateway**.
-
-    ![Routed network option](images/vmw-vcd91-add-network-routed-option.png)
-
-5. Select the **Edge Gateway** that you want your network to connect to.
-
-    > [!NOTE]
-    > The edge must be an advanced gateway and must have distributed routing enabled.
-
-6. From the **Interface type** list, select **Distributed**.
-
-    ![Distributed network option](images/vmw-vcd91-dlr-add-network-distributed.png)
-
-7. Complete the remaining fields in the dialog box as you would for any other routed network.
-
-    For more detailed instructions, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
-
-8. When you're done, click **Save**.
-
-***
-
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

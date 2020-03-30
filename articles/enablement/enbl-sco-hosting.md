@@ -1,5 +1,5 @@
 ---
-title: Cloud Enablement - Server/Storage Hosting Service Scope | UKCloud Ltd
+title: Cloud Enablement - Server/Storage Hosting Service Scope
 description: outlines important details regarding Cloud enablement for server / storage hosting
 services: enablement
 author: Steve Hall
@@ -44,7 +44,7 @@ Please note that ANY device placed within the UKCloud estate must be done so to 
 **Resilience requirement</br>(1 bay = 10U, 1kw per month)** | Depends on solution               |
 **Resilience cost** | Depends on solution
 **Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (e.g. Cloud Enablement in region 5 cannot be stretched to region 6)
-**Next steps** | Raise a service request via the UKCloud Portal                    |
+**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal                    |
 
 ## What connectivity does the server/storage hosting service provide?
 
@@ -118,4 +118,4 @@ If, in the unlikely event of a power failure, you would like your hardware resta
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

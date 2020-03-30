@@ -1,5 +1,5 @@
 ---
-title: Service Level Agreement FAQs | UKCloud Ltd
+title: Service Level Agreement FAQs
 description: Frequently asked questions for Service Level Agreements
 services: other
 author: Matt Warner
@@ -51,7 +51,7 @@ No, UKCloud's monitoring tools, data and records (including support tickets) wil
 
 ### How do I request a Service Credit?
 
-To request a Service Credit, customers must raise a support call on the [UKCloud Portal](https://portal.ukcloud.com/support/my_calls/new) within thirty (30) calendar days of the suspected SLA Event. UKCloud will review the request and issue a Service Credit if applicable either during that billing cycle or the subsequent one if the claim is made just after an invoice has been paid.
+To request a Service Credit, customers must raise a Service Request the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal within thirty (30) calendar days of the suspected SLA Event. UKCloud will review the request and issue a Service Credit if applicable either during that billing cycle or the subsequent one if the claim is made just after an invoice has been paid.
 
 ### Does UKCloud have an SLA that covers customer-owned hardware or appliances such as routers?
 
@@ -461,4 +461,4 @@ How much is payable?
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,10 +1,10 @@
 ---
-title: Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd
+title: Getting Started Guide for UKCloud for OpenStack
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: Steve Dixon
+lastreviewed: 20/08/2019
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -35,7 +35,11 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 2. From the **Authenticate using** list, select:
 
     - **Keystone Credentials** if your account has not been migrated to SSO
+    
     - **UKCloud SSO** if your account has been migrated to SSO
+
+    > [!NOTE]
+    > If you're using **UKCloud SSO**, you'll require the v3 version of the OpenStack RC file. You can find more details about the OpenStack RC file in [*How to use the OpenStack API using an SSO enabled user*](ostack-how-use-api-sso.md).
 
     ![Horizon login page](images/ostack-horizon-login.png)
 
@@ -43,7 +47,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 
     If you selected **UKCloud SSO** click **Connect**. You'll be redirected to the SSO login page, where you can enter your username and password and click **Log in**.
 
-    ![SSO Login Page](images/ostack-horizon-sso-login.PNG)
+    ![SSO Login Page](images/ostack-horizon-sso-login.png)
 
     If you've set up two-factor authentication (2FA) in the Portal, you'll be prompted for a 2FA code.
 
@@ -525,29 +529,12 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
 
 3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process that you'll typically need when configuring connections.
 
-    You can also download your user's OpenStack RC file for use in the following section.
-    
-    > [!NOTE]
-    > If your account is SSO-enabled, download the v3 RC file.
+    You can also download your user's OpenStack RC file for use in the following section. 
 
     ![Download OpenStack RC File button on Access & Security page](images/ostack-horizon-btn-download-rc-file.png)
 
-4. If your account is enabled for SSO, you'll need to add the following items to the RC file you downloaded in the previous step.
-
-   ``` none
-   export OS_AUTH_TYPE="v3oidcpassword"
-   export OS_IDENTITY_PROVIDER="sso"
-   export OS_PROTOCOL="oidc"
-   export OS_CLIENT_ID=""
-   export OS_CLIENT_SECRET=""
-   export OS_DISCOVERY_ENDPOINT="https://idp.ukcloud.com/auth/realms/client-assured/.well-known/openid-configuration
-   ```
-   
-    - The `client_id` for Corsham is `cni.1.cor00005`
-
-    - The `client_id` for Farnborough is `cni.1.frn00006`
-
-    - You can set the `client_secret` to any value
+    > [!NOTE]
+    > If your account is SSO-enabled, download the v3 RC file and make the modifications stated [here](ostack-how-use-api-sso.md).
 
 ## Using the OpenStack command-line client
 
@@ -570,15 +557,15 @@ In this Getting Started Guide, you've learned how to use the OpenStack Horizon U
 
 You can find additional information in the following places:
 
-- **OpenStack API** --- For more information about using the API, see the OpenStack documentation at <http://developer.openstack.org/api-guide/quick-start/>
+- **OpenStack API** --- For more information about using the API, see the OpenStack documentation at <https://developer.openstack.org/api-guide/quick-start/>
 
 - **OpenStack Client** --- For more information about using the OpenStack Client, see the OpenStack documentation at <http://docs.openstack.org/user-guide/cli.html>
 
-- **HEAT templates** --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <https://wiki.openstack.org/wiki/Heat> and <http://docs.openstack.org/developer/heat/template_guide/index.html>
+- **HEAT templates** --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <https://wiki.openstack.org/wiki/Heat> and <https://docs.openstack.org/developer/heat/template_guide/index.html>
 
 - **Terraform** --- For information about using Terraform and the OpenStack provider, see the Terraform documentation at <https://www.terraform.io/intro/> and <https://www.terraform.io/docs/providers/openstack/index.html>
 
-- **Ansible** --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack>
+- **Ansible** --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <https://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack>
 
 ## Related videos
 
@@ -624,4 +611,4 @@ network mounted onto the host hypervisor.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

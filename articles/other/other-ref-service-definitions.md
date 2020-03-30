@@ -1,10 +1,10 @@
 ---
-title: UKCloud Service Definitions and Pricing Guide | UKCloud Ltd
+title: UKCloud Service Definitions and Pricing Guide
 description: List of Service Definitions for UKCloud services, including terms and conditions, SFIA rate card, and pricing guide
 services: Other
 author: Sue Highmoor
 reviewer:
-lastreviewed: 28/06/2018
+lastreviewed: 28/06/2019
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -55,7 +55,7 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Migration to the Cloud](../migration/migr-sd.md)
 
-[Multi-Cloud Backup Storage](../mcbs/mcbs-sd.md)
+[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md)
 
 [Private Cloud](../private-cloud/prc-sd.md)
 
@@ -79,13 +79,11 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Portworx Enterprise from UKCloud](../third-party/third-sd-portworx.md)
 
-[XQ Cyber CyberScore from UKCloud](../third-party/third-sd-cyberscore.md)
-
 ## Pricing Guide
 
 [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)
 
-[3rd Party Software Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf)
+[3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide)
 
 ## SFIA rate card
 
@@ -97,4 +95,4 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

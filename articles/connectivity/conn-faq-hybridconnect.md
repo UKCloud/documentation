@@ -1,10 +1,10 @@
 ---
-title: HybridConnect FAQs | UKCloud Ltd
+title: HybridConnect FAQs
 description: Frequently asked questions for HybridConnect
 services: connectivity
 author: Matt Warner
-reviewer:
-lastreviewed: 20/07/2018 18:37:23
+reviewer: hbrunt
+lastreviewed: 16/12/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -72,7 +72,7 @@ The way that HybridConnect connects to your UKCloud environment depends on the r
 
 ## How do I initiate and process a HybridConnect installation?
 
-You need to either contact your account director or raise a service request via [My Calls](https://portal.ukcloud.com/support/my_calls) in the UKCloud Portal.
+You need to either contact your account director or raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal.
 
 ## How much do you charge for a HybridConnect connection?
 
@@ -84,4 +84,4 @@ If you have questions about connectivity in general, please see the [*General co
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Oracle Software FAQs | UKCloud Ltd
+title: UKCloud for Oracle Software FAQs
 description: Frequently asked questions for UKCloud for Oracle Software
 services: oracle
 author: Matt Warner
@@ -103,7 +103,7 @@ You can also create your own assemblies and upload reusable software images.
 
 ### How do I increase or decrease resources?
 
-Currently, processor, memory and storage allocations are changed via a service request, raised through the UKCloud Portal. This is because of the resource pinning that OVM does on the underlying hypervisor.
+Currently, processor, memory and storage allocations are changed by raising a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. This is because of the resource pinning that OVM does on the underlying hypervisor.
 
 - Processors and memory can be added to or removed from VMs, although VMs will need to be shut down for this to happen.
 
@@ -189,4 +189,4 @@ You must ensure your platform is appropriately licensed for the Oracle Software 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

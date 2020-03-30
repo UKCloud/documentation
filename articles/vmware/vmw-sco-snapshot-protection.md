@@ -1,10 +1,10 @@
 ---
-title: Snapshot Protection Service Scope | UKCloud Ltd
+title: Snapshot Protection Service Scope
 description: Outlines important details regarding the Snapshot Protection service
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+reviewer: George Smith
+lastreviewed: 28/10/2019 13:50:39
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -35,7 +35,7 @@ You can choose from the following Snapshot Protection policies:
 
 When you opt a virtual machine (VM) into a Snapshot Protection policy, the VM is added to a daily automated snapshot. The snapshot is of the entire VM running on your UKCloud for VMware service.
 
-Data protected by the snapshot has an RPO of 24 hours. RTO is determined by the time taken to restore the VM after you've raised a service request.
+Data protected by the snapshot has an RPO of 24 hours. RTO is determined by the time taken to restore the VM after you've raised a Service Request.
 
 Snapshot Protection is chargeable based on the number of VMs protected and the capacity utilised to store the data.
 
@@ -45,11 +45,11 @@ No protection products are automatically applied to VMs running on the UKCloud p
 
 Snapshots are scheduled to occur once in a 24-hour period.
 
-Snapshots take place 365 days of the year and are started inside the UKCloud‑defined window: 2000-0800. Snapshots are not started before 2000 or after 0800.
+Snapshots take place 365 days of the year and are started inside the UKCloud‑defined window: 20:00-08:00. Snapshots are not started before 20:00 or after 08:00.
 
 We cannot guarantee the time at which your VM will have a snapshot taken inside this window; the time may also vary from day to day. The time of a snapshot is reported via the UKCloud Portal the next day.
 
-There's a system hard stop at 0900, at which time any active snapshots are cancelled.
+There's a system hard stop at 09:00, at which time any active snapshots are cancelled.
 
 ### Success rate
 
@@ -57,13 +57,13 @@ We do not guarantee successful snapshots.
 
 We can provide you with guidance on suitable candidates for Snapshot Protection (data change rate/size).
 
-VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your Technical Account Manager (TAM) if this scenario applies to one or more of your VMs.
+VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your Service Delivery Manager if this scenario applies to one or more of your VMs.
 
 VM snapshots may be attempted more than once to obtain successful status.
 
 Only the final state will count in our calculations.
 
-Any snapshots still in progress at 0900 are considered as failed.
+Any snapshots still in progress at 09:00 are considered as failed.
 
 Partial snapshots and those with errors count as failed.
 
@@ -83,11 +83,11 @@ If none of these services meet your requirements, you can also implement and man
 
 The UKCloud Cloud Storage platform may be an appropriate target for self‑managed solutions using software such as CommVault and NetWorker.
 
-### Other
-
 The service is not backed by service credits.
 
-On occasion, planned maintenance will take precedence over VM snapshots. If there's a potential disruption, we'll highlight this to you via the service [status page](http://status.ukcloud.com/) and UKCloud Portal notifications system.
+### Planned maintenance
+
+On occasion, planned maintenance will take precedence over VM snapshots. If there's a potential disruption, we'll highlight this to you via the service [status page](https://status.ukcloud.com/) and UKCloud Portal notifications system.
 
 ## Snapshot management
 
@@ -103,7 +103,7 @@ You can make changes to your Snapshot Protection via the UKCloud Portal. You can
 
 ## Alerting and reporting
 
-Information about your backups is reported on the UKCloud Portal. Reports are updated daily and are available by 1000, but typically within minutes of the close of the backup window.
+Information about your backups is reported on the UKCloud Portal. Reports are updated daily and are available by 10:00, but typically within minutes of the close of the backup window.
 
 Reports are available covering every day of the retention period (14 or 28 days as appropriate).
 
@@ -113,7 +113,7 @@ Alerting on individual VMs is not provided.
 
 ### Timing and process
 
-You can ask to restore a VM via a service request, which is subject to standard support SLA timescales.
+You can ask to restore a VM by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, which is subject to standard support SLA timescales.
 
 Restores are performed outside of the backup window, unless a P1 incident is involved. You can find a definition of our support processes and severity categorisation in [*How to raise and escalate incidents and service requests*](../portal/ptl-how-raise-escalate-service-request.md).
 
@@ -149,4 +149,4 @@ We'll proactively investigate failures on the platform on the following triggers
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

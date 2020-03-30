@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to migrate workloads on OpenStack using Hystax Acura | UKCloud Ltd </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to migrate workloads on OpenStack using Hystax Acura | UKCloud Ltd ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-use-hystax.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-migrate-workloads-on-openstack-using-hystax-acura">How to migrate workloads on OpenStack using Hystax Acura</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Hystax Acura offers a fully automated and reliable way to lift-and-shift all types of OpenStack workloads without experiencing downtime or complications arising from large-scale migration. Hystax supports all popular OpenStack distributions including UKCloud's Red Hat OpenStack.</p>
+<p>Hystax offers a sustainable solution to achieve zero downtime during the OpenStack migration process. The instance keeps running throughout the migration, which is important when it's not an option to stop the applications running on the instance. Overcome common transfer challenges like high costs, long transfer times and security concerns – all in a single product. Lifting-and-shifting workloads to a chosen OpenStack distribution is more manageable than ever before.</p>
+<p>This article provides instructions from the <a href="https://hystax.com/wp-content/uploads/2019/09/Hystax-Acura-Migration-Guide.pdf">Hystax Acura Cloud Migration Step-by-Step Guide</a> for how to migrate workloads using Hystax Acura.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To utilise Hystax Acura cloud migration services, you'll first need a Hystax user account provisioned in the Hystax Acura Control Panel. You can request a Hystax user account by raising a ticket in the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="understanding-concepts">Understanding concepts</h2>
+<p>Before starting to use Hystax Acura, it's helpful to understand a few commonly used terms and concepts.</p>
+<h3 id="hystax-acura-control-panel">Hystax Acura Control Panel</h3>
+<p>Hystax Acura Control Panel is a management portal deployed and managed by UKCloud. The Hystax Acura Control Panel enables an OpenStack user to create and manage all their workload migration requirements.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>All Hystax components are deployed and contained within UKCloud's infrastructure. No customer data is shared or transmitted to any third party.</p>
+</div>
+<h3 id="hystax-acura-agents">Hystax Acura agents</h3>
+<p>These are the agents that are installed within a guest Linux or Windows operating system, which communicate with the Hystax Acura Control Panel to coordinate and manage workload migrations.</p>
+<h2 id="migrating-openstack-workloads">Migrating OpenStack workloads</h2>
+<p>To perform cloud migration you need to complete the following steps:</p>
+<h3 id="replication-flow">Replication flow</h3>
+<ol>
+<li><p>Login to the Hystax Acura Control Panel and navigate to a customer dashboard for a customer you target to perform migration.</p>
+<p><img src="images/hystax1.jpg" alt="Hystax Acura Control Panel"></p>
+</li>
+<li><p>On a customer dashboard you can find information about replicated machines, Migration Plans and Migrations running on a target cloud. By default, no resources are available for a new customer.</p>
+<p><img src="images/hystax2.jpg" alt="Machine Groups"></p>
+</li>
+<li><p>Click <strong>Download agents</strong> in the main menu, select a customer for which machines need to be replicated and download a replication agent.</p>
+<p><img src="images/hystax3.jpg" alt="Hystax Agents"></p>
+<p>For OpenStack workload migrations there are two types of replication agents:</p>
+<ul>
+<li><p><strong>Windows agent</strong> - an internal agent that can be deployed to any number of customer Windows virtual or physical machines. Refer to <a href="http://docs.hystax.com/devices_protection.html#install-windows-and-linux-agents">http://docs.hystax.com/devices_protection.html#install-windows-and-linux-agents</a> and the <a href="https://hystax.com/wp-content/uploads/2019/12/Hystax_Acura-Compatibility-Matrix.pdf">Operating Systems Compatibility Matrix</a>.</p>
+</li>
+<li><p><strong>Linux agent</strong> - an internal agent that can be deployed to any number of customer Linux virtual or physical machines. Refer to <a href="http://docs.hystax.com/devices_protection.html#install-windows-and-linux-agents">http://docs.hystax.com/devices_protection.html#install-windows-and-linux-agents</a> and the <a href="https://hystax.com/wp-content/uploads/2019/12/Hystax_Acura-Compatibility-Matrix.pdf">Operating Systems Compatibility Matrix</a>.</p>
+</li>
+</ul>
+</li>
+<li><p>When any of the agents are deployed, the machine with it (or all machines on the same ESXi host where the agent is located) will appear in Hystax Acura Control Panel under customer dashboard in the Discovered state.</p>
+</li>
+<li><p>To start replication of machines, select the machines and click <strong>Start replication</strong> under <strong>Bulk actions</strong> or for any of the machines specifically. After <strong>Start replication</strong> is performed, machines will be replicated to a target cloud, first, Hystax Acura takes full replica and, later, incremental replicas according to a schedule set globally for all the machines or for any group of machines or for any machines specifically.</p>
+<p><img src="images/hystax4.jpg" alt="Start Replication"></p>
+</li>
+<li><p>To change the replication schedule, navigate to Replication schedule under a machine settings or bulk actions. Refer to <a href="http://docs.hystax.com/dr_overview.html#edit-replication-schedule">http://docs.hystax.com/dr_overview.html#edit-replication-schedule</a> for more information on configuring the settings.</p>
+</li>
+</ol>
+<h3 id="run-migration-flow">Run migration flow</h3>
+<ol>
+<li><p>Migration is based on Migration Plans, which are scenarios of what needs to be migrated and in what order. Refer to <a href="http://docs.hystax.com/dr_overview.html#disaster-recovery-plans">http://docs.hystax.com/dr_overview.html#disaster-recovery-plans</a> for more information about Migration Plans. To create a Migration Plan click Add on Migration Plans region.</p>
+<p><img src="images/hystax5.jpg" alt="Hystax Migration Plans"></p>
+</li>
+<li><p>While creating a Migration Plan, orchestration is available under Basic and Expert modes. Basic mode helps to generate a plan with standard settings, expert mode is a JSON script with more powerful settings described under <a href="http://docs.hystax.com/dr_overview.html#dr-plan-syntax">http://docs.hystax.com/dr_overview.html#dr-plan-syntax</a>.</p>
+</li>
+<li><p>Add all the machines which need to be migrated, place them into ranks, set correct IP addresses, networks and boot delays.</p>
+<p><img src="images/hystax6.jpg" alt="Plans"></p>
+</li>
+<li><p>When the Migration Plan is ready, you can run test or production failovers. To run a migration, select a Migration Plan and click Run Migration.</p>
+<p><img src="images/hystax7.jpg" alt="Run Plans"></p>
+</li>
+<li><p>Select a restore point for the migration by selecting Restore point time. For all of the machines selected the closest snapshot in the past will be taken. Click Run Migration to start the process.</p>
+<p><img src="images/hystax8.jpg" alt="Restore Point Time"></p>
+</li>
+<li><p>When a migration is running, you can see and control its status on the Cloud Site page available via customer dashboard.</p>
+<p><img src="images/hystax9.jpg" alt="Hystax Acura Status"></p>
+</li>
+<li><p>When you are done with test migration you can delete it and start a new one. For the final cutover, just detach Hystax Acura from the migration and Hystax Acura will stop tracking any resources belonging to this migration.</p>
+<p><img src="images/hystax10.jpg" alt="Hystax Status Success"></p>
+</li>
+</ol>
+<h2 id="known-issues">Known issues</h2>
+<p>The Hystax Acura service is under constant development. The following are the known issues in the current release of the software, which should be resolved in the next release.</p>
+<h3 id="creation-of-new-persistent-volumes-on-target-instances">Creation of new persistent volumes on target instances</h3>
+<p>When the Hystax migration completes, the disk of the resulting new/target instances will use persistent volumes and snapshots. This may result in extra monthly storage costs.</p>
+<h3 id="migrating-ubuntu-workloads">Migrating Ubuntu workloads</h3>
+<p>Due to the way in which the Hystax software works, you may experience issues migrating an Ubuntu server/instance with the default disk mount settings. In Ubuntu, the root risk (<code>/</code>) is mounted by label (that is, in <code>/etc/fstab</code> there is a setting that states <code>LABEL=&quot;….&quot;</code> for the &quot;<code>/</code>&quot; disk).</p>
+<p>You need to modify this to use the UUID or device name (for example, <code>/dev/vdb1</code>).</p>
+<p>Run the following steps on a default Ubuntu setup for a successful migration:</p>
+<ol>
+<li><p>Ensure <code>/etc/fstab</code> refers to the boot and root disks using <code>UUID=&quot;&quot;</code> or <code>/dev/vda1</code>, and so on, and not by <code>LABEL=&quot;&quot;</code> (you can retrieve the device name using the <code>lsblk</code> command and return the UUID using the <code>blkid</code> command).</p>
+</li>
+<li><p>After changing <code>/etc/fstab</code> (if required), run <code>update-grub</code> as the root user.</p>
+</li>
+<li><p>Install the Hystax source agent (<code>hlragent</code>) as per instructions given on the Hystax Acura server (Web UI).</p>
+</li>
+<li><p>Reboot the Ubuntu instance.</p>
+</li>
+<li><p>At this point the Ubuntu instance is ready to be replicated and migrated.</p>
+</li>
+</ol>
+<h3 id="migrating-microsoft-windows-workloads">Migrating Microsoft Windows workloads</h3>
+<h4 id="error-when-creating-and-running-a-migration-plan-in-the-acura-user-interface">Error when creating and running a migration plan in the Acura user interface</h4>
+<p>When creating and running a migration plan in the Acura user interface, you may encounter an error relating to a malformed mac-address. To resolve this go to the <strong>Expert</strong> tab in the <em>Edit Migration Plan</em> interface and remove any lines that contain <code>&quot;&quot;mac&quot;: &quot;…..&quot;</code>. After doing this save and re-run the migration plan and the issue will be resolved.</p>
+<h4 id="user-management">User management</h4>
+<p>When a Microsoft Windows instance is migrated and first created on the destination cloud, the administrator user password will be reset to a random different value. Before a migration is run, ensure the source server has a local user with sufficient administration privileges that enable you to login and administer the server (possibly change the administrator password back if required).</p>
+<h2 id="further-support">Further support</h2>
+<p>Should you experience any issues in using Hystax Acura or with your migrations, our support team is on hand to assist via a Support Request in the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

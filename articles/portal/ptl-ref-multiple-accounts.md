@@ -1,5 +1,5 @@
 ---
-title: Partitioning projects or end customers using UKCloud accounts | UKCloud Ltd
+title: Partitioning projects or end customers using UKCloud accounts
 description: 
 services: portal
 author: Sophie Wake
@@ -81,7 +81,7 @@ There are two options that you can choose from to manage your projects and end c
 
 ## Creating multiple accounts
 
-When you bring a new workload to UKCloud, your Technical Account Manager (TAM) or Customer Success Manager (CSM) will discuss your requirements and whether you want to create an additional account. If you decide that an additional account is best for your setup, UKCloud will create it for you. Once the additional account is created, the Portal administrator for the account can then add existing UKCloud Portal users to the account by raising a Service Request via MyCalls or add new users to the UKCloud Portal onto the new account, which the administrator can add themselves.
+When you bring a new workload to UKCloud, your Service Delivery Manager or Customer Success Manager (CSM) will discuss your requirements and whether you want to create an additional account. If you decide that an additional account is best for your setup, UKCloud will create it for you. Once the additional account is created, the Portal administrator for the account can then add existing UKCloud Portal users to the account by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or add new users to the UKCloud Portal onto the new account, which the administrator can add themselves.
 
 ## Related articles
 
@@ -91,4 +91,4 @@ When you bring a new workload to UKCloud, your Technical Account Manager (TAM) o
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: Private Cloud for Storage FAQs | UKCloud Ltd
+title: Private Cloud for Storage FAQs
 description: Frequently asked questions for Private Cloud for Storage
 services: private-cloud
 author: Matt Warner
@@ -67,7 +67,7 @@ UKCloud's secure online Portal provides the most common service management funct
 
 ### How do I manage my services?
 
-Private Cloud for Storage on the Assured OFFICIAL (formerly IL2) domain can be managed over the internet (or other connectivity) by raising a Service Request via the My Calls section of the UKCloud Portal.
+Private Cloud for Storage on the Assured OFFICIAL (formerly IL2) domain can be managed over the internet (or other connectivity) by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 For the Elevated OFFICIAL (formerly IL3) domain, the security requirements are much stricter and require either a PSN-approved connection, UKCloud Secure Remote Access, or CAPS-approved encryption.
 
@@ -121,10 +121,10 @@ This service is hosted in the UK and operated by SC-cleared staff. It has extens
 
 ### Can systems on different UKCloud platforms communicate with one another?
 
-UKCloud's Cross Domain Security Zone allows you to use the UKCloud-defined and managed UKCloud Guard, or a customer-designed and managed Walled Garden, to enable communication between platforms.
+UKCloud's Cross Domain Security Zone allows you to use a customer-designed and managed Walled Garden, to enable communication between platforms.
 
 For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md).
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: Private Cloud for Oracle Software Service Scope | UKCloud Ltd
+title: Private Cloud for Oracle Software Service Scope
 description: Outlines important details regarding Private Cloud for Oracle Software
 services: private-cloud
 author: Sue Highmoor
@@ -119,7 +119,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 ### Your UKCloud Hosted responsibilities
 
-- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done through a Service Request. Note that due to the secure nature of the site, at least 24 hours’ notice is required. Engineers must be escorted and this is charged at a [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) day rate.
+- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. Note that due to the secure nature of the site, at least 24 hours’ notice is required. Engineers must be escorted and this is charged at a [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) day rate.
 
 ### Your CHDC Hosted responsibilities
 
@@ -143,7 +143,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 ### Important CHDC/On-premises/Alternate DC considerations
 
-You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. A Service Request via the UKCloud Portal must be raised for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
+You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. You must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
 
 We cannot be responsible for any service affecting issues resulting from non-escorted access.
 
@@ -155,7 +155,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
 - Managing the performance of your workload by right-sizing your VMs and their usage
 
-- Raising Service Requests through the UKCloud Portal when you need configurations implemented
+- Raising Service Requests through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 
@@ -237,7 +237,7 @@ As per All-Inclusive plus:
 
 - Providing you with visibility of capacity utilisation to ensure capacity planning can be effectively performed
 
-- Your assigned Technical Account Manager will attend any required service reviews and project progress calls that you need
+- Your assigned Service Delivery Manager will attend any required service reviews and project progress calls that you need
 
 - Notifying you of any maintenance windows and agreeing a suitable time to implement
 
@@ -307,8 +307,8 @@ SLA excludes:
 
 ## To progress further
 
-For further information, contact your Technical Account Manager to request more information or to place an order.
+For further information, contact your Service Delivery Manager to request more information or to place an order.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

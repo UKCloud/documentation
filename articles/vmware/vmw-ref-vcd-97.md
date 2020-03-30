@@ -1,38 +1,29 @@
 ---
-title: Preparing for vCloud Director 9.7 upgrade | UKCloud Ltd
+title: Changes in vCloud Director 9.7
 description: Outlines the steps required to prepare for the upcoming upgrade to vCloud Director 9.7
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 
+reviewer: Dylan Coombes 
+lastreviewed: 15/11/2019 15:00:00
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Preparing for vCloud Director 9.7 upgrade
+toc_title: Changes in vCloud Director 9.7
 toc_fullpath: Reference/vmw-ref-vcd-97.md
 toc_mdlink: vmw-ref-vcd-97.md
 ---
 
-# Preparing for vCloud Director 9.7 upgrade
+# Changes in vCloud Director 9.7
 
 ## Overview
 
-Ahead of our upgrade to vCloud Director 9.7, there are some key points for you to consider as preparation for the upgrade.
+After the recent upgrades to vCloud Director 9.7, there are some things you might need to take into consideration.
 
-## Upgrade to advanced edge gateways
+## Advanced edge gateways
 
-vCloud Director 9.7 supports only advanced edge gateways. In preparation for the upgrade, before 31 May 2019 you must convert any legacy standard edge gateways to advanced edge gateways. For more information, see [*How to convert your edge to an advanced gateway*](https://docs.ukcloud.com/articles/vmware/vmw-how-convert-edge.md).
-
-> [!IMPORTANT]
-> The conversion process will cause the gateway to redeploy. Therefore, you should schedule the conversion during an outage window.
-
-After 31 May 2019, UKCloud will convert any remaining standard edge gateways at our convenience.
-
-## Sandbox for testing vCloud API
-
-UKCloud provides sandboxes to enable you to test the next versions of the vCloud API so that you can prepare for vCloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/cloud/>) has been upgraded to vCloud Director 9.7. If you already have an account on a previous sandbox, you can continue to use this account in the 9.7 sandbox. If you haven't previously used one of our vCloud sandboxes, raise a Service Request via My Calls on the UKCloud Portal to gain access.
+vCloud Director 9.7 supports only advanced edge gateways. As part of the upgrades, UKCloud requested that any edge gateways be upgraded before 31st May 2019.
 
 ## Changes to APIs
 
@@ -44,10 +35,6 @@ vCloud Director 9.7 is the last release of vCloud Director to support vCloud API
 
 If you're using PowerCLI to interact with our vCloud Director instances, the minimum supported version is 11.0.0.
 
-## vCloud Director 9.7 new features
-
-We're currently evaluating the new features provided with vCloud Director 9.7 to determine which functionality is appropriate to make available on our platform. We'll provide more details of the new features that we plan to enable as this evaluation progresses.
-
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,10 +1,10 @@
 ---
-title: How to use UKCloud's email service with your application | UKCloud Ltd
+title: How to use UKCloud's email service with your application
 description: Walks through the process for configuring your application to use our Email and Collaboration service
 services: email
 author: Sue Highmoor
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+reviewer: mperry
+lastreviewed: 29/10/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -58,7 +58,7 @@ A mailbox will be needed for each email address you want to be able to send from
 
 This section takes you through the process of configuring a mailbox on UKCloud's Email and Collaboration platform for use with an application.
 
-The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <https://mail.skyscapecs.net:7071>
+The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <https://mail.ukcloud.com:9071/zimbraAdmin/>
 
 Create a new mailbox --- configure the account name and password as you normally would, but make sure you **don't** choose the option to force a password change:
 
@@ -72,7 +72,7 @@ You're now ready to configure your application to connect to the mailbox to send
 
 To send outbound email, your application needs to support SMTP authentication and TLS encryption. Provided this is the case, simply configure the following settings in your application:
 
-- SMTP Server/Mail relay host: mail.skyscapecs.net
+- SMTP Server/Mail relay host: mail.ukcloud.com
 
 - Port number: 465
 
@@ -91,7 +91,7 @@ To receive inbound email, your application needs to support POP3 or IMAP4 over T
 
 Provided this is the case, simply configure the following settings in your application:
 
-- Mailbox server: mail.skyscapecs.net
+- Mailbox server: mail.ukcloud.com
 
 - Protocol: POP3S or IMAPS
 
@@ -128,7 +128,7 @@ The diagram below shows stunnel encrypting SMTP traffic.
 [smtp]
 accept = 25
 client = yes
-connect = mail.skyscapecs.net:465
+connect = mail.ukcloud.com:465
 ;delay = yes
 ```
 
@@ -140,4 +140,4 @@ If you need more help, contact UKCloud Support.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

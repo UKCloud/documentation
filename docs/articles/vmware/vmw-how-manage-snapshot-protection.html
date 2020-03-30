@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to manage Snapshot Protection for your VMs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to manage Snapshot Protection for your VMs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to manage Snapshot Protection for your VMs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="How to manage Snapshot Protection for your VMs ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,8 +98,8 @@
 <p>The UKCloud platform offers a variety of protection options, including Snapshot Protection. Snapshot Protection automatically takes an image of your virtual machine (VM) every 24 hours and stores the image outside the core platform for either 14 or 28 days, depending on your chosen snapshot retention profile.</p>
 <h2 id="how-does-snapshot-protection-work">How does Snapshot Protection work?</h2>
 <p>By default, VMs deployed on the UKCloud platform do not come with any protection services enabled. If you want Snapshot Protection for your VM, you must explicitly add it.</p>
-<p>When you add Snapshot Protection to a VM, the VM is added to a daily automated backup. Backups are automatically taken for the VM once every 24 hours, sometime between the hours of 2000 and 0800. The status of a VM's backup is reported daily in the UKCloud Portal by 1000, but typically within minutes of the close of the backup window.</p>
-<p>If you encounter a problem with your VM, raise a Service Request and we can use one of your VM backups to restore the whole VM image to a new VM in your VDC. You can then use this image to restore the VM or restore any required data to your original VM.</p>
+<p>When you add Snapshot Protection to a VM, the VM is added to a daily automated backup. Backups are automatically taken for the VM once every 24 hours, sometime between the hours of 20:00 and 08:00. The status of a VM's backup is reported daily in the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.</p>
+<p>If you encounter a problem with your VM, raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal and we can use one of your VM backups to restore the whole VM image to a new VM in your VDC. You can then use this image to restore the VM or restore any required data to your original VM.</p>
 <p>For more detailed information, see the <a href="vmw-sco-snapshot-protection.html"><em>Snapshot Protection Service Scope</em></a>.</p>
 <h2 id="checking-a-vms-snapshot-protection-status">Checking a VM's Snapshot Protection status</h2>
 <p>You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, find out which snapshot retention policy is currently applied to a VM, or check the status of your VM's snapshots.</p>
@@ -219,7 +219,7 @@
 </li>
 </ul>
 </li>
-<li><p>Click <strong>Manage my Backups</strong> to raise a service request related to your backups, for example, to restore a backup.</p>
+<li><p>Click <strong>Manage my Backups</strong> to raise a Service Request related to your backups via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal, for example, to restore a backup.</p>
 <p><img src="images/snapshot-image-5.png" alt="Manage my Backups button"></p>
 </li>
 <li><p>To view all the VM information in a single table, click the <em>Actions</em> tab and select <strong>Export VMs</strong>. You can save this page to view offline and analyse further.</p>
@@ -268,7 +268,7 @@
 <li><p>Click <strong>Submit</strong>.</p>
 <p>The button in the <strong>Snapshot Protection</strong> column changes to an amber <strong>Processing</strong> button. When the changes have been applied, the button changes back to green with a label indicating the VM's snapshot retention policy (<strong>14-day</strong> or <strong>28-day</strong>) or <strong>Manage</strong> if you have turned off Snapshot Protection.</p>
 <p>The amount of time it takes for your changes to take place depends on how many requests are in the queue. If there are any problems with the request, the button in the <strong>Snapshot Protection</strong> column changes to a red <strong>Failed</strong> button; in this situation, contact UKCloud Support for further assistance.</p>
-<p>Backup status information is updated daily on the UKCloud Portal by 1000, but typically within minutes of the close of the backup window.</p>
+<p>Backup status information is updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If you remove a VM from backups, the status icon for the VM will display as a red cross until the end of the previously selected retention period. When the end of the retention period is reached, the status icon will change to the grey minus sign.</p>
@@ -320,7 +320,7 @@
 <p>The label of the <strong>Default VM Snapshot Protection</strong> button changes to indicate the new snapshot retention policy (<strong>14-day</strong> or <strong>28-day</strong>) or to <strong>Manage</strong> if you have turned off Snapshot Protection.</p>
 <p>Any new VMs created within the VDC will now use the specified snapshot retention policy, although you can override this for individual VMs if required by following the steps in <a href="#managing-snapshot-protection-for-a-vm">Managing snapshot protection for a VM</a>.</p>
 <p>If you selected <strong>Apply to all existing VMs</strong>, the button changes to an amber <strong>Processing</strong> button. When the changes have been applied, the button changes back to green with a label indicating the VDC's snapshot retention policy (<strong>14-day</strong> or <strong>28-day</strong>) or <strong>Manage</strong> if you have turned off Snapshot Protection. If the VDC contains a lot of VMs, the process of updating the policy for all existing VMs may take several minutes to complete.</p>
-<p>Backup status information is updated daily on the UKCloud Portal by 1000, but typically within minutes of the close of the backup window.</p>
+<p>Backup status information is updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>When you exit the <em>Snapshot Protection Policy</em> dialog box, the <strong>Currently viewing for VDC</strong> list on the <em>My VMs</em> tab resets to the first VDC listed under the compute service. You'll need to reselect your VDC from the list before continuing.</p>
@@ -363,7 +363,7 @@
 <h2 id="next-steps">Next steps</h2>
 <p>For more information about working with your VMs, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -391,7 +391,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -400,7 +400,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -408,12 +408,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -423,5 +430,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

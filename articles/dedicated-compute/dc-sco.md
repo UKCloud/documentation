@@ -1,5 +1,5 @@
 ---
-title: Dedicated Compute v2 Service Scope | UKCloud Ltd
+title: Dedicated Compute v2 Service Scope
 description: Outlines important details regarding Dedicated Compute v2
 services: dedicated-compute
 author: Steve Hall
@@ -81,13 +81,9 @@ A VM cannot span across physical hosts so, if you create a VM larger than 50% of
 
 You can over-contend the resources on your Dedicated Compute v2 as you see fit.
 
-## Deployment options
+## Deployment
 
-There are two deployment options for Dedicated Compute v2:
-
-- **UKCloud-defined** - You select a workload type for your VDC based on UKCloud for VMware VM types (ESSENTIAL, POWER or PRIORITY). Any VMs will inherit the characteristics and reservation levels of that service when deployed.
-
-- **Customer-defined** - You can set reservation levels on a per-VM basis.
+Dedicated Compute v2 utilises a reservation pool allocation model providing fine-grained control over the performance of workloads that are running in the organisation VDC. The reservation pool allocation model is optimal for dedicated workloads.
 
 ## Platform management
 
@@ -99,7 +95,7 @@ It's not currently possible to see the level of provisioned/utilised resources a
 
 ## Service provisioning
 
-You can request Dedicated Compute v2 via your Technical Account Manager or using the My Calls section of the UKCloud Portal.
+You can request Dedicated Compute v2 via your Service Delivery Manager or using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 The minimum commitment period to the service is 30 days. The notice period is 30 days.
 
@@ -123,4 +119,4 @@ You need to be aware of the following customer responsibilities relating to depl
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

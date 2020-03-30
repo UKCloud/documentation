@@ -1,10 +1,10 @@
 ---
-title: How to reset your Cloud Storage secret key | UKCloud Ltd
+title: How to reset your Cloud Storage secret key
 description: Describes how to reset your Cloud Storage secret key
 services: cloud-storage
 author: Sue Highmoor
-reviewer:
-lastreviewed: 31/08/2018 15:11:27
+reviewer: nwayman
+lastreviewed: 24/02/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -67,14 +67,10 @@ This guide has shown you how to reset your Cloud Storage secret key. For informa
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- Cloud Storage Gateways
-
-    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

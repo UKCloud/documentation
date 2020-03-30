@@ -1,10 +1,10 @@
 ---
-title: How to view Cloud Storage information in the UKCloud Portal | UKCloud Ltd
+title: How to view Cloud Storage information in the UKCloud Portal
 description: Describes how to access information about your Cloud Storage service in the UKCloud Portal
 services: cloud-storage
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: nwayman
+lastreviewed: 24/02/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -93,8 +93,6 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 
 4. On the *Buckets* tab, you can see the following information for each bucket in the selected namespace:
 
-    - The type of bucket: S3 or ATMOS
-
     - The total amount of storage (in GiB) currently consumed by the objects in the bucket
 
     - The number of objects in the bucket
@@ -113,14 +111,10 @@ This guide has shown you how you can view information about your Cloud Storage s
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- Cloud Storage Gateways
-
-  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

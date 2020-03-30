@@ -1,5 +1,5 @@
 ---
-title: Private Cloud for Storage Service Scope | UKCloud Ltd
+title: Private Cloud for Storage Service Scope
 description: Outlines important details regarding Private Cloud for Storage
 services: private-cloud
 author: Sue Highmoor
@@ -109,7 +109,7 @@ As your storage needs grow, we'll work with you to coordinate the installation o
 
 - Performing capacity planning and working with us to plan upgrades
 
-- Raising service requests through the UKCloud Portal when you need configurations implemented
+- Raising service requests through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 
@@ -143,7 +143,7 @@ As your storage needs grow, we'll work with you to coordinate the installation o
 
 - Performing capacity planning and working with us to plan upgrades
 
-- Raising Service Requests through the UKCloud Portal when you need configurations implemented
+- Raising Service Requests through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 
@@ -201,8 +201,8 @@ We will not supply you with root access to your hardware as your hardware will b
 
 ## To progress further
 
-For further information, please see the [*Private Cloud for Storage Service Definition*](prc-sd-storage.md) and contact your Technical Account Manager to request more information or to place an order.
+For further information, please see the [*Private Cloud for Storage Service Definition*](prc-sd-storage.md) and contact your Service Delivery Manager to request more information or to place an order.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: How to access Red Hat update servers | UKCloud Ltd
+title: How to access Red Hat update servers
 description: Shows you how to access Red Hat updates using Red Hat Update Infrastructure (RHUI)
 services: vmware
 author: Sue Highmoor
@@ -51,8 +51,8 @@ If you have already deployed a Red Hat VM using the old templates, you can confi
 
 ## Additional resources
 
-High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the My Calls section in the UKCloud Portal and it will be uploaded to your private catalog.
+High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section in the UKCloud Portal and it will be uploaded to your private catalog.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

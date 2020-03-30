@@ -1,5 +1,5 @@
 ---
-title: Red Hat Update Infrastructure overview | UKCloud Ltd
+title: Red Hat Update Infrastructure overview
 description: Explains the UKCloud Red Hat Update Infrastructure (RHUI)
 services: vmware
 author: Sue Highmoor
@@ -83,8 +83,8 @@ The UKCloud RHUI service supplies access to the following repository groups, eac
 
 ## High Availability and Extended Update Support
 
-High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services. Customers will need to notify UKCloud for access to these repositories or will need to bring their own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a UKCloud Support service request directly via the My Calls feature and it will be uploaded to your private catalogue.
+High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services. Customers will need to notify UKCloud for access to these repositories or will need to bring their own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a UKCloud Support Service Request directly via [My Calls](https://portal.skyscapecloud.com/support/ivanti) and it will be uploaded to your private catalogue.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

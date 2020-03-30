@@ -1,13 +1,13 @@
 ---
-title: Terminating your UKCloud services | UKCloud Ltd
+title: Terminating your UKCloud services
 description: Provides useful information for offboarding UKCloud services, including key customer and UKCloud responsibilities
 services: other
 author: Sue Highmoor
-reviewer:
-lastreviewed: 06/12/2018 16:00:29
+reviewer: Sue Highmoor
+lastreviewed: 14/02/2020
 
 toc_rootlink: Reference
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -20,7 +20,7 @@ toc_mdlink: other-ref-offboarding.md
 
 ## Overview
 
-UKCloud is easy to adopt, easy to use and easy to leave, so our intention is to make the service termination process, sometimes referred to as offboarding, as simple as possible.
+UKCloud is easy to adopt, easy to use and easy to leave, so our intention is to make the service termination process, sometimes referred to as offboarding or deprovisioning, as simple as possible.
 
 This article clearly outlines customer and UKCloud responsibilities for terminating your UKCloud services.
 
@@ -32,13 +32,13 @@ The notice required to terminate UKCloud services varies depending on the servic
 
 You can request the termination of one or more services within your account. In this case, the termination is restricted to the chargeable items within that service (for example, a VMware environment within a customer account).
 
-If you want to terminate your whole account with UKCloud, you must raise separate termination requests for each service associated with your customer contract. The final stage of the termination of a complete customer account will be the decommissioning of the last UKCloud Portal user, decommissioning of all customer reports and termination of the ability to access customer ticket details and service reports through the Portal.
+If you want to terminate your whole account with UKCloud, you must raise separate termination requests for each service associated with your customer contract. The final stage of the termination of a complete customer account will be the decommissioning of the last UKCloud Portal user, decommissioning of all customer reports and termination of the ability to access customer ticket details through the Portal.
 
 ## Customer responsibilities
 
-- When you decide to terminate a service, you should first contact your Technical Account Manager (TAM) or Cloud Delivery Manager (CDM). Your TAM or CDM will help you to determine the relevant environment details for termination and the Effective Date of Termination.
+- When you decide to terminate a service, you should first contact your Service Delivery Manager. Your Service Delivery Manager will help you to determine the relevant environment details for termination and the Effective Date of Termination.
 
-- After speaking to your TAM or CDM, an administrator of your Portal account must raise a Service Request via the Portal, following the relevant prompts for information to enable our support team to action the request as quickly as possible.
+- After speaking to your Service Delivery Manager, an administrator of your Portal account must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, following the relevant prompts for information to enable our support team to action the request as quickly as possible.
 
     > [!NOTE]
     > If you do not raise a Service Request to initiate a formal termination of service, your environment may not be completely decommissioned and you may end up still being charged for objects remaining on the platform.
@@ -76,7 +76,7 @@ There are no termination costs associated with cancelling UKCloud services. Howe
 
 - We reserve the right to pass through third-party price rises that are not within our direct control.
 
-- If you use service options with minimum terms, such as Global Load Balancing or Application-tuned DDoS Protection, you will continue to be charged for these until the end of those terms.
+- If you use service options with minimum terms, such as UltraDNS or SiteProtect Advanced DDoS Mitigation, you will continue to be charged for these until the end of those terms.
 
 - We reserve the right to charge for any content that you leave in your environment or for retrieving and returning your content.
 
@@ -198,8 +198,23 @@ Customer-provided private networks | External network connections
 Customer-provided IP ranges | Allocated IP ranges
 Customer co-lo'd kit | Private VLANs/VRFs
 
+#### [Cloud Enablement](#tab/tabid-16)
+
+Customer responsibilities | UKCloud responsibilities
+--------------------------|-------------------------
+Remove customer equipment from Cloud Enablement bays | Escort customer to remove equipment from Cloud Enablement bays
+&nbsp; | Remove physical and logical networking
+
+#### [Big Cloud Enablement](#tab/tabid-17)
+
+Customer responsibilities | UKCloud responsibilities
+--------------------------|-------------------------
+Remove customer equipment from Big Cloud Enablement racks | Escort customer to remove equipment from Big Cloud Enablement racks
+&nbsp; | Remove logical networking config
+&nbsp; | Remove physical networking if UKCloud-provided
+
 ***
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: How to create a key vault using the UKCloud Azure Stack portal | UKCloud Ltd
+title: How to create a key vault using the UKCloud Azure Stack Hub portal
 description: Provides help for creating a key vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -16,21 +16,21 @@ toc_fullpath: Users/How To/Create a Key Vault/azs-how-create-key-vault-portal.md
 toc_mdlink: azs-how-create-key-vault-portal.md
 ---
 
-# How to create a key vault using the UKCloud Azure Stack portal
+# How to create a key vault using the UKCloud Azure Stack Hub portal
 
 ## Overview
 
-Key Vault in Azure Stack helps safeguard cryptographic keys and secrets that cloud applications and services use. By using Key Vault, you can encrypt keys and secrets.
+Key Vault in Azure Stack Hub helps safeguard cryptographic keys and secrets that cloud applications and services use. By using Key Vault, you can encrypt keys and secrets.
 
-The following process shows you how to setup a vault within Azure Stack's Key Vault, store a secret in the vault and how to view the secret using the Azure Stack Portal.
+The following process shows you how to setup a vault within Azure Stack Hub's Key Vault, store a secret in the vault and how to view the secret using the Azure Stack Hub Portal.
 
 ## Prerequisites
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ## Creating a new key vault
 
-1. Log in to the Azure Stack portal.
+1. Log in to the Azure Stack Hub portal.
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -54,7 +54,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
    - **Access policies** - Configure who can access the key vault and what permissions they have.
 
@@ -106,4 +106,4 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

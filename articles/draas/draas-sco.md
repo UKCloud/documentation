@@ -1,5 +1,5 @@
 ---
-title: Disaster Recovery as a Service Service Scope | UKCloud Ltd
+title: Disaster Recovery as a Service Service Scope
 description: outlines important details regarding the Disaster Recovery to the Cloud service
 services: draas
 author: Steve Hall
@@ -95,7 +95,7 @@ The service is not backed by service credits.
 
 On occasion, planned maintenance may disrupt the operation of the Disaster Recovery as a Service. This may lead to the service being unavailable, or a temporary increase to the RPO you may be able to achieve on the platform.
 
-If there's a potential disruption, we'll highlight this to you via the service [status page](http://status.ukcloud.com/) and UKCloud Portal notifications system.
+If there's a potential disruption, we'll highlight this to you via the service [status page](https://status.ukcloud.com/) and UKCloud Portal notifications system.
 
 ## Disaster Recovery as a Service management
 
@@ -149,4 +149,4 @@ UKCloud provides licensing for VMs protected by Zerto that utilise UKCloud as th
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

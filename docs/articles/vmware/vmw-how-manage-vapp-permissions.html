@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to securely manage permissions for a specific vApp | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to securely manage permissions for a specific vApp </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to securely manage permissions for a specific vApp | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="How to securely manage permissions for a specific vApp ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -95,13 +95,6 @@
 
 <h2 id="overview">Overview</h2>
 <p>This guide shows you how to extend permissions to users for specific vApps, while ensuring that those users cannot access other vApps or settings within vCloud Director.</p>
-<p>The steps for managing vApp permissions depend on the version of vCloud Director available in your environment:</p>
-<ul>
-<li><p><a href="#managing-permissions-for-a-vapp-vcloud-director-820">vCloud Director 8.20</a></p>
-</li>
-<li><p><a href="#managing-permissions-for-a-vapp-vcloud-director-91">vCloud Director 9.1</a></p>
-</li>
-</ul>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>You must be able to log in to the UKCloud Portal as an administrator to perform the steps in this guide. If you do not have the appropriate permissions, contact your administrator.</p>
 <p>For each user to whom you want to grant permissions on the vApp, you need the vCloud Director user ID. Users can obtain their user ID as follows:</p>
@@ -111,12 +104,11 @@
 <li><p>Click the drop down list in the top right of the Portal pane and click <strong>API</strong>.</p>
 <p><img src="images/vmw-portal-mnu-api.png" alt="API"></p>
 </li>
-<li><p>For the vOrg to which the vApp belongs, make a note of the user ID.</p>
-<p>The user ID is the first part of the <strong>Username</strong> (that is, the part before the @ sign).</p>
+<li><p>For the vOrg to which the vApp belongs, make a note of the <strong>Username</strong>.</p>
 <p><img src="images/vmw-portal-api-details.png" alt="Username"></p>
 </li>
 </ol>
-<h2 id="setting-vcloud-director-permissions-in-the-ukcloud-portal">Setting vCloud Director permissions in the UKCloud Portal:</h2>
+<h2 id="setting-vcloud-director-permissions-in-the-ukcloud-portal">Setting vCloud Director permissions in the UKCloud Portal</h2>
 <ol>
 <li><p>Log in to the UKCloud Portal as an administrator.</p>
 </li>
@@ -125,48 +117,18 @@
 <li><p>In the left-hand menu, click <strong>Contacts</strong> and then <strong>All Contacts</strong>.</p>
 <p><img src="images/ptl-menu-all-contacts.png" alt="contacts"></p>
 </li>
-<li><p>Edit the users to whom you want to grant permissions and ensure that only the <strong>vApp User</strong> option is selected for the vOrg to which the vApp belongs.</p>
-<p><img src="images/manage-image-4.png" alt="vApp user"></p>
+<li><p>Edit the users to whom you want to grant permissions and ensure that, on the <strong>Permissions</strong> tab, only the <strong>vApp User</strong> option is selected for the vOrg to which the vApp belongs.</p>
+<p><img src="images/ptl-contact-permissions-vapp-user.png" alt="vApp user"></p>
 <p>You can also create new users if required.</p>
 </li>
 </ol>
-<h2 id="managing-permissions-for-a-vapp-vcloud-director-820">Managing permissions for a vApp (vCloud Director 8.20)</h2>
-<p>To manage permissions for a specific vApp:</p>
-<ol>
-<li><p>In vCloud Director, right-click the vApp and select <strong>Properties</strong>.</p>
-<p><img src="images/manage-image-7.png" alt="Properties"></p>
-</li>
-<li><p>Click the <strong>Sharing</strong> tab and then click <strong>Add Members</strong>.</p>
-<p><img src="images/manage-image-8.png" alt="Add members"></p>
-</li>
-<li><p>Select <strong>Specific users and groups</strong>.</p>
-</li>
-<li><p>For each user to whom you want to grant permissions:</p>
-<ul>
-<li><p>Enter the user ID and click the <strong>Refresh</strong> icon.</p>
-<p>For information about how to obtain the user ID, see the
-Prerequisites section earlier in this guide.</p>
-<p><img src="images/manage-image-9.png" alt="Specific users"></p>
-</li>
-<li><p>In the top table, select the user ID and click <strong>Add</strong>.</p>
-<p><img src="images/manage-image-10.png" alt="Add"></p>
-</li>
-<li><p>In the bottom table, select the user ID and then select the appropriate permission level from the <strong>Access level</strong> list: <strong>Read Only</strong>, <strong>Read / Write</strong>, <strong>Full Control</strong>.</p>
-<p><img src="images/manage-image-11.png" alt="Access level"></p>
-<p>Read / Write access gives users the ability to power the VM on and off and launch VMRC.</p>
-</li>
-</ul>
-</li>
-<li><p>When you're done setting permissions for all users, click <strong>OK</strong>.</p>
-</li>
-</ol>
-<h2 id="managing-permissions-for-a-vapp-vcloud-director-91">Managing permissions for a vApp (vCloud Director 9.1)</h2>
+<h2 id="managing-permissions-for-a-vapp">Managing permissions for a vApp</h2>
 <p>To manage permissions for a specific vApp:</p>
 <ol>
 <li><p>In vCloud Director, select the VDC where your vApp is located.</p>
 </li>
 <li><p>In the card for the vApp, click <strong>Details</strong>.</p>
-<p><img src="images/vmw-vcd-tp-vapp-details.png" alt="Details option"></p>
+<p><img src="images/vmw-vcd-mnu-vapp-details.png" alt="Details option"></p>
 </li>
 <li><p>In the <em>Sharing</em> section, select <strong>Share with specific users or groups</strong>.</p>
 <p><img src="images/vmw-vcd-tp-vapp-share.png" alt="vApp permissions"></p>
@@ -184,7 +146,7 @@ Prerequisites section earlier in this guide.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -212,7 +174,7 @@ Prerequisites section earlier in this guide.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -221,7 +183,7 @@ Prerequisites section earlier in this guide.</p>
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -229,12 +191,19 @@ Prerequisites section earlier in this guide.</p>
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -244,5 +213,6 @@ Prerequisites section earlier in this guide.</p>
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

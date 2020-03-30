@@ -1,10 +1,11 @@
 ---
-title: RAC on UKCloud for Oracle Software | UKCloud Ltd
+title: RAC on UKCloud for Oracle Software
 description: Describes how to run Oracle Real Application Clusters (RAC) on UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
-reviewer:
-lastreviewed: 24/08/2018 16:01:11
+reviewer: fbordacchini
+lastreviewed: 15/10/2019
+
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -46,4 +47,4 @@ To run RAC on UKCloud for Oracle Software, you must have:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

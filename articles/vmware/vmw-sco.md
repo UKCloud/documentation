@@ -1,5 +1,5 @@
 ---
-title: UKCloud for VMware Service Scope | UKCloud Ltd
+title: UKCloud for VMware Service Scope
 description: Outlines important details regarding UKCloud for VMware
 services: vmware
 author: Steve Hall
@@ -85,7 +85,7 @@ Customers have a range of automated, on-platform protection options to choose fr
 
 **Catalogue and template-based recovery.** All customers have access to catalogue and template-based recovery as standard. This is a configuration management solution that can re-provision stateless servers to a new VM when required, using standard, and catalogue-based VM templates.
 
-**Snapshot Protection.** 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the service request is raised. See the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md) for full details.
+**Snapshot Protection.** 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the Service Request is raised. See the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md) for full details.
 
 **Journaling Protection.** A non-invasive, self-service disaster recovery solution with configurable recovery points, providing near real-time data protection. The standard journaling profile provides a target RPO of 5 minutes and a journal history of 2, 7, 14 or 28 days. The [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md) covers the full details of this protection option.
 
@@ -146,7 +146,7 @@ You are entitled to claim Service Credits for outages to services that take you 
 
 For the latest available licences, please check the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
-You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.
+You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If you're providing your own licensing, you should inform UKCloud by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for a retrospective discount.
 
 For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.
 
@@ -164,11 +164,11 @@ A full overview of the connectivity options and network architecture is availabl
 
 We manage the physical firewalls that face public and secure networks.
 
-**Internet-facing solutions** have 2 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+**Internet-facing solutions** have 2 usable public IP addresses. You can ask for additional public IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.
 
-**PSN-facing solutions.** You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. Contended bandwidth (uncapped).
+**PSN-facing solutions.** You should raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or contact your Customer Success Manager (CSM) to be assigned your IP address. Contended bandwidth (uncapped).
 
-**Janet and HSCN solutions** have one usable IP address. You can request additional IP addresses via a Service Request.
+**Janet and HSCN solutions** have one usable IP address. You can request additional IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the UKCloud Portal GUI or API.
 
@@ -215,7 +215,7 @@ Users can access, manage and view the UKCloud for VMware service, accessing only
 
 - **vCloud Director graphical UI.** Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions).
 
-- **UKCloud Portal.** Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.
+- **UKCloud Portal.** Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the vSphere environment.
 
@@ -223,7 +223,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
-Customers are free to migrate their workloads. You can also request a migration through a Service Request. Migrations may be between:
+Customers are free to migrate their workloads. You can also request a migration through a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. Migrations may be between:
 
 - Services (for example, ESSENTIAL to POWER)
 
@@ -233,9 +233,7 @@ Customers are free to migrate their workloads. You can also request a migration 
 
 ## Service reporting
 
-**Visibility.** We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal.
-
-**Service reporting.** All service reporting is done via the UKCloud Portal.
+**Visibility.** Maintenance notifications and Service Status reports are delivered through the Portal.
 
 **Billing.** We provide you with monthly bills covering your monthly spend.
 
@@ -245,9 +243,9 @@ Customers are free to migrate their workloads. You can also request a migration 
 
 **Cloud Architects.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
 
-**Technical Account Managers (TAM).** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
+**Service Delivery Managers.** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf).
+**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -277,7 +275,7 @@ UKCloud will adhere to the following in terms of maintenance windows:
 
 "Planned Maintenance" means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide affected customers with at least fourteen (14) days' notice of the Planned Maintenance.
 
-If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For ESSENTIAL and POWER services this event will count in SLA calculations. For VMs running as a PRIORITY configuration, this time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For ESSENTIAL and POWER services this event will count in SLA calculations. For VMs running as a PRIORITY configuration, this time will be excluded from the availability calculation.
 
 "Emergency Maintenance" means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall:
 
@@ -285,7 +283,7 @@ a)  provide affected customers with at least six (6) hours' advance notice and
 
 b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
 
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
 
 ## Supporting documents and resources
 
@@ -311,4 +309,4 @@ The following documents contain more information about UKCloud for VMware and th
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

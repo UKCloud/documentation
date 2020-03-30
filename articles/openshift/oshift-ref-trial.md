@@ -3,8 +3,8 @@ title: Making the most of your UKCloud for OpenShift trial
 description: Provides information to get up and running with UKCloud for OpenShift trials
 services: openshift
 author: Mudasar Hussain
-reviewer:
-lastreviewed: 08/03/2019 16:01:29
+reviewer: Ben Bacon
+lastreviewed: 20/03/2020
 
 toc_rootlink: Reference
 toc_sub1:
@@ -32,9 +32,9 @@ OpenShift provides a platform-as-a-service, which means that you don't need to w
 
 With UKCloud for OpenShift, you have administrator access to your cluster, giving you the control you need to create, deploy and administer your environment as you see fit.
 
-All OpenShift deployments get a Foundation Pack, which includes the management and orchestration planes. These are essentially three master nodes, two infrastructure nodes and load balancers for the control and data planes.
+All OpenShift deployments get a Foundation Pack, which includes the management and orchestration planes. These are essentially three master nodes, three infrastructure nodes and load balancers for the control and data planes.
 
-During a trial, each cluster is also provisioned with two small Runtime Packs. These are essentially two OpenStack VMs running RedHat Atomic OS with 16GB RAM, 2vCPUs and 100GB disks each. This is also the minimum number of Runtime Packs UKCloud recommends in each OpenShift deployment in order to provide minimal resilience and enable interruption free patching. After the trial phase it is possible to deploy larger and more nodes for your cluster.
+During a trial, each cluster is also provisioned with two small Runtime Packs. These are essentially two OpenStack VMs running RedHat Atomic OS with 16GB RAM, two vCPUs and 100GB disks each. This is also the minimum number of Runtime Packs UKCloud recommends in each OpenShift deployment in order to provide minimal resilience and enable interruption free patching. After the trial phase it is possible to deploy larger and more nodes for your cluster.
 
 **OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/3.11/architecture/index.html)
 
@@ -50,7 +50,7 @@ In addition to GUI access, you can also access OpenShift through the CLI. To do 
 
 ## Storage
 
-Each trial deployment has a block storage quota of 2TB across either Tier 1 or Tier 2 storage. This is enforced at the OpenStack project layer. This storage is available to the projects you create within OpenShift and you can consume the storage by creating Persistent Volume Claims (PVCs) for your applications. It is good practice to use PVCs for any persistent storage requirements as any data stored within local volumes will be lost when pods are moved from one node to another; for example as a result of node evacuations during patching. You can increase your storage quotas by creating a service request in the UKCloud Portal.
+Each trial deployment has a block storage quota of 2TB across either Tier 1 or Tier 2 storage. This is enforced at the OpenStack project layer. This storage is available to the projects you create within OpenShift and you can consume the storage by creating Persistent Volume Claims (PVCs) for your applications. It is good practice to use PVCs for any persistent storage requirements as any data stored within local volumes will be lost when pods are moved from one node to another; for example as a result of node evacuations during patching. You can increase your storage quotas by creating a service request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 OpenShift is deployed with an internal image registry making use of UKCloud's object storage service for persistence.  This includes 60GB of free storage capacity which does not consume your 2TB block storage quota; rather this is in addition to the 2TB data limit. UKCloud do provision an Elasticsearch, Fluentd and Kibana stack which uses 40GB, Hawkular Metrics backed by a Cassandra database which uses 10GB and the Prometheus Operator which uses 106GB of Tier 2 storage (which consumes some of the 2TB storage limit).
 
@@ -66,4 +66,4 @@ You should take care when creating your container images to ensure the images do
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

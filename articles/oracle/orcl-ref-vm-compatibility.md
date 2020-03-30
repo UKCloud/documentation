@@ -1,10 +1,10 @@
 ---
-title: VM compatibility with UKCloud for Oracle Software | UKCloud Ltd
+title: VM compatibility with UKCloud for Oracle Software
 description: Provides information about the compatibility of Oracle virtual machines with UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
-reviewer:
-lastreviewed: 16/07/2018 12:32:29
+reviewer: bchallis
+lastreviewed: 24/01/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

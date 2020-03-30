@@ -8,6 +8,8 @@
     href: third-sco-appdynamics.md
 - name: CloudSOC
   items:
+  - name: CloudSOC case study (video)
+    href: third-vid-cloudsoc-intro.md
   - name: CloudSOC from UKCloud Service Definition
     href: third-sd-cloudsoc.md
 - name: HyTrust DataControl
@@ -30,13 +32,3 @@
   items:
   - name: 3rd party software EULA information
     href: third-ref-eula.md
-- name: XQ Cyber CyberScore
-  items:
-  - name: CyberScore scanner deployment environment requirements
-    href: third-ref-cyberscore-prereqs.md
-  - name: XQ Cyber CyberScore from UKCloud FAQs
-    href: third-faq-cyberscore.md
-  - name: XQ Cyber CyberScore from UKCloud Service Definition
-    href: third-sd-cyberscore.md
-  - name: XQ Cyber CyberScore from UKCloud Service Scope
-    href: third-sco-cyberscore.md

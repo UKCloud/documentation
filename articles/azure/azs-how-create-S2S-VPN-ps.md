@@ -1,6 +1,6 @@
 ---
-title: How to create a site-to-site VPN connection using PowerShell | UKCloud Ltd
-description: Create a site-to-site (S2S) VPN connection from Azure Stack to Microsoft Azure
+title: How to create a site-to-site VPN connection using PowerShell
+description: Create a site-to-site (S2S) VPN connection from Azure Stack Hub to Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
 reviewer:
@@ -31,7 +31,7 @@ To complete the steps in this guide, you must have appropriate access to subscri
 
 ## Prerequisites
 
-Before you begin, ensure your PowerShell environment is set up as detailed in [*Configure the Azure Stack user's PowerShell environment*](azs-how-configure-powershell-users.md).
+Before you begin, ensure your PowerShell environment is set up as detailed in [*Configure the Azure Stack Hub user's PowerShell environment*](azs-how-configure-powershell-users.md).
 
 ## Declare variables
 
@@ -39,16 +39,16 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name           | Variable description                                                                       | Input            |
 |-------------------------|--------------------------------------------------------------------------------------------|------------------|
-| \$ArmEndpoint           | The Azure Resource Manager endpoint for Azure Stack                                        | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
-| \$AzsRGName             | Name of resource group to create in Azure Stack                                            | <form oninput="result.value=AzsRGName.value" id="AzsRGName" style="display: inline;" ><input  type="text" id="AzsRGName" name="AzsRGName" style="display: inline;" placeholder="S2S-VPN"/></form> |
-| \$AzsVNetName           | Name of virtual network to create in Azure Stack                                           | <form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;" ><input  type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="S2S-VNet"/></form> |
-| \$AzsVNetRange          | Address space of virtual network to create in Azure Stack in CIDR notation                 | <form oninput="result.value=AzsVNetRange.value" id="AzsVNetRange" style="display: inline;"><input  type="text" id="AzsVNetRange" name="AzsVNetRange" style="display: inline;" placeholder="10.1.0.0/16"/></form> |
-| \$AzsSubnetRange        | Address space of virtual network subnet to create in Azure Stack in CIDR notation          | <form oninput="result.value=AzsSubnetRange.value" id="AzsSubnetRange" style="display: inline;"><input  type="text" id="AzsSubnetRange" name="AzsSubnetRange" style="display: inline;" placeholder="10.1.0.0/24"/></form> |
-| \$AzsGWSubnetRange      | Address space of virtual network gateway subnet to create in Azure Stack in CIDR notation  | <form oninput="result.value=AzsGWSubnetRange.value" id="AzsGWSubnetRange" style="display: inline;"><input  type="text" id="AzsGWSubnetRange" name="AzsGWSubnetRange" style="display: inline;" placeholder="10.1.1.0/24"/></form> |
-| \$AzsPublicIPName       | Name of public IP to create in Azure Stack                                                 | <form oninput="result.value=AzsPublicIPName.value" id="AzsPublicIPName" style="display: inline;" ><input  type="text" id="AzsPublicIPName" name="AzsPublicIPName" style="display: inline;" placeholder="S2S-IP"/></form> |
-| \$AzsVirtualGWName      | Name of virtual network gateway to create in Azure Stack                                   | <form oninput="result.value=AzsVirtualGWName.value" id="AzsVirtualGWName" style="display: inline;" ><input  type="text" id="AzsVirtualGWName" name="AzsVirtualGWName" style="display: inline;" placeholder="S2S-VNG"/></form> |
-| \$AzsLocalGWName        | Name of local network gateway to create in Azure Stack                                     | <form oninput="result.value=AzsLocalGWName.value" id="AzsLocalGWName" style="display: inline;" ><input  type="text" id="AzsLocalGWName" name="AzsLocalGWName" style="display: inline;" placeholder="S2S-LNG"/></form> |
-| \$AzsGWConnectionName   | Name of virtual network gateway connection to create in Azure Stack                        | <form oninput="result.value=AzsGWConnectionName.value" id="AzsGWConnectionName" style="display: inline;" ><input  type="text" id="AzsGWConnectionName" name="AzsGWConnectionName" style="display: inline;" placeholder="S2S-Connection"/></form> |
+| \$ArmEndpoint           | The Azure Resource Manager endpoint for Azure Stack Hub                                        | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$AzsRGName             | Name of resource group to create in Azure Stack Hub                                            | <form oninput="result.value=AzsRGName.value" id="AzsRGName" style="display: inline;" ><input  type="text" id="AzsRGName" name="AzsRGName" style="display: inline;" placeholder="S2S-VPN"/></form> |
+| \$AzsVNetName           | Name of virtual network to create in Azure Stack Hub                                           | <form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;" ><input  type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="S2S-VNet"/></form> |
+| \$AzsVNetRange          | Address space of virtual network to create in Azure Stack Hub in CIDR notation                 | <form oninput="result.value=AzsVNetRange.value" id="AzsVNetRange" style="display: inline;"><input  type="text" id="AzsVNetRange" name="AzsVNetRange" style="display: inline;" placeholder="10.1.0.0/16"/></form> |
+| \$AzsSubnetRange        | Address space of virtual network subnet to create in Azure Stack Hub in CIDR notation          | <form oninput="result.value=AzsSubnetRange.value" id="AzsSubnetRange" style="display: inline;"><input  type="text" id="AzsSubnetRange" name="AzsSubnetRange" style="display: inline;" placeholder="10.1.0.0/24"/></form> |
+| \$AzsGWSubnetRange      | Address space of virtual network gateway subnet to create in Azure Stack Hub in CIDR notation  | <form oninput="result.value=AzsGWSubnetRange.value" id="AzsGWSubnetRange" style="display: inline;"><input  type="text" id="AzsGWSubnetRange" name="AzsGWSubnetRange" style="display: inline;" placeholder="10.1.1.0/24"/></form> |
+| \$AzsPublicIPName       | Name of public IP to create in Azure Stack Hub                                                 | <form oninput="result.value=AzsPublicIPName.value" id="AzsPublicIPName" style="display: inline;" ><input  type="text" id="AzsPublicIPName" name="AzsPublicIPName" style="display: inline;" placeholder="S2S-IP"/></form> |
+| \$AzsVirtualGWName      | Name of virtual network gateway to create in Azure Stack Hub                                   | <form oninput="result.value=AzsVirtualGWName.value" id="AzsVirtualGWName" style="display: inline;" ><input  type="text" id="AzsVirtualGWName" name="AzsVirtualGWName" style="display: inline;" placeholder="S2S-VNG"/></form> |
+| \$AzsLocalGWName        | Name of local network gateway to create in Azure Stack Hub                                     | <form oninput="result.value=AzsLocalGWName.value" id="AzsLocalGWName" style="display: inline;" ><input  type="text" id="AzsLocalGWName" name="AzsLocalGWName" style="display: inline;" placeholder="S2S-LNG"/></form> |
+| \$AzsGWConnectionName   | Name of virtual network gateway connection to create in Azure Stack Hub                        | <form oninput="result.value=AzsGWConnectionName.value" id="AzsGWConnectionName" style="display: inline;" ><input  type="text" id="AzsGWConnectionName" name="AzsGWConnectionName" style="display: inline;" placeholder="S2S-Connection"/></form> |
 | \$AzureLocation         | Name of location to create resources within in public Azure                                | <form oninput="result.value=AzureLocation.value" id="AzureLocation" style="display: inline;" ><input  type="text" id="AzureLocation" name="AzureLocation" style="display: inline;" placeholder="UK West"/></form> |
 | \$AzureRGName           | Name of resource group to create in public Azure                                           | <form oninput="result.value=AzureRGName.value" id="AzureRGName" style="display: inline;" ><input  type="text" id="AzureRGName" name="AzureRGName" style="display: inline;" placeholder="S2S-RG"/></form> |
 | \$AzureVNetName         | Name of virtual network to create in public Azure                                          | <form oninput="result.value=AzureVNetName.value" id="AzureVNetName" style="display: inline;" ><input  type="text" id="AzureVNetName" name="AzureVNetName" style="display: inline;" placeholder="S2S-VNet"/></form> |
@@ -61,7 +61,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzureGWConnectionName | Name of virtual network gateway connection to create in public Azure                       | <form oninput="result.value=AzureGWConnectionName.value" id="AzureGWConnectionName" style="display: inline;" ><input  type="text" id="AzureGWConnectionName" name="AzureGWConnectionName" style="display: inline;" placeholder="S2S-Connection"/></form> |
 | \$SharedKey             | Encryption key to use for VPN connection                                                   | <form oninput="result.value=SharedKey.value" id="SharedKey" style="display: inline;" ><input  type="text" id="SharedKey" name="SharedKey" style="display: inline;" placeholder="Password123!"/></form> |
 
-## Create site-to-site VPN connection from Azure Stack to public Azure
+## Create site-to-site VPN connection from Azure Stack Hub to public Azure
 
 From your PowerShell window:
 
@@ -87,7 +87,7 @@ $AzureLocalGWName = "<output form="AzureLocalGWName" name="result" style="displa
 $AzureGWConnectionName = "<output form="AzureGWConnectionName" name="result" style="display: inline;">S2S-Connection</output>"
 $SharedKey = "<output form="SharedKey" name="result" style="display: inline;">Password123!</output>"
 
-# Azure Stack
+# Azure Stack Hub
 
 ## Login
 ### Declare endpoint
@@ -98,7 +98,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 $AzsContext = (Connect-AzureRmAccount -EnvironmentName "AzureStackUser").Context
 ### Retrieve Access token
 $AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object -FilterScript { $_.TenantId -eq $AzsContext.Tenant.Id } | Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
-### Get location of Azure Stack
+### Get location of Azure Stack Hub
 $AzsLocation = (Get-AzureRmLocation).Location
 
 ## Create resource group
@@ -176,7 +176,7 @@ $AzureVirtualGWConnection = New-AzureRmVirtualNetworkGatewayConnection -Resource
 ## Retrieve public IP address of virtual network gateway
 $AzurePublicIP = Get-AzureRmPublicIpAddress -ResourceGroupName $AzureRGName -Name $AzurePublicIPName
 
-# Azure Stack
+# Azure Stack Hub
 ## Reconnect to environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -AccessToken $AzsAccessToken -AccountId $AzsContext.Account.Id
 
@@ -187,8 +187,8 @@ $AzsLocalGW.GatewayIpAddress = $AzurePublicIP.IpAddress
 Set-AzureRmLocalNetworkGateway -LocalNetworkGateway $AzsLocalGW
 </code></pre>
 
-After a short amount of time, the connection between Azure Stack and public Azure should change to **Connected**.
+After a short amount of time, the connection between Azure Stack Hub and public Azure should change to **Connected**.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

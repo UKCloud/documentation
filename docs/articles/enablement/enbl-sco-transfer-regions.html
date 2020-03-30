@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Data Transfer - Region to Region Service Scope </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Data Transfer - Region to Region Service Scope ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/enablement/enbl-sco-transfer-regions.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="data-transfer---region-to-region-service-scope">Data Transfer - Region to Region Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This document describes the boundaries of the UKCloud Data Transfer – Region to Region service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
+<h2 id="about-data-transfer---region-to-region">About Data Transfer - Region to Region</h2>
+<p>The Data Transfer – Region to Region service enables customers to move their UKCloud for VMware workloads between regions on the UKCloud platform. To complete this task as efficiently as possible, we utilise the Zerto recovery tool as it's already implemented and tested on the platform for data migration and restoration.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This service is specifically designed for UKCloud for VMware workloads that are Zerto-enabled.</p>
+</div>
+<h2 id="application-process">Application process</h2>
+<p>Customers wanting to transfer UKCloud for VMware workloads between regions on the UKCloud platform will need to raise a service request for the Zerto tool to be implemented in their environment. To commence the service, there's a ticket template available under service requests within My Calls.</p>
+<h2 id="implementation">Implementation</h2>
+<p>To transfer UKCloud for VMware workloads between regions, customers must use the Zerto recovery tool, which will be provisioned and set up for their use to transfer the workloads. This tool is made available free of charge for 10 working days for the migration only. Zerto is also available for UKCloud for VMware workloads for Journaling Protection at additional cost – which is outside of the functionality provided for this specific Data Transfer - Region to Region service.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>While the data transfer service is free of charge for 10 working days, customers will be charged for all compute and storage resources that are consumed in both the source and target regions. It is the customer's responsibility to ensure that the compute and storage in the source region is deleted once the transfer is complete in order to avoid unnecessary charges.</p>
+</div>
+<h2 id="service-architecture">Service architecture</h2>
+<p>UKCloud will provide access to the Zerto recovery tool for the transfer of data between regions. Currently, Zerto is only enabled for UKCloud for VMware and will be provisioned for the purpose of transfer only between specific regions. Note that there is no functionality to transfer to region 1 or region 2. Workloads can only be transferred to regions 5,6,7 and 8. Also note that this is dependent on the security domain of the source region as this service can only be used to transfer workloads between:</p>
+<ul>
+<li><p>Assured to Assured region</p>
+</li>
+<li><p>Elevated to Elevated region</p>
+</li>
+</ul>
+<p>If you need to transfer workloads between security domains (Assured and Elevated), then you'll need to use the <a href="enbl-sco-transfer-assured-elevated.html">Data Transfer between Assured and Elevated service</a>.</p>
+<p>The actual Zerto transfer service will be provided without charge for the transfer of workloads, with the following restrictions:</p>
+<ul>
+<li><p>The service is free of charge for the first 10 working days. After 10 working days, the service will be charged as per the standard Journaling Protection costs in the <a href="https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf">UKCloud Pricing Guide</a>.</p>
+</li>
+<li><p>Customers are required to inform UKCloud via a service request to confirm that the transfer is complete. The service will then be stopped, which will prevent further billing.</p>
+</li>
+<li><p>There is no Service Level Agreement for this service.</p>
+</li>
+<li><p>Customers utilising this service will not qualify for Service Credits due to unavailability or loss of performance during the transfer.</p>
+</li>
+<li><p>Once the Zerto tool has been provisioned, customers are responsible for the selection of VMs and data, and the actual transfer. If required, UKCloud can provide assistance via our Professional Services team, which can be arranged via your Service Delivery Manager.</p>
+</li>
+</ul>
+<p>The <a href="../vmware/vmw-how-zerto-migrate-between-regions.html"><em>How to migrate your workloads between UKCloud regions</em></a> article on the Knowledge Centre provides all the information you'll require to understand the tool as well as configuration details and step-by-step instructions.</p>
+<h2 id="service-availability">Service availability</h2>
+<p>As a free service for data transfer between regions, customers are not entitled to Service Credits for any downtime during data transfer scenarios.</p>
+<h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
+<p>The following documents contain more information about the Zerto and the service options:</p>
+<ul>
+<li><p><a href="../vmware/vmw-how-zerto-migrate-between-regions.html"><em>How to migrate your workloads between UKCloud regions</em></a></p>
+</li>
+<li><p><a href="../vmware/vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a></p>
+</li>
+<li><p><a href="../vmware/vmw-how-zerto-create-vpg.html"><em>How to create a virtual protection group</em></a></p>
+</li>
+<li><p><a href="../vmware/vmw-how-zerto-perform-failover.html"><em>How to perform a failover</em></a></p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>
