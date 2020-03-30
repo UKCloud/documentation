@@ -220,7 +220,7 @@ In particular, you may find the following documents useful:
 
 - [Azure Stack Hub resource provider API](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api)
 
-This is guidance for Azure Stack Hub users. Currently, there is no official API reference guide for Azure Stack Hub users; however, there is an admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when an API guide becomes available.
+This is guidance for Azure Stack Hub users. Currently, there is no official API reference guide for Azure Stack Hub users; however, there is an admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this article when an API guide becomes available.
 
 For more information about UKCloud for Microsoft Azure, see:
 
