@@ -146,7 +146,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 4. Ensure the **Generalise** tick box is selected.
 
-5. Under *Shutdown Options*, select **Shutdown** from the **Shutdown Options** list.
+5. Under *Shutdown Options*, select **Shutdown** from the dropdown menu.
 
     See the image below for an example:
 

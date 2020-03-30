@@ -96,7 +96,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. Ensure the **Generalize** tick box is selected.
 
-5. Under *Shutdown Options*, select **Shutdown**.
+5. Under *Shutdown Options*, select **Shutdown** from the dropdown menu.
 
     See the image below for an example:
 
