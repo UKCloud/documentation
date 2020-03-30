@@ -142,7 +142,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`
 
-3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the **System Cleanup Action** list.
+3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
 
 4. Ensure the **Generalise** tick box is selected.
 
