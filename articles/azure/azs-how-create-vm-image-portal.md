@@ -1,5 +1,5 @@
 ---
-title: How to create a custom image from a VM on Azure Stack using the UKCloud Azure Stack portal | UKCloud Ltd
+title: How to create a custom image from a VM on Azure Stack Hub using the UKCloud Azure Stack Hub portal
 description: Provides details on how to create a custom image from a VM using the portal
 services: azure-stack
 author: Daniel Brennand
@@ -16,17 +16,17 @@ toc_fullpath: Users/How To/azs-how-create-vm-image-portal.md
 toc_mdlink: azs-how-create-vm-image-portal.md
 ---
 
-# How to create a custom image from a VM on Azure Stack using the UKCloud Azure Stack portal
+# How to create a custom image from a VM on Azure Stack Hub using the UKCloud Azure Stack Hub portal
 
 ## Overview
 
 You can create an image resource from a generalised virtual machine (VM) that is stored as either a managed disk or an unmanaged disk in a storage account. You can then use the image to create multiple VMs.
 
-This article explains how to create a custom image from a VM on Azure Stack, which you can then use to deploy other VMs.
+This article explains how to create a custom image from a VM on Azure Stack Hub, which you can then use to deploy other VMs.
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ## [1. Generalise your VM](#tab/tabid-1)
 
@@ -38,7 +38,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 > [!WARNING]
 > Capturing a VM image will make it unusable and cannot be undone.
 
-1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com/).
+1. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com/).
 
     For more detailed instructions, see [Getting Started Guide for UKCloud for Microsoft Azure](azs-gs.md).
 
@@ -88,7 +88,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 1. Log in to your Windows VM using remote desktop protocol (RDP).
 
-2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
+2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`
 
 3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)**.
 
@@ -108,7 +108,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Run the following command: `sudo su` and enter your user password.
 
-3. Run the following command: `shutdown && waagent -deprovision+user -force`.
+3. Run the following command: `shutdown && waagent -deprovision+user -force`
 
 4. Wait for the VM to shutdown. Your session will be closed.
 
