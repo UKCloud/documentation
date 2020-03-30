@@ -251,7 +251,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Update and Management compliance example](images/azs-browser-example-update-management-compliant-ok.png)
 
-12. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
+12. In public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines**.
 
     - You'll see two usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
 
