@@ -277,11 +277,11 @@ To complete the steps in this article, you must have appropriate access to a sub
 15. Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled **Azure Monitor for VMs** on.
 
     ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
-
+    
     ![Monitor map example](images/azs-browser-example-monitor-map.png)
-
-> [!NOTE]
-> It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure Monitor enabled VMs.
+    
+    > [!NOTE]
+    > It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure Monitor enabled VMs.
 
 ## Feedback
 
