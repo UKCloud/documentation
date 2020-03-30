@@ -225,7 +225,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         ![Log analytics query example](images/azs-browser-log-analytics-workspace-query-example.png)
 
         > [!NOTE]
-        > If your VM shows in the **Results** tab, you have successfully linked your VM from Azure Stack Hub to your Log Analytics workspace [(see here for more information)](https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded).
+        > If your VM shows in the **Results** tab, then you have successfully linked your VM from Azure Stack Hub to your Log Analytics workspace [(see here for more information)](https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded).
 
 10. Navigate to the *Automation Account*. In the new blade, under *Update Management*, select **Update Management**.
 
