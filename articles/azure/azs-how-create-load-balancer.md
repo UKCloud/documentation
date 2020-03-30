@@ -98,7 +98,7 @@ In this section we will create a virtual network and two virtual machines which 
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
