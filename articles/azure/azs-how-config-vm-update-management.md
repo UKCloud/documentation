@@ -78,24 +78,24 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         ![Log Analytics workspace creation](images/azs-browser-example-log-analytics-workspace.png)
 
-    - Click **OK** once finished. The Log Analytics workspace will now begin deploying. A notification will appear in the top right of the portal.
-
-    - Once deployment is complete, navigate to the resource group you placed the Log Analytics workspace in.
-
-    - Click the newly created workspace. On the new blade, under *Settings*, select **Advanced settings**, **Connected Sources** and then **Windows Servers** or **Linux Servers** depending on the VM type you want to add analytics to.
-
-    - Note down the **Workspace ID** and **Primary Key** values.
+        - Click **OK** once finished. The Log Analytics workspace will now begin deploying. A notification will appear in the top right of the portal.
+    
+        - Once deployment is complete, navigate to the resource group you placed the Log Analytics workspace in.
+    
+        - Click the newly created workspace. On the new blade, under *Settings*, select **Advanced settings**, **Connected Sources** and then **Windows Servers** or **Linux Servers** depending on the VM type you want to add analytics to.
+    
+        - Note down the **Workspace ID** and **Primary Key** values.
 
        ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
-    - Within *Advanced settings*, select the *Data* blade and click **Windows Performance Counters** or **Linux Performance Counters**.
+        - Within *Advanced settings*, select the *Data* blade and click **Windows Performance Counters** or **Linux Performance Counters**.
 
-    - Ensure all counters are selected, then click **Add the selected performance counters**.
+        - Ensure all counters are selected, then click **Add the selected performance counters**.
 
         > [!NOTE]
         > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
 
-    - Click **Save**.
+        - Click **Save**.
 
         ![Performance counters](images/azs-browser-example-performance-counters.png)
 
