@@ -177,7 +177,10 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - In the new blade under *Insights*, click **Virtual Machines**.
 
-    - You will see two usage analytics tabs (**Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+    - You will see three usage analytics tabs (**Get Started**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+
+    > [!NOTE]
+    > The **Get Started** tab does **not** show Azure Stack Hub VMs.
 
     ![Public Azure monitor virtual machines](images/azs-browser-public-azure-monitor-virtual-machines.png)
 
