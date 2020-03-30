@@ -3,8 +3,8 @@ title: How to configure Azure Monitor for VMs on Azure Stack Hub
 description: Describes how to configure Azure Monitor for VMs on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
-reviewer:
-lastreviewed: 26/03/2020 17:09:00
+reviewer: Chris Black
+lastreviewed: 30/03/2020 11:09:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -83,14 +83,14 @@ To complete the steps in this article, you must have appropriate access to a sub
 
        ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
-    - Within *Advanced settings*, select the *Data* blade, and click **Windows Performance Counters** or **Linux Performance Counters**.
+    - Within *Advanced settings*, select the *Data* blade, and click **Windows Performance Counters** or **Linux Performance Counters**
 
-    - Ensure all counters are selected and click **Add the selected performance counters**.
+    - Ensure all counters are selected and click **Add the selected performance counters**
 
         > [!NOTE]
         > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
 
-    - Click **Save**.
+    - Click **Save**
 
         ![Performance counters](images/azs-browser-example-performance-counters.png)
 
