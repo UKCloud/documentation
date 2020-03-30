@@ -1,6 +1,6 @@
 ---
-title: How to back up files and folders on Azure Stack VMs using PowerShell | UKCloud Ltd
-description: Provides details on how to install and configure the Microsoft Azure Recovery Services (MARS) agent to backup files and folders on Azure Stack
+title: How to back up files and folders on Azure Stack Hub VMs using PowerShell | UKCloud Ltd
+description: Provides details on how to install and configure the Microsoft Azure Recovery Services (MARS) agent to backup files and folders on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
 reviewer:
@@ -16,11 +16,11 @@ toc_fullpath: Users/How To/azs-how-configure-mars-backups-powershell.md
 toc_mdlink: azs-how-configure-mars-backups-powershell.md
 ---
 
-# How to automatically back up files and folders on Azure Stack VMs using PowerShell
+# How to automatically back up files and folders on Azure Stack Hub VMs using PowerShell
 
 ## Overview
 
-This article explains how to set up the Microsoft Azure Recovery Services (MARS) agent to backup files and folders from Azure Stack VMs to Recovery Services vaults.
+This article explains how to set up the Microsoft Azure Recovery Services (MARS) agent to backup files and folders from Azure Stack Hub VMs to Recovery Services vaults.
 
 Recovery Services vaults store all backups and recovery points you create over time, and contains the backup policy applied to backed up machines.
 
@@ -34,10 +34,10 @@ Recovery Services vaults store all backups and recovery points you create over t
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in both the public Azure and Azure Stack portals.
+To complete the steps in this article, you must have appropriate access to a subscription in both the public Azure and Azure Stack Hub portals.
 
 > [!IMPORTANT]
-> The MARS agent is **only** supported on Windows VMs. Linux is **not** supported.
+> The MARS agent is **only** supported on Windows VMs. Linux VMs are **not** supported.
 
 ## Setup the MARS agent using PowerShell
 
@@ -49,7 +49,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name   | Variable description                                               | Input            |
 |-----------------|--------------------------------------------------------------------|------------------|
-| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack                 | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack Hub                 | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$RGName        | Name of the resource group                           | <form oninput="result.value=resourcegroup.value;result2.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$VMName        | Name of the virtual machine                          | <form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
 | \$CustomScriptFileName        | The name of the custom script file                         | <form oninput="result.value=customscriptfilename.value;result2.value=customscriptfilename.value" id="customscriptfilename" style="display: inline;"><input type="text" id="customscriptfilename" name="customscriptfilename" style="display: inline;" placeholder="AzureBackupConfig.ps1"/></form> |
@@ -64,14 +64,11 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$BackupTimes    | A comma separated list of the times to backup at on the specified backup days.                 | <form oninput="result.value=backuptimes.value;result2.value=backuptimes.value;result3.value=backuptimes.value" id="backuptimes" style="display: inline;"><input type="text" id="backuptimes" name="backuptimes" style="display: inline;" placeholder="16:00, 20:00"/></form> |
 | \$FoldersToBackup    | A comma separated list of folders to backup. By default it will back up all drives.             | <form oninput="result.value=folderstobackup.value;result2.value=folderstobackup.value;result3.value=folderstobackup.value" id="folderstobackup" style="display: inline;"><input type="text" id="folderstobackup" name="folderstobackup" style="display: inline;" placeholder="C:\Users, C:\Important"/></form> |
 
-1. Create a [public Azure and Azure Stack service principal name (SPN)](azs-how-create-spn-powershell.md).
+1. Create a [public Azure and Azure Stack Hub service principal name (SPN)](azs-how-create-spn-powershell.md).
 
-2. From an elevated (administrator) PowerShell console, run either the custom script extension or script to download the required module and execute the backup process:
+2. From an elevated (administrator) PowerShell console, run either the custom script extension or PowerShell script to download the required module and execute the backup process:
 
 ## [Custom script extension](#tab/tabid-1)
-
-> [!TIP]
-> Select the operating system:
 
 ## [PowerShell script](#tab/tabid-2)
 
@@ -88,11 +85,10 @@ $BackupDays = "<output form="backupdays" name="result" style="display: inline;">
 $BackupTimes = "<output form="backuptimes" name="result" style="display: inline;">16:00", "20:00</output>"
 $FoldersToBackup = "<output form="folderstobackup" name="result" style="display: inline;">C:\Users", "C:\Important</output>"
 
-# Download the AzureBackupConfig script
-Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script"
+# Download the AzureBackupConfig.ps1 script
+Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script..."
 $OutPath = Join-Path -Path $ModulePath -ChildPath $ModuleName
-$WebClient = New-Object System.Net.WebClient
-$WebClient.DownloadFile("https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1", $OutPath)
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1" -OutFile $OutPath
 
 # Run the AzureBackupConfig script
 Write-Output -InputObject "Running AzureBackupConfig with provided parameters"
@@ -101,7 +97,7 @@ Write-Output -InputObject "Running AzureBackupConfig with provided parameters"
 
 ***
 
-### [Linux](#tab/tabid-a/tabid-1)
+### [Linux VM](#tab/tabid-a/tabid-1)
 
 <pre><code class="language-PowerShell"># Initialise environment and variables
 
@@ -114,7 +110,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input variables
@@ -141,7 +137,7 @@ $ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExe
 Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
 </code></pre>
 
-### [Windows](#tab/tabid-b/tabid-1)
+### [Windows VM](#tab/tabid-b/tabid-1)
 
 <pre><code class="language-PowerShell"># Initialise environment and variables
 
@@ -154,7 +150,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input variables
@@ -182,4 +178,4 @@ Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGr
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
