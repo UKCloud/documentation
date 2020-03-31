@@ -3,8 +3,8 @@ title: How to create a Service Fabric cluster using the UKCloud Azure Stack Hub 
 description: Provides help for creating a Service Fabric cluster on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 30/03/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -54,7 +54,7 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window.
 
    - **Location** - This will be `frn00006`, which is the Azure Stack Hub region.
 
