@@ -3,8 +3,8 @@ title: Understanding connectivity options in UKCloud for VMware
 description: Describes the two different architecture designs used in UKCloud for VMware so that you can better understand your environment and more effectively design your solutions
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: Tadas Petrokas
+lastreviewed: 31/03/2020 
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -25,7 +25,7 @@ This document explains what the different architectures look like so you can des
 
 ## Overview of UKCloud for VMware network architecture
 
-Our UKCloud for VMware service uses multiple security domains (Assured, Elevated and the Cross Domain Security Zone), enabling you to provide a service over the internet, government community networks (such as N3, PSN or JANET) or your own HybridConnect lines.
+Our UKCloud for VMware service uses multiple security domains (Assured, Elevated and the Cross Domain Security Zone), enabling you to provide a service over the internet, government community networks (such as HSCN, PSN or JANET) or your own HybridConnect lines.
 
 Each of these networks brings its own challenges for network separation and prevention of accidental bridging. Our network architecture offers two different options to address these challenges. Your Cloud Architect will be able to advise you which solution works best for your application.
 
@@ -49,27 +49,27 @@ From a customer management experience, you manage all your connectivity rules, s
 
 We manage the NFW and provide additional controls around whitelisted ports, metering and packet shaping.
 
-### Multiple network architecture (PSN Assured and N3)
+### Multiple network architecture (PSN and HSCN)
 
-If you want to add other networks to your VDC (for example, the health and social care network (N3) or PSN Assured), you can enable these connections through the same edge as your internet connection. This is possible because the separation of connectivity happens at the NFT. The NFT resides on a single tenant NFW to comply with the security requirements of these networks.
+If you want to add other networks to your VDC (for example, the health and social care network (HSCN) or PSN), you can enable these connections through the same edge as your internet connection. This is possible because the separation of connectivity happens at the NFT. The NFT resides on a single tenant NFW to comply with the security requirements of these networks.
 
-![Multiple network architecture (NFT)](images/fig2_nft_multi.png)
+![Multiple network architecture (NFT)](images/COFVMWimage2.png)
 
-In the diagram above, you can see that Customer 3 uses the same edge to connect to both the internet and the N3 network through an NFT on a single tenant NFW. Customer 4 uses a similar architecture to connect to the internet and PSN Assured.
+In the diagram above, you can see that Customer 3 uses the same edge to connect to both the internet and the HSCN network through an NFT on a single tenant NFW. Customer 4 uses a similar architecture to connect to the internet and PSN.
 
-Management-wise, you can see the external IP range on the edge. Typically, you use this range for internet connectivity. However, in the case of PSN Assured and N3, we translate the address on the NFW before routing it to the edge. You won't see your PSN Assured or N3 address in your IP allocation, but your users will need to target the address to reach your service.
+Management-wise, you can see the external IP range on the edge. Typically, you use this range for internet connectivity. However, in the case of PSN and HSCN, we translate the address on the NFW before routing it to the edge. You won't see your PSN or HSCN address in your IP allocation, but your users will need to target the address to reach your service.
 
-#### PSN Assured
+#### PSN
 
-If you're adding PSN Assured connectivity to a VDC, we translate each PSN Assured IP address to one of your external IP allocations, consuming one of your internet IPs.
+If you're adding PSN connectivity to a VDC, we translate each PSN IP address to one of your external IP allocations, consuming one of your internet IPs.
 
-#### N3
+#### HSCN
 
-If you're adding N3 connectivity to a VDC, we translate the N3 IP to one of the following:
+If you're adding HSCN connectivity to a VDC, we translate the HSCN IP to one of the following:
 
 - One of your external IP allocations, consuming an internet IP.
 
-- A private address of your choice, bypassing the edge and enabling you to route the traffic directly to a virtual machine (VM) with the same private address. This retains your external IP allocation but limits the use of your N3 IP address.
+- A private address of your choice, bypassing the edge and enabling you to route the traffic directly to a virtual machine (VM) with the same private address. This retains your external IP allocation but limits the use of your HSCN IP address.
 
 ### Multiple network architecture (Janet)
 
@@ -89,13 +89,13 @@ The Janet facing edge has the same functionality as the internet facing edge and
 
 Networking in the Elevated platform is very similar to the Assured platform. All connectivity is routed through the same edge on the VDC, and separation of connections occurs within the NFT.
 
-![Network architecture in the Elevated platform](images/fig4_nft_elevated.png)
+![Network architecture in the Elevated platform](images/COFVMWimage4.png)
 
-#### PSN Protected
+#### PSN
 
-In the diagram above, Customer 1's PSN Protected connection is routed to their NFT sitting in the multi-tenant NFW. This then provides the onward connection to Customer 1's edge. The same NFT also handles the connections in from Cross Domain Security Zone products (Walled Garden and SRA).
+In the diagram above, Customer 1's PSN connection is routed to their NFT sitting in the multi-tenant NFW. This then provides the onward connection to Customer 1's edge. The same NFT also handles the connections in from Cross Domain Security Zone products (Walled Garden and SRA).
 
-It's worth noting that UKCloud translates the PSN Protected IP address to one of the external IP ranges that are available on the edge. Your users will target the PSN Protected IP address, however you'll see only your UKCloud allocated external range on your edge, so it's important to know what your PSN Protected IP has been translated to.
+It's worth noting that UKCloud translates the PSN IP address to one of the external IP ranges that are available on the edge. Your users will target the PSN IP address, however you'll see only your UKCloud allocated external range on your edge, so it's important to know what your PSN IP has been translated to.
 
 #### RLI
 
@@ -139,13 +139,11 @@ When you create a new vOrg, we'll provide you with a number of usable IP address
 
 - Internet - 5 x usable IPs
 
-- N3 - 1 x usable IP
+- HSCN - 1 x usable IP
 
-- PSN Assured - 1 x usable IP
+- PSN - 1 x usable IP
 
 - Janet - 1 x usable IP
-
-- PSN Protected - 1 x usable IP
 
 You can request additional IP addresses as required by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
 
@@ -169,9 +167,9 @@ UKCloud controls the gateway out to the internet and provides metering and packe
 
 Most differences between NFT and Cloud Fabric can be seen with multiple network architectures. To achieve network separation and ensure security and compliance with government community networks, we've developed a new VDC edge architecture.
 
-![Multiple network architecture (cloud fabric)](images/fig10_fabric_multi.png)
+![Multiple network architecture (cloud fabric)](images/COFVMimage10.png)
 
-In the diagram above, you can see that if you want to add other networks to your VDC (for example, N3, PSN Assured or Janet), you need separate edges to facilitate that connection. These edges have the same style of connectivity as the internet facing edge: an edge that connects into a Cloud Fabric, dedicated to that particular network, which then has onward connectivity to the government community network through the UKCloud‑managed gateway.
+In the diagram above, you can see that if you want to add other networks to your VDC (for example, HSCN, PSN or Janet), you need separate edges to facilitate that connection. These edges have the same style of connectivity as the internet facing edge: an edge that connects into a Cloud Fabric, dedicated to that particular network, which then has onward connectivity to the government community network through the UKCloud‑managed gateway.
 
 Customer management is on a per-edge basis. You'll see multiple edges within your UKCloud Portal GUI and you'll need to manage these individually. The full functionality of each edge is available for every network connectivity, however UKCloud manages the port whitelist for all government connected networks.
 
@@ -179,9 +177,9 @@ Customer management is on a per-edge basis. You'll see multiple edges within you
 
 Networking in the Elevated platform is the same as the Assured platform from a management perspective. Just like the Assured platform, there is edge separation for the different networks that feed into the Elevated platform.
 
-![Network architecture in the Elevated platform (Cloud Fabric)](images/fig11_fabric_elevated.png)
+![Network architecture in the Elevated platform (Cloud Fabric)](images/COFVMimage11.png)
 
-As the diagram above shows, the edge is connected to a Cloud Fabric with nward connectivity to the PSN Protected network. There is also an internal Cloud Fabric that connects the Elevated VDC to the Walled Garden, enabling cross-security domain communication.
+As the diagram above shows, the edge is connected to a Cloud Fabric with nward connectivity to the PSN network. There is also an internal Cloud Fabric that connects the Elevated VDC to the Walled Garden, enabling cross-security domain communication.
 
 ### Networking between VDCs
 
@@ -191,7 +189,7 @@ You have two options for communicating between VDCs. Both these options will be 
 
 Shared networks are useful when you have multiple VDCs within the same vOrg and region. You can create networks that span between VDCs, enabling VMs within different VDCs to communicate. This is particularly useful if you have VDCs with VMs that are operating at different service levels (ESSENTIAL, POWER and PRIORITY) and need to have inter-VM communication.
 
-![VDC communication using shared networks (Cloud Fabric)](images/fig12_fabric_shared_network.png)
+![VDC communication using shared networks (Cloud Fabric)](images/COFVMimage12.png)
 
 #### Option 2: IPsec VPN
 
@@ -203,9 +201,9 @@ In the Elevated platform each IPsec tunnel consumes either:
 
 - An external (UKCloud) IP, if the tunnel is configured between VDCs
 
-- An external (PSN Protected) IP, if the tunnel is configured between a VDC and an endpoint on the PSN Protected network
+- An external (PSN) IP, if the tunnel is configured between a VDC and an endpoint on the PSN network
 
-![VDC communication using IPsec VPN in the Elevated platform (Cloud Fabric)](images/fig14_fabric_ipsec_vpn_elevated.png)
+![VDC communication using IPsec VPN in the Elevated platform (Cloud Fabric)](images/COFVMimage14.png)
 
 ### Bringing your own firewall
 
@@ -231,26 +229,26 @@ When connecting to the different UKCloud networks it's important to ensure that 
 
 In the Assured platform, you'll always have an internet connected edge. Access to other networks is as follows:
 
-- For N3 you'll need to go through the UKCloud aggregation process
+- For HSCN you'll need to go through the UKCloud aggregation process
 
-- For PSN Assured you'll need to get accreditation for the service you wish to provide from the PSN Authority
+- For PSN you'll need to get accreditation for the service you wish to provide from the PSN Authority
 
 - For Janet you'll need to engage with your Cloud Architect
 
 In the Elevated platform:
 
-- For PSN Protected you'll need to gain approval from the PSN Authority
+- For PSN you'll need to gain approval from the PSN Authority
 
 - For RLI you'll need to get approval from the MOD
 
 - For Cross Domain Security Zone services (Walled Garden or SRA) you'll need to get the authorisation from your end-customer IA as well as the UKCloud SIRO
 
-The application processes haven't changed for any of these services, however it's important to be mindful about how you may have to design your architecture based on the network architecture you'll be deployed on. As an example, when connecting to the N3 network, you'll need to ensure that the N3 and internet networks aren't bridged. With the Cloud Fabric architecture and NFT architecture (shown in the two diagrams below respectively), you should ensure that VMs are not connected to both the internet and to N3
+The application processes haven't changed for any of these services, however it's important to be mindful about how you may have to design your architecture based on the network architecture you'll be deployed on. As an example, when connecting to the HSCN network, you'll need to ensure that the HSCN and internet networks aren't bridged. With the Cloud Fabric architecture and NFT architecture (shown in the two diagrams below respectively), you should ensure that VMs are not connected to both the internet and to HSCN
 at the same time.
 
-![N3 network connectivity using Cloud Fabric](images/fig16_fabric_n3.png)
+![HSCN network connectivity using Cloud Fabric](images/COFVMWimage16.png)
 
-![N3 connectivity using NFT](images/fig17_nft_n3.png)
+![HSCN connectivity using NFT](images/COFVMWimage17.png)
 
 ## Feedback
 
