@@ -54,13 +54,13 @@ In this section we will create a load balancer with a public IP address.
 
    - **Public IP Address** - The public IP address that will be assigned to this load balancer. To create a new public IP address:
 
-     - Select the **Create new** option under the **Public IP address** variable.
+     - Select **Create new** from the **Public IP address** options.
 
      - Enter a name for the public IP address.
 
-     - Expand the **Configure public IP address** dropdown.
+     - Expand the *Configure public IP address* section.
 
-     - Under **Assignment**, select either the **Dynamic** or **Static** option. It is recommended to select the **Static** option when creating a load balancer.
+     - Select either **Dynamic** or **Static** from the **Assignment** options. We recommend selecting the **Static** option when creating a load balancer.
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
