@@ -94,7 +94,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
    3. On your subscription's blade, select **Access Control (IAM)**.
 
-3. On the *Access Control (IAM)* blade, click the **+ Add** button.
+3. On the *Access Control (IAM)* blade, click the **+ Add** button and then click **Add role assignment**
 
     ![Add SPN to RBAC](images/azs-browser-add-RBAC-user.png)
 
