@@ -96,7 +96,7 @@ Support for new OpenStack services has been added to the evidence files.
 
 - Column H : has 3 new service types
     - OpenStack Block Storage Tier 1 Encrypted
-    - OpenStack Block Storage Tier 1 Encrypted
+    - OpenStack Block Storage Tier 2 Encrypted
     - OpenStack Instance Backup Storage
 - Column AR : OpenStack Instance Backup Storage has a Protection Type of "Backup Storage".
 
