@@ -3,8 +3,8 @@ title: How to create an SPN for Azure Stack Hub using the Azure portal
 description: Learn how to create a service principal name (SPN) to manage your Azure Stack Hub resources using the Azure portal
 services: azure-stack
 author: Bailey Lawson
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 31/03/2020
 
 toc_rootlink: Users
 toc_sub1: How To
