@@ -166,6 +166,14 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Service Fabric runtime package URL** - Specify the URL to download the Service Fabric runtime package from. For disconnected scenarios, download the service fabric runtime from the URL specified and upload it to a blob and enable anonymous access and specify the URL here.
 
+   > [!WARNING]
+    > There are compatibility issues between the latest release of Service Fabric and its corresponding SDK. Until that issue is addressed, please provide the following parameters to the deployment package URL and runtime package URL. Your deployments will fail otherwise.
+    >
+    > - Service Fabric deployment package URL: https://download.microsoft.com/download/8/3/6/836E3E99-A300-4714-8278-96BC3E8B5528/6.5.641.9590/Microsoft.Azure.ServiceFabric.WindowsServer.6.5.641.9590.zip
+    > - Service Fabric runtime package URL: https://download.microsoft.com/download/B/0/B/B0BCCAC5-65AA-4BE3-AB13-D5FF5890F4B5/6.5.641.9590/MicrosoftAzureServiceFabric.6.5.641.9590.cab
+    >
+    > For disconnected deployments, download these packages from the specified location and host it locally on an Azure Stack Hub Blob.
+
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
    - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window. Note that to create a Service Fabric cluster, the resource group must contain no other resources.
