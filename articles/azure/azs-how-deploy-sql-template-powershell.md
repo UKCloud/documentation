@@ -28,7 +28,7 @@ It will guide you through the process of:
 
 ## What is an ARM Template?
 
-You can use Azure Resource Manager templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group.
+You can use Azure Resource Manager (ARM) templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group.
 These templates can be deployed via the Azure Stack Hub portal, PowerShell, Azure CLI, REST API and Visual Studio.
 The following quick-start templates are available on [GitHub](https://aka.ms/AzureStackGitHub).
 
@@ -195,7 +195,7 @@ The images used to create this deployment are:
 | WorkloadType                    | The SQL VM work load type                        | {GENERAL, OLTP, DW}                                                               | GENERAL        |
 | SampleDatabaseName              | Sample HA database                              | | AutoHa-sample |
 
-## Deploy ARM Template code
+## Deploy ARM template code
 
 Change the required variables as per your environment and run the following script:
 
