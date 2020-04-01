@@ -103,13 +103,15 @@ This template deploys two SQL Server 2016 SP1 or SP2 Enterprise / Standard / Dev
 
 The images used to create this deployment are:
 
-- AD - Windows Server 2016 Datacenter image.
+- Active Directory (AD) and File Share Witness (FSW) - Windows Server 2016 Datacenter image.
 
 - SQL Server - SQL Server 2016 SP1 or SP2 on Windows Server 2016 image (Enterprise, Standard or Developer).
 
 - SQL IAAS Extension 1.2.30.
 
 - Latest DSC Extension (2.76.0 or higher).
+
+- Latest custom script extension for Windows (1.9.1, or higher).
 
 > [!WARNING]
 > If you deploy SQL STANDARD, your Availability Group will have limitations as per [Basic Availability Groups](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017):
