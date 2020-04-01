@@ -184,7 +184,7 @@ Write-Output -InputObject "Running AzureBackupConfig.ps1 with provided parameter
         ![Microsoft Azure Recovery Services Agent mounted backup volume files](images/azs-msft-azure-backup-recover-mounted-backup-volume-files.png)
 
         > [!TIP]
-        > You can drag and drop these files and folders to restore them to a desired location on the VM.
+        > You can drag and drop files and folders to restore them to a desired location on the VM.
         >
         > ![Microsoft Azure Recovery Services Agent mounted backup volume drag and drop](images/azs-msft-azure-backup-recover-mounted-backup-volume-drag-drop.png)
 
