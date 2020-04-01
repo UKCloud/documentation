@@ -82,7 +82,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 18. Review the *Summary* blade and click **OK**. The new VM will now begin deployment.
 
-![Custom image VM summary](images/azs-browser-custom-image-vm-summary.png)
+    ![Custom image VM summary](images/azs-browser-custom-image-vm-summary.png)
 
 ***
 
