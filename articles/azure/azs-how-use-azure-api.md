@@ -190,7 +190,7 @@ where:
 
 The syntax of an Azure Stack Hub request URI is:
 
-`https://management.frn00006.azure.ukcloud.com/<subscription-id>/<resource-group>/<provider>/<resource-path>&api-version=<api-version>?<filter-expression>`
+`https://management.frn00006.azure.ukcloud.com/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/<provider>/<resource-path>?<filter-expression>&api-version=<api-version>`
 
 where:
 
@@ -202,13 +202,18 @@ where:
 
 - **resource-path** is the resource you want to query
 
-- **api-version** is the version of the Azure Stack Hub API being called, for example: `api-version=2017-12-01`
-
 - **filter-expression** is an optional list of arguments to filter the results of the query
 
-For example, the following API call returns a list of all virtual machines in the specified Azure Stack Hub subscription:
+- **api-version** is the version of the Azure Stack Hub API being called, for example: `api-version=2017-12-01`
 
-`https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/providers/Microsoft.Compute/virtualMachines?api-version=2017-12-01"`
+For example, the following API call returns the VM: *Windows-VM* located in the resource group: *MY-WINDOWS-VM-RG* in the specified Azure Stack Hub subscription:
+
+`https://management.frn00006.azure.ukcloud.com/subscriptions/1e0ffc2d-184f-4038-887d-b8548ede4d0b/resourceGroups/MY-WINDOWS-VM-RG/providers/Microsoft.Compute/virtualMachines/Windows-VM?api-version=2017-12-01`
+
+> [!TIP]
+> To query a top level API resource, such as virtual machines, use the following example:
+>
+> `https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/providers/Microsoft.Compute/virtualMachines?api-version=2017-12-01`
 
 ## Next steps
 
