@@ -196,7 +196,7 @@ Write-Output -InputObject "Running AzureBackupConfig.ps1 with provided parameter
 
     ![Microsoft Azure Recovery Services Agent recover confirm recovery volume unmount](images/azs-msft-azure-backup-recover-confirm-recovery-volume-unmount.png)
 
-10. The recovery volume will now detach from the VM. You have successfully restored files and folders using the MARS agent.
+10. The recovery volume will now detach from the VM. You have successfully restored files and folders using the MARS agent GUI.
 
 ## Feedback
 
