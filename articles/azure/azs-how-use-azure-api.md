@@ -4,7 +4,7 @@ description: Describes how to use the Azure Stack Hub API with UKCloud for Micro
 services: azure-stack
 author: Sue Highmoor
 reviewer: Daniel Brennand
-lastreviewed: 27/03/2020
+lastreviewed: 01/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -94,8 +94,8 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name           | Variable description                                                                       | Input            |
 |-------------------------|--------------------------------------------------------------------------------------------|------------------|
-| \$Tenant           | The tenant ID or domain to authenticate to                                      | <form oninput="result.value=tenant.value;result2.value=tenant.value;result3.value=tenant.value" id="tenant" style="display: inline;"><input type="text" id="tenant" name="tenant" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
-| \$AzureStackUsername         | The username of a user for Azure Stack Hub  | <form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user"/></form> |
+| \$Tenant           | The tenant ID or domain to authenticate to                                      | <form oninput="result.value=tenant.value;result2.value=tenant.value" id="tenant" style="display: inline;"><input type="text" id="tenant" name="tenant" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
+| \$AzureStackUsername         | The username of a user for Azure Stack Hub  | <form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
 | \$AzureStackUserPassword     | The password of a user for Azure Stack Hub  | <form oninput="result.value=azspassword.value;result2.value=azspassword.value" id="azspassword" style="display: inline;"><input type="text" id="azspassword" name="azspassword" style="display: inline;" placeholder="Password123!"/></form> |
 | \$ClientID     | The application ID to authenticate against the Azure Stack Hub API   | <form oninput="result.value=clientid.value;result2.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="1950a258-227b-4e31-a9cf-717495945fc2"/></form> |
 
@@ -106,7 +106,7 @@ curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="re
 -H "Content-Type: application/x-www-form-urlencoded" \
 --data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" \
 --data-urlencode "grant_type=password" \
---data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user</output>@<output form="tenant" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>" \
+--data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output> \
 --data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" \
 --data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
 </code></pre>
@@ -114,8 +114,8 @@ curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="re
 ### [PowerShell](#tab/tabid-2)
 
 <pre><code class="language-PowerShell"># Declare variables
-$Tenant = "<output form="tenant" name="result3" style="display: inline;">contoso.onmicrosoft.com</output>"
-$UserName = "<output form="azsusername" name="result2" style="display: inline;">user</output>@$Tenant"
+$Tenant = "<output form="tenant" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
+$UserName = "<output form="azsusername" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>"
 $UserPassword = "<output form="azspassword" name="result2" style="display: inline;">Password123!</output>"
 $AuthRequestBody = @{
     "grant_type" = "password"
