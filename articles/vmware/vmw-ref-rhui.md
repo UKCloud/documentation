@@ -27,19 +27,6 @@ The RHUI services consist of:
 
 The UKCloud RHUI service supplies access to the following repository groups, each group is installed by an RPM. You can only have one RPM installed per RHUI client virtual machine.
 
-## RHEL5-Standard
-
-- Red Hat Enterprise Linux 5 Server - RH Common from RHUI (RPMs) (5Server-i386) 
-
-- Red Hat Enterprise Linux 5 Server - RH Common from RHUI (RPMs) (5Server-x86_64) 
-
-- Red Hat Enterprise Linux 5 Server from RHUI (RPMs) (5Server-i386) 
-
-- Red Hat Enterprise Linux 5 Server from RHUI (RPMs) (5Server-x86_64) 
-
-- Red Hat Enterprise Linux 5 Server - Supplementary from RHUI (RPMs) (5Server-i386) 
-
-- Red Hat Enterprise Linux 5 Server - Supplementary from RHUI (RPMs) (5Server-x86_64)
 
 ## RHEL6-Standard
 
