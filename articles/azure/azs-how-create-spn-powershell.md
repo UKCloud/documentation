@@ -58,9 +58,9 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name              | Variable description                                          | Input                                   |
 |----------------------------|---------------------------------------------------------------|-----------------------------------------|
-| \$PublicAzureAdminUsername       | The username of a user with admin privileges for public Azure | <form oninput="result.value=azureusername.value" id="azureusername" style="display: inline;"><input type="text" id="azureusername" name="azureusername" style="display: inline;" placeholder="user"/></form> |
+| \$PublicAzureAdminUsername       | The username of a user with admin privileges for public Azure | <form oninput="result.value=azureusername.value" id="azureusername" style="display: inline;"><input type="text" id="azureusername" name="azureusername" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
 | \$PublicAzureAdminPassword   | The password of a user with admin privileges for public Azure | <form oninput="result.value=azurepassword.value" id="azurepassword" style="display: inline;"><input type="text" id="azurepassword" name="azurepassword" style="display: inline;" placeholder="Password123!"/></form> |
-| \$AzureStackUsernameAdmin         | The username of a user with admin privileges for Azure Stack Hub  | <form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user"/></form> |
+| \$AzureStackUsernameAdmin         | The username of a user with admin privileges for Azure Stack Hub  | <form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
 | \$AzureStackUserPasswordAdmin     | The password of a user with admin privileges for Azure Stack Hub  | <form oninput="result.value=azspassword.value;result2.value=azspassword.value" id="azspassword" style="display: inline;"><input type="text" id="azspassword" name="azspassword" style="display: inline;" placeholder="Password123!"/></form> |
 | \$AppName                  | The name of the SPN to be created                             | <form oninput="result.value=appname.value;result2.value=appname.value" id="appname" style="display: inline;"><input type="text" id="appname" name="appname" style="display: inline;" placeholder="TestApp"/></form> |
 | \$AppURL                   | The homepage URL of the SPN to be created                     | <form oninput="result.value=appurl.value;result2.value=appurl.value" id="appurl" style="display: inline;"><input type="text" id="appurl" name="appurl" style="display: inline;" placeholder="https://test.app"/></form> |
@@ -128,7 +128,7 @@ $PublicAzureRole = "<output form="publicazurerole" name="result" style="display:
 $AzureStackRole = "<output form="azurestackrole" name="result" style="display: inline;">Owner</output>"
 
 # Create your Public Azure admin credentials in order to log in to your Azure subscription which you will be creating your SPN in
-$PublicAzureAdminUsername = "<output form="azureusername" name="result" style="display: inline;">user</output>@$TenantDomain"
+$PublicAzureAdminUsername = "<output form="azureusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
 $PublicAzureAdminPassword = ConvertTo-SecureString -String "<output form="azurepassword" name="result" style="display: inline;">Password123!</output>" -AsPlainText -Force
 $PublicAzureAdminCreds = New-Object -TypeName "System.Management.Automation.PSCredential" -ArgumentList $PublicAzureAdminUsername, $PublicAzureAdminPassword
 
@@ -206,7 +206,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Hub Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
-$AzureStackUsernameAdmin = "<output form="azsusername" name="result" style="display: inline;">user</output>@$TenantDomain"
+$AzureStackUsernameAdmin = "<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
 $AzureStackUserPasswordAdmin = ConvertTo-SecureString -String "<output form="azspassword" name="result" style="display: inline;">Password123!</output>" -AsPlainText -Force
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
@@ -291,7 +291,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Hub admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
-$AzureStackUsernameAdmin = "<output form="azsusername" name="result2" style="display: inline;">user</output>@$TenantDomain"
+$AzureStackUsernameAdmin = "<output form="azsusername" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>"
 $AzureStackUserPasswordAdmin = ConvertTo-SecureString -String "<output form="azspassword" name="result2" style="display: inline;">Password123!</output>" -AsPlainText -Force
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
