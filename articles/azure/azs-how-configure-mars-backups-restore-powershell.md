@@ -112,7 +112,7 @@ Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGr
 ## [PowerShell script](#tab/tabid-2)
 
 <pre><code class="language-PowerShell"># Declare variables
-$ScriptPath = "C:\Users\$env:USERNAME\Downloads\"
+$ScriptPath = "C:\Users\$env:USERNAME\Downloads"
 $ScriptName = "AzureBackupConfig.ps1"
 
 $ClientID = "<output form="clientid" name="result2" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
@@ -134,7 +134,7 @@ Invoke-WebRequest -Uri $FileUri -OutFile $OutPath
 
 # Run the AzureBackupConfig.ps1 script
 Write-Output -InputObject "Running AzureBackupConfig.ps1 with provided parameters"
-. "$ScriptPath\$ScriptName $ScriptArguments"
+powershell -Command "$ScriptPath\$ScriptName $ScriptArguments"
 </code></pre>
 
 ***
