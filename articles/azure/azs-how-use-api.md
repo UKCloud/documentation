@@ -208,7 +208,7 @@ where:
 
 For example, the following API call returns the VM: *Windows-VM* located in the resource group: *MY-WINDOWS-VM-RG* in the specified Azure Stack Hub subscription:
 
-`https://management.frn00006.azure.ukcloud.com/subscriptions/1e0ffc2d-184f-4038-887d-b8548ede4d0b/resourceGroups/MY-WINDOWS-VM-RG/providers/Microsoft.Compute/virtualMachines/Windows-VM?api-version=2017-12-01`
+`https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/resourceGroups/MY-WINDOWS-VM-RG/providers/Microsoft.Compute/virtualMachines/Windows-VM?api-version=2017-12-01`
 
 > [!TIP]
 > To query a top level API resource, such as virtual machines, use the following example:
