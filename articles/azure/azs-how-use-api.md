@@ -12,8 +12,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Use the Azure Stack Hub API
-toc_fullpath: Users/How To/azs-how-use-azure-api.md
-toc_mdlink: azs-how-use-azure-api.md
+toc_fullpath: Users/How To/azs-how-use-api.md
+toc_mdlink: azs-how-use-api.md
 ---
 
 # How to use the Azure Stack Hub API
