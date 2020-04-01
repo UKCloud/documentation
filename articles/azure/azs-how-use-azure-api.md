@@ -72,7 +72,14 @@ To obtain an access token:
        > [!NOTE]
        > You can obtain the resource endpoint by querying the Azure Stack Hub management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
        >
+       > It is constructed like this: `https://management.<region>.<AzureStackHubFQDN>/metadata/endpoints?api-version=2017-12-01`
+       >
        > For example, to find the endpoint for the `users` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2017-12-01`.
+
+       > [!TIP]
+       > For Azure Stack Hub administrators (*operators*) add `admin` to the request.
+       >
+       > For example, to find the endpoint for the `operators` resource, send a request to `https://adminmanagement.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2017-12-01`.
 
     - **username** - The Azure Stack Hub AAD account, for example: `user@contoso.onmicrosoft.com`
 
