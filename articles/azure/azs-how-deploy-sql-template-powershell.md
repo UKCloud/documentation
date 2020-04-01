@@ -3,8 +3,8 @@ title: How to deploy an SQL template to Azure Stack Hub using PowerShell
 description: Learn how to deploy an SQL template to Azure Stack Hub using PowerShell
 services: azure-stack
 author: Chris Black
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: Daniel Brennand
+lastreviewed: 01/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -18,7 +18,7 @@ toc_mdlink: azs-how-deploy-sql-template-powershell.md
 
 # How to deploy an SQL template to Azure Stack Hub using PowerShell
 
-This article explains how to deploy an SQL Always On Cluster using an ARM Template to Azure Stack using PowerShell.
+This article explains how to deploy an SQL Always On Cluster using an ARM Template to Azure Stack Hub using PowerShell.
 
 It will guide you through the process of:
 
@@ -40,7 +40,7 @@ Prerequisites from a Windows-based external client are:
 
   - [Configure PowerShell Environment and Azure Stack Hub Module](azs-how-configure-powershell-users.md)
 
-- An active Azure Stack *Subscription*. Required to create an [SPN](azs-how-create-spn-portal.md) on Azure Stack.
+- An active Azure Stack Hub *Subscription*. Required to create a [SPN](azs-how-create-spn-portal.md) on Azure Stack Hub.
 
 ## Official documentation
 
@@ -151,7 +151,7 @@ The images used to create this deployment are:
 
 2. Create your Azure Stack Hub environment.
 
-3. Log in to your Azure Stack *Subscription* with Service Principal Name (SPN).
+3. Log in to your Azure Stack Hub *Subscription* with Service Principal Name (SPN).
 
 4. Check if the resource group exists and create one if it does not.
 
@@ -253,7 +253,7 @@ $SqlServerOffer = "SQL2016SP2-WS2016"
 $SqlServerSKU = "Enterprise"
 $ArmDeploymentName = "Sql2016AlwaysOnDeployment"
 
-# Create Azure Stack environment so that you can log in to it
+# Create Azure Stack Hub environment so that you can log in to it
 Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your SPN credentials login
