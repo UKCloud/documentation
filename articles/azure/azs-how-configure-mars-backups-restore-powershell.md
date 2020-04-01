@@ -1,6 +1,6 @@
 ---
-title: How to back up files and folders on Azure Stack Hub VMs using PowerShell | UKCloud Ltd
-description: Provides details on how to install and configure the Microsoft Azure Recovery Services (MARS) agent to backup files and folders on Azure Stack Hub
+title: How to backup and restore files and folders on Azure Stack Hub VMs using PowerShell | UKCloud Ltd
+description: Provides details on how to install and configure the Microsoft Azure Recovery Services (MARS) agent to backup and restore files and folders on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
 reviewer:
@@ -11,16 +11,16 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Back up files and folders - PowerShell
-toc_fullpath: Users/How To/azs-how-configure-mars-backups-powershell.md
-toc_mdlink: azs-how-configure-mars-backups-powershell.md
+toc_title: Backup and restore files and folders - PowerShell
+toc_fullpath: Users/How To/azs-how-configure-mars-backups-restore-powershell.md
+toc_mdlink: azs-how-configure-mars-backups-restore-powershell.md
 ---
 
-# How to automatically back up files and folders on Azure Stack Hub VMs using PowerShell
+# How to automatically backup and restore files and folders on Azure Stack Hub VMs using PowerShell
 
 ## Overview
 
-This article explains how to set up the Microsoft Azure Recovery Services (MARS) agent to backup files and folders from Azure Stack Hub VMs to Recovery Services vaults.
+This article explains how to set up the Microsoft Azure Recovery Services (MARS) agent to backup and restore files and folders from Azure Stack Hub VMs to Recovery Services vaults.
 
 Recovery Services vaults store all backups and recovery points you create over time, and contains the backup policy applied to backed up machines.
 
@@ -28,9 +28,11 @@ Recovery Services vaults store all backups and recovery points you create over t
 
 [MARS agent support matrix](https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix-mars-agent)
 
-[Back up Windows machines using MARS](https://docs.microsoft.com/en-us/azure/backup/backup-configure-vault)
+[Backup Windows machines using MARS](https://docs.microsoft.com/en-us/azure/backup/backup-configure-vault)
 
 [MARS agent backup process](https://docs.microsoft.com/en-us/azure/backup/backup-architecture#architecture-direct-backup-of-on-premises-windows-server-machines-or-azure-vm-files-or-folders)
+
+# Backup
 
 ## Prerequisites
 
@@ -62,7 +64,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$EncryptionKey    | The encryption key to encrypt the backups with.                 | <form oninput="result.value=encryptionkey.value;result2.value=encryptionkey.value;result3.value=encryptionkey.value" id="encryptionkey" style="display: inline;"><input type="text" id="encryptionkey" name="encryptionkey" style="display: inline;" placeholder="ExampleEncryptionKey"/></form> |
 | \$BackupDays    | A comma separated list of the days to backup on.                 | <form oninput="result.value=backupdays.value;result2.value=backupdays.value;result3.value=backupdays.value" id="backupdays" style="display: inline;"><input type="text" id="backupdays" name="backupdays" style="display: inline;" placeholder="Wednesday, Sunday"/></form> |
 | \$BackupTimes    | A comma separated list of the times to backup at on the specified backup days.                 | <form oninput="result.value=backuptimes.value;result2.value=backuptimes.value;result3.value=backuptimes.value" id="backuptimes" style="display: inline;"><input type="text" id="backuptimes" name="backuptimes" style="display: inline;" placeholder="16:00, 20:00"/></form> |
-| \$FoldersToBackup    | A comma separated list of folders to backup. By default it will back up all drives.             | <form oninput="result.value=folderstobackup.value;result2.value=folderstobackup.value;result3.value=folderstobackup.value" id="folderstobackup" style="display: inline;"><input type="text" id="folderstobackup" name="folderstobackup" style="display: inline;" placeholder="C:\Users, C:\Important"/></form> |
+| \$FoldersToBackup    | A comma separated list of folders to backup. By default it will backup all drives.             | <form oninput="result.value=folderstobackup.value;result2.value=folderstobackup.value;result3.value=folderstobackup.value" id="folderstobackup" style="display: inline;"><input type="text" id="folderstobackup" name="folderstobackup" style="display: inline;" placeholder="C:\Users, C:\Important"/></form> |
 
 1. Create a [public Azure and Azure Stack Hub service principal name (SPN)](azs-how-create-spn-powershell.md).
 
