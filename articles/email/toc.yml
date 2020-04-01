@@ -10,7 +10,7 @@
   items:
   - name: Set up Email and Collaboration on an iPhone or iPad
     href: email-how-setup-iphone.md
-  - name: Set up Email and Collaboration on Android, Windows or Blackberry mobile devices
+  - name: Set up Email on Android, Windows or Blackberry
     href: email-how-setup-android.md
   - name: Use UKCloud's email service with your application
     href: email-how-use-with-app.md

@@ -1,10 +1,10 @@
 ---
-title: Understanding your invoice evidence file | UKCloud Ltd
+title: Understanding your invoice evidence file
 description: Describes the recent changes to the evidence file provided with your UKCloud invoice
 services: other
 author: Sue Highmoor
 reviewer:
-lastreviewed: 23/07/2018 14:44:15
+lastreviewed: 24/01/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -23,18 +23,7 @@ The UKCloud evidence file is a CSV file provided with your invoice that contains
 
 ## Evidence file columns containing information about charges
 
-The evidence file includes information to help you understand how your usage of the UKCloud platform determines how the totals in your invoice are calculated. For a quick look at the different charges that contribute to the overall cost, see the columns listed in the table below.
-
-Charge            | CSV column             | Description
-------------------|------------------------|------------
-Compute VM        | U                      | The cost for the compute resources based on the amount of time it was powered on, security domain, workload type and VM size
-Cloud GPU         | V, W, X and Y          | Details and cost for  Cloud GPU compute resources. (Cost will be shown in column Y)
-vCloud snapshot   | AA, AG and AM          | Charges associated with manually taking a snapshot in vCloud Director
-Block Storage     | AE and/or AK and/or AQ | The cost of storage based on the type of block storage used by the VM
-Protection costs  | AT, AX, AY and AZ      | AT – the cost of protection for the compute element <br> AX – the cost of protecting Tier 1 storage <br> AY – the cost of protecting Tier 2 storage <br> AZ – the cost of protecting Geo-Resilient storage
-Protection Option | BA                     | The cost of the selected protection option applied to the VM
-Licensing         | BC                     | Any licensing costs associated with the VM
-Total             | BD                     | The total cost
+The evidence file includes information to help you understand how your usage of the UKCloud platform determines how the totals in your invoice are calculated. For a quick look at the different charges that contribute to the overall cost of each service, and the corresponding evidence file columns, see the [*Invoice and billing FAQs*](other-faq-billing.md).
 
 ## All evidence file columns
 
@@ -161,4 +150,4 @@ These initial changes to the Evidence File will be followed by further enhanceme
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

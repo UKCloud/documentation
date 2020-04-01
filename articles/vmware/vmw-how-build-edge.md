@@ -1,10 +1,10 @@
 ---
-title: How to build an edge gateway using the UKCloud Portal | UKCloud Ltd
+title: How to build an edge gateway using the UKCloud Portal
 description: Describes how to use the UKCloud Portal to build an edge gateway
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: Gurcharan Sohal 
+lastreviewed: 26/03/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -41,10 +41,7 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
     For more detailed steps, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
 2. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service in which you want to create the edge gateway.
-
-    > [!NOTE]
-    > To create an edge gateway using the Portal, the compute service must be in region 5 or 6.
-
+    
     ![Compute services menu option](images/vmw-portal-mnu-select-compute-service.png)
 
 3. From the **Actions** menu, select **Build Edge Gateway**.
@@ -68,7 +65,7 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
 6. The *Edge Gateway Build Status* page displays information about the edge gateway you're building and lets you know how the build is progressing.
 
     > [!TIP]
-    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *VMware Cloud Build History* report.
+    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by expanding **Reports** in the Portal navigation panel and selecting **VMware Cloud Build History**.
 
     ![Build Edge Gateway Status page](images/vmw-portal-build-edge-gateway-status.png)
 
@@ -83,8 +80,6 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
     ![Build VDC Status - failed](images/vmw-portal-build-edge-fail.png)
 
 ## Next steps
-
-After you create your edge gateway, we recommend that you convert it to an advanced gateway to access the latest vCloud Director functionality. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
 
 For information about how to configure your new edge gateway, see:
 
@@ -102,4 +97,4 @@ For information about how to configure your new edge gateway, see:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

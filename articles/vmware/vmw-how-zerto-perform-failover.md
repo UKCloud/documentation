@@ -1,5 +1,5 @@
 ---
-title: How to perform a failover | UKCloud Ltd
+title: How to perform a failover
 description: This article shows you how to use the Zerto Self-Service Portal to perform a test or live failover
 services: vmware
 author: Steve Hall
@@ -178,4 +178,4 @@ For Migration to the Cloud, as soon as you are happy with how your workloads are
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

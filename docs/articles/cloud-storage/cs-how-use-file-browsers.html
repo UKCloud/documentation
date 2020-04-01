@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to use file browsers with Cloud Storage | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to use file browsers with Cloud Storage </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to use file browsers with Cloud Storage | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="How to use file browsers with Cloud Storage ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -104,19 +104,17 @@
 <li><p>Easy maintenance and housekeeping of the objects in the storage system</p>
 </li>
 </ul>
-<p>ECS provides two APIs that you can use to manage Cloud Storage: the S3 compatible API and the EMC ECS Atmos API.</p>
+<p>ECS provides an S3-compatible API that you can use to manage Cloud Storage.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If you write content to Cloud Storage using one of the APIs, you cannot subsequently access that content using the other API. Choose carefully which API you want to use before beginning a project, as it will be difficult to move between them.</p>
+<p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API.</p>
 </div>
-<p>In this article, we'll look at some of the many applications that enable you to browse an object storage system. We'll look at two categories:</p>
-<ul>
-<li><p><a href="#windows-applications">Windows applications</a></p>
-</li>
-<li><p><a href="#internet-browser-access">Internet browser access</a></p>
-</li>
-</ul>
+<p>In this article, we'll look at a couple of the many applications that enable you to browse an object storage system.</p>
 <p>The inclusion of applications in this article should not be taken as an endorsement or recommendation of them by UKCloud. However, we have tested them with our Cloud Storage service and verified that they work correctly.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>While there are S3 browser extensions available, none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.</p>
+</div>
 <h2 id="api-endpoints">API endpoints</h2>
 <p>Cloud Storage provides different API endpoints to access your storage, depending on the UKCloud site and connectivity type you are using. Make sure you use the correct endpoint to ensure the best possible performance for your solution.</p>
 <p>S3 API endpoints:</p>
@@ -143,9 +141,7 @@
 </li>
 </ul>
 <p>Contact UKCloud support if you are unsure which endpoint to use.</p>
-<h2 id="windows-applications">Windows applications</h2>
-<p>This section takes you through installing and configuring two applications: Cyberduck and S3 Browser.</p>
-<h3 id="cyberduck">Cyberduck</h3>
+<h2 id="cyberduck">Cyberduck</h2>
 <p>Cyberduck is an open source cross platform file browser for HTTP based object storage solutions. It utilises the S3 endpoints to establish connectivity with the ECS platform over HTTPS.</p>
 <p>To install and configure Cyberduck:</p>
 <ol>
@@ -153,7 +149,7 @@
 </li>
 <li><p>Install Cyberduck using either the default settings or specifying your own configuration.</p>
 </li>
-<li><p>Download the <a href="https://developer-content.emc.com/downloads/jive_attach_proxy.htm?ecnCommID=3939&amp;ecnCommName=ECS%20-%20Elastic%20Cloud%20Storage&amp;ecnAttachmentName=EMC%20ECS%20S3%20(HTTPS%20with%20AWS2).cyberduckprofile&amp;ecnContainerURL=/docs/DOC-27683&amp;reqURL=/servlet/JiveServlet/download/27683-11-131318/EMC%20ECS%20S3%20(HTTPS%20with%20AWS2).cyberduckprofile">Cloud Storage Cyberduck profile</a>.</p>
+<li><p>Download the Cloud Storage Cyberduck profile from <a href="https://community.emc.com/docs/DOC-27683">Connecting to ECS with Cyberduck</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If you download this profile using a browser, ensure the file name is <code>.cyberduckprofile</code>.</p>
@@ -190,14 +186,14 @@
 <li><p>After you've authenticated yourself with your secret key, you can view, upload and download files as normal.</p>
 <p><img src="images/cs-file-browsers-6.png" alt="Cyberduck interface"></p>
 </li>
-<li><p>For additional information, see <a href="https://community.emc.com/docs/DOC-27683"><em>Connecting to ECS with Cyberduck</em></a>.</p>
+<li><p>For additional information, see <a href="https://community.emc.com/docs/DOC-27683">Connecting to ECS with Cyberduck</a>.</p>
 </li>
 </ol>
-<h3 id="s3-browser">S3 Browser</h3>
+<h2 id="s3-browser">S3 Browser</h2>
 <p>S3 Browser is a Windows client for Amazon S3 that you can easily configure to work with the S3 compatible API on Cloud Storage. It’s free for personal use; a licence fee is payable for business use.</p>
 <p>To install and configure S3 Browser:</p>
 <ol>
-<li><p>Download <a href="ttp://s3browser.com/">S3 Browser</a>.</p>
+<li><p>Download <a href="https://s3browser.com/">S3 Browser</a>.</p>
 </li>
 <li><p>Execute the installer and follow the prompts in the wizard to complete the installation.</p>
 </li>
@@ -218,66 +214,8 @@
 </div>
 </li>
 </ol>
-<h2 id="internet-browser-access">Internet browser access</h2>
-<p>This section takes you through installing and configuring browser access that enables users to browse the contents of Cloud Storage using a web browser.</p>
-<p>EMC provides an HTML5 application that you can install in your Atmos bucket to generate a URL that enables you to share the bucket with other users who require access to cloud storage.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If you have multiple buckets under the same endpoint, you can provide access to them all from a single URL. However, if you have multiple buckets hosted in both Cloud Storage regions, you'll need to install the application in both regions and access is via a different URL for each region.</p>
-</div>
-<p>S3 extensions are also available for browsers, but none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.</p>
-<h3 id="atmos-html5-application">Atmos HTML5 application</h3>
-<blockquote>
-</blockquote>
-<div class="NOTE">
-<h5>Note</h5>
-<p>For installation and initial configuration of the Atmos HTML5 application, you will need the following Prerequisite information:</p>
-<p>Atmos Access Key - in the form of SubtennantID/User</p>
-<p>Atmos Secret Key - Shared Secret Key</p>
-<p>A folder within an existing bucket or new bucket to host the GUI files, for example /&lt;bucket_name&gt;/HTML5UI/ or /HTML5UI/</p>
-</div>
-<p>To install and configure the Atmos HTML5 application:</p>
-<ol>
-<li><p>Download and extract the <a href="https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/AtmosHTML5.zip?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1575471403&amp;Signature=49Xss9swLLmSPmkAyruywkscUas%3D">Atmos HTML5 application</a>.</p>
-</li>
-<li><p><strong>On Windows:</strong> Open a command prompt, navigate to the extracted files and run the following command: <code>upload.bat WebContent\main.html /&lt;bucket_name&gt;/&lt;optional_path&gt;/</code>.</p>
-<p><strong>On Linux:</strong> Open a terminal prompt, or from the CLI, navigate to the extracted files and run the following command: <code>upload.sh WebContent\main.html /&lt;bucket_name&gt;/&lt;optional_path&gt;/</code>.</p>
-</li>
-<li><p>The installer script will run and prompt for the following information:</p>
-<ul>
-<li><p>Atmos host name, which is the UKCloud endpoint URL for your selected storage bucket for example <code>atmos.cas.frn00006.ukcloud.com</code></p>
-</li>
-<li><p>Atmos port - Enter 443.</p>
-</li>
-<li><p>Atmos UID - Enter your selected storage bucket's Atmos access key for example <code>a554f348g57f48729c0247r9730e29a1/10-10-10-89431b-1</code></p>
-</li>
-<li><p>Atmos secret - Enter your selected storage bucket's shared secret key.</p>
-</li>
-</ul>
-</li>
-<li><p>When you have provided all the required information, the installer will connect to the bucket and upload the files to the requested folder. Once the script has finished, it will output a URL that you should copy to your clipboard and then keep somewhere safe.</p>
-</li>
-<li><p>Enter the generated URL into your browser and, when connecting for the first time, the application will prompt you to specify an account UID and shared secret for the account that you want to access. After you enter the UID and secret, you can test the credentials using the test button. If the test is successful, click OK to add the credentials to the application and you can then access the bucket.</p>
-<p><img src="images/cs-file-browsers-html5-2.png" alt="Atmos HTML5 Add account interface"></p>
-</li>
-<li><p>If you want to add more cloud storage accounts that are located at the same Cloud Storage endpoint, you can add them to the application using the cog icon in the top right-hand corner.</p>
-</li>
-<li><p>You can now:</p>
-<ul>
-<li><p>Browse the buckets and files stored in your account</p>
-</li>
-<li><p>Use the toolbar buttons to upload files</p>
-</li>
-<li><p>Double-click items to download them</p>
-</li>
-<li><p>Access other operations for selected items through the toolbar buttons</p>
-</li>
-</ul>
-<p><img src="images/cs-file-browsers-html5-1.png" alt="Atmos HTML5 Application interface"></p>
-</li>
-</ol>
 <h2 id="next-steps">Next steps</h2>
-<p>This article has shown you how to browse Cloud Storage buckets using various different applications. For more information about how to use the service, see the following articles:</p>
+<p>This article has shown you how to browse Cloud Storage buckets using a couple of different applications. For more information about how to use the service, see the following articles:</p>
 <ul>
 <li><p><a href="cs-gs.html"><em>Getting Started Guide for Cloud Storage</em></a></p>
 </li>
@@ -285,19 +223,13 @@
 </li>
 <li><p><a href="cs-how-create-user.html"><em>How to create a new Cloud Storage user in the UKCloud Portal</em></a></p>
 </li>
-<li><p>Cloud Storage Gateways</p>
-<ul>
 <li><p><a href="cs-how-install-geodrive2-client.html"><em>How to install the GeoDrive Client 2.0</em></a></p>
-</li>
-<li><p><a href="cs-how-install-cloudarray.html"><em>How to install CloudArray</em></a></p>
-</li>
-</ul>
 </li>
 <li><p><a href="cs-how-use-file-browsers.html"><em>How to use file browsers with Cloud Storage</em></a></p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -325,7 +257,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -334,7 +266,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -342,12 +274,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -357,5 +296,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

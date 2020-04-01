@@ -1,10 +1,10 @@
 ---
-title: How to retrieve your subscription quotas using PowerShell | UKCloud Ltd
+title: How to retrieve your subscription quotas using PowerShell
 description: Provides help for retrieving your quotas on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 31/03/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -26,7 +26,7 @@ The following process shows you how to retrieve the quotas for your subscription
 
 ## Prerequisites
 
-Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
+Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md).
 
 ## Declare variables
 
@@ -34,7 +34,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name  | Variable description                                | Input            |
 |----------------|-----------------------------------------------------|------------------|
-| \$ArmEndpoint   | The Azure Resource Manager endpoint for Azure Stack | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$ArmEndpoint   | The Azure Resource Manager endpoint for Azure Stack Hub | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 
 ## Retrieving your quota
 
@@ -49,7 +49,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Retrieve Compute quota
@@ -78,4 +78,4 @@ $AllQuotas | Export-Csv -Path "AzureStackQuotas.csv" -NoTypeInformation
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,10 +1,10 @@
 ---
-title: How to bring your own Red Hat licensing | UKCloud Ltd
-description: Outlines the options for Red Hat licencing and how to use your own licencing
+title: How to bring your own Red Hat licensing
+description: Outlines the options for Red Hat licencing and how to use your own licensing
 services: vmware
 author: Steve Hall
-reviewer: mikepukcloud
-lastreviewed: 30/05/2019
+reviewer: Sue Highmoor
+lastreviewed: 22/10/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -25,7 +25,7 @@ UKCloud offers UKCloud for VMware with a variety of operating systems to suit yo
 
 To make the provision of Red Hat based virtual machines (VMs) as simple and quick as possible, UKCloud offer the following options to all customers:
 
-- UKCloud Red Hat licencing and usage billing - One of the options is for UKCloud to provide Red Hat licensing per hour based on your usage per VM. This will be retrospectively billed based on your usage per month in addition to the cost of the VM.
+- UKCloud Red Hat licensing and usage billing - One of the options is for UKCloud to provide Red Hat licensing per hour based on your usage per VM. This will be retrospectively billed based on your usage per month in addition to the cost of the VM.
 
 - Bring your own (BYO) Red hat licensing - For certain organisations that have an existing licensing contract with Red Hat, or want to license their Red Hat usage directly, UKCloud are able to offer the option of your organisation using your own licensing and therefore opting out of the automatic Red Hat licensing process offered by UKCloud.
 
@@ -41,29 +41,31 @@ If you want to take advantage of your own existing Red Hat licensing or purchase
 
     ![My Calls menu option](images/ptl-mnu-my-calls.png)
 
-3. Select the **Raise a new Support Call** tab.
+3. Click **Go to My Calls Portal**.
 
-    ![Raising a support call](images/ptl-my-calls-new-ticket.png)
+4. Click **New Service Request**.
 
-4. From the **How can we help you?** list, select **I am requesting information on/administration of my service**.
+5. Select **Generic Service Request**.
 
-5. From the **Select Product** list, select **vCloud/VMware**.
+6. Fill in the Service Request form, making sure to provide the following information in the **Additional Details** field:
 
-6. From the **What is the nature of your query?**, select **I wish to bring my own Red Hat licencing**.
+    - The date you want to use your own licencing from
 
-    The support form will ask you to state what date you want to use you own licencing from, and whether you want your own licencing to affect specific VMs, specific VDCs or all of your VMs under your organisation.
+    - Whether you want your own licencing to affect specific VMs, specific VDCs or all of your VMs under your organisation
+
+7. When you're done, click **Review & Submit**.
 
 ## Validation
 
-Once you've submitted the form, the support team will update our records and once the change has been confirmed with you, your own Red Hat licencing will be utilised and you will no longer be billed by UKCloud for Red Hat licence usage.
+Once you've submitted the form, the support team will update our records and once the change has been confirmed with you, your own Red Hat licensing will be utilised and you will no longer be billed by UKCloud for Red Hat licence usage.
 
 > [!NOTE]
 > Red Hat may contact you to confirm that you have the correct number of licences in place to cover the number of Red Hat provisioned VMs supplied by UKCloud.
 
 ## Responsibilities
 
-Once you've completed the form and the actions have been confirmed, your organisation will be responsible for ensuring that there are enough eligible licences to cover the Red Hat VMs on the UKCloud platform, and UKCloud will no longer be responsible for any Red Hat licencing commitments for the specified VMs under your organisation.
+Once you've completed the form and the actions have been confirmed, your organisation will be responsible for ensuring that there are enough eligible licences to cover the Red Hat VMs on the UKCloud platform, and UKCloud will no longer be responsible for any Red Hat licensing commitments for the specified VMs under your organisation.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

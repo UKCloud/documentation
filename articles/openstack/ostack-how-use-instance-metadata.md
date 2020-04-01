@@ -1,5 +1,5 @@
 ---
-title: How to use OpenStack instance metadata | UKCloud Ltd
+title: How to use OpenStack instance metadata
 description: Shows you how to add metadata to an instance and how to retrieve instance metadata
 services: openstack
 author: Sue Highmoor
@@ -75,8 +75,8 @@ Heat supports metadata tagging. For more information, see:
 
 You can also use configuration management tools, such as Ansible, to set instance attributes. For more information, see:
 
-<http://docs.ansible.com/ansible/os_server_module.html>
+<https://docs.ansible.com/ansible/os_server_module.html>
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

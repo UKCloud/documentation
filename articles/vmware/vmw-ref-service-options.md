@@ -1,5 +1,5 @@
 ---
-title: UKCloud for VMware options | UKCloud Ltd
+title: UKCloud for VMware options
 description: Provides information about the different choices you can make when building your UKCloud for VMware service
 services: vmware
 author: Sue Highmoor
@@ -75,4 +75,4 @@ Choose the application and data protection needed for your solution. You can cho
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

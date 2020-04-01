@@ -14,6 +14,8 @@
   items:
   - name: Configure an instance using cloud-config
     href: ostack-how-cloud-config.md
+  - name: Configure IPsec VPN in OpenStack
+    href: ostack-how-configure-ipsec-vpn.md
   - name: Convert virtual machines
     href: ostack-how-convert-vms.md
   - name: 'Create and deploy a basic Heat template '
@@ -30,16 +32,22 @@
     href: ostack-how-recover-instance.md
   - name: Manage UKCloud for OpenStack accounts in the UKCloud Portal
     href: ostack-how-manage-accounts-portal.md
+  - name: Migrate workloads on OpenStack using Hystax Acura
+    href: ostack-how-use-hystax.md
   - name: Move resources between OpenStack regions
     href: ostack-how-move-resources.md
   - name: Retrieve your Windows password on UKCloud for OpenStack
     href: ostack-how-retrieve-windows-password.md
+  - name: Use Barbican Key Management as a Service
+    href: ostack-how-use-barbican.md
   - name: Use OpenStack instance metadata
     href: ostack-how-use-instance-metadata.md
   - name: Use the OpenStack API with an SSO user
     href: ostack-how-use-api-sso.md
-  - name: Use the OpenStack Command Line Client on Microsoft operating systems
+  - name: Use the OpenStackClient on Microsoft operating systems
     href: ostack-how-use-cli.md
+  - name: Use TrilioVault for self-service backup
+    href: ostack-how-use-triliovault.md
 - name: Reference
   items:
   - name: Auto Scaling for UKCloud for OpenStack
@@ -60,9 +68,15 @@
     href: ostack-sd.md
 - name: Service Scope
   items:
+  - name: Hystax Acura Workload Migration Service Scope
+    href: ostack-sco-hystax.md
+  - name: Self Service Backup and Restoration (TrilioVault) Service Scope
+    href: ostack-sco-triliovault.md
   - name: UKCloud for OpenStack Service Scope
     href: ostack-sco.md
 - name: Videos
   items:
   - name: OpenStack Horizon dashboard overview
     href: ostack-vid-overview.md
+  - name: Self-service backup with TrilioVault
+    href: ostack-vid-trilio.md

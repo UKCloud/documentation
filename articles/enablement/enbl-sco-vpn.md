@@ -1,10 +1,10 @@
 ---
-title: Cloud Enablement - VPN solutions Service Scope | UKCloud Ltd
+title: Cloud Enablement - VPN solutions Service Scope
 description: Outlines important details regarding Cloud Enablement for VPN solutions
 services: enablement
 author: Steve Hall
-reviewer:
-lastreviewed: 23/07/2018 11:55:40
+reviewer: hbrunt
+lastreviewed: 16/12/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -35,14 +35,14 @@ The table provides an overview of the Cloud Enablement services available for VP
 **Hosted device** | VPN
 **Typical device size** | 1U / 2U
 **Service level (default)** | Single data centre, no automatic failover
-**Cloud Enablement requirement</br>(one bay = 10U, 1kW per month)** | One bay in one UKCloud data centre
+**Cloud Enablement requirement<br>(one bay = 10U, 1kW per month)** | One bay in one UKCloud data centre
 **Cost** | £2,000 setup fee plus £500 per month
 **Resilience available?** | We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a  self-managed resilient solution (in which case the resilience options below are required).
 **Failover responsibility** | Customer
-**Resilience requirement</br>(1 bay = 10U, 1kw per month)** | One bay in our Farnborough data centre</br>One bay in our Corsham data centre
+**Resilience requirement<br>(1 bay = 10U, 1kw per month)** | One bay in our Farnborough data centre<br>One bay in our Corsham data centre
 **Resilience cost** | £4,000 setup fee plus £1,000 per month
 **Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (eg Cloud Enablement in region 5 cannot be stretched to region 6)
-**Next steps** | Raise a service request via the UKCloud Portal
+**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal
 
 ## What connectivity does the VPN service provide?
 
@@ -116,4 +116,4 @@ If, in the unlikely event of a power failure, you would like your hardware resta
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

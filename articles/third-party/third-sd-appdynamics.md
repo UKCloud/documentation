@@ -1,8 +1,10 @@
 ---
-title: Cisco AppDynamics from UKCloud Service Definition | UKCloud Ltd
+title: Cisco AppDynamics from UKCloud Service Definition
 description: Provides an overview of what is provided by the Cisco AppDynamics from UKCloud service
 services: third-party
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Cisco AppDynamics
 toc_sub1: 
 toc_sub2:
@@ -83,7 +85,7 @@ Cisco AppDynamics offers three editions:
 
 ## Pricing and packaging
 
-Cisco AppDynamics pricing is per agent per year, from £2,290, dependent on the type of agent and the edition. Full pricing is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf).
+Cisco AppDynamics pricing is per agent per year, from £2,290, dependent on the type of agent and the edition. Full pricing is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide).
 
 ## Free trial
 
@@ -103,4 +105,4 @@ For full terms and conditions, please refer to the [*Terms and conditions docume
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

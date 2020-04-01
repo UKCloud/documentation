@@ -1,10 +1,10 @@
 ---
-title: How to expand OpenShift persistent volumes | UKCloud Ltd
+title: How to expand OpenShift persistent volumes
 description: Outlines methods to expand OpenShift persistent volumes in v3.11 OpenShift clusters.
 services: openshift
 author: Gareth Ellner
-reviewer:
-lastreviewed: 
+reviewer: gsmith
+lastreviewed: 20/11/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-expand-persistent-vols.md
 
 ## Overview
 
-In OpenShift clusters running OpenShift v3.11 or later, you can expand existing persistent volumes. In earlier versions (such as v3.9) you need to raise a Service Request so that UKCloud OpenShift administrators can facilitate the expansion.
+In OpenShift clusters running OpenShift v3.11 or later, you can expand existing persistent volumes. In earlier versions (such as v3.9) you need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal so that UKCloud OpenShift administrators can facilitate the expansion.
 
 > [!TIP]
 > To check the version of your cluster, either click **(?)** in the top-right of the web UI and select **About** or run the following while connected in the CLI client:
@@ -178,4 +178,4 @@ Filesystem                             Size  Used Avail Use% Mounted on
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: Best practice customer guide | UKCloud Ltd
+title: Best practice customer guide
 description: Provides useful best practice information and other helpful advice to ensure good performance from our products
 services: vmware
 author: Dan Baker
@@ -24,12 +24,6 @@ At UKCloud, we strive to ensure that our products deliver the most value to your
 ## Best Practices - UKCloud for VMware
 
 This section provides some best practices to ensure you get the most out of UKCloud for VMware.
-
-### Updating old edge gateways
-
-To use the latest version of our vCloud product, it's important that you're using the most up to date edge gateway. Older edges are unsupported and not compatible with our latest products and could cause performance issues and disruption to your service.
-
-You can find out the latest version of the edge you're using in our vCentre. To upgrade your edge, see [*How to upgrade your edge gateway*](../vmware/vmw-how-upgrade-edge.md).
 
 ### Removing out of date snapshots
 
@@ -156,7 +150,7 @@ System administrators and mobile workers can securely access workloads running o
 
 - SRA certificates last for 12 months. You'll need to renew certificates no later than two weeks before the certificates expire to avoid any interruption to your service.
 
-- To add additional certificates, raise a service request via the UKCloud Portal, selecting the **Request Additional SRAS Certificate(s)** option.
+- To add additional certificates, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the **Request Additional SRAS Certificate(s)** option.
 
 - To renew or revoke your certificate, raise a service request via the UKCloud Portal, selecting the **Renew and/or Revoke SRAS Certificate** option.
 

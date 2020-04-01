@@ -1,10 +1,10 @@
 ---
-title: UKCloud FAQs | UKCloud Ltd
+title: UKCloud FAQs
 description: List of FAQs on UKCloud services, technology, connections and processes
 services: Other
-author: Sue Highmoor
-reviewer:
-lastreviewed: 30/07/2018 11:15:54
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 03/03/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -19,92 +19,108 @@ toc_mdlink: other-faq-ukcloud.md
 
 This article provides a list of FAQs on UKCloud services, technology, connections and processes.
 
-## UKCloud for VMware
+## UKCloud for Microsoft Azure FAQs
 
-[UKCloud for VMware FAQs](../vmware/vmw-faq.md)
+- [UKCloud for Microsoft Azure](../azure/azs-faq.md)
 
-[Journaling Protection FAQs](../vmware/vmw-faq-journaling-protection.md)
+## UKCloud for OpenShift FAQs
 
-[Snapshot Protection FAQs](../vmware/vmw-faq-snapshot-protection.md)
+- [UKCloud for OpenShift](../openshift/oshift-faq.md)
 
-## UKCloud for OpenStack
+## UKCloud for OpenStack FAQs
 
-[UKCloud for OpenStack FAQs](../openstack/ostack-faq.md)
+- [UKCloud for OpenStack](../openstack/ostack-faq.md)
 
-## UKCloud for Microsoft Azure
+## UKCloud for Oracle Software FAQs
 
-[UKCloud for Microsoft Azure FAQs](../azure/azs-faq.md)
+- [UKCloud for Oracle Software](../oracle/orcl-faq.md)
 
-## UKCloud for Oracle Software
+## UKCloud for VMware FAQs
 
-[UKCloud for Oracle Software FAQs](../oracle/orcl-faq.md)
+- [UKCloud for VMware](../vmware/vmw-faq.md)
 
-## UKCloud for OpenShift
+- [Journaling Protection](../vmware/vmw-faq-journaling-protection.md)
 
-[UKCloud for OpenShift FAQs](../openshift/oshift-faq.md)
+- [Snapshot Protection](../vmware/vmw-faq-snapshot-protection.md)
 
-## Cloud Storage
+- [Service failover testing](../vmware/vmw-faq-failover-testing.md)
 
-[Cloud Storage FAQs](../cloud-storage/cs-faq.md)
+- [Sharing catalogs](../vmware/vmw-faq-sharing-catalogs.md)
 
-## Cloud GPU
+## Cloud GPU FAQs
 
-[Cloud GPU FAQs](../gpu/gpu-faq.md)
+- [Cloud GPU](../gpu/gpu-faq.md)
 
-## Cross Domain Security Zone
+## Cloud Storage FAQs
 
-[Cross Domain Security Zone FAQs](../cdsz/cdsz-faq.md)
+- [Cloud Storage](../cloud-storage/cs-faq.md)
 
-## Email and Collaboration
+## Cross Domain Security Zone FAQs
 
-[Email and Collaboration as a Service FAQs](../email/email-faq.md)
+- [Cross Domain Security Zone](../cdsz/cdsz-faq.md)
 
-## Private Cloud for Compute
+## Disaster Recovery as a Service FAQs
 
-[Private Cloud for Compute FAQs](../private-compute/prc-faq.md)
+- [Disaster Recovery as a Service](../draas/draas-faq.md)
 
-## Private Cloud for Storage
+## Email and Collaboration FAQs
 
-[Private Cloud for Storage FAQs](../private-storage/prs-faq.md)
+- [Email and Collaboration as a Service](../email/email-faq.md)
 
-## Connectivity
+## Managed Services FAQs
 
-[General connectivity FAQs](../connectivity/conn-faq.md)
+- [Managed Monitoring from UKCloud](../managed-services/man-monitoring-faq.md)
 
-[Application-tuned DDoS protection FAQs](../connectivity/conn-faq-app-ddos.md)
+## Private Cloud FAQs
 
-[Bandwidth monitoring FAQs](../connectivity/conn-faq-bandwidth-monitoring.md)
+- [Private Cloud](../private-cloud/prc-faq.md)
 
-[DDoS mitigation service FAQs](../connectivity/conn-faq-ddos.md)
+- [Private Cloud for Storage](../private-cloud/prc-faq-storage.md)
 
-[Emergency Services Network FAQs](../connectivity/conn-faq-esn.md)
+## Secure Remote Access FAQs
 
-[Global load balancing FAQs](../connectivity/conn-faq-glb.md)
+- [Secure Remote Access](../sra/sra-faq.md)
 
-[HSCN connectivity FAQs](../connectivity/conn-faq-hscn.md)
+## Connectivity FAQs
 
-[HybridConnect FAQs](../connectivity/conn-faq-hybridconnect.md)
+- [General connectivity](../connectivity/conn-faq.md)
 
-[Janet connectivity FAQs](../connectivity/conn-faq-janet.md)
+- [PSN connectivity](../connectivity/conn-faq-psn.md)
 
-[N3 connectivity FAQs](../connectivity/conn-faq-n3.md)
+- [HSCN connectivity](../connectivity/conn-faq-hscn.md)
 
-[PSN connectivity FAQs](../connectivity/conn-faq-psn.md)
+- [Janet connectivity](../connectivity/conn-faq-janet.md)
 
-[PSN for Policing and enhanced regime FAQs](../connectivity/conn-faq-psn-police.md)
+- [HybridConnect](../connectivity/conn-faq-hybridconnect.md)
 
-## Other
+- [PSN for Policing and enhanced regime](../connectivity/conn-faq-psn-police.md)
 
-[G-Cloud 11 enhancements and additions FAQs](other-faq-g11.md)
+- [Emergency Services Network](../connectivity/conn-faq-esn.md)
 
-[Enterprise & Private Sector FAQs](other-faq-eps.md)
+- [SiteProtect Advanced DDoS Mitigation](../connectivity/conn-faq-app-ddos.md)
 
-[MISO rebate FAQs](other-faq-miso-rebate.md)
+- [UltraDNS](../connectivity/conn-faq-glb.md)
 
-[Protective Monitoring FAQs](other-faq-promon.md)
+- [Bandwidth monitoring](../connectivity/conn-faq-bandwidth-monitoring.md)
 
-[Service Level Agreement FAQs](other-faq-sla.md)
+- [DDoS mitigation service](../connectivity/conn-faq-ddos.md)
+
+## Other FAQs
+
+- [G-Cloud 11 enhancements and additions](other-faq-g11.md)
+
+- [Jumpstart](other-faq-jumpstart.md)
+
+- [Invoice and billing](other-faq-billing.md)
+
+- [Credit card payment](other-faq-credit-card.md)
+
+- [Enterprise & Private Sector](other-faq-eps.md)
+
+- [Service Level Agreement](other-faq-sla.md)
+
+- [MISO rebate](other-faq-miso-rebate.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

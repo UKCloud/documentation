@@ -1,5 +1,5 @@
 ---
-title: How to configure an L2 VPN | UKCloud Ltd
+title: How to configure an L2 VPN
 description: Describes how to configure your Layer 2 VPN (L2 VPN), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-configure-l2-vpn.md
 
 ## Overview
 
-UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Enterprise Networking Bundle (additional charges apply). With L2 VPN you can stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.
+UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Advanced Management bundle (additional charges apply). With L2 VPN you can stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.
 
 L2 VPN is an extension of the edge's SSL functionality. It enables you to configure a tunnel between two sites, extending a logical switch across both sites. The tunnel means that virtual machines (VMs) remain on the same subnet if they are moved between the two sites, enabling you to extend your data centre across multiple sites. An NSX edge at one site can provide all services to VMs on the other site.
 
@@ -42,14 +42,20 @@ UKCloud L2 VPN functionality covers three scenarios:
 
 Before enabling L2 VPN, consider the following:
 
-- You must have purchased the Enterprise Networking Bundle for your UKCloud for VMware service
-- You must have converted your edge gateway to an advanced gateway (see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md))
+- You must have purchased the Advanced Management bundle for your UKCloud for VMware service
+
 - This service takes up one of your allocated IP addresses (primary or secondary)
+
 - L2 VPN can be enabled only on a routed Org VDC network
+
 - You cannot use SSL VPN on any edge gateway running L2 VPN
+
 - You may encounter issues with IPsec VPN
+
 - You cannot use load balancers using HTTPS on primary or secondary edge gateway addresses once L2 VPN is enabled
+
 - You'll need to change any existing NAT and firewall rules using the primary or secondary IP of the edge for HTTPS
+
 - If your remote site does not have vSphere or NSX, you'll need to deploy a standalone edge as the L2 VPN client (see [*Deploying a standalone edge as an L2 VPN client*](#deploying-a-standalone-edge-as-an-l2-vpn-client))
 
 ## Configuring L2 VPN
@@ -65,15 +71,15 @@ To set up L2 VPN, you need to configure an L2 VPN server on the destination edge
     > [!NOTE]
     > To stretch the subnet across the two sites, make sure you use the desired address space on both networks.
 
-2. For each network, select the network and click **Convert To**.
+2. For each network, select the network and, on the *General* tab, click **Edit**
 
-    ![Convert network option](images/vmw-vcd91-l2vpn-btn-convert-network.png)
+3. In the *Edit network* dialog box, select the **Connection** tab.
 
-3. Select **Convert to Subinterface** to connect the network as a subinterface to the trunk interface on the attached gateway, then click **OK**.
+4. From the **Interface Type** list, select **Subinterface** to connect the network as a subinterface to the trunk interface on the attached gateway, then click **Save**.
 
-    ![Convert Interface dialog box](images/vmw-vcd91-l2vpn-btn-convert-interface.png)
+    ![Convert network to subinterface](images/vmw-vcd-network-subinterface.png)
 
-4. To be able to move, your VMs need to be able to access your new network, so you need to attach them to it.
+5. To be able to move, your VMs need to be able to access your new network, so you need to attach them to it.
 
 ### Creating certificates
 
@@ -119,7 +125,7 @@ The L2 VPN server is the destination edge gateway to which the client is to be c
 
     ![L2 VPN server certificate details](images/vmw-vcd91-l2vpn-server-cert.png)
 
-8. Enable the **Validate Server Certificate** toggle, select the certificate you created earlier then click **OK**.
+8. Select the **Validate Server Certificate** option, select the certificate you created earlier then click **OK**.
 
 9. Click **Save changes**.
 
@@ -184,7 +190,7 @@ The L2 VPN client is the source edge gateway that initiates communication with t
 
     3. For **L2VPN Mode**, select **Server**.
 
-    4. Enable the **Enabled** toggle.
+    4. Select the **Enabled** option.
 
         ![Enable L2 VPN](images/vmw-vcd91-l2vpn-enable.png)
 
@@ -200,13 +206,9 @@ If the source site is not backed by NSX, you can deploy a standalone edge as the
 
     For more information, see the following VMware article: [Configure Standalone Edge as L2 VPN Client](https://pubs.vmware.com/NSX-61/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-C9E2B0E4-F1C1-44A7-B142-F814F801FA42.html).
 
-2. Convert the edge gateway to an advanced gateway.
+2. Create a port group and convert it to a sub interface.
 
-    For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
-
-3. Create a port group and convert it to a sub interface.
-
-4. You can now set up your L2 VPN by following the steps below, using the standalone edge as the source edge gateway.
+3. You can now set up your L2 VPN by following the steps below, using the standalone edge as the source edge gateway.
 
     - [*Creating certificates*](#creating-certificates)
 
@@ -221,4 +223,4 @@ If the source site is not backed by NSX, you can deploy a standalone edge as the
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

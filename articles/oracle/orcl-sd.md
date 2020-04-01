@@ -1,8 +1,10 @@
 ---
-title: UKCloud for Oracle Software Service Definition | UKCloud Ltd
+title: UKCloud for Oracle Software Service Definition
 description: Provides an overview of what is provided by the UKCloud for Oracle Software service
 services: oracle
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:
@@ -99,7 +101,7 @@ Choose the local protection required for your application in the event of a loca
 
 UKCloud for Oracle Softwatre doesn't include infrastructure level backup and restore or remote protection products. Instead we offer an underpinning infrastructure that can support technologies that are compatible with Oracle VMs such as Oracle Data Guard and Oracle RMAN data protection solutions
 
-- Multi Cloud Backup Storage - Compatible with Oracle RMAN and other DDBoost aware backup applicatons. See the [*Multi-Cloud Backup Storage Service Definition*](../mcbs/mcbs-sd.md) for more info
+- Multi Cloud Backup Storage - Compatible with Oracle RMAN and other DDBoost aware backup applicatons. See the [*Multi-Cloud Backup Storage Service Definition*](../other/other-sd-mcbs.md) for more info
 
 - Second Oracle region - Use Oracle Data Guard or other Oracle compatible replication technologies to create a DR environment in a second Oracle region
 
@@ -119,34 +121,12 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
 
-<table>
-  <tr>
-    <th></th>
-    <th>Non-HA x86</th>
-    <th>HA x86</th>
-    <th>SPARC / Dedicated SPARC with resilience</th>
-    <th>Dedicated SPARC without resilience</th>
-  </tr>
-  <tr>
-    <td><b>Service level agreement</b></td>
-    <td>99.95%</td>
-    <td>99.99%</td>
-    <td>99.95%</td>
-    <td>95.00%</td>
-  </tr>
-  <tr>
-    <td><b>Portal level agreement</b></td>
-    <td colspan="4">99.90%</td>
-  </tr>
-  <tr>
-    <td><b>Measurement of SLA</b></td>
-    <td colspan="4">The Service is deemed unavailable if a customer is unable to restart an VM after it becomes unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking such as physical firewalls and routers.<br>As Oracle workloads are pinned to processor cores, x86 VMs will only be automatically moved in the event of a host failure if HA feature has been enabled by the customer on each x86 VM. Customers are responsible for enabling the HA feature on x86 VMs. If the x86 HA feature is not enabled, or SPARC is used, UKCloud will need to move Oracle VMs to a new host so they can be restarted. The manual movement of VMs is covered by the Non-HA x86 / SPARC SLAs. Customers are responsible for restarting VMs and should configure alerts to be notified if an Oracle VM failure occurs This will not be a live migration and an application restart will be required. Customers will be advised if an action is to be performed.</td>
-  </tr>
-  <tr>
-    <td><b>Key exclusions</b></td>
-    <td colspan="4">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul></td>
-  </tr>
-</table>
+&nbsp;                       | UKCloud for Oracle Software
+-----------------------------|----------------------------
+**Service level agreement**  | **Non-HA x86:** 99.95%<br>**HA x86:** 99.99%<br>**SPARC / Dedicated SPARC with resilience:** 99.95%<br>**Dedicated SPARC without resilience:** 95.00%
+**Portal level agreement**     | 99.90%
+**Measurement of SLA**       | The service is deemed unavailable if a customer is unable to restart a VM after it becomes unresponsive due to a fault recognised as the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking, such as physical firewalls and routers.<br>Oracle workloads are pinned to processor cores and will power off in the event of a host failure. Migrations are not live and VM restart will be required. UKCloud will advise customers if VM restart is required.<br><b>HA-enabled x86 VMs</b> will be automatically moved to a new host in the event of a host failure, but may require restarting. Automatic movement of VMs is covered by the HA x86 SLA. Customers are responsible for enabling the HA feature on x86 VMs and for restarting VMs.<br><b>Non-HA x86 VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the Non-HA x86 SLA. Customers are responsible for restarting VMs<br><b>SPARC VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the SPARC SLAs. Customers are responsible for restarting VMs.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
 
 ## The small print
 
@@ -154,4 +134,4 @@ For full terms and conditions including onboarding and responsibilities, please 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

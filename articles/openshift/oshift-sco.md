@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenShift Service Scope | UKCloud Ltd
+title: UKCloud for OpenShift Service Scope
 description: Outlines important details regarding UKCloud for OpenShift
 services: openshift
 author: Sue Highmoor
@@ -111,6 +111,9 @@ Containers in OpenShift by default don’t persist data. Every time an applicati
 **Number of file copies** | 3                        | 3
 **Use cases**             | Web caching<br>Containerised analytics<br>Highly performant, real-time web/mobile applications | Standard, containerised web/mobile applications<br>Storing OpenShift logs and metrics
 
+> [!NOTE]
+> In line with current restrictions on the OpenStack service underpinning OpenShift, you can make/attach 25 additional persistent volume claims (PVCs) to each worker node.
+
 ## Optional extras
 
 To complement your UKCloud for OpenShift service, UKCloud offers the following value-added options:
@@ -166,7 +169,7 @@ UKCloud maintains responsibility for routine patching and upgrades of the OpenSh
 
 ## Service provisioning
 
-You can request UKCloud for OpenShift via your Technical Account Manager (TAM) or by using the My Calls section of the UKCloud Portal.
+You can request UKCloud for OpenShift via your Service Delivery Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 Within 5 business days of accepting an order, UKCloud will create the customer’s primary account and send a Welcome Pack, which includes the URL for the UKCloud Portal, and the [Getting Started Guide](oshift-gs.md).
 
@@ -180,7 +183,7 @@ Maintaining a master copy or backup copy of the data used in the UKCloud for Ope
 
 Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
 
-Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.
+Customers with requirements beyond these limits can raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) to have these limits per project considered for raising.
 
 ## Backup/recovery and disaster recovery
 
@@ -198,4 +201,4 @@ Although these features are not currently available, they will be considered upo
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,10 +1,10 @@
 ---
-title: How to create a load balancer using the UKCloud Azure Stack portal | UKCloud Ltd
+title: How to create a load balancer for Azure Stack Hub
 description: Provides help for creating a load balancer on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 30/03/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -16,7 +16,7 @@ toc_fullpath: Users/How To/azs-how-create-load-balancer.md
 toc_mdlink: azs-how-create-load-balancer.md
 ---
 
-# How to create a load balancer using the UKCloud Azure Stack portal
+# How to create a load balancer for Azure Stack Hub
 
 ## Overview
 
@@ -24,13 +24,13 @@ A load balancer provides scale and availability by spreading incoming requests a
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ## Creating a load balancer
 
 In this section we will create a load balancer with a public IP address.
 
-1. Log in to the Azure Stack portal.
+1. Log in to the Azure Stack Hub portal.
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -54,19 +54,21 @@ In this section we will create a load balancer with a public IP address.
 
    - **Public IP Address** - The public IP address that will be assigned to this load balancer. To create a new public IP address:
 
-     - Click **Public IP address** on the **Create load balancer** blade.
+     - Select **Create new** from the **Public IP address** options.
 
-     - Select **Create new** on the **Choose public IP address** blade.
+     - Enter a name for the public IP address.
 
-     - Enter a name for the public IP address and click **OK**.
+     - Expand the *Configure public IP address* section.
+
+     - Select either **Dynamic** or **Static** from the **Assignment** options. We recommend selecting the **Static** option when creating a load balancer.
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
-     ![Create new load balancer](images/azs-browser-create-load-balancer.PNG)
+     ![Create new load balancer](images/azs-browser-create-load-balancer.png)
 
 6. Click **Create**.
 
@@ -96,9 +98,9 @@ In this section we will create a virtual network and two virtual machines which 
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
    - **Subnet Name** - The name of the first subnet within the virtual network.
 
@@ -181,7 +183,7 @@ In this section we will create NSG rules to allow inbound traffic.
 
    - **Description** - A description of the security rule.
   
-    ![Add an inbound security rule](images/azs-browser-add-in-security-rule.PNG)
+    ![Add an inbound security rule](images/azs-browser-add-in-security-rule.png)
 
 6. Click **Add**.
 
@@ -211,7 +213,7 @@ To spread traffic load across the VMs, you must create a back-end address pool. 
 
 ### Create a health probe
 
-When creating a load balancer, you can use a health probe to monitor the status of your application. In Azure Stack, the health probe adds and removes VMs from the load balancer back-end pool based on their current status.
+When creating a load balancer, you can use a health probe to monitor the status of your application. In Azure Stack Hub, the health probe adds and removes VMs from the load balancer back-end pool based on their current status.
 
 1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
 
@@ -275,6 +277,8 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
    - **Idle timeout** - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.
 
+   - **Floating IP** - Can be enabled to change the IP address mapping scheme to allow for additional flexibility, see [here](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-multivip-overview) for further details.
+
     ![Add a load balancing rule](images/azs-browser-add-lb-rule.png)
 
 6. Click **OK**.
@@ -293,4 +297,4 @@ After installing the application that is being load-balanced on each of the VMs,
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

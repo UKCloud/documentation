@@ -1,10 +1,10 @@
 ---
-title: How to interact with ECS using Python and Boto| UKCloud Ltd
+title: How to interact with ECS using Python and Boto
 description: How to use Python and Boto with ECS
 services: cloud-storage
 author: Paul Brown
-reviewer:
-lastreviewed: 27/11/2018 15:12:48
+reviewer: nwayman
+lastreviewed: 24/02/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -153,12 +153,8 @@ This guide has shown you how to use the Boto package for Python to interact with
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
-- Cloud Storage Gateways
-
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
-
-  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

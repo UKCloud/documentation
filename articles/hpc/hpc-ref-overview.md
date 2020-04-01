@@ -1,5 +1,5 @@
 ---
-title: Understanding High Performance Compute | UKCloud Ltd
+title: Understanding High Performance Compute
 description: Provides an overview of UKCloud's High Performance Compute service
 services: hpc
 author: Sue Highmoor
@@ -77,7 +77,7 @@ High Performance Compute includes as standard:
 
 - DDoS-protected internet
 
-- Personalised support via Customer Success Managers, Technical Account Managers and a telephone support desk
+- Personalised support via Customer Success Managers, Service Delivery Managers and a telephone support desk
 
 To model a total cost of ownership, you may also want to consider additional elements, such as connectivity, and service options, such as cloud enablement and cross-domain services.
 
@@ -109,4 +109,4 @@ For more information, see the [*High Performance Compute Service Definition*](hp
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

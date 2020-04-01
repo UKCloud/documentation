@@ -1,5 +1,5 @@
 ---
-title: System requirements for services on the UKCloud platform | UKCloud Ltd
+title: System requirements for services on the UKCloud platform
 description: Provides information about system requirements, including browser versions, for various services on the UKCloud platform
 services: other
 author: Sue Highmoor
@@ -33,7 +33,7 @@ To get the best interaction with the UKCloud platform, it's important to use a b
 > [!NOTE]
 > The Microsoft Edge browser does not support plugins, so functions such as console redirection and OVF upload using the Legacy UI do not work with Edge. To perform these functions, you must use a different browser.
 
-#### vCloud Director 9.7
+#### vCloud Director
 
 vCloud Director 9.7 is compatible with the current and last major browser revisions. Version 9.7 of vCloud Director was tested by VMware and supports:
 
@@ -45,28 +45,13 @@ vCloud Director 9.7 is compatible with the current and last major browser revisi
 
 - Microsoft Internet Explorer 11.590.171340
 
-#### vCloud Director 9.1
-
-vCloud Director 9.1 is compatible with many current and last major browser revisions. Version 9.1 of vCloud Director was tested by VMware and supports:
-
-- Google Chrome 64
-
-- Mozilla Firefox 58
-
-- Microsoft Edge 41
-
-- Microsoft Internet Explorer 11
-
-> [!NOTE]
-> Although Internet Explorer is supported by vCloud Director 9.1, if you've applied any security or group policy restrictions, you may encounter problems.
-
 ### UKCloud for OpenStack
 
 UKCloud for OpenStack is powered by OpenStack and uses the Horizon project to provide its dashboard capabilities. Horizon is built around modern HTML5 standards and requires no auxiliary plugins to operate. Therefore, it is compatible with all latest browser versions.
 
 ### UKCloud for Microsoft Azure
 
-Interaction with UKCloud for Microsoft Azure is through the Azure Stack portal. Microsoft recommends using the most up-to-date browser for your operating system.
+Interaction with UKCloud for Microsoft Azure is through the Azure Stack Hub portal. Microsoft recommends using the most up-to-date browser for your operating system.
 
 ### Cloud GPU
 
@@ -92,4 +77,4 @@ It is your responsibility to ensure that you are using supported versions of any
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

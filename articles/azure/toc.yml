@@ -14,23 +14,25 @@
       href: azs-gs.md
   - name: How To
     items:
+    - name: Configure custom script extensions
+      href: azs-how-configure-custom-script-extension.md
     - name: Convert a VM to use managed disks - PowerShell
       href: azs-how-convert-to-managed-disks-ps.md
     - name: Create a load balancer
       href: azs-how-create-load-balancer.md
-    - name: Create a scale set
-      href: azs-how-create-scale-set.md
     - name: Create a Service Fabric cluster
       href: azs-how-create-service-fabric-portal.md
+    - name: Create a VM scale set
+      href: azs-how-create-scale-set.md
     - name: Create an Azure Kubernetes Service cluster
       href: azs-how-create-aks.md
-    - name: Deploy an Azure Site Recovery template to Azure Stack - PowerShell
+    - name: Deploy an Azure Site Recovery template to Azure Stack Hub - PowerShell
       href: azs-how-deploy-asr-template-powershell.md
-    - name: Deploy an SQL template to Azure Stack - PowerShell
+    - name: Deploy an SQL template to Azure Stack Hub - PowerShell
       href: azs-how-deploy-sql-template-powershell.md
     - name: Identify your Azure global administrators
       href: azs-how-identify-global-admins.md
-    - name: Link Azure Storage Explorer to Azure Stack
+    - name: Link Azure Storage Explorer to Azure Stack Hub
       href: azs-how-link-storage-explorer.md
     - name: List VM extensions - PowerShell
       href: azs-how-list-vm-extensions.md
@@ -40,17 +42,19 @@
       href: azs-how-move-vm-new-vnet-ps.md
     - name: Retrieve your subscription quotas
       href: azs-how-retrieve-quota-ps.md
-    - name: Use the Azure Stack API
+    - name: Use the Azure Stack Hub API
       href: azs-how-use-azure-api.md
+    - name: Use UKCloud as your public Azure CSP
+      href: azs-how-use-ukc-csp.md
     - name: Add a Managed Disk to a VM
       items:
       - name: Add a managed disk to a VM - Portal
         href: azs-how-add-managed-disks-portal.md
     - name: Configure Environment
       items:
-      - name: Configure the Azure Stack user's Azure CLI environment
+      - name: Configure the Azure Stack Hub user's Azure CLI environment
         href: azs-how-configure-cli.md
-      - name: Configure the Azure Stack user's PowerShell environment
+      - name: Configure the Azure Stack Hub user's PowerShell environment
         href: azs-how-configure-powershell-users.md
     - name: Create a Key Vault
       items:
@@ -68,10 +72,10 @@
         href: azs-how-create-spn-powershell.md
     - name: Create a Site-to-Site VPN Connection
       items:
-      - name: Create a site-to-site VPN connection - Portal
-        href: azs-how-create-S2S-VPN.md
       - name: Create a site-to-site VPN connection - PowerShell
         href: azs-how-create-S2S-VPN-ps.md
+      - name: Create a site-to-site VPN connection between Azure Stack Hub and Public Azure - Portal
+        href: azs-how-create-S2S-VPN-azurestack-to-azure.md
     - name: Create a Virtual Machine
       items:
       - name: Create a virtual machine - CLI
@@ -104,17 +108,17 @@
       href: azs-sco.md
   - name: Videos
     items:
-    - name: UKCloud Azure Stack portal overview
+    - name: UKCloud Azure Stack Hub portal overview
       href: azs-vid-overview.md
 - name: Operators
   items:
   - name: How To
     items:
-    - name: Deploy and configure the Azure Stack Development Kit
+    - name: Deploy and configure the Azure Stack Hub Development Kit
       href: azs-how-deploy-asdk.md
-    - name: Perform an Azure Stack update
+    - name: Perform an Azure Stack Hub update
       href: azs-how-ps-update-azure-stack.md
     - name: Configure Environment
       items:
-      - name: Configure the Azure Stack operator's PowerShell environment
+      - name: Configure the Azure Stack Hub operator's PowerShell environment
         href: azs-how-configure-powershell-operators.md

@@ -1,10 +1,10 @@
 ---
-title: How create a vApp | UKCloud Ltd
+title: How to create a vApp
 description: Shows you how to create create vApps from scratch within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: lthangarajah
+lastreviewed: 02/08/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -24,51 +24,19 @@ vCloud Director uses vApps to make virtual machine (VM) creation and management 
 
 In this guide we'll look at how to create a vApp from scratch.
 
-The steps for creating a vApp depend on the version of vCloud Director available in your environment:
-
-- [vCloud Director 8.20](#creating-a-vapp-vcloud-director-820)
-
-- [vCloud Director 9.1](#creating-a-vapp-vcloud-director-91)
-
-## Creating a vApp (vCloud Director 8.20)
-
-1. In vCloud Director, on the *Home* tab, click the Build New vApp button.
-
-    ![Build New vApp button](images/vmw-vcd-btn-new-vapp.png)
-
-2. Enter a name for your vApp. This should be a name that will easily identify it if you're building a large environment with multiple vApps. If you have multiple VDCs on the UKCloud platform, you can decide later which one the new vApp sits in. You can also choose how long the vApp can exist for, which is useful for test & dev projects.
-
-    ![Select Name and Location page of New vApp dialog box](images/vmw-vcd-vapp-name.png)
-
-3. When you're happy with these settings, click **Next**.
-
-4. You can now populate the vApp with VMs. There are several ways to create a VM:
-
-    - From an existing template. The template can be in your own organisation's catalogue or in UKClouds's public catalogue (see [*How to create a VM from a template*](vmw-how-create-vm-from-template.md)).
-
-        Catalogue creation is covered in [*How to create a catalog*](vmw-how-create-catalog.md).
-
-    - From scratch, without using a template (see [*How to create a virtual machine from scratch*](vmw-how-create-vm-from-scratch.md)).
-
-5. When you've finished creating your vApp, click **Finish**.
-
-6. When your vApp has finished deploying, on the *Home* page, right-click the newly created vApp and click **Start** to power it on.
-
-## Creating a vApp (vCloud Director 9.1)
-
 1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to create the vApp.
 
 2. In the left navigation panel, select **vApps** to view a list of vApps within the VDC.
 
-    ![vApps tab in vCloud Director](images/vmw-vcd91-tab-vapps.png)
+    ![vApps tab in vCloud Director](images/vmw-vcd-tab-vapps.png)
 
-3. Click **Build New vApp**.
+3. Click **New vApp**.
 
-    ![Build New vApp button](images/vmw-vcd91-btn-new-vapp.png)
+    ![Build New vApp button](images/vmw-vcd-btn-new-vapp.png)
 
-4. In the *Build new vApp* dialog box, enter a **Name** and **Description** for your vApp. The name should be something that will easily identify it if you're building a large environment with multiple vApps.
+4. In the *New vApp* dialog box, enter a **Name** and **Description** for your vApp. The name should be something that will easily identify it if you're building a large environment with multiple vApps.
 
-    ![Build new vApp dialog box](images/vmw-vcd91-build-vapp.png)
+    ![Build new vApp dialog box](images/vmw-vcd-build-vapp.png)
 
 5. You can now click **Add Virtual Machine** to populate the vApp with VMs. There are several ways to create a VM:
 
@@ -78,10 +46,10 @@ The steps for creating a vApp depend on the version of vCloud Director available
 
     - From scratch, without using a template (see [*How to create a virtual machine from scratch*](vmw-how-create-vm-from-scratch.md)).
 
-6. When you've finished creating your vApp, click **Build**.
+6. When you've finished creating your vApp, click **Create**.
 
-7. When your vApp has finished deploying, in the card for the vApp, click **Power** then **Power On** to power it on.
+7. When your vApp has finished deploying, in the card for the vApp, select **Actions** then **Power On** to power it on.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

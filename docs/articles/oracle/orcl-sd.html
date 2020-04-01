@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>UKCloud for Oracle Software Service Definition | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>UKCloud for Oracle Software Service Definition </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="UKCloud for Oracle Software Service Definition | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="UKCloud for Oracle Software Service Definition ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -169,7 +169,7 @@
 <h3 id="backup--remote-protection">Backup &amp; remote protection</h3>
 <p>UKCloud for Oracle Softwatre doesn't include infrastructure level backup and restore or remote protection products. Instead we offer an underpinning infrastructure that can support technologies that are compatible with Oracle VMs such as Oracle Data Guard and Oracle RMAN data protection solutions</p>
 <ul>
-<li><p>Multi Cloud Backup Storage - Compatible with Oracle RMAN and other DDBoost aware backup applicatons. See the <a href="../mcbs/mcbs-sd.html"><em>Multi-Cloud Backup Storage Service Definition</em></a> for more info</p>
+<li><p>Multi Cloud Backup Storage - Compatible with Oracle RMAN and other DDBoost aware backup applicatons. See the <a href="../other/other-sd-mcbs.html"><em>Multi-Cloud Backup Storage Service Definition</em></a> for more info</p>
 </li>
 <li><p>Second Oracle region - Use Oracle Data Guard or other Oracle compatible replication technologies to create a DR environment in a second Oracle region</p>
 </li>
@@ -183,37 +183,35 @@
 <h2 id="an-sla-you-can-trust">An SLA you can trust</h2>
 <p>We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the <a href="../other/other-ref-sla-definition.html"><em>SLA defintion article</em></a> on the UKCloud Knowledge Centre.</p>
 <table>
-  <tr>
-    <th></th>
-    <th>Non-HA x86</th>
-    <th>HA x86</th>
-    <th>SPARC / Dedicated SPARC with resilience</th>
-    <th>Dedicated SPARC without resilience</th>
-  </tr>
-  <tr>
-    <td><b>Service level agreement</b></td>
-    <td>99.95%</td>
-    <td>99.99%</td>
-    <td>99.95%</td>
-    <td>95.00%</td>
-  </tr>
-  <tr>
-    <td><b>Portal level agreement</b></td>
-    <td colspan="4">99.90%</td>
-  </tr>
-  <tr>
-    <td><b>Measurement of SLA</b></td>
-    <td colspan="4">The Service is deemed unavailable if a customer is unable to restart an VM after it becomes unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking such as physical firewalls and routers.<br>As Oracle workloads are pinned to processor cores, x86 VMs will only be automatically moved in the event of a host failure if HA feature has been enabled by the customer on each x86 VM. Customers are responsible for enabling the HA feature on x86 VMs. If the x86 HA feature is not enabled, or SPARC is used, UKCloud will need to move Oracle VMs to a new host so they can be restarted. The manual movement of VMs is covered by the Non-HA x86 / SPARC SLAs. Customers are responsible for restarting VMs and should configure alerts to be notified if an Oracle VM failure occurs This will not be a live migration and an application restart will be required. Customers will be advised if an action is to be performed.</td>
-  </tr>
-  <tr>
-    <td><b>Key exclusions</b></td>
-    <td colspan="4">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</li></li></ul></td>
-  </tr>
+<thead>
+<tr>
+<th> </th>
+<th>UKCloud for Oracle Software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service level agreement</strong></td>
+<td><strong>Non-HA x86:</strong> 99.95%<br><strong>HA x86:</strong> 99.99%<br><strong>SPARC / Dedicated SPARC with resilience:</strong> 99.95%<br><strong>Dedicated SPARC without resilience:</strong> 95.00%</td>
+</tr>
+<tr>
+<td><strong>Portal level agreement</strong></td>
+<td>99.90%</td>
+</tr>
+<tr>
+<td><strong>Measurement of SLA</strong></td>
+<td>The service is deemed unavailable if a customer is unable to restart a VM after it becomes unresponsive due to a fault recognised as the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking, such as physical firewalls and routers.<br>Oracle workloads are pinned to processor cores and will power off in the event of a host failure. Migrations are not live and VM restart will be required. UKCloud will advise customers if VM restart is required.<br><b>HA-enabled x86 VMs</b> will be automatically moved to a new host in the event of a host failure, but may require restarting. Automatic movement of VMs is covered by the HA x86 SLA. Customers are responsible for enabling the HA feature on x86 VMs and for restarting VMs.<br><b>Non-HA x86 VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the Non-HA x86 SLA. Customers are responsible for restarting VMs<br><b>SPARC VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the SPARC SLAs. Customers are responsible for restarting VMs.</td>
+</tr>
+<tr>
+<td><strong>Key exclusions</strong></td>
+<td>The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</li></li></ul></td>
+</tr>
+</tbody>
 </table>
 <h2 id="the-small-print">The small print</h2>
 <p>For full terms and conditions including onboarding and responsibilities, please refer to the <a href="../other/other-ref-terms-and-conditions.html"><em>Terms and conditions documents</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -241,7 +239,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -250,7 +248,7 @@
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -258,12 +256,19 @@
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -273,5 +278,6 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

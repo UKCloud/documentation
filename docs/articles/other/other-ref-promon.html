@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Protective Monitoring from UKCloud </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Protective Monitoring from UKCloud ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-promon.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="protective-monitoring-from-ukcloud">Protective Monitoring from UKCloud</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Protective monitoring is a term that comes from the National Cyber Security Centre (NCSC), listed in the Good Practice Guide 13 (GPG-13). It provides a set of guidance as to what controls should be implemented, and the depth of those controls, to make sure that the data being stored or transported in an IT estate is protected against cyber threats.</p>
+<p>As part of our activity to maintain the security of our platforms, we adhere to protective monitoring best practice from the NCSC. UKCloud's Protective Monitoring protects both the Assured OFFICIAL and Elevated OFFICIAL security domains with resilient, 24x7 enhanced protective monitoring, vulnerability scanning and assessment.</p>
+<h2 id="protective-monitoring-service-scope">Protective Monitoring service scope</h2>
+<p>Our protective monitoring activity covers all assets that provide our products to customers, including all hosting infrastructure, networking and management applications.</p>
+<p>In the case of our compute products (UKCloud for VMware, UKCloud for OpenStack, UKCloud for Microsoft Azure and UKCloud for Oracle Software), we protectively monitor up to the hypervisor (the component that provides the virtual machines). For components above this infrastructure (for example, your own virtual machines, appliances and applications) you are responsible for providing an appropriate protective monitoring capability.</p>
+<p>The following demonstrates the scope of UKCloud's Protective Monitoring:</p>
+<ul>
+<li><p>Perimeter routes and firewalls - UKCloud protectively monitors and regularly assesses any potential vulnerabilities at the perimeter, alongside other mitigations including DDoS<sup>*</sup> and active vulnerability scanning.</p>
+</li>
+<li><p>Compute hypervisor, UKCloud networks and physical infrastructure - UKCloud protectively monitors and regularly assesses vulnerabilities across all components of the hosting estate (for example, hypervisors, hosting infrastructure, servers, networking and management applications).</p>
+</li>
+<li><p>Customer VDC, vApps, VMs, Virtual Network Appliance and customer networks - This is the customer's responsibility to monitor.</p>
+</li>
+<li><p>External connectivity, for example, internet, PSN, HSCN, Janet, RLI, leased lines - This is the responsibility of the telecommunications provider.</p>
+</li>
+</ul>
+<p><sup>*</sup> For more information about UKCloud's volumetric DDoS protection, see the <a href="../connectivity/conn-faq-ddos.html"><em>DDoS mitigation service FAQs</em></a>.</p>
+<p>We do not share a feed from our platform protective monitoring to customers, so you cannot connect your own SOC to the protective monitoring data. You can however get access to log data for all traffic traversing your virtual boundary firewall.</p>
+<h2 id="cyber-security-news-page">Cyber Security News page</h2>
+<p>The <em>Cyber Security News</em> page in the UKCloud Portal, located under Monitoring, lets you see, at a glance, general threat briefs and security news from around the world as analysed by e2e-assure.</p>
+<p>All Portal users can access the <em>Cyber Security News</em> page.</p>
+<p>Each brief includes a headline in bold text that sums up the threat to help you scan through the feed quickly. Briefs are also colour-coded, ranging from yellow to red, to indicate the severity of the brief: Yellow indicating a low threat level and red indicating a high threat level.</p>
+<p>A more in-depth description of the threat is included below the headline. This provides you with more information and recommended actions, depending on the threat. The feed is listed in chronological order with two timestamps: one showing when the brief was originally published and the other showing when the brief was most recently updated.</p>
+<p>You can search and filter the feed on the <em>Cyber Security News</em> page to define exactly what content you want to see. Use the search bar to query specific words or phrases within the threat briefs. To access filtering options, to edit the priority and date range you want to see in your feed or search results, click <strong>Advanced Search</strong>.</p>
+<h2 id="my-security-events-page">My Security Events page</h2>
+<p>The <em>Security Events</em> page in the UKCloud Portal, located under Monitoring, lets you see, at a glance, threat information specific to your account.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>To view the <em>Security Events</em> page, you must have <strong>Read</strong> monitoring permissions on the page. For more information, see <a href="../portal/ptl-ref-overview-permissions.html#permissions-for-monitoring"><em>Portal permissions</em></a>.</p>
+</div>
+<p>Any threat information listed on the <em>Security Events</em> page is also raised as a My Calls ticket to ensure that it's seen in a timely manner by the relevant person.</p>
+<p>Currently, the <em>Security Events</em> page only includes information for internet connectivity to UKCloud for VMware in the Assured OFFICIAL security domain. All other services are still supported by UKCloud's Protective Monitoring service and our security team will inform you of security incidents for those other services via My Calls.</p>
+<p>If you'd like to request that other services are included on the <em>Security Events</em> page, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+<h3 id="example-security-incidents">Example security incidents</h3>
+<ul>
+<li><p>Communication seen with known malware sites</p>
+</li>
+<li><p>Data being exchanged in plain text</p>
+</li>
+<li><p>Certificate issues</p>
+</li>
+<li><p>Brute force attacks</p>
+</li>
+<li><p>Vulnerability scanning</p>
+</li>
+<li><p>Attempts to compromise operating systems and services</p>
+</li>
+<li><p>Machines contacting known malicious domains</p>
+</li>
+<li><p>Machines being used for personal use (if you're running a VPN server, UKCloud will capture internet browsing)</p>
+</li>
+<li><p>Any traffic that is encrypted will not be spotted by UKCloud unless it's contacting known malicious domains</p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you would like to request that other clouds, networks or security domains are supported, contact <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

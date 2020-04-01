@@ -1,5 +1,5 @@
 ---
-title: HSCN connectivity FAQs | UKCloud Ltd
+title: HSCN connectivity FAQs
 description: Frequently asked questions for HSCN Connectivity
 services: connectivity
 author: Matt Warner
@@ -65,7 +65,7 @@ You can find all ODS and connection agreements at <https://crm.digital.nhs.uk/hs
 
 First you need to align with the HSCN Connection Agreement. You can do this by either signing your own Connection Agreement and having NHS Digital counter-sign. You can then supply us with a copy of it. Alternatively, you can sign the UKCloud Master Services Agreement (MSA version 11.0 onwards) and be covered by the flow-down of the Connection Agreement terms.
 
-Once you have a Connection Agreement in place, you will need to raise a service request for HSCN.
+Once you have a Connection Agreement in place, you will need to raise a service request for HSCN via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 We will give you a new Edge or Router with as many HSCN IPs as you are currently using for N3 assigned to it.
 
@@ -261,4 +261,4 @@ Please note that IP changes are NOT instantaneous and may take some time to prop
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

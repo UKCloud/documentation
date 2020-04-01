@@ -1,5 +1,5 @@
 ---
-title: Cloud GPU Service Scope | UKCloud Ltd
+title: Cloud GPU Service Scope
 description: Outlines important details regarding Cloud GPU
 services: gpu
 author: Steve Hall
@@ -53,13 +53,13 @@ Workload type | Resource allocation | Automated Rebalancing
 --------------|---------------------|----------------------
 PRIORITY | Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption
 
-To have GPU enabled in your environment, you will need to raise a [Service Request](https://portal.skyscapecloud.com/support/my_calls/new).
+To have GPU enabled in your environment, you will need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 When you raise a service request, you will need to specify the profile that you want to be made available from the following options:
 
 Workload type | Presentation | Memory size
 --------------|--------------|------------
-Visualisation | Profile</br>(slice of card) | 1GB</br>2GB</br>4GB</br>8GB
+Visualisation | Profile<br>(slice of card) | 1GB<br>2GB<br>4GB<br>8GB
 Compute | Card | 16GB
 
 ## Storage
@@ -150,15 +150,13 @@ You can access, manage and view the GPU-connected VMs in the same way that you w
 
 - **vCloud Director Graphical User Interface.** Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions) and manage GPU-enabled VMs.
 
-- **UKCloud Portal.** Enables the creation of compute services and subsequently, PRIORITY VDCs and the requesting of GPU resources for environments. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the UKCloud Portal.
+- **UKCloud Portal.** Enables the creation of compute services and subsequently, PRIORITY VDCs and the requesting of GPU resources for environments. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the UKCloud Portal.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the GPU hardware and the GPU management plane.
 
 ## Service reporting
 
-**Visibility.** We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability, including GPU resource availability, and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal.
-
-**Service reporting.** All service reporting is done via the UKCloud Portal.
+**Visibility.** Maintenance notifications and Service Status reports are delivered through the Portal.
 
 **Billing.** We provide you with monthly invoices and detailed CSV reports covering your previous monthly spend. Your GPU-enabled machines will be within the reports, and a separate column will provide you with information regarding your GPU usage.
 
@@ -168,7 +166,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 **Cloud Architects.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. They are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
 
-**Technical Account Managers (TAM).** After the initial 90 days, you'll be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
+**Service Delivery Manager.** After the initial 90 days, you'll be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
 **Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is outlined in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
@@ -194,11 +192,11 @@ UKCloud will adhere to the following in terms of maintenance windows:
 
 "Planned Maintenance" means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide you with at least fourteen (14) days' advance notice of the Planned Maintenance if you will be affected.
 
-If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
 
 "Emergency Maintenance" means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall: a) provide affected customers with at least six (6) hours' advance notice and b) carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
 
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
 
 You should be aware of some of the limitations of parts of the SLA. The disruptive nature of GPU hardware failures means that in the event of a GPU hardware failure, the VM will also fail.
 
@@ -212,9 +210,11 @@ The following documents contain more information about Cloud GPU:
 
 - [*Cloud GPU FAQ*](gpu-faq.md)
 
-- Getting Started Guide for Cloud GPU [*Compute*](gpu-gs-compute.md) and [*Visualisation*](gpu-gs-visualisation.md)
+- [*Cloud GPU Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/cloud-gpu-factsheet.pdf)
 
-- [*Cloud GPU Factsheet*](https://ukcloud.com/wp-content/uploads/2017/12/Cloud-GPU-factsheet.pdf)
+- [*How to set up Cloud GPU Compute for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-compute.md)
+
+- [*How to set up Cloud GPU Visualisation for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-visualisation.md)
 
 - [*UKCloud Terms & Conditions for G-Cloud 11*](../other/other-ref-terms-and-conditions.md)
 
@@ -222,4 +222,4 @@ The following documents contain more information about Cloud GPU:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

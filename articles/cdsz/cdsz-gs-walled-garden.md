@@ -1,5 +1,5 @@
 ---
-title: Getting Started Guide for the Cross Domain Security Zone Walled Garden | UKCloud Ltd
+title: Getting Started Guide for the Cross Domain Security Zone
 description: Provides information to get up and running with the Cross Domain Security Zone
 services: cdsz
 author: Sue Highmoor
@@ -11,12 +11,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Cross Domain Security Zone Walled Garden
+toc_title: Cross Domain Security Zone
 toc_fullpath: Getting Started/cdsz-gs-walled-garden.md
 toc_mdlink: cdsz-gs-walled-garden.md
 ---
 
-# Getting Started Guide for the Cross Domain Security Zone Walled Garden
+# Getting Started Guide for the Cross Domain Security Zone
 
 ## Overview
 
@@ -43,7 +43,7 @@ After your Walled Garden application has been approved, a service request is rai
 > [!NOTE]
 > If a service request for this implementation already exists, the existing request is used and a new one is not raised.
 
-You can track the progress of the service request in the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal.
+You can track the progress of the service request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 During the provisioning of the Walled Garden service, we'll ask you for some additional information via the service request:
 
@@ -107,9 +107,9 @@ When you've built your VMs and networking, you can start to test the environment
 
 ### Performing the IT Health Check
 
-As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can search for appropriate providers on the [NCSC web site](https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&f%5B1%5D=field_assurance_scheme%3A213).
+As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can verify appropriate providers on the [NCSC web site](https://www.ncsc.gov.uk/section/products-services/verify-supplier?q=&defaultTypes=organisation&sort=date%2Bdesc&start=0&rows=20).
 
-Before beginning the ITHC, notify UKCloud by raising a service request in My Calls and completing the [*External Security Review Test (ESRT) application form*](https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad). Ideally, we require five working days' notice before the work is due to be carried out.
+Before beginning the ITHC, notify UKCloud by raising a service request in [My Calls](https://portal.skyscapecloud.com/support/ivanti) and completing the [*External Security Review Test (ESRT) application form*](https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad). Ideally, we require five working days' notice before the work is due to be carried out.
 
 The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.
 
@@ -147,4 +147,4 @@ Garden.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

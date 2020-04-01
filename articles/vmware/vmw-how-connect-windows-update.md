@@ -1,6 +1,6 @@
 ---
-title: How to connect to the UKCloud Windows Server Update Services (WSUS) | UKCloud Ltd
-description:  Shows how to connect to the UKCloud Windows Update Services within vCloud Director
+title: How to connect to the UKCloud Windows Server Update Services (WSUS)
+description: Shows how to connect to the UKCloud Windows Update Services within vCloud Director
 services: vmware
 author: Sue Highmoor
 reviewer:
@@ -40,10 +40,10 @@ In this section you'll need to use the appropriate address depending on the loca
 
     - `https://wsus.frn.ukcloud.com` (Assured OFFICIAL, Farnborough)
 
-    - For Elevated OFFICIAL, raise a Service Request via the My Calls section of the UKCloud Portal to get the appropriate IP address
+    - For Elevated OFFICIAL, raise a Service Request via the My Calls section of the Elevated UKCloud Portal to get the appropriate IP address
 
     > [!NOTE]
-    > Ensure that you can resolve this name via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the My Calls section of the UKCloud Portal.
+    > Ensure that you can resolve this name via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 3. Ensure that you have the full certificate chain installed. If not, you may have to install the certificates into your VM manually.
 
@@ -54,14 +54,14 @@ In this section you'll need to use the appropriate address depending on the loca
     - <https://www.digicert.com/CACerts/DigiCertSHA2SecureServerCA.crt>
 
     **For Windows Server 2008:**<br>
-    Select Place all certificates in the following store.</br>
-    In the Select Certificate Store select the option Show Physical Stores.</br>
-    Install the certificate into Trusted Root Certification authorities/local PC.</br>
-    </br>
-    **For Windows Server 2012 and 2016:**</br>
-    On the welcome screen of the Certificate import wizard, select Local Machine, then click Next.</br>
-    Select Place all certificates in the following store, and click Browse.</br>
-    Highlight Trusted Root Certification Authorities and click OK.</br>
+    Select Place all certificates in the following store.<br>
+    In the Select Certificate Store select the option Show Physical Stores.<br>
+    Install the certificate into Trusted Root Certification authorities/local PC.<br>
+    <br>
+    **For Windows Server 2012 and 2016:**<br>
+    On the welcome screen of the Certificate import wizard, select Local Machine, then click Next.<br>
+    Select Place all certificates in the following store, and click Browse.<br>
+    Select Trusted Root Certification Authorities and click OK.<br>
     Click Next and confirm the import settings, then click Finish.
 
 4. Restart your browser and open a connection to `https://wsus.cor.ukcloud.com`, `https://wsus.frn.ukcloud.com` or the appropriate Elevated IP address.
@@ -98,8 +98,6 @@ To quickly replicate the settings defined above to other Windows VMs in your env
 
 4. Restart the Windows update service on the additional VMs.
 
-UKCloud provides a PowerShell script in our public GitHub that changes these settings by changing the registry keys inside the VM. If you use this script, you do so at your own risk.
-
 Another option is to reference these settings in a Group Policy Object if you have Group Policy running in your environment.
 
 These settings will depend on your current setup. The following article provides some useful information:
@@ -107,8 +105,12 @@ These settings will depend on your current setup. The following article provides
 <https://technet.microsoft.com/en-us/library/cc720539(v=ws.10).aspx>
 
 > [!NOTE]
-> UKCloud are not responsible for content published on the URLs in the above guide. If you believe the link is broken or is no longer relevant, contact UKCloud Customer Support via the My Calls section of the UKCloud Portal.
+> UKCloud are not responsible for content published on the URLs in the above guide. If you believe the link is broken or is no longer relevant, contact UKCloud Customer Support via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+
+## Related videos
+
+- [*Connecting a VM to UKCloud's Windows Server Update Services (WSUS) video*](vmw-vid-wsus.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,10 +1,10 @@
 ---
-title: How to permit outbound access to internet hosts in deployments with government community network connectivity | UKCloud Ltd
+title: How to permit outbound access to internet hosts in deployments with government community network connectivity
 description: Outlines methods to securely permit access to internet hosts in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon
-reviewer:
-lastreviewed: 26/02/2019 10:09:46
+reviewer: gsmith
+lastreviewed: 20/11/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -143,4 +143,4 @@ https://wiki.squid-cache.org/SquidFaq/SquidAcl
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,10 +1,10 @@
 ---
-title: UKCloud for VMware | UKCloud Ltd
+title: UKCloud for VMware
 description: Home page for UKCloud for VMware
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 
+reviewer: Sue Highmoor
+lastreviewed: 21/11/2019
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -24,15 +24,15 @@ UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware t
 First, take a look at our [Getting Started Guide](vmw-gs.md) to learn the basics, then you can:
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/vmware/vmw-how-create-routed-network.html">Create a routed network</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/vmware/vmw-how-create-vm-from-template.html">Create a VM using a template</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/vmware/vmw-how-create-firewall-rules.html">Create firewall rules</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-routed-network.md">Create a routed network</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-vm-from-template.md">Create a VM using a template</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-firewall-rules.md">Create firewall rules</a></p></li></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/vmware/vmw-how-create-isolated-network.html">Create an isolated network</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/vmware/vmw-how-create-vm-from-scratch.html">Create a VM from scratch<a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/vmware/vmw-how-create-nat-rules.html">Create NAT rules<a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-isolated-network.md">Create an isolated network</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-vm-from-scratch.md">Create a VM from scratch<a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-nat-rules.md">Create NAT rules<a></p></li></ul></div>
 </div>
 
 ## Useful videos
@@ -40,51 +40,51 @@ First, take a look at our [Getting Started Guide](vmw-gs.md) to learn the basics
 <div class="row">
   <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/307686299?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-      </iframe>
+      <iframe src="https://www.youtube.com/embed/uLocAqDFBbw" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://vimeo.com/307686299">VMware Distributed Firewall</a></p>
+    <p><a href="https://www.youtube.com/watch?v=uLocAqDFBbw">VMware Distributed Firewall</a></p>
   </div>
   <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/323161271?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-      </iframe>
+      <iframe src="https://www.youtube.com/embed/Zdct0gy20-g" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://vimeo.com/323161271">Benefits of VMware L2 VPN</a></p>
+    <p><a href="https://www.youtube.com/watch?v=Zdct0gy20-g">Benefits of VMware L2 VPN</a></p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/308877124?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-      </iframe>
+      <iframe src="https://www.youtube.com/embed/bFB74pj_00E" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://vimeo.com/308877124">Licensing Windows VMs using the KMS</a></p>
+    <p><a href="https://www.youtube.com/watch?v=bFB74pj_00E">Licensing Windows VMs using the KMS</a></p>
   </div>
-  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://www.youtube.com/embed/bnpF3B6XmOQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://www.youtube.com/watch?v=bnpF3B6XmOQ">Building a virtual data centre</a></p>
+  </div>
 </div>
-
-<script src="https://player.vimeo.com/api/player.js"></script>
 
 ## Other resources
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/vmware/vmw-sd.html">Service Definition</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-sd.md">Service Definition</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</a></p></li></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/vmware/vmw-sco.html">Service Scope</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-sco.md">Service Scope</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</a></p></li></ul></div>
 </div>
 
 ## Still have questions?
 
 Find answers to common questions in our [UKCloud for VMware FAQ](vmw-faq.md).
 
-## Join the conversation
+## Get in touch
 
-Visit the <a href="https://community.ukcloud.com">UKCloud Community</a> to join the conversation about digital transformation in the UK Public Sector. If you have an idea for how we could improve any of our services, use the <a href="https://community.ukcloud.com/ideas">Ideas</a> section or watch out for regular feedback challenges from our Product Management team. You can also read blogs, watch webinars, sign up to upcoming events and find a Partner to help deliver your project.
+We want to know what you think. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

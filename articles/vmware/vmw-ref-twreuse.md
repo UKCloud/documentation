@@ -1,10 +1,10 @@
 ---
-title: TCP_TW_REUSE and TCP_TW_RECYCLE settings | UKCloud Ltd
+title: TCP_TW_REUSE and TCP_TW_RECYCLE settings
 description: Describes the role of TCP_TW_reuse and TCP_TW_recycle settings on edge gateways, and how these may affect TCP connections in some scenarios.
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: lthangarajah
+lastreviewed: 11/06/2019
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -28,10 +28,10 @@ Recent releases of the VMware edge gateway networking component have the `TCP_TW
 
 For a further explanation of the reuse and recycle settings, refer to the following link:
 
-<http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html>
+<https://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html>
 
 Due to the implementation of both of these settings by default, there are instances where TCP sockets are closed prematurely. This is particularly noticeable where a large amount of NAT rules or Load balancers are configured on the edge gateway, with moderate to high traffic throughput. Depending on how the client application layer is designed to handle such interruptions in network layer communications, this may manifest to end users as application hangs or crashes.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,8 +1,10 @@
 ---
-title: Private Cloud Service Definition | UKCloud Ltd
+title: Private Cloud Service Definition
 description: Provides an overview of what is provided by the Private Cloud service
 services: private-cloud
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/07/2019
 toc_rootlink: Service Definition
 toc_sub1: 
 toc_sub2:
@@ -27,7 +29,7 @@ We recognise the importance of government services in making the country run smo
 
 Private Cloud is a high assurance, cost-effective alternative to hosting and managing your own compute and storage infrastructure. This secure single-tenant compute and storage platform provides you with physical hardware separation and isolation from other customers. This enables you to meet heightened security requirements and provides increased flexibility over the infrastructure allowing you to specify host and storage requirements with options to include high performance GPU, advanced monitoring and DR.
 
-Offering a choice of technology stacks, including VMware, Microsoft Azure Stack, Oracle Virtual Machine, Oracle Cloud at Customer or Red Hat OpenStack implementations. You can deploy Private Cloud in either of our UK data centres to gain the benefits of our Assured and Elevated security domains, within the Crown Campus or within your own data centre.
+Offering a choice of technology stacks, including VMware, Microsoft Azure Stack Hub, Oracle Virtual Machine, Oracle Cloud at Customer or Red Hat OpenStack implementations. You can deploy Private Cloud in either of our UK data centres to gain the benefits of our Assured and Elevated security domains, within the Crown Campus or within your own data centre.
 
 For full information regarding this product, we have [Service Scopes](prc-sco.md), [FAQs](prc-faq.md) and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
 
@@ -37,7 +39,7 @@ For full information regarding this product, we have [Service Scopes](prc-sco.md
 
 - **Deployment of secure disconnected environments** – providing connectivity via private and secure network links, rather than over the public internet
 
-- **Utilise existing skills** – Private Cloud supports familiar technology stacks (VMware, Azure Stack, OpenStack, Oracle)
+- **Utilise existing skills** – Private Cloud supports familiar technology stacks (VMware, Azure Stack Hub, OpenStack, Oracle)
 
 - **Integration of existing software** – that require access to the underlying hypervisor, such as AV, Backup solutions
 
@@ -65,7 +67,7 @@ Choose which technology stack you wish to use
 
 - OpenStack
 
-- Microsoft Azure Stack
+- Microsoft Azure Stack Hub
 
 - Oracle
 
@@ -125,4 +127,4 @@ For full terms and conditions including onboarding and responsibilities, please 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

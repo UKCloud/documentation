@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to use VM location in vCloud Director | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to use VM location in vCloud Director </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to use VM location in vCloud Director | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="How to use VM location in vCloud Director ">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -95,28 +95,27 @@
 
 <h2 id="overview">Overview</h2>
 <p>The VM location function in vCloud Director enables you to identify where a specific virtual machine (VM) within your organisation is located within the UKCloud platform.</p>
-<p>This article describes the step-by-step instructions for obtaining this information which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL platforms.</p>
+<p>This article describes the step-by-step instructions for obtaining this information which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL security domains.</p>
 <p>With regards to the supplied location, this is standardised to the following options:</p>
 <ul>
 <li><p>Corsham (located in the Corsham data centre)</p>
 </li>
 <li><p>Farnborough (located in the Farnborough data centre)</p>
 </li>
-<li><p>ENHANCED-Corsham (replicated in both data centres. Active in Corsham and standby in Farnborough)</p>
+<li><p>ENHANCED-Corsham (replicated in both data centres; active in Corsham and standby in Farnborough)</p>
 </li>
-<li><p>ENHANCED-Farnborough (replicated in both data centres. Active in Farnborough and standby in Corsham)</p>
+<li><p>ENHANCED-Farnborough (replicated in both data centres; active in Farnborough and standby in Corsham)</p>
 </li>
 </ul>
-<p>This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you wish to change the location of a specific or group
-of VMs, raise a support request from the My Calls section of the UKCloud Portal.</p>
+<p>This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you want to change the location of a specific or group of VMs, raise a support request from the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <p>You can also use the <a href="#obtaining-the-location-of-a-specific-vm-using-the-vcloud-api">vCloud API</a>.</p>
 <h2 id="obtaining-the-location-of-a-vm">Obtaining the location of a VM</h2>
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the <strong>VDC</strong> your VM is in.</p>
+<p>For more detailed instructions on accessing vCloud Director, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>Virtual Machines</strong>.</p>
 <p><img src="images/vmw-vcd-tab-vms.png" alt="Virtual Machines menu option"></p>
-<p>For more detailed instructions on accessing vCloud Director, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>You can change the view from cards to list. If you need to search for the VM, click on the filter icon and enter the name of the VM.</p>
@@ -124,10 +123,11 @@ of VMs, raise a support request from the My Calls section of the UKCloud Portal.
 </div>
 </li>
 <li><p>In the card for the VM, click <strong>Details</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-vm-details.png" alt="VM Details menu option"></p>
 </li>
 <li><p>Expand the <em>Advanced</em> section of the VM details to see <em>Metadata</em> information at the bottom.</p>
-<p><img src="images/vmw-vcd-vm-metadata.png" alt="VM details -- Metadata"></p>
-<p>The location of the VM is displayed in the <strong>Value</strong> column.</p>
+<p><img src="images/vmw-vcd-vm-location-metadata.png" alt="VM details -- Metadata"></p>
+<p>The location of the VM is displayed in the <strong>Value</strong> column for the <strong>SkyscapeLocation</strong> metadata tag.</p>
 </li>
 </ol>
 <h2 id="obtaining-the-location-of-a-specific-vm-using-the-vcloud-api">Obtaining the location of a specific VM using the vCloud API</h2>
@@ -136,7 +136,7 @@ of VMs, raise a support request from the My Calls section of the UKCloud Portal.
 <p><a href="https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata">https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata</a></p>
 <p>Replace the &quot;xxxxxxxx&quot; with the relevant VM ID.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -164,7 +164,7 @@ of VMs, raise a support request from the My Calls section of the UKCloud Portal.
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
@@ -173,7 +173,7 @@ of VMs, raise a support request from the My Calls section of the UKCloud Portal.
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
             <p>
-              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
             </p>
           </div>
       
@@ -181,12 +181,19 @@ of VMs, raise a support request from the My Calls section of the UKCloud Portal.
             <button class="cookie-cta-close button button--small">Accept</button>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
     <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
@@ -196,5 +203,6 @@ of VMs, raise a support request from the My Calls section of the UKCloud Portal.
       gtag('js', new Date());
     
       gtag('config', 'UA-57433193-6');
-    </script>  </body>
+    </script>
+  </body>
 </html>

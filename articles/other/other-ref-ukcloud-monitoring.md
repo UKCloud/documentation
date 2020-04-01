@@ -1,5 +1,5 @@
 ---
-title: Monitoring the UKCloud platform | UKCloud Ltd
+title: Monitoring the UKCloud platform
 description: Explains what UKCloud monitors and how we manage alerts created by the monitoring system
 services: other
 author: Sue Highmoor
@@ -153,4 +153,4 @@ In the event of a service performance or availability outage, we'll provide upda
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

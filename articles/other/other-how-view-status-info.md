@@ -1,5 +1,5 @@
 ---
-title: How to view the UKCloud Service Status page | UKCloud Ltd
+title: How to view the UKCloud Service Status page
 description: Describes how to access the UKCloud Service Status page to view information on the status of the services on the platform
 services: other
 author: Sue Highmoor
@@ -118,4 +118,4 @@ You can subscribe to the Service Status page to receive updates when information
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: How to contribute to the UKCloud Knowledge Centre | UKCloud Ltd
+title: How to contribute to the UKCloud Knowledge Centre
 description: Describes how to submit changes to articles in the UKCloud Knowledge Centre and how to create new articles
 services: other
 author: Sue Highmoor
@@ -19,7 +19,7 @@ toc_mdlink: other-how-contribute-knowledge.md
 
 ## Overview
 
-Content for the UKCloud Knowledge Center is stored in a GitHub repository, which means that anyone with a GitHub account can submit changes to articles and even add new articles.
+Content for the UKCloud Knowledge Centre is stored in a GitHub repository, which means that anyone with a GitHub account can submit changes to articles and even add new articles.
 
 This article explains how to submit changes to UKCloud Knowledge Centre articles.
 
@@ -32,9 +32,9 @@ To submit changes or new articles you must have a GitHub account.
 
 ## Submitting minor changes to an existing article
 
-1. Go to the UKCloud Knowledge Center at:
+1. Go to the UKCloud Knowledge Centre at:
 
-    <http://docs.ukcloud.com>
+    <https://docs.ukcloud.com>
 
 2. Find the article that you want to edit.
 
@@ -77,7 +77,7 @@ For a template to get you started with a new article, see [*UKCloud Knowledge Ce
 
 ## Suggesting significant changes
 
-If you want to suggest significant changes to the Knowledge Centre, contact <products@ukcloud.com> to discuss your ideas.
+If you want to suggest significant changes to the Knowledge Centre, raise an issue within GitHub or contact <products@ukcloud.com> to discuss your ideas.
 
 ## Related videos
 
@@ -85,4 +85,4 @@ If you want to suggest significant changes to the Knowledge Centre, contact <pro
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
