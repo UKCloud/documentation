@@ -147,7 +147,7 @@ powershell -Command "$ScriptPath\$ScriptName $ScriptArguments"
 
     ![Microsoft Azure Backup icon](images/azs-msft-azure-backup-icon.png)
 
-2. In the new window, in the right menu under *Actions*, click **Recovery Data**.
+2. In the new window, in the right menu under *Actions*, click **Recover Data**.
 
     ![Microsoft Azure Recovery Services Agent recover data](images/azs-msft-azure-backup-recover-data.png)
 
