@@ -90,7 +90,7 @@ $Location = (Get-AzureRmLocation).Location
 # Input variables
 $ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
 $ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
-$TenantID = "<output form="tenantid" name="result" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
+$TenantID = "<output form="tenantid" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
 $VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
 $EncryptionKey = "<output form="encryptionkey" name="result" style="display: inline;">ExampleEncryptionKey</output>"
 $AzureLocation = "<output form="azurelocation" name="result" style="display: inline;">ukwest</output>"
@@ -117,7 +117,7 @@ $ScriptName = "AzureBackupConfig.ps1"
 
 $ClientID = "<output form="clientid" name="result2" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
 $ClientSecret = "<output form="clientsecret" name="result2" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
-$TenantID = "<output form="tenantid" name="result2" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
+$TenantID = "<output form="tenantid" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
 $VaultName = "<output form="vaultname" name="result2" style="display: inline;">AzureStackVault</output>"
 $EncryptionKey = "<output form="encryptionkey" name="result2" style="display: inline;">ExampleEncryptionKey</output>"
 $AzureLocation = "<output form="azurelocation" name="result2" style="display: inline;">ukwest</output>"
