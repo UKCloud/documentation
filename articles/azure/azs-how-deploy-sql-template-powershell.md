@@ -61,14 +61,13 @@ SQL Always On Repository - [sql-2016-alwayson](https://github.com/Azure/AzureSta
 > [!NOTE]
 > This will download just the sql-2016-alwayson folder from the repository instead of downloading all of it.
 >
-> Change **RepoDirectory** below to the desired folder.
+> Change **~/sql-2016-alwayson** below to the desired folder.
 
 - From an elevated (run as administrator) PowerShell prompt run:
 
   ```powershell
-  cd c:\
-  mkdir RepoDirectory
-  cd RepoDirectory
+  mkdir ~/sql-2016-alwayson
+  cd ~/sql-2016-alwayson
   git init
   git config core.sparseCheckout true
   git remote add origin -f "https://github.com/Azure/AzureStack-QuickStart-Templates"
@@ -226,8 +225,8 @@ Change the required variables as per your environment and run the following scri
 
 ```powershell
 # Declare login variables
-$AppGUID = "<ClientID of your SPN application>"
-$AppPassword = "<ClientSecret of your SPN application>"
+$ClientID = "<ClientID of your SPN application>"
+$ClientSecret = "<ClientSecret of your SPN application>"
 
 $TenantDomain = "<MyDirectoryTenantName>"
 $ArmEndpoint = "https://management.frn00006.azure.ukcloud.com"
@@ -235,13 +234,13 @@ $AzureStackEnvironment = "AzureStackUser"
 
 # Declare variables for the template
 $AdminPassword = "<YourPassword>"
-$AdminPasswordCred = ConvertTo-SecureString -String "$AdminPassword" -AsPlainText -Force
+$AdminPasswordCred = ConvertTo-SecureString -String $AdminPassword -AsPlainText -Force
 
 $SqlServerServiceAccountPassword = "<YourPassword>"
-$SqlServerServiceAccountPasswordCred = ConvertTo-SecureString -String "$SqlServerServiceAccountPassword" -AsPlainText -Force
+$SqlServerServiceAccountPasswordCred = ConvertTo-SecureString -String $SqlServerServiceAccountPassword -AsPlainText -Force
 
 $SqlAuthPassword = "<YourPassword>"
-$SqlAuthPasswordCred = ConvertTo-SecureString -String "$SqlAuthPassword" -AsPlainText -Force
+$SqlAuthPasswordCred = ConvertTo-SecureString -String $SqlAuthPassword -AsPlainText -Force
 
 $DomainName = "<ActiveDirectoryDomainName>"
 $AdminUsername = "<AdminUsername>"
@@ -260,10 +259,9 @@ $ArmDeploymentName = "Sql2016AlwaysOnDeployment"
 # Create Azure Stack Hub environment so that you can log in to it
 Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
-# Create your SPN credentials login
-# Note: (Username is "<ApplicationId>@<AAD Domain>")
-$AzsUsername = $AppGUID + "@" + $TenantDomain
-$AzsUserPassword = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
+# Create your SPN credentials for log in
+$AzsUsername = $ClientID
+$AzsUserPassword = ConvertTo-SecureString -String $ClientSecret -AsPlainText -Force
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Log in to Azure Stack Hub using SPN account
