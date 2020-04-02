@@ -42,19 +42,15 @@ If you need to install Azure Storage Explorer, please click [here](https://azure
 
     ![Storage Explorer installation guide 3](images/azs-installation-storage-tool-2.png)
 
-5. Select **Add an Azure Account** \> **Add New Environment**, then click **Next**.
+5. Select **Add an Azure Account** \> **Azure**, then click **Next**.
 
     ![Storage Explorer installation guide 4](images/azs-installation-storage-tool-3.png)
 
-6. Name the environment **Azure Stack Hub** and use `https://management.frn00006.azure.ukcloud.com` for the **ARM endpoint**. Click **Next** once both fields have been populated.
-
-    ![Storage Explorer installation guide 5](images/azs-installation-storage-tool-4.png)
-
-7. Sign in with your Azure Stack Hub credentials when prompted.
+6. Sign in with your Azure Stack Hub credentials when prompted.
 
     ![Storage Explorer installation guide 6](images/azs-installation-storage-tool-5.png)
 
-8. Click **Apply**.
+7. Click **Apply**.
 
     ![Storage Explorer installation guide 7](images/azs-installation-storage-tool-6.png)
 
