@@ -110,7 +110,13 @@ To access OpenStack:
 
 Removing a user's account in the Portal will also remove their access to OpenStack.
 
-1. Following the instructions above, navigate to the *Contacts* list, locate the user and click the **Remove** button.
+1. In the UKCloud Portal, if necessary, switch to the account that includes the OpenStack project.
+
+2. In the Portal navigation panel, expand **Contacts** option and select **All Contacts**.
+
+    ![All Contacts menu option in UKCloud Portal](images/ptl-menu-all-contacts.png)
+
+3. On the *Contacts* page, use the **Search** field to locate the user and click the **Remove** button.
 
     ![Remove button for Portal contact](images/ptl-contacts-btn-remove.png)
 
