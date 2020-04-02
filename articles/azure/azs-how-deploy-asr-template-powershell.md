@@ -4,7 +4,7 @@ description: Learn how to deploy an Azure Site Recovery template to Azure Stack 
 services: azure-stack
 author: Bailey Lawson
 reviewer: William Turner
-lastreviewed: 01/04/2020
+lastreviewed: 02/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
