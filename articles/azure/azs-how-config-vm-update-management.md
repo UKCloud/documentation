@@ -21,8 +21,9 @@ toc_mdlink: azs-how-config-vm-update-management.md
 ## Overview
 
 > [!TIP]
-> Azure Stack Hub has built-in Azure Monitor capabilities.
-> You can find out more about them in the following article [Use Azure Monitor on Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-metrics-azure-data).
+> Azure Stack Hub has built-in Azure Monitor capabilities. However, they are limited. Therefore, if you are looking for a more feature rich solution, you should use Public Azure Monitor.
+>
+> You can find out more about Azure Stack Hub's built-in Azure Monitor capabilities in the following article [Use Azure Monitor on Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-metrics-azure-data).
 
 Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive, and otherwise take action on the metrics and logs coming from resources in Azure.
 
