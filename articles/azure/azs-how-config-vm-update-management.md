@@ -21,7 +21,7 @@ toc_mdlink: azs-how-config-vm-update-management.md
 ## Overview
 
 > [!TIP]
-> Azure Stack Hub has built-in Azure Monitor capabilities. However, they are limited. Therefore, if you are looking for a more feature rich solution, you should use Public Azure Monitor.
+> Azure Stack Hub has built-in Azure Monitor capabilities. However, they are limited. Therefore, if you are looking for a more feature rich solution, you should use public Azure Monitor.
 >
 > You can find out more about Azure Stack Hub's built-in Azure Monitor capabilities in the following article [Use Azure Monitor on Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-metrics-azure-data).
 
