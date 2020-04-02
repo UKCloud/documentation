@@ -24,7 +24,7 @@ In this article, you will learn how to link Azure Stack Hub subscriptions to the
 
 If you need to install Azure Storage Explorer, please click [here](https://azure.microsoft.com/en-us/features/storage-explorer/) and install it.
 
-## Official documentation
+## Microsoft documentation
 
 - [Connect Storage Explorer to an Azure Stack Hub subscription with Azure AD](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-storage-connect-se?view=azs-2002#connect-to-an-azure-stack-hub-subscription-with-azure-ad)
 
