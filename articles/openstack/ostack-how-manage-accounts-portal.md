@@ -20,7 +20,7 @@ toc_mdlink: ostack-how-manage-accounts-portal.md
 
 ## Overview
 
-This guide shows how UKCloud Portal administrators can use the Portal to create user accounts for UKCloud for OpenStack and set access permissions.
+This article shows how UKCloud Portal administrators can use the Portal to create user accounts for UKCloud for OpenStack and set access permissions.
 
 ### Intended audience
 
@@ -53,7 +53,7 @@ To create a new OpenStack user:
 
     ![New Contact page](images/ptl-new-contact.png)
 
-6. After you've created the user account, you can grant access to OpenStack projects using the steps in [Assigning and revoking OpenStack permissions](#assigning-and-revoking-openstack-permissions). There may be a delay of a few minutes while the new user's information is sychronised around the system.
+6. After you've created the user account, you can grant access to OpenStack projects using the steps in [Assigning and revoking OpenStack permissions](#assigning-and-revoking-openstack-permissions). There may be a delay of a few minutes while the new user's information is synchronised around the system.
 
 ## Assigning and revoking OpenStack permissions
 
@@ -77,7 +77,7 @@ To assign or revoke OpenStack permissions:
 
 5. You'll see a list of the OpenStack projects within your organisation. There's a separate entry for each region a project is in.
 
-6. For the project/region to which you want to grant the user access, select the check box.
+6. Select the check box for the project and region to which you want to grant the user access.
     Deselect the check box to revoke access permissions.
 
     ![Check boxes for granting permissions to an OpenStack project in a certain region](images/ostack-portal-sso-permissions.png)
@@ -108,7 +108,7 @@ To access OpenStack:
 
 ## Removing an OpenStack account via the UKCloud Portal
 
-Removing a user's account in the portal will also remove their access to OpenStack.
+Removing a user's account in the Portal will also remove their access to OpenStack.
 
 1. Following the instructions above, navigate to the *Contacts* list, locate the user and click the **Remove** button.
 
