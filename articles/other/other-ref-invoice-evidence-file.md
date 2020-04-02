@@ -38,7 +38,7 @@ D      | vDC                               | Name of the virtual data centre | V
 E      | ResourceName                      | Client-friendly name of the resource | OpenStack, VMware
 F      | Resource Id                       | Identifier of the resource | OpenStack, VMware
 G      | OSID                              | Operating system | VMware
-H      | Service                           | The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 2<br>OpenStack Image<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM | OpenStack, VMware
+H      | Service                           | The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 1 Encrypted<br>OpenStack Block Storage Tier 2<br>OpenStack Block Storage Tier 2 Encrypted<br>OpenStack Image<br>OpenStack Instance Backup Storage<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM | OpenStack, VMware
 I      | Metadata                          | Customer VM metadata | VMware
 J      | StartTime                         | Charging period start time on the EventDate, in UTC | OpenStack, VMware
 K      | EndTime                           | Charging period end time on the EventDate, in UTC | OpenStack, VMware
@@ -74,7 +74,7 @@ AN     | Geo-resilientStorageIncluded      | Geo-resilient storage amount that i
 AO     | Geo-resilientStorageChargeable    | Geo-resilientSnapshotStorageUsed + Geo-resilientSnapshotStorageUsed - Geo-resilientStorageIncluded | VMware
 AP     | Geo-resilientPricePerHour         | Service catalogue price for geo-resilient storage and security domain converted into hourly charge per GiB | VMware
 AQ     | Geo-resilientStoragePrice         | Geo-resilientStorageChargeable * Geo-resilientStoragePricePerHour * UsageHoursWithinPeriod | VMware
-AR     | Protection Type                   | Type of protection applied:<br>None<br>14 Day Snapshot Protection<br>28 Day Snapshot Protection<br>Synchronous Protection<br>2 Day Journaling Protection<br>7 Day Journaling Protection<br>14 Day Journaling Protection<br>28 Day Journaling Protection<br>Any combination of the above (apart from None) separated by & | VMware
+AR     | Protection Type                   | Type of protection applied:<br>None<br>Backup Storage<br>14 Day Snapshot Protection<br>28 Day Snapshot Protection<br>Synchronous Protection<br>2 Day Journaling Protection<br>7 Day Journaling Protection<br>14 Day Journaling Protection<br>28 Day Journaling Protection<br>Any combination of the above (apart from None) separated by & | OpenStack, VMware
 AS     | ComputeProtectionPerHour          | Price per hour dependent on values in Protection Type (taking into account free 14 day snapshot with synchronous) | VMware
 AT     | ComputeProtectionTotalPrice       | ComputeProtectionPerHour * UsageHoursWithinPeriod | VMware
 AU     | Tier1ProtectionPricePerHour       | Monthly charge from service catalogue (per GB per month) converted into hourly charge per GiB (0 if no protection; blank if not relevant) | VMware
@@ -90,6 +90,18 @@ BD     | TotalPrice                        | ComputeTotalPrice + GPUTotalPrice +
 
 ## Key changes to the Evidence File (November 2017 onwards)
 
+### March 2020
+
+Support for new OpenStack services has been added to the evidence files.
+
+- Column H : has 3 new service types
+    - OpenStack Block Storage Tier 1 Encrypted
+    - OpenStack Block Storage Tier 2 Encrypted
+    - OpenStack Instance Backup Storage
+- Column AR : OpenStack Instance Backup Storage has a Protection Type of "Backup Storage".
+
+### December 2018
+
 From December 2018, you'll see the following changes to your evidence file. You'll receive the Evidence File for December at the start of January 2019, detailing your consumption during December.
 
 The key changes to the evidence file are as follows:
@@ -97,8 +109,6 @@ The key changes to the evidence file are as follows:
 **Service type categories**
 
 - In column H the OpenStack Instance service type has been renamed to OpenStack Virtual Machine
-
-## Previous changes
 
 ### November 2017
 
