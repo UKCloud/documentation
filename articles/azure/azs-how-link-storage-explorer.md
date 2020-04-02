@@ -3,8 +3,8 @@ title: How to link Azure Storage Explorer to Azure Stack Hub
 description: Provides help for linking Azure Storage Explorer to Azure Stack Hub
 services: azure-stack
 author: David Woffendin
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 02/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
