@@ -3,8 +3,8 @@ title: How to manage Azure user groups and permissions
 description: Describes how to apply the appropriate Azure Stack Hub permissions to your UKCloud for Microsoft Azure users
 services: azure-stack
 author: Sue Highmoor
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 02/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
