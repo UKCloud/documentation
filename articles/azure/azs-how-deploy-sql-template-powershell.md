@@ -155,7 +155,7 @@ The images used to create this deployment are:
 
 2. Create your Azure Stack Hub environment.
 
-3. Log in to your Azure Stack Hub *Subscription* with Service Principal Name (SPN).
+3. Log in to your Azure Stack Hub subscription with the SPN.
 
 4. Check if the resource group exists and create one if it does not.
 
