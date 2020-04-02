@@ -200,7 +200,7 @@ The images used to create this deployment are:
 
 ## Deploy ARM template code
 
-Change the required variables as per your environment and run the following script:
+### Declare variables
 
 > [!IMPORTANT]
 > Credential variables to change:
@@ -223,38 +223,59 @@ Change the required variables as per your environment and run the following scri
 > To change the SQL server SKU that is deployed, set **SqlServerSKU** accordingly: **`Enterprise`** or **`Standard`** or **`SQLDEV`**.
 > The current default is set to **`Enterprise`**.
 
-```powershell
-# Declare login variables
-$ClientID = "<ClientID of your SPN application>"
-$ClientSecret = "<ClientSecret of your SPN application>"
+Enter details below to provide values for the variables in the following scripts in this article:
 
-$TenantDomain = "<MyDirectoryTenantName>"
-$ArmEndpoint = "https://management.frn00006.azure.ukcloud.com"
+| Variable name   | Variable description                                               | Input            |
+|-----------------|--------------------------------------------------------------------|------------------|
+| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack Hub                 | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$ClientID    | The client ID of your Azure Stack Hub SPN                 | <form oninput="result.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
+| \$ClientSecret    | The client secret of your Azure Stack Hub SPN                 | <form oninput="result.value=clientsecret.value" id="clientsecret" style="display: inline;"><input type="text" id="clientsecret" name="clientsecret" style="display: inline;" placeholder="ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]="/></form> |
+| \$TenantID    | The Tenant/Directory ID of your AAD domain                 | <form oninput="result.value=tenantid.value" id="tenantid" style="display: inline;"><input type="text" id="tenantid" name="tenantid" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
+| \$AdminPassword    | The password for the administrator account of the new VMs and domain                | <form oninput="result.value=adminpassword.value" id="adminpassword" style="display: inline;"><input type="text" id="adminpassword" name="adminpassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$SqlServerServiceAccountPassword    | The SQL server service account password             | <form oninput="result.value=sqlserviceaccountpw.value" id="sqlserviceaccountpw" style="display: inline;"><input type="text" id="sqlserviceaccountpw" name="sqlserviceaccountpw" style="display: inline;" placeholder="Password123!"/></form> |
+| \$SqlAuthPassword    | The SQL server auth account password            | <form oninput="result.value=sqlauthpassword.value" id="sqlauthpassword" style="display: inline;"><input type="text" id="sqlauthpassword" name="sqlauthpassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$DomainName    | The AAD domain name to log in to            | <form oninput="result.value=domainname.value" id="domainname" style="display: inline;"><input type="text" id="domainname" name="domainname" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
+| \$AdminUsername    | The name of the administrator of the new VMs and domain            | <form oninput="result.value=adminusername.value" id="adminusername" style="display: inline;"><input type="text" id="adminusername" name="adminusername" style="display: inline;" placeholder="localadmin"/></form> |
+| \$SqlServerServiceAccountUserName    | The SQL server service account name            | <form oninput="result.value=sqlserversausername.value" id="sqlserversausername" style="display: inline;"><input type="text" id="sqlserversausername" name="sqlserversausername" style="display: inline;" placeholder="sqlservice"/></form> |
+| \$CustomTemplateJSON    | The full path to the directory containing the azuredeploy.json file             | <form oninput="result.value=customtemplatejson.value" id="customtemplatejson" style="display: inline;"><input type="text" id="customtemplatejson" name="customtemplatejson" style="display: inline;" placeholder="~\sql-2016-alwayson\sql-2016-alwayson\azuredeploy.json"/></form> |
+| \$DNSSuffix    | The DNS Suffix for reverse lookup of public IP addresses             | <form oninput="result.value=dnssuffix.value" id="dnssuffix" style="display: inline;"><input type="text" id="dnssuffix" name="dnssuffix" style="display: inline;" placeholder="azure.ukcloud.com"/></form> |
+| \$ResourceGroupName    | The name of the resource group to deploy the template within             | <form oninput="result.value=resourcegroupname.value" id="resourcegroupname" style="display: inline;"><input type="text" id="resourcegroupname" name="resourcegroupname" style="display: inline;" placeholder="Sql2016AlwaysOnRG01"/></form> |
+| \$SqlServerOffer    | The SQL server version             | <form oninput="result.value=sqlserveroffer.value" id="sqlserveroffer" style="display: inline;"><input type="text" id="sqlserveroffer" name="sqlserveroffer" style="display: inline;" placeholder="SQL2016SP2-WS2016"/></form> |
+| \$SqlServerSKU    | The name of the SQL server SKU             | <form oninput="result.value=sqlserversku.value" id="sqlserversku" style="display: inline;"><input type="text" id="sqlserversku" name="sqlserversku" style="display: inline;" placeholder="Enterprise"/></form> |
+| \$ArmDeploymentName    | The name of the template deploment in Azure Resource Manager (ARM)             | <form oninput="result.value=armdeploymentname.value" id="armdeploymentname" style="display: inline;"><input type="text" id="armdeploymentname" name="armdeploymentname" style="display: inline;" placeholder="Sql2016AlwaysOnDeployment"/></form> |
+
+
+<pre><code class="language-PowerShell"># Declare login variables
+$ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
+
+$TenantID = "<output form="tenantid" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 $AzureStackEnvironment = "AzureStackUser"
 
 # Declare variables for the template
-$AdminPassword = "<YourPassword>"
+$AdminPassword = "<output form="adminpassword" name="result" style="display: inline;">Password123!</output>"
 $AdminPasswordCred = ConvertTo-SecureString -String $AdminPassword -AsPlainText -Force
 
-$SqlServerServiceAccountPassword = "<YourPassword>"
+$SqlServerServiceAccountPassword = "<output form="sqlserviceaccountpw" name="result" style="display: inline;">Password123!</output>"
 $SqlServerServiceAccountPasswordCred = ConvertTo-SecureString -String $SqlServerServiceAccountPassword -AsPlainText -Force
 
-$SqlAuthPassword = "<YourPassword>"
+$SqlAuthPassword = "<output form="sqlauthpassword" name="result" style="display: inline;">Password123!</output>"
 $SqlAuthPasswordCred = ConvertTo-SecureString -String $SqlAuthPassword -AsPlainText -Force
 
-$DomainName = "<ActiveDirectoryDomainName>"
-$AdminUsername = "<AdminUsername>"
-$SqlServerServiceAccountUserName = "<ServiceAccountUsername>"
+$DomainName = "<output form="domainname" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
+$AdminUsername = "<output form="adminusername" name="result" style="display: inline;">localadmin</output>"
+$SqlServerServiceAccountUserName = "<output form="sqlserversausername" name="result" style="display: inline;">sqlservice</output>"
 
-$CustomTemplateJSON = "<Directory>\azuredeploy.json"
+$CustomTemplateJSON = "<output form="customtemplatejson" name="result" style="display: inline;">~\sql-2016-alwayson\sql-2016-alwayson\azuredeploy.json</output>"
 
-$DnsSuffix = "azure.ukcloud.com"
-$ResourceGroupName = "Sql2016AlwaysOnRG01"
+$DNSSuffix = "<output form="dnssuffix" name="result" style="display: inline;">azure.ukcloud.com</output>"
+$ResourceGroupName = "<output form="resourcegroupname" name="result" style="display: inline;">Sql2016AlwaysOnRG01</output>"
 $Location = (Get-AzureRmLocation).Location
 
-$SqlServerOffer = "SQL2016SP2-WS2016"
-$SqlServerSKU = "Enterprise"
-$ArmDeploymentName = "Sql2016AlwaysOnDeployment"
+$SqlServerOffer = "<output form="sqlserveroffer" name="result" style="display: inline;">SQL2016SP2-WS2016</output>"
+$SqlServerSKU = "<output form="sqlserversku" name="result" style="display: inline;">Enterprise</output>"
+$ArmDeploymentName = "<output form="armdeploymentname" name="result" style="display: inline;">Sql2016AlwaysOnDeployment</output>"
 
 # Create Azure Stack Hub environment so that you can log in to it
 Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
@@ -265,7 +286,7 @@ $AzsUserPassword = ConvertTo-SecureString -String $ClientSecret -AsPlainText -Fo
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Log in to Azure Stack Hub using SPN account
-Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantDomain
+Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantID
 
 # Create a new resource group if it does not exist
 try {
@@ -285,15 +306,15 @@ catch {
 }
 
 # Test deployment
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
+Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
 
 # Start deployment
-New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
+New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
 
 # Verify deployment
 ## Note: $ArmDeploymentName can be changed to query each deployment in your resource group
 Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
-```
+</code></pre>
 
 > [!TIP]
 > Every parameter in the [parameter list](#list-of-the-parameters-you-can-define) can be defined in the **`New-AzureRmResourceGroupDeployment`** by simply adding *`-<ParameterName>`*
