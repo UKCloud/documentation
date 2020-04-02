@@ -61,7 +61,7 @@ SQL Always On Repository - [sql-2016-alwayson](https://github.com/Azure/AzureSta
 > [!NOTE]
 > This will download just the sql-2016-alwayson folder from the repository instead of downloading all of it.
 >
-> Change **RepoDirectory** to the desired folder.
+> Change **RepoDirectory** below to the desired folder.
 
 - From an elevated (run as administrator) PowerShell prompt run:
 
