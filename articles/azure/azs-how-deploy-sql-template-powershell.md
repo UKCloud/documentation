@@ -42,7 +42,7 @@ Prerequisites from a Windows-based external client are:
 
 - Active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack Hub)
 
-## Official documentation
+## Microsoft documentation
 
 - [Azure Stack Hub ARM Templates Overview](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates)
 
