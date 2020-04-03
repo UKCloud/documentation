@@ -59,8 +59,10 @@ To create a group in the Azure portal:
 
 7. In the **Group description** field, enter a brief, but meaningful description for the group.
 
+8. There are two possible options for the **Membership type** field: **Assigned** or **Dynamic**.
+
     > [!NOTE]
-    > There are two possible options for the **Membership type** field: *Assigned* or *Dynamic*. However, the *Dynamic* option requires at least a Premium P1 license in Azure AD. The dropdown is automatically set to *Assigned* and will be greyed out if you do not meet this requirement.
+    > The **Dynamic** option requires at least a Premium P1 license in Azure AD. If you do not meet this requirement, the dropdown is automatically set to **Assigned** and you will not be able to select the **Dynamic** option.
 
     ![Group blade](images/azs-portal-add-group.png)
 
