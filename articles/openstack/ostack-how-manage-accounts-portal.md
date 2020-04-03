@@ -24,36 +24,17 @@ This article shows how UKCloud Portal administrators can use the Portal to creat
 
 ### Intended audience
 
-To create user accounts and set permissions, you must be a UKCloud Portal administrator for the account that includes the OpenStack project.
+To set OpenStack account permissions, you must be a UKCloud Portal administrator for the account that includes the OpenStack project.
 
-## Creating a new OpenStack user
+## Prerequisites
 
-To give a user access to an OpenStack project, you first need to create them a user account in the UKCloud Portal.
+To give a user access to an OpenStack project, they must have a user account in the UKCloud Portal. For detailed steps for how to create a new Portal user, see [*How to create a new user in the UKCloud Portal*](../portal/ptl-how-create-users.md).
 
-To create a new OpenStack user:
+> [!TIP]
+> When creating a Portal account for an OpenStack user, you may first need to switch to the account that contains the OpenStack project.
 
-1. Log in to the UKCloud Portal.
-
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
-
-    > [!NOTE]
-    > You must log in as a Portal administrator for the account that includes the OpenStack project.
-
-2. If necessary, switch to the account that includes the OpenStack project.
-
-3. In the Portal navigation panel, expand the **Contacts** option and select **All Contacts**.
-
-    ![All Contacts menu option in UKCloud Portal](images/ptl-menu-all-contacts.png)
-
-4. Select the **Actions** menu and then select **Add new contact** from the dropdown list.
-
-    ![Add New contact action](images/ptl-mnu-add-new-contact.png)
-
-5. On the *New contact* page, provide information about the user's name and contact information, then click **Save**.
-
-    ![New Contact page](images/ptl-new-contact.png)
-
-6. After you've created the user account, you can grant access to OpenStack projects using the steps in [Assigning and revoking OpenStack permissions](#assigning-and-revoking-openstack-permissions). There may be a delay of a few minutes while the new user's information is synchronised around the system.
+> [!NOTE]
+> After creating a new Portal user account, there may be a delay of a few minutes while the new user's information is synchronised around the system.
 
 ## Assigning and revoking OpenStack permissions
 
@@ -61,28 +42,35 @@ To enable a user to work with an OpenStack project you must assign them permissi
 
 To assign or revoke OpenStack permissions:
 
-1. In the UKCloud Portal, if necessary, switch to the account that includes the OpenStack project.
+1. Log in to the UKCloud Portal
 
-2. In the Portal navigation panel, expand **Contacts** option and select **All Contacts**.
+    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal**](../portal/ptl-gs.md).
+
+    > [!NOTE]
+    > You must log in as a Portal administrator for the account that includes the OpenStack project.
+
+2. If necessary, switch to the account that includes the OpenStack project.
+
+3. In the Portal navigation panel, expand **Contacts** option and select **All Contacts**.
 
     ![All Contacts menu option in UKCloud Portal](images/ptl-menu-all-contacts.png)
 
-3. On the *Contacts* page, use the **Search** field to find the user to whom you want to assign or revoke OpenStack permissions and then click the **Edit** button.
+4. On the *Contacts* page, use the **Search** field to find the user to whom you want to assign or revoke OpenStack permissions and then click the **Edit** button.
 
     ![Edit button for Portal contact](images/ptl-contacts-btn-edit.png)
 
-4. On the *Edit contact* page, select the **OpenStack Permissions** tab.
+5. On the *Edit contact* page, select the **OpenStack Permissions** tab.
 
     ![Permissions tab for Portal contact](images/ptl-contacts-tab-openstack-permissions.png)
 
-5. You'll see a list of the OpenStack projects within your organisation. There's a separate entry for each region a project is in.
+6. You'll see a list of the OpenStack projects within your organisation. There's a separate entry for each region a project is in.
 
-6. Select the check box for the project and region to which you want to grant the user access.
+7. Select the check box for the project and region to which you want to grant the user access.
     Deselect the check box to revoke access permissions.
 
     ![Check boxes for granting permissions to an OpenStack project in a certain region](images/ostack-portal-sso-permissions.png)
 
-7. When you're done, click the **Save** button.
+8. When you're done, click the **Save** button.
 
 ## Accessing OpenStack from the UKCloud Portal
 
