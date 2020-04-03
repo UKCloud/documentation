@@ -1,5 +1,5 @@
 ---
-title: How to backup and restore files and folders on Azure Stack Hub VMs using PowerShell | UKCloud Ltd
+title: How to backup and restore files and folders on Azure Stack Hub VMs using PowerShell
 description: Provides details on how to install and configure the Microsoft Azure Recovery Services (MARS) agent to backup and restore files and folders on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
@@ -20,11 +20,11 @@ toc_mdlink: azs-how-configure-mars-backups-restore-powershell.md
 
 ## Overview
 
+Recovery Services vaults store all backups and recovery points you create over time, and contain the backup policy applied to backed up machines.
+
 This article explains how to set up the Microsoft Azure Recovery Services (MARS) agent to backup and restore files and folders from Azure Stack Hub VMs to Recovery Services vaults.
 
-Recovery Services vaults store all backups and recovery points you create over time, and contains the backup policy applied to backed up machines.
-
-## Official documentation
+## Microsoft documentation
 
 [MARS agent support matrix](https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix-mars-agent)
 
@@ -43,7 +43,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## Setup the MARS agent using PowerShell
 
-The script used in this article can be found [here](https://github.com/UKCloud/AzureStack/blob/master/Users/Extensions/Windows/AzureBackupConfig.ps1). It provides docstrings on additional parameters which are not used in this article.
+You can find the script used in this article [here](https://github.com/UKCloud/AzureStack/blob/master/Users/Extensions/Windows/AzureBackupConfig.ps1). It provides docstrings on additional parameters that are not used in this article.
 
 ### Declare variables
 
@@ -147,19 +147,19 @@ powershell -Command "$ScriptPath\$ScriptName $ScriptArguments"
 
     ![Microsoft Azure Backup icon](images/azs-msft-azure-backup-icon.png)
 
-2. In the new window, in the right menu under *Actions*, click **Recover Data**.
+2. In Microsoft Azure Backup, in the right menu under *Actions*, click **Recover Data**.
 
     ![Microsoft Azure Recovery Services Agent recover data](images/azs-msft-azure-backup-recover-data.png)
 
-3. In the new *Recover Data Wizard* window, select **This server** and click **Next >**.
+3. On the *Getting Started* page of the *Recover Data Wizard*, select **This server** and click **Next**.
 
     ![Microsoft Azure Recovery Services Agent recover data wizard getting started](images/azs-msft-azure-backup-recover-data-wizard-getting-started.png)
 
-4. In the *Recover Data Wizard* window, select **Individual files and folders** and click **Next >**.
+4. On the *Select Recovery Mode* page, select **Individual files and folders** and click **Next**.
 
     ![Microsoft Azure Recovery Services Agent recover data wizard select recovery mode](images/azs-msft-azure-backup-recover-data-wizard-select-recovery-mode.png)
 
-5. In the *Recover Data Wizard* window, select the:
+5. On the *Select Volume and Date* page, select the:
 
     - **Volume** to restore files and folders from using the dropdown menu
 
@@ -171,28 +171,28 @@ powershell -Command "$ScriptPath\$ScriptName $ScriptArguments"
 
 6. Click **Mount**.
 
-    - The Microsoft Azure Recovery Services Agent will begin mounting the volume from the specific backup date and time.
+    The Microsoft Azure Recovery Services Agent will begin mounting the volume from the specific backup date and time.
 
-7. Click **Browse** to view the contents of the mounted backup volume.
+7. On the *Browse and Recover Files* page, click **Browse** to view the contents of the mounted backup volume.
 
     ![Microsoft Azure Recovery Services Agent recover data wizard browse](images/azs-msft-azure-backup-recover-data-wizard-browse.png)
 
-    - A file explorer window will open showing your backed up files and folders.
+    A file explorer window will open showing your backed up files and folders.
 
-        ![Microsoft Azure Recovery Services Agent mounted backup volume](images/azs-msft-azure-backup-recover-mounted-backup-volume.png)
+    ![Microsoft Azure Recovery Services Agent mounted backup volume](images/azs-msft-azure-backup-recover-mounted-backup-volume.png)
 
-        ![Microsoft Azure Recovery Services Agent mounted backup volume files](images/azs-msft-azure-backup-recover-mounted-backup-volume-files.png)
+    ![Microsoft Azure Recovery Services Agent mounted backup volume files](images/azs-msft-azure-backup-recover-mounted-backup-volume-files.png)
 
-        > [!TIP]
-        > You can drag and drop files and folders to restore them to a desired location on the VM.
-        >
-        > ![Microsoft Azure Recovery Services Agent mounted backup volume drag and drop](images/azs-msft-azure-backup-recover-mounted-backup-volume-drag-drop.png)
+    > [!TIP]
+    > You can drag and drop files and folders to restore them to a desired location on the VM.
+    >
+    > ![Microsoft Azure Recovery Services Agent mounted backup volume drag and drop](images/azs-msft-azure-backup-recover-mounted-backup-volume-drag-drop.png)
 
-8. When finished, in the *Recover Data Wizard* window, click **Unmount** to detach the backup volume from the VM.
+8. When you're done, in the *Recover Data Wizard*, click **Unmount** to detach the backup volume from the VM.
 
     ![Microsoft Azure Recovery Services Agent recover data wizard unmount](images/azs-msft-azure-backup-recover-data-wizard-unmount.png)
 
-9. In the *Confirm Recovery Volume Unmount* window, click **Yes**.
+9. In the *Confirm Recovery Volume Unmount* dialog box, click **Yes**.
 
     ![Microsoft Azure Recovery Services Agent recover confirm recovery volume unmount](images/azs-msft-azure-backup-recover-confirm-recovery-volume-unmount.png)
 
