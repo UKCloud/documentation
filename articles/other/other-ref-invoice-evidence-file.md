@@ -74,7 +74,7 @@ AN     | Geo-resilientStorageIncluded      | Geo-resilient storage amount that i
 AO     | Geo-resilientStorageChargeable    | Geo-resilientSnapshotStorageUsed + Geo-resilientSnapshotStorageUsed - Geo-resilientStorageIncluded | VMware
 AP     | Geo-resilientPricePerHour         | Service catalogue price for geo-resilient storage and security domain converted into hourly charge per GiB | VMware
 AQ     | Geo-resilientStoragePrice         | Geo-resilientStorageChargeable * Geo-resilientStoragePricePerHour * UsageHoursWithinPeriod | VMware
-AR     | Protection Type                   | Type of protection applied:<br>None<br>14 Day Snapshot Protection<br>28 Day Snapshot Protection<br>Synchronous Protection<br>2 Day Journaling Protection<br>7 Day Journaling Protection<br>14 Day Journaling Protection<br>28 Day Journaling Protection<br>Any combination of the above (apart from None) separated by & | VMware
+AR     | Protection Type                   | Type of protection applied:<br>None<br>14 Day Snapshot Protection<br>28 Day Snapshot Protection<br>Synchronous Protection<br>2 Day Journaling Protection<br>7 Day Journaling Protection<br>14 Day Journaling Protection<br>30 Day Journaling Protection<br>Any combination of the above (apart from None) separated by & | VMware
 AS     | ComputeProtectionPerHour          | Price per hour dependent on values in Protection Type (taking into account free 14 day snapshot with synchronous) | VMware
 AT     | ComputeProtectionTotalPrice       | ComputeProtectionPerHour * UsageHoursWithinPeriod | VMware
 AU     | Tier1ProtectionPricePerHour       | Monthly charge from service catalogue (per GB per month) converted into hourly charge per GiB (0 if no protection; blank if not relevant) | VMware

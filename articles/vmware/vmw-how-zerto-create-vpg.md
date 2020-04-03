@@ -3,8 +3,8 @@ title: How to create a virtual protection group
 description: This guide describes how to create a virtual protection group (VPG) for Disaster Recovery as a Service, Journaling Protection or Migration to the Cloud
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: shighmoor
+lastreviewed: 30/03/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -41,43 +41,53 @@ For Disaster Recovery as a Service or Migration to the Cloud, you must have acce
 
 If you're creating a VPG for Journaling Protection, you specify the vApp to protect and all the VMs in that vApp are included in the VPG.
 
-1. Log in to the ZSSP.
+1. Log in to the ZSSP using the ZSSP login link for the zone in which the VMs that you want to protect are located.
 
     For more detailed instructions, see [*How to access the Zerto Self-Service Portal*](vmw-how-zerto-access-zssp.md).
 
-    Use the ZSSP login link for the zone in which the VMs that you want to protect are located.
-
 2. Select the *VPGs* tab and then click **NEW VPG**.
 
-    ![VPGs](images/vpg-image-1.png)
+    ![NEW VPG option](images/vmw-zerto-btn-new-vpg.png)
 
 3. In the *Create VPG* dialog, specify the **VPG Name**.
 
     The name must be unique and contain no more than 80 characters.
 
-4. From the **Available VMs** list, select the vApp that contains the VMs that you want to protect.
+4. Select the vApp that contains the VMs that you want to protect.
 
-5. From the **Recovery Site** list, choose your target site.
+5. From the **Recovery Site** list, select your target site.
 
-6. From the **Org vDC** list, choose the VDC in which you want to replicate the VMs.
+6. From the **Org vDC** list, select the VDC in which you want to replicate the VMs.
 
-7. UKCloud provides a single **Service Profile**: **System Service Profile**.
+7. From the **Service Profile** list, select one of the Journaling Protection service profiles, depending on your requirements:
 
-    ![profile](images/vpg-image-2.png)
+    - Journaling Protection 2 Day Retention
 
-8. Click **SAVE**.
+    - Journaling Protection 7 Day Retention
+
+    - System Service Profile (for 14-day Journaling Protection)
+
+    - Journaling Protection 30 Day Retention
+
+    ![Create VPG dialog box](images/vmw-zerto-create-vpg.png)
+
+8. Click **Save**.
 
     At this point, the selected VMs are synchronised to the target site. This synchronisation between the source site and target site may take some time, depending on the size of the VMs.
 
     After the initial synchronisation, all the VMs in the VPG are fully protected and all write operations to those VMs are sent to the journal.
 
-9. After the initial creation of your VPG, you need to edit it to determine what happens during disaster recovery.
+9. After the initial creation of your VPG, you need to edit it to determine what happens during recovery.
 
-10. On the *VPGs* tab, click the pencil icon next to your **VPG Name**.
+10. On the *VPGs* tab, select your VPG then click the three dots.
 
-    ![VPG name](images/vpg-image-3.png)
+    ![VPG options](images/vmw-zerto-btn-vpg-options.png)
 
-11. From the **Priority** list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.
+11. Select **Edit VPG**
+
+    ![Edit VPG menu option](images/vmw-zerto-mnu-edit-vpg.png)
+
+12. On the *General* page of the *Edit VPG* dialog box, from the **Priority** list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.
 
     - **High** - Updates from VPGs with high priority are passed over the WAN first
 
@@ -85,65 +95,63 @@ If you're creating a VPG for Journaling Protection, you specify the vApp to prot
 
     - **Low** - Updates from VPGs with low priority use whatever bandwidth is left after the medium VPGs have used it
 
-    ![priority list](images/vpg-image-4.png)
+    ![Edit VPG - General page](images/vmw-zerto-edit-vpg-general.png)
 
-12. Click **NEXT**.
+13. Click **Next**.
 
-13. In the *VMs* page, you can see the VMs that are included in the VPG.
+14. On the *VMs* page, you can see the VMs that are included in the VPG.
 
-    ![VMs page](images/vpg-image-5.png)
+    ![Edit VPG - VMs page](images/vmw-zerto-edit-vpg-vms.png)
 
-14. Click **NEXT**.
+15. Click **Next**.
 
-15. In the *REPLICATION* page, you can see the options you selected for the **Recovery Site** and **Recovery Org vDC**.
+16. On the *Replication* page, you can see the options you selected for the **Recovery Site** and **Recovery Org vDC**.
 
-    ![recovery](images/vpg-image-6.png)
+    ![Edit VPG - Replication page](images/vmw-zerto-edit-vpg-replication.png)
 
-16. To change the **Storage Profile** used for the VMs in the VPG, click **VM SETTINGS**.
+17. To change the **Storage Profile** used for the VMs in the VPG, click **VM Settings**.
 
-    You cannot change the **Journal Size** or **Journal Warning Threshold**.
+    You cannot change the **Journal Hard Limit** or **Journal Warning Threshold**.
 
-    Click **OK** when you're done.
+    ![Advanced VM Replication Settings](images/vmw-zerto-edit-vpg-vm-settings.png)
 
-    ![journal size](images/vpg-image-7.png)
+18. When you're done, click **OK** then click **Next**.
 
-17. Click **NEXT**.
+19. The *Storage* page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).
 
-18. The *STORAGE* page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).
-
-    ![storage](images/vpg-image-8.png)
+    ![Edit VPG - Storage page](images/vmw-zerto-edit-vpg-storage.png)
 
     If you want to edit the storage settings for a VM, select the VM and then click **EDIT SELECTED**.
 
     > [!NOTE]
     > Make sure that the **Thin** checkbox is selected for all VMs.
 
-19. When you've finished setting the options for each of the VMs, click **NEXT**.
+20. When you've finished setting the options for each of the VMs, click **Next**.
 
-20. In the *RECOVERY* page, from the **Failover/Move Network** list, choose the network to use in the target site for a live failover.
+21. On the *Recovery* page, from the **Failover/Move Network** list, choose the network to use in the target site for a live failover.
 
-21. From the **Failover Test Network** list, choose the network to use in the target site for a test failover of VMs.
+22. From the **Failover Test Network** list, choose the network to use in the target site for a test failover of VMs.
 
     If you select **Isolated**, the network interface controller (NIC) will not be connected to the VM when it's brought up in the target site.
 
-22. **vCD Guest Customization** controls whether the failed‑over VM is subject to guest customization to set its IP address inside its operating system.
+23. **vCD Guest Customization** controls whether the failed‑over VM is subject to guest customization to set its IP address inside its operating system.
 
-    ![customization](images/vpg-image-9.png)
+    ![Edit VPG - Recovery page](images/vmw-zerto-edit-vpg-recovery.png)
 
-23. Click **NEXT**.
+24. Click **Next**.
 
-24. In the *NICs* page, specify the network interface controller (NIC) to use for the VMs after a live or test failover.
+25. On the *NICs* page, specify the network interface controller (NIC) to use for the VMs after a live or test failover.
 
     > [!NOTE]
-    > If you specify different IP addresses (or use **IP Pool**) for the IP addresses here, you must enable **vCD Guest Customization** on the *RECOVERY* page.
+    > If you specify different IP addresses (or use **IP Pool**) for the IP addresses here, you must enable **vCD Guest Customization** on the *Recovery* page.
 
-    ![Ip pool](images/vpg-image-10.png)
+    ![Edit VPG - NICs page](images/vmw-zerto-edit-vpg-nics.png)
 
-25. Click **NEXT**.
+26. Click **Next**.
 
-26. The System Service Profile does not permit Backup Services, so click **NEXT** again.
+27. The UKCloud service profiles do not permit Long Term Retention Services, so click **Next** again.
 
-27. In the *SUMMARY* page, review the options you have selected for the VPG and click **DONE** to create the VPG.
+28. On the *Summary* page, review the options you've selected for the VPG and click **Done** to create the VPG.
 
 ## Creating a virtual protection group in Zerto Virtual Manager (Disaster Recovery as a Service and Migration to the Cloud)
 

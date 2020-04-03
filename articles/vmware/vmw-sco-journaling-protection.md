@@ -39,11 +39,11 @@ Every few seconds a checkpoint is written to every journal for each VM in the VP
 
 UKCloud's Journaling Protection service is designed to provide customers with recovery points that are as little as seconds behind the running VM.
 
-UKCloud's standard journaling profile provides:
+UKCloud's standard journaling profiles provide:
 
 - Target RPO of 5 Minutes
 
-- Journal history of 2, 7, 14 or 28 days
+- Journal history of 2, 7, 14 or 30 days
 
 At present, UKCloud have not enabled the ability for customers to configure custom profiles.
 
