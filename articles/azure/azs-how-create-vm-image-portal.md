@@ -4,7 +4,7 @@ description: Provides details on how to create a custom image from a VM using th
 services: azure-stack
 author: Daniel Brennand
 reviewer:
-lastreviewed:
+lastreviewed: 03/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -42,21 +42,21 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     For more detailed instructions, see [Getting Started Guide for UKCloud for Microsoft Azure](azs-gs.md).
 
-2. Click **Virtual Machines** on the left menu.
+2. In the *favorites* panel, select **Virtual machines**.
 
-3. Click the VM that you want to capture.
+3. In the *Virtual machines* blade, select the VM that you want to capture.
 
-4. At the top, click **Capture**.
+4. In the top menu, click **Capture**.
 
     ![Capture VM image](images/azs-browser-capture-vm.png)
 
-5. In the new blade, provide a **Name** for the new image.
+5. In the *Create image* blade, provide a **Name** for the new image.
 
-6. Select a **Resource group** from the dropdown menu or create a new one.
+6. From the **Resource group** list, select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
 7. Select **Automatically delete this virtual machine after creating the image**.
 
-8. Enter the VM name in the field **Type the virtual machine name**.
+8. In the **Type the virtual machine name** field, enter the VM name.
 
 9. Click **Create**.
 
@@ -72,9 +72,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 13. In the *new* page, click **Create VM**.
 
-14. Enter a **Name**, **Username**, **Authentication type**, **Password** and **Resource group** for the new VM. Click **OK**.
+14. Enter a **Name**, **Username**, **Authentication type**, **Password** and **Resource group** for the new VM, then click **OK**.
 
-15. Select a VM size. Click **Select**.
+15. Select a VM size then click **Select**.
 
 16. In *Configure optional features*, under *Select public inbound ports*, select the ports you want to open.
 
@@ -90,7 +90,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 1. Log in to your Windows VM using remote desktop protocol (RDP).
 
-2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`
+2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
 
 3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
 
@@ -113,7 +113,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Run the following command: `sudo su` and enter your user password.
 
-3. Run the following command: `shutdown && waagent -deprovision+user -force`
+3. Run the following command: `shutdown && waagent -deprovision+user -force`.
 
 4. Wait for the VM to shutdown. Your SSH session will be closed.
 
