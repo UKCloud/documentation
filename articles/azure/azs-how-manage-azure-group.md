@@ -4,7 +4,7 @@ description: Describes how to apply the appropriate Azure Stack Hub permissions 
 services: azure-stack
 author: Sue Highmoor
 reviewer: William Turner
-lastreviewed: 02/04/2020
+lastreviewed: 03/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -59,7 +59,8 @@ To create a group in the Azure portal:
 
 7. In the **Group description** field, enter a brief, but meaningful description for the group.
 
-8. From the **Membership type** list, select **Assigned**.
+    > [!NOTE]
+    > There are two possible options for the **Membership type** field: *Assigned* or *Dynamic*. However, the *Dynamic* option requires at least a Premium P1 license in Azure AD. The dropdown is automatically set to *Assigned* and will be greyed out if you do not meet this requirement.
 
     ![Group blade](images/azs-portal-add-group.png)
 
