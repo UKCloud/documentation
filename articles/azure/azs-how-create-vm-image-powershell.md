@@ -4,7 +4,7 @@ description: Provides details on how to create a custom image from a VM using Po
 services: azure-stack
 author: Daniel Brennand
 reviewer:
-lastreviewed:
+lastreviewed: 03/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -138,7 +138,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 1. Log in to your Windows VM using remote desktop protocol (RDP).
 
-2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`
+2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
 
 3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
 
@@ -161,7 +161,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 2. Run the following command: `sudo su` and enter your user password.
 
-3. Run the following command: `shutdown && waagent -deprovision+user -force`
+3. Run the following command: `shutdown && waagent -deprovision+user -force`.
 
 4. Wait for the VM to shutdown. Your SSH session will be closed.
 
