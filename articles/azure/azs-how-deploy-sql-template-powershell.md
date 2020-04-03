@@ -234,7 +234,7 @@ Enter details below to provide values for the variables in the following scripts
 | \$AdminPassword    | The password for the administrator account of the new VMs and domain                | <form oninput="result.value=adminpassword.value" id="adminpassword" style="display: inline;"><input type="text" id="adminpassword" name="adminpassword" style="display: inline;" placeholder="Password123!"/></form> |
 | \$SqlServerServiceAccountPassword    | The SQL server service account password             | <form oninput="result.value=sqlserviceaccountpw.value" id="sqlserviceaccountpw" style="display: inline;"><input type="text" id="sqlserviceaccountpw" name="sqlserviceaccountpw" style="display: inline;" placeholder="Password123!"/></form> |
 | \$SqlAuthPassword    | The SQL server auth account password            | <form oninput="result.value=sqlauthpassword.value" id="sqlauthpassword" style="display: inline;"><input type="text" id="sqlauthpassword" name="sqlauthpassword" style="display: inline;" placeholder="Password123!"/></form> |
-| \$DomainName    | The AAD domain name to log in to            | <form oninput="result.value=domainname.value" id="domainname" style="display: inline;"><input type="text" id="domainname" name="domainname" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
+| \$DomainName    | The AAD domain name to log in to            | <form oninput="result.value=domainname.value" id="domainname" style="display: inline;"><input type="text" id="domainname" name="domainname" style="display: inline;" placeholder="fabrikam.local"/></form> |
 | \$AdminUsername    | The name of the administrator of the new VMs and domain            | <form oninput="result.value=adminusername.value" id="adminusername" style="display: inline;"><input type="text" id="adminusername" name="adminusername" style="display: inline;" placeholder="localadmin"/></form> |
 | \$SqlServerServiceAccountUserName    | The SQL server service account name            | <form oninput="result.value=sqlserversausername.value" id="sqlserversausername" style="display: inline;"><input type="text" id="sqlserversausername" name="sqlserversausername" style="display: inline;" placeholder="sqlservice"/></form> |
 | \$CustomTemplateJSON    | The full path to the directory containing the azuredeploy.json file             | <form oninput="result.value=customtemplatejson.value" id="customtemplatejson" style="display: inline;"><input type="text" id="customtemplatejson" name="customtemplatejson" style="display: inline;" placeholder="~\sql-2016-alwayson\sql-2016-alwayson\azuredeploy.json"/></form> |
@@ -263,7 +263,7 @@ $SqlServerServiceAccountPasswordCred = ConvertTo-SecureString -String $SqlServer
 $SqlAuthPassword = "<output form="sqlauthpassword" name="result" style="display: inline;">Password123!</output>"
 $SqlAuthPasswordCred = ConvertTo-SecureString -String $SqlAuthPassword -AsPlainText -Force
 
-$DomainName = "<output form="domainname" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
+$DomainName = "<output form="domainname" name="result" style="display: inline;">fabrikam.local</output>"
 $AdminUsername = "<output form="adminusername" name="result" style="display: inline;">localadmin</output>"
 $SqlServerServiceAccountUserName = "<output form="sqlserversausername" name="result" style="display: inline;">sqlservice</output>"
 
