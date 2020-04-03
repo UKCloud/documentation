@@ -3,8 +3,8 @@ title: How to perform an Azure Stack Hub Update
 description: Azure Stack Hub update procedure guide for support
 services: azure-stack
 author: Chris Black
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 03/04/2020
 
 toc_rootlink: Operators
 toc_sub1: How To
