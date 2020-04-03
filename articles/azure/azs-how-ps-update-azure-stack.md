@@ -25,9 +25,7 @@ Loosely based on [Azure Stack Hub Apply Updates](https://docs.microsoft.com/en-u
 
 Prerequisites from a Windows-based external client.
 
-* PowerShell 5.1
-
-* Azure Stack Hub PowerShell Modules -> [Configure PowerShell Environment](azs-how-configure-powershell-operators.md)
+* Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack Hub operator's PowerShell environment.](azs-how-configure-powershell-operators.md)
 
 > [!IMPORTANT]
 > Always consult Microsoft documentation for your specific Update Version
