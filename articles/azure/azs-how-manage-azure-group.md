@@ -79,13 +79,13 @@ To grant Azure permissions to a group:
 2. Navigate to **Subscriptions**.
 
     > [!TIP]
-    > If you can't see Subscriptions in your favourites panel, click **All services** and then **Subscriptions**. You can add Subscriptions to your favourites panel by clicking the star icon.
+    > If you can't see **Subscriptions** in your favourites panel, click **All services** and then **Subscriptions**. You can add **Subscriptions** to your favourites panel by clicking the star icon.
 
 3. Select your subscription for UKCloud for Microsoft Azure.
 
 4. Select **Access control (IAM)**.
 
-5. Click the **Add** option, then click **Add role assignment**
+5. Click the **Add** option, then click **Add role assignment**.
 
 6. From the **Role** list, select the appropriate role that you want to assign to the group.
 
