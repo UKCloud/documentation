@@ -3,8 +3,8 @@ title: Red Hat Update Infrastructure overview
 description: Explains the UKCloud Red Hat Update Infrastructure (RHUI)
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: pcantle
+lastreviewed: 01/04/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
