@@ -28,12 +28,48 @@ This article explains how to create a custom image from a VM on Azure Stack Hub,
 
 To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
-## [1. Generalise your VM](#tab/tabid-1)
+## Generalise your VM
 
 > [!WARNING]
 > Once you've generalised a VM, you **cannot** log back into it.
 
-## [2. Creating the image](#tab/tabid-2)
+### [Windows](#tab/tabid-a)
+
+1. Log in to your Windows VM using Remote Desktop Protocol (RDP).
+
+2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
+
+3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
+
+4. Ensure the **Generalise** tick box is selected.
+
+5. Under *Shutdown Options*, select **Shutdown** from the dropdown menu.
+
+    See the image below for an example:
+
+    ![Windows sysprep example](images/azs-windows-sys-prep.png)
+
+6. Click **OK** and wait for the VM to shutdown. Your RDP session will be closed.
+
+    > [!TIP]
+    > The generalisation process is complete once your VM is in a stopped state.
+
+### [Linux](#tab/tabid-b)
+
+1. Log in to your Linux VM using Secure Shell (SSH).
+
+2. Run the following command: `sudo su` and enter your user password if prompted.
+
+3. Run the following command: `shutdown && waagent -deprovision+user -force`.
+
+4. Wait for the VM to shutdown. Your SSH session will be closed.
+
+    > [!TIP]
+    > The generalisation process is complete once your VM is in a stopped state.
+
+***
+
+## Creating the image
 
 > [!WARNING]
 > Capturing a VM image will make it unusable and **cannot** be undone.
@@ -131,44 +167,6 @@ else {
 Write-Output -InputObject "Creating VM from image: $ImageName... (This may take a while)"
 New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -ImageName $ImageName -Credential $Credential -VirtualNetworkName $VNetName -SubnetName $SubnetName -PublicIpAddressName $PublicIPName -SecurityGroupName $NsgName -OpenPorts $OpenPorts -Size $Size
 </code></pre>
-
-***
-
-### [Windows](#tab/tabid-a/tabid-1)
-
-1. Log in to your Windows VM using Remote Desktop Protocol (RDP).
-
-2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
-
-3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
-
-4. Ensure the **Generalise** tick box is selected.
-
-5. Under *Shutdown Options*, select **Shutdown** from the dropdown menu.
-
-    See the image below for an example:
-
-    ![Windows sysprep example](images/azs-windows-sys-prep.png)
-
-6. Click **OK** and wait for the VM to shutdown. Your RDP session will be closed.
-
-    > [!TIP]
-    > The generalisation process is complete once your VM is in a stopped state.
-
-### [Linux](#tab/tabid-b/tabid-1)
-
-1. Log in to your Linux VM using Secure Shell (SSH).
-
-2. Run the following command: `sudo su` and enter your user password.
-
-3. Run the following command: `shutdown && waagent -deprovision+user -force`.
-
-4. Wait for the VM to shutdown. Your SSH session will be closed.
-
-    > [!TIP]
-    > The generalisation process is complete once your VM is in a stopped state.
-
-***
 
 ## Feedback
 
