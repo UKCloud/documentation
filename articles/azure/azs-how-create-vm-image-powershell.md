@@ -136,7 +136,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 ### [Windows](#tab/tabid-a/tabid-1)
 
-1. Log in to your Windows VM using remote desktop protocol (RDP).
+1. Log in to your Windows VM using Remote Desktop Protocol (RDP).
 
 2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
 
