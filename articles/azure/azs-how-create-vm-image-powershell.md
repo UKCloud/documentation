@@ -157,7 +157,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 ### [Linux](#tab/tabid-b/tabid-1)
 
-1. Log in to your Linux VM using secure shell (SSH).
+1. Log in to your Linux VM using Secure Shell (SSH).
 
 2. Run the following command: `sudo su` and enter your user password.
 
