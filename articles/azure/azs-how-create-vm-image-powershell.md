@@ -92,7 +92,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 ## Creating the image
 
 > [!WARNING]
-> Capturing a VM image will make it unusable and **cannot** be undone.
+> Capturing a VM image will make the VM unusable and **cannot** be undone.
 
 ### Declare variables
 
