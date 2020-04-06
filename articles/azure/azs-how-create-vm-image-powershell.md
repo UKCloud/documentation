@@ -138,7 +138,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 1. Log in to your Windows VM using Remote Desktop Protocol (RDP).
 
-2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
+2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
 
 3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
 
