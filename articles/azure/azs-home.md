@@ -25,7 +25,7 @@ toc_mdlink: azs-home.md
 
 # UKCloud for Microsoft Azure
 
-UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.
+UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.
 
 # Azure Stack family announcement
 <b>Azure Stack has become a family of products! Azure Stack is now Azure Stack Hub! You can read more about it [here](https://aka.ms/AzsFamAnnounce).</b>
@@ -45,7 +45,7 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-manage-azure-group.md">Manage groups and permissions</a></li></p></ul></strong></div>
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-retrieve-quota-ps.md">Retrieve your subscription quotas (using PowerShell)</a></li></p></ul></strong></div>
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-configure-powershell-users.md">Configure PowerShell environment</a></li></p></ul></strong></div>
-  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-use-azure-api.md">Use the Azure Stack Hub API</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-use-api.md">Use the Azure Stack Hub API</a></li></p></ul></strong></div>
 </div>
 
 <div class="row">

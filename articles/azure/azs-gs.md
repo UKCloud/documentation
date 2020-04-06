@@ -290,7 +290,7 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 - [*How to create an Azure user group*](azs-how-manage-azure-group.md)
 
-- [*How to use the Azure Stack Hub API*](azs-how-use-azure-api.md)
+- [*How to use the Azure Stack Hub API*](azs-how-use-api.md)
 
 ## Related videos
 
