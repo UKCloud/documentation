@@ -4,7 +4,7 @@ description: Provides details on how to create a custom image from a VM using Po
 services: azure-stack
 author: Daniel Brennand
 reviewer:
-lastreviewed: 03/04/2020
+lastreviewed: 06/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
