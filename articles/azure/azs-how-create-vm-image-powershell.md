@@ -176,10 +176,10 @@ $Image = New-AzureRmImage -ResourceGroupName $NewRGName -ImageName $ImageName -I
 # Delete the VM
 Remove-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
-# Get image to check OS type.
+# Get image to check OS type
 $Image = Get-AzureRmImage | Where-Object -FilterScript { $_.Name -like $ImageName }
 
-# Depending on the OS type, open either an RDP or SSH port and provision correct size.
+# Depending on the OS type, open either an RDP or SSH port and provision correct size
 if ($Image.StorageProfile.OsDisk.OsType -like "Windows") {
     $OpenPorts = 3389
     if (-not $Size) {
@@ -271,10 +271,10 @@ $Image = New-AzureRmImage -ResourceGroupName $NewRGName -Image $ImageConfig -Ima
 # Delete the VM
 Remove-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
-# Get image to check OS type.
+# Get image to check OS type
 $Image = Get-AzureRmImage | Where-Object -FilterScript { $_.Name -like $ImageName }
 
-# Depending on the OS type, open either an RDP or SSH port and provision correct size.
+# Depending on the OS type, open either an RDP or SSH port and provision correct size
 if ($Image.StorageProfile.OsDisk.OsType -like "Windows") {
     $OpenPorts = 3389
     if (-not $Size) {
