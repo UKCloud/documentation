@@ -52,24 +52,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "O4j89eI6/47hld72Cp49gA=="
+          "hash": "nUbmXoQyp+dqckpklu36kQ=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-home.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-home.html",
-          "hash": "yyR9N0Yea1fsgqlg3h50kg=="
+          "hash": "JoHYdHzmRwqjA/kaBdmD5g=="
         }
       },
       "is_incremental": false,
@@ -189,7 +195,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-aks.html",
-          "hash": "H0SRC5FiHC393R+ZBUtm2A=="
+          "hash": "bFOupXcKr0k2xwLOI0152Q=="
         }
       },
       "is_incremental": false,
@@ -249,7 +255,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-service-fabric-portal.html",
-          "hash": "lat3HqiLvoNXFwQcHlmGyQ=="
+          "hash": "MNzXpJeCPWp6Wn0aVtXzyA=="
         }
       },
       "is_incremental": false,
@@ -417,7 +423,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-manage-azure-group.html",
-          "hash": "SfiojiGYhCmxNmW437MU6w=="
+          "hash": "SttcG/S1apdxw8fuh89Aug=="
         }
       },
       "is_incremental": false,
@@ -441,7 +447,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
-          "hash": "ZAy3MbE/wmochN4hxGsNnA=="
+          "hash": "w6Noa9GT9WmFfzOepqzG/w=="
         }
       },
       "is_incremental": false,
@@ -497,11 +503,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-how-use-azure-api.md",
+      "source_relative_path": "articles/azure/azs-how-use-api.md",
       "output": {
         ".html": {
-          "relative_path": "articles/azure/azs-how-use-azure-api.html",
-          "hash": "tVriUo9PYCsU1j3LNEd5nQ=="
+          "relative_path": "articles/azure/azs-how-use-api.html",
+          "hash": "Noo/ikBljAYMcisQPKilLw=="
         }
       },
       "is_incremental": false,
@@ -2132,6 +2138,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs_advancedaccesspolicies.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs_advancedaccesspolicies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azsp_computeblade.png",
       "output": {
         "resource": {
@@ -2301,7 +2318,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "fYKTMTMLhPUn5DRgnAV0IA=="
+          "hash": "QJD/0eJwiRfgWqWB5bjUTw=="
         }
       },
       "is_incremental": false,
@@ -19722,17 +19739,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 426,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 426,
           "skipped_file_count": 0
         }
       }
