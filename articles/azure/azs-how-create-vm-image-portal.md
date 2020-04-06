@@ -88,7 +88,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ### [Windows](#tab/tabid-a/tabid-1)
 
-1. Log in to your Windows VM using remote desktop protocol (RDP).
+1. Log in to your Windows VM using Remote Desktop Protocol (RDP).
 
 2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
 
