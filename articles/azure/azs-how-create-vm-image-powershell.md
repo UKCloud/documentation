@@ -28,6 +28,21 @@ This article explains how to create a custom image from a VM on Azure Stack Hub,
 
 To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
+## High-level Process Overview
+
+1. Generalise the virtual machine
+
+2. Create a custom image from the virtual machine
+
+3. Delete the virtual machine
+
+4. Deploy a second virtual machine from the image
+
+5. Delete the resource group and all resources associated with the original virtual machine
+
+> [!WARNING]
+> The last step is only applicable if there are no other resources associated with the original virtual machine in the original resource group.
+
 ## Generalise your VM
 
 > [!WARNING]
