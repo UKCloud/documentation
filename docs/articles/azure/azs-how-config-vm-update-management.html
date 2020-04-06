@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to configure VM update management on Azure Stack Hub </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to configure VM update management on Azure Stack Hub ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-config-vm-update-management.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-configure-vm-update-management-on-azure-stack-hub">How to configure VM update management on Azure Stack Hub</h1>
+
+<h2 id="overview">Overview</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Azure Stack Hub has built-in Azure Monitor capabilities; however, they are limited. Therefore, if you are looking for a more feature rich solution, you should use public Azure Monitor.</p>
+<p>You can find out more about Azure Stack Hub's built-in Azure Monitor capabilities in the following article <a href="https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-metrics-azure-data">Use Azure Monitor on Azure Stack Hub</a>.</p>
+</div>
+<p>Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive, and otherwise take action on the metrics and logs coming from resources in Azure.</p>
+<p>This article will enable the following solutions for Azure Stack Hub VMs:</p>
+<ul>
+<li><p><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-overview">Azure Monitor for VMs</a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-us/azure/automation/automation-vm-inventory">Inventory</a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-us/azure/automation/change-tracking">Change Tracking</a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-us/azure/automation/automation-update-management">Update Management</a></p>
+</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack Hub portal.</p>
+<h2 id="enabling-vm-update--management">Enabling VM Update &amp; Management</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Before proceeding, check <a href="https://docs.microsoft.com/en-gb/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems">here</a> that your VMs' OS version is supported.</p>
+</div>
+<ol>
+<li><p>Log in to the <a href="https://portal.azure.com">public Azure portal</a>.</p>
+</li>
+<li><p>Create a <em>Log Analytics workspace</em> in your Azure subscription:</p>
+<ul>
+<li><p>Click <strong>Create a resource</strong></p>
+</li>
+<li><p>In the search bar, search for <code>log analytics</code></p>
+<p><img src="images/azs-browser-search-log-analytics.png" alt="Log Analytics search"></p>
+</li>
+<li><p>Click <strong>Log Analytics</strong></p>
+</li>
+<li><p>Click <strong>Create</strong></p>
+</li>
+<li><p>Provide the following:</p>
+<ul>
+<li><p>A name for the <strong>Log Analytics Workspace</strong>. Example: <code>DefaultLAWorkspace</code></p>
+</li>
+<li><p>A <strong>Subscription</strong> to link the workspace to</p>
+</li>
+<li><p>A <strong>Resource group</strong> to host the workspace in</p>
+</li>
+<li><p>A <strong>Location</strong> to host the workspace in</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Azure Monitor for VMs supports a Log Analytics workspace in the these <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics">regions</a>.</p>
+</div>
+</li>
+<li><p>A <strong>Pricing tier</strong> to use</p>
+<p><img src="images/azs-browser-example-log-analytics-workspace.png" alt="Log Analytics workspace creation"></p>
+<p><em>The example above shows the blade with all items filled out.</em></p>
+</li>
+<li><p>Click <strong>OK</strong> once finished. The Log Analytics workspace will now begin deploying. A notification will appear in the top right of the portal.</p>
+</li>
+<li><p>Once deployment is complete, navigate to the resource group you placed the Log Analytics workspace in.</p>
+</li>
+<li><p>Click the newly created workspace. On the new blade, under <em>Settings</em>, select <strong>Advanced settings</strong>, <strong>Connected Sources</strong> and then <strong>Windows Servers</strong> or <strong>Linux Servers</strong> depending on the VM type you want to add analytics to.</p>
+</li>
+<li><p>Note down the <strong>Workspace ID</strong> and <strong>Primary Key</strong> values.</p>
+<p><img src="images/azs-browser-log-analytics-workspace-advanced-settings.png" alt="Log Analytics workspace advanced settings"></p>
+</li>
+<li><p>Within <em>Advanced settings</em>, select the <em>Data</em> blade and click <strong>Windows Performance Counters</strong> or <strong>Linux Performance Counters</strong>.</p>
+</li>
+<li><p>Ensure all counters are selected, then click <strong>Add the selected performance counters</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For Linux performance counters, ensure <strong>Apply below configuration to my machines</strong> is selected.</p>
+</div>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
+<p><img src="images/azs-browser-example-performance-counters.png" alt="Performance counters"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Create and configure an <em>Automation Account</em>:</p>
+<ul>
+<li><p>Click <strong>Create a resource</strong></p>
+</li>
+<li><p>Search for <code>automation</code></p>
+</li>
+<li><p>Select <strong>Automation</strong> and then click <strong>Create</strong></p>
+<p><img src="images/azs-browser-search-automation-account.png" alt="Automation Account"></p>
+</li>
+<li><p>Choose a <strong>Name</strong>, <strong>Subscription</strong>, <strong>Resource group</strong>, <strong>Location</strong> and ensure <strong>Create Azure Run As account</strong> is set to <strong>Yes</strong></p>
+</li>
+<li><p>Click <strong>Create</strong></p>
+<p><img src="images/azs-browser-add-automation-account.png" alt="Add Automation Account"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The error &quot;Azure Classic Run As account creation error&quot; may occur. This <strong>DOES NOT</strong> affect the process.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Once deployed, navigate to the <em>Automation Account</em>. In the new blade, under <em>Configuration Management</em>, select the solution to enable (<strong>Inventory</strong> or <strong>Change Tracking</strong>).</p>
+<ul>
+<li><p>Select the Log Analytics workspace to link the automation account to</p>
+</li>
+<li><p>Click <strong>Enable</strong></p>
+</li>
+<li><p>Wait for the deployment to complete</p>
+</li>
+<li><p>Repeat step 4 for <strong>Update Management</strong> under <em>Update Management</em></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Leave the public Azure portal open; you will need to use it again later.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Log in to the <a href="https://portal.frn00006.azure.ukcloud.com">Azure Stack Hub portal</a>.</p>
+</li>
+</ol>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Portal</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">PowerShell</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
+
+<ol start="6">
+<li><p>Navigate to the VM that you want to enable Azure Monitor on and under <em>Settings</em>, select the <em>Extensions</em> blade.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>For any monitoring to work correctly, the VM <strong>must</strong> have HTTPS (Port 443) enabled in the <strong>Network Security Group</strong> rules.</p>
+</div>
+</li>
+<li><p>Click <strong>Add</strong> at the top, select the extension <strong>Azure Monitor Dependency Agent</strong>, click <strong>Create</strong> and then <strong>OK</strong>.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Wait for the deployment to finish before continuing.</p>
+</div>
+<ul>
+<li><p>Repeat this step for the <strong>Azure Monitor, Update and Configuration Management</strong> extension. Providing the extension with the <strong>Workspace ID</strong> and <strong>Primary Key</strong> values (noted down previously) when prompted.</p>
+<p><img src="images/azs-browser-log-analytics-enable-update-management.png" alt="VM enable update management"></p>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+
+<ol start="6">
+<li><p>Execute the following PowerShell script to setup the <strong>Azure Monitor Dependency Agent</strong> and <strong>Azure Monitor, Update and Configuration Management</strong> extensions.</p>
+<h3 id="declare-variables">Declare variables</h3>
+<p>Enter details below to provide values for the variables in the following script in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$VMName</td>
+<td>The name of the virtual machine</td>
+<td><form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="AzureStackHubVM"></form></td>
+</tr>
+<tr>
+<td>$ResourceGroupName</td>
+<td>Name of the resource group which the VM resides in</td>
+<td><form oninput="result.value=resourcegroup.value;result1.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$WorkspaceKey</td>
+<td>The log analytics workspace primary key</td>
+<td><form oninput="result.value=workspacekey.value" id="workspacekey" style="display: inline;"><input type="text" id="workspacekey" name="workspacekey" style="display: inline;" placeholder="2Fzno02qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ=="></form></td>
+</tr>
+<tr>
+<td>$WorkspaceId</td>
+<td>The log analytics workspace ID</td>
+<td><form oninput="result.value=workspaceid.value" id="workspaceid" style="display: inline;"><input type="text" id="workspaceid" name="workspaceid" style="display: inline;" placeholder="a40470ff-d8a0-4d37-ba13-274d4649a674"></form></td>
+</tr>
+<tr>
+<td>$NetworkSecurityGroupName</td>
+<td>The name of the network security group to apply the inbound port 443 rule to</td>
+<td><form oninput="result.value=networksecuritygroupname.value" id="networksecuritygroupname" style="display: inline;"><input type="text" id="networksecuritygroupname" name="networksecuritygroupname" style="display: inline;" placeholder="AzureStackHubVMNSG"></form></td>
+</tr>
+</tbody>
+</table>
+ <pre><code class="language-PowerShell"># Declare variables
+ $ResourceGroupName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+ $VMName = "<output form="vmname" name="result" style="display: inline;">AzureStackHubVM</output>"
+ $WorkspaceKey = "<output form="workspacekey" name="result" style="display: inline;">2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ==</output>"
+ $PublicSettings = "{'workspaceId': '<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>'}"
+ $ProtectedSettings = "{'workspaceKey': `'$WorkspaceKey`'}"
+ $Location = (Get-AzureRmLocation).Location
+
+ # Get the virtual machine to apply the custom script extensions to
+ $VM = Get-AzureRmVM -ResourceGroupName $ResourceGroupName -VMName $VMName
+
+ # Obtain network security group, create the port 443 inbound network security group rule and apply the rule to it
+ Get-AzureRmNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzureRmNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzureRmNetworkSecurityGroup
+
+ # Deploy DependencyAgent extension
+ Set-AzureRmVMExtension -ExtensionName "DependencyAgent" `
+ -ResourceGroupName $VM.ResourceGroupName `
+ -VMName $VM.Name `
+ -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
+ -ExtensionType "DependencyAgentLinux" `
+ -TypeHandlerVersion 9.7 `
+ -Location $Location `
+ -Verbose
+
+ # Deploy Microsoft.EnterpriseCloud.Monitoring extension
+ Set-AzureRmVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
+ -ResourceGroupName $VM.ResourceGroupName `
+ -VMName $VM.Name `
+ -Publisher "Microsoft.EnterpriseCloud.Monitoring" `
+ -ExtensionType "OmsAgentForLinux" `
+ -TypeHandlerVersion 1.12 `
+ -SettingString $PublicSettings `
+ -ProtectedSettingString $ProtectedSettings `
+ -Location $Location `
+ -Verbose</code></pre>
+</li>
+<li><p>Continue to step 8.</p>
+</li>
+</ol>
+</section>
+</div>
+
+<ol start="8">
+<li><p>Once the deployment is finished, head back to the public Azure portal and navigate to the <em>Log Analytics workspace</em> -&gt; <em>Advanced settings</em> -&gt; <em><code>VM Type</code> Servers</em>.</p>
+<ul>
+<li><p>You will see <strong><em><code>x VM Type</code></em> COMPUTERS CONNECTED</strong>, depending on how many VMs you linked to the workspace.</p>
+<p><img src="images/azs-browser-log-analytics-workspace-computers-connected.png" alt="Log Analytics workspace computers connected"></p>
+</li>
+<li><p>Click <strong><em><code>x</code> <code>VM Type</code></em> COMPUTERS CONNECTED</strong>. This will bring up the logs for that specific VM type.</p>
+</li>
+<li><p>Change the time range to <strong>Last 30 minutes</strong>.</p>
+</li>
+</ul>
+</li>
+<li><p>Execute the following log query, passing in your <em><code>VM Type</code></em>:</p>
+<ul>
+<li><p><code>Heartbeat | where OSType == &quot;VMTYPE&quot; | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table</code></p>
+</li>
+<li><p><code>Heartbeat | where OSType == &quot;Linux&quot; | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table</code></p>
+<p><img src="images/azs-browser-log-analytics-workspace-query-example.png" alt="Log analytics query example"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If your VM shows in the <strong>Results</strong> tab, then you have successfully linked your VM from Azure Stack Hub to your Log Analytics workspace <a href="https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded">(see here for more information)</a>.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Navigate to the <em>Automation Account</em>. In the new blade, under <em>Update Management</em>, select <strong>Update Management</strong>.</p>
+<ul>
+<li><p>You will see the following prompt:</p>
+<p><img src="images/azs-browser-example-log-enable.png" alt="Enable log example"></p>
+</li>
+<li><p>Select <strong>Click to manage machines</strong>.</p>
+</li>
+<li><p>Select <strong>Enable on all available and future machines</strong>.</p>
+<p><img src="images/azs-browser-example-enable-update-management.png" alt="Enable Update and Management"></p>
+</li>
+<li><p>Click <strong>Enable</strong>.</p>
+</li>
+<li><p>Repeat step 10 for <strong>Inventory</strong>.</p>
+</li>
+<li><p>Everything is now enabled. The API is called every 15 minutes to query for the last update time to determine whether the status has changed. If the status has changed, a compliance scan is initiated.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It can take between 30 minutes and 6 hours for the dashboard to display updated data from managed VMs.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Within the <em>Automation Account</em>, the blades <em>Inventory</em>, <em>Change Tracking</em> and <em>Update Management</em> will provide useful analytics.</p>
+<p><img src="images/azs-browser-example-inventory.png" alt="Inventory example"></p>
+<p><img src="images/azs-browser-example-change-tracking.png" alt="Change Tracking example"></p>
+<p><img src="images/azs-browser-example-update-management-compliant-ok.png" alt="Update and Management compliance example"></p>
+</li>
+<li><p>In public Azure, on the top left, click the hamburger icon and select <strong>Monitor</strong>.</p>
+<p><img src="images/azs-browser-public-azure-hamburger-menu-monitor.png" alt="Public Azure Hamburger menu"></p>
+</li>
+<li><p>In the new blade under <em>Insights</em>, click <strong>Virtual Machines</strong>.</p>
+</li>
+<li><p>You will see three usage analytics tabs (<strong>Get Started</strong>, <strong>Performance</strong> and <strong>Map</strong>) for the VMs you have enabled <strong>Azure Monitor for VMs</strong> on.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>The <strong>Get Started</strong> tab does <strong>not</strong> show Azure Stack Hub VMs.</p>
+</div>
+<p><img src="images/azs-browser-public-azure-monitor-virtual-machines.png" alt="Public Azure monitor virtual machines"></p>
+</li>
+<li><p>At the top, click the <em>Performance</em> tab, then on the right, move the switch from <strong>Azure</strong> to <strong>Hybrid</strong>:</p>
+<p><img src="images/azs-browser-hybrid-switch.png" alt="Public Azure Hybrid switch"></p>
+</li>
+<li><p>A prompt will appear to upgrade the workspace, click <strong>Upgrade</strong>. In the new blade, click <strong>Upgrade</strong> again.</p>
+</li>
+<li><p>Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled <strong>Azure Monitor for VMs</strong> on.</p>
+<p><img src="images/azs-browser-example-monitor-stats.png" alt="Monitor stats example"></p>
+<p><img src="images/azs-browser-example-monitor-map.png" alt="Monitor map example"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure Monitor enabled VMs.</p>
+</div>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

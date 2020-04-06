@@ -8,7 +8,7 @@
     <title>How to create a load balancer for Azure Stack Hub </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a load balancer for Azure Stack Hub ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -120,17 +120,19 @@
 </li>
 <li><p><strong>Public IP Address</strong> - The public IP address that will be assigned to this load balancer. To create a new public IP address:</p>
 <ul>
-<li><p>Click <strong>Public IP address</strong> on the <strong>Create load balancer</strong> blade.</p>
+<li><p>Select <strong>Create new</strong> from the <strong>Public IP address</strong> options.</p>
 </li>
-<li><p>Select <strong>Create new</strong> on the <strong>Choose public IP address</strong> blade.</p>
+<li><p>Enter a name for the public IP address.</p>
 </li>
-<li><p>Enter a name for the public IP address and click <strong>OK</strong>.</p>
+<li><p>Expand the <em>Configure public IP address</em> section.</p>
+</li>
+<li><p>Select either <strong>Dynamic</strong> or <strong>Static</strong> from the <strong>Assignment</strong> options. We recommend selecting the <strong>Static</strong> option when creating a load balancer.</p>
 </li>
 </ul>
 </li>
 <li><p><strong>Subscription</strong> - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.</p>
 </li>
-<li><p><strong>Resource Group</strong> - Select an existing resource group, or create a new one by typing a name for your new resource group.</p>
+<li><p><strong>Resource Group</strong> - Select an existing resource group, or create a new one by clicking the <strong>Create new</strong> link and then typing a name for your new resource group in the pop out window.</p>
 </li>
 <li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the location of the Azure Stack Hub.</p>
 <p><img src="images/azs-browser-create-load-balancer.png" alt="Create new load balancer"></p>
@@ -161,7 +163,7 @@
 </li>
 <li><p><strong>Subscription</strong> - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.</p>
 </li>
-<li><p><strong>Resource Group</strong> - Select an existing resource group, or create a new one by typing a name for your new resource group.</p>
+<li><p><strong>Resource Group</strong> - Select an existing resource group, or create a new one by clicking the <strong>Create new</strong> link and then typing a name for your new resource group in the pop out window.</p>
 </li>
 <li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the location of the Azure Stack Hub.</p>
 </li>
@@ -340,6 +342,8 @@
 </ul>
 </li>
 <li><p><strong>Idle timeout</strong> - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.</p>
+</li>
+<li><p><strong>Floating IP</strong> - Can be enabled to change the IP address mapping scheme to allow for additional flexibility, see <a href="https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-multivip-overview">here</a> for further details.</p>
 </li>
 </ul>
 <p><img src="images/azs-browser-add-lb-rule.png" alt="Add a load balancing rule"></p>
