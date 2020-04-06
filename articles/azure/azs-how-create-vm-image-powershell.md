@@ -30,18 +30,23 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## High-level Process Overview
 
-1. Generalise the virtual machine
+1. Generalise the virtual machine.
 
-2. Create a custom image from the virtual machine
+2. Create a new resource group.
 
-3. Delete the virtual machine
+    > [!IMPORTANT]
+    > The image **must** be created in the same resource group that you are planning to create the new virtual machine in.
 
-4. Deploy a second virtual machine from the image
+3. Create a custom image from the virtual machine, ensuring that it is created in the new resource group.
 
-5. Delete the resource group and all resources associated with the original virtual machine
+4. Delete the virtual machine.
 
-> [!WARNING]
-> The last step is only applicable if there are no other resources associated with the original virtual machine in the original resource group.
+5. Deploy a second virtual machine from the image, which can only be created in the new resource group.
+
+6. Delete the resource group which contained the original virtual machine.
+
+    > [!WARNING]
+    > The last step is only applicable if there are no other resources, such as other virtual machines, in the original resource group.
 
 ## Generalise your VM
 
