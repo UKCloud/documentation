@@ -34,7 +34,7 @@ Prerequisites from a Windows-based external client.
 
   - [How to create Service Principal Name for Azure Stack Hub in Powershell](azs-how-create-spn-powershell.md)
 
-## Official Documentation
+## HashiCorp documentation
 
 - [Azure Stack Hub Provider Website](https://www.terraform.io/docs/providers/azurestack)
 

@@ -3,8 +3,8 @@ title: Red Hat Update Infrastructure overview
 description: Explains the UKCloud Red Hat Update Infrastructure (RHUI)
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: pcantle
+lastreviewed: 01/04/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -27,19 +27,6 @@ The RHUI services consist of:
 
 The UKCloud RHUI service supplies access to the following repository groups, each group is installed by an RPM. You can only have one RPM installed per RHUI client virtual machine.
 
-## RHEL5-Standard
-
-- Red Hat Enterprise Linux 5 Server - RH Common from RHUI (RPMs) (5Server-i386) 
-
-- Red Hat Enterprise Linux 5 Server - RH Common from RHUI (RPMs) (5Server-x86_64) 
-
-- Red Hat Enterprise Linux 5 Server from RHUI (RPMs) (5Server-i386) 
-
-- Red Hat Enterprise Linux 5 Server from RHUI (RPMs) (5Server-x86_64) 
-
-- Red Hat Enterprise Linux 5 Server - Supplementary from RHUI (RPMs) (5Server-i386) 
-
-- Red Hat Enterprise Linux 5 Server - Supplementary from RHUI (RPMs) (5Server-x86_64)
 
 ## RHEL6-Standard
 
