@@ -3,8 +3,8 @@ title: How to manage Azure user groups and permissions
 description: Describes how to apply the appropriate Azure Stack Hub permissions to your UKCloud for Microsoft Azure users
 services: azure-stack
 author: Sue Highmoor
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 03/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -59,7 +59,10 @@ To create a group in the Azure portal:
 
 7. In the **Group description** field, enter a brief, but meaningful description for the group.
 
-8. From the **Membership type** list, select **Assigned**.
+8. There are two possible options for the **Membership type** field: **Assigned** or **Dynamic**.
+
+    > [!NOTE]
+    > The **Dynamic** option requires at least a Premium P1 license in Azure AD. If you do not meet this requirement, the dropdown is automatically set to **Assigned** and you will not be able to select the **Dynamic** option.
 
     ![Group blade](images/azs-portal-add-group.png)
 
@@ -78,17 +81,17 @@ To grant Azure permissions to a group:
 2. Navigate to **Subscriptions**.
 
     > [!TIP]
-    > If you can't see Subscriptions in your favourites panel, click **More services** and then **Subscriptions**. You can add Subscriptions to your favourites panel by clicking the star icon.
+    > If you can't see **Subscriptions** in your favourites panel, click **All services** and then **Subscriptions**. You can add **Subscriptions** to your favourites panel by clicking the star icon.
 
 3. Select your subscription for UKCloud for Microsoft Azure.
 
 4. Select **Access control (IAM)**.
 
-5. Click the **Add** option.
+5. Click the **Add** option, then click **Add role assignment**.
 
 6. From the **Role** list, select the appropriate role that you want to assign to the group.
 
-7. In the **Select** field, enter the name of the group you created in [Creating a group for UKCloud for Microsoft Azure users](#creating-a-group-for-azure-users).
+7. In the **Select** field, enter the name of the group you created in [Creating a group for Azure users](#creating-a-group-for-azure-users).
 
     ![Add permissions blade](images/azs-portal_add-permissions.png)
 

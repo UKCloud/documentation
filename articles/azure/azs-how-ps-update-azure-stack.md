@@ -3,8 +3,8 @@ title: How to perform an Azure Stack Hub Update
 description: Azure Stack Hub update procedure guide for support
 services: azure-stack
 author: Chris Black
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 03/04/2020
 
 toc_rootlink: Operators
 toc_sub1: How To
@@ -25,9 +25,7 @@ Loosely based on [Azure Stack Hub Apply Updates](https://docs.microsoft.com/en-u
 
 Prerequisites from a Windows-based external client.
 
-* PowerShell 5.1
-
-* Azure Stack Hub PowerShell Modules -> [Configure PowerShell Environment](azs-how-configure-powershell-operators.md)
+* Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack Hub operator's PowerShell environment.](azs-how-configure-powershell-operators.md)
 
 > [!IMPORTANT]
 > Always consult Microsoft documentation for your specific Update Version

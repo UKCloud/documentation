@@ -144,11 +144,11 @@ The [*How to use VM location in vCloud Director*](../vmware/vmw-how-use-vm-locat
 
 The cost of your UKCloud for OpenStack instances is determined by adding together the cost of your compute and storage. You can find these individual costs in the following columns of the evidence file in rows of the service type (column H) of `OpenStack Virtual Machine`:
 
-Description           | Column
-----------------------|-------
-Compute               | U
-Tier 1 Storage        | AE
-Tier 2 Storage        | AK
+Description                           | Column
+--------------------------------------|-------
+Compute                               | U
+Tier 1 Storage (or Encrypted Storage) | AE
+Tier 2 Storage (or Encrypted Storage) | AK
 
 The compute cost of an instance (column U) is determined by the instance size (column O), security domain (column Q), vCPU (column R), and memory (column S).
 
@@ -158,7 +158,7 @@ When you shelve an OpenStack instance, all compute charges for that instance cea
 
 ### How much block storage are my instances using?
 
-Block storage for OpenStack instances is included in the evidence as separate line items with the service type (column H) of `OpenStack Block Storage Tier 1` or `OpenStack Block Storage Tier 2`.
+Block storage for OpenStack instances is included in the evidence as separate line items with the service type (column H) of `OpenStack Block Storage Tier 1` or `OpenStack Block Storage Tier 2` or `OpenStack Block Storage Tier 1 Encrypted` or `OpenStack Block Storage Tier 2 Encrypted`.
 
 The amount and cost of block storage is provided in the following columns:
 
@@ -169,7 +169,7 @@ Tier 1 Storage cost        | AE
 Tier 2 Storage used        | AF
 Tier 2 Storage cost        | AK
 
-UKCloud for OpenStack storage costs also include any images you have, which are listed as separate rows in the evidence file. Look for rows with the service type (column H) of `OpenStack Image`.
+UKCloud for OpenStack storage costs also include any images and backups you have, which are listed as separate rows in the evidence file. Look for rows with the service type (column H) of `OpenStack Image` and `OpenStack Instance Backup Storage`.
 
 ## Cloud GPU charges
 

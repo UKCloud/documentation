@@ -4,7 +4,7 @@ description: Learn how to create service principal name (SPN) to manage your Azu
 services: azure-stack
 author: Chris Black
 reviewer: William Turner
-lastreviewed: 18/03/2020 11:00:00
+lastreviewed: 31/03/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -44,7 +44,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 - Active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack Hub)
 
-## Official Documentation
+## Microsoft documentation
 
 - [Service Principal Name commands for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2018-03-01-hybrid)
 
