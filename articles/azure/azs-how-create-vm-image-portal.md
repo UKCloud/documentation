@@ -37,7 +37,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 1. Log in to your Windows VM using Remote Desktop Protocol (RDP).
 
-2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
+2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`
 
 3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
 
@@ -60,7 +60,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Run the following command: `sudo su` and enter your user password if prompted.
 
-3. Run the following command: `shutdown && waagent -deprovision+user -force`.
+3. Run the following command: `shutdown && waagent -deprovision+user -force`
 
 4. Wait for the VM to shutdown. Your SSH session will be closed.
 
