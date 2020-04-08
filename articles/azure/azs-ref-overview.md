@@ -33,23 +33,23 @@ Virtual machines (VMs) provide the basic building block providing compute in Azu
 
 You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling. VMs have the following support:
 
-- Azure Compute APIs - Provides you with programmatic access to virtual machines and their supporting resources. 
+- Azure Compute APIs - Provides you with programmatic access to virtual machines and their supporting resources.
 
-- Azure Stack Hub Marketplace - Provides access to pre-created images that help speed up application delivery
+- Azure Stack Hub Marketplace - Provides access to pre-created images that help speed up application delivery.
 
-- Azure Resource Manager - Enables you to write templates to deploy, update and delete Azure Stack Hub resources in a single co-ordinated operation
+- Azure Resource Manager - Enables you to write templates to deploy, update and delete Azure Stack Hub resources in a single co-ordinated operation.
 
 <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-considerations>
 
 ### Network
 
-- Virtual networks - Azure Stack Hub enables you to configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling
+- Virtual networks - Azure Stack Hub enables you to configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling.
 
-- Load balancers (IPv4 only) — You can deploy basic load balancers
+- Load balancers (IPv4 only) — You can deploy basic load balancers.
 
-- VPN gateway — You can use the Azure Stack Hub VPN gateway to create site-to-site VPNs to remote infrastructure
+- VPN gateway — You can use the Azure Stack Hub VPN gateway to create site-to-site VPNs to remote infrastructure.
 
-- Routing — You can configure basic custom defined routing on virtual networks; Vnet to Vnet peering is not yet supported
+- Routing — You can configure basic custom defined routing on virtual networks; Vnet to Vnet peering is not yet supported.
 
 <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-network-differences>
 
@@ -57,11 +57,11 @@ You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling. V
 
 | Type of storage             | Description                                                                                     | Notes vs Azure                                                                           |
 |-----------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| Azure Blob Storage (block)  | Object storage; good for storing documents, videos, images and so on | Maximum block blob size is 4.75 TB (100 MB x 50,000 blocks) for the 1802 update or newer version. Previous versions are limited to 50,000 x 4 MB (approximately 195 GB). Blob name size differs slightly at 880 characters (1,760 bytes), compared to 1,024 characters (2,048 bytes) for public Azure. |
-| Azure Blob Storage (page) | Used to support virtual machine disks; good for randomly accessed large files | Maximum page blob size differs greatly at 1TB for Azure Stack, compared to 8TB for public Azure. |
-| Azure Blob Storage (append) | Used for log files                                                                              |                                                                                          |
-| Azure Queue Storage         | Message queue as a service to provide asynchronous scale out micro-services, among other things |                                                                                          |
-| Azure Table Storage         | NoSQL database service; good for highly scalable, eventually consistent database support        | Maximum table partition key and row key size is 400 characters (800 bytes), compared to 1,024 characters (2,048 bytes) for public Azure.                                                                         |
+| Azure Blob Storage (block)  | Object storage; good for storing documents, videos, images and so on. | Maximum block blob size is 4.75 TB (100 MB x 50,000 blocks) for the 1802 update or newer version. Previous versions are limited to 50,000 x 4 MB (approximately 195 GB). Blob name size differs slightly at 880 characters (1,760 bytes), compared to 1,024 characters (2,048 bytes) for public Azure. |
+| Azure Blob Storage (page) | Used to support virtual machine disks; good for randomly accessed large files. | Maximum page blob size differs greatly at 1TB for Azure Stack, compared to 8TB for public Azure. |
+| Azure Blob Storage (append) | Used for log files. | |
+| Azure Queue Storage | Message queue as a service to provide asynchronous scale out micro-services, among other things. |                                                                                          |
+| Azure Table Storage | NoSQL database service; good for highly scalable, eventually consistent database support. | Maximum table partition key and row key size is 400 characters (800 bytes), compared to 1,024 characters (2,048 bytes) for public Azure.                                                                         |
 
 ### Advanced features
 
@@ -132,33 +132,33 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
       Select-Object -Property Type, Version | Format-Table -AutoSize
     ```
 
-- Use load balancers to make the best use of IP address quota
+- Use load balancers to make the best use of IP address quota.
 
-- Azure Stack Hub API may be a couple of releases behind Azure
+- Azure Stack Hub API may be a couple of releases behind Azure API.
 
-- Single region and single state set (affects availability)
+- Single region and single state set (affects availability).
 
-- VM sets don't support auto-scale, so consider how to handle load
+- VM sets don't support auto-scale, so consider how to handle load.
 
-- Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack Hub
+- Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack Hub.
 
 ### Storage
 
 Azure Stack Hub storage is all served from the same pool of disks and does not provide "limitless" storage, so you should consider the following:
 
-- Use blob storage (object storage) to support the application; not for multiple petabytes of data storage
+- Use blob storage (object storage) to support the application; not for multiple petabytes of data storage.
 
-- Put large volume data on [UKCloud's Cloud Storage](cs-gs.md)
+- Put large volume data on [UKCloud's Cloud Storage](cs-gs.md).
 
-- Clean up backups to conserve storage
+- Clean up backups to conserve storage.
 
-- Consider use of temporary storage
+- Consider use of temporary storage.
 
-- There is a difference in maximum blob storage between Azure and Azure Stack Hub
+- For some blob types, there is a difference in maximum storage between Azure and Azure Stack Hub.
 
-- No guarantees around IOPs
+- No guarantees around IOPs.
 
-- Use blob storage for queues to help deliver scalable micro-services
+- Use blob storage for queues to help deliver scalable micro-services.
 
 ## Accessing UKCloud for Microsoft Azure
 
