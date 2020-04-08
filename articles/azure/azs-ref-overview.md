@@ -3,8 +3,8 @@ title: Understanding UKCloud for Microsoft Azure
 description: Overview of UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 08/04/2020
 
 toc_rootlink: Users
 toc_sub1: Reference
@@ -132,7 +132,7 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
 
 ### Storage
 
-Azure Stack Hub storage is all served from the same pool of disks and does not provide “limitless” storage, so you should consider the following:
+Azure Stack Hub storage is all served from the same pool of disks and does not provide "limitless" storage, so you should consider the following:
 
 - Use blob storage (object storage) to support the application; not for multiple petabytes of data storage
 
