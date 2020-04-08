@@ -61,13 +61,13 @@ SQL Always On Repository - [sql-2016-alwayson](https://github.com/Azure/AzureSta
 > [!NOTE]
 > This will download just the sql-2016-alwayson folder from the repository instead of downloading all of it.
 >
-> Change **~/sql-2016-alwayson** below to the desired folder.
+> Change **$Env:USERPROFILE\sql-2016-alwayson** below to the desired folder.
 
 - From an elevated (run as administrator) PowerShell prompt run:
 
   ```powershell
-  mkdir ~/sql-2016-alwayson
-  cd ~/sql-2016-alwayson
+  mkdir $Env:USERPROFILE\sql-2016-alwayson
+  cd $Env:USERPROFILE\sql-2016-alwayson
   git init
   git config core.sparseCheckout true
   git remote add origin -f "https://github.com/Azure/AzureStack-QuickStart-Templates"
@@ -237,7 +237,7 @@ Enter details below to provide values for the variables in the following scripts
 | \$DomainName    | The FQDN of the AD domain created            | <form oninput="result.value=domainname.value" id="domainname" style="display: inline;"><input type="text" id="domainname" name="domainname" style="display: inline;" placeholder="fabrikam.local"/></form> |
 | \$AdminUsername    | The name of the administrator of the new VMs and domain            | <form oninput="result.value=adminusername.value" id="adminusername" style="display: inline;"><input type="text" id="adminusername" name="adminusername" style="display: inline;" placeholder="localadmin"/></form> |
 | \$SqlServerServiceAccountUserName    | The SQL server service account name            | <form oninput="result.value=sqlserversausername.value" id="sqlserversausername" style="display: inline;"><input type="text" id="sqlserversausername" name="sqlserversausername" style="display: inline;" placeholder="sqlservice"/></form> |
-| \$CustomTemplateJSON    | The full path to the directory containing the azuredeploy.json file             | <form oninput="result.value=customtemplatejson.value" id="customtemplatejson" style="display: inline;"><input type="text" id="customtemplatejson" name="customtemplatejson" style="display: inline;" placeholder="~\sql-2016-alwayson\sql-2016-alwayson\azuredeploy.json"/></form> |
+| \$CustomTemplateJSON    | The full path to the directory containing the azuredeploy.json file             | <form oninput="result.value=customtemplatejson.value" id="customtemplatejson" style="display: inline;"><input type="text" id="customtemplatejson" name="customtemplatejson" style="display: inline;" placeholder="$Env:USERPROFILE\sql-2016-alwayson"/></form> |
 | \$DNSSuffix    | The DNS Suffix for reverse lookup of public IP addresses             | <form oninput="result.value=dnssuffix.value" id="dnssuffix" style="display: inline;"><input type="text" id="dnssuffix" name="dnssuffix" style="display: inline;" placeholder="azure.ukcloud.com"/></form> |
 | \$ResourceGroupName    | The name of the resource group to deploy the template within             | <form oninput="result.value=resourcegroupname.value" id="resourcegroupname" style="display: inline;"><input type="text" id="resourcegroupname" name="resourcegroupname" style="display: inline;" placeholder="Sql2016AlwaysOnRG01"/></form> |
 | \$SqlServerOffer    | The SQL server version             | <form oninput="result.value=sqlserveroffer.value" id="sqlserveroffer" style="display: inline;"><input type="text" id="sqlserveroffer" name="sqlserveroffer" style="display: inline;" placeholder="SQL2016SP2-WS2016"/></form> |
@@ -267,7 +267,7 @@ $DomainName = "<output form="domainname" name="result" style="display: inline;">
 $AdminUsername = "<output form="adminusername" name="result" style="display: inline;">localadmin</output>"
 $SqlServerServiceAccountUserName = "<output form="sqlserversausername" name="result" style="display: inline;">sqlservice</output>"
 
-$CustomTemplateJSON = "<output form="customtemplatejson" name="result" style="display: inline;">~\sql-2016-alwayson\sql-2016-alwayson\azuredeploy.json</output>"
+$CustomTemplateJSON = "<output form="customtemplatejson" name="result" style="display: inline;">$Env:USERPROFILE\sql-2016-alwayson</output>"
 
 $DNSSuffix = "<output form="dnssuffix" name="result" style="display: inline;">azure.ukcloud.com</output>"
 $ResourceGroupName = "<output form="resourcegroupname" name="result" style="display: inline;">Sql2016AlwaysOnRG01</output>"
