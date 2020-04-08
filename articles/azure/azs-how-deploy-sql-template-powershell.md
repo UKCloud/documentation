@@ -40,9 +40,9 @@ Prerequisites from a Windows-based external client are:
 
   - [Configure PowerShell Environment and Azure Stack Hub Module](azs-how-configure-powershell-users.md)
 
-- An active Azure Stack Hub subscription. 
+- An active Azure Stack Hub subscription
 
-- An Azure Stack Hub [Service Principal Name (SPN)](azs-how-create-spn-portal.md).
+- An Azure Stack Hub [Service Principal Name (SPN)](azs-how-create-spn-portal.md)
 
 ## Microsoft documentation
 
