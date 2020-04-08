@@ -3,8 +3,8 @@ title: How to create a Service Fabric cluster using the UKCloud Azure Stack Hub 
 description: Provides help for creating a Service Fabric cluster on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 02/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -54,7 +54,7 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window.
 
    - **Location** - This will be `frn00006`, which is the Azure Stack Hub region.
 
@@ -110,7 +110,9 @@ During configuration of the Service Fabric cluster, you must provide several det
 
 4. On the *Access policies* page, click **Click to show advanced access policies**.
 
-5. Tick the top two check boxes, then click the **Save** button.
+5. Select the top two check boxes, then click the **Save** button.
+
+![Advanced access policies](images/azs_advancedaccesspolicies.png)
 
 6. In the *Settings* section of the key vault blade, select **Properties**.
 
@@ -158,11 +160,23 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Repair Manager** - Select **Yes** to use Repair Manager to enable patch orchestration on node types with a durability of bronze, which helps keep your VMs up to date.
 
-   - **Service Fabric deployment package URL** - Specify the URL to download the Service Fabric deployment package from. For off-line scenarios, download the service fabric package from the URL specified and upload it to a blob and enable anonymous access and specify the URL here.
+   - **Diagnostic Data Age In Days** - Specify the number of days to keep the Service Fabric diagnostic log in the diagnostics store.
+
+   - **Service Fabric deployment package URL** - Specify the URL to download the Service Fabric deployment package from. For disconnected scenarios, download the service fabric package from the URL specified and upload it to a blob, then enable anonymous access and specify the URL here.
+
+   - **Service Fabric runtime package URL** - Specify the URL to download the Service Fabric runtime package from. For disconnected scenarios, download the service fabric runtime from the URL specified and upload it to a blob, then enable anonymous access and specify the URL here.
+
+   > [!WARNING]
+    > There are compatibility issues between the latest release of Service Fabric and its corresponding SDK. Until this issue is addressed, provide the following parameters to the deployment package URL and runtime package URL. Your deployments will fail otherwise.
+    >
+    > - Service Fabric deployment package URL: https://download.microsoft.com/download/8/3/6/836E3E99-A300-4714-8278-96BC3E8B5528/6.5.641.9590/Microsoft.Azure.ServiceFabric.WindowsServer.6.5.641.9590.zip
+    > - Service Fabric runtime package URL: https://download.microsoft.com/download/B/0/B/B0BCCAC5-65AA-4BE3-AB13-D5FF5890F4B5/6.5.641.9590/MicrosoftAzureServiceFabric.6.5.641.9590.cab
+    >
+    > For disconnected deployments, download these packages from the specified location and host them locally on an Azure Stack Hub Blob.
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group. Note that to create a Service Fabric cluster, the resource group must contain no other resources.
+   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window. Note that to create a Service Fabric cluster, the resource group must contain no other resources.
 
    - **Location** - This will be `frn00006`, which is the Azure Stack Hub region.
 
@@ -213,7 +227,7 @@ You also need the thumbprint of the certificate(s). For information about how to
 
 8. Click **OK**, then **Create**.
 
-9. You can monitor the progress of your Key Vault's deployment by clicking the **Notifications** icon.
+9. You can monitor the progress of your Service Fabric cluster's deployment by clicking the **Notifications** icon.
 
    ![!Notification showing Service Fabric cluster deployment in progress](images/azsp_createvm_progress.png)
 

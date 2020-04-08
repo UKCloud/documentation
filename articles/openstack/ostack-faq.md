@@ -542,7 +542,7 @@ UKCloud may make an additional charge for transferring data out of the service.
 
 ### Is two-factor authentication (2FA) available?
 
-Yes, it is possible to further protect access to OpenStack's management portal (Horizon) using 2FA. To enable this feature, OpenStack users need to be created in the UKCloud Portal as described [here](ostack-how-create-users.md).
+Yes, it is possible to further protect access to OpenStack's management portal (Horizon) using 2FA. To enable this feature, OpenStack users need to be created in the UKCloud Portal as described [here](../portal/ptl-how-create-users.md).
 
 ### What data is suitable for the UKCloud assured cloud platform?
 

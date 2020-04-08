@@ -8,7 +8,7 @@
     <title>How to manage Azure user groups and permissions </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to manage Azure user groups and permissions ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -129,7 +129,11 @@
 </li>
 <li><p>In the <strong>Group description</strong> field, enter a brief, but meaningful description for the group.</p>
 </li>
-<li><p>From the <strong>Membership type</strong> list, select <strong>Assigned</strong>.</p>
+<li><p>There are two possible options for the <strong>Membership type</strong> field: <strong>Assigned</strong> or <strong>Dynamic</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The <strong>Dynamic</strong> option requires at least a Premium P1 license in Azure AD. If you do not meet this requirement, the dropdown is automatically set to <strong>Assigned</strong> and you will not be able to select the <strong>Dynamic</strong> option.</p>
+</div>
 <p><img src="images/azs-portal-add-group.png" alt="Group blade"></p>
 </li>
 <li><p>Click <strong>Create</strong>.</p>
@@ -146,18 +150,18 @@
 <li><p>Navigate to <strong>Subscriptions</strong>.</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>If you can't see Subscriptions in your favourites panel, click <strong>More services</strong> and then <strong>Subscriptions</strong>. You can add Subscriptions to your favourites panel by clicking the star icon.</p>
+<p>If you can't see <strong>Subscriptions</strong> in your favourites panel, click <strong>All services</strong> and then <strong>Subscriptions</strong>. You can add <strong>Subscriptions</strong> to your favourites panel by clicking the star icon.</p>
 </div>
 </li>
 <li><p>Select your subscription for UKCloud for Microsoft Azure.</p>
 </li>
 <li><p>Select <strong>Access control (IAM)</strong>.</p>
 </li>
-<li><p>Click the <strong>Add</strong> option.</p>
+<li><p>Click the <strong>Add</strong> option, then click <strong>Add role assignment</strong>.</p>
 </li>
 <li><p>From the <strong>Role</strong> list, select the appropriate role that you want to assign to the group.</p>
 </li>
-<li><p>In the <strong>Select</strong> field, enter the name of the group you created in <a href="#creating-a-group-for-azure-users">Creating a group for UKCloud for Microsoft Azure users</a>.</p>
+<li><p>In the <strong>Select</strong> field, enter the name of the group you created in <a href="#creating-a-group-for-azure-users">Creating a group for Azure users</a>.</p>
 <p><img src="images/azs-portal_add-permissions.png" alt="Add permissions blade"></p>
 </li>
 <li><p>Click <strong>Save</strong>.</p>

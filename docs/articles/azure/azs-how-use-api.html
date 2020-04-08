@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use the Azure Stack Hub API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use the Azure Stack Hub API ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-use-api.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-use-the-azure-stack-hub-api">How to use the Azure Stack Hub API</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The Azure Stack Hub API enables you to interact programmatically with your UKCloud for Microsoft Azure environment. For example, you can use API calls to manage your UKCloud for Microsoft Azure tenancy.</p>
+<p>This article shows you how to get started with the Azure Stack Hub API.</p>
+<p>When interacting with Azure Stack Hub resources via the API, you must specify an API version. You can find a full list of supported API versions <a href="https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-profiles-azure-resource-manager-versions">here</a>.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>To complete the steps in this article, you must have appropriate access to a subscription on Azure Stack Hub and permissions on the resources you are trying to access.</p>
+<h2 id="authenticating-to-the-api">Authenticating to the API</h2>
+<p>Azure Stack Hub API authentication uses access tokens to validate requests.</p>
+<p>To obtain an access token:</p>
+<ol>
+<li><p>Send a POST request to the Azure REST authentication/login endpoint:</p>
+<p><code>https://login.microsoftonline.com/&lt;tenant_id&gt;/oauth2/token</code></p>
+<p>where <strong>tenant_id</strong> is one of the following:</p>
+<ul>
+<li><p>Your tenant domain, for example: <code>ukcloud.onmicrosoft.com</code>, <code>ukcloud.com</code>, <code>example.mydomain.com</code></p>
+</li>
+<li><p>Your tenant ID, for example: <code>8eaef023-2b34-4da1-9baa-8bc8c9d6a490</code></p>
+</li>
+<li><p>The default value for tenant independent keys: <code>common</code></p>
+</li>
+</ul>
+</li>
+<li><p>Pass the following parameters in the request body:</p>
+<ul>
+<li><p><strong>grant_type</strong> - The type of authentication scheme to use: <code>password</code></p>
+</li>
+<li><p><strong>client_id</strong> - Hard-coded to a default value of <code>1950a258-227b-4e31-a9cf-717495945fc2</code></p>
+<p>Other options for specific scenarios are:</p>
+<ul>
+<li><p>PowerShell - <code>1950a258-227b-4e31-a9cf-717495945fc2</code></p>
+</li>
+<li><p>LegacyPowerShell - <code>0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*</code></p>
+</li>
+<li><p>WindowsAzureActiveDirectory - <code>00000002-0000-0000-c000-000000000000</code></p>
+</li>
+<li><p>VisualStudio - <code>872cd9fa-d31f-45e0-9eab-6e460a02d1f1</code></p>
+</li>
+<li><p>AzureCLI - <code>04b07795-8ddb-461a-bbee-02f9e1bf7b46</code></p>
+</li>
+</ul>
+</li>
+<li><p><strong>resource</strong> - The endpoint of the resource that the token will be used to access, for example:
+<code>https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1</code></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can obtain the resource endpoint by querying the Azure Stack Hub management metadata endpoint. The resource endpoint is returned in the <code>audiences</code> section of the response.</p>
+<p>It is constructed like this: <code>https://management.&lt;region&gt;.&lt;AzureStackHubFQDN&gt;/metadata/endpoints?api-version=2017-12-01</code></p>
+<p>For example, to find the endpoint for the <code>users</code> resource, send a request to <code>https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2017-12-01</code>.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>For Azure Stack Hub administrators (<em>operators</em>) add <code>admin</code> to the request.</p>
+<p>For example, to find the endpoint for the <code>operators</code> resource, send a request to <code>https://adminmanagement.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2017-12-01</code>.</p>
+</div>
+</li>
+<li><p><strong>username</strong> - The Azure Stack Hub AAD account, for example: <code>user@contoso.onmicrosoft.com</code></p>
+</li>
+<li><p><strong>password</strong> - The password for the Azure Stack Hub AAD account</p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Ensure you format the request body using Content-Type <code>x-www-form-urlencoded</code>.</p>
+</div>
+</li>
+</ol>
+<h3 id="declare-variables">Declare variables</h3>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$Tenant</td>
+<td>The tenant ID or domain to authenticate to</td>
+<td><form oninput="result.value=tenant.value;result2.value=tenant.value" id="tenant" style="display: inline;"><input type="text" id="tenant" name="tenant" style="display: inline;" placeholder="contoso.onmicrosoft.com"></form></td>
+</tr>
+<tr>
+<td>$AzureStackUsername</td>
+<td>The username of a user for Azure Stack Hub</td>
+<td><form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"></form></td>
+</tr>
+<tr>
+<td>$AzureStackUserPassword</td>
+<td>The password of a user for Azure Stack Hub</td>
+<td><form oninput="result.value=azspassword.value;result2.value=azspassword.value" id="azspassword" style="display: inline;"><input type="text" id="azspassword" name="azspassword" style="display: inline;" placeholder="Password123!"></form></td>
+</tr>
+<tr>
+<td>$ClientID</td>
+<td>The application ID to authenticate against the Azure Stack Hub API</td>
+<td><form oninput="result.value=clientid.value;result2.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="1950a258-227b-4e31-a9cf-717495945fc2"></form></td>
+</tr>
+</tbody>
+</table>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Bash</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">PowerShell</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token. 
+curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" \
+-H "Content-Type: application/x-www-form-urlencoded" \
+--data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" \
+--data-urlencode "grant_type=password" \
+--data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output> \
+--data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" \
+--data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="language-PowerShell"># Declare variables
+$Tenant = "<output form="tenant" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
+$UserName = "<output form="azsusername" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>"
+$UserPassword = "<output form="azspassword" name="result2" style="display: inline;">Password123!</output>"
+$AuthRequestBody = @{
+    "grant_type" = "password"
+    "client_id" = "<output form="clientid" name="result2" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>"
+    "resource" = "https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
+    "username" = $UserName
+    "password" = $UserPassword
+}
+
+# Send POST request to Azure REST authentication/login endpoint to retrieve access token.
+$AuthResp = Invoke-RestMethod -Method "POST" -Uri "https://login.microsoftonline.com/$Tenant/oauth2/token" -Body $AuthRequestBody -ContentType "application/x-www-form-urlencoded"
+
+$AuthResp
+</code></pre>
+</section>
+</div>
+
+<ol start="3">
+<li><p>If the authentication is successful, the endpoint returns an access token, for example:</p>
+<pre><code class="lang-json">{
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;scope&quot;: &quot;user_impersonation&quot;,
+  &quot;expires_in&quot;: &quot;3599&quot;,
+  &quot;ext_expires_in&quot;: &quot;0&quot;,
+  &quot;expires_on&quot;: &quot;1512574780&quot;,
+  &quot;not_before&quot;: &quot;1512570880&quot;,
+  &quot;resource&quot;: &quot;https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1&quot;,
+  &quot;access_token&quot;: &quot;eyJ0eXAiOi...truncated for readability...&quot;,
+  &quot;refresh_token&quot;: &quot;AQABAAAAAA...truncated for readability...&quot;
+}
+</code></pre>
+</li>
+<li><p>You must include this token in the Authorization header of each subsequent API request, for example:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Bash</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-2" data-tab="tabid-2" tabindex="-1">PowerShell</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<pre><code class="lang-bash">curl -H &quot;Authorization: Bearer eyJ0eXAiOi...truncated for readability...&quot; 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-powershell"># Add access token to header object for subsequent API requests
+$AuthHeader = @{&quot;Authorization&quot; = &quot;Bearer $($AuthResp.access_token)&quot;}
+
+# Query the Azure Stack Hub API for subscriptions
+Invoke-RestMethod -Method &quot;GET&quot; -Uri &quot;https://management.frn00006.azure.ukcloud.com/subscriptions&quot; -Headers $AuthHeader -Body @{&quot;api-version&quot; = &quot;2017-12-01&quot;} -ContentType &quot;application/x-www-form-urlencoded&quot;
+</code></pre>
+</section>
+</div>
+</li>
+</ol>
+<h2 id="calling-azure-stack-hub-api-endpoints">Calling Azure Stack Hub API endpoints</h2>
+<p>A REST request URI consists of:</p>
+<p><code>&lt;URI-scheme&gt;://&lt;URI-host&gt;/&lt;resource-path&gt;?&lt;query-string&gt;</code></p>
+<p>where:</p>
+<ul>
+<li><p><strong>URI-scheme</strong> is the protocol used to transmit the request, for example <code>http</code> or <code>https</code></p>
+</li>
+<li><p><strong>URI-host</strong> is the domain name or IP address of the server where the REST service endpoint is hosted, for example: <code>management.frn00006.azure.ukcloud.com</code></p>
+</li>
+<li><p><strong>resource path</strong> is the resource or resource collection used by the service in determining the selection of those resources (the path may include multiple segments), for example: <code>/subscriptions</code> is the resource path to obtain information about Azure Stack Hub subscriptions</p>
+</li>
+<li><p><strong>query-string</strong> provides additional parameters, such as the API version or resource selection criteria</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For Bash, you can add the <strong>query-string</strong> to the end of the request URI following a question mark. For example, to specify use of a specific API version: <code>https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01</code>. <br>For PowerShell, you can provide a <strong>query-string</strong> in the <strong>-Body</strong> parameter hash table. For example: <code>-Body @{&quot;api-version&quot; = &quot;2017-12-01&quot;}</code></p>
+</div>
+</li>
+</ul>
+<p>The syntax of an Azure Stack Hub request URI is:</p>
+<p><code>https://management.frn00006.azure.ukcloud.com/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group&gt;/providers/&lt;provider&gt;/&lt;resource-path&gt;?&lt;filter-expression&gt;&amp;api-version=&lt;api-version&gt;</code></p>
+<p>where:</p>
+<ul>
+<li><p><strong>subscription-id</strong> is your tenant subscription ID</p>
+</li>
+<li><p><strong>resource-group</strong> is the resource group you want to query</p>
+</li>
+<li><p><strong>provider</strong> is the provider you want to query</p>
+</li>
+<li><p><strong>resource-path</strong> is the resource you want to query</p>
+</li>
+<li><p><strong>filter-expression</strong> is an optional list of arguments to filter the results of the query</p>
+</li>
+<li><p><strong>api-version</strong> is the version of the Azure Stack Hub API being called, for example: <code>api-version=2017-12-01</code></p>
+</li>
+</ul>
+<p>For example, the following API call returns the VM: <em>Windows-VM</em> located in the resource group: <em>MY-WINDOWS-VM-RG</em> in the specified Azure Stack Hub subscription:</p>
+<p><code>https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/resourceGroups/MY-WINDOWS-VM-RG/providers/Microsoft.Compute/virtualMachines/Windows-VM?api-version=2017-12-01</code></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To query a top level API resource, such as virtual machines, use the following example:</p>
+<p><code>https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/providers/Microsoft.Compute/virtualMachines?api-version=2017-12-01</code></p>
+</div>
+<h2 id="next-steps">Next steps</h2>
+<p>For general information about the Azure API, see the <em>Azure REST API Reference</em> at:</p>
+<p><a href="https://docs.microsoft.com/en-gb/rest/api/?view=Azure">Azure API documentation page</a></p>
+<p>In particular, you may find the following documents useful:</p>
+<ul>
+<li><p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-rest-api-use">Azure Stack Hub REST API</a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-protocols-oauth-code">AD protocols oauth</a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-authentication-scenarios">AD auth scenarios</a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-v2-protocols-oauth-code">AD V2 protocol oauth</a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api">Azure Stack Hub resource provider API</a></p>
+</li>
+</ul>
+<p>This is guidance for Azure Stack Hub users. Currently, there is no official API reference guide for Azure Stack Hub users; however, there is an admin API guide that you can find <a href="https://docs.microsoft.com/en-us/rest/api/azure-stack/">here</a>. We'll update this article when an API guide becomes available.</p>
+<p>For more information about UKCloud for Microsoft Azure, see:</p>
+<ul>
+<li><p><a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a></p>
+</li>
+<li><p><a href="azs-faq.html"><em>UKCloud for Microsoft Azure FAQs</em></a></p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

@@ -14,8 +14,12 @@
       href: azs-gs.md
   - name: How To
     items:
+    - name: Configure Azure Monitor for VMs on Azure Stack Hub
+      href: azs-how-setup-monitoring.md
     - name: Configure custom script extensions
       href: azs-how-configure-custom-script-extension.md
+    - name: Configure VM update management
+      href: azs-how-config-vm-update-management.md
     - name: Convert a VM to use managed disks - PowerShell
       href: azs-how-convert-to-managed-disks-ps.md
     - name: Create a load balancer
@@ -43,7 +47,7 @@
     - name: Retrieve your subscription quotas
       href: azs-how-retrieve-quota-ps.md
     - name: Use the Azure Stack Hub API
-      href: azs-how-use-azure-api.md
+      href: azs-how-use-api.md
     - name: Use UKCloud as your public Azure CSP
       href: azs-how-use-ukc-csp.md
     - name: Add a Managed Disk to a VM

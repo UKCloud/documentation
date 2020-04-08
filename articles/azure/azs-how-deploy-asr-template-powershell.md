@@ -3,8 +3,8 @@ title: How to deploy a Site Recovery template to Azure Stack Hub
 description: Learn how to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell
 services: azure-stack
 author: Bailey Lawson
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 02/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -48,7 +48,7 @@ Prerequisites from a Windows-based external client are:
 
   - [Windows](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1) - This extension disables Remote User Access control and allows WMI and File and Printer sharing on the firewall
 
-  - [Linux](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Extensions/Linux/SetRootPassword.sh) - This extension sets the root password to the input parameter, as root access is required for Azure Site Recovery
+  - [Linux](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh) - This extension sets the root password to the input parameter, as root access is required for Azure Site Recovery
 
 ## Microsoft documentation
 

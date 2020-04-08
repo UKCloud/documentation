@@ -82,10 +82,6 @@ In addition, UKCloud have created an API Only role that restricts users with vCl
 
 Users need to be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. The user will also be able to see consumption data for namespaces and buckets.
 
-## Permissions for UKCloud for OpenStack
-
-Users need to be granted access to the relevant OpenStack project. Once access is granted, the user can access the Horizon dashboard for the project.
-
 ## Permissions for Billing
 
 Users with **API** permissions can retrieve billing information using the Portal API. For more information, see the *GET /api/billing/billing-csv* section of the [*UKCloud Portal API Reference Guide*](ptl-ref-portal-api.md).

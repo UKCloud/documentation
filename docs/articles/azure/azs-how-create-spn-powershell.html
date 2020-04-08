@@ -8,7 +8,7 @@
     <title>How to create an SPN for Azure Stack Hub using PowerShell </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create an SPN for Azure Stack Hub using PowerShell ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -138,7 +138,7 @@
 <tr>
 <td>$PublicAzureAdminUsername</td>
 <td>The username of a user with admin privileges for public Azure</td>
-<td><form oninput="result.value=azureusername.value" id="azureusername" style="display: inline;"><input type="text" id="azureusername" name="azureusername" style="display: inline;" placeholder="user"></form></td>
+<td><form oninput="result.value=azureusername.value" id="azureusername" style="display: inline;"><input type="text" id="azureusername" name="azureusername" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"></form></td>
 </tr>
 <tr>
 <td>$PublicAzureAdminPassword</td>
@@ -148,7 +148,7 @@
 <tr>
 <td>$AzureStackUsernameAdmin</td>
 <td>The username of a user with admin privileges for Azure Stack Hub</td>
-<td><form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user"></form></td>
+<td><form oninput="result.value=azsusername.value;result2.value=azsusername.value" id="azsusername" style="display: inline;"><input type="text" id="azsusername" name="azsusername" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"></form></td>
 </tr>
 <tr>
 <td>$AzureStackUserPasswordAdmin</td>
@@ -268,7 +268,7 @@ $PublicAzureRole = "<output form="publicazurerole" name="result" style="display:
 $AzureStackRole = "<output form="azurestackrole" name="result" style="display: inline;">Owner</output>"
 
 # Create your Public Azure admin credentials in order to log in to your Azure subscription which you will be creating your SPN in
-$PublicAzureAdminUsername = "<output form="azureusername" name="result" style="display: inline;">user</output>@$TenantDomain"
+$PublicAzureAdminUsername = "<output form="azureusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
 $PublicAzureAdminPassword = ConvertTo-SecureString -String "<output form="azurepassword" name="result" style="display: inline;">Password123!</output>" -AsPlainText -Force
 $PublicAzureAdminCreds = New-Object -TypeName "System.Management.Automation.PSCredential" -ArgumentList $PublicAzureAdminUsername, $PublicAzureAdminPassword
 
@@ -346,7 +346,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Hub Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
-$AzureStackUsernameAdmin = "<output form="azsusername" name="result" style="display: inline;">user</output>@$TenantDomain"
+$AzureStackUsernameAdmin = "<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
 $AzureStackUserPasswordAdmin = ConvertTo-SecureString -String "<output form="azspassword" name="result" style="display: inline;">Password123!</output>" -AsPlainText -Force
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
@@ -430,7 +430,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Hub admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
-$AzureStackUsernameAdmin = "<output form="azsusername" name="result2" style="display: inline;">user</output>@$TenantDomain"
+$AzureStackUsernameAdmin = "<output form="azsusername" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>"
 $AzureStackUserPasswordAdmin = ConvertTo-SecureString -String "<output form="azspassword" name="result2" style="display: inline;">Password123!</output>" -AsPlainText -Force
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
