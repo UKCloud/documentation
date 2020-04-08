@@ -44,7 +44,7 @@ Prerequisites from a Windows-based external client are:
 
 - An Azure Stack Hub [Service Principal Name (SPN)](azs-how-create-spn-portal.md).
 
-## Official documentation
+## Microsoft documentation
 
 - [Azure Stack Hub ARM Templates Overview](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates)
 
