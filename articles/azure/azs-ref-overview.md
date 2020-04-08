@@ -57,11 +57,11 @@ You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling. V
 
 | Type of storage             | Description                                                                                     | Notes vs Azure                                                                           |
 |-----------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| Azure Blob Storage (block)  | Object storage; good for storing documents, videos, images and so on                            | Size of disk storage differs significantly, as well as naming standards like name length |
-| Azure Blob Storage (page)   | Used to support virtual machine disks; good for randomly accessed large files                   |                                                                                          |
+| Azure Blob Storage (block)  | Object storage; good for storing documents, videos, images and so on | Maximum block blob size is 4.75 TB (100 MB x 50,000 blocks) for the 1802 update or newer version. Previous versions are limited to 50,000 x 4 MB (approximately 195 GB). Blob name size differs slightly at 880 characters (1,760 bytes), compared to 1,024 characters (2,048 bytes) for public Azure. |
+| Azure Blob Storage (page) | Used to support virtual machine disks; good for randomly accessed large files | Maximum page blob size differs greatly at 1TB for Azure Stack, compared to 8TB for public Azure. |
 | Azure Blob Storage (append) | Used for log files                                                                              |                                                                                          |
 | Azure Queue Storage         | Message queue as a service to provide asynchronous scale out micro-services, among other things |                                                                                          |
-| Azure Table Storage         | NoSQL database service; good for highly scalable, eventually consistent database support        | Max sizes differ                                                                         |
+| Azure Table Storage         | NoSQL database service; good for highly scalable, eventually consistent database support        | Maximum table partition key and row key size is 400 characters (800 bytes), compared to 1,024 characters (2,048 bytes) for public Azure.                                                                         |
 
 ### Advanced features
 
