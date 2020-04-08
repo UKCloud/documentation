@@ -53,7 +53,7 @@ To create a new user:
 
     - [*How to manage permissions for vCloud Director*](../vmware/vmw-how-manage-vcd-permissions.md)
 
-    - [*How to create new UKCloud for OpenStack users in the UKCloud Portal*](../openstack/ostack-how-create-users.md)
+    - [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](../openstack/ostack-how-manage-accounts-portal.md)
 
     - [*How to create new UKCloud for OpenShift users in the UKCloud Portal*](../openshift/oshift-how-create-users.md)
 
