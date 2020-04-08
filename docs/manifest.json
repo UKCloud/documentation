@@ -7588,6 +7588,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-portal-sso-permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-portal-sso-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-portal-synchronise-password.png",
       "output": {
         "resource": {
@@ -7863,6 +7874,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-contacts-tab-openstack-permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-contacts-tab-openstack-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ptl-contacts-tab-permissions.png",
       "output": {
         "resource": {
@@ -7999,7 +8021,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "ubVwEgpxLVS1d5C2B74Cqw=="
+          "hash": "SbuEK5ssQil/nx3SxU/L5Q=="
         }
       },
       "is_incremental": false,
@@ -8091,18 +8113,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/openstack/ostack-how-create-users.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openstack/ostack-how-create-users.html",
-          "hash": "4/xOS2TfwmDNk42Qwd9whw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-install-rhui.md",
       "output": {
         ".html": {
@@ -8119,7 +8129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-manage-accounts-portal.html",
-          "hash": "X+7b/1FBLphDC/9xhUUXdQ=="
+          "hash": "yizoK7VEbHpaXtOLYi70Sg=="
         }
       },
       "is_incremental": false,
@@ -8395,7 +8405,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "4yM5WeUfEAI/2DHg9NCbxQ=="
+          "hash": "80TgWOcBR5dP45o1v82W8A=="
         }
       },
       "is_incremental": false,
@@ -9717,18 +9727,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-how-delete-sso-user.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-how-delete-sso-user.html",
-          "hash": "cnoXptcu0Fk//RnonWbrUA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-how-use-pricing-tool.md",
       "output": {
         ".html": {
@@ -10189,7 +10187,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "YHQCPf7vw+8cP4e1fv/wTA=="
+          "hash": "l9FpYtjqjNHsSST3Pzxdjw=="
         }
       },
       "is_incremental": false,
@@ -11082,7 +11080,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-create-users.html",
-          "hash": "LXT047uyRfTZtY1J7S2ARg=="
+          "hash": "1sZPFGTvdLzBclX4o+wRRA=="
         }
       },
       "is_incremental": false,
@@ -11274,7 +11272,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-overview-permissions.html",
-          "hash": "0yQ0fSqBlLNHyB0/+ayDuA=="
+          "hash": "JsLwFhWEs2uff2JSennQiQ=="
         }
       },
       "is_incremental": false,
@@ -19726,13 +19724,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19743,7 +19734,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 426,
+          "total_file_count": 424,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
