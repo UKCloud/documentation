@@ -1,10 +1,10 @@
 ---
 title: How to change your service configuration for Managed Monitoring from UKCloud
-description: Describes how to change monitored items, thresholds, contact information and maintenance window details for your Managed Monitoring from UKCloud service
+description: Describes how to change monitored items, thresholds, contact information and maintenance window details for your Managed Monitoring from UKCloud service and how to create and edit playbooks
 services: managed-services
 author: plopezcatalan
-reviewer:
-lastreviewed: 03/01/2020
+reviewer: shighmoor
+lastreviewed: 09/04/2020
 toc_rootlink: Managed Monitoring
 toc_sub1: 
 toc_sub2:
@@ -69,6 +69,8 @@ You can change the following service configurations:
 - [Change monitoring thresholds](#changing-monitoring-thresholds)
 
 - [Provide advance notice of maintenance windows](#providing-notification-of-maintenance-windows)
+
+- [Add, update or delete playbooks](#adding-updating-or-deleting-playbooks)
 
 ### Adding or removing a monitored device
 
@@ -244,6 +246,27 @@ If you want to change the configuration of multiple devices or contacts, rather 
     ![Upload Managed Monitoring spreadsheet](images/man-monitoring-multiple-upload.png)
 
 6. When you're done, click  **Review & Submit** then **Submit**.
+
+### Adding, updating or deleting playbooks
+
+A playbook details the step-by-step process required to respond to an event. You can add playbooks to your Managed Monitoring service (and update or delete those playbooks) by raising a Service Request.
+
+1. In My Calls, raise a ticket using the **Playbooks** Managed Monitoring template.
+
+2. From the **Action** list, select **Add Playbook**, **Update Playbook** or **Delete Playbook** as appropriate.
+
+3. Enter the **Playbook Name**.
+
+4. For new or updated playbooks, either click **Select files** and browse to the playbook file or drag the file into the template.
+
+    > [!TIP]
+    > The playbook file should be in Word format using one of the Managed Monitoring playbook templates (available from UKCloud Support).
+
+5. Enter any **Additional Details** as necessary.
+
+    ![Playbooks](images/man-monitoring-playbooks.png)
+
+6. When you're done, click **Review & Submit** then **Submit**.
 
 ## Feedback
 
