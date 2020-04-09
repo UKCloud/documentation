@@ -170,7 +170,7 @@ You can access UKCloud for Microsoft Azure from the following location:
 
 For more information about Azure Stack Hub, see the following Microsoft resources:
 
-- [Get Started with Azure](https://azure.microsoft.com/en-gb/get-started/)
+- [Azure Stack Hub User Documentation](https://docs.microsoft.com/en-us/azure-stack/user)
 
 For more information about UKCloud for Microsoft Azure, see:
 
