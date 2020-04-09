@@ -170,9 +170,7 @@ You can access UKCloud for Microsoft Azure from the following location:
 
 For more information about Azure Stack Hub, see the following Microsoft resources:
 
-- [*Get Started with Azure*](https://azure.microsoft.com/en-gb/get-started/)
-
-- [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md)
+- [Get Started with Azure](https://azure.microsoft.com/en-gb/get-started/)
 
 For more information about UKCloud for Microsoft Azure, see:
 
@@ -180,13 +178,15 @@ For more information about UKCloud for Microsoft Azure, see:
 
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
+- [*Configure the Azure Stack Hub user's PowerShell environment*](azs-how-configure-powershell-users.md)
+
 ## Related videos
 
 - [*UKCloud Azure Stack Hub portal overview video*](azs-vid-overview.md)
 
 ## Related repositories
 
-- [*UKCloud Azure Stack Hub Repository*](https://github.com/UKCloud/AzureStack)
+- [UKCloud Azure Stack Hub Repository](https://github.com/UKCloud/AzureStack)
 
 ## Feedback
 
