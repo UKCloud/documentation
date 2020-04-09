@@ -33,7 +33,7 @@ Virtual machines (VMs) provide the basic building block providing compute in Azu
 
 You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling. VMs have the following support:
 
-- Azure Compute APIs - Provides you with programmatic access to virtual machines and their supporting resources.
+- Azure Compute APIs - Provides you with programmatic access to virtual machines and their supporting resources. For further information, see the [Azure REST API Reference](https://docs.microsoft.com/en-gb/rest/api/azure/).
 
 - Azure Stack Hub Marketplace - Provides access to pre-created images that help speed up application delivery.
 
