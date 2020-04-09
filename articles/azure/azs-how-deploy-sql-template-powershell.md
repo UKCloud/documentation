@@ -325,7 +325,7 @@ Under *Settings*, click **Deployments** and you can see the stages of the ARM te
   ![Azure Stck Hub tenant portal my-sql-alwayson deployments](images/azs-browser-mysql-alwayson-deployments.png)
 
 > [!TIP]
-> Every parameter in the [parameter list](#list-of-the-parameters-you-can-define) can be defined in the **`New-AzureRmResourceGroupDeployment`** by simply adding *`-<ParameterName>`*
+> Every parameter in the [parameter list](#list-of-parameters-you-can-define-in-the-template) can be defined in the **`New-AzureRmResourceGroupDeployment`** by simply adding *`-<ParameterName>`*
 >
 > For example:
 > `-WitnessVMSize "Standard_D1_v2"`
