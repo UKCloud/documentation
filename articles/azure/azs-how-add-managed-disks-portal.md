@@ -96,10 +96,7 @@ If you're adding a new disk:
 
     - **Location** - This will be frn00006, which is the location of the Azure Stack Hub.
 
-    - **Account type** - Standard disks (HDD) are backed by magnetic drives and are preferable for applications where data is accessed infrequently.
-
-        > [!Note]
-        > Currently, only standard disks (HDD) are available in UKCloud for Microsoft Azure.
+    - **Account type** - Premium disk (SSD) are backed by solid state drives and offer consistent, low-latency performance. They provide the best balance between price and performance, and are ideal for I/O-intensive applications and production workloads. Standard disks (HDD) are backed by magnetic drives and are preferable for applications where data is accessed infrequently.
 
     - **Source type** - Create a disk from a snapshot of another disk, a blob in a storage account, or create an empty disk.
 
