@@ -44,15 +44,11 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Create scale set button](images/azs-browser-button-create-scale-set.png)
 
-5. On the *BASICS* page, enter the following information:
+5. On the *Create virtual machine scale set* blade, enter the following information:
 
     - **Virtual machine scale set name** - The name of the virtual machine scale set.
 
     - **Operating system disk image** – The operating system disk image for the virtual machines in the scale set.
-
-        > [!WARNING]
-        > CentOS 7.2 is currently unsupported on Azure Stack Hub. For more information, see [here](https://docs.microsoft.com/en-gb/azure-stack/operator/azure-stack-release-notes-known-issues-1904#virtual-machine-scale-set).
-        > ![CentOS 7.2 is currently unsupported](images/azs-browser-scale-set-unsupported-operating-systems.png)
 
     - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
@@ -70,6 +66,8 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Use managed disks** – Managed disks is a feature that simplifies disk management for Azure IaaS virtual machines by handling storage account management for you. For more information, see [Managed Disks overview](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview).
 
+    - **Choose load balancing options** - Select between *Load balancer* or *None*. If *None* is selected then the **Public IP address name** and **Domain name label** fields will be hidden.
+
     - **Public IP address name** – The name of the public IP address for the load balancer in front of the scale sets.
 
     - **Public IP allocation method** – Select between *Dynamic* or *Static* IP addresses.
@@ -78,7 +76,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Virtual network** – This is the virtual network you would like the scale set to be connected to.
 
-    - **Public IP address per instance** – Add a public IP address to each instance in the scale set.
+    - **Subnet** – This is a subnet within the selected virtual network.
 
     ![BASICS page](images/azs-browser-create-scale-set.png)
 
