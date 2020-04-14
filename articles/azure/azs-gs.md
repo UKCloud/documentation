@@ -3,8 +3,8 @@ title: Getting Started Guide for UKCloud for Microsoft Azure
 description: Provides information to get up and running with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 09/04/2020
 
 toc_rootlink: Users
 toc_sub1: Getting Started
@@ -268,7 +268,7 @@ Microsoft provide a cross platform Azure command line interface (CLI) tool which
 
 For more information, including steps for setting up the Azure CLI with UKCloud for Microsoft Azure, see:
 
-- [Configure AzureCLI Environment](azs-how-configure-cli.md)
+- [*Configure AzureCLI Environment*](azs-how-configure-cli.md)
 
 ## Configuring the Azure Stack Hub PowerShell client
 
@@ -276,7 +276,7 @@ You can use PowerShell to manage your Azure resources. For example, you can crea
 
 For more information, including steps and scripts for setting up Azure PowerShell with UKCloud for Microsoft Azure, see:
 
-- [Configure PowerShell Environment](azs-how-configure-powershell-users.md)
+- [*Configure PowerShell Environment*](azs-how-configure-powershell-users.md)
 
 ## Next steps
 
