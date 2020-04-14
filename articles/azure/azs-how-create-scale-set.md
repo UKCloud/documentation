@@ -36,7 +36,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![New option in favourites panel](images/azsp_newmenu.png)
 
-3. In the *Everything* blade, search for **'Virtual machine scale set'** and then select it from the search results.
+3. In the *New* blade, search for **'Virtual machine scale set'** and then select it from the search results.
 
     ![Searching for scale set](images/azs-browser-button-scale-set-menu.png)
 
