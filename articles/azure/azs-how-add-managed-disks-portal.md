@@ -104,15 +104,21 @@ If you're adding a new disk:
 
     ![Create managed disk](images/azs-browser-add-vm-disk.png)
 
-3. You can monitor the progress of your deployment by clicking the **Notifications** icon.
+3. Click the **Create** button. Once it has been created, the *Disks* blade will be shown again with the new disk displayed under the **Data disks** section.
+
+4. Click the **Save** button.
+
+    ![Create managed disk](images/azs-browser-button-save-add-data-disk.png)
+
+5. You can monitor the progress of your deployment by clicking the **Notifications** icon.
 
     ![Deployment progress alert](images/azs-browser-notification-disks-progress.png)
 
-4. When the deployment is finished, the notification will change to *Successfully updated virtual machine disks*.
+6. When the deployment is finished, the notification will change to *Successfully updated virtual machine disks*.
 
     ![Deployment complete alert](images/azs-browser-notification-disks-complete.png)
 
-5. You can view the disk by navigating to the VM that the disk was added to, then select **Disks**.
+7. You can view the disk by navigating to the VM that the disk was added to, then select **Disks**.
 
     ![VM Data disks](images/azs-browser-disks.png)
 
