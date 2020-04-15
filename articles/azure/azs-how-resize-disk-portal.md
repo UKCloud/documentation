@@ -3,8 +3,8 @@ title: How to resize a disk using the UKCloud Azure Stack Hub portal
 description: Provides help for resizing a disk using the portal on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
-reviewer: BaileyLawson
-lastreviewed: 15/04/2019 11:00:00
+reviewer: William Turner
+lastreviewed: 15/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
