@@ -66,7 +66,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Use managed disks** – Managed disks is a feature that simplifies disk management for Azure IaaS virtual machines by handling storage account management for you. For more information, see [Managed Disks overview](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview).
 
-    - **Choose load balancing options** - Select between *Load balancer* or *None*. If *None* is selected then the **Public IP address name** and **Domain name label** fields will be hidden.
+    - **Choose load balancing options** - Select between *Load balancer* or *None*. If *None* is selected, then the **Public IP address name** and **Domain name label** fields will be hidden.
 
     - **Public IP address name** – The name of the public IP address for the load balancer in front of the scale sets.
 
