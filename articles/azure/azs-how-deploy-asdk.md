@@ -99,9 +99,9 @@ Once step 3 is complete the box will have been rebooted from the vhdx downloaded
 
 ## Step 4 - Install ASDK
 
-Implement the following steps from the guide: [https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script)
+Implement the following steps from the guide:
 
-- Deploy the development kit
+- [Deploy the development kit](https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-deploy-powershell)
 
 The following details should be used:
 
