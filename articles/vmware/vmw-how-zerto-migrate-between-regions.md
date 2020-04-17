@@ -3,8 +3,8 @@ title: How to migrate your workloads between UKCloud regions
 description: This article describes how to migrate your existing workloads from one region in our cloud platform to another
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: gsohal
+lastreviewed: 15/04/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,15 +19,15 @@ toc_mdlink: vmw-how-zerto-migrate-between-regions.md
 
 ## Overview
 
-Journaling Protection is a powerful, self-service replication and recovery tool that can help you improve your organisational resilience. However, you can also use UKCloud's Journaling Protection solution to migrate your UKCloud for VMware applications into another UKCloud for VMware-enabled zone. This enables you to move your workloads into the regions within the UKCloud platform that are best suited for their requirements.
+Journaling Protection is a powerful, self-service replication and recovery tool that can help you improve your organisational resilience. However, you can also use UKCloud's Journaling Protection solution to migrate your UKCloud for VMware applications into a different UKCloud for VMware-enabled zone. This enables you to move your workloads into the regions within the UKCloud platform that are best suited for their requirements.
 
-Our Migration service is powered by Zerto, a leading provider of disaster recovery software for the cloud.
+Our workload migration service is powered by Zerto, a leading provider of disaster recovery software for the cloud.
 
 The migration of VMs within the UKCloud platform is very closely aligned to the disaster recovery of VMs within UKCloud; the small difference being that when you have failed-over the VMs from one region into another, you don't then failback to your primary region. As such, you'll find that the articles linked to from this article refer to disaster recovery and failover, however the steps also apply to migration.
 
 ### Intended audience
 
-To complete the steps in this guide, you need to have access to the Zerto Self-Service Portal.
+To complete the steps in this article, you need to have access to the Zerto Self-Service Portal.
 
 ## Before you begin
 
@@ -45,13 +45,13 @@ You should consider the following:
 
 - Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. This means if you delete a VM before migrating it, that VM will not exist in your target region.
 
-- We provide a single default service profile. The details of this are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md). We do not currently provide the option for you to create custom profiles
+- We do not currently provide the option for you to create custom service profiles.
 
 ## Migrating workloads between UKCloud regions
 
 You begin the migration process for your VMs by adding Journaling Protection to the vApp that contains those VMs. This creates something called a virtual protection group (VPG). Each VM in the protected vApp is synchronised to the target migration region and a journal is created. After this initial synchronisation, each subsequent write operation to the VM is processed as normal on the source region and a copy is asynchronously sent to the target region and written to the journal.
 
-![Add Journaling Protection](images/migrate-zerto-image-1.png)
+![Journaling Protection overview](images/vmw-zerto-migrate-overview.png)
 
 Each journal entry exists in the journal for a specified number of days (the journal history). When the journal history is reached, as new journal entries are created, older entries are written to the migration
 target VM's virtual disks.
@@ -60,23 +60,27 @@ Every few seconds, a checkpoint is written to every journal for each VM in the V
 
 During migration, the vApp and its VMs are created on the target region and the recovery disks for each VM are attached to the migrated VM. Information in the journal is then promoted to the VM to bring it up to the date and time of the selected checkpoint.
 
-![VM journal](images/migrate-zerto-image-2.png)
+![Journals overview](images/vmw-zerto-migrate-journal-overview.png)
 
 The process for getting Journaling Protection up and running ready for workload migration within the UKCloud platform is as follows:
 
 1. [Create a migration VDC](#create-a-migration-vdc)
+
 2. [Configure networking in the migration target VDC](#configure-networking-in-the-migration-target-vdc)
+
 3. [Create a virtual protection group in the primary region](#create-a-virtual-protection-group-in-the-primary-region)
+
 4. [Perform a test migration](#perform-a-test-migration)
+
 5. [Migrate your workloads](#migrate-your-workloads)
 
 ## Create a migration VDC
 
 To migrate your workloads to a different UKCloud region, you must have a VDC in the intended target region. If you already have a compute service in the target region, you can use an existing VDC or you can create a new one using:
 
-- The UKCloud Portal - For more information see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
+- The UKCloud Portal (see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md))
 
-- The UKCloud Portal API -- For more information see [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md)
+- The UKCloud Portal API (see [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md))
 
 If you don't already have a compute service in the target region or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Journaling Protection service request.
 
@@ -84,7 +88,7 @@ If you don't already have a compute service in the target region or you'd prefer
 
 You must configure any internally and externally routed networks in your migration target environment to duplicate those in the source region. You must also configure the edge gateway with the same firewall, NAT and other rules.
 
-You'll create the mapping between these networks when you create your VPG; see [*How to create a virtual protection group*](vmw-how-zerto-create-vpg.md).
+You'll create the mapping between these networks when you create your VPG (see [*How to create a virtual protection group*](vmw-how-zerto-create-vpg.md)).
 
 When you initially migrate your workloads, external access to the target region will be via a different IP address. If you want to keep the same IP addresses for your new environment, you'll need to request an IP move from UKCloud. We'll move the IPs from your old edge to your new edge. Note that you should raise this service request in good time so we can move the IPs as soon as you need us to.
 
@@ -96,13 +100,13 @@ You don't need to configure vApp networks in advance as they'll be replicated wi
 
 A VPG is a collection of VMs that are grouped together for migration. As workload migration within the UKCloud platform uses Journaling Protection, VPGs are created from vApps. When you create a VPG, you specify the vApp you want to migrate and all the VMs in that vApp are replicated. For example, in a standard three-tier application, you'll likely have three VMs: one for your application, one for the database and one for the web server. As best practice, you should create these three related VMs in a single vApp, which you can then add to a VPG so that all the VMs are migrated together.
 
-For more information, see [*How to create a virtual protection group*](vmw-how-zerto-create-vpg.md). This guide is the same for both failovers and migrations.
+For more information, see [*How to create a virtual protection group*](vmw-how-zerto-create-vpg.md) (this article is the same for failovers and migrations).
 
 ## Perform a test migration
 
 After you create your VPG, we recommend that you perform a test migration to confirm that your VMs will be recovered correctly when you do the real migration.
 
-For more information, see [*How to perform a failover*](vmw-how-zerto-perform-failover.md). This guide is the same for both failovers and migrations.
+For more information, see [*How to perform a failover*](vmw-how-zerto-perform-failover.md) (this article is the same for failovers and migrations).
 
 ## Migrate your workloads
 
@@ -116,19 +120,19 @@ Within Zerto, you have two options for migrating your workloads:
 
 To move a VPG:
 
-1. Log in to ZSSP.
+1. Log in to ZSSP using the ZSSP login link for the zone in which your target VDC is located.
 
-    If you need more detailed instructions, see [*How to access the Zerto Self-Service Portal*](vmw-how-zerto-access-zssp.md). Use the ZSSP login link for the zone in which your target VDC is located.
+    For more detailed instructions, see [*How to access the Zerto Self-Service Portal*](vmw-how-zerto-access-zssp.md).
 
-2. From the **ACTIONS** menu at the bottom of the page, choose **MOVE VPG**.
+2. From the **Actions** menu, select **Move VPG**.
 
-   ![Actions](images/migrate-zerto-image-4.png)
+   ![Move VPG menu option](images/vmw-zerto-mnu-move-vpg.png)
 
-3. In the *Move* wizard, on the *Select VPGs* page, select one or more VPGs that you want to move then click **NEXT**.
+3. In the *Move* wizard, on the *Select VPGs* page, select one or more VPGs that you want to move then click **Next**.
 
-   ![next](images/migrate-zerto-image-5.png)
+   ![Move wizard - Select VPGs page](images/vmw-zerto-move-vpgs.png)
 
-4. On the *EXECUTION PARAMETERS* page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, select the **Commit Policy** field and choose:
+4. On the *Execute Parameters* page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, click the **Commit Policy** field and select:
 
     - **Auto-Commit** if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.
 
@@ -138,13 +142,13 @@ To move a VPG:
 
 5. The source VMs must be powered off before they can be migrated. If the VMs cannot be gracefully shut down, you can force a shutdown. To force shutdown, select the **Force Shutdown** check box. If you do not select this option and the VMs cannot be gracefully shut down, the move process fails.
 
-6. Reverse protection ensures that when the source VMs are migrated to the target region, the source region becomes the new target region. Reverse protection is enabled by default, but you should disable it by clicking the **Reverse Protection** field and deselecting the **REVERSE** check box.
+6. Reverse protection ensures that when the source VMs are migrated to the target region, the source region becomes the new target region. Reverse protection is enabled by default, but you should disable it by clicking the **Reverse Protection** field and deselecting the **Reverse** check box.
 
-   ![reverse](images/migrate-zerto-image-6.png)
+   ![Move wizard - Execute Parameters page](images/vmw-zerto-move-params.png)
 
-7. Click **NEXT**.
+7. Click **Next**.
 
-8. On the *MOVE* page, review the diagram to see the number of VPGs and VMs included in the move and where they will be moved to, then click **START MOVE**.
+8. On the *Move* page, review the diagram to see the number of VPGs and VMs included in the move and where they will be moved to, then click **Start Move**.
 
     The move process creates the VMs in the target region.
 
