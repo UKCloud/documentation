@@ -4,7 +4,7 @@ description: Overview of UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
 reviewer: William Turner
-lastreviewed: 08/04/2020
+lastreviewed: 17/04/2020
 
 toc_rootlink: Users
 toc_sub1: Reference
@@ -55,7 +55,7 @@ You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling. V
 
 ### Storage
 
-| Type of storage             | Description                                                                                     | Notes vs Azure                                                                           |
+| Type of storage             | Description                                                                                     | Notes vs public Azure                                                                           |
 |-----------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | Azure Blob Storage (block)  | Object storage; good for storing documents, videos, images and so on. | Maximum block blob size is 4.75 TB (100 MB x 50,000 blocks) for the 1802 update or newer version. Previous versions are limited to 50,000 x 4 MB (approximately 195 GB). Blob name size differs slightly at 880 characters (1,760 bytes), compared to 1,024 characters (2,048 bytes) for public Azure. |
 | Azure Blob Storage (page) | Used to support virtual machine disks; good for randomly accessed large files. | Maximum page blob size differs greatly at 1TB for Azure Stack, compared to 8TB for public Azure. |
@@ -134,7 +134,7 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
 
 - Use load balancers to make the best use of IP address quota.
 
-- Azure Stack Hub API may be a couple of releases behind Azure API.
+- Azure Stack Hub API may be a couple of releases behind public Azure API.
 
 - Single region and single state set (affects availability).
 
@@ -154,7 +154,7 @@ Azure Stack Hub storage is all served from the same pool of disks and does not p
 
 - Consider use of temporary storage.
 
-- For some blob types, there is a difference in maximum storage between Azure and Azure Stack Hub.
+- For some blob types, there is a difference in maximum storage between public Azure and Azure Stack Hub.
 
 - No guarantees around IOPs.
 
