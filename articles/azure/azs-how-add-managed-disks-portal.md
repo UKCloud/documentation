@@ -4,7 +4,7 @@ description: Provides help adding managed disks to a virtual machine on UKCloud 
 services: azure-stack
 author: Shaion O'Niel
 reviewer: William Turner 
-lastreviewed: 14/04/2020
+lastreviewed: 17/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -96,7 +96,7 @@ If you're adding a new disk:
 
     - **Location** - This will be frn00006, which is the location of the Azure Stack Hub.
 
-    - **Account type** - Premium disks (SSD) are backed by solid state drives and offer consistent, low-latency performance. They provide the best balance between price and performance, and are ideal for I/O-intensive applications and production workloads. Standard disks (HDD) are backed by magnetic drives and are preferable for applications where data is accessed infrequently.
+    - **Account type** - Whilst both *Standard HDD* and *Premium SSD* are available options, in Azure Stack Hub there is no difference between the two in terms of performance or pricing. Storage speed is instead determined by the size of the virtual machine that the disk is attached to.
 
     - **Source type** - Create a disk from a snapshot of another disk, a blob in a storage account, or create an empty disk.
 
