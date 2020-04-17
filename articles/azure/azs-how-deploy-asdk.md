@@ -55,17 +55,17 @@ Install Windows Server 2016 to the OS disk implementing a static IP address.
 
 [https://software.cisco.com/download/release.html?mdfid=286281356&softwareid=283291009&os=Windows%202016%2064-bit&release=3.0(3a)&relind=AVAILABLE&rellifecycle=&reltype=latest](https://software.cisco.com/download/release.html?mdfid=286281356&softwareid=283291009&os=Windows%202016%2064-bit&release=3.0(3a)&relind=AVAILABLE&rellifecycle=&reltype=latest)
 
-**Virtualisation Note:** VMware tools must be installed and the VMware Tools drivers must be exported onto the c: drive (VMwareKB), also disks have to be online and initialised as MBR
+**Virtualisation Note:** VMware tools must be installed and the VMware Tools drivers must be exported onto the C: drive (VMwareKB), also disks have to be online and initialised as MBR
 
 ## Step 3 - Initial setup
 
 Download the appliance and prep the virtual disk (vhdx) for the ASDK.
 
-Implement the following steps from the guide: [https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script)
+Implement the following steps from the guide:
 
-- Download and extract the development kit
+- [Download and extract the development kit](https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-download)
 
-- Prepare the development kit host
+- [Prepare the development kit host](https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-prepare-host)
 
 **Virtualisation Note:** Before running the installer, open \"C:\AzureStack\_Installer\asdk-installer.ps1\" and edit as follows:
 
