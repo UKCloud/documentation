@@ -61,7 +61,7 @@ Install Windows Server 2016 to the OS disk implementing a static IP address.
 
 Download the appliance and prep the virtual disk (vhdx) for the ASDK.
 
-Implement the following steps from the guide:
+Implement the following steps from the Microsoft documentation:
 
 - [Download and extract the development kit](https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-download)
 
@@ -99,9 +99,9 @@ Once step 3 is complete the box will have been rebooted from the vhdx downloaded
 
 ## Step 4 - Install ASDK
 
-Implement the following steps from the guide:
+Implement the following steps from the Microsoft documentation:
 
-- [Deploy the development kit](https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-deploy-powershell)
+- [Deploy the development kit](https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-install)
 
 The following details should be used:
 
