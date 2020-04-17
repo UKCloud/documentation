@@ -112,6 +112,8 @@ The following details should be used:
 | Type          | Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com |
 | Static IP     | Different IP than what you currently have - eg. 10.0.0.101 was my box 10.0.0.191 I set up - or just current IP + 1                                                     |
 
+# [Physical Kit Deployment](#tab/tabid-a)
+
 **Physical Note:** Before running the installation, make sure only one network adapter is enabled, otherwise install will fail.
 
 For some reason the driver injection does not work and you have to manually add Ethernet Adapters from Device Manager, then disable everything but management-0. Configure its IP address and then run the install.
@@ -177,10 +179,12 @@ cd C:\CloudDeployment\Setup
 .\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $Credentials -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -NatIPv4Subnet 51.179.198.224/28 -NatIPv4Address 51.179.198.227 -NatIPv4DefaultGateway 51.179.198.225 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
 ```
 
-**Virtualisation Note:** after completing the wizard BUT before clicking install copy the command as the install will fail.
+# [Virtualisation Deployment](#tab/tabid-b)
+
+**Virtualisation Note:** after completing the wizard BUT before clicking deploy, copy the command as the install will fail.
 
 > [!IMPORTANT]
-> If the installer cannot see any network adapters - you can install manually VMware Tools and reboot the box. It will work then.
+> If the installer cannot see any network adapters - you can manually install VMware Tools and reboot the box.
 
 ```powershell
 E:\AzureStack_Installer\asdk-installer.ps1
@@ -188,9 +192,7 @@ E:\AzureStack_Installer\asdk-installer.ps1
 Initialize environment. Please wait...
 ```
 
-This will just end with nothing.
-
-Then you need to run the copied InstallAzureStackPOC.ps1 to create the Roles directory.
+This will just end with nothing after exiting the installer wizard.
 
 Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and edit as follows:
 
@@ -199,7 +201,7 @@ Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and 
 | 521         | `$physicalMachine.IsVirtualMachine | Should Be $false`                                                                                 | `$physicalMachine.IsVirtualMachine | Should Be $true`                                                    |
 | 521         | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine` | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0` |
 
-To edit run:
+To edit, run:
 
 ```powershell
 Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace  "\`$physicalMachine.IsVirtualMachine \| Should Be \`$false","`$physicalMachine.IsVirtualMachine | Should Be `$true"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
@@ -211,14 +213,14 @@ And then run:
 Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
 ```
 
-To verify run:
+To verify, run:
 
 ```powershell
 Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Pattern "\`$physicalMachine.IsVirtualMachine \| Should Be \`$true"
 Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Pattern "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0"
 ```
 
-After you modified it, run:
+After you've modified it, run:
 
 ```powershell
 $AdminPass = ConvertTo-SecureString -String 'Password123'-AsPlainText -Force
@@ -233,9 +235,13 @@ cd C:\CloudDeployment\Setup
 
 If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@\<domain\>.onmicrosoft.com
 
-- [Develop templates for Azure Stack Hub](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+***
 
-- [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
+## Useful Links
+
+- [Develop templates for Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-develop-templates)
+
+- [Deploy templates with PowerShell](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-deploy-template-powershell)
 
 ## Feedback
 
