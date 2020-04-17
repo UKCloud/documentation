@@ -71,12 +71,12 @@ Implement the following steps from the guide:
 
 | Line Number | Current Code                                                                             | Details                                                                          |
 |-------------|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| 1372        | `elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'null') {` |
+| 1917        | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {` |
 
 To run:
 
 ```powershell
-Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object -FilterScript {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
+Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
 ```
 
 To verify:
