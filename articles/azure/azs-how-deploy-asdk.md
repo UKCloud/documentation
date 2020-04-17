@@ -3,8 +3,8 @@ title: How to deploy and configure the Azure Stack Hub Development Kit
 description: Deploy and configure the Azure Stack Hub Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 17/04/2020
 
 toc_rootlink: Operators
 toc_sub1: How To
@@ -28,14 +28,14 @@ The ASDK is used in two modes within UKCloud:
 
 ## Step 1 - Hardware pre-requisites
 
-Detailed specifications are here - [https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy)
+Detailed specifications can be found [here](https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-deploy-considerations)
 
 | Device     | Details         |
 |------------|-----------------|
 | CPU        | \>=16 cores     |
-| RAM        | \>=128GB        |
+| RAM        | \>=192GB        |
 | OS Disks   | \>=200GB        |
-| Data Disks | \>=4 \* \>=250G |
+| Data Disks | \>=4 \* \>=240G |
 
 **Virtualisation Note:** VMware HW must be \>=11, CPU virtual extension pass-through must be enabled
 
