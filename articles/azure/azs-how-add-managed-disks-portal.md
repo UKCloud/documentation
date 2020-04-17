@@ -96,7 +96,7 @@ If you're adding a new disk:
 
     - **Location** - This will be frn00006, which is the location of the Azure Stack Hub.
 
-    - **Account type** - Whilst both *Standard HDD* and *Premium SSD* are available options, in Azure Stack Hub there is no difference between the two in terms of performance or pricing. Storage speed is instead determined by the size of the virtual machine that the disk is attached to.
+    - **Account type** - Whilst both *Standard HDD* and *Premium SSD* are available options, in Azure Stack Hub there is no difference between the two in terms of performance or pricing. Storage speed is instead determined by the size of the virtual machine that the disk is attached to. The *Premium SSD* option is only available to prevent compatibility issues with the Azure API.
 
     - **Source type** - Create a disk from a snapshot of another disk, a blob in a storage account, or create an empty disk.
 
