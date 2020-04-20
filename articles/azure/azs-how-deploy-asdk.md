@@ -84,7 +84,7 @@ The following details should be used:
 
 | Option        | Parameter                                                                          |
 |---------------|------------------------------------------------------------------------------------|
-| NTP           | 46.227.200.76                                                                       |
+| NTP           | 46.227.200.76                                                                      |
 | DNS Forwarder | 8.8.8.8                                                                            |
 | Drivers       | Browse to path of either the extracted Cisco drivers or the extracted VMware tools |
 | Computer Name | Anything but "azurestack", eg: "azurestackhost"                                    |
@@ -94,7 +94,7 @@ The following details should be used:
 
 Before running the installer, open \"C:\AzureStack\_Installer\asdk-installer.ps1\" and edit as follows:
 
-| Line Number | Current Code                                                                             | Details                                                                          |
+| Line Number | Current Code                                                                             | Updated code                                                                          |
 |-------------|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | 1917        | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {` |
 
@@ -128,7 +128,7 @@ The following details should be used:
 
 | Option        | Parameter                                                                                                                                                              |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| NTP           | 46.227.200.76                                                                                                                                                           |
+| NTP           | 46.227.200.76                                                                                                                                                          |
 | DNS Forwarder | 8.8.8.8                                                                                                                                                                |
 | Type          | Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com |
 | Static IP     | Different IP than what you currently have - eg. 10.0.0.101 was my box 10.0.0.191 I set up - or just current IP + 1                                                     |
@@ -150,19 +150,24 @@ This will just end with nothing after exiting the installer wizard.
 
 Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and edit as follows:
 
-| Line Number | Current code                                                                                                                           | Details                                                                                                  |
-|-------------|----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| 1202         | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine` | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0` |
+| Line Number | Current code                                                                                                                           | Updated code                                                                                             | Reference                                                                                                                         |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| 780         | `PartNumber = $_.PartNumber.Trim();`                                                                                                   | `PartNumber = $_.PartNumber;`                                                                            | https://social.msdn.microsoft.com/Forums/en-US/f9060fe2-4408-41a4-b387-09a3e9a09f00/ltstacktracegtat-line-762-in?forum=AzureStack |
+| 1202        | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine` | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0` |                                                                                                                                   |
 
 To edit, run:
 
 ```powershell
+Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace "$_.PartNumber.Trim\(\);", "$_.PartNumber;"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
+
 Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
 ```
 
 To verify, run:
 
 ```powershell
+Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Pattern "PartNumber = \`$_.PartNumber;"
+
 Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Pattern "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0"
 ```
 
