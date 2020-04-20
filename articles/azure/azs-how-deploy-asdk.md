@@ -22,9 +22,9 @@ The Azure Stack Hub Development Kit (ASDK) is a single server instance of Azure 
 
 The ASDK is used in two modes within UKCloud:
 
-- Physical hardware (pre-production) - Community support with Microsoft
+- Physical hardware (pre-production) - Community support with Microsoft.
 
-- Virtual servers (development and testing) - not officially supported by Microsoft This document covers two scenarios, building from scratch and redeploying.
+- Virtual servers (development and testing) - Not officially supported by Microsoft.
 
 ## Step 1 - Hardware pre-requisites
 
@@ -37,7 +37,9 @@ Detailed specifications can be found [here](https://docs.microsoft.com/en-us/azu
 | OS Disks   | \>=200GB        |
 | Data Disks | \>=4 \* \>=240G |
 
-**Virtualisation Note:** VMware HW must be \>=11, CPU virtual extension pass-through must be enabled
+## [Virtual Deployment](#tab/tabid-1)
+
+VMware HW must be \>=11, CPU virtual extension pass-through must be enabled.
 
 > [!IMPORTANT]
 > If you deploy your VM with Hardware Version 11 and Operating System Family as Windows Server 2016 you will not be able to create S2D Cluster as disk UUIDs are not exposed.
@@ -45,17 +47,28 @@ Detailed specifications can be found [here](https://docs.microsoft.com/en-us/azu
 > Either create it with Windows Server 2012 and change later or in Configuration Parameters -\> Click Add Row. In the Name column, enter disk.EnableUUID.
 > In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.
 
-**Physical Note:** The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC
+
+## [Physical Deployment](#tab/tabid-2)
+
+The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC.
+
+***
 
 ## Step 2 - Install base operating system
 
 Install Windows Server 2016 to the OS disk implementing a static IP address.
 
-**Physical Note:** This the RAID 1 disk, the following drivers must be downloaded, extracted and installed:
+## [Virtual Deployment](#tab/tabid-1)
+
+VMware tools must be installed and the VMware Tools drivers must be exported onto the C: drive (VMwareKB). Additionally, the disks have to be online and initialised as MBR.
+
+## [Physical Deployment](#tab/tabid-2)
+
+On the RAID 1 disk, the following drivers must be downloaded, extracted and installed:
 
 [https://software.cisco.com/download/release.html?mdfid=286281356&softwareid=283291009&os=Windows%202016%2064-bit&release=3.0(3a)&relind=AVAILABLE&rellifecycle=&reltype=latest](https://software.cisco.com/download/release.html?mdfid=286281356&softwareid=283291009&os=Windows%202016%2064-bit&release=3.0(3a)&relind=AVAILABLE&rellifecycle=&reltype=latest)
 
-**Virtualisation Note:** VMware tools must be installed and the VMware Tools drivers must be exported onto the C: drive (VMwareKB), also disks have to be online and initialised as MBR
+***
 
 ## Step 3 - Initial setup
 
@@ -67,33 +80,41 @@ Implement the following steps from the Microsoft documentation:
 
 - [Prepare the development kit host](https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-prepare-host)
 
-**Virtualisation Note:** Before running the installer, open \"C:\AzureStack\_Installer\asdk-installer.ps1\" and edit as follows:
+The following details should be used:
+
+| Option        | Parameter                                                                          |
+|---------------|------------------------------------------------------------------------------------|
+| NTP           | 46.227.200.76                                                                       |
+| DNS Forwarder | 8.8.8.8                                                                            |
+| Drivers       | Browse to path of either the extracted Cisco drivers or the extracted VMware tools |
+| Computer Name | Anything but "azurestack", eg: "azurestackhost"                                    |
+| Static IP     | IP details assigned to the current interface                                       |
+
+## [Virtual Deployment](#tab/tabid-1)
+
+Before running the installer, open \"C:\AzureStack\_Installer\asdk-installer.ps1\" and edit as follows:
 
 | Line Number | Current Code                                                                             | Details                                                                          |
 |-------------|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | 1917        | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {` |
 
-To run:
+To edit, run:
 
 ```powershell
 Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
 ```
 
-To verify:
+To verify, run:
 
 ```powershell
 Select-String -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Pattern "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{"
 ```
 
-The following details should be used:
+## [Physical Deployment](#tab/tabid-2)
 
-| Option        | Parameter                                                                          |
-|---------------|------------------------------------------------------------------------------------|
-| NTP           | 13.79.239.69                                                                       |
-| DNS Forwarder | 8.8.8.8                                                                            |
-| Drivers       | Browse to path of either the extracted Cisco drivers or the extracted VMware tools |
-| Computer Name | Anything but "azurestack", eg: "azurestackhost"                                    |
-| Static IP     | IP details assigned to the current interface                                       |
+No additional steps.
+
+***
 
 Once step 3 is complete the box will have been rebooted from the vhdx downloaded above.
 
@@ -107,16 +128,62 @@ The following details should be used:
 
 | Option        | Parameter                                                                                                                                                              |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| NTP           | 13.79.239.69                                                                                                                                                           |
+| NTP           | 46.227.200.76                                                                                                                                                           |
 | DNS Forwarder | 8.8.8.8                                                                                                                                                                |
 | Type          | Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com |
 | Static IP     | Different IP than what you currently have - eg. 10.0.0.101 was my box 10.0.0.191 I set up - or just current IP + 1                                                     |
 
-# [Physical Kit Deployment](#tab/tabid-a)
+## [Virtual Deployment](#tab/tabid-1)
 
-**Physical Note:** Before running the installation, make sure only one network adapter is enabled, otherwise install will fail.
+> [!NOTE]
+> If the installer cannot see any network adapters - you can manually install VMware Tools and reboot the box.
 
-For some reason the driver injection does not work and you have to manually add Ethernet Adapters from Device Manager, then disable everything but management-0. Configure its IP address and then run the install.
+After completing the wizard BUT before clicking deploy, copy the command as the install will fail.
+
+```powershell
+E:\AzureStack_Installer\asdk-installer.ps1
+
+Initialize environment. Please wait...
+```
+
+This will just end with nothing after exiting the installer wizard.
+
+Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and edit as follows:
+
+| Line Number | Current code                                                                                                                           | Details                                                                                                  |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| 1202         | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine` | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0` |
+
+To edit, run:
+
+```powershell
+Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
+```
+
+To verify, run:
+
+```powershell
+Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Pattern "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0"
+```
+
+After you've modified it, run:
+
+```powershell
+$AdminPass = ConvertTo-SecureString -String 'Password123'-AsPlainText -Force
+$Username = "azurestackadmin@<domain>.onmicrosoft.com"
+$Password = "<password>"
+$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
+$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+
+cd C:\CloudDeployment\Setup
+.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -DNSForwarder 8.8.8.8 -TimeServer 46.227.200.76
+```
+
+## [Physical Deployment](#tab/tabid-2)
+
+> [!NOTE]
+> Before running the installation, make sure only one network adapter is enabled, otherwise the install will fail.
+> For some reason the driver injection does not work and you have to manually add Ethernet Adapters from Device Manager, then disable everything but management-0. Configure its IP address and then run the install.
 
 **Important:** 1803 install failed with the error below.
 
@@ -156,9 +223,9 @@ At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 
 Verification of Physical kit showed that Virtualisation is in fact enabled but Hyper-V is not starting on boot.
 
-To verify run you can run systeminfo and it will show whether BIOS is set correctly etc... In our case it was set correctly. Only Boot settings were not.
+To verify, you can run systeminfo and it will show whether BIOS is set correctly etc... In our case it was set correctly. Only the Boot settings were not.
 
-To fix it run from elevated command/powershell prompt:
+To fix it, run the below from an elevated command/powershell prompt:
 
 ```powershell
 BCDEDIT /Set {current} hypervisorlaunchtype auto
@@ -176,58 +243,12 @@ $Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
 $Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
 
 cd C:\CloudDeployment\Setup
-.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $Credentials -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
+.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $Credentials -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -DNSForwarder 8.8.8.8 -TimeServer 46.227.200.76
 ```
-
-# [Virtualisation Deployment](#tab/tabid-b)
-
-**Virtualisation Note:** after completing the wizard BUT before clicking deploy, copy the command as the install will fail.
-
-> [!IMPORTANT]
-> If the installer cannot see any network adapters - you can manually install VMware Tools and reboot the box.
-
-```powershell
-E:\AzureStack_Installer\asdk-installer.ps1
-
-Initialize environment. Please wait...
-```
-
-This will just end with nothing after exiting the installer wizard.
-
-Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and edit as follows:
-
-| Line Number | Current code                                                                                                                           | Details                                                                                                  |
-|-------------|----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| 1202         | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine` | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0` |
-
-To edit, run:
-
-```powershell
-Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
-```
-
-To verify, run:
-
-```powershell
-Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Pattern "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0"
-```
-
-After you've modified it, run:
-
-```powershell
-$AdminPass = ConvertTo-SecureString -String 'Password123'-AsPlainText -Force
-$Username = "azurestackadmin@<domain>.onmicrosoft.com"
-$Password = "<password>"
-$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
-$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
-
-cd C:\CloudDeployment\Setup
-.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
-```
-
-If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@\<domain\>.onmicrosoft.com
 
 ***
+
+If you do not set the InfraAzureDirectoryTenantAdminCredential, then you will get prompted for AAD Account a few minutes after you run the script - use azurestackadmin@\<domain\>.onmicrosoft.com
 
 ## Useful Links
 
