@@ -148,6 +148,8 @@ Initialize environment. Please wait...
 
 This will just end with nothing after exiting the installer wizard.
 
+Then you need to run the copied InstallAzureStackPOC.ps1 command to create the Roles directory which will contain the below script.
+
 Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and edit as follows:
 
 | Line Number | Current code                                                                                                                           | Updated code                                                                                             | Reference                                                                                                                         |
