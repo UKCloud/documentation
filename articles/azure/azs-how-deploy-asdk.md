@@ -185,7 +185,7 @@ cd C:\CloudDeployment\Setup
 > Before running the installation, make sure only one network adapter is enabled, otherwise the install will fail.
 > For some reason the driver injection does not work and you have to manually add Ethernet Adapters from Device Manager, then disable everything but management-0. Configure its IP address and then run the install.
 
-**Important:** 1803 install failed with the error below.
+1803 install failed with the error below:
 
 ```powershell
 Invoke-EceAction : Type 'Deployment' of Role 'Domain' raised an exception: 'AzS-DC01' failed to start.
