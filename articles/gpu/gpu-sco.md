@@ -162,13 +162,11 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Customer service
 
-**Customer Success Manager (CSM).** For the first 90 days of the service, you have access to a UKCloud CSM. They will help you with your adoption of the UKCloud Cloud GPU service, including finding relevant systems and using UKCloud tools and processes.
+**Cloud Architect.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. They are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
 
-**Cloud Architects.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. They are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
+**Service Delivery Manager (SDM).** An assigned point of contact who will provide any assistance you require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
-**Service Delivery Manager.** After the initial 90 days, you'll be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
-
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is outlined in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
+**Support Desk.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is outlined in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -178,11 +176,11 @@ Alongside the responsibilities outlined in the [*UKCloud for VMware Service Scop
 
 Outside of the creation of your UKCloud for VMware resources needed to support your GPU service, customers can request the addition of GPU capabilities in GPU-enabled zones via the service request option, and the service will be available within 10 working days.
 
-If you request access to Cloud GPU resources for existing VMs that are not in a GPU-enabled zone, our CSMs will work with you to configure new UKCloud for VMware, High Performance Compute or UKCloud for OpenStack services in the correct zone.
+If you request access to Cloud GPU resources for existing VMs that are not in a GPU-enabled zone, our SDMs will work with you to configure new UKCloud for VMware, High Performance Compute or UKCloud for OpenStack services in the correct zone.
 
 UKCloud has created several videos, helpful guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the [Knowledge Centre](https://docs.ukcloud.com/).
 
-As previously mentioned, you will be assigned a Customer Success Manager (CSM) to provide any assistance required during the first 90 days of the service.
+As previously mentioned, your Service Delivery Manager (SDM) will provide any assistance during the provisioning of the service.
 
 UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.
 

@@ -61,7 +61,7 @@ Methods for contacting The UKCloud team are as follows:
 
 - UKCloud Portal (Assured) - <https://portal.ukcloud.com/>
 
-- UKCloud Portal (Elevated) - Contact your Portal administrator or Customer Success Manager (CSM)
+- UKCloud Portal (Elevated) - Contact your Portal administrator or Service Delivery Manager (SDM)
 
 - Telephone - 01252 303 300 (select option 2)
 
@@ -121,7 +121,7 @@ During a Major Incident, updates are published to the Service Status page: <http
 
 ## Escalation
 
-For onboarding issues, contact your allocated Customer Success Manager (CSM).
+For onboarding issues, contact your allocated SDM.
 
 To escalate an incident or service request, contact the Support Team (by phone in the first instance):
 
@@ -129,7 +129,7 @@ To escalate an incident or service request, contact the Support Team (by phone i
 
 - Email: <escalations@ukcloud.com> (monitored 24 x 7)
 
-For wider service issues, contact your Service Delivery Manager during standard office hours.
+For wider service issues, contact your SDM during standard office hours.
 
 ## Feedback
 

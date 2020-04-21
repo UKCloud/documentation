@@ -64,7 +64,7 @@ Azure Active Directory is Microsoft's cloud-based Directory and Identity Access 
 
 # [I have an existing Azure Active Directory Domain](#tab/tabid-1)
 
-If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
+If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your Service Delivery Manager (SDM) with the following information:
 
 - Contact email address, for example, onboardingukcloud3@ukcloud.com
 
@@ -86,11 +86,11 @@ Accept the **Microsoft Store for Business and your data** agreement.
 
 ![Microsoft Store for Business Data Agreement](images/azs-browser-MS-SfB-agreement.png)
 
-After accepting the agreement you will be greeted with the following page. Tick the checkbox and click **Accept**, then contact your CSM so UKCloud can complete your onboarding process.
+After accepting the agreement you will be greeted with the following page. Tick the checkbox and click **Accept**, then contact your SDM so UKCloud can complete your onboarding process.
 
 ![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.png)
 
-Next, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
+Next, you should receive a welcome email from your SDM containing the details of your new UKCloud for Microsoft Azure environment.
 
 > [!IMPORTANT]
 > If you have conditional access policies enabled for your Azure Active Directory, follow the instructions from the invitation email to allow us access to your AAD.
@@ -99,7 +99,7 @@ Next, you should receive a welcome email from your CSM containing the details of
 
 # [I do not have an existing Azure Active Directory](#tab/tabid-2)
 
-If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
+If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your Service Delivery Manager (SDM) with the following information:
 
 - Contact name, for example, John Doe
 
@@ -113,7 +113,7 @@ If you've decided that UKCloud for Microsoft Azure is the right environment for 
 
 Once you've provided this information, UKCloud will set up your new UKCloud for Microsoft Azure environment.
 
-After providing the above details, you should receive a welcome email shortly from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
+After providing the above details, you should receive a welcome email shortly from your SDM containing the details of your new UKCloud for Microsoft Azure environment.
 
 ***
 

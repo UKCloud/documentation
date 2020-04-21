@@ -45,7 +45,7 @@ Both our Corsham and Farnborough sites have Janet connectivity.
 
 ## How do I get a Janet connection via the UKCloud Assured OFFICIAL security domain?
 
-To place an order for a Janet connection, please raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or speak to your Service Delivery Manager.
+To place an order for a Janet connection, please raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Can I get a Janet connection via the UKCloud Elevated OFFICIAL security domain?
 

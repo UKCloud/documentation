@@ -40,8 +40,6 @@ Once a purchase order is received, within 4 hours of accepting an order (shorter
 
 We've created several articles, guides and FAQs to help you get up and running quickly and easily. These are available within our Knowledge Centre.
 
-In addition, you'll be assigned a Customer Success Manager (CSM) to provide any assistance required during your initial adoption of the service.
-
 UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.
 
 ### Azure Stack Hub service management
@@ -280,13 +278,11 @@ UKCloud can offer additional professional and managed services in relation to Mi
 
 ## Customer service
 
-**Customer Success Manager (CSM).** During your initial time with UKCloud, you'll be assigned a CSM, who will help you with your adoption of the UKCloud for Microsoft Azure service, including finding relevant systems and using UKCloud tools and processes.
+**Cloud Architect.** Cloud Architects support you during the design of solutions for the cloud platform. Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
 
-**Cloud Architects.** Cloud Architects support you during the design of solutions for the cloud platform. Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
+**Service Delivery Manager (SDM).** An assigned point of contact who will provide any assistance you require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
-**Service Delivery Managers.** You'll be allocated an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
-
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
+**Support Desk.** After the initial onboarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Supporting documents and resources
 
