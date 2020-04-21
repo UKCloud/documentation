@@ -37,7 +37,7 @@ Detailed specifications can be found [here](https://docs.microsoft.com/en-us/azu
 | OS Disks   | \>=200GB        |
 | Data Disks | \>=4 \* \>=240G |
 
-## [Virtual Deployment](#tab/tabid-1)
+### [Virtual Deployment](#tab/tabid-1)
 
 VMware HW must be \>=11, CPU virtual extension pass-through must be enabled.
 
@@ -47,8 +47,7 @@ VMware HW must be \>=11, CPU virtual extension pass-through must be enabled.
 > Either create it with Windows Server 2012 and change later or in Configuration Parameters -\> Click Add Row. In the Name column, enter disk.EnableUUID.
 > In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.
 
-
-## [Physical Deployment](#tab/tabid-2)
+### [Physical Deployment](#tab/tabid-2)
 
 The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC.
 
@@ -58,11 +57,11 @@ The first two drives must be setup as a RAID 1, the rest passed through as a JBO
 
 Install Windows Server 2016 to the OS disk implementing a static IP address.
 
-## [Virtual Deployment](#tab/tabid-1)
+### [Virtual Deployment](#tab/tabid-1)
 
 VMware tools must be installed and the VMware Tools drivers must be exported onto the C: drive (VMwareKB). Additionally, the disks have to be online and initialised as MBR.
 
-## [Physical Deployment](#tab/tabid-2)
+### [Physical Deployment](#tab/tabid-2)
 
 On the RAID 1 disk, the following drivers must be downloaded, extracted and installed:
 
@@ -90,7 +89,7 @@ The following details should be used:
 | Computer Name | Anything but "azurestack", eg: "azurestackhost"                                    |
 | Static IP     | IP details assigned to the current interface                                       |
 
-## [Virtual Deployment](#tab/tabid-1)
+### [Virtual Deployment](#tab/tabid-1)
 
 Before running the installer, open \"C:\AzureStack\_Installer\asdk-installer.ps1\" and edit as follows:
 
@@ -110,11 +109,13 @@ To verify, run:
 Select-String -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Pattern "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{"
 ```
 
-## [Physical Deployment](#tab/tabid-2)
+### [Physical Deployment](#tab/tabid-2)
 
 No additional steps.
 
 ***
+
+<br>
 
 Once step 3 is complete the box will have been rebooted from the vhdx downloaded above.
 
@@ -133,7 +134,7 @@ The following details should be used:
 | Type          | Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com |
 | Static IP     | Different IP than what you currently have - eg. 10.0.0.101 was my box 10.0.0.191 I set up - or just current IP + 1                                                     |
 
-## [Virtual Deployment](#tab/tabid-1)
+### [Virtual Deployment](#tab/tabid-1)
 
 > [!NOTE]
 > If the installer cannot see any network adapters - you can manually install VMware Tools and reboot the box.
@@ -186,13 +187,35 @@ cd C:\CloudDeployment\Setup
 .\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -DNSForwarder 8.8.8.8 -TimeServer 46.227.200.76
 ```
 
-## [Physical Deployment](#tab/tabid-2)
+### [Physical Deployment](#tab/tabid-2)
 
 > [!NOTE]
 > Before running the installation, make sure only one network adapter is enabled, otherwise the install will fail.
 > For some reason the driver injection does not work and you have to manually add Ethernet Adapters from Device Manager, then disable everything but management-0. Configure its IP address and then run the install.
 
-1803 install failed with the error below:
+Example of Automated Physical Kit Deployment:
+
+```powershell
+$AdminPass = ConvertTo-SecureString -String 'Password123' -AsPlainText -Force
+$Username = "azurestackadmin@<domain>.onmicrosoft.com"
+$Password = "<password>"
+$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
+$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+
+cd C:\CloudDeployment\Setup
+.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $Credentials -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -DNSForwarder 8.8.8.8 -TimeServer 46.227.200.76
+```
+
+***
+
+<br>
+
+> [!IMPORTANT]
+> Do not set the InfraAzureDirectoryTenantAdminCredential parameter if the AAD account has MFA enabled. Instead, leave it blank and you will get prompted for the AAD Account a few minutes after you run the script.
+
+### Fix for Potential Installation Failure
+
+1803 install failed with the below error:
 
 ```powershell
 Invoke-EceAction : Type 'Deployment' of Role 'Domain' raised an exception: 'AzS-DC01' failed to start.
@@ -239,23 +262,6 @@ BCDEDIT /Set {current} hypervisorlaunchtype auto
 ```
 
 Then reboot the box and continue the install.
-
-Example of Automated Physical Kit Deployment:
-
-```powershell
-$AdminPass = ConvertTo-SecureString -String 'Password123' -AsPlainText -Force
-$Username = "azurestackadmin@<domain>.onmicrosoft.com"
-$Password = "<password>"
-$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
-$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
-
-cd C:\CloudDeployment\Setup
-.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $Credentials -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -DNSForwarder 8.8.8.8 -TimeServer 46.227.200.76
-```
-
-***
-
-If you do not set the InfraAzureDirectoryTenantAdminCredential, then you will get prompted for AAD Account a few minutes after you run the script - use azurestackadmin@\<domain\>.onmicrosoft.com
 
 ## Useful Links
 
