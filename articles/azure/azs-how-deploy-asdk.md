@@ -211,7 +211,7 @@ cd C:\CloudDeployment\Setup
 <br>
 
 > [!IMPORTANT]
-> Do not set the InfraAzureDirectoryTenantAdminCredential parameter if the AAD account has MFA enabled. Instead, leave it blank and you will get prompted for the AAD Account a few minutes after you run the script.
+> Do not set the InfraAzureDirectoryTenantAdminCredential parameter if the AAD account has MFA enabled as you will not be able to authenticate correctly. Instead, leave it blank and you will get prompted for the AAD Account a few minutes after you run the script.
 
 ### Fix for Potential Installation Failure
 
