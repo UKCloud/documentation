@@ -113,13 +113,8 @@
 <li><p>In the <em>Disks</em> blade, select the disk you would like to resize.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.</p>
-</div>
-</li>
-<li><p>In the disk's blade, enter the desired size of the disk in GiB in the <strong>Size</strong> field.</p>
-<div class="NOTE">
-<h5>Note</h5>
 <ul>
+<li>Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.</li>
 <li>Disks can only be resized to a larger size.</li>
 <li>Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both are provided below.</li>
 </ul>
@@ -137,18 +132,29 @@
 </ul>
 <section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
 
+<ol>
+<li><p>In the disk's blade, select <strong>Configuration</strong>.</p>
+</li>
+<li><p>Enter the desired size of the disk in GiB in the <strong>Size</strong> field.</p>
 <p><img src="images/azs-browser-vm-disk-size-managed.png" alt="Managed disk resize"></p>
+</li>
+<li><p>When you're done, click <strong>Save</strong>.</p>
+</li>
+</ol>
 </section>
 <section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 
+<ol>
+<li><p>Enter the desired size of the disk in GiB in the <strong>Size</strong> field.</p>
 <p><img src="images/azs-browser-vm-disk-size.png" alt="Unmanaged disk resize"></p>
+</li>
+<li><p>When you're done, click <strong>Save</strong>.</p>
+</li>
+</ol>
 </section>
 </div>
 
-<ol start="7">
-<li><p>When you're done, click <strong>Save</strong>.</p>
-<p><img src="images/azs-browser-vm-disk-save-button.png" alt="VM disks save button"></p>
-</li>
+<ol start="6">
 <li><p>You can monitor the progress of the disk resizing by clicking the <strong>Notifications</strong> icon.</p>
 <p><img src="images/azsp_createvm_progress.png" alt="Notification showing updating virtual machine disk"></p>
 </li>
