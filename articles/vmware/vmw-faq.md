@@ -463,7 +463,7 @@ You can request a trial via the UKCloud website: <https://www.ukcloud.com/free-t
 
 ### What do I do when my trial comes to an end?
 
-You will be contacted by your Cloud Architect or CSM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner).
+You will be contacted by your Cloud Architect or Service Delivery Manager (SDM) when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner).
 
 At the end of your trial, you have the option to transition to production or cease the trial.
 

@@ -30,7 +30,7 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 
 ## Before you begin
 
-You should have received your UKCloud Portal login credentials from your Customer Success Manager (CSM).
+You should have received your UKCloud Portal login credentials from your Service Delivery Manager (SDM).
 
 ## Introductions to UKCloud for VMware
 
@@ -50,7 +50,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 
     - **Assured OFFICIAL:** <https://portal.ukcloud.com>
 
-    - **Elevated OFFICIAL:** Contact your Portal administrator or Customer Success Manager (CSM)
+    - **Elevated OFFICIAL:** Contact your Portal administrator or SDM
 
 2. On the *Log in* page, enter your credentials and click **Sign in**.
 
@@ -59,7 +59,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
     > [!TIP]
     > If you've forgotten your password, click the **Forgotten password?** link to request a password reset.
 
-    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.
+    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or SDM. You'll be prompted to change this temporary password.
 
 3. If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)
 

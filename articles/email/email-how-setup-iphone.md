@@ -67,7 +67,7 @@ For more information about ActiveSync, go to <https://en.wikipedia.org/wiki/Act
   
 6. Click **Next**.
 
-7. Enter your server details as supplied by your UKCloud Customer Success Manager.
+7. Enter your server details as supplied by your UKCloud Service Delivery Manager (SDM).
 
 8. Synchronise **Mail**, **Contacts**, and/or **Calendars** as you prefer by setting the appropriate sliders to on.
 

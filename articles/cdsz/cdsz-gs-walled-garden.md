@@ -61,7 +61,7 @@ During the provisioning of the Walled Garden service, we'll ask you for some add
 
     These IP addresses are the locations from which you can build and test the environment (for example, offices or end user premises).
 
-The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Customer Success Manager (CSM) will send you the information you need to access it.
+The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Service Delivery Manager (SDM) will send you the information you need to access it.
 
 ## Building your Walled Garden service
 

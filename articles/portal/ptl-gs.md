@@ -45,7 +45,7 @@ This Getting Started Guide is intended for any user with access to the Portal.
 
 ## Before you begin
 
-You should have received your Portal login credentials from your Portal administrator. If you're the Portal administrator, your Customer Success Manager (CSM) will have provided you with your login credentials.
+You should have received your Portal login credentials from your Portal administrator. If you're the Portal administrator, your Service Delivery Manager (SDM) will have provided you with your login credentials.
 
 The Portal works with Google Chrome, Microsoft Edge and Mozilla Firefox.
 
@@ -57,7 +57,7 @@ The first thing you need to do is log in.
 
     - **Assured OFFICIAL:** <https://portal.ukcloud.com>
 
-    - **Elevated OFFICIAL:** Contact your Portal administrator or Customer Success Manager (CSM)
+    - **Elevated OFFICIAL:** Contact your Portal administrator or SDM
 
 2. On the *Log in* page, enter your credentials and click **Sign in**.
 
@@ -66,7 +66,7 @@ The first thing you need to do is log in.
     > [!TIP]
     > If you've forgotten your password, click the **Forgotten password?** link to request a password reset.
 
-    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.
+    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or SDM. You'll be prompted to change this temporary password.
 
     > [!NOTE]
     > If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.
@@ -234,11 +234,6 @@ Within the UKCloud VMware environment there are two types of account:
 ### compute service
 
 A UKCloud for VMware top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogs, users and resources.
-
-### Customer Success Manager (CSM)
-
-A UKCloud Customer Services role aimed at providing you with any assistance you require during onboarding and the first 90 days of using
-a UKCloud service.
 
 ### Knowledge Centre
 

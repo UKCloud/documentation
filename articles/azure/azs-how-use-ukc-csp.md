@@ -29,7 +29,7 @@ If you already consume UKCloud for Microsoft Azure, or another UKCloud core clou
 - Access to our free 24x7 customer support
 
 > [!NOTE]
-> If you have an existing subscription that's not covered by a CSP (for example, an Enterprise Agreement subscription) this cannot be automatically used in your UKCloud public Azure environment. In this scenario, raise a service request so that we can contact you to discuss options, or speak to your Customer Success Manager or Service Delivery Manager.
+> If you have an existing subscription that's not covered by a CSP (for example, an Enterprise Agreement subscription) this cannot be automatically used in your UKCloud public Azure environment. In this scenario, raise a service request so that we can contact you to discuss options, or speak to your Service Delivery Manager.
 
 ## Prerequisites
 

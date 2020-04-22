@@ -77,7 +77,7 @@ High Performance Compute includes as standard:
 
 - DDoS-protected internet
 
-- Personalised support via Customer Success Managers, Service Delivery Managers and a telephone support desk
+- Personalised support via Service Delivery Managers and a telephone support desk
 
 To model a total cost of ownership, you may also want to consider additional elements, such as connectivity, and service options, such as cloud enablement and cross-domain services.
 

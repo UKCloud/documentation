@@ -36,12 +36,6 @@ The service is charged per mailbox per month (or part thereof) which includes 1G
 
 No. As Email and Collaboration has been removed from sale, a free trial is no longer available.
 
-## What happens when my trial comes to an end?
-
-Your Cloud Architect or CSM will contact you when your trial is due to end, either because you have used up all of your credits or because you have reached 30 days (whichever is sooner).
-
-At the end of your trial, you can transition to production or cease the trial.
-
 ## Where is the service hosted?
 
 The service is delivered from two secure UK data centres by UKCloud.
@@ -67,7 +61,7 @@ Yes, you can connect via PSN, Janet and HSCN; via legacy GCF networks including 
 There are several configuration options for using the PSN email relays. These can provide either resiliency across multiple PSN relays or give you an opportunity to just use a single relay (in case of maintenance on the other).
 
 > [!NOTE]
-> For Email services in regions 1, 2, 7 and 8, you’ll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.
+> For Email services in regions 1, 2, 7 and 8, you'll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.
 
 - Create a local host file entry on your mail system or a DNS entry on your internal DNS server with a name of your choice that is configured with both PSN relay IP addresses.
 
@@ -125,7 +119,7 @@ Yes, there is a minimum charge of 25 mailboxes per month required to set up Emai
 
 ## Is any spam software included?
 
-Yes, mail hygiene is provided via Cisco IronPort® for internet-facing solutions, providing protection against spam and malware. In addition, there is a centralised mail scanning solution within the PSN; combined with the fact that as a restricted network, spam is much less of an issue than with internet connections.
+Yes, mail hygiene is provided via Cisco IronPort&reg; for internet-facing solutions, providing protection against spam and malware. In addition, there is a centralised mail scanning solution within the PSN; combined with the fact that as a restricted network, spam is much less of an issue than with internet connections.
 
 ## Is there a mail archive solution?
 
@@ -145,7 +139,7 @@ Briefcase is a document storing and sharing function that allows users to upload
 
 ## What are the default Class of Service settings?
 
-A Class of Service exists for each e-mail domain and defines the features, access privileges and default preferences that a new user account receives. For existing accounts, if a setting has been specified within the client’s Preferences tab, it will take precedence; otherwise the Class of Service setting will be applied. All new accounts will inherit the settings from the Class of Service. For information about the default Class of Service settings, or to request that a setting is changed from the default, raise a Service Request via the My Calls section of the UKCloud Portal.
+A Class of Service exists for each e-mail domain and defines the features, access privileges and default preferences that a new user account receives. For existing accounts, if a setting has been specified within the client's Preferences tab, it will take precedence; otherwise the Class of Service setting will be applied. All new accounts will inherit the settings from the Class of Service. For information about the default Class of Service settings, or to request that a setting is changed from the default, raise a Service Request via the My Calls section of the UKCloud Portal.
 
 ## How long does it take to get the solution up and running?
 

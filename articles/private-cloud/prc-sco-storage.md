@@ -201,7 +201,7 @@ We will not supply you with root access to your hardware as your hardware will b
 
 ## To progress further
 
-For further information, please see the [*Private Cloud for Storage Service Definition*](prc-sd-storage.md) and contact your Service Delivery Manager to request more information or to place an order.
+For more information, see the [*Private Cloud for Storage Service Definition*](prc-sd-storage.md). Contact your Service Delivery Manager to request further information or to place an order.
 
 ## Feedback
 

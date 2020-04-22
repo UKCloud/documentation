@@ -119,7 +119,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 ### Your UKCloud Hosted responsibilities
 
-- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. Note that due to the secure nature of the site, at least 24 hours’ notice is required. Engineers must be escorted and this is charged at a [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) day rate.
+- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. Note that due to the secure nature of the site, at least 24 hours' notice is required. Engineers must be escorted and this is charged at a [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) day rate.
 
 ### Your CHDC Hosted responsibilities
 
@@ -237,7 +237,7 @@ As per All-Inclusive plus:
 
 - Providing you with visibility of capacity utilisation to ensure capacity planning can be effectively performed
 
-- Your assigned Service Delivery Manager will attend any required service reviews and project progress calls that you need
+- Your assigned Service Delivery Manager (SDM) will attend any required service reviews and project progress calls that you need
 
 - Notifying you of any maintenance windows and agreeing a suitable time to implement
 
@@ -307,7 +307,7 @@ SLA excludes:
 
 ## To progress further
 
-For further information, contact your Service Delivery Manager to request more information or to place an order.
+Contact your SDM to request more information or to place an order.
 
 ## Feedback
 
