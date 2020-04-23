@@ -37,7 +37,7 @@ If your cluster is using OpenShift Container Platform 3.10 or later, you can cre
 
 2. If necessary, switch to the account that contains the services you want the user to be able to access.
 
-3. If the user has no UKCloud Portal account, you will need to create an account for them first by refering to [*How to create a new user in the UKCloud Portal*](../portal/ptl-how-create-users.md).
+3. If the user has no UKCloud Portal account, you will need to create an account for them first by referring to [*How to create a new user in the UKCloud Portal*](../portal/ptl-how-create-users.md).
 
 4. To grant the users permissions to log into your OpenShift cluster: In the navigation panel, expand **Contacts**, then select **All Contacts**.
 
@@ -51,7 +51,7 @@ If your cluster is using OpenShift Container Platform 3.10 or later, you can cre
 
     ![OpenShift permissions tab for Portal contact](images/ptl-contacts-tab-oshift-permissions.png)
     
-7. Check the box(es) for the cluster(s) that you want the user to have access to, then click **Save**
+7. Select the checkbox(es) for the cluster(s) that you want the user to have access to, then click **Save**
 
     ![OpenShift permissions checkboxes](images/ptl-oshift-permissions-checkboxes.png)
 
