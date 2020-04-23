@@ -22,57 +22,36 @@ toc_mdlink: oshift-how-create-users.md
 
 If your cluster is using OpenShift Container Platform 3.10 or later, you can create users in the UKCloud Portal so that users need to remember only one lot of credentials and can also take advantage of two-factor authentication (2FA) that is provided via the Portal.
 
-> [!NOTE]
-> If your cluster is using an earlier version of OpenShift Container Platform, you must create users within OpenShift. For more information see the OpenShift [*Managing Users*](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_users.html) documentation.
 
 ## Creating a new OpenShift user
 
-To create a new user:
+> [!NOTE]
+> For OpenShift v3.10 and later clusters, you can add users and allow them to access your OpenShift environmnet using the UKCloud Portal permissions systems. For OpenShift v3.9 cluster, please [raise a service request](../portal/ptl-how-use-my-calls.md) to add new users.
+
 
 1. Log in to the UKCloud Portal
 
     For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
     > [!NOTE]
-    > You must log in as a Portal administrator for the account that includes the OpenShift cluster.
+    > You must log in as a Portal administrator.
 
-2. If necessary, switch to the account that includes the OpenShift cluster.
+2. If necessary, switch to the account that contains the services you want the user to be able to access.
 
-3. In the navigation panel, expand **Contacts**, then select **All Contacts**.
+3. If the user has no UKCloud Portal account, you will need to create an account for them first by refering to [*How to create a new user in the UKCloud Portal*](../portal/ptl-how-create-users.md).
 
-    ![All contacts menu option in the UKCloud Portal](images/ptl-menu-all-contacts.png)
+4. To grant the users permissions to log into your OpenShift cluster: In the navigation panel, expand **Contacts**, then select **All Contacts**.
 
-4. From the **Actions** menu, select **Add new contact**.
+    ![All Contacts menu option in UKCloud Portal](images/ptl-menu-all-contacts.png)
 
-    ![Add new contact menu option](images/ptl-mnu-add-new-contact.png)
+5. On the *Contacts* page, use the **Search** field to find the user to whom you want to assign OpenShift permissions and then click the **Edit** button.
 
-5. On the *New Contact* page, provide the user's name and contact information, then click **Save**.
+    ![Edit button for Portal contact](images/ptl-contacts-btn-edit.png)
 
-    ![New Contact page](images/ptl-new-contact.png)
+6. On the *Edit contact* page, select the **OpenShift Permissions** tab.
 
-6. After you've created the user account, you must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to grant the user access to the OpenShift cluster.
+    ![OpenShift permissions tab for Portal contact](images/ptl-contacts-tab-oshift-permissions.png)
 
-    a. In the navigation panel, expand **Support**, then select **My Calls**.
-
-    ![My Calls menu option in the UKCloud Portal](images/ptl_mnu-my-calls.png)
-
-    b. Click **Go to My Calls Portal**.
-
-    c. Click **New Service Request**.
-
-    d. Select **Generic Service Request**.
-
-    e. From the **UKCloud Service** list, select **UKCloud for OpenStack**.
-
-    f. In the **Additional Details** field, enter `Add Portal users to OpenShift cluster` and provide the following information:
-
-      - The name(s) of the user(s), and their username(s), that you want to add to the OpenShift cluster.
-
-      - The URL of the cluster that the user(s) should be added to. If there are multiple clusters the user(s) needs adding to then specify all of the cluster URLs here and it can be completed as one task.
-
-    g. When you're done, click **Review & Submit**.
-
-7. When the Service Request is resolved, the identified users can log in to the OpenShift web console and CLI using their UKCloud Portal credentials.
 
     If you've enabled two-factor authentication (2FA) in the account that includes the OpenShift cluster and users have set up 2FA for their user accounts, they will be prompted to provide a 2FA code when logging in to OpenShift.
 
