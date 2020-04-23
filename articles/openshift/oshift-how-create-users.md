@@ -23,10 +23,13 @@ toc_mdlink: oshift-how-create-users.md
 If your cluster is using OpenShift Container Platform 3.10 or later, you can create users in the UKCloud Portal so that users need to remember only one lot of credentials and can also take advantage of two-factor authentication (2FA) that is provided via the Portal.
 
 > [!NOTE]
-> If your cluster is using OpenShift Container Platform 3.9, please [raise a service request](../portal/ptl-how-use-my-calls.md) to add new users.
+> UKCloud engineers will sometimes need to add their user accounts (ending in *@ukcloud.com*) to your portal account and OpenShift environment to diagnose issues. The access will be removed when it is no longer required, however the user may continue to show in the output of the `oc get users` command. If you have any concerns about a user showing in your environment please [raise a service request](../portal/ptl-how-use-my-calls.md) for advice.
 
 
 ## Creating a new OpenShift user
+
+> [!NOTE]
+> If your cluster is using OpenShift Container Platform 3.9, please [raise a service request](../portal/ptl-how-use-my-calls.md) to add new users.
 
 1. Log in to the UKCloud Portal
 
