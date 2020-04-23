@@ -51,9 +51,16 @@ If your cluster is using OpenShift Container Platform 3.10 or later, you can cre
 6. On the *Edit contact* page, select the **OpenShift Permissions** tab.
 
     ![OpenShift permissions tab for Portal contact](images/ptl-contacts-tab-oshift-permissions.png)
+    
+7. Check the box(es) for the cluster(s) that you want the user to have access to, then click **Save**
+
+    ![OpenShift permissions checkboxes](images/ptl-oshift-permissions-checkboxes.png)
 
 
     If you've enabled two-factor authentication (2FA) in the account that includes the OpenShift cluster and users have set up 2FA for their user accounts, they will be prompted to provide a 2FA code when logging in to OpenShift.
+    
+> [!NOTE]
+> By default, the new user will be able to create new projects in OpenShift but they will be unable to view existing projects. Additional cluster or project roles can be added to the user if required. See the OpenShift [*Managing role bindings*](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_rbac.html#managing-role-bindings) documentation.
 
 ## Feedback
 
