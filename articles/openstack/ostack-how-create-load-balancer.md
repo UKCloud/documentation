@@ -3,8 +3,8 @@ title: How to create load balancing services on UKCloud for OpenStack
 description: Provides information to deploy a load balancing solution (LBaaS) within your OpenStack environment
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 15:17:17
+reviewer: Bryce Nicholls
+lastreviewed: 23/04/2020 15:43:17
 
 toc_rootlink: How To
 toc_sub1:
