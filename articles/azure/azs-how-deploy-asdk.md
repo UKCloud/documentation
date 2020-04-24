@@ -4,7 +4,7 @@ description: Deploy and configure the Azure Stack Hub Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
 reviewer: William Turner
-lastreviewed: 21/04/2020
+lastreviewed: 24/04/2020
 
 toc_rootlink: Operators
 toc_sub1: How To
