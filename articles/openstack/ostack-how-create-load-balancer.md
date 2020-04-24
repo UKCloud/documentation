@@ -174,7 +174,7 @@ This guide assumes that you have the following already configured in your enviro
 
 7. Update ports to allow traffic to be sent via VIP IP.
 
-    - Get the port IDs that need updating These are the IDs that are associated to IP addresses of the Load Balancer servers you just created (LB1-node1 & LB1-node2).
+    - Get the port IDs that need updating. These are the IDs that are associated to IP addresses of the Load Balancer servers you just created (LB1-node1 & LB1-node2).
 
         **Command:** `openstack port list --network <network-name>`
 
