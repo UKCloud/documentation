@@ -39,7 +39,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`
 
-3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
+3. In the *System Preparation Tool*, from the **System Cleanup Action** list, select **Enter System Out-of-Box Experience (OOBE)**.
 
 4. Ensure the **Generalize** check box is selected.
 
