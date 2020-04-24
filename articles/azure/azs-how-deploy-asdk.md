@@ -258,7 +258,7 @@ At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
  + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
 ```
 
-Verification of Physical kit showed that Virtualisation is in fact enabled but Hyper-V is not starting on boot.
+Verification of Physical kit showed that virtualisation is in fact enabled but Hyper-V is not starting on boot.
 
 To verify, you can run systeminfo and it will show whether BIOS is set correctly etc... In our case it was set correctly. Only the Boot settings were not.
 
