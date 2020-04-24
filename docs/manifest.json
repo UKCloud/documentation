@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-add-managed-disks-portal.html",
-          "hash": "oO5c3RX/XJDQ5+O2LL30fw=="
+          "hash": "7EVqeniwifzf+5E8pGVAdA=="
         }
       },
       "is_incremental": false,
@@ -18843,7 +18843,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-license-microsoft.html",
-          "hash": "K+1UCSjIvPDVDCEKJdUW+Q=="
+          "hash": "PLwU2huYUNI68zecXMcVGA=="
         }
       },
       "is_incremental": false,
@@ -19735,6 +19735,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19746,13 +19753,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 424,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }

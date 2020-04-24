@@ -165,11 +165,7 @@
 </li>
 <li><p><strong>Location</strong> - This will be frn00006, which is the location of the Azure Stack Hub.</p>
 </li>
-<li><p><strong>Account type</strong> - Standard disks (HDD) are backed by magnetic drives and are preferable for applications where data is accessed infrequently.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Currently, only standard disks (HDD) are available in UKCloud for Microsoft Azure.</p>
-</div>
+<li><p><strong>Account type</strong> - Whilst both <em>Standard HDD</em> and <em>Premium SSD</em> are available options, in Azure Stack Hub there is no difference between the two in terms of performance or pricing. Storage speed is instead determined by the size of the virtual machine that the disk is attached to. The <em>Premium SSD</em> option is only available to prevent compatibility issues with the Azure API.</p>
 </li>
 <li><p><strong>Source type</strong> - Create a disk from a snapshot of another disk, a blob in a storage account, or create an empty disk.</p>
 </li>
@@ -177,6 +173,11 @@
 </li>
 </ul>
 <p><img src="images/azs-browser-add-vm-disk.png" alt="Create managed disk"></p>
+</li>
+<li><p>Click the <strong>Create</strong> button. Once it has been created, the <em>Disks</em> blade will be shown again with the new disk displayed under the <strong>Data disks</strong> section.</p>
+</li>
+<li><p>Click the <strong>Save</strong> button.</p>
+<p><img src="images/azs-browser-button-save-add-data-disk.png" alt="Create managed disk"></p>
 </li>
 <li><p>You can monitor the progress of your deployment by clicking the <strong>Notifications</strong> icon.</p>
 <p><img src="images/azs-browser-notification-disks-progress.png" alt="Deployment progress alert"></p>
