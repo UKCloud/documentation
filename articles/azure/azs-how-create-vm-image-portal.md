@@ -8,11 +8,11 @@ lastreviewed: 06/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2:
+toc_sub2: Create a Custom Image from a VM
 toc_sub3:
 toc_sub4:
 toc_title: Create a custom image from a VM - Portal
-toc_fullpath: Users/How To/azs-how-create-vm-image-portal.md
+toc_fullpath: Users/How To/Create a Custom Image from a VM/azs-how-create-vm-image-portal.md
 toc_mdlink: azs-how-create-vm-image-portal.md
 ---
 
@@ -41,9 +41,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
 
-4. Ensure the **Generalize** tick box is selected.
+4. Ensure the **Generalize** check box is selected.
 
-5. Under *Shutdown Options*, select **Shutdown** from the dropdown menu.
+5. From the **Shutdown Options** list, select **Shutdown**.
 
     See the image below for an example:
 
