@@ -276,8 +276,7 @@ Then reboot the box and continue the install.
 
 When registering the ASDK, you may experience a timeout during the Service Principal creation. If you inspect the action plan you will see that this is actually caused by an issue with connecting to the below addresses, which are the client & admin portal.
 ```xml
-TCP connection failed for the following VIPs: 'SDRInternal' 192.168.105.8:19007
-'SDRInternal' 192.168.105.8:19000.
+TCP connection failed for the following VIPs: 'SDRInternal' 192.168.105.8:19007 'SDRInternal' 192.168.105.8:19000.
 ```
 
 A potential fix for this is to try increasing the memory & disk space of the **Azs-ERCS01** virtual machine. For memory, you should try to have a minimum of 8192 MB, and the disk should have around 40 GB total space.
