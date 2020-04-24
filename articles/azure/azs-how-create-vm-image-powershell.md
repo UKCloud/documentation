@@ -8,11 +8,11 @@ lastreviewed: 06/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2:
+toc_sub2: Create a Custom Image from a VM
 toc_sub3:
 toc_sub4:
 toc_title: Create a custom image from a VM - PowerShell
-toc_fullpath: Users/How To/azs-how-create-vm-image-powershell.md
+toc_fullpath: Users/How To/Create a Custom Image from a VM/azs-how-create-vm-image-powershell.md
 toc_mdlink: azs-how-create-vm-image-powershell.md
 ---
 
@@ -59,11 +59,11 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Open a PowerShell console or command prompt as administrator and run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`
 
-3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
+3. In the *System Preparation Tool*, from the **System Cleanup Action** list, select **Enter System Out-of-Box Experience (OOBE)**.
 
-4. Ensure the **Generalise** tick box is selected.
+4. Ensure the **Generalise** check box is selected.
 
-5. Under *Shutdown Options*, select **Shutdown** from the dropdown menu.
+5. From the **Shutdown Options** list, select **Shutdown**.
 
     See the image below for an example:
 
@@ -100,13 +100,13 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name   | Variable description                                               | Input            |
 |-----------------|--------------------------------------------------------------------|------------------|
-| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack Hub                 | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$ArmEndpoint    | Azure Resource Manager endpoint for Azure Stack Hub                 | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$RGName        | Name of the resource group                            | <form oninput="result.value=resourcegroup.value;result2.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$NewRGName        | Name of the resource group for the virtual machine to be created within                            | <form oninput="result.value=newresourcegroup.value;result2.value=newresourcegroup.value" id="newresourcegroup" style="display: inline;"><input type="text" id="newresourcegroup" name="newresourcegroup" style="display: inline;" placeholder="MyNewResourceGroup"/></form> |
 | \$VMName        | Name of the virtual machine to be created                          | <form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
-| \$ImageName    | The name of the new custom image to be created                 | <form oninput="result.value=imagename.value;result2.value=imagename.value" id="imagename" style="display: inline;"><input type="text" id="imagename" name="imagename" style="display: inline;" placeholder="MyCustomImage"/></form> |
+| \$ImageName    | Name of the new custom image to be created                 | <form oninput="result.value=imagename.value;result2.value=imagename.value" id="imagename" style="display: inline;"><input type="text" id="imagename" name="imagename" style="display: inline;" placeholder="MyCustomImage"/></form> |
 | \$NewVMName        | Name of the new virtual machine to be created                          | <form oninput="result.value=newvmname.value;result2.value=newvmname.value" id="newvmname" style="display: inline;"><input type="text" id="newvmname" name="newvmname" style="display: inline;" placeholder="MyNewVMFromImage"/></form> |
-| \$Size        | The size of the new virtual machine to be created                          | <form oninput="result.value=size.value;result2.value=size.value" id="size" style="display: inline;"><input type="text" id="size" name="size" style="display: inline;" placeholder="Standard_DS2_v2"/></form> |
+| \$Size        | Size of the new virtual machine to be created                          | <form oninput="result.value=size.value;result2.value=size.value" id="size" style="display: inline;"><input type="text" id="size" name="size" style="display: inline;" placeholder="Standard_DS2_v2"/></form> |
 | \$VNetName      | Name of the virtual network to be created                        | <form oninput="result.value=vnetname.value;result2.value=vnetname.value" id="vnetname" style="display: inline;"><input type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="MyVNetwork"/></form> |
 | \$SubnetName    | Name of the subnet                                  | <form oninput="result.value=subnetname.value;result2.value=subnetname.value" id="subnetname" style="display: inline;"><input type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="MySubnet"/></form> |
 | \$NSGName       | Name of the network security group to be created                   | <form oninput="result.value=nsgname.value;result2.value=nsgname.value" id="nsgname" style="display: inline;"><input type="text" id="nsgname" name="nsgname" style="display: inline;" placeholder="MyNSG"/></form> |
