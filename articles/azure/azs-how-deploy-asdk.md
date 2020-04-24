@@ -272,11 +272,35 @@ Then reboot the box and continue the install.
 
 ## Post-Deployment Troubleshooting
 
-- Increase disk space of AzS-ERCS01: Add 10GB in Hyper-V, then connect & increase in Windows.
+### Service Principal creation failed during registration process
 
-- Increase memory of AzS-ERCS01 - Increase in Hyper-V
+When registering the ASDK, you may experience a timeout during the Service Principal creation. If you inspect the action plan you will see that this is actually caused by an issue with connecting to the below addresses, which are the client & admin portal.
+```xml
+TCP connection failed for the following VIPs: 'SDRInternal' 192.168.105.8:19007
+'SDRInternal' 192.168.105.8:19000.
+```
 
-- Start/stop azure stack on ERCS
+A potential fix for this is to try increasing the memory & disk space of the **Azs-ERCS01** virtual machine. For memory, you should try to have a minimum of 8192 MB, and the disk should have around 40 GB total space.
+
+After changing these you will need to restart the ASDK, like below:
+
+```powershell
+# Create your Credentials
+$AzsUsername = "AzureStack\CloudAdmin"
+$AzsPassword = 'Password123!'
+$AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
+$AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
+
+$Session = New-PSSession -ComputerName AzS-ERCS01 -Credential $AzsCred -ConfigurationName PrivilegedEndpoint
+
+Enter-PSSession $Session
+
+# This will reboot the machine after a few minutes.
+Stop-AzureStack
+
+# When the machine is back up, create the PSSession again and run the below command.
+Start-AzureStack
+```
 
 ## Useful Links
 
