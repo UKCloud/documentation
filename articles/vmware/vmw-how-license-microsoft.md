@@ -179,7 +179,7 @@ To use your existing Microsoft licensing or use licences billed by us on UKCloud
     - If want to bring your own licensing and your Microsoft Mobility application has been accepted, the date from which your licensing will take effect. (You must have completed the [Microsoft Mobility](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) verification process before choosing this option.)
 
     > [!NOTE]
-    > It is **your** responsibility to inform UKCloud Support when you require and no longer require the licensing on one or more of the specified VMs
+    > It is **your** responsibility to inform UKCloud Support if you rename a VM that has licensing applied or if you no longer require the licensing on one or more of the specified VMs.
 
 7. When you're done, click **Review & Submit**.
 
