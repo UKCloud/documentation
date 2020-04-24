@@ -102,7 +102,7 @@ To edit, run:
 ```powershell
 $GetScript = Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1"
 
-$GetScript | ForEach-Object { ($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object -FilterScript { `$====_.isboot -eq `$true }).Model -match 'null') {") -replace "====","" }
+$GetScript = $GetScript | ForEach-Object { ($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object -FilterScript { `$====_.isboot -eq `$true }).Model -match 'null') {") -replace "====","" }
 
 $GetScript | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
 ```
@@ -167,8 +167,8 @@ To edit, run:
 ```powershell
 $GetScript = Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1"
 
-$GetScript | ForEach-Object { $_ -replace "$_.PartNumber.Trim\(\);", "$_.PartNumber;" }
-$GetScript | ForEach-Object { $_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0" }
+$GetScript = $GetScript | ForEach-Object { $_ -replace "$_.PartNumber.Trim\(\);", "$_.PartNumber;" }
+$GetScript = $GetScript | ForEach-Object { $_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0" }
 
 $GetScript | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
 ```
