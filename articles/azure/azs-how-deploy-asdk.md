@@ -95,18 +95,22 @@ Before running the installer, open \"C:\AzureStack\_Installer\asdk-installer.ps1
 
 | Line Number | Current Code                                                                             | Updated code                                                                          |
 |-------------|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| 1917        | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {` |
+| 1917        | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object -FilterScript { $_.isboot -eq $true }).Model -match 'null') {` |
 
 To edit, run:
 
 ```powershell
-Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
+$GetScript = Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1"
+
+$GetScript | ForEach-Object { ($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object -FilterScript { `$====_.isboot -eq `$true }).Model -match 'null') {") -replace "====","" }
+
+$GetScript | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
 ```
 
 To verify, run:
 
 ```powershell
-Select-String -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Pattern "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{"
+Select-String -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Pattern "elseif \(\(get-disk \| Where-Object -FilterScript \`{ \`$`_.isboot -eq \`$true \`}\).Model -match 'null'\) \`{"
 ```
 
 ### [Physical Deployment](#tab/tabid-2)
@@ -161,9 +165,12 @@ Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and 
 To edit, run:
 
 ```powershell
-Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace "$_.PartNumber.Trim\(\);", "$_.PartNumber;"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
+$GetScript = Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1"
 
-Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
+$GetScript | ForEach-Object { $_ -replace "$_.PartNumber.Trim\(\);", "$_.PartNumber;" }
+$GetScript | ForEach-Object { $_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0" }
+
+$GetScript | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
 ```
 
 To verify, run:
@@ -262,6 +269,14 @@ BCDEDIT /Set {current} hypervisorlaunchtype auto
 ```
 
 Then reboot the box and continue the install.
+
+## Post-Deployment Troubleshooting
+
+- Increase disk space of AzS-ERCS01: Add 10GB in Hyper-V, then connect & increase in Windows.
+
+- Increase memory of AzS-ERCS01 - Increase in Hyper-V
+
+- Start/stop azure stack on ERCS
 
 ## Useful Links
 
