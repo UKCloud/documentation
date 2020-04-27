@@ -21,11 +21,7 @@ toc_mdlink: conn-faq-hscn.md
 
 ### What is HSCN?
 
-The Health and Social Care Network (HSCN) is the replacement for the N3, which is being phased out in March 2019. The HSCN is designed to provide a solution for hospitals, medical centres and GPs to collaborate and access services over a secure, high speed network. Like the N3, it will enable third-party software solutions to be presented to front-line patient care organisations. It is a government network like the PSN, but specifically designed for the health and social care community.
-
-### When will HSCN be available from UKCloud?
-
-We'll be able to provide HSCN connectivity from June 2018. In the meantime, we can provide you with N3 connectivity and we'll contact you to arrange migration to HSCN from June 2018.
+The Health and Social Care Network (HSCN) is designed to provide a solution for hospitals, medical centres and GPs to collaborate and access services over a secure, high-speed network. It enables third-party software solutions to be presented to front-line patient care organisations. It's a government network like the PSN, but specifically designed for the health and social care community.
 
 ### Can I use UKCloud's HSCN connection without using UKCloud's cloud services?
 
@@ -58,48 +54,6 @@ UKCloud will validate that you have signed up to the terms of the HSCN Connectio
 The UKCloud ODS code is 8J561.
 
 You can find all ODS and connection agreements at <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/>.
-
-## Migration
-
-### How do I migrate my existing UKCloud N3 workload onto HSCN?
-
-First you need to align with the HSCN Connection Agreement. You can do this by either signing your own Connection Agreement and having NHS Digital counter-sign. You can then supply us with a copy of it. Alternatively, you can sign the UKCloud Master Services Agreement (MSA version 11.0 onwards) and be covered by the flow-down of the Connection Agreement terms.
-
-Once you have a Connection Agreement in place, you will need to raise a service request for HSCN via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
-
-We will give you a new Edge or Router with as many HSCN IPs as you are currently using for N3 assigned to it.
-
-You will be able to use this Edge and IP addresses to perform any testing that you require to validate the connectivity you require to support your application on the HSCN.
-
-Once you are comfortable with the HSCN you have two choices:
-
-1. You can create new application networks from your new HSCN Edge and connect to new NICs on your VMs to present your service over the new IPs.
-
-2. You can ask UKCloud to attach HSCN connectivity to your existing N3 Edge. When you are ready to migrate, you can ask UKCloud to change the Edge's Default Gateway from N3 to HSCN to cut over.
-
-Note that in both scenarios you will be responsible for VM routing configurations, Edge rules / security groups and DNS changes needed to move your service. There may be some connectivity downtime as you make the configuration changes in your environment and DNS changes on HSCN.
-
-When you are comfortable, we will decommission your N3 connection and your N3 Edge.
-
-### How do I migrate my non-UKCloud N3 workload to HSCN on UKCloud?
-
-You have multiple ways of migrating your workload to UKCloud. One way to migrate to UKCloud is over the Internet, if your current environment has internet connectivity. Alternatively, you could migrate over N3.
-
-If you already have N3 approval, you may be eligible for N3 connectivity within UKCloud (see [*N3 FAQs*](conn-faq-n3.md) for more details). You can then move your workload over to UKCloud via the N3 either by VM transfer or our Workload Migration service. (see [*How to migrate your workloads to the UKCloud platform*](../migration/migr-how-zerto-migrate-to-ukcloud.md) for migrating your workloads to UKCloud).
-
-Once you have got your Connection Agreement terms in place, you can then have HSCN connectivity and can connect your VMs to HSCN.
-
-When you are comfortable, we will decommission your N3 connection.
-
-For more information about moving to UKCloud, please speak to your Cloud Architect.
-
-### Will I be billed for HSCN and N3 connectivity at the same time while migrating?
-
-HSCN will be provided free for one month per connection for existing customers who are migrating existing UKCloud-hosted applications from N3 to HSCN. After one month, UKCloud reserves the right to begin charging for the HSCN connections unless the migration of an environment from N3 to HSCN cannot be completed within the month due to UKCloud being unable to provide a migration slot.
-
-### Will there be additional costs for migration?
-
-Migration assistance in-hours (8am-8pm) will be done free-of-charge, if out-of-hours (8pm-8am) migration support is required then a [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) rate for engineer time may be applied to the migration.
 
 ## Service
 
@@ -147,11 +101,9 @@ You will have unrestricted access to the HSCN but you may not be able to access 
 
 ## Process
 
-### What has happened to your status as 'N3 Aggregator'?
+### Are you an HSCN Aggregator?
 
-UKCloud achieved N3 aggregator status by meeting the strict information governance standards set by NHS Digital, which were required for all organisations that connect to N3. With HSCN, this changes slightly.
-
-We will be an HSCN aggregator but will no longer need to take you through an aggregation process to connect you to HSCN.
+We are an HSCN connected Cloud Service Provider and can give you an HSCN connection to environments on our cloud, however there is no longer an Aggregation programme for HSCN.
 
 Once you are aligned with the HSCN Connection Agreement terms, either by signing your own agreement, or by signing to UKCloud's terms, we will connect you to our aggregated HSCN connection.
 
