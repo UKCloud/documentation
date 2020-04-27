@@ -4,7 +4,7 @@ description: Explains the network configuration required to provision a syslog c
 services: vmware
 author: Sue Highmoor
 reviewer: lthangarajah
-lastreviewed: 21/06/2020
+lastreviewed: 21/06/2019
 
 toc_rootlink: How To
 toc_sub1:
