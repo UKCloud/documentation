@@ -4,7 +4,7 @@ description: Deploy and configure the Azure Stack Hub Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
 reviewer: William Turner
-lastreviewed: 24/04/2020
+lastreviewed: 27/04/2020
 
 toc_rootlink: Operators
 toc_sub1: How To
@@ -294,11 +294,11 @@ $Session = New-PSSession -ComputerName AzS-ERCS01 -Credential $AzsCred -Configur
 
 Enter-PSSession $Session
 
-# This will reboot the machine after a few minutes.
+# This will shutdown the machine after a few minutes. You will need to manually start the VM again once it is shutdown (e.g. through VMWare Cloud Director)
 Stop-AzureStack
 
-# When the machine is back up, create the PSSession again and run the below command.
-Start-AzureStack
+# When the machine is back up, create the PSSession again and run the below command to retrieve the status of Start-AzureStack
+Get-ActionStatus Start-AzureStack
 ```
 
 ## Useful Links
