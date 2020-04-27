@@ -24,10 +24,6 @@
     href: conn-faq-app-ddos.md
   - name: UltraDNS FAQs
     href: conn-faq-glb.md
-- name: How To
-  items:
-  - name: Migrate from N3 to HSCN
-    href: conn-how-migrate-n3-hscn.md
 - name: Reference
   items:
   - name: DDoS mitigation causing VPN failures and slow applications
