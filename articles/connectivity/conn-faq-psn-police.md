@@ -61,7 +61,7 @@ Yes. As the connection is installed as a private circuit into UKCloud, provided 
 
 ## Can I have a combination of government community networks and private accredited networks into the same UKCloud solution, including the PSN for Policing networks?
 
-Yes, subject to compliance with information assurance requirements, as only organisations that demonstrate compliance with the appropriate [code of connections](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/193704/PSN_Compliance_Zero_tolerance_approach.pdf) (for example PSN compliance certificate or approved N3 (IGSoC) can have access to government community networks.
+Yes, subject to compliance with information assurance requirements, as only organisations that demonstrate compliance with the appropriate [code of connections](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/193704/PSN_Compliance_Zero_tolerance_approach.pdf) (for example PSN compliance certificate or HSCN Connection Agreement) can have access to government community networks.
 
 You should be careful not to misconfigure self-managed components of the solution (OS, application) to 'bridge' between government community networks (PSN) and private networks. This concern must be addressed by accreditation of the customer-managed components - preferably via PSN Accreditation. Local departmental accreditation by a public-sector customer is also allowed. This applies to solutions on both our Assured OFFICIAL and Elevated OFFICIAL cloud platforms.
 
