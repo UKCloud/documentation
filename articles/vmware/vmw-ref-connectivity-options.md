@@ -234,7 +234,7 @@ When connecting to the different UKCloud networks it's important to ensure that 
 
 In the Assured security domain, you'll always have an internet connected edge. Access to other networks is as follows:
 
-- For HSCN you'll need to go through the UKCloud aggregation process
+- For HSCN you'll need to sign up to the terms of the HSCN Connection Agreement
 
 - For PSN you'll need to get accreditation for the service you want to provide from the PSN Authority
 
