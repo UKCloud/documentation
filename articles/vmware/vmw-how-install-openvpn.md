@@ -3,8 +3,8 @@ title: How to install and configure OpenVPN
 description: Details the steps required to obtain, deploy and configure an OpenVPN virtual appliance to obtain remote access to your virtual data centres running on the UKCloud platform
 services: vmware
 author: Sue Highmoor
-reviewer: lthangarajah
-lastreviewed: 23/08/2019
+reviewer: jpaddock
+lastreviewed: 01/04/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -28,6 +28,12 @@ This article details the steps required to obtain, deploy and configure an OpenV
 
 > [!NOTE]
 > OpenVPN is a licensed product. Without a licence key, you are limited to only two concurrent VPN connections. If you require additional concurrent connections, you'll need to obtain and install a licence key.
+
+## Before you begin
+
+To ensure you're running the latest release of OpenVPN, we recommend that you download the latest version of the appliance directly from the OpenVPN website:
+
+<https://openvpn.net/downloads/openvpn-as-latest-vmware.ova>
 
 ## Preparing your virtual data centre
 
@@ -53,19 +59,10 @@ After you've created the network, you'll need to configure the edge gateway to c
 
 For more information, see [*How to create NAT rules*](vmw-how-create-nat-rules.md) and [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
 
-## Obtaining the latest OpenVPN appliance
-
-To ensure you're running the latest release of OpenVPN, we recommend that you download the latest version of the appliance directly from the OpenVPN website:
-
-1. Go to the following location to download the latest OVA file:
-
-    <https://swupdate.openvpn.org/appliances/AS2.ova>
-
-2. In vCloud Director, click the menu icon and select **Libraries**.
-
-3. To upload the OVA file to a catalog, see [*How to create a catalog*](vmw-how-create-catalog.md).
-
 ## Deploying the OpenVPN appliance
+
+> [!TIP]
+> You may need to run the commands in the following steps as root (sudo).
 
 To deploy the OpenVPN appliance:
 
@@ -79,17 +76,17 @@ To deploy the OpenVPN appliance:
 
     ![Add vApp from OVF option](images/vmw-vcd-btn-vapp-from-ovf.png)
 
-4. Select the OVA that you downloaded then click **Next**.
+4. Select the OpenVPN OVA that you downloaded then click **Next**.
 
 5. Review the details of the OVA to confirm that it's the right image then click **Next**.
 
-6. The appliance will be deployed as a single VM inside a vApp. Provide a **Name** and (optinal) **Description** for the vApp then click **Next**.
+6. The appliance will be deployed as a single VM inside a vApp. Provide a **Name** and (optional) **Description** for the vApp then click **Next**.
 
 7. Provide a valid NetBIOS host name and your desired storage policy then click **Next**.
 
 8. Configure the network by selecting **Switch to the advanced networking workflow**.
 
-9. Select the network adapter type, network and IP pool assignment (**Manual**) then click **Next**.
+9. Select the network adapter type, network and IP pool assignment (**Manual**), assign a valid IP from within your range, then click **Next**.
 
 10. Select the number of vCPUs, sockets and memory this appliance will have then click **Next**.
 
@@ -101,7 +98,10 @@ To deploy the OpenVPN appliance:
 
 To perform initial configuration:
 
-1. In vCloud Director, open the console for your OpenVPN VM.
+1. In vCloud Director (under **Compute > Virtual Machines**), open the console for your OpenVPN VM.
+
+    > [!TIP]
+    > If you haven't already done so, you may need to download the VMware Remote Console.
 
 2. Log in to the VM as the root user.
 
@@ -138,7 +138,7 @@ To perform initial configuration:
 
 5. If you opted to use the default `openvpn` account, you'll need to configure its password:
 
-        #passwd openvpn
+    `#passwd openvpn`
 
 6. Press **^D** to log off the console, but before you do so, there are some additional system configurations, detailed in the following sections, that you might want to perform while you're connected to the console.
 
@@ -148,17 +148,19 @@ During our tests, the DNS resolver configuration was not added by the VMware cus
 
 1. Enter the following command:
 
-        # pico /etc/network/interfaces
+    `# pico /etc/network/interfaces`
 
 2. Use the arrow keys to scroll down. Below the line specifying the default gateway, add the following:
 
-        dns-nameservers 8.8.8.8
+    `dns-nameservers 8.8.8.8`
 
-3. Press **^O** to save the file, then **^X** to exit the text editor.
+3. Press **^O** to save the file, then press **Enter** to confirm the file name.
 
-4. Restart the networking service for the change to take effect:
+4. Press **^X** to exit the text editor.
 
-        # service networking restart
+5. Restart the networking service for the change to take effect:
+
+    `# systemctl restart systemd-networkd.service`
 
 ### Configure the keyboard
 
@@ -166,7 +168,7 @@ The default configuration is for a US keyboard. To reconfigure for UK:
 
 1. Enter the following command:
 
-        # dpkg-reconfigure keyboard-configuration
+    `# dpkg-reconfigure keyboard-configuration`
 
 2. Step through the wizard. There's no need to restart anything when you're finished.
 
@@ -176,7 +178,7 @@ It's a good idea to apply the latest upgrades to the system.
 
 1. Enter the following command:
 
-        # apt-get update && apt-get upgrade
+    `# apt-get update && apt-get upgrade`
 
 2. You'll be prompted to approve the installation of any updates.
 
@@ -186,11 +188,11 @@ Installing NTP is good practice anyway, but is required if you intend to use two
 
 1. Enter the following command:
 
-        # apt-get install ntp
+    `# apt-get install ntp`
 
 2. When the installation is complete, update the configuration file to point to UKCloud's NTP servers.
 
-        # pico /etc/ntp.config
+    `# pico /etc/ntp.config`
 
 3. Use the arrow keys to scroll down until you reach the lines beginning with `server`. Change the first two lines to reflect the UKCloud servers, and comment out the remaining two lines.
 
@@ -204,7 +206,7 @@ To configure administration options:
 
     `https://<ip_address>/admin`
 
-2. To set the hostname, under *Configuration*, select **Server Network Settings** and then set the **Hostname or IP Address** to either a public IP address or a fully qualified domain name (FQDN) that your client will be able to resolve.
+2. To set the hostname, under *Configuration*, select **Network Settings** and then set the **Hostname or IP Address** to either a public IP address or a fully qualified domain name (FQDN) that your client will be able to resolve.
 
 3. Save the settings on this page.
 
@@ -241,13 +243,13 @@ If you've not already done so, change the root password to something more secure
 
 2. Enter the following command:
 
-        # passwd
+    `# passwd`
 
 ### Lock down unused ports with iptables
 
 The OpenVPN configuration utility adds the required `ALLOW` entries to `iptables` automatically. To deny all other traffic, enter the following command:
 
-    # iptables -A INPUT -j DROP
+`# iptables -A INPUT -j DROP`
 
 ### Enable two-factor authentication via Google Authenticator
 
@@ -257,7 +259,7 @@ You can enable two-factor authentication via the OpenVPN administration interfac
 
     `https://<ip_address>/admin`
 
-2. Under *Configuration*, select **Client Settings** then click the checkbox to enable Google Authenticator support.
+2. Under **Authentication > General**, select **Client Settings** then click the checkbox to enable Google Authenticator support.
 
     > [!NOTE]
     > Users will need to enter or scan the Google Authenticator secret by logging into the client portal (`http://<ip_address>/`). When they've configured the secret, they should click the **I scanned the QR code** button to enforce two-factor authentication.
@@ -279,7 +281,7 @@ To lock down the administration and client interfaces:
 
 2. Under *Configuration*, select **Server Network Settings**.
 
-3. Under *Service Forwarding* in the *VPN Server* section, clear the check boxes for **Admin Web Server** and **Client Web Server**.
+3. Under *Service Forwarding*, in the *VPN Server* section, clear the check boxes for **Admin Web Server** and **Client Web Server**.
 
 ### Disable root SSH login
 
@@ -287,7 +289,7 @@ If connecting via SSH, it's best practice to connect with a non-privileged accou
 
 1. Enter the following command:
 
-        # pico /etc/ssh/sshd\_config
+    `# pico /etc/ssh/sshd-**-_config`
 
 2. Use the arrow keys to scroll down the file, and change the `PermitRootLogin` to `no`.
 
@@ -299,7 +301,7 @@ To disable the default account:
 
 1. Enter the following command:
 
-        # pico /usr/local/openvpn_as/etc/as.conf
+    `# pico /usr/local/openvpn_as/etc/as.conf`
 
 2. Use the arrow keys to scroll down the file until you see entries starting with `boot_pam_users`.
 
@@ -307,11 +309,11 @@ To disable the default account:
 
 4. Restart the OpenVPN service for the change to take effect:
 
-        # service restart openvpnas
+    `# systemctl restart openvpnas.service`
 
 ## More help
 
-If you have any issues regarding the updating or support of Microsoft Server, contact the UKCloud support team by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+If you have any issues regarding the updating or support of OpenVPN, contact the UKCloud support team by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

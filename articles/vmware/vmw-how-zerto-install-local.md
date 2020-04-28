@@ -78,7 +78,7 @@ UKCloud provides a version of ZVM that is compatible with the Zerto software on 
 
 12. The first time you log in, you'll need to enter licensing details.
 
-    As you are using ZVM as part of a UKCloud service, select **Pair to a site with a license** and enter the **Site Address** and **Port**     provided by UKCloud.
+    As you are using ZVM as part of a UKCloud service, select **Pair to a site with a license** and enter the **Site Address** and **Port** provided by UKCloud.
 
 13. Click **START**.
 
@@ -110,7 +110,7 @@ The following table lists the minimum firewall rules required for Zerto to pair 
 
 Source device | Target service | Port | Direction | Purpose
 --------------|----------------|------|-----------|---------
-Customer ZVM | Service Provider ZCC | TCP 9081 | Bi-directional | ZVM to ZCC communication
+Customer ZVM | Service Provider ZCC | TCP 9081               | Bi-directional | ZVM to ZCC communication
 Customer VRA | Service Provider ZCC | TCP 4007, 9082 and up^ | Bi-directional | TCP control communication between source and target VRAs and ZCC
 Customer VRA | Service Provider ZCC | TCP 4008, 9082 and up^ | Bi-directional | TCP communication to pass data between source and target VRAs and ZCC
 
