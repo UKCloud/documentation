@@ -4,7 +4,7 @@ description: Deploy and configure the Azure Stack Hub Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
 reviewer: William Turner
-lastreviewed: 27/04/2020
+lastreviewed: 29/04/2020
 
 toc_rootlink: Operators
 toc_sub1: How To
@@ -279,9 +279,9 @@ When registering the ASDK, you may experience a timeout during the Service Princ
 TCP connection failed for the following VIPs: 'SDRInternal' 192.168.105.8:19007 'SDRInternal' 192.168.105.8:19000.
 ```
 
-A potential fix for this is to try increasing the memory & disk space of the **Azs-ERCS01** virtual machine. For memory, you should try to have a minimum of 8192 MB, and the disk should have around 40 GB total space.
+A potential fix is to try increasing the memory & disk space of the 'AzS' virtual machines in Hyper-V manager. As a general guide, make sure that you assign enough memory to meet the *Memory Demand* listed in the **Memory** tab for each virtual machine.
 
-After changing these you will need to restart the ASDK, like below:
+After making any changes, you should restart the ASDK like below:
 
 ```powershell
 # Create your Credentials
@@ -300,6 +300,8 @@ Stop-AzureStack
 # When the machine is back up, create the PSSession again and run the below command to retrieve the status of Start-AzureStack
 Get-ActionStatus Start-AzureStack
 ```
+
+If the above does not resolve the issue, then you will likely need to redeploy the ASDK from the beginning.
 
 ## Useful Links
 
