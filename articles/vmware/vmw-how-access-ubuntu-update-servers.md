@@ -3,8 +3,8 @@ title: How to access Ubuntu update servers
 description: This guide shows you how to configure access to Ubuntu update servers from within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: pcantle
+lastreviewed: 01/04/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
