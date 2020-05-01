@@ -259,7 +259,9 @@ You can enable two-factor authentication via the OpenVPN administration interfac
 
     `https://<ip_address>/admin`
 
-2. Under **Authentication > General**, select **Client Settings** then click the checkbox to enable Google Authenticator support.
+2. From the menu, select **Authentication** then **General**.
+
+3. Set **Enable Google Authenticator MFA** to **Yes**.
 
     > [!NOTE]
     > Users will need to enter or scan the Google Authenticator secret by logging into the client portal (`http://<ip_address>/`). When they've configured the secret, they should click the **I scanned the QR code** button to enforce two-factor authentication.
@@ -281,7 +283,7 @@ To lock down the administration and client interfaces:
 
 2. Under *Configuration*, select **Server Network Settings**.
 
-3. Under *Service Forwarding*, in the *VPN Server* section, clear the check boxes for **Admin Web Server** and **Client Web Server**.
+3. Under *Service Forwarding*, in the *VPN Server* section, set **Admin Web Server** and **Client Web Server** to **No**.
 
 ### Disable root SSH login
 
