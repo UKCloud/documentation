@@ -34,37 +34,73 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Click **All services** in the favourites panel, then select **Disks** under the *Compute* section.
 
-3. Select the disk that you would like to use. The Disk page for that disk appears.
+    ![All services - disks](images/azs-browser-allservices-disks.png)
 
-4. From the menu at the top, click **Create snapshot**.
+3. From the list, select the disk that you would like to create a snapshot from.
 
-5. Enter a Name for the snapshot.
+    ![Disks blade](images/azs-browser-disks-list.png)
 
-6. Choose a Resource group for the snapshot. You can use either an existing resource group or create a new one.
+    > [!NOTE]
+    > Snapshots can only be created from managed disks.
 
-7. For Account type, choose either Standard (HDD) or Premium (SSD) storage.
+4. In the new blade for the selected disk, click **Create snapshot**.
 
-8. When you're done, click **Create** to create the snapshot.
+    ![Create snapshot from disk - New Blade](images/azs-create-snapshot-disk.png)
 
-## Creating a managed disk from a snapshot
+5. In the **Create snapshot** blade, enter the following information:
 
-1. After the snapshot has been created, select Create a resource in the left menu.
+    - **Name** - The name of the snapshot.
 
-2. In the search box, enter managed disk and then select Managed Disks from the list.
+    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription.
 
-3. On the Managed Disks page, select Create.
+    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-4. Enter a Name for the disk.
+    - **Location** - This will be the location of the Azure Stack Hub.
 
-5. Choose a Resource group for the disk. You can use either an existing resource group or create a new one. This selection will also be used as the resource group where you create the VM from the disk.
+    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage.
 
-6. For Account type, choose either Standard (HDD) or Premium (SSD) storage.
+    ![Create snapshot from disk - Populate & Create](images/azs-browser-create-snapshot.png)
 
-7. In Source type, ensure Snapshot is selected.
+6. When you're done, click the **Create** button to create the snapshot.
 
-8. In the Source snapshot drop-down, select the snapshot you want to use.
+7. You can monitor the progress of the snapshot creation by clicking the **Notifications** icon.
 
-9. Make any other adjustments as needed and then select Create to create the disk.
+    ![Notification showing snapshot creation in progress](images/azs-browser-create-snapshot-progress.png)
+
+## Creating a new managed disk from a snapshot
+
+1. Click **All services** in the favourites panel, then select **Disks** under the *Compute* section.
+
+    ![All services - disks](images/azs-browser-allservices-disks.png)
+
+2. On the **Disks** blade, click **Add**.
+
+    ![Disks blade - Add](images/azs-browser-disks-list-add.png)
+
+3. In the **Create managed disk** blade, enter the following information:
+
+    - **Name** - The name of the disk.
+
+    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription.
+
+    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+
+    - **Location** - This will be the location of the Azure Stack Hub.
+
+    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage.
+
+    - **Source type** - Select *Snapshot* from the dropdown.
+        - **Source snapshot** - Select the previously created snapshot.
+
+    - **Size** - This will be set to the size of the source disk that the snapshot was created from. You can increase this if necessary, but you will not be allowed to decrease it below the original size.
+
+    ![Create disk from snapshot](images/azs-browser-create-disk-from-snapshot.png)
+
+4. When you're done, click the **Create** button to create the disk.
+
+5. You can monitor the progress of the disk creation by clicking the **Notifications** icon.
+
+    ![Notification showing disk creation in progress](images/azs-browser-create-disk-from-snapshot-progress.png)
 
 ## Creating a virtual machine from a managed disk
 
