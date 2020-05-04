@@ -28,13 +28,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## Creating a snapshot from a disk
 
-1. From the Azure portal, on the left menu, select All services.
+1. Log in to the Azure Stack Hub portal.
 
-2. In the All services search box, enter disks and then select Disks to display the list of available disks.
+    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
+
+2. Click **All services** in the favourites panel, then select **Disks** under the *Compute* section.
 
 3. Select the disk that you would like to use. The Disk page for that disk appears.
 
-4. From the menu at the top, select Create snapshot.
+4. From the menu at the top, click **Create snapshot**.
 
 5. Enter a Name for the snapshot.
 
@@ -42,7 +44,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 7. For Account type, choose either Standard (HDD) or Premium (SSD) storage.
 
-8. When you're done, select Create to create the snapshot.
+8. When you're done, click **Create** to create the snapshot.
 
 ## Creating a managed disk from a snapshot
 
