@@ -8,12 +8,12 @@ lastreviewed: 05/05/2020
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a Virtual Machine from disk snapshot
+toc_sub2: Create a Virtual Machine from a disk snapshot
 toc_sub3:
 toc_sub4:
-toc_title: Create a virtual machine from snapshot - Portal
-toc_fullpath: Users/How To/Create a Virtual Machine from disk snapshot/azs-how-create-vmfromsnapshot-portal.md
-toc_mdlink: azs-how-create-vmfromsnapshot-portal.md
+toc_title: Create a virtual machine from a disk snapshot - Portal
+toc_fullpath: Users/How To/Create a Virtual Machine from disk snapshot/azs-how-create-vm-from-snapshot-portal.md
+toc_mdlink: azs-how-create-vm-from-snapshot-portal.md
 ---
 
 # How to create a virtual machine from a disk snapshot using the UKCloud Azure Stack Hub portal
