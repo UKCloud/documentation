@@ -92,7 +92,10 @@ To complete the steps in this article, you must have appropriate access to a sub
     - **Source type** - Select *Snapshot* from the dropdown.
         - **Source snapshot** - Select the previously created snapshot.
 
-    - **Size** - This will be set to the size of the source disk that the snapshot was created from. You can increase this if necessary, but you will not be allowed to decrease it below the original size.
+    - **Size** - This will be set to the size of the source disk that the snapshot was created from.
+
+        > [!NOTE]
+        > You can increase the size if necessary, but you will not be allowed to decrease it below the original size.
 
     ![Create disk from snapshot](images/azs-browser-create-disk-from-snapshot.png)
 
