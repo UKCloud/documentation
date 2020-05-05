@@ -4,7 +4,7 @@ description: Provides help for creating a virtual machine from a managed disk sn
 services: azure-stack
 author: William Turner
 reviewer: William Turner
-lastreviewed: 04/05/2020
+lastreviewed: 05/05/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -104,33 +104,43 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## Creating a virtual machine from a managed disk
 
-After you have the managed disk VHD that you want to use, you can create the VM in the portal:
+After you have the managed disk that you want to use, you can create the VM in the portal:
 
-1. From the Azure portal, on the left menu, select All services.
+1. Click **All services** in the favourites panel, then select **Disks** under the *Compute* section.
 
-2. In the All services search box, enter disks and then select Disks to display the list of available disks.
+    ![All services - disks](images/azs-browser-allservices-disks.png)
 
-3. Select the disk that you would like to use. The Disk page for that disk opens.
+2. From the list, select the disk that you would like to create a virtual machine from.
 
-4. In the Overview page, ensure that DISK STATE is listed as Unattached. If it isn't, you might need to either detach the disk from the VM or delete the VM to free up the disk.
+    ![Disks blade](images/azs-browser-disks-list.png)
 
-5. In the menu at the top of the page, select Create VM.
+3. In the new blade for the selected disk, under *Overview*, ensure that **Disk state** is listed as *Unattached*. If it isn't, you will need to either detach the disk from the VM or delete the VM to free up the disk.
 
-6. On the Basics page for the new VM, enter a Virtual machine name and either select an existing Resource group or create a new one.
+    ![New disk blade - Unattached](images/azs-browser-disk-unattached.png)
 
-7. For Size, select Change size to access the Size page.
+4. In the menu at the top of the blade, click **Create VM**.
 
-8. Select a VM size row and then choose Select.
+5. In the **Create virtual machine** blade, in the *Basics* step, enter a Virtual machine name and either select an existing Resource group or create a new one, then click **OK**.
 
-9. On the Networking page, you can either let the portal create all new resources or you can select an existing Virtual network and Network security group. The portal always creates a new network interface and public IP address for the new VM.
+    ![Create VM from disk - Basics](images/azs-browser-disk-vm-basics.png)
 
-10. On the Management page, make any changes to the monitoring options.
+6. In the *Size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
-11. On the Guest config page, add any extensions as needed.
+    For information about the different available VM sizes, see [https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes)
 
-12. When you're done, select Review + create.
+    ![Create VM from disk - Size](images/azs-browser-disk-vm-size.png)
 
-13. If the VM configuration passes validation, select Create to start the deployment.
+7. In the *Settings* step, change any of the optional settings as required for your VM, then click **OK**.
+
+    ![Create VM from disk - Settings](images/azs-browser-disk-vm-settings.png)
+
+8. In the *Summary* step, review the selections you've made and then click **OK** to start the deployment.
+
+    ![Create VM from disk - Summary](images/azs-browser-disk-vm-summary.png)
+
+9. You can monitor the progress of your VM's deployment by clicking the **Notifications** icon.
+
+    ![Create VM from disk - Notification](images/azs-browser-disk-vm-notification.png)
 
 ## Feedback
 
