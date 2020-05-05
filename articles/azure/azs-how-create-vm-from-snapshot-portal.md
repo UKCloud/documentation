@@ -20,7 +20,7 @@ toc_mdlink: azs-how-create-vm-from-snapshot-portal.md
 
 ## Overview
 
-The UKCloud Azure Stack Hub portal allows you to create a snapshot of a managed disk. This snapshot can be used to create a new managed disk, which you can then create a virtual machine from. This article shows you how to take the snapshot, create a managed disk, and create a virtual machine.
+This article shows you how to use the UKCloud Azure Stack Hub portal to take a snapshot of a managed disk, use that to create a new managed disk, and finally create a virtual machine from the new disk.
 
 ### Intended audience
 
