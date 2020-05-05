@@ -28,120 +28,169 @@ Before you begin, ensure your PowerShell environment is set up as detailed in [C
 
 ## Creating a snapshot from a disk
 
-1. Log in to the Azure Stack Hub portal.
+### Declare variables
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
+Enter details below to provide values for the variables in the following script in this article:
 
-2. Click **All services** in the favourites panel, then select **Disks** under the *Compute* section.
+| Variable name   | Variable description                                               | Input            |
+|-----------------|--------------------------------------------------------------------|------------------|
+| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack Hub                 | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$RGName        | Name of the resource group to be created                           | <form oninput="result.value=resourcegroup.value;result2.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+| \$SAName        | Name of the storage account to be created                          | <form oninput="result.value=saname.value;result2.value=saname.value" id="saname" style="display: inline;"><input type="text" id="saname" name="saname" style="display: inline;" placeholder="MyStorageAccount"/></form> |
+| \$SubnetName    | Name of the subnet to be created                                   | <form oninput="result.value=subnetname.value;result2.value=subnetname.value" id="subnetname" style="display: inline;"><input type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="MySubnet"/></form> |
+| \$SubnetRange   | Address range of the subnet to be createdin CIDR notation          | <form oninput="result.value=subaddrrange.value;result2.value=subaddrrange.value" id="subaddrrange" style="display: inline;"><input type="text" id="subaddrrange" name="subaddrrange" style="display: inline;" placeholder="192.168.1.0/24"/></form> |
+| \$VNetName      | Name of the virtual network to be created                          | <form oninput="result.value=vnetname.value;result2.value=vnetname.value" id="vnetname" style="display: inline;"><input type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="MyVNetwork"/></form> |
+| \$VNetRange     | Address range of the virtual network to be createdin CIDR notation | <form oninput="result.value=vnetaddrrange.value;result2.value=vnetaddrrange.value" id="vnetaddrrange" style="display: inline;"><input type="text" id="vnetaddrrange" name="vnetaddrrange" style="display: inline;" placeholder="192.168.0.0/16"/></form> |
+| \$PublicIPName  | Name of the public IP to be created                                | <form oninput="result.value=publicipname.value;result2.value=publicipname.value" id="publicipname" style="display: inline;"><input type="text" id="publicipname" name="publicipname" style="display: inline;" placeholder="MyPublicIP"/></form> |
+| \$NSGName       | Name of the network security group to be created                   | <form oninput="result.value=nsgname.value;result2.value=nsgname.value" id="nsgname" style="display: inline;"><input type="text" id="nsgname" name="nsgname" style="display: inline;" placeholder="MyNSG"/></form> |
+| \$NICName       | Name of the network interface controller to be created             | <form oninput="result.value=nicname.value;result2.value=nicname.value" id="nicname" style="display: inline;"><input type="text" id="nicname" name="nicname" style="display: inline;" placeholder="MyNIC"/></form> |
+| \$Username      | Username of the VM to be created                                   | <form oninput="result.value=vmusername.value;result2.value=vmusername.value" id="vmusername" style="display: inline;"><input type="text" id="vmusername" name="vmusername" style="display: inline;" placeholder="MyUser"/></form> |
+| \$Password      | Password of the VM to be created                                   | <form oninput="result.value=vmpassword.value;result2.value=vmpassword.value" id="vmpassword" style="display: inline;"><input type="text" id="vmpassword" name="vmpassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$ComputerName  | Computer name of the VM to be created                              | <form oninput="result.value=compname.value;result2.value=compname.value" id="compname" style="display: inline;"><input type="text" id="compname" name="compname" style="display: inline;" placeholder="MyComputer"/></form> |
+| \$VMName        | Name of the virtual machine to be created                          | <form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
+| \$VMSize        | Size of the virtual machine to be created [(More info)](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-vm-sizes) | <form onchange="result.value=vmsize.value;result2.value=vmsize.value" id="vmsize" style="display: inline;" ><select name="vmsize" id="vmsize" style="display: inline;"><optgroup label="Basic A"><option value="Basic_A0">Basic A0</option><option value="Basic_A1">Basic A1</option><option value="Basic_A2">Basic A2</option><option value="Basic_A3">Basic A3</option><option value="Basic_A4">Basic A4</option></optgroup><optgroup label="Standard A"><option value="Standard_A0">Standard A0</option><option value="Standard_A1">Standard A1</option><option value="Standard_A2">Standard A2</option><option value="Standard_A3">Standard A3</option><option value="Standard_A4">Standard A4</option><option value="Standard_A5">Standard A5</option><option value="Standard_A6">Standard A6</option><option value="Standard_A7">Standard A7</option></optgroup><optgroup label="Av2-Series"><option value="Standard_A1_v2">Standard A1 v2</option><option value="Standard_A2_v2">Standard A2 v2</option><option value="Standard_A4_v2">Standard A4 v2</option><option value="Standard_A8_v2">Standard A8 v2</option><option value="Standard_A2m_v2">Standard A2m v2</option><option value="Standard_A4m_v2">Standard A4m v2</option><option value="Standard_A8m_v2">Standard A8m v2</option></optgroup><optgroup label="D-Series"><option value="Standard_D1">Standard D1</option><option value="Standard_D2">Standard D2</option><option value="Standard_D3">Standard D3</option><option value="Standard_D4">Standard D4</option><option value="Standard_D11">Standard D11</option><option value="Standard_D12">Standard D12</option><option value="Standard_D13">Standard D13</option><option value="Standard_D14">Standard D14</option></optgroup><optgroup label="Dv2-Series"><option value="Standard_D1_v2">Standard D1 v2</option><option value="Standard_D2_v2">Standard D2 v2</option><option value="Standard_D3_v2">Standard D3 v2</option><option value="Standard_D4_v2">Standard D4 v2</option><option value="Standard_D5_v2">Standard D5 v2</option><option value="Standard_D11_v2">Standard D11 v2</option><option value="Standard_D12_v2">Standard D12 v2</option><option value="Standard_D13_v2">Standard D13 v2</option><option value="Standard_D14_v2">Standard D14 v2</option></optgroup><optgroup label="DS-Series"><option value="Standard_DS1">Standard DS1</option><option value="Standard_DS2">Standard DS2</option><option value="Standard_DS3">Standard DS3</option><option value="Standard_DS4">Standard DS4</option><option value="Standard_DS11">Standard DS11</option><option value="Standard_DS12">Standard DS12</option><option value="Standard_DS13">Standard DS13</option><option value="Standard_DS14">Standard DS14</option></optgroup><optgroup label="DSv2-Series"><option value="Standard_DS1_v2" selected>Standard DS1 v2</option><option value="Standard_DS2_v2">Standard DS2 v2</option><option value="Standard_DS3_v2">Standard DS3 v2</option><option value="Standard_DS4_v2">Standard DS4 v2</option><option value="Standard_DS5_v2">Standard DS5 v2</option><option value="Standard_DS11_v2">Standard DS11 v2</option><option value="Standard_DS12_v2">Standard DS12 v2</option><option value="Standard_DS13_v2">Standard DS13 v2</option><option value="Standard_DS14_v2">Standard DS14 v2</option></optgroup><optgroup label="F-Series"><option value="Standard_F1">Standard F1</option><option value="Standard_F2">Standard F2</option><option value="Standard_F4">Standard F4</option><option value="Standard_F8">Standard F8</option><option value="Standard_F16">Standard F16</option></optgroup><optgroup label="Fs-Series"><option value="Standard_F1s">Standard F1s</option><option value="Standard_F2s">Standard F2s</option><option value="Standard_F4s">Standard F4s</option><option value="Standard_F8s">Standard F8s</option><option value="Standard_F16s">Standard F16s</option></optgroup><optgroup label="Fsv2-Series"><option value="Standard_F2s_v2">Standard F2s v2</option><option value="Standard_F4s_v2">Standard F4s v2</option><option value="Standard_F8s_v2">Standard F8s v2</option><option value="Standard_F16s_v2">Standard F16s v2</option><option value="Standard_F32s_v2">Standard F32s v2</option><option value="Standard_F64s_v2">Standard F64s v2</option></optgroup></select></form> |
+| VMType (switch) | The type of virtual machine to be created (Linux or Windows)       | <form onchange="result.value=vmtype.value;result2.value=vmtype.value;result3.value=vmtype.value;result4.value=vmtype.value" id="vmtype" style="display: inline;"><select name="vmtype" id="vmtype" style="display: inline;"><option value="-Linux">Linux</option><option value="-Windows">Windows</option></select></form> |
+| \$VMImage       | The image template to deploy the virtual machine from              | <form onchange="result.value=vmimage.value;result2.value=vmimage.value" id="vmimage" style="display: inline;"><select name="vmimage" id="vmimage" style="display: inline;"><option value="/CentOS/Skus/6.9">CentOS-based 6.9</option><option value="/CentOS/Skus/6.10">CentOS-based 6.10</option><option value="/CentOS/Skus/7.3">CentOS-based 7.3</option><option value="/CentOS/Skus/7.5" selected>CentOS-based 7.5</option><option value="/Debian/Skus/9">Debian 9 "Stretch"</option><option value="/UbuntuServer/Skus/14.04.5-LTS">Ubuntu Server 14.04 LTS</option><option value="/UbuntuServer/Skus/16.04-LTS">Ubuntu Server 16.04 LTS</option><option value="/UbuntuServer/Skus/18.04-LTS">Ubuntu Server 18.04 LTS</option><option value="/WindowsServerSemiAnnual/Skus/Datacenter-Core-1709-with-Containers-smalldisk">Windows Server, version 1709 with Containers - Pay as you use</option><option value="/SQL2016SP1-WS2016/Skus/SQLDEV">Free License: SQL Server 2016 SP1 Developer on Windows Server 2016</option><option value="/SQL2016SP2-WS2016/Skus/SQLDEV">Free License: SQL Server 2016 SP2 Developer on Windows Server 2016</option><option value="/SQL2016SP2-WS2016/Skus/Express">Free License: SQL Server 2016 SP2 Express on Windows Server 2016</option><option value="/SQL2017-SLES12SP2/Skus/SQLDEV">Free SQL Server License: SQL Server 2017 Developer on SLES 12 SP2</option><option value="/SQL2017-WS2016/Skus/SQLDEV">Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016</option><option value="/SQL2017-SLES12SP2/Skus/Express">Free SQL Server License: SQL Server 2017 Express on SLES 12 SP2</option><option value="/SQL2017-WS2016/Skus/Express">Free SQL Server License: SQL Server 2017 Express on Windows Server 2016</option><option value="/SQL2016SP1-WS2016/Skus/Enterprise">SQL Server 2016 SP1 Enterprise on Windows Server 2016</option><option value="/SQL2016SP1-WS2016/Skus/Standard">SQL Server 2016 SP1 Standard on Windows Server 2016</option><option value="/SQL2016SP2-WS2016/Skus/Enterprise">SQL Server 2016 SP2 Enterprise on Windows Server 2016</option><option value="/SQL2016SP2-WS2016/Skus/Standard">SQL Server 2016 SP2 Standard on Windows Server 2016</option><option value="/SQL2017-SLES12SP2/Skus/Enterprise">SQL Server 2017 Enterprise on SLES 12 SP2</option><option value="/SQL2017-WS2016/Skus/Enterprise">SQL Server 2017 Enterprise Windows Server 2016</option><option value="/SQL2017-SLES12SP2/Skus/Standard">SQL Server 2017 Standard on SLES 12 SP2</option><option value="/SQL2017-WS2016/Skus/Standard">SQL Server 2017 Standard on Windows Server 2016</option><option value="/WindowsServer/Skus/2012-Datacenter">Windows Server 2012 Datacenter - Pay as you use</option><option value="/WindowsServer/Skus/2012-R2-Datacenter">Windows Server 2012 R2 Datacenter - Pay as you use</option><option value="/WindowsServer/Skus/2016-Datacenter">Windows Server 2016 Datacenter - Pay-as-you-use</option><option value="/WindowsServer/Skus/2016-Datacenter-Server-Core">Windows Server 2016 Datacenter - Server Core - Pay as you use</option><option value="/WindowsServer/Skus/2016-Datacenter-with-Containers">Windows Server 2016 Datacenter - with Containers - Pay as you use</option><option value="/WindowsServer/Skus/2019-Datacenter">Windows Server 2019 Datacenter - Pay as you use</option><option value="/WindowsServer/Skus/2019-Datacenter-with-Containers">Windows Server 2019 Datacenter - with Containers - Pay as you use</option><option value="/WindowsServer/Skus/2019-Datacenter-Core">Windows Server 2019 Datacenter Core - Pay as you use</option><option value="/WindowsServer/Skus/2019-Datacenter-Core-with-Containers">Windows Server 2019 Datacenter Core - with Containers - Pay as you use</option></select></form> |
 
-    ![All services - disks](images/azs-browser-allservices-disks.png)
+<pre><code class="language-PowerShell"># Initialise environment and variables
 
-3. From the list, select the disk that you would like to create a snapshot from.
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-    ![Disks blade](images/azs-browser-disks-list.png)
+## Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
-    > [!NOTE]
-    > Snapshots can only be created from managed disks.
+## Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-4. In the new blade for the selected disk, click **Create snapshot**.
+# Get location of Azure Stack Hub
+$Location = (Get-AzureRmLocation).Location
 
-    ![Create snapshot from disk - New Blade](images/azs-create-snapshot-disk.png)
+# Input Variables
+$RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
+$SSName = "<output form="ssname" name="result2" style="display: inline;">MySnapshot</output>"
 
-5. In the **Create snapshot** blade, enter the following information:
+# Retrieve the VM object
+$VM = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
 
-    - **Name** - The name of the snapshot.
 
-    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription.
 
-    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
-
-    - **Location** - This will be the location of the Azure Stack Hub.
-
-    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage.
-
-    ![Create snapshot from disk - Populate & Create](images/azs-browser-create-snapshot.png)
-
-6. When you're done, click the **Create** button to create the snapshot.
-
-7. You can monitor the progress of the snapshot creation by clicking the **Notifications** icon.
-
-    ![Notification showing snapshot creation in progress](images/azs-browser-create-snapshot-progress.png)
+Write-Output -InputObject "Snapshot created successfully"
+</code></pre>
 
 ## Creating a new managed disk from a snapshot
 
-1. Click **All services** in the favourites panel, then select **Disks** under the *Compute* section.
-
-    ![All services - disks](images/azs-browser-allservices-disks.png)
-
-2. On the **Disks** blade, click **Add**.
-
-    ![Disks blade - Add](images/azs-browser-disks-list-add.png)
-
-3. In the **Create managed disk** blade, enter the following information:
-
-    - **Name** - The name of the disk.
-
-    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription.
-
-    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
-
-    - **Location** - This will be the location of the Azure Stack Hub.
-
-    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage.
-
-    - **Source type** - Select *Snapshot* from the dropdown.
-        - **Source snapshot** - Select the previously created snapshot.
-
-    - **Size** - This will be set to the size of the source disk that the snapshot was created from.
-
-        > [!NOTE]
-        > You can increase the size if necessary, but you will not be allowed to decrease it below the original size.
-
-    ![Create disk from snapshot](images/azs-browser-create-disk-from-snapshot.png)
-
-4. When you're done, click the **Create** button to create the disk.
-
-5. You can monitor the progress of the disk creation by clicking the **Notifications** icon.
-
-    ![Notification showing disk creation in progress](images/azs-browser-create-disk-from-snapshot-progress.png)
+WIP
 
 ## Creating a virtual machine from a managed disk
 
-1. Click **All services** in the favourites panel, then select **Disks** under the *Compute* section.
+<pre><code class="language-PowerShell"># Initialise environment and variables
 
-    ![All services - disks](images/azs-browser-allservices-disks.png)
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-2. From the list, select the disk that you would like to create a virtual machine from.
+## Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
-    ![Disks blade](images/azs-browser-disks-list.png)
+## Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-3. In the new blade for the selected disk, under *Overview*, ensure that **Disk state** is listed as *Unattached*. If it isn't, you will need to detach the disk from the VM before you can use it.
+# Get location of Azure Stack Hub
+$Location = (Get-AzureRmLocation).Location
 
-    ![New disk blade - Unattached](images/azs-browser-disk-unattached.png)
+# Input Variables
+$RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
+$SAName = "<output form="saname" name="result2" style="display: inline;">MyStorageAccount<span id="RandNum2"></span></output>".ToLower()
+$SubnetName = "<output form="subnetname" name="result2" style="display: inline;">MySubnet</output>"
+$SubnetRange = "<output form="subaddrrange" name="result2" style="display: inline;">192.168.1.0/24</output>"
+$VNetName = "<output form="vnetname" name="result2" style="display: inline;">MyVNetwork</output>"
+$VNetRange = "<output form="vnetaddrrange" name="result2" style="display: inline;">192.168.0.0/16</output>"
+$PublicIPName = "<output form="publicipname" name="result2" style="display: inline;">MyPublicIP</output>"
+$NSGName = "<output form="nsgname" name="result2" style="display: inline;">MyNSG</output>"
+$NICName = "<output form="nicname" name="result2" style="display: inline;">MyNIC</output>"
+$ComputerName = "<output form="compname" name="result2" style="display: inline;">MyComputer</output>"
+$VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
+$VMSize = "<output form="vmsize" name="result2" style="display: inline;">Standard_DS1_v2</output>"
+$VMImage = "*<output form="vmimage" name="result2" style="display: inline;">/CentOS/Skus/7.5</output>"
 
-4. In the menu at the top of the blade, click **Create VM**.
+# Create a new resource group
+Write-Output -InputObject "Creating resource group"
+New-AzureRmResourceGroup -Name $RGName -Location $Location
 
-5. In the **Create virtual machine** blade, in the *Basics* step, enter a Virtual machine name and either select an existing Resource group or create a new one, then click **OK**.
+## Create storage resources
 
-    ![Create VM from disk - Basics](images/azs-browser-disk-vm-basics.png)
+# Create a new storage account
+Write-Output -InputObject "Creating storage account"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $SAName
 
-6. In the *Size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
+## Create network resources
 
-    For information about the different available VM sizes, see [https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes)
+# Create a subnet configuration
+Write-Output -InputObject "Creating virtual network"
+$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
 
-    ![Create VM from disk - Size](images/azs-browser-disk-vm-size.png)
+# Create a virtual network
+$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
 
-7. In the *Settings* step, change any of the optional settings as required for your VM, then click **OK**.
+# Create a public IP address
+Write-Output -InputObject "Creating public IP address"
+$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
 
-    ![Create VM from disk - Settings](images/azs-browser-disk-vm-settings.png)
+# Create network security group rule (SSH or RDP)
+Write-Output -InputObject "Creating SSH/RDP network security rule"
+$SecurityGroupRule = switch ("<output form="vmtype" name="result3" style="display: inline;">-Linux</output>") {
+    "-Linux" { New-AzureRmNetworkSecurityRuleConfig -Name "SSH-Rule" -Description "Allow SSH" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 22 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
+    "-Windows" { New-AzureRmNetworkSecurityRuleConfig -Name "RDP-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 3389 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
+}
 
-8. In the *Summary* step, review the selections you've made and then click **OK** to start the deployment.
+# Create a network security group
+Write-Output -InputObject "Creating network security group"
+$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName -SecurityRules $SecurityGroupRule
 
-    ![Create VM from disk - Summary](images/azs-browser-disk-vm-summary.png)
+# Create a virtual network card and associate it with the public IP address and NSG
+Write-Output -InputObject "Creating network interface card"
+$NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
 
-9. You can monitor the progress of your VM's deployment by clicking the **Notifications** icon.
+## Create the virtual machine
 
-    ![Create VM from disk - Notification](images/azs-browser-disk-vm-notification.png)
+# Define a credential object to store the username and password for the virtual machine
+$Username = "<output form="vmusername" name="result2" style="display: inline;">MyUser</output>"
+$Password = '<output form="vmpassword" name="result2" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$Credential = New-Object -TypeName PSCredential -ArgumentList ($Username, $Password)
+
+# Create the virtual machine configuration object
+$VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
+
+# Set the VM Size and Type
+$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result4" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
+
+# Enable the provisioning of the VM Agent
+if ($VirtualMachine.OSProfile.WindowsConfiguration) {
+    $VirtualMachine.OSProfile.WindowsConfiguration.ProvisionVMAgent = $true
+}
+
+# Get the VM Source Image
+$Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object -FilterScript { $_.Id -like $VMImage }
+
+# Set the VM Source Image
+$VirtualMachine = Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
+
+# Add Network Interface Card
+$VirtualMachine = Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id -VM $VirtualMachine
+
+# Applies the OS disk properties
+$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -CreateOption "FromImage"
+
+# Enable boot diagnostics.
+$VirtualMachine = Set-AzureRmVMBootDiagnostics -VM $VirtualMachine -Enable -StorageAccountName $SAName -ResourceGroupName $RGName
+
+# Create the virtual machine.
+Write-Output -InputObject "Creating virtual machine"
+$NewVM = New-AzureRmVM -ResourceGroupName $RGName -Location $Location -VM $VirtualMachine
+$NewVM
+Write-Output -InputObject "Virtual machine created successfully"
+</code></pre>
 
 ## Feedback
 
