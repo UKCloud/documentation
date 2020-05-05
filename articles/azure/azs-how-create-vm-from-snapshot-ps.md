@@ -8,19 +8,19 @@ lastreviewed: 05/05/2020
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a Virtual Machine from disk snapshot
+toc_sub2: Create a Virtual Machine from a disk snapshot
 toc_sub3:
 toc_sub4:
-toc_title: Create a virtual machine from snapshot - PowerShell
-toc_fullpath: Users/How To/Create a Virtual Machine from disk snapshot/azs-how-create-vmfromsnapshot-ps.md
-toc_mdlink: azs-how-create-vmfromsnapshot-ps.md
+toc_title: Create a virtual machine from a disk snapshot - PowerShell
+toc_fullpath: Users/How To/Create a Virtual Machine from disk snapshot/azs-how-create-vm-from-snapshot-ps.md
+toc_mdlink: azs-how-create-vm-from-snapshot-ps.md
 ---
 
 # How to create a virtual machine from a disk snapshot using PowerShell
 
 ## Overview
 
-This article shows you how to use PowerShell to take a snapshot of disk, use that to create a new managed disk, and finally create a virtual machine from the new disk.
+This article shows you how to use PowerShell to take a snapshot of a managed disk, use that to create a new managed disk, and finally create a virtual machine from the new disk.
 
 ### Prerequisites
 
