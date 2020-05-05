@@ -92,7 +92,10 @@ Before you begin, ensure your PowerShell environment is set up as detailed in [C
     - **Source type** - Select *Snapshot* from the dropdown.
         - **Source snapshot** - Select the previously created snapshot.
 
-    - **Size** - This will be set to the size of the source disk that the snapshot was created from. You can increase this if necessary, but you will not be allowed to decrease it below the original size.
+    - **Size** - This will be set to the size of the source disk that the snapshot was created from.
+
+        > [!NOTE]
+        > You can increase the size if necessary, but you will not be allowed to decrease it below the original size.
 
     ![Create disk from snapshot](images/azs-browser-create-disk-from-snapshot.png)
 
@@ -104,8 +107,6 @@ Before you begin, ensure your PowerShell environment is set up as detailed in [C
 
 ## Creating a virtual machine from a managed disk
 
-After you have the managed disk that you want to use, you can create the VM in the portal:
-
 1. Click **All services** in the favourites panel, then select **Disks** under the *Compute* section.
 
     ![All services - disks](images/azs-browser-allservices-disks.png)
@@ -114,7 +115,7 @@ After you have the managed disk that you want to use, you can create the VM in t
 
     ![Disks blade](images/azs-browser-disks-list.png)
 
-3. In the new blade for the selected disk, under *Overview*, ensure that **Disk state** is listed as *Unattached*. If it isn't, you will need to either detach the disk from the VM or delete the VM to free up the disk.
+3. In the new blade for the selected disk, under *Overview*, ensure that **Disk state** is listed as *Unattached*. If it isn't, you will need to detach the disk from the VM before you can use it.
 
     ![New disk blade - Unattached](images/azs-browser-disk-unattached.png)
 
