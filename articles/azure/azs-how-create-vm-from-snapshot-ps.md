@@ -20,7 +20,7 @@ toc_mdlink: azs-how-create-vm-from-snapshot-ps.md
 
 ## Overview
 
-This article shows you how to use PowerShell to take a snapshot of a managed disk, use that to create a new managed disk, and finally create a virtual machine from the new disk.
+This article shows you how to use PowerShell to create a copy of a virtual machine that uses managed disks by taking a snapshot of the VM, and then by using that snapshot to create a new managed disk and a new VM.
 
 ### Prerequisites
 
