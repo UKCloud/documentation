@@ -41,7 +41,9 @@ If you need to change the email address you use to log in to the UKCloud Portal,
 
     - thing two
 
-4. 
+4. A member of the UKCloud Support Team will pick up the ticket and make the relevant changes.
+
+5. When the change has been completed, your ticket will be updated and you can log in to the Portal with your new email address.
 
 ## Feedback
 
