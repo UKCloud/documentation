@@ -105,7 +105,7 @@ In the toolbar, you can also click your username to access the following options
     > [!TIP]
     > The number next to the **Notifications** menu option (and next to your username in the toolbar) shows how many unread notifications you have.
 
-- **Update contact details** - Change your name, email address and telephone numbers. You can also opt to have Portal notifications sent to your email address.
+- **Update contact details** - Change your name and telephone numbers. You can also opt to have Portal notifications sent to your email address.
 
 - **Change Password** - Change your password or memorable word. We recommend that you change your password at least every 90 days (see [*How to reset your UKCloud Portal password or memorable word*](ptl-how-reset-password.md)).
 
