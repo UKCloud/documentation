@@ -6762,6 +6762,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-availability-zone-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-availability-zone-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-cli-example.png",
       "output": {
         "resource": {
@@ -6799,6 +6810,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-cli-results-autorestart-on.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-flavor-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-flavor-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-floating-ip-create.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-floating-ip-create.png"
         }
       },
       "is_incremental": false,
@@ -7389,6 +7422,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-image-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-image-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-neutron-floatingip-associate.png",
       "output": {
         "resource": {
@@ -7543,10 +7587,54 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-openstack-net-create.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-openstack-net-create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-openstack-subnet-create.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-openstack-subnet-create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-pip-installed.png",
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-pip-installed.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-port-create.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-port-create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-port-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-port-list.png"
         }
       },
       "is_incremental": false,
@@ -7701,6 +7789,39 @@
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-rhui-volumelocation.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-router-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-router-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-server-create-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-server-create-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-server-create-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-server-create-2.png"
         }
       },
       "is_incremental": false,
@@ -8104,7 +8225,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-create-load-balancer.html",
-          "hash": "XYkhuw/HyvWUEkkMsoz41A=="
+          "hash": "h8NG5Hcf0P9GZdUlrIQxDA=="
         }
       },
       "is_incremental": false,
@@ -11985,10 +12106,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/fig16_fabric_n3.png",
+      "source_relative_path": "articles/vmware/images/fig16_fabric_hscn.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/fig16_fabric_n3.png"
+          "relative_path": "articles/vmware/images/fig16_fabric_hscn.png"
         }
       },
       "is_incremental": false,
@@ -11996,10 +12117,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/fig17_nft_n3.png",
+      "source_relative_path": "articles/vmware/images/fig17_nft_hscn.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/fig17_nft_n3.png"
+          "relative_path": "articles/vmware/images/fig17_nft_hscn.png"
         }
       },
       "is_incremental": false,
@@ -18495,7 +18616,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-ubuntu-update-servers.html",
-          "hash": "JFkm7xodFRwmX01KTj+pfw=="
+          "hash": "jPbubDlZAB8GwEP9flInbg=="
         }
       },
       "is_incremental": false,
@@ -19203,7 +19324,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-connectivity-options.html",
-          "hash": "cDBwNnpf8KlHiasW5lYOqg=="
+          "hash": "NZJYQmZxx47JAsmcEYJeYw=="
         }
       },
       "is_incremental": false,
@@ -19730,17 +19851,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 423,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 423,
           "skipped_file_count": 0
         }
       }
