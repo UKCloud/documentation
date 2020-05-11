@@ -35,13 +35,17 @@ UKCloud's Elevated OFFICIAL platform doesn't natively connect to the internet, a
 
 We provide Ubuntu repositories for the 12.04 and 14.04 LTS versions of Ubuntu on our Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.
 
-- For 12.04:
+- For 16.04:
 
-        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_precise.list
+        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_xenial.list
 
-- For 14.04:
+- For 18.04:
 
-        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_trusty.list
+        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_bionic.list
+ 
+- For 20.04:
+
+        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_focal.list
 
 We also recommend that you rename the default `/etc/apt/sources.list` file to reduce the likelihood of errors during the update process that stem from attempts to access the internet-based Canonical Partner repositories. To do this, use the following command:
 
