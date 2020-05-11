@@ -4,7 +4,7 @@ description: This guide shows you how to configure access to Ubuntu update serve
 services: vmware
 author: Sue Highmoor
 reviewer: pcantle
-lastreviewed: 01/04/2020
+lastreviewed: 11/05/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -33,7 +33,7 @@ UKCloud's Elevated OFFICIAL platform doesn't natively connect to the internet, a
 
 ### UKCloud-managed repository servers
 
-We provide Ubuntu repositories for the 12.04 and 14.04 LTS versions of Ubuntu on our Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.
+We provide Ubuntu repositories for the 16.04, 18.04 and 20.04 LTS versions of Ubuntu on our Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.
 
 - For 16.04:
 
