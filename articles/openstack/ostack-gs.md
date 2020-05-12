@@ -35,7 +35,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 2. From the **Authenticate using** list, select:
 
     - **Keystone Credentials** if your account has not been migrated to SSO
-    
+
     - **UKCloud SSO** if your account has been migrated to SSO
 
     > [!NOTE]
@@ -45,11 +45,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 
 3. If you selected **Keystone Credentials**, enter your UKCloud Portal login credentials and click **Connect**.
 
-    If you selected **UKCloud SSO** click **Connect**. You'll be redirected to the SSO login page, where you can enter your username and password and click **Log in**.
-
-    ![SSO Login Page](images/ostack-horizon-sso-login.png)
-
-    If you've set up two-factor authentication (2FA) in the Portal, you'll be prompted for a 2FA code.
+    If you selected **UKCloud SSO** click **Connect**.
 
 4. After logging in, the first screen you'll see is the *Overview* page.
 

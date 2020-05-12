@@ -88,9 +88,13 @@ To access OpenStack:
 
     ![Select OpenStack region](images/ostack-portal-select-region.png)
 
-4. On the OpenStack Horizon *Log in* page, enter your UKCloud Portal **User Name** and **Password** and click **Connect**.
+4. On the OpenStack Horizon *Log in* page, log in using either:
 
-    ![Log in page for OpenStack Horizon](images/ostack-horizon-log-in.png)
+    - **Keystone Credentials** if your account has not been migrated to SSO
+
+    - **UKCloud SSO** if your account has been migrated to SSO
+
+    For more detailed instructions, see the [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md).
 
 5. You can now work with your OpenStack projects within the OpenStack Horizon dashboard.
 
