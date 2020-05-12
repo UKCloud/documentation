@@ -3,8 +3,8 @@ title: Known bugs with the UKCloud Pricing Estimation Tool
 description: Known bugs with the UKCloud Pricing Estimation Tool
 services: other
 author: Dan Baker
-reviewer:
-lastreviewed: 20/11/2018 14:29:01
+reviewer: hferris
+lastreviewed: 05/05/2020
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -30,11 +30,15 @@ The current version of the tool:
 
 ## Pricing Estimation Tool v10.3.1 Changelog
 
-Fixed all known issues listed below.
+Fixed all known issues in v10.2.8.
 
-- **No known issues with 10.3.1.**
+## Known issues with v10.3.1 (current version)
 
-## Known issues with v10.2.8 (Previous Version)
+- The Mac version of the Pricing Estimation Tool is a 32-bit application, so wll not work on the latest version of the Mac OS.
+
+- Tool crashes when inputting a large amount of data.
+
+## Known issues with v10.2.8 (previous version)
 
 ### Windows
 
