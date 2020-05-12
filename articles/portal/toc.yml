@@ -50,5 +50,7 @@
     href: ptl-ref-security-settings.md
 - name: Videos
   items:
+  - name: Creating support tickets
+    href: ptl-vid-mycalls.md
   - name: UKCloud Portal
     href: ptl-vid-portal.md

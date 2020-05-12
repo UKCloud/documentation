@@ -11188,7 +11188,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "83265kI9Qxqca5PbdIijTw=="
+          "hash": "vqEMr6I5qSfKalhc+PQ2eQ=="
         }
       },
       "is_incremental": false,
@@ -11236,7 +11236,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-raise-escalate-service-request.html",
-          "hash": "DW4He355El69Qg+RGJkmJg=="
+          "hash": "lvyYkIG2XVKUPdx7pzU/hg=="
         }
       },
       "is_incremental": false,
@@ -11356,7 +11356,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "6wl88ImY8iIk70Hs3+E5iA=="
+          "hash": "WD5+4rNd99OnTNZAzGDrjw=="
         }
       },
       "is_incremental": false,
@@ -11448,11 +11448,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-vid-mycalls.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-vid-mycalls.html",
+          "hash": "oYSaRtJVRgcba/82Qm0hYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-vid-portal.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-vid-portal.html",
-          "hash": "y887MbgJeauuxYO/evorRQ=="
+          "hash": "C720XqZPi1zQeffGJwSC5Q=="
         }
       },
       "is_incremental": false,
@@ -11464,7 +11476,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "cvUkvHQHCBMaD6quTbbRhA=="
+          "hash": "nKm0lPB8RtEqTdXKAJrIaA=="
         }
       },
       "is_incremental": false,
@@ -19844,6 +19856,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19854,14 +19873,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 423,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 424,
           "skipped_file_count": 0
         }
       }
