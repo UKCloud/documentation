@@ -1,5 +1,5 @@
 ---
-title: UKCloud Portal overview video
+title: (Video) UKCloud Portal overview
 description: Shows a video that provides an overview of the UKCloud Portal user interface
 services: portal
 author: Sue Highmoor
@@ -15,7 +15,7 @@ toc_fullpath: Videos/ptl-vid-portal.md
 toc_mdlink: ptl-vid-portal.md
 ---
 
-# UKCloud Portal overview video
+# Video: UKCloud Portal overview
 
 The following video provides an overview of the UKCloud Portal user interface.
 

@@ -170,7 +170,7 @@ The Portal navigation panel provides access to all the functionality available i
 
   - The Knowledge Centre
 
-  - My Calls (see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md))
+  - My Calls (see [*How to use My Calls to raise and monitor support tickets*](ptl-how-use-my-calls.md))
 
   - Service status information (see [*How to view the UKCloud Service Status page*](../other/other-how-view-status-info.md))
 
@@ -218,6 +218,8 @@ In this Getting Started Guide, you've learned the basics about the Portal and th
 ## Related videos
 
 - [*UKCloud Portal overview video*](ptl-vid-portal.md)
+
+- [*Creating support tickets in My Calls*](ptl-vid-mycalls.md)
 
 ## Glossary
 
