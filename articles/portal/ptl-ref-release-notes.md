@@ -29,7 +29,7 @@ Details:
 
 - Disable ability for users to change their emails.
 
-- Remove uneeded VM sizes field from billing table.
+- Remove unneeded VM sizes field from billing table.
 
 ## Release 1.132.0
 
