@@ -4,7 +4,7 @@ description: Describes the process for changing your email address in the UKClou
 services: portal
 author: Sue Highmoor
 reviewer: wllewellyn
-lastreviewed: 07/05/2020
+lastreviewed: 14/05/2020
 
 toc_rootlink: How To
 toc_sub1: 
@@ -35,15 +35,21 @@ If you need to change the email address you use to log in to the UKCloud Portal,
 
     For more detailed instructions, see [*How to use My Calls to raise and monitor support tickets*](ptl-how-use-my-calls.md).
 
-3. Enter the details as required in the template, and , including:
+3. Enter the details as required, including:
 
-    - thing one
+    - Your new email address
 
-    - thing two
+    - The name of the user account (if you have multiple accounts for the same email address)
 
-4. A member of the UKCloud Support Team will pick up the ticket and make the relevant changes.
+4. A member of UKCloud Support will pick up the ticket and make the necessary changes.
 
-5. When the change has been completed, your ticket will be updated and you can log in to the Portal with your new email address.
+5. When the change has been completed, a member of UKCloud Support will contact you to verify that the change was successful.
+
+6. Log in to the Portal using your new email address and verify that you can access My Calls.
+
+7. Confirm with UKCloud Support that the update has been successful.
+
+8. If you encounter any problems, contact UKCloud Support. If you can't access My Calls, you can call UKCloud Support on 01252 303 300 (select option 2).
 
 ## Feedback
 
