@@ -43,7 +43,7 @@ If you need to change the email address you use to log in to the UKCloud Portal,
 
 4. A member of UKCloud Support will pick up the ticket and make the necessary changes.
 
-5. When the change has been completed, a member of UKCloud Support will contact you to verify that the change was successful.
+5. When the change has been completed, a member of UKCloud Support will contact you, on the email address you used to raise the ticket, to verify that the change was successful.
 
 6. Log in to the Portal using your new email address and verify that you can access My Calls.
 
