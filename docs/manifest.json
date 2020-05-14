@@ -11188,7 +11188,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "vqEMr6I5qSfKalhc+PQ2eQ=="
+          "hash": "knxXEyLge7EU1+VDcUIX3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-how-change-email-address.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-how-change-email-address.html",
+          "hash": "4CoilfrnPkbHxspAxoamGA=="
         }
       },
       "is_incremental": false,
@@ -11476,7 +11488,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "nKm0lPB8RtEqTdXKAJrIaA=="
+          "hash": "+3uN+IdPVO0a8wp9g3m8kw=="
         }
       },
       "is_incremental": false,
@@ -19863,17 +19875,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 425,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 424,
           "skipped_file_count": 0
         }
       }
