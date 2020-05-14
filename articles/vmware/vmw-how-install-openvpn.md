@@ -4,7 +4,7 @@ description: Details the steps required to obtain, deploy and configure an OpenV
 services: vmware
 author: Sue Highmoor
 reviewer: jpaddock
-lastreviewed: 01/04/2020
+lastreviewed: 14/05/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -150,7 +150,7 @@ During our tests, the DNS resolver configuration was not added by the VMware cus
 
     `# pico /etc/network/interfaces`
 
-2. Use the arrow keys to scroll down. Below the line specifying the default gateway, add the following:
+2. Use the arrow keys to scroll down. At the first free line specify your DNS servers, for example::
 
     `dns-nameservers 8.8.8.8`
 

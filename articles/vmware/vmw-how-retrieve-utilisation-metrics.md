@@ -4,7 +4,7 @@ description: This guide shows how you can use the vCloud API to retrieve current
 services: vmware
 author: Steve Hall
 reviewer:
-lastreviewed: 01/04/2020
+lastreviewed: 14/05/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -40,7 +40,7 @@ You can use the vCloud API to retrieve current or historic utilisation metrics f
 You can retrieve current utilisation metrics for VMs in all UKCloud regions; you can retrieve historic metrics for VMs in regions 5 and 6.
 
 > [!NOTE]
-> These metrics are also available in the Details > Monitoring chart of the VM itself.
+> You can also find utilisation metrics for a in vCloud Director by selecting **Details** and expanding the *Monitoring Chart* section.
 
 ### Intended audience
 
