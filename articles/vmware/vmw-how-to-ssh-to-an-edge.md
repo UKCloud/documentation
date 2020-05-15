@@ -33,14 +33,14 @@ To access your edge gateways console via SSH from a VM networked to your edge wi
 
 ## Firewall Rules
 
-Source: IP of Nic on VM
+Source: IP of NIC on VM
 Destination: External IP of your edge gateway
 Service: 
 -	Protocol: TCP
 -	Destination port: 22
 
 ## From within the VM
-From within your VM you will need to SSH to your edge gateways external IP address and login with the credentials specified earlier. This can be done using PuTTY on a Windows VM or by running the relevant command on your Linux VM.
+From within your VM you will need to SSH to the external IP address of your edge gateway and login with the credentials specified earlier. This can be done using PuTTY on a Windows VM or by running the relevant command on a Linux VM.
 
 
 ## Feedback
