@@ -79,7 +79,7 @@ For full information regarding this product, we have Service Scopes, FAQs and ot
 
 ## Pricing and packaging
 
-HyTrust DataControl from UKCloud pricing from £35.00 per VM/ per month, full pricing with all options including licensing and connectivity available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide).
+HyTrust DataControl from UKCloud pricing from £35.00 per VM/ per month, full pricing with all options including licensing and connectivity available in the [3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide).
 
 ## Accreditation and information assurance
 

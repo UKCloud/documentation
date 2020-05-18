@@ -85,7 +85,7 @@ Cisco AppDynamics offers three editions:
 
 ## Pricing and packaging
 
-Cisco AppDynamics pricing is per agent per year, from £2,290, dependent on the type of agent and the edition. Full pricing is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide).
+Cisco AppDynamics pricing is per agent per year, from £2,290, dependent on the type of agent and the edition. Full pricing is available in the [3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide).
 
 ## Free trial
 

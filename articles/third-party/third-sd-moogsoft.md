@@ -47,7 +47,7 @@ Moogsoft AIOps is the pioneering AI platform for IT operations, powered by purpo
 
 ## Pricing and packaging
 
-Moogsoft AIOps from UKCloud is priced per managed device per year, starting at £1.10. Full pricing according to managed device type and number of managed devices is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide).
+Moogsoft AIOps from UKCloud is priced per managed device per year, starting at £1.10. Full pricing according to managed device type and number of managed devices is available in the [3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide).
 
 ## Free trial
 
