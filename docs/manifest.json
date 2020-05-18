@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-home.html",
-          "hash": "lE3I8gZKEjYkntv9ImMZkQ=="
+          "hash": "hv1Ta6/x4uD5UD8k+AKTAw=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sd.html",
-          "hash": "PsoUZ34bKFb4Ql7+UaRdTg=="
+          "hash": "LdzTbA/4JHjsJ4C8fYC/uQ=="
         }
       },
       "is_incremental": false,
@@ -2384,7 +2384,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sco.html",
-          "hash": "HuxEdmiLW5ivNfz8NrKZMw=="
+          "hash": "3lb7S7B1Iu44Mifby7haiQ=="
         }
       },
       "is_incremental": false,
@@ -2396,7 +2396,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sd.html",
-          "hash": "HwY+ZYYB/58z2lxTISWO5A=="
+          "hash": "EWW0ina22+Pg07Jp1dvbQA=="
         }
       },
       "is_incremental": false,
@@ -2617,7 +2617,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sd.html",
-          "hash": "um5A29zp6B8EGrnnVxVWFQ=="
+          "hash": "QF7I4NfJbeLf0czb63Dfqw=="
         }
       },
       "is_incremental": false,
@@ -3483,7 +3483,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-hscn.html",
-          "hash": "+NCAchv/9+CgsJn6BFSKuA=="
+          "hash": "Mc86qKZXGvbcz7YX/Yehtg=="
         }
       },
       "is_incremental": false,
@@ -3543,7 +3543,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-psn.html",
-          "hash": "kY0HSA8HCmKnGUKpNWcahA=="
+          "hash": "AYloO6ebdjO7eX7XOcomng=="
         }
       },
       "is_incremental": false,
@@ -3859,7 +3859,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/dedicated-compute/dc-sco.html",
-          "hash": "OIVKNmkA20AWR27edGvosA=="
+          "hash": "8aJpyTvPwyRTz01qREtCfw=="
         }
       },
       "is_incremental": false,
@@ -3871,7 +3871,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/dedicated-compute/dc-sd.html",
-          "hash": "bFYfL7n+SpBKnTTTroI7PA=="
+          "hash": "Q498sEqincNAx/5h1kqt2w=="
         }
       },
       "is_incremental": false,
@@ -3928,7 +3928,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-faq.html",
-          "hash": "BCWPrDD8HCpERQ+JPtrzlg=="
+          "hash": "06x0izVTggC5gm28am3u3w=="
         }
       },
       "is_incremental": false,
@@ -3976,7 +3976,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-sd.html",
-          "hash": "callqDSXEdSJw8rRXVvHxA=="
+          "hash": "3yXsemgauTkH2Ocdj0Pc3g=="
         }
       },
       "is_incremental": false,
@@ -4719,7 +4719,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-transfer-assured-elevated.html",
-          "hash": "ZmEoAgRSniMe7olyjMuj7A=="
+          "hash": "/Zt7B+nG1oq4BvRD/4eR6Q=="
         }
       },
       "is_incremental": false,
@@ -4731,7 +4731,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-transfer-regions.html",
-          "hash": "I4tGdT1b6XpCYw5pLCSTDA=="
+          "hash": "rtyXhKi1vVv7lSEemMMlJA=="
         }
       },
       "is_incremental": false,
@@ -5021,7 +5021,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-sco.html",
-          "hash": "XEF/Dg4LLO9yX8s3PDhaxA=="
+          "hash": "pS4ar/AUT4Equ1MU2iS9Bg=="
         }
       },
       "is_incremental": false,
@@ -5045,7 +5045,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/hpc/hpc-ref-overview.html",
-          "hash": "STBLALu4jCejJX/WLrpevA=="
+          "hash": "KqJpYKbV8adnPFFG1CLhUw=="
         }
       },
       "is_incremental": false,
@@ -5057,7 +5057,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/hpc/hpc-sd.html",
-          "hash": "Gkrh2zWct/oZ4rj1kNwKBg=="
+          "hash": "M5nnTxZbHWr2lB7Oyuf+eQ=="
         }
       },
       "is_incremental": false,
@@ -5216,7 +5216,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-compute.html",
-          "hash": "f9f6RDx0p2qNByBmxO4tYQ=="
+          "hash": "XkwAEUVLKAZvHE7UIiUSlw=="
         }
       },
       "is_incremental": false,
@@ -5228,7 +5228,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-monitoring.html",
-          "hash": "nLSUhBUpDVJdI1B6FCjL6A=="
+          "hash": "HRBv43xAPTx8bD8TLznMlg=="
         }
       },
       "is_incremental": false,
@@ -5240,7 +5240,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-network.html",
-          "hash": "wddjWKq2bLvWusO5+F2I9g=="
+          "hash": "WZovMFxiwsWQ7h5zJ6+lVQ=="
         }
       },
       "is_incremental": false,
@@ -5252,7 +5252,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-optimisation.html",
-          "hash": "va9LgUNPQq9T4ooVZKph4Q=="
+          "hash": "ybngGYaOdZgFqPwL9SOsXQ=="
         }
       },
       "is_incremental": false,
@@ -5344,7 +5344,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/migr-sd.html",
-          "hash": "s7ERmhi+D3FVAVTQhb2zhQ=="
+          "hash": "3zrlawP/y16CwUZqZGVzqA=="
         }
       },
       "is_incremental": false,
@@ -5601,7 +5601,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-home.html",
-          "hash": "5o5yt1I5N+6pQguFowxv6Q=="
+          "hash": "EoxUWZhdjAK78a8wQXr+iw=="
         }
       },
       "is_incremental": false,
@@ -5949,7 +5949,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "FxldCZpke3y88DI37YXgDg=="
+          "hash": "PgWSOp23M4yUm7W0bdcoIA=="
         }
       },
       "is_incremental": false,
@@ -5961,7 +5961,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sd.html",
-          "hash": "XAN5b3/Ic08huhOCrtekxw=="
+          "hash": "TqrzvDZHgi8w+Ir5+zntjg=="
         }
       },
       "is_incremental": false,
@@ -8141,7 +8141,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "6oQtHmNSVOKTrD9tIpMG7w=="
+          "hash": "WMN4eF4TMz8OWyWbPdM1pw=="
         }
       },
       "is_incremental": false,
@@ -8165,7 +8165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "KNXSWKBgaXgaio5g+OUlXA=="
+          "hash": "SRbRNchFt5bmAF77bB6XXQ=="
         }
       },
       "is_incremental": false,
@@ -8489,7 +8489,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sd.html",
-          "hash": "14nxQ0t6ICJeLAb055PE6w=="
+          "hash": "p1Nv//yeqGHYJQI26Diwzw=="
         }
       },
       "is_incremental": false,
@@ -8946,7 +8946,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-home.html",
-          "hash": "1uoRG0zYSiGdWqknmnQkyw=="
+          "hash": "ig+NyZRP3nJVrZUK4R9EHA=="
         }
       },
       "is_incremental": false,
@@ -9078,7 +9078,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sd.html",
-          "hash": "5ht8wJ47KXDmhCb4Cf+8IA=="
+          "hash": "JtxIXEb71QXV9iub5jG7ZQ=="
         }
       },
       "is_incremental": false,
@@ -9755,7 +9755,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-g11.html",
-          "hash": "SQYeenFZA9qKvLnUVgdPZw=="
+          "hash": "gUmfGmaydd6vm3sl4AMLMQ=="
         }
       },
       "is_incremental": false,
@@ -9851,7 +9851,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-use-pricing-tool.html",
-          "hash": "JYNOr7v/QQN2WXDeFfYo6w=="
+          "hash": "B0RDmM6Xm/nY6Y3XxNs/1A=="
         }
       },
       "is_incremental": false,
@@ -9887,7 +9887,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "lOt74C7xZLXw1xqrfJT6pQ=="
+          "hash": "DVk93ydBH4bCel5FnnoKew=="
         }
       },
       "is_incremental": false,
@@ -9924,18 +9924,6 @@
         ".html": {
           "relative_path": "articles/other/other-ref-complaints.html",
           "hash": "ZdXGkISvwMbGIy7MINBZoA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-customer-admin.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-customer-admin.html",
-          "hash": "lT3Z6OGZzRyXSjKhN52yHg=="
         }
       },
       "is_incremental": false,
@@ -10079,7 +10067,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-offboarding.html",
-          "hash": "Ut2dRkJGnNa2LzlZIVpWRA=="
+          "hash": "8byUt3I+xS08II77tL9oBw=="
         }
       },
       "is_incremental": false,
@@ -10091,7 +10079,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "G9Fm+Fo2frprcCq22y/SZg=="
+          "hash": "rRZSqhYGAVN2CJ8OpOCi7Q=="
         }
       },
       "is_incremental": false,
@@ -10127,7 +10115,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "rO7jkBVg9RO8VT9eeLFtCw=="
+          "hash": "UlkWc/0Hpo58qa3VZGPRGQ=="
         }
       },
       "is_incremental": false,
@@ -10151,7 +10139,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "bI7Z8ecNfTPTwsGO9uKbIA=="
+          "hash": "PU6opXPEBaL5FqaSAzhkxQ=="
         }
       },
       "is_incremental": false,
@@ -10271,7 +10259,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-sd-mcbs.html",
-          "hash": "PTykJ1b8O4NWWvpm0f2KxA=="
+          "hash": "oyVPf1wzSpe1SeoWlG+ryQ=="
         }
       },
       "is_incremental": false,
@@ -10307,7 +10295,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "l9FpYtjqjNHsSST3Pzxdjw=="
+          "hash": "CJeyKLBLbl0FpcIAsvp40A=="
         }
       },
       "is_incremental": false,
@@ -11535,7 +11523,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sco-orcl.html",
-          "hash": "so8bkM/QaLNLF+To6DDR6w=="
+          "hash": "Mrdz74C7kAASo6CT6/pU8Q=="
         }
       },
       "is_incremental": false,
@@ -11559,7 +11547,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sco.html",
-          "hash": "PHR+v+2YRXfDkIVFNF5EbQ=="
+          "hash": "EimwulEgOLMfe2KIAMW6XQ=="
         }
       },
       "is_incremental": false,
@@ -11571,7 +11559,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-orcl.html",
-          "hash": "wkn0lG8SD+4pm3AB+VGaug=="
+          "hash": "Dd5hUjyO6+kBT150UsgegA=="
         }
       },
       "is_incremental": false,
@@ -11583,7 +11571,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-storage.html",
-          "hash": "WM8sI6xOJOe37KAsG8Sjpg=="
+          "hash": "bO1Qt3i/TPftiB50YT0SHg=="
         }
       },
       "is_incremental": false,
@@ -11595,7 +11583,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd.html",
-          "hash": "cgP8Q8skDwCisQlS45SGYg=="
+          "hash": "L6yKgIaNXNrW5Ss9ocOvHQ=="
         }
       },
       "is_incremental": false,
@@ -11696,7 +11684,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-faq.html",
-          "hash": "5cJmRY62tNIBXcHPd95rkA=="
+          "hash": "jhI0wdaZALt9DW93ISaSxw=="
         }
       },
       "is_incremental": false,
@@ -11732,7 +11720,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sco.html",
-          "hash": "kxhGFHi+IKxPV2aIXbVmsQ=="
+          "hash": "aesw2oCxBrRj3gGM5t03zw=="
         }
       },
       "is_incremental": false,
@@ -11744,7 +11732,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sd.html",
-          "hash": "wAUovu5Kpsjcj9XPgg6+yA=="
+          "hash": "e+n/1z+jGeXgN5LB9qIk3A=="
         }
       },
       "is_incremental": false,
@@ -11861,7 +11849,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-sd-appdynamics.html",
-          "hash": "w7u1pVHYwLmUoV8aAcmAOQ=="
+          "hash": "d15cEtDlexka8HzZK1+ujA=="
         }
       },
       "is_incremental": false,
@@ -11873,7 +11861,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-sd-cloudsoc.html",
-          "hash": "0fWQJNvA4ED7Y/fOh6nVIQ=="
+          "hash": "cCabN+myhkGnL3T5bqjN+w=="
         }
       },
       "is_incremental": false,
@@ -11885,7 +11873,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-sd-hytrust.html",
-          "hash": "xAT+/ko6PDSuyp5nhLnPZA=="
+          "hash": "QzH6NP1rUj00vN447GAtjA=="
         }
       },
       "is_incremental": false,
@@ -11897,7 +11885,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-sd-moogsoft.html",
-          "hash": "4/cvsSvh95olxRk/ovCiKQ=="
+          "hash": "WCfPopdiORsq2fmGdKhU+Q=="
         }
       },
       "is_incremental": false,
@@ -11909,7 +11897,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-sd-portworx.html",
-          "hash": "C/HumZTEDD7iCL6a0j0blw=="
+          "hash": "hSrRnBH57aAo7tEotwVRcg=="
         }
       },
       "is_incremental": false,
@@ -11968,7 +11956,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/transition-services/trans-sd.html",
-          "hash": "TifOlvrsRLfFuvGv1z5ybw=="
+          "hash": "n72tuAo6fBM7k+fmoKQKsQ=="
         }
       },
       "is_incremental": false,
@@ -18520,7 +18508,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "aXdog7cTO5mFRpt96aQeag=="
+          "hash": "XI7OKxAxSefVrfMB9WvbHA=="
         }
       },
       "is_incremental": false,
@@ -18568,7 +18556,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-home.html",
-          "hash": "S/ZqbIdRd8bf5ymChYmxnA=="
+          "hash": "7HDqZT9XLUuqsUQk3L8nCw=="
         }
       },
       "is_incremental": false,
@@ -18604,7 +18592,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-redhat-update-servers.html",
-          "hash": "r5N9Oxelzg/PlSjtoOWlxA=="
+          "hash": "AqOSia024suEQFwPkWwKhA=="
         }
       },
       "is_incremental": false,
@@ -18976,7 +18964,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-license-microsoft.html",
-          "hash": "PLwU2huYUNI68zecXMcVGA=="
+          "hash": "/JRJHOWyTZeH51r7g3imWg=="
         }
       },
       "is_incremental": false,
@@ -19300,7 +19288,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-advanced-networking.html",
-          "hash": "PMrzICD3Ab7NA1i2o9i1XA=="
+          "hash": "2LkQBFQxl4YHe80zwdnrUw=="
         }
       },
       "is_incremental": false,
@@ -19672,7 +19660,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-dedicated-compute.html",
-          "hash": "PvVtZkOFP2reJsbf0whnXA=="
+          "hash": "jbMFJRsuTn/+UoIrSMi0Ww=="
         }
       },
       "is_incremental": false,
@@ -19720,7 +19708,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "iXborjDLU0ucH/In3N/tKA=="
+          "hash": "JzM8cfIZBObvK0/8PHIGhA=="
         }
       },
       "is_incremental": false,
@@ -19732,7 +19720,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sd.html",
-          "hash": "YW0XTtSkOIAPgZ+xKS/aKQ=="
+          "hash": "RFbTJncI6cKunpkB+ZlpEQ=="
         }
       },
       "is_incremental": false,
@@ -19868,6 +19856,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19878,14 +19873,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 425,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 424,
           "skipped_file_count": 0
         }
       }
