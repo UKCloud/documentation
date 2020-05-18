@@ -41,13 +41,13 @@ These templates have the following properties:
 
 - 32GB disk space / 1 x vCPU / 2GB ram (default, adjust as required)
 
-You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf). You will not be billed on additional storage until you reach the 60GiB of provisioned disk space.
+You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). You will not be billed on additional storage until you reach the 60GiB of provisioned disk space.
 
 ## Old Red Hat VM templates
 
 If you have already deployed a Red Hat VM using the old templates, you can configure it to access the RHUI by following this guide:
 
-[How to install Red Hat Update Infrastructure (RHUI) on an existing virtual machine](vmw-how-install-rhui-vm.md)
+[*How to install Red Hat Update Infrastructure (RHUI) on an existing virtual machine*](vmw-how-install-rhui-vm.md)
 
 ## Additional resources
 

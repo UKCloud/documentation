@@ -19,9 +19,9 @@ toc_mdlink: third-sd-cloudsoc.md
 
 ## Why UKCloud?
 
-UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government’s Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
+UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government's Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
 
-We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud’s technical experts.
+We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud's technical experts.
 
 ![UKCloud services](images/ukc-services.png)
 
@@ -31,7 +31,7 @@ Modern organisations need to consider cyber defence as a priority; attacks can c
 
 CloudSOC is an always-on, cloud-hosted cyber security capability that can see all your IT systems, all the time, ensuring you have an up-to-date view of possible threats.
 
-Utilising [e2e-assure](https://www.e2e-assure.com/VSOC)'s capability performing services such as traffic analysis; deep packet inspections; IDS, vulnerability scanning; blacklist monitoring of the assets that matter to you; highly skilled SOC personnel and UKCloud’s highly connected, highly secure cloud platform, we deliver a SOC that can see your entire IT estate and is always available.
+Utilising [e2e-assure](https://www.e2e-assure.com/VSOC)'s capability performing services such as traffic analysis; deep packet inspections; IDS, vulnerability scanning; blacklist monitoring of the assets that matter to you; highly skilled SOC personnel and UKCloud's highly connected, highly secure cloud platform, we deliver a SOC that can see your entire IT estate and is always available.
 
 For full information regarding this product, we have Service Scopes, FAQs and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
 
@@ -85,15 +85,15 @@ A 15-day free trial with complete access to all AppDynamics platform components 
 
 ## Accreditation and information assurance
 
-The security of our platform is our number one priority. We’ve always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
+The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
 
 ## An SLA you can trust
 
-We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. As the SLA varies based on the chosen cloud technology, you can find full details on each service’s SLA, including measurements and service credits, in the [*SLA Definition article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
+We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. As the SLA varies based on the chosen cloud technology, you can find full details on each service's SLA, including measurements and service credits, in the [*SLA Definition article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
 
 ## The small print
 

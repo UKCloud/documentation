@@ -104,7 +104,7 @@ For more information, see [*How to access syslog data for your edge gateway*](..
 
 At UKCloud, we're proud to provide a range of products, solutions and pricing tailored to suit the needs of your business. We've designed our compute 't-shirt' sizes with the optimum level of RAM and CPU to deliver ideal performance. However, if these levels are increased, this may degrade performance over time.
 
-For more information on the range of VM sizes that we offer, see our latest [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+For more information on the range of VM sizes that we offer, see our latest [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Best Practices - general information
 

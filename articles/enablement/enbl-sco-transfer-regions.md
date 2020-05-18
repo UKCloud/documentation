@@ -51,7 +51,7 @@ If you need to transfer workloads between security domains (Assured and Elevated
 
 The actual Zerto transfer service will be provided without charge for the transfer of workloads, with the following restrictions:
 
-- The service is free of charge for the first 10 working days. After 10 working days, the service will be charged as per the standard Journaling Protection costs in the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+- The service is free of charge for the first 10 working days. After 10 working days, the service will be charged as per the standard Journaling Protection costs in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 - Customers are required to inform UKCloud via a service request to confirm that the transfer is complete. The service will then be stopped, which will prevent further billing.
 
