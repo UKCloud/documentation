@@ -62,7 +62,7 @@ After you've removed all of the items from your account that you're responsible 
 
 - Remove your account (and company, if necessary).
 
-- Return any prepaid sums for services that you have not consumed (unless otherwise identified in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)).
+- Return any prepaid sums for services that you have not consumed (unless otherwise identified in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide)).
 
 - Arrange to return all confidential information.
 

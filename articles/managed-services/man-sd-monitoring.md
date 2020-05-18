@@ -19,9 +19,9 @@ toc_mdlink: man-sd-monitoring.md
 
 ## Why UKCloud?
 
-UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government’s Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
+UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government's Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
 
-We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud’s technical experts.
+We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud's technical experts.
 
 ![UKCloud services](images/ukc-services.png)
 
@@ -43,11 +43,11 @@ For full information regarding this product, we have Service Scopes, FAQs and ot
 
 - Concentrate on creating and managing applications and increasing business value rather than managing virtual infrastructure
 
-- Reduce the number of ‘false-positive’ alerts and associated out of hours call-outs. Utilise UKCloud’s 24x7x365 Network Operations Centre to be the initial responder to events, only escalating those which genuinely need further investigation
+- Reduce the number of 'false-positive' alerts and associated out of hours call-outs. Utilise UKCloud's 24x7x365 Network Operations Centre to be the initial responder to events, only escalating those which genuinely need further investigation
 
 - Increase the uptime of your IT estate through faster identification, triage and alert escalations
 
-- Leverage the insights that UKCloud’s AIOps platform can provide in identifying trends and anomalies
+- Leverage the insights that UKCloud's AIOps platform can provide in identifying trends and anomalies
 
 ## Product options
 
@@ -59,25 +59,25 @@ The service is designed to be flexible and allows you to choose from the options
 
 - Network performance and availability monitoring
 
-- Application Performance Monitoring (APM) – the ability to monitor your application performance through the eyes of you users rather than the traditional ‘infrastructure up’ perspective
+- Application Performance Monitoring (APM) – the ability to monitor your application performance through the eyes of you users rather than the traditional 'infrastructure up' perspective
 
-- Allow UKCloud to execute defined ‘playbook’, enabling UKCloud to proactively perform basic actions such as service restarts and log file rotations, in response to pre-defined events
+- Allow UKCloud to execute defined 'playbook', enabling UKCloud to proactively perform basic actions such as service restarts and log file rotations, in response to pre-defined events
 
 ## Pricing and packaging
 
-Prices start from £10 per month for a customer end point device such as a set-top box. Full pricing with all options including licensing and connectivity is available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+Prices start from £10 per month for a customer end point device such as a set-top box. Full pricing with all options including licensing and connectivity is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
-The security of our platform is our number one priority. We’ve always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
+The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
 
 ## An SLA you can trust
 
-We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. As the SLA varies based on the chosen cloud technology, you can find full details on each service’s SLA, including measurements and service credits, in the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
+We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. As the SLA varies based on the chosen cloud technology, you can find full details on each service's SLA, including measurements and service credits, in the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
 
 ## The small print
 

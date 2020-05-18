@@ -46,7 +46,7 @@ First, take a look at our [Getting Started Guide](orcl-gs.md) to learn the basic
 
 <div class="row">
   <div class="col-md-4"><ul><li><p><a href="orcl-sd.md">Service Definition</a></p></li></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a></p></li></ul></div>
   <div class="col-md-4"><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</a></p></li></ul></div>
 </div>
 

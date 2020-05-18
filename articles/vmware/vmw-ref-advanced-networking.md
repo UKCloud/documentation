@@ -37,7 +37,7 @@ UKCloud for VMware's advanced distributed networking features include:
 
 ## Availability of advanced networking options
 
-UKCloud for VMware provides advanced networking options via its Advanced Management bundle, which is charged as a 15% uplift on the hourly compute price. For more information, see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+UKCloud for VMware provides advanced networking options via its Advanced Management bundle, which is charged as a 15% uplift on the hourly compute price. For more information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Feedback
 

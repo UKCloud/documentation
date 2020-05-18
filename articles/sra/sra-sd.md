@@ -19,9 +19,9 @@ toc_mdlink: sra-sd.md
 
 ## Why UKCloud?
 
-UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government’s Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
+UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government's Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
 
-We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud’s technical experts.
+We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud's technical experts.
 
 ![UKCloud services](images/ukc-services.png)
 
@@ -31,27 +31,27 @@ The UKCloud Secure Remote Access (SRA) service enables you to securely connect t
 
 System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN.
 
-SRA uses NCSC Assured VPN technologies and the secure ‘walled garden’ architectural pattern:
+SRA uses NCSC Assured VPN technologies and the secure 'walled garden' architectural pattern:
 
 - Providing flexible connectivity for remote administrators and mobile workers to the UKCloud Elevated OFFICIAL cloud platform
 
 - Delivered as a cloud service — no need to purchase and manage NCSC-approved VPN hardware
 
-- With a flexible application process with a self-assessment route for customers with simple implementations, an assurance review approach with UKCloud’s experienced professionals for more complex implementations.
+- With a flexible application process with a self-assessment route for customers with simple implementations, an assurance review approach with UKCloud's experienced professionals for more complex implementations.
 
 For full information regarding this product, we have Service Scopes, [FAQs](sra-faq.md) and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
 
 ## Pricing and packaging
 
-This service is priced per licence per calendar month from £5.00, and full pricing with all options including licensing and connectivity available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+This service is priced per licence per calendar month from £5.00, and full pricing with all options including licensing and connectivity available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
-The security of our platform is our number one priority. We’ve always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
+The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
 
 ## An SLA you can trust
 

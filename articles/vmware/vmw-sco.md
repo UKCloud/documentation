@@ -144,7 +144,7 @@ You are entitled to claim Service Credits for outages to services that take you 
 
 - Red Hat Enterprise Linux licensing
 
-For the latest available licences, please check the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+For the latest available licences, please check the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If you're providing your own licensing, you should inform UKCloud by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for a retrospective discount.
 
@@ -221,7 +221,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Service migration
 
-You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 Customers are free to migrate their workloads. You can also request a migration through a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. Migrations may be between:
 
