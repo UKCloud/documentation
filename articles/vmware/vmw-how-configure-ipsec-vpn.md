@@ -3,8 +3,8 @@ title: How to configure IPsec VPN
 description: Shows how to configure IPsec VPN within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: Tadas Petrokas
+lastreviewed: 30/03/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -74,10 +74,10 @@ Before you start configuring IPsec VPN settings, you'll need to make a note of t
     Name | 
     Local Id |
     Local Endpoint | The external IP of your edge gateway (refer to the first steps of this procedure for more information).
-    Local Subnets | Enter the organisation networks that can access the VPN (separate multiple local subnets with commas).
+    Local Subnets | Enter the organisation networks that can be accessed via the VPN from the remote location (separate multiple local subnets with commas).
     Peer Id |
     Peer Endpoint | The external IP of your remote site or on-premises firewall or edge where VPN is being set up.
-    Peer Subnets | This is the subnet on your on-premises network that you want to make accessible from your UKCloud VDC. For example, if your on-premises networks sit inside the `10.20.0.0/16` range, you could enter `10.20.0.0/16` here or limit your entry to a smaller subnet of that, for example `10.20.0.0/25`.
+    Peer Subnets | This is the local subnet of your remote network that you want to access from your UKCloud VDC. For example, if your remote networks sit inside the `10.20.0.0/16` range, you could enter `10.20.0.0/16` here or limit your entry to a smaller subnet of that, for example `10.20.0.0/25`.
     Encryption Algorithm | Select the most secure protocol that is supported by your on-premises gateway.
     Authentication | Select the authentication method that is supported by your on-premises gateway. If you want to use certificates, then you need to configure those first on the **Certificates** tab.
     Pre-Shared Key | The shared secret used to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters that includes at least one uppercase letter, one lowercase letter and one number. This must be the same on both sites.
