@@ -4,7 +4,7 @@ description: Shows how to configure IPsec VPN within vCloud Director
 services: vmware
 author: Sue Highmoor
 reviewer: Tadas Petrokas
-lastreviewed: 30/03/2020
+lastreviewed: 20/05/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -71,11 +71,11 @@ Before you start configuring IPsec VPN settings, you'll need to make a note of t
     Field | Description
     ------|------------
     Enable perfect forward secrecy (PFS) | Select this if your on-premises/remote site has that capability.
-    Name | 
-    Local Id |
+    Name | Enter a desired name for your ipsec vpn
+    Local Id | This is usually set to the same value as Local Endpoint
     Local Endpoint | The external IP of your edge gateway (refer to the first steps of this procedure for more information).
     Local Subnets | Enter the organisation networks that can be accessed via the VPN from the remote location (separate multiple local subnets with commas).
-    Peer Id |
+    Peer Id | This is usually set to the same value as Peer Endpoint
     Peer Endpoint | The external IP of your remote site or on-premises firewall or edge where VPN is being set up.
     Peer Subnets | This is the local subnet of your remote network that you want to access from your UKCloud VDC. For example, if your remote networks sit inside the `10.20.0.0/16` range, you could enter `10.20.0.0/16` here or limit your entry to a smaller subnet of that, for example `10.20.0.0/25`.
     Encryption Algorithm | Select the most secure protocol that is supported by your on-premises gateway.
