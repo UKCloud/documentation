@@ -25,7 +25,7 @@ It describes the boundaries of the service, along with the division of responsib
 
 ## About UKCloud for OpenShift
 
-UKCloud for OpenShift is UKCloud’s OpenShift powered Kubernetes Platform as a Service (PaaS).
+UKCloud for OpenShift is UKCloud's OpenShift powered Kubernetes Platform as a Service (PaaS).
 
 This service is designed for customers who want to:
 
@@ -99,11 +99,11 @@ Provides the foundation OpenShift services to support the orchestration and mana
 
 ### Runtime Pack
 
-Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
+Provides the footprint to host customer's containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
 
 ## Storage options
 
-Containers in OpenShift by default don’t persist data. Every time an application is started, it creates a new container with an immutable image. Hence, any persisted data in the file systems is lost when the container stops or is destroyed. Use Persistent Volumes within your OpenShift environment to provide data persistence independent of containers. You can purchase Persistent Volumes for your cluster as stated below:
+Containers in OpenShift by default don't persist data. Every time an application is started, it creates a new container with an immutable image. Hence, any persisted data in the file systems is lost when the container stops or is destroyed. Use Persistent Volumes within your OpenShift environment to provide data persistence independent of containers. You can purchase Persistent Volumes for your cluster as stated below:
 
 &nbsp;                    | Tier 1 Persistent Volume | Tier 2 Persistent Volume
 --------------------------|--------------------------|-------------------------
@@ -119,7 +119,7 @@ Containers in OpenShift by default don’t persist data. Every time an applicati
 To complement your UKCloud for OpenShift service, UKCloud offers the following value-added options:
 
 > [!NOTE]
-> Some of these extras will carry supplementary charges; please see UKCloud’s current [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for full details.)
+> Some of these extras will carry supplementary charges; please see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for full details.
 
 ### Additional networks
 
@@ -141,11 +141,11 @@ As your workloads increase or become more critical and you want to increase the 
 
 ### Enhanced metric collection
 
-As part of your Foundation Pack, UKCloud will provision a single Hawkular metrics instance backed by a single Cassandra instance to collect and publish your cluster’s metrics from all containers and components in one user interface.
+As part of your Foundation Pack, UKCloud will provision a single Hawkular metrics instance backed by a single Cassandra instance to collect and publish your cluster's metrics from all containers and components in one user interface.
 
 To provide this service, UKCloud will need to provision an initial 10GiB of Tier 2 Persistent Volume at the prevailing rate.
 
-To provide resilience and added performance to your cluster’s metrics, you can deploy additional Infrastructure Nodes (see below for [Infrastructure Node](#infrastructure-nodes) costs).
+To provide resilience and added performance to your cluster's metrics, you can deploy additional Infrastructure Nodes (see below for [Infrastructure Node](#infrastructure-nodes) costs).
 
 ### Infrastructure nodes
 
@@ -153,7 +153,7 @@ Additional nodes to support OpenShift core services such as OpenShift routers, r
 
 ### SSL certificates
 
-By default, UKCloud will provide 90 day Let’s Encrypt SSL certificates for your OpenShift cluster. At the point of deployment, you can to provide your own certificates for use with OpenShift.
+By default, UKCloud will provide 90 day Let's Encrypt SSL certificates for your OpenShift cluster. At the point of deployment, you can to provide your own certificates for use with OpenShift.
 
 ### Container native storage
 
@@ -163,7 +163,7 @@ In order to address the challenge above, UKCloud offers a [Portworx Enterprise](
 
 ## Platform management
 
-UKCloud for OpenShift is managed directly by the customer, using OpenShift’s dashboard, the UKCloud Portal, and APIs associated with both.
+UKCloud for OpenShift is managed directly by the customer, using OpenShift's dashboard, the UKCloud Portal, and APIs associated with both.
 
 UKCloud maintains responsibility for routine patching and upgrades of the OpenShift platform in-line with the published [OpenShift life cycle and patch management process](oshift-ref-lifecycle.md).
 
@@ -171,7 +171,7 @@ UKCloud maintains responsibility for routine patching and upgrades of the OpenSh
 
 You can request UKCloud for OpenShift via your Service Delivery Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-Within 5 business days of accepting an order, UKCloud will create the customer’s primary account and send a Welcome Pack, which includes the URL for the UKCloud Portal, and the [Getting Started Guide](oshift-gs.md).
+Within 5 business days of accepting an order, UKCloud will create the customer's primary account and send a Welcome Pack, which includes the URL for the UKCloud Portal, and the [Getting Started Guide](oshift-gs.md).
 
 ## Customer responsibilities
 
@@ -189,7 +189,7 @@ Customers with requirements beyond these limits can raise a service request via 
 
 As standard, localised component failures are tolerated within the infrastructure through elimination of single points of failure (including physical server failure or disk failure).
 
-Although OpenShift is designed to deploy and manage stateless apps (applications that can be destroyed and re-instantiated without risk of data loss), you should maintain a master copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, UKCloud’s [Cloud Storage](../cloud-storage/cs-sd.md).
+Although OpenShift is designed to deploy and manage stateless apps (applications that can be destroyed and re-instantiated without risk of data loss), you should maintain a master copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, UKCloud's [Cloud Storage](../cloud-storage/cs-sd.md).
 
 ## Published features not currently available
 

@@ -55,7 +55,7 @@ A secure and highly adaptable object storage platform, which is natively optimis
 
 ### Cross Domain Security Zone (CDSZ)
 
-CDSZ enables UKCloud’s Assured OFFICIAL and Elevated OFFICIAL security domains to communicate with each other as part of a requirement of a service, using cross-domain security patterns.
+CDSZ enables UKCloud's Assured OFFICIAL and Elevated OFFICIAL security domains to communicate with each other as part of a requirement of a service, using cross-domain security patterns.
 
 ### Dedicated Compute v2
 
@@ -79,11 +79,11 @@ With Managed Monitoring from UKCloud, we become the first line of support, 24 ho
 
 ### Migration to the Cloud
 
-This service (powered by Zerto) makes it easy to replicate and migrate applications to the cloud, by moving VM’s over from your own data centre to UKCloud’s trusted, cost-effective and well-connected cloud.
+This service (powered by Zerto) makes it easy to replicate and migrate applications to the cloud, by moving VM's over from your own data centre to UKCloud's trusted, cost-effective and well-connected cloud.
 
 ### Multi-Cloud Backup Storage (MCBS)
 
-UKCloud’s MCBS provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, as well as being an off-site target for any on-premises data back-up. This service utilises a technology that is common across backup products such as Veritas NetBackup/Backup Exec and Veeam, along with native hooks for database backups from Oracle, DB2, SQL Server and Hadoop. In addition, this service can be attached as a backup target within your file system, enabling a wide array of applications to utilise this backup service.
+UKCloud's MCBS provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, as well as being an off-site target for any on-premises data back-up. This service utilises a technology that is common across backup products such as Veritas NetBackup/Backup Exec and Veeam, along with native hooks for database backups from Oracle, DB2, SQL Server and Hadoop. In addition, this service can be attached as a backup target within your file system, enabling a wide array of applications to utilise this backup service.
 
 ### Multi-Cloud for Tier2
 
@@ -107,7 +107,7 @@ This service enables you to securely connect to the UKCloud Elevated OFFICIAL se
 
 ## Third-party software
 
-Applications that are accessed over the internet and hosted in the cloud. These services are listed in the [3rd Party Software Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf).
+Applications that are accessed over the internet and hosted in the cloud. These services are listed in the [3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide).
 
 ### Appvia Hub from UKCloud
 
@@ -119,7 +119,7 @@ Cisco AppDynamics provides application performance management, end user monitori
 
 ### CloudSOC from UKCloud
 
-CloudSOC is an always-on, cloud-hosted cyber security capability that can see all your IT systems, all the time, ensuring you have an up-to-date view of possible threats. Utilising e2e‘s capability performing services such as traffic analysis; deep packet inspections; IDS, vulnerability scanning; blacklist monitoring of the assets that matter to you; highly skilled SOC personnel and UKCloud’s highly connected, highly secure cloud platform, we deliver a SOC that can see your entire IT estate and is always available.
+CloudSOC is an always-on, cloud-hosted cyber security capability that can see all your IT systems, all the time, ensuring you have an up-to-date view of possible threats. Utilising e2e's capability performing services such as traffic analysis; deep packet inspections; IDS, vulnerability scanning; blacklist monitoring of the assets that matter to you; highly skilled SOC personnel and UKCloud's highly connected, highly secure cloud platform, we deliver a SOC that can see your entire IT estate and is always available.
 
 ### CommVault Complete Backup & Recovery from UKCloud
 
@@ -149,7 +149,7 @@ If you don't have a clear cloud migration path, the cloud assessment service can
 
 #### Cloud Migration Service
 
-This service assists with the migration of critical business systems and entire data centres to UKCloud’s secure multi-cloud platform. We interview key stakeholders and deploy tools ensuring we understand the criticality and dependencies of their applications and migration. The migration of workloads is completed in the right order and sized appropriately to benefit from metered billing.
+This service assists with the migration of critical business systems and entire data centres to UKCloud's secure multi-cloud platform. We interview key stakeholders and deploy tools ensuring we understand the criticality and dependencies of their applications and migration. The migration of workloads is completed in the right order and sized appropriately to benefit from metered billing.
 
 #### Cloud Optimisation Service
 

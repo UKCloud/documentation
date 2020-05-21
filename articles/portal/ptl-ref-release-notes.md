@@ -4,7 +4,7 @@ description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
 reviewer: ccampbell
-lastreviewed: 20/03/2020
+lastreviewed: 13/05/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,18 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 1.139.0
+
+Date: 13th May 2020
+
+Feature update
+
+Details:
+
+- Disable ability for users to change their emails.
+
+- Remove unneeded VM sizes field from billing table.
 
 ## Release 1.132.0
 

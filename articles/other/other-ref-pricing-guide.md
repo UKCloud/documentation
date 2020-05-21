@@ -19,7 +19,7 @@ toc_mdlink: other-ref-pricing-guide.md
 
 For pricing information for UKCloud services, see the following documents on the UKCloud website:
 
-- [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)
+- [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide)
 
     This document provides the pricing for our multi-cloud technology and cloud support products, options and other services:
 

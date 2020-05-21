@@ -171,13 +171,13 @@ Changes depend on whether you're on PSN Assured or PSN Protected and whether you
 
 - If you're on PSN Assured, you'll be charged for outbound data used in the month once you have exceeded 1TB.
 
-- If you're on PSN Protected, you'll be charged a monthly starter pack fee for the outbound data used which provides 250GB per month. Additional usage will be charged as per the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+- If you're on PSN Protected, you'll be charged a monthly starter pack fee for the outbound data used which provides 250GB per month. Additional usage will be charged as per the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 - For either service, if you have the Unmetered Data Transfer option, you'll be charged a set fee for the month.
 
 We charge for each separate connection on the UKCloud platform.
 
-UKCloud pricing is available via the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+UKCloud pricing is available via the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### How does PSN for Policing work?
 

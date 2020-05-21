@@ -91,7 +91,7 @@ High Performance Compute is subject to the following:
 
 - If using Tier 0 storage is configured with two local disks in a RAID 10 configuration. All available storage in the cluster will be allocated to the customer with a 6-month minimum commitment.
 
-- If any VMs are deployed with MS Windows Server OS, all provisioned cores must be licensed and will be charged at the current rate (as shown in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)).
+- If any VMs are deployed with MS Windows Server OS, all provisioned cores must be licensed and will be charged at the current rate (as shown in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide)).
 
 - There is a two-year (24-month) fixed-term commitment, which can be continued via a further 24-month call-off contract subject to the standard procedures.
 
