@@ -88,11 +88,7 @@ To access OpenStack:
 
     ![Select OpenStack region](images/ostack-portal-select-region.png)
 
-4. On the OpenStack Horizon *Log in* page, log in using either:
-
-    - **Keystone Credentials** if your account has not been migrated to SSO
-
-    - **UKCloud SSO** if your account has been migrated to SSO
+4. Log in to the OpenStack Horizon dashboard.
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md).
 
