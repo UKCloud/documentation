@@ -55,15 +55,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 5. In the **Create snapshot** blade, enter the following information:
 
-    - **Name** - The name of the snapshot.
+    - **Name** - The name of the snapshot
 
-    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription.
+    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription
 
-    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group
 
-    - **Location** - This will be the location of the Azure Stack Hub.
+    - **Location** - This will be the location of the Azure Stack Hub
 
-    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage.
+    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage
 
     ![Create snapshot from disk - Populate & Create](images/azs-browser-create-snapshot.png)
 
@@ -85,20 +85,20 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. In the **Create managed disk** blade, enter the following information:
 
-    - **Name** - The name of the disk.
+    - **Name** - The name of the disk
 
-    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription.
+    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription
 
-    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group
 
-    - **Location** - This will be the location of the Azure Stack Hub.
+    - **Location** - This will be the location of the Azure Stack Hub
 
-    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage.
+    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage
 
-    - **Source type** - Select *Snapshot* from the dropdown.
-        - **Source snapshot** - Select the previously created snapshot.
+    - **Source type** - Select *Snapshot* from the dropdown
+        - **Source snapshot** - Select the previously created snapshot
 
-    - **Size** - This will be set to the size of the source disk that the snapshot was created from.
+    - **Size** - This will be set to the size of the source disk that the snapshot was created from
 
         > [!NOTE]
         > You can increase the size if necessary, but you will not be allowed to decrease it below the original size.
