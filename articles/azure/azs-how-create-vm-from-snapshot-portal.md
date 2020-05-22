@@ -127,7 +127,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. In the menu at the top of the blade, click **Create VM**.
 
-5. In the **Create virtual machine** blade, in the *Basics* step, enter a Virtual machine name and either select an existing Resource group or create a new one, then click **OK**.
+5. In the **Create virtual machine** blade, in the *Basics* step, enter a Virtual machine name and either select an existing resource group or create a new one, then click **OK**.
 
     ![Create VM from disk - Basics](images/azs-browser-disk-vm-basics.png)
 
