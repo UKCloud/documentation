@@ -4,7 +4,7 @@ description: Provides help for creating a virtual machine from a managed disk sn
 services: azure-stack
 author: William Turner
 reviewer: William Turner
-lastreviewed: 05/05/2020
+lastreviewed: 26/05/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -59,7 +59,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Subscription** - This will be your UKCloud for Microsoft Azure subscription
 
-    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group
+    - **Resource group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
     - **Location** - This will be the location of the Azure Stack Hub
 
@@ -89,7 +89,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Subscription** - This will be your UKCloud for Microsoft Azure subscription
 
-    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group
+    - **Resource group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
     - **Location** - This will be the location of the Azure Stack Hub
 
