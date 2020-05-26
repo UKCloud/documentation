@@ -71,7 +71,7 @@ Notes | Ephemeral | Persistent boot from block
 ------|-----------|---------------------------
 **Use case** | Disposable VMs used in environments that can tolerate the failure of a VM and its associated data | VMs serving mission-critical data and needing a higher level of data resilience and persistence
 **VM placement** | Choice of multiple regions | Choice of multiple regions
-**Internet IP addresses included per project** | 3 | 3
+**Internet IP addresses included per project** | 3 (shared between ephemeral and persistent instances) | 3 (shared between ephemeral and persistent instances)
 **Automated disaster recovery between data centres** | No | No
 **Storage included (GiB)** | 60 | None
 **Storage type** | Ephemeral (non-persistent) | Persistent block storage - Tier 1 or Tier 2
