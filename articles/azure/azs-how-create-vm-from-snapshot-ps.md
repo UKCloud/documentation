@@ -179,10 +179,10 @@ $VirtualMachine = Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id -VM $Vi
 # Applies the OS disk properties
 $VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -ManagedDiskId $NewDisk.Id -StorageAccountType "StandardLRS" -CreateOption "Attach" <output form="vmtype" name="result3" style="display: inline;">-Linux</output>
 
-# Enable boot diagnostics.
+# Enable boot diagnostics
 $VirtualMachine = Set-AzureRmVMBootDiagnostics -VM $VirtualMachine -Enable -StorageAccountName $SAName -ResourceGroupName $NewRGName
 
-# Create the virtual machine.
+# Create the virtual machine
 Write-Output -InputObject "Creating virtual machine"
 $NewVM = New-AzureRmVM -ResourceGroupName $NewRGName -Location $Location -VM $VirtualMachine
 $NewVM
