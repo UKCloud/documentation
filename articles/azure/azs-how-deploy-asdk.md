@@ -136,7 +136,7 @@ The following details should be used:
 |---------------|---------------|
 | NTP           | 46.227.200.76 |
 | DNS Forwarder | 8.8.8.8       |
-| Type          | Azure AAD - this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub, for example `joebloggsukcloud.onmicrosoft.com` |
+| Type          | Azure AD - this should be either your own AAD account where you are the system admin or one you have setup for Azure Stack Hub, for example `joebloggsukcloud.onmicrosoft.com` |
 | Static IP     | Different IP than what you currently have, for example if your current IP is 10.0.0.101, use 10.0.0.191, or just current IP + 1 |
 
 ### [Virtual Deployment](#tab/tabid-1)
