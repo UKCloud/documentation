@@ -4,7 +4,7 @@ description: Deploy and configure the Azure Stack Hub Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
 reviewer: William Turner
-lastreviewed: 29/04/2020
+lastreviewed: 26/05/2020
 
 toc_rootlink: Operators
 toc_sub1: How To
@@ -39,18 +39,18 @@ Detailed specifications can be found [here](https://docs.microsoft.com/en-us/azu
 
 ### [Virtual Deployment](#tab/tabid-1)
 
-VMware HW must be \>=11, CPU virtual extension pass-through must be enabled.
+VMware HW version must be \>=11, and CPU virtual extension pass-through must be enabled.
 
 > [!IMPORTANT]
 > If you deploy your VM with Hardware Version 11 and Operating System Family as Windows Server 2016 you will not be able to create S2D Cluster as disk UUIDs are not exposed.
 >
 > - Either create it with Windows Server 2012 and change it later.
 >
-> - Or in Configuration Parameters, click Add Row. In the Name column, enter disk.EnableUUID. In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.
+> - Or in Configuration Parameters, click Add Row. In the Name column, enter disk.EnableUUID. In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and the cluster should build.
 
 ### [Physical Deployment](#tab/tabid-2)
 
-The first two drives must be setup as a RAID 1, the rest passed through as a JBOD. Additionally, you need to specify your VLAN as ACCESS in the CIMC.
+The first two drives must be setup in a RAID 1 configuration, with the rest passed through as JBOD (Just a Bunch Of Drives). Additionally, you need to specify your VLAN as ACCESS in the CIMC.
 
 ***
 
@@ -87,7 +87,7 @@ The following details should be used:
 | NTP           | 46.227.200.76                                                                      |
 | DNS Forwarder | 8.8.8.8                                                                            |
 | Drivers       | Browse to path of either the extracted Cisco drivers or the extracted VMware tools |
-| Computer Name | Anything but "azurestack", for example "azurestackhost"                            |
+| Computer Name | Anything but "azurestack", for example, "azurestackhost"                            |
 | Static IP     | IP details assigned to the current interface                                       |
 
 ### [Virtual Deployment](#tab/tabid-1)
@@ -136,8 +136,8 @@ The following details should be used:
 |---------------|---------------|
 | NTP           | 46.227.200.76 |
 | DNS Forwarder | 8.8.8.8       |
-| Type          | Azure AD - this should be either your own AAD account where you are the system admin or one you have setup for Azure Stack Hub, for example `joebloggsukcloud.onmicrosoft.com` |
-| Static IP     | Different IP than what you currently have, for example if your current IP is 10.0.0.101, use 10.0.0.191, or just current IP + 1 |
+| Type          | Azure AD - this should be either your own AAD account where you are the system admin or one you have setup for Azure Stack Hub, for example, `contoso.onmicrosoft.com` |
+| Static IP     | Different IP than what you currently have, for example, if your current IP is 10.0.0.101 then you could use 10.0.0.191. |
 
 ### [Virtual Deployment](#tab/tabid-1)
 
@@ -262,9 +262,9 @@ At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 
 Verification of Physical kit showed that virtualisation is in fact enabled but Hyper-V is not starting on boot.
 
-To verify, you can run systeminfo and it will show whether BIOS is set correctly, and so on. In our case it was set correctly, only the boot settings were not.
+To verify, you can run systeminfo and it will show whether the BIOS is set correctly, and so on. In our case it was set correctly, only the boot settings were not.
 
-To fix it, run the below from an elevated command/powershell prompt:
+To fix it, run the below from an elevated command prompt:
 
 ```powershell
 BCDEDIT /Set {current} hypervisorlaunchtype auto
@@ -297,7 +297,7 @@ $Session = New-PSSession -ComputerName AzS-ERCS01 -Credential $AzsCred -Configur
 
 Enter-PSSession $Session
 
-# This will shutdown the machine after a few minutes. You will need to manually start the VM again once it is shutdown (e.g. through VMWare Cloud Director)
+# This will shutdown the machine after a few minutes. You will need to manually start the VM again once it is shutdown (e.g. through VMWare vCloud Director)
 Stop-AzureStack
 
 # When the machine is back up, create the PSSession again and run the below command to retrieve the status of Start-AzureStack
