@@ -59,7 +59,7 @@ The first thing you need to do is log in.
 
     - **Elevated OFFICIAL:** Contact your Portal administrator or SDM
 
-2. On the *Log in* page, enter your credentials and click **Sign in**.
+2. On the log in page, enter your credentials and click **Log in**.
 
     ![UKCloud Portal Log in page](images/ptl-login.png)
 
@@ -71,7 +71,7 @@ The first thing you need to do is log in.
     > [!NOTE]
     > If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.
 
-3. If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA).
+3. If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA; see [*How to set up two-factor authentication for a user account*](ptl-how-setup-2fa.md)).
 
     ![Two-Factor Authentication dialog box](images/ptl-2fa.png)
 
