@@ -7169,17 +7169,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-horizon-log-in.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-horizon-log-in.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-horizon-login.png",
       "output": {
         "resource": {
@@ -8153,7 +8142,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "e5EY1/yTqd1MxpFxpNKiew=="
+          "hash": "ERMCTX5e6bntmiUCKF90NQ=="
         }
       },
       "is_incremental": false,
@@ -8249,7 +8238,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-manage-accounts-portal.html",
-          "hash": "bCkvq7vwkclz8YRnq6D/fw=="
+          "hash": "hAtaz68aFsezLTO+NRkSMg=="
         }
       },
       "is_incremental": false,
@@ -8309,7 +8298,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-api-sso.html",
-          "hash": "3vc/uGozkvh6ajlRyt6a/A=="
+          "hash": "j7op5Cp1HPcfBDP76tqpOA=="
         }
       },
       "is_incremental": false,
@@ -11176,7 +11165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "zYcYz3rVx0NITAN1dHiRHg=="
+          "hash": "op2KyWWU7ZBiIWCd3TZyPQ=="
         }
       },
       "is_incremental": false,
@@ -11356,7 +11345,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "7lWZ8bUdLbfL8dH9DsKNdQ=="
+          "hash": "lSfUKvmXHjH1m0p419sQFA=="
         }
       },
       "is_incremental": false,
