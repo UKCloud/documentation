@@ -67,7 +67,7 @@ If you're creating a VPG for Journaling Protection, you specify the vApp to prot
 
     - System Service Profile (for 14-day Journaling Protection)
 
-    - Journaling Protection 30 Day Retention
+    - Journaling Protection 28 Day Retention
 
     ![Create VPG dialog box](images/vmw-zerto-create-vpg.png)
 

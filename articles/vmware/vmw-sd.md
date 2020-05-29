@@ -109,7 +109,7 @@ Choose the protection required for your application. All customers can use the c
 
 - Snapshot based recovery (14 or 28 days)
 
-- Journaling (2, 7, 14 or 30 days)
+- Journaling (2, 7, 14 or 28 days)
 
 - Synchronous Protection
 

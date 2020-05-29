@@ -70,7 +70,7 @@ You should consider the following:
 
 - Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. If you want to keep historic records of VMs that are no longer running on the platform, consider UKCloud's Snapshot Protection service option.
 
-- We provide service profiles for 2, 7, 14 and 30 day retention. The details of these are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md). We do not currently provide the option for you to create custom profiles.
+- We provide service profiles for 2, 7, 14 and 28 day retention. The details of these are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md). We do not currently provide the option for you to create custom profiles.
 
 ## Getting Journaling Protection up and running
 

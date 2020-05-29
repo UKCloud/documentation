@@ -29,7 +29,7 @@ As indicated in the name, journaling protection utilises a "journal" for capturi
 
 The contents of this journal are then stored in a different UKCloud Zone - which is nominated by the customer.
 
-The journal can span up to 30 days of a VMs history, with recovery points just seconds apart. Allowing for a near zero RPO.
+The journal can span up to 28 days of a VMs history, with recovery points just seconds apart. Allowing for a near zero RPO.
 
 In the event of a disruption to service - either at the service provider level (loss of infrastructure), or something localised to the application (ransomware attack, problematic software upgrade).
 
@@ -119,7 +119,7 @@ Once the service has been provisioned for your environment, you will be able to 
 
 ### How does this differ from Snapshot Protection?
 
-The Journaling Protection service provides a continuous log of all the changes that have occurred within your environment within the specified time frame (2, 7, 14 or 30 days) that are stored on the UKCloud platform and can be restored quickly and easily from a point in time of your choosing.
+The Journaling Protection service provides a continuous log of all the changes that have occurred within your environment within the specified time frame (2, 7, 14 or 28 days) that are stored on the UKCloud platform and can be restored quickly and easily from a point in time of your choosing.
 
 Snapshot protection utilises 24 hour backups for up to 28 days which are stored on a separate storage solution, and can recover from deleted disks or VMs. In the event that you need to recover from a previous recovery point, there may be a loss of data due to the time difference between the event and the last snapshot.
 
@@ -149,7 +149,7 @@ We do not currently plan to offer an SLA around the service. However, the real t
 
 ### Is Zerto licensing included?
 
-Yes, it is included with the Journaling Protection option for use with the 2, 7, 14 or 30 day retention policies.
+Yes, it is included with the Journaling Protection option for use with the 2, 7, 14 or 28 day retention policies.
 
 ### Will a VPG still be protected if one or more VMs are powered off?
 

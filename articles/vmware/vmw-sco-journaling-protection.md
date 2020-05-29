@@ -43,7 +43,7 @@ UKCloud's standard journaling profiles provide:
 
 - Target RPO of 5 Minutes
 
-- Journal history of 2, 7, 14 or 30 days
+- Journal history of 2, 7, 14 or 28 days
 
 At present, UKCloud have not enabled the ability for customers to configure custom profiles.
 
