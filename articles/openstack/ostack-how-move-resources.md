@@ -147,7 +147,7 @@ You can find more information about UKCloud's sites, regions and zones in the fo
 
 - [Understanding sites, regions and zones](../other/other-ref-sites-regions-zones.md)
 
-- [Sites, regions and zones map and reference table](../other/other-ref-srz-table.md)
+- [UKCloud services by region](../other/other-ref-services-by-region.md)
 
 You can find full details for the OpenStack command-line interface (OpenStack CLI) at:
 
