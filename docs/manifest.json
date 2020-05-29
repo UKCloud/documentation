@@ -8250,7 +8250,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-move-resources.html",
-          "hash": "WwjA/5/rxlMvdoNnVJ8oNg=="
+          "hash": "ePlNyKhdAncsh1Q9tNSe5w=="
         }
       },
       "is_incremental": false,
@@ -9275,6 +9275,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-sites-regions-zones.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-sites-regions-zones.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/other-status-all-operational.png",
       "output": {
         "resource": {
@@ -9664,28 +9675,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/other/images/pricing-estimator-mac-install-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/sites_regions_and_zones_map.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/sites_regions_and_zones_map.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/srz_ref_table.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/srz_ref_table.png"
         }
       },
       "is_incremental": false,
@@ -10140,19 +10129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-services-by-region.html",
-          "hash": "svU4XbU7CebSzturU1ePSA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-services-by-zone.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-services-by-zone.html",
-          "hash": "HXy2weRKusDQLIUW2EFSIw=="
+          "hash": "k3Y60y5VuTw22tHxFdr4hQ=="
         }
       },
       "is_incremental": false,
@@ -10177,18 +10154,6 @@
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
           "hash": "teKyRH4PyMVbrpASooWghA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-srz-table.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-srz-table.html",
-          "hash": "RSlegDg0Tiw8AoxHDV9/cQ=="
         }
       },
       "is_incremental": false,
@@ -10284,7 +10249,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "CJeyKLBLbl0FpcIAsvp40A=="
+          "hash": "89iLwYq+s3WHnrro8glfqw=="
         }
       },
       "is_incremental": false,
@@ -19848,7 +19813,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 424,
+          "total_file_count": 422,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
