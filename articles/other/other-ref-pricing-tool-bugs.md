@@ -24,23 +24,19 @@ This is an accompanying article to [*How to use the UKCloud Pricing Estimation T
 
 The current version of the tool:
 
-- **Windows version**: 10.3.1
+- **Windows version**: 11.0.6
 
-- **Mac version**: 10.3.1
+- **Mac version**: 11.0.6
 
-## Pricing Estimation Tool v10.3.1 Changelog
+## Known issues with v11.0.6 (current version)
 
-Fixed all known issues in v10.2.8.
+- The Mac version of the Pricing Estimation Tool is a 32-bit application, so will not work on the latest version of the Mac OS.
 
-## Known issues with v10.3.1 (current version)
+## Known issues with previous versions
 
-- The Mac version of the Pricing Estimation Tool is a 32-bit application, so wll not work on the latest version of the Mac OS.
+### Known issues with v10.2.8 (fixed in v10.3.1)
 
-- Tool crashes when inputting a large amount of data.
-
-## Known issues with v10.2.8 (previous version)
-
-### Windows
+#### Windows
 
 1. In the UKCloud for VMware section, entering an amount of additional storage GiB without selecting the Storage type does not display an error message.
 
@@ -50,7 +46,7 @@ Workaround: When including additional storage in your estimate, be sure to selec
 
 ![Storage Bug](images/pricing-bug-win-1.png)
 
-### Mac
+#### Mac
 
 The following are known issues with the Mac version of the Pricing Estimation Tool.
 
