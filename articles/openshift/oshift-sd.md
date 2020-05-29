@@ -19,15 +19,15 @@ toc_mdlink: oshift-sd.md
 
 ## Why UKCloud?
 
-UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government’s Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
+UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government's Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
 
-We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud’s technical experts.
+We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud's technical experts.
 
 ![UKCloud services](images/ukc-services.png)
 
 ## What is UKCloud for OpenShift?
 
-UKCloud for OpenShift delivers a secure, private deployment of Red Hat’s OpenShift Container Platform, enabling developers to use build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud native applications and accelerate digital transformation.
+UKCloud for OpenShift delivers a secure, private deployment of Red Hat's OpenShift Container Platform, enabling developers to use build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud native applications and accelerate digital transformation.
 
 UKCloud deploys, scales and monitors the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality-controlled code, all without having to worry about the underlying infrastructure or software.
 
@@ -39,7 +39,7 @@ For full information regarding this product, we have [FAQs](oshift-faq.md) and o
 
 - Cope with unpredictable spikes in traffic and customer demand
 
-- Realise more value from your DevOps team by allowing them to focus on the ‘Dev’ rather than ‘Ops’
+- Realise more value from your DevOps team by allowing them to focus on the 'Dev' rather than 'Ops'
 
 - Create a standard approach to deployment, ensuring consistency across all users
 
@@ -75,7 +75,7 @@ Provides the footprint to host customer's containerised applications and service
 
 ### Persistent Volumes
 
-Containers in OpenShift by default don’t persist data. Every time an application is started, it creates a new container with an immutable image. Hence, any persisted data in the file system is lost when the container stops or is destroyed. Persistent Volumes can be used within your OpenShift environment to provide data persistence independent of containers.
+Containers in OpenShift by default don't persist data. Every time an application is started, it creates a new container with an immutable image. Hence, any persisted data in the file system is lost when the container stops or is destroyed. Persistent Volumes can be used within your OpenShift environment to provide data persistence independent of containers.
 
 - Tier 1 - High I/O database applications
 
@@ -97,15 +97,15 @@ Additional nodes to support OpenShift core services such as OpenShift routers, r
 
 ## Pricing and packaging
 
-UKCloud for Red Hat OpenShift starts from £940 per month, and full pricing with all options including licensing and connectivity available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+UKCloud for Red Hat OpenShift starts from £940 per month, and full pricing with all options including licensing and connectivity available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
-The security of our platform is our number one priority. We’ve always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
+The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
 
 ## An SLA you can trust
 

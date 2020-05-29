@@ -8,7 +8,7 @@
     <title>Portal permissions </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Portal permissions ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -178,14 +178,12 @@
 </ul>
 <p>You can find further details of these roles in the <a href="https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html">vCloud Director Administrator's Guide</a>.</p>
 <p>In addition, UKCloud have created an API Only role that restricts users with vCloud Director permissions to accessing vCloud Director solely via the API, with no GUI access.</p>
-<blockquote>
-<p>[NOTE]
-The API Only role must be selected in addition to one of the vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The API Only role must be selected in addition to one of the vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.</p>
+</div>
 <h2 id="permissions-for-cloud-storage">Permissions for Cloud Storage</h2>
 <p>Users need to be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. The user will also be able to see consumption data for namespaces and buckets.</p>
-<h2 id="permissions-for-ukcloud-for-openstack">Permissions for UKCloud for OpenStack</h2>
-<p>Users need to be granted access to the relevant OpenStack project. Once access is granted, the user can access the Horizon dashboard for the project.</p>
 <h2 id="permissions-for-billing">Permissions for Billing</h2>
 <p>Users with <strong>API</strong> permissions can retrieve billing information using the Portal API. For more information, see the <em>GET /api/billing/billing-csv</em> section of the <a href="ptl-ref-portal-api.html"><em>UKCloud Portal API Reference Guide</em></a>.</p>
 <h2 id="permissions-for-monitoring">Permissions for Monitoring</h2>

@@ -8,7 +8,7 @@
     <title>How to create load balancing services on UKCloud for OpenStack </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create load balancing services on UKCloud for OpenStack ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -126,110 +126,102 @@
 <h2 id="implementation-steps">Implementation steps</h2>
 <ol>
 <li><p>Create the network in which your front edge load balancers sit.</p>
-<p><strong>Command:</strong> <code>neutron net-create &lt;network-name&gt;</code></p>
-<p><strong>Example:</strong> <code>neutron net-create FrontEdge</code></p>
+<p><strong>Command:</strong> <code>openstack network create &lt;network-name&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack network create FrontEdge</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-net-create.png" alt="Results of net-create command"></p>
+<p><img src="images/ostack-openstack-net-create.png" alt="Results of net-create command"></p>
 </li>
 <li><p>Create the subnet in which your load-balancers will be placed (we recommend creating a <code>/28</code>, as four addresses will be used internally by OpenStack).</p>
-<p><strong>Command:</strong> <code>neutron subnet-create --name &lt;subnetName&gt; &lt;networkName&gt; &lt;cidr&gt;</code></p>
-<p><strong>Example:</strong> <code>neutron subnet-create --name FrontEdge FrontEdge 192.168.0.0/28</code></p>
+<p><strong>Command:</strong> <code>openstack subnet create --subnet-range &lt;cidr&gt; --network &lt;networkName&gt; &lt;subnetName&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack subnet create --subnet-range 192.168.0.0/28 --network FrontEdge FrontEdge</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-subnet-create.png" alt="Results of subnet-create command"></p>
+<p><img src="images/ostack-openstack-subnet-create.png" alt="Results of subnet-create command"></p>
 </li>
 <li><p>Attach your internet router to the newly created network.</p>
 <ul>
 <li><p>Locate your router.</p>
-<p><strong>Command:</strong> <code>neutron router-list</code></p>
+<p><strong>Command:</strong> <code>openstack router list</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-router-list.png" alt="Results of router-list command"></p>
+<p><img src="images/ostack-router-list.png" alt="Results of router-list command"></p>
 </li>
 <li><p>Add the Interface to the router.</p>
-<p><strong>Command:</strong> <code>neutron router-interface-add &lt;RouterName&gt; &lt;NetworkName&gt;</code></p>
-<p><strong>Example:</strong> <code>neutron router-interface-add R1 FrontEdge</code></p>
-<p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-router-interface-add.png" alt="Results of router-interface-add command"></p>
+<p><strong>Command:</strong> <code>openstack router add subnet &lt;RouterName&gt; &lt;SubnetName&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack router add subnet R1 FrontEdge</code></p>
 </li>
 </ul>
 </li>
 <li><p>Create a port to be used as the VIP addresses.</p>
-<p><strong>Command:</strong> <code>neutron port-create --fixed-ip subnet_id=&lt;subnetName&gt;,ip_address=&lt;vipIP&gt; &lt;NetworkName&gt;</code></p>
-<p><strong>Example:</strong> <code>neutron port-create --fixed-ip subnet_id=FrontEdge,ip_address=192.168.0.5 FrontEdge</code></p>
+<p><strong>Command:</strong> <code>openstack port create --fixed-ip subnet_id=&lt;subnetName&gt;,ip_address=&lt;vipIP&gt; --network &lt;NetworkName&gt; --description &lt;description&gt; &lt;PortName&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack port create --fixed-ip subnet=FrontEdge,ip-address=192.168.0.5 --network FrontEdge --description LB_VIP_PORT FrontEdge</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-port-create.png" alt="Results of port-create command"></p>
+<p><img src="images/ostack-port-create.png" alt="Results of port-create command"></p>
 <p>Make a note of the ID and the IP you set as you will need this information later.</p>
 </li>
 <li><p>Associate Floating IP with newly created VIP port.</p>
 <ul>
 <li><p>Get a new floating IP.</p>
-<p><strong>Command:</strong> <code>neutron floatingip-create &lt;floatingIPPoolName&gt;</code></p>
-<p><strong>Example:</strong> <code>neutron floatingip-create internet</code></p>
+<p><strong>Command:</strong> <code>openstack floating ip create &lt;floatingIPPoolName&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack floating ip create internet</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-floatingip-create.png" alt="Results of floatingip_create command"></p>
+<p><img src="images/ostack-floating-ip-create.png" alt="Results of floatingip_create command"></p>
 <p>Make a note of the ID you will need it in the next step.</p>
 </li>
-<li><p>Associate the floating IP to VIP port-create.</p>
-<p><strong>Command:</strong> <code>neutron floatingip-associate &lt;floatingIPID&gt; &lt;portID&gt;</code></p>
-<p><strong>Example:</strong> <code>neutron floatingip-associate 247b7001-f145-4a61-8988-7bdf61915e4f6653ae36-6a30-4eed-8c5a-da567c92610d</code></p>
-<p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-floatingip-associate.png" alt="Results of floatingip-associate command"></p>
+<li><p>Associate the floating IP to VIP port-create. You can use the name or ID.</p>
+<p><strong>Command:</strong> <code>openstack floating ip set --port &lt;portName&gt; &lt;floatingIPID&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack floating ip set --port FrontEdge 7bbfdbb9-026b-4c04-8999-8051e47c3528</code></p>
 </li>
 </ul>
 </li>
 <li><p>Create and boot the two load-balancer instances.</p>
 <ul>
 <li><p>Get a list of availability zones to ensure resilience of the LB pair.</p>
-<p><strong>Command:</strong> <code>nova availability-zone-list</code></p>
+<p><strong>Command:</strong> <code>openstack availability zone list</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-nova-availability-zone-list.png" alt="Results for availability-zone-list command"></p>
+<p><img src="images/ostack-availability-zone-list.png" alt="Results for availability-zone-list command"></p>
 <p>Make a note of available zones, as you'll want to boot one server into one zone and the other into the other.</p>
 </li>
 <li><p>Get available flavours.</p>
-<p><strong>Command:</strong> <code>nova flavor-list</code></p>
+<p><strong>Command:</strong> <code>openstack flavor list</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-nova-flavor-list.png" alt="Results of flavor-list command"></p>
+<p><img src="images/ostack-flavor-list.png" alt="Results of flavor-list command"></p>
 <p>Make a note of the ID of the flavour you want to use.</p>
 </li>
 <li><p>Get available images.</p>
-<p><strong>Command:</strong> <code>glance image-list</code></p>
+<p><strong>Command:</strong> <code>openstack image list</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-glance-image-list.png" alt="Results of image-list command"></p>
+<p><img src="images/ostack-image-list.png" alt="Results of image-list command"></p>
 <p>Make a note of the ID of the image you want to boot.</p>
 </li>
-<li><p>Boot the first server.</p>
-<p><strong>Command:</strong> <code>nova boot --flavor &lt;flavorID&gt; --image &lt;imageID&gt; --key-name &lt;keyName&gt; --availability-zone &lt;availabilityZone&gt; --nic net-name=&lt;networkName&gt;,v4-fixed-ip=&lt;fixedIP&gt; &lt;name&gt;</code></p>
-<p><strong>Example:</strong> <code>nova boot --flavor 43746228-0c64-4e33-b39d-c3f91bedb7cc --image b8617599-495f-4d00-abf9-57b431caeb4c --key-name user-laptop --availability-zone 0000c-1 --nic net-name=FrontEdge,v4-fixed-ip=192.168.0.6 LB1-node1</code></p>
+<li><p>Launch the first server.</p>
+<p><strong>Command:</strong> <code>openstack server create --flavor &lt;flavorID&gt; --image &lt;imageID&gt; --key-name &lt;keyName&gt; --availability-zone &lt;availabilityZone&gt; --nic net-id=&lt;networkName&gt;,v4-fixed-ip=&lt;fixedIP&gt; &lt;name&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack server create --flavor 45f90cde-96a0-45af-ad92-c8774eab01ba --image 1cb6d236-33ce-4fa8-8703-d93d8b8d8fd4 --key-name bryce --availability-zone 00021-2 --nic net-id=82032ea0-a7d4-429d-8b79-a56c5c19c2be,v4-fixed-ip=192.168.0.6 LB1-node1</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-nova-boot.png" alt="Results of boot command"></p>
+<p><img src="images/ostack-server-create-1.png" alt="Results of boot command"></p>
 </li>
-<li><p>Boot the second server, remembering to change the availability zone and the IP address of the server.</p>
-<p><strong>Command:</strong> <code>nova boot --flavor &lt;flavorID&gt; --image &lt;imageID&gt; --key-name &lt;key-name&gt; --availability-zone &lt;availability-zone&gt; --nic net-name=&lt;networkName&gt;,v4-fixed-ip=&lt;fixedIP&gt; &lt;name&gt;</code></p>
-<p><strong>Example:</strong> <code>nova boot --flavor 43746228-0c64-4e33-b39d-c3f91bedb7cc --image b8617599-495f-4d00-abf9-57b431caeb4c --key-name user-laptop --availability-zone 0000c-2 --nic net-name=FrontEdge,v4-fixed-ip=192.168.0.7 LB1-node2</code></p>
+<li><p>Launch the second server, remembering to change the availability zone and the IP address of the server and the server name.</p>
+<p><strong>Command:</strong> <code>openstack server create --flavor &lt;flavorID&gt; --image &lt;imageID&gt; --key-name &lt;keyName&gt; --availability-zone &lt;availabilityZone&gt; --nic net-id=&lt;networkName&gt;,v4-fixed-ip=&lt;fixedIP&gt; &lt;name&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack server create --flavor 45f90cde-96a0-45af-ad92-c8774eab01ba --image 1cb6d236-33ce-4fa8-8703-d93d8b8d8fd4 --key-name bryce --availability-zone 00021-1 --nic net-id=82032ea0-a7d4-429d-8b79-a56c5c19c2be,v4-fixed-ip=192.168.0.7 LB1-node2</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-nova-boot.png" alt="Results of second boot command"></p>
+<p><img src="images/ostack-server-create-2.png" alt="Results of second boot command"></p>
 </li>
 </ul>
 </li>
 <li><p>Update ports to allow traffic to be sent via VIP IP.</p>
 <ul>
-<li><p>Get the port IDs that need updating.</p>
-<p><strong>Command:</strong> <code>neutron port-list network-id &lt;network-id&gt;</code></p>
-<p><strong>Example:</strong> <code>neutron port-list --network-id e1909abc-9ce6-45e7-8a3a-9c53d7c4af2b</code></p>
+<li><p>Get the port IDs that need updating. These are the IDs that are associated to IP addresses of the Load Balancer servers you just created (LB1-node1 &amp; LB1-node2).</p>
+<p><strong>Command:</strong> <code>openstack port list --network &lt;network-name&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack port list --network FrontEdge</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-port-list.png" alt="Results of port-list command"></p>
+<p><img src="images/ostack-port-list.png" alt="Results of port-list command"></p>
 <p>You need to locate the ports that are attached to your load-balancer instances. Once you've located them, note down the IDs as you'll need them in the next steps.</p>
 </li>
 <li><p>Update the first port to allow traffic to pass on VIP IP.</p>
-<p><strong>Command:</strong> <code>neutron update-port &lt;portID&gt; --allowed_address_pairs list=true type=dict ip_address=&lt;VIPIP&gt;</code></p>
-<p><strong>Example:</strong> <code>neutron port-update cbe044c6-8501-4e9f-9b68-7bedc45cd0ee -allowed_address_pairs list=true type=dict ip_address=192.168.0.5</code></p>
-<p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-update-port.png" alt="Results of update-port command"></p>
+<p><strong>Command:</strong> <code>openstack port set --allowed-address ip-address=&lt;VIP_IP&gt; &lt;PortID&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack port set --allowed-address ip-address=192.168.0.5 ab52f9db-6171-43d1-b0c0-83f61f20669a</code></p>
 </li>
 <li><p>Update the second port to allow traffic to pass on VIP IP.</p>
-<p><strong>Command:</strong> <code>neutron update-port &lt;portID&gt; --allowed_address_pairs list=true type=dict ip_address=&lt;VIPIP&gt;</code></p>
-<p><strong>Example:</strong> <code>neutron port-update 4dd06a59-6c18-4996-b80f-7c1577a1595e -allowed_address_pairs list=true type=dict ip_address=192.168.0.5</code></p>
-<p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-update-port2.png" alt="Results of second update-port command"></p>
+<p><strong>Command:</strong> <code>openstack port set --allowed-address ip-address=&lt;VIP_IP&gt; &lt;PortID&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack port set --allowed-address ip-address=192.168.0.5 77738977-0926-4a3c-9807-82c7af1240c4</code></p>
 </li>
 </ul>
 </li>

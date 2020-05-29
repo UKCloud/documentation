@@ -4,7 +4,7 @@ description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
 reviewer: ccampbell
-lastreviewed: 25/02/2020
+lastreviewed: 13/05/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,40 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 1.139.0
+
+Date: 13th May 2020
+
+Feature update
+
+Details:
+
+- Disable ability for users to change their emails.
+
+- Remove unneeded VM sizes field from billing table.
+
+## Release 1.132.0
+
+Date: 20th March 2020
+
+Feature update
+
+Details:
+
+- Improved success messaging when locking user accounts. 
+
+## Release 1.129.0
+
+Date: 4th March 2020
+
+Feature update
+
+Details:
+
+- OpenStack dropdown now shows all accessible regions, regardless of permission type
+
+- Change background image on login page
 
 ## Release 1.128.0
 
@@ -121,7 +155,7 @@ Date: 18th July 2019
 
 Feature update
 
-Details: Updated links to support the launch of the new UKCloud Communities platorm (https://community.ukcloud.com) which also includes changes to UKCloud Ideas.
+Details: Updated links to support the launch of the new UKCloud Communities platform which also includes changes to UKCloud Ideas.
 
 ## Release 1.109.1
 

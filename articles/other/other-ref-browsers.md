@@ -33,7 +33,7 @@ To get the best interaction with the UKCloud platform, it's important to use a b
 > [!NOTE]
 > The Microsoft Edge browser does not support plugins, so functions such as console redirection and OVF upload using the Legacy UI do not work with Edge. To perform these functions, you must use a different browser.
 
-#### vCloud Director 9.7
+#### vCloud Director
 
 vCloud Director 9.7 is compatible with the current and last major browser revisions. Version 9.7 of vCloud Director was tested by VMware and supports:
 
@@ -44,21 +44,6 @@ vCloud Director 9.7 is compatible with the current and last major browser revisi
 - Microsoft Edge 42.17134.1.0
 
 - Microsoft Internet Explorer 11.590.171340
-
-#### vCloud Director 9.1
-
-vCloud Director 9.1 is compatible with many current and last major browser revisions. Version 9.1 of vCloud Director was tested by VMware and supports:
-
-- Google Chrome 64
-
-- Mozilla Firefox 58
-
-- Microsoft Edge 41
-
-- Microsoft Internet Explorer 11
-
-> [!NOTE]
-> Although Internet Explorer is supported by vCloud Director 9.1, if you've applied any security or group policy restrictions, you may encounter problems.
 
 ### UKCloud for OpenStack
 

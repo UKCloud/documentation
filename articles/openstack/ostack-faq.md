@@ -436,9 +436,9 @@ At the time of order, you can specify which of our two UK data centres you'd lik
 
 We offer a 30-day free trial so that you can test and evaluate our service without commitment. Your trial provides you with a live environment on the UKCloud platform to test our services and check whether they're suited to your needs.
 
-Before your trial, a Cloud Architect will engage with you to identify the goals you\'re working towards, to help ensure that your trial meets those goals.
+Before your trial, a Cloud Architect will engage with you to identify the goals you're working towards, to help ensure that your trial meets those goals.
 
-Throughout the trial period, a Customer Success Manager (CSM) will provide support for any issues you may encounter or questions you may have.
+Throughout the trial period, a Service Delivery Manager (SDM) will provide support for any issues you may encounter or questions you may have.
 
 At the end of your free trial, you can seamlessly move to a billed service, leveraging any of the work you've already completed in the live trial environment.
 
@@ -482,11 +482,11 @@ See [*How to use TrilioVault self-service backup and restoration within OpenStac
 
 UKCloud charges a nominal monthly fee per instance being protected by this service. UKCloud charges by the whole month for any part month consumption of this service.
 
-You can find pricing details in the OpenStack section of the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+You can find pricing details in the OpenStack section of the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### Are there any additional fees for the TrilioVault self-service backup and restoration service?
 
-This service utilises UKCloud's [*Multi-Cloud Backup Storage*](../other/other-sd-mcbs.md) (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+This service utilises UKCloud's [*Multi-Cloud Backup Storage*](../other/other-sd-mcbs.md) (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### Can I use my own backup software?
 
@@ -542,7 +542,7 @@ UKCloud may make an additional charge for transferring data out of the service.
 
 ### Is two-factor authentication (2FA) available?
 
-Yes, it is possible to further protect access to OpenStack's management portal (Horizon) using 2FA. To enable this feature, OpenStack users need to be created in the UKCloud Portal as described [here](ostack-how-create-users.md).
+Yes, it is possible to further protect access to OpenStack's management portal (Horizon) using 2FA. To enable this feature, OpenStack users need to be created in the UKCloud Portal as described [here](../portal/ptl-how-create-users.md).
 
 ### What data is suitable for the UKCloud assured cloud platform?
 

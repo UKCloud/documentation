@@ -8,7 +8,7 @@
     <title>How to create an isolated VDC network </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create an isolated VDC network ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -102,18 +102,7 @@
 <li><p>A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. Creation of routed networks is described in <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
 </li>
 </ul>
-<p>The steps for creating an isolated VDC network depend on the version of vCloud Director available in your environment.</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">vCloud Director 9.7</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">vCloud Director 9.1</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
-
+<h2 id="creating-an-isolated-network">Creating an isolated network</h2>
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to create the network.</p>
 </li>
@@ -148,39 +137,6 @@
 <li><p>On the <em>Ready to Complete</em> page, review your selections then click <strong>Finish</strong>.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to create the network.</p>
-</li>
-<li><p>In the left navigation panel, select <strong>Network</strong>.</p>
-<p><img src="images/vmw-vcd91-tab-network.png" alt="Network tab in vCloud Director"></p>
-</li>
-<li><p>Click the <strong>Add</strong> button.</p>
-<p><img src="images/vmw-vcd91-btn-add-network.png" alt="Add network button"></p>
-</li>
-<li><p>In the <em>Add Org VDC Network</em> dialog box, from the <strong>Type</strong> radio buttons, select <strong>Isolated network within this Virtual Data Center</strong>.</p>
-<p><img src="images/vmw-vcd91-add-network-isolated.png" alt="Add Org VDC Network dialog box with Isolated network selected"></p>
-</li>
-<li><p>Confirm that you're creating the network in the correct <strong>Org VDC</strong>.</p>
-</li>
-<li><p>Enter a <strong>Name</strong> and <strong>Description</strong> for the network.</p>
-</li>
-<li><p>If you want to make the network shareable with other VDCs, select the <strong>Share this network with other VDCs in this organization</strong> check box.</p>
-</li>
-<li><p>Create a network <strong>Gateway address</strong> and <strong>Network mask</strong>, and add a <strong>DNS</strong> if possible.</p>
-</li>
-<li><p>The <strong>Static IP Pool</strong> is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network.</p>
-<p>In the Static IP Pool field, enter a range of addresses to be consumed by the VMs connecting to the network, then click <strong>Add</strong>.</p>
-<p>As an example, if you give the gateway address as <code>192.168.1.1</code>, you may then want to create a <strong>Static IP Pool</strong> of <code>192.168.1.10-192.168.1.100</code>. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.</p>
-<p><img src="images/vmw-vcd91-network-ip-pool.png" alt="Static IP Pool"></p>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="next-steps">Next steps</h2>
 <p>Now you've created your network to connect your VDC with the outside world, may want to configure your edge gateway to control what traffic is allowed into and out of your VDC. You may also wan to start building some VMs. For a quick guide on how to do this, see <a href="vmw-gs-build-vm-vcd.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
 <h2 id="feedback">Feedback</h2>

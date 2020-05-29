@@ -47,15 +47,15 @@ All of the G11 Service Definitions and Pricing Guides are available within the [
 
 ### What is Dedicated Compute v2?
 
-Dedicated Compute v2 is a flexible solution designed where guaranteed performance is required. Hosts are assigned for a customer’s sole use and enables granular configuration to meet individual workload requirements. Dedicated Compute v2 utilises our public VMware storage and provides on-demand flexibility, with either Tier 1 or Tier 2 storage options available.
+Dedicated Compute v2 is a flexible solution designed where guaranteed performance is required. Hosts are assigned for a customer's sole use and enables granular configuration to meet individual workload requirements. Dedicated Compute v2 utilises our public VMware storage and provides on-demand flexibility, with either Tier 1 or Tier 2 storage options available.
 
 ### What is Extended Network Support from UKCloud?
 
-This service is an extension of the Basic Managed Compute offering and enables customers to choose from an extensive list of officially supported network appliances, of which UKCloud undertake the initial deployment and configuration of the various elements of the customer’s virtual network, along with ongoing monitoring and support.
+This service is an extension of the Basic Managed Compute offering and enables customers to choose from an extensive list of officially supported network appliances, of which UKCloud undertake the initial deployment and configuration of the various elements of the customer's virtual network, along with ongoing monitoring and support.
 
 ### What is Managed Monitoring from UKCloud?
 
-The Managed Monitoring service from UKCloud includes total application monitoring through first line support 24 hours a day, 365 days a year. The UKCloud team will receive and react to any abnormal events or alerts across the customer’s IT estate. This reduces noise and allows customers to focus on the critical events that really matter.
+The Managed Monitoring service from UKCloud includes total application monitoring through first line support 24 hours a day, 365 days a year. The UKCloud team will receive and react to any abnormal events or alerts across the customer's IT estate. This reduces noise and allows customers to focus on the critical events that really matter.
 
 ### What is Cloud Optimisation from UKCloud?
 
@@ -99,7 +99,7 @@ We've now added support for Data Protection Suite (DPS). DPS is a de-duplication
 
 ### What are the key changes to the Multi-Cloud for Tier 2 (UKCloud X) suite of products?
 
-We've simplified the pricing model to offer hourly and monthly pricing for every community of interest (COI) multi-cloud service. Customers opting for hourly pricing have a minimum commitment term of three months. Customers using monthly pricing have a minimum commitment term of six months. We've also changed the concept from “base pack” to “floor pricing”, giving customers greater flexibility over their VM and storage choices and removing the restrictions of a pre-defined pack of resources.
+We've simplified the pricing model to offer hourly and monthly pricing for every community of interest (COI) multi-cloud service. Customers opting for hourly pricing have a minimum commitment term of three months. Customers using monthly pricing have a minimum commitment term of six months. We've also changed the concept from "base pack" to "floor pricing", giving customers greater flexibility over their VM and storage choices and removing the restrictions of a pre-defined pack of resources.
 
 ### What changes have been made to the UKCloud for Oracle Software service?
 
@@ -111,7 +111,7 @@ Pricing has also been simplified, by clarifying that customers can purchase on a
 
 UKCloud has now included the capability to offer connectivity to the Scottish Wide Area Network (SWAN) on a single-tenant basis.
 
-The HybridConnect pricing has now changed from being a single setup fee to a lower setup fee and a low recurring monthly charge. For more information, please refer to the [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+The HybridConnect pricing has now changed from being a single setup fee to a lower setup fee and a low recurring monthly charge. For more information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 We've also made a couple of name changes to connectivity products:
 
@@ -121,17 +121,17 @@ We've also made a couple of name changes to connectivity products:
 
 ### What are the key changes to the UKCloud for OpenStack service?
 
-We've added a new instance size to the portfolio: p1.medium. This instance comes with 12 vCPU, 128 GiB RAM and 60 GiB of ephemeral storage. Please view the [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for further information.
+We've added a new instance size to the portfolio: p1.medium. This instance comes with 12 vCPU, 128 GiB RAM and 60 GiB of ephemeral storage. For more information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for further information.
 
 Based on customer demand, we've now added a new backup and restoration tool from TrilioVault. For early access, speak to your Service Delivery Manager.
 
-### What’s new in Cloud Storage?
+### What's new in Cloud Storage?
 
 With this service we've added storage gateway options for customers, making it easier to target our object storage platform. For more information on the gateway options see the [Cloud Storage Service Definition](../cloud-storage/cs-sd.md).
 
 ### What are the key changes to the UKCloud for VMware service?
 
-We now offer customers access to advanced networking features such as Distributed Firewall, Distributed Logical Router and L2 VPN along with monitoring features that provides much greater granularity and reporting in a customer’s environment. Both these options are available at a 15% cost increase in addition to the VM cost. See the [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for more details.
+We now offer customers access to advanced networking features such as Distributed Firewall, Distributed Logical Router and L2 VPN along with monitoring features that provides much greater granularity and reporting in a customer's environment. Both these options are available at a 15% cost increase in addition to the VM cost. See the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for more details.
 
 ### What are the key changes to the Basic Managed VM service?
 
@@ -145,7 +145,7 @@ We can now offer customers management of their workloads running in Microsoft Pu
 
 ### What is happening to End User Compute?
 
-This has been removed from sale. However we'll continue to investigate options around End User Compute/Virtual Desktop, so if you have any ideas or feedback on this topic, let us know via the [UKCloud Community](https://community.ukcloud.com/ideas).
+This has been removed from sale. However we'll continue to investigate options around End User Compute/Virtual Desktop, so if you have any ideas or feedback on this topic, let us know by emailing <feedback@ukcloud.com>.
 
 ### What is happening to Email and Collaboration as a service?
 

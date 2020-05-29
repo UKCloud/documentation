@@ -137,19 +137,19 @@ For more information, see the [Cross Domain Security Zone service definition](..
 
 ### Customer Success Manager (CSM)
 
-A UKCloud Customer Services role aimed at providing you with any assistance you may require during onboarding and the first 90 days of using a UKCloud service.
+*See:* [Service Delivery Manager](#service-delivery-manager)
 
 ## D
 
 ### Data centre interconnect (DCI)
 
-A UKCloud connectivity service that enables self-designed and managed disaster recovery solutions, or increased connectivity resilience, by using UKCloud’s assured connections between our sites.
+A UKCloud connectivity service that enables self-designed and managed disaster recovery solutions, or increased connectivity resilience, by using UKCloud's assured connections between our sites.
 
 *See also:* [Assured inter-data centre connectivity](#assured-inter-data-centre-connectivity), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
 
 ### Data Transfer Facility (DTF)
 
-A UKCloud enablement service that enables you to use the secure network connections at our Farnborough site to manage systems or transfer data into or out of your environments. This service is useful if you don’t have enough network bandwidth or are waiting for appropriately accredited connectivity to be installed.
+A UKCloud enablement service that enables you to use the secure network connections at our Farnborough site to manage systems or transfer data into or out of your environments. This service is useful if you don't have enough network bandwidth or are waiting for appropriately accredited connectivity to be installed.
 
 *See also:* [Mass Transfer Facility (MTF)](#mass-transfer-facility-mtf)
 
@@ -237,7 +237,7 @@ For more information, see the [UKCloud Big Data & Hadoop service proposition](ht
 
 ### Health and Social Care Network (HSCN)
 
-A government network designed to provide a solution for hospitals, medical centres and GPs to collaborate and access services over a secure, high speed network. One of UKCloud’s connectivity options, available on the Assured OFFICIAL security domain.
+A government network designed to provide a solution for hospitals, medical centres and GPs to collaborate and access services over a secure, high speed network. One of UKCloud's connectivity options, available on the Assured OFFICIAL security domain.
 
 For more information, see the [HSCN FAQs](../connectivity/conn-faq-hscn.md).
 
@@ -281,7 +281,7 @@ A customer provisioned compute resource within OpenStack, similar to the virtual
 
 ### Janet
 
-The UK's research and education network, used by education organisations and research councils. One of UKCloud’s connectivity options, available on the Assured OFFICIAL security domain.
+The UK's research and education network, used by education organisations and research councils. One of UKCloud's connectivity options, available on the Assured OFFICIAL security domain.
 
 For more information, see the [Janet connectivity FAQs](../connectivity/conn-faq-janet.md).
 
@@ -301,13 +301,13 @@ For more information, see the [Jumpstart FAQs](../other/other-faq-jumpstart.md).
 
 ### Knowledge Centre
 
-UKCloud’s repository of articles created in collaboration with subject matter experts to provide information about how to use our products and services.
+UKCloud's repository of articles created in collaboration with subject matter experts to provide information about how to use our products and services.
 
 *See:* <https://docs.ukcloud.com/>
 
 ## L
 
-Let us know your thoughts and ideas by posting on the [UKCloud Community](https://community.ukcloud.com/ideas).
+Let us know your thoughts and ideas by sending an email to <feedback@ukcloud.com>.
 
 ## M
 
@@ -335,7 +335,7 @@ For more information, see the [Moogsoft AIOps from UKCloud service definition](.
 
 ### Multi-Cloud Backup Storage
 
-A UKCloud IaaS service that provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, based on Dell EMC's Data Domain Boost™ (DD Boost) technology, enabling open-source backup applications to utilise the backup service as a target. You can also use Multi-Cloud Backup Storage as a remote backup target for your on-premises data.
+A UKCloud IaaS service that provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, based on Dell EMC's Data Domain Boost&trade; (DD Boost) technology, enabling open-source backup applications to utilise the backup service as a target. You can also use Multi-Cloud Backup Storage as a remote backup target for your on-premises data.
 
 For more information, see the [Multi-Cloud Backup Storage service definition](../other/other-sd-mcbs.md).
 
@@ -431,7 +431,7 @@ Note the difference between Private Cloud, which is a single-tenant environment 
 
 ### Private Cloud for Oracle Software
 
-A UKCloud IaaS service that enables you to have private implementations of Oracle's Engineered Systems within UKCloud’s assured, sovereign data centres, Crown Hosting Data Centres or even on-premise.
+A UKCloud IaaS service that enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premise.
 
 For more information, see the [Private Cloud for Oracle Software service definition](../private-cloud/prc-sd-orcl.md).
 
@@ -449,7 +449,7 @@ For more information, see [Protective Monitoring from UKCloud](../other/other-re
 
 ### Public Services Network (PSN)
 
-A government network, used by central, local and devolved government organisations. One of UKCloud’s connectivity options, available on the Assured OFFICIAL and Elevated OFFICIAL security domains.
+A government network, used by central, local and devolved government organisations. One of UKCloud's connectivity options, available on the Assured OFFICIAL and Elevated OFFICIAL security domains.
 
 For more information, see the [Public Services Network (PSN) FAQs](../connectivity/conn-faq-psn.md).
 
@@ -467,7 +467,7 @@ A physically segregated part of the UKCloud platform with its own power infrastr
 
 ### Restricted LAN Interconnect (RLI)
 
-A high-security network for defence and industry partners. One of UKCloud’s connectivity options. Connection to RLI is subject to extensive vetting and approval from the MOD. Contact one of our Cloud Architects for more information about how to connect to RLI.
+A high-security network for defence and industry partners. One of UKCloud's connectivity options. Connection to RLI is subject to extensive vetting and approval from the MOD. Contact one of our Cloud Architects for more information about how to connect to RLI.
 
 ## S
 
@@ -481,13 +481,13 @@ For more information, see the [Secure Remote Access service definition](../sra/s
 
 ### Service Credits
 
-A compensation scheme whereby if we fall short of our service level agreement, we’ll compensate you with credits that you redeem them against UKCloud services.
+A compensation scheme whereby if we fall short of our service level agreement, we'll compensate you with credits that you redeem them against UKCloud services.
 
 *See also:* [Cloud Credits](#cloud-credits)
 
 ### Service Delivery Manager
 
-A UKCloud Customer Services role aimed at providing you with an assigned point of contact after the first 90 days with a service.
+A UKCloud Customer Services role aimed at providing you with an assigned point of contact who will provide any assistance you require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
 ### Site
 
@@ -545,15 +545,9 @@ For more information, see the [Transition Services service definition](../transi
 
 ## U
 
-### UKCloud Community
-
-A site where you can share information about delivering digital transformation within the UK Public Sector. UKCloud regularly updates the Community with blogs, videos, webinars and event information. You can also request to join private groups to gain early access to BETA functionality. The Ideas section of the Community provides a place for you to let us know what you'd like to see on our platform.
-
-*See:* <https://community.ukcloud.com>
-
 ### UKCloud for Microsoft Azure
 
-A UKCloud IaaS service that harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment.
+A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
 
 For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
 
@@ -593,12 +587,6 @@ A division of UKCloud that is dedicated to health and care, research and life sc
 
 *See:* <https://ukcloudhealth.com/>
 
-### UKCloud Ideas
-
-An area of the UKCloud Community where you can share your ideas and suggestions with us, as well as see highlights of what is upcoming on our development roadmap. You can also vote and comment on existing ideas, which allows us to understand the importance of the idea and provide further information or direction. Ideas with the most votes will be given a higher priority on the roadmap.
-
-*See:* <https://community.ukcloud.com/ideas>
-
 ### UKCloudX
 
 A division of UKCloud specifically designed to cater for the enhanced requirements of the UK Defence and National Security sectors. The team is made up of industry experts, with first hand experience of keeping our nation safe, and experts in delivering cloud at scale. UKCloudX operates across all security domains, including Tier 2.
@@ -619,7 +607,7 @@ A container for VMs, where each VM has the same workload characteristics and acc
 
 ### Virtual machine (VM)
 
-Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM’s resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.
+Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM's resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.
 
 ### VMware
 
@@ -647,7 +635,7 @@ For more information, see the [Cross Domain Security Zone service definition](..
 
 ## Y
 
-You can read interesting blogs and posts, post your ideas and find out about upcoming events at the [UKCloud Community](https://community.ukcloud.com).
+You can find documentation about how to work with our products at the [UKCloud Knowledge Centre](https://docs.ukcloud.com).
 
 ## Z
 

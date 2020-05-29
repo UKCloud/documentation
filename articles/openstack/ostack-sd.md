@@ -19,15 +19,15 @@ toc_mdlink: ostack-sd.md
 
 ## Why UKCloud?
 
-UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government’s Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
+UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government's Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
 
-We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud’s technical experts.
+We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud's technical experts.
 
 ![UKCloud services](images/ukc-services.png)
 
 ## What is UKCloud for OpenStack?
 
-UKCloud for OpenStack is engineered specifically for organisations embracing digital transformation and delivering true cloud-native applications; facilitating the creation of elastic infrastructure as code, which can be built once and run anywhere at any time to take full advantage of the benefits of cloud. Powered by OpenStack®, this service provides a full suite of modern, highly scalable and flexible IaaS services that address the needs of DevOps and WebOps communities. OpenStack's ease of use and openness enables delivery of Digital by Default services and solutions.
+UKCloud for OpenStack is engineered specifically for organisations embracing digital transformation and delivering true cloud-native applications; facilitating the creation of elastic infrastructure as code, which can be built once and run anywhere at any time to take full advantage of the benefits of cloud. Powered by OpenStack&reg;, this service provides a full suite of modern, highly scalable and flexible IaaS services that address the needs of DevOps and WebOps communities. OpenStack's ease of use and openness enables delivery of Digital by Default services and solutions.
 
 For full information regarding this product, we have [Service Scopes](ostack-sco.md), [FAQs](ostack-faq.md), [Getting Started videos](ostack-vid-overview.md) and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
 
@@ -117,15 +117,15 @@ Add GPU capabilities to Instances to accelerate computational and visualisation 
 
 ## Pricing and packaging
 
-UKCloud for OpenStack instances start at 1p per hour, and full pricing with all options including licensing and connectivity available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+UKCloud for OpenStack instances start at 1p per hour, and full pricing with all options including licensing and connectivity available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
-The security of our platform is our number one priority. We’ve always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
+The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
 
 ## An SLA you can trust
 

@@ -3,8 +3,8 @@ title: How to license Microsoft software on the UKCloud platform
 description: This guide will explain how Microsoft software such as Server and SQL is licensed on the UKCloud platform
 services: vmware
 author: Steve Hall
-reviewer: Sue Highmoor
-lastreviewed: 22/10/2019
+reviewer: Darren B
+lastreviewed: 27/03/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -100,7 +100,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
   - SQL Developer can only be utilised on a shared platform to test the SQL element of a solution and cannot be used to provide end-user services. If you want to provide SQL services to end-users, SQL Enterprise or SQL Standard must be purchased.
 
-  - We can provide Microsoft SQL Standard Server licences on a per hour basis, or Microsoft SQL Enterprise licences billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+  - We can provide Microsoft SQL Standard Server licences on a per hour basis, or Microsoft SQL Enterprise licences billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
   - Microsoft Mobility - this is a valid option for both SQL Standard and Enterprise.
 
@@ -114,7 +114,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Remote Desktop Server Access Licence**
 
-  - UKCloud licensing - we are able to provide Microsoft Remote Desktop (RDS) SAL on a monthly basis only. These are retrospectively billed, and the pricing is available within the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf). To use these licences, you must raise a Service Request prior to their use to register them on the UKCloud platform and provision a dedicated RDS licence server. To assign and validate the licences, we will need to arrange a session to connect to your server.
+  - UKCloud licensing - we are able to provide Microsoft Remote Desktop (RDS) SAL on a monthly basis only. These are retrospectively billed, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). To use these licences, you must raise a Service Request prior to their use to register them on the UKCloud platform and provision a dedicated RDS licence server. To assign and validate the licences, we will need to arrange a session to connect to your server.
 
   - Microsoft Mobility - this is a valid option for RDS licences.
 
@@ -132,7 +132,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Office**
 
-  - UKCloud licensing - UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we'll bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+  - UKCloud licensing - UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we'll bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
   - Microsoft Mobility - this is not available via Microsoft Mobility and must be provided by UKCloud.
 
@@ -179,7 +179,7 @@ To use your existing Microsoft licensing or use licences billed by us on UKCloud
     - If want to bring your own licensing and your Microsoft Mobility application has been accepted, the date from which your licensing will take effect. (You must have completed the [Microsoft Mobility](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) verification process before choosing this option.)
 
     > [!NOTE]
-    > It is **your** responsibility to inform support when you no longer require the licensing on one or more of the specified VMs.
+    > It is **your** responsibility to inform UKCloud Support if you rename a VM that has licensing applied or if you no longer require the licensing on one or more of the specified VMs.
 
 7. When you're done, click **Review & Submit**.
 

@@ -8,7 +8,7 @@
     <title>How to access Ubuntu update servers </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to access Ubuntu update servers ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -101,14 +101,18 @@
 <h2 id="elevated-official-platform">Elevated OFFICIAL platform</h2>
 <p>UKCloud's Elevated OFFICIAL platform doesn't natively connect to the internet, and the PSN Protected network doesn't have any Ubuntu repository servers. To connect to an Ubuntu repository server for updates, you can use UKCloud-managed repository servers or a UKCloud Walled Garden.</p>
 <h3 id="ukcloud-managed-repository-servers">UKCloud-managed repository servers</h3>
-<p>We provide Ubuntu repositories for the 12.04 and 14.04 LTS versions of Ubuntu on our Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.</p>
+<p>We provide Ubuntu repositories for the 16.04, 18.04 and 20.04 LTS versions of Ubuntu on our Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.</p>
 <ul>
-<li><p>For 12.04:</p>
-<pre><code>  sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_precise.list
+<li><p>For 16.04:</p>
+<pre><code>  sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_xenial.list
 </code></pre>
 </li>
-<li><p>For 14.04:</p>
-<pre><code>  sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_trusty.list
+<li><p>For 18.04:</p>
+<pre><code>  sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_bionic.list
+</code></pre>
+</li>
+<li><p>For 20.04:</p>
+<pre><code>  sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_focal.list
 </code></pre>
 </li>
 </ul>

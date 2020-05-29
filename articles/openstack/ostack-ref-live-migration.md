@@ -3,8 +3,8 @@ title: OpenStack live migrations
 description: Describes the process for performing live migrations to enable maintenance activity on OpenStack hypervisor servers
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 09/04/2019 10:21:32
+reviewer: bnicholls
+lastreviewed: 09/04/2020
 
 toc_rootlink: Reference
 toc_sub1: 

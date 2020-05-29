@@ -8,7 +8,7 @@
     <title>How to configure the Azure Stack Hub user's Azure CLI environment | Based on Microsoft Docs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure the Azure Stack Hub user's Azure CLI environment | Based on Microsoft Docs ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,18 +94,101 @@
 <h1 id="how-to-configure-the-azure-stack-hub-users-azure-cli-environment">How to configure the Azure Stack Hub user's Azure CLI environment</h1>
 
 <p>In this article, we will guide you through the process of installing and using the Azure command-line interface (CLI) to manage Azure Stack Hub. Azure CLI can be used to manage resources such as create virtual machines, deploy Azure Resource Manager templates, etc.</p>
-<h2 id="official-documentation">Official Documentation</h2>
+<h2 id="microsoft-documentation">Microsoft documentation</h2>
 <p><a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-2018-03-01-hybrid">Azure CLI command reference for 2018-03-01-hybrid profile</a></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>There is currently no document for the 2019-03-01-hybrid profile.</p>
+</div>
 <p><a href="https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-deploy-template-command-line">Deploy templates with Azure CLI</a></p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Azure Stack Hub works with very specific <strong>API Profiles</strong> - you need to use <code>2018-03-01-hybrid</code> in order to interact with it. The biggest caveat is that it only support as small subset of commands from the <code>latest profile</code>.</p>
+<p>Azure Stack Hub works with very specific <strong>API Profiles</strong> - you need to use <code>2019-03-01-hybrid</code> to interact with it. The biggest caveat is that it only supports a small subset of commands from the <code>latest profile</code>.</p>
 </div>
 <h2 id="install-cli">Install CLI</h2>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Local workstation</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Docker container</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
 <p>Sign in to your development workstation and install CLI. Azure Stack Hub requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the <a href="https://docs.microsoft.com/cli/azure/install-azure-cli">Install Azure CLI 2.0</a> article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:</p>
-<pre><code class="lang-azurecli">az --version
+<pre><code class="lang-azurecli">   bash-5.0# az --version
+   azure-cli                          2.2.0
+
+   command-modules-nspkg              2.0.3
+   core                               2.2.0
+   nspkg                              3.0.4
+   telemetry                          1.0.4
+
+   Python location '/usr/local/bin/python'
+   Extensions directory '/root/.azure/cliextensions'
+
+   Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
+   [GCC 8.3.0]
+
+   Legal docs and information: aka.ms/AzureCliLegal
+
+
+
+   Your CLI is up-to-date.
+
+   Please let us know how we are doing: https://aka.ms/clihats
 </code></pre>
 <p>You should see the version of Azure CLI and other dependent libraries that are installed on your computer.</p>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>If you have <a href="https://www.docker.com/">Docker</a> installed on your workstation, Microsoft provides an Azure CLI container that you can use instead of installing dependencies locally.</p>
+<p>To start the Azure CLI docker container, run the following command:</p>
+<pre><code class="lang-azurecli">   docker run -it --rm mcr.microsoft.com/azure-cli
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The above command will automatically pull the container image from Microsoft's container registry.</p>
+<p>If you experience issues with pulling the image, run the following command:</p>
+<pre><code class="lang-azurecli">docker pull mcr.microsoft.com/azure-cli
+</code></pre>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>If you are running Docker Desktop on Windows and receive the following error:</p>
+<pre><code class="lang-cmd">C:\Program Files\Docker\Docker\Resources\bin\docker.exe: image operating system &quot;linux&quot; cannot be used on this platform.
+</code></pre>
+<p>Ensure Docker Desktop on Windows is set to <strong>Linux containers</strong>.</p>
+</div>
+<p>This command will execute an interactive terminal session inside the container and remove it on exit.</p>
+<p>You will now be in the container's interactive terminal session and see the following prompt: <code>bash-5.0#</code>.</p>
+<p>You can run <code>az --version</code> to verify the Azure CLI is working correctly:</p>
+<pre><code class="lang-azurecli">   bash-5.0# az --version
+   azure-cli                          2.2.0
+
+   command-modules-nspkg              2.0.3
+   core                               2.2.0
+   nspkg                              3.0.4
+   telemetry                          1.0.4
+
+   Python location '/usr/local/bin/python'
+   Extensions directory '/root/.azure/cliextensions'
+
+   Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
+   [GCC 8.3.0]
+
+   Legal docs and information: aka.ms/AzureCliLegal
+
+
+
+   Your CLI is up-to-date.
+
+   Please let us know how we are doing: https://aka.ms/clihats
+</code></pre>
+</section>
+</div>
 <h2 id="declare-variables">Declare variables</h2>
 <p>Enter details below to provide values for the variables in the scripts in this article:</p>
 <table>
@@ -154,7 +237,7 @@
 </code></pre>
 </li>
 <li><p>Update your environment configuration to use the Azure Stack Hub specific API version profile. To update the configuration, run the following command:</p>
-<pre><code class="lang-azurecli">az cloud update --profile 2018-03-01-hybrid
+<pre><code class="lang-azurecli">az cloud update --profile 2019-03-01-hybrid
 </code></pre>
 </li>
 <li><p>Sign in to your Azure Stack Hub environment by using the <code>az login</code> command. You can sign in to the Azure Stack Hub environment either as a user or as a <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects">service principal</a>.</p>
@@ -166,6 +249,15 @@
 <div class="NOTE">
 <h5>Note</h5>
 <p>If your user account has multi-factor authentication enabled, you can use the <code>az login</code> command without providing the <code>-u</code> parameter. Running the command gives you a URL and a code that you must use to authenticate.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>If the user is not present in the domain that you are attempting to login to, you must specify the <code>--tenant</code> parameter.
+For example, if your guest user is <code>user@contoso.onmicrosoft.com</code> and the domain is <code>fabrikam@onmicrosoft.com</code> the command will be as follows:</p>
+<pre><code class="lang-azurecli">az login --tenant fabrikam@onmicrosoft.com
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code xxxxxxxxx to authenticate.
+</code></pre>
+<p>At the user authentication page, sign in with your guest user <code>user@contoso.onmicrosoft.com</code>.</p>
 </div>
 </li>
 <li><p>Sign in as a <em>service principal</em>: Before you sign in, create a service principal through <a href="azs-how-create-spn-portal.html">the public Azure portal</a>, <a href="azs-how-create-spn-powershell.html">PowerShell</a> or <a href="azs-how-create-spn-cli.html">CLI</a> and assign it a role. Now, sign in by using the following command:</p>
@@ -179,8 +271,19 @@
 </ul>
 </li>
 <li><p>Verify that your environment is set correctly and that AzureStackUser is the active cloud.</p>
-<pre><code class="lang-azurecli">az cloud list --output table
+<pre><code class="lang-azurecli">bash-5.0# az cloud list --output table
+IsActive    Name               Profile
+----------  -----------------  -----------------
+False       AzureCloud         latest
+False       AzureChinaCloud    latest
+False       AzureUSGovernment  latest
+False       AzureGermanCloud   latest
+True        AzureStackUser     2019-03-01-hybrid
 </code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The final line shows that the user profile has been updated and is active.</p>
+</div>
 </li>
 <li><p>To list command subgroups run:</p>
 <pre><code class="lang-azurecli">az --help
@@ -193,7 +296,7 @@
 </ol>
 <h2 id="connect-to-azure-stack-hub---quick-reference-guide">Connect to Azure Stack Hub - Quick Reference Guide</h2>
 <pre><code class="lang-azurecli hljs"># Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result7" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result8" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result9" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result7" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result8" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result9" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2019-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
@@ -211,9 +314,9 @@ az login -u "<output form="username" name="result2" style="display: inline;">use
 <ul>
 <li><p>The CLI interactive mode i.e the <code>az interactive</code> command is not yet supported in Azure Stack Hub.</p>
 </li>
-<li><p>To get the list of virtual machine images available in Azure Stack Hub, use the <code>az vm images list --all</code> command instead of the <code>az vm image list</code> command. Specifying the <code>--all</code> option makes sure that response returns only the images that are available in your Azure Stack Hub environment.</p>
+<li><p>To get the list of virtual machine images available in Azure Stack Hub, use the <code>az vm image list --all</code> command instead of the <code>az vm image list</code> command. Specifying the <code>--all</code> option makes sure that response returns only the images that are available in your Azure Stack Hub environment.</p>
 </li>
-<li><p>Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack Hub. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the <code>az vm images list</code> command.</p>
+<li><p>Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack Hub. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the <code>az vm image list -all</code> command.</p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>

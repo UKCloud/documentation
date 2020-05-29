@@ -22,10 +22,28 @@ toc_mdlink: ptl-how-raise-escalate-service-request.md
 
 This article provides information about how the support process works at UKCloud and what to expect when you raise a support ticket (incident or service request), including support hours, target response times and the escalation process.
 
-> [!NOTE]
+- Incidents - for ongoing faults and outages
+
+- Service requests - for requesting new services, changes to existing services, system information, restoring backups or requesting logs
+
+> [!TIP]
 > Before raising an incident, you can check the [UKCloud Service Status page](https://status.ukcloud.com/) to see if there's a known issue on the platform that we're already working on.
 
+## Incident priorities
+
+> [!NOTE]
+> Incidents are for ongoing faults and outages. If you're raising a ticket against an incident that has been resolved, raise a service request instead.
+
+&nbsp; | &nbsp;
+-----------|-----------
+**Priority 1** | **Priority 2**
+Service is currently experiencing a significant outage or disruption to multiple users or locations<br><br>Service has a confirmed or suspected compromise, loss or unavailability of data | Service is available but is currently experiencing degradation or restrictions for multiple users or locations
+**Priority 3** | **Priority 4**
+Service is currently experiencing a failure or degradation of redundant or non-critical components<br><br>Service is currently experiencing failure of a shared service, where alternative services remain available, or disruption for single users | Service is currently affected by documented housekeeping activities<br><br>Service is currently affected by administration-related requirements or an uncategorised incident
+
 ## Contacting UKCloud
+
+### Service hours
 
 Service support hours are:
 
@@ -41,11 +59,11 @@ Customers should ensure they complete basic checks before contacting UKCloud, an
 
 Methods for contacting The UKCloud team are as follows:
 
-- UKCloud Portal (Assured) &mdash; <https://portal.ukcloud.com/>
+- UKCloud Portal (Assured) - <https://portal.ukcloud.com/>
 
-- UKCloud Portal (Elevated) &mdash; Contact your Portal administrator or Customer Success Manager (CSM)
+- UKCloud Portal (Elevated) - Contact your Portal administrator or Service Delivery Manager (SDM)
 
-- Telephone &mdash; 01252 303 300 (select option 2)
+- Telephone - 01252 303 300 (select option 2)
 
 The UKCloud Portal is the preferred approach for raising requests and issues with UKCloud. For information about raising requests, see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md).
 
@@ -95,24 +113,15 @@ Ticket priority | Initial response target | Resolution target
 **P4 incident** | 1 hour | 90% in 5 days
 **Service request** | 1 hour | 2 days (standard pre-approved requests)
 
-## Incident priorities
-
-&nbsp; | &nbsp;
------------|-----------
-**Priority 1** | **Priority 2**
-A significant outage or disruption to multiple users or locations is in progress<br><br>Confirmed or suspected compromise, loss or unavailability of data has occurred | Service is available but degraded or restricted for multiple users or locations
-**Priority 3** | **Priority 4**
-A failure or degradation of redundant or non-critical components of service has occurred<br><br>Failure of a shared service, where alternative services remain available, or service disruption for single users | Documented housekeeping activities<br><br>Administration related requirements or an uncategorised incident
-
 ## Viewing tickets and service updates
 
-All incidents and service requests are visible within the UKCloud Portal under [My Calls](https://portal.skyscapecloud.com/support/ivanti)(for more information, see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md)). The Portal also provides notification of upcoming changes.
+All incidents and service requests are visible within the UKCloud Portal under [My Calls](https://portal.skyscapecloud.com/support/ivanti) (for more information, see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md)). The Portal also provides notification of upcoming changes.
 
 During a Major Incident, updates are published to the Service Status page: <https://status.ukcloud.com/>.
 
 ## Escalation
 
-For onboarding issues, contact your allocated Customer Success Manager (CSM).
+For onboarding issues, contact your allocated SDM.
 
 To escalate an incident or service request, contact the Support Team (by phone in the first instance):
 
@@ -120,7 +129,11 @@ To escalate an incident or service request, contact the Support Team (by phone i
 
 - Email: <escalations@ukcloud.com> (monitored 24 x 7)
 
-For wider service issues, contact your Service Delivery Manager during standard office hours.
+For wider service issues, contact your SDM during standard office hours.
+
+## Related videos
+
+- [*Creating support tickets in My Calls*](ptl-vid-mycalls.md)
 
 ## Feedback
 

@@ -22,8 +22,6 @@
     href: ostack-how-create-heat-template.md
   - name: Create load balancing services
     href: ostack-how-create-load-balancer.md
-  - name: Create new users
-    href: ostack-how-create-users.md
   - name: Create static IPs for OpenStack instances
     href: ostack-how-static-ip.md
   - name: Install Red Hat Update Infrastructure on an existing OpenStack instance
@@ -68,6 +66,10 @@
     href: ostack-sd.md
 - name: Service Scope
   items:
+  - name: Hystax Acura Workload Migration Service Scope
+    href: ostack-sco-hystax.md
+  - name: Self Service Backup and Restoration (TrilioVault) Service Scope
+    href: ostack-sco-triliovault.md
   - name: UKCloud for OpenStack Service Scope
     href: ostack-sco.md
 - name: Videos

@@ -104,7 +104,7 @@ For a transfer time calculator, go to: <https://techinternets.com/copy_calc?do>
 
 If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.
 
-Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via NAS, HDD or USB devices that are plugged directly into your environment. Please check the [*Mass Transfer Facility Service Scope*](../enablement/enbl-sco-mtf-nas.md) or the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for further details.
+Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via NAS, HDD or USB devices that are plugged directly into your environment. Please check the [*Mass Transfer Facility Service Scope*](../enablement/enbl-sco-mtf-nas.md) or the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for further details.
 
 ### Does UKCloud offer encryption on the VM?
 
@@ -114,7 +114,7 @@ Alternatively, you can implement encryption using the technology of your choice 
 
 ### Is UKCloud's encryption service available for UKCloud for VMware?
 
-Not currently as a service (see above). We're considering this as an option, so please provide feedback via the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+Not currently as a service (see above). We're considering this as an option, so please provide feedback by sending an email to <feedback@ukcloud.com>.
 
 ### Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast-provisioned ones?
 
@@ -208,7 +208,7 @@ The Advanced Management bundle includes Distributed Firewall (DFW), Distributed 
 > [!NOTE]
 > * The Advanced Management bundle may not be available in all regions and zones.
 > 
-> * The bundle is enabled at an organisation (vOrg) level, therefore all VMs within the organisation will be uplifted. See the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf) for details.
+> * The bundle is enabled at an organisation (vOrg) level, therefore all VMs within the organisation will be uplifted. See the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for details.
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
@@ -264,7 +264,7 @@ The exception is Micro sized VMs. These have a fixed 10GiB allocation that canno
 
 No, storage pooling isn't possible. Each VM must have a minimum of 60GiB (except Micro VMs).
 
-You can quickly and easily allocate additional storage via the self-service vCloud Director tenant portal or vCloud API. Additional storage is charged on a per-GiB basis as listed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+You can quickly and easily allocate additional storage via the self-service vCloud Director tenant portal or vCloud API. Additional storage is charged on a per-GiB basis as listed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### Is storage persistent?
 
@@ -463,7 +463,7 @@ You can request a trial via the UKCloud website: <https://www.ukcloud.com/free-t
 
 ### What do I do when my trial comes to an end?
 
-You will be contacted by your Cloud Architect or CSM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner).
+You will be contacted by your Cloud Architect or Service Delivery Manager (SDM) when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner).
 
 At the end of your trial, you have the option to transition to production or cease the trial.
 
@@ -589,7 +589,7 @@ For example, if a VM was switched off for a total of 890 minutes but was on for 
 
 ### Will I be charged for creating snapshots?
 
-Snapshot Protection can be purchased with any VM and will be charged for in accordance with the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf). Self-service snapshots created within vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
+Snapshot Protection can be purchased with any VM and will be charged for in accordance with the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Self-service snapshots created within vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
 
 ## Security
 

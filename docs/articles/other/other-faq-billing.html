@@ -8,7 +8,7 @@
     <title>Invoice and billing FAQs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Invoice and billing FAQs ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -286,11 +286,11 @@
 <td>U</td>
 </tr>
 <tr>
-<td>Tier 1 Storage</td>
+<td>Tier 1 Storage (or Encrypted Storage)</td>
 <td>AE</td>
 </tr>
 <tr>
-<td>Tier 2 Storage</td>
+<td>Tier 2 Storage (or Encrypted Storage)</td>
 <td>AK</td>
 </tr>
 </tbody>
@@ -299,7 +299,7 @@
 <h3 id="are-shelved-instances-included-in-the-evidence-file">Are shelved instances included in the evidence file?</h3>
 <p>When you shelve an OpenStack instance, all compute charges for that instance cease, so it no longer appears in the evidence file as an <code>OpenStack Virtual Machine</code> row. When an instance is shelved, a snapshot is taken, so the evidence file includes an <code>OpenStack Image</code> row for the instance, which details the storage charges for that snapshot.</p>
 <h3 id="how-much-block-storage-are-my-instances-using">How much block storage are my instances using?</h3>
-<p>Block storage for OpenStack instances is included in the evidence as separate line items with the service type (column H) of <code>OpenStack Block Storage Tier 1</code> or <code>OpenStack Block Storage Tier 2</code>.</p>
+<p>Block storage for OpenStack instances is included in the evidence as separate line items with the service type (column H) of <code>OpenStack Block Storage Tier 1</code> or <code>OpenStack Block Storage Tier 2</code> or <code>OpenStack Block Storage Tier 1 Encrypted</code> or <code>OpenStack Block Storage Tier 2 Encrypted</code>.</p>
 <p>The amount and cost of block storage is provided in the following columns:</p>
 <table>
 <thead>
@@ -327,7 +327,7 @@
 </tr>
 </tbody>
 </table>
-<p>UKCloud for OpenStack storage costs also include any images you have, which are listed as separate rows in the evidence file. Look for rows with the service type (column H) of <code>OpenStack Image</code>.</p>
+<p>UKCloud for OpenStack storage costs also include any images and backups you have, which are listed as separate rows in the evidence file. Look for rows with the service type (column H) of <code>OpenStack Image</code> and <code>OpenStack Instance Backup Storage</code>.</p>
 <h2 id="cloud-gpu-charges">Cloud GPU charges</h2>
 <h3 id="how-are-my-cloud-gpu-charges-calculated">How are my Cloud GPU charges calculated?</h3>
 <p>Costs for Cloud GPU are shown against VMware VMs in the following columns of the evidence file:</p>

@@ -8,7 +8,7 @@
     <title>Understanding your invoice evidence file </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Understanding your invoice evidence file ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -154,7 +154,7 @@
 <tr>
 <td>H</td>
 <td>Service</td>
-<td>The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 2<br>OpenStack Image<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM</td>
+<td>The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 1 Encrypted<br>OpenStack Block Storage Tier 2<br>OpenStack Block Storage Tier 2 Encrypted<br>OpenStack Image<br>OpenStack Instance Backup Storage<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM</td>
 <td>OpenStack, VMware</td>
 </tr>
 <tr>
@@ -370,8 +370,8 @@
 <tr>
 <td>AR</td>
 <td>Protection Type</td>
-<td>Type of protection applied:<br>None<br>14 Day Snapshot Protection<br>28 Day Snapshot Protection<br>Synchronous Protection<br>2 Day Journaling Protection<br>7 Day Journaling Protection<br>14 Day Journaling Protection<br>28 Day Journaling Protection<br>Any combination of the above (apart from None) separated by &amp;</td>
-<td>VMware</td>
+<td>Type of protection applied:<br>None<br>Backup Storage<br>14 Day Snapshot Protection<br>28 Day Snapshot Protection<br>Synchronous Protection<br>2 Day Journaling Protection<br>7 Day Journaling Protection<br>14 Day Journaling Protection<br>28 Day Journaling Protection<br>Any combination of the above (apart from None) separated by &amp;</td>
+<td>OpenStack, VMware</td>
 </tr>
 <tr>
 <td>AS</td>
@@ -448,13 +448,25 @@
 </tbody>
 </table>
 <h2 id="key-changes-to-the-evidence-file-november-2017-onwards">Key changes to the Evidence File (November 2017 onwards)</h2>
+<h3 id="march-2020">March 2020</h3>
+<p>Support for new OpenStack services has been added to the evidence files.</p>
+<ul>
+<li>Column H : has 3 new service types
+<ul>
+<li>OpenStack Block Storage Tier 1 Encrypted</li>
+<li>OpenStack Block Storage Tier 2 Encrypted</li>
+<li>OpenStack Instance Backup Storage</li>
+</ul>
+</li>
+<li>Column AR : OpenStack Instance Backup Storage has a Protection Type of &quot;Backup Storage&quot;.</li>
+</ul>
+<h3 id="december-2018">December 2018</h3>
 <p>From December 2018, you'll see the following changes to your evidence file. You'll receive the Evidence File for December at the start of January 2019, detailing your consumption during December.</p>
 <p>The key changes to the evidence file are as follows:</p>
 <p><strong>Service type categories</strong></p>
 <ul>
 <li>In column H the OpenStack Instance service type has been renamed to OpenStack Virtual Machine</li>
 </ul>
-<h2 id="previous-changes">Previous changes</h2>
 <h3 id="november-2017">November 2017</h3>
 <p><strong>New column:</strong></p>
 <ul>

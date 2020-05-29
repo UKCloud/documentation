@@ -8,7 +8,7 @@
     <title>How to configure IPsec VPN </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure IPsec VPN ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -150,11 +150,11 @@
 </tr>
 <tr>
 <td>Name</td>
-<td></td>
+<td>Enter a desired name for your ipsec vpn</td>
 </tr>
 <tr>
 <td>Local Id</td>
-<td></td>
+<td>This is usually set to the same value as Local Endpoint</td>
 </tr>
 <tr>
 <td>Local Endpoint</td>
@@ -162,11 +162,11 @@
 </tr>
 <tr>
 <td>Local Subnets</td>
-<td>Enter the organisation networks that can access the VPN (separate multiple local subnets with commas).</td>
+<td>Enter the organisation networks that can be accessed via the VPN from the remote location (separate multiple local subnets with commas).</td>
 </tr>
 <tr>
 <td>Peer Id</td>
-<td></td>
+<td>This is usually set to the same value as Peer Endpoint</td>
 </tr>
 <tr>
 <td>Peer Endpoint</td>
@@ -174,7 +174,7 @@
 </tr>
 <tr>
 <td>Peer Subnets</td>
-<td>This is the subnet on your on-premises network that you want to make accessible from your UKCloud VDC. For example, if your on-premises networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here or limit your entry to a smaller subnet of that, for example <code>10.20.0.0/25</code>.</td>
+<td>This is the local subnet of your remote network that you want to access from your UKCloud VDC. For example, if your remote networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here or limit your entry to a smaller subnet of that, for example <code>10.20.0.0/25</code>.</td>
 </tr>
 <tr>
 <td>Encryption Algorithm</td>

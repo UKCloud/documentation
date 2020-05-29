@@ -81,7 +81,7 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 ## Pricing Guide
 
-[Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)
+[Pricing Guide](https://ukcloud.com/pricing-guide)
 
 [3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide)
 

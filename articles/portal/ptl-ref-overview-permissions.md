@@ -75,16 +75,12 @@ You can find further details of these roles in the [vCloud Director Administrato
 
 In addition, UKCloud have created an API Only role that restricts users with vCloud Director permissions to accessing vCloud Director solely via the API, with no GUI access.
 
-> [NOTE]
+> [!NOTE]
 > The API Only role must be selected in addition to one of the vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
 
 ## Permissions for Cloud Storage
 
 Users need to be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. The user will also be able to see consumption data for namespaces and buckets.
-
-## Permissions for UKCloud for OpenStack
-
-Users need to be granted access to the relevant OpenStack project. Once access is granted, the user can access the Horizon dashboard for the project.
 
 ## Permissions for Billing
 

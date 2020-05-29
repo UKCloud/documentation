@@ -69,10 +69,10 @@ export OS_TOKEN=$(openstack token issue -c id -f value)
 | Site | Variable | Value|
 | ---  | ---------|------|
 | Farnborough  | OS_CLIENT_ID | `cni.1.frn00006` |
-| &nbsp; | OS_CLIENT_SECRET | User defined |
+| &nbsp; | OS_CLIENT_SECRET | e7f230b0-e445-444e-9d27-70beb2da3306 |
 | &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
 | Corsham  | OS_CLIENT_ID | `cni.1.cor00005` |
-| &nbsp; | OS_CLIENT_SECRET | User defined |
+| &nbsp; | OS_CLIENT_SECRET | b624c22a-d0c4-4255-821d-607dc3dd55fa |
 | &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
 | Corsham-2 (OSP13)  | OS_CLIENT_ID | `cni.2.cor00005` |
 | &nbsp; | OS_CLIENT_SECRET | 56160ec2-17d1-4047-a42a-e6f9f70a3179 |

@@ -3,8 +3,8 @@ title: How to configure the Azure Stack Hub operator's PowerShell environment
 description: Configure the Azure Stack Hub operator's PowerShell environment
 services: azure-stack
 author: Chris Black
-reviewer: BaileyLawson
-lastreviewed: 09/05/2019 17:00:00
+reviewer: Daniel Brennand
+lastreviewed: 27/03/2020 09:58:00
 
 toc_rootlink: Operators
 toc_sub1: How To
@@ -58,19 +58,7 @@ Install-Module -Name AzureRM.BootStrapper -Verbose
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
 Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
-Install-Module -Name AzureStack -RequiredVersion 1.7.2 -Verbose
-</code></pre>
-
-### Enable additional storage features
-
-<pre><code class="language-PowerShell"># Install the Azure.Storage module version 4.5.0
-Install-Module -Name Azure.Storage -RequiredVersion 4.5.0 -AllowClobber -Force -Verbose
-
-# Install the AzureRm.Storage module version 5.0.4
-Install-Module -Name AzureRM.Storage -RequiredVersion 5.0.4 -AllowClobber -Force -Verbose
-
-# Remove incompatible storage module installed by AzureRM.Storage
-Uninstall-Module Azure.Storage -RequiredVersion 4.6.1 -Force -Verbose
+Install-Module -Name AzureStack -RequiredVersion 1.8.1 -Verbose
 </code></pre>
 
 ## Configure the operator environment and sign in to Azure Stack Hub

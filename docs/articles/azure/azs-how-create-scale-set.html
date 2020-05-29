@@ -8,7 +8,7 @@
     <title>How to create a VM scale set </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a VM scale set ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -105,22 +105,17 @@
 <li><p>In the favourites panel, select <strong>Create a resource</strong>.</p>
 <p><img src="images/azsp_newmenu.png" alt="New option in favourites panel"></p>
 </li>
-<li><p>In the <em>Everything</em> blade, search for <strong>'Virtual machine scale set'</strong> and then select it from the search results.</p>
+<li><p>In the <em>New</em> blade, search for <strong>'Virtual machine scale set'</strong> and then select it from the search results.</p>
 <p><img src="images/azs-browser-button-scale-set-menu.png" alt="Searching for scale set"></p>
 </li>
 <li><p>In the <em>Virtual machine scale set</em> blade select <strong>Create</strong>.</p>
 <p><img src="images/azs-browser-button-create-scale-set.png" alt="Create scale set button"></p>
 </li>
-<li><p>On the <em>BASICS</em> page, enter the following information:</p>
+<li><p>On the <em>Create virtual machine scale set</em> blade, enter the following information:</p>
 <ul>
 <li><p><strong>Virtual machine scale set name</strong> - The name of the virtual machine scale set.</p>
 </li>
 <li><p><strong>Operating system disk image</strong> – The operating system disk image for the virtual machines in the scale set.</p>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>CentOS 7.2 is currently unsupported on Azure Stack Hub. For more information, see <a href="https://docs.microsoft.com/en-gb/azure-stack/operator/azure-stack-release-notes-known-issues-1904#virtual-machine-scale-set">here</a>.
-<img src="images/azs-browser-scale-set-unsupported-operating-systems.png" alt="CentOS 7.2 is currently unsupported"></p>
-</div>
 </li>
 <li><p><strong>Subscription</strong> - This is your UKCloud for Microsoft Azure subscription.</p>
 </li>
@@ -138,6 +133,8 @@
 </li>
 <li><p><strong>Use managed disks</strong> – Managed disks is a feature that simplifies disk management for Azure IaaS virtual machines by handling storage account management for you. For more information, see <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview">Managed Disks overview</a>.</p>
 </li>
+<li><p><strong>Choose load balancing options</strong> - Select between <em>Load balancer</em> or <em>None</em>. If <em>None</em> is selected, then the <strong>Public IP address name</strong> and <strong>Domain name label</strong> fields will be hidden.</p>
+</li>
 <li><p><strong>Public IP address name</strong> – The name of the public IP address for the load balancer in front of the scale sets.</p>
 </li>
 <li><p><strong>Public IP allocation method</strong> – Select between <em>Dynamic</em> or <em>Static</em> IP addresses.</p>
@@ -146,7 +143,7 @@
 </li>
 <li><p><strong>Virtual network</strong> – This is the virtual network you would like the scale set to be connected to.</p>
 </li>
-<li><p><strong>Public IP address per instance</strong> – Add a public IP address to each instance in the scale set.</p>
+<li><p><strong>Subnet</strong> – This is a subnet within the selected virtual network.</p>
 </li>
 </ul>
 <p><img src="images/azs-browser-create-scale-set.png" alt="BASICS page"></p>

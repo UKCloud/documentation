@@ -72,7 +72,7 @@ UKCloud for Oracle Software does not include Oracle licensing but, because the p
 
 UKCloud ensures that hard partitioning is in place in all customer guest VMs in order to conform to Oracle licensing policies. When you create or modify a VM, automatic CPU pinning ensures that the VM won't use any CPUs other than the ones specifically pinned to the VM's vCPUs.
 
-If you have any questions about Oracle licensing, contact your Cloud Architect, Customer Success Manager or Service Delivery Manager.
+If you have any questions about Oracle licensing, contact your Cloud Architect or Service Delivery Manager (SDM).
 
 If you require assistance building out your Oracle solution, we can put you in contact with one or our partners who specialises in Oracle technologies.
 
@@ -86,7 +86,7 @@ The management of your Oracle estate is split between Oracle Enterprise Manager 
 
 ![UKCloud for Oracle Software architecture](images/orcl-architecture.png)
 
-When you first purchase UKCloud for Oracle Software, your Customer Success Manager (CSM) creates an Oracle tenant to act as a top‑level container for your Oracle VMs. As your estate grows, you can add more tenants to logically organise your resources.
+When you first purchase UKCloud for Oracle Software, your SDM creates an Oracle tenant to act as a top‑level container for your Oracle VMs. As your estate grows, you can add more tenants to logically organise your resources.
 
 Within your Oracle tenant you can create the VMs that comprise your Oracle applications.
 
@@ -353,8 +353,6 @@ This section provides a glossary of terms specific to UKCloud for Oracle Softwar
 **Assured OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides access to public networks, such as the internet, PSN, HSCN or Janet.
 
 **Cloud Console**&nbsp;&nbsp;System management software from Oracle that delivers centralized monitoring, administration, and life-cycle management functionality for the complete IT infrastructure, including systems running Oracle and non-Oracle technologies.
-
-**Customer Success Manager (CSM)**&nbsp;&nbsp;A UKCloud Customer Services role aimed at providing you with any assistance you require during onboarding and the first 90 days of using a UKCloud service.
 
 **edge gateway**&nbsp;&nbsp;A virtual router that provides VDC network services such as DHCP, firewall, NAT, static routing, VPN and load balancing.
 

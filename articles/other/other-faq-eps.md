@@ -91,7 +91,7 @@ Yes. We offer a 30-day free trial for many of our services. Your trial provides 
 
 You can request a trial via the UKCloud website: https://www.UKCloud.com/free-trial-sign-up and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
 
-You will be contacted by your Cloud Architect or CSM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner). At the end of your trial, you have the option to transition to production or cease the trial.
+You will be contacted by your Cloud Architect or Service Delivery Manager (SDM) when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner). At the end of your trial, you have the option to transition to production or cease the trial.
 
 ## Feedback
 

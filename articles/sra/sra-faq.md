@@ -245,7 +245,7 @@ We use consumption-based billing for licences, and these are in packs. You'll be
 
 For example, if you usually operate with nine certificates for an SRA instance, you'd be billed for a 10-pack of licences. If, one month, you run a project that requires three more certificates for additional engineers, you'd be billed for a 25-pack of licences for that month. When you go back to nine certificates for your usual engineer access, you'd go back to being billed for a 10-pack of licences.
 
-For more information about the different licence packs, see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+For more information about the different licence packs, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Security
 

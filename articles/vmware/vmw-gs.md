@@ -30,7 +30,7 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 
 ## Before you begin
 
-You should have received your UKCloud Portal login credentials from your Customer Success Manager (CSM).
+You should have received your UKCloud Portal login credentials from your Service Delivery Manager (SDM).
 
 ## Introductions to UKCloud for VMware
 
@@ -50,7 +50,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 
     - **Assured OFFICIAL:** <https://portal.ukcloud.com>
 
-    - **Elevated OFFICIAL:** Contact your Portal administrator or Customer Success Manager (CSM)
+    - **Elevated OFFICIAL:** Contact your Portal administrator or SDM
 
 2. On the *Log in* page, enter your credentials and click **Sign in**.
 
@@ -59,7 +59,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
     > [!TIP]
     > If you've forgotten your password, click the **Forgotten password?** link to request a password reset.
 
-    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.
+    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or SDM. You'll be prompted to change this temporary password.
 
 3. If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)
 
@@ -198,11 +198,11 @@ After you've created your compute service and VDC, you can start to build up you
 
 4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
 
-    **More information!** [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)
+    For more information, see [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md).
 
 5. To return to the UKCloud Portal, click your user name in the top right corner, and select **Log out**.
 
-    ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-link.png)
+    ![vCloud Director Logout option](images/vmw-vcd-logout-link.png)
 
 ## Next steps
 

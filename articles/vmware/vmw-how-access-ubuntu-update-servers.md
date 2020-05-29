@@ -3,8 +3,8 @@ title: How to access Ubuntu update servers
 description: This guide shows you how to configure access to Ubuntu update servers from within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: pcantle
+lastreviewed: 11/05/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -33,15 +33,19 @@ UKCloud's Elevated OFFICIAL platform doesn't natively connect to the internet, a
 
 ### UKCloud-managed repository servers
 
-We provide Ubuntu repositories for the 12.04 and 14.04 LTS versions of Ubuntu on our Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.
+We provide Ubuntu repositories for the 16.04, 18.04 and 20.04 LTS versions of Ubuntu on our Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.
 
-- For 12.04:
+- For 16.04:
 
-        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_precise.list
+        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_xenial.list
 
-- For 14.04:
+- For 18.04:
 
-        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_trusty.list
+        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_bionic.list
+ 
+- For 20.04:
+
+        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_focal.list
 
 We also recommend that you rename the default `/etc/apt/sources.list` file to reduce the likelihood of errors during the update process that stem from attempts to access the internet-based Canonical Partner repositories. To do this, use the following command:
 

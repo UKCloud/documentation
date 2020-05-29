@@ -181,7 +181,7 @@ Yes, you can receive portal notifications to the email address associated with y
 
 ### How can I get started with the service?
 
-Once you have requested a UKCloud for Microsoft Azure environment, your Customer Success Manager (CSM) will introduce you to the platform and relevant supporting documentation.
+Once you've requested a UKCloud for Microsoft Azure environment, your Service Delivery Manager will introduce you to the platform and relevant supporting documentation.
 
 ### Is there a free trial?
 
@@ -193,7 +193,7 @@ This can be requested via the [UKCloud website trial page](https://ukcloud.com/f
 
 ### What do I do when my trial comes to an end?
 
-During your 30 day trial period, you will be contacted regularly by your Customer Success Manager who will be on hand to assist you with using the service. When your trial is nearing the 30 day limit, your Account Manager will contact you to discuss the outcome of the trial. If you wish to cancel the service, this will be done for you, and any data will be deleted and the service will be decommissioned. If you wish to commit to using the service, your trial will convert to a full paid service, and you will then be billed according to the [*Service Definition*](azs-sd.md).
+During your 30 day trial period, you will be contacted regularly by your Service Delivery Manager who will be on hand to assist you with using the service. When your trial is nearing the 30 day limit, your Account Manager will contact you to discuss the outcome of the trial. If you want to cancel the service, this will be done for you, and any data will be deleted and the service will be decommissioned. If you want to commit to using the service, your trial will convert to a full paid service, and you'll then be billed according to the [*Service Definition*](azs-sd.md).
 
 ## Billing and legal
 

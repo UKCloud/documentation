@@ -8,7 +8,7 @@
     <title>Getting Started Guide for Cloud Storage </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for Cloud Storage ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -97,7 +97,7 @@
 <p>UKCloud's Cloud Storage service is an object storage solution based on Dell EMC Elastic Cloud Storage (ECS). Access is via a RESTful application programming interface (API), which also provides support for
 Amazon's S3 API.</p>
 <p>This Getting Started Guide covers the tasks you need to perform to get Cloud Storage up and running in your environment. It also looks at common use cases for API‑based object storage within web applications
-and provides information about some command-line tools that you can use to interact with the storage APIs.</p>
+and provides information about some command-line tools that you can use to interact with the storage API.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>This guide is intended for users who want to learn more about UKCloud's Cloud Storage service.</p>
 <h2 id="cloud-storage-overview">Cloud Storage overview</h2>
@@ -109,7 +109,7 @@ and provides information about some command-line tools that you can use to inter
 </li>
 <li><p>Removes the complexity of capacity management by utilising a pay‑as‑you‑go model, so you pay for what you use, when you use it, scaling indefinitely and on demand</p>
 </li>
-<li><p>Natively enables application deduplication and redundancy to ensure the highest level of data availability, while reducing the cost and management of on-premises storage solutions</p>
+<li><p>Natively provides application redundancy to ensure the highest level of data availability, while reducing the cost and management of on-premises storage solutions</p>
 </li>
 <li><p>Provides easy access to storage anywhere, any time, to any device, using HTTP(S) to simplify the integration of object storage systems into cloud‑based solutions by removing the need to rely on the availability of web, file or FTP servers</p>
 </li>
@@ -118,7 +118,7 @@ and provides information about some command-line tools that you can use to inter
 <li><p>Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery</p>
 </li>
 </ul>
-<p>ECS provides an APIs that you can use to manage your cloud storage. The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the <em>S3 Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>).</p>
+<p>ECS provides an API that you can use to manage your cloud storage. The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the <em>S3 Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>).</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>

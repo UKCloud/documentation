@@ -43,9 +43,9 @@ The initial Dedicated Compute purchase is a starter pack consisting of two physi
 
 You can then scale your estate by purchasing additional upgrade packs (an upgrade pack consists of  1 x dual 16 core and 512 GiB of RAM compute host). After nine expansion packs, you must buy another starter pack.
 
-You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options are given in the [*Service Definition*](dc-sd.md). For pricing, see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options are given in the [*Service Definition*](dc-sd.md). For pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
-The storage pool isn’t a dedicated hardware resource; it's drawn from our UKCloud for VMware block storage solutions.
+The storage pool isn't a dedicated hardware resource; it's drawn from our UKCloud for VMware block storage solutions.
 
 These resources are grouped in a private virtual data centre (pVDC) which is available only to the individual Dedicated Compute customer.
 

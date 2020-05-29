@@ -3,8 +3,8 @@ title: Data Transfer Facility Service Scope
 description: Outlines important details regarding the Data Transfer Facility
 services: enablement
 author: Steve Hall
-reviewer: hbrunt
-lastreviewed: 16/12/2019
+reviewer: Edward Corfield
+lastreviewed: 24/03/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -76,8 +76,6 @@ You'll have access to a PC connected to our Assured or Elevated platform, as spe
 It's expected that you or a third party working on your behalf will be able to complete the data transfer or system management activities without any help from UKCloud.
 
 To help make your day comfortable, the Data Transfer Facility has:
-
-- An Xbox One - you can bring your own compatible games
 
 - Tea and coffee making facilities, a microwave and a fridge in the kitchen next door
 
