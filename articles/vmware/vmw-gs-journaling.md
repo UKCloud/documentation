@@ -76,13 +76,13 @@ You should consider the following:
 
 To get Journaling Protection up and running for your VMs, follow the steps below:
 
-- [Create a recovery VDC](#create-a-recovery-vdc)
+1. [Create a recovery VDC](#create-a-recovery-vdc)
 
-- [Configure networking on the recovery site](#configure-networking-on-the-recovery-site)
+2. [Configure networking on the recovery site](#configure-networking-on-the-recovery-site)
 
-- [Create a virtual protection group](#create-a-virtual-protection-group)
+3. [Create a virtual protection group](#create-a-virtual-protection-group)
 
-- [Perform a test failover](#perform-a-test-failover)
+4. [Perform a test failover](#perform-a-test-failover)
 
 ### Create a recovery VDC
 
