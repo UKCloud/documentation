@@ -163,7 +163,7 @@ If you're creating a VPG for Disaster Recovery as a Service or Migration to the 
 
 2. Select the **VPGs** tab and then click **NEW VPG**.
 
-3. On the *NEW VPG* page of the *Create VPG* dialog, specify the **VPG Name**.
+3. On the *New VPG* page of the *Create VPG* dialog, specify the **VPG Name**.
 
 4. From the **Priority** list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.
 
@@ -173,17 +173,15 @@ If you're creating a VPG for Disaster Recovery as a Service or Migration to the 
 
     - **Low** - Updates from VPGs with low priority use whatever bandwidth is left after the medium VPGs have used it
 
-5. Click **NEXT**.
+5. Click **Next**.
 
-6. On the *VMs* page, select the VMs that you want to protect or migrate and then click **NEXT**.
+6. On the *VMs* page, select the VMs that you want to protect or migrate and then click **Next**.
 
-7. On the *REPLICATION* tab, from the **Recovery Site** list, choose your UKCloud target site.
+7. On the *Replication* tab, from the **Recovery Site** list, choose your UKCloud target site.
 
 8. From the **Recovery Org vDC** list, choose the VDC in which you want to replicate the VMs.
 
-9. UKCloud provides a single **Service Profile**: **System Service Profile**.
-
-10. From the **Service Profile** list, select one of the service profiles, depending on service and level of retention you require:
+9. From the **Service Profile** list, select one of the service profiles, depending on the service and level of retention you require:
 
     - DRaaS 2 Day Retention
 
@@ -195,31 +193,29 @@ If you're creating a VPG for Disaster Recovery as a Service or Migration to the 
 
     - Migration to the Cloud 1 Day Retention
 
-11. Click **NEXT**.
+10. Click **Next**.
 
-12. The *STORAGE* page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).
+11. The *Storage* page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).
 
-13. To change the **Storage Profile** used for the VMs in the VPG, click **VM SETTINGS**.
-
-    If you want to edit the storage settings for a VM, select the VM and then click **EDIT SELECTED**.
+12. To change the **Storage Profile** used for a VM, select the VM and then click **EDIT SELECTED**.
 
     > [!NOTE]
     > Make sure that the **Thin** checkbox is selected for all VMs.
 
-14. When you've finished setting the options for each of the VMs, click **NEXT**.
+13. When you've finished setting the options for each of the VMs, click **Next**.
 
-15. In the *RECOVERY* page, from the **Failover/Move Network** list, choose the network to use in the target site for a live failover or move operation.
+14. In the *Recovery* page, from the **Failover/Move Network** list, choose the network to use in the target site for a live failover or move operation.
 
-16. From the **Failover Test Network** list, choose the network to use in the target site for a test failover of VMs.
+15. From the **Failover Test Network** list, choose the network to use in the target site for a test failover of VMs.
 
-17. Click **NEXT**.
+16. Click **Next**.
 
-18. In the *NICs* page, specify the network interface controller (**NIC**) to use for the VMs after a live or test failover, or a move operation.
+17. In the *NICs* page, specify the network interface controller (**NIC**) to use for the VMs after a live or test failover, or a move operation.
 
     > [!NOTE]
     > If you encounter issues with MAC addresses, edit each VM and set the **MAC Address** to **Reset** for both the **Failover/Move** and **Test** networks to assign a new address on failover or move.
 
-19. At this point, you can click **DONE** to create the VPG.
+18. At this point, you can click **Done** to create the VPG.
 
 ## Next steps
 
