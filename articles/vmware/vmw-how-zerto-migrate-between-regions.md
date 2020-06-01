@@ -45,7 +45,7 @@ You should consider the following:
 
 - Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. This means if you delete a VM before migrating it, that VM will not exist in your target region.
 
-- We provide a single default service profile. The details of this are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md). We do not currently provide the option for you to create custom profiles.
+- We provide a single default service profile. The details of this are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md). We do not currently provide the option for you to create custom profiles
 
 ## Migrating workloads between UKCloud regions
 
@@ -64,15 +64,11 @@ During migration, the vApp and its VMs are created on the target region and the 
 
 The process for getting Journaling Protection up and running ready for workload migration within the UKCloud platform is as follows:
 
-- [Create a migration VDC](#create-a-migration-vdc)
-
-- [Configure networking in the migration target VDC](#configure-networking-in-the-migration-target-vdc)
-
-- [Create a virtual protection group in the primary region](#create-a-virtual-protection-group-in-the-primary-region)
-
-- [Perform a test migration](#perform-a-test-migration)
-
-- [Migrate your workloads](#migrate-your-workloads)
+1. [Create a migration VDC](#create-a-migration-vdc)
+2. [Configure networking in the migration target VDC](#configure-networking-in-the-migration-target-vdc)
+3. [Create a virtual protection group in the primary region](#create-a-virtual-protection-group-in-the-primary-region)
+4. [Perform a test migration](#perform-a-test-migration)
+5. [Migrate your workloads](#migrate-your-workloads)
 
 ## Create a migration VDC
 
@@ -116,7 +112,7 @@ Within Zerto, you have two options for migrating your workloads:
 
 - Move the VPG to the target region. This method performs and end-to-end migration, including removing the VMs from the source region after they've been moved. For more information, see the steps below.
 
-- Perform a live migration. This method provides more flexibility for you to control what happens in the primary region after you move the VMs to the target region. For more information, see [*How to perform a failover*](vmw-how-zerto-perform-failover.md).
+- Perform a live migration. This method provides more flexibility for you to control what happens in the primary region after you move the VMs to the target region. For more information, see [*How to perform a     failover*](vmw-how-zerto-perform-failover.md).
 
 To move a VPG:
 

@@ -67,7 +67,7 @@ If you're creating a VPG for Journaling Protection, you specify the vApp to prot
 
     - System Service Profile (for 14-day Journaling Protection)
 
-      If your environment is in the Elevated OFFICIAL security domain, the service profile to use for 14-day Journaling Protection is called UKCloud Service Profile
+      If your environment is in the Elevated OFFICIAL security domain, the service profile to use for 14-day Journaling Protection is called UKCloud Service Profile.
 
     - Journaling Protection 28 Day Retention
 
