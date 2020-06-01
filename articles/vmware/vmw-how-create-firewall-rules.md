@@ -3,8 +3,8 @@ title: How to create firewall rules
 description: Shows how to create firewall rules within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer: lthangarajah
-lastreviewed: 21/06/2019
+reviewer: Gsmith
+lastreviewed: 27/03/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -58,6 +58,9 @@ To create a firewall rule:
     ![Add firewall button](images/vmw-vcd-adv-edge-firewall-add.png)
 
 6. For the **New Rule**, specify a **Name**.
+
+> [!NOTE]
+> The firewall rules above provide a simple example; we strongly advise that you do not use Any, Any, Any, Accept as this allows all traffic through.
 
     ![New firewall rule](images/vmw-vcd-edge-firewall-new-rule.png)
 
