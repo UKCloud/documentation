@@ -59,13 +59,15 @@ If you're creating a VPG for Journaling Protection, you specify the vApp to prot
 
 6. From the **Org vDC** list, select the VDC in which you want to replicate the VMs.
 
-7. From the **Service Profile** list, select one of the Journaling Protection service profiles, depending on your requirements:
+7. From the **Service Profile** list, select one of the Journaling Protection service profiles, depending on the level of retention you require:
 
     - Journaling Protection 2 Day Retention
 
     - Journaling Protection 7 Day Retention
 
     - System Service Profile (for 14-day Journaling Protection)
+
+      If your environment is in the Elevated OFFICIAL security domain, the service profile to use for 14-day Journaling Protection is called UKCloud Service Profile
 
     - Journaling Protection 28 Day Retention
 
@@ -181,31 +183,43 @@ If you're creating a VPG for Disaster Recovery as a Service or Migration to the 
 
 9. UKCloud provides a single **Service Profile**: **System Service Profile**.
 
-10. Click **NEXT**.
+10. From the **Service Profile** list, select one of the service profiles, depending on service and level of retention you require:
 
-11. The *STORAGE* page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).
+    - DRaaS 2 Day Retention
 
-12. To change the **Storage Profile** used for the VMs in the VPG, click **VM SETTINGS**.
+    - DRaaS 7 Day Retention
+
+    - DRaaS 14 Day Retention
+
+    - DRaaS 28 Day Retention
+
+    - Migration to the Cloud 1 Day Retention
+
+11. Click **NEXT**.
+
+12. The *STORAGE* page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).
+
+13. To change the **Storage Profile** used for the VMs in the VPG, click **VM SETTINGS**.
 
     If you want to edit the storage settings for a VM, select the VM and then click **EDIT SELECTED**.
 
     > [!NOTE]
     > Make sure that the **Thin** checkbox is selected for all VMs.
 
-13. When you've finished setting the options for each of the VMs, click **NEXT**.
+14. When you've finished setting the options for each of the VMs, click **NEXT**.
 
-14. In the *RECOVERY* page, from the **Failover/Move Network** list, choose the network to use in the target site for a live failover or move operation.
+15. In the *RECOVERY* page, from the **Failover/Move Network** list, choose the network to use in the target site for a live failover or move operation.
 
-15. From the **Failover Test Network** list, choose the network to use in the target site for a test failover of VMs.
+16. From the **Failover Test Network** list, choose the network to use in the target site for a test failover of VMs.
 
-16. Click **NEXT**.
+17. Click **NEXT**.
 
-17. In the *NICs* page, specify the network interface controller (**NIC**) to use for the VMs after a live or test failover, or a move operation.
+18. In the *NICs* page, specify the network interface controller (**NIC**) to use for the VMs after a live or test failover, or a move operation.
 
     > [!NOTE]
     > If you encounter issues with MAC addresses, edit each VM and set the **MAC Address** to **Reset** for both the **Failover/Move** and **Test** networks to assign a new address on failover or move.
 
-18. At this point, you can click **DONE** to create the VPG.
+19. At this point, you can click **DONE** to create the VPG.
 
 ## Next steps
 
