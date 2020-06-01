@@ -102,6 +102,9 @@ A VPG is a collection of VMs that are grouped together for migration. As workloa
 
 For more information, see [*How to create a virtual protection group*](vmw-how-zerto-create-vpg.md) (this article is the same for failovers and migrations).
 
+> [!TIP]
+> For migration between regions, use the Migration to the Cloud 1 Day Retention service profile.
+
 ## Perform a test migration
 
 After you create your VPG, we recommend that you perform a test migration to confirm that your VMs will be recovered correctly when you do the real migration.
@@ -114,9 +117,9 @@ If you are happy with your test migration, you can now choose when to migrate yo
 
 Within Zerto, you have two options for migrating your workloads:
 
-- Move the VPG to the target region. This method performs and end-to-end migration, including removing the VMs from the source region after they've been moved. For more information, see the steps below.
+- Move the VPG to the target region. This method performs an end-to-end migration, including removing the VMs from the source region after they've been moved. For more information, see the steps below.
 
-- Perform a live migration. This method provides more flexibility for you to control what happens in the primary region after you move the VMs to the target region. For more information, see [*How to perform a     failover*](vmw-how-zerto-perform-failover.md).
+- Perform a live migration. This method provides more flexibility for you to control what happens in the primary region after you move the VMs to the target region. For more information, see [*How to perform a failover*](vmw-how-zerto-perform-failover.md).
 
 To move a VPG:
 
