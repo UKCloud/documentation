@@ -193,29 +193,30 @@ If you're creating a VPG for Disaster Recovery as a Service or Migration to the 
 
     - Migration to the Cloud 1 Day Retention
 
-10. Click **Next**.
+10. To change the **Storage Profile** used for the VMs in the VPG, click **VM Settings**.
 
-11. The *Storage* page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).
+11. When you're done, click **OK** then click **Next**.
 
-12. To change the **Storage Profile** used for a VM, select the VM and then click **EDIT SELECTED**.
+12. The *Storage* page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).
+13. If you want to edit the storage settings for a VM, select the VM and then click **EDIT SELECTED**.
 
     > [!NOTE]
     > Make sure that the **Thin** checkbox is selected for all VMs.
 
-13. When you've finished setting the options for each of the VMs, click **Next**.
+14. When you've finished setting the options for each of the VMs, click **Next**.
 
-14. In the *Recovery* page, from the **Failover/Move Network** list, choose the network to use in the target site for a live failover or move operation.
+15. In the *Recovery* page, from the **Failover/Move Network** list, choose the network to use in the target site for a live failover or move operation.
 
-15. From the **Failover Test Network** list, choose the network to use in the target site for a test failover of VMs.
+16. From the **Failover Test Network** list, choose the network to use in the target site for a test failover of VMs.
 
-16. Click **Next**.
+17. Click **Next**.
 
-17. In the *NICs* page, specify the network interface controller (**NIC**) to use for the VMs after a live or test failover, or a move operation.
+18. In the *NICs* page, specify the network interface controller (**NIC**) to use for the VMs after a live or test failover, or a move operation.
 
     > [!NOTE]
     > If you encounter issues with MAC addresses, edit each VM and set the **MAC Address** to **Reset** for both the **Failover/Move** and **Test** networks to assign a new address on failover or move.
 
-18. At this point, you can click **Done** to create the VPG.
+19. At this point, you can click **Done** to create the VPG.
 
 ## Next steps
 
