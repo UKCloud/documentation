@@ -4,7 +4,7 @@ description: Provides an overview of how UKCloud manages the patching and lifecy
 services: openshift
 author: Steve Dixon
 reviewer: Ben Bacon
-lastreviewed: 20/03/2019
+lastreviewed: 20/03/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
