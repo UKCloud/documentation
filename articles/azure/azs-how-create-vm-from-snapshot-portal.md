@@ -20,7 +20,7 @@ toc_mdlink: azs-how-create-vm-from-snapshot-portal.md
 
 ## Overview
 
-A snapshot is a copy of a virtual disk at a specific point in time. Snapshots are often used as backups, as they allow you to quickly & easily restore a disk to it's original state if something goes wrong. They can also be exported to a VHD file, which can then be used to externally troubleshoot potential issues with a virtual machine.
+A snapshot is a copy of a virtual disk at a specific point in time. Snapshots are often used as backups, as they enable you to quickly and easily restore a disk to its original state if something goes wrong. You can also export snapshots to a VHD file, which you can then use to externally troubleshoot potential issues with a virtual machine.
 
 This article shows you how to use the UKCloud Azure Stack Hub portal to:
 
