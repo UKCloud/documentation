@@ -53,8 +53,6 @@ vCloud Director 10.1 provides the following new features.
 
 - Terraform vCloud Director Provider, updated to version 2.8, enables you to access infrastructure-as-code
 
-- vRealize Operations Tenant App
-
 For more information about new features in VMware Cloud Director 10.1, see <https://cloudsolutions.vmware.com/assets/blta3bfbeafb64db8f8/What_s_New_with_VMware_Cloud_Director_10.1.pdf>.
 
 ## Legacy UI
@@ -96,6 +94,9 @@ The following API versions are still available:
 UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/cloud/>) has been upgraded to vCloud Director 10.1.
 
 To gain access to the 10.1 sandbox, raise a Service Request via My Calls on the UKCloud Portal.
+
+> [!NOTE]
+> Some VMware Cloud Director features may be available in the sandbox that will not be enabled in UKCloud for VMware after the 10.1 upgrade. If there's a 10.1 feature that you're particularly interested in, contact your Service Delivery Manager to register interest so that we can consider it for our roadmap.
 
 ## Known issues
 
