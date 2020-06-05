@@ -33,8 +33,6 @@ vCloud Director 10.1 provides the following new features.
 
   - New vApp and VM card design
 
-  - New Chrome Browser Extension to automate proxy configuration for VMware Cloud Director access to stand alone vCenters
-
   - New Resources view for VMs and vApps
 
   - Ability to change the catalog owner
@@ -42,8 +40,6 @@ vCloud Director 10.1 provides the following new features.
   - Ability to edit the OVF properties of a vApp and VM
 
   - Option to power on a vApp after vApp deployment
-
-  - Ability to import a VM, vApp or vApp template from vSphere
 
   - vApp templates are differentiated from unexpired templates with a new grid column
 
