@@ -18390,7 +18390,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "l8+7RZnFznj9Y4BVYxMSow=="
+          "hash": "mRoayhRbHNhZpXKDJjvdAQ=="
         }
       },
       "is_incremental": false,
@@ -19502,6 +19502,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-vcd-10-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-vcd-10-1.html",
+          "hash": "N3p7ylUrCDW3LtJtU4zGnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-vcd-97.md",
       "output": {
         ".html": {
@@ -19813,7 +19825,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 422,
+          "total_file_count": 423,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
