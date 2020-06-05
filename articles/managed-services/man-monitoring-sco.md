@@ -4,7 +4,7 @@ description: Outlines important details regarding the Managed Monitoring from UK
 services: managed-services
 author: Steve Dixon
 reviewer:
-lastreviewed: 20/28/2019 15:17:17
+lastreviewed: 20/08/2019
 toc_rootlink: Managed Monitoring
 toc_sub1: 
 toc_sub2:
