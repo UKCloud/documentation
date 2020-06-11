@@ -5,13 +5,13 @@ services: vmware
 author: Sue Highmoor
 reviewer: lthangarajah
 lastreviewed: 20/08/2019
-toc_rootlink: Troubleshooting
+toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Fixing your advanced gateway if you encounter NullPointerException error
-toc_fullpath: Troubleshooting/vmw-ref-trouble-null-pointer.md
+toc_fullpath: Reference/vmw-ref-trouble-null-pointer.md
 toc_mdlink: vmw-ref-trouble-null-pointer.md
 ---
 
@@ -23,19 +23,25 @@ To complete the steps in this article, you must have access to vCloud Director.
 
 To fix your edge to enable viewing of its properties:
 
-1. In vCloud Director, access the edge gateway settings for the edge with the broken VPN.
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge with the broken VPN.
 
-    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
+2. In the left navigation panel, click **Edges**.
 
-2. Select the **Routing** tab.
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
-3. Select **Routing Configuration**.
+3. Select the edge gateway and click **Configure Services**.
 
-4. Under the *Static Routing Default Gateway* section, The **MTU** field will contain a value of `0`. Change the value from `0` to `1500`.
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
-5. When you're done, click **Save Changes** at the top of the page.
+4. Select the **Routing** tab.
 
-6. Close vCloud Director and attempt to view the properties of the edge gateway in vCloud.
+5. Select **Routing Configuration**.
+
+6. Under the *Static Routing Default Gateway* section, The **MTU** field will contain a value of `0`. Change the value from `0` to `1500`.
+
+7. When you're done, click **Save Changes** at the top of the page.
+
+8. Close vCloud Director and attempt to view the properties of the edge gateway in vCloud.
 
     You should no longer get the `NullPointerException` error and the properties should be displayed.
 
