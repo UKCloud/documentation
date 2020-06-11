@@ -4,7 +4,7 @@ description: Provides help for creating a virtual machine from a managed disk sn
 services: azure-stack
 author: William Turner
 reviewer: William Turner
-lastreviewed: 06/05/2020
+lastreviewed: 11/06/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -20,7 +20,15 @@ toc_mdlink: azs-how-create-vm-from-snapshot-ps.md
 
 ## Overview
 
-This article shows you how to use PowerShell to take a snapshot of a managed disk that is attached to a virtual machine, then use the snapshot to create a new managed disk and attach it to a new virtual machine from the new disk.
+A snapshot is a copy of a virtual disk at a specific point in time. Snapshots are often used as backups, as they enable you to quickly and easily restore a disk to its original state if something goes wrong. You can also export snapshots to a VHD file, which you can then use to externally troubleshoot potential issues with a virtual machine.
+
+This article shows you how to use PowerShell to:
+
+* Take a snapshot of a managed disk
+
+* Create a new managed disk from the snapshot
+
+* Create a virtual machine from the new managed disk
 
 ### Prerequisites
 
