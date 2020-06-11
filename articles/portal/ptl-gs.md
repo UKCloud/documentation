@@ -3,8 +3,8 @@ title: Getting Started Guide for the UKCloud Portal
 description: Provides information to get up and running with the UKCloud Portal
 services: portal
 author: Sue Highmoor
-reviewer: wllewellyn
-lastreviewed: 24/10/2019
+reviewer: shighmoor
+lastreviewed: 02/06/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -22,17 +22,23 @@ toc_mdlink: ptl-gs.md
 
 The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you can:
 
-- View information about your UKCloud services, including UKCloud for VMware, UKCloud for OpenStack, UKCloud for Microsoft Azure and Cloud Storage
+- Raise and monitor support tickets
 
 - View notifications relating to the UKCloud platform
+
+- View cyber security news and security events
+
+- View information about your UKCloud for VMware service, including VM information and backup reports
 
 - Create compute services, virtual data centres (VDCs) and edge gateways within your UKCloud for VMware environment
 
 - Access vCloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall
 
-- Raise and monitor support tickets
+- Access the OpenStack Horizon dashboard to work with your UKCloud for OpenStack environment, for example to build your network infrastructure, set up access and security and launch instances
 
-- Access Knowledge Centre articles to help you understand and work with the UKCloud platform
+- Access the Azure Stack Hub portal to manage your UKCloud for Microsoft Azure environment, for example to create virtual machines
+
+- View information about your Cloud Storage service, including secret keys and storage consumption
 
 This Getting Started Guide provides an overview of the functionality available within the Portal.
 
@@ -41,7 +47,7 @@ This Getting Started Guide provides an overview of the functionality available w
 This Getting Started Guide is intended for any user with access to the Portal.
 
 > [!NOTE]
-> The options you can see and tasks you can perform within the Portal depend on the permissions you've been granted by your Portal administrator.
+> The options you can see and tasks you can perform within the Portal depend on the services available in your account and the permissions you've been granted by your Portal administrator.
 
 ## Before you begin
 
@@ -116,7 +122,7 @@ In the toolbar, you can also click your username to access the following options
 
 - **API** - View the information you need to use the vCloud API (see [*How to access vCloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md)).
 
-- **Feedback** - Send an email to UKCloud with feedback on the Portal or any other aspect of your UKCloud experience.
+- **Feedback** - Send an email to UKCloud (<feedback@ukcloud.com>) with feedback on the Portal or any other aspect of your UKCloud experience.
 
 - **Log out** - Log out of the Portal.
 
@@ -180,7 +186,7 @@ The Portal navigation panel provides access to all the functionality available i
 
   - The Zerto Self-Service Portal (ZSSP) where you can manage Journaling Protection, Disaster Recovery to the Cloud and Workload Migration to the Cloud (see [*How to perform a failover*](../vmware/vmw-how-zerto-perform-failover.md)).
 
-- **Communities** - Access the UKCloud site on GitHub, the UKCloud Community and UKCloud Ideas.
+- **Communities** - Access the UKCloud Community LinkedIn group, Content Hub and UKCloud repositories on GitHub.
 
 ### Content area
 
@@ -201,7 +207,7 @@ When you've finished working in the Portal, we recommend that you log out to pre
 
 ## Using the UKCloud Portal API
 
-The Portal also provides an API to enable you to interact programmatically with your UKCloud environment. For example, you can use the Portal API to view information about the components of your environment and create compute services, virtual data centres and edge gateways.
+The Portal also provides an API to enable you to interact programmatically with your UKCloud environment. For example, you can use the Portal API to view information about the components of your environment and create compute services, VDCs and edge gateways.
 
 The entry point URL for the Portal API is:
 
