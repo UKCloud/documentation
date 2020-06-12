@@ -18177,6 +18177,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-btn-new-vpg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-btn-new-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-btn-vpg-options.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-btn-vpg-options.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-create-vpg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-create-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-dashboard.png",
       "output": {
         "resource": {
@@ -18192,6 +18225,83 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-zerto-draas.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-general.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-general.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-nics.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-nics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-recovery.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-recovery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-replication.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-replication.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-storage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-storage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-vm-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-vm-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-edit-vpg-vms.png"
         }
       },
       "is_incremental": false,
@@ -18221,120 +18331,21 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-mnu-edit-vpg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-mnu-edit-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-recovery.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-zerto-recovery.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-10.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-10.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-4.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-5.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-6.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-7.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-7.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-8.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-8.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vpg-image-9.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vpg-image-9.png"
         }
       },
       "is_incremental": false,
@@ -18414,7 +18425,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-journaling-protection.html",
-          "hash": "BJy2ZynI1YAx1DaFVlHAtg=="
+          "hash": "cp9Ku6JNFvLkOR7/oIUW+w=="
         }
       },
       "is_incremental": false,
@@ -18486,7 +18497,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-journaling.html",
-          "hash": "rmgc2wP3DywlDZnH1ERX5Q=="
+          "hash": "xZBR/4/eHi/4eb3jXdMxHA=="
         }
       },
       "is_incremental": false,
@@ -19182,7 +19193,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-create-vpg.html",
-          "hash": "3+B3gB3eXtCBi0fgNfTS5Q=="
+          "hash": "5hmAF7p3gCd6Ta63F4PjRA=="
         }
       },
       "is_incremental": false,
@@ -19638,7 +19649,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-journaling-protection.html",
-          "hash": "OjVyE71+by129CAXF/lGgw=="
+          "hash": "HCpzIKuWS046+Pow8Pacgg=="
         }
       },
       "is_incremental": false,
@@ -19674,7 +19685,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "EYG48x2iojzj5XD6J63Bkg=="
+          "hash": "eIs0ofNN6F7KeKN4B/SRhA=="
         }
       },
       "is_incremental": false,
