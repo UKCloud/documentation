@@ -5272,10 +5272,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/migration/images/migr-zerto-move-execution-parameters.png",
+      "source_relative_path": "articles/migration/images/migr-zerto-mnu-move-vpg.png",
       "output": {
         "resource": {
-          "relative_path": "articles/migration/images/migr-zerto-move-execution-parameters.png"
+          "relative_path": "articles/migration/images/migr-zerto-mnu-move-vpg.png"
         }
       },
       "is_incremental": false,
@@ -5283,10 +5283,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/migration/images/migr-zerto-move-select-vpg.png",
+      "source_relative_path": "articles/migration/images/migr-zerto-move-params.png",
       "output": {
         "resource": {
-          "relative_path": "articles/migration/images/migr-zerto-move-select-vpg.png"
+          "relative_path": "articles/migration/images/migr-zerto-move-params.png"
         }
       },
       "is_incremental": false,
@@ -5294,10 +5294,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/migration/images/migr-zerto_move-vpg.png",
+      "source_relative_path": "articles/migration/images/migr-zerto-move-vpgs.png",
       "output": {
         "resource": {
-          "relative_path": "articles/migration/images/migr-zerto_move-vpg.png"
+          "relative_path": "articles/migration/images/migr-zerto-move-vpgs.png"
         }
       },
       "is_incremental": false,
@@ -5320,7 +5320,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/migr-how-zerto-migrate-to-ukcloud.html",
-          "hash": "pfmZ6ibdOkgzPLuvbGvnlw=="
+          "hash": "+4EsuZKRot+knHo/YEGBFw=="
         }
       },
       "is_incremental": false,
@@ -12391,72 +12391,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/migrate-zerto-image-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/migrate-zerto-image-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/migrate-zerto-image-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/migrate-zerto-image-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/migrate-zerto-image-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/migrate-zerto-image-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/migrate-zerto-image-4.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/migrate-zerto-image-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/migrate-zerto-image-5.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/migrate-zerto-image-5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/migrate-zerto-image-6.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/migrate-zerto-image-6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/myvms-image-1.png",
       "output": {
         "resource": {
@@ -12538,94 +12472,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/ovf-image-5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/perform-image-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/perform-image-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/perform-image-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/perform-image-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/perform-image-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/perform-image-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/perform-image-4.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/perform-image-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/perform-image-5.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/perform-image-5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/perform-image-6.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/perform-image-6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/perform-image-7.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/perform-image-7.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/perform-image-8.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/perform-image-8.png"
         }
       },
       "is_incremental": false,
@@ -18177,6 +18023,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-btn-failover-live.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-btn-failover-live.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-btn-failover-test.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-btn-failover-test.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-btn-new-vpg.png",
       "output": {
         "resource": {
@@ -18309,6 +18177,72 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-failover-live-checkpoints.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-failover-live-checkpoints.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-failover-live-params-checkpoint.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-failover-live-params-checkpoint.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-failover-live-vpgs.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-failover-live-vpgs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-failover-test-checkpoints.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-failover-test-checkpoints.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-failover-test-params-checkpoint.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-failover-test-params-checkpoint.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-failover-test-vpgs.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-failover-test-vpgs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-journaling.png",
       "output": {
         "resource": {
@@ -18331,10 +18265,65 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-migrate-journal-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-migrate-journal-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-migrate-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-migrate-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-mnu-edit-vpg.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-zerto-mnu-edit-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-mnu-move-vpg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-mnu-move-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-move-params.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-move-params.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-move-vpgs.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-move-vpgs.png"
         }
       },
       "is_incremental": false,
@@ -19217,7 +19206,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-migrate-between-regions.html",
-          "hash": "VV7+woJWEkxAtgbACKuIew=="
+          "hash": "H8A+abZxTjs4FtAx46GHNg=="
         }
       },
       "is_incremental": false,
@@ -19229,7 +19218,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-perform-failover.html",
-          "hash": "t9ZMP3zF1lpYk8D11Cppkg=="
+          "hash": "ISoviCnNqw+LP2JI0hbHBA=="
         }
       },
       "is_incremental": false,
