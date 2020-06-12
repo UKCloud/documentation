@@ -3,8 +3,8 @@ title: How to perform a failover
 description: This article shows you how to use the Zerto Self-Service Portal to perform a test or live failover
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: gsohal
+lastreviewed: 16/04/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -21,7 +21,7 @@ toc_mdlink: vmw-how-zerto-perform-failover.md
 
 You may want to perform a failover in the following circumstances:
 
-- To recover virtual machines (VMs) after a disaster, if you're using Disaster Recovery as a Service or the UKCloud for VMware Journaling Protection option
+- To recover virtual machines (VMs) after an issue or disaster, if you're using Disaster Recovery as a Service or the UKCloud for VMware Journaling Protection option
 
 - To migrate workloads from a local, on-premises environment onto the UKCloud platform
 
@@ -41,7 +41,7 @@ If you use Disaster Recovery as a Service or Journaling Protection, you should p
 When you run a test failover, a test VM is created for each of your protected VMs in a sandbox on the target site, using the test network specified in the virtual protection group (VPG). During the test, your VMs' journals continue to be updated and new checkpoints generated, ensuring that your VMs remain protected and can be fully recovered in the event of an actual live failover.
 
 > [!NOTE]
-> When the test failover has been instantiated, Zerto will automatically start up the test failover VMs. It is critically important that you do not power on (or power off) the VMs manually in vCloud Director before the failover is completely instantiated. Changing the state of the VMs in vCloud Director before the failover process is complete will result in corruption of the VPG. If you power off a failed-over VMs while a test failover is in progress, replication of live VMs will be affected.
+> When the test failover has been instantiated, Zerto will automatically start up the test failover VMs. It is critically important that you do not power on (or power off) the VMs manually in vCloud Director before the failover is completely instantiated. Changing the state of the VMs in vCloud Director before the failover process is complete will result in corruption of the VPG. If you power off failed-over VMs while a test failover is in progress, replication of live VMs will be affected.
 
 1. Log in to the ZSSP.
 
@@ -49,19 +49,19 @@ When you run a test failover, a test VM is created for each of your protected VM
 
     Use the ZSSP login link for the zone in which your target VDC is located.
 
-2. At the bottom of the page, make sure that the failover toggle is set to **TEST** and click **FAILOVER**.
+2. At the bottom of the page, click **Test**.
 
-   ![test](images/perform-image-1.png)
+   ![Test failover option](images/vmw-zerto-btn-failover-test.png)
 
-3. In the *Failover Test* wizard, in the *SELECT VPGs* page, select one or more VPGs that you want to test then click **NEXT**.
+3. In the *Failover Test* wizard, on the *Select VPGs* page, select one or more VPGs that you want to test then click **Next**.
 
-   ![My VMs](images/perform-image-2.png)
+   ![Failover Test wizard - Select VPGs page](images/vmw-zerto-failover-test-vpgs.png)
 
-4. The *EXECUTION PARAMETERS* page shows the most recent checkpoint added to the journal. If you want to use a different checkpoint for the test, click the **Checkpoint** time.
+4. The *Execute Parameters* page shows the most recent checkpoint added to the journal. If you want to use a different checkpoint for the test, click the **Checkpoint** time.
 
-   ![My VMs](images/perform-image-3.png)
+   ![Failover Test wizard - Execute Parameters page](images/vmw-zerto-failover-test-params-checkpoint.png)
 
-5. In the *Checkpoints* dialog, select the checkpoint that you want to use:
+5. In the *Checkpoints* dialog box, select the checkpoint that you want to use:
 
     - **Latest** to use the latest checkpoint
 
@@ -71,11 +71,11 @@ When you run a test failover, a test VM is created for each of your protected VM
 
     - **Select from all available checkpoints** to select a specific checkpoint from the list below
 
-   ![My VMs](images/perform-image-4.png)
+   ![Checkpoints dialog box for test failover](images/vmw-zerto-failover-test-checkpoints.png)
 
-6. Click **OK** then click **NEXT**.
+6. Click **OK** then click **Next**.
 
-7. In the *FAILOVER TEST* page, review the diagram to see the number of VPGs and VMs included in the test and where they will be recovered to, then click **START FAILOVER TEST**.
+7. In the *Failover Test* page, review the diagram to see the number of VPGs and VMs included in the test and where they will be recovered to, then click **Start Failover Test**.
 
     The test begins with an initialisation period, during which the VMs are created in scratch volumes on the target site.
 
@@ -83,7 +83,7 @@ When you run a test failover, a test VM is created for each of your protected VM
 
 9. To stop the test, on the *VPGs* tab, click the **VPG Name** and click the **Stop test** icon.
 
-10. In the *Stop Test* dialog, from the **Result** list, choose whether the test succeeded or failed, then click **STOP**.
+10. In the *Stop Test* dialog, from the **Result** list, choose whether the test succeeded or failed, then click **Stop**.
 
     You can also provide additional **Notes** to describe the test scenario.
 
@@ -102,20 +102,17 @@ In the event of a disaster, you'll need to run a live failover to recover your V
 
     Use the ZSSP login link for the zone in which your target VDC (for recovery or migration) is located.
 
-2. At the bottom of the page, make sure that the failover toggle is set to **LIVE** and click **FAILOVER**.
+2. At the bottom of the page, click **Failover**.
 
-   ![My VMs](images/perform-image-5.png)
+   ![Live failover option](images/vmw-zerto-btn-failover-live.png)
 
-3. In the *Failover* wizard, in the *SELECT VPGs* page, select one or more VPGs that you want to failover or migrate then click **NEXT**.
+3. In the *Failover Live* wizard, on the *Select VPGs* page, select one or more VPGs that you want to failover or migrate then click **Next**.
 
-    > [!TIP]
-    > The red border around the wizard provides a visual cue that you are performing a live failover, rather than a test.
+   ![Failover Live wizard - Select VPGs page](images/vmw-zerto-failover-live-vpgs.png)
 
-   ![My VMs](images/perform-image-6.png)
+4. The *Execute Parameters* page shows the most recent checkpoint added to the journal. If you want to use a different checkpoint, click the **Checkpoint** time.
 
-4. The *EXECUTION PARAMETERS* page shows the most recent checkpoint added to the journal. If you want to use a different checkpoint, click the **Checkpoint** time.
-
-   ![My VMs](images/perform-image-7.png)
+   ![Failover Live wizard - Execute Parameters page](images/vmw-zerto-failover-live-params-checkpoint.png)
 
 5. In the *Checkpoints* dialog, select the checkpoint that you want to use:
 
@@ -127,11 +124,11 @@ In the event of a disaster, you'll need to run a live failover to recover your V
 
     - **Select from all available checkpoints** to select a specific checkpoint from the list below
 
-   ![My VMs](images/perform-image-8.png)
+   ![Checkpoints dialog box for live failover](images/vmw-zerto-failover-live-checkpoints.png)
 
 6. Click **OK**.
 
-7. The commit policy gives you the opportunity to check the integrity of the recovered or migrated VMs before committing the failover. To change the commit policy, select the **Commit Policy** field and choose:
+7. The commit policy gives you the opportunity to check the integrity of the recovered or migrated VMs before committing the failover. To change the commit policy, click the **Commit Policy** field and select:
 
     - **Auto-Commit** if you want to automatically commit the failover after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the failover to be immediately committed, enter 0.
 
@@ -139,7 +136,7 @@ In the event of a disaster, you'll need to run a live failover to recover your V
 
     - **None** if you do not want to apply a commit policy. You must manually commit or roll back the failover.
 
-8. The shutdown policy determines what happens to the source VMs in the event of a failover. To change the shutdown policy, select the **VM Shutdown** field and choose:
+8. The VM shutdown policy determines what happens to the source VMs in the event of a failover. To change the shutdown policy, click the **VM Shutdown** field and select:
 
     - **No** to leave the source VMs as they are before starting the failover.
 
@@ -147,14 +144,14 @@ In the event of a disaster, you'll need to run a live failover to recover your V
 
     - **Force Shutdown** to forcibly shut down the source VMs before starting the failover.
 
-9. Reverse protection ensures that when the source VMs are failed over to the target site, the source site becomes the new target site to ensure that the VMs are still protected. To enable reverse protection, select the **Reverse Protection** field and select the check box.
+9. Reverse protection ensures that when the source VMs are failed over to the target site, the source site becomes the new target site so that the VMs are still protected. To enable reverse protection, click the **Reverse Protection** field and select the check box.
 
     > [!IMPORTANT]
     > Reverse protection uses the original source VM's virtual disks to pre‑seed the reverse replication, therefore enabling reverse protection will make changes to the source VMs.
 
-10. Click **NEXT**.
+10. Click **Next**.
 
-11. In the *FAILOVER* page, review the diagram to see the number of VPGs and VMs included in the failover and where they will be recovered or migrated to, then click **START FAILOVER**.
+11. In the *Failover* page, review the diagram to see the number of VPGs and VMs included in the failover and where they will be recovered or migrated to, then click **Start Failover**.
 
     The failover process creates the VMs in the target site to the selected point in time.
 
@@ -166,7 +163,7 @@ In the event of a disaster, you'll need to run a live failover to recover your V
     > [!NOTE]
     > As soon as a live failover is committed, the journal is destroyed and you cannot go back and select a different checkpoint. However, provided reverse protection is not enabled, the original VMs on the source site remain in place.
 
-    When the commit is completed, the VPG will show as being in **Needs Configuration** state. When in this state, editing the VPG configuration may cause reverse protection to begin. If this is not desired, then you should delete VPG as soon as it reaches the **Needs Configuration** state.
+    When the commit is completed, the VPG will show as being in **Needs Configuration** state. When in this state, editing the VPG configuration may cause reverse protection to begin. If this is not desired, then you should delete the VPG as soon as it reaches the **Needs Configuration** state.
 
 ## Next steps
 
@@ -174,7 +171,7 @@ Your VMs are now running in the target site, which is now your primary site.
 
 For Disaster Recovery as a Service and Journaling Protection, to return to the source site (or a different site) after the disaster has been resolved, perform a failover to move them to the source site.
 
-For Migration to the Cloud, as soon as you are happy with how your workloads are running in on the UKCloud platform, you can tidy up the source environment.
+For Migration to the Cloud, as soon as you are happy with how your workloads are running on the UKCloud platform, you can tidy up the source environment.
 
 ## Feedback
 
