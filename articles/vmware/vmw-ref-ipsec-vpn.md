@@ -4,7 +4,7 @@ description: Provides information about UKCloud for VMware's support of Foundati
 services: vmware
 author: Sue Highmoor
 reviewer: Simon Delaney
-lastreviewed: 17/06/2020 10:29:58
+lastreviewed: 17/06/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
