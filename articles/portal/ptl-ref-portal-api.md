@@ -33,9 +33,8 @@ For information and examples about how to use the Portal API, see [*How to use t
 
 ## OpenAPI
 
-An OpenAPI definition of the Portal API is in development.
-It can be viewed [interactively using Swagger UI](https://app.swaggerhub.com/apis-docs/ukcloud/UKCloud_Portal/development)
-and in [its raw form](https://github.com/UKCloud/create-vdc-with-edge-portal-api-demo/blob/master/docs/portal-api/openapi.json).
+We're currently working on an OpenAPI definition of the Portal API. You can view the definition [interactively using Swagger UI](https://app.swaggerhub.com/apis-docs/ukcloud/UKCloud_Portal/development)
+or in [its raw form](https://github.com/UKCloud/create-vdc-with-edge-portal-api-demo/blob/master/docs/portal-api/openapi.json).
 
 
 ## Response HTTP status codes
