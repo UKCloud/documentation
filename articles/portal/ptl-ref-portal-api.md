@@ -31,6 +31,12 @@ The entry point URL for the Portal API is:
 
 For information and examples about how to use the Portal API, see [*How to use the UKCloud Portal API*](ptl-how-use-api.md).
 
+## OpenAPI
+
+We're currently working on an OpenAPI definition of the Portal API. You can view the definition [interactively using Swagger UI](https://app.swaggerhub.com/apis-docs/ukcloud/UKCloud_Portal/development)
+or in [its raw form](https://github.com/UKCloud/create-vdc-with-edge-portal-api-demo/blob/master/docs/portal-api/openapi.json).
+
+
 ## Response HTTP status codes
 
 Code | Reason
