@@ -11358,7 +11358,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-portal-api.html",
-          "hash": "M6OWZ8aNmDs07t1jrOo8rQ=="
+          "hash": "Gma8FB7OJWwHMFwzNkVSpA=="
         }
       },
       "is_incremental": false,
@@ -11370,7 +11370,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-release-notes.html",
-          "hash": "5PJZcCpD6YhVGFW0TvQYRg=="
+          "hash": "ZLiuHmMymaLRrwMQm8OaMA=="
         }
       },
       "is_incremental": false,
@@ -12879,6 +12879,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/tier_1_small_writes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ukc-services-2020.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ukc-services-2020.png"
         }
       },
       "is_incremental": false,
@@ -18390,7 +18401,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "mRoayhRbHNhZpXKDJjvdAQ=="
+          "hash": "mEnw7kNfnr9we8VS6+dtCA=="
         }
       },
       "is_incremental": false,
@@ -19682,6 +19693,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-sd-vls.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-sd-vls.html",
+          "hash": "ghiSeJLVfkkZ2JcfAx8f1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-sd.md",
       "output": {
         ".html": {
@@ -19825,7 +19848,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 423,
+          "total_file_count": 424,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

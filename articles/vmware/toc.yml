@@ -210,6 +210,8 @@
   items:
   - name: UKCloud for VMware Service Definition
     href: vmw-sd.md
+  - name: VMware Licence Service Service Definition
+    href: vmw-sd-vls.md
 - name: Service Scope
   items:
   - name: Bring Your Own Firewall Service Scope
