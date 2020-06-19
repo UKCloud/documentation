@@ -19,6 +19,16 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 1.141.0
+
+Date: 18th June 2020
+
+Performance update
+
+Details:
+
+- Improve efficiency of Portal API compute service endpoint
+
 ## Release 1.139.0
 
 Date: 13th May 2020
