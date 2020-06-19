@@ -91,7 +91,7 @@ The service is designed to be flexible and comes with our standard onboarding. A
 
 - **Monitoring and management service.** UKCloud can remotely monitor the VMware products within the environment, alert you of any incidents if appropriate and provide a high level of engagement appropriate with the level of managed services. This may include patching, capacity management, performance management or supporting non-VMware products (Storage Array, Physical Network).
 
-- **Transition services.** UKCloud can provide specialist Professional Services to help you assess your environment, create an actionable cloud strategy and migrate workloads to the UKCloud's multi-cloud environment. UKCloud can also provide expert services to help you adopt cloud-native approaches such as DevOps, automation, and containerisation.
+- **Transition services.** UKCloud can provide specialist Professional Services to help you assess your environment, create an actionable cloud strategy and migrate workloads to the UKCloud multi-cloud environment. UKCloud can also provide expert services to help you adopt cloud-native approaches such as DevOps, automation, and containerisation.
 
 ## Pricing and packaging
 
