@@ -29,7 +29,7 @@ This ideally suits customers who:
 
 - Are in the middle of cloud migration and are seeing a steady decrease in their on-premises requirements, and therefore seek a flexible licensing model rather than a more traditional three-year Enterprise License Agreement (ELA)
 
-- Want to benefit from UKCloud's partnership with VMware to switch to a viable, cost-effective and efficient alternative options offered by VMware
+- Want to benefit from UKCloud's partnership with VMware to switch to a viable, cost-effective and efficient model offered by VMware
 
 ## What the service can help you achieve
 
@@ -49,7 +49,7 @@ This ideally suits customers who:
 
 - VLS is a service delivered by UKCloud, a specialist VMware Cloud Verified Provider, headquartered in the UK and dedicated to serving public sector organisations with over eight years' experience in providing and supporting VMware cloud workloads.
 
-- UK based award-winning Service Desk manned 24/7 by vetted and security-cleared experts.
+- UK based award-winning service desk manned 24/7 by vetted and security-cleared experts.
 
 - Every UKCloud customer has a designated Service Delivery Manager regardless of usage or number of workloads. 
 
@@ -91,7 +91,7 @@ The service is designed to be flexible and comes with our standard onboarding. A
 
 - **Monitoring and management service.** UKCloud can remotely monitor the VMware products within the environment, alert you of any incidents if appropriate and provide a high level of engagement appropriate with the level of managed services. This may include patching, capacity management, performance management or supporting non-VMware products (Storage Array, Physical Network).
 
-- **Transition services.** UKCloud can provide specialist Professional Services to help you assess your environment, create an actionable cloud strategy and migrate workloads to the UKCloud multi-cloud environment. UKCloud can also provide expert services to help you adopt cloud-native approaches such as DevOps, automation, and containerisation.
+- **Transition services.** UKCloud can provide specialist Professional Services to help you assess your environment, create an actionable cloud strategy and migrate workloads to the UKCloud's multi-cloud environment. UKCloud can also provide expert services to help you adopt cloud-native approaches such as DevOps, automation, and containerisation.
 
 ## Pricing and packaging
 
