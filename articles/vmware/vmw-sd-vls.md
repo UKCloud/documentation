@@ -43,7 +43,7 @@ This ideally suits customers who:
 
 - **Flexibility.** An easier and more cost-effective method for adopting new VMware technologies, without committing to the purchase cost of perpetual licenses. Utilise enhanced features or capabilities with just a small monthly increase in consumption reporting.
 
-- **Mix and match SnS with VLS.** You can utilise both traditional SnS and VLS in the same environment such that existing support arrangements can continue, and then new VLS licences can be layered on top.
+- **Mix and match SnS with VLS.** You can utilise both traditional Support and Subscription Services (SnS) and VLS in the same environment such that existing support arrangements can continue, and then new VLS licences can be layered on top.
 
 ## Advantages of utilising UKCloud
 
