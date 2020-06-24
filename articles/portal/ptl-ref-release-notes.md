@@ -23,6 +23,8 @@ This article provides a list of completed Portal releases.
 
 Date: 24th June 2020
 
+Bug fix
+
 SSO Workflow improvement
 
 Details:
