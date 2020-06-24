@@ -25,8 +25,6 @@ Date: 24th June 2020
 
 Bug fix
 
-SSO Workflow improvement
-
 Details:
 
 - Improved page flow when session timeout occurs
