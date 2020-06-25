@@ -19,6 +19,16 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 1.141.1
+
+Date: 24th June 2020
+
+Bug fix
+
+Details:
+
+- Improved page flow when session timeout occurs
+
 ## Release 1.141.0
 
 Date: 18th June 2020
