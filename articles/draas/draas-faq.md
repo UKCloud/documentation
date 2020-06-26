@@ -85,6 +85,20 @@ UKCloud will make the appropriate Zerto software versions available.
 
 Yes, once you've tested or performed a live failover you can failback onto your own infrastructure using the self-service Zerto Portal.
 
+### How do I ensure that I have complete recovery in the event of a disaster?
+
+- **Maintain a full copy of your mission critical workloads (data and applications) outside of your production environment** - If your workloads are running on UKCloud we recommend protection to the opposite site (Farnborough or Corsham) from where your production workload resides.
+
+- **Test DR regularly** – Remember your DR is only as good as your testing. Ensure tests are clearly defined to provide business confidence. UKCloud's DRaaS solution, powered by Zerto, simplifies testing and has no impact on production workloads.
+
+- **Ensure production changes are reflected in your DR plan** – If you make changes to existing workloads or add new workloads, ensure these VMs have been included within your virtual protection groups. Update tests to cover these changes.
+
+- **Document your DR plan** - And ensure documentation is easily accessible in the event of a disaster.
+
+- **Training** – Ensure knowledge is shared amongst your team. Get the team involved and make sure they're familiar with the recovery processes.
+
+For more guidance, see the Zerto and UKCloud [Disaster Recovery 101](https://ukcloud.com/wp-content/uploads/2020/06/zerto-ebook-v2.pdf) ebook.
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
