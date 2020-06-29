@@ -11,9 +11,9 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create a new user
-toc_fullpath: How To/oshift-how-create-users.md
-toc_mdlink: oshift-how-create-users.md
+toc_title: Manage OpenShift access
+toc_fullpath: How To/oshift-how-manage-user-access.md
+toc_mdlink: oshift-how-manage-user-access.md
 ---
 
 # How to manage OpenShift access in the UKCloud Portal
