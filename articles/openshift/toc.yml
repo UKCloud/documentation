@@ -18,14 +18,14 @@
     href: oshift-how-backup-migrate.md
   - name: Build an OpenShift application from a private GitHub repo
     href: oshift-how-build-app-private-repo.md
-  - name: Create a new user
-    href: oshift-how-create-users.md
   - name: Customise the router error page
     href: oshift-how-customise-error-page.md
   - name: Expose non-http services externally
     href: oshift-how-expose-nonhttp-services.md
   - name: How to expand OpenShift persistent volumes
     href: oshift-how-expand-persistent-vols.md
+  - name: Manage OpenShift access
+    href: oshift-how-manage-user-access.md
   - name: Monitor your OpenShift cluster
     href: oshift-how-monitor-cluster.md
   - name: Obtain usage metrics for OpenShift capacity management

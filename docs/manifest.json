@@ -5496,6 +5496,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/ptl-contacts-btn-edit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/ptl-contacts-btn-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/ptl-contacts-tab-oshift-permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/ptl-contacts-tab-oshift-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/ptl-menu-all-contacts.png",
       "output": {
         "resource": {
@@ -5533,6 +5555,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/openshift/images/ptl-new-contact.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/ptl-oshift-permissions-checkboxes.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/ptl-oshift-permissions-checkboxes.png"
         }
       },
       "is_incremental": false,
@@ -5669,18 +5702,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-how-create-users.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openshift/oshift-how-create-users.html",
-          "hash": "Fzka9BTPH7ugo4dHNGuZ+Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-customise-error-page.md",
       "output": {
         ".html": {
@@ -5710,6 +5731,18 @@
         ".html": {
           "relative_path": "articles/openshift/oshift-how-expose-nonhttp-services.html",
           "hash": "g03baHTIWfv6gkMGuMd9dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-manage-user-access.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-manage-user-access.html",
+          "hash": "IIj0g0RF6r5xPWBXeYodEQ=="
         }
       },
       "is_incremental": false,
@@ -5925,7 +5958,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-security-best-practices.html",
-          "hash": "qMy6w1T9Uf/mZo3NLU0GmQ=="
+          "hash": "tkn+D56gyVVqnH0NoTTPVw=="
         }
       },
       "is_incremental": false,
@@ -5973,7 +6006,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "6txf35Gs7FmteLAZxMelBA=="
+          "hash": "snFwKrFQhtDxWfEorAhrMw=="
         }
       },
       "is_incremental": false,
@@ -11154,7 +11187,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-create-users.html",
-          "hash": "l0j1+muVLsuZmfmXSOYVYA=="
+          "hash": "+ox67sDu/rBmScazmSY6KQ=="
         }
       },
       "is_incremental": false,
