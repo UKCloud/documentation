@@ -55,7 +55,7 @@ To create a new user:
 
     - [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](../openstack/ostack-how-manage-accounts-portal.md)
 
-    - [*How to create new UKCloud for OpenShift users in the UKCloud Portal*](../openshift/oshift-how-create-users.md)
+    - [*How to manage OpenShift access in the UKCloud Portal*](../openshift/oshift-how-manage-user-access.md)
 
     - [*Portal permissions*](ptl-ref-overview-permissions.md)
 
