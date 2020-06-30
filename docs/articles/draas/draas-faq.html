@@ -127,6 +127,20 @@
 <p>UKCloud will make the appropriate Zerto software versions available.</p>
 <h3 id="can-i-failback-to-my-own-data-centre-or-third-party-data-centre">Can I failback to my own data centre or third party data centre?</h3>
 <p>Yes, once you've tested or performed a live failover you can failback onto your own infrastructure using the self-service Zerto Portal.</p>
+<h3 id="how-do-i-ensure-that-i-have-complete-recovery-in-the-event-of-a-disaster">How do I ensure that I have complete recovery in the event of a disaster?</h3>
+<ul>
+<li><p><strong>Maintain a full copy of your mission critical workloads (data and applications) outside of your production environment</strong> - If your workloads are running on UKCloud we recommend protection to the opposite site (Farnborough or Corsham) from where your production workload resides.</p>
+</li>
+<li><p><strong>Test DR regularly</strong> – Remember your DR is only as good as your testing. Ensure tests are clearly defined to provide business confidence. UKCloud's DRaaS solution, powered by Zerto, simplifies testing and has no impact on production workloads.</p>
+</li>
+<li><p><strong>Ensure production changes are reflected in your DR plan</strong> – If you make changes to existing workloads or add new workloads, ensure these VMs have been included within your virtual protection groups. Update tests to cover these changes.</p>
+</li>
+<li><p><strong>Document your DR plan</strong> - And ensure documentation is easily accessible in the event of a disaster.</p>
+</li>
+<li><p><strong>Training</strong> – Ensure knowledge is shared amongst your team. Get the team involved and make sure they're familiar with the recovery processes.</p>
+</li>
+</ul>
+<p>For more guidance, see the Zerto and UKCloud <a href="https://ukcloud.com/wp-content/uploads/2020/06/zerto-ebook-v2.pdf">Disaster Recovery 101</a> ebook.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
