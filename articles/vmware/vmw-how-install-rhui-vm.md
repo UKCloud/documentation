@@ -37,13 +37,13 @@ There are two pre-requisites for performing this operation:
 
 You can find the installer RPM files in the following locations:
 
-- [IL2 RHEL 6 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261766&Signature=zCxurIGSgb2TLrr2ISgqngRuTeU%3D)
+- [Assured RHEL 6 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261766&Signature=zCxurIGSgb2TLrr2ISgqngRuTeU%3D)
 
-- [IL2 RHEL 7 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL7-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261781&Signature=txJ05hPU56lncP%2Bj8hvdgfJJFok%3D)
+- [Assured RHEL 7 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL7-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261781&Signature=txJ05hPU56lncP%2Bj8hvdgfJJFok%3D)
 
-- [IL3 RHEL 6 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL6-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261791&Signature=ser5iUAzUdPOX1hBHyRjw6PUULI%3D)
+- [Elevated RHEL 6 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL6-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261791&Signature=ser5iUAzUdPOX1hBHyRjw6PUULI%3D)
 
-- [IL3 RHEL 7 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL7-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261806&Signature=tPUvM%2B53G1qVD6lCEUbDNQ9IMX8%3D)
+- [Elevated RHEL 7 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL7-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261806&Signature=tPUvM%2B53G1qVD6lCEUbDNQ9IMX8%3D)
 
 If you require the high availability (HA) package, raise a Service Request directly via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and we'll provide you with a download location.
 
