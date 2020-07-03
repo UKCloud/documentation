@@ -45,9 +45,9 @@ You can find the installer RPM files in the following locations:
 
 [IL3 RHEL 7 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL7-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261806&Signature=tPUvM%2B53G1qVD6lCEUbDNQ9IMX8%3D)
 
-If you require the high availability (HA) package, raise a Service Request directly via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and you will be provided with a download location.
+If you require the high availability (HA) package, raise a Service Request directly via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and we'll provide you with a download location.
 
-1. Download the file required to your VM (or place the contents in an accessible location such as NFS share, FTP, and so on).
+1. Download the appropriate file to your VM (or place the contents in an accessible location such as NFS share or FTP).
 
 2. Install the relevant RPM.
 
@@ -71,11 +71,11 @@ If you require the high availability (HA) package, raise a Service Request direc
     
 ## Upgrading the RPMs to a newer version
 
-If you already have one of the original UKCloud RPMs installed on your system and require the one(s) documented in this article (due to the original ones expiring), you can run the following command to upgrade it once you've downloaded the required files.
+If you already have one of the original UKCloud RPMs installed on your system and require one of the latest ones documented in this article (due to the original ones expiring), you can run a command to upgrade it once you've downloaded the required files.
 
-   For example, for RHEL6: `rpm -U IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm`.
+For example, for RHEL6: `rpm -U IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm`.
 
-This will overwrite the files and certificates associated with the original RPM and restore access to the RHUA
+This will overwrite the files and certificates associated with the original RPM and restore access to the RHUA.
 
 ## Troubleshooting
 
@@ -97,7 +97,7 @@ Ensure you have installed the correct RPM for your release.
 
 ### Unauthorized (401) Error when trying to access RHUA
 
-You most likely have the original RPMs installed. Follow the instructions in **Upgrading the RPMs to a newer version** section above
+You most likely have the original RPMs installed. Follow the instructions in the [*Upgrading the RPMs to a newer version*](#upgrading-the-rpms-to-a-newer-version] section above.
 
 ## Feedback
 
