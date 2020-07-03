@@ -97,7 +97,7 @@ Ensure you have installed the correct RPM for your release.
 
 ### Unauthorized (401) Error when trying to access RHUA
 
-You most likely have the original RPMs installed. Follow the instructions in the [*Upgrading the RPMs to a newer version*](#upgrading-the-rpms-to-a-newer-version] section above.
+You most likely have the original RPMs installed. Follow the instructions in the [*Upgrading the RPMs to a newer version*](#upgrading-the-rpms-to-a-newer-version) section above.
 
 ## Feedback
 
