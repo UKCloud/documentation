@@ -106,24 +106,34 @@
 </li>
 </ul>
 <h2 id="installation">Installation</h2>
-<p>You can find the installer RPM files in the UKCloud public catalog under <strong>media</strong>, for example, <strong>UKCloud-RHUI-Standard-Assured</strong>.</p>
-<p>If you require the high availability (HA) package, raise a Service Request directly via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal and it will be uploaded to your private catalog.</p>
+<p>You can find the installer RPM files in the following locations:</p>
+<ul>
+<li><p><a href="https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1625261766&amp;Signature=zCxurIGSgb2TLrr2ISgqngRuTeU%3D">Assured RHEL 6 Standard</a></p>
+</li>
+<li><p><a href="https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL7-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1625261781&amp;Signature=txJ05hPU56lncP%2Bj8hvdgfJJFok%3D">Assured RHEL 7 Standard</a></p>
+</li>
+<li><p><a href="https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL6-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1625261791&amp;Signature=ser5iUAzUdPOX1hBHyRjw6PUULI%3D">Elevated RHEL 6 Standard</a></p>
+</li>
+<li><p><a href="https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL7-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1625261806&amp;Signature=tPUvM%2B53G1qVD6lCEUbDNQ9IMX8%3D">Elevated RHEL 7 Standard</a></p>
+</li>
+</ul>
+<p>If you require the high availability (HA) package, raise a Service Request directly via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal and we'll provide you with a download location.</p>
 <ol>
-<li><p>Mount the <code>UKCloud RHUI-***.iso</code> to the VM (or place the contents in an accessible location such as NFS share, FTP, and so on).</p>
+<li><p>Download the appropriate file to your VM (or place the contents in an accessible location such as NFS share or FTP).</p>
 </li>
 <li><p>Install the relevant RPM.</p>
-<p>For example, for RHEL6: <code>rpm -ivh IL2-Client-RHEL6-Standard-2.0-1.noarch.rpm</code>.</p>
+<p>For example, for RHEL6: <code>rpm -ivh IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm</code>.</p>
 <p>If you're installing a new RPM, such as replacing standard with HA you need to use the <code>-force</code> flag to overwrite the existing certificates.</p>
 </li>
-<li><p>Clean yum:</p>
-<pre><code>yum clean all
+<li><p>Clean yum and the cache:</p>
+<pre><code>yum clean all; rm -rf /var/cache/yum
 </code></pre>
 </li>
 <li><p>Test the RHUI is working:</p>
 <pre><code>yum update
 </code></pre>
 </li>
-<li><p>The first time you update from RHUI you will be prompted to accept the following two certificates:</p>
+<li><p>The first time you update from RHUI you may be prompted to accept the following two certificates:</p>
 <ul>
 <li><p>The Red Hat entitlement certificate</p>
 </li>
@@ -132,6 +142,10 @@
 </ul>
 </li>
 </ol>
+<h2 id="upgrading-the-rpms-to-a-newer-version">Upgrading the RPMs to a newer version</h2>
+<p>If you already have one of the original UKCloud RPMs installed on your system and require one of the latest ones documented in this article (due to the original ones expiring), you can run a command to upgrade it once you've downloaded the required files.</p>
+<p>For example, for RHEL6: <code>rpm -U IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm</code>.</p>
+<p>This will overwrite the files and certificates associated with the original RPM and restore access to the RHUA.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>The primary issues you may encounter are:</p>
 <h3 id="dns-failure">DNS Failure</h3>
@@ -145,6 +159,8 @@
 </ol>
 <h3 id="incorrect-version">Incorrect version</h3>
 <p>Ensure you have installed the correct RPM for your release.</p>
+<h3 id="unauthorized-401-error-when-trying-to-access-rhua">Unauthorized (401) Error when trying to access RHUA</h3>
+<p>You most likely have the original RPMs installed. Follow the instructions in the <a href="#upgrading-the-rpms-to-a-newer-version"><em>Upgrading the RPMs to a newer version</em></a> section above.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
