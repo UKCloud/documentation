@@ -19,6 +19,17 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 1.143.0
+
+Date: 7th July 2020
+
+Update and ITHC
+
+Details:
+
+- Passwords must now be a minium of 12 characters and not contain "personal" information
+- The captcha has been removed from the forgotten password page
+
 ## Release 1.141.1
 
 Date: 24th June 2020
