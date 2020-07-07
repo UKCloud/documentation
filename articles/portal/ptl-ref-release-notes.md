@@ -23,7 +23,7 @@ This article provides a list of completed Portal releases.
 
 Date: 7th July 2020
 
-Feature Update
+Feature update
 
 Details:
 
