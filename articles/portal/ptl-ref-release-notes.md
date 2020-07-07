@@ -27,8 +27,9 @@ Update and ITHC
 
 Details:
 
-- Passwords must now be a minium of 12 characters and not contain "personal" information
-- The captcha has been removed from the forgotten password page
+- Passwords must now be a minimum of 12 characters and not contain personal information
+
+- Captcha has been removed from the forgotten password page
 
 ## Release 1.141.1
 
