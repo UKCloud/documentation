@@ -37,13 +37,13 @@ There are two pre-requisites for performing this operation:
 
 You can find the installer RPM files in the following locations:
 
-- [Assured RHEL 6 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261766&Signature=zCxurIGSgb2TLrr2ISgqngRuTeU%3D)
+- [Assured RHEL 6 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625780068&Signature=2k%2BmhJ6BKzVVeJi6qwKzBJsG5TM%3D)
 
-- [Assured RHEL 7 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL7-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261781&Signature=txJ05hPU56lncP%2Bj8hvdgfJJFok%3D)
+- [Assured RHEL 7 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL7-Standard-2.2-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625780100&Signature=%2F4f3KQO02KVG0sNQ7%2FhSH%2BNVCg0%3D)
 
-- [Elevated RHEL 6 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL6-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261791&Signature=ser5iUAzUdPOX1hBHyRjw6PUULI%3D)
+- [Elevated RHEL 6 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL6-Standard-2.5-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625780111&Signature=dP8KvNxmC01dBdt0zOyLPq9Q6rA%3D)
 
-- [Elevated RHEL 7 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL7-Standard-2.1-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625261806&Signature=tPUvM%2B53G1qVD6lCEUbDNQ9IMX8%3D)
+- [Elevated RHEL 7 Standard](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL7-Standard-2.5-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1625780129&Signature=pR2g6hZEE%2BZimRCU5G0g9gQHvww%3D)
 
 If you require the high availability (HA) package, raise a Service Request directly via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and we'll provide you with a download location.
 
@@ -51,7 +51,7 @@ If you require the high availability (HA) package, raise a Service Request direc
 
 2. Install the relevant RPM.
 
-    For example, for RHEL6: `rpm -ivh IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm`.
+    For example, for RHEL6 in Assured: `yum install IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm`.
 
     If you're installing a new RPM, such as replacing standard with HA you need to use the `-force` flag to overwrite the existing certificates.
 
@@ -73,9 +73,9 @@ If you require the high availability (HA) package, raise a Service Request direc
 
 If you already have one of the original UKCloud RPMs installed on your system and require one of the latest ones documented in this article (due to the original ones expiring), you can run a command to upgrade it once you've downloaded the required files.
 
-For example, for RHEL6: `rpm -U IL2-Client-RHEL6-Standard-2.1-1.noarch.rpm`.
+For example, for RHEL6 in Assured: `yum update IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm`.
 
-This will overwrite the files and certificates associated with the original RPM and restore access to the RHUA.
+This will overwrite the files and certificates associated with the original RPM and restore access to the RHUA (as well as tidying up the previously installed RPM).
 
 ## Troubleshooting
 
@@ -94,6 +94,10 @@ Check the DNS lookup is working and you have the correct entry for Assured and E
 ### Incorrect version
 
 Ensure you have installed the correct RPM for your release.
+
+### Comms errors when trying to upgrade the RPM using yum (RHEL6 only)
+
+Due to the previous RPMs no longer being valid for accessing the RHUI, when running RHEL6, you may see some errors when trying to upgrade the RPM. To work around this, issue: `yum update --disableplugin=rhui-lb IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm`. This is not an issue when running RHEL7
 
 ### Unauthorized (401) Error when trying to access RHUA
 
