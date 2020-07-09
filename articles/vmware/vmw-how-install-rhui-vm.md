@@ -97,7 +97,7 @@ Ensure you have installed the correct RPM for your release.
 
 ### Comms errors when trying to upgrade the RPM using yum (RHEL6 only)
 
-Due to the previous RPMs no longer being valid for accessing the RHUI, when running RHEL6, you may see some errors when trying to upgrade the RPM. To work around this, issue: `yum update --disableplugin=rhui-lb IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm`. This is not an issue when running RHEL7
+Due to the previous RPMs no longer being valid for accessing the RHUI, when running RHEL6, you may see some errors when trying to upgrade the RPM. To work around this, issue: `yum update --disableplugin=rhui-lb IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm`. This is not an issue when running RHEL7.
 
 ### Unauthorized (401) Error when trying to access RHUA
 
