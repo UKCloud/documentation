@@ -4,7 +4,7 @@ description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
 reviewer: ccampbell
-lastreviewed: 13/05/2020
+lastreviewed: 14/07/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,16 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 1.144.0
+
+Date: 14th July 2020
+
+Feature update
+
+Details:
+
+- Check a contacts primary instead secondary user on initial account switch to prevent blank page appearing
 
 ## Release 1.143.0
 
