@@ -23,11 +23,11 @@ This article provides a list of completed Portal releases.
 
 Date: 14th July 2020
 
-Feature update
+Bug Fix
 
 Details:
 
-- Check a contacts primary instead secondary user on initial account switch to prevent blank page appearing
+- Prevented situation where a customer might be presented with a blank page when switching to a newly created account
 
 ## Release 1.143.0
 
