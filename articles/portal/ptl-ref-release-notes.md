@@ -23,7 +23,7 @@ This article provides a list of completed Portal releases.
 
 Date: 14th July 2020
 
-Bug Fix
+Bug fix
 
 Details:
 
