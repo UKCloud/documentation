@@ -35,7 +35,7 @@
   - name: High Performance Compute
     topicHref: articles/hpc/hpc-ref-overview.md
   - name: Managed Services
-    topicHref: articles/managed-services/man-sd-compute.md
+    topicHref: articles/managed-services/man-services-landing-page.md
   - name: Migration to the Cloud 
     topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
   - name: Private Cloud

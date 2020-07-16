@@ -3,15 +3,15 @@ title: Extended Network Support from UKCloud Service Definition
 description: Provides an overview of what is provided by the Extended Network Support from UKCloud service
 services: managed-services
 author: Sue Highmoor
-reviewer:
-lastreviewed: 02/07/2019
-toc_rootlink: Extended Network Support
-toc_sub1: 
+reviewer: Steve Dixon
+lastreviewed: 16/07/2020
+toc_rootlink: Managed Services
+toc_sub1: Extended Network Support
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Extended Network Support from UKCloud Service Definition
-toc_fullpath: Extended Network Support/man-sd-network.md
+toc_fullpath: Managed Services/man-sd-network.md
 toc_mdlink: man-sd-network.md
 ---
 
