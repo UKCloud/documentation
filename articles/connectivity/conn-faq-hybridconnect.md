@@ -76,7 +76,7 @@ You need to either contact your account director or raise a service request via 
 
 ## How much do you charge for a HybridConnect connection?
 
-There is a one‑off charge of £2,000.
+There is a one‑off charge of £1,000 and then a monthly charge of £150 for a 1Gb port and £300 for a 10Gb port.
 
 ## General connectivity questions 
 
