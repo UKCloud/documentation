@@ -30,7 +30,7 @@ The following video shows how Zerto Virtual Manager can support your organisatio
 
 ## Related articles
 
-- [*Getting Started Guide for Disaster Recovery as a Service](draas-gs.html)
+- [*Getting Started Guide for Disaster Recovery as a Service](draas-gs.md)
 
 ## Feedback
 
