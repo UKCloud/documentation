@@ -123,7 +123,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vmware-
 
 16. In the *Request Header* dialog box, in the **Name** field enter 'Authorization'.
 
-17. In the **Value** field, type 'Bearer' with a trailing space, then paste the string of characters copied in the previous step, then click **Okay**.
+17. In the **Value** field, enter 'Bearer ' (with a trailing space), then paste the string of characters copied in the previous step, then click **Okay**.
 
     ![Authorization token in request headers](images/vmw-restclient-request-headers-token.png)
 
