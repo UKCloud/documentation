@@ -46,7 +46,7 @@ When using the istio-system as a multi-tenant control plane, each ingress needs 
 
 ### Services
 
-Kiali can accessthe Service Mesh components configuration and will report on configuration errors. While not requred for functionality, all services should be labelled and ports should have a name and protocol defined in order to avoid Kiali reporting configuration errors.
+Kiali can access the Service Mesh components configuration and will report on configuration errors. While not requred for functionality, all services should be labelled and ports should have a name and protocol defined in order to avoid Kiali reporting configuration errors.
 
 ### Internal traffic routing
 
