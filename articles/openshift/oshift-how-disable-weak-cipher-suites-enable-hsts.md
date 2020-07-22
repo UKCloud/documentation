@@ -71,7 +71,7 @@ HSTS (HTTP Strict Transport Security) prevents MITM attacks such as protocol dow
 > It is currently not possible to enable HSTS for the OpenShift v3.x web console or the OpenShift v4.x API server.
 
 > [!WARNING]
-> HSTS should only be enabled on routes which currently have a valid certificate; should the certificate become invalid the route will be inaccessible, due to how browsers' HSTS mechanism works. Particular caution should be exercised if you are using a non-standard hostname (i.e. not ending in `<your-cluster-hostname>.ukcloud.com`) for a route - in this case you should ensure a valid certificate is contained within the route spec.
+> HSTS should only be enabled on routes which currently have a valid certificate; should the certificate become invalid the route will be inaccessible, due to how browsers' HSTS mechanism works. Particular caution should be exercised if you are using a non-standard hostname (i.e. not ending in `<your-cluster-hostname>.ukcloud.com`) for a route - in this case you should ensure a valid certificate is contained within the route spec for edge and re-encrypt routes or within the container if using the pass-through TLS encryption method.
 
 HSTS can be enabled on secure routes by using the following command:
 
