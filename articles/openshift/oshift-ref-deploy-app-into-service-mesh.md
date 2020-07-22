@@ -29,7 +29,7 @@ This article is intened for teams familiar with OpenShift, microservices and the
 ### Prerequisites
 
 * Familiarity with the concepts involved in a Service Mesh.
-* The OpenShift Service Mesh (OSM) Operator is installed into your OpenShift cluster. See the [OpenShift docs](https://docs.openshift.com/container-platform/4.4/service_mesh/service_mesh_install/preparing-ossm-installation.html) for an installation guide.
+* The OpenShift Service Mesh (OSM) Operator is installed into your OpenShift cluster. See the [OpenShift docs](https://docs.openshift.com/container-platform/4.5/service_mesh/service_mesh_install/preparing-ossm-installation.html) for an installation guide.
 * The istio-system project exists and the target project for the sample application deployment has been added to the OSM `ServiceMeshMemberRole` configuration.
 
 ## Preparing services for deployment
