@@ -32,7 +32,7 @@ There are three update channels available to choose from:
 * Stable - This is the recommended channel for production clusters. Updates are released to this channel after data has been collected by Red Hat from customers running updates from the fast channel and stability of the updates have been confirmed.
 
 > [!NOTE]
-> UKCloud would ask that all customers remain on the stable channel for production clusters. We reccommend only using the fast channel if there are specific bug fixes/security patches you require.
+> UKCloud would ask that all customers remain on the stable channel for production clusters. We recommend only using the fast channel if there are specific bug fixes/security patches you require.
 
 ### How to Upgrade
 
