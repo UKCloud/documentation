@@ -50,7 +50,7 @@ Ensure the correct channel is selected. If an update is available there will be 
 
 Click the 'Update Now' button and you can choose a dropdown of available versions and set off an update as shown below:
 
-![update screenshot](images/oshift-v4-updates.png)
+![update screenshot](images/oshift-v4-update.png)
 
 ### Further information
 
