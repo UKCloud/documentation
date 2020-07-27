@@ -7,7 +7,7 @@ reviewer: gsmith
 lastreviewed: 20/11/2019
 
 toc_rootlink: How To
-toc_sub1:
+toc_sub1: v3
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -30,7 +30,7 @@ This article assumes familiarity with the Linux command line, and with the `oc` 
 
 ### Prerequisites
 
-To complete the steps in this article, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc login`. Your account must have access to edit objects in the "default" project. 
+To complete the steps in this article, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc login`. Your account must have access to edit objects in the "default" project.
 
 Your OpenShift cluster must be version 3.x.
 
@@ -44,7 +44,7 @@ Your OpenShift cluster must be version 3.x.
     Cache-Control: private, max-age=0, no-cache, no-store
     Connection: close
     Content-Type: text/html
-    
+
     <html>
     <head>
     ...
@@ -56,25 +56,25 @@ Your OpenShift cluster must be version 3.x.
     $ oc project default
     $ oc create configmap haproxy-custom-configs --from-file=error-page-503.http
     ```
-       
+
 3. Attach the configmap as a volume to the router deployment config:
 
     ```none
     $ oc set volume dc/router --add --name custom-configs -t configmap --configmap-name=haproxy-custom-configs -m /var/lib/haproxy/conf/error-page-503.http --sub-path=error-page-503.http
     ````
-       
-5. If your cluster is multi-network (connected to HSCN, VRF, and so on), you may want to repeat this for the router-private configmap so that the private network routers also serve the custom page:      
+
+5. If your cluster is multi-network (connected to HSCN, VRF, and so on), you may want to repeat this for the router-private configmap so that the private network routers also serve the custom page:
 
     ```none
     $ oc set volume dc/router-private --add --name custom-configs -t configmap --configmap-name=haproxy-custom-configs -m /var/lib/haproxy/conf/error-page-503.http --sub-path=error-page-503.http
     ```
-	   
+
 ## Reverting to the default Application Not Available page
 
 To revert the above changes and return to the default error page, run the following:
 
 ```none
-$ oc set volume dc/router --remove --name custom-configs 
+$ oc set volume dc/router --remove --name custom-configs
 $ oc set volume dc/router-private --remove --name custom-configs # (if router-private was edited)
 $ oc delete configmap haproxy-custom-configs
 ```

@@ -3,11 +3,11 @@ title: How to back up and restore container directories and databases on OpenShi
 description: Provides guidance on how to back up container directories and databases and how to restore them
 services: openshift
 author: Daniel Brennand
-reviewer: 
+reviewer:
 lastreviewed: 03/12/2019
 
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: v3
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -134,10 +134,10 @@ In this example, the type of database being backed up is PostgreSQL. Substitute 
 
     ```bash
     oc get pods
-    
+
     NAME                           READY    STATUS      RESTARTS    AGE
     postgresql-1-hscwm   1/1           Running    0                   31m
- 
+
     # In this example, the database is running in pod: postgresql-1-hscwm
     ```
 
@@ -148,7 +148,7 @@ In this example, the type of database being backed up is PostgreSQL. Substitute 
     # Dump the contents of the database and pipe it into gzip (to create a compressed archive)
     # oc exec usage:
     oc exec {podname} -- bash -c 'pg_dump {databasename} | gzip > /opt/app-root/src/{databasename}.gz'
-    
+
     # Example usage:
     oc exec postgresql-1-hscwm -- bash -c 'pg_dump sampledb | gzip > /opt/app-root/src/sampledb.gz'
     ```
@@ -158,7 +158,7 @@ In this example, the type of database being backed up is PostgreSQL. Substitute 
     ```bash
     # oc rsync usage:
     oc rsync {podname}:{path/to/directory} {destination/on/host}
- 
+
     # Example usage:
     # This command copies the database backup file to /home/databasebackup
     oc rsync postgresql-1-hscwm:/opt/app-root/src/sampledb.gz ~/oshiftdatabasebackup
