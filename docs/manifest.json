@@ -3983,6 +3983,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/draas/draas-vid-zerto-dr.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/draas/draas-vid-zerto-dr.html",
+          "hash": "6Ouialmx1UwIhTlWPsKhGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "articles/draas/images/draas-zerto-draas.png",
       "output": {
@@ -4021,7 +4033,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/toc.html",
-          "hash": "KgeL7XTxb+dJEeTroPQo6w=="
+          "hash": "EKxq8iYkbwdJJbzNlf1Nxw=="
         }
       },
       "is_incremental": false,
@@ -18962,7 +18974,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-license-microsoft.html",
-          "hash": "4CZ7pSSQg1EwgYksgru9wA=="
+          "hash": "nWWp4Ze6Ka8r6ZaXG6Pndg=="
         }
       },
       "is_incremental": false,
@@ -19881,7 +19893,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 424,
+          "total_file_count": 425,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
