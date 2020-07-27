@@ -64,6 +64,7 @@ Weaveworks have a sample microservice-based application called the Sock Shop whi
 
 Weaveworks sock shop project - https://microservices-demo.github.io/
 UKCloud Sock Shop for OSM - https://github.com/UKCloud/sock-shop-service-mesh
+Deploying applications on Red Hat OpenShift Service Mesh - https://docs.openshift.com/container-platform/4.5/service_mesh/service_mesh_day_two/prepare-to-deploy-applications-ossm.html
 
 ## Feedback
 
