@@ -3,8 +3,8 @@ title: How to connect to the UKCloud Windows Server Update Services (WSUS)
 description: Shows how to connect to the UKCloud Windows Update Services within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: jpaddock
+lastreviewed: 01/04/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -100,9 +100,7 @@ To quickly replicate the settings defined above to other Windows VMs in your env
 
 Another option is to reference these settings in a Group Policy Object if you have Group Policy running in your environment.
 
-These settings will depend on your current setup. The following article provides some useful information:
-
-<https://technet.microsoft.com/en-us/library/cc720539(v=ws.10).aspx>
+These settings will depend on your current setup. The [Configure Group Policy Settings for Automatic Updates](https://docs.microsoft.com/en-us/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates) article from Microsoft provides some useful information.
 
 > [!NOTE]
 > UKCloud are not responsible for content published on the URLs in the above guide. If you believe the link is broken or is no longer relevant, contact UKCloud Customer Support via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.

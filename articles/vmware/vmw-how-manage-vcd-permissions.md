@@ -3,8 +3,8 @@ title: How to manage permissions for vCloud Director
 description: Shows how to manage and adjust permissions and roles for vCloud Director within the UKCloud Portal
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: jpaddock
+lastreviewed: 02/04/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -89,6 +89,13 @@ vApp | Access to VM Console | &check; | &check; | &check; | &check; | &check;
 &nbsp; | Manage VM Password Settings | &check; | &check; | &check; | &check; | &check;
 &nbsp; | Share a vApp | &nbsp; | &nbsp; | &check; | &check; | &check;
 &nbsp; | Start/Stop/Suspend/Reset a vApp | &nbsp; | &check; | &check; | &check; | &check;
+
+### API Only role
+
+UKCloud have created an **API Only** role that restricts users with vCloud Director permissions to accessing vCloud Director solely via the API, with no GUI access.
+
+> [!NOTE]
+> The **API Only** role must be selected in addition to one of the vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
 
 ## Feedback
 
