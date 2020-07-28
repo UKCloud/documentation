@@ -28,8 +28,6 @@
   items:
   - name: Access CentOS Update servers
     href: vmw-how-access-centos-update-servers.md
-  - name: Access edge gateway settings
-    href: vmw-how-access-edge.md
   - name: Access Red Hat update servers
     href: vmw-how-access-redhat-update-servers.md
   - name: Access syslog data for your advanced gateway
@@ -164,6 +162,10 @@
     href: vmw-ref-edge-ha.md
   - name: Fix for customers unable to upload and download vApps or catalog items
     href: vmw-ref-fix-unable-to-vapps.md
+  - name: Fixing your advanced gateway if you encounter NullPointerException error
+    href: vmw-ref-trouble-null-pointer.md
+  - name: Fixing your IPsec VPN following upgrade to NSX 6.4
+    href: vmw-ref-trouble-ipsec-nsx64.md
   - name: IPsec VPN Foundation and PRIME profiles
     href: vmw-ref-ipsec-vpn.md
   - name: Known working and non-working firewalls
@@ -182,6 +184,8 @@
     href: vmw-ref-powercli-vcloud.md
   - name: Red Hat Update Infrastructure overview
     href: vmw-ref-rhui.md
+  - name: Retrieving snapshot summaries for multiple accounts
+    href: vmw-ref-snapshot-summary-api.md
   - name: Shared Secret Length Issues IPSec VPN
     href: vmw-ref-shared-secret-issues.md
   - name: System Center on the UKCloud platform
@@ -226,12 +230,6 @@
     href: vmw-sco-synchronous-protection.md
   - name: UKCloud for VMware Service Scope
     href: vmw-sco.md
-- name: Troubleshooting
-  items:
-  - name: Fixing your advanced gateway if you encounter NullPointerException error
-    href: vmw-ref-trouble-null-pointer.md
-  - name: Fixing your IPsec VPN following upgrade to NSX 6.4
-    href: vmw-ref-trouble-ipsec-nsx64.md
 - name: Videos
   items:
   - name: Benefits of VMware L2 VPN

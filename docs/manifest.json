@@ -18446,7 +18446,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "mEnw7kNfnr9we8VS6+dtCA=="
+          "hash": "HH09+D5+NsKVAZJugvWKrQ=="
         }
       },
       "is_incremental": false,
@@ -18586,18 +18586,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-access-edge.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-access-edge.html",
-          "hash": "ZrdyntGLjKAoZAK1leHoNQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-access-redhat-update-servers.md",
       "output": {
         ".html": {
@@ -18650,7 +18638,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-vcloud-api.html",
-          "hash": "10sXVnsIA3Iq/cdKenxfTw=="
+          "hash": "v2mHBrNEY6LIk71dO/UqYQ=="
         }
       },
       "is_incremental": false,
@@ -18662,7 +18650,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-build-edge.html",
-          "hash": "+vWtkdkZ9FOyt78iVTBazg=="
+          "hash": "8kYKVNZpi/ZuRKf4k/XiTA=="
         }
       },
       "is_incremental": false,
@@ -18722,7 +18710,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-l2-vpn.html",
-          "hash": "y2Rj6Ypeb5xqTvbq2BFfCw=="
+          "hash": "qU2YuvrIJ5UtIPqgPpJUxA=="
         }
       },
       "is_incremental": false,
@@ -18746,7 +18734,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-connect-windows-update.html",
-          "hash": "3ajmgSO7Fe318SOXvgxKNw=="
+          "hash": "YV2qxjnaeH3u46hdVGGXcA=="
         }
       },
       "is_incremental": false,
@@ -18926,7 +18914,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-openvpn.html",
-          "hash": "2EUTmtFZMcwTb6BoH4gdMA=="
+          "hash": "lHCnp/LxYZAAeWDLKa37hQ=="
         }
       },
       "is_incremental": false,
@@ -19034,7 +19022,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-vcd-permissions.html",
-          "hash": "bpjIMBH2zrpxEJjPXj0U+w=="
+          "hash": "oVyAKXCj04gFS5/9Qpi/Pg=="
         }
       },
       "is_incremental": false,
@@ -19094,7 +19082,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-retrieve-utilisation-metrics.html",
-          "hash": "a3u3mnXLFaA2GEJXzN2DwQ=="
+          "hash": "icIHtIYj3v4V3iF0cAJhog=="
         }
       },
       "is_incremental": false,
@@ -19178,7 +19166,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-affinity-rules.html",
-          "hash": "o0mPbc+mOijub3GCjZ/suw=="
+          "hash": "bbfY4ohdgmReWaU28kjgdQ=="
         }
       },
       "is_incremental": false,
@@ -19250,7 +19238,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-install-local.html",
-          "hash": "U3VRKdJhaI4Cg0BRrYtKFg=="
+          "hash": "Wg1xHgq9WqfKY1S/ZIBIUg=="
         }
       },
       "is_incremental": false,
@@ -19498,6 +19486,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-snapshot-summary-api.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-snapshot-summary-api.html",
+          "hash": "03pbys0gdTLzU0eZiuJ64g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-system-center.md",
       "output": {
         ".html": {
@@ -19526,7 +19526,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-trouble-ipsec-nsx64.html",
-          "hash": "7qEx94I7mcjKqaSBnZ1HGg=="
+          "hash": "c10eug41KbibCF+jR/7URQ=="
         }
       },
       "is_incremental": false,
@@ -19538,7 +19538,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-trouble-null-pointer.html",
-          "hash": "3ymYNpYuW1xzrN2Yl6GMQQ=="
+          "hash": "QdkjwSYbdq1qac2nPZAJmg=="
         }
       },
       "is_incremental": false,
