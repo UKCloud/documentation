@@ -5906,6 +5906,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-ref-deploy-app-into-service-mesh.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-ref-deploy-app-into-service-mesh.html",
+          "hash": "nhASC74+ZyDXYuJe+RPcJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-ref-dns-zone-forwarding.md",
       "output": {
         ".html": {
@@ -6018,7 +6030,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "snFwKrFQhtDxWfEorAhrMw=="
+          "hash": "H/2fBHeSWtHltb2bG6MQ7Q=="
         }
       },
       "is_incremental": false,
@@ -19893,7 +19905,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 425,
+          "total_file_count": 426,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
