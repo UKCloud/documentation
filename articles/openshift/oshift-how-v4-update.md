@@ -48,7 +48,9 @@ There are three update channels available to choose from:
 
 2. Ensure the correct channel is selected. If an update is available there will be a large blue **Update Now** button. 
 
-3. Click **Update Now** and select from the list of available versions, then set off the update as shown below:
+3. Click **Update Now**.
+
+4. In the *Update Cluster* dialog box, from the **Select New Version** list, select the version to upgrade to, then click **Update**.
 
     ![update screenshot](images/oshift-v4-update.png)
 
