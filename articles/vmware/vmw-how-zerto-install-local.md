@@ -3,8 +3,8 @@ title: How to install and configure Zerto in your local environment
 description: This guide describes the steps you need to perform in your local environment to set up Zerto
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: jpaddock
+lastreviewed: 01/05/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
