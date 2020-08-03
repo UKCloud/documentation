@@ -3,6 +3,8 @@ title: Partitioning projects or end customers using UKCloud accounts
 description: 
 services: portal
 author: Sophie Wake
+reviewer: dbroderick
+lastreviewed: 03/08/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
