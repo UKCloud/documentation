@@ -19221,45 +19221,36 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-vls-add-products.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vls-add-products.html",
-          "hash": "SUmajLZS3rRBdkvLHYInfA=="
+          "hash": "FnHHFTHiyRdnYlE9xxoShA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-vls-install-usage-meter.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vls-install-usage-meter.html",
-          "hash": "xIZEEJaoaPUKcq8/xb+khA=="
+          "hash": "cLFOtww4ahGXA2LifNR9kA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-vls-report-usage.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vls-report-usage.html",
-          "hash": "ZBWQnHwqu+ypUlAhB+9/dg=="
+          "hash": "QJLb7TP7tkhPsFdyJ3IYnw=="
         }
       },
       "is_incremental": false,
