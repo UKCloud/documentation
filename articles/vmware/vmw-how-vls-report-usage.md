@@ -29,9 +29,9 @@ This article provides all the information you need to use the Usage Meter to gen
 
 Before you can create usage reports, you must have:
 
-- Installed and configured the vCloud Usage Meter (see [*How to install the vCloud Usage Meter*](vmw-how-install-vcloud-usage-meter.md))
+- Installed and configured the vCloud Usage Meter (see [*How to install the vCloud Usage Meter*](vmw-how-vls-install-usage-meter.md))
 
-- Added your VMware products to the Usage Meter and completed the discovery of the environment (see [*How to add products to the vCloud Usage Meter*](vmw-how-add-products-usage-meter.md))
+- Added your VMware products to the Usage Meter and completed the discovery of the environment (see [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products.md))
 
 ## Creating a customer record
 

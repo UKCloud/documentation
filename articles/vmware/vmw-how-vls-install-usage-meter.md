@@ -258,9 +258,9 @@ After finishing the initial Usage Meter configuration successfully, you can sele
 
 This article described how to install and configure the vCloud Usage Meter. Next, you need to give the Usage Meter access to the products that you need it to report on and send monthly usage reports to UKCloud.
 
-- [*How to add products to the vCloud Usage Meter*](vmw-how-add-products-usage-meter.md)
+- [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products.md)
 
-- [*How to report licence usage for the VMware Licence Service*](vmw-how-report-licence-usage.md)
+- [*How to report licence usage for the VMware Licence Service*](vmw-how-vls-report-usage.md)
 
 ## Feedback
 
