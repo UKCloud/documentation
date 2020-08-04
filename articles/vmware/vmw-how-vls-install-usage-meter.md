@@ -157,7 +157,7 @@ VMware has released several rollup patch packs for Usage Meter 3.6.1. You need t
 
 3. Open the Usage Meter VM console and log on as `root`.
 
-4. Edit the `/etc/sshd/sshd.conf` file using vi and, in the `# Authentication` section, change the `PermitRootLogin` option to `yes`, then save the file.
+4. Edit the `/etc/ssh/sshd.conf` file using vi and, in the `# Authentication` section, change the `PermitRootLogin` option to `yes`, then save the file.
 
 5. Start the SSH service using the following command:
 
@@ -169,7 +169,7 @@ VMware has released several rollup patch packs for Usage Meter 3.6.1. You need t
 
     `service sshd stop`
 
-8. Edit the `/etc/sshd/sshd.conf` file using vi and, in the `# Authentication` section, change the `PermitRootLogin` option back to `no`, then save the file.
+8. Edit the `/etc/ssh/sshd.conf` file using vi and, in the `# Authentication` section, change the `PermitRootLogin` option back to `no`, then save the file.
 
 9. Change directory to `/home/usgmtr` and unzip the hot patch file using the following command:
 
