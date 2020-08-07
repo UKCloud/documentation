@@ -23,11 +23,11 @@ This article provides a list of completed Portal releases.
 
 Date: 7th August 2020
 
-Feature Update
+Feature update
 
 Details:
 
-- Simplify and improve the experience of OpenStack users in the portal
+- Simplify and improve the experience of OpenStack users in the Portal
 
 ## Release 1.144.0
 
