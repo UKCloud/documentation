@@ -4,7 +4,7 @@ description: Outlines what is considered to be fair use of UKCloud network acces
 services: connectivity
 author: Sue Highmoor
 reviewer:
-lastreviewed: 31/01/2019 09:48:38
+lastreviewed: 07/08/2020 
 
 toc_rootlink: Reference
 toc_sub1: 
