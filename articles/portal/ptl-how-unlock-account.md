@@ -3,8 +3,8 @@ title: How to unlock a user account
 description: Explains how a Portal administrator can unlock a Portal user account
 services: portal
 author: Sue Highmoor
-reviewer: Lewis Dean
-lastreviewed: 16/10/2019 11:00:00
+reviewer: William Llewellyn
+lastreviewed: 07/08/2020 14:00:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,17 +20,13 @@ toc_mdlink: ptl-how-unlock-account.md
 
 ## Overview
 
-A user account may be locked after too many failed login attempts. A locked user account must be unlocked by a Portal administrator.
+A user account may be locked or unlocked by a Portal administator.
 
 ## Intended audience
 
 To complete the steps in this guide you must be a Portal administrator.
 
 ## Unlocking a user account
-
-If a user incorrectly enters their password three times, they'll be prompted to enter a captcha code until they successfully log in. If the user then incorrectly enters the captcha code or password another three  times, a seventh unsuccessful login attempt will result in the account being locked.
-
-![Log in dialog box for locked account](images/ptl-account-locked.png)
 
 A locked user account must be unlocked by a Portal administrator.
 
