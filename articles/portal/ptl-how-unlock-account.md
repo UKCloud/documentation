@@ -4,7 +4,7 @@ description: Explains how a Portal administrator can unlock a Portal user accoun
 services: portal
 author: Sue Highmoor
 reviewer: William Llewellyn
-lastreviewed: 07/08/2020 14:00:00
+lastreviewed: 07/08/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -46,7 +46,7 @@ To unlock a user account:
 
 4. Select the **User** tab.
 
-    Next to the **Is active?** check box, you'll see the tab: **User account locked**.
+    Next to the **Is active?** check box, you'll see the tag: **User account locked**.
 
     ![User account locked](images/ptl-locked-user.png)
 
@@ -54,7 +54,7 @@ To unlock a user account:
 
 6. Click **Save**.
 
-    The tag next to the check box changes to User account active.
+    The tag next to the check box changes to **User account active**.
 
     ![User account active](images/ptl-active-user.png)
 
