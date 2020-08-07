@@ -238,6 +238,8 @@
     href: vmw-sco-synchronous-protection.md
   - name: UKCloud for VMware Service Scope
     href: vmw-sco.md
+  - name: VMware Licence Service Service Scope
+    href: vmw-sco-vls.md
 - name: Videos
   items:
   - name: Benefits of VMware L2 VPN
