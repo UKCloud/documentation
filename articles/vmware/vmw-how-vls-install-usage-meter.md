@@ -248,7 +248,7 @@ After finishing the initial Usage Meter configuration successfully, you can sele
 
     - **From Email**: Enter a sender email address, for example, `usagemeter@<domain>`
 
-    - **To Email**: Enter `licensing@ukcloud.com` (if you also want to to receive failed collection alerts, use a comma between addresses and enter your internal email address)
+    - **To Email**: Enter `vls@ukcloud.com` (if you also want to to receive failed collection alerts, use a comma between addresses and enter your internal email address)
 
     - **Alerts**: Ensure **Failed collection** is selected
 
