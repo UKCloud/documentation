@@ -53,7 +53,7 @@ You can use `virt-v2v` to convert VMs running the following operating systems to
 > `virt-v2v` may convert VMs running other Linux operating systems, such as Debian and Ubuntu, but these conversions are not supported.
 > 
 > [!NOTE]
-> As of January 2020 some operating systems are not supported for conversion on RHELV8 but they are still supported on RHELV7 as the table above shows.
+> As of January 2020 some operating systems are not supported for conversion on RHEL 8 but they are still supported on RHEL 7 as the table above shows.
 
 Conversions from the following hypervisors are supported:
 
