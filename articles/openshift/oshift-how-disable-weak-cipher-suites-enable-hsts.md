@@ -23,37 +23,37 @@ This article outlines steps to increase the security of externally exposed route
 
 ### Intended audience
 
-OpenShift developers who have created and deployed services into OpenShift, and created and exposed secure routes for those services.
+OpenShift developers who have created and deployed services into OpenShift and created and exposed secure routes for those services.
 
 ## Disable weak cipher suites
 
-Cipher suites perform an important role in determining the security of a TLS connection. Over time vulnerabilities have been identified in the algorithms used by cipher suites which has resulted in published methods of decrypting and manipulating encrypted traffic. It is therefore generally recommended to use as modern a cipher suite as possible.
+Cipher suites perform an important role in determining the security of a TLS connection. Over time, vulnerabilities have been identified in the algorithms used by cipher suites, which has resulted in published methods of decrypting and manipulating encrypted traffic. It's therefore generally recommended to use as modern a cipher suite as possible.
 
 ### UKCloud for OpenShift v3.x
 
 #### Data plane
 
-In order to provide extended client compatibility, the OpenShift router supports cipher suites from TLS 1.0 - TLS 1.2 by default. Some of these cipher suites (especially older ones) are vulnerable to man-in-the-middle (MITM) attacks.
+To provide extended client compatibility, the OpenShift router supports cipher suites from TLS 1.0 - TLS 1.2 by default. Some of these cipher suites (especially older ones) are vulnerable to man-in-the-middle (MITM) attacks.
 
-If exposed secure routes are only being accessed from modern clients (that support TLS 1.2 and above) the weak cipher suites can be disabled by adding the following environment variable to any router `DeploymentConfig`s:
+If exposed secure routes are only being accessed from modern clients (that support TLS 1.2 and above),  you can disable the weak cipher suites by adding the following environment variable to any router `DeploymentConfig`:
 
 ```
 oc set env dc/router ROUTER_CIPHERS=modern -n default
 ```
 
-This will trigger a rollout of the `DeploymentConfig`, going forward the new router pods will only accept cipher suites from TLS 1.2.
+This triggers a rollout of the `DeploymentConfig`. Going forward, the new router pods will only accept cipher suites from TLS 1.2.
 
 #### Control plane
 
 By default, the OpenShift control plane (web console) only supports TLS 1.2 ciphers, although these do not provide forward secrecy.
 
-It is possible to restrict the ciphers to only ones that provide forward secrecy, to do so please raise a Service Request to the UKCloud OpenShift Support team via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+We can restrict the ciphers to only those that provide forward secrecy. To do this, raise a Service Request with the UKCloud OpenShift Support team via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### UKCloud for OpenShift v4.x
 
 #### Data plane
 
-There are no weak ciphers supported by the OpenShift `IngressController` since by default it supports TLS 1.2 cipher suites with forward secrecy. It is possible to further restrict the ciphers by modifying the default `IngressController` object, specifically the value of `IngressController.spec.tlsSecurityProfile`
+There are no weak ciphers supported by the OpenShift `IngressController` since by default it supports TLS 1.2 cipher suites with forward secrecy. It is possible to further restrict the ciphers by modifying the default `IngressController` object, specifically the value of `IngressController.spec.tlsSecurityProfile`:
 
 ```
 oc edit ingresscontroller default -n openshift-ingress-operator
@@ -65,15 +65,15 @@ There are no weak ciphers supported by the OpenShift control plane (API) since b
 
 ## Enable HSTS
 
-HSTS (HTTP Strict Transport Security) prevents MITM attacks such as protocol downgrading by setting a header within HTTPS responses. This header (`Strict-Transport-Security`) is cached by a browser and ensures that future requests to the same host always use HTTPS as opposed to HTTP.
+HSTS (HTTP Strict Transport Security) prevents MITM attacks, such as protocol downgrading by setting a header within HTTPS responses. This header (`Strict-Transport-Security`) is cached by a browser and ensures that future requests to the same host always use HTTPS rather than HTTP.
 
 > [!NOTE]
-> It is currently not possible to enable HSTS for the OpenShift v3.x web console or the OpenShift v4.x API server.
+> It is currently not possible to enable HSTS for the the OpenShift v3.x web console or OpenShift v4.x API server.
 
 > [!WARNING]
-> HSTS should only be enabled on routes which currently have a valid certificate; should the certificate become invalid the route will be inaccessible, due to how browsers' HSTS mechanism works. Particular caution should be exercised if you are using a non-standard hostname (i.e. not ending in `<your-cluster-hostname>.ukcloud.com`) for a route - in this case you should ensure a valid certificate is contained within the route spec for edge and re-encrypt routes or within the container if using the pass-through TLS encryption method.
+> You should only enable HSTS on routes that currently have a valid certificate. If the certificate becomes invalid, the route will be inaccessible, due to how browsers' HSTS mechanisms works. You should exercise particular caution if you're using a non-standard hostname (that is, not ending in `<your-cluster-hostname>.ukcloud.com`) for a route. In this case you should ensure a valid certificate is contained within the route spec for edge and re-encrypt routes or within the container if using the pass-through TLS encryption method.
 
-HSTS can be enabled on secure routes by using the following command:
+Enable HSTS on secure routes by using the following command:
 
 ```
 oc annotate route <routename> haproxy.router.openshift.io/hsts_header=max-age=31536000
@@ -82,23 +82,32 @@ oc annotate route <routename> haproxy.router.openshift.io/hsts_header=max-age=31
 By default in UKCloud for OpenShift v4.x clusters, the following apps routes provisioned during deployment have HSTS enabled:
 
 - OpenShift Console
+
 - Kibana
+
 - AlertManager
+
 - Grafana
+
 - Prometheus
+
 - Thanos
 
 ## Further reading
 
-- https://wiki.mozilla.org/Security/Server_Side_TLS
-- https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
+- <https://wiki.mozilla.org/Security/Server_Side_TLS>
+
+- <https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security>
 
 ### UKCloud for OpenShift v3.x Specific
-- https://docs.openshift.com/container-platform/3.11/install_config/router/default_haproxy_router.html#bind-ciphers
-- https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-enabling-hsts
+
+- <https://docs.openshift.com/container-platform/3.11/install_config/router/default_haproxy_router.html#bind-ciphers>
+
+- <https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-enabling-hsts>
 
 ### UKCloud for OpenShift v4.x Specific
-- https://docs.openshift.com/container-platform/4.4/networking/routes/route-configuration.html#nw-enabling-hsts_route-configuration
+
+- <https://docs.openshift.com/container-platform/4.4/networking/routes/route-configuration.html#nw-enabling-hsts_route-configuration>
 
 ## Feedback
 
