@@ -69,7 +69,7 @@ After creating the customer record, you need to create a rule to map resources t
 
 ## Generating the licence usage report
 
-Every month, you're required to send the following reports to <licensing@ukcloud.com>:
+Every month, you're required to send the following reports to <vls@ukcloud.com>:
 
 - Customer Monthly Usage report
 
@@ -98,7 +98,7 @@ To enable automatic reporting:
 
     - **From Email**: Enter your sender email address, for example `usagemeter@<domain>`
 
-    - **To Email**: Enter `licensing@ukcloud.com`
+    - **To Email**: Enter `vls@ukcloud.com`
 
 3. Click **Save**.
 
@@ -118,7 +118,7 @@ You can also manually generate and email the monthly usage reports.
 
 5. Repeat the steps above, this time selecting the **Monthly Usage** report.
 
-6. When you have both reports, send them to <licensing@ukcloud.com>.
+6. When you have both reports, send them to <vls@ukcloud.com>.
 
 ## Feedback
 
