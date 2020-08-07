@@ -19,6 +19,16 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.1.0
+
+Date: 7th August 2020
+
+Feature Update
+
+Details:
+
+- Simplify and improve the experience of OpenStack users in the portal
+
 ## Release 1.144.0
 
 Date: 14th July 2020
