@@ -3,8 +3,8 @@ title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
-reviewer: ccampbell
-lastreviewed: 14/07/2020
+reviewer: William Llewellyn
+lastreviewed: 18/08/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,16 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 2.1.2
+
+Date: 18th August 2020
+
+Bug fix
+
+Details:
+
+- Users resetting their password weren't given an SSO session
 
 ## Release 2.1.0
 
