@@ -3711,7 +3711,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-psn-permitted-ports.html",
-          "hash": "UwmjvWIlQbcNjcio+i202g=="
+          "hash": "sUKERDhBMZrwsqMDpyPLkA=="
         }
       },
       "is_incremental": false,
@@ -10369,17 +10369,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-account-locked.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-account-locked.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-active-user.png",
       "output": {
         "resource": {
@@ -11343,7 +11332,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-unlock-account.html",
-          "hash": "cphvP4Ax5DKeuQBs740fCQ=="
+          "hash": "zPOaYhjWMNBSArXwyViWcQ=="
         }
       },
       "is_incremental": false,
