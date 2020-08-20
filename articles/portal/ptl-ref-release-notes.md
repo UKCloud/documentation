@@ -27,7 +27,7 @@ Bug fix
 
 Details:
 
-- Users reseting their password weren't given an SSO session
+- Users resetting their password weren't given an SSO session
 
 ## Release 1.144.0
 
