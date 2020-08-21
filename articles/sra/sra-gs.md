@@ -3,8 +3,8 @@ title: Getting Started Guide for Secure Remote Access
 description: Provides information to get up and running with Secure Remote Access
 services: sra
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: George Smith
+lastreviewed: 06/08/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -93,13 +93,11 @@ We request that you paste the contents of the CSR file directly into a ticket fo
 
 ## VPN Cisco AnyConnect client setup
 
-To access your SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices (requires UKCloud Portal login).
+To access your SRA VDC you need to raise a service request to acquire the Cisco AnyConnect client and install (requires UKCloud Portal login).
 
 For each OS there is the main Cisco AnyConnect client software install and an additional executable to enable the FIPS capability. You need to run both.
 
-### Download link
 
-<https://portal.skyscapecloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084>
 
 ### Linux
 
