@@ -55,9 +55,9 @@ The UKCloud ODS code is 8J561.
 
 You can find all ODS and connection agreements at <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/>.
 
-### UKCloud are not on NHS Digital's CN-SP list - can you provide HSCN?
+### UKCloud are not on NHS Digital's CN-SP list. Can you provide HSCN?
 
-We don't appear on the NHS Digital list of HSCN Consumer Network Service Providers (CN-SPs) as UKCloud are not a connectivity service provider in the same way as BT, Vodafone, Redcentric etc. as we cannot provide 'cables in the ground' for consumers of HSCN. We are a Cloud Service Provider (CSP) which means we can allow customers to - share - our HSCN link as long as they have an ODS code, a valid DSP Toolkit, signed up to the terms in the HSCN Connection Agreement, and are consuming one of our 'value add' services such as our VMware or Openstack IaaS or our Virtual Desktop services. More information about this can be provided on request.
+UKCloud doesn't appear on the NHS Digital list of HSCN Consumer Network Service Providers (CN-SPs) as we are not a connectivity service provider in the same way as BT, Vodafone, Redcentric are, as we cannot provide 'cables in the ground' for consumers of HSCN. We are a Cloud Service Provider (CSP), which means we can allow customers to _share_ our HSCN link as long as they have an ODS code, a valid DSP Toolkit, are signed up to the terms in the HSCN Connection Agreement and are consuming one of our value-add services, such as our VMware or OpenStack IaaS or our Virtual Desktop services. We can provide more information about this on request.
 
 ## Service
 
@@ -95,9 +95,9 @@ You must encrypt the data within your applications, especially personally identi
 
 ### Can I use UKCloud's HSCN connected service if I'm based outside of England?
 
-IT Service Providers can use a share of UKCloud's HSCN connection from outside of England as long as they comply with the criteria specified in the NHS Digital guidance: https://digital.nhs.uk/services/health-and-social-care-network/hscn-technical-guidance/hscn-private-it-service-provider-connecting-from-outside-of-englands-borders-policy
+IT Service Providers can use a share of UKCloud's HSCN connection from outside of England as long as they comply with the criteria specified in the NHS Digital guidance: <https://digital.nhs.uk/services/health-and-social-care-network/hscn-technical-guidance/hscn-private-it-service-provider-connecting-from-outside-of-englands-borders-policy>.
 
-This guidance does not apply to NHS organisations who would need to seek clarification from NHS Digital for their specific situation
+This guidance does not apply to NHS organisations who would need to seek clarification from NHS Digital for their specific situation.
 
 ### Will I have full and unrestricted access to the entire HSCN network?
 
