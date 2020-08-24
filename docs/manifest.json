@@ -10258,7 +10258,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-sco-free-trials.html",
-          "hash": "pIx6XKd3RbX//FG6EKTQjg=="
+          "hash": "BOk8nowhqzMnsZFA3ycpPg=="
         }
       },
       "is_incremental": false,
@@ -18447,7 +18447,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "yR+CKC+qnjyZcRiAfx9bWw=="
+          "hash": "wG7D/pf6rOnP/p7IJkWF8g=="
         }
       },
       "is_incremental": false,
@@ -19535,18 +19535,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-system-center.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-system-center.html",
-          "hash": "Xp8n+4FWZqu8NG/6ur+e2A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-tier1-storage.md",
       "output": {
         ".html": {
@@ -19942,7 +19930,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 430,
+          "total_file_count": 429,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

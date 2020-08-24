@@ -196,8 +196,6 @@
     href: vmw-ref-snapshot-summary-api.md
   - name: Shared Secret Length Issues IPSec VPN
     href: vmw-ref-shared-secret-issues.md
-  - name: System Center on the UKCloud platform
-    href: vmw-ref-system-center.md
   - name: TCP_TW_REUSE and TCP_TW_RECYCLE settings
     href: vmw-ref-twreuse.md
   - name: Tier 1 storage
