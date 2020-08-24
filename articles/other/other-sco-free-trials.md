@@ -69,7 +69,7 @@ Free trials are:
 
 - Trials are excluded from any SLA credits
 
-- Customers are liable for any software licensing even though the service is not in production. This includes software such as Microsoft Server OS, Microsoft SQL, and Microsoft Applications (including Office 365)
+- Customers are liable for any software licensing even though the service is not in production (this includes software such as Microsoft Server OS, Microsoft SQL, and Microsoft Applications (including Office 365))
 
 ## How does the free trial work?
 
