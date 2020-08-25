@@ -5310,7 +5310,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "Zy5qZvpHiOcrLKvAZHfn2A=="
+          "hash": "thRuOxymIv7oYBiQz0GlHA=="
         }
       },
       "is_incremental": false,
@@ -10047,15 +10047,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-glossary.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "v+wINp68t8rAUd/vK41n8g=="
+          "hash": "0GavnqIlFJ3OYty/l8BHHA=="
         }
       },
       "is_incremental": false,
@@ -10206,15 +10203,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-service-definitions.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "U315sJFXQ/+eZ6VOwqp2+Q=="
+          "hash": "cCG0mdp76v8W2kIMx9cmdg=="
         }
       },
       "is_incremental": false,
@@ -11872,15 +11866,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/third-party/third-sco-moogsoft.md",
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-sco-moogsoft.html",
-          "hash": "FlqDtNF4qT0G/sFchLVhEA=="
+          "hash": "Y1kgbiN0G9sWHiIT6WldNA=="
         }
       },
       "is_incremental": false,
