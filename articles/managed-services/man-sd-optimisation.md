@@ -5,13 +5,13 @@ services: managed-services
 author: Sue Highmoor
 reviewer: Steve Dixon
 lastreviewed: 16/07/2020
-toc_rootlink: Managed Services
-toc_sub1: Cloud Optimisation
+toc_rootlink: Cloud Optimisation
+toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Cloud Optimisation from UKCloud Service Definition
-toc_fullpath: Managed Services/man-sd-optimisation.md
+toc_fullpath: Cloud Optimisation/man-sd-optimisation.md
 toc_mdlink: man-sd-optimisation.md
 ---
 
