@@ -5,13 +5,13 @@ services: managed-services
 author: Steve Dixon
 reviewer:
 lastreviewed: 16/07/2020
-toc_rootlink: Managed Services
-toc_sub1: Managed IT Operations
+toc_rootlink: Managed IT Operations
+toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Managed IT Operations Service Definition
-toc_fullpath: Managed Services/Managed IT Operations/man-sd-managed-it-ops.md
+toc_fullpath: Managed IT Operations/man-sd-managed-it-ops.md
 toc_mdlink: man-sd-managed-it-ops.md
 ---
 

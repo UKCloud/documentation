@@ -5,13 +5,13 @@ services: managed-services
 author: Steve Dixon
 reviewer:
 lastreviewed: 16/07/2020
-toc_rootlink: Managed Services
+toc_rootlink: About
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: UKCloud Managed Services Overview
-toc_fullpath: Managed Services/man-services-home.md
+toc_fullpath: About/man-services-home.md
 toc_mdlink: man-services-home.md
 ---
 
