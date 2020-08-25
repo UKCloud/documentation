@@ -1,35 +1,35 @@
 ---
-title: How to change your service configuration for Managed Monitoring from UKCloud
-description: Describes how to change monitored items, thresholds, contact information and maintenance window details for your Managed Monitoring from UKCloud service and how to create and edit playbooks
+title: How to change your service configuration for Managed Monitoring as a Service
+description: Describes how to change monitored items, thresholds, contact information and maintenance window details for Managed Monitoring as a Service and how to create and edit playbooks
 services: managed-services
 author: plopezcatalan
 reviewer: shighmoor
 lastreviewed: 09/04/2020
-toc_rootlink: Managed Monitoring
-toc_sub1: 
+toc_rootlink: Managed IT Operations
+toc_sub1: Managed Monitoring as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Change your service configuration
-toc_fullpath: Managed Monitoring/man-monitoring-how-change-config.md
+toc_fullpath: Managed IT Operations/Managed Monitoring as a Service/man-monitoring-how-change-config.md
 toc_mdlink: man-monitoring-how-change-config.md
 ---
 
-# How to change your service configuration for Managed Monitoring from UKCloud
+# How to change your service configuration for Managed Monitoring as a Service
 
 ## Overview
 
-With Managed Monitoring from UKCloud, our Network Operations Centre (NOC) monitors your devices, receiving and reacting to any abnormal events, only escalating those events that genuinely require your attention.
+With Managed Monitoring as a Service, our Network Operations Centre (NOC) monitors your devices, receiving and reacting to any abnormal events, only escalating those events that genuinely require your attention.
 
 When we first provision the service, we set it up with default thresholds for the devices you've selected to monitor, unless you specified different thresholds in your initial request. At any time, you can raise a Service Request to change these thresholds and other service configuration details.
 
 This article provides information about the default monitoring thresholds and alerting procedures and shows you how to change your service configuration.
 
-## Managed Monitoring from UKCloud default configuration
+## Managed Monitoring as a Service default configuration
 
 ### Default monitoring thresholds
 
-Managed Monitoring thresholds determine when alerts are raised against your monitored devices. The following table shows the default thresholds used by the service. If you want to use different thresholds you can identify these in your initial request or change them later.
+Managed Monitoring as a Service thresholds determine when alerts are raised against your monitored devices. The following table shows the default thresholds used by the service. If you want to use different thresholds you can identify these in your initial request or change them later.
 
 Item                                | Alert type     | Default threshold
 ------------------------------------|----------------|------------------
@@ -56,7 +56,7 @@ Critical Alert | Yes           | <ol><li>Incident logged against the escalation 
 
 ## Making changes to your service configuration
 
-To make any changes to your Managed Monitoring from UKCloud service, you must log a Service Request via the UKCloud Portal. For general information about raising a Service Request, see [*How to use My Calls in the UKCloud Portal*](../portal/ptl-how-use-my-calls.md).
+To make any changes to your Managed Monitoring as a Service, you must log a Service Request via the UKCloud Portal. For general information about raising a Service Request, see [*How to use My Calls in the UKCloud Portal*](../portal/ptl-how-use-my-calls.md).
 
 If you want to make changes to more than one item, you'll be provided with a link to download a spreadsheet to specify the list of items that need amending. When filling out the spreadsheet, ensure that you fill in the correct tab, depending on the change required. If you want to download the file ahead of raising the request, click [here](https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-257%20Managed%20Monitoring%20from%20UKCloud%20-%20%20make%20changes%20to%20my%20service.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1608414781&Signature=jHVncOCED%2FOxxgc%2FKpKSGnJqQV8%3D). You can attach the file to the request offering before submitting to UKCloud.
 
@@ -74,7 +74,7 @@ You can change the following service configurations:
 
 ### Adding or removing a monitored device
 
-If there's a new device that you want to add to your Managed Monitoring from UKCloud service, or if there's a device that you no longer want to be monitored, you can let us know by raising a Service Request.
+If there's a new device that you want to add to Managed Monitoring as a Service, or if there's a device that you no longer want to be monitored, you can let us know by raising a Service Request.
 
 1. In My Calls, raise a ticket using the **Add or Remove Monitored Devices** Managed Monitoring template.
 
@@ -112,17 +112,17 @@ If there's a new device that you want to add to your Managed Monitoring from UKC
 
 ### Changing escalation contact information
 
-It's important that you keep the escalation contact information held for your Managed Monitoring service up to date to ensure that the correct person is contacted if we need to escalate an alert.
+It's important that you keep the escalation contact information held for Managed Monitoring as a Service up to date to ensure that the correct person is contacted if we need to escalate an alert.
 
 1. In My Calls, raise a ticket using the **Add or Remove Escalation Contacts** Managed Monitoring template.
 
 2. From the **Action** field, select:
 
-    - **Add new contact** to add a new escalation contact for your Managed Monitoring service
+    - **Add new contact** to add a new escalation contact
 
-    - **Remove existing contact** to remove a contact from your Managed Monitoring service
+    - **Remove existing contact** to remove an existing escalation contact
 
-    - **Add a New Contact and Remove an Existing Contact** if you want to both add and remove contacts
+    - **Add a New Contact and Remove an Existing Contact** if you want to both add and remove escalation contacts
 
     > [!TIP]
     > If you want to change the details of an existing contact, select **Add new contact** and specify in the **Additional Details** field which details have changed.
@@ -147,7 +147,7 @@ It's important that you keep the escalation contact information held for your Ma
 
 ### Changing monitoring thresholds
 
-Monitoring thresholds determine under which circumstances alerts are escalated to you for your attention. The Managed Monitoring from UKCloud service defines default thresholds, but you can change these by raising a Service Request.
+Monitoring thresholds determine under which circumstances alerts are escalated to you for your attention. Managed Monitoring as a Service defines default thresholds, but you can change these by raising a Service Request.
 
 1. In My Calls, raise a ticket using the **Change Thresholds** Managed Monitoring template.
 
@@ -228,9 +228,9 @@ If you want to change the configuration of multiple devices or contacts, rather 
 
     - Default Handling Procedures - For information only; do not change the contents of this tab
 
-    - Add Devices to Monitoring - Provide details of any devices you want to add to your Managed Monitoring service
+    - Add Devices to Monitoring - Provide details of any devices you want to add to Managed Monitoring as a Service
 
-    - Remove Devices from Monitoring - Provide details of any devices you want to remove from your Managed Monitoring service
+    - Remove Devices from Monitoring - Provide details of any devices you want to remove from Managed Monitoring as a Service
 
     - Add Remove Escalation Contact - Provide details of any escalation contacts you want to add or remove
 
@@ -249,7 +249,7 @@ If you want to change the configuration of multiple devices or contacts, rather 
 
 ### Adding, updating or deleting playbooks
 
-A playbook details the step-by-step process required to respond to an event. You can add playbooks to your Managed Monitoring service (and update or delete those playbooks) by raising a Service Request.
+A playbook details the step-by-step process required to respond to an event. You can add playbooks to Managed Monitoring as a Service (and update or delete those playbooks) by raising a Service Request.
 
 1. In My Calls, raise a ticket using the **Playbooks** Managed Monitoring template.
 

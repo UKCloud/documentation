@@ -1,39 +1,39 @@
 ---
-title: Managed Monitoring from UKCloud FAQs
-description: Frequently asked questions for Managed Monitoring from UKCloud
+title: Managed Monitoring as a Service FAQs
+description: Frequently asked questions for Managed Monitoring as a Service
 services: managed-services
 author: Steve Dixon
 reviewer:
 lastreviewed: 20/08/2019 15:17:17
-toc_rootlink: Managed Monitoring
-toc_sub1:
+toc_rootlink: Managed IT Operations
+toc_sub1: Managed Monitoring as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Managed Monitoring from UKCloud FAQs
-toc_fullpath: Managed Monitoring/man-monitoring-faq.md
+toc_title: Managed Monitoring as a Service FAQs
+toc_fullpath: Managed IT Operations/Managed Monitoring as a Service/man-monitoring-faq.md
 toc_mdlink: man-monitoring-faq.md
 ---
 
-# Managed Monitoring from UKCloud FAQs
+# Managed Monitoring as a Service FAQs
 
 ## Service
 
 ### What is the service?
 
-As customer solutions start to expand beyond their own data centres into embracing the benefits of leveraging multi-cloud, accurate and trusted monitoring of the various technology stacks and locations become highly complex and resource intensive. Managed Monitoring from UKCloud helps to reduce these challenges, whilst increasing your level of trust and confidence of the true health of your entire IT estate, from IoT edge devices, through to any infrastructure, be it virtual or physical.
+As customer solutions start to expand beyond their own data centres into embracing the benefits of leveraging multi-cloud, accurate and trusted monitoring of the various technology stacks and locations become highly complex and resource intensive. Managed Monitoring as a Service helps to reduce these challenges, whilst increasing your level of trust and confidence of the true health of your entire IT estate, from IoT edge devices, through to any infrastructure, be it virtual or physical.
 
-With Managed Monitoring from UKCloud, we become your first line of support, 24 hours a day, 365 days a year, in receiving and reacting to any abnormal events or alerts across your IT estate, reducing the amount of noise customers traditionally must filter through, enabling them to focus on the critical events that really matter.
+With Managed Monitoring as a Service, we become your first line of support, 24 hours a day, 365 days a year, in receiving and reacting to any abnormal events or alerts across your IT estate, reducing the amount of noise customers traditionally must filter through, enabling them to focus on the critical events that really matter.
 
 ### What technologies do you use?
 
-UKCloud uses the same technologies we use in house to monitor events across our public clouds to deliver our Managed Monitoring service, providing you with the confidence that well proven and understood technologies are being used to underpin this service.
+UKCloud uses the same technologies we use in house to monitor events across our public clouds to deliver our Managed Monitoring as a Service, providing you with the confidence that well proven and understood technologies are being used to underpin this service.
 
 This service also leverages the benefits of AIOps (see below).
 
 ### What is AIOps?
 
-The term *AIOps* stands for *artificial intelligence for IT operations*. AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies. 
+The term *AIOps* stands for *artificial intelligence for IT operations*. AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies.
 
 ### Do I get access to a dashboard or reports?
 
@@ -93,7 +93,7 @@ Due to the initial complexity of creating the monitoring environment, UKCloud is
 
 ## Backup
 
-### Does UKCloud back up the Managed Monitoring from UKCloud service?
+### Does UKCloud back up Managed Monitoring as a Service?
 
 UKCloud will perform a nightly backup of the configuration of any thresholds or triggers defined as part of this service. All event data is eventually stored within UKCloud's highly resilient centralised monitoring data lake.
 
