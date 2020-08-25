@@ -311,11 +311,11 @@ Let us know your thoughts and ideas by sending an email to <feedback@ukcloud.com
 
 ## M
 
-### Managed Monitoring from UKCloud
+### Managed Monitoring as a Service
 
-Managed Monitoring from UKCloud helps to address monitoring challenges as customer solutions expand beyond their own data centres into multi-cloud, increasing the level of trust and confidence of the true health of their entire IT estate, from IoT edge devices, through to any infrastructure, be it virtual or physical.
+Managed Monitoring as a Service helps to address monitoring challenges as customer solutions expand beyond their own data centres into multi-cloud, increasing the level of trust and confidence of the true health of their entire IT estate, from IoT edge devices, through to any infrastructure, be it virtual or physical.
 
-For more information, see the [Managed Monitoring from UKCloud service definition](../managed-services/man-sd-monitoring.md).
+For more information, see the [Managed IT Operations Service Definition](../managed-services/man-sd-managed-it-ops.md).
 
 ### Mass Transfer Facility (MTF)
 
