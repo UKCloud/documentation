@@ -60,6 +60,8 @@
     href: ostack-ref-live-migration.md
   - name: OpenStack public image versioning
     href: ostack-ref-public-image-versioning.md
+  - name: OpenStack region migration tooling
+    href: ostack-ref-migrations.md
 - name: Service Definition
   items:
   - name: UKCloud for OpenStack Service Definition
