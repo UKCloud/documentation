@@ -79,7 +79,11 @@
   - name: UKCloud Service Definitions and Pricing Guide
     href: other-ref-service-definitions.md
   - name: UKCloud Terms & Conditions for G-Cloud 11
+    href: other-ref-terms-and-conditions-g11.md
+  - name: UKCloud Terms and Conditions
     href: other-ref-terms-and-conditions.md
+  - name: UKCloud Terms and Conditions for Partners
+    href: other-ref-terms-and-conditions-partners.md
   - name: Understanding sites, regions and zones
     href: other-ref-sites-regions-zones.md
   - name: Understanding the difference between GB and GiB
