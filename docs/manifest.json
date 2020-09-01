@@ -13607,17 +13607,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-portal-login.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-portal-login.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-portal-memorable-word.png",
       "output": {
         "resource": {
@@ -18625,7 +18614,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "c0gppmZH32ki0KZqerbaPA=="
+          "hash": "a8sYSA6+I/gt6ZO9bKD7bQ=="
         }
       },
       "is_incremental": false,
