@@ -52,7 +52,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 
     - **Elevated OFFICIAL:** Contact your Portal administrator or SDM
 
-2. On the *Log in* page, enter your credentials and click **Sign in**.
+2. On the *Log in* page, enter your credentials and click **Log in**.
 
     ![UKCloud Portal Log in page](../portal/images/ptl-login.png)
 
