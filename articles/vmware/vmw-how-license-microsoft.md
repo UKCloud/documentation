@@ -86,7 +86,7 @@ As stated, all Microsoft applications on the UKCloud platform must be licensed a
   
   - Authorized Partner Website URL: https://ukcloud.com/
   
-  - Authorized Mobility Partner Email Address: nstewart@ukcloud.com
+  - Authorized Mobility Partner Email Address: licensing@ukcloud.com
   
   - Partner agreement number: 82685361
 
