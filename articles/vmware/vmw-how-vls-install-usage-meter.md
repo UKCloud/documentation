@@ -250,7 +250,7 @@ After finishing the initial Usage Meter configuration successfully, you can sele
 
     - **To Email**: Enter `vls@ukcloud.com` (if you also want to to receive failed collection alerts, use a comma between addresses and enter your internal email address)
 
-    - **Alerts**: Ensure both **Successful collection** and **Failed collection** is selected
+    - **Alerts**: Ensure both **Successful collection** and **Failed collection** are selected
 
     - **Testing**: Select **Send a test email alert after saving**
 
