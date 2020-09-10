@@ -7,7 +7,7 @@ reviewer: George Smith
 lastreviewed: 20/11/2019
 
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: v3
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -89,7 +89,7 @@ To create a backup of the namespace:
 
     ```
     velero get backups
-    
+
     velero describe backup test1
     ```
 
@@ -101,11 +101,11 @@ To create a backup of the namespace:
 
     ```
     oc cancel-build ruby-ex-1
-    
+
     oc delete build ruby-ex-1
-    
+
     oc delete sa builder
-    
+
     oc start-build ruby-ex
     ```
 

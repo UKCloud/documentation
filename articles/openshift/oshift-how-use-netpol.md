@@ -7,7 +7,7 @@ reviewer: George Smith
 lastreviewed: 21/11/2019
 
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: v3
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -20,7 +20,7 @@ toc_mdlink: oshift-how-use-netpol.md
 
 ## Overview
 
-In OpenShift v3.11 clusters deployed from mid-February 2019, the default SDN plugin has been changed from ovs-multitenant to ovs-networkpolicy. This gives you the ability to create NetworkPolicy objects which allow granular control over the flow of communication between the pods, services and projects inside your cluster. 
+In OpenShift v3.11 clusters deployed from mid-February 2019, the default SDN plugin has been changed from ovs-multitenant to ovs-networkpolicy. This gives you the ability to create NetworkPolicy objects which allow granular control over the flow of communication between the pods, services and projects inside your cluster.
 
 By default, we create a NetworkPolicy object, named `allow-from-same-and-privileged-namespaces`, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.
 
@@ -67,7 +67,7 @@ You can use this to match all pods in a project or alternatively to match all po
 apiVersion: extensions/v1beta1
 kind: NetworkPolicy
 metadata:
-  name: webserver-egress 
+  name: webserver-egress
   namespace: webserver
 spec:
   podSelector:

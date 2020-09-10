@@ -1,12 +1,12 @@
 ---
 title: How to expand OpenShift persistent volumes
-description: Outlines methods to expand OpenShift persistent volumes in v3.11 OpenShift clusters.
+description: Outlines methods to expand OpenShift persistent volumes.
 services: openshift
 author: Gareth Ellner
 reviewer: gsmith
 lastreviewed: 20/11/2019
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -165,7 +165,7 @@ Once the pod has started, you can check the file system has resized correctly by
 
 ```
 $ oc rsh logging-es-data-master-7bqadxxd-1-7rb9x
-sh-4.2$ df -h                                  
+sh-4.2$ df -h
 Filesystem                             Size  Used Avail Use% Mounted on
 ...
 /dev/vdd                               30G  7.5G   23G  33% /elasticsearch/persistent

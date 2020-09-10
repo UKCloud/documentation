@@ -6,7 +6,7 @@ author: Ben Bacon
 reviewer: gsmith
 lastreviewed: 20/11/2019
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: v3
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -49,7 +49,7 @@ registry.redhat.io
 
 A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named `proxy-whitelist` within the `whitelist` project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the whitelist and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.
 
-### Assigning non cluster-admin users rights to edit the whitelist 
+### Assigning non cluster-admin users rights to edit the whitelist
 
 By default, only users who have been assigned the cluster-admin role will be able to view/edit the `proxy-whitelist` ConfigMap object within the `whitelist` project. It is possible to grant non cluster-admin users rights to edit this object but this should be given careful consideration. The ability to access hosts on the internet, from nodes that previously only had access to government community networks, exposes the cluster to additional risk (should a domain be whitelisted that hosts malicious content for example). For this reason, only trusted users should be permitted to determine these domains to reduce the risk of a malicious domain being unwittingly added.
 
@@ -72,7 +72,7 @@ oc policy add-role-to-user edit-proxy-whitelist $username -n whitelist --role-na
 
 ### Modifying the whitelist
 
-There are two tools you can use to modify the `proxy-whitelist` Config Map. As previously stated you will need to have the necessary rights to edit this object within the `whitelist` project. 
+There are two tools you can use to modify the `proxy-whitelist` Config Map. As previously stated you will need to have the necessary rights to edit this object within the `whitelist` project.
 
 #### Web console
 
@@ -96,8 +96,8 @@ There are two tools you can use to modify the `proxy-whitelist` Config Map. As p
 >[!NOTE]
 >To authenticate using the `oc` client you will need an API token. Retrieve this by logging in to the Web Console and clicking your name in the top right then choosing **Copy Login Command**. This can then be pasted from your buffer into a terminal where you have the `oc` client installed.
 
-1. Change to the `whitelist` project: 
-   
+1. Change to the `whitelist` project:
+
    ```bash
    $ oc project whitelist
    ```

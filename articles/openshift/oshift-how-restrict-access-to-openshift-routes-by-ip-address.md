@@ -6,7 +6,7 @@ author: Mudasar Hussain
 reviewer: Kieran O'Neill
 lastreviewed: 04/02/2020 10:46:43
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -28,12 +28,12 @@ OpenShift developers who have created and deployed services into OpenShift, and 
 ## Restricting access to a route
 
 After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to whitelist.
-  
+
 > [!IMPORTANT]
 > Whitelisting a IP address automatically blacklists everything else.
-  
+
 You apply the annotation to a route in the following manner:
-  
+
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="<ip_address>"
 
 > [!IMPORTANT]
@@ -42,7 +42,7 @@ You apply the annotation to a route in the following manner:
 ## Examples
 
 To allow a single IP address through to the route, use the following:
-  
+
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10"
 
 To allow several IP addresses through to the route, separate each IP with a space (do not use commas to separate IPs):
@@ -58,7 +58,7 @@ You can even use a mix of IP addresses and a CIDR block:
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="192.168.1.10 180.5.61.153 192.168.1.0/24 10.0.0.0/8"
 
 To delete the IPs from the annotation, you can run the command:
-    
+
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist-
 
 ## More information
@@ -66,7 +66,7 @@ To delete the IPs from the annotation, you can run the command:
 For further information, see the following: [OpenShift Documentation](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html)
 
 > [!IMPORTANT]
-> This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled. 
+> This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled.
 
 ## Feedback
 

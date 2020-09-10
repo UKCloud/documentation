@@ -102,7 +102,7 @@ This API call returns a reasonable amount of JSON-encoded data, which may be har
 
 The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy.
 
-``` python
+```python
 #!/usr/bin/env python3
 import urllib.request
 import json

@@ -4,10 +4,10 @@ description: Explains how to view the logs on the OpenShift routers
 services: openshift
 author: Gareth Ellner
 reviewer:
-lastreviewed: 
+lastreviewed:
 
 toc_rootlink: How To
-toc_sub1:
+toc_sub1: v3
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -48,7 +48,7 @@ Your OpenShift cluster must be version 3.11 or later, and must be enabled for ro
        router-4-n7jg2             2/2       Running   0          12d
        router-private-3-lvbg4     2/2       Running   0          12d
        router-private-3-s2nbr     2/2       Running   0          12d
-       
+
        # Since the container count for each router shows 2/2, the syslog container is present
 
     If your routers do not have the syslog sidecar container, raise a request in the UKCloud Portal to add this functionality. Your cluster must be v3.11 or later.
@@ -60,25 +60,23 @@ Your OpenShift cluster must be version 3.11 or later, and must be enabled for ro
        2019-07-03T13:41:28.573805+00:00 worker-infra-0 haproxy[506]: 37.69.33.21:49342 [03/Jul/2019:13:41:28.570] fe_sni~ be_secure:openshift-logging:logging-kibana/pod:logging-kibana-1-r8rkj:logging-kibana:10.177.0.13:3000 0/0/0/3/3 200 22810 - - --VN 10/5/0/1/0 0/0 "GET /bundles/2e90d5152ce92e3eb62ba053c7b9d2cb.woff HTTP/1.1"
        2019-07-03T13:41:28.578731+00:00 worker-infra-0 haproxy[506]: 37.69.33.21:49345 [03/Jul/2019:13:41:28.575] fe_sni~ be_secure:openshift-logging:logging-kibana/pod:logging-kibana-1-r8rkj:logging-kibana:10.177.0.13:3000 0/0/0/2/2 200 23286 - - --VN 10/5/1/2/0 0/0 "GET /bundles/697573f67bcfdd2c45e3e63c7380dd67.woff HTTP/1.1"
        ...
-       
+
 The logs are shown in the HTTP haproxy log format. See https://cbonte.github.io/haproxy-dconv/1.7/configuration.html#8.2.3 for a guide on the fields.
-       
 
 ## Viewing logs for all routers in the cluster
 
 The router syslog containers send their logs to the cluster's Elasticsearch database in the `openshift-logging` project. You can view this using Kibana as follows:
 
 1. Locate the URL to access Kibana. You can find this in the `openshift-logging` project using the Web UI or by using the command-line client as below:
-      
+
        $ oc describe route logging-kibana -n openshift-logging | grep Host
        Requested Host:         kibana.cnap-testing.frn00006.cna.ukcloud.com
-       
+
 2. Access Kibana by opening the URL using HTTPS (for example, https://kibana.cnap-testing.frn00006.cna.ukcloud.com) in a web browser. Login with your OpenShift/SSO credentials if prompted.
 
 3. In the query box, enter `kubernetes.pod_name:router*` and click the Search/Magnifying Glass button. This returns the logs for all routers. By default, logs for the last 15 minutes are shown. You can change this using the picker in the top right of the page.
 
 ![Example Kibana Search](images/oshift-kibana.png)
-
 
 ## Next steps
 
