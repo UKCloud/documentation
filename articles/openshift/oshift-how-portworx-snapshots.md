@@ -7,8 +7,8 @@ reviewer:
 lastreviewed: 15/10/2019
 
 toc_rootlink: How To
-toc_sub1: Use Portworx with OpenShift
-toc_sub2:
+toc_sub1: v3
+toc_sub2: Use Portworx with OpenShift
 toc_sub3:
 toc_sub4:
 toc_title: Create and restore Portworx snapshots
@@ -24,7 +24,7 @@ Portworx is a cloud-native storage solution that is now available as an add-on t
 
 ### Intended audience
 
-This article assumes you have access to a Portworx-enabled OpenShift 3.11 or greater cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. 
+This article assumes you have access to a Portworx-enabled OpenShift 3.11 or greater cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client.
 
 If you're interested in a free 30 day trial of Portworx, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
@@ -54,12 +54,12 @@ You can take on-demand snapshots by creating an OpenShift resource of type `Volu
 
     ```none
     oc describe volumesnapshot test-snapshot-1
-    
+
     "Snapshot Data Name:            k8s-volume-snapshot-e292b115-eb4b-11e9-9d81-0a580a830007"
-    
-    
+
+
     oc describe volumesnapshotdata k8s-volume-snapshot-e292b115-eb4b-11e9-9d81-0a580a830007
-    
+
     "Message:               Snapshot created successfully and it is ready"
     ```
 
@@ -137,7 +137,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: group-snapshot-test-$i
   namespace: test-snapshot-1
-  annotations: 
+  annotations:
     volume.beta.kubernetes.io/storage-class: portworx-repl1
   labels:
     purpose: "group-test"
@@ -167,7 +167,7 @@ done
 
     ```none
     oc describe groupvolumesnapshot | grep "Volume Snapshot Name"
-    
+
         Volume Snapshot Name:  test-groupsnapshot-group-snapshot-test-2-61d7ca5e-ee87-11e9-8422-fa163e52fd0e
         Volume Snapshot Name:  test-groupsnapshot-group-snapshot-test-1-61d7ca5e-ee87-11e9-8422-fa163e52fd0e
         Volume Snapshot Name:  test-groupsnapshot-group-snapshot-test-0-61d7ca5e-ee87-11e9-8422-fa163e52fd0e
@@ -194,7 +194,7 @@ done
 
 ### Cloud snapshots
 
-Portworx enables you to backup snapshots to cloud storage. We can provide a bucket for the cluster on our Cloud Storage service and set up a cloud credential that you can use. If you'd like to configure snapshots to be sent to your own storage, see <https://docs.portworx.com/reference/cli/credentials/#overview> for how to set this up. 
+Portworx enables you to backup snapshots to cloud storage. We can provide a bucket for the cluster on our Cloud Storage service and set up a cloud credential that you can use. If you'd like to configure snapshots to be sent to your own storage, see <https://docs.portworx.com/reference/cli/credentials/#overview> for how to set this up.
 
 > [!TIP]
 > To find the ID of the cloud credentials provided with your cluster run:
@@ -210,7 +210,7 @@ Portworx enables you to backup snapshots to cloud storage. We can provide a buck
     metadata:
       name: test-cloudsnap
       namespace: test-snapshot-1
-      annotations: 
+      annotations:
         volume.beta.kubernetes.io/storage-class: portworx-repl1
     spec:
       accessModes:
@@ -337,7 +337,7 @@ The following example creates a daily policy that creates snapshots at a certain
 
     ```none
     oc get volumesnapshotschedules
-    
+
     NAME                             AGE
     test-schedule-daily-schedule     1m
     test-schedule-default-schedule   1m
@@ -385,7 +385,7 @@ Events:
   ----    ------  ----  ----   -------
   Normal  Ready   9s    stork  Scheduled snapshot (test-schedule-default-schedule-interval-2019-10-22-155402) completed successfully
   ```
-  
+
 
 ## Further reading
 
