@@ -6,8 +6,8 @@ author: Ben Bacon
 reviewer:
 lastreviewed: 14/10/2019
 toc_rootlink: How To
-toc_sub1: v3
-toc_sub2: Use Portworx with OpenShift
+toc_sub1: OpenShift v3.x
+toc_sub2: Portworx
 toc_sub3:
 toc_sub4:
 toc_title: Configure Portworx volume replication
