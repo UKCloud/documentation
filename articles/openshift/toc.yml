@@ -24,15 +24,7 @@
     href: oshift-how-monitor-cluster.md
   - name: Restrict access to OpenShift routes by IP address
     href: oshift-how-restrict-access-to-openshift-routes-by-ip-address.md
-  - name: Use Portworx with OpenShift
-    items:
-    - name: Create and restore Portworx snapshots
-      href: oshift-how-portworx-snapshots.md
-    - name: Use Portworx encrypted volumes
-      href: oshift-how-use-portworx-encrypted-volumes.md
-    - name: Use Portworx shared volumes
-      href: oshift-how-use-portworx-shared-volumes.md
-  - name: v3
+  - name: OpenShift v3.x
     items:
     - name: Backup, restore and migrate OpenShift resources
       href: oshift-how-backup-migrate.md
@@ -54,10 +46,16 @@
       href: oshift-how-view-proxy-logs.md
     - name: View your router logs
       href: oshift-how-view-router-logs.md
-    - name: Use Portworx with OpenShift
+    - name: Portworx
       items:
       - name: Configure Portworx volume replication
         href: oshift-how-configure-portworx-volume-replication.md
+      - name: Create and restore Portworx snapshots
+        href: oshift-how-portworx-snapshots.md
+      - name: Use Portworx encrypted volumes
+        href: oshift-how-use-portworx-encrypted-volumes.md
+      - name: Use Portworx shared volumes
+        href: oshift-how-use-portworx-shared-volumes.md
 - name: Reference
   items:
   - name: DNS zone forwarding in OpenShift clusters
@@ -66,7 +64,7 @@
     href: oshift-ref-lifecycle.md
   - name: Making the most of your UKCloud for OpenShift trial
     href: oshift-ref-trial.md
-  - name: v3
+  - name: OpenShift v3.x
     items:
     - name: Community network proxy configuration
       href: oshift-ref-no-proxy.md

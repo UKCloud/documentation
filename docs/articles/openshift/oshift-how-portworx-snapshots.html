@@ -192,7 +192,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: group-snapshot-test-$i
   namespace: test-snapshot-1
-  annotations: 
+  annotations:
     volume.beta.kubernetes.io/storage-class: portworx-repl1
   labels:
     purpose: &quot;group-test&quot;
@@ -258,7 +258,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: test-cloudsnap
   namespace: test-snapshot-1
-  annotations: 
+  annotations:
     volume.beta.kubernetes.io/storage-class: portworx-repl1
 spec:
   accessModes:
