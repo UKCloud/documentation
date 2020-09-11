@@ -6,7 +6,7 @@ author: Steve Mulholland
 reviewer: Gareth Ellner
 lastreviewed: 29/01/2020
 toc_rootlink: How To
-toc_sub1: v3
+toc_sub1: OpenShift version 3
 toc_sub2:
 toc_sub3:
 toc_sub4:

@@ -4,7 +4,7 @@ description: Provides information regarding proxy environment variables in v3.11
 services: openshift
 author: Ben Bacon
 toc_rootlink: Reference
-toc_sub1: v3
+toc_sub1: OpenShift version 3
 toc_sub2:
 toc_sub3:
 toc_sub4:

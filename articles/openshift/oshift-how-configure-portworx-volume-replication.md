@@ -6,7 +6,7 @@ author: Ben Bacon
 reviewer:
 lastreviewed: 14/10/2019
 toc_rootlink: How To
-toc_sub1: v3
+toc_sub1: OpenShift version 3
 toc_sub2: Use Portworx with OpenShift
 toc_sub3:
 toc_sub4:
