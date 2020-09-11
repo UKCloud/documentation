@@ -7,8 +7,8 @@ reviewer:
 lastreviewed: 15/10/2019
 
 toc_rootlink: How To
-toc_sub1: OpenShift version 3
-toc_sub2: Use Portworx with OpenShift
+toc_sub1: OpenShift v3.x
+toc_sub2: Portworx
 toc_sub3:
 toc_sub4:
 toc_title: Create and restore Portworx snapshots

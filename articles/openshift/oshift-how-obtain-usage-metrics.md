@@ -7,7 +7,7 @@ reviewer: gellner
 lastreviewed: 14/11/2019 11:15:38
 
 toc_rootlink: How To
-toc_sub1: OpenShift version 3
+toc_sub1: OpenShift v3.x
 toc_sub2:
 toc_sub3:
 toc_sub4:
