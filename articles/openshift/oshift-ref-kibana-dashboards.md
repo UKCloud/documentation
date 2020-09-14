@@ -4,10 +4,10 @@ description: Explains the data provided in our custom Kibana dashboards and how 
 services: openshift
 author: Kieran O'Neill
 reviewer:
-lastreviewed: 
+lastreviewed:
 
 toc_rootlink: Reference
-toc_sub1:
+toc_sub1: OpenShift v3.x
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -30,7 +30,7 @@ The Hosts Logging dashboard is available in 3.9-3.11 clusters and the Response C
 
 Open the kibana route. Depending on your cluster version, it will have the following format: `https://kibana.xxxx-xxxxx.region.cna.ukcloud.com` or `https://kibana.xxx-xxx-xx-xxxxx.region.cna.ukcloud.com`.
 
-This will take you to the Kibana UI. From here you can select the dashboards option. 
+This will take you to the Kibana UI. From here you can select the dashboards option.
 
 On 3.9 clusters:
 
@@ -46,7 +46,7 @@ On 3.10+ clusters:
 
 The Hosts Logging dashboard contains a graph for each host in the cluster that shows amount of messages on the Y axis and time on the X axis. You can use this dashboard to look for an increase in messages being generated on hosts when new applications are deployed. This can help determine if you need to expand the persistent storage of your Elasticsearch: [*Expand OpenShift persistent storage*](https://docs.ukcloud.com/articles/openshift/oshift-how-expand-persistent-vols.html)
 
-You can also use the Hosts Logging dashboard to ensure that all hosts are sending logs to Elasticsearch. If a host is not showing it may indicate a problem with the fluentd container on that node. 
+You can also use the Hosts Logging dashboard to ensure that all hosts are sending logs to Elasticsearch. If a host is not showing it may indicate a problem with the fluentd container on that node.
 
 ![Hosts Logging dashboard](images/oshift-kibana-hosts.png)
 

@@ -64,7 +64,7 @@ Before using the vCloud API, you first need to find your API credentials.
 
 ## Obtaining an authorisation token
 
-To start interacting with the vCloud API, you first need to obtain an `x-vcloud-authorization` token; to do this you need to adjust some settings in the RESTClient.
+To start interacting with the vCloud API, you first need to obtain an `x-vmware-vcloud-access-token` token; to do this you need to adjust some settings in the RESTClient.
 
 1. In your browser, click the **RESTClient** icon.
 
@@ -108,26 +108,26 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
     ![Headers section with Accept header](images/vmw-restclient-accept-header.png)
 
-12. The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a `x-vcloud-authorization` token, so click the **Send** button.
+12. The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a `x-vmware-vcloud-access-token` token, so click the **Send** button.
 
-13. When a response is received the **Headers** tab in the *Response* section will be populated, including an `x-vcloud-authorization` token.
+13. When a response is received the **Headers** tab in the *Response* section will be populated, including an `x-vmware-vcloud-access-token` token.
 
     ![API response with authentication token](images/vmw-restclient-authentication-token.png)
 
-14. The `x-vcloud-authorization` token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word `x-vcloud-authorization`.
+14. The `x-vmware-vcloud-access-token` token becomes part of an Authorization header, which will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word `x-vmware-vcloud-access-token`.
 
     > [!NOTE]
     > If at any point while following the instructions in this guide, the output displayed in the RESTClient does not look similar to that shown in the images, you can use the value of the **Status Code** field to determine what went wrong and needs investigation. In this case above, **Status Code** received was HTTP 200 OK, which means that the request succeeded. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
-15. To add an `x-vcloud-authorization` header, from the **Headers** menu, select **Custom Header**.
+15. Next, add an Authorization header. To do this, from the **Headers** menu, select **Custom Header**.
 
-16. In the *Request Header* dialog box, in the **Name** field enter `x-vcloud-authorization`.
+16. In the *Request Header* dialog box, in the **Name** field enter 'Authorization'.
 
-17. In the **Value** field, paste the string of characters copied in the previous step, then click **Okay**.
+17. In the **Value** field, enter 'Bearer ' (with a trailing space), then paste the string of characters copied in the previous step, then click **Okay**.
 
     ![Authorization token in request headers](images/vmw-restclient-request-headers-token.png)
 
-18. Now that you've obtained an `x-vcloud-authorization` token, you can remove the Basic Authentication Header. Click the **x** in the upper right-hand corner of the header.
+18. Now that you've obtained an `x-vmware-vcloud-access-token` token, you can remove the Basic Authentication Header. Click the **x** in the upper right-hand corner of the header.
 
     ![Remove basic authentication](images/vmw-restclient-basic-authentication-remove.png)
 

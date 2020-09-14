@@ -7,7 +7,7 @@ reviewer: gellner
 lastreviewed: 14/11/2019 11:15:38
 
 toc_rootlink: How To
-toc_sub1:
+toc_sub1: OpenShift v3.x
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -86,7 +86,7 @@ The OpenStack CLI provides the ability to list the nodes in your cluster and the
        worker-infra-0.5623-f84e8e      281m         15%       7697Mi          50%
        worker-infra-1.5623-f84e8e      566m         31%       7946Mi          52%
        worker-tenant-s-0.5623-f84e8e   405m         22%       12229Mi         80%
-       worker-tenant-s-1.5623-f84e8e   258m         14%       2451Mi          16%	   
+       worker-tenant-s-1.5623-f84e8e   258m         14%       2451Mi          16%
 
     > [!NOTE]
     > For the `oc adm top` command to work, Hawkular metrics must be running in your cluster. This command can also report on images and pods.
@@ -181,7 +181,7 @@ The OpenStack CLI provides the ability to list the nodes in your cluster and the
          --------  --------      ------
          cpu       1060m (58%)   1020m (56%)
          memory    4220Mi (27%)  3612Mi (23%)
-       Events:     <none>	   
+       Events:     <none>
 
 7. You can also obtain some of the above information via the REST API, by using something like:
 
@@ -235,9 +235,9 @@ Object storage is used only for the OpenShift registry, therefore, you can calcu
        none>                                                                                                                             <none>                                                                    no       156.6MiB
        sha256:58fe06c9b5cf48bbaea47d18511958f51b6b50b764e6d879b65b4715477d0385 openshift/fuse7-console (1.0), openshift/jboss-fuse70-console (1.0)                                                                                                 <
        none>                                                                                                                             <none>                                                                    no       91.88MiB
-       sha256:1f8e264d6fe3a1868e29ba2ad85612ccfc380707dd9f2026f2e5058224dced2c openshift/jboss-decisionserver62-openshift (1.2)	  
+       sha256:1f8e264d6fe3a1868e29ba2ad85612ccfc380707dd9f2026f2e5058224dced2c openshift/jboss-decisionserver62-openshift (1.2)
        ...
-       
+
        $ oc adm top imagestreams
        NAME                                                   STORAGE  IMAGES LAYERS
        openshift/jboss-eap64-openshift                        5.061GiB 9      48

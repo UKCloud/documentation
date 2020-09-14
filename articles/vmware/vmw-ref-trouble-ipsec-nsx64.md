@@ -5,13 +5,13 @@ services: vmware
 author: Sue Highmoor
 reviewer: lthangarajah
 lastreviewed: 20/08/2019
-toc_rootlink: Troubleshooting
+toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Fixing your IPsec VPN following upgrade to NSX 6.4
-toc_fullpath: Troubleshooting/vmw-ref-trouble-ipsec-nsx64.md
+toc_fullpath: Reference/vmw-ref-trouble-ipsec-nsx64.md
 toc_mdlink: vmw-ref-trouble-ipsec-nsx64.md
 ---
 
@@ -45,25 +45,31 @@ Follow the steps below to convert your edge to an advanced gateway and configure
 
 To change the DH setting on your broken VPN:
 
-1. In vCloud Director, access the edge gateway settings for the edge with the broken VPN.
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge with the broken VPN.
 
-    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
+2. In the left navigation panel, click **Edges**.
 
-2. Select the **VPN** tab.
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
-3. On the *IPsec VPN Configuration* page, select the **IPsec VPN Sites** tab.
+3. Select the edge gateway and click **Configure Services**.
 
-4. Select the VPN tunnel that is broken and click the edit icon.
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
-5. From the **Diffee-Hellman Group** list, select DH2.
+4. Select the **VPN** tab.
+
+5. On the *IPsec VPN Configuration* page, select the **IPsec VPN Sites** tab.
+
+6. Select the VPN tunnel that is broken and click the edit icon.
+
+7. From the **Diffee-Hellman Group** list, select DH2.
 
     ![Diffie-Helman Group list](images/vmw-tp-ipsec-fix2.png)
 
     You may need to scroll the window to the bottom of the page to find the list.
 
-6. When you're done, click **Keep**.
+8. When you're done, click **Keep**.
 
-7. Repeat the steps 4 and 5 for any other VPNs that are broken and when you're ready to save the configuration, click **Save Changes** at the top of the page.
+9. Repeat the steps 6 and 7 for any other VPNs that are broken and when you're ready to save the configuration, click **Save Changes** at the top of the page.
 
     Check the state of the VPN by clicking the **Statistics** tab at the top of the screen and selecting **IPSEC VPN** to view the health of your VPN.
 

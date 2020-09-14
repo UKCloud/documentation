@@ -3,8 +3,8 @@ title: Understanding PSN core services
 description: Outlines the responsibilities between you and UKCloud with regards to Public Services Network (PSN) core services, such as DNS and email filtering. 
 services: connectivity
 author: Sue Highmoor
-reviewer:
-lastreviewed: 20/07/2018 18:37:23
+reviewer: Chris Aldridge
+lastreviewed: 06/08/2020 16:08
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

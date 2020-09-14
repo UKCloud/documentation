@@ -94,7 +94,7 @@
 <h1 id="vmware-licence-service-service-definition">VMware Licence Service Service Definition</h1>
 
 <h2 id="what-is-the-vmware-licence-service">What is the VMware Licence Service?</h2>
-<p>The VMware Licence Service (VLS) is an innovative licensing model designed with VMware to make it easier to modernise your existing VMware environments as you migrate to the cloud. VLS enables you to exchange the fixed cost of your ongoing VMware Support and Subscription Service for existing perpetual VMware licences with a VMware Cloud Provider Programme (VCPP) consumption-based licence provided by UKCloud.</p>
+<p>The VMware Licence Service (VLS) is an innovative licensing model designed with VMware to make it easier to modernise your existing VMware environments as you migrate to the cloud. VLS enables you to exchange the fixed cost of your ongoing VMware Support and Subscription (SnS) Service for existing perpetual VMware licences with a VMware Cloud Provider Programme (VCPP) consumption-based licence provided by UKCloud.</p>
 <p>This ideally suits customers who:</p>
 <ul>
 <li><p>Want to migrate to a full rental/consumption-based OPEX model rather than a fixed-cost (that is, CAPEX-centric) model on either an annual or monthly basis</p>
@@ -118,14 +118,14 @@
 </li>
 <li><p><strong>Flexibility.</strong> An easier and more cost-effective method for adopting new VMware technologies, without committing to the purchase cost of perpetual licenses. Utilise enhanced features or capabilities with just a small monthly increase in consumption reporting.</p>
 </li>
-<li><p><strong>Mix and match SnS with VLS.</strong> You can utilise both traditional Support and Subscription Services (SnS) and VLS in the same environment such that existing support arrangements can continue, and then new VLS licences can be layered on top.</p>
+<li><p><strong>Mix and match SnS with VLS.</strong> You can utilise both traditional SnS and VLS in the same environment so that existing support arrangements can continue, with new VLS licences layered on top.</p>
 </li>
 </ul>
 <h2 id="advantages-of-utilising-ukcloud">Advantages of utilising UKCloud</h2>
 <ul>
 <li><p>VLS is a service delivered by UKCloud, a specialist VMware Cloud Verified Provider, headquartered in the UK and dedicated to serving public sector organisations with over eight years' experience in providing and supporting VMware cloud workloads.</p>
 </li>
-<li><p>UK based award-winning service desk manned 24/7 by vetted and security-cleared experts.</p>
+<li><p>UK-based, award-winning service desk, manned 24/7 by vetted and security-cleared experts.</p>
 </li>
 <li><p>Every UKCloud customer has a designated Service Delivery Manager regardless of usage or number of workloads.</p>
 </li>
@@ -151,24 +151,33 @@
 </li>
 </ul>
 <h2 id="whats-involved">What's involved?</h2>
-<p>To administer VLS, three changes will be required to the existing VMware environment:</p>
+<p>To administer VLS, three changes are required to the existing VMware environment:</p>
 <ul>
-<li><p>New licence keys must be 'injected' into all VMware products covered under VLS, as these keys represent the new consumption-based service arrangement. This is a very simple activity that can be done by the customer or UKCloud.</p>
+<li><p>New licence keys must be 'injected' into all VMware products covered under VLS, as these keys represent the new consumption-based service arrangement. This is a very simple activity that can be done by the customer or UKCloud. As part of the onboarding the customer will ensure that all elements of the environment are on a supported version of VMware software.</p>
 </li>
 <li><p>The VMware metering tool will be deployed as this delivers accurate consumption / utilisation that enables variable costs to be compared against the pre-agreed fixed cost.</p>
 <ul>
 <li>The customer is responsible for providing the usage reports to UKCloud within the first five working days of each month. Failure to do so is a breach of contract and costs will be estimated.</li>
 </ul>
 </li>
-<li><p>Customers will be supported by UKCloud's experienced technical services team, and will receive the same level of support as they would directly from VMware.</p>
+<li><p>Customers will be supported by UKCloud's experienced technical services team and will receive the same level of support as they would directly from VMware. Any remediation of the customer environment will be performed by the customer.</p>
 </li>
 </ul>
 <h2 id="whats-included">What's included?</h2>
-<p>The service is designed to be flexible and comes with our standard onboarding. Additional, optional services are available, including the following:</p>
+<p>The service is designed to be flexible and comes with our standard onboarding:</p>
+<ul>
+<li><p><strong>Creation of a UKCloud Portal account.</strong> Enabling you to access our ticketing system and notifications centre.</p>
+</li>
+<li><p><strong>UKCloud licensing keys.</strong> We will create and distribute unique VMware licence keys for you to use with this service for the relevant software.</p>
+</li>
+<li><p><strong>Knowledge Centre.</strong> Access to our extensive library of articles to assist you in using VMware on a self-service basis.</p>
+</li>
+<li><p><strong>Support services.</strong> UKCloud becomes the authorised 24/7 service desk for VMware support and provides first and second-line support for the VMware products within the environment, and will manage escalations for third-line support via the VMware engineering team as appropriate. All tickets are prioritised and full details are available in our <a href="../portal/ptl-how-raise-escalate-service-request.html">Knowledge Centre</a>.</p>
+</li>
+</ul>
+<p>Additional, optional services are available, including the following:</p>
 <ul>
 <li><p><strong>Enhanced onboarding.</strong> UKCloud can install and configure the VMware Usage Meter and replace existing perpetual licence keys with VCPP licence keys across all applicable VMware products within the environment.</p>
-</li>
-<li><p><strong>Support services.</strong> UKCloud becomes the authorised service desk for VMware support and provides first-line support for the VMware products within the environment covered, and will manage escalations for second and third-line support via the VMware engineering team as appropriate.</p>
 </li>
 <li><p><strong>Monitoring and management service.</strong> UKCloud can remotely monitor the VMware products within the environment, alert you of any incidents if appropriate and provide a high level of engagement appropriate with the level of managed services. This may include patching, capacity management, performance management or supporting non-VMware products (Storage Array, Physical Network).</p>
 </li>
@@ -176,142 +185,20 @@
 </li>
 </ul>
 <h2 id="pricing-and-packaging">Pricing and packaging</h2>
-<p>VLS starts at 44p per point per month for academia. Full pricing is available in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
-<table>
-  <tr>
-    <th></th>
-    <th colspan="2">Public Sector (Non-Academia)</th>
-    <th colspan="2">Academia</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td><strong>Cost per committed point</strong></td>
-    <td><strong>Cost per uncommitted point</strong></td>
-    <td><strong>Cost per committed point</strong></td>
-    <td><strong>Cost per uncommitted point</strong></td>
-  </tr>  <tr>
-    <td>Up to 100,000 points per month</td>
-    <td>£0.60</td>
-    <td>£0.66</td>
-    <td>£0.44</td>
-    <td>£0.48</td>
-  </tr>
-  <tr>
-    <td>100,000+ points per month</td>
-    <td>£0.58</td>
-    <td>£0.64</td>
-    <td>£0.43</td>
-    <td>£0.47</td>
-  </tr></table>
-<ul>
-<li><p>Customers will be charged if they self-serve via the UKCloud Portal</p>
-</li>
-<li><p>Customers are not eligible for a refund on upfront payments</p>
-</li>
-<li><p>Customers are responsible for providing usage meter reports each month during the first 5 working days for accurate billing</p>
-</li>
-</ul>
+<p>VLS starts at 43p per point per month for academia. Full pricing is available in the <a href="vmw-sco-vls.html"><em>VMware Licence Service Service Scope</em></a>.</p>
 <h2 id="accreditation-and-information-assurance">Accreditation and information assurance</h2>
 <p>The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors and management system assessors. Details are available on the <a href="https://ukcloud.com/governance/">UKCloud website</a>.</p>
 <h2 id="connectivity-options">Connectivity options</h2>
-<p>UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a> which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.</p>
+<p>UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN and RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <h2 id="an-sla-you-can-trust">An SLA you can trust</h2>
 <p>We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the <a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA Definition</a> article on the UKCloud Knowledge Centre.</p>
-<table>
-<thead>
-<tr>
-<th> </th>
-<th> </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Priority 1</strong></td>
-<td><strong>Priority 2</strong></td>
-</tr>
-<tr>
-<td>Service is currently experiencing a significant outage or disruption to multiple users or locations<br><br>Service has a confirmed or suspected compromise, loss or unavailability of data</td>
-<td>Service is available but is currently experiencing degradation or restrictions for multiple users or locations</td>
-</tr>
-<tr>
-<td><strong>Priority 3</strong></td>
-<td><strong>Priority 4</strong></td>
-</tr>
-<tr>
-<td>Service is currently experiencing a failure or degradation of redundant or non-critical components<br><br>Service is currently experiencing failure of a shared service, where alternative services remain available, or disruption for single users</td>
-<td>Service is currently affected by documented housekeeping activities<br><br>Service is currently affected by administration-related requirements or an uncategorised incident</td>
-</tr>
-</tbody>
-</table>
-<h3 id="service-hours">Service hours</h3>
-<p>Service support hours are:</p>
-<table>
-<thead>
-<tr>
-<th>Ticket priority</th>
-<th>Support hours</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>P1 incident</strong></td>
-<td>24 x 7</td>
-</tr>
-<tr>
-<td><strong>P2 to P4 incident</strong></td>
-<td>Monday to Friday from 0800 to 2000 (excluding bank holidays)</td>
-</tr>
-<tr>
-<td><strong>Service requests (all)</strong></td>
-<td>Monday to Friday from 0800 to 2000 (excluding bank holidays)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="customer-service-targets">Customer service targets</h3>
-<p>Your experience is important to us. We measure our performance against service targets across our customers to ensure that we provide you with a service you can trust.</p>
-<table>
-<thead>
-<tr>
-<th>Ticket priority</th>
-<th>Initial response target</th>
-<th>Resolution target</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>P1 incident</strong></td>
-<td>15 minutes</td>
-<td>90% in 12 hours</td>
-</tr>
-<tr>
-<td><strong>P2 incident</strong></td>
-<td>1 hour</td>
-<td>90% in 24 hours</td>
-</tr>
-<tr>
-<td><strong>P3 incident</strong></td>
-<td>1 hour</td>
-<td>90% in 5 days</td>
-</tr>
-<tr>
-<td><strong>P4 incident</strong></td>
-<td>1 hour</td>
-<td>90% in 5 days</td>
-</tr>
-<tr>
-<td><strong>Service request</strong></td>
-<td>1 hour</td>
-<td>2 days (standard pre-approved requests)</td>
-</tr>
-</tbody>
-</table>
 <h2 id="the-small-print">The small print</h2>
-<p>For full terms and conditions, including onboarding and responsibilities, refer to the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf">Terms and Conditions documents</a>.</p>
-<p>For full information regarding this product, we have Service Scopes, FAQs and other relevant articles on our <a href="https://docs.ukcloud.com/index.html">Knowledge Centre</a>.</p>
+<p>For full terms and conditions, including onboarding and responsibilities, refer to the <a href="../other/other-ref-terms-and-conditions.html">Terms and Conditions documents</a>.</p>
+<p>For full information regarding this product, we have relevant articles on our <a href="https://docs.ukcloud.com/index.html">Knowledge Centre</a>.</p>
 <h2 id="why-ukcloud">Why UKCloud?</h2>
-<p>UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.</p>
+<p>UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning onpremises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.</p>
 <p><img src="images/ukc-services-2020.png" alt="UKCloud services"></p>
-<p>We recognise the importance of public services to UK citizens and businesses; we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.</p>
+<p>We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

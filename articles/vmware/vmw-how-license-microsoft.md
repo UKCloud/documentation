@@ -86,7 +86,7 @@ As stated, all Microsoft applications on the UKCloud platform must be licensed a
   
   - Authorized Partner Website URL: https://ukcloud.com/
   
-  - Authorized Mobility Partner Email Address: nstewart@ukcloud.com
+  - Authorized Mobility Partner Email Address: licensing@ukcloud.com
   
   - Partner agreement number: 82685361
 
@@ -100,7 +100,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
   - SQL Developer can only be utilised on a shared platform to test the SQL element of a solution and cannot be used to provide end-user services. If you want to provide SQL services to end-users, SQL Enterprise or SQL Standard must be purchased.
 
-  - We can provide Microsoft SQL Standard Server licences on a per hour basis, or Microsoft SQL Enterprise licences billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+  - We can provide Microsoft SQL Standard Server licences on a per hour basis, Microsoft SQL Enterprise licences billed on a monthly basis or Microsoft SQL Web licenses billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Microsoft SQL Web is currently priced at £10.95 per pair of cores per month with a minimum of 4 cores per VM.
 
   - Microsoft Mobility - this is a valid option for both SQL Standard and Enterprise.
 
@@ -122,7 +122,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
   - We are unable to offer this on our public cloud platform in any form.
   
-  - It is available for customers running dedicated or Private Cloud environments, in which case it can be purchased via SPLA or BYO licensing using Microsoft mobility with Software Assurance.
+  - It is available for customers running dedicated or Private Cloud environments, in which case it can be purchased via UKCloud's SPLA agreement. Please contact Support to arrange for System Center licensing to be implemented on 1 or more of your private hosts.
 
 - **SharePoint**
 

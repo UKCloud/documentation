@@ -69,7 +69,7 @@ To perform cloud migration you need to complete the following steps:
     
     - **Linux agent** - an internal agent that can be deployed to any number of customer Linux virtual or physical machines. Refer to <http://docs.hystax.com/devices_protection.html#install-windows-and-linux-agents> and the [Operating Systems Compatibility Matrix](https://hystax.com/wp-content/uploads/2019/12/Hystax_Acura-Compatibility-Matrix.pdf).
  
-4. When any of the agents are deployed, the machine with it (or all machines on the same ESXi host where the agent is located) will appear in Hystax Acura Control Panel under customer dashboard in the Discovered state.
+4. When any of the agents are deployed, the machine with the Hystax agent will appear in Hystax Acura Control Panel under customer dashboard in the Discovered state.
    
 5. To start replication of machines, select the machines and click **Start replication** under **Bulk actions** or for any of the machines specifically. After **Start replication** is performed, machines will be replicated to a target cloud, first, Hystax Acura takes full replica and, later, incremental replicas according to a schedule set globally for all the machines or for any group of machines or for any machines specifically.
 

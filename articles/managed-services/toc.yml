@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: UKCloud Managed Services Overview
+    href: man-services-home.md
 - name: Basic Managed Compute
   items:
   - name: Basic Mangaged Compute from UKCloud Service Definition
@@ -10,13 +14,15 @@
   items:
   - name: Extended Network Support from UKCloud Service Definition
     href: man-sd-network.md
-- name: Managed Monitoring
+- name: Managed IT Operations
   items:
-  - name: Change your service configuration
-    href: man-monitoring-how-change-config.md
-  - name: Managed Monitoring from UKCloud FAQs
-    href: man-monitoring-faq.md
-  - name: Managed Monitoring from UKCloud Service Definition
-    href: man-sd-monitoring.md
-  - name: Managed Monitoring from UKCloud Service Scope
-    href: man-monitoring-sco.md
+  - name: Managed IT Operations Service Definition
+    href: man-sd-managed-it-ops.md
+  - name: Managed Monitoring as a Service
+    items:
+    - name: Change your service configuration
+      href: man-monitoring-how-change-config.md
+    - name: Managed Monitoring as a Service FAQs
+      href: man-monitoring-faq.md
+    - name: Managed Monitoring as a Service Service Scope
+      href: man-monitoring-sco.md

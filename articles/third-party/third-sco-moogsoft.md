@@ -31,7 +31,7 @@ Moogsoft AIOps from UKCloud consists of the standard Moogsoft AIOps product from
 
 ## Product deployment
 
-You can deploy Moogoft AIOps onto UKCloud IaaS or other on-premises or multi-cloud environments. The latest supported environments are listed in the [Moogsoft Implementer Guide](https://docs.moogsoft.com/en/implementer-guide.html). If you want UKCloud to manage your Moogsoft service, please enquire about our [Managed Monitoring from UKCloud service](../managed-services/man-sd-monitoring.md).
+You can deploy Moogoft AIOps onto UKCloud IaaS or other on-premises or multi-cloud environments. The latest supported environments are listed in the [Moogsoft Implementer Guide](https://docs.moogsoft.com/en/implementer-guide.html). If you want UKCloud to manage your Moogsoft service, please enquire about Managed Monitoring as a Service.
 
 ## Product integrations
 

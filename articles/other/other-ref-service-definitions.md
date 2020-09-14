@@ -51,7 +51,7 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [High Performance Compute](../hpc/hpc-sd.md)
 
-[Managed Monitoring from UKCloud](../managed-services/man-sd-monitoring.md)
+[Managed IT Operations Service Definition](../managed-services/man-sd-managed-it-ops.md)
 
 [Migration to the Cloud](../migration/migr-sd.md)
 

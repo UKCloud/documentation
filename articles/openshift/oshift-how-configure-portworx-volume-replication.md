@@ -6,8 +6,8 @@ author: Ben Bacon
 reviewer:
 lastreviewed: 14/10/2019
 toc_rootlink: How To
-toc_sub1: Use Portworx with OpenShift
-toc_sub2:
+toc_sub1: OpenShift v3.x
+toc_sub2: Portworx
 toc_sub3:
 toc_sub4:
 toc_title: Configure Portworx volume replication
@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-configure-portworx-volume-replication.md
 
 ## Overview
 
-Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how to configure replication for Portworx volumes. 
+Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how to configure replication for Portworx volumes.
 
 ### Intended audience
 
@@ -68,7 +68,7 @@ You can increase or decrease the replication factor for a Portworx volume after 
     ```
 
     > [!NOTE]
-    > The `pxctl` binary is available within the Portworx container, therefore the easiest way to execute commands against the Portworx cluster is to do so remotely using the [`oc exec`](https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html) command. 
+    > The `pxctl` binary is available within the Portworx container, therefore the easiest way to execute commands against the Portworx cluster is to do so remotely using the [`oc exec`](https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html) command.
 
 2. To reduce command complexity, we will set an environment variable named PX_POD containing the name of a Portworx pod so we can re-use it throughout the article.
 

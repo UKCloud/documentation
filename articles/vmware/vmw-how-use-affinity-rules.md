@@ -40,8 +40,6 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 
 To create an affinity or anti-affinity rule:
 
-### [Using the Tenant UI](#tab/tabid-1)
-
 1. In vCloud Director, click the VDC in which you want to create the affinity or anti-affinity rule.
 
 2. In the left navigation panel, select **Affinity Rules**.
@@ -72,46 +70,6 @@ To create an affinity or anti-affinity rule:
     > Select the **Show selected** option to see a list of the VMs already included in the rule.
 
 8. When you're done, click **Save**.
-
-### [Using the Legacy UI](#tab/tabid-2)
-
-1. In the vCloud Director Legacy UI, click **Administration**.
-
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
-
-    For information about how to access the Legacy UI, see [*How to switch to the vCloud Director Legacy UI*](vmw-how-switch-web-console.md).
-
-2. Right-click the VDC that you want to work with and select **Open**.
-
-3. Select the *Affinity Rules* tab.
-
-    ![Affinity Rules tab](images/vmw-vcd-tab-affinity.png)
-
-4. To create an affinity rule, click the **+** icon in the *Affinity Rules* section.
-
-    To create an anti-affinity rule, click the **+** icon in the *Anti-Affinity Rules* section.
-
-    ![Add Affinity Rule and Add Anti-Affinity Rule icons](images/vmw-vcd-ico-add-affinity-rule.png)
-
-5. In the *Add Affinity Rule* or *Add Anti-Affinity Rule* dialog box, enter a **Rule Name**.
-
-6. In the search box, enter the name of a VM that you want to add to the rule.
-
-7. Select the VM and click the **Add** button.
-
-8. Add more VMs as required.
-
-9. If you don't want the rule to take effect immediately, deselect the **Enabled** check box.
-
-    You can edit the rule later to enable it when you're ready.
-
-    ![Add Affinity Rule dialog box](images/vmw-vcd-add-affinity-rule.png)
-
-10. When you're done, click **OK**.
-
-11. If you selected the **Enabled** check box, the affinity or anti-affinity rule is applied and the selected VMs are redistributed as required to meet the conditions of the rule.
-
-***
 
 ## Next steps
 
