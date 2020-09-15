@@ -4,7 +4,7 @@ description: Provides information about the changes in VMware Cloud Director 10.
 services: vmware
 author: Sue Highmoor
 reviewer: sdelaney
-lastreviewed: 04/06/2020
+lastreviewed: 15/09/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -21,9 +21,13 @@ toc_mdlink: vmw-ref-vcd-10-1.md
 
 Ahead of our planned upgrade to VMware Cloud Director 10.1, this article provides information about the changes in this new version.
 
+## Upgrading your edge gateways
+
+In preparation for the upgrade, you must upgrade your edge gateways to the latest available version by October 12th 2020. For more information, see [*How to upgrade your edge gateway*](vmw-how-upgrade-edge.md).
+
 ## New features
 
-vCloud Director 10.1 provides the following new features.
+VMware Cloud Director 10.1 provides the following new features.
 
 - UI enhancements in the HTML5 Tenant Portal:
 
@@ -53,7 +57,7 @@ For more information about new features in VMware Cloud Director 10.1, see <http
 
 ## Legacy UI
 
-The Legacy UI is no longer available in vCloud Director 10.1.
+The Legacy UI is no longer available in vCloud Director 10.1. All tasks can now be performed using the HTML5-based Tenant Portal, removing the requirement for the Flash browser plugin.
 
 ## Browser support
 
