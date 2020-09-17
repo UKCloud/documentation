@@ -3,8 +3,8 @@ title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
-reviewer: William Llewellyn
-lastreviewed: 18/08/2020
+reviewer: Mark Young
+lastreviewed: 15/09/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,16 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 2.2.2
+
+Date: 15th September 2020 
+
+Bug fix
+
+Details:
+
+- If VMware Cloud Director login fails ensure the login 'Confirm' button is active
 
 ## Release 2.1.2
 
