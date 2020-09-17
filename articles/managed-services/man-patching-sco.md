@@ -25,51 +25,64 @@ It describes the boundaries of the service, along with the division of responsib
 
 ## Scope of Patching as a Service
 
-The following table outlines the boundaries of responsibilities for Patching as a Service:
+The following tables outline the boundaries of responsibilities for Patching as a Service.
 
-| **Patching Element**                                               | **UKCloud** | **Customer** | **UKCloud - Professional Services** | **Notes**                                                                                                                                                                                    |
-|--------------------------------------------------------------------|-------------|--------------|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|<td colspan=5> ***Patching as a Service \-  Platform***                                       |              |                                     |                                                                                                                                                                                              |
-| Availability                                                       | A/R         |              |                                     | Platform will be available to ensure the successful attempt of at least one scheduled patching run per calendar month                                                                                  |
-| Updates                                                            | A/R         |              |                                     | Patches will be updated to within 30 days of the latest monthly vendor releases                                                                                                              |
-| Configuration                                                      | A/R         |              |                                     |                                                                                                               |
-| <td colspan=5> ***Patching as a Service \- Customer Endpoint Agents***                  |             |              |                                     |                                                                                                                                                                                              |
-| Making latest agents available                                     | A/R         |              |                                     |                                                                                                                                                                                              |
-| Deploying initial agents                                           | C           | A/R          | £                                   | Agents are only required for non\-Windows Operating Systems                                                                                                                                                  |
-| Deploying agent updates                                            | C           | A/R          | £                                   | Agents are only required for non\-Windows Operating Systems                                                                                                                                                |
-| Configuring agents                                                 | R           | A/C          |                                     | UKCloud will apply and manage configurations, but customers are ultimately accountable for providing configuration data such as required patch cycle                                         |
-| <td colspan=5> ***Patching as a Service \- Applying Patches***                          |             |              |                                     |                                                                                                                                                                                              |
-| Scan customer VMs for applicable patches                           | A/R         | I            |                                     |                                                                                                                                                                                              |
-| Approving patches                                                  | C           | A/R          |                                     | Although UKCloud will validate the quality of patches being supplied, the customer is ultimately responsible for ensuring the application of any patches will not corrupt their environments |
-| Taking a snapshot of a VM prior to applying patches                | A/R         | I            |                                     |                                                                                                                                                                                              |
-| Ensuring the success of the snapshot of a VM prior to applying patches | A/R         | R/A          |                                     | See 'General Support & Troubleshooting' Section                                                                                                                                                |
-| Applying customer approved patches                                 | A/R         |              |                                     |                                                                                                                                                                                              |
-| Ensuring the success of customer approved patches                  | A/R         | R/C          |                                     | See 'General Support & Troubleshooting' Section                                                                                                                                                |
-| Patching fails \- Restoring from snapshot                          | A/R         | R/C          |                                     | See 'General Support & Troubleshooting' Section                                                                                                                                                |
 <u>Key</u>
 
-**R = Responsible** - person who performs an activity or does the work.<BR>
-**A= Accountable** - person who is ultimately accountable and has Yes/No/Veto.<BR>
-**C= Consulted** - person that needs to feedback and contribute to the activity.<BR>
-**I = Informed** - person that needs to know of the decision or action.<BR>
+- **R = Responsible** - The person who performs an activity or does the work
 
-## General Support & Troubleshooting
+- **A = Accountable** - The person who is ultimately accountable and has Yes/No/Veto
 
-UKCloud will work with the customer on a reasonable endeavours basis to troubleshoot and attempt remediation of of any incidents which may occur whilst using this service.
+- **C = Consulted** - A person who needs to feedback and contribute to the activity
+
+- **I = Informed** - A person who needs to know of the decision or action
+
+### Patching as a Service - Platform
+
+Patching element | UKCloud | Customer | UKCloud - Professional Services | Notes
+-----------------|---------|----------|---------------------------------|------
+Availability     | A/R     |          |                                 | Platform will be available to ensure the successful attempt of at least one scheduled patching run per calendar month
+Updates          | A/R     |          |                                 | Patches will be updated to within 30 days of the latest monthly vendor releases
+Configuration    | A/R     |          |                                 | 
+
+### Patching as Service - Customer endpoint agents
+
+Patching element               | UKCloud | Customer | UKCloud - Professional Services | Notes
+-------------------------------|---------|----------|---------------------------------|------
+Making latest agents available | A/R     |          |                                 |
+Deploying initial agents       | C       | A/R      | £                               | Agents are only required for non-Windows operating systems
+Deploying agent updates        | C       | A/R      | £                               | Agents are only required for non-Windows operating systems
+Configuring agents             | R       | A/C      |                                 | UKCloud will apply and manage configurations, but customers are ultimately accountable for providing configuration data such as required patch cycle
+
+### Patching as a Service - Applying patches
+
+Patching element                                              | UKCloud | Customer | UKCloud - Professional Services | Notes
+--------------------------------------------------------------|---------|----------|---------------------------------|------
+Scanning customer VMs for applicable patches                  | A/R     | I        |                                 |
+Approving patches                                             | C       | A/R      |                                 | Although UKCloud will validate the quality of patches being supplied, the customer is ultimately responsible for ensuring the application of any patches will not corrupt their environments
+Taking a snapshot of a VM prior to applying patches           | A/R     | I        |                                 |
+Ensuring the success of VM snapshot prior to applying patches | A/R     | R/A      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+Applying customer approved patches                            | A/R     |          |                                 |
+Ensuring the success of customer approved patches             | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+Restoring from snapshot if patching fails                     | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+
+## General support and troubleshooting
+
+UKCloud will work with the customer on a reasonable endeavours basis to troubleshoot and attempt remediation of any incidents that may occur whilst using this service.
 
 ## Service provisioning
 
 You can request Patching as a Service via your Service Delivery Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-Within 5 business days of accepting an order, UKCloud will enable the customer's patching environment with default configurations (unless otherwise specified) and commence patching any endpoints that have been elected in to the service by the customer.
+Within 5 business days of accepting an order, UKCloud will enable the customer's patching environment with default configurations (unless otherwise specified) and commence patching any endpoints that have been elected into the service by the customer.
 
 ## Customer responsibilities
 
-Any elements within the Scope section of this article where the Customer is listed as Accountable or Responsible.
+Any elements within the [Scope of Patching as a Service](#scope-of-patching-as-a-service) section of this article where the customer is listed as Accountable or Responsible.
 
-The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.
+The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.
 
-Allowing UKCloud access into your environments to analyse and deploy any approved patches or software in order to provide a reliable service.
+Allowing UKCloud access into customer environments to analyse and deploy any approved patches or software in order to provide a reliable service.
 
 Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
 
