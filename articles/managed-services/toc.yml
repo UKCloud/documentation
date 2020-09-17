@@ -26,3 +26,7 @@
       href: man-monitoring-faq.md
     - name: Managed Monitoring as a Service Service Scope
       href: man-monitoring-sco.md
+  - name: Patching as a Service
+    items:
+    - name: Patching as a Service Service Scope
+      href: man-patching-sco.md

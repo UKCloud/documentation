@@ -1,3 +1,9 @@
+- name: How To
+  items:
+  - name: Migrate edge configuration data
+    href: enbl-how-migrate-edge-config.md
+  - name: Obtain full IPsec VPN configuration
+    href: enbl-how-obtain-vpn-config.md
 - name: Reference
   items:
   - name: Cloud Enablement services

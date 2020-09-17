@@ -4643,6 +4643,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-how-migrate-edge-config.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-how-migrate-edge-config.html",
+          "hash": "zmZBEGuuhBYfpJMIiK5eYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-how-obtain-vpn-config.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-how-obtain-vpn-config.html",
+          "hash": "SQjrj4Q1svBVPQRG9EkIEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-ref-services.md",
       "output": {
         ".html": {
@@ -4778,6 +4802,171 @@
       "output": {
         "resource": {
           "relative_path": "articles/enablement/images/enbl-config.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-firefox-restclient-icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-firefox-restclient-icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-accept-header.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-accept-header.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-api-url.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-api-url.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-authentication-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-authentication-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-authentication-header.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-authentication-header.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-authentication-token.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-authentication-token.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-basic-authentication-remove.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-basic-authentication-remove.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-basic-authentication.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-basic-authentication.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-custom-header.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-custom-header.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-get-vorg-url.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-get-vorg-url.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-get-vorg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-get-vorg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-method-get.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-method-get.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-request-headers-token.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-request-headers-token.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-request-headers.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-request-headers.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-restclient-request-method-post.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-restclient-request-method-post.png"
         }
       },
       "is_incremental": false,
@@ -5009,7 +5198,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "TK5t28y72kEXEv1Q7uNu3A=="
+          "hash": "ZfPNF3/1zq9UIAUvIJyovA=="
         }
       },
       "is_incremental": false,
@@ -5246,6 +5435,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-patching-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-patching-sco.html",
+          "hash": "09F/wbVKIV8gLNFfeY8qIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-sd-compute.md",
       "output": {
         ".html": {
@@ -5310,7 +5511,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "thRuOxymIv7oYBiQz0GlHA=="
+          "hash": "aGjW8gUr7rwpsY4zkZFmhg=="
         }
       },
       "is_incremental": false,
@@ -19989,7 +20190,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 433,
+          "total_file_count": 436,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
