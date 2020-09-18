@@ -5507,26 +5507,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sqlserver-sco.md.md",
+      "source_relative_path": "articles/managed-services/man-sqlserver-sco.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-sqlserver-sco.md.html",
-          "hash": "Ey3dcmYNcQRpR6JfB63QFQ=="
+          "relative_path": "articles/managed-services/man-sqlserver-sco.html",
+          "hash": "YCzzshyVjgBi78q/Xzf/Ug=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/managed-services/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "OGd3suVusan1HKuhdjjk8Q=="
+          "hash": "1tJ9ZcAhSlgjScPonc/yDA=="
         }
       },
       "is_incremental": false,
