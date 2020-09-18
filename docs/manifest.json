@@ -15118,6 +15118,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-redeploy.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-btn-redeploy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-reset-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-btn-reset-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-reset-vaap-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-btn-reset-vaap-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-btn-syslog-server.png",
       "output": {
         "resource": {
@@ -18719,7 +18752,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "wG7D/pf6rOnP/p7IJkWF8g=="
+          "hash": "jsxZf/nzYffFN4ele38VMA=="
         }
       },
       "is_incremental": false,
@@ -19423,6 +19456,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-upgrade-edge.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-upgrade-edge.html",
+          "hash": "nA5y6MMo0Hf93hgmz/xKrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-upload-media-iso-flp.md",
       "output": {
         ".html": {
@@ -19859,7 +19904,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-10-1.html",
-          "hash": "FZAK6tIvZAE7n06hmTqhRg=="
+          "hash": "d7fBipQheh/uwV+I1xDDKQ=="
         }
       },
       "is_incremental": false,
@@ -20202,7 +20247,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 437,
+          "total_file_count": 438,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

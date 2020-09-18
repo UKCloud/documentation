@@ -128,6 +128,8 @@
     href: vmw-how-setup-gpu-visualisation.md
   - name: Switch to the Legacy UI
     href: vmw-how-switch-web-console.md
+  - name: Upgrade your edge gateway
+    href: vmw-how-upgrade-edge.md
   - name: Upload ISO or FLP media
     href: vmw-how-upload-media-iso-flp.md
   - name: Use affinity and anti-affinity rules
