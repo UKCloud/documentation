@@ -5427,7 +5427,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-sco.html",
-          "hash": "qFe55wGtuYta9fLbigNg4A=="
+          "hash": "lP7b3Hb7CoCAcVdYj9mD8g=="
         }
       },
       "is_incremental": false,
@@ -5506,12 +5506,27 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-sqlserver-sco.md.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-sqlserver-sco.md.html",
+          "hash": "Ey3dcmYNcQRpR6JfB63QFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/managed-services/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "aGjW8gUr7rwpsY4zkZFmhg=="
+          "hash": "OGd3suVusan1HKuhdjjk8Q=="
         }
       },
       "is_incremental": false,
@@ -20190,7 +20205,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 436,
+          "total_file_count": 437,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

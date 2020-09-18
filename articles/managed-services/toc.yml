@@ -26,6 +26,10 @@
       href: man-monitoring-faq.md
     - name: Managed Monitoring as a Service Service Scope
       href: man-monitoring-sco.md
+  - name: Managed SQL Server
+    items:
+    - name: Managed SQL Server Service Scope
+      href: man-sqlserver-sco.md
   - name: Patching as a Service
     items:
     - name: Patching as a Service Service Scope
