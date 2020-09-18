@@ -1,10 +1,10 @@
 ---
 title: How to create a static route
-description: Shows how to configure static routing within vCloud Director
+description: Shows how to configure static routing within the vCloud Director/VMware Cloud Director Tenant Portal
 services: vmware
-author: Sue Highmoor
-reviewer: lthangarajah
-lastreviewed: 21/06/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 18/09/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,18 +20,20 @@ toc_mdlink: vmw-how-create-static-route.md
 
 ## Overview
 
-Static routing allows you to configure your edge gateway with knowledge of other networks which are not directly connected to it. It's particularly useful if you need to route between virtual data centres (VDCs) in the same vOrg, or route traffic to vApp networks. Static routing is the only option on edge gateways; dynamic routing protocols cannot be used. 
+Static routing enables you to configure your edge gateway with knowledge of other networks which are not directly connected to it. It's particularly useful if you need to route between virtual data centres (VDCs) in the same vOrg, or route traffic to vApp networks. Static routing is the only option on edge gateways; dynamic routing protocols cannot be used.
 
 As an example, you may have a vApp network `192.168.8.0/24` routed to a VDC network called `Front end network`. You could create a static route to enable traffic to get to the outside IP of the vApp edge at `192.168.4.33` (a NAT will exist there).
 
 > [!IMPORTANT]
-> Selecting the **Default gateway is not set** in the **Applied On** list under the *Static Routing Default Gateway* section will remove all existing static routes.  However, setting a global default **Gateway IP** when it is configured with **Default gateway is not set** will retain the entries on the Static Routes tab.
+> Selecting **Default gateway is not set** in the **Applied On** list under the *Static Routing Default Gateway* section will remove all existing static routes.  However, setting a global default **Gateway IP** when it is configured with **Default gateway is not set** will retain the entries on the Static Routes tab.
 
 ## Creating a static route
 
 To create a static route:
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway in which you to create the static route.
+### [vCloud Director 9.7](#tab/tabid-a)
+
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway in which you want to create the static route.
 
 2. In the left navigation panel, click **Edges**.
 
@@ -56,6 +58,36 @@ To create a static route:
 7. When you're done, click **Keep** then **Save changes**.
 
 8. Repeat the steps for the second VDC.
+
+### [VMware Cloud Director 10.1](#tab/tabid-b)
+
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway in which you want to create the static route.
+
+2. In the left navigation panel, under *Networking*, select **Edges**.
+
+    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+
+3. On the *Edge Gateways* page, select the edge that you want to configure and click **Services**.
+
+    ![Services button](images/vmw-vcd10.1-edge-btn-services.png)
+
+4. On the *Edge Gateway* page, select the **Routing** tab then the **Static Routes** tab.
+
+    ![Routing tab](images/vmw-vcd10.1-edge-tab-static-route.png)
+
+5. On the *Static Routes* page, click the **+** button.
+
+    ![Add static route button](images/vmw-vcd10.1-edge-btn-add-static-route.png)
+
+6. In the *Add Static Route* dialog box, fill in the details of the network range, next hop (edge IP) and select the network interface to which you want to apply the static route.
+
+    ![Add Static Route dialog box](images/vmw-vcd10.1-edge-add-static-route.png)
+
+7. When you're done, click **Keep** then **Save changes**.
+
+8. Repeat the steps for the second VDC.
+
+***
 
 ## Next steps
 
