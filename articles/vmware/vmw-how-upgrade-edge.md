@@ -41,7 +41,15 @@ To upgrade an isolated organisation network edge, see [*Upgrading an isolated ne
 
 #### vApp network edges
 
-vApps and vApp networks have some optional capabilities that require the use of an NSX edge services gateway in the underlying network. This is often due to the vApp being configured as "fenced", requiring you to use NAT to communicate outside of the vApp. If you've configured a vApp network to use either NAT or firewall functionality, an NSX edge services gateway is required.
+vApps and vApp networks have some optional capabilities that require the use of an NSX edge services gateway in the underlying network. This is often due to the vApp being configured as "fenced", requiring you to use NAT to communicate outside of the vApp. If you've configured a vApp network with any of the following, an NSX edge services gateway is required:
+
+- NAT
+
+- Firewall
+
+- DHCP Scope
+
+- Connection into an organisation network
 
 To upgrade a vApp network edge, see [*Upgrading a vApp network edge*](#upgrading-a-vapp-network-edge).
 
@@ -94,6 +102,8 @@ To upgrade an isolated network edge, you need to reset the network. This forces 
 An edge will be present on your vApp network if the network is:
 
 - Connected to an organisation network
+
+- Configured for NAT and/or firewall services
 
 - Configured to supply DHCP services (disabled by default)
 
