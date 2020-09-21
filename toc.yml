@@ -40,12 +40,12 @@
     topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
   - name: Private Cloud
     topicHref: articles/private-cloud/prc-sd.md
+  - name: Professional Services
+    topicHref: articles/pro-services/ps-sd.md
   - name: Secure Remote Access
     topicHref: articles/sra/sra-gs.md
   - name: Third-Party Software
     topicHref: articles/third-party/third-ref-eula.md
-  - name: Transition Services
-    topicHref: articles/transition-services/trans-sd.md
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
   - name: Other

@@ -441,6 +441,12 @@ A UKCloud IaaS service that provides single-tenant storage infrastructure on you
 
 For more information, see the [Private Cloud for Storage service definition](../private-cloud/prc-sd-storage.md).
 
+### Professional Services
+
+UKCloud Professional Services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. The four services include our Assessment, Migration, Optimisation and Transformation services and can be tailored to suit your requirements.
+
+For more information, see the [UKCloud Professional Services service definition](../pro-services/ps-sd.md).
+
 ### Protective Monitoring
 
 A complimentary service from UKCloud that ensures our platform, up to the hypervisor level, adheres to Good Practice Guide 13 (GPG13) guidance.
@@ -536,12 +542,6 @@ Fast block storage, optimised for data warehouses, busy transactional databases 
 ### Tier 2 storage
 
 General all-purpose block storage, providing a balance of performance and cost.
-
-### Transition Services
-
-UKCloud's Transition services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. The four services include our Assessment, Migration, Optimisation and Transformation services and can be tailored to suit your requirements.
-
-For more information, see the [Transition Services service definition](../transition-services/trans-sd.md).
 
 ## U
 

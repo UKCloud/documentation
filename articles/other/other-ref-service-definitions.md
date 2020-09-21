@@ -63,9 +63,9 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Private Cloud for Storage](../private-cloud/prc-sd-storage.md)
 
-[Secure Remote Access](../sra/sra-sd.md)
+[Professional Services](../pro-services/ps-sd.md)
 
-[Transition Services](../transition-services/trans-sd.md)
+[Secure Remote Access](../sra/sra-sd.md)
 
 ### 3rd party software
 

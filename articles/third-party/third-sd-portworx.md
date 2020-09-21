@@ -2,9 +2,9 @@
 title: Portworx Enterprise from UKCloud Service Definition
 description: Provides an overview of what is provided by the Portworx Enterprise from UKCloud service
 services: third-party
-author: Sue Highmoor
-reviewer:
-lastreviewed: 02/07/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 21/09/2020
 toc_rootlink: Portworx Enterprise
 toc_sub1: 
 toc_sub2:
@@ -17,21 +17,11 @@ toc_mdlink: third-sd-portworx.md
 
 # Portworx Enterprise from UKCloud Service Definition
 
-## Why UKCloud?
-
-UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government's Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
-
-We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud's technical experts.
-
-![UKCloud services](images/ukc-services.png)
-
 ## What is Portworx Enterprise from UKCloud?
 
 The service provides a secure and stable cloud native storage and data management platform for Kubernetes that enterprises can trust to manage data in containers.
 
-Kubernetes is the fastest growing open-source project in history, but Kubernetes was not designed with stateful applications like databases in mind. For enterprise applications, these systems have non-negotiable business requirements like high availability, data security, disaster recovery, strict performance SLAs and hybrid/multi-cloud operations. Portworx Enterprise addresses all these requirements enabling the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.
-
-For full information regarding this product, we have Service Scopes, FAQs and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
+Kubernetes is the fastest growing open source project in history, but Kubernetes was not designed with stateful applications like databases in mind. For enterprise applications, these systems have non-negotiable business requirements like high availability, data security, disaster recovery, strict performance SLAs and hybrid/multi-cloud operations. Portworx Enterprise addresses all these requirements enabling the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.
 
 ## What the service can help you achieve
 
@@ -43,15 +33,15 @@ For full information regarding this product, we have Service Scopes, FAQs and ot
 
   - Auto-scaling
 
-- Improve cloud native storage resilience
+  - Improve cloud native storage resilience
 
   - Read/write multi-attachment of persistent data volumes
 
   - Automated failover of volumes across nodes
 
-  - Application-consistent snapshots – On-demand and schedule based
+  - Application-consistent snapshots – on-demand and schedule based
 
-  - Scanning drives for media errors, alerting and repairing
+  - Scanning drives for media errors, alerting and repairing 
 
 - Improve cloud native storage security
 
@@ -71,7 +61,7 @@ For full information regarding this product, we have Service Scopes, FAQs and ot
 
   - Multi-site asynchronous replication across the WAN
 
-- Opensource standards
+- Open source standards
 
   - OpenStorage SDK – plugs into CSI, Kubernetes and Docker volumes
 
@@ -81,23 +71,31 @@ For full information regarding this product, we have Service Scopes, FAQs and ot
 
 ## Product options
 
-The service is designed to be flexible to enable you to select the right type of container native storage based upon your chosen Kubernetes platform and deployment type (i.e. bare metal hosts or virtualised worker nodes).
+The service is designed to be flexible to enable you to select the right type of container native storage based upon your chosen Kubernetes platform and deployment type (that is, bare metal hosts or virtualised worker nodes).
 
 ## Pricing and packaging
 
-UKCloud for Portworx Enterprise starts from £2,200 per month, and full pricing with all options including licensing and connectivity available in the [3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide).
+Portworx Enterprise from UKCloud starts from £33,400 per annum. Full pricing is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
-The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
+The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## The small print
 
-For full terms and conditions including onboarding and responsibilities, please refer to the [*Terms and conditions documents*](../other/other-ref-terms-and-conditions.md).
+For full terms and conditions, including onboarding and responsibilities, refer to the [*Terms and conditions documents*](../other/other-ref-terms-and-conditions.md).
+
+## Why UKCloud?
+
+UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
+
+![UKCloud services](images/ukc-services-g12.png)
+
+We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
 ## Feedback
 
