@@ -5399,6 +5399,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-antivirus-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-antivirus-sco.html",
+          "hash": "FHC2R27JPtfr4/7hpzdpiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-monitoring-faq.md",
       "output": {
         ".html": {
@@ -5523,7 +5535,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "Lbjz1cYVr38VRgyRKT71CQ=="
+          "hash": "47PIq4oNFJ/u/vVzeyFjHw=="
         }
       },
       "is_incremental": false,
@@ -20247,7 +20259,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 438,
+          "total_file_count": 439,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

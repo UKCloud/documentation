@@ -24,6 +24,10 @@
   items:
   - name: Managed IT Operations Service Definition
     href: man-sd-managed-it-ops.md
+  - name: Anti-Virus as a Service
+    items:
+    - name: Anti-Virus as a Service Service Scope
+      href: man-antivirus-sco.md
   - name: Managed Monitoring as a Service
     items:
     - name: Change your service configuration
