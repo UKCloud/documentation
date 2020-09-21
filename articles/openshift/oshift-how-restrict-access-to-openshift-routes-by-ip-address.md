@@ -61,26 +61,30 @@ To delete the IPs from the annotation, you can run the command:
     
 ## Known Issues   
 
-As of OpenShift version 4.4+ pod DNS lookups will return the internal IP of a route rather than the public IP. This means traffic will not leave the cluster for pod to route communication. In order for a whitelisted route to accept traffic from a pod in the same cluster you must whitelist the internal cluster subnet rather than the clusters egress IP. The following screenshots show a lookup from a local client machine and from inside a pod demonstrating the difference in resolution:
+As of OpenShift version 4.4+, pod DNS lookups will return the internal IP of a route rather than the public IP. This means traffic will not leave the cluster for pod to route communication. For a whitelisted route to accept traffic from a pod in the same cluster, you must whitelist the internal cluster subnet rather than the cluster's egress IP. The following screenshots show a lookup from a local client machine and from inside a pod, demonstrating the difference in resolution:
 
-DNS lookup on local machine
+**DNS lookup on local machine:**
 
  ![Local machine lookup](images/oshift-local-lookup.png)
 
-DNS lookup from inside a pod
+**DNS lookup from inside a pod:**
 
  ![Pod lookup](images/oshift-pod-lookup.png)
 
-In this case you would want to run the following command to whitelist your route (assuming your cluster local subnet is 10.0.0.0/24):
+In this case you would run the following command to whitelist your route (assuming your cluster local subnet is 10.0.0.0/24):
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="10.0.0.0/24"
 
 ## More information
 
-For further information, see the following documentation: [v3](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html) [v4](https://docs.openshift.com/container-platform/4.5/networking/routes/route-configuration.html)
+For further information, see the following OpenShift documentation:
+
+- [OpenShift v3](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html)
+
+- [OpenShift v4](https://docs.openshift.com/container-platform/4.5/networking/routes/route-configuration.html)
 
 > [!IMPORTANT]
-> This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled.
+> This functionality is available by default in UKCloud for OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled.
 
 ## Feedback
 
