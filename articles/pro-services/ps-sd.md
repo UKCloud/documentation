@@ -5,13 +5,13 @@ services: pro-services
 author: shighmoor
 reviewer: shighmoor
 lastreviewed: 21/09/2020
-toc_rootlink: Service Definition
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud Professional Services Service Definition
-toc_fullpath: Service Definition/ps-sd.md
+toc_title: Service Definition
+toc_fullpath: Service Information/ps-sd.md
 toc_mdlink: ps-sd.md
 ---
 

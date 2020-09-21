@@ -5,13 +5,13 @@ services: oracle
 author: shighmoor
 reviewer: shighmoor
 lastreviewed: 21/09/2020
-toc_rootlink: Service Definition
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Oracle Software Service Definition
-toc_fullpath: Service Definition/orcl-sd.md
+toc_title: Service Definition
+toc_fullpath: Service Information/orcl-sd.md
 toc_mdlink: orcl-sd.md
 ---
 

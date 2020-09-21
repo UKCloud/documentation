@@ -5,13 +5,13 @@ services: openstack
 author: shighmoor
 reviewer: shighmoor
 lastreviewed: 21/09/2020
-toc_rootlink: Service Definition
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for OpenStack Service Definition
-toc_fullpath: Service Definition/ostack-sd.md
+toc_title: Service Definition
+toc_fullpath: Service Information/ostack-sd.md
 toc_mdlink: ostack-sd.md
 ---
 
