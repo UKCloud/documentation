@@ -4,7 +4,7 @@ description: Restrict access to OpenShift routes by IP address
 services: openshift
 author: Mudasar Hussain
 reviewer: Kieran O'Neill
-lastreviewed: 04/02/2020 10:46:43
+lastreviewed: 21/09/2020
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
@@ -61,7 +61,7 @@ To delete the IPs from the annotation, you can run the command:
     
 ## Known Issues   
 
-As of OpenShift version 4.4+ pod DNS lookups will return the internal IP of a route rather than the public IP. This means traffic will not leave the cluster for pod to route communication. In order for a whitelisted route to accept traffic from a pod in the same cluster you must whitelist the internal cluster subnet. The following screenshots show a lookup from a local client machine and inside a pod demonstrating the difference in resolution:
+As of OpenShift version 4.4+ pod DNS lookups will return the internal IP of a route rather than the public IP. This means traffic will not leave the cluster for pod to route communication. In order for a whitelisted route to accept traffic from a pod in the same cluster you must whitelist the internal cluster subnet. The following screenshots show a lookup from a local client machine and from inside a pod demonstrating the difference in resolution:
 
 DNS lookup on local machine
 
@@ -77,7 +77,7 @@ In this case you would want to run the following command to whitelist your route
 
 ## More information
 
-For further information, see the following: [OpenShift Documentation](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html)
+For further information, see the following: [v3](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html) [v4](https://docs.openshift.com/container-platform/4.5/networking/routes/route-configuration.html)
 
 > [!IMPORTANT]
 > This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled.
