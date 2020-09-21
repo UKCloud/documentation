@@ -30,14 +30,12 @@ OpenShift developers who have created and deployed services into OpenShift, and 
 After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to whitelist.
 
 > [!IMPORTANT]
-> Whitelisting a IP address automatically blacklists everything else.
+> Whitelisting an IP address automatically blacklists everything else.
 
 You apply the annotation to a route in the following manner:
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="<ip_address>"
 
-> [!IMPORTANT]
-> You must do this for every route that you wish to apply the whitelisting to.
 
 ## Examples
 
@@ -60,6 +58,12 @@ You can even use a mix of IP addresses and a CIDR block:
 To delete the IPs from the annotation, you can run the command:
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist-
+    
+## Known Issues   
+
+As of OpenShift version 4.4+ pod DNS lookups will return the internal IP of a route rather than the public IP. This means traffic will not leave the cluster for pod to route communication. In order for a whitelisted route to accept traffic from a pod in the same cluster you must whitelist the internal cluster subnet. The following screenshots show a lookup from a local client machine and inside a pod demonstrating the difference in resolution:
+
+
 
 ## More information
 
