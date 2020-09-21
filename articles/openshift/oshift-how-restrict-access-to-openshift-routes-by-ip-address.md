@@ -77,7 +77,7 @@ In this case you would want to run the following command to whitelist your route
 
 ## More information
 
-For further information, see the following: [v3](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html) [v4](https://docs.openshift.com/container-platform/4.5/networking/routes/route-configuration.html)
+For further information, see the following documentation: [v3](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html) [v4](https://docs.openshift.com/container-platform/4.5/networking/routes/route-configuration.html)
 
 > [!IMPORTANT]
 > This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled.
