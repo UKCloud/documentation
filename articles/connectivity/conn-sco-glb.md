@@ -1,6 +1,6 @@
 ---
-title: UltraDNS Service Scope
-description: Outlines important details regarding the UltraDNS service (previously Global Load Balancing)
+title: Neustar UltraDNS from UKCloud Service Scope
+description: Outlines important details regarding the Neustar UltraDNS from UKCloud service (previously Global Load Balancing)
 services: connectivity
 author: Steve Hall
 reviewer: hbrunt
@@ -10,28 +10,28 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UltraDNS Service Scope
+toc_title: Neustar UltraDNS from UKCloud Service Scope
 toc_fullpath: Service Scope/conn-sco-glb.md
 toc_mdlink: conn-sco-glb.md
 ---
 
-# UltraDNS Service Scope
+# Neustar UltraDNS from UKCloud Service Scope
 
 ## About this document
 
-This document is intended to provide additional information regarding the optional UltraDNS service (previously Global Load Balancing) that is available for UKCloud services within the UKCloud for VMware service definition. For additional information, see the [*UltraDNS FAQs*](conn-faq-glb.md).
+This document is intended to provide additional information regarding the optional Neustar UltraDNS from UKCloud service (previously Global Load Balancing) that is available for UKCloud services within the UKCloud for VMware service definition. For additional information, see the [*Neustar UltraDNS from UKCloud FAQs*](conn-faq-glb.md).
 
-## About UltraDNS
+## About Neustar UltraDNS from UKCloud
 
 This service is aimed at providing a secure and reliable managed DNS service to help businesses enable and protect their online presence. It ensures a high level of web site availability and optimal performance, with built-in security for superior protection that is scalable to future demands.
 
 It enables customers to direct internet traffic between multiple end-points, which can be across different sites or different platforms.
 
-UKCloud have partnered with Neustar for the provision of this service along with the additional option of [*SiteProtect Advanced DDoS Mitigation*](conn-sco-app-ddos.md) for a complete traffic protection solution.
+UKCloud have partnered with Neustar for the provision of this service along with the additional option of [*Neustar DDoS Protection from UKCloud*](conn-sco-app-ddos.md) for a complete traffic protection solution.
 
 ## Traffic management services
 
-Basic traffic routing services for monitored load balancing and failover are included services with the UltraDNS service. Monitor and automatically load balance or failover traffic at the DNS level by distributing traffic among multiple servers. Our advanced traffic routing services help to further optimise your traffic, allowing granular control of load balancing and failover options to configure different thresholds for notifications and traffic routing actions.
+Basic traffic routing services for monitored load balancing and failover are included services with the Neustar UltraDNS from UKCloud service. Monitor and automatically load balance or failover traffic at the DNS level by distributing traffic among multiple servers. Our advanced traffic routing services help to further optimise your traffic, allowing granular control of load balancing and failover options to configure different thresholds for notifications and traffic routing actions.
 
 ## Monitoring and failover
 

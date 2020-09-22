@@ -1,7 +1,7 @@
 ---
-title: Secure Remote Access Service Definition
-description: Provides an overview of what is provided by the Secure Remote Access service
-services: sra
+title: Neustar UltraDNS from UKCloud
+description: Provides an overview of what is provided by the Neustar UltraDNS from UKCloud service
+services: connectivity
 author: shighmoor
 reviewer: shighmoor
 lastreviewed: 22/09/2020
@@ -10,28 +10,40 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Service Definition
-toc_fullpath: Service Information/sra-sd.md
-toc_mdlink: sra-sd.md
+toc_title: Neustar UltraDNS from UKCloud Service Definition
+toc_fullpath: Service Information/conn-sd-ultradns.md
+toc_mdlink: conn-sd-ultradns.md
 ---
 
-# Secure Remote Access Service Definition
+# Neustar UltraDNS from UKCloud
 
-## What is Secure Remote Access?
+## What is Neustar UltraDNS from UKCloud?
 
-The Secure Remote Access (SRA) service enables you to securely connect to the UKCloud platform's Elevated OFFICIAL security domain using NCSC-approved internet virtual private network (VPN) technologies and the walled garden architectural pattern.
-System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN.
-SRA uses NCSC Assured VPN technologies and the secure walled garden architectural pattern:
+Neustar UltraDNS is an enterprise grade, cloud-based authoritative DNS service that securely delivers fast and accurate query responses to websites and other vital online assets. Whether you're looking for a primary or secondary DNS solution, Neustar UltraDNS offers customizable packages to fit any organisation's DNS needs. The UltraDNS Firewall option is a cost-effective enterprise grade, cloud-based recursive DNS service that delivers fast and reliable access to vital online applications with built-in security and threat intelligence.
 
-- Providing flexible connectivity for remote administrators and mobile workers to the UKCloud Elevated OFFICIAL security domain
+Built-in DNS DDoS protection with UltraDDoS Protect mitigation that quickly defends against attacks and ensures that legitimate DNS queries are always responded to. Nameserver segmentation and DNSSEC support add an additional layer of protection that enables effective DDoS protection and prevents malicious activity. This service is delivered by Neustar on behalf of UKCloud. Neustar is built on the foundation of Privacy by Design, and for more than 20 years Neustar's unique capabilities have made them the leader in the field of responsible identity resolution.
 
-- Delivered as a cloud service – no need to purchase and manage NCSC-approved VPN hardware
+## What the service can help you achieve
 
-- With a flexible application process, including a self-assessment route for customers with simple implementations and an assurance review approach with UKCloud's experienced professionals for more complex implementations.
+- **Continuous DNS.** Ensure your online assets are always available with a 100% DNS uptime SLA.
+
+- **DDoS protection.** Ensures that your service is protected from DDoS attacks.
+
+- **Monitoring and Failover.** Automatically redirect traffic in the event of outage or server downtime as part of your DR strategy.
+
+- **Traffic Management.** Quickly and efficiently manage changes via a web-based portal.
+
+- **Global Load Balancing.** Load balance between servers either locally or globally as part of your DR strategy.
+
+## Product options
+
+The service is designed to be flexible and enables you to choose from the list below to match your requirements.
+
+![Neustar UltraDNS from UKCloud product options](images/conn-ultradns-product-options-g12.png)
 
 ## Pricing and packaging
 
-This service is priced per licence per calendar month from £5.00 Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Pricing starts from £116 pcm. Full pricing is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
@@ -39,7 +51,7 @@ The security of our platform is our number one priority. We've always been commi
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+This service is only available with our internet connectivity.
 
 ## An SLA you can trust
 
@@ -49,7 +61,7 @@ We understand that enterprise workloads need a dependable service that underpins
 
 For full terms and conditions, including onboarding and responsibilities, refer to the [*Terms and conditions documents*](../other/other-ref-terms-and-conditions.md).
 
-For more information about this service, see the [*Service Scope*](sra-sco.md) and [*FAQs*](sra-faq.md).
+For more information about this service, see the [*Service Scope*](conn-sco-glb.md) and [*FAQs*](conn-faq-glb.md).
 
 ## Why UKCloud?
 
