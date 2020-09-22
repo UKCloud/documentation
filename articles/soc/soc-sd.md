@@ -1,18 +1,18 @@
 ---
 title: Security Operations Service Service Definition
 description: Provides an overview of what is provided by Security Operations Service
-services: third-party
+services: soc
 author: shighmoor
 reviewer: shighmoor
 lastreviewed: 21/09/2020
-toc_rootlink: CloudSOC
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Security Operations Service Service Definition
-toc_fullpath: CloudSOC/third-sd-cloudsoc.md
-toc_mdlink: third-sd-cloudsoc.md
+toc_title: Service Definition
+toc_fullpath: Service Information/soc-sd.md
+toc_mdlink: soc-sd.md
 ---
 
 # Security Operations Service Service Definition

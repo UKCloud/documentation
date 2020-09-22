@@ -44,6 +44,8 @@
     topicHref: articles/pro-services/ps-sd.md
   - name: Secure Remote Access
     topicHref: articles/sra/sra-gs.md
+  - name: Security Operations Service
+    topicHref: articles/soc/soc-sd.md   
   - name: Third-Party Software
     topicHref: articles/third-party/third-ref-eula.md
   - name: UKCloud Portal

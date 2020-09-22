@@ -1,18 +1,18 @@
 ---
 title: Portworx Enterprise from UKCloud Service Definition
 description: Provides an overview of what is provided by the Portworx Enterprise from UKCloud service
-services: third-party
+services: openshift
 author: shighmoor
 reviewer: shighmoor
 lastreviewed: 21/09/2020
-toc_rootlink: Portworx Enterprise
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Portworx Enterprise from UKCloud Service Definition
-toc_fullpath: Portworx Enterprise/third-sd-portworx.md
-toc_mdlink: third-sd-portworx.md
+toc_fullpath: Service Information/oshift-sd-portworx.md
+toc_mdlink: oshift-sd-portworx.md
 ---
 
 # Portworx Enterprise from UKCloud Service Definition
