@@ -3,8 +3,8 @@ title: Introduction to the OpenStack dashboard
 description: Provides an outline of the options available in the OpenStack dashboard user interface used to drive UKCloud for Openstack
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 22/10/2020
+reviewer: bnicholls
+lastreviewed: 22/09/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
