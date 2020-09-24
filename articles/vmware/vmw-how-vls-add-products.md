@@ -161,9 +161,9 @@ When you've completed the addition of VMware products to the Usage Meter and it 
 
 ## Next steps
 
-This article described how to give the Usage Meter access to the products that you need it to report on. Next, you need to send monthly usage reports to UKCloud so that you can be billed correctly for the VMware Licence Service.
+This article described how to give the Usage Meter access to the products that you need it to report on. Next, you need to send monthly usage reports to UKCloud so that you can be billed correctly for the VMware Licence Service. For more information, see [*How to report licence usage for the VMware Licence Service*](vmw-how-vls-report-usage.md).
 
-- [*How to report licence usage for the VMware Licence Service*](vmw-how-vls-report-usage.md)
+If you upgrade any of your VLS-licensed VMware products, you must request new licences before upgrading. For more information, see [*How to request a new VLS license*](vmw-how-vls-request-licence.md).
 
 ## Feedback
 

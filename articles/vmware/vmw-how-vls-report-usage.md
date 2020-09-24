@@ -120,6 +120,10 @@ You can also manually generate and email the monthly usage reports.
 
 6. When you have both reports, send them to <vls@ukcloud.com>.
 
+## Related articles
+
+If you upgrade any of your VLS-licensed VMware products, you must request new licences before upgrading. For more information, see [*How to request a new VLS license*](vmw-how-vls-request-licence.md).
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
