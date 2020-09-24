@@ -3,8 +3,8 @@ title: Changes in VMware Cloud Director 10.1
 description: Provides information about the changes in VMware Cloud Director 10.1
 services: vmware
 author: Sue Highmoor
-reviewer: sdelaney
-lastreviewed: 15/09/2020
+reviewer: shighmoor
+lastreviewed: 24/09/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -23,7 +23,9 @@ Ahead of our planned upgrade to VMware Cloud Director 10.1, this article provide
 
 ## Upgrading your edge gateways
 
-In preparation for the upgrade, you must upgrade your edge gateways to the latest available version by October 12th 2020. For more information, see [*How to upgrade your edge gateway*](vmw-how-upgrade-edge.md).
+In preparation for the VMware Cloud Director upgrade, you must upgrade your edge gateways to the latest available version. For more information, see [*How to upgrade your edge gateway*](vmw-how-upgrade-edge.md).
+
+Prior to commencing the VMware Cloud Director upgrades in the various regions, we will upgrade any remaining older edges. You can find information about edge upgrade dates and overall VMware Cloud Director 10.1 rollout dates on the [UKCloud Service Status page](https://status.ukcloud.com/).
 
 ## New features
 
