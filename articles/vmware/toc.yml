@@ -152,6 +152,8 @@
       href: vmw-how-vls-install-usage-meter.md
     - name: Report VLS licence usage
       href: vmw-how-vls-report-usage.md
+    - name: Request a new VLS licence
+      href: vmw-how-vls-request-licence.md
 - name: Reference
   items:
   - name: Access to virtual machines on the UKCloud platform

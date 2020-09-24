@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to report licence usage for the VMware Licence Service </title>
+    <title>How to request a new VLS license </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to report licence usage for the VMware Licence Service ">
+    <meta name="title" content="How to request a new VLS license ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-vls-report-usage.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-vls-request-licence.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,108 +91,27 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-report-licence-usage-for-the-vmware-licence-service">How to report licence usage for the VMware Licence Service</h1>
+<h1 id="how-to-request-a-new-vls-license">How to request a new VLS license</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The VMware Licence Service (VLS) enables you to switch to a flexible, VMware Cloud Provider Programme (VCPP) consumption-based licensing model.</p>
-<p>As the VLS licensing model is consumption-based, you must generate reports in the vCloud Usage Meter (Usage Meter) and send them to UKCloud each month to detail your usage of VMware products.</p>
-<p>This article provides all the information you need to use the Usage Meter to generate usage reports for VLS. For more information about the Usage Meter, see the VMware documentation <a href="https://docs.vmware.com/en/vCloud-Usage-Meter/3.6/com.vmware.vcum.usersguide.doc/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html">here</a>.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Before you can create usage reports, you must have:</p>
-<ul>
-<li><p>Installed and configured the vCloud Usage Meter (see <a href="vmw-how-vls-install-usage-meter.html"><em>How to install the vCloud Usage Meter</em></a>)</p>
-</li>
-<li><p>Added your VMware products to the Usage Meter and completed the discovery of the environment (see <a href="vmw-how-vls-add-products.html"><em>How to add products to the vCloud Usage Meter</em></a>)</p>
-</li>
-</ul>
-<h2 id="creating-a-customer-record">Creating a customer record</h2>
-<p>To create usage reports, you must have a customer record in the Usage Meter.</p>
-<ol>
-<li><p>Log in to the Usage Meter web application.</p>
-</li>
-<li><p>In the top-right menu, select <strong>Customers</strong>, then click <strong>Add</strong>.</p>
-</li>
-<li><p>In the <em>Add/Edit Customer</em> dialog box, in the <strong>Name</strong> field, enter your customer name.</p>
-</li>
-<li><p>From the <strong>Country</strong> list, select <strong>United Kingdom</strong>.</p>
-</li>
-<li><p>In the <strong>Postal Code</strong> field, enter your postcode.</p>
-</li>
-<li><p>Click <strong>Save</strong>.</p>
-</li>
-</ol>
-<h2 id="creating-licence-reporting-rules">Creating licence reporting rules</h2>
-<p>After creating the customer record, you need to create a rule to map resources to your environment.</p>
-<ol>
-<li><p>In the top-right menu of the Usage Meter web application, select <strong>Rules</strong>.</p>
-</li>
-<li><p>From the <strong>Customer</strong> list, select your customer name.</p>
-</li>
-<li><p>On the <strong>Create Rules</strong> tab, in the <em>Rule Creator</em> section, from the <strong>Object Type</strong> list, select your vCenter Server.</p>
-</li>
-<li><p>From the <strong>vCenter</strong> list, select the IP of your vCenter, then click <strong>Create</strong>.</p>
-</li>
-<li><p>Repeat the steps above for all the vCenters in the list.</p>
-<p>You can see all the rules you create on the <strong>Rules List</strong> tab.</p>
-</li>
-<li><p>After a few minutes, you can check that the Usage Meter has assigned all the VMs to the customer record by clicking the <strong>Display Mapped Virtual Machines</strong> button. You should see a list of VMs.</p>
-</li>
-</ol>
-<h2 id="generating-the-licence-usage-report">Generating the licence usage report</h2>
-<p>Every month, you're required to send the following reports to <a href="mailto:vls@ukcloud.com">vls@ukcloud.com</a>:</p>
-<ul>
-<li><p>Customer Monthly Usage report</p>
-</li>
-<li><p>Monthly Usage report</p>
-</li>
-</ul>
-<p>If you've connected the Usage Meter to your SMTP sever, you can automatically email the reports each month. Otherwise, you can generate the reports manually and email them to UKCloud.</p>
+<p>VMware licence keys are associated with a specific version of the product. When you upgrade to a different version (not including patches), you need a new licence key. If you're planning to upgrade any VLS-licensed VMware products, you must request a new upgraded licence to cover the new version before performing the upgrade.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You must provide the usage reports to UKCloud within the first five working days of each month. Failure to do so is a breach of contract and costs will be estimated.</p>
+<p>If you upgrade prior to requesting a new licence, depending on the product, you may be covered by the product's trial grace period, during which time you must request the new licence.</p>
 </div>
-<h3 id="enabling-automatic-reporting">Enabling automatic reporting</h3>
-<p>If you've connected the Usage Meter to your SMTP server, you can automatically email the reports to UKCloud each month.</p>
-<p>To enable automatic reporting:</p>
-<ol>
-<li><p>In the top-right menu of the Usage Meter web application, select <strong>Automatic Reporting</strong>.</p>
-</li>
-<li><p>In the <em>Submit reports to self</em> section, complete the fields as follows:</p>
+<h2 id="requesting-a-new-vls-licence">Requesting a new VLS licence</h2>
+<p>To request an upgrade to an existing licence, raise a Service Request, stating the following:</p>
 <ul>
-<li><p><strong>Name</strong>: Enter the name for the reporting, for example, <code>UKCloud VLS reports</code></p>
+<li><p>Product and version you're upgrading from</p>
 </li>
-<li><p><strong>Reporting Day</strong>: Select the day on which you want to send the reports (you must provide usage reports to UKCloud within the first five working days of each month)</p>
+<li><p>Product and version you're upgrading to</p>
 </li>
-<li><p><strong>Reports</strong>: Select the <strong>Customer Monthly Usage</strong> and <strong>Monthly Usage</strong> check boxes</p>
+<li><p>First and last 5-character blocks of your current VLS licence key</p>
 </li>
-<li><p><strong>From Email</strong>: Enter your sender email address, for example <code>usagemeter@&lt;domain&gt;</code></p>
-</li>
-<li><p><strong>To Email</strong>: Enter <code>vls@ukcloud.com</code></p>
+<li><p>Date of your planned upgrade</p>
 </li>
 </ul>
-</li>
-<li><p>Click <strong>Save</strong>.</p>
-<p>The <strong>Last time report sent</strong> field shows the date when the usage reports were last sent, so that you can confirm that the reports are being sent correctly.</p>
-</li>
-</ol>
-<h3 id="generating-usage-reports-manually">Generating usage reports manually</h3>
-<p>You can also manually generate and email the monthly usage reports.</p>
-<ol>
-<li><p>In the top-right menu of the Usage Meter web application, select <strong>Reports</strong>.</p>
-</li>
-<li><p>From the <strong>Report</strong> field, select <strong>Customer Monthly Usage</strong>.</p>
-</li>
-<li><p>In the <strong>Month of</strong> field, select the current month and year.</p>
-</li>
-<li><p>Select the <strong>Zip</strong> check box, then click <strong>Export</strong>.</p>
-</li>
-<li><p>Repeat the steps above, this time selecting the <strong>Monthly Usage</strong> report.</p>
-</li>
-<li><p>When you have both reports, send them to <a href="mailto:vls@ukcloud.com">vls@ukcloud.com</a>.</p>
-</li>
-</ol>
-<h2 id="related-articles">Related articles</h2>
-<p>If you upgrade any of your VLS-licensed VMware products, you must request new licences before upgrading. For more information, see <a href="vmw-how-vls-request-licence.html"><em>How to request a new VLS license</em></a>.</p>
+<p>For more information about raising Service Requests, see <a href="../portal/ptl-how-use-my-calls.html"><em>How to use My Calls to raise and monitor support tickets</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
