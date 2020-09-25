@@ -95,8 +95,6 @@ There are no termination fees for the service. You are responsible for extractin
 
 We offer a 30-day free trial so that you can test and evaluate our service without commitment. Your trial provides you with a live environment on the UKCloud platform to test our services and verify whether they are suited to your needs. If you're new to UKCloud, you can request a trial via the [UKCloud website trial page](https://ukcloud.com/free-trial-sign-up). If you're an existing customer, contact your Service Delivery Manager. For more information about free trials, see the [*Free Trials Service Scope*](../other/other-sco-free-trials.md).
 
-
-
 ## Service scope
 
 For information about what is and isn't included in the UKCloud for Oracle Software service, as well as UKCloud and customer responsibilities, see the [*UKCloud for Oracle Software Service Scope*](orcl-sco.md).

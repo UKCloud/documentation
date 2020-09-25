@@ -85,7 +85,7 @@ We offer a 30-day free trial so that you can test and evaluate our service witho
 
 ## Service scope
 
-For information about what is and isn't included in the UKCloud for VMware service, as well as UKCloud and customer responsibilities, see the [*UKCloud for VMware Service Scope*](vmw-sco.md).
+For information about what is and isn't included in the Cloud Storage service, as well as UKCloud and customer responsibilities, see the [*Cloud Storage Service Scope*](cs-sco.md).
 
 ## Feedback
 

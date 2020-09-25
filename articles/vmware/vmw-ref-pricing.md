@@ -205,6 +205,18 @@ For more information about the discount and purchase schemes offered by UKCloud,
 
 - If you want to host Oracle solutions on our platform, consult our Cloud Architects, or consider our Dedicated Compute v2 or UKCloud for Oracle Software services to avoid licensing issues.
 
+### Snapshots
+
+- Self-service snapshots created within vCloud Director/VMware Cloud Director will be charged at the rate of the storage they are stored on (Tier 1 or Tier 2), and charged per GiB per month.
+
+- You can use the 60GiB of free VM storage for snapshots.
+
+### Independent disks
+
+- Independent disks will be charged at the rate of the storage they are stored on, along with any additional protection applied (Journaling or Snapshot Protection) and charged at a rate per GiB per month.
+
+- As an independent disk can be mounted to any VM inside a customer's VDC, it cannot be included in the 60GiB of free VM storage.
+
 ## Billing and payment information
 
 Billing for the service is one month in arrears. The minimum unit of time for use is one hour. Part hours will be rounded up.
