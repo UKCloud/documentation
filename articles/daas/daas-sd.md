@@ -25,7 +25,7 @@ UKCloud Desktop as a Service provides significant security and compliance benefi
 
 ## What the service can help you achieve
 
-- **Deliver both persistent and non-persistent Windows 10 desktops.** Supports both standard and complex requirements within your organisation.
+- **Deliver both dedicated and shared Windows 10 desktops.** Supports both standard and complex requirements within your organisation.
 
 - **Virtualize individual applications.** Stream individual applications for those users that don't require a full desktop experience.
 
