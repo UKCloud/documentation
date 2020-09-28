@@ -544,15 +544,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-ref-pricing.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-pricing.html",
-          "hash": "aVzEYQy8qKCfG7AbYJjLWQ=="
+          "hash": "0E0QGHp1/JvxmAuQo146yQ=="
         }
       },
       "is_incremental": false,
@@ -9042,15 +9039,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-ref-pricing.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-pricing.html",
-          "hash": "mSlY5k7k8Rxvc5z3Qrs5Xg=="
+          "hash": "+6GajYHO6PwAOa6GLvVI9g=="
         }
       },
       "is_incremental": false,
