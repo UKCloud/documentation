@@ -107,7 +107,7 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 ## Other FAQs
 
-- [G-Cloud 11 enhancements and additions](other-faq-g11.md)
+- [G-Cloud 12 enhancements and additions](other-faq-g12.md)
 
 - [Jumpstart](other-faq-jumpstart.md)
 
