@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sd.html",
-          "hash": "yCx09siZ6bmpTjduzMe1Ew=="
+          "hash": "XoMZsPXTxvbVMTaKAZnnAQ=="
         }
       },
       "is_incremental": false,
@@ -1868,6 +1868,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-public-browser-add-connection-blade.png",
       "output": {
         "resource": {
@@ -2297,6 +2308,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/ukc-services.png",
       "output": {
         "resource": {
@@ -2312,7 +2334,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "QJD/0eJwiRfgWqWB5bjUTw=="
+          "hash": "I6Xr9vkcK+MJ/Vu3qV3ZFw=="
         }
       },
       "is_incremental": false,
@@ -13338,10 +13360,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/ukc-services-2020.png",
+      "source_relative_path": "articles/vmware/images/ukc-services-g12.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/ukc-services-2020.png"
+          "relative_path": "articles/vmware/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -14046,6 +14068,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-powercli-open.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-product-options-g12.png"
         }
       },
       "is_incremental": false,
@@ -18875,7 +18908,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "gZpkFy5q/w3FMWDE6ukPkQ=="
+          "hash": "hZzbLeCSda6U6NbLH8MdGg=="
         }
       },
       "is_incremental": false,
@@ -20231,7 +20264,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sd-vls.html",
-          "hash": "GoPy1JAxWt6o5FPq130w8A=="
+          "hash": "6Yz44wrHSP6/bZzo6V16Dg=="
         }
       },
       "is_incremental": false,
@@ -20243,7 +20276,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sd.html",
-          "hash": "05hLdr0OolRDFZV/8zSHjQ=="
+          "hash": "mVDiVUf18a5FOkGmnzL3Qg=="
         }
       },
       "is_incremental": false,
