@@ -2262,7 +2262,7 @@
   "index.html": {
     "href": "index.html",
     "title": "UKCloud Knowledge Centre",
-    "keywords": "UKCloud Knowledge Centre Welcome to the UKCloud Knowledge Centre where you can find articles to help you understand and work with our platform .sideaffix.shiftup { bottom: unset; } Azure OpenShift OpenStack Oracle VMware Cloud Enablement Cloud GPU Cloud Storage Connectivity Cross Domain Security Zone Dedicated Compute Disaster Recovery as a Service Email and Collaboration High Performance Compute Managed Services Migration to the Cloud Private Cloud Professional Services Secure Remote Access Security Operations Services UKCloud Portal Other UKCloud on YouTube More Resources Service Status"
+    "keywords": "UKCloud Knowledge Centre Welcome to the UKCloud Knowledge Centre where you can find articles to help you understand and work with our platform .sideaffix.shiftup { bottom: unset; } Azure OpenShift OpenStack Oracle VMware Cloud Enablement Cloud GPU Cloud Storage Connectivity Cross Domain Security Zone Dedicated Compute Desktop as a Service Disaster Recovery as a Service Email and Collaboration High Performance Compute Managed Services Migration to the Cloud Private Cloud Professional Services Secure Remote Access Security Operations Services UKCloud Portal Other More Resources Service Status"
   },
   "README.html": {
     "href": "README.html",
