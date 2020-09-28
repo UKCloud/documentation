@@ -57,7 +57,7 @@ where:
     `oshift` | UKCloud for OpenShift       | `ostack` | UKCloud for OpenStack
     `prc`    | Private Cloud               | `ptl`    | UKCloud Portal
     `sra`    | Secure Remote Access        | `third`  | Third-Party Software
-    `trans`  | Transition Services         | `vmw`    | UKCloud for VMware
+    `ps`     | Professional Services       | `vmw`    | UKCloud for VMware
 
     For articles that do belong to a service or that apply to multiple services, use `other`
 
@@ -132,7 +132,7 @@ Metadata value        | Product                     | Metadata value  | Product
 `openstack`           | UKCloud for OpenStack       | `oracle`        | UKCloud for Oracle Software
 `portal`              | UKCloud Portal              | `private-cloud` | Private Cloud
 `sra`                 | Secure Remote Access        | `third-party`   | Third-Party Software
-`transition-services` | Transition Services         | `vmware`        | UKCloud for VMware
+`pro-services`        | Professional Services       | `vmware`        | UKCloud for VMware
 
 For articles that do belong to a service or that apply to multiple services, use `other`
 

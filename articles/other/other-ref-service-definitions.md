@@ -57,27 +57,27 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Multi-Cloud Backup Storage](../other/other-sd-mcbs.md)
 
+[Portworx Enterprise from UKCloud](../openshift/oshift-sd-portworx.md)
+
 [Private Cloud](../private-cloud/prc-sd.md)
 
 [Private Cloud for Oracle Software](../private-cloud/prc-sd-orcl.md)
 
 [Private Cloud for Storage](../private-cloud/prc-sd-storage.md)
 
+[Professional Services](../pro-services/ps-sd.md)
+
 [Secure Remote Access](../sra/sra-sd.md)
 
-[Transition Services](../transition-services/trans-sd.md)
+[Security Operations Service](../soc/soc-sd.md)
 
 ### 3rd party software
 
 [Cisco AppDynamics from UKCloud](../third-party/third-sd-appdynamics.md)
 
-[CloudSOC from UKCloud](../third-party/third-sd-cloudsoc.md)
-
 [HyTrust DataControl from UKCloud](../third-party/third-sd-hytrust.md)
 
 [Moogsoft AIOps from UKCloud](../third-party/third-sd-moogsoft.md)
-
-[Portworx Enterprise from UKCloud](../third-party/third-sd-portworx.md)
 
 ## Pricing Guide
 

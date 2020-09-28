@@ -74,16 +74,16 @@
     <span>Private Cloud</span>
   </a>
 
+  <a href="/articles/pro-services/ps-sd.html" class="product-grid__item">
+    <span>Professional Services</span>
+  </a>
+
   <a href="/articles/sra/sra-gs.html" class="product-grid__item">
     <span>Secure Remote Access</span>
   </a>
 
-  <a href="/articles/third-party/third-ref-eula.html" class="product-grid__item">
-    <span>Third-Party Software</span>
-  </a>
-
-  <a href="/articles/transition-services/trans-sd.html" class="product-grid__item">
-    <span>Transition Services</span>
+  <a href="/articles/soc/soc-sd.html" class="product-grid__item">
+    <span>Security Operations Services</span>
   </a>
 
   <a href="/articles/portal/ptl-gs.html" class="product-grid__item">

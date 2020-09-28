@@ -141,7 +141,7 @@ This service provides a secure and stable cloud native storage and data manageme
 
 Services to help you set up and maintain your cloud software or hosting services, such as migration services or ongoing support.
 
-### Transition services
+## Professional Services
 
 #### Cloud Assessment Service
 

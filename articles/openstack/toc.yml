@@ -62,9 +62,9 @@
     href: ostack-ref-public-image-versioning.md
   - name: OpenStack region migration tooling
     href: ostack-ref-migrations.md
-- name: Service Definition
+- name: Service Information
   items:
-  - name: UKCloud for OpenStack Service Definition
+  - name: Service Definition
     href: ostack-sd.md
 - name: Service Scope
   items:

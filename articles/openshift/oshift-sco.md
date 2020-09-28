@@ -159,7 +159,7 @@ By default, UKCloud will provide 90 day Let's Encrypt SSL certificates for your 
 
 Kubernetes was not designed with stateful applications like databases in mind. For enterprise applications, these systems have non-negotiable business requirements like high availability, data security, disaster recovery, strict performance SLAs and hybrid/multi-cloud operations.
 
-In order to address the challenge above, UKCloud offers a [Portworx Enterprise](../third-party/third-sd-portworx.md) service, assisting with the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.
+In order to address the challenge above, UKCloud offers a [Portworx Enterprise](../openshift/oshift-sd-portworx.md) service, assisting with the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.
 
 ## Platform management
 

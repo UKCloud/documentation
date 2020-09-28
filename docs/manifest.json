@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sd.html",
-          "hash": "yCx09siZ6bmpTjduzMe1Ew=="
+          "hash": "XoMZsPXTxvbVMTaKAZnnAQ=="
         }
       },
       "is_incremental": false,
@@ -1868,6 +1868,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-public-browser-add-connection-blade.png",
       "output": {
         "resource": {
@@ -2297,6 +2308,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/ukc-services.png",
       "output": {
         "resource": {
@@ -2312,7 +2334,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "QJD/0eJwiRfgWqWB5bjUTw=="
+          "hash": "I6Xr9vkcK+MJ/Vu3qV3ZFw=="
         }
       },
       "is_incremental": false,
@@ -5723,6 +5745,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/oshift-proxy-configmap.png",
       "output": {
         "resource": {
@@ -5859,6 +5892,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/openshift/images/ptl_mnu-my-calls.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -6265,7 +6309,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "9kgfrJzuX0bNbq8l4+WqEw=="
+          "hash": "jVfYfolfj+SWGj5X+6skSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-sd-portworx.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-sd-portworx.html",
+          "hash": "+C4yLlVl2yRYJGA2WKdC8w=="
         }
       },
       "is_incremental": false,
@@ -6277,7 +6333,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sd.html",
-          "hash": "UoxAuYxrv5udUK/tXrOC2g=="
+          "hash": "jHt7n6e6lyYQyVAENcxgHA=="
         }
       },
       "is_incremental": false,
@@ -6289,7 +6345,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "KBFlWkPnSRBGaEw9IwVJ8A=="
+          "hash": "T01/RDIkTzLVNu07VAmFMA=="
         }
       },
       "is_incremental": false,
@@ -8002,6 +8058,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-ps-openrc-unblock.png",
       "output": {
         "resource": {
@@ -8431,6 +8498,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ukc-services.png",
       "output": {
         "resource": {
@@ -8806,7 +8884,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sd.html",
-          "hash": "22S3jlJ1slENTFNHcmDzrg=="
+          "hash": "Eh5kpTqMIMLByIrGbtY+PQ=="
         }
       },
       "is_incremental": false,
@@ -8842,7 +8920,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "J5/gByZchMiasT8J49MUGg=="
+          "hash": "TjrIpV5XdyqT98L42AAL6A=="
         }
       },
       "is_incremental": false,
@@ -9213,10 +9291,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/oracle/images/orcl-solaris-aix.png",
       "output": {
         "resource": {
           "relative_path": "articles/oracle/images/orcl-solaris-aix.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -9395,7 +9495,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sd.html",
-          "hash": "ZoreJKzLvXD1U8hD7nwAvQ=="
+          "hash": "Id66RKVe+zfqvKOLtz5m0Q=="
         }
       },
       "is_incremental": false,
@@ -9419,7 +9519,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "ldGWk21fG9YGS1TwDwyDTA=="
+          "hash": "iF1YbThdWYmcxP4LXRFbew=="
         }
       },
       "is_incremental": false,
@@ -10289,7 +10389,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "0GavnqIlFJ3OYty/l8BHHA=="
+          "hash": "Myg/4/kVYZqpI64ZSFYsYw=="
         }
       },
       "is_incremental": false,
@@ -10313,7 +10413,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "+MvftqgYxnxPlK3A+QXENA=="
+          "hash": "CZzefk2ALh0mFZ8KHEl5YQ=="
         }
       },
       "is_incremental": false,
@@ -10349,7 +10449,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-knowledge-guidelines.html",
-          "hash": "WicXrMnclFYDakALUj2m0A=="
+          "hash": "LHnoqlxNKa3D6NU8t54pkQ=="
         }
       },
       "is_incremental": false,
@@ -10385,7 +10485,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "w+FJWGXO+ZJSUA1MByV3LA=="
+          "hash": "km3NCnIS1cwE/+aKNDduHg=="
         }
       },
       "is_incremental": false,
@@ -10421,7 +10521,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "gWXPFK9fSglq6Tef7QH1eg=="
+          "hash": "HCcW8bsYXEwWDIqJ9Vmc6Q=="
         }
       },
       "is_incremental": false,
@@ -10445,7 +10545,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "cCG0mdp76v8W2kIMx9cmdg=="
+          "hash": "cuAHWPGEjB/z/F4Wz4pgDg=="
         }
       },
       "is_incremental": false,
@@ -11898,6 +11998,99 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/pro-services/images/ps-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/pro-services/images/ps-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/pro-services/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/pro-services/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/pro-services/ps-sd.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/pro-services/ps-sd.html",
+          "hash": "tariGdY7j0TiSDBvEYMO9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/pro-services/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/pro-services/toc.html",
+          "hash": "Jz0yHgl1vHNZ7hpHQwBH8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/soc/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/soc/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/soc/soc-sd.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/soc/soc-sd.html",
+          "hash": "iU9m6dI2CzbGs8Gi1OMeZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/soc/soc-vid-intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/soc/soc-vid-intro.html",
+          "hash": "2wlREp9ERKZW7kcSu9wNrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/soc/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/soc/toc.html",
+          "hash": "hsUZDJ4qF5V27O1tog+Q4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/sra/images/sra-windows-anyconnect-client.png",
       "output": {
         "resource": {
@@ -12069,6 +12262,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/third-party/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/third-party/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/third-party/images/ukc-services.png",
       "output": {
         "resource": {
@@ -12152,18 +12356,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-sd-cloudsoc.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-sd-cloudsoc.html",
-          "hash": "Q1+BxvLWEHxcwcgIwGr7sg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/third-party/third-sd-hytrust.md",
       "output": {
         ".html": {
@@ -12187,71 +12379,12 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-sd-portworx.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-sd-portworx.html",
-          "hash": "6Q/sE5Ztf6JoWjz0ZZhjVQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-vid-cloudsoc-intro.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-vid-cloudsoc-intro.html",
-          "hash": "xsuQeMXLcFK0hcXOx+g2KA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/third-party/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/third-party/toc.html",
-          "hash": "aEG7foYAGhomOqH7+PG0Kw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/transition-services/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/transition-services/images/ukc-services.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/transition-services/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/transition-services/toc.html",
-          "hash": "Yi2WoJ2Ba2ivGl+quRic5w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/transition-services/trans-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/transition-services/trans-sd.html",
-          "hash": "4YGVB2VQCM9TF3BSaGR+rw=="
+          "hash": "2owo4zDKvlLH6Uy9dZ6yJA=="
         }
       },
       "is_incremental": false,
@@ -13227,10 +13360,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/ukc-services-2020.png",
+      "source_relative_path": "articles/vmware/images/ukc-services-g12.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/ukc-services-2020.png"
+          "relative_path": "articles/vmware/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -13935,6 +14068,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-powercli-open.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-product-options-g12.png"
         }
       },
       "is_incremental": false,
@@ -18764,7 +18908,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "jsxZf/nzYffFN4ele38VMA=="
+          "hash": "hZzbLeCSda6U6NbLH8MdGg=="
         }
       },
       "is_incremental": false,
@@ -19544,7 +19688,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vls-add-products.html",
-          "hash": "FnHHFTHiyRdnYlE9xxoShA=="
+          "hash": "RPStCRLoo3HCAM3Z78KCBQ=="
         }
       },
       "is_incremental": false,
@@ -19568,7 +19712,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vls-report-usage.html",
-          "hash": "dIppTOg7DgVGQeP6iMJknQ=="
+          "hash": "OdpwDAN/JXdKa6PD3qE8aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-vls-request-licence.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-vls-request-licence.html",
+          "hash": "1vBz+FrlCgtYspIEgsyE/g=="
         }
       },
       "is_incremental": false,
@@ -19916,7 +20072,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-10-1.html",
-          "hash": "d7fBipQheh/uwV+I1xDDKQ=="
+          "hash": "LrNnxyWK6KDl2GD7JoQp7g=="
         }
       },
       "is_incremental": false,
@@ -20108,7 +20264,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sd-vls.html",
-          "hash": "3B53P4dyq8beMOwhzmrPUw=="
+          "hash": "6Yz44wrHSP6/bZzo6V16Dg=="
         }
       },
       "is_incremental": false,
@@ -20120,7 +20276,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sd.html",
-          "hash": "05hLdr0OolRDFZV/8zSHjQ=="
+          "hash": "mVDiVUf18a5FOkGmnzL3Qg=="
         }
       },
       "is_incremental": false,
@@ -20215,7 +20371,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "KYyIfNen099l+n3OZj5Uig=="
+          "hash": "nSWIdc/e4vC9FqGBYCzF/A=="
         }
       },
       "is_incremental": false,
@@ -20238,7 +20394,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "4tYDzvr5nLtvU6BtQcz7wA=="
+          "hash": "6/gXtWFV9aiXaAgApCRmJQ=="
         }
       },
       "is_incremental": false,
@@ -20259,7 +20415,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 439,
+          "total_file_count": 440,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
