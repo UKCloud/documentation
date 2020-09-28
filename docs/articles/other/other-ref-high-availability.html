@@ -165,11 +165,11 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../connectivity/conn-sco-glb.html">UltraDNS</a></td>
+<td><a href="../connectivity/conn-sco-glb.html">Neustar UltraDNS from UKCloud</a></td>
 <td>Enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.</td>
 </tr>
 <tr>
-<td><a href="../connectivity/conn-sco-app-ddos.html">SiteProtect Advanced DDoS Mitigation</a></td>
+<td><a href="../connectivity/conn-sco-app-ddos.html">Neustar DDoS Protection from UKCloud</a></td>
 <td>A fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site.</td>
 </tr>
 <tr>
@@ -207,7 +207,7 @@
 <tbody>
 <tr>
 <td>Web services</td>
-<td>Utilise an N+1 model, either with multiple web servers running underneath a load balancer or reverse proxy, or with at least one web server running in hot standby. Also use this approach in conjunction with UltraDNS to deliver multi-site resilience.</td>
+<td>Utilise an N+1 model, either with multiple web servers running underneath a load balancer or reverse proxy, or with at least one web server running in hot standby. Also use this approach in conjunction with Neustar UltraDNS from UKCloud to deliver multi-site resilience.</td>
 </tr>
 <tr>
 <td>Application services</td>
@@ -233,7 +233,7 @@
 <p>With Azure Site Recovery, you can replicate a VM to a different region for disaster recovery. For more information, see <a href="../azure/azs-how-deploy-asr-template-powershell.html"><em>How to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell</em></a>.</p>
 <p>Use SQL Always On to ensure the availability of SQL server. For more information, see <a href="../azure/azs-how-deploy-sql-template-powershell.html"><em>How to deploy an SQL template to Azure Stack Hub using PowerShell</em></a>.</p>
 <h3 id="ukcloud-for-openshift">UKCloud for OpenShift</h3>
-<p>Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from UltraDNS) to ensure traffic is redirected should a region or cluster level availability issue occur.</p>
+<p>Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from Neustar UltraDNS from UKCloud) to ensure traffic is redirected should a region or cluster level availability issue occur.</p>
 <p>We also offer the option to have the Portworx storage solution configured in your cluster by UKCloud during deployment. This enables further resilience for your applications by offering highly-available storage, which significantly reduces container failover times, adds multi-attach storage to enable multiple containers to read/write the same volume on different nodes and the ability to replicate and migrate workloads between clusters to aid disaster recovery.</p>
 <p>Within each OpenShift cluster deployment there are a number of features that support high availability and resilience:</p>
 <ul>

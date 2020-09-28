@@ -2418,7 +2418,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sd.html",
-          "hash": "P3aL+/Ro/0y2wzu0LMdICQ=="
+          "hash": "1A1VvdUozT/WhNay5bHdqg=="
         }
       },
       "is_incremental": false,
@@ -2492,6 +2492,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/cdsz/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cdsz/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/cdsz/images/ukc-services.png",
       "output": {
         "resource": {
@@ -2507,7 +2518,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/toc.html",
-          "hash": "e8Xbr3ENtWugzPOQNXa6Dw=="
+          "hash": "v60tPnhYb+U4pW2Ot/pcIw=="
         }
       },
       "is_incremental": false,
@@ -2639,7 +2650,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sd.html",
-          "hash": "gh3Gab3skyqd0t4z1fWYXw=="
+          "hash": "butJ3vg+uxAatZfNKI0r4w=="
         }
       },
       "is_incremental": false,
@@ -3407,10 +3418,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/cloud-storage/images/psn_assured_whitelist_ports.png",
       "output": {
         "resource": {
           "relative_path": "articles/cloud-storage/images/psn_assured_whitelist_ports.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -3433,7 +3466,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/toc.html",
-          "hash": "s46wuzBsgnyHOotPbpT6LA=="
+          "hash": "DekekP7H11a1yIjLNHrGBA=="
         }
       },
       "is_incremental": false,
@@ -3445,7 +3478,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-app-ddos.html",
-          "hash": "nHnsB7YMmAOg9FucR8diIg=="
+          "hash": "aBmOdDdDE7egxRid/X+ZaA=="
         }
       },
       "is_incremental": false,
@@ -3469,7 +3502,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-ddos.html",
-          "hash": "1wZv8eNhOeVlBmNaBE91OQ=="
+          "hash": "3OWjZXeO6LVKqE8EYxrmKw=="
         }
       },
       "is_incremental": false,
@@ -3493,7 +3526,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-glb.html",
-          "hash": "RVgo3LW/+pqorMpJeDfrKQ=="
+          "hash": "SpQ/D8v5U0gL8wG5dYBdLg=="
         }
       },
       "is_incremental": false,
@@ -3601,7 +3634,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-ddos-protection.html",
-          "hash": "/G9lt8zq2tRqPaD5RNKsDQ=="
+          "hash": "+5Ivt1pYe6ki3ST5ylh3oA=="
         }
       },
       "is_incremental": false,
@@ -3757,7 +3790,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-sco-app-ddos.html",
-          "hash": "CDsEhWP8udLKEZzYtVj7aA=="
+          "hash": "AKsuI3aSupfzsfNNQJFG2g=="
         }
       },
       "is_incremental": false,
@@ -3769,7 +3802,48 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-sco-glb.html",
-          "hash": "WxWW6uNg6MgO5R1ft6Jgag=="
+          "hash": "Qeflhw0pDrFNzZTrn0Wyrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-sd-ddosprotect.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-sd-ddosprotect.html",
+          "hash": "imfyLkSXuyADZyhnw5B4sQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-sd-ultradns.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-sd-ultradns.html",
+          "hash": "YEeuaWtR7JALY3/tIf1mYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/conn-ddosprotect-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/conn-ddosprotect-product-options-g12.png"
         }
       },
       "is_incremental": false,
@@ -3792,6 +3866,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/connectivity/images/conn-psn-flattening.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/conn-ultradns-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/conn-ultradns-product-options-g12.png"
         }
       },
       "is_incremental": false,
@@ -3869,7 +3954,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "6w9ENr/H9hMsfFkZDHrAtQ=="
+          "hash": "rjoRTG5iLDsHUcSh9A1v5A=="
         }
       },
       "is_incremental": false,
@@ -9615,6 +9700,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/mcbs-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/mcbs-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/other-complaints.png",
       "output": {
         "resource": {
@@ -10110,6 +10206,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/ukc-services.png",
       "output": {
         "resource": {
@@ -10221,7 +10328,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "/Ve9KgctXT3yfHjUUdELDg=="
+          "hash": "EmJ/Op137fBJCNwwts/yew=="
         }
       },
       "is_incremental": false,
@@ -10389,7 +10496,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "Myg/4/kVYZqpI64ZSFYsYw=="
+          "hash": "XFIn+L8pfROGGZBSUwrirQ=="
         }
       },
       "is_incremental": false,
@@ -10413,7 +10520,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "CZzefk2ALh0mFZ8KHEl5YQ=="
+          "hash": "CIweo89vK1Kj5omG/RfkqQ=="
         }
       },
       "is_incremental": false,
@@ -10473,7 +10580,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-offboarding.html",
-          "hash": "6FdYRkAe63qQqNjhxSFaKQ=="
+          "hash": "foVU5cGgIzyaqzicpHo0Jg=="
         }
       },
       "is_incremental": false,
@@ -10665,7 +10772,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-sd-mcbs.html",
-          "hash": "f8fs4RfaCz61TJtlaVxkLg=="
+          "hash": "JpiJJ3rVqMOzUjURobVoBw=="
         }
       },
       "is_incremental": false,
@@ -10701,7 +10808,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "5m8i1hIKPwOXAbDtE3ee1g=="
+          "hash": "pq6fr58wFB6Xl2pcyB+eoQ=="
         }
       },
       "is_incremental": false,
@@ -11879,6 +11986,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/private-cloud/images/prc-orcl-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/private-cloud/images/prc-orcl-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/private-cloud/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/private-cloud/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/private-cloud/images/ukc-services.png",
       "output": {
         "resource": {
@@ -11954,7 +12083,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-orcl.html",
-          "hash": "Fu6uZ5dkbHEVtLMAja5XUg=="
+          "hash": "lwF8FoPqyBJUAjtdGSbsgw=="
         }
       },
       "is_incremental": false,
@@ -11990,7 +12119,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/toc.html",
-          "hash": "OjgSm/zsg8FehA5Tg4fppA=="
+          "hash": "3sdv2332FdlLK4Zm5AhTfA=="
         }
       },
       "is_incremental": false,
@@ -12157,6 +12286,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/sra/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/sra/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/sra/images/ukc-services.png",
       "output": {
         "resource": {
@@ -12220,7 +12360,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sd.html",
-          "hash": "FEqEH1ZWPau/ki+fS9kFtg=="
+          "hash": "igGI6P2X07zlLXeD2hkpGw=="
         }
       },
       "is_incremental": false,
@@ -12232,7 +12372,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/toc.html",
-          "hash": "V3JUVQFZD24dEl5bKz7vaw=="
+          "hash": "v55crAi9qpPxh+cz4M2s3A=="
         }
       },
       "is_incremental": false,
@@ -18980,7 +19120,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "nagk/owQGp0h0lPQvHSphw=="
+          "hash": "YX2iNKGH68IIqt7NOzft4A=="
         }
       },
       "is_incremental": false,
@@ -20415,7 +20555,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 440,
+          "total_file_count": 442,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

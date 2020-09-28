@@ -92,7 +92,7 @@
     href: other-ref-invoice-evidence-file.md
   - name: Windows Server 2016 templates
     href: other-ref-windows-2016-templates.md
-- name: Service Definition
+- name: Service Information
   items:
   - name: Multi-Cloud Backup Storage Service Definition
     href: other-sd-mcbs.md
