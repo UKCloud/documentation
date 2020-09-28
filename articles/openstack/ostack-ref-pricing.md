@@ -10,7 +10,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Pricing information for UKCloud for OpenStack
+toc_title: Pricing information
 toc_fullpath: Service Information/ostack-ref-pricing.md
 toc_mdlink: ostack-ref-pricing.md
 ---

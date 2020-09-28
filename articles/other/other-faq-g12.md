@@ -113,11 +113,11 @@ There is no stated or supported Service Level Agreement for Disaster Recovery as
 
 ### What is happening to Basic Managed Compute?
 
-Basic Managed Compute has now been replaced by our new managed services portfolio, offering a much wider range of options to suit customer needs. For more information, see the [*Managed IT Operations Service definition*](../managed-services/man-sd-managed-it-ops.).
+Basic Managed Compute has now been replaced by our new managed services portfolio, offering a much wider range of options to suit customer needs. For more information, see the [*Managed IT Operations Service definition*](../managed-services/man-sd-managed-it-ops.md).
 
 ### What is happening to Managed Monitoring?
 
-Managed Monitoring has now been replaced by our new managed services portfolio, offering a much wider range of options to suit customer needs. For more information, see the [*Managed IT Operations Service definition*](../managed-services/man-sd-managed-it-ops.).
+Managed Monitoring has now been replaced by our new managed services portfolio, offering a much wider range of options to suit customer needs. For more information, see the [*Managed IT Operations Service definition*](../managed-services/man-sd-managed-it-ops.md).
 
 ### What is happening to Cloud GPU?
 
