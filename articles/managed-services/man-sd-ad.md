@@ -6,12 +6,12 @@ author: shighmoor
 reviewer: shighmoor
 lastreviewed: 23/09/2020
 toc_rootlink: Advanced Managed Services
-toc_sub1: 
+toc_sub1: Managed Active Directory Support
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Managed Active Directory Support Service Definition
-toc_fullpath: Advanced Managed Services/man-sd-ad.md
+toc_fullpath: Advanced Managed Services/Managed Active Directory Support/man-sd-ad.md
 toc_mdlink: man-sd-ad.md
 ---
 
