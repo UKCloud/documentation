@@ -46,7 +46,7 @@ This article will be updated as and when new Terms and Conditions documents are 
 
 ## For UKCloud partners
 
-[UKCloud Terms and Conditions for Partners](other-ref-terms-and-conditions-partners.md) - These main terms apply to UKCloud Partners and also include terms for the following services (applicable when bought / used):
+[UKCloud Terms and Conditions for Partners](other-ref-terms-and-conditions-partners.md) - These main terms apply to UKCloud partners and also include terms for the following services (applicable when bought / used):
 
 - Free trials
 
