@@ -1,97 +1,74 @@
 ---
-title: UKCloud Service Definitions and Pricing Guide
-description: List of Service Definitions for UKCloud services, including terms and conditions, SFIA rate card, and pricing guide
+title: UKCloud Service Definitions
+description: List of Service Definitions for UKCloud services, including terms and conditions
 services: Other
-author: Sue Highmoor
-reviewer:
-lastreviewed: 28/06/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 26/09/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud Service Definitions and Pricing Guide
+toc_title: UKCloud Service Definitions
 toc_fullpath: Reference/other-ref-service-definitions.md
 toc_mdlink: other-ref-service-definitions.md
 ---
 
-# UKCloud Service Definitions and Pricing Guide
+# UKCloud Service Definitions
 
-This article provides a list of Service Definitions for UKCloud services. The list also includes our Pricing Guide, SFIA rate card and terms and conditions.
+This article provides a list of Service Definitions for UKCloud services. The list also includes our terms and conditions.
 
 ## Service Definitions
 
 ### Multi-cloud technology stacks
 
-[UKCloud for Microsoft Azure](../azure/azs-sd.md)
-
-[UKCloud for OpenShift](../openshift/oshift-sd.md)
-
-[UKCloud for OpenStack](../openstack/ostack-sd.md)
-
-[UKCloud for Oracle Software](../oracle/orcl-sd.md)
-
+[UKCloud for Managed OpenShift](../openshift/oshift-sd.md)<br>
+[UKCloud for Microsoft Azure](../azure/azs-sd.md)<br>
+[UKCloud for OpenStack](../openstack/ostack-sd.md)<br>
+[UKCloud for Oracle Software](../oracle/orcl-sd.md)<br>
 [UKCloud for VMware](../vmware/vmw-sd.md)
 
 ### Multi-cloud enabling services
 
-[Basic Managed Compute from UKCloud](../managed-services/man-sd-compute.md)
+[Cloud Storage](../cloud-storage/cs-sd.md)<br>
+[Cross Domain Security Zone](../cdsz/cdsz-sd.md)<br>
+[Dedicated Compute v2](../dedicated-compute/dc-sd.md)<br>
+[Disaster Recovery as a Service](../draas/draas-sd.md)<br>
+[High Performance Compute](../hpc/hpc-sd.md)<br>
+[Migration to the Cloud](../migration/migr-sd.md)<br>
+[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md)<br>
+[Neustar DDoS Protection from UKCloud](../connectivity/conn-sd-ddosprotect.md)<br>
+[Neustar UltraDNS from UKCloud](../connectivity/conn-sd-ultradns.md)<br>
+[Portworx Enterprise from UKCloud](../openshift/oshift-sd-portworx.md)<br>
+[Secure Remote Access](../sra/sra-sd.md)<br>
+[Security Operations Service](../soc/soc-sd.md)<br>
+[UKCloud Desktop as a Service](../daas/daas-sd.md)<br>
+[VMware Licence Service](../vmware/vmw-sd-vls.md)
 
-[Cloud Optimisation from UKCloud](../managed-services/man-sd-optimisation.md)
+### Private Cloud
 
-[Cloud Storage](../cloud-storage/cs-sd.md)
-
-[Cross Domain Security Zone](../cdsz/cdsz-sd.md)
-
-[Dedicated Compute v2](../dedicated-compute/dc-sd.md)
-
-[Disaster Recovery as a Service](../draas/draas-sd.md)
-
-[Extended Network Support from UKCloud](../managed-services/man-sd-network.md)
-
-[High Performance Compute](../hpc/hpc-sd.md)
-
-[Managed IT Operations Service Definition](../managed-services/man-sd-managed-it-ops.md)
-
-[Migration to the Cloud](../migration/migr-sd.md)
-
-[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md)
-
-[Portworx Enterprise from UKCloud](../openshift/oshift-sd-portworx.md)
-
-[Private Cloud](../private-cloud/prc-sd.md)
-
-[Private Cloud for Oracle Software](../private-cloud/prc-sd-orcl.md)
-
+[Private Cloud](../private-cloud/prc-sd.md)<br>
+[Private Cloud for Oracle Software](../private-cloud/prc-sd-orcl.md)<br>
 [Private Cloud for Storage](../private-cloud/prc-sd-storage.md)
 
-[Professional Services](../pro-services/ps-sd.md)
+### Managed services
 
-[Secure Remote Access](../sra/sra-sd.md)
+[Managed IT Operations Service Definition](../managed-services/man-sd-managed-it-ops.md)<br>
+[Managed Active Directory Support](../managed-services/man-sd-ad.md)<br>
+[Managed Remote Desktop Services Support](../managed-services/man-sd-rds.md)<br>
+[Managed SQL Server](../managed-services/man-sd-sqlserver.md)<br>
+[Managed Web Server](../managed-services/man-sd-webserver.md)<br>
+[Extended Network Support from UKCloud](../managed-services/man-sd-network.md)
 
-[Security Operations Service](../soc/soc-sd.md)
+### Support services
 
-### 3rd party software
-
-[Cisco AppDynamics from UKCloud](../third-party/third-sd-appdynamics.md)
-
-[HyTrust DataControl from UKCloud](../third-party/third-sd-hytrust.md)
-
-[Moogsoft AIOps from UKCloud](../third-party/third-sd-moogsoft.md)
-
-## Pricing Guide
-
-[Pricing Guide](https://ukcloud.com/pricing-guide)
-
-[3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide)
-
-## SFIA rate card
-
-[Skills Framework for the Information Age (SFIA) UKCloud rate card and definitions](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
+[Professional Services](../pro-services/ps-sd.md)<br>
+[Cloud Optimisation from UKCloud](../managed-services/man-sd-optimisation.md)
 
 ## Terms and conditions
 
-[UKCloud Ltd G-Cloud 11 Terms and Conditions](other-ref-terms-and-conditions.md)
+[UKCloud Terms and Conditions](other-ref-terms-and-conditions.md)
 
 ## Feedback
 
