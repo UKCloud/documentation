@@ -6,12 +6,6 @@
     href: third-sd-appdynamics.md
   - name: Cisco AppDynamics from UKCloud Service Scope
     href: third-sco-appdynamics.md
-- name: CloudSOC
-  items:
-  - name: CloudSOC case study (video)
-    href: third-vid-cloudsoc-intro.md
-  - name: CloudSOC from UKCloud Service Definition
-    href: third-sd-cloudsoc.md
 - name: HyTrust DataControl
   items:
   - name: HyTrust DataControl from UKCloud Service Definition
@@ -24,10 +18,6 @@
     href: third-sd-moogsoft.md
   - name: Moogsoft AIOps from UKCloud Service Scope
     href: third-sco-moogsoft.md
-- name: Portworx Enterprise
-  items:
-  - name: Portworx Enterprise from UKCloud Service Definition
-    href: third-sd-portworx.md
 - name: Reference
   items:
   - name: 3rd party software EULA information

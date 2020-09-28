@@ -32,9 +32,9 @@
     href: orcl-ref-templates.md
   - name: VM compatibility with UKCloud for Oracle Software
     href: orcl-ref-vm-compatibility.md
-- name: Service Definition
+- name: Service Information
   items:
-  - name: UKCloud for Oracle Software Service Definition
+  - name: Service Definition
     href: orcl-sd.md
 - name: Service Scope
   items:

@@ -1,4 +1,4 @@
-- name: Service Definition
+- name: Service Information
   items:
-  - name: UKCloud Transition Services Service Definition
-    href: trans-sd.md
+  - name: Service Definition
+    href: ps-sd.md

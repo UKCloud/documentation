@@ -1,1 +1,8 @@
-[]
+- name: Service Information
+  items:
+  - name: Service Definition
+    href: soc-sd.md
+- name: Videos
+  items:
+  - name: Security Operations Service case study (video)
+    href: soc-vid-intro.md
