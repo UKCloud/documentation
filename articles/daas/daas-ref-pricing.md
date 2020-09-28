@@ -19,9 +19,9 @@ toc_mdlink: daas-ref-pricing.md
 
 ## Overview
 
-UKCloud Desktop as a Service can achieve an effective price from £24.30 per desktop per month or £12.15* per user per month for Session Hosting access (*excluding RDS hosting). Full pricing with all options, including licensing and connectivity, are available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Additional UKCloud commitment discounts apply for this service.
+UKCloud Desktop as a Service (DaaS) can achieve an effective price from £24.30 per desktop per month or £12.15* per user per month for Session Hosting access (*excluding RDS hosting). Full pricing with all options, including licensing and connectivity, are available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Additional UKCloud commitment discounts apply for this service.
 
-UKCloud will engage with you to assess your current desktop landscape, this includes understanding the end user roles, applications requirements, performance expectations, end user devices, security requirements, and connectivity needs. Following this initial assessment UKCloud will be able to recommend the most suitable deployment model and recommend desktop and application sizing to meet your requirement.
+UKCloud will engage with you to assess your current desktop landscape. This includes understanding the end user roles, applications requirements, performance expectations, end user devices, security requirements, and connectivity needs. Following this initial assessment, UKCloud will recommend and support you through a proof of concept, followed by larger pilot of DaaS to ensure that you achieve the best possible user experience and cost.
 
 ## Discount options
 
