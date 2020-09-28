@@ -1,21 +1,21 @@
 ---
-title: (Video) CloudSOC case study
+title: (Video) Security Operations Service case study
 description: Shows a video that explains how UKCloud provides cyber security capabilities in partnership with e2e-assure
-services: third-party
+services: soc
 author: Sue Highmoor
 reviewer: 
-lastreviewed: 14/02/2020
-toc_rootlink: CloudSOC
+lastreviewed: 22/09/2020
+toc_rootlink: Videos
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: CloudSOC case study (video)
-toc_fullpath: CloudSOC/third-vid-cloudsoc-intro.md
-toc_mdlink: third-vid-cloudsoc-intro.md
+toc_title: Security Operations Service case study (video)
+toc_fullpath: Videos/soc-vid-intro.md
+toc_mdlink: soc-vid-intro.md
 ---
 
-# (Video) CloudSOC case study
+# (Video) Security Operations Service case study
 
 The following video explains why UKCloud partnered with e2e-assure to provide the cyber security capabilities that keep our platform secure.
 
@@ -30,7 +30,7 @@ The following video explains why UKCloud partnered with e2e-assure to provide th
 
 ## Related articles
 
-- [*CloudSOC from UKCloud Service Definition*](third-sd-cloudsoc.md)
+- [*Security Operations Service Service Definition*](soc-sd.md)
 
 ## Feedback
 

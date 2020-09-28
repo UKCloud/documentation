@@ -61,9 +61,8 @@ High-availability consideration | Notes
 [Disaster Recovery as a Service](../draas/draas-sd.md) | A powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and the UKCloud platform.
 Replicated backup | Enables your services to be backed up and the backup data replicated to another site.
 [Cloud Storage](../cloud-storage/cs-sd.md) | Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).
-[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md) | Provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, utilizing a technology that is common across backup products, enabling open-source backup applications to utilize the backup service as a target. You can also use MCBS as a remote backup target for your on-premises data.
-Third-Party Software | Provides software from third-party providers, including [Moogsoft](../third-party/third-sd-moogsoft.md) and [Portworx](../third-party/third-sd-portworx.md), to help with cyber security and monitoring.
-[Transition Services](../transition-services/trans-sd.md) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
+[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md) | Provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, utilizing a technology that is common across backup products, enabling open-source backup applications to utilize the backup service as a target. You can also use MCBS as a remote backup target for your on-premises data.
+[Professional Services](../pro-services/ps-sd.md) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
 
 ## Application design considerations
 
@@ -101,9 +100,9 @@ Within each OpenShift cluster deployment there are a number of features that sup
 
 - Ingress traffic comes via resilient UKCloud managed load balancers into the cluster. It enters the cluster via resilient router pods deployed on the OpenShift infrastructure nodes.
 
-- We recommend always having more than one application node deployed in each cluster. If you only have one node for your application containers, a single host failure could affect all applications deployed in the cluster as they’d have nowhere to fail over to within the cluster until the node is recovered and returned to service.
+- We recommend always having more than one application node deployed in each cluster. If you only have one node for your application containers, a single host failure could affect all applications deployed in the cluster as they'd have nowhere to fail over to within the cluster until the node is recovered and returned to service.
 
-- You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of >1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform’s understanding of any problematic containers.
+- You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of >1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform's understanding of any problematic containers.
 
 ### UKCloud for OpenStack
 
@@ -119,7 +118,7 @@ To help your applications cope with variable demand, you can configure Orchestra
 
 In UKCloud for Oracle Software, you can enable HA on a virtual machine so that it can be automatically migrated to a surviving node in the event of a failure. For more information, see [*How to enable high availability for your Oracle VMs*](../oracle/orcl-how-enable-ha.md).
 
-If your VM is running an Oracle database and you’re using hard partitioning to reduce licensing costs, virtual CPUs are pinned to physical cores and the HA option is not available. In the event of a failure, VMs must be manually migrated to a new host and will require restarting.
+If your VM is running an Oracle database and you're using hard partitioning to reduce licensing costs, virtual CPUs are pinned to physical cores and the HA option is not available. In the event of a failure, VMs must be manually migrated to a new host and will require restarting.
 
 To achieve high availability for your Oracle database, you can use Real Application Clusters to share the database across multiple servers. For more information, see [*RAC on UKCloud for Oracle Software*](../oracle/orcl-ref-rac.md).
 
@@ -129,7 +128,7 @@ UKCloud for VMware provides Snapshot Protection as a protection option for your 
 
 As an alternative to Snapshot Protection, you could consider Journaling Protection, a powerful self-service protection option, powered by Zerto, that protects your applications by replicating them to another zone. For more information, see the [*Getting Started Guide for Journaling Protection*](../vmware/vmw-gs-journaling.md).
 
-The edge gateway for your VDC provides basic load balancing functionality to help distribute traffic. For more information, see [*How to configure a load balancer*](../vmware/vmw-how-configure-load-balancer.md). However, for more complex requirements, you’ll need to provide your own third-party virtual load balancer.
+The edge gateway for your VDC provides basic load balancing functionality to help distribute traffic. For more information, see [*How to configure a load balancer*](../vmware/vmw-how-configure-load-balancer.md). However, for more complex requirements, you'll need to provide your own third-party virtual load balancer.
 
 Affinity and anti-affinity rules determine whether or not VMs are kept together as they are move around within your environment. If you want your applications to be robust in the event of host failures, you can create anti-affinity rules to make sure that when VMs are moved, they remain spread across multiple hosts. For more information, see [*How to use affinity and anti‑affinity rules*](../vmware/vmw-how-use-affinity-rules.md).
 

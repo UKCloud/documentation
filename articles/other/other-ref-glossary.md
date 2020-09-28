@@ -113,9 +113,7 @@ For more information, see the [Cloud GPU service definition](../gpu/gpu-sco.md).
 
 ### CloudSOC from UKCloud
 
-Third-party software available from UKCloud that provides an always-on, cloud-hosted cyber security capability that can see all your IT systems, all the time, ensuring you have an up-to-date view of possible threats.
-
-For more information, see the [CloudSOC from UKCloud service definition](../third-party/third-sd-cloudsoc.md).
+*See:* [Security Operations Service](#security-operations-service).
 
 ### Cloud Storage
 
@@ -401,7 +399,7 @@ A UKCloud for OpenStack block storage option that is always available, regardles
 
 Third-party software available from UKCloud that provides a secure and stable cloud native storage and data management platform for Kubernetes that enterprises can trust to manage data in containers.
 
-For more information, see the [Portworx Enterprise from UKCloud service definition](../third-party/third-sd-portworx.md).
+For more information, see the [Portworx Enterprise from UKCloud service definition](../openshift/oshift-sd-portworx.md).
 
 ### POWER VM
 
@@ -441,6 +439,12 @@ A UKCloud IaaS service that provides single-tenant storage infrastructure on you
 
 For more information, see the [Private Cloud for Storage service definition](../private-cloud/prc-sd-storage.md).
 
+### Professional Services
+
+UKCloud Professional Services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. The four services include our Assessment, Migration, Optimisation and Transformation services and can be tailored to suit your requirements.
+
+For more information, see the [UKCloud Professional Services service definition](../pro-services/ps-sd.md).
+
 ### Protective Monitoring
 
 A complimentary service from UKCloud that ensures our platform, up to the hypervisor level, adheres to Good Practice Guide 13 (GPG13) guidance.
@@ -478,6 +482,12 @@ A UKCloud IaaS service that provides a secure internet connection to our Elevate
 For more information, see the [Secure Remote Access service definition](../sra/sra-sd.md).
 
 *See also:* [Cross Domain Security Zone (CDSZ)](#cross-domain-security-zone-cdsz)
+
+### Security Operations Service
+
+Provides an always-on, cloud-hosted cyber security capability that can see all your IT systems, all the time, ensuring you have an up-to-date view of possible threats.
+
+For more information, see the [Security Operations Service service definition](../soc/soc-sd.md).
 
 ### Service Credits
 
@@ -539,9 +549,7 @@ General all-purpose block storage, providing a balance of performance and cost.
 
 ### Transition Services
 
-UKCloud's Transition services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. The four services include our Assessment, Migration, Optimisation and Transformation services and can be tailored to suit your requirements.
-
-For more information, see the [Transition Services service definition](../transition-services/trans-sd.md).
+*See:* [Professional Services](#professional-services)
 
 ## U
 

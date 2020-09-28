@@ -61,9 +61,9 @@ For pricing information for UKCloud services, see the following documents on the
 
   - Private Cloud for Oracle Sofware
 
-  - Secure Remote Access
+  - Professional services
 
-  - Transition services
+  - Secure Remote Access
 
   - Cloud Optimisation from UKCloud
 
