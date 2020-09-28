@@ -1,0 +1,4 @@
+- name: Service Information
+  items:
+  - name: Pricing information
+    href: daas-ref-pricing.md

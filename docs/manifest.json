@@ -3967,6 +3967,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/daas/daas-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/daas/daas-ref-pricing.html",
+          "hash": "c0WFBkdn2HAcgqaqGCfL6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/daas/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/daas/toc.html",
+          "hash": "CyqngOESLjagaLEV8l0E5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/dedicated-compute/dc-sco.md",
       "output": {
         ".html": {
@@ -20588,7 +20612,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 445,
+          "total_file_count": 446,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
