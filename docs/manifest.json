@@ -3978,12 +3978,35 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/daas/daas-sd.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/daas/daas-sd.html",
+          "hash": "Qip9mOgZ+uVquASWeoIWEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/daas/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/daas/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/daas/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/daas/toc.html",
-          "hash": "CyqngOESLjagaLEV8l0E5g=="
+          "hash": "uhiQVXEraQosXo0d/RzOvA=="
         }
       },
       "is_incremental": false,
@@ -4007,7 +4030,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/dedicated-compute/dc-sd.html",
-          "hash": "TyiBHVXK0rS7R56gCJvEXQ=="
+          "hash": "mJNhJM7ONRSa2oBrnyp98w=="
         }
       },
       "is_incremental": false,
@@ -4015,10 +4038,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/dedicated-compute/images/ukc-services.png",
+      "source_relative_path": "articles/dedicated-compute/images/dc-product-options-g12.png",
       "output": {
         "resource": {
-          "relative_path": "articles/dedicated-compute/images/ukc-services.png"
+          "relative_path": "articles/dedicated-compute/images/dc-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dedicated-compute/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dedicated-compute/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -4052,7 +4086,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/dedicated-compute/toc.html",
-          "hash": "qDmhNAbNEUmTLBdTb2w9hw=="
+          "hash": "S1cB+h2NADQmZzuSCD+nNg=="
         }
       },
       "is_incremental": false,
@@ -4112,7 +4146,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-sd.html",
-          "hash": "84bplNX92vEvHoFOvDYocg=="
+          "hash": "uqvOBZU6x0o2tTRoBioheQ=="
         }
       },
       "is_incremental": false,
@@ -4154,10 +4188,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/draas/images/ukc-services.png",
+      "source_relative_path": "articles/draas/images/ukc-services-g12.png",
       "output": {
         "resource": {
-          "relative_path": "articles/draas/images/ukc-services.png"
+          "relative_path": "articles/draas/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -4169,7 +4203,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/toc.html",
-          "hash": "EKxq8iYkbwdJJbzNlf1Nxw=="
+          "hash": "anjTmw8B5brKG7mkXHdApg=="
         }
       },
       "is_incremental": false,
@@ -5394,7 +5428,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/hpc/hpc-sd.html",
-          "hash": "fQS7ZboP1rV0Nm6TzEAqCg=="
+          "hash": "UHgFBCDM+tZlPyQ/sXzMPA=="
         }
       },
       "is_incremental": false,
@@ -5402,10 +5436,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/hpc/images/ukc-services.png",
+      "source_relative_path": "articles/hpc/images/hpc-product-options-g12.png",
       "output": {
         "resource": {
-          "relative_path": "articles/hpc/images/ukc-services.png"
+          "relative_path": "articles/hpc/images/hpc-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/hpc/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/hpc/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -5417,7 +5462,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/hpc/toc.html",
-          "hash": "joGyYGQKDW2Qt1o/rVnBrA=="
+          "hash": "0NsFfu2Aa5GdhzBudt3D3g=="
         }
       },
       "is_incremental": false,
@@ -5737,10 +5782,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/migration/images/ukc-services.png",
+      "source_relative_path": "articles/migration/images/ukc-services-g12.png",
       "output": {
         "resource": {
-          "relative_path": "articles/migration/images/ukc-services.png"
+          "relative_path": "articles/migration/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -5776,7 +5821,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/migr-sd.html",
-          "hash": "+pHzO/eFxgJh4l00Fg4odw=="
+          "hash": "eTcM4n8JrE37sxKFaSxKhQ=="
         }
       },
       "is_incremental": false,
@@ -5788,7 +5833,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/toc.html",
-          "hash": "UXFHwTRmc3omvOe3dzmOnA=="
+          "hash": "gdSdcVeOlQiX5QcQfaCUGA=="
         }
       },
       "is_incremental": false,
@@ -12054,6 +12099,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/private-cloud/images/prc-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/private-cloud/images/prc-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/private-cloud/images/prc-storage-product-options-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/private-cloud/images/prc-storage-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/private-cloud/images/ukc-services-g12.png",
       "output": {
         "resource": {
@@ -12152,7 +12219,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-storage.html",
-          "hash": "+0V2wvzNGmRcvHws6KVkaA=="
+          "hash": "tC0jFjcqrAzzv1DFgm4aJg=="
         }
       },
       "is_incremental": false,
@@ -12164,7 +12231,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd.html",
-          "hash": "STL0eDZC4Uvk0JlqC81Qew=="
+          "hash": "umW9hKcip8o29B0m1AuZ7w=="
         }
       },
       "is_incremental": false,
@@ -12176,7 +12243,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/toc.html",
-          "hash": "3sdv2332FdlLK4Zm5AhTfA=="
+          "hash": "/98a8fZ5DWJoSb2MhNPxPA=="
         }
       },
       "is_incremental": false,
@@ -20612,7 +20679,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 446,
+          "total_file_count": 447,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

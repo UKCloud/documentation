@@ -2,3 +2,5 @@
   items:
   - name: Pricing information
     href: daas-ref-pricing.md
+  - name: Service Definition
+    href: daas-sd.md
