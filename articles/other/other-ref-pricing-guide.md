@@ -64,6 +64,20 @@ This document outlines:
 
 - SFIA skill definitions
 
+**Additional pricing information**
+
+We also have additional pricing information, including pricing examples, for the following:
+
+[UKCloud for Managed OpenShift](../openshift/oshift-ref-pricing.md)<br>
+[UKCloud for Microsoft Azure](../azure/azs-ref-pricing.md)<br>
+[UKCloud for OpenStack](../openstack/ostack-ref-pricing.md)<br>
+[UKCloud for Oracle Software](../oracle/orcl-ref-pricing.md)<br>
+[UKCloud for VMware](../vmware/vmw-ref-pricing.md)<br>
+[Cloud Storage](../cloud-storage/cs-ref-pricing.md)<br>
+[Cross Domain Security Zone](../cdsz/cdsz-ref-pricing.md)<br>
+[Secure Remote Access](../sra/sra-ref-pricing.md)<br>
+[UKCloud Desktop as a Service](../daas/daas-ref-pricing.md)
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
