@@ -4,14 +4,24 @@
     href: man-services-home.md
 - name: Advanced Managed Services
   items:
+  - name: Managed Active Directory Support
+    items:
+    - name: Managed Active Directory Support Service Definition
+      href: man-sd-ad.md
+  - name: Managed Remote Desktop Services
+    items:
+    - name: Managed Remote Desktop Services Support Service Definition
+      href: man-sd-rds.md
   - name: Managed SQL Server
     items:
+    - name: Managed SQL Server Service Definition
+      href: man-sd-sqlserver.md
     - name: Managed SQL Server Service Scope
       href: man-sqlserver-sco.md
-- name: Basic Managed Compute
-  items:
-  - name: Basic Mangaged Compute from UKCloud Service Definition
-    href: man-sd-compute.md
+  - name: Managed Web Server
+    items:
+    - name: Managed Web Server Service Definition
+      href: man-sd-webserver.md
 - name: Cloud Optimisation
   items:
   - name: Cloud Optimisation from UKCloud Service Definition

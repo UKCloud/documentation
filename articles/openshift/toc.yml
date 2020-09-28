@@ -80,9 +80,11 @@
     items:
     - name: Deploying an application into OpenShift Service Mesh
       href: oshift-ref-deploy-app-into-service-mesh.md
-- name: Service Definition
+- name: Service Information
   items:
-  - name: UKCloud for OpenShift Service Definition
+  - name: Portworx Enterprise from UKCloud Service Definition
+    href: oshift-sd-portworx.md
+  - name: UKCloud for Managed OpenShift Service Definition
     href: oshift-sd.md
 - name: Service Scope
   items:

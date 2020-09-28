@@ -2,16 +2,16 @@
 title: VMware Licence Service Service Definition
 description: Provides an overview of what is provided by the VMware Licence Service (VLS)
 services: vmware
-author: Sue Highmoor
-reviewer: shall
-lastreviewed: 07/08/2020
-toc_rootlink: Service Definition
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 21/09/2020
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: VMware Licence Service Service Definition
-toc_fullpath: Service Definition/vmw-sd-vls.md
+toc_fullpath: Service Information/vmw-sd-vls.md
 toc_mdlink: vmw-sd-vls.md
 ---
 
@@ -99,11 +99,11 @@ Additional, optional services are available, including the following:
 
 - **Monitoring and management service.** UKCloud can remotely monitor the VMware products within the environment, alert you of any incidents if appropriate and provide a high level of engagement appropriate with the level of managed services. This may include patching, capacity management, performance management or supporting non-VMware products (Storage Array, Physical Network).
 
-- **Transition services.** UKCloud can provide specialist Professional Services to help you assess your environment, create an actionable cloud strategy and migrate workloads to the UKCloud multi-cloud environment. UKCloud can also provide expert services to help you adopt cloud-native approaches such as DevOps, automation, and containerisation.
+- **Professional services.** UKCloud can provide specialist Professional Services to help you assess your environment, create an actionable cloud strategy and migrate workloads to the UKCloud multi-cloud environment. UKCloud can also provide expert services to help you adopt cloud-native approaches such as DevOps, automation, and containerisation.
 
 ## Pricing and packaging
 
-VLS starts at 43p per point per month for academia. Full pricing is available in the [*VMware Licence Service Service Scope*](vmw-sco-vls.md).
+VLS starts at 43p per point per month for academia. Full pricing is available in the [*UKCloud Pricing Guide*](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
@@ -115,19 +115,19 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 ## An SLA you can trust
 
-We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the [SLA Definition](https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html) article on the UKCloud Knowledge Centre.
+We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the [SLA definition](https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html).
 
 ## The small print
 
 For full terms and conditions, including onboarding and responsibilities, refer to the [Terms and Conditions documents](../other/other-ref-terms-and-conditions.md).
 
-For full information regarding this product, we have relevant articles on our [Knowledge Centre](https://docs.ukcloud.com/index.html).
+For more information about this service, see the [*Service Scope*](vmw-sco-vls.md).
 
 ## Why UKCloud?
 
-UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning onpremises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
+UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-2020.png)
+![UKCloud services](images/ukc-services-g12.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
