@@ -5,13 +5,13 @@ services: azure-stack
 author: shighmoor
 reviewer:
 lastreviewed: 25/09/2020
-toc_rootlink: Service Information
-toc_sub1: 
+toc_rootlink: Users
+toc_sub1: Service Information
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Pricing information
-toc_fullpath: Service Information/azs-ref-pricing.md
+toc_fullpath: Users/Service Information/azs-ref-pricing.md
 toc_mdlink: azs-ref-pricing.md
 ---
 
