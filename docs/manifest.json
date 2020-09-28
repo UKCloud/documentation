@@ -3809,9 +3809,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-sd-ddosprotect.md",
       "output": {
@@ -3824,9 +3821,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-sd-ultradns.md",
       "output": {
@@ -3943,6 +3937,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/connectivity/images/topology_simple.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/ukc-services-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -5667,7 +5672,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "pI6PC8aGGL4cHvA2xG269g=="
+          "hash": "x/00AfvvAo4FfjSyQGA25w=="
         }
       },
       "is_incremental": false,
@@ -10516,15 +10521,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-glossary.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "OdNUeiisSbnRQ1i+Ge9J0w=="
+          "hash": "ZHYi9U8hvWAKViwfezChXA=="
         }
       },
       "is_incremental": false,
