@@ -85,7 +85,7 @@ For more information about the discount and purchase schemes offered by UKCloud,
 
 - SQL Standard is charged per hour based on the powered-on state of the host VM. SQL Enterprise is charged monthly.
 
-- You must report, via support ticket, which VMs have either SQL Standard or Enterprise installed so that we can license and bill you accordingly. You do have the option to bring your own licences for SQL under Microsoft Mobility, though you must inform us as soon as you receive confirmation from Microsoft that mobility has been agreed. For more information, see [*How to license Microsoft applications/software on the UKCloud platform*](vmw-how-license-microsoft.md).
+- You must report, via support ticket, which VMs have either SQL Standard or Enterprise installed so that we can license and bill you accordingly. You do have the option to bring your own licences for SQL under Microsoft Mobility, though you must inform us as soon as you receive confirmation from Microsoft that mobility has been agreed. For more information, see [*How to license Microsoft applications/software on the UKCloud platform*](../vmware/vmw-how-license-microsoft.md).
 
 - Microsoft Windows Server licences must be provided by UKCloud and you'll be billed per hour based on the powered-on state of the host VM.
 
