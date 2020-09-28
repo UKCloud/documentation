@@ -6,12 +6,12 @@ author: shighmoor
 reviewer: shighmoor
 lastreviewed: 23/09/2020
 toc_rootlink: Advanced Managed Services
-toc_sub1: 
+toc_sub1: Managed Remote Desktop Services
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Managed Remote Desktop Services Support Service Definition
-toc_fullpath: Advanced Managed Services/man-sd-rds.md
+toc_fullpath: Advanced Managed Services/Managed Remote Desktop Services/man-sd-rds.md
 toc_mdlink: man-sd-rds.md
 ---
 

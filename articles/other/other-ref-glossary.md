@@ -61,15 +61,7 @@ A security domain on the UKCloud platform that provides access to public network
 
 ### Basic Managed Compute
 
-A UKCloud IaaS service that provides routine operating system management, such as:
-
-- Initial deployment of standardised Windows and Linus VMs
-
-- Initial configuration of common operating system parameters, such as IP addresses and disk volumes
-
-- Provision of critical core operating systems, and backup and recovery of VM images.
-
-For more information, see the [Basic Managed Compute service definition](../managed-services/man-sd-compute.md).
+*See:* [Managed IT Operations](#managed-it-operations)
 
 ### Bring Your Own Firewall (BYOF)
 
@@ -309,11 +301,15 @@ Let us know your thoughts and ideas by sending an email to <feedback@ukcloud.com
 
 ## M
 
-### Managed Monitoring as a Service
+### Managed IT Operations
 
-Managed Monitoring as a Service helps to address monitoring challenges as customer solutions expand beyond their own data centres into multi-cloud, increasing the level of trust and confidence of the true health of their entire IT estate, from IoT edge devices, through to any infrastructure, be it virtual or physical.
+Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, Managed VM recovery points, patching as a service, antivirus as a service and runbook automation. This service provides you with the building blocks to utilise essential operational delivery services.
 
 For more information, see the [Managed IT Operations Service Definition](../managed-services/man-sd-managed-it-ops.md).
+
+### Managed Monitoring as a Service
+
+*See:* [Managed IT Operations](#managed-it-operations)
 
 ### Mass Transfer Facility (MTF)
 
