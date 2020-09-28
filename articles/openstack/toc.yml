@@ -64,7 +64,7 @@
     href: ostack-ref-migrations.md
 - name: Service Information
   items:
-  - name: Pricing information for UKCloud for OpenStack
+  - name: Pricing information
     href: ostack-ref-pricing.md
   - name: Service Definition
     href: ostack-sd.md
