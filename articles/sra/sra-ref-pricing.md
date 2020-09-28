@@ -60,9 +60,15 @@ A 10 licence remote access pack costs **£500**.
 
 **Bastion host cost**
 
-SRA includes a Small VM for a bastion host free of charge. The difference in cost between a Small and Medium VM is **£0.11**
+SRA includes a Small VM for a bastion host free of charge. The difference in cost between a Small and Medium VM is **£0.11** per hour.
 
-In an average **730** hour month, the monthly bastion host cost works out as 730 x £0.11 = **£80.30**
+14-day Snapshot Protection for a Medium VM costs **£0.19** per hour.
+
+In an average **730** hour month, the monthly bastion host cost works out as:
+
+Hours in operation | x | (VM     | + | Protection) | = | VM cost per month
+-------------------|---|---------|---|-------------|---|------------------
+730                | x | (£0.11  | + | £0.19)      | = | **£219.00**
 
 **Storage cost per month**
 
@@ -82,7 +88,7 @@ Calculate the total basic cost by adding together the monthly licence, bastion h
 
 Licence costs | Bastion host cost | + | Storage cost per month | = | Total basic cost
 --------------|-------------------|---|------------------------|---|-----------------
-£500          | £80.30            | + | £4.00                  | = | **£584.30**
+£500          | £219.00           | + | £4.00                  | = | **£723.00**
 
 ## Additional pricing notes
 
