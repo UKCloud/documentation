@@ -35,7 +35,7 @@ Within the UKCloud environment there are two types of accounts:
 
 ### Application-tuned DDoS protection
 
-*See:* [SiteProtect Advanced DDoS Mitigation](#siteprotect-advanced-ddos-mitigation)
+*See:* [Neustar DDoS Protection from UKCloud](#neustar-ddos-protection-from-ukcloud)
 
 ### Assured inter-data centre connectivity
 
@@ -223,7 +223,7 @@ Geo-resilient storage is no longer available as a storage option for UKCloud for
 
 ### Global Load Balancing
 
-*See:* [UltraDNS](#ultradns)
+*See:* [Neustar UltraDNS from UKCloud](#neustar-ultradns-from-ukcloud)
 
 ## H
 
@@ -358,6 +358,18 @@ Single- or multi tenant instances on a network firewall (NFW). NFT architecture 
 ### NSX Edge
 
 Provides a rich set of integrated networking and security gateway services for protecting VDCs and optimising resource utilisation. This virtual appliance includes services such as firewall, network address translation (NAT), load balancing and VPN.
+
+### Neustar DDoS Protection from UKCloud
+
+A UKCloud service option, powered by Neustar, to absorb and scrub bad traffic into your environment and protect your applications from DDoS attacks, while still allowing legitimate traffic through.
+
+For more information, see the [Neustar DDoS Protection from UKCloud service scope](../connectivity/conn-sco-app-ddos.md).
+
+### Neustar UltraDNS from UKCloud
+
+A UKCloud service option, powered by Neustar, that provides a secure and reliable managed DNS service to ensure the highest level of website availability and optimal performance, with built-in security for superior protection that is scalable to future demands.
+
+For more information, see the [*Neustar UltraDNS from UKCloud FAQs](../connectivity/conn-faq-glb.md).
 
 ## O
 
@@ -507,9 +519,7 @@ See also: [Region](#region), [Zone](#zone)
 
 ### SiteProtect Advanced DDoS Mitigation
 
-A UKCloud service option, powered by Neustar, to absorb and scrub bad traffic into your environment and protect your applications from DDoS attacks, while still allowing legitimate traffic through.
-
-For more information, see the [SiteProtect Advanced DDoS Mitigation service scope](../connectivity/conn-sco-app-ddos.md).
+*See:* [Neustar DDoS Protection from UKCloud](#neustar-ddos-protection-from-ukcloud)
 
 ### Smart Hands
 
@@ -603,9 +613,7 @@ A division of UKCloud specifically designed to cater for the enhanced requiremen
 
 ### UltraDNS
 
-A UKCloud service option, powered by Neustar, that provides a secure and reliable managed DNS service to ensure the highest level of website availability and optimal performance, with built-in security for superior protection that is scalable to future demands.
-
-For more information, see the [*UltraDNS FAQs](../connectivity/conn-faq-glb.md).
+*See:* [Neustar UltraDNS from UKCloud](#neustar-ultradns-from-ukcloud)
 
 ## V
 

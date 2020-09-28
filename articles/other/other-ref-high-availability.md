@@ -56,8 +56,8 @@ In addition to the high-availability features provided as-standard on our platfo
 
 High-availability consideration | Notes
 --------------------------------|------
-[UltraDNS](../connectivity/conn-sco-glb.md) | Enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.
-[SiteProtect Advanced DDoS Mitigation](../connectivity/conn-sco-app-ddos.md) | A fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site.
+[Neustar UltraDNS from UKCloud](../connectivity/conn-sco-glb.md) | Enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.
+[Neustar DDoS Protection from UKCloud](../connectivity/conn-sco-app-ddos.md) | A fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site.
 [Disaster Recovery as a Service](../draas/draas-sd.md) | A powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and the UKCloud platform.
 Replicated backup | Enables your services to be backed up and the backup data replicated to another site.
 [Cloud Storage](../cloud-storage/cs-sd.md) | Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).
@@ -72,7 +72,7 @@ There are some high-level considerations to think about when deploying to a clou
 
 Service | High-availability consideration
 --------|--------------------------------
-Web services | Utilise an N+1 model, either with multiple web servers running underneath a load balancer or reverse proxy, or with at least one web server running in hot standby. Also use this approach in conjunction with UltraDNS to deliver multi-site resilience.
+Web services | Utilise an N+1 model, either with multiple web servers running underneath a load balancer or reverse proxy, or with at least one web server running in hot standby. Also use this approach in conjunction with Neustar UltraDNS from UKCloud to deliver multi-site resilience.
 Application services | As per web services, utilize an N+1 model.
 Inter-service messaging | Utilise a resilient message queuing architecture to handle messages between services. This enables messages to be load balanced between sites. It also means that messages are not lost in the event of a server crash and restart.
 Databases | Every database has a high availability option. We recommend that you adopt an N+1 clustered database model (but avoid shared disk architectures), in conjunction with sharding or asynchronous replication technologies, to create a replica of this database in another location.
@@ -90,7 +90,7 @@ Use SQL Always On to ensure the availability of SQL server. For more information
 
 ### UKCloud for OpenShift
 
-Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from UltraDNS) to ensure traffic is redirected should a region or cluster level availability issue occur.
+Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from Neustar UltraDNS from UKCloud) to ensure traffic is redirected should a region or cluster level availability issue occur.
 
 We also offer the option to have the Portworx storage solution configured in your cluster by UKCloud during deployment. This enables further resilience for your applications by offering highly-available storage, which significantly reduces container failover times, adds multi-attach storage to enable multiple containers to read/write the same volume on different nodes and the ability to replicate and migrate workloads between clusters to aid disaster recovery.
 

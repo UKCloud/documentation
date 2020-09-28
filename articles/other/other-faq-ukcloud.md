@@ -97,9 +97,9 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 - [Emergency Services Network](../connectivity/conn-faq-esn.md)
 
-- [SiteProtect Advanced DDoS Mitigation](../connectivity/conn-faq-app-ddos.md)
+- [Neustar DDoS Protection from UKCloud](../connectivity/conn-faq-app-ddos.md)
 
-- [UltraDNS](../connectivity/conn-faq-glb.md)
+- [Neustar UltraDNS from UKCloud](../connectivity/conn-faq-glb.md)
 
 - [Bandwidth monitoring](../connectivity/conn-faq-bandwidth-monitoring.md)
 
