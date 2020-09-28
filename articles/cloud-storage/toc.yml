@@ -26,6 +26,8 @@
     href: cs-ref-s3-examples.md
 - name: Service Information
   items:
+  - name: Pricing information
+    href: cs-ref-pricing.md
   - name: Service Definition
     href: cs-sd.md
 - name: Service Scope

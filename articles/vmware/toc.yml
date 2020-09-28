@@ -222,6 +222,8 @@
     href: vmw-ref-windows-server-activation.md
 - name: Service Information
   items:
+  - name: Pricing information for UKCloud for VMware
+    href: vmw-ref-pricing.md
   - name: UKCloud for VMware Service Definition
     href: vmw-sd.md
   - name: VMware Licence Service Service Definition

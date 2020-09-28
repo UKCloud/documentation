@@ -34,6 +34,8 @@
     href: orcl-ref-vm-compatibility.md
 - name: Service Information
   items:
+  - name: Pricing information
+    href: orcl-ref-pricing.md
   - name: Service Definition
     href: orcl-sd.md
 - name: Service Scope

@@ -1,3 +1,7 @@
+- name: Service Information
+  items:
+  - name: Pricing information
+    href: azs-ref-pricing.md
 - name: About
   items:
   - name: UKCloud for Microsoft Azure

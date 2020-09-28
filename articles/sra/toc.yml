@@ -12,6 +12,8 @@
     href: sra-how-add-remove-users.md
 - name: Service Information
   items:
+  - name: Pricing information
+    href: sra-ref-pricing.md
   - name: Service Definition
     href: sra-sd.md
 - name: Service Scope

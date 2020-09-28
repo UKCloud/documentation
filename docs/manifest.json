@@ -544,6 +544,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-ref-pricing.html",
+          "hash": "aVzEYQy8qKCfG7AbYJjLWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-sco.md",
       "output": {
@@ -2334,7 +2349,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "I6Xr9vkcK+MJ/Vu3qV3ZFw=="
+          "hash": "4tH9dO1rowiJBSHxu2bOcw=="
         }
       },
       "is_incremental": false,
@@ -2395,6 +2410,18 @@
         ".html": {
           "relative_path": "articles/cdsz/cdsz-ref-bp-overview.html",
           "hash": "V4p34lWSaJmBH3RlJ7Av4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cdsz/cdsz-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cdsz/cdsz-ref-pricing.html",
+          "hash": "Ol16Pa49eGFaLUPqrkrlpQ=="
         }
       },
       "is_incremental": false,
@@ -2518,7 +2545,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/toc.html",
-          "hash": "v60tPnhYb+U4pW2Ot/pcIw=="
+          "hash": "1qwcbKzaE5ScssdXyqJbew=="
         }
       },
       "is_incremental": false,
@@ -2615,6 +2642,18 @@
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-view-info-portal.html",
           "hash": "fxUt0rb5EaPRJDH1y6wNmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cloud-storage/cs-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/cs-ref-pricing.html",
+          "hash": "FgdJbsJt60WzGUOpgpoOuw=="
         }
       },
       "is_incremental": false,
@@ -3466,7 +3505,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/toc.html",
-          "hash": "DekekP7H11a1yIjLNHrGBA=="
+          "hash": "7J7kMdQQCcC+hXowJKur/Q=="
         }
       },
       "is_incremental": false,
@@ -9003,6 +9042,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-ref-pricing.html",
+          "hash": "mSlY5k7k8Rxvc5z3Qrs5Xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-ref-public-image-versioning.md",
       "output": {
@@ -9104,7 +9158,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "TjrIpV5XdyqT98L42AAL6A=="
+          "hash": "UqUIDBqqaNy6/dah0VtC1Q=="
         }
       },
       "is_incremental": false,
@@ -9615,6 +9669,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-ref-pricing.html",
+          "hash": "3pwZTaaJSfwy2PL9JORAXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-ref-rac.md",
       "output": {
         ".html": {
@@ -9703,7 +9769,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "iF1YbThdWYmcxP4LXRFbew=="
+          "hash": "0/nAL7s16IrP7bs7kB8iuw=="
         }
       },
       "is_incremental": false,
@@ -12468,6 +12534,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/sra/sra-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/sra/sra-ref-pricing.html",
+          "hash": "K9mzzaIF6DKy7U5RjG6GFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/sra/sra-sco.md",
       "output": {
         ".html": {
@@ -12496,7 +12574,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/toc.html",
-          "hash": "v55crAi9qpPxh+cz4M2s3A=="
+          "hash": "5dNeTcLG2b2/W6/zn3rDeQ=="
         }
       },
       "is_incremental": false,
@@ -19172,7 +19250,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "hZzbLeCSda6U6NbLH8MdGg=="
+          "hash": "m2Z3uf6NUubzyekJ2EnASg=="
         }
       },
       "is_incremental": false,
@@ -20236,6 +20314,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-pricing.html",
+          "hash": "gf8u79mFejPb5DpPXqLAsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-rhui.md",
       "output": {
         ".html": {
@@ -20679,7 +20769,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 447,
+          "total_file_count": 454,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

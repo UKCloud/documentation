@@ -18,6 +18,8 @@
     href: cdsz-ref-application-process.md
 - name: Service Information
   items:
+  - name: Pricing information
+    href: cdsz-ref-pricing.md
   - name: Service Definition
     href: cdsz-sd.md
 - name: Service Scope
