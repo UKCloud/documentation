@@ -28,6 +28,8 @@
     topicHref: articles/cdsz/cdsz-gs-walled-garden.md
   - name: Dedicated Compute
     topicHref: articles/dedicated-compute/dc-sd.md
+  - name: Desktop as a Service
+    topicHref: articles/daas/daas-sd.md
   - name: Disaster Recovery as a Service
     topicHref: articles/draas/draas-gs.md
   - name: Email and Collaboration 
