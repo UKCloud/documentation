@@ -27,19 +27,19 @@ Our portfolio of multi-cloud services has been further enhanced at G-Cloud 12 to
 
 All existing customer solutions will automatically benefit from the service improvements and new service options from 28th September 2020. Updated Service Definitions for updated and new services are available via the [UKCloud Knowledge Centre](https://docs.ukcloud.com/articles/other/other-ref-service-definitions.html) and the [Digital Marketplace](https://www.digitalmarketplace.service.gov.uk/).
 
-### Can I retain my G11 service?
+### Can I retain my G-Cloud 11 service?
 
-Yes, you will still receive the same service, with the improvements and enhancements we've made for G12. Note that for some new options in G12 there may be an additional charge.
+Yes, you will still receive the same service, with the improvements and enhancements we've made for G-Cloud 12. Note that for some new options in G-Cloud 12 there may be an additional charge.
 
 ### If I have a query about my October or November 2020 invoice, who should I contact?
 
 If you have any queries about your invoice, contact the finance department by emailing <invoicing@ukcloud.com>.
 
-### How can I get access to the new G12 Service Definitions and Pricing Guides?
+### How can I get access to the new G-Cloud 12 Service Definitions and Pricing Guides?
 
-All of the G12 Service Definitions and Pricing Guides are available [here](https://docs.ukcloud.com/articles/other/other-ref-service-definitions.html).
+All of the G-Cloud 12 Service Definitions and Pricing Guides are available [here](https://docs.ukcloud.com/articles/other/other-ref-service-definitions.html).
 
-We have two Pricing Guides for G12:
+We have two Pricing Guides for G-Cloud 12:
 
 - UKCloud Pricing Guide (all core services and options)
 
@@ -91,7 +91,7 @@ For information about any of the updated services listed below, see [*UKCloud Se
 
 ### What's new in the UKCloud for OpenShift service?
 
-With a slight change in name to UKCloud for Managed OpenShift, this service now offers customers the option for hourly pricing alongside the traditional monthly pricing.
+With a slight change in name to UKCloud for Managed OpenShift, this service now offers customers on OCPv4 or higher the option for hourly pricing alongside the traditional monthly pricing.
 
 ### What's new in the CloudSOC service?
 
