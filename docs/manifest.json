@@ -5484,21 +5484,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/ukc-services-2020.png",
+      "source_relative_path": "articles/managed-services/images/ukc-services-g12.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/ukc-services-2020.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/managed-services/images/ukc-services.png"
+          "relative_path": "articles/managed-services/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -5566,11 +5555,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sd-compute.md",
+      "source_relative_path": "articles/managed-services/man-sd-ad.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-sd-compute.html",
-          "hash": "9r2dFNgiySD+Wq8mFcfULw=="
+          "relative_path": "articles/managed-services/man-sd-ad.html",
+          "hash": "MZJl37FaprAIC43jikh/tA=="
         }
       },
       "is_incremental": false,
@@ -5582,7 +5571,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-managed-it-ops.html",
-          "hash": "Zvn43h/t6HOK5RF/F9ftjA=="
+          "hash": "adCruIW3V4XKxbsEQ+QsXw=="
         }
       },
       "is_incremental": false,
@@ -5594,7 +5583,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-network.html",
-          "hash": "xv3mhkO7UnZ74IzHBCl3aw=="
+          "hash": "XuJpk+TbxajPnINtTR79WQ=="
         }
       },
       "is_incremental": false,
@@ -5606,7 +5595,43 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-optimisation.html",
-          "hash": "6BXoOxXGyz4yr7SKiHV4VA=="
+          "hash": "AfwAh6QaKfQd40OWzvliDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-sd-rds.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-sd-rds.html",
+          "hash": "GpkgZFoaE6urM8R6SJ+ysg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-sd-sqlserver.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-sd-sqlserver.html",
+          "hash": "sl5L0N7hwHjbOsOlPOeZwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-sd-webserver.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-sd-webserver.html",
+          "hash": "AEbuXOfz8MuzXuHN+yDiSg=="
         }
       },
       "is_incremental": false,
@@ -5642,7 +5667,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "47PIq4oNFJ/u/vVzeyFjHw=="
+          "hash": "pI6PC8aGGL4cHvA2xG269g=="
         }
       },
       "is_incremental": false,
@@ -10491,12 +10516,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-glossary.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "XFIn+L8pfROGGZBSUwrirQ=="
+          "hash": "OdNUeiisSbnRQ1i+Ge9J0w=="
         }
       },
       "is_incremental": false,
@@ -10647,12 +10675,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-service-definitions.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "cuAHWPGEjB/z/F4Wz4pgDg=="
+          "hash": "CIeVFioj6mR8I1+0cHknIQ=="
         }
       },
       "is_incremental": false,
@@ -20555,7 +20586,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 442,
+          "total_file_count": 445,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
