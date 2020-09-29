@@ -4,7 +4,7 @@ description: This article describes how to use PowerCLI to extract Edge Gateway 
 services: vmware
 author: Steve Hall
 reviewer: Dylan Coombes
-lastreviewed: 24/09/2020 12:00:00
+lastreviewed: 24/09/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
