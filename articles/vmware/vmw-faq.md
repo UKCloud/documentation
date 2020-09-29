@@ -108,7 +108,7 @@ Alternatively, we offer the Mass Transfer Facility option enabling customers to 
 
 ### Does UKCloud offer encryption on the VM?
 
-Not by default, however UKCloud can supply licensing for [*HyTrust DataControl*](../third-party/third-sd-hytrust.md). This solution offers powerful data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle, from deployment to decommission.
+Not by default, however UKCloud can supply licensing for HyTrust DataControl. This solution offers powerful data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle, from deployment to decommission.
 
 Alternatively, you can implement encryption using the technology of your choice inside the VM's operating system.
 
