@@ -72,7 +72,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
     }
 
-4. Enter the below command to import the function.
+4. Enter the following command to import the function.
 
         Import-Module [PATH TO PSM1 FILE]
     
@@ -95,9 +95,9 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
         $Config.LoadBalancer = All load balancer rules
         $Config.DHCP = All DHCP pools
 
-   You can drill down further into the objects properties to get more in-depth detail by using `$Config.firewall[0].source` as an example, this will look at the source of the 1st retrieved firewall rule.
+    You can drill down further into the object's properties to retrieve more details. For example, using `$Config.firewall[0].source`, you can examine the source of the first retrieved firewall rule.
 
-9. If you want to export the data to a CSV, you will find this won't export nicely as things like the source address are presented as objects in objects. You could use code like the below to extract these values and present them at the top level to make export easier.
+9. Data such as source addresses is presented as objects in objects, so if you want to export the data to a CSV, we recommend first using code like that shown below to extract these values and present them at the top level.
 
     ```
     function Get-FirewallDetails ($config)
@@ -137,10 +137,11 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
             $natrule.SetAttribute("Protocol", $Protocol)
         }
     }
+    ```
 
-Now you could run `Get-FirewallDetails $Config` to make the results more export-friendly
+    You can then run `Get-FirewallDetails $Config` to make the results more export-friendly.
 
-10. You can export this data to a CSV file, by entering a command such as:
+10. To export this data to a CSV file, enter a command such as:
 
         $Config.Firewall | Export-csv -path c:\users\myaccount\desktop\firewallrules.csv
 
