@@ -3,8 +3,8 @@ title: Getting Started Guide for UKCloud for OpenStack
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
-reviewer: Steve Dixon
-lastreviewed: 20/08/2019
+reviewer: Bryce Nicholls
+lastreviewed: 23/09/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -53,7 +53,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 
     ![Horizon Overview page](images/ostack-horizon-welcome.png)
 
-For more information about the Horizon dashboard, see the [*Red Hat OpenStack Platform 10 Introduction to the OpenStack Dashboard*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-10-Introduction_to_the_OpenStack_Dashboard-en-US.pdf).
+For more information about the Horizon dashboard, see the [*Introduction to the OpenStack dashboard*](https://docs.ukcloud.com/articles/openstack/ostack-ref-dashboard.html){target="_blank"}.
 
 ## Creating your network infrastructure
 
