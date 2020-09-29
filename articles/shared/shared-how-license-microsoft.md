@@ -1,18 +1,18 @@
 ---
 title: How to license Microsoft software on the UKCloud platform
-description: This guide will explain how Microsoft software such as Server and SQL is licensed on the UKCloud platform
-services: vmware
-author: Steve Hall
-reviewer: Darren B
-lastreviewed: 27/03/2020
+description: Explains how Microsoft software, such as Windows Server and SQL, is licensed on the UKCloud platform
+services: shared-services
+author: shall
+reviewer: pcantle
+lastreviewed: 29/09/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: License Microsoft software on the UKCloud platform
-toc_fullpath: How to/vmw-how-license-microsoft.md
-toc_mdlink: vmw-how-license-microsoft.md
+toc_fullpath: How to/shared-how-license-microsoft.md
+toc_mdlink: shared-how-license-microsoft.md
 ---
 
 # How to license Microsoft applications/software on the UKCloud platform
@@ -144,7 +144,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Other Microsoft Products**
 
-  - Engage with your Account Director or Service Delivery Manager who will be able to help and advise you as to whether the software can be licensed, and if so, how.
+  - Engage with your Account Director or Service Delivery Manager who'll be able to help and advise you as to whether the software can be licensed, and if so, how.
 
 ## Submitting a request to use Microsoft applications on the UKCloud platform
 

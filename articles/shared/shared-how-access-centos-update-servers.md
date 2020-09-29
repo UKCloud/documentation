@@ -1,29 +1,29 @@
 ---
-title: How to access CentOS Update servers
-description: Shows you how to access CentOS updates within vCloud Director
-services: vmware
-author: Sue Highmoor
+title: How to access CentOS update servers
+description: Shows you how to access CentOS updates
+services: shared-services
+author: shighmoor
 reviewer: pcantle
-lastreviewed: 03/12/2019
+lastreviewed: 29/09/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Access CentOS Update servers
-toc_fullpath: How To/vmw-how-access-centos-update-servers.md
-toc_mdlink: vmw-how-access-centos-update-servers.md
+toc_title: Access CentOS update servers
+toc_fullpath: How To/shared-how-access-centos-update-servers.md
+toc_mdlink: shared-how-access-centos-update-servers.md
 ---
 
-# How to access CentOS Update servers
+# How to access CentOS update servers
 
 ## Overview
 
 Each of the two security domains within the UKCloud cloud presents its own challenges regarding licensing CentOS machines. This document explains how to access the CentOS repository servers to receive updates.
 
-Before you attempt to establish a connection to the CentOS repo servers, you need to make sure your VMs can communicate with the CentOS server which exists outside of your cloud organisation.
+Before you attempt to establish a connection to the CentOS repo servers, you need to make sure your virtual machines (VMs) can communicate with the CentOS server, which exists outside of your cloud organisation.
 
-This may involve editing your NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the [*How to create NAT rules*](vmw-how-create-nat-rules.md) and [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
+This may involve editing your NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 ## Assured OFFICIAL platform
 

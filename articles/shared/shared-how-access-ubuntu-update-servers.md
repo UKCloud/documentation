@@ -1,18 +1,18 @@
 ---
 title: How to access Ubuntu update servers 
-description: This guide shows you how to configure access to Ubuntu update servers from within vCloud Director
-services: vmware
-author: Sue Highmoor
+description: This guide shows you how to configure access to Ubuntu update servers
+services: shared-services
+author: shighmoor
 reviewer: pcantle
-lastreviewed: 11/05/2020
+lastreviewed: 29/09/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Access Ubuntu update servers
-toc_fullpath: How To/vmw-how-access-ubuntu-update-servers.md
-toc_mdlink: vmw-how-access-ubuntu-update-servers.md
+toc_fullpath: How To/shared-how-access-ubuntu-update-servers.md
+toc_mdlink: shared-how-access-ubuntu-update-servers.md
 ---
 
 # How to access Ubuntu update servers

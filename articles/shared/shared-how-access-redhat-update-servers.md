@@ -1,18 +1,18 @@
 ---
 title: How to access Red Hat update servers
 description: Shows you how to access Red Hat updates using Red Hat Update Infrastructure (RHUI)
-services: vmware
-author: Sue Highmoor
+services: shared-services
+author: shighmoor
 reviewer: pcantle
-lastreviewed: 01/04/2020
+lastreviewed: 29/09/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Access Red Hat update servers
-toc_fullpath: How To/vmw-how-access-redhat-update-servers.md
-toc_mdlink: vmw-how-access-redhat-update-servers.md
+toc_fullpath: How To/shared-how-access-redhat-update-servers.md
+toc_mdlink: shared-how-access-redhat-update-servers.md
 ---
 
 # How to access Red Hat update servers
@@ -21,7 +21,7 @@ toc_mdlink: vmw-how-access-redhat-update-servers.md
 
 UKCloud has implemented a Red Hat Update Infrastructure (RHUI) to provide automatic updates to our Red Hat customers in the Assured OFFICIAL and Elevated OFFICIAL security domains. The benefits over the existing system are the reliable availability of patch updates and Red Hat approved OS templates.
 
-Before you attempt to establish a connection to RHUI, you need to make sure your virtual machines (VMs) can communicate with the RHUI which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the articles for creating [NAT](vmw-how-create-nat-rules.md) and [firewall](vmw-how-create-firewall-rules.md) rules.
+Before you attempt to establish a connection to RHUI, you need to make sure your virtual machines (VMs) can communicate with the RHUI, which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the articles for creating [NAT](vmw-how-create-nat-rules.md) and [firewall](vmw-how-create-firewall-rules.md) rules.
 
 ## New Red Hat VM templates
 
