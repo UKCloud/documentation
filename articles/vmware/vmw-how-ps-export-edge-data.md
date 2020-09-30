@@ -54,7 +54,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
         [xml]$EGWConfXML = $webclient.DownloadString($requrl)
 
-        $Holder = "" | Select Firewall,NAT
+        $Holder = "" | Select Firewall,NAT,LoadBalancer,DHCP
 
         $Holder.Firewall =
         $EGWConfXML.edge.features.firewall.firewallrules.firewallrule
