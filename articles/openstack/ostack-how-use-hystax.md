@@ -131,6 +131,10 @@ Run the following steps on a default Ubuntu setup for a successful migration:
 
 5. At this point the Ubuntu instance is ready to be replicated and migrated.
 
+### Migrating Centos/RHEL workloads
+
+You may encounter an issue where the instance fails to boot in the cloud site after migration, and instead enters a dracut debug state. If this is the case, in the source Instance run `dracut -fMa qemu`. Replicate and re-run the migration and the issue should be resolved.
+
 ### Migrating Microsoft Windows workloads
 
 #### Error when creating and running a migration plan in the Acura user interface
