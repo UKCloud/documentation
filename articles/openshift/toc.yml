@@ -76,7 +76,7 @@
       href: oshift-ref-cluster-monitoring.md
     - name: Security best practices
       href: oshift-ref-security-best-practices.md
-  - name: v4
+  - name: OpenShift v4.x
     items:
     - name: Deploying an application into OpenShift Service Mesh
       href: oshift-ref-deploy-app-into-service-mesh.md
