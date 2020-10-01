@@ -133,7 +133,7 @@ Run the following steps on a default Ubuntu setup for a successful migration:
 
 ### Migrating Centos/RHEL workloads
 
-You may encounter an issue where the instance fails to boot in the cloud site after migration, and instead enters a dracut debug state. If this is the case, in the source Instance run `dracut -fMa qemu`. Replicate and re-run the migration and the issue should be resolved.
+You may encounter an issue where the instance fails to boot in the cloud site after migration, and instead enters a dracut debug state. In this the case, in the source instance, run `dracut -fMa qemu`. Replicate and re-run the migration and the issue should be resolved.
 
 ### Migrating Microsoft Windows workloads
 
