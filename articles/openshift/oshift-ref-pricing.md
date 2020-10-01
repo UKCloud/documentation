@@ -135,7 +135,7 @@ Master node cost | + | Infrastructure cost | + | Application node cost | + | Sto
 -----------------|---|---------------------|---|-----------------------|---|--------------|---|---------------------------
 £372.30          | + | £248.20             | + | £1,115.90             | + |  £16.00      | = |  **£1,749.40**
 
-### [Example 3: Hourly application node pricing](#tab/tab-2)
+### [Example 3: Hourly application node pricing](#tab/tab-3)
 
 **Master nodes:** 3 x m1.medium<br>
 **Infrastructure nodes:** 2 x m1.medium<br>
