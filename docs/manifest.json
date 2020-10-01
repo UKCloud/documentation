@@ -6488,15 +6488,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-tab-group"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-ref-pricing.md",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-pricing.html",
-          "hash": "Vjst7wIQgBJmjXdGGXfoyQ=="
+          "hash": "QrR1rDraF51HC9GnO7Vnog=="
         }
       },
       "is_incremental": false,
