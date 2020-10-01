@@ -6488,6 +6488,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "invalid-tab-group"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-ref-pricing.html",
+          "hash": "Vjst7wIQgBJmjXdGGXfoyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-ref-scaling.md",
       "output": {
@@ -6565,7 +6580,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "T01/RDIkTzLVNu07VAmFMA=="
+          "hash": "zCEBYBHe5wv7W2zieMTAzA=="
         }
       },
       "is_incremental": false,
@@ -10746,15 +10761,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-pricing-guide.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "HEl+3VcUPcUUxwkJWCw8Gg=="
+          "hash": "H1+Jepf1nTAFUvKb2yRYVA=="
         }
       },
       "is_incremental": false,
@@ -20763,7 +20775,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 454,
+          "total_file_count": 455,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
