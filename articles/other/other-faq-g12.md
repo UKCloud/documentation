@@ -105,10 +105,6 @@ This service has been renamed to Professional Services. To offer a highly flexib
 
 The only change to our VMware-based service is the addition of advanced monitoring and metrics (provided by the vRealize Operations (vROps) Tenant Appliance) to our Advanced Management bundle option.
 
-### What's new in Disaster Recovery as a Service?
-
-There is no stated or supported Service Level Agreement for Disaster Recovery as a Service. However, the underlying UKCloud for VMware service has Service Level Agreements for each VM type, backed by Service Credits.
-
 ## End of sale
 
 ### What is happening to Basic Managed Compute?
