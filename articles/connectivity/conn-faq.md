@@ -137,7 +137,7 @@ This depends on the use case.
 
 ## Does UKCloud support RLI connections?
 
-Yes, UKCloud does support an RLI connection for customers who have been already authorised by the MoD. We will then us the HybridConnect service to connect the RLI network to your cloud environment.
+Yes, UKCloud does support an RLI connection for customers who have been already authorised by the MOD. We will then use the HybridConnect service to connect the RLI network to your cloud environment.
 
 ## If I have an MPLS circuit direct into UKCloud, do I still have to go through a PSN connection to access the Elevated Portal?
 
