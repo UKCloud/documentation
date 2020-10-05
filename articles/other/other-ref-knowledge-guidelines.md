@@ -56,8 +56,8 @@ where:
     `migr`   | Migration to the Cloud      | `orcl`   | UKCloud for Oracle Software
     `oshift` | UKCloud for OpenShift       | `ostack` | UKCloud for OpenStack
     `prc`    | Private Cloud               | `ptl`    | UKCloud Portal
-    `sra`    | Secure Remote Access        | `third`  | Third-Party Software
-    `ps`     | Professional Services       | `vmw`    | UKCloud for VMware
+    `sra`    | Secure Remote Access        | `ps`     | Professional Services
+    `vmw`    | UKCloud for VMware          |     | 
 
     For articles that do belong to a service or that apply to multiple services, use `other`
 
@@ -131,8 +131,8 @@ Metadata value        | Product                     | Metadata value  | Product
 `migration`           | Migration to the Cloud      | `openshift`     | UKCloud for OpenShift
 `openstack`           | UKCloud for OpenStack       | `oracle`        | UKCloud for Oracle Software
 `portal`              | UKCloud Portal              | `private-cloud` | Private Cloud
-`sra`                 | Secure Remote Access        | `third-party`   | Third-Party Software
-`pro-services`        | Professional Services       | `vmware`        | UKCloud for VMware
+`sra`                 | Secure Remote Access        | `pro-services`  | Professional Services
+`vmware`              | UKCloud for VMware          |         | 
 
 For articles that do belong to a service or that apply to multiple services, use `other`
 
@@ -176,14 +176,14 @@ Metadata value | Article type        | Metadata value  | Article type
 > [!NOTE]
 > For UKCloud for Microsoft Azure articles, the `rootlink` is either `Users` for articles intended for tenants or `Operators` for articles intended for service providers. Use the `toc_sub1` metadata tag to identify the article type.
 > 
-> For Managed Services and Third-Party Software, the `rootlink` is the name of the product. Use the `toc_sub1` metadata tag to identify the article type.
+> For Managed Services, the `rootlink` is the name of the product. Use the `toc_sub1` metadata tag to identify the article type.
 
 ### toc sub1, toc sub2, etc
 
 The `toc_sub1` metadata tag enables you to categorise articles within the root level to group them into related articles. This is useful if the product has lots of articles of the same type.
 
 > [!NOTE]
-> For UKCloud for Microsoft Azure, Managed Services and Third-Party Software articles, `toc_sub1` should be the article type as listed in [rootlink](#rootlink).
+> For UKCloud for Microsoft Azure and Managed Services articles, `toc_sub1` should be the article type as listed in [rootlink](#rootlink).
 
 You can use `toc_sub2`, `toc_sub3` and so on to further categorise articles, but it is not recommended to go too many levels deep.
 
