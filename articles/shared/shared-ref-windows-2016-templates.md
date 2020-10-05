@@ -39,7 +39,7 @@ You can license the templates using our existing Microsoft KMS infrastructure, w
 
 - The templates have been built as OS type Windows Server 2012 (64-bit) -- see point above.
 
-For more information about licensing Windows VMs, see [*How to set up the UKCloud Key Management Server*](../vmware/vmw-how-setup-kms.md).
+For more information about licensing Windows VMs, see [*How to set up the UKCloud Key Management Server*](shared-how-setup-kms.md).
 
 You can deploy and manage the Windows Server 2016 templates in exactly the same way as any other template from our public catalogue. For more information, see [*How to create a virtual machine from a template*](../vmware/vmw-how-create-vm-from-template.md).
 

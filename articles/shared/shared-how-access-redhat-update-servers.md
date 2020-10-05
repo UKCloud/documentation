@@ -21,7 +21,7 @@ toc_mdlink: shared-how-access-redhat-update-servers.md
 
 UKCloud has implemented a Red Hat Update Infrastructure (RHUI) to provide automatic updates to our Red Hat customers in the Assured OFFICIAL and Elevated OFFICIAL security domains. The benefits over the existing system are the reliable availability of patch updates and Red Hat approved OS templates.
 
-Before you attempt to establish a connection to RHUI, you need to make sure your virtual machines (VMs) can communicate with the RHUI, which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the articles for creating [NAT](vmw-how-create-nat-rules.md) and [firewall](vmw-how-create-firewall-rules.md) rules.
+Before you attempt to establish a connection to RHUI, you need to make sure your virtual machines (VMs) can communicate with the RHUI, which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the articles for creating [NAT](../vmware/vmw-how-create-nat-rules.md) and [firewall](../vmware/vmw-how-create-firewall-rules.md) rules.
 
 ## New Red Hat VM templates
 
@@ -47,7 +47,7 @@ You can adjust the VM properties as required and you'll be billed as per the sta
 
 If you have already deployed a Red Hat VM using the old templates, you can configure it to access the RHUI by following this guide:
 
-[*How to install Red Hat Update Infrastructure (RHUI) on an existing virtual machine*](vmw-how-install-rhui-vm.md)
+[*How to install Red Hat Update Infrastructure (RHUI) on an existing virtual machine*](shared-how-install-rhui-vm.md)
 
 ## Additional resources
 

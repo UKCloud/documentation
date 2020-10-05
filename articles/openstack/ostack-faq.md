@@ -344,7 +344,7 @@ You can use the UKCloud catalogue of operating systems or upload your own:
 
 Microsoft SQL can be installed within an OpenStack instance.
 
-You have the choice to either bring your own license using the Microsoft License Mobility scheme or choose to use a UKCloud provided license. The process for both options are available on the UKCloud Knowledge Centre [here](../vmware/vmw-how-license-microsoft.md).
+You have the choice to either bring your own license using the Microsoft License Mobility scheme or choose to use a UKCloud provided license. The process for both options are available on the UKCloud Knowledge Centre [here](../shared/shared-how-license-microsoft.md).
 
 ### How can I license an operating system?
 
@@ -356,7 +356,7 @@ Microsoft offers License Mobility, a scheme that allows a customer to provide ad
 
 ### Do you have a Key Management System (KMS) for activating Windows?
 
-Yes. A we provide a [step-by-step guide](../vmware/vmw-how-setup-kms.md) on configuring and using this service.
+Yes. A we provide a [step-by-step guide](../shared/shared-how-setup-kms.md) on configuring and using this service.
 
 ### How does RHEL licensing work?
 

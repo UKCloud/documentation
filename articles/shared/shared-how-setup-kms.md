@@ -1,9 +1,9 @@
 ---
 title: How to license Windows VMs using the UKCloud KMS
 description: Shows how to register virtual machines with the KMS within vCloud Director
-services: vmware
-author: Sue Highmoor
-reviewer: Sue Highmoor
+services: shared
+author: shighmoor
+reviewer: shighmoor
 lastreviewed: 19/08/2019
 
 toc_rootlink: How To
@@ -46,13 +46,13 @@ To allow this communication, you need to create a source network address transla
 
 7. For the translated address, enter the external IP address of your edge gateway or one of your external IP address assignments.
 
-    For more information about creating SNAT rules, see [*How to create NAT rules*](vmw-how-create-nat-rules.md).
+    For more information about creating SNAT rules, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md).
 
 8. Select the **Firewall** tab and make sure that an outbound rule exists on your firewall.
 
     Contact UKCloud Support for details of the **Destination IP** and **Destination Port**.
 
-    For more information about creating firewall rules, see [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
+    For more information about creating firewall rules, see [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 ## Activating your Windows licence
 
@@ -66,23 +66,23 @@ To allow this communication, you need to create a source network address transla
 
 4. You'll see the following pop-up box:
 
-    ![Windows Script Host dialog box](images/vmw-windows-kms-activate.png)
+    ![Windows Script Host dialog box](images/shared-windows-kms-activate.png)
 
 5. If an error message appears indicating that the KMS server can't be contacted, it means either that the edge gateway hasn't been configured correctly or that DNS can't be retrieved. Try again by issuing the same command but using the IP address of the activation server:
 
         C:\ > slmgr /skms  <external IP address>:1688
 
-    ![Windows Script Host dialog box](images/vmw-windows-kms-activate-ip.png)
+    ![Windows Script Host dialog box](images/shared-windows-kms-activate-ip.png)
 
 6. Click **OK**, then from the same command line window, enter:
 
         C:\ >slmgr /ato
 
-    ![Product successfully activated](images/vmw-windows-kms-activate-success.png)
+    ![Product successfully activated](images/shared-windows-kms-activate-success.png)
 
 ## Related videos
 
-- [*Licensing Windows VMs using the UKCloud Key Management Server video*](vmw-vid-licensing-kms.md)
+- [*Licensing Windows VMs using the UKCloud Key Management Server video*](shared-vid-licensing-kms.md)
 
 ## Feedback
 
