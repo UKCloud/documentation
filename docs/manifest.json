@@ -2330,17 +2330,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/ukc-services.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/azure/toc.yml",
       "output": {
@@ -2520,17 +2509,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/cdsz/images/ukc-services-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cdsz/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cdsz/images/ukc-services.png"
         }
       },
       "is_incremental": false,
@@ -3480,17 +3458,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/cloud-storage/images/ukc-services-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/ukc-services.png"
         }
       },
       "is_incremental": false,
@@ -6129,17 +6096,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/openshift/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openshift/images/ukc-services.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-faq.md",
       "output": {
@@ -8740,17 +8696,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ukc-services.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-faq.md",
       "output": {
@@ -9567,17 +9512,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/oracle/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/oracle/images/ukc-services.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-faq.md",
       "output": {
@@ -10387,17 +10321,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/ukc-services.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-billing.md",
       "output": {
@@ -10667,7 +10590,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "ZHYi9U8hvWAKViwfezChXA=="
+          "hash": "1HIQYcWZXF2S4qyv/szpZA=="
         }
       },
       "is_incremental": false,
@@ -10727,7 +10650,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-knowledge-guidelines.html",
-          "hash": "LHnoqlxNKa3D6NU8t54pkQ=="
+          "hash": "Bf1G5NrzjgQa3zsA/znMKQ=="
         }
       },
       "is_incremental": false,
@@ -10859,7 +10782,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "teKyRH4PyMVbrpASooWghA=="
+          "hash": "hwpE3oINyz9GMODhxrqJHA=="
         }
       },
       "is_incremental": false,
@@ -12200,17 +12123,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/private-cloud/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/private-cloud/images/ukc-services.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/private-cloud/prc-faq-storage.md",
       "output": {
@@ -12489,17 +12401,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/sra/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/sra/images/ukc-services.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/sra/sra-faq.md",
       "output": {
@@ -12578,158 +12479,6 @@
         ".html": {
           "relative_path": "articles/sra/toc.html",
           "hash": "5dNeTcLG2b2/W6/zn3rDeQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/third-appdynamics-ui.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/third-appdynamics-ui.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/third-moogsoft-overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/third-moogsoft-overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/ukc-services-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/ukc-services-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/third-party/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/third-party/images/ukc-services.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-faq-appdynamics.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-faq-appdynamics.html",
-          "hash": "gHwsPe069p+RjWCIQzrF4A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-faq-moogsoft.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-faq-moogsoft.html",
-          "hash": "htjqIejXE98UWrWX982L2g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-ref-eula.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-ref-eula.html",
-          "hash": "CGiG6V+ph6dPwb+T25mj/A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-sco-appdynamics.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-sco-appdynamics.html",
-          "hash": "aJfIL+Un4hB8r9cV8MFWew=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-sco-moogsoft.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-sco-moogsoft.html",
-          "hash": "Y1kgbiN0G9sWHiIT6WldNA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-sd-appdynamics.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-sd-appdynamics.html",
-          "hash": "XAg17Zj9Zb9CueCVUN5c5A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-sd-hytrust.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-sd-hytrust.html",
-          "hash": "XhvcUBSiVUzqvmygUu57lw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/third-party/third-sd-moogsoft.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/third-sd-moogsoft.html",
-          "hash": "2e2WnHsSw8PU76KNmG3Kmg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/third-party/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/third-party/toc.html",
-          "hash": "2owo4zDKvlLH6Uy9dZ6yJA=="
         }
       },
       "is_incremental": false,
@@ -13709,17 +13458,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/ukc-services-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/ukc-services.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/ukc-services.png"
         }
       },
       "is_incremental": false,
@@ -19325,7 +19063,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "YX2iNKGH68IIqt7NOzft4A=="
+          "hash": "th9H8biUi3lysSUIDu6xnQ=="
         }
       },
       "is_incremental": false,
@@ -20746,12 +20484,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "GhVzg/EGJKLpSyKhjwvb2A=="
+          "hash": "4UVz34NEmJy7HfY2yw5fwQ=="
         }
       },
       "is_incremental": false,
@@ -20772,7 +20513,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 455,
+          "total_file_count": 447,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
