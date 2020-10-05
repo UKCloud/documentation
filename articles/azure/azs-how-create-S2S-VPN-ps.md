@@ -2,9 +2,9 @@
 title: How to create a site-to-site VPN connection using PowerShell
 description: Create a site-to-site (S2S) VPN connection from Azure Stack Hub to Microsoft Azure
 services: azure-stack
-author: Bailey Lawson
+author: blawson
 reviewer:
-lastreviewed:
+lastreviewed: 17/06/2019
 
 toc_rootlink: Users
 toc_sub1: How To
