@@ -21,7 +21,9 @@ toc_mdlink: other-faq-g12.md
 
 ### What is the UKCloud theme for G-Cloud 12?
 
-Our portfolio of multi-cloud services has been further enhanced at G-Cloud 12 to accelerate the government's legacy IT transformation programme. This expanded portfolio has been designed to overcome the resource, assurance, availability and commercial constraints that often stop public sector organisations reaching their digital transformation objectives.  
+Our portfolio of multi-cloud services has been further enhanced at G-Cloud 12 to accelerate the government's legacy IT transformation programme. This expanded portfolio has been designed to overcome the resource, assurance, availability and commercial constraints that often stop public sector organisations reaching their digital transformation objectives.
+
+To see how our G-Cloud 12 portfolio provides even more choice and options, secure solutions, and expert support to help public sector organisations navigate the journey to cloud, watch our [G-Cloud 12: Transforming legacy environments and delivering customer outcomes](https://www.brighttalk.com/webcast/17330/441399) webinar on [BrightTALK](https://www.brighttalk.com/search/?q=ukcloud).
 
 ### When will the changes take effect?
 
