@@ -101,7 +101,7 @@ This service has been renamed as the Security Operations Service and is now a UK
 
 ### What's new in Transition Services?
 
-This service has been renamed to Professional Services. To offer a highly flexible service, the options provided are now based on our newly issued SFIA rate card and therefore can be customised to match customer requirements.
+This service has been renamed to Professional Services. To offer a highly flexible service, the options provided are now based on our newly issued [SFIA Rate Card](http://www.ukcloud.com/sfia) and therefore can be customised to match customer requirements.
 
 ### What's new in the UKCloud for VMware service?
 

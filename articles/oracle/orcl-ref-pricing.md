@@ -79,7 +79,7 @@ For more information about the discount and purchase schemes offered by UKCloud,
 
 - To model a total cost of ownership, you should consider additional elements, such as licensing, connectivity and service options, which are listed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
-- UKCloud reserves the right to charge for the onboarding of complex configurations in line with our SFIA rate card.
+- UKCloud reserves the right to charge for the onboarding of complex configurations in line with our [SFIA Rate Card](http://www.ukcloud.com/sfia).
 
 ## Billing and payment information
 

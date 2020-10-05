@@ -85,7 +85,7 @@ UKCloud charges monthly for connectivity solutions, and requires a minimum commi
 
 Simple implementations of HSCN won't incur any additional setup or onboarding charges.
 
-For complex networking solutions, we reserve the right to charge SFIA rates. We'll always tell you in advance if an engagement will incur [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) charges.
+For complex networking solutions, we reserve the right to charge SFIA rates. We'll always tell you in advance if an engagement will incur [SFIA Rate Card](http://www.ukcloud.com/sfia) charges.
 
 ### Does UKCloud provide data encryption?
 
