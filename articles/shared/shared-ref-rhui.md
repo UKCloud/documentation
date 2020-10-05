@@ -1,8 +1,8 @@
 ---
 title: Red Hat Update Infrastructure overview
 description: Explains the UKCloud Red Hat Update Infrastructure (RHUI)
-services: vmware
-author: Sue Highmoor
+services: shared-services
+author: shighmoor
 reviewer: pcantle
 lastreviewed: 01/04/2020
 toc_rootlink: Reference
@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Red Hat Update Infrastructure overview
-toc_fullpath: Reference/vmw-ref-rhui.md
-toc_mdlink: vmw-ref-rhui.md
+toc_fullpath: Reference/shared-ref-rhui.md
+toc_mdlink: shared-ref-rhui.md
 ---
 
 # Red Hat Update Infrastructure overview

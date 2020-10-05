@@ -1,7 +1,7 @@
 ---
 title: How to install Red Hat Update Infrastructure
 description: Shows you how to update your existing hosts to target UKCloud's approved Red Hat Update Infrastructure (RHUI)
-services: shared
+services: shared-services
 author: shighmoor
 reviewer: pcantle
 lastreviewed: 02/07/2020

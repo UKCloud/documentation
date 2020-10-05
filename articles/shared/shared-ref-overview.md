@@ -1,7 +1,7 @@
 ---
 title: Understanding UKCloud shared services
 description: Provides an overview of UKCloud's shared services
-services: shared
+services: shared-services
 author: shighmoor
 reviewer:
 lastreviewed: 05/10/2020

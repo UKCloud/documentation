@@ -1,9 +1,9 @@
 ---
 title: How to bring your own Red Hat licensing
 description: Outlines the options for Red Hat licencing and how to use your own licensing
-services: vmware
-author: Steve Hall
-reviewer: Sue Highmoor
+services: shared-services
+author: shall
+reviewer: shighmoor
 lastreviewed: 22/10/2019
 toc_rootlink: How To
 toc_sub1: 
@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Bring your own Red Hat licensing
-toc_fullpath: How To/vmw-how-license-red-hat.md
-toc_mdlink: vmw-how-license-red-hat.md
+toc_fullpath: How To/shared-how-license-red-hat.md
+toc_mdlink: shared-how-license-red-hat.md
 ---
 
 # How to bring your own Red Hat licensing

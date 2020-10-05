@@ -1,18 +1,18 @@
 ---
 title: Windows Server 2016 templates
 description: This article explains the current status and availability of Windows Server 2016 templates on UKCloud compute services.
-services: x-platform
-author: Sue Highmoor
+services: shared-services
+author: shighmoor
 reviewer:
-lastreviewed: 23/07/2018 14:44:15
+lastreviewed: 23/07/2018
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Windows Server 2016 templates
-toc_fullpath: Reference/other-ref-windows-2016-templates.md
-toc_mdlink: other-ref-windows-2016-templates.md
+toc_fullpath: Reference/shared-ref-windows-2016-templates.md
+toc_mdlink: shared-ref-windows-2016-templates.md
 ---
 
 # Windows Server 2016 templates

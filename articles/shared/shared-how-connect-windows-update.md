@@ -1,7 +1,7 @@
 ---
 title: How to connect to the UKCloud Windows Server Update Services (WSUS)
 description: Shows how to connect to the UKCloud Windows Update Services
-services: shared
+services: shared-services
 author: shighmoor
 reviewer: jpaddock
 lastreviewed: 01/04/2020
