@@ -41,7 +41,7 @@ In a BYOF implementation, UKCloud present an external network directly to the cu
 
 Upon a customer's request, UKCloud will:
 
-- Deploy a new VDC without a NSX ESG device
+- Deploy a new VDC without a NSX Edge Services Gateway device
 
 - Present the external network to the customer for them to install their own firewall device
 
