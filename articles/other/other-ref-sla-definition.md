@@ -4,7 +4,7 @@ description: Definition of the UKCloud service level agreement (SLA)
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 02/10/2020
+lastreviewed: 06/10/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -145,6 +145,10 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
 **Service Credit**           | 3% of monthly spend per 5% below service level target or part thereof for affected compute platform
 
+### Cloud Optimisation from UKCloud
+
+As Cloud Optimisation from UKCloud is based on third-party software and reporting, we are unable to offer an SLA for this service.
+
 ### Cloud Storage
 
 &nbsp;                       | Cloud Storage
@@ -173,17 +177,17 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 
 &nbsp;                       | Dedicated Compute v2
 -----------------------------|---------------------
-**Availability commitment**  | 99.99%
+**Availability commitment**  | 99.95%
 **Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days)
 **Emergency maintenance**    | Excluded
 **Planned maintenance**      | Excluded
 **Measurement of SLA**       | Unavailability applies to existing VMs when the compute platform becomes inaccessible due to a fault recognised at the IaaS layer or lower:<ul><li>Fault is not within the customer's control (OS configuration, customer applications and customer networks)<li>Fault is within UKCloud-controlled components such as the dedicated compute infrastructure, UKCloud data centre facilities, physical firewalls and routers</ul>
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
+**Service Credit**           | 5% of monthly spend per 5% below service level target or part thereof for affected compute platform
 
 ### Disaster Recovery as a Service (DRaaS)
 
-Due to the service being dependent on connectivity between the customer data centre and
-UKCloud, we are unable to offer an SLA relating to the performance of this service. For full details of the SLA for the UKCloud for VMware platform that hosts the solution, see [*UKCloud for VMware*](#ukcloud-for-vmware).
+Due to the service being dependent on connectivity between the customer data centre and UKCloud, we are unable to offer an SLA relating to the performance of this service. For full details of the SLA for the UKCloud for VMware platform that hosts the solution, see [*UKCloud for VMware*](#ukcloud-for-vmware).
 
 ### Email and Collaboration as a Service
 
@@ -260,8 +264,8 @@ Due to the service being dependent on connectivity between the customer data cen
 **Emergency maintenance**    | Included
 **Planned maintenance**      | Included
 **Measurement of SLA**       | Availability of service refers to availability of the DDoS Protect platform.<br>Neustar shall begin mitigation within:<br><ul><li>5 minutes for Layer 3 & 4 attacks<li>15 minutes for Layer 7 attacks</ul>From the time traffic is redirected to UltraDDoS Protect platform and Neustar has detected malicious traffic. Each attack vector change shall start a new Time to mitigate.<br>95% clean pass-through. Neustar shall clean the traffic such that no more than 5% of dirty/malicious traffic shall be passed to customer endpoint(s).
-**Key exclusions**           | ???
-**Service Credit** | ???
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Fault is within the customer's control (configuration, customer applications and customer networks)<li>Faults associated with customer's domain name registrar<li>Faults associated with third party/service provider networks</ul>
+**Service Credit**           | None
 
 ### Neustar UltraDNS from UKCloud
 
@@ -273,7 +277,11 @@ Due to the service being dependent on connectivity between the customer data cen
 **Planned maintenance**      | Included
 **Measurement of SLA**       | Availability applies to the customer assigned network within the Neustar Server Network being available to respond to Authoritative DNS queries
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Fault is within the customer's control (configuration, customer applications and customer networks)<li>Faults associated with customer's domain name registrar<li>Faults associated with third party/service provider networks</ul>
-**Service Credit** | ???
+**Service Credit**           | None
+
+### Portworx Enterprise from UKCloud
+
+Portworx Enterprise from UKCloud is deployed in your OpenShift cluster. For details of the SLA for OpenShift, see [*UKCloud for Managed OpenShift*](#ukcloud-for-managed-openshift).
 
 ### Private Cloud
 
@@ -326,6 +334,10 @@ Due to the service being dependent on connectivity between the customer data cen
 ### Security Operations Service
 
 SLA varies based on the chosen cloud technology. See the appropriate section of this article for more information.
+
+### VMware Licence Support
+
+There is no SLA for this service. For information about customer service targets for support response, see [*How to raise and escalate support tickets with customer support*](../portal/ptl-how-raise-escalate-service-request.md)).
 
 ## Feedback
 
