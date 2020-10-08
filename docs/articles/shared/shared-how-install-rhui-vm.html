@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access UKCloud services from Walled Garden and Secure Remote Access </title>
+    <title>How to install Red Hat Update Infrastructure </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access UKCloud services from Walled Garden and Secure Remote Access ">
+    <meta name="title" content="How to install Red Hat Update Infrastructure ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-how-access-services-walled-garden.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/shared/shared-how-install-rhui-vm.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,48 +91,78 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-ukcloud-services-from-walled-garden-and-secure-remote-access">How to access UKCloud services from Walled Garden and Secure Remote Access</h1>
+<h1 id="how-to-install-red-hat-update-infrastructure">How to install Red Hat Update Infrastructure</h1>
 
 <h2 id="overview">Overview</h2>
-<p>If you've implemented either Secure Remote Access (SRA) or a Cross Domain Security Zone (CDSZ) Walled Garden solution and want to access UKCloud services (such as WSUS, KMS or Red Hat Update Service), you'll need to edit your edge gateway settings to enable access.</p>
-<h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide you must have vCloud Director administrator access to a virtual data centre (VDC) in the Elevated OFFICIAL security domain.</p>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>Before making network changes to your environment, you'll need the following information:</p>
+<p>This article provides advice on how to update your existing Red Hat virtual machines (VMs) to target UKCloud's approved Red Hat Update Infrastructure (RHUI).</p>
+<p>As of July 2015, UKCloud implemented an RHUI to provide automatic updates to our Red Hat customers on our Assured OFFICIAL and Elevated OFFICIAL security domains. This provides benefits such as the reliable availability of patch updates and Red Hat approved OS templates.</p>
+<p>This update service replaces the previous repositories, which are no longer updated and were retired on the 31 August 2015.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>There are two pre-requisites for performing this operation:</p>
 <ul>
-<li><p>The Transit IP for the Elevated edge gateway of your CDSZ or SRA VDC</p>
+<li><p>The host can resolve to the RHUI DNS records (contact Customer Support for the IP addresses and domain names for these records). You can achieve this by configuring an A record on your local DNS, or configuring an <code>/etc/hosts</code> file with the appropriate information.</p>
 </li>
-<li><p>The Transit IP for the edge gateway of your Elevated VDC</p>
-</li>
-<li><p>The IP of the service you require.</p>
+<li><p>All hosts using the service must be able to access the local RHUA server on port 443 (HTTPS). Ensure that you have configured SNAT and firewall policies on your edge gateway device. If you have any questions on this, contact UKCloud Support.</p>
 </li>
 </ul>
-<p>To get the last two octets of the IP addresses for the service you require, please raise a Service Request on the UKCloud Elevated Portal.</p>
-<h2 id="setting-up-access-to-ukcloud-services">Setting up access to UKCloud services</h2>
-<p>The diagrams below show that you need to add two static routes and an SNAT rule on two edge gateways.</p>
+<h2 id="installation">Installation</h2>
+<p>You can find the installer RPM files in the following locations:</p>
+<ul>
+<li><p><a href="https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1625780068&amp;Signature=2k%2BmhJ6BKzVVeJi6qwKzBJsG5TM%3D">Assured RHEL 6 Standard</a></p>
+</li>
+<li><p><a href="https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL2-Client-RHEL7-Standard-2.2-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1625780100&amp;Signature=%2F4f3KQO02KVG0sNQ7%2FhSH%2BNVCg0%3D">Assured RHEL 7 Standard</a></p>
+</li>
+<li><p><a href="https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL6-Standard-2.5-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1625780111&amp;Signature=dP8KvNxmC01dBdt0zOyLPq9Q6rA%3D">Elevated RHEL 6 Standard</a></p>
+</li>
+<li><p><a href="https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/IL3-Client-RHEL7-Standard-2.5-1.noarch.rpm?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1625780129&amp;Signature=pR2g6hZEE%2BZimRCU5G0g9gQHvww%3D">Elevated RHEL 7 Standard</a></p>
+</li>
+</ul>
+<p>If you require the high availability (HA) package, raise a Service Request directly via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal and we'll provide you with a download location.</p>
 <ol>
-<li><p>In vCloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.</p>
+<li><p>Download the appropriate file to your VM (or place the contents in an accessible location such as NFS share or FTP).</p>
 </li>
-<li><p>Create a static route that directs traffic for the service you need via the Transit IP of your Elevated edge gateway.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-static-route.html"><em>How to create a static route</em></a>.</p>
+<li><p>Install the relevant RPM.</p>
+<p>For example, for RHEL6 in Assured: <code>yum install IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm</code>.</p>
+<p>If you're installing a new RPM, such as replacing standard with HA you need to use the <code>-force</code> flag to overwrite the existing certificates.</p>
 </li>
-<li><p>Create an SNAT rule on your Elevated VDC to allow the private IP range from your CDSZ or SRA to have external access.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
+<li><p>Clean yum and the cache:</p>
+<pre><code>yum clean all; rm -rf /var/cache/yum
+</code></pre>
 </li>
-<li><p>Amend the firewall to allow the private IP range access to the service you require on your Elevated VDC.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
+<li><p>Test the RHUI is working:</p>
+<pre><code>yum update
+</code></pre>
 </li>
-<li><p>Add a static route for the return traffic on your Elevated VDC to point to the Transit IP of your CDSZ or SRA VDC.</p>
+<li><p>The first time you update from RHUI you may be prompted to accept the following two certificates:</p>
+<ul>
+<li><p>The Red Hat entitlement certificate</p>
+</li>
+<li><p>The Client entitlement certificate</p>
+</li>
+</ul>
 </li>
 </ol>
-<h2 id="next-steps">Next steps</h2>
-<p>Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:</p>
-<ul>
-<li><p><a href="../shared/shared-how-setup-kms.html"><em>How to license Windows VMs using the UKCloud Key Management Server</em></a></p>
+<h2 id="upgrading-the-rpms-to-a-newer-version">Upgrading the RPMs to a newer version</h2>
+<p>If you already have one of the original UKCloud RPMs installed on your system and require one of the latest ones documented in this article (due to the original ones expiring), you can run a command to upgrade it once you've downloaded the required files.</p>
+<p>For example, for RHEL6 in Assured: <code>yum update IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm</code>.</p>
+<p>This will overwrite the files and certificates associated with the original RPM and restore access to the RHUA (as well as tidying up the previously installed RPM).</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>The primary issues you may encounter are:</p>
+<h3 id="dns-failure">DNS Failure</h3>
+<p>Check the DNS lookup is working and you have the correct entry for Assured and Elevated.</p>
+<h3 id="443-not-accessible">443 not accessible</h3>
+<ol>
+<li><p>Check your firewall configuration, including local firewalls (<code>iptables</code>) and edge gateway.</p>
 </li>
-<li><p><a href="../shared/shared-how-connect-windows-update.html"><em>How to connect to the UKCloud Windows Server Update Services (WSUS)</em></a></p>
+<li><p>Ensure you have the correct destination IP entry for Assured or Elevated.</p>
 </li>
-</ul>
+</ol>
+<h3 id="incorrect-version">Incorrect version</h3>
+<p>Ensure you have installed the correct RPM for your release.</p>
+<h3 id="comms-errors-when-trying-to-upgrade-the-rpm-using-yum-rhel6-only">Comms errors when trying to upgrade the RPM using yum (RHEL6 only)</h3>
+<p>Due to the previous RPMs no longer being valid for accessing the RHUI, when running RHEL6, you may see some errors when trying to upgrade the RPM. To work around this, issue: <code>yum update --disableplugin=rhui-lb IL2-Client-RHEL6-Standard-2.2-1.noarch.rpm</code>. This is not an issue when running RHEL7.</p>
+<h3 id="unauthorized-401-error-when-trying-to-access-rhua">Unauthorized (401) Error when trying to access RHUA</h3>
+<p>You most likely have the original RPMs installed. Follow the instructions in the <a href="#upgrading-the-rpms-to-a-newer-version"><em>Upgrading the RPMs to a newer version</em></a> section above.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

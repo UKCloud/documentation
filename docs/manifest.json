@@ -549,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-pricing.html",
-          "hash": "0E0QGHp1/JvxmAuQo146yQ=="
+          "hash": "58sfW6Ce8P4e58mt0gwJcQ=="
         }
       },
       "is_incremental": false,
@@ -2371,7 +2371,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-how-access-services-walled-garden.html",
-          "hash": "BpiJefziOWSKHJR1rfSH1A=="
+          "hash": "qqhIF5d9NAveTppYtMETuA=="
         }
       },
       "is_incremental": false,
@@ -5612,7 +5612,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-sco.html",
-          "hash": "PAG/JnIUgOOk3B5nbhC5aA=="
+          "hash": "1pJAvGvYm+IP11rnmkUqsw=="
         }
       },
       "is_incremental": false,
@@ -8701,7 +8701,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "kxB6zkVcUb3lNR/+HQ4L5Q=="
+          "hash": "dkP2Og/Ts2YuYXD61mbehg=="
         }
       },
       "is_incremental": false,
@@ -9001,7 +9001,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-pricing.html",
-          "hash": "+6GajYHO6PwAOa6GLvVI9g=="
+          "hash": "5rNwcEjn8poS867QncviKQ=="
         }
       },
       "is_incremental": false,
@@ -10838,18 +10838,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-windows-2016-templates.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-windows-2016-templates.html",
-          "hash": "bEOx/0UPjEw5j24YX9MLIA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-sco-free-trials.md",
       "output": {
         ".html": {
@@ -10902,7 +10890,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "u3Ne1HirZ/wFbJGqVjfb3g=="
+          "hash": "s7vtobzy2X2qcdQV30HGXA=="
         }
       },
       "is_incremental": false,
@@ -12271,6 +12259,264 @@
         ".html": {
           "relative_path": "articles/pro-services/toc.html",
           "hash": "Jz0yHgl1vHNZ7hpHQwBH8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/shared/images/ptl-mnu-my-calls.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/ptl-mnu-my-calls.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/shared/images/shared-windows-kms-activate-ip.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/shared-windows-kms-activate-ip.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/shared/images/shared-windows-kms-activate-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/shared-windows-kms-activate-success.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/shared/images/shared-windows-kms-activate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/shared-windows-kms-activate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/shared/images/vmw-vcd-edge-btn-config.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/vmw-vcd-edge-btn-config.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/shared/images/vmw-vcd91-mnu-edges.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/vmw-vcd91-mnu-edges.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-how-access-centos-update-servers.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-how-access-centos-update-servers.html",
+          "hash": "ucozTgi+Dwx1M3roLcJi0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-how-access-redhat-update-servers.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-how-access-redhat-update-servers.html",
+          "hash": "36i+ziHwHd8m6DWg+oEU7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-how-access-ubuntu-update-servers.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-how-access-ubuntu-update-servers.html",
+          "hash": "JGix6lUpTBl4omeLqsdk7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-how-connect-windows-update.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-how-connect-windows-update.html",
+          "hash": "LPIWRAd7gR7B2AU0sydHxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-how-install-rhui-vm.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-how-install-rhui-vm.html",
+          "hash": "ZXd8gZSPUf64aV+TbQDRvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-how-license-microsoft.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-how-license-microsoft.html",
+          "hash": "xySTBFLIH54m20BFeW8N7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-how-license-red-hat.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-how-license-red-hat.html",
+          "hash": "w5XpfyVTZtYnoDm+AL/r7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-how-setup-kms.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-how-setup-kms.html",
+          "hash": "LYjaWMXHsgvYkFRdA/fmzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-ref-access-to-vms.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-ref-access-to-vms.html",
+          "hash": "pNQoYgYs74m2dZsd+xylOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-ref-network-time-server.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-ref-network-time-server.html",
+          "hash": "fMPQk86iuwuZqK9qvodvFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-ref-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-ref-overview.html",
+          "hash": "PZ21dzse1FJbH30k+qyXrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-ref-rhui.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-ref-rhui.html",
+          "hash": "60oRdZ1TgKf6NVTiEyKn0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-ref-windows-2016-templates.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-ref-windows-2016-templates.html",
+          "hash": "0HhBGmB4CS3LFGF604jjww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-vid-licensing-kms.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-vid-licensing-kms.html",
+          "hash": "6ISu5/mwHqcalTXb/E+k1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/shared/shared-vid-wsus.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/shared-vid-wsus.html",
+          "hash": "q/23q9923bvvYnoJl77iDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/shared/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/shared/toc.html",
+          "hash": "Kx5cDkpfoVop6V9JK6b1ig=="
         }
       },
       "is_incremental": false,
@@ -18591,39 +18837,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-windows-kms-activate-ip.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-windows-kms-activate-ip.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-windows-kms-activate-success.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-windows-kms-activate-success.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-windows-kms-activate.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-windows-kms-activate.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-btn-failover-live.png",
       "output": {
         "resource": {
@@ -18991,7 +19204,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "m2Z3uf6NUubzyekJ2EnASg=="
+          "hash": "jePfPcoTq1aThHjw4tD+hw=="
         }
       },
       "is_incremental": false,
@@ -19063,7 +19276,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "th9H8biUi3lysSUIDu6xnQ=="
+          "hash": "pjMVJ/UDN7YB/RkXLV7sUQ=="
         }
       },
       "is_incremental": false,
@@ -19119,30 +19332,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-access-centos-update-servers.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-access-centos-update-servers.html",
-          "hash": "o0Wc/weCS24AWUXLsBkqFA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-access-redhat-update-servers.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-access-redhat-update-servers.html",
-          "hash": "LQ8/s8/CvbVGYNLXSwiaDw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-access-syslog-data-adv.md",
       "output": {
         ".html": {
@@ -19160,18 +19349,6 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-syslog-data.html",
           "hash": "eioTf0+gqOJYW9Uyf0ph+A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-access-ubuntu-update-servers.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-access-ubuntu-update-servers.html",
-          "hash": "Yopo8uIsvh4r2r/DE1UB2g=="
         }
       },
       "is_incremental": false,
@@ -19268,18 +19445,6 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-load-balancer.html",
           "hash": "5uhaij0hzHuGIgrEShh5VQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-connect-windows-update.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-connect-windows-update.html",
-          "hash": "YV2qxjnaeH3u46hdVGGXcA=="
         }
       },
       "is_incremental": false,
@@ -19467,18 +19632,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-install-rhui-vm.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-install-rhui-vm.html",
-          "hash": "5fNkhC4F6WPd6cFCmR8lJQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-install-vcloud-api-rest-client.md",
       "output": {
         ".html": {
@@ -19496,30 +19649,6 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-how-interact-vcd-api-powershell.html",
           "hash": "S8msRvvTwnYwFvfURd3AtQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-license-microsoft.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-license-microsoft.html",
-          "hash": "r2F3pz/FGFt+EDvtkwFJDg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-license-red-hat.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-license-red-hat.html",
-          "hash": "XQiYPjChMIbrQzLBwl5Oig=="
         }
       },
       "is_incremental": false,
@@ -19652,18 +19781,6 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-how-setup-gpu-visualisation.html",
           "hash": "ZzHIBb9D0cBpJSbugWnB7w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-setup-kms.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-setup-kms.html",
-          "hash": "TcgYIgwe+CuN0kP39994Fg=="
         }
       },
       "is_incremental": false,
@@ -19875,18 +19992,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-access-to-vms.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-access-to-vms.html",
-          "hash": "gph7ozhExBsliiBtSZUhig=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-advanced-networking.md",
       "output": {
         ".html": {
@@ -20019,18 +20124,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-network-time-server.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-network-time-server.html",
-          "hash": "3I607NVDNhpnsFfpqmzjvQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-oversized-vms.md",
       "output": {
         ".html": {
@@ -20059,19 +20152,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-pricing.html",
-          "hash": "gf8u79mFejPb5DpPXqLAsA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-rhui.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-rhui.html",
-          "hash": "vF+q4+FVg58/4R8SEt0A9w=="
+          "hash": "djaGZFoWwpMOvIzz7pE8Xw=="
         }
       },
       "is_incremental": false,
@@ -20275,7 +20356,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-byof.html",
-          "hash": "0B0O+LdOkIzNnlVjmNajCQ=="
+          "hash": "Fm5FHq+zwZ6GzYkYzuj3Sw=="
         }
       },
       "is_incremental": false,
@@ -20415,35 +20496,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-vid-licensing-kms.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-vid-licensing-kms.html",
-          "hash": "uhwMgo9zDN3jIzi/jYVVcA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-vid-vcd97.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-vcd97.html",
           "hash": "H7scbNvkXK+rizy4/tzHCw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-vid-wsus.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-vid-wsus.html",
-          "hash": "x0b2+8WhlL87l+y9IxqztA=="
         }
       },
       "is_incremental": false,
@@ -20466,7 +20523,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "6H+Cs9sCBztfekLSJh7kgw=="
+          "hash": "vlfZRitMGYd3zAuh/rYpMg=="
         }
       },
       "is_incremental": false,
@@ -20489,7 +20546,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "M9zRRL+fJ8nc0MhIT5ga/A=="
+          "hash": "ONljRPxys9QEN/1nT6A8YA=="
         }
       },
       "is_incremental": false,
@@ -20510,7 +20567,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 447,
+          "total_file_count": 448,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

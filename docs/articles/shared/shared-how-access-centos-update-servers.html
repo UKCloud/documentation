@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access UKCloud services from Walled Garden and Secure Remote Access </title>
+    <title>How to access CentOS update servers </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access UKCloud services from Walled Garden and Secure Remote Access ">
+    <meta name="title" content="How to access CentOS update servers ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-how-access-services-walled-garden.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/shared/shared-how-access-centos-update-servers.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,48 +91,93 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-ukcloud-services-from-walled-garden-and-secure-remote-access">How to access UKCloud services from Walled Garden and Secure Remote Access</h1>
+<h1 id="how-to-access-centos-update-servers">How to access CentOS update servers</h1>
 
 <h2 id="overview">Overview</h2>
-<p>If you've implemented either Secure Remote Access (SRA) or a Cross Domain Security Zone (CDSZ) Walled Garden solution and want to access UKCloud services (such as WSUS, KMS or Red Hat Update Service), you'll need to edit your edge gateway settings to enable access.</p>
-<h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide you must have vCloud Director administrator access to a virtual data centre (VDC) in the Elevated OFFICIAL security domain.</p>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>Before making network changes to your environment, you'll need the following information:</p>
-<ul>
-<li><p>The Transit IP for the Elevated edge gateway of your CDSZ or SRA VDC</p>
-</li>
-<li><p>The Transit IP for the edge gateway of your Elevated VDC</p>
-</li>
-<li><p>The IP of the service you require.</p>
-</li>
-</ul>
-<p>To get the last two octets of the IP addresses for the service you require, please raise a Service Request on the UKCloud Elevated Portal.</p>
-<h2 id="setting-up-access-to-ukcloud-services">Setting up access to UKCloud services</h2>
-<p>The diagrams below show that you need to add two static routes and an SNAT rule on two edge gateways.</p>
-<ol>
-<li><p>In vCloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.</p>
-</li>
-<li><p>Create a static route that directs traffic for the service you need via the Transit IP of your Elevated edge gateway.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-static-route.html"><em>How to create a static route</em></a>.</p>
-</li>
-<li><p>Create an SNAT rule on your Elevated VDC to allow the private IP range from your CDSZ or SRA to have external access.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
-</li>
-<li><p>Amend the firewall to allow the private IP range access to the service you require on your Elevated VDC.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
-</li>
-<li><p>Add a static route for the return traffic on your Elevated VDC to point to the Transit IP of your CDSZ or SRA VDC.</p>
-</li>
-</ol>
-<h2 id="next-steps">Next steps</h2>
-<p>Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:</p>
-<ul>
-<li><p><a href="../shared/shared-how-setup-kms.html"><em>How to license Windows VMs using the UKCloud Key Management Server</em></a></p>
-</li>
-<li><p><a href="../shared/shared-how-connect-windows-update.html"><em>How to connect to the UKCloud Windows Server Update Services (WSUS)</em></a></p>
-</li>
-</ul>
+<p>Each of the two security domains within the UKCloud cloud presents its own challenges regarding licensing CentOS machines. This document explains how to access the CentOS repository servers to receive updates.</p>
+<p>Before you attempt to establish a connection to the CentOS repo servers, you need to make sure your virtual machines (VMs) can communicate with the CentOS server, which exists outside of your cloud organisation.</p>
+<p>This may involve editing your NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the <a href="../vmware/vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
+<h2 id="assured-official-platform">Assured OFFICIAL platform</h2>
+<p>UKCloud's Assured OFFICIAL security domain is internet facing, so you need to configure your VM to connect to the internet, and use a standard update tool, such as Spacewalk RHN, to get updates for CentOS.</p>
+<h2 id="elevated-official-platform">Elevated OFFICIAL platform</h2>
+<p>Our Elevated OFFICIAL security domain doesn't natively connect to the internet, and the PSN network doesn't have any CentOS repo servers. To receive CentOS updates, you can use UKCloud-managed repository servers or a Walled Garden. Both options are described below.</p>
+<h3 id="option-1-ukcloud-managed-repository-servers">Option 1. UKCloud-managed repository servers</h3>
+<p>We provide repositories and EPEL (Extra Packages for Enterprise Linux) for CentOS 6 and 7 on our Elevated OFFICIAL security domain.</p>
+<p>To access CentOS base files, create a file called <code>centos_&lt;x&gt;_il3.repo</code> in <code>/etc/yum.repos.d</code>, where <code>&lt;x&gt;</code> is either 6 or 7 depending on your version of CentOS, and populate it with the following:</p>
+<p><strong>CentOS 6:</strong></p>
+<pre><code class="lang-none">[base]
+name=CentOS-6-Base
+baseurl=http://&lt;elevated-public-ip-address&gt;/centos-base/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+
+#released updates
+[updates]
+name=CentOS-6-Updates
+baseurl=http://&lt;elevated-public-ip-address&gt;/centos-updates/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+
+#additional packages that may be useful
+[extras]
+name=CentOS-6-Extras
+baseurl=http://&lt;elevated-public-ip-address&gt;/centos-extras/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+</code></pre>
+<p><strong>CentOS 7:</strong></p>
+<pre><code class="lang-none">[base]
+name=CentOS-7-Base
+baseurl=http://&lt;elevated-public-ip-address&gt;/centos-7-base/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+#released updates
+[updates]
+name=CentOS-7-Updates
+baseurl=http://&lt;elevated-public-ip-address&gt;/centos-7-updates/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+#additional packages that may be useful
+[extras]
+name=CentOS-7-Extras
+baseurl=http://&lt;elevated-public-ip-address&gt;/centos-7-extras/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+</code></pre>
+<p>Where <code>&lt;elevated-public-ip-address&gt;</code> is the Elevated OFFICIAL public IP address (if you're not sure what this is, contact UKCloud Support).</p>
+<p>To access CentOS EPEL files, create a file called <code>epel_&lt;x&gt;_il3.repo</code> in <code>/etc/yum.repos.d</code>, where <code>&lt;x&gt;</code> is either 6 or 7 depending on your version of CentOS, and populate it with the following:</p>
+<p><strong>CentOS 6:</strong></p>
+<pre><code class="lang-none">[epel]
+name=Extra Packages for Enterprise Linux 6
+baseurl=http://&lt;elevated-public-ip-address&gt;/epel/
+enabled=1
+metadata_expire=7d
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+</code></pre>
+<p><strong>CentOS 7:</strong></p>
+<pre><code class="lang-none">[epel]
+name=Extra Packages for Enterprise Linux 7
+baseurl=http://&lt;elevated-public-ip-address&gt;/epel-7/
+enabled=1
+metadata_expire=7d
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+</code></pre>
+<p>To download the repo file directly from the server, use the following command (<code>&lt;x&gt;</code> is either 6 or 7 depending on your version of CentOS):</p>
+<p><strong>CentOS base updates and extras:</strong></p>
+<pre><code class="lang-none">wget -P /etc/yum.repos.d/ http://&lt;elevated-public-ip-address&gt;/customer_repo_files/centos_&lt;x&gt;_il3.repo
+</code></pre>
+<p><strong>CentOS EPEL:</strong></p>
+<pre><code class="lang-none">wget -P /etc/yum.repos.d/ http://&lt;elevated-public-ip-address&gt;/customer_repo_files/epel_&lt;x&gt;_il3.repo
+</code></pre>
+<p>Remove all other <code>*.repo</code> files in this directory then execute <code>yum repolist</code>.</p>
+<h3 id="option-2-walled-garden">Option 2. Walled Garden</h3>
+<p>Choose this option only if you want full control of CentOS updates and are already thinking of deploying a Walled Garden. This option involves pulling updates into the Assured security domain, then using UKCloud's Walled Garden to move them to the Elevated security domain.</p>
+<p>It's a much more complex solution than using UKCloud-managed repository servers, and you have sole responsibility for deploying and managing it.</p>
+<p>For more information about the Walled Garden, see the <a href="../cdsz/cdsz-gs-walled-garden.html"><em>Getting Started Guide for Cross Domain Security Zone</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

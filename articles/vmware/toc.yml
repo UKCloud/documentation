@@ -26,22 +26,14 @@
     href: vmw-gs.md
 - name: How To
   items:
-  - name: Access CentOS Update servers
-    href: vmw-how-access-centos-update-servers.md
-  - name: Access Red Hat update servers
-    href: vmw-how-access-redhat-update-servers.md
   - name: Access syslog data for your advanced gateway
     href: vmw-how-access-syslog-data-adv.md
   - name: Access syslog data for your edge gateway
     href: vmw-how-access-syslog-data.md
   - name: Access the Zerto Self-Service Portal
     href: vmw-how-zerto-access-zssp.md
-  - name: Access Ubuntu update servers
-    href: vmw-how-access-ubuntu-update-servers.md
   - name: Access vCloud Director through the vCloud API
     href: vmw-how-access-vcloud-api.md
-  - name: Bring your own Red Hat licensing
-    href: vmw-how-license-red-hat.md
   - name: Build an edge gateway using the UKCloud Portal
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the vCloud API
@@ -56,8 +48,6 @@
     href: vmw-how-configure-l2-vpn.md
   - name: Configure IPsec VPN
     href: vmw-how-configure-ipsec-vpn.md
-  - name: Connect to the UKCloud Windows Server Update Services (WSUS)
-    href: vmw-how-connect-windows-update.md
   - name: Create a catalog
     href: vmw-how-create-catalog.md
   - name: Create a DHCP pool
@@ -96,14 +86,8 @@
     href: vmw-how-install-openvpn.md
   - name: Install and configure Zerto in your local environment
     href: vmw-how-zerto-install-local.md
-  - name: Install Red Hat Update Infrastructure on an existing VMware virtual machine
-    href: vmw-how-install-rhui-vm.md
   - name: Interact with the vCloud REST API using PowerShell and Python
     href: vmw-how-interact-vcd-api-powershell.md
-  - name: License Microsoft software on the UKCloud platform
-    href: vmw-how-license-microsoft.md
-  - name: License Windows VMs using the UKCloud KMS
-    href: vmw-how-setup-kms.md
   - name: Locate your virtual data centre on the UKCloud platform
     href: vmw-how-locate-vdc.md
   - name: Manage permissions for vCloud Director
@@ -156,8 +140,6 @@
       href: vmw-how-vls-request-licence.md
 - name: Reference
   items:
-  - name: Access to virtual machines on the UKCloud platform
-    href: vmw-ref-access-to-vms.md
   - name: Advanced networking options
     href: vmw-ref-advanced-networking.md
   - name: Availability of Virtual Hardware version 11
@@ -188,14 +170,10 @@
     href: vmw-ref-naming-vms.md
   - name: Nested hypervisors
     href: vmw-ref-nested-hypervisors.md
-  - name: Network Time Protocol server access
-    href: vmw-ref-network-time-server.md
   - name: Oversized VMs on UKCloud for VMware
     href: vmw-ref-oversized-vms.md
   - name: PowerCLI command for interacting with the vCloud API
     href: vmw-ref-powercli-vcloud.md
-  - name: Red Hat Update Infrastructure overview
-    href: vmw-ref-rhui.md
   - name: Retrieving snapshot summaries for multiple accounts
     href: vmw-ref-snapshot-summary-api.md
   - name: Shared Secret Length Issues IPSec VPN
@@ -250,10 +228,6 @@
     href: vmw-vid-l2-vpn.md
   - name: Build a VDC using the Portal
     href: vmw-vid-build-vdc-portal.md
-  - name: Connecting a VM to WSUS
-    href: vmw-vid-wsus.md
-  - name: Licensing Windows VMs using the KMS
-    href: vmw-vid-licensing-kms.md
   - name: vCloud Director 9.7
     href: vmw-vid-vcd97.md
   - name: VMware Distributed Firewall

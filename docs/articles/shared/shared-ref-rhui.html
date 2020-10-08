@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access UKCloud services from Walled Garden and Secure Remote Access </title>
+    <title>Red Hat Update Infrastructure overview </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access UKCloud services from Walled Garden and Secure Remote Access ">
+    <meta name="title" content="Red Hat Update Infrastructure overview ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-how-access-services-walled-garden.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/shared/shared-ref-rhui.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,48 +91,61 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-ukcloud-services-from-walled-garden-and-secure-remote-access">How to access UKCloud services from Walled Garden and Secure Remote Access</h1>
+<h1 id="red-hat-update-infrastructure-overview">Red Hat Update Infrastructure overview</h1>
 
-<h2 id="overview">Overview</h2>
-<p>If you've implemented either Secure Remote Access (SRA) or a Cross Domain Security Zone (CDSZ) Walled Garden solution and want to access UKCloud services (such as WSUS, KMS or Red Hat Update Service), you'll need to edit your edge gateway settings to enable access.</p>
-<h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide you must have vCloud Director administrator access to a virtual data centre (VDC) in the Elevated OFFICIAL security domain.</p>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>Before making network changes to your environment, you'll need the following information:</p>
+<p>The Red Hat Update Infrastructure enables the patching of a Red Hat virtual machine without any requirement for registering the virtual machine on the Red Hat network. To achieve this, each Red Hat Enterprise Linux (RHEL) virtual machine must have an RPM installed that configures the RHUI repository servers and provides the required certificates.</p>
+<p>The RHUI services consist of:</p>
 <ul>
-<li><p>The Transit IP for the Elevated edge gateway of your CDSZ or SRA VDC</p>
+<li><p>Red Hat Update Appliance (RHUA), which builds and manages the repositories</p>
 </li>
-<li><p>The Transit IP for the edge gateway of your Elevated VDC</p>
-</li>
-<li><p>The IP of the service you require.</p>
+<li><p>Content Distribution Servers (CDS), which serve content to clients</p>
 </li>
 </ul>
-<p>To get the last two octets of the IP addresses for the service you require, please raise a Service Request on the UKCloud Elevated Portal.</p>
-<h2 id="setting-up-access-to-ukcloud-services">Setting up access to UKCloud services</h2>
-<p>The diagrams below show that you need to add two static routes and an SNAT rule on two edge gateways.</p>
-<ol>
-<li><p>In vCloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.</p>
-</li>
-<li><p>Create a static route that directs traffic for the service you need via the Transit IP of your Elevated edge gateway.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-static-route.html"><em>How to create a static route</em></a>.</p>
-</li>
-<li><p>Create an SNAT rule on your Elevated VDC to allow the private IP range from your CDSZ or SRA to have external access.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
-</li>
-<li><p>Amend the firewall to allow the private IP range access to the service you require on your Elevated VDC.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
-</li>
-<li><p>Add a static route for the return traffic on your Elevated VDC to point to the Transit IP of your CDSZ or SRA VDC.</p>
-</li>
-</ol>
-<h2 id="next-steps">Next steps</h2>
-<p>Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:</p>
+<p>The UKCloud RHUI service supplies access to the following repository groups, each group is installed by an RPM. You can only have one RPM installed per RHUI client virtual machine.</p>
+<h2 id="rhel6-standard">RHEL6-Standard</h2>
 <ul>
-<li><p><a href="../shared/shared-how-setup-kms.html"><em>How to license Windows VMs using the UKCloud Key Management Server</em></a></p>
+<li><p>Red Hat Enterprise Linux 6 Server - Extras from RHUI (RPMs) (i386)</p>
 </li>
-<li><p><a href="../shared/shared-how-connect-windows-update.html"><em>How to connect to the UKCloud Windows Server Update Services (WSUS)</em></a></p>
+<li><p>Red Hat Enterprise Linux 6 Server - Extras from RHUI (RPMs) (x86_64)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 6 Server - Optional from RHUI (RPMs) (6Server-i386)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 6 Server - Optional from RHUI (RPMs) (6Server-x86_64)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 6 Server - RH Common from RHUI (RPMs) (6Server-i386)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 6 Server - RH Common from RHUI (RPMs) (6Server-x86_64)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 6 Server from RHUI (RPMs) (6Server-i386)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 6 Server from RHUI (RPMs) (6Server-x86_64)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 6 Server - Supplementary from RHUI (RPMs) (6Server-i386)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 6 Server - Supplementary from RHUI (RPMs) (6Server-x86_64)</p>
+</li>
+<li><p>Red Hat Software Collections for RHEL Server from RHUI (RPMs) (6Server-i386)</p>
+</li>
+<li><p>Red Hat Software Collections for RHEL Server from RHUI (RPMs) (6Server-x86_64)</p>
 </li>
 </ul>
+<h2 id="rhel7-standard">RHEL7-Standard</h2>
+<ul>
+<li><p>Red Hat Enterprise Linux 7 Server - Extras from RHUI (RPMs) (x86_64)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 7 Server - Optional from RHUI (RPMs) (7Server-x86_64)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 7 Server - RH Common from RHUI (RPMs) (7Server-x86_64)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 7 Server from RHUI (RPMs) (7Server-x86_64)</p>
+</li>
+<li><p>Red Hat Enterprise Linux 7 Server - Supplementary from RHUI (RPMs) (7Server-x86_64)</p>
+</li>
+<li><p>Red Hat Software Collections RPMs for Red Hat Enterprise Linux 7 Server from RHUI (7Server-x86_64)</p>
+</li>
+</ul>
+<h2 id="high-availability-and-extended-update-support">High Availability and Extended Update Support</h2>
+<p>High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services. Customers will need to notify UKCloud for access to these repositories or will need to bring their own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a UKCloud Support Service Request directly via <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> and it will be uploaded to your private catalogue.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

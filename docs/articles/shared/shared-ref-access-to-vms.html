@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access UKCloud services from Walled Garden and Secure Remote Access </title>
+    <title>Access to virtual machines on the UKCloud platform </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access UKCloud services from Walled Garden and Secure Remote Access ">
+    <meta name="title" content="Access to virtual machines on the UKCloud platform ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-how-access-services-walled-garden.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/shared/shared-ref-access-to-vms.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,48 +91,22 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-ukcloud-services-from-walled-garden-and-secure-remote-access">How to access UKCloud services from Walled Garden and Secure Remote Access</h1>
+<h1 id="access-to-virtual-machines-on-the-ukcloud-platform">Access to virtual machines on the UKCloud platform</h1>
 
-<h2 id="overview">Overview</h2>
-<p>If you've implemented either Secure Remote Access (SRA) or a Cross Domain Security Zone (CDSZ) Walled Garden solution and want to access UKCloud services (such as WSUS, KMS or Red Hat Update Service), you'll need to edit your edge gateway settings to enable access.</p>
-<h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide you must have vCloud Director administrator access to a virtual data centre (VDC) in the Elevated OFFICIAL security domain.</p>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>Before making network changes to your environment, you'll need the following information:</p>
-<ul>
-<li><p>The Transit IP for the Elevated edge gateway of your CDSZ or SRA VDC</p>
-</li>
-<li><p>The Transit IP for the edge gateway of your Elevated VDC</p>
-</li>
-<li><p>The IP of the service you require.</p>
-</li>
-</ul>
-<p>To get the last two octets of the IP addresses for the service you require, please raise a Service Request on the UKCloud Elevated Portal.</p>
-<h2 id="setting-up-access-to-ukcloud-services">Setting up access to UKCloud services</h2>
-<p>The diagrams below show that you need to add two static routes and an SNAT rule on two edge gateways.</p>
-<ol>
-<li><p>In vCloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.</p>
-</li>
-<li><p>Create a static route that directs traffic for the service you need via the Transit IP of your Elevated edge gateway.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-static-route.html"><em>How to create a static route</em></a>.</p>
-</li>
-<li><p>Create an SNAT rule on your Elevated VDC to allow the private IP range from your CDSZ or SRA to have external access.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
-</li>
-<li><p>Amend the firewall to allow the private IP range access to the service you require on your Elevated VDC.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
-</li>
-<li><p>Add a static route for the return traffic on your Elevated VDC to point to the Transit IP of your CDSZ or SRA VDC.</p>
-</li>
-</ol>
-<h2 id="next-steps">Next steps</h2>
-<p>Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:</p>
-<ul>
-<li><p><a href="../shared/shared-how-setup-kms.html"><em>How to license Windows VMs using the UKCloud Key Management Server</em></a></p>
-</li>
-<li><p><a href="../shared/shared-how-connect-windows-update.html"><em>How to connect to the UKCloud Windows Server Update Services (WSUS)</em></a></p>
-</li>
-</ul>
+<h2 id="what-access-does-ukcloud-have-to-our-running-virtual-machines-and-the-memory-they-are-using">What access does UKCloud have to our running virtual machines and the memory they are using?</h2>
+<p>Our default policy is that no UKCloud personnel have access to any of our customer's environments. We would need a specific, customer approved change ticket in order to gain access to a customers' environment if we are to assist them with resolving any issues.</p>
+<p>UKCloud provides compute in line with the NIST defined IaaS cloud delivery model, which means that we manage the components up to and including the hypervisor, but we do not manage the virtual machine (VM) or anything within it (for example, the operating system or local disks). Each customer has complete autonomy in provisioning their VMs and therefore has exclusive control over the security credentials they use for each VM. As UKCloud does not have access to these security credentials, our personnel have no ability to authenticate and gain access to customer VMs.</p>
+<p>UKCloud personnel do have access to the vSphere hypervisors, physical servers and storage in which customer VMs run, so that they can effectively manage and maintain the cloud platform. This does not give them access to individual VMs, but rather the underlying resource pool.</p>
+<h2 id="what-controls-do-you-have-in-place-to-prevent-access-to-our-data-either-on-disk-or-in-memory">What controls do you have in place to prevent access to our data, either on disk or in memory?</h2>
+<p>UKCloud was one of the first cloud service providers to achieve NCSC Pan Government Accreditation to host government data classified up to and including UK RESTRICTED (IL3 under the Government Protective Marking Scheme) and is one of the few cloud service providers who maintain PSN Accreditation, as well as the approval of the Health and Social Care Information Commission (HSCIC) to provide access to HSCN and Personally Identifiable Data. This heritage means that we have mature and well developed security controls throughout our organisation. This encompasses robust and multi-tiered physical, logical and technical security systems and controls.</p>
+<p>Given the low-level access that UKCloud personnel have to the cloud platform, we have implemented a variety of interconnected controls which include people, process and technology.</p>
+<p>We have a comprehensive Role Based Access Control (RBAC) system, which ensures that only authorised personnel can access appropriate elements of the cloud platform as required to undertake the authorised tasks of their role</p>
+<p>In addition, UKCloud is subject to regular ITSC CHECK Tests which provide a comprehensive and in-depth independent assessment of technical and security configurations, and check alignment of the assurance of UKCloud to Service Definitions, published RMADS and appropriate UK Government and industry standards.</p>
+<p>UKCloud maintains a protective monitoring service aligned with NCSC Good Practice Guidance GPG13 and the prescribed protective monitoring controls PMC1-12. This ensures that UKCloud has a comprehensive and detailed audit log, tracking which personnel have accessed and performed tasks on the cloud platform.</p>
+<p>All UKCloud personnel are appropriately vetted and security cleared so that customers can be assured that engineers with access to the underlying infrastructure are operating at the highest levels of trust (for example, through vetting and clearance frameworks including like BPSS, SC, DV and NPPV).</p>
+<p>UKCloud benefits from a full-time internal compliance function, which regularly audits company functions and processes to assess whether they are being correctly followed (for example by maintaining clear evidence where customers request and permit UKCloud to access their VMs). Any non-conformance is documented, reported to Board Level, and followed up to ensure that effective remedial actions are implemented.</p>
+<p>Finally, to complement the high levels of security inherent within the UKCloud platform, UKCloud recommends that customers use appropriate controls within the VM or application, such as data at rest encryption (for example, Bitlocker or Becrypt), session encryption (for example, HTTPS or VPN), and the implementation of appropriate protective monitoring.</p>
+<p>UKCloud has produced extensive security collateral to explain how we provide an assured cloud platform, including our <a href="https://ukcloud.com/wp-content/uploads/2016/08/UKCloud_WhitePaper_RGB_Digital_Government_Security_Classifications_policy.pdf">Government Security Classification Policy</a> whitepaper, relevant evidence packs and RMADS. If you would like to discuss this further, we can arrange for an Account Director, a Cloud Architect or a member of the Compliance Team to contact you.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
