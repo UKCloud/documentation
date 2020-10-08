@@ -59,11 +59,11 @@ During a failure scenario, VMs will be restarted on surviving hosts within the D
 
 The table below shows the configuration, the resources available to a customer, the number of physical blades in the configuration, and the UKCloud resources reserved to run it.
 
-&nbsp;                               | Total resources              | Customer available resources | Resource reservation
--------------------------------------|------------------------------|------------------------------|---------------------
-**Starter pack**                     | 64 cores, 1024 GiB RAM       | 32 cores, 512 GiB RAM        | 50% (32 core , 512 GiB RAM)
-**Starter pack + 1 upgrade pack**    | 96 cores, 1536 GiB RAM       | 64 cores, 1024 GiB RAM       | 33% (32 core , 512 GiB RAM)
-**Starter pack + 2 upgrade packs**   | 128 cores, 2048 GiB RAM      | 96 cores, 1536 GiB RAM       | 25% (32 core , 512 GiB RAM)
+&nbsp;                             | Total resources         | Resource reservation        | Customer available resources
+-----------------------------------|-------------------------|-----------------------------|-----------------------------
+**Starter pack**                   | 64 cores, 1024 GiB RAM  | 50% (32 core , 512 GiB RAM) | 32 cores, 512 GiB RAM
+**Starter pack + 1 upgrade pack**  | 96 cores, 1536 GiB RAM  | 33% (32 core , 512 GiB RAM) | 64 cores, 1024 GiB RAM
+**Starter pack + 2 upgrade packs** | 128 cores, 2048 GiB RAM | 25% (32 core , 512 GiB RAM) | 96 cores, 1536 GiB RAM
 
 ## Resource utilisation
 
