@@ -4,7 +4,7 @@ description: Outlines important details regarding Managed Monitoring as a Servic
 services: managed-services
 author: Steve Dixon
 reviewer:
-lastreviewed: 17/09/2020
+lastreviewed: 07/10/2020
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
@@ -47,9 +47,11 @@ The following table outlines the scope of Managed Monitoring as a Service:
 
 | Monitoring Element                     | Detail |
 |----------------------------------------|--------|
-| Event Monitors                         | - Ping check <BR> - SNMP check  <BR> - Application port checks <BR> - Webhooks (only HTTP/HTTPS RestAPI inbound to UKCloud) <BR> - Operating system service status change |
+| Event Monitors                         | - Ping check <BR> - SNMP check  <BR> - Application port checks <BR> - Deviation of operating system service from an 'agreed good' status <BR> - Webhooks* (only HTTP/HTTPS RestAPI inbound to UKCloud)|
 | Compute, Disk, Memory (CDM) Monitoring | Reactive monitoring and alerting  of Compute, Disk and Memory capacity events. <BR> Thresholds will initially be set with default values unless otherwise advised by the customer.  |
 | Alerting                               | UKCloud will alert customers via their chosen notification method (support ticket with email notification or phone escalation) based on a threshold breach of one of the above elements. |
+
+\* May require engagement with a Cloud Architect to ensure correct integration
 
 > [!NOTE]
 > You can request changes to default thresholds via a service request from within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
