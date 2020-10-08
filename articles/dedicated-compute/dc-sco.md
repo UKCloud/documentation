@@ -59,11 +59,11 @@ During a failure scenario, VMs will be restarted on surviving hosts within the D
 
 The table below shows the configuration, the resources available to a customer, the number of physical blades in the configuration, and the UKCloud resources reserved to run it.
 
-&nbsp;                               | Customer available resources | Physical blades | Resource reservation
--------------------------------------|------------------------------|-----------------|---------------------
-**Starter pack**                     | 32 cores, 512 GiB RAM        | 2               | 50% (32 core , 512 GiB RAM)
-**Starter pack + 1 expansion pack**  | 64 cores, 1024 GiB RAM       | 3               | 33% (32 core , 512 GiB RAM)
-**Starter pack + 2 expansion packs** | 96 cores, 1536 GiB RAM       | 4               | 25% (32 core , 512 GiB RAM)
+&nbsp;                               | Total resources              | Customer available resources | Resource reservation
+-------------------------------------|------------------------------|------------------------------|---------------------
+**Starter pack**                     | 64 cores, 1024 GiB RAM       | 32 cores, 512 GiB RAM        | 50% (32 core , 512 GiB RAM)
+**Starter pack + 1 upgrade pack**    | 96 cores, 1536 GiB RAM       | 64 cores, 1024 GiB RAM       | 33% (32 core , 512 GiB RAM)
+**Starter pack + 2 upgrade packs**   | 128 cores, 2048 GiB RAM      | 96 cores, 1536 GiB RAM       | 25% (32 core , 512 GiB RAM)
 
 ## Resource utilisation
 
@@ -71,13 +71,26 @@ To improve performance, Dedicated Compute v2 uses all physical resources availab
 
 This means that in general operation within the starter pack, there is a 50% utilisation of both physical hosts:
 
-![50% utilisation of blades](images/vmw-dc-contingency1.png)
+![50% utilisation of blades]
+            Contingency             |            Contingency             | 
+------------------------------------|------------------------------------|
+            Customer VMs            |            Customer VMs            |
+------------------------------------|------------------------------------|            
+               Host 1               |               Host 2               |
+
 
 However, you can create VMs of any size and shape you require, up to the maximum size of the physical capacity of one host - 32 cores 512 GiB RAM.
 
 A VM cannot span across physical hosts so, if you create a VM larger than 50% of the host capacity, the Dedicated Compute v2 installation may carry more of the contingency capacity of one physical host than of the others:
 
-![Greater than 50% utilisation of blade](images/vmw-dc-contingency2.png)
+![Greater than 50% utilisation of blade]
+
+            Contingency             |            Contingency             |
+                                    |------------------------------------|                                                  
+------------------------------------|                                    |
+            Customer VMs            |            Customer VMs            |
+------------------------------------|------------------------------------|
+               Host 1               |               Host 2               |
 
 You can over-contend the resources on your Dedicated Compute v2 as you see fit.
 
