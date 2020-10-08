@@ -2,9 +2,9 @@
 title: Bring Your Own Firewall Service Scope
 description: Outlines important details regarding Bring Your Own Firewall
 services: other
-author: Steve Hall
-reviewer:
-lastreviewed: 23/07/2018 14:44:15
+author: shall
+reviewer: sdelaney
+lastreviewed: 06/10/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -27,9 +27,9 @@ The document describes the responsibilities of both UKCloud and the customer in 
 
 ## About Bring Your Own Firewall
 
-Bring your own firewall allows customers to customise their networking infrastructure by installing their own virtual firewall appliance in place of the vCNS device UKCloud includes as standard with its compute services.
+Bring your own firewall allows customers to customise their networking infrastructure by installing their own virtual firewall appliance in place of the NSX Edge Services Gateway device UKCloud includes as standard with its compute services.
 
-This can allow customers to leverage their own in-house expertise with a particular technology or can provide access to some higher level networking functionality not natively available in the vCNS device.
+This can allow customers to leverage their own in-house expertise with a particular technology or can provide access to some higher level networking functionality not natively available in the NSX Edge Services Gateway device.
 
 ## Default setup
 
@@ -41,7 +41,7 @@ In a BYOF implementation, UKCloud present an external network directly to the cu
 
 Upon a customer's request, UKCloud will:
 
-- Deploy a new VDC without a vCNS device
+- Deploy a new VDC without a NSX Edge Services Gateway device
 
 - Present the external network to the customer for them to install their own firewall device
 

@@ -27,7 +27,7 @@ UKCloud for Oracle Software provides a proven Oracle Infrastructure as a Service
 
 - Achieve your data centre modernisation strategy by moving both legacy and modern Oracle workloads to the cloud
 
-- Streamline Oracle licensing by adjusting VM resources to suit performance and only licence the x86 or SPARC CPU cores used
+- Streamline Oracle licensing by adjusting VM resources to suit performance and only licence the CPU cores used
 
 - Improve data locality by having your Oracle workloads next to your other cloud workloads
 
@@ -41,7 +41,7 @@ The service is designed to be flexible and enables you to mix and match from a r
 
 ## Pricing and packaging
 
-UKCloud for Oracle Software VMs start at 9p per hour. Full pricing with all options, including all x86 and SPARC pricing, licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for Oracle Software VMs start at 9p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

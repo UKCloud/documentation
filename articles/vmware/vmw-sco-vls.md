@@ -44,7 +44,7 @@ When we receive an order from the customer, we will create account and login det
 
 ## Service provisioning
 
-To implement the VLS service, there are some simple steps that need to be completed both by UKCloud and the customer. The details that follow assume that the customer has a good understanding of VMware and can carry out the required actions. Note that, if required, UKCloud can provide assistance in these actions at an additional charge, based on our SFIA rate card for Professional Services.
+To implement the VLS service, there are some simple steps that need to be completed both by UKCloud and the customer. The details that follow assume that the customer has a good understanding of VMware and can carry out the required actions. Note that, if required, UKCloud can provide assistance in these actions at an additional charge, based on our [SFIA Rate Card](http://www.ukcloud.com/sfia) for Professional Services.
 
 ### UKCloud Portal access
 
@@ -151,121 +151,21 @@ The customer will receive a monthly report based on their submitted vCloud Usage
 
 ### Cost options
 
-VLS is priced per point consumed and is charged on either a monthly "uncommited" basis or upfront "committed" basis. Note that there is a discount level over 100,000 points per month.
-
-<table>
-  <tr>
-    <th></th>
-    <th colspan="2">Public Sector (Non-Academia)</th>
-    <th colspan="2">Academia</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Cost per committed point</td>
-    <td>Cost per uncommitted point</td>
-    <td>Cost per committed point</td>
-    <td>Cost per uncommitted point</td>
-  </tr>
-  <tr>
-    <td><strong>Up to 100,000 points per month</strong></td>
-    <td>£0.60</td>
-    <td>£0.66</td>
-    <td>£0.44</td>
-    <td>£0.48</td>
-  </tr>
-  <tr>
-    <td><strong>100,000+ points per month
-    <td>£0.58</td>
-    <td>£0.64</td>
-    <td>£0.43</td>
-    <td>£0.47</td>
-  </tr>
-</table>
+VLS is priced per point consumed and is charged on either a monthly "uncommitted" basis or upfront "committed" basis.
 
 - **Committed VLS billing.** This is the most cost-effective method of purchasing points as it offers additional discounting. The customer will commit to an amount based on estimated usage and this will be invoiced and paid up front. The customer then has 24 months in which to consume this usage which will be drawn down against the initial commitment. Each month, once the customer has reported their usage, their Service Delivery Manager will report on the cost for that month and the points used to ensure that the customer is aware of the amount of points used and what is remaining. At any point, the customer can top up the amount of committed points with either an additional committed order or using flexible monthly billing on a pay as you go basis as detailed below.
 
 - **Uncommitted VLS billing.** To avoid upfront costs, the customer can opt for flexible monthly pay as you go billing. Once UKCloud receives the monthly Usage Meter report, this will be calculated and charged on the next month's invoice (first working day of the month). Although this option does not offer a discounted rate, it enables the customer to be flexible on their usage and may suit customers that are slowing reducing their on-premises VMware estate and migrating to cloud as they have no committed spend. They can therefore cease to use the service at any time, only paying for their usage up to that point.
 
+For full pricing information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+
+Note that there is a discount level over 100,000 points per month.
+
 ## Professional Services
 
 This Service Scope sets out the responsibilities of UKCloud and the customer. Although the actions that the customer is responsible for are supported by UKCloud via Knowledge Centre articles and the support team, if a customer requires additional support with their on-premises estate or the installation and configuration of any element of VMware or the Usage Meter, we can arrange for our Professional Services team to assist.
 
-These additional services are charged as per our SFIA rate card:
-
-<table>
-  <tr>
-    <th></th>
-    <th>Strategy & architecture</th>
-    <th>Business change</th>
-    <th>Solution development & implementation</th>
-    <th>Service management</th>
-    <th>Procurement & management support</th>
-    <th>Client interface</th>
-  <tr>
-  <tr>
-    <td><strong>1. Follow</strong></td>
-    <td>£350</td>
-    <td>£350</td>
-    <td>£350</td>
-    <td>£350</td>
-    <td>£350</td>
-    <td>£350</td>
-  </tr>
-  <tr>
-    <td><strong>2. Assist</strong></td>
-    <td>£500</td>
-    <td>£500</td>
-    <td>£500</td>
-    <td>£500</td>
-    <td>£500</td>
-    <td>£500</td>
-  </tr>
-  <tr>
-    <td></strong> 3. Apply</strong></td>
-    <td>£600</td>
-    <td>£600</td>
-    <td>£600</td>
-    <td>£600</td>
-    <td>£600</td>
-    <td>£600</td>
-  </tr>
-  <tr>
-    <td><strong>4. Enable</strong></td>
-    <td>£750</td>
-    <td>£750</td>
-    <td>£750</td>
-    <td>£750</td>
-    <td>£750</td>
-    <td>£750</td>
-  </tr>
-  <tr>
-    <td><strong>5. Ensure/Advise</strong></td>
-    <td>£900</td>
-    <td>£900</td>
-    <td>£900</td>
-    <td>£900</td>
-    <td>£900</td>
-    <td>£900</td>
-  </tr>
-  <tr>
-    <td><strong>6. Initiate/Influence</strong></td>
-    <td>£1,000</td>
-    <td>£1,000</td>
-    <td>£1,000</td>
-    <td>£1,000</td>
-    <td>£1,000</td>
-    <td>£1,000</td>
-  </tr>
-  <tr>
-    <td><strong>Set Strategy/Inspire</strong></td>
-    <td>£1,200</td>
-    <td>£1,200</td>
-    <td>£1,200</td>
-    <td>£1,200</td>
-    <td>£1,200</td>
-    <td>£1,200</td>
-  </tr>
-</table>
+These additional services are charged as per our [SFIA Rate Card](http://www.ukcloud.com/sfia).
 
 If a customer requires the assistance of our Professional Services, they can either contact our support team or their Service Delivery Manager.
 

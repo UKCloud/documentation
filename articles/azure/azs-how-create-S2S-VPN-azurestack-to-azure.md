@@ -2,9 +2,9 @@
 title: How to create a site-to-site connection between Azure Stack Hub and Public Azure using the UKCloud Azure Stack Hub portal
 description: Create a site-to-site (S2S) VPN gateway connection from an on-premises network to UKCloud for Microsoft Azure 
 services: azure-stack
-author: Daniel Brennand
-reviewer: Alexa Evans
-lastreviewed: 
+author: dbrennand
+reviewer: aevans
+lastreviewed: 13/09/2019
 
 toc_rootlink: Users
 toc_sub1: How To

@@ -48,9 +48,9 @@
     topicHref: articles/sra/sra-gs.md
   - name: Security Operations Service
     topicHref: articles/soc/soc-sd.md   
-  - name: Third-Party Software
-    topicHref: articles/third-party/third-ref-eula.md
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
+  - name: Shared Services
+    topicHref: articles/shared/shared-ref-overview.md
   - name: Other
     topicHref: articles/other/other-ref-services-by-region.md

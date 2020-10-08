@@ -21,7 +21,9 @@ toc_mdlink: other-faq-g12.md
 
 ### What is the UKCloud theme for G-Cloud 12?
 
-Our portfolio of multi-cloud services has been further enhanced at G-Cloud 12 to accelerate the government's legacy IT transformation programme. This expanded portfolio has been designed to overcome the resource, assurance, availability and commercial constraints that often stop public sector organisations reaching their digital transformation objectives.  
+Our portfolio of multi-cloud services has been further enhanced at G-Cloud 12 to accelerate the government's legacy IT transformation programme. This expanded portfolio has been designed to overcome the resource, assurance, availability and commercial constraints that often stop public sector organisations reaching their digital transformation objectives.
+
+To see how our G-Cloud 12 portfolio provides even more choice and options, secure solutions, and expert support to help public sector organisations navigate the journey to cloud, watch our [G-Cloud 12: Transforming legacy environments and delivering customer outcomes](https://www.brighttalk.com/webcast/17330/441399) webinar on [BrightTALK](https://www.brighttalk.com/search/?q=ukcloud).
 
 ### When will the changes take effect?
 
@@ -99,15 +101,11 @@ This service has been renamed as the Security Operations Service and is now a UK
 
 ### What's new in Transition Services?
 
-This service has been renamed to Professional Services. To offer a highly flexible service, the options provided are now based on our newly issued SFIA rate card and therefore can be customised to match customer requirements.
+This service has been renamed to Professional Services. To offer a highly flexible service, the options provided are now based on our newly issued [SFIA Rate Card](http://www.ukcloud.com/sfia) and therefore can be customised to match customer requirements.
 
 ### What's new in the UKCloud for VMware service?
 
 The only change to our VMware-based service is the addition of advanced monitoring and metrics (provided by the vRealize Operations (vROps) Tenant Appliance) to our Advanced Management bundle option.
-
-### What's new in Disaster Recovery as a Service?
-
-There is no stated or supported Service Level Agreement for Disaster Recovery as a Service. However, the underlying UKCloud for VMware service has Service Level Agreements for each VM type, backed by Service Credits.
 
 ## End of sale
 

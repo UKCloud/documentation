@@ -69,12 +69,6 @@ A UKCloud for VMware service option that enables you to customise your networkin
 
 ## C
 
-### Cisco AppDynamics from UKCloud
-
-Third-party software available from UKCloud that provides application performance management, end user monitoring, infrastructure visibility and business performance monitoring.
-
-For more information, see the [Cisco AppDynamics from UKCloud service definition](../third-party/third-sd-appdynamics.md).
-
 ### Cloud Architect
 
 A UKCloud Pre-Sales role aimed at helping you design your cloud solution so that you can get the best out of the UKCloud platform.
@@ -247,12 +241,6 @@ For more information, see the [HybridConnect FAQs](../connectivity/conn-faq-hybr
 
 Software layer on top of the physical infrastructure that enables the virtualisation of the physical resources.
 
-### HyTrust DataControl from UKCloud
-
-Third-party software available from UKCloud that offers powerful, data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle - from deployment to decommission.
-
-For more information, see the [HyTrust DataControl from UKCloud service definition](../third-party/third-sd-hytrust.md).
-
 ## I
 
 ### Impact Level (IL)
@@ -320,12 +308,6 @@ For more information, see the [Mass Transfer Facility service scope](../enableme
 ### Migration to the Cloud
 
 A UKCloud IaaS service, powered by Zerto, that provides easy to use tools to help customers migrate workloads from their on-premises data centres to the UKCloud platform - all on a self-service basis.
-
-### Moogsoft AIOps from UKCloud
-
-Third-party software available from UKCloud that provides a pioneering AI platform for IT operations, powered by purpose-built machine learning algorithms. It improves the signal-to-noise ratio by reducing and then correlating related alerts together; and then the AIOps platform suggests root cause and enables crossteam collaboration to solve incidents faster.
-
-For more information, see the [Moogsoft AIOps from UKCloud service definition](../third-party/third-sd-moogsoft.md).
 
 ### Multi-Cloud Backup Storage
 
@@ -405,7 +387,7 @@ A UKCloud for OpenStack block storage option that is always available, regardles
 
 ### Portworx Enterprise from UKCloud
 
-Third-party software available from UKCloud that provides a secure and stable cloud native storage and data management platform for Kubernetes that enterprises can trust to manage data in containers.
+Provides a secure and stable cloud native storage and data management platform for Kubernetes that enterprises can trust to manage data in containers.
 
 For more information, see the [Portworx Enterprise from UKCloud service definition](../openshift/oshift-sd-portworx.md).
 

@@ -41,7 +41,7 @@ Service level (default) | Single data centre, no automatic failover
 PDU specifications per rack | 2 x 16A single phase PDUs per rack with A and B power supplies<br>Each PDU has 36 x C13 and 6 x C19 sockets
 Max power draw per rack | 4kW
 Networking | Bespoke networking based on customer requirement.<br>Big Cloud Enablement price excludes any networking components.
-Contiguous racks | Contiguous racks are not guaranteed if not purchased together on a single order. UKCloud can reserve racks for a maximum of 6 months before charging for full use. This is at UKCloud’s discretion.
+Contiguous racks | Contiguous racks are not guaranteed if not purchased together on a single order. UKCloud can reserve racks for a maximum of 6 months before charging for full use. This is at UKCloud's discretion.
 Resilience available? | You can provision multiple Big Cloud Enablement services within a single site or into both data centres, but you'll need to manage any resilience within the hardware.
 Failover responsibility | Customer
 Resilience cost | Depends on solution
@@ -114,13 +114,13 @@ Due to the secure nature of UKCloud's sites, unscheduled maintenance access may 
 
 ### Out-of-hours maintenance access
 
-Out-of-hours access will be granted at UKCloud's discretion and is charged as per the [*SFIA rate card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) (Level 4 - Enable).
+Out-of-hours access will be granted at UKCloud's discretion and is charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
 
 ### Additional maintenance access
 
-If you require more than eight visits per year for maintenance, these additional escorted visits will be charged as per the [*SFIA rate card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) (Level 4 - Enable).
+If you require more than eight visits per year for maintenance, these additional escorted visits will be charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
 
-If you need to install and configure additional device(s) within your solution, these escorted visits will be charged as per the [*SFIA rate card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) (Level 4 - Enable).
+If you need to install and configure additional device(s) within your solution, these escorted visits will be charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
 
 ## Power failure
 

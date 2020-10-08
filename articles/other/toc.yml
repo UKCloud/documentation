@@ -90,8 +90,6 @@
     href: other-ref-gib.md
   - name: Understanding your invoice evidence file
     href: other-ref-invoice-evidence-file.md
-  - name: Windows Server 2016 templates
-    href: other-ref-windows-2016-templates.md
 - name: Service Information
   items:
   - name: Multi-Cloud Backup Storage Service Definition
