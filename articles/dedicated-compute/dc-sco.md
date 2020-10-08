@@ -71,26 +71,13 @@ To improve performance, Dedicated Compute v2 uses all physical resources availab
 
 This means that in general operation within the starter pack, there is a 50% utilisation of both physical hosts:
 
-![50% utilisation of blades]
-            Contingency             |            Contingency             | 
-------------------------------------|------------------------------------|
-            Customer VMs            |            Customer VMs            |
-------------------------------------|------------------------------------|            
-               Host 1               |               Host 2               |
-
+![50% utilisation of blades](images/vmw-dc-contingency1.png)
 
 However, you can create VMs of any size and shape you require, up to the maximum size of the physical capacity of one host - 32 cores 512 GiB RAM.
 
 A VM cannot span across physical hosts so, if you create a VM larger than 50% of the host capacity, the Dedicated Compute v2 installation may carry more of the contingency capacity of one physical host than of the others:
 
-![Greater than 50% utilisation of blade]
-
-            Contingency             |            Contingency             |
-                                    |------------------------------------|                                                  
-------------------------------------|                                    |
-            Customer VMs            |            Customer VMs            |
-------------------------------------|------------------------------------|
-               Host 1               |               Host 2               |
+![Greater than 50% utilisation of blade](images/vmw-dc-contingency2.png)
 
 You can over-contend the resources on your Dedicated Compute v2 as you see fit.
 
