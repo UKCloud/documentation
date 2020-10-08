@@ -1,8 +1,8 @@
 ---
 title: How to connect to the UKCloud Windows Server Update Services (WSUS)
-description: Shows how to connect to the UKCloud Windows Update Services within vCloud Director
-services: vmware
-author: Sue Highmoor
+description: Shows how to connect to the UKCloud Windows Update Services
+services: shared-services
+author: shighmoor
 reviewer: jpaddock
 lastreviewed: 01/04/2020
 toc_rootlink: How To
@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Connect to the UKCloud Windows Server Update Services (WSUS)
-toc_fullpath: How To/vmw-how-connect-windows-update.md
-toc_mdlink: vmw-how-connect-windows-update.md
+toc_fullpath: How To/shared-how-connect-windows-update.md
+toc_mdlink: shared-how-connect-windows-update.md
 ---
 
 # How to connect to the UKCloud Windows Server Update Services (WSUS)
@@ -26,7 +26,7 @@ When you create a virtual machine (VM) running a Windows Server operating system
 
 Before you establish a connection to the update service, you need to ensure your VMs can communicate with the update server, which exists outside your cloud organisation.
 
-This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports `443` and `8530` on your firewall to the update server. For more information on how to do this, see [*How to create NAT rules*](vmw-how-create-nat-rules.md) and [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
+This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports `443` and `8530` on your firewall to the update server. For more information on how to do this, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 ## Configuring Windows update
 
@@ -107,7 +107,7 @@ These settings will depend on your current setup. The [Configure Group Policy Se
 
 ## Related videos
 
-- [*Connecting a VM to UKCloud's Windows Server Update Services (WSUS) video*](vmw-vid-wsus.md)
+- [*Connecting a VM to UKCloud's Windows Server Update Services (WSUS) video*](../shared/shared-vid-wsus.md)
 
 ## Feedback
 

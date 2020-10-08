@@ -1,18 +1,18 @@
 ---
 title: How to access Ubuntu update servers 
-description: This guide shows you how to configure access to Ubuntu update servers from within vCloud Director
-services: vmware
-author: Sue Highmoor
+description: This guide shows you how to configure access to Ubuntu update servers
+services: shared-services
+author: shighmoor
 reviewer: pcantle
-lastreviewed: 11/05/2020
+lastreviewed: 29/09/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Access Ubuntu update servers
-toc_fullpath: How To/vmw-how-access-ubuntu-update-servers.md
-toc_mdlink: vmw-how-access-ubuntu-update-servers.md
+toc_fullpath: How To/shared-how-access-ubuntu-update-servers.md
+toc_mdlink: shared-how-access-ubuntu-update-servers.md
 ---
 
 # How to access Ubuntu update servers
@@ -21,7 +21,7 @@ toc_mdlink: vmw-how-access-ubuntu-update-servers.md
 
 When you create a virtual machine (VM) with an Ubuntu licence on it, you need to register the VM in order to receive updates for it. This guide explains how to access the Ubuntu repository servers to receive updates. Depending on whether your VM is on UKCloud's Assured OFFICIAL or Elevated OFFICIAL platform, there's a different process to follow.
 
-Before you attempt to establish connections to an Ubuntu repository server, you need to make sure your VMs can communicate with the Ubuntu server which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the [*How to create NAT rules*](vmw-how-create-nat-rules.md) and [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
+Before you attempt to establish connections to an Ubuntu repository server, you need to make sure your VMs can communicate with the Ubuntu server which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 ## Assured OFFICIAL platform
 

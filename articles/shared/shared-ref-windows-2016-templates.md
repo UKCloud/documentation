@@ -1,18 +1,18 @@
 ---
 title: Windows Server 2016 templates
 description: This article explains the current status and availability of Windows Server 2016 templates on UKCloud compute services.
-services: x-platform
-author: Sue Highmoor
+services: shared-services
+author: shighmoor
 reviewer:
-lastreviewed: 23/07/2018 14:44:15
+lastreviewed: 23/07/2018
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Windows Server 2016 templates
-toc_fullpath: Reference/other-ref-windows-2016-templates.md
-toc_mdlink: other-ref-windows-2016-templates.md
+toc_fullpath: Reference/shared-ref-windows-2016-templates.md
+toc_mdlink: shared-ref-windows-2016-templates.md
 ---
 
 # Windows Server 2016 templates
@@ -39,7 +39,7 @@ You can license the templates using our existing Microsoft KMS infrastructure, w
 
 - The templates have been built as OS type Windows Server 2012 (64-bit) -- see point above.
 
-For more information about licensing Windows VMs, see [*How to set up the UKCloud Key Management Server*](../vmware/vmw-how-setup-kms.md).
+For more information about licensing Windows VMs, see [*How to set up the UKCloud Key Management Server*](shared-how-setup-kms.md).
 
 You can deploy and manage the Windows Server 2016 templates in exactly the same way as any other template from our public catalogue. For more information, see [*How to create a virtual machine from a template*](../vmware/vmw-how-create-vm-from-template.md).
 

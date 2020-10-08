@@ -1,9 +1,9 @@
 ---
 title: Licensing Windows VMs using the UKCloud Key Management Server video
 description: Provides a quick video guide for how to activate your Windows licence on VMware using the UKCloud Key Management System (KMS)
-services: vmware
-author: Sue Highmoor
-reviewer: Sue Highmoor
+services: shared-services
+author: shighmoor
+reviewer: shighmoor
 lastreviewed: 20/09/2019
 toc_rootlink: Videos
 toc_sub1: 
@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Licensing Windows VMs using the KMS
-toc_fullpath: Videos/vmw-vid-licensing-kms.md
-toc_mdlink: vmw-vid-licensing-kms.md
+toc_fullpath: Videos/shared-vid-licensing-kms.md
+toc_mdlink: shared-vid-licensing-kms.md
 ---
 
 # Licensing Windows VMs using the UKCloud Key Management Server video
@@ -30,11 +30,11 @@ The following video provides a quick guide for how to activate your Windows lice
 
 ## Related articles
 
-- [*How to license Windows VMs using the UKCloud Key Management Server*](vmw-how-setup-kms.md)
+- [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md)
 
-- [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+- [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md)
 
-- [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+- [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md)
 
 ## Feedback
 

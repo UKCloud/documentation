@@ -1,18 +1,18 @@
 ---
 title: Network Time Protocol server access
 description: This guide shows you how to configure access to the Network Time Protocol (NTP) server within vCloud Director
-services: vmware
-author: Sue Highmoor
+services: shared-services
+author: shighmoor
 reviewer:
-lastreviewed: 19/07/2018 12:45:48
+lastreviewed: 19/07/2018
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Network Time Protocol server access
-toc_fullpath: Reference/vmw-ref-network-time-server.md
-toc_mdlink: vmw-ref-network-time-server.md
+toc_fullpath: Reference/shared-ref-network-time-server.md
+toc_mdlink: shared-ref-network-time-server.md
 ---
 
 # Network Time Server access

@@ -1,9 +1,9 @@
 ---
-title: How to install Red Hat Update Infrastructure on an existing VMware virtual machine
+title: How to install Red Hat Update Infrastructure
 description: Shows you how to update your existing hosts to target UKCloud's approved Red Hat Update Infrastructure (RHUI)
-services: vmware
-author: Sue Highmoor
-reviewer: Paul Cantle
+services: shared-services
+author: shighmoor
+reviewer: pcantle
 lastreviewed: 02/07/2020
 toc_rootlink: How To
 toc_sub1: 
@@ -11,11 +11,11 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Install Red Hat Update Infrastructure on an existing VMware virtual machine
-toc_fullpath: How To/vmw-how-install-rhui-vm.md
-toc_mdlink: vmw-how-install-rhui-vm.md
+toc_fullpath: How To/shared-how-install-rhui-vm.md
+toc_mdlink: shared-how-install-rhui-vm.md
 ---
 
-# How to install Red Hat Update Infrastructure on an existing VMware virtual machine
+# How to install Red Hat Update Infrastructure
 
 ## Overview
 
@@ -68,7 +68,7 @@ If you require the high availability (HA) package, raise a Service Request direc
     - The Red Hat entitlement certificate
 
     - The Client entitlement certificate
-    
+
 ## Upgrading the RPMs to a newer version
 
 If you already have one of the original UKCloud RPMs installed on your system and require one of the latest ones documented in this article (due to the original ones expiring), you can run a command to upgrade it once you've downloaded the required files.

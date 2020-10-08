@@ -1,25 +1,25 @@
 ---
 title: Access to virtual machines on the UKCloud platform
 description: Outlines what access and controls UKCloud has in place with regards to customer virtual machines.
-services: vmware
-author: Sue Highmoor
+services: shared-services
+author: shighmoor
 reviewer:
-lastreviewed: 19/07/2018 12:45:48
+lastreviewed: 19/07/2018
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Access to virtual machines on the UKCloud platform
-toc_fullpath: Reference/vmw-ref-access-to-vms.md
-toc_mdlink: vmw-ref-access-to-vms.md
+toc_fullpath: Reference/shared-ref-access-to-vms.md
+toc_mdlink: shared-ref-access-to-vms.md
 ---
 
 # Access to virtual machines on the UKCloud platform
 
 ## What access does UKCloud have to our running virtual machines and the memory they are using?
 
-Our default policy is that no UKCloud personnel have access to any of our customer’s environments. We would need a specific, customer approved change ticket in order to gain access to a customers’ environment if we are to assist them with resolving any issues.
+Our default policy is that no UKCloud personnel have access to any of our customer's environments. We would need a specific, customer approved change ticket in order to gain access to a customers' environment if we are to assist them with resolving any issues.
 
 UKCloud provides compute in line with the NIST defined IaaS cloud delivery model, which means that we manage the components up to and including the hypervisor, but we do not manage the virtual machine (VM) or anything within it (for example, the operating system or local disks). Each customer has complete autonomy in provisioning their VMs and therefore has exclusive control over the security credentials they use for each VM. As UKCloud does not have access to these security credentials, our personnel have no ability to authenticate and gain access to customer VMs.
 

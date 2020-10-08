@@ -94,16 +94,16 @@
     <span>UKCloud Portal</span>
   </a>
 
+  <a href="/articles/shared/shared-ref-overview.html" class="product-grid__item">
+    <span>Shared Services</span>
+  </a>
+
   <a href="/articles/other/other-ref-services-by-region.html" class="product-grid__item">
     <span>Other</span>
   </a>
 
   <a href="https://ukcloud.com/hub/" class="product-grid__item">
     <span>More Resources</span>
-  </a>
-
-  <a href="https://status.ukcloud.com/" class="product-grid__item">
-    <span>Service Status</span>
   </a>
 
 </section>

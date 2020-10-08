@@ -1,18 +1,18 @@
 ---
 title: How to license Microsoft software on the UKCloud platform
-description: This guide will explain how Microsoft software such as Server and SQL is licensed on the UKCloud platform
-services: vmware
-author: Steve Hall
-reviewer: Darren B
-lastreviewed: 27/03/2020
+description: Explains how Microsoft software, such as Windows Server and SQL, is licensed on the UKCloud platform
+services: shared-services
+author: shall
+reviewer: pcantle
+lastreviewed: 29/09/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: License Microsoft software on the UKCloud platform
-toc_fullpath: How to/vmw-how-license-microsoft.md
-toc_mdlink: vmw-how-license-microsoft.md
+toc_fullpath: How to/shared-how-license-microsoft.md
+toc_mdlink: shared-how-license-microsoft.md
 ---
 
 # How to license Microsoft applications/software on the UKCloud platform
@@ -39,7 +39,7 @@ The standard licensing approach is for us to provide Microsoft Windows Server li
 > [!IMPORTANT]
 > You cannot bring your own Microsoft Windows Server licences for use on the UKCloud platform.
 
-For your Microsoft Windows Server‑based VMs to use a UKCloud-purchased licence, you must create all your Microsoft VMs using a Microsoft template from the UKCloud product catalog. If you prefer to create your Microsoft VMs using your own template, you must then register these VMs with our Key Management Server (KMS). See the [*How to license Windows VMs using the UKCloud Key Management Server*](vmw-how-setup-kms.md) article or [*Licensing Windows VMs using the UKCloud Key Management Server video*](vmw-vid-licensing-kms.md) for information about how to do this.
+For your Microsoft Windows Server‑based VMs to use a UKCloud-purchased licence, you must create all your Microsoft VMs using a Microsoft template from the UKCloud product catalog. If you prefer to create your Microsoft VMs using your own template, you must then register these VMs with our Key Management Server (KMS). See the [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md) article or [*Licensing Windows VMs using the UKCloud Key Management Server video*](shared-vid-licensing-kms.md) for information about how to do this.
 
 The Microsoft Windows Server licence is invoiced each month, in addition to the cost of the VM, based on the VM's usage.
 
@@ -144,7 +144,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Other Microsoft Products**
 
-  - Engage with your Account Director or Service Delivery Manager who will be able to help and advise you as to whether the software can be licensed, and if so, how.
+  - Engage with your Account Director or Service Delivery Manager who'll be able to help and advise you as to whether the software can be licensed, and if so, how.
 
 ## Submitting a request to use Microsoft applications on the UKCloud platform
 
