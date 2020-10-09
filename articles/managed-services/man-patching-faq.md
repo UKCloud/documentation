@@ -39,7 +39,7 @@ All alerting will be performed via a support ticket or any special escalation pr
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-We envisage that there should not be a scenario which prevents UKCloud in meeting the availability KPI defined within the [Service Scope](https://docs.ukcloud.com/articles/managed-services/man-patching-sco.html) for this service. Current Service Status reports are published on the [Status Page](https://status.ukcloud.com/). You can view past incident reports on the UKCloud Portal.
+We envisage that there should not be a scenario which prevents UKCloud in meeting the availability KPI defined within the [Service Scope](https://docs.ukcloud.com/articles/managed-services/man-patching-sco.html) for this service. Current Service Status and past incident reports are published on the [Status Page](https://status.ukcloud.com/).
 
 ### How does the patching cycle work?
 
