@@ -29,8 +29,6 @@ With Patching as a Service, we provide routine OS patch management for compute i
 
 Built on the capabilities of our [Managed Monitoring as a Service](https://docs.ukcloud.com/articles/managed-services/man-monitoring-sco.html), UKCloud uses a combination of patches released directly by the vendor coupled with [Ivanti Security Controls](https://www.ivanti.com/products/security-controls), a market-leading enterprise patch management and control solution, as the key technologies to deliver Patching as a Service.
 
-This service also leverages the benefits of AIOps (see below).
-
 ### Do I get access to a dashboard or reports?
 
 As it is assumed UKCloud will manage all patching aspects as part of this service, there are currently no dashboard or reporting features for customers to access.
@@ -43,7 +41,7 @@ All alerting will be performed via a support ticket or any special escalation pr
 
 We do not envisage any scenarios that prevent UKCloud in meeting the availability KPI defined within the [Service Scope](https://docs.ukcloud.com/articles/managed-services/man-patching-sco.html) for this service.
 
-Current Service Status reports are published on the [UKCloud Service Status page](https://status.ukcloud.com/). You can view past incident reports on the UKCloud Portal.
+Current Service Status reports and past incident reports are published on the [UKCloud Service Status page](https://status.ukcloud.com/).
 
 ### How does the patching cycle work?
 
