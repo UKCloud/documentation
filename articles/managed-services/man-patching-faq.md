@@ -27,11 +27,13 @@ With Patching as a Service, we provide routine OS patch management for compute i
 
 ### What technologies do you use?
 
-Built-upon the capabilities of our [Managed Monitoring as a Service](https://docs.ukcloud.com/articles/managed-services/man-monitoring-sco.html), UKCloud uses a combination of patches released directly by the vendor coupled with [Ivanti Security Controls](https://www.ivanti.com/products/security-controls), a market leading enterprise patch management and control solution, as the key technologies to deliver Patching as a Service.
+Built on the capabilities of our [Managed Monitoring as a Service](https://docs.ukcloud.com/articles/managed-services/man-monitoring-sco.html), UKCloud uses a combination of patches released directly by the vendor coupled with [Ivanti Security Controls](https://www.ivanti.com/products/security-controls), a market-leading enterprise patch management and control solution, as the key technologies to deliver Patching as a Service.
+
+This service also leverages the benefits of AIOps (see below).
 
 ### Do I get access to a dashboard or reports?
 
-As it is assumed UKCloud will manage all patching aspects as part of this service, there is currently no dashboard or reporting features for customers to access.
+As it is assumed UKCloud will manage all patching aspects as part of this service, there are currently no dashboard or reporting features for customers to access.
 
 ### How do I get alerted on events?
 
@@ -39,37 +41,44 @@ All alerting will be performed via a support ticket or any special escalation pr
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-We envisage that there should not be a scenario which prevents UKCloud in meeting the availability KPI defined within the [Service Scope](https://docs.ukcloud.com/articles/managed-services/man-patching-sco.html) for this service. Current Service Status and past incident reports are published on the [Status Page](https://status.ukcloud.com/).
+We do not envisage any scenarios that prevent UKCloud in meeting the availability KPI defined within the [Service Scope](https://docs.ukcloud.com/articles/managed-services/man-patching-sco.html) for this service.
+
+Current Service Status reports are published on the [UKCloud Service Status page](https://status.ukcloud.com/). You can view past incident reports on the UKCloud Portal.
 
 ### How does the patching cycle work?
 
-Operating system vendors such as Microsoft release updates for their operating systems and associated packages in two ways:
+OS vendors such as Microsoft release updates for their operating systems and associated packages in two ways:
 
 * To a specific schedule: "Patch Tuesday" / "Update Tuesday"
+
 * Ad-hoc, throughout the course of each month
 
-As such, any patching cycle needs to take into consideration the two potential release mechanisms for updates, and as such a batch approach with specific cut-off dates is deemed the best approach to maintain consistency in UKCloud's service, provide a good level of responsiveness to patch releases, and also to insulate sufficiently against erroneous upstream vendor patches or errors. What this means is that there is a specific cut-off at which point patches released after that time will not be included in that cycle (see [Windows Patches vs Linux Package Updates](#windows-patches-vs-linux-package-updates) ). Rather than this being a limitation, this is in order to ensure that correct tracking of activities can take place when dealing with customer VMs in an efficient manner.
+As such, any patching cycle needs to take into consideration the two potential release mechanisms for updates. For our Patching as a Service, we use a batch approach with specific cut-off dates, which we consider to be the best approach to maintain consistency in UKCloud's service, provide a good level of responsiveness to patch releases and also to insulate sufficiently against erroneous upstream vendor patches or errors. This means that there's a specific cut-off after which point any patches released will not be included in that cycle (see [Windows Patches vs Linux Package Updates](#windows-patches-vs-linux-package-updates)). Rather being a limitation, this ensures that we can correctly  and efficiently track activities when dealing with customer VMs.
 
-The following diagram shows the six available cut-off dates and associated Device Groups (Device Group A to J) of which a customer can choose to group patch some or all of their VMs
+The following diagram shows the six available cut-off dates and associated Device Groups (Device Group A to J) that customers can choose to group patch some or all of their VMs:
 
 <div style="text-align:center"><img alt="Patching Cycles" src="images/man-patching-patchingcycle.png" /></div>
 
-Notes:
-* Patching cycle is two weeks long (dates above show day number from beginning of each cycle rather than day of month).
-* Customers are advised to use ***Device Groups A to E*** to test patches on VMs within a representative non-production environment
-* Customers are advised to use ***Device Groups F to J*** to apply patches on VMs within their production environments on the basis that no issues ave been identified in their non-production environments
+> [!NOTE]
+> * Patching cycle is two weeks long (dates above show day number from beginning of each cycle rather than day of month).
+>
+> * Customers are advised to use ***Device Groups A to E*** to test patches on VMs within a representative non-production environment.
+>
+> * Customers are advised to use ***Device Groups F to J*** to apply patches on VMs within their production environments on the basis that no issues ave been identified in their non-production environments.
 
-### Windows Patches vs Linux Package Updates
+### Windows patches vs Linux package updates
 
-There are major differences between the way that Microsoft releases patches for its Windows operating systems, and the way that most Linux distribution vendors provide updates. The key difference is
-* Microsoft release patches for their operating system (which can be either critical or recommended)
-* Linux vendors release patches for individual packages that make up the operating system. 
+There are major differences between the way that Microsoft releases patches for its Windows OSs and the way that most Linux distribution vendors provide updates. The key difference is:
+
+* Microsoft releases patches for their OS (which can be either critical or recommended)
+
+* Linux vendors release patches for individual packages that make up the OS. 
  
-To make best use of existing tooling within those Linux distributions, our service will update a package, rather than an individual patch (for example the equivalent of running `yum update httpd`, which will include **all** patches related to the httpd package).
+To make best use of existing tooling within those Linux distributions, our service will update a package rather than an individual patch (for example, the equivalent of running `yum update httpd`, which will include **all** patches related to the httpd package).
 
-### What if a the application of a patch fails?
+### What if the application of a patch fails?
 
-Each patching window is followed by 18 hours of issue resolution time in which issues during automatic patching are investigated and may involve actions such as manual application of patches, etc. Following the end of this window, the customer will be contacted by UKCloud Support with the current state and if more time is required, this will be arranged then.
+Each patching window is followed by 18 hours of issue resolution time, in which issues during automatic patching are investigated and may involve actions such as manual application of patches, and so on. Following the end of this window, the customer will be contacted by UKCloud Support with the current state. If more time is required, this will be arranged at that point.
 
 ## Management
 
@@ -79,15 +88,15 @@ As it is assumed UKCloud will manage all OS patching aspects as part of this ser
 
 ### How do I manage my services?
 
-Currently there is no way for a customer to directly manage this service as it is assumed UKCloud will manage all OS patching aspects as part of this service. 
+As it is assumed UKCloud will manage all OS patching aspects as part of this service, there is currently no way for customers to directly manage this service. 
 
-Any changes to patch scheduling after customers have selected their patch windows will require consultation and should be requested initially by raising a ticket within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
+Any changes to patch scheduling after customers have selected their patch windows will require consultation and should be requested initially by raising a ticket within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact UKCloud Support by phone or email.
 
 ## Support
 
 ### How do I raise a support ticket?
 
-The secure online [UKCloud Portal](https://portal.ukcloud.com/login) provides most common service management functionality. You can raise tickets within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
+The secure online [UKCloud Portal](https://portal.ukcloud.com/login) provides most common service management functionality. You can raise tickets within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact UKCloud Support by phone or email.
 
 ### What are your service maintenance windows?
 
@@ -103,7 +112,7 @@ Yes, you can have Portal notifications sent to you at the email address associat
 
 ### How can I get started with the service?
 
-Within 5 business days of accepting an order, UKCloud will create the customer's patching environment and commence patching any environments in-line with the Device Group schedules they have opted-in to.
+Within 5 business days of accepting an order, UKCloud will create the customer's patching environment and commence patching any environments in line with the Device Group schedules they have opted-in to.
 
 ### Is there a free trial?
 
@@ -115,9 +124,9 @@ Due to the initial complexity of configuring the patching environment, UKCloud i
 
 The minimum unit of time for use is monthly. Part months will be rounded up.
 
-### Will I be charged for resources in a 'Shut Off' state?
+### Will I be charged for resources in a 'shut off' state?
 
-UKCloud will continue to charge for any resources that you have elected to be monitored regardless of the state they're in. In order to stop any charges, you'll need to raise a ticket within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
+UKCloud will continue to charge for any resources that you have elected to be monitored regardless of the state they're in. To stop any charges, you'll need to raise a ticket within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact UKCloud Support by phone or email.
 
 ### How can I view billing information?
 
