@@ -154,8 +154,6 @@
     href: vmw-ref-comparison-hyperscalers.md
   - name: Edge gateways and high availability
     href: vmw-ref-edge-ha.md
-  - name: Fix for customers unable to upload and download vApps or catalog items
-    href: vmw-ref-fix-unable-to-vapps.md
   - name: Fixing your advanced gateway if you encounter NullPointerException error
     href: vmw-ref-trouble-null-pointer.md
   - name: Fixing your IPsec VPN following upgrade to NSX 6.4
