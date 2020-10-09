@@ -5550,6 +5550,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-patching-patchingcycle.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-patching-patchingcycle.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/managed-services/images/man-sd-managed-it-ops.png",
       "output": {
         "resource": {
@@ -5613,6 +5624,18 @@
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-sco.html",
           "hash": "1pJAvGvYm+IP11rnmkUqsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-patching-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-patching-faq.html",
+          "hash": "i5K1rHTpzGtAy7MOF0WMzQ=="
         }
       },
       "is_incremental": false,
@@ -5744,7 +5767,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "x/00AfvvAo4FfjSyQGA25w=="
+          "hash": "+2tY519WYQLolNo7SDQa1g=="
         }
       },
       "is_incremental": false,
@@ -20555,7 +20578,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 447,
+          "total_file_count": 448,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

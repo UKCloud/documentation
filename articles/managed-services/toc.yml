@@ -48,5 +48,7 @@
       href: man-monitoring-sco.md
   - name: Patching as a Service
     items:
+    - name: Patching as a Service FAQs
+      href: man-patching-faq.md
     - name: Patching as a Service Service Scope
       href: man-patching-sco.md
