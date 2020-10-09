@@ -1,5 +1,5 @@
 ---
-title: Service level agreement (SLA) definition
+title: SLA definition
 description: Definition of the UKCloud service level agreement (SLA)
 services: other
 author: shighmoor
@@ -15,7 +15,7 @@ toc_fullpath: Reference/other-ref-sla-definition.md
 toc_mdlink: other-ref-sla-definition.md
 ---
 
-# Service level agreement (SLA) definition
+# SLA definition
 
 ## Availability
 
