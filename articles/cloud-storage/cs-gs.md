@@ -48,7 +48,7 @@ Cloud Storage:
 
 - Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery
 
-ECS provides an API that you can use to manage your cloud storage. The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the *S3 Supported Features* chapter of the [*Elastic Cloud Storage (ECS) Data Access Guide*](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf)).
+ECS provides an API that you can use to manage your cloud storage. The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the *S3 API supported and unsupported features* section of the [*Elastic Cloud Storage (ECS) Data Access Guide*](http://doc.isilon.com/ECS/3.5/DataAccessGuide/GUID-E21545D1-8529-4E72-A49A-EE0834A201A9.html)).
 
 > [!NOTE]
 > The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
