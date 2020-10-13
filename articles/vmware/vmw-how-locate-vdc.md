@@ -1,10 +1,10 @@
 ---
 title: How to locate your virtual data centre on the UKCloud platform
-description: Describes how to use the vCloud Director UI or API to find out where your VDC is located within the UKCloud platform
+description: Describes how to use the Tenant Portal or vCloud API to find out where your VDC is located within the UKCloud platform
 services: vmware
-author: Steve Hall
-reviewer: Sue Highmoor
-lastreviewed: 19/08/2019
+author: shall
+reviewer: shighmoor
+lastreviewed: 04/09/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -25,15 +25,17 @@ Knowing where your VDCs are located can be useful for:
 
 - Determining how resilient your applications are
 
-- Determining how scheduled or emergency maintenance or an unplanned outage may affect your applications
+- Understanding how scheduled or emergency maintenance or an unplanned outage may affect your applications
 
 - Providing additional information to help with support call resolution
 
-This guide describes how to use vCloud Director to find out where your VDC is within the UKCloud platform. You can use the vCloud Director UI or the API.
+This article describes how to find out where your VDC is within the UKCloud platform. You can use the vCloud Director/VMware Cloud Director Tenant Portal or the API.
 
 The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-## Finding the location of a VDC using the vCloud Director Tenant UI
+## Finding the location of a VDC
+
+### [vCloud Director 9.7](#tab/tabid-a)
 
 1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that you want to locate.
 
@@ -65,9 +67,41 @@ The information provided by the VDC metadata is read-only. If you want to change
 
 4. When you're done, click **Cancel**.
 
-## Finding the location of a VDC using the vCloud Director API
+### [VMware Cloud Director 10.1](#tab/tabid-b)
 
-You can also find the location of your VDC by calling the vCloud Director API. For more information about the vCloud Director API, see [vCloud Director API Guide](https://code.vmware.com/apis/553/vcloud-director).
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that you want to locate. [confirm dashboard and whether there's a step before this]
+
+2. In the left navigation panel, under *Settings*, select **Metadata**.
+
+    ![VDC Metadata menu option](images/vmw-vcd10.1-mnu-vdc-metadata.png)
+
+3. The following fields indicate the location of your VDC:
+
+    - **provider-site** - indicates the site in which your VDC is located: **Farnborough** or **Corsham**
+
+    - **provider-region** - indicates the region in which your VDC is located, for example **1** or **5**.
+
+    - **provider-zone** - indicates the zone in which your VDC is located, for example **1(AF2)** or **B**
+
+    ![VDC location metadata](images/vmw-vcd10.1-vdc-location-metadata.png)
+
+    > [!NOTE]
+    > If you set up your VDC to use Synchronous Protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:
+    >
+    > - **provider-protection-synchronous** is **Yes**
+    > - **provider-site** - indicates that your VDC is stretched across both sites: **Farnborough or Corsham**
+    > - **provider-region** - indicates that your VDC is stretched across multiple regions, for example **1 or 2**
+    > - **provider-zone** - indicates that your VDC is stretched across multiple zones, for example **1(AE1) or 2(AE2)**
+
+    You can use VM location to locate individual VMs within the VDC. For more information, see [*How to use VM location in vCloud Director*](vmw-how-use-vm-location.md).
+
+4. When you're done, click **Cancel**.
+
+***
+
+## Finding the location of a VDC using the vCloud API
+
+You can also find the location of your VDC by calling the vCloud API. For more information about the vCloud API, see the [vCloud Director API Guide](https://code.vmware.com/apis/553/vcloud-director).
 
 For example, to retrieve all the metadata for a specified VDC, call the `GET /vcd/<id>/metadata` endpoint.
 
