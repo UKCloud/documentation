@@ -5582,15 +5582,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-antivirus-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-antivirus-faq.html",
-          "hash": "4y12o+lFI0oTUzVOXNn9dQ=="
+          "hash": "r3vlGBlBVMSgGJFB19Z+Vw=="
         }
       },
       "is_incremental": false,
