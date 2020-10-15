@@ -44,7 +44,7 @@ All alerting will be performed via a support ticket or any special escalation pr
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-We don't envisage any scenarios that prevent UKCloud from meeting the Anti-Virus as a Service platform availability KPI defined within the [Service Scope](man-antivirus-sco.html) for this service. Current Service Status and past incident reports are published on the [UKCloud Service Status page](https://status.ukcloud.com/).
+We don't envisage any scenarios that prevent UKCloud from meeting the Anti-Virus as a Service platform availability KPI defined within the [Service Scope](man-antivirus-sco.md) for this service. Current Service Status and past incident reports are published on the [UKCloud Service Status page](https://status.ukcloud.com/).
 
 > [!NOTE]
 > Should the central Anti-Virus as a Service platform become unavailable, any SentinelOne agents installed locally to the endpoint will remain active and continue to provide protection.
@@ -87,7 +87,7 @@ SentinelOne participates in a variety of testing and has won awards. The most re
 
 * Gartner Best Endpoint Protection Platforms (EPP) as Reviewed by Customers.
 
-* Passmark’s January 2019 performance test compares SentinelOne to several legacy AV products. Testing showed that SentinelOne performs better than other vendors when the agent is under heavy load. During normal user workload, customers typically see less than 5% CPU load.
+* Passmark's January 2019 performance test compares SentinelOne to several legacy AV products. Testing showed that SentinelOne performs better than other vendors when the agent is under heavy load. During normal user workload, customers typically see less than 5% CPU load.
 
 ## Endpoint security
 
@@ -109,7 +109,7 @@ SentinelOne utilises multiple cascading engines: reputation, StaticAI and Active
 
 * Detection - Patented Behavioral AI recognizes malicious actions regardless of vector. SentinelOne is the only endpoint security vendor to detect fileless, zero-day and nation-grade attacks in real time.
 
-* Prevention - Static AI on the endpoint prevents attacks inline in real time. Consistently ranked for highest efficacy and lowest false-positives, SentinelOne’s static AI model replaces legacy antivirus.
+* Prevention - Static AI on the endpoint prevents attacks inline in real time. Consistently ranked for highest efficacy and lowest false-positives, SentinelOne's static AI model replaces legacy antivirus.
 
 ### Does SentinelOne provide malware prevention?
 
