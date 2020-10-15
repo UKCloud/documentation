@@ -5582,6 +5582,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-antivirus-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-antivirus-faq.html",
+          "hash": "4y12o+lFI0oTUzVOXNn9dQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-antivirus-sco.md",
       "output": {
@@ -5767,7 +5782,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "+2tY519WYQLolNo7SDQa1g=="
+          "hash": "smry40KBD0YPdrRpp9xnRg=="
         }
       },
       "is_incremental": false,
@@ -20578,7 +20593,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 448,
+          "total_file_count": 449,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

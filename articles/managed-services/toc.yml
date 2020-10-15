@@ -36,6 +36,8 @@
     href: man-sd-managed-it-ops.md
   - name: Anti-Virus as a Service
     items:
+    - name: Anti-Virus as a Service FAQs
+      href: man-antivirus-faq.md
     - name: Anti-Virus as a Service Service Scope
       href: man-antivirus-sco.md
   - name: Managed Monitoring as a Service
