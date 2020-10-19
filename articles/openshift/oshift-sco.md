@@ -35,7 +35,7 @@ UKCloud for Managed OpenShift provides:
 
 - A secure and scalable UK-based platform connected to the internet and government networks including PSN, HSCN, Janet and RLI
 
-- Secure customer separation - UKCloud for Managed OpenShift management components and container hosts are dedicated to you, deployed on independently verified, assured 
+- Secure customer separation - UKCloud for Managed OpenShift management components and container hosts are dedicated to you, deployed on independently verified, assured multi-tenant infrastructure
 
 - Ability to deploy and manage containers using standardised tools and RESTful APIs
 
@@ -78,7 +78,7 @@ UKCloud for Managed OpenShift is packaged to provide you with a high level of fl
 With UKCloud for Managed OpenShift, we deploy an OpenShift cluster that contains multiple nodes: master nodes for the control plane, infrastructure nodes for additional services, such as ingress controllers, metrics, developer console and aggregated logging, and application nodes for your containerised applications.
 
 > [!NOTE]
-> An operational OpenShift cluster requires a minimum of three master nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services, such as ingress controllers, metrics, developer console and aggregated logging. You'll need at least one application node to run your application and recommend a minimum of two nodes for resilience.
+> An operational OpenShift cluster requires a minimum of three master nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services, such as ingress controllers, metrics, developer console and aggregated logging. You'll need at least one application node to run your application and we recommend a minimum of two nodes for resilience.
 
 #### Master nodes
 
@@ -86,7 +86,7 @@ Master nodes provide the foundation OpenShift services to support the orchestrat
 
 #### Infrastructure nodes
 
-Infrastructure nodes provide supporting services such as OpenShift routers, registry, metric collection and aggregated logging. Infrastructure nodes are not required, but we recommend a minimum of two infrastructure nodes to provide integrated cluster services.
+Infrastructure nodes provide supporting services such as OpenShift routers, registry, metric collection and aggregated logging. Infrastructure nodes are not mandatory, but we recommend a minimum of two infrastructure nodes to provide integrated cluster services.
 
 #### Application nodes
 
@@ -118,7 +118,7 @@ By default, your OpenShift cluster will only be connected to the internet. Your 
 
 #### Registry storage
 
-A benefit of OpenShift is its ability to build Docker images directly from your source code, deploy them, and manage their lifecycle. To enable this, OpenShift utilises an integrated Docker registry to locally manage images. This registry is stored securely, using our Cloud Storage service, outside of your OpenShift environment to help ensure the resilience and availability of your images. Standard Cloud Storage rates apply, for more information, see the [*Cloud Storage Service Definition*](../cloud-storage/cs-sd.md).
+A benefit of OpenShift is its ability to build Docker images directly from your source code, deploy them, and manage their lifecycle. To enable this, OpenShift utilises an integrated Docker registry to locally manage images. This registry is stored securely, using our Cloud Storage service, outside of your OpenShift environment to help ensure the resilience and availability of your images. Standard Cloud Storage rates apply, for more information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 #### Enhanced aggregated logging
 
@@ -180,7 +180,7 @@ You can request UKCloud for Managed OpenShift by raising a Service Request via t
 
 Within 5 business days of accepting an order, UKCloud will create your primary account and send a Welcome Pack, which includes the URLs for the UKCloud Portal and the [*Getting Started Guide*](oshift-gs.md).
 
-UKCloud for Managed OpenShift is delivered as a private Platform-as-a-Service (PaaS). Each customer will be provided with an isolated OpenShift cluster within which they can build their containerized solutions.
+UKCloud for Managed OpenShift is delivered as a private Platform-as-a-Service (PaaS). Each customer will be provided with an isolated OpenShift cluster within which they can build their containerised solutions.
 
 By default, only a single user account will be created per cluster, this user can then create additional users within the cluster.
 
@@ -208,7 +208,7 @@ You are responsible for:
 
 We monitor, maintain and support our controlled UKCloud for Managed OpenShift infrastructure and services, including:
 
-- UKCloud-controlled components, such as teh virtual infrastructure, storage, power and physical firewalls and routers
+- UKCloud-controlled components, such as the virtual infrastructure, storage, power and physical firewalls and routers
 
 - UKCloud-maintained OpenShift services (for example, router service, DEAs, health manager, cloud controller, master nodes, worker nodes, routing layer)
 
