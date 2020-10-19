@@ -5611,7 +5611,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-faq.html",
-          "hash": "nb4eohJI9aMKfh3lC2hMIg=="
+          "hash": "aCgK8xyZ6hI0zFRoGTG20g=="
         }
       },
       "is_incremental": false,
@@ -5631,11 +5631,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-monitoring-how-use-customer-polling.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-monitoring-how-use-customer-polling.html",
+          "hash": "zBWDamnQWkdFBOWQg/ViDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-monitoring-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-sco.html",
-          "hash": "1pJAvGvYm+IP11rnmkUqsw=="
+          "hash": "O75Op4+2Nqxk5nLzTB4tlQ=="
         }
       },
       "is_incremental": false,
@@ -5779,7 +5791,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "smry40KBD0YPdrRpp9xnRg=="
+          "hash": "XTR09FB3OhF+wis3HFAWTA=="
         }
       },
       "is_incremental": false,
@@ -20590,7 +20602,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 449,
+          "total_file_count": 450,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

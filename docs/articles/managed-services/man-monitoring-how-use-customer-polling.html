@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use my own polling (monitoring) tooling with Managed Monitoring as a Service </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use my own polling (monitoring) tooling with Managed Monitoring as a Service ">
+    <meta name="generator" content="docfx 2.53.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/managed-services/man-monitoring-how-use-customer-polling.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-use-your-own-polling-monitoring-tooling-with-managed-monitoring-as-a-service">How to use your own polling (monitoring) tooling with Managed Monitoring as a Service</h1>
+
+<h2 id="overview">Overview</h2>
+<p>With Managed Monitoring as a Service, our Network Operations Centre (NOC) monitors your devices, receiving and reacting to any abnormal events, only escalating those events that genuinely require your attention.</p>
+<p>By default, we use our own monitoring systems to poll devices and perform remote checks. In certain situations, you may have your own monitoring tooling already established, but still want to forward your polling events to UKCloud's Managed Monitoring as a Service so that you can leverage UKCloud's 24x7x365 Network Operations Centre (NOC) capabilities.</p>
+<p>This article provides information and considerations regarding connecting your own polling (monitoring) solution to UKCloud's Managed Monitoring as a Service.</p>
+<h2 id="customer-polling-monitoring-technology-considerations">Customer polling (monitoring) technology considerations</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>While we're confident that modern monitoring tooling, such as Opsview, ManageEngine OpManager, Nagios and SolarWinds, should be able to pass their polling events to UKCloud's Managed Monitoring as a Service, we do need to perform an integration assessment (potentially chargeable) so that we can validate compatibility.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We cannot guarantee integration with any/all monitoring technologies if an assessment has not been completed.</p>
+</div>
+<h3 id="alert-forwarding-method">Alert forwarding method</h3>
+<p>If you want to provide your own polling service, then it must support one of the UKCloud's accepted methods of accepting alerts, which are:</p>
+<ul>
+<li><p>HTTPS GET/POST</p>
+</li>
+<li><p>API integration with Moogsoft AIOps via HTTP/HTTPS reverse proxy</p>
+</li>
+<li><p>SNMP traps</p>
+</li>
+<li><p>Local command execution (for example, a script that can be executed that can generate an SNMP trap or make a POST or GET request to a URL)</p>
+</li>
+</ul>
+<p>In addition to being able to forward alert information, the data must contain the hostname of the device and be able to provide a reference to a <a href="#playbooks"><em>Playbook</em></a>, which will be used by UKCloud to indicate the correct contact and escalation instructions for any live alert.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We cannot guarantee that your polling technology will be compatible with the service until the forwarding method has been investigated, confirmed and tested by UKCloud.</p>
+</div>
+<h3 id="non-standard-monitoring-checks">Non-standard monitoring checks</h3>
+<p>Our standard checks are outlined in the <a href="man-monitoring-sco.html"><em>Managed Monitoring as a Service Service Scope</em></a>. If non-standard monitoring checks are required, these must be confirmed as cleared by UKCloud before go-ahead can be given.</p>
+<h2 id="connectivity-between-the-customer-and-ukcloud">Connectivity between the customer and UKCloud</h2>
+<h3 id="standard-connectivity">Standard connectivity</h3>
+<p>Connecting your own polling (monitoring) service to UKCloud's Managed Monitoring as a Service requires a method over which polling of devices can take place. As standard, this will be performed via a single site to site/IPsec VPN between a UKCloud VMware NSX Edge Gateway device and your network device. See <a href="#non-standard-connectivity"><em>Non-standard connectivity</em></a> for more information beyond this standard implementation.</p>
+<p>Any customer VPN endpoint must be able to support Internet Key Exchange Version (IKEv1 or IKEv2) with the following configuration for the UKCloud VPN termination:</p>
+<p><strong>Phase 1</strong></p>
+<table>
+<thead>
+<tr>
+<th>Configuration item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption Algorithm for protection suite</td>
+<td>AES256</td>
+</tr>
+<tr>
+<td>UpdHash Algorithm for protection suite</td>
+<td>SHA-256</td>
+</tr>
+<tr>
+<td>Authentication Method</td>
+<td>PreShareKey</td>
+</tr>
+<tr>
+<td>Diffie-Hellman group</td>
+<td>DH-16</td>
+</tr>
+<tr>
+<td>Lifetime (seconds)</td>
+<td>28800</td>
+</tr>
+<tr>
+<td>Exchange</td>
+<td>esp</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Phase 2</strong></p>
+<table>
+<thead>
+<tr>
+<th>Configuration item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption Algorithm</td>
+<td>AES256</td>
+</tr>
+<tr>
+<td>Hash Algorithm</td>
+<td>SHA-256</td>
+</tr>
+<tr>
+<td>Lifetime (seconds)</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>SA Lifetime Expiration (Traffic Volume in KBytes)</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Perfect Forward Secrecy (PFS)</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>esp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="non-standard-connectivity">Non-standard connectivity</h3>
+<p>If there's a requirement for using one of the following non-standard connectivity methods, it must be assessed by a UKCloud design authority before continuing:</p>
+<ul>
+<li><p>Failover via alternative/multiple VPN endpoints</p>
+</li>
+<li><p>Leased line termination</p>
+</li>
+<li><p>Monitoring via non-encrypted Internet (without a secure VPN)</p>
+</li>
+</ul>
+<p>Further information may be required as to the specific network architecture.</p>
+<h2 id="playbooks">Playbooks</h2>
+<p>UKCloud's Managed Monitoring as a Service uses the concept of playbooks to indicate the actions to be performed on receipt of an alert to UKCloud's NOC.</p>
+<p>A typical contact playbook provides UKCloud's NOC with your contact and escalation details, along with the following details on an alert by alert basis:</p>
+<ul>
+<li><p>Contact name/team name</p>
+</li>
+<li><p>Contact number</p>
+</li>
+<li><p>Contact email</p>
+</li>
+<li><p>Whether telephone authentication is required, and the information to perform it</p>
+</li>
+</ul>
+<p>At the very least, a single default playbook will be established for a given customer. Additionally, you can add more playbooks with specific contact instructions tied to individual alert types should a different contact or team be required for different alerts.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

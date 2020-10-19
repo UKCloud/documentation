@@ -48,6 +48,8 @@
       href: man-monitoring-faq.md
     - name: Managed Monitoring as a Service Service Scope
       href: man-monitoring-sco.md
+    - name: Use your own polling (monitoring) tooling
+      href: man-monitoring-how-use-customer-polling.md
   - name: Patching as a Service
     items:
     - name: Patching as a Service FAQs
