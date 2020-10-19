@@ -43,6 +43,10 @@ As it is assumed UKCloud will manage all monitoring aspects as part of this serv
 
 All alerting will be performed via a support ticket or any special escalation process agreed between UKCloud and the customer.
 
+### Can I use my existing polling (monitoring) tooling with this service?
+
+We've designed our Managed Monitoring as a Service solution to be extensible with existing monitoring technology you may have already invested in. We cannot guarantee compatibility with all monitoring tooling, but for information about what to consider if this is something you want to do, see [*How to use your own polling (monitoring) tooling with Managed Monitoring as a Service*](man-monitoring-how-use-customer-polling.md).
+
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
 Current Service Status reports are published on the [Status Page](https://status.ukcloud.com/). You can view past incident reports on the UKCloud Portal.
