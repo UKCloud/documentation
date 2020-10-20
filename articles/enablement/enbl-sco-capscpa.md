@@ -3,8 +3,8 @@ title: Cloud Enablement - CAPS/CPA-approved VPN Service Scope
 description: Outlines important details regarding Cloud Enablement services available for CAPS and CPA-approved (or equivalent standard) VPN solutions.
 services: enablement
 author: Steve Hall
-reviewer: hbrunt
-lastreviewed: 16/12/2019
+reviewer: Nick Stobbart
+lastreviewed: 20/10/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -23,7 +23,7 @@ This document describes the Cloud Enablement services available for CAPS and CPA
 
 ## About Cloud Enablement
 
-The Cloud Enablement service provides basic facilities for your own hardware installed in our data centre for the purpose of utilising our cloud.
+The Cloud Enablement service provides basic facilities for your own hardware to be installed in our data centre for the purpose of utilising our cloud.
 
 The table provides an overview of the Cloud Enablement services available for CAPS and CPA-approved (or equivalent standard) VPN solutions. If the usage scenario you need isn't shown in the table, contact us to discuss your requirements.
 
@@ -34,20 +34,20 @@ Use case | Chosen connectivity option:<br>CPA-approved (or equivalent standard) 
 **Hosted device** | VPN
 **Typical device size** | 1U / 2U
 **Service level (default)** | Single data centre, no automatic failover
-**Cloud Enablement requirement<br> (one bay = 10U, 1kW per month)** | One bay in one UKCloud data centre
+**Cloud Enablement requirement<br> (one bay = 10U, 1kW of power)** | One bay in one UKCloud data centre
 **Cost** | £2,000 setup fee plus £500 per month
-**Resilience available?** | We don\'t provide a resiliently connected environment. You can provision devices to both of our data centres to create a self-managed resilient solution (in which case, the resilience options below are required).
+**Resilience available?** | We do not provide a resiliently connected environment. You can provision devices to both of our data centres to create a self-managed resilient solution (in which case, the resilience options below are required).
 **Failover responsibility** | Customer
-**Resilience requirement<br>(1 bay = 10U, 1kw per month)**| One bay in our Farnborough data centre<br>One bay in our Corsham data centre
+**Resilience requirement<br>(1 bay = 10U, 1kw per month)**| One bay in our Farnborough data centres<br>One bay in our Corsham data centres
 **Resilience cost** | £4,000 setup fee plus £1,000 per month
 **Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (e.g. Cloud Enablement in region 5 cannot be stretched to region 6).
-**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.<br>You will also need to complete the Assurance Wrap form so that we can create a walled garden for you in the Cross Domain Security Zone.
+**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.<br>You will also need to complete the Assurance wrap form so that we can create a walled garden for you within the Cross Domain Security Zone.
 
 ## What connectivity does the VPN service provide?
 
 The VPN service provides up to two ports:
 
-- Cloud Enablement in regions 1, 2, 7 & 8 offers fibre-only connectivity
+- Cloud Enablement in regions 1, 2, 7 & 8 offers copper connectivity only
 
 - Cloud Enablement in regions 5 & 6 offers connectivity via SFP, so customers can use fibre or copper
 
