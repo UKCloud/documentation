@@ -3,8 +3,8 @@ title: Big Cloud Enablement Service Scope
 description: Outlines how UKCloud provides co-location of your own hardware in our data centres
 services: enablement
 author: Bart Challis
-reviewer: 
-lastreviewed: 06/02/2020
+reviewer: Nick Stobbart
+lastreviewed: 20/10/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -35,14 +35,14 @@ The table below provides an overview of the Big Cloud Enablement services availa
 Use case | You may have complex systems that can't be virtualised (for example, database clusters or legacy applications).<br>You may also have large amounts of storage (for example, private file storage) you want to host with us, so that you can integrate it with our compute offerings.
 Service type | Co-location of physical infrastructure
 Security level | Assured OFFICIAL, Elevated OFFICIAL and Tier 2
-Hosted device | Physical server, networking device or storage appliance
+Hosted device | Physical servers, networking devices or storage appliances
 Useable U count | 40U
 Service level (default) | Single data centre, no automatic failover
 PDU specifications per rack | 2 x 16A single phase PDUs per rack with A and B power supplies<br>Each PDU has 36 x C13 and 6 x C19 sockets
 Max power draw per rack | 4kW
 Networking | Bespoke networking based on customer requirement.<br>Big Cloud Enablement price excludes any networking components.
 Contiguous racks | Contiguous racks are not guaranteed if not purchased together on a single order. UKCloud can reserve racks for a maximum of 6 months before charging for full use. This is at UKCloud's discretion.
-Resilience available? | You can provision multiple Big Cloud Enablement services within a single site or into both data centres, but you'll need to manage any resilience within the hardware.
+Resilience available? | You can provision multiple Big Cloud Enablement services within a single or dual sites, but you'll need to manage any resilience within the hardware.
 Failover responsibility | Customer
 Resilience cost | Depends on solution
 Notes | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Big Cloud Enablement into other regions (for example, Big Cloud Enablement in region 5 cannot be stretched to region 6).
@@ -50,7 +50,7 @@ Next steps | Raise a service request via the [My Calls](https://portal.skyscapec
 
 ## Big Cloud Enablement connectivity
 
-Connectivity within the solution will be bespoke to your requirements. You can bring your own switches and manage them, or you can ask UKCloud to purchase and manage switches on your behalf. Switches purchased by UKCloud will be Arista, and port count/speed and so on will be agreed between you and UKCloud.
+Connectivity within the solution will be bespoke to your requirements. You can bring your own switches and manage them, or you can ask UKCloud to purchase and manage switches on your behalf. Switches purchased by UKCloud will be agreed based on the solution, and port count/speed will be agreed between you and UKCloud.
 
 ## Connectivity port speed
 
