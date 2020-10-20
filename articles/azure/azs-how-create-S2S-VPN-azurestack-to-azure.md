@@ -3,8 +3,8 @@ title: How to create a site-to-site connection between Azure Stack Hub and Publi
 description: Create a site-to-site (S2S) VPN gateway connection from an on-premises network to UKCloud for Microsoft Azure 
 services: azure-stack
 author: dbrennand
-reviewer: aevans
-lastreviewed: 13/09/2019
+reviewer: rjarvis
+lastreviewed: 19/10/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -60,23 +60,25 @@ First, you'll need to create a virtual network. This virtual network will be abl
 
 5. In the **Create virtual network** blade, enter the following information:
 
-   - **Name** - The name of the virtual network.
-
-   - **Address Space** - The virtual network's address range in CIDR notation.
-
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
+   - **Name** - The name of the virtual network.
+
+   - **Region** - This will be `frn00006`, which is the location of the Azure Stack Hub.
+
+        ![Create new virtual network](images/azs-browser-create-virtual-network.png)
+
+   - **Address Space** - The virtual network's address range in CIDR notation.
+
+   - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited
 
    - **Subnet Name** - The name of the first subnet within the virtual network.
 
-   - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
+     ![Create new virtual network2](images/azs-browser-create-virtual-network2.png)
 
-     ![Create new virtual network](images/azs-browser-create-virtual-network.png)
-
-6. Click **Create**.
+6. Click **Review + Create**.
 
 7. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section.
 
@@ -114,7 +116,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **Name** - The name of the virtual network gateway.
 
-   - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRoute gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack Hub SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
+   - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. From version 1910 onwards, a custom IPSec policy is required for Azure Stack to connect to public Azure, therefore requiring a Standard or High SKU. If you are creating the network to coexist with an ExpressRoute gateway, you must select Standard or High also. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack Hub SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
 
    - **Virtual Network** - This is the virtual network that you created earlier.
 
@@ -226,27 +228,29 @@ You'll also need to create a virtual network in Public Azure. This virtual netwo
 
 5. In the **Create virtual network** blade, enter the following information:
 
-   - **Name** - The name of the virtual network.
-
-   - **Address Space** - The virtual network's address range in CIDR notation.
-
    - **Subscription** - This is your Microsoft Azure subscription.
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+   
+   - **Name** - The name of the virtual network.
 
-   - **Location** - Select the location of the Azure resource.
+   - **Region** - Select the location of the Azure resource.
 
-   - **Subnet Name** - The name of the first subnet within the virtual network.
+       ![Create new virtual network](images/azs-public-browser-new-virtual-network-blade.png)
+
+   - **Address Space** - The virtual network's address range in CIDR notation.
 
    - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be within the address range of the virtual network. It should be noted that the address range of a subnet currently in use cannot be edited.
 
-   - **DDoS protection** - Select the DDoS protection you would like. For more information, see the [Azure DDoS Protection Standard overview](https://docs.microsoft.com/en-gb/azure/virtual-network/ddos-protection-overview).
+   - **Subnet Name** - The name of the first subnet within the virtual network.
 
-   - **Service endpoints** - This allows you to enable one or more service endpoints for more information please see [Virtual Network Service Endpoints](https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-service-endpoints-overview).
+        ![Create new virtual network](images/azs-public-browser-new-virtual-network-blade2.png)
+
+   - **DDoS protection** - Select the DDoS protection you would like. For more information, see the [Azure DDoS Protection Standard overview](https://docs.microsoft.com/en-gb/azure/virtual-network/ddos-protection-overview).
 
    - **Firewall** - Select this option to enable Azure Firewall, which is a managed cloud-based network security service that protects your Azure Virtual Network resources.
 
-     ![Create new virtual network](images/azs-public-browser-new-virtual-network-blade.png)
+     ![Create new virtual network](images/azs-public-browser-new-virtual-network-blade3.png)
 
 6. Click **Create**.
 
@@ -308,7 +312,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **VPN type** - The type of VPN you can choose depends on the make and model of your VPN device, and the kind of VPN connection you intend to create. Choose a route-based gateway if you intend to use point-to-site, inter-virtual network, or multiple site-to-site connections; if you are creating a VPN type gateway to coexist with an ExpressRoute gateway; or if you need to use IKEv2. Policy-based gateways support only IKEv1.
 
-   - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRoute gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack Hub SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
+   - **SKU** -Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. From version 1910 onwards, a custom IPSec policy is required for Azure Stack to connect to public Azure, therefore requiring a Standard or High SKU. If you are creating the network to coexist with an ExpressRoute gateway, you must select Standard or High also. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack Hub SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
 
    - **Virtual Network** - This is the virtual network that you created earlier in Public Azure.
 
@@ -403,7 +407,35 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
      ![Add new connection](images/azs-public-browser-add-connection-blade.png)
 
-6. Click **OK**.
+6. Navigate to your connection by clicking **Connections**, in the **virtual network gateway**.
+
+7. In the **Configuration** blade, enter the following information for set up the custom IPSec policy to connect Azure Stack to Public Azure:
+
+   - **IPSec / IKE policy** - Change the policy status from **Disabled** to **Enabled**.
+
+   - **IKE Phase 1** 
+
+        - **Encryption** - Set the type to **AES256** from the dropdown menu.
+
+        - **Integrity/PRF** - Set the type to **SHA384** from the dropdown menu.
+
+        - **DH Group** - Set the type to **ECP384** from the dropdown menu.
+
+   - **IKE Phase 2** - Set the type to **AES256** from the dropdown menu.
+
+        - **IPSec Encryption** - Set the type to **GCMAES256** from the dropdown menu.
+
+        - **IPSec Integrity** - Set the type to **GCMAES256** from the dropdown menu.
+
+        - **PFS Group** - Set the type to **ECP384** from the dropdown menu.
+
+   - **IPSec SA lifetime in KiloBytes** - Set the value to **102400000**.
+
+   - **IPSec SA lifetime in seconds** - Set the value to **27000**.
+
+     ![Add new connection](images/azs-public-vpn-connection-configuration.png)
+
+8. Click **OK**.
 
 ## Update the local gateway IPs in Azure Stack Hub and Public Azure
 
