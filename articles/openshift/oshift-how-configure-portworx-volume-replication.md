@@ -3,8 +3,9 @@ title: How to configure Portworx replication
 description: Explains how to configure volume replication in a Portworx integrated OpenShift cluster
 services: openshift
 author: Ben Bacon
-reviewer:
-lastreviewed: 14/10/2019
+reviewer: Kieran O'Neill
+lastreviewed: 21/10/2020
+
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
 toc_sub2: Portworx
@@ -23,7 +24,7 @@ Portworx is a cloud-native storage solution that is now available as an integrat
 
 ### Intended audience
 
-This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster (or later) and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. For one of the steps you will also need to have `jq` installed.
+This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. For one of the steps you will also need to have `jq` installed.
 
 If you're interested in a free 30 day trial of Portworx, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
