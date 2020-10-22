@@ -102,7 +102,13 @@ To gain access to the sandbox, raise a Service Request via My Calls on the UKClo
 
 ## Known issues
 
-For known issues with VMware Cloud Director 10.1, see the [VMware Cloud Director 10.1 Release Notes](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html).
+Known issues you may experience following the upgrade to VMware Cloud Director 10.1 include:
+
+- Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal. If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.
+
+- Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal.
+
+For other known issues with VMware Cloud Director 10.1, see the [VMware Cloud Director 10.1 Release Notes](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html).
 
 ## Feedback
 
