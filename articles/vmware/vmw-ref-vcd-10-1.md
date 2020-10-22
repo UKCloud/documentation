@@ -93,7 +93,7 @@ The following API versions are still available:
 
 ### Sandbox for testing vCloud API
 
-UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/cloud/>) has been upgraded to vCloud Director 10.1.
+UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/login/>) has been upgraded to vCloud Director 10.1.2.
 
 To gain access to the 10.1 sandbox, raise a Service Request via My Calls on the UKCloud Portal.
 
