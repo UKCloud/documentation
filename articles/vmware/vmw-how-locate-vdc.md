@@ -4,7 +4,7 @@ description: Describes how to use the Tenant Portal or vCloud API to find out wh
 services: vmware
 author: shall
 reviewer: shighmoor
-lastreviewed: 04/09/2020
+lastreviewed: 23/10/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -33,6 +33,9 @@ This article describes how to find out where your VDC is within the UKCloud plat
 
 The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
+> [!NOTE]
+> If you want to find the location of a specific VM within a VDC, you can use VM location. For more information, see [*How to use VM location*](vmw-how-use-vm-location.md).
+
 ## Finding the location of a VDC
 
 ### [vCloud Director 9.7](#tab/tabid-a)
@@ -55,21 +58,11 @@ The information provided by the VDC metadata is read-only. If you want to change
 
     ![VDC location metadata](images/vmw-vcd-vdc-location-metadata.png)
 
-    > [!NOTE]
-    > If you set up your VDC to use Synchronous Protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:
-    >
-    > - **provider-protection-synchronous** is **Yes**
-    > - **provider-site** - indicates that your VDC is stretched across both sites: **Farnborough or Corsham**
-    > - **provider-region** - indicates that your VDC is stretched across multiple regions, for example **1 or 2**
-    > - **provider-zone** - indicates that your VDC is stretched across multiple zones, for example **1(AE1) or 2(AE2)**
-
-    You can use VM location to locate individual VMs within the VDC. For more information, see [*How to use VM location in vCloud Director*](vmw-how-use-vm-location.md).
-
 4. When you're done, click **Cancel**.
 
 ### [VMware Cloud Director 10.1](#tab/tabid-b)
 
-1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that you want to locate. [confirm dashboard and whether there's a step before this]
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that you want to locate.
 
 2. In the left navigation panel, under *Settings*, select **Metadata**.
 
@@ -83,21 +76,23 @@ The information provided by the VDC metadata is read-only. If you want to change
 
     - **provider-zone** - indicates the zone in which your VDC is located, for example **1(AF2)** or **B**
 
-    ![VDC location metadata](images/vmw-vcd10.1-vdc-location-metadata.png)
-
-    > [!NOTE]
-    > If you set up your VDC to use Synchronous Protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:
-    >
-    > - **provider-protection-synchronous** is **Yes**
-    > - **provider-site** - indicates that your VDC is stretched across both sites: **Farnborough or Corsham**
-    > - **provider-region** - indicates that your VDC is stretched across multiple regions, for example **1 or 2**
-    > - **provider-zone** - indicates that your VDC is stretched across multiple zones, for example **1(AE1) or 2(AE2)**
-
-    You can use VM location to locate individual VMs within the VDC. For more information, see [*How to use VM location in vCloud Director*](vmw-how-use-vm-location.md).
+    <!-- ![VDC location metadata](images/vmw-vcd10.1-vdc-location-metadata.png) -->
 
 4. When you're done, click **Cancel**.
 
 ***
+
+### A note about Synchronous Protection
+
+If you set up your VDC to use Synchronous Protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:
+
+- **provider-protection-synchronous** is **Yes**
+
+- **provider-site** - indicates that your VDC is stretched across both sites: **Farnborough or Corsham**
+
+- **provider-region** - indicates that your VDC is stretched across multiple regions, for example **1 or 2**
+
+- **provider-zone** - indicates that your VDC is stretched across multiple zones, for example **1(AE1) or 2(AE2)**
 
 ## Finding the location of a VDC using the vCloud API
 

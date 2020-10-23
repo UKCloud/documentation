@@ -4,7 +4,7 @@ description: Demonstrates how to use the VM location function within vCloud Dire
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 04/09/2020
+lastreviewed: 23/10/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: vmw-how-use-vm-location.md
 
 ## Overview
 
-The VM location function in vCloud Director/VMware Cloud Director enables you to identify where a specific virtual machine (VM) within your organisation is located within the UKCloud platform.
+The VM location function in vCloud Director/VMware Cloud Director enables you to identify where a specific virtual machine (VM) in your organisation is located within the UKCloud platform.
 
 This article describes the step-by-step instructions for obtaining this information, which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL security domains.
 
@@ -49,11 +49,6 @@ You can also use the [vCloud API](#obtaining-the-location-of-a-specific-vm-using
 
     ![Virtual Machines menu option](images/vmw-vcd-tab-vms.png)
 
-    > [!TIP]
-    > You can change the view from cards to list. If you need to search for the VM, click on the filter icon and enter the name of the VM.
-    > 
-    > ![Filter virtual machines](images/vmw-vcd-vms-filter.png)
-
 3. In the card for the VM, click **Details**.
 
     ![VM Details menu option](images/vmw-vcd-mnu-vm-details.png)
@@ -66,28 +61,21 @@ You can also use the [vCloud API](#obtaining-the-location-of-a-specific-vm-using
 
 ### [VMware Cloud Director 10.1](#tab/tabid-b)
 
-[confirm steps]
-
-1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC in which your VM is located. [confirm dashboard and whether there's a step before this]
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC in which your VM is located.
 
 2. In the left navigation panel, select **Virtual Machines**.
 
     ![Virtual Machines menu option](images/vmw-vcd10.1-tab-vms.png)
 
-    > [!TIP]
-    > You can change the view from cards to list. If you need to search for the VM, click on the filter icon and enter the name of the VM.
-    >
-    > ![Filter virtual machines](images/vmw-vcd10.1-vms-filter.png)
-
 3. In the card for the VM, click **Details**.
 
     ![VM Details menu option](images/vmw-vcd10.1-mnu-vm-details.png)
 
-4. Expand the *Advanced* section of the VM details to see *Metadata* information at the bottom.
+4. Select **Metadata**.
 
     ![VM details -- Metadata](images/vmw-vcd10.1-vm-location-metadata.png)
 
-    The location of the VM is displayed in the **Value** column for the **SkyscapeLocation** metadata tag.
+5. The location of the VM is displayed in the **Value** column for the **SkyscapeLocation** metadata tag.
 
 ***
 
@@ -99,7 +87,7 @@ The following has been created as an example script to obtain the VM location:
 
 https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxx/metadata
 
-Replace the "xxx" with the relevant VM ID.
+Replace the `xxx` with the relevant VM ID.
 
 ## Feedback
 
