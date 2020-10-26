@@ -29,7 +29,7 @@ The table provides an overview of the Cloud Enablement services available for VP
 
 &nbsp; | &nbsp;
 -------|-------
-**Use case** | You don't want to use the vCNS Edge VPN capability and want to  install your own
+**Use case** | You don't want to use the NSX edge gateway VPN capability and want to  install your own
 **Service type** | Connectivity
 **Security level** | Assured OFFICIAL
 **Hosted device** | VPN
