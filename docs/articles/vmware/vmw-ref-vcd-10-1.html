@@ -167,7 +167,14 @@
 <p>Some VMware Cloud Director features may be available in the sandbox that will not be enabled in UKCloud for VMware after the 10.1 upgrade. If there's a 10.1 feature that you're particularly interested in, contact your Service Delivery Manager to register interest so that we can consider it for our roadmap.</p>
 </div>
 <h2 id="known-issues">Known issues</h2>
-<p>For known issues with VMware Cloud Director 10.1, see the <a href="https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html">VMware Cloud Director 10.1 Release Notes</a>.</p>
+<p>Known issues you may experience following the upgrade to VMware Cloud Director 10.1 include:</p>
+<ul>
+<li><p>Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal. If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.</p>
+</li>
+<li><p>Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal.</p>
+</li>
+</ul>
+<p>For other known issues with VMware Cloud Director 10.1, see the <a href="https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html">VMware Cloud Director 10.1 Release Notes</a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
