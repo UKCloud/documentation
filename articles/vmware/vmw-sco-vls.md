@@ -3,16 +3,16 @@ title: VMware Licence Service Service Scope
 description: Outlines important details regarding the VMware Licence Service (VLS)
 services: vmware
 author: shall
-reviewer:
-lastreviewed: 07/08/2020
+reviewer: shall
+lastreviewed: 26/10/2020
 
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: VMware Licence Service Service Scope
-toc_fullpath: Service Scope/vmw-sco-vls.md
+toc_fullpath: Service Information/vmw-sco-vls.md
 toc_mdlink: vmw-sco-vls.md
 ---
 
