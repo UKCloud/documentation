@@ -31,7 +31,7 @@ Please note that ANY device placed within the UKCloud estate must be done so to 
 
 &nbsp; | &nbsp;
 -------|-------
-**Use case** | You may have complex systems that can not be virtualised (for example database clusters or legacy applications).</br>You may also have large amounts of storage you wish to host with us, so that you can integrate it with our UKCloud for VMware offering  
+**Use case** | You may have complex systems that cannot be virtualised (for example database clusters or legacy applications).</br>You may also have large amounts of storage you wish to host with us, so that you can integrate it with our UKCloud for VMware offering  
 **Service type** | Server/storage hosting
 **Security level** | Assured OFFICIAL and Elevated OFFICIAL
 **Hosted device** | Physical server or storage appliance
