@@ -6,13 +6,13 @@ author: shall
 reviewer:
 lastreviewed: 07/08/2020
 
-toc_rootlink: Service Scope
-toc_sub1: 
+toc_rootlink: Service Information
+toc_sub1: VMware Licence Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: VMware Licence Service Service Scope
-toc_fullpath: Service Scope/vmw-sco-vls.md
+toc_title: Service Scope
+toc_fullpath: Service Information/VMware Licence Service/vmw-sco-vls.md
 toc_mdlink: vmw-sco-vls.md
 ---
 

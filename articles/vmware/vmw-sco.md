@@ -5,13 +5,13 @@ services: vmware
 author: Steve Hall
 reviewer: Guy Martin
 lastreviewed: 26/06/2019
-toc_rootlink: Service Scope
-toc_sub1: 
+toc_rootlink: Service Information
+toc_sub1: UKCloud for VMware
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for VMware Service Scope
-toc_fullpath: Service Scope/vmw-sco.md
+toc_title: Service Scope
+toc_fullpath: Service Information/UKCloud for VMware/vmw-sco.md
 toc_mdlink: vmw-sco.md
 ---
 
