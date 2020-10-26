@@ -4,7 +4,7 @@ description: outlines important details regarding Cloud enablement for server / 
 services: enablement
 author: Steve Hall
 reviewer: Nick Stobbart
-lastreviewed: 20/10/2020 14:57:40
+lastreviewed: 20/10/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -56,7 +56,7 @@ The VPN service provides up to two ports:
 
 - The connection is into a shared switch.
 
-## What are the port speed of connection?
+## What are the port speeds of connection?
 
 - In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
 
