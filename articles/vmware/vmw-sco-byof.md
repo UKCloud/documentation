@@ -5,13 +5,13 @@ services: other
 author: shall
 reviewer: sdelaney
 lastreviewed: 06/10/2020
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Bring Your Own Firewall Service Scope
-toc_fullpath: Service Scope/vmw-sco-byof.md
+toc_fullpath: Service Information/vmw-sco-byof.md
 toc_mdlink: vmw-sco-byof.md
 ---
 

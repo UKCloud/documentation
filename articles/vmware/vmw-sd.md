@@ -6,12 +6,12 @@ author: shighmoor
 reviewer: shighmoor
 lastreviewed: 21/09/2020
 toc_rootlink: Service Information
-toc_sub1: 
+toc_sub1: UKCloud for VMware
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for VMware Service Definition
-toc_fullpath: Service Information/vmw-sd.md
+toc_title: Service Definition
+toc_fullpath: Service Information/UKCloud for VMware/vmw-sd.md
 toc_mdlink: vmw-sd.md
 ---
 

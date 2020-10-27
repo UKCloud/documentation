@@ -6,12 +6,12 @@ author: shighmoor
 reviewer:
 lastreviewed: 25/09/2020
 toc_rootlink: Service Information
-toc_sub1: 
+toc_sub1: UKCloud for VMware
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Pricing information for UKCloud for VMware
-toc_fullpath: Service Information/vmw-ref-pricing.md
+toc_title: Pricing information
+toc_fullpath: Service Information/UKCloud for VMware/vmw-ref-pricing.md
 toc_mdlink: vmw-ref-pricing.md
 ---
 
