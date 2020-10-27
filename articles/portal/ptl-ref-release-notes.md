@@ -19,6 +19,16 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.4.0
+
+Date: 28th October 2020
+
+Details:
+
+- Stop displaying VM storage information in the Portal MyVMs pages
+- Stop returning VM storage values within the Portal API.
+  Zero values are returned to avoid breaking software that expects the field.
+
 ## Release 2.2.2
 
 Date: 15th September 2020 
