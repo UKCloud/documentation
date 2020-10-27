@@ -98,9 +98,9 @@ $NewVNet = Get-AzureRmVirtualNetwork | Where-Object -FilterScript { $_.Name -lik
 $NewSubnet = Get-AzureRmVirtualNetworkSubnetConfig -VirtualNetwork $NewVNet -Name $NewSubnetName
 
 # Create new VM networking resources
-$NewPublicIP = New-AzureRmPublicIpAddress -Name $NewPublicIpName -Location $NewVNet.Location -ResourceGroupName $NewVNet.ResourceGroupName -Sku $PublicIp.Sku.Name -AllocationMethod $PublicIp.PublicIpAllocationMethod
-$NewIPConfig = New-AzureRmNetworkInterfaceIpConfig -Subnet $NewSubnet -Name "ipconfig2" -Primary -PrivateIpAddress $NewPrivateIP -PublicIpAddress $NewPublicIP
-$NewNic = New-AzureRmNetworkInterface -Name $NewNicName -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location -IpConfiguration $NewIPConfig -NetworkSecurityGroupId $Nic.NetworkSecurityGroup.Id -Force
+$NewPublicIp = New-AzureRmPublicIpAddress -Name $NewPublicIpName -Location $NewVNet.Location -ResourceGroupName $NewVNet.ResourceGroupName -Sku $PublicIp.Sku.Name -AllocationMethod $PublicIp.PublicIpAllocationMethod
+$NewIpConfig = New-AzureRmNetworkInterfaceIpConfig -Subnet $NewSubnet -Name "ipconfig2" -Primary -PrivateIpAddress $NewPrivateIp -PublicIpAddress $NewPublicIp
+$NewNic = New-AzureRmNetworkInterface -Name $NewNicName -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location -IpConfiguration $NewIpConfig -NetworkSecurityGroupId $Nic.NetworkSecurityGroup.Id -Force
 
 # Retrieve VM data disk details
 if ($VM.StorageProfile.DataDisks) {
@@ -154,7 +154,7 @@ Remove-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
 
 # Create the new VM from the new VM configuration
 Write-Output -InputObject "Creating new virtual machine"
-New-AzureRmVm -VM $NewVMConfig -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location
+New-AzureRmVM -VM $NewVMConfig -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location
 Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 Write-Output -InputObject "The virtual machine has been created successfully"
 </code></pre>
