@@ -110,11 +110,11 @@ The following are NOT eligible under VLS:
 
 VLS requires the mandatory installation of the vCloud Usage Meter on the customer's environment.
 
-- For customers using the committed VLS billing model, the Usage Meter is required for audit purposes and to determine when an uncommitted provision would be a lower cost.
+- For customers on a fixed price package, the Usage Meter is required for audit purposes and to determine when an uncommitted provision would be a lower cost.
 
-- For customers using the uncommitted VLS billing model, the Usage Meter captures all the VMware usage covered by the VLS agreement during the month and creates a report with the number of units consumed for each VMware bundle. This report of total units is used by UKCloud to calculate the customer's invoice for each month and enables the customer to be flexible on what they use in any given month, rather than be committed up front.
+- For customers on a fully metered package, the Usage Meter captures all the VMware usage covered by the VLS agreement during the month and creates a report with the number of units consumed for each VMware bundle. This report of total units is used by UKCloud to calculate the customer's invoice for each month and enables the customer to be flexible on what they use in any given month, rather than be committed up front.
 
-- If both committed and uncommitted elements exist in the same environment, then it will be necessary to deploy two Usage Meters.
+- If both fixed price and fully metered elements exist in the same environment, then it will be necessary to deploy two Usage Meters.
 
 UKCloud will make the URL of the recommended Usage Meter available to the customer.
 
@@ -189,11 +189,15 @@ The customer will receive a monthly report from their Service Delivery Manager b
 
 ### Cost options
 
-VLS is priced per point consumed and is charged on either a monthly "uncommitted" basis or upfront "committed" basis.
+VLS is priced per point consumed. There are two payment options available for VLS. **Committed VLS billing** mimics normal annual support payments and is a pre-payment of the estimated one-year consumption. **Uncommitted VLS billing** is a genuine pay-as-you-go model where monthly consumption is recorded and then bills issued accordingly.
 
-- **Committed VLS billing.** This is the most cost-effective method of purchasing points as it offers additional discounting. The customer will commit to an amount based on estimated usage and this will be invoiced and paid up front. The customer then has 24 months in which to consume this usage, which will be drawn down against the initial commitment. Each month, once the customer has reported their usage, their Service Delivery Manager will report on the cost for that month and the points used to ensure that the customer is aware of the amount of points used and what is remaining. At any point, the customer can top up the amount of committed points with either an additional committed order or using flexible monthly billing on a pay as you go basis as detailed below.
+- **Committed VLS billing.** This is the most cost-effective method of purchasing points as it offers additional discounting. This approach can be used with both the fixed price and fully metered packages (or both, where appropriate). An estimated annual consumption is calculated using the current usage metrics provided by the customer. This amount is then invoiced and paid up front. Each quarter, using the reported consumption figures, the Service Delivery Manager will report on the amount consumed to date and the remaining value left in the pre-payment. Monthly reports can be requested as the pre-payment approaches zero to ensure that the top amount is applied in good time. At any point, the customer can top up the amount in pre-payment with a new order or, if on the fully metered package, switch to uncommitted billing (pay-as-you-go), as detailed below (note this is not available for the fixed price package).
 
-- **Uncommitted VLS billing.** To avoid upfront costs, the customer can opt for flexible monthly pay as you go billing. Once UKCloud receives the monthly Usage Meter report, this will be calculated and charged on the next month's invoice (first working day of the month). Although this option does not offer a discounted rate, it enables the customer to be flexible on their usage and may suit customers who are slowing or reducing their on-premises VMware estate and migrating to cloud as they have no committed spend. They can therefore cease to use the service at any time, only paying for their usage up to that point.
+    Whilst the estimated one year consumption calculation is accurate, this is dependent on there being no changes to the environment or usage. Therefore, an increase in usage would result in the committed value expiring prior to 12 months, or likewise a reduction in consumption would result in the committed value covering greater than 12 months. For this reason each committed order is valid for consumption over the next 24 months.
+
+- **Uncommitted VLS billing.** To avoid upfront costs, the customer can opt for flexible monthly pay-as-you-go billing. Once UKCloud receives the monthly Usage Meter report, this will be calculated and charged on the next month's invoice (first working day of the month). Although this option does not offer a discounted rate, it enables the customer to be flexible on their usage and may suit customers who are reducing their on-premises VMware estate and migrating to cloud as they have no committed spend. They can therefore cease to use the service at any time, only paying for their usage up to that point.
+
+In both of the above scenarios, where for whatever reason a usage report is unavailable within the prescribed time after the end of each month, UKCloud will report and invoice based on either the prior month's confirmed usage, or the initial estimated consumption as appropriate.
 
 For full pricing information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
