@@ -114,39 +114,39 @@ if ($VM.StorageProfile.DataDisks) {
 }
 
 # Create new VM configuration
-$NewVMConfig = New-AzureRmVMConfig -VMName $VMName -VMSize $VM.HardwareProfile.VmSize
+$NewVmConfig = New-AzureRmVMConfig -VMName $VMName -VMSize $VM.HardwareProfile.VmSize
 
 if ($ManagedDisks) {
     # Add OS disk to new VM configuration
     if ($VM.OsProfile.WindowsConfiguration) {
-        $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Windows
+        $NewVmConfig = Set-AzureRmVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Windows
     }
     else {
-        $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Linux
+        $NewVmConfig = Set-AzureRmVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Linux
     }
     # Add data disk(s) to new VM configuration
     foreach ($Disk in $Disks) {
-        $NewVMConfig = Add-AzureRmVMDataDisk -VM $NewVMConfig -ManagedDiskId $Disk.Id -CreateOption "Attach" -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
+        $NewVmConfig = Add-AzureRmVMDataDisk -VM $NewVmConfig -ManagedDiskId $Disk.Id -CreateOption "Attach" -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
         $Lun++
     }
 }
 else {
     # Add OS disk to new VM configuration
     if ($VM.OsProfile.WindowsConfiguration) {
-        $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Windows
+        $NewVmConfig = Set-AzureRmVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Windows
     }
     else {
-        $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Linux
+        $NewVmConfig = Set-AzureRmVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Linux
     }
     # Add data disk(s) to new VM configuration
     foreach ($Disk in $Disks) {
-        $NewVMConfig = Add-AzureRmVMDataDisk -VM $NewVMConfig -Name $Disk.Name -CreateOption "Attach" -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
+        $NewVmConfig = Add-AzureRmVMDataDisk -VM $NewVmConfig -Name $Disk.Name -CreateOption "Attach" -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
         $Lun++
     }
 }
 
 # Add new NIC to new VM configuration
-$NewVMConfig = Add-AzureRmVMNetworkInterface -VM $NewVMConfig -NetworkInterface $NewNic
+$NewVmConfig = Add-AzureRmVMNetworkInterface -VM $NewVmConfig -NetworkInterface $NewNic
 
 # Remove the old VM
 Write-Output -InputObject "Removing old virtual machine"
@@ -154,7 +154,7 @@ Remove-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
 
 # Create the new VM from the new VM configuration
 Write-Output -InputObject "Creating new virtual machine"
-New-AzureRmVM -VM $NewVMConfig -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location
+New-AzureRmVM -VM $NewVmConfig -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location
 Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 Write-Output -InputObject "The virtual machine has been created successfully"
 </code></pre>
