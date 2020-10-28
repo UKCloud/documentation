@@ -23,6 +23,8 @@ This article provides a list of completed Portal releases.
 
 Date: 28th October 2020
 
+Feature update
+
 Details:
 
 - Stop displaying VM storage information in the Portal MyVMs pages
