@@ -2,9 +2,9 @@
 title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
-author: Sue Highmoor
-reviewer: Mark Young
-lastreviewed: 15/09/2020
+author: shighmoor
+reviewer: ccouzens
+lastreviewed: 28/10/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
