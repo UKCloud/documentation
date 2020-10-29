@@ -2,9 +2,9 @@
 title: UKCloud Portal API Reference Guide
 description: Shows how to interact with the UKCloud Portal via use of an application programming interface (API)
 services: portal
-author: Sue Highmoor
-reviewer:
-lastreviewed: 20/07/2018 12:12:33
+author: shighmoor
+reviewer: ccouzens
+lastreviewed: 29/10/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
