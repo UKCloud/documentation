@@ -2,9 +2,9 @@
 title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
-author: Sue Highmoor
-reviewer: Mark Young
-lastreviewed: 15/09/2020
+author: shighmoor
+reviewer: ccouzens
+lastreviewed: 28/10/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,20 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 2.4.0
+
+Date: 28th October 2020
+
+Feature update
+
+Details:
+
+- Stop displaying VM storage information in the Portal MyVMs pages
+
+- Stop returning VM storage values within the Portal API
+
+- Zero values are returned to avoid breaking software that expects the field
 
 ## Release 2.2.2
 
