@@ -2,9 +2,9 @@
 title: UKCloud Portal API Reference Guide
 description: Shows how to interact with the UKCloud Portal via use of an application programming interface (API)
 services: portal
-author: Sue Highmoor
-reviewer:
-lastreviewed: 20/07/2018 12:12:33
+author: shighmoor
+reviewer: ccouzens
+lastreviewed: 29/10/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -127,7 +127,7 @@ curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.sk
 Returns a list of up to 10 VMs.
 
 > [!NOTE]
-> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
+> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
 
 ### API version
 
@@ -183,30 +183,30 @@ Returns a response with a list of up to 10 VMs
      "name":"My vApp",
      "ps":"On",
      "total_vms":1,
-     "month_to_date":"£0.15",
-     "estimated_monthly_total":"£0.34"
+     "month_to_date":"£0.00",
+     "estimated_monthly_total":"£0.00"
     ],
     "vms":
     ["_id":1,
      "urn":"urn:vcloud:vm:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
      "name":"My VM",
-     "size":"small",
+     "size":null,
      "ps":"On",
      "os":"Microsoft Windows Server 2008 R2 (64-bit)",
      "cpu":"2x2GHz",
      "mem":"4096MB",
-     "storage":"50GB",
+     "storage":"0GB",
      "created_at":"01/01/2015 09:00",
      "updated_at":"01/01/2015 09:00",
-     "month_to_date":"£0.15",
-     "estimated_monthly_total":"£0.34",
+     "month_to_date":"£0.00",
+     "estimated_monthly_total":"£0.00",
      "comment":null,
      "last_backup_status":"Successful",
      "in_backup":true,
      "last_backup":"Completed on the night of: 01/01/2015",
      "retention_length":14,
-     "billed_hours_powered_on":8,
-     "billed_hours_powered_off":14,
+     "billed_hours_powered_on":0,
+     "billed_hours_powered_off":0,
      "backups":
      [{"status":"Completed",
        "backup_slot":"night of: 01/01/2015",
@@ -361,7 +361,7 @@ Returns an array of accounts with the ID and name.
 Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.
 
 > [!NOTE]
-> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
+> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
 
 ### API version
 
@@ -433,16 +433,16 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
               "VMs": [
                 {
                   “_id”: 2
-                  "billedHoursPoweredOff": 443,
+                  "billedHoursPoweredOff": 0,
                   "billedHoursPoweredOn": 0,
-                  "estimatedMonthlyTotal": "4.88",
+                  "estimatedMonthlyTotal": "0.00",
                   "memory": 16384,
-                  "monthToDate": "2.91",
+                  "monthToDate": "0.00",
                   "name": "RedHat-v6.4-x86_64",
                   "numberOfCPUs": 4,
                   "operatingSystem": "Red Hat Enterprise Linux 6 (64-bit)",
                   "powerStatus": "POWERED_OFF",
-                  "storage": 65536,
+                  "storage": 0,
                   "urn": "urn:vcloud:vm:3272ed5b-8e59-4ce4-bc10-5b575fd25787",
                   "inBackup": true,
                   "lastBackupStatus": "Successful",
@@ -795,7 +795,7 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
 Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).
 
 > [!NOTE]
-> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
+> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
 
 ### API version
 
@@ -873,7 +873,7 @@ Returns a list of VDCs, vApps and VMs.
               "operatingSystem": "Ubuntu",
               "numberOfCPUs": 1,
               "memory": 512,
-              "storage": 1024,
+              "storage": 0,
               "lastBackupStatus": "Excluded from backup",
               "inBackup": false,
               "lastBackup": "No backup",
