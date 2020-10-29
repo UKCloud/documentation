@@ -28,8 +28,10 @@ Feature update
 Details:
 
 - Stop displaying VM storage information in the Portal MyVMs pages
-- Stop returning VM storage values within the Portal API.
-  Zero values are returned to avoid breaking software that expects the field.
+
+- Stop returning VM storage values within the Portal API
+
+- Zero values are returned to avoid breaking software that expects the field
 
 ## Release 2.2.2
 
