@@ -58,8 +58,6 @@
         href: oshift-how-use-portworx-shared-volumes.md
 - name: Reference
   items:
-  - name: DNS zone forwarding in OpenShift clusters
-    href: oshift-ref-dns-zone-forwarding.md
   - name: Lifecycle and patch management
     href: oshift-ref-lifecycle.md
   - name: Making the most of your UKCloud for OpenShift trial
@@ -72,6 +70,8 @@
       href: oshift-ref-scaling.md
     - name: Custom dashboards provided with aggregated logging Kibana
       href: oshift-ref-kibana-dashboards.md
+    - name: DNS zone forwarding in OpenShift clusters
+      href: oshift-ref-dns-zone-forwarding.md
     - name: OpenShift integrated cluster monitoring
       href: oshift-ref-cluster-monitoring.md
     - name: Security best practices
