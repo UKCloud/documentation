@@ -25,11 +25,11 @@ In OpenShift version 4, updates of the cluster and operating system of the nodes
 
 There are three update channels available to choose from:
 
-- **Candidate** - This is an unsupported channel that will provide release candidate z stream releases. Do not update via this channel or both UKCloud and Red Hat will be unable to support the cluster.
+- **Stable** - This is the recommended channel for production clusters. Updates are released to this channel after data has been collected by Red Hat from customers running updates from the fast channel and stability of the updates has been confirmed.
 
 - **Fast** - This channel is fully supported. Updates are released to this channel after performing well in the candidate channel.
 
-- **Stable** - This is the recommended channel for production clusters. Updates are released to this channel after data has been collected by Red Hat from customers running updates from the fast channel and stability of the updates has been confirmed.
+- **Candidate** - This is an unsupported channel that will provide release candidate z stream releases. Do not update via this channel or both UKCloud and Red Hat will be unable to support the cluster.
 
 > [!NOTE]
 > UKCloud asks that all customers remain on the stable channel for production clusters. We recommend using the fast channel only if you require specific bug fixes or security patches.
@@ -53,6 +53,8 @@ There are three update channels available to choose from:
 4. In the *Update Cluster* dialog box, from the **Select New Version** list, select the version to upgrade to, then click **Update**.
 
     ![update screenshot](images/oshift-v4-update.png)
+
+5. This will return you to the cluster settings screen where you can see the updates progress represented as a percentage.
 
 ## Further information
 
