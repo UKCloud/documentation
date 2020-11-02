@@ -2,9 +2,9 @@
 title: Dedicated Compute v2 Service Scope
 description: Outlines important details regarding Dedicated Compute v2
 services: dedicated-compute
-author: Steve Hall
-reviewer: Guy Martin
-lastreviewed: 01/07/2019
+author: shall
+reviewer: gmartin
+lastreviewed: 02/11/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -39,9 +39,9 @@ This service is designed for customers who:
 
 We deliver Dedicated Compute v2 by providing you with dedicated physical hosts on which you control resource allocation.
 
-The initial Dedicated Compute purchase is a starter pack consisting of two physical hosts. The standard host specification is dual 16 core and 512 GiB of RAM.
+The initial Dedicated Compute purchase is a starter pack consisting of two physical hosts. The standard host specification is dual 18 core and 512 GiB of RAM.
 
-You can then scale your estate by purchasing additional upgrade packs (an upgrade pack consists of  1 x dual 16 core and 512 GiB of RAM compute host). After nine upgrade packs, you must buy another starter pack.
+You can then scale your estate by purchasing additional upgrade packs (an upgrade pack consists of  1 x dual 18 core and 512 GiB of RAM compute host). After nine upgrade packs, you must buy another starter pack.
 
 You choose Tier 1 and Tier 2 storage for your VMs, both of which can include a backup service. For pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
@@ -59,11 +59,11 @@ During a failure scenario, VMs will be restarted on surviving hosts within the D
 
 The table below shows the configuration, the resources available to a customer, the number of physical servers in the configuration, and the UKCloud resources reserved to run it.
 
-&nbsp;                             | Total resources         | Resource reservation        | Customer available resources
------------------------------------|-------------------------|-----------------------------|-----------------------------
-**Starter pack**                   | 64 cores, 1024 GiB RAM  | 50% (32 core , 512 GiB RAM) | 32 cores, 512 GiB RAM
-**Starter pack + 1 upgrade pack**  | 96 cores, 1536 GiB RAM  | 33% (32 core , 512 GiB RAM) | 64 cores, 1024 GiB RAM
-**Starter pack + 2 upgrade packs** | 128 cores, 2048 GiB RAM | 25% (32 core , 512 GiB RAM) | 96 cores, 1536 GiB RAM
+&nbsp;                             | Total resources          | Resource reservation       | Customer available resources
+-----------------------------------|--------------------------|----------------------------|-----------------------------
+**Starter pack**                   | 72 cores, 1024 GiB RAM   | 50% (36 core, 512 GiB RAM) | 36 cores, 512 GiB RAM
+**Starter pack + 1 upgrade pack**  | 108 cores, 1536 GiB RAM  | 33% (36 core, 512 GiB RAM) | 72 cores, 1024 GiB RAM
+**Starter pack + 2 upgrade packs** | 144 cores, 2048 GiB RAM  | 25% (36 core, 512 GiB RAM) | 108 cores, 1536 GiB RAM
 
 ## Resource utilisation
 
@@ -73,7 +73,7 @@ This means that in general operation within the starter pack, there is a 50% uti
 
 ![50% utilisation of blades](images/vmw-dc-contingency1.png)
 
-However, you can create VMs of any size and shape you require, up to the maximum size of the physical capacity of one host - 32 cores 512 GiB RAM.
+However, you can create VMs of any size and shape you require, up to the maximum size of the physical capacity of one host - 36 cores 512 GiB RAM.
 
 A VM cannot span across physical hosts. If you create a VM larger than 50% of the host capacity, the Dedicated Compute v2 installation may carry more of the contingency capacity of one physical host than of the others:
 
