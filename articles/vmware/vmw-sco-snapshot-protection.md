@@ -5,13 +5,13 @@ services: vmware
 author: Steve Hall
 reviewer: George Smith
 lastreviewed: 28/10/2019 13:50:39
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Snapshot Protection Service Scope
-toc_fullpath: Service Scope/vmw-sco-snapshot-protection.md
+toc_fullpath: Service Information/vmw-sco-snapshot-protection.md
 toc_mdlink: vmw-sco-snapshot-protection.md
 ---
 

@@ -93,16 +93,22 @@ The following API versions are still available:
 
 ### Sandbox for testing vCloud API
 
-UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/cloud/>) has been upgraded to vCloud Director 10.1.
+UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/login/>) has been upgraded to vCloud Director 10.1.2.
 
-To gain access to the 10.1 sandbox, raise a Service Request via My Calls on the UKCloud Portal.
+To gain access to the sandbox, raise a Service Request via My Calls on the UKCloud Portal.
 
 > [!NOTE]
 > Some VMware Cloud Director features may be available in the sandbox that will not be enabled in UKCloud for VMware after the 10.1 upgrade. If there's a 10.1 feature that you're particularly interested in, contact your Service Delivery Manager to register interest so that we can consider it for our roadmap.
 
 ## Known issues
 
-For known issues with VMware Cloud Director 10.1, see the [VMware Cloud Director 10.1 Release Notes](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html).
+Known issues you may experience following the upgrade to VMware Cloud Director 10.1 include:
+
+- Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal. If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.
+
+- Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal.
+
+For other known issues with VMware Cloud Director 10.1, see the [VMware Cloud Director 10.1 Release Notes](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html).
 
 ## Feedback
 

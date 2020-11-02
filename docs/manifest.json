@@ -429,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-move-vm-new-vnet-ps.html",
-          "hash": "YaSTgYXYqryEeAeDKmDnvg=="
+          "hash": "8bkUwTvHcwxBnhMq7dQt/w=="
         }
       },
       "is_incremental": false,
@@ -2544,7 +2544,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-gs.html",
-          "hash": "Rvh+dP1bkUSPYyTp4mWJ4A=="
+          "hash": "y7yKx2MrhWJM9zct8/Dyuw=="
         }
       },
       "is_incremental": false,
@@ -5550,6 +5550,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-patching-patchingcycle.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-patching-patchingcycle.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/managed-services/images/man-sd-managed-it-ops.png",
       "output": {
         "resource": {
@@ -5565,6 +5576,18 @@
       "output": {
         "resource": {
           "relative_path": "articles/managed-services/images/ukc-services-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-antivirus-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-antivirus-faq.html",
+          "hash": "r3vlGBlBVMSgGJFB19Z+Vw=="
         }
       },
       "is_incremental": false,
@@ -5588,7 +5611,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-faq.html",
-          "hash": "nb4eohJI9aMKfh3lC2hMIg=="
+          "hash": "aCgK8xyZ6hI0zFRoGTG20g=="
         }
       },
       "is_incremental": false,
@@ -5608,11 +5631,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-monitoring-how-use-customer-polling.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-monitoring-how-use-customer-polling.html",
+          "hash": "zBWDamnQWkdFBOWQg/ViDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-monitoring-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-sco.html",
-          "hash": "1pJAvGvYm+IP11rnmkUqsw=="
+          "hash": "O75Op4+2Nqxk5nLzTB4tlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-patching-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-patching-faq.html",
+          "hash": "i5K1rHTpzGtAy7MOF0WMzQ=="
         }
       },
       "is_incremental": false,
@@ -5744,7 +5791,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "x/00AfvvAo4FfjSyQGA25w=="
+          "hash": "XTR09FB3OhF+wis3HFAWTA=="
         }
       },
       "is_incremental": false,
@@ -9517,7 +9564,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-faq.html",
-          "hash": "rx+0UjZipka0Z/3lK7Kf1Q=="
+          "hash": "CKe+ET0mRrZZumpDvpV+RQ=="
         }
       },
       "is_incremental": false,
@@ -9637,7 +9684,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-solaris-aix.html",
-          "hash": "JGNLcFShsglHrq7ndxW6sQ=="
+          "hash": "g7uYf+qeM3eTU8jTQS3t/A=="
         }
       },
       "is_incremental": false,
@@ -9685,7 +9732,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sd.html",
-          "hash": "Id66RKVe+zfqvKOLtz5m0Q=="
+          "hash": "rBdjVz3WBmstrrvSMfc5aA=="
         }
       },
       "is_incremental": false,
@@ -11988,7 +12035,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-portal-api.html",
-          "hash": "Gma8FB7OJWwHMFwzNkVSpA=="
+          "hash": "a/0yBV6EFhMR/Hzdh/Rn2A=="
         }
       },
       "is_incremental": false,
@@ -12000,7 +12047,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-release-notes.html",
-          "hash": "/obtSTo6CEEPZS+VgyTxlA=="
+          "hash": "TW/Y6Y0M8OwcY7pUA3jVEA=="
         }
       },
       "is_incremental": false,
@@ -19204,7 +19251,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "jePfPcoTq1aThHjw4tD+hw=="
+          "hash": "+uE+Bs0JusnNXotapdYP/g=="
         }
       },
       "is_incremental": false,
@@ -20064,18 +20111,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-fix-unable-to-vapps.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-fix-unable-to-vapps.html",
-          "hash": "Az90zoxaYJTZMa9K6xj8YA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-ipsec-vpn.md",
       "output": {
         ".html": {
@@ -20248,7 +20283,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-10-1.html",
-          "hash": "LrNnxyWK6KDl2GD7JoQp7g=="
+          "hash": "xOdsCvp0JLi4yEGHMsrn1g=="
         }
       },
       "is_incremental": false,
@@ -20567,7 +20602,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 448,
+          "total_file_count": 450,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

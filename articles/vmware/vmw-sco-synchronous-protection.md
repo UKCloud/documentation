@@ -5,13 +5,13 @@ services: vmware
 author: Steve Hall
 reviewer: Guy Martin
 lastreviewed: 22/03/2019
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Synchronous Protection Service Scope
-toc_fullpath: Service Scope/vmw-sco-synchronous-protection.md
+toc_fullpath: Service Information/vmw-sco-synchronous-protection.md
 toc_mdlink: vmw-sco-synchronous-protection.md
 ---
 

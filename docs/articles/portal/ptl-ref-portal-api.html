@@ -228,7 +228,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 <p>Returns a list of up to 10 VMs.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint.</p>
+<p>The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint. For storage information, use the vCloud Director API.</p>
 </div>
 <h3 id="api-version-1">API version</h3>
 <p>v1</p>
@@ -260,30 +260,30 @@ cookies = resp.env[:response_headers]['set-cookie']
      &quot;name&quot;:&quot;My vApp&quot;,
      &quot;ps&quot;:&quot;On&quot;,
      &quot;total_vms&quot;:1,
-     &quot;month_to_date&quot;:&quot;£0.15&quot;,
-     &quot;estimated_monthly_total&quot;:&quot;£0.34&quot;
+     &quot;month_to_date&quot;:&quot;£0.00&quot;,
+     &quot;estimated_monthly_total&quot;:&quot;£0.00&quot;
     ],
     &quot;vms&quot;:
     [&quot;_id&quot;:1,
      &quot;urn&quot;:&quot;urn:vcloud:vm:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;,
      &quot;name&quot;:&quot;My VM&quot;,
-     &quot;size&quot;:&quot;small&quot;,
+     &quot;size&quot;:null,
      &quot;ps&quot;:&quot;On&quot;,
      &quot;os&quot;:&quot;Microsoft Windows Server 2008 R2 (64-bit)&quot;,
      &quot;cpu&quot;:&quot;2x2GHz&quot;,
      &quot;mem&quot;:&quot;4096MB&quot;,
-     &quot;storage&quot;:&quot;50GB&quot;,
+     &quot;storage&quot;:&quot;0GB&quot;,
      &quot;created_at&quot;:&quot;01/01/2015 09:00&quot;,
      &quot;updated_at&quot;:&quot;01/01/2015 09:00&quot;,
-     &quot;month_to_date&quot;:&quot;£0.15&quot;,
-     &quot;estimated_monthly_total&quot;:&quot;£0.34&quot;,
+     &quot;month_to_date&quot;:&quot;£0.00&quot;,
+     &quot;estimated_monthly_total&quot;:&quot;£0.00&quot;,
      &quot;comment&quot;:null,
      &quot;last_backup_status&quot;:&quot;Successful&quot;,
      &quot;in_backup&quot;:true,
      &quot;last_backup&quot;:&quot;Completed on the night of: 01/01/2015&quot;,
      &quot;retention_length&quot;:14,
-     &quot;billed_hours_powered_on&quot;:8,
-     &quot;billed_hours_powered_off&quot;:14,
+     &quot;billed_hours_powered_on&quot;:0,
+     &quot;billed_hours_powered_off&quot;:0,
      &quot;backups&quot;:
      [{&quot;status&quot;:&quot;Completed&quot;,
        &quot;backup_slot&quot;:&quot;night of: 01/01/2015&quot;,
@@ -379,7 +379,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 <p>Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint.</p>
+<p>The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint. For storage information, use the vCloud Director API.</p>
 </div>
 <h3 id="api-version-4">API version</h3>
 <p>v1</p>
@@ -450,16 +450,16 @@ cookies = resp.env[:response_headers]['set-cookie']
               &quot;VMs&quot;: [
                 {
                   “_id”: 2
-                  &quot;billedHoursPoweredOff&quot;: 443,
+                  &quot;billedHoursPoweredOff&quot;: 0,
                   &quot;billedHoursPoweredOn&quot;: 0,
-                  &quot;estimatedMonthlyTotal&quot;: &quot;4.88&quot;,
+                  &quot;estimatedMonthlyTotal&quot;: &quot;0.00&quot;,
                   &quot;memory&quot;: 16384,
-                  &quot;monthToDate&quot;: &quot;2.91&quot;,
+                  &quot;monthToDate&quot;: &quot;0.00&quot;,
                   &quot;name&quot;: &quot;RedHat-v6.4-x86_64&quot;,
                   &quot;numberOfCPUs&quot;: 4,
                   &quot;operatingSystem&quot;: &quot;Red Hat Enterprise Linux 6 (64-bit)&quot;,
                   &quot;powerStatus&quot;: &quot;POWERED_OFF&quot;,
-                  &quot;storage&quot;: 65536,
+                  &quot;storage&quot;: 0,
                   &quot;urn&quot;: &quot;urn:vcloud:vm:3272ed5b-8e59-4ce4-bc10-5b575fd25787&quot;,
                   &quot;inBackup&quot;: true,
                   &quot;lastBackupStatus&quot;: &quot;Successful&quot;,
@@ -807,7 +807,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 <p>Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint.</p>
+<p>The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint. For storage information, use the vCloud Director API.</p>
 </div>
 <h3 id="api-version-5">API version</h3>
 <p>v1</p>
@@ -881,7 +881,7 @@ cookies = resp.env[:response_headers]['set-cookie']
               &quot;operatingSystem&quot;: &quot;Ubuntu&quot;,
               &quot;numberOfCPUs&quot;: 1,
               &quot;memory&quot;: 512,
-              &quot;storage&quot;: 1024,
+              &quot;storage&quot;: 0,
               &quot;lastBackupStatus&quot;: &quot;Excluded from backup&quot;,
               &quot;inBackup&quot;: false,
               &quot;lastBackup&quot;: &quot;No backup&quot;,

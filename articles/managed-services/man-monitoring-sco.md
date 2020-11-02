@@ -47,7 +47,7 @@ The following table outlines the scope of Managed Monitoring as a Service:
 
 | Monitoring Element                     | Detail |
 |----------------------------------------|--------|
-| Event Monitors                         | - Ping check <BR> - SNMP check  <BR> - Application port checks <BR> - Deviation of operating system service from an 'agreed good' status <BR> - Webhooks* (only HTTP/HTTPS RestAPI inbound to UKCloud)|
+| Event Monitors                         | - Ping check <BR> - SNMP check  <BR> - Open port check <BR> - Deviation of Windows Server service from an 'agreed good' status <BR> - URL response check <BR>- HTTPS certificate expiry check<BR> - Webhooks\* (only HTTP/HTTPS RestAPI inbound to UKCloud)|
 | Compute, Disk, Memory (CDM) Monitoring | Reactive monitoring and alerting  of Compute, Disk and Memory capacity events. <BR> Thresholds will initially be set with default values unless otherwise advised by the customer.  |
 | Alerting                               | UKCloud will alert customers via their chosen notification method (support ticket with email notification or phone escalation) based on a threshold breach of one of the above elements. |
 

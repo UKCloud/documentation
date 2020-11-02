@@ -57,7 +57,7 @@ We will reserve at least one physical host's worth of resources from your alloca
 
 During a failure scenario, VMs will be restarted on surviving hosts within the Dedicated Compute v2 cluster. UKCloud is not responsible for any performance degradation of VMs in the Dedicated Compute v2 cluster caused during a failure scenario due to over contention in the remaining hosts.
 
-The table below shows the configuration, the resources available to a customer, the number of physical blades in the configuration, and the UKCloud resources reserved to run it.
+The table below shows the configuration, the resources available to a customer, the number of physical servers in the configuration, and the UKCloud resources reserved to run it.
 
 &nbsp;                             | Total resources         | Resource reservation        | Customer available resources
 -----------------------------------|-------------------------|-----------------------------|-----------------------------

@@ -36,6 +36,8 @@
     href: man-sd-managed-it-ops.md
   - name: Anti-Virus as a Service
     items:
+    - name: Anti-Virus as a Service FAQs
+      href: man-antivirus-faq.md
     - name: Anti-Virus as a Service Service Scope
       href: man-antivirus-sco.md
   - name: Managed Monitoring as a Service
@@ -46,7 +48,11 @@
       href: man-monitoring-faq.md
     - name: Managed Monitoring as a Service Service Scope
       href: man-monitoring-sco.md
+    - name: Use your own polling (monitoring) tooling
+      href: man-monitoring-how-use-customer-polling.md
   - name: Patching as a Service
     items:
+    - name: Patching as a Service FAQs
+      href: man-patching-faq.md
     - name: Patching as a Service Service Scope
       href: man-patching-sco.md

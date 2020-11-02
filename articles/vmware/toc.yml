@@ -154,8 +154,6 @@
     href: vmw-ref-comparison-hyperscalers.md
   - name: Edge gateways and high availability
     href: vmw-ref-edge-ha.md
-  - name: Fix for customers unable to upload and download vApps or catalog items
-    href: vmw-ref-fix-unable-to-vapps.md
   - name: Fixing your advanced gateway if you encounter NullPointerException error
     href: vmw-ref-trouble-null-pointer.md
   - name: Fixing your IPsec VPN following upgrade to NSX 6.4
@@ -200,14 +198,6 @@
     href: vmw-ref-windows-server-activation.md
 - name: Service Information
   items:
-  - name: Pricing information for UKCloud for VMware
-    href: vmw-ref-pricing.md
-  - name: UKCloud for VMware Service Definition
-    href: vmw-sd.md
-  - name: VMware Licence Service Service Definition
-    href: vmw-sd-vls.md
-- name: Service Scope
-  items:
   - name: Bring Your Own Firewall Service Scope
     href: vmw-sco-byof.md
   - name: Dedicated Compute v1 Service Scope
@@ -218,10 +208,20 @@
     href: vmw-sco-snapshot-protection.md
   - name: Synchronous Protection Service Scope
     href: vmw-sco-synchronous-protection.md
-  - name: UKCloud for VMware Service Scope
-    href: vmw-sco.md
-  - name: VMware Licence Service Service Scope
-    href: vmw-sco-vls.md
+  - name: UKCloud for VMware
+    items:
+    - name: Pricing information
+      href: vmw-ref-pricing.md
+    - name: Service Definition
+      href: vmw-sd.md
+    - name: Service Scope
+      href: vmw-sco.md
+  - name: VMware Licence Service
+    items:
+    - name: Service Definition
+      href: vmw-sd-vls.md
+    - name: Service Scope
+      href: vmw-sco-vls.md
 - name: Videos
   items:
   - name: Benefits of VMware L2 VPN

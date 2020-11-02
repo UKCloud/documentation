@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Cisco AppDynamics from UKCloud Service Definition </title>
+    <title>How to use my own polling (monitoring) tooling with Managed Monitoring as a Service </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Cisco AppDynamics from UKCloud Service Definition ">
+    <meta name="title" content="How to use my own polling (monitoring) tooling with Managed Monitoring as a Service ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/third-party/third-sd-appdynamics.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/managed-services/man-monitoring-how-use-customer-polling.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,74 +91,137 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="cisco-appdynamics-from-ukcloud-service-definition">Cisco AppDynamics from UKCloud Service Definition</h1>
+<h1 id="how-to-use-your-own-polling-monitoring-tooling-with-managed-monitoring-as-a-service">How to use your own polling (monitoring) tooling with Managed Monitoring as a Service</h1>
 
-<h2 id="why-ukcloud">Why UKCloud?</h2>
-<p>UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government's Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.</p>
-<p>We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud's technical experts.</p>
-<p><img src="images/ukc-services.png" alt="UKCloud services"></p>
-<h2 id="what-is-cisco-appdynamics-from-ukcloud">What is Cisco AppDynamics from UKCloud?</h2>
-<p>Cisco AppDynamics provides application performance management, end user monitoring, infrastructure visibility and business performance monitoring.</p>
-<p>AppDynamics helps businesses deliver consistently flawless digital experiences by connecting end-user experience and application performance to business outcomes.</p>
-<p>AppDynamics monitors, correlates, analyses, and acts on application and business performance data in real-time. This automated, cross-stack intelligence enables developers, IT ops, and business owners to make the mission critical and strategic improvements that win customers at every moment.</p>
-<p>For full information regarding this product visit our <a href="https://docs.ukcloud.com">Knowledge Centre</a>.</p>
-<h2 id="what-the-service-can-help-you-achieve">What the service can help you achieve</h2>
-<p>Cisco AppDynamics is for IT Operations, Production support, Developers, Architects and anyone whose phone rings when the application is having problems. It helps you:</p>
+<h2 id="overview">Overview</h2>
+<p>With Managed Monitoring as a Service, our Network Operations Centre (NOC) monitors your devices, receiving and reacting to any abnormal events, only escalating those events that genuinely require your attention.</p>
+<p>By default, we use our own monitoring systems to poll devices and perform remote checks. In certain situations, you may have your own monitoring tooling already established, but still want to forward your polling events to UKCloud's Managed Monitoring as a Service so that you can leverage UKCloud's 24x7x365 Network Operations Centre (NOC) capabilities.</p>
+<p>This article provides information and considerations regarding connecting your own polling (monitoring) solution to UKCloud's Managed Monitoring as a Service.</p>
+<h2 id="customer-polling-monitoring-technology-considerations">Customer polling (monitoring) technology considerations</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>While we're confident that modern monitoring tooling, such as Opsview, ManageEngine OpManager, Nagios and SolarWinds, should be able to pass their polling events to UKCloud's Managed Monitoring as a Service, we do need to perform an integration assessment (potentially chargeable) so that we can validate compatibility.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We cannot guarantee integration with any/all monitoring technologies if an assessment has not been completed.</p>
+</div>
+<h3 id="alert-forwarding-method">Alert forwarding method</h3>
+<p>If you want to provide your own polling service, then it must support one of the UKCloud's accepted methods of accepting alerts, which are:</p>
 <ul>
-<li><p>Visualize your entire application, from browser and mobile app to backend database.</p>
+<li><p>HTTPS GET/POST</p>
 </li>
-<li><p>Monitor hybrid environments with Java, .NET, PHP, Node.js, Python and C++.</p>
+<li><p>API integration with Moogsoft AIOps via HTTP/HTTPS reverse proxy</p>
 </li>
-<li><p>Troubleshoot bottlenecks 90% faster with deep code-level diagnostics.</p>
+<li><p>SNMP traps</p>
 </li>
-<li><p>Automate common fixes with Application Run Book Automation.</p>
-</li>
-<li><p>Improve situational awareness and DevOps collaboration with single pane of glass for cross-tier monitoring, role-based views, virtual war room.</p>
+<li><p>Local command execution (for example, a script that can be executed that can generate an SNMP trap or make a POST or GET request to a URL)</p>
 </li>
 </ul>
-<p>Cisco AppDynamics enables customers to solve the following problems:</p>
+<p>In addition to being able to forward alert information, the data must contain the hostname of the device and be able to provide a reference to a <a href="#playbooks"><em>Playbook</em></a>, which will be used by UKCloud to indicate the correct contact and escalation instructions for any live alert.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We cannot guarantee that your polling technology will be compatible with the service until the forwarding method has been investigated, confirmed and tested by UKCloud.</p>
+</div>
+<h3 id="non-standard-monitoring-checks">Non-standard monitoring checks</h3>
+<p>Our standard checks are outlined in the <a href="man-monitoring-sco.html"><em>Managed Monitoring as a Service Service Scope</em></a>. If non-standard monitoring checks are required, these must be confirmed as cleared by UKCloud before go-ahead can be given.</p>
+<h2 id="connectivity-between-the-customer-and-ukcloud">Connectivity between the customer and UKCloud</h2>
+<h3 id="standard-connectivity">Standard connectivity</h3>
+<p>Connecting your own polling (monitoring) service to UKCloud's Managed Monitoring as a Service requires a method over which polling of devices can take place. As standard, this will be performed via a single site to site/IPsec VPN between a UKCloud VMware NSX Edge Gateway device and your network device. See <a href="#non-standard-connectivity"><em>Non-standard connectivity</em></a> for more information beyond this standard implementation.</p>
+<p>Any customer VPN endpoint must be able to support Internet Key Exchange Version (IKEv1 or IKEv2) with the following configuration for the UKCloud VPN termination:</p>
+<p><strong>Phase 1</strong></p>
+<table>
+<thead>
+<tr>
+<th>Configuration item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption Algorithm for protection suite</td>
+<td>AES256</td>
+</tr>
+<tr>
+<td>UpdHash Algorithm for protection suite</td>
+<td>SHA-256</td>
+</tr>
+<tr>
+<td>Authentication Method</td>
+<td>PreShareKey</td>
+</tr>
+<tr>
+<td>Diffie-Hellman group</td>
+<td>DH-16</td>
+</tr>
+<tr>
+<td>Lifetime (seconds)</td>
+<td>28800</td>
+</tr>
+<tr>
+<td>Exchange</td>
+<td>esp</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Phase 2</strong></p>
+<table>
+<thead>
+<tr>
+<th>Configuration item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption Algorithm</td>
+<td>AES256</td>
+</tr>
+<tr>
+<td>Hash Algorithm</td>
+<td>SHA-256</td>
+</tr>
+<tr>
+<td>Lifetime (seconds)</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>SA Lifetime Expiration (Traffic Volume in KBytes)</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Perfect Forward Secrecy (PFS)</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>esp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="non-standard-connectivity">Non-standard connectivity</h3>
+<p>If there's a requirement for using one of the following non-standard connectivity methods, it must be assessed by a UKCloud design authority before continuing:</p>
 <ul>
-<li><p>Uptime and availability</p>
+<li><p>Failover via alternative/multiple VPN endpoints</p>
 </li>
-<li><p>Slow response time</p>
+<li><p>Leased line termination</p>
 </li>
-<li><p>Memory leaks and thrash</p>
-</li>
-<li><p>Stalls</p>
-</li>
-<li><p>Deadlocks</p>
-</li>
-<li><p>Slow database response</p>
-</li>
-<li><p>Database connection pool areas</p>
-</li>
-<li><p>End-user monitoring</p>
-</li>
-<li><p>Mobile application performance monitoring</p>
+<li><p>Monitoring via non-encrypted Internet (without a secure VPN)</p>
 </li>
 </ul>
-<p>The AppDynamics web interface provides an intuitive view of your application allowing for quick identification and remediation of application performance issues, including the Application Flow Map illustrated below.</p>
-<p><img src="images/third-appdynamics-ui.png" alt="AppDynamics web interface"></p>
-<h2 id="product-options">Product options</h2>
-<p>Cisco AppDynamics offers three editions:</p>
+<p>Further information may be required as to the specific network architecture.</p>
+<h2 id="playbooks">Playbooks</h2>
+<p>UKCloud's Managed Monitoring as a Service uses the concept of playbooks to indicate the actions to be performed on receipt of an alert to UKCloud's NOC.</p>
+<p>A typical contact playbook provides UKCloud's NOC with your contact and escalation details, along with the following details on an alert by alert basis:</p>
 <ul>
-<li><p>APM Pro: Provides end-to-end monitoring of key business transactions within your applications. Features the core Application Performance Management functionality, with flexibility to switch between languages; includes basic infrastructure monitoring.</p>
+<li><p>Contact name/team name</p>
 </li>
-<li><p>APM Advanced: Enables deeper insights into your application stack with Server and Network Visibility. Contains everything from APM Pro plus Server Visibility and Network Visibility.</p>
+<li><p>Contact number</p>
 </li>
-<li><p>APM Peak – provides everything in APM Advanced with the addition of real-time business performance monitoring, transaction analytics and Business Journeys.</p>
+<li><p>Contact email</p>
+</li>
+<li><p>Whether telephone authentication is required, and the information to perform it</p>
 </li>
 </ul>
-<h2 id="pricing-and-packaging">Pricing and packaging</h2>
-<p>Cisco AppDynamics pricing is per agent per year, from £2,290, dependent on the type of agent and the edition. Full pricing is available in the <a href="https://ukcloud.com/3rd-party-pricing-guide">3rd Party Software Pricing Guide</a>.</p>
-<h2 id="free-trial">Free trial</h2>
-<p>A 15-day free trial with complete access to all AppDynamics platform components is available. Please contact UKCloud for details.</p>
-<h2 id="accreditation-and-information-assurance">Accreditation and information assurance</h2>
-<p>The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the <a href="https://ukcloud.com/governance/">UKCloud website</a>.</p>
-<h2 id="connectivity-options">Connectivity options</h2>
-<p>UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a> which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.</p>
-<h2 id="the-small-print">The small print</h2>
-<p>For full terms and conditions, please refer to the <a href="../other/other-ref-terms-and-conditions.html"><em>Terms and conditions documents</em></a> and the <a href="third-ref-eula.html">AppDynamics End User Terms and Conditions</a>.</p>
+<p>At the very least, a single default playbook will be established for a given customer. Additionally, you can add more playbooks with specific contact instructions tied to individual alert types should a different contact or team be required for different alerts.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
