@@ -33,7 +33,7 @@ Known Service Providers with presence<sup>*</sup> within A9 and SQ17:
 
 - Vodafone
 
-- CenturyLink
+- Lumen (Formerly CenturyLink)
 
 - Virgin Media
 
