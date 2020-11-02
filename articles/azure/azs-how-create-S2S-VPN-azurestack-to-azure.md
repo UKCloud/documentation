@@ -314,7 +314,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **VPN type** - The type of VPN you can choose depends on the make and model of your VPN device, and the kind of VPN connection you intend to create. Choose a route-based gateway if you intend to use point-to-site, inter-virtual network, or multiple site-to-site connections; if you are creating a VPN type gateway to coexist with an ExpressRoute gateway; or if you need to use IKEv2. Policy-based gateways support only IKEv1.
 
-   - **SKU** - Route-based VPN gateway types are offered in eleven SKUs: the legacy Basic SKU and ten new generation SKUs. From version 1910 onwards, a custom IPsec policy is required for Azure Stack Hub to connect to public Azure, therefore requiring a VpnGw1, VpnGw2 or VpnGw3 SKU. You can find more information about public Azure SKUs here: [public Azure SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
+   - **SKU** - Route-based VPN gateway types are offered in eleven SKUs: the legacy Basic SKU and ten new generation SKUs. You can find more information about public Azure SKUs here: [public Azure SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-vpngateways#gwsku). From version 1910 onwards, a custom IPsec policy is required for Azure Stack Hub to connect to public Azure, therefore requiring a VpnGw1, VpnGw2 or VpnGw3 SKU as detailed here: [IPsec/IKE policy](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
 
    - **Virtual Network** - This is the virtual network that you created earlier in public Azure.
 
@@ -445,9 +445,9 @@ To establish the connection you will need to identify the address spaces and pub
 
 ### Update the local gateway address spaces and IPs in public Azure
 
-1. In the Azure Stack Hub portal, navigate to the *Virtual networks* blade by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the *Networking* section. Select the virtual network you created make a note of the address space.
+1. In the Azure Stack Hub portal, navigate to the *Virtual networks* blade by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the *Networking* section. Select the virtual network you created and make a note of the address space.
 
- 2. Navigate to the *Connections* blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *Networking* section. Select the VPN connection you created in [Create the VPN connection in Azure Stack Hub](#create-the-vpn-connection-in-azure-stack-hub).  Make a note of the public IP which you can find this in the *Virtual network gateway* section.
+ 2. Navigate to the *Connections* blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *Networking* section. Select the VPN connection you created in [Create the VPN connection in Azure Stack Hub](#create-the-vpn-connection-in-azure-stack-hub. Make a note of the public IP which you can find in the *Virtual network gateway* section.
 
     ![VPN connection public IP](images/azs-browser-site-to-site-vpn-connection-public-ip.png)
 
@@ -471,10 +471,9 @@ To establish the connection you will need to identify the address spaces and pub
 
 ### Update the local gateway address space and IPs in Azure Stack Hub
 
-1. In the public Azure portal, navigate to the *Virtual networks* blade by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the *Networking* section. Select the virtual network you created make a note of the address space.
+1. In the public Azure portal, navigate to the *Virtual networks* blade by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the *Networking* section. Select the virtual network you created and make a note of the address space.
 
-2. Navigate to the *Connections* blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *Networking* section. Select the VPN connection you created in [Create the VPN connection in public Azure](#create-the-vpn-connection-in-public-azure).
-Make a note of the public IP which you can find this in the *Virtual network gateway* section.
+2. Navigate to the *Connections* blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *Networking* section. Select the VPN connection you created in [Create the VPN connection in public Azure](#create-the-vpn-connection-in-public-azure). Make a note of the public IP which you can find in the *Virtual network gateway* section.
 
     ![Public IP of virtual network gateway in public Azure](images/azs-public-browser-connection-ip.png)
 
