@@ -3,8 +3,8 @@ title: How to create and restore Portworx snapshots
 description: Explains how to create and restore the different types of Portworx snapshots
 services: openshift
 author: Kieran O'Neill
-reviewer:
-lastreviewed: 15/10/2019
+reviewer: Kieran O'Neill
+lastreviewed: 21/10/2020
 
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
@@ -24,7 +24,7 @@ Portworx is a cloud-native storage solution that is now available as an add-on t
 
 ### Intended audience
 
-This article assumes you have access to a Portworx-enabled OpenShift 3.11 or greater cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client.
+This article assumes you have access to a Portworx-enabled OpenShift 3.11 cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client.
 
 If you're interested in a free 30 day trial of Portworx, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
