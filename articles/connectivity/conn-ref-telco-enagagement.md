@@ -55,7 +55,7 @@ The following telcos have a presence in Ark MMRs:
 
 - Vodafone<sup>*</sup>
 
-- CenturyLink<sup>*</sup>
+- Lumen (Formerly CenturyLink)<sup>*</sup>
 
 - Virgin Media<sup>*</sup>
 
