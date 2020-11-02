@@ -188,7 +188,7 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
    - **Name** - The name of the connection.
 
-   - **Connection type** - Select **Site-to-site (IPSec)**.
+   - **Connection type** - Select **Site-to-site (IPsec)**.
 
    - **Virtual network gateway** - Select the virtual network gateway you created earlier.
 
@@ -312,7 +312,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **VPN type** - The type of VPN you can choose depends on the make and model of your VPN device, and the kind of VPN connection you intend to create. Choose a route-based gateway if you intend to use point-to-site, inter-virtual network, or multiple site-to-site connections; if you are creating a VPN type gateway to coexist with an ExpressRoute gateway; or if you need to use IKEv2. Policy-based gateways support only IKEv1.
 
-   - **SKU** - Route-based VPN gateway types are offered in eleven SKUs: the legacy Basic SKU and ten new generation SKUs. From version 1910 onwards, a custom IPSec policy is required for Azure Stack to connect to public Azure, therefore requiring a VpnGw1, VpnGw2 or VpnGw3 SKU. The SKUs ending in AZ (VpnGw1AZ-VpnGw5AZ) are required if you require an availability zone.
+   - **SKU** - Route-based VPN gateway types are offered in eleven SKUs: the legacy Basic SKU and ten new generation SKUs. From version 1910 onwards, a custom IPsec policy is required for Azure Stack to connect to public Azure, therefore requiring a VpnGw1, VpnGw2 or VpnGw3 SKU. The SKUs ending in AZ (VpnGw1AZ-VpnGw5AZ) are required if you require an availability zone.
 
    - **Virtual Network** - This is the virtual network that you created earlier in public Azure.
 
@@ -391,7 +391,7 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
    - **Name** - The name of the connection.
 
-   - **Connection type** - Select **Site-to-site (IPSec)**.
+   - **Connection type** - Select **Site-to-site (IPsec)**.
 
    - **Virtual network gateway** - Select the virtual network gateway you created earlier.
 
@@ -409,9 +409,9 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
 6. Navigate to your connection by clicking **Connections**, in the **virtual network gateway**.
 
-7. In the **Configuration** blade, enter the following information to configure the custom IPSec policy to allow a site-to-site connection between Azure Stack Hub and public Azure:
+7. In the **Configuration** blade, enter the following information to configure the custom IPsec policy to allow a site-to-site connection between Azure Stack Hub and public Azure:
 
-   - **IPSec / IKE policy** - Change the policy status from **Disabled** to **Enabled**.
+   - **IPsec / IKE policy** - Change the policy status from **Disabled** to **Enabled**.
 
    - **IKE Phase 1**
 
@@ -423,13 +423,13 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
    - **IKE Phase 2**
 
-        - **IPSec Encryption** - Set the type to **GCMAES256** from the dropdown menu.
+        - **IPsec Encryption** - Set the type to **GCMAES256** from the dropdown menu.
 
-        - **IPSec Integrity** - Set the type to **GCMAES256** from the dropdown menu.
+        - **IPsec Integrity** - Set the type to **GCMAES256** from the dropdown menu.
 
         - **PFS Group** - Set the type to **ECP384** from the dropdown menu.
 
-   - **IPSec SA lifetime in KiloBytes** - Set the value to **102400000**.
+   - **IPsec SA lifetime in KiloBytes** - Set the value to **102400000**.
 
    - **IPSec SA lifetime in seconds** - Set the value to **27000**.
 
