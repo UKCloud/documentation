@@ -94,9 +94,15 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
 2. In the **Settings** section of the virtual network blade, select **Subnets**.
 
+    ![Subnets button in virtual networks blade](images/azs-public-browser-virtual-network-subnets-button.png)
+
 3. On the **Subnets** page, click the **Gateway Subnet** button.
 
+    ![Gateway subnet button in virtual networks blade](images/azs-public-browser-virtual-network-gateway-subnet-button.png)
+
 4. Fill in the **Address range** and add a route table if required, then click **OK**. The subnet should now have appeared.
+
+    ![Create gateway subnet](images/azs-browser-create-gateway-subnet.png)
 
 ### Create the VPN gateway in Azure Stack Hub
 
