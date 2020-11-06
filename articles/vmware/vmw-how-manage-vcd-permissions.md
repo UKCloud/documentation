@@ -1,21 +1,29 @@
 ---
-title: How to manage permissions for vCloud Director
-description: Shows how to manage and adjust permissions and roles for vCloud Director within the UKCloud Portal
+title: How to manage vCloud Director/VMware Cloud Director permissions in the UKCloud Portal
+description: Shows how to manage and adjust permissions and roles for vCloud Director/VMware Cloud Director within the UKCloud Portal
 services: vmware
-author: Sue Highmoor
-reviewer: jpaddock
-lastreviewed: 02/04/2020
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 06/11/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Manage permissions for vCloud Director
+toc_title: Manage vCloud Director/VMware Cloud Director permissions
 toc_fullpath: How To/vmw-how-manage-vcd-permissions.md
 toc_mdlink: vmw-how-manage-vcd-permissions.md
 ---
 
-# How to manage permissions for vCloud Director
+# How to manage vCloud Director/VMware Cloud Director permissions in the UKCloud Portal
+
+## Overview
+
+In the UKCloud Portal, you can control the access that a Portal user has to the different virtual data centres (VDCs) in your organisation.
+
+### Intended audience
+
+To complete the steps in this guide you must be a Portal administrator.
 
 ## Configuring permissions
 
@@ -29,7 +37,7 @@ To configure permissions for a portal user:
 
     ![All Contacts menu option in UKCloud Portal](images/ptl-menu-all-contacts.png)
 
-3. On the *Contacts* page, use the **Search** field to find the user to whom you want to assign or revoke vCloud Director permissions and then click the **Edit** button.
+3. On the *Contacts* page, use the **Search** field to find the user to whom you want to assign or revoke permissions and then click the **Edit** button.
 
     ![Edit button for Portal contact](images/ptl-contacts-btn-edit.png)
 
@@ -37,7 +45,7 @@ To configure permissions for a portal user:
 
     ![Permissions tab for Portal contact](images/ptl-contacts-tab-permissions.png)
 
-5. In the *Permissions for UKCloud for VMware* section, you'll see a list of virtual data centres (VDCs) and the associated permissions available for the portal user.
+5. In the *Permissions for UKCloud for VMware* section, you'll see a list of VDCs and the associated permissions available for the Portal user.
 
     Select the permission level you want to assign to the user, then scroll to the bottom of the page and click **Save**.
 
@@ -45,7 +53,7 @@ To configure permissions for a portal user:
 
 The first table shows the user types (operations); the second table shows the exact privileges each user type has.
 
-Operation | Allows the user administrative access to the given vCloud Director organisation with:
+Operation | Allows the user administrative access to the given organisation with:
 ----------|--------------------------------------------------------------------------------------
 Console Only (CO) | Permissions for Console access only
 vApp User (VU) | Permissions for a vApp User
@@ -92,10 +100,10 @@ vApp | Access to VM Console | &check; | &check; | &check; | &check; | &check;
 
 ### API Only role
 
-UKCloud have created an **API Only** role that restricts users with vCloud Director permissions to accessing vCloud Director solely via the API, with no GUI access.
+UKCloud have created an **API Only** role that restricts users with vCloud Director/VMware Cloud Director permissions to accessing vCloud Director/VMware Cloud Director solely via the API, with no GUI access.
 
 > [!NOTE]
-> The **API Only** role must be selected in addition to one of the vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
+> The **API Only** role must be selected in addition to one of the vCloud Director/VMware Cloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
 
 ## Feedback
 

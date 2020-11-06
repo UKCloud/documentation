@@ -1,6 +1,6 @@
 ---
 title: How to access Red Hat update servers
-description: Shows you how to access Red Hat updates using Red Hat Update Infrastructure (RHUI)
+description: Provides information about accessing Red Hat updates using Red Hat Update Infrastructure (RHUI)
 services: shared-services
 author: shighmoor
 reviewer: pcantle
@@ -25,7 +25,7 @@ Before you attempt to establish a connection to RHUI, you need to make sure your
 
 ## New Red Hat VM templates
 
-Certain Red Hat templates within the public catalog within vCloud Director are automatically configured to receive updates from UKCloud's RHUI. The templates are:
+Certain Red Hat templates within the public catalog are automatically configured to receive updates from UKCloud's RHUI. The templates are:
 
 - **RHEL6.6** - UKCloud-RHEL6.6-x86_64-RHUI-Template
 

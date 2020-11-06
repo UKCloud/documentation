@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2016 templates
-description: This article explains the current status and availability of Windows Server 2016 templates on UKCloud compute services.
+description: Explains the current status and availability of Windows Server 2016 templates on UKCloud compute services
 services: shared-services
 author: shighmoor
 reviewer:
@@ -27,7 +27,7 @@ To enable Windows Server 2016 for our compute services, we've deployed new Key M
 
 ### UKCloud for VMware
 
-In vCloud Director, we provide a public catalogue (Windows Templates Catalogue) for you to use that contains standard virtual machine (VM) sizes and operating systems. This public catalogue in our Assured and Elevated security domains now includes templates for Windows Server 2016.
+In vCloud Director/VMware Cloud Director, we provide a public catalogue (Windows Templates Catalogue) for you to use that contains standard virtual machine (VM) sizes and operating systems. This public catalogue in our Assured and Elevated security domains now includes templates for Windows Server 2016.
 
 The Windows Template Catalogue for UKCloud for VMware includes templates for both Datacenter and Standard Editions of Windows 2016. Templates are available in our standard range of resource configurations (CPU/RAM).
 
@@ -35,7 +35,7 @@ You can license the templates using our existing Microsoft KMS infrastructure, w
 
 - Windows 2016 is available for our compute services provided 2016 templates are used. However, VMware does not currently support Windows 2016 and we do not have a timescale for when this will be available.
 
-- The Guest OS Customisation feature in vCloud Director is available for Microsoft Windows Server 2016 (64-bit), however it is not officially supported by VMware.
+- The Guest OS Customisation feature is available for Microsoft Windows Server 2016 (64-bit), however it is not officially supported by VMware.
 
 - The templates have been built as OS type Windows Server 2012 (64-bit) -- see point above.
 
