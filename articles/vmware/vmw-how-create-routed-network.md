@@ -106,13 +106,10 @@ There are two network flavours, isolated and routed:
 
     - Select the edge gateway that you want your network to connect to.
 
-    - From the **Interface Type** list, select:
+    - From the **Interface Type** list, select **Internal**.
 
-      - **Internal**
-
-      - **Distributed** - DLR?
-
-      - **Subinterface** - L2 VPN?
+        > [!NOTE]
+        > For information about distributed networks, see [*How to configure a Distributed Logical Router*](vmw-how-configure-distributed-logical-router.md). For information about creating a routed network as a subinterface for L2 VPN, see [*How to configure an L2 VPN*](vmw-how-configure-l2-vpn.md).
 
     - Switch on the **Guest VLAN Allowed** toggle to enable tagging of guest VLANs on this network.
 

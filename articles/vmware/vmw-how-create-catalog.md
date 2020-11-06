@@ -104,9 +104,7 @@ The first step is to create an empty catalog:
 
     ![Share catalog menu option](images/vmw-vcd10.1-mnu-share-catalog.png)
 
-8. In the *Share Catalog* dialog box, from the **Share with** radio buttons, select.
-
-9. On the *Users and Groups* dialog box, select:
+8. In the *Share Catalog* dialog box, from the **Share with** radio buttons, select:
 
     - **All Users and Groups** to share the catalog with everyone in the organisation.
 
@@ -114,7 +112,7 @@ The first step is to create an empty catalog:
 
     ![Share Catalog dialog box](images/vmw-vcd10.1-share-catalog.png)
 
-10. When you've added all the people who you want to access the catalog, click **Save**.
+9. When you've added all the people who you want to access the catalog, click **Save**.
 
 ***
 
