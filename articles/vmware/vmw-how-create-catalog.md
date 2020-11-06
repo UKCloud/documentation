@@ -245,7 +245,7 @@ To create a catalog from an existing vApp:
 
 6. When you're done, click **OK**.
 
-    A status bar will appear on top with the message: **Please wait**. You can close the window and check the progress by expanding the *Recent Tasks* section at the bottom of the vCloud Director interface.
+    A status bar will appear on top with the message: **Please wait**. You can close the window and check the progress by expanding the *Recent Tasks* section at the bottom of the VMware Cloud Director interface.
 
 ***
 
