@@ -95,6 +95,26 @@
 
 <h2 id="overview">Overview</h2>
 <p>This article describes some of the issues you may encounter when using vCloud Director 9.7 with UKCloud for VMware.</p>
+<h2 id="known-issues-with-the-vcloud-director-legacy-ui">Known issues with the vCloud Director Legacy UI</h2>
+<h3 id="adobe-flash-player-end-of-life">Adobe Flash Player end of life</h3>
+<p>The Adobe Flash Player, which is required for the vCloud Director Legacy (Flex-based) UI, goes end-of-life (EOL) on 31 December 2020. Following this date browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge and Microsoft Internet Explorer, will discontinue support for Flash. Although most vCloud Director functionality is available via the HTML5-based Tenant Portal, there are some operations that still need to be performed using the Legacy UI. These include:</p>
+<ul>
+<li><p>Uploading ISO and FLP media as a URL</p>
+</li>
+<li><p>Viewing the vApp template description, including OS password and patch dates</p>
+</li>
+<li><p>Changing the VDC default storage policy</p>
+</li>
+<li><p>Enabling distributed routing</p>
+</li>
+<li><p>Attaching a VM to multiple networks</p>
+</li>
+<li><p>Changing the network adapter type</p>
+</li>
+<li><p>Changing the encryption algorithm for a VPN set to <code>AES-GCM</code></p>
+</li>
+</ul>
+<p>If you need to perform any of the above operations in vCloud Director 9.7 after 31 December 2020, you must ensure that you have at least one machine with automatic browser updates disabled so that you still have access to the Flash-based Legacy UI.</p>
 <h2 id="known-issues-with-virtual-machines">Known issues with virtual machines</h2>
 <h3 id="disk-sizes-are-in-mb">Disk sizes are in MB</h3>
 <h4 id="description">Description</h4>
