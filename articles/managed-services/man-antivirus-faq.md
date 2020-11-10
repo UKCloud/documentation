@@ -29,7 +29,7 @@ Anti-Virus as a Service provides you with the confidence that your environments 
 
 Building on the capabilities of our [Managed Monitoring as a Service](man-monitoring-sco.md), UKCloud uses the industry-leading endpoint security platform [SentinelOne](https://www.sentinelone.com/) as the engine for Anti-Virus as a Service, harnessing the power of machine learning to providing protection that goes beyond that of traditional anti-virus or anti-malware solutions.
 
-Further details as to how we leverage SentinelOne as an approved third party in the delivery of this service can be found in the [Anti-Virus as a Service Service Scope](https://docs.ukcloud.com/articles/managed-services/man-antivirus-sco.html)
+For further details as to how we leverage SentinelOne as an approved third party in the delivery of this service, see the [Anti-Virus as a Service Service Scope](https://docs.ukcloud.com/articles/managed-services/man-antivirus-sco.html).
 
 ### What actions will UKCloud perform on positive detection?
 
