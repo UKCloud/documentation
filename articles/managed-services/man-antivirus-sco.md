@@ -69,13 +69,13 @@ Action upon detection - Suspicious objects                    | A/R      | R/C  
 
 ## Use of approved third party in the delivery of Anti-Virus as a Service
 
-UKCloud harnesses the market leading cybersecurity services of [SentinelOne](https://https://www.sentinelone.com/) as the engine which powers our Anti-Virus as a Service product.
+UKCloud harnesses the market-leading cyber security services of [SentinelOne](https://https://www.sentinelone.com/) as the engine that powers our Anti-Virus as a Service product.
 
-In order to ensure the utmost accuracy, reliability and protection from our [Anti-Virus as a Service](https://docs.ukcloud.com/articles/managed-services/man-sd-managed-it-ops.html) product, SentinelOne Agents are required to be installed on any customer end-point (VM) opted in to this service. The SentinelOne Agent will exchange key end-pont metadata securely exchanged between any customer end-point which has the SentinelOne agent installed and SentinelOne's central cloud platform which sits outside of UKCloud's data centres.
+To ensure the utmost accuracy, reliability and protection of our [Anti-Virus as a Service](https://docs.ukcloud.com/articles/managed-services/man-sd-managed-it-ops.html) product, SentinelOne Agents must be installed on any customer end-point (VM) opted in to this service. The SentinelOne Agent exchanges key endpoint metadata securely between any customer endpoint that has the SentinelOne agent installed and SentinelOne's central cloud platform, which sits outside of UKCloud's data centres.
 
-A full list of data which may be exchanged between the SentinelOne Agent and SentinelOne's central cloud platform can be found in the article [What data is collected in using UKCloud's Anti-Virus as a Service?](https://docs.ukcloud.com/articles/managed-services/man-ref-sentinelone-datacollection.html).
+For a full list of the data that may be exchanged between the SentinelOne Agent and SentinelOne's central cloud platform, see [Data collected by UKCloud's Anti-Virus as a Service](https://docs.ukcloud.com/articles/managed-services/man-ref-sentinelone-datacollection.html).
 
-In using UKCloud's Antivirus as a Service, customers must also be aware of and agree to the [SENTINELONE TERMS OF SERVICE](https://www.sentinelone.com/legal/terms-of-service/).
+In using UKCloud's Antivirus as a Service, customers must also be aware of and agree to the [SentinelOne Terms of Service](https://www.sentinelone.com/legal/terms-of-service/).
 
 ## General support and troubleshooting
 
