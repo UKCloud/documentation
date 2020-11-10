@@ -5587,7 +5587,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-antivirus-faq.html",
-          "hash": "r3vlGBlBVMSgGJFB19Z+Vw=="
+          "hash": "n9u54ooxjNzooqr2J+oT0g=="
         }
       },
       "is_incremental": false,
@@ -5599,7 +5599,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-antivirus-sco.html",
-          "hash": "FHC2R27JPtfr4/7hpzdpiw=="
+          "hash": "/9iZ81+gZGKo0nEU+36SBQ=="
         }
       },
       "is_incremental": false,
@@ -5672,6 +5672,18 @@
         ".html": {
           "relative_path": "articles/managed-services/man-patching-sco.html",
           "hash": "09F/wbVKIV8gLNFfeY8qIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-ref-sentinelone-datacollection.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-ref-sentinelone-datacollection.html",
+          "hash": "z5UV6fr6mdVVFORXeg50eA=="
         }
       },
       "is_incremental": false,
@@ -5791,7 +5803,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "XTR09FB3OhF+wis3HFAWTA=="
+          "hash": "DeY+5yukU92EDpcwGi/QIA=="
         }
       },
       "is_incremental": false,
@@ -10829,7 +10841,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "hwpE3oINyz9GMODhxrqJHA=="
+          "hash": "lIUsJvH1z1joTWOigLmC+A=="
         }
       },
       "is_incremental": false,
@@ -20602,7 +20614,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 450,
+          "total_file_count": 451,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

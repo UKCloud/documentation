@@ -40,6 +40,8 @@
       href: man-antivirus-faq.md
     - name: Anti-Virus as a Service Service Scope
       href: man-antivirus-sco.md
+    - name: Data collected by Anti-Virus as a Service
+      href: man-ref-sentinelone-datacollection.md
   - name: Managed Monitoring as a Service
     items:
     - name: Change your service configuration
