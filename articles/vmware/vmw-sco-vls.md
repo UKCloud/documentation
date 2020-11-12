@@ -188,7 +188,7 @@ There are two packages available for pricing.
 Package       | Description | Use case | Payment options
 --------------|-------------|----------|----------------
 Fixed Price   | A fixed cost for a specific set of licences, irrespective of the actual usage made of the licences during the month. The price is set at the beginning of the year. | Customers who have a good idea of their usage for the next year and need certainty in their budgets.| Committed 
-Fully Metered | Pay-as-you-go - only pay for what you use. Consumption is calculated and the customer invoiced based on actual usage at the end of each month | Customers who need the ability to scale up and down as required. | Committed<br>Uncommitted 
+Fully Metered | Pay-as-you-go - only pay for what you use. Consumption is calculated and the customer invoiced based on actual usage at the end of each month. | Customers who need the ability to scale up and down as required. | Committed<br>Uncommitted 
 
 ### Payment options
 
@@ -197,7 +197,7 @@ VLS is charged per point consumed. There are two payment options available for V
 Payment option | Description | Benefits
 ---------------|-------------|---------
 Committed       | An estimated annual consumption is calculated using the current usage metrics provided by the customer. This amount is then invoiced and paid up front. Each quarter, using the reported consumption figures, the Service Delivery Manager will report on the amount consumed to date and the remaining value left in the pre-payment. Monthly reports can be requested as the pre-payment approaches zero to ensure that the top amount is applied in good time. At any point, the customer can top up the amount in pre-payment with a new order or, if on the fully metered package, switch to uncommitted billing (pay-as-you-go), as detailed below (note this is not available for the Fixed Price package). | Most cost-effective option.<br>Additional discounting available.
-Uncommitted    | Billing is based on actual consumption is billed calculated monthly from customer-supplied Usage Meter reports. Customers are charged on the next month's invoice (first working day of the month). | Flexible, pay-as-you-go.<br>No upfront costs.<br>Cease service at any time, only paying for usage up to that point<br>Especially suited to customers who are reducing their on-premises VMware estate and migrating to cloud..
+Uncommitted    | Billing is based on actual consumption is billed calculated monthly from customer-supplied Usage Meter reports. Customers are charged on the next month's invoice (first working day of the month). | Flexible, pay-as-you-go.<br>No upfront costs.<br>Cease service at any time, only paying for usage up to that point.<br>Especially suited to customers who are reducing their on-premises VMware estate and migrating to cloud.
 
 For the Committed payment option, whilst the estimated one year consumption calculation is accurate, this is dependent on there being no changes to the environment or usage. Therefore, an increase in usage would result in the committed value expiring prior to 12 months, or likewise a reduction in consumption would result in the committed value covering greater than 12 months. For this reason each committed order is valid for consumption over the next 24 months.
 
