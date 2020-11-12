@@ -188,7 +188,7 @@ There are two packages available for pricing.
 Package       | Description | Use case | Payment options
 --------------|-------------|----------|----------------
 Fixed Price   | A fixed cost for a specific set of licences, irrespective of the actual usage made of the licences during the month. The price is set at the beginning of the year. | Customers who have a good idea of their usage for the next year and need certainty in their budgets.| Committed 
-Fully Metered | Pay-as-you-go - only pay for what you use. Comsumption is calculated and the customer invoiced based on actual usage at the end of each month | Customers who need the ability to scale up and down as required. | Committed<br>Uncommitted 
+Fully Metered | Pay-as-you-go - only pay for what you use. Consumption is calculated and the customer invoiced based on actual usage at the end of each month | Customers who need the ability to scale up and down as required. | Committed<br>Uncommitted 
 
 ### Payment options
 
