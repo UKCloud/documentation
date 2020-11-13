@@ -2,17 +2,17 @@
 title: How to configure a Distributed Logical Router
 description: Describes how to configure a Distributed Logical Router (DLR), available as an advanced networking option with UKCloud for VMware
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 31/01/2019 09:49:35
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 13/11/2020
 
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: Advanced networking
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Configure a Distributed Logical Router
-toc_fullpath: How To/vmw-how-configure-distributed-logical-router.md
+toc_fullpath: How To/Advanced networking/vmw-how-configure-distributed-logical-router.md
 toc_mdlink: vmw-how-configure-distributed-logical-router.md
 ---
 
@@ -29,25 +29,44 @@ UKCloud for VMware provides Distributed Logical Router (DLR) functionality as pa
 Before enabling DLR, consider the following:
 
 - You must have purchased the Advanced Management bundle for your UKCloud for VMware service
+
 - Your advanced gateway must have one free interface for DLR to use for the transit (P2P) network
+
 - IPv6 is not supported with DLR
+
 - L2 VPN is not supported on a distributed VDC network
+
 - vApp routed networks are not supported
+
 - You can only have one DLR instance per VDC edge gateway
+
 - You can create up to 1000 distributed networks per edge gateway
+
 - You cannot distribute a VLAN-based network
+
 - Your local subnets should not overlap with the transit network (`10.255.255.248/30`)
+
 - You cannot modify the transit connection between the edge gateway and DLR
+
 - You can change auto-generated DHCP and static route configurations on the edge gateway
+
 - To disable DLR on the edge gateway, you must first remove all distributed networks
+
 - You can migrate existing VDC networks to distributed network without service disruption
+
 - You cannot run more than one routing protocol on each DLR (BGP or OSPF)
+
 - If you use OSPF, you cannot run it on more than one DLR uplink
+
 - Dynamic routing protocols are only supported on uplink interfaces
 
 ## Enabling distributed routing for Distributed Logical Router
 
-To enable distributed routing, you must use the vCloud Director Web Console.
+To enable distributed routing
+
+### [vCloud Director 9.7](#tab/tabid-a)
+
+You must use the vCloud Director Web Console.
 
 1. In the top-right corner of the vCloud Director Tenant UI, click your user name, then select **Legacy UI**.
 
@@ -71,9 +90,27 @@ To enable distributed routing, you must use the vCloud Director Web Console.
 
     ![Tenant UI link](images/vmw-vcd-mnu-tenant-ui.png)
 
+### [VMware Cloud Director 10.1](#tab/tabid-b)
+
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway.
+
+2. In the left navigation panel, under *Networking*, select **Edges**.
+
+    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+
+3. On the *Edge Gateways* page, select the edge.
+
+4. On the *General* page, click **Edit**.
+
+5. Select **Distributed Routing**.
+
+***
+
 ## Creating a distributed network
 
 After you've enabled distributed routing, you can create your distributed networks. You can create up to 1000 distributed networks per edge gateway.
+
+### [vCloud Director 9.7](#tab/tabid-a)
 
 1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
 
@@ -115,6 +152,55 @@ After you've enabled distributed routing, you can create your distributed networ
     For more detailed instructions, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
 
 13. When you're done, click **Finish**.
+
+### [VMware Cloud Director 10.1](#tab/tabid-b)
+
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select your VDC.
+
+2. In the left navigation panel, select **Networks**.
+
+    ![Network tab in VMware Cloud Director](images/vmw-vcd10.1-tab-networks.png)
+
+3. Click **New**.
+
+    ![New network button](images/vmw-vcd10.1-btn-add-network.png)
+
+4. On the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed** then click **Next**.
+
+    ![New Organization VDC Network dialog box - Network Type page - Routed network](images/vmw-vcd10.1-new-network-routed-type.png)
+
+5. On the *General* page:
+
+    - Enter a **Name** and **Description** for the network.
+
+    - In the **Gateway CIDR** field, enter the gateway address for the network.
+
+    - Select the **Shared** option to make the network available to other VDCs within the same organisation.
+
+    ![New Organization VDC Network dialog box - General page](images/vmw-vcd10.1-new-network-general.png)
+
+6. Click **Next**.
+
+7. On the *Edge Connection* page:
+
+    - Select the edge gateway that you want your network to connect to.
+
+        > [!NOTE]
+        > The edge must be an advanced gateway and must have distributed routing enabled.
+
+    - From the **Interface Type** list, select **Distributed**.
+
+    ![New Organization VDC Network dialog box - Edge Connection page](images/vmw-vcd10.1-new-network-distributed-edge.png)
+
+8. Click **Next**.
+
+9. Complete the remaining fields in the dialog box as you would for any other routed network.
+
+    For more detailed instructions, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
+
+10. When you're done, click **Finish**.
+
+***
 
 ## Feedback
 

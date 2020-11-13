@@ -2,17 +2,17 @@
 title: How to configure a Distributed Firewall
 description: Describes how to configure a Distributed Firewall (DFW), available as an advanced networking option with UKCloud for VMware
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 21/12/2018 15:47:05
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 13/11/2020
 
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: Advanced networking
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Configure a Distributed Firewall
-toc_fullpath: How To/vmw-how-configure-distributed-firewall.md
+toc_fullpath: How To/Advanced networking/vmw-how-configure-distributed-firewall.md
 toc_mdlink: vmw-how-configure-distributed-firewall.md
 ---
 
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-configure-distributed-firewall.md
 
 ## Overview
 
-UKCloud for VMware provides Distributed Firewall (DFW) functionality as part of its Advanced Management bundle (additional charges apply). DFW enables microsegmentation of networks at the virtual data centre (VDC) level. It can inspect every packet and frame coming to and leaving the VM regardless of the network topology. Packet inspection is done at the VM virtual NIC (vNIC) level, which enables ACLs to be applied closest to the source.
+UKCloud for VMware provides Distributed Firewall (DFW) functionality as part of its Advanced Management bundle (additional charges apply). DFW enables microsegmentation of networks at the virtual data centre (VDC) level. It can inspect every packet and frame coming to and leaving the VM regardless of the network topology. Packet inspection is done at the VM virtual NIC (vNIC) level, which enables access-control lists (ACLs) to be applied closest to the source.
 
 You can have a routed or isolated network on a vApp and still use a DFW at the VDC level to complement it. The NSX edge handles North-South bound traffic while the DFW is designed to manage East-West bound traffic.
 
@@ -28,11 +28,11 @@ You can have a routed or isolated network on a vApp and still use a DFW at the V
 
 The DFW rules can be based on Layer 2 (L2) up to Layer 4 (L4).
 
-- L2 rules (Ethernet tab) are based on MAC address L2 protocols like ARP, RARP and LLDP
-- L3 rules (General tab) are based on Ip source destination
-- L4 uses a TCP or UDP service port
+- Layer 2 (L2) rules (Ethernet tab) are based on MAC address L2 protocols like ARP, RARP and LLDP
+- Layer 3 (L3) rules (General tab) are based on Ip source destination
+- Layer 4 (L4) uses a TCP or UDP service port
 
-Layer 2 (Ethernet) firewall rules are processed before Layer 3 rules. The default firewall rule allows L2 and L3 traffic to pass through your VDCs. Once you have implemented all the rules, you can change this to block. Rules are always read and enforced from top-to-bottom ordering like any traditional firewall.
+L2 (Ethernet) firewall rules are processed before L3 rules. The default firewall rule allows L2 and L3 traffic to pass through your VDCs. Once you've implemented all the rules, you can change this to block. Rules are always read and enforced from top-to-bottom ordering like any traditional firewall.
 
 DFW rules can have one or more of the following entities as the source or destination: Org VDC networks, virtual machines, Org VDCs, MAC sets (L2 – Ethernet), IP sets (L3 – General) or security groups.
 
@@ -42,6 +42,8 @@ DFW rules can have one or more of the following entities as the source or destin
 ## Configuring a Distributed Firewall
 
 To access the DFW:
+
+### [vCloud Director 9.7](#tab/tabid-a)
 
 1. Log in to vCloud Director via the UKCloud Portal.
 
@@ -88,6 +90,51 @@ To access the DFW:
 
     ![Save changes](images/vmw-vcd91-save-changes.png)
 
+### [VMware Cloud Director 10.1](#tab/tabid-b)
+
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the DFW you want to manage.
+
+2. In the left navigation panel, under *Networking*, select **Security**.
+
+    ![Security menu in VMware Cloud Director](images/vmw-vcd10.1-mnu-security.png)
+
+3. Select the **Security Services** for your VDC, then click **Configure Services**.
+
+    Even though other VDC security policies are listed in this section, you cannot launch the configuration until you switch to the relevant VDC. You can confirm which VDC you are in by looking at the **Data center** name displayed at the top of the page. To go back to all VDCs, click **All Virtual data centers**.
+
+    ![Configure Services for Security Services](images/vmw-vcd10.1-btn-configure-services-security.png)
+
+4. In the **Distributed Firewall > General** tab of the *Services* dialog box, select **Enable Distributed Firewall**.
+
+    This creates default rules in both the **General** (L3) and **Ethernet** (L2) tabs.
+
+    ![Enable Distributed Firewall option](images/vmw-vcd10.1-enable-dfw.png)
+
+5. In the **General** tab, click the **+** button to add a new L3 rule.
+
+    ![Add DFW rule (L3)](images/vmw-vcd91-btn-add-dfw-l3-rule.png)
+
+6. Define the L3 rule:
+
+    Field | Action | &nbsp;
+    ------|--------|-------
+    Name | Enter a name for the rule. |
+    Source | Hover over the field, then click the **IP** button to enter a single IP address or an IP range. When you're done, click **Keep**. | ![Source IP Address dialog box](images/vmw-vcd91-dfw-l3-rule-source-ip.png)
+    Destination | Hover over the field, then click the **IP** button to enter a single IP address or an IP range. When you're done, click **Keep**. | ![Destination IP Address dialog box](images/vmw-vcd91-dfw-l3-rule-dest-ip.png)
+    Service | Hover over the field, then click the **IP** button to add the relevant **Protocol** and **Port**. When you're done, click **Keep**. | ![Add Service dialog box](images/vmw-vcd91-dfw-l3-rule-add-service.png)
+    Action | Select **Allow** or **Deny**. |
+    Direction | Select **In**, **Out** or **In/Out**. |
+    Packet Type | Select **IPv4**, **IPv6** or **Any**. |
+    Applied To | Hover over the field, then click the **+** button to select whether to apply the rule to an edge, Org VDC network, virtual machine, Org VDC or security group. Select the specific object then click the right arrow to add it. When you're done, click **Keep**. | ![Select objects dialog box](images/vmw-vcd91-dfw-l3-rule-select-objects.png)
+
+    ![Defining an L3 rule for DFW](images/vmw-vcd91-dfw-l3-rule.png)
+
+7. When you're done, click **Save changes**.
+
+    ![Save changes](images/vmw-vcd91-save-changes.png)
+
+***
+
 ## Creating a group of objects
 
 In some VDCs, you may want to use the same set of objects in multiple rules. For example, you may want to group web servers or other application servers together to use in a ruleset. Grouping objects keeps the firewall ruleset clean and easy to read.
@@ -108,12 +155,12 @@ To create an IP set:
 
 3. Fill out the fields in the *New IP Set* dialog box:
 
-    Field | Action
-    ------|-------
-    Name | Enter a name for the IP set, ideally without any spaces or special characters.
-    Description | Enter a description for the IP set.
+    Field        | Action
+    -------------|-------
+    Name         | Enter a name for the IP set, ideally without any spaces or special characters.
+    Description  | Enter a description for the IP set.
     IP Addresses | Enter the IP addresses that you want to include in the IP set. You can include a combination of individual IP addresses and IP ranges. You can also use CIDR format, for example `192.168.1.1/24`.
-    Inheritance | Select this option to enable the IP set to be consumed by underlying scopes.
+    Inheritance  | Select this option to enable the IP set to be consumed by underlying scopes.
 
     ![New IP Set dialog box](images/vmw-vcd91-services-ipset.png)
 
@@ -136,12 +183,12 @@ To create a MAC set:
 
 3. Fill out the fields in the *New MAC Set* dialog box:
 
-    Field | Action
-    ------|-------
-    Name | Enter a name for the MAC set.
-    Description | Enter a description for the MAC set.
+    Field         | Action
+    --------------|-------
+    Name          | Enter a name for the MAC set.
+    Description   | Enter a description for the MAC set.
     MAC Addresses | Enter the individual MAC addresses for your servers.
-    Inheritance | Select this option to enable the MAC set to be consumed by underlying scopes.
+    Inheritance   | Select this option to enable the MAC set to be consumed by underlying scopes.
 
     ![New MAC Set dialog box](images/vmw-vcd91-services-macset.png)
 

@@ -27,7 +27,7 @@ With this service, you're charged for the amount of data that you're protecting 
 
 ## About Disaster Recovery as a Service
 
-Disaster Recovery as a Service is a powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and UKCloud's disaster recovery enabled regions. This means that, in the event of a VM being compromised such as a local hardware failure, a power outage or security incidents such as theft or WAN connectivity disruption, you can quickly recover your VMs to the UKCloud platform and ensure that the disruption to your service is minimised.
+Disaster Recovery as a Service is a powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and UKCloud's disaster recovery enabled regions. This means that, in the event of a VM being compromised such as a local hardware failure, a power outage or security incident, such as theft or WAN connectivity disruption, you can quickly recover your VMs to the UKCloud platform and ensure that the disruption to your service is minimised.
 
 Once configured, you can protect VMs by adding them to a virtual protection group (VPG). Each VM in the VPG is synchronised to your recovery site on UKCloud, and a journal is created. After this initial sync, each subsequent write operation to the VM is processed as normal on your site and a copy is asynchronously sent to the recovery site and written to the journal.
 
@@ -49,7 +49,7 @@ Given the nature of this service, with part of the solution hosted on your site,
 
 - Creation of a VPN to connect to UKCloud
 
-- Ensuring that the local instances of Zerto are upgraded to remain compatible with the current version utilised by UKCloud. You will be notified via the notifications section on the UKCloud Portal when the version is upgraded on the UKCloud platform
+- Ensuring that the local instances of Zerto are upgraded to remain compatible with the current version utilised by UKCloud. You will be notified when the version is upgraded on the UKCloud platform
 
 - Local network tuning and firewall configurations
 
@@ -79,11 +79,11 @@ Factors that can affect the RPO are:
 
 - **Any network latency or storage performance challenges.** We monitor our estate to ensure that network and storage performance are in line with platform expectations. Any deviations are alerted to our technical teams to resolve.
 
-- **WAN network performance.** Low throughput WAN connections are unlikely to be able to transfer large amounts of data to UKCloud. This can make initial sync challenging for larger VMs.
+- **WAN network performance.** Low throughput WAN connections are unlikely to be able to transfer large amounts of data to UKCloud. This can make the initial sync challenging for larger VMs.
 
 Additionally, the service raises an alert if the size of a VM's journal exceeds 75% of the original VM. This alert helps to understand if your solution is adequately protected.
 
-Disaster Recovery as a Service captures data only while a VM is powered on. If a VM is deleted in vCloud Director, it will IMMEDIATELY delete the associated journal.
+Disaster Recovery as a Service captures data only while a VM is powered on. If a VM is deleted in vCloud Director/VMware Cloud Director, it will IMMEDIATELY delete the associated journal.
 
 ### What SLA do you offer on Disaster Recovery as a Service?
 
@@ -91,11 +91,11 @@ We don't offer an SLA around the VMs protected by our Disaster Recovery as a Ser
 
 ### Other
 
-The service is not backed by service credits.
+The service is not backed by Service Credits.
 
 On occasion, planned maintenance may disrupt the operation of the Disaster Recovery as a Service. This may lead to the service being unavailable, or a temporary increase to the RPO you may be able to achieve on the platform.
 
-If there's a potential disruption, we'll highlight this to you via the service [status page](https://status.ukcloud.com/) and UKCloud Portal notifications system.
+If there's a potential disruption, we'll highlight this to you via the [UKCloud Service Status page](https://status.ukcloud.com/).
 
 ## Disaster Recovery as a Service management
 
@@ -113,23 +113,23 @@ You can self-manage your protected environment via the Zerto Self-Service Portal
 
 - Perform live failovers
 
-We've disabled some areas of the Zerto Self-Service Portal as they're for services we don't presently support. These include:
+We've disabled some areas of the ZSSP as they're for services we don't presently support. These include:
 
-- Backup to external systems. At present, you cannot export your journal to external backup targets (such as UKCloud Cloud Storage). We've identified a compliance issue with this solution which we're working to address. Until this is addressed, the feature will remain unavailable.
+- Backup to external systems. At present, you cannot export your journal to external backup targets (such as UKCloud Cloud Storage). We've identified a compliance issue with this solution, which we're working to address. Until this is addressed, the feature will remain unavailable.
 
 Additionally, the following scenarios cannot be protected:
 
 - VMs with virtual disks with individual disks greater than 3TB
 
-- VMs which are clustered using shared virtual disks
+- VMs that are clustered using shared virtual disks
 
 ## Alerting and reporting
 
-The Zerto Self-Service Portal provides live real-time reporting of your solution and the current level of protection being provided to your VMs.
+The Zerto Self-Service Portal (ZSSP) provides live real-time reporting of your solution and the current level of protection being provided to your VMs.
 
 The portal also raises alerts if the target RPO of your VPG exceed the threshold, or if the associated journal size grows beyond the expected size. In both these scenarios, UKCloud also receives a platform monitoring alert and will investigate the cause.
 
-Additionally, the portal provides an activity log of the actions against a particular VM and a list of any errors captured on the platform.
+Additionally, the ZSSP provides an activity log of the actions against a particular VM and a list of any errors captured on the platform.
 
 ## Failover
 

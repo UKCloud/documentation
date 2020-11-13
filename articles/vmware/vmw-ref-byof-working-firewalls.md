@@ -2,9 +2,9 @@
 title: Bring Your Own Firewall - Known working and non-working firewalls
 description: This guide provides information about firewall technology that is known to work or not work on the UKCloud platform.
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+author: shighmoor
+reviewer: 
+lastreviewed: 19/07/2018
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,9 +19,9 @@ toc_mdlink: vmw-ref-byof-working-firewalls.md
 
 ## Introduction
 
-The UKCloud Bring Your Own Firewall service option enables you to install your own virtual firewall within your compute environment instead of using the vCNS device we provide as standard. This enables you to use technology with which you are already familiar and which offers the exact functionality that meets your requirements.
+The UKCloud Bring Your Own Firewall service option enables you to install your own virtual firewall within your compute environment instead of using the NSX Edge Services Gateway device we provide as standard. This enables you to use technology with which you are already familiar and which offers the exact functionality that meets your requirements.
 
-While we provide you with a vDC that enables you to use whichever firewall technology you want and do not impose any specific restrictions, this guide aims to provide information about technology that is known to work or not work on our platform.
+While we provide you with a VDC that enables you to use whichever firewall technology you want and do not impose any specific restrictions, this guide aims to provide information about technology that is known to work or not work on our platform.
 
 By requesting the Bring Your Own Firewall option, you accept that you are entirely responsible for sourcing, licensing, installing, configuring and maintaining your firewall. UKCloud will not be able to offer any support for issues caused by the use of a non-standard firewall.
 
@@ -47,17 +47,13 @@ The following firewall technology has been successfully deployed and configured 
 
     To ensure that your CSR1000v router operates correctly, ensure that your OVF template is built on the most recent hardware version (9 or above).
 
-    For more information see:
-
-    <https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2107517>
-
 ## Known non-working firewalls
 
 The following firewall technology is known to not work with the UKCloud platform.
 
 ### Cisco ASAv
 
-This product is not supported in vCloud Director and therefore will not work on the UKCloud platform.
+This product is not supported in vCloud Director/VMware Cloud Director and therefore will not work on the UKCloud platform.
 
 For more information, see:
 

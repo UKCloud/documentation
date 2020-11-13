@@ -2,17 +2,17 @@
 title: How to configure an L2 VPN
 description: Describes how to configure your Layer 2 VPN (L2 VPN), available as an advanced networking option with UKCloud for VMware
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 31/01/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 10/11/2020
 
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: Advanced networking
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Configure an L2 VPN
-toc_fullpath: How To/vmw-how-configure-l2-vpn.md
+toc_fullpath: How To/Advanced networking/vmw-how-configure-l2-vpn.md
 toc_mdlink: vmw-how-configure-l2-vpn.md
 ---
 
