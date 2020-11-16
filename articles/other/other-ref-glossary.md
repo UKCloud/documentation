@@ -2,7 +2,7 @@
 title: UKCloud glossary
 description: Provides definitions of commonly used UKCloud terms
 services: other
-author: Hannah Ferris
+author: hferris
 reviewer:
 lastreviewed: 19/11/2019
 toc_rootlink: Reference
@@ -109,7 +109,7 @@ For more information, see the [Cloud Storage service definition](../cloud-storag
 
 ### Compute service
 
-A UKCloud for VMware top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogs, users and resources.
+A UKCloud for VMware top-level container within a customer account that includes a vCloud Director/VMware Cloud Director organization and its VDCs, catalogs, users and resources.
 
 ### Cross Domain Security Zone (CDSZ)
 
@@ -377,7 +377,7 @@ OFFICIAL data that requires specific handling to mitigate risk. Security measure
 
 ### Organization (Org)
 
-A top level container in vCloud Director that contains one or more VDCs and owns all the virtual resources used by those VDCs.
+A top level container in vCloud Director/VMware Cloud Director that contains one or more VDCs and owns all the virtual resources used by those VDCs.
 
 ## P
 
