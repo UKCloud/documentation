@@ -3489,18 +3489,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/connectivity/conn-faq-bandwidth-monitoring.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/connectivity/conn-faq-bandwidth-monitoring.html",
-          "hash": "oJzVwzb1+ho0LkJre0xf1A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-faq-ddos.md",
       "output": {
         ".html": {
@@ -3962,7 +3950,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "rjoRTG5iLDsHUcSh9A1v5A=="
+          "hash": "27jSmGwtIIPhRkN4j87U+Q=="
         }
       },
       "is_incremental": false,
@@ -10481,7 +10469,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "UJdN2NQ2EOZUznK4MJg23Q=="
+          "hash": "Ukmdjsp70crY5yvZcU64OA=="
         }
       },
       "is_incremental": false,
@@ -12047,7 +12035,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-portal-api.html",
-          "hash": "a/0yBV6EFhMR/Hzdh/Rn2A=="
+          "hash": "zVJNw/cM9XORtTaSzoHs1w=="
         }
       },
       "is_incremental": false,
@@ -20614,7 +20602,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 451,
+          "total_file_count": 450,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
