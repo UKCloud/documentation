@@ -58,7 +58,7 @@ In this article we'll look at how to create a vApp from scratch.
 
 2. In the left navigation panel, under *Compute*, select **vApps** to view a list of vApps within the VDC.
 
-    ![vApps tab in vCloud Director](images/vmw-vcd10.1-tab-vapps.png)
+    ![vApps tab in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
 
 3. In the *vApps* page, click **New**, then select **New vApp**.
 
