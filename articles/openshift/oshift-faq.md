@@ -21,7 +21,7 @@ toc_mdlink: oshift-faq.md
 
 UKCloud for Managed OpenShift is UKCloud's OpenShift powered Kubernetes Platform as a Service (PaaS). The service provides a secure, private deployment of the Red Hat&trade; OpenShift&trade; Container Platform. The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
 
-UKCloud deploys, scales, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure or platform services.
+UKCloud deploys, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure or platform services.
 
 For an overview what the service offers, see the [*UKCloud for Managed OpenShift Service Definition*](oshift-sd.md). For specific details about the implementation and boundaries of the service, see the [*UKCloud for Managed OpenShift Service Scope*](oshift-sco.md).
 
