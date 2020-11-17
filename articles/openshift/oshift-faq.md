@@ -89,7 +89,7 @@ By default, ports 80 and 443 are open for customer application traffic. Further 
 
 ### How do I add users?
 
-To add new users, you will need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portall.
+To add new users, you will need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### What monitoring of the services is provided by default in a trial?
 
