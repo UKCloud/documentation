@@ -25,7 +25,7 @@ If you are considering purchasing our UKCloud for Managed OpenShift service, thi
 
 UKCloud for Managed OpenShift is UKCloud's OpenShift powered Kubernetes Platform as a Service (PaaS). The service provides a secure, private deployment of the Red Hat&trade; OpenShift&trade; Container Platform. The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
 
-UKCloud deploys, scales, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure.
+UKCloud deploys, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure.
 
 For more information about what the service offers, see the [*UKCloud for Managed OpenShift Service Definition*](oshift-sd.md).
 
@@ -65,7 +65,7 @@ Typical use cases include:
 
 ## Service implementation
 
-UKCloud for Managed OpenShift is built using Red Hat's OpenShift Container Platform (OCP) v4, which is the enterprise-hardened version of OKD (previously Origins) v4, which is based on Kubernetes 1.11.
+UKCloud for Managed OpenShift is built using Red Hat's OpenShift Container Platform (OCP) v4, which is the enterprise-hardened version of OKD (previously Origins) v4, which extends the Open Source Kubernetes project.
 
 UKCloud for Managed OpenShift is built as an isolated single-tenant environment on top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS service, helping to deliver the benefits of single-tenant isolation with the economics and flexibility of multi-tenant infrastructure.
 
@@ -182,7 +182,7 @@ Within 5 business days of accepting an order, UKCloud will create your primary a
 
 UKCloud for Managed OpenShift is delivered as a private Platform-as-a-Service (PaaS). Each customer will be provided with an isolated OpenShift cluster within which they can build their containerised solutions.
 
-By default, only a single user account will be created per cluster, this user can then create additional users within the cluster.
+By default, only a single user account will be created per cluster, this user can then create additional users within the cluster by managing account users via the UKCloud Portal.
 
 ## Platform management
 
@@ -196,7 +196,7 @@ You are responsible for:
 
 - The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks, such as HSCN, Janet, RLI or PSN (including legacy networks), you are responsible for adhering to the Code of Connection (CoCo).
 
-- Self-managing the environment including container deployment, virtual network configuration, storage management, and so on.
+- Self-managing the environment including workload deployment, in cluster workload segregation, network policy management, storage requests and management, and so on.
 
 - Maintaining a master copy or backup copy of the data used in the UKCloud for Managed OpenShift service (see [*Backup/recovery and disaster recovery*](#backuprecovery-and-disaster-recovery)).
 
