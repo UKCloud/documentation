@@ -6148,7 +6148,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-faq.html",
-          "hash": "Ig6kfplACpG+6mKg0HkkLw=="
+          "hash": "y6bB6AXsTUXAxjy66Q+BFg=="
         }
       },
       "is_incremental": false,
@@ -6539,12 +6539,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "jVfYfolfj+SWGj5X+6skSw=="
+          "hash": "Ifa+/phpADP7JPAgkt4j2Q=="
         }
       },
       "is_incremental": false,
@@ -6580,7 +6583,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "TnImtpmilbEakVj79Ys53Q=="
+          "hash": "3g0rXGqzj614cahzPYBwVQ=="
         }
       },
       "is_incremental": false,
