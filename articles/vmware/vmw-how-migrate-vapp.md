@@ -2,9 +2,9 @@
 title: How to migrate vApps between virtual data centres
 description: Covers the ways in which customers can migrate their vApps between virtual data centres (VDCs)
 services: vmware
-author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 02/08/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 17/11/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -33,15 +33,15 @@ You may want to copy your vApp from one VDC to another VDC, leaving the original
 
 To copy a vApp:
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the vApp you want to copy.
+1. In vCloud Director/VMware Cloud Director, select the VDC that contains the vApp you want to copy.
 
-2. In the left navigation panel, click **vApps**.
+2. In the left navigation panel, under *Compute*, select **vApps**.
 
 3. In the card for the vApp that you want to copy, select **Actions** then **Copy to**.
 
 4. In the *Copy* dialog box, enter a **Name** for the copied vApp and select which VDC you want to migrate it to. You can also change the storage policy for each virtual machines (VMs) within the vApp.
 
-    ![Copy vApp dialog box](images/vmw-vcd91-copy-vapp.png)
+    ![Copy vApp dialog box](images/vmw-vcd10.1-copy-vapp.png)
 
 5. When you're happy with the configuration, click **OK** to begin the copy operation.
 
@@ -54,15 +54,15 @@ You may want to completely move your vApp from one VDC to another VDC. This will
 
 To move a vApp:
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the vApp you want to move.
+1. In vCloud Director/VMware Cloud Director, select the VDC that contains the vApp you want to move.
 
-2. In the left navigation panel, click **vApps**.
+2. In the left navigation panel, under *Compute*, click **vApps**.
 
 3. In the card for the vApp that you want to move, select **Actions** then **Move to**.
 
 4. In the *Move* dialog box, select which VDC you want to migrate the vApp to. You can also change the storage policy for each VMs within the vApp.
 
-    ![Move vApp dialog box](images/vmw-vcd91-move-vapp.png)
+    ![Move vApp dialog box](images/vmw-vcd10.1-move-vapp.png)
 
 5. When you're happy with the configuration, click **OK** to begin the move operation.
 
