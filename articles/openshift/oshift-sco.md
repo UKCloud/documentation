@@ -142,9 +142,7 @@ By default, UKCloud will provide 90-day Let's Encrypt SSL certificates for your 
 
 #### Container native storage
 
-Kubernetes was not designed with stateful applications like databases in mind. For enterprise applications, these systems have non-negotiable business requirements like high availability, data security, disaster recovery, strict performance SLAs and hybrid/multi-cloud operations.
-
-To address the challenge above, UKCloud offers a [Portworx Enterprise](../openshift/oshift-sd-portworx.md) service, assisting with the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.
+To facilitate the deployment of stateful workloads, UKCloud for Managed OpenShift offers dynamically provisioned persistent storage. It is vital that any persistent workloads utilise the appropriate storage policy for the workload to ensure no data loss when a container restarts. The customer is responsible for backup and disaster recovery of any data stored in persistent volumes.
 
 ### Backup/recovery and disaster recovery
 
@@ -196,7 +194,7 @@ You are responsible for:
 
 - The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks, such as HSCN, Janet, RLI or PSN (including legacy networks), you are responsible for adhering to the Code of Connection (CoCo).
 
-- Self-managing the environment including workload deployment, in cluster workload segregation, network policy management, storage requests and management, and so on.
+- Self-managing the environment including workload deployment, in-cluster workload segregation, network policy management, storage requests and management, and so on.
 
 - Maintaining a master copy or backup copy of the data used in the UKCloud for Managed OpenShift service (see [*Backup/recovery and disaster recovery*](#backuprecovery-and-disaster-recovery)).
 
