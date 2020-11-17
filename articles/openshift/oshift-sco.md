@@ -69,7 +69,7 @@ UKCloud for Managed OpenShift is built using Red Hat's OpenShift Container Platf
 
 UKCloud for Managed OpenShift is built as an isolated single-tenant environment on top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS service, helping to deliver the benefits of single-tenant isolation with the economics and flexibility of multi-tenant infrastructure.
 
-UKCloud for Managed OpenShift is available in our Assured OFFICIAL and Elevated OFFICIAL security domains on our Tier 1 platform. UKCloud for Managed OpenShift is available on our Tier 2 platform for workloads which require greater levels of security.
+UKCloud for Managed OpenShift is available in our Assured OFFICIAL and Elevated OFFICIAL security domains on our Tier 1 platform. UKCloud for Managed OpenShift is available on our Tier 2 platform for workloads that require greater levels of security.
 
 ### Deployment options
 
@@ -172,7 +172,7 @@ Although these features are not currently available, they will be considered on 
 
 ### How to buy
 
-You can request UKCloud for Managed OpenShift by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or for new enquires visit our "Contact Us" page of our website.
+You can request UKCloud for Managed OpenShift by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or, for new enquires, visit the [Contact Us](https://ukcloud.com/contact/) page of our website.
 
 ### Onboarding
 
