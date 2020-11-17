@@ -6539,15 +6539,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "Ifa+/phpADP7JPAgkt4j2Q=="
+          "hash": "cnPEWae+S1Uii5otxdKg0Q=="
         }
       },
       "is_incremental": false,
