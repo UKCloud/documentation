@@ -19,7 +19,7 @@ toc_mdlink: oshift-sco.md
 
 ## About this Service Scope
 
-If you are considering purchasing our UKCloud for Managed OpenShift service, this article describes the boundaries of the service, along with the division of responsibilities between you and UKCloud to facilitate  the provisioning and ongoing use of the service.
+If you are considering purchasing our UKCloud for Managed OpenShift service, this article describes the boundaries of the service, along with the division of responsibilities between you and UKCloud to facilitate the provisioning and ongoing use of the service.
 
 ## About UKCloud for Managed OpenShift
 
@@ -65,11 +65,11 @@ Typical use cases include:
 
 ## Service implementation
 
-UKCloud for Managed OpenShift is built using Red Hat's OpenShift Container Platform (OCP) v4, which is the enterprise-hardened version of OKD (previously Origins) v4, which extends the Open Source Kubernetes project.
+UKCloud for Managed OpenShift is built using Red Hat's OpenShift Container Platform (OCP) v4, which is the enterprise-hardened version of OKD (previously Origins) v4, which extends the open source Kubernetes project.
 
 UKCloud for Managed OpenShift is built as an isolated single-tenant environment on top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS service, helping to deliver the benefits of single-tenant isolation with the economics and flexibility of multi-tenant infrastructure.
 
-UKCloud for Managed OpenShift is available in our Assured OFFICIAL and Elevated OFFICIAL security domains on our Tier 1 platform. UKCloud for Managed OpenShift is available on our Tier 2 platform.
+UKCloud for Managed OpenShift is available in our Assured OFFICIAL and Elevated OFFICIAL security domains on our Tier 1 platform. UKCloud for Managed OpenShift is available on our Tier 2 platform for workloads which require greater levels of security.
 
 ### Deployment options
 
@@ -172,7 +172,7 @@ Although these features are not currently available, they will be considered on 
 
 ### How to buy
 
-You can request UKCloud for Managed OpenShift by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or by contacting your Account Director or Service Delivery Manager.
+You can request UKCloud for Managed OpenShift by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or for new enquires visit our "Contact Us" page of our website.
 
 ### Onboarding
 
