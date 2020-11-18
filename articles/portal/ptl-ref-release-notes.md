@@ -19,6 +19,16 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.6.0
+
+Date: 18th November 2020
+
+Feature update
+
+Details:
+ 
+- Stop displaying bandwidth monitoring information in the Portal MyVMs pages and the API
+
 ## Release 2.4.0
 
 Date: 28th October 2020
