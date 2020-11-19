@@ -35,7 +35,7 @@ After you've deployed a virtual machine (VM), you can view and update its config
 
 4. Click the name of the VM for which you want to view configuration information.
 
-5. Expand each section to view the settings for the VM and change them if required.
+5. Expand each section to view the settings for the VM and change them if required (see below).
 
 6. When you're done, click **Save** to save any changes you've made, or **Discard Changes** to close without saving.
 
@@ -51,19 +51,21 @@ After you've deployed a virtual machine (VM), you can view and update its config
 
     ![Virtual Machine Details option](images/vmw-vcd10.1-mnu-vm-details.png)
 
-4. Select each section to view the settings for the VM and change them if required.
+4. Select each section to view the settings for the VM and change them if required (see below).
 
 ***
 
 ## General
 
-In **General**, you can view and changes properties such as the VM/host name, OS type and version. You can also see if VMware Tools is installed on the VM and change the storage policy for the VM.
+In **General**, you can view and change properties such as the VM/host name, OS type and version. You can also see if VMware Tools is installed on the VM and change the storage policy for the VM.
 
 ### [vCloud Director 9.7](#tab/tabid-a)
 
 ![Virtual Machines: General section](images/vmw-vcd91-vm-general.png)
 
 ### [VMware Cloud Director 10.1](#tab/tabid-b)
+
+To update general VM settings, click **Edit**.
 
 ![Virtual Machine: General page](images/vmw-vcd10.1-vm-general.png)
 
@@ -90,6 +92,8 @@ In **Hardware**, you can:
 
 ### [VMware Cloud Director 10.1](#tab/tabid-b)
 
+To update VM hardware, select the appropriate component under *Hardware*, then click **Edit**.
+
 ![Virtual Machine: Compute page](images/vmw-vcd10.1-vm-hardware-compute.png)
 
 ![Virtual Machine: Hard Disks page](images/vmw-vcd10.1-vm-hardware-disks.png)
@@ -113,6 +117,8 @@ For Windows VMs, there is an option for guest customisation to change the SID of
 ![Virtual Machines: Guest OS Customization section](images/vmw-vcd-vm-guestos.png)
 
 ### [VMware Cloud Director 10.1](#tab/tabid-b)
+
+To update guest OS customisation settings, click **Edit**.
 
 ![Virtual Machine: Guest OS Customization page](images/vmw-vcd10.1-vm-guest-os.png)
 
