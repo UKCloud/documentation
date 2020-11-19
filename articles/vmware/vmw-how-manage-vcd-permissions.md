@@ -53,50 +53,50 @@ To configure permissions for a portal user:
 
 The first table shows the user types (operations); the second table shows the exact privileges each user type has.
 
-Operation | Allows the user administrative access to the given organisation with:
-----------|--------------------------------------------------------------------------------------
-Console Only (CO) | Permissions for Console access only
-vApp User (VU) | Permissions for a vApp User
-vApp Author (VA) | Permissions for a vApp Author
-Catalogue Author (CA) |  Permissions for a Catalogue Author
-Admin (ADM) | All permissions
+Operation             | Allows the user administrative access to the given organisation with:
+----------------------|--------------------------------------------------------------------------------------
+Console Only (CO)     | Permissions for Console access only
+vApp User (VU)        | Permissions for a vApp User
+vApp Author (VA)      | Permissions for a vApp Author
+Catalogue Author (CA) | Permissions for a Catalogue Author
+Admin (ADM)           | All permissions
 
-Group | Privilege | CO | VU | VA | CA | ADM
-------|-----------|----|----|----|----|-----
-Catalog | Add a vApp from My Cloud | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Change Owner | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &check;
-&nbsp; | Create/Delete a new Catalog | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Edit Catalog Properties | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Publish a Catalog | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Share a Catalog | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | View Private and Shared Catalogs | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | View Published Catalogs | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &check;
-Catalog Item | Add to My Cloud | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Copy/Move a vApp Template/Media | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Create/Upload a vApp Template/Media | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Enable vApp Template Download | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Edit vApp Template / Media Properties | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | View vApp Templates/Media | &nbsp; | &check; | &check; |&check; | &check;
-Disk | Change Owner | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Create a Disk | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Delete a Disk | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Edit Disk Properties | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | View Disk Properties | &nbsp; | &check; | &check; | &check; | &check;
-vApp | Access to VM Console | &check; | &check; | &check; | &check; | &check;
-&nbsp; | Change Owner | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &check;
-&nbsp; | Copy a vApp | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Create/Reconfigure a vApp | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Create/Revert/Remove a Snapshot | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Delete a vApp | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Edit vApp Properties | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Edit VM CPU | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Edit VM Hard Disk | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Edit VM Memory | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Edit VM Network | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Edit VM Properties | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Manage VM Password Settings | &check; | &check; | &check; | &check; | &check;
-&nbsp; | Share a vApp | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Start/Stop/Suspend/Reset a vApp | &nbsp; | &check; | &check; | &check; | &check;
+Group        | Privilege                              | CO      | VU      | VA      | CA      | ADM
+-------------|----------------------------------------|---------|---------|---------|---------|--------
+Catalog      | Add vApp from My Cloud                 | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | Change Owner                           | &nbsp;  | &nbsp;  | &nbsp;  | &nbsp;  | &check;
+&nbsp;       | Create / Delete a Catalog              | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
+&nbsp;       | Edit Properties                        | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
+&nbsp;       | Publish                                | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
+&nbsp;       | Sharing                                | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
+&nbsp;       | View Private and Shared Catalogs       | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | View Published Catalogs                | &nbsp;  | &nbsp;  | &nbsp;  | &nbsp;  | &check;
+Catalog Item | Add to My Cloud                        | &nbsp;  | &check; | &check; | &check; | &check;
+&nbsp;       | Copy/Move a vApp Template/Media        | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | Create/Upload a vApp Template/Media    | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
+&nbsp;       | Enable vApp Template Download          | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
+&nbsp;       | Edit vApp Template / Media Properties  | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
+&nbsp;       | View vApp Templates/Media              | &nbsp;  | &check; | &check; | &check; | &check;
+Disk         | Change Owner                           | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
+&nbsp;       | Create                                 | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | Delete                                 | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | Edit Properties                        | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | View Properties                        | &nbsp;  | &check; | &check; | &check; | &check;
+vApp         | Change Owner                           | &nbsp;  | &nbsp;  | &nbsp;  | &nbsp;  | &check;
+&nbsp;       | Copy                                   | &nbsp;  | &check; | &check; | &check; | &check;
+&nbsp;       | Create/Reconfigure                     | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | Delete                                 | &nbsp;  | &check; | &check; | &check; | &check;
+&nbsp;       | Edit vApp Properties                   | &nbsp;  | &check; | &check; | &check; | &check;
+&nbsp;       | Edit VM CPU                            | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | Edit VM Hard Disk                      | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | Edit VM Memory                         | &nbsp;  | &nbsp;  | &check; | &check; | &check;
+&nbsp;       | Edit VM Network                        | &nbsp;  | &check; | &check; | &check; | &check;
+&nbsp;       | Edit VM Properties                     | &nbsp;  | &check; | &check; | &check; | &check;
+&nbsp;       | Manage VM Password Settings            | &check; | &check; | &check; | &check; | &check;
+&nbsp;       | Power Operations                       | &nbsp;  | &check; | &check; | &check; | &check;
+&nbsp;       | Sharing                                | &nbsp;  | &check; | &check; | &check; | &check;
+&nbsp;       | Snapshot Operations                    | &nbsp;  | &check; | &check; | &check; | &check;
+&nbsp;       | Use Console                            | &check; | &check; | &check; | &check; | &check;
 
 ### API Only role
 
