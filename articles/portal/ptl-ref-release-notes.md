@@ -3,8 +3,8 @@ title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: shighmoor
-reviewer: ccouzens
-lastreviewed: 28/10/2020
+reviewer: tlaryea 
+lastreviewed: 18/11/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -19,6 +19,16 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.6.0
+
+Date: 18th November 2020
+
+Feature update
+
+Details:
+ 
+- Remove bandwidth monitoring information from the Portal My VMs pages and the API
+
 ## Release 2.4.0
 
 Date: 28th October 2020
@@ -27,7 +37,7 @@ Feature update
 
 Details:
 
-- Stop displaying VM storage information in the Portal MyVMs pages
+- Remove VM storage information from the Portal My VMs pages
 
 - Stop returning VM storage values within the Portal API
 
