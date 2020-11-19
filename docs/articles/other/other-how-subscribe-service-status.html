@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to sign up for Portal notifications </title>
+    <title>How to subscribe to service status notifications </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to sign up for Portal notifications ">
+    <meta name="title" content="How to subscribe to service status notifications ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-how-signup-notifications.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-how-subscribe-service-status.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,34 +91,58 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-sign-up-for-portal-notifications">How to sign up for Portal notifications</h1>
+<h1 id="how-to-subscribe-to-service-status-notifications">How to subscribe to service status notifications</h1>
 
 <h2 id="overview">Overview</h2>
-<p>When you use the UKCloud Portal, you'll notice that notifications are provided at the top of every page. These notifications provide information about incidents that have occurred on the UKCloud platform.</p>
-<p>If you want, you can also opt to have these notifications sent to you by email. This feature is available in both the Assured and Elevated Portals.</p>
-<p>To keep up to date with everything that's happening on the UKCloud platform, including general service availability, scheduled maintenance and incidents, go to the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a>. For more information, see <a href="../other/other-ref-status-page.html">*Understanding the UKCloud Service Status page</a>.</p>
-<h2 id="opting-in-to-portal-notifications-by-email">Opting in to Portal notifications by email</h2>
+<p>The <a href="https://status.ukcloud.com">UKCloud Service Status page</a> enables you to monitor the availability and overall health of the services on the UKCloud platform.</p>
+<p>You can subscribe to the Service Status page to receive notifications to keep up to date with the latest status and maintenance information.</p>
+<h2 id="subscribing-to-the-service-status-page">Subscribing to the Service Status page</h2>
+<p>You can subscribe to the Service Status page to receive updates when information on the page is updated.</p>
 <ol>
-<li><p>Log in to the UKCloud Portal.</p>
-<p>For more details see the <a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></p>
+<li><p>On the UKCloud Service Status page, click the <strong>Subscribe to Updates</strong> button.</p>
+<p><img src="images/other-status-btn-subscribe.png" alt="Subscribe to Updates button"></p>
 </li>
-<li><p>In the top-right of the toolbar, click your user name and select <strong>Update contact details</strong>.</p>
-<p><img src="images/ptl-mnu-contact-details.png" alt="Update contact details menu option"></p>
+<li><p>To receive email notifications:</p>
+<ul>
+<li><p>Click the envelope icon, enter your email address, then click <strong>Subscribe via Email</strong>.</p>
+<p><img src="images/other-status-notification-email.png" alt="Subscribe via Email"></p>
 </li>
-<li><p>In the <em>Contact Preferences</em> section of the <em>Update Contact Details</em> page, select the <strong>Receive notification emails</strong> checkbox and then click <strong>Save</strong>.</p>
-<p><img src="images/ptl-contact-details-notifications.png" alt="Receive notification emails opton on Update Contact Details page"></p>
+<li><p>Confirm your subscription by clicking the <strong>Confirm subscription</strong> button in the email you receive.</p>
 </li>
-<li><p>You should now receive Portal notification emails to the email address associated with your Portal account.</p>
+<li><p>On the <em>Notifications Subscription</em> page, you can specify individual components for which you want to receive notifications.</p>
+<p><img src="images/other-status-subscriptions.png" alt="Notifications Subscription page"></p>
+</li>
+</ul>
+</li>
+<li><p>To receive text notifications:</p>
+<ul>
+<li><p>Click the telephone handset icon, enter your phone number, then click <strong>Subscribe via Text Message</strong>.</p>
+<p><img src="images/other-status-notification-text.png" alt="Subscribe via Text Message"></p>
+</li>
+<li><p>Click the link in the confirmation text message you receive to manage your subscriptions.</p>
+</li>
+</ul>
+</li>
+<li><p>To receive webhook notifications, click the code icon (<strong>&lt;&gt;</strong>), enter the URL of the endpoint to send the webhook to and the email address to send any associated error messages, then click <strong>Subscribe to Notifications</strong>.</p>
+<p><img src="images/other-status-notification-webhook.png" alt="Subscribe via Webhook"></p>
+<p>You'll need to set up an endpoint to receive the webhook requests. For more information about webhooks, see the Atlassian Statuspage documentation: <a href="https://help.statuspage.io/help/webhook-notifications">Webhook Notifications</a>. For example code for setting up an endpoint, see <a href="other-how-use-webhooks.html"><em>How to use webhooks to receive service status notifications</em></a>.</p>
+</li>
+<li><p>To subscribe to the Atom/RSS feed, click the RSS icon and then click the <strong>Atom Feed</strong> or <strong>RSS Feed</strong> link.</p>
+<p><img src="images/other-status-notification-rss.png" alt="Subscribe to RSS"></p>
 </li>
 </ol>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This may not happen immediately as the update will need to sync with Active Directory. If you experience any issues with receiving emails from the Portal, raise a ticket with UKCloud Support.</p>
-</div>
-<h2 id="related-videos">Related videos</h2>
-<ul>
-<li><a href="ptl-vid-portal.html"><em>UKCloud Portal overview video</em></a></li>
-</ul>
+<h2 id="subscribing-to-a-specific-incident-or-maintenance-window">Subscribing to a specific incident or maintenance window</h2>
+<p>You can also subscribe to notifications for a specific incident or maintenance window.</p>
+<ol>
+<li><p>On the UKCloud Service Status page, click the <strong>Subscribe</strong> link in the banner for the incident or maintenance alert that you want to subscribe to.</p>
+<p><img src="images/other-status-incident-subscribe.png" alt="Subscribe link for incident"></p>
+</li>
+<li><p>Enter your email address or phone number, then click <strong>Subscribe to Incident</strong>.</p>
+<p><img src="images/other-status-subscribe-incident.png" alt="Subscribe to Incident dialog box"></p>
+</li>
+</ol>
+<h2 id="subscribing-to-portal-notifications">Subscribing to Portal notifications</h2>
+<p>Incident notifications are also reported via the UKCloud Portal. You can subscribe to receive Portal notifications via email. For more information, see <a href="../portal/ptl-how-signup-notifications.html"><em>How to sign up for Portal notifications</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

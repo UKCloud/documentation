@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "RVNvecFubIezrZM7kxo04w=="
+          "hash": "Yx7rN0M4gSKtv6QMAWiuTw=="
         }
       },
       "is_incremental": false,
@@ -5575,7 +5575,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-antivirus-faq.html",
-          "hash": "n9u54ooxjNzooqr2J+oT0g=="
+          "hash": "3nWKTGudPSfHqIYgQF4KTg=="
         }
       },
       "is_incremental": false,
@@ -5599,7 +5599,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-faq.html",
-          "hash": "aCgK8xyZ6hI0zFRoGTG20g=="
+          "hash": "I82hd84Jcsh0zHEBEjPA/Q=="
         }
       },
       "is_incremental": false,
@@ -5647,7 +5647,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-patching-faq.html",
-          "hash": "i5K1rHTpzGtAy7MOF0WMzQ=="
+          "hash": "xs4FCmaV7LpcS1K49t9kew=="
         }
       },
       "is_incremental": false,
@@ -8748,7 +8748,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "dkP2Og/Ts2YuYXD61mbehg=="
+          "hash": "OkIt6mdc/nTzDdLuxl8o7w=="
         }
       },
       "is_incremental": false,
@@ -10501,6 +10501,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-how-subscribe-service-status.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-how-subscribe-service-status.html",
+          "hash": "dAObrAIf4mrpC5mCBthopg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-how-use-pricing-tool.md",
       "output": {
         ".html": {
@@ -10517,19 +10529,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-use-webhooks.html",
-          "hash": "NoYH5Q9Wt32QQUrqT5k8Cg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-how-view-status-info.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-how-view-status-info.html",
-          "hash": "QWSiLvAS8m/5SEYsz2eMxQ=="
+          "hash": "ZtCCnnNXgq+wF0K3KVLfnQ=="
         }
       },
       "is_incremental": false,
@@ -10837,6 +10837,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-status-page.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-status-page.html",
+          "hash": "MHElDfcc1OyM7ay2Z2enwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-terms-and-conditions-g12.md",
       "output": {
         ".html": {
@@ -10937,7 +10949,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "s7vtobzy2X2qcdQV30HGXA=="
+          "hash": "/i5lGN8qVm/iaBV/hfgSUQ=="
         }
       },
       "is_incremental": false,
@@ -11807,7 +11819,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "bswT8q9/YGaygDzB0nx8yA=="
+          "hash": "d9B2yo380PZp0PPNlucaMg=="
         }
       },
       "is_incremental": false,
@@ -11951,7 +11963,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-signup-notifications.html",
-          "hash": "WhlQLVbsrqLu2t82iQmdZQ=="
+          "hash": "hDM/B4mkkgE7J1H0wVxWRA=="
         }
       },
       "is_incremental": false,
@@ -19323,7 +19335,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "pjMVJ/UDN7YB/RkXLV7sUQ=="
+          "hash": "n5L9XYNDApirUrpvz2ZpqA=="
         }
       },
       "is_incremental": false,
@@ -20602,7 +20614,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 450,
+          "total_file_count": 451,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
