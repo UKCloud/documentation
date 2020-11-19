@@ -48,7 +48,7 @@ To create a DHCP pool:
 
     ![Add DHCP button](images/vmw-vcd-btn-add-dhcp-adv.png)
 
-6. Select the network to which you want to apply the DHCP pool, then define an IP range for the pool. You can leave the lease times as default or change them.
+6. Define an IP range for the pool. You can leave the lease times as default or change them.
 
     ![Add DHCP Pool dialog box](images/vmw-vcd-add-dhcp-pool-adv.png)
 
@@ -74,7 +74,7 @@ To create a DHCP pool:
 
     ![Add DHCP button](images/vmw-vcd10.1-btn-add-dhcp.png)
 
-6. In the *Add DHCP Pool* dialog box, select the network to which you want to apply the DHCP pool, then define an IP range for the pool. You can leave the lease times as default or change them.
+6. In the *Add DHCP Pool* dialog box, define an IP range for the pool. You can leave the lease times as default or change them.
 
     ![Add DHCP Pool dialog box](images/vmw-vcd10.1-add-dhcp-pool.png)
 
@@ -84,7 +84,9 @@ To create a DHCP pool:
 
 ## Next steps
 
-In this article you've learned how to create a DHCP pool. For other edge gateway configuration tasks, see:
+In this article you've learned how to create a DHCP pool. Next, you need to make sure there's a VDC network, configured with a matching gateway and range, connected to the edge. Any VMs attached to this network and configured for DHCP will pick up an IP address from the pool. For more information about creating a network, see [*How to create a routed VDC network**](vmw-how-create-routed-network.md).
+
+For other edge gateway configuration tasks, see:
 
 - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
 
