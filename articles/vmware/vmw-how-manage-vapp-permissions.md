@@ -25,7 +25,7 @@ This article shows you how to extend permissions to users for specific vApps, wh
 
 You must be able to log in to the UKCloud Portal as an administrator to perform the steps in this guide. If you do not have the appropriate permissions, contact your administrator.
 
-For each user to whom you want to grant permissions on the vApp, you need the vCloud Director/VMware Cloud Director user ID. Users can obtain their user ID as follows:
+For each user to whom you want to grant permissions on the vApp, you need the VMware Cloud Director/vCloud Director user ID. Users can obtain their user ID as follows:
 
 1. Log into the Portal as the appropriate user.
 
@@ -37,7 +37,7 @@ For each user to whom you want to grant permissions on the vApp, you need the vC
 
     ![Username](images/vmw-portal-api-details.png)
 
-## Setting vCloud Director permissions in the UKCloud Portal
+## Setting VMware Cloud Director/vCloud Director permissions in the UKCloud Portal
 
 1. Log in to the UKCloud Portal as an administrator.
 
@@ -57,29 +57,7 @@ For each user to whom you want to grant permissions on the vApp, you need the vC
 
 To manage permissions for a specific vApp:
 
-### [vCloud Director 9.7](#tab/tabid-a)
-
-1. In vCloud Director, select the VDC where your vApp is located.
-
-2. In the card for the vApp, click **Details**.
-
-    ![Details option](images/vmw-vcd-mnu-vapp-details.png)
-
-3. In the *Sharing* section, select **Share with specific users or groups**.
-
-    ![vApp permissions](images/vmw-vcd-tp-vapp-share.png)
-
-4. For each user to whom you want to grant permissions:
-
-    - Highlight the user or users from the list and go to the right panel to select Access Level.
-
-    - Select the appropriate permission level from the **Access Level** list: **Read Only** or **Full Control**.
-
-    ![vApp Access Level](images/vmw-vcd-tp-vapp-share-level.png)
-
-5. When you're done setting permissions for all users, click **Save**.
-
-### [VMware Cloud Director 10.1](#tab/tabid-b)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the vApp.
 
@@ -102,6 +80,28 @@ To manage permissions for a specific vApp:
     ![vApp Access Level](images/vmw-vcd10.1-share-vapp.png)
 
 7. When you're done setting permissions for all users, click **Share**.
+
+### [vCloud Director 9.7](#tab/tabid-b)
+
+1. In vCloud Director, select the VDC where your vApp is located.
+
+2. In the card for the vApp, click **Details**.
+
+    ![Details option](images/vmw-vcd-mnu-vapp-details.png)
+
+3. In the *Sharing* section, select **Share with specific users or groups**.
+
+    ![vApp permissions](images/vmw-vcd-tp-vapp-share.png)
+
+4. For each user to whom you want to grant permissions:
+
+    - Highlight the user or users from the list and go to the right panel to select Access Level.
+
+    - Select the appropriate permission level from the **Access Level** list: **Read Only** or **Full Control**.
+
+    ![vApp Access Level](images/vmw-vcd-tp-vapp-share-level.png)
+
+5. When you're done setting permissions for all users, click **Save**.
 
 ***
 

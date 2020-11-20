@@ -21,7 +21,7 @@ VMware provides tools that should be installed into all virtual machines running
 
 ## Windows
 
-1. In vCloud Director/VMware Cloud Director, locate the virtual machine in which you want to install VMware Tools.
+1. In VMware Cloud Director/vCloud Director, locate the virtual machine in which you want to install VMware Tools.
 
 2. In the card for the VM, select **Actions**, then **Install VMware tools**.
 
@@ -31,7 +31,7 @@ VMware provides tools that should be installed into all virtual machines running
 
 ## Linux
 
-There are two methods of installing the VMware tools for Linux, from within vCloud Director/VMware Cloud Director using the method above or installing the open-vm-tools, which are now supported by VMware. Not all distributions provide support for the open-vm-tools however the following well known distributions do:
+There are two methods of installing the VMware tools for Linux, from within VMware Cloud Director/vCloud Director using the method above or installing the open-vm-tools, which are now supported by VMware. Not all distributions provide support for the open-vm-tools however the following well known distributions do:
 
 Centos 5/6/7
 
@@ -39,7 +39,7 @@ Redhat 5/6/7
 
 Ubuntu 12.04/14.04
 
-Installing the VMware tools via vCloud Director/VMware Cloud Director requires modules to be built against the running kernel. If the kernel is updated, the administrator needs to run the VMWare tools setup again to recompile the modules. UKCloud recommends using the open-vm-tools because this maintenance is handled by the package manager when the kernel is updated.
+Installing the VMware tools via VMware Cloud Director/vCloud Director requires modules to be built against the running kernel. If the kernel is updated, the administrator needs to run the VMWare tools setup again to recompile the modules. UKCloud recommends using the open-vm-tools because this maintenance is handled by the package manager when the kernel is updated.
 
 ### Redhat/Centos 5/6/7
 

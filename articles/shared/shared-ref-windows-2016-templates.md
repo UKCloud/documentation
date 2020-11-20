@@ -27,7 +27,7 @@ To enable Windows Server 2016 for our compute services, we've deployed new Key M
 
 ### UKCloud for VMware
 
-In vCloud Director/VMware Cloud Director, we provide a public catalogue (Windows Templates Catalogue) for you to use that contains standard virtual machine (VM) sizes and operating systems. This public catalogue in our Assured and Elevated security domains now includes templates for Windows Server 2016.
+In VMware Cloud Director/vCloud Director, we provide a public catalogue (Windows Templates Catalogue) for you to use that contains standard virtual machine (VM) sizes and operating systems. This public catalogue in our Assured and Elevated security domains now includes templates for Windows Server 2016.
 
 The Windows Template Catalogue for UKCloud for VMware includes templates for both Datacenter and Standard Editions of Windows 2016. Templates are available in our standard range of resource configurations (CPU/RAM).
 

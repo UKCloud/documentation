@@ -40,7 +40,7 @@ You can use the vCloud API to retrieve current or historic utilisation metrics f
 You can retrieve current utilisation metrics for VMs in all UKCloud regions; you can retrieve historic metrics for VMs in regions 5 and 6.
 
 > [!NOTE]
-> You can also find utilisation metrics for a VM in vCloud Director/VMware Cloud Director by selecting **Details** and expanding the *Monitoring Chart* section.
+> You can also find utilisation metrics for a VM in VMware Cloud Director/vCloud Director by selecting **Details** and expanding the *Monitoring Chart* section.
 
 ### Intended audience
 
@@ -54,7 +54,7 @@ You can retrieve current utilisation metrics for VMs in all regions.
 
 1. Log in to the vCloud API.
 
-    For more information, see [*How to access vCloud Director/VMware Cloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+    For more information, see [*How to access VMware Cloud Director/vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
 
 2. Send the following request to the vCloud API to retrieve the current utilisation metrics for the VM.
 
@@ -65,7 +65,7 @@ You can retrieve current utilisation metrics for VMs in all regions.
     Parameter | Description | Example
     ----------|-------------|--------
     `vcloud_api_url` | The URL you use to access the vCloud API | `api.vcd.portal.skyscapecloud.com`
-    `vm_id` | The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in vCloud Director/VMware Cloud Director | `vm-12345678-aaaa-bbbb-cccc-1234567890ab`
+    `vm_id` | The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in VMware Cloud Director/vCloud Director | `vm-12345678-aaaa-bbbb-cccc-1234567890ab`
 
     For example:
 
@@ -124,7 +124,7 @@ You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.
 
 1. Log in to the vCloud API.
 
-    For more information, see [How to access vCloud Director/VMware Cloud Director through the vCloud API](vmw-how-access-vcloud-api.md).
+    For more information, see [How to access VMware Cloud Director/vCloud Director through the vCloud API](vmw-how-access-vcloud-api.md).
 
 2. Send the following request to the vCloud API to retrieve the historic utilisation metrics for the VM.
 
@@ -135,7 +135,7 @@ You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.
     Parameter | Description | Example
     ----------|-------------|--------
     `vcloud_api_url` | The URL you use to access the vCloud API | `api.vcd.pod0000b.sys00005.portal.skyscapecloud.com`
-    `vm_id` | The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in vCloud Director/VMware Cloud Director | `vm-12345678-aaaa-bbbb-cccc-1234567890ab`
+    `vm_id` | The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in VMware Cloud Director/vCloud Director | `vm-12345678-aaaa-bbbb-cccc-1234567890ab`
 
     For example:
 

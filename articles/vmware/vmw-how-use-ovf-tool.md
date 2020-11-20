@@ -90,7 +90,7 @@ To import a `.vmx` file:
 
     - `username` is your UKCloud Portal user ID
 
-    - `apiURL` is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access vCloud Director/VMware Cloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+    - `apiURL` is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access VMware Cloud Director/vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
 
     - `computeServiceID` is the ID of your UKCloud compute service (sometimes also called an org or vOrg)
 
@@ -107,7 +107,7 @@ To import a `.vmx` file:
 
 4. The `.vmx` file is uploaded as a vApp template into your environment.
 
-    In vCloud Director/VMware Cloud Director, expand the *Recent Tasks* panel to check the status.
+    In VMware Cloud Director/vCloud Director, expand the *Recent Tasks* panel to check the status.
 
 ## Importing an .iso file to a vApp template
 
@@ -127,13 +127,13 @@ To upload an ISO image:
 
     - `username` is your UKCloud Portal user ID
 
-    - `apiURL` is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access vCloud Director/VMware Cloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+    - `apiURL` is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access VMware Cloud Director/vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
 
     - `targetVDC` is the VDC where you want to upload the file
 
     - `computeServiceID` is the ID of your UKCloud compute service (sometimes also called an org or vOrg)
 
-    - `name` is the name to display for the file in vCloud Director/VMware Cloud Director
+    - `name` is the name to display for the file in VMware Cloud Director/vCloud Director
 
     - `catalogID` is the ID of the catalog to which you want to upload the file
 

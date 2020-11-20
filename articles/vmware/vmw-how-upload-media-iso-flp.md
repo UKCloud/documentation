@@ -1,6 +1,6 @@
 ---
 title: How to upload ISO or FLP media
-description: Shows you how to upload ISO (CD/DVD) and FLP (floppy disk) media within the vCloud Director/VMware Cloud Director Tenant Portal
+description: Shows you how to upload ISO (CD/DVD) and FLP (floppy disk) media within the VMware Cloud Director/vCloud Director Tenant Portal
 services: vmware
 author: shighmoor
 reviewer: shighmoor
@@ -25,6 +25,34 @@ You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to vClou
 - Be consumed by users within your organisation
 
 - Facilitate the creation of VMs from scratch, which can then be saved to your catalog for future deployment
+
+## Uploading media in VMware Cloud Director 10.1
+
+In VMware Cloud Director 10.1, you can upload media from a file on your local machine.
+
+1. In VMware Cloud Director, click the menu icon and select **Libraries**.
+
+    ![Libraries menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-libraries.png)
+
+2. In the left navigation panel, click **Media & Other**.
+
+    ![Media & Other tab](images/vmw-vcd10.1-mnu-media.png)
+
+3. Click **Add**.
+
+    ![Upload media button](images/vmw-vcd-btn-add-media.png)
+
+4. In the *Upload Media* dialog box, select the **Catalog** to which you want to upload the media.
+
+5. Enter a **Name** for the media if you want to use something more user-friendly than the file name.
+
+6. Click the **Upload** icon and browse to the ISO or FLP file that you want to upload.
+
+    ![Upload Media dialog box](images/vmw-vcd10.1-upload-media.png)
+
+7. When you're done, click **OK**.
+
+    You can monitor the progress of the upload in the *Recent Tasks* panel.
 
 ## Uploading media in vCloud Director 9.7
 
@@ -98,34 +126,6 @@ In vCloud Director 9.7, you can use the Tenant Portal to upload media [from a fi
     This opens the *Transfer process* dialog box.
 
     ![Transfer process dialog box](images/vmw-vcd-transfer-process.png)
-
-## Uploading media in VMware Cloud Director 10.1
-
-In VMware Cloud Director 10.1, you can upload media from a file on your local machine.
-
-1. In VMware Cloud Director, click the menu icon and select **Libraries**.
-
-    ![Libraries menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-libraries.png)
-
-2. In the left navigation panel, click **Media & Other**.
-
-    ![Media & Other tab](images/vmw-vcd10.1-mnu-media.png)
-
-3. Click **Add**.
-
-    ![Upload media button](images/vmw-vcd-btn-add-media.png)
-
-4. In the *Upload Media* dialog box, select the **Catalog** to which you want to upload the media.
-
-5. Enter a **Name** for the media if you want to use something more user-friendly than the file name.
-
-6. Click the **Upload** icon and browse to the ISO or FLP file that you want to upload.
-
-    ![Upload Media dialog box](images/vmw-vcd10.1-upload-media.png)
-
-7. When you're done, click **OK**.
-
-    You can monitor the progress of the upload in the *Recent Tasks* panel.
 
 ## Feedback
 
