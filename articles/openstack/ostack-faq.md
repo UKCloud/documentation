@@ -344,7 +344,7 @@ You can use the UKCloud catalogue of operating systems or upload your own:
 
 Microsoft SQL can be installed within an OpenStack instance.
 
-You have the choice to either bring your own license using the Microsoft License Mobility scheme or choose to use a UKCloud provided license. The process for both options are available on the UKCloud Knowledge Centre [here](../vmware/vmw-how-license-microsoft.md).
+You have the choice to either bring your own license using the Microsoft License Mobility scheme or choose to use a UKCloud provided license. The process for both options are available on the UKCloud Knowledge Centre [here](../shared/shared-how-license-microsoft.md).
 
 ### How can I license an operating system?
 
@@ -356,7 +356,7 @@ Microsoft offers License Mobility, a scheme that allows a customer to provide ad
 
 ### Do you have a Key Management System (KMS) for activating Windows?
 
-Yes. A we provide a [step-by-step guide](../vmware/vmw-how-setup-kms.md) on configuring and using this service.
+Yes. A we provide a [step-by-step guide](../shared/shared-how-setup-kms.md) on configuring and using this service.
 
 ### How does RHEL licensing work?
 
@@ -404,9 +404,9 @@ As far as possible, planned maintenance of UKCloud's infrastructure takes place 
 
 As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Friday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
 
-### Can I configure email alerts from the Portal?
+### Can UKCloud provide notifications for service status and maintenance?
 
-Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.
+Yes, you can subscribe to the [UKCloud Service Status page](https://status.ukcloud.com/) to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see [*How to subscribe to service status notifications*](../other/other-how-subscribe-service-status.md).
 
 ## Service Limitations
 

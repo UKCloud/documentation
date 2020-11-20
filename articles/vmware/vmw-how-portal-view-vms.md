@@ -2,9 +2,9 @@
 title: How to view your VMs in the UKCloud Portal
 description: Shows how to view your virtual machines within the UKCloud portal
 services: vmware
-author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 04/02/2020
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 03/11/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-portal-view-vms.md
 
 ## Overview
 
-The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps and bandwidth monitoring.
+The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment, including virtual machines (VMs) and vApps.
 
 ## Accessing the My VMs page
 
@@ -81,19 +81,6 @@ The **VMs** tab displays a list of all VMs within your environment.
     ![VM Info tab](images/ptl-myvms-vm-info.png)
 
 3. Click **Back to VMs** to return to the main *My VMs* page.
-
-## Viewing bandwidth monitoring information
-
-The **Bandwidth Monitoring** tab displays bandwidth statistics for the edge gateways within your VDCs.
-
-> [!NOTE]
-> Bandwidth Monitoring is not available for the Elevated OFFICIAL security domain.
-
-1. Select the **Bandwidth Monitoring** tab.
-
-2. From the **Select Edge** list, select the edge gateway you want to work with.
-
-3. Select the appropriate tab to view different bandwidth statistics.
 
 ## Viewing snapshot protection information
 

@@ -25,9 +25,17 @@ Tasks that you cannot perform in the Tenant UI include:
 
 - Uploading ISO and FLP media as a URL
 
-- Viewing vApp template description, including OS password and patch dates
+- Viewing the vApp template description, including OS password and patch dates
 
-- Changing VDC default storage policy
+- Changing the VDC default storage policy
+
+- Enabling distributed routing
+
+- Attaching a VM to multiple networks
+
+- Changing the network adapter type
+
+- Changing the encryption algorithm for a VPN set to `AES-GCM`
 
 ## Switching to the Legacy UI
 

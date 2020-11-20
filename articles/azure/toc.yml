@@ -102,9 +102,11 @@
       href: azs-ref-known-issues.md
     - name: Understanding UKCloud for Microsoft Azure
       href: azs-ref-overview.md
-  - name: Service Definition
+  - name: Service Information
     items:
-    - name: UKCloud for Microsoft Azure Service Definition
+    - name: Pricing information
+      href: azs-ref-pricing.md
+    - name: Service Definition
       href: azs-sd.md
   - name: Service Scope
     items:

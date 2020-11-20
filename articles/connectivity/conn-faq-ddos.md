@@ -23,7 +23,7 @@ UKCloud has selected one of the leading providers of DDoS mitigation services an
 
 This mitigation service enhances UKCloud's current ability to absorb typical sized DDoS attacks by providing an additional layer of defence against larger and more complex volumetric DDoS attacks. UKCloud utilises a combination of specialist DDoS mitigation appliances hosted within our data centres and terabit scale scrubbing centres that together implement a suite of DDoS countermeasures as appropriate. This, along with superior incident reporting, enables UKCloud to provide you with the details you need when reporting to GovCERT.
 
-You are advised to ensure that suitable application specific protection is in place to mitigate threats at the application layer, such as advanced persistent threats. For this purpose, you can procure an advanced DDoS mitigation solution. For more information, see [*SiteProtect Advanced DDoS Mitigation FAQs*](conn-faq-app-ddos.md).
+You are advised to ensure that suitable application specific protection is in place to mitigate threats at the application layer, such as advanced persistent threats. For this purpose, you can procure an advanced DDoS mitigation solution. For more information, see [*Neustar DDoS Protection from UKCloud FAQs*](conn-faq-app-ddos.md).
 
 ## DDoS mitigation services are expensive, will UKCloud be passing these costs onto customers?
 
@@ -59,7 +59,7 @@ No. The service is designed to specifically neutralise the impact of highly dist
 
 Further, if your service is subject to a particularly high volume attack, it is possible that UKCloud will deploy specific countermeasures against your targeted IP address that could effectively make the IP address inaccessible to legitimate users of your service.
 
-To ensure you are protected against all types of denial of service attacks, UKCloud recommends that you consider mitigating these application specific threat vectors via appropriate solutions such as Web Application Firewalls, Content Delivery Networks, robust domain name services, and so on. For this purpose, you can procure an advanced DNS based DDoS mitigation solution. For more information, see [*SiteProtect Advanced DDoS Mitigation FAQs FAQs*](conn-faq-app-ddos.md).
+To ensure you are protected against all types of denial of service attacks, UKCloud recommends that you consider mitigating these application specific threat vectors via appropriate solutions such as Web Application Firewalls, Content Delivery Networks, robust domain name services, and so on. For this purpose, you can procure an advanced DNS based DDoS mitigation solution. For more information, see [*Neustar DDoS Protection from UKCloud FAQs*](conn-faq-app-ddos.md).
 
 ## What gives UKCloud the right to 'null route' traffic to my service?
 
@@ -67,7 +67,7 @@ In common with most cloud service providers and hosting organisations, the Terms
 
 ## Can I use my own DDoS mitigation service if I have more extensive requirements?
 
-Yes. Indeed UKCloud recommends that customers review their preparedness for DDoS attacks and other attacks such as advanced persistent threats and application layer threats. As an example, some customers choose to use a Content Delivery Network or DNS based DDoS mitigation service to provide additional protection against application layer and DNS layer attacks. Such a solution can absorb and mitigate customer specific attacks before the attack traffic hits the UKCloud platform. UKCloud customers are also able to procure an advanced DDoS mitigation solution. For more information, see [*SiteProtect Advanced DDoS Mitigation FAQs*](conn-faq-app-ddos.md).
+Yes. Indeed UKCloud recommends that customers review their preparedness for DDoS attacks and other attacks such as advanced persistent threats and application layer threats. As an example, some customers choose to use a Content Delivery Network or DNS based DDoS mitigation service to provide additional protection against application layer and DNS layer attacks. Such a solution can absorb and mitigate customer specific attacks before the attack traffic hits the UKCloud platform. UKCloud customers are also able to procure an advanced DDoS mitigation solution. For more information, see [*Neustar DDoS Protection from UKCloud FAQs*](conn-faq-app-ddos.md).
 
 ## Does the use of these third party DDoS mitigation services affect UKCloud's status as a PSN Accredited service provider?
 

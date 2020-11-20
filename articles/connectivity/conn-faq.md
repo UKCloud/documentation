@@ -133,11 +133,11 @@ This depends on the use case.
 
 - If your private circuits or co-located equipment need to use the data centre interconnection:
 
-  - Contact your account manager, as this will be a non-standard solution which may require support from our technical specialists (costs will be as per the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)).
+  - Contact your account manager, as this will be a non-standard solution which may require support from our technical specialists (costs will be as per the [SFIA Rate Card](http://www.ukcloud.com/sfia)).
 
 ## Does UKCloud support RLI connections?
 
-Yes, UKCloud does support an RLI connection for customers who have been already authorised by the MoD. We will then us the HybridConnect service to connect the RLI network to your cloud environment.
+Yes, UKCloud does support an RLI connection for customers who have been already authorised by the MOD. We will then use the HybridConnect service to connect the RLI network to your cloud environment.
 
 ## If I have an MPLS circuit direct into UKCloud, do I still have to go through a PSN connection to access the Elevated Portal?
 

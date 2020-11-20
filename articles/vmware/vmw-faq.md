@@ -108,7 +108,7 @@ Alternatively, we offer the Mass Transfer Facility option enabling customers to 
 
 ### Does UKCloud offer encryption on the VM?
 
-Not by default, however UKCloud can supply licensing for [*HyTrust DataControl*](../third-party/third-sd-hytrust.md). This solution offers powerful data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle, from deployment to decommission.
+Not by default, however UKCloud can supply licensing for HyTrust DataControl. This solution offers powerful data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle, from deployment to decommission.
 
 Alternatively, you can implement encryption using the technology of your choice inside the VM's operating system.
 
@@ -230,7 +230,7 @@ For internet-facing services a third-party DNS provider will be required.
 
 ### Is Network Time Protocol available for time synchronisation?
 
-Yes, this is available for Assured OFFICIAL and Elevated OFFICIAL. See [*Network Time Protocol server access*](vmw-ref-network-time-server.md) for details.
+Yes, this is available for Assured OFFICIAL and Elevated OFFICIAL. See [*Network Time Protocol server access*](../shared/shared-ref-network-time-server.md) for details.
 
 ### Can UKCloud provide SSL certificates or can existing SSL certificates be used?
 
@@ -250,7 +250,7 @@ Yes, you can configure load balancing within the service and it is included with
 
 Yes, you can deploy your own load-balancing virtual appliance (for example, F5, Stingray, Zeus) if support for other algorithms is required.
 
-In addition, UKCloud offers UltraDNS - an authoritative DNS and global load balancing service from Neustar, which you can customise for your own specific requirements. An [*FAQ*](../connectivity/conn-faq-glb.md) and [*Service Scope*](../connectivity/conn-sco-glb.md) are available in the Knowledge Centre.
+In addition, UKCloud offers Neustar UltraDNS from UKCloud - an authoritative DNS and global load balancing service, which you can customise for your own specific requirements. An [*FAQ*](../connectivity/conn-faq-glb.md) and [*Service Scope*](../connectivity/conn-sco-glb.md) are available in the Knowledge Centre.
 
 ## Storage
 
@@ -346,7 +346,7 @@ For support, you'll need to log a request with UKCloud, who will log the ticket 
 
 ### Do you have a Key Management System (KMS) for activating Windows?
 
-Yes, a step-by-step guide on configuring and using this service is included in [*How to license Windows VMs using the UKCloud Key Management Server*](vmw-how-setup-kms.md). 
+Yes, a step-by-step guide on configuring and using this service is included in [*How to license Windows VMs using the UKCloud Key Management Server*](../shared/shared-how-setup-kms.md).
 
 ### How do I control a VM?
 
@@ -387,7 +387,7 @@ In addition, we provide access to common templates provided by the Bitnami servi
 
 Microsoft terms and conditions preclude customers from using their own licence agreements for Windows Server in the Cloud. That means all licensing for Windows Server operating systems must be provided by UKCloud.
 
-Microsoft offers License Mobility, a scheme that allows a customer to provide additional software such as Exchange, SQL and so on, as long as the customer has appropriate Microsoft licensing as per the licence terms and conditions and usage rights. In order to use License Mobility, you must complete the form that is available in the from the Microsoft web site and send this by post to Microsoft. For more information, see [*How to licence Microsoft applications/software on the UKCloud platform*](vmw-how-license-microsoft.md).
+Microsoft offers License Mobility, a scheme that allows a customer to provide additional software such as Exchange, SQL and so on, as long as the customer has appropriate Microsoft licensing as per the licence terms and conditions and usage rights. In order to use License Mobility, you must complete the form that is available in the from the Microsoft web site and send this by post to Microsoft. For more information, see [*How to licence Microsoft applications/software on the UKCloud platform*](../shared/shared-how-license-microsoft.md).
 
 If you require SQL licensing to be provided by UKCloud, this can be done by completing a Service Request from the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. SQL standard licensing is charged per hour per VM, whilst SQL Enterprise is charged monthly per VM. It is essential that UKCloud are informed of every instance of SQL on the platform, and that you complete a Licence Mobility form for all licences that you use on the UKCloud platform.
 
@@ -437,11 +437,9 @@ As far as possible, planned maintenance of UKCloud's infrastructure takes place 
 
 As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
 
-### Can I configure email alerts from the Portal?
+### Can UKCloud provide notifications for service status and maintenance?
 
-Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is available in both the Assured and Elevated Portals.
-
-You can also sign up to service status notifications from the [UKCloud Service Status page](https://status.ukcloud.com/). For more information, see [*How to view the UKCloud Service Status page*](../other/other-how-view-status-info.md)
+Yes, you can subscribe to the [UKCloud Service Status page](https://status.ukcloud.com/) to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see [*How to subscribe to service status notifications*](../other/other-how-subscribe-service-status.md).
 
 ## Onboarding
 

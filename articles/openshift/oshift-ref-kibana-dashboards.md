@@ -3,8 +3,8 @@ title: Custom dashboards provided with aggregated logging Kibana
 description: Explains the data provided in our custom Kibana dashboards and how you can use that data.
 services: openshift
 author: Kieran O'Neill
-reviewer:
-lastreviewed:
+reviewer: Kieran O'Neill
+lastreviewed: 21/10/2020
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x

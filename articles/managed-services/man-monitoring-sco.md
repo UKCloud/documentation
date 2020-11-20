@@ -4,7 +4,7 @@ description: Outlines important details regarding Managed Monitoring as a Servic
 services: managed-services
 author: Steve Dixon
 reviewer:
-lastreviewed: 17/09/2020
+lastreviewed: 07/10/2020
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
@@ -47,9 +47,11 @@ The following table outlines the scope of Managed Monitoring as a Service:
 
 | Monitoring Element                     | Detail |
 |----------------------------------------|--------|
-| Event Monitors                         | - Ping check <BR> - SNMP check  <BR> - Application port checks <BR> - Webhooks (only HTTP/HTTPS RestAPI inbound to UKCloud) <BR> - Operating system service status change |
+| Event Monitors                         | - Ping check <BR> - SNMP check  <BR> - Open port check <BR> - Deviation of Windows Server service from an 'agreed good' status <BR> - URL response check <BR>- HTTPS certificate expiry check<BR> - Webhooks\* (only HTTP/HTTPS RestAPI inbound to UKCloud)|
 | Compute, Disk, Memory (CDM) Monitoring | Reactive monitoring and alerting  of Compute, Disk and Memory capacity events. <BR> Thresholds will initially be set with default values unless otherwise advised by the customer.  |
 | Alerting                               | UKCloud will alert customers via their chosen notification method (support ticket with email notification or phone escalation) based on a threshold breach of one of the above elements. |
+
+\* May require engagement with a Cloud Architect to ensure correct integration
 
 > [!NOTE]
 > You can request changes to default thresholds via a service request from within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
@@ -66,12 +68,11 @@ Service levels for Managed Monitoring as a Service are spilt out into the follow
 
 #### Default Alert handling procedures
 
-Alert Type     | Critical Item | UKCloud Action
+Alert Code     | Alert Type | UKCloud Action
 ---------------|---------------|---------------
-Major Alert    | No            | 1 - Incident Logged against the Escalation Contact via the UKCloud Portal<br>2 - Email notification to Escalation Contact with ticket details (Automatic by Ivanti)<br>3 - Ticket remains on **Waiting for Customer** until customer acknowledges and closes the incident via the UKCloud Portal
-Major Alert    | Yes           |
-Critical Alert | No            |
-Critical Alert | Yes           | 1 - Incident Logged against the Escalation Contact via the UKCloud Portal<br>2 - Email notification to Escalation Contact with ticket details<br>3 - Ticket remains on **Waiting for Customer** until customer acknowledges and closes the incident via the UKCloud Portal<br>4 - Phone call to Escalation Contact; if no response then voicemail and update ticket with voicemail details
+E1   | Critical            | 1 - Incident Logged against the Escalation Contact via the UKCloud Portal<br>2 - Email notification to Escalation Contact with ticket details (Automatic by Ivanti)<br>3 - Ticket remains on **Logged** until customer acknowledges and closes the incident via the UKCloud Portal <br>4 - (OPTIONAL) Phone call to Escalation Contact; if no response then voicemail and update ticket with voicemail details
+E2    | General           | 1 - Incident Logged against the Escalation Contact via the UKCloud Portal<br>2 - Email notification to Escalation Contact with ticket details (Automatic by Ivanti)<br>3 - Ticket remains on **Logged** until customer acknowledges and closes the incident via the UKCloud Portal <br>4 - Ticket will automatically be closed if no further update is received after 7 calendar days
+
 
 ### Service level exclusions
 

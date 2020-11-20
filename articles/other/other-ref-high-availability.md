@@ -56,14 +56,13 @@ In addition to the high-availability features provided as-standard on our platfo
 
 High-availability consideration | Notes
 --------------------------------|------
-[UltraDNS](../connectivity/conn-sco-glb.md) | Enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.
-[SiteProtect Advanced DDoS Mitigation](../connectivity/conn-sco-app-ddos.md) | A fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site.
+[Neustar UltraDNS from UKCloud](../connectivity/conn-sco-glb.md) | Enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.
+[Neustar DDoS Protection from UKCloud](../connectivity/conn-sco-app-ddos.md) | A fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site.
 [Disaster Recovery as a Service](../draas/draas-sd.md) | A powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and the UKCloud platform.
 Replicated backup | Enables your services to be backed up and the backup data replicated to another site.
 [Cloud Storage](../cloud-storage/cs-sd.md) | Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).
-[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md) | Provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, utilizing a technology that is common across backup products, enabling open-source backup applications to utilize the backup service as a target. You can also use MCBS as a remote backup target for your on-premises data.
-Third-Party Software | Provides software from third-party providers, including [Moogsoft](../third-party/third-sd-moogsoft.md) and [Portworx](../third-party/third-sd-portworx.md), to help with cyber security and monitoring.
-[Transition Services](../transition-services/trans-sd.md) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
+[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md) | Provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, utilizing a technology that is common across backup products, enabling open-source backup applications to utilize the backup service as a target. You can also use MCBS as a remote backup target for your on-premises data.
+[Professional Services](../pro-services/ps-sd.md) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
 
 ## Application design considerations
 
@@ -73,7 +72,7 @@ There are some high-level considerations to think about when deploying to a clou
 
 Service | High-availability consideration
 --------|--------------------------------
-Web services | Utilise an N+1 model, either with multiple web servers running underneath a load balancer or reverse proxy, or with at least one web server running in hot standby. Also use this approach in conjunction with UltraDNS to deliver multi-site resilience.
+Web services | Utilise an N+1 model, either with multiple web servers running underneath a load balancer or reverse proxy, or with at least one web server running in hot standby. Also use this approach in conjunction with Neustar UltraDNS from UKCloud to deliver multi-site resilience.
 Application services | As per web services, utilize an N+1 model.
 Inter-service messaging | Utilise a resilient message queuing architecture to handle messages between services. This enables messages to be load balanced between sites. It also means that messages are not lost in the event of a server crash and restart.
 Databases | Every database has a high availability option. We recommend that you adopt an N+1 clustered database model (but avoid shared disk architectures), in conjunction with sharding or asynchronous replication technologies, to create a replica of this database in another location.
@@ -91,7 +90,7 @@ Use SQL Always On to ensure the availability of SQL server. For more information
 
 ### UKCloud for OpenShift
 
-Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from UltraDNS) to ensure traffic is redirected should a region or cluster level availability issue occur.
+Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from Neustar UltraDNS from UKCloud) to ensure traffic is redirected should a region or cluster level availability issue occur.
 
 We also offer the option to have the Portworx storage solution configured in your cluster by UKCloud during deployment. This enables further resilience for your applications by offering highly-available storage, which significantly reduces container failover times, adds multi-attach storage to enable multiple containers to read/write the same volume on different nodes and the ability to replicate and migrate workloads between clusters to aid disaster recovery.
 
@@ -101,9 +100,9 @@ Within each OpenShift cluster deployment there are a number of features that sup
 
 - Ingress traffic comes via resilient UKCloud managed load balancers into the cluster. It enters the cluster via resilient router pods deployed on the OpenShift infrastructure nodes.
 
-- We recommend always having more than one application node deployed in each cluster. If you only have one node for your application containers, a single host failure could affect all applications deployed in the cluster as they’d have nowhere to fail over to within the cluster until the node is recovered and returned to service.
+- We recommend always having more than one application node deployed in each cluster. If you only have one node for your application containers, a single host failure could affect all applications deployed in the cluster as they'd have nowhere to fail over to within the cluster until the node is recovered and returned to service.
 
-- You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of >1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform’s understanding of any problematic containers.
+- You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of >1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform's understanding of any problematic containers.
 
 ### UKCloud for OpenStack
 
@@ -119,7 +118,7 @@ To help your applications cope with variable demand, you can configure Orchestra
 
 In UKCloud for Oracle Software, you can enable HA on a virtual machine so that it can be automatically migrated to a surviving node in the event of a failure. For more information, see [*How to enable high availability for your Oracle VMs*](../oracle/orcl-how-enable-ha.md).
 
-If your VM is running an Oracle database and you’re using hard partitioning to reduce licensing costs, virtual CPUs are pinned to physical cores and the HA option is not available. In the event of a failure, VMs must be manually migrated to a new host and will require restarting.
+If your VM is running an Oracle database and you're using hard partitioning to reduce licensing costs, virtual CPUs are pinned to physical cores and the HA option is not available. In the event of a failure, VMs must be manually migrated to a new host and will require restarting.
 
 To achieve high availability for your Oracle database, you can use Real Application Clusters to share the database across multiple servers. For more information, see [*RAC on UKCloud for Oracle Software*](../oracle/orcl-ref-rac.md).
 
@@ -129,7 +128,7 @@ UKCloud for VMware provides Snapshot Protection as a protection option for your 
 
 As an alternative to Snapshot Protection, you could consider Journaling Protection, a powerful self-service protection option, powered by Zerto, that protects your applications by replicating them to another zone. For more information, see the [*Getting Started Guide for Journaling Protection*](../vmware/vmw-gs-journaling.md).
 
-The edge gateway for your VDC provides basic load balancing functionality to help distribute traffic. For more information, see [*How to configure a load balancer*](../vmware/vmw-how-configure-load-balancer.md). However, for more complex requirements, you’ll need to provide your own third-party virtual load balancer.
+The edge gateway for your VDC provides basic load balancing functionality to help distribute traffic. For more information, see [*How to configure a load balancer*](../vmware/vmw-how-configure-load-balancer.md). However, for more complex requirements, you'll need to provide your own third-party virtual load balancer.
 
 Affinity and anti-affinity rules determine whether or not VMs are kept together as they are move around within your environment. If you want your applications to be robust in the event of host failures, you can create anti-affinity rules to make sure that when VMs are moved, they remain spread across multiple hosts. For more information, see [*How to use affinity and anti‑affinity rules*](../vmware/vmw-how-use-affinity-rules.md).
 

@@ -1,6 +1,6 @@
 ---
-title: UltraDNS FAQs
-description: Frequently asked questions for UltraDNS (previously Global Load Balancing)
+title: Neustar UltraDNS from UKCloud FAQs
+description: Frequently asked questions for Neustar UltraDNS from UKCloud (previously Global Load Balancing)
 services: connectivity
 author: Matt Warner
 reviewer: hbrunt
@@ -10,22 +10,22 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UltraDNS FAQs
+toc_title: Neustar UltraDNS from UKCloud FAQs
 toc_fullpath: FAQs/conn-faq-glb.md
 toc_mdlink: conn-faq-glb.md
 ---
 
-# UltraDNS FAQs
+# Neustar UltraDNS from UKCloud FAQs
 
-## What is UltraDNS?
+## What is Neustar UltraDNS from UKCloud?
 
-The UltraDNS service (previously Global Load Balancing) is aimed at providing a secure and reliable managed DNS service to help businesses enable and protect their online presence. It ensures the highest level of website availability and optimal performance, with built-in security for superior protection that is scalable to future demands.
+The Neustar UltraDNS from UKCloud service (previously Global Load Balancing) is aimed at providing a secure and reliable managed DNS service to help businesses enable and protect their online presence. It ensures the highest level of website availability and optimal performance, with built-in security for superior protection that is scalable to future demands.
 
 It enables customers to direct internet traffic between multiple end-points, which can be across different sites or different platforms.
 
-## Who supplies the UltraDNS service?
+## Who supplies the Neustar UltraDNS from UKCloud service?
 
-UKCloud has partnered with Neustar for the provision of this service along with the additional option of [*SiteProtect Advanced DDoS Mitigation*](conn-sco-app-ddos.md) for a complete traffic protection solution.
+UKCloud has partnered with Neustar for the provision of this service along with the additional option of [*Neustar DDoS Protection from UKCloud*](conn-sco-app-ddos.md) for a complete traffic protection solution.
 
 ## Who are Neustar?
 

@@ -35,7 +35,7 @@ Within the UKCloud environment there are two types of accounts:
 
 ### Application-tuned DDoS protection
 
-*See:* [SiteProtect Advanced DDoS Mitigation](#siteprotect-advanced-ddos-mitigation)
+*See:* [Neustar DDoS Protection from UKCloud](#neustar-ddos-protection-from-ukcloud)
 
 ### Assured inter-data centre connectivity
 
@@ -61,27 +61,13 @@ A security domain on the UKCloud platform that provides access to public network
 
 ### Basic Managed Compute
 
-A UKCloud IaaS service that provides routine operating system management, such as:
-
-- Initial deployment of standardised Windows and Linus VMs
-
-- Initial configuration of common operating system parameters, such as IP addresses and disk volumes
-
-- Provision of critical core operating systems, and backup and recovery of VM images.
-
-For more information, see the [Basic Managed Compute service definition](../managed-services/man-sd-compute.md).
+*See:* [Managed IT Operations](#managed-it-operations)
 
 ### Bring Your Own Firewall (BYOF)
 
 A UKCloud for VMware service option that enables you to customise your networking infrastructure by installing your own virtual firewall appliance in place of the edge device UKCloud includes as standard. This enables you to leverage your own in-house expertise with a particular technology or can provide access to some higher level networking functionality not natively available in the provided edge.
 
 ## C
-
-### Cisco AppDynamics from UKCloud
-
-Third-party software available from UKCloud that provides application performance management, end user monitoring, infrastructure visibility and business performance monitoring.
-
-For more information, see the [Cisco AppDynamics from UKCloud service definition](../third-party/third-sd-appdynamics.md).
 
 ### Cloud Architect
 
@@ -113,9 +99,7 @@ For more information, see the [Cloud GPU service definition](../gpu/gpu-sco.md).
 
 ### CloudSOC from UKCloud
 
-Third-party software available from UKCloud that provides an always-on, cloud-hosted cyber security capability that can see all your IT systems, all the time, ensuring you have an up-to-date view of possible threats.
-
-For more information, see the [CloudSOC from UKCloud service definition](../third-party/third-sd-cloudsoc.md).
+*See:* [Security Operations Service](#security-operations-service).
 
 ### Cloud Storage
 
@@ -225,7 +209,7 @@ Geo-resilient storage is no longer available as a storage option for UKCloud for
 
 ### Global Load Balancing
 
-*See:* [UltraDNS](#ultradns)
+*See:* [Neustar UltraDNS from UKCloud](#neustar-ultradns-from-ukcloud)
 
 ## H
 
@@ -256,12 +240,6 @@ For more information, see the [HybridConnect FAQs](../connectivity/conn-faq-hybr
 ### Hypervisor
 
 Software layer on top of the physical infrastructure that enables the virtualisation of the physical resources.
-
-### HyTrust DataControl from UKCloud
-
-Third-party software available from UKCloud that offers powerful, data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle - from deployment to decommission.
-
-For more information, see the [HyTrust DataControl from UKCloud service definition](../third-party/third-sd-hytrust.md).
 
 ## I
 
@@ -311,11 +289,15 @@ Let us know your thoughts and ideas by sending an email to <feedback@ukcloud.com
 
 ## M
 
-### Managed Monitoring as a Service
+### Managed IT Operations
 
-Managed Monitoring as a Service helps to address monitoring challenges as customer solutions expand beyond their own data centres into multi-cloud, increasing the level of trust and confidence of the true health of their entire IT estate, from IoT edge devices, through to any infrastructure, be it virtual or physical.
+Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, Managed VM recovery points, patching as a service, antivirus as a service and runbook automation. This service provides you with the building blocks to utilise essential operational delivery services.
 
 For more information, see the [Managed IT Operations Service Definition](../managed-services/man-sd-managed-it-ops.md).
+
+### Managed Monitoring as a Service
+
+*See:* [Managed IT Operations](#managed-it-operations)
 
 ### Mass Transfer Facility (MTF)
 
@@ -326,12 +308,6 @@ For more information, see the [Mass Transfer Facility service scope](../enableme
 ### Migration to the Cloud
 
 A UKCloud IaaS service, powered by Zerto, that provides easy to use tools to help customers migrate workloads from their on-premises data centres to the UKCloud platform - all on a self-service basis.
-
-### Moogsoft AIOps from UKCloud
-
-Third-party software available from UKCloud that provides a pioneering AI platform for IT operations, powered by purpose-built machine learning algorithms. It improves the signal-to-noise ratio by reducing and then correlating related alerts together; and then the AIOps platform suggests root cause and enables crossteam collaboration to solve incidents faster.
-
-For more information, see the [Moogsoft AIOps from UKCloud service definition](../third-party/third-sd-moogsoft.md).
 
 ### Multi-Cloud Backup Storage
 
@@ -360,6 +336,18 @@ Single- or multi tenant instances on a network firewall (NFW). NFT architecture 
 ### NSX Edge
 
 Provides a rich set of integrated networking and security gateway services for protecting VDCs and optimising resource utilisation. This virtual appliance includes services such as firewall, network address translation (NAT), load balancing and VPN.
+
+### Neustar DDoS Protection from UKCloud
+
+A UKCloud service option, powered by Neustar, to absorb and scrub bad traffic into your environment and protect your applications from DDoS attacks, while still allowing legitimate traffic through.
+
+For more information, see the [Neustar DDoS Protection from UKCloud service scope](../connectivity/conn-sco-app-ddos.md).
+
+### Neustar UltraDNS from UKCloud
+
+A UKCloud service option, powered by Neustar, that provides a secure and reliable managed DNS service to ensure the highest level of website availability and optimal performance, with built-in security for superior protection that is scalable to future demands.
+
+For more information, see the [*Neustar UltraDNS from UKCloud FAQs](../connectivity/conn-faq-glb.md).
 
 ## O
 
@@ -399,9 +387,9 @@ A UKCloud for OpenStack block storage option that is always available, regardles
 
 ### Portworx Enterprise from UKCloud
 
-Third-party software available from UKCloud that provides a secure and stable cloud native storage and data management platform for Kubernetes that enterprises can trust to manage data in containers.
+Provides a secure and stable cloud native storage and data management platform for Kubernetes that enterprises can trust to manage data in containers.
 
-For more information, see the [Portworx Enterprise from UKCloud service definition](../third-party/third-sd-portworx.md).
+For more information, see the [Portworx Enterprise from UKCloud service definition](../openshift/oshift-sd-portworx.md).
 
 ### POWER VM
 
@@ -441,6 +429,12 @@ A UKCloud IaaS service that provides single-tenant storage infrastructure on you
 
 For more information, see the [Private Cloud for Storage service definition](../private-cloud/prc-sd-storage.md).
 
+### Professional Services
+
+UKCloud Professional Services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. The four services include our Assessment, Migration, Optimisation and Transformation services and can be tailored to suit your requirements.
+
+For more information, see the [UKCloud Professional Services service definition](../pro-services/ps-sd.md).
+
 ### Protective Monitoring
 
 A complimentary service from UKCloud that ensures our platform, up to the hypervisor level, adheres to Good Practice Guide 13 (GPG13) guidance.
@@ -479,6 +473,12 @@ For more information, see the [Secure Remote Access service definition](../sra/s
 
 *See also:* [Cross Domain Security Zone (CDSZ)](#cross-domain-security-zone-cdsz)
 
+### Security Operations Service
+
+Provides an always-on, cloud-hosted cyber security capability that can see all your IT systems, all the time, ensuring you have an up-to-date view of possible threats.
+
+For more information, see the [Security Operations Service service definition](../soc/soc-sd.md).
+
 ### Service Credits
 
 A compensation scheme whereby if we fall short of our service level agreement, we'll compensate you with credits that you redeem them against UKCloud services.
@@ -497,9 +497,7 @@ See also: [Region](#region), [Zone](#zone)
 
 ### SiteProtect Advanced DDoS Mitigation
 
-A UKCloud service option, powered by Neustar, to absorb and scrub bad traffic into your environment and protect your applications from DDoS attacks, while still allowing legitimate traffic through.
-
-For more information, see the [SiteProtect Advanced DDoS Mitigation service scope](../connectivity/conn-sco-app-ddos.md).
+*See:* [Neustar DDoS Protection from UKCloud](#neustar-ddos-protection-from-ukcloud)
 
 ### Smart Hands
 
@@ -539,9 +537,7 @@ General all-purpose block storage, providing a balance of performance and cost.
 
 ### Transition Services
 
-UKCloud's Transition services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. The four services include our Assessment, Migration, Optimisation and Transformation services and can be tailored to suit your requirements.
-
-For more information, see the [Transition Services service definition](../transition-services/trans-sd.md).
+*See:* [Professional Services](#professional-services)
 
 ## U
 
@@ -595,9 +591,7 @@ A division of UKCloud specifically designed to cater for the enhanced requiremen
 
 ### UltraDNS
 
-A UKCloud service option, powered by Neustar, that provides a secure and reliable managed DNS service to ensure the highest level of website availability and optimal performance, with built-in security for superior protection that is scalable to future demands.
-
-For more information, see the [*UltraDNS FAQs](../connectivity/conn-faq-glb.md).
+*See:* [Neustar UltraDNS from UKCloud](#neustar-ultradns-from-ukcloud)
 
 ## V
 

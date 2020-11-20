@@ -2,9 +2,9 @@
 title: Getting Started Guide for the Cross Domain Security Zone
 description: Provides information to get up and running with the Cross Domain Security Zone
 services: cdsz
-author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+author: shighmoor
+reviewer: ecorfield
+lastreviewed: 18/09/2020
 
 toc_rootlink: Getting Started
 toc_sub1:

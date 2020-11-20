@@ -43,6 +43,10 @@ As it is assumed UKCloud will manage all monitoring aspects as part of this serv
 
 All alerting will be performed via a support ticket or any special escalation process agreed between UKCloud and the customer.
 
+### Can I use my existing polling (monitoring) tooling with this service?
+
+We've designed our Managed Monitoring as a Service solution to be extensible with existing monitoring technology you may have already invested in. We cannot guarantee compatibility with all monitoring tooling, but for information about what to consider if this is something you want to do, see [*How to use your own polling (monitoring) tooling with Managed Monitoring as a Service*](man-monitoring-how-use-customer-polling.md).
+
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
 Current Service Status reports are published on the [Status Page](https://status.ukcloud.com/). You can view past incident reports on the UKCloud Portal.
@@ -77,9 +81,9 @@ As far as possible, planned maintenance of UKCloud's infrastructure takes place 
 
 As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Friday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
 
-### Can I configure email alerts from the Portal?
+### Can UKCloud provide notifications for service status and maintenance?
 
-Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications.
+Yes, you can subscribe to the [UKCloud Service Status page](https://status.ukcloud.com/) to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see [*How to subscribe to service status notifications*](../other/other-how-subscribe-service-status.md).
 
 ## Onboarding
 

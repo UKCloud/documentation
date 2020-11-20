@@ -2,9 +2,9 @@
 title: How to access UKCloud services from Walled Garden and Secure Remote Access
 description: Shows how to access UKCloud services (such as WSUS, KMS or Red Hat Update Service) from Secure Remote Access or a Cross Domain Security Zone Walled Garden solution
 services: cdsz
-author: Sue Highmoor
-reviewer:
-lastreviewed: 17/07/2018 10:43:00
+author: shighmoor
+reviewer: ecorfield
+lastreviewed: 18/09/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -62,9 +62,9 @@ The diagrams below show that you need to add two static routes and an SNAT rule 
 
 Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:
 
-- [*How to license Windows VMs using the UKCloud Key Management Server*](../vmware/vmw-how-setup-kms.md)
+- [*How to license Windows VMs using the UKCloud Key Management Server*](../shared/shared-how-setup-kms.md)
 
-- [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](../vmware/vmw-how-connect-windows-update.md)
+- [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](../shared/shared-how-connect-windows-update.md)
 
 ## Feedback
 

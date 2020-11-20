@@ -2,66 +2,64 @@
 title: Migration to the Cloud Service Definition
 description: Provides an overview of what is provided by the Migration to the Cloud service
 services: migration
-author: Sue Highmoor
-reviewer:
-lastreviewed: 02/07/2019
-toc_rootlink: Service Definition
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 22/09/2020
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Migration to the Cloud Service Definition
-toc_fullpath: Service Definition/migr-sd.md
+toc_title: Service Definition
+toc_fullpath: Service Information/migr-sd.md
 toc_mdlink: migr-sd.md
 ---
 
 # Migration to the Cloud Service Definition
 
-## Why UKCloud?
-
-UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government's Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
-
-We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud's technical experts.
-
-![UKCloud services](images/ukc-services.png)
-
 ## What is Migration to the Cloud?
 
-Smoothly manage your transition from on premise infrastructure to cloud hosting. This service enables the migration of your on-premise vSphere and Hyper-V workloads into UKCloud for VMware, which allows you to move large workloads and data to UKCloud quickly, efficiently and securely.
+Smoothly manage your transition from on-premises infrastructure to cloud hosting. This service enables the migration of your on-premises vSphere and Hyper-V workloads into UKCloud for VMware, which enables you to accelerate your cloud migration and move large workloads and data to UKCloud quickly, efficiently and securely.
 
-Powered by Zerto, leaders in IT resilience, the service enables replication of data and virtual machines (VMs) from your primary site into UKCloud. Continuous replication gives you the ability to carry-out multiple tests on UKCloud that simulate your migration without effecting live services prior to final fail-over.
-
-For full information regarding this product, we have Service Scopes, FAQs and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
+Continuous replication gives you the ability to carry out multiple tests on UKCloud that simulate how your application will perform on cloud service without affecting live services prior to final failover.
 
 ## What the service can help you achieve
 
 - Supports your DC modernisation and transformation projects by reducing the cost and time of migrating existing workloads and data
 
-- Comply with policy, regulation or legislation (for example, Civil Contingencies Act) without the cost and complexity and inefficiency of traditional DR solutions
+- Comply with policy, regulation or legislation (for example, Civil Contingencies Act) without the cost, complexity and inefficiency of traditional DR solutions
 
-- Reduce risks to your migration by utilising fully featured testing using real time copies of production data before you commit the change.
+- Reduce risks to your migration by utilising fully featured testing, using real time copies of production data before you commit the change
 
 - Replicate your on-premises network topology in the cloud using software-defined network capabilities
 
 ## Pricing and packaging
 
-Migration to the Cloud, powered by Zerto is priced per VM plus the Storage, full pricing with all options including licensing and connectivity available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Migration to the Cloud is priced per VM plus the storage. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
-The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
+The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## An SLA you can trust
 
-Due to the service being dependent on connectivity between customer data centre and UKCloud we are unable to offer an SLA relating the performance of this service.
+Due to the service being dependent on connectivity between the customer data centre and UKCloud we are unable to offer an SLA relating to the performance of this service.
 
 ## The small print
 
-For full terms and conditions including onboarding and responsibilities, please refer to the [*Terms and conditions documents*](../other/other-ref-terms-and-conditions.md).
+For full terms and conditions, including onboarding and responsibilities, refer to the [*Terms and conditions documents*](../other/other-ref-terms-and-conditions.md).
+
+## Why UKCloud?
+
+UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
+
+![UKCloud services](images/ukc-services-g12.png)
+
+We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
 ## Feedback
 

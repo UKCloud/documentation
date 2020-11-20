@@ -3,6 +3,9 @@ title: Community network proxy configuration
 description: Provides information regarding proxy environment variables in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon
+reviewer: Kieran O'Neill
+lastreviewed: 21/10/2020
+
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
 toc_sub2:
