@@ -57,7 +57,7 @@ Factors that can affect the RPO are:
 
 Additionally, the service will also alert if a customer's journal exceeds 75% in size of the original VM. This alert is utilised to understand if the customer's solution is being protected adequately.
 
-Journaling Protection only works for VMs currently on the platform and it will only capture data whilst a VM is turned on. If a VM is deleted in vCloud Director/VMware Cloud Director, Journaling Protection will IMMEDIATELY delete the associated journal.
+Journaling Protection only works for VMs currently on the platform and it will only capture data whilst a VM is turned on. If a VM is deleted in VMware Cloud Director/vCloud Director, Journaling Protection will IMMEDIATELY delete the associated journal.
 
 ### What SLA do you offer on Journaling Protection?
 

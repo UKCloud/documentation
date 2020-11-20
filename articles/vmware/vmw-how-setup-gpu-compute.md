@@ -33,7 +33,7 @@ This article provides an introduction for how to use Cloud GPU for compute workl
 
 ### Intended audience
 
-To complete the steps in this article you must have access to the UKCloud Portal and vCloud Director/VMware Cloud Director.
+To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.
 
 ## Cloud GPU overview
 
@@ -109,7 +109,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![vCloud Director tab in the UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-6. In the vCloud Director/VMware Cloud Director menu, select **Libraries**.
+6. In the VMware Cloud Director/vCloud Director menu, select **Libraries**.
 
     > [!TIP] In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
 

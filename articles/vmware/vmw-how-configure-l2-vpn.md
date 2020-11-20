@@ -83,17 +83,17 @@ To set up L2 VPN, you need to configure an L2 VPN server on the destination edge
 
 ### Creating certificates
 
-### [vCloud Director 9.7](#tab/tabid-a)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the *destination* edge gateway.
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the *destination* edge gateway.
 
-2. In the left navigation panel, click **Edges**.
+2. In the left navigation panel, under *Networking*, select **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
+    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-3. Select the *destination* edge gateway and click **Configure Services**.
+3. Select the *destination* edge gateway and click **Services**.
 
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
+    ![Services option](images/vmw-vcd10.1-edge-btn-services.png)
 
 4. Select the **Certificates** tab.
 
@@ -107,17 +107,17 @@ To set up L2 VPN, you need to configure an L2 VPN server on the destination edge
 
 7. Repeat this process for the *source* edge gateway.
 
-### [VMware Cloud Director 10.1](#tab/tabid-b)
+### [vCloud Director 9.7](#tab/tabid-b)
 
-1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the *destination* edge gateway.
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the *destination* edge gateway.
 
-2. In the left navigation panel, under *Networking*, select **Edges**.
+2. In the left navigation panel, click **Edges**.
 
-    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
-3. Select the *destination* edge gateway and click **Services**.
+3. Select the *destination* edge gateway and click **Configure Services**.
 
-    ![Services option](images/vmw-vcd10.1-edge-btn-services.png)
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
 4. Select the **Certificates** tab.
 
