@@ -24,15 +24,7 @@ Before allocating more disk space in your UKCloud for VMware account, it's usefu
 
 ## Viewing a VDC's storage usage (Tenant Portal)
 
-### [vCloud Director 9.7](#tab/tabid-a)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, go to the card for your VDC.
-
-2. The *Storage* section shows how much storage you're currently using as well as the amount of allocated storage.
-
-    ![VDC card showing storage usage and allocation](images/vmw-vcd-storage.png)
-
-### [VMware Cloud Director 10.1](#tab/tabid-b)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, find the card for the VDC.
 
@@ -40,9 +32,17 @@ Before allocating more disk space in your UKCloud for VMware account, it's usefu
 
     ![VDC card showing storage usage and allocation](images/vmw-vcd10.1-vdc-storage.png)
 
+### [vCloud Director 9.7](#tab/tabid-b)
+
+1. In the vCloud Director *Virtual Datacenters* dashboard, go to the card for your VDC.
+
+2. The *Storage* section shows how much storage you're currently using as well as the amount of allocated storage.
+
+    ![VDC card showing storage usage and allocation](images/vmw-vcd-storage.png)
+
 ## Viewing a VM's storage usage (Tenant Portal)
 
-In the VMware Cloud Director Tenant Portal, you can see how much storage an individual VM is currently using.
+In the VMware Cloud Director 10.1 Tenant Portal, you can see how much storage an individual VM is currently using.
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the VM.
 

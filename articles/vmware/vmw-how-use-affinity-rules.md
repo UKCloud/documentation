@@ -34,13 +34,46 @@ For example, if it is important that your application has very low latency, you 
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director/VMware Cloud Director.
+To complete the steps in this guide you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.
 
 ## Creating an affinity or anti-affinity rule
 
 To create an affinity or anti-affinity rule:
 
-### [vCloud Director 9.7](#tab/tabid-a)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
+
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC in which you want to create the affinity or anti-affinity rule.
+
+2. In the left navigation panel, under *Compute*, select **Affinity Rules**.
+
+    ![Affinity rules option](images/vmw-vcd10.1-mnu-affinity.png)
+
+3. To create an affinity rule, in the *Affinity Rules* section, click **New**.
+
+    ![New Affinity rule link](images/vmw-vcd10.1-new-affinity-rule.png)
+
+    To create an anti-affinity rule,in the *Anti-Affinity Rules* section, click **New**.
+
+    ![New Anti-Affinity rule link](images/vmw-vcd10.1-new-anti-affinity-rule.png)
+
+4. In the *Create Affinity Rule* or *Create Anti-Affinity Rule* dialog box, enter a **Name** for the rule.
+
+5. If you don't want the rule to take effect immediately, deselect the **Enabled** check box.
+
+    If you leave this check box selected, the rule is applied and the selected VMs are redistributed as required as soon as you create the rule.
+
+6. If you leave the **Required** check box selected, the VMs added to the rule will not power on if the rule cannot be met. If you want the VMS to be powered on even if the rule cannot be met, deselect the **Required** check box to create the rule as a preferred rule instead.
+
+7. In the *VMs in Rule* section, select the VMs that you want to add to the rule.
+
+    ![Create Affinity Rule dialog box](images/vmw-vcd10.1-create-affinity-rule.png)
+
+    > [!TIP]
+    > Select the **Show selected** option to see a list of the VMs already included in the rule.
+
+8. When you're done, click **Save**.
+
+### [vCloud Director 9.7](#tab/tabid-b)
 
 1. In vCloud Director, click the VDC in which you want to create the affinity or anti-affinity rule.
 
@@ -73,38 +106,7 @@ To create an affinity or anti-affinity rule:
 
 8. When you're done, click **Save**.
 
-### [VMware Cloud Director 10.1](#tab/tabid-b)
-
-1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC in which you want to create the affinity or anti-affinity rule.
-
-2. In the left navigation panel, under *Compute*, select **Affinity Rules**.
-
-    ![Affinity rules option](images/vmw-vcd10.1-mnu-affinity.png)
-
-3. To create an affinity rule, in the *Affinity Rules* section, click **New**.
-
-    ![New Affinity rule link](images/vmw-vcd10.1-new-affinity-rule.png)
-
-    To create an anti-affinity rule,in the *Anti-Affinity Rules* section, click **New**.
-
-    ![New Anti-Affinity rule link](images/vmw-vcd10.1-new-anti-affinity-rule.png)
-
-4. In the *Create Affinity Rule* or *Create Anti-Affinity Rule* dialog box, enter a **Name** for the rule.
-
-5. If you don't want the rule to take effect immediately, deselect the **Enabled** check box.
-
-    If you leave this check box selected, the rule is applied and the selected VMs are redistributed as required as soon as you create the rule.
-
-6. If you leave the **Required** check box selected, the VMs added to the rule will not power on if the rule cannot be met. If you want the VMS to be powered on even if the rule cannot be met, deselect the **Required** check box to create the rule as a preferred rule instead.
-
-7. In the *VMs in Rule* section, select the VMs that you want to add to the rule.
-
-    ![Create Affinity Rule dialog box](images/vmw-vcd10.1-create-affinity-rule.png)
-
-    > [!TIP]
-    > Select the **Show selected** option to see a list of the VMs already included in the rule.
-
-8. When you're done, click **Save**.
+***
 
 ## Next steps
 

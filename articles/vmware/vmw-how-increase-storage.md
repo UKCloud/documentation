@@ -30,22 +30,7 @@ Before increasing the size of block storage for a VM, if the VM has a snapshot, 
 
 Before increasing block storage for a VM, you can check the storage allocation for its VDC:
 
-### [vCloud Director 9.7](#tab/tabid-a)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains your VM.
-
-2. In the left navigation panel, select **Storage Policies**.
-
-    ![Storage Policies menu option in vCloud Director](images/vmw-vcd-mnu-storage-policies.png)
-
-3. In the row for the appropriate storage policy, check the **Limit** column.
-
-    ![Storage policy limit](images/vmw-vcd-storage-limit.png)
-
-> [!NOTE]
-> If you need to increase the storage allocation for your storage policy, raise a Service Request in the My Calls section of the UKCloud Portal.
-
-### [VMware Cloud Director 10.1](#tab/tabid-b)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the VM.
 
@@ -60,31 +45,28 @@ Before increasing block storage for a VM, you can check the storage allocation f
 > [!NOTE]
 > If you need to increase the storage allocation for your storage policy, raise a Service Request in the My Calls section of the UKCloud Portal.
 
+### [vCloud Director 9.7](#tab/tabid-b)
+
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains your VM.
+
+2. In the left navigation panel, select **Storage Policies**.
+
+    ![Storage Policies menu option in vCloud Director](images/vmw-vcd-mnu-storage-policies.png)
+
+3. In the row for the appropriate storage policy, check the **Limit** column.
+
+    ![Storage policy limit](images/vmw-vcd-storage-limit.png)
+
+> [!NOTE]
+> If you need to increase the storage allocation for your storage policy, raise a Service Request in the My Calls section of the UKCloud Portal.
+
 ***
 
 ## Increasing storage for a virtual machine
 
 To increase the amount of block storage for your VM:
 
-### [vCloud Director 9.7](#tab/tabid-a)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains your VM.
-
-2. In the *Virtual Machines* page, in the card for your VM, click **Details**.
-
-    ![VM Details menu option](images/vmw-vcd-mnu-vm-details.png)
-
-3. Expand the *Hardware* section.
-
-4. In the *Hard Disks* section, in the row for the hard disk that you want to increase, enter the new value (in MB) in the **Size** field.
-
-    ![Hard disk size](images/vmw-vcd-vm-hardware.png)
-
-5. If required, you can add more hard disks to your VM by clicking **Add** and specifying the details for the new disk.
-
-6. When you're done, click **Save**.
-
-### [VMware Cloud Director 10.1](#tab/tabid-b)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the VM.
 
@@ -108,6 +90,24 @@ To increase the amount of block storage for your VM:
 6. If required, you can add more hard disks to your VM by clicking **Add** and specifying the details for the new disk.
 
 7. When you're done, click **Save**.
+
+### [vCloud Director 9.7](#tab/tabid-b)
+
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains your VM.
+
+2. In the *Virtual Machines* page, in the card for your VM, click **Details**.
+
+    ![VM Details menu option](images/vmw-vcd-mnu-vm-details.png)
+
+3. Expand the *Hardware* section.
+
+4. In the *Hard Disks* section, in the row for the hard disk that you want to increase, enter the new value (in MB) in the **Size** field.
+
+    ![Hard disk size](images/vmw-vcd-vm-hardware.png)
+
+5. If required, you can add more hard disks to your VM by clicking **Add** and specifying the details for the new disk.
+
+6. When you're done, click **Save**.
 
 ***
 
