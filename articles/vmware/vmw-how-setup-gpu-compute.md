@@ -109,7 +109,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![vCloud Director tab in the UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-6. In the vCloud Director/VMware Cloud Director men, select **Libraries**.
+6. In the vCloud Director/VMware Cloud Director menu, select **Libraries**.
 
     > [!TIP] In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
 
