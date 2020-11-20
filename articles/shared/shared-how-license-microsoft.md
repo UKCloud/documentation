@@ -39,7 +39,7 @@ The standard licensing approach is for us to provide Microsoft Windows Server li
 > [!IMPORTANT]
 > You cannot bring your own Microsoft Windows Server licences for use on the UKCloud platform within the multi-tenant (public cloud) environments.
 
-For your Microsoft Windows Server‑based VMs in our multi-tenant environments to use a UKCloud-purchased licence, you must create all your Microsoft VMs using a Microsoft template from the UKCloud product catalog. If you prefer to create your Microsoft VMs using your own template, you must then register these VMs with our Key Management Server (KMS). See the [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md) article or [*Licensing Windows VMs using the UKCloud Key Management Server video*](shared-vid-licensing-kms.md) for information about how to do this.
+For your Microsoft Windows Server‑based VMs in our multi-tenant environments, to use a UKCloud-purchased licence you must create all your Microsoft VMs using a Microsoft template from the UKCloud product catalog. If you prefer to create your Microsoft VMs using your own template, you must then register these VMs with our Key Management Server (KMS). See the [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md) article or [*Licensing Windows VMs using the UKCloud Key Management Server video*](shared-vid-licensing-kms.md) for information about how to do this.
 
 The Microsoft Windows Server licence is invoiced each month, in addition to the cost of the VM, based on the VM's usage.
 
@@ -56,13 +56,13 @@ Due to the elimination of the discount for G-SPLA, there is now price parity wit
 
 ## Microsoft desktop licensing
 
-UKCloud offers a variety of ways for you to run aand license Windows desktop worloads on the platform:
+UKCloud offers a variety of ways for you to run and license Windows desktop workloads on the platform:
 
-- UKCloud Desktop as a Service. A purpose-built VDI/remote workijng solution aimed at providing the ability for customers to virtualise their desktop usage including all of the licensing required. Details are available within the Knowledge Centre for more information.
+- UKCloud Desktop as a Service. A purpose-built VDI/remote working solution aimed at enabling customers to virtualise their desktop usage, including all of the licensing required. Details are available within the Knowledge Centre for more information.
 
-- Purchasing Windows 10 Enterprise licenses from UKCloud. As a Microsoft CSP, UKCloud are able to purchase and provide Windows 10 Enterprise licenses for its customers on an annual basis which are charged per each month. Please create a Service request stating the number and version of licenses required.
+- Purchasing Windows 10 Enterprise licences from UKCloud. As a Microsoft CSP, UKCloud is able to purchase and provide Windows 10 Enterprise licences for customers on an annual basis, charged per month. To utilise this service, create a Service Request stating the number and version of licences required.
 
-- Bring your own Windows 10 Enterprise licensing via QMTH. As a Tier 1 direct CSP, UKCloud are an authorised partner on the Qualified MultiTenant Hoster (QMTH) program. The QMTH program enables you to purchase Microsoft 10 Enterprise licences, and use these on our multi-tenant cloud platform.
+- Bring your own Windows 10 Enterprise licensing via Qualified MultiTenant Hoster (QMTH). As a Tier 1 direct CSP, UKCloud is an authorised partner on the QMTH program. The QMTH program enables you to purchase Microsoft 10 Enterprise licences and use them on our multi-tenant cloud platform.
 
 For more information regarding the QMTH program, we have further details on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/)
 
