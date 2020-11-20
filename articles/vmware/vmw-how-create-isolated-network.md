@@ -1,6 +1,6 @@
 ---
 title: How to create an isolated VDC network
-description: Shows how to create an isolated VDC network within the vCloud Director/VMware Cloud Director Tenant Portal
+description: Shows how to create an isolated VDC network within the VMware Cloud Director/vCloud Director Tenant Portal
 services: vmware
 author: shighmoor
 reviewer: shighmoor
@@ -30,49 +30,7 @@ There are two network flavours, isolated and routed:
 
 ## Creating an isolated network
 
-### [vCloud Director 9.7](#tab/tabid-a)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to create the network.
-
-2. In the left navigation panel, select **Networks**.
-
-    ![Networks tab in vCloud Director](images/vmw-vcd-tab-networks.png)
-
-3. Click **Add**.
-
-    ![Add network button](images/vmw-vcd-btn-add-network.png)
-
-4. In the *Network Type* page of the *New Organization VDC Network* dialog box, select **Isolated** then click **Next**.
-
-    ![New Organization VDC Network dialog box - Network Type - Isolated](images/vmw-vcd-add-network-isolated.png)
-
-5. In the *General* page, enter a **Name** and **Description** for the network.
-
-6. In the **Gateway CIDR** field, the gateway address for the network.
-
-7. Select the **Shared** option to make the network available to other VDCs within the same organisation.
-
-    ![New Organization VDC Network dialog box - General](images/vmw-vcd-add-network-general.png)
-
-8. Click **Next**.
-
-9. In the **Static IP Pools** field, enter a range of addresses to be consumed by the VMs connecting to the network, then click **Add**.
-
-    As an example, if you give the gateway address as `192.168.1.1/24`, you may then want to create a **Static IP Pool** of `192.168.1.10-192.168.1.100`. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.
-
-    You can add multiple IP pools.
-
-    ![New Organization VDC Network dialog box - Static IP Pools](images/vmw-vcd-add-network-ip-pool.png)
-
-10. When you're done, click **Next**.
-
-11. In the *DNS* page, enter DNS information if possible then click **Next**.
-
-    ![New Organization VDC Network dialog box - DNS](images/vmw-vcd-add-network-dns.png)
-
-12. On the *Ready to Complete* page, review your selections then click **Finish**.
-
-### [VMware Cloud Director 10.1](#tab/tabid-b)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC in which you want to create the network.
 
@@ -117,6 +75,48 @@ There are two network flavours, isolated and routed:
 10. Click **Next**.
 
 11. On the *Ready to Complete* page, review your selections then click **Finish**.
+
+### [vCloud Director 9.7](#tab/tabid-b)
+
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to create the network.
+
+2. In the left navigation panel, select **Networks**.
+
+    ![Networks tab in vCloud Director](images/vmw-vcd-tab-networks.png)
+
+3. Click **Add**.
+
+    ![Add network button](images/vmw-vcd-btn-add-network.png)
+
+4. In the *Network Type* page of the *New Organization VDC Network* dialog box, select **Isolated** then click **Next**.
+
+    ![New Organization VDC Network dialog box - Network Type - Isolated](images/vmw-vcd-add-network-isolated.png)
+
+5. In the *General* page, enter a **Name** and **Description** for the network.
+
+6. In the **Gateway CIDR** field, the gateway address for the network.
+
+7. Select the **Shared** option to make the network available to other VDCs within the same organisation.
+
+    ![New Organization VDC Network dialog box - General](images/vmw-vcd-add-network-general.png)
+
+8. Click **Next**.
+
+9. In the **Static IP Pools** field, enter a range of addresses to be consumed by the VMs connecting to the network, then click **Add**.
+
+    As an example, if you give the gateway address as `192.168.1.1/24`, you may then want to create a **Static IP Pool** of `192.168.1.10-192.168.1.100`. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.
+
+    You can add multiple IP pools.
+
+    ![New Organization VDC Network dialog box - Static IP Pools](images/vmw-vcd-add-network-ip-pool.png)
+
+10. When you're done, click **Next**.
+
+11. In the *DNS* page, enter DNS information if possible then click **Next**.
+
+    ![New Organization VDC Network dialog box - DNS](images/vmw-vcd-add-network-dns.png)
+
+12. On the *Ready to Complete* page, review your selections then click **Finish**.
 
 ***
 
