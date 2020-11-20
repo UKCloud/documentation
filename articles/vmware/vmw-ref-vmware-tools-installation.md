@@ -41,7 +41,7 @@ Redhat 5/6/7
 
 Ubuntu 12.04/14.04
 
-Installing the VMware tools via vCloud Director requires modules to be built against the running kernel. If the kernel is updated the administrator needs to run the VMWare tools setup again to recompile the modules. UKCloud recommends using the open-vm-tools because this maintenance is handled by the package manager when the kernel is updated.
+Installing the VMware tools via vCloud Director requires modules to be built against the running kernel. If the kernel is updated the administrator needs to run the VMware tools setup again to recompile the modules. UKCloud recommends using the open-vm-tools because this maintenance is handled by the package manager when the kernel is updated.
 
 ## Redhat/Centos 5/6/7
 

@@ -27,7 +27,7 @@ We recognise the importance of government services in making the country run smo
 
 ## What is UKCloud for VMware?
 
-UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware technology, that allows you to either migrate existing workloads or create new workloads on our secure sovereign cloud platform quickly and easily whilst enjoying the economies of scale of the cloud. Using a familiar interface and structure for customers having virtualised using VMWare, it offers native backup and disaster recovery, storage options, all government network connectivity, [GPU](../gpu/gpu-sco.md) resource for enhanced compute and visualisation requirements and self-provisioning of VDCs and VMs. It is billed hourly with no minimum contracts and supported free of charge.
+UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware technology, that allows you to either migrate existing workloads or create new workloads on our secure sovereign cloud platform quickly and easily whilst enjoying the economies of scale of the cloud. Using a familiar interface and structure for customers having virtualised using VMware, it offers native backup and disaster recovery, storage options, all government network connectivity, [GPU](../gpu/gpu-sco.md) resource for enhanced compute and visualisation requirements and self-provisioning of VDCs and VMs. It is billed hourly with no minimum contracts and supported free of charge.
 
 For full information regarding this product, we have [Service Scopes](vmw-sco.md), [FAQs](vmw-faq.md) and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
 
