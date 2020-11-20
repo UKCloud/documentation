@@ -19,7 +19,7 @@ toc_mdlink: vmw-sco-byof.md
 
 ## About this document
 
-This document is intended for UKCloud customers who might be considering an alternative virtual firewall or virtual appliance to the presently integrated NSX Edge Services Gateway device within vCloud Director/VMware Cloud Director.
+This document is intended for UKCloud customers who might be considering an alternative virtual firewall or virtual appliance to the presently integrated NSX Edge Services Gateway device within VMware Cloud Director/vCloud Director.
 
 The scope of the document is not to provide step by step detail on how to setup or install an alternative virtual firewall but rather the key points that a customer should consider when choosing an alternative product.
 
@@ -65,9 +65,9 @@ By requesting to have the edge gateway device removed and their own firewall tec
 
 - Outages caused by the customer's new firewall will not be liable to Service Credit claims.
 
-- Customers lose the visibility of the IP address assignments which are currently easily referenced within vCloud Director/VMware Cloud Director.
+- Customers lose the visibility of the IP address assignments which are currently easily referenced within VMware Cloud Director/vCloud Director.
 
-- Customers lose the integrated functionality of configuring the edge gateway device through vCloud Director/VMware Cloud Director. Access to the new firewall replacement is only available via the console or from within the customer VDC (based on setup).
+- Customers lose the integrated functionality of configuring the edge gateway device through VMware Cloud Director/vCloud Director. Access to the new firewall replacement is only available via the console or from within the customer VDC (based on setup).
 
 ## Feedback
 

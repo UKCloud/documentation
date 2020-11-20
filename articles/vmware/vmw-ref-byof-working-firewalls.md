@@ -53,7 +53,7 @@ The following firewall technology is known to not work with the UKCloud platform
 
 ### Cisco ASAv
 
-This product is not supported in vCloud Director/VMware Cloud Director and therefore will not work on the UKCloud platform.
+This product is not supported in VMware Cloud Director/vCloud Director and therefore will not work on the UKCloud platform.
 
 For more information, see:
 

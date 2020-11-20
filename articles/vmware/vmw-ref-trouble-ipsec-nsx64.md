@@ -39,43 +39,13 @@ As a result, VPN tunnels are then broken until either of the following is perfor
 
 UKCloud support staff can change the VPN config back to DH-2 on a temporary basis until the edge is converted, however the setting is not persistent, and under certain configuration changes to an edge, the setting of DH-14 may be reapplied. Converting to an advanced gateway does not require any downtime nor cause any outage during the conversion.
 
-Follow the steps below to convert your edge to an advanced gateway and configure your VPN back to DH-2. To complete these steps, you must have access to the UKCloud Portal and vCloud Director/VMware Cloud Director.
+Follow the steps below to convert your edge to an advanced gateway and configure your VPN back to DH-2. To complete these steps, you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.
 
 ## Change your VPN settings
 
 To change the DH setting on your broken VPN:
 
-### [vCloud Director 9.7](#tab/tabid-a)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge with the broken VPN.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
-
-3. Select the edge gateway and click **Configure Services**.
-
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
-
-4. Select the **VPN** tab.
-
-5. On the *IPsec VPN Configuration* page, select the **IPsec VPN Sites** tab.
-
-6. Select the VPN tunnel that is broken and click the edit icon.
-
-7. From the **Diffee-Hellman Group** list, select DH2.
-
-    ![Diffie-Helman Group list](images/vmw-tp-ipsec-fix2.png)
-
-    You may need to scroll the window to the bottom of the page to find the list.
-
-8. When you're done, click **Keep**.
-
-9. Repeat the steps 6 and 7 for any other VPNs that are broken and when you're ready to save the configuration, click **Save Changes** at the top of the page.
-
-    Check the state of the VPN by clicking the **Statistics** tab at the top of the screen and selecting **IPSEC VPN** to view the health of your VPN.
-
-### [VMware Cloud Director 10.1](#tab/tabid-b)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge with the broken VPN.
 
@@ -108,6 +78,36 @@ To change the DH setting on your broken VPN:
 9. Repeat the steps 6 and 7 for any other VPNs that are broken and when you're ready to save the configuration, click **Save Changes** at the top of the page.
 
     Check the state of the VPN by clicking the **Statistics** tab at the top of the screen and selecting **IPsec VPN** to view the health of your VPN.
+
+### [vCloud Director 9.7](#tab/tabid-b)
+
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge with the broken VPN.
+
+2. In the left navigation panel, click **Edges**.
+
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
+
+3. Select the edge gateway and click **Configure Services**.
+
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
+
+4. Select the **VPN** tab.
+
+5. On the *IPsec VPN Configuration* page, select the **IPsec VPN Sites** tab.
+
+6. Select the VPN tunnel that is broken and click the edit icon.
+
+7. From the **Diffee-Hellman Group** list, select DH2.
+
+    ![Diffie-Helman Group list](images/vmw-tp-ipsec-fix2.png)
+
+    You may need to scroll the window to the bottom of the page to find the list.
+
+8. When you're done, click **Keep**.
+
+9. Repeat the steps 6 and 7 for any other VPNs that are broken and when you're ready to save the configuration, click **Save Changes** at the top of the page.
+
+    Check the state of the VPN by clicking the **Statistics** tab at the top of the screen and selecting **IPSEC VPN** to view the health of your VPN.
 
 ***
 

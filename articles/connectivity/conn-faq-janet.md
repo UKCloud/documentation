@@ -65,7 +65,7 @@ We provide an SLA for availability of our core services such as UKCloud for VMwa
 
 ## How can I whitelist source Janet IP addresses on the edge gateway?
 
-You can log in to vCloud Director/VMware Cloud Director via the UKCloud Portal and edit the firewall settings to allow or deny incoming connections from external IP addresses. See the [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md) for more details.
+You can log in to VMware Cloud Director/vCloud Director via the UKCloud Portal and edit the firewall settings to allow or deny incoming connections from external IP addresses. See the [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md) for more details.
 
 ## Can I use UKCloud as a transit or gateway between different connections?
 

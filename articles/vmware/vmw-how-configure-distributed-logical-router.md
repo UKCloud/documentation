@@ -64,7 +64,21 @@ Before enabling DLR, consider the following:
 
 To enable distributed routing
 
-### [vCloud Director 9.7](#tab/tabid-a)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
+
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway.
+
+2. In the left navigation panel, under *Networking*, select **Edges**.
+
+    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+
+3. On the *Edge Gateways* page, select the edge.
+
+4. On the *General* page, click **Edit**.
+
+5. Select **Distributed Routing**.
+
+### [vCloud Director 9.7](#tab/tabid-b)
 
 You must use the vCloud Director Web Console.
 
@@ -90,70 +104,13 @@ You must use the vCloud Director Web Console.
 
     ![Tenant UI link](images/vmw-vcd-mnu-tenant-ui.png)
 
-### [VMware Cloud Director 10.1](#tab/tabid-b)
-
-1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway.
-
-2. In the left navigation panel, under *Networking*, select **Edges**.
-
-    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
-
-3. On the *Edge Gateways* page, select the edge.
-
-4. On the *General* page, click **Edit**.
-
-5. Select **Distributed Routing**.
-
 ***
 
 ## Creating a distributed network
 
 After you've enabled distributed routing, you can create your distributed networks. You can create up to 1000 distributed networks per edge gateway.
 
-### [vCloud Director 9.7](#tab/tabid-a)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
-
-2. In the left navigation panel, select **Networks**.
-
-    ![Network tab in vCloud Director](images/vmw-vcd-tab-networks.png)
-
-3. Click **Add**.
-
-    ![Add network button](images/vmw-vcd-btn-add-network.png)
-
-4. In the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed** then click **Next**.
-
-    ![New Organization VDC Network dialog box - Network Type - Routed](images/vmw-vcd-add-network-routed-type.png)
-
-5. On the *General* page, enter a **Name** and **Description** for the network.
-
-6. In the **Gateway CIDR** field, the gateway address for the network.
-
-7. Select the **Shared** option to make the network available to other VDCs within the same region.
-
-    ![New Organization VDC Network dialog box - General](images/vmw-vcd-add-network-general.png)
-
-8. Click **Next**.
-
-9. On the *Edge Connection* page, select the edge gateway that you want your network to connect to.
-
-    > [!NOTE]
-    > The edge must be an advanced gateway and must have distributed routing enabled.
-
-10. From the **Interface Type** list, select **Distributed**.
-
-    ![New Organization VDC Network dialog box - Edge Connection](images/vmw-vcd-add-network-distributed-edge.png)
-
-11. Click **Next**.
-
-12. Complete the remaining fields in the dialog box as you would for any other routed network.
-
-    For more detailed instructions, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
-
-13. When you're done, click **Finish**.
-
-### [VMware Cloud Director 10.1](#tab/tabid-b)
+### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select your VDC.
 
@@ -199,6 +156,49 @@ After you've enabled distributed routing, you can create your distributed networ
     For more detailed instructions, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
 
 10. When you're done, click **Finish**.
+
+### [vCloud Director 9.7](#tab/tabid-b)
+
+1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
+
+2. In the left navigation panel, select **Networks**.
+
+    ![Network tab in vCloud Director](images/vmw-vcd-tab-networks.png)
+
+3. Click **Add**.
+
+    ![Add network button](images/vmw-vcd-btn-add-network.png)
+
+4. In the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed** then click **Next**.
+
+    ![New Organization VDC Network dialog box - Network Type - Routed](images/vmw-vcd-add-network-routed-type.png)
+
+5. On the *General* page, enter a **Name** and **Description** for the network.
+
+6. In the **Gateway CIDR** field, the gateway address for the network.
+
+7. Select the **Shared** option to make the network available to other VDCs within the same region.
+
+    ![New Organization VDC Network dialog box - General](images/vmw-vcd-add-network-general.png)
+
+8. Click **Next**.
+
+9. On the *Edge Connection* page, select the edge gateway that you want your network to connect to.
+
+    > [!NOTE]
+    > The edge must be an advanced gateway and must have distributed routing enabled.
+
+10. From the **Interface Type** list, select **Distributed**.
+
+    ![New Organization VDC Network dialog box - Edge Connection](images/vmw-vcd-add-network-distributed-edge.png)
+
+11. Click **Next**.
+
+12. Complete the remaining fields in the dialog box as you would for any other routed network.
+
+    For more detailed instructions, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
+
+13. When you're done, click **Finish**.
 
 ***
 
