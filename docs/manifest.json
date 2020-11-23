@@ -18896,6 +18896,160 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-alerts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-alerts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-disable-card.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-disable-card.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-enable-card.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-enable-card.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-enable.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-enable.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-metric-selector-btn-export.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-metric-selector-btn-export.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-metric-selector-metrics.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-metric-selector-metrics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-metric-selector-resources.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-metric-selector-resources.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-mnu-alerts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-mnu-alerts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-mnu-metric-selector.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-mnu-metric-selector.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-mnu-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-mnu-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-org-overview-more.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-org-overview-more.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-org-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-org-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-refresh-card.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-refresh-card.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-refresh.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-refresh.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-btn-failover-live.png",
       "output": {
         "resource": {
@@ -19263,7 +19417,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "+uE+Bs0JusnNXotapdYP/g=="
+          "hash": "w/5AQIOiuz7810Ka54n+rQ=="
         }
       },
       "is_incremental": false,
@@ -19990,6 +20144,51 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "invalid-note-section"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-vrops-enable.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-vrops-enable.html",
+          "hash": "xEzKsHZvGXi8UdK78Xwndg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "invalid-note-section"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-vrops-refresh.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-vrops-refresh.html",
+          "hash": "blY6DtNdbjyihwJEHqWXtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "invalid-note-section"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-vrops-use.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-vrops-use.html",
+          "hash": "1/VSQk2Qifc187uIDkvfHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-zerto-access-zssp.md",
       "output": {
@@ -20387,6 +20586,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-vrops-trouble.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-vrops-trouble.html",
+          "hash": "KebdjOrpLk4ofgXNrCol9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-windows-server-activation.md",
       "output": {
         ".html": {
@@ -20614,7 +20825,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 451,
+          "total_file_count": 455,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

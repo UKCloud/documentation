@@ -128,6 +128,14 @@
     href: vmw-how-view-storage-usage.md
   - name: View your VMs in the UKCloud Portal
     href: vmw-how-portal-view-vms.md
+  - name: Advanced monitoring
+    items:
+    - name: Access advanced monitoring (vROps)
+      href: vmw-how-vrops-use.md
+    - name: Enable advanced monitoring (vROps)
+      href: vmw-how-vrops-enable.md
+    - name: Refresh the vROps Tenant Appliance
+      href: vmw-how-vrops-refresh.md
   - name: VMware Licence Service
     items:
     - name: Add products to the vCloud Usage Meter
@@ -180,6 +188,8 @@
     href: vmw-ref-twreuse.md
   - name: Tier 1 storage
     href: vmw-ref-tier1-storage.md
+  - name: Troubleshooting advanced monitoring (vROps)
+    href: vmw-ref-vrops-trouble.md
   - name: UKCloud for VMware options
     href: vmw-ref-service-options.md
   - name: Understanding connectivity options in UKCloud for VMware
