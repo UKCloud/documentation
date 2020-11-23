@@ -20144,45 +20144,36 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-note-section"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-vrops-enable.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vrops-enable.html",
-          "hash": "xEzKsHZvGXi8UdK78Xwndg=="
+          "hash": "KFxo+IPcNB/i1LTOiLhZog=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-note-section"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-vrops-refresh.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vrops-refresh.html",
-          "hash": "blY6DtNdbjyihwJEHqWXtg=="
+          "hash": "IXulak8kZn5dYJTe3gVSFw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-note-section"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-vrops-use.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vrops-use.html",
-          "hash": "1/VSQk2Qifc187uIDkvfHg=="
+          "hash": "0ZT3DlwFVcAZVYDtZuS+NA=="
         }
       },
       "is_incremental": false,
