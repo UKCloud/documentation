@@ -29,7 +29,8 @@ To refresh the vRealize Operations Tenant Appliance, you must be a vCloud Direct
 
 1. In the vCloud Director/VMware Cloud Director menu, select **Libraries**.
 
-    > [!TIP] In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
+    > [!TIP]
+    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
 
 2. In the left navigation panel, under *Services*, select **Service Library**.
 

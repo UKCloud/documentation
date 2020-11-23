@@ -44,7 +44,8 @@ To make advanced monitoring available for your UKCloud for VMware environment, y
 
 1. In the vCloud Director/VMware Cloud Director menu, select **Libraries**.
 
-    > [!TIP] In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
+    > [!TIP]
+    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
 
 2. In the left navigation panel, under *Services*, select **Service Library**.
 
@@ -64,7 +65,8 @@ If you no longer want access to advanced monitoring, you must disable the vReali
 
 1. In the vCloud Director/VMware Cloud Director menu, select **Libraries**.
 
-    > [!TIP] In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
+    > [!TIP]
+    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
 
 2. In the left navigation panel, under *Services*, select **Service Library**.
 
