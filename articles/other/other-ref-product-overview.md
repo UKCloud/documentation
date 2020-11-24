@@ -68,7 +68,7 @@ This article is designed to provide you with a top level comparison for our main
 
 ## [SLA, service credits and maintenance](#tab/tabid-3)
 
-&nbsp;                                 | SLA                                          | Service credits - data plane                                         | Service credits - Control plane       | Planned maintenance
+&nbsp;                                 | SLA                                          | Service credits - data plane                                         | Service credits - Control plane       | Planned Maintenance
 ---------------------------------------|----------------------------------------------|----------------------------------------------------------------------|---------------------------------------|--------------------
 **UKCloud for Microsoft Azure**        | Single instance=99.90%, dual instance=99.95% | 5% per 5% or part thereof below SLA                                  | 1% per 1% or part thereof below 9.90% | Included
 **UKCloud for VMware**                 | ESSENTIAL&PRIORITY=99-95%, POWER=99.99%      | 3% (ESSENTIAL), 5% (POWER & PRIORITY) or part therof below SLA       | 1% per 1% or part thereof below 9.90% | Included except Priority

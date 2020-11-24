@@ -132,15 +132,7 @@ Walled Gardens are managed from the higher-security side of the platform (Elevat
 
 ### What are your service maintenance windows?
 
-UKCloud's maintenance windows are as follows (times are UK local times):
-
-#### Planned maintenance
-
-Any pre-planned maintenance of any infrastructure relating to the services. We'll provide you with at least 14 days' advance notice of any planned maintenance. It will take place between 00:00 and 06:00 Monday to Sunday or between 08:00 and 12:00 on a Saturday or Sunday. No planned maintenance will take place on a Saturday unless agreed in advance by both parties.
-
-#### Emergency Maintenance
-
-Any emergency maintenance of any infrastructure relating to the services. Whenever possible, we'll provide you with at least six hours' advance notice of emergency maintenance; and carry it out between 00:00 and 06:00 Monday to Sunday or between 08:00 and 12:00 on a Saturday or Sunday, unless there's an identified and demonstrable immediate risk to a customer's environment.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
 
 ## Billing and legal
 
