@@ -159,13 +159,18 @@ To configure IPsec VPN, you need to follow these general steps (each of these st
 
 ## Creating the second VPN gateway
 
-You now need to create the endpoint of the VPN tunnel. If this is a different VDC (in the Elevated security domain) or vOrg, go through the steps described above again to create the tunnel. When you've done that, you can change your firewall settings and validate the connection (see below).
+You now need to create the endpoint of the VPN tunnel. If this is a different VDC or vOrg, go through the steps described above again to create the tunnel. When you've done that, you can change your firewall settings and validate the connection (see below).
 
 If you're connecting to an external data centre, you'll need to set up the tunnel on that premises.
 
 ### Creating an external data centre VPN gateway
 
 Although we can't provide specific instructions on setting up an external data centre gateway to connect to the edge gateway, we've provided information about some configuration requirements below.
+
+> [!IMPORTANT]
+> - IPsec VPN supports only time-based rekeying. You must disable lifebytes rekeying.
+>
+> - Starting in NSX 6.4.5, Triple DES (3DES) cypher algorithm is deprecated in IPsec VPN.
 
 #### IKE Phase 1 and Phase 2
 
