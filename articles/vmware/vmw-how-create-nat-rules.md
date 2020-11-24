@@ -75,9 +75,9 @@ To create a DNAT rule:
 
 8. Select the **Protocol**, **Original Port** and **Translated Port**.
 
-9. Make sure the **Enabled** toggle is switched on.
+9. Make sure the **Enabled** option is selected.
 
-10. If you have a syslog server configured, switch on the **Enable logging** toggle.
+10. If you have a syslog server configured, select the **Enable logging** option.
 
     For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
 
@@ -159,9 +159,9 @@ To create an SNAT rule:
 
 7. Enter an **Original Source IP/Range** and a **Translated Source IP/Range**.
 
-8. Make sure the **Enabled** toggle is switched on.
+8. Make sure the **Enabled** option is selected.
 
-9. If you have a syslog server configured, switch on the **Enable logging** toggle.
+9. If you have a syslog server configured, select the **Enable logging** option.
 
     For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
 
@@ -235,7 +235,7 @@ If you have an IPv6 network and need to communicate to an IPv4 network, you'll n
 
 7. In the **Translated Ipv4 Source Prefix** field, enter the IPv4 address to use to translate IPv6 source addresses into IPv4 source addresses.
 
-8. Make sure the **Enabled** toggle is switched on.
+8. Make sure the **Enabled** option is selected.
 
 9. If you have a syslog server configured, select the **Enable logging** option.
 

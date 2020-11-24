@@ -72,9 +72,9 @@ To configure IPsec VPN, you need to follow these general steps (each of these st
 
 6. Click the **+** button.
 
-7. In the *Add IPsec VPN* dialog box, switch on the **Enabled** toggle.
+7. In the *Add IPsec VPN* dialog box, select the **Enabled** option.
 
-8. Switch on the **Enable perfect forward secrecy (PFS)** toggle if your on-premises/remote site has that capability.
+8. Select the **Enable perfect forward secrecy (PFS)** option if your on-premises/remote site has that capability.
 
 9. In the **Name** field, enter a name for  your IPsec VPN.
 
@@ -102,7 +102,7 @@ To configure IPsec VPN, you need to follow these general steps (each of these st
 
 20. When you're done, click **Keep** to create the edge end of the VPN tunnel.
 
-21. Select the **Activation Status** tab and switch on the **IPsec VPN Service Status** toggle.
+21. Select the **Activation Status** tab and select the **IPsec VPN Service Status** option.
 
     ![Enable IPsec VPN](images/vmw-vcd10.1-edge-ipsec-enabled.png)
 

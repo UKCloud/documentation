@@ -44,11 +44,11 @@ To configure a load balancer:
 
     ![Load Balancer tab](images/vmw-vcd10.1-edge-tab-load-balancer.png)
 
-5. Select the **Global Configuration** tab, then switch on the **Status** toggle.
+5. Select the **Global Configuration** tab, then select the **Status** option.
 
-6. Switch on the **Acceleration Enabled** toggle if you want to use the Layer 4 engine rather than Layer 7.
+6. Select the **Acceleration Enabled** option if you want to use the Layer 4 engine rather than Layer 7.
 
-7. If you have a syslog server configured, switch on the **Enable Logging** toggle and select the **Log Level**.
+7. If you have a syslog server configured, select the **Enable Logging** option and select the **Log Level**.
 
     For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md)
 
@@ -108,7 +108,7 @@ Server pools are the real servers that are masked by the load balancer.
 
 5. From the **Monitors** list, select the monitors policy to use.
 
-6. Switch on the **Transparent** toggle if you want IP addresses to be transparent.
+6. Select the **Transparent** option if you want IP addresses to be transparent.
 
     ![Add Pool dialog box](images/vmw-vcd10.1-edge-load-balancer-add-pool.png)
 

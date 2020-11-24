@@ -52,7 +52,7 @@ There are two network flavours, isolated and routed:
 
     - In the **Gateway CIDR** field, enter the gateway address for the network.
 
-    - Switch on the **Shared** toggle to make the network available to other VDCs within the same organisation.
+    - Select the **Shared** option to make the network available to other VDCs within the same organisation.
 
     ![New Organization VDC Network dialog box - General page](images/vmw-vcd10.1-new-network-general.png)
 
@@ -67,7 +67,7 @@ There are two network flavours, isolated and routed:
         > [!NOTE]
         > For information about distributed networks, see [*How to configure a Distributed Logical Router*](vmw-how-configure-distributed-logical-router.md). For information about creating a routed network as a subinterface for L2 VPN, see [*How to configure an L2 VPN*](vmw-how-configure-l2-vpn.md).
 
-    - Switch on the **Guest VLAN Allowed** toggle to enable tagging of guest VLANs on this network.
+    - Select the **Guest VLAN Allowed** option to enable tagging of guest VLANs on this network.
 
     ![New Organization VDC Network dialog box - Edge Connection page](images/vmw-vcd10.1-new-network-routed-edge.png)
 
