@@ -7,7 +7,7 @@ reviewer:
 lastreviewed:
 
 toc_rootlink: Reference
-toc_sub1: OpenShift v3.x
+toc_sub1: OpenShift v4.x
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -20,7 +20,7 @@ toc_mdlink: oshift-ref-dns-zone-forwarding-v4.md
 
 ## Overview
 
-This article documents the ability to forward DNS zones within OpenShift deployments. Forwarding zones can assist in resolving services on private networks if you have existing private DNS resolvers configured within your wider UKCloud environment. This removes the need to individually add domains to a node's local host file and can aid consumption of private services from within OpenShift.
+This article documents the ability to forward DNS zones within OpenShift deployments. Forwarding zones can assist in resolving services on private networks if you have existing private DNS resolvers configured within your wider UKCloud environment.
 
 ### Intended audience
 
@@ -28,11 +28,9 @@ This article is best aimed at those with OpenShift deployments with connectivity
 
 ## OpenShift cluster DNS architecture
 
-We deploy load balancer pairs as part of an OpenShift deployment, primarily to provide redundancy for inbound traffic but also to resolve DNS requests.
+The DNS operator inside OpenShift runs a CoreDNS daemonset and creates a service for the daemonset. Pods are instructed to use the CoreDNS service IP for name resolution. 
 
-One pair resolves the local zone within the cluster (performing internal hostname resolution) and forwards all undefined zones outbound to an upstream open internet resolver. Zones can be configured to be forwarded to a separate upstream server. All internet OpenShift nodes reference this load balancer pair.
-
-Where a deployment has connectivity with government community networks, another pair forwards the local zone and a small number of internet zones (required for provisioning and ongoing maintenance) to the previously mentioned load balancer pair, with all remaining zones being forwarded to upstream open resolvers on the secondary network. All secondary network nodes reference the secondary network load balancers as resolvers.
+If there is a server block configured for the zone being resolved then requests will be forwarded on to those resolvers. If there are no matching server blocks then the request will fall back to the servers specified in /etc/resolv.conf. The nodes will always be configured to have name servers able to resolve names on the external network your cluster is deployed to (e.g. internet, community networks).
 
 ## Identifying forward zones
 
@@ -42,13 +40,35 @@ In OpenShift deployments with connectivity to a private network, you may want to
 
 ## Requesting DNS zone forwarding
 
-You can provide any zones that you want to forward DNS requests for (including the IPs of the corresponding DNS resolvers) in a Service Request. This can be as part of a deployment request or post-deployment, provided your environment has connectivity to a private network.
+You can provide any zones that you want to forward DNS requests for (including the IPs of the corresponding DNS resolvers) as part of a deployment request provided your environment has connectivity to a private network.
 
 We will test that queries are being replied to as expected and assist you in diagnosing issues. You may need to make firewall changes to permit your OpenShift cluster to both send DNS queries and to access the desired services.
 
+## Implementing DNS zone forwarding
+
+You have the ability to implement your own zone forwarding by editing DNS operator config. The steps to add upstream servers of 10.0.0.1 and 10.0.0.2 on port 5353 for the zone example.com are as follows:
+
+1. `oc edit dns.operator/default` 
+
+2. At the spec.servers level add the following yaml block:
+
+```
+- name: example-dns
+  zones: 
+    - example.com
+  forwardPlugin:
+    upstreams: 
+      - 10.0.0.1
+      - 10.0.0.2:5353
+```
+
+3. To verify the changes are successful you can view the dns-default configmap and ensure the forward zones are present as configured:
+
+`oc get configmap/dns-default -n openshift-dns -o yaml`
+
 ## Further information
 
-https://docstore.mik.ua/orelly/networking_2ndEd/dns/ch10_05.htm
+https://docs.openshift.com/container-platform/4.6/networking/dns-operator.html#nw-dns-forward_dns-operator
 
 ## Feedback
 
