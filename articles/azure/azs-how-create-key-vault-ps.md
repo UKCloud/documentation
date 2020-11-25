@@ -3,8 +3,8 @@ title: How to create a key vault using PowerShell
 description: Provides help for creating a key vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
-reviewer: William Turner
-lastreviewed: 07/05/2020
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -50,20 +50,20 @@ From your PowerShell window:
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Select resource group
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VaultName = "<output form="vaultname" name="result" style="display: inline;">MyVault</output>"
 
 # Create a new vault
-New-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName -Location $Location
+New-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName -Location $Location
 </code></pre>
 
 This will create a key vault in the specified resource group.

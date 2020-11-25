@@ -4,7 +4,7 @@ description: Describes how to configure custom script extensions for new and exi
 services: azure-stack
 author: dbrennand
 reviewer: rjarvis
-lastreviewed: 15/10/2020
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -76,32 +76,32 @@ $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
 Write-Output -InputObject "Creating storage account and container"
-$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
 
 # Get storage account context
 $Context = $StorageAccount.Context
-$Container = New-AzureStorageContainer -Name $ContainerName -Context $Context
+$Container = New-AzStorageContainer -Name $ContainerName -Context $Context
 
 # Retrieve storage account key
-$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+$StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
 
 # Retrieve storage blob endpoint
 $ScriptBlobUrl = $Container.Context.BlobEndPoint
 
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
-Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
 
 # Creating script location string
 $ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
 
 # Add custom script extension to Linux VM
 Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
 $ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
-Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 
 #### File URI
@@ -114,11 +114,11 @@ $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to Linux VM
 Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @($FileUri)};
 $ProtectedSettings = @{"commandToExecute" = $CommandToExecute};
-Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 
 ### [Windows](#tab/tabid-b/tabid-1)
@@ -137,14 +137,14 @@ $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
 Write-Output -InputObject "Creating storage account and container"
-$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
 
 # Get storage account context
 $Context = $StorageAccount.Context
 New-AzureStorageContainer -Name $ContainerName -Context $Context
 
 # Retrieve storage account key
-$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+$StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
 
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
@@ -152,7 +152,7 @@ Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $Cus
 
 # Add custom script extension to Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
+Set-AzVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
 </code></pre>
 
 #### File URI
@@ -165,7 +165,7 @@ $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
+Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 
 ### [Linux](#tab/tabid-c/tabid-2)

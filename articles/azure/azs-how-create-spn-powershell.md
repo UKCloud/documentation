@@ -3,8 +3,8 @@ title: How to create an SPN for Azure Stack Hub using PowerShell
 description: Learn how to create a service principal name (SPN) to manage your Azure Stack Hub using PowerShell
 services: azure-stack
 author: Chris Black
-reviewer: Daniel Brennand
-lastreviewed: 27/03/2020 10:38:00
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -134,31 +134,30 @@ $PublicAzureAdminCreds = New-Object -TypeName "System.Management.Automation.PSCr
 
 # Log in to your public Azure subscription and Azure AD you will be creating your SPN in
 Connect-AzureAD -Credential $PublicAzureAdminCreds -TenantId $TenantDomain
-Connect-AzureRmAccount -Credential $PublicAzureAdminCreds
+Connect-AzAccount -Credential $PublicAzureAdminCreds
 
 # List subscriptions
-$SubId = Get-AzureRmSubscription | Select-Object -Property SubscriptionId, TenantId
+$SubId = Get-AzSubscription | Select-Object -Property SubscriptionId, TenantId
 
 # Set context to be your active subscription
-Get-AzureRmSubscription -SubscriptionId $SubId.SubscriptionId -TenantId $SubId.TenantId | Set-AzureRmContext
+Get-AzSubscription -SubscriptionId $SubId.SubscriptionId -TenantId $SubId.TenantId | Set-AzContext
 
 # Create an Azure AD application, this is the object that you need in order to set the SPN record against
 try {
-    $App = New-AzureRmADApplication -DisplayName $AppName -HomePage $AppUrl -IdentifierUris $AppUrl -Password $AppPasswordSecure
+    $App = New-AzADApplication -DisplayName $AppName -HomePage $AppUrl -IdentifierUris $AppUrl -Password $AppPasswordSecure
     $AppGet = Get-AzureADApplication -ObjectId $App.ObjectId.Guid
     $AppGet
 
     # Create a Service Principal Name (SPN) for the application created earlier
-    $SPN = New-AzureRmADServicePrincipal -ApplicationId $AppGet.AppId
+    $SPN = New-AzADServicePrincipal -ApplicationId $AppGet.AppId
 
     Write-Output -InputObject "Waiting for the SPN to be created..."
     Start-Sleep -Seconds 35
 
     # Assign the Service Principal Name a role
-    New-AzureRmRoleAssignment -RoleDefinitionName $PublicAzureRole -ServicePrincipalName $AppGet.AppId | Out-Null
-    Get-AzureRmRoleAssignment -ObjectId $SPN.Id.Guid
-}
-catch {
+    New-AzRoleAssignment -RoleDefinitionName $PublicAzureRole -ServicePrincipalName $AppGet.AppId | Out-Null
+    Get-AzRoleAssignment -ObjectId $SPN.Id.Guid
+} catch {
     Write-Error -Message "$($_.Exception.Message)"
     break
 }
@@ -193,16 +192,16 @@ Get-AzureADApplication -ObjectId $AppGet.ObjectId | Select-Object -Property *
 $SPNCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AppGet.AppId, $AppPasswordSecure
 
 # Log in to public Azure using SPN account
-Connect-AzureRmAccount -Credential $SPNCreds -ServicePrincipal -TenantId $TenantDomain
+Connect-AzAccount -Credential $SPNCreds -ServicePrincipal -TenantId $TenantDomain
 
 # Test your SPN account by creating a new resource group in public Azure
-New-AzureRmResourceGroup -Name $PublicAzureResourceGroup -Location $PublicAzureRegion
+New-AzResourceGroup -Name $PublicAzureResourceGroup -Location $PublicAzureRegion
 
 # Remove test resource group
-Remove-AzureRmResourceGroup -Name $PublicAzureResourceGroup -Force
+Remove-AzResourceGroup -Name $PublicAzureResourceGroup -Force
 
 # Create Azure Stack Hub environment so that you can log in to it
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Hub Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
@@ -211,30 +210,30 @@ $AzureStackUserPasswordAdmin = ConvertTo-SecureString -String "<output form="azs
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
 # Login to Azure Stack Hub as Admin (Subscription Owner)
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCredAdmin
+Connect-AzAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCredAdmin
 
 # Find application details from Azure AD
-$AzureStackApp = Get-AzureRmADApplication -DisplayNameStartWith $AppGet.DisplayName
+$AzureStackApp = Get-AzADApplication -DisplayNameStartWith $AppGet.DisplayName
 
 # Find Object Id of your Service Principal Name in Azure Stack Hub
-$SPNAzureStackGet = Get-AzureRmADServicePrincipal -SearchString $AzureStackApp.DisplayName
+$SPNAzureStackGet = Get-AzADServicePrincipal -SearchString $AzureStackApp.DisplayName
 $SPNAzureStackGet
 
 # Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack Hub
-New-AzureRmRoleAssignment -RoleDefinitionName $AzureStackRole -ServicePrincipalName $AzureStackApp.ApplicationId.Guid | Out-Null
-Get-AzureRmRoleAssignment -ObjectId $SPNAzureStackGet.Id.Guid
+New-AzRoleAssignment -RoleDefinitionName $AzureStackRole -ServicePrincipalName $AzureStackApp.ApplicationId.Guid | Out-Null
+Get-AzRoleAssignment -ObjectId $SPNAzureStackGet.Id.Guid
 
 # Log in to Azure Stack Hub using SPN account
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $SPNCreds -ServicePrincipal -TenantId $TenantDomain
+Connect-AzAccount -EnvironmentName "AzureStackUser" -Credential $SPNCreds -ServicePrincipal -TenantId $TenantDomain
 
 # Pull location from environment
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Test your SPN account by creating a new resource group in Azure Stack Hub
-New-AzureRmResourceGroup -Name $AzureStackResourceGroup -Location $Location
+New-AzResourceGroup -Name $AzureStackResourceGroup -Location $Location
 
 # Remove test resource group
-Remove-AzureRmResourceGroup -Name $AzureStackResourceGroup -Force
+Remove-AzResourceGroup -Name $AzureStackResourceGroup -Force
 
 # Export data of your SPN
 $SPN = [PSCustomObject]@{
@@ -297,31 +296,30 @@ $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCrede
 
 # Login to Azure Stack Hub as admin (Subscription Owner) and Azure AD
 Connect-AzureAD -Credential $AzureStackCredAdmin -TenantId $TenantDomain
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCredAdmin
+Connect-AzAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCredAdmin
 
 # List subscriptions
-$SubId = Get-AzureRmSubscription | Select-Object -Property SubscriptionId, TenantId
+$SubId = Get-AzSubscription | Select-Object -Property SubscriptionId, TenantId
 
 # Set context to be your active subscription
-Get-AzureRmSubscription -SubscriptionId $SubId.SubscriptionId -TenantId $SubId.TenantId | Set-AzureRmContext
+Get-AzSubscription -SubscriptionId $SubId.SubscriptionId -TenantId $SubId.TenantId | Set-AzContext
 
 # Create an Azure AD application, this is the object that you need in order to set the SPN record against
 try {
-    $App = New-AzureRmADApplication -DisplayName $AppName -HomePage $AppUrl -IdentifierUris $AppUrl -Password $AppPasswordSecure
+    $App = New-AzADApplication -DisplayName $AppName -HomePage $AppUrl -IdentifierUris $AppUrl -Password $AppPasswordSecure
     $AppGet = Get-AzureADApplication -ObjectId $App.ObjectId.Guid
     $AppGet
 
     # Create a Service Principal Name (SPN) for the application created earlier
-    $SPN = New-AzureRmADServicePrincipal -ApplicationId $AppGet.AppId
+    $SPN = New-AzADServicePrincipal -ApplicationId $AppGet.AppId
 
     Write-Output -InputObject "Waiting for the SPN to be created..."
     Start-Sleep -Seconds 35
 
     # Assign the Service Principal Name a role
-    New-AzureRmRoleAssignment -RoleDefinitionName "Owner" -ServicePrincipalName $AppGet.AppId | Out-Null
-    Get-AzureRmRoleAssignment -ObjectId $SPN.Id.Guid
-}
-catch {
+    New-AzRoleAssignment -RoleDefinitionName "Owner" -ServicePrincipalName $AppGet.AppId | Out-Null
+    Get-AzRoleAssignment -ObjectId $SPN.Id.Guid
+} catch {
     Write-Error -Message "$($_.Exception.Message)"
     break
 }
@@ -331,16 +329,16 @@ catch {
 $AzureStackCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AppGet.AppId, $AppPasswordSecure
 
 # Log in to Azure Stack Hub using SPN account
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCred -ServicePrincipal -TenantId $TenantDomain
+Connect-AzAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCred -ServicePrincipal -TenantId $TenantDomain
 
 # Pull location from environment
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Test your SPN account by creating a new resource group in Azure Stack Hub
-New-AzureRmResourceGroup -Name $AzureStackResourceGroup -Location $Location
+New-AzResourceGroup -Name $AzureStackResourceGroup -Location $Location
 
 ## Remove test resource group
-Remove-AzureRmResourceGroup -Name $AzureStackResourceGroup -Force
+Remove-AzResourceGroup -Name $AzureStackResourceGroup -Force
 
 # Export data of your SPN
 $SPN = [PSCustomObject]@{

@@ -3,8 +3,8 @@ title: Understanding UKCloud for Microsoft Azure
 description: Overview of UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: Reference
@@ -114,9 +114,9 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
     Then run the following commands:
 
     ```powershell
-    Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-    Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
-    Get-AzureRmVMImagePublisher -Location "frn00006" | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
+    Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+    Connect-AzAccount -EnvironmentName "AzureStackUser"
+    Get-AzVMImagePublisher -Location "frn00006" | Get-AzVMExtensionImageType | Get-AzVMExtensionImage | `
       Select-Object -Property Type, Version | Format-Table -AutoSize
     ```
 

@@ -3,8 +3,8 @@ title: How to deploy an SQL template to Azure Stack Hub using PowerShell
 description: Learn how to deploy an SQL template to Azure Stack Hub using PowerShell
 services: azure-stack
 author: Chris Black
-reviewer: Daniel Brennand
-lastreviewed: 01/04/2020
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -278,7 +278,7 @@ $SqlServerSKU = "<output form="sqlserversku" name="result" style="display: inlin
 $ArmDeploymentName = "<output form="armdeploymentname" name="result" style="display: inline;">Sql2016AlwaysOnDeployment</output>"
 
 # Create Azure Stack Hub environment so that you can log in to it
-Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your SPN credentials for log in
 $AzsUsername = $ClientID
@@ -286,34 +286,32 @@ $AzsUserPassword = ConvertTo-SecureString -String $ClientSecret -AsPlainText -Fo
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Log in to Azure Stack Hub using SPN account
-Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantID
+Connect-AzAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantID
 
 # Create a new resource group if it does not exist
 try {
-    $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $Location -ErrorAction 'SilentlyContinue'
+    $RG = Get-AzResourceGroup -Name $ResourceGroupName -Location $Location -ErrorAction 'SilentlyContinue'
     if (-not $RG) {
         Write-Output -InputObject "Could not find the resource group, creating now..."
-        New-AzureRmResourceGroup -Name $ResourceGroupName -Location $Location -Verbose
-    }
-    else {
+        New-AzResourceGroup -Name $ResourceGroupName -Location $Location -Verbose
+    } else {
         Write-Output -InputObject "The resource group: $ResourceGroupName exists."
     }
-}
-catch {
+} catch {
     Write-Output -InputObject "Could not query the resource group: $ResourceGroupName"
     Write-Error -Message "$($_.Exception.Message)"
     exit
 }
 
 # Test deployment
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
+Test-AzResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
 
 # Start deployment
-New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
+New-AzResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
 
 # Verify deployment
 ## Note: $ArmDeploymentName can be changed to query each deployment in your resource group
-Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
+Get-AzResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
 </code></pre>
 
 In the Azure Stack Hub portal, you will see the deployment progressing and resources being created:

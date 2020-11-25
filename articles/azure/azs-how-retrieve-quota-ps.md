@@ -3,8 +3,8 @@ title: How to retrieve your subscription quotas using PowerShell
 description: Provides help for retrieving your quotas on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
-reviewer: William Turner
-lastreviewed: 31/03/2020
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -44,30 +44,29 @@ From your PowerShell window:
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Retrieve Compute quota
-$ComputeQuota = Get-AzureRmVMUsage -Location $Location | Select-Object -Property Name, CurrentValue, Limit
+$ComputeQuota = Get-AzVMUsage -Location $Location | Select-Object -Property Name, CurrentValue, Limit
 $ComputeQuota | ForEach-Object {
     if (-not $_.Name.LocalizedValue) {
         $_.Name = $_.Name.Value -creplace '(\B[A-Z])', ' $1'
-    }
-    else {
+    } else {
         $_.Name = $_.Name.LocalizedValue
     }
 }
 
 # Retrieve Storage quota
-$StorageQuota = Get-AzureRmStorageUsage | Select-Object -Property Name, CurrentValue, Limit
+$StorageQuota = Get-AzStorageUsage | Select-Object -Property Name, CurrentValue, Limit
 
 # Retrieve Network quota
-$NetworkQuota = Get-AzureRmNetworkUsage -Location $Location | Select-Object @{ Label="Name"; Expression={ $_.ResourceType } }, CurrentValue, Limit
+$NetworkQuota = Get-AzNetworkUsage -Location $Location | Select-Object @{ Label="Name"; Expression={ $_.ResourceType } }, CurrentValue, Limit
 
 # Combine quotas
 $AllQuotas = $ComputeQuota + $StorageQuota + $NetworkQuota
