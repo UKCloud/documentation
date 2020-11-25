@@ -81,7 +81,8 @@ $VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
 # Check if the VM uses managed or unmanaged disks
 if ($VM.StorageProfile.OsDisk.ManagedDisk) {
     $ManagedDisks = $true
-    }  else {
+    }
+    else {
         $ManagedDisks = $false
   } 
 
@@ -119,7 +120,8 @@ if ($ManagedDisks) {
     # Add OS disk to new VM configuration
     if ($VM.OsProfile.WindowsConfiguration) {
         $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Windows
-    } else {
+    }
+    else {
         $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Linux
     }
     # Add data disk(s) to new VM configuration
@@ -127,11 +129,13 @@ if ($ManagedDisks) {
         $NewVmConfig = Add-AzVMDataDisk -VM $NewVmConfig -ManagedDiskId $Disk.Id -CreateOption "Attach" -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
         $Lun++
     }
-} else {
+}
+else {
     # Add OS disk to new VM configuration
     if ($VM.OsProfile.WindowsConfiguration) {
         $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Windows
-    } else {
+    }
+    else {
         $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Linux
     }
     # Add data disk(s) to new VM configuration

@@ -157,7 +157,8 @@ try {
     # Assign the Service Principal Name a role
     New-AzRoleAssignment -RoleDefinitionName $PublicAzureRole -ServicePrincipalName $AppGet.AppId | Out-Null
     Get-AzRoleAssignment -ObjectId $SPN.Id.Guid
-} catch {
+}
+catch {
     Write-Error -Message "$($_.Exception.Message)"
     break
 }
@@ -319,7 +320,8 @@ try {
     # Assign the Service Principal Name a role
     New-AzRoleAssignment -RoleDefinitionName "Owner" -ServicePrincipalName $AppGet.AppId | Out-Null
     Get-AzRoleAssignment -ObjectId $SPN.Id.Guid
-} catch {
+}
+catch {
     Write-Error -Message "$($_.Exception.Message)"
     break
 }

@@ -203,15 +203,18 @@ if ($TestRG) {
         $TestSubnet = Get-AzVirtualNetworkSubnetConfig -Name $StackSubnetName -VirtualNetwork $TestVNet
         if ($TestSubnet) {
             Write-Output -InputObject "Validated resource group, virtual network and subnet successfully"
-        } else {
+        }
+        else {
             Write-Error -Message "Could not find subnet with name $StackSubnetName, please check and try again"
             break
         }
-    } else {
+    }
+    else {
         Write-Error -Message "Could not find virtual network with name $StackVNetName, please check and try again"
         break
     }
-} else {
+}
+else {
     Write-Error -Message "Could not find resource group with name $StackResourceGroup, please check and try again"
     break
 }
@@ -255,7 +258,8 @@ if ($TestDeployment.Count -eq 0) {
     Write-Output -InputObject "Deploying ARM template..."
     Write-Warning -Message "This may take a while..."
     New-AzResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters -Name "AzureSiteRecovery"
-} else {
+}
+else {
     Write-Warning -Message "Unable to deploy ARM template due to following issue(s):"
     $TestDeployment
     break

@@ -50,8 +50,6 @@ Set-ExecutionPolicy RemoteSigned
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 
-
-
 # Install the latest version of PowerShellGet
 Install-Module -Name PowerShellGet -Force
 

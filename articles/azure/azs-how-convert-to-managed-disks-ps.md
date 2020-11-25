@@ -100,7 +100,8 @@ $NewVMConfig = New-AzVMConfig -VMName $VMName -VMSize $OldVM.HardwareProfile.VmS
 # Add OS disk to the new virtual machine config
 if ($OldVM.OSProfile.LinuxConfiguration) {
     $NewVMConfig = Set-AzVMOSDisk -VM $NewVMConfig -ManagedDiskId $OSDisk.Id -CreateOption "Attach" -Linux
-} else {
+}
+else {
     $NewVMConfig = Set-AzVMOSDisk -VM $NewVMConfig -ManagedDiskId $OSDisk.Id -CreateOption "Attach" -Windows
 }
 
@@ -115,7 +116,8 @@ foreach ($Disk in $DataDiskArray) {
 foreach ($Nic in $OldVM.NetworkProfile.NetworkInterfaces) {
     if ($Nic.Primary -eq $true -or $Nic.Primary -eq $null) {
         $NewVMConfig = Add-AzVMNetworkInterface -VM $NewVMConfig -Id $Nic.Id -Primary
-    } else {
+    }
+    else {
         $NewVMConfig = Add-AzVMNetworkInterface -VM $NewVMConfig -Id $Nic.Id
     }
 }
