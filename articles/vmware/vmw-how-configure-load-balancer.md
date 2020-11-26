@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-configure-load-balancer.md
 
 ## Overview
 
-One of the functions of the edge gateway is to act as a basic Layer 3 load balancer, distributing IP traffic to a pool of servers while appearing as a single virtual server. The load balancing methods offered are round-robin, IP hash, URI, HTTP header or least connected.
+One of the functions of the edge gateway is to act as a basic load balancer, distributing IP traffic to a pool of servers while appearing as a single virtual server. The load balancing methods offered are round-robin, IP hash, URI, HTTP header or least connected.
 
 Bear in mind, however, that the edge gateway load balancer is quite basic. If you need to meet more complex requirements, you'll need provide your own third-party virtual load balancer.
 
@@ -105,6 +105,9 @@ Server pools are the real servers that are masked by the load balancer.
     > The pool name should not include any spaces.
 
 4. From the **Algorithm** list, select the load balancing algorithm to use.
+
+    > [!TIP]
+    > For a description of the different algorithms, see the [Add a Server Pool for Load Balancing](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-769B5EE4-A1AA-43A9-83A3-C4B47EF0DFEB.html) VMware article.
 
 5. From the **Monitors** list, select the monitors policy to use.
 
