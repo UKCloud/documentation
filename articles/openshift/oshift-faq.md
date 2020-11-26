@@ -77,7 +77,7 @@ Our OpenShift service provides popular open source data service packages deploya
 
 - RabbitMQ, for reliable, scalable and portable messaging for applications
 
-Note that these services are offered 'as is' with no management, support or availability commitment from UKCloud. We strongly suggest customers ensure they maintain a master copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, a data service provided by a managed service provider on our UKCloud for VMware platform.
+Note that these services are offered 'as is' with no management, support or availability commitment from UKCloud. We strongly suggest customers ensure they maintain a original copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, a data service provided by a managed service provider on our UKCloud for VMware platform.
 
 ### How scalable is UKCloud for Managed OpenShift?
 
@@ -113,7 +113,7 @@ In line with current restrictions on the OpenStack service underpinning OpenShif
 
 ### Can I have integrated container logging deployed with the platform?
 
-Yes, this can be requested at time of deployment, or added post-deployment. The services can be run on either the master nodes or the worker nodes in the cluster. By default, we would place them on the master nodes, but you may wish to change this placement to be more suitable for the specific cluster performance you desire.
+Yes, this can be requested at time of deployment, or added post-deployment. The services can be run on either the infrastructure  nodes or the worker nodes in the cluster. By default, we would place them on the infrastructure nodes, but you may wish to change this placement to be more suitable for the specific cluster performance you desire.
 
 ### How much control do I have over the policies and configuration of the platform once it has been deployed?
 
