@@ -82,9 +82,6 @@ For information about catalogs, see [*How to create a catalog*](vmw-how-create-c
 
 13. In the *Edit VM* dialog box, from the **Storage Policy** list, select a storage policy to assign the VM to, then click **Save**.
 
-    > [!NOTE]
-    > We recommend using the `*-*-*-Any` option as this will ensure your VMs are balanced evenly across all storage pools. However, you could use this option to specifically separate VMs on different storage if required for high availability purposes. For example, you could specifically place VMs on `*.*.*-Storage1` as opposed to `*.*.*-Storage2`.
-
     ![Edit VM dialog box](images/vmw-vcd10.1-vm-details-general.png)
 
 14. Under *Hardware*, select **Hard Disks**, then click **Edit** to configure storage or **Add** more disks.
@@ -162,9 +159,6 @@ For information about catalogs, see [*How to create a catalog*](vmw-how-create-c
 11. In the card for your new VM, select **Details**.
 
 12. In the *General* section, from the **Storage Policy** list, select a storage policy to assign the VM to.
-
-    > [!NOTE]
-    > We recommend using the `*-*-*-Any` option as this will ensure your VMs are balanced evenly across all storage pools. However, you could use this option to specifically separate VMs on different storage if required for high availability purposes. For example, you could specifically place VMs on `*.*.*-Storage1` as opposed to `*.*.*-Storage2`. For more information, visit the Knowledge Centre.
 
     ![VM details - General](images/vmw-vcd-vm-details-general.png)
 
