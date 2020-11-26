@@ -223,7 +223,7 @@ Billing for the service is one month in arrears. The minimum unit of time for us
 
 Actual real-time resource usage is measured to the nearest second. At the end of each day, periods of time in identical VM state are grouped together and the total for each group in seconds is rounded up to the nearest hour. An identical VM state has the same power status, VM size, service level, storage size, protection and licensing. Where rounding up of multiple periods in differing states during the same day would result in more than 24 hours of charges, the period with the lowest price per hour is rounded down. For example, if a VM was switched off for a total of 890 minutes but was on for 550 minutes, the billable hours would be rounded up to 10 hours for when the VM was on and the off period would be rounded down to 14 hours to cap the day at 24 hours.
 
-Payment can be made by direct bank transfer. You can find bank details for payment on your invoice. If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven days after the invoice date.
+Payment can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice. You can also pay by credit card, in which case, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 Billing information is provided in an evidence file on the first working day of the month for your previous month's spend. For more information about the invoice evidence file, see [*Understanding your invoice evidence file*](../other/other-ref-invoice-evidence-file.md).
 
