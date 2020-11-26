@@ -27,7 +27,7 @@ To complete the steps in this guide you must be a Portal administrator.
 
 ## Configuring permissions
 
-To configure permissions for a portal user:
+To configure permissions for a Portal user:
 
 1. Log in to the UKCloud Portal as an administrator.
 
@@ -45,58 +45,14 @@ To configure permissions for a portal user:
 
     ![Permissions tab for Portal contact](images/ptl-contacts-tab-permissions.png)
 
-5. In the *Permissions for UKCloud for VMware* section, you'll see a list of VDCs and the associated permissions available for the Portal user.
+5. In the *Permissions for UKCloud for VMware* section, you'll see a list of VDCs and the associated user roles available for the Portal user.
 
-    Select the permission level you want to assign to the user, then scroll to the bottom of the page and click **Save**.
+    Select the role you want to assign to the user, then scroll to the bottom of the page and click **Save**.
 
-## User types and privileges
+## User roles and access rights
 
-The first table shows the user types (operations); the second table shows the exact privileges each user type has.
-
-Operation             | Allows the user administrative access to the given organisation with:
-----------------------|--------------------------------------------------------------------------------------
-Console Only (CO)     | Permissions for Console access only
-vApp User (VU)        | Permissions for a vApp User
-vApp Author (VA)      | Permissions for a vApp Author
-Catalogue Author (CA) | Permissions for a Catalogue Author
-Admin (ADM)           | All permissions
-
-Group        | Privilege                              | CO      | VU      | VA      | CA      | ADM
--------------|----------------------------------------|---------|---------|---------|---------|--------
-Catalog      | Add vApp from My Cloud                 | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | Change Owner                           | &nbsp;  | &nbsp;  | &nbsp;  | &nbsp;  | &check;
-&nbsp;       | Create / Delete a Catalog              | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
-&nbsp;       | Edit Properties                        | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
-&nbsp;       | Publish                                | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
-&nbsp;       | Sharing                                | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
-&nbsp;       | View Private and Shared Catalogs       | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | View Published Catalogs                | &nbsp;  | &nbsp;  | &nbsp;  | &nbsp;  | &check;
-Catalog Item | Add to My Cloud                        | &nbsp;  | &check; | &check; | &check; | &check;
-&nbsp;       | Copy/Move a vApp Template/Media        | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | Create/Upload a vApp Template/Media    | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
-&nbsp;       | Enable vApp Template Download          | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
-&nbsp;       | Edit vApp Template / Media Properties  | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
-&nbsp;       | View vApp Templates/Media              | &nbsp;  | &check; | &check; | &check; | &check;
-Disk         | Change Owner                           | &nbsp;  | &nbsp;  | &nbsp;  | &check; | &check;
-&nbsp;       | Create                                 | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | Delete                                 | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | Edit Properties                        | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | View Properties                        | &nbsp;  | &check; | &check; | &check; | &check;
-vApp         | Change Owner                           | &nbsp;  | &nbsp;  | &nbsp;  | &nbsp;  | &check;
-&nbsp;       | Copy                                   | &nbsp;  | &check; | &check; | &check; | &check;
-&nbsp;       | Create/Reconfigure                     | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | Delete                                 | &nbsp;  | &check; | &check; | &check; | &check;
-&nbsp;       | Edit vApp Properties                   | &nbsp;  | &check; | &check; | &check; | &check;
-&nbsp;       | Edit VM CPU                            | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | Edit VM Hard Disk                      | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | Edit VM Memory                         | &nbsp;  | &nbsp;  | &check; | &check; | &check;
-&nbsp;       | Edit VM Network                        | &nbsp;  | &check; | &check; | &check; | &check;
-&nbsp;       | Edit VM Properties                     | &nbsp;  | &check; | &check; | &check; | &check;
-&nbsp;       | Manage VM Password Settings            | &check; | &check; | &check; | &check; | &check;
-&nbsp;       | Power Operations                       | &nbsp;  | &check; | &check; | &check; | &check;
-&nbsp;       | Sharing                                | &nbsp;  | &check; | &check; | &check; | &check;
-&nbsp;       | Snapshot Operations                    | &nbsp;  | &check; | &check; | &check; | &check;
-&nbsp;       | Use Console                            | &check; | &check; | &check; | &check; | &check;
+For a list of the access rights each of the listed user roles has, see the [Rights in Predefined Global Tenant Roles]( 
+https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-AE42A8F6-868C-4FC0-B224-87CA0F3D6350.html#GUID-AE42A8F6-868C-4FC0-B224-87CA0F3D6350) VMware article.
 
 ### API Only role
 
