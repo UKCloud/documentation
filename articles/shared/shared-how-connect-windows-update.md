@@ -1,6 +1,6 @@
 ---
 title: How to connect to the UKCloud Windows Server Update Services (WSUS)
-description: Shows how to connect to the UKCloud Windows Update Services
+description: Shows how to connect to the UKCloud Windows Server Update Services (WSUS) to keep your VMs up to date
 services: shared-services
 author: shighmoor
 reviewer: jpaddock
