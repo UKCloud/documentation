@@ -32,7 +32,7 @@
     href: vmw-how-access-syslog-data.md
   - name: Access the Zerto Self-Service Portal
     href: vmw-how-zerto-access-zssp.md
-  - name: Access vCloud Director through the vCloud API
+  - name: Access VMware Cloud Director/vCloud Director through the vCloud API
     href: vmw-how-access-vcloud-api.md
   - name: Build an edge gateway using the UKCloud Portal
     href: vmw-how-build-edge.md
@@ -86,14 +86,16 @@
     href: vmw-how-install-openvpn.md
   - name: Install and configure Zerto in your local environment
     href: vmw-how-zerto-install-local.md
+  - name: Install VMware Tools
+    href: vmw-how-install-vmware-tools.md
   - name: Interact with the vCloud REST API using PowerShell and Python
     href: vmw-how-interact-vcd-api-powershell.md
   - name: Locate your virtual data centre on the UKCloud platform
     href: vmw-how-locate-vdc.md
-  - name: Manage permissions for vCloud Director
-    href: vmw-how-manage-vcd-permissions.md
   - name: Manage Snapshot Protection for your VMs
     href: vmw-how-manage-snapshot-protection.md
+  - name: Manage VMware Cloud Director/vCloud Director permissions
+    href: vmw-how-manage-vcd-permissions.md
   - name: Manipulate power states with PowerCLI
     href: vmw-how-manipulate-power-states-powercli.md
   - name: Migrate vApps between virtual data centres
@@ -200,8 +202,6 @@
     href: vmw-ref-vm-data-recovery.md
   - name: Virtual machine disk limits and considerations
     href: vmw-ref-vmdk-limits.md
-  - name: VMware Tools installation
-    href: vmw-ref-vmware-tools-installation.md
   - name: VMware vCloud Connector
     href: vmw-ref-vcloud-connector.md
   - name: Windows Server activation
