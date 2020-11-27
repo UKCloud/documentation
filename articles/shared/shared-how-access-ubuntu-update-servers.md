@@ -1,6 +1,6 @@
 ---
 title: How to access Ubuntu update servers 
-description: This guide shows you how to configure access to Ubuntu update servers
+description: Provides information about accessing the Ubuntu repository servers
 services: shared-services
 author: shighmoor
 reviewer: pcantle
