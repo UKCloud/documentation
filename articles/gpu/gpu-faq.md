@@ -17,6 +17,9 @@ toc_mdlink: gpu-faq.md
 
 # Cloud GPU FAQs
 
+> [!IMPORTANT]
+> This product is no longer available for sale. This article is provided to support existing customers of the product only.
+
 ## General
 
 ### What is Cloud GPU?
