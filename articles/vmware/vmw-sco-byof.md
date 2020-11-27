@@ -19,7 +19,7 @@ toc_mdlink: vmw-sco-byof.md
 
 ## About this document
 
-This document is intended for UKCloud customers who might be considering an alternative virtual firewall or virtual appliance to the presently integrated VMWare vCNS firewall device within vCloud Director.
+This document is intended for UKCloud customers who might be considering an alternative virtual firewall or virtual appliance to the presently integrated VMware vCNS firewall device within vCloud Director.
 
 The scope of the document is not to provide step by step detail on how to setup or install an alternative virtual firewall but rather the key points that a customer should consider when choosing an alternative product.
 

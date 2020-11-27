@@ -114,8 +114,8 @@
 <thead>
 <tr>
 <th>Anti-Virus element</th>
-<th>UKCloud</th>
 <th>Customer</th>
+<th>UKCloud</th>
 <th>UKCloud - Professional Services</th>
 <th>Notes</th>
 </tr>
@@ -123,22 +123,22 @@
 <tbody>
 <tr>
 <td>Availability</td>
-<td>A/R</td>
 <td></td>
+<td>A/R</td>
 <td></td>
 <td>Agents installed on customer end-points will remain active regardless as to the availability of the central platform.</td>
 </tr>
 <tr>
 <td>Updates</td>
-<td>A/R</td>
 <td></td>
+<td>A/R</td>
 <td></td>
 <td>Definition updates are provided in real-time by the vendor.</td>
 </tr>
 <tr>
 <td>Configuration</td>
-<td>A/R</td>
 <td></td>
+<td>A/R</td>
 <td></td>
 <td></td>
 </tr>
@@ -149,8 +149,8 @@
 <thead>
 <tr>
 <th>Anti-Virus element</th>
-<th>UKCloud</th>
 <th>Customer</th>
+<th>UKCloud</th>
 <th>UKCloud - Professional Services</th>
 <th>Notes</th>
 </tr>
@@ -158,29 +158,29 @@
 <tbody>
 <tr>
 <td>Making latest agents available</td>
-<td>A/R</td>
 <td></td>
+<td>A/R</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>Deploying initial agents</td>
-<td>C/R</td>
 <td>A/R</td>
+<td>C/R</td>
 <td>£</td>
 <td>UKCloud may deploy the initial agents as part of any new build activities contracting into by the customer.</td>
 </tr>
 <tr>
 <td>Deploying agent updates</td>
-<td>A/R</td>
 <td>I/R</td>
+<td>A/R</td>
 <td>£</td>
 <td>Agents are updated automatically, centrally by the platform. Customers will become responsible to jointly assist UKCloud in any troubleshooting activities should we detect any issues with updates, see <a href="#general-support-and-troubleshooting">General support and troubleshooting</a>.</td>
 </tr>
 <tr>
 <td>Configuring agents</td>
-<td>R</td>
 <td>A/C</td>
+<td>R</td>
 <td></td>
 <td>UKCloud will apply a default configuration, however the customer remains accountable for ensuring any specific exclusions (file or directories) have been applied to their end-points. Customer specific exclusions can be requested via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. UKCloud will implement any requested exclusions).</td>
 </tr>
@@ -191,8 +191,8 @@
 <thead>
 <tr>
 <th>Anti-Virus element</th>
-<th>UKCloud</th>
 <th>Customer</th>
+<th>UKCloud</th>
 <th>UKCloud - Professional Services</th>
 <th>Notes</th>
 </tr>
@@ -207,22 +207,22 @@
 </tr>
 <tr>
 <td>Ad-hoc full file system scans</td>
-<td>R</td>
 <td>A</td>
+<td>R</td>
 <td></td>
 <td>Should a customer feel they require an additional full file system scan, in addition to the constant protection our Anti-Virus as a Service solution provides, they can raise a request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</td>
 </tr>
 <tr>
 <td>Action upon detection - Malicious objects</td>
-<td>A/R</td>
 <td>I</td>
+<td>A/R</td>
 <td></td>
 <td>Upon detection of a malicious object, the default configuration of our Anti-Virus as a Service solution is to automatically quarantine the object and then notify the customer via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal in addition to any other alerting methods (for example, email) a customer may have configured.</td>
 </tr>
 <tr>
 <td>Action upon detection - Suspicious objects</td>
-<td>R/C</td>
 <td>A/R</td>
+<td>R/C</td>
 <td></td>
 <td>Upon detection of a suspicious object, the default configuration of our Anti-Virus as a Service solution is to notify the customer via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal in addition to any other alerting methods (for example, email) a customer may have configured, but <strong>not</strong> take any action against the object. The customer and UKCloud will then work together to agree the severity of detection (may be a false positive) and agree actions to be taken against the detected object.</td>
 </tr>
@@ -232,6 +232,11 @@
 <h5>Note</h5>
 <p>UKCloud does not provide 'Security as a Service', expert anti-virus/malware or forensic analysis beyond the default capabilities provided by our platform.</p>
 </div>
+<h2 id="use-of-approved-third-party-in-the-delivery-of-anti-virus-as-a-service">Use of approved third party in the delivery of Anti-Virus as a Service</h2>
+<p>UKCloud harnesses the market-leading cyber security services of <a href="https://https://www.sentinelone.com/">SentinelOne</a> as the engine that powers our Anti-Virus as a Service product.</p>
+<p>To ensure the utmost accuracy, reliability and protection of our <a href="https://docs.ukcloud.com/articles/managed-services/man-sd-managed-it-ops.html">Anti-Virus as a Service</a> product, SentinelOne Agents must be installed on any customer end-point (VM) opted in to this service. The SentinelOne Agent exchanges key endpoint metadata securely between any customer endpoint that has the SentinelOne agent installed and SentinelOne's central cloud platform, which sits outside of UKCloud's data centres.</p>
+<p>For a full list of the data that may be exchanged between the SentinelOne Agent and SentinelOne's central cloud platform, see <a href="https://docs.ukcloud.com/articles/managed-services/man-ref-sentinelone-datacollection.html">Data collected by UKCloud's Anti-Virus as a Service</a>.</p>
+<p>In using UKCloud's Antivirus as a Service, customers must also be aware of and agree to the <a href="https://www.sentinelone.com/legal/terms-of-service/">SentinelOne Terms of Service</a>.</p>
 <h2 id="general-support-and-troubleshooting">General support and troubleshooting</h2>
 <p>UKCloud will work with the customer on a reasonable endeavours basis to troubleshoot and attempt remediation of any incidents that may occur whilst using this service.</p>
 <h2 id="service-provisioning">Service provisioning</h2>

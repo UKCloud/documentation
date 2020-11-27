@@ -437,11 +437,9 @@ As far as possible, planned maintenance of UKCloud's infrastructure takes place 
 
 As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
 
-### Can I configure email alerts from the Portal?
+### Can UKCloud provide notifications for service status and maintenance?
 
-Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is available in both the Assured and Elevated Portals.
-
-You can also sign up to service status notifications from the [UKCloud Service Status page](https://status.ukcloud.com/). For more information, see [*How to view the UKCloud Service Status page*](../other/other-how-view-status-info.md)
+Yes, you can subscribe to the [UKCloud Service Status page](https://status.ukcloud.com/) to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see [*How to subscribe to service status notifications*](../other/other-how-subscribe-service-status.md).
 
 ## Onboarding
 

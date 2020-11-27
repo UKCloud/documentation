@@ -29,6 +29,8 @@ Anti-Virus as a Service provides you with the confidence that your environments 
 
 Building on the capabilities of our [Managed Monitoring as a Service](man-monitoring-sco.md), UKCloud uses the industry-leading endpoint security platform [SentinelOne](https://www.sentinelone.com/) as the engine for Anti-Virus as a Service, harnessing the power of machine learning to providing protection that goes beyond that of traditional anti-virus or anti-malware solutions.
 
+For further details as to how we leverage SentinelOne as an approved third party in the delivery of this service, see the [Anti-Virus as a Service Service Scope](https://docs.ukcloud.com/articles/managed-services/man-antivirus-sco.html).
+
 ### What actions will UKCloud perform on positive detection?
 
 Our service uses the following two detection types:
@@ -161,9 +163,9 @@ As far as possible, planned maintenance of UKCloud's infrastructure takes place 
 
 As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Friday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
 
-### Can I configure email alerts from the Portal?
+### Can UKCloud provide notifications for service status and maintenance?
 
-Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications.
+Yes, you can subscribe to the [UKCloud Service Status page](https://status.ukcloud.com/) to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see [*How to subscribe to service status notifications*](../other/other-how-subscribe-service-status.md).
 
 ## Onboarding
 
