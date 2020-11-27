@@ -13407,6 +13407,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-login.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/ptl-menu-all-contacts.png",
       "output": {
         "resource": {
@@ -20356,15 +20367,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "7uHkeGVZ/nGJOzg+bqc/gA=="
+          "hash": "UdffRbXEyenCHjPxl7IzVg=="
         }
       },
       "is_incremental": false,
@@ -20508,7 +20516,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-catalog.html",
-          "hash": "XLf6Fx6QuBkDY9ue+MB1cQ=="
+          "hash": "PdY+T0i2qRuzm5j8dFuDKA=="
         }
       },
       "is_incremental": false,
@@ -20611,15 +20619,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-create-vm-from-scratch.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vm-from-scratch.html",
-          "hash": "paUvCxxFvecJ+TPxJVh1EA=="
+          "hash": "MyDC764kfEsl5AOQyHKxpg=="
         }
       },
       "is_incremental": false,
