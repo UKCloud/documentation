@@ -77,7 +77,7 @@ The secure online [UKCloud Portal](https://portal.ukcloud.com/login) provides mo
 
 ### What are your service maintenance windows?
 
-See [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ### Can UKCloud provide notifications for service status and maintenance?
 

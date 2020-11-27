@@ -249,7 +249,7 @@ UKCloud also has a large ecosystem of partners who can deliver additional servic
 
 ## Service constraints
 
-For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Supporting documents and resources
 

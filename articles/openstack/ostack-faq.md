@@ -400,7 +400,7 @@ For the Elevated OFFICIAL platform, security requirements are stricter and requi
 
 ### What are your service maintenance windows?
 
-See [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ### Can UKCloud provide notifications for service status and maintenance?
 

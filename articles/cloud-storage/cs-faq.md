@@ -100,7 +100,7 @@ For the Elevated OFFICIAL domain, security requirements are stricter and require
 
 ### What are your service maintenance windows?
 
-See [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ### Does the Cloud Storage solution support browser-based form POST upload?
 
