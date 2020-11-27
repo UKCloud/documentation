@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "Yx7rN0M4gSKtv6QMAWiuTw=="
+          "hash": "h0pfLRf0//qIgNWUAYY7Gw=="
         }
       },
       "is_incremental": false,
@@ -2347,7 +2347,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-faq.html",
-          "hash": "glelvVXhzzmjndHsQvB7Ug=="
+          "hash": "WJBeBwK4DxePeyOlgprenA=="
         }
       },
       "is_incremental": false,
@@ -5599,7 +5599,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-faq.html",
-          "hash": "I82hd84Jcsh0zHEBEjPA/Q=="
+          "hash": "feqamHlksiAgEKwHZqONLw=="
         }
       },
       "is_incremental": false,
@@ -8748,7 +8748,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "OkIt6mdc/nTzDdLuxl8o7w=="
+          "hash": "P9704PkACQ52Nfu9YTrQuA=="
         }
       },
       "is_incremental": false,
@@ -10373,19 +10373,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-billing.html",
-          "hash": "+Jl87yhEd4ofVP+fhQrs+g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-faq-credit-card.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-faq-credit-card.html",
-          "hash": "EKBFr+VWvN9IbWp2webgQQ=="
+          "hash": "3GP71xir4eqcS99nR0/gtA=="
         }
       },
       "is_incremental": false,
@@ -10397,7 +10385,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-eps.html",
-          "hash": "kPNHPPyW0TZoe+yniyOcpA=="
+          "hash": "T/OYZ+1PY+OmfPWnWFm9rg=="
         }
       },
       "is_incremental": false,
@@ -10469,7 +10457,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "Ukmdjsp70crY5yvZcU64OA=="
+          "hash": "Ye4ZOAVU/oHrMNHNvayBjg=="
         }
       },
       "is_incremental": false,
@@ -10877,7 +10865,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-terms-and-conditions.html",
-          "hash": "Z2B2ndftxgGvkdRb1rDv9A=="
+          "hash": "/aGYrJpRp0N7+Bl3Dn6ORw=="
         }
       },
       "is_incremental": false,
@@ -10949,7 +10937,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "/i5lGN8qVm/iaBV/hfgSUQ=="
+          "hash": "jDX44eNqBWhosy/Ja9DG+w=="
         }
       },
       "is_incremental": false,
@@ -20709,7 +20697,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "dTwwt6sIsx9MPXDWJPm5MQ=="
+          "hash": "Qql+B07OfD33a9aMsKXa7g=="
         }
       },
       "is_incremental": false,
@@ -20913,7 +20901,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-firewall-rules.html",
-          "hash": "ApAfJYq50cYjjOXDmPu0NA=="
+          "hash": "RkLeinQ/I5/wR6WQDDHrQw=="
         }
       },
       "is_incremental": false,
@@ -21009,7 +20997,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vm-from-template.html",
-          "hash": "uT9sKgTZJqwk2M9snQU9Jw=="
+          "hash": "yF7aVNUvXFAHEEwTj6w/cg=="
         }
       },
       "is_incremental": false,
@@ -21609,7 +21597,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-pricing.html",
-          "hash": "lp3sSlOQycTU4VdqbYczJQ=="
+          "hash": "UxSUi7zJLMQFol6SSS2Vyg=="
         }
       },
       "is_incremental": false,
@@ -22036,7 +22024,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 454,
+          "total_file_count": 453,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
