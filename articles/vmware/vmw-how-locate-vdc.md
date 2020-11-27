@@ -25,7 +25,7 @@ Knowing where your VDCs are located can be useful for:
 
 - Determining how resilient your applications are
 
-- Understanding how scheduled or emergency maintenance or an unplanned outage may affect your applications
+- Determining how Planned or Emergency Maintenance or an unplanned outage may affect your applications
 
 - Providing additional information to help with support call resolution
 

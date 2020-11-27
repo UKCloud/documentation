@@ -236,7 +236,9 @@ You are entitled to claim Service Credits for outages to services that take you 
 
 ### Service maintenance windows
 
-For UKCloud for Managed OpenShift, emergency and planned maintenance is not included in the SLA.
+For UKCloud for Managed OpenShift, Planned and Emergency are not included in the SLA.
+
+For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
 
 ## Pricing and billing
 
