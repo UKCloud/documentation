@@ -132,7 +132,7 @@ Walled Gardens are managed from the higher-security side of the platform (Elevat
 
 ### What are your service maintenance windows?
 
-See [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Billing and legal
 

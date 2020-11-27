@@ -73,7 +73,7 @@ For the Elevated OFFICIAL (formerly IL3) domain, the security requirements are m
 
 ### What are your service maintenance windows?
 
-See [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Onboarding
 

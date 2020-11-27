@@ -153,7 +153,7 @@ The length of time for the solution to be fully operational depends on the amoun
 
 ### What are your service maintenance windows?
 
-See [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Can I use the service as a short-term solution, such as for a couple of months?
 

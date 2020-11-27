@@ -71,7 +71,7 @@ For the Elevated OFFICIAL domain, the security requirements are much stricter an
 
 ### What are your service maintenance windows?
 
-See [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Onboarding
 

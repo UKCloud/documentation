@@ -186,7 +186,7 @@ UKCloud also has a large ecosystem of partners who can deliver additional servic
 
 ## Service constraints
 
-For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 You should be aware of some of the limitations of parts of the SLA. The disruptive nature of GPU hardware failures means that in the event of a GPU hardware failure, the VM will also fail.
 

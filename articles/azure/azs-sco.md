@@ -234,7 +234,7 @@ You are responsible for:
 
 ### Azure Stack Hub service constraints
 
-For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-service-maintenance-windows.md).
+For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Azure public cloud
 
