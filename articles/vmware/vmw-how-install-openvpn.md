@@ -92,7 +92,7 @@ To deploy the OpenVPN appliance:
 
 11. Review the details then click **Finish** to deploy the vApp and appliance.
 
-12. When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.
+12. When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMware's guest customisations to take effect before you start configuring OpenVPN.
 
 ## Performing initial configuration
 
