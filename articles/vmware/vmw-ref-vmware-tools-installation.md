@@ -1,5 +1,5 @@
 ---
-title: How to install VMware Tools
+title: VMware Tools installation
 description: Recommended practices for installing and maintaining VMware tools on the Assured platform
 services: vmware
 author: shighmoor
@@ -10,12 +10,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Install VMware Tools
-toc_fullpath: Reference/vmw-how-install-vmware-tools.md
-toc_mdlink: vmw-how-install-vmware-tools.md
+toc_title: VMware Tools installation
+toc_fullpath: Reference/vmw-ref-vmware-tools-installation.md
+toc_mdlink: vmw-ref-vmware-tools-installation.md
 ---
 
-# How to install VMware Tools
+# VMware Tools installation
 
 VMware provides tools that should be installed into all virtual machines running on UKCloud. The tools provide additional features such as automated customisation as well as improved performance by implementing optimised drivers such as storage, network and display. You can find more information [here](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=340).
 
