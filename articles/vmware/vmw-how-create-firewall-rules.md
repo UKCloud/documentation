@@ -88,7 +88,7 @@ To create a firewall rule:
 
 10. Select the **Action** field, and from the list select whether the rule is an **Accept** or **Deny** rule.
 
-11. If you have a syslog server configured, select the **Enable logging** check box. [confirm that this still exists]
+11. If you have a syslog server configured, select the **Enable logging** check box.
 
     For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
 

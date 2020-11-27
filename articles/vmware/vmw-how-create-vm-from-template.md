@@ -48,7 +48,7 @@ For information about catalogs, see [*How to create a catalog*](vmw-how-create-c
 
     ![Add Virtual Machine button](images/vmw-vcd10.1-btn-add-vm.png)
 
-5. In the *New VM* dialog box, enter a **Name**, **Computer Name** and **Description** for your VM. [confirm dialog box name]
+5. In the *New VM* dialog box, enter a **Name**, **Computer Name** and **Description** for your VM.
 
     > [!NOTE]
     > **Name** is a name to identify the VM, **Computer Name** is the host name of the VM.
