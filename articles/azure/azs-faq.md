@@ -207,7 +207,7 @@ For infrastructure solutions, you'll be billed by the smallest unit of time whic
 
 ### How can I pay for the services?
 
-Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice. You can also pay by credit card, in which case, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
+Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
 ### Are there any termination fees?
 
