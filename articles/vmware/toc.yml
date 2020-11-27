@@ -154,7 +154,7 @@
     href: vmw-ref-virtual-hardware-v11.md
   - name: Changes in vCloud Director 9.7
     href: vmw-ref-vcd-97.md
-  - name: Changes in VMWare Cloud Director 10.1
+  - name: Changes in VMware Cloud Director 10.1
     href: vmw-ref-vcd-10-1.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
