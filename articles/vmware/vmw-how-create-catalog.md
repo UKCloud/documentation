@@ -120,7 +120,7 @@ The first step is to create an empty catalog:
 
 There are two ways to populate a catalog:
 
-- By [creating a template from an OVF package](#uploading-an-ovf-package)
+- By [creating a template from an OVF package](#creating-a-template-from-an-ovf-package)
 
 - By [creating a template from an existing vApp](#adding-an-existing-vapp)
 
