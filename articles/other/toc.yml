@@ -58,6 +58,8 @@
     href: other-ref-ukcloud-monitoring.md
   - name: Protective Monitoring from UKCloud
     href: other-ref-promon.md
+  - name: Service maintenance windows
+    href: other-ref-maintenance-windows.md
   - name: Services at a glance
     href: other-ref-product-overview.md
   - name: Services by region

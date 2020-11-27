@@ -40,12 +40,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "h0pfLRf0//qIgNWUAYY7Gw=="
+          "hash": "Sf8ZZJg23LEkLAaKA/i1fw=="
         }
       },
       "is_incremental": false,
@@ -556,12 +559,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sco.html",
-          "hash": "FRG7K2Sgh/a0ZJ2ay2J2qw=="
+          "hash": "LA/itqVsVG6cijcMQPPRzg=="
         }
       },
       "is_incremental": false,
@@ -2342,12 +2348,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cdsz/cdsz-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-faq.html",
-          "hash": "WJBeBwK4DxePeyOlgprenA=="
+          "hash": "8YNvV2Tvw2/1lVo7N2KJAA=="
         }
       },
       "is_incremental": false,
@@ -2414,12 +2423,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cdsz/cdsz-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sco.html",
-          "hash": "gPTGYlnWmCGVngpeHrAr4Q=="
+          "hash": "0Gjw0crpSHwDhHLSLJqqYw=="
         }
       },
       "is_incremental": false,
@@ -2527,12 +2539,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cloud-storage/cs-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-faq.html",
-          "hash": "vBzQVrmgKJhG7eGx1CGsug=="
+          "hash": "IXdUhlhqHMzTou/dIWomOQ=="
         }
       },
       "is_incremental": false,
@@ -2647,12 +2662,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cloud-storage/cs-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
-          "hash": "+ZSekarggf7Jz8An4p7mkw=="
+          "hash": "XLB76W+vi/pp88TII/CO3Q=="
         }
       },
       "is_incremental": false,
@@ -4201,12 +4219,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/email/email-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/email/email-faq.html",
-          "hash": "5A2cBdEORbsUy9b+QTt6hw=="
+          "hash": "+FUJhcFZfSfI+tq1oKzkSA=="
         }
       },
       "is_incremental": false,
@@ -5378,12 +5399,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/gpu/gpu-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-sco.html",
-          "hash": "xSc+5TbbKIbMZO+7AXzhQQ=="
+          "hash": "GHMTLbRMH0UexDOIdzHCvA=="
         }
       },
       "is_incremental": false,
@@ -5570,12 +5594,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-antivirus-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-antivirus-faq.html",
-          "hash": "3nWKTGudPSfHqIYgQF4KTg=="
+          "hash": "uAXVh8T9jbAyOicQHm6Otg=="
         }
       },
       "is_incremental": false,
@@ -5594,12 +5621,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-monitoring-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-faq.html",
-          "hash": "feqamHlksiAgEKwHZqONLw=="
+          "hash": "bL4Iz+rj5LU9LOxKHBrs7A=="
         }
       },
       "is_incremental": false,
@@ -5635,19 +5665,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-sco.html",
-          "hash": "O75Op4+2Nqxk5nLzTB4tlQ=="
+          "hash": "05IlweSk/uM2zwT2Jdshnw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-patching-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-patching-faq.html",
-          "hash": "xs4FCmaV7LpcS1K49t9kew=="
+          "hash": "z5HgSmlBMzxEBVSmLAoYfA=="
         }
       },
       "is_incremental": false,
@@ -6539,12 +6572,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "cnPEWae+S1Uii5otxdKg0Q=="
+          "hash": "+BMxzLJZXM2802VmuiNE6Q=="
         }
       },
       "is_incremental": false,
@@ -8743,12 +8779,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "P9704PkACQ52Nfu9YTrQuA=="
+          "hash": "BU8koynhVaPkvMwDrs7Llg=="
         }
       },
       "is_incremental": false,
@@ -9096,7 +9135,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sco-triliovault.html",
-          "hash": "3Etc1r81HTQ9i+8koL3ciQ=="
+          "hash": "CvD7vtoBt/XhXsB/r8iDxg=="
         }
       },
       "is_incremental": false,
@@ -9576,7 +9615,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-gs.html",
-          "hash": "5B/DVe2rG/y3uet7rWVtMQ=="
+          "hash": "L6ErlYWso67fRo//QUiO1w=="
         }
       },
       "is_incremental": false,
@@ -9715,12 +9754,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "fq5DBYTrOJ+H+H/rjpnTYQ=="
+          "hash": "fDjFBwDm0aveb38RFseGvA=="
         }
       },
       "is_incremental": false,
@@ -10445,7 +10487,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-sla.html",
-          "hash": "BE4tfSzQhaGDQ+e9KKXMtw=="
+          "hash": "ltSz0Fl+8sV2zkKe9XK+uQ=="
         }
       },
       "is_incremental": false,
@@ -10529,7 +10571,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "T4b+Eagz3PN85KCXV7CsPQ=="
+          "hash": "EzVAKhoNhUlOho46V50wzg=="
         }
       },
       "is_incremental": false,
@@ -10649,7 +10691,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "CIweo89vK1Kj5omG/RfkqQ=="
+          "hash": "8CuTY27d7k2WLLHPBClVww=="
         }
       },
       "is_incremental": false,
@@ -10705,6 +10747,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-maintenance-windows.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-maintenance-windows.html",
+          "hash": "1964r9sgpIZ2N60isJ0hWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-offboarding.md",
       "output": {
         ".html": {
@@ -10745,7 +10799,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-product-overview.html",
-          "hash": "om4GngzSjsxgfxSZoZYWZA=="
+          "hash": "kdzK3uxiygAlz2RrSAYiZw=="
         }
       },
       "is_incremental": false,
@@ -10817,7 +10871,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "2/9VfsrWp7E+bCAqnIs7bg=="
+          "hash": "BIJG+DsnCHZ7K2EMi4r+eg=="
         }
       },
       "is_incremental": false,
@@ -10937,7 +10991,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "jDX44eNqBWhosy/Ja9DG+w=="
+          "hash": "cEvhIJ+0+sziNhk7WtECZg=="
         }
       },
       "is_incremental": false,
@@ -12158,24 +12212,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/private-cloud/prc-faq-storage.md",
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-faq-storage.html",
-          "hash": "BFUfiuw+SgbDADZgEkvSJQ=="
+          "hash": "ZxDhlYrWPl4mvIss9PCxQA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/private-cloud/prc-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-faq.html",
-          "hash": "3EqaKr+fmAuHw1Smlte6kg=="
+          "hash": "cmpN9y2Z55kOWQf8Xk+ePw=="
         }
       },
       "is_incremental": false,
@@ -12752,12 +12812,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/sra/sra-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sco.html",
-          "hash": "J1xfzbpBakEYtBUy9GpDaA=="
+          "hash": "a675h56khBxumP1KkQKXdg=="
         }
       },
       "is_incremental": false,
@@ -20685,19 +20748,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-synchronous-protection.html",
-          "hash": "dBLIewmXOZleRmSy3PfzNg=="
+          "hash": "vdz7nPAQG7xi3qCuQ7Bseg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "Qql+B07OfD33a9aMsKXa7g=="
+          "hash": "rIUm2nvEt5VVwtr/W40roQ=="
         }
       },
       "is_incremental": false,
@@ -21081,7 +21147,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-locate-vdc.html",
-          "hash": "92FXDMSroraH0jlia2NMWw=="
+          "hash": "LSdnwXgYH0DTSr2vL0zXVA=="
         }
       },
       "is_incremental": false,
@@ -21837,7 +21903,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-journaling-protection.html",
-          "hash": "HCpzIKuWS046+Pow8Pacgg=="
+          "hash": "nyAOl/ARuDSGUUcwTYK6iw=="
         }
       },
       "is_incremental": false,
@@ -21849,7 +21915,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-snapshot-protection.html",
-          "hash": "L97zSHA8THiRzOrGJVpAsA=="
+          "hash": "R2U093tFCeLgjbAFqWP/5Q=="
         }
       },
       "is_incremental": false,
@@ -21880,12 +21946,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "eIs0ofNN6F7KeKN4B/SRhA=="
+          "hash": "Vm93Jei+sLrbFAbzF3YWgA=="
         }
       },
       "is_incremental": false,
@@ -22024,7 +22093,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 453,
+          "total_file_count": 454,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
