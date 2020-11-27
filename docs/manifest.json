@@ -12380,6 +12380,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/shared/images/vmw-vcd10.1-edge-btn-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/vmw-vcd10.1-edge-btn-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/shared/images/vmw-vcd10.1-mnu-edges.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/vmw-vcd10.1-mnu-edges.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/shared/images/vmw-vcd91-mnu-edges.png",
       "output": {
         "resource": {
@@ -12474,9 +12496,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/shared/shared-how-setup-kms.md",
       "output": {
@@ -20613,15 +20632,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/vmware/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "bDOFvpjuk/rZIVATL7ZgXA=="
+          "hash": "G2HpYSXuOVy25mVhUeXjjQ=="
         }
       },
       "is_incremental": false,
@@ -20688,15 +20704,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "NFAuMf97dWNnkHm+F0OSYg=="
+          "hash": "dTwwt6sIsx9MPXDWJPm5MQ=="
         }
       },
       "is_incremental": false,
@@ -21776,7 +21789,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vmware-tools-installation.html",
-          "hash": "l7L4ONrSw3I+p1y/4QkSfw=="
+          "hash": "nh0dWECoAMK4R8Q9DSce3g=="
         }
       },
       "is_incremental": false,

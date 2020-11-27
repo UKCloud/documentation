@@ -86,8 +86,6 @@
     href: vmw-how-install-openvpn.md
   - name: Install and configure Zerto in your local environment
     href: vmw-how-zerto-install-local.md
-  - name: Install VMware Tools
-    href: vmw-how-install-vmware-tools.md
   - name: Interact with the vCloud REST API using PowerShell and Python
     href: vmw-how-interact-vcd-api-powershell.md
   - name: Locate your virtual data centre on the UKCloud platform
@@ -130,6 +128,8 @@
     href: vmw-how-view-storage-usage.md
   - name: View your VMs in the UKCloud Portal
     href: vmw-how-portal-view-vms.md
+  - name: VMware Tools installation
+    href: vmw-ref-vmware-tools-installation.md
   - name: Advanced monitoring
     items:
     - name: Access advanced monitoring (vROps)
