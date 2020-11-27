@@ -111,8 +111,6 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 - [Invoice and billing](other-faq-billing.md)
 
-- [Credit card payment](other-faq-credit-card.md)
-
 - [Enterprise & Private Sector](other-faq-eps.md)
 
 - [Service Level Agreement](other-faq-sla.md)

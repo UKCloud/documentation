@@ -518,8 +518,6 @@ Historic billing information is available via the UKCloud Portal.
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
-
 ### How are snapshots charged?
 
 You will only ever be charged for the amount of Tier 1 or Tier 2 storage your snapshots consume, that you have scheduled via the OpenStack dashboard or the API - we do not place any additional premium on-top for the snapshot functionality. To calculate an estimated cost of performing snapshots on UKCloud for OpenStack, simply use the following formula:

@@ -571,8 +571,6 @@ Billing information is available via the UKCloud Portal.
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
-
 ### What are the termination fees?
 
 There are no termination costs for this service. Customers are responsible for extracting their own data from the UKCloud for VMware if required.

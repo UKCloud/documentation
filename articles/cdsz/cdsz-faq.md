@@ -152,11 +152,9 @@ Walled Garden billing is based on the solution design. You pay a monthly rental 
 
 For existing UKCloud Guard customers, billing is based on the amount of data transferred between domains. You buy a starter pack which includes an amount of data that can be transferred. You're billed at an incremental rate for data transferred above the starter pack threshold.
 
-### How do I pay for the service?
+### How can I pay for the services?
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
-
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### What are the termination fees?
 

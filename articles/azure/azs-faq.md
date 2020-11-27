@@ -209,8 +209,6 @@ For infrastructure solutions, you'll be billed by the smallest unit of time whic
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
-
 ### Are there any termination fees?
 
 There are no termination costs for this service. You are responsible for extracting your data from the UKCloud for Microsoft Azure service if required.
