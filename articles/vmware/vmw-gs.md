@@ -54,7 +54,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 
 2. On the *Log in* page, enter your credentials and click **Sign in**.
 
-    ![UKCloud Portal Log in page](images/vmw-portal-login.png)
+    ![UKCloud Portal Log in page](images/ptl-login.png)
 
     > [!TIP]
     > If you've forgotten your password, click the **Forgotten password?** link to request a password reset.

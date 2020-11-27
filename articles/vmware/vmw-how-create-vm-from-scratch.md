@@ -215,7 +215,7 @@ For information about creating a VM from a template, see [*How to create a VM fr
 
 8. Carry out the operating system install as normal. When you've finished, remember to install VMware Tools.
 
-    For more information, see [*How to install VMware Tools Installation*](vmw-how-install-vmware-tools.md).
+    For more information, see [*VMware Tools installation*](vmw-ref-vmware-tools-installation.md).
 
 ### [vCloud Director 9.7](#tab/tabid-b)
 
@@ -249,7 +249,7 @@ For information about creating a VM from a template, see [*How to create a VM fr
 
 8. Carry out the operating system install as normal. When you've finished, remember to install VMware Tools.
 
-    For more information, see [*How to install VMware Tools*](vmw-how-install-vmware-tools.md).
+    For more information, see [*VMware Tools installation*](vmw-ref-vmware-tools-installation.md).
 
 ***
 
