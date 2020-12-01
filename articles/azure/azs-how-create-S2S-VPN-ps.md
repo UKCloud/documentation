@@ -121,8 +121,8 @@ $AzsPublicIp = New-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -L
 
 ## Create virtual network gateway
 Write-Output -InputObject "Creating virtual network gateway"
-$AzsGatewayIPConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIP" -Subnet $AzsGatewaySubnetConfig -PublicIpAddress $AzsPublicIP
-$AzsVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsVirtualGatewayName -IpConfigurations $AzsGatewayIPConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
+$AzsGatewayIpConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIp" -Subnet $AzsGatewaySubnetConfig -PublicIpAddress $AzsPublicIp
+$AzsVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsVirtualGatewayName -IpConfigurations $AzsGatewayIpConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
 
 ## Create local network gateway
 Write-Output -InputObject "Creating local network gateway"
