@@ -298,7 +298,8 @@ try {
     else {
         Write-Output -InputObject "The resource group: $ResourceGroupName exists."
     }
-} catch {
+}
+catch {
     Write-Output -InputObject "Could not query the resource group: $ResourceGroupName"
     Write-Error -Message "$($_.Exception.Message)"
     exit
