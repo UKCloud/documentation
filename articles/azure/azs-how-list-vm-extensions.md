@@ -42,7 +42,7 @@ $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;
 # Register an Az environment that targets your Azure Stack Hub instance
 Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
-## Login
+# Sign in to your environment
 Connect-AzAccount -Environment "AzureStackUser"
 
 # Get location of Azure Stack Hub
