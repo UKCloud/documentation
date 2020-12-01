@@ -39,7 +39,7 @@ From your Powershell window run:
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-## Add environment
+# Register an Az environment that targets your Azure Stack Hub instance
 Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 ## Login
