@@ -21,7 +21,7 @@ This article provides a list of completed Portal releases.
 
 ## Release 2.9.0
 
-Date: 1 December 2020
+Date: 1st December 2020
 
 Bug fix and feature update
 
