@@ -57,7 +57,8 @@ $ComputeQuota = Get-AzVMUsage -Location $Location | Select-Object -Property Name
 $ComputeQuota | ForEach-Object {
     if (-not $_.Name.LocalizedValue) {
         $_.Name = $_.Name.Value -creplace '(\B[A-Z])', ' $1'
-    } else {
+    }
+    else {
         $_.Name = $_.Name.LocalizedValue
     }
 }
