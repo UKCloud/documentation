@@ -129,7 +129,7 @@ Write-Output -InputObject "Creating local network gateway"
 $AzsLocalGateway = New-AzLocalNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsLocalGatewayName -GatewayIpAddress "10.10.10.10" -AddressPrefix $AzureVNetRange
 
 ## Create IPsec Policy
-$IPsecPolicy = New-AzIpsecPolicy -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -IpsecEncryption "AES256" -IpsecIntegrity "SHA256" -PfsGroup "PFS2048" -SALifeTimeSeconds 3600 -SADataSizeKilobytes 102400000
+$IpsecPolicy = New-AzIpsecPolicy -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -IpsecEncryption "AES256" -IpsecIntegrity "SHA256" -PfsGroup "PFS2048" -SALifeTimeSeconds 3600 -SADataSizeKilobytes 102400000
 
 ## Create virtual network gateway connection
 Write-Output -InputObject "Creating virtual network gateway connection"
