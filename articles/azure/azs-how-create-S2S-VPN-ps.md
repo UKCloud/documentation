@@ -162,8 +162,8 @@ $AzurePublicIp = New-AzPublicIpAddress -ResourceGroupName $AzureResourceGroupNam
 
 ## Create virtual network gateway
 Write-Output -InputObject "Creating virtual network gateway"
-$AzureGatewayIPConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIP" -Subnet $AzureGatewaySubnetConfig -PublicIpAddress $AzurePublicIP
-$AzureVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureVirtualGatewayName -IpConfigurations $AzureGatewayIPConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
+$AzureGatewayIpConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIp" -Subnet $AzureGatewaySubnetConfig -PublicIpAddress $AzurePublicIp
+$AzureVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureVirtualGatewayName -IpConfigurations $AzureGatewayIpConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
 
 ## Create local network gateway
 Write-Output -InputObject "Creating local network gateway"
