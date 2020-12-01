@@ -294,7 +294,8 @@ try {
     if (-not $RG) {
         Write-Output -InputObject "Could not find the resource group, creating now..."
         New-AzResourceGroup -Name $ResourceGroupName -Location $Location -Verbose
-    } else {
+    } 
+    else {
         Write-Output -InputObject "The resource group: $ResourceGroupName exists."
     }
 } catch {
