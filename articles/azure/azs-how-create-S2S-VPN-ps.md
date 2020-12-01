@@ -181,7 +181,7 @@ $AzurePublicIp = Get-AzPublicIpAddress -ResourceGroupName $AzureResourceGroupNam
 Connect-AzAccount -EnvironmentName "AzureStackUser" -UseDeviceAuthentication -AccessToken $AzsAccessToken -AccountId $AzsContext.Account.Id
 
 ## Set the public IP on the local network gateway
-$AzsLocalGateway.GatewayIpAddress = $AzurePublicIP.IpAddress
+$AzsLocalGateway.GatewayIpAddress = $AzurePublicIp.IpAddress
 
 ## Update the local network gateway
 Set-AzLocalNetworkGateway -LocalNetworkGateway $AzsLocalGateway
