@@ -1,36 +1,37 @@
 ---
-title: How to restrict access to the vCloud API
-description: Shows how to create a whitelist of IP addresses to restrict access to the vCloud API
+title: How to restrict access to VMware Cloud Director/vCloud Director
+description: Shows how to create an allowlist of IP addresses to restrict access to the vCloud API and VMware Cloud Director/vCloud Director
 services: portal
-author: Sue Highmoor
-reviewer:
-lastreviewed: 15/11/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 01/12/2020
 
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Restrict access to the vCloud API
+toc_title: Restrict access to vCloud Director
 toc_fullpath: How To/ptl-how-restrict-access-vcloud-api.md
 toc_mdlink: ptl-how-restrict-access-vcloud-api.md
 ---
 
-# How to restrict access to the vCloud API
+# How to restrict access to VMware Cloud Director/vCloud Director
 
 ## Overview
 
-You can restrict access to the vCloud API by creating a whitelist of acceptable IP addresses. This helps to prevent access to the API from unauthorised sources as users will only be able to access the API if their request originates from an IP address on the whitelist.
+You can restrict access to VMware Cloud Director/vCloud Director by creating an allowlist of acceptable IP addresses. This helps to prevent access from unauthorised sources as users will only be able to access VMware Cloud Director/vCloud Director if their request originates from an IP address on the allowlist.
+
+> [!NOTE]
+> Enabling this option restricts access to both the vCloud API and the VMware Cloud Director/vCloud Director UI.
 
 > [!NOTE]
 > When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
 
 > [!IMPORTANT]
-> Be careful when entering IP addresses. Entering the wrong address may make the vCloud API inaccessible and you will be unable to change the settings. If you lose access to the API, contact UKCloud Support.
+> Be careful when entering IP addresses. Entering the wrong address may make the API and UI inaccessible and you will be unable to change the settings. If you lose access, contact UKCloud Support.
 
-## Restricting access to the vCloud API
-
-To restrict access to the vCloud API:
+## Restricting access to VMware Cloud Director/vCloud Director
 
 1. Log in to the UKCloud Portal as an administrator
 
@@ -46,17 +47,17 @@ To restrict access to the vCloud API:
 
     ![Security Settings tab of the Settings page](images/ptl-settings-tab-security.png)
 
-5. Click **vCloud Director API access restriction by IP address** to expand the section.
+5. Click **vCloud Director access restriction by IP address** to expand the section.
 
-6. Select **Enable vCloud Director API IP address access restriction**.
+6. Select **Enable vCloud Director IP address access restriction**.
 
-7. To add an IP address to the whitelist, click **Add IP** in the *Account wide* section and enter the IP addresses that you want to whitelist.
+7. To add an IP address to the allowlist, click **Add IP** in the *Account wide* section and enter the IP addresses that you want to allow.
 
-    ![Account-wide IP address whitelist security setting for the vCloud API](images/ptl-settings-ip-api-account.png)
+    ![Account-wide IP address allowlist security setting for VMware Cloud Director/vCloud Director](images/ptl-settings-ip-api-account.png)
 
-8. To whitelist an IP address for a specific user, in addition to the account-wide IP addresses, click **Add IP** in the *Individual users* section, enter the email address for the user and the IP addresses that you want to whitelist.
+8. To allow an IP address for a specific user, in addition to the account-wide IP addresses, click **Add IP** in the *Individual users* section, enter the email address for the user and the IP addresses that you want to allow.
 
-    ![Individual user IP address whitelist security setting for the vCloud API](images/ptl-settings-ip-api-user.png)
+    ![Individual user IP address allowlist security setting for VMware Cloud Director/vCloud Director](images/ptl-settings-ip-api-user.png)
 
     > [!NOTE]
     > When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
