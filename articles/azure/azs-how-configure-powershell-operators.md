@@ -105,7 +105,7 @@ $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -For
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Sign in to your environment
-Connect-AzAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
+Connect-AzAccount -Credential $AzsCred -EnvironmentName "AzureStackAdmin"
 </code></pre>
 
 ## Test the connectivity
