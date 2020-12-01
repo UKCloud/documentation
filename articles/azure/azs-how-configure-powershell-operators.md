@@ -96,7 +96,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Register an Az environment that targets your Azure Stack Hub instance
-Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
 
 # Create your Credentials
 $AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
