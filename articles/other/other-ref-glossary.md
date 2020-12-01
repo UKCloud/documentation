@@ -2,9 +2,9 @@
 title: UKCloud glossary
 description: Provides definitions of commonly used UKCloud terms
 services: other
-author: Hannah Ferris
-reviewer:
-lastreviewed: 19/11/2019
+author: hferris
+reviewer: shighmoor
+lastreviewed: 30/11/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -91,12 +91,6 @@ For more information, see the relevant Cloud Enablement service scope:
 
 - [Cloud Enablement service scope for CAPS/CPA approved VPN](../enablement/enbl-sco-capscpa.md)
 
-### Cloud GPU
-
-A UKCloud IaaS service that enables you to supplement your on-platform compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.
-
-For more information, see the [Cloud GPU service definition](../gpu/gpu-sco.md).
-
 ### CloudSOC from UKCloud
 
 *See:* [Security Operations Service](#security-operations-service).
@@ -171,10 +165,6 @@ A security domain on the UKCloud platform that provides secure access to restric
 
 *See also:* [Assured OFFICIAL](#assured-official), [OFFICIAL](#official), [OFFICIAL SENSITIVE](#official-sensitive)
 
-### Email and Collaboration as a Service
-
-Email and Collaboration as a Service has been removed from sale. However, we'll continue to support and maintain this service for current customers.
-
 ### Ephemeral storage
 
 A UKCloud for OpenStack storage option that exists only as long as the associated OpenStack instance exists.
@@ -203,10 +193,6 @@ A network service that controls traffic into and out of your environment using d
 
 ## G
 
-### Geo-resilient storage
-
-Geo-resilient storage is no longer available as a storage option for UKCloud for VMware.
-
 ### Global Load Balancing
 
 *See:* [Neustar UltraDNS from UKCloud](#neustar-ultradns-from-ukcloud)
@@ -224,12 +210,6 @@ For more information, see the [UKCloud Big Data & Hadoop service proposition](ht
 A government network designed to provide a solution for hospitals, medical centres and GPs to collaborate and access services over a secure, high speed network. One of UKCloud's connectivity options, available on the Assured OFFICIAL security domain.
 
 For more information, see the [HSCN FAQs](../connectivity/conn-faq-hscn.md).
-
-## High Performance Compute (HPC)
-
-A UKCloud IaaS service that provides a single-tenant compute infrastructure specifically designed for large-scale, compute-intensive workloads with requirements for large amounts of processor cores and memory.
-
-For more information, see the [High Performance Compute service definition](../hpc/hpc-sd.md).
 
 ### HybridConnect
 
@@ -309,12 +289,6 @@ For more information, see the [Mass Transfer Facility service scope](../enableme
 
 A UKCloud IaaS service, powered by Zerto, that provides easy to use tools to help customers migrate workloads from their on-premises data centres to the UKCloud platform - all on a self-service basis.
 
-### Multi-Cloud Backup Storage
-
-A UKCloud IaaS service that provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, based on Dell EMC's Data Domain Boost&trade; (DD Boost) technology, enabling open-source backup applications to utilise the backup service as a target. You can also use Multi-Cloud Backup Storage as a remote backup target for your on-premises data.
-
-For more information, see the [Multi-Cloud Backup Storage service definition](../other/other-sd-mcbs.md).
-
 ### Multi-Cloud for Tier 2
 
 The UKCloud cloud platform for workloads that require higher assurance than OFFICIAL SENSITIVE classification. Predominantly used within the UKCloudX space of Defence and National Security.
@@ -361,7 +335,7 @@ OFFICIAL data that requires specific handling to mitigate risk. Security measure
 
 ### OpenShift
 
-*See:* [UKCloud for OpenShift](#ukcloud-for-openshift)
+*See:* [UKCloud for Managed OpenShift](#ukcloud-for-managed-openshift)
 
 ### OpenStack
 
@@ -373,7 +347,7 @@ OFFICIAL data that requires specific handling to mitigate risk. Security measure
 
 ### Oracle
 
-*See:* [UKCloud for Oracle Software](#ukcloud-for-oracle-software)
+*See:* [Private Cloud for Oracle Software](#private-cloud-for-oracle-software)
 
 ### Organization (Org)
 
@@ -419,7 +393,7 @@ Note the difference between Private Cloud, which is a single-tenant environment 
 
 ### Private Cloud for Oracle Software
 
-A UKCloud IaaS service that enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premise.
+A UKCloud IaaS service that enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premises.
 
 For more information, see the [Private Cloud for Oracle Software service definition](../private-cloud/prc-sd-orcl.md).
 
@@ -515,12 +489,6 @@ For more information, see the [Snapshot Protection service scope](../vmware/vmw-
 
 *See:* [Tier 2 storage](#tier-2-storage)
 
-### Synchronous Protection
-
-Synchronous Protection is no longer available as a protection option for UKCloud for VMware. We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
-
-*See:* [Journaling Protection](#journaling-protection), [Snapshot Protection](#snapshot-protection)
-
 ## T
 
 ### Technical Account Manager (TAM)
@@ -547,11 +515,11 @@ A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platfo
 
 For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
 
-### UKCloud for OpenShift
+### UKCloud for Managed OpenShift
 
 A UKCloud PaaS service that delivers a secure, private deployment of OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks including HCSN and Janet.
 
-For more information, see the [UKCloud for OpenShift service definition](../openshift/oshift-sd.md).
+For more information, see the [UKCloud for Managed OpenShift service definition](../openshift/oshift-sd.md).
 
 ### UKCloud for OpenStack
 
@@ -559,23 +527,11 @@ A UKCloud IaaS service, powered by OpenStack, that provides a cloud platform spe
 
 For more information, see the [UKCloud for OpenStack service definition](../openstack/ostack-sd.md).
 
-### UKCloud for Oracle Software
-
-A UKCloud IaaS service that provides a compute infrastructure that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications.
-
-For more information, see the [UKCloud for Oracle Software service definition](../oracle/orcl-sd.md).
-
 ### UKCloud for VMware
 
 A UKCloud IaaS service that provides a compute infrastructure specifically designed to deliver traditional enterprise applications in the cloud.
 
 For more information, see the [UKCloud for VMware service definition](../vmware/vmw-sd.md).
-
-### UKCloud Guard
-
-The UKCloud Guard has been removed from sale. However, customers can still take advantage of the Cross Domain Security Zone (CDSZ) functionality via the Walled Garden service.
-
-*See:* [Cross Domain Security Zone (CDSZ)](#cross-domain-security-zone-cdsz), [Walled Garden](#walled-garden)
 
 ### UKCloud Health
 
