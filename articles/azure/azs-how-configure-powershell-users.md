@@ -57,6 +57,7 @@ Install-Module -Name PowerShellGet -Force
 Get-Module -Name Azs.*, Azure*, Az.* -ListAvailable | Uninstall-Module -Force -Verbose
 
 # Install the Az.BootStrapper module
+# On some systems, you may need to run this command to be able to connect to PowerShell Gallery
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
 
