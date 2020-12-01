@@ -28,6 +28,7 @@ Bug fix and feature update
 Details:
  
 - Support non-ASCII characters when logging in to VMware Cloud Director 10
+
 - Change "My Security Events" to "Security Operations Service" and remove account-specific events
 
 ## Release 2.6.0
