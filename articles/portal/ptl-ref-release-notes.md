@@ -19,6 +19,17 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.9.0
+
+Date: 1 December 2020
+
+Bug fix and feature update
+
+Details:
+ 
+- Support non-ASCII characters when logging in to VMware Cloud Director 10
+- Change "My Security Events" to "Security Operations Service" and remove account-specific events
+
 ## Release 2.6.0
 
 Date: 18th November 2020
