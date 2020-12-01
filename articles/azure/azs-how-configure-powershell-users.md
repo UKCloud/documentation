@@ -56,7 +56,7 @@ Install-Module -Name PowerShellGet -Force
 # Uninstall existing versions of Azure/Azure Stack Hub PowerShell
 Get-Module -Name Azs.*, Azure*, Az.* -ListAvailable | Uninstall-Module -Force -Verbose
 
-# Install the Az.BootStrapper module.
+# Install the Az.BootStrapper module
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
 
