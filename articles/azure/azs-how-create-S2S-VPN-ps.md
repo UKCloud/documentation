@@ -117,7 +117,7 @@ $AzsGatewaySubnetConfig = Get-AzVirtualNetworkSubnetConfig -Name "GatewaySubnet"
 
 ## Create public IP address
 Write-Output -InputObject "Creating public IP address"
-$AzsPublicIP = New-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -AllocationMethod "Dynamic" -Name $AzsPublicIPName
+$AzsPublicIp = New-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -AllocationMethod "Dynamic" -Name $AzsPublicIpName
 
 ## Create virtual network gateway
 Write-Output -InputObject "Creating virtual network gateway"
