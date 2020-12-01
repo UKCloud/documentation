@@ -136,7 +136,7 @@ Write-Output -InputObject "Creating virtual network gateway connection"
 $AzsVirtualGatewayConnection = New-AzVirtualNetworkGatewayConnection -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsGatewayConnectionName -VirtualNetworkGateway1 $AzsVirtualGateway -LocalNetworkGateway2 $AzsLocalGateway -ConnectionType IPsec -IpsecPolicies $IpsecPolicy -SharedKey $SharedKey
 
 ## Retrieve public IP address of virtual network gateway
-$AzsPublicIP = Get-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Name $AzsPublicIPName
+$AzsPublicIp = Get-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Name $AzsPublicIpName
 
 # Azure
 ## Connect to environment
