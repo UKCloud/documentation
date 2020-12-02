@@ -54,12 +54,12 @@ Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 Install-Module -Name PowerShellGet -Force
 
 # Uninstall existing versions of Azure/Azure Stack Hub PowerShell
-Get-Module -Name Azure* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
-Get-Module -Name Azs.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
-Get-Module -Name Az.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
+Get-Module -Name Azs.*, Azure*, Az.* -ListAvailable | Uninstall-Module -Force -Verbose
 
-# Install the Az.BootStrapper module.
+# On some systems, you may need to run this command to be able to connect to PowerShell Gallery
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# Install the Az.BootStrapper module
 Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
@@ -82,7 +82,7 @@ Set-ExecutionPolicy RemoteSigned
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Register an Az environment that targets your Azure Stack Hub instance
-Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
 Connect-AzAccount -EnvironmentName "AzureStackAdmin"
@@ -97,7 +97,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Register an Az environment that targets your Azure Stack Hub instance
-Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
 
 # Create your Credentials
 $AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
@@ -106,7 +106,7 @@ $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -For
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Sign in to your environment
-Connect-AzAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
+Connect-AzAccount -Credential $AzsCred -EnvironmentName "AzureStackAdmin"
 </code></pre>
 
 ## Test the connectivity

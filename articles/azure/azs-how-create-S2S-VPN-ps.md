@@ -117,26 +117,26 @@ $AzsGatewaySubnetConfig = Get-AzVirtualNetworkSubnetConfig -Name "GatewaySubnet"
 
 ## Create public IP address
 Write-Output -InputObject "Creating public IP address"
-$AzsPublicIP = New-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -AllocationMethod "Dynamic" -Name $AzsPublicIPName
+$AzsPublicIp = New-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -AllocationMethod "Dynamic" -Name $AzsPublicIpName
 
 ## Create virtual network gateway
 Write-Output -InputObject "Creating virtual network gateway"
-$AzsGatewayIPConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIP" -Subnet $AzsGatewaySubnetConfig -PublicIpAddress $AzsPublicIP
-$AzsVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsVirtualGatewayName -IpConfigurations $AzsGatewayIPConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
+$AzsGatewayIpConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIp" -Subnet $AzsGatewaySubnetConfig -PublicIpAddress $AzsPublicIp
+$AzsVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsVirtualGatewayName -IpConfigurations $AzsGatewayIpConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
 
 ## Create local network gateway
 Write-Output -InputObject "Creating local network gateway"
 $AzsLocalGateway = New-AzLocalNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsLocalGatewayName -GatewayIpAddress "10.10.10.10" -AddressPrefix $AzureVNetRange
 
 ## Create IPsec Policy
-$IPsecPolicy = New-AzIpsecPolicy -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -IpsecEncryption "AES256" -IpsecIntegrity "SHA256" -PfsGroup "PFS2048" -SALifeTimeSeconds 3600 -SADataSizeKilobytes 102400000
+$IpsecPolicy = New-AzIpsecPolicy -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -IpsecEncryption "AES256" -IpsecIntegrity "SHA256" -PfsGroup "PFS2048" -SALifeTimeSeconds 3600 -SADataSizeKilobytes 102400000
 
 ## Create virtual network gateway connection
 Write-Output -InputObject "Creating virtual network gateway connection"
-$AzsVirtualGatewayConnection = New-AzVirtualNetworkGatewayConnection -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsGatewayConnectionName -VirtualNetworkGateway1 $AzsVirtualGateway -LocalNetworkGateway2 $AzsLocalGateway -ConnectionType IPsec -IpsecPolicies $IPsecPolicy -SharedKey $SharedKey
+$AzsVirtualGatewayConnection = New-AzVirtualNetworkGatewayConnection -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsGatewayConnectionName -VirtualNetworkGateway1 $AzsVirtualGateway -LocalNetworkGateway2 $AzsLocalGateway -ConnectionType IPsec -IpsecPolicies $IpsecPolicy -SharedKey $SharedKey
 
 ## Retrieve public IP address of virtual network gateway
-$AzsPublicIP = Get-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Name $AzsPublicIPName
+$AzsPublicIp = Get-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Name $AzsPublicIpName
 
 # Azure
 ## Connect to environment
@@ -158,30 +158,30 @@ $AzureGatewaySubnetConfig = Get-AzVirtualNetworkSubnetConfig -Name "GatewaySubne
 
 ## Create public IP address
 Write-Output -InputObject "Creating public IP address"
-$AzurePublicIP = New-AzPublicIpAddress -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -AllocationMethod "Dynamic" -Name $AzurePublicIPName
+$AzurePublicIp = New-AzPublicIpAddress -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -AllocationMethod "Dynamic" -Name $AzurePublicIpName
 
 ## Create virtual network gateway
 Write-Output -InputObject "Creating virtual network gateway"
-$AzureGatewayIPConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIP" -Subnet $AzureGatewaySubnetConfig -PublicIpAddress $AzurePublicIP
-$AzureVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureVirtualGatewayName -IpConfigurations $AzureGatewayIPConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
+$AzureGatewayIpConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIp" -Subnet $AzureGatewaySubnetConfig -PublicIpAddress $AzurePublicIp
+$AzureVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureVirtualGatewayName -IpConfigurations $AzureGatewayIpConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
 
 ## Create local network gateway
 Write-Output -InputObject "Creating local network gateway"
-$AzureLocalGateway = New-AzLocalNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureLocalGatewayName  -GatewayIpAddress $AzsPublicIP.IpAddress -AddressPrefix $AzsVNetRange
+$AzureLocalGateway = New-AzLocalNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureLocalGatewayName  -GatewayIpAddress $AzsPublicIp.IpAddress -AddressPrefix $AzsVNetRange
 
 ## Create virtual network gateway connection
 Write-Output -InputObject "Creating virtual network gateway connection"
-$AzureVirtualGatewayConnection = New-AzVirtualNetworkGatewayConnection -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureGatewayConnectionName -VirtualNetworkGateway1 $AzureVirtualGateway -LocalNetworkGateway2 $AzureLocalGateway -ConnectionType IPsec -IpsecPolicies $IPsecPolicy -SharedKey $SharedKey
+$AzureVirtualGatewayConnection = New-AzVirtualNetworkGatewayConnection -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureGatewayConnectionName -VirtualNetworkGateway1 $AzureVirtualGateway -LocalNetworkGateway2 $AzureLocalGateway -ConnectionType IPsec -IpsecPolicies $IpsecPolicy -SharedKey $SharedKey
 
 ## Retrieve public IP address of virtual network gateway
-$AzurePublicIP = Get-AzPublicIpAddress -ResourceGroupName $AzureResourceGroupName -Name $AzurePublicIPName
+$AzurePublicIp = Get-AzPublicIpAddress -ResourceGroupName $AzureResourceGroupName -Name $AzurePublicIpName
 
 # Azure Stack Hub
 ## Reconnect to environment
 Connect-AzAccount -EnvironmentName "AzureStackUser" -UseDeviceAuthentication -AccessToken $AzsAccessToken -AccountId $AzsContext.Account.Id
 
 ## Set the public IP on the local network gateway
-$AzsLocalGateway.GatewayIpAddress = $AzurePublicIP.IpAddress
+$AzsLocalGateway.GatewayIpAddress = $AzurePublicIp.IpAddress
 
 ## Update the local network gateway
 Set-AzLocalNetworkGateway -LocalNetworkGateway $AzsLocalGateway

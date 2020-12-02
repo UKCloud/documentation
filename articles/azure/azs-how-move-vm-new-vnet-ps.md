@@ -81,10 +81,10 @@ $VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
 # Check if the VM uses managed or unmanaged disks
 if ($VM.StorageProfile.OsDisk.ManagedDisk) {
     $ManagedDisks = $true
-    }
-    else {
-        $ManagedDisks = $false
-  }
+}
+else {
+    $ManagedDisks = $false
+}
 
 # Stop the VM
 Stop-AzVM -Name $VMName -ResourceGroupName $RGName -Force

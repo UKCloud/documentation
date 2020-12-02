@@ -54,12 +54,12 @@ Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 Install-Module -Name PowerShellGet -Force
 
 # Uninstall existing versions of Azure/Azure Stack Hub PowerShell
-Get-Module -Name Azure* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
-Get-Module -Name Azs.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
-Get-Module -Name Az.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
+Get-Module -Name Azs.*, Azure*, Az.* -ListAvailable | Uninstall-Module -Force -Verbose
 
-# Install the Az.BootStrapper module.
+# On some systems, you may need to run this command to be able to connect to PowerShell Gallery
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# Install the Az.BootStrapper module
 Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
