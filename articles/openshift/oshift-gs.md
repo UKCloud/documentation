@@ -28,7 +28,7 @@ This Getting Started Guide provides an overview of the functionality available w
 
 ### Intended audience
 
-This guide is intended for developers who want to leverage the benefits of Docker and Kubernetes containerisation technologies as part of their development, continuous integration or continuous delivery cycles.
+This guide is intended for developers who want to leverage the benefits of Kubernetes containerisation technologies as part of their development, continuous integration or continuous delivery cycles.
 
 ## Introduction to UKCloud for OpenShift
 
@@ -54,14 +54,13 @@ You can use UKCloud for OpenShift to:
 
 ### UKCloud-deployed Red Hat OpenShift Container Platform
 
-OpenShift Container Platform is an open source PaaS, developed and supported by Red Hat and based around common technologies such as Docker containers and the Kubernetes container cluster manager for enterprise application development.
+OpenShift Container Platform is an open source PaaS, developed and supported by Red Hat and based around common technologies such as containers and the Kubernetes container cluster manager for enterprise application development.
 
-UKCloud for OpenShift provides a full Red Hat OpenShift Container Platform that has been deployed by UKCloud and is ready to consume without delay. We deploy an OpenShift project in which you can run multiple pods, with each pod containing a group of related Docker
-containers.
+UKCloud for OpenShift provides a full Red Hat OpenShift Container Platform that has been deployed by UKCloud and is ready to consume without delay. You can then create one or more OpenShift projects in which you can run multiple pods, with each pod containing a group of related containers.
 
 ![OpenShift pods and containers](images/oshift-pods-containers.png)
 
-**OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/3.11/architecture/index.html) and [*Container Security Guide*](https://docs.openshift.com/container-platform/3.11/security/index.html)
+**OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/4.6/architecture/architecture.html) and [*Container Security Guide*](https://docs.openshift.com/container-platform/4.6/security/container_security/security-understanding.html)
 
 ## Before you begin
 
@@ -71,7 +70,7 @@ As part of your onboarding, UKCloud will provide you with a URL and credentials 
 
 In addition, we recommend the installation of the OpenShift CLI on your device.
 
-**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html)
+**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html)
 
 ## Initial environment
 
@@ -90,7 +89,7 @@ If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later,
 
 If your OpenShift cluster uses an earlier version of OCP, you will need to use your separate OpenShift credentials to log in to the console.
 
-**OpenShift documentation:** [*Web Console Walkthrough*](https://docs.openshift.com/container-platform/3.11/getting_started/developers_console.html)
+**OpenShift documentation:** [*Web Console Developer Walkthrough*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html)
 
 ## Using the command-line interface
 
@@ -101,9 +100,9 @@ If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later,
 Alternatively, you can obtain the CLI login command (including login token) from the OpenShift console by clicking your user name and selecting **Copy Login Command**.
 
 > [!NOTE]
-> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Service Accounts*](https://docs.openshift.com/container-platform/3.11/dev_guide/service_accounts.html) documentation.
+> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Service Accounts*](https://docs.openshift.com/container-platform/4.6/authentication/understanding-and-creating-service-accounts.html) documentation.
 
-**OpenShift documentation:** [*Basic Walkthrough Using the CLI*](https://docs.openshift.com/container-platform/3.11/getting_started/developers_cli.html) and [*CLI Reference*](https://docs.openshift.com/container-platform/3.11/cli_reference/index.html)
+**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI Reference*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI Reference*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/administrator-cli-commands.html)
 
 ## Using the API
 
@@ -111,7 +110,7 @@ Alternatively, you can obtain the CLI login command (including login token) from
 
 These REST APIs can be used to manage end-user applications, the cluster, and the users of the cluster.
 
-**OpenShift documentation:** [*REST API Reference*](https://docs.openshift.com/container-platform/3.11/rest_api/index.html)
+**OpenShift documentation:** [*REST API Reference*](https://docs.openshift.com/container-platform/4.6/rest_api/index.html)
 
 ## Developing and deploying applications
 
