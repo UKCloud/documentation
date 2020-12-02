@@ -173,16 +173,16 @@ To complete the steps in this article, you must have appropriate access to a sub
     $WorkspaceKey = "<output form="workspacekey" name="result" style="display: inline;">2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ==</output>"
     $PublicSettings = "{'workspaceId': '<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>'}"
     $ProtectedSettings = "{'workspaceKey': `'$WorkspaceKey`'}"
-    $Location = (Get-AzureRmLocation).Location
+    $Location = (Get-AzLocation).Location
     
     # Get the virtual machine to apply the custom script extensions to
-    $VM = Get-AzureRmVM -ResourceGroupName $ResourceGroupName -VMName $VMName
+    $VM = Get-AzVM -ResourceGroupName $ResourceGroupName -VMName $VMName
 
     # Obtain network security group, create the port 443 inbound network security group rule and apply the rule to it
-    Get-AzureRmNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzureRmNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzureRmNetworkSecurityGroup
+    Get-AzNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzNetworkSecurityGroup
 
     # Deploy DependencyAgent extension
-    Set-AzureRmVMExtension -ExtensionName "DependencyAgent" `
+    Set-AzVMExtension -ExtensionName "DependencyAgent" `
     -ResourceGroupName $VM.ResourceGroupName `
     -VMName $VM.Name `
     -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
@@ -192,7 +192,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     -Verbose
 
     # Deploy Microsoft.EnterpriseCloud.Monitoring extension
-    Set-AzureRmVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
+    Set-AzVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
     -ResourceGroupName $VM.ResourceGroupName `
     -VMName $VM.Name `
     -Publisher "Microsoft.EnterpriseCloud.Monitoring" `

@@ -84,7 +84,7 @@ if ($VM.StorageProfile.OsDisk.ManagedDisk) {
     }
     else {
         $ManagedDisks = $false
-  } 
+  }
 
 # Stop the VM
 Stop-AzVM -Name $VMName -ResourceGroupName $RGName -Force
@@ -99,7 +99,7 @@ $NewSubnet = Get-AzVirtualNetworkSubnetConfig -VirtualNetwork $NewVNet -Name $Ne
 
 # Create new VM networking resources
 $NewPublicIp = New-AzPublicIpAddress -Name $NewPublicIpName -Location $NewVNet.Location -ResourceGroupName $NewVNet.ResourceGroupName -Sku $PublicIp.Sku.Name -AllocationMethod $PublicIp.PublicIpAllocationMethod
-$NewIpConfig = New-AzNetworkInterfaceIpConfig -Subnet $NewSubnet -Name "ipconfig2" -Primary -PublicIpAddress $NewPublicIp
+$NewIpConfig = New-AzNetworkInterfaceIpConfig -Subnet $NewSubnet -Name "ipconfig2" -Primary -PrivateIpAddress $NewPrivateIp -PublicIpAddress $NewPublicIp
 $NewNic = New-AzNetworkInterface -Name $NewNicName -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location -IpConfiguration $NewIpConfig -NetworkSecurityGroupId $Nic.NetworkSecurityGroup.Id -Force
 
 # Retrieve VM data disk details

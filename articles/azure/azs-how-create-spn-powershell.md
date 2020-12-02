@@ -287,7 +287,7 @@ $AzureStackResourceGroup = "<output form="azurestackrg" name="result2" style="di
 $AzureStackRole = "<output form="azurestackrole" name="result2" style="display: inline;">Owner</output>"
 
 # Create Azure Stack Hub environment so that you can log in to it
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Hub admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account

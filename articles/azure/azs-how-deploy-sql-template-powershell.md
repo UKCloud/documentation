@@ -271,7 +271,7 @@ $CustomTemplateJSON = "<output form="customtemplatejson" name="result" style="di
 
 $DNSSuffix = "<output form="dnssuffix" name="result" style="display: inline;">azure.ukcloud.com</output>"
 $ResourceGroupName = "<output form="resourcegroupname" name="result" style="display: inline;">Sql2016AlwaysOnRG01</output>"
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 $SqlServerOffer = "<output form="sqlserveroffer" name="result" style="display: inline;">SQL2016SP2-WS2016</output>"
 $SqlServerSKU = "<output form="sqlserversku" name="result" style="display: inline;">Enterprise</output>"
@@ -294,10 +294,12 @@ try {
     if (-not $RG) {
         Write-Output -InputObject "Could not find the resource group, creating now..."
         New-AzResourceGroup -Name $ResourceGroupName -Location $Location -Verbose
-    } else {
+    }
+    else {
         Write-Output -InputObject "The resource group: $ResourceGroupName exists."
     }
-} catch {
+}
+catch {
     Write-Output -InputObject "Could not query the resource group: $ResourceGroupName"
     Write-Error -Message "$($_.Exception.Message)"
     exit
@@ -323,7 +325,7 @@ Under *Settings*, click **Deployments** and you can see the stages of the ARM te
   ![Azure Stck Hub tenant portal my-sql-alwayson deployments](images/azs-browser-mysql-alwayson-deployments.png)
 
 > [!TIP]
-> Every parameter in the [parameter list](#list-of-parameters-you-can-define-in-the-template) can be defined in the **`New-AzureRmResourceGroupDeployment`** by simply adding *`-<ParameterName>`*
+> Every parameter in the [parameter list](#list-of-parameters-you-can-define-in-the-template) can be defined in the **`New-AzResourceGroupDeployment`** by simply adding *`-<ParameterName>`*
 >
 > For example:
 > `-WitnessVMSize "Standard_D1_v2"`
@@ -332,7 +334,7 @@ Under *Settings*, click **Deployments** and you can see the stages of the ARM te
 > If the template fails validation, PowerShell will output the reason for the failure (see below):
 >
 > ```powershell
->Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -dnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -WitnessVMSize "Standard_232" -Verbose
+>Test-AzResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -dnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -WitnessVMSize "Standard_232" -Verbose
 >
 > Code    : InvalidTemplate
 > Message : Deployment template validation failed: 'The provided value 'Standard_232' for the template parameter 'witnessVMSize' at line '39' and column '26' is not valid. The parameter value is not part of the allowed value(s): 'Standard_D1_v2,Standard_D2_v2'.'.
@@ -360,13 +362,13 @@ Under *Settings*, click **Deployments** and you can see the stages of the ARM te
 
   - `C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\<version number>`
 
-- [DSC Configuration](https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/) and [cmdlets](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0)
+- [DSC Configuration](https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/) and [cmdlets](https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmdscextensionstatus?view=azps-5.1.0)
 
   - To view the status of the DSC deployment run:
 
     ```powershell
-    Get-AzureRmVMDscExtension -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>"
-    Get-AzureRmVMDscExtensionStatus -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>" | Select-Object -ExpandProperty DscConfigurationLog
+    Get-AzVMDscExtension -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>"
+    Get-AzVMDscExtensionStatus -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>" | Select-Object -ExpandProperty DscConfigurationLog
     ```
 
 - [Event Viewer Logs](http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/)
