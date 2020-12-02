@@ -56,7 +56,7 @@ Install-Module -Name PowerShellGet -Force
 # Uninstall existing versions of Azure/Azure Stack Hub PowerShell
 Get-Module -Name Azs.*, Azure*, Az.* -ListAvailable | Uninstall-Module -Force -Verbose
 
-# On some older systems, you may need to explicity set the TLS 1.2 security protocol to be able to interact with PowerShell Gallery
+# On some older systems, you may need to explicitly set the TLS 1.2 security protocol to be able to interact with PowerShell Gallery
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 # Install the Az.BootStrapper module
