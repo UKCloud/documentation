@@ -18,6 +18,9 @@ toc_mdlink: oshift-gs.md
 
 # Getting Started Guide for UKCloud for OpenShift
 
+> [!NOTE]
+> This Getting Started Guide is for OpenShift v4 clusters. The previous Getting Started page for OpenShift v3.x clusters can be found here: [*Getting Started Guide for UKCloud for OpenShift v3.x*](./oshift-gs-v3.md)
+
 ## Overview
 
 UKCloud for OpenShift delivers a secure, private deployment of Red Hat&trade; OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks, including PSN, HSCN and Janet.
