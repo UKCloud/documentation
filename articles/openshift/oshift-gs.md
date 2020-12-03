@@ -74,9 +74,9 @@ In addition, we recommend the installation of the OpenShift CLI on your device.
 
 ## Initial environment
 
-UKCloud will provision you with an OpenShift Foundation Pack, providing 48GiB of container resources to run the management applications and 48GiB of container resources to run the management services.
+OpenShift clusters can be deployed with flexible sizing, including different options for worker node sizes. It is recommended that a mininum of 2 worker nodes are provisioned to provide resiliency. There is the option of hourly pricing and self-service scaling is available for v4 OpenShift clusters.
 
-To deploy applications to your cluster you'll need to request Runtime Packs at deployment time. Runtime Packs come in three sizes: small (16GiB 2vCPU), medium (32GiB 4vCPU) and large (64GiB 8vCPU). If you'd like to expand an existing cluster you can request this via a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+For more information about sizing options for OpenShift, see [*Pricing information for UKCloud for Managed OpenShift*](./oshift-ref-pricing.md)  If you'd like to expand an existing cluster you can request this via a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Using the web console
 
@@ -126,13 +126,13 @@ Containers in OpenShift Container Platform are based on Docker-formatted contain
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform 3.11 Documentation*](https://docs.openshift.com/container-platform/3.11/welcome/index.html)
+In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform Documentation*](https://docs.openshift.com/container-platform/4.6/welcome/index.html) - take care to change to the correct version of the documentation to match the version of your cluster.
 
 ## Glossary
 
 This section provides a glossary of terms specific to UKCloud for OpenShift.
 
-**cluster**&nbsp;&nbsp;One or more masters and a set of nodes.
+**cluster**&nbsp;&nbsp;OpenShift controlplane and a set of worker nodes.
 
 **container**&nbsp;&nbsp;A lightweight mechanism for isolating running processes so that they are limited to interacting with only their designated resources.
 
@@ -142,13 +142,13 @@ This section provides a glossary of terms specific to UKCloud for OpenShift.
 
 **Kubernetes**&nbsp;&nbsp;Manages containerized applications across a set of containers or hosts and provides mechanisms for deployment, maintenance, and application-scaling.
 
-**master server**&nbsp;&nbsp;The host or hosts that contain the master components, including the API server, controller manager server, and etcd. The master manages nodes in its Kubernetes cluster and schedules pods to run on nodes.
+**master server**&nbsp;&nbsp;The host or hosts that contain the controlplane components, including the API server, controller manager server, and etcd. The master manages nodes in its Kubernetes cluster and schedules pods to run on nodes.
 
 **microservices**&nbsp;&nbsp;A method of developing an application as a collection of smaller independent services.
 
-**node**&nbsp;&nbsp;Provides the runtime environment for a container. Each node in a Kubernetes cluster has the required services to be managed by the master. Nodes also have the required services to run pods, including the Docker service, a kubelet, and a service proxy.
+**worker node**&nbsp;&nbsp;Provides the runtime environment for a container. Each node in a Kubernetes cluster has the required services to be managed by the master. Nodes also have the required services to run pods, including the Docker service, a kubelet, and a service proxy.
 
-**OpenShift**&nbsp;&nbsp;Red Hat's secure and comprehensive enterprise-grade container platform based on industry standards, Docker and Kubernetes.
+**OpenShift**&nbsp;&nbsp;Red Hat's secure and comprehensive enterprise-grade container platform based on industry standards such as CRI-O and Kubernetes.
 
 **PaaS**&nbsp;&nbsp;Platform-as-a-Service. The capability provided to the consumer is to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.
 
