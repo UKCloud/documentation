@@ -58,9 +58,6 @@ To restrict access to the Portal:
 
     ![Individual user IP address allowlist security setting for the UKCloud Portal](images/ptl-settings-ip-portal-user.png)
 
-    > [!NOTE]
-    > When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
-
 9. When you're done, click **Save**.
 
 ## Next steps
