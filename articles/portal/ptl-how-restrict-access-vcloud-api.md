@@ -11,7 +11,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Restrict access to vCloud Director
+toc_title: Restrict access to VMware Cloud Director/vCloud Director
 toc_fullpath: How To/ptl-how-restrict-access-vcloud-api.md
 toc_mdlink: ptl-how-restrict-access-vcloud-api.md
 ---
