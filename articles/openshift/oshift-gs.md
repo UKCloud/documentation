@@ -116,6 +116,8 @@ These REST APIs can be used to manage end-user applications, the cluster, and th
 
 OpenShift Container Platform is designed for building and deploying applications. You can begin your application's development from scratch using OpenShift Container Platform directly or develop locally then use OpenShift Container Platform to deploy your fully developed application.
 
+**OpenShift documentation:** [*Understanding OpenShift Development*](https://docs.openshift.com/container-platform/4.6/architecture/understanding-development.html)
+
 ## Creating and using images
 
 Containers in OpenShift Container Platform are based on Docker-formatted container images. An image is a binary that includes all the requirements for running a single container, as well as metadata describing its needs and capabilities. Containers only have access to resources defined in the image unless you give the container additional access when creating it.
