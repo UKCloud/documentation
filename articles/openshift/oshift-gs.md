@@ -139,7 +139,7 @@ This section provides a glossary of terms specific to UKCloud for OpenShift.
 
 **container**&nbsp;&nbsp;A lightweight mechanism for isolating running processes so that they are limited to interacting with only their designated resources.
 
-**Docker**&nbsp;&nbsp;A software container platform for building and managing containerised applications.
+**Docker**&nbsp;&nbsp;A software container platform for building containerised applications. OpenShift is compatible with Docker-formatted container images.
 
 **image**&nbsp;&nbsp;A binary that includes all of the requirements for running a single container, as well as metadata describing its needs and capabilities.
 
