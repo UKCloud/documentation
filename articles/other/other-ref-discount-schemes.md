@@ -107,7 +107,7 @@ Disaster Recovery as a Service        | &nbsp;              | &nbsp;            
 Extended Network Support from UKCloud | &check;             | &nbsp;                       | &check;
 High Performance Compute              | &nbsp;              | &nbsp;                       | &check;
 Managed IT Operations                 | &check;             | &nbsp;                       | &check;
-Migration to the Cloud                | &nbsp               | &nbsp;                       | &check;
+Migration to the Cloud                | &nbsp;              | &nbsp;                       | &check;
 Private Cloud                         | &nbsp;              | &nbsp;                       | &check;
 Private Cloud for Oracle Software     | &nbsp;              | &nbsp;                       | &check;
 Private Cloud for Storage             | &nbsp;              | &nbsp;                       | &check;
