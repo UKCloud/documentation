@@ -3,8 +3,8 @@ title: Making the most of your UKCloud for OpenShift trial
 description: Provides information to get up and running with UKCloud for OpenShift trials
 services: openshift
 author: Mudasar Hussain
-reviewer: Ben Bacon
-lastreviewed: 20/03/2020
+reviewer: Gareth Ellner
+lastreviewed: 04/12/2020 12:04:00
 
 toc_rootlink: Reference
 toc_sub1:
