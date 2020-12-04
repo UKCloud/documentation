@@ -10585,6 +10585,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-discount-schemes.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-discount-schemes.html",
+          "hash": "tZDKvcqUlewKnRFGyvk4yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-export-data.md",
       "output": {
         ".html": {
@@ -10625,7 +10637,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "1HIQYcWZXF2S4qyv/szpZA=="
+          "hash": "9WQHWnEkKkxnTKYKxDeHtw=="
         }
       },
       "is_incremental": false,
@@ -10733,7 +10745,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "vjBsX9tMfC1lIct/GnXLlg=="
+          "hash": "KQkLtD/LO4yv1IS/4vZtbg=="
         }
       },
       "is_incremental": false,
@@ -10757,7 +10769,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-product-overview.html",
-          "hash": "kdzK3uxiygAlz2RrSAYiZw=="
+          "hash": "O6IzLbzmoRws0TgcjXlTPQ=="
         }
       },
       "is_incremental": false,
@@ -10769,7 +10781,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "+BID7+11R+RoouWrfoZ9Lw=="
+          "hash": "Z1s3ALEv2ceird7DRDMWmw=="
         }
       },
       "is_incremental": false,
@@ -10805,7 +10817,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-services-by-region.html",
-          "hash": "k3Y60y5VuTw22tHxFdr4hQ=="
+          "hash": "KR2st8adpQwE0fZ/6MGCLQ=="
         }
       },
       "is_incremental": false,
@@ -10949,7 +10961,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "cEvhIJ+0+sziNhk7WtECZg=="
+          "hash": "nr2gsjjorzsVCWh+F3eUiw=="
         }
       },
       "is_incremental": false,
@@ -22036,7 +22048,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 454,
+          "total_file_count": 455,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
