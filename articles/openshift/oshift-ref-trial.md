@@ -50,7 +50,7 @@ In addition to GUI access, you can also access OpenShift through the CLI. To do 
 
 ## Storage
 
-Each trial deployment has a block storage quota of 2TB across either Tier 1 or Tier 2 storage. This is enforced at the OpenStack project layer. This storage is available to the projects you create within OpenShift and you can consume the storage by creating Persistent Volume Claims (PVCs) for your applications. PVCs are using for pods that run stateful applications; data inside pods that are not stored on PVCs will be lost when pods are restarted, for example when the application is redeployed, updated or as a result of node evacuations during patching. You can increase your storage quotas by creating a Service Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. 
+Each trial deployment has a block storage quota of 2TB across either Tier 1 or Tier 2 storage. This is enforced at the OpenStack project layer. This storage is available to the projects you create within OpenShift and you can consume the storage by creating Persistent Volume Claims (PVCs) for your applications. PVCs are used for pods that run stateful applications; data inside pods that is not stored on PVCs will be lost when the pods are restarted, for example when the application is redeployed, updated or as a result of node evacuations during patching. You can increase your storage quotas by creating a Service Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. 
 
 Where possible, deploy application pods statelessly. Stateless application pods scale more easily and hence tend to be more resilient and performant.
 
