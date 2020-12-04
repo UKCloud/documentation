@@ -4,7 +4,7 @@ description: Provides information to get up and running with UKCloud for OpenShi
 services: openshift
 author: Mudasar Hussain
 reviewer: Gareth Ellner
-lastreviewed: 04/12/2020 12:04:00
+lastreviewed: 04/12/2020
 
 toc_rootlink: Reference
 toc_sub1:
@@ -36,25 +36,25 @@ All OpenShift deployments get a Foundation Pack, which includes the management a
 
 During a trial, each cluster is also provisioned with two small Runtime Packs. These are essentially two OpenStack VMs running RedHat Atomic OS with 16GB RAM, two vCPUs and 100GB disks each. This is also the minimum number of Runtime Packs UKCloud recommends in each OpenShift deployment in order to provide minimal resilience and enable interruption free patching. After the trial phase it is possible to deploy larger and more nodes for your cluster.
 
-**OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/4.6/architecture/architecture.html)
+**OpenShift documentation:** [*OpenShift Container Platform architecture*](https://docs.openshift.com/container-platform/4.6/architecture/architecture.html)
 
 ## GUI and CLI Access
 
 To access the OpenShift cluster GUI, you need an internet-enabled device running an HTML5-capable browser. You will also be set up for access to the UKCloud Portal and given the relevant access to your OpenShift deployment.
 
-**OpenShift documentation:** [*Web Console Developer Walkthrough*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html)
+**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html)
 
 In addition to GUI access, you can also access OpenShift through the CLI. To do this, you need to install the `oc` client on your machines. To avoid any compatibility issues please install the same version of the `oc` client as your OpenShift cluster. 
 
-**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html)
+**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html)
 
 ## Storage
 
-Each trial deployment has a block storage quota of 2TB across either Tier 1 or Tier 2 storage. This is enforced at the OpenStack project layer. This storage is available to the projects you create within OpenShift and you can consume the storage by creating Persistent Volume Claims (PVCs) for your applications. PVCs are using for pods which run stateful applications - data inside pods which are not stored on PVCs will be lost when pods are restarted; for example when the application is redeployed, updated or as a result of node evacuations during patching. You can increase your storage quotas by creating a service request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. 
+Each trial deployment has a block storage quota of 2TB across either Tier 1 or Tier 2 storage. This is enforced at the OpenStack project layer. This storage is available to the projects you create within OpenShift and you can consume the storage by creating Persistent Volume Claims (PVCs) for your applications. PVCs are using for pods that run stateful applications; data inside pods that are not stored on PVCs will be lost when pods are restarted, for example when the application is redeployed, updated or as a result of node evacuations during patching. You can increase your storage quotas by creating a Service Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. 
 
-Where possible, deploy application pods statelessly - stateless application pods scale more easily and hence tend to be more resilient and performant.
+Where possible, deploy application pods statelessly. Stateless application pods scale more easily and hence tend to be more resilient and performant.
 
-OpenShift is deployed with an internal image registry making use of UKCloud's object storage service for persistence.  This includes 60GB of free storage capacity which does not consume your 2TB block storage quota; rather this is in addition to the 2TB data limit. UKCloud provision an Elasticsearch, Fluentd and Kibana stack which uses 200GB of Tier 2 storage (which consumes some of the 2TB storage limit).
+OpenShift is deployed with an internal image registry making use of UKCloud's object storage service for persistence. This includes 60GB of free storage capacity, which does not consume your 2TB block storage quota; rather this is in addition to the 2TB data limit. UKCloud provisions an Elasticsearch, Fluentd and Kibana stack, which uses 200GB of Tier 2 storage (which does consume some of the 2TB storage limit).
 
 ## Image Security
 
@@ -64,7 +64,7 @@ You should take care when creating your container images to ensure the images do
 
 ## RedHat OpenShift Getting Started Documentation
 
-**OpenShift documentation:** [*Web Console Developer Walkthrough*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html), [*Get Started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI Reference*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI Reference*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/administrator-cli-commands.html)
+**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html), [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI commands*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI commands*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/administrator-cli-commands.html)
 
 ## Feedback
 
