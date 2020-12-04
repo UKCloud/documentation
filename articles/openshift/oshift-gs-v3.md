@@ -4,7 +4,7 @@ description: Provides information to get up and running with UKCloud for OpenShi
 services: openshift
 author: Sue Highmoor
 reviewer: Gareth Ellner
-lastreviewed: 04/12/2020 12:04:00
+lastreviewed: 04/12/2020
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
@@ -12,8 +12,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Getting Started Guide v3.x
-toc_fullpath: Getting Started/oshift-gs.md
-toc_mdlink: oshift-gs.md
+toc_fullpath: Reference/oshift-gs-v3.md
+toc_mdlink: oshift-gs-v3.md
 ---
 
 # Getting Started Guide for UKCloud for OpenShift v3.x
