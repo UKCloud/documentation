@@ -29,7 +29,6 @@ UKCloud for OpenStack<br>
 UKCloud for Oracle Software<br>
 UKCloud for VMware<br>
 VMware Licence Service (VLS)<br>
-Cloud GPU<br>
 Cloud Storage<br>
 Cross Domain Security Zone<br>
 Dedicated Compute v1<br>
