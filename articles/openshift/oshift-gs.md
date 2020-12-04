@@ -149,13 +149,13 @@ This section provides a glossary of terms specific to UKCloud for OpenShift.
 
 **microservices**&nbsp;&nbsp;A method of developing an application as a collection of smaller independent services.
 
-**worker node**&nbsp;&nbsp;Provides the runtime environment for a container. Each node in a Kubernetes cluster has the required services to be managed by the master. Nodes also have the required services to run pods, including the Docker service, a kubelet, and a service proxy.
-
 **OpenShift**&nbsp;&nbsp;Red Hat's secure and comprehensive enterprise-grade container platform based on industry standards such as CRI-O and Kubernetes.
 
 **PaaS**&nbsp;&nbsp;Platform-as-a-Service. The capability provided to the consumer is to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.
 
-**pod**&nbsp;&nbsp;A group of related containers placed onto the same host.
+**pod**&nbsp;&nbsp;A group of related containers placed onto the same node. May contain one or more containers. Production applications should consist of multiple replicas of each pod to provide increased performance and resilience. 
+
+**worker node**&nbsp;&nbsp;Provides the runtime environment for a container. Each node in a Kubernetes cluster has the required services to be managed by the control plane. Nodes also have the required services to run pods, including CRI-O, a kubelet, and a service proxy.
 
 ## Feedback
 
