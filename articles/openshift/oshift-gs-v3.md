@@ -12,7 +12,7 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Getting Started Guide v3.x
-toc_fullpath: Reference/oshift-gs-v3.md
+toc_fullpath: Reference/OpenShift v3.x/oshift-gs-v3.md
 toc_mdlink: oshift-gs-v3.md
 ---
 
