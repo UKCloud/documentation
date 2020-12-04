@@ -4,7 +4,7 @@ description: Provides information to get up and running with UKCloud for OpenShi
 services: openshift
 author: Sue Highmoor
 reviewer: Gareth Ellner
-lastreviewed: 04/12/2020 12:04:00
+lastreviewed: 04/12/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -19,7 +19,7 @@ toc_mdlink: oshift-gs.md
 # Getting Started Guide for UKCloud for OpenShift
 
 > [!NOTE]
-> This Getting Started Guide is for OpenShift v4 clusters. The previous Getting Started page for OpenShift v3.x clusters can be found here: [*Getting Started Guide for UKCloud for OpenShift v3.x*](./oshift-gs-v3.md)
+> This Getting Started Guide is for OpenShift v4 clusters. For getting started information for OpenShift v3.x clusters, see the [*Getting Started Guide for UKCloud for OpenShift v3.x*](oshift-gs-v3.md).
 
 ## Overview
 
@@ -31,7 +31,7 @@ This Getting Started Guide provides an overview of the functionality available w
 
 ### Intended audience
 
-This guide is intended for developers who want to leverage the benefits of Kubernetes containerisation technologies as part of their development, continuous integration or continuous delivery cycles.
+This article is intended for developers who want to leverage the benefits of Kubernetes containerisation technologies as part of their development, continuous integration or continuous delivery cycles.
 
 ## Introduction to UKCloud for OpenShift
 
@@ -57,13 +57,13 @@ You can use UKCloud for OpenShift to:
 
 ### UKCloud-deployed Red Hat OpenShift Container Platform
 
-OpenShift Container Platform is an open source PaaS, developed and supported by Red Hat and based around common technologies such as containers and the Kubernetes container cluster manager for enterprise application development.
+OpenShift Container Platform is an open source PaaS, developed and supported by Red Hat and based around common technologies, such as containers and the Kubernetes container cluster manager for enterprise application development.
 
 UKCloud for OpenShift provides a full Red Hat OpenShift Container Platform that has been deployed by UKCloud and is ready to consume without delay. You can then create one or more OpenShift projects in which you can run multiple pods, with each pod containing a group of related containers.
 
 ![OpenShift pods and containers](images/oshift-pods-containers.png)
 
-**OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/4.6/architecture/architecture.html) and [*Container Security Guide*](https://docs.openshift.com/container-platform/4.6/security/container_security/security-understanding.html)
+**OpenShift documentation:** [*OpenShift Container Platform architecture*](https://docs.openshift.com/container-platform/4.6/architecture/architecture.html) and [*Understanding container security*](https://docs.openshift.com/container-platform/4.6/security/container_security/security-understanding.html)
 
 ## Before you begin
 
@@ -73,13 +73,13 @@ As part of your onboarding, UKCloud will provide you with a URL and credentials 
 
 In addition, we recommend the installation of the OpenShift CLI on your device.
 
-**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html)
+**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html)
 
 ## Initial environment
 
-OpenShift clusters can be deployed with flexible sizing, including different options for worker node sizes. It is recommended that a mininum of 2 worker nodes are provisioned to provide resiliency. There is the option of hourly pricing and self-service scaling is available for v4 OpenShift clusters.
+OpenShift clusters can be deployed with flexible sizing, including different options for worker node sizes. We recommend a mininum of two worker nodes to provide resiliency. OpenShift v4 clusters provide the option of hourly pricing and self-service scaling.
 
-For more information about sizing options for OpenShift, see [*Pricing information for UKCloud for Managed OpenShift*](./oshift-ref-pricing.md)  If you'd like to expand an existing cluster you can request this via a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+For more information about sizing options for OpenShift, see [*Pricing information for UKCloud for Managed OpenShift*](oshift-ref-pricing.md). If you'd like to expand an existing cluster, you can request this by raising a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Using the web console
 
@@ -92,7 +92,7 @@ If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later,
 
 If your OpenShift cluster uses an earlier version of OCP, you will need to use your separate OpenShift credentials to log in to the console.
 
-**OpenShift documentation:** [*Web Console Developer Walkthrough*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html)
+**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html)
 
 ## Using the command-line interface
 
@@ -103,9 +103,9 @@ If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later,
 Alternatively, you can obtain the CLI login command (including login token) from the OpenShift console by clicking your user name and selecting **Copy Login Command**.
 
 > [!NOTE]
-> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Service Accounts*](https://docs.openshift.com/container-platform/4.6/authentication/understanding-and-creating-service-accounts.html) documentation.
+> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Understanding and creating service accounts*](https://docs.openshift.com/container-platform/4.6/authentication/understanding-and-creating-service-accounts.html) documentation.
 
-**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI Reference*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI Reference*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/administrator-cli-commands.html)
+**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI commands*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI commands*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/administrator-cli-commands.html)
 
 ## Using the API
 
@@ -113,13 +113,13 @@ Alternatively, you can obtain the CLI login command (including login token) from
 
 These REST APIs can be used to manage end-user applications, the cluster, and the users of the cluster.
 
-**OpenShift documentation:** [*REST API Reference*](https://docs.openshift.com/container-platform/4.6/rest_api/index.html)
+**OpenShift documentation:** [*API index*](https://docs.openshift.com/container-platform/4.6/rest_api/index.html)
 
 ## Developing and deploying applications
 
 OpenShift Container Platform is designed for building and deploying applications. You can begin your application's development from scratch using OpenShift Container Platform directly or develop locally then use OpenShift Container Platform to deploy your fully developed application.
 
-**OpenShift documentation:** [*Understanding OpenShift Development*](https://docs.openshift.com/container-platform/4.6/architecture/understanding-development.html)
+**OpenShift documentation:** [*Understanding OpenShift Container Platform development*](https://docs.openshift.com/container-platform/4.6/architecture/understanding-development.html)
 
 ## Creating and using images
 
@@ -129,13 +129,13 @@ Containers in OpenShift Container Platform are based on Docker-formatted contain
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform Documentation*](https://docs.openshift.com/container-platform/4.6/welcome/index.html) - take care to change to the correct version of the documentation to match the version of your cluster.
+In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform Documentation*](https://docs.openshift.com/container-platform/4.6/welcome/index.html). Take care to change to the correct version of the documentation to match the version of your cluster.
 
 ## Glossary
 
 This section provides a glossary of terms specific to UKCloud for OpenShift.
 
-**cluster**&nbsp;&nbsp;OpenShift controlplane and a set of worker nodes.
+**cluster**&nbsp;&nbsp;OpenShift control plane and a set of worker nodes.
 
 **container**&nbsp;&nbsp;A lightweight mechanism for isolating running processes so that they are limited to interacting with only their designated resources.
 
@@ -145,7 +145,7 @@ This section provides a glossary of terms specific to UKCloud for OpenShift.
 
 **Kubernetes**&nbsp;&nbsp;Manages containerized applications across a set of containers or hosts and provides mechanisms for deployment, maintenance, and application-scaling.
 
-**master server**&nbsp;&nbsp;The host or hosts that contain the controlplane components, including the API server, controller manager server, and etcd. The master manages nodes in its Kubernetes cluster and schedules pods to run on nodes.
+**master server**&nbsp;&nbsp;The host or hosts that contain the control plane components, including the API server, controller manager server, and etcd. The control plane manages nodes in its Kubernetes cluster and schedules pods to run on nodes.
 
 **microservices**&nbsp;&nbsp;A method of developing an application as a collection of smaller independent services.
 
