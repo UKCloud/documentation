@@ -4,7 +4,7 @@ description: Shows how to extend permissions to users for a specific vApp, ensur
 services: vmware
 author: shall
 reviewer: shighmoor
-lastreviewed: 06/11/2019
+lastreviewed: 06/11/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
