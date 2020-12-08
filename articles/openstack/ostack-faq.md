@@ -3,8 +3,8 @@ title: UKCloud for OpenStack FAQs
 description: Frequently asked questions for UKCloud for OpenStack
 services: openstack
 author: Matt Warner
-reviewer: stevedicko
-lastreviewed: 17/12/2019 15:17:17
+reviewer: SteveRelf
+lastreviewed: 08/12/2020
 toc_rootlink: FAQs
 toc_sub1:
 toc_sub2:
@@ -135,7 +135,7 @@ You can also use your preferred software firewall and security appliances deploy
 
 To access the infrastructure via the dashboard and API you will need access through any firewalls on the following ports to the OpenStack endpoints you target.
 
-443, 13000, 13080, 13004, 13311, 13776, 13774, 13777, 13696, 13776
+443, 13000, 13004, 13005, 13041, 13292, 13774, 13776, 13778, 13786, 13876, 13977
 
 ### Do you offer dynamic or static IP addresses?
 
