@@ -1322,7 +1322,7 @@ None
 #### Example request
 
 ```bash
-curl -b /tmp/cookies.txt -H 'Content-Type: application/json' 'https://portal.skyscapecloud.com/api/vorg-builds/10'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/vorg-builds/10'
 ```
 
 ### Response
@@ -2005,7 +2005,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -H 'Content-Type: application/json' 'https://portal.skyscapecloud.com/api/vdc-builds/10'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/10'
 ```
 
 ### Response
@@ -2512,7 +2512,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -H 'Content-Type: application/json' 'https://portal.skyscapecloud.com/api/edge-gateway-builds/23'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/23'
 ```
 
 ### Response
