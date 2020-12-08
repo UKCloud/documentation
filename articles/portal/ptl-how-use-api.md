@@ -33,14 +33,6 @@ use the Portal API. For more information about UKCloud regions, see [*Understand
 
 The examples in this guide are shown as curl commands, but you may find it easier to work with the API by installing a REST client (for example, Insomnia).
 
-Before reading this guide, you may find it useful to understand the following:
-
-- **Versioning** - The Portal API uses a version scheme that you can specify in the Accept header:
-
-        Accept: application/vnd-skyscapecloud-v1
-
-    The examples in this guide use V1 of the API. As V1 is the default version, the examples don't explicitly set the API version.
-
 ## Authenticating to the API
 
 The Portal API uses session authentication. Before calling any of the API endpoints, you must first authenticate to the API.
