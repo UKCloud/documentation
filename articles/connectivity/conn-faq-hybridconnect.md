@@ -2,9 +2,9 @@
 title: HybridConnect FAQs
 description: Frequently asked questions for HybridConnect
 services: connectivity
-author: Matt Warner
-reviewer: hbrunt
-lastreviewed: 16/12/2019
+author: mwarner
+reviewer: shighmoor
+lastreviewed: 07/12/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -78,7 +78,11 @@ You need to either contact your account director or raise a service request via 
 
 There is a one‑off charge of £1,000 and then a monthly charge of £150 for a 1Gb port and £300 for a 10Gb port.
 
-## General connectivity questions 
+## Is there a minimum commit for HybridConnect?
+
+There is a minimum commit of 12 months for HybridConnect. In the case of early termination, you will be liable for any remaining balance.
+
+## General connectivity questions
 
 If you have questions about connectivity in general, please see the [*General connectivity FAQs*](conn-faq.md).
 
