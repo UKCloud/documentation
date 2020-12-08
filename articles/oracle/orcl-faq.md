@@ -19,9 +19,13 @@ toc_mdlink: orcl-faq.md
 
 ## General
 
+### Can I buy UKCloud for Oracle Software?
+
+UKCloud for Oracle has now been retired from sale by UKCloud. We will continue to look after all our existing customers who are using this Product however will no longer be providing this service for new workloads. These pages are here to provide our existing customers with access to support documentation and will continue to be updated as required. For new Oracle requirements please contact your Account Manager or Service Delivery Manager
+
 ### What is UKCloud for Oracle Software?
 
-UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. This service sits within UKCloud's genuine assured cloud services portfolio, enabling you to leverage the benefits of digital transformation while maintaining your investment and integration with traditional Oracle-based services.
+UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. 
 
 ### What is provided in the service?
 
