@@ -105,7 +105,7 @@ workloads:</p>
 </ul>
 <p>This article provides an introduction for how to use Cloud GPU for compute workloads and describes the tasks you need to perform to get the service up and running for UKCloud for VMware.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this article you must have access to the UKCloud Portal and vCloud Director.</p>
+<p>To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.</p>
 <h2 id="cloud-gpu-overview">Cloud GPU overview</h2>
 <p>We offer two GPU variants for use with our cloud platform:</p>
 <table>
@@ -204,14 +204,20 @@ workloads:</p>
 <li><p>On the <em>vCloud Director</em> tab, enter your password and click <strong>Confirm</strong>.</p>
 <p><img src="images/vmw-portal-vcd-login.png" alt="vCloud Director tab in the UKCloud Portal"></p>
 </li>
-<li><p>In vCloud Director, click the menu icon and select <strong>Libraries</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-libraries.png" alt="Libraries menu option"></p>
+<li><p>In the VMware Cloud Director/vCloud Director menu, select <strong>Libraries</strong>.</p>
+<blockquote>
+<p>[!TIP] In vCloud Director 9.7, click the menu icon (three lines) to access the menu.</p>
+</blockquote>
 </li>
-<li><p>In the left navigation panel, click <strong>vApp Templates</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-vapp-templates.png" alt="vApp Templates menu option"></p>
+<li><p>In the left navigation panel, under <em>Content Libraries</em>, select <strong>vApp Templates</strong>.</p>
 </li>
-<li><p>Click the triple-dot icon next to the <strong>GPGPU</strong> template for your preferred operating system (for example <strong>CentOS7x64-GPGPU-Blank</strong>) and select <strong>Create vApp</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-create-vapp-from-template.png" alt="Create vApp menu option"></p>
+<li><p>Create a vApp from the <strong>GPGPU</strong> template for your preferred operating system (for example <strong>CentOS7x64-GPGPU-Blank</strong>).</p>
+<ul>
+<li><p>In vCloud Director 9.7, click the triple-dot icon next to the template and select <strong>Create vApp</strong>.</p>
+</li>
+<li><p>In VMware Cloud Director 10.1, select radio button for the template and click <strong>Create vApp</strong>.</p>
+</li>
+</ul>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The GPGPU templates provide a shell VM with no disks attached, hence no operating system installed. You'll need to add the necessary disks so that you can install your preferred operating system on the VM.</p>
@@ -220,7 +226,7 @@ workloads:</p>
 <li><p>On the <em>Select Name</em> page of the <em>Create vApp from Template</em> dialog box, give the vApp a <strong>Name</strong> and <strong>Description</strong>, select the appropriate <strong>Runtime lease</strong> and <strong>Storage lease</strong> then click <strong>Next</strong>.</p>
 <p><img src="images/vmw-vcd-vapp-from-template-name.png" alt="Select Name page of Create vApp from Template dialog box"></p>
 </li>
-<li><p>On the <em>Configure Resources</em> page, from the list of VDCs, select the VDC in which you want to create the VM and click <strong>Next</strong>.</p>
+<li><p>On the <em>Configure Resources</em> page, from the list of VDCs, select the VDC in which you want to create the VM.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You must create your VM in a PRIORITY VDC.</p>
@@ -230,16 +236,17 @@ workloads:</p>
 <p><img src="images/vmw-vcd-vapp-from-template-resources.png" alt="Configure Resources page"></p>
 </li>
 <li><p>On the <em>Ready to Complete</em> page, review your settings and then click <strong>Finish</strong> to start the deployment.</p>
-<p>You can check progress by expanding the <em>Recent Tasks</em> section at the bottom of the vCloud Director Tenant UI.</p>
+<p>You can check progress by expanding the <em>Recent Tasks</em> section.</p>
 </li>
-<li><p>After the VM has been deployed, click the menu icon and select <strong>Datacenters</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-dcs.png" alt="Datacenters menu option"></p>
+<li><p>After the VM has been deployed, from the main menu, select <strong>Datacenters</strong> (vCloud Director 9.7) or <strong>Data Centres</strong> (VMware Cloud Director 10.1).</p>
 </li>
 <li><p>Select your VDC, then in the card for your newly-deployed VM, select <strong>Details</strong>.</p>
 </li>
-<li><p>Expand the <em>Hardware</em> section.</p>
-</li>
-<li><p>In the <em>Hard Disks</em> section, click <strong>Add</strong> and add a hard disk of an appropriate size for your operating system.</p>
+<li><p>In the <em>Hardware</em> section, in the <em>Hard Disks</em> section/page, click <strong>Add</strong> and add a hard disk of an appropriate size for your operating system.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>In VMware Cloud Director, click <strong>Edit</strong>, then click <strong>Add</strong> in the <em>Edit Hard Disks</em> dialog box.</p>
+</div>
 <div class="NOTE">
 <h5>Note</h5>
 <p>We recommend using <strong>Paravirtual (SCSI)</strong> disk controllers, but for older operating systems, you may need to use <strong>LSI Logic SAS (SCSI)</strong>.</p>
@@ -247,8 +254,7 @@ workloads:</p>
 </li>
 <li><p>In the card for the VM, select <strong>Actions</strong> then <strong>Power On</strong>.</p>
 </li>
-<li><p>Use the popout console to go through the setup procedure.</p>
-<p><img src="images/vmw-vcd-ico-console-gpu.png" alt="Popout console icon"></p>
+<li><p>Use the console to go through the setup procedure.</p>
 </li>
 <li><p>When your VM is ready, install your preferred operating system.</p>
 <p>For detailed steps, see <a href="vmw-how-create-vm-from-scratch.html#installing-an-operating-system-into-the-vm"><em>Installing an operating system into the VM</em></a></p>
@@ -278,7 +284,6 @@ workloads:</p>
 <li><p>Power on your VM.</p>
 </li>
 <li><p>In the card for the VM, select <strong>Actions</strong> then <strong>Insert Media</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-insert-media.png" alt="Insert CD/DVD from Catalog menu option"></p>
 </li>
 <li><p>In the <em>Insert CD</em> dialog box, select the vGPU driver ISO and click <strong>Insert</strong>.</p>
 <p><img src="images/vmw-vcd-insert-cd.png" alt="Insert CD dialog box"></p>

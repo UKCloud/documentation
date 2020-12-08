@@ -44,8 +44,6 @@
     href: vmw-how-configure-distributed-logical-router.md
   - name: Configure a load balancer
     href: vmw-how-configure-load-balancer.md
-  - name: Configure an L2 VPN
-    href: vmw-how-configure-l2-vpn.md
   - name: Configure IPsec VPN
     href: vmw-how-configure-ipsec-vpn.md
   - name: Create a catalog
@@ -138,6 +136,10 @@
       href: vmw-how-vrops-enable.md
     - name: Refresh the vROps Tenant Appliance
       href: vmw-how-vrops-refresh.md
+  - name: Advanced networking
+    items:
+    - name: Configure an L2 VPN
+      href: vmw-how-configure-l2-vpn.md
   - name: VMware Licence Service
     items:
     - name: Add products to the vCloud Usage Meter
