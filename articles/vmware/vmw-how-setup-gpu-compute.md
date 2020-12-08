@@ -111,7 +111,8 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
 6. In the VMware Cloud Director/vCloud Director menu, select **Libraries**.
 
-    > [!TIP] In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
+    > [!TIP]
+    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
 
 7. In the left navigation panel, under *Content Libraries*, select **vApp Templates**.
 
