@@ -32,15 +32,15 @@ The table provides an overview of the Cloud Enablement services available for VP
 **Use case** | You don't want to use the NSX edge gateway VPN capability and want to  install your own
 **Service type** | Connectivity
 **Security level** | Assured OFFICIAL
-**Hosted device** | VPN
-**Typical device size** | 1U / 2U
 **Service level (default)** | Single data centre, no automatic failover
-**Cloud Enablement requirement** | One bay in one UKCloud data centre
-**Cost** | £2,000 setup fee plus £500 per month
-**Resilience available?** | We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a  self-managed resilient solution (in which case the resilience options below are required).
+**Hosted device** | VPN device eg firewall
+**Cloud Enablement sizing** | one bay = 10U, 1kW per month
+**Typical device size** | 1U / 2U
+**Hosted device(s) allowed** | Depends on solution. UKCloud will work with the customer to understand the requirement and assess the suitability of the devices that the customer wishes to locate within Cloud Enablement
+**Hosted device power draw** | Customer devices within a single 10u bay have a combined average power draw of no more than 1kW. Average power draw will be assessed based vendor material supplied by the customer as part of the engagement with UKCloud prior to installation of devices
+**Cost** | Priced per 10u bay</br>£2,000 up front charge</br>£500 pcm</br>Additional install visits charged at SFIA rate
+**Resilience available?** | We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a  self-managed resilient solution
 **Failover responsibility** | Customer
-**Resilience requirement<br>(1 bay = 10U, 1kw of power)** | One bay in our Farnborough data centre<br>One bay in our Corsham data centre
-**Resilience cost** | £4,000 setup fee plus £1,000 per month
 **Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (eg Cloud Enablement in region 5 cannot be stretched to region 6)
 **Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal
 
