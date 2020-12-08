@@ -244,7 +244,7 @@ When you have the account and vOrg IDs, you can go ahead and create your VDC.
         "id": "9",
         "attributes": {
           "createdAt": "2016-07-28T14:16:11+01:00",
-          "createdBy": "user\@example.com",
+          "createdBy": "user@example.com",
           "state": "running"
         }
       }
