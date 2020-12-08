@@ -69,10 +69,11 @@ The Portal API uses session authentication. Before calling any of the API endpoi
         read portal_email # Enter your Portal email address
         read -s portal_password # Enter your Portal password
         
-        curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d '{
-          "email": "'"$portal_email"'",
-          "password": "'"$portal_password"'"
-        }' -H 'Content-Type: application/json'
+        authentication_body="$(
+          jq --arg email "$portal_email" --arg password "$portal_password" --null-input '{email: $email, password: $password}'
+        )"
+        
+        curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d "$authentication_body" -H 'Content-Type: application/json'
         ```
 
 3. If the authentication is successful, the endpoint returns a cookie that provides authentication for the next 900 seconds (15 minutes) and a response that tells you how long the session will last:
