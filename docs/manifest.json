@@ -21186,15 +21186,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-note-section"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-setup-gpu-compute.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-setup-gpu-compute.html",
-          "hash": "WCt2eexliyuQ0P2ATGyBOQ=="
+          "hash": "h6m7so+tNdBw4S3dHG7Gfg=="
         }
       },
       "is_incremental": false,
