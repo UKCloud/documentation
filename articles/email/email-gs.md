@@ -20,10 +20,9 @@ toc_mdlink: email-gs.md
 
 ## Overview
 
-UKCloud offers an Email and Collaboration service, powered by Zimbra, to enable you to have a cloud hosted, secure email service, connected to government networks or the internet. You can connect this mail service
-through your normal mail applications (for example, Microsoft Outlook), to send and receive mail as well as use lightweight collaborative features.
+UKCloud Email and Collaboration service is no longer available for purchase from UKCloud. We will continue to manage this service for all existing customers however this Product is not available for new workloads. If you have email and collaboartion requirements then please speak to your Account Manager or Service Delivery Manager to discuss our alternative options.
 
-This Getting Started Guide walks you through the process of configuring your Email and Collaboration service.
+All documents in this section are to assist our existing userbase in managing their Email and Collaboration Service
 
 ### Intended audience
 
