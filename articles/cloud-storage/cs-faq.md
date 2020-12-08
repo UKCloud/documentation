@@ -3,8 +3,8 @@ title: Cloud Storage FAQs
 description: Frequently asked questions for Cloud Storage
 services: cloud-storage
 author: Dan Baker
-reviewer:
-lastreviewed: 20/08/2019 16:46:31
+reviewer: Steve Relf
+lastreviewed: 08/12/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
