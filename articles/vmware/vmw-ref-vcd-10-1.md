@@ -10,7 +10,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Changes in VMWare Cloud Director 10.1
+toc_title: Changes in VMware Cloud Director 10.1
 toc_fullpath: Reference/vmw-ref-vcd-10-1.md
 toc_mdlink: vmw-ref-vcd-10-1.md
 ---

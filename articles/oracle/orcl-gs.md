@@ -157,7 +157,7 @@ On this page, you can:
 UKCloud uses The *Notification Center* to communicate alerts about the objects in your UKCloud for Oracle Software environment.
 
 > [!NOTE]
-> For notifications about planned maintenance windows, service incidents and new features, see the UKCloud Portal.
+> For notifications about Planned Maintenance and service incidents, see the [UKCloud Service Status page](https://status.ukcloud.com).
 
 1. In the Cloud Control console, click the notifications icon.
 

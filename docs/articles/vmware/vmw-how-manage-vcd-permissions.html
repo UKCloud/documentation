@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to manage permissions for vCloud Director </title>
+    <title>How to manage VMware Cloud Director/vCloud Director permissions in the UKCloud Portal </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to manage permissions for vCloud Director ">
+    <meta name="title" content="How to manage VMware Cloud Director/vCloud Director permissions in the UKCloud Portal ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,10 +91,14 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-manage-permissions-for-vcloud-director">How to manage permissions for vCloud Director</h1>
+<h1 id="how-to-manage-vmware-cloud-directorvcloud-director-permissions-in-the-ukcloud-portal">How to manage VMware Cloud Director/vCloud Director permissions in the UKCloud Portal</h1>
 
+<h2 id="overview">Overview</h2>
+<p>In the UKCloud Portal, you can control the access that a Portal user has to the different virtual data centres (VDCs) in your organisation.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must be a Portal administrator.</p>
 <h2 id="configuring-permissions">Configuring permissions</h2>
-<p>To configure permissions for a portal user:</p>
+<p>To configure permissions for a Portal user:</p>
 <ol>
 <li><p>Log in to the UKCloud Portal as an administrator.</p>
 <p>For more detailed instructions, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></p>
@@ -102,374 +106,23 @@
 <li><p>In the Portal navigation panel, expand the <strong>Contacts</strong> option and select <strong>All Contacts</strong>.</p>
 <p><img src="images/ptl-menu-all-contacts.png" alt="All Contacts menu option in UKCloud Portal"></p>
 </li>
-<li><p>On the <em>Contacts</em> page, use the <strong>Search</strong> field to find the user to whom you want to assign or revoke vCloud Director permissions and then click the <strong>Edit</strong> button.</p>
+<li><p>On the <em>Contacts</em> page, use the <strong>Search</strong> field to find the user to whom you want to assign or revoke permissions and then click the <strong>Edit</strong> button.</p>
 <p><img src="images/ptl-contacts-btn-edit.png" alt="Edit button for Portal contact"></p>
 </li>
 <li><p>On the <em>Edit contact</em> page, select the <strong>Permissions</strong> tab.</p>
 <p><img src="images/ptl-contacts-tab-permissions.png" alt="Permissions tab for Portal contact"></p>
 </li>
-<li><p>In the <em>Permissions for UKCloud for VMware</em> section, you'll see a list of virtual data centres (VDCs) and the associated permissions available for the portal user.</p>
-<p>Select the permission level you want to assign to the user, then scroll to the bottom of the page and click <strong>Save</strong>.</p>
+<li><p>In the <em>Permissions for UKCloud for VMware</em> section, you'll see a list of VDCs and the associated user roles available for the Portal user.</p>
+<p>Select the role you want to assign to the user, then scroll to the bottom of the page and click <strong>Save</strong>.</p>
 </li>
 </ol>
-<h2 id="user-types-and-privileges">User types and privileges</h2>
-<p>The first table shows the user types (operations); the second table shows the exact privileges each user type has.</p>
-<table>
-<thead>
-<tr>
-<th>Operation</th>
-<th>Allows the user administrative access to the given vCloud Director organisation with:</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Console Only (CO)</td>
-<td>Permissions for Console access only</td>
-</tr>
-<tr>
-<td>vApp User (VU)</td>
-<td>Permissions for a vApp User</td>
-</tr>
-<tr>
-<td>vApp Author (VA)</td>
-<td>Permissions for a vApp Author</td>
-</tr>
-<tr>
-<td>Catalogue Author (CA)</td>
-<td>Permissions for a Catalogue Author</td>
-</tr>
-<tr>
-<td>Admin (ADM)</td>
-<td>All permissions</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Group</th>
-<th>Privilege</th>
-<th>CO</th>
-<th>VU</th>
-<th>VA</th>
-<th>CA</th>
-<th>ADM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Catalog</td>
-<td>Add a vApp from My Cloud</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Change Owner</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Create/Delete a new Catalog</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Edit Catalog Properties</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Publish a Catalog</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Share a Catalog</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>View Private and Shared Catalogs</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>View Published Catalogs</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-</tr>
-<tr>
-<td>Catalog Item</td>
-<td>Add to My Cloud</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Copy/Move a vApp Template/Media</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Create/Upload a vApp Template/Media</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Enable vApp Template Download</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Edit vApp Template / Media Properties</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>View vApp Templates/Media</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td>Disk</td>
-<td>Change Owner</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Create a Disk</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Delete a Disk</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Edit Disk Properties</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>View Disk Properties</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td>vApp</td>
-<td>Access to VM Console</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Change Owner</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Copy a vApp</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Create/Reconfigure a vApp</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Create/Revert/Remove a Snapshot</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Delete a vApp</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Edit vApp Properties</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Edit VM CPU</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Edit VM Hard Disk</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Edit VM Memory</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Edit VM Network</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Edit VM Properties</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Manage VM Password Settings</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Share a vApp</td>
-<td> </td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td> </td>
-<td>Start/Stop/Suspend/Reset a vApp</td>
-<td> </td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-</tbody>
-</table>
+<h2 id="user-roles-and-access-rights">User roles and access rights</h2>
+<p>For a list of the access rights each of the listed user roles has, see the <a href="https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-AE42A8F6-868C-4FC0-B224-87CA0F3D6350.html#GUID-AE42A8F6-868C-4FC0-B224-87CA0F3D6350">Rights in Predefined Global Tenant Roles</a> VMware article.</p>
 <h3 id="api-only-role">API Only role</h3>
-<p>UKCloud have created an <strong>API Only</strong> role that restricts users with vCloud Director permissions to accessing vCloud Director solely via the API, with no GUI access.</p>
+<p>UKCloud have created an <strong>API Only</strong> role that restricts users with VMware Cloud Director/vCloud Director permissions to accessing VMware Cloud Director/vCloud Director solely via the API, with no GUI access.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The <strong>API Only</strong> role must be selected in addition to one of the vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.</p>
+<p>The <strong>API Only</strong> role must be selected in addition to one of the VMware Cloud Director/vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>

@@ -4,7 +4,7 @@
     href: oshift-home.md
 - name: FAQs
   items:
-  - name: UKCloud for OpenShift FAQs
+  - name: UKCloud for Managed OpenShift FAQs
     href: oshift-faq.md
 - name: Getting Started
   items:
@@ -88,7 +88,5 @@
     href: oshift-ref-pricing.md
   - name: UKCloud for Managed OpenShift Service Definition
     href: oshift-sd.md
-- name: Service Scope
-  items:
-  - name: UKCloud for OpenShift Service Scope
+  - name: UKCloud for Managed OpenShift Service Scope
     href: oshift-sco.md

@@ -67,7 +67,7 @@ UKCloud do not offer an SLA around the VMs protected by UKCloud's Journaling Pro
 
 The service is not backed by service credits.
 
-On occasion, planned maintenance may disrupt the operation of the Journaling Protection service. This may lead to the service being unavailable, or a temporary increase to the RPO a customer may be able to achieve on the platform.
+On occasion, Planned Maintenance may disrupt the operation of the Journaling Protection service. This may lead to the service being unavailable, or a temporary increase to the RPO a customer may be able to achieve on the platform.
 
 If there's a potential disruption, we'll highlight this to you via the service [status page](https://status.ukcloud.com/) and UKCloud Portal notifications system.
 

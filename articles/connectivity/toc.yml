@@ -1,7 +1,5 @@
 - name: FAQs
   items:
-  - name: Bandwidth monitoring FAQs
-    href: conn-faq-bandwidth-monitoring.md
   - name: DDoS mitigation service FAQs
     href: conn-faq-ddos.md
   - name: Emergency Services Network FAQs

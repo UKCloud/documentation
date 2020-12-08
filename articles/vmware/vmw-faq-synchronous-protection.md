@@ -81,7 +81,7 @@ When a failure occurs, edge gateways, virtual data centres (VDCs) and organisati
 
 ### Can I ask for the VMs in my environment to be split between UKCloud sites?
 
-You cannot specifically request this as part of the service, but UKCloud retains the right to do this if necessary, such as during planned maintenance.
+You cannot specifically request this as part of the service, but UKCloud retains the right to do this if necessary, such as during Planned Maintenance.
 
 ### Can I be alerted when a VM is moved to a different site?
 

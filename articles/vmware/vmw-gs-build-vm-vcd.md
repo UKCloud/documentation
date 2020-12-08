@@ -94,7 +94,7 @@ First, you need to create a network that can connect to external networks outsid
 
 13. Click **Next**.
 
-14. When you connect a network to the outside world, it's important that you control exactly what can access your environment via that network. UKCloud for VMWare uses edge gateways to do this.
+14. When you connect a network to the outside world, it's important that you control exactly what can access your environment via that network. UKCloud for VMware uses edge gateways to do this.
 
     In the *Edge Connection* page, select the edge that you want your new network to use (we'll work more with the edge gateway later on).
 

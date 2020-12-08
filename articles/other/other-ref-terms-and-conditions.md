@@ -4,7 +4,7 @@ description: Provides links to the various UKCloud Terms and Conditions document
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 26/09/2020
+lastreviewed: 26/11/2020
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -63,10 +63,6 @@ This article will be updated as and when new Terms and Conditions documents are 
 - PSN connectivity
 
 - HSCN connectivity
-
-## UKCloud Online Terms
-
-[Online Terms and Conditions](https://ukcloud.com/onlinetermsandconditions/) - These terms apply when services are bought online via the UKCloud website.
 
 ## Feedback
 

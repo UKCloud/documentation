@@ -400,13 +400,11 @@ For the Elevated OFFICIAL platform, security requirements are stricter and requi
 
 ### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place periodically and at a time which aims to minimise customer impact. We provide customers with at least 14 days' advance notice of planned maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Friday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
+### Can UKCloud provide notifications for service status and maintenance?
 
-### Can I configure email alerts from the Portal?
-
-Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.
+Yes, you can subscribe to the [UKCloud Service Status page](https://status.ukcloud.com/) to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see [*How to subscribe to service status notifications*](../other/other-how-subscribe-service-status.md).
 
 ## Service Limitations
 
@@ -517,8 +515,6 @@ Historic billing information is available via the UKCloud Portal.
 ### How can I pay for the services?
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
-
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### How are snapshots charged?
 
