@@ -3,8 +3,8 @@ title: How to move resources between OpenStack regions
 description: Helps you understand how you can move resources between OpenStack regions
 services: openstack
 author: Sue Highmoor
-reviewer: scassidy
-lastreviewed: 08/01/2020
+reviewer: srelf
+lastreviewed: 10/12/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -46,6 +46,8 @@ Corsham | 00005 (cor00005.cni.ukcloud.com) | 0000c-1
 &nbsp; | &nbsp; | 0000c-2
 Farnborough | 00006 (frn00006.cni.ukcloud.com) | 00021-1
 &nbsp; | &nbsp; | 00021-2
+Corsham 2 | 00005 (cor00005-2.cni.ukcloud.com) | 00026-1
+&nbsp; | &nbsp; | 00026-2
 
 Details correct at date of publication. Current details can be found in the UKCloud Knowledge Centre.
 
