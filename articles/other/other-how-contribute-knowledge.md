@@ -52,9 +52,9 @@ To submit changes or new articles you must have a GitHub account.
 
 7. When you're done, at the bottom of the page, enter a short descriptive name for your change and, optionally, a longer description to provide more detail.
 
-8. Click **Propose file change**.
+8. Click **Commit changes**.
 
-    ![Propose file change](images/other-github-propose-change.png)
+    ![Commit changes](images/other-github-commit-changes.png)
 
 9. Review the changes you've made.
 
