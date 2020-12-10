@@ -55,10 +55,6 @@ Code | Reason
 
 Authenticates your API session.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -128,10 +124,6 @@ Returns a list of up to 10 VMs.
 
 > [!NOTE]
 > The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
-
-### API version
-
-v1
 
 ### Request
 
@@ -224,10 +216,6 @@ Returns a response with a list of up to 10 VMs
 
 An endpoint to test API functionality.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -277,10 +265,6 @@ Returns OK if the user has been authenticated.
 ## GET /api/accounts
 
 Returns a list of accounts associated with the current user.
-
-### API version
-
-v1
 
 ### Request
 
@@ -362,10 +346,6 @@ Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with 
 
 > [!NOTE]
 > The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
-
-### API version
-
-v1
 
 ### Request
 
@@ -797,10 +777,6 @@ Returns information about the VDCs, vApps and VMs associated with the specified 
 > [!NOTE]
 > The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -892,10 +868,6 @@ Returns a list of VDCs, vApps and VMs.
 
 Returns a list of vCloud API credentials associated with the specified account.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -983,10 +955,6 @@ Returns an array of vCloud Director API credentials.
 ## GET /api/accounts/:account_id/vorgs
 
 Returns a list of basic information about VMware compute services (vOrgs) associated with the specified account.
-
-### API version
-
-v1
 
 ### Request
 
@@ -1150,10 +1118,6 @@ The authenticated user who creates the vOrg is automatically granted full admini
 > [!NOTE]
 > This API endpoint is available only in Regions 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -1303,10 +1267,6 @@ Returns information about the progress of a specific vOrg build.
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -1444,10 +1404,6 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 ## GET /api/accounts/:account\_id/vorg-builds
 
 Returns information about all self-service vOrg builds for an account.
-
-### API version
-
-v1
 
 ### Request
 
@@ -1648,10 +1604,6 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 
 Returns a list of basic information about the virtual data centres (VDCs) in the specified account under the specified vOrg.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -1808,10 +1760,6 @@ Creates a VDC in the specified account under the specified compute service (vOrg
 
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
-
-### API version
-
-v1
 
 ### Request
 
@@ -1982,10 +1930,6 @@ Returns information about the progress of a specific VDC build.
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2140,10 +2084,6 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 ## GET /api/accounts/:account_id/vdc-builds
 
 Returns information about all self-service VDC builds for an account.
-
-### API version
-
-v1
 
 ### Request
 
@@ -2360,10 +2300,6 @@ Creates an edge gateway in the specified account under the specified organisatio
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2489,10 +2425,6 @@ Provides information about the progress of a specific edge gateway build.
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2603,10 +2535,6 @@ state | String | The state of the build<br>Valid values:<br>- approved -- edge g
 ## GET /api/accounts/:account_id/edge-gateway-builds
 
 Returns information about all self-service edge gateway builds for an account.
-
-### API version
-
-v1
 
 ### Request
 
@@ -2789,10 +2717,6 @@ state | String | The state of the build<br>Valid values:<br>- approved -- edge g
 
 Returns a list of VMotion events that occurred in the specified account over the last 12 hours.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2890,10 +2814,6 @@ Returns an array of VMotion events for the last 12 hours.
 
 Returns billing information for Cloud Storage.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2961,10 +2881,6 @@ For more information about this CSV, see [*Understanding your invoice evidence f
 
 > [!TIP]
 > Usage data is updated on a daily basis, so you only need to call this endpoint once a day to get the latest cost information. For example, you might call the endpoint at 06:00 each day to get the costs from the previous day.
-
-### API version
-
-v1
 
 ### Request
 

@@ -33,24 +33,6 @@ use the Portal API. For more information about UKCloud regions, see [*Understand
 
 The examples in this guide are shown as curl commands, but you may find it easier to work with the API by installing a REST client (for example, Insomnia).
 
-Before reading this guide, you may find it useful to understand the following:
-
-- **Versioning** - The Portal API uses a version scheme that you can specify in the Accept header:
-
-        Accept: application/vnd-skyscapecloud-v1
-
-    The examples in this guide use V1 of the API. As V1 is the default version, the examples don't explicitly set the API version.
-
-- **Accept headers** - Within your API call, set the `Accept` header for the type of response you'd like returned:
-
-  - `Accept: application/json` - for a response in JSON format
-
-  - `Accept: application/xml` - for a response in XML format
-
-       The examples in this guide accept JSON responses. As JSON is the default format, the examples don't explicitly set the response type. If you require XML responses, you must include the appropriate `Accept` header.
-
-       You can add `.json` or `.xml` to the end of the API endpoint URL to override the `Accept` header.
-
 ## Authenticating to the API
 
 The Portal API uses session authentication. Before calling any of the API endpoints, you must first authenticate to the API.
