@@ -3,8 +3,8 @@ title: PSN for Policing and enhanced regime FAQs
 description: Frequently asked questions for PSN for Policing and enhanced regime
 services: connectivity
 author: Matt Warner
-reviewer:
-lastreviewed: 20/07/2018 18:37:23
+reviewer: Nick Stobbart
+lastreviewed: 10/12/2020 15:32
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -31,7 +31,7 @@ The PSN-P is based on the IPED (Inter-Provider Encryption Domain) to enable mult
 
 ## Can data get between the PSN for Policing CUG and the Enhanced Regime?
 
-Yes. There are gateways, external to UKCloud, that allow data to traverse the two networks. This is managed and controlled by Vodafone. For questions relating to this gateway please contact Vodafone or the PSN for Policing Authority.
+Yes. There are gateways, external to UKCloud which allow data to traverse the two networks. This is managed and controlled by Vodafone. For questions relating to this gateway please contact Vodafone or the PSN for Policing Authority.
 
 ## How do I get on the PSN for Policing or the Enhanced Regime?
 
@@ -49,7 +49,7 @@ You will need to contact the PSN for Policing Information Assurance team: (<info
 
 ## Can I connect directly to the UKCloud Elevated OFFICIAL platform using a PSN for Policing CUG?
 
-Yes. Even though the PSN for Policing is an overlay on the PSN-A, the connection in will be installed as a private circuit into UKCloud, provided and managed by Vodafone. This means it can be terminated in the Elevated Cloud platform. Please see our [*HybridConnect FAQs*](conn-faq-hybridconnect.md) for more information around connecting your own line into the UKCloud platform.
+Yes. Even though the PSN for Policing is an overlay on the PSN-A, the connection will be installed as a private circuit into UKCloud, provided and managed by Vodafone. This means it can be terminated in the Elevated Cloud platform. Please see our [*HybridConnect FAQs*](conn-faq-hybridconnect.md) for more information around connecting your own line into the UKCloud platform.
 
 ## Can I connect directly to the UKCloud Elevated OFFICIAL platform using the Enhanced Regime?
 
@@ -69,7 +69,7 @@ You should be careful not to misconfigure self-managed components of the solutio
 
 You will need to liaise with Vodafone to ensure that these IPs are associated with your service within UKCloud. You may be asked by Vodafone for your circuit reference numbers, please raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to obtain these.
 
-You will then need to have these IPs added to your accounts, you can do this via a service request. UKCloud may need to work with Vodafone to advertise these IPs this process can take up to 10 days to facilitate. Once complete, you will then be able to provide your service over the new IPs.
+You will then need to have these IPs added to your accounts, you can do this via a service request. UKCloud may need to work with Vodafone to advertise these IPs which can take up to 10 days to facilitate. Once complete, you will then be able to provide your service over the new IPs.
 
 ## Can I swap out my existing PSN-P IPs for Enhanced Regime IPs?
 
