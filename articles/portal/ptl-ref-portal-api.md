@@ -4,7 +4,7 @@ description: Shows how to interact with the UKCloud Portal via use of an applica
 services: portal
 author: shighmoor
 reviewer: ccouzens
-lastreviewed: 29/10/2020
+lastreviewed: 08/12/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
