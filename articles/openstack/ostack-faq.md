@@ -23,7 +23,7 @@ toc_mdlink: ostack-faq.md
 
 UKCloud for OpenStack is an OpenStack-powered Infrastructure as a Service (IaaS) offering which enables organisations to rapidly provision and scale secure instances (VMs) in seconds, in a flexible and autonomous manner.
 
-UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain and cost, instead of designing to the highest level which may not always be needed.
+UKCloud provides this service across Assured OFFICIAL (formerly PGA IL2), offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain and cost, instead of designing to the highest level which may not always be needed.
 
 ### What hypervisor do you use?
 
