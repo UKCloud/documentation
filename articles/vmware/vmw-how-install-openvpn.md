@@ -2,7 +2,7 @@
 title: How to install and configure OpenVPN
 description: Details the steps required to obtain, deploy and configure an OpenVPN virtual appliance to obtain remote access to your virtual data centres running on the UKCloud platform
 services: vmware
-author: Sue Highmoor
+author: shighmoor
 reviewer: jpaddock
 lastreviewed: 14/05/2020
 
@@ -66,6 +66,38 @@ For more information, see [*How to create NAT rules*](vmw-how-create-nat-rules.m
 
 To deploy the OpenVPN appliance:
 
+### [VMware Cloud Director 10.1](#tab/tabid-a)
+
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC in which you want to deploy the OpenVPN appliance.
+
+2. In the left navigation panel, under *Compute*, select **vApps**.
+
+    ![vApps tab in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
+
+3. Click **New**, then select **Add vApp from OVF**.
+
+    ![Add vApp from OVF option](images/vmw-vcd10.1-mnu-vapp-from-ovf.png)
+
+4. Select the OpenVPN OVA that you downloaded then click **Next**.
+
+5. Review the details of the OVA to confirm that it's the right image then click **Next**.
+
+6. The appliance will be deployed as a single VM inside a vApp. Provide a **Name** and (optional) **Description** for the vApp then click **Next**.
+
+7. Provide a valid NetBIOS host name and your desired storage policy then click **Next**.
+
+8. Configure the network by selecting **Switch to the advanced networking workflow**.
+
+9. Select the network adapter type, network and IP pool assignment (**Manual**), assign a valid IP from within your range, then click **Next**.
+
+10. Select the number of vCPUs, sockets and memory this appliance will have then click **Next**.
+
+11. Review the details then click **Finish** to deploy the vApp and appliance.
+
+12. When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.
+
+### [vCloud Director 9.7](#tab/tabid-b)
+
 1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to deploy the OpenVPN appliance.
 
 2. In the left navigation panel, select **vApps**.
@@ -94,11 +126,13 @@ To deploy the OpenVPN appliance:
 
 12. When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMware's guest customisations to take effect before you start configuring OpenVPN.
 
+***
+
 ## Performing initial configuration
 
 To perform initial configuration:
 
-1. In vCloud Director (under **Compute > Virtual Machines**), open the console for your OpenVPN VM.
+1. In VMware Cloud Director/vCloud Director (under **Compute > Virtual Machines**), open the console for your OpenVPN VM.
 
     > [!TIP]
     > If you haven't already done so, you may need to download the VMware Remote Console.
@@ -150,7 +184,7 @@ During our tests, the DNS resolver configuration was not added by the VMware cus
 
     `# pico /etc/network/interfaces`
 
-2. Use the arrow keys to scroll down. At the first free line specify your DNS servers, for example::
+2. Use the arrow keys to scroll down. At the first free line specify your DNS servers, for example:
 
     `dns-nameservers 8.8.8.8`
 

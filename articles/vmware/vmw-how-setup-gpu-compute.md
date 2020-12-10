@@ -2,9 +2,9 @@
 title: How to set up Cloud GPU Compute for UKCloud for VMware
 description: Provides information to get up and running with Cloud GPU Compute for UKCloud for VMware
 services: vmware
-author: Sue Highmoor
-reviewer: mhodgetts
-lastreviewed: 05/08/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 17/11/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -33,7 +33,7 @@ This article provides an introduction for how to use Cloud GPU for compute workl
 
 ### Intended audience
 
-To complete the steps in this article you must have access to the UKCloud Portal and vCloud Director.
+To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.
 
 ## Cloud GPU overview
 
@@ -109,17 +109,18 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![vCloud Director tab in the UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-6. In vCloud Director, click the menu icon and select **Libraries**.
+6. In the VMware Cloud Director/vCloud Director menu, select **Libraries**.
 
-    ![Libraries menu option](images/vmw-vcd-mnu-libraries.png)
+    > [!TIP]
+    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
 
-7. In the left navigation panel, click **vApp Templates**.
+7. In the left navigation panel, under *Content Libraries*, select **vApp Templates**.
 
-    ![vApp Templates menu option](images/vmw-vcd-mnu-vapp-templates.png)
+8. Create a vApp from the **GPGPU** template for your preferred operating system (for example **CentOS7x64-GPGPU-Blank**).
 
-8. Click the triple-dot icon next to the **GPGPU** template for your preferred operating system (for example **CentOS7x64-GPGPU-Blank**) and select **Create vApp**.
+    - In vCloud Director 9.7, click the triple-dot icon next to the template and select **Create vApp**.
 
-    ![Create vApp menu option](images/vmw-vcd-mnu-create-vapp-from-template.png)
+    - In VMware Cloud Director 10.1, select radio button for the template and click **Create vApp**.
 
     > [!NOTE]
     > The GPGPU templates provide a shell VM with no disks attached, hence no operating system installed. You'll need to add the necessary disks so that you can install your preferred operating system on the VM.
@@ -128,7 +129,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![Select Name page of Create vApp from Template dialog box](images/vmw-vcd-vapp-from-template-name.png)
 
-10. On the *Configure Resources* page, from the list of VDCs, select the VDC in which you want to create the VM and click **Next**.
+10. On the *Configure Resources* page, from the list of VDCs, select the VDC in which you want to create the VM.
 
     > [!NOTE]
     > You must create your VM in a PRIORITY VDC.
@@ -139,32 +140,29 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
 12. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
 
-    You can check progress by expanding the *Recent Tasks* section at the bottom of the vCloud Director Tenant UI.
+    You can check progress by expanding the *Recent Tasks* section.
 
-13. After the VM has been deployed, click the menu icon and select **Datacenters**.
-
-    ![Datacenters menu option](images/vmw-vcd-mnu-dcs.png)
+13. After the VM has been deployed, from the main menu, select **Datacenters** (vCloud Director 9.7) or **Data Centres** (VMware Cloud Director 10.1).
 
 14. Select your VDC, then in the card for your newly-deployed VM, select **Details**.
 
-15. Expand the *Hardware* section.
+15. In the *Hardware* section, in the *Hard Disks* section/page, click **Add** and add a hard disk of an appropriate size for your operating system.
 
-16. In the *Hard Disks* section, click **Add** and add a hard disk of an appropriate size for your operating system.
+    > [!TIP]
+    > In VMware Cloud Director, click **Edit**, then click **Add** in the *Edit Hard Disks* dialog box.
 
     > [!NOTE]
     > We recommend using **Paravirtual (SCSI)** disk controllers, but for older operating systems, you may need to use **LSI Logic SAS (SCSI)**.
 
-17. In the card for the VM, select **Actions** then **Power On**.
+16. In the card for the VM, select **Actions** then **Power On**.
 
-18. Use the popout console to go through the setup procedure.
+17. Use the console to go through the setup procedure.
 
-    ![Popout console icon](images/vmw-vcd-ico-console-gpu.png)
-
-19. When your VM is ready, install your preferred operating system.
+18. When your VM is ready, install your preferred operating system.
 
     For detailed steps, see [*Installing an operating system into the VM*](vmw-how-create-vm-from-scratch.md#installing-an-operating-system-into-the-vm)
 
-20. When you're finished, select **Actions** then **Power Off**.
+19. When you're finished, select **Actions** then **Power Off**.
 
     > [!IMPORTANT]
     > It is essential that you power off the VM so that UKCloud can migrate it to a GPU‑enabled server.
@@ -190,8 +188,6 @@ To install NVIDIA drivers:
 1. Power on your VM.
 
 2. In the card for the VM, select **Actions** then **Insert Media**.
-
-    ![Insert CD/DVD from Catalog menu option](images/vmw-vcd-mnu-insert-media.png)
 
 3. In the *Insert CD* dialog box, select the vGPU driver ISO and click **Insert**.
 

@@ -2,8 +2,8 @@
 title: Synchronous Protection Service Scope
 description: Outlines important details regarding the Synchronous Protection service
 services: vmware
-author: Steve Hall
-reviewer: Guy Martin
+author: shall
+reviewer: gmartin
 lastreviewed: 22/03/2019
 toc_rootlink: Service Information
 toc_sub1: 
@@ -140,7 +140,7 @@ You can also receive alerts via email subscription or using the [Service Status 
 
 We'll contact you after a failover to inform you that our actions are complete.
 
-We do not currently provide alerts when a VM is moved to a different site. However, you can check the location of your VMs. For more information, see [*How to use VM location in vCloud Director*](vmw-how-use-vm-location.md).
+We do not currently provide alerts when a VM is moved to a different site. However, you can check the location of your VMs. For more information, see [*How to use VM location*](vmw-how-use-vm-location.md).
 
 ## Networking
 
