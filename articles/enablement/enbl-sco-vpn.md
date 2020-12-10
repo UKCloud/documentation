@@ -2,9 +2,9 @@
 title: Cloud Enablement - VPN solutions Service Scope
 description: Outlines important details regarding Cloud Enablement for VPN solutions
 services: enablement
-author: Steve Hall
-reviewer: Nick Stobbart
-lastreviewed: 20/10/2020
+author: shall
+reviewer: bchallis
+lastreviewed: 08/12/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -34,7 +34,7 @@ The table provides an overview of the Cloud Enablement services available for VP
 **Security level** | Assured OFFICIAL
 **Service level (default)** | Single data centre, no automatic failover
 **Hosted device** | VPN device eg firewall
-**Cloud Enablement sizing** | one bay = 10U, 1kW per month
+**Cloud Enablement sizing** | one bay = 10U, 1kW of power
 **Typical device size** | 1U / 2U
 **Hosted device(s) allowed** | Depends on solution. UKCloud will work with the customer to understand the requirement and assess the suitability of the devices that the customer wishes to locate within Cloud Enablement
 **Hosted device power draw** | Customer devices within a single 10u bay have a combined average power draw of no more than 1kW. Average power draw will be assessed based vendor material supplied by the customer as part of the engagement with UKCloud prior to installation of devices
