@@ -3,8 +3,8 @@ title: HSCN connectivity FAQs
 description: Frequently asked questions for HSCN Connectivity
 services: connectivity
 author: Matt Warner
-reviewer:
-lastreviewed: 20/07/2018 18:37:23
+reviewer: Nick Stobbart
+lastreviewed: 10/12/2020 14:27:23
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -57,7 +57,7 @@ You can find all ODS and connection agreements at <https://crm.digital.nhs.uk/hs
 
 ### UKCloud are not on NHS Digital's CN-SP list. Can you provide HSCN?
 
-UKCloud doesn't appear on the NHS Digital list of HSCN Consumer Network Service Providers (CN-SPs) as we are not a connectivity service provider in the same way as BT, Vodafone, Redcentric are, as we cannot provide 'cables in the ground' for consumers of HSCN. We are a Cloud Service Provider (CSP), which means we can allow customers to _share_ our HSCN link as long as they have an ODS code, a valid DSP Toolkit, are signed up to the terms in the HSCN Connection Agreement and are consuming one of our value-add services, such as our VMware or OpenStack IaaS or our Virtual Desktop services. We can provide more information about this on request.
+UKCloud does not appear on the NHS Digital list of HSCN Consumer Network Service Providers (CN-SPs) as we are not a connectivity service provider in the same way as BT, Vodafone, Redcentric are, as we cannot provide 'cables in the ground' for consumers of HSCN. We are a Cloud Service Provider (CSP), which means we can allow customers to _share_ our HSCN link as long as they have an ODS code, a valid DSP Toolkit, are signed up to the terms in the HSCN Connection Agreement and are consuming one of our value-add services, such as our VMware or OpenStack IaaS or our Virtual Desktop services. We can provide more information about this on request.
 
 ## Service
 
@@ -83,7 +83,7 @@ UKCloud charges monthly for connectivity solutions, and requires a minimum commi
 
 ### Will I incur an upfront cost (setup fee)?
 
-Simple implementations of HSCN won't incur any additional setup or onboarding charges.
+Simple implementations of HSCN will not incur any additional setup or onboarding charges.
 
 For complex networking solutions, we reserve the right to charge SFIA rates. We'll always tell you in advance if an engagement will incur [SFIA Rate Card](http://www.ukcloud.com/sfia) charges.
 
@@ -93,7 +93,7 @@ The HSCN is an unencrypted network and we don't provide additional data encrypti
 
 You must encrypt the data within your applications, especially personally identifiable data (PID), with an AES256 level of encryption.
 
-### Can I use UKCloud's HSCN connected service if I'm based outside of England?
+### Can I use UKCloud's HSCN connected service if based outside of England?
 
 IT Service Providers can use a share of UKCloud's HSCN connection from outside of England as long as they comply with the criteria specified in the NHS Digital guidance: <https://digital.nhs.uk/services/health-and-social-care-network/hscn-technical-guidance/hscn-private-it-service-provider-connecting-from-outside-of-englands-borders-policy>.
 
@@ -105,13 +105,13 @@ You will have unrestricted access to the HSCN but you may not be able to access 
 
 ## Process
 
-### Are you an HSCN Aggregator?
+### Are UKCloud a HSCN Aggregator?
 
-We are an HSCN connected Cloud Service Provider and can give you an HSCN connection to environments on our cloud, however there is no longer an Aggregation programme for HSCN.
+We are an HSCN connected Cloud Service Provider and can give you a HSCN connection to environments on our cloud, however there is no longer an Aggregation programme for HSCN.
 
-Once you are aligned with the HSCN Connection Agreement terms, either by signing your own agreement, or by signing to UKCloud's terms, we will connect you to our aggregated HSCN connection.
+Once you are aligned with the HSCN Connection Agreement terms, either by signing your own agreement, or by signing to UKCloud's terms, we will connect you to our shared HSCN connection.
 
-### How do I get an HSCN-connected solution via the UKCloud assured cloud platform?
+### How do I get a HSCN connected solution via the UKCloud assured cloud platform?
 
 You can get HSCN connectivity in one of two ways.
 
@@ -169,7 +169,7 @@ We provide an SLA for availability of our core services such as Enterprise Compu
 
 You will be given one (1) useable IP address per HSCN Edge/router. Any additional IP addresses will need to be justified and are an additional cost.
 
-You can be allocated up to 5 IP addresses per connection. If you require more than 5 IPs per connection you will need to request additional IPs from NHS Digital and we can advertise them on your behalf.
+You can be allocated up to 5 IP addresses per connection. If you require more than 5 IPs per connection you will need to request additional IPs from NHS Digital which we can advertise on your behalf.
 
 ### How do I justify the need for more IP addresses?
 
@@ -189,7 +189,7 @@ Yes. There is an administration fee of £20 for each additional HSCN IP address.
 
 You can log into the UKCloud Portal and, within the edge gateway properties, edit the firewall settings to allow or deny incoming connections from external IP addresses.
 
-### How does IP address allocation work on an HSCN network for two front-end servers?
+### How does IP address allocation work on a HSCN network with two front-end servers?
 
 You can implement this in two ways:
 
@@ -199,7 +199,7 @@ You can implement this in two ways:
 
 ### How does name resolution (DNS) happen on HSCN?
 
-There are two DNS servers on the HSCN network which is looked after by the NHS Digital DNS team. UKCloud permits access (outbound) on UDP port 53 for DNS queries.
+There are two DNS servers on the HSCN network which are looked after by the NHS Digital DNS team. UKCloud permits access (outbound) on UDP port 53 for DNS queries.
 
 To request a DNS change, please email <dnsteam@nhs.net>, who require the following information:
 
@@ -213,7 +213,7 @@ To request a DNS change, please email <dnsteam@nhs.net>, who require the followi
 
 We recommend a couple of days lead time as there may be scheduling issues, though these can be waived in emergencies.
 
-Please note that IP changes are NOT instantaneous and may take some time to propagate fully. We can do out of hours changes for NHS customers
+Please note that IP changes are NOT instantaneous and may take some time to propagate fully. We can perform out of hours changes for NHS customers
 
 ## Feedback
 
