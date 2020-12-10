@@ -53,7 +53,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 
     ![Horizon Overview page](images/ostack-horizon-welcome.png)
 
-For more information about the Horizon dashboard, see the [*Introduction to the OpenStack dashboard*](https://docs.ukcloud.com/articles/openstack/ostack-ref-dashboard.html){target="_blank"}.
+For more information about the Horizon dashboard, see the [*Introduction to the OpenStack dashboard*](https://docs.ukcloud.com/articles/openstack/ostack-ref-dashboard.html).
 
 ## Creating your network infrastructure
 
