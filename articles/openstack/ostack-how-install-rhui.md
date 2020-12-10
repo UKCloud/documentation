@@ -29,7 +29,7 @@ There are two prerequisites for performing this operation:
 
 - The host can resolve to the RHUI DNS records (contact Customer Support for the IP addresses and domain names for these records). You can achieve this by configuring an A record on your local DNS or configuring  an `/etc/hosts` file with the appropriate information. For internet connectivity, the required domain name is in public DNS.
 
-- All hosts using the service must be able to access the local RHUA server on port 443 (HTTPS). Ensure that the configured Security Groups allow outbound connectivity on port 443. If you have any questions on this, contact UKCloud Support.
+- All hosts using the service must be able to access the local RHUI server on port 443 (HTTPS). Ensure that the configured Security Groups allow outbound connectivity on port 443. If you have any questions on this, contact UKCloud Support.
 
 ## Installation
 
