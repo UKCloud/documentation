@@ -4,7 +4,7 @@ description: Shows how to interact with the UKCloud Portal via use of an applica
 services: portal
 author: shighmoor
 reviewer: ccouzens
-lastreviewed: 29/10/2020
+lastreviewed: 08/12/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -116,100 +116,6 @@ curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts'
 
 ```
 {"expire_after": 900}
-```
-
-## GET /api/my_vm
-
-Returns a list of up to 10 VMs.
-
-> [!NOTE]
-> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
-
-### Request
-
-#### Request body
-
-None
-
-#### Parameters
-
-None
-
-#### URI parameters
-
-None
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/my_vm'
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.get('/api/my_vm') { |req| req.headers['cookie'] = cookies }
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-401 Unauthorized --- The user could not be authenticated
-
-#### Response body
-
-Returns a response with a list of up to 10 VMs
-
-#### Example response
-
-```
-{"account":
-  {"vapps":
-    ["_id":1,
-     "urn":"urn:vcloud:vapp:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-     "name":"My vApp",
-     "ps":"On",
-     "total_vms":1,
-     "month_to_date":"£0.00",
-     "estimated_monthly_total":"£0.00"
-    ],
-    "vms":
-    ["_id":1,
-     "urn":"urn:vcloud:vm:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-     "name":"My VM",
-     "size":null,
-     "ps":"On",
-     "os":"Microsoft Windows Server 2008 R2 (64-bit)",
-     "cpu":"2x2GHz",
-     "mem":"4096MB",
-     "storage":"0GB",
-     "created_at":"01/01/2015 09:00",
-     "updated_at":"01/01/2015 09:00",
-     "month_to_date":"£0.00",
-     "estimated_monthly_total":"£0.00",
-     "comment":null,
-     "last_backup_status":"Successful",
-     "in_backup":true,
-     "last_backup":"Completed on the night of: 01/01/2015",
-     "retention_length":14,
-     "billed_hours_powered_on":0,
-     "billed_hours_powered_off":0,
-     "backups":
-     [{"status":"Completed",
-       "backup_slot":"night of: 01/01/2015",
-       "backup_start":"01/01/2015 23:23",
-       "backup_end":"01/01/2015 23:31",
-       "snapshot_removal_start":"01/01/2015 23:33",
-       "snapshot_removal_end":"01/01/2015 23:38"
-     }]
-    ]
-  }
-}
 ```
 
 ## GET /api/ping
