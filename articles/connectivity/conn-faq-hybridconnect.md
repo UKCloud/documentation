@@ -80,7 +80,7 @@ There is a one‑off charge of £1,000 and then a monthly charge of £150 for a 
 
 ## Is there a minimum commit for HybridConnect?
 
-There is a minimum commit of 12 months for HybridConnect. In the case of early termination, you will be liable for any remaining balance.
+There is a minimum commit of 6 months for HybridConnect. In the case of early termination, you will be liable for any remaining balance.
 
 ## General connectivity questions
 

@@ -72,7 +72,7 @@ Lead times vary depending on product. HybridConnect can normally be delivered wi
 
 ## Minimum commit
 
-For both products, there is a minimum commit of 12 months. In the case of early termination, you will be liable for any remaining balance.
+For both products, there is a minimum commit of 6 months. In the case of early termination, you will be liable for any remaining balance.
 
 ## Comparison table
 
