@@ -17,13 +17,15 @@ toc_mdlink: enbl-ref-services.md
 
 # Cloud Enablement services
 
-UKCloud provides several Cloud Enablement services to help you install your own hardware in our cloud platform:
+As a multi-cloud provider, UKCloud knows the importance of being able install your own hardware in our cloud platform. We call this 'Cloud Enablement' because it is a key capability that enables you to use cloud services more extensively.  Here are some examples:
 
-- CAPS/CPA-approved VPN - Provides basic facilities for your own CAPS and CPA-approved (or equivalent standard) hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - CAPS/CPA-approved VPN Service Scope*](enbl-sco-capscpa.md).
+- CAPS/CPA-approved VPN - Provides secure hosting facilities for your own CAPS and CPA-approved (or equivalent standard) hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - CAPS/CPA-approved VPN Service Scope*](enbl-sco-capscpa.md).
 
-- VPN solutions - Provides basic facilities for your own VPN hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - VPN solutions Service Scope*](enbl-sco-vpn.md).
+- Hardware Security Module (HSM) - Provides secure hosting facilities for your HSM to provide secure key management and encryption capabilities across your workloads in our cloud. For more information, see the [*Cloud Enablement - Server/Storage Hosting Service Scope*](enbl-sco-hosting.md).
 
-- Server/Storage Hosting - Provides basic facilities for your own hosting servers and storage hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - Server/Storage Hosting Service Scope*](enbl-sco-hosting.md).
+- VPN solutions - Provides secure facilities for your own VPN hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - VPN solutions Service Scope*](enbl-sco-vpn.md).
+
+- Server/Storage Hosting - Provides secure facilities for your own hosting servers and storage hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - Server/Storage Hosting Service Scope*](enbl-sco-hosting.md).
 
 The following diagram shows the different configurations available to you for these Cloud Enablement services:
 
