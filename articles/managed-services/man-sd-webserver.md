@@ -53,7 +53,7 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 ## An SLA you can trust
 
-We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. As the SLA varies based on the chosen cloud technology, you can find full details on each service's SLA, including measurements and service credits, in the [*SLA defintion*](../other/other-ref-sla-definition.md).
+We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. As the SLA varies based on the chosen cloud technology, you can find full details on each service's SLA, including measurements and service credits, in the [*SLA definition*](../other/other-ref-sla-definition.md).
 
 ## The small print
 
