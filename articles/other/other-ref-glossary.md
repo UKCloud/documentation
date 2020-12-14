@@ -2,9 +2,9 @@
 title: UKCloud glossary
 description: Provides definitions of commonly used UKCloud terms
 services: other
-author: Hannah Ferris
-reviewer:
-lastreviewed: 19/11/2019
+author: hferris
+reviewer: shighmoor
+lastreviewed: 03/12/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -37,12 +37,6 @@ Within the UKCloud environment there are two types of accounts:
 
 *See:* [Neustar DDoS Protection from UKCloud](#neustar-ddos-protection-from-ukcloud)
 
-### Assured inter-data centre connectivity
-
-A connectivity option in the Assured security domain that provides connectivity between the two UKCloud sites using multi-tenanted, internet-facing circuits.
-
-*See also:* [Data centre interconnect (DCI)](#data-centre-interconnect-dci), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
-
 ### Assured OFFICIAL
 
 A security domain on the UKCloud platform that provides access to public networks, such as the internet, PSN, HSCN or Janet.
@@ -59,9 +53,9 @@ A security domain on the UKCloud platform that provides access to public network
 
 ## B
 
-### Basic Managed Compute
+### Big Cloud Enablement
 
-*See:* [Managed IT Operations](#managed-it-operations)
+*See:* [Cloud Enablement](#cloud-enablement)
 
 ### Bring Your Own Firewall (BYOF)
 
@@ -91,11 +85,13 @@ For more information, see the relevant Cloud Enablement service scope:
 
 - [Cloud Enablement service scope for CAPS/CPA approved VPN](../enablement/enbl-sco-capscpa.md)
 
-### Cloud GPU
+- [Big Cloud Enablement Service Scope](../enablement/enbl-sco-bigcolo.md)
 
-A UKCloud IaaS service that enables you to supplement your on-platform compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.
+### Cloud Optimisation from UKCloud
 
-For more information, see the [Cloud GPU service definition](../gpu/gpu-sco.md).
+A UKCloud service, utilising CloudHealth&reg;, that helps you optimise and manage large scale cloud implementations to help you avoid cloud sprawl and reduce cloud spend, achieving initial savings of up to 30%.
+
+For more information, see [Cloud Optimisation from UKCloud Service Definition](../managed-services/man-sd-optimisation.md).
 
 ### CloudSOC from UKCloud
 
@@ -109,7 +105,7 @@ For more information, see the [Cloud Storage service definition](../cloud-storag
 
 ### Compute service
 
-A UKCloud for VMware top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogs, users and resources.
+A UKCloud for VMware top-level container within a customer account that includes a VMware Cloud Director/vCloud Director organization and its VDCs, catalogs, users and resources.
 
 ### Cross Domain Security Zone (CDSZ)
 
@@ -118,6 +114,12 @@ A UKCloud IaaS service that provides the ability to securely transfer data betwe
 For more information, see the [Cross Domain Security Zone service definition](../cdsz/cdsz-sd.md).
 
 *See also:* [Walled Garden](#walled-garden), [Secure Remote Access (SRA)](#secure-remote-access-sra)
+
+### CrownConnect (Private Connectivity)
+
+A connectivity option that enables you to bring private connectivity into service provider locations anywhere in the ARK data centre campus. UKCloud will then arrange for onward connectivity from the termination point into your cloud service. The service provider locations can be anywhere within the ARK Crown Campus and are not limited to UKCloud's core network locations.
+
+*See also:* [HybridConnect](#hybridconnect)
 
 ### Customer Success Manager (CSM)
 
@@ -129,7 +131,7 @@ For more information, see the [Cross Domain Security Zone service definition](..
 
 A UKCloud connectivity service that enables self-designed and managed disaster recovery solutions, or increased connectivity resilience, by using UKCloud's assured connections between our sites.
 
-*See also:* [Assured inter-data centre connectivity](#assured-inter-data-centre-connectivity), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
+*See also:* [Internet-based inter-data centre connectivity](#internet-based-inter-data-centre-connectivity), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
 
 ### Data Transfer Facility (DTF)
 
@@ -141,7 +143,7 @@ A UKCloud enablement service that enables you to use the secure network connecti
 
 A UKCloud service option that enables you to have a reserved, single-tenanted section of our cloud, provisioned for your sole use, where the physical CPU and RAM allocations are known. This is useful if you need to run abnormal VM sizes, meet specific software licensing requirements or have increased security requirements.
 
-For more information, see the [Dedicated Compute service scope](../dedicated-compute/dc-sd.md).
+For more information, see the [UKCloud Dedicated Compute v2 service scope](../dedicated-compute/dc-sd.md).
 
 Note the difference between Dedicated Compute, which is run within our multi-tenanted environment, and Private Cloud, which is a single-tenant environment run on independent infrastructure, providing a private cloud environment.
 
@@ -151,9 +153,13 @@ Note the difference between Dedicated Compute, which is run within our multi-ten
 
 A connectivity option available in the Assured and Elevated security domains that provides dedicated bandwidth between the two UKCloud sites.
 
-*See also:* [Assured inter-data centre connectivity](#assured-inter-data-centre-connectivity), [Data centre interconnect (DCI)](#data-centre-interconnect-dci)
+*See also:* [Internet-based inter-data centre connectivity](#internet-based-inter-data-centre-connectivity), [Data centre interconnect (DCI)](#data-centre-interconnect-dci)
 
-### Disaster Recovery as a Service
+### Desktop as a Service (DaaS)
+
+*See:* [UKCloud Desktop as a Service](#ukcloud-desktop-as-a-service)
+
+### Disaster Recovery as a Service (DRaaS)
 
 A UKCloud IaaS service, powered by Zerto, that enables you to easily replicate data and VMs from your primary site to UKCloud to recover your services with minimum downtime and data loss.
 
@@ -165,15 +171,13 @@ For more information, see the [Disaster Recovery as a Service service definition
 
 A virtual router that provides VDC network services such as DHCP, firewall, NAT, static routing, VPN and load balancing.
 
+*See also:* [NSX Edge](#nsx-edge)
+
 ### Elevated OFFICIAL
 
 A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN.
 
 *See also:* [Assured OFFICIAL](#assured-official), [OFFICIAL](#official), [OFFICIAL SENSITIVE](#official-sensitive)
-
-### Email and Collaboration as a Service
-
-Email and Collaboration as a Service has been removed from sale. However, we'll continue to support and maintain this service for current customers.
 
 ### Ephemeral storage
 
@@ -203,10 +207,6 @@ A network service that controls traffic into and out of your environment using d
 
 ## G
 
-### Geo-resilient storage
-
-Geo-resilient storage is no longer available as a storage option for UKCloud for VMware.
-
 ### Global Load Balancing
 
 *See:* [Neustar UltraDNS from UKCloud](#neustar-ultradns-from-ukcloud)
@@ -225,17 +225,13 @@ A government network designed to provide a solution for hospitals, medical centr
 
 For more information, see the [HSCN FAQs](../connectivity/conn-faq-hscn.md).
 
-## High Performance Compute (HPC)
-
-A UKCloud IaaS service that provides a single-tenant compute infrastructure specifically designed for large-scale, compute-intensive workloads with requirements for large amounts of processor cores and memory.
-
-For more information, see the [High Performance Compute service definition](../hpc/hpc-sd.md).
-
 ### HybridConnect
 
 A UKCloud connectivity option that makes it easy for you to connect to hybrid clouds by securely connecting to the UKCloud assured cloud platform and supports a variety of flexible private connectivity options enabling hybrid topologies. You can also use HybridConnect in conjunction with our Cloud Enablement service to add, for example, an encryption device or switch.
 
 For more information, see the [HybridConnect FAQs](../connectivity/conn-faq-hybridconnect.md).
+
+*See also:* [CrownConnect (Private Connectivity)](#crownconnect-private-connectivity)
 
 ### Hypervisor
 
@@ -253,7 +249,13 @@ A customer provisioned compute resource within OpenStack, similar to the virtual
 
 ### Inter-data centre connectivity
 
-*See:* [Assured inter-data centre connectivity](#assured-inter-data-centre-connectivity), [Data centre interconnect (DCI)](#data-centre-interconnect-dci), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
+*See:* [Internet-based inter-data centre connectivity](#internet-based-inter-data-centre-connectivity), [Data centre interconnect (DCI)](#data-centre-interconnect-dci), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
+
+### Internet-based inter-data centre connectivity
+
+A connectivity option in the Assured security domain that provides connectivity between the two UKCloud sites using multi-tenanted, internet-facing circuits.
+
+*See also:* [Data centre interconnect (DCI)](#data-centre-interconnect-dci), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
 
 ## J
 
@@ -289,6 +291,14 @@ Let us know your thoughts and ideas by sending an email to <feedback@ukcloud.com
 
 ## M
 
+### Managed Active Directory (AD) Support
+
+A UKCloud advanced managed service that provides you with monitoring and support for your Active Directory services and supporting Windows servers.
+
+For more information, see the [Managed Active Directory Support Service Definition](../managed-services/man-sd-ad.md).
+
+*See also:* [Managed IT Operations](#managed-it-operations)
+
 ### Managed IT Operations
 
 Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, Managed VM recovery points, patching as a service, antivirus as a service and runbook automation. This service provides you with the building blocks to utilise essential operational delivery services.
@@ -299,6 +309,30 @@ For more information, see the [Managed IT Operations Service Definition](../mana
 
 *See:* [Managed IT Operations](#managed-it-operations)
 
+### Managed Remote Desktop Services (RDS) Support
+
+A UKCloud advanced managed service that provides you with monitoring and support for your Remote Desktop Services and supporting Windows servers.
+
+For more information, see the [Managed Remote Desktop Services Support Service Definition](../managed-services/man-sd-rds.md).
+
+*See also:* [Managed IT Operations](#managed-it-operations)
+
+### Managed SQL Server
+
+A UKCloud advanced managed service that provides monitoring and support for your SQL servers.
+
+For more information, see the [Managed SQL Server Service Definition](../managed-services/man-sd-sqlserver.md).
+
+*See also:* [Managed IT Operations](#managed-it-operations)
+
+### Managed Web Server
+
+A UKCloud advanced managed service that provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers.
+
+For more information, see the [Managed Web Server Service Definition](../managed-services/man-sd-webserver.md).
+
+*See also:* [Managed IT Operations](#managed-it-operations)
+
 ### Mass Transfer Facility (MTF)
 
 Our Mass Transfer Facility (MTF) enables you to move virtualised environments, in the form of VMs, into and out of your UKCloud environment using your own network attached storage (NAS) device, hard disk drives (HDDs) or USB drives.
@@ -308,12 +342,6 @@ For more information, see the [Mass Transfer Facility service scope](../enableme
 ### Migration to the Cloud
 
 A UKCloud IaaS service, powered by Zerto, that provides easy to use tools to help customers migrate workloads from their on-premises data centres to the UKCloud platform - all on a self-service basis.
-
-### Multi-Cloud Backup Storage
-
-A UKCloud IaaS service that provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, based on Dell EMC's Data Domain Boost&trade; (DD Boost) technology, enabling open-source backup applications to utilise the backup service as a target. You can also use Multi-Cloud Backup Storage as a remote backup target for your on-premises data.
-
-For more information, see the [Multi-Cloud Backup Storage service definition](../other/other-sd-mcbs.md).
 
 ### Multi-Cloud for Tier 2
 
@@ -337,6 +365,8 @@ Single- or multi tenant instances on a network firewall (NFW). NFT architecture 
 
 Provides a rich set of integrated networking and security gateway services for protecting VDCs and optimising resource utilisation. This virtual appliance includes services such as firewall, network address translation (NAT), load balancing and VPN.
 
+*See also:* [Edge gateway](#edge-gateway)
+
 ### Neustar DDoS Protection from UKCloud
 
 A UKCloud service option, powered by Neustar, to absorb and scrub bad traffic into your environment and protect your applications from DDoS attacks, while still allowing legitimate traffic through.
@@ -355,29 +385,25 @@ For more information, see the [*Neustar UltraDNS from UKCloud FAQs](../connectiv
 
 A Government Security Classification Policy (GSCP) data classification indicating data that is not subject to any special risks, such as personal data.
 
-### OFFICIAL SENSITIVE
+### OFFICIAL-SENSITIVE
 
 OFFICIAL data that requires specific handling to mitigate risk. Security measures required for the data will depend on the specific risks associated with that data.
 
 ### OpenShift
 
-*See:* [UKCloud for OpenShift](#ukcloud-for-openshift)
+*See:* [UKCloud for Managed OpenShift](#ukcloud-for-managed-openshift)
 
 ### OpenStack
 
 *See:* [UKCloud for OpenStack](#ukcloud-for-openstack)
 
-### Optimised storage
-
-*See:* [Tier 1 storage](#tier-1-storage)
-
 ### Oracle
 
-*See:* [UKCloud for Oracle Software](#ukcloud-for-oracle-software)
+*See:* [Private Cloud for Oracle Software](#private-cloud-for-oracle-software)
 
 ### Organization (Org)
 
-A top level container in vCloud Director that contains one or more VDCs and owns all the virtual resources used by those VDCs.
+A top level container in VMware Cloud Director/vCloud Director that contains one or more VDCs and owns all the virtual resources used by those VDCs.
 
 ## P
 
@@ -419,7 +445,7 @@ Note the difference between Private Cloud, which is a single-tenant environment 
 
 ### Private Cloud for Oracle Software
 
-A UKCloud IaaS service that enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premise.
+A UKCloud IaaS service that enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premises.
 
 For more information, see the [Private Cloud for Oracle Software service definition](../private-cloud/prc-sd-orcl.md).
 
@@ -511,16 +537,6 @@ A UKCloud for VMware protection option that provides a daily backup of your VMs.
 
 For more information, see the [Snapshot Protection service scope](../vmware/vmw-sco-snapshot-protection.md).
 
-### Standard storage
-
-*See:* [Tier 2 storage](#tier-2-storage)
-
-### Synchronous Protection
-
-Synchronous Protection is no longer available as a protection option for UKCloud for VMware. We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
-
-*See:* [Journaling Protection](#journaling-protection), [Snapshot Protection](#snapshot-protection)
-
 ## T
 
 ### Technical Account Manager (TAM)
@@ -541,17 +557,23 @@ General all-purpose block storage, providing a balance of performance and cost.
 
 ## U
 
+### UKCloud Desktop as a Service
+
+A UKCloud service that provides a platform to deliver, protect and manage desktops and apps whilst containing costs and ensuring that end users can work anytime, anywhere, across any device.
+
+For more information, see the [UKCloud Desktop as a Service Service Definition](../daas/daas-sd.md).
+
 ### UKCloud for Microsoft Azure
 
 A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
 
 For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
 
-### UKCloud for OpenShift
+### UKCloud for Managed OpenShift
 
 A UKCloud PaaS service that delivers a secure, private deployment of OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks including HCSN and Janet.
 
-For more information, see the [UKCloud for OpenShift service definition](../openshift/oshift-sd.md).
+For more information, see the [UKCloud for Managed OpenShift service definition](../openshift/oshift-sd.md).
 
 ### UKCloud for OpenStack
 
@@ -559,23 +581,11 @@ A UKCloud IaaS service, powered by OpenStack, that provides a cloud platform spe
 
 For more information, see the [UKCloud for OpenStack service definition](../openstack/ostack-sd.md).
 
-### UKCloud for Oracle Software
-
-A UKCloud IaaS service that provides a compute infrastructure that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications.
-
-For more information, see the [UKCloud for Oracle Software service definition](../oracle/orcl-sd.md).
-
 ### UKCloud for VMware
 
 A UKCloud IaaS service that provides a compute infrastructure specifically designed to deliver traditional enterprise applications in the cloud.
 
 For more information, see the [UKCloud for VMware service definition](../vmware/vmw-sd.md).
-
-### UKCloud Guard
-
-The UKCloud Guard has been removed from sale. However, customers can still take advantage of the Cross Domain Security Zone (CDSZ) functionality via the Walled Garden service.
-
-*See:* [Cross Domain Security Zone (CDSZ)](#cross-domain-security-zone-cdsz), [Walled Garden](#walled-garden)
 
 ### UKCloud Health
 
@@ -607,6 +617,12 @@ Software that emulates the functionality of a physical computer, running an oper
 
 *See:* [UKCloud for VMware](#ukcloud-for-vmware)
 
+### VMware Licence Service (VLS)
+
+A licensing model provided by UKCloud that enables you to exchange the fixed cost of your ongoing VMware Support and Subscription (SnS) Service for existing perpetual VMware licences with a VMware Cloud Provider Programme (VCPP) consumption-based licence provided by UKCloud.
+
+For more information, see the [VMware Licence Service Service Definition](../vmware/vmw-sd-vls.md).
+
 ### vOrg
 
 *See:* [Compute service](#compute-service)
@@ -637,7 +653,7 @@ You can find documentation about how to work with our products at the [UKCloud K
 
 The disaster recovery software that powers UKCloud's Journaling Protection, Disaster Recovery as a Service and Migration to the Cloud services.
 
-*See also:* [Disaster Recovery as a Service](#disaster-recovery-as-a-service), [Journaling Protection](#journaling-protection), [Migration to the Cloud](#migration-to-the-cloud)
+*See also:* [Disaster Recovery as a Service (DRaaS](#disaster-recovery-as-a-service-draas), [Journaling Protection](#journaling-protection), [Migration to the Cloud](#migration-to-the-cloud)
 
 ### Zone
 

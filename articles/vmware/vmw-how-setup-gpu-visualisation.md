@@ -33,7 +33,7 @@ This article provides an introduction for how to use Cloud GPU for visualisation
 
 ### Intended audience
 
-To complete the steps in this article you must have access to the UKCloud Portal and vCloud Director.
+To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.
 
 ## Cloud GPU overview
 
@@ -119,8 +119,6 @@ To install NVIDIA drivers:
 1. Power on your VM.
 
 2. In the card for the VM, select **Actions** then **Insert Media**.
-
-    ![Insert CD/DVD from Catalog menu option](images/vmw-vcd-mnu-insert-media.png)
 
 3. In the *Insert CD* dialog box, select the vGPU driver ISO and click **Insert**.
 

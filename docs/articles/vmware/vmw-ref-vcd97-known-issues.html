@@ -97,6 +97,7 @@
 <p>This article describes some of the issues you may encounter when using vCloud Director 9.7 with UKCloud for VMware.</p>
 <h2 id="known-issues-with-the-vcloud-director-legacy-ui">Known issues with the vCloud Director Legacy UI</h2>
 <h3 id="adobe-flash-player-end-of-life">Adobe Flash Player end of life</h3>
+<h4 id="description">Description</h4>
 <p>The Adobe Flash Player, which is required for the vCloud Director Legacy (Flex-based) UI, goes end-of-life (EOL) on 31 December 2020. Following this date browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge and Microsoft Internet Explorer, will discontinue support for Flash. Although most vCloud Director functionality is available via the HTML5-based Tenant Portal, there are some operations that still need to be performed using the Legacy UI. These include:</p>
 <ul>
 <li><p>Uploading ISO and FLP media as a URL</p>
@@ -114,69 +115,70 @@
 <li><p>Changing the encryption algorithm for a VPN set to <code>AES-GCM</code></p>
 </li>
 </ul>
+<h4 id="solution">Solution</h4>
 <p>If you need to perform any of the above operations in vCloud Director 9.7 after 31 December 2020, you must ensure that you have at least one machine with automatic browser updates disabled so that you still have access to the Flash-based Legacy UI.</p>
 <h2 id="known-issues-with-virtual-machines">Known issues with virtual machines</h2>
 <h3 id="disk-sizes-are-in-mb">Disk sizes are in MB</h3>
-<h4 id="description">Description</h4>
+<h4 id="description-1">Description</h4>
 <p>When adding a disk in the <em>Hardware</em> section of the VM details page, you must enter disk size in MB rather than GB and values must be entered in MB.</p>
-<h4 id="solution">Solution</h4>
+<h4 id="solution-1">Solution</h4>
 <p>There is currently no workaround for this issue. You must enter disk sizes in MB. We have raised a bug with VMware.</p>
 <h3 id="can-enter-non-optimal-values-for-disks">Can enter non-optimal values for disks</h3>
-<h4 id="description-1">Description</h4>
+<h4 id="description-2">Description</h4>
 <p>The UI doesn't give default or suggested values for <strong>Bus Number</strong> or <strong>Unit Number</strong>, leading to the potential to enter non-optimal values.</p>
-<h4 id="solution-1">Solution</h4>
+<h4 id="solution-2">Solution</h4>
 <p>There is currently no workaround for this issue. We have raised a bug with VMware.</p>
 <h3 id="not-using-default-storage-policy-when-adding-a-new-disk">Not using default storage policy when adding a new disk</h3>
-<h4 id="description-2">Description</h4>
+<h4 id="description-3">Description</h4>
 <p>When adding a new disk, the storage <strong>Policy</strong> does not default to the VM or VDC default option.</p>
-<h4 id="solution-2">Solution</h4>
+<h4 id="solution-3">Solution</h4>
 <p>You must change the storage policy as required.</p>
 <h3 id="default-option-is-to-automatically-power-on-vms">Default option is to automatically power-on VMs</h3>
-<h4 id="description-3">Description</h4>
+<h4 id="description-4">Description</h4>
 <p>When you create a VM using the Tenant UI, the <strong>Power on</strong> check box is selected by default so that the newly created VM is powered on. In the Legacy UI, the default was for VMs to be powered off.</p>
-<h4 id="solution-3">Solution</h4>
+<h4 id="solution-4">Solution</h4>
 <p>If you do not want a newly created VM to be powered on, ensure that you deselect the <strong>Power on</strong> check box.</p>
 <h3 id="cannot-perform-some-tasks-on-a-shut-down-vm-such-as-upgrade-hardware-version">Cannot perform some tasks on a shut down VM, such as upgrade hardware version</h3>
-<h4 id="description-4">Description</h4>
+<h4 id="description-5">Description</h4>
 <p>When you select the <strong>Shut Down Guest OS</strong> option for a VM leaves the VM in a partially powered off state. However in the Tenant UI, the VM will show as <strong>Powered off</strong>. While in this partially powered off state, you will be unable to perform tasks that require the VM to be completely powered off.</p>
-<h4 id="solution-4">Solution</h4>
+<h4 id="solution-5">Solution</h4>
 <p>To make sure that a VM is fully powered off, select the <strong>Power Off</strong> option from the <strong>Actions</strong> menu.</p>
 <h3 id="cannot-select-nic-type-when-adding-a-new-nic">Cannot select NIC type when adding a new NIC</h3>
-<h4 id="description-5">Description</h4>
+<h4 id="description-6">Description</h4>
 <p>When adding a new NIC in the <em>Hardware</em> section of the VM details page, you cannot see or edit the NIC type.</p>
-<h4 id="solution-5">Solution</h4>
+<h4 id="solution-6">Solution</h4>
 <p>There is currently no workaround for this issue. We have raised a bug with VMware.</p>
 <h3 id="the-list-of-operating-systems-when-creating-a-vm-is-not-logically-ordered">The list of operating systems when creating a VM is not logically ordered</h3>
-<h4 id="description-6">Description</h4>
+<h4 id="description-7">Description</h4>
 <p>The list of operating systems is not sorted in a logical order.</p>
-<h4 id="solution-6">Solution</h4>
+<h4 id="solution-7">Solution</h4>
 <p>Make sure to scroll through the list of operating systems to find the one you want to use for your VM.</p>
 <h2 id="known-issues-with-edge-gateways">Known issues with edge gateways</h2>
 <h3 id="edge-with-vpn-shows-as-working-when-it-is-not">Edge with VPN shows as working when it is not</h3>
-<h4 id="description-7">Description</h4>
+<h4 id="description-8">Description</h4>
 <p>Status icon for edge does not change even though there are issues with IPsec VPN or load balancing.</p>
-<h4 id="solution-7">Solution</h4>
+<h4 id="solution-8">Solution</h4>
 <p>There is currently no workaround for this issue. We have raised a bug with VMware.</p>
 <h3 id="edge-with-a-vpn-using-aes-gcm-encryption-algorithm-cannot-be-managed-in-the-tenant-ui">Edge with a VPN using AES-GCM encryption algorithm cannot be managed in the Tenant UI</h3>
-<h4 id="description-8">Description</h4>
+<h4 id="description-9">Description</h4>
 <p>After setting up a VPN, if the encryption algorithm is set to <code>AES-GCM</code> the edge is no longer manageable in Tenant UI and errors with <code>&quot;class java.lang.NullPointerException&quot;</code>.</p>
-<h4 id="solution-8">Solution</h4>
+<h4 id="solution-9">Solution</h4>
 <p>Use the Legacy UI to change the algorithm in the VPN configuration with the Legacy UI, You can then manage the edge in the Tenant UI.</p>
 <h3 id="cannot-see-the-psk-for-my-ipsec-vpn">Cannot see the PSK for my IPsec VPN</h3>
-<h4 id="description-9">Description</h4>
+<h4 id="description-10">Description</h4>
 <p>In the Tenant UI, it is difficult to find the PSK for an IPSec VPN.</p>
-<h4 id="solution-9">Solution</h4>
+<h4 id="solution-10">Solution</h4>
 <p>This information is available, but to access it you need to select <strong>Change shared key</strong>, then select <strong>Display shared key</strong>. After making a note of the key, you can close the dialog box without making any changes.</p>
 <h2 id="other-known-issues">Other known issues</h2>
 <h3 id="cannot-see-vapp-description">Cannot see vApp description</h3>
-<h4 id="description-10">Description</h4>
+<h4 id="description-11">Description</h4>
 <p>In the Tenant UI, there is no way to see the description of a vApp template to see information such as the OS password or patch dates.</p>
-<h4 id="solution-10">Solution</h4>
+<h4 id="solution-11">Solution</h4>
 <p>To view the description of a vApp template, you must use the Legacy UI.</p>
 <h3 id="no-option-to-change-default-vdc-storage-profile">No option to change default VDC storage profile</h3>
-<h4 id="description-11">Description</h4>
+<h4 id="description-12">Description</h4>
 <p>On the <em>Storage Policies</em> page, there is no way to change the default storage policy for the VDC.</p>
-<h4 id="solution-11">Solution</h4>
+<h4 id="solution-12">Solution</h4>
 <p>There is currently no workaround for this issue. We have raised a bug with VMware.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>

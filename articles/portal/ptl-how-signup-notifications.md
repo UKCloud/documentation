@@ -2,9 +2,9 @@
 title: How to sign up for Portal notifications
 description: Explains how you can opt in to receive UKCloud Portal notifications by email
 services: portal
-author: Sue Highmoor
-reviewer: Lewis Dean
-lastreviewed: 16/10/2019 11:00:00
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 05/11/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,15 +19,11 @@ toc_mdlink: ptl-how-signup-notifications.md
 
 ## Overview
 
-When you use the UKCloud Portal, you'll notice that notifications are provided at the top of every page. These notifications provide information about:
-
-- Updates to UKCloud services
-
-- Planned maintenance
-
-- Incidents
+When you use the UKCloud Portal, you'll notice that notifications are provided at the top of every page. These notifications provide information about incidents that have occurred on the UKCloud platform.
 
 If you want, you can also opt to have these notifications sent to you by email. This feature is available in both the Assured and Elevated Portals.
+
+To keep up to date with everything that's happening on the UKCloud platform, including general service availability, scheduled maintenance and incidents, go to the [UKCloud Service Status page](https://status.ukcloud.com/). For more information, see [*Understanding the UKCloud Service Status page](../other/other-ref-status-page.md).
 
 ## Opting in to Portal notifications by email
 

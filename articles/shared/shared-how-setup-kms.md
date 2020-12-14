@@ -4,7 +4,7 @@ description: Shows how to register virtual machines with the KMS within vCloud D
 services: shared-services
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 19/08/2019
+lastreviewed: 06/11/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -27,6 +27,36 @@ You need to register the Windows virtual machines (VMs) that you create with the
 Before product activation, make sure your VMs can communicate with the UKCloud KMS that exists outside your cloud organisation.
 
 To allow this communication, you need to create a source network address translation (SNAT) and firewall rule on your edge gateway:
+
+### [VMware Cloud Director 10.1](#tab/tabid-a)
+
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC for which server activation is required.
+
+2. In the left navigation panel, under *Networking*, select **Edges**.
+
+    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+
+3. On the *Edge Gateways* page, select the edge that you want to configure and click **Services**.
+
+    ![Services option](images/vmw-vcd10.1-edge-btn-services.png)
+
+4. On the *Edge Gateway* page, select the **NAT** tab and create a new SNAT rule.
+
+5. Make sure that the **Applied On** field is set to reflect your network firewall tenant (NFT).
+
+6. In the **Original IP/Range** field, enter the IP address, CIDR or range of addresses you want to SNAT out.
+
+7. For the translated address, enter the external IP address of your edge gateway or one of your external IP address assignments.
+
+    For more information about creating SNAT rules, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md).
+
+8. Select the **Firewall** tab and make sure that an outbound rule exists on your firewall.
+
+    Contact UKCloud Support for details of the **Destination IP** and **Destination Port**.
+
+    For more information about creating firewall rules, see [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
+
+### [vCloud Director 9.7](#tab/tabid-b)
 
 1. In vCloud Director, select the VDC for which server activation is required.
 
@@ -53,6 +83,8 @@ To allow this communication, you need to create a source network address transla
     Contact UKCloud Support for details of the **Destination IP** and **Destination Port**.
 
     For more information about creating firewall rules, see [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
+
+***
 
 ## Activating your Windows licence
 

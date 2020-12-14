@@ -1,6 +1,6 @@
 ---
 title: How to access CentOS update servers
-description: Shows you how to access CentOS updates
+description: Provides information about accessing the CentOS repository servers to keep your CentOS VMs up to date
 services: shared-services
 author: shighmoor
 reviewer: pcantle

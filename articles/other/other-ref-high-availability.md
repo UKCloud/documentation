@@ -80,7 +80,7 @@ Data | Make sure you take a copy of your application or database data at appropr
 
 ### UKCloud for Microsoft Azure
 
-In UKCloud for Microsoft Azure, you can use availability sets to spread VMs across multiple fault domains and update domains. In the event of downtime in one domain due to a hardware failure or planned maintenance, VMs in the affected domain are restarted in another domain. For more information, see [Providing high availability](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-overview?view=azs-1908#providing-high-availability).
+In UKCloud for Microsoft Azure, you can use availability sets to spread VMs across multiple fault domains and update domains. In the event of downtime in one domain due to a hardware failure or Planned Maintenance, VMs in the affected domain are restarted in another domain. For more information, see [Providing high availability](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-overview?view=azs-1908#providing-high-availability).
 
 A load balancer spreads incoming requests across multiple VMs, helping with scale and availability. For more information, see [*How to create a load balancer using the UKCloud Azure Stack Hub portal*](../azure/azs-how-create-load-balancer.md).
 

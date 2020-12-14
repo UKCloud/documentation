@@ -361,10 +361,9 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <p>Services on the Assured OFFICIAL platform can be managed over the internet (or other connectivity) via the UKCloud Portal.</p>
 <p>For the Elevated OFFICIAL platform, security requirements are stricter and require either a PSN-approved connection, UKCloud Secure Remote Access or a self-managed CPA-approved VPN solution (for example site-to-site VPN).</p>
 <h3 id="what-are-your-service-maintenance-windows">What are your service maintenance windows?</h3>
-<p>As far as possible, planned maintenance of UKCloud's infrastructure takes place periodically and at a time which aims to minimise customer impact. We provide customers with at least 14 days' advance notice of planned maintenance.</p>
-<p>As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Friday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.</p>
-<h3 id="can-i-configure-email-alerts-from-the-portal">Can I configure email alerts from the Portal?</h3>
-<p>Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.</p>
+<p>See <a href="../other/other-ref-maintenance-windows.html"><em>Understanding UKCloud service maintenance windows</em></a>.</p>
+<h3 id="can-ukcloud-provide-notifications-for-service-status-and-maintenance">Can UKCloud provide notifications for service status and maintenance?</h3>
+<p>Yes, you can subscribe to the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a> to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see <a href="../other/other-how-subscribe-service-status.html"><em>How to subscribe to service status notifications</em></a>.</p>
 <h2 id="service-limitations">Service Limitations</h2>
 <h3 id="are-there-any-restrictions-on-the-number-of-instances-i-can-create-or-manipulate-in-a-single-request">Are there any restrictions on the number of instances I can create or manipulate in a single request?</h3>
 <p>Although designed to be a large-scale cloud platform, we strongly advise that when performing operations/requests against UKCloud for OpenStack you perform these actions in batches of no more than 30 (for example, only creating batches of up to 30 new instances in a single request). Additional requests can then be made to the platform for subsequent batches.</p>
@@ -424,7 +423,6 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <p>Historic billing information is available via the UKCloud Portal.</p>
 <h3 id="how-can-i-pay-for-the-services">How can I pay for the services?</h3>
 <p>Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.</p>
-<p>If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.</p>
 <h3 id="how-are-snapshots-charged">How are snapshots charged?</h3>
 <p>You will only ever be charged for the amount of Tier 1 or Tier 2 storage your snapshots consume, that you have scheduled via the OpenStack dashboard or the API - we do not place any additional premium on-top for the snapshot functionality. To calculate an estimated cost of performing snapshots on UKCloud for OpenStack, simply use the following formula:</p>
 <p>Cost £ = Instance Size (GiB) x Number of Snapshots to be retained (Customer controlled) x Choice of Storage (Tier 1 @ £0.25 or Tier 2 @ £0.10)</p>

@@ -178,7 +178,7 @@ The Portal navigation panel provides access to all the functionality available i
 
   - My Calls (see [*How to use My Calls to raise and monitor support tickets*](ptl-how-use-my-calls.md))
 
-  - Service status information (see [*How to view the UKCloud Service Status page*](../other/other-how-view-status-info.md))
+  - Service status information (see [*Understanding the UKCloud Service Status page*](../other/other-ref-status-page.md))
 
 - **Tools** - Provides access to:
 

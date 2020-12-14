@@ -121,7 +121,7 @@ If you're already a nominated administrator and would like to set up an addition
 
 ### Subscribing to platform updates
 
-To provide you with the latest information on the availability and overall health of our platforms, we have set-up the [UKCloud status page](https://status.ukcloud.com/). This page shows the status of our services and connections, split by region and zone, and details of planned maintenance.
+To provide you with the latest information on the availability and overall health of our platforms, we have set-up the [UKCloud Service Status page](https://status.ukcloud.com/). This page shows the status of our services and connections, split by region and zone, and details of Planned Maintenance.
 
 To subscribe to updates, at the bottom of the page, click **Subscribe**, enter your email address then select the services you're interested in. You'll receive an email confirming your subscription to the status page; be sure to click **Verify** to ensure you'll receive updates on your selected services.
 
