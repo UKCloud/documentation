@@ -71,7 +71,7 @@ Our standard profile provides:
 
 At present, we've not enabled the ability for you to configure custom profiles.
 
-If the target RPO is exceeded, you and UKCloud will be notified via the Zerto Self-Service Portal.
+If the target RPO is exceeded, you and UKCloud will be notified via the Zerto Self-Service Portal (ZSSP).
 
 Factors that can affect the RPO are:
 
@@ -99,7 +99,7 @@ If there's a potential disruption, we'll highlight this to you via the [UKCloud 
 
 ## Disaster Recovery as a Service management
 
-You can self-manage your protected environment via the Zerto Self-Service Portal. This portal enables you to:
+You can self-manage your protected environment via the ZSSP. This portal enables you to:
 
 - Configure virtual protection groups
 
@@ -125,7 +125,7 @@ Additionally, the following scenarios cannot be protected:
 
 ## Alerting and reporting
 
-The Zerto Self-Service Portal (ZSSP) provides live real-time reporting of your solution and the current level of protection being provided to your VMs.
+The ZSSP provides live real-time reporting of your solution and the current level of protection being provided to your VMs.
 
 The portal also raises alerts if the target RPO of your VPG exceed the threshold, or if the associated journal size grows beyond the expected size. In both these scenarios, UKCloud also receives a platform monitoring alert and will investigate the cause.
 
@@ -133,7 +133,7 @@ Additionally, the ZSSP provides an activity log of the actions against a particu
 
 ## Failover
 
-The Zerto Self-Service Portal enables you to failover to your recovery site.
+The ZSSP enables you to failover to your recovery site.
 
 When this is initiated, Disaster Recovery as a Service fails over the VMs inside a VPG, restoring the data and state of the VMs to the desired point from the journal. Disaster Recovery as a Service can also replicate any internal networking rules.
 
