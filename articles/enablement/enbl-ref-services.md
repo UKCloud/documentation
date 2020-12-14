@@ -3,8 +3,8 @@ title: Cloud Enablement services
 description: Lists the cloud enablement services provided by UKCloud
 services: enablement
 author: Sue Highmoor
-reviewer: hbrunt
-lastreviewed: 16/12/2019
+reviewer: ljames
+lastreviewed: 11/12/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,7 +17,7 @@ toc_mdlink: enbl-ref-services.md
 
 # Cloud Enablement services
 
-As a multi-cloud provider, UKCloud knows the importance of being able install your own hardware in our cloud platform. We call this 'Cloud Enablement' because it is a key capability that enables you to use cloud services more extensively.  Here are some examples:
+As a multi-cloud provider, UKCloud knows the importance of being able to install your own hardware in our cloud platform. We call this *Cloud Enablement* because it's a key capability that enables you to use cloud services more extensively. Some examples include:
 
 - CAPS/CPA-approved VPN - Provides secure hosting facilities for your own CAPS and CPA-approved (or equivalent standard) hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - CAPS/CPA-approved VPN Service Scope*](enbl-sco-capscpa.md).
 
