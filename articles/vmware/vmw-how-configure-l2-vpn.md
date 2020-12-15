@@ -207,12 +207,15 @@ The L2 VPN client is the *source* edge gateway that initiates communication with
     a. If the default gateway for virtual machines is the same across the two sites, enter the gateway IP addresses in the **Egress Optimization Gateway Address** text box. These IP addresses are the addresses for which the traffic is to be locally routed or for which the traffic is to be blocked over the tunnel.
     
     b. Server edge - edit Site Configuration Details
+        
         ![Edge Gateway Site Configuration Details](images/vmw-vcd91-eg.png)
 
     c. Enter the IP address in the **Egress Optimization Gateway Address** text box
+        
         ![Edge Gateway Edit Peer Site](images/vmw-vcd91-EPS.png)
 
     d. Client edge
+
         ![Edge Gateway L2 VPN Egress Optimization Gateway Address](images/vmw-vcd91-L2VPN-EOGA.png)
 
 2.	Configure firewall and NAT rules on both the destination and source edge gateways to allow traffic to pass between the L2 VPN server and the L2 VPN client.
