@@ -3,23 +3,23 @@ title: How to permit outbound access to internet hosts in deployments with gover
 description: Outlines methods to securely permit access to internet hosts in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon
-reviewer: gsmith
-lastreviewed: 20/11/2019
+reviewer: smulholland
+lastreviewed: 15/12/2020
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Permit outbound internet access in deployments with government community network connectivity
-toc_fullpath: How To/oshift-how-add-domains-proxy-whitelist.md
-toc_mdlink: oshift-how-add-domains-proxy-whitelist.md
+toc_fullpath: How To/oshift-how-add-domains-proxy-allow-list.md
+toc_mdlink: oshift-how-add-domains-proxy-allow-list.md
 ---
 
 # How to permit outbound access to internet hosts in deployments with government community network connectivity
 
 ## Overview
 
-This article outlines the necessary steps to whitelist domain names within the Squid proxy. Squid is an enabled service within v3.11 OpenShift clusters deployed with connectivity to government community networks (such as: HSCN, PSN, Janet). Whitelisted domains can be accessed on the internet via the proxy, enabling you to request external resources/data on nodes that previously only had connectivity to government community networks. Added domains should be scrutinised as the relevant authority of the community network may require you to submit documentation regarding these for you to receive accreditation.
+This article outlines the necessary steps to add domain names to an allow-list within the Squid proxy. Squid is an enabled service within v3.11 OpenShift clusters deployed with connectivity to government community networks (such as: HSCN, PSN, Janet). Ddomains on the allow-list can be accessed on the internet via the proxy, enabling you to request external resources/data on nodes that previously only had connectivity to government community networks. Added domains should be scrutinised as the relevant authority of the community network may require you to submit documentation regarding these for you to receive accreditation.
 
 ## Prerequisites
 
@@ -31,11 +31,11 @@ You must also have access to either:
 
 - `oc`, the OpenShift command-line client (CLI). For more information, see OpenShift's [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html)
 
-## Destination domain whitelist
+## Destination domain allow-list
 
-Squid proxy is installed as a service on the control plane load balancers. Within the Squid configuration, we have specified an ACL (Access Control List) as being a list of destination domains (present in a file on the file system), which we will refer to as the whitelist for the remainder of this article. Outbound traffic from the cluster's internal network will pass through the proxy with the destination domain being compared against the whitelist for each connection attempt; if the domain exists then outbound internet traffic is permitted, otherwise it is denied with a HTTP 403 error.
+Squid proxy is installed as a service on the control plane load balancers. Within the Squid configuration, we have specified an ACL (Access Control List) as being a list of destination domains (present in a file on the file system), which we will refer to as the allow-list for the remainder of this article. Outbound traffic from the cluster's internal network will pass through the proxy with the destination domain being compared against the allow-list for each connection attempt; if the domain exists then outbound internet traffic is permitted, otherwise it is denied with a HTTP 403 error.
 
-By default, the following domains are added to the whitelist (and cannot be removed) to facilitate installation, testing and ongoing operation of the cluster:
+By default, the following domains are added to the allow-list (and cannot be removed) to facilitate installation, testing and ongoing operation of the cluster:
 
 ```
 registry.access.redhat.com
@@ -45,13 +45,13 @@ registry.redhat.io
 ```
 
 > [!WARNING]
-> Adding any subdomains of domains that are already within the proxy whitelist will lead to squid being unable to reconfigure and any domains added after this point will not be whitelisted. Please keep the above domains in mind when adding to the whitelist as these will not be shown in the ConfigMap. To give an example, you should avoid adding `.ukcloud.com` or `.redhat.com` to your proxy-whitelist as both `registry.access.redhat.com` and `idp.ukcloud.com` are already whitelisted by us.
+> Adding any subdomains of domains that are already within the proxy allow-list will lead to squid being unable to reconfigure and any domains added after this point will not be possible to access. Please keep the above domains in mind when adding to the allow-list as these will not be shown in the ConfigMap. To give an example, you should avoid adding `.ukcloud.com` or `.redhat.com` to your proxy allow-list as both `registry.access.redhat.com` and `idp.ukcloud.com` are already on the allow-list.
 
-A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named `proxy-whitelist` within the `whitelist` project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the whitelist and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.
+A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named `proxy-whitelist` within the `whitelist` project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the allow-list and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.
 
-### Assigning non cluster-admin users rights to edit the whitelist
+### Assigning non cluster-admin users rights to edit the allow-list
 
-By default, only users who have been assigned the cluster-admin role will be able to view/edit the `proxy-whitelist` ConfigMap object within the `whitelist` project. It is possible to grant non cluster-admin users rights to edit this object but this should be given careful consideration. The ability to access hosts on the internet, from nodes that previously only had access to government community networks, exposes the cluster to additional risk (should a domain be whitelisted that hosts malicious content for example). For this reason, only trusted users should be permitted to determine these domains to reduce the risk of a malicious domain being unwittingly added.
+By default, only users who have been assigned the cluster-admin role will be able to view/edit the `proxy-whitelist` ConfigMap object within the `whitelist` project. It is possible to grant non cluster-admin users rights to edit this object but this should be given careful consideration. The ability to access hosts on the internet, from nodes that previously only had access to government community networks, exposes the cluster to additional risk (should a domain be added to the allow-list that hosts malicious content for example). For this reason, only trusted users should be permitted to determine these domains to reduce the risk of a malicious domain being unwittingly added.
 
 To allow non cluster-admin users to edit this object, use the following Role Based Access Control (RBAC) commands:
 
@@ -70,7 +70,7 @@ oc policy add-role-to-user get-configmap $username -n whitelist --role-namespace
 oc policy add-role-to-user edit-proxy-whitelist $username -n whitelist --role-namespace='whitelist'
 ```
 
-### Modifying the whitelist
+### Modifying the allow-list
 
 There are two tools you can use to modify the `proxy-whitelist` Config Map. As previously stated you will need to have the necessary rights to edit this object within the `whitelist` project.
 
@@ -83,7 +83,7 @@ There are two tools you can use to modify the `proxy-whitelist` Config Map. As p
    ![whitelist ConfigMaps](images/oshift-proxy-configmap.png)
 
 >[!TIP]
->To whitelist all subdomains, precede the domain with a `.` for example `.domain.com`
+>To add all subdomains to the allow-list, precede the domain with a `.` for example `.domain.com`
 
 2. Click **Actions** then **Edit** to modify the values within the `proxy-whitelist.txt` key. Each domain should be on its own line:
 
