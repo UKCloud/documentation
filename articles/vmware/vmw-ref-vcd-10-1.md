@@ -102,6 +102,26 @@ Known issues you may experience following the upgrade to VMware Cloud Director 1
 
 - If you enable the **Enable VM to join domain** options, you will not be able to amend the hardware configuration of the VM. There is currently no workaround for this issue, so you should ensure that you do not enable this setting.
 
+- Guest customisation is failing in the following:
+
+  - For existing VMs
+
+    - Windows 2012
+
+    - Windows 2012R2
+
+    - Windows 2016
+
+  - For new VMs
+
+    - Windows 2012
+
+    - Windows 2012R2
+
+  When setting a new administrator password and/or changing the IP address then forcing re-customisation at power-on, the settings are ignored.
+
+  The workaround is to request the default password of the templates, if they're from the UKCloud catalog. Then you'll need to manually run sysprep and set the IP and hostname.
+
 ### Known issues in the UKCloud Portal
 
 - Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal (see [*How to restrict access to VMware Cloud Director*](../portal/ptl-how-restrict-access-vcloud-api.md)). If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.
