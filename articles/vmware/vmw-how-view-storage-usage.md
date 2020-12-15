@@ -40,6 +40,8 @@ Before allocating more disk space in your UKCloud for VMware account, it's usefu
 
     ![VDC card showing storage usage and allocation](images/vmw-vcd-storage.png)
 
+***
+
 ## Viewing a VM's storage usage (Tenant Portal)
 
 In the VMware Cloud Director 10.1 Tenant Portal, you can see how much storage an individual VM is currently using.
