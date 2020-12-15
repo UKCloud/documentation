@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-add-domains-proxy-allow-list.md
 
 ## Overview
 
-This article outlines the necessary steps to add domain names to an allow-list within the Squid proxy. Squid is an enabled service within v3.11 OpenShift clusters deployed with connectivity to government community networks (such as: HSCN, PSN, Janet). Ddomains on the allow-list can be accessed on the internet via the proxy, enabling you to request external resources/data on nodes that previously only had connectivity to government community networks. Added domains should be scrutinised as the relevant authority of the community network may require you to submit documentation regarding these for you to receive accreditation.
+This article outlines the necessary steps to add domain names to an allow-list within the Squid proxy. Squid is an enabled service within v3.11 OpenShift clusters deployed with connectivity to government community networks (such as: HSCN, PSN, Janet). Domains on the allow-list can be accessed on the internet via the proxy, enabling you to request external resources/data on nodes that previously only had connectivity to government community networks. Added domains should be scrutinised as the relevant authority of the community network may require you to submit documentation regarding these for you to receive accreditation.
 
 ## Prerequisites
 
