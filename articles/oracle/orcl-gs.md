@@ -78,11 +78,11 @@ If you require assistance building out your Oracle solution, we can put you in c
 
 ### Your UKCloud for Oracle Software estate
 
-The management of your Oracle estate is split between Oracle Enterprise Manager (OEM) and VMware Cloud Director/vCloud Director:
+The management of your Oracle estate is split between Oracle Enterprise Manager (OEM) and VMware Cloud Director:
 
 - Use OEM to build and manage your VMs and templates
 
-- Use VMware Cloud Director/vCloud Director to create your VM networks and configure your edge gateway, including firewall rules and VPN connections
+- Use VMware Cloud Director to create your VM networks and configure your edge gateway, including firewall rules and VPN connections
 
 ![UKCloud for Oracle Software architecture](images/orcl-architecture.png)
 
@@ -269,10 +269,10 @@ On the *Infrastructure -- Oracle VM Cloud Services* page you can view and manage
 
 Before you can start using the VMs in your Oracle environment, you need to create the network that connects the VMs to each other, and potentially also to the outside world. This network enables your VMs to communicate with each other or access external networks. A single Oracle tenant can have multiple networks. When UKCloud sets up a new Oracle tenant for you, we'll usually create an edge gateway for that tenant, but the creation of any networks is your responsibility.
 
-Networking and connectivity for UKCloud for Oracle Software is managed within VMware Cloud Director/vCloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.
+Networking and connectivity for UKCloud for Oracle Software is managed within VMware Cloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.
 
 > [!NOTE]
-> Because you create your network in VMware Cloud Director/vCloud Director, you'll see references to VMware terminology, such as organisations and virtual data centres (VDCs). In UKCloud for Oracle Software, an Oracle tenant is equivalent to a VDC.
+> Because you create your network in VMware Cloud Director, you'll see references to VMware terminology, such as organisations and virtual data centres (VDCs). In UKCloud for Oracle Software, an Oracle tenant is equivalent to a VDC.
 
 There are two types of network:
 
@@ -284,7 +284,7 @@ There are two types of network:
 
 An edge gateway controls how traffic from the outside world comes into and out of your environment. It is very important to make sure that your edge gateway is configured correctly to make your applications available but also secure.
 
-The tools for configuring your edge gateway are provided within VMware Cloud Director/vCloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.
+The tools for configuring your edge gateway are provided within VMware Cloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.
 
 Your edge gateway provides the following services:
 

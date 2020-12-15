@@ -43,8 +43,6 @@ DFW rules can have one or more of the following entities as the source or destin
 
 To access the DFW:
 
-### [VMware Cloud Director 10.1](#tab/tabid-a)
-
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the DFW you want to manage.
 
 2. In the left navigation panel, under *Networking*, select **Security**.
@@ -85,55 +83,6 @@ To access the DFW:
 7. When you're done, click **Save changes**.
 
     ![Save changes](images/vmw-vcd91-save-changes.png)
-
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. Log in to vCloud Director via the UKCloud Portal.
-
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
-
-2. In the *Virtual Datacenters* dashboard, select the VDC that contains the DFW you want to manage.
-
-3. In the left navigation panel, click **Security**.
-
-    ![Security menu in vCloud Director](images/vmw-vcd-mnu-security.png)
-
-4. Select the **Security Services** for your VDC, then click **Configure Services**.
-
-    Even though other VDC security policies are listed in this section, you cannot launch the configuration until you switch to the relevant VDC. You can confirm which VDC you are in by looking in the top right corner. To go back to all VDCs, click the back arrow.
-
-    ![Configure Services for Security Services](images/vmw-vcd-btn-configure-services-security.png)
-
-5. In the **Distributed Firewall > General** tab of the *Services* dialog box, select **Enable Distributed Firewall**.
-
-    This creates default rules in both the **General** (L3) and **Ethernet** (L2) tabs.
-
-    ![Enable Distributed Firewall option](images/vmw-vcd91-enable-dfw.png)
-
-6. In the **General** tab, click the **+** button to add a new L3 rule.
-
-    ![Add DFW rule (L3)](images/vmw-vcd91-btn-add-dfw-l3-rule.png)
-
-7. Define the L3 rule:
-
-    Field | Action | &nbsp;
-    ------|--------|-------
-    Name | Enter a name for the rule. |
-    Source | Hover over the field, then click the **IP** button to enter a single IP address or an IP range. When you're done, click **Keep**. | ![Source IP Address dialog box](images/vmw-vcd91-dfw-l3-rule-source-ip.png)
-    Destination | Hover over the field, then click the **IP** button to enter a single IP address or an IP range. When you're done, click **Keep**. | ![Destination IP Address dialog box](images/vmw-vcd91-dfw-l3-rule-dest-ip.png)
-    Service | Hover over the field, then click the **IP** button to add the relevant **Protocol** and **Port**. When you're done, click **Keep**. | ![Add Service dialog box](images/vmw-vcd91-dfw-l3-rule-add-service.png)
-    Action | Select **Allow** or **Deny**. |
-    Direction | Select **In**, **Out** or **In/Out**. |
-    Packet Type | Select **IPv4**, **IPv6** or **Any**. |
-    Applied To | Hover over the field, then click the **+** button to select whether to apply the rule to an edge, Org VDC network, virtual machine, Org VDC or security group. Select the specific object then click the right arrow to add it. When you're done, click **Keep**. | ![Select objects dialog box](images/vmw-vcd91-dfw-l3-rule-select-objects.png)
-
-    ![Defining an L3 rule for DFW](images/vmw-vcd91-dfw-l3-rule.png)
-
-8. When you're done, click **Save changes**.
-
-    ![Save changes](images/vmw-vcd91-save-changes.png)
-
-***
 
 ## Creating a group of objects
 

@@ -83,7 +83,7 @@ Factors that can affect the RPO are:
 
 Additionally, the service raises an alert if the size of a VM's journal exceeds 75% of the original VM. This alert helps to understand if your solution is adequately protected.
 
-Disaster Recovery as a Service captures data only while a VM is powered on. If a VM is deleted in VMware Cloud Director/vCloud Director, it will IMMEDIATELY delete the associated journal.
+Disaster Recovery as a Service captures data only while a VM is powered on. If a VM is deleted in VMware Cloud Director, it will IMMEDIATELY delete the associated journal.
 
 ### What SLA do you offer on Disaster Recovery as a Service?
 

@@ -24,7 +24,7 @@ If you've implemented either Secure Remote Access (SRA) or a Cross Domain Securi
 
 ### Intended audience
 
-To complete the steps in this guide you must have VMware Cloud Director/vCloud Director administrator access to a virtual data centre (VDC) in the Elevated OFFICIAL security domain.
+To complete the steps in this guide you must have VMware Cloud Director administrator access to a virtual data centre (VDC) in the Elevated OFFICIAL security domain.
 
 ## Before you begin
 
@@ -42,7 +42,7 @@ To get the last two octets of the IP addresses for the service you require, rais
 
 You need to add two static routes and an SNAT rule on two edge gateways.
 
-1. In VMware Cloud Director/vCloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.
+1. In VMware Cloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.
 
 2. Create a static route that directs traffic for the service you need via the Transit IP of your Elevated edge gateway.
 

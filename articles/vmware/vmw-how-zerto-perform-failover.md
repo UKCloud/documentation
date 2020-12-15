@@ -41,7 +41,7 @@ If you use Disaster Recovery as a Service or Journaling Protection, you should p
 When you run a test failover, a test VM is created for each of your protected VMs in a sandbox on the target site, using the test network specified in the virtual protection group (VPG). During the test, your VMs' journals continue to be updated and new checkpoints generated, ensuring that your VMs remain protected and can be fully recovered in the event of an actual live failover.
 
 > [!NOTE]
-> When the test failover has been instantiated, Zerto will automatically start up the test failover VMs. It is critically important that you do not power on (or power off) the VMs manually in VMware Cloud Director/vCloud Director before the failover is completely instantiated. Changing the state of the VMs in VMware Cloud Director/vCloud Director before the failover process is complete will result in corruption of the VPG. If you power off failed-over VMs while a test failover is in progress, replication of live VMs will be affected.
+> When the test failover has been instantiated, Zerto will automatically start up the test failover VMs. It is critically important that you do not power on (or power off) the VMs manually in VMware Cloud Director before the failover is completely instantiated. Changing the state of the VMs in VMware Cloud Director before the failover process is complete will result in corruption of the VPG. If you power off failed-over VMs while a test failover is in progress, replication of live VMs will be affected.
 
 1. Log in to the ZSSP.
 
@@ -94,7 +94,7 @@ When you run a test failover, a test VM is created for each of your protected VM
 In the event of a disaster, you'll need to run a live failover to recover your VMs. You can also use live failover to migrate your workloads to the target site.
 
 > [!NOTE]
-> When the failover has been instantiated, Zerto will automatically start up the failover VMs. It is critically important that you do not power on (or power off) the VMs manually in VMware Cloud Director/vCloud Director before the failover is completely instantiated. Changing the state of the VMs in VMware Cloud Director/vCloud Director before the failover process is complete will result in corruption of the VPG and potentially the failure of the disaster recovery process.
+> When the failover has been instantiated, Zerto will automatically start up the failover VMs. It is critically important that you do not power on (or power off) the VMs manually in VMware Cloud Director before the failover is completely instantiated. Changing the state of the VMs in VMware Cloud Director before the failover process is complete will result in corruption of the VPG and potentially the failure of the disaster recovery process.
 
 1. Log in to the ZSSP.
 
