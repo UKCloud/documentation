@@ -3,8 +3,8 @@ title: How to configure an L2 VPN
 description: Describes how to configure your Layer 2 VPN (L2 VPN), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 17/11/2020
+reviewer: Tadas Petrokas
+lastreviewed: 15/12/2020
 
 toc_rootlink: How To
 toc_sub1: Advanced networking
@@ -202,9 +202,18 @@ The L2 VPN client is the *source* edge gateway that initiates communication with
 
 ### Completing L2 VPN configuration
 
-1. Configure TCP optimisation.
+1. Configure Egress Optimization Gateway:
+    a. If the default gateway for virtual machines is the same across the two sites, enter the gateway IP addresses in the **Egress Optimization Gateway Address** text box. These IP addresses are the addresses for which the traffic is to be locally routed or for which the traffic is to be blocked over the tunnel
+    b. Server edge - edit Site Configuration Details
+    ![Edge Gateway Site Configuration Details](images/vmw-vcd91-eg.png)
 
-2. Configure firewall and NAT rules on both the destination and source edge gateways to allow traffic to pass between the L2 VPN server and the L2 VPN client.
+    c. Enter the IP address in the **Egress Optimization Gateway Address** text box
+    ![Edge Gateway Edit Peer Site](images/vmw-vcd91-EPS.png)
+
+    d. Client edge
+    ![Edge Gateway L2 VPN Egress Optimization Gateway Address](images/vmw-vcd91-L2VPN-EOGA.png)
+
+2.	Configure firewall and NAT rules on both the destination and source edge gateways to allow traffic to pass between the L2 VPN server and the L2 VPN client.
 
 3. Enable L2 VPN on the *destination* edge gateway.
 
@@ -226,7 +235,7 @@ If the source site is not backed by NSX, you can deploy a standalone edge as the
 
 1. Download `NSX-l2vpn-client.ovf` and deploy the standalone edge.
 
-    For more information, see the following VMware article: [Configure Standalone Edge as L2 VPN Client](https://pubs.vmware.com/NSX-61/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-C9E2B0E4-F1C1-44A7-B142-F814F801FA42.html).
+    For more information, see the following VMware article: [Configure Standalone Edge as L2 VPN Client](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-C9E2B0E4-F1C1-44A7-B142-F814F801FA42.html).
 
 2. Create a port group and convert it to a sub interface.
 
