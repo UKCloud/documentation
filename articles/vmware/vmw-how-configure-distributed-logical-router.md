@@ -88,7 +88,7 @@ After you've enabled distributed routing, you can create your distributed networ
 
 3. Click **New**.
 
-    ![New network button](images/vmw-vcd10.1-btn-add-network.png)
+    ![New network button](images/vmw-vcd10.1-btn-new-network.png)
 
 4. On the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed** then click **Next**.
 
