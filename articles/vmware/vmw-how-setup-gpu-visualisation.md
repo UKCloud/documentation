@@ -18,6 +18,9 @@ toc_mdlink: vmw-how-setup-gpu-visualisation.md
 
 # How to set up Cloud GPU Visualisation for UKCloud for VMware
 
+> [!IMPORTANT]
+> Cloud GPU has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Cloud GPU customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ## Overview
 
 Cloud GPU enables you to supplement your on-platform compute resources with GPU capabilities.
