@@ -17,6 +17,9 @@ toc_mdlink: email-ref-upgrade-to-86.md
 
 # Upgrade to Email and Collaboration as a Service
 
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ## Overview
 
 This article outlines the improvements UKCloud's upgrade to its Email and Collaboration as a Service to Zimbra 8.6.0 will deliver.
