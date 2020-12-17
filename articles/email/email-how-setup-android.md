@@ -18,6 +18,9 @@ toc_mdlink: email-how-setup-android.md
 
 # How to set up Email and Collaboration on Android, Windows or Blackberry mobile devices
 
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software Email and Collaboration customers with access to support documentation and we will continue update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ## Overview
 
 UKCloud's Email and Collaboration as a Service includes the option of accessing emails, calendars and tasks via most smart phone devices. The underlying platform for this service is provided by Zimbra, and this guide contains an overview of mobility options for Zimbra Collaboration Suite (ZCS), as well as information on how to set up Zimbra Mobile for most smart phones on specific operating systems.
