@@ -19,7 +19,7 @@ toc_mdlink: email-ref-fair-use.md
 # Email and Collaboration fair use policy
 
 > [!IMPORTANT]
-> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
 
 ## Overview
 
