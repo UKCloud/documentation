@@ -115,21 +115,23 @@
 </li>
 </ul>
 <p>UKCloud support staff can change the VPN config back to DH-2 on a temporary basis until the edge is converted, however the setting is not persistent, and under certain configuration changes to an edge, the setting of DH-14 may be reapplied. Converting to an advanced gateway does not require any downtime nor cause any outage during the conversion.</p>
-<p>Follow the steps below to convert your edge to an advanced gateway and configure your VPN back to DH-2. To complete these steps, you must have access to the UKCloud Portal and vCloud Director.</p>
+<p>Follow the steps below to convert your edge to an advanced gateway and configure your VPN back to DH-2. To complete these steps, you must have access to the UKCloud Portal and VMware Cloud Director.</p>
 <h2 id="change-your-vpn-settings">Change your VPN settings</h2>
 <p>To change the DH setting on your broken VPN:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge with the broken VPN.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the edge with the broken VPN.</p>
 </li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>Select the edge gateway and click <strong>Configure Services</strong>.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
+<li><p>On the <em>Edge Gateways</em> page, select the edge that you want to configure and click <strong>Services</strong>.</p>
+<p><img src="images/vmw-vcd10.1-edge-btn-services.png" alt="Services option"></p>
 </li>
-<li><p>Select the <strong>VPN</strong> tab.</p>
+<li><p>On the <em>Edge Gateway</em> page, select the <strong>VPN</strong> tab, then the <strong>IPsec VPN</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-ipsec-vpn.png" alt="IPsec VPN tab"></p>
 </li>
-<li><p>On the <em>IPsec VPN Configuration</em> page, select the <strong>IPsec VPN Sites</strong> tab.</p>
+<li><p>Select the <strong>IPsec VPN Sites</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-ipsec-vpn-sites.png" alt="IPsec VPN sites tab"></p>
 </li>
 <li><p>Select the VPN tunnel that is broken and click the edit icon.</p>
 </li>
@@ -140,7 +142,7 @@
 <li><p>When you're done, click <strong>Keep</strong>.</p>
 </li>
 <li><p>Repeat the steps 6 and 7 for any other VPNs that are broken and when you're ready to save the configuration, click <strong>Save Changes</strong> at the top of the page.</p>
-<p>Check the state of the VPN by clicking the <strong>Statistics</strong> tab at the top of the screen and selecting <strong>IPSEC VPN</strong> to view the health of your VPN.</p>
+<p>Check the state of the VPN by clicking the <strong>Statistics</strong> tab at the top of the screen and selecting <strong>IPsec VPN</strong> to view the health of your VPN.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>

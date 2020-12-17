@@ -2371,7 +2371,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-how-access-services-walled-garden.html",
-          "hash": "qqhIF5d9NAveTppYtMETuA=="
+          "hash": "JCFu2MGydgryJyJ4RINrrQ=="
         }
       },
       "is_incremental": false,
@@ -3541,7 +3541,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-hybridconnect.html",
-          "hash": "jnITVgraWGmlywadyBLBJw=="
+          "hash": "80vtj/lrSPimiDLhG9aapA=="
         }
       },
       "is_incremental": false,
@@ -3553,7 +3553,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-janet.html",
-          "hash": "qavH3NgGLV+y86rMRGEBrw=="
+          "hash": "mkveryAlR/wDh2u/ttM0Zw=="
         }
       },
       "is_incremental": false,
@@ -3649,7 +3649,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-hybrid-crown-connect.html",
-          "hash": "4546q9weRmBVL9SCdds7PQ=="
+          "hash": "Ex0h5o+D09tcM9QqCGoifg=="
         }
       },
       "is_incremental": false,
@@ -4125,7 +4125,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-sco.html",
-          "hash": "hUJC5q89vtxc1+a5wCdsOQ=="
+          "hash": "wbDuNWuHeN1pIzXogz4exA=="
         }
       },
       "is_incremental": false,
@@ -4206,7 +4206,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-faq.html",
-          "hash": "iDy4t10HxPiA8Ok6XXtJFw=="
+          "hash": "UoZQmvwQiZn4B6KBUftsmw=="
         }
       },
       "is_incremental": false,
@@ -4230,7 +4230,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-setup-android.html",
-          "hash": "/d+U7t1WijUfdFIiK08G8A=="
+          "hash": "TMFwy/uz7/bxTa8IMLxF4Q=="
         }
       },
       "is_incremental": false,
@@ -4242,7 +4242,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-setup-iphone.html",
-          "hash": "1VHMfxsJRpQarOQmj4uEIw=="
+          "hash": "/ZJ5zTuuoe0oKIjjPEFWQQ=="
         }
       },
       "is_incremental": false,
@@ -4254,7 +4254,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-use-with-app.html",
-          "hash": "UuOich+keM4Ov4kKTomnEQ=="
+          "hash": "fp+6DgXNWPMnqQzrcZfNKA=="
         }
       },
       "is_incremental": false,
@@ -4266,7 +4266,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-ref-fair-use.html",
-          "hash": "JIxZuCjFeQQqyS1iuL6e6g=="
+          "hash": "gQQi94vuyiXmDGAFv6CboA=="
         }
       },
       "is_incremental": false,
@@ -9576,7 +9576,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-gs.html",
-          "hash": "L6ErlYWso67fRo//QUiO1w=="
+          "hash": "UsPDVDbDMApGVdOx9P/DLg=="
         }
       },
       "is_incremental": false,
@@ -10685,7 +10685,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-invoice-evidence-file.html",
-          "hash": "HTOe9zG/ycnrZtvR0JMsWA=="
+          "hash": "uWVcXCnCEeV6f/Cm8okkJQ=="
         }
       },
       "is_incremental": false,
@@ -17939,6 +17939,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-configure-services-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-configure-services-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-enable-distributed-routing.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-enable-distributed-routing.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-new-network.png",
       "output": {
         "resource": {
@@ -18390,6 +18412,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-enable-dfw.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-enable-dfw.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-home-page.png",
       "output": {
         "resource": {
@@ -18588,6 +18621,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-share-catalog.png",
       "output": {
         "resource": {
@@ -18691,6 +18735,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd10.1-new-anti-affinity-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-distributed-edge.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-distributed-edge.png"
         }
       },
       "is_incremental": false,
@@ -20627,7 +20682,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "ugpXKCBjAVmCqchSovJJnA=="
+          "hash": "TnjAPVqCfP/vPUscbZ1usA=="
         }
       },
       "is_incremental": false,
@@ -20807,7 +20862,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-change-ipsec-vpn-api.html",
-          "hash": "Fz6Vw55aF1U9jBgNFNGVzw=="
+          "hash": "k1kIumtV9feAx4DSsPOtOw=="
         }
       },
       "is_incremental": false,
@@ -20819,7 +20874,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-distributed-firewall.html",
-          "hash": "4MUlhAsTzBaf+hwXP9u52A=="
+          "hash": "8ysMfhLs8VNyTSo7efGXUA=="
         }
       },
       "is_incremental": false,
@@ -20831,7 +20886,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-distributed-logical-router.html",
-          "hash": "ciyq93uOcmr/u89bA6bPRg=="
+          "hash": "VC3n4btiCEGrgsTkfhHY8A=="
         }
       },
       "is_incremental": false,
@@ -21443,7 +21498,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-perform-failover.html",
-          "hash": "ISoviCnNqw+LP2JI0hbHBA=="
+          "hash": "yXJHUNMGqUtF/TJSEawEOg=="
         }
       },
       "is_incremental": false,
@@ -21467,7 +21522,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-byof-working-firewalls.html",
-          "hash": "PMcv9Zami6YvAMgjXSFR8g=="
+          "hash": "flqqLYGWANp93PnmhLMD/A=="
         }
       },
       "is_incremental": false,
@@ -21659,7 +21714,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-trouble-ipsec-nsx64.html",
-          "hash": "c10eug41KbibCF+jR/7URQ=="
+          "hash": "DNGguJgPNWTr4JH8An3zSw=="
         }
       },
       "is_incremental": false,
@@ -21671,7 +21726,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-trouble-null-pointer.html",
-          "hash": "QdkjwSYbdq1qac2nPZAJmg=="
+          "hash": "D7fnf0ghrMU0Dz6o8TWSPw=="
         }
       },
       "is_incremental": false,
@@ -21815,7 +21870,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-byof.html",
-          "hash": "WJeiaEHVhbvNtL2f6gzYFw=="
+          "hash": "4xYtl/4kF/sai2+w0XSmAg=="
         }
       },
       "is_incremental": false,
