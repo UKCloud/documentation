@@ -93,13 +93,17 @@
                   
 <h1 id="getting-started-guide-for-ukcloud-for-oracle-software">Getting Started Guide for UKCloud for Oracle Software</h1>
 
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.</p>
+</div>
 <h2 id="overview">Overview</h2>
 <p>UKCloud for Oracle Software provides Infrastructure-as-a-Service (IaaS), powered by Oracle VM (OVM) technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications.</p>
 <p>This Getting Started Guide provides an overview of the functionality available with UKCloud for Oracle Software.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>This guide is intended for customers who want to get up and running with UKCloud for Oracle Software.</p>
 <h2 id="introduction-to-ukcloud-for-oracle-software">Introduction to UKCloud for Oracle Software</h2>
-<p>Many applications running in the UK public sector today have a backbone powered by Oracle software. They include ERP solutions, finance systems (such as payroll), HR systems and wide variety of citizen‑supporting applications.</p>
+<p>Many applications running in the UK Public Sector today have a backbone powered by Oracle software. They include ERP solutions, finance systems (such as payroll), HR systems and wide variety of citizen‑supporting applications.</p>
 <p>Oracle solutions have traditionally been subject to licensing and technical requirements that have made it challenging to carry out cloud transition projects and meet the government's Cloud First policy.</p>
 <p>UKCloud for Oracle Software enables you to start your cloud journey with your Oracle applications. It overcomes the licensing and technical barriers, and provides the trusted, connected and flexible Assured OFFICIAL and non-internet-connected Elevated OFFICIAL cloud platforms you need to deliver your critical Oracle applications in the cloud. UKCloud for Oracle Software can help you achieve the business goals at the centre of your strategy, without risking your operational ability to execute.</p>
 <p>The service has been designed and tested for compatibility with the most popular Oracle applications used in citizen‑facing solutions today, including:</p>
@@ -139,11 +143,11 @@
 <p>If you have any questions about Oracle licensing, contact your Cloud Architect or Service Delivery Manager (SDM).</p>
 <p>If you require assistance building out your Oracle solution, we can put you in contact with one or our partners who specialises in Oracle technologies.</p>
 <h3 id="your-ukcloud-for-oracle-software-estate">Your UKCloud for Oracle Software estate</h3>
-<p>The management of your Oracle estate is split between Oracle Enterprise Manager (OEM) and vCloud Director:</p>
+<p>The management of your Oracle estate is split between Oracle Enterprise Manager (OEM) and VMware Cloud Director:</p>
 <ul>
 <li><p>Use OEM to build and manage your VMs and templates</p>
 </li>
-<li><p>Use vCloud Director to create your VM networks and configure your edge gateway, including firewall rules and VPN connections</p>
+<li><p>Use VMware Cloud Director to create your VM networks and configure your edge gateway, including firewall rules and VPN connections</p>
 </li>
 </ul>
 <p><img src="images/orcl-architecture.png" alt="UKCloud for Oracle Software architecture"></p>
@@ -298,10 +302,10 @@
 <p><strong>More information!</strong> <a href="orcl-how-build-vm.html"><em>How to build an Oracle virtual machine</em></a></p>
 <h2 id="setting-up-your-network">Setting up your network</h2>
 <p>Before you can start using the VMs in your Oracle environment, you need to create the network that connects the VMs to each other, and potentially also to the outside world. This network enables your VMs to communicate with each other or access external networks. A single Oracle tenant can have multiple networks. When UKCloud sets up a new Oracle tenant for you, we'll usually create an edge gateway for that tenant, but the creation of any networks is your responsibility.</p>
-<p>Networking and connectivity for UKCloud for Oracle Software is managed within vCloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.</p>
+<p>Networking and connectivity for UKCloud for Oracle Software is managed within VMware Cloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Because you create your network in vCloud Director, you'll see references to VMware terminology, such as organisations and virtual data centres (VDCs). In UKCloud for Oracle Software, an Oracle tenant is equivalent to a VDC.</p>
+<p>Because you create your network in VMware Cloud Director, you'll see references to VMware terminology, such as organisations and virtual data centres (VDCs). In UKCloud for Oracle Software, an Oracle tenant is equivalent to a VDC.</p>
 </div>
 <p>There are two types of network:</p>
 <ul>
@@ -312,7 +316,7 @@
 </ul>
 <h2 id="configuring-your-edge-gateway">Configuring your edge gateway</h2>
 <p>An edge gateway controls how traffic from the outside world comes into and out of your environment. It is very important to make sure that your edge gateway is configured correctly to make your applications available but also secure.</p>
-<p>The tools for configuring your edge gateway are provided within vCloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.</p>
+<p>The tools for configuring your edge gateway are provided within VMware Cloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.</p>
 <p>Your edge gateway provides the following services:</p>
 <ul>
 <li><p><strong>Dynamic Host Configuration Protocol (DHCP)</strong> --- The edge gateway can act as a DHCP server for VMs connected to VDC networks connected to an edge (see <a href="../vmware/vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a>).</p>

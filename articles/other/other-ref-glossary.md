@@ -87,12 +87,6 @@ For more information, see the relevant Cloud Enablement service scope:
 
 - [Big Cloud Enablement Service Scope](../enablement/enbl-sco-bigcolo.md)
 
-### Cloud Optimisation from UKCloud
-
-A UKCloud service, utilising CloudHealth&reg;, that helps you optimise and manage large scale cloud implementations to help you avoid cloud sprawl and reduce cloud spend, achieving initial savings of up to 30%.
-
-For more information, see [Cloud Optimisation from UKCloud Service Definition](../managed-services/man-sd-optimisation.md).
-
 ### CloudSOC from UKCloud
 
 *See:* [Security Operations Service](#security-operations-service).
@@ -410,12 +404,6 @@ A top level container in VMware Cloud Director/vCloud Director that contains one
 ### Persistent storage
 
 A UKCloud for OpenStack block storage option that is always available, regardless of the state of the VM.
-
-### Portworx Enterprise from UKCloud
-
-Provides a secure and stable cloud native storage and data management platform for Kubernetes that enterprises can trust to manage data in containers.
-
-For more information, see the [Portworx Enterprise from UKCloud service definition](../openshift/oshift-sd-portworx.md).
 
 ### POWER VM
 
