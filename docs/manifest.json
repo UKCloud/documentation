@@ -3493,7 +3493,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-ddos.html",
-          "hash": "3OWjZXeO6LVKqE8EYxrmKw=="
+          "hash": "y5GJ//6t+egKOoYiydXrnQ=="
         }
       },
       "is_incremental": false,
@@ -3553,7 +3553,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-janet.html",
-          "hash": "mkveryAlR/wDh2u/ttM0Zw=="
+          "hash": "8SxtjW3CudQruH/8vPOdUw=="
         }
       },
       "is_incremental": false,
@@ -4218,7 +4218,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-gs.html",
-          "hash": "eoFLnDc6rnVQwJUJgit6PA=="
+          "hash": "w0tsw6JKk2dHjWGwG9fU4Q=="
         }
       },
       "is_incremental": false,
@@ -6124,7 +6124,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-faq.html",
-          "hash": "y6bB6AXsTUXAxjy66Q+BFg=="
+          "hash": "6yCkMVXCnH9fAf5vcheoyg=="
         }
       },
       "is_incremental": false,
@@ -6136,7 +6136,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "RLRmNc0QYekA/TQoywS2dQ=="
+          "hash": "Px1jVw8vZqJk/BO1dX+qIg=="
         }
       },
       "is_incremental": false,
@@ -6156,11 +6156,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-how-add-domains-proxy-whitelist.md",
+      "source_relative_path": "articles/openshift/oshift-how-add-domains-proxy-allow-list.md",
       "output": {
         ".html": {
-          "relative_path": "articles/openshift/oshift-how-add-domains-proxy-whitelist.html",
-          "hash": "HltQ0LuY7uwbTLA6uAVsjw=="
+          "relative_path": "articles/openshift/oshift-how-add-domains-proxy-allow-list.html",
+          "hash": "BmPs2H6r8WaQc1SrAqV3ow=="
         }
       },
       "is_incremental": false,
@@ -6316,7 +6316,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-restrict-access-to-openshift-routes-by-ip-address.html",
-          "hash": "oQwryd4aetzDy6QF96Q5ZQ=="
+          "hash": "8rTXwNv3kiO1zmfKXQ27XA=="
         }
       },
       "is_incremental": false,
@@ -6376,7 +6376,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-view-proxy-logs.html",
-          "hash": "1xkhRAn3me+N7PQKeyhHZg=="
+          "hash": "yqX7aK4jNBXTB9XNdVIiWw=="
         }
       },
       "is_incremental": false,
@@ -6460,7 +6460,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-no-proxy.html",
-          "hash": "QRPedgPOeXDjegQRHatvKg=="
+          "hash": "f2z2TEjN0U4f8oyYQpM12w=="
         }
       },
       "is_incremental": false,
@@ -6472,7 +6472,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-pricing.html",
-          "hash": "QrR1rDraF51HC9GnO7Vnog=="
+          "hash": "jZ24bpHXOt+idq3b7DRhNg=="
         }
       },
       "is_incremental": false,
@@ -6496,7 +6496,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-security-best-practices.html",
-          "hash": "2ZEPbtDaqpQVgs+FTJcR2A=="
+          "hash": "73lbdsYsL2WQom/3AhiSyg=="
         }
       },
       "is_incremental": false,
@@ -6508,7 +6508,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-trial.html",
-          "hash": "rHu48XoPMNgZygSw6l55Qw=="
+          "hash": "C8/Wks0cIHm0atfO/PDrqw=="
         }
       },
       "is_incremental": false,
@@ -6520,7 +6520,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "zG4iY19k5k/liDyJ+dOvvQ=="
+          "hash": "k0oQ5eMxAYbiZIC+6u8bnQ=="
         }
       },
       "is_incremental": false,
@@ -6544,7 +6544,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "IucgPl2t/8XTeqIwv//Glg=="
+          "hash": "5ZF6WUadSbuoW/YfrAAQ1Q=="
         }
       },
       "is_incremental": false,
@@ -8784,7 +8784,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-create-heat-template.html",
-          "hash": "YOJFcjusKQQ1qXfC9yZRpA=="
+          "hash": "tULXa3XWi904YqsWgOr+EA=="
         }
       },
       "is_incremental": false,
@@ -8796,7 +8796,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-create-load-balancer.html",
-          "hash": "3lWrl0SPB5SKJpHh//wPDg=="
+          "hash": "T/JpWXAQu9jwtH9n4GrPFw=="
         }
       },
       "is_incremental": false,
@@ -8808,7 +8808,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-install-rhui.html",
-          "hash": "y0enRk2srOeALeOsFJLWKA=="
+          "hash": "CWnqsBeNhHExJfmbAWdOvA=="
         }
       },
       "is_incremental": false,
@@ -8844,7 +8844,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-recover-instance.html",
-          "hash": "atuxW54tyIcTIkEWg3q2bw=="
+          "hash": "oM605nERfe8gvdHvblyg5w=="
         }
       },
       "is_incremental": false,
@@ -9552,7 +9552,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-home.html",
-          "hash": "VtGH7XNEo4WVamM1ZfYGng=="
+          "hash": "IDMNlSZAhiIWQ86X02hBFA=="
         }
       },
       "is_incremental": false,
@@ -9684,7 +9684,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "YbUNEn+aAbi51pEEDz4bKA=="
+          "hash": "poEEE/Yg7HuiDbtV2RJbWQ=="
         }
       },
       "is_incremental": false,
@@ -10397,7 +10397,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-sla.html",
-          "hash": "ltSz0Fl+8sV2zkKe9XK+uQ=="
+          "hash": "NSMj+xUGzLQaEasJPagXGw=="
         }
       },
       "is_incremental": false,
