@@ -36,7 +36,6 @@ This article provides a list of Service Definitions for UKCloud services. The li
 [Dedicated Compute v2](../dedicated-compute/dc-sd.md)<br>
 [Disaster Recovery as a Service](../draas/draas-sd.md)<br>
 [Migration to the Cloud](../migration/migr-sd.md)<br>
-[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md)<br>
 [Neustar DDoS Protection from UKCloud](../connectivity/conn-sd-ddosprotect.md)<br>
 [Neustar UltraDNS from UKCloud](../connectivity/conn-sd-ultradns.md)<br>
 [Secure Remote Access](../sra/sra-sd.md)<br>
