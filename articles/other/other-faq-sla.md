@@ -297,7 +297,7 @@ How much is payable?
 
 - The bill for the customer at the end of the month would be £7,440 (before credits are applied)
 
-- The Service Credit is 3% of the amount billed to that UKCloud for OpenShift instance during the calendar month = £223.20
+- The Service Credit is 3% of the amount billed to that UKCloud for Managed OpenShift instance during the calendar month = £223.20
 
 - The amount billed to the Customer is therefore £7,440 - £223.20= **£7,216.80**
 
