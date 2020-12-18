@@ -415,6 +415,9 @@ How much is payable?
 
 ## Email and Collaboration as a Service
 
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ### How do you offer an SLA on Email and Collaboration as a Service?
 
 Unavailability applies to existing mailboxes that become unresponsive due to a fault recognised at the SaaS layer or below. That is, the fault is within UKCloud-controlled components, such as the messaging infrastructure, storage, power or internal networking (such as physical firewalls and routers).
