@@ -5703,18 +5703,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sd-optimisation.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/managed-services/man-sd-optimisation.html",
-          "hash": "AfwAh6QaKfQd40OWzvliDw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-sd-rds.md",
       "output": {
         ".html": {
@@ -5755,7 +5743,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-services-home.html",
-          "hash": "QUIssheKVyFpYRXH+cjXSQ=="
+          "hash": "TwBshWGxJR07o13H32hUNw=="
         }
       },
       "is_incremental": false,
@@ -5779,7 +5767,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "DeY+5yukU92EDpcwGi/QIA=="
+          "hash": "AxtiaruGh16KDvslGbYNFA=="
         }
       },
       "is_incremental": false,
@@ -10625,7 +10613,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "3wG1s2N2KoXbN5Oi8E3+5Q=="
+          "hash": "6UUl99diYwsnKQQVhgsxBg=="
         }
       },
       "is_incremental": false,
@@ -10733,7 +10721,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "PiwCJ72+JYqmzIrIglec1Q=="
+          "hash": "HOdsuDVby7c4WtLIPCIJaA=="
         }
       },
       "is_incremental": false,
@@ -10769,7 +10757,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "Z1s3ALEv2ceird7DRDMWmw=="
+          "hash": "L9W2oQl1+ECnZBg78AlNMQ=="
         }
       },
       "is_incremental": false,
@@ -10793,7 +10781,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "oB9A5j+C+wlkD9/j3AtxYQ=="
+          "hash": "IgymKtGz/nvU9d7GI9buXA=="
         }
       },
       "is_incremental": false,
@@ -10829,7 +10817,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "BIJG+DsnCHZ7K2EMi4r+eg=="
+          "hash": "KaY9O66A16VMqcIwfu/Hxw=="
         }
       },
       "is_incremental": false,
@@ -22069,7 +22057,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 454,
+          "total_file_count": 453,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
