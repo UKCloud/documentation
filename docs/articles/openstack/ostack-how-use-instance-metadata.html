@@ -99,7 +99,7 @@
 <h2 id="using-the-api">Using the API</h2>
 <h3 id="creating-an-instance-with-metadata-api">Creating an instance with metadata (API)</h3>
 <p>When you create a new instance using the OpenStack API, use the <code>property</code> flag to include metadata:</p>
-<pre><code>-- property &lt;key&gt;=&lt;value
+<pre><code>--property &lt;key&gt;=&lt;value
 </code></pre>
 <p>For exmaple:</p>
 <pre><code>openstack server create --nic net-id=internet --image cirros --flavor t1.tiny --property awesomeMetadata=true testVM

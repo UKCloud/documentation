@@ -8760,7 +8760,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "+NzLAl5QoWqz0IKCH4y4Uw=="
+          "hash": "WlvR+ON1zYD7Ud4buNO6nw=="
         }
       },
       "is_incremental": false,
@@ -8964,7 +8964,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-instance-metadata.html",
-          "hash": "5pB/T0uGgPGNZTS/MXRY8g=="
+          "hash": "yMNxA8zyfNSCPf3+J02/Dw=="
         }
       },
       "is_incremental": false,
