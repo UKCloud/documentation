@@ -35,7 +35,7 @@
     - name: Obtain usage metrics for OpenShift capacity management
       href: oshift-how-obtain-usage-metrics.md
     - name: Permit outbound internet access in deployments with government community network connectivity
-      href: oshift-how-add-domains-proxy-whitelist.md
+      href: oshift-how-add-domains-proxy-allow-list.md
     - name: Publish application routes to multiple external networks
       href: oshift-how-publish-routes-on-multiple-networks.md
     - name: Use NetworkPolicy objects

@@ -3,8 +3,8 @@ title: How to restrict access to OpenShift routes by IP address
 description: Restrict access to OpenShift routes by IP address
 services: openshift
 author: Mudasar Hussain
-reviewer: Kieran O'Neill
-lastreviewed: 04/02/2020 10:46:43
+reviewer: Steve Mulholland
+lastreviewed: 15/12/2020 10:46:43
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
@@ -27,17 +27,17 @@ OpenShift developers who have created and deployed services into OpenShift, and 
 
 ## Restricting access to a route
 
-After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to whitelist.
+After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to add to the allow-list.
 
 > [!IMPORTANT]
-> Whitelisting a IP address automatically blacklists everything else.
+> Adding this annotation for an IP address or list of addresses/subnets automatically denies all traffic from addresses outside this list.
 
 You apply the annotation to a route in the following manner:
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="<ip_address>"
 
 > [!IMPORTANT]
-> You must do this for every route that you wish to apply the whitelisting to.
+> You must do this for every route that you wish to apply the restriction to.
 
 ## Examples
 
