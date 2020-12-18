@@ -8712,7 +8712,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "zJA6qJ63QPm8SYq+TaZ9ow=="
+          "hash": "4E8oHzu0ssLw4pTPpEuU5A=="
         }
       },
       "is_incremental": false,
@@ -10381,18 +10381,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-faq-mcbs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-faq-mcbs.html",
-          "hash": "2S5AstvzmZ8Ult0dhkJOFw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-miso-rebate.md",
       "output": {
         ".html": {
@@ -10422,18 +10410,6 @@
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
           "hash": "Ye4ZOAVU/oHrMNHNvayBjg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-how-connect-mcbs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-how-connect-mcbs.html",
-          "hash": "XbwOooyIek1Q+yuwi9QnQA=="
         }
       },
       "is_incremental": false,
@@ -10625,7 +10601,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "8CuTY27d7k2WLLHPBClVww=="
+          "hash": "efkdlXtqK4XRbhWsWO9wvQ=="
         }
       },
       "is_incremental": false,
@@ -10661,7 +10637,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-knowledge-guidelines.html",
-          "hash": "Bf1G5NrzjgQa3zsA/znMKQ=="
+          "hash": "3h7trNvkgZ3myhKMjC6iyg=="
         }
       },
       "is_incremental": false,
@@ -10709,7 +10685,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "HOdsuDVby7c4WtLIPCIJaA=="
+          "hash": "6PbRtKYyiRjB9br8I7RlRQ=="
         }
       },
       "is_incremental": false,
@@ -10769,7 +10745,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "qxzLtf5ktp0u8lE/o1yYiA=="
+          "hash": "axoSjgkFS+NNRZ7K1irTlw=="
         }
       },
       "is_incremental": false,
@@ -10805,7 +10781,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "5SZixipXJDxQ+KjTVkyLlg=="
+          "hash": "dZlsCVzFBYN2xfErOzJwYw=="
         }
       },
       "is_incremental": false,
@@ -10885,18 +10861,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-sd-mcbs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-sd-mcbs.html",
-          "hash": "hvKnlU0qNvquk5sA/vQMjw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-vid-kc-contribution.md",
       "output": {
         ".html": {
@@ -10925,7 +10889,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "nr2gsjjorzsVCWh+F3eUiw=="
+          "hash": "cbn4l+wllfQCWaX2suLbng=="
         }
       },
       "is_incremental": false,
@@ -22045,7 +22009,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 452,
+          "total_file_count": 449,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
