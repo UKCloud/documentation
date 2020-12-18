@@ -267,10 +267,6 @@ Due to the service being dependent on connectivity between the customer data cen
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Fault is within the customer's control (configuration, customer applications and customer networks)<li>Faults associated with customer's domain name registrar<li>Faults associated with third party/service provider networks</ul>
 **Service Credit**           | None
 
-### Portworx Enterprise from UKCloud
-
-Portworx Enterprise from UKCloud is deployed in your OpenShift cluster. For details of the SLA for OpenShift, see [*UKCloud for Managed OpenShift*](#ukcloud-for-managed-openshift).
-
 ### Private Cloud
 
 &nbsp;                       | Private Cloud

@@ -40,7 +40,6 @@ This article provides a list of Service Definitions for UKCloud services. The li
 [Multi-Cloud Backup Storage](../other/other-sd-mcbs.md)<br>
 [Neustar DDoS Protection from UKCloud](../connectivity/conn-sd-ddosprotect.md)<br>
 [Neustar UltraDNS from UKCloud](../connectivity/conn-sd-ultradns.md)<br>
-[Portworx Enterprise from UKCloud](../openshift/oshift-sd-portworx.md)<br>
 [Secure Remote Access](../sra/sra-sd.md)<br>
 [Security Operations Service](../soc/soc-sd.md)<br>
 [UKCloud Desktop as a Service](../daas/daas-sd.md)<br>
