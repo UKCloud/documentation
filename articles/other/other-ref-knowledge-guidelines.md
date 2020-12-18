@@ -45,21 +45,18 @@ where:
 
 - `product` indicates which product the topic is for. One of:
 
-    Code     | Product                     | Code     | Product
-    ---------|-----------------------------|----------|--------
-    `azs`    | UKCloud for Microsoft Azure | `cdsz`   | Cross Domain Security Zone
-    `conn`   | Connectivity                | `cs`     | Cloud Storage
-    `dc`     | Dedicated Compute v2        | `draas`  | Disaster Recovery as a Service
-    `email`  | Email and Collaboration     | `enbl`   | Cloud Enablement
-    `gpu`    | Cloud GPU                   | `hpc`    | High Performance Compute
-    `man`    | Managed Services            | `mcbs`   | Multi-Cloud Backup Services
-    `migr`   | Migration to the Cloud      | `orcl`   | UKCloud for Oracle Software
-    `oshift` | UKCloud for OpenShift       | `ostack` | UKCloud for OpenStack
-    `prc`    | Private Cloud               | `ptl`    | UKCloud Portal
-    `sra`    | Secure Remote Access        | `ps`     | Professional Services
-    `vmw`    | UKCloud for VMware          |     | 
-
-    For articles that do belong to a service or that apply to multiple services, use `other`
+    Code     | Product                        | Code     | Product
+    ---------|--------------------------------|----------|--------
+    `azs`    | UKCloud for Microsoft Azure    | `cdsz`   | Cross Domain Security Zone
+    `conn`   | Connectivity                   | `cs`     | Cloud Storage
+    `daas`   | UKCloud Desktop as a Service   | `dc`     | Dedicated Compute v2
+    `draas`  | Disaster Recovery as a Service | `enbl`   | Cloud Enablement
+    `man`    | Managed Services               | `migr`   | Migration to the Cloud
+    `oshift` | UKCloud for Managed OpenShift  | `ostack` | UKCloud for OpenStack
+    `other`  | Cross-platform services        | `prc`    | Private Cloud
+    `ps`     | Professional Services          | `ptl`    | UKCloud Portal
+    `shared` | Shared Services                | `soc`    | Security Operations Service
+    `sra`    | Secure Remote Access           | `vmw`    | UKCloud for VMware
 
 - `type` indicates the article type. One of:
 
@@ -75,9 +72,8 @@ where:
     For example:
 
     - `conn-ref-<psn-core-services>.md`
-    - `vmw-how-<create-vm-from-template>.md`
 
-    
+    - `vmw-how-<create-vm-from-template>.md`
 
 - `tool` (optional) indicates if the topic is specific to a particular tool (for example, a CLI or API).
 
@@ -120,21 +116,18 @@ This is a description of the content of the article. Provide information here th
 
 This is the service to which the article belongs. One of:
 
-Metadata value        | Product                     | Metadata value  | Product
-----------------------|-----------------------------|-----------------|--------
-`azure-stack`         | UKCloud for Microsoft Azure | `cdsz`          | Cross Domain Security Zone
-`connectivity`        | Connectivity                | `cloud-storage` | Cloud Storage
-`dedicated-compute`   | Dedicated Compute v2        | `draas`         | Disaster Recovery as a Service
-`email`               | Email and Collaboration     | `enablement`    | Cloud Enablement
-`gpu`                 | Cloud GPU                   | `hpc`           | High Performance Compute
-`managed-services`    | Managed Services            | `mcbs`          | Multi-Cloud Backup Services
-`migration`           | Migration to the Cloud      | `openshift`     | UKCloud for OpenShift
-`openstack`           | UKCloud for OpenStack       | `oracle`        | UKCloud for Oracle Software
-`portal`              | UKCloud Portal              | `private-cloud` | Private Cloud
-`sra`                 | Secure Remote Access        | `pro-services`  | Professional Services
-`vmware`              | UKCloud for VMware          |         | 
-
-For articles that do belong to a service or that apply to multiple services, use `other`
+Metadata value        | Product                        | Metadata value      | Product
+----------------------|--------------------------------|---------------------|--------
+`azure-stack`         | UKCloud for Microsoft Azure    | `cdsz`              | Cross Domain Security Zone
+`cloud-storage`       | Cloud Storage                  | `connectivity`      | Connectivity
+`daas`                | UKCloud Desktop as a Service   | `dedicated-compute` | Dedicated Compute v2
+`draas`               | Disaster Recovery as a Service | `enablement`        | Cloud Enablement
+`managed-services`    | Managed Services               | `migration`         | Migration to the Cloud
+`openshift`           | UKCloud for Managed OpenShift  | `openstack`         | UKCloud for OpenStack
+`other`               | Cross-platform services        | `portal`            | UKCloud Portal
+`private-cloud`       | Private Cloud                  | `pro-services`      | Professional Services
+`shared-services`     | Shared Services                | `soc`               | Security Operations Service
+`sra`                 | Secure Remote Access           | `vmware`            | UKCloud for VMware
 
 ### author
 
@@ -152,7 +145,9 @@ This is the date when the article was most recently reviewed in its entirety.
 
 **Mandatory.** For most articles, the rootlink will be the article type. One of:
 
-- `About`
+- `About` - Product home pages
+
+- `FAQs`
 
 - `Getting Started`
 
@@ -160,18 +155,9 @@ This is the date when the article was most recently reviewed in its entirety.
 
 - `Reference`
 
-- `FAQs`
+- `Service Information` - for Service Definitions, Service Scopes and pricing information articles
 
-- `Blueprints`
-
-- `Service Scopes`
-
-Metadata value | Article type        | Metadata value  | Article type
-    -------|---------------------|-------|-------------
-    `About` | Product home pages | `FAQs`  | FAQs
-    `Getting Started`  | Getting Started Guides | `How To` | How To Guides
-    `Reference`  | Reference Guides    | `Service Scope` | Service Scopes
-    `Service Definition`   | Service Definitions | `Videos` | Videos
+- `Videos`
 
 > [!NOTE]
 > For UKCloud for Microsoft Azure articles, the `rootlink` is either `Users` for articles intended for tenants or `Operators` for articles intended for service providers. Use the `toc_sub1` metadata tag to identify the article type.

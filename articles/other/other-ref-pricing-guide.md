@@ -42,7 +42,6 @@ Managed SQL Server<br>
 Managed Web Server<br>
 Extended Network Support from UKCloud<br>
 Migration to the Cloud<br>
-Multi-Cloud Backup Storage<br>
 Neustar DDoS Protection from UKCloud<br>
 Neustar UltraDNS from UKCloud<br>
 Private Cloud<br>
