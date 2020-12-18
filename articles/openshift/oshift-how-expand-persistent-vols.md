@@ -3,8 +3,8 @@ title: How to expand OpenShift persistent volumes
 description: Outlines methods to expand OpenShift persistent volumes.
 services: openshift
 author: Gareth Ellner
-reviewer: gsmith
-lastreviewed: 20/11/2019
+reviewer: Gareth Ellner
+lastreviewed: 18/12/2020
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
@@ -65,6 +65,9 @@ In this article, we'll expand the volume for a cluster's default Elasticsearch d
 
 You can apply the same procedure to any other pods that use persistent volumes.
 
+> [!NOTE]
+> In OpenShift v4, the cluster-logging components are named differently: the Elasticsearch pod is prefixed "elasticsearch-cdm-" and the pvc is prefixed "elasticsearch-elasticsearch-cdm-". In version 4, both kibana and elasticsearch are scaled using deployments rather than deployment configs.
+
 ```
 $ oc project openshift-logging
 Now using project "openshift-logging" on server "https://console.5678-89abcd:8443".
@@ -96,6 +99,9 @@ Confirm that the pod that uses the volume has been terminated:
 $ oc get pods | grep logging-es-data-master
 # (nothing returned)
 ```
+
+
+
 
 ## Resize the persistent volume
 
