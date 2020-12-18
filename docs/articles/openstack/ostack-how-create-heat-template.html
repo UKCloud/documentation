@@ -141,7 +141,7 @@ resources:
     type: OS::Cinder::Volume
     properties:
       size: { get_param: heat_volume_size }
-  heat_volume_attachement:
+  heat_volume_attachment:
     type: OS::Cinder::VolumeAttachment
     properties:
       volume_id: { get_resource: heat_volume }

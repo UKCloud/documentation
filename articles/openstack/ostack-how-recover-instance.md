@@ -2,9 +2,9 @@
 title: How to manage how your instance recovers from a host failure
 description: Describes how to control what happens to your instances in the event of a service interruption to the availability of a host
 services: openstack
-author: Sue Highmoor
-reviewer: Bryce Nicholls
-lastreviewed: 24/04/2020 10:34:17
+author: shighmoor
+reviewer: nmathews
+lastreviewed: 10/12/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -58,11 +58,11 @@ To use the OpenStackClient CLI to set the recovery option for an instance:
 
 1. To set the recovery option so that the instance is automatically restarted when the host has been recovered, run the following command:
 
-        openstack server set -- property RestartOnFail=True <instance_ID_or_name>
+        openstack server set --property RestartOnFail=True <instance_ID_or_name>
 
 2. To set the recovery option so that you must manually restart the instance when the host has been recovered, run the following command:
 
-        openstack server unset -- property RestartOnFail <instance_ID_or_name>
+        openstack server unset --property RestartOnFail <instance_ID_or_name>
 
 ## Using the OpenStack Horizon dashboard
 

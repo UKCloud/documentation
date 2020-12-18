@@ -18,6 +18,9 @@ toc_mdlink: orcl-ref-solaris-aix.md
 
 # Compatibility with Solaris and AIX
 
+> [!IMPORTANT]
+> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
+
 ## Overview
 
 This article provides advice about how you can migrate your applications to UKCloud for Oracle Software depending on the Oracle platform you're using.

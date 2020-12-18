@@ -124,11 +124,11 @@
 <p>To use the OpenStackClient CLI to set the recovery option for an instance:</p>
 <ol>
 <li><p>To set the recovery option so that the instance is automatically restarted when the host has been recovered, run the following command:</p>
-<pre><code> openstack server set -- property RestartOnFail=True &lt;instance_ID_or_name&gt;
+<pre><code> openstack server set --property RestartOnFail=True &lt;instance_ID_or_name&gt;
 </code></pre>
 </li>
 <li><p>To set the recovery option so that you must manually restart the instance when the host has been recovered, run the following command:</p>
-<pre><code> openstack server unset -- property RestartOnFail &lt;instance_ID_or_name&gt;
+<pre><code> openstack server unset --property RestartOnFail &lt;instance_ID_or_name&gt;
 </code></pre>
 </li>
 </ol>

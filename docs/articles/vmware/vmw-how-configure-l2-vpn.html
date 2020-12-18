@@ -94,7 +94,7 @@
 <h1 id="how-to-configure-an-l2-vpn">How to configure an L2 VPN</h1>
 
 <h2 id="overview">Overview</h2>
-<p>UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Advanced Management bundle (additional charges apply). With L2 VPN you can stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.</p>
+<p>UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Advanced Management bundle (additional charges apply). With L2 VPN you can stretch the same L2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.</p>
 <p>L2 VPN is an extension of the edge's SSL functionality. It enables you to configure a tunnel between two sites, extending a logical switch across both sites. The tunnel means that virtual machines (VMs) remain on the same subnet if they are moved between the two sites, enabling you to extend your data centre across multiple sites. An NSX edge at one site can provide all services to VMs on the other site.</p>
 <p>UKCloud L2 VPN functionality covers three scenarios:</p>
 <ul>
@@ -139,7 +139,7 @@
 <p>To stretch the subnet across the two sites, make sure you use the desired address space on both networks.</p>
 </div>
 </li>
-<li><p>For each network, select the network and, on the <em>General</em> tab, click <strong>Edit</strong></p>
+<li><p>For each network, select the network and, on the <em>General</em> tab/page, click <strong>Edit</strong></p>
 </li>
 <li><p>In the <em>Edit network</em> dialog box, select the <strong>Connection</strong> tab.</p>
 </li>
@@ -150,6 +150,40 @@
 </li>
 </ol>
 <h3 id="creating-certificates">Creating certificates</h3>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
+
+<ol>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the <em>destination</em> edge gateway.</p>
+</li>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
+</li>
+<li><p>Select the <em>destination</em> edge gateway and click <strong>Services</strong>.</p>
+<p><img src="images/vmw-vcd10.1-edge-btn-services.png" alt="Services option"></p>
+</li>
+<li><p>Select the <strong>Certificates</strong> tab.</p>
+</li>
+<li><p>Click <strong>+ CA Certificate</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-btn-add-cert.png" alt="Add CA Certification button"></p>
+</li>
+<li><p>Add the certificate to use for the L2 VPN server then click <strong>Keep</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-create-ssl-trust-object.png" alt="Create SSL Trust Object dialog box"></p>
+</li>
+<li><p>Repeat this process for the <em>source</em> edge gateway.</p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the <em>destination</em> edge gateway.</p>
 </li>
@@ -170,6 +204,8 @@
 <li><p>Repeat this process for the <em>source</em> edge gateway.</p>
 </li>
 </ol>
+</section>
+</div>
 <h3 id="configuring-the-l2-vpn-server-on-the-destination-edge-gateway">Configuring the L2 VPN server on the destination edge gateway</h3>
 <p>The L2 VPN server is the <em>destination</em> edge gateway to which the client is to be connected.</p>
 <ol>
@@ -210,13 +246,7 @@
 <p>If the source site is not backed by NSX, you can deploy a standalone edge as the L2 VPN client. For information see <a href="#deploying-a-standalone-edge-as-an-l2-vpn-client"><em>Deploying a standalone edge as an L2 VPN client</em></a>.</p>
 </div>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the <em>source</em> edge gateway.</p>
-</li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-</li>
-<li><p>Select the <em>source</em> edge gateway and click <strong>Configure Services</strong>.</p>
-</li>
-<li><p>Select the <strong>VPN</strong> tab, then the <strong>L2 VPN</strong> tab.</p>
+<li><p>On the <em>Edge Gateway</em> page for the <em>source</em> edge gateway, select the <strong>VPN</strong> tab, then the <strong>L2 VPN</strong> tab.</p>
 </li>
 <li><p>For <strong>L2VPN Mode</strong>, select <strong>Client</strong>.</p>
 <p><img src="images/vmw-vcd91-l2vpn-client.png" alt="L2 VPN Client option"></p>

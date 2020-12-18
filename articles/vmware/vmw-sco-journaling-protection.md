@@ -2,9 +2,9 @@
 title: Journaling Protection Service Scope
 description: Outlines important details regarding the Journaling Protection service, powered by Zerto
 services: vmware
-author: Steve Hall
+author: shall
 reviewer:
-lastreviewed: 24/07/2018 13:50:39
+lastreviewed: 24/07/2018
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -57,7 +57,7 @@ Factors that can affect the RPO are:
 
 Additionally, the service will also alert if a customer's journal exceeds 75% in size of the original VM. This alert is utilised to understand if the customer's solution is being protected adequately.
 
-Journaling Protection only works for VM's currently on the platform -- it will only capture data whilst a VM is turned on. If a VM is deleted in vCloud Director -- Journaling Protection will IMMEDIATELY delete the associated journal.
+Journaling Protection only works for VMs currently on the platform and it will only capture data whilst a VM is turned on. If a VM is deleted in VMware Cloud Director/vCloud Director, Journaling Protection will IMMEDIATELY delete the associated journal.
 
 ### What SLA do you offer on Journaling Protection?
 

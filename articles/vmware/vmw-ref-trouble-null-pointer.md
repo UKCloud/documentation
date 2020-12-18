@@ -17,31 +17,29 @@ toc_mdlink: vmw-ref-trouble-null-pointer.md
 
 # Fixing your advanced gateway if you encounter NullPointerException error
 
-With the upgrade to NSX version 6.4, edges that have been converted to an advanced gateway may produce an error when attempting to view the properties of the edge gateway in vCloud Director. This does not affect access to the tenant portal GUI, where you can set up firewall rules and so on, this only affects viewing the edge properties such as the IP addresses assigned to an edge.
+With the upgrade to NSX version 6.4, edges that have been converted to an advanced gateway may produce an error when attempting to view the properties of the edge gateway in VMware Cloud Director. This does not affect access to the tenant portal GUI, where you can set up firewall rules and so on, this only affects viewing the edge properties such as the IP addresses assigned to an edge.
 
-To complete the steps in this article, you must have access to vCloud Director.
+To complete the steps in this article, you must have access to VMware Cloud Director.
 
 To fix your edge to enable viewing of its properties:
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge with the broken VPN.
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the broken edge.
 
-2. In the left navigation panel, click **Edges**.
+2. In the left navigation panel, under *Networking*, select **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
+    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-3. Select the edge gateway and click **Configure Services**.
+3. On the *Edge Gateways* page, select the edge that you want to configure and click **Services**.
 
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
+    ![Services button](images/vmw-vcd10.1-edge-btn-services.png)
 
-4. Select the **Routing** tab.
+4. On the *Edge Gateway* page, select the **Routing** tab then the **Routing Configuration** tab.
 
-5. Select **Routing Configuration**.
+5. In the *Static Routing Default Gateway* section, the **MTU** field will contain a value of `0`. Change the value from `0` to `1,500`.
 
-6. Under the *Static Routing Default Gateway* section, The **MTU** field will contain a value of `0`. Change the value from `0` to `1500`.
+6. When you're done, click **Save Changes** at the top of the page.
 
-7. When you're done, click **Save Changes** at the top of the page.
-
-8. Close vCloud Director and attempt to view the properties of the edge gateway in vCloud.
+7. Close VMware Cloud Director and attempt to view the properties of the edge gateway in vCloud.
 
     You should no longer get the `NullPointerException` error and the properties should be displayed.
 

@@ -17,6 +17,9 @@ toc_mdlink: orcl-sco.md
 
 # UKCloud for Oracle Software Service Scope
 
+> [!IMPORTANT]
+> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
+
 ## About this document
 
 This document describes the boundaries of the UKCloud for Oracle software service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.
@@ -102,7 +105,7 @@ UKCloud for Oracle Software is underpinned by Oracle compute infrastructure. UKC
 
 Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager.
 
-VM creation is currently available via service request to ensure that the platform remains balanced &mdash; this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see [*Oracle cloud self-service funtionality*](orcl-ref-bug-self-service.md).
+VM creation is currently available via service request to ensure that the platform remains balanced &mdash; this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see [*Oracle cloud self-service functionality*](orcl-ref-bug-self-service.md).
 
 All service requests will be triaged by UKCloud. We reserve the right to escalate a request to Infomentum for support. If you have not have a managed service contract with Infomentum, please do not contact them directly.
 

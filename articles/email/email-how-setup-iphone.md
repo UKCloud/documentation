@@ -18,6 +18,9 @@ toc_mdlink: email-how-setup-iphone.md
 
 # How to set up Email and Collaboration on an iPhone or iPad
 
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ## Overview
 
 Zimbra Collaboration Server Network Edition with Zimbra Mobile enabled integrates natively over the air with the Mail, Contact and Calendar applications on any Apple iPhone, iPod Touch or iPad. By using the ActiveSync protocol no additional download is required, only that WiFi or a wireless data plan is enabled. After a simple configuration step you can work virtually anywhere with your Zimbra account on the go.

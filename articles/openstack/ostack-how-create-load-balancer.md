@@ -216,7 +216,7 @@ This guide assumes that you have the following already configured in your enviro
 
     - Copy example configuration to keepalive config directory.
 
-           sudo cp /usr/share/doc/keepalived/samples/keepalived.conf.vrrp /etc/keepalived/keepalivd.conf
+           sudo cp /usr/share/doc/keepalived/samples/keepalived.conf.vrrp /etc/keepalived/keepalived.conf
 
     - Delete lines 36 through 79 in `/etc/keepalived/keepalived.conf`.
 

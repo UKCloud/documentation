@@ -20,7 +20,7 @@
     href: ptl-how-reset-password.md
   - name: Restrict access to the Portal
     href: ptl-how-restrict-access-portal.md
-  - name: Restrict access to the vCloud API
+  - name: Restrict access to VMware Cloud Director/vCloud Director
     href: ptl-how-restrict-access-vcloud-api.md
   - name: Set up 2FA for a user account
     href: ptl-how-setup-2fa.md

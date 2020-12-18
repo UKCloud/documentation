@@ -38,14 +38,8 @@
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the vCloud API
     href: vmw-how-change-ipsec-vpn-api.md
-  - name: Configure a Distributed Firewall
-    href: vmw-how-configure-distributed-firewall.md
-  - name: Configure a Distributed Logical Router
-    href: vmw-how-configure-distributed-logical-router.md
   - name: Configure a load balancer
     href: vmw-how-configure-load-balancer.md
-  - name: Configure an L2 VPN
-    href: vmw-how-configure-l2-vpn.md
   - name: Configure IPsec VPN
     href: vmw-how-configure-ipsec-vpn.md
   - name: Create a catalog
@@ -138,6 +132,14 @@
       href: vmw-how-vrops-enable.md
     - name: Refresh the vROps Tenant Appliance
       href: vmw-how-vrops-refresh.md
+  - name: Advanced networking
+    items:
+    - name: Configure a Distributed Firewall
+      href: vmw-how-configure-distributed-firewall.md
+    - name: Configure a Distributed Logical Router
+      href: vmw-how-configure-distributed-logical-router.md
+    - name: Configure an L2 VPN
+      href: vmw-how-configure-l2-vpn.md
   - name: VMware Licence Service
     items:
     - name: Add products to the vCloud Usage Meter

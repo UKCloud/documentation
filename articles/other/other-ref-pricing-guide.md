@@ -29,13 +29,11 @@ UKCloud for OpenStack<br>
 UKCloud for Oracle Software<br>
 UKCloud for VMware<br>
 VMware Licence Service (VLS)<br>
-Cloud GPU<br>
 Cloud Storage<br>
 Cross Domain Security Zone<br>
 Dedicated Compute v1<br>
 Dedicated Compute v2<br>
 Disaster Recovery as a Service<br>
-High Performance Compute<br>
 Managed IT Operations<br>
 Managed Active Directory Support<br>
 Managed Remote Desktop Services Support<br>
@@ -43,7 +41,6 @@ Managed SQL Server<br>
 Managed Web Server<br>
 Extended Network Support from UKCloud<br>
 Migration to the Cloud<br>
-Multi-Cloud Backup Storage<br>
 Neustar DDoS Protection from UKCloud<br>
 Neustar UltraDNS from UKCloud<br>
 Private Cloud<br>
@@ -52,7 +49,6 @@ Secure Remote Access<br>
 Security Operations Service<br>
 UKCloud Desktop as a Service<br>
 Professional Services<br>
-Cloud Optimisation from UKCloud
 
 **[UKCloud Skills Framework for the Information Age (SFIA) UKCloud Rate Card and Definitions](http://www.ukcloud.com/sfia)**
 

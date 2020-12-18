@@ -109,7 +109,7 @@ Alternatively, you can obtain the CLI login command (including login token) from
 
 ## Using the API
 
- The OpenShift Container Platform distribution of Kubernetes includes the Kubernetes v1 REST API and the OpenShift v1 REST API. These are RESTful APIs accessible via HTTPS on the OpenShift Container Platform master servers.
+ The OpenShift Container Platform distribution of Kubernetes includes the Kubernetes v1 REST API and the OpenShift v1 REST API. These are RESTful APIs accessible via HTTPS on the OpenShift Container Platform control plane servers.
 
 These REST APIs can be used to manage end-user applications, the cluster, and the users of the cluster.
 
@@ -135,7 +135,7 @@ In this Getting Started Guide, you've learned the basics about UKCloud for OpenS
 
 This section provides a glossary of terms specific to UKCloud for OpenShift.
 
-**cluster**&nbsp;&nbsp;OpenShift control plane and a set of worker nodes.
+**cluster**&nbsp;&nbsp;One or more control plane nodes and a set of worker nodes.
 
 **container**&nbsp;&nbsp;A lightweight mechanism for isolating running processes so that they are limited to interacting with only their designated resources.
 
@@ -145,11 +145,13 @@ This section provides a glossary of terms specific to UKCloud for OpenShift.
 
 **Kubernetes**&nbsp;&nbsp;Manages containerized applications across a set of containers or hosts and provides mechanisms for deployment, maintenance, and application-scaling.
 
-**master server**&nbsp;&nbsp;The host or hosts that contain the control plane components, including the API server, controller manager server, and etcd. The control plane manages nodes in its Kubernetes cluster and schedules pods to run on nodes.
+**control plane node**&nbsp;&nbsp;The host or hosts that contain the control plane components, including the API server, controller manager server, and etcd. The control plane manages nodes in its Kubernetes cluster and schedules pods to run on nodes.
 
 **microservices**&nbsp;&nbsp;A method of developing an application as a collection of smaller independent services.
 
-**OpenShift**&nbsp;&nbsp;Red Hat's secure and comprehensive enterprise-grade container platform based on industry standards such as CRI-O and Kubernetes.
+**node**&nbsp;&nbsp;Provides the runtime environment for a container. Each node in a Kubernetes cluster has the required services to be managed by the control plane. Nodes also have the required services to run pods, including the container runtime, a kubelet, and a service proxy.
+
+**OpenShift**&nbsp;&nbsp;Red Hat's secure and comprehensive enterprise-grade container platform based on industry standards, containers and Kubernetes.
 
 **PaaS**&nbsp;&nbsp;Platform-as-a-Service. The capability provided to the consumer is to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.
 

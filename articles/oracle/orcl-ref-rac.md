@@ -18,6 +18,9 @@ toc_mdlink: orcl-ref-rac.md
 
 # RAC on UKCloud for Oracle Software
 
+> [!IMPORTANT]
+> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
+
 ## Overview
 
 Oracle Real Application Clusters (RAC) shares an Oracle database across multiple servers, removing the database as a potential single point of failure and increasing application availability.

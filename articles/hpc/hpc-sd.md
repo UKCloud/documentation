@@ -17,6 +17,10 @@ toc_mdlink: hpc-sd.md
 
 # High Performance Compute Service Definition
 
+> [!IMPORTANT]
+> High Performance Compute has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing High Performance Compute customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
+
 ## What is High Performance Compute?
 
 High Performance Compute (HPC) is designed to give you the compute power to help you solve large scale problems. Whether you need rapid real time data processing to provide direction to teams making life or death decisions, the ability to process complex large data sets in search of patterns to unlock new knowledge or to be able to simulate hypotheses to support fast innovation in healthcare or science, HPC can help by providing an easy to deploy and easy to use compute infrastructure that can power Grid engine or parallel processing workloads that typically underpin these services.
@@ -53,7 +57,7 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 ## An SLA you can trust
 
-We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the [*SLA defintion*](../other/other-ref-sla-definition.md).
+We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the [*SLA definition*](../other/other-ref-sla-definition.md).
 
 ## The small print
 
