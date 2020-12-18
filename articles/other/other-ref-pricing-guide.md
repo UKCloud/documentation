@@ -34,7 +34,6 @@ Cross Domain Security Zone<br>
 Dedicated Compute v1<br>
 Dedicated Compute v2<br>
 Disaster Recovery as a Service<br>
-High Performance Compute<br>
 Managed IT Operations<br>
 Managed Active Directory Support<br>
 Managed Remote Desktop Services Support<br>
