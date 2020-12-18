@@ -18,6 +18,9 @@ toc_mdlink: orcl-how-enable-ha.md
 
 # How to enable high availability for your Oracle VMs
 
+> [!IMPORTANT]
+> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
+
 ## Overview
 
 Owing to the nature of Oracle workloads and the need to pin them to processor cores, workloads will be automatically moved in the event of a host failure only if you've enabled the high availability (HA) feature
