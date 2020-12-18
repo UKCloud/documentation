@@ -82,8 +82,6 @@
       href: oshift-ref-deploy-app-into-service-mesh.md
 - name: Service Information
   items:
-  - name: Portworx Enterprise from UKCloud Service Definition
-    href: oshift-sd-portworx.md
   - name: Pricing information
     href: oshift-ref-pricing.md
   - name: UKCloud for Managed OpenShift Service Definition

@@ -6528,18 +6528,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-sd-portworx.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openshift/oshift-sd-portworx.html",
-          "hash": "+C4yLlVl2yRYJGA2WKdC8w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-sd.md",
       "output": {
         ".html": {
@@ -6556,7 +6544,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "3g0rXGqzj614cahzPYBwVQ=="
+          "hash": "IucgPl2t/8XTeqIwv//Glg=="
         }
       },
       "is_incremental": false,
@@ -10613,7 +10601,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "6UUl99diYwsnKQQVhgsxBg=="
+          "hash": "shYGjXAugKJcQHaJgd/iGw=="
         }
       },
       "is_incremental": false,
@@ -10757,7 +10745,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "L9W2oQl1+ECnZBg78AlNMQ=="
+          "hash": "MOrkFPVZzC6nnrKU6zhvSw=="
         }
       },
       "is_incremental": false,
@@ -10781,7 +10769,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "IgymKtGz/nvU9d7GI9buXA=="
+          "hash": "qxzLtf5ktp0u8lE/o1yYiA=="
         }
       },
       "is_incremental": false,
@@ -10817,7 +10805,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "KaY9O66A16VMqcIwfu/Hxw=="
+          "hash": "5SZixipXJDxQ+KjTVkyLlg=="
         }
       },
       "is_incremental": false,
@@ -22057,7 +22045,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 453,
+          "total_file_count": 452,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
