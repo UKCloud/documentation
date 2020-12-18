@@ -30,7 +30,7 @@ OpenShift developers who have created and deployed services into OpenShift, and 
 After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to add to the allow-list.
 
 > [!IMPORTANT]
-> Addiong this annotation for an IP address or list of addresses/subnets automatically denies all traffic from addresses outside this list.
+> Adding this annotation for an IP address or list of addresses/subnets automatically denies all traffic from addresses outside this list.
 
 You apply the annotation to a route in the following manner:
 
