@@ -51,7 +51,6 @@ Secure Remote Access<br>
 Security Operations Service<br>
 UKCloud Desktop as a Service<br>
 Professional Services<br>
-Cloud Optimisation from UKCloud
 
 **[UKCloud Skills Framework for the Information Age (SFIA) UKCloud Rate Card and Definitions](http://www.ukcloud.com/sfia)**
 

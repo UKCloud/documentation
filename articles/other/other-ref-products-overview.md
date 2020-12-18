@@ -145,10 +145,6 @@ UKCloud's Professional Services are designed to provide a clear path to true clo
 
 **Transformation service.** This service provides the help you might need to adopt and harness the power of cloud native transformation. Cloud native applications fully utilise the features of platforms such as OpenStack, OpenShift and Azure Stack Hub. This transformation service provides the expertise to introduce teams to new ways of developing and deploying applications.
 
-### Cloud Optimisation from UKCloud
-
-Cloud Optimisation from UKCloud draws on our expertise in optimising and managing large scale cloud implementations to help you avoid cloud sprawl by realising value and optimising cloud spend, eliminating unused or underused resources and improving security and compliance stance. UKCloud are confident that this service can achieve initial savings of up to 30% on cloud spend.
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
