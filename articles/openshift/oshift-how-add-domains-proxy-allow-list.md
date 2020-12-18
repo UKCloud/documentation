@@ -45,7 +45,7 @@ registry.redhat.io
 ```
 
 > [!WARNING]
-> Adding any subdomains of domains that are already within the proxy allow-list will lead to squid being unable to reconfigure and any domains added after this point will not be possible to access. Please keep the above domains in mind when adding to the allow-list as these will not be shown in the ConfigMap. To give an example, you should avoid adding `.ukcloud.com` or `.redhat.com` to your proxy allow-list as both `registry.access.redhat.com` and `idp.ukcloud.com` are already on the allow-list.
+> Adding any subdomains of domains that are already within the proxy allow-list will lead to squid being unable to reconfigure and any domains added after this point will not be accessible. Please keep the above domains in mind when adding to the allow-list as these will not be shown in the ConfigMap. To give an example, you should avoid adding `.ukcloud.com` or `.redhat.com` to your proxy allow-list as both `registry.access.redhat.com` and `idp.ukcloud.com` are already on the allow-list.
 
 A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named `proxy-whitelist` within the `whitelist` project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the allow-list and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.
 
