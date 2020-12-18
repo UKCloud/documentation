@@ -405,12 +405,6 @@ A top level container in VMware Cloud Director/vCloud Director that contains one
 
 A UKCloud for OpenStack block storage option that is always available, regardless of the state of the VM.
 
-### Portworx Enterprise from UKCloud
-
-Provides a secure and stable cloud native storage and data management platform for Kubernetes that enterprises can trust to manage data in containers.
-
-For more information, see the [Portworx Enterprise from UKCloud service definition](../openshift/oshift-sd-portworx.md).
-
 ### POWER VM
 
 A UKCloud for VMware VM type with uncontended compute resource allocation (CPU/RAM). Automated balancing is enable to pre-emptively optimise performance and availability.
