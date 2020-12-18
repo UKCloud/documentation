@@ -3,8 +3,8 @@ title: Janet connectivity FAQs
 description: Frequently asked questions for Janet connectivity
 services: connectivity
 author: mwarner
-reviewer:
-lastreviewed: 20/07/2018
+reviewer: nstobbart
+lastreviewed: 16/12/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -21,7 +21,7 @@ toc_mdlink: conn-faq-janet.md
 
 Janet is the UK's research and education network. It is connected to all education organisations and research councils.
 
-Janet is a free-of-charge network that eligible UKCloud customers can use; there are no ingress or egress charges for this network. It's presented from our Assured platform and has a current bandwidth capacity of 1Gbps from each of our data centres, scalable to 100s of Gbps. The Janet connections are diversely routed for resilience and utilise Border Gateway Protocol (BGP) between data centres to ensure high availability of connections.
+Janet is a free-of-charge network that eligible UKCloud customers can use; there are no ingress or egress charges for this network. It's presented from our Assured platform and has a current bandwidth capacity of 1Gbps, scalable to 100s of Gbps. 
 
 ## Who is entitled to connect to the Janet network?
 
@@ -38,10 +38,6 @@ No. We can't arrange Janet connections to third-party offices. We only enable ou
 ## Does UKCloud support dedicated Janet connections?
 
 Yes. Our HybridConnect service option enables customers and partners to provide their own private circuits, including dedicated Janet connections. If you'd like a dedicated Janet connection to our cloud platform, we can arrange for the installation of dedicated Janet circuits to each of our UK data centres.
-
-## Which UKCloud data centre has Janet connectivity?
-
-Both our Corsham and Farnborough sites have Janet connectivity.
 
 ## How do I get a Janet connection via the UKCloud Assured OFFICIAL security domain?
 
