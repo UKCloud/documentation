@@ -17,7 +17,8 @@ toc_mdlink: orcl-home.md
 
 # UKCloud for Oracle Software
 
-UKCloud for Oracle has now been retired from sale by UKCloud. We will continue to look after all our existing customers who are using this Product however will no longer be providing this service for new workloads. These pages are here to provide our existing customers with access to support documentation and will continue to be updated as required. For new Oracle requirements please contact your Account Manager or Service Delivery Manager
+> [!IMPORTANT]
+> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. These articles provide existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update them as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
 
 ## Let's get started
 
