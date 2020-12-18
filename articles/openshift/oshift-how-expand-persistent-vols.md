@@ -66,7 +66,7 @@ In this article, we'll expand the volume for a cluster's default Elasticsearch d
 You can apply the same procedure to any other pods that use persistent volumes.
 
 > [!NOTE]
-> In OpenShift v4, the cluster-logging components are named differently: the Elasticsearch pod is prefixed "elasticsearch-cdm-" and the pvc is prefixed "elasticsearch-elasticsearch-cdm-". In version 4, both kibana and elasticsearch are scaled using deployments rather than deployment configs.
+> In OpenShift v4, the cluster-logging components are named differently: the Elasticsearch pod is prefixed "elasticsearch-cdm-" and the pvc is prefixed "elasticsearch-elasticsearch-cdm-". In version 4, both Kibana and Elasticsearch are scaled using deployments rather than deployment configs.
 
 ```
 $ oc project openshift-logging
@@ -99,9 +99,6 @@ Confirm that the pod that uses the volume has been terminated:
 $ oc get pods | grep logging-es-data-master
 # (nothing returned)
 ```
-
-
-
 
 ## Resize the persistent volume
 
