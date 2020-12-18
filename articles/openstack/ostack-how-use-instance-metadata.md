@@ -29,7 +29,7 @@ This article shows you how to add metadata to an instance and how to retrieve in
 
 When you create a new instance using the OpenStack API, use the `property` flag to include metadata:
 
-    -- property <key>=<value
+    --property <key>=<value
 
 For exmaple:
 
