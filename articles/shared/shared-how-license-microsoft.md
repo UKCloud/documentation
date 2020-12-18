@@ -62,7 +62,7 @@ UKCloud offers a variety of ways for you to run and license Windows desktop work
 
 - Purchasing Windows 10 Enterprise licences from UKCloud. As a Microsoft CSP, UKCloud is able to purchase and provide Windows 10 Enterprise licences for customers on an annual basis, charged per month. To utilise this service, create a Service Request stating the number and version of licences required.
 
-- Bring your own Windows 10 Enterprise licensing via Qualified MultiTenant Hoster (QMTH). As a Tier 1 direct CSP, UKCloud is an authorised partner on the QMTH program. The QMTH program enables you to purchase Microsoft 10 Enterprise licences and use them on our multi-tenant cloud platform.Simpley raise a service request with the number of licenses and your Microsoft subscription ID.
+- Bring your own Windows 10 Enterprise licensing via Qualified MultiTenant Hoster (QMTH). As a Tier 1 direct CSP, UKCloud is an authorised partner on the QMTH program. The QMTH program enables you to purchase Microsoft 10 Enterprise licences and use them on our multi-tenant cloud platform. To bring your own licences, raise a Service Request stating the number of licences and your Microsoft subscription ID.
 
 For more information regarding the QMTH program, we have further details on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/)
 
