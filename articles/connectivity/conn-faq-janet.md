@@ -2,9 +2,9 @@
 title: Janet connectivity FAQs
 description: Frequently asked questions for Janet connectivity
 services: connectivity
-author: Matt Warner
-reviewer: Nick Stobbart
-lastreviewed: 16/12/2020 18:37:23
+author: mwarner
+reviewer: nstobbart
+lastreviewed: 16/12/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
