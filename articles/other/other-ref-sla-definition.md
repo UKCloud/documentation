@@ -145,10 +145,6 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
 **Service Credit**           | 3% of monthly spend per 5% below service level target or part thereof for affected compute platform
 
-### Cloud Optimisation from UKCloud
-
-As Cloud Optimisation from UKCloud is based on third-party software and reporting, we are unable to offer an SLA for this service.
-
 ### Cloud Storage
 
 &nbsp;                       | Cloud Storage

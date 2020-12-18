@@ -45,8 +45,6 @@ The following provides a brief overview of our Managed Services; click the links
 
 - [**Extended Network Support from UKCloud**](man-sd-network.md) - Enables customers to choose from an extensive list of officially supported network appliances with UKCloud undertaking the initial deployment (or assuming ownership of valid existing networks) and configuration of the various elements of your virtual network, along with the ongoing monitoring and support.
 
-- [**Cloud Optimisation from UKCloud**](man-sd-optimisation.md) - Draws on our expertise in optimising and managing large scale cloud implementations to help you avoid cloud sprawl by realising value and optimising cloud spend, eliminating unused or underused resources and improving security and compliance stance. UKCloud are confident that this service can achieve initial savings of up to 30% on cloud spend.
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

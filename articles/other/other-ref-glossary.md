@@ -87,12 +87,6 @@ For more information, see the relevant Cloud Enablement service scope:
 
 - [Big Cloud Enablement Service Scope](../enablement/enbl-sco-bigcolo.md)
 
-### Cloud Optimisation from UKCloud
-
-A UKCloud service, utilising CloudHealth&reg;, that helps you optimise and manage large scale cloud implementations to help you avoid cloud sprawl and reduce cloud spend, achieving initial savings of up to 30%.
-
-For more information, see [Cloud Optimisation from UKCloud Service Definition](../managed-services/man-sd-optimisation.md).
-
 ### CloudSOC from UKCloud
 
 *See:* [Security Operations Service](#security-operations-service).

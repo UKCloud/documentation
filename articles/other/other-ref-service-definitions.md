@@ -63,7 +63,6 @@ This article provides a list of Service Definitions for UKCloud services. The li
 ### Support services
 
 [Professional Services](../pro-services/ps-sd.md)<br>
-[Cloud Optimisation from UKCloud](../managed-services/man-sd-optimisation.md)
 
 ## Terms and conditions
 
