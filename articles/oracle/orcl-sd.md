@@ -17,9 +17,6 @@ toc_mdlink: orcl-sd.md
 
 # UKCloud for Oracle Software Service Definition
 
-> [!IMPORTANT]
-> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
-
 ## What is UKCloud for Oracle Software?
 
 UKCloud for Oracle Software provides a proven Oracle Infrastructure as a Service that's tailor made for running your Oracle workloads in the cloud. This service enables you to move technologies such as Oracle Database, Oracle WebLogic Server, Oracle Primavera, E-Business Suite and more to our secure sovereign cloud platform quickly and easily, while enjoying the economies of scale of the cloud. You can then connect your Oracle applications to the non-Oracle workloads that you have within the rest of the multi-cloud ecosystem. It is billed hourly and supported free of charge.
