@@ -2,9 +2,9 @@
 title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
-author: Sue Highmoor
-reviewer: Mark Young
-lastreviewed: 15/09/2020
+author: shighmoor
+reviewer: tlaryea 
+lastreviewed: 18/11/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,42 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 2.9.0
+
+Date: 1st December 2020
+
+Bug fix and feature update
+
+Details:
+ 
+- Support non-ASCII characters when logging in to VMware Cloud Director 10
+
+- Change "My Security Events" to "Security Operations Service" and remove account-specific events
+
+## Release 2.6.0
+
+Date: 18th November 2020
+
+Feature update
+
+Details:
+ 
+- Remove bandwidth monitoring information from the Portal My VMs pages and the API
+
+## Release 2.4.0
+
+Date: 28th October 2020
+
+Feature update
+
+Details:
+
+- Remove VM storage information from the Portal My VMs pages
+
+- Stop returning VM storage values within the Portal API
+
+- Zero values are returned to avoid breaking software that expects the field
 
 ## Release 2.2.2
 

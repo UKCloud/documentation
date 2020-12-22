@@ -7,7 +7,7 @@ reviewer:
 lastreviewed: 22/07/2020
 
 toc_rootlink: Reference
-toc_sub1: v4
+toc_sub1: OpenShift v4.x
 toc_sub2:
 toc_sub3:
 toc_sub4:

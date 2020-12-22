@@ -101,9 +101,42 @@
 <li><p>Facilitate the creation of VMs from scratch, which can then be saved to your catalog for future deployment</p>
 </li>
 </ul>
-<h2 id="uploading-media">Uploading media</h2>
-<p>If you want to upload media <a href="#uploading-media-from-a-local-file">from a file on your local machine</a>, you can use the Tenant UI. To upload media <a href="#uploading-media-from-a-url">from a URL</a>, you'll need to use the Legacy UI.</p>
-<h3 id="uploading-media-from-a-local-file">Uploading media from a local file</h3>
+<h2 id="uploading-iso-or-flp-media">Uploading ISO or FLP media</h2>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
+
+<ol>
+<li><p>In VMware Cloud Director, click the menu icon and select <strong>Libraries</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-libraries.png" alt="Libraries menu option in VMware Cloud Director"></p>
+</li>
+<li><p>In the left navigation panel, click <strong>Media &amp; Other</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-media.png" alt="Media &amp; Other tab"></p>
+</li>
+<li><p>Click <strong>Add</strong>.</p>
+<p><img src="images/vmw-vcd-btn-add-media.png" alt="Upload media button"></p>
+</li>
+<li><p>In the <em>Upload Media</em> dialog box, select the <strong>Catalog</strong> to which you want to upload the media.</p>
+</li>
+<li><p>Enter a <strong>Name</strong> for the media if you want to use something more user-friendly than the file name.</p>
+</li>
+<li><p>Click the <strong>Upload</strong> icon and browse to the ISO or FLP file that you want to upload.</p>
+<p><img src="images/vmw-vcd10.1-upload-media.png" alt="Upload Media dialog box"></p>
+</li>
+<li><p>When you're done, click <strong>OK</strong>.</p>
+<p>You can monitor the progress of the upload in the <em>Recent Tasks</em> panel.</p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+
 <ol>
 <li><p>In vCloud Director, click the menu icon and select <strong>Libraries</strong>.</p>
 <p><img src="images/vmw-vcd-mnu-libraries.png" alt="Libraries menu option in vCloud Director"></p>
@@ -115,10 +148,8 @@
 <p><img src="images/vmw-vcd-btn-add-media.png" alt="Upload media button"></p>
 </li>
 <li><p>In the <em>Upload Media</em> dialog box, select the <strong>Catalog</strong> to which you want to upload the media.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>You can change the <strong>Name</strong> to be more user-friendly if necessary.</p>
-</div>
+</li>
+<li><p>Enter a <strong>Name</strong> for the media file if you want to use something more user-friendly than the file name.</p>
 </li>
 <li><p>Click the <strong>Upload</strong> icon and browse to the ISO or FLP file that you want to upload.</p>
 <p><img src="images/vmw-vcd91-upload-media.png" alt="Upload Media dialog box"></p>
@@ -131,39 +162,8 @@
 <p>In the <em>Media &amp; Other</em> page, you can monitor the progress of the upload. You can carry on with other work while the upload takes place.</p>
 </li>
 </ol>
-<h3 id="uploading-media-from-a-url">Uploading media from a URL</h3>
-<ol>
-<li><p>In the vCloud Director Legacy UI, select the <strong>Catalogs</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-catalogs.png" alt="Catalogs tab in vCloud Director"></p>
-<p>For information about how to access the Legacy UI, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director Legacy UI</em></a>.</p>
-</li>
-<li><p>Select the <strong>Media &amp; Other</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-media.png" alt="Media &amp; Other tab"></p>
-</li>
-<li><p>Click the <strong>Upload</strong> icon.</p>
-<p><img src="images/vmw-vcd-ico-upload-media.png" alt="Upload icon"></p>
-</li>
-<li><p>In the <em>Upload Media &amp; Other</em> dialog box you can:</p>
-<ul>
-<li><p>Paste in a URL for the ISO or FLP media</p>
-</li>
-<li><p>Browse to the ISO or FLP file on your local device and select it (for this to work, you need to have Java JRE available on your device)</p>
-</li>
-</ul>
-<p><img src="images/vmw-vcd-upload-media-source.png" alt="Upload Media &amp; Other dialog box"></p>
-</li>
-<li><p>You can give the media a name and then choose which catalog to put it in.</p>
-<p><img src="images/vmw-vcd-upload-media-destination.png" alt="Specify destination for media"></p>
-</li>
-<li><p>When you're done, click <strong>Upload</strong>.</p>
-<p>During the upload, you'll see a status window. You can carry on with other work while the upload takes place.</p>
-</li>
-<li><p>You can close (and reopen) the window by clicking the <strong>View uploads and downloads</strong> icon.</p>
-<p><img src="images/vmw-vcd-ico-upload-progress.png" alt="View uploads and downloads icon"></p>
-<p>This opens the <em>Transfer process</em> dialog box.</p>
-<p><img src="images/vmw-vcd-transfer-process.png" alt="Transfer process dialog box"></p>
-</li>
-</ol>
+</section>
+</div>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

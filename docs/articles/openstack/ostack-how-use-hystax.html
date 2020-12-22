@@ -180,6 +180,8 @@
 <li><p>At this point the Ubuntu instance is ready to be replicated and migrated.</p>
 </li>
 </ol>
+<h3 id="migrating-centosrhel-workloads">Migrating Centos/RHEL workloads</h3>
+<p>You may encounter an issue where the instance fails to boot in the cloud site after migration, and instead enters a dracut debug state. In this the case, in the source instance, run <code>dracut -fMa qemu</code>. Replicate and re-run the migration and the issue should be resolved.</p>
 <h3 id="migrating-microsoft-windows-workloads">Migrating Microsoft Windows workloads</h3>
 <h4 id="error-when-creating-and-running-a-migration-plan-in-the-acura-user-interface">Error when creating and running a migration plan in the Acura user interface</h4>
 <p>When creating and running a migration plan in the Acura user interface, you may encounter an error relating to a malformed mac-address. To resolve this go to the <strong>Expert</strong> tab in the <em>Edit Migration Plan</em> interface and remove any lines that contain <code>&quot;&quot;mac&quot;: &quot;…..&quot;</code>. After doing this save and re-run the migration plan and the issue will be resolved.</p>

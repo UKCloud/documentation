@@ -35,6 +35,10 @@ vCloud Director 9.7 is the last release of vCloud Director to support vCloud API
 
 If you're using PowerCLI to interact with our vCloud Director instances, the minimum supported version is 11.0.0.
 
+## Known issues
+
+For known issues with vCloud Director 9.7, including the impact of Adobe Flash Player end-of-life, see [*vCloud Director 9.7 known issues*](vmw-ref-vcd97-known-issues.md).
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

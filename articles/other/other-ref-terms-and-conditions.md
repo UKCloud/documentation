@@ -2,9 +2,9 @@
 title: UKCloud Terms and Conditions
 description: Provides links to the various UKCloud Terms and Conditions documents
 services: other
-author: Sue Highmoor
-reviewer: 
-lastreviewed: 28/08/2020
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 26/11/2020
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -26,25 +26,7 @@ This article will be updated as and when new Terms and Conditions documents are 
 
 ## For Public Sector customers
 
-[UKCloud Terms and Conditions for G-Cloud 11](other-ref-terms-and-conditions-g11.md) - These main terms apply to Public Sector customers buying direct from UKCloud via the G-Cloud Framework and also include terms for the following services (applicable when bought / used):
-
-- Free trials
-
-- Multi-tenanted services
-
-- Private Cloud services
-
-- Microsoft licensing
-
-- Multi-Cloud for Microsoft Azure services
-
-- PSN connectivity
-
-- HSCN connectivity
-
-## For UKCloud partners
-
-[UKCloud Terms and Conditions for Partners](other-ref-terms-and-conditions-partners.md) - These main terms apply to UKCloud Partners and also include terms for the following services (applicable when bought / used):
+[UKCloud Terms and Conditions for G-Cloud 12](other-ref-terms-and-conditions-g12.md) - These main terms apply to Public Sector customers buying direct from UKCloud via the G-Cloud Framework and also include terms for the following services (applicable when bought / used):
 
 - Free trials
 
@@ -62,9 +44,25 @@ This article will be updated as and when new Terms and Conditions documents are 
 
 - HSCN connectivity
 
-## UKCloud Online Terms
+## For UKCloud partners
 
-[Online Terms and Conditions](https://ukcloud.com/onlinetermsandconditions/) - These terms apply when services are bought online via the UKCloud website.
+[UKCloud Terms and Conditions for Partners](other-ref-terms-and-conditions-partners.md) - These main terms apply to UKCloud partners and also include terms for the following services (applicable when bought / used):
+
+- Free trials
+
+- Multi-tenanted services
+
+- Private Cloud services
+
+- VMware Licence Service (VLS)
+
+- Microsoft licensing
+
+- Multi-Cloud for Microsoft Azure services
+
+- PSN connectivity
+
+- HSCN connectivity
 
 ## Feedback
 

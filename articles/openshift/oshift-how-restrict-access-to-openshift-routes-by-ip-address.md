@@ -3,8 +3,8 @@ title: How to restrict access to OpenShift routes by IP address
 description: Restrict access to OpenShift routes by IP address
 services: openshift
 author: Mudasar Hussain
-reviewer: Kieran O'Neill
-lastreviewed: 21/09/2020
+reviewer: Steve Mulholland
+lastreviewed: 21/12/2020 10:46:43
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
@@ -27,15 +27,17 @@ OpenShift developers who have created and deployed services into OpenShift, and 
 
 ## Restricting access to a route
 
-After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to whitelist.
+After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to add to the allow-list.
 
 > [!IMPORTANT]
-> Whitelisting an IP address automatically blacklists everything else.
+> Adding this annotation for an IP address or list of addresses/subnets automatically denies all traffic from addresses outside this list.
 
 You apply the annotation to a route in the following manner:
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="<ip_address>"
 
+> [!IMPORTANT]
+> You must do this for every route that you wish to apply the restriction to.
 
 ## Examples
 
@@ -61,7 +63,7 @@ To delete the IPs from the annotation, you can run the command:
     
 ## Known issues   
 
-As of OpenShift version 4.4+, pod DNS lookups will return the internal IP of a route rather than the public IP. This means traffic will not leave the cluster for pod to route communication. For a whitelisted route to accept traffic from a pod in the same cluster, you must whitelist the internal cluster subnet rather than the cluster's egress IP. The following examples show a lookup from a local client machine and from inside a pod, demonstrating the difference in resolution:
+As of OpenShift version 4.4+, pod DNS lookups will return the internal IP of a route rather than the public IP. This means traffic will not leave the cluster for pod to route communication. For a route with an allow-list to accept traffic from a pod in the same cluster, you must add the internal cluster subnet to the allow-list rather than the cluster's egress IP. The following examples show a lookup from a local client machine and from inside a pod, demonstrating the difference in resolution:
 
 **DNS lookup on local machine:**
 
@@ -71,7 +73,7 @@ As of OpenShift version 4.4+, pod DNS lookups will return the internal IP of a r
 
  ![Pod lookup](images/oshift-pod-lookup.png)
 
-In this case you would run the following command to whitelist your route (assuming your cluster local subnet is 10.0.0.0/24):
+In this case you would run the following command to apply an allow-list to your route (assuming your cluster local subnet is 10.0.0.0/24):
 
     oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist="10.0.0.0/24"
 

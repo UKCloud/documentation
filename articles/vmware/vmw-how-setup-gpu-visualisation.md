@@ -18,6 +18,9 @@ toc_mdlink: vmw-how-setup-gpu-visualisation.md
 
 # How to set up Cloud GPU Visualisation for UKCloud for VMware
 
+> [!IMPORTANT]
+> Cloud GPU has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Cloud GPU customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ## Overview
 
 Cloud GPU enables you to supplement your on-platform compute resources with GPU capabilities.
@@ -33,7 +36,7 @@ This article provides an introduction for how to use Cloud GPU for visualisation
 
 ### Intended audience
 
-To complete the steps in this article you must have access to the UKCloud Portal and vCloud Director.
+To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.
 
 ## Cloud GPU overview
 
@@ -119,8 +122,6 @@ To install NVIDIA drivers:
 1. Power on your VM.
 
 2. In the card for the VM, select **Actions** then **Insert Media**.
-
-    ![Insert CD/DVD from Catalog menu option](images/vmw-vcd-mnu-insert-media.png)
 
 3. In the *Insert CD* dialog box, select the vGPU driver ISO and click **Insert**.
 

@@ -30,15 +30,9 @@ Use the diagram below to determine if your current platform is compatible with o
 
 ## Solaris x86
 
-Solaris x86 is compatible with our x86 Oracle cloud service so you can bring your Solaris workload to us. We provide a Solaris x86 template for you to use to build your Oracle virtual machines.
+Solaris x86 is compatible with our Oracle cloud service so you can bring your Solaris workload to us. We provide a Solaris x86 template for you to use to build your Oracle virtual machines.
 
 You may need to talk to your Service Delivery Manager or Cloud Architect to help with the specifics of the project.
-
-## Solaris SPARC
-
-We support Solaris on our Oracle SPARC cloud so you can bring your Solaris SPARC workloads to us without needing to transform them.
-
-If you want to use UKCloud for Oracle Software with SPARC, contact your Service Delivery Manager or Cloud Architect to help with the specifics of the project.
 
 ## AIX
 

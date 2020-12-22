@@ -17,8 +17,6 @@ toc_mdlink: orcl-home.md
 
 # UKCloud for Oracle Software
 
-UKCloud for Oracle provides a proven Oracle Infrastructure as a Service that's tailor made for running your Oracle workloads in the cloud, enabling you to move technologies such as Oracle Database, Oracle WebLogic Server, Oracle Fusion Applications, E-Business Suite and more to our secure sovereign cloud platform quickly and easily while enjoying the economies of scale of the cloud.
-
 ## Let's get started
 
 First, take a look at our [Getting Started Guide](orcl-gs.md) to learn the basics, then you can:
@@ -35,9 +33,9 @@ First, take a look at our [Getting Started Guide](orcl-gs.md) to learn the basic
 <div class="row">
   <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/juhKzvCV4-g" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/1tBv7dVDzbw" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://www.youtube.com/watch?v=juhKzvCV4-g">Oracle Enterprise Manager Cloud Control 13c Console Overview</a></p>
+    <p><a href="https://www.youtube.com/watch?v=1tBv7dVDzbw">Overview of Oracle Self Service Portal</a></p>
   </div>
   <div class="col-md-6"></div>
 </div>

@@ -2,9 +2,9 @@
 title: Naming virtual machines
 description: Explains the new naming convention for virtual machines (VMs) in UKCloud for VMware
 services: vmware
-author: Sue Highmoor
-reviewer: George Smith
-lastreviewed: 29/10/2019 16:00:00
+author: shighmoor
+reviewer: mbelchamber
+lastreviewed: 07/10/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

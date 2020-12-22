@@ -3,6 +3,9 @@ title: Community network proxy configuration
 description: Provides information regarding proxy environment variables in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon
+reviewer: Kieran O'Neill
+lastreviewed: 21/10/2020
+
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
 toc_sub2:
@@ -25,7 +28,7 @@ To follow the steps in this article you must have access to a cluster that is ru
 
 ## Squid
 
-Squid proxy enables containers running on worker nodes (with government community network access) to request resources from the internet. Our default configuration only permits access to specific endpoints to ensure compliance with network regulatory requirements. You can find more information regarding these endpoints in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-whitelist.md).
+Squid proxy enables containers running on worker nodes (with government community network access) to request resources from the internet. Our default configuration only permits access to specific endpoints to ensure compliance with network regulatory requirements. You can find more information regarding these endpoints in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-allow-list.md).
 
 ## Purpose of no_proxy
 
@@ -48,7 +51,7 @@ $ oc describe dc docker-registry -n default | grep PROXY
 
 - `HTTPS_PROXY`: Cluster Proxy URL for HTTPS requests
 
-When building container images within OpenShift, these environment variables will be passed through to the image pushed to your local registry. When working with images that have been imported from an external source, you may need to apply these environment values to ensure that you can access whitelisted internet resources from your community network nodes.
+When building container images within OpenShift, these environment variables will be passed through to the image pushed to your local registry. When working with images that have been imported from an external source, you may need to apply these environment values to ensure that you can access internet resources on the allow-list from your community network nodes.
 
 ## Identifying where you might need to add entries to no_proxy
 
@@ -60,7 +63,7 @@ W0412 13:52:16.288545   50288 dockerimagelookup.go:233] Docker registry lookup f
 error: unable to locate any images in image streams, local docker images with name "centos/ruby-25-centos7"
 ```
 
-In the example above this is an internet URL so it would be best to add this specific domain (or all subdomains using `.exampleurl.com`) to the `proxy-whitelist` configmap in the `whitelist` project, as documented in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-whitelist.md). If this URL was accessible on another network other than the internet, this would be a good candidate to be added to `no_proxy` to ensure the proxy was bypassed.
+In the example above this is an internet URL so it would be best to add this specific domain (or all subdomains using `.exampleurl.com`) to the `proxy-whitelist` configmap in the `whitelist` project, as documented in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-allow-list.md). If this URL was accessible on another network other than the internet, this would be a good candidate to be added to `no_proxy` to ensure the proxy was bypassed.
 
 ## Adding entries to no_proxy
 

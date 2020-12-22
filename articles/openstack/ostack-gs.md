@@ -3,8 +3,8 @@ title: Getting Started Guide for UKCloud for OpenStack
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
-reviewer: Steve Dixon
-lastreviewed: 20/08/2019
+reviewer: Bryce Nicholls
+lastreviewed: 23/09/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -53,7 +53,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 
     ![Horizon Overview page](images/ostack-horizon-welcome.png)
 
-For more information about the Horizon dashboard, see the [*Red Hat OpenStack Platform 10 Introduction to the OpenStack Dashboard*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-10-Introduction_to_the_OpenStack_Dashboard-en-US.pdf).
+For more information about the Horizon dashboard, see the [*Introduction to the OpenStack dashboard*](https://docs.ukcloud.com/articles/openstack/ostack-ref-dashboard.html).
 
 ## Creating your network infrastructure
 
@@ -247,7 +247,7 @@ You can see the images that are available for you to use by expanding the **Comp
 
 ### Choosing your instance size
 
-If you're already familiar with UKCloud's vCloud Director-based UKCloud for VMWare service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.
+If you're already familiar with UKCloud's vCloud Director-based UKCloud for VMware service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.
 
 In OpenStack, you choices are restricted to a number of pre-defined *flavors* that define how many vCPUs, how much memory and how much storage an instance may use. Although full details for each flavor are
 available through the Horizon UI, there's no overall list available showing all the different flavors and sizes of instances. However, if you've installed the OpenStack CLI tools (see

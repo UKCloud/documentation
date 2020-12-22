@@ -333,13 +333,13 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 </ul>
 <h3 id="can-i-run-microsoft-sql-on-my-instances">Can I run Microsoft SQL on my instances?</h3>
 <p>Microsoft SQL can be installed within an OpenStack instance.</p>
-<p>You have the choice to either bring your own license using the Microsoft License Mobility scheme or choose to use a UKCloud provided license. The process for both options are available on the UKCloud Knowledge Centre <a href="../vmware/vmw-how-license-microsoft.html">here</a>.</p>
+<p>You have the choice to either bring your own license using the Microsoft License Mobility scheme or choose to use a UKCloud provided license. The process for both options are available on the UKCloud Knowledge Centre <a href="../shared/shared-how-license-microsoft.html">here</a>.</p>
 <h3 id="how-can-i-license-an-operating-system">How can I license an operating system?</h3>
 <h3 id="microsoft">Microsoft</h3>
 <p>Microsoft terms and conditions preclude customers from using their own licence agreements for Windows Server in the Cloud. That means all licensing for Windows Server operating systems must be provided by UKCloud.</p>
 <p>Microsoft offers License Mobility, a scheme that allows a customer to provide additional software such as Exchange, SQL and so on, as long as the customer has appropriate Microsoft licensing as per the licence terms, conditions and usage rights.</p>
 <h3 id="do-you-have-a-key-management-system-kms-for-activating-windows">Do you have a Key Management System (KMS) for activating Windows?</h3>
-<p>Yes. A we provide a <a href="../vmware/vmw-how-setup-kms.html">step-by-step guide</a> on configuring and using this service.</p>
+<p>Yes. A we provide a <a href="../shared/shared-how-setup-kms.html">step-by-step guide</a> on configuring and using this service.</p>
 <h3 id="how-does-rhel-licensing-work">How does RHEL licensing work?</h3>
 <p>You can license RHEL operating systems yourself directly with Red Hat. We are currently unable to provide RHEL licences for UKCloud for OpenStack.</p>
 <p>Customers are responsible for ensuring correct licensing for any other operating system they chose to install.</p>
@@ -361,10 +361,9 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <p>Services on the Assured OFFICIAL platform can be managed over the internet (or other connectivity) via the UKCloud Portal.</p>
 <p>For the Elevated OFFICIAL platform, security requirements are stricter and require either a PSN-approved connection, UKCloud Secure Remote Access or a self-managed CPA-approved VPN solution (for example site-to-site VPN).</p>
 <h3 id="what-are-your-service-maintenance-windows">What are your service maintenance windows?</h3>
-<p>As far as possible, planned maintenance of UKCloud's infrastructure takes place periodically and at a time which aims to minimise customer impact. We provide customers with at least 14 days' advance notice of planned maintenance.</p>
-<p>As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Friday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.</p>
-<h3 id="can-i-configure-email-alerts-from-the-portal">Can I configure email alerts from the Portal?</h3>
-<p>Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.</p>
+<p>See <a href="../other/other-ref-maintenance-windows.html"><em>Understanding UKCloud service maintenance windows</em></a>.</p>
+<h3 id="can-ukcloud-provide-notifications-for-service-status-and-maintenance">Can UKCloud provide notifications for service status and maintenance?</h3>
+<p>Yes, you can subscribe to the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a> to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see <a href="../other/other-how-subscribe-service-status.html"><em>How to subscribe to service status notifications</em></a>.</p>
 <h2 id="service-limitations">Service Limitations</h2>
 <h3 id="are-there-any-restrictions-on-the-number-of-instances-i-can-create-or-manipulate-in-a-single-request">Are there any restrictions on the number of instances I can create or manipulate in a single request?</h3>
 <p>Although designed to be a large-scale cloud platform, we strongly advise that when performing operations/requests against UKCloud for OpenStack you perform these actions in batches of no more than 30 (for example, only creating batches of up to 30 new instances in a single request). Additional requests can then be made to the platform for subsequent batches.</p>
@@ -407,8 +406,6 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <h3 id="does-ukcloud-charge-for-the-triliovault-self-service-backup-and-restoration-service">Does UKCloud charge for the TrilioVault self-service backup and restoration service?</h3>
 <p>UKCloud charges a nominal monthly fee per instance being protected by this service. UKCloud charges by the whole month for any part month consumption of this service.</p>
 <p>You can find pricing details in the OpenStack section of the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
-<h3 id="are-there-any-additional-fees-for-the-triliovault-self-service-backup-and-restoration-service">Are there any additional fees for the TrilioVault self-service backup and restoration service?</h3>
-<p>This service utilises UKCloud's <a href="../other/other-sd-mcbs.html"><em>Multi-Cloud Backup Storage</em></a> (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <h3 id="can-i-use-my-own-backup-software">Can I use my own backup software?</h3>
 <p>Yes, you simply install appropriate backup software within your project and specify the backup location.</p>
 <p>A typical scenario would involve using a commercial backup solution (such as Symantec NetBackup, CommVault or EMC NetWorker) that points to a cloud storage service such as our Cloud Storage.</p>
@@ -424,7 +421,6 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <p>Historic billing information is available via the UKCloud Portal.</p>
 <h3 id="how-can-i-pay-for-the-services">How can I pay for the services?</h3>
 <p>Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.</p>
-<p>If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.</p>
 <h3 id="how-are-snapshots-charged">How are snapshots charged?</h3>
 <p>You will only ever be charged for the amount of Tier 1 or Tier 2 storage your snapshots consume, that you have scheduled via the OpenStack dashboard or the API - we do not place any additional premium on-top for the snapshot functionality. To calculate an estimated cost of performing snapshots on UKCloud for OpenStack, simply use the following formula:</p>
 <p>Cost £ = Instance Size (GiB) x Number of Snapshots to be retained (Customer controlled) x Choice of Storage (Tier 1 @ £0.25 or Tier 2 @ £0.10)</p>

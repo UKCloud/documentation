@@ -2,9 +2,9 @@
 title: Dedicated Compute v2 Service Scope
 description: Outlines important details regarding Dedicated Compute v2
 services: dedicated-compute
-author: Steve Hall
-reviewer: Guy Martin
-lastreviewed: 01/07/2019
+author: shall
+reviewer: gmartin
+lastreviewed: 02/11/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -39,11 +39,11 @@ This service is designed for customers who:
 
 We deliver Dedicated Compute v2 by providing you with dedicated physical hosts on which you control resource allocation.
 
-The initial Dedicated Compute purchase is a starter pack consisting of two physical hosts. The standard host specification is dual 16 core and 512 GiB of RAM.
+The initial Dedicated Compute purchase is a starter pack consisting of two physical hosts. The standard host specification is dual 18 core and 512 GiB of RAM.
 
-You can then scale your estate by purchasing additional upgrade packs (an upgrade pack consists of  1 x dual 16 core and 512 GiB of RAM compute host). After nine expansion packs, you must buy another starter pack.
+You can then scale your estate by purchasing additional upgrade packs (an upgrade pack consists of  1 x dual 18 core and 512 GiB of RAM compute host). After nine upgrade packs, you must buy another starter pack.
 
-You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options are given in the [*Service Definition*](dc-sd.md). For pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+You choose Tier 1 and Tier 2 storage for your VMs, both of which can include a backup service. For pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 The storage pool isn't a dedicated hardware resource; it's drawn from our UKCloud for VMware block storage solutions.
 
@@ -53,17 +53,17 @@ These resources are grouped in a private virtual data centre (pVDC) which is ava
 
 We operate at least N+1 for hardware resilience on our Dedicated Compute v2 service. However, we recommend sizing your resilience according to your workload profile.
 
-We will reserve at least one physical hosts worth of resources from your allocation to ensure that, in the event of a hardware failure, the service can continue to run and support your workload.
+We will reserve at least one physical host's worth of resources from your allocation to ensure that, in the event of a hardware failure, the service can continue to run and support your workload.
 
 During a failure scenario, VMs will be restarted on surviving hosts within the Dedicated Compute v2 cluster. UKCloud is not responsible for any performance degradation of VMs in the Dedicated Compute v2 cluster caused during a failure scenario due to over contention in the remaining hosts.
 
-The table below shows the configuration, the resources available to a customer, the number of physical blades in the configuration, and the UKCloud resources reserved to run it.
+The table below shows the configuration, the resources available to a customer, the number of physical servers in the configuration, and the UKCloud resources reserved to run it.
 
-&nbsp;                               | Customer available resources | Physical blades | Resource reservation
--------------------------------------|------------------------------|-----------------|---------------------
-**Starter pack**                     | 32 cores, 512 GiB RAM        | 2               | 50% (32 core , 512 GiB RAM)
-**Starter pack + 1 expansion pack**  | 64 cores, 1024 GiB RAM       | 3               | 33% (32 core , 512 GiB RAM)
-**Starter pack + 2 expansion packs** | 96 cores, 1536 GiB RAM       | 4               | 25% (32 core , 512 GiB RAM)
+&nbsp;                             | Total resources          | Resource reservation       | Customer available resources
+-----------------------------------|--------------------------|----------------------------|-----------------------------
+**Starter pack**                   | 72 cores, 1024 GiB RAM   | 50% (36 core, 512 GiB RAM) | 36 cores, 512 GiB RAM
+**Starter pack + 1 upgrade pack**  | 108 cores, 1536 GiB RAM  | 33% (36 core, 512 GiB RAM) | 72 cores, 1024 GiB RAM
+**Starter pack + 2 upgrade packs** | 144 cores, 2048 GiB RAM  | 25% (36 core, 512 GiB RAM) | 108 cores, 1536 GiB RAM
 
 ## Resource utilisation
 
@@ -73,9 +73,9 @@ This means that in general operation within the starter pack, there is a 50% uti
 
 ![50% utilisation of blades](images/vmw-dc-contingency1.png)
 
-However, you can create VMs of any size and shape you require, up to the maximum size of the physical capacity of one host - 32 cores 512 GiB RAM.
+However, you can create VMs of any size and shape you require, up to the maximum size of the physical capacity of one host - 36 cores 512 GiB RAM.
 
-A VM cannot span across physical hosts so, if you create a VM larger than 50% of the host capacity, the Dedicated Compute v2 installation may carry more of the contingency capacity of one physical host than of the others:
+A VM cannot span across physical hosts. If you create a VM larger than 50% of the host capacity, the Dedicated Compute v2 installation may carry more of the contingency capacity of one physical host than of the others:
 
 ![Greater than 50% utilisation of blade](images/vmw-dc-contingency2.png)
 
@@ -107,15 +107,15 @@ Dedicated Compute v2 is available only in UKCloud Regions 5 and 6.
 
 You need to be aware of the following customer responsibilities relating to deployment of, configuration of and migration into the Dedicated Compute v2 service, which are in addition to the usual responsibilities placed on customers of our UKCloud for VMware service:
 
-- Creating VMs in the new environment
+- Creating VMs in the new environment.
 
-- Migrating VMs from existing environments by cloning and copying turned-off VMs, or by moving turned-off vApps to the new environment
+- Migrating VMs from existing environments by cloning and copying turned-off VMs, or by moving turned-off vApps to the new environment.
 
-- Ensuring you have the right licensing in place for the applications in use in your Dedicated Compute v2 environment
+- Ensuring you have the right licensing in place for the applications in use in your Dedicated Compute v2 environment.
 
-- If you select the customer-defined deployment option, you must manage your own reservation levels
+- If you select the customer-defined deployment option, you must manage your own reservation levels.
 
-- It is your responsibility to purchase enough Dedicated Compute v2 modules to ensure that there is enough resource available to your VMs in the event that one or more hosts fail. If you need any help ensuring you have enough resource in your Dedicated Compute v2 cluster, contact your Cloud Architect.
+- It is your responsibility to purchase enough Dedicated Compute v2 starter and upgrade packs to ensure that there is enough resource available to your VMs in the event that one or more hosts fail. If you need any help ensuring you have enough resource in your Dedicated Compute v2 cluster, contact your Cloud Architect.
 
 ## Feedback
 

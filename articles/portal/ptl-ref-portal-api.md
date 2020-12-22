@@ -2,9 +2,9 @@
 title: UKCloud Portal API Reference Guide
 description: Shows how to interact with the UKCloud Portal via use of an application programming interface (API)
 services: portal
-author: Sue Highmoor
-reviewer:
-lastreviewed: 20/07/2018 12:12:33
+author: shighmoor
+reviewer: ccouzens
+lastreviewed: 08/12/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -55,10 +55,6 @@ Code | Reason
 
 Authenticates your API session.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -81,7 +77,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -c /tmp/cookies.txt -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"email": "email@example.com", "password": "password"}' 'https://portal.skyscapecloud.com/api/authenticate'
+curl -c /tmp/cookies.txt -X POST -H 'Content-Type: application/json' -d '{"email": "email@example.com", "password": "password"}' 'https://portal.skyscapecloud.com/api/authenticate'
 ```
 
 #### Example request (Ruby)
@@ -113,7 +109,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 The endpoint also returns a session cookie that provides authentication for your API calls. You must send this cookie with any subsequent authenticated call, for example:
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts'
 ```
 
 #### Example response
@@ -122,112 +118,10 @@ curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.sk
 {"expire_after": 900}
 ```
 
-## GET /api/my_vm
-
-Returns a list of up to 10 VMs.
-
-> [!NOTE]
-> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
-
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-None
-
-#### Parameters
-
-None
-
-#### URI parameters
-
-None
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/my_vm'
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.get('/api/my_vm') { |req| req.headers['cookie'] = cookies }
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-401 Unauthorized --- The user could not be authenticated
-
-#### Response body
-
-Returns a response with a list of up to 10 VMs
-
-#### Example response
-
-```
-{"account":
-  {"vapps":
-    ["_id":1,
-     "urn":"urn:vcloud:vapp:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-     "name":"My vApp",
-     "ps":"On",
-     "total_vms":1,
-     "month_to_date":"£0.15",
-     "estimated_monthly_total":"£0.34"
-    ],
-    "vms":
-    ["_id":1,
-     "urn":"urn:vcloud:vm:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-     "name":"My VM",
-     "size":"small",
-     "ps":"On",
-     "os":"Microsoft Windows Server 2008 R2 (64-bit)",
-     "cpu":"2x2GHz",
-     "mem":"4096MB",
-     "storage":"50GB",
-     "created_at":"01/01/2015 09:00",
-     "updated_at":"01/01/2015 09:00",
-     "month_to_date":"£0.15",
-     "estimated_monthly_total":"£0.34",
-     "comment":null,
-     "last_backup_status":"Successful",
-     "in_backup":true,
-     "last_backup":"Completed on the night of: 01/01/2015",
-     "retention_length":14,
-     "billed_hours_powered_on":8,
-     "billed_hours_powered_off":14,
-     "backups":
-     [{"status":"Completed",
-       "backup_slot":"night of: 01/01/2015",
-       "backup_start":"01/01/2015 23:23",
-       "backup_end":"01/01/2015 23:31",
-       "snapshot_removal_start":"01/01/2015 23:33",
-       "snapshot_removal_end":"01/01/2015 23:38"
-     }]
-    ]
-  }
-}
-```
-
 ## GET /api/ping
 
 An endpoint to test API functionality.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -245,7 +139,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/ping'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/ping'
 ```
 
 #### Example request (Ruby)
@@ -278,10 +172,6 @@ Returns OK if the user has been authenticated.
 
 Returns a list of accounts associated with the current user.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -299,7 +189,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts'
 ```
 
 #### Example request (Ruby)
@@ -361,11 +251,7 @@ Returns an array of accounts with the ID and name.
 Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.
 
 > [!NOTE]
-> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
-
-### API version
-
-v1
+> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
 
 ### Request
 
@@ -388,7 +274,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/compute_services?page=10&per_page=20'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/compute_services?page=10&per_page=20'
 ```
 
 #### Example request (Ruby)
@@ -433,16 +319,16 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
               "VMs": [
                 {
                   “_id”: 2
-                  "billedHoursPoweredOff": 443,
+                  "billedHoursPoweredOff": 0,
                   "billedHoursPoweredOn": 0,
-                  "estimatedMonthlyTotal": "4.88",
+                  "estimatedMonthlyTotal": "0.00",
                   "memory": 16384,
-                  "monthToDate": "2.91",
+                  "monthToDate": "0.00",
                   "name": "RedHat-v6.4-x86_64",
                   "numberOfCPUs": 4,
                   "operatingSystem": "Red Hat Enterprise Linux 6 (64-bit)",
                   "powerStatus": "POWERED_OFF",
-                  "storage": 65536,
+                  "storage": 0,
                   "urn": "urn:vcloud:vm:3272ed5b-8e59-4ce4-bc10-5b575fd25787",
                   "inBackup": true,
                   "lastBackupStatus": "Successful",
@@ -795,11 +681,7 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
 Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).
 
 > [!NOTE]
-> While the billing fields returned by this endpoint are retained for backwards compatibility, the data in those fields has been deprecated and is no longer up to date. For accurate billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint.
-
-### API version
-
-v1
+> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
 
 ### Request
 
@@ -823,7 +705,7 @@ For information about how to find the vOrg ID, see [*GET /api/accounts/:account_
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/compute_services/12'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/compute_services/12'
 ```
 
 ### Response
@@ -873,7 +755,7 @@ Returns a list of VDCs, vApps and VMs.
               "operatingSystem": "Ubuntu",
               "numberOfCPUs": 1,
               "memory": 512,
-              "storage": 1024,
+              "storage": 0,
               "lastBackupStatus": "Excluded from backup",
               "inBackup": false,
               "lastBackup": "No backup",
@@ -891,10 +773,6 @@ Returns a list of VDCs, vApps and VMs.
 ## GET /api/accounts/:account_id/api_credentials
 
 Returns a list of vCloud API credentials associated with the specified account.
-
-### API version
-
-v1
 
 ### Request
 
@@ -915,7 +793,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/api_credentials'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/api_credentials'
 ```
 
 #### Example request (Ruby)
@@ -984,10 +862,6 @@ Returns an array of vCloud Director API credentials.
 
 Returns a list of basic information about VMware compute services (vOrgs) associated with the specified account.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -1007,7 +881,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/vorgs'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/vorgs'
 ```
 
 #### Example request (Ruby)
@@ -1150,10 +1024,6 @@ The authenticated user who creates the vOrg is automatically granted full admini
 > [!NOTE]
 > This API endpoint is available only in Regions 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -1179,7 +1049,7 @@ zone id | The zone in which to create the vOrg</br>Valid values:</br>- B (for Re
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs -X POST -d '{"data": {"type": "Vorg", "attributes": {"zoneId": "B", "name": "DEMO"}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
+curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs -X POST -d '{"data": {"type": "Vorg", "attributes": {"zoneId": "B", "name": "DEMO"}}}' -H 'Content-Type: application/json'
 ```
 
 ### Response
@@ -1303,10 +1173,6 @@ Returns information about the progress of a specific vOrg build.
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -1322,7 +1188,7 @@ None
 #### Example request
 
 ```bash
-curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' 'https://portal.skyscapecloud.com/api/vorg-builds/10' -X GET
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/vorg-builds/10'
 ```
 
 ### Response
@@ -1445,10 +1311,6 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 
 Returns information about all self-service vOrg builds for an account.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -1464,7 +1326,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/vorg-builds'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/vorg-builds'
 ```
 
 #### Example request (Ruby)
@@ -1648,10 +1510,6 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 
 Returns a list of basic information about the virtual data centres (VDCs) in the specified account under the specified vOrg.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -1672,7 +1530,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs'
 ```
 
 ### Response
@@ -1809,10 +1667,6 @@ Creates a VDC in the specified account under the specified compute service (vOrg
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -1838,7 +1692,7 @@ vmType | The type of VM workloads used in the VDC</br>Valid values:</br>- POWER<
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs -X POST -d '{"data": {"type": "VDC", "attributes": {"vmType": "POWER", "name": "DEMO"}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
+curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs -X POST -d '{"data": {"type": "VDC", "attributes": {"vmType": "POWER", "name": "DEMO"}}}' -H 'Content-Type: application/json'
 ```
 
 ### Response
@@ -1982,10 +1836,6 @@ Returns information about the progress of a specific VDC build.
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2005,7 +1855,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' 'https://portal.skyscapecloud.com/api/vdc-builds/10' -X GET
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/10'
 ```
 
 ### Response
@@ -2141,10 +1991,6 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 
 Returns information about all self-service VDC builds for an account.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2160,7 +2006,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/vdc-builds'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/vdc-builds'
 ```
 
 #### Example request (Ruby)
@@ -2360,10 +2206,6 @@ Creates an edge gateway in the specified account under the specified organisatio
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2390,7 +2232,7 @@ connectivityType | The type of connection</br>Valid values:</br>- Internet (in t
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs/urn:vcloud:vdc:345a5d90-1c8c-4fb2-bf4f-f480de82c594/edge-gateways -X POST -d '{"data": {"type": "EdgeGateway", "attributes": {"connectivityType": "Internet"}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
+curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs/urn:vcloud:vdc:345a5d90-1c8c-4fb2-bf4f-f480de82c594/edge-gateways -X POST -d '{"data": {"type": "EdgeGateway", "attributes": {"connectivityType": "Internet"}}}' -H 'Content-Type: application/json'
 ```
 
 ### Response
@@ -2489,10 +2331,6 @@ Provides information about the progress of a specific edge gateway build.
 > [!NOTE]
 > This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2512,7 +2350,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' 'https://portal.skyscapecloud.com/api/edge-gateway-builds/23' -X GET
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/23'
 ```
 
 ### Response
@@ -2604,10 +2442,6 @@ state | String | The state of the build<br>Valid values:<br>- approved -- edge g
 
 Returns information about all self-service edge gateway builds for an account.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2623,7 +2457,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/edge-gateway-builds'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/edge-gateway-builds'
 ```
 
 #### Example request (Ruby)
@@ -2789,10 +2623,6 @@ state | String | The state of the build<br>Valid values:<br>- approved -- edge g
 
 Returns a list of VMotion events that occurred in the specified account over the last 12 hours.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2812,7 +2642,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/platform_visibility/vmotion_events'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/platform_visibility/vmotion_events'
 ```
 
 #### Example request (Ruby)
@@ -2890,10 +2720,6 @@ Returns an array of VMotion events for the last 12 hours.
 
 Returns billing information for Cloud Storage.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2914,7 +2740,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" 'https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&org_id=xx-xx-xx-xxxxxxx'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&org_id=xx-xx-xx-xxxxxxx'
 ```
 
 #### Example request (Ruby)
@@ -2962,10 +2788,6 @@ For more information about this CSV, see [*Understanding your invoice evidence f
 > [!TIP]
 > Usage data is updated on a daily basis, so you only need to call this endpoint once a day to get the latest cost information. For example, you might call the endpoint at 06:00 each day to get the costs from the previous day.
 
-### API version
-
-v1
-
 ### Request
 
 #### Request body
@@ -2986,7 +2808,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" 'https://portal.skyscapecloud.com/api/billing/billing-csv?period=2018-01&org_id=xx-xx-xx-xxxxxxx'
+curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/billing/billing-csv?period=2018-01&org_id=xx-xx-xx-xxxxxxx'
 ```
 
 #### Example request (Ruby)
@@ -3070,193 +2892,6 @@ Returns a CSV report for the period specified.
   LicencePricePerHour               | Hourly price of any licenses attached to this VM
   LicenceTotalPrice                 | Price of any licenses attached to this VM
   TotalPrice                        | Total price of this VM
-
-## Deprecated endpoints
-
-The following endpoints are deprecated and may be removed in the future.
-
-### GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways
-
-Returns basic information about the edge gateways in the specified account under the specified VDC.
-
-#### API version
-
-v1
-
-#### Request
-
-##### Request body
-
-None
-
-##### Parameters
-
-None
-
-##### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  account_id | The ID of your account | String | Y
-  vorg_id | The ID of the vOrg in which the edge gateway resides | String | Y
-  vdc_urn | The full URN of the VDC in which the edge gateway resides, including the urn:vcloud:vdc: prefix | String | Y
-
-##### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' 'https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways'
-```
-
-#### Response
-
-##### Successful HTTP response
-
-200 OK --- The request was successful
-
-##### Unsuccessful HTTP response
-
-401 Unauthorized --- The user could not be authenticated
-
-403 Forbidden --- The user does not have permissions for the vOrg
-
-404 Not Found --- The user does not have access to the account, the account does not exist or the vOrg does not exist
-
-##### Response body
-
-If the call returns an empty list, check that the specified VDC URN is correct.
-
-  Attribute | Type | Value | Example
-  ----------|------|-------|--------
-  type | String | EdgeGateway | &nbsp;
-  id | String | The ID of the edge gateway | urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c
-  name | String | The name of the edge gateway | My Edge - nft00002i2 SL3
-
-##### Example response
-
-```
-{
-    "data": [
-        {
-            "type": "EdgeGateway",
-            "id": "urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c",
-            "attributes": {
-                "name": "My Edge - nft00002i2 SL3"
-            }
-        }
-    ]
-}
-```
-
-#### JSON schema
-
-```
-{
-    "title":"GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways",
-    "description":"The edge-gateways within this VDC.",
-    "oneOf": [
-        {
-            "$ref": "#/definitions/success"
-        },
-        {
-            "$ref": "#/definitions/failure"
-        }
-    ],
-    "definitions": {
-        "success": {
-            "type": "object",
-            "required": [
-                "data"
-            ],
-            "properties": {
-                "data": {
-                    "$ref": "#/definitions/data"
-                }
-            }
-        },
-        "failure": {
-            "$ref": "#/definitions/error"
-        },
-        "data":{
-            "type":"array",
-            "items":{
-                "title":"Edge Gateways",
-                "type":"object",
-                "properties":{
-                    "id":{
-                        "type":"string",
-                        "pattern":"^urn:vcloud:gateway:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$"
-                    },
-                    "type":{
-                        "type":"string",
-                        "enum":["EdgeGateway"]
-                    },
-                    "attributes":{
-                        "type": "object",
-                        "properties":{
-                            "name": {
-                                "type":"string"
-                            }
-                        },
-                        "required":[
-                            "name"
-                        ]
-                    }
-                },
-                "required":[
-                    "id",
-                    "type",
-                    "attributes"
-                ]
-            }
-        },
-        "error": {
-            "type": "object",
-            "properties": {
-                "error": {
-                    "description": "A short, human-readable summary of the problem.",
-                    "type": "string"
-                },
-                "detail": {
-                    "description": "A human-readable explanation of the problem.",
-                    "type": "string"
-                }
-            },
-            "required":[
-                "error"
-            ]
-        }
-    }
-}
-```
-
-## Removed endpoints
-
-The following endpoints have been removed from the Portal API.
-
-### My Calls
-
-> [!IMPORTANT]
-> With the move to the new [My Calls](https://portal.skyscapecloud.com/support/ivanti) service management tool, the My Calls API functionality is no longer available.
-
-- GET /api/my_calls Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).
-
-- GET /api/my_calls/:ticket_id - Returns a single ticket and its updates and changes.
-
-- PUT /api/my_calls/:ticket_id - Adds a new note to a ticket.
-
-- POST /api/my_calls - Adds a new ticket.
-
-- PUT /api/my_calls/:ticket_id/subscribe - Subscribes a user to a ticket.
-
-- PUT /api/my_calls/:ticket_id/unsubscribe - Unsubscribes a user from a ticket.
-
-- PUT /api/my_calls/:ticket_id/reopen - Reopens a ticket.
-
-- PUT /api/my_calls/:ticket_id/change_owner - Change the owner of a ticket.
-
-- PUT /api/my_calls/:ticket_id/cancel - Cancels a ticket.
-
-- PUT /api/my_calls/:ticket_id/close - Closes a ticket.
 
 ## Further information
 

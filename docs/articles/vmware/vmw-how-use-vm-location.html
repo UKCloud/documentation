@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to use VM location in vCloud Director </title>
+    <title>How to use VM location </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to use VM location in vCloud Director ">
+    <meta name="title" content="How to use VM location ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,11 +91,11 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-use-vm-location-in-vcloud-director">How to use VM location in vCloud Director</h1>
+<h1 id="how-to-use-vm-location">How to use VM location</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The VM location function in vCloud Director enables you to identify where a specific virtual machine (VM) within your organisation is located within the UKCloud platform.</p>
-<p>This article describes the step-by-step instructions for obtaining this information which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL security domains.</p>
+<p>The VM location function in VMware Cloud Director/vCloud Director enables you to identify where a specific virtual machine (VM) in your organisation is located within the UKCloud platform.</p>
+<p>This article describes the step-by-step instructions for obtaining this information, which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL security domains.</p>
 <p>With regards to the supplied location, this is standardised to the following options:</p>
 <ul>
 <li><p>Corsham (located in the Corsham data centre)</p>
@@ -107,20 +107,44 @@
 <li><p>ENHANCED-Farnborough (replicated in both data centres; active in Farnborough and standby in Corsham)</p>
 </li>
 </ul>
-<p>This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you want to change the location of a specific or group of VMs, raise a support request from the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you want to change the location of a specific or group of VMs, raise a Service Request from the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <p>You can also use the <a href="#obtaining-the-location-of-a-specific-vm-using-the-vcloud-api">vCloud API</a>.</p>
 <h2 id="obtaining-the-location-of-a-vm">Obtaining the location of a VM</h2>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
+
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the <strong>VDC</strong> your VM is in.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which your VM is located.</p>
+</li>
+<li><p>In the left navigation panel, select <strong>Virtual Machines</strong>.</p>
+<p><img src="images/vmw-vcd10.1-tab-vms.png" alt="Virtual Machines menu option"></p>
+</li>
+<li><p>In the card for the VM, click <strong>Details</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-vm-details.png" alt="VM Details menu option"></p>
+</li>
+<li><p>Select <strong>Metadata</strong>.</p>
+<p><img src="images/vmw-vcd10.1-vm-location-metadata.png" alt="VM details -- Metadata"></p>
+</li>
+<li><p>The location of the VM is displayed in the <strong>Value</strong> column for the <strong>SkyscapeLocation</strong> metadata tag.</p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC your VM is in.</p>
 <p>For more detailed instructions on accessing vCloud Director, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>Virtual Machines</strong>.</p>
 <p><img src="images/vmw-vcd-tab-vms.png" alt="Virtual Machines menu option"></p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>You can change the view from cards to list. If you need to search for the VM, click on the filter icon and enter the name of the VM.</p>
-<p><img src="images/vmw-vcd-vms-filter.png" alt="Filter virtual machines"></p>
-</div>
 </li>
 <li><p>In the card for the VM, click <strong>Details</strong>.</p>
 <p><img src="images/vmw-vcd-mnu-vm-details.png" alt="VM Details menu option"></p>
@@ -130,11 +154,13 @@
 <p>The location of the VM is displayed in the <strong>Value</strong> column for the <strong>SkyscapeLocation</strong> metadata tag.</p>
 </li>
 </ol>
+</section>
+</div>
 <h2 id="obtaining-the-location-of-a-specific-vm-using-the-vcloud-api">Obtaining the location of a specific VM using the vCloud API</h2>
 <p>You can also obtain the location of a VM via the via the API, looking at the metadata against the applicable VM.</p>
 <p>The following has been created as an example script to obtain the VM location:</p>
-<p><a href="https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata">https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata</a></p>
-<p>Replace the &quot;xxxxxxxx&quot; with the relevant VM ID.</p>
+<p><a href="https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxx/metadata">https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxx/metadata</a></p>
+<p>Replace the <code>xxx</code> with the relevant VM ID.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

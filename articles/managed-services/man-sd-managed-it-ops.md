@@ -2,8 +2,8 @@
 title: Managed IT Operations Service Definition
 description: Provides an overview of what is provided by the Managed IT Operations service
 services: managed-services
-author: Steve Dixon
-reviewer:
+author: shighmoor
+reviewer: shighmoor
 lastreviewed: 16/07/2020
 toc_rootlink: Managed IT Operations
 toc_sub1: 
@@ -65,104 +65,7 @@ This service is designed to be flexible and allows you to mix and match from a r
 
 ## Pricing and packaging
 
-Prices start from £12.50 per month for a customer endpoint device.
-
-<table>
-  <tr>
-    <th colspan="2">Managed Monitoring as a Service (mandatory)</th>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td><strong>£ per instance per month</td>
-  </tr>
-  <tr>
-    <td>Monitoring of infrastructure<br>- Virtual Server<br>- Physical Server<br>- Edge switch /router</td>
-    <td>£12.50</td>
-  </tr>
-  <tr>
-    <th colspan="2">Managed VM Recovery Point (optional add-on)</th>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td><strong>£ per month</td>
-  </tr>
-  <tr>
-    <td>Basic nightly data protection of a VM</td>
-    <td>£40 per instance</td>
-  </tr>
-  <tr>
-    <td>Associated storage charges</td>
-    <td>£0.10 per GiB</td>
-  </tr>
-  <tr>
-    <th colspan="2">Patching as a Service (optional add-on)</th>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td><strong>£ per server per month</td>
-  </tr>
-  <tr>
-    <td>Patching of server operating system</td>
-    <td>£12.50</td>
-  </tr>
-  <tr>
-    <th colspan="2">Anti-virus as a Service (optional add-on)</th>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td><strong>£ per instance per month</td>
-  </tr>
-  <tr>
-    <td>Installation and management of an anti-virus endpoint solution</td>
-    <td>£9.50</td>
-  </tr>
-  <tr>
-    <th colspan="2">Runbook Automation (optional add-on)</th>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td><strong>£</td>
-  </tr>
-  <tr>
-    <td>Creation/amendment, validation, and storage of runbook</td>
-    <td>£100 per runbook per month</td>
-  </tr>
-  <tr>
-    <td>Execution of runbook</td>
-    <td>£75 per execution per runbook</td>
-  </tr>
-</table>
-
-### Volume discounts
-
-Volume discounts are offered per single line item (for example, Managed Monitoring, AntiVirus as a Service, Patching as a Service) and line items cannot be combined in order to obtain a higher level of volume discount. Storage charges associated with Managed VM Recovery Point are excluded from this volume discount scheme.
-
-<table>
-  <tr>
-    <th>Volume</th>
-    <th>% discount</th>
-  </tr>
-  <tr>
-    <td>1 to 24</td>
-    <td>List Price</td>
-  </tr>
-  <tr>
-    <td>25 to 49</td>
-    <td>5%</td>
-  </tr>
-  <tr>
-    <td>50 to 99</td>
-    <td>10%</td>
-  </tr>
-  <tr>
-    <td>100 to 249</td>
-    <td>15%</td>
-  </tr>
-  <tr>
-    <td>250+</td>
-    <td>20%</td>
-  </tr>
-</table>
+Prices start from £12.50 per month for a customer endpoint device. Full pricing with all options, including volume discounts, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
@@ -174,7 +77,7 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 ## An SLA you can trust
 
-We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. As the SLA varies based on the chosen cloud technology, you can find full details on each service's SLA, including measurements and service credits, in the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
+We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. As the SLA varies based on the chosen cloud technology, you can find full details on each service's SLA, including measurements and service credits, in the [*SLA definition*](../other/other-ref-sla-definition.md).
 
 ## The small print
 
@@ -184,7 +87,7 @@ For full terms and conditions including onboarding and responsibilities, refer t
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning onpremises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads, migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-2020.png)
+![UKCloud services](images/ukc-services-g12.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
