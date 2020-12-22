@@ -17,9 +17,6 @@ toc_mdlink: orcl-ref-pricing.md
 
 # Pricing information for UKCloud for Oracle Software
 
-> [!IMPORTANT]
-> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
-
 ## Overview
 
 UKCloud for Oracle Software VMs start at 9p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
