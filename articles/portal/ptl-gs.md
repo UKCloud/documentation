@@ -26,7 +26,7 @@ The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you c
 
 - View notifications relating to the UKCloud platform
 
-- View cyber security news and security events
+- View cyber security news
 
 - View information about your UKCloud for VMware service, including VM information and backup reports
 
@@ -168,7 +168,7 @@ The Portal navigation panel provides access to all the functionality available i
 
   - **Cyber Security News**, where you can view general threat briefs and security news
 
-  - **Security Events**, which displays security events specific to your environment
+  - **Security Operations Service**, which shows the number of logs processed against the UKCloud platform by our Security Operations Service
 
   For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
