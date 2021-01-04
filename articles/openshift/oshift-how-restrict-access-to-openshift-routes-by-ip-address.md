@@ -86,7 +86,7 @@ For further information, see the following OpenShift documentation:
 - [OpenShift v4](https://docs.openshift.com/container-platform/4.5/networking/routes/route-configuration.html)
 
 > [!IMPORTANT]
-> This functionality is available by default in UKCloud for OpenShift deployments of version 3.10 or later. For all previous versions, you must raise a request with UKCloud to have this functionality enabled.
+> This functionality is available by default in UKCloud for Managed OpenShift deployments of version 3.10 or later. For all previous versions, you must raise a request with UKCloud to have this functionality enabled.
 
 ## Feedback
 
