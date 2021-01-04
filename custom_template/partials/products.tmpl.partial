@@ -90,12 +90,12 @@
     <span>Other</span>
   </a>
 
-  <a href="https://www.youtube.com/channel/UCnlFUyOWcS4iE_HK-ZEcNGw" class="product-grid__item">
-    <span>UKCloud on YouTube</span>
-  </a>
-
   <a href="https://ukcloud.com/hub/" class="product-grid__item">
     <span>More Resources</span>
+  </a>
+
+  <a href="https://www.youtube.com/channel/UCnlFUyOWcS4iE_HK-ZEcNGw" class="product-grid__item">
+    <span>UKCloud on YouTube</span>
   </a>
 
   <a href="https://status.ukcloud.com/" class="product-grid__item">
