@@ -109,8 +109,6 @@
 <ul>
 <li><p>Overall status of each node in the cluster</p>
 </li>
-<li><p>Uptime per node</p>
-</li>
 <li><p>CPU usage</p>
 </li>
 <li><p>Memory usage</p>
@@ -129,7 +127,7 @@
 <pre><code>oc get nodes
 </code></pre>
 </li>
-<li><p>The results show you the overall readiness of each node and how long they've been running. For example:</p>
+<li><p>The results show you the overall readiness of each node and their role. For example:</p>
 <pre><code>$ oc get nodes
 NAME                            STATUS    ROLES     AGE       VERSION
 master-infra-0.5623-f84e8e      Ready     master    310d      v1.11.0+d4cacc0

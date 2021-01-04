@@ -129,6 +129,10 @@ Events:                &lt;none&gt;
 <h2 id="stop-any-pod-that-is-using-the-volume">Stop any pod that is using the volume</h2>
 <p>In this article, we'll expand the volume for a cluster's default Elasticsearch deployment, which is located in the <code>openshift-logging</code> project. The pod using the persistent volume in this example is named <code>logging-es-data-master</code> and the pvc (Persistent Volume Claim) name is <code>logging-es-0</code>. This is a common scenario - a high throughput of logs may cause Elasticsearch to enter a CrashLoop when the logging volume fills up.</p>
 <p>You can apply the same procedure to any other pods that use persistent volumes.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>In OpenShift v4, the cluster-logging components are named differently: the Elasticsearch pod is prefixed &quot;elasticsearch-cdm-&quot; and the pvc is prefixed &quot;elasticsearch-elasticsearch-cdm-&quot;. In version 4, both Kibana and Elasticsearch are scaled using deployments rather than deployment configs.</p>
+</div>
 <pre><code>$ oc project openshift-logging
 Now using project &quot;openshift-logging&quot; on server &quot;https://console.5678-89abcd:8443&quot;.
 $ oc get pods

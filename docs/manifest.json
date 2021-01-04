@@ -6184,7 +6184,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-backup-migrate.html",
-          "hash": "NDs3eRHcGWDz2pPR3JpDYQ=="
+          "hash": "yke+Zuas6DFzYBXnLn/tig=="
         }
       },
       "is_incremental": false,
@@ -6196,7 +6196,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-build-app-private-repo.html",
-          "hash": "G+SenNw/v6AyQURaU1fMQw=="
+          "hash": "VEXA/yrccdz7+IlelMlz8A=="
         }
       },
       "is_incremental": false,
@@ -6232,7 +6232,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-expand-persistent-vols.html",
-          "hash": "93oFSjMScoqN1h8SvP3IXA=="
+          "hash": "lXQ1jo4hgrEjWgvUSw+FgA=="
         }
       },
       "is_incremental": false,
@@ -6280,7 +6280,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-obtain-usage-metrics.html",
-          "hash": "Dw+3L2fZb+cy0JiK0r1Z8Q=="
+          "hash": "Wh7AO7/vJhb/4sUiMwqZcA=="
         }
       },
       "is_incremental": false,
@@ -10757,7 +10757,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-services-by-region.html",
-          "hash": "KR2st8adpQwE0fZ/6MGCLQ=="
+          "hash": "FepmqAWUwuvxggJp20LYqA=="
         }
       },
       "is_incremental": false,
