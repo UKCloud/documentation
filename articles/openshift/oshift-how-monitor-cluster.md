@@ -3,8 +3,8 @@ title: How to monitor your OpenShift cluster
 description: Explains how to set up a simple system to monitor an OpenShift Cloud Native Application Platform cluster
 services: openshift
 author: Sue Highmoor
-reviewer: Kieran O'Neill
-lastreviewed: 12/11/2019 13:20:00
+reviewer: Gareth Ellner
+lastreviewed: 22/12/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -100,7 +100,11 @@ This API call returns a reasonable amount of JSON-encoded data, which may be har
 
 ## Using the OpenShift API to obtain cluster status
 
-The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy.
+The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy. It has been tested using Python 3.7.
+
+> [!TIP]
+> The `ENDPOINT` parameter in the code is an example for OpenShift v3. For OpenShift v4 clusters, you'll need to change the port number from `8443` to `6443`. API URLs for OpenShift v4 begin with `https://api.` rather than `https://ocp.`.
+
 
 ```python
 #!/usr/bin/env python3
