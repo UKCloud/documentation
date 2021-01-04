@@ -4,7 +4,7 @@ description: Provides an overview of the Managed Services offerings UKCloud prov
 services: managed-services
 author: Steve Dixon
 reviewer:
-lastreviewed: 16/07/2020
+lastreviewed: 04/01/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -23,8 +23,8 @@ UKCloud offers a variety of Managed Services, all focused around removing the di
 
 The following provides a brief overview of our Managed Services; click the links for further details.
 
-- [**Managed IT Operations**](man-sd-managed-it-ops.md) - A portfolio of Managed Services focused on the general health of your compute assets. This portfolio of services is comprised of the following elements:
-
+- [**Managed IT Operations**](man-sd-managed-it-ops.md) - A portfolio of Managed Services focused on enhancing the general health of your compute assets. This portfolio is comprised of the following elements:
+  
   - ***Managed Monitoring as a Service*** - The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate, leveraging the power of AIOps to reduce the amount of noise you traditionally had to filter through, enabling you to focus on the critical events that really matter.
 
   - ***Managed VM Recovery Point*** - Ensures your VM is protected on a nightly basis, providing confidence that you can request your entire VM or individual files to be restored from an RPO within the previous 24 hours.
@@ -35,13 +35,15 @@ The following provides a brief overview of our Managed Services; click the links
 
   - ***Runbook Automation*** - Enables UKCloud to execute predefined basic actions in response to well understood events to achieve a specific outcome, helping to accelerate your time to resolution for known issues.
 
-- **Managed SQL Server** - Provides monitoring and support for your SQL servers. This level of monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your SQL services are operating effectively.
+- **Advanced Managed Services** - A suite of specialised managed support products focused on the middleware and back-end services supporting your solutions. This suite is comprised of the following products:
 
-- **Managed Web Server** - Provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers. This level of monitoring and support, when coupled with proactive operating system patching, provides you with the confidence that your web services are operating effectively.
+  - [***Managed SQL Server***](https://docs.ukcloud.com/articles/managed-services/man-sd-sqlserver.html) - Provides monitoring and support for your SQL servers. This level of monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your SQL services are operating effectively.
 
-- **Managed Active Directory (AD) Support** - Provides you with monitoring and support for your Active Directory services and supporting Windows servers. This level of monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your AD services are operating effectively.
+  - [***Managed Web Server***](https://docs.ukcloud.com/articles/managed-services/man-sd-webserver.html) - Provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers. This level of monitoring and support, when coupled with proactive operating system patching, provides you with the confidence that your web services are operating effectively.
 
-- **Managed Remote Desktop Services (RDS) Support** - Provides you with monitoring and support for your Remote Desktop Services and supporting Windows servers. This level of monitoring and support, when coupled with pro-active Windows patching, provides you with the confidence that your RDS services are operating effectively.
+  - [***Managed Active Directory (AD) Support***](https://docs.ukcloud.com/articles/managed-services/man-sd-ad.html) - Provides you with monitoring and support for your Active Directory services and supporting Windows servers. This level of monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your AD services are operating effectively.
+
+  - [***Managed Remote Desktop Services (RDS) Support***](https://docs.ukcloud.com/articles/managed-services/man-sd-rds.html) - Provides you with monitoring and support for your Remote Desktop Services and supporting Windows servers. This level of monitoring and support, when coupled with pro-active Windows patching, provides you with the confidence that your RDS services are operating effectively.
 
 - [**Extended Network Support from UKCloud**](man-sd-network.md) - Enables customers to choose from an extensive list of officially supported network appliances with UKCloud undertaking the initial deployment (or assuming ownership of valid existing networks) and configuration of the various elements of your virtual network, along with the ongoing monitoring and support.
 
