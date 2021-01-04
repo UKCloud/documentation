@@ -159,7 +159,11 @@ $ curl -k -H &quot;Authorization: Bearer ${token}&quot; \
 <p>You'll need to customise the query above by providing the correct values for endpoint and token.</p>
 <p>This API call returns a reasonable amount of JSON-encoded data, which may be hard to parse using shell commands. It's also necessary to fetch items from various places within this data. The Python program in the following section shows you how to accomplish this.</p>
 <h2 id="using-the-openshift-api-to-obtain-cluster-status">Using the OpenShift API to obtain cluster status</h2>
-<p>The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy.</p>
+<p>The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy. It has been tested using Python 3.7.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <code>ENDPOINT</code> parameter in the code is an example for OpenShift v3. For OpenShift v4 clusters, you'll need to change the port number from <code>8443</code> to <code>6443</code>. API URLs for OpenShift v4 begin with <code>https://api.</code> rather than <code>https://ocp.</code>.</p>
+</div>
 <pre><code class="lang-python">#!/usr/bin/env python3
 import urllib.request
 import json

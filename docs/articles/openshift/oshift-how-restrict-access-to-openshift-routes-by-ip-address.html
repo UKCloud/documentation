@@ -126,11 +126,26 @@
 <p>To delete the IPs from the annotation, you can run the command:</p>
 <pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist-
 </code></pre>
+<h2 id="known-issues">Known issues</h2>
+<p>As of OpenShift version 4.4+, pod DNS lookups will return the internal IP of a route rather than the public IP. This means traffic will not leave the cluster for pod to route communication. For a route with an allow-list to accept traffic from a pod in the same cluster, you must add the internal cluster subnet to the allow-list rather than the cluster's egress IP. The following examples show a lookup from a local client machine and from inside a pod, demonstrating the difference in resolution:</p>
+<p><strong>DNS lookup on local machine:</strong></p>
+<p><img src="images/oshift-local-lookup.png" alt="Local machine lookup"></p>
+<p><strong>DNS lookup from inside a pod:</strong></p>
+<p><img src="images/oshift-pod-lookup.png" alt="Pod lookup"></p>
+<p>In this case you would run the following command to apply an allow-list to your route (assuming your cluster local subnet is 10.0.0.0/24):</p>
+<pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist=&quot;10.0.0.0/24&quot;
+</code></pre>
 <h2 id="more-information">More information</h2>
-<p>For further information, see the following: <a href="https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html">OpenShift Documentation</a></p>
+<p>For further information, see the following OpenShift documentation:</p>
+<ul>
+<li><p><a href="https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html">OpenShift v3</a></p>
+</li>
+<li><p><a href="https://docs.openshift.com/container-platform/4.5/networking/routes/route-configuration.html">OpenShift v4</a></p>
+</li>
+</ul>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled.</p>
+<p>This functionality is available by default in UKCloud for Managed OpenShift deployments of version 3.10 or later. For all previous versions, you must raise a request with UKCloud to have this functionality enabled.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>

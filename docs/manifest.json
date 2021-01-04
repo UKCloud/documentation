@@ -5933,10 +5933,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-local-lookup.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-local-lookup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/oshift-overview.png",
       "output": {
         "resource": {
           "relative_path": "articles/openshift/images/oshift-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-pod-lookup.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-pod-lookup.png"
         }
       },
       "is_incremental": false,
@@ -6268,7 +6290,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-monitor-cluster.html",
-          "hash": "VXCGPG3ihUeL4pXn1BOBQA=="
+          "hash": "8KVh1VenX+UnLx2jd181Qw=="
         }
       },
       "is_incremental": false,
@@ -6316,7 +6338,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-restrict-access-to-openshift-routes-by-ip-address.html",
-          "hash": "8rTXwNv3kiO1zmfKXQ27XA=="
+          "hash": "427ePADKWfnQOLxGihVA/Q=="
         }
       },
       "is_incremental": false,
