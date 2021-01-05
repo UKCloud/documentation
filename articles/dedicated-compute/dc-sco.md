@@ -87,7 +87,7 @@ Dedicated Compute v2 utilises a reservation pool allocation model providing fine
 
 ## Platform management
 
-Dedicated Compute v2 is managed in the same way as our other cloud services, using vCloud Director, the UKCloud Portal, and APIs associated with both.
+Dedicated Compute v2 is managed in the same way as our other cloud services, using VMware Cloud Director, the UKCloud Portal, and APIs associated with both.
 
 The Dedicated Compute v2 service will be maintained to the same software patch revisions as our main platform.
 

@@ -39,7 +39,7 @@ The figure below shows an example of a possible setup, but it should be used as 
 
 ## Service architecture
 
-UKCloud will provide access to a CDSZ environment for the transfer of data between the security domains. A CDSZ Walled Garden is a VMware only environment, utilizing VMware vCloud Director as the management orchestrator for the service. For additional information regarding the CDSZ, see the [*Service Scope*](../cdsz/cdsz-sco.md).
+UKCloud will provide access to a CDSZ environment for the transfer of data between the security domains. A CDSZ Walled Garden is a VMware only environment, utilizing VMware Cloud Director as the management orchestrator for the service. For additional information regarding the CDSZ, see the [*Service Scope*](../cdsz/cdsz-sco.md).
 
 The actual CDSZ service will be provided without charge for the transfer of data, with the following restrictions:
 

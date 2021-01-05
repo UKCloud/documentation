@@ -32,7 +32,7 @@ The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you c
 
 - Create compute services, virtual data centres (VDCs) and edge gateways within your UKCloud for VMware environment
 
-- Access vCloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall
+- Access VMware Cloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall
 
 - Access the OpenStack Horizon dashboard to work with your UKCloud for OpenStack environment, for example to build your network infrastructure, set up access and security and launch instances
 
@@ -120,7 +120,7 @@ In the toolbar, you can also click your username to access the following options
 
 - **Two-Factor Auth** - Set up two-factor authentication (2FA) for your user account (see [*How to set up two-factor authentication for a user account*](ptl-how-setup-2fa.md)).
 
-- **API** - View the information you need to use the vCloud API (see [*How to access vCloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md)).
+- **API** - View the information you need to use the vCloud API (see [*How to access VMware Cloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md)).
 
 - **Feedback** - Send an email to UKCloud (<feedback@ukcloud.com>) with feedback on the Portal or any other aspect of your UKCloud experience.
 
@@ -241,7 +241,7 @@ Within the UKCloud VMware environment there are two types of account:
 
 ### compute service
 
-A UKCloud for VMware top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogs, users and resources.
+A UKCloud for VMware top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogs, users and resources.
 
 ### Knowledge Centre
 

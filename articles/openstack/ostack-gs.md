@@ -168,12 +168,9 @@ When adding a new rule to a security group, you can choose from a pre-populated 
 
 ### SSH key pairs
 
-Another change if you're used to using vCloud Director, is the authenticated access to your instances. OpenStack, like most other cloud providers, doesn't use templates that allow password controlled access.
-The standard cloud method of authenticating access to a new instance is to use SSH key pair authentication --- your SSH client uses the private key and OpenStack injects the public key into your new instance using
-the cloud-init package pre-installed in the instance image.
+Another change if you're used to using VMware Cloud Director, is the authenticated access to your instances. OpenStack, like most other cloud providers, doesn't use templates that allow password controlled access. The standard cloud method of authenticating access to a new instance is to use SSH key pair authentication - your SSH client uses the private key and OpenStack injects the public key into your new instance using the cloud-init package pre-installed in the instance image.
 
-Before you launch any instances on OpenStack, you need to set up at least one SSH key pair. You can use OpenStack to create a new key pair for you, or if you have an existing SSH key pair, you can import the
-public key so that OpenStack can use it to inject into new instances.
+Before you launch any instances on OpenStack, you need to set up at least one SSH key pair. You can use OpenStack to create a new key pair for you, or if you have an existing SSH key pair, you can import the public key so that OpenStack can use it to inject into new instances.
 
 To see what public keys have already been set up for your use:
 
@@ -247,12 +244,9 @@ You can see the images that are available for you to use by expanding the **Comp
 
 ### Choosing your instance size
 
-If you're already familiar with UKCloud's vCloud Director-based UKCloud for VMware service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.
+If you're already familiar with our UKCloud for VMware service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.
 
-In OpenStack, you choices are restricted to a number of pre-defined *flavors* that define how many vCPUs, how much memory and how much storage an instance may use. Although full details for each flavor are
-available through the Horizon UI, there's no overall list available showing all the different flavors and sizes of instances. However, if you've installed the OpenStack CLI tools (see
-<http://docs.openstack.org/user-guide/common/cli-install-openstack-command-line-clients.html>),
-you can run the following command to retrieve a list of the flavors and their makeup
+In OpenStack, you choices are restricted to a number of pre-defined *flavors* that define how many vCPUs, how much memory and how much storage an instance may use. Although full details for each flavor are available through the Horizon UI, there's no overall list available showing all the different flavors and sizes of instances. However, if you've installed the OpenStack CLI tools (see <http://docs.openstack.org/user-guide/common/cli-install-openstack-command-line-clients.html>), you can run the following command to retrieve a list of the flavors and their makeup:
 
     \> openstack flavor list
 
