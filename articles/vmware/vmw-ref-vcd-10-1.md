@@ -2,9 +2,9 @@
 title: Changes in VMware Cloud Director 10.1
 description: Provides information about the changes in VMware Cloud Director 10.1
 services: vmware
-author: Sue Highmoor
+author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/12/2020
+lastreviewed: 05/01/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -104,23 +104,13 @@ Known issues you may experience following the upgrade to VMware Cloud Director 1
 
 - Guest customisation is failing in the following:
 
-  - For existing VMs
+  - For existing VMs - Windows 2012, Windows 2012R2 and Windows 2016
 
-    - Windows 2012
-
-    - Windows 2012R2
-
-    - Windows 2016
-
-  - For new VMs
-
-    - Windows 2012
-
-    - Windows 2012R2
+  - For new VMs - Windows 2012, Windows 2012R2
 
   When setting a new administrator password and/or changing the IP address then forcing re-customisation at power-on, the settings are ignored.
 
-  The workaround is to request the default password of the templates, if they're from the UKCloud catalog. Then you'll need to manually run sysprep and set the IP and hostname.
+  The workaround is to deploy the template, but before powering on, change the VM type to Windows 2016. Power on using Force Customization.
 
 ### Known issues in the UKCloud Portal
 
