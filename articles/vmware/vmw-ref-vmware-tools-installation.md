@@ -3,8 +3,8 @@ title: VMware Tools installation
 description: Recommended practices for installing and maintaining VMware tools on the Assured platform
 services: vmware
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 06/11/2020
+reviewer: sdelaney
+lastreviewed: 04/01/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
