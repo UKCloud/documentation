@@ -25,7 +25,7 @@ Cloud Storage from UKCloud is a secure next-generation storage platform designed
 
 ### Where will my data be physically stored?
 
-Data will be stored in one or both of our highly resilient tier 3, UK-sovereign data centres, which are separated by over 100km.
+Data will be stored in one or both of our highly resilient tier 3, UK-sovereign data centres, which are separated by over 100km.
 
 ### How much data can I store?
 
@@ -72,11 +72,11 @@ The frequency of data backup is defined and managed by your organisation adminis
 
 UKCloud's object storage is however highly durable and can automatically recover from disk and node failure, negating the need for a backup.
 
-### What reports can I get about storage usage? 
+### What reports can I get about storage usage? 
 
 We provide tools for monitoring used capacity and storage growth via the UKCloud Portal.
 
-### What software tools are provided? 
+### What software tools are provided? 
 
 UKCloud does not provide software tools for accessing the platform as storage is accessed via APIs, supporting S3.
 
@@ -198,7 +198,7 @@ For more information, see the [*Cross Domain Security Zone Service Definition*](
 
 ### Is there a protective monitoring service?
 
-Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
+Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
 ## Feedback
 

@@ -31,7 +31,7 @@ The Neustar DDoS Protection from UKCloud service is supplied and managed by Neus
 
 ## Who is Neustar?
 
-Founded in 1996, Neustar, Inc. (NYSE: NSR) is a trusted, neutral provider of real-time information and analysis to the internet, telecommunications, entertainment, advertising and marketing industries throughout the world. Neustar delivers real-time information and analytics for over 6 billion physical and virtual addresses, provides instantaneous answers to more than 27 billion queries from the internet each day, and answers over 300,000 questions every second.
+Founded in 1996, Neustar, Inc. (NYSE: NSR) is a trusted, neutral provider of real-time information and analysis to the internet, telecommunications, entertainment, advertising and marketing industries throughout the world. Neustar delivers real-time information and analytics for over 6 billion physical and virtual addresses, provides instantaneous answers to more than 27 billion queries from the internet each day, and answers over 300,000 questions every second.
 
 ## How is this different from standard UKCloud DDoS protection?
 

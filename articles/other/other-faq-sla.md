@@ -431,7 +431,7 @@ The following are examples of what is not covered by the SLA:
 
 - Faults within your control, such as client applications and mailbox configuration
 
-- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or HSCN) and components collocated at UKCloud 
+- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or HSCN) and components collocated at UKCloud 
 
 ### Can you give me a worked example for the Email and Collaboration as a Service SLA?
 
@@ -441,7 +441,7 @@ Example factors (Email and Collaboration as a Service)
 
 - Price per month + storage + archived + connectivity = total price per month
 
-- £3.50 + (5,000 x £1.00) + (5,000 x £0.34) + £0.00 = £6,703.50 per month
+- £3.50 + (5,000 x £1.00) + (5,000 x £0.34) + £0.00 = £6,703.50 per month
 
 - Availability Commitment = 99.99%
 

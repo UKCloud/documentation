@@ -33,26 +33,26 @@ You can use the Apple iPhone to access your Zimbra account three primary ways:
 
 - Enter IMAP/POP3 email settings
 
-For more information about ActiveSync, go to <https://en.wikipedia.org/wiki/ActiveSync>.
+For more information about ActiveSync, go to <https://en.wikipedia.org/wiki/ActiveSync>.
 
 > [!IMPORTANT]
 > Performing the following steps may delete all of the existing contacts on your iPhone. This is a common problem for iPhone users when creating a new ActiveSync account. You should ensure that you have backed up all of your contacts before proceeding.
 
 ## Installation and setup for iPhone
 
-1. On your iPhone Home screen, tap the **Settings** icon.
+1. On your iPhone Home screen, tap the **Settings** icon.
 
     ![Settings icon on iPhone Home screen](images/email-iphone-home.png)
 
-2. Scroll down and select **Passwords & Accounts**.
+2. Scroll down and select **Passwords & Accounts**.
 
     ![Mail, Contacts, Calendars](images/email-iphone-settings.png)
 
-3. Select **Add Account**.
+3. Select **Add Account**.
 
     ![Add Account](images/email-iphone-add-account.png)
 
-4. Choose **Exchange**.
+4. Choose **Exchange**.
 
     ![Exchange](images/email-iphone-exchange.png)
 
@@ -88,7 +88,7 @@ You can now edit your global or account-specific settings as described in the ne
 
 When you have successfully set up your account, you should begin to see mail folders, contacts, and your calendar(s) appear on your device. When the synchronization completes, you can edit your global or account-specific settings.
 
-In **Passwords & Accounts** you can set global or account-specific usability controls for your email account(s), including setting the number of messages to show, how many lines of an email to preview, font size, how often to sync, and more.
+In **Passwords & Accounts** you can set global or account-specific usability controls for your email account(s), including setting the number of messages to show, how many lines of an email to preview, font size, how often to sync, and more.
 
 ![Zimbra settings](images/email-iphone-zimbra-settings.png)
 

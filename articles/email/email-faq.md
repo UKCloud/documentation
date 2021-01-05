@@ -74,7 +74,7 @@ There are several configuration options for using the PSN email relays. These ca
 
 ## Is the service Pan Government Accredited?
 
-UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.
+UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.
 
 We are now required to self-assess our services, with customers then responsible for assessing and selecting the most appropriate cloud services which meet their individual security requirements.
 

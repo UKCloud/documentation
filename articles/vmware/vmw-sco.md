@@ -201,7 +201,7 @@ Full customer and UKCloud responsibilities can be found in the [*Bring Your Own 
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
 
 We don't provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to act at this level.
 

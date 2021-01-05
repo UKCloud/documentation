@@ -37,7 +37,7 @@ However, customers can use multiple VDCs to deliver their solution.
 
 ESSENTIAL VMs are contended: VMs contend for memory and processor resources.
 
-POWER & PRIORITY VMs: UKCloud has implemented a combination of technical and process controls (for example, an ISO 20000-certified capacity management process) to ensure that these VMs don't contend for memory or processor resources.
+POWER & PRIORITY VMs: UKCloud has implemented a combination of technical and process controls (for example, an ISO 20000-certified capacity management process) to ensure that these VMs don't contend for memory or processor resources.
 
 POWER VMs operate where automated rebalancing is enabled to pre-emptively optimise performance and availability.
 
@@ -75,7 +75,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 ### What VM sizes are available?
 
-UKCloud offers a variety of *T-shirt sizes* to meet customers' needs. The smallest configuration is 0.5GiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
+UKCloud offers a variety of *T-shirt sizes* to meet customers' needs. The smallest configuration is 0.5GiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
 
 Check the [*UKCloud for VMware Service Definition*](vmw-sd.md) for more details on the currently available sizes.
 
@@ -347,7 +347,7 @@ For support, you'll need to log a request with UKCloud, who will log the ticket 
 
 ### Do you have a Key Management System (KMS) for activating Windows?
 
-Yes, a step-by-step guide on configuring and using this service is included in [*How to license Windows VMs using the UKCloud Key Management Server*](../shared/shared-how-setup-kms.md).
+Yes, a step-by-step guide on configuring and using this service is included in [*How to license Windows VMs using the UKCloud Key Management Server*](../shared/shared-how-setup-kms.md).
 
 ### How do I control a VM?
 
@@ -600,7 +600,7 @@ For more information, see the [*Cross Domain Security Zone Service Definition*](
 
 ### Is there a protective monitoring service?
 
-Protective Monitoring is included for our IaaS platform and follows GPG 13.
+Protective Monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 

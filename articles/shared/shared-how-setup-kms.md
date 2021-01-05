@@ -1,6 +1,6 @@
 ---
-title: How to license Windows VMs using the UKCloud KMS
-description: Shows how to register virtual machines with the KMS within VMware Cloud Director
+title: How to license Windows VMs using the UKCloud KMS
+description: Shows how to register virtual machines with the KMS within VMwareCloud Director
 services: shared-services
 author: shighmoor
 reviewer: shighmoor
@@ -16,7 +16,7 @@ toc_fullpath: How To/shared-how-setup-kms.md
 toc_mdlink: shared-how-setup-kms.md
 ---
 
-# How to license Windows VMs using the UKCloud Key Management Server
+# How to license Windows VMs using the UKCloud Key Management Server
 
 ## Overview
 
@@ -62,7 +62,7 @@ To allow this communication, you need to create a source network address transla
 
 3. Enter:
 
-        C:\ > slmgr /skms  kms.ukcloud.com:1688
+        C:\ > slmgr /skms  kms.ukcloud.com:1688
 
 4. You'll see the following pop-up box:
 
@@ -70,7 +70,7 @@ To allow this communication, you need to create a source network address transla
 
 5. If an error message appears indicating that the KMS server can't be contacted, it means either that the edge gateway hasn't been configured correctly or that DNS can't be retrieved. Try again by issuing the same command but using the IP address of the activation server:
 
-        C:\ > slmgr /skms  <external IP address>:1688
+        C:\ > slmgr /skms  <external IP address>:1688
 
     ![Windows Script Host dialog box](images/shared-windows-kms-activate-ip.png)
 

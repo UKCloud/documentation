@@ -139,7 +139,7 @@ A full overview of the connectivity options and network architecture is availabl
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
 
 We do not provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to monitor at this level.
 
