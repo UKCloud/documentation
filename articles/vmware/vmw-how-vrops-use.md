@@ -33,16 +33,13 @@ Advanced monitoring enables you to:
 
 ### Intended audience
 
-To access advanced monitoring you must be a vCloud Director/VMware Cloud Director administrator.
+To access advanced monitoring you must be a VMware Cloud Director administrator.
 
 ## Accessing advanced monitoring metrics
 
 To access advanced monitoring metrics:
 
-1. In the vCloud Director/VMware Cloud Director menu, select **Operations Manager**.
-
-    > [!TIP]
-    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
+1. In the VMware Cloud Director menu, select **Operations Manager**.
 
 2. In the left navigation panel, under *Dashboards*, select **Organization Overview**
 

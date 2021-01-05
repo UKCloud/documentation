@@ -26,7 +26,7 @@ You can also create edge gateways using the Portal API. For more information, se
 
 ### Intended audience
 
-To complete the steps in this guide, you must be a vCloud Director administrator.
+To complete the steps in this guide, you must be a VMware Cloud Director administrator.
 
 ## Building an edge gateway
 
