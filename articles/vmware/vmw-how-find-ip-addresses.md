@@ -16,7 +16,7 @@ toc_fullpath: How To/vmw-how-find-ip-addresses.md
 toc_mdlink: vmw-how-find-ip-addresses.md
 ---
 
-# How to find your allocated external IP addresses
+# How to find your allocated external IP addresses
 
 ## Overview
 

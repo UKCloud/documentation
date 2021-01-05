@@ -194,7 +194,7 @@ Phase 1 sets up mutual authentication of the peers, negotiates cryptographic par
 
 ##### Phase 2 parameters
 
-IKE Phase 2 negotiates an IPsec tunnel by creating keying material for the IPsec tunnel to use (either by using the IKE phase 1 keys as a base or by performing a new key exchange). The supported IKE Phase 2 parameters are:
+IKE Phase 2 negotiates an IPsec tunnel by creating keying material for the IPsec tunnel to use (either by using the IKE phase 1 keys as a base or by performing a new key exchange). The supported IKE Phase 2 parameters are:
 
 - AES/AES256/AES-GCM (Will match the Phase 1 setting)
 

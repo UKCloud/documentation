@@ -31,7 +31,7 @@ workloads:
 
 - **Compute workloads.** GPUs have become prevalent in a world that needs a lot of data processing, fast. The parallel nature of GPU cores lends itself perfectly to supporting initiatives such as deep or machine learning and large-scale mathematical modelling.
 
-- **Visualisation workloads.** Describes the traditional use cases for GPU processing. These include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.
+- **Visualisation workloads.** Describes the traditional use cases for GPU processing. These include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.
 
 This article provides an introduction for how to use Cloud GPU for compute workloads and describes the tasks you need to perform to get the service up and running for UKCloud for VMware.
 
