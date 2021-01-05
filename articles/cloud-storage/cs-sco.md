@@ -102,7 +102,7 @@ We manage the physical firewalls that face public and secure networks.
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.
 
 We don't provide Protective Monitoring services within your estate - it is your responsibility to act at this level.
 

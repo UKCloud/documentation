@@ -195,7 +195,7 @@ For capacity management, it's also useful to know much block storage your cluste
 
        oc get pv
 
-2. The results will look similar to the following, where we can see there is one item consuming 50 GB of storage.
+2. The results will look similar to the following, where we can see there is one item consuming 50 GB of storage.
 
        $ oc get pv
        NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                                                           STORAGECLASS   REASON    AGE

@@ -151,7 +151,7 @@ Providing that the software products adhere to the guidelines above, the followi
 
 - Oracle 9i R2 DB with partitioning; OEM;
 
-- Oracle 10g R1 & R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM
+- Oracle 10g R1 & R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM
 
 - WebLogic 10 Platform
 

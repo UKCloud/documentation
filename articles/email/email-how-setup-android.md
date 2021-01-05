@@ -56,11 +56,11 @@ You may also need to know:
 
 ## Installation and setup
 
-1. From your Android Home screen, tap the **Applications** button and go to the **Settings** icon.
+1. From your Android Home screen, tap the **Applications** button and go to the **Settings** icon.
 
     ![Settings icon](images/email-android-ico-settings.png)
 
-2. Under *Accounts*, tap **Add account**.
+2. Under *Accounts*, tap **Add account**.
 
     ![Add account option](images/email-android-mnu-add-account.png)
 

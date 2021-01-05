@@ -55,7 +55,7 @@ Install Windows Server 2016 to the OS disk implementing a static IP address.
 
 [https://software.cisco.com/download/release.html?mdfid=286281356&softwareid=283291009&os=Windows%202016%2064-bit&release=3.0(3a)&relind=AVAILABLE&rellifecycle=&reltype=latest](https://software.cisco.com/download/release.html?mdfid=286281356&softwareid=283291009&os=Windows%202016%2064-bit&release=3.0(3a)&relind=AVAILABLE&rellifecycle=&reltype=latest)
 
-**Virtualisation Note:** VMware tools must be installed and the VMware Tools drivers must be exported onto the c: drive (VMwareKB), also disks have to be online and initialised as MBR
+**Virtualisation Note:** VMware tools must be installed and the VMware Tools drivers must be exported onto the c: drive (VMwareKB), also disks have to be online and initialised as MBR
 
 ## Step 3 - Initial setup
 
@@ -109,7 +109,7 @@ The following details should be used:
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | NTP           | 13.79.239.69                                                                                                                                                           |
 | DNS Forwarder | 8.8.8.8                                                                                                                                                                |
-| Type          | Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com |
+| Type          | Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com |
 | Static IP     | Different IP than what you currently have - eg. 10.0.0.101 was my box 10.0.0.191 I set up - or just current IP + 1                                                     |
 
 **Physical Note:** Before running the installation, make sure only one network adapter is enabled, otherwise install will fail.
@@ -136,20 +136,20 @@ at <ScriptBlock>, <No file>: line 37
 At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 + Invoke-EceAction -RolePath $masterRole -ActionType $actionPlan @d ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- + CategoryInfo : NotSpecified: (:) [Invoke-EceAction], InterfaceInvocationFailedException
- + FullyQualifiedErrorId : OperationFailed,Microsoft.HyperV.PowerShell.Commands.StartVM,CloudEngine.Cmdlets.InvokeCmdlet
+ + CategoryInfo : NotSpecified: (:) [Invoke-EceAction], InterfaceInvocationFailedException
+ + FullyQualifiedErrorId : OperationFailed,Microsoft.HyperV.PowerShell.Commands.StartVM,CloudEngine.Cmdlets.InvokeCmdlet
 Invoke-EceAction : Action: Invocation of step PhysicalMachineAndInitialConfiguration.15 failed. Stopping invocation of action plan.
 At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 + Invoke-EceAction -RolePath $masterRole -ActionType $actionPlan @d ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
- + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
+ + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
+ + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
 Invoke-EceAction : Action: Invocation of step PhysicalMachineAndInitialConfiguration failed. Stopping invocation of action plan.
 At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 + Invoke-EceAction -RolePath $masterRole -ActionType $actionPlan @d ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
- + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
+ + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
+ + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
 ```
 
 Verification of Physical kit showed that Virtualisation is in fact enabled but Hyper-V is not starting on boot.
