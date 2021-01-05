@@ -170,46 +170,46 @@ import json
 import ssl
 
 def get_all_nodes(endpoint, token):
-    &quot;&quot;&quot;Fetch the nodes data from the openshift cluster&quot;&quot;&quot;
-    request = urllib.request.Request(endpoint + &quot;/api/v1/nodes&quot;)
-    request.add_header('Authorization', 'Bearer ' + token)
-    request.add_header('Accept', 'application/json')
-    ssl_context = None  # or ssl._create_unverified_context()
-    result = urllib.request.urlopen(request, context=ssl_context)
-    return result.read()
+    &quot;&quot;&quot;Fetch the nodes data from the openshift cluster&quot;&quot;&quot;
+    request = urllib.request.Request(endpoint + &quot;/api/v1/nodes&quot;)
+    request.add_header('Authorization', 'Bearer ' + token)
+    request.add_header('Accept', 'application/json')
+    ssl_context = None  # or ssl._create_unverified_context()
+    result = urllib.request.urlopen(request, context=ssl_context)
+    return result.read()
 
 def get_status_from_node(data_item):
-    &quot;&quot;&quot; Extract the status conditions from the data&quot;&quot;&quot;
-    addresses = data_item['status']['addresses']
-    address = None
-    for addr in addresses:
-        if addr['type'] == 'Hostname':
-            address = addr['address']
-    return {'hostname': address,
-            'conditions': data_item['status']['conditions']}
+    &quot;&quot;&quot; Extract the status conditions from the data&quot;&quot;&quot;
+    addresses = data_item['status']['addresses']
+    address = None
+    for addr in addresses:
+        if addr['type'] == 'Hostname':
+            address = addr['address']
+    return {'hostname': address,
+            'conditions': data_item['status']['conditions']}
 
 def find_faults(cond_data):
-    &quot;&quot;&quot; find whether each node is in a failed state&quot;&quot;&quot;
-    cells = []
-    for node in cond_data:
-        hostname = node['hostname']
-        state = 'OK  '
-        for cond in node['conditions']:
-            if cond['status'] != &quot;False&quot; and cond['type'] != &quot;Ready&quot;:
-                state = 'FAIL'
-            elif cond['status'] != &quot;True&quot; and cond['type'] == &quot;Ready&quot;:
-                state = 'FAIL'
-        cells.append('{} {} '.format(state, hostname))
-    return cells
+    &quot;&quot;&quot; find whether each node is in a failed state&quot;&quot;&quot;
+    cells = []
+    for node in cond_data:
+        hostname = node['hostname']
+        state = 'OK  '
+        for cond in node['conditions']:
+            if cond['status'] != &quot;False&quot; and cond['type'] != &quot;Ready&quot;:
+                state = 'FAIL'
+            elif cond['status'] != &quot;True&quot; and cond['type'] == &quot;Ready&quot;:
+                state = 'FAIL'
+        cells.append('{} {} '.format(state, hostname))
+    return cells
 
 def main():
-    all_nodes = json.loads(get_all_nodes(ENDPOINT, TOKEN))
-    all_conditions = []
-    for node in all_nodes['items']:
-        all_conditions.append(get_status_from_node(node))
-    print(&quot;Status of Cluster at {}&quot;.format(ENDPOINT))
-    for node in find_faults(all_conditions):
-        print(node)
+    all_nodes = json.loads(get_all_nodes(ENDPOINT, TOKEN))
+    all_conditions = []
+    for node in all_nodes['items']:
+        all_conditions.append(get_status_from_node(node))
+    print(&quot;Status of Cluster at {}&quot;.format(ENDPOINT))
+    for node in find_faults(all_conditions):
+        print(node)
 
 ENDPOINT = 'https://ocp.my-cluster-url.ukcloud.com:8443'
 TOKEN = 'eyJhb...the.179.char.token'

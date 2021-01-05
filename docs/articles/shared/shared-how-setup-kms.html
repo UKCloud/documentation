@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to license Windows VMs using&#160;the UKCloud KMS </title>
+    <title>How to license Windows VMs using the UKCloud KMS </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to license Windows VMs using&#160;the UKCloud KMS ">
+    <meta name="title" content="How to license Windows VMs using the UKCloud KMS ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-license-windows-vms-usingthe-ukcloud-key-management-server">How to license Windows VMs using the UKCloud Key Management Server</h1>
+<h1 id="how-to-license-windows-vms-using-the-ukcloud-key-management-server">How to license Windows VMs using the UKCloud Key Management Server</h1>
 
 <h2 id="overview">Overview</h2>
 <p>You need to register the Windows virtual machines (VMs) that you create with the UKCloud Key Management Server (KMS). You need to set up a connection with the KMS to enable registration.</p>
@@ -167,14 +167,14 @@
 <li><p>Launch a command line with administrator rights.</p>
 </li>
 <li><p>Enter:</p>
-<pre><code> C:\ &gt; slmgr /skms  kms.ukcloud.com:1688
+<pre><code> C:\ &gt; slmgr /skms  kms.ukcloud.com:1688
 </code></pre>
 </li>
 <li><p>You'll see the following pop-up box:</p>
 <p><img src="images/shared-windows-kms-activate.png" alt="Windows Script Host dialog box"></p>
 </li>
 <li><p>If an error message appears indicating that the KMS server can't be contacted, it means either that the edge gateway hasn't been configured correctly or that DNS can't be retrieved. Try again by issuing the same command but using the IP address of the activation server:</p>
-<pre><code> C:\ &gt; slmgr /skms  &lt;external IP address&gt;:1688
+<pre><code> C:\ &gt; slmgr /skms  &lt;external IP address&gt;:1688
 </code></pre>
 <p><img src="images/shared-windows-kms-activate-ip.png" alt="Windows Script Host dialog box"></p>
 </li>
