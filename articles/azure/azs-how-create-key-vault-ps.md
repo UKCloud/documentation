@@ -77,7 +77,7 @@ $SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="
 $SecretName = "<output form="secretname" name="result" style="display: inline;">MySecret</output>"
 
 # Store the secret in Azure Stack Hub Key Vault
-$Secret = Set-AzureKeyVaultSecret -VaultName $VaultName -Name $SecretName -SecretValue $SecretValue
+$Secret = Set-AzKeyVaultSecret -VaultName $VaultName -Name $SecretName -SecretValue $SecretValue
 
 # Display URL
 $Secret.Id
@@ -93,7 +93,7 @@ The secret you created will be stored in your key vault.
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Extract the secret key value and store it in a variable
-$ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName $VaultName -Name $SecretName).SecretValueText
+$ExtractedSecret = (Get-AzKeyVaultSecret -VaultName $VaultName -Name $SecretName).SecretValueText
 
 # Display the secret key value
 $ExtractedSecret
