@@ -145,7 +145,7 @@ Get-AzSubscription -SubscriptionId $SubId.SubscriptionId -TenantId $SubId.Tenant
 # Create an Azure AD application, this is the object that you need in order to set the SPN record against
 try {
     $App = New-AzADApplication -DisplayName $AppName -HomePage $AppUrl -IdentifierUris $AppUrl -Password $AppPasswordSecure
-    $AppGet = Get-AzureADApplication -ObjectId $App.ObjectId.Guid
+    $AppGet = Get-AzADApplication -ObjectId $App.ObjectId.Guid
     $AppGet
 
     # Create a Service Principal Name (SPN) for the application created earlier
@@ -185,8 +185,8 @@ $Acc16 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -Arg
 $Acc17 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "2d05a661-f651-4d57-a595-489c91eda336", "Scope"
 $Required.ResourceAccess = $Acc1, $Acc2, $Acc3, $Acc4, $Acc5, $Acc6, $Acc7, $Acc8, $Acc9, $Acc10, $Acc11, $Acc12, $Acc13, $Acc14, $Acc15, $Acc16, $Acc17
 
-Set-AzureADApplication -ObjectId $AppGet.ObjectId -RequiredResourceAccess $Required | Out-Null
-Get-AzureADApplication -ObjectId $AppGet.ObjectId | Select-Object -Property *
+Set-AzADApplication -ObjectId $AppGet.ObjectId -RequiredResourceAccess $Required | Out-Null
+Get-AzADApplication -ObjectId $AppGet.ObjectId | Select-Object -Property *
 
 # Create your SPN credentials login
 # Note: Username is "ApplicationId"
@@ -308,7 +308,7 @@ Get-AzSubscription -SubscriptionId $SubId.SubscriptionId -TenantId $SubId.Tenant
 # Create an Azure AD application, this is the object that you need in order to set the SPN record against
 try {
     $App = New-AzADApplication -DisplayName $AppName -HomePage $AppUrl -IdentifierUris $AppUrl -Password $AppPasswordSecure
-    $AppGet = Get-AzureADApplication -ObjectId $App.ObjectId.Guid
+    $AppGet = Get-AzADApplication -ObjectId $App.ObjectId.Guid
     $AppGet
 
     # Create a Service Principal Name (SPN) for the application created earlier
