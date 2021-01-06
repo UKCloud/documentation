@@ -67,11 +67,11 @@ Add the following code to the end of the VM creation script when creating a Linu
 #### Local disk
 
 <pre><code class="language-PowerShell"># Declare variables
-$CustomScriptFileName = "SetRootPassword.sh"
-$ContainerName = "customscriptextension"
-$CustomScriptStorageAccountName = "customscript50155934".ToLower()
-$FilePath = "C:\Users\User1\SetRootPassword.sh"
-$ScriptArguments = "Password123!"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">SetRootPassword.sh</output>"
+$ContainerName = "<output form="containername" name="result" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result" style="display: inline;">customscript<span id="RandNum"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"
+$ScriptArguments = "<output form="scriptargs" name="result" style="display: inline;">Password123!</output>"
 $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
