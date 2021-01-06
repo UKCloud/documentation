@@ -141,14 +141,14 @@ $StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $R
 
 # Get storage account context
 $Context = $StorageAccount.Context
-New-AzureStorageContainer -Name $ContainerName -Context $Context
+New-AzStorageContainer -Name $ContainerName -Context $Context
 
 # Retrieve storage account key
 $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
 
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
-Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
 
 # Add custom script extension to Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
@@ -296,7 +296,7 @@ $StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $R
 
 # Get storage account context
 $Context = $StorageAccount.Context
-$Container = New-AzureStorageContainer -Name $ContainerName -Context $Context
+$Container = New-AzStorageContainer -Name $ContainerName -Context $Context
 
 # Retrieve storage account key
 $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
@@ -306,7 +306,7 @@ $ScriptBlobUrl = $Container.Context.BlobEndPoint
 
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
-Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
 
 # Creating script location string
 $ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
