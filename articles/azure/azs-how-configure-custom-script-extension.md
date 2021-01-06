@@ -288,7 +288,7 @@ $ContainerName = "<output form="containername" name="result4" style="display: in
 $CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result4" style="display: inline;">customscript<span id="RandNum4"></span></output>".ToLower()
 $FilePath = "<output form="filepath" name="result4" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
 $ScriptArguments = "<output form="scriptargs" name="result7" style="display: inline;">-FirewallPorts 80,443</output>"
-$CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
+$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
 Write-Output -InputObject "Creating storage account and container"
@@ -342,7 +342,7 @@ $VMName = "<output form="vmname" name="result4" style="display: inline;">MyVM</o
 $CustomScriptFileName = "<output form="customscriptfilename" name="result8" style="display: inline;">VMSetupForSR.ps1</output>"
 $FileUri = "<output form="fileuri" name="result4" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
 $ScriptArguments = "<output form="scriptargs" name="result8" style="display: inline;">-FirewallPorts 80,443</output>"
-$CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
+$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Linux VM
 Write-Output -InputObject "Adding custom script extension to existing virtual machine"
