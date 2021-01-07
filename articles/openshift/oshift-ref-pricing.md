@@ -30,11 +30,11 @@ OpenShift is packaged to provide you with a high level of flexibility to scale y
 
 This deployment option provides a full Red Hat OCP that has been deployed by UKCloud and is ready to consume without delay.
 
-We will deploy an OpenShift cluster that contain multiple nodes: master nodes for the control plane, infrastructure nodes for infrastructure services and application nodes for application servers. The number of nodes within your cluster will dictate the monthly charge.
+We will deploy an OpenShift cluster that contain multiple nodes: control plane nodes, infrastructure nodes for infrastructure services and application nodes for application servers. The number of nodes within your cluster will dictate the monthly charge.
 
-### Master and infrastructure nodes
+### Control Plane and infrastructure nodes
 
-OpenShift requires a minimum of three master nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services such as ingress controllers, metrics, developer console and aggregated logging.
+OpenShift requires a minimum of three control plane nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services such as ingress controllers, metrics, developer console and aggregated logging.
 
 ### Application nodes
 
@@ -46,20 +46,20 @@ Application node pricing includes a Red Hat OpenShift subscription component.
 
 ### [Example 1: Small deployment](#tab/tabid-1)
 
-**Master nodes:** 3 x m1.medium<br>
+**Control plane nodes:** 3 x m1.medium<br>
 **Infrastructure nodes:** None<br>
 **Application nodes:** 2 x m1.small (monthly pricing)<br>
 **Persistent volume storage used:** 60GiB Tier 2 persistent volume storage<br>
 
-**Master node cost per month**
+**Control plane node cost per month**
 
-Three m1.medium master nodes cost 3 x £0.170 per hour = **£0.510** per hour.
+Three m1.medium control plane nodes cost 3 x £0.170 per hour = **£0.510** per hour.
 
-In an average **730** hour month, the monthly master node cost works out at:
+In an average **730** hour month, the monthly control plane node cost works out at:
 
-Hours in operation | x | Master node cost | = | Master node cost per month
--------------------|---|------------------|---|---------------------------
-730                | x | £0.510           | = | **£372.30**
+Hours in operation | x | Control plane node cost | = | Control plane node cost per month
+-------------------|---|-------------------------|---|---------------------------
+730                | x | £0.510                  | = | **£372.30**
 
 **Infrastructure node cost per month**
 
@@ -78,28 +78,28 @@ Tier 2 persistent block storage costs **£0.10** per GiB month, so the storage c
 
 **Total basic cost**
 
-Calculate the total basic cost by adding together the master, infrastructure and application node and storage costs.
+Calculate the total basic cost by adding together the control plane, infrastructure and application node and storage costs.
 
-Master node cost | + | Infrastructure cost | + | Application node cost | + | Storage cost | = | Total basic cost per month
------------------|---|---------------------|---|-----------------------|---|--------------|---|---------------------------
-£372.30          | + | £0.00               | + | £474.00               | + |  £6.00       | = |  **£852.30**
+Control plane node cost | + | Infrastructure cost | + | Application node cost | + | Storage cost | = | Total basic cost per month
+------------------------|---|---------------------|---|-----------------------|---|--------------|---|---------------------------
+£372.30                 | + | £0.00               | + | £474.00               | + |  £6.00       | = |  **£852.30**
 
 ### [Example 2: Medium deployment](#tab/tab-2)
 
-**Master nodes:** 3 x m1.medium<br>
+**Control plane nodes:** 3 x m1.medium<br>
 **Infrastructure nodes:** 2 x m1.medium<br>
 **Application nodes:** 2 x m1.small node and 1 x r1.medium (monthly pricing)<br>
 **Persistent volume storage used:** 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br>
 
-**Master node cost per month**
+**Control plane node cost per month**
 
-Three m1.medium master nodes cost 3 x £0.170 per hour = **£0.510** per hour.
+Three m1.medium control plane nodes cost 3 x £0.170 per hour = **£0.510** per hour.
 
-In an average **730** hour month, the monthly master node cost works out at:
+In an average **730** hour month, the monthly control plane node cost works out at:
 
-Hours in operation | x | Master node cost | = | Master node cost per month
--------------------|---|------------------|---|---------------------------
-730                | x | £0.510           | = | **£372.30**
+Hours in operation | x | Control plane node cost | = | Control plane node cost per month
+-------------------|---|-------------------------|---|---------------------------
+730                | x | £0.510                  | = | **£372.30**
 
 **Infrastructure node cost per month**
 
@@ -129,28 +129,28 @@ The total cost of storage is £6.00 + £10.00 = **£16.00** per month.
 
 **Total basic cost**
 
-Calculate the total basic cost by adding together the master, infrastructure and application node and storage costs.
+Calculate the total basic cost by adding together the control plane, infrastructure and application node and storage costs.
 
-Master node cost | + | Infrastructure cost | + | Application node cost | + | Storage cost | = | Total basic cost per month
------------------|---|---------------------|---|-----------------------|---|--------------|---|---------------------------
-£372.30          | + | £248.20             | + | £1,115.90             | + |  £16.00      | = |  **£1,749.40**
+Control plane node cost | + | Infrastructure cost | + | Application node cost | + | Storage cost | = | Total basic cost per month
+------------------------|---|---------------------|---|-----------------------|---|--------------|---|---------------------------
+£372.30                 | + | £248.20             | + | £1,115.90             | + |  £16.00      | = |  **£1,749.40**
 
 ### [Example 3: Hourly application node pricing](#tab/tab-3)
 
-**Master nodes:** 3 x m1.medium<br>
+**Control plane nodes:** 3 x m1.medium<br>
 **Infrastructure nodes:** 2 x m1.medium<br>
 **Application nodes:** 2 x m1.small node (monthly pricing) and 1 x r1.medium (hourly pricing)<br>
 **Persistent volume storage used:** 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br>
 
-**Master node cost per month**
+**Control plane node cost per month**
 
-Three m1.medium master nodes cost 3 x £0.170 per hour = **£0.510** per hour.
+Three m1.medium control plane nodes cost 3 x £0.170 per hour = **£0.510** per hour.
 
-In an average **730** hour month, the monthly master node cost works out at:
+In an average **730** hour month, the monthly control plane node cost works out at:
 
-Hours in operation | x | Master node cost | = | Master node cost per month
--------------------|---|------------------|---|---------------------------
-730                | x | £0.510           | = | **£372.30**
+Hours in operation | x | Control plane node cost | = | Control plane node cost per month
+-------------------|---|-------------------------|---|----------------------------------
+730                | x | £0.510                  | = | **£372.30**
 
 **Infrastructure node cost per month**
 
@@ -186,11 +186,11 @@ The total cost of storage is £6.00 + £10.00 = **£16.00** per month.
 
 **Total basic cost**
 
-Calculate the total basic cost by adding together the master, infrastructure and application node and storage costs.
+Calculate the total basic cost by adding together the control plane, infrastructure and application node and storage costs.
 
-Master node cost | + | Infrastructure cost | + | Application node cost | + | Storage cost | = | Total basic cost
------------------|---|---------------------|---|-----------------------|---|--------------|---|-----------------
-£372.30          | + | £248.20             | + | £756.00               | + |  £16.00      | = |  **£1,392.50**
+Control plane node cost | + | Infrastructure cost | + | Application node cost | + | Storage cost | = | Total basic cost
+------------------------|---|---------------------|---|-----------------------|---|--------------|---|-----------------
+£372.30                 | + | £248.20             | + | £756.00               | + |  £16.00      | = |  **£1,392.50**
 
 ***
 

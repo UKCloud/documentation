@@ -1,6 +1,6 @@
 ---
 title: How to create a static route
-description: Shows how to configure static routing within the VMware Cloud Director/vCloud Director Tenant Portal
+description: Shows how to configure static routing within the VMware Cloud Director tenant portal
 services: vmware
 author: shighmoor
 reviewer: shighmoor
@@ -31,8 +31,6 @@ As an example, you may have a vApp network `192.168.8.0/24` routed to a VDC netw
 
 To create a static route:
 
-### [VMware Cloud Director 10.1](#tab/tabid-a)
-
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway in which you want to create the static route.
 
 2. In the left navigation panel, under *Networking*, select **Edges**.
@@ -58,36 +56,6 @@ To create a static route:
 7. When you're done, click **Keep** then **Save changes**.
 
 8. Repeat the steps for the second VDC.
-
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway in which you want to create the static route.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
-
-3. Select the edge that you want to configure and click **Configure Services**.
-
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
-
-4. Select the **Routing** tab then the **Static Routes** tab.
-
-    ![Routing tab](images/vmw-vcd-edge-tab-static-route.png)
-
-5. Click the **+** button.
-
-    ![Add static route button](images/vmw-vcd-adv-edg-btn-add-static-route.png)
-
-6. In the *Add Static Route* dialog box, fill in the details of the network range, next hop (edge IP) and select the network interface to which you want to apply the static route.
-
-    ![Add Static Route dialog box](images/vmw-vcd-adv-edg-add-static-route.png)
-
-7. When you're done, click **Keep** then **Save changes**.
-
-8. Repeat the steps for the second VDC.
-
-***
 
 ## Next steps
 

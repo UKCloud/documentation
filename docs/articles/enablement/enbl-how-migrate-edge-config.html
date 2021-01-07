@@ -99,7 +99,7 @@
 <p>This article explains how to use the vCloud API to export configuration from an NSX edge, make the necessary amendments and then apply this configuration to a different edge.</p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>Before using the vCloud API to migrate edge configuration data, you should install a REST client to enable you to easily access the vCloud API and interact with the relevant endpoints. For information about installing a REST client, see <a href="../vmware/vmw-how-install-vcloud-api-rest-client.html"><em>How to install a REST client to access the vCloud API</em></a>. You can use an alternative API client if you prefer.</p>
-<p>You also need to obtain your API credentials. For more information, see <a href="../vmware/vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a>.</p>
+<p>You also need to obtain your API credentials. For more information, see <a href="../vmware/vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>.</p>
 <h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
 <p>To start interacting with the vCloud API, you first need to obtain an <code>x-vcloud-authorization</code> token; to do this you need to adjust some settings in RESTClient.</p>
 <ol>
@@ -257,7 +257,7 @@
 <p>With your external IP allocation likely to change, this will also affect any configured VPNs and load balancers that you may have previously had on your original edge.</p>
 <p>For VPN configuration, you'll need to replace the interface references and names for your <strong>local</strong> networks. For the load balancer configuration, you'll need to replace the <strong>external</strong> network interface reference and name. As above, each of these interfaces have their own ID and <code>href</code> that you'll need to add to the new configuration. Exporting the XML configuration of the new edge will provide you with the required information for these new interfaces.</p>
 <p>Remember that when amending VPN configuration, and particularly the local endpoint IP address, you'll also need to make configuration changes on the peer side to mirror those amendments.</p>
-<p>If you're using a Pre-Shared Key (PSK) for IPsec VPN authentication, the key will not be exported as part of this configuration. You can retrieve the key either through the vCloud Director GUI or by querying an additional API endpoint (see <a href="enbl-how-obtain-vpn-config.html"><em>How to obtain full IPsec VPN configuration via the vCloud API</em></a>).</p>
+<p>If you're using a Pre-Shared Key (PSK) for IPsec VPN authentication, the key will not be exported as part of this configuration. You can retrieve the key either through the VMware Cloud Director GUI or by querying an additional API endpoint (see <a href="enbl-how-obtain-vpn-config.html"><em>How to obtain full IPsec VPN configuration via the vCloud API</em></a>).</p>
 <h2 id="applying-the-new-configuration">Applying the new configuration</h2>
 <p>When you've amended the configuration with the necessary elements of the new edge gateway, you can apply it to the edge gateway.</p>
 <p>To easily identify and resolve any possible issues when applying the configuration, posting the configuration to the edge in the individual configurable items may be easier. For example, apply the amended firewall rules, then apply the NAT rules and so on.</p>
@@ -308,7 +308,7 @@
 </li>
 <li><p>To submit the new configuration, click <strong>Send</strong>.</p>
 </li>
-<li><p>The status of the edge gateway as viewed from vCloud Director will briefly show as <strong>Updating Configuration</strong>. Once this process has completed, click the edge gateway and select <strong>Configure Services</strong>.</p>
+<li><p>The status of the edge gateway as viewed from VMware Cloud Director will briefly show as <strong>Updating Configuration</strong>. Once this process has completed, click the edge gateway and select <strong>Configure Services</strong>.</p>
 </li>
 <li><p>In the <em>Configure Services</em> window, verify that the configuration has been applied successfully.</p>
 </li>

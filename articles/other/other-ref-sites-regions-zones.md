@@ -33,7 +33,7 @@ For specific services, such as UKCloud for OpenStack or UKCloud for VMware, we p
 
 ### What is a site?
 
-A site is a geographically specific location. UKCloud has two UK‑based sites, separated by 100 km, in Farnborough and Corsham (see diagram above). Sites provide:
+A site is a geographically specific location. UKCloud has two UK‑based sites, separated by 100 km, in Farnborough and Corsham (see diagram above). Sites provide:
 
 - Independent power, security, geography and infrastructure
 

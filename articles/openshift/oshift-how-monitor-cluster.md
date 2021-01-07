@@ -3,8 +3,8 @@ title: How to monitor your OpenShift cluster
 description: Explains how to set up a simple system to monitor an OpenShift Cloud Native Application Platform cluster
 services: openshift
 author: Sue Highmoor
-reviewer: Kieran O'Neill
-lastreviewed: 12/11/2019 13:20:00
+reviewer: Gareth Ellner
+lastreviewed: 22/12/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -100,7 +100,11 @@ This API call returns a reasonable amount of JSON-encoded data, which may be har
 
 ## Using the OpenShift API to obtain cluster status
 
-The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy.
+The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy. It has been tested using Python 3.7.
+
+> [!TIP]
+> The `ENDPOINT` parameter in the code is an example for OpenShift v3. For OpenShift v4 clusters, you'll need to change the port number from `8443` to `6443`. API URLs for OpenShift v4 begin with `https://api.` rather than `https://ocp.`.
+
 
 ```python
 #!/usr/bin/env python3
@@ -109,46 +113,46 @@ import json
 import ssl
 
 def get_all_nodes(endpoint, token):
-    """Fetch the nodes data from the openshift cluster"""
-    request = urllib.request.Request(endpoint + "/api/v1/nodes")
-    request.add_header('Authorization', 'Bearer ' + token)
-    request.add_header('Accept', 'application/json')
-    ssl_context = None  # or ssl._create_unverified_context()
-    result = urllib.request.urlopen(request, context=ssl_context)
-    return result.read()
+    """Fetch the nodes data from the openshift cluster"""
+    request = urllib.request.Request(endpoint + "/api/v1/nodes")
+    request.add_header('Authorization', 'Bearer ' + token)
+    request.add_header('Accept', 'application/json')
+    ssl_context = None  # or ssl._create_unverified_context()
+    result = urllib.request.urlopen(request, context=ssl_context)
+    return result.read()
 
 def get_status_from_node(data_item):
-    """ Extract the status conditions from the data"""
-    addresses = data_item['status']['addresses']
-    address = None
-    for addr in addresses:
-        if addr['type'] == 'Hostname':
-            address = addr['address']
-    return {'hostname': address,
-            'conditions': data_item['status']['conditions']}
+    """ Extract the status conditions from the data"""
+    addresses = data_item['status']['addresses']
+    address = None
+    for addr in addresses:
+        if addr['type'] == 'Hostname':
+            address = addr['address']
+    return {'hostname': address,
+            'conditions': data_item['status']['conditions']}
 
 def find_faults(cond_data):
-    """ find whether each node is in a failed state"""
-    cells = []
-    for node in cond_data:
-        hostname = node['hostname']
-        state = 'OK  '
-        for cond in node['conditions']:
-            if cond['status'] != "False" and cond['type'] != "Ready":
-                state = 'FAIL'
-            elif cond['status'] != "True" and cond['type'] == "Ready":
-                state = 'FAIL'
-        cells.append('{} {} '.format(state, hostname))
-    return cells
+    """ find whether each node is in a failed state"""
+    cells = []
+    for node in cond_data:
+        hostname = node['hostname']
+        state = 'OK  '
+        for cond in node['conditions']:
+            if cond['status'] != "False" and cond['type'] != "Ready":
+                state = 'FAIL'
+            elif cond['status'] != "True" and cond['type'] == "Ready":
+                state = 'FAIL'
+        cells.append('{} {} '.format(state, hostname))
+    return cells
 
 def main():
-    all_nodes = json.loads(get_all_nodes(ENDPOINT, TOKEN))
-    all_conditions = []
-    for node in all_nodes['items']:
-        all_conditions.append(get_status_from_node(node))
-    print("Status of Cluster at {}".format(ENDPOINT))
-    for node in find_faults(all_conditions):
-        print(node)
+    all_nodes = json.loads(get_all_nodes(ENDPOINT, TOKEN))
+    all_conditions = []
+    for node in all_nodes['items']:
+        all_conditions.append(get_status_from_node(node))
+    print("Status of Cluster at {}".format(ENDPOINT))
+    for node in find_faults(all_conditions):
+        print(node)
 
 ENDPOINT = 'https://ocp.my-cluster-url.ukcloud.com:8443'
 TOKEN = 'eyJhb...the.179.char.token'

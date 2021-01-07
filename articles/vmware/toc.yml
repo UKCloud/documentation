@@ -32,20 +32,14 @@
     href: vmw-how-access-syslog-data.md
   - name: Access the Zerto Self-Service Portal
     href: vmw-how-zerto-access-zssp.md
-  - name: Access VMware Cloud Director/vCloud Director through the vCloud API
+  - name: Access VMware Cloud Director through the vCloud API
     href: vmw-how-access-vcloud-api.md
   - name: Build an edge gateway using the UKCloud Portal
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the vCloud API
     href: vmw-how-change-ipsec-vpn-api.md
-  - name: Configure a Distributed Firewall
-    href: vmw-how-configure-distributed-firewall.md
-  - name: Configure a Distributed Logical Router
-    href: vmw-how-configure-distributed-logical-router.md
   - name: Configure a load balancer
     href: vmw-how-configure-load-balancer.md
-  - name: Configure an L2 VPN
-    href: vmw-how-configure-l2-vpn.md
   - name: Configure IPsec VPN
     href: vmw-how-configure-ipsec-vpn.md
   - name: Create a catalog
@@ -92,7 +86,7 @@
     href: vmw-how-locate-vdc.md
   - name: Manage Snapshot Protection for your VMs
     href: vmw-how-manage-snapshot-protection.md
-  - name: Manage VMware Cloud Director/vCloud Director permissions
+  - name: Manage VMware Cloud Director permissions
     href: vmw-how-manage-vcd-permissions.md
   - name: Manipulate power states with PowerCLI
     href: vmw-how-manipulate-power-states-powercli.md
@@ -110,8 +104,6 @@
     href: vmw-how-setup-gpu-compute.md
   - name: Set up Cloud GPU Visualisation for VMware
     href: vmw-how-setup-gpu-visualisation.md
-  - name: Switch to the Legacy UI
-    href: vmw-how-switch-web-console.md
   - name: Upgrade your edge gateway
     href: vmw-how-upgrade-edge.md
   - name: Upload ISO or FLP media
@@ -138,6 +130,14 @@
       href: vmw-how-vrops-enable.md
     - name: Refresh the vROps Tenant Appliance
       href: vmw-how-vrops-refresh.md
+  - name: Advanced networking
+    items:
+    - name: Configure a Distributed Firewall
+      href: vmw-how-configure-distributed-firewall.md
+    - name: Configure a Distributed Logical Router
+      href: vmw-how-configure-distributed-logical-router.md
+    - name: Configure an L2 VPN
+      href: vmw-how-configure-l2-vpn.md
   - name: VMware Licence Service
     items:
     - name: Add products to the vCloud Usage Meter
@@ -154,8 +154,6 @@
     href: vmw-ref-advanced-networking.md
   - name: Availability of Virtual Hardware version 11
     href: vmw-ref-virtual-hardware-v11.md
-  - name: Changes in vCloud Director 9.7
-    href: vmw-ref-vcd-97.md
   - name: Changes in VMware Cloud Director 10.1
     href: vmw-ref-vcd-10-1.md
   - name: Cloning vApps using PowerCLI
@@ -238,7 +236,5 @@
     href: vmw-vid-l2-vpn.md
   - name: Build a VDC using the Portal
     href: vmw-vid-build-vdc-portal.md
-  - name: vCloud Director 9.7
-    href: vmw-vid-vcd97.md
   - name: VMware Distributed Firewall
     href: vmw-vid-dfw.md

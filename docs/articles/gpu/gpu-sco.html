@@ -93,6 +93,10 @@
                   
 <h1 id="cloud-gpu-service-scope">Cloud GPU Service Scope</h1>
 
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Cloud GPU has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Cloud GPU customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.</p>
+</div>
 <h2 id="about-this-document">About this document</h2>
 <p>This document describes the boundaries of the Cloud GPU service, along with the division of responsibilities between you and UKCloud, to facilitate the provisioning and ongoing use of the service.</p>
 <h2 id="about-cloud-gpu">About Cloud GPU</h2>
@@ -200,22 +204,22 @@
 <h2 id="operating-systems">Operating systems</h2>
 <p><strong>Licencing.</strong> We provide the GRID licence which is included within the GPU price.</p>
 <p>UKCloud can also provide Operating Systems (OS) licensing, and is mandatory with respect to Windows Server. For more information, see the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
-<p><strong>VM server images.</strong> We provide base GPU-enabled VM images for the OS for which we provide licensing. You can access these from vCloud Director once the GPU-enabled image has been made available to you.</p>
+<p><strong>VM server images.</strong> We provide base GPU-enabled VM images for the OS for which we provide licensing. You can access these from VMware Cloud Director once the GPU-enabled image has been made available to you.</p>
 <p><strong>Update services.</strong> We make update repositories available for all software for which we provide licensing. We don't provide software update facilities for non-UKCloud licensed software.</p>
 <p><strong>Anti-virus.</strong> We do not provide anti-virus software as part of the service.</p>
 <h2 id="networks">Networks</h2>
 <p>All networks available to the UKCloud for VMware platform are available for GPU-enabled VMs.</p>
 <p>A full overview of the connectivity options and network architecture is available in <a href="../vmware/vmw-ref-connectivity-options.html"><em>Understanding connectivity options in UKCloud for VMware</em></a>.</p>
 <h2 id="protective-monitoring">Protective monitoring</h2>
-<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.</p>
+<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.</p>
 <p>We do not provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to monitor at this level.</p>
 <p>In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.</p>
 <h2 id="platform-management">Platform management</h2>
 <p>You can access, manage and view the GPU-connected VMs in the same way that you would manage the rest of your UKCloud for VMware service. Access only those features allowed by their role, in any of the following ways:</p>
 <ul>
-<li><p><strong>vCloud Director API.</strong> Enables the programmatic creation and management of GPU-enabled VMs inside the platform.</p>
+<li><p><strong>vCloud API.</strong> Enables the programmatic creation and management of GPU-enabled VMs inside the platform.</p>
 </li>
-<li><p><strong>vCloud Director Graphical User Interface.</strong> Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions) and manage GPU-enabled VMs.</p>
+<li><p><strong>VMware Cloud Director tenant portal.</strong> Provides a graphical interface to access the VMware Cloud Director environment (depending on assigned permissions) and manage GPU-enabled VMs.</p>
 </li>
 <li><p><strong>UKCloud Portal.</strong> Enables the creation of compute services and subsequently, PRIORITY VDCs and the requesting of GPU resources for environments. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the UKCloud Portal.</p>
 </li>

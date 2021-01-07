@@ -3,8 +3,8 @@ title: How to back up and restore container directories and databases on OpenShi
 description: Provides guidance on how to back up container directories and databases and how to restore them
 services: openshift
 author: Daniel Brennand
-reviewer:
-lastreviewed: 03/12/2019
+reviewer: Gareth Ellner
+lastreviewed: 16/12/2020
 
 toc_rootlink: How To
 toc_sub1:

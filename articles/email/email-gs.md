@@ -18,10 +18,12 @@ toc_mdlink: email-gs.md
 
 # Getting Started Guide for Email and Collaboration as a Service
 
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ## Overview
 
-UKCloud offers an Email and Collaboration service, powered by Zimbra, to enable you to have a cloud hosted, secure email service, connected to government networks or the internet. You can connect this mail service
-through your normal mail applications (for example, Microsoft Outlook), to send and receive mail as well as use lightweight collaborative features.
+UKCloud offers an Email and Collaboration service, powered by Zimbra, to enable you to have a cloud hosted, secure email service, connected to government networks or the internet. You can connect this mail service through your normal mail applications (for example, Microsoft Outlook), to send and receive mail as well as use lightweight collaborative features.
 
 This Getting Started Guide walks you through the process of configuring your Email and Collaboration service.
 

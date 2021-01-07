@@ -3,8 +3,8 @@ title: Security best practices for UKCloud for Openshift
 description: Provides security best practices in OpenShift that you could follow to keep the risk of attack to your UKCloud OpenShift deployment to a minimum
 services: openshift
 author: Mudasar Hussain
-reviewer: gsmith
-lastreviewed: 13/11/2019
+reviewer: Steve Mulholland
+lastreviewed: 15/12/2020
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
 toc_sub2:
@@ -39,7 +39,7 @@ You can view a pre-defined list of cluster roles and local roles [here](https://
 
 It is good practice to follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) with OpenShift access. For information about managing access to OpenShift, see [*How to manage OpenShift access in the UKCloud Portal*](oshift-how-manage-user-access.md). This article also explains how to enable two-factor authentication (2FA) when logging in to OpenShift. Users are also encouraged to change their passwords regularly, which is possible to do from the UKCloud Portal. You should ensure that OpenShift account credentials are not shared between multiple users. Instead, you should create individual user accounts for each user with the correct role binding. It is also the responsibility of each individual user to ensure the physical security of the terminal from which they access OpenShift.
 
-You should also apply the principle of least privilege to your containers' workloads. This means you should run your workloads as a user with just enough permissions to run the workload within your containers, particularly avoiding running privileged containers if this can be avoided. If however a workload does require to be run as a privileged container, then you should ensure that you set the correct security context constraint (SCC) to run that container. You can read more about setting the correct SCC [here](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html). Containers that try to run as priviledged without the relevant SCC set will fail to run.
+You should also apply the principle of least privilege to your containers' workloads. This means you should run your workloads as a user with just enough permissions to run the workload within your containers, particularly avoiding running privileged containers if this can be avoided. If however a workload does require to be run as a privileged container, then you should ensure that you set the correct security context constraint (SCC) to run that container. You can read more about setting the correct SCC [here](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html). Containers that try to run as privileged without the relevant SCC set will fail to run.
 
 ## Service accounts
 
@@ -95,11 +95,11 @@ Within OpenShift, you can expose your services using routes. Creating a route to
 
 ## Control plane and data plane lockdown
 
-As part of the UKCloud for OpenShift service we offer the ability to lock down the control plane and/or data planes to your cluster. This helps to protect each of these if you know the acceptable sources for all traffic (for example only allowing control plane access from an office network or VPN). This is done with the use of security groups at the cloud platform layer outside OpenShift. You can apply whitelists at the time of cluster deployment or later by raising a Service Request to the UKCloud OpenShift Support team via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. The information we require to apply these rules is: the plane you would like these applied to, for example, control plane or data plane (specify internet or community network if applicable) and the source addresses or ranges that will be allowed access. When services are protected by these whitelists, any non-matched traffic is dropped before it reaches OpenShift.
+As part of the UKCloud for OpenShift service we offer the ability to lock down the control plane and/or data planes to your cluster to specific IP addresses or subnets. This helps to protect each of these if you know the acceptable sources for all traffic (for example only allowing control plane access from an office network or VPN). This is done with the use of security groups at the cloud platform layer outside OpenShift. You can apply these restrictions at the time of cluster deployment or later by raising a Service Request to the UKCloud OpenShift Support team via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. The information we require to apply these rules is: the plane you would like these applied to, for example, control plane or data plane (specify internet or community network if applicable) and the source addresses or ranges that will be allowed access. When services are protected by these controls, any non-matched traffic is dropped before it reaches OpenShift.
 
 ## Whitelisting
 
-At the OpenShift cluster level, you can secure your routes by applying whitelists by IP address. The advantage of doing this is that you can do this yourself, however this does allow traffic to reach the OpenShift route before it is either allowed through or dropped based on the whitelisting you may have applied. We have documented the process of IP whitelisting [here](oshift-how-restrict-access-to-openshift-routes-by-ip-address.md).
+At the OpenShift cluster level, you can secure your routes by applying an allow-list by IP address. The advantage of doing this is that you can do this yourself, however this does allow traffic to reach the OpenShift route before it is either allowed through or dropped based on the list of allowed addresses you have applied. We have documented the process of restricting access per route [here](oshift-how-restrict-access-to-openshift-routes-by-ip-address.md).
 
 ## Network Isolation
 

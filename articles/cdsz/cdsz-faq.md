@@ -160,7 +160,7 @@ The platform is hosted in the UK and operated by SC-cleared staff. It has extens
 
 ### Is there a protective monitoring service?
 
-Protective monitoring is included for our IaaS platform and follows GPG 13.
+Protective monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 

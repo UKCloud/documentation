@@ -3,8 +3,8 @@ title: Understanding UKCloud for Microsoft Azure
 description: Overview of UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: Reference
@@ -59,8 +59,8 @@ You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling. V
 |-----------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | Azure Blob Storage (block)  | Object storage; good for storing documents, videos, images and so on                            | Size of disk storage differs significantly, as well as naming standards like name length |
 | Azure Blob Storage (page)   | Used to support virtual machine disks; good for randomly accessed large files                   |                                                                                          |
-| Azure Blob Storage (append) | Used for log files                                                                              |                                                                                          |
-| Azure Queue Storage         | Message queue as a service to provide asynchronous scale out micro-services, among other things |                                                                                          |
+| Azure Blob Storage (append) | Used for log files                                                                              |                                                                                          |
+| Azure Queue Storage         | Message queue as a service to provide asynchronous scale out micro-services, among other things |                                                                                          |
 | Azure Table Storage         | NoSQL database service; good for highly scalable, eventually consistent database support        | Max sizes differ                                                                         |
 
 ### Advanced features
@@ -114,9 +114,9 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
     Then run the following commands:
 
     ```powershell
-    Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-    Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
-    Get-AzureRmVMImagePublisher -Location "frn00006" | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
+    Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+    Connect-AzAccount -EnvironmentName "AzureStackUser"
+    Get-AzVMImagePublisher -Location "frn00006" | Get-AzVMExtensionImageType | Get-AzVMExtensionImage | `
       Select-Object -Property Type, Version | Format-Table -AutoSize
     ```
 

@@ -1,6 +1,6 @@
 ---
 title: How to find your allocated external IP addresses
-description: Shows how to find your allocated external IP addresses within the VMware Cloud Director/vCloud Director Tenant Portal
+description: Shows how to find your allocated external IP addresses within the VMware Cloud Director tenant portal
 services: vmware
 author: shighmoor
 reviewer: shighmoor
@@ -16,7 +16,7 @@ toc_fullpath: How To/vmw-how-find-ip-addresses.md
 toc_mdlink: vmw-how-find-ip-addresses.md
 ---
 
-# How to find your allocated external IP addresses
+# How to find your allocated external IP addresses
 
 ## Overview
 
@@ -25,8 +25,6 @@ To route traffic to your external network (for example internet, PSN), you need 
 ## Finding your allocated external IP addresses
 
 To find your allocated external IP address range:
-
-### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway.
 
@@ -46,27 +44,9 @@ To find your allocated external IP address range:
 
     You'll need to know this range when you configure settings such as NAT rules.
 
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
-
-3. Select the edge.
-
-4. In the *Edge Gateway Settings* section, in the *Sub-allocated IP Addresses* table, you'll see the range of external IP addresses allocated for your use.
-
-    You'll need to know this range when you configure settings such as NAT rules.
-
-***
-
 ## Finding your primary external IP address
 
 For some tasks, such as configuring an IPsec VPN, you'll need to know your primary external IP address.
-
-### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway.
 
@@ -83,20 +63,6 @@ For some tasks, such as configuring an IPsec VPN, you'll need to know your prima
 5. In the **Primary IP** column, you'll see your primary external IP address.
 
     ![Primary external IP address](images/vmw-vcd10.1-primary-ip.png)
-
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
-
-3. Select the edge.
-
-4. In the *Edge Gateway Settings* section, in the *IP Addresses* table, you'll see your primary external IP address in the **IP Addresses** field.
-
-***
 
 ## Next steps
 

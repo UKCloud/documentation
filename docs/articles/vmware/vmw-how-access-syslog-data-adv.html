@@ -198,29 +198,22 @@
 <h2 id="enabling-logging">Enabling logging</h2>
 <p>After setting up your syslog collector, you need to make sure that your NSX edge sends network traffic to the log.</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC to which the NSX edge belongs.</p>
+<li><p>In the VMware Cloud Director, select the VDC to which the NSX edge belongs.</p>
 </li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
 </li>
-<li><p>Select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services"></p>
+<li><p>Select the edge that you want to configure and click <strong>Services</strong>.</p>
 </li>
 <li><p>Select the <strong>Edge Settings</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-settings.png" alt="Edge Settings tab"></p>
 </li>
 <li><p>Click <strong>Edit Syslog Server</strong>.</p>
-<p><img src="images/vmw-vcd-btn-syslog-server.png" alt="Edit Syslog Server button"></p>
 </li>
 <li><p>In the <em>Edit Syslog Server</em> dialog box, in the <strong>Syslog Server</strong> field, enter the IP address of your syslog server then click <strong>Keep</strong>.</p>
-<p><img src="images/vmw-vcd-edit-syslog-server.png" alt="Edit Syslog Server dialog box"></p>
 </li>
 <li><p>Select the <strong>Firewall Rules</strong> tab.</p>
 </li>
-<li><p>For each firewall rule that you want to log, select the <strong>Enable logging</strong> check box.</p>
+<li><p>For each firewall rule that you want to log, select the <strong>Enable logging</strong> check box, then click <strong>Save changes</strong>.</p>
 <p><img src="images/vmw-vcd-logging-firewall.png" alt="Logging firewall rules"></p>
-</li>
-<li><p>When you're done, click <strong>Save changes</strong>.</p>
 </li>
 <li><p>Select the <strong>NAT</strong> tab.</p>
 </li>

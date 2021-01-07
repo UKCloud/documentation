@@ -19,11 +19,11 @@ toc_mdlink: enbl-how-obtain-vpn-config.md
 
 ## Overview
 
-Due to changes in vCloud Director and how edge configuration is stored and retrieved, the current documented process for retrieving the edge gateway configuration does not include the full IPsec VPN configuration, specifically the Pre-Shared Key (PSK).
+Due to changes in VMware Cloud Director and how edge configuration is stored and retrieved, the current documented process for retrieving the edge gateway configuration does not include the full IPsec VPN configuration, specifically the Pre-Shared Key (PSK).
 
 Through testing, UKCloud has identified how to obtain the full IPsec configuration, but unfortunately not as a single configuration file. You must obtain and query the IPsec VPN configuration separately.
 
-This article provides instruction on how to obtain the PSK of your configured IPsec VPNs on an edge gateway via the vCloud API. This can also be achieved via the vCloud Director GUI.
+This article provides instruction on how to obtain the PSK of your configured IPsec VPNs on an edge gateway via the vCloud API. This can also be achieved via the VMware Cloud Director GUI.
 
 The PSK is not necessarily required when updating edge or VPN configuration. Changes in configuration to an existing VPN can be applied to an edge via the API without the PSK being present in the XML body. In this case, the PSK will remain unaltered. If you're configuring a new VPN or updating the PSK, then this information will need to be present in the XML body.
 
@@ -53,7 +53,7 @@ A GET request against this endpoint should now return the full IPsec configurati
 
 ## Applying the new configuration
 
-Unfortunately, you cannot post this XML configuration back to an edge, and will also be unable to modify the edge via this API endpoint. You'll need to format your XML configuration and apply it as documented in the _Modifying the IPsec VPN configuration_ and _Applying the new configuration_ sections of [_How to change IPsec VPN settings via the vCloud Director API_](../vmware/vmw-how-change-ipsec-vpn-api.md).
+Unfortunately, you cannot post this XML configuration back to an edge, and will also be unable to modify the edge via this API endpoint. You'll need to format your XML configuration and apply it as documented in the _Modifying the IPsec VPN configuration_ and _Applying the new configuration_ sections of [_How to change IPsec VPN settings via the vCloud API_](../vmware/vmw-how-change-ipsec-vpn-api.md).
 
 As mentioned earlier in this article, you can post the VPN configuration to the edge without the PSK being present in the XML configuration. The PSK will remain the same. However, if you need to amend the PSK or configure a new VPN, you can find instructions for this in the _Amending the shared secret_ section of the article linked above.
 

@@ -73,7 +73,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 ### What instance sizes are available?
 
-UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
+UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
 
 Check the [*Service Definition*](ostack-sd.md) for more details on the currently available sizes.
 
@@ -163,7 +163,7 @@ UKCloud doesn't provide SSL certificates, but you can use your existing ones.
 
 Some government secure networks (such as PSN and HSCN) provide SSL certificates as part of their service.
 
-### Do you offer Load Balancing as a Service (LBaaS)? 
+### Do you offer Load Balancing as a Service (LBaaS)? 
 
 The answer to this depends on which of UKCloud's OpenStack platforms you are using:
 
@@ -216,7 +216,7 @@ You can detach persistent block storage volumes from one instance then attach th
 
 You can allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.
 
-### Is instance storage persistent? 
+### Is instance storage persistent? 
 
 No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.
 
@@ -482,10 +482,6 @@ UKCloud charges a nominal monthly fee per instance being protected by this servi
 
 You can find pricing details in the OpenStack section of the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
-### Are there any additional fees for the TrilioVault self-service backup and restoration service?
-
-This service utilises UKCloud's [*Multi-Cloud Backup Storage*](../other/other-sd-mcbs.md) (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
-
 ### Can I use my own backup software?
 
 Yes, you simply install appropriate backup software within your project and specify the backup location.
@@ -552,7 +548,7 @@ For more information, see the Cross Domain Security Zone documentation.
 
 ### Is there a protective monitoring service?
 
-Protective monitoring is included for our IaaS platform and follows GPG 13.
+Protective monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 

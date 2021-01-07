@@ -3,8 +3,8 @@ title: How to backup, restore and migrate OpenShift resources
 description: Provides a starting point for using Velero to backup and restore cluster resources and migrate between clusters
 services: openshift
 author: Kieran O'Neill
-reviewer: George Smith
-lastreviewed: 20/11/2019
+reviewer: Gareth Ellner
+lastreviewed: 18/12/2020
 
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
@@ -30,7 +30,7 @@ This guide outlines how to:
 
 - Restore a namespace to a new cluster
 
-Velero offers a tool called restic that enables backup of persistent volume data regardless of provider, however this guide doesn't cover restic as the tool is considered beta-quality. If you'd like to test it you can find more on restic here: <https://velero.io/docs/v1.1.0/restic/>.
+Velero offers a tool called restic that enables backup of persistent volume data regardless of provider, however this guide doesn't cover restic as the tool is considered beta-quality. If you'd like to test it you can find more on restic here: <https://velero.io/docs/v1.5/restic/>.
 
 ### Installing Velero
 
@@ -40,7 +40,7 @@ Velero offers a tool called restic that enables backup of persistent volume data
 
 2. After logging in to the cluster via the CLI, run the following command to configure a `yaml` file that you can then edit and use to create the Velero deployment in the cluster:
 
-    `velero install --bucket velero-test --provider aws --secret-file ./secret-file.txt  --dry-run -o yaml > deploy-velero.yml`
+    `velero install --bucket velero-test --provider aws --plugins velero/velero-plugin-for-aws:v1.1.0 --secret-file ./secret-file.txt  --dry-run -o yaml > deploy-velero.yml`
 
     `secret-file.txt` contains the access and secret key for the ECS bucket in the following format:
 
@@ -65,7 +65,6 @@ Velero offers a tool called restic that enables backup of persistent volume data
         config: {"s3Url": "https://cas.cor00005.ukcloud.com","region": "us-east-1"}
         objectStorage:
           bucket: velero-test
-          prefix: ""
         provider: aws
     ```
 
@@ -139,7 +138,7 @@ For example, to migrate the `backup-test` namespace from our previous example in
 
 For further information, see the Velero documentation at:
 
-<https://velero.io/docs/v1.1.0/>
+<https://velero.io/docs/>
 
 ## Feedback
 
