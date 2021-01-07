@@ -83,8 +83,6 @@ To set up L2 VPN, you need to configure an L2 VPN server on the destination edge
 
 ### Creating certificates
 
-### [VMware Cloud Director 10.1](#tab/tabid-a)
-
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the *destination* edge gateway.
 
 2. In the left navigation panel, under *Networking*, select **Edges**.
@@ -106,32 +104,6 @@ To set up L2 VPN, you need to configure an L2 VPN server on the destination edge
     ![Create SSL Trust Object dialog box](images/vmw-vcd91-l2vpn-create-ssl-trust-object.png)
 
 7. Repeat this process for the *source* edge gateway.
-
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the *destination* edge gateway.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
-
-3. Select the *destination* edge gateway and click **Configure Services**.
-
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
-
-4. Select the **Certificates** tab.
-
-5. Click **+ CA Certificate**.
-
-    ![Add CA Certification button](images/vmw-vcd91-l2vpn-btn-add-cert.png)
-
-6. Add the certificate to use for the L2 VPN server then click **Keep**.
-
-    ![Create SSL Trust Object dialog box](images/vmw-vcd91-l2vpn-create-ssl-trust-object.png)
-
-7. Repeat this process for the *source* edge gateway.
-
-***
 
 ### Configuring the L2 VPN server on the destination edge gateway
 

@@ -1,6 +1,6 @@
 ---
 title: How to upload ISO or FLP media
-description: Shows you how to upload ISO (CD/DVD) and FLP (floppy disk) media within the VMware Cloud Director/vCloud Director Tenant Portal
+description: Shows you how to upload ISO (CD/DVD) and FLP (floppy disk) media within the VMware Cloud Director tenant portal
 services: vmware
 author: shighmoor
 reviewer: shighmoor
@@ -28,8 +28,6 @@ You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to vClou
 
 ## Uploading ISO or FLP media
 
-### [VMware Cloud Director 10.1](#tab/tabid-a)
-
 1. In VMware Cloud Director, click the menu icon and select **Libraries**.
 
     ![Libraries menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-libraries.png)
@@ -53,37 +51,6 @@ You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to vClou
 7. When you're done, click **OK**.
 
     You can monitor the progress of the upload in the *Recent Tasks* panel.
-
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In vCloud Director, click the menu icon and select **Libraries**.
-
-    ![Libraries menu option in vCloud Director](images/vmw-vcd-mnu-libraries.png)
-
-2. In the left navigation panel, click **Media & Other**.
-
-    ![Media & Other tab](images/vmw-vcd-mnu-media.png)
-
-3. Click **Add**.
-
-    ![Upload media button](images/vmw-vcd-btn-add-media.png)
-
-4. In the *Upload Media* dialog box, select the **Catalog** to which you want to upload the media.
-
-5. Enter a **Name** for the media file if you want to use something more user-friendly than the file name.
-
-6. Click the **Upload** icon and browse to the ISO or FLP file that you want to upload.
-
-    ![Upload Media dialog box](images/vmw-vcd91-upload-media.png)
-
-    > [!NOTE]
-    > If you want to upload media from a URL, you must use the Legacy UI.
-
-7. When you're done, click **OK**.
-
-    In the *Media & Other* page, you can monitor the progress of the upload. You can carry on with other work while the upload takes place.
-
-***
 
 ## Feedback
 

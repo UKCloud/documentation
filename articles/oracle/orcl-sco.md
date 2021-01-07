@@ -172,11 +172,11 @@ Users can access, manage and view the UKCloud for Oracle Software service, acces
 
 - **Oracle Enterprise Manager.** The graphical interface for the creation and management of the Oracle environment.
 
-- **vCloud Director API.** Enables the programmatic creation and management of the Oracle edge gateway.
+- **vCloud API.** Enables the programmatic creation and management of the Oracle edge gateway.
 
-- **vCloud Director Graphical UI.** Provides a graphical interface to access the vCloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).
+- **VMware Cloud Director tenant portal.** Provides a graphical interface to access the VMware Cloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).
 
-- **UKCloud Portal.** Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.
+- **UKCloud Portal.** Enables access to the VMware Cloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of service configuration information. Access to incident and request management is also possible through the Portal.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.
 

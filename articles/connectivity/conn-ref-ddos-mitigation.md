@@ -33,7 +33,7 @@ To avoid issues related to fragmentation, UKCloud recommends the following setti
 
 - MTU - As a proactive measure, adjust the Maximum Transmission Unit (MTU) settings of your IPsec VPN connection from the default (~1500) to a fixed value between 1350 and 1426.
 
-  You can do this using the vCloud Director GUI or by using the vCloud Director API (for more information, see [*How to configure IPsec VPN*](../vmware/vmw-how-configure-ipsec-vpn.md) (GUI) or [*How to change IPSEC VPN settings via the vCloud Director API*](../vmware/vmw-how-change-ipsec-vpn-api.md)).
+  You can do this using the VMware Cloud Director GUI or by using the vCloud API (for more information, see [*How to configure IPsec VPN*](../vmware/vmw-how-configure-ipsec-vpn.md) (GUI) or [*How to change IPSEC VPN settings via the vCloud API*](../vmware/vmw-how-change-ipsec-vpn-api.md)).
 
 - IKE - UKCloud recommends using IKEv2, which supports fragmentation.
 

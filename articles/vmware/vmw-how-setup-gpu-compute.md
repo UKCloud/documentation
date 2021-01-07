@@ -37,7 +37,7 @@ This article provides an introduction for how to use Cloud GPU for compute workl
 
 ### Intended audience
 
-To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.
+To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director.
 
 ## Cloud GPU overview
 
@@ -113,18 +113,11 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![vCloud Director tab in the UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-6. In the VMware Cloud Director/vCloud Director menu, select **Libraries**.
-
-    > [!TIP]
-    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
+6. In the VMware Cloud Director menu, select **Libraries**.
 
 7. In the left navigation panel, under *Content Libraries*, select **vApp Templates**.
 
-8. Create a vApp from the **GPGPU** template for your preferred operating system (for example **CentOS7x64-GPGPU-Blank**).
-
-    - In vCloud Director 9.7, click the triple-dot icon next to the template and select **Create vApp**.
-
-    - In VMware Cloud Director 10.1, select radio button for the template and click **Create vApp**.
+8. Create a vApp from the **GPGPU** template for your preferred operating system by selecting the radio button for the template (for example **CentOS7x64-GPGPU-Blank**) and clicking **Create vApp**.
 
     > [!NOTE]
     > The GPGPU templates provide a shell VM with no disks attached, hence no operating system installed. You'll need to add the necessary disks so that you can install your preferred operating system on the VM.
@@ -146,7 +139,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     You can check progress by expanding the *Recent Tasks* section.
 
-13. After the VM has been deployed, from the main menu, select **Datacenters** (vCloud Director 9.7) or **Data Centres** (VMware Cloud Director 10.1).
+13. After the VM has been deployed, from the main menu, select **Data Centres**.
 
 14. Select your VDC, then in the card for your newly-deployed VM, select **Details**.
 

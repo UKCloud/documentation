@@ -125,7 +125,7 @@ UKCloud reserve the right to proactively move a GPU-enabled VM to another GPU-en
 
 UKCloud can also provide Operating Systems (OS) licensing, and is mandatory with respect to Windows Server. For more information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
-**VM server images.** We provide base GPU-enabled VM images for the OS for which we provide licensing. You can access these from vCloud Director once the GPU-enabled image has been made available to you.
+**VM server images.** We provide base GPU-enabled VM images for the OS for which we provide licensing. You can access these from VMware Cloud Director once the GPU-enabled image has been made available to you.
 
 **Update services.** We make update repositories available for all software for which we provide licensing. We don't provide software update facilities for non-UKCloud licensed software.
 
@@ -149,9 +149,9 @@ In line with UKCloud's SISP, we provide notification of customer-impacting secur
 
 You can access, manage and view the GPU-connected VMs in the same way that you would manage the rest of your UKCloud for VMware service. Access only those features allowed by their role, in any of the following ways:
 
-- **vCloud Director API.** Enables the programmatic creation and management of GPU-enabled VMs inside the platform.
+- **vCloud API.** Enables the programmatic creation and management of GPU-enabled VMs inside the platform.
 
-- **vCloud Director Graphical User Interface.** Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions) and manage GPU-enabled VMs.
+- **VMware Cloud Director tenant portal.** Provides a graphical interface to access the VMware Cloud Director environment (depending on assigned permissions) and manage GPU-enabled VMs.
 
 - **UKCloud Portal.** Enables the creation of compute services and subsequently, PRIORITY VDCs and the requesting of GPU resources for environments. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the UKCloud Portal.
 

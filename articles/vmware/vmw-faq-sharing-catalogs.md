@@ -37,8 +37,6 @@ For information on permissions you as the customer can select, see:
 
 - [VMware Cloud Director 10.1](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html)
 
-- [vCloud Director 9.7](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html)
-
 ## How many vOrgs can a catalog be shared with?
 
 A catalog can be shared with as many vOrgs as required.
@@ -60,8 +58,6 @@ You can delete the contents of a shared catalog as long as you have full control
 For information on permissions you as the customer can select, see:
 
 - [VMware Cloud Director 10.1](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html)
-
-- [vCloud Director 9.7](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html)
 
 ## Feedback
 

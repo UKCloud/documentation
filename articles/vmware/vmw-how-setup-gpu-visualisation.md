@@ -36,7 +36,7 @@ This article provides an introduction for how to use Cloud GPU for visualisation
 
 ### Intended audience
 
-To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.
+To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director.
 
 ## Cloud GPU overview
 

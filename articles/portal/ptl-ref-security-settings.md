@@ -33,7 +33,7 @@ The UKCloud Portal provides various settings to enable you to provide additional
 
 - **Portal access restriction by IP address** - Restrict access so that users can only log in to the Portal from specific IP addresses. For more information, see [*How to restrict access to the Portal*](ptl-how-restrict-access-portal.md).
 
-- **vCloud Director API access restriction by IP address** - Restrict access so that users can only access the vCloud API from specific IP addresses. For more information, see [*How to restrict access to the vCloud API*](ptl-how-restrict-access-vcloud-api.md).
+- **VMware Cloud Director access restriction by IP address** - Restrict access so that users can only access VMware Cloud Director from specific IP addresses. For more information, see [*How to restrict access to VMware Cloud Director*](ptl-how-restrict-access-vcloud-api.md).
 
 To change Portal security settings:
 

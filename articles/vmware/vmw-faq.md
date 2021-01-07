@@ -61,7 +61,7 @@ If you want to migrate a vApp larger than 1.5TiB, you'll need to engage the UKCl
 
 ### What hypervisor do you use?
 
-UKCloud's environment is built using VMware vSphere, the most ubiquitous and mature hypervisor available. Secure multi-tenancy is achieved with VMware Cloud Director/vCloud Director.
+UKCloud's environment is built using VMware vSphere, the most ubiquitous and mature hypervisor available. Secure multi-tenancy is achieved with VMware Cloud Director.
 
 ### Can I have a read-only account in vCloud for monitoring?
 
@@ -191,7 +191,7 @@ UKCloud also offers the additional benefits of a Distributed Firewall (DFW). An 
 
 ### How do I create and manage firewall rules?
 
-Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the VMware Cloud Director/vCloud Director Tenant Portal and vCloud API.
+Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the VMware Cloud Director tenant portal and vCloud API.
 
 On-boarding guides and associated video tutorials are available to help customers configure and manage their firewalls.
 
@@ -206,9 +206,10 @@ This service, how to order it, and the constraints it may place on operation, is
 The Advanced Management bundle includes Distributed Firewall (DFW), Distributed Logical Router (DLR), Layer 2 VPN and vROPs Tenant Monitoring and Metrics.
 
 > [!NOTE]
-> * The Advanced Management bundle may not be available in all regions and zones.
-> 
-> * The bundle is enabled at an organisation (vOrg) level, therefore all VMs within the organisation will be uplifted. See the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for details.
+>
+> - The Advanced Management bundle may not be available in all regions and zones.
+>
+> - The bundle is enabled at an organisation (vOrg) level, therefore all VMs within the organisation will be uplifted. See the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for details.
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
@@ -264,7 +265,7 @@ The exception is Micro sized VMs. These have a fixed 10GiB allocation that canno
 
 No, storage pooling isn't possible. Each VM must have a minimum of 60GiB (except Micro VMs).
 
-You can quickly and easily allocate additional storage via the self-service VMware Cloud Director/vCloud Director Tenant Portal or vCloud API. Additional storage is charged on a per-GiB basis as listed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+You can quickly and easily allocate additional storage via the self-service VMware Cloud Director tenant portal or vCloud API. Additional storage is charged on a per-GiB basis as listed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### Is storage persistent?
 
@@ -288,7 +289,7 @@ Talk to your UKCloud Account Director or Cloud Architect to understand if Tier 1
 
 ### What are independent disks?
 
-Independent disks are a technology provided natively by VMware Cloud Director/vCloud Director, and are included as options by default in the UKCloud service. They can only be created via the API, and cannot be created though the user interface. UKCloud has provided some advice on how to create and control them [here](https://github.com/UKCloud/vcloud-independent-disks).
+Independent disks are a technology provided natively by VMware Cloud Director, and are included as options by default in the UKCloud service. They can only be created via the API, and cannot be created though the user interface. UKCloud has provided some advice on how to create and control them [here](https://github.com/UKCloud/vcloud-independent-disks).
 
 Independent disks are stand-alone virtual disks that you create in organization VDCs. Administrators and users who have adequate rights can create, remove, and update independent disks, and connect them to virtual machines.
 
@@ -350,7 +351,7 @@ Yes, a step-by-step guide on configuring and using this service is included in [
 
 ### How do I control a VM?
 
-You control a VM via the VMware Cloud Director/vCloud Director Tenant Portal or vCloud API. Controls include stop, start, restart, load media, clone, snapshot, and so on.
+You control a VM via the VMware Cloud Director tenant portal or vCloud API. Controls include stop, start, restart, load media, clone, snapshot, and so on.
 
 ### Do you monitor VMs?
 
@@ -467,7 +468,7 @@ At the end of your trial, you have the option to transition to production or cea
 
 ### Can I create a clone of my environment?
 
-Yes, you can do this through the VMware Cloud Director/vCloud Director Tenant Portal. This operation can also be performed programmatically via the vCloud API.
+Yes, you can do this through the VMware Cloud Director tenant portal. This operation can also be performed programmatically via the vCloud API.
 
 It's not possible to restrict the automated VM snapshot backup to specific files or directories. You can install your own backup service and use our Cloud Storage service if you need more flexibility.
 
@@ -481,9 +482,9 @@ Synchronous Protection is no longer available as protection option for UKCloud f
 
 A snapshot is NOT a copy of the VMDK. Creating a snapshot locks out the base VMDK file and any changes to the data are written to the snapshot delta VMDK. If you want to roll back to the point in time that the snapshot was created and discard any changes since, you can revert the snapshot, which essentially deletes it and discards any changes. If you are happy with the changes made since the snapshot was created, you can delete the snapshot, which essentially consolidated all changes back into the base VMDK. For advice on best practice regarding snapshots, see [*Virtual machine disk limits and considerations*](vmw-ref-vmdk-limits.md).
 
-You can create snapshots using the VMware Cloud Director/vCloud Director Tenant Portal and these are stored in the same zone as the source VM. This is not to be confused with the UKCloud Snapshot Protection service, which uses a temporary snapshot to backup the VM to an external system in another UKCloud site.
+You can create snapshots using the VMware Cloud Director tenant portal and these are stored in the same zone as the source VM. This is not to be confused with the UKCloud Snapshot Protection service, which uses a temporary snapshot to backup the VM to an external system in another UKCloud site.
 
-For further reference, [*Virtual machine data recovery options*](vmw-ref-vm-data-recovery.md) explains the different recovery options available to you through VMware Cloud Director/vCloud Director.
+For further reference, [*Virtual machine data recovery options*](vmw-ref-vm-data-recovery.md) explains the different recovery options available to you through VMware Cloud Director.
 
 ### Can I restrict automated VM snapshot backup to specific files or directories?
 
@@ -583,7 +584,7 @@ For example, if a VM was switched off for a total of 890 minutes but was on for 
 
 ### Will I be charged for creating snapshots?
 
-Snapshot Protection can be purchased with any VM and will be charged for in accordance with the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Self-service snapshots created within VMware Cloud Director/vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
+Snapshot Protection can be purchased with any VM and will be charged for in accordance with the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Self-service snapshots created within VMware Cloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
 
 ## Security
 

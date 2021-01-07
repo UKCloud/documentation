@@ -35,7 +35,7 @@ Your UKCloud service architecture is as follows:
 
 **Account.** We use accounts to separate financial ownership. An account could represent an organisation, a customer contract, or a specific project. An account can also have several UKCloud services associated with it, such as UKCloud for VMware, Cloud Storage and UKCloud for OpenStack. You can also use accounts to separate users based on access requirements or permissions.
 
-**Organisation (vOrg).** This represents your UKCloud for VMware service inside vCloud Director and on the UKCloud Portal. There is a 1:1 mapping of service to vOrg.
+**Organisation (vOrg).** This represents your UKCloud for VMware service inside VMware Cloud Director and on the UKCloud Portal. There is a 1:1 mapping of service to vOrg.
 
 **Virtual data centre (VDC).** A VDC is where you define your workload type and build your virtual machines (VMs). You can create VDCs through the UKCloud Portal or the Portal API.
 
@@ -51,7 +51,7 @@ ESSENTIAL     | Contended             | Configured to meet requested performance
 POWER         | Uncontended (CPU/GiB) | Pre-emptively optimises performance and availability
 PRIORITY      | Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption
 
-**VM size.** There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.
+**VM size.** There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through VMware Cloud Director.
 
 Full details of the available service options are outlined in the [*Service Definition*](vmw-sd.md).
 
@@ -128,11 +128,11 @@ You are entitled to claim Service Credits for outages to services that take you 
 
   - Internally this includes, but isn't limited to, the vSphere and ESX versions, and the hardware version of the platform.
 
-  - Externally this includes the available versions of the edge gateway and vCloud Director.
+  - Externally this includes the available versions of the edge gateway and VMware Cloud Director.
 
 - Promiscuous mode is disabled.
 
-- You can set affinity or anti-affinity rules through vCloud Director so that VMs do, or do not, run on the same physical host.
+- You can set affinity or anti-affinity rules through VMware Cloud Director so that VMs do, or do not, run on the same physical host.
 
 - You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies). We do not support customer implementations inside a VM.
 
@@ -150,7 +150,7 @@ You can bring your own licensing for Red Hat and certain Microsoft application l
 
 For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.
 
-**VM server images.** We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from vCloud Director.
+**VM server images.** We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from VMware Cloud Director.
 
 You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.
 
@@ -211,9 +211,9 @@ In line with UKCloud's SISP, we provide notification of customer-impacting secur
 
 Users can access, manage and view the UKCloud for VMware service, accessing only those features allowed by their role, in any of the following ways:
 
-- **vCloud Director API.** Enables the programmatic creation and management of VMs inside the platform.
+- **vCloud API.** Enables the programmatic creation and management of VMs inside the platform.
 
-- **vCloud Director graphical UI.** Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions).
+- **VMware Cloud Director tenant portal.** Provides a graphical interface to access the VMware Cloud Director environment (depending on assigned permissions).
 
 - **UKCloud Portal.** Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.
 
