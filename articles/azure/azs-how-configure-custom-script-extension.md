@@ -301,9 +301,6 @@ $Container = New-AzStorageContainer -Name $ContainerName -Context $Context
 # Retrieve storage account key
 $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
 
-# Retrieve storage blob endpoint
-$ScriptBlobUrl = $Container.Context.BlobEndPoint
-
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
 Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
