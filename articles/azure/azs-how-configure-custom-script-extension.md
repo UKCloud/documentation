@@ -308,16 +308,9 @@ $ScriptBlobUrl = $Container.Context.BlobEndPoint
 Write-Output -InputObject "Uploading custom script extension to storage account"
 Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
 
-# Creating script location string
-$ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
-
 # Add custom script extension to existing Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
-$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
-$ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
-$ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
-Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
 </code></pre>
 
 #### File URI
@@ -344,12 +337,9 @@ $FileUri = "<output form="fileuri" name="result4" style="display: inline;">https
 $ScriptArguments = "<output form="scriptargs" name="result8" style="display: inline;">-FirewallPorts 80,443</output>"
 $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
-# Add custom script extension to existing Linux VM
-Write-Output -InputObject "Adding custom script extension to existing virtual machine"
-$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
-$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
-$ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
-Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
+# Add custom script extension to existing Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 
 ***
