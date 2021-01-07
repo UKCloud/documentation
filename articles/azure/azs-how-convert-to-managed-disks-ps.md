@@ -27,6 +27,9 @@ For more information, see [Introduction to Azure managed disks](https://docs.mic
 The following article shows you how to convert a virtual machine from unmanaged to managed disks on UKCloud for Microsoft Azure.
 
 > [!WARNING]
+> At the time of writing, the [ConvertTo-AzVMManagedDisk](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/convertto-azurermvmmanageddisk?view=azurermps-6.13.0) cmdlet is not supported on Azure Stack Hub and will result in your VM becoming unmanageable. Follow the process below to convert your unmanaged disks safely.
+
+> [!WARNING]
 > Running the script below will result in downtime for your virtual machine as it needs to be removed then recreated.
 
 ## Prerequisites
