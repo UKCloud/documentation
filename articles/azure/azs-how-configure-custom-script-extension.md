@@ -307,7 +307,7 @@ Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $Custom
 
 # Add custom script extension to existing Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
+Set-AzVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
 </code></pre>
 
 #### File URI
@@ -336,7 +336,7 @@ $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
+Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 
 ***
