@@ -3,8 +3,8 @@ title: How to configure VM update management on Azure Stack Hub
 description: Describes how to use Azure Monitor to configure VM update management on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
-reviewer: Chris Black
-lastreviewed: 30/03/2020
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
