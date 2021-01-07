@@ -59,8 +59,8 @@ You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling. V
 |-----------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | Azure Blob Storage (block)  | Object storage; good for storing documents, videos, images and so on                            | Size of disk storage differs significantly, as well as naming standards like name length |
 | Azure Blob Storage (page)   | Used to support virtual machine disks; good for randomly accessed large files                   |                                                                                          |
-| Azure Blob Storage (append) | Used for log files                                                                              |                                                                                          |
-| Azure Queue Storage         | Message queue as a service to provide asynchronous scale out micro-services, among other things |                                                                                          |
+| Azure Blob Storage (append) | Used for log files                                                                              |                                                                                          |
+| Azure Queue Storage         | Message queue as a service to provide asynchronous scale out micro-services, among other things |                                                                                          |
 | Azure Table Storage         | NoSQL database service; good for highly scalable, eventually consistent database support        | Max sizes differ                                                                         |
 
 ### Advanced features

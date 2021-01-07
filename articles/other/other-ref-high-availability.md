@@ -61,7 +61,6 @@ High-availability consideration | Notes
 [Disaster Recovery as a Service](../draas/draas-sd.md) | A powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and the UKCloud platform.
 Replicated backup | Enables your services to be backed up and the backup data replicated to another site.
 [Cloud Storage](../cloud-storage/cs-sd.md) | Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).
-[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md) | Provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, utilizing a technology that is common across backup products, enabling open-source backup applications to utilize the backup service as a target. You can also use MCBS as a remote backup target for your on-premises data.
 [Professional Services](../pro-services/ps-sd.md) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
 
 ## Application design considerations
@@ -80,7 +79,7 @@ Data | Make sure you take a copy of your application or database data at appropr
 
 ### UKCloud for Microsoft Azure
 
-In UKCloud for Microsoft Azure, you can use availability sets to spread VMs across multiple fault domains and update domains. In the event of downtime in one domain due to a hardware failure or planned maintenance, VMs in the affected domain are restarted in another domain. For more information, see [Providing high availability](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-overview?view=azs-1908#providing-high-availability).
+In UKCloud for Microsoft Azure, you can use availability sets to spread VMs across multiple fault domains and update domains. In the event of downtime in one domain due to a hardware failure or Planned Maintenance, VMs in the affected domain are restarted in another domain. For more information, see [Providing high availability](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-overview?view=azs-1908#providing-high-availability).
 
 A load balancer spreads incoming requests across multiple VMs, helping with scale and availability. For more information, see [*How to create a load balancer using the UKCloud Azure Stack Hub portal*](../azure/azs-how-create-load-balancer.md).
 

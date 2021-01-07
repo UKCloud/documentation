@@ -163,7 +163,7 @@ In addition to the responsibilities already mentioned in this Service Scope, cus
 
 - As UKCloud does not have any direct physical or network connection to the customer's environment, it is the customer's responsibility to ensure they are on supported versions of VMware software and that any third-party software is within the compatibility matrix. See the following VMware documents for assistance:
 
-  - [VMWare Lifecycle Product Matrix](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/support/product-lifecycle-matrix.pdf)
+  - [VMware Lifecycle Product Matrix](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/support/product-lifecycle-matrix.pdf)
 
   - [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php)
 

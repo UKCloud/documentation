@@ -3,8 +3,8 @@ title: How to obtain usage metrics for OpenShift capacity management
 description: Shows you how to obtain various statistics about your UKCloud for OpenShift cluster that you can use to help with capacity management
 services: openshift
 author: Sue Highmoor
-reviewer: gellner
-lastreviewed: 14/11/2019 11:15:38
+reviewer: Gareth Ellner
+lastreviewed: 16/12/2020
 
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
@@ -38,8 +38,6 @@ The sections in this guide, show you how to obtain various statistics about the 
 
 - Overall status of each node in the cluster
 
-- Uptime per node
-
 - CPU usage
 
 - Memory usage
@@ -60,7 +58,7 @@ The OpenStack CLI provides the ability to list the nodes in your cluster and the
 
        oc get nodes
 
-2. The results show you the overall readiness of each node and how long they've been running. For example:
+2. The results show you the overall readiness of each node and their role. For example:
 
        $ oc get nodes
        NAME                            STATUS    ROLES     AGE       VERSION
@@ -197,7 +195,7 @@ For capacity management, it's also useful to know much block storage your cluste
 
        oc get pv
 
-2. The results will look similar to the following, where we can see there is one item consuming 50 GB of storage.
+2. The results will look similar to the following, where we can see there is one item consuming 50 GB of storage.
 
        $ oc get pv
        NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                                                           STORAGECLASS   REASON    AGE

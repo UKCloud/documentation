@@ -129,6 +129,48 @@
 <p>You may need to run the commands in the following steps as root (sudo).</p>
 </div>
 <p>To deploy the OpenVPN appliance:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
+
+<ol>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which you want to deploy the OpenVPN appliance.</p>
+</li>
+<li><p>In the left navigation panel, under <em>Compute</em>, select <strong>vApps</strong>.</p>
+<p><img src="images/vmw-vcd10.1-tab-vapps.png" alt="vApps tab in VMware Cloud Director"></p>
+</li>
+<li><p>Click <strong>New</strong>, then select <strong>Add vApp from OVF</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-vapp-from-ovf.png" alt="Add vApp from OVF option"></p>
+</li>
+<li><p>Select the OpenVPN OVA that you downloaded then click <strong>Next</strong>.</p>
+</li>
+<li><p>Review the details of the OVA to confirm that it's the right image then click <strong>Next</strong>.</p>
+</li>
+<li><p>The appliance will be deployed as a single VM inside a vApp. Provide a <strong>Name</strong> and (optional) <strong>Description</strong> for the vApp then click <strong>Next</strong>.</p>
+</li>
+<li><p>Provide a valid NetBIOS host name and your desired storage policy then click <strong>Next</strong>.</p>
+</li>
+<li><p>Configure the network by selecting <strong>Switch to the advanced networking workflow</strong>.</p>
+</li>
+<li><p>Select the network adapter type, network and IP pool assignment (<strong>Manual</strong>), assign a valid IP from within your range, then click <strong>Next</strong>.</p>
+</li>
+<li><p>Select the number of vCPUs, sockets and memory this appliance will have then click <strong>Next</strong>.</p>
+</li>
+<li><p>Review the details then click <strong>Finish</strong> to deploy the vApp and appliance.</p>
+</li>
+<li><p>When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.</p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to deploy the OpenVPN appliance.</p>
 </li>
@@ -154,13 +196,15 @@
 </li>
 <li><p>Review the details then click <strong>Finish</strong> to deploy the vApp and appliance.</p>
 </li>
-<li><p>When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.</p>
+<li><p>When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMware's guest customisations to take effect before you start configuring OpenVPN.</p>
 </li>
 </ol>
+</section>
+</div>
 <h2 id="performing-initial-configuration">Performing initial configuration</h2>
 <p>To perform initial configuration:</p>
 <ol>
-<li><p>In vCloud Director (under <strong>Compute &gt; Virtual Machines</strong>), open the console for your OpenVPN VM.</p>
+<li><p>In VMware Cloud Director/vCloud Director (under <strong>Compute &gt; Virtual Machines</strong>), open the console for your OpenVPN VM.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>If you haven't already done so, you may need to download the VMware Remote Console.</p>
@@ -213,7 +257,7 @@
 <li><p>Enter the following command:</p>
 <p><code># pico /etc/network/interfaces</code></p>
 </li>
-<li><p>Use the arrow keys to scroll down. At the first free line specify your DNS servers, for example::</p>
+<li><p>Use the arrow keys to scroll down. At the first free line specify your DNS servers, for example:</p>
 <p><code>dns-nameservers 8.8.8.8</code></p>
 </li>
 <li><p>Press <strong>^O</strong> to save the file, then press <strong>Enter</strong> to confirm the file name.</p>

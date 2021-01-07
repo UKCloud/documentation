@@ -105,7 +105,7 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
     ![Service Catalog](images/ptl-mycalls-service-catalog.png)
 
-3. Select the incident template that you want to use (for example, **VMWare Incident**).
+3. Select the incident template that you want to use (for example, **VMware Incident**).
 
     ![Incident template](images/ptl-mycalls-template-incident.png)
 

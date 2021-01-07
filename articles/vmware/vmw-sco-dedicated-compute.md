@@ -40,7 +40,7 @@ This service is designed for customers who:
 
 We deliver Dedicated Compute by providing you with dedicated physical blades on which you control resource allocation.
 
-The initial Dedicated Compute purchase is a starter pack consisting of two physical blades. The standard blade consists of 20 physical cores (40 hyper-threaded cores) and 300 GiB of RAM.
+The initial Dedicated Compute purchase is a starter pack consisting of two physical blades. The standard blade consists of 20 physical cores (40 hyper-threaded cores) and 300 GiB of RAM.
 
 You can then scale your estate by purchasing expansion packs. After nine expansion packs, you must buy another starter pack.
 

@@ -26,8 +26,6 @@
     href: shared-ref-rhui.md
   - name: Understanding UKCloud shared services
     href: shared-ref-overview.md
-  - name: Windows Server 2016 templates
-    href: shared-ref-windows-2016-templates.md
 - name: Videos
   items:
   - name: Connecting a VM to WSUS

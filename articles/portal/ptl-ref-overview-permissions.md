@@ -53,7 +53,7 @@ Support permissions dictate whether a user can view other users support tickets.
 &nbsp; | Read | Update | All
 ------ | ---- | ------ | ---
 **User support tickets** | Can view their own support tickets.| Can update their own support tickets. | All of the above.
-**Account support tickets** | Can view all tickets logged by users across that account. | Can update anyone’s support ticket across that account. | All of the above.
+**Account support tickets** | Can view all tickets logged by users across that account. | Can update anyone's support ticket across that account. | All of the above.
 
 ## Permissions for UKCloud for VMware
 
@@ -88,7 +88,7 @@ Users with **API** permissions can retrieve billing information using the Portal
 
 ## Permissions for Monitoring
 
-Users with **Read** permissions can view information from the Protective Monitoring service on the *My Security Events* page.
+Users with **Read** permissions can view information from the Protective Monitoring service on the *Security Operations Service* page.
 
 ## Feedback
 

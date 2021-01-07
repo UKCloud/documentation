@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "Yx7rN0M4gSKtv6QMAWiuTw=="
+          "hash": "LafBGTmW2+9UuZoqsQ7zqw=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-custom-script-extension.html",
-          "hash": "hDBrEYbx7lJRvKBWwV9Hyg=="
+          "hash": "TFFSZrhGjqnn1phcNqkDOg=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-aks.html",
-          "hash": "kaEQRRQyll1P0D5FUsxmhA=="
+          "hash": "EQFnDweXy2UoTC88DHH6Kw=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-deploy-asdk.html",
-          "hash": "iRGM2/CrnlVz8T1bHbjL0A=="
+          "hash": "CG3kFWXvVHMrcDfsAxPOWA=="
         }
       },
       "is_incremental": false,
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "iNLcE94GFLnMrKjIw7yvVw=="
+          "hash": "A3VitYJ8UchWsr31CzNKXw=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sco.html",
-          "hash": "FRG7K2Sgh/a0ZJ2ay2J2qw=="
+          "hash": "G1RlGeDsAkHq/RuSMEvlyw=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sd.html",
-          "hash": "XoMZsPXTxvbVMTaKAZnnAQ=="
+          "hash": "yxtA0r0tZxcckfjEvRK69g=="
         }
       },
       "is_incremental": false,
@@ -2347,7 +2347,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-faq.html",
-          "hash": "glelvVXhzzmjndHsQvB7Ug=="
+          "hash": "QxNp8ZBNtpYtiVuk6yIAww=="
         }
       },
       "is_incremental": false,
@@ -2371,7 +2371,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-how-access-services-walled-garden.html",
-          "hash": "qqhIF5d9NAveTppYtMETuA=="
+          "hash": "MGQ7L/VhsKLj4RG63AS37A=="
         }
       },
       "is_incremental": false,
@@ -2419,7 +2419,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sco.html",
-          "hash": "gPTGYlnWmCGVngpeHrAr4Q=="
+          "hash": "jEWPV6nfV1HrUhPNh7mnqA=="
         }
       },
       "is_incremental": false,
@@ -2532,7 +2532,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-faq.html",
-          "hash": "vBzQVrmgKJhG7eGx1CGsug=="
+          "hash": "X0erb3JQwUP9P0JALQyQww=="
         }
       },
       "is_incremental": false,
@@ -2652,7 +2652,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
-          "hash": "+ZSekarggf7Jz8An4p7mkw=="
+          "hash": "rvdXDrftChGg2TEDVMMdRA=="
         }
       },
       "is_incremental": false,
@@ -2664,7 +2664,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sd.html",
-          "hash": "butJ3vg+uxAatZfNKI0r4w=="
+          "hash": "rGgTzEKispb7QgsCi+ezxw=="
         }
       },
       "is_incremental": false,
@@ -3481,7 +3481,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-app-ddos.html",
-          "hash": "aBmOdDdDE7egxRid/X+ZaA=="
+          "hash": "V+GwVH/RK5DoGBtdtNTZ4w=="
         }
       },
       "is_incremental": false,
@@ -3493,7 +3493,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-ddos.html",
-          "hash": "3OWjZXeO6LVKqE8EYxrmKw=="
+          "hash": "aoIyC/1cooLKXvgw0sJCVw=="
         }
       },
       "is_incremental": false,
@@ -3541,7 +3541,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-hybridconnect.html",
-          "hash": "jnITVgraWGmlywadyBLBJw=="
+          "hash": "80vtj/lrSPimiDLhG9aapA=="
         }
       },
       "is_incremental": false,
@@ -3553,7 +3553,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-janet.html",
-          "hash": "qavH3NgGLV+y86rMRGEBrw=="
+          "hash": "8SxtjW3CudQruH/8vPOdUw=="
         }
       },
       "is_incremental": false,
@@ -3589,7 +3589,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-psn.html",
-          "hash": "GF/LYUIAFXJRaUH0WoqWAw=="
+          "hash": "Wp4JQTyZKYhu1uMkZpD21A=="
         }
       },
       "is_incremental": false,
@@ -3601,7 +3601,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq.html",
-          "hash": "aktbwyxqon4JF7xjYR2kCg=="
+          "hash": "ZNLXykKOrcw6P6N2kN+ijw=="
         }
       },
       "is_incremental": false,
@@ -3625,7 +3625,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-ddos-protection.html",
-          "hash": "+5Ivt1pYe6ki3ST5ylh3oA=="
+          "hash": "9NnLSRQPnl1aDTq9XQCJCQ=="
         }
       },
       "is_incremental": false,
@@ -3649,7 +3649,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-hybrid-crown-connect.html",
-          "hash": "4546q9weRmBVL9SCdds7PQ=="
+          "hash": "Ex0h5o+D09tcM9QqCGoifg=="
         }
       },
       "is_incremental": false,
@@ -3805,7 +3805,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-sd-ddosprotect.html",
-          "hash": "imfyLkSXuyADZyhnw5B4sQ=="
+          "hash": "YGzpIb/mawCW7BPQZkJaGg=="
         }
       },
       "is_incremental": false,
@@ -3817,7 +3817,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-sd-ultradns.html",
-          "hash": "YEeuaWtR7JALY3/tIf1mYw=="
+          "hash": "CPgXYyOPbGxT6pnkECvJ/g=="
         }
       },
       "is_incremental": false,
@@ -4021,7 +4021,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/dedicated-compute/dc-sd.html",
-          "hash": "mJNhJM7ONRSa2oBrnyp98w=="
+          "hash": "aLSpzK1g2rnYADOXgzI1HA=="
         }
       },
       "is_incremental": false,
@@ -4101,7 +4101,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-gs.html",
-          "hash": "GgSA5DmN+UxWsyli5voCCA=="
+          "hash": "uhvVWSdAF6gsT5qEM3weJA=="
         }
       },
       "is_incremental": false,
@@ -4125,7 +4125,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-sco.html",
-          "hash": "hUJC5q89vtxc1+a5wCdsOQ=="
+          "hash": "wbDuNWuHeN1pIzXogz4exA=="
         }
       },
       "is_incremental": false,
@@ -4137,7 +4137,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-sd.html",
-          "hash": "uqvOBZU6x0o2tTRoBioheQ=="
+          "hash": "tc5qRLb+REk00Id7PP99fQ=="
         }
       },
       "is_incremental": false,
@@ -4206,7 +4206,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-faq.html",
-          "hash": "5A2cBdEORbsUy9b+QTt6hw=="
+          "hash": "eKMWH2kG1WpllUu2pWaqRA=="
         }
       },
       "is_incremental": false,
@@ -4218,7 +4218,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-gs.html",
-          "hash": "eoFLnDc6rnVQwJUJgit6PA=="
+          "hash": "w0tsw6JKk2dHjWGwG9fU4Q=="
         }
       },
       "is_incremental": false,
@@ -4230,7 +4230,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-setup-android.html",
-          "hash": "/d+U7t1WijUfdFIiK08G8A=="
+          "hash": "+ZEgAwz17Ose2EsBGleb9Q=="
         }
       },
       "is_incremental": false,
@@ -4242,7 +4242,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-setup-iphone.html",
-          "hash": "1VHMfxsJRpQarOQmj4uEIw=="
+          "hash": "ULEJ1TLlOEB1SG9RRTXkiA=="
         }
       },
       "is_incremental": false,
@@ -4254,7 +4254,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-use-with-app.html",
-          "hash": "UuOich+keM4Ov4kKTomnEQ=="
+          "hash": "fp+6DgXNWPMnqQzrcZfNKA=="
         }
       },
       "is_incremental": false,
@@ -4266,7 +4266,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-ref-fair-use.html",
-          "hash": "JIxZuCjFeQQqyS1iuL6e6g=="
+          "hash": "gQQi94vuyiXmDGAFv6CboA=="
         }
       },
       "is_incremental": false,
@@ -4278,7 +4278,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-ref-upgrade-to-86.html",
-          "hash": "AGNKZ0LIraLVOoAI1Ru4LA=="
+          "hash": "iVstwO/8XyB23Z2YVHXPDg=="
         }
       },
       "is_incremental": false,
@@ -4844,7 +4844,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-bigcolo.html",
-          "hash": "tpJEWyZtYEuCO0a4tDccqA=="
+          "hash": "Hbc2y1WoB1JU4hGDoOG+KQ=="
         }
       },
       "is_incremental": false,
@@ -4856,7 +4856,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-capscpa.html",
-          "hash": "dM64IZuhp4YfJI57sfhsZQ=="
+          "hash": "jr4QG7hXvl+QgSlJ+xC0LA=="
         }
       },
       "is_incremental": false,
@@ -4868,7 +4868,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-dtf.html",
-          "hash": "aKKp2WccfZgt7Vup7rcZJg=="
+          "hash": "05p95CCHPhVIV44Qa9mbkw=="
         }
       },
       "is_incremental": false,
@@ -4880,7 +4880,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-hosting.html",
-          "hash": "oApwi+5b/pPck4H0LRTVxw=="
+          "hash": "WYErTBSENK+YYJ7FYaRItQ=="
         }
       },
       "is_incremental": false,
@@ -4940,7 +4940,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-vpn.html",
-          "hash": "/XCD2pUBtrvvkJGCfDD10Q=="
+          "hash": "eiYJuwAV44TG/Jab2S/EIg=="
         }
       },
       "is_incremental": false,
@@ -5371,7 +5371,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-faq.html",
-          "hash": "BJHe1t2fTFJ/uFfwAVJ18g=="
+          "hash": "2binzsDFVdua68inBrnmBQ=="
         }
       },
       "is_incremental": false,
@@ -5383,7 +5383,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-sco.html",
-          "hash": "xSc+5TbbKIbMZO+7AXzhQQ=="
+          "hash": "qZv0w4kSgm6nAouPebBi+Q=="
         }
       },
       "is_incremental": false,
@@ -5403,23 +5403,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/hpc/hpc-ref-overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/hpc/hpc-ref-overview.html",
-          "hash": "niSVwLGad4vOVwZV5dQbNQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/hpc/hpc-sd.md",
       "output": {
         ".html": {
           "relative_path": "articles/hpc/hpc-sd.html",
-          "hash": "UHgFBCDM+tZlPyQ/sXzMPA=="
+          "hash": "yl6Ugd7pX6s51bpQjITEcg=="
         }
       },
       "is_incremental": false,
@@ -5453,7 +5441,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/hpc/toc.html",
-          "hash": "0NsFfu2Aa5GdhzBudt3D3g=="
+          "hash": "VjkZfIDcUnBG4pEb15QQPw=="
         }
       },
       "is_incremental": false,
@@ -5575,7 +5563,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-antivirus-faq.html",
-          "hash": "3nWKTGudPSfHqIYgQF4KTg=="
+          "hash": "ewa+x1OK0QBf/OE5ALs4ag=="
         }
       },
       "is_incremental": false,
@@ -5599,7 +5587,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-faq.html",
-          "hash": "I82hd84Jcsh0zHEBEjPA/Q=="
+          "hash": "0o1vgVjeFGkOc2fMVx7Gww=="
         }
       },
       "is_incremental": false,
@@ -5635,7 +5623,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-sco.html",
-          "hash": "O75Op4+2Nqxk5nLzTB4tlQ=="
+          "hash": "05IlweSk/uM2zwT2Jdshnw=="
         }
       },
       "is_incremental": false,
@@ -5647,7 +5635,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-patching-faq.html",
-          "hash": "xs4FCmaV7LpcS1K49t9kew=="
+          "hash": "h98r2dTUb1T06mRZDHzb1A=="
         }
       },
       "is_incremental": false,
@@ -5671,7 +5659,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-ref-sentinelone-datacollection.html",
-          "hash": "z5UV6fr6mdVVFORXeg50eA=="
+          "hash": "DUqdFcIHGD3h6IFhRBsxuw=="
         }
       },
       "is_incremental": false,
@@ -5683,7 +5671,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-ad.html",
-          "hash": "MZJl37FaprAIC43jikh/tA=="
+          "hash": "ThA8sObQOqp0x0+JL9Et/A=="
         }
       },
       "is_incremental": false,
@@ -5695,7 +5683,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-managed-it-ops.html",
-          "hash": "adCruIW3V4XKxbsEQ+QsXw=="
+          "hash": "nFuMNM1NeqXBhVOkge+fwA=="
         }
       },
       "is_incremental": false,
@@ -5707,19 +5695,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-network.html",
-          "hash": "XuJpk+TbxajPnINtTR79WQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sd-optimisation.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/managed-services/man-sd-optimisation.html",
-          "hash": "AfwAh6QaKfQd40OWzvliDw=="
+          "hash": "l+WnNkRNtein8/azwD/+HA=="
         }
       },
       "is_incremental": false,
@@ -5731,7 +5707,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-rds.html",
-          "hash": "GpkgZFoaE6urM8R6SJ+ysg=="
+          "hash": "Zcv3riE0QBHMzunjtAIIJg=="
         }
       },
       "is_incremental": false,
@@ -5743,7 +5719,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-sqlserver.html",
-          "hash": "sl5L0N7hwHjbOsOlPOeZwg=="
+          "hash": "KeKMIOuCX2HANuiI+vk7FQ=="
         }
       },
       "is_incremental": false,
@@ -5755,7 +5731,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-webserver.html",
-          "hash": "AEbuXOfz8MuzXuHN+yDiSg=="
+          "hash": "HW5MzDDHAj1W53qYnr01wQ=="
         }
       },
       "is_incremental": false,
@@ -5767,7 +5743,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-services-home.html",
-          "hash": "QUIssheKVyFpYRXH+cjXSQ=="
+          "hash": "Jh43U4vqZucjcAhYAH2GdQ=="
         }
       },
       "is_incremental": false,
@@ -5791,7 +5767,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "DeY+5yukU92EDpcwGi/QIA=="
+          "hash": "AxtiaruGh16KDvslGbYNFA=="
         }
       },
       "is_incremental": false,
@@ -5847,7 +5823,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/migr-how-zerto-migrate-to-ukcloud.html",
-          "hash": "+4EsuZKRot+knHo/YEGBFw=="
+          "hash": "G+TIfB7uCKWNbIFBBYQUVQ=="
         }
       },
       "is_incremental": false,
@@ -5957,10 +5933,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-local-lookup.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-local-lookup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/oshift-overview.png",
       "output": {
         "resource": {
           "relative_path": "articles/openshift/images/oshift-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-pod-lookup.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-pod-lookup.png"
         }
       },
       "is_incremental": false,
@@ -6148,7 +6146,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-faq.html",
-          "hash": "y6bB6AXsTUXAxjy66Q+BFg=="
+          "hash": "6yCkMVXCnH9fAf5vcheoyg=="
         }
       },
       "is_incremental": false,
@@ -6160,7 +6158,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "RLRmNc0QYekA/TQoywS2dQ=="
+          "hash": "Px1jVw8vZqJk/BO1dX+qIg=="
         }
       },
       "is_incremental": false,
@@ -6180,11 +6178,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-how-add-domains-proxy-whitelist.md",
+      "source_relative_path": "articles/openshift/oshift-how-add-domains-proxy-allow-list.md",
       "output": {
         ".html": {
-          "relative_path": "articles/openshift/oshift-how-add-domains-proxy-whitelist.html",
-          "hash": "HltQ0LuY7uwbTLA6uAVsjw=="
+          "relative_path": "articles/openshift/oshift-how-add-domains-proxy-allow-list.html",
+          "hash": "BmPs2H6r8WaQc1SrAqV3ow=="
         }
       },
       "is_incremental": false,
@@ -6208,7 +6206,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-backup-migrate.html",
-          "hash": "NDs3eRHcGWDz2pPR3JpDYQ=="
+          "hash": "yke+Zuas6DFzYBXnLn/tig=="
         }
       },
       "is_incremental": false,
@@ -6220,7 +6218,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-build-app-private-repo.html",
-          "hash": "G+SenNw/v6AyQURaU1fMQw=="
+          "hash": "VEXA/yrccdz7+IlelMlz8A=="
         }
       },
       "is_incremental": false,
@@ -6256,7 +6254,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-expand-persistent-vols.html",
-          "hash": "93oFSjMScoqN1h8SvP3IXA=="
+          "hash": "lXQ1jo4hgrEjWgvUSw+FgA=="
         }
       },
       "is_incremental": false,
@@ -6292,7 +6290,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-monitor-cluster.html",
-          "hash": "VXCGPG3ihUeL4pXn1BOBQA=="
+          "hash": "V8z7FHrytNe/C2rsMgDYkA=="
         }
       },
       "is_incremental": false,
@@ -6304,7 +6302,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-obtain-usage-metrics.html",
-          "hash": "Dw+3L2fZb+cy0JiK0r1Z8Q=="
+          "hash": "JRM38LDCgNwn2nZVF4N/pQ=="
         }
       },
       "is_incremental": false,
@@ -6340,7 +6338,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-restrict-access-to-openshift-routes-by-ip-address.html",
-          "hash": "oQwryd4aetzDy6QF96Q5ZQ=="
+          "hash": "427ePADKWfnQOLxGihVA/Q=="
         }
       },
       "is_incremental": false,
@@ -6400,7 +6398,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-view-proxy-logs.html",
-          "hash": "1xkhRAn3me+N7PQKeyhHZg=="
+          "hash": "yqX7aK4jNBXTB9XNdVIiWw=="
         }
       },
       "is_incremental": false,
@@ -6484,7 +6482,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-no-proxy.html",
-          "hash": "QRPedgPOeXDjegQRHatvKg=="
+          "hash": "f2z2TEjN0U4f8oyYQpM12w=="
         }
       },
       "is_incremental": false,
@@ -6496,7 +6494,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-pricing.html",
-          "hash": "QrR1rDraF51HC9GnO7Vnog=="
+          "hash": "jZ24bpHXOt+idq3b7DRhNg=="
         }
       },
       "is_incremental": false,
@@ -6520,7 +6518,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-security-best-practices.html",
-          "hash": "2ZEPbtDaqpQVgs+FTJcR2A=="
+          "hash": "73lbdsYsL2WQom/3AhiSyg=="
         }
       },
       "is_incremental": false,
@@ -6532,7 +6530,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-trial.html",
-          "hash": "rHu48XoPMNgZygSw6l55Qw=="
+          "hash": "C8/Wks0cIHm0atfO/PDrqw=="
         }
       },
       "is_incremental": false,
@@ -6544,19 +6542,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "cnPEWae+S1Uii5otxdKg0Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-sd-portworx.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openshift/oshift-sd-portworx.html",
-          "hash": "+C4yLlVl2yRYJGA2WKdC8w=="
+          "hash": "k0oQ5eMxAYbiZIC+6u8bnQ=="
         }
       },
       "is_incremental": false,
@@ -6568,7 +6554,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sd.html",
-          "hash": "jHt7n6e6lyYQyVAENcxgHA=="
+          "hash": "myMY+i7Dlh+YQ/uHj5aBFA=="
         }
       },
       "is_incremental": false,
@@ -6580,7 +6566,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "3g0rXGqzj614cahzPYBwVQ=="
+          "hash": "5ZF6WUadSbuoW/YfrAAQ1Q=="
         }
       },
       "is_incremental": false,
@@ -8748,7 +8734,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "OkIt6mdc/nTzDdLuxl8o7w=="
+          "hash": "qBMapDrmurQG/5XspLZbUw=="
         }
       },
       "is_incremental": false,
@@ -8760,7 +8746,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "uk9/xVPMjWqvkYgTPcnyGg=="
+          "hash": "WlvR+ON1zYD7Ud4buNO6nw=="
         }
       },
       "is_incremental": false,
@@ -8820,7 +8806,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-create-heat-template.html",
-          "hash": "YOJFcjusKQQ1qXfC9yZRpA=="
+          "hash": "tULXa3XWi904YqsWgOr+EA=="
         }
       },
       "is_incremental": false,
@@ -8832,7 +8818,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-create-load-balancer.html",
-          "hash": "3lWrl0SPB5SKJpHh//wPDg=="
+          "hash": "T/JpWXAQu9jwtH9n4GrPFw=="
         }
       },
       "is_incremental": false,
@@ -8844,7 +8830,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-install-rhui.html",
-          "hash": "y0enRk2srOeALeOsFJLWKA=="
+          "hash": "CWnqsBeNhHExJfmbAWdOvA=="
         }
       },
       "is_incremental": false,
@@ -8880,7 +8866,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-recover-instance.html",
-          "hash": "atuxW54tyIcTIkEWg3q2bw=="
+          "hash": "HEXqkb/i9FBOSsAaKM1w5Q=="
         }
       },
       "is_incremental": false,
@@ -8964,7 +8950,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-instance-metadata.html",
-          "hash": "5pB/T0uGgPGNZTS/MXRY8g=="
+          "hash": "yMNxA8zyfNSCPf3+J02/Dw=="
         }
       },
       "is_incremental": false,
@@ -9096,7 +9082,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sco-triliovault.html",
-          "hash": "3Etc1r81HTQ9i+8koL3ciQ=="
+          "hash": "CvD7vtoBt/XhXsB/r8iDxg=="
         }
       },
       "is_incremental": false,
@@ -9120,7 +9106,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sd.html",
-          "hash": "Eh5kpTqMIMLByIrGbtY+PQ=="
+          "hash": "3UuXmyNoWGrHFCkN7p5wUw=="
         }
       },
       "is_incremental": false,
@@ -9564,7 +9550,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-faq.html",
-          "hash": "CKe+ET0mRrZZumpDvpV+RQ=="
+          "hash": "6DnIgp1CIX8t4WnAWOZ39Q=="
         }
       },
       "is_incremental": false,
@@ -9576,7 +9562,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-gs.html",
-          "hash": "5B/DVe2rG/y3uet7rWVtMQ=="
+          "hash": "UsPDVDbDMApGVdOx9P/DLg=="
         }
       },
       "is_incremental": false,
@@ -9588,7 +9574,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-home.html",
-          "hash": "VtGH7XNEo4WVamM1ZfYGng=="
+          "hash": "Xz/lnO+X7Yv0FCxvY7gnTA=="
         }
       },
       "is_incremental": false,
@@ -9708,7 +9694,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-vm-compatibility.html",
-          "hash": "n8VXBAYh6hCGGOOmC5fYyA=="
+          "hash": "rMenmijc75SWqAPl6iWkbQ=="
         }
       },
       "is_incremental": false,
@@ -9720,7 +9706,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "fq5DBYTrOJ+H+H/rjpnTYQ=="
+          "hash": "2Yw2V9GdunH3jHGweGjvCQ=="
         }
       },
       "is_incremental": false,
@@ -9732,7 +9718,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sd.html",
-          "hash": "rBdjVz3WBmstrrvSMfc5aA=="
+          "hash": "uflJSA/ZtnOE1wufw375EA=="
         }
       },
       "is_incremental": false,
@@ -10373,19 +10359,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-billing.html",
-          "hash": "+Jl87yhEd4ofVP+fhQrs+g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-faq-credit-card.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-faq-credit-card.html",
-          "hash": "EKBFr+VWvN9IbWp2webgQQ=="
+          "hash": "xl9TYqSsXmqZCr4YGNRwgw=="
         }
       },
       "is_incremental": false,
@@ -10397,7 +10371,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-eps.html",
-          "hash": "kPNHPPyW0TZoe+yniyOcpA=="
+          "hash": "T/OYZ+1PY+OmfPWnWFm9rg=="
         }
       },
       "is_incremental": false,
@@ -10429,18 +10403,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-faq-mcbs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-faq-mcbs.html",
-          "hash": "2S5AstvzmZ8Ult0dhkJOFw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-miso-rebate.md",
       "output": {
         ".html": {
@@ -10457,7 +10419,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-sla.html",
-          "hash": "BE4tfSzQhaGDQ+e9KKXMtw=="
+          "hash": "/W6pbFG4jW7Sinm4+tzICA=="
         }
       },
       "is_incremental": false,
@@ -10469,19 +10431,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "Ukmdjsp70crY5yvZcU64OA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-how-connect-mcbs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-how-connect-mcbs.html",
-          "hash": "XbwOooyIek1Q+yuwi9QnQA=="
+          "hash": "Ye4ZOAVU/oHrMNHNvayBjg=="
         }
       },
       "is_incremental": false,
@@ -10517,7 +10467,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-use-pricing-tool.html",
-          "hash": "FR8WHJXjXQ5Dbp0XyLEf3A=="
+          "hash": "EUhAEzkJrqDhTfOsPlrNfA=="
         }
       },
       "is_incremental": false,
@@ -10541,7 +10491,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "T4b+Eagz3PN85KCXV7CsPQ=="
+          "hash": "EzVAKhoNhUlOho46V50wzg=="
         }
       },
       "is_incremental": false,
@@ -10553,7 +10503,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-browsers.html",
-          "hash": "JkFCIMurruHWQgVGh+0aog=="
+          "hash": "zWWlIcP9jhZWlXQAvqOjIw=="
         }
       },
       "is_incremental": false,
@@ -10597,6 +10547,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-discount-schemes.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-discount-schemes.html",
+          "hash": "emiGn5QMpldA8QPOSkuI1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-export-data.md",
       "output": {
         ".html": {
@@ -10625,7 +10587,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-gib.html",
-          "hash": "UIaEWhZMcEt/ASqV2unrgg=="
+          "hash": "HQdm/tA6HWvMsd0pZbaqzw=="
         }
       },
       "is_incremental": false,
@@ -10637,7 +10599,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "1HIQYcWZXF2S4qyv/szpZA=="
+          "hash": "shYGjXAugKJcQHaJgd/iGw=="
         }
       },
       "is_incremental": false,
@@ -10649,7 +10611,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-hadoop-proposition.html",
-          "hash": "YcGcTHG4QXmnHVMxPyTf6A=="
+          "hash": "STTFXad6EQFR1mCnLmEXpg=="
         }
       },
       "is_incremental": false,
@@ -10661,7 +10623,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "CIweo89vK1Kj5omG/RfkqQ=="
+          "hash": "efkdlXtqK4XRbhWsWO9wvQ=="
         }
       },
       "is_incremental": false,
@@ -10685,7 +10647,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-invoice-evidence-file.html",
-          "hash": "HTOe9zG/ycnrZtvR0JMsWA=="
+          "hash": "uWVcXCnCEeV6f/Cm8okkJQ=="
         }
       },
       "is_incremental": false,
@@ -10697,7 +10659,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-knowledge-guidelines.html",
-          "hash": "Bf1G5NrzjgQa3zsA/znMKQ=="
+          "hash": "3h7trNvkgZ3myhKMjC6iyg=="
         }
       },
       "is_incremental": false,
@@ -10710,6 +10672,18 @@
         ".html": {
           "relative_path": "articles/other/other-ref-knowledge-template.html",
           "hash": "gfB3ixdes9s83d4YbtkHtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-maintenance-windows.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-maintenance-windows.html",
+          "hash": "1964r9sgpIZ2N60isJ0hWQ=="
         }
       },
       "is_incremental": false,
@@ -10733,7 +10707,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "vjBsX9tMfC1lIct/GnXLlg=="
+          "hash": "6PbRtKYyiRjB9br8I7RlRQ=="
         }
       },
       "is_incremental": false,
@@ -10757,7 +10731,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-product-overview.html",
-          "hash": "om4GngzSjsxgfxSZoZYWZA=="
+          "hash": "O6IzLbzmoRws0TgcjXlTPQ=="
         }
       },
       "is_incremental": false,
@@ -10769,7 +10743,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "+BID7+11R+RoouWrfoZ9Lw=="
+          "hash": "MOrkFPVZzC6nnrKU6zhvSw=="
         }
       },
       "is_incremental": false,
@@ -10781,7 +10755,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-promon.html",
-          "hash": "WfIUjo0M06Xt0XsaynS7MQ=="
+          "hash": "rZMZ1jH/3ERYsXZwNKrTgg=="
         }
       },
       "is_incremental": false,
@@ -10793,7 +10767,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "kXnikd3tUzzWmcp6JbGbBw=="
+          "hash": "axoSjgkFS+NNRZ7K1irTlw=="
         }
       },
       "is_incremental": false,
@@ -10805,7 +10779,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-services-by-region.html",
-          "hash": "k3Y60y5VuTw22tHxFdr4hQ=="
+          "hash": "FepmqAWUwuvxggJp20LYqA=="
         }
       },
       "is_incremental": false,
@@ -10817,7 +10791,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sites-regions-zones.html",
-          "hash": "q1BHUoLxUrLfAEAcqDkkvw=="
+          "hash": "47+vjmtkEeUkTyskvMnIGw=="
         }
       },
       "is_incremental": false,
@@ -10829,7 +10803,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "2/9VfsrWp7E+bCAqnIs7bg=="
+          "hash": "dZlsCVzFBYN2xfErOzJwYw=="
         }
       },
       "is_incremental": false,
@@ -10877,7 +10851,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-terms-and-conditions.html",
-          "hash": "Z2B2ndftxgGvkdRb1rDv9A=="
+          "hash": "/aGYrJpRp0N7+Bl3Dn6ORw=="
         }
       },
       "is_incremental": false,
@@ -10902,18 +10876,6 @@
         ".html": {
           "relative_path": "articles/other/other-sco-free-trials.html",
           "hash": "DZHCWCpmL/ZEU2aWnk7emA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-sd-mcbs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-sd-mcbs.html",
-          "hash": "JpiJJ3rVqMOzUjURobVoBw=="
         }
       },
       "is_incremental": false,
@@ -10949,7 +10911,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "/i5lGN8qVm/iaBV/hfgSUQ=="
+          "hash": "cbn4l+wllfQCWaX2suLbng=="
         }
       },
       "is_incremental": false,
@@ -11819,7 +11781,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "d9B2yo380PZp0PPNlucaMg=="
+          "hash": "nOuRfM7XvwETSw3CoISI/Q=="
         }
       },
       "is_incremental": false,
@@ -11915,7 +11877,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-restrict-access-portal.html",
-          "hash": "qHwNIHO7nlfwrFIiBsQg4A=="
+          "hash": "CD3Wl/B2X5kLPd847sJQ6w=="
         }
       },
       "is_incremental": false,
@@ -11927,7 +11889,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-restrict-access-vcloud-api.html",
-          "hash": "f+Zx7ne8rQ51NAgDhF/cOw=="
+          "hash": "/IZOGnbWhTURem+dzjh1dQ=="
         }
       },
       "is_incremental": false,
@@ -11987,7 +11949,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-api.html",
-          "hash": "UfK/6r2l2KfsUuW1DanqVw=="
+          "hash": "KqSc62UQX5zk21Ur4TOkcA=="
         }
       },
       "is_incremental": false,
@@ -11999,7 +11961,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "lSfUKvmXHjH1m0p419sQFA=="
+          "hash": "OH4dHVb4AY1hc1SvcSS9cw=="
         }
       },
       "is_incremental": false,
@@ -12035,7 +11997,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-overview-permissions.html",
-          "hash": "MiQlbCNZ3cB6x1tdqOtdhA=="
+          "hash": "JVIEKyPxzXXbK948Yw/Ohw=="
         }
       },
       "is_incremental": false,
@@ -12047,7 +12009,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-portal-api.html",
-          "hash": "zVJNw/cM9XORtTaSzoHs1w=="
+          "hash": "H83x0x9GET4kZk214PWIiw=="
         }
       },
       "is_incremental": false,
@@ -12059,7 +12021,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-release-notes.html",
-          "hash": "eemobJEloveeDTC2nR1p6w=="
+          "hash": "6MxI37y0YrJQ0A3DsQZeAQ=="
         }
       },
       "is_incremental": false,
@@ -12119,7 +12081,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "+3uN+IdPVO0a8wp9g3m8kw=="
+          "hash": "NkqRZTWsOJCRcES/NaXHig=="
         }
       },
       "is_incremental": false,
@@ -12175,7 +12137,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-faq-storage.html",
-          "hash": "BFUfiuw+SgbDADZgEkvSJQ=="
+          "hash": "+nUbGB9LFJ72KssPDiYHFw=="
         }
       },
       "is_incremental": false,
@@ -12187,7 +12149,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-faq.html",
-          "hash": "3EqaKr+fmAuHw1Smlte6kg=="
+          "hash": "ZxoXbqB+kdRKER/WR3ou6w=="
         }
       },
       "is_incremental": false,
@@ -12235,7 +12197,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-orcl.html",
-          "hash": "lwF8FoPqyBJUAjtdGSbsgw=="
+          "hash": "u3ZUqSJ663m9qBY03L20jQ=="
         }
       },
       "is_incremental": false,
@@ -12247,7 +12209,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-storage.html",
-          "hash": "tC0jFjcqrAzzv1DFgm4aJg=="
+          "hash": "0m3RVf79PJi5HLBU1Or6iA=="
         }
       },
       "is_incremental": false,
@@ -12259,7 +12221,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd.html",
-          "hash": "umW9hKcip8o29B0m1AuZ7w=="
+          "hash": "1fgJv3ARsIcVJ2ZpPW+gcw=="
         }
       },
       "is_incremental": false,
@@ -12380,6 +12342,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/shared/images/vmw-vcd10.1-edge-btn-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/vmw-vcd10.1-edge-btn-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/shared/images/vmw-vcd10.1-mnu-edges.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/shared/images/vmw-vcd10.1-mnu-edges.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/shared/images/vmw-vcd91-mnu-edges.png",
       "output": {
         "resource": {
@@ -12395,7 +12379,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-access-centos-update-servers.html",
-          "hash": "ucozTgi+Dwx1M3roLcJi0g=="
+          "hash": "3/0UBgjmZE4gxZ4rSKXOEw=="
         }
       },
       "is_incremental": false,
@@ -12407,7 +12391,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-access-redhat-update-servers.html",
-          "hash": "36i+ziHwHd8m6DWg+oEU7Q=="
+          "hash": "9jlAHIZ6Bjq/4V/nSOpLBw=="
         }
       },
       "is_incremental": false,
@@ -12455,7 +12439,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-license-microsoft.html",
-          "hash": "xySTBFLIH54m20BFeW8N7Q=="
+          "hash": "ZzI20ZHSu5fPANLw4p/+6Q=="
         }
       },
       "is_incremental": false,
@@ -12479,7 +12463,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-setup-kms.html",
-          "hash": "LYjaWMXHsgvYkFRdA/fmzQ=="
+          "hash": "r9a7OCnaDupN7KOIjzxo2A=="
         }
       },
       "is_incremental": false,
@@ -12503,7 +12487,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-ref-network-time-server.html",
-          "hash": "fMPQk86iuwuZqK9qvodvFg=="
+          "hash": "0OkoGtwToZIGpdaD1PQ1XQ=="
         }
       },
       "is_incremental": false,
@@ -12528,18 +12512,6 @@
         ".html": {
           "relative_path": "articles/shared/shared-ref-rhui.html",
           "hash": "60oRdZ1TgKf6NVTiEyKn0w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/shared/shared-ref-windows-2016-templates.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/shared/shared-ref-windows-2016-templates.html",
-          "hash": "0HhBGmB4CS3LFGF604jjww=="
         }
       },
       "is_incremental": false,
@@ -12575,7 +12547,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/toc.html",
-          "hash": "Kx5cDkpfoVop6V9JK6b1ig=="
+          "hash": "mWP+mOceIcuEroKM7SEgww=="
         }
       },
       "is_incremental": false,
@@ -12759,7 +12731,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sco.html",
-          "hash": "J1xfzbpBakEYtBUy9GpDaA=="
+          "hash": "p3olxqT6MIyT8KJLNch69A=="
         }
       },
       "is_incremental": false,
@@ -12771,7 +12743,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sd.html",
-          "hash": "igGI6P2X07zlLXeD2hkpGw=="
+          "hash": "PvXWMd3901e2iXBPt0092A=="
         }
       },
       "is_incremental": false,
@@ -13400,6 +13372,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/ptl-contacts-tab-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-login.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-login.png"
         }
       },
       "is_incremental": false,
@@ -15365,17 +15348,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-adv-edge-tab-settings.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-adv-edge-tab-settings.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-adv-edge-tab-vpn.png",
       "output": {
         "resource": {
@@ -15695,17 +15667,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-syslog-server.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-btn-syslog-server.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-btn-upload.png",
       "output": {
         "resource": {
@@ -15970,17 +15931,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-edit-syslog-server.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-edit-syslog-server.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-enable-vpn-reg.png",
       "output": {
         "resource": {
@@ -16113,32 +16063,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-ico-console-gpu.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-ico-console-gpu.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-ico-reset-vm.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-ico-reset-vm.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-ico-upload-media.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-ico-upload-media.png"
         }
       },
       "is_incremental": false,
@@ -16381,17 +16309,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-mnu-create-snapshot.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-create-vapp-from-template.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-mnu-create-vapp-from-template.png"
         }
       },
       "is_incremental": false,
@@ -16938,17 +16855,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-tab-catalogs.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-tab-catalogs.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-tab-configure-ip-settings.png",
       "output": {
         "resource": {
@@ -17030,17 +16936,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-tab-load-balancer-reg.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-tab-media.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-tab-media.png"
         }
       },
       "is_incremental": false,
@@ -17334,43 +17229,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-transfer-process.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-transfer-process.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-tunnel-ip-address.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-tunnel-ip-address.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-upload-media-destination.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-upload-media-destination.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-upload-media-source.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-upload-media-source.png"
         }
       },
       "is_incremental": false,
@@ -17877,6 +17739,1359 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-vpn-config-reg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-add-dhcp-pool.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-add-dhcp-pool.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-add-dnat.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-add-dnat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-add-nat64.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-add-nat64.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-add-network-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-add-network-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-add-snat.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-add-snat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-add-to-catalog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-add-to-catalog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-allocated-ips.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-allocated-ips.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-dhcp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-dhcp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-dnat.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-dnat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-nat64.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-nat64.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-snat.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-snat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-vapp-template.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-vapp-template.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-configure-services-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-configure-services-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-enable-distributed-routing.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-enable-distributed-routing.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-new-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-new-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-new-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-new-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-dhcp-edit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-dhcp-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-fence.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-fence.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-services-edit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-services-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-static-route-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-static-route-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-static-route-enable.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vapp-network-static-route-enable.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vm-hard-disks-edit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vm-hard-disks-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vm-nics-edit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-vm-nics-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-build-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-build-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-catalog-btn-new.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-catalog-btn-new.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-copy-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-copy-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-create-affinity-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-create-affinity-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-create-catalog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-create-catalog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-create-vapp-template-catalog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-create-vapp-template-catalog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-create-vapp-template-source.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-create-vapp-template-source.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-add-static-route.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-add-static-route.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-btn-add-static-route.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-btn-add-static-route.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-btn-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-btn-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-add-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-add-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-ip-set.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-ip-set.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-new-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-new-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-save.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-save.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-select-objects.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-select-objects.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-source-ip.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-firewall-source-ip.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-ipsec-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-ipsec-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-ipsec-enabled.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-ipsec-enabled.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-load-balancer-add-pool.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-load-balancer-add-pool.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-load-balancer-config.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-load-balancer-config.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-load-balancer-pool-stats.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-load-balancer-pool-stats.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-dhcp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-dhcp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-firewall.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-firewall.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-ipsec-vpn-sites.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-ipsec-vpn-sites.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-ipsec-vpn.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-ipsec-vpn.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-load-balancer-pools.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-load-balancer-pools.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-load-balancer-servers.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-load-balancer-servers.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-load-balancer.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-load-balancer.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-nat.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-nat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-static-route.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-static-route.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edit-hard-disks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edit-hard-disks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-enable-dfw.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-enable-dfw.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-home-page.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-home-page.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-add-member.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-add-member.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-add-virtual-server.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-add-virtual-server.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-btn-add-member.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-btn-add-member.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-btn-add-pool.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-btn-add-pool.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-btn-add-server.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-load-balancer-btn-add-server.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-logout-link.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-logout-link.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-add-to-catalog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-add-to-catalog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-add-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-add-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-affinity.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-affinity.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-catalogs.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-catalogs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-edge-gateway.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-edge-gateway.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-edge-ips.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-edge-ips.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-edges.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-edges.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-insert-media.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-insert-media.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-libraries.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-libraries.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-media.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-media.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-reset-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-reset-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-share-catalog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-share-catalog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-storage-policies.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-storage-policies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vapp-from-ovf.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vapp-from-ovf.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vapp-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vapp-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vapp-templates.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vapp-templates.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vdc-metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vdc-metadata.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vm-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vm-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-move-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-move-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-affinity-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-affinity-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-anti-affinity-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-anti-affinity-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-distributed-edge.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-distributed-edge.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-dns.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-dns.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-general.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-general.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-ip-pool.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-ip-pool.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-isolated.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-isolated.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-routed-edge.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-routed-edge.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-routed-type.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-routed-type.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-vm-scratch.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-vm-scratch.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-vm-size.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-vm-size.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-vm-template.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-vm-template.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-primary-ip.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-primary-ip.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-share-catalog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-share-catalog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-share-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-share-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-storage-limit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-storage-limit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-tab-networks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-tab-networks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-tab-vapps.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-tab-vapps.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-tab-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-tab-vms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-upload-media.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-upload-media.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-dhcp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-dhcp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-firewall-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-firewall-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-nat-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-nat-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-static-route.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-static-route.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-static-routing.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-static-routing.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vdc-storage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vdc-storage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-compute.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-compute.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-general-edit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-general-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-general.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-general.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-hard-disks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-hard-disks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-nics.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-details-nics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-general.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-general.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-guest-os.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-guest-os.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-hardware-compute.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-hardware-compute.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-hardware-disks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-hardware-disks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-hardware-nic.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-hardware-nic.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-location-metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-location-metadata.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-storage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-storage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vm-vapp-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vm-vapp-network.png"
         }
       },
       "is_incremental": false,
@@ -19417,7 +20632,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "w/5AQIOiuz7810Ka54n+rQ=="
+          "hash": "TnjAPVqCfP/vPUscbZ1usA=="
         }
       },
       "is_incremental": false,
@@ -19453,7 +20668,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-sharing-catalogs.html",
-          "hash": "fxlwv89gB2kiNTyznM5erA=="
+          "hash": "RW5wpHEzScbqav1UhAVOOg=="
         }
       },
       "is_incremental": false,
@@ -19477,7 +20692,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-synchronous-protection.html",
-          "hash": "dBLIewmXOZleRmSy3PfzNg=="
+          "hash": "XejUdIYjU4iYYf/chOLowg=="
         }
       },
       "is_incremental": false,
@@ -19489,7 +20704,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "n5L9XYNDApirUrpvz2ZpqA=="
+          "hash": "oTLeODfWBgHoANI5h+RCag=="
         }
       },
       "is_incremental": false,
@@ -19501,7 +20716,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-build-vm-vcd.html",
-          "hash": "LDMlLT1ameUAmhdmy6TTLg=="
+          "hash": "cat5dXUgy3QDx7E3CVp77g=="
         }
       },
       "is_incremental": false,
@@ -19525,7 +20740,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "EbX6tKDIufdtyckRonNbNA=="
+          "hash": "UdffRbXEyenCHjPxl7IzVg=="
         }
       },
       "is_incremental": false,
@@ -19537,7 +20752,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-home.html",
-          "hash": "DE2c2m0VnWIGYyZwlAN3WA=="
+          "hash": "P3VXcx6fhqvIMZpTHBeSNA=="
         }
       },
       "is_incremental": false,
@@ -19549,7 +20764,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-syslog-data-adv.html",
-          "hash": "WxSRxsE9RjrFAf1nxwNRXQ=="
+          "hash": "Azp/i/YIpWXFg+Daywtmeg=="
         }
       },
       "is_incremental": false,
@@ -19573,7 +20788,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-vcloud-api.html",
-          "hash": "v2mHBrNEY6LIk71dO/UqYQ=="
+          "hash": "qajNd7o5ewIOXbiWiJF/dA=="
         }
       },
       "is_incremental": false,
@@ -19597,7 +20812,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-change-ipsec-vpn-api.html",
-          "hash": "Fz6Vw55aF1U9jBgNFNGVzw=="
+          "hash": "k1kIumtV9feAx4DSsPOtOw=="
         }
       },
       "is_incremental": false,
@@ -19609,7 +20824,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-distributed-firewall.html",
-          "hash": "4MUlhAsTzBaf+hwXP9u52A=="
+          "hash": "8ysMfhLs8VNyTSo7efGXUA=="
         }
       },
       "is_incremental": false,
@@ -19621,7 +20836,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-distributed-logical-router.html",
-          "hash": "ciyq93uOcmr/u89bA6bPRg=="
+          "hash": "VC3n4btiCEGrgsTkfhHY8A=="
         }
       },
       "is_incremental": false,
@@ -19633,7 +20848,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-ipsec-vpn.html",
-          "hash": "MzS8j4aD19FAd+V8gHFCKA=="
+          "hash": "v2LhtzYlRGNb8lKw7jffLg=="
         }
       },
       "is_incremental": false,
@@ -19645,7 +20860,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-l2-vpn.html",
-          "hash": "qU2YuvrIJ5UtIPqgPpJUxA=="
+          "hash": "JbA9GNWzLckGU/b6iZlLWw=="
         }
       },
       "is_incremental": false,
@@ -19657,7 +20872,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-load-balancer.html",
-          "hash": "5uhaij0hzHuGIgrEShh5VQ=="
+          "hash": "O0NZDs66Tm034+puCRRlBg=="
         }
       },
       "is_incremental": false,
@@ -19669,7 +20884,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-catalog.html",
-          "hash": "FWfOeUEnc5oMG9iTYlET3w=="
+          "hash": "PdY+T0i2qRuzm5j8dFuDKA=="
         }
       },
       "is_incremental": false,
@@ -19681,7 +20896,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-dhcp-pool.html",
-          "hash": "/R2rS02ReXfLPoXBsdOaRw=="
+          "hash": "YcLTPC9rFycBHoXFG/jqTw=="
         }
       },
       "is_incremental": false,
@@ -19693,7 +20908,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-firewall-rules.html",
-          "hash": "TKtV5C8Rd5CymincL4Laxw=="
+          "hash": "RkLeinQ/I5/wR6WQDDHrQw=="
         }
       },
       "is_incremental": false,
@@ -19705,7 +20920,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-isolated-network.html",
-          "hash": "vpbY9zvPlAkhhGj+nRMqZQ=="
+          "hash": "rU26c+eWx7FUQgjS3AmhOw=="
         }
       },
       "is_incremental": false,
@@ -19717,7 +20932,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-nat-rules.html",
-          "hash": "B91ibdrwxC6mmW0fEwnuaw=="
+          "hash": "0moHNVQLCoW7d0rFvQEv7A=="
         }
       },
       "is_incremental": false,
@@ -19729,7 +20944,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-routed-network.html",
-          "hash": "lLUl1+WNXf+tqLWMmn2XlA=="
+          "hash": "FPhi7M3slhL/HX2ujfHOVg=="
         }
       },
       "is_incremental": false,
@@ -19741,7 +20956,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-static-route.html",
-          "hash": "2RkQKf6GrLPovA+KlAVaJg=="
+          "hash": "6kjXoQhy5OmqkorBPD8Phg=="
         }
       },
       "is_incremental": false,
@@ -19753,7 +20968,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vapp-network.html",
-          "hash": "NPkJRweAUvPuGUsWZQffIA=="
+          "hash": "p/aAKbBwZJg38KqalJhyUw=="
         }
       },
       "is_incremental": false,
@@ -19765,7 +20980,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vapp.html",
-          "hash": "mNx96nZ4aHoldXrscOJTKQ=="
+          "hash": "JXZrzdlp4HQqt6sq77XNEg=="
         }
       },
       "is_incremental": false,
@@ -19777,7 +20992,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vm-from-scratch.html",
-          "hash": "BnEpCTwDmkFaCvDDp6UajA=="
+          "hash": "7XSZmLQ926eOsYt9lK61Sg=="
         }
       },
       "is_incremental": false,
@@ -19789,7 +21004,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vm-from-template.html",
-          "hash": "CnGZ9KmB1zQN2hxyUSw0qg=="
+          "hash": "gVjutIlbeymvCkAR63WBTQ=="
         }
       },
       "is_incremental": false,
@@ -19813,7 +21028,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-find-ip-addresses.html",
-          "hash": "trXZ4qBIC3+Zy3yQryFtgw=="
+          "hash": "cNCE2oryPAdIn6XSYJOJPg=="
         }
       },
       "is_incremental": false,
@@ -19825,7 +21040,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-increase-storage.html",
-          "hash": "1AYvIX3cW8C6sOHrUo93tA=="
+          "hash": "Lq7ni4vljs2dQa3z4Ld0rA=="
         }
       },
       "is_incremental": false,
@@ -19837,7 +21052,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-openvpn.html",
-          "hash": "lHCnp/LxYZAAeWDLKa37hQ=="
+          "hash": "nXORn5B/ssMo3ww6qg07uQ=="
         }
       },
       "is_incremental": false,
@@ -19873,7 +21088,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-locate-vdc.html",
-          "hash": "QmymR+ZLH9J5jP7wndl4kg=="
+          "hash": "LSdnwXgYH0DTSr2vL0zXVA=="
         }
       },
       "is_incremental": false,
@@ -19885,7 +21100,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-snapshot-protection.html",
-          "hash": "vzbfzsyfawwfT35E57eciw=="
+          "hash": "Opwo496H9pjVS7egY40xzw=="
         }
       },
       "is_incremental": false,
@@ -19897,7 +21112,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-vapp-permissions.html",
-          "hash": "ZRg4yYoMURbopwNR4B6b0Q=="
+          "hash": "MUmnW5i92OYltWnN5psU8Q=="
         }
       },
       "is_incremental": false,
@@ -19909,7 +21124,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-vcd-permissions.html",
-          "hash": "oVyAKXCj04gFS5/9Qpi/Pg=="
+          "hash": "iqCa5q3mDnW29YoxP4E6zQ=="
         }
       },
       "is_incremental": false,
@@ -19933,7 +21148,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-migrate-vapp.html",
-          "hash": "zmBDsjGcUNAzrWhCFV9F0g=="
+          "hash": "6EFrcd7zogvSLJV3ciWUvw=="
         }
       },
       "is_incremental": false,
@@ -19969,7 +21184,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-retrieve-utilisation-metrics.html",
-          "hash": "icIHtIYj3v4V3iF0cAJhog=="
+          "hash": "NCe8xlgwkx/HG2RuULLSDg=="
         }
       },
       "is_incremental": false,
@@ -19981,7 +21196,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-setup-gpu-compute.html",
-          "hash": "f+um+ZsKJOGwGPQIPKnIfw=="
+          "hash": "vVMaDx2Cf5kS4HlZU93xfQ=="
         }
       },
       "is_incremental": false,
@@ -19993,7 +21208,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-setup-gpu-visualisation.html",
-          "hash": "ZzHIBb9D0cBpJSbugWnB7w=="
+          "hash": "4HWh/CRZaNdVJLf2dC+cUw=="
         }
       },
       "is_incremental": false,
@@ -20017,7 +21232,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-update-vm-settings.html",
-          "hash": "Leww17LrVG4YmJUMvwZPmw=="
+          "hash": "vAyEigJNa00SeMVwePFT6Q=="
         }
       },
       "is_incremental": false,
@@ -20041,7 +21256,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-upload-media-iso-flp.html",
-          "hash": "EtdT63C33FmmTwFApB5xxA=="
+          "hash": "z87DeoPbdlckUR1zgX2rzw=="
         }
       },
       "is_incremental": false,
@@ -20053,7 +21268,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-affinity-rules.html",
-          "hash": "bbfY4ohdgmReWaU28kjgdQ=="
+          "hash": "pcXcZ4KmALuw3LBoJ1+CkQ=="
         }
       },
       "is_incremental": false,
@@ -20065,7 +21280,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-ovf-tool.html",
-          "hash": "yq+1WwisBLx6jGAMo4VSyw=="
+          "hash": "sGzwm/cz4hMUDcPstaqpYg=="
         }
       },
       "is_incremental": false,
@@ -20077,7 +21292,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-vm-location.html",
-          "hash": "P66qlr0B/bMYsNnBHCbaeg=="
+          "hash": "xLPbLo0hMIvb0WHGokwZRQ=="
         }
       },
       "is_incremental": false,
@@ -20089,7 +21304,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-view-storage-usage.html",
-          "hash": "+3TAe8U+sIElt9Hl97i2WQ=="
+          "hash": "ia0yS6UaaG9xkTM0NyCX9w=="
         }
       },
       "is_incremental": false,
@@ -20233,7 +21448,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-perform-failover.html",
-          "hash": "ISoviCnNqw+LP2JI0hbHBA=="
+          "hash": "yXJHUNMGqUtF/TJSEawEOg=="
         }
       },
       "is_incremental": false,
@@ -20257,7 +21472,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-byof-working-firewalls.html",
-          "hash": "PMcv9Zami6YvAMgjXSFR8g=="
+          "hash": "flqqLYGWANp93PnmhLMD/A=="
         }
       },
       "is_incremental": false,
@@ -20389,7 +21604,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-pricing.html",
-          "hash": "djaGZFoWwpMOvIzz7pE8Xw=="
+          "hash": "UxSUi7zJLMQFol6SSS2Vyg=="
         }
       },
       "is_incremental": false,
@@ -20449,7 +21664,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-trouble-ipsec-nsx64.html",
-          "hash": "c10eug41KbibCF+jR/7URQ=="
+          "hash": "DNGguJgPNWTr4JH8An3zSw=="
         }
       },
       "is_incremental": false,
@@ -20461,7 +21676,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-trouble-null-pointer.html",
-          "hash": "QdkjwSYbdq1qac2nPZAJmg=="
+          "hash": "D7fnf0ghrMU0Dz6o8TWSPw=="
         }
       },
       "is_incremental": false,
@@ -20569,7 +21784,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vmware-tools-installation.html",
-          "hash": "G4sXoF4a69yB0JkyPnkC9w=="
+          "hash": "nh0dWECoAMK4R8Q9DSce3g=="
         }
       },
       "is_incremental": false,
@@ -20605,7 +21820,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-byof.html",
-          "hash": "Fm5FHq+zwZ6GzYkYzuj3Sw=="
+          "hash": "4xYtl/4kF/sai2+w0XSmAg=="
         }
       },
       "is_incremental": false,
@@ -20617,7 +21832,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-dedicated-compute.html",
-          "hash": "dO7rlMAsdjgpWpNYNGDjtA=="
+          "hash": "Hhtf/jXIuT7qlg86bJku5Q=="
         }
       },
       "is_incremental": false,
@@ -20629,7 +21844,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-journaling-protection.html",
-          "hash": "HCpzIKuWS046+Pow8Pacgg=="
+          "hash": "M4q9qV7wdUZ9px/YOMBrYA=="
         }
       },
       "is_incremental": false,
@@ -20641,7 +21856,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-snapshot-protection.html",
-          "hash": "L97zSHA8THiRzOrGJVpAsA=="
+          "hash": "R2U093tFCeLgjbAFqWP/5Q=="
         }
       },
       "is_incremental": false,
@@ -20653,7 +21868,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-synchronous-protection.html",
-          "hash": "nKYR1kLjSxVvQkiL12rX8Q=="
+          "hash": "pOYy4mSNhMMB5kNOd42wdA=="
         }
       },
       "is_incremental": false,
@@ -20665,7 +21880,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-vls.html",
-          "hash": "0uNusi9O6A47hQvOQdMOBA=="
+          "hash": "yt5uKe6NMdnHV7dyCEpJNg=="
         }
       },
       "is_incremental": false,
@@ -20677,7 +21892,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "eIs0ofNN6F7KeKN4B/SRhA=="
+          "hash": "xoy7YKKwLr/0JR8XlNe0nQ=="
         }
       },
       "is_incremental": false,
@@ -20701,7 +21916,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sd.html",
-          "hash": "mVDiVUf18a5FOkGmnzL3Qg=="
+          "hash": "e+6scOxixpFb84i3q9fyww=="
         }
       },
       "is_incremental": false,
@@ -20772,7 +21987,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "vlfZRitMGYd3zAuh/rYpMg=="
+          "hash": "4G9gY69sjvwSVJ0KWCY6Tg=="
         }
       },
       "is_incremental": false,
@@ -20795,7 +22010,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "ONljRPxys9QEN/1nT6A8YA=="
+          "hash": "bIV2LUDAf9wHONP3OMI0Pw=="
         }
       },
       "is_incremental": false,
@@ -20816,7 +22031,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 455,
+          "total_file_count": 449,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

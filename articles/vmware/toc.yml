@@ -32,20 +32,14 @@
     href: vmw-how-access-syslog-data.md
   - name: Access the Zerto Self-Service Portal
     href: vmw-how-zerto-access-zssp.md
-  - name: Access vCloud Director through the vCloud API
+  - name: Access VMware Cloud Director/vCloud Director through the vCloud API
     href: vmw-how-access-vcloud-api.md
   - name: Build an edge gateway using the UKCloud Portal
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the vCloud API
     href: vmw-how-change-ipsec-vpn-api.md
-  - name: Configure a Distributed Firewall
-    href: vmw-how-configure-distributed-firewall.md
-  - name: Configure a Distributed Logical Router
-    href: vmw-how-configure-distributed-logical-router.md
   - name: Configure a load balancer
     href: vmw-how-configure-load-balancer.md
-  - name: Configure an L2 VPN
-    href: vmw-how-configure-l2-vpn.md
   - name: Configure IPsec VPN
     href: vmw-how-configure-ipsec-vpn.md
   - name: Create a catalog
@@ -90,10 +84,10 @@
     href: vmw-how-interact-vcd-api-powershell.md
   - name: Locate your virtual data centre on the UKCloud platform
     href: vmw-how-locate-vdc.md
-  - name: Manage permissions for vCloud Director
-    href: vmw-how-manage-vcd-permissions.md
   - name: Manage Snapshot Protection for your VMs
     href: vmw-how-manage-snapshot-protection.md
+  - name: Manage VMware Cloud Director/vCloud Director permissions
+    href: vmw-how-manage-vcd-permissions.md
   - name: Manipulate power states with PowerCLI
     href: vmw-how-manipulate-power-states-powercli.md
   - name: Migrate vApps between virtual data centres
@@ -120,7 +114,7 @@
     href: vmw-how-use-affinity-rules.md
   - name: Use the VMware OVF Tool
     href: vmw-how-use-ovf-tool.md
-  - name: Use VM location in vCloud Director
+  - name: Use VM location
     href: vmw-how-use-vm-location.md
   - name: View and update virtual machine settings
     href: vmw-how-update-vm-settings.md
@@ -128,6 +122,8 @@
     href: vmw-how-view-storage-usage.md
   - name: View your VMs in the UKCloud Portal
     href: vmw-how-portal-view-vms.md
+  - name: VMware Tools installation
+    href: vmw-ref-vmware-tools-installation.md
   - name: Advanced monitoring
     items:
     - name: Access advanced monitoring (vROps)
@@ -136,6 +132,14 @@
       href: vmw-how-vrops-enable.md
     - name: Refresh the vROps Tenant Appliance
       href: vmw-how-vrops-refresh.md
+  - name: Advanced networking
+    items:
+    - name: Configure a Distributed Firewall
+      href: vmw-how-configure-distributed-firewall.md
+    - name: Configure a Distributed Logical Router
+      href: vmw-how-configure-distributed-logical-router.md
+    - name: Configure an L2 VPN
+      href: vmw-how-configure-l2-vpn.md
   - name: VMware Licence Service
     items:
     - name: Add products to the vCloud Usage Meter
@@ -154,7 +158,7 @@
     href: vmw-ref-virtual-hardware-v11.md
   - name: Changes in vCloud Director 9.7
     href: vmw-ref-vcd-97.md
-  - name: Changes in VMWare Cloud Director 10.1
+  - name: Changes in VMware Cloud Director 10.1
     href: vmw-ref-vcd-10-1.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
@@ -200,8 +204,6 @@
     href: vmw-ref-vm-data-recovery.md
   - name: Virtual machine disk limits and considerations
     href: vmw-ref-vmdk-limits.md
-  - name: VMware Tools installation
-    href: vmw-ref-vmware-tools-installation.md
   - name: VMware vCloud Connector
     href: vmw-ref-vcloud-connector.md
   - name: Windows Server activation

@@ -19,7 +19,7 @@ toc_mdlink: vmw-sco-byof.md
 
 ## About this document
 
-This document is intended for UKCloud customers who might be considering an alternative virtual firewall or virtual appliance to the presently integrated VMWare vCNS firewall device within vCloud Director.
+This document is intended for UKCloud customers who might be considering an alternative virtual firewall or virtual appliance to the presently integrated NSX Edge Services Gateway device within VMware Cloud Director.
 
 The scope of the document is not to provide step by step detail on how to setup or install an alternative virtual firewall but rather the key points that a customer should consider when choosing an alternative product.
 
@@ -27,9 +27,9 @@ The document describes the responsibilities of both UKCloud and the customer in 
 
 ## About Bring Your Own Firewall
 
-Bring your own firewall allows customers to customise their networking infrastructure by installing their own virtual firewall appliance in place of the NSX Edge Services Gateway device UKCloud includes as standard with its compute services.
+Bring your own firewall enables customers to customise their networking infrastructure by installing their own virtual firewall appliance in place of the NSX Edge Services Gateway device UKCloud includes as standard with its compute services.
 
-This can allow customers to leverage their own in-house expertise with a particular technology or can provide access to some higher level networking functionality not natively available in the NSX Edge Services Gateway device.
+This can enable customers to leverage their own in-house expertise with a particular technology or can provide access to some higher level networking functionality not natively available in the NSX Edge Services Gateway device.
 
 ## Default setup
 
@@ -41,7 +41,7 @@ In a BYOF implementation, UKCloud present an external network directly to the cu
 
 Upon a customer's request, UKCloud will:
 
-- Deploy a new VDC without a NSX Edge Services Gateway device
+- Deploy a new VDC without an NSX Edge Services Gateway device
 
 - Present the external network to the customer for them to install their own firewall device
 
@@ -59,15 +59,15 @@ By requesting to have the edge gateway device removed and their own firewall tec
 
 - Customers are responsible for installing and configuring the firewall device. Guidance on how this might be done can be found in the [*Bring your own firewall to UKCloud Blueprint*](https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-310-bring-your-own-firewall-blueprint.pdf).
 
-- UKCloud do not offer any support of customer installed firewall replacements. This includes but not limited to install, configuration and troubleshooting issues.
+- UKCloud do not offer any support of customer installed firewall replacements. This includes but is not limited to install, configuration and troubleshooting issues.
 
 - UKCloud will not be able to perform any network diagnostic tasks on the customer side of the firewall (inside the VDC).
 
-- Outages caused by the customers new firewall will not be liable to service credit claims.
+- Outages caused by the customer's new firewall will not be liable to Service Credit claims.
 
-- Customers lose the visibility of the IP address assignments which are currently easily referenced within vCloud Director.
+- Customers lose the visibility of the IP address assignments which are currently easily referenced within VMware Cloud Director.
 
-- Customers lose the integrated functionality of configuring the edge gateway device through vCloud Director. Access to the new firewall replacement is only available via the console or from within the customer VDC (based on setup).
+- Customers lose the integrated functionality of configuring the edge gateway device through VMware Cloud Director. Access to the new firewall replacement is only available via the console or from within the customer VDC (based on setup).
 
 ## Feedback
 

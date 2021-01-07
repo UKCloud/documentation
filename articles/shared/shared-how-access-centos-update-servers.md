@@ -1,6 +1,6 @@
 ---
 title: How to access CentOS update servers
-description: Shows you how to access CentOS updates
+description: Provides information about accessing the CentOS repository servers to keep your CentOS VMs up to date
 services: shared-services
 author: shighmoor
 reviewer: pcantle
@@ -35,7 +35,7 @@ Our Elevated OFFICIAL security domain doesn't natively connect to the internet, 
 
 ### Option 1. UKCloud-managed repository servers
 
-We provide repositories and EPEL (Extra Packages for Enterprise Linux) for CentOS 6 and 7 on our Elevated OFFICIAL security domain.
+We provide repositories and EPEL (Extra Packages for Enterprise Linux) for CentOS 6 and 7 on our Elevated OFFICIAL security domain.
 
 To access CentOS base files, create a file called `centos_<x>_il3.repo` in `/etc/yum.repos.d`, where `<x>` is either 6 or 7 depending on your version of CentOS, and populate it with the following:
 

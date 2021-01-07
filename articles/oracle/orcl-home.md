@@ -17,8 +17,6 @@ toc_mdlink: orcl-home.md
 
 # UKCloud for Oracle Software
 
-UKCloud for Oracle provides a proven Oracle Infrastructure as a Service that's tailor made for running your Oracle workloads in the cloud, enabling you to move technologies such as Oracle Database, Oracle WebLogic Server, Oracle Fusion Applications, E-Business Suite and more to our secure sovereign cloud platform quickly and easily while enjoying the economies of scale of the cloud.
-
 ## Let's get started
 
 First, take a look at our [Getting Started Guide](orcl-gs.md) to learn the basics, then you can:

@@ -132,15 +132,7 @@ Walled Gardens are managed from the higher-security side of the platform (Elevat
 
 ### What are your service maintenance windows?
 
-UKCloud's maintenance windows are as follows (times are UK local times):
-
-#### Planned maintenance
-
-Any pre-planned maintenance of any infrastructure relating to the services. We'll provide you with at least 14 days' advance notice of any planned maintenance. It will take place between 00:00 and 06:00 Monday to Sunday or between 08:00 and 12:00 on a Saturday or Sunday. No planned maintenance will take place on a Saturday unless agreed in advance by both parties.
-
-#### Emergency Maintenance
-
-Any emergency maintenance of any infrastructure relating to the services. Whenever possible, we'll provide you with at least six hours' advance notice of emergency maintenance; and carry it out between 00:00 and 06:00 Monday to Sunday or between 08:00 and 12:00 on a Saturday or Sunday, unless there's an identified and demonstrable immediate risk to a customer's environment.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Billing and legal
 
@@ -152,11 +144,9 @@ Walled Garden billing is based on the solution design. You pay a monthly rental 
 
 For existing UKCloud Guard customers, billing is based on the amount of data transferred between domains. You buy a starter pack which includes an amount of data that can be transferred. You're billed at an incremental rate for data transferred above the starter pack threshold.
 
-### How do I pay for the service?
+### How can I pay for the services?
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
-
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### What are the termination fees?
 
@@ -170,7 +160,7 @@ The platform is hosted in the UK and operated by SC-cleared staff. It has extens
 
 ### Is there a protective monitoring service?
 
-Protective monitoring is included for our IaaS platform and follows GPG 13.
+Protective monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 

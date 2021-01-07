@@ -4,7 +4,7 @@ description: Provides overview information of the various products and services 
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 26/09/2020
+lastreviewed: 30/11/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -30,10 +30,6 @@ This compute service can be powered by either a UKCloud-based Microsoft Azure St
 ### UKCloud for OpenStack
 
 This service is powered by Red Hat OpenStack, an open source cloud computing platform that provides a flexible virtual data centre (VDC) management platform built for the digital age.
-
-### UKCloud for Oracle Software
-
-This service provides a platform powered by Oracle VM (OVM) technology that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. This enables you to move away from expensive hardware-based Oracle solutions and move your workloads to a secure cloud platform.
 
 ### UKCloud for VMware
 
@@ -61,17 +57,9 @@ Dedicated Compute v2 is a flexible solution designed for where guaranteed perfor
 
 This service (powered by Zerto) makes it easy to replicate and recover VMs to the cloud, by failing over from your own data centre to UKCloud.
 
-### High Performance Compute (HPC)
-
-This service is designed for large-scale compute-intensive workloads such as Grid Engines, all of which have a requirement for large amounts of processor, cores and memory.
-
 ### Migration to the Cloud
 
 This service (powered by Zerto) makes it easy to replicate and migrate applications to the cloud, by moving VM's over from your own data centre to UKCloud's trusted, cost-effective and well-connected cloud.
-
-### Multi-Cloud Backup Storage (MCBS)
-
-UKCloud's MCBS provides a backup target that is accessible from every cloud within UKCloud's multi-cloud platform, as well as being an off-site target for any on-premises data back-up.
 
 ### Neustar DDoS Protection from UKCloud
 
@@ -80,10 +68,6 @@ UKCloud's internet-connected Assured OFFICIAL platform already has Neustar DDoS 
 ### Neustar UltraDNS from UKCloud
 
 Neustar UltraDNS is an enterprise grade, cloud-based authoritative DNS service that securely delivers fast and accurate query responses to websites and other vital online assets. Whether you're looking for a primary or secondary DNS solution, Neustar UltraDNS offers customizable packages to fit any organisation's DNS needs. The UltraDNS Firewall option is a cost-effective enterprise grade, cloud-based recursive DNS service that delivers fast and reliable access to vital online applications with built-in security and threat intelligence.
-
-### Portworx Enterprise from UKCloud
-
-This service provides a secure and stable cloud native storage and data management platform for Kubernetes that you can trust to manage data in containers. Kubernetes is the fastest growing open-source project in history, but Kubernetes was not designed with stateful applications like databases in mind. For enterprise applications, these systems have non-negotiable business requirements like high availability, data security, disaster recovery, strict performance SLAs and hybrid/multi-cloud operations. Portworx Enterprise addresses all these requirements enabling the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.
 
 ### Secure Remote Access (SRA)
 
@@ -156,10 +140,6 @@ UKCloud's Professional Services are designed to provide a clear path to true clo
 **Optimisation service.** A service that helps you review your current usage or understand how to optimise your migration to the UKCloud environment. UKCloud consultants will undertake a commercial and technical assessment of your UKCloud environment, then develop and execute work packages that deliver operational efficiency and cost savings.
 
 **Transformation service.** This service provides the help you might need to adopt and harness the power of cloud native transformation. Cloud native applications fully utilise the features of platforms such as OpenStack, OpenShift and Azure Stack Hub. This transformation service provides the expertise to introduce teams to new ways of developing and deploying applications.
-
-### Cloud Optimisation from UKCloud
-
-Cloud Optimisation from UKCloud draws on our expertise in optimising and managing large scale cloud implementations to help you avoid cloud sprawl by realising value and optimising cloud spend, eliminating unused or underused resources and improving security and compliance stance. UKCloud are confident that this service can achieve initial savings of up to 30% on cloud spend.
 
 ## Feedback
 

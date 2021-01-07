@@ -25,7 +25,7 @@ Cloud Storage from UKCloud is a secure next-generation storage platform designed
 
 ### Where will my data be physically stored?
 
-Data will be stored in one or both of our highly resilient tier 3, UK-sovereign data centres, which are separated by over 100km.
+Data will be stored in one or both of our highly resilient tier 3, UK-sovereign data centres, which are separated by over 100km.
 
 ### How much data can I store?
 
@@ -72,11 +72,11 @@ The frequency of data backup is defined and managed by your organisation adminis
 
 UKCloud's object storage is however highly durable and can automatically recover from disk and node failure, negating the need for a backup.
 
-### What reports can I get about storage usage? 
+### What reports can I get about storage usage? 
 
 We provide tools for monitoring used capacity and storage growth via the UKCloud Portal.
 
-### What software tools are provided? 
+### What software tools are provided? 
 
 UKCloud does not provide software tools for accessing the platform as storage is accessed via APIs, supporting S3.
 
@@ -100,9 +100,7 @@ For the Elevated OFFICIAL domain, security requirements are stricter and require
 
 ### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days' advance notice of planned maintenance.
-
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours advance notice of emergency maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ### Does the Cloud Storage solution support browser-based form POST upload?
 
@@ -200,7 +198,7 @@ For more information, see the [*Cross Domain Security Zone Service Definition*](
 
 ### Is there a protective monitoring service?
 
-Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
+Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
 ## Feedback
 

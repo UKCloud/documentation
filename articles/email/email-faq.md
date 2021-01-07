@@ -17,6 +17,9 @@ toc_mdlink: email-faq.md
 
 # Email and Collaboration as a Service FAQs
 
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ## What is the service?
 
 Email and Collaboration as a Service provides a range of productivity tools, including email, calendaring and tasks, which help an organisation's end users to work in a secure, efficient and effective way.
@@ -71,7 +74,7 @@ There are several configuration options for using the PSN email relays. These ca
 
 ## Is the service Pan Government Accredited?
 
-UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.
+UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.
 
 We are now required to self-assess our services, with customers then responsible for assessing and selecting the most appropriate cloud services which meet their individual security requirements.
 
@@ -151,11 +154,9 @@ Set up of client-based software or mobile devices may be required, depending on 
 
 The length of time for the solution to be fully operational depends on the amount of work you require once you've received the welcome pack.
 
-## What are your service maintenance windows?
+### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days advance notice of planned maintenance.
-
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Can I use the service as a short-term solution, such as for a couple of months?
 

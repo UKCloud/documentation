@@ -93,19 +93,23 @@
                   
 <h1 id="how-to-set-up-cloud-gpu-visualisation-for-ukcloud-for-vmware">How to set up Cloud GPU Visualisation for UKCloud for VMware</h1>
 
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Cloud GPU has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Cloud GPU customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.</p>
+</div>
 <h2 id="overview">Overview</h2>
 <p>Cloud GPU enables you to supplement your on-platform compute resources with GPU capabilities.</p>
 <p>This service enables you to use UKCloud's main infrastructure platforms to meet the specialist requirements of some advanced applications, with the benefits of a cloud environment. It supports the following types of
 workloads:</p>
 <ul>
-<li><p><strong>Visualisation workloads.</strong> Describes the traditional use cases for GPU processing. These include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.</p>
+<li><p><strong>Visualisation workloads.</strong> Describes the traditional use cases for GPU processing. These include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.</p>
 </li>
 <li><p><strong>Compute workloads.</strong> GPUs have become prevalent in a world that needs a lot of data processing, fast. The parallel nature of GPU cores lends itself perfectly to supporting initiatives such as deep or machine learning and large-scale mathematical modelling.</p>
 </li>
 </ul>
 <p>This article provides an introduction for how to use Cloud GPU for visualisation workloads and describes the tasks you need to perform to get the service up and running for UKCloud for VMware.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this article you must have access to the UKCloud Portal and vCloud Director.</p>
+<p>To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.</p>
 <h2 id="cloud-gpu-overview">Cloud GPU overview</h2>
 <p>We offer two GPU variants for use with our cloud platform:</p>
 <table>
@@ -279,7 +283,6 @@ card to your VM.</p>
 <li><p>Power on your VM.</p>
 </li>
 <li><p>In the card for the VM, select <strong>Actions</strong> then <strong>Insert Media</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-insert-media.png" alt="Insert CD/DVD from Catalog menu option"></p>
 </li>
 <li><p>In the <em>Insert CD</em> dialog box, select the vGPU driver ISO and click <strong>Insert</strong>.</p>
 <p><img src="images/vmw-vcd-insert-cd.png" alt="Insert CD dialog box"></p>

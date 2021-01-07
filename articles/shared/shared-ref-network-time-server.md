@@ -1,10 +1,10 @@
 ---
 title: Network Time Protocol server access
-description: This guide shows you how to configure access to the Network Time Protocol (NTP) server within vCloud Director
+description: This guide shows you how to configure access to the Network Time Protocol (NTP) server
 services: shared-services
 author: shighmoor
-reviewer:
-lastreviewed: 19/07/2018
+reviewer: shighmoor
+lastreviewed: 06/11/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,11 +17,11 @@ toc_mdlink: shared-ref-network-time-server.md
 
 # Network Time Server access
 
-The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's customers. It is available in both the Assured and Elevated platforms.
+The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's customers. It is available in both the Assured OFFICIAL and Elevated OFFICIAL security domains.
 
 ## Assured OFFICIAL Platform
 
-Update your Assured virtual machines' (VMs) NTP server with one or both of the following IP addresses:
+Update the NTP server of your Assured virtual machines with one or both of the following IP addresses:
 
 `37.26.90.192`
 
@@ -29,15 +29,15 @@ Update your Assured virtual machines' (VMs) NTP server with one or both of the f
 
 ## Elevated OFFICIAL Platform
 
-Update your Elevated VMs' NTP sever with one or both of the following IP addresses:
+Update the NTP server of your Elevated virtual machines with one or both of the following IP addresses:
 
 `x.y.89.96`
 
 `x.y.93.144`
 
-Replace `x.y` with the first two octets of the Elevated OFFICIAL public IP addresses. If you are unsure of these, please contact UKCloud Support.
+Replace `x.y` with the first two octets of the Elevated OFFICIAL public IP addresses. If you are unsure of these, contact UKCloud Support.
 
-You may need to adjust your firewall and NAT rules to allow communication between your VMs' NTP server and the UKCloud network time server.
+You may need to adjust your firewall and NAT rules to allow communication between the NTP server of your virtual machines and the UKCloud network time server.
 
 ## Feedback
 

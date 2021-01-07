@@ -2,9 +2,9 @@
 title: How to use the VMware OVF Tool
 description: Describes how to use the VMware OVF Tool to assist in the distribution of virtual machines and vApps
 services: vmware
-author: Steve Hall
+author: shall
 reviewer: dcoombesukc
-lastreviewed: 18/09/2019
+lastreviewed: 06/11/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -21,11 +21,11 @@ toc_mdlink: vmw-how-use-ovf-tool.md
 
 The VMware OVF Tool is a conversion program freely downloadable from VMware that assists in the distribution of virtual machines (VMs) and vApps, converting them between OVF, VMX and OVA formats. It also includes a command‑line facility to import and export OVF packages between environments or from third party suppliers. The OVF Tool is a command‑line interface (CLI) tool only.
 
-- **OVF (Open Virtualisation Format)** is a packaging standard created by leading virtualisation vendors. It is a platform independent, efficient, open packaging and distribution format for virtual machines.
+- **OVF (Open Virtualisation Format)** is a packaging standard created by leading virtualisation vendors. It is a platform independent, efficient, open packaging and distribution format for VMs.
 
-- **VMX (the VM configuration file)** is a simple text file with various parameters relating to the guest Virtual Machine.
+- **VMX (the VM configuration file)** is a simple text file with various parameters relating to the guest VM.
 
-- **The OVA file extension** is associated with Open Virtual Machine Format. Compared to the OVF file format, the OVA format contains all VM files and *.ovf files compressed into one single OVA archive file instead of many files in a folder.
+- **The OVA file extension** is associated with Open Virtual Machine Format. Compared to the OVF file format, the OVA format contains all VM files and `*.ovf` files compressed into one single OVA archive file instead of many files in a folder.
 
 ## Downloading the OVF Tool
 
@@ -62,7 +62,7 @@ The basic syntax to do this using the OVF Tool is:
 
 Refer to the OVF Tool User Guide for further commands and switches.
 
-## Importing a .vmx file to a vApp template in vCloud Director
+## Importing a .vmx file to a vApp template
 
 To import a `.vmx` file:
 
@@ -90,7 +90,7 @@ To import a `.vmx` file:
 
     - `username` is your UKCloud Portal user ID
 
-    - `apiURL` is your vCloud Director API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+    - `apiURL` is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access VMware Cloud Director/vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
 
     - `computeServiceID` is the ID of your UKCloud compute service (sometimes also called an org or vOrg)
 
@@ -107,9 +107,9 @@ To import a `.vmx` file:
 
 4. The `.vmx` file is uploaded as a vApp template into your environment.
 
-    In vCloud Director, expand the *Recent Tasks* section to check the status.
+    In VMware Cloud Director/vCloud Director, expand the *Recent Tasks* panel to check the status.
 
-## Importing an .iso file to a vApp template in vCloud Director
+## Importing an .iso file to a vApp template
 
 To upload an ISO image:
 
@@ -127,13 +127,13 @@ To upload an ISO image:
 
     - `username` is your UKCloud Portal user ID
 
-    - `apiURL` is your vCloud Director API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+    - `apiURL` is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access VMware Cloud Director/vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
 
     - `targetVDC` is the VDC where you want to upload the file
 
     - `computeServiceID` is the ID of your UKCloud compute service (sometimes also called an org or vOrg)
 
-    - `name` is the name to display for the file in vCloud Director
+    - `name` is the name to display for the file in VMware Cloud Director/vCloud Director
 
     - `catalogID` is the ID of the catalog to which you want to upload the file
 

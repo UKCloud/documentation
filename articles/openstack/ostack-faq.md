@@ -73,7 +73,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 ### What instance sizes are available?
 
-UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
+UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
 
 Check the [*Service Definition*](ostack-sd.md) for more details on the currently available sizes.
 
@@ -163,7 +163,7 @@ UKCloud doesn't provide SSL certificates, but you can use your existing ones.
 
 Some government secure networks (such as PSN and HSCN) provide SSL certificates as part of their service.
 
-### Do you offer Load Balancing as a Service (LBaaS)? 
+### Do you offer Load Balancing as a Service (LBaaS)? 
 
 The answer to this depends on which of UKCloud's OpenStack platforms you are using:
 
@@ -216,7 +216,7 @@ You can detach persistent block storage volumes from one instance then attach th
 
 You can allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.
 
-### Is instance storage persistent? 
+### Is instance storage persistent? 
 
 No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.
 
@@ -400,9 +400,7 @@ For the Elevated OFFICIAL platform, security requirements are stricter and requi
 
 ### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place periodically and at a time which aims to minimise customer impact. We provide customers with at least 14 days' advance notice of planned maintenance.
-
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Friday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ### Can UKCloud provide notifications for service status and maintenance?
 
@@ -484,10 +482,6 @@ UKCloud charges a nominal monthly fee per instance being protected by this servi
 
 You can find pricing details in the OpenStack section of the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
-### Are there any additional fees for the TrilioVault self-service backup and restoration service?
-
-This service utilises UKCloud's [*Multi-Cloud Backup Storage*](../other/other-sd-mcbs.md) (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
-
 ### Can I use my own backup software?
 
 Yes, you simply install appropriate backup software within your project and specify the backup location.
@@ -517,8 +511,6 @@ Historic billing information is available via the UKCloud Portal.
 ### How can I pay for the services?
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
-
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### How are snapshots charged?
 
@@ -556,7 +548,7 @@ For more information, see the Cross Domain Security Zone documentation.
 
 ### Is there a protective monitoring service?
 
-Protective monitoring is included for our IaaS platform and follows GPG 13.
+Protective monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 

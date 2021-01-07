@@ -1,7 +1,5 @@
 - name: FAQs
   items:
-  - name: Credit card payment FAQ
-    href: other-faq-credit-card.md
   - name: Enterprise & Private Sector FAQs
     href: other-faq-eps.md
   - name: G-Cloud 12 enhancements and additions
@@ -12,16 +10,12 @@
     href: other-faq-jumpstart.md
   - name: MISO rebate FAQs
     href: other-faq-miso-rebate.md
-  - name: Multi-Cloud Backup Storage FAQs
-    href: other-faq-mcbs.md
   - name: Service Level Agreement FAQs
     href: other-faq-sla.md
   - name: UKCloud FAQs
     href: other-faq-ukcloud.md
 - name: How To
   items:
-  - name: Connect to MCBS using Data Domain BoostFS
-    href: other-how-connect-mcbs.md
   - name: Contribute to the UKCloud Knowledge Centre
     href: other-how-contribute-knowledge.md
   - name: Subscribe to service status notifications
@@ -40,6 +34,8 @@
     href: other-ref-cloud-economics.md
   - name: Data centre advance notice requirements
     href: other-ref-dc-notice.md
+  - name: Discount and purchase schemes
+    href: other-ref-discount-schemes.md
   - name: External security review testing
     href: other-ref-external-security-review-testing.md
   - name: Glossary
@@ -60,6 +56,8 @@
     href: other-ref-ukcloud-monitoring.md
   - name: Protective Monitoring from UKCloud
     href: other-ref-promon.md
+  - name: Service maintenance windows
+    href: other-ref-maintenance-windows.md
   - name: Services at a glance
     href: other-ref-product-overview.md
   - name: Services by region
@@ -92,10 +90,6 @@
     href: other-ref-gib.md
   - name: Understanding your invoice evidence file
     href: other-ref-invoice-evidence-file.md
-- name: Service Information
-  items:
-  - name: Multi-Cloud Backup Storage Service Definition
-    href: other-sd-mcbs.md
 - name: Service Scope
   items:
   - name: Free trials Service Scope

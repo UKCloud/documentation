@@ -17,7 +17,7 @@ toc_mdlink: vmw-home.md
 
 # UKCloud for VMware
 
-UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware technology, that enables you to either migrate existing workloads or create new workloads on our secure sovereign cloud platform quickly and easily whilst enjoying the economies of scale of the cloud. Using a familiar interface and structure for customers having virtualised using VMWare, it offers native backup and disaster recovery, storage options, all government network connectivity, and self-provisioning of VDCs and VMs. It's billed hourly with no minimum contracts and supported free of charge.
+UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware technology, that enables you to either migrate existing workloads or create new workloads on our secure sovereign cloud platform quickly and easily whilst enjoying the economies of scale of the cloud. Using a familiar interface and structure for customers having virtualised using VMware, it offers native backup and disaster recovery, storage options, all government network connectivity, and self-provisioning of VDCs and VMs. It's billed hourly with no minimum contracts and supported free of charge.
 
 ## Let's get started
 

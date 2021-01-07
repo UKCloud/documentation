@@ -55,7 +55,7 @@ This service is only available with our internet connectivity.
 
 ## An SLA you can trust
 
-We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the [*SLA defintion*](../other/other-ref-sla-definition.md).
+We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the [*SLA definition*](../other/other-ref-sla-definition.md).
 
 ## The small print
 

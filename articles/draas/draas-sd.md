@@ -59,7 +59,7 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 Due to the service being dependent on connectivity between the customer data centre and UKCloud, we are unable to offer an SLA relating to the performance of this service.
 
-For full details on the service SLA for our UKCloud for VMware service, including measurements and service credits, see the [*SLA defintion*](../other/other-ref-sla-definition.md).
+For full details on the service SLA for our UKCloud for VMware service, including measurements and service credits, see the [*SLA definition*](../other/other-ref-sla-definition.md).
 
 ## The small print
 

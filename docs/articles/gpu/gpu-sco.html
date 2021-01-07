@@ -93,6 +93,10 @@
                   
 <h1 id="cloud-gpu-service-scope">Cloud GPU Service Scope</h1>
 
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Cloud GPU has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Cloud GPU customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.</p>
+</div>
 <h2 id="about-this-document">About this document</h2>
 <p>This document describes the boundaries of the Cloud GPU service, along with the division of responsibilities between you and UKCloud, to facilitate the provisioning and ongoing use of the service.</p>
 <h2 id="about-cloud-gpu">About Cloud GPU</h2>
@@ -165,7 +169,7 @@
 <p>The Service Level Agreement for Cloud GPU is 99.90%.</p>
 <p>Unavailability applies to the inability to connect to a new GPU resource in the event of a failure of a GPU service within a single zone. Failure condition is following a hardware fault recognised at the Infrastructure layer or below, and within UKCloud-controlled components.</p>
 <p>The SLA of 99.90% supersedes any other SLA relating to the VM that the GPU is associated with.</p>
-<p>Emergency and planned maintenance is excluded from calculations.</p>
+<p>Planned and Emergency Maintenance are excluded from calculations.</p>
 <p>You are entitled to claim Service Credits for outages to services where the SLA falls below 99.90%. For more about how we calculate SLAs, see the <a href="../other/other-ref-sla-definition.html"><em>SLA Definition</em></a>.</p>
 <h2 id="service-background">Service background</h2>
 <h3 id="the-following-applies-to-the-cloud-gpu-service">The following applies to the Cloud GPU service</h3>
@@ -207,7 +211,7 @@
 <p>All networks available to the UKCloud for VMware platform are available for GPU-enabled VMs.</p>
 <p>A full overview of the connectivity options and network architecture is available in <a href="../vmware/vmw-ref-connectivity-options.html"><em>Understanding connectivity options in UKCloud for VMware</em></a>.</p>
 <h2 id="protective-monitoring">Protective monitoring</h2>
-<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.</p>
+<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.</p>
 <p>We do not provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to monitor at this level.</p>
 <p>In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.</p>
 <h2 id="platform-management">Platform management</h2>
@@ -237,11 +241,7 @@
 <p>As previously mentioned, your Service Delivery Manager (SDM) will provide any assistance during the provisioning of the service.</p>
 <p>UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.</p>
 <h2 id="service-constraints">Service constraints</h2>
-<p>UKCloud will adhere to the following in terms of maintenance windows:</p>
-<p>&quot;Planned Maintenance&quot; means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide you with at least fourteen (14) days' advance notice of the Planned Maintenance if you will be affected.</p>
-<p>If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.</p>
-<p>&quot;Emergency Maintenance&quot; means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall: a) provide affected customers with at least six (6) hours' advance notice and b) carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.</p>
-<p>If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.</p>
+<p>For information about Planned and Emergency Maintenance, see <a href="../other/other-ref-maintenance-windows.html"><em>Understanding UKCloud service maintenance windows</em></a>.</p>
 <p>You should be aware of some of the limitations of parts of the SLA. The disruptive nature of GPU hardware failures means that in the event of a GPU hardware failure, the VM will also fail.</p>
 <p>In this event, UKCloud will be responsible for connecting the VM to another available GPU inside the zone. If there are no GPU hosts available inside a zone for connection to, an SLA event will be triggered.</p>
 <p>You should be aware that by adding a Cloud GPU to a VM, the SLA for the core compute service is replaced for that VM.</p>

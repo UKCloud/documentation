@@ -159,9 +159,7 @@ The secure online [UKCloud Portal](https://portal.ukcloud.com/login) provides mo
 
 ### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place periodically and at a time that aims to minimise customer impact. We provide customers with at least 14 days' advance notice of planned maintenance.
-
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Friday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ### Can UKCloud provide notifications for service status and maintenance?
 
@@ -213,7 +211,7 @@ Any customer data that UKCloud collects as part of this service will never leave
 
 ### Is there a protective monitoring service?
 
-Protective monitoring is included with all our IaaS platforms and follows GPG 13.
+Protective monitoring is included with all our IaaS platforms and follows GPG 13.
 
 ## Feedback
 

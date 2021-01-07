@@ -17,6 +17,9 @@ toc_mdlink: gpu-faq.md
 
 # Cloud GPU FAQs
 
+> [!IMPORTANT]
+> Cloud GPU has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Cloud GPU customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ## General
 
 ### What is Cloud GPU?
