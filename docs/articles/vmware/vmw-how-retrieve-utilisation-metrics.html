@@ -116,7 +116,7 @@
 <p>You can retrieve current utilisation metrics for VMs in all UKCloud regions; you can retrieve historic metrics for VMs in regions 5 and 6.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You can also find utilisation metrics for a VM in VMware Cloud Director/vCloud Director by selecting <strong>Details</strong> and expanding the <em>Monitoring Chart</em> section.</p>
+<p>You can also find utilisation metrics for a VM in VMware Cloud Director by selecting <strong>Details</strong> and expanding the <em>Monitoring Chart</em> section.</p>
 </div>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To retrieve the utilisation metrics using the API, you must be logged into the vCloud API as an administrator, Catalog Author or vApp Author.</p>
@@ -125,7 +125,7 @@
 <p>You can retrieve current utilisation metrics for VMs in all regions.</p>
 <ol>
 <li><p>Log in to the vCloud API.</p>
-<p>For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director/vCloud Director through the vCloud API</em></a>.</p>
+<p>For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>.</p>
 </li>
 <li><p>Send the following request to the vCloud API to retrieve the current utilisation metrics for the VM.</p>
 <pre><code class="lang-none">GET https://&lt;vcloud_api_url&gt;/api/vApp/&lt;vm_id&gt;/metrics/current
@@ -146,7 +146,7 @@
 </tr>
 <tr>
 <td><code>vm_id</code></td>
-<td>The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in VMware Cloud Director/vCloud Director</td>
+<td>The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in VMware Cloud Director</td>
 <td><code>vm-12345678-aaaa-bbbb-cccc-1234567890ab</code></td>
 </tr>
 </tbody>
@@ -199,7 +199,7 @@
 <p>You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.</p>
 <ol>
 <li><p>Log in to the vCloud API.</p>
-<p>For more information, see <a href="vmw-how-access-vcloud-api.html">How to access VMware Cloud Director/vCloud Director through the vCloud API</a>.</p>
+<p>For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>.</p>
 </li>
 <li><p>Send the following request to the vCloud API to retrieve the historic utilisation metrics for the VM.</p>
 <pre><code class="lang-none">GET https://&lt;vcloud_api_url&gt;/api/vApp/&lt;vm_id&gt;/metrics/historic
@@ -220,7 +220,7 @@
 </tr>
 <tr>
 <td><code>vm_id</code></td>
-<td>The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in VMware Cloud Director/vCloud Director</td>
+<td>The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in VMware Cloud Director</td>
 <td><code>vm-12345678-aaaa-bbbb-cccc-1234567890ab</code></td>
 </tr>
 </tbody>

@@ -109,7 +109,7 @@ workloads:</p>
 </ul>
 <p>This article provides an introduction for how to use Cloud GPU for compute workloads and describes the tasks you need to perform to get the service up and running for UKCloud for VMware.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.</p>
+<p>To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director.</p>
 <h2 id="cloud-gpu-overview">Cloud GPU overview</h2>
 <p>We offer two GPU variants for use with our cloud platform:</p>
 <table>
@@ -208,21 +208,11 @@ workloads:</p>
 <li><p>On the <em>vCloud Director</em> tab, enter your password and click <strong>Confirm</strong>.</p>
 <p><img src="images/vmw-portal-vcd-login.png" alt="vCloud Director tab in the UKCloud Portal"></p>
 </li>
-<li><p>In the VMware Cloud Director/vCloud Director menu, select <strong>Libraries</strong>.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>In vCloud Director 9.7, click the menu icon (three lines) to access the menu.</p>
-</div>
+<li><p>In the VMware Cloud Director menu, select <strong>Libraries</strong>.</p>
 </li>
 <li><p>In the left navigation panel, under <em>Content Libraries</em>, select <strong>vApp Templates</strong>.</p>
 </li>
-<li><p>Create a vApp from the <strong>GPGPU</strong> template for your preferred operating system (for example <strong>CentOS7x64-GPGPU-Blank</strong>).</p>
-<ul>
-<li><p>In vCloud Director 9.7, click the triple-dot icon next to the template and select <strong>Create vApp</strong>.</p>
-</li>
-<li><p>In VMware Cloud Director 10.1, select radio button for the template and click <strong>Create vApp</strong>.</p>
-</li>
-</ul>
+<li><p>Create a vApp from the <strong>GPGPU</strong> template for your preferred operating system by selecting the radio button for the template (for example <strong>CentOS7x64-GPGPU-Blank</strong>) and clicking <strong>Create vApp</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The GPGPU templates provide a shell VM with no disks attached, hence no operating system installed. You'll need to add the necessary disks so that you can install your preferred operating system on the VM.</p>
@@ -243,7 +233,7 @@ workloads:</p>
 <li><p>On the <em>Ready to Complete</em> page, review your settings and then click <strong>Finish</strong> to start the deployment.</p>
 <p>You can check progress by expanding the <em>Recent Tasks</em> section.</p>
 </li>
-<li><p>After the VM has been deployed, from the main menu, select <strong>Datacenters</strong> (vCloud Director 9.7) or <strong>Data Centres</strong> (VMware Cloud Director 10.1).</p>
+<li><p>After the VM has been deployed, from the main menu, select <strong>Data Centres</strong>.</p>
 </li>
 <li><p>Select your VDC, then in the card for your newly-deployed VM, select <strong>Details</strong>.</p>
 </li>

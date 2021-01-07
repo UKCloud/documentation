@@ -301,7 +301,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 <p>Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint. For storage information, use the vCloud Director API.</p>
+<p>The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint. For storage information, use the vCloud API.</p>
 </div>
 <h3 id="request-3">Request</h3>
 <h4 id="request-body-3">Request body</h4>
@@ -369,7 +369,7 @@ cookies = resp.env[:response_headers]['set-cookie']
             {
               &quot;VMs&quot;: [
                 {
-                  “_id”: 2
+                  &quot;_id&quot;: 2
                   &quot;billedHoursPoweredOff&quot;: 0,
                   &quot;billedHoursPoweredOn&quot;: 0,
                   &quot;estimatedMonthlyTotal&quot;: &quot;0.00&quot;,
@@ -727,7 +727,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 <p>Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint. For storage information, use the vCloud Director API.</p>
+<p>The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the <a href="#get-apibillingbilling-csv"><em>GET /api/billing/billing-csv</em></a> endpoint. For storage information, use the vCloud API.</p>
 </div>
 <h3 id="request-4">Request</h3>
 <h4 id="request-body-4">Request body</h4>
@@ -852,7 +852,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
 <h4 id="response-body-5">Response body</h4>
-<p>Returns an array of vCloud Director API credentials.</p>
+<p>Returns an array of vCloud API credentials.</p>
 <h4 id="example-response-5">Example response</h4>
 <pre><code>{
   &quot;UKCloud Demo (1-1-1-9836cf)&quot;: {
@@ -867,7 +867,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 </code></pre>
 <h3 id="json-schema-2">JSON schema</h3>
 <pre><code>{
-  &quot;description&quot;:&quot;The vCloud Director API credentials for a given account&quot;,
+  &quot;description&quot;:&quot;The vCloud API credentials for a given account&quot;,
   &quot;type&quot;: &quot;object&quot;,
   &quot;patternProperties&quot;: {
     &quot;^.*\\(\\d+-\\d+-\\d+-[a-zA-Z0-9]{5,6}\\)$&quot;: {
