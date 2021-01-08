@@ -1,6 +1,6 @@
 ---
-title: UKCloud for OpenShift
-description: Home page for UKCloud for OpenShift
+title: UKCloud for Managed OpenShift
+description: Home page for UKCloud for Managed OpenShift
 services: openshift
 author: Sue Highmoor
 reviewer:
@@ -10,14 +10,14 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for OpenShift
+toc_title: UKCloud for Managed OpenShift
 toc_fullpath: About/oshift-home.md
 toc_mdlink: oshift-home.md
 ---
 
-# UKCloud for OpenShift
+# UKCloud for Managed OpenShift
 
-UKCloud for OpenShift delivers a secure, private deployment of Red Hat&reg; OpenShift Container Platform, enabling developers to use build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud native applications and accelerate digital transformation.
+UKCloud for Managed OpenShift delivers a secure, private deployment of Red Hat&reg; OpenShift Container Platform, enabling developers to use build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud native applications and accelerate digital transformation.
 
 ## Let's get started
 
@@ -46,7 +46,7 @@ First, take a look at our [Getting Started Guide](oshift-gs.md) to learn the bas
 
 ## Still have questions?
 
-Find answers to common questions in our [UKCloud for OpenShift FAQ](oshift-faq.md).
+Find answers to common questions in our [UKCloud for Managed OpenShift FAQ](oshift-faq.md).
 
 ## Get in touch
 
