@@ -1,6 +1,6 @@
 ---
-title: How to access syslog data for your advanced gateway
-description: Explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your advanced gateway
+title: How to access syslog data for your edge gateway
+description: Explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your edge gateway
 services: vmware
 author: shighmoor
 reviewer: lthangarajah
@@ -11,12 +11,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Access syslog data for your advanced gateway
+toc_title: Access syslog data for your edge gateway
 toc_fullpath: How To/vmw-how-access-syslog-data-adv.md
 toc_mdlink: vmw-how-access-syslog-data-adv.md
 ---
 
-# How to access syslog data for your advanced gateway
+# How to access syslog data for your edge gateway
 
 ## Overview
 
@@ -57,7 +57,7 @@ The simplest scenario is to gather syslog data from a single NSX edge into one c
 
 1. Create a new routed network with the following details:
 
-    - **Org Network Name:** Customer defined
+    - **Name:** Customer defined
 
     - **Gateway:** `100.127.255.249`
 
@@ -97,10 +97,6 @@ If you have multiple NSX edges under a single NFT, you can gather the data from 
 
 4. On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:
 
-    - **Applied On:** *`nft_network`*
-
-    - **Name:** Syslog traffic (or any other name you prefer)
-
     - **Network:** `100.127.255.248/29`
 
     - **Next Hop IP:** The TRANSIT IP address of the syslog edge
@@ -118,7 +114,7 @@ If you have multiple NSX edges under a single NFT, you can gather the data from 
 
 After setting up your syslog collector, you need to make sure that your NSX edge sends network traffic to the log.
 
-1. In the VMware Cloud Director, select the VDC to which the NSX edge belongs.
+1. In VMware Cloud Director, select the VDC to which the NSX edge belongs.
 
 2. In the left navigation panel, under *Networking*, select **Edges**.
 
