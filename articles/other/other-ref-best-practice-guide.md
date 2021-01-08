@@ -97,7 +97,7 @@ Your edge gateway is globally configured to send syslog messages to a specific I
 
 - Load balancer health
 
-For more information, see [*How to access syslog data for your advanced gateway*](../vmware/vmw-how-access-syslog-data-adv.md).
+For more information, see [*How to access syslog data for your edge gateway*](../vmware/vmw-how-access-syslog-data-adv.md).
 
 ### Choosing the appropriate compute sizing
 

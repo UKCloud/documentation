@@ -88,7 +88,7 @@ To create a firewall rule:
 
 11. If you have a syslog server configured, select the **Enable logging** check box.
 
-    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
+    For more information about syslog servers, see [*How to access syslog data for your edge gateway*](vmw-how-access-syslog-data-adv.md).
 
 12. Click **Save changes**.
 
