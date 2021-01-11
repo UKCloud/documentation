@@ -4,7 +4,7 @@ description: Provides information regarding DNS zone forwarding which can be con
 services: openshift
 author: Kieran O'Neill
 reviewer: 
-lastreviewed:
+lastreviewed: 25/11/2020
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v4.x
@@ -30,29 +30,31 @@ This article is best aimed at those with OpenShift deployments with connectivity
 
 The DNS operator inside OpenShift runs a CoreDNS daemonset and creates a service for the daemonset. Pods are instructed to use the CoreDNS service IP for name resolution. 
 
-If there is a server block configured for the zone being resolved then requests will be forwarded on to those resolvers. If there are no matching server blocks then the request will fall back to the servers specified in /etc/resolv.conf. The nodes will always be configured to have name servers able to resolve names on the external network your cluster is deployed to (e.g. internet, community networks).
+If there is a server block configured for the zone being resolved, requests will be forwarded on to those resolvers. If there are no matching server blocks, the request will fall back to the servers specified in `/etc/resolv.conf`. The nodes will always be configured to have name servers able to resolve names on the external network your cluster is deployed to (for example, internet or community networks).
 
 ## Identifying forward zones
 
-A zone is a domain (for example domain.com) and configuring a forward zone will forward any DNS queries received for that domain and all sub-domains to the configured IP address. This allows different domains to be resolved by separate DNS servers at a granular level if required.
+A zone is a domain (for example, `domain.com`) and configuring a forward zone will forward any DNS queries received for that domain, and all sub-domains, to the configured IP address. This allows different domains to be resolved by separate DNS servers at a granular level if required.
 
-In OpenShift deployments with connectivity to a private network, you may want to resolve a pre-existing internal zone using a private resolver, instead of forwarding these requests to an external service (and therefore routing traffic over an external network). This gives you the benefit of being able to locate private services that may otherwise be restricted or inaccessible from these networks. Examples of services that could be consumed from OpenShift include: container image registry, binary repository, version control system.
+In OpenShift deployments with connectivity to a private network, you may want to resolve a pre-existing internal zone using a private resolver, instead of forwarding these requests to an external service (and therefore routing traffic over an external network). This gives you the benefit of being able to locate private services that may otherwise be restricted or inaccessible from these networks. Examples of services that could be consumed from OpenShift include: container image registry, binary repository or version control system.
 
 ## Requesting DNS zone forwarding
 
 You can provide any zones that you want to forward DNS requests for (including the IPs of the corresponding DNS resolvers) as part of a deployment request provided your environment has connectivity to a private network.
 
-We will test that queries are being replied to as expected and assist you in diagnosing issues. You may need to make firewall changes to permit your OpenShift cluster to both send DNS queries and to access the desired services.
+We'll test that queries are being replied to as expected and assist you in diagnosing issues. You may need to make firewall changes to permit your OpenShift cluster to both send DNS queries and to access the desired services.
 
 ## Implementing DNS zone forwarding
 
-You have the ability to implement your own zone forwarding by editing DNS operator config. The steps to add upstream servers of 10.0.0.1 and 10.0.0.2 on port 5353 for the zone example.com are as follows:
+You can implement your own zone forwarding by editing DNS operator config. The steps to add upstream servers of `10.0.0.1` and `10.0.0.2` on port `5353` for the zone `example.com` are as follows:
 
-1. `oc edit dns.operator/default` 
+1. Edit the DNS operator config:
 
-2. At the spec.servers level add the following yaml block:
+    `oc edit dns.operator/default` 
 
-```
+2. At the `spec.servers` level add the following yaml block:
+
+```yaml
 - name: example-dns
   zones: 
     - example.com
@@ -62,13 +64,13 @@ You have the ability to implement your own zone forwarding by editing DNS operat
       - 10.0.0.2:5353
 ```
 
-3. To verify the changes are successful you can view the dns-default configmap and ensure the forward zones are present as configured:
+3. To verify the changes are successful you can view the dns-default configmap to ensure the forward zones are present as configured:
 
-`oc get configmap/dns-default -n openshift-dns -o yaml`
+    `oc get configmap/dns-default -n openshift-dns -o yaml`
 
 ## Further information
 
-https://docs.openshift.com/container-platform/4.6/networking/dns-operator.html#nw-dns-forward_dns-operator
+<https://docs.openshift.com/container-platform/4.6/networking/dns-operator.html#nw-dns-forward_dns-operator>
 
 ## Feedback
 
