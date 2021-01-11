@@ -2,9 +2,10 @@
 title: Secure Remote Access Service Scope
 description: Outlines important details regarding UKCloud's Secure Remote Access (SRA) service
 services: sra
-author: Bart Challis
+author: bchallis
 reviewer: 
-lastreviewed: 
+lastreviewed: 30/08/2019
+
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
