@@ -156,7 +156,7 @@ Azure Stack Hub storage is all served from the same pool of disks and does not p
 
 - For some blob types, there is a difference in maximum storage between public Azure and Azure Stack Hub.
 
-- No guarantees around IOPs.
+- No guarantees around IOPS.
 
 - Use blob storage for queues to help deliver scalable micro-services.
 
