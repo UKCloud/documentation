@@ -96,7 +96,7 @@
 <h2 id="overview">Overview</h2>
 <p>This article explains how you can back up container directories and databases (specifically <a href="https://www.postgresql.org/">PostgreSQL</a>) to your localhost. It also goes through the process of how to restore from a backup.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>This article assumes that you have a UKCloud for OpenShift envrionment and can access it using the <a href="https://docs.openshift.com/container-platform/3.11/cli_reference/index.html#cli-reference-index">OpenShift Container Platform command line interface</a>.</p>
+<p>This article assumes that you have a UKCloud for Managed OpenShift envrionment and can access it using the <a href="https://docs.openshift.com/container-platform/3.11/cli_reference/index.html#cli-reference-index">OpenShift Container Platform command line interface</a>.</p>
 <p>This article uses the following two OC CLI commands:</p>
 <ul>
 <li><p><a href="https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html"><code>oc exec</code></a></p>
@@ -104,7 +104,7 @@
 <li><p><a href="https://docs.openshift.com/container-platform/3.11/dev_guide/copy_files_to_container.html#overview"><code>oc rsync</code></a></p>
 </li>
 </ul>
-<p>Begin by logging into your UKCloud for OpenShift envrionment using the following command:</p>
+<p>Begin by logging into your UKCloud for Managed OpenShift envrionment using the following command:</p>
 <pre><code class="lang-bash">oc login --server {server} --token {token here}
 </code></pre>
 <div class="TIP">
