@@ -5,13 +5,13 @@ services: enablement
 author: Sue Highmoor
 reviewer: ljames
 lastreviewed: 11/12/2020
-toc_rootlink: Reference
+toc_rootlink: About
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Cloud Enablement services
-toc_fullpath: Reference/enbl-ref-services.md
+toc_fullpath: About/enbl-ref-services.md
 toc_mdlink: enbl-ref-services.md
 ---
 
@@ -36,6 +36,10 @@ Other enablement services that we provide to help you work with our cloud platfo
 - Data Transfer Facility - Enables you to use the secure network connections at our Farnborough office to manage systems or transfer data into or out of your environments. For more information, see the [*Data Transfer Facility Service Scope*](enbl-sco-dtf.md).
 
 - Mass Data Transfer - Enables you to move virtualised environments, in the form of VMs, into or out of your UKCloud environment using your own NAS, HDD, or USB devices. For more information, see the [*Mass Transfer Facility Service Scope*](enbl-sco-mtf-nas.md).
+
+- Data Transfer - Region to Region - Enables you to move your UKCloud for VMware workloads between regions on the UKCloud platform. For more information, see the [*Data Transfer - Region to Region Service Scope*(enbl-sco-transfer-regions.md).
+
+- Data Transfer between Assured and Elevated - Enables you to move your workloads between the Assured and Elevated security domains to better meet sensitivity requirements. For more information, see the [*Data Transfer between Assured and Elevated Service Scope*](enbl-sco-transfer-assured-elevated.md).
 
 - Smart Hands - This service can be used for a number of different requirements such as a physical 'push-button' task, replacing hardware and checking equipment statuses. For more information, see the [*Smart Hands Service Scope*](enbl-sco-smart-hands.md).
 
