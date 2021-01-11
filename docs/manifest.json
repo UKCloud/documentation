@@ -532,15 +532,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-ref-overview.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "YWpmtwgFcYTsy38gNf8Y1w=="
+          "hash": "JhcETQe5/r0BuyzMk+xDqw=="
         }
       },
       "is_incremental": false,
