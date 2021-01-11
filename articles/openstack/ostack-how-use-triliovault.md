@@ -50,7 +50,7 @@ Before starting to use TrilioVault, it is necessary to know a few commonly used 
 
 ## Getting Started
 
-If you are currently using a SSO enabled account to access the OpenStack platform, and you wish to make use of the TrilioVault service, please raise a support ticket and request a Keystone account for Trilio management.
+If you are currently using an SSO-enabled account to access the OpenStack platform and you want to make use of the TrilioVault service,  raise a support ticket and request a Keystone account for Trilio management.
 
 ### TrilioVault Dashboard
 
