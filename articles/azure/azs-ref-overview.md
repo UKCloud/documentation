@@ -93,7 +93,7 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
   
   - VMAccessAgent  v2.4.4 & v2.0
   
-  - SqlIaaSAgent  v1.2.30.0
+  - SqlIaaSAgent  v1.3.20370
   
   - DSC  v2.77.0.0 & v2.19.0.0
   
@@ -107,15 +107,19 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
   
   - MicrosoftMonitoringAgent  v1.0.11081.5 & v1.0.10900.0
 
-  - OmsAgentForLinux  v1.8.11 & v1.12
+  - OmsAgentForLinux  v1.13.27 & v1.8.11
 
-  - DependencyAgentLinux  v9.7.4
+  - DependencyAgentLinux  v9.10.6.11730
 
-  - DependencyAgentWindows  v9.7.4
+  - DependencyAgentWindows  v9.10.6.11730
 
   - LinuxDiagnostic  v3.0.121
 
-  - AmdGpuDriverWindows  v1.0.1.0
+  - AmdGpuDriverWindows  v1.0.4.0 & v1.0.1.0
+
+  - NvidiaGpuDriverLinux  v1.3.0.0
+
+  - NvidiaGpuDriverWindows  v1.3.1.0
 
   For an up-to-date list of the supported extensions, perform the following steps:
 
