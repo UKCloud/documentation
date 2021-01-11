@@ -8,7 +8,7 @@
     <title>How to create a virtual protection group </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual protection group ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -111,35 +111,48 @@
 <h2 id="creating-a-virtual-protection-group-in-the-zerto-self-service-portal-journaling-protection">Creating a virtual protection group in the Zerto Self-Service Portal (Journaling Protection)</h2>
 <p>If you're creating a VPG for Journaling Protection, you specify the vApp to protect and all the VMs in that vApp are included in the VPG.</p>
 <ol>
-<li><p>Log in to the ZSSP.</p>
+<li><p>Log in to the ZSSP using the ZSSP login link for the zone in which the VMs that you want to protect are located.</p>
 <p>For more detailed instructions, see <a href="vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a>.</p>
-<p>Use the ZSSP login link for the zone in which the VMs that you want to protect are located.</p>
 </li>
 <li><p>Select the <em>VPGs</em> tab and then click <strong>NEW VPG</strong>.</p>
-<p><img src="images/vpg-image-1.png" alt="VPGs"></p>
+<p><img src="images/vmw-zerto-btn-new-vpg.png" alt="NEW VPG option"></p>
 </li>
 <li><p>In the <em>Create VPG</em> dialog, specify the <strong>VPG Name</strong>.</p>
 <p>The name must be unique and contain no more than 80 characters.</p>
 </li>
-<li><p>From the <strong>Available VMs</strong> list, select the vApp that contains the VMs that you want to protect.</p>
+<li><p>Select the vApp that contains the VMs that you want to protect.</p>
 </li>
-<li><p>From the <strong>Recovery Site</strong> list, choose your target site.</p>
+<li><p>From the <strong>Recovery Site</strong> list, select your target site.</p>
 </li>
-<li><p>From the <strong>Org vDC</strong> list, choose the VDC in which you want to replicate the VMs.</p>
+<li><p>From the <strong>Org vDC</strong> list, select the VDC in which you want to replicate the VMs.</p>
 </li>
-<li><p>UKCloud provides a single <strong>Service Profile</strong>: <strong>System Service Profile</strong>.</p>
-<p><img src="images/vpg-image-2.png" alt="profile"></p>
+<li><p>From the <strong>Service Profile</strong> list, select one of the Journaling Protection service profiles, depending on the level of retention you require:</p>
+<ul>
+<li><p>Journaling Protection 2 Day Retention</p>
 </li>
-<li><p>Click <strong>SAVE</strong>.</p>
+<li><p>Journaling Protection 7 Day Retention</p>
+</li>
+<li><p>System Service Profile (for 14-day Journaling Protection)</p>
+<p>If your environment is in the Elevated OFFICIAL security domain, the service profile to use for 14-day Journaling Protection is called UKCloud Service Profile.</p>
+</li>
+<li><p>Journaling Protection 28 Day Retention</p>
+</li>
+</ul>
+<p><img src="images/vmw-zerto-create-vpg.png" alt="Create VPG dialog box"></p>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
 <p>At this point, the selected VMs are synchronised to the target site. This synchronisation between the source site and target site may take some time, depending on the size of the VMs.</p>
 <p>After the initial synchronisation, all the VMs in the VPG are fully protected and all write operations to those VMs are sent to the journal.</p>
 </li>
-<li><p>After the initial creation of your VPG, you need to edit it to determine what happens during disaster recovery.</p>
+<li><p>After the initial creation of your VPG, you need to edit it to determine what happens during recovery.</p>
 </li>
-<li><p>On the <em>VPGs</em> tab, click the pencil icon next to your <strong>VPG Name</strong>.</p>
-<p><img src="images/vpg-image-3.png" alt="VPG name"></p>
+<li><p>On the <em>VPGs</em> tab, select your VPG then click the three dots.</p>
+<p><img src="images/vmw-zerto-btn-vpg-options.png" alt="VPG options"></p>
 </li>
-<li><p>From the <strong>Priority</strong> list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.</p>
+<li><p>Select <strong>Edit VPG</strong></p>
+<p><img src="images/vmw-zerto-mnu-edit-vpg.png" alt="Edit VPG menu option"></p>
+</li>
+<li><p>On the <em>General</em> page of the <em>Edit VPG</em> dialog box, from the <strong>Priority</strong> list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.</p>
 <ul>
 <li><p><strong>High</strong> - Updates from VPGs with high priority are passed over the WAN first</p>
 </li>
@@ -148,57 +161,56 @@
 <li><p><strong>Low</strong> - Updates from VPGs with low priority use whatever bandwidth is left after the medium VPGs have used it</p>
 </li>
 </ul>
-<p><img src="images/vpg-image-4.png" alt="priority list"></p>
+<p><img src="images/vmw-zerto-edit-vpg-general.png" alt="Edit VPG - General page"></p>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>In the <em>VMs</em> page, you can see the VMs that are included in the VPG.</p>
-<p><img src="images/vpg-image-5.png" alt="VMs page"></p>
+<li><p>On the <em>VMs</em> page, you can see the VMs that are included in the VPG.</p>
+<p><img src="images/vmw-zerto-edit-vpg-vms.png" alt="Edit VPG - VMs page"></p>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>In the <em>REPLICATION</em> page, you can see the options you selected for the <strong>Recovery Site</strong> and <strong>Recovery Org vDC</strong>.</p>
-<p><img src="images/vpg-image-6.png" alt="recovery"></p>
+<li><p>On the <em>Replication</em> page, you can see the options you selected for the <strong>Recovery Site</strong> and <strong>Recovery Org vDC</strong>.</p>
+<p><img src="images/vmw-zerto-edit-vpg-replication.png" alt="Edit VPG - Replication page"></p>
 </li>
-<li><p>To change the <strong>Storage Profile</strong> used for the VMs in the VPG, click <strong>VM SETTINGS</strong>.</p>
-<p>You cannot change the <strong>Journal Size</strong> or <strong>Journal Warning Threshold</strong>.</p>
-<p>Click <strong>OK</strong> when you're done.</p>
-<p><img src="images/vpg-image-7.png" alt="journal size"></p>
+<li><p>To change the <strong>Storage Profile</strong> used for the VMs in the VPG, click <strong>VM Settings</strong>.</p>
+<p>You cannot change the <strong>Journal Hard Limit</strong> or <strong>Journal Warning Threshold</strong>.</p>
+<p><img src="images/vmw-zerto-edit-vpg-vm-settings.png" alt="Advanced VM Replication Settings"></p>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>When you're done, click <strong>OK</strong> then click <strong>Next</strong>.</p>
 </li>
-<li><p>The <em>STORAGE</em> page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).</p>
-<p><img src="images/vpg-image-8.png" alt="storage"></p>
+<li><p>The <em>Storage</em> page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).</p>
+<p><img src="images/vmw-zerto-edit-vpg-storage.png" alt="Edit VPG - Storage page"></p>
 <p>If you want to edit the storage settings for a VM, select the VM and then click <strong>EDIT SELECTED</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Make sure that the <strong>Thin</strong> checkbox is selected for all VMs.</p>
 </div>
 </li>
-<li><p>When you've finished setting the options for each of the VMs, click <strong>NEXT</strong>.</p>
+<li><p>When you've finished setting the options for each of the VMs, click <strong>Next</strong>.</p>
 </li>
-<li><p>In the <em>RECOVERY</em> page, from the <strong>Failover/Move Network</strong> list, choose the network to use in the target site for a live failover.</p>
+<li><p>On the <em>Recovery</em> page, from the <strong>Failover/Move Network</strong> list, choose the network to use in the target site for a live failover.</p>
 </li>
 <li><p>From the <strong>Failover Test Network</strong> list, choose the network to use in the target site for a test failover of VMs.</p>
 <p>If you select <strong>Isolated</strong>, the network interface controller (NIC) will not be connected to the VM when it's brought up in the target site.</p>
 </li>
 <li><p><strong>vCD Guest Customization</strong> controls whether the failed‑over VM is subject to guest customization to set its IP address inside its operating system.</p>
-<p><img src="images/vpg-image-9.png" alt="customization"></p>
+<p><img src="images/vmw-zerto-edit-vpg-recovery.png" alt="Edit VPG - Recovery page"></p>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>In the <em>NICs</em> page, specify the network interface controller (NIC) to use for the VMs after a live or test failover.</p>
+<li><p>On the <em>NICs</em> page, specify the network interface controller (NIC) to use for the VMs after a live or test failover.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If you specify different IP addresses (or use <strong>IP Pool</strong>) for the IP addresses here, you must enable <strong>vCD Guest Customization</strong> on the <em>RECOVERY</em> page.</p>
+<p>If you specify different IP addresses (or use <strong>IP Pool</strong>) for the IP addresses here, you must enable <strong>vCD Guest Customization</strong> on the <em>Recovery</em> page.</p>
 </div>
-<p><img src="images/vpg-image-10.png" alt="Ip pool"></p>
+<p><img src="images/vmw-zerto-edit-vpg-nics.png" alt="Edit VPG - NICs page"></p>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>The System Service Profile does not permit Backup Services, so click <strong>NEXT</strong> again.</p>
+<li><p>The UKCloud service profiles do not permit Long Term Retention Services, so click <strong>Next</strong> again.</p>
 </li>
-<li><p>In the <em>SUMMARY</em> page, review the options you have selected for the VPG and click <strong>DONE</strong> to create the VPG.</p>
+<li><p>On the <em>Summary</em> page, review the options you've selected for the VPG and click <strong>Done</strong> to create the VPG.</p>
 </li>
 </ol>
 <h2 id="creating-a-virtual-protection-group-in-zerto-virtual-manager-disaster-recovery-as-a-service-and-migration-to-the-cloud">Creating a virtual protection group in Zerto Virtual Manager (Disaster Recovery as a Service and Migration to the Cloud)</h2>
@@ -208,7 +220,7 @@
 </li>
 <li><p>Select the <strong>VPGs</strong> tab and then click <strong>NEW VPG</strong>.</p>
 </li>
-<li><p>On the <em>NEW VPG</em> page of the <em>Create VPG</em> dialog, specify the <strong>VPG Name</strong>.</p>
+<li><p>On the <em>New VPG</em> page of the <em>Create VPG</em> dialog, specify the <strong>VPG Name</strong>.</p>
 </li>
 <li><p>From the <strong>Priority</strong> list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.</p>
 <ul>
@@ -220,34 +232,47 @@
 </li>
 </ul>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>On the <em>VMs</em> page, select the VMs that you want to protect or migrate and then click <strong>NEXT</strong>.</p>
+<li><p>On the <em>VMs</em> page, select the VMs that you want to protect or migrate and then click <strong>Next</strong>.</p>
 </li>
-<li><p>On the <em>REPLICATION</em> tab, from the <strong>Recovery Site</strong> list, choose your UKCloud target site.</p>
+<li><p>On the <em>Replication</em> tab, from the <strong>Recovery Site</strong> list, choose your UKCloud target site.</p>
 </li>
 <li><p>From the <strong>Recovery Org vDC</strong> list, choose the VDC in which you want to replicate the VMs.</p>
 </li>
-<li><p>UKCloud provides a single <strong>Service Profile</strong>: <strong>System Service Profile</strong>.</p>
+<li><p>From the <strong>Service Profile</strong> list, select one of the service profiles, depending on the service and level of retention you require:</p>
+<ul>
+<li><p>DRaaS 2 Day Retention</p>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>DRaaS 7 Day Retention</p>
 </li>
-<li><p>The <em>STORAGE</em> page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).</p>
+<li><p>DRaaS 14 Day Retention</p>
 </li>
-<li><p>To change the <strong>Storage Profile</strong> used for the VMs in the VPG, click <strong>VM SETTINGS</strong>.</p>
-<p>If you want to edit the storage settings for a VM, select the VM and then click <strong>EDIT SELECTED</strong>.</p>
+<li><p>DRaaS 28 Day Retention</p>
+</li>
+<li><p>Migration to the Cloud 1 Day Retention</p>
+</li>
+</ul>
+</li>
+<li><p>To change the <strong>Storage Profile</strong> used for the VMs in the VPG, click <strong>VM Settings</strong>.</p>
+</li>
+<li><p>When you're done, click <strong>OK</strong> then click <strong>Next</strong>.</p>
+</li>
+<li><p>The <em>Storage</em> page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).</p>
+</li>
+<li><p>If you want to edit the storage settings for a VM, select the VM and then click <strong>EDIT SELECTED</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Make sure that the <strong>Thin</strong> checkbox is selected for all VMs.</p>
 </div>
 </li>
-<li><p>When you've finished setting the options for each of the VMs, click <strong>NEXT</strong>.</p>
+<li><p>When you've finished setting the options for each of the VMs, click <strong>Next</strong>.</p>
 </li>
-<li><p>In the <em>RECOVERY</em> page, from the <strong>Failover/Move Network</strong> list, choose the network to use in the target site for a live failover or move operation.</p>
+<li><p>In the <em>Recovery</em> page, from the <strong>Failover/Move Network</strong> list, choose the network to use in the target site for a live failover or move operation.</p>
 </li>
 <li><p>From the <strong>Failover Test Network</strong> list, choose the network to use in the target site for a test failover of VMs.</p>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
 <li><p>In the <em>NICs</em> page, specify the network interface controller (<strong>NIC</strong>) to use for the VMs after a live or test failover, or a move operation.</p>
 <div class="NOTE">
@@ -255,7 +280,7 @@
 <p>If you encounter issues with MAC addresses, edit each VM and set the <strong>MAC Address</strong> to <strong>Reset</strong> for both the <strong>Failover/Move</strong> and <strong>Test</strong> networks to assign a new address on failover or move.</p>
 </div>
 </li>
-<li><p>At this point, you can click <strong>DONE</strong> to create the VPG.</p>
+<li><p>At this point, you can click <strong>Done</strong> to create the VPG.</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
@@ -290,7 +315,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

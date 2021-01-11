@@ -21,7 +21,7 @@ toc_mdlink: prc-faq.md
 
 ### What is the service?
 
-Private Cloud is a single-tenant UKCloud for VMware service, where your compute or storage requirements are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated cloud platforms; or in your Crown Hosting Data Centre (CHDC); powered by VMware vCloud Director or OpenStack.
+Private Cloud is a single-tenant service, powered by VMware or OpenStack, where your compute or storage requirements are hosted either in one of our data centres (to gain the benefits of our Assured and Elevated cloud platforms) or in your Crown Hosting Data Centre (CHDC).
 
 ### How does Private Cloud differ from UKCloud for VMware?
 
@@ -71,9 +71,7 @@ For the Elevated OFFICIAL domain, the security requirements are much stricter an
 
 ### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days' advance notice of planned maintenance.
-
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Onboarding
 

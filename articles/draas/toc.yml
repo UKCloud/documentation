@@ -10,11 +10,15 @@
   items:
   - name: Troubleshooting Disaster Recovery to the Cloud
     href: draas-ref-troubleshooting.md
-- name: Service Definition
+- name: Service Information
   items:
-  - name: Disaster Recovery as a Service Service Definition
+  - name: Service Definition
     href: draas-sd.md
 - name: Service Scope
   items:
   - name: Disaster Recovery as a Service Service Scope
     href: draas-sco.md
+- name: Videos
+  items:
+  - name: Using Zerto Virtual Manager for DR testing
+    href: draas-vid-zerto-dr.md

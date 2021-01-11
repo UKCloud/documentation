@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to migrate edge configuration data to another edge </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to migrate edge configuration data to another edge ">
+    <meta name="generator" content="docfx 2.53.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/enablement/enbl-how-migrate-edge-config.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-migrate-edge-configuration-data-to-another-edge">How to migrate edge configuration data to another edge</h1>
+
+<h2 id="overview">Overview</h2>
+<p>When moving VMware workloads between regions on the UKCloud platform, if you want to apply same edge configuration data to an edge in the new region, you need to export edge configuration data to an XML file and then migrate that data to the new edge. As part of the migration, some aspects of the environment may change, therefore you'll need to edit the exported XML file to make those changes before applying the configuration to the new edge.</p>
+<p>While the migration of edge configuration is not a common process, there are certain activities that may require this to make the transition from one edge to another much simpler and quicker. The main reason this would likely be needed is when migrating workloads between regions, where, for the most part, the edge configuration needs to remain the same, but some amendments, such as a change in IP address, are required.</p>
+<p>This article explains how to use the vCloud API to export configuration from an NSX edge, make the necessary amendments and then apply this configuration to a different edge.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Before using the vCloud API to migrate edge configuration data, you should install a REST client to enable you to easily access the vCloud API and interact with the relevant endpoints. For information about installing a REST client, see <a href="../vmware/vmw-how-install-vcloud-api-rest-client.html"><em>How to install a REST client to access the vCloud API</em></a>. You can use an alternative API client if you prefer.</p>
+<p>You also need to obtain your API credentials. For more information, see <a href="../vmware/vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>.</p>
+<h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
+<p>To start interacting with the vCloud API, you first need to obtain an <code>x-vcloud-authorization</code> token; to do this you need to adjust some settings in RESTClient.</p>
+<ol>
+<li><p>In your browser, click the <strong>RESTClient</strong> icon.</p>
+<p><img src="images/vmw-firefox-restclient-icon.png" alt="RESTClient icon"></p>
+</li>
+<li><p>From the <strong>Method</strong> menu, select <strong>POST</strong>.</p>
+<p><img src="images/vmw-restclient-request-method-post.png" alt="POST request method"></p>
+</li>
+<li><p>In the <strong>API</strong> field, enter the API URL you recorded earlier and append the following:</p>
+<p><code>/api/sessions</code></p>
+<p><img src="images/vmw-restclient-api-url.png" alt="API URL"></p>
+</li>
+<li><p>Next, add a Basic Authentication header. To do this, from the <strong>Authentication</strong> menu at the top of the REST Client, select <strong>Basic Authentication</strong>.</p>
+<p><img src="images/vmw-restclient-basic-authentication.png" alt="Basic Authentication menu option"></p>
+</li>
+<li><p>In the <em>Basic Authentication</em> dialog box, in the <strong>Username</strong> field, enter your API username recorded earlier from the API page.</p>
+</li>
+<li><p>In the <strong>Password</strong> field enter your UKCloud Portal password and then click <strong>Okay</strong>.</p>
+<p><img src="images/vmw-restclient-authentication-details.png" alt="Basic Authentication dialog box"></p>
+</li>
+<li><p>The <em>Request</em> section now includes an Authorization header.</p>
+<p><img src="images/vmw-restclient-authentication-header.png" alt="Authorization header"></p>
+</li>
+<li><p>Next, add an Accept header. To do this, from the <strong>Headers</strong> menu, select <strong>Custom Header</strong>.</p>
+<p><img src="images/vmw-restclient-custom-header.png" alt="Custom Header menu option"></p>
+</li>
+<li><p>In the <em>Request Header</em> dialog box, in the <strong>Name</strong> field, enter <code>Accept</code></p>
+</li>
+<li><p>In the <strong>Value</strong> field enter <code>application/*+xml;version=32.0</code> and then click <strong>Okay</strong>.</p>
+<p><img src="images/vmw-restclient-request-headers.png" alt="Request Headers dialog box"></p>
+</li>
+<li><p>The <em>Headers</em> section should now be displayed, containing the Accept header.</p>
+<p><img src="images/vmw-restclient-accept-header.png" alt="Headers section with Accept header"></p>
+</li>
+<li><p>The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a <code>x-vcloud-authorization</code> token, so click the <strong>Send</strong> button.</p>
+</li>
+<li><p>When a response is received, the <strong>Headers</strong> tab in the <em>Response</em> section will be populated, including an <code>x-vcloud-authorization</code> token.</p>
+<p><img src="images/vmw-restclient-authentication-token.png" alt="API response with authentication token"></p>
+</li>
+<li><p>The <code>x-vcloud-authorization</code> token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word <code>x-vcloud-authorization</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If at any point while following the instructions in this guide, the output displayed in the REST Client does not look similar to that shown in the images, you can use the value of the <strong>Status Code</strong> field to determine what went wrong and needs investigation. In this case above, the <strong>Status Code</strong> received was <code>HTTP 200 OK</code>, which means that the request succeeded. For a list of HTTP response codes, see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP Response Codes</a>.</p>
+</div>
+</li>
+<li><p>To add an <code>x-vcloud-authorization</code> header, from the <strong>Headers</strong> menu, select <strong>Custom Header</strong>.</p>
+</li>
+<li><p>In the <em>Request Header</em> dialog box, in the <strong>Name</strong> field enter <code>x-vcloud-authorization</code>.</p>
+</li>
+<li><p>In the <strong>Value</strong> field, paste the string of characters copied in the previous step, then click <strong>Okay</strong>.</p>
+<p><img src="images/vmw-restclient-request-headers-token.png" alt="Authorization token in request headers"></p>
+</li>
+<li><p>Now that you've obtained an <code>x-vcloud-authorization</code> token, you can remove the Basic Authentication Header. Click the <strong>x</strong> in the upper right-hand corner of the header.</p>
+<p><img src="images/vmw-restclient-basic-authentication-remove.png" alt="Remove basic authentication"></p>
+</li>
+</ol>
+<h2 id="retrieving-organisation-details-via-the-api">Retrieving organisation details via the API</h2>
+<p>Now that you've obtained an <code>x-vcloud-authorization</code> token, you can call the vCloud API to retrieve the information that you need about your organisation to extract your edge configuration data.</p>
+<ol>
+<li><p>Set the <strong>Method</strong> to <strong>GET</strong>.</p>
+<p><img src="images/vmw-restclient-method-get.png" alt="GET request method"></p>
+</li>
+<li><p>In the <em>Response</em> section, select the <strong>Preview</strong> tab.</p>
+<p>This view lists the links that you can use to drill down into the various objects exposed via the vCloud API. Of interest in the output below is a link that will, when queried, return details about the organisation and the objects contained within it.</p>
+<p><img src="images/vmw-restclient-get-vorg.png" alt="Link for retrieving compute service details"></p>
+<p>The link should look something like:</p>
+<p><code>https://&lt;api_url&gt;/api/org/&lt;org_id&gt;</code></p>
+</li>
+<li><p>Copy the URL and paste it into the Request <strong>URL</strong> field.</p>
+<p><img src="images/vmw-restclient-get-vorg-url.png" alt="API call to get compute service details"></p>
+</li>
+<li><p>Click <strong>Send</strong>.</p>
+<p>After a short amount of time the contents of the Response <strong>Preview</strong> tab will be updated to reflect the response from the vCloud API to your latest request, including links to each virtual data centre (VDC) in the organisation.</p>
+</li>
+</ol>
+<h2 id="retrieving-virtual-data-centre-details-via-the-api">Retrieving virtual data centre details via the API</h2>
+<p>When locating the VDC and exporting the edge configuration, perform this for both the existing environment and the new environment that you'll be migrating to.</p>
+<p>To retrieve details about the VDCs in an organisation:</p>
+<ol>
+<li><p>Copy the link for the VDC that contains the edge gateway.</p>
+<p>The link should look something like:</p>
+<p><code>https&gt;//&lt;api_url&gt;/api/vdc/&lt;vdc_id&gt;</code></p>
+</li>
+<li><p>Click <strong>Send</strong>.</p>
+<p>The contents of the Response <strong>Preview</strong> tab will be updated again.</p>
+</li>
+</ol>
+<h2 id="retrieving-edge-gateway-configuration-via-the-api">Retrieving edge gateway configuration via the API</h2>
+<p>To retrieve details of the edge gateway configuration:</p>
+<ol>
+<li><p>The response this time will probably be quite long. To easily locate a specific section in the response, use your browser's search utility. You can invoke this in Firefox by pressing <strong>CTRL+F</strong>. In the search dialog window at the bottom of the screen, enter <code>edgeGateways</code> and then click the down arrow button to locate a section that looks similar to the one shown below:</p>
+<p><code>&lt;Link rel=&quot;edgeGateways&quot; href=&quot;https://&lt;api_url&gt;/api/admin/vdc/&lt;vdc_id&gt;/edgeGateways&quot; type=&quot;application/vnd.vmware.vcloud.query.records+xml&quot; /&gt;</code></p>
+</li>
+<li><p>Copy the link ending in <code>/edgeGateways</code> and paste it into the URL field at the top of the RESTClient. Ensure that the <strong>Method</strong> drop down is set to <strong>GET</strong> and click <strong>Send</strong>.</p>
+<p>If this request is successful, the response will contain a link to the edge gateway which, when queried, will return the configuration of the edge gateway. Once you've received a response, use your browser's search utility to locate the <code>EdgeGatewayRecord</code> section within the response.</p>
+<p><code>&lt;EdgeGatewayRecord gatewayStatus=&quot;READY&quot; haStatus=&quot;UP&quot; isBusy=&quot;false&quot; name=&quot;&lt;edge_name&gt;&quot; numberOfExtNetworks=&quot;1&quot; numberOfOrgNetworks=&quot;8&quot; vdc=&quot;https://&lt;api_url&gt;/api/vdc/&lt;vdc_id&gt;&quot; href=&quot;https://&lt;api_url&gt;/api/admin/edgeGateway/&lt;edge_id&gt;&quot; task=&quot;https://&lt;api_url&gt;/api/task/&lt;task_id&gt;&quot; isSyslogServerSettingInSync=&quot;true&quot; taskOperation=&quot;networkConfigureEdgeGatewayServices&quot; taskStatus=&quot;success&quot; taskDetails=&quot; &quot; /&gt;</code></p>
+</li>
+<li><p>Within the <code>EdgeGatewayRecord</code> section of the above from the response, locate the link to the edge gateway that starts with the following:</p>
+<p><code>https://&lt;api_url&gt;/api/admin/edgeGateway/</code></p>
+</li>
+<li><p>At the end of the URL will be a unique identifier for the edge gateway within the VDC. Copy this link, paste it into the URL field and then click <strong>Send</strong>.</p>
+<p>After a short amount of time the current configuration of the edge gateway will be displayed in a block of XML.</p>
+</li>
+</ol>
+<h2 id="reviewing-and-updating-the-edge-gateway-configuration">Reviewing and updating the edge gateway configuration</h2>
+<p>The edge configuration information is contained between <code>&lt;Configuration&gt;</code> and <code>&lt;/Configuration&gt;</code> tags.</p>
+<p>This block of XML is split into sections that detail the configuration settings applied to a specific item, function or service available on the edge gateway.</p>
+<p>The example below shows a high‑level overview of the structure of the XML block returned:</p>
+<pre><code class="lang-xml">&lt;EdgeGateway&gt;
+   &lt;Configuration&gt;
+      &lt;GatewayBackingConfig&gt;
+      &lt;/GatewayBackingConfig&gt;
+      &lt;GatewayInterfaces&gt;
+      &lt;/GatewayInterfaces&gt;
+      &lt;EdgeGatewayServiceConfiguration&gt;
+         &lt;FirewallService&gt;
+         &lt;/FirewallService&gt;
+         &lt;NatService&gt;
+         &lt;/NatService&gt;
+         &lt;GatewayIpsecVpnService&gt;
+         &lt;/GatewayIpsecVpnService&gt;
+         &lt;StaticRoutingService&gt;
+         &lt;/StaticRoutingService&gt;
+         &lt;LoadBalancerService&gt;
+         &lt;/LoadBalancerService&gt;
+      &lt;/EdgeGatewayServiceConfiguration&gt;
+   &lt;/Configuration&gt;
+&lt;/EdgeGateway\&gt;
+</code></pre>
+<p>This is the configuration that you'll need to amend prior to posting it back to your new edge. Depending on your specific configuration and requirements, different sections of the configuration may or may not require editing. Copy and paste all of this configuration into a text editor, for example Notepad++, for editing.</p>
+<h3 id="configuration-that-must-be-changed">Configuration that must be changed</h3>
+<p>As you can see above, the edge XML configuration is split into each configurable item. When amending and applying the configuration, you may want to apply this section by section, rather than as a single XML block.</p>
+<h4 id="firewall-and-nat-rules">Firewall and NAT rules</h4>
+<p>When migrating configuration between edges, particularly when moving between regions, your external IP allocation will change. This means that any references to your externally assigned IP addresses within your edge configuration will need to be amended.</p>
+<p>You'll be assigned the same amount of external addresses as before, so we'd recommend pairing a new IP with each of your old IP addresses and then performing a find and replace to ensure all IPs are updated correctly.</p>
+<p>When you create NAT rules, they're applied to a single interface on the edge. Each interface is referenced within the configuration file as an <code>href</code> with its own interface ID. When applying the configuration to the new edge, these interface IDs will be different and will therefore need to be replaced. The interface name will also likely change. By exporting the configuration of the new edge as an XML file, you can identify the interface name and its <code>href</code> that the rules will need to be applied on.</p>
+<p>Providing you keep your private address ranges the same as your original environment, you should not need to make any changes to these within the new configuration.</p>
+<pre><code class="lang-xml">&lt;NatService&gt;
+     &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+         &lt;NatRule&gt;
+             &lt;Description&gt;&lt;/Description&gt;
+                 &lt;RuleType&gt;&lt;/RuleType&gt;
+                 &lt;IsEnabled&gt;&lt;/IsEnabled&gt;
+                 &lt;Id&gt;&lt;/Id&gt;
+                 &lt;GatewayNatRule&gt;
+                     &lt;Interface href=https://&lt;api_url&gt;/api/admin/network/&lt;interface-id&gt; name=&quot;nft00xxxxx&quot; type=&quot;application/vnd.vmware.admin.network+xml&quot; /&gt;
+                     &lt;OriginalIp&gt;x.x.x.x&lt;/OriginalIp&gt;
+                     &lt;TranslatedIp&gt;y.y.y.y&lt;/TranslatedIp&gt;
+                 &lt;/GatewayNatRule&gt;
+             &lt;/NatRule&gt;
+&lt;/NatService&gt;
+</code></pre>
+<h4 id="vpns-and-load-balancers">VPNs and load balancers</h4>
+<p>With your external IP allocation likely to change, this will also affect any configured VPNs and load balancers that you may have previously had on your original edge.</p>
+<p>For VPN configuration, you'll need to replace the interface references and names for your <strong>local</strong> networks. For the load balancer configuration, you'll need to replace the <strong>external</strong> network interface reference and name. As above, each of these interfaces have their own ID and <code>href</code> that you'll need to add to the new configuration. Exporting the XML configuration of the new edge will provide you with the required information for these new interfaces.</p>
+<p>Remember that when amending VPN configuration, and particularly the local endpoint IP address, you'll also need to make configuration changes on the peer side to mirror those amendments.</p>
+<p>If you're using a Pre-Shared Key (PSK) for IPsec VPN authentication, the key will not be exported as part of this configuration. You can retrieve the key either through the VMware Cloud Director GUI or by querying an additional API endpoint (see <a href="enbl-how-obtain-vpn-config.html"><em>How to obtain full IPsec VPN configuration via the vCloud API</em></a>).</p>
+<h2 id="applying-the-new-configuration">Applying the new configuration</h2>
+<p>When you've amended the configuration with the necessary elements of the new edge gateway, you can apply it to the edge gateway.</p>
+<p>To easily identify and resolve any possible issues when applying the configuration, posting the configuration to the edge in the individual configurable items may be easier. For example, apply the amended firewall rules, then apply the NAT rules and so on.</p>
+<p>The steps below outline how to apply the amended configuration to your new edge gateway:</p>
+<ol>
+<li><p>Enclose the new configuration in a pair of <code>&lt;EdgeGatewayServiceConfiguration&gt;</code> tags, for example:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;EdgeGatewayServiceConfiguration xmlns=&quot;http://www.vmware.com/vcloud/v1.5&quot;&gt;
+
+&lt;NatService&gt;
+    &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+        &lt;NatRule&gt;
+            &lt;Description&gt;&lt;/Description&gt;
+                &lt;RuleType&gt;&lt;/RuleType&gt;
+                &lt;IsEnabled&gt;&lt;/IsEnabled&gt;
+                &lt;Id&gt;&lt;/Id&gt;
+                &lt;GatewayNatRule&gt;
+                    &lt;Interface href=https://&lt;api_url&gt;/api/admin/network/&lt;interface-id&gt; name=&quot;nft00xxxxx&quot; type=&quot;application/vnd.vmware.admin.network+xml&quot; /&gt;
+                    &lt;OriginalIp&gt;x.x.x.x&lt;/OriginalIp&gt;
+                    &lt;TranslatedIp&gt;y.y.y.y&lt;/TranslatedIp&gt;
+                &lt;/GatewayNatRule&gt;
+        &lt;/NatRule&gt;
+&lt;/NatService&gt;
+
+&lt;/EdgeGatewayServiceConfiguration&gt;
+</code></pre>
+</li>
+<li><p>Copy and paste this configuration into the Request <em>Body</em> section of the RESTClient.</p>
+</li>
+<li><p>From the <strong>Method</strong> list, select <strong>POST</strong>.</p>
+</li>
+<li><p>Append the following to the URL of the <strong>new</strong> edge gateway in the <strong>URL</strong> field:</p>
+<p><code>/action/configureServices</code></p>
+<p>For example, if the original contents of the URL were:</p>
+<p><code>https://&lt;api_url&gt;/api/admin/edgeGateway/&lt;id&gt;</code></p>
+<p>The updated URL would be:</p>
+<p><code>https://&lt;api_url&gt;/api/admin/edgeGateway/&lt;id&gt;/action/configureServices</code></p>
+</li>
+<li><p>You must also add another header to the RESTClient prior to submitting the new configuration.</p>
+<p>From the <strong>Headers</strong> menu at the top of the RESTClient select <strong>Custom Header</strong>.</p>
+</li>
+<li><p>In the <strong>Name</strong> field, enter <strong>Content-Type</strong>.</p>
+</li>
+<li><p>In the <strong>Attribute Value</strong> field enter the following:</p>
+<p><code>application/vnd.vmware.admin.edgeGatewayServiceConfiguration+xml</code></p>
+</li>
+<li><p>Click <strong>Okay</strong>.</p>
+</li>
+<li><p>To submit the new configuration, click <strong>Send</strong>.</p>
+</li>
+<li><p>The status of the edge gateway as viewed from VMware Cloud Director will briefly show as <strong>Updating Configuration</strong>. Once this process has completed, click the edge gateway and select <strong>Configure Services</strong>.</p>
+</li>
+<li><p>In the <em>Configure Services</em> window, verify that the configuration has been applied successfully.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>If you need any further assistance, or if you want to discuss any aspect of this service or settings specific to your domain, log a support ticket via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

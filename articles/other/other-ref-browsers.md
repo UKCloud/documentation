@@ -27,23 +27,17 @@ To get the best interaction with the UKCloud platform, it's important to use a b
 
 ### UKCloud for VMware
 
-> [!NOTE]
-> You must enable Flash in your browser to access the vCloud Director Legacy UI (Web Console).
+#### VMware Cloud Director
 
-> [!NOTE]
-> The Microsoft Edge browser does not support plugins, so functions such as console redirection and OVF upload using the Legacy UI do not work with Edge. To perform these functions, you must use a different browser.
+VMware Cloud Director is compatible with the current major and previous major release of the following browsers:
 
-#### vCloud Director
+- Google Chrome
 
-vCloud Director 9.7 is compatible with the current and last major browser revisions. Version 9.7 of vCloud Director was tested by VMware and supports:
+- Mozilla Firefox
 
-- Google Chrome 72.0.3626.109
+- Microsoft Edge
 
-- Mozilla Firefox 60.5.1ESR
-
-- Microsoft Edge 42.17134.1.0
-
-- Microsoft Internet Explorer 11.590.171340
+- Microsoft Internet Explorer 11
 
 ### UKCloud for OpenStack
 
@@ -52,14 +46,6 @@ UKCloud for OpenStack is powered by OpenStack and uses the Horizon project to pr
 ### UKCloud for Microsoft Azure
 
 Interaction with UKCloud for Microsoft Azure is through the Azure Stack Hub portal. Microsoft recommends using the most up-to-date browser for your operating system.
-
-### Cloud GPU
-
-Cloud GPU has the same browser requirements as [UKCloud for VMware](#ukcloud-for-vmware).
-
-### High Performance Compute
-
-High Performance Compute has the same browser requirements as [UKCloud for VMware](#ukcloud-for-vmware).
 
 ### Email and Collaboration as a Service
 

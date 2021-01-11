@@ -8,7 +8,7 @@
     <title>How to export edge gateway configuration data using PowerShell </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to export edge gateway configuration data using PowerShell ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,10 +98,10 @@
 <h2 id="exporting-edge-gateway-configuration-data">Exporting Edge Gateway configuration data</h2>
 <ol>
 <li><p>Install PowerCLI from VMware:</p>
-<p><a href="https://code.vmware.com/web/tool/11.4.0/vmware-powercli">https://code.vmware.com/web/tool/11.4.0/vmware-powercli</a></p>
+<p><a href="https://code.vmware.com/web/tool/12.0.0/vmware-powercli">https://code.vmware.com/web/tool/12.0.0/vmware-powercli</a></p>
 </li>
 <li><p>Open your PowerCLI session and connect to vCloud.</p>
-<p>You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [<em>Finding your vCloud API credentials</em>(vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).</p>
+<p>You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see <a href="vmw-how-access-vcloud-api.html#finding-your-vcloud-api-credentials"><em>Finding your vCloud API credentials</em></a>.</p>
 </li>
 <li><p>Copy the following function and paste it into a .psm1 file:</p>
 <pre><code>Function Get-EdgeConfig ($EdgeGateway)
@@ -114,23 +114,29 @@
 
     $webclient.Headers.Add(&quot;x-vcloud-authorization&quot;,$EdgeView.Client.SessionKey)
 
-    $webclient.Headers.Add(&quot;accept&quot;,$EdgeView.Type + &quot;;version=30.0&quot;)
+    $webclient.Headers.Add(&quot;accept&quot;,&quot;application/*+xml;version=32.0&quot;)
 
-    [xml]$EGWConfXML = $webclient.DownloadString($EdgeView.href)
+    $edgeview.id -match &quot;(?&lt;=urn:vcloud:gateway:).*&quot;
+
+    $edgeID = $Matches[0]
+
+    $requrl = &quot;https://&quot; + $global:DefaultCIServers.name + &quot;/network/edges/&quot; + $edgeID
+
+    [xml]$EGWConfXML = $webclient.DownloadString($requrl)
 
     $Holder = &quot;&quot; | Select Firewall,NAT,LoadBalancer,DHCP
 
     $Holder.Firewall =
-    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.FirewallService.FirewallRule
+    $EGWConfXML.edge.features.firewall.firewallrules.firewallrule
 
     $Holder.NAT =
-    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.NatService.NatRule
+    $EGWConfXML.edge.features.nat.natrules.natrule
 
-    $Holder.LoadBalancer =
-    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.LoadBalancerService.VirtualServer
+    $Holder.LoadBalancer = 
+    $EGWConfXML.edge.features.LoadBalancer
 
-    $Holder.DHCP =
-    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.GatewayDHCPService.Pool
+    $Holder.DHCP = 
+    $EGWConfXML.edge.features.DHCP
 
     Return $Holder
 
@@ -138,7 +144,7 @@
 
 </code></pre>
 </li>
-<li><p>Enter the below command to import the function.</p>
+<li><p>Enter the following command to import the function.</p>
 <pre><code> Import-Module [PATH TO PSM1 FILE]
 </code></pre>
 </li>
@@ -159,11 +165,53 @@
  $Config.LoadBalancer = All load balancer rules
  $Config.DHCP = All DHCP pools
 </code></pre>
+<p>You can drill down further into the object's properties to retrieve more details. For example, using <code>$Config.firewall[0].source</code>, you can examine the source of the first retrieved firewall rule.</p>
 </li>
-<li><p>You can export this data to a CSV file, by entering a command such as:</p>
-<pre><code> $Config.Firewall | Export-csv -path c:\users\myaccount\desktop\firewallrules.csv
+<li><p>Data such as source addresses is presented as objects in objects, so if you want to export the data to a CSV, we recommend first using code like that shown below to extract these values and present them at the top level.</p>
+<pre><code>function Get-FirewallDetails ($config)
+{
+    foreach ($fwrule in $config.firewall){
+        $protocol = $fwrule.application.service.protocol
+        $fwrule.SetAttribute(&quot;protocol&quot;,$protocol)
+        $port = $fwrule.application.service.port
+        $fwrule.SetAttribute(&quot;port&quot;,$port)
+        $srcport = $fwrule.application.service.sourcePort
+        $fwrule.SetAttribute(&quot;sourcePort&quot;,$srcport)
+        $destex = $fwrule.destination.exclude
+        $fwrule.SetAttribute(&quot;destExclude&quot;,$destex)
+        $destip = $fwrule.destination.ipAddress
+        $fwrule.SetAttribute(&quot;destIP&quot;,$destip)
+        $srcex = $fwrule.source.exclude
+        $fwrule.SetAttribute(&quot;srcExclude&quot;,$srcex)
+        $srcip = $fwrule.source.ipAddress
+        $fwrule.SetAttribute(&quot;srcIP&quot;,$srcip)
+    }
+}
 
- $Config.Nat | Export-csv -path c:\users\myaccount\desktop\natrules.csv -notypeinformation
+function Get-NatDetails ($config)
+{
+    foreach ($natrule in $config.nat){
+        $Originalip = $natrule.GatewayNatRule.OriginalIP
+        $Translatedip = $natrule.GatewayNatRule.TranslatedIP
+        $appliedon = $natrule.GatewayNatRule.interface.name
+        $OriginalPort = $natrule.GatewayNatRule.originalport
+        $TranslatedPort = $natrule.GatewayNatRule.TranslatedPort
+        $Protocol = $natrule.GatewayNatRule.Protocol
+        $natrule.SetAttribute(&quot;OriginalIP&quot;, $Originalip)
+        $natrule.SetAttribute(&quot;TranslatedIP&quot;, $Translatedip)
+        $natrule.SetAttribute(&quot;AppliedOn&quot;, $appliedon)
+        $natrule.SetAttribute(&quot;OriginalPort&quot;, $OriginalPort)
+        $natrule.SetAttribute(&quot;TranslatedPort&quot;, $TranslatedPort)
+        $natrule.SetAttribute(&quot;Protocol&quot;, $Protocol)
+    }
+}
+</code></pre>
+<p>You can then run <code>Get-FirewallDetails $Config</code> to make the results more export-friendly.</p>
+</li>
+<li><p>To export this data to a CSV file, enter a command such as:</p>
+<pre><code>$Config.Firewall | Export-csv -path c:\users\myaccount\desktop\firewallrules.csv
+
+$Config.Nat | Export-csv -path c:\users\myaccount\desktop\natrules.csv -notypeinformation
 </code></pre>
 </li>
 </ol>
@@ -196,7 +244,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

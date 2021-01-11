@@ -2,9 +2,9 @@
 title: Getting Started Guide for the Cross Domain Security Zone
 description: Provides information to get up and running with the Cross Domain Security Zone
 services: cdsz
-author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+author: shighmoor
+reviewer: ecorfield
+lastreviewed: 18/09/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -61,7 +61,7 @@ During the provisioning of the Walled Garden service, we'll ask you for some add
 
     These IP addresses are the locations from which you can build and test the environment (for example, offices or end user premises).
 
-The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Customer Success Manager (CSM) will send you the information you need to access it.
+The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Service Delivery Manager (SDM) will send you the information you need to access it.
 
 ## Building your Walled Garden service
 
@@ -99,7 +99,7 @@ The diagrams below provide examples for both options.
 
 ### Building your virtual machines
 
-The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the vCloud Director catalog or from template VMs as OVF files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
+The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the VMware Cloud Director catalog or from template VMs as OVF files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
 
 ### Testing your environment
 

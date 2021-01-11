@@ -46,7 +46,7 @@ The benchmarking was based on the PerfKit Benchmarker tool which was originally 
 
 PerfKit was configured to specifically compare UKCloud for VMware in Region 6, Zone F with AWS EU-West 2 (London) region and the Azure London region. The benchmarks ran throughout August 2017 and average values for the month are reported below.
 
-UKCloud have worked on extending Perfkit to directly support vCloud Director based clouds, this is available from the UKCloud Github pages and will be contributed back to the core repository. This will enable you to run your own benchmarks with up-to-date data, allowing for a ready comparison of our performance against other public cloud providers. You will also be able to compare performance from a set time period of your choice.
+UKCloud have worked on extending Perfkit to directly support VMware Cloud Director-based clouds, this is available from the UKCloud Github pages and will be contributed back to the core repository. This will enable you to run your own benchmarks with up-to-date data, allowing for a ready comparison of our performance against other public cloud providers. You will also be able to compare performance from a set time period of your choice.
 
 ## Benchmark results
 
@@ -95,7 +95,7 @@ The graph below shows that the UKCloud platform performs 2.5 times faster random
 
 This means that enterprise applications such as relational databases which are disk-intensive (require high I/O), perform better on the UKCloud platform.
 
-Databases and applications that are disk intensive are often slowed down by their storage, hence the increased popularity of Solid State Drives (SSD). However, as the graph below shows, UKCloud provides fast storage access allowing applications to rapidly access and process data, resulting in faster applications compared to AWS and Azure’s equivalent storage option.
+Databases and applications that are disk intensive are often slowed down by their storage, hence the increased popularity of Solid State Drives (SSD). However, as the graph below shows, UKCloud provides fast storage access allowing applications to rapidly access and process data, resulting in faster applications compared to AWS and Azure's equivalent storage option.
 
 ![Random IO performance](images/vmw-benchmark-random-io.png)
 

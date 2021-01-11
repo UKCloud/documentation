@@ -71,11 +71,7 @@ All of our UKCloud Service Definitions, Pricing Guide and Terms and Conditions a
 
 ### How do I order?
 
-All of our customers, regardless of sector, can order the same way via our sales team who can be contacted by calling 01252 303300 (option 3) or by emailing <info@ukcloud.com>. There are also contact details on the main website *Contact us* page. We'll shortly be launching a new credit card-based order system and further details will be made available closer to the launch date.
-
-### Can I pay with my credit card?
-
-While a credit card payment option is not currently available, we are implementing this feature, which will be available soon.
+All of our customers, regardless of sector, can order the same way via our sales team who can be contacted by calling 01252 303300 (option 3) or by emailing <info@ukcloud.com>. There are also contact details on the main website *Contact us* page.
 
 ### Are you able to supply licensing for use by Enterprise & Private Sector customers?
 
@@ -91,7 +87,7 @@ Yes. We offer a 30-day free trial for many of our services. Your trial provides 
 
 You can request a trial via the UKCloud website: https://www.UKCloud.com/free-trial-sign-up and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
 
-You will be contacted by your Cloud Architect or CSM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner). At the end of your trial, you have the option to transition to production or cease the trial.
+You will be contacted by your Cloud Architect or Service Delivery Manager (SDM) when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner). At the end of your trial, you have the option to transition to production or cease the trial.
 
 ## Feedback
 

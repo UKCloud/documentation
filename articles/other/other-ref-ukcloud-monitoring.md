@@ -3,8 +3,8 @@ title: Monitoring the UKCloud platform
 description: Explains what UKCloud monitors and how we manage alerts created by the monitoring system
 services: other
 author: Sue Highmoor
-reviewer:
-lastreviewed: 12/03/2019 09:14:53
+reviewer: dselwood
+lastreviewed: 24/04/2020
 
 toc_rootlink: Reference
 toc_sub1: 

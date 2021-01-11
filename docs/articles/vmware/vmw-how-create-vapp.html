@@ -8,7 +8,7 @@
     <title>How to create a vApp </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a vApp ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,32 +94,35 @@
 <h1 id="how-to-create-a-vapp">How to create a vApp</h1>
 
 <h2 id="overview">Overview</h2>
-<p>vCloud Director uses vApps to make virtual machine (VM) creation and management easy and flexible. vApps are essentially containers for VMs and can be used in many ways. One of the most common uses of a vApp is to group similar VMs together for easy management. Or you can put VMs that form a multi-tier application into the same vApp for greater control. Up to 128 vApps can be created within a virtual data centre (VDC) and intelligently networked to create complex architectures that can be managed easily.</p>
-<p>In this guide we'll look at how to create a vApp from scratch.</p>
+<p>VMware Cloud Director uses vApps to make virtual machine (VM) creation and management easy and flexible. vApps are essentially containers for VMs and can be used in many ways. One of the most common uses of a vApp is to group similar VMs together for easy management. Or you can put VMs that form a multi-tier application into the same vApp for greater control. You can create up to 128 vApps within a virtual data centre (VDC) and intelligently network them to create complex architectures that can be managed easily.</p>
+<p>In this article we'll look at how to create a vApp from scratch.</p>
+<h2 id="creating-a-vapp">Creating a vApp</h2>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to create the vApp.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which you want to create the vApp.</p>
 </li>
-<li><p>In the left navigation panel, select <strong>vApps</strong> to view a list of vApps within the VDC.</p>
-<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Compute</em>, select <strong>vApps</strong> to view a list of vApps within the VDC.</p>
+<p><img src="images/vmw-vcd10.1-tab-vapps.png" alt="vApps tab in VMware Cloud Director"></p>
 </li>
-<li><p>Click <strong>New vApp</strong>.</p>
-<p><img src="images/vmw-vcd-btn-new-vapp.png" alt="Build New vApp button"></p>
+<li><p>In the <em>vApps</em> page, click <strong>New</strong>, then select <strong>New vApp</strong>.</p>
+<p><img src="images/vmw-vcd10.1-btn-new-vapp.png" alt="New vApp menu option"></p>
 </li>
-<li><p>In the <em>New vApp</em> dialog box, enter a <strong>Name</strong> and <strong>Description</strong> for your vApp. The name should be something that will easily identify it if you're building a large environment with multiple vApps.</p>
-<p><img src="images/vmw-vcd-build-vapp.png" alt="Build new vApp dialog box"></p>
+<li><p>In the <em>New vApp</em> dialog box, enter a <strong>Name</strong> and <strong>Description</strong> for your vApp.</p>
+<p>The name should be something that will easily identify it if you're building a large environment with multiple vApps.</p>
 </li>
-<li><p>You can now click <strong>Add Virtual Machine</strong> to populate the vApp with VMs. There are several ways to create a VM:</p>
+<li><p>Select the <strong>Power on</strong> check box if you want the vApp to start up as soon as you finish creating it.</p>
+<p><img src="images/vmw-vcd10.1-build-vapp.png" alt="New vApp dialog box"></p>
+</li>
+<li><p>Click <strong>Add Virtual Machine</strong> to populate the vApp with VMs.</p>
+</li>
+<li><p>In the <em>New VM</em> dialog box, select:</p>
 <ul>
-<li><p>From an existing template (see <a href="vmw-how-create-vm-from-template.html"><em>How to create a VM from a template</em></a>).</p>
-<p>Catalog creation is covered in <a href="vmw-how-create-catalog.html"><em>How to create a catalog</em></a>.</p>
+<li><p><strong>New</strong> to create a VM from scratch, without using a template (see <a href="vmw-how-create-vm-from-scratch.html"><em>How to create a virtual machine from scratch</em></a>).</p>
 </li>
-<li><p>From scratch, without using a template (see <a href="vmw-how-create-vm-from-scratch.html"><em>How to create a virtual machine from scratch</em></a>).</p>
+<li><p><strong>From Template</strong> to create a VM from an existing template (see <a href="vmw-how-create-vm-from-template.html"><em>How to create a VM from a template</em></a>).</p>
 </li>
 </ul>
 </li>
-<li><p>When you've finished creating your vApp, click <strong>Create</strong>.</p>
-</li>
-<li><p>When your vApp has finished deploying, in the card for the vApp, select <strong>Actions</strong> then <strong>Power On</strong> to power it on.</p>
+<li><p>When you've finished adding VMs to your vApp, in the <em>New vApp</em> dialog box, click <strong>Create</strong>.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
@@ -151,7 +154,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

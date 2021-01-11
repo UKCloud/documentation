@@ -5,13 +5,13 @@ services: vmware
 author: Steve Hall
 reviewer: Guy Martin
 lastreviewed: 01/07/2019
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Dedicated Compute v1 Service Scope
-toc_fullpath: Service Scope/vmw-sco-dedicated-compute.md
+toc_fullpath: Service Information/vmw-sco-dedicated-compute.md
 toc_mdlink: vmw-sco-dedicated-compute.md
 ---
 
@@ -40,11 +40,11 @@ This service is designed for customers who:
 
 We deliver Dedicated Compute by providing you with dedicated physical blades on which you control resource allocation.
 
-The initial Dedicated Compute purchase is a starter pack consisting of two physical blades. The standard blade consists of 20 physical cores (40 hyper-threaded cores) and 300 GiB of RAM.
+The initial Dedicated Compute purchase is a starter pack consisting of two physical blades. The standard blade consists of 20 physical cores (40 hyper-threaded cores) and 300 GiB of RAM.
 
 You can then scale your estate by purchasing expansion packs. After nine expansion packs, you must buy another starter pack.
 
-You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options and pricing are given in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options and pricing are given in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 The storage pool isn't a dedicated hardware resource: it is drawn from our Cloud Storage solutions.
 
@@ -92,7 +92,7 @@ There are two deployment options for Dedicated Compute:
 
 ## Platform management
 
-Dedicated Compute is managed in the same way as our other cloud services, using vCloud Director, the UKCloud Portal, and APIs associated with both.
+Dedicated Compute is managed in the same way as our other cloud services, using VMware Cloud Director, the UKCloud Portal, and APIs associated with both.
 
 The Dedicated Compute service will be maintained to the same software patch revisions as our main platform.
 

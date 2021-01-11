@@ -8,7 +8,7 @@
     <title>Getting Started Guide for the UKCloud Portal </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for the UKCloud Portal ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,17 +96,23 @@
 <h2 id="overview">Overview</h2>
 <p>The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you can:</p>
 <ul>
-<li><p>View information about your UKCloud services, including UKCloud for VMware, UKCloud for OpenStack, UKCloud for Microsoft Azure and Cloud Storage</p>
+<li><p>Raise and monitor support tickets</p>
 </li>
 <li><p>View notifications relating to the UKCloud platform</p>
 </li>
+<li><p>View cyber security news</p>
+</li>
+<li><p>View information about your UKCloud for VMware service, including VM information and backup reports</p>
+</li>
 <li><p>Create compute services, virtual data centres (VDCs) and edge gateways within your UKCloud for VMware environment</p>
 </li>
-<li><p>Access vCloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall</p>
+<li><p>Access VMware Cloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall</p>
 </li>
-<li><p>Raise and monitor support tickets</p>
+<li><p>Access the OpenStack Horizon dashboard to work with your UKCloud for OpenStack environment, for example to build your network infrastructure, set up access and security and launch instances</p>
 </li>
-<li><p>Access Knowledge Centre articles to help you understand and work with the UKCloud platform</p>
+<li><p>Access the Azure Stack Hub portal to manage your UKCloud for Microsoft Azure environment, for example to create virtual machines</p>
+</li>
+<li><p>View information about your Cloud Storage service, including secret keys and storage consumption</p>
 </li>
 </ul>
 <p>This Getting Started Guide provides an overview of the functionality available within the Portal.</p>
@@ -114,10 +120,10 @@
 <p>This Getting Started Guide is intended for any user with access to the Portal.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The options you can see and tasks you can perform within the Portal depend on the permissions you've been granted by your Portal administrator.</p>
+<p>The options you can see and tasks you can perform within the Portal depend on the services available in your account and the permissions you've been granted by your Portal administrator.</p>
 </div>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>You should have received your Portal login credentials from your Portal administrator. If you're the Portal administrator, your Customer Success Manager (CSM) will have provided you with your login credentials.</p>
+<p>You should have received your Portal login credentials from your Portal administrator. If you're the Portal administrator, your Service Delivery Manager (SDM) will have provided you with your login credentials.</p>
 <p>The Portal works with Google Chrome, Microsoft Edge and Mozilla Firefox.</p>
 <h2 id="logging-in-to-the-ukcloud-portal">Logging in to the UKCloud Portal</h2>
 <p>The first thing you need to do is log in.</p>
@@ -126,23 +132,23 @@
 <ul>
 <li><p><strong>Assured OFFICIAL:</strong> <a href="https://portal.ukcloud.com">https://portal.ukcloud.com</a></p>
 </li>
-<li><p><strong>Elevated OFFICIAL:</strong> Contact your Portal administrator or Customer Success Manager (CSM)</p>
+<li><p><strong>Elevated OFFICIAL:</strong> Contact your Portal administrator or SDM</p>
 </li>
 </ul>
 </li>
-<li><p>On the <em>Log in</em> page, enter your credentials and click <strong>Sign in</strong>.</p>
+<li><p>On the log in page, enter your credentials and click <strong>Log in</strong>.</p>
 <p><img src="images/ptl-login.png" alt="UKCloud Portal Log in page"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>If you've forgotten your password, click the <strong>Forgotten password?</strong> link to request a password reset.</p>
 </div>
-<p>If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.</p>
+<p>If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or SDM. You'll be prompted to change this temporary password.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.</p>
 </div>
 </li>
-<li><p>If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA).</p>
+<li><p>If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA; see <a href="ptl-how-setup-2fa.html"><em>How to set up two-factor authentication for a user account</em></a>).</p>
 <p><img src="images/ptl-2fa.png" alt="Two-Factor Authentication dialog box"></p>
 </li>
 </ol>
@@ -173,7 +179,7 @@
 <p>The number next to the <strong>Notifications</strong> menu option (and next to your username in the toolbar) shows how many unread notifications you have.</p>
 </div>
 </li>
-<li><p><strong>Update contact details</strong> - Change your name, email address and telephone numbers. You can also opt to have Portal notifications sent to your email address.</p>
+<li><p><strong>Update contact details</strong> - Change your name and telephone numbers. You can also opt to have Portal notifications sent to your email address.</p>
 </li>
 <li><p><strong>Change Password</strong> - Change your password or memorable word. We recommend that you change your password at least every 90 days (see <a href="ptl-how-reset-password.html"><em>How to reset your UKCloud Portal password or memorable word</em></a>).</p>
 <div class="NOTE">
@@ -183,9 +189,9 @@
 </li>
 <li><p><strong>Two-Factor Auth</strong> - Set up two-factor authentication (2FA) for your user account (see <a href="ptl-how-setup-2fa.html"><em>How to set up two-factor authentication for a user account</em></a>).</p>
 </li>
-<li><p><strong>API</strong> - View the information you need to use the vCloud API (see <a href="../vmware/vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a>).</p>
+<li><p><strong>API</strong> - View the information you need to use the vCloud API (see <a href="../vmware/vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>).</p>
 </li>
-<li><p><strong>Feedback</strong> - Send an email to UKCloud with feedback on the Portal or any other aspect of your UKCloud experience.</p>
+<li><p><strong>Feedback</strong> - Send an email to UKCloud (<a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>) with feedback on the Portal or any other aspect of your UKCloud experience.</p>
 </li>
 <li><p><strong>Log out</strong> - Log out of the Portal.</p>
 </li>
@@ -234,7 +240,7 @@
 <ul>
 <li><p><strong>Cyber Security News</strong>, where you can view general threat briefs and security news</p>
 </li>
-<li><p><strong>Security Events</strong>, which displays security events specific to your environment</p>
+<li><p><strong>Security Operations Service</strong>, which shows the number of logs processed against the UKCloud platform by our Security Operations Service</p>
 </li>
 </ul>
 <p>For more information, see <a href="../other/other-ref-promon.html"><em>Protective Monitoring from UKCloud</em></a>.</p>
@@ -243,9 +249,9 @@
 <ul>
 <li><p>The Knowledge Centre</p>
 </li>
-<li><p>My Calls (see <a href="ptl-how-use-my-calls.html"><em>How to use My Calls in the UKCloud Portal</em></a>)</p>
+<li><p>My Calls (see <a href="ptl-how-use-my-calls.html"><em>How to use My Calls to raise and monitor support tickets</em></a>)</p>
 </li>
-<li><p>Service status information (see <a href="../other/other-how-view-status-info.html"><em>How to view the UKCloud Service Status page</em></a>)</p>
+<li><p>Service status information (see <a href="../other/other-ref-status-page.html"><em>Understanding the UKCloud Service Status page</em></a>)</p>
 </li>
 </ul>
 </li>
@@ -257,7 +263,7 @@
 </li>
 </ul>
 </li>
-<li><p><strong>Communities</strong> - Access the UKCloud site on GitHub, the UKCloud Community and UKCloud Ideas.</p>
+<li><p><strong>Communities</strong> - Access the UKCloud Community LinkedIn group, Content Hub and UKCloud repositories on GitHub.</p>
 </li>
 </ul>
 <h3 id="content-area">Content area</h3>
@@ -276,7 +282,7 @@
 </ol>
 <p><img src="images/ptl-mnu-logout.png" alt="Log out menu option"></p>
 <h2 id="using-the-ukcloud-portal-api">Using the UKCloud Portal API</h2>
-<p>The Portal also provides an API to enable you to interact programmatically with your UKCloud environment. For example, you can use the Portal API to view information about the components of your environment and create compute services, virtual data centres and edge gateways.</p>
+<p>The Portal also provides an API to enable you to interact programmatically with your UKCloud environment. For example, you can use the Portal API to view information about the components of your environment and create compute services, VDCs and edge gateways.</p>
 <p>The entry point URL for the Portal API is:</p>
 <p><code>https://portal.skyscapecloud.com/api</code></p>
 <p>For reference information about the various endpoints offered by the Portal API, see the <a href="ptl-ref-portal-api.html"><em>UKCloud Portal API Reference Guide</em></a>.</p>
@@ -285,7 +291,10 @@
 <p>In this Getting Started Guide, you've learned the basics about the Portal and the functionality it provides to help you interact with your UKCloud environment. For more details about a specific service, see the appropriate Getting Started Guide.</p>
 <h2 id="related-videos">Related videos</h2>
 <ul>
-<li><a href="ptl-vid-portal.html"><em>UKCloud Portal overview video</em></a></li>
+<li><p><a href="ptl-vid-portal.html"><em>UKCloud Portal overview video</em></a></p>
+</li>
+<li><p><a href="ptl-vid-mycalls.html"><em>Creating support tickets in My Calls</em></a></p>
+</li>
 </ul>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to the UKCloud Portal.</p>
@@ -298,10 +307,7 @@
 </li>
 </ul>
 <h3 id="compute-service">compute service</h3>
-<p>A UKCloud for VMware top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogs, users and resources.</p>
-<h3 id="customer-success-manager-csm">Customer Success Manager (CSM)</h3>
-<p>A UKCloud Customer Services role aimed at providing you with any assistance you require during onboarding and the first 90 days of using
-a UKCloud service.</p>
+<p>A UKCloud for VMware top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogs, users and resources.</p>
 <h3 id="knowledge-centre">Knowledge Centre</h3>
 <p>UKCloud's repository of articles created in collaboration with subject matter experts to provide information about how to use our products and services.</p>
 <h3 id="my-calls">My Calls</h3>
@@ -341,7 +347,7 @@ a UKCloud service.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

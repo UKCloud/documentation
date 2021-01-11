@@ -8,7 +8,7 @@
     <title>How to create a routed VDC network </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a routed VDC network ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,52 +94,74 @@
 <h1 id="how-to-create-a-routed-vdc-network">How to create a routed VDC network</h1>
 
 <h2 id="overview">Overview</h2>
-<p>An organisation virtual data centre network enables its virtual machines (VMs) to communicate with each other or to provide access to external networks. A single VDC can have multiple networks.</p>
+<p>An organisation virtual data centre (VDC) network enables its virtual machines (VMs) to communicate with each other or to provide access to external networks. A single VDC can have multiple networks.</p>
 <p>There are two network flavours, isolated and routed:</p>
 <ul>
 <li><p>An isolated (internally connected) network is one that only VMs within the VDC can connect to. Creation of isolated networks is described in <a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a>.</p>
 </li>
-<li><p>A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. This guide describes how to create a routed VDC network.</p>
+<li><p>A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. This article describes how to create a routed VDC network.</p>
 </li>
 </ul>
 <h2 id="creating-a-routed-vdc-network">Creating a routed VDC network</h2>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to create the network.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which you want to create the network.</p>
 </li>
-<li><p>In the left navigation panel, select <strong>Networks</strong>.</p>
-<p><img src="images/vmw-vcd-tab-networks.png" alt="Networks tab in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Networks</strong>.</p>
+<p><img src="images/vmw-vcd10.1-tab-networks.png" alt="Networks tab in VMware Cloud Director"></p>
 </li>
-<li><p>Click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd-btn-add-network.png" alt="Add network button"></p>
+<li><p>Click <strong>New</strong>.</p>
+<p><img src="images/vmw-vcd10.1-btn-new-network.png" alt="New network button"></p>
 </li>
-<li><p>In the <em>Network Type</em> page of the <em>New Organization VDC Network</em> dialog box, select <strong>Routed</strong> then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-vcd-add-network-routed-type.png" alt="New Organization VDC Network dialog box - Network Type - Routed"></p>
+<li><p>On the <em>Network Type</em> page of the <em>New Organization VDC Network</em> dialog box, select <strong>Routed</strong>, then click <strong>Next</strong>.</p>
+<p><img src="images/vmw-vcd10.1-new-network-routed-type.png" alt="New Organization VDC Network dialog box - Network Type page - Routed network"></p>
 </li>
-<li><p>In the <em>General</em> page, enter a <strong>Name</strong> and <strong>Description</strong> for the network.</p>
+<li><p>On the <em>General</em> page:</p>
+<ul>
+<li><p>Enter a <strong>Name</strong> and <strong>Description</strong> for the network.</p>
 </li>
-<li><p>In the <strong>Gateway CIDR</strong> field, the gateway address for the network.</p>
+<li><p>In the <strong>Gateway CIDR</strong> field, enter the gateway address for the network.</p>
 </li>
-<li><p>Select the <strong>Shared</strong> option to make the network available to other VDCs within the same region.</p>
-<p><img src="images/vmw-vcd-add-network-general.png" alt="New Organization VDC Network dialog box - General"></p>
+<li><p>Select the <strong>Shared</strong> option to make the network available to other VDCs within the same organisation.</p>
+</li>
+</ul>
+<p><img src="images/vmw-vcd10.1-new-network-general.png" alt="New Organization VDC Network dialog box - General page"></p>
 </li>
 <li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>On the <em>Edge Connection</em> page, select the edge gateway that you want your network to connect to then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-vcd-add-network-routed-edge.png" alt="New Organization VDC Network dialog box - Edge Connection"></p>
+<li><p>On the <em>Edge Connection</em> page:</p>
+<ul>
+<li><p>Select the edge gateway that you want your network to connect to.</p>
 </li>
-<li><p>In the <strong>Static IP Pools</strong> field, enter a range of addresses to be consumed by the VMs connecting to the network, then click <strong>Add</strong>.</p>
+<li><p>From the <strong>Interface Type</strong> list, select <strong>Internal</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For information about distributed networks, see <a href="vmw-how-configure-distributed-logical-router.html"><em>How to configure a Distributed Logical Router</em></a>. For information about creating a routed network as a subinterface for L2 VPN, see <a href="vmw-how-configure-l2-vpn.html"><em>How to configure an L2 VPN</em></a>.</p>
+</div>
+</li>
+<li><p>Select the <strong>Guest VLAN Allowed</strong> option to enable tagging of guest VLANs on this network.</p>
+</li>
+</ul>
+<p><img src="images/vmw-vcd10.1-new-network-routed-edge.png" alt="New Organization VDC Network dialog box - Edge Connection page"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Static IP Pools</em> page, in the <strong>Static IP Pools</strong> field, enter a range of addresses to be consumed by the VMs connecting to the network, then click <strong>Add</strong>.</p>
 <p>As an example, if you give the gateway address as <code>192.168.1.1/24</code>, you may then want to create a <strong>Static IP Pool</strong> of <code>192.168.1.10-192.168.1.100</code>. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.</p>
 <p>You can add multiple IP pools.</p>
-<p><img src="images/vmw-vcd-add-network-ip-pool.png" alt="New Organization VDC Network dialog box - Static IP Pools"></p>
+<p><img src="images/vmw-vcd10.1-new-network-ip-pool.png" alt="New Organization VDC Network dialog box - Static IP Pools page"></p>
 </li>
-<li><p>In the <em>DNS</em> page, enter DNS information if possible then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-vcd-add-network-dns.png" alt="New Organization VDC Network dialog box - DNS"></p>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>DNS</em> page, enter DNS information if possible.</p>
+<p><img src="images/vmw-vcd10.1-new-network-dns.png" alt="New Organization VDC Network dialog box - DNS page"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
 <li><p>On the <em>Ready to Complete</em> page, review your selections then click <strong>Finish</strong>.</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
-<p>Now you've created your network to connect your VDC with the outside world, may want to configure your edge gateway to control what traffic is allowed into and out of your VDC. You may also wan to start building some VMs. For a quick guide on how to do this, see <a href="vmw-gs-build-vm-vcd.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
+<p>Now you've created your network to connect your VDC with the outside world, may want to configure your edge gateway to control what traffic is allowed into and out of your VDC. You may also want to start building some VMs. For a walkthrough on how to do this, see <a href="vmw-gs-build-vm-vcd.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -169,7 +191,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

@@ -1,22 +1,56 @@
-- name: Basic Managed Compute
+- name: About
   items:
-  - name: Basic Mangaged Compute from UKCloud Service Definition
-    href: man-sd-compute.md
-- name: Cloud Optimisation
+  - name: UKCloud Managed Services Overview
+    href: man-services-home.md
+- name: Advanced Managed Services
   items:
-  - name: Cloud Optimisation from UKCloud Service Definition
-    href: man-sd-optimisation.md
+  - name: Managed Active Directory Support
+    items:
+    - name: Managed Active Directory Support Service Definition
+      href: man-sd-ad.md
+  - name: Managed Remote Desktop Services
+    items:
+    - name: Managed Remote Desktop Services Support Service Definition
+      href: man-sd-rds.md
+  - name: Managed SQL Server
+    items:
+    - name: Managed SQL Server Service Definition
+      href: man-sd-sqlserver.md
+    - name: Managed SQL Server Service Scope
+      href: man-sqlserver-sco.md
+  - name: Managed Web Server
+    items:
+    - name: Managed Web Server Service Definition
+      href: man-sd-webserver.md
 - name: Extended Network Support
   items:
   - name: Extended Network Support from UKCloud Service Definition
     href: man-sd-network.md
-- name: Managed Monitoring
+- name: Managed IT Operations
   items:
-  - name: Change your service configuration
-    href: man-monitoring-how-change-config.md
-  - name: Managed Monitoring from UKCloud FAQs
-    href: man-monitoring-faq.md
-  - name: Managed Monitoring from UKCloud Service Definition
-    href: man-sd-monitoring.md
-  - name: Managed Monitoring from UKCloud Service Scope
-    href: man-monitoring-sco.md
+  - name: Managed IT Operations Service Definition
+    href: man-sd-managed-it-ops.md
+  - name: Anti-Virus as a Service
+    items:
+    - name: Anti-Virus as a Service FAQs
+      href: man-antivirus-faq.md
+    - name: Anti-Virus as a Service Service Scope
+      href: man-antivirus-sco.md
+    - name: Data collected by Anti-Virus as a Service
+      href: man-ref-sentinelone-datacollection.md
+  - name: Managed Monitoring as a Service
+    items:
+    - name: Change your service configuration
+      href: man-monitoring-how-change-config.md
+    - name: Managed Monitoring as a Service FAQs
+      href: man-monitoring-faq.md
+    - name: Managed Monitoring as a Service Service Scope
+      href: man-monitoring-sco.md
+    - name: Use your own polling (monitoring) tooling
+      href: man-monitoring-how-use-customer-polling.md
+  - name: Patching as a Service
+    items:
+    - name: Patching as a Service FAQs
+      href: man-patching-faq.md
+    - name: Patching as a Service Service Scope
+      href: man-patching-sco.md

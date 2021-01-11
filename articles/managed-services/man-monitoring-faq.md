@@ -1,39 +1,39 @@
 ---
-title: Managed Monitoring from UKCloud FAQs
-description: Frequently asked questions for Managed Monitoring from UKCloud
+title: Managed Monitoring as a Service FAQs
+description: Frequently asked questions for Managed Monitoring as a Service
 services: managed-services
 author: Steve Dixon
 reviewer:
 lastreviewed: 20/08/2019 15:17:17
-toc_rootlink: Managed Monitoring
-toc_sub1:
+toc_rootlink: Managed IT Operations
+toc_sub1: Managed Monitoring as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Managed Monitoring from UKCloud FAQs
-toc_fullpath: Managed Monitoring/man-monitoring-faq.md
+toc_title: Managed Monitoring as a Service FAQs
+toc_fullpath: Managed IT Operations/Managed Monitoring as a Service/man-monitoring-faq.md
 toc_mdlink: man-monitoring-faq.md
 ---
 
-# Managed Monitoring from UKCloud FAQs
+# Managed Monitoring as a Service FAQs
 
 ## Service
 
 ### What is the service?
 
-As customer solutions start to expand beyond their own data centres into embracing the benefits of leveraging multi-cloud, accurate and trusted monitoring of the various technology stacks and locations become highly complex and resource intensive. Managed Monitoring from UKCloud helps to reduce these challenges, whilst increasing your level of trust and confidence of the true health of your entire IT estate, from IoT edge devices, through to any infrastructure, be it virtual or physical.
+As customer solutions start to expand beyond their own data centres into embracing the benefits of leveraging multi-cloud, accurate and trusted monitoring of the various technology stacks and locations become highly complex and resource intensive. Managed Monitoring as a Service helps to reduce these challenges, whilst increasing your level of trust and confidence of the true health of your entire IT estate, from IoT edge devices, through to any infrastructure, be it virtual or physical.
 
-With Managed Monitoring from UKCloud, we become your first line of support, 24 hours a day, 365 days a year, in receiving and reacting to any abnormal events or alerts across your IT estate, reducing the amount of noise customers traditionally must filter through, enabling them to focus on the critical events that really matter.
+With Managed Monitoring as a Service, we become your first line of support, 24 hours a day, 365 days a year, in receiving and reacting to any abnormal events or alerts across your IT estate, reducing the amount of noise customers traditionally must filter through, enabling them to focus on the critical events that really matter.
 
 ### What technologies do you use?
 
-UKCloud uses the same technologies we use in house to monitor events across our public clouds to deliver our Managed Monitoring service, providing you with the confidence that well proven and understood technologies are being used to underpin this service.
+UKCloud uses the same technologies we use in house to monitor events across our public clouds to deliver our Managed Monitoring as a Service, providing you with the confidence that well proven and understood technologies are being used to underpin this service.
 
 This service also leverages the benefits of AIOps (see below).
 
 ### What is AIOps?
 
-The term *AIOps* stands for *artificial intelligence for IT operations*. AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies. 
+The term *AIOps* stands for *artificial intelligence for IT operations*. AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies.
 
 ### Do I get access to a dashboard or reports?
 
@@ -42,6 +42,10 @@ As it is assumed UKCloud will manage all monitoring aspects as part of this serv
 ### How do I get alerted on events?
 
 All alerting will be performed via a support ticket or any special escalation process agreed between UKCloud and the customer.
+
+### Can I use my existing polling (monitoring) tooling with this service?
+
+We've designed our Managed Monitoring as a Service solution to be extensible with existing monitoring technology you may have already invested in. We cannot guarantee compatibility with all monitoring tooling, but for information about what to consider if this is something you want to do, see [*How to use your own polling (monitoring) tooling with Managed Monitoring as a Service*](man-monitoring-how-use-customer-polling.md).
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
@@ -73,13 +77,11 @@ The secure online [UKCloud Portal](https://portal.ukcloud.com/login) provides mo
 
 ### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place periodically and at a time that aims to minimise customer impact. We provide customers with at least 14 days' advance notice of planned maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Friday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
+### Can UKCloud provide notifications for service status and maintenance?
 
-### Can I configure email alerts from the Portal?
-
-Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications.
+Yes, you can subscribe to the [UKCloud Service Status page](https://status.ukcloud.com/) to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see [*How to subscribe to service status notifications*](../other/other-how-subscribe-service-status.md).
 
 ## Onboarding
 
@@ -93,7 +95,7 @@ Due to the initial complexity of creating the monitoring environment, UKCloud is
 
 ## Backup
 
-### Does UKCloud back up the Managed Monitoring from UKCloud service?
+### Does UKCloud back up Managed Monitoring as a Service?
 
 UKCloud will perform a nightly backup of the configuration of any thresholds or triggers defined as part of this service. All event data is eventually stored within UKCloud's highly resilient centralised monitoring data lake.
 
@@ -115,8 +117,6 @@ Online visibility of real-time or historic billing information is currently not 
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
-
 ### What are the termination fees?
 
 There are no termination costs for this service.
@@ -131,7 +131,7 @@ The data that UKCloud collects as part of this service will never leave a UKClou
 
 ### Is there a protective monitoring service?
 
-Protective monitoring is included with all our IaaS platforms and follows GPG 13.
+Protective monitoring is included with all our IaaS platforms and follows GPG 13.
 
 ## Feedback
 

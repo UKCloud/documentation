@@ -8,7 +8,7 @@
     <title>How to configure custom script extensions for new and existing VMs on Azure Stack Hub </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure custom script extensions for new and existing VMs on Azure Stack Hub ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -209,32 +209,32 @@ $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
 Write-Output -InputObject "Creating storage account and container"
-$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
 
 # Get storage account context
 $Context = $StorageAccount.Context
-$Container = New-AzureStorageContainer -Name $ContainerName -Context $Context
+$Container = New-AzStorageContainer -Name $ContainerName -Context $Context
 
 # Retrieve storage account key
-$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+$StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
 
 # Retrieve storage blob endpoint
 $ScriptBlobUrl = $Container.Context.BlobEndPoint
 
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
-Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
 
 # Creating script location string
 $ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
 
 # Add custom script extension to Linux VM
 Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
 $ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
-Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 <h4 id="file-uri">File URI</h4>
 <pre><code class="language-PowerShell"># Declare variables
@@ -245,11 +245,11 @@ $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to Linux VM
 Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @($FileUri)};
 $ProtectedSettings = @{"commandToExecute" = $CommandToExecute};
-Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
@@ -266,22 +266,22 @@ $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
 Write-Output -InputObject "Creating storage account and container"
-$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
 
 # Get storage account context
 $Context = $StorageAccount.Context
-New-AzureStorageContainer -Name $ContainerName -Context $Context
+New-AzStorageContainer -Name $ContainerName -Context $Context
 
 # Retrieve storage account key
-$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+$StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
 
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
-Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
 
 # Add custom script extension to Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
+Set-AzVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
 </code></pre>
 <h4 id="file-uri-1">File URI</h4>
 <pre><code class="language-PowerShell"># Declare variables
@@ -292,7 +292,7 @@ $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
+Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-c_tabid-2" role="tabpanel" data-tab="tabid-c" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
@@ -305,13 +305,13 @@ Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGr
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Input variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
@@ -325,32 +325,32 @@ $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
 Write-Output -InputObject "Creating storage account and container"
-$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
 
 # Get storage account context
 $Context = $StorageAccount.Context
-$Container = New-AzureStorageContainer -Name $ContainerName -Context $Context
+$Container = New-AzStorageContainer -Name $ContainerName -Context $Context
 
 # Retrieve storage account key
-$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+$StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
 
 # Retrieve storage blob endpoint
 $ScriptBlobUrl = $Container.Context.BlobEndPoint
 
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
-Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
 
 # Creating script location string
 $ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
 
 # Add custom script extension to existing Linux VM
 Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
 $ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
-Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 <h4 id="file-uri-2">File URI</h4>
 <pre><code class="language-PowerShell"># Initialise environment and variables
@@ -359,13 +359,13 @@ Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $V
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Input variables
 $RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
@@ -377,10 +377,10 @@ $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Linux VM
 Write-Output -InputObject "Adding custom script extension to existing virtual machine"
-$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
+$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
-Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-d_tabid-2" role="tabpanel" data-tab="tabid-d" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
@@ -393,15 +393,15 @@ Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $V
 $ArmEndpoint = "<output form="armendpoint" name="result3" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
-# Input Variables
+# Input variables
 $RGName = "<output form="resourcegroup" name="result3" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result3" style="display: inline;">MyVM</output>"
 $CustomScriptFileName = "<output form="customscriptfilename" name="result7" style="display: inline;">VMSetupForSR.ps1</output>"
@@ -413,22 +413,22 @@ $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
 Write-Output -InputObject "Creating storage account and container"
-$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
 
 # Get storage account context
 $Context = $StorageAccount.Context
-New-AzureStorageContainer -Name $ContainerName -Context $Context
+$Container = New-AzStorageContainer -Name $ContainerName -Context $Context
 
 # Retrieve storage account key
-$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+$StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
 
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
-Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
 
 # Add custom script extension to existing Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
+Set-AzVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
 </code></pre>
 <h4 id="file-uri-3">File URI</h4>
 <pre><code class="language-PowerShell"># Initialise environment and variables
@@ -437,13 +437,13 @@ Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $Cust
 $ArmEndpoint = "<output form="armendpoint" name="result4" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Input variables
 $RGName = "<output form="resourcegroup" name="result4" style="display: inline;">MyResourceGroup</output>"
@@ -455,7 +455,7 @@ $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
+Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 </section>
 </div>
@@ -492,7 +492,7 @@ Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGr
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

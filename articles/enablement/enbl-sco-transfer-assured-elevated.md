@@ -39,15 +39,15 @@ The figure below shows an example of a possible setup, but it should be used as 
 
 ## Service architecture
 
-UKCloud will provide access to a CDSZ environment for the transfer of data between the security domains. A CDSZ Walled Garden is a VMware only environment, utilizing VMware vCloud Director as the management orchestrator for the service. For additional information regarding the CDSZ, see the [*Service Scope*](../cdsz/cdsz-sco.md).
+UKCloud will provide access to a CDSZ environment for the transfer of data between the security domains. A CDSZ Walled Garden is a VMware only environment, utilizing VMware Cloud Director as the management orchestrator for the service. For additional information regarding the CDSZ, see the [*Service Scope*](../cdsz/cdsz-sco.md).
 
 The actual CDSZ service will be provided without charge for the transfer of data, with the following restrictions:
 
-- The service is free of charge for the first 10 working days. After working 10 days, the service will be charged as per the standard CDSZ pricing in the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+- The service is free of charge for the first 10 working days. After working 10 days, the service will be charged as per the standard CDSZ pricing in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 - The 10-day free-of-charge service is available only for single site applications.
 
-- For dual or cross-site applications, there will be an additional charge as per the CDSZ price matrix in the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+- For dual or cross-site applications, there will be an additional charge as per the CDSZ price matrix in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 - There is no Service Level Agreement for this service.
 

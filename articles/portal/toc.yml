@@ -4,6 +4,8 @@
     href: ptl-gs.md
 - name: How To
   items:
+  - name: Change your email address in the Portal
+    href: ptl-how-change-email-address.md
   - name: Create a new user
     href: ptl-how-create-users.md
   - name: Enable 2FA in the Portal
@@ -18,7 +20,7 @@
     href: ptl-how-reset-password.md
   - name: Restrict access to the Portal
     href: ptl-how-restrict-access-portal.md
-  - name: Restrict access to the vCloud API
+  - name: Restrict access to VMware Cloud Director
     href: ptl-how-restrict-access-vcloud-api.md
   - name: Set up 2FA for a user account
     href: ptl-how-setup-2fa.md
@@ -50,5 +52,7 @@
     href: ptl-ref-security-settings.md
 - name: Videos
   items:
+  - name: Creating support tickets
+    href: ptl-vid-mycalls.md
   - name: UKCloud Portal
     href: ptl-vid-portal.md

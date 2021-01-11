@@ -3,8 +3,11 @@ title: Community network proxy configuration
 description: Provides information regarding proxy environment variables in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon
+reviewer: Kieran O'Neill
+lastreviewed: 21/10/2020
+
 toc_rootlink: Reference
-toc_sub1: 
+toc_sub1: OpenShift v3.x
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -25,7 +28,7 @@ To follow the steps in this article you must have access to a cluster that is ru
 
 ## Squid
 
-Squid proxy enables containers running on worker nodes (with government community network access) to request resources from the internet. Our default configuration only permits access to specific endpoints to ensure compliance with network regulatory requirements. You can find more information regarding these endpoints in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-whitelist.md).
+Squid proxy enables containers running on worker nodes (with government community network access) to request resources from the internet. Our default configuration only permits access to specific endpoints to ensure compliance with network regulatory requirements. You can find more information regarding these endpoints in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-allow-list.md).
 
 ## Purpose of no_proxy
 
@@ -33,9 +36,9 @@ Squid proxy enables containers running on worker nodes (with government communit
 
 ## Viewing proxy environment variables
 
-To view the required proxy environment variables for your OpenShift cluster, you can refer to the environment values set for the `docker-registry` Deployment Config in the `default` project with a breakdown of these variables following: 
+To view the required proxy environment variables for your OpenShift cluster, you can refer to the environment values set for the `docker-registry` Deployment Config in the `default` project with a breakdown of these variables following:
 
-```
+```sh
 $ oc describe dc docker-registry -n default | grep PROXY
       NO_PROXY:							.cluster.local,.svc,10.2.1.13,10.2.1.19,10.2.1.5,169.254.169.254,172.30.0.1,console.local-domain,cor00005.cni.ukcloud.com,frn00006.cni.ukcloud.com,master-infra-0.local-domain,master-infra-1.local-domain,master-infra-2.local-domain,worker-infra-0.local-domain,worker-infra-1.local-domain,worker-tenant-s-0.local-domain,worker-tenant-s-1.local-domain
       HTTP_PROXY:						http://10.2.1.10:3128
@@ -48,19 +51,19 @@ $ oc describe dc docker-registry -n default | grep PROXY
 
 - `HTTPS_PROXY`: Cluster Proxy URL for HTTPS requests
 
-When building container images within OpenShift, these environment variables will be passed through to the image pushed to your local registry. When working with images that have been imported from an external source, you may need to apply these environment values to ensure that you can access whitelisted internet resources from your community network nodes.
+When building container images within OpenShift, these environment variables will be passed through to the image pushed to your local registry. When working with images that have been imported from an external source, you may need to apply these environment values to ensure that you can access internet resources on the allow-list from your community network nodes.
 
 ## Identifying where you might need to add entries to no_proxy
 
 Typically you can identify where the proxy is denying requests by looking for keywords such as `forbidden` or when receiving HTTP 403 status code responses. Below you can see an example where an HTTPS request to `registry.exampleurl.com` has been blocked by the proxy.
 
-```
+```sh
 $ oc new-app centos/ruby-25-centos7~https://github.com/sclorg/ruby-ex.git
 W0412 13:52:16.288545   50288 dockerimagelookup.go:233] Docker registry lookup failed: Get https://registry.exampleurl.com: Forbidden
 error: unable to locate any images in image streams, local docker images with name "centos/ruby-25-centos7"
 ```
 
-In the example above this is an internet URL so it would be best to add this specific domain (or all subdomains using `.exampleurl.com`) to the `proxy-whitelist` configmap in the `whitelist` project, as documented in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-whitelist.md). If this URL was accessible on another network other than the internet, this would be a good candidate to be added to `no_proxy` to ensure the proxy was bypassed.
+In the example above this is an internet URL so it would be best to add this specific domain (or all subdomains using `.exampleurl.com`) to the `proxy-whitelist` configmap in the `whitelist` project, as documented in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-allow-list.md). If this URL was accessible on another network other than the internet, this would be a good candidate to be added to `no_proxy` to ensure the proxy was bypassed.
 
 ## Adding entries to no_proxy
 

@@ -8,7 +8,7 @@
     <title>How to configure IPsec VPN </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure IPsec VPN ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@
 <h1 id="how-to-configure-ipsec-vpn">How to configure IPsec VPN</h1>
 
 <h2 id="overview">Overview</h2>
-<p>vCloud Director supports the following types of site-to-site VPN:</p>
+<p>VMware Cloud Director supports the following types of site-to-site VPN:</p>
 <ul>
 <li><p>Another edge gateway in the same organisation</p>
 </li>
@@ -105,108 +105,91 @@
 </ul>
 <p>Depending on the type of connection required, you'll need to complete IP addressing for both ends, together with a shared secret, and indicate which VDC networks are allowed to connect to the VPN link.</p>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>Before you start configuring IPsec VPN settings, you'll need to make a note of the IP address of your edge gateway to use as your tunnel endpoint address:</p>
+<p>Before you start configuring IPsec VPN settings, you'll need to make a note of the IP address of your edge gateway to use as your tunnel endpoint address. For more information, see <a href="vmw-how-find-ip-addresses.html"><em>How to find your allocated external IP addresses</em></a>.</p>
+<h2 id="process-overview">Process overview</h2>
+<p>To configure IPsec VPN, you need to follow these general steps (each of these steps in described in more detail later in this article):</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway you want to configure.</p>
+<li><p><a href="#configuring-edge-gateway-ipsec-vpn-settings"><em>Configure the edge gateway IPsec VPN settings</em></a>.</p>
 </li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+<li><p><a href="#creating-the-second-vpn-gateway"><em>Create the second VPN gateway</em></a>.</p>
 </li>
-<li><p>On the <em>Edges</em> page, select the edge that you want to configure.</p>
+<li><p><a href="#configuring-the-edge-gateway-firewall"><em>Configure the edge gateway firewall</em></a>.</p>
 </li>
-<li><p>In the <em>Edge Gateway Settings</em> section, in the <em>IP Addresses</em> table, make a note of the IP address in the <strong>IP Addresses</strong> column.</p>
-<p><img src="images/vmw-vcd-edge-ip-addresses.png" alt="IP Addresses column"></p>
+<li><p><a href="#configuring-the-external-data-centre-gateway-firewall"><em>Configure the external data centre gateway firewall</em></a>.</p>
+</li>
+<li><p><a href="#validating-the-tunnel"><em>Validate the tunnel</em></a>.</p>
 </li>
 </ol>
 <h2 id="configuring-edge-gateway-ipsec-vpn-settings">Configuring edge gateway IPsec VPN settings</h2>
 <ol>
-<li><p>On the <em>Edges</em> page, select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services option"></p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which you want to configure IPsec VPN.</p>
 </li>
-<li><p>Select the <strong>VPN</strong> tab, then the <strong>IPsec VPN</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-ipsec-vpn.png" alt="IPsec VPN tab"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>On the <strong>Activation Status</strong> tab, enable the <strong>IPsec VPN Service Status</strong> option.</p>
-<p><img src="images/vmw-vcd-edge-ipsec-enabled.png" alt="Enable IPsec VPN"></p>
+<li><p>On the <em>Edge Gateways</em> page, select the edge that you want to configure and click <strong>Services</strong>.</p>
+<p><img src="images/vmw-vcd10.1-edge-btn-services.png" alt="Services option"></p>
+</li>
+<li><p>On the <em>Edge Gateway</em> page, select the <strong>VPN</strong> tab, then the <strong>IPsec VPN</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-ipsec-vpn.png" alt="IPsec VPN tab"></p>
 </li>
 <li><p>Select the <strong>IPsec VPN Sites</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-ipsec-vpn-sites.png" alt="IPsec VPN sites tab"></p>
 </li>
-<li><p>Click the <strong>+</strong> icon.</p>
+<li><p>Click the <strong>+</strong> button.</p>
 </li>
-<li><p>In the <em>Add IPsec VPN</em> dialog box, enable the <strong>Enabled</strong> option.</p>
+<li><p>In the <em>Add IPsec VPN</em> dialog box, select the <strong>Enabled</strong> option.</p>
 </li>
-<li><p>Complete the configuration as follows:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Enable perfect forward secrecy (PFS)</td>
-<td>Select this if your on-premises/remote site has that capability.</td>
-</tr>
-<tr>
-<td>Name</td>
-<td></td>
-</tr>
-<tr>
-<td>Local Id</td>
-<td></td>
-</tr>
-<tr>
-<td>Local Endpoint</td>
-<td>The external IP of your edge gateway (refer to the first steps of this procedure for more information).</td>
-</tr>
-<tr>
-<td>Local Subnets</td>
-<td>Enter the organisation networks that can access the VPN (separate multiple local subnets with commas).</td>
-</tr>
-<tr>
-<td>Peer Id</td>
-<td></td>
-</tr>
-<tr>
-<td>Peer Endpoint</td>
-<td>The external IP of your remote site or on-premises firewall or edge where VPN is being set up.</td>
-</tr>
-<tr>
-<td>Peer Subnets</td>
-<td>This is the subnet on your on-premises network that you want to make accessible from your UKCloud VDC. For example, if your on-premises networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here or limit your entry to a smaller subnet of that, for example <code>10.20.0.0/25</code>.</td>
-</tr>
-<tr>
-<td>Encryption Algorithm</td>
-<td>Select the most secure protocol that is supported by your on-premises gateway.</td>
-</tr>
-<tr>
-<td>Authentication</td>
-<td>Select the authentication method that is supported by your on-premises gateway. If you want to use certificates, then you need to configure those first on the <strong>Certificates</strong> tab.</td>
-</tr>
-<tr>
-<td>Pre-Shared Key</td>
-<td>The shared secret used to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters that includes at least one uppercase letter, one lowercase letter and one number. This must be the same on both sites.</td>
-</tr>
-<tr>
-<td>Diffie-Hellmann Group</td>
-<td>We recommend setting this to DH14 or higher if your on-premises environment can support it.</td>
-</tr>
-</tbody>
-</table>
-<p><img src="images/vmw-vcd-edge-ipsec-add.png" alt="Add IPsec VPN dialog box"></p>
+<li><p>Select the <strong>Enable perfect forward secrecy (PFS)</strong> option if your on-premises/remote site has that capability.</p>
 </li>
-<li><p>When you're done, click <strong>Keep</strong> to create the edge end of the VPN tunnel then click <strong>Save changes</strong>.</p>
+<li><p>In the <strong>Name</strong> field, enter a name for  your IPsec VPN.</p>
+</li>
+<li><p>The <strong>Local ID</strong> field is usually set to the same value as the <strong>Local Endpoint</strong> (see next step).</p>
+</li>
+<li><p>In the <strong>Local Endpoint</strong> field, enter the external IP address of your edge gateway (as noted in the <em>Prerequisites</em>).</p>
+</li>
+<li><p>In the <strong>Local Subnets</strong> field, enter the organisation networks that can be accessed via the VPN from the remote location. If you enter multiple local subnets, separate them with commas.</p>
+</li>
+<li><p>The <strong>Peer ID</strong> field is usually set to the same value as the <strong>Peer Endpoint</strong> (see next step).</p>
+</li>
+<li><p>In the <strong>Peer Endpoint</strong> field, enter the external IP address of your remote site or on-premises firewall or edge where the VPN is being set up.</p>
+</li>
+<li><p>In the <strong>Peer Subnets</strong> field, enter the local subnet of your remote network that you want to access from your UKCloud VDC. For example, if your remote networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here or limit your entry to a smaller subnet of that, for example, <code>10.20.0.0/25</code>. If you enter multiple subnets, separate them with commas.</p>
+</li>
+<li><p>From the <strong>Encryption Algorithm</strong> list, select the most secure protocol that is supported by your on-premises gateway.</p>
+</li>
+<li><p>From the <strong>Authentication</strong> list, select the authentication method that is supported by your on-premises gateway. If you want to use certificates, you need to configure those first on the <strong>Certificates</strong> tab.</p>
+</li>
+<li><p>If you selected <strong>PSK</strong> as the authentication method, enter the shared secret used to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters that includes at least one uppercase letter, one lowercase letter and one number. This must be the same on both sites.</p>
+</li>
+<li><p>We recommend setting the <strong>Diffie-Hellmann Group</strong> to DH14 or higher if your on-premises environment can support it.</p>
+<p><img src="images/vmw-vcd10.1-edge-ipsec-add.png" alt="Add IPsec VPN dialog box"></p>
+</li>
+<li><p>When you're done, click <strong>Keep</strong> to create the edge end of the VPN tunnel.</p>
+</li>
+<li><p>Select the <strong>Activation Status</strong> tab and select the <strong>IPsec VPN Service Status</strong> option.</p>
+<p><img src="images/vmw-vcd10.1-edge-ipsec-enabled.png" alt="Enable IPsec VPN"></p>
+</li>
+<li><p>Click <strong>Save changes</strong>.</p>
 </li>
 </ol>
 <h2 id="creating-the-second-vpn-gateway">Creating the second VPN gateway</h2>
-<p>You now need to create the endpoint of the VPN tunnel. If this is a different VDC (in the Elevated security domain) or vOrg, go through the steps described above again to create the tunnel. When you've done that, you can change your firewall settings and validate the connection (see below).</p>
+<p>You now need to create the endpoint of the VPN tunnel. If this is a different VDC or vOrg, go through the steps described above again to create the tunnel. When you've done that, you can change your firewall settings and validate the connection (see below).</p>
 <p>If you're connecting to an external data centre, you'll need to set up the tunnel on that premises.</p>
-<h2 id="creating-an-external-data-centre-vpn-gateway">Creating an external data centre VPN gateway</h2>
+<h3 id="creating-an-external-data-centre-vpn-gateway">Creating an external data centre VPN gateway</h3>
 <p>Although we can't provide specific instructions on setting up an external data centre gateway to connect to the edge gateway, we've provided information about some configuration requirements below.</p>
-<h3 id="ike-phase-1-and-phase-2">IKE Phase 1 and Phase 2</h3>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<ul>
+<li><p>IPsec VPN supports only time-based rekeying. You must disable lifebytes rekeying.</p>
+</li>
+<li><p>Starting in NSX 6.4.5, Triple DES (3DES) cypher algorithm is deprecated in IPsec VPN.</p>
+</li>
+</ul>
+</div>
+<h4 id="ike-phase-1-and-phase-2">IKE Phase 1 and Phase 2</h4>
 <p>IKE is a standard method for arranging secure, authenticated communications.</p>
-<h4 id="phase-1-parameters">Phase 1 parameters</h4>
+<h5 id="phase-1-parameters">Phase 1 parameters</h5>
 <p>Phase 1 sets up mutual authentication of the peers, negotiates cryptographic parameters, and creates session keys. The supported Phase 1 parameters are:</p>
 <ul>
 <li><p>Main mode</p>
@@ -222,8 +205,8 @@
 <li><p>ISAKMP aggressive mode disabled</p>
 </li>
 </ul>
-<h4 id="phase-2-parameters">Phase 2 parameters</h4>
-<p>IKE Phase 2 negotiates an IPSec tunnel by creating keying material for the IPSec tunnel to use (either by using the IKE phase 1 keys as a base or by performing a new key exchange). The supported IKE Phase 2 parameters are:</p>
+<h5 id="phase-2-parameters">Phase 2 parameters</h5>
+<p>IKE Phase 2 negotiates an IPsec tunnel by creating keying material for the IPsec tunnel to use (either by using the IKE phase 1 keys as a base or by performing a new key exchange). The supported IKE Phase 2 parameters are:</p>
 <ul>
 <li><p>AES/AES256/AES-GCM (Will match the Phase 1 setting)</p>
 </li>
@@ -231,7 +214,7 @@
 </li>
 <li><p>Diffie-Hellman Group</p>
 </li>
-<li><p>Perfect forward secrecy for rekeying (only if it was turned on in both endpoints)</p>
+<li><p>Perfect forward secrecy for rekeying (only if it was switched on in both endpoints)</p>
 </li>
 <li><p>SA lifetime of 3600 seconds (one hour) with no kbytes rekeying</p>
 </li>
@@ -264,10 +247,18 @@
 <h2 id="configuring-the-external-data-centre-gateway-firewall">Configuring the external data centre gateway firewall</h2>
 <p>When the VPN tunnel is up and running, you may need to create firewall rules and routes on your on-premises gateway or other internal firewall for traffic passing over the tunnel. This is outside of the scope of this article and will depend on your specific premises network configuration.</p>
 <h2 id="validating-the-tunnel">Validating the tunnel</h2>
-<p>When you've configured both ends of the IPSec tunnel, the connection should start without any issues.</p>
-<p>To verify the tunnel status in vCloud Director:</p>
+<p>When you've configured both ends of the IPsec tunnel, the connection should start without any issues.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It can take up to two minutes after the tunnel is established to show that the VPN connection is active.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Logs from the IPsec VPN cannot currently be used to aid fault finding.</p>
+</div>
+<p>To verify the tunnel status:</p>
 <ol>
-<li><p>On the <em>Edges</em> page, select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
+<li><p>On the <em>Edge Gateways</em> page, select the edge that you want to validate and click <strong>Services</strong>.</p>
 </li>
 <li><p>Select the <strong>Statistics</strong> tab and then the <strong>IPsec VPN</strong> tab.</p>
 </li>
@@ -280,10 +271,6 @@
 <li><p>You should now be able to send traffic via the VPN.</p>
 </li>
 </ol>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Logs from the IPsec VPN cannot currently be used to aid fault finding.</p>
-</div>
 <h2 id="next-steps">Next steps</h2>
 <p>In this article you've learned how to configure IPsec VPN. For other edge gateway configuration tasks, see:</p>
 <ul>
@@ -327,7 +314,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

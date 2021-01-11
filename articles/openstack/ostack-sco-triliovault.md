@@ -81,9 +81,9 @@ This service is not backed by Service Credits.
 
 The UKCloud support team can help provide customers with the support around investigating any failures on request.
 
-## Planned maintenance
+## Planned Maintenance
 
-On occasion, planned maintenance of the OpenStack platform will take precedence over this service. If there's a potential disruption, we'll highlight this to you via the service status page and UKCloud Portal notifications system.
+On occasion, Planned Maintenance of the OpenStack platform will take precedence over this service. If there's a potential disruption, we'll highlight this to you via the [UKCloud Service Status page](https://status.ukcloud.com).
 
 ## Additional data protection services
 

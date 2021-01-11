@@ -8,7 +8,7 @@
     <title>How to use the VMware OVF Tool </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use the VMware OVF Tool ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,11 +96,11 @@
 <h2 id="overview">Overview</h2>
 <p>The VMware OVF Tool is a conversion program freely downloadable from VMware that assists in the distribution of virtual machines (VMs) and vApps, converting them between OVF, VMX and OVA formats. It also includes a command‑line facility to import and export OVF packages between environments or from third party suppliers. The OVF Tool is a command‑line interface (CLI) tool only.</p>
 <ul>
-<li><p><strong>OVF (Open Virtualisation Format)</strong> is a packaging standard created by leading virtualisation vendors. It is a platform independent, efficient, open packaging and distribution format for virtual machines.</p>
+<li><p><strong>OVF (Open Virtualisation Format)</strong> is a packaging standard created by leading virtualisation vendors. It is a platform independent, efficient, open packaging and distribution format for VMs.</p>
 </li>
-<li><p><strong>VMX (the VM configuration file)</strong> is a simple text file with various parameters relating to the guest Virtual Machine.</p>
+<li><p><strong>VMX (the VM configuration file)</strong> is a simple text file with various parameters relating to the guest VM.</p>
 </li>
-<li><p><strong>The OVA file extension</strong> is associated with Open Virtual Machine Format. Compared to the OVF file format, the OVA format contains all VM files and *.ovf files compressed into one single OVA archive file instead of many files in a folder.</p>
+<li><p><strong>The OVA file extension</strong> is associated with Open Virtual Machine Format. Compared to the OVF file format, the OVA format contains all VM files and <code>*.ovf</code> files compressed into one single OVA archive file instead of many files in a folder.</p>
 </li>
 </ul>
 <h2 id="downloading-the-ovf-tool">Downloading the OVF Tool</h2>
@@ -125,7 +125,7 @@ ovftool --help config
 <pre><code>ovftool &lt;source&gt; &lt;target&gt;
 </code></pre>
 <p>Refer to the OVF Tool User Guide for further commands and switches.</p>
-<h2 id="importing-a-vmx-file-to-a-vapp-template-in-vcloud-director">Importing a .vmx file to a vApp template in vCloud Director</h2>
+<h2 id="importing-a-vmx-file-to-a-vapp-template">Importing a .vmx file to a vApp template</h2>
 <p>To import a <code>.vmx</code> file:</p>
 <ol>
 <li><p>In your UKCloud environment, create a catalog to contain the vApp template.</p>
@@ -149,7 +149,7 @@ ovftool --help config
 </li>
 <li><p><code>username</code> is your UKCloud Portal user ID</p>
 </li>
-<li><p><code>apiURL</code> is your vCloud Director API URL. This URL is different depending on the region in which your environment is located. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a>.</p>
+<li><p><code>apiURL</code> is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>.</p>
 </li>
 <li><p><code>computeServiceID</code> is the ID of your UKCloud compute service (sometimes also called an org or vOrg)</p>
 </li>
@@ -167,10 +167,10 @@ ovftool --help config
 </div>
 </li>
 <li><p>The <code>.vmx</code> file is uploaded as a vApp template into your environment.</p>
-<p>In vCloud Director, expand the <em>Recent Tasks</em> section to check the status.</p>
+<p>In VMware Cloud Director, expand the <em>Recent Tasks</em> panel to check the status.</p>
 </li>
 </ol>
-<h2 id="importing-an-iso-file-to-a-vapp-template-in-vcloud-director">Importing an .iso file to a vApp template in vCloud Director</h2>
+<h2 id="importing-an-iso-file-to-a-vapp-template">Importing an .iso file to a vApp template</h2>
 <p>To upload an ISO image:</p>
 <ol>
 <li><p>Make sure you are in the correct directory, that is, the directory containing the ISO file you want to import.</p>
@@ -186,13 +186,13 @@ ovftool --help config
 </li>
 <li><p><code>username</code> is your UKCloud Portal user ID</p>
 </li>
-<li><p><code>apiURL</code> is your vCloud Director API URL. This URL is different depending on the region in which your environment is located. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a>.</p>
+<li><p><code>apiURL</code> is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>.</p>
 </li>
 <li><p><code>targetVDC</code> is the VDC where you want to upload the file</p>
 </li>
 <li><p><code>computeServiceID</code> is the ID of your UKCloud compute service (sometimes also called an org or vOrg)</p>
 </li>
-<li><p><code>name</code> is the name to display for the file in vCloud Director</p>
+<li><p><code>name</code> is the name to display for the file in VMware Cloud Director</p>
 </li>
 <li><p><code>catalogID</code> is the ID of the catalog to which you want to upload the file</p>
 </li>
@@ -237,7 +237,7 @@ ovftool --help config
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

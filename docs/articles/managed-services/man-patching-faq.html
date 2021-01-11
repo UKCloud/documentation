@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Patching as a Service FAQs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Patching as a Service FAQs ">
+    <meta name="generator" content="docfx 2.53.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/managed-services/man-patching-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="patching-as-a-service-faqs">Patching as a Service FAQs</h1>
+
+<h2 id="service">Service</h2>
+<h3 id="what-is-the-service">What is the service?</h3>
+<p>As customer solutions start to expand beyond their own data centres into embracing the benefits of leveraging multi-cloud, the day-to-day management and control of operating system (OS) patching across various technology stacks and locations become highly complex and resource intensive. Patching as a Service helps to reduce these challenges, whilst increasing your level of trust and confidence in the security health of any operating systems deployed as part of your solution stack.</p>
+<p>With Patching as a Service, we provide routine OS patch management for compute instances deployed across UKCloud's multi-cloud. It helps you accelerate business value by removing the burden of basic OS hygiene, letting you focus your attention above the operating system.</p>
+<h3 id="what-technologies-do-you-use">What technologies do you use?</h3>
+<p>Built on the capabilities of our <a href="https://docs.ukcloud.com/articles/managed-services/man-monitoring-sco.html">Managed Monitoring as a Service</a>, UKCloud uses a combination of patches released directly by the vendor coupled with <a href="https://www.ivanti.com/products/security-controls">Ivanti Security Controls</a>, a market-leading enterprise patch management and control solution, as the key technologies to deliver Patching as a Service.</p>
+<h3 id="do-i-get-access-to-a-dashboard-or-reports">Do I get access to a dashboard or reports?</h3>
+<p>As it is assumed UKCloud will manage all patching aspects as part of this service, there are currently no dashboard or reporting features for customers to access.</p>
+<h3 id="how-do-i-get-alerted-on-events">How do I get alerted on events?</h3>
+<p>All alerting will be performed via a support ticket or any special escalation process agreed between UKCloud and the customer.</p>
+<h3 id="how-does-ukcloud-provide-urgent-maintenance-notifications-and-incident-reports">How does UKCloud provide urgent maintenance notifications and incident reports?</h3>
+<p>We do not envisage any scenarios that prevent UKCloud in meeting the availability KPI defined within the <a href="https://docs.ukcloud.com/articles/managed-services/man-patching-sco.html">Service Scope</a> for this service.</p>
+<p>Current Service Status reports and past incident reports are published on the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a>.</p>
+<h3 id="how-does-the-patching-cycle-work">How does the patching cycle work?</h3>
+<p>OS vendors such as Microsoft release updates for their operating systems and associated packages in two ways:</p>
+<ul>
+<li><p>To a specific schedule: &quot;Patch Tuesday&quot; / &quot;Update Tuesday&quot;</p>
+</li>
+<li><p>Ad-hoc, throughout the course of each month</p>
+</li>
+</ul>
+<p>As such, any patching cycle needs to take into consideration the two potential release mechanisms for updates. For our Patching as a Service, we use a batch approach with specific cut-off dates, which we consider to be the best approach to maintain consistency in UKCloud's service, provide a good level of responsiveness to patch releases and also to insulate sufficiently against erroneous upstream vendor patches or errors. This means that there's a specific cut-off after which point any patches released will not be included in that cycle (see <a href="#windows-patches-vs-linux-package-updates">Windows Patches vs Linux Package Updates</a>). Rather being a limitation, this ensures that we can correctly  and efficiently track activities when dealing with customer VMs.</p>
+<p>The following diagram shows the six available cut-off dates and associated Device Groups (Device Group A to J) that customers can choose to group patch some or all of their VMs:</p>
+<div style="text-align:center"><img alt="Patching Cycles" src="images/man-patching-patchingcycle.png"></div>
+<div class="NOTE">
+<h5>Note</h5>
+<ul>
+<li><p>Patching cycle is two weeks long (dates above show day number from beginning of each cycle rather than day of month).</p>
+</li>
+<li><p>Customers are advised to use <em><strong>Device Groups A to E</strong></em> to test patches on VMs within a representative non-production environment.</p>
+</li>
+<li><p>Customers are advised to use <em><strong>Device Groups F to J</strong></em> to apply patches on VMs within their production environments on the basis that no issues ave been identified in their non-production environments.</p>
+</li>
+</ul>
+</div>
+<h3 id="windows-patches-vs-linux-package-updates">Windows patches vs Linux package updates</h3>
+<p>There are major differences between the way that Microsoft releases patches for its Windows OSs and the way that most Linux distribution vendors provide updates. The key difference is:</p>
+<ul>
+<li><p>Microsoft releases patches for their OS (which can be either critical or recommended)</p>
+</li>
+<li><p>Linux vendors release patches for individual packages that make up the OS.</p>
+</li>
+</ul>
+<p>To make best use of existing tooling within those Linux distributions, our service will update a package rather than an individual patch (for example, the equivalent of running <code>yum update httpd</code>, which will include <strong>all</strong> patches related to the httpd package).</p>
+<h3 id="what-if-the-application-of-a-patch-fails">What if the application of a patch fails?</h3>
+<p>Each patching window is followed by 18 hours of issue resolution time, in which issues during automatic patching are investigated and may involve actions such as manual application of patches, and so on. Following the end of this window, the customer will be contacted by UKCloud Support with the current state. If more time is required, this will be arranged at that point.</p>
+<h2 id="management">Management</h2>
+<h3 id="how-do-i-access-my-patching-environment">How do I access my patching environment?</h3>
+<p>As it is assumed UKCloud will manage all OS patching aspects as part of this service, there is currently no environment for customers to access.</p>
+<h3 id="how-do-i-manage-my-services">How do I manage my services?</h3>
+<p>As it is assumed UKCloud will manage all OS patching aspects as part of this service, there is currently no way for customers to directly manage this service.</p>
+<p>Any changes to patch scheduling after customers have selected their patch windows will require consultation and should be requested initially by raising a ticket within the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the Portal. Alternatively, you can contact UKCloud Support by phone or email.</p>
+<h2 id="support">Support</h2>
+<h3 id="how-do-i-raise-a-support-ticket">How do I raise a support ticket?</h3>
+<p>The secure online <a href="https://portal.ukcloud.com/login">UKCloud Portal</a> provides most common service management functionality. You can raise tickets within the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the Portal. Alternatively, you can contact UKCloud Support by phone or email.</p>
+<h3 id="what-are-your-service-maintenance-windows">What are your service maintenance windows?</h3>
+<p>See <a href="../other/other-ref-maintenance-windows.html"><em>Understanding UKCloud service maintenance windows</em></a>.</p>
+<h3 id="can-ukcloud-provide-notifications-for-service-status-and-maintenance">Can UKCloud provide notifications for service status and maintenance?</h3>
+<p>Yes, you can subscribe to the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a> to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see <a href="../other/other-how-subscribe-service-status.html"><em>How to subscribe to service status notifications</em></a>.</p>
+<h2 id="onboarding">Onboarding</h2>
+<h3 id="how-can-i-get-started-with-the-service">How can I get started with the service?</h3>
+<p>Within 5 business days of accepting an order, UKCloud will create the customer's patching environment and commence patching any environments in line with the Device Group schedules they have opted-in to.</p>
+<h3 id="is-there-a-free-trial">Is there a free trial?</h3>
+<p>Due to the initial complexity of configuring the patching environment, UKCloud is currently unable to offer a free trial of this service.</p>
+<h2 id="billing-and-legal">Billing and legal</h2>
+<h3 id="what-is-the-smallest-unit-of-time-i-will-be-billed-for">What is the smallest unit of time I will be billed for?</h3>
+<p>The minimum unit of time for use is monthly. Part months will be rounded up.</p>
+<h3 id="will-i-be-charged-for-resources-in-a-shut-off-state">Will I be charged for resources in a 'shut off' state?</h3>
+<p>UKCloud will continue to charge for any resources that you have elected to be monitored regardless of the state they're in. To stop any charges, you'll need to raise a ticket within the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the Portal. Alternatively, you can contact UKCloud Support by phone or email.</p>
+<h3 id="how-can-i-view-billing-information">How can I view billing information?</h3>
+<p>Online visibility of real-time or historic billing information is currently not available as a service provided by UKCloud.</p>
+<h3 id="how-can-i-pay-for-the-services">How can I pay for the services?</h3>
+<p>Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.</p>
+<h3 id="what-are-the-termination-fees">What are the termination fees?</h3>
+<p>There are no termination costs for this service.</p>
+<h2 id="security">Security</h2>
+<h3 id="how-is-any-data-related-to-this-service-kept-secure">How is any data related to this service kept secure?</h3>
+<p>UKCloud will deploy and manage all agents used to deliver this service, with all traffic being passed via HTTPS.</p>
+<p>Any customer data that UKCloud collects as part of this service will never leave a UKCloud data centre or be shared with a third party.</p>
+<h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
+<p>Protective monitoring is included with all our IaaS platforms and follows GPG 13.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>
