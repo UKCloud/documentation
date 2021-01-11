@@ -1,6 +1,6 @@
 ---
-title: How to manage VMware Cloud Director/vCloud Director permissions in the UKCloud Portal
-description: Shows how to manage and adjust permissions and roles for VMware Cloud Director/vCloud Director within the UKCloud Portal
+title: How to manage VMware Cloud Director permissions in the UKCloud Portal
+description: Shows how to manage and adjust permissions and roles for VMware Cloud Director within the UKCloud Portal
 services: vmware
 author: shighmoor
 reviewer: shighmoor
@@ -10,12 +10,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Manage VMware Cloud Director/vCloud Director permissions
+toc_title: Manage VMware Cloud Director permissions
 toc_fullpath: How To/vmw-how-manage-vcd-permissions.md
 toc_mdlink: vmw-how-manage-vcd-permissions.md
 ---
 
-# How to manage VMware Cloud Director/vCloud Director permissions in the UKCloud Portal
+# How to manage VMware Cloud Director permissions in the UKCloud Portal
 
 ## Overview
 
@@ -56,10 +56,10 @@ https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantpo
 
 ### API Only role
 
-UKCloud have created an **API Only** role that restricts users with VMware Cloud Director/vCloud Director permissions to accessing VMware Cloud Director/vCloud Director solely via the API, with no GUI access.
+UKCloud have created an **API Only** role that restricts users with VMware Cloud Director permissions to accessing VMware Cloud Director solely via the API, with no GUI access.
 
 > [!NOTE]
-> The **API Only** role must be selected in addition to one of the VMware Cloud Director/vCloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
+> The **API Only** role must be selected in addition to one of the VMware Cloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
 
 ## Feedback
 

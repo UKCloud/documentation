@@ -100,7 +100,7 @@
 <p>PSN Assured carries non-encrypted traffic at the network and application layers, whereas PSN Protected carries traffic that contains a shared IPsec encrypted overlay.</p>
 <h3 id="who-is-entitled-to-connect-to-the-psn-network">Who is entitled to connect to the PSN network?</h3>
 <p>Any organisation that is approved by the PSN can connect.</p>
-<p>If you want PSN connectivity, you must have proven to the PSN that your infrastructure is sufficiently secure to connect to or be consumed via the PSN. This means that you must have successfully completed the process of obtaining a PSN Code of Connection (CoCo).</p>
+<p>If you want PSN connectivity, you must have proven to the PSN that your infrastructure is sufficiently secure to connect to or be consumed via the PSN. This means that you must have successfully completed the process of obtaining a PSN Code of Connection (CoCo).</p>
 <p>In addition, if you're a partner selling a managed service over the PSN connectivity, you must either:</p>
 <ul>
 <li><p>Have your own PSN CoCo and PSN Code of Practice (CoP) in place, or</p>
@@ -157,9 +157,9 @@
 <ul>
 <li><p>Source NAT - all outbound traffic to other resources on the PSN will appear to come from one of these IPv4 addresses.</p>
 </li>
-<li><p>Destination NAT - all inbound traffic from other resources on the PSN must be targeted at one of these IPv4 addresses. You can translate the PSN IPv4 address to an internal (RFC 1918) IP address assigned to a VM or, preferably, to the edge gateway load balancer.</p>
+<li><p>Destination NAT - all inbound traffic from other resources on the PSN must be targeted at one of these IPv4 addresses. You can translate the PSN IPv4 address to an internal (RFC 1918) IP address assigned to a VM or, preferably, to the edge gateway load balancer.</p>
 </li>
-<li><p>A VPN - an IPsec VPN between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.</p>
+<li><p>A VPN - an IPsec VPN between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.</p>
 </li>
 </ul>
 <p>Before additional IPv4 addresses can be allocated, you'll need to demonstrate your use of:</p>
@@ -168,7 +168,7 @@
 </li>
 <li><p>Host headers - enabling web servers to accept connections for several URLs via a single externally routable IP address</p>
 </li>
-<li><p>VPN tunnelling - enabling the use of internal (RFC 1918) IP addresses for non‑production services such as UAT and development</p>
+<li><p>VPN tunnelling - enabling the use of internal (RFC 1918) IP addresses for non‑production services such as UAT and development</p>
 </li>
 </ul>
 <h3 id="is-the-psn-connection-into-ukcloud-shared-by-all-environments-connected-to-the-psn">Is the PSN connection into UKCloud shared by all environments connected to the PSN?</h3>
@@ -205,9 +205,9 @@
 <h3 id="what-psn-code-of-connection-coco-do-i-need-to-get-psn-connectivity-on-ukcloud">What PSN Code of Connection (CoCo) do I need to get PSN connectivity on UKCloud?</h3>
 <p>The <a href="https://www.gov.uk/government/groups/public-services-network">guidance</a> from PSN Authority is as follows:</p>
 <ul>
-<li><p>The PSN CoCo from non-government organisations is called the PSN Service Provision Compliance Certificate. This certificate is the one that is relevant to workloads facing PSN -- there are other PSN CoCos, however are not applicable for non-government organisations.</p>
+<li><p>The PSN CoCo from non-government organisations is called the PSN Service Provision Compliance Certificate. This certificate is the one that is relevant to workloads facing PSN -- there are other PSN CoCos, however are not applicable for non-government organisations.</p>
 </li>
-<li><p>You can present us with one of two CoCos. If you present us with a <em>PSN Service Provision Compliance Certificate</em> then it needs to be applicable to that project or a blanket Service Provision Compliance Certificate, covering many projects that you are doing. The other PSN CoCo, <em>PSN Connection Compliance Certificate</em>, allows the access to connect to PSN to send and receive data from services on it, including creating PSN-connected environments for yourselves on UKCloud.</p>
+<li><p>You can present us with one of two CoCos. If you present us with a <em>PSN Service Provision Compliance Certificate</em> then it needs to be applicable to that project or a blanket Service Provision Compliance Certificate, covering many projects that you are doing. The other PSN CoCo, <em>PSN Connection Compliance Certificate</em>, allows the access to connect to PSN to send and receive data from services on it, including creating PSN-connected environments for yourselves on UKCloud.</p>
 </li>
 </ul>
 <h3 id="i-am-a-government-organisation-what-do-i-need-to-show-you-to-get-psn-connectivity-for-my-ukcloud-environment">I am a government organisation, what do I need to show you to get PSN connectivity for my UKCloud environment?</h3>
@@ -215,19 +215,19 @@
 <ul>
 <li><p>Supply us with a project specific PSN Service Provision Compliance Certificate</p>
 </li>
-<li><p>Supply us with a blanket PSN Service Provision Compliance Certificate that covers all projects you are doing</p>
+<li><p>Supply us with a blanket PSN Service Provision Compliance Certificate that covers all projects you are doing</p>
 </li>
 <li><p>Supply us with a PSN Connection Compliance Certificate, validating that you are connected to PSN</p>
 </li>
 </ul>
 <h3 id="i-am-a-non-government-organisation-but-i-am-supplying-a-service-to-a-single-government-organisation-what-do-i-need-to-show-you-to-get-psn-connectivity-to-my-environment">I am a non-government organisation but I am supplying a service to a single government organisation. What do I need to show you to get PSN connectivity to my environment?</h3>
 <ul>
-<li><p>If the government customer is supplying the CoCo, this must be a blanket or project specific PSN Service Provision Compliance Certificate, covering all projects that the government organisation is doing and we must see a statement from the government organisation's SIRO/IA with confirmation to use their CoCo.</p>
+<li><p>If the government customer is supplying the CoCo, this must be a blanket or project specific PSN Service Provision Compliance Certificate, covering all projects that the government organisation is doing and we must see a statement from the government organisation's SIRO/IA with confirmation to use their CoCo.</p>
 </li>
 <li><p>If the government customer is not supplying them with the CoCo, they will need to apply for a PSN Service Provision Compliance Certificate for themselves.</p>
 </li>
 </ul>
-<p>A PSN Connection Compliance Certificate is not an acceptable CoCo.</p>
+<p>A PSN Connection Compliance Certificate is not an acceptable CoCo.</p>
 <h3 id="i-am-a-non-government-organisation-providing-a-service-to-multiple-government-organisations-what-do-i-need-to-show-you-to-get-psn-connectivity-to-my-environment">I am a non-government organisation providing a service to multiple government organisations. What do I need to show you to get PSN connectivity to my environment?</h3>
 <p>You will need a PSN Service Provision Compliance Certificate for your organisation.</p>
 <h3 id="can-i-take-my-assigned-psn-ips-with-me-if-i-ever-migrate-away-from-ukcloud">Can I take my assigned PSN IPs with me if I ever migrate away from UKCloud?</h3>
@@ -265,7 +265,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

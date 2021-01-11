@@ -62,7 +62,7 @@ You need to add two static routes and an SNAT rule on two edge gateways.
 
 Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:
 
-- [*How to license Windows VMs using the UKCloud Key Management Server*](../shared/shared-how-setup-kms.md)
+- [*How to license Windows VMs using the UKCloud Key Management Server*](../shared/shared-how-setup-kms.md)
 
 - [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](../shared/shared-how-connect-windows-update.md)
 

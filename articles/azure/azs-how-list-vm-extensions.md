@@ -3,8 +3,8 @@ title: How to list VM extensions in Azure Stack Hub using PowerShell
 description: Learn how to list VM extensions in Azure Stack Hub with PowerShell
 services: azure-stack
 author: Paul Brown
-reviewer: William Turner
-lastreviewed: 31/03/2020
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -39,19 +39,19 @@ From your Powershell window run:
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Register an AzureRM environment that targets your Azure Stack Hub instance
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+# Register an Az environment that targets your Azure Stack Hub instance
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -Environment "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Retrieve VM extension list
-Get-AzureRmVmImagePublisher -Location $Location | `
-  Get-AzureRmVMExtensionImageType | `
-  Get-AzureRmVMExtensionImage | `
+Get-AzVmImagePublisher -Location $Location | `
+  Get-AzVMExtensionImageType | `
+  Get-AzVMExtensionImage | `
   Format-Table -Property Type, Version -AutoSize
 </code></pre>
 

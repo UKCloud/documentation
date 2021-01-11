@@ -100,7 +100,7 @@ To use the Horizon dashboard to set the recovery option for an instance:
 
         ![Set value of RestartOnFail metadata](images/ostack-horizon-restartonfail-true.png)
 
-    - To set the recovery option so that you must manually restart the instance when the host has been recovered, next to the **RestartOnFail** field, click the **&ndash;** button.
+    - To set the recovery option so that you must manually restart the instance when the host has been recovered, next to the **RestartOnFail** field, click the **&ndash;** button.
 
         ![Remove RestartOnFail metadata](images/ostack-horizon-restartonfail-off.png)
 

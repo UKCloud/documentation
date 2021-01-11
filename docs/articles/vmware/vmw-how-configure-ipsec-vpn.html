@@ -94,7 +94,7 @@
 <h1 id="how-to-configure-ipsec-vpn">How to configure IPsec VPN</h1>
 
 <h2 id="overview">Overview</h2>
-<p>VMware Cloud Director/vCloud Director supports the following types of site-to-site VPN:</p>
+<p>VMware Cloud Director supports the following types of site-to-site VPN:</p>
 <ul>
 <li><p>Another edge gateway in the same organisation</p>
 </li>
@@ -121,17 +121,6 @@
 </li>
 </ol>
 <h2 id="configuring-edge-gateway-ipsec-vpn-settings">Configuring edge gateway IPsec VPN settings</h2>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which you want to configure IPsec VPN.</p>
 </li>
@@ -184,96 +173,6 @@
 <li><p>Click <strong>Save changes</strong>.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to configure IPsec VPN.</p>
-</li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
-</li>
-<li><p>On the <em>Edges</em> page, select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services option"></p>
-</li>
-<li><p>On the <em>Edge Gateway</em> page, select the <strong>VPN</strong> tab, then the <strong>IPsec VPN</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-ipsec-vpn.png" alt="IPsec VPN tab"></p>
-</li>
-<li><p>Select the <strong>Activation Status</strong> tab, then enable the <strong>IPsec VPN Service Status</strong> option.</p>
-<p><img src="images/vmw-vcd-edge-ipsec-enabled.png" alt="Enable IPsec VPN"></p>
-</li>
-<li><p>Select the <strong>IPsec VPN Sites</strong> tab.</p>
-</li>
-<li><p>Click the <strong>+</strong> icon.</p>
-</li>
-<li><p>In the <em>Add IPsec VPN</em> dialog box, enable the <strong>Enabled</strong> option.</p>
-</li>
-<li><p>Complete the configuration as follows:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Enable perfect forward secrecy (PFS)</td>
-<td>Select this if your on-premises/remote site has that capability.</td>
-</tr>
-<tr>
-<td>Name</td>
-<td>Enter a desired name for your ipsec vpn</td>
-</tr>
-<tr>
-<td>Local Id</td>
-<td>This is usually set to the same value as Local Endpoint</td>
-</tr>
-<tr>
-<td>Local Endpoint</td>
-<td>The external IP of your edge gateway (refer to the first steps of this procedure for more information).</td>
-</tr>
-<tr>
-<td>Local Subnets</td>
-<td>Enter the organisation networks that can be accessed via the VPN from the remote location (separate multiple local subnets with commas).</td>
-</tr>
-<tr>
-<td>Peer Id</td>
-<td>This is usually set to the same value as Peer Endpoint</td>
-</tr>
-<tr>
-<td>Peer Endpoint</td>
-<td>The external IP of your remote site or on-premises firewall or edge where VPN is being set up.</td>
-</tr>
-<tr>
-<td>Peer Subnets</td>
-<td>This is the local subnet of your remote network that you want to access from your UKCloud VDC. For example, if your remote networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here or limit your entry to a smaller subnet of that, for example <code>10.20.0.0/25</code>.</td>
-</tr>
-<tr>
-<td>Encryption Algorithm</td>
-<td>Select the most secure protocol that is supported by your on-premises gateway.</td>
-</tr>
-<tr>
-<td>Authentication</td>
-<td>Select the authentication method that is supported by your on-premises gateway. If you want to use certificates, then you need to configure those first on the <strong>Certificates</strong> tab.</td>
-</tr>
-<tr>
-<td>Pre-Shared Key</td>
-<td>The shared secret used to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters that includes at least one uppercase letter, one lowercase letter and one number. This must be the same on both sites.</td>
-</tr>
-<tr>
-<td>Diffie-Hellmann Group</td>
-<td>We recommend setting this to DH14 or higher if your on-premises environment can support it.</td>
-</tr>
-</tbody>
-</table>
-<p><img src="images/vmw-vcd-edge-ipsec-add.png" alt="Add IPsec VPN dialog box"></p>
-</li>
-<li><p>When you're done, click <strong>Keep</strong> to create the edge end of the VPN tunnel then click <strong>Save changes</strong>.</p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="creating-the-second-vpn-gateway">Creating the second VPN gateway</h2>
 <p>You now need to create the endpoint of the VPN tunnel. If this is a different VDC or vOrg, go through the steps described above again to create the tunnel. When you've done that, you can change your firewall settings and validate the connection (see below).</p>
 <p>If you're connecting to an external data centre, you'll need to set up the tunnel on that premises.</p>
@@ -307,7 +206,7 @@
 </li>
 </ul>
 <h5 id="phase-2-parameters">Phase 2 parameters</h5>
-<p>IKE Phase 2 negotiates an IPsec tunnel by creating keying material for the IPsec tunnel to use (either by using the IKE phase 1 keys as a base or by performing a new key exchange). The supported IKE Phase 2 parameters are:</p>
+<p>IKE Phase 2 negotiates an IPsec tunnel by creating keying material for the IPsec tunnel to use (either by using the IKE phase 1 keys as a base or by performing a new key exchange). The supported IKE Phase 2 parameters are:</p>
 <ul>
 <li><p>AES/AES256/AES-GCM (Will match the Phase 1 setting)</p>
 </li>
@@ -358,17 +257,6 @@
 <p>Logs from the IPsec VPN cannot currently be used to aid fault finding.</p>
 </div>
 <p>To verify the tunnel status:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>On the <em>Edge Gateways</em> page, select the edge that you want to validate and click <strong>Services</strong>.</p>
 </li>
@@ -383,21 +271,6 @@
 <li><p>You should now be able to send traffic via the VPN.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>On the <em>Edges</em> page, select the edge that you want to validate and click <strong>Configure Services</strong>.</p>
-</li>
-<li><p>Select the <strong>Statistics</strong> tab and then the <strong>IPsec VPN</strong> tab.</p>
-</li>
-<li><p>For each configured tunnel, if you can see a tick, the tunnel is up and running and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.</p>
-</li>
-<li><p>You should now be able to send traffic via the VPN.</p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="next-steps">Next steps</h2>
 <p>In this article you've learned how to configure IPsec VPN. For other edge gateway configuration tasks, see:</p>
 <ul>
@@ -441,7 +314,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

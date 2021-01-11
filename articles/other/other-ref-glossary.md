@@ -99,7 +99,7 @@ For more information, see the [Cloud Storage service definition](../cloud-storag
 
 ### Compute service
 
-A UKCloud for VMware top-level container within a customer account that includes a VMware Cloud Director/vCloud Director organization and its VDCs, catalogs, users and resources.
+A UKCloud for VMware top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogs, users and resources.
 
 ### Cross Domain Security Zone (CDSZ)
 
@@ -397,7 +397,7 @@ OFFICIAL data that requires specific handling to mitigate risk. Security measure
 
 ### Organization (Org)
 
-A top level container in VMware Cloud Director/vCloud Director that contains one or more VDCs and owns all the virtual resources used by those VDCs.
+A top level container in VMware Cloud Director that contains one or more VDCs and owns all the virtual resources used by those VDCs.
 
 ## P
 
@@ -551,17 +551,17 @@ A UKCloud service that provides a platform to deliver, protect and manage deskto
 
 For more information, see the [UKCloud Desktop as a Service Service Definition](../daas/daas-sd.md).
 
-### UKCloud for Microsoft Azure
-
-A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
-
-For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
-
 ### UKCloud for Managed OpenShift
 
 A UKCloud PaaS service that delivers a secure, private deployment of OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks including HCSN and Janet.
 
 For more information, see the [UKCloud for Managed OpenShift service definition](../openshift/oshift-sd.md).
+
+### UKCloud for Microsoft Azure
+
+A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
+
+For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
 
 ### UKCloud for OpenStack
 

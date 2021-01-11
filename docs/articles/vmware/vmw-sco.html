@@ -102,7 +102,7 @@
 <p>Your UKCloud service architecture is as follows:</p>
 <p><strong>Company.</strong> Your contract with UKCloud is associated with a company, which provides a single owner for the contract, regardless of how many accounts are created.</p>
 <p><strong>Account.</strong> We use accounts to separate financial ownership. An account could represent an organisation, a customer contract, or a specific project. An account can also have several UKCloud services associated with it, such as UKCloud for VMware, Cloud Storage and UKCloud for OpenStack. You can also use accounts to separate users based on access requirements or permissions.</p>
-<p><strong>Organisation (vOrg).</strong> This represents your UKCloud for VMware service inside vCloud Director and on the UKCloud Portal. There is a 1:1 mapping of service to vOrg.</p>
+<p><strong>Organisation (vOrg).</strong> This represents your UKCloud for VMware service inside VMware Cloud Director and on the UKCloud Portal. There is a 1:1 mapping of service to vOrg.</p>
 <p><strong>Virtual data centre (VDC).</strong> A VDC is where you define your workload type and build your virtual machines (VMs). You can create VDCs through the UKCloud Portal or the Portal API.</p>
 <h2 id="service-options">Service options</h2>
 <p>You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, allowing you to scale resources up or down as your requirements change.</p>
@@ -133,7 +133,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>VM size.</strong> There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.</p>
+<p><strong>VM size.</strong> There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through VMware Cloud Director.</p>
 <p>Full details of the available service options are outlined in the <a href="vmw-sd.html"><em>Service Definition</em></a>.</p>
 <h2 id="storage-options">Storage options</h2>
 <p>All workloads (except micro) include 60GiB of Tier 2 storage for free, all storage is persistent and resilient to local hardware failures. Micro sized VMs include 10GiB of Tier 2 storage.</p>
@@ -193,13 +193,13 @@
 <ul>
 <li><p>Internally this includes, but isn't limited to, the vSphere and ESX versions, and the hardware version of the platform.</p>
 </li>
-<li><p>Externally this includes the available versions of the edge gateway and vCloud Director.</p>
+<li><p>Externally this includes the available versions of the edge gateway and VMware Cloud Director.</p>
 </li>
 </ul>
 </li>
 <li><p>Promiscuous mode is disabled.</p>
 </li>
-<li><p>You can set affinity or anti-affinity rules through vCloud Director so that VMs do, or do not, run on the same physical host.</p>
+<li><p>You can set affinity or anti-affinity rules through VMware Cloud Director so that VMs do, or do not, run on the same physical host.</p>
 </li>
 <li><p>You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies). We do not support customer implementations inside a VM.</p>
 </li>
@@ -215,7 +215,7 @@
 <p>For the latest available licences, please check the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <p>You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If you're providing your own licensing, you should inform UKCloud by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal for a retrospective discount.</p>
 <p>For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.</p>
-<p><strong>VM server images.</strong> We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from vCloud Director.</p>
+<p><strong>VM server images.</strong> We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from VMware Cloud Director.</p>
 <p>You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.</p>
 <p><strong>Update services.</strong> We make update repositories available for all software for which we provide licensing. We don't provide software update facilities for non-UKCloud licensed software.</p>
 <p><strong>Anti-virus.</strong> We do not provide anti-virus software as part of the service.</p>
@@ -246,15 +246,15 @@ than as part of a regular end-user design.</p>
 <p>If you change from a UKCloud-provided firewall to your own firewall, we will redeploy your firewall on to a dedicated network and you will need to migrate your environment to that network.</p>
 <p>Full customer and UKCloud responsibilities can be found in the <a href="vmw-sco-byof.html"><em>Bring Your Own Firewall Service Scope</em></a>.</p>
 <h2 id="protective-monitoring">Protective monitoring</h2>
-<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.</p>
+<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.</p>
 <p>We don't provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to act at this level.</p>
 <p>In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.</p>
 <h2 id="platform-management">Platform management</h2>
 <p>Users can access, manage and view the UKCloud for VMware service, accessing only those features allowed by their role, in any of the following ways:</p>
 <ul>
-<li><p><strong>vCloud Director API.</strong> Enables the programmatic creation and management of VMs inside the platform.</p>
+<li><p><strong>vCloud API.</strong> Enables the programmatic creation and management of VMs inside the platform.</p>
 </li>
-<li><p><strong>vCloud Director graphical UI.</strong> Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions).</p>
+<li><p><strong>VMware Cloud Director tenant portal.</strong> Provides a graphical interface to access the VMware Cloud Director environment (depending on assigned permissions).</p>
 </li>
 <li><p><strong>UKCloud Portal.</strong> Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.</p>
 </li>
@@ -348,7 +348,7 @@ than as part of a regular end-user design.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

@@ -28,7 +28,7 @@ Cloud GPU enables you to supplement your on-platform compute resources with GPU 
 This service enables you to use UKCloud's main infrastructure platforms to meet the specialist requirements of some advanced applications, with the benefits of a cloud environment. It supports the following types of
 workloads:
 
-- **Visualisation workloads.** Describes the traditional use cases for GPU processing. These include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.
+- **Visualisation workloads.** Describes the traditional use cases for GPU processing. These include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.
 
 - **Compute workloads.** GPUs have become prevalent in a world that needs a lot of data processing, fast. The parallel nature of GPU cores lends itself perfectly to supporting initiatives such as deep or machine learning and large-scale mathematical modelling.
 
@@ -36,7 +36,7 @@ This article provides an introduction for how to use Cloud GPU for visualisation
 
 ### Intended audience
 
-To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director.
+To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director.
 
 ## Cloud GPU overview
 

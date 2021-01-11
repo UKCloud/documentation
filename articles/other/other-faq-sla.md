@@ -358,9 +358,6 @@ How much is payable?
 
 ## UKCloud for Oracle Software
 
-> [!IMPORTANT]
-> This service is no longer available for sale. The following information is provided to support existing customers of the service only.
-
 ### How do you offer an SLA on UKCloud for Oracle Software?
 
 UKCloud monitors two main components of the UKCloud for Oracle Software service to provide the best overall measure of service availability. The first component is the physical host server that the Oracle Virtual Machine (OVM) is running on. This confirms that the OVM has resources and can be available. The second component is the data store which ensures that the storage associated with the OVM is accessible. By monitoring these two components, UKCloud believes that we can provide the best overall view of the availability of the service.
@@ -434,7 +431,7 @@ The following are examples of what is not covered by the SLA:
 
 - Faults within your control, such as client applications and mailbox configuration
 
-- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or HSCN) and components collocated at UKCloud 
+- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or HSCN) and components collocated at UKCloud 
 
 ### Can you give me a worked example for the Email and Collaboration as a Service SLA?
 
@@ -444,7 +441,7 @@ Example factors (Email and Collaboration as a Service)
 
 - Price per month + storage + archived + connectivity = total price per month
 
-- £3.50 + (5,000 x £1.00) + (5,000 x £0.34) + £0.00 = £6,703.50 per month
+- £3.50 + (5,000 x £1.00) + (5,000 x £0.34) + £0.00 = £6,703.50 per month
 
 - Availability Commitment = 99.99%
 

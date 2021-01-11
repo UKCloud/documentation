@@ -23,14 +23,11 @@ If a user uses the Portal GUI or API to add a new VDC to a compute service after
 
 ### Intended audience
 
-To refresh the vRealize Operations Tenant Appliance, you must be a vCloud Director/VMware Cloud Director Organization Administrator.
+To refresh the vRealize Operations Tenant Appliance, you must be a VMware Cloud Director Organization Administrator.
 
 ## Refreshing the vRealize Operations Tenant Appliance
 
-1. In the vCloud Director/VMware Cloud Director menu, select **Libraries**.
-
-    > [!TIP]
-    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
+1. In the VMware Cloud Director menu, select **Libraries**.
 
 2. In the left navigation panel, under *Services*, select **Service Library**.
 

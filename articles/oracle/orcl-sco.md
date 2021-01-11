@@ -17,9 +17,6 @@ toc_mdlink: orcl-sco.md
 
 # UKCloud for Oracle Software Service Scope
 
-> [!IMPORTANT]
-> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
-
 ## About this document
 
 This document describes the boundaries of the UKCloud for Oracle software service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.
@@ -163,7 +160,7 @@ Bring Your Own Firewall is currently not available for UKCloud for Oracle Softwa
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
 
 We don't provide Protective Monitoring services above the hypervisor (for example, for your VM). Components above this infrastructure are your own responsibility to provide an appropriate protective monitoring capability.
 
@@ -175,11 +172,11 @@ Users can access, manage and view the UKCloud for Oracle Software service, acces
 
 - **Oracle Enterprise Manager.** The graphical interface for the creation and management of the Oracle environment.
 
-- **vCloud Director API.** Enables the programmatic creation and management of the Oracle edge gateway.
+- **vCloud API.** Enables the programmatic creation and management of the Oracle edge gateway.
 
-- **vCloud Director Graphical UI.** Provides a graphical interface to access the vCloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).
+- **VMware Cloud Director tenant portal.** Provides a graphical interface to access the VMware Cloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).
 
-- **UKCloud Portal.** Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.
+- **UKCloud Portal.** Enables access to the VMware Cloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of service configuration information. Access to incident and request management is also possible through the Portal.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.
 

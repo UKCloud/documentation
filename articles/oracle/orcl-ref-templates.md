@@ -18,9 +18,6 @@ toc_mdlink: orcl-ref-templates.md
 
 # UKCloud for Oracle Software templates
 
-> [!IMPORTANT]
-> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
-
 UKCloud for Oracle Software provides several templates in a public library to help you build your Oracle virtual machines (VMs). An Oracle VM template is a fully pre-installed, pre-configured VM image that you can use to quickly create new VMs without having to worry about OS installation and configuration.
 
 UKCloud provides the following templates:

@@ -26,13 +26,13 @@ The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you c
 
 - View notifications relating to the UKCloud platform
 
-- View cyber security news and security events
+- View cyber security news
 
 - View information about your UKCloud for VMware service, including VM information and backup reports
 
 - Create compute services, virtual data centres (VDCs) and edge gateways within your UKCloud for VMware environment
 
-- Access vCloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall
+- Access VMware Cloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall
 
 - Access the OpenStack Horizon dashboard to work with your UKCloud for OpenStack environment, for example to build your network infrastructure, set up access and security and launch instances
 
@@ -120,7 +120,7 @@ In the toolbar, you can also click your username to access the following options
 
 - **Two-Factor Auth** - Set up two-factor authentication (2FA) for your user account (see [*How to set up two-factor authentication for a user account*](ptl-how-setup-2fa.md)).
 
-- **API** - View the information you need to use the vCloud API (see [*How to access vCloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md)).
+- **API** - View the information you need to use the vCloud API (see [*How to access VMware Cloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md)).
 
 - **Feedback** - Send an email to UKCloud (<feedback@ukcloud.com>) with feedback on the Portal or any other aspect of your UKCloud experience.
 
@@ -158,7 +158,7 @@ The Portal navigation panel provides access to all the functionality available i
 
 - **OpenStack Cloud** - Provides access to the OpenStack Horizon dashboard for UKCloud for OpenStack (see the [*Getting Started Guide for UKCloud for OpenStack*](../openstack/ostack-gs.md)).
 
-- **OpenShift** - Provides information about UKCloud for OpenShift (see the [*Getting Started Guide for UKCloud for OpenShift*](../openshift/oshift-gs.md)).
+- **OpenShift** - Provides information about UKCloud for Managed OpenShift (see the [*Getting Started Guide for UKCloud for Managed OpenShift*](../openshift/oshift-gs.md)).
 
 - **Azure Cloud** - Provides access to the Azure Stack Hub portal for UKCloud for Microsoft Azure (see the [*Getting Started Guide for UKCloud for Microsoft Azure*](../azure/azs-gs.md)).
 
@@ -168,7 +168,7 @@ The Portal navigation panel provides access to all the functionality available i
 
   - **Cyber Security News**, where you can view general threat briefs and security news
 
-  - **Security Events**, which displays security events specific to your environment
+  - **Security Operations Service**, which shows the number of logs processed against the UKCloud platform by our Security Operations Service
 
   For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
@@ -241,7 +241,7 @@ Within the UKCloud VMware environment there are two types of account:
 
 ### compute service
 
-A UKCloud for VMware top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogs, users and resources.
+A UKCloud for VMware top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogs, users and resources.
 
 ### Knowledge Centre
 

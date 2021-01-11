@@ -1,6 +1,6 @@
 ---
 title: How to create NAT rules
-description: Shows how to configure network address translation within vCloud Director
+description: Shows how to configure network address translation within the VMware Cloud Director tenant portal
 services: vmware
 author: shighmoor
 reviewer: shighmoor
@@ -47,8 +47,6 @@ DNAT changes the destination IP address of a packet and performs the reverse fun
 
 To create a DNAT rule:
 
-### [VMware Cloud Director 10.1](#tab/tabid-a)
-
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway in which you want to create the DNAT rule.
 
 2. In the left navigation panel, under *Networking*, select **Edges**.
@@ -87,44 +85,6 @@ To create a DNAT rule:
 
 12. Add more NAT rules as required, then click **Save changes**.
 
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway in which you want to create the DNAT rule.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
-
-3. Select the edge that you want to configure and click the **Configure Services** button.
-
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
-
-4. Select the **NAT** tab.
-
-    ![NAT tab](images/vmw-vcd-edge-tab-nat.png)
-
-5. In the *NAT44 Rules* section, click **+ DNAT Rule**.
-
-    ![Add DNAT Rule button](images/vmw-vcd-btn-add-dnat.png)
-
-6. In the *Add DNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule. Unless you have special requirements, this will be the external network (usually named nti\* or nft\*).
-
-7. Enter an **Original IP/Range** and a **Translated IP/Range**.
-
-8. Select the **Protocol**, **Original Port** and **Translated Port**.
-
-9. Make sure the **Enabled** option is selected.
-
-10. If you have a syslog server configured, select the **Enable logging** option.
-
-    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
-
-    ![Add DNAT Rule dialog box](images/vmw-vcd-add-dnat-adv.png)
-
-11. When you're done, click **Keep** then **Save changes**.
-
-***
-
 ## Creating an SNAT rule
 
 SNAT changes the source IP address of a packet and performs the reverse function for any replies.
@@ -133,13 +93,11 @@ When connecting to an external network, such as the internet, to access services
 
 To create an SNAT rule:
 
-### [VMware Cloud Director 10.1](#tab/tabid-a)
-
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway in which you want to create the SNAT rule.
 
 2. In the left navigation panel, under *Networking*, select **Edges**..
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd10.1-mnu-edges.png)
+    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
 3. On the *Edge Gateways* page, select the edge that you want to configure and click the **Services** button.
 
@@ -171,47 +129,9 @@ To create an SNAT rule:
 
 11. Add more NAT rules as required, then click **Save changes**.
 
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway in which you want to create the SNAT rule.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
-
-3. Select the edge that you want to configure and click the **Configure Services** button.
-
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
-
-4. Select the **NAT** tab.
-
-    ![NAT tab](images/vmw-vcd-edge-tab-nat.png)
-
-5. In the *NAT44 Rules* section, click **+ SNAT Rule**.
-
-    ![Add SNAT Rule button](images/vmw-vcd-btn-add-snat.png)
-
-6. In the *Add SNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule. Unless you have special requirements, this will be the external network (usually named nti\* or nft\*).
-
-7. Enter an **Original Source IP/Range** and a **Translated Source IP/Range**.
-
-8. Make sure the **Enabled** option is selected.
-
-9. If you have a syslog server configured, select the **Enable logging** option.
-
-    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
-
-    ![Add SNAT Rule dialog box](images/vmw-vcd-add-snat-adv.png)
-
-10. When you're done, click **Keep** then **Save changes**.
-
-***
-
 ## Creating a NAT64 rule
 
 If you have an IPv6 network and need to communicate to an IPv4 network, you'll need to translate IP addresses to enable that communication.
-
-### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway in which you want to create the NAT64 rule.
 
@@ -244,40 +164,6 @@ If you have an IPv6 network and need to communicate to an IPv4 network, you'll n
     ![Add NAT64 Rule dialog box](images/vmw-vcd10.1-add-nat64.png)
 
 10. When you're done, click **Keep** then **Save changes**.
-
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway in which you want to create the NAT64 rule.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
-
-3. Select the edge that you want to configure and click the **Configure Services** button.
-
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
-
-4. Select the **NAT** tab.
-
-    ![NAT tab](images/vmw-vcd-edge-tab-nat.png)
-
-5. In the *NAT64 Rules* section, click **+ NAT64 Rule**.
-
-6. In the *Add NAT64 Rule* dialog box, in the **Match Ipv6 Destination Prefix** field, enter the IPv6 address to use to translate IPv6 destinations to IPv4 destinations.
-
-7. In the **Translated Ipv4 Source Prefix** field, enter the IPv4 address to use to translate IPv6 source addresses into IPv4 source addresses.
-
-8. Make sure the **Enabled** option is selected.
-
-9. If you have a syslog server configured, select the **Enable logging** option.
-
-    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
-
-    ![Add NAT64 Rule dialog box](images/vmw-vcd-add-nat64.png)
-
-10. When you're done, click **Keep** then **Save changes**.
-
-***
 
 ## Next steps
 

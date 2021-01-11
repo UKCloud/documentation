@@ -103,17 +103,6 @@
 <h5>Note</h5>
 <p>As you're going to be changing network settings, all VMs within the vApp must be powered off.</p>
 </div>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the vApp.</p>
 </li>
@@ -133,45 +122,9 @@
 <li><p>When you're done, click <strong>Add</strong>.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains your vApp.</p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
-</li>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
-</li>
-<li><p>In the card for your vApp, select <strong>Actions</strong>, then <strong>Add network</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-vapp-network.png" alt="Add network menu option"></p>
-</li>
-<li><p>In the <em>Add Network</em> dialog box, select <strong>vApp Network</strong>.</p>
-<p><img src="images/vmw-vcd-add-network-vapp.png" alt="Add vApp Network option"></p>
-</li>
-<li><p>Enter a <strong>Name</strong> and <strong>Description</strong> for the network.</p>
-</li>
-<li><p>In the <em>Address and DNS</em> section, fill out the fields as required for your network.</p>
-</li>
-<li><p>When you're done, click <strong>Add</strong>.</p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="connecting-a-vm-to-a-vapp-network">Connecting a VM to a vApp network</h2>
 <p>If your vApp is already populated with VMs that are connected to a VDC network, you may want to move them over to the vApp network.</p>
 <p>To change the network a VM connects to:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the card for the vApp, select <strong>Details</strong>.</p>
 </li>
@@ -192,37 +145,8 @@
 <li><p>You can go back to the VM hardware properties to see the new IP address assigned to the VM.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
-</li>
-<li><p>Click each VM, expand <em>Hardware</em> and in the <em>NICs</em> section select the vApp network from the <strong>Network</strong> list.</p>
-<p><img src="images/vmw-vcd-vm-vapp-network.png" alt="VM connected to a vApp network"></p>
-</li>
-<li><p>If you want to dual-home your VM, click the <strong>Add</strong> button to add a second network.</p>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-<li><p>You can go back to the VM hardware properties to see the new IP address assigned to the VM.</p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="viewing-and-adjusting-vapp-network-settings">Viewing and adjusting vApp network settings</h2>
 <p>When you've created your vApp network and assigned VMs to it, you may want to review the vApp network settings and adjust them if needed.</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-2">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-2_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-2_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-2_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-2_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-2_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 </li>
@@ -242,45 +166,10 @@
 <li><p>On the <em>Routing</em> page you can create static routes for your vApp network. For more information, see <a href="#creating-static-routes"><em>Creating static routes</em></a>.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-2_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-</li>
-<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
-</li>
-<li><p>Select the <strong>Networks</strong> tab.</p>
-</li>
-<li><p>Click your vApp network to view its network settings.</p>
-</li>
-<li><p>The <strong>General</strong> tab displays general network settings. Click <strong>Edit</strong> to adjust these settings.</p>
-</li>
-<li><p>The <strong>IP Management</strong> tab displays the IP settings for the network, including static pool and DNS and DHCP. Click <strong>Edit</strong> to adjust these settings.</p>
-<p>For more information about enabling DHCP for your vApp network, see <a href="#enabling-dhcp">*Enabling DHCP</a>.</p>
-</li>
-<li><p>The <strong>Services</strong> tab enables you to set up firewall and NAT rules for your network. For more information, see <a href="#creating-firewall-rules"><em>Creating firewall rules</em></a> and <a href="#creating-nat-rules"><em>Creating NAT rules</em></a>.</p>
-</li>
-<li><p>The <strong>Routing</strong> tab enables you to create static routes for your network. For more information, see <a href="#creating-static-routes"><em>Creating static routes</em></a>.</p>
-</li>
-</ol>
-</section>
-</div>
 <h3 id="enabling-dhcp">Enabling DHCP</h3>
 <p>DHCP isn't enabled by default.</p>
 <p>For more information about DHCP, see <a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a>.</p>
 <p>To enable DHCP:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-3">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-3_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-3_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-3_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-3_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-3_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 </li>
@@ -301,47 +190,11 @@
 <p><img src="images/vmw-vcd10.1-vapp-network-dhcp.png" alt="Edit network settings for DHCP"></p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-3_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-</li>
-<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
-</li>
-<li><p>Select the <strong>Networks</strong> tab.</p>
-</li>
-<li><p>Click your vApp network to view its network settings.</p>
-</li>
-<li><p>Select the <strong>IP Management</strong> tab then <strong>DHCP</strong>.</p>
-</li>
-<li><p>Click <strong>Edit</strong>.</p>
-<p><img src="images/vmw-vcd-btn-vapp-network-dhcp-edit.png" alt="Edit button for vApp network DHCP"></p>
-</li>
-<li><p>In the <em>Edit network</em> dialog box, select the <strong>Enabled</strong> option.</p>
-</li>
-<li><p>Enter <strong>IP Pool</strong> and lease information for your DHCP addresses then click <strong>Save</strong>.</p>
-<p><img src="images/vmw-vcd-vapp-network-dhcp.png" alt="Edit network settings for DHCP"></p>
-</li>
-</ol>
-</section>
-</div>
 <h3 id="creating-firewall-rules">Creating firewall rules</h3>
 <p>There will be a rule in place to allow any traffic to traverse the firewall. You can amend or delete this rule, or create new rules.</p>
 <p><img src="images/vmw-vcd-vapp-network-firewall.png" alt="vApp network firewall rules"></p>
 <p>For more about firewall rules, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <p>To create a firewall rule:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-4">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-4_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-4_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-4_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-4_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-4_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 </li>
@@ -360,44 +213,10 @@
 <p><img src="images/vmw-vcd10.1-vapp-network-firewall-add.png" alt="Add firewall rule"></p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-4_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-</li>
-<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
-</li>
-<li><p>Select the <strong>Networks</strong> tab.</p>
-</li>
-<li><p>Click your vApp network to view its network settings.</p>
-</li>
-<li><p>Select the <strong>Services</strong> tab.</p>
-</li>
-<li><p>Click <strong>Edit</strong>.</p>
-<p><img src="images/vmw-vcd-btn-vapp-network-firewall-edit.png" alt="Edit button for vApp network firewall rules"></p>
-</li>
-<li><p>On the <strong>Firewall</strong> tab, click <strong>Add</strong>, specify the details for the firewall rule then click <strong>Save</strong>.</p>
-<p><img src="images/vmw-vcd-vapp-network-firewall-add.png" alt="Add firewall rule"></p>
-</li>
-</ol>
-</section>
-</div>
 <h3 id="creating-nat-rules">Creating NAT rules</h3>
 <p>NAT rules, enabled by default, enable mapping between internal VM interfaces and external IP addresses.</p>
 <p>For more information about NAT rules, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
 <p>To edit the mapping rules for a VM:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-5">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-5_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-5_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-5_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-5_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-5_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 </li>
@@ -426,37 +245,6 @@
 <p>The external IP address will be on the same subnet as the VDC network that connects to the vApp edge.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-5_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-</li>
-<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
-</li>
-<li><p>Select the <strong>Networks</strong> tab.</p>
-</li>
-<li><p>Click your vApp network to view its network settings.</p>
-</li>
-<li><p>Select the <strong>Services</strong> tab.</p>
-</li>
-<li><p>Click <strong>Edit</strong>.</p>
-<p><img src="images/vmw-vcd-btn-vapp-network-firewall-edit.png" alt="Edit button for vApp network NAT rules"></p>
-</li>
-<li><p>On the <strong>NAT</strong> tab, click <strong>Add</strong>.</p>
-</li>
-<li><p>In the <strong>VM Interface</strong> field, click the edit (pencil) icon, then select the VM interface for which you want to add the NAT rule.</p>
-</li>
-<li><p>From the <strong>Mapping Mode</strong> list, select the mapping mode.</p>
-<p>The default mapping is <strong>Automatic</strong>. You can change this to <strong>Manual</strong>, in which case, enter an <strong>External IP</strong> address to which the VM can map.</p>
-<p><img src="images/vmw-vcd-vapp-network-nat-add.png" alt="Add NAT rule"></p>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-<p>The external IP address will be on the same subnet as the VDC network that connects to the vApp edge.</p>
-</li>
-</ol>
-</section>
-</div>
 <h3 id="creating-static-routes">Creating static routes</h3>
 <p>Static routing at the vApp network level allows traffic to route between different vApp networks, across the VDC networks.</p>
 <p>The prerequisites for static routing are as follows:</p>
@@ -469,17 +257,6 @@
 </li>
 </ul>
 <p>To add a static route:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-6">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-6_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-6_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-6_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-6_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-6_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 </li>
@@ -516,41 +293,6 @@
 <li><p>Repeat for the second vApp network.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-6_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-</li>
-<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
-</li>
-<li><p>Select the <strong>Networks</strong> tab.</p>
-</li>
-<li><p>Click the first vApp network to view its network settings.</p>
-</li>
-<li><p>Select the <strong>Routing</strong> tab.</p>
-</li>
-<li><p>Click <strong>Add</strong></p>
-<p><img src="images/vmw-vcd-btn-vapp-network-static-route-add.png" alt="Add button for vApp network static route"></p>
-</li>
-<li><p>In the <em>Add Static Route</em> dialog box, enter a <strong>Name</strong> for the static route.</p>
-</li>
-<li><p>Enter the following details:</p>
-<ul>
-<li><p><strong>Network CIDR</strong> - The address of the first vApp network to which you're adding a static route</p>
-</li>
-<li><p><strong>Next Hop IP</strong> - The external IP address of that vApp network's router</p>
-</li>
-</ul>
-<p><img src="images/vmw-vcd-vapp-network-static-route.png" alt="Add Static Route dialog box"></p>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-<li><p>Repeat for the second vApp network.</p>
-</li>
-</ol>
-</section>
-</div>
 <h4 id="examples">Examples</h4>
 <p>The tables below provides examples of the settings needed to create a static route between two vApps.</p>
 <h5 id="network-information">Network information</h5>
@@ -613,17 +355,6 @@
 <p>Fencing a vApp allows identical VMs within different vApps to be powered on without conflict, by isolating the MAC and IP addresses of the VMs. This feature is particularly useful if you are copying vApps or creating catalog images of vApps where these details can't be altered.</p>
 <p>vApp fencing can be done during or after vApp creation. It is done when the VMs within the vApp sit on the VDC network, rather than on their own vApp network.</p>
 <p>To apply vApp fencing:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-7">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-7_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-7_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-7_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-7_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-7_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 </li>
@@ -638,25 +369,6 @@
 <p><img src="images/vmw-vcd-vapp-fencing.png" alt="Edit vApp Fencing dialog box"></p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-7_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-</li>
-<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
-</li>
-<li><p>Select the <strong>Networks</strong> tab.</p>
-</li>
-<li><p>In the <em>vApp Fencing</em> section, click <strong>Edit</strong>.</p>
-<p><img src="images/vmw-vcd-btn-vapp-network-fence.png" alt="Edit button for vApp network fencing"></p>
-</li>
-<li><p>Select the <strong>Fence vApp</strong> option then click <strong>OK</strong>.</p>
-<p><img src="images/vmw-vcd-vapp-fencing.png" alt="Edit vApp Fencing dialog box"></p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -686,7 +398,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

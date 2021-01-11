@@ -211,7 +211,7 @@ Any customer data that UKCloud collects as part of this service will never leave
 
 ### Is there a protective monitoring service?
 
-Protective monitoring is included with all our IaaS platforms and follows GPG 13.
+Protective monitoring is included with all our IaaS platforms and follows GPG 13.
 
 ## Feedback
 

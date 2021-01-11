@@ -17,9 +17,6 @@ toc_mdlink: orcl-ref-vm-compatibility.md
 
 # VM compatibility with UKCloud for Oracle Software
 
-> [!IMPORTANT]
-> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
-
 ## Introduction
 
 This article outlines what you need to do to make sure your Oracle VMs (OVMs) are compatible with UKCloud for Oracle Software service. You may find this useful if you're moving VMs from UKCloud for VMware to UKCloud for Oracle Software.
@@ -65,7 +62,7 @@ If you select the **Template** option on the upload page, then the uploader will
 
 ## Upload size
 
-For any uploads larger than 500 MB, you'll need to allow sufficient time for the upload to complete before clicking the **Upload** button or it will fail and the item will not appear in your software library. There is currently no upload progress indicator on OEM. Oracle is aware of this but are treating it as an enhancement request therefore there's currently no indication of when the upload progress indicator will be added on future releases of the platform software.
+For any uploads larger than 500 MB, you'll need to allow sufficient time for the upload to complete before clicking the **Upload** button or it will fail and the item will not appear in your software library. There is currently no upload progress indicator on OEM. Oracle is aware of this but are treating it as an enhancement request therefore there's currently no indication of when the upload progress indicator will be added on future releases of the platform software.
 
 ## Feedback
 

@@ -17,9 +17,6 @@ toc_mdlink: orcl-faq.md
 
 # UKCloud for Oracle Software FAQs
 
-> [!IMPORTANT]
-> UKCloud for Oracle Software has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we will continue to update it as required. For new Oracle requests, contact your Account Manager or Service Delivery Manager.
-
 ## General
 
 ### What is UKCloud for Oracle Software?
@@ -154,7 +151,7 @@ Providing that the software products adhere to the guidelines above, the followi
 
 - Oracle 9i R2 DB with partitioning; OEM;
 
-- Oracle 10g R1 & R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM
+- Oracle 10g R1 & R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM
 
 - WebLogic 10 Platform
 
