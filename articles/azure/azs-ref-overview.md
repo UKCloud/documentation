@@ -4,7 +4,7 @@ description: Overview of UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
 reviewer: William Turner
-lastreviewed: 17/04/2020
+lastreviewed: 11/01/2021
 
 toc_rootlink: Users
 toc_sub1: Reference
