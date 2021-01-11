@@ -1,6 +1,6 @@
 - name: About
   items:
-  - name: UKCloud for OpenShift
+  - name: UKCloud for Managed OpenShift
     href: oshift-home.md
 - name: FAQs
   items:
@@ -8,7 +8,7 @@
     href: oshift-faq.md
 - name: Getting Started
   items:
-  - name: UKCloud for OpenShift
+  - name: UKCloud for Managed OpenShift
     href: oshift-gs.md
 - name: How To
   items:
@@ -60,7 +60,7 @@
   items:
   - name: Lifecycle and patch management
     href: oshift-ref-lifecycle.md
-  - name: Making the most of your UKCloud for OpenShift trial
+  - name: Making the most of your UKCloud for Managed OpenShift trial
     href: oshift-ref-trial.md
   - name: OpenShift v3.x
     items:

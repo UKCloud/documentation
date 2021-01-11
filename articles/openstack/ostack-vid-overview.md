@@ -3,8 +3,9 @@ title: OpenStack Horizon dashboard overview video
 description: Shows a video that provides an overview of the OpenStack Horizon dashboard for UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
-reviewer: Steve Relf
-lastreviewed: 08/12/2020
+reviewer: Bryce Nicholls
+lastreviewed: 11/01/2021
+
 toc_rootlink: Videos
 toc_sub1: 
 toc_sub2:

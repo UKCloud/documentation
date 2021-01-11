@@ -1,6 +1,6 @@
 ---
-title: Getting Started Guide for UKCloud for OpenShift
-description: Provides information to get up and running with UKCloud for OpenShift
+title: Getting Started Guide for UKCloud for Managed OpenShift
+description: Provides information to get up and running with UKCloud for Managed OpenShift
 services: openshift
 author: Sue Highmoor
 reviewer: Kieran O'Neill
@@ -11,34 +11,34 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for OpenShift
+toc_title: UKCloud for Managed OpenShift
 toc_fullpath: Getting Started/oshift-gs.md
 toc_mdlink: oshift-gs.md
 ---
 
-# Getting Started Guide for UKCloud for OpenShift
+# Getting Started Guide for UKCloud for Managed OpenShift
 
 ## Overview
 
-UKCloud for OpenShift delivers a secure, private deployment of Red Hat&trade; OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks, including PSN, HSCN and Janet.
+UKCloud for Managed OpenShift delivers a secure, private deployment of Red Hat&trade; OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks, including PSN, HSCN and Janet.
 
 UKCloud provides a fully provisioned, single-tenant OpenShift instance to each customer, enabling developers to totally focus on delivering business value, without having to worry about any infrastructure considerations.
 
-This Getting Started Guide provides an overview of the functionality available with UKCloud for OpenShift and includes links to OpenShift documentation for further detail.
+This Getting Started Guide provides an overview of the functionality available with UKCloud for Managed OpenShift and includes links to OpenShift documentation for further detail.
 
 ### Intended audience
 
 This guide is intended for developers who want to leverage the benefits of Docker and Kubernetes containerisation technologies as part of their development, continuous integration or continuous delivery cycles.
 
-## Introduction to UKCloud for OpenShift
+## Introduction to UKCloud for Managed OpenShift
 
-IT projects are traditionally complex, requiring careful management of server hardware, storage, networking, operating systems, middleware, as well as development of the actual application. UKCloud for OpenShift removes complexity and enables you to focus on creating business value through development, testing and scaling of your applications.
+IT projects are traditionally complex, requiring careful management of server hardware, storage, networking, operating systems, middleware, as well as development of the actual application. UKCloud for Managed OpenShift removes complexity and enables you to focus on creating business value through development, testing and scaling of your applications.
 
 UKCloud deploys, scales and monitors the platform, which frees up your DevOps resource to focus on adding value further up the stack - for example, in automated software testing or tuning autoscaling.
 
 ![PaaS overview](images/oshift-overview.png)
 
-You can use UKCloud for OpenShift to:
+You can use UKCloud for Managed OpenShift to:
 
 - Host front-end web applications services to ensure that your environment:
 
@@ -56,7 +56,7 @@ You can use UKCloud for OpenShift to:
 
 OpenShift Container Platform is an open source PaaS, developed and supported by Red Hat and based around common technologies such as Docker containers and the Kubernetes container cluster manager for enterprise application development.
 
-UKCloud for OpenShift provides a full Red Hat OpenShift Container Platform that has been deployed by UKCloud and is ready to consume without delay. We deploy an OpenShift project in which you can run multiple pods, with each pod containing a group of related Docker
+UKCloud for Managed OpenShift provides a full Red Hat OpenShift Container Platform that has been deployed by UKCloud and is ready to consume without delay. We deploy an OpenShift project in which you can run multiple pods, with each pod containing a group of related Docker
 containers.
 
 ![OpenShift pods and containers](images/oshift-pods-containers.png)
@@ -127,11 +127,11 @@ Containers in OpenShift Container Platform are based on Docker-formatted contain
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform 3.11 Documentation*](https://docs.openshift.com/container-platform/3.11/welcome/index.html)
+In this Getting Started Guide, you've learned the basics about UKCloud for Managed OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform 3.11 Documentation*](https://docs.openshift.com/container-platform/3.11/welcome/index.html)
 
 ## Glossary
 
-This section provides a glossary of terms specific to UKCloud for OpenShift.
+This section provides a glossary of terms specific to UKCloud for Managed OpenShift.
 
 **cluster**&nbsp;&nbsp;One or more control plane nodes and a set of worker nodes.
 
