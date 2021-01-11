@@ -2,9 +2,10 @@
 title: UKCloud for OpenShift
 description: Home page for UKCloud for OpenShift
 services: openshift
-author: Sue Highmoor
+author: shighmoor
 reviewer:
-lastreviewed: 
+lastreviewed: 05/07/2019
+
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
