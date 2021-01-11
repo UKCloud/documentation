@@ -72,6 +72,8 @@
       href: oshift-ref-kibana-dashboards.md
     - name: DNS zone forwarding in OpenShift clusters
       href: oshift-ref-dns-zone-forwarding.md
+    - name: Getting Started Guide v3.x
+      href: oshift-gs-v3.md
     - name: OpenShift integrated cluster monitoring
       href: oshift-ref-cluster-monitoring.md
     - name: Security best practices
@@ -80,6 +82,8 @@
     items:
     - name: Deploying an application into OpenShift Service Mesh
       href: oshift-ref-deploy-app-into-service-mesh.md
+    - name: DNS zone forwarding in OpenShift clusters
+      href: oshift-ref-dns-zone-forwarding-v4.md
 - name: Service Information
   items:
   - name: Pricing information
