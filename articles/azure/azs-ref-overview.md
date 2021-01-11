@@ -80,38 +80,38 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
   - Microsoft.OSTCExtensions  v1.5.2
 
   - CustomScriptForLinux  v1.5.5, v1.5.2.2 & v1.5.2.0
-  
-  - OSPatchingForLinux  v2.3.0.1
-  
-  - VMAccessForLinux  v1.5.2 & v1.4.0.0
-  
-  - CustomScriptExtension  v1.9.3 & v1.8
-  
-  - BGInfo  v2.1
-  
-  - JsonADDomainExtension  v1.3.4, v1.3.2 & v1.3
-  
-  - VMAccessAgent  v2.4.4 & v2.0
-  
-  - SqlIaaSAgent  v1.3.20370
-  
-  - DSC  v2.77.0.0 & v2.19.0.0
-  
-  - DockerExtension  v1.1.1606092330
-  
-  - CustomScript  v2.0.6
-  
-  - IaaSAntimalware  v1.5.5.9 & v1.4.0.0
-  
-  - IaaSDiagnostics  v1.12.2.2 & v1.10.1.1
-  
-  - MicrosoftMonitoringAgent  v1.0.11081.5 & v1.0.10900.0
 
-  - OmsAgentForLinux  v1.13.27 & v1.8.11
+  - VMAccessForLinux  v1.5.2 & v1.4.0.0
+
+  - OSPatchingForLinux  v2.3.0.1
 
   - DependencyAgentLinux  v9.10.6.11730
 
   - DependencyAgentWindows  v9.10.6.11730
+
+  - OmsAgentForLinux  v1.13.27 & v1.8.11
+
+  - MicrosoftMonitoringAgent  v1.0.11081.5 & v1.0.10900.0
+
+  - SqlIaaSAgent  v1.3.20370
+
+  - BGInfo  v2.1
+
+  - CustomScriptExtension  v1.9.3 & v1.8
+
+  - JsonADDomainExtension  v1.3.4, v1.3.2 & v1.3
+
+  - VMAccessAgent  v2.4.4 & v2.0
+
+  - DockerExtension  v1.1.1606092330
+
+  - CustomScript  v2.0.6
+
+  - DSC  v2.77.0.0 & v2.19.0.0
+
+  - IaaSAntimalware  v1.5.5.9 & v1.4.0.0
+
+  - IaaSDiagnostics  v1.12.2.2 & v1.10.1.1
 
   - LinuxDiagnostic  v3.0.121
 
