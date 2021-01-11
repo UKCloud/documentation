@@ -532,12 +532,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-ref-overview.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "Bqw+2quWkq8ww5+gPWCnzg=="
+          "hash": "YWpmtwgFcYTsy38gNf8Y1w=="
         }
       },
       "is_incremental": false,
@@ -2419,7 +2422,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sco.html",
-          "hash": "h3qVwcEpZQyz0yIG3he4JA=="
+          "hash": "4XBsIayf9u19QeWoCqW+UA=="
         }
       },
       "is_incremental": false,
@@ -6170,7 +6173,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-home.html",
-          "hash": "vtIlrSyhzaqPvvOWzc4QKA=="
+          "hash": "HAd1xKEZ0TXyVaCHQ7vEWg=="
         }
       },
       "is_incremental": false,
@@ -12161,7 +12164,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sco-orcl.html",
-          "hash": "JmbyKqn7huswnfuGeK15NQ=="
+          "hash": "lAZO3ojgccJ4YiPU/sK+tA=="
         }
       },
       "is_incremental": false,
@@ -12731,7 +12734,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sco.html",
-          "hash": "ddWhAuotOCdtDKtHuZHARQ=="
+          "hash": "9vn1ATXDQM7vOnHWYCSjoA=="
         }
       },
       "is_incremental": false,
