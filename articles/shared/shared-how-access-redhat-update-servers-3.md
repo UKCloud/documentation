@@ -25,7 +25,7 @@ Before you attempt to establish a connection to RHUI Content Delivery Systems (C
 
 ## New Red Hat VM templates
 
-Certain Red Hat templates within the UKCloud public catalog are automatically configured to receive updates from UKCloud's RHUI. The templates are:
+Certain Red Hat templates within the UKCloud public catalogue are automatically configured to receive updates from UKCloud's RHUI. The templates are:
 
 - **RHEL6.Latest** - UKCloud-RHEL6
 
@@ -53,7 +53,7 @@ If you have already deployed a Red Hat VM using the old templates, you can confi
 
 ## Additional resources
 
-High Availability (HA) is a premium Red Hat service, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section in the UKCloud Portal and it will be uploaded to your private catalog.
+High Availability (HA) is a premium Red Hat service, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section in the UKCloud Portal and it will be uploaded to your private catalogue.
 
 ## Feedback
 
