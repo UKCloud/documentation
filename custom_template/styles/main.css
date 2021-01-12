@@ -94,8 +94,8 @@ h1, h2, h3, h4, h5 {
 /* Dark theme alerts */
 .dark-theme .alert-success {
   color: #3c763d;
-  background-color: #154b00;
-  border-color: #154b00;
+  background-color: #094409;
+  border-color: #094409;
 }
 .dark-theme .alert-info {
   color: #a3d7ff;
@@ -103,14 +103,14 @@ h1, h2, h3, h4, h5 {
   border-color: #002b4d;
 }
 .dark-theme .alert-warning {
-  color: #594521;
-  background-color: #f9eeb8;
-  border-color: #f9eeb8;
+  color: #fff1cc;
+  background-color: #664b00;
+  border-color: #664b00;
 }
 .dark-theme .alert-danger {
   color: #a94442;
-  background-color: #370000;
-  border-color: #4b0000;
+  background-color: #651b01;
+  border-color: #651b01;
 }
 
 p, td {
