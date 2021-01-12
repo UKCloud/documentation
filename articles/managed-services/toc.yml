@@ -22,10 +22,6 @@
     items:
     - name: Managed Web Server Service Definition
       href: man-sd-webserver.md
-- name: Cloud Optimisation
-  items:
-  - name: Cloud Optimisation from UKCloud Service Definition
-    href: man-sd-optimisation.md
 - name: Extended Network Support
   items:
   - name: Extended Network Support from UKCloud Service Definition

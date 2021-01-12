@@ -125,8 +125,6 @@ This article is designed to provide you with a top level comparison for our main
 > [!NOTE]
 > The following products are no longer available for sale. They are included in this article to support existing customers of the product only:
 >
-> - UKCloud for Oracle Software
->
 > - High Performance Compute
 >
 > - Email and Collaboration as a Service

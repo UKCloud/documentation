@@ -53,13 +53,13 @@ VMware Cloud Director 10.1 provides the following new features.
 
   - Ability to delete Shadow VMs
 
-- Terraform vCloud Director Provider, updated to version 2.8, enables you to access infrastructure-as-code
+- Terraform VMware Cloud Director Provider, updated to version 2.8, enables you to access infrastructure-as-code
 
 For more information about new features in VMware Cloud Director 10.1, see <https://cloudsolutions.vmware.com/assets/blta3bfbeafb64db8f8/What_s_New_with_VMware_Cloud_Director_10.1.pdf>.
 
 ## Legacy UI
 
-The Legacy UI is no longer available in vCloud Director 10.1. All tasks can now be performed using the HTML5-based Tenant Portal, removing the requirement for the Flash browser plugin.
+The Legacy UI is no longer available in VMware Cloud Director 10.1. All tasks can now be performed using the HTML5-based Tenant Portal, removing the requirement for the Flash browser plugin.
 
 ## Browser support
 
@@ -77,7 +77,7 @@ VMware Cloud Director 10.1 is compatible with the current major and previous maj
 
 VMware Cloud Director 10.1 supports the VMware Cloud Director API version 34.0 (see <https://code.vmware.com/apis/912/vmware-cloud-director>). For information about the changes to the VMware Cloud Director API for this version, see [VMare Cloud Director API Schema Differences](https://code.vmware.com/apis/912/vmware-cloud-director/doc/diff/index.html).
 
-VMware Cloud Director 10.1 is the last release of VMware Cloud Director to support vCloud Director API 30.0. The 30.0 and 31.0 versions of the API are deprecated in this release and will not be supported in future releases.
+VMware Cloud Director 10.1 is the last release of VMware Cloud Director to support vCloud API 30.0. The 30.0 and 31.0 versions of the API are deprecated in this release and will not be supported in future releases.
 
 The following API versions are still available:
 
@@ -93,7 +93,7 @@ The following API versions are still available:
 
 ### Sandbox for testing vCloud API
 
-UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/login/>) has been upgraded to vCloud Director 10.1.2.
+UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/login/>) has been upgraded to VMware Cloud Director 10.1.2.
 
 To gain access to the sandbox, raise a Service Request via My Calls on the UKCloud Portal.
 

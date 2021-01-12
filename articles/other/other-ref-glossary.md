@@ -87,12 +87,6 @@ For more information, see the relevant Cloud Enablement service scope:
 
 - [Big Cloud Enablement Service Scope](../enablement/enbl-sco-bigcolo.md)
 
-### Cloud Optimisation from UKCloud
-
-A UKCloud service, utilising CloudHealth&reg;, that helps you optimise and manage large scale cloud implementations to help you avoid cloud sprawl and reduce cloud spend, achieving initial savings of up to 30%.
-
-For more information, see [Cloud Optimisation from UKCloud Service Definition](../managed-services/man-sd-optimisation.md).
-
 ### CloudSOC from UKCloud
 
 *See:* [Security Operations Service](#security-operations-service).
@@ -105,7 +99,7 @@ For more information, see the [Cloud Storage service definition](../cloud-storag
 
 ### Compute service
 
-A UKCloud for VMware top-level container within a customer account that includes a VMware Cloud Director/vCloud Director organization and its VDCs, catalogs, users and resources.
+A UKCloud for VMware top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogs, users and resources.
 
 ### Cross Domain Security Zone (CDSZ)
 
@@ -403,19 +397,13 @@ OFFICIAL data that requires specific handling to mitigate risk. Security measure
 
 ### Organization (Org)
 
-A top level container in VMware Cloud Director/vCloud Director that contains one or more VDCs and owns all the virtual resources used by those VDCs.
+A top level container in VMware Cloud Director that contains one or more VDCs and owns all the virtual resources used by those VDCs.
 
 ## P
 
 ### Persistent storage
 
 A UKCloud for OpenStack block storage option that is always available, regardless of the state of the VM.
-
-### Portworx Enterprise from UKCloud
-
-Provides a secure and stable cloud native storage and data management platform for Kubernetes that enterprises can trust to manage data in containers.
-
-For more information, see the [Portworx Enterprise from UKCloud service definition](../openshift/oshift-sd-portworx.md).
 
 ### POWER VM
 
@@ -563,17 +551,17 @@ A UKCloud service that provides a platform to deliver, protect and manage deskto
 
 For more information, see the [UKCloud Desktop as a Service Service Definition](../daas/daas-sd.md).
 
-### UKCloud for Microsoft Azure
-
-A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
-
-For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
-
 ### UKCloud for Managed OpenShift
 
 A UKCloud PaaS service that delivers a secure, private deployment of OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks including HCSN and Janet.
 
 For more information, see the [UKCloud for Managed OpenShift service definition](../openshift/oshift-sd.md).
+
+### UKCloud for Microsoft Azure
+
+A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
+
+For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
 
 ### UKCloud for OpenStack
 

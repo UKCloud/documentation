@@ -33,7 +33,7 @@ Advanced monitoring enables you to:
 
 ### Intended audience
 
-To enable the vRealize Operations Tenant Appliance, you must be a vCloud Director/VMware Cloud Director Organization Administrator.
+To enable the vRealize Operations Tenant Appliance, you must be a VMware Cloud Director Organization Administrator.
 
 ## Enabling the vRealize Operations Tenant Appliance
 
@@ -42,10 +42,7 @@ To enable the vRealize Operations Tenant Appliance, you must be a vCloud Directo
 
 To make advanced monitoring available for your UKCloud for VMware environment, you need to enable the vRealize Operations Tenant Appliance:
 
-1. In the vCloud Director/VMware Cloud Director menu, select **Libraries**.
-
-    > [!TIP]
-    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
+1. In the VMware Cloud Director menu, select **Libraries**.
 
 2. In the left navigation panel, under *Services*, select **Service Library**.
 
@@ -63,10 +60,7 @@ To make advanced monitoring available for your UKCloud for VMware environment, y
 
 If you no longer want access to advanced monitoring, you must disable the vRealize Operations Tenant Appliance:
 
-1. In the vCloud Director/VMware Cloud Director menu, select **Libraries**.
-
-    > [!TIP]
-    > In vCloud Director 9.7, click the menu icon (three lines) to access the menu.
+1. In the VMware Cloud Director menu, select **Libraries**.
 
 2. In the left navigation panel, under *Services*, select **Service Library**.
 

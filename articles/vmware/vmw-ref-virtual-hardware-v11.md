@@ -51,7 +51,7 @@ Prior to upgrading the Virtual Hardware version, you should note the following:
 
 ## How do I manually upgrade the Virtual Hardware version of my VM?
 
-1. Log into the UKCloud Portal and access vCloud Director.
+1. Log into the UKCloud Portal and access VMware Cloud Director.
 
     For more detailed steps, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
 

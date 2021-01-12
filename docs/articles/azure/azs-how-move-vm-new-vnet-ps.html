@@ -164,13 +164,13 @@
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 ## Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 ## Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
@@ -182,7 +182,7 @@ $NewNicName = "<output form="newnic" name="result" style="display: inline;">NewN
 $NewPublicIpName = "<output form="newip" name="result" style="display: inline;">NewPublicIp</output>"
 
 # Retrieve VM details
-$VM = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
+$VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
 
 # Check if the VM uses managed or unmanaged disks
 if ($VM.StorageProfile.OsDisk.ManagedDisk) {
@@ -193,26 +193,26 @@ else {
 }
 
 # Stop the VM
-Stop-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
+Stop-AzVM -Name $VMName -ResourceGroupName $RGName -Force
 
 # Get VM current networking details
-$Nic = (Get-AzureRmNetworkInterface | Where-Object -FilterScript { $_.VirtualMachine.Id -like $VM.Id })
-$PublicIp = Get-AzureRmPublicIpAddress | Where-Object -FilterScript { $_.Id -like $Nic.IpConfigurations.PublicIpAddress.Id }
+$Nic = (Get-AzNetworkInterface | Where-Object -FilterScript { $_.VirtualMachine.Id -like $VM.Id })
+$PublicIp = Get-AzPublicIpAddress | Where-Object -FilterScript { $_.Id -like $Nic.IpConfigurations.PublicIpAddress.Id }
 
 # Get new virtual network details
-$NewVNet = Get-AzureRmVirtualNetwork | Where-Object -FilterScript { $_.Name -like $NewNetworkName }
-$NewSubnet = Get-AzureRmVirtualNetworkSubnetConfig -VirtualNetwork $NewVNet -Name $NewSubnetName
+$NewVNet = Get-AzVirtualNetwork | Where-Object -FilterScript { $_.Name -like $NewNetworkName }
+$NewSubnet = Get-AzVirtualNetworkSubnetConfig -VirtualNetwork $NewVNet -Name $NewSubnetName
 
 # Create new VM networking resources
-$NewPublicIp = New-AzureRmPublicIpAddress -Name $NewPublicIpName -Location $NewVNet.Location -ResourceGroupName $NewVNet.ResourceGroupName -Sku $PublicIp.Sku.Name -AllocationMethod $PublicIp.PublicIpAllocationMethod
-$NewIpConfig = New-AzureRmNetworkInterfaceIpConfig -Subnet $NewSubnet -Name "ipconfig2" -Primary -PrivateIpAddress $NewPrivateIp -PublicIpAddress $NewPublicIp
-$NewNic = New-AzureRmNetworkInterface -Name $NewNicName -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location -IpConfiguration $NewIpConfig -NetworkSecurityGroupId $Nic.NetworkSecurityGroup.Id -Force
+$NewPublicIp = New-AzPublicIpAddress -Name $NewPublicIpName -Location $NewVNet.Location -ResourceGroupName $NewVNet.ResourceGroupName -Sku $PublicIp.Sku.Name -AllocationMethod $PublicIp.PublicIpAllocationMethod
+$NewIpConfig = New-AzNetworkInterfaceIpConfig -Subnet $NewSubnet -Name "ipconfig2" -Primary -PrivateIpAddress $NewPrivateIp -PublicIpAddress $NewPublicIp
+$NewNic = New-AzNetworkInterface -Name $NewNicName -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location -IpConfiguration $NewIpConfig -NetworkSecurityGroupId $Nic.NetworkSecurityGroup.Id -Force
 
 # Retrieve VM data disk details
 if ($VM.StorageProfile.DataDisks) {
     $Lun = 0
     if ($ManagedDisks) {
-        $Disks = Get-AzureRmDisk -ResourceGroupName $RGName | Where-Object -FilterScript { $_.ManagedBy -like "*$VMName" } | Where-Object -FilterScript { $_.Id -notlike $VM.StorageProfile.OsDisk.ManagedDisk.Id }
+        $Disks = Get-AzDisk -ResourceGroupName $RGName | Where-Object -FilterScript { $_.ManagedBy -like "*$VMName" } | Where-Object -FilterScript { $_.Id -notlike $VM.StorageProfile.OsDisk.ManagedDisk.Id }
     }
     else {
         $Disks = $VM.StorageProfile.DataDisks
@@ -220,48 +220,48 @@ if ($VM.StorageProfile.DataDisks) {
 }
 
 # Create new VM configuration
-$NewVmConfig = New-AzureRmVMConfig -VMName $VMName -VMSize $VM.HardwareProfile.VmSize
+$NewVmConfig = New-AzVMConfig -VMName $VMName -VMSize $VM.HardwareProfile.VmSize
 
 if ($ManagedDisks) {
     # Add OS disk to new VM configuration
     if ($VM.OsProfile.WindowsConfiguration) {
-        $NewVmConfig = Set-AzureRmVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Windows
+        $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Windows
     }
     else {
-        $NewVmConfig = Set-AzureRmVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Linux
+        $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Linux
     }
     # Add data disk(s) to new VM configuration
     foreach ($Disk in $Disks) {
-        $NewVmConfig = Add-AzureRmVMDataDisk -VM $NewVmConfig -ManagedDiskId $Disk.Id -CreateOption "Attach" -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
+        $NewVmConfig = Add-AzVMDataDisk -VM $NewVmConfig -ManagedDiskId $Disk.Id -CreateOption "Attach" -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
         $Lun++
     }
 }
 else {
     # Add OS disk to new VM configuration
     if ($VM.OsProfile.WindowsConfiguration) {
-        $NewVmConfig = Set-AzureRmVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Windows
+        $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Windows
     }
     else {
-        $NewVmConfig = Set-AzureRmVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Linux
+        $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Linux
     }
     # Add data disk(s) to new VM configuration
     foreach ($Disk in $Disks) {
-        $NewVmConfig = Add-AzureRmVMDataDisk -VM $NewVmConfig -Name $Disk.Name -CreateOption "Attach" -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
+        $NewVmConfig = Add-AzVMDataDisk -VM $NewVmConfig -Name $Disk.Name -CreateOption "Attach" -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
         $Lun++
     }
 }
 
 # Add new NIC to new VM configuration
-$NewVmConfig = Add-AzureRmVMNetworkInterface -VM $NewVmConfig -NetworkInterface $NewNic
+$NewVmConfig = Add-AzVMNetworkInterface -VM $NewVmConfig -NetworkInterface $NewNic
 
 # Remove the old VM
 Write-Output -InputObject "Removing old virtual machine"
-Remove-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
+Remove-AzVM -Name $VMName -ResourceGroupName $RGName -Force
 
 # Create the new VM from the new VM configuration
 Write-Output -InputObject "Creating new virtual machine"
-New-AzureRmVM -VM $NewVmConfig -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location
-Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+New-AzVM -VM $NewVmConfig -ResourceGroupName $NewVNet.ResourceGroupName -Location $NewVNet.Location
+Get-AzVM -ResourceGroupName $RGName -Name $VMName
 Write-Output -InputObject "The virtual machine has been created successfully"
 </code></pre>
 <h2 id="feedback">Feedback</h2>
@@ -293,7 +293,7 @@ Write-Output -InputObject "The virtual machine has been created successfully"
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

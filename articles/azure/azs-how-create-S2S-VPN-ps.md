@@ -4,7 +4,7 @@ description: Create a site-to-site (S2S) VPN gateway connection between Azure St
 services: azure-stack
 author: blawson
 reviewer: rjarvis
-lastreviewed: 22/10/2020
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -50,7 +50,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzsLocalGatewayName        | Name of local network gateway to create in Azure Stack Hub                                     | <form oninput="result.value=AzsLocalGatewayName.value" id="AzsLocalGatewayName" style="display: inline;" ><input  type="text" id="AzsLocalGatewayName" name="AzsLocalGatewayName" style="display: inline;" placeholder="S2S-LNG"/></form> |
 | \$AzsGatewayConnectionName   | Name of virtual network gateway connection to create in Azure Stack Hub                        | <form oninput="result.value=AzsGatewayConnectionName.value" id="AzsGatewayConnectionName" style="display: inline;" ><input  type="text" id="AzsGatewayConnectionName" name="AzsGatewayConnectionName" style="display: inline;" placeholder="S2S-Connection"/></form> |
 | \$AzureLocation         | Name of location to create resources within in public Azure                                | <form oninput="result.value=AzureLocation.value" id="AzureLocation" style="display: inline;" ><input  type="text" id="AzureLocation" name="AzureLocation" style="display: inline;" placeholder="UK West"/></form> |
-| \$AzureResourceGroupName| Name of resource group to create in public Azure                                           | <form oninput="result.value=AzureResourceGroupName.value" id="AzureResourceGroupName" style="display: inline;" ><input  type="text" id="AzureResourceGroupName" name="AzureResourceGroupName" style="display: inline;" placeholder="S2S-RG"/></form> |
+| \$AzureResourceGroupName| Name of resource group to create in public Azure                                           | <form oninput="result.value=AzureResourceGroupName.value" id="AzureResourceGroupName" style="display: inline;" ><input  type="text" id="AzureResourceGroupName" name="AzureResourceGroupName" style="display: inline;" placeholder="S2S-ResourceGroup"/></form> |
 | \$AzureVNetName         | Name of virtual network to create in public Azure                                          | <form oninput="result.value=AzureVNetName.value" id="AzureVNetName" style="display: inline;" ><input  type="text" id="AzureVNetName" name="AzureVNetName" style="display: inline;" placeholder="S2S-VNet"/></form> |
 | \$AzureVNetRange        | Address space of virtual network to create in public Azure in CIDR notation                | <form oninput="result.value=AzureVNetRange.value" id="AzureVNetRange" style="display: inline;" ><input  type="text" id="AzureVNetRange" name="AzureVNetRange" style="display: inline;" placeholder="10.2.0.0/16"/></form> |
 | \$AzureSubnetRange      | Address space of virtual network subnet to create in public Azure in CIDR notation         | <form oninput="result.value=AzureSubnetRange.value" id="AzureSubnetRange" style="display: inline;" ><input  type="text" id="AzureSubnetRange" name="AzureSubnetRange" style="display: inline;" placeholder="10.2.0.0/24"/></form> |
@@ -66,7 +66,7 @@ Enter details below to provide values for the variables in the scripts in this a
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Declare Variables
-$AzsResourceGroupName = "<output form="AzsResourceGroupName" name="result" style="display: inline;">S2S-RG</output>"
+$AzsResourceGroupName = "<output form="AzsResourceGroupName" name="result" style="display: inline;">S2S-ResourceGroup</output>"
 $AzsVNetName = "<output form="AzsVNetName" name="result" style="display: inline;">S2S-VNet</output>"
 $AzsVNetRange = "<output form="AzsVNetRange" name="result" style="display: inline;">10.1.0.0/16</output>"
 $AzsSubnetRange = "<output form="AzsSubnetRange" name="result" style="display: inline;">10.1.0.0/24</output>"
@@ -76,7 +76,7 @@ $AzsVirtualGatewayName = "<output form="AzsVirtualGatewayName" name="result" sty
 $AzsLocalGatewayName = "<output form="AzsLocalGatewayName" name="result" style="display: inline;">S2S-LNG</output>"
 $AzsGatewayConnectionName = "<output form="AzsGatewayConnectionName" name="result" style="display: inline;">S2S-Connection</output>"
 $AzureLocation = "<output form="AzureLocation" name="result" style="display: inline;">UK West</output>"
-$AzureResourceGroupName = "<output form="AzureResourceGroupName" name="result" style="display: inline;">S2S-RG</output>"
+$AzureResourceGroupName = "<output form="AzureResourceGroupName" name="result" style="display: inline;">S2S-ResourceGroup</output>"
 $AzureVNetName = "<output form="AzureVNetName" name="result" style="display: inline;">S2S-VNet</output>"
 $AzureVNetRange = "<output form="AzureVNetRange" name="result" style="display: inline;">10.2.0.0/16</output>"
 $AzureSubnetRange = "<output form="AzureSubnetRange" name="result" style="display: inline;">10.2.0.0/24</output>"
@@ -93,98 +93,98 @@ $SharedKey = "<output form="SharedKey" name="result" style="display: inline;">Pa
 ### Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 ### Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 ### Connect to environment
-$AzsContext = (Connect-AzureRmAccount -EnvironmentName "AzureStackUser").Context
+$AzsContext = (Connect-AzAccount -EnvironmentName "AzureStackUser" -UseDeviceAuthentication).Context
 ### Retrieve Access token
 $AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object -FilterScript { $_.TenantId -eq $AzsContext.Tenant.Id } | Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
 ### Get location of Azure Stack Hub
-$AzsLocation = (Get-AzureRmLocation).Location
+$AzsLocation = (Get-AzLocation).Location
 
 ## Create resource group
 Write-Output -InputObject "Creating resource group"
-New-AzureRmResourceGroup -Name $AzsResourceGroupName -Location $AzsLocation
+New-AzResourceGroup -Name $AzsResourceGroupName -Location $AzsLocation
 
 ## Create network
 ### Create subnet configuration
 Write-Output -InputObject "Creating virtual network"
-$AzsSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "Default" -AddressPrefix $AzsSubnetRange
-$AzsGatewaySubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -AddressPrefix $AzsGatewaySubnetRange
+$AzsSubnetConfig = New-AzVirtualNetworkSubnetConfig -Name "Default" -AddressPrefix $AzsSubnetRange
+$AzsGatewaySubnetConfig = New-AzVirtualNetworkSubnetConfig -Name "GatewaySubnet" -AddressPrefix $AzsGatewaySubnetRange
 ### Create virtual network
-$AzsVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsVNetName -AddressPrefix $AzsVNetRange -Subnet $AzsSubnetConfig, $AzsGatewaySubnetConfig
+$AzsVirtualNetwork = New-AzVirtualNetwork -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsVNetName -AddressPrefix $AzsVNetRange -Subnet $AzsSubnetConfig, $AzsGatewaySubnetConfig
 ### Retrieve gateway subnet config
-$AzsGatewaySubnetConfig = Get-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -VirtualNetwork $AzsVirtualNetwork
+$AzsGatewaySubnetConfig = Get-AzVirtualNetworkSubnetConfig -Name "GatewaySubnet" -VirtualNetwork $AzsVirtualNetwork
 
 ## Create public IP address
 Write-Output -InputObject "Creating public IP address"
-$AzsPublicIp = New-AzureRmPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -AllocationMethod "Dynamic" -Name $AzsPublicIpName
+$AzsPublicIp = New-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -AllocationMethod "Dynamic" -Name $AzsPublicIpName
 
 ## Create virtual network gateway
 Write-Output -InputObject "Creating virtual network gateway"
-$AzsGatewayIpConfig = New-AzureRmVirtualNetworkGatewayIpConfig -Name "GatewayIp" -Subnet $AzsGatewaySubnetConfig -PublicIpAddress $AzsPublicIp
-$AzsVirtualGateway = New-AzureRmVirtualNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsVirtualGatewayName -IpConfigurations $AzsGatewayIpConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGw1"
+$AzsGatewayIpConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIp" -Subnet $AzsGatewaySubnetConfig -PublicIpAddress $AzsPublicIp
+$AzsVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsVirtualGatewayName -IpConfigurations $AzsGatewayIpConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
 
 ## Create local network gateway
 Write-Output -InputObject "Creating local network gateway"
-$AzsLocalGateway = New-AzureRmLocalNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsLocalGatewayName -GatewayIpAddress "10.10.10.10" -AddressPrefix $AzureVNetRange
+$AzsLocalGateway = New-AzLocalNetworkGateway -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsLocalGatewayName -GatewayIpAddress "10.10.10.10" -AddressPrefix $AzureVNetRange
 
 ## Create IPsec Policy
-$IpsecPolicy = New-AzureRmIpsecPolicy -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -IpsecEncryption "AES256" -IpsecIntegrity "SHA256" -PfsGroup "PFS2048" -SALifeTimeSeconds 3600 -SADataSizeKilobytes 102400000
+$IpsecPolicy = New-AzIpsecPolicy -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -IpsecEncryption "AES256" -IpsecIntegrity "SHA256" -PfsGroup "PFS2048" -SALifeTimeSeconds 3600 -SADataSizeKilobytes 102400000
 
 ## Create virtual network gateway connection
 Write-Output -InputObject "Creating virtual network gateway connection"
-$AzsVirtualGatewayConnection = New-AzureRmVirtualNetworkGatewayConnection -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsGatewayConnectionName -VirtualNetworkGateway1 $AzsVirtualGateway -LocalNetworkGateway2 $AzsLocalGateway -ConnectionType IPsec -IpsecPolicies $IpsecPolicy -SharedKey $SharedKey
+$AzsVirtualGatewayConnection = New-AzVirtualNetworkGatewayConnection -ResourceGroupName $AzsResourceGroupName -Location $AzsLocation -Name $AzsGatewayConnectionName -VirtualNetworkGateway1 $AzsVirtualGateway -LocalNetworkGateway2 $AzsLocalGateway -ConnectionType IPsec -IpsecPolicies $IpsecPolicy -SharedKey $SharedKey
 
 ## Retrieve public IP address of virtual network gateway
-$AzsPublicIp = Get-AzureRmPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Name $AzsPublicIpName
+$AzsPublicIp = Get-AzPublicIpAddress -ResourceGroupName $AzsResourceGroupName -Name $AzsPublicIpName
 
 # Azure
 ## Connect to environment
-Connect-AzureRmAccount
+Connect-AzAccount -UseDeviceAuthentication
 
 ## Create resource group
 Write-Output -InputObject "Creating resource group"
-New-AzureRmResourceGroup -Name $AzureResourceGroupName -Location $AzureLocation
+New-AzResourceGroup -Name $AzureResourceGroupName -Location $AzureLocation
 
 ## Create network
 ### Create subnet configurations
 Write-Output -InputObject "Creating virtual network"
-$AzureSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "Default" -AddressPrefix $AzureSubnetRange
-$AzureGatewaySubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -AddressPrefix $AzureGatewaySubnetRange
+$AzureSubnetConfig = New-AzVirtualNetworkSubnetConfig -Name "Default" -AddressPrefix $AzureSubnetRange
+$AzureGatewaySubnetConfig = New-AzVirtualNetworkSubnetConfig -Name "GatewaySubnet" -AddressPrefix $AzureGatewaySubnetRange
 ### Create virtual network
-$AzureVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureVNetName -AddressPrefix $AzureVNetRange -Subnet $AzureSubnetConfig, $AzureGatewaySubnetConfig
+$AzureVirtualNetwork = New-AzVirtualNetwork -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureVNetName -AddressPrefix $AzureVNetRange -Subnet $AzureSubnetConfig, $AzureGatewaySubnetConfig
 ### Retrieve gateway subnet config
-$AzureGatewaySubnetConfig = Get-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -VirtualNetwork $AzureVirtualNetwork
+$AzureGatewaySubnetConfig = Get-AzVirtualNetworkSubnetConfig -Name "GatewaySubnet" -VirtualNetwork $AzureVirtualNetwork
 
 ## Create public IP address
 Write-Output -InputObject "Creating public IP address"
-$AzurePublicIp = New-AzureRmPublicIpAddress -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -AllocationMethod "Dynamic" -Name $AzurePublicIpName
+$AzurePublicIp = New-AzPublicIpAddress -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -AllocationMethod "Dynamic" -Name $AzurePublicIpName
 
 ## Create virtual network gateway
 Write-Output -InputObject "Creating virtual network gateway"
-$AzureGatewayIpConfig = New-AzureRmVirtualNetworkGatewayIpConfig -Name "GatewayIp" -Subnet $AzureGatewaySubnetConfig -PublicIpAddress $AzurePublicIp
-$AzureVirtualGateway = New-AzureRmVirtualNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureVirtualGatewayName -IpConfigurations $AzureGatewayIpConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGw1"
+$AzureGatewayIpConfig = New-AzVirtualNetworkGatewayIpConfig -Name "GatewayIp" -Subnet $AzureGatewaySubnetConfig -PublicIpAddress $AzurePublicIp
+$AzureVirtualGateway = New-AzVirtualNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureVirtualGatewayName -IpConfigurations $AzureGatewayIpConfig -GatewayType "VPN" -VpnType "RouteBased" -GatewaySku "VpnGateway1"
 
 ## Create local network gateway
 Write-Output -InputObject "Creating local network gateway"
-$AzureLocalGateway = New-AzureRmLocalNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureLocalGatewayName  -GatewayIpAddress $AzsPublicIp.IpAddress -AddressPrefix $AzsVNetRange
+$AzureLocalGateway = New-AzLocalNetworkGateway -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureLocalGatewayName  -GatewayIpAddress $AzsPublicIp.IpAddress -AddressPrefix $AzsVNetRange
 
 ## Create virtual network gateway connection
 Write-Output -InputObject "Creating virtual network gateway connection"
-$AzureVirtualGatewayConnection = New-AzureRmVirtualNetworkGatewayConnection -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureGatewayConnectionName -VirtualNetworkGateway1 $AzureVirtualGateway -LocalNetworkGateway2 $AzureLocalGateway -ConnectionType IPsec -IpsecPolicies $IpsecPolicy -SharedKey $SharedKey
+$AzureVirtualGatewayConnection = New-AzVirtualNetworkGatewayConnection -ResourceGroupName $AzureResourceGroupName -Location $AzureLocation -Name $AzureGatewayConnectionName -VirtualNetworkGateway1 $AzureVirtualGateway -LocalNetworkGateway2 $AzureLocalGateway -ConnectionType IPsec -IpsecPolicies $IpsecPolicy -SharedKey $SharedKey
 
 ## Retrieve public IP address of virtual network gateway
-$AzurePublicIp = Get-AzureRmPublicIpAddress -ResourceGroupName $AzureResourceGroupName -Name $AzurePublicIpName
+$AzurePublicIp = Get-AzPublicIpAddress -ResourceGroupName $AzureResourceGroupName -Name $AzurePublicIpName
 
 # Azure Stack Hub
 ## Reconnect to environment
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -AccessToken $AzsAccessToken -AccountId $AzsContext.Account.Id
+Connect-AzAccount -EnvironmentName "AzureStackUser" -UseDeviceAuthentication -AccessToken $AzsAccessToken -AccountId $AzsContext.Account.Id
 
 ## Set the public IP on the local network gateway
 $AzsLocalGateway.GatewayIpAddress = $AzurePublicIp.IpAddress
 
 ## Update the local network gateway
-Set-AzureRmLocalNetworkGateway -LocalNetworkGateway $AzsLocalGateway
+Set-AzLocalNetworkGateway -LocalNetworkGateway $AzsLocalGateway
 </code></pre>
 
 After a short amount of time, the connection between Azure Stack Hub and public Azure should change to **Connected**.

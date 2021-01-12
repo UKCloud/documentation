@@ -1,26 +1,26 @@
 ---
-title: How to access VMware Cloud Director/vCloud Director through the vCloud API
+title: How to access VMware Cloud Director through the vCloud API
 description: Describes how to get started with the vCloud API
 services: vmware
-author: Sue Highmoor
-reviewer: Dylan Coombes
-lastreviewed: 5/11/2019 13:30:00
+author: shighmoor
+reviewer: dcoombes
+lastreviewed: 05/11/2019
 
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Access VMware Cloud Director/vCloud Director through the vCloud API
+toc_title: Access VMware Cloud Director through the vCloud API
 toc_fullpath: How To/vmw-how-access-vcloud-api.md
 toc_mdlink: vmw-how-access-vcloud-api.md
 ---
 
-# How to access VMware Cloud Director/vCloud Director through the vCloud API
+# How to access VMware Cloud Director through the vCloud API
 
 ## Overview
 
-To perform some tasks within your UKCloud for VMware environment, you may need to access VMware Cloud Director/vCloud Director through the vCloud API. This guide shows you how to access the vCloud API.
+To perform some tasks within your UKCloud for VMware environment, you may need to access VMware Cloud Director through the vCloud API. This guide shows you how to access the vCloud API.
 
 ## Before you begin
 

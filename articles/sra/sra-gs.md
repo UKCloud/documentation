@@ -260,7 +260,7 @@ There is no direct access to the Elevated portal once the AnyConnect client conn
 
 In most instances we'll create a virtual machine (VM) within the SRA VDC that you can VPN into in order to log in to the Elevated portal to provision and manage your SRA and Elevated VDC. Once this VM is deployed, it becomes your responsibility to manage and maintain it. This VM will be billed according to standard UKCloud billing process.
 
-Addresses to hit the Elevated portal and vCloud Director API can be obtained by raising a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+To obtain addresses for the Elevated portal and vCloud API, raise a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

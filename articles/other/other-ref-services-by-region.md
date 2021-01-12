@@ -4,7 +4,7 @@ description: Shows the regions in each UKCloud site and lists the services and c
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 30/11/2020
+lastreviewed: 17/12/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -59,7 +59,16 @@ Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, 
 &nbsp; | **UKCloud for Microsoft Azure**<br>*Connectivity:* Internet<br>IaaS services | Zone 22
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 12
-&nbsp; | **Cloud Storage** (All zones)<br>*Connectivity:* PSN | All zones
+&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN | All zones
+
+*Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
+
+### Region 13 (00013)
+
+Security domain | Services | Zone
+-----------------|---------|-----
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 2D
 
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access
@@ -97,6 +106,15 @@ Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, 
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone D
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN | All zones
+
+*Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
+
+### Region 14 (00014)
+
+Security domain | Services | Zone
+-----------------|---------|-----
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 2E
 
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access

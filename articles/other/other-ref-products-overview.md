@@ -69,10 +69,6 @@ UKCloud's internet-connected Assured OFFICIAL platform already has Neustar DDoS 
 
 Neustar UltraDNS is an enterprise grade, cloud-based authoritative DNS service that securely delivers fast and accurate query responses to websites and other vital online assets. Whether you're looking for a primary or secondary DNS solution, Neustar UltraDNS offers customizable packages to fit any organisation's DNS needs. The UltraDNS Firewall option is a cost-effective enterprise grade, cloud-based recursive DNS service that delivers fast and reliable access to vital online applications with built-in security and threat intelligence.
 
-### Portworx Enterprise from UKCloud
-
-This service provides a secure and stable cloud native storage and data management platform for Kubernetes that you can trust to manage data in containers. Kubernetes is the fastest growing open-source project in history, but Kubernetes was not designed with stateful applications like databases in mind. For enterprise applications, these systems have non-negotiable business requirements like high availability, data security, disaster recovery, strict performance SLAs and hybrid/multi-cloud operations. Portworx Enterprise addresses all these requirements enabling the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.
-
 ### Secure Remote Access (SRA)
 
 This service enables you to securely connect to the UKCloud Elevated OFFICIAL security domain using internet virtual private network (VPN) technologies and the walled garden architectural pattern (using bastion hosts), where direct connection to the network is not available.
@@ -144,10 +140,6 @@ UKCloud's Professional Services are designed to provide a clear path to true clo
 **Optimisation service.** A service that helps you review your current usage or understand how to optimise your migration to the UKCloud environment. UKCloud consultants will undertake a commercial and technical assessment of your UKCloud environment, then develop and execute work packages that deliver operational efficiency and cost savings.
 
 **Transformation service.** This service provides the help you might need to adopt and harness the power of cloud native transformation. Cloud native applications fully utilise the features of platforms such as OpenStack, OpenShift and Azure Stack Hub. This transformation service provides the expertise to introduce teams to new ways of developing and deploying applications.
-
-### Cloud Optimisation from UKCloud
-
-Cloud Optimisation from UKCloud draws on our expertise in optimising and managing large scale cloud implementations to help you avoid cloud sprawl by realising value and optimising cloud spend, eliminating unused or underused resources and improving security and compliance stance. UKCloud are confident that this service can achieve initial savings of up to 30% on cloud spend.
 
 ## Feedback
 

@@ -2,9 +2,9 @@
 title: Cloud Enablement - VPN solutions Service Scope
 description: Outlines important details regarding Cloud Enablement for VPN solutions
 services: enablement
-author: Steve Hall
-reviewer: Nick Stobbart
-lastreviewed: 20/10/2020
+author: shall
+reviewer: bchallis
+lastreviewed: 08/12/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -29,20 +29,20 @@ The table provides an overview of the Cloud Enablement services available for VP
 
 &nbsp; | &nbsp;
 -------|-------
-**Use case** | You don't want to use the NSX edge gateway VPN capability and want to  install your own
+**Use case** | You want to install your own VPN capability instead of using the one provided by the NSX edge gateway.
 **Service type** | Connectivity
 **Security level** | Assured OFFICIAL
-**Hosted device** | VPN
-**Typical device size** | 1U / 2U
 **Service level (default)** | Single data centre, no automatic failover
-**Cloud Enablement requirement** | One bay in one UKCloud data centre
-**Cost** | £2,000 setup fee plus £500 per month
-**Resilience available?** | We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a  self-managed resilient solution (in which case the resilience options below are required).
+**Hosted device** | VPN device (for example, firewall)
+**Cloud Enablement sizing** | One bay = 10U, 1kW of power
+**Typical device size** | 1U / 2U
+**Hosted device(s) allowed** | Depends on solution. UKCloud will work with the customer to understand the requirement and assess the suitability of the devices that the customer wants to locate within Cloud Enablement.
+**Hosted device power draw** | Customer devices within a single 10U bay have a combined average power draw of no more than 1kW. Average power draw will be assessed based on vendor material supplied by the customer as part of the engagement with UKCloud prior to installation of devices.
+**Cost** | Priced per 10U bay<br>£2,000 up front charge<br>£500 pcm<br>Additional install visits charged at SFIA rate
+**Resilience available?** | We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a  self-managed resilient solution.
 **Failover responsibility** | Customer
-**Resilience requirement<br>(1 bay = 10U, 1kw of power)** | One bay in our Farnborough data centre<br>One bay in our Corsham data centre
-**Resilience cost** | £4,000 setup fee plus £1,000 per month
-**Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (eg Cloud Enablement in region 5 cannot be stretched to region 6)
-**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal
+**Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (for example, Cloud Enablement in region 5 cannot be stretched to region 6).
+**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## What connectivity does the VPN service provide?
 
@@ -56,9 +56,9 @@ The VPN service provides up to two ports:
 
 ## What is the port speed of connection?
 
-- In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
+- In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
 
-- In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10 Gbps (fibre only)
+- In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10 Gbps (fibre only)
 
 ## Who manages the switch?
 

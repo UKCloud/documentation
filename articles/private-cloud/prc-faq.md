@@ -21,7 +21,7 @@ toc_mdlink: prc-faq.md
 
 ### What is the service?
 
-Private Cloud is a single-tenant UKCloud for VMware service, where your compute or storage requirements are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated cloud platforms; or in your Crown Hosting Data Centre (CHDC); powered by VMware vCloud Director or OpenStack.
+Private Cloud is a single-tenant service, powered by VMware or OpenStack, where your compute or storage requirements are hosted either in one of our data centres (to gain the benefits of our Assured and Elevated cloud platforms) or in your Crown Hosting Data Centre (CHDC).
 
 ### How does Private Cloud differ from UKCloud for VMware?
 

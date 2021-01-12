@@ -39,7 +39,8 @@ Hosted device | Physical servers, networking devices or storage appliances
 Useable U count | 40U
 Service level (default) | Single data centre, no automatic failover
 PDU specifications per rack | 2 x 16A single phase PDUs per rack with A and B power supplies<br>Each PDU has 36 x C13 and 6 x C19 sockets
-Max power draw per rack | 4kW
+Hosted device(s) allowed | Depends on solution. UKCloud will work with the customer to understand the requirement and assess the suitability of the devices that the customer wants to locate within Cloud Enablement.
+Max power draw per rack | Customer devices within a single 40u rack have a combined average power draw of no more than 4kW. Average power draw will be assessed based vendor material supplied by the customer as part of the engagement with UKCloud prior to installation of devices, and reviewed whenever any additional equipment is added.
 Networking | Bespoke networking based on customer requirement.<br>Big Cloud Enablement price excludes any networking components.
 Contiguous racks | Contiguous racks are not guaranteed if not purchased together on a single order. UKCloud can reserve racks for a maximum of 6 months before charging for full use. This is at UKCloud's discretion.
 Resilience available? | You can provision multiple Big Cloud Enablement services within a single or dual sites, but you'll need to manage any resilience within the hardware.

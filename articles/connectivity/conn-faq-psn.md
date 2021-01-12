@@ -125,9 +125,9 @@ With the PSN IP addresses, you can establish:
 
 - Source NAT - all outbound traffic to other resources on the PSN will appear to come from one of these IPv4 addresses.
 
-- Destination NAT - all inbound traffic from other resources on the PSN must be targeted at one of these IPv4 addresses. You can translate the PSN IPv4 address to an internal (RFC 1918) IP address assigned to a VM or, preferably, to the edge gateway load balancer.
+- Destination NAT - all inbound traffic from other resources on the PSN must be targeted at one of these IPv4 addresses. You can translate the PSN IPv4 address to an internal (RFC 1918) IP address assigned to a VM or, preferably, to the edge gateway load balancer.
 
-- A VPN - an IPsec VPN between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
+- A VPN - an IPsec VPN between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
 
 Before additional IPv4 addresses can be allocated, you'll need to demonstrate your use of:
 
@@ -135,7 +135,7 @@ Before additional IPv4 addresses can be allocated, you'll need to demonstrate yo
 
 - Host headers - enabling web servers to accept connections for several URLs via a single externally routable IP address
 
-- VPN tunnelling - enabling the use of internal (RFC 1918) IP addresses for non‑production services such as UAT and development
+- VPN tunnelling - enabling the use of internal (RFC 1918) IP addresses for non‑production services such as UAT and development
 
 ### Is the PSN connection into UKCloud shared by all environments connected to the PSN?
 
@@ -193,9 +193,9 @@ We suggest an MTU size of 1400 bytes for further information. For more informati
 
 The [guidance](https://www.gov.uk/government/groups/public-services-network) from PSN Authority is as follows:
 
-- The PSN CoCo from non-government organisations is called the PSN Service Provision Compliance Certificate. This certificate is the one that is relevant to workloads facing PSN -- there are other PSN CoCos, however are not applicable for non-government organisations.
+- The PSN CoCo from non-government organisations is called the PSN Service Provision Compliance Certificate. This certificate is the one that is relevant to workloads facing PSN -- there are other PSN CoCos, however are not applicable for non-government organisations.
 
-- You can present us with one of two CoCos. If you present us with a *PSN Service Provision Compliance Certificate* then it needs to be applicable to that project or a blanket Service Provision Compliance Certificate, covering many projects that you are doing. The other PSN CoCo, *PSN Connection Compliance Certificate*, allows the access to connect to PSN to send and receive data from services on it, including creating PSN-connected environments for yourselves on UKCloud.
+- You can present us with one of two CoCos. If you present us with a *PSN Service Provision Compliance Certificate* then it needs to be applicable to that project or a blanket Service Provision Compliance Certificate, covering many projects that you are doing. The other PSN CoCo, *PSN Connection Compliance Certificate*, allows the access to connect to PSN to send and receive data from services on it, including creating PSN-connected environments for yourselves on UKCloud.
 
 ### I am a government organisation, what do I need to show you to get PSN connectivity for my UKCloud environment?
 
@@ -203,17 +203,17 @@ You must do either of the following:
 
 - Supply us with a project specific PSN Service Provision Compliance Certificate
 
-- Supply us with a blanket PSN Service Provision Compliance Certificate that covers all projects you are doing
+- Supply us with a blanket PSN Service Provision Compliance Certificate that covers all projects you are doing
 
 - Supply us with a PSN Connection Compliance Certificate, validating that you are connected to PSN
 
 ### I am a non-government organisation but I am supplying a service to a single government organisation. What do I need to show you to get PSN connectivity to my environment?
 
-- If the government customer is supplying the CoCo, this must be a blanket or project specific PSN Service Provision Compliance Certificate, covering all projects that the government organisation is doing and we must see a statement from the government organisation's SIRO/IA with confirmation to use their CoCo.
+- If the government customer is supplying the CoCo, this must be a blanket or project specific PSN Service Provision Compliance Certificate, covering all projects that the government organisation is doing and we must see a statement from the government organisation's SIRO/IA with confirmation to use their CoCo.
 
 - If the government customer is not supplying them with the CoCo, they will need to apply for a PSN Service Provision Compliance Certificate for themselves.
 
-A PSN Connection Compliance Certificate is not an acceptable CoCo.
+A PSN Connection Compliance Certificate is not an acceptable CoCo.
 
 ### I am a non-government organisation providing a service to multiple government organisations. What do I need to show you to get PSN connectivity to my environment?
 

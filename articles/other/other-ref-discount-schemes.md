@@ -105,7 +105,6 @@ Cross Domain Security Zone            | &check;             | &nbsp;            
 Dedicated Compute v2                  | &nbsp;              | &nbsp;                       | &check;
 Disaster Recovery as a Service        | &nbsp;              | &nbsp;                       | &check;
 Extended Network Support from UKCloud | &check;             | &nbsp;                       | &check;
-High Performance Compute              | &nbsp;              | &nbsp;                       | &check;
 Managed IT Operations                 | &check;             | &nbsp;                       | &check;
 Migration to the Cloud                | &nbsp;              | &nbsp;                       | &check;
 Private Cloud                         | &nbsp;              | &nbsp;                       | &check;

@@ -1,6 +1,6 @@
 - name: About
   items:
-  - name: UKCloud for OpenShift
+  - name: UKCloud for Managed OpenShift
     href: oshift-home.md
 - name: FAQs
   items:
@@ -8,7 +8,7 @@
     href: oshift-faq.md
 - name: Getting Started
   items:
-  - name: UKCloud for OpenShift
+  - name: UKCloud for Managed OpenShift
     href: oshift-gs.md
 - name: How To
   items:
@@ -35,7 +35,7 @@
     - name: Obtain usage metrics for OpenShift capacity management
       href: oshift-how-obtain-usage-metrics.md
     - name: Permit outbound internet access in deployments with government community network connectivity
-      href: oshift-how-add-domains-proxy-whitelist.md
+      href: oshift-how-add-domains-proxy-allow-list.md
     - name: Publish application routes to multiple external networks
       href: oshift-how-publish-routes-on-multiple-networks.md
     - name: Use NetworkPolicy objects
@@ -60,7 +60,7 @@
   items:
   - name: Lifecycle and patch management
     href: oshift-ref-lifecycle.md
-  - name: Making the most of your UKCloud for OpenShift trial
+  - name: Making the most of your UKCloud for Managed OpenShift trial
     href: oshift-ref-trial.md
   - name: OpenShift v3.x
     items:
@@ -72,6 +72,8 @@
       href: oshift-ref-kibana-dashboards.md
     - name: DNS zone forwarding in OpenShift clusters
       href: oshift-ref-dns-zone-forwarding.md
+    - name: Getting Started Guide v3.x
+      href: oshift-gs-v3.md
     - name: OpenShift integrated cluster monitoring
       href: oshift-ref-cluster-monitoring.md
     - name: Security best practices
@@ -80,10 +82,10 @@
     items:
     - name: Deploying an application into OpenShift Service Mesh
       href: oshift-ref-deploy-app-into-service-mesh.md
+    - name: DNS zone forwarding in OpenShift clusters
+      href: oshift-ref-dns-zone-forwarding-v4.md
 - name: Service Information
   items:
-  - name: Portworx Enterprise from UKCloud Service Definition
-    href: oshift-sd-portworx.md
   - name: Pricing information
     href: oshift-ref-pricing.md
   - name: UKCloud for Managed OpenShift Service Definition

@@ -33,7 +33,7 @@ You may want to copy your vApp from one VDC to another VDC, leaving the original
 
 To copy a vApp:
 
-1. In VMware Cloud Director/vCloud Director, select the VDC that contains the vApp you want to copy.
+1. In VMware Cloud Director, select the VDC that contains the vApp you want to copy.
 
 2. In the left navigation panel, under *Compute*, select **vApps**.
 
@@ -54,7 +54,7 @@ You may want to completely move your vApp from one VDC to another VDC. This will
 
 To move a vApp:
 
-1. In VMware Cloud Director/vCloud Director, select the VDC that contains the vApp you want to move.
+1. In VMware Cloud Director, select the VDC that contains the vApp you want to move.
 
 2. In the left navigation panel, under *Compute*, click **vApps**.
 
