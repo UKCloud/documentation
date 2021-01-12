@@ -16,7 +16,6 @@
   --color-background-alert-warning: #664b00;
   --color-foreground-alert-important: #a94442;
   --color-background-alert-important: #651b01;
-  /* --color-toc-hover: #fff; */
 }
 
 body.light-theme {
@@ -37,7 +36,6 @@ body.light-theme {
   --color-background-alert-warning: #fcf8e3;
   --color-foreground-alert-important: #a94442;
   --color-background-alert-important: #f2dede;
-  /* --color-toc-hover: #4c4c4c; */
 }
 
 @font-face {
@@ -269,7 +267,6 @@ a:hover {
 }
 
 body .toc {
-  /* color: var(--color-toc-hover); */
   background-color: var(--color-background);
 }
 
