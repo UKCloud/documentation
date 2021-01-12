@@ -2,7 +2,7 @@
   --color-foreground: #ccd5dc;
   --color-foreground-navbar: #ddd;
   --color-foreground-toc: #ccd5dc;
-  --color-foreground-alert: #30545f;
+  --color-foreground-alert: #ccd5dc;
   --color-background: #1e1e1e;
   --color-background-navbar: #1e1e1e;
   --color-background-code: #2d2d30;
@@ -49,7 +49,6 @@ body.light-theme {
   src: url("../fonts/varela-round/varela-round-regular-webfont.woff2") format("woff2"), url("../fonts/varela-round/varela-round-regular-webfont.woff") format("woff");
 } */
 
-html,
 body {
   /* font-family: 'varela-round', Helvetica, Arial, sans-serif; */
   color      : var(--color-foreground);
@@ -70,46 +69,48 @@ h1, h2, h3, h4, h5 {
   color: var(--color-foreground-alert);
 }
 
-/* .alert-success {
+/* Light theme alerts */
+/* .light-theme .alert-success {
   color: #3c763d;
   background-color: #dff0d8;
-  border-color: #d6e9c6
+  border-color: #d6e9c6;
 }
-.alert-info {
+.light-theme .alert-info {
   color: #31708f;
   background-color: #d9edf7;
-  border-color: #bce8f1
+  border-color: #bce8f1;
 }
-.alert-warning {
+.light-theme .alert-warning {
   color: #8a6d3b;
   background-color: #fcf8e3;
-  border-color: #faebcc
+  border-color: #faebcc;
 }
-.alert-danger {
+.light-theme .alert-danger {
   color: #a94442;
   background-color: #f2dede;
-  border-color: #ebccd1
+  border-color: #ebccd1;
 } */
 
-.alert-success {
+/* Dark theme alerts */
+.dark-theme .alert-success {
   color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6
+  background-color: #154b00;
+  border-color: #154b00;
 }
-.alert-info {
-  color: #31708f;
-  background-color: #d9edf7;
-  border-color: #bce8f1
+.dark-theme .alert-info {
+  color: #a3d7ff;
+  background-color: #002b4d;
+  border-color: #002b4d;
 }
-.alert-warning {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-  border-color: #faebcc
+.dark-theme .alert-warning {
+  color: #594521;
+  background-color: #f9eeb8;
+  border-color: #f9eeb8;
 }
-.alert-danger {
+.dark-theme .alert-danger {
   color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1
+  background-color: #370000;
+  border-color: #4b0000;
 }
 
 p, td {
