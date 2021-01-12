@@ -1,9 +1,6 @@
 :root, body.dark-theme {
   --color-foreground: #ccd5dc;
-  --color-navbar: #ddd;
-  --color-breadcrumb: #999;
-  --color-underline: #ddd;
-  /* --color-toc-hover: #fff; */
+  --color-foreground-navbar: #ddd;
   --color-foreground-toc: #ccd5dc;
   --color-foreground-alert: #30545f;
   --color-background: #1e1e1e;
@@ -12,13 +9,14 @@
   --color-background-dark: #1e1e1e;
   --color-background-table-alt: #212123;
   --color-background-quote: #69696e;
+  --color-breadcrumb: #999;
+  --color-underline: #ddd;
+  /* --color-toc-hover: #fff; */
 }
 
 body.light-theme {
   --color-foreground: #30545f;
-  --color-navbar: #36464e;
-  --color-breadcrumb: #4a4a4a;
-  /* --color-toc-hover: #4c4c4c; */
+  --color-foreground-navbar: #36464e;
   --color-foreground-toc: #666666;
   --color-foreground-alert: #30545f;
   --color-background: #ffffff;
@@ -26,6 +24,8 @@ body.light-theme {
   --color-background-navbar: #ffffff;
   --color-background-dark: #ddd;
   --color-background-table-alt: #f9f9f9;
+  --color-breadcrumb: #4a4a4a;
+  /* --color-toc-hover: #4c4c4c; */
 }
 
 @font-face {
@@ -57,7 +57,6 @@ body.light-theme {
 html,
 body {
   /* font-family: 'varela-round', Helvetica, Arial, sans-serif; */
-  /* color      : #30545f; */
   color      : var(--color-foreground);
   font-family: Helvetica, Arial, sans-serif;
   font-size  : 16px;
@@ -65,7 +64,6 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  /* color         : #30545f; */
   color         : var(--color-foreground);
   font-family   : 'raleway', Helvetica, Arial, sans-serif;
   font-weight   : 700;
@@ -78,7 +76,6 @@ h1, h2, h3, h4, h5 {
 }
 
 p, td {
-  /* color: #30545f; */
   color: var(--color-foreground);
   font-size: 16px;
 }
@@ -102,21 +99,18 @@ a:hover {
 }
 
 .navbar-inverse {
-  /* background-color: #ffffff; */
   background-color: var(--color-background-navbar);
   border-color: #e7e7e7;
 }
 
 .navbar-default {
-  /* background-color: #fff; */
   background-color: var(--color-background-navbar);
   border-bottom: 1px solid #e7e7e7;
 }
 
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .navbar-text {
-  /* color: #36464e; */
-  color: var(--color-navbar);
+  color: var(--color-foreground-navbar);
 }
 
 .navbar-inverse .navbar-nav > li > a:focus,
@@ -224,11 +218,8 @@ a:hover {
 }
 
 .sidetoc {
-  /* background-color: #ffffff; */
   background-color: var(--color-background);
-  /* border-left: 1px solid #ffffff; */
   border-left: 1px solid var(--color-background);
-  /* border-right: 1px solid #ffffff; */
   border-right: 1px solid var(--color-background);
   top: 190px;
 }
@@ -238,11 +229,8 @@ a:hover {
 }
 
 .sidefilter {
-  /* background-color: #ffffff; */
   background-color: var(--color-background);
-  /* border-left: 1px solid #ffffff; */
   border-left: 1px solid var(--color-background);
-  /* border-right: 1px solid #ffffff; */
   border-right: 1px solid var(--color-background);
   top: 120px;
 }
