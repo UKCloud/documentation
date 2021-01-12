@@ -2,9 +2,10 @@
 title: Emergency Services Network FAQs
 description: Frequently asked questions about the Emergency Services Network (ESN)
 services: connectivity
-author: Matt Warner
-reviewer: Nick Stobbart
-lastreviewed: 10/12/2020 14:23:23
+author: mwarner
+reviewer: nstobbart
+lastreviewed: 10/12/2020
+
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -17,17 +18,17 @@ toc_mdlink: conn-faq-esn.md
 
 # Emergency Services Network FAQs
 
-## What is the Emergency Services Network (ESN)?
+## What is the Emergency Services Network?
 
-The ESN is a network based on 4G that will enable communications between emergency services. It will replace the current radio-based system that has been in operation since 2004.
+The Emergency Services Network (ESN) is a network based on 4G that will enable communications between emergency services. It will replace the current radio-based system that has been in operation since 2004.
 
 ## Who is responsible for the ESN?
 
-EE are responsible for providing the 4G network and Motorola are providing all the equipment and Data Centres that are connected to the ESN. Vodafone are also responsible for the provision of a Direct Network Service Provider (DNSP), the last-mile connectivity from the EE Points of Presence, each control room and every police, fire and ambulance station.
+EE are responsible for providing the 4G network and Motorola are providing all the equipment and data centres that are connected to the ESN. Vodafone are also responsible for the provision of a Direct Network Service Provider (DNSP), the last-mile connectivity from the EE Points of Presence, each control room and every police, fire and ambulance station.
 
 ## How does the ESN work?
 
-EE are currently upgrading their entire network to 4G and the ESN will share the same networking space as commercial mobile traffic, however Emergency services will have a quality of service priority over EE's 4G network. During an emergency, EE will prioritise emergency service traffic to allow for a better quality of service in the localised area of the emergency.
+EE are currently upgrading their entire network to 4G and the ESN will share the same networking space as commercial mobile traffic, however emergency services will have a quality of service priority over EE's 4G network. During an emergency, EE will prioritise emergency service traffic to allow for a better quality of service in the localised area of the emergency.
 
 ## When is the ESN going live?
 
