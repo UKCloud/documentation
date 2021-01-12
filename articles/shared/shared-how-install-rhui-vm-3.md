@@ -21,9 +21,15 @@ toc_mdlink: shared-how-install-rhui-vm.md
 
 This article provides advice on how to update your existing Red Hat virtual machines (VMs) to target UKCloud's approved Red Hat Update Infrastructure (RHUI).
 
-As of November 2020, UKCloud implemented the latest version of RHUI to continue to provide automatic updates to our Red Hat customers on our Assured OFFICIAL and Elevated OFFICIAL security domains. This provides benefits such as the reliable availability of patch updates and Red Hat approved OS templates without having to subscribe each VM to Red Hat. A significant change from the old RHUI is that the RPM installer files no longer distinguish between Assured and Elevated. A single file (per Operating System version) will work in both environments.
+As of November 2020, UKCloud implemented the latest version of RHUI to continue to provide automatic updates to our Red Hat customers on our Assured OFFICIAL and Elevated OFFICIAL security domains. This provides benefits such as the reliable availability of patch updates and Red Hat approved OS templates without having to subscribe each VM to Red Hat. Significant changes from the old RHUI include the following:
 
-This latest version of RHUI replaces the previous version, which is soon to be decommissioned.
+- The RPM installer files no longer distinguish between Assured and Elevated. A single file (per Operating System version) will work in both environments (providing DNS resolution is configured correctly).
+
+- Replication of packages between Assured and Elevated is significantly faster.
+
+- Root CA signed SSL certificates are now in use for HTTPS communication to the CDS'.
+
+This latest version of RHUI replaces the previous version (from 2015), which is soon to be decommissioned.
 
 ## Prerequisites
 
