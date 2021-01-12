@@ -4,7 +4,6 @@
   --color-foreground-toc: #ccd5dc;
   --color-foreground-alert: #30545f;
   --color-background: #1e1e1e;
-  --color-background-subnav: #1e1e1e;
   --color-background-navbar: #1e1e1e;
   --color-background-code: #2d2d30;
   --color-background-table-alt: #212123;
@@ -20,7 +19,6 @@ body.light-theme {
   --color-foreground-toc: #666666;
   --color-foreground-alert: #30545f;
   --color-background: #ffffff;
-  --color-background-subnav: #f5f5f5;
   --color-background-navbar: #ffffff;
   --color-background-code: #f5f5f5;
   --color-background-table-alt: #f9f9f9;
