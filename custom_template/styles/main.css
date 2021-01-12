@@ -230,6 +230,7 @@ a:hover {
   border-left: 1px solid var(--color-background);
   /* border-right: 1px solid #ffffff; */
   border-right: 1px solid var(--color-background);
+  top: 190px;
 }
 
 .toc-filter {
@@ -243,11 +244,11 @@ a:hover {
   border-left: 1px solid var(--color-background);
   /* border-right: 1px solid #ffffff; */
   border-right: 1px solid var(--color-background);
+  top: 120px;
 }
 
 body .toc {
   /* color: var(--color-toc-hover); */
-  /* background-color: #ffffff; */
   background-color: var(--color-background);
 }
 
@@ -414,7 +415,6 @@ body .toc {
   order: 2;
 }
 
-
 /**
  * Article updates
  */
@@ -422,18 +422,9 @@ body .toc {
   margin-top: 110px;
 }
 
-
 /**
  * Sidebar updates
  */
- .sidefilter {
-  top: 120px;
-}
-
-.sidetoc {
-  top: 190px;
-}
-
 .sideaffix {
   top: 120px;
 }
