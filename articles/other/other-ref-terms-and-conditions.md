@@ -4,7 +4,7 @@ description: Provides links to the various UKCloud Terms and Conditions document
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 26/11/2020
+lastreviewed: 17/12/2020
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -26,29 +26,15 @@ This article will be updated as and when new Terms and Conditions documents are 
 
 ## For Public Sector customers
 
-[UKCloud Terms and Conditions for G-Cloud 12](other-ref-terms-and-conditions-g12.md) - These main terms apply to Public Sector customers buying direct from UKCloud via the G-Cloud Framework and also include terms for the following services (applicable when bought / used):
-
-- Free trials
-
-- Multi-tenanted services
-
-- Private Cloud services
-
-- VMware Licence Service (VLS)
-
-- Microsoft licensing
-
-- Multi-Cloud for Microsoft Azure services
-
-- PSN connectivity
-
-- HSCN connectivity
+[UKCloud Terms and Conditions for G-Cloud 12](other-ref-terms-and-conditions-g12.md) - These main terms apply to Public Sector customers buying direct from UKCloud via the G-Cloud Framework.
 
 ## For UKCloud partners
 
-[UKCloud Terms and Conditions for Partners](other-ref-terms-and-conditions-partners.md) - These main terms apply to UKCloud partners and also include terms for the following services (applicable when bought / used):
+[UKCloud Terms and Conditions for Partners](other-ref-terms-and-conditions-partners.md) - These main terms apply to UKCloud partners.
 
-- Free trials
+## Product-specific terms and conditions
+
+[UKCloud Ltd Product-Specific Terms and Conditions](other-ref-terms-and-conditions-products.md) - This article lists the terms that apply to specific UKCloud products and services (applicable when bought / used), including:
 
 - Multi-tenanted services
 
@@ -56,13 +42,7 @@ This article will be updated as and when new Terms and Conditions documents are 
 
 - VMware Licence Service (VLS)
 
-- Microsoft licensing
-
-- Multi-Cloud for Microsoft Azure services
-
-- PSN connectivity
-
-- HSCN connectivity
+- Multi-Cloud for Azure services
 
 ## Feedback
 
