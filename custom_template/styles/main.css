@@ -181,7 +181,7 @@ a:hover {
   min-height: 1px;
 }
 
-.navbar-form{
+.navbar-form {
   padding: 0 15px 0 15px;
   border-top:1px solid transparent;
   border-bottom:1px solid transparent;
@@ -288,7 +288,7 @@ body .toc {
 
 .navbar-inverse .navbar-nav>.open>a,
 .navbar-inverse .navbar-nav>.open>a:focus,
-.navbar-inverse .navbar-nav>.open>a:hover{
+.navbar-inverse .navbar-nav>.open>a:hover {
   color: #30545f;
 }
 
@@ -296,48 +296,48 @@ body .toc {
 /**
  * Nav updates
  */
-.navbar > .container-fluid{
+.navbar > .container-fluid {
   max-width: 1340px;
 }
 
-.navbar:not(.subnav){
+.navbar:not(.subnav) {
   padding-bottom: 1em;
   padding-top: 1em;
 }
 
-.navbar:not(.collapsed) .navbar-margin-left{
+.navbar:not(.collapsed) .navbar-margin-left {
   align-items: flex-end;
   display: flex;
   justify-content: space-between
 }
 
-.navbar:not(.collapsed) .navbar-collapse{
+.navbar:not(.collapsed) .navbar-collapse {
   align-items: center;
   display: flex !important;
   justify-self: flex-end;
 }
 
-.navbar:not(.collapsed) .navbar-collapse .navbar-nav{
+.navbar:not(.collapsed) .navbar-collapse .navbar-nav {
   margin-right: 2em;
 }
 
-.navbar:not(.collapsed) .navbar-collapse .navbar-nav > li > a{
+.navbar:not(.collapsed) .navbar-collapse .navbar-nav > li > a {
   padding-bottom: 0.25em;
   padding-top: 0.25em;
 }
 
-.navbar .navbar-collapse .navbar-nav > li > a{
+.navbar .navbar-collapse .navbar-nav > li > a {
   font-family: 'raleway', sans-serif;
   font-weight: 700;
 }
 
-.navbar:not(.collapsed) .navbar-collapse .navbar-form{
+.navbar:not(.collapsed) .navbar-collapse .navbar-form {
   margin: 0;
   order: 2;
   padding-right: 0;
 }
 
-.navbar .navbar-form{
+.navbar .navbar-form {
   /* background-color: #fff; */
   background-color: var(--color-background);
   border: 1px solid #ddd;
@@ -345,7 +345,7 @@ body .toc {
   position: relative;
 }
 
-.navbar .navbar-form:after{
+.navbar .navbar-form:after {
   border-left: 1px solid #ddd;
   color: #0ca;
   content: '\e003';
@@ -372,7 +372,7 @@ body .toc {
   padding: 0;
 }
 
-.navbar-header{
+.navbar-header {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -388,7 +388,7 @@ body .toc {
   max-height: 43px;
 }
 
-.navbar-brand > img{
+.navbar-brand > img {
   height: auto;
   max-width: 100%;
 }
