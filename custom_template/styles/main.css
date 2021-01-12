@@ -6,7 +6,7 @@
   --color-background: #1e1e1e;
   --color-background-subnav: #1e1e1e;
   --color-background-navbar: #1e1e1e;
-  --color-background-dark: #1e1e1e;
+  --color-background-code: #2d2d30;
   --color-background-table-alt: #212123;
   --color-background-quote: #69696e;
   --color-breadcrumb: #999;
@@ -22,7 +22,7 @@ body.light-theme {
   --color-background: #ffffff;
   --color-background-subnav: #f5f5f5;
   --color-background-navbar: #ffffff;
-  --color-background-dark: #ddd;
+  --color-background-code: #f5f5f5;
   --color-background-table-alt: #f9f9f9;
   --color-breadcrumb: #4a4a4a;
   /* --color-toc-hover: #4c4c4c; */
@@ -745,6 +745,96 @@ mark {
   padding: 0px;
 }
 
+/* Code blocks */
+pre {
+  /* padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  word-break: break-all;
+  word-wrap: break-word; */
+  background-color: var(--color-background-code);
+  /* border-radius: 0;
+  border: none; */
+}
+
+code {
+  background: var(--color-background-code) !important;
+  /* border-radius: 2px; */
+}
+
+.hljs {
+  color: var(--color-foreground);
+}
+
+.dark-theme .hljs-comment {
+  color: #57a64a;
+}
+
+.dark-theme .hljs-number {
+  color: #b5cea8;
+}
+
+.dark-theme .hljs-attribute,
+.dark-theme .hljs-code,
+.dark-theme .hljs-deletion,
+.dark-theme .hljs-section,
+.dark-theme .hljs-string,
+.dark-theme .hljs-string .hljs-subst .hljs-string,
+.dark-theme .hljs-template-tag,
+.dark-theme .hljs-template-variable,
+.dark-theme .hljs-type {
+  color: #ce9178;
+}
+
+.dark-theme .hljs-built_in,
+.dark-theme .hljs-keyword,
+.dark-theme .hljs-literal,
+.dark-theme .hljs-name,
+.dark-theme .hljs-pscommand,
+.dark-theme .hljs-selector-tag,
+.dark-theme .hljs-tag {
+  color: #569cd6
+}
+
+.dark-theme .hljs-addition,
+.dark-theme .hljs-attribute,
+.dark-theme .hljs-meta,
+.dark-theme .hljs-parameter,
+.dark-theme .hljs-selector-attr,
+.dark-theme .hljs-selector-pseudo,
+.dark-theme .hljs-title,
+.dark-theme .hljs-type {
+  color: #01cfff;
+}
+
+.dark-theme .hljs-doctag {
+  color: #808080;
+}
+
+.dark-theme .hljs-attr {
+  color: #9cdcfe;
+}
+
+.dark-theme .hljs-control {
+  color: #c586c0;
+}
+
+.dark-theme .hljs-helper {
+  color: #dcdcaa;
+}
+
+.dark-theme .hljs-symbol,
+.dark-theme .hljs-bullet,
+.dark-theme .hljs-link {
+  color: #808080;
+}
+
+.dark-theme .hljs-reserved,
+.dark-theme .hljs-constant {
+  color: #f44747;
+}
+
+
 .table-bordered,
 .table-bordered > tbody > tr > td,
 .table-bordered > tbody > tr > th,
@@ -752,7 +842,7 @@ mark {
 .table-bordered > tfoot > tr > th,
 .table-bordered > thead > tr > td,
 .table-bordered > thead > tr > th {
-  border: 1px solid var(--color-background-dark);
+  border: 1px solid var(--color-background);
 }
 
 .table-striped >tbody > tr:nth-of-type(odd) {
