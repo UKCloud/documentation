@@ -98,7 +98,7 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>To follow the steps in this article you must have access to a cluster that is running OpenShift Container Platform v3.11 (or newer) with connectivity to government community networks (such as HSCN, PSN or Janet). Within this cluster configuration we deploy Squid proxy to enable non-internet connected nodes to request internet resources and data in a restricted manner.</p>
 <h2 id="squid">Squid</h2>
-<p>Squid proxy enables containers running on worker nodes (with government community network access) to request resources from the internet. Our default configuration only permits access to specific endpoints to ensure compliance with network regulatory requirements. You can find more information regarding these endpoints in <a href="oshift-how-add-domains-proxy-whitelist.html"><em>How to permit outbound access to internet hosts in deployments with government community network connectivity</em></a>.</p>
+<p>Squid proxy enables containers running on worker nodes (with government community network access) to request resources from the internet. Our default configuration only permits access to specific endpoints to ensure compliance with network regulatory requirements. You can find more information regarding these endpoints in <a href="oshift-how-add-domains-proxy-allow-list.html"><em>How to permit outbound access to internet hosts in deployments with government community network connectivity</em></a>.</p>
 <h2 id="purpose-of-no_proxy">Purpose of no_proxy</h2>
 <p><code>no_proxy</code> is an environment variable used in conjunction with <code>http_proxy</code> and <code>https_proxy</code>. If an HTTP(S) connection attempt is destined for an address or hostname listed in <code>no_proxy</code>, the traffic will not be requested via the proxy and will instead use the routes on the current node, ensuring connectivity is not lost with community or private networks.</p>
 <h2 id="viewing-proxy-environment-variables">Viewing proxy environment variables</h2>
@@ -116,14 +116,14 @@
 <li><p><code>HTTPS_PROXY</code>: Cluster Proxy URL for HTTPS requests</p>
 </li>
 </ul>
-<p>When building container images within OpenShift, these environment variables will be passed through to the image pushed to your local registry. When working with images that have been imported from an external source, you may need to apply these environment values to ensure that you can access whitelisted internet resources from your community network nodes.</p>
+<p>When building container images within OpenShift, these environment variables will be passed through to the image pushed to your local registry. When working with images that have been imported from an external source, you may need to apply these environment values to ensure that you can access internet resources on the allow-list from your community network nodes.</p>
 <h2 id="identifying-where-you-might-need-to-add-entries-to-no_proxy">Identifying where you might need to add entries to no_proxy</h2>
 <p>Typically you can identify where the proxy is denying requests by looking for keywords such as <code>forbidden</code> or when receiving HTTP 403 status code responses. Below you can see an example where an HTTPS request to <code>registry.exampleurl.com</code> has been blocked by the proxy.</p>
 <pre><code class="lang-sh">$ oc new-app centos/ruby-25-centos7~https://github.com/sclorg/ruby-ex.git
 W0412 13:52:16.288545   50288 dockerimagelookup.go:233] Docker registry lookup failed: Get https://registry.exampleurl.com: Forbidden
 error: unable to locate any images in image streams, local docker images with name &quot;centos/ruby-25-centos7&quot;
 </code></pre>
-<p>In the example above this is an internet URL so it would be best to add this specific domain (or all subdomains using <code>.exampleurl.com</code>) to the <code>proxy-whitelist</code> configmap in the <code>whitelist</code> project, as documented in <a href="oshift-how-add-domains-proxy-whitelist.html"><em>How to permit outbound access to internet hosts in deployments with government community network connectivity</em></a>. If this URL was accessible on another network other than the internet, this would be a good candidate to be added to <code>no_proxy</code> to ensure the proxy was bypassed.</p>
+<p>In the example above this is an internet URL so it would be best to add this specific domain (or all subdomains using <code>.exampleurl.com</code>) to the <code>proxy-whitelist</code> configmap in the <code>whitelist</code> project, as documented in <a href="oshift-how-add-domains-proxy-allow-list.html"><em>How to permit outbound access to internet hosts in deployments with government community network connectivity</em></a>. If this URL was accessible on another network other than the internet, this would be a good candidate to be added to <code>no_proxy</code> to ensure the proxy was bypassed.</p>
 <h2 id="adding-entries-to-no_proxy">Adding entries to no_proxy</h2>
 <p>Entries can be added to <code>no_proxy</code> pre-deployment if included in the Service Request requesting the environment. Otherwise if you identify additional endpoints that you would like to bypass the proxy post-deployment, you will need to raise a Support Request via the UKCloud Portal and arrange a suitable maintenance window as a restart of the master, node and Docker services are required.</p>
 <p>Examples of domains you may want to bypass the proxy could be:</p>
@@ -178,7 +178,7 @@ error: unable to locate any images in image streams, local docker images with na
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

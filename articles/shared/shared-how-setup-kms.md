@@ -1,6 +1,6 @@
 ---
-title: How to license Windows VMs using the UKCloud KMS
-description: Shows how to register virtual machines with the KMS within vCloud Director
+title: How to license Windows VMs using the UKCloud KMS
+description: Shows how to register virtual machines with the KMS within VMwareCloud Director
 services: shared-services
 author: shighmoor
 reviewer: shighmoor
@@ -16,7 +16,7 @@ toc_fullpath: How To/shared-how-setup-kms.md
 toc_mdlink: shared-how-setup-kms.md
 ---
 
-# How to license Windows VMs using the UKCloud Key Management Server
+# How to license Windows VMs using the UKCloud Key Management Server
 
 ## Overview
 
@@ -27,8 +27,6 @@ You need to register the Windows virtual machines (VMs) that you create with the
 Before product activation, make sure your VMs can communicate with the UKCloud KMS that exists outside your cloud organisation.
 
 To allow this communication, you need to create a source network address translation (SNAT) and firewall rule on your edge gateway:
-
-### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC for which server activation is required.
 
@@ -56,36 +54,6 @@ To allow this communication, you need to create a source network address transla
 
     For more information about creating firewall rules, see [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In vCloud Director, select the VDC for which server activation is required.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
-
-3. Select the edge that you want to configure and click the **Configure Services** button.
-
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
-
-4. In the *Edge Gateway* dialog box, select the **NAT** tab and create a new SNAT rule.
-
-5. Make sure that the **Applied On** field is set to reflect your network firewall tenant (NFT).
-
-6. In the **Original Source IP/Range** field, enter the IP address, CIDR or range of addresses you want to SNAT out.
-
-7. For the translated address, enter the external IP address of your edge gateway or one of your external IP address assignments.
-
-    For more information about creating SNAT rules, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md).
-
-8. Select the **Firewall** tab and make sure that an outbound rule exists on your firewall.
-
-    Contact UKCloud Support for details of the **Destination IP** and **Destination Port**.
-
-    For more information about creating firewall rules, see [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
-
-***
-
 ## Activating your Windows licence
 
 1. Open a console to the VM you want to license and activate.
@@ -94,7 +62,7 @@ To allow this communication, you need to create a source network address transla
 
 3. Enter:
 
-        C:\ > slmgr /skms  kms.ukcloud.com:1688
+        C:\ > slmgr /skms  kms.ukcloud.com:1688
 
 4. You'll see the following pop-up box:
 
@@ -102,7 +70,7 @@ To allow this communication, you need to create a source network address transla
 
 5. If an error message appears indicating that the KMS server can't be contacted, it means either that the edge gateway hasn't been configured correctly or that DNS can't be retrieved. Try again by issuing the same command but using the IP address of the activation server:
 
-        C:\ > slmgr /skms  <external IP address>:1688
+        C:\ > slmgr /skms  <external IP address>:1688
 
     ![Windows Script Host dialog box](images/shared-windows-kms-activate-ip.png)
 

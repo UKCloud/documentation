@@ -97,17 +97,6 @@
 <p>UKCloud provides a public catalog for you to use that contains standard virtual machine (VM) sizes and operating systems. The public catalog is a good place to start when you first deploy VMs into the UKCloud platform. However, you may want to create your own catalogs, containing specific applications or gold images, which you can then use to deploy VMs quickly.</p>
 <h2 id="creating-a-catalog">Creating a catalog</h2>
 <p>The first step is to create an empty catalog:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the VMware Cloud Director menu bar, select <strong>Libraries</strong>.</p>
 <p><img src="images/vmw-vcd10.1-mnu-libraries.png" alt="Libraries menu option in VMware Cloud Director"></p>
@@ -146,55 +135,6 @@
 <li><p>When you've added all the people who you want to access the catalog, click <strong>Save</strong>.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In vCloud Director, click the menu icon and select <strong>Libraries</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-libraries.png" alt="Libraries menu option in vCloud Director"></p>
-</li>
-<li><p>In the left navigation panel, click <strong>Catalogs</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-catalogs.png" alt="Catalogs menu option"></p>
-</li>
-<li><p>Click <strong>New</strong> to create a new catalog.</p>
-<p><img src="images/vmw-vcd-catalog-btn-add.png" alt="Add catalog button"></p>
-</li>
-<li><p>In the <em>Create Catalog</em> dialog box, <strong>Name</strong> the catalog and give it a <strong>Description</strong> if needed.</p>
-</li>
-<li><p>To specify a particular storage policy for the catalog, select the <strong>Pre-provision on specific storage policy</strong> option then select the desired <strong>Storage Policy</strong>:</p>
-<ul>
-<li><p><strong>Tier1</strong> is for high performance, high IOPS VMs</p>
-</li>
-<li><p><strong>Tier2</strong> is for everything else less demanding (recommended for ISO and templates)</p>
-</li>
-</ul>
-<p><img src="images/vmw-vcd-create-catalog.png" alt="Create Catalog dialog box"></p>
-</li>
-<li><p>When you're done, click <strong>OK</strong>.</p>
-</li>
-<li><p>To make the catalog visible to others within your organisation, click the three vertical dots and select <strong>Share</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-share-catalog.png" alt="Share catalog menu option"></p>
-</li>
-<li><p>In the <em>Share Catalog</em> dialog box, click the <strong>Add</strong> button.</p>
-<p><img src="images/vmw-vcd-share-catalog.png" alt="Share Catalog dialog box"></p>
-</li>
-<li><p>In the <em>Share With Users and Groups</em> dialog box, select:</p>
-<ul>
-<li><p><strong>Share with everyone in the organisation</strong> to add everyone in the organisation</p>
-</li>
-<li><p><strong>Share with specific users or groups</strong> to add individual users or groups of users</p>
-</li>
-</ul>
-<p>You can give users different access levels: <strong>Read Only</strong>, <strong>Full Control</strong> or <strong>Change</strong>. Change allows users to change permissions.</p>
-<p><img src="images/vmw-vcd91-share-users-groups.png" alt="Share With Users and Groups dialog box"></p>
-</li>
-<li><p>When you've added all the people who you want to access the catalog, click <strong>OK</strong>.</p>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="populating-a-catalog">Populating a catalog</h2>
 <p>There are two ways to populate a catalog:</p>
 <ul>
@@ -209,17 +149,6 @@
 <p>Depending on the file size and network speed, the upload may take some time.</p>
 </div>
 <p>To upload an OVF package and assign it to a catalog:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>On the <em>Libraries</em> page, in the left navigation panel, under <em>Content Libraries</em>, select <strong>vApp Templates</strong>.</p>
 <p><img src="images/vmw-vcd10.1-mnu-vapp-templates.png" alt="vApp Templates menu option"></p>
@@ -246,47 +175,7 @@
 <li><p>On the <em>Ready to Complete</em> page, review the details of the vApp template and when you're done, click <strong>Finish</strong> to deploy.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the <em>Libraries</em> page, in the left navigation panel, select <strong>vApp Templates</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-vapp-templates.png" alt="vApp Templates menu option"></p>
-</li>
-<li><p>Click <strong>Add</strong> to open an OVF upload window.</p>
-<p><img src="images/vmw-vcd-btn-add-vapp-template.png" alt="Add vApp template button"></p>
-</li>
-<li><p>In the <em>Create vApp template from OVF</em> dialog box, select the source of the OVF: either enter a <strong>URL</strong> or <strong>Browse</strong> for a local file.</p>
-<p><img src="images/vmw-create-vapp-template-source.png" alt="Select Source step of the Create vApp template from OVF dialog box"></p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>You can select multiple files by pressing the CTRL key and selecting other files.</p>
-</div>
-</li>
-<li><p>Click <strong>Next</strong>.</p>
-</li>
-<li><p>Review the details of the OVF template and then click <strong>Next</strong>.</p>
-</li>
-<li><p>Enter a <strong>Name</strong> and <strong>Description</strong> for the template and from the <strong>Catalog</strong> list, select the catalog in which you want to put the OVF. Click <strong>Next</strong> to continue.</p>
-<p><img src="images/vmw-create-vapp-template-catalog.png" alt="Select vApp Template Name step of the Create vApp template from OVF dialog box"></p>
-</li>
-<li><p>Review the details of the vApp template and when you're done, click <strong>Finish</strong> to deploy.</p>
-</li>
-</ol>
-</section>
-</div>
 <h3 id="adding-an-existing-vapp">Adding an existing vApp</h3>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-2">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-2_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-2_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-2_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-2_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-2_tabid-a" role="tabpanel" data-tab="tabid-a">
-
 <ol>
 <li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which the vApp you want to use is located.</p>
 </li>
@@ -307,33 +196,6 @@
 <p>A status bar will appear on top with the message: <strong>Please wait</strong>. You can close the window and check the progress by expanding the <em>Recent Tasks</em> section at the bottom of the VMware Cloud Director interface.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q-2_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<p>To create a catalog from an existing vApp:</p>
-<ol>
-<li><p>In vCloud Director, click the menu icon and select <strong>Datacenters</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-dcs.png" alt="Datacenters menu option in vCloud Director"></p>
-</li>
-<li><p>Select the VDC where the vApp is located.</p>
-</li>
-<li><p>In the left navigation panel, click <strong>vApps</strong>.</p>
-<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps menu option"></p>
-</li>
-<li><p>In the card for the vApp that you want to add to the catalog, select <strong>Actions</strong> then <strong>Add to Catalog</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-add-to-catalog.png" alt="Add to Catalog menu option"></p>
-<p>You can add both running and stopped vApps to the catalog, although it's worth noting that creating a catalog image from a running vApp could affect performance.</p>
-</li>
-<li><p>You can now choose the catalog you want to add the vApp to, give the vApp a new name, assign a storage lease, and define whether vApps deployed using this template are identical or customisable.</p>
-<p>You can also overwrite an existing catalog item. If the catalog you are adding the vApp to is published externally, you'll see a warning.</p>
-<p><img src="images/vmw-vcd-add-to-catalog.png" alt="Add to Catalog dialog box"></p>
-</li>
-<li><p>When you're done, click <strong>OK</strong>.</p>
-<p>A status bar will appear on top with the message: <strong>Please wait</strong>. You can close the window and check the progress by expanding the <em>Recent Tasks</em> section at the bottom of the vCloud Director interface.</p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -363,7 +225,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

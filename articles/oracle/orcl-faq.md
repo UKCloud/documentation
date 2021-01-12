@@ -21,7 +21,7 @@ toc_mdlink: orcl-faq.md
 
 ### What is UKCloud for Oracle Software?
 
-UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. This service sits within UKCloud's genuine assured cloud services portfolio, enabling you to leverage the benefits of digital transformation while maintaining your investment and integration with traditional Oracle-based services.
+UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. 
 
 ### What is provided in the service?
 
@@ -151,7 +151,7 @@ Providing that the software products adhere to the guidelines above, the followi
 
 - Oracle 9i R2 DB with partitioning; OEM;
 
-- Oracle 10g R1 & R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM
+- Oracle 10g R1 & R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM
 
 - WebLogic 10 Platform
 

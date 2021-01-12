@@ -29,7 +29,7 @@ This article explains how to use the vCloud API to export configuration from an 
 
 Before using the vCloud API to migrate edge configuration data, you should install a REST client to enable you to easily access the vCloud API and interact with the relevant endpoints. For information about installing a REST client, see [*How to install a REST client to access the vCloud API*](../vmware/vmw-how-install-vcloud-api-rest-client.md). You can use an alternative API client if you prefer.
 
-You also need to obtain your API credentials. For more information, see [*How to access vCloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md).
+You also need to obtain your API credentials. For more information, see [*How to access VMware Cloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md).
 
 ## Obtaining an authorisation token
 
@@ -236,7 +236,7 @@ For VPN configuration, you'll need to replace the interface references and names
 
 Remember that when amending VPN configuration, and particularly the local endpoint IP address, you'll also need to make configuration changes on the peer side to mirror those amendments.
 
-If you're using a Pre-Shared Key (PSK) for IPsec VPN authentication, the key will not be exported as part of this configuration. You can retrieve the key either through the vCloud Director GUI or by querying an additional API endpoint (see [_How to obtain full IPsec VPN configuration via the vCloud API_](enbl-how-obtain-vpn-config.md)).
+If you're using a Pre-Shared Key (PSK) for IPsec VPN authentication, the key will not be exported as part of this configuration. You can retrieve the key either through the VMware Cloud Director GUI or by querying an additional API endpoint (see [_How to obtain full IPsec VPN configuration via the vCloud API_](enbl-how-obtain-vpn-config.md)).
 
 ## Applying the new configuration
 
@@ -300,7 +300,7 @@ The steps below outline how to apply the amended configuration to your new edge 
 
 9. To submit the new configuration, click **Send**.
 
-10. The status of the edge gateway as viewed from vCloud Director will briefly show as **Updating Configuration**. Once this process has completed, click the edge gateway and select **Configure Services**.
+10. The status of the edge gateway as viewed from VMware Cloud Director will briefly show as **Updating Configuration**. Once this process has completed, click the edge gateway and select **Configure Services**.
 
 11. In the *Configure Services* window, verify that the configuration has been applied successfully.
 

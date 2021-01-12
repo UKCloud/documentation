@@ -19,13 +19,13 @@ toc_mdlink: other-faq-ukcloud.md
 
 This article provides a list of FAQs on UKCloud services, technology, connections and processes.
 
+## UKCloud for Managed OpenShift FAQs
+
+- [UKCloud for Managed OpenShift](../openshift/oshift-faq.md)
+
 ## UKCloud for Microsoft Azure FAQs
 
 - [UKCloud for Microsoft Azure](../azure/azs-faq.md)
-
-## UKCloud for OpenShift FAQs
-
-- [UKCloud for OpenShift](../openshift/oshift-faq.md)
 
 ## UKCloud for OpenStack FAQs
 

@@ -62,7 +62,7 @@ To restrict access to the Portal:
 
 ## Next steps
 
-You can also restrict access to VMware Cloud Director/vCloud Director. For more information, see [*How to restrict access to VMware Cloud Director/vCloud Director*](ptl-how-restrict-access-vcloud-api.md)
+You can also restrict access to VMware Cloud Director. For more information, see [*How to restrict access to VMware Cloud Director*](ptl-how-restrict-access-vcloud-api.md)
 
 ## Feedback
 

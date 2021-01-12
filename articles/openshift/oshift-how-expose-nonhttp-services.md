@@ -3,8 +3,8 @@ title: How to expose non-http services externally
 description: Explains how to expose services outside of your OpenShift cluster without using HTTP or HTTPS
 services: openshift
 author: Kieran O'Neill
-reviewer: gsmith
-lastreviewed: 20/11/2019
+reviewer: Gareth Ellner
+lastreviewed: 16/12/2020
 
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
@@ -20,7 +20,7 @@ toc_mdlink: oshift-how-expose-nonhttp-services.md
 
 ## Overview
 
-UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
+UKCloud for Managed OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
 
 This article explains how you can expose services outside of your OpenShift cluster without using routes.
 

@@ -118,11 +118,11 @@ If you have multiple NSX edges under a single NFT, you can gather the data from 
 
 After setting up your syslog collector, you need to make sure that your NSX edge sends network traffic to the log.
 
-1. In the VMware Cloud Director/vCloud Director, select the VDC to which the NSX edge belongs.
+1. In the VMware Cloud Director, select the VDC to which the NSX edge belongs.
 
 2. In the left navigation panel, under *Networking*, select **Edges**.
 
-3. Select the edge that you want to configure and click **Configure Services** (vCloud Director 9.7) or **Services** (VMware Cloud Director 10.1).
+3. Select the edge that you want to configure and click **Services**.
 
 4. Select the **Edge Settings** tab.
 

@@ -4,7 +4,8 @@ description: Frequently asked questions for Janet connectivity
 services: connectivity
 author: mwarner
 reviewer: nstobbart
-lastreviewed: 10/12/2020
+lastreviewed: 16/12/2020
+
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -21,7 +22,7 @@ toc_mdlink: conn-faq-janet.md
 
 Janet is the UK's research and education network. It's connected to all education organisations and research councils.
 
-Janet is a free-of-charge network that eligible UKCloud customers can use; there are no ingress or egress charges for this network. It's presented from our Assured platform and has a current bandwidth capacity of 1Gbps from each of our data centres. The Janet connections are diversely routed for resilience and utilise Border Gateway Protocol (BGP) between data centres to ensure high availability of connections. 
+Janet is a free-of-charge network that eligible UKCloud customers can use; there are no ingress or egress charges for this network. It's presented from our Assured platform and has a current bandwidth capacity of 1Gbps. 
 
 ## Who is entitled to connect to the Janet network?
 
@@ -38,10 +39,6 @@ No. We can't arrange Janet connections to third-party offices. We only enable ou
 ## Does UKCloud support dedicated Janet connections?
 
 Yes. Our HybridConnect service option enables customers and partners to provide their own private circuits, including dedicated Janet connections. If you'd like a dedicated Janet connection to our cloud platform, we can arrange for the installation of dedicated Janet circuits to each of our UK data centres.
-
-## Which UKCloud data centre has Janet connectivity?
-
-Both our Corsham and Farnborough sites have Janet connectivity.
 
 ## How do I get a Janet connection via the UKCloud Assured OFFICIAL security domain?
 
@@ -65,7 +62,7 @@ We provide an SLA for availability of our core services such as UKCloud for VMwa
 
 ## How can I create an allow-list of source Janet IP addresses on the edge gateway?
 
-You can log onto the UKCloud Portal and, within VMware Cloud Director administration, edit the firewall settings to allow or deny incoming connections from external IP addresses. See [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md) for more details.
+You can log in to VMware Cloud Director via the UKCloud Portal and edit the firewall settings to allow or deny incoming connections from external IP addresses. See [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md) for more details.
 
 ## Can I use UKCloud as a transit or gateway between different connections?
 
@@ -77,7 +74,7 @@ There is no minimum commitment for Janet connectivity.
 
 ## How will I be billed?
 
-There is no charge for Janet connectivity or for the first IP address for each data centre you are connected to via the Janet network.
+There is no charge for Janet connectivity or for the first IP address for each data centre you connect to the Janet network.
 
 Additional IP addresses will need to be justified and an administration fee will apply of £20 per additional IP address that is set up.
 

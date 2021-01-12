@@ -3,8 +3,8 @@ title: UKCloud for OpenStack Service Scope
 description: Outlines important details regarding Cloud Native Infrastructure
 services: openstack
 author: Steve Hall
-reviewer:
-lastreviewed: 18/09/2019 15:17:17
+reviewer: Steven Relf
+lastreviewed: 08/12/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -53,7 +53,7 @@ The following OpenStack projects/services are available with UKCloud for OpenSta
 
 - Octavia Load Balancing as a Service (*Excludes COR00005 & FRN00006 Regions*)
 
-- Self-service backup and restoration, powered by TrilioVault (*Generally available November 2019)
+- Self-service backup and restoration, powered by TrilioVault (*Excludes COR00005*)
 
 UKCloud will look to add additional OpenStack projects to this service through future releases.
 

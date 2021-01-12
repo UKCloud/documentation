@@ -3,8 +3,8 @@ title: How to move resources between OpenStack regions
 description: Helps you understand how you can move resources between OpenStack regions
 services: openstack
 author: Sue Highmoor
-reviewer: scassidy
-lastreviewed: 08/01/2020
+reviewer: bnicholls
+lastreviewed: 05/01/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -46,6 +46,8 @@ Corsham | 00005 (cor00005.cni.ukcloud.com) | 0000c-1
 &nbsp; | &nbsp; | 0000c-2
 Farnborough | 00006 (frn00006.cni.ukcloud.com) | 00021-1
 &nbsp; | &nbsp; | 00021-2
+Corsham 2 | 00005 (cor00005-2.cni.ukcloud.com) | 00026-1
+&nbsp; | &nbsp; | 00026-2
 
 Details correct at date of publication. Current details can be found in the UKCloud Knowledge Centre.
 
@@ -79,7 +81,7 @@ The following provides a code example of how to achieve this export and import o
 
 4. To download source image snapshot, enter the following command:
 
-        glance image-download --file <output-location> --progress <id-of-image-to-download>
+        openstack image save <id-of-image-to-download> --file <image-name> 
 
 5. To upload source image to the target region:
 
@@ -87,7 +89,7 @@ The following provides a code example of how to achieve this export and import o
 
     - Enter the following command:
 
-          glance image-create --progress --file <path-to-file-to-upload> --disk-format qcow2 --container-format bare --name <name-for-upload>
+          openstack image create  --file <path-to-file-to-upload> --disk-format qcow2 --container-format bare <name-for-upload>
 
 6. You can now start the migrated instance from file you've just uploaded.
 
@@ -123,11 +125,11 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
 2. Upload the source volume to the OpenStack Glance image repository using the following command:
 
-        cinder --os-volume-api-version 2 upload-to-image <volume id> <name>
+        openstack image create --volume <volume id> <name>
 
 3. Download the source volume image to your local device using the following command:
 
-        glance image-download --file <output-location> --progress <id-of-image-to-download>
+        openstack image save <id-of-image-to-download> --file <image-name> 
 
 4. To upload the source volume image to the target region:
 
@@ -135,7 +137,7 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
     - Enter the following command:
 
-          glance image-create --progress --file <path-to-file-to-upload> --disk-format qcow2 --container-format bare --name <name-for-upload>
+          openstack image create  --file <path-to-file-to-upload> --disk-format qcow2 --container-format bare <name-for-upload>
 
 5. To create a new volume in the target region based upon the original source volume, enter the following command:
 

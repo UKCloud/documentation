@@ -43,7 +43,7 @@ You need to be aware of what this service offers. The UKCloud Synchronous Protec
 
 - Is not designed to be active‑active. It offers failover to a second UK site. If you need an active‑active solution, you can build across both sites and design in load balancing. Contact your Account Manager if you want to investigate this option.
 
-- Provides a disaster recovery service with an RPO of 0 seconds, and a variable RTO from 1 minute to longer, depending on the scenario.
+- Provides a disaster recovery service with an RPO of 0 seconds, and a variable RTO from 1 minute to longer, depending on the scenario.
 
 ### What will I need to do after an unplanned failover has occurred?
 
@@ -73,7 +73,7 @@ UKCloud's firewalls are protected within each site, with the failover between th
 
 ### How long will it take for my services to fail over?
 
-This will depend on the scenario and the design of your environment, but generally the failover will take as long as the VM needs to reboot plus a small amount of additional time to invoke the failover - about 45 seconds. Some scenarios, such as a "split brain", can take longer, leading to an outage of up to two hours.
+This will depend on the scenario and the design of your environment, but generally the failover will take as long as the VM needs to reboot plus a small amount of additional time to invoke the failover - about 45 seconds. Some scenarios, such as a "split brain", can take longer, leading to an outage of up to two hours.
 
 ### What is the relationship between edge gateways, VDCs and vOrgs when a failover occurs?
 

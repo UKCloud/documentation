@@ -139,13 +139,13 @@
 <p>UKCloud for Managed OpenShift is available in our Assured OFFICIAL and Elevated OFFICIAL security domains on our Tier 1 platform. UKCloud for Managed OpenShift is available on our Tier 2 platform for workloads that require greater levels of security.</p>
 <h3 id="deployment-options">Deployment options</h3>
 <p>UKCloud for Managed OpenShift is packaged to provide you with a high level of flexibility to scale your environments inline with your workloads.</p>
-<p>With UKCloud for Managed OpenShift, we deploy an OpenShift cluster that contains multiple nodes: master nodes for the control plane, infrastructure nodes for additional services, such as ingress controllers, metrics, developer console and aggregated logging, and application nodes for your containerised applications.</p>
+<p>With UKCloud for Managed OpenShift, we deploy an OpenShift cluster that contains multiple nodes: nodes for the cluster control plane, infrastructure nodes for additional services, such as ingress controllers, metrics, developer console and aggregated logging, and application nodes for your containerised applications.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>An operational OpenShift cluster requires a minimum of three master nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services, such as ingress controllers, metrics, developer console and aggregated logging. You'll need at least one application node to run your application and we recommend a minimum of two nodes for resilience.</p>
+<p>An operational OpenShift cluster requires a minimum of three control plane nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services, such as ingress controllers, metrics, developer console and aggregated logging. You'll need at least one application node to run your application and we recommend a minimum of two nodes for resilience.</p>
 </div>
 <h4 id="master-nodes">Master nodes</h4>
-<p>Master nodes provide the foundation OpenShift services to support the orchestration and management of the container runtime environments. An operational OpenShift cluster requires a minimum of three master nodes for API, scheduling and etcd key-value store.</p>
+<p>Master nodes provide the foundation OpenShift services to support the orchestration and management of the container runtime environments. An operational OpenShift cluster requires a minimum of three control plane nodes for API, scheduling and etcd key-value store.</p>
 <h4 id="infrastructure-nodes">Infrastructure nodes</h4>
 <p>Infrastructure nodes provide supporting services such as OpenShift routers, registry, metric collection and aggregated logging. Infrastructure nodes are not mandatory, but we recommend a minimum of two infrastructure nodes to provide integrated cluster services.</p>
 <h4 id="application-nodes">Application nodes</h4>
@@ -206,7 +206,7 @@
 <p>To facilitate the deployment of stateful workloads, UKCloud for Managed OpenShift offers dynamically provisioned persistent storage. It is vital that any persistent workloads utilise the appropriate storage policy for the workload to ensure no data loss when a container restarts. The customer is responsible for backup and disaster recovery of any data stored in persistent volumes.</p>
 <h3 id="backuprecovery-and-disaster-recovery">Backup/recovery and disaster recovery</h3>
 <p>As standard, localised component failures are tolerated within the infrastructure through elimination of single points of failure (including physical server failure or disk failure).</p>
-<p>Although OpenShift is designed to deploy and manage stateless applications (applications that can be destroyed and re-instantiated without risk of data loss), you should maintain a master copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, UKCloud's <a href="../cloud-storage/cs-sd.html">Cloud Storage</a> service.</p>
+<p>Although OpenShift is designed to deploy and manage stateless applications (applications that can be destroyed and re-instantiated without risk of data loss), you should maintain an original copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, UKCloud's <a href="../cloud-storage/cs-sd.html">Cloud Storage</a> service.</p>
 <h3 id="service-limitations">Service limitations</h3>
 <h4 id="scalability">Scalability</h4>
 <p>As a true cloud platform, UKCloud for Managed OpenShift provides full elasticity and scalability. However, to protect the integrity of the platform and manage customer spend, soft limits on the number and size of application instances will be in place. These limits may be extended on request.</p>
@@ -235,7 +235,7 @@
 </li>
 <li><p>Self-managing the environment including workload deployment, in-cluster workload segregation, network policy management, storage requests and management, and so on.</p>
 </li>
-<li><p>Maintaining a master copy or backup copy of the data used in the UKCloud for Managed OpenShift service (see <a href="#backuprecovery-and-disaster-recovery"><em>Backup/recovery and disaster recovery</em></a>).</p>
+<li><p>Maintaining an original copy or backup copy of the data used in the UKCloud for Managed OpenShift service (see <a href="#backuprecovery-and-disaster-recovery"><em>Backup/recovery and disaster recovery</em></a>).</p>
 </li>
 <li><p>Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
 <p>Customers with requirements beyond these limits can raise a service request via <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> to have these limits per project considered for raising.</p>
@@ -246,7 +246,7 @@
 <ul>
 <li><p>UKCloud-controlled components, such as the virtual infrastructure, storage, power and physical firewalls and routers</p>
 </li>
-<li><p>UKCloud-maintained OpenShift services (for example, router service, DEAs, health manager, cloud controller, master nodes, worker nodes, routing layer)</p>
+<li><p>UKCloud-maintained OpenShift services (for example, router service, DEAs, health manager, cloud controller, control plane nodes, worker nodes, routing layer)</p>
 </li>
 </ul>
 <p>UKCloud for Managed OpenShift includes full UKCloud support as standard at no additional charge. For more information about how the support process works, see <a href="../portal/ptl-how-raise-escalate-service-request.html"><em>How to raise and escalate support tickets with customer support</em></a>.</p>
@@ -316,7 +316,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

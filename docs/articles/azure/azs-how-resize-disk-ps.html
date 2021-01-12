@@ -213,26 +213,26 @@
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your Azure Stack Hub environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
 $RGName = "<output form="ResourceGroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="VMName" name="result" style="display: inline;">MyVM</output>"
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Stop-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize managed OS disk
-$Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
+$Disk = Get-AzDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
 $Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">200</output>
-Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
+Update-AzDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
 # Start the VM
-Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Start-AzVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
@@ -242,25 +242,25 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your Azure Stack Hub environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
 $RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="VMName" name="result2" style="display: inline;">MyVM</output>"
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Stop-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize unmanaged OS disk
 $VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">200</output>
-Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+Update-AzVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
-Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Start-AzVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
@@ -270,8 +270,8 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 $ArmEndpoint = "<output form="armendpoint2" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your Azure Stack Hub environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
 $RGName = "<output form="ResourceGroup2" name="result" style="display: inline;">MyResourceGroup</output>"
@@ -279,18 +279,18 @@ $VMName = "<output form="VMName2" name="result" style="display: inline;">MyVM</o
 $DiskLun = <output form="LUN" name="result" style="display: inline;">0</output>
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Stop-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize managed data disk
-$Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.DataDisks[$DiskLun].Name
+$Disk = Get-AzDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.DataDisks[$DiskLun].Name
 $Disk.DiskSizeGB = <output form="DiskSize2" name="result" style="display: inline;">200</output>
-Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
+Update-AzDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
 # Start the VM
-Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Start-AzVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
@@ -300,8 +300,8 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 $ArmEndpoint = "<output form="armendpoint2" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your Azure Stack Hub environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
 $RGName = "<output form="ResourceGroup2" name="result2" style="display: inline;">MyResourceGroup</output>"
@@ -309,17 +309,17 @@ $VMName = "<output form="VMName2" name="result2" style="display: inline;">MyVM</
 $DiskLun = <output form="LUN" name="result2" style="display: inline;">0</output>
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Stop-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize unmanaged data disk
 $VM.StorageProfile.DataDisks[$DiskLun].DiskSizeGB = <output form="DiskSize2" name="result2" style="display: inline;">200</output>
-Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+Update-AzVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
-Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Start-AzVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 </section>
 </div>
@@ -357,8 +357,8 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <ol>
 <li><p>Open an RDP connection to your VM.</p>
 <pre><code class="lang-powershell"># Obtain public IP of your VM based on the variables from above
-$NICName = (Get-AzureRmNetworkInterface -ResourceGroupName $RGName | Where-Object -FilterScript { $_.VirtualMachine.Id -like &quot;*$VMName*&quot;}).Name
-$IpAddress = Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object -FilterScript { $_.IpConfiguration.Id -like &quot;*$NICName*&quot; }
+$NICName = (Get-AzNetworkInterface -ResourceGroupName $RGName | Where-Object -FilterScript { $_.VirtualMachine.Id -like &quot;*$VMName*&quot;}).Name
+$IpAddress = Get-AzPublicIpAddress -ResourceGroupName $RGName | Where-Object -FilterScript { $_.IpConfiguration.Id -like &quot;*$NICName*&quot; }
 # Start RDP session to your VM
 Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&quot;
 </code></pre>
@@ -409,7 +409,7 @@ Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&q
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

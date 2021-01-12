@@ -3,8 +3,8 @@ title: How to deploy a Site Recovery template to Azure Stack Hub
 description: Learn how to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell
 services: azure-stack
 author: Bailey Lawson
-reviewer: William Turner
-lastreviewed: 02/04/2020
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -157,13 +157,13 @@ Change the required variables as per your environment and run the following scri
 $StackArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 ## Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
 
 ## Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Declare template variables
 $StackResourceGroup = "<output form="AzsRGName" name="result" style="display: inline;">MyResourceGroup</output>"
@@ -196,11 +196,11 @@ $LinuxRootPassword = '<output form="LinuxPassword" name="result" style="display:
 $TemplateUri = "https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/ARM%20Templates/Azure%20Site%20Recovery%20-%20Config%20Server/azuredeploy.json"
 
 # Validate that resource group, virtual network and subnet exist
-$TestRG = Get-AzureRmResourceGroup -Name $StackResourceGroup
+$TestRG = Get-AzResourceGroup -Name $StackResourceGroup
 if ($TestRG) {
-    $TestVNet = Get-AzureRmVirtualNetwork -Name $StackVNetName -ResourceGroupName $StackResourceGroup
+    $TestVNet = Get-AzVirtualNetwork -Name $StackVNetName -ResourceGroupName $StackResourceGroup
     if ($TestVNet) {
-        $TestSubnet = Get-AzureRmVirtualNetworkSubnetConfig -Name $StackSubnetName -VirtualNetwork $TestVNet
+        $TestSubnet = Get-AzVirtualNetworkSubnetConfig -Name $StackSubnetName -VirtualNetwork $TestVNet
         if ($TestSubnet) {
             Write-Output -InputObject "Validated resource group, virtual network and subnet successfully"
         }
@@ -251,13 +251,13 @@ $TemplateParameters = @{
 }
 
 # Test deployment
-$TestDeployment = Test-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
+$TestDeployment = Test-AzResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
 
 # Deploy ARM template
 if ($TestDeployment.Count -eq 0) {
     Write-Output -InputObject "Deploying ARM template..."
     Write-Warning -Message "This may take a while..."
-    New-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters -Name "AzureSiteRecovery"
+    New-AzResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters -Name "AzureSiteRecovery"
 }
 else {
     Write-Warning -Message "Unable to deploy ARM template due to following issue(s):"

@@ -1,6 +1,6 @@
 ---
 title: How to create a vApp network
-description: Shows how to create an isolated VDC network within the VMware Cloud Director/vCloud Director Tenant Portal
+description: Shows how to create an isolated VDC network within the VMware Cloud Director tenant portal
 services: vmware
 author: shighmoor
 reviewer: shighmoor
@@ -33,8 +33,6 @@ The vApp network diagram below shows the vApp edge.
 > [!NOTE]
 > As you're going to be changing network settings, all VMs within the vApp must be powered off.
 
-### [VMware Cloud Director 10.1](#tab/tabid-a)
-
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the vApp.
 
 2. In the left navigation panel, select **vApps**.
@@ -55,39 +53,11 @@ The vApp network diagram below shows the vApp edge.
 
 7. When you're done, click **Add**.
 
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains your vApp.
-
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
-
-2. In the left navigation panel, select **vApps**.
-
-    ![vApps tab in vCloud Director](images/vmw-vcd-tab-vapps.png)
-
-3. In the card for your vApp, select **Actions**, then **Add network**.
-
-    ![Add network menu option](images/vmw-vcd-mnu-vapp-network.png)
-
-4. In the *Add Network* dialog box, select **vApp Network**.
-
-    ![Add vApp Network option](images/vmw-vcd-add-network-vapp.png)
-
-5. Enter a **Name** and **Description** for the network.
-
-6. In the *Address and DNS* section, fill out the fields as required for your network.
-
-7. When you're done, click **Add**.
-
-***
-
 ## Connecting a VM to a vApp network
 
 If your vApp is already populated with VMs that are connected to a VDC network, you may want to move them over to the vApp network.
 
 To change the network a VM connects to:
-
-### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the card for the vApp, select **Details**.
 
@@ -113,27 +83,9 @@ To change the network a VM connects to:
 
 6. You can go back to the VM hardware properties to see the new IP address assigned to the VM.
 
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the card for the vApp, select **Details**.
-
-2. Click each VM, expand *Hardware* and in the *NICs* section select the vApp network from the **Network** list.
-
-    ![VM connected to a vApp network](images/vmw-vcd-vm-vapp-network.png)
-
-3. If you want to dual-home your VM, click the **Add** button to add a second network.
-
-4. When you're done, click **Save**.
-
-5. You can go back to the VM hardware properties to see the new IP address assigned to the VM.
-
-***
-
 ## Viewing and adjusting vApp network settings
 
 When you've created your vApp network and assigned VMs to it, you may want to review the vApp network settings and adjust them if needed.
-
-### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the left navigation panel, select **vApps**.
 
@@ -153,28 +105,6 @@ When you've created your vApp network and assigned VMs to it, you may want to re
 
 8. On the *Routing* page you can create static routes for your vApp network. For more information, see [*Creating static routes*](#creating-static-routes).
 
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the left navigation panel, select **vApps**.
-
-2. In the card for the vApp, select **Details**.
-
-3. Select the **Networks** tab.
-
-4. Click your vApp network to view its network settings.
-
-5. The **General** tab displays general network settings. Click **Edit** to adjust these settings.
-
-6. The **IP Management** tab displays the IP settings for the network, including static pool and DNS and DHCP. Click **Edit** to adjust these settings.
-
-    For more information about enabling DHCP for your vApp network, see [*Enabling DHCP](#enabling-dhcp).
-
-7. The **Services** tab enables you to set up firewall and NAT rules for your network. For more information, see [*Creating firewall rules*](#creating-firewall-rules) and [*Creating NAT rules*](#creating-nat-rules).
-
-8. The **Routing** tab enables you to create static routes for your network. For more information, see [*Creating static routes*](#creating-static-routes).
-
-***
-
 ### Enabling DHCP
 
 DHCP isn't enabled by default.
@@ -182,8 +112,6 @@ DHCP isn't enabled by default.
 For more information about DHCP, see [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md).
 
 To enable DHCP:
-
-#### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the left navigation panel, select **vApps**.
 
@@ -205,30 +133,6 @@ To enable DHCP:
 
     ![Edit network settings for DHCP](images/vmw-vcd10.1-vapp-network-dhcp.png)
 
-#### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the left navigation panel, select **vApps**.
-
-2. In the card for the vApp, select **Details**.
-
-3. Select the **Networks** tab.
-
-4. Click your vApp network to view its network settings.
-
-5. Select the **IP Management** tab then **DHCP**.
-
-6. Click **Edit**.
-
-    ![Edit button for vApp network DHCP](images/vmw-vcd-btn-vapp-network-dhcp-edit.png)
-
-7. In the *Edit network* dialog box, select the **Enabled** option.
-
-8. Enter **IP Pool** and lease information for your DHCP addresses then click **Save**.
-
-    ![Edit network settings for DHCP](images/vmw-vcd-vapp-network-dhcp.png)
-
-***
-
 ### Creating firewall rules
 
 There will be a rule in place to allow any traffic to traverse the firewall. You can amend or delete this rule, or create new rules.
@@ -238,8 +142,6 @@ There will be a rule in place to allow any traffic to traverse the firewall. You
 For more about firewall rules, see [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
 
 To create a firewall rule:
-
-#### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the left navigation panel, select **vApps**.
 
@@ -259,28 +161,6 @@ To create a firewall rule:
 
     ![Add firewall rule](images/vmw-vcd10.1-vapp-network-firewall-add.png)
 
-#### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the left navigation panel, select **vApps**.
-
-2. In the card for the vApp, select **Details**.
-
-3. Select the **Networks** tab.
-
-4. Click your vApp network to view its network settings.
-
-5. Select the **Services** tab.
-
-6. Click **Edit**.
-
-    ![Edit button for vApp network firewall rules](images/vmw-vcd-btn-vapp-network-firewall-edit.png)
-
-7. On the **Firewall** tab, click **Add**, specify the details for the firewall rule then click **Save**.
-
-    ![Add firewall rule](images/vmw-vcd-vapp-network-firewall-add.png)
-
-***
-
 ### Creating NAT rules
 
 NAT rules, enabled by default, enable mapping between internal VM interfaces and external IP addresses.
@@ -288,8 +168,6 @@ NAT rules, enabled by default, enable mapping between internal VM interfaces and
 For more information about NAT rules, see [*How to create NAT rules*](vmw-how-create-nat-rules.md).
 
 To edit the mapping rules for a VM:
-
-#### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the left navigation panel, select **vApps**.
 
@@ -321,38 +199,6 @@ To edit the mapping rules for a VM:
 
     The external IP address will be on the same subnet as the VDC network that connects to the vApp edge.
 
-#### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the left navigation panel, select **vApps**.
-
-2. In the card for the vApp, select **Details**.
-
-3. Select the **Networks** tab.
-
-4. Click your vApp network to view its network settings.
-
-5. Select the **Services** tab.
-
-6. Click **Edit**.
-
-    ![Edit button for vApp network NAT rules](images/vmw-vcd-btn-vapp-network-firewall-edit.png)
-
-7. On the **NAT** tab, click **Add**.
-
-8. In the **VM Interface** field, click the edit (pencil) icon, then select the VM interface for which you want to add the NAT rule.
-
-9. From the **Mapping Mode** list, select the mapping mode.
-
-    The default mapping is **Automatic**. You can change this to **Manual**, in which case, enter an **External IP** address to which the VM can map.
-
-    ![Add NAT rule](images/vmw-vcd-vapp-network-nat-add.png)
-
-10. When you're done, click **Save**.
-
-    The external IP address will be on the same subnet as the VDC network that connects to the vApp edge.
-
-***
-
 ### Creating static routes
 
 Static routing at the vApp network level allows traffic to route between different vApp networks, across the VDC networks.
@@ -366,8 +212,6 @@ The prerequisites for static routing are as follows:
 - The vApp networks must be in vApps that have been started at least once.
 
 To add a static route:
-
-#### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the left navigation panel, select **vApps**.
 
@@ -405,38 +249,6 @@ To add a static route:
 
 12. Repeat for the second vApp network.
 
-#### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the left navigation panel, select **vApps**.
-
-2. In the card for the vApp, select **Details**.
-
-3. Select the **Networks** tab.
-
-4. Click the first vApp network to view its network settings.
-
-5. Select the **Routing** tab.
-
-6. Click **Add**
-
-    ![Add button for vApp network static route](images/vmw-vcd-btn-vapp-network-static-route-add.png)
-
-7. In the *Add Static Route* dialog box, enter a **Name** for the static route.
-
-8. Enter the following details:
-
-    - **Network CIDR** - The address of the first vApp network to which you're adding a static route
-
-    - **Next Hop IP** - The external IP address of that vApp network's router
-
-    ![Add Static Route dialog box](images/vmw-vcd-vapp-network-static-route.png)
-
-9. When you're done, click **Save**.
-
-10. Repeat for the second vApp network.
-
-***
-
 #### Examples
 
 The tables below provides examples of the settings needed to create a static route between two vApps.
@@ -467,8 +279,6 @@ vApp fencing can be done during or after vApp creation. It is done when the VMs 
 
 To apply vApp fencing:
 
-### [VMware Cloud Director 10.1](#tab/tabid-a)
-
 1. In the left navigation panel, select **vApps**.
 
 2. In the card for the vApp, select **Details**.
@@ -482,24 +292,6 @@ To apply vApp fencing:
 5. Select the **Fence vApp** option then click **OK**.
 
     ![Edit vApp Fencing dialog box](images/vmw-vcd-vapp-fencing.png)
-
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the left navigation panel, select **vApps**.
-
-2. In the card for the vApp, select **Details**.
-
-3. Select the **Networks** tab.
-
-4. In the *vApp Fencing* section, click **Edit**.
-
-    ![Edit button for vApp network fencing](images/vmw-vcd-btn-vapp-network-fence.png)
-
-5. Select the **Fence vApp** option then click **OK**.
-
-    ![Edit vApp Fencing dialog box](images/vmw-vcd-vapp-fencing.png)
-
-***
 
 ## Feedback
 
