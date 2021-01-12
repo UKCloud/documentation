@@ -35,13 +35,13 @@ Certain Red Hat templates within the UKCloud public catalogue are automatically 
 
 These templates have the following properties:
 
-- You can find the default root password in the VM Properties Description field (you can set the password using Guest Customization)
-
 - Red Hat Update Infrastructure enabled for standard packages
 
 - VMware Tools / Guest Customization enabled
 
 - 60GB disk space / 1 x vCPU / 2GB RAM (default, adjust as required)
+
+- To configure the root password for the VM, guest customisation **MUST** be run
 
 You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). You will not be billed on additional storage until you reach the 60GiB of provisioned disk space.
 
