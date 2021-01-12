@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "Bqw+2quWkq8ww5+gPWCnzg=="
+          "hash": "JhcETQe5/r0BuyzMk+xDqw=="
         }
       },
       "is_incremental": false,
@@ -2347,7 +2347,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-faq.html",
-          "hash": "n3QBuBWsRL1yxGMYK8232w=="
+          "hash": "1hBymHpt/wfOSFTKIqdaGw=="
         }
       },
       "is_incremental": false,
@@ -2419,7 +2419,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sco.html",
-          "hash": "h3qVwcEpZQyz0yIG3he4JA=="
+          "hash": "4XBsIayf9u19QeWoCqW+UA=="
         }
       },
       "is_incremental": false,
@@ -4856,7 +4856,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-capscpa.html",
-          "hash": "8JnYL1Aj3EMzOpJC1Pqx2w=="
+          "hash": "0QK0Pmg3T+sQ92LU5jpEFA=="
         }
       },
       "is_incremental": false,
@@ -4880,7 +4880,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-hosting.html",
-          "hash": "UMP3oLBXen8alk/dn2sOeQ=="
+          "hash": "VaFh51bkqnkd1wsC+HOcwA=="
         }
       },
       "is_incremental": false,
@@ -4940,7 +4940,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-vpn.html",
-          "hash": "Ba5BQ8pwyejFREMLvuFMfA=="
+          "hash": "e+vZQd6+DNnPsbyg6r3M7Q=="
         }
       },
       "is_incremental": false,
@@ -6154,11 +6154,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-gs-v3.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-gs-v3.html",
+          "hash": "CEt9ThfXx4uOx7lupsphvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "HAQIGYhPNbqAioz/FLjJxg=="
+          "hash": "EgQU6+p5Sw198xud2iVMbg=="
         }
       },
       "is_incremental": false,
@@ -6170,7 +6182,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-home.html",
-          "hash": "vtIlrSyhzaqPvvOWzc4QKA=="
+          "hash": "NpXc9ys/EVFklIdTCRvXqA=="
         }
       },
       "is_incremental": false,
@@ -6194,7 +6206,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-backup-directories-database.html",
-          "hash": "FaCtLbjylrcY64jItF+lIQ=="
+          "hash": "ifCiyiizLwp2UwE/f/Pf4A=="
         }
       },
       "is_incremental": false,
@@ -6242,7 +6254,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-customise-error-page.html",
-          "hash": "d5KR3ezQcZQg4/KicjbxhA=="
+          "hash": "Db4T3J8I2hz7eh4kAtD1Jw=="
         }
       },
       "is_incremental": false,
@@ -6266,7 +6278,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-expose-nonhttp-services.html",
-          "hash": "RjalrPk4v7ihLywcWs7uig=="
+          "hash": "NqIrYb6eJ7eFvaixDeuIYw=="
         }
       },
       "is_incremental": false,
@@ -6290,7 +6302,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-monitor-cluster.html",
-          "hash": "+AHxeYqJpPkLwbaoHHV/Jg=="
+          "hash": "X/LpjqMpfYMStbHtoN4YJg=="
         }
       },
       "is_incremental": false,
@@ -6302,7 +6314,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-obtain-usage-metrics.html",
-          "hash": "P7Etn3PBqHYnuuiuEE8QPQ=="
+          "hash": "NaT5JUEHGp7NfiotdFbxgQ=="
         }
       },
       "is_incremental": false,
@@ -6398,7 +6410,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-view-proxy-logs.html",
-          "hash": "HeMF7m1Rd4s/jBkUvYIBAA=="
+          "hash": "TLM8PXekTiXHD7oc1vaR3A=="
         }
       },
       "is_incremental": false,
@@ -6410,7 +6422,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-view-router-logs.html",
-          "hash": "eL6qF5j43K7OYfVIznpI5A=="
+          "hash": "TMBrnHEIrLmZ3QVk4nmTXg=="
         }
       },
       "is_incremental": false,
@@ -6435,6 +6447,18 @@
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-deploy-app-into-service-mesh.html",
           "hash": "XyIpVWyQYuXInpCiC5NiZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-ref-dns-zone-forwarding-v4.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-ref-dns-zone-forwarding-v4.html",
+          "hash": "+nTd0TC4I09+3xKMKh0yYg=="
         }
       },
       "is_incremental": false,
@@ -6470,7 +6494,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-lifecycle.html",
-          "hash": "gl5HQJuHnp1O/S8qljhzFA=="
+          "hash": "eoexR4fuHmKFdiA07oTRFg=="
         }
       },
       "is_incremental": false,
@@ -6506,7 +6530,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-scaling.html",
-          "hash": "2aHZsZ0g7cLK9tH1JBPbEw=="
+          "hash": "e2W89c0O6wPl7lFSAG5Xwg=="
         }
       },
       "is_incremental": false,
@@ -6518,7 +6542,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-security-best-practices.html",
-          "hash": "X27LZzxUBBmgr37d/payBg=="
+          "hash": "+2x9wrzfntn7MpI9pAS8fg=="
         }
       },
       "is_incremental": false,
@@ -6530,7 +6554,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-trial.html",
-          "hash": "/KBu0zGv1p/DYPRZeDwGvg=="
+          "hash": "gDSvsIrwR7EJ7FaVIs8ICA=="
         }
       },
       "is_incremental": false,
@@ -6566,7 +6590,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "5ZF6WUadSbuoW/YfrAAQ1Q=="
+          "hash": "1f4ZLrGDodGcqTtMOPa6BQ=="
         }
       },
       "is_incremental": false,
@@ -8734,7 +8758,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "f+2oS0sFGNiSEUyAN7nezg=="
+          "hash": "nl19wUE4xR1UJNJRMrFy7w=="
         }
       },
       "is_incremental": false,
@@ -8746,7 +8770,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "R1QPFEEerigs9x30qGm+6A=="
+          "hash": "MYwe5aEn93hpU8+G6Lf7TQ=="
         }
       },
       "is_incremental": false,
@@ -8854,7 +8878,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-move-resources.html",
-          "hash": "KKpIPxBYEQv+tM6eXy8wZw=="
+          "hash": "dKtuvE/cI8QjnlJ4J3fblw=="
         }
       },
       "is_incremental": false,
@@ -8962,7 +8986,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-triliovault.html",
-          "hash": "pBbyfR0nKjTnQ35Kz3ulEQ=="
+          "hash": "hIb3977kaU8jRnWBpDIp+A=="
         }
       },
       "is_incremental": false,
@@ -9082,7 +9106,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sco-triliovault.html",
-          "hash": "o8gXlcBgsQhyT1oCPQEzJw=="
+          "hash": "ESzEx0xvuCcNF6pfx0ll9Q=="
         }
       },
       "is_incremental": false,
@@ -9094,7 +9118,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sco.html",
-          "hash": "SL7Ls1cQEskWky4CAMUHGw=="
+          "hash": "G6nb2u+OX9vcQbBRYAIEmg=="
         }
       },
       "is_incremental": false,
@@ -9118,7 +9142,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-vid-overview.html",
-          "hash": "DqMjVXNrbmHNSBFzVZqDKQ=="
+          "hash": "O0BnAdxlXADAKjVhlG3J+g=="
         }
       },
       "is_incremental": false,
@@ -9130,7 +9154,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-vid-trilio.html",
-          "hash": "AjNNTyQapL17bfC83THT7w=="
+          "hash": "+9PxODdq9wdSPw5vNsbKLA=="
         }
       },
       "is_incremental": false,
@@ -10431,7 +10455,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "CxmLSpyvlrUYtAaeRwBoNA=="
+          "hash": "KBbDyBX62cn+B7WaJXhpvA=="
         }
       },
       "is_incremental": false,
@@ -10599,7 +10623,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "swp3HjsgWdJff2u7U4ix+Q=="
+          "hash": "7dds3wXDa/wdQndS2DZZ4g=="
         }
       },
       "is_incremental": false,
@@ -10623,7 +10647,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "xf6pXNcAE8URaTIQl8Nz+A=="
+          "hash": "HoXzUCNy5CFSnpIxtVX3gQ=="
         }
       },
       "is_incremental": false,
@@ -10695,7 +10719,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-offboarding.html",
-          "hash": "inD5UHRz7TmUC/eJpTS79w=="
+          "hash": "KfHCD2mboAXb7i9MwmoNdg=="
         }
       },
       "is_incremental": false,
@@ -10731,7 +10755,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-product-overview.html",
-          "hash": "jJX7hUgwDVWJRVWnJJeh/Q=="
+          "hash": "sSC+CpNyglUrvVMFnFYBBQ=="
         }
       },
       "is_incremental": false,
@@ -11781,7 +11805,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "PnvUMn9hjE4/tse0U1107Q=="
+          "hash": "SuqAXIN+mpnSf5L/eSNovA=="
         }
       },
       "is_incremental": false,
@@ -12161,7 +12185,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sco-orcl.html",
-          "hash": "JmbyKqn7huswnfuGeK15NQ=="
+          "hash": "lAZO3ojgccJ4YiPU/sK+tA=="
         }
       },
       "is_incremental": false,
@@ -12683,7 +12707,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-faq.html",
-          "hash": "ob9lFZG8mSe9M/g/BaIkbw=="
+          "hash": "BEhEPx0QZ8O4216kcoLiPg=="
         }
       },
       "is_incremental": false,
@@ -12731,7 +12755,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sco.html",
-          "hash": "ddWhAuotOCdtDKtHuZHARQ=="
+          "hash": "9vn1ATXDQM7vOnHWYCSjoA=="
         }
       },
       "is_incremental": false,
@@ -22028,7 +22052,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 446,
+          "total_file_count": 448,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

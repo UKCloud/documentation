@@ -158,7 +158,7 @@ The Portal navigation panel provides access to all the functionality available i
 
 - **OpenStack Cloud** - Provides access to the OpenStack Horizon dashboard for UKCloud for OpenStack (see the [*Getting Started Guide for UKCloud for OpenStack*](../openstack/ostack-gs.md)).
 
-- **OpenShift** - Provides information about UKCloud for OpenShift (see the [*Getting Started Guide for UKCloud for OpenShift*](../openshift/oshift-gs.md)).
+- **OpenShift** - Provides information about UKCloud for Managed OpenShift (see the [*Getting Started Guide for UKCloud for Managed OpenShift*](../openshift/oshift-gs.md)).
 
 - **Azure Cloud** - Provides access to the Azure Stack Hub portal for UKCloud for Microsoft Azure (see the [*Getting Started Guide for UKCloud for Microsoft Azure*](../azure/azs-gs.md)).
 
