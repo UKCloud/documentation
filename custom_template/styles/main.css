@@ -862,7 +862,7 @@ code {
   color: #f44747;
 }
 
-
+/* Tables */
 .table-bordered,
 .table-bordered > tbody > tr > td,
 .table-bordered > tbody > tr > th,
@@ -873,7 +873,7 @@ code {
   border: 1px solid var(--color-background);
 }
 
-.table-striped >tbody > tr:nth-of-type(odd) {
+.table-striped > tbody > tr:nth-of-type(odd) {
   background-color: var(--color-background-table-alt);
 }
 
