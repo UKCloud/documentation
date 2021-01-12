@@ -531,6 +531,10 @@ input:checked + .slider:before {
   vertical-align: middle;
 }
 
+/* Tab group - selected tab */
+.tabGroup a[role='tab'][aria-selected='true'] {
+  color: var(--color-foreground);
+}
 
 .toc-filter {
   border-radius: 0;
