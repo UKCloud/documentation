@@ -369,7 +369,6 @@ body .toc {
 }
 
 .navbar .navbar-form {
-  /* background-color: #fff; */
   background-color: var(--color-background);
   border: 1px solid #ddd;
   padding: 0;
@@ -533,7 +532,6 @@ input:checked + .slider:before {
 
 .toc-filter {
   border-radius: 0;
-  /* background-color: #fff; */
   background-color: var(--color-background);
   border: 1px solid #ddd;
   padding: 0;
@@ -777,20 +775,12 @@ mark {
 
 /* Code blocks */
 pre {
-  /* padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
-  word-break: break-all;
-  word-wrap: break-word; */
   background-color: var(--color-background-code);
-  /* border-radius: 0;
-  border: none; */
 }
 
 code {
   color: var(--color-foreground-code);
   background: var(--color-background-code) !important;
-  /* border-radius: 2px; */
 }
 
 .hljs {
