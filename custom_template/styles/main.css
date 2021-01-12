@@ -3,6 +3,7 @@
   --color-foreground-navbar: #ddd;
   --color-foreground-toc: #ccd5dc;
   --color-foreground-alert: #ccd5dc;
+  --color-foreground-code: #ccd5dc;
   --color-background: #1e1e1e;
   --color-background-navbar: #1e1e1e;
   --color-background-code: #2d2d30;
@@ -16,6 +17,7 @@ body.light-theme {
   --color-foreground-navbar: #36464e;
   --color-foreground-toc: #666666;
   --color-foreground-alert: #30545f;
+  --color-foreground-code: #c7254e;
   --color-background: #ffffff;
   --color-background-navbar: #ffffff;
   --color-background-code: #f5f5f5;
@@ -796,6 +798,7 @@ pre {
 }
 
 code {
+  color: var(--color-foreground-code);
   background: var(--color-background-code) !important;
   /* border-radius: 2px; */
 }
