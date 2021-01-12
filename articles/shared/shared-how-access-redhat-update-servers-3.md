@@ -41,7 +41,7 @@ These templates have the following properties:
 
 - 60GB disk space / 1 x vCPU / 2GB RAM (default, adjust as required)
 
-- To configure the root password for the VM, guest customisation **MUST** be run
+- To configure the root password for the VM, Guest Customisation **MUST** be run
 
 You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). You will not be billed on additional storage until you reach the 60GiB of provisioned disk space.
 
