@@ -2,9 +2,9 @@
 title: PSN connectivity FAQs
 description: Frequently asked questions for PSN connectivity
 services: connectivity
-author: Matt Warner
-reviewer: Nick Stobbart
-lastreviewed: 10/12/2020 18:37:23
+author: mwarner
+reviewer: nstobbart
+lastreviewed: 10/12/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -23,15 +23,11 @@ toc_mdlink: conn-faq-psn.md
 
 The Public Services Network (PSN) is the government's high-performance network, which helps public sector organisations work together, reduce duplication and share resources.
 
-### What is the difference between PSN Assured and PSN Protected?
-
-PSN Assured carries non-encrypted traffic at the network and application layers, whereas PSN Protected carries traffic that contains a shared IPsec encrypted overlay. However PSN has now been flattened into one network as detailed in [PSN flattening](https://docs.ukcloud.com/articles/connectivity/conn-ref-psn-flattening.html)
-
 ### Who is entitled to connect to the PSN network?
 
 Any organisation that is approved by the PSN authority can connect.
 
-If you want PSN connectivity, you must have proven to the PSN authority that your infrastructure is sufficiently secure to connect to or be consumed via the PSN. This means that you must have successfully completed the process of obtaining a PSN Code of Connection (CoCo).
+If you want PSN connectivity, you must have proven to the PSN authority that your infrastructure is sufficiently secure to connect to or be consumed via the PSN. This means that you must have successfully completed the process of obtaining a PSN Code of Connection (CoCo).
 
 In addition, if you're a partner selling a managed service over the PSN connectivity, you must either:
 
@@ -56,6 +52,10 @@ You must have a CoCo before you can apply for a CoP and list the UKCloud Service
 ### What are UKCloud's PSN service numbers?
 
 Click [here](https://www.gov.uk/government/publications/public-services-network-psn-service-compliance/psn-compliant-services) for a list of our PSN approved services.
+
+### What happened to PSN Assured and PSN Protected?
+
+Previously, PSN Assured carried non-encrypted traffic at the network and application layers, whereas PSN Protected carried traffic that contained a shared IPsec encrypted overlay. However PSN has now been flattened into one network as detailed in [PSN flattening](https://docs.ukcloud.com/articles/connectivity/conn-ref-psn-flattening.html)
 
 ### Do you have any general connectivity questions?
 
@@ -83,9 +83,9 @@ Yes, subject to compliance with information assurance requirements, as only orga
 
 You should be careful not to misconfigure self‑managed components of the solution (OS, application) to 'bridge' between government community networks (PSN) and private networks. This concern must be addressed by accreditation of the customer-managed components - preferably via PSN Accreditation. Local departmental accreditation by a public-sector customer is also allowed. This applies to solutions on both our Assured OFFICIAL and Elevated OFFICIAL cloud platforms.
 
-The UKCloud Assured OFFICIAL cloud platform features connectivity to the PSN Assured Service (previously IL2). This is provided via resilient, high‑capacity PSN circuits from Virgin Media installed into each of our data centres.
+The UKCloud Assured OFFICIAL security domain features connectivity to the PSN Assured Service (previously IL2). This is provided via resilient, high‑capacity PSN circuits from Virgin Media installed into each of our data centres.
 
-The UKCloud Elevated OFFICIAL cloud platform is connected to the encrypted PSN Protected Service (previously IL3) via the IPED. This is provided using circuits from Vodafone into each UKCloud data centre. The PSN Protected Service also provides onward connectivity to legacy government community networks such as PNN and CJX.
+The UKCloud Elevated OFFICIAL security domain is connected to the encrypted PSN Protected Service (previously IL3) via the IPED. This is provided using circuits from Vodafone into each UKCloud data centre. The PSN Protected Service also provides onward connectivity to legacy government community networks such as PNN and CJX.
 
 For both PSN services, we use our data centre interconnects (DCI) to provide additional resilience through triangulation.
 
@@ -107,7 +107,7 @@ You request connectivity to the PSN by raising a Service Request via the [My Cal
 
 If your solution requires many PSN IP addresses, we may need more time to work with you to get your PSN IP addresses configured to work with your solution hosted on our cloud platform.
 
-If you require [additional PSN IP addresses](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/81660/PSN-IP-Address-Allocation-Guidance-v1-4.pdf), you will need to request them from the PSN.
+If you require [additional PSN IP addresses](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/81660/PSN-IP-Address-Allocation-Guidance-v1-4.pdf), you'll need to request them from the PSN.
 
 ### Do you provide an SLA on PSN connectivity?
 
@@ -143,7 +143,7 @@ PSN is a shared connection and all UKCloud PSN‑enabled customers use a shared 
 
 ### Does each PSN connection have a maximum bandwidth limit assigned to it?
 
-We do not publish limits associated with PSN bandwidth as we capacity manage the link sto ensure there is always enough bandwidth for our customers. Consumption of PSN bandwidth is based on the actual volume of data transferred (outbound) per month.
+We don't publish limits associated with PSN bandwidth as we capacity manage the link to ensure there is always enough bandwidth for our customers. Consumption of PSN bandwidth is based on the actual volume of data transferred (outbound) per month.
 
 ### What is the notice period for PSN termination?
 
@@ -155,7 +155,7 @@ You'll need to complete the PSN DNS order form, PSN domain name authorisation re
 
 You then need to submit the completed forms to: <frameworkschange@vodafone.com> 
 
-If you do not have an existing contract with Vodafone, a billing account and remedy name will need to be created.
+If you don't have an existing contract with Vodafone, a billing account and remedy name will need to be created.
 
 ### How do I order PSN connectivity?
 
@@ -173,7 +173,7 @@ Changes depend on whether you're on PSN Assured or PSN Protected and whether you
 
 - If you're on PSN Protected, you'll be charged a monthly starter pack fee for the outbound data used which provides 250GB per month. Additional usage will be charged as per the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
-- For either service, if you have the Unmetered Data Transfer option, you will be charged a set fee for the month.
+- For either service, if you have the Unmetered Data Transfer option, you'll be charged a set fee for the month.
 
 We charge for each separate connection on the UKCloud platform.
 
