@@ -23,11 +23,11 @@ The Public Services Network for Policing is a closed user group (CUG) operated b
 
 ## What is the Enhanced Regime?
 
-The Enhanced Regime is sometimes referred to as the PSN in Policing (Protect), which is a set of controls over and above PSN encryption. It's generally used to exchange data between police and non-police organisations.
+The Enhanced Regime is sometimes referred to as the PSN in Policing (Protect), which is a set of controls over and above the encryption that is run on parts of the PSN that were PSN-P when it was a separate network to PSN-A. It's generally used to exchange data between police and non-police organisations.
 
 ## Why are there two policing networks?
 
-The PSN-P is based on the IPED (Inter-Provider Encryption Domain) to enable multiple DNSPs to provide competition. The downside of this is that this introduces latency issues and throughput concerns. There are also a lot of non-police organisations on the PSN-P so police have less trust of this community. Due to this, non-police organisations will use the PSN-P with additional controls (Enhanced Regime), as this is easier to consume, but police will use the CUG over the PSN-A (PSN for Policing).
+Legacy PSN-P was based on the IPED (Inter-Provider Encryption Domain) to enable multiple DNSPs to provide competition. Since the merge of PSN-A and -P this IPED still exists with those connections that were PSN-P before the flattening, however the downside of IPED is that this introduces latency issues and throughput concerns. There are also a lot of non-police organisations on the PSN-P so police have less trust of this community. Due to this, non-police organisations will use the PSN-P with additional controls (Enhanced Regime), as this is easier to consume, but police will use the CUG over the PSN (PSN for Policing).
 
 ## Can data get between the PSN for Policing CUG and the Enhanced Regime?
 
@@ -53,7 +53,7 @@ Yes. The PSN for Policing the connection will be installed as a private circuit 
 
 ## Can I connect directly to the UKCloud Elevated OFFICIAL platform using the Enhanced Regime?
 
-Yes. The Enhanced Regime is a set of additional controls over the PSN-P, which terminates in the Elevated platform.
+Yes. The Enhanced Regime is a set of additional controls over what was the PSN-P, which terminates in the Elevated platform.
 
 ## Can I connect directly to the UKCloud Assured OFFICIAL platform using a PSN for Policing CUG?
 
