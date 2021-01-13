@@ -6,6 +6,7 @@
   --color-foreground-alert: #ccd5dc;
   --color-foreground-code: #ccd5dc;
   --color-background: #1e1e1e;
+  --color-border: #2d2d30;
   --color-background-navbar: #1e1e1e;
   --color-background-code: #2d2d30;
   --color-background-table-alt: #212123;
@@ -27,6 +28,7 @@ body.light-theme {
   --color-foreground-alert: #30545f;
   --color-foreground-code: #c7254e;
   --color-background: #ffffff;
+  --color-border: #e7e7e7;
   --color-background-navbar: #ffffff;
   --color-background-code: #f5f5f5;
   --color-background-table-alt: #f9f9f9;
@@ -133,12 +135,12 @@ a:hover {
 
 .navbar-inverse {
   background-color: var(--color-background-navbar);
-  border-color: #e7e7e7;
+  border-color: var(--color-border);
 }
 
 .navbar-default {
   background-color: var(--color-background-navbar);
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .navbar-inverse .navbar-nav > li > a,
@@ -893,7 +895,7 @@ code {
 
 #cookie-cta .cookie-cta-inner {
   background: var(--color-background);
-  border: 1px solid var(--color-background);
+  border: 1px solid var(--color-border);
   border-bottom: 0;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
   color: #30545f;
