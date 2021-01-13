@@ -813,8 +813,13 @@ code {
 .dark-theme .hljs-string .hljs-subst .hljs-string,
 .dark-theme .hljs-template-tag,
 .dark-theme .hljs-template-variable,
-.dark-theme .hljs-type {
+.dark-theme .hljs-type,
+.dark-theme code > output {
   color: #ce9178;
+}
+
+.light-theme code > output {
+  color: #a31515;
 }
 
 .dark-theme .hljs-built_in,
