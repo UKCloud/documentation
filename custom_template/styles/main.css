@@ -892,8 +892,8 @@ code {
 }
 
 #cookie-cta .cookie-cta-inner {
-  background: #fff;
-  border: 1px solid #e7e7e7;
+  background: var(--color-background);
+  border: 1px solid var(--color-background);
   border-bottom: 0;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
   color: #30545f;
