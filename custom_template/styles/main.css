@@ -784,6 +784,7 @@ mark {
 
 /* Code blocks */
 pre {
+  color: var(--color-foreground-code);
   background-color: var(--color-background-code);
 }
 
