@@ -9,6 +9,7 @@
   --color-border: #2d2d30;
   --color-background-navbar: #1e1e1e;
   --color-background-code: #2d2d30;
+  --color-background-cookie: #333;
   --color-background-table-alt: #212123;
   --color-foreground-alert-tip: #3c763d;
   --color-background-alert-tip: #094409;
@@ -31,6 +32,7 @@ body.light-theme {
   --color-border: #e7e7e7;
   --color-background-navbar: #ffffff;
   --color-background-code: #f5f5f5;
+  --color-background-cookie: #ffffff;
   --color-background-table-alt: #f9f9f9;
   --color-foreground-alert-tip: #3c763d;
   --color-background-alert-tip: #dff0d8;
@@ -900,7 +902,7 @@ code {
 }
 
 #cookie-cta .cookie-cta-inner {
-  background: var(--color-background);
+  background: var(--color-background-cookie);
   border: 1px solid var(--color-border);
   border-bottom: 0;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
