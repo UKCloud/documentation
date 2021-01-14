@@ -20,7 +20,7 @@ toc_mdlink: conn-faq.md
 
 ## What options do I have to connect to my solution hosted on the UKCloud Assured OFFICIAL security domain?
 
-The UKCloud Assured OFFICAL security domain is PSN accredited to host OFFICIAL data (including OFFICIAL SENSITIVE) that is accessible via the internet or the PSN service. You can also connect via internet, HSCN and Janet dependant on relevant accreditation.
+The UKCloud Assured OFFICAL security domain is PSN accredited to host OFFICIAL data (including OFFICIAL SENSITIVE) that is accessible via the internet or the PSN service. You can also connect via internet, HSCN and Janet dependent on relevant accreditation.
 
 Our Assured OFFICAL security domain follows best commercial practice, so certain insecure traffic types are restricted. In general, it's good practice to connect to your Assured OFFICIAL solution via an IPsec VPN (using commercial-grade encryption), which you configure via your self-managed virtual firewall. Within the VPN tunnel, you can use any protocol, giving you maximum flexibility. You can also configure your solution to allow other traffic encrypted using SSL or TLS. Use of non-encrypted traffic should be minimised.
 
