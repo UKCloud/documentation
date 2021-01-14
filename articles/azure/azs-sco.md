@@ -36,7 +36,7 @@ UKCloud can deliver an Azure service using either our own Azure Stack Hub from t
 
 This service is provisioned from the UKCloud platform, and is owned, maintained and supported by UKCloud as with all other UKCloud technology stacks.  
 
-Once a purchase order is received, within 4 hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a Welcome Pack, which includes the URL for the UKCloud Customer Portal and the Getting Started Guide.
+Once a purchase order is received for the Private Azure Stack Hub, we will inform you as to when the environment will be available for you. UKCloud will create the customer's Primary Administrator account and send a Welcome Pack, which includes the URL for the UKCloud Customer Portal and the Getting Started Guide.
 
 We've created several articles, guides and FAQs to help you get up and running quickly and easily. These are available within our Knowledge Centre.
 
