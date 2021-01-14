@@ -56,24 +56,25 @@ UKCloud also has a large ecosystem of partners who can deliver additional servic
 
 You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, enabling you to scale resources up or down as your requirements change.
 
-Azure Stack Hub is available in two models:
+Azure Stack Hub is **only** available as a private deployment (single-tenant).
 
-- Pay as you go (PAYG). Customers of the PAYG model can consume Microsoft Azure IaaS services and services built on Azure IaaS templates like Azure Kubernetes Service (AKS).
+Customers with private Azure Stack Hub environments can consume Microsoft Azure IaaS services and services built on Azure IaaS templates like Azure Kubernetes Service (AKS), and also enable PaaS services such as Azure Functions, SQL and MySQL services, IoT Hub and Event Hubs.
 
-- Private deployment. Customers with private Azure Stack environments can also enable PaaS services such as Azure Functions, SQL and MySQL services.
-
-The options below are all currently available within the PAYG service. For a full list of Azure Stack Hub services, see [here](https://azure.microsoft.com/en-gb/overview/azure-stack/keyfeatures/).
+For a full list of Azure Stack Hub services, see [here](https://azure.microsoft.com/en-gb/overview/azure-stack/keyfeatures/).
 
 #### IaaS compute
 
 Virtual machines (VMs) provide the basic building blocks of compute resource within UKCloud for Microsoft Azure. Each standard machine has a pre-allocated number of vCPUs, amount of memory and a temporary disk. The available sizes and families of VMs are continually increasing. Broadly, the following machine families are supported:
 
-- Basic and Standard A-Series. CPU performance and memory configurations best suited for entry level workloads like development and test.  
+- Basic and Standard A-Series. CPU performance and memory configurations best suited for entry level workloads like development and test.
+
 - Standard D-Series and DS-Series. Optimised CPU-to-memory configuration, making them suitable for most general-purpose applications. A subset of the D-series VMs also support higher memory per CPU making them suitable for applications that require higher amounts of memory.
 
-- Basic and Standard F-series. Optimised for CPU-intensive workloads so have a higher CPU to memory configurations.
+- Basic and Standard F-Series. Optimised for CPU-intensive workloads so have a higher CPU to memory configurations.
 
-You can find the full list of supported virtual machine sizes [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
+- GPU enabled (NVIDIA and AMD) N-Series virtual machine (VM) types as follows: NCv3, NVv4 (AMD MI25), NCasT4_v3.
+
+You can find the full list of supported virtual machine sizes [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes) and if you need more information about GPU enabled VMs [here](https://docs.microsoft.com/en-gb/azure-stack/user/gpu-vms-about).
 
 You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling.
 
