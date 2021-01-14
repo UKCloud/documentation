@@ -60,7 +60,7 @@ Azure Stack Hub is available in two models:
 
 - Pay as you go (PAYG). Customers of the PAYG model can consume Microsoft Azure IaaS services and services built on Azure IaaS templates like Azure Kubernetes Service (AKS).
 
-- Private deployment. Customers with private Azure Stack environments can also enable PaaS services such as Azure Functions, SQL and MYSQL services.
+- Private deployment. Customers with private Azure Stack environments can also enable PaaS services such as Azure Functions, SQL and MySQL services.
 
 The options below are all currently available within the PAYG service. For a full list of Azure Stack Hub services, see [here](https://azure.microsoft.com/en-gb/overview/azure-stack/keyfeatures/).
 
