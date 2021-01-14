@@ -96,7 +96,7 @@ There are several ways in which storage can be addressed in UKCloud for Microsof
 - Azure Table Storage. Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless design, making it different from traditional relational databases. With a schemaless data store, it's easy to adapt your data as the needs of your application evolve. Table storage is easy to use, so developers can create applications quickly. Table storage is a key-attribute store, which means that every value in a table is stored with a typed property name. The property name can be used for filtering and specifying selection criteria. A collection of properties and their values comprise an entity. Since table storage is schemaless, two entities in the same table can contain different collections of properties, and those properties can be of different types. You can use table storage to store flexible datasets, such as user data for web applications, address books, device information and any other type of metadata that your service requires. For today's internet-based applications, NoSQL databases like table storage offer a popular alternative to traditional relational databases. A storage account can contain any number of tables, and a table can contain any number of entities, up to the capacity limit of the storage account.
 
 > [!NOTE]
-> All storage in Azure Stack Hub is taken from a common pool. When designing your service for UKCloud for Microsoft Azure, consider the best usage of your storage. For example, if you have a large object storage requirement, consider using UKCloud's Cloud Storage service as part of your solution.
+> All storage in Azure Stack Hub is taken from a common pool. When designing your service for UKCloud for Microsoft Azure, consider the best usage of your storage. For example, if you have a large object storage requirement, consider using UKCloud's [Cloud Storage service](../cloud-storage/cs-gs.md) as part of your solution.
 
 #### Network
 
@@ -106,13 +106,15 @@ You can deploy multiple gateway devices and configure the following using either
 
 - Virtual networks. UKCloud for Microsoft Azure enables you to configure virtual private clouds and create and manage your private address space within Azure. You can configure this via the UI, API or other tooling.
 
+- VNet peering. Enables you to seamlessly connect virtual networks inside an Azure Stack Hub environment.
+
 - Load balancers (IPv4 only). Deploy basic load balancers VPN gateway across your Azure environments.
 
 - VPN gateway. Use the UKCloud for Microsoft Azure VPN gateway to create site-to-site VPNs to remote infrastructure.
 
 - Routing. Configure basic custom defined routing on virtual networks.
 
-Internet-facing solutions have 10 usable public IP addresses. You can ask for additional public IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+Internet-facing solutions have a pool of usable public IP addresses. Please contact your Service Delivery Manager (SDM) if you have any additional requirements.
 
 #### Advanced features
 
@@ -122,7 +124,7 @@ UKCloud for Microsoft Azure provides cryptographic secret storage for applicatio
 
 #### Protection options
 
-You're responsible for designing your own disaster recovery and backup solutions as part of your adoption of UKCloud for Microsoft Azure.
+You are responsible for designing your own disaster recovery and backup solutions as part of your adoption of UKCloud for Microsoft Azure.
 
 ### Azure Stack Hub service availability
 
@@ -136,6 +138,8 @@ The service levels are as follows:
 
 > [!TIP]
 > To qualify for the higher service level, we advise that you use on-platform tools, like availability sets, that ensure your VMs are provisioned to different hardware in the zone.
+>
+> We highly recommend that you consider duplicating your workloads across two separate Azure Stack Hub regions for higher availability.
 
 ### Azure Stack Hub service background
 
@@ -163,15 +167,15 @@ UKCloud for Microsoft Azure includes access to a local version of the Azure Mark
 
 - Formatting information to display the item in the portal
 
-We've pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request for additional resources to be added, provided they are approved for use on Azure Stack Hub. You can find a full list of available items [here](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items).
+We have pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request for additional resources to be added, provided they are approved for use on Azure Stack Hub. You can find a full list of available items [here](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items).
 
-You're responsible for ensuring that you have appropriate licensing and support in place for any item deployed from the Marketplace not licensed by UKCloud.
+You are responsible for ensuring that you have appropriate licensing and support in place for any items deployed from the Marketplace not licensed by UKCloud.
 
 ### Azure Stack Hub Licensing
 
 We can provide:
 
-- Operating system licensing for Microsoft
+- Microsoft operating system and application licensing
 
 - Red Hat Enterprise Linux licensing
 
@@ -191,11 +195,11 @@ We do not provide anti-virus software as part of the service.
 
 ### Azure Stack Hub protective monitoring
 
-We've implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below.
 
 We don't provide Protective Monitoring services above the hypervisor (for example, for your VM). It's your responsibility to act at this level.
 
-In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It's your responsibility to report similar incidents to us.
+In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notification of customer-impacting security incidents. It's your responsibility to report similar incidents to us.
 
 ### Azure Stack Hub platform management
 
@@ -203,7 +207,7 @@ You can access, manage and view the UKCloud for Microsoft Azure service, accessi
 
 - Azure Stack Hub API. Enables the programmatic creation and management of the services inside the platform.
 
-- Azure Stack Hub portal (graphical UI). Provides a graphical interface to access the Azure Stack Hub environment (depending on assigned permissions).
+- Azure Stack Hub portal (graphical UI). Provides a graphical user interface to access the Azure Stack Hub environment (depending on assigned permissions).
 
 - UKCloud Portal. Access to incident and request management.
 
@@ -212,8 +216,6 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 ### Azure Stack Hub service reporting
 
 - Visibility. You can use the UKCloud Azure Stack Hub portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.
-
-- Reporting. Maintenance notifications and Service Status reports are delivered through the Portal and via the [UKCloud status page](https://status.ukcloud.com/).
 
 **Billing.** We provide you with monthly bills covering your monthly spend.
 
@@ -231,7 +233,7 @@ You are responsible for:
 
 - Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).
 
-- Ensuring only lawful data that supports the UK Public Sector is stored and processed by applications on this environment, and that you fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
+- Ensuring only lawful data that supports the UK Public Sector is stored and processed by applications on this environment, and that you fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud SISP and associated accreditation documentation sets.
 
 ### Azure Stack Hub service constraints
 
