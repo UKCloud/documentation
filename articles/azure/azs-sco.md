@@ -26,7 +26,7 @@ This document describes the boundaries of the UKCloud for Microsoft Azure servic
 
 UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure Stack Hub platform to deliver Microsoft Azure services from UKCloud's award-winning government-grade multi-cloud environment, addressing the security, service, connectivity and diversity requirements of UK Public Sector organisations and their industry partners.
 
-As a Microsoft cloud service provider (CSP), UKCloud can also manage and support customers in their utilisation of Microsoft Azure public, making UKCloud the one-stop partner for all your Microsoft Azure requirements.
+As a Microsoft Cloud Solution Provider (CSP), UKCloud can also manage and support customers in their utilisation of Microsoft Azure public, making UKCloud the one-stop partner for all your Microsoft Azure requirements.
 
 ## Service delivery options
 
@@ -238,7 +238,7 @@ For information about Planned and Emergency Maintenance, see [*Understanding UKC
 
 ## Azure public cloud
 
-UKCloud is a Tier 1 cloud service provider (CSP) and so is able to offer support and delivery of Microsoft Azure public services. To take advantage of the services, customers just need to nominate UKCloud as their CSP.
+UKCloud is a Tier 1 Cloud Solution Provider (CSP) and so is able to offer support and delivery of Microsoft Azure public services. To take advantage of the services, customers just need to nominate UKCloud as their CSP.
 
 By nominating UKCloud as your CSP you get access to:
 
