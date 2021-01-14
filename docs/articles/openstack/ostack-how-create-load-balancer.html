@@ -8,7 +8,7 @@
     <title>How to create load balancing services on UKCloud for OpenStack </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create load balancing services on UKCloud for OpenStack ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -126,8 +126,8 @@
 <h2 id="implementation-steps">Implementation steps</h2>
 <ol>
 <li><p>Create the network in which your front edge load balancers sit.</p>
-<p><strong>Command:</strong> <code>openstack network create &lt;network-name&gt;</code></p>
-<p><strong>Example:</strong> <code>openstack network create FrontEdge</code></p>
+<p><strong>Command:</strong> <code>openstack network create  &lt;network-name&gt;</code></p>
+<p><strong>Example:</strong> <code>openstack network create FrontEdge </code></p>
 <p><strong>Result:</strong></p>
 <p><img src="images/ostack-openstack-net-create.png" alt="Results of net-create command"></p>
 </li>
@@ -390,6 +390,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>

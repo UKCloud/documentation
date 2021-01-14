@@ -8,7 +8,7 @@
     <title>How to migrate edge configuration data to another edge </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to migrate edge configuration data to another edge ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -196,7 +196,7 @@
 </li>
 <li><p>Copy the link ending in <code>/edgeGateways</code> and paste it into the URL field at the top of the RESTClient. Ensure that the <strong>Method</strong> drop down is set to <strong>GET</strong> and click <strong>Send</strong>.</p>
 <p>If this request is successful, the response will contain a link to the edge gateway which, when queried, will return the configuration of the edge gateway. Once you've received a response, use your browser's search utility to locate the <code>EdgeGatewayRecord</code> section within the response.</p>
-<p><code>&lt;EdgeGatewayRecord gatewayStatus=&quot;READY&quot; haStatus=&quot;UP&quot; isBusy=&quot;false&quot; name=&quot;&lt;edge_name&gt;&quot; numberOfExtNetworks=&quot;1&quot; numberOfOrgNetworks=&quot;8&quot; vdc=&quot;https://&lt;api_url&gt;/api/vdc/&lt;vdc_id&gt;&quot; href=&quot;https://&lt;api_url&gt;/api/admin/edgeGateway/&lt;edge_id&gt;&quot; task=&quot;https://&lt;api_url&gt;/api/task/&lt;task_id&gt;&quot; isSyslogServerSettingInSync=&quot;true&quot; taskOperation=&quot;networkConfigureEdgeGatewayServices&quot; taskStatus=&quot;success&quot; taskDetails=&quot; &quot; /&gt;</code></p>
+<p><code>&lt;EdgeGatewayRecord gatewayStatus=&quot;READY&quot; haStatus=&quot;UP&quot; isBusy=&quot;false&quot; name=&quot;&lt;edge_name&gt;&quot; numberOfExtNetworks=&quot;1&quot; numberOfOrgNetworks=&quot;8&quot; vdc=&quot;https://&lt;api_url&gt;/api/vdc/&lt;vdc_id&gt;&quot; href=&quot;https://&lt;api_url&gt;/api/admin/edgeGateway/&lt;edge_id&gt;&quot;     task=&quot;https://&lt;api_url&gt;/api/task/&lt;task_id&gt;&quot; isSyslogServerSettingInSync=&quot;true&quot; taskOperation=&quot;networkConfigureEdgeGatewayServices&quot; taskStatus=&quot;success&quot; taskDetails=&quot; &quot; /&gt;</code></p>
 </li>
 <li><p>Within the <code>EdgeGatewayRecord</code> section of the above from the response, locate the link to the edge gateway that starts with the following:</p>
 <p><code>https://&lt;api_url&gt;/api/admin/edgeGateway/</code></p>
@@ -326,6 +326,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>

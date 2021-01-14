@@ -8,7 +8,7 @@
     <title>How to backup, restore and migrate OpenShift resources </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to backup, restore and migrate OpenShift resources ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -111,7 +111,7 @@
 <p>You can deploy Velero onto OpenShift with the <code>velero install</code> command. To deploy Velero, you'll need compatible object storage: <a href="https://velero.io/docs/v1.1.0/support-matrix/">https://velero.io/docs/v1.1.0/support-matrix/</a>. In this article we use UKCloud's Cloud Storage product.</p>
 </li>
 <li><p>After logging in to the cluster via the CLI, run the following command to configure a <code>yaml</code> file that you can then edit and use to create the Velero deployment in the cluster:</p>
-<p><code>velero install --bucket velero-test --provider aws --plugins velero/velero-plugin-for-aws:v1.1.0 --secret-file ./secret-file.txt --dry-run -o yaml &gt; deploy-velero.yml</code></p>
+<p><code>velero install --bucket velero-test --provider aws --plugins velero/velero-plugin-for-aws:v1.1.0 --secret-file ./secret-file.txt  --dry-run -o yaml &gt; deploy-velero.yml</code></p>
 <p><code>secret-file.txt</code> contains the access and secret key for the ECS bucket in the following format:</p>
 <pre><code>[default]
 aws_access_key_id=&lt;key&gt;
@@ -201,6 +201,19 @@ oc start-build ruby-ex
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
