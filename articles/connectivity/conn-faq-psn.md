@@ -181,7 +181,7 @@ UKCloud pricing is available via the [UKCloud Pricing Guide](https://ukcloud.com
 
 ### How does PSN for Policing work?
 
-Cryptographic overlays on top of the PSN network are created that prevent PSN customers from seeing the closed Police network.
+Cryptographic overlays on top of the PSN network are created that prevent PSN customers from seeing the closed Police network. See the [*PSN for Policing and enhanced regime FAQs*](conn-faq-psn-police.md).
 
 Please engage with a UKCloud Cloud Architect for more details.
 
@@ -199,7 +199,7 @@ The [guidance](https://www.gov.uk/government/groups/public-services-network) fro
 
 ### I am a government organisation, what do I need to show you to get PSN connectivity for my UKCloud environment?
 
-You must do either of the following:
+You must do one of the following:
 
 - Supply us with a project specific PSN Service Provision Compliance Certificate
 
