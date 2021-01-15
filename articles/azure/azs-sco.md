@@ -235,10 +235,6 @@ You are responsible for:
 
 - Ensuring only lawful data that supports the UK Public Sector is stored and processed by applications on this environment, and that you fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud SISP and associated accreditation documentation sets.
 
-### Azure Stack Hub service constraints
-
-For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
-
 ## Azure public cloud
 
 UKCloud is a Tier 1 Cloud Solution Provider (CSP) and so is able to offer support and delivery of Microsoft Azure public services. To take advantage of the services, customers just need to nominate UKCloud as their CSP.
