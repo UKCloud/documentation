@@ -1,6 +1,6 @@
 ---
-title: How to access Red Hat update servers (RHUI v3)
-description: Provides information about accessing Red Hat updates using Red Hat Update Infrastructure (RHUI) v3
+title: How to access Red Hat update servers (RHUI 3)
+description: Provides information about accessing Red Hat updates using Red Hat Update Infrastructure (RHUI 3)
 services: shared-services
 author: shighmoor
 reviewer: pcantle
@@ -10,12 +10,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Access Red Hat update servers (RHUI v3)
+toc_title: Access Red Hat update servers (RHUI 3)
 toc_fullpath: How To/shared-how-access-redhat-update-servers.md
 toc_mdlink: shared-how-access-redhat-update-servers.md
 ---
 
-# How to access Red Hat update servers (RHUI v3)
+# How to access Red Hat update servers (RHUI 3)
 
 ## Overview
 
