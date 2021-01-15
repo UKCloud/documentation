@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Access Red Hat update servers (RHUI 3)
-toc_fullpath: How To/shared-how-access-redhat-update-servers.md
-toc_mdlink: shared-how-access-redhat-update-servers.md
+toc_fullpath: How To/shared-how-access-redhat-update-servers-3.md
+toc_mdlink: shared-how-access-redhat-update-servers-3.md
 ---
 
 # How to access Red Hat update servers (RHUI 3)

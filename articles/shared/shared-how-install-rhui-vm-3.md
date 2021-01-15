@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Install Red Hat Update Infrastructure (RHUI 3)
-toc_fullpath: How To/shared-how-install-rhui-vm.md
-toc_mdlink: shared-how-install-rhui-vm.md
+toc_fullpath: How To/shared-how-install-rhui-vm-3.md
+toc_mdlink: shared-how-install-rhui-vm-3.md
 ---
 
 # How to install and use Red Hat Update Infrastructure (RHUI 3)

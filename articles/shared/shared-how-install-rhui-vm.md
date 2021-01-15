@@ -1,6 +1,6 @@
 ---
-title: How to install Red Hat Update Infrastructure
-description: Shows you how to update your existing hosts to target UKCloud's approved Red Hat Update Infrastructure (RHUI)
+title: How to install Red Hat Update Infrastructure (RHUI 2)
+description: Shows you how to update your existing hosts to target UKCloud's approved Red Hat Update Infrastructure (RHUI 2)
 services: shared-services
 author: shighmoor
 reviewer: pcantle
@@ -10,12 +10,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Install Red Hat Update Infrastructure on an existing VMware virtual machine
+toc_title: Install Red Hat Update Infrastructure (RHUI 2)
 toc_fullpath: How To/shared-how-install-rhui-vm.md
 toc_mdlink: shared-how-install-rhui-vm.md
 ---
 
-# How to install Red Hat Update Infrastructure
+# How to install Red Hat Update Infrastructure (RHUI 2)
 
 ## Overview
 
@@ -24,6 +24,10 @@ This article provides advice on how to update your existing Red Hat virtual mach
 As of July 2015, UKCloud implemented an RHUI to provide automatic updates to our Red Hat customers on our Assured OFFICIAL and Elevated OFFICIAL security domains. This provides benefits such as the reliable availability of patch updates and Red Hat approved OS templates.
 
 This update service replaces the previous repositories, which are no longer updated and were retired on the 31 August 2015.
+
+### Intended audience
+
+This article is intended for customers who have not yet migrated to RHUI v3.
 
 ## Prerequisites
 

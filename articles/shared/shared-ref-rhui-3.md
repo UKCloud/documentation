@@ -29,6 +29,10 @@ The RHUI services consist of:
 
 - Content Distribution Servers (CDS), which serve packages to client machines
 
+### Intended audience
+
+This article is intended for customers who have migrated to RHUI v3.
+
 ## Repository groups
 
 The UKCloud RHUI service supplies access to the following repository groups. Each group is installed by a configuration RPM. You can install only one configuration RPM per client machine.
