@@ -194,8 +194,6 @@
     href: vmw-ref-service-options.md
   - name: Understanding connectivity options in UKCloud for VMware
     href: vmw-ref-connectivity-options.md
-  - name: vCloud Director 9.7 known issues
-    href: vmw-ref-vcd97-known-issues.md
   - name: Virtual machine data recovery options
     href: vmw-ref-vm-data-recovery.md
   - name: Virtual machine disk limits and considerations

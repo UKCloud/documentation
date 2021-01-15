@@ -94,10 +94,7 @@
 <h1 id="changes-in-vmware-cloud-director-101">Changes in VMware Cloud Director 10.1</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Ahead of our planned upgrade to VMware Cloud Director 10.1, this article provides information about the changes in this new version.</p>
-<h2 id="upgrading-your-edge-gateways">Upgrading your edge gateways</h2>
-<p>In preparation for the VMware Cloud Director upgrade, you must upgrade your edge gateways to the latest available version. For more information, see <a href="vmw-how-upgrade-edge.html"><em>How to upgrade your edge gateway</em></a>.</p>
-<p>Prior to commencing the VMware Cloud Director upgrades in the various regions, we will upgrade any remaining older edges. You can find information about edge upgrade dates and overall VMware Cloud Director 10.1 rollout dates on the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a>.</p>
+<p>This article provides information about the changes introduced in VMware Cloud Director 10.1.</p>
 <h2 id="new-features">New features</h2>
 <p>VMware Cloud Director 10.1 provides the following new features.</p>
 <ul>
@@ -168,10 +165,26 @@
 </div>
 <h2 id="known-issues">Known issues</h2>
 <p>Known issues you may experience following the upgrade to VMware Cloud Director 10.1 include:</p>
+<h3 id="known-issues-in-vmware-cloud-director">Known issues in VMware Cloud Director</h3>
 <ul>
-<li><p>Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal. If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.</p>
+<li><p>If you enable the <strong>Enable VM to join domain</strong> options, you will not be able to amend the hardware configuration of the VM. There is currently no workaround for this issue, so you should ensure that you do not enable this setting.</p>
 </li>
-<li><p>Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal.</p>
+<li><p>Guest customisation is failing in the following:</p>
+<ul>
+<li><p>For existing VMs - Windows 2012, Windows 2012R2 and Windows 2016</p>
+</li>
+<li><p>For new VMs - Windows 2012, Windows 2012R2</p>
+</li>
+</ul>
+<p>When setting a new administrator password and/or changing the IP address then forcing re-customisation at power-on, the settings are ignored.</p>
+<p>The workaround is to deploy the template, but before powering on, change the VM type to Windows 2016. Power on using Force Customization.</p>
+</li>
+</ul>
+<h3 id="known-issues-in-the-ukcloud-portal">Known issues in the UKCloud Portal</h3>
+<ul>
+<li><p>Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal (see <a href="../portal/ptl-how-restrict-access-vcloud-api.html"><em>How to restrict access to VMware Cloud Director</em></a>). If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.</p>
+</li>
+<li><p>Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal (see <a href="vmw-how-view-storage-usage.html"><em>How to view storage profile usage</em></a>).</p>
 </li>
 </ul>
 <p>For other known issues with VMware Cloud Director 10.1, see the <a href="https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html">VMware Cloud Director 10.1 Release Notes</a>.</p>
