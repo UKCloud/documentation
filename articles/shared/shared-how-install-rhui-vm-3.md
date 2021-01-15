@@ -1,6 +1,6 @@
 ---
-title: How to install and use Red Hat Update Infrastructure (RHUI v3)
-description: Shows you how to update your existing VMs to target UKCloud's approved Red Hat Update Infrastructure (RHUI) v3
+title: How to install and use Red Hat Update Infrastructure (RHUI 3)
+description: Shows you how to update your existing VMs to target UKCloud's approved Red Hat Update Infrastructure (RHUI 3)
 services: shared-services
 author: shighmoor
 reviewer: pcantle
@@ -10,12 +10,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Install Red Hat Update Infrastructure
+toc_title: Install Red Hat Update Infrastructure (RHUI 3)
 toc_fullpath: How To/shared-how-install-rhui-vm.md
 toc_mdlink: shared-how-install-rhui-vm.md
 ---
 
-# How to install and use Red Hat Update Infrastructure (RHUI v3)
+# How to install and use Red Hat Update Infrastructure (RHUI 3)
 
 ## Overview
 
