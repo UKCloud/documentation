@@ -2,9 +2,9 @@
 title: Getting Started Guide for UKCloud for OpenStack
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
-author: Sue Highmoor
-reviewer: Bryce Nicholls
-lastreviewed: 23/09/2020
+author: shighmoor
+reviewer: nmathews
+lastreviewed: 10/12/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -537,9 +537,9 @@ can examine the contents of the RC file to find the settings that you may need t
 
 ![OpenStack CLI example](images/ostack-cli-example.png)
 
-The key values to note here are the `OS\_AUTH\_URL`, `OS\_TENANT\_NAME` and `OS\_USERNAME` environment variables, as these will be common to any API authentication request.
+The key values to note here are the `OS_AUTH_URL`, `OS_TENANT_NAME` and `OS_USERNAME` environment variables, as these will be common to any API authentication request.
 
-In addition, creating the line export `OS\_INTERFACE=public` in the RC file should address any issues you may have accessing the Admin API endpoints.
+In addition, creating the line export `OS_INTERFACE=public` in the RC file should address any issues you may have accessing the Admin API endpoints.
 
 ## Next steps
 

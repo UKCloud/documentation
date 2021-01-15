@@ -3,8 +3,8 @@ title: Cloud Storage Service Scope
 description: Outlines important details regarding Cloud Storage
 services: cloud-storage
 author: Steve Hall
-reviewer:
-lastreviewed: 20/08/2019 16:46:31
+reviewer: Steve relf
+lastreviewed: 08/12/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:

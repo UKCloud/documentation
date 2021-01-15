@@ -30,7 +30,7 @@ This allows solutions hosted on the Elevated OFFICIAL security domain that are c
 
 ### Do I have to buy other UKCloud services to use services in the CDSZ?
 
-Yes. UKCloud cross-domain services are available only to customers purchasing other UKCloud services, such as IaaS (compute and storage) or PaaS (UKCloud for OpenShift).
+Yes. UKCloud cross-domain services are available only to customers purchasing other UKCloud services, such as IaaS (compute and storage) or PaaS (UKCloud for Managed OpenShift).
 
 ### Is there a free trial available for CDSZ?
 

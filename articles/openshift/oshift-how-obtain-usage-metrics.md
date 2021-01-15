@@ -1,6 +1,6 @@
 ---
 title: How to obtain usage metrics for OpenShift capacity management
-description: Shows you how to obtain various statistics about your UKCloud for OpenShift cluster that you can use to help with capacity management
+description: Shows you how to obtain various statistics about your UKCloud for Managed OpenShift cluster that you can use to help with capacity management
 services: openshift
 author: Sue Highmoor
 reviewer: Gareth Ellner
@@ -20,7 +20,7 @@ toc_mdlink: oshift-how-obtain-usage-metrics.md
 
 ## Overview
 
-This article provides examples of the self-service commands you can execute against your UKCloud for OpenShift cluster to gain usage metrics and statistics to help manage your ongoing capacity requirements.
+This article provides examples of the self-service commands you can execute against your UKCloud for Managed OpenShift cluster to gain usage metrics and statistics to help manage your ongoing capacity requirements.
 
 A UKCloud deployed OpenShift cluster comprises a single Starter Pack, plus a number of Runtime Packs as required by your workload demands.
 

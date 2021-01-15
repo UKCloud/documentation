@@ -1,5 +1,5 @@
 ---
-title: UKCloud for OpenShift lifecycle and patch management
+title: UKCloud for Managed OpenShift lifecycle and patch management
 description: Provides an overview of how UKCloud manages the patching and lifecycle support of its OpenShift service
 services: openshift
 author: Steve Dixon
@@ -15,7 +15,7 @@ toc_fullpath: Reference/oshift-ref-lifecycle.md
 toc_mdlink: oshift-ref-lifecycle.md
 ---
 
-# UKCloud for OpenShift life cycle and patch management
+# UKCloud for Managed OpenShift life cycle and patch management
 
 ## Overview
 
@@ -23,7 +23,7 @@ This article outlines the lifecycle of UKCloud-supported OpenShift releases, alo
 
 ### Intended audience
 
-Administrators and operators of the UKCloud for OpenShift service.
+Administrators and operators of the UKCloud for Managed OpenShift service.
 
 ## Lifecycle management
 

@@ -84,19 +84,19 @@ There are no termination costs associated with cancelling UKCloud services. Howe
 
 ### Multi-cloud technology stacks
 
-#### [UKCloud for Microsoft Azure](#tab/tabid-1)
-
-Customer responsibilities | UKCloud responsibilities
---------------------------|-------------------------
-Resource groups (which contain virtual machines, storage and virtual networks) | User subscriptions, offers, plans and quotas
-
-#### [UKCloud for OpenShift](#tab/tabid-2)
+#### [UKCloud for Managed OpenShift](#tab/tabid-1)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 Pods | Entire environment
 Projects |
 Volumes |
+
+#### [UKCloud for Microsoft Azure](#tab/tabid-2)
+
+Customer responsibilities | UKCloud responsibilities
+--------------------------|-------------------------
+Resource groups (which contain virtual machines, storage and virtual networks) | User subscriptions, offers, plans and quotas
 
 #### [UKCloud for OpenStack](#tab/tabid-3)
 
@@ -110,12 +110,7 @@ Volumes |
 Volume snapshots |
 Images |
 
-<!-- #### [UKCloud for Oracle Software](#tab/tabid-4)
-
-Customer responsibilities | UKCloud responsibilities
---------------------------|------------------------- -->
-
-#### [UKCloud for VMware](#tab/tabid-5)
+#### [UKCloud for VMware](#tab/tabid-4)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
@@ -133,21 +128,21 @@ VPGs for Journaling Protection |
 
 ### Multi-cloud enabling
 
-#### [Cloud GPU](#tab/tabid-6)
+#### [Cloud GPU](#tab/tabid-5)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 Uninstall NVIDIA software | Remove GPU mapping from virtual machine
 Power off GPU-enabled virtual machine |
 
-#### [Cloud Storage](#tab/tabid-7)
+#### [Cloud Storage](#tab/tabid-6)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 Data | Default bucket
 Customer-created buckets | Accounts
 
-#### [Cross Domain Security Zone](#tab/tabid-8)
+#### [Cross Domain Security Zone](#tab/tabid-7)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
@@ -159,27 +154,27 @@ Catalogs |
 Org VDC networks |
 NAT/firewall/DHCP/static routes/VPN |
 
-#### [Disaster Recovery as a Service](#tab/tabid-9)
+#### [Disaster Recovery as a Service](#tab/tabid-8)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 On-premises ZVMs and VRAs | ZORG/assigned VDCs
 VPGs |
 
-#### [Email and Collaboration](#tab/tabid-10)
+#### [Email and Collaboration](#tab/tabid-9)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 Mail accounts | Final admin account
 
-#### [Migration to the Cloud](#tab/tabid-12)
+#### [Migration to the Cloud](#tab/tabid-10)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 On-premises ZVMs and VRAs | ZORG/assigned VDCs
 VPGs |
 
-#### [Secure Remote Access](#tab/tabid-14)
+#### [Secure Remote Access](#tab/tabid-11)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
@@ -190,7 +185,7 @@ ISOs | VDC
 Catalogs | vOrg
 &nbsp; | Certificates and Active Directory
 
-#### [Connectivity](#tab/tabid-15)
+#### [Connectivity](#tab/tabid-12)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
@@ -198,14 +193,14 @@ Customer-provided private networks | External network connections
 Customer-provided IP ranges | Allocated IP ranges
 Customer co-lo'd kit | Private VLANs/VRFs
 
-#### [Cloud Enablement](#tab/tabid-16)
+#### [Cloud Enablement](#tab/tabid-13)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 Remove customer equipment from Cloud Enablement bays | Escort customer to remove equipment from Cloud Enablement bays
 &nbsp; | Remove physical and logical networking
 
-#### [Big Cloud Enablement](#tab/tabid-17)
+#### [Big Cloud Enablement](#tab/tabid-14)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
