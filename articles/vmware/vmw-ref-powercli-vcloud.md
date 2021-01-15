@@ -17,7 +17,7 @@ toc_mdlink: vmw-ref-powercli-vcloud.md
 
 # PowerCLI command for interacting with the vCloud API
 
-To establish a connection to vCloud Director using PowerShell, use the following command:
+To establish a connection to VMware Cloud Director using PowerShell, use the following command:
 
     Connect-CIServer -Server <API-URL> -org <ORG-ID> -User <USERNAME> -Password <PASSWORD>
 

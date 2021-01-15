@@ -251,7 +251,7 @@ Returns an array of accounts with the ID and name.
 Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.
 
 > [!NOTE]
-> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
+> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud API.
 
 ### Request
 
@@ -318,7 +318,7 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
             {
               "VMs": [
                 {
-                  “_id”: 2
+                  "_id": 2
                   "billedHoursPoweredOff": 0,
                   "billedHoursPoweredOn": 0,
                   "estimatedMonthlyTotal": "0.00",
@@ -681,7 +681,7 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
 Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).
 
 > [!NOTE]
-> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud Director API.
+> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud API.
 
 ### Request
 
@@ -816,7 +816,7 @@ resp = conn.get("/api/accounts/#{account_id}/api_credentials") { |req| req.heade
 
 #### Response body
 
-Returns an array of vCloud Director API credentials.
+Returns an array of vCloud API credentials.
 
 #### Example response
 
@@ -837,7 +837,7 @@ Returns an array of vCloud Director API credentials.
 
 ```
 {
-  "description":"The vCloud Director API credentials for a given account",
+  "description":"The vCloud API credentials for a given account",
   "type": "object",
   "patternProperties": {
     "^.*\\(\\d+-\\d+-\\d+-[a-zA-Z0-9]{5,6}\\)$": {

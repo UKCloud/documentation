@@ -141,7 +141,7 @@ Supported virtual machine (VM) formats:
 
 - Maximum single VM size: 1.5TB
 
-If your VMs are in a different format, you can use the OVF Tool and VMware vCenter Converter to upload them.
+If your VMs are in a different format, you can use the OVF Tool and VMware vCenter Converter to upload them.
 
 ## Supported network ports and protocols
 
@@ -179,7 +179,7 @@ Access to environments on other networks (e.g HSCN or PSN) will require addition
 
 ## Platform performance
 
-The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.
+The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.
 
 For a transfer time calculator, go to <https://techinternets.com/copy_calc?do>.
 

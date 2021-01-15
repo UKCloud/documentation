@@ -36,7 +36,7 @@ UKCloud for Microsoft Azure IaaS currently provides:
 
 #### Compute
 
-Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack Hub. Virtual machine sizes supported are:
+Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack Hub. Virtual machine sizes supported are:
 
 - General purpose: Basic A series, standard A & Av2 series, D & Dv2 series, DS & DSv2 series
 
@@ -60,13 +60,13 @@ You can find the full list of supported virtual machine sizes [here](https://doc
 
 #### Network
 
-- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure Stack Hub. This can be configured via the UI, API and other tooling.
+- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure Stack Hub. This can be configured via the UI, API and other tooling.
 
-- Load balancers (IPv4 only) - Deploy basic load balancers.
+- Load balancers (IPv4 only) - Deploy basic load balancers.
 
-- VPN gateway - Use the Azure Stack Hub VPN gateway to create site-to-site VPNs to remote infrastructure.
+- VPN gateway - Use the Azure Stack Hub VPN gateway to create site-to-site VPNs to remote infrastructure.
 
-- Routing - Configure basic custom defined routing on virtual networks.
+- Routing - Configure basic custom defined routing on virtual networks.
 
 ### What technology is UKCloud for Microsoft Azure based on?
 

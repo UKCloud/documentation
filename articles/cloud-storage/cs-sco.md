@@ -3,8 +3,8 @@ title: Cloud Storage Service Scope
 description: Outlines important details regarding Cloud Storage
 services: cloud-storage
 author: Steve Hall
-reviewer:
-lastreviewed: 20/08/2019 16:46:31
+reviewer: Steve relf
+lastreviewed: 08/12/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -102,7 +102,7 @@ We manage the physical firewalls that face public and secure networks.
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.
 
 We don't provide Protective Monitoring services within your estate - it is your responsibility to act at this level.
 

@@ -30,7 +30,7 @@ This article defines any such metadata that may be exchanged between a customer'
 
 ## Data collected by endpoint agent
 
-### Virtual machine data   
+### Virtual machine data   
 
 - Architecture
 
@@ -44,7 +44,7 @@ This article defines any such metadata that may be exchanged between a customer'
 
 ### User and device data
 
-- Agent ID
+- Agent ID
 
 - Endpoint name
 
@@ -68,7 +68,7 @@ This article defines any such metadata that may be exchanged between a customer'
 
 - OS version
 
-- SentinelOne Agent version
+- SentinelOne Agent version
 
 - SMTP username
 
@@ -80,7 +80,7 @@ This article defines any such metadata that may be exchanged between a customer'
 
 - Full file path
 
-- In cases of suspected threats, the SentinelOne Agent collects for each process:
+- In cases of suspected threats, the SentinelOne Agent collects for each process:
 
   - Hash
 
@@ -118,9 +118,9 @@ This article defines any such metadata that may be exchanged between a customer'
 
 ### General
 
-- Users usernames, emails, and phone numbers (UKCloud credentials)
+- Users usernames, emails, and phone numbers (UKCloud credentials)
 
-- SentinelOne customer corporate name (UKCloud credentials)
+- SentinelOne customer corporate name (UKCloud credentials)
 
 - Solutions agent information, including endpoint name and user ID
 
@@ -130,7 +130,7 @@ This article defines any such metadata that may be exchanged between a customer'
 
   - File path
 
-  - Agent IDs
+  - Agent IDs
 
   - Time stamp
 
@@ -140,15 +140,15 @@ This article defines any such metadata that may be exchanged between a customer'
 
   - Detection source
 
-### Agent information
+### Agent information
 
 - Number of endpoints and respective operating systems
 
-- Endpoint grouping information (named as per users selection)
+- Endpoint grouping information (named as per users selection)
 
 - Endpoint crash dumps
 
-- Agent logs
+- Agent logs
 
 ### Endpoint information:
 
@@ -158,13 +158,13 @@ This article defines any such metadata that may be exchanged between a customer'
 
 Research data includes certain telemetric data sent from the customer's management consoles to the SentinelOne cloud. From the SentinelOne cloud, the research team extracts research data and uses it to improve the understanding of known malicious behaviors, predict additional likely malicious behaviors, and otherwise improve artificial intelligence-based detection of unknown malware. Research data is stored on AWS servers in the U.S. and consists of the following data components:
 
-- Endpoint and Agent build information
+- Endpoint and Agent build information
 
-  - Agent boot – Uptime of the Agent service, indicating when endpoints are rebooted, restarted, or the time in which Agents are down due to bugs or other issues
+  - Agent boot – Uptime of the Agent service, indicating when endpoints are rebooted, restarted, or the time in which Agents are down due to bugs or other issues
 
-  - Agent id – Internal identifier of the SentinelOne Agent in use, for communication with its Management
+  - Agent id – Internal identifier of the SentinelOne Agent in use, for communication with its Management
 
-  - Agent version – SentinelOne software version
+  - Agent version – SentinelOne software version
 
   - Operating system – Which OS is installed on the device
 
@@ -178,9 +178,9 @@ Research data includes certain telemetric data sent from the customer's manageme
 
   - RootName – Process name
 
-### Deep visibility data  
+### Deep visibility data  
 
-This data is collected by Agents and correlated by Deep Visibility to provide enhanced details, search and monitor capabilities
+This data is collected by Agents and correlated by Deep Visibility to provide enhanced details, search and monitor capabilities
 
 - General
 

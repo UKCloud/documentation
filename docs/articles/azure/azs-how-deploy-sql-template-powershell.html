@@ -573,14 +573,14 @@ $CustomTemplateJSON = "<output form="customtemplatejson" name="result" style="di
 
 $DNSSuffix = "<output form="dnssuffix" name="result" style="display: inline;">azure.ukcloud.com</output>"
 $ResourceGroupName = "<output form="resourcegroupname" name="result" style="display: inline;">Sql2016AlwaysOnRG01</output>"
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 $SqlServerOffer = "<output form="sqlserveroffer" name="result" style="display: inline;">SQL2016SP2-WS2016</output>"
 $SqlServerSKU = "<output form="sqlserversku" name="result" style="display: inline;">Enterprise</output>"
 $ArmDeploymentName = "<output form="armdeploymentname" name="result" style="display: inline;">Sql2016AlwaysOnDeployment</output>"
 
 # Create Azure Stack Hub environment so that you can log in to it
-Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your SPN credentials for log in
 $AzsUsername = $ClientID
@@ -588,14 +588,14 @@ $AzsUserPassword = ConvertTo-SecureString -String $ClientSecret -AsPlainText -Fo
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Log in to Azure Stack Hub using SPN account
-Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantID
+Connect-AzAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantID
 
 # Create a new resource group if it does not exist
 try {
-    $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $Location -ErrorAction 'SilentlyContinue'
+    $RG = Get-AzResourceGroup -Name $ResourceGroupName -Location $Location -ErrorAction 'SilentlyContinue'
     if (-not $RG) {
         Write-Output -InputObject "Could not find the resource group, creating now..."
-        New-AzureRmResourceGroup -Name $ResourceGroupName -Location $Location -Verbose
+        New-AzResourceGroup -Name $ResourceGroupName -Location $Location -Verbose
     }
     else {
         Write-Output -InputObject "The resource group: $ResourceGroupName exists."
@@ -608,14 +608,14 @@ catch {
 }
 
 # Test deployment
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
+Test-AzResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
 
 # Start deployment
-New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
+New-AzResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DNSSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
 
 # Verify deployment
 ## Note: $ArmDeploymentName can be changed to query each deployment in your resource group
-Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
+Get-AzResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
 </code></pre>
 <p>In the Azure Stack Hub portal, you will see the deployment progressing and resources being created:</p>
 <p><img src="images/azs-browser-mysql-alwayson-resource-group.png" alt="Azure Stack Hub tenant portal mysql-alwayson resource group"></p>
@@ -623,14 +623,14 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 <p><img src="images/azs-browser-mysql-alwayson-deployments.png" alt="Azure Stck Hub tenant portal my-sql-alwayson deployments"></p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Every parameter in the <a href="#list-of-parameters-you-can-define-in-the-template">parameter list</a> can be defined in the <strong><code>New-AzureRmResourceGroupDeployment</code></strong> by simply adding <em><code>-&lt;ParameterName&gt;</code></em></p>
+<p>Every parameter in the <a href="#list-of-parameters-you-can-define-in-the-template">parameter list</a> can be defined in the <strong><code>New-AzResourceGroupDeployment</code></strong> by simply adding <em><code>-&lt;ParameterName&gt;</code></em></p>
 <p>For example:
 <code>-WitnessVMSize &quot;Standard_D1_v2&quot;</code></p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If the template fails validation, PowerShell will output the reason for the failure (see below):</p>
-<pre><code class="lang-powershell">Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -dnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -WitnessVMSize &quot;Standard_232&quot; -Verbose
+<pre><code class="lang-powershell">Test-AzResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -dnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -WitnessVMSize &quot;Standard_232&quot; -Verbose
 
 Code    : InvalidTemplate
 Message : Deployment template validation failed: 'The provided value 'Standard_232' for the template parameter 'witnessVMSize' at line '39' and column '26' is not valid. The parameter value is not part of the allowed value(s): 'Standard_D1_v2,Standard_D2_v2'.'.
@@ -657,11 +657,11 @@ threw one or more non-terminating errors while running the Set-TargetResource fu
 <li><code>C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\&lt;version number&gt;</code></li>
 </ul>
 </li>
-<li><p><a href="https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/">DSC Configuration</a> and <a href="https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0">cmdlets</a></p>
+<li><p><a href="https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/">DSC Configuration</a> and <a href="https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmdscextensionstatus?view=azps-5.1.0">cmdlets</a></p>
 <ul>
 <li><p>To view the status of the DSC deployment run:</p>
-<pre><code class="lang-powershell">Get-AzureRmVMDscExtension -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot;
-Get-AzureRmVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot; | Select-Object -ExpandProperty DscConfigurationLog
+<pre><code class="lang-powershell">Get-AzVMDscExtension -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot;
+Get-AzVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot; | Select-Object -ExpandProperty DscConfigurationLog
 </code></pre>
 </li>
 </ul>
@@ -683,6 +683,19 @@ Get-AzureRmVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&g
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -701,7 +714,7 @@ Get-AzureRmVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&g
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

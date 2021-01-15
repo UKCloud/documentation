@@ -2,9 +2,10 @@
 title: Cross Domain Security Zone Service Scope
 description: Outlines important details regarding UKCloud's Cross Domain Security Zone (CDSZ)
 services: cdsz
-author: Bart Challis
+author: bchallis
 reviewer: 
-lastreviewed: 
+lastreviewed: 30/08/2019
+
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -40,7 +41,7 @@ CDSZ includes a Walled Garden option that provides self-service access to the CD
 
 ## Service architecture
 
-The CDSZ Walled Garden is a VMware-only environment, utilizing VMware vCloud Director as the management orchestrator for the service. A CDSZ is a virtual datacenter (VDC) in which you can build virtual machines and virtual networks in order to inspect and protect data moving between Assured and Elevated cloud environments. You can find more information about architecting a CDSZ environment in the [*Getting Started Guide for the Cross Domain Security Zone Walled Garden*](cdsz-gs-walled-garden.md).
+The CDSZ Walled Garden is a VMware-only environment, utilizing VMware Cloud Director as the management orchestrator for the service. A CDSZ is a virtual datacenter (VDC) in which you can build virtual machines and virtual networks in order to inspect and protect data moving between Assured and Elevated cloud environments. You can find more information about architecting a CDSZ environment in the [*Getting Started Guide for the Cross Domain Security Zone Walled Garden*](cdsz-gs-walled-garden.md).
 
 ![CDSZ architecture](images/cdsz-walled-garden.png)
 
@@ -96,7 +97,7 @@ You're entitled to claim Service Credits for outages to services that take you o
 
   - Internally this includes, but isn't limited to, the vSphere and ESX versions, and the hardware version of the platform.
 
-  - Externally this includes the available versions of the edge gateway and vCloud Director.
+  - Externally this includes the available versions of the edge gateway and VMware Cloud Director.
 
 - Promiscuous mode is disabled.
 
@@ -106,7 +107,7 @@ You're entitled to claim Service Credits for outages to services that take you o
 
 - You can specify Farnborough or Corsham as the site where you'd like to have your CDSZ service provisioned. We'll try to accommodate requests and will advise you if we are unable do so.
 
-- You can set affinity or anti-affinity rules through vCloud Director so that VMs do, or do not, run on the same physical host.
+- You can set affinity or anti-affinity rules through VMware Cloud Director so that VMs do, or do not, run on the same physical host.
 
 ## Operating systems
 
@@ -126,7 +127,7 @@ For non-UKCloud issued software, you must obey the licensing requirements of the
 
 ### VM server images
 
-We provide base VM images for the operating systems for which we provide licensing. You can access these from vCloud Director.
+We provide base VM images for the operating systems for which we provide licensing. You can access these from VMware Cloud Director.
 
 You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.
 
@@ -140,7 +141,7 @@ We do not provide anti-virus software as part of the service.
 
 ## Networks
 
-From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the vCloud Director tenant portal or vCloud API.
+From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the VMware Cloud Director tenant portal or vCloud API.
 
 You can find more information about networking within the CDSZ in the [*Getting Started Guide for the Cross Domain Security Zone Walled Garden*](cdsz-gs-walled-garden.md).
 
@@ -174,9 +175,9 @@ In line with UKCloud's SISP, we provide notification of customer-impacting secur
 
 Users can access, manage and view the CDSZ service, accessing only those features allowed by their role, in any of the following ways:
 
-- **vCloud Director API.** Enables the programmatic creation and management of VMs inside the CDSZ.
+- **vCloud API.** Enables the programmatic creation and management of VMs inside the CDSZ.
 
-- **vCloud Director tenant portal.** Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions).
+- **VMware Cloud Director tenant portal.** Provides a graphical interface to access the VMware Cloud Director environment (depending on assigned permissions).
 
 - **UKCloud Portal.** Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.
 

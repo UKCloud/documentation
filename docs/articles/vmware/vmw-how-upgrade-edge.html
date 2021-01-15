@@ -97,12 +97,12 @@
 <p>It's important to keep your edge gateways up to date to ensure that you benefit from the latest features and enhancements.</p>
 <p>This article shows you how to upgrade your edge gateway to the latest available version. If you need any assistance with the upgrade process, contact UKCloud Support by raising a Service Request in the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h3 id="different-types-of-edge">Different types of edge</h3>
-<p>vCloud Director uses NSX edge services gateways in three main areas. These are all identical at the virtual network level, however feature exposure in vCloud Director varies. Due to this, there are differences in the method to upgrade these underlying devices.</p>
+<p>VMware Cloud Director uses NSX edge services gateways in three main areas. These are all identical at the virtual network level, however feature exposure in VMware Cloud Director varies. Due to this, there are differences in the method to upgrade these underlying devices.</p>
 <h4 id="organisation-edge-gateways">Organisation edge gateways</h4>
-<p>These are commonly referred to as edge gateways, and are by far the most widely understood. They provide VPN, NAT, firewall and routing functionality, and appear as the object <strong>Edge Gateway</strong> in vCloud Director. These edges are referred to as edge gateways throughout this article.</p>
+<p>These are commonly referred to as edge gateways, and are by far the most widely understood. They provide VPN, NAT, firewall and routing functionality, and appear as the object <strong>Edge Gateway</strong> in VMware Cloud Director. These edges are referred to as edge gateways throughout this article.</p>
 <p>To upgrade an organisation edge gateway, see <a href="#upgrading-an-organisation-edge-gateway"><em>Upgrading an organisation edge gateway</em></a>.</p>
 <h4 id="isolated-organisation-network-edges">Isolated organisation network edges</h4>
-<p>When you create an isolated organisation network in a VDC in vCloud Director, DHCP services are enabled by default with a DHCP pool of any remaining IP addresses not used by any static IP pools specified for the network. A small NSX edge services gateway is deployed on the network to manage DHCP traffic. If you disable the DHCP service after creation of the network, the edge is removed.</p>
+<p>When you create an isolated organisation network in a VDC in VMware Cloud Director, DHCP services are enabled by default with a DHCP pool of any remaining IP addresses not used by any static IP pools specified for the network. A small NSX edge services gateway is deployed on the network to manage DHCP traffic. If you disable the DHCP service after creation of the network, the edge is removed.</p>
 <p>To upgrade an isolated organisation network edge, see <a href="#upgrading-an-isolated-network-edge"><em>Upgrading an isolated network edge</em></a>.</p>
 <h4 id="vapp-network-edges">vApp network edges</h4>
 <p>vApps and vApp networks have some optional capabilities that require the use of an NSX edge services gateway in the underlying network. This is often due to the vApp being configured as &quot;fenced&quot;, requiring you to use NAT to communicate outside of the vApp. If you've configured a vApp network with any of the following, an NSX edge services gateway is required:</p>
@@ -118,7 +118,7 @@
 </ul>
 <p>To upgrade a vApp network edge, see <a href="#upgrading-a-vapp-network-edge"><em>Upgrading a vApp network edge</em></a>.</p>
 <h2 id="intended-audience">Intended audience</h2>
-<p>To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director.</p>
+<p>To complete the steps in this guide you must have access to the UKCloud Portal and VMware Cloud Director.</p>
 <h2 id="upgrading-an-edge-to-the-latest-available-version">Upgrading an edge to the latest available version</h2>
 <h3 id="upgrading-an-organisation-edge-gateway">Upgrading an organisation edge gateway</h3>
 <div class="IMPORTANT">
@@ -127,15 +127,15 @@
 </div>
 <p>To upgrade an organisation edge gateway you need to redeploy the edge:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway you want to upgrade.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the edge gateway you want to upgrade.</p>
 </li>
-<li><p>In the left navigation panel, select <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Networking</em> select <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>On the <em>Edges</em> page, select the edge that you want to configure and click <strong>Redeploy</strong>.</p>
-<p><img src="images/vmw-vcd-btn-redeploy.png" alt="Redeploy button"></p>
+<li><p>On the <em>Edge Gateways</em> page, select the edge that you want to configure and click <strong>Redeploy</strong>.</p>
+<p><img src="images/vmw-vcd10.1-btn-redeploy.png" alt="Redeploy button"></p>
 </li>
-<li><p>In the <em>Redeploy an Edge gateway</em> dialog box, click <strong>OK</strong>.</p>
+<li><p>In the <em>Confirm Redeploy</em> dialog box, click <strong>OK</strong>.</p>
 </li>
 </ol>
 <h3 id="upgrading-an-isolated-network-edge">Upgrading an isolated network edge</h3>
@@ -145,13 +145,13 @@
 <p>Before you begin the upgrade process, bear in mind that this process will disrupt DHCP server operations whilst the underlying edge is redeployed.</p>
 </div>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the network edge you want to upgrade.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the network edge you want to upgrade.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>Networks</strong>.</p>
-<p><img src="images/vmw-vcd-tab-networks.png" alt="Edges menu option in vCloud Director"></p>
+<p><img src="images/vmw-vcd10.1-tab-networks.png" alt="Networks menu option in VMware Cloud Director"></p>
 </li>
 <li><p>On the <em>Networks</em> page, select the isolated network that contains the edge you want to upgrade and click <strong>Reset</strong>.</p>
-<p><img src="images/vmw-vcd-btn-reset-network.png" alt="Reset network button"></p>
+<p><img src="images/vmw-vcd10.1-btn-reset-network.png" alt="Reset network button"></p>
 </li>
 <li><p>In the <em>Reset Network</em> dialog box, click <strong>OK</strong>.</p>
 </li>
@@ -174,32 +174,32 @@
 <p>Before you begin the upgrade process, bear in mind that this process will disrupt any traffic flowing into or out of the vApp network and DHCP services will be interrupted.</p>
 </div>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the vApp with the network edge you want to upgrade.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the vApp with the network edge you want to upgrade.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps menu option in vCloud Director"></p>
+<p><img src="images/vmw-vcd10.1-tab-vapps.png" alt="vApps menu option in VMware Cloud Director"></p>
 </li>
 <li><p>On the <em>vApps</em> page, in the card for the vApp, click <strong>Details</strong>.</p>
 </li>
 <li><p>On the vApp details page, select the <strong>Networks</strong> tab.</p>
 </li>
 <li><p>Select the vApp network that contains the edge you want to upgrade and click <strong>Reset</strong>.</p>
-<p><img src="images/vmw-vcd-btn-reset-vaap-network.png" alt="Reset vApp network button"></p>
+<p><img src="images/vmw-vcd10.1-btn-reset-vapp-network.png" alt="Reset vApp network button"></p>
 </li>
 <li><p>In the <em>Reset Network</em> dialog box, click <strong>OK</strong>.</p>
 </li>
 </ol>
 <h4 id="shutting-down-and-restarting-the-vapp">Shutting down and restarting the vApp</h4>
-<p>Another way to upgrade a vApp network is to shut down the vApp and restart it. Restarting the vApp in this way recreates any networks in the virtual network space and deploys fresh vApp edges with the configuration held in vCloud Director.</p>
+<p>Another way to upgrade a vApp network is to shut down the vApp and restart it. Restarting the vApp in this way recreates any networks in the virtual network space and deploys fresh vApp edges with the configuration held in VMware Cloud Director.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Before you begin the upgrade process, bear in mind that all the vApp resources will be unavailable until the vApp restarts.</p>
 </div>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the vApp with the network edge you want to upgrade.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the vApp with the network edge you want to upgrade.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps menu option in vCloud Director"></p>
+<p><img src="images/vmw-vcd10.1-tab-vapps.png" alt="vApps menu option in VMware Cloud Director"></p>
 </li>
 <li><p>On the <em>vApps</em> pages, in the card for the vApp, select <strong>Actions</strong>, then <strong>Power Off</strong> or <strong>Stop</strong>.</p>
 <div class="NOTE">
@@ -222,6 +222,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -240,7 +253,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

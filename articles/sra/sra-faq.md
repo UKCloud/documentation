@@ -35,7 +35,7 @@ System administrators and mobile workers can securely access workloads running o
 
 ### Do I have to buy other UKCloud services to use UKCloud SRA?
 
-Yes. UKCloud SRA is available only to customers purchasing other UKCloud services such as UKCloud for VMware, Cloud Storage or UKCloud for OpenShift.
+Yes. UKCloud SRA is available only to customers purchasing other UKCloud services such as UKCloud for VMware, Cloud Storage or UKCloud for Managed OpenShift.
 
 ### Is a free trial available for the service?
 

@@ -29,7 +29,7 @@ Knowing where your VDCs are located can be useful for:
 
 - Providing additional information to help with support call resolution
 
-This article describes how to find out where your VDC is within the UKCloud platform. You can use the VMware Cloud Director/vCloud Director Tenant Portal or the API.
+This article describes how to find out where your VDC is within the UKCloud platform. You can use the VMware Cloud Director tenant portal or the API.
 
 The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
@@ -37,8 +37,6 @@ The information provided by the VDC metadata is read-only. If you want to change
 > If you want to find the location of a specific VM within a VDC, you can use VM location. For more information, see [*How to use VM location*](vmw-how-use-vm-location.md).
 
 ## Finding the location of a VDC
-
-### [VMware Cloud Director 10.1](#tab/tabid-a)
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that you want to locate.
 
@@ -58,30 +56,6 @@ The information provided by the VDC metadata is read-only. If you want to change
 
 4. When you're done, click **Cancel**.
 
-### [vCloud Director 9.7](#tab/tabid-b)
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that you want to locate.
-
-    For more detailed instructions on accessing vCloud Director, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
-
-2. In the left navigation panel, select **Metadata**.
-
-    ![VDC Metadata menu option](images/vmw-vcd-mnu-vdc-metadata.png)
-
-3. The following fields indicate the location of your VDC:
-
-    - **provider-site** - indicates the site in which your VDC is located: **Farnborough** or **Corsham**
-
-    - **provider-region** - indicates the region in which your VDC is located, for example **1** or **5**.
-
-    - **provider-zone** - indicates the zone in which your VDC is located, for example **1(AF2)** or **B**
-
-    ![VDC location metadata](images/vmw-vcd-vdc-location-metadata.png)
-
-4. When you're done, click **Cancel**.
-
-***
-
 ### A note about Synchronous Protection
 
 If you set up your VDC to use Synchronous Protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:
@@ -96,7 +70,8 @@ If you set up your VDC to use Synchronous Protection, then the VDC is stretched 
 
 ## Finding the location of a VDC using the vCloud API
 
-You can also find the location of your VDC by calling the vCloud API. For more information about the vCloud API, see the [vCloud Director API Guide](https://code.vmware.com/apis/553/vcloud-director).
+You can also find the location of your VDC by calling the vCloud API. For more information about the vCloud API, see the [VMware Cloud Director API
+](https://code.vmware.com/apis/912/vmware-cloud-director).
 
 For example, to retrieve all the metadata for a specified VDC, call the `GET /vcd/<id>/metadata` endpoint.
 

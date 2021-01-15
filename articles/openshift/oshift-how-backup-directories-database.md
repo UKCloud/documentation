@@ -3,8 +3,8 @@ title: How to back up and restore container directories and databases on OpenShi
 description: Provides guidance on how to back up container directories and databases and how to restore them
 services: openshift
 author: Daniel Brennand
-reviewer:
-lastreviewed: 03/12/2019
+reviewer: Gareth Ellner
+lastreviewed: 16/12/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -24,7 +24,7 @@ This article explains how you can back up container directories and databases (s
 
 ### Prerequisites
 
-This article assumes that you have a UKCloud for OpenShift envrionment and can access it using the [OpenShift Container Platform command line interface](https://docs.openshift.com/container-platform/3.11/cli_reference/index.html#cli-reference-index).
+This article assumes that you have a UKCloud for Managed OpenShift envrionment and can access it using the [OpenShift Container Platform command line interface](https://docs.openshift.com/container-platform/3.11/cli_reference/index.html#cli-reference-index).
 
 This article uses the following two OC CLI commands:
 
@@ -32,7 +32,7 @@ This article uses the following two OC CLI commands:
 
 - [`oc rsync`](https://docs.openshift.com/container-platform/3.11/dev_guide/copy_files_to_container.html#overview)
 
-Begin by logging into your UKCloud for OpenShift envrionment using the following command:
+Begin by logging into your UKCloud for Managed OpenShift envrionment using the following command:
 
 ```bash
 oc login --server {server} --token {token here}

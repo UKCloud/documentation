@@ -207,7 +207,7 @@ For more information about the discount and purchase schemes offered by UKCloud,
 
 ### Snapshots
 
-- Self-service snapshots created within VMware Cloud Director/vCloud Director will be charged at the rate of the storage they are stored on (Tier 1 or Tier 2), and charged per GiB per month.
+- Self-service snapshots created within VMware Cloud Director will be charged at the rate of the storage they are stored on (Tier 1 or Tier 2), and charged per GiB per month.
 
 - You can use the 60GiB of free VM storage for snapshots.
 

@@ -3,8 +3,8 @@ title: Understanding UKCloud for Microsoft Azure
 description: Overview of UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 11/01/2021
 
 toc_rootlink: Users
 toc_sub1: Reference
@@ -33,35 +33,35 @@ Virtual machines (VMs) provide the basic building block providing compute in Azu
 
 You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling. VMs have the following support:
 
-- API
+- Azure Compute APIs - Provides you with programmatic access to virtual machines and their supporting resources. For further information, see the [Azure REST API Reference](https://docs.microsoft.com/en-gb/rest/api/azure/).
 
-- Azure Stack Hub Marketplace - Provides access to pre-created images that help speed up application delivery
+- Azure Stack Hub Marketplace - Provides access to pre-created images that help speed up application delivery.
 
-- Azure Resource Manager - Enables you to write templates to deploy, update and delete Azure Stack Hub resources in a single co-ordinated operation
+- Azure Resource Manager - Enables you to write templates to deploy, update and delete Azure Stack Hub resources in a single co-ordinated operation.
 
 <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-considerations>
 
 ### Network
 
-- Virtual networks - Azure Stack Hub enables you to configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling
+- Virtual networks - Azure Stack Hub enables you to configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling.
 
-- Load balancers (IPv4 only) — You can deploy basic load balancers
+- Load balancers (IPv4 only) — You can deploy basic load balancers.
 
-- VPN gateway — You can use the Azure Stack Hub VPN gateway to create site-to-site VPNs to remote infrastructure
+- VPN gateway — You can use the Azure Stack Hub VPN gateway to create site-to-site VPNs to remote infrastructure.
 
-- Routing — You can configure basic custom defined routing on virtual networks; Vnet to Vnet peering is not yet supported
+- Routing — You can configure basic custom defined routing on virtual networks; Vnet to Vnet peering is not yet supported.
 
 <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-network-differences>
 
 ### Storage
 
-| Type of storage             | Description                                                                                     | Notes vs Azure                                                                           |
+| Type of storage             | Description                                                                                     | Notes vs public Azure                                                                           |
 |-----------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| Azure Blob Storage (block)  | Object storage; good for storing documents, videos, images and so on                            | Size of disk storage differs significantly, as well as naming standards like name length |
-| Azure Blob Storage (page)   | Used to support virtual machine disks; good for randomly accessed large files                   |                                                                                          |
-| Azure Blob Storage (append) | Used for log files                                                                              |                                                                                          |
-| Azure Queue Storage         | Message queue as a service to provide asynchronous scale out micro-services, among other things |                                                                                          |
-| Azure Table Storage         | NoSQL database service; good for highly scalable, eventually consistent database support        | Max sizes differ                                                                         |
+| Azure Blob Storage (block)  | Object storage; good for storing documents, videos, images and so on. | Maximum block blob size is 4.75 TB (100 MB x 50,000 blocks) for the 1802 update or newer version. Previous versions are limited to 50,000 x 4 MB (approximately 195 GB). Blob name size differs slightly at 880 characters (1,760 bytes), compared to 1,024 characters (2,048 bytes) for public Azure. |
+| Azure Blob Storage (page) | Used to support virtual machine disks; good for randomly accessed large files. | Maximum page blob size differs greatly at 1TB for Azure Stack Hub, compared to 8TB for public Azure. |
+| Azure Blob Storage (append) | Used for log files. | |
+| Azure Queue Storage | Message queue as a service to provide asynchronous scale out micro-services, among other things. |                                                                                          |
+| Azure Table Storage | NoSQL database service; good for highly scalable, eventually consistent database support. | Maximum table partition key and row key size is 400 characters (800 bytes), compared to 1,024 characters (2,048 bytes) for public Azure.                                                                         |
 
 ### Advanced features
 
@@ -77,33 +77,49 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
 
 - Azure Stack Hub supports a subset of Azure VM extensions; UKCloud for Microsoft Azure currently supports the following:
 
-  - CustomScriptForLinux  v1.5.2.2 & v1.5.2.0
-  
+  - Microsoft.OSTCExtensions  v1.5.2
+
+  - CustomScriptForLinux  v1.5.5, v1.5.2.2 & v1.5.2.0
+
+  - VMAccessForLinux  v1.5.2 & v1.4.0.0
+
   - OSPatchingForLinux  v2.3.0.1
-  
-  - VMAccessForLinux  v1.4.0.0
-  
-  - CustomScriptExtension  v1.9.1 & v1.8
-  
+
+  - DependencyAgentLinux  v9.10.6.11730
+
+  - DependencyAgentWindows  v9.10.6.11730
+
+  - OmsAgentForLinux  v1.13.27 & v1.8.11
+
+  - MicrosoftMonitoringAgent  v1.0.11081.5 & v1.0.10900.0
+
+  - SqlIaaSAgent  v1.3.20370
+
   - BGInfo  v2.1
-  
-  - JsonADDomainExtension  v1.3
-  
-  - VMAccessAgent  v2.0
-  
-  - SqlIaaSAgent  v1.2.30.0
-  
-  - DSC  v2.76.0.0 & v2.19.0.0
-  
+
+  - CustomScriptExtension  v1.9.3 & v1.8
+
+  - JsonADDomainExtension  v1.3.4, v1.3.2 & v1.3
+
+  - VMAccessAgent  v2.4.4 & v2.0
+
   - DockerExtension  v1.1.1606092330
-  
+
   - CustomScript  v2.0.6
-  
-  - IaaSAntimalware  v1.4.0.0
-  
-  - IaaSDiagnostics  v1.10.1.1
-  
-  - MicrosoftMonitoringAgent  v1.0.10900.0
+
+  - DSC  v2.77.0.0 & v2.19.0.0
+
+  - IaaSAntimalware  v1.5.5.9 & v1.4.0.0
+
+  - IaaSDiagnostics  v1.12.2.2 & v1.10.1.1
+
+  - LinuxDiagnostic  v3.0.121
+
+  - AmdGpuDriverWindows  v1.0.4.0 & v1.0.1.0
+
+  - NvidiaGpuDriverLinux  v1.3.0.0
+
+  - NvidiaGpuDriverWindows  v1.3.1.0
 
   For an up-to-date list of the supported extensions, perform the following steps:
 
@@ -114,39 +130,39 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
     Then run the following commands:
 
     ```powershell
-    Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-    Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
-    Get-AzureRmVMImagePublisher -Location "frn00006" | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
+    Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+    Connect-AzAccount -EnvironmentName "AzureStackUser"
+    Get-AzVMImagePublisher -Location "frn00006" | Get-AzVMExtensionImageType | Get-AzVMExtensionImage | `
       Select-Object -Property Type, Version | Format-Table -AutoSize
     ```
 
-- Use load balancers to make the best use of IP address quota
+- Use load balancers to make the best use of IP address quota.
 
-- Azure Stack Hub API may be a couple of releases behind Azure
+- Azure Stack Hub API may be a couple of releases behind public Azure API.
 
-- Single region and single state set (affects availability)
+- Single region and single state set (affects availability).
 
-- VM sets don't support auto-scale, so consider how to handle load
+- VM sets don't support auto-scale, so consider how to handle load.
 
-- Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack Hub
+- Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack Hub.
 
 ### Storage
 
-Azure Stack Hub storage is all served from the same pool of disks and does not provide “limitless” storage, so you should consider the following:
+Azure Stack Hub storage is all served from the same pool of disks and does not provide "limitless" storage, so you should consider the following:
 
-- Use blob storage (object storage) to support the application; not for multiple petabytes of data storage
+- Use blob storage (object storage) to support the application; not for multiple petabytes of data storage.
 
-- Put large volume data on UKCloud's Cloud Storage
+- Put large volume data on UKCloud's [*Cloud Storage*](../cloud-storage/cs-sd.md).
 
-- Clean up backups to conserve storage
+- Clean up backups to conserve storage.
 
-- Consider use of temporary storage
+- Consider use of temporary storage.
 
-- There is a difference in maximum blob storage between Azure and Azure Stack Hub
+- For some blob types, there is a difference in maximum storage between public Azure and Azure Stack Hub.
 
-- No guarantees around IOPs
+- No guarantees around IOPS.
 
-- Use blob storage for queues to help deliver scalable micro-services
+- Use blob storage for queues to help deliver scalable micro-services.
 
 ## Accessing UKCloud for Microsoft Azure
 
@@ -158,9 +174,7 @@ You can access UKCloud for Microsoft Azure from the following location:
 
 For more information about Azure Stack Hub, see the following Microsoft resources:
 
-- [*Get Started with Azure*](https://azure.microsoft.com/en-gb/get-started/)
-
-- [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md)
+- [Azure Stack Hub User Documentation](https://docs.microsoft.com/en-us/azure-stack/user)
 
 For more information about UKCloud for Microsoft Azure, see:
 
@@ -168,13 +182,15 @@ For more information about UKCloud for Microsoft Azure, see:
 
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
+- [*Configure the Azure Stack Hub user's PowerShell environment*](azs-how-configure-powershell-users.md)
+
 ## Related videos
 
 - [*UKCloud Azure Stack Hub portal overview video*](azs-vid-overview.md)
 
 ## Related repositories
 
-- [*UKCloud Azure Stack Hub Repository*](https://github.com/UKCloud/AzureStack)
+- [UKCloud Azure Stack Hub Repository](https://github.com/UKCloud/AzureStack)
 
 ## Feedback
 

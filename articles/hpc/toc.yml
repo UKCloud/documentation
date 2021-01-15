@@ -1,7 +1,3 @@
-- name: Reference
-  items:
-  - name: Understanding High Performance Compute
-    href: hpc-ref-overview.md
 - name: Service Information
   items:
   - name: Service Definition
