@@ -29,7 +29,7 @@ The UKCloud RHUI service supplies access to the following repository groups, eac
 
 ### Intended audience
 
-This article is intended for customers who have not yet migrated to RHUI v3.
+This article is intended for customers who have not yet migrated to RHUI v3. If you need information for RHUI 3, see [*Red Hat Update Infrastructure overview (RHUI 3)*](shared-ref-rhui-3.md).
 
 ## RHEL6-Standard
 

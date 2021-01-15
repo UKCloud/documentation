@@ -33,7 +33,7 @@ This latest version of RHUI replaces the previous version (from 2015), which is 
 
 ### Intended audience
 
-This article is intended for customers who have migrated to RHUI v3.
+This article is intended for customers who have migrated to RHUI v3. If you need information for RHUI 2, see [*How to install and use Red Hat Update Infrastructure (RHUI 2)*](shared-how-install-rhui-vm.md).
 
 ## Prerequisites
 

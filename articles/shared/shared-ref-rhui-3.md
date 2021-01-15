@@ -31,7 +31,7 @@ The RHUI services consist of:
 
 ### Intended audience
 
-This article is intended for customers who have migrated to RHUI v3.
+This article is intended for customers who have migrated to RHUI v3. If you need information for RHUI 2, see [*Red Hat Update Infrastructure overview (RHUI 2)*](shared-ref-rhui.md).
 
 ## Repository groups
 

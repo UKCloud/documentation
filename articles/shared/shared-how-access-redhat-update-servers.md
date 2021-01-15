@@ -25,7 +25,7 @@ Before you attempt to establish a connection to RHUI, you need to make sure your
 
 ### Intended audience
 
-This article is intended for customers who have not yet migrated to RHUI v3.
+This article is intended for customers who have not yet migrated to RHUI v3. If you need information for RHUI 3, see [*How to access Red Hat update servers (RHUI 3)*](shared-how-access-redhat-update-servers-3.md).
 
 ## New Red Hat VM templates
 

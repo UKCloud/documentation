@@ -27,7 +27,7 @@ This update service replaces the previous repositories, which are no longer upda
 
 ### Intended audience
 
-This article is intended for customers who have not yet migrated to RHUI v3.
+This article is intended for customers who have not yet migrated to RHUI v3. If you need information for RHUI 3, see [*How to install Red Hat Update Infrastructure (RHUI 3)*](shared-how-install-rhui-vm-3.md).
 
 ## Prerequisites
 
