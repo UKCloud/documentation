@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: Understanding UKCloud shared services
+    href: shared-ref-overview.md
 - name: How To
   items:
   - name: Access CentOS update servers
@@ -24,8 +28,6 @@
     href: shared-ref-network-time-server.md
   - name: Red Hat Update Infrastructure overview
     href: shared-ref-rhui.md
-  - name: Understanding UKCloud shared services
-    href: shared-ref-overview.md
 - name: Videos
   items:
   - name: Connecting a VM to WSUS
