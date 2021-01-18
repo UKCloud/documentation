@@ -70,7 +70,7 @@ Virtual machines (VMs) provide the basic building blocks of compute resource wit
 
 - Standard D-Series and DS-Series. Optimised CPU-to-memory configuration, making them suitable for most general-purpose applications. A subset of the D-series VMs also support higher memory per CPU making them suitable for applications that require higher amounts of memory.
 
-- Basic and Standard F-Series. Optimised for CPU-intensive workloads so have a higher CPU to memory configurations.
+- Basic and Standard F-Series. Optimised for CPU-intensive workloads so have a higher CPU-to-memory configurations.
 
 - GPU enabled (NVIDIA and AMD) N-Series virtual machine (VM) types as follows: NCv3, NVv4 (AMD MI25), NCasT4_v3.
 
