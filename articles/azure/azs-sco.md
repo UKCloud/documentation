@@ -34,7 +34,7 @@ UKCloud can deliver an Azure service using either our own Azure Stack Hub from t
 
 ## UKCloud Azure Stack Hub
 
-This single-tenant service is provisioned from the UKCloud platform, and is owned, maintained and supported by UKCloud as with all other UKCloud technology stacks.  
+This single-tenant service is provisioned from the UKCloud platform, and is owned, maintained and supported by UKCloud as with all other UKCloud technology stacks.
 
 Once a purchase order is received for the Private Azure Stack Hub, we will inform you as to when the environment will be available for you. UKCloud will create the customer's Primary Administrator account and send a Welcome Pack, which includes the URL for the UKCloud Customer Portal and the Getting Started Guide.
 
@@ -275,11 +275,11 @@ UKCloud can offer additional professional and managed services in relation to Mi
 
 The following documents contain more information about UKCloud for Microsoft Azure and the service options:
 
-- [*UKCloud for Microsoft Azure service definition*](azs-sd.md)
+- [*UKCloud for Microsoft Azure Service Definition*](azs-sd.md)
 
 - [*UKCloud for Microsoft Azure FAQ*](azs-faq.md)
 
-- [*Getting Started Guide for for Microsoft Azure*](azs-gs.md)
+- [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
 
 - [*UKCloud Terms and Conditions*](../other/other-ref-terms-and-conditions.md)
 
