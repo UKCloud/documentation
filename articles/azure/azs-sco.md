@@ -151,7 +151,7 @@ The service levels are as follows:
 
 - You can specify the site where you would like to have your service provisioned (from sites where UKCloud for Microsoft Azure is available).
 
-- The UKCloud for Microsoft Azure service is updated regularly with the latest code release from Microsoft. Typically, this is once a month and notified via the [UKCloud service status page](https://status.ukcloud.com/) and the [UKCloud Portal](https://portal.ukcloud.com). UKCloud aim to be within two updates from Microsoft, however, we will control the release of the patches into the live service.
+- The UKCloud for Microsoft Azure service is updated regularly with the latest code release from Microsoft. Typically, this is once a month and UKCloud aim to be within two updates from Microsoft, however, we will control the release of the patches into the live service.
 
 - Through the UKCloud Azure Stack Hub portal you can use availability sets so that VMs do not run on the same physical host.
 
