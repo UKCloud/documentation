@@ -145,10 +145,6 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
 **Service Credit**           | 3% of monthly spend per 5% below service level target or part thereof for affected compute platform
 
-### Cloud Optimisation from UKCloud
-
-As Cloud Optimisation from UKCloud is based on third-party software and reporting, we are unable to offer an SLA for this service.
-
 ### Cloud Storage
 
 &nbsp;                       | Cloud Storage
@@ -229,18 +225,6 @@ Service levels for Managed Monitoring as a Service are split into the following 
 
 Due to the service being dependent on connectivity between the customer data centre and UKCloud, we are unable to offer an SLA relating to the performance of this service.
 
-### Multi-Cloud Backup Storage
-
-&nbsp;                       | Multi-Cloud Backup Storage
------------------------------|---------------------------
-**Availability commitment**  | **STANDARD:** 99.95%<br>**REPLICATED:** 99.99%
-**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days)
-**Emergency Maintenance**    | Excluded
-**Planned Maintenance**      | **STANDARD:** Excluded<br>**REPLICATED:** Included
-**Measurement of SLA**       | Unavailability applies to existing data where the data on the backup target becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the backup infrastructure, storage, power and internal networking such as physical firewalls and routers
-**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>The fault is within the customer's control (for example, backup software or application and user networks)<li>Incompatible applications or backup software (for example, a change of backup software leading to incompatibility, or incompatible software versions)<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
-**Service Credit** | **STANDARD:** 10% of monthly Backup Storage spend<br>**REPLICATED:** 15% of monthly Backup Storage spend
-
 ### Neustar DDoS Protection from UKCloud
 
 &nbsp;                       | Neustar DDoS Protection from UKCloud
@@ -266,10 +250,6 @@ Due to the service being dependent on connectivity between the customer data cen
 **Measurement of SLA**       | Availability applies to the customer assigned network within the Neustar Server Network being available to respond to Authoritative DNS queries
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Fault is within the customer's control (configuration, customer applications and customer networks)<li>Faults associated with customer's domain name registrar<li>Faults associated with third party/service provider networks</ul>
 **Service Credit**           | None
-
-### Portworx Enterprise from UKCloud
-
-Portworx Enterprise from UKCloud is deployed in your OpenShift cluster. For details of the SLA for OpenShift, see [*UKCloud for Managed OpenShift*](#ukcloud-for-managed-openshift).
 
 ### Private Cloud
 

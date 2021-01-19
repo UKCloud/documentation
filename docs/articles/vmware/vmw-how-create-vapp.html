@@ -94,19 +94,9 @@
 <h1 id="how-to-create-a-vapp">How to create a vApp</h1>
 
 <h2 id="overview">Overview</h2>
-<p>VMware Cloud Director/vCloud Director uses vApps to make virtual machine (VM) creation and management easy and flexible. vApps are essentially containers for VMs and can be used in many ways. One of the most common uses of a vApp is to group similar VMs together for easy management. Or you can put VMs that form a multi-tier application into the same vApp for greater control. You can create up to 128 vApps within a virtual data centre (VDC) and intelligently network them to create complex architectures that can be managed easily.</p>
+<p>VMware Cloud Director uses vApps to make virtual machine (VM) creation and management easy and flexible. vApps are essentially containers for VMs and can be used in many ways. One of the most common uses of a vApp is to group similar VMs together for easy management. Or you can put VMs that form a multi-tier application into the same vApp for greater control. You can create up to 128 vApps within a virtual data centre (VDC) and intelligently network them to create complex architectures that can be managed easily.</p>
 <p>In this article we'll look at how to create a vApp from scratch.</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">VMware Cloud Director 10.1</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">vCloud Director 9.7</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
-
+<h2 id="creating-a-vapp">Creating a vApp</h2>
 <ol>
 <li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which you want to create the vApp.</p>
 </li>
@@ -135,37 +125,6 @@
 <li><p>When you've finished adding VMs to your vApp, in the <em>New vApp</em> dialog box, click <strong>Create</strong>.</p>
 </li>
 </ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
-
-<ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to create the vApp.</p>
-</li>
-<li><p>In the left navigation panel, select <strong>vApps</strong> to view a list of vApps within the VDC.</p>
-<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
-</li>
-<li><p>Click <strong>New vApp</strong>.</p>
-<p><img src="images/vmw-vcd-btn-new-vapp.png" alt="Build New vApp button"></p>
-</li>
-<li><p>In the <em>New vApp</em> dialog box, enter a <strong>Name</strong> and <strong>Description</strong> for your vApp. The name should be something that will easily identify it if you're building a large environment with multiple vApps.</p>
-<p><img src="images/vmw-vcd-build-vapp.png" alt="Build new vApp dialog box"></p>
-</li>
-<li><p>You can now click <strong>Add Virtual Machine</strong> to populate the vApp with VMs. There are several ways to create a VM:</p>
-<ul>
-<li><p>From an existing template (see <a href="vmw-how-create-vm-from-template.html"><em>How to create a VM from a template</em></a>).</p>
-<p>Catalog creation is covered in <a href="vmw-how-create-catalog.html"><em>How to create a catalog</em></a>.</p>
-</li>
-<li><p>From scratch, without using a template (see <a href="vmw-how-create-vm-from-scratch.html"><em>How to create a virtual machine from scratch</em></a>).</p>
-</li>
-</ul>
-</li>
-<li><p>When you've finished creating your vApp, click <strong>Create</strong>.</p>
-</li>
-<li><p>When your vApp has finished deploying, in the card for the vApp, select <strong>Actions</strong> then <strong>Power On</strong> to power it on.</p>
-</li>
-</ol>
-</section>
-</div>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -177,6 +136,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -195,7 +167,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

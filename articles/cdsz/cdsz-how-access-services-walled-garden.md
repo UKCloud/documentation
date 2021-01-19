@@ -24,7 +24,7 @@ If you've implemented either Secure Remote Access (SRA) or a Cross Domain Securi
 
 ### Intended audience
 
-To complete the steps in this guide you must have vCloud Director administrator access to a virtual data centre (VDC) in the Elevated OFFICIAL security domain.
+To complete the steps in this guide you must have VMware Cloud Director administrator access to a virtual data centre (VDC) in the Elevated OFFICIAL security domain.
 
 ## Before you begin
 
@@ -36,13 +36,13 @@ Before making network changes to your environment, you'll need the following inf
 
 - The IP of the service you require.
 
-To get the last two octets of the IP addresses for the service you require, please raise a Service Request on the UKCloud Elevated Portal.
+To get the last two octets of the IP addresses for the service you require, raise a Service Request on the UKCloud Elevated Portal.
 
 ## Setting up access to UKCloud services
 
-The diagrams below show that you need to add two static routes and an SNAT rule on two edge gateways.
+You need to add two static routes and an SNAT rule on two edge gateways.
 
-1. In vCloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.
+1. In VMware Cloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.
 
 2. Create a static route that directs traffic for the service you need via the Transit IP of your Elevated edge gateway.
 
@@ -62,7 +62,7 @@ The diagrams below show that you need to add two static routes and an SNAT rule 
 
 Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:
 
-- [*How to license Windows VMs using the UKCloud Key Management Server*](../shared/shared-how-setup-kms.md)
+- [*How to license Windows VMs using the UKCloud Key Management Server*](../shared/shared-how-setup-kms.md)
 
 - [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](../shared/shared-how-connect-windows-update.md)
 

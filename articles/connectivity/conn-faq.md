@@ -44,7 +44,7 @@ Networks such as the internet and PSN, Janet and HSCN community networks are bro
 
 ## Why doesn't the UKCloud SLA extend to external connectivity such as PSN and the internet?
 
-The UKCloud SLA provides our customers with assurance that our platform is designed, engineered and operated to deliver high levels of availability and uptime. We've invested in skilled and experienced people, ISO 20000-certified IT service management processes and best-in-class technology - all of which underpin our cloud services and enable us to deliver high availability.
+The UKCloud SLA provides our customers with assurance that our platform is designed, engineered and operated to deliver high levels of availability and uptime. We've invested in skilled and experienced people, ISO 20000-certified IT service management processes and best-in-class technology - all of which underpin our cloud services and enable us to deliver high availability.
 
 When it comes to external connectivity, we depend on services provided by third parties. In some cases (such as PSN and Janet), we have no choice over which connectivity provider to work with, as this is mandated by the government framework. These services are available only as managed connections, so our SLA can only extend to the inside interface of the managed router deployed and maintained by the third party. Although we work closely with third-party providers to engineer a highly available solution, the actual delivery of the service is outside our control.
 
@@ -60,9 +60,9 @@ With these addresses, you can establish:
 
 - Source NAT - all outbound traffic to other resources on the internet will appear to come from one of these IPv4 addresses.
 
-- Destination NAT - all inbound traffic from other resources on the internet must be targeted at one of these IPv4 addresses. You can translate the internet IPv4 address to an internal (RFC 1918) IP address assigned to a virtual machine (VM) or, preferably, to the edge gateway load balancer.
+- Destination NAT - all inbound traffic from other resources on the internet must be targeted at one of these IPv4 addresses. You can translate the internet IPv4 address to an internal (RFC 1918) IP address assigned to a virtual machine (VM) or, preferably, to the edge gateway load balancer.
 
-- A VPN - an IPsec VPN can be established between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
+- A VPN - an IPsec VPN can be established between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
 
 For PSN connections to either of our cloud platforms, the PSN Authority has provided us with a [limited allocation of PSN IP addresses](https://www.gov.uk/government/publications/public-services-network-psn-ip-address-allocation). The PSN Authority requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN Authority. UKCloud will work with customers to facilitate the allocation of their PSN IP addresses to their services hosted on our cloud platform.
 
@@ -70,9 +70,9 @@ With the PSN IP addresses, you can establish:
 
 - Source NAT - all outbound traffic to other resources on the PSN will appear to come from one of these IPv4 addresses.
 
-- Destination NAT - all inbound traffic from other resources on the PSN must be targeted at one of these IPv4 addresses. You can translate the PSN IPv4 address to an internal (RFC 1918) IP address assigned to a VM or, preferably, to the edge gateway load balancer.
+- Destination NAT - all inbound traffic from other resources on the PSN must be targeted at one of these IPv4 addresses. You can translate the PSN IPv4 address to an internal (RFC 1918) IP address assigned to a VM or, preferably, to the edge gateway load balancer.
 
-- A VPN - an IPsec VPN can be established between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
+- A VPN - an IPsec VPN can be established between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
 
 As both PSN and RIPE IPv4 addresses are in short supply, you must use your addresses as efficiently as possible. Before additional IPv4 addresses can be allocated, you'll need to demonstrate your use of:
 
@@ -80,7 +80,7 @@ As both PSN and RIPE IPv4 addresses are in short supply, you must use your addre
 
 - Host headers - enabling web servers to accept connections for a number of URLs via a single externally routable IP address
 
-- VPN tunnelling - enabling the use of internal (RFC 1918) IP addresses for non-production services such as UAT and development
+- VPN tunnelling - enabling the use of internal (RFC 1918) IP addresses for non-production services such as UAT and development
 
 ## Can additional purchased IP addresses be transferred to another VDC?
 
@@ -124,7 +124,7 @@ This depends on the use case.
 
 - If you have a VDC in each UKCloud data centre:
 
-  - Configure an IPsec VPN between the edge gateway instances of each VDC. Once the VPN has been established, VMs within the VDC can connect to each other using their private (RFC 1918) IP addresses.
+  - Configure an IPsec VPN between the edge gateway instances of each VDC. Once the VPN has been established, VMs within the VDC can connect to each other using their private (RFC 1918) IP addresses.
 
 - If you have VMs in one UKCloud data centre that need to access published services in the other (for example, VMs hosted in DC1 might choose to access Cloud Storage in DC2):
 

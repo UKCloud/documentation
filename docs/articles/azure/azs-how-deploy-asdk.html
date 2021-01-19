@@ -141,7 +141,7 @@ In the Value column, enter TRUE. This will show correct disk IDs in Get-Physical
 <p>Install Windows Server 2016 to the OS disk implementing a static IP address.</p>
 <p><strong>Physical Note:</strong> This the RAID 1 disk, the following drivers must be downloaded, extracted and installed:</p>
 <p><a href="https://software.cisco.com/download/release.html?mdfid=286281356&amp;softwareid=283291009&amp;os=Windows%202016%2064-bit&amp;release=3.0(3a)&amp;relind=AVAILABLE&amp;rellifecycle=&amp;reltype=latest">https://software.cisco.com/download/release.html?mdfid=286281356&amp;softwareid=283291009&amp;os=Windows%202016%2064-bit&amp;release=3.0(3a)&amp;relind=AVAILABLE&amp;rellifecycle=&amp;reltype=latest</a></p>
-<p><strong>Virtualisation Note:</strong> VMware tools must be installed and the VMware Tools drivers must be exported onto the c: drive (VMwareKB), also disks have to be online and initialised as MBR</p>
+<p><strong>Virtualisation Note:</strong> VMware tools must be installed and the VMware Tools drivers must be exported onto the c: drive (VMwareKB), also disks have to be online and initialised as MBR</p>
 <h2 id="step-3---initial-setup">Step 3 - Initial setup</h2>
 <p>Download the appliance and prep the virtual disk (vhdx) for the ASDK.</p>
 <p>Implement the following steps from the guide: <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script">https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script</a></p>
@@ -230,7 +230,7 @@ In the Value column, enter TRUE. This will show correct disk IDs in Get-Physical
 </tr>
 <tr>
 <td>Type</td>
-<td>Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com</td>
+<td>Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com</td>
 </tr>
 <tr>
 <td>Static IP</td>
@@ -258,20 +258,20 @@ at &lt;ScriptBlock&gt;, &lt;No file&gt;: line 37
 At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 + Invoke-EceAction -RolePath $masterRole -ActionType $actionPlan @d ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- + CategoryInfo : NotSpecified: (:) [Invoke-EceAction], InterfaceInvocationFailedException
- + FullyQualifiedErrorId : OperationFailed,Microsoft.HyperV.PowerShell.Commands.StartVM,CloudEngine.Cmdlets.InvokeCmdlet
+ + CategoryInfo : NotSpecified: (:) [Invoke-EceAction], InterfaceInvocationFailedException
+ + FullyQualifiedErrorId : OperationFailed,Microsoft.HyperV.PowerShell.Commands.StartVM,CloudEngine.Cmdlets.InvokeCmdlet
 Invoke-EceAction : Action: Invocation of step PhysicalMachineAndInitialConfiguration.15 failed. Stopping invocation of action plan.
 At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 + Invoke-EceAction -RolePath $masterRole -ActionType $actionPlan @d ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
- + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
+ + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
+ + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
 Invoke-EceAction : Action: Invocation of step PhysicalMachineAndInitialConfiguration failed. Stopping invocation of action plan.
 At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 + Invoke-EceAction -RolePath $masterRole -ActionType $actionPlan @d ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
- + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
+ + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
+ + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
 </code></pre>
 <p>Verification of Physical kit showed that Virtualisation is in fact enabled but Hyper-V is not starting on boot.</p>
 <p>To verify run you can run systeminfo and it will show whether BIOS is set correctly etc... In our case it was set correctly. Only Boot settings were not.</p>
@@ -360,6 +360,19 @@ cd C:\CloudDeployment\Setup
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -378,7 +391,7 @@ cd C:\CloudDeployment\Setup
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

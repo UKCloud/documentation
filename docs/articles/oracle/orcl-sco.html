@@ -146,7 +146,7 @@ backups.</p>
 <h2 id="service-background">Service background</h2>
 <p>UKCloud for Oracle Software is underpinned by Oracle compute infrastructure. UKCloud manage the physical infrastructure and utilise our partner, Infomentum, to provide support and management from the hypervisor level and above.</p>
 <p>Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager.</p>
-<p>VM creation is currently available via service request to ensure that the platform remains balanced — this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see <a href="orcl-ref-bug-self-service.html"><em>Oracle cloud self-service funtionality</em></a>.</p>
+<p>VM creation is currently available via service request to ensure that the platform remains balanced — this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see <a href="orcl-ref-bug-self-service.html"><em>Oracle cloud self-service functionality</em></a>.</p>
 <p>All service requests will be triaged by UKCloud. We reserve the right to escalate a request to Infomentum for support. If you have not have a managed service contract with Infomentum, please do not contact them directly.</p>
 <p>UKCloud actively capacity-manages the cloud platform to ensure you have access to the resources you request.</p>
 <p>The UKCloud platform is designed using sites, regions and zones. The relationship between them is shown below:</p>
@@ -180,7 +180,7 @@ backups.</p>
 <h2 id="bring-your-own-firewall">Bring Your Own Firewall</h2>
 <p>Bring Your Own Firewall is currently not available for UKCloud for Oracle Software installations; however, you can have BYOF within UKCloud for VMware and connect it to the UKCloud for Oracle Software edge gateway via an IPsec VPN.</p>
 <h2 id="protective-monitoring">Protective monitoring</h2>
-<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.</p>
+<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.</p>
 <p>We don't provide Protective Monitoring services above the hypervisor (for example, for your VM). Components above this infrastructure are your own responsibility to provide an appropriate protective monitoring capability.</p>
 <p>In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.</p>
 <h2 id="platform-management">Platform management</h2>
@@ -188,11 +188,11 @@ backups.</p>
 <ul>
 <li><p><strong>Oracle Enterprise Manager.</strong> The graphical interface for the creation and management of the Oracle environment.</p>
 </li>
-<li><p><strong>vCloud Director API.</strong> Enables the programmatic creation and management of the Oracle edge gateway.</p>
+<li><p><strong>vCloud API.</strong> Enables the programmatic creation and management of the Oracle edge gateway.</p>
 </li>
-<li><p><strong>vCloud Director Graphical UI.</strong> Provides a graphical interface to access the vCloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).</p>
+<li><p><strong>VMware Cloud Director tenant portal.</strong> Provides a graphical interface to access the VMware Cloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).</p>
 </li>
-<li><p><strong>UKCloud Portal.</strong> Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.</p>
+<li><p><strong>UKCloud Portal.</strong> Enables access to the VMware Cloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of service configuration information. Access to incident and request management is also possible through the Portal.</p>
 </li>
 </ul>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.</p>
@@ -247,6 +247,19 @@ backups.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -265,7 +278,7 @@ backups.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

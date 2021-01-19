@@ -35,12 +35,9 @@ This article provides a list of Service Definitions for UKCloud services. The li
 [Cross Domain Security Zone](../cdsz/cdsz-sd.md)<br>
 [Dedicated Compute v2](../dedicated-compute/dc-sd.md)<br>
 [Disaster Recovery as a Service](../draas/draas-sd.md)<br>
-[High Performance Compute](../hpc/hpc-sd.md)<br>
 [Migration to the Cloud](../migration/migr-sd.md)<br>
-[Multi-Cloud Backup Storage](../other/other-sd-mcbs.md)<br>
 [Neustar DDoS Protection from UKCloud](../connectivity/conn-sd-ddosprotect.md)<br>
 [Neustar UltraDNS from UKCloud](../connectivity/conn-sd-ultradns.md)<br>
-[Portworx Enterprise from UKCloud](../openshift/oshift-sd-portworx.md)<br>
 [Secure Remote Access](../sra/sra-sd.md)<br>
 [Security Operations Service](../soc/soc-sd.md)<br>
 [UKCloud Desktop as a Service](../daas/daas-sd.md)<br>
@@ -64,7 +61,6 @@ This article provides a list of Service Definitions for UKCloud services. The li
 ### Support services
 
 [Professional Services](../pro-services/ps-sd.md)<br>
-[Cloud Optimisation from UKCloud](../managed-services/man-sd-optimisation.md)
 
 ## Terms and conditions
 

@@ -102,9 +102,9 @@
 </div>
 <h2 id="ukcloud-deployed-red-hat-openshift-container-platform">UKCloud deployed Red Hat OpenShift Container Platform</h2>
 <p>This deployment option provides a full Red Hat OCP that has been deployed by UKCloud and is ready to consume without delay.</p>
-<p>We will deploy an OpenShift cluster that contain multiple nodes: master nodes for the control plane, infrastructure nodes for infrastructure services and application nodes for application servers. The number of nodes within your cluster will dictate the monthly charge.</p>
-<h3 id="master-and-infrastructure-nodes">Master and infrastructure nodes</h3>
-<p>OpenShift requires a minimum of three master nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services such as ingress controllers, metrics, developer console and aggregated logging.</p>
+<p>We will deploy an OpenShift cluster that contain multiple nodes: control plane nodes, infrastructure nodes for infrastructure services and application nodes for application servers. The number of nodes within your cluster will dictate the monthly charge.</p>
+<h3 id="control-plane-and-infrastructure-nodes">Control Plane and infrastructure nodes</h3>
+<p>OpenShift requires a minimum of three control plane nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services such as ingress controllers, metrics, developer console and aggregated logging.</p>
 <h3 id="application-nodes">Application nodes</h3>
 <p>You'll need at least one application node to run your application and we recommend a minimum of two nodes for resilience.</p>
 <p>Application node pricing includes a Red Hat OpenShift subscription component.</p>
@@ -123,21 +123,21 @@
 </ul>
 <section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
 
-<p><strong>Master nodes:</strong> 3 x m1.medium<br>
+<p><strong>Control plane nodes:</strong> 3 x m1.medium<br>
 <strong>Infrastructure nodes:</strong> None<br>
 <strong>Application nodes:</strong> 2 x m1.small (monthly pricing)<br>
 <strong>Persistent volume storage used:</strong> 60GiB Tier 2 persistent volume storage<br></p>
-<p><strong>Master node cost per month</strong></p>
-<p>Three m1.medium master nodes cost 3 x £0.170 per hour = <strong>£0.510</strong> per hour.</p>
-<p>In an average <strong>730</strong> hour month, the monthly master node cost works out at:</p>
+<p><strong>Control plane node cost per month</strong></p>
+<p>Three m1.medium control plane nodes cost 3 x £0.170 per hour = <strong>£0.510</strong> per hour.</p>
+<p>In an average <strong>730</strong> hour month, the monthly control plane node cost works out at:</p>
 <table>
 <thead>
 <tr>
 <th>Hours in operation</th>
 <th>x</th>
-<th>Master node cost</th>
+<th>Control plane node cost</th>
 <th>=</th>
-<th>Master node cost per month</th>
+<th>Control plane node cost per month</th>
 </tr>
 </thead>
 <tbody>
@@ -161,11 +161,11 @@
 <p><strong>Storage cost per month</strong></p>
 <p>Tier 2 persistent block storage costs <strong>£0.10</strong> per GiB month, so the storage cost for 60GiB is <strong>£6.00</strong>.</p>
 <p><strong>Total basic cost</strong></p>
-<p>Calculate the total basic cost by adding together the master, infrastructure and application node and storage costs.</p>
+<p>Calculate the total basic cost by adding together the control plane, infrastructure and application node and storage costs.</p>
 <table>
 <thead>
 <tr>
-<th>Master node cost</th>
+<th>Control plane node cost</th>
 <th>+</th>
 <th>Infrastructure cost</th>
 <th>+</th>
@@ -193,21 +193,21 @@
 </section>
 <section id="tabpanel_CeZOj-G++Q_tab-2" role="tabpanel" data-tab="tab-2" aria-hidden="true" hidden="hidden">
 
-<p><strong>Master nodes:</strong> 3 x m1.medium<br>
+<p><strong>Control plane nodes:</strong> 3 x m1.medium<br>
 <strong>Infrastructure nodes:</strong> 2 x m1.medium<br>
 <strong>Application nodes:</strong> 2 x m1.small node and 1 x r1.medium (monthly pricing)<br>
 <strong>Persistent volume storage used:</strong> 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br></p>
-<p><strong>Master node cost per month</strong></p>
-<p>Three m1.medium master nodes cost 3 x £0.170 per hour = <strong>£0.510</strong> per hour.</p>
-<p>In an average <strong>730</strong> hour month, the monthly master node cost works out at:</p>
+<p><strong>Control plane node cost per month</strong></p>
+<p>Three m1.medium control plane nodes cost 3 x £0.170 per hour = <strong>£0.510</strong> per hour.</p>
+<p>In an average <strong>730</strong> hour month, the monthly control plane node cost works out at:</p>
 <table>
 <thead>
 <tr>
 <th>Hours in operation</th>
 <th>x</th>
-<th>Master node cost</th>
+<th>Control plane node cost</th>
 <th>=</th>
-<th>Master node cost per month</th>
+<th>Control plane node cost per month</th>
 </tr>
 </thead>
 <tbody>
@@ -252,11 +252,11 @@
 <p>Tier 1 persistent block storage costs <strong>£0.25</strong> per GiB month, so the storage cost for 40GiB is <strong>£10.00</strong>.</p>
 <p>The total cost of storage is £6.00 + £10.00 = <strong>£16.00</strong> per month.</p>
 <p><strong>Total basic cost</strong></p>
-<p>Calculate the total basic cost by adding together the master, infrastructure and application node and storage costs.</p>
+<p>Calculate the total basic cost by adding together the control plane, infrastructure and application node and storage costs.</p>
 <table>
 <thead>
 <tr>
-<th>Master node cost</th>
+<th>Control plane node cost</th>
 <th>+</th>
 <th>Infrastructure cost</th>
 <th>+</th>
@@ -284,21 +284,21 @@
 </section>
 <section id="tabpanel_CeZOj-G++Q_tab-3" role="tabpanel" data-tab="tab-3" aria-hidden="true" hidden="hidden">
 
-<p><strong>Master nodes:</strong> 3 x m1.medium<br>
+<p><strong>Control plane nodes:</strong> 3 x m1.medium<br>
 <strong>Infrastructure nodes:</strong> 2 x m1.medium<br>
 <strong>Application nodes:</strong> 2 x m1.small node (monthly pricing) and 1 x r1.medium (hourly pricing)<br>
 <strong>Persistent volume storage used:</strong> 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br></p>
-<p><strong>Master node cost per month</strong></p>
-<p>Three m1.medium master nodes cost 3 x £0.170 per hour = <strong>£0.510</strong> per hour.</p>
-<p>In an average <strong>730</strong> hour month, the monthly master node cost works out at:</p>
+<p><strong>Control plane node cost per month</strong></p>
+<p>Three m1.medium control plane nodes cost 3 x £0.170 per hour = <strong>£0.510</strong> per hour.</p>
+<p>In an average <strong>730</strong> hour month, the monthly control plane node cost works out at:</p>
 <table>
 <thead>
 <tr>
 <th>Hours in operation</th>
 <th>x</th>
-<th>Master node cost</th>
+<th>Control plane node cost</th>
 <th>=</th>
-<th>Master node cost per month</th>
+<th>Control plane node cost per month</th>
 </tr>
 </thead>
 <tbody>
@@ -364,11 +364,11 @@
 <p>Tier 1 persistent block storage costs <strong>£0.25</strong> per GiB month, so the storage cost for 40GiB is <strong>£10.00</strong>.</p>
 <p>The total cost of storage is £6.00 + £10.00 = <strong>£16.00</strong> per month.</p>
 <p><strong>Total basic cost</strong></p>
-<p>Calculate the total basic cost by adding together the master, infrastructure and application node and storage costs.</p>
+<p>Calculate the total basic cost by adding together the control plane, infrastructure and application node and storage costs.</p>
 <table>
 <thead>
 <tr>
-<th>Master node cost</th>
+<th>Control plane node cost</th>
 <th>+</th>
 <th>Infrastructure cost</th>
 <th>+</th>
@@ -444,6 +444,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -462,7 +475,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

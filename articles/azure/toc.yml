@@ -108,9 +108,7 @@
       href: azs-ref-pricing.md
     - name: Service Definition
       href: azs-sd.md
-  - name: Service Scope
-    items:
-    - name: UKCloud for Microsoft Azure Service Scope
+    - name: Service Scope
       href: azs-sco.md
   - name: Videos
     items:

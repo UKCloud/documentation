@@ -2,9 +2,9 @@
 title: Changes in VMware Cloud Director 10.1
 description: Provides information about the changes in VMware Cloud Director 10.1
 services: vmware
-author: Sue Highmoor
+author: shighmoor
 reviewer: shighmoor
-lastreviewed: 24/09/2020
+lastreviewed: 05/01/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,13 +19,7 @@ toc_mdlink: vmw-ref-vcd-10-1.md
 
 ## Overview
 
-Ahead of our planned upgrade to VMware Cloud Director 10.1, this article provides information about the changes in this new version.
-
-## Upgrading your edge gateways
-
-In preparation for the VMware Cloud Director upgrade, you must upgrade your edge gateways to the latest available version. For more information, see [*How to upgrade your edge gateway*](vmw-how-upgrade-edge.md).
-
-Prior to commencing the VMware Cloud Director upgrades in the various regions, we will upgrade any remaining older edges. You can find information about edge upgrade dates and overall VMware Cloud Director 10.1 rollout dates on the [UKCloud Service Status page](https://status.ukcloud.com/).
+This article provides information about the changes introduced in VMware Cloud Director 10.1.
 
 ## New features
 
@@ -53,13 +47,13 @@ VMware Cloud Director 10.1 provides the following new features.
 
   - Ability to delete Shadow VMs
 
-- Terraform vCloud Director Provider, updated to version 2.8, enables you to access infrastructure-as-code
+- Terraform VMware Cloud Director Provider, updated to version 2.8, enables you to access infrastructure-as-code
 
 For more information about new features in VMware Cloud Director 10.1, see <https://cloudsolutions.vmware.com/assets/blta3bfbeafb64db8f8/What_s_New_with_VMware_Cloud_Director_10.1.pdf>.
 
 ## Legacy UI
 
-The Legacy UI is no longer available in vCloud Director 10.1. All tasks can now be performed using the HTML5-based Tenant Portal, removing the requirement for the Flash browser plugin.
+The Legacy UI is no longer available in VMware Cloud Director 10.1. All tasks can now be performed using the HTML5-based Tenant Portal, removing the requirement for the Flash browser plugin.
 
 ## Browser support
 
@@ -77,7 +71,7 @@ VMware Cloud Director 10.1 is compatible with the current major and previous maj
 
 VMware Cloud Director 10.1 supports the VMware Cloud Director API version 34.0 (see <https://code.vmware.com/apis/912/vmware-cloud-director>). For information about the changes to the VMware Cloud Director API for this version, see [VMare Cloud Director API Schema Differences](https://code.vmware.com/apis/912/vmware-cloud-director/doc/diff/index.html).
 
-VMware Cloud Director 10.1 is the last release of VMware Cloud Director to support vCloud Director API 30.0. The 30.0 and 31.0 versions of the API are deprecated in this release and will not be supported in future releases.
+VMware Cloud Director 10.1 is the last release of VMware Cloud Director to support vCloud API 30.0. The 30.0 and 31.0 versions of the API are deprecated in this release and will not be supported in future releases.
 
 The following API versions are still available:
 
@@ -93,7 +87,7 @@ The following API versions are still available:
 
 ### Sandbox for testing vCloud API
 
-UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/login/>) has been upgraded to vCloud Director 10.1.2.
+UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/login/>) has been upgraded to VMware Cloud Director 10.1.2.
 
 To gain access to the sandbox, raise a Service Request via My Calls on the UKCloud Portal.
 
@@ -104,9 +98,25 @@ To gain access to the sandbox, raise a Service Request via My Calls on the UKClo
 
 Known issues you may experience following the upgrade to VMware Cloud Director 10.1 include:
 
-- Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal. If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.
+### Known issues in VMware Cloud Director
 
-- Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal.
+- If you enable the **Enable VM to join domain** options, you will not be able to amend the hardware configuration of the VM. There is currently no workaround for this issue, so you should ensure that you do not enable this setting.
+
+- Guest customisation is failing in the following:
+
+  - For existing VMs - Windows 2012, Windows 2012R2 and Windows 2016
+
+  - For new VMs - Windows 2012, Windows 2012R2
+
+  When setting a new administrator password and/or changing the IP address then forcing re-customisation at power-on, the settings are ignored.
+
+  The workaround is to deploy the template, but before powering on, change the VM type to Windows 2016. Power on using Force Customization.
+
+### Known issues in the UKCloud Portal
+
+- Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal (see [*How to restrict access to VMware Cloud Director*](../portal/ptl-how-restrict-access-vcloud-api.md)). If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.
+
+- Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal (see [*How to view storage profile usage*](vmw-how-view-storage-usage.md)).
 
 For other known issues with VMware Cloud Director 10.1, see the [VMware Cloud Director 10.1 Release Notes](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html).
 

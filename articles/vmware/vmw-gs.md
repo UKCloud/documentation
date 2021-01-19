@@ -26,7 +26,7 @@ The Getting Started Guide provides an overview of UKCloud for VMware and gives y
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to the UKCloud Portal and VMware Cloud Director/vCloud Director. To build compute services and virtual data centres (VDCs) you must be a VMware Cloud Director/vCloud Director administrator.
+To complete the steps in this guide you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a VMware Cloud Director administrator.
 
 ## Before you begin
 
@@ -180,9 +180,9 @@ After creating your compute service, the next step is to create one or more VDCs
 
     ![Build VDC Status - failed](images/vmw-portal-build-vdc-fail.png)
 
-## Logging in to VMware Cloud Director/vCloud Director
+## Logging in to VMware Cloud Director
 
-After you've created your compute service and VDC, you can start to build up your applications. To do this, you must log in to VMware Cloud Director/vCloud Director, which you can access from the UKCloud Portal.
+After you've created your compute service and VDC, you can start to build up your applications. To do this, you must log in to VMware Cloud Director, which you can access from the UKCloud Portal.
 
 1. In the Portal navigation panel expand **VMware Cloud** then select your compute service.
 
@@ -192,29 +192,17 @@ After you've created your compute service and VDC, you can start to build up you
 
     ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-3. VMware Cloud Director/vCloud Director launches in your browser window. The version depends on where your service is located within the UKCloud platform.
-
-    **VMware Cloud Director 10.1**
+3. VMware Cloud Director launches in your browser window. The version depends on where your service is located within the UKCloud platform.
 
     ![VMware Cloud Director Home page](images/vmw-vcd10.1-home-page.png)
 
-    **vCloud Director 9.7**
+4. The tasks you can perform in VMware Cloud Director will depend on the permissions you have been granted.
 
-    ![vCloud Director Home page](images/vmw-vcd-home-page.png)
-
-4. The tasks you can perform in VMware Cloud Director/vCloud Director will depend on the permissions you have been granted.
-
-    For more information, see [*How to manage permissions for VMware Cloud Director/vCloud Director*](vmw-how-manage-vcd-permissions.md).
+    For more information, see [*How to manage permissions for VMware Cloud Director*](vmw-how-manage-vcd-permissions.md).
 
 5. To return to the UKCloud Portal, click your user name in the top right corner, and select **Log out**.
 
-    **VMware Cloud Director 10.1**
-
     ![VMware Cloud Director Log out option](images/vmw-vcd10.1-logout-link.png)
-
-    **vCloud Director 9.7**
-
-    ![vCloud Director Log out option](images/vmw-vcd-logout-link.png)
 
 ## Next steps
 
@@ -226,7 +214,7 @@ In this *Getting Started Guide*, you've learned:
 
 - How to create a compute service and VDC to set up your environment
 
-- How to log in to VMware Cloud Director/vCloud Director so that you can start to build your applications
+- How to log in to VMware Cloud Director so that you can start to build your applications
 
 Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at [*How to build a virtual machine with UKCloud for VMware*](vmw-gs-build-vm-vcd.md), which provides a walkthrough of the process.
 
@@ -271,7 +259,7 @@ This section provides a glossary of terms specific to UKCloud for VMware.
 **company**&nbsp;&nbsp;A UKCloud construct to organise business accounts. Each company can own
 multiple accounts.
 
-**compute service**&nbsp;&nbsp;A top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogues, users and resources.
+**compute service**&nbsp;&nbsp;A top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogues, users and resources.
 
 **UKCloud for VMware**&nbsp;&nbsp;A UKCloud IaaS service that provides a compute infrastructure
 specifically designed to deliver traditional enterprise applications to the cloud.
