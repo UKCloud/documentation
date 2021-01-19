@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to install and use Red Hat Update Infrastructure (RHUI 3) </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to install and use Red Hat Update Infrastructure (RHUI 3) ">
+    <meta name="generator" content="docfx 2.53.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/shared/shared-how-install-rhui-vm-3.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-install-and-use-red-hat-update-infrastructure-rhui-3">How to install and use Red Hat Update Infrastructure (RHUI 3)</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article provides advice on how to update your existing Red Hat virtual machines (VMs) to target UKCloud's approved Red Hat Update Infrastructure (RHUI).</p>
+<p>As of November 2020, UKCloud implemented the latest version of RHUI to continue to provide automatic updates to our Red Hat customers on our Assured OFFICIAL and Elevated OFFICIAL security domains. This provides benefits such as the reliable availability of patch updates and Red Hat approved OS templates without having to subscribe each VM to Red Hat. Significant changes from the old RHUI include the following:</p>
+<ul>
+<li><p>The RPM installer files no longer distinguish between Assured and Elevated. A single file (per operating system version) works in both environments (providing DNS resolution is configured correctly).</p>
+</li>
+<li><p>Replication of packages between Assured and Elevated is significantly faster.</p>
+</li>
+<li><p>Root CA signed SSL certificates are now in use for HTTPS communication to the RHUI Content Delivery Systems (CDS).</p>
+</li>
+</ul>
+<p>This latest version of RHUI replaces the previous version (from 2015), which is soon to be decommissioned.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article is intended for customers who have migrated to RHUI v3. If you need information for RHUI 2, see <a href="shared-how-install-rhui-vm.html"><em>How to install and use Red Hat Update Infrastructure (RHUI 2)</em></a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>There are two prerequisites for performing this operation:</p>
+<ul>
+<li><p>The VM can resolve to the RHUI CDS DNS records (contact UKCloud Support for the IP addresses for the Elevated records). You can achieve this several different ways:</p>
+<ul>
+<li><p>Use internet DNS records to resolve the Assured CDS</p>
+</li>
+<li><p>Configure an A record on your local DNS for the Elevated CDS</p>
+</li>
+<li><p>Configure an <code>/etc/hosts</code> file entry with the appropriate information</p>
+</li>
+</ul>
+</li>
+<li><p>All VMs using the service must be able to access the required CDS servers on port TCP/443 (HTTPS). Ensure that you have configured SNAT and firewall policies on your edge gateway device. If you have any questions about this, contact UKCloud Support.</p>
+</li>
+</ul>
+<h2 id="installing-red-hat-update-infrastructure">Installing Red Hat Update Infrastructure</h2>
+<h3 id="locations">Locations</h3>
+<p>You can browse the list of installer RPM files <a href="https://rh-cds.ukcloud.com/redhat/client_rpms/">here</a> or download the required files directly from the following locations:</p>
+<ul>
+<li><p><a href="https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL6-STANDARD-2.0-3.noarch.rpm">RHEL 6 Standard</a></p>
+</li>
+<li><p><a href="https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL6-EUS-2.0-2.noarch.rpm">RHEL 6 EUS</a></p>
+</li>
+<li><p><a href="https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL7-STANDARD-2.0-5.noarch.rpm">RHEL 7 Standard</a></p>
+</li>
+<li><p><a href="https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL7-EUS-2.0-2.noarch.rpm">RHEL 7 EUS</a></p>
+</li>
+<li><p><a href="https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL8-STANDARD-2.0-3.noarch.rpm">RHEL 8 Standard</a></p>
+</li>
+</ul>
+<p>If you require the high availability (HA) package, raise a Service Request directly via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal and we'll provide you with a download location.</p>
+<h3 id="vms-not-currently-configured-to-use-any-rhui">VMs not currently configured to use any RHUI</h3>
+<p>If your VM doesn't currently have any UKCloud repository configuration already in place and you have not installed either the old RHUI or the new RHUI RPMs:</p>
+<ol>
+<li><p>Download the appropriate file (listed <a href="#locations">above</a>) to your VM (or place the contents in an accessible location such as an NFS share or FTP server).</p>
+</li>
+<li><p>Install the relevant RPM. For example, for RHEL7 Standard:</p>
+<p><code>yum install UKCloud-Client-RHEL7-STANDARD-2.0-5.noarch.rpm</code></p>
+</li>
+<li><p>Clean yum and the cache and confirm the new repositories are available:</p>
+<p><code>yum clean all; rm -rf /var/cache/yum; yum repolist</code></p>
+</li>
+<li><p>Test the connection to the RHUI CDS is working:</p>
+<p><code>yum update</code></p>
+</li>
+</ol>
+<h3 id="vms-using-a-previous-version-of-rhui">VMs using a previous version of RHUI</h3>
+<p>If your VMs are configured to use the old RHUI (identified by an installation RPM being installed with a reference to IL2 or IL3 (original titles for Assured and Elevated security domains)), migrate to the new RHUI:</p>
+<ol>
+<li><p>Erase the old RHUI RPM.</p>
+<ul>
+<li><p>For Assured VMs:</p>
+<p><code>yum erase $(rpm -qa|grep IL2-Client)</code></p>
+</li>
+<li><p>For Elevated VMs:</p>
+<p><code>yum erase $(rpm -qa|grep IL3-Client)</code></p>
+</li>
+</ul>
+</li>
+<li><p>Download the appropriate file (listed <a href="#locations">above</a>) to your VM (or place the contents in an accessible location such as an NFS share or FTP server).</p>
+</li>
+<li><p>Install the relevant RPM. For example, for RHEL7:</p>
+<p><code>yum install UKCloud-Client-RHEL7-STANDARD-2.0-5.noarch.rpm</code></p>
+</li>
+<li><p>Clean yum and the cache and confirm the new repositories are available:</p>
+<p><code>yum clean all; rm -rf /var/cache/yum; yum repolist</code></p>
+</li>
+<li><p>Test the connection to the RHUI CDS is working:</p>
+<p><code>yum update</code></p>
+</li>
+</ol>
+<h2 id="upgrading-the-rpms-to-a-newer-version">Upgrading the RPMs to a newer version</h2>
+<p>From time to time, UKCloud updates the versions of the RHUI installation RPMs due to new repositories being added that may prove useful to you. The latest installation RPMs will always be available <a href="https://rh-cds.ukcloud.com/redhat/client_rpms/">here</a>. However, if a new RPM is available, you don't have to upgrade if you don't want to use the additional repositories; your existing configuration will continue to work without issue.</p>
+<p>After downloading the appropriate file to the VM, you can use <code>yum update</code> to upgrade to the newer version of the installation RPM. For example, for RHEL7 Standard:</p>
+<p><code>yum update UKCloud-Client-RHEL7-STANDARD-2.0-X.noarch.rpm</code></p>
+<p>Where <code>X</code> is the new release.</p>
+<p>This will overwrite the files and certificates associated with the original RPM and allow the VM to access the new repositories.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>The primary issues you may encounter are:</p>
+<h3 id="dns-failure">DNS Failure</h3>
+<p>Check the DNS lookup is working and you have the correct entry for Assured and Elevated.</p>
+<h3 id="443-not-accessible">443 not accessible</h3>
+<ol>
+<li><p>Check your firewall configuration, including local firewalls (<code>iptables</code>) and edge gateway.</p>
+</li>
+<li><p>Ensure you have the correct destination IP entry for Assured or Elevated.</p>
+</li>
+</ol>
+<h3 id="incorrect-version">Incorrect version</h3>
+<p>Ensure you have installed the correct RPM for your release.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

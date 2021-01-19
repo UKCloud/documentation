@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access Red Hat update servers </title>
+    <title>How to access Red Hat update servers (RHUI 2) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access Red Hat update servers ">
+    <meta name="title" content="How to access Red Hat update servers (RHUI 2) ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,11 +91,13 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-red-hat-update-servers">How to access Red Hat update servers</h1>
+<h1 id="how-to-access-red-hat-update-servers-rhui-2">How to access Red Hat update servers (RHUI 2)</h1>
 
 <h2 id="overview">Overview</h2>
 <p>UKCloud has implemented a Red Hat Update Infrastructure (RHUI) to provide automatic updates to our Red Hat customers in the Assured OFFICIAL and Elevated OFFICIAL security domains. The benefits over the existing system are the reliable availability of patch updates and Red Hat approved OS templates.</p>
 <p>Before you attempt to establish a connection to RHUI, you need to make sure your virtual machines (VMs) can communicate with the RHUI, which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the articles for creating <a href="../vmware/vmw-how-create-nat-rules.html">NAT</a> and <a href="../vmware/vmw-how-create-firewall-rules.html">firewall</a> rules.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article is intended for customers who have not yet migrated to RHUI v3. If you need information for RHUI 3, see <a href="shared-how-access-redhat-update-servers-3.html"><em>How to access Red Hat update servers (RHUI 3)</em></a>.</p>
 <h2 id="new-red-hat-vm-templates">New Red Hat VM templates</h2>
 <p>Certain Red Hat templates within the public catalog are automatically configured to receive updates from UKCloud's RHUI. The templates are:</p>
 <ul>
