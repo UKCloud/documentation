@@ -194,15 +194,15 @@ Customers are responsible for:
 
 ### UKCloud Azure Stack Hub support
 
-#### UKCloud Azure Stack Hub service reporting
+#### Service reporting
 
 - **Visibility.** Customers can use the UKCloud Azure Stack Hub portal to configure multiple views of their estate and monitor the health of their services in real time. This includes utilisation of individual components, alerts and recent operations.
 
 - **Billing.** We provide customers with monthly bills covering their monthly spend.
 
-#### UKCloud Azure Stack Hub protective monitoring
+#### Protective Monitoring
 
-We've implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below.
+We've implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below.  For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
 We don't provide Protective Monitoring services above the hypervisor (for example, for a VM). It's the customers responsibility to act at this level.
 
@@ -223,7 +223,7 @@ The service levels are as follows:
 >
 > We highly recommend duplicating workloads across two separate Azure Stack Hub regions for higher availability.
 
-#### Azure Stack Hub service background
+#### Service background
 
 - VMs are fully provisioned.
 
