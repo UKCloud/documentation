@@ -17,6 +17,9 @@ toc_mdlink: shared-how-install-rhui-vm.md
 
 # How to install Red Hat Update Infrastructure (RHUI 2)
 
+-[!NOTE]
+-RHUI 2 is scheduled for decommission. Consider updating to RHUI 3, see [*How to install and use Red hat Update Infrastructure (RHUI 3)*](shared-how-to-install-rhui-vm-3.md) for instructions.
+
 ## Overview
 
 This article provides advice on how to update your existing Red Hat virtual machines (VMs) to target UKCloud's approved Red Hat Update Infrastructure (RHUI).
