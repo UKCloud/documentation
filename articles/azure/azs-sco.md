@@ -79,7 +79,7 @@ Customers can deploy VMs using the UKCloud Azure Stack Hub portal and other tool
 
 ##### Storage options
 
-There are several ways to address storage in UKCloud for Microsoft Azure:
+There are several ways to address storage requirements in UKCloud for Microsoft Azure:
 
 - Azure Blob Storage (Page). Page blobs are optimised for representing IaaS disks and supporting random writes that are up to 1 TB in size. An IaaS disk attached to an Azure Stack Hub VM is a Virtual Hard Disk (VHD) stored as a page blob.
 
