@@ -5,6 +5,7 @@ services: connectivity
 author: mwarner
 reviewer: nstobbart
 lastreviewed: 16/12/2020
+
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -19,9 +20,9 @@ toc_mdlink: conn-faq-janet.md
 
 ## What is Janet?
 
-Janet is the UK's research and education network. It is connected to all education organisations and research councils.
+Janet is the UK's research and education network. It's connected to all education organisations and research councils.
 
-Janet is a free-of-charge network that eligible UKCloud customers can use; there are no ingress or egress charges for this network. It's presented from our Assured platform and has a current bandwidth capacity of 1Gbps, scalable to 100s of Gbps. 
+Janet is a free-of-charge network that eligible UKCloud customers can use; there are no ingress or egress charges for this network. It's presented from our Assured platform and has a current bandwidth capacity of 1Gbps. 
 
 ## Who is entitled to connect to the Janet network?
 
@@ -29,11 +30,11 @@ Any organisation that is either publicly funded or receives government or EU fun
 
 ## Can I use UKCloud's Janet connection without using cloud services provided by UKCloud?
 
-No. We can only provide a Janet connection to customers who use our cloud services, such as our Infrastructure as a Service (IaaS) or Platform as a Service (PaaS) offerings.
+No. We can only provide a Janet connection to customers who use our cloud services.
 
 ## Does UKCloud provide local connections to the Janet network?
 
-No. We can't arrange Janet connections to third-party offices. We only enable our customers and partners to provide services via the Janet network, using applications and solutions hosted on the UKCloud Assured OFFICIAL cloud platform.
+No. We can't arrange Janet connections to third-party offices. We only enable our customers and partners to provide services via the Janet network, using applications and solutions hosted on the UKCloud Assured OFFICIAL security domain.
 
 ## Does UKCloud support dedicated Janet connections?
 
@@ -47,9 +48,9 @@ To place an order for a Janet connection, raise a Service Request via the [My Ca
 
 No. Janet connections are available only in our Assured OFFICAL security domain.
 
-## I have multiple NSX Edges and need to configure a specific Janet route. How do I set this up?
+## I have multiple edges and need to configure a specific Janet route, how do I set this up?
 
-To configure specific routing to allow access to each network, a routing table is available from UKCloud support.
+To configure specific routing to allow access to each network, contact UKCloud support for a routing table.
 
 ## If I already have a Janet connection, can I use cloud services provided by UKCloud?
 
@@ -59,9 +60,9 @@ Yes. A pre-existing connection to Janet will reduce the amount of time required 
 
 We provide an SLA for availability of our core services such as UKCloud for VMware and UKCloud for OpenStack. We cannot provide an SLA on external services as they are outside of our control.
 
-## How can I whitelist source Janet IP addresses on the edge gateway?
+## How can I create an allow-list of source Janet IP addresses on the edge gateway?
 
-You can log in to VMware Cloud Director via the UKCloud Portal and edit the firewall settings to allow or deny incoming connections from external IP addresses. See the [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md) for more details.
+You can log in to VMware Cloud Director via the UKCloud Portal and edit the firewall settings to allow or deny incoming connections from external IP addresses. See [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md) for more details.
 
 ## Can I use UKCloud as a transit or gateway between different connections?
 
@@ -73,9 +74,9 @@ There is no minimum commitment for Janet connectivity.
 
 ## How will I be billed?
 
-There is no charge for Janet connectivity or for the first IP address for each data centre you connect only to the Janet network.
+There is no charge for Janet connectivity or for the first IP address for each data centre you connect to the Janet network.
 
-Additional IP addresses will need to be justified and an admin fee will apply of £20 per additional IP address that is set up.
+Additional IP addresses will need to be justified and an administration fee will apply of £20 per additional IP address that is set up.
 
 There is no charge for bringing your own Janet IP addresses.
 
