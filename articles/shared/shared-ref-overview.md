@@ -27,11 +27,17 @@ UKCloud provides various shared services, including update servers, licensing se
 
 - [*How to access CentOS update servers*](shared-how-access-centos-update-servers.md)
 
-- [*How to access Red Hat update servers*](shared-how-access-redhat-update-servers.md)
+- *How to access Red Hat update servers*
+
+  - [RHUI 2](shared-how-access-redhat-update-servers.md)
+
+  - [RHUI 3](shared-how-access-redhat-update-servers-3.md)
 
 - [*How to access Ubuntu update servers*](shared-how-access-ubuntu-update-servers.md)
 
-- [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](shared-how-connect-windows-update.md) | [Video](shared-vid-wsus.md)
+- [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](shared-how-connect-windows-update.md)
+
+  - [Video](shared-vid-wsus.md)
 
 ### Licensing
 
@@ -43,7 +49,9 @@ UKCloud provides various shared services, including update servers, licensing se
 
 - [*How to license Microsoft applications/software on the UKCloud platform*](shared-how-license-microsoft.md)
 
-- [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md) | [Video](shared-vid-licensing-kms.md)
+- [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md)
+
+  - [Video](shared-vid-licensing-kms.md)
 
 ### Network Time Protocol servers
 
