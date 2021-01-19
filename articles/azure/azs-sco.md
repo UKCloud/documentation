@@ -36,9 +36,9 @@ UKCloud can deliver an Azure service using either our own Azure Stack Hub from t
 
 This single-tenant service is provisioned from the UKCloud platform, and is owned, maintained and supported by UKCloud as with all other UKCloud technology stacks.
 
-### Service implementation
+### UKCloud Azure Stack Hub Service implementation
 
-#### UKCloud Azure Stack Hub service management
+#### Service management
 
 - API. Enables customers to programmatically interact with UKCloud for Microsoft Azure resources.
 
@@ -48,7 +48,7 @@ This single-tenant service is provisioned from the UKCloud platform, and is owne
 
 - VM Extensions. UKCloud for Microsoft Azure supports virtual machine extensions that provide post deployment management for automation (for example, PowerShell DSC).
 
-#### UKCloud Azure Stack Hub service options
+#### Service options
 
 Customers can build a tailored solution to meet their requirements by mixing and matching service options. This choice enables the scaling up or down of resources to meet requirements changes, without service or size lock-in.
 
