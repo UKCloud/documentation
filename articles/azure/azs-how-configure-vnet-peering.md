@@ -58,28 +58,30 @@ First, you'll need to create two virtual networks. These virtual networks will b
 
 5. In the **Create virtual network** blade, enter the following information:
 
-   - **Name** - The name of the virtual network.
-
-   - **Address Space** - The virtual network's address range in CIDR notation.
-
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+   
+    - **Name** - The name of the virtual network.
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
+     ![Create new virtual network](images/azs-portal-vnet-config-1.png)
+
+    - **Address Space** - The virtual network's address range in CIDR notation.
+
+   - **Subnet** - The subnet's address range in CIDR notation (for example, 10.10.0.0). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
+
    - **Subnet Name** - The name of the first subnet within the virtual network.
 
-   - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
-
-     ![Create new virtual network](images/azs-browser-create-virtual-network.png)
+     ![Create new virtual network](images/azs-portal-vnet-config-2.png)
 
 > [!NOTE]
 > When creating the second virtual network, make sure to use a different address space than the first, otherwise they will not be able to communicate 
 
 6. Click **Create**.
 
-7. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section.
+7. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section, orit appears inside the resource group.
 
 8. Select your virtual network from the list.
 
@@ -87,31 +89,21 @@ First, you'll need to create two virtual networks. These virtual networks will b
 
 10. Repeat the steps above for the second virtual network, but use different address spaces.
 
+![Create new virtual network](images/azs-portal-vnet-overview.png)
+
 ## Create a Virtual Machine in each Virtual Network
 
 After creating each virtual network, create a virtual machine in each virtual network.
 
-For more detailed instructions on how to create a virtal machine, see the [*How to create a virtual machine using the UKCloud Azure Stack Hub portal*](azs-how-create-vm-portal.md) guide.
-
-1. In the favourites panel, select **Create a resource**.
-
-    ![New option in favourites panel](images/azsp_newmenu.png)
-
-2. In the *New* blade, select **Compute**.
-
-    ![Compute option in New blade](images/azsp_newblade.png)
-
-3. In the *Compute* blade, select the template that you want to use for your VM. Then click **Create**.
-
-    ![List of VM images in Compute blade](images/azsp_computeblade.png)
-
-4. 
+For more detailed instructions on how to create a virtal machine, see the [*How to create a virtual machine using the UKCloud Azure Stack Hub portal*](azs-how-create-vm-portal.md).
 
 ## Configure virtual network peering
 
-1. Go into one of the vnets and click on the peering tab and then click add
+1. Click on one of the created virtual netowrks and click **Add**
 
-2. Enter in desired perameters inside peering, naming it something good
+![Configure virtual netork peering](images/azs-portal-peering-1.png)
+
+2. In the Add peering, enter the following information:
 
 3. Select the destinaiton vnet and  name that peering something good
 
