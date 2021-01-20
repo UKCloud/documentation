@@ -105,9 +105,20 @@ For more detailed instructions on how to create a virtal machine, see the [*How 
 
 2. In the Add peering, enter the following information:
 
+    - **Name**
+    - **Peer Details**
+    - **Subscription**
+    - **Virtual Network**
+    - **Name** of peering rule on  other virtual
+    - **Allow virtual network access**
+    - **Allow virtual network access**
+    - **Allow forwarded traffic**
+    - **Allow forwarded traffic**
+    - **Configure gateway traffic**
+
 3. Select the destinaiton vnet and  name that peering something good
 
-4. Click ok
+4. Click **OK**
 
 ### Testing connection
 
