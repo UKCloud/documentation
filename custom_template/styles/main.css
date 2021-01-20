@@ -2,7 +2,7 @@
   --color-foreground: #ccd5dc;
   --color-foreground-navbar: #ddd;
   --color-foreground-toc: #ccd5dc;
-  --color-foreground-toc-input: #e3e3e3;
+  --color-foreground-input: #e3e3e3;
   --color-foreground-alert: #ccd5dc;
   --color-foreground-code: #ccd5dc;
   --color-background: #1e1e1e;
@@ -25,7 +25,7 @@ body.light-theme {
   --color-foreground: #30545f;
   --color-foreground-navbar: #36464e;
   --color-foreground-toc: #666666;
-  --color-foreground-toc-input: #666666;
+  --color-foreground-input: #666666;
   --color-foreground-alert: #30545f;
   --color-foreground-code: #c7254e;
   --color-background: #ffffff;
@@ -396,6 +396,7 @@ body .toc {
 }
 
 .navbar .navbar-form input {
+  color: var(--color-foreground-input);
   background: 0;
   border: 0;
   box-shadow: none;
@@ -567,7 +568,7 @@ input:checked + .slider:before {
 }
 
 .toc-filter input {
-  color: var(--color-foreground-toc-input);
+  color: var(--color-foreground-input);
   background: 0;
   border: 0;
   box-shadow: none;
