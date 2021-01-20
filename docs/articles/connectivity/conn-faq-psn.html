@@ -8,7 +8,7 @@
     <title>PSN connectivity FAQs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PSN connectivity FAQs ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,11 +96,9 @@
 <h2 id="general">General</h2>
 <h3 id="what-is-psn">What is PSN?</h3>
 <p>The Public Services Network (PSN) is the government's high-performance network, which helps public sector organisations work together, reduce duplication and share resources.</p>
-<h3 id="what-is-the-difference-between-psn-assured-and-psn-protected">What is the difference between PSN Assured and PSN Protected?</h3>
-<p>PSN Assured carries non-encrypted traffic at the network and application layers, whereas PSN Protected carries traffic that contains a shared IPsec encrypted overlay.</p>
 <h3 id="who-is-entitled-to-connect-to-the-psn-network">Who is entitled to connect to the PSN network?</h3>
-<p>Any organisation that is approved by the PSN can connect.</p>
-<p>If you want PSN connectivity, you must have proven to the PSN that your infrastructure is sufficiently secure to connect to or be consumed via the PSN. This means that you must have successfully completed the process of obtaining a PSN Code of Connection (CoCo).</p>
+<p>Any organisation that is approved by the PSN authority can connect.</p>
+<p>If you want PSN connectivity, you must have proven to the PSN authority that your infrastructure is sufficiently secure to connect to or be consumed via the PSN. This means that you must have successfully completed the process of obtaining a PSN Code of Connection (CoCo).</p>
 <p>In addition, if you're a partner selling a managed service over the PSN connectivity, you must either:</p>
 <ul>
 <li><p>Have your own PSN CoCo and PSN Code of Practice (CoP) in place, or</p>
@@ -121,6 +119,8 @@
 <p>You must have a CoCo before you can apply for a CoP and list the UKCloud Service Numbers in your application. For the current CoP application form, click <a href="https://www.gov.uk/government/publications/psn-code-of-practice-cop">here</a>. You must have your CoP in place before we can accept your order.</p>
 <h3 id="what-are-ukclouds-psn-service-numbers">What are UKCloud's PSN service numbers?</h3>
 <p>Click <a href="https://www.gov.uk/government/publications/public-services-network-psn-service-compliance/psn-compliant-services">here</a> for a list of our PSN approved services.</p>
+<h3 id="what-happened-to-psn-assured-and-psn-protected">What happened to PSN Assured and PSN Protected?</h3>
+<p>Previously, PSN Assured carried non-encrypted traffic at the network and application layers, whereas PSN Protected carried traffic that contained a shared IPsec encrypted overlay. However PSN has now been flattened into one network as detailed in <a href="https://docs.ukcloud.com/articles/connectivity/conn-ref-psn-flattening.html">PSN flattening</a></p>
 <h3 id="do-you-have-any-general-connectivity-questions">Do you have any general connectivity questions?</h3>
 <p>You can find information about other connectivity methods and answers to general connectivity questions in the <a href="conn-faq.html"><em>General Connectivity FAQs</em></a>.</p>
 <h2 id="service">Service</h2>
@@ -134,9 +134,9 @@
 <h3 id="can-i-have-a-combination-of-government-community-networks-and-private-accredited-networks-into-the-same-ukcloud-solution">Can I have a combination of government community networks and private accredited networks into the same UKCloud solution?</h3>
 <p>Yes, subject to compliance with information assurance requirements, as only organisations that demonstrate compliance with the appropriate <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/193704/PSN_Compliance_Zero_tolerance_approach.pdf">code of connections</a> (for example PSN compliance certificate or HSCN Connection Agreement) can have access to government community networks.</p>
 <p>You should be careful not to misconfigure self‑managed components of the solution (OS, application) to 'bridge' between government community networks (PSN) and private networks. This concern must be addressed by accreditation of the customer-managed components - preferably via PSN Accreditation. Local departmental accreditation by a public-sector customer is also allowed. This applies to solutions on both our Assured OFFICIAL and Elevated OFFICIAL cloud platforms.</p>
-<p>The UKCloud Assured OFFICIAL cloud platform features connectivity to the PSN Assured Service (previously IL2). This is provided via resilient, high‑capacity PSN circuits from VMB installed into each of our data centres.</p>
-<p>The UKCloud Elevated OFFICIAL cloud platform is connected to the encrypted PSN Protected Service (previously IL3) via the IPED. This is provided using circuits from Vodafone into each UKCloud data centre. The PSN Protected Service also provides onward connectivity to legacy government community networks such as PNN and CJX.</p>
-<p>For both PSN services, we use our data centre interconnectivity (DCI) to provide additional resilience through triangulation.</p>
+<p>The UKCloud Assured OFFICIAL security domain features connectivity to the PSN Assured Service (previously IL2). This is provided via resilient, high‑capacity PSN circuits from Virgin Media installed into each of our data centres.</p>
+<p>The UKCloud Elevated OFFICIAL security domain is connected to the encrypted PSN Protected Service (previously IL3) via the IPED. This is provided using circuits from Vodafone into each UKCloud data centre. The PSN Protected Service also provides onward connectivity to legacy government community networks such as PNN and CJX.</p>
+<p>For both PSN services, we use our data centre interconnects (DCI) to provide additional resilience through triangulation.</p>
 <h3 id="how-have-you-implemented-your-gsi-connections">How have you implemented your GSI connections?</h3>
 <p>UKCloud uses Vodafone for connectivity to the encrypted PSN Protected Service into the Elevated OFFICIAL cloud platform. This connection uses the IPED to provide native connectivity to GSI and other legacy government community networks, including GSE, PNN and CJX.</p>
 <p>Scalable, resilient PSN Protected Service connections are installed into each of our data centres. We use our DCI to provide additional resilience through triangulation.</p>
@@ -173,13 +173,13 @@
 </ul>
 <h3 id="is-the-psn-connection-into-ukcloud-shared-by-all-environments-connected-to-the-psn">Is the PSN connection into UKCloud shared by all environments connected to the PSN?</h3>
 <p>PSN is a shared connection and all UKCloud PSN‑enabled customers use a shared bandwidth model.</p>
-<h3 id="does-each-psn-environment-have-a-maximum-limit-assigned-to-it">Does each PSN environment have a maximum limit assigned to it?</h3>
-<p>We don't publish limits associated with PSN bandwidth as we capacity‑manage this link to ensure there is always enough bandwidth for our customers. Consumption of PSN bandwidth is based on the actual volume of data transferred (outbound) per month.</p>
+<h3 id="does-each-psn-connection-have-a-maximum-bandwidth-limit-assigned-to-it">Does each PSN connection have a maximum bandwidth limit assigned to it?</h3>
+<p>We don't publish limits associated with PSN bandwidth as we capacity manage the link to ensure there is always enough bandwidth for our customers. Consumption of PSN bandwidth is based on the actual volume of data transferred (outbound) per month.</p>
 <h3 id="what-is-the-notice-period-for-psn-termination">What is the notice period for PSN termination?</h3>
 <p>The notice period for PSN termination is 30 days.</p>
 <h3 id="how-do-i-make-dns-changes">How do I make DNS changes?</h3>
 <p>You'll need to complete the PSN DNS order form, PSN domain name authorisation request form and the PSN customer change form. You can find these forms at: <a href="https://www.gov.uk/government/publications/psn-dns-change-forms">https://www.gov.uk/government/publications/psn-dns-change-forms</a></p>
-<p>You then need to submit the completed forms to: <a href="mailto:gcforderdesk@vodafone.com">gcforderdesk@vodafone.com</a></p>
+<p>You then need to submit the completed forms to: <a href="mailto:frameworkschange@vodafone.com">frameworkschange@vodafone.com</a></p>
 <p>If you don't have an existing contract with Vodafone, a billing account and remedy name will need to be created.</p>
 <h3 id="how-do-i-order-psn-connectivity">How do I order PSN connectivity?</h3>
 <p>When placing an order through your account manager or when raising a service request, you need to provide evidence of your entitlement to connect to the PSN.</p>
@@ -198,7 +198,7 @@
 <p>We charge for each separate connection on the UKCloud platform.</p>
 <p>UKCloud pricing is available via the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <h3 id="how-does-psn-for-policing-work">How does PSN for Policing work?</h3>
-<p>Cryptographic overlays on top of the PSN network are created that prevent PSN customers from seeing the closed Police network.</p>
+<p>Cryptographic overlays on top of the PSN network are created that prevent PSN customers from seeing the closed Police network. See the <a href="conn-faq-psn-police.html"><em>PSN for Policing and enhanced regime FAQs</em></a>.</p>
 <p>Please engage with a UKCloud Cloud Architect for more details.</p>
 <h3 id="what-is-the-suggested-maximum-transition-unit-mtu-for-psn">What is the suggested Maximum Transition Unit (MTU) for PSN?</h3>
 <p>We suggest an MTU size of 1400 bytes for further information. For more information, see this <a href="conn-ref-ddos-mitigation.html"><em>DDoS mitigation causing VPN failures and slow applications</em></a>.</p>
@@ -211,7 +211,7 @@
 </li>
 </ul>
 <h3 id="i-am-a-government-organisation-what-do-i-need-to-show-you-to-get-psn-connectivity-for-my-ukcloud-environment">I am a government organisation, what do I need to show you to get PSN connectivity for my UKCloud environment?</h3>
-<p>You must do either of the following:</p>
+<p>You must do one of the following:</p>
 <ul>
 <li><p>Supply us with a project specific PSN Service Provision Compliance Certificate</p>
 </li>
