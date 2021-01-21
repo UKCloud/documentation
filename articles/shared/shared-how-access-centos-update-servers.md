@@ -40,7 +40,7 @@ We provide both CentOS standard repositories and EPEL (Extra Packages for Enterp
 > [!IMPORTANT]
 > CentOS6.x is deprecated. You can view details of the CentOS Public Mirror Site [here](http://mirror.centos.org/centos/6.10/readme).
 
-For both Assured and Elevated OFFICIAL security domains, you can configure your systems to reference the following server: `https://rh-cds.ukcloud.com`. In Assured, this domain is configured in DNS, so you'll automatically be able to resolve it. For Elevated, you'll need to contact UKCloud Support to get the correct IP address and add an entry to `/etc/hosts` on your systems to be able to resolve it.
+For both Assured and Elevated OFFICIAL security domains, you can configure your systems to reference the following server: `https://rh-cds.ukcloud.com`. In Assured, this domain is configured in DNS, so you'll automatically be able to resolve it. For Elevated, you'll need to contact UKCloud Support to get the correct IP address and add an entry to `/etc/hosts` on your systems, or add an entry to your own internal DNS, to be able to resolve it.
 
 To access CentOS base files, you have 2 options.
 
