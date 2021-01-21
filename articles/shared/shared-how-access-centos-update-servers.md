@@ -19,7 +19,7 @@ toc_mdlink: shared-how-access-centos-update-servers.md
 
 ## Overview
 
-Each of the two security domains within the UKCloud cloud presents its own challenges regarding patching and updating CentOS machines. This document explains how to access the CentOS repository servers to receive updates.
+Each of the two security domains within the UKCloud platform presents its own challenges regarding patching and updating CentOS machines. This article explains how to access the CentOS repository servers to receive updates.
 
 Before you attempt to establish a connection to the CentOS repo servers, you need to make sure your virtual machines (VMs) can communicate with the CentOS server, which exists outside of your cloud organisation.
 
@@ -27,7 +27,7 @@ This may involve editing your NAT and firewall settings within your edge gateway
 
 ## Assured OFFICIAL platform
 
-UKCloud's Assured OFFICIAL security domain is internet facing, so you have the option to configure your VM to connect to the internet, and use a standard update tool (such as Spacewalk RHN) or the pubicly accessible CentOS mirrors or you can use UKCloud-managed repositories.
+UKCloud's Assured OFFICIAL security domain is internet facing, so you have the option to configure your VM to connect to the internet and use a standard update tool (such as Spacewalk RHN) or the pubicly accessible CentOS mirrors, or you can use UKCloud-managed repositories.
 
 ## Elevated OFFICIAL platform
 
@@ -37,10 +37,10 @@ Our Elevated OFFICIAL security domain doesn't natively connect to the internet, 
 
 We provide both CentOS standard repositories and EPEL (Extra Packages for Enterprise Linux) for CentOS 6, 7  and 8 on our Elevated OFFICIAL security domain.
 
->[!NOTE]
->Please be aware CentOS6.x is deprecated! You can view details on the CentOS Public Mirror Site [here](http://mirror.centos.org/centos/6.10/readme)
+> [!IMPORTANT]
+> CentOS6.x is deprecated. You can view details of the CentOS Public Mirror Site [here](http://mirror.centos.org/centos/6.10/readme).
 
-For both Assured and Elevated OFFICIAL security domains, you can configure your systems to reference the following server `https://rh-cds.ukcloud.com` In Assured, this domain is configured in DNS so you will automatically be able to resolve it. For Elevated, you will need to UKCloud Support to get the correct IP address and add an entry to `/etc/hosts` on your systems to be able to resolve it.  
+For both Assured and Elevated OFFICIAL security domains, you can configure your systems to reference the following server: `https://rh-cds.ukcloud.com`. In Assured, this domain is configured in DNS, so you'll automatically be able to resolve it. For Elevated, you'll need to contact UKCloud Support to get the correct IP address and add an entry to `/etc/hosts` on your systems to be able to resolve it.
 
 To access CentOS base files, you have 2 options.
 
