@@ -44,7 +44,9 @@ For both Assured and Elevated OFFICIAL security domains, you can configure your 
 
 To access CentOS base files, you have 2 options.
 
-1) Create a file called `centos-<x>.repo` in `/etc/yum.repos.d`, where `<x>` is either 6, 7 or 8 depending on your version of CentOS, and populate it with the following:
+#### Create your own configuration file
+
+Create a file called `centos-<x>.repo` in `/etc/yum.repos.d`, where `<x>` is either 6, 7 or 8 depending on your version of CentOS, and populate it with the following:
 
 **CentOS 6:**
 
@@ -103,6 +105,7 @@ sslverify=1
 ```
 
 **CentOS 8:**
+
 ```none
 [centos-8-base]
 name=centos-8-base
@@ -156,6 +159,7 @@ sslverify=1
 ```
 
 **CentOS 8:**
+
 ```none
 [epel-8]
 name=Extra Packages for Enterprise Linux 8 - $basearch
@@ -166,7 +170,9 @@ gpgkey=https://rh-cds.ukcloud.com/centos/keys/RPM-GPG-KEY-EPEL-8
 sslverify=1
 ```
 
-2) Download the repo configuration file directly from the repo server, using the following command (where `<x>` is either 6, 7 or 8 depending on your version of CentOS):
+#### Download the configuration file
+
+Download the repo configuration file directly from the repo server, using the following command (where `<x>` is either 6, 7 or 8 depending on your version of CentOS):
 
 **CentOS base updates and extras:**
 
