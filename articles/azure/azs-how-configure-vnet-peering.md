@@ -81,7 +81,7 @@ First, you'll need to create two virtual networks. These virtual networks will b
 
 6. Click **Create**.
 
-7. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section, orit appears inside the resource group.
+7. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section, or it appears inside the resource group.
 
 8. Select your virtual network from the list.
 
@@ -105,22 +105,29 @@ For more detailed instructions on how to create a virtal machine, see the [*How 
 
 2. In the Add peering, enter the following information:
 
-    - **Name**
-    - **Peer Details**
-    - **Subscription**
-    - **Virtual Network**
-    - **Name** of peering rule on  other virtual
-    - **Allow virtual network access**
-    - **Allow virtual network access**
-    - **Allow forwarded traffic**
-    - **Allow forwarded traffic**
-    - **Configure gateway traffic**
+    - **Name** - The name of the connection from A-B.
 
-3. Select the destinaiton vnet and  name that peering something good
+    - **Peer Details** - ?
 
-4. Click **OK**
+    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
+
+    - **Virtual Network** - The virtual network you want to peer to.
+
+    - **Name** - The name of the connection from B-A.
+
+    - **Allow virtual network access** - Allows access between virtual networks.
+
+    - **Allow forwarded traffic** - This setting allows the peer’s forwarded traffic into your virtual network.
+
+    - **Configure gateway traffic** - Allows the peer virtual network to use your virtual network gateway.
+
+![Configure virtual netork peering](images/azs-portal-peering-2.png)
+
+3. Click **OK**
 
 ### Testing connection
+
+{ - could link to new part of guide for connecting to vm
 
 To test the connection you need to allow your pc through the nsg to use rdp and access the vm
 
@@ -140,13 +147,30 @@ To test the connection you need to allow your pc through the nsg to use rdp and 
 
 3. Click **Add**
 
->[!NOTE]
->repeat for each nsg
+> [!NOTE]
+> repeat for each nsg
 
-4. then go to connect, rdp, then download rdp file and run it
+}
 
-5. log in with creds you created for the VM
+To test the connection by pinging one of the virtual machines from the other. To do this, some firewall rules needs to be allowed in each virtual machine.
 
-6. go into the firewall settings and allow "file and printer sharing (echo request - icmpv4-in)"
+1. Go to the virtual machine and connect to it by downloading the RDP file.
 
-7. ping the other network :) 
+**image**
+
+> [!NOTE]
+> The device you are connecting from must be allowed through the virtual machine NSG on port 3389.
+
+2. Launch the RDP file and log in with the correct credentials for the virtual machine.
+
+3. Access the firewall advanced security (Settings>Update & Security>Windows Security>Firewall & network protection>Advanced settings) 
+
+4. Click on **Inbound Rules**, scroll down to *file and printer sharing (echo request - icmpv4-in)* and allow it through the firewall
+
+**image**
+
+5. Repeat for each virtual machine
+
+6. From one of the virtual machines, the connection can be tested by pinging the other.
+
+**image**
