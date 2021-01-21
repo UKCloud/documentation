@@ -56,17 +56,17 @@ Configuring agents             | R       | A/C      |                           
 
 ### Patching as a Service - Applying patches
 
-Patching element                                              | UKCloud | Customer | UKCloud - Professional Services | Notes
---------------------------------------------------------------|---------|----------|---------------------------------|------
-Scheduled scanning customer VMs for applicable patches        | A/R     | I        |                                 |
-Approving patches                                             | C       | A/R      |                                 | Although UKCloud will validate the quality of patches being supplied, the customer is ultimately responsible for ensuring the application of any patches will not corrupt their environments
-Taking a snapshot of a VM prior to applying patches           | A/R     | I        |                                 |
-Ensuring the success of VM snapshot prior to applying patches | A/R     | R/A      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
-Applying customer approved patches                            | A/R     | I        |                                 |
-Ensuring the success of customer approved patches             | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
-Restoring from snapshot if patching fails                     | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
-Identification of patches outside of my defined patching cycle| I       | A/R      |                                 | Customer will notify UKCloud via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal of any specific patches to be applied outside of the normal schedule of the service
-Application of patches outside of my defined patching cycle   | A/R     | I        |                                 | Subject to UKCloud's standard Service Request service target and patches being made publicly available by the vendor
+Patching element                                                  | UKCloud | Customer | UKCloud - Professional Services | Notes
+------------------------------------------------------------------|---------|----------|---------------------------------|------
+Scheduled scanning of customer VMs for applicable patches         | A/R     | I        |                                 |
+Approving patches                                                 | C       | A/R      |                                 | Although UKCloud will validate the quality of patches being supplied, the customer is ultimately responsible for ensuring the application of any patches will not corrupt their environments
+Taking a snapshot of a VM prior to applying patches               | A/R     | I        |                                 |
+Ensuring the success of VM snapshot prior to applying patches     | A/R     | R/A      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+Applying customer approved patches                                | A/R     | I        |                                 |
+Ensuring the success of customer approved patches                 | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+Restoring from snapshot if patching fails                         | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+Identification of patches outside customer defined patching cycle | I       | A/R      |                                 | Customer will notify UKCloud via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal of any specific patches to be applied outside of the normal schedule of the service
+Application of patches outside customer defined patching cycle    | A/R     | I        |                                 | Subject to UKCloud's standard Service Request service target and patches being made publicly available by the vendor
 
 ## General support and troubleshooting
 
