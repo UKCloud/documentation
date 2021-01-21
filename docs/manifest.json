@@ -5635,7 +5635,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-patching-faq.html",
-          "hash": "pVDsdDR5jUjmJJhVoQbhyQ=="
+          "hash": "zUuwUczPVWEmUemxwRKyIA=="
         }
       },
       "is_incremental": false,
@@ -5647,7 +5647,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-patching-sco.html",
-          "hash": "2j5dM63wsattBxPQZcVw7Q=="
+          "hash": "TRTeXHx6mz8zzPqSFJi7GA=="
         }
       },
       "is_incremental": false,
