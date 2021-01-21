@@ -78,6 +78,10 @@ To make best use of existing tooling within those Linux distributions, our servi
 
 Each patching window is followed by 18 hours of issue resolution time, in which issues during automatic patching are investigated and may involve actions such as manual application of patches, and so on. Following the end of this window, the customer will be contacted by UKCloud Support with the current state. If more time is required, this will be arranged at that point.
 
+### What if I require additional patches outside of my standard patching cycle?
+
+The customer is responsible for notifying UKCloud of any patches (including critical patches) they require to be applied outside of their standard patching cycle via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. UKCloud will not proactively scan for or apply any patches outside of a customer's standard patching cycle. Should a customer raise a Service Request for patches to be applied outside of their standard patching cycle, our standard [Service Request resolution target](https://docs.ukcloud.com/articles/portal/ptl-how-raise-escalate-service-request.html?q=ticket) will apply, with the clock starting from the point we receive the Service Request **and** a vendor released patch being made publicly available.
+
 ## Management
 
 ### How do I access my patching environment?
