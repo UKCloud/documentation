@@ -17,7 +17,7 @@ toc_mdlink: shared-how-access-redhat-update-servers.md
 
 # How to access Red Hat update servers (RHUI 2)
 
-> [!NOTE]
+> [!IMPORTANT]
 > As RHUI 2 is scheduled for decommission, you should consider updating to RHUI 3. For more information, see [*How to install and use Red hat Update Infrastructure (RHUI 3)*](shared-how-to-install-rhui-vm-3.md).
 
 ## Overview
