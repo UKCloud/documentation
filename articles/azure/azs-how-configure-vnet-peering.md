@@ -156,7 +156,7 @@ To test the connection by pinging one of the virtual machines from the other. To
 
 1. Go to the virtual machine and connect to it by downloading the RDP file.
 
-**image**
+![Configure virtual netork peering](images/azs-portal-peering-5.png)
 
 > [!NOTE]
 > The device you are connecting from must be allowed through the virtual machine NSG on port 3389.
@@ -167,10 +167,22 @@ To test the connection by pinging one of the virtual machines from the other. To
 
 4. Click on **Inbound Rules**, scroll down to *file and printer sharing (echo request - icmpv4-in)* and allow it through the firewall
 
-**image**
+![Configure virtual netork peering](images/azs-portal-peering-3.png)
 
 5. Repeat for each virtual machine
 
 6. From one of the virtual machines, the connection can be tested by pinging the other.
 
-**image**
+![Configure virtual netork peering](images/azs-portal-peering-4.png)
+
+## Hub and Spoke virtual network peering
+
+The hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub.
+
+### Configuring the Hub
+
+1. create hub vnet
+
+2. create vpn gateway in the vnet with a pub ip
+
+3. 
