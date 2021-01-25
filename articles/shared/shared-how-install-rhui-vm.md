@@ -18,7 +18,7 @@ toc_mdlink: shared-how-install-rhui-vm.md
 # How to install Red Hat Update Infrastructure (RHUI 2)
 
 > [!IMPORTANT]
-> As RHUI 2 is [scheduled for decommission](https://status.ukcloud.com/incidents/z5jz2wbcwf4f), you should consider updating to RHUI 3. For more information, see [*How to install and use Red hat Update Infrastructure (RHUI 3)*](shared-how-to-install-rhui-vm-3.md).
+> As RHUI 2 is [scheduled for decommission](https://status.ukcloud.com/incidents/z5jz2wbcwf4f), you should consider updating to RHUI 3. For more information, see [*How to install and use Red hat Update Infrastructure (RHUI 3)*](shared-how-install-rhui-vm-3.md).
 
 ## Overview
 
