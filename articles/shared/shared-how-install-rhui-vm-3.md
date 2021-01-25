@@ -53,6 +53,9 @@ There are two prerequisites for performing this operation:
 
 ### Locations
 
+> [!NOTE]
+> These locations are accessible only from within the UKCloud network.
+
 You can browse the list of installer RPM files [here](https://rh-cds.ukcloud.com/redhat/client_rpms/) or download the required files directly from the following locations:
 
 - [RHEL 6 Standard](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL6-STANDARD-2.0-3.noarch.rpm)

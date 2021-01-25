@@ -17,6 +17,9 @@ toc_mdlink: shared-how-access-redhat-update-servers.md
 
 # How to access Red Hat update servers (RHUI 2)
 
+> [!IMPORTANT]
+> As RHUI 2 is [scheduled for decommission](https://status.ukcloud.com/incidents/z5jz2wbcwf4f), you should consider updating to RHUI 3. For more information, see [*How to install and use Red hat Update Infrastructure (RHUI 3)*](shared-how-to-install-rhui-vm-3.md).
+
 ## Overview
 
 UKCloud has implemented a Red Hat Update Infrastructure (RHUI) to provide automatic updates to our Red Hat customers in the Assured OFFICIAL and Elevated OFFICIAL security domains. The benefits over the existing system are the reliable availability of patch updates and Red Hat approved OS templates.

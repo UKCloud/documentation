@@ -17,6 +17,11 @@ toc_mdlink: shared-ref-rhui.md
 
 # Red Hat Update Infrastructure overview (RHUI 2)
 
+> [!IMPORTANT]
+> As RHUI 2 is [scheduled for decommission](https://status.ukcloud.com/incidents/z5jz2wbcwf4f), you should consider updating to RHUI 3. For more information, see [*How to install and use Red hat Update Infrastructure (RHUI 3)*](shared-how-to-install-rhui-vm-3.md).
+
+## Overview
+
 The Red Hat Update Infrastructure enables the patching of a Red Hat virtual machine without any requirement for registering the virtual machine on the Red Hat network. To achieve this, each Red Hat Enterprise Linux (RHEL) virtual machine must have an RPM installed that configures the RHUI repository servers and provides the required certificates.
 
 The RHUI services consist of:
