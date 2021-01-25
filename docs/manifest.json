@@ -12434,15 +12434,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/shared/shared-how-access-redhat-update-servers.md",
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-access-redhat-update-servers.html",
-          "hash": "8uL/fzMtbiHGZqlNoGx4hw=="
+          "hash": "mfcv/Ev0dnEWJbXUf3f23Q=="
         }
       },
       "is_incremental": false,
@@ -12485,15 +12482,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/shared/shared-how-install-rhui-vm.md",
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-install-rhui-vm.html",
-          "hash": "WKM7tWwY2UVIhePSrEzSeg=="
+          "hash": "+ApJ+Y/TZLUN7REy7fiu5A=="
         }
       },
       "is_incremental": false,
@@ -12584,15 +12578,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/shared/shared-ref-rhui.md",
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-ref-rhui.html",
-          "hash": "pnr54F5PlQLUb9jiE96FMg=="
+          "hash": "I2ncT5NIoZf/AS13Y/mHyg=="
         }
       },
       "is_incremental": false,
