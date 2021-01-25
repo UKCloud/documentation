@@ -185,4 +185,11 @@ The hub is a virtual network in Azure that acts as a central point of connectivi
 
 2. create vpn gateway in the vnet with a pub ip
 
-3. 
+**image of creating vnet gateway**
+
+3. Create spoke vnet
+
+4. add peering to hub
+
+5. add peering to both sides
+
