@@ -137,7 +137,7 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
     - Enter the following command:
 
-          openstack image create  --file <path-to-file-to-upload> --disk-format qcow2 --container-format bare <name-for-upload>
+          openstack image create  --file <path-to-file-to-upload> --disk-format raw --container-format bare <name-for-upload>
 
 5. To create a new volume in the target region based upon the original source volume, enter the following command:
 
