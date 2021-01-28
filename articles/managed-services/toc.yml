@@ -8,6 +8,8 @@
     items:
     - name: Managed Active Directory Support Service Definition
       href: man-sd-ad.md
+    - name: Managed Active Directory Support Service Scope
+      href: man-ad-sco.md
   - name: Managed Remote Desktop Services
     items:
     - name: Managed Remote Desktop Services Support Service Definition
@@ -22,6 +24,8 @@
     items:
     - name: Managed Web Server Service Definition
       href: man-sd-webserver.md
+    - name: Managed Web Server Service Scope
+      href: man-webserver-sco.md
 - name: Extended Network Support
   items:
   - name: Extended Network Support from UKCloud Service Definition
