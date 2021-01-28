@@ -1,6 +1,6 @@
 ---
 title: Managed Active Directory Support Service Scope
-description: Outlines important details regarding UKCloud's Managed Active Directory Support service
+description: Outlines important details regarding UKCloud's Managed Active Directory (AD) Support service
 services: managed-services
 author: Steve Dixon
 reviewer:
@@ -19,108 +19,108 @@ toc_mdlink: man-ad-sco.md
 
 ## About this document
 
-This document is for customers considering purchasing UKCloud's Managed Active Directory Support service.
+This document is for customers considering purchasing UKCloud's Managed Active Directory (AD) Support service.
 
 It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the service.
 
 > [!NOTE]
-> This service is not intended to replace a customers Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
+> This service is not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
 
 ## Scope of supported servers
 
-| Servers Supported                                    |
-| ---------------------------------------------------- |
-| Windows Server 2012+ (all editions which support AD) |
+| Servers Supported                                   |
+|-----------------------------------------------------|
+| Windows Server 2012+ (all editions that support AD) |
 
 ## Supported configurations
 
-| Supported configurations                                                                                                                                        |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Active Directory Domain Services only (e.g. excludes Azure Active Directory, Active Directory Federation Services, Active Directory Certificate Services, etc.) |
-| Multi-Domain Controller (single server Active Directory Services are out of scope)                                                                              |
+| Supported configurations                                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AD Domain Services only (for example, excludes Azure Active Directory, Active Directory Federation Services, Active Directory Certificate Services, and so on) |
+| Multi-Domain Controller (single server Active Directory Services are out of scope)                                                                             |
 
 ## Scope of Managed Active Directory Support service
 
-The following tables outline the boundaries of responsibilities for the Managed Active Directory Support service.
+The following tables outline the boundaries of responsibilities for the Managed AD Support service.
 
 ### Pre-life
 
-| Element                                  | UKC-Support | Customer | UKC Professional Services |
-| ---------------------------------------- | ----------- | -------- | ------------------------- |
-| Design                                   | N           | Y        | £                         |
-| Deploy                                   | N           | Y        | £                         |
-| Post Deployment Config                   | N           | Y        | £                         |
-| Initial instantiation of HA/Clustering   | N           | Y        | £                         |
-| DR planning & design                     | N           | Y        | N                         |
-| Active Directory Trust/Federation Design | N           | Y        | £                         |
+| Element                                | UKCloud Support | Customer | UKCloud Professional Services |
+|----------------------------------------|-----------------|----------|-------------------------------|
+| Design                                 | N               | Y        | £                             |
+| Deploy                                 | N               | Y        | £                             |
+| Post deployment config                 | N               | Y        | £                             |
+| Initial instantiation of HA/clustering | N               | Y        | £                             |
+| Disaster recovery planning and design  | N               | Y        | N                             |
+| AD trust/federation design             | N               | Y        | £                             |
 
 ### Transition
 
-| Element                                                    | UKC-Support | Customer | UKC Professional Services |
-| ---------------------------------------------------------- | ----------- | -------- | ------------------------- |
-| Existing AD validation (quality/integrity)                 | N           | Y        | £                         |
-| Customer schema migrations                                 | N           | Y        | £                         |
-| Implementation of DR                                       | N           | Y        | £                         |
-| Implementation of Active Directory Trust/Federation Design | N           | Y        | £                         |
+| Element                                      | UKCloud Support | Customer | UKCloud Professional Services |
+|----------------------------------------------|-----------------|----------|-------------------------------|
+| Existing AD validation (quality/integrity)   | N               | Y        | £                             |
+| Customer schema migrations                   | N               | Y        | £                             |
+| Implementation of disaster recovery          | N               | Y        | £                             |
+| Implementation of AD trust/federation design | N               | Y        | £                             |
 
 ### In-life - Monitoring
 
-| Element                           | UKC-Support | Customer | UKC Professional Services |
-| --------------------------------- | ----------- | -------- | ------------------------- |
-| IaaS Platform & Networking        | Y           | N        | N                         |
-| VM Availability                   | Y           | N        | N                         |
-| VM CDM Monitoring                 | Y           | N        | N                         |
-| AD Service availability           | Y           | N        | N                         |
-| AD Service status change          | Y           | N        | N                         |
-| AD Schema Backup pass/fail        | Y           | N        | N                         |
-| AD Schema Replication             | Y           | N        | N                         |
-| Monitoring of Trust Relationships | Y           | N        | N                         |
+| Element                           | UKCloud Support | Customer | UKCloud Professional Services |
+|-----------------------------------|-----------------|----------|-------------------------------|
+| IaaS platform and networking      | Y               | N        | N                             |
+| VM availability                   | Y               | N        | N                             |
+| VM CDM monitoring                 | Y               | N        | N                             |
+| AD service availability           | Y               | N        | N                             |
+| AD service status change          | Y               | N        | N                             |
+| AD schema backup pass/fail        | Y               | N        | N                             |
+| AD schema replication             | Y               | N        | N                             |
+| Monitoring of trust relationships | Y               | N        | N                             |
 
 ### In-life - Patching
 
-| Element                                                             | UKC-Support | Customer | UKC Professional Services |
-| ------------------------------------------------------------------- | ----------- | -------- | ------------------------- |
-| Windows Server (y & z stream/in-version patches)                    | Y           | N        | N                         |
-| Windows Server  Major Version Upgrades                              | N           | Y        | £                         |
-| Validation of patches against 3rd party AD integrated apps/services | N           | Y        | £                         |
+| Element                                                               | UKCloud Support | Customer | UKCloud Professional Services |
+|-----------------------------------------------------------------------|-----------------|----------|-------------------------------|
+| Windows Server (y and z stream/in-version patches)                    | Y               | N        | N                             |
+| Windows Server major version upgrades                                 | N               | Y        | £                             |
+| Validation of patches against third-party AD integrated apps/services | N               | Y        | £                             |
 
 ### In-life - Data protection and housekeeping
 
-| Element                               | UKC-Support | Customer | UKC Professional Services |
-| ------------------------------------- | ----------- | -------- | ------------------------- |
-| AD Backup configuration & implementation | Y           | N        | N                         |
-| AD Backup troubleshooting                | Y           | N        | N                         |
-| AD Backup restoration                    | Y           | N        | N                         |
-| AD Restoration troubleshooting           | N           | N        | N                         |
+| Element                                    | UKCloud Support | Customer | UKCloud Professional Services |
+|--------------------------------------------|-----------------|----------|-------------------------------|
+| AD backup configuration and implementation | Y               | N        | N                             |
+| AD backup troubleshooting                  | Y               | N        | N                             |
+| AD backup restoration                      | Y               | N        | N                             |
+| AD restoration troubleshooting             | N               | N        | N                             |
 
 ### In-life - Administration
 
-| Element                                                                                             | UKC-Support | Customer | UKC Professional Services |
-| --------------------------------------------------------------------------------------------------- | ----------- | -------- | ------------------------- |
-| Management and Administration of resource within AD (i.e. Computers, People, Security Groups, etc…) | N           | Y        | £                         |
-| Addition of Active Directory Sites and Subnets                                                      | Y           | N        | N                         |
-| Creation of Group Policies                                                                          | N           | Y        | £                         |
+| Element                                                                                             | UKCloud Support | Customer | UKCloud Professional Services |
+|-----------------------------------------------------------------------------------------------------|-----------------|----------|-------------------------------|
+| Management and administration of resource within AD (computers, people, security groups, and so on) | N               | Y        | £                             |
+| Addition of AD sites and subnets                                                                    | Y               | N        | N                             |
+| Creation of group policies                                                                          | N               | Y        | £                             |
 
 ### In-life - Troubleshooting and remediation
 
-| Element                                                                   | UKC-Support                       | Customer | UKC Professional Services |
-| ------------------------------------------------------------------------- | --------------------------------- | -------- | ------------------------- |
-| AD Replication                                                            | Y                                 | N        | N                         |
-| AD Specific DFS-R (inc. sysvolshare and associated DFS-Replication)       | Y                                 | N        | N                         |
-| Ad-hock performance issues (identification)                               | Y (Basic)                         | N        | N                         |
-| Ad-Hock performance issues (remediation)                                  | Y (Basic)                         | Y        | £                         |
-| AD Services issues (e.g. services fails to start, service keeps stopping) | Y                                 | N        | N                         |
-| Issue with IaaS/VM                                                        | Y                                 | N        | N                         |
-| Expansion of virtual capacity                                             | Y (In consultation with Customer) | N        | N                         |
-| AD Service Errors (Identification & Triage)                               | Y                                 | N        | N                         |
-| AD Service Errors (Remediation)                                           | Y                                 | N        | N                         |
-| Customer AD Schema integrity and validation                               | N                                 | Y        | £                         |
-| DHCP Issues directly impacting AD Services (identification)               | Y (In consultation with Customer) | Y        | N                         |
-| DHCP Issues directly impacting AD Services (Remediation)                  | Y (In consultation with Customer) | Y        | N                         |
-| DNS Issues directly impacting AD Services (identification)                | Y (In consultation with Customer) | Y        | N                         |
-| DNS Issues directly impacting AD Services (Remediation)                   | Y (In consultation with Customer) | Y        | N                         |
-| Resolving issues with Trust relationships                                 | Y                                 | N        | N                         |
-| End-user management and troubleshooting                                   | N                                 | Y        | N                         |
+| Element                                                                          | UKCloud Support                   | Customer | UKCloud Professional Services |
+|----------------------------------------------------------------------------------|-----------------------------------|----------|-------------------------------|
+| AD replication                                                                   | Y                                 | N        | N                             |
+| AD specific DFS-R (including sysvolshare and associated DFS-replication)         | Y                                 | N        | N                             |
+| Ad-hoc performance issues (identification)                                       | Y (basic)                         | N        | N                             |
+| Ad-hoc performance issues (remediation)                                          | Y (basic)                         | Y        | £                             |
+| AD services issues (for example, services fail to start, service keeps stopping) | Y                                 | N        | N                             |
+| Issue with IaaS/VM                                                               | Y                                 | N        | N                             |
+| Expansion of virtual capacity                                                    | Y (in consultation with customer) | N        | N                             |
+| AD service errors (identification and triage)                                    | Y                                 | N        | N                             |
+| AD service errors (remediation)                                                  | Y                                 | N        | N                             |
+| Customer AD schema integrity and validation                                      | N                                 | Y        | £                             |
+| DHCP issues directly impacting AD services (identification)                      | Y (in consultation with customer) | Y        | N                             |
+| DHCP issues directly impacting AD services (remediation)                         | Y (in consultation with customer) | Y        | N                             |
+| DNS issues directly impacting AD services (identification)                       | Y (in consultation with customer) | Y        | N                             |
+| DNS issues directly impacting AD services (remediation)                          | Y (in consultation with customer) | Y        | N                             |
+| Resolving issues with trust relationships                                        | Y                                 | N        | N                             |
+| End-user management and troubleshooting                                          | N                                 | Y        | N                             |
 
 ## General support and troubleshooting
 
@@ -128,9 +128,9 @@ Beyond the service scope defined in this article, UKCloud will work with the cus
 
 ## Service provisioning
 
-You can request Managed Active Directory Support via your Service Delivery Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+You can request Managed AD Support via your Service Delivery Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-Within 5 business days of accepting an order, UKCloud will enable the customer's Managed Active Directory Support environment with default configurations (unless otherwise specified) and commence protecting any endpoints that have been elected into the service by the customer.
+Within 5 business days of accepting an order, UKCloud will enable the customer's Managed AD Support environment with default configurations (unless otherwise specified) and commence protecting any endpoints that have been elected into the service by the customer.
 
 ## Customer responsibilities
 
