@@ -2,9 +2,9 @@
 title: UKCloud Knowledge Centre guidelines
 description: Provides guidelines for what to consider when creating and editing Knowledge Centre articles
 services: other
-author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 22/07/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 28/01/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -21,283 +21,380 @@ If you're contributing content to the UKCloud Knowledge Centre, it's important t
 
 For information about how to contribute content, see [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md).
 
-For a template to get you started, see [*UKCloud Knowledge Centre article template*](https://raw.githubusercontent.com/UKCloud/documentation/master/articles/other/other-ref-knowledge-template.md).
-
 ## Sensitive content
 
 > [!IMPORTANT]
-> Content in the Knowledge Centre is available over the internet to anybody, therefore it is extremely important to ensure that articles do not contain any sensitive information, including, but not limited to, user names and sensitive IP addresses. This includes information that may be in screenshots or images. If you're unsure about whether information in the article is sensitive, consult with a subject matter expert before creating your Pull Request.
+> Content in the Knowledge Centre is publicly available to anyone, therefore it is extremely important to ensure that articles do not contain any sensitive information, including, but not limited to, user names and sensitive IP addresses. This includes information that may be in screenshots or images. If you're unsure about whether information in the article is sensitive, consult with a subject matter expert before submitting your changes.
 
 ## Submission of content
 
-By submitting content you are granting UKCloud permission to use your submission in our Knowledge Centre, which is available for public consumption over the internet. In addition, you will also be identified as a contributor to the article in our public GitHub repository.
+By submitting content you're granting UKCloud permission to use your submission in our Knowledge Centre, which is available for public consumption. In addition, you'll also be identified as a contributor to the article in our public GitHub repository.
 
 ## Article file naming conventions
 
-If you're creating a new article, use the following file naming convention
+Article file names are constructed as follows, with each element separated by a hyphen:
 
 `<product>-<type>-<description>-<tool>.md`
 
-> [!NOTE]
-> Each word in the file name should be separated by a hyphen.
-
 where:
 
-- `product` indicates which product the topic is for. One of:
+- `product` indicates which product the topic is for, for example `vmw` for UKCloud for VMware, `conn` for Connectivity or `ptl` for the UKCloud Portal.
 
-    Code     | Product                        | Code     | Product
-    ---------|--------------------------------|----------|--------
-    `azs`    | UKCloud for Microsoft Azure    | `cdsz`   | Cross Domain Security Zone
-    `conn`   | Connectivity                   | `cs`     | Cloud Storage
-    `daas`   | UKCloud Desktop as a Service   | `dc`     | Dedicated Compute v2
-    `draas`  | Disaster Recovery as a Service | `enbl`   | Cloud Enablement
-    `man`    | Managed Services               | `migr`   | Migration to the Cloud
-    `oshift` | UKCloud for Managed OpenShift  | `ostack` | UKCloud for OpenStack
-    `other`  | Cross-platform services        | `prc`    | Private Cloud
-    `ps`     | Professional Services          | `ptl`    | UKCloud Portal
-    `shared` | Shared Services                | `soc`    | Security Operations Service
-    `sra`    | Secure Remote Access           | `vmw`    | UKCloud for VMware
+- `type` indicates the article type, for example `how` for How To Guides, `sd` for Service Definitions or `vid` for Videos
 
-- `type` indicates the article type. One of:
-
-    Code   | Article type        | Code  | Article type
-    -------|---------------------|-------|-------------
-    `faq`  | FAQs                | `gs`  | Getting Started Guides
-    `home` | Product home pages  | `how` | How To Guides
-    `ref`  | Reference Guides    | `sco` | Service Scopes
-    `sd`   | Service Definitions | `vid` | Videos
-
-- `description` indicates the purpose of the article. Use as few words as possible and separate words with hyphens. For Reference Guides start with a noun, for How To guides start with a verb.
-
-    For example:
-
-    - `conn-ref-<psn-core-services>.md`
-
-    - `vmw-how-<create-vm-from-template>.md`
+- `description` indicates the purpose of the article.
 
 - `tool` (optional) indicates if the topic is specific to a particular tool (for example, a CLI or API).
 
-    For example:
+## Article metadata
 
-    - `ostack-how-manage-accounts-<portal>.md`
+Each article includes metadata at the top of the file, which ensures that the article is included properly in the Knowledge Centre and helps with searches. Metadata includes the article `title`, when it was `lastreviewed` and categorisation and location within the Knowledge Centre.
 
-    - `azs-how-configure-<cli>.md`
+## Article title
 
-## Metadata
+The first thing in your article after the metadata should be the main article title. Use the following to help you decide on the title for your article:
 
-If you're creating a new article, you must make sure that it includes the appropriate metadata. The metadata ensures that the article is included properly in the Knowledge Centre and helps with internet searches. Include the following metadata at the top of the article:
+- Titles (and all other headings) should use *Sentence capitalisation* (that is, the first word should start with an uppercase letter and all other words should be all lowercase unless they are proper nouns)
 
-``` none
-title: UKCloud Knowledge Centre guidelines
-description: Provides guidelines for what to consider when creating and editing Knowledge Centre articles
-services: other
-author: A Name
-reviewer:
-lastreviewed: 27/07/2018 17:59:14
-toc_rootlink: Reference
-toc_sub1: 
-toc_sub2:
-toc_sub3:
-toc_sub4:
-toc_title: Knowledge Centre guidelines
-toc_fullpath: Reference/other-ref-knowledge-guidelines.md
-toc_mdlink: other-ref-knowledge-guidelines.md
+- Use a single `#` for the article title, and make sure there's a space after the `#`
+
+- How To Guide titles should start with How to and then a verb to describe the task described in the article, for example *How to create a virtual machine*.
+
+- Reference Guides should start with a noun if possible
+
+Generally, you should not include any text below the article title, but should go straight to the first (*Overview*) section. However, if the article is very short and does not require any subheadings, you can include the content directly below the article title. You can also include important notes immediately after the title (for example, product retirement notifications).
+
+## Article structure
+
+### Overview section
+
+The first section after the article title should be *Overview* and should provide an introduction to the purpose of the article.
+
+#### Intended audience section
+
+For How To Guides, if appropriate, you can include an *Intended audience* subsection within the *Overview* section to indicate any particular access or permissions a user might need to complete the steps in the task described by the guide.
+
+### Prerequisites section
+
+For How To Guides, if appropriate, you can include a *Prerequisites* section after the *Overview* section to indicate any actions a user might need to complete before the steps detailed by the guide.
+
+### Further sections
+
+Use additional sections to break the article up into manageable chunks to make it easier to read.
+
+Section headings should use *Sentence capitalisation* (that is, the first word should start with an uppercase letter and all other words should be all lowercase unless they are proper nouns).
+
+In How To articles, you may just have a single additional section describing the task being described in the article -- you should use gerunds (words ending in -ing) for the section headings. For example *Logging into the OpenStack Horizon dashboard*. If the article includes multiple tasks, put each task into its own section, but avoid having too many tasks in a single article.
+
+Reference Guides can include as many sections as necessary to keep the content easy to read. But don't use too many levels of subsections as it can be difficult for users to keep track of where they are if the subsections go too deep.
+
+### Next steps section
+
+For procedural articles, where possible include a *Next steps* section after describing the tasks within the article to point users to other articles that might be helpful. Lead into the list of articles by recapping what was covered in the current article.
+
+For information about creating links, see [*Links*](#links).
+
+### Related information sections
+
+For reference articles, where possible, include a *Related articles* and/or *Related videos* section at the end to provide pointers for what to read next.
+
+If there are resources outside of the Knowledge Centre that would be useful to users, for example, vendor articles or web pages, include these in a *More information* section at the end of the article.
+
+For information about creating links, see [*Links*](#links).
+
+### Feedback section
+
+The last section in every article should be the *Feedback* section. This provides users with information about how to provide feedback to UKCloud on their experience either with the Knowledge Centre or with our platform. The feedback section should include the following text:
+
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
+
+**Markdown**
+
+```none
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
 ```
 
-### title
+## Using markdown
 
-This is the full title of the article and will appear in the browser title bar.
+Knowledge Centre articles are written using GitHub markdown. For more information, see [*Basic writing and formatting syntax*](https://help.github.com/articles/basic-writing-and-formatting-syntax/).
 
-### description
+As we use DocFX to generate our Knowledge Centre web pages, you can also use DocFX markdown to add additional features to your articles. For example, DocFX markdown provides a way of highlighting notes, tips and warnings.
 
-This is a description of the content of the article. Provide information here that will help target the article in internet searches.
+### Headings
 
-### services
+Use the `#` symbol to identify headings within the article. A single `#` for the article title and add additional `#` symbols to indicate the level of subheading for subsequent sections.
 
-This is the service to which the article belongs. One of:
+**Markdown:**
 
-Metadata value        | Product                        | Metadata value      | Product
-----------------------|--------------------------------|---------------------|--------
-`azure-stack`         | UKCloud for Microsoft Azure    | `cdsz`              | Cross Domain Security Zone
-`cloud-storage`       | Cloud Storage                  | `connectivity`      | Connectivity
-`daas`                | UKCloud Desktop as a Service   | `dedicated-compute` | Dedicated Compute v2
-`draas`               | Disaster Recovery as a Service | `enablement`        | Cloud Enablement
-`managed-services`    | Managed Services               | `migration`         | Migration to the Cloud
-`openshift`           | UKCloud for Managed OpenShift  | `openstack`         | UKCloud for OpenStack
-`other`               | Cross-platform services        | `portal`            | UKCloud Portal
-`private-cloud`       | Private Cloud                  | `pro-services`      | Professional Services
-`shared-services`     | Shared Services                | `soc`               | Security Operations Service
-`sra`                 | Secure Remote Access           | `vmware`            | UKCloud for VMware
+```none
+# Article title
 
-### author
+## First level heading
 
-This is the name of the person who created the article.
+### Second level heading
+```
 
-### reviewer
+### Formatting text
 
-This is the name of the person who most recently reviewed the article in its entirety.
+#### Bold
 
-### lastreviewed
+For **bold** text, for example to identify interactive UI elements in a procedural step, enclose the text in double-asterisks.
 
-This is the date when the article was most recently reviewed in its entirety.
+**Markdown:**
 
-### rootlink
+```none
+Click **Improve this Doc** to open the article in GitHub.
+```
 
-**Mandatory.** For most articles, the rootlink will be the article type. One of:
+**Looks like:**
 
-- `About` - Product home pages
+Click **Improve this Doc** to open the article in GitHub.
 
-- `FAQs`
+#### Italics
 
-- `Getting Started`
+For *italic* text, for example to identify non-interacive UI elements in a procedural step, enclose the text in single asterisks.
 
-- `How To`
+**Markdown:**
 
-- `Reference`
+```none
+On the *Open a pull request* page, provide more details about the change you've made.
+```
 
-- `Service Information` - for Service Definitions, Service Scopes and pricing information articles
+**Looks like:**
 
-- `Videos`
+On the *Open a pull request* page, provide more details about the change you've made.
+
+#### Monospace
+
+For `monospace` text, enclose the text in backticks.
+
+**Markdown:**
+
+```none
+Enter the IP address, for example, `192.168.1.10`.
+```
+
+**Looks like:**
+
+Enter the IP address, for example, `192.168.1.10`.
+
+### Lists
+
+#### Bulleted lists
+
+Bullet lists are for lists of items where the order doesn't matter. For lists where the items are short, incomplete sentences, you don't need to include a full stop at the end of each item. For longer sentences or multiple sentences, use full stops. But be consistent within each list; if one item in a list needs a full stop, all items that list should end in a full stop.
+
+Include an empty line in between each item in the list.
+
+- Bulleted lists
+
+- Look like this
+
+  - with sub lists
+
+    - if required
+
+**Markdown:**
+
+``` none
+- Bulleted lists
+
+- Look like this
+
+  - with sub lists
+
+    - if required
+```
+
+#### Numbered lists
+
+Numbered lists are for lists where the order is important. A How To Guide should include at least one numbered list. Generally speaking, items in a numbered list will be complete sentences, so they should end with a full stop.
+
+Include an empty line in between each item in the list.
+
+1. Do this.
+
+2. Then this.
+
+3. And finally, this
+
+    - you can include
+
+    - bulleted lists
+
+**Markdown:**
+
+``` none
+1. Do this.
+
+2. Then this.
+
+3. And finally, this
+
+    - you can include
+
+    - bulleted lists
+```
+
+### Links
+
+#### Links to external content
+
+To link to content outside of the Knowledge Centre, use the following markdown:
+
+``` none
+<url>
+```
+
+For example, to link to <https://ukcloud.com/>, use:
+
+``` none
+<https://ukcloud.com/>
+```
+
+To use descriptive text for the link, rather than just the URL, use the following markdown:
+
+``` none
+[text](url)
+```
+
+For example, to point to the [UKCloud](https://ukcloud.com/) website, use:
+
+``` none
+[UKCloud](https://ukcloud.com/)
+```
+
+#### Links to other Knowledge Centre articles
+
+When linking to other Knowledge Centre articles use *italics* for the article title to identify it as an internal link.
+
+Links to other articles within the same section of the Knowledge Centre just need to point to the filename:
+
+``` none
+[*topic-title*](topic-filename.md)
+```
+
+For example, to point to [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md), which is within the same section of the Knowledge Centre as this article, use:
+
+``` none
+[*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)
+```
+
+Links to articles in different sections of the Knowledge Centre need to also include the appropriate folder name:
+
+``` none
+[*topic-title*](../product/topic-filename.md)
+```
+
+For example, to point to the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md), which is within the `portal` section of the Knowledge Centre, use:
+
+``` none
+[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
+```
+
+#### Links to a section within the current article
+
+When linking to a section within the current article, use the following markdown:
+
+``` none
+[*section-heading*](#section-anchor)
+```
+
+The section anchor is the section heading, in all lowercase with spaces replaced by hyphens. For example, to point to the [*Article file naming conventions*](#article-file-naming-conventions) section within this article, use:
+
+``` none
+[*Article file naming conventions*](#article-file-naming-conventions)
+```
+
+### Notes, tips and warnings
+
+#### Notes
+
+A note provides important information.
 
 > [!NOTE]
-> For UKCloud for Microsoft Azure articles, the `rootlink` is either `Users` for articles intended for tenants or `Operators` for articles intended for service providers. Use the `toc_sub1` metadata tag to identify the article type.
-> 
-> For Managed Services, the `rootlink` is the name of the product. Use the `toc_sub1` metadata tag to identify the article type.
+> This is a note, which provides important information.
 
-### toc sub1, toc sub2, etc
+**Markdown:**
 
-The `toc_sub1` metadata tag enables you to categorise articles within the root level to group them into related articles. This is useful if the product has lots of articles of the same type.
-
+``` none
 > [!NOTE]
-> For UKCloud for Microsoft Azure and Managed Services articles, `toc_sub1` should be the article type as listed in [rootlink](#rootlink).
+> This is a note, which provides important information.
+```
 
-You can use `toc_sub2`, `toc_sub3` and so on to further categorise articles, but it is not recommended to go too many levels deep.
+#### Tips
 
-### toc title
+A tip provides helpful, but not necessarily essential, information.
 
-**Mandatory.** This is the title of the article as it will appear in the product topic list. Due to the restricted width of the topic list, the TOC title should not be too long, so consider shortening the full title if appropriate. For How To Guides, remove the initial How to and start with the verb. For example, for the topic *How to create a virtual machine from the Azure Marketplace*, you could set the TOC title to `Create a virtual machine`.
+> [!TIP]
+> This is a tip, which provides helpful information for working with a product.
 
-### fullpath
+**Markdown:**
 
-This is the full path of the article within the product topic list. For example:
+``` none
+> [!TIP]
+> This is a tip, which provides helpful information for working with a product.
+```
 
-`Getting Started/vmw-gs.md`
-`How To/vmw-how-create-vapp.md`
-`Users/Getting Started/azs-gs.md`
+#### Important notes
 
-### mdlink
+Important notes provide important information that requires particular attention.
 
-**Mandatory.** This is the file name of the article. This must exactly match the file name (see [Article file naming conventions](#article-file-naming-conventions)) and include the `.md` extension.
+> [!IMPORTANT]
+> This is an important note, which requires particular attention.
 
-## Images
+**Markdown:**
 
-If you add images to the article, `.png` is the preferred file format.
+``` none
+> [!IMPORTANT]
+> This is an important note, which requires particular attention.
+```
 
-> [!NOTE]
-> You should make sure that you are not violating any copyright laws with any images that you add.
->
-> You should make sure that images, especially screenshots, do not contain any sensitive data, such as user names or IP addresses.
+#### Warnings
 
-### Image location
+Warnings provide important information about something which could have significant implications if ignored.
 
-Put images in an `images` folder below the main product folder.
+> [!WARNING]
+> This is a warning, which provides users with information about something which could cause significant issues if ignored.
 
-### Image file naming conventions
+**Markdown:**
 
-File names for images in Knowledge Centre articles should use the following file naming convention:
+``` none
+> [!WARNING]
+> This is a warning, which provides users with information about something which could cause significant issues if ignored.
+```
 
-`<product>-<tool>-<ui>-<description>.png`
-
-> [!NOTE]
-> Each word in the file name should be separated by a hyphen.
-
-where:
-
-- `product` indicates which product the image is for (see [Article file naming conventions](#article-file-naming-conventions) for a list of products).
-
-- `tool` (optional) indicates the tool the image is depicting. This will be different for each product.
-
-    For example, `vmw-<vcd>-add-dhcp-pool-adv.png`, `ostack-<horizon>-create-network.png`
-
-- `ui` (optional) indicates the UI element the image is depicting, for example, <mnu> for a menu, <btn> for a button, <tab> for a tab.
-
-    For example, `vmw-vcd-<btn>-add-static-route.png`
-
-- `description` indicates the purpose of the image. Use as few words as possible and separate words with hyphens.
-
-    For example: `vmw-portal-<build-compute-service>.png`
-
-### Markdown for images
+### Images
 
 To insert an image into an article use the following markdown:
 
 ``` none
-![Alt text](images/image-file-name.png)
+![alt-text](images/image-file-name.png)
 ```
 
-Alt text is a short bit of text that is used by screen readers to provide a description of what the image is showing.
+`alt-text` is a short bit of text, read out by screen readers, that helps visually impaired users determine what the image is illustrating.
 
-## Other markdown
+Images used in articles are stored in a separate `images` folder below the main product folder and should use the following file naming convention:
 
-You should write your article using GitHub markdown. For more information, see [*Basic writing and formatting syntax*](https://help.github.com/articles/basic-writing-and-formatting-syntax/).
+`<product>-<tool>-<ui>-<description>.png`
 
-As we use DocFX to generate our Knowledge Centre web pages, you can also use DocFX markdown to add additional features to your articles. Specifically, we use DocFX markdown to highlight notes, tips and warnings:
+where:
 
-### For tips
+- `product` indicates which product the image is for, for example `vmw` for UKCloud for VMware, `conn` for Connectivity or `ptl` for the UKCloud Portal.
 
-Markdown:
+- `tool` (optional) indicates the tool the image is depicting. This will be different for each product.
 
-``` none
-> [!TIP]
-> This is a tip, which provides helpful information for working with a product.
-```
+- `ui` (optional) indicates the UI element the image is depicting, for example, `mnu` for a menu, `btn` for a button or `tab` for a tab.
 
-Looks like:
+- `description` indicates the purpose of the image.
 
-> [!TIP]
-> This is a tip, which provides helpful information for working with a product.
+## Related articles
 
-### For notes
+- [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)
 
-Markdown:
+## Related videos
 
-``` none
-> [!NOTE]
-> This is a note, which provides important information.
-```
-
-Looks like:
-
-> [!NOTE]
-> This is a note, which provides important information.
-
-### For important notes
-
-Markdown:
-
-``` none
-> [!IMPORTANT]
-> This is an important note, which requires particular attention.
-```
-
-Looks like:
-
-> [!IMPORTANT]
-> This is an important note, which requires particular attention.
-
-### For warnings
-
-Markdown:
-
-``` none
-> [!WARNING]
-> This is a warning, which provides users with information about something which could cause significant issues if ignored.
-```
-
-Looks like:
-
-> [!WARNING]
-> This is a warning, which provides users with information about something which could cause significant issues if ignored.
+- [*Editing Knowledge Centre articles video*](other-vid-kc-contribution.md)
 
 ## Feedback
 
