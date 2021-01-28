@@ -24,25 +24,25 @@ This document is for customers considering purchasing UKCloud's Managed Web Serv
 It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the service.
 
 > [!NOTE]
-> This service is not intended to replace a customers Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
+> This service is not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
 
 ## Scope of supported servers
 
-| Web Servers Supported               |
+| Web servers supported               |
 | ----------------------------------- |
 | Internet Information Services (IIS) |
 | Apache                              |
 | NGINX                               |
 
 > [!NOTE]
-> Web Server services, including FTP, only (additional service such as Load Balancing, Mail Proxy, etc… are out of scope)
+> Web server services only, including FTP. Additional services, such as load balancing and mail proxy, are out of scope.
 
 ## Supported configurations
 
 | Supported configurations |
 | ------------------------ |
 | Single deployment        |
-| HA - Clustered/Farm      |
+| HA - clustered/farm      |
 
 ## Scope of Managed Web Server service
 
@@ -50,81 +50,81 @@ The following tables outline the boundaries of responsibilities for the Managed 
 
 ### Pre-life
 
-| Element                                   | UKC-Support | Customer | UKC Professional Services |
-| ----------------------------------------- | ----------- | -------- | ------------------------- |
-| Design                                    | N           | Y        | £                         |
-| Deploy                                    | N           | Y        | £                         |
-| Post Deployment Config                    | N           | Y        | £                         |
-| Initial instantiation of HA/Clustering    | N           | Y        | £                         |
-| DR planning & design                      | N           | Y        | N                         |
+| Element                                | UKCloud Support | Customer | UKCloud Professional Services |
+|----------------------------------------|-----------------|----------|-------------------------------|
+| Design                                 | N               | Y        | £                             |
+| Deploy                                 | N               | Y        | £                             |
+| Post deployment config                 | N               | Y        | £                             |
+| Initial instantiation of HA/clustering | N               | Y        | £                             |
+| Disaster recovery planning and design  | N               | Y        | N                             |
 
 ### Transition
 
-| Element                                                     | UKC-Support | Customer | UKC Professional Services |
-| ----------------------------------------------------------- | ----------- | -------- | ------------------------- |
-| Existing Web Services validation (quality/integrity/design) | N           | Y        | £                         |
-| Customer data (e.g. Sites/Domain) migrations                | N           | Y        | £                         |
-| Implementation of DR                                        | N           | Y        | N                         |
+| Element                                                     | UKCloud Support | Customer | UKCloud Professional Services |
+|-------------------------------------------------------------|-----------------|----------|-------------------------------|
+| Existing web services validation (quality/integrity/design) | N               | Y        | £                             |
+| Customer data (for example, sites/domain) migrations        | N               | Y        | £                             |
+| Implementation of disaster recovery                         | N               | Y        | N                             |
 
 ### In-life - Monitoring
 
-| Element                                                                             | UKC-Support | Customer | UKC Professional Services |
-| ----------------------------------------------------------------------------------- | ----------- | -------- | ------------------------- |
-| IaaS Platform & Networking (UKCloud Platform - Hypervisor and infrastructure below) | Y           | N        | N                         |
-| VM Availability                                                                     | Y           | N        | N                         |
-| VM CDM Monitoring                                                                   | Y           | N        | N                         |
-| Web Server Service availability                                                     | Y           | N        | N                         |
-| Web Server Service status change                                                    | Y           | N        | N                         |
-| Web Server Backup pass/fail                                                         | Y           | N        | N                         |
-| HA Replication monitoring                                                           | Y           | N        | N                         |
-| Site Certificates - Providing/Self-signing/Renewing                                 | N           | Y        | N                         |
-| Site Certificates - Applying                                                        | Y           | N        | N                         |
-| Site Certificates - Expiry monitoring                                               | Y           | N        | N                         |
+| Element                                                                               | UKCloud Support | Customer | UKCloud Professional Services |
+|---------------------------------------------------------------------------------------|-----------------|----------|-------------------------------|
+| IaaS platform and networking (UKCloud platform - hypervisor and infrastructure below) | Y               | N        | N                             |
+| VM availability                                                                       | Y               | N        | N                             |
+| VM CDM monitoring                                                                     | Y               | N        | N                             |
+| Web server service availability                                                       | Y               | N        | N                             |
+| Web server service status change                                                      | Y               | N        | N                             |
+| Web server backup pass/fail                                                           | Y               | N        | N                             |
+| HA replication monitoring                                                             | Y               | N        | N                             |
+| Site certificates - providing/self-signing/renewing                                   | N               | Y        | N                             |
+| Site certificates - applying                                                          | Y               | N        | N                             |
+| Site certificates - expiry monitoring                                                 | Y               | N        | N                             |
 
 ### In-life - Patching
 
-| Element                                                          | UKC-Support | Customer | UKC Professional Services |
-| ---------------------------------------------------------------- | ----------- | -------- | ------------------------- |
-| Web Server (y & z stream/minor/in-version patches)               | N           | N        | N                         |
-| Web Server  Major Version Upgrades                               | N           | Y        | £                         |
-| Validation of patches against additional modules                 | N           | Y        | £                         |
-| Validation of patches against 3rd party integrated apps/services | N           | Y        | £                         |
+| Element                                                            | UKCloud Support | Customer | UKCloud Professional Services |
+|--------------------------------------------------------------------|-----------------|----------|-------------------------------|
+| Web server (y and z stream/minor/in-version patches)               | N               | N        | N                             |
+| Web server major version Upgrades                                  | N               | Y        | £                             |
+| Validation of patches against additional modules                   | N               | Y        | £                             |
+| Validation of patches against third-party integrated apps/services | N               | Y        | £                             |
 
 ### In-life - Data protection and housekeeping
 
-| Element                               | UKC-Support | Customer | UKC Professional Services |
-| ------------------------------------- | ----------- | -------- | ------------------------- |
-| Backup configuration & implementation | Y           | N        | N                         |
-| Backup troubleshooting                | Y           | N        | N                         |
-| Backup restoration                    | Y           | N        | N                         |
-| Restoration troubleshooting           | Y           | N        | N                         |
+| Element                                 | UKCloud Support | Customer | UKCloud Professional Services |
+|-----------------------------------------|-----------------|----------|-------------------------------|
+| Backup configuration and implementation | Y               | N        | N                             |
+| Backup troubleshooting                  | Y               | N        | N                             |
+| Backup restoration                      | Y               | N        | N                             |
+| Restoration troubleshooting             | Y               | N        | N                             |
 
 ### In-life - Administration
 
-| Element                                                                                                                         | UKC-Support | Customer | UKC Professional Services |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------- | ------------------------- |
-| Installation of 3rd party integrated apps/services                                                                              | N           | Y        | £                         |
-| Installation of additional modules                                                                                              | N           | Y        | £                         |
-| Management and Administration of data and resources within the Web Server (e.g. Sites, Domains, FTP users, general permissions) | N           | Y        | £                         |
-| Encryption and all associated Key Management                                                                                    | N           | Y        | N                         |
+| Element                                                                                                                                | UKCloud Support | Customer | UKCloud Professional Services |
+|----------------------------------------------------------------------------------------------------------------------------------------|-----------------|----------|-------------------------------|
+| Installation of third-party integrated apps/services                                                                                   | N               | Y        | £                             |
+| Installation of additional modules                                                                                                     | N               | Y        | £                             |
+| Management and administration of data and resources within the web server (for example sites, domains, FTP users, general permissions) | N               | Y        | £                             |
+| Encryption and all associated key management                                                                                           | N               | Y        | N                             |
 
 ### In-life - Troubleshooting and remediation
 
-| Element                                                                           | UKC-Support                           | Customer | UKC Professional Services |
-| --------------------------------------------------------------------------------- | ------------------------------------- | -------- | ------------------------- |
-| HA/Cluster Replication                                                            | Y                                     | N        | N                         |
-| Ad-hoc performance issues (identification)                                        | Y (Basic)                             | N        | N                         |
-| Ad-Hoc performance issues (remediation)                                           | Y (Basic)                             | Y        | £                         |
-| Web Server Services issues (e.g. services fails to start, service keeps stopping) | Y                                     | N        | N                         |
-| Issue with IaaS/VM                                                                | Y                                     | N        | N                         |
-| Expansion of virtual capacity                                                     | Y (in consultation with the customer) | N        | N                         |
-| Web Server Service Errors (Identification & Triage)                               | Y                                     | N        | N                         |
-| Web Server Service Errors (Remediation)                                           | Y                                     | N        | N                         |
-| Customer sites/domains integrity and validation                                   | N                                     | Y        | £                         |
-| DNS Issues directly impacting Web Service Services (identification)               | Y (in consultation with the customer) | Y        | N                         |
-| DNS Issues directly impacting Web Service Services (Remediation)                  | Y (in consultation with the customer) | Y        | N                         |
-| End-user management and troubleshooting                                           | N                                     | Y        | N                         |
-| Issues with application being hosted                                              | Y (Basic)                             | Y        | N                         |
+| Element                                                                                  | UKCloud Support                       | Customer | UKCloud Professional Services |
+|------------------------------------------------------------------------------------------|---------------------------------------|----------|-------------------------------|
+| HA/cluster replication                                                                   | Y                                     | N        | N                             |
+| Ad-hoc performance issues (identification)                                               | Y (basic)                             | N        | N                             |
+| Ad-hoc performance issues (remediation)                                                  | Y (basic)                             | Y        | £                             |
+| Web server services issues (for example, services fail to start, service keeps stopping) | Y                                     | N        | N                             |
+| Issue with IaaS/VM                                                                       | Y                                     | N        | N                             |
+| Expansion of virtual capacity                                                            | Y (in consultation with the customer) | N        | N                             |
+| Web server service errors (identification and triage)                                    | Y                                     | N        | N                             |
+| Web server service errors (remediation)                                                  | Y                                     | N        | N                             |
+| Customer sites/domains integrity and validation                                          | N                                     | Y        | £                             |
+| DNS issues directly impacting web service services (identification)                      | Y (in consultation with the customer) | Y        | N                             |
+| DNS issues directly impacting web service services (remediation)                         | Y (in consultation with the customer) | Y        | N                             |
+| End-user management and troubleshooting                                                  | N                                     | Y        | N                             |
+| Issues with application being hosted                                                     | Y (basic)                             | Y        | N                             |
 
 ## General support and troubleshooting
 
