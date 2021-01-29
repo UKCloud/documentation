@@ -38,13 +38,13 @@ Article file names are constructed as follows, with each element separated by a 
 
 where:
 
-- `product` indicates which product the topic is for, for example `vmw` for UKCloud for VMware, `conn` for Connectivity or `ptl` for the UKCloud Portal.
+- `product` indicates which product the topic is for, for example `vmw` for UKCloud for VMware, `conn` for Connectivity or `ptl` for the UKCloud Portal
 
 - `type` indicates the article type, for example `how` for How To Guides, `sd` for Service Definitions or `vid` for Videos
 
-- `description` indicates the purpose of the article.
+- `description` indicates the purpose of the article
 
-- `tool` (optional) indicates if the topic is specific to a particular tool (for example, a CLI or API).
+- `tool` (optional) indicates if the topic is specific to a particular tool (for example, a CLI or API)
 
 ## Article metadata
 
@@ -58,7 +58,7 @@ The first thing in your article after the metadata should be the main article ti
 
 - Use a single `#` for the article title, and make sure there's a space after the `#`
 
-- How To Guide titles should start with How to and then a verb to describe the task described in the article, for example *How to create a virtual machine*.
+- How To Guide titles should start with How to and then a verb to describe the task described in the article, for example *How to create a virtual machine*
 
 - Reference Guides should start with a noun if possible
 
@@ -118,11 +118,11 @@ If you find a problem with this article, click **Improve this Doc** to make the 
 
 Knowledge Centre articles are written using GitHub markdown. For more information, see [*Basic writing and formatting syntax*](https://help.github.com/articles/basic-writing-and-formatting-syntax/).
 
-As we use DocFX to generate our Knowledge Centre web pages, you can also use DocFX markdown to add additional features to your articles. For example, DocFX markdown provides a way of highlighting notes, tips and warnings.
+As we use DocFX to generate our Knowledge Centre site, you can also use DocFX markdown to add additional features to your articles. For example, DocFX markdown provides a way of highlighting notes, tips and warnings.
 
 ### Headings
 
-Use the `#` symbol to identify headings within the article. A single `#` for the article title and add additional `#` symbols to indicate the level of subheading for subsequent sections.
+Use the `#` symbol to identify headings within the article. Use a single `#` for the article title and add additional `#` symbols to indicate the level of subheading for subsequent sections.
 
 **Markdown:**
 
@@ -182,9 +182,7 @@ Enter the IP address, for example, `192.168.1.10`.
 
 #### Bulleted lists
 
-Bullet lists are for lists of items where the order doesn't matter. For lists where the items are short, incomplete sentences, you don't need to include a full stop at the end of each item. For longer sentences or multiple sentences, use full stops. But be consistent within each list; if one item in a list needs a full stop, all items that list should end in a full stop.
-
-Include an empty line in between each item in the list.
+Bulleted lists are for lists of items where the order doesn't matter. For lists where the items are short, incomplete sentences, you don't need to include a full stop at the end of each item. For longer sentences or multiple sentences, use full stops. But be consistent within each list; if one item in a list needs a full stop, all items that list should end in a full stop. Include an empty line in between each item in the list.
 
 - Bulleted lists
 
@@ -208,15 +206,13 @@ Include an empty line in between each item in the list.
 
 #### Numbered lists
 
-Numbered lists are for lists where the order is important. A How To Guide should include at least one numbered list. Generally speaking, items in a numbered list will be complete sentences, so they should end with a full stop.
-
-Include an empty line in between each item in the list.
+Numbered lists are for lists where the order is important. A How To Guide will usually include at least one numbered list. Generally speaking, items in a numbered list will be complete sentences, so they should end with a full stop. Include an empty line in between each item in the list.
 
 1. Do this.
 
 2. Then this.
 
-3. And finally, this
+3. And finally, this.
 
    - you can include
 
@@ -229,7 +225,7 @@ Include an empty line in between each item in the list.
 
 2. Then this.
 
-3. And finally, this
+3. And finally, this.
 
    - you can include
 
@@ -268,43 +264,41 @@ For example, to point to the [UKCloud](https://ukcloud.com/) website, use:
 
 When linking to other Knowledge Centre articles use *italics* for the article title to identify it as an internal link.
 
-Links to other articles within the same section of the Knowledge Centre just need to point to the filename:
+- Links to other articles within the same section of the Knowledge Centre just need to point to the filename:
 
-``` none
-[*topic-title*](topic-filename.md)
-```
+    ``` none
+    [*topic-title*](topic-filename.md)
+    ```
 
-For example, to point to [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md), which is within the same section of the Knowledge Centre as this article, use:
+    For example, to point to [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md), which is within the same section of the Knowledge Centre as this article, use:
 
-``` none
-[*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)
-```
+    ``` none
+    [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)
+    ```
 
-Links to articles in different sections of the Knowledge Centre need to also include the appropriate folder name:
+- Links to articles in different sections of the Knowledge Centre need to also include the appropriate folder name:
 
-``` none
-[*topic-title*](../product/topic-filename.md)
-```
+    ``` none
+    [*topic-title*](../product/topic-filename.md)
+    ```
 
-For example, to point to the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md), which is within the `portal` section of the Knowledge Centre, use:
+    For example, to point to the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md), which is within the `portal` section of the Knowledge Centre, use:
 
-``` none
-[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
-```
+    ``` none
+    [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
+    ```
 
-#### Links to a section within the current article
+- Links to a section within the current article, use the following markdown:
 
-When linking to a section within the current article, use the following markdown:
+    ``` none
+    [*section-heading*](#section-anchor)
+    ```
 
-``` none
-[*section-heading*](#section-anchor)
-```
+    The `section-anchor` is the section heading, in all lowercase with spaces replaced by hyphens. For example, to point to the [*Article file naming conventions*](#article-file-naming-conventions) section within this article, use:
 
-The section anchor is the section heading, in all lowercase with spaces replaced by hyphens. For example, to point to the [*Article file naming conventions*](#article-file-naming-conventions) section within this article, use:
-
-``` none
-[*Article file naming conventions*](#article-file-naming-conventions)
-```
+    ``` none
+    [*Article file naming conventions*](#article-file-naming-conventions)
+    ```
 
 ### Notes, tips and warnings
 
@@ -372,7 +366,7 @@ To insert an image into an article use the following markdown:
 ![alt-text](images/image-file-name.png)
 ```
 
-`alt-text` is a short bit of text, read out by screen readers, that helps visually impaired users determine what the image is illustrating.
+The `alt-text` is a short bit of text, read out by screen readers, that helps sight impaired users determine what the image is illustrating.
 
 Images used in articles are stored in a separate `images` folder below the main product folder and should use the following file naming convention:
 
@@ -380,13 +374,13 @@ Images used in articles are stored in a separate `images` folder below the main 
 
 where:
 
-- `product` indicates which product the image is for, for example `vmw` for UKCloud for VMware, `conn` for Connectivity or `ptl` for the UKCloud Portal.
+- `product` indicates which product the image is for, for example `vmw` for UKCloud for VMware, `conn` for Connectivity or `ptl` for the UKCloud Portal
 
-- `tool` (optional) indicates the tool the image is depicting. This will be different for each product.
+- `tool` (optional) indicates the tool the image is depicting, which may be different for each product
 
-- `ui` (optional) indicates the UI element the image is depicting, for example, `mnu` for a menu, `btn` for a button or `tab` for a tab.
+- `ui` (optional) indicates the UI element the image is depicting, for example, `mnu` for a menu, `btn` for a button or `tab` for a tab
 
-- `description` indicates the purpose of the image.
+- `description` indicates the purpose of the image
 
 ## Related articles
 

@@ -44,7 +44,7 @@ This article is intended for anyone who wants to update a Knowledge Centre artic
 
 4. If necessary, log in to GitHub.
 
-5. Click the **Edit the file** (pencil) icon.
+5. Click the **Edit this file** (pencil) icon.
 
     ![Edit this file icon in GitHub](images/other-github-ico-edit.png)
 
