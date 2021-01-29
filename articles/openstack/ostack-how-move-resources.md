@@ -135,7 +135,7 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
         openstack image save <id-of-image-to-download> --file <image-name> 
 
-    If the image size is greater than the memory of the local host the following may be required
+    If the image size is greater than the memory of the local host, the following may be required:
         
         glance image-download --file <output-location> --progress <id-of-image-to-download>
 
