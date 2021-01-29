@@ -218,9 +218,9 @@ Include an empty line in between each item in the list.
 
 3. And finally, this
 
-    - you can include
+   - you can include
 
-    - bulleted lists
+   - bulleted lists
 
 **Markdown:**
 
@@ -231,9 +231,9 @@ Include an empty line in between each item in the list.
 
 3. And finally, this
 
-    - you can include
+   - you can include
 
-    - bulleted lists
+   - bulleted lists
 ```
 
 ### Links
