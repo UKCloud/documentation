@@ -82,7 +82,11 @@ The following provides a code example of how to achieve this export and import o
 4. To download source image snapshot, enter the following command:
 
         openstack image save <id-of-image-to-download> --file <image-name> 
-
+        
+        If the image size is greater than the memory of the local host the following may be required
+        
+        glance image-download --file <output-location> --progress <id-of-image-to-download>
+        
 5. To upload source image to the target region:
 
     - Source the target region's `cred rc` file
@@ -130,6 +134,11 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 3. Download the source volume image to your local device using the following command:
 
         openstack image save <id-of-image-to-download> --file <image-name> 
+        
+        If the image size is greater than the memory of the local host the following may be required
+        
+        glance image-download --file <output-location> --progress <id-of-image-to-download>
+
 
 4. To upload the source volume image to the target region:
 
