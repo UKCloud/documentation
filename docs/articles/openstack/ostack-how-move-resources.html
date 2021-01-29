@@ -178,6 +178,9 @@
 <li><p>To download source image snapshot, enter the following command:</p>
 <pre><code> openstack image save &lt;id-of-image-to-download&gt; --file &lt;image-name&gt; 
 </code></pre>
+<p>If the image size is greater than the memory of the local host, the following may be required:</p>
+<pre><code> glance image-download --file &lt;output-location&gt; --progress &lt;id-of-image-to-download&gt;
+</code></pre>
 </li>
 <li><p>To upload source image to the target region:</p>
 <ul>
@@ -222,13 +225,16 @@
 <li><p>Download the source volume image to your local device using the following command:</p>
 <pre><code> openstack image save &lt;id-of-image-to-download&gt; --file &lt;image-name&gt; 
 </code></pre>
+<p>If the image size is greater than the memory of the local host, the following may be required:</p>
+<pre><code> glance image-download --file &lt;output-location&gt; --progress &lt;id-of-image-to-download&gt;
+</code></pre>
 </li>
 <li><p>To upload the source volume image to the target region:</p>
 <ul>
 <li><p>Source the target region's <code>cred rc</code> file</p>
 </li>
 <li><p>Enter the following command:</p>
-<pre><code>openstack image create  --file &lt;path-to-file-to-upload&gt; --disk-format qcow2 --container-format bare &lt;name-for-upload&gt;
+<pre><code>openstack image create  --file &lt;path-to-file-to-upload&gt; --disk-format raw --container-format bare &lt;name-for-upload&gt;
 </code></pre>
 </li>
 </ul>
