@@ -4,7 +4,7 @@ description: Helps you understand how you can move resources between OpenStack r
 services: openstack
 author: Sue Highmoor
 reviewer: bnicholls
-lastreviewed: 05/01/2021
+lastreviewed: 29/01/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -83,6 +83,10 @@ The following provides a code example of how to achieve this export and import o
 
         openstack image save <id-of-image-to-download> --file <image-name> 
 
+    If the image size is greater than the memory of the local host, the following may be required:
+        
+        glance image-download --file <output-location> --progress <id-of-image-to-download>
+        
 5. To upload source image to the target region:
 
     - Source the target region's `cred rc` file
@@ -131,13 +135,17 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
         openstack image save <id-of-image-to-download> --file <image-name> 
 
+    If the image size is greater than the memory of the local host, the following may be required:
+        
+        glance image-download --file <output-location> --progress <id-of-image-to-download>
+
 4. To upload the source volume image to the target region:
 
     - Source the target region's `cred rc` file
 
     - Enter the following command:
 
-          openstack image create  --file <path-to-file-to-upload> --disk-format qcow2 --container-format bare <name-for-upload>
+          openstack image create  --file <path-to-file-to-upload> --disk-format raw --container-format bare <name-for-upload>
 
 5. To create a new volume in the target region based upon the original source volume, enter the following command:
 
