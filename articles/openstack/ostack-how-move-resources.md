@@ -4,7 +4,7 @@ description: Helps you understand how you can move resources between OpenStack r
 services: openstack
 author: Sue Highmoor
 reviewer: bnicholls
-lastreviewed: 05/01/2021
+lastreviewed: 29/01/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -82,14 +82,14 @@ The following provides a code example of how to achieve this export and import o
 4. To download source image snapshot, enter the following command:
 
         openstack image save <id-of-image-to-download> --file <image-name> 
-        
-        If the image size is greater than the memory of the local host the following may be required
+
+    If the image size is greater than the memory of the local host, the following may be required:
         
         glance image-download --file <output-location> --progress <id-of-image-to-download>
         
 5. To upload source image to the target region:
 
-    - Source the target region's `cred rc` file
+    - Source the target region's `cred rc` file.
 
     - Enter the following command:
 
