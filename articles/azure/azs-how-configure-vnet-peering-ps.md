@@ -55,6 +55,9 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzsSubnetARange        | Address space of virtual network subnet to create in Azure Stack Hub in CIDR notation          | <form oninput="result.value=AzsSubnetARange.value" id="AzsSubnetARange" style="display: inline;"><input  type="text" id="AzsSubnetARange" name="AzsSubnetARange" style="display: inline;" placeholder="10.1.0.0/24"/></form> |
 
 
+
+
+
 | \$AzsVNetBName           | Name of virtual network to create in Azure Stack Hub                                           | <form oninput="result.value=AzsVNetBName.value" id="AzsVNetBName" style="display: inline;" ><input  type="text" id="AzsVNetBName" name="AzsVNetBName" style="display: inline;" placeholder="VnetB-Peering"/></form> |
 
 
@@ -64,37 +67,18 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzsSubnetARange        | Address space of virtual network subnet to create in Azure Stack Hub in CIDR notation          | <form oninput="result.value=AzsSubnetARange.value" id="AzsSubnetARange" style="display: inline;"><input  type="text" id="AzsSubnetARange" name="AzsSubnetARange" style="display: inline;" placeholder="10.2.0.0/24"/></form> |
 
 
-| \$AzsPublicIpName       | Name of public IP to create in Azure Stack Hub                                                 | <form oninput="result.value=AzsPublicIpName.value" id="AzsPublicIpName" style="display: inline;" ><input  type="text" id="AzsPublicIpName" name="AzsPublicIpName" style="display: inline;" placeholder="Pub-IP"/></form> |
-
-| \$AzureLocation         | Name of location to create resources within in public Azure                                | <form oninput="result.value=AzureLocation.value" id="AzureLocation" style="display: inline;" ><input  type="text" id="AzureLocation" name="AzureLocation" style="display: inline;" placeholder="UK West"/></form> |
 
 
-| \$AzureResourceGroupName| Name of resource group to create in public Azure                                           | <form oninput="result.value=AzureResourceGroupName.value" id="AzureResourceGroupName" style="display: inline;" ><input  type="text" id="AzureResourceGroupName" name="AzureResourceGroupName" style="display: inline;" placeholder="S2S-ResourceGroup"/></form> |
+| \$AzureLocation         | Name of location to create resources within in public Azure                                | <form oninput="result.value=AzureLocation.value" id="AzureLocation" style="display: inline;" ><input  type="text" id="AzureLocation" name="AzureLocation" style="display: inline;" placeholder="farn0006????"/></form> |
 
 
-| \$AzureVNetName         | Name of virtual network to create in public Azure                                          | <form oninput="result.value=AzureVNetName.value" id="AzureVNetName" style="display: inline;" ><input  type="text" id="AzureVNetName" name="AzureVNetName" style="display: inline;" placeholder="S2S-VNet"/></form> |
+peering comands
 
 
-| \$AzureVNetRange        | Address space of virtual network to create in public Azure in CIDR notation                | <form oninput="result.value=AzureVNetRange.value" id="AzureVNetRange" style="display: inline;" ><input  type="text" id="AzureVNetRange" name="AzureVNetRange" style="display: inline;" placeholder="10.2.0.0/16"/></form> |
+create vm in each
 
 
-| \$AzureSubnetRange      | Address space of virtual network subnet to create in public Azure in CIDR notation         | <form oninput="result.value=AzureSubnetRange.value" id="AzureSubnetRange" style="display: inline;" ><input  type="text" id="AzureSubnetRange" name="AzureSubnetRange" style="display: inline;" placeholder="10.2.0.0/24"/></form> |
+| \$AzsPublicIpNameVMA       | Name of public IP to create in Azure Stack Hub                                                 | <form oninput="result.value=AzsPublicIpNameVMA.value" id="AzsPublicIpNameVMA" style="display: inline;" ><input  type="text" id="AzsPublicIpNameVMA" name="AzsPublicIpNameVMA" style="display: inline;" placeholder="Pub-IP"/></form> |
 
 
-| \$AzureGatewaySubnetRange    | Address space of virtual network gateway subnet to create in public Azure in CIDR notation | <form oninput="result.value=AzureGatewaySubnetRange.value" id="AzureGatewaySubnetRange" style="display: inline;" ><input  type="text" id="AzureGatewaySubnetRange" name="AzureGatewaySubnetRange" style="display: inline;" placeholder="10.2.1.0/24"/></form> |
-
-
-| \$AzurePublicIpName     | Name of public IP to create in public Azure                                                | <form oninput="result.value=AzurePublicIpName.value" id="AzurePublicIpName" style="display: inline;" ><input  type="text" id="AzurePublicIpName" name="AzurePublicIpName" style="display: inline;" placeholder="S2S-IP"/></form> |
-
-
-| \$AzureVirtualGatewayName    | Name of virtual network gateway to create in public Azure                                  | <form oninput="result.value=AzureVirtualGatewayName.value" id="AzureVirtualGatewayName" style="display: inline;" ><input  type="text" id="AzureVirtualGatewayName" name="AzureVirtualGatewayName" style="display: inline;" placeholder="S2S-VNG"/></form> |
-
-
-| \$AzureLocalGatewayName      | Name of local network gateway to create in public Azure                                    | <form oninput="result.value=AzureLocalGatewayName.value" id="AzureLocalGatewayName" style="display: inline;" ><input  type="text" id="AzureLocalGatewayName" name="AzureLocalGatewayName" style="display: inline;" placeholder="S2S-LNG"/></form> |
-
-
-| \$AzureGatewayConnectionName | Name of virtual network gateway connection to create in public Azure                       | <form oninput="result.value=AzureGatewayConnectionName.value" id="AzureGatewayConnectionName" style="display: inline;" ><input  type="text" id="AzureGatewayConnectionName" name="AzureGatewayConnectionName" style="display: inline;" placeholder="S2S-Connection"/></form> |
-
-
-| \$SharedKey             | Encryption key to use for VPN connection                                                   | <form oninput="result.value=SharedKey.value" id="SharedKey" style="display: inline;" ><input  type="text" id="SharedKey" name="SharedKey" style="display: inline;" placeholder="Password123!"/></form> |
-
+| \$AzsPublicIpNameVMB       | Name of public IP to create in Azure Stack Hub                                                 | <form oninput="result.value=AzsPublicIpNameVMB.value" id="AzsPublicIpNameVMB" style="display: inline;" ><input  type="text" id="AzsPublicIpNameVMB" name="AzsPublicIpNameVMB" style="display: inline;" placeholder="Pub-IP"/></form> |
