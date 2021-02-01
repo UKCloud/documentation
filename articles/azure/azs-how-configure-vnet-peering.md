@@ -20,27 +20,19 @@ toc_mdlink: azs-how-configure-vnet-peering.md
 
 ## Overview
 
-Overview 
+This article shows you how to use the Azure Stack Hub portal to create two virtual networks peered to eachother so they can communicate. 
 
 ### Intended audience
 
-Audience
+To complete the steps in this article, you must have appropriate access to a subscription in Azure Stack Hub.
 
 ## Process Overview
 
-Bellow is a shot overview of the proces. To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack Hub portal.
-
-1. [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub)
-2. [Create a virtual machine in each Virtual Network](#Create-a-Virtual-Machine-in-each-Virtual-Network)
-3. [Configure virtual network peering](#Configure-virtual-network-peering)
-4. 
+In this guide you will need to create two virual networks and two virtual machines. After, they will be peered together, allowing them to communicate and ping eachother.
 
 ## Create two virtual networks in Azure Stack Hub
 
-First, you'll need to create two virtual networks. These virtual networks will be able to communicate with eachother. 
-
-> [!NOTE]
-> This is a not btw :)
+First, create two virtual networks. These virtual networks will be able to communicate with eachother at the end of this guide, demonstrated with a ping in windows. 
 
 1. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
 
@@ -81,23 +73,26 @@ First, you'll need to create two virtual networks. These virtual networks will b
 
 6. Click **Create**.
 
-7. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section, or it appears inside the resource group.
+7. Repeat the steps above for the second virtual network, but use different address spaces.
 
-8. Select your virtual network from the list.
+After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section, or it appears inside the resource group.
 
-9. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
-
-10. Repeat the steps above for the second virtual network, but use different address spaces.
+In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
 
 ![Create new virtual network](images/azs-portal-vnet-overview.png)
 
 ## Create a Virtual Machine in each Virtual Network
 
-After creating each virtual network, create a virtual machine in each virtual network.
+After creating each virtual network, create a virtual machine in each virtual network subnet.
+
+> [!NOTE]
+> Make sure that a new Public IP address is created for each virtual machine in the configuration.
 
 For more detailed instructions on how to create a virtal machine, see the [*How to create a virtual machine using the UKCloud Azure Stack Hub portal*](azs-how-create-vm-portal.md).
 
 ## Configure virtual network peering
+
+After a virtual machine is created in each virtual network, they can be peered together
 
 1. Click on one of the created virtual netowrks and click **Add**
 
@@ -105,25 +100,21 @@ For more detailed instructions on how to create a virtal machine, see the [*How 
 
 2. In the Add peering, enter the following information:
 
-    - **Name** - The name of the connection from A-B.
-
-    - **Peer Details** - ?
+    - **Name** - The name of the connection from A-B. (From virtual network 1 to virtual network 2)
 
     - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
     - **Virtual Network** - The virtual network you want to peer to.
 
-    - **Name** - The name of the connection from B-A.
+    - **Name** - The name of the connection from B-A. (From virtual network 2 to virtual network 1)
 
     - **Allow virtual network access** - Allows access between virtual networks.
-
-    - **Allow forwarded traffic** - This setting allows the peer’s forwarded traffic into your virtual network.
-
-    - **Configure gateway traffic** - Allows the peer virtual network to use your virtual network gateway.
 
 ![Configure virtual netork peering](images/azs-portal-peering-2.png)
 
 3. Click **OK**
+
+If done correctly, Azure stack hub will create the peering rule in the other virtual network automatically 
 
 ### Testing connection
 
