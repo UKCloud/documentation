@@ -1,6 +1,6 @@
 - name: About
   items:
-  - name: UKCloud Managed Services Overview
+  - name: UKCloud managed service products
     href: man-services-home.md
 - name: Advanced Managed Services
   items:
