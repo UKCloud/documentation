@@ -83,7 +83,7 @@ The following provides a code example of how to achieve this export and import o
 
         openstack image save <id-of-image-to-download> --file <image-name> 
 
-    If the image size is greater than the memory of the local host, the following may be required:
+    If the image size is greater than the memory of the local host, the following may be required (**NOTE** in order to use the glance cli commands a keystone user is required as it does not work with SSO accounts, please discuss this with your support represntative to request a keystone account if this is required):
         
         glance image-download --file <output-location> --progress <id-of-image-to-download>
         
@@ -135,7 +135,7 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
         openstack image save <id-of-image-to-download> --file <image-name> 
 
-    If the image size is greater than the memory of the local host, the following may be required:
+    If the image size is greater than the memory of the local host, the following may be required (**NOTE** in order to use the glance cli commands a keystone user is required as it does not work with SSO accounts, please discuss this with your support represntative to request a keystone account if this is required):
         
         glance image-download --file <output-location> --progress <id-of-image-to-download>
 
