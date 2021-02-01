@@ -1,5 +1,5 @@
 ---
-title: UKCloud Managed Services Products
+title: UKCloud Managed Service Products
 description: Provides an overview of the managed service products UKCloud provides
 services: managed-services
 author: sdixon
