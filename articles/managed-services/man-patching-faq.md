@@ -84,12 +84,13 @@ The customer is responsible for notifying UKCloud of any patches (including crit
 
 ## Prerequisites
 
-### Operating Systems
-UKCloud will only support in-life, vendor backed operating systems such as Microsoft Windows, Red Hat Enterprise Linux and Canonical Ubuntu. Customer built operating systems (for example Gentoo Linux custom build).
+### Operating systems
+
+UKCloud will only support in-life, vendor-backed operating systems, such as Microsoft Windows, Red Hat Enterprise Linux and Canonical Ubuntu. Customer-built operating systems (for example Gentoo Linux custom build).
 
 ### Customer environment configuration
-In order for UKCloud to correctly scan for and apply OS patches, the customer must agree to and configure port 445 to be open on all virtual machines and associated operating systems opted-in to this service.
 
+For UKCloud to correctly scan for and apply OS patches, the customer must agree to and configure port 445 to be open on all virtual machines and associated operating systems opted-in to this service.
 
 ## Management
 
