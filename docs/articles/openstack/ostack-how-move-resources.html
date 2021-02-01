@@ -181,6 +181,10 @@
 <p>If the image size is greater than the memory of the local host, the following may be required:</p>
 <pre><code> glance image-download --file &lt;output-location&gt; --progress &lt;id-of-image-to-download&gt;
 </code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>As glance CLI commands don't work with SSO accounts, you'll need a keystone user to run this command. Contact UKCloud Support to request a keystone account, if necessary.</p>
+</div>
 </li>
 <li><p>To upload source image to the target region:</p>
 <ul>
@@ -228,6 +232,10 @@
 <p>If the image size is greater than the memory of the local host, the following may be required:</p>
 <pre><code> glance image-download --file &lt;output-location&gt; --progress &lt;id-of-image-to-download&gt;
 </code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>As glance CLI commands don't work with SSO accounts, you'll need a keystone user to run this command. Contact UKCloud Support to request a keystone account, if necessary.</p>
+</div>
 </li>
 <li><p>To upload the source volume image to the target region:</p>
 <ul>
