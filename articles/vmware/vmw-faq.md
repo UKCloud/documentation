@@ -213,7 +213,7 @@ The Advanced Management bundle includes Distributed Firewall (DFW), Distributed 
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-You can view these on the [Notifications page](https://portal.ukcloud.com/notifications) of the UKCloud Portal. In addition, you can view Service Status information on the [Service Status page](https://status.ukcloud.com/).
+You can view these, as well as general service status information on the [UKCloud Service Status page](https://status.ukcloud.com/).
 
 ### Do you offer dynamic or static IP addresses?
 

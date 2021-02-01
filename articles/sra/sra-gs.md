@@ -143,7 +143,7 @@ If a client is upgraded from a previous install then the following post installa
 
 ## Post-installation configuration
 
-Once you've installed the AnyConnect software and certificates on your device, you need to install the connection profile which is available in the Knowledge Centre (<https://portal.skyscapecloud.com/support/knowledge_centre/25a7111c-139e-4fd2-a52c-3412689bf1d3>). Unzip the file and copy the xml to the following location:
+Once you've installed the AnyConnect software and certificates on your device, you need to install the connection profile, which is available from UKCloud Support. Unzip the file and copy the xml to the following location:
 
 OS type | CPA XML location
 --------|-----------------
@@ -152,9 +152,7 @@ Windows | `C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile`
 
 ### For Linux only
 
-In addition to the AnyConnect profile, you also need to install a local policy which is available in the Knowledge Centre:
-
-<https://portal.skyscapecloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea>
+In addition to the AnyConnect profile, you also need to install a local policy, which is available from UKCloud Support.
 
 Unzip the file and copy it to: `/opt/cisco/anyconnect/AnyConnectLocalPolicy.xml`.
 
