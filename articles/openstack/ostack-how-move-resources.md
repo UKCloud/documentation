@@ -83,10 +83,13 @@ The following provides a code example of how to achieve this export and import o
 
         openstack image save <id-of-image-to-download> --file <image-name> 
 
-    If the image size is greater than the memory of the local host, the following may be required (**NOTE** in order to use the glance cli commands a keystone user is required as it does not work with SSO accounts, please discuss this with your support represntative to request a keystone account if this is required):
-        
+    If the image size is greater than the memory of the local host, the following may be required:
+       
         glance image-download --file <output-location> --progress <id-of-image-to-download>
-        
+
+    > [!NOTE]
+    > As glance CLI commands don't work with SSO accounts, you'll need a keystone user to run this command. Contact UKCloud Support to request a keystone account, if necessary.
+
 5. To upload source image to the target region:
 
     - Source the target region's `cred rc` file
@@ -135,9 +138,12 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
         openstack image save <id-of-image-to-download> --file <image-name> 
 
-    If the image size is greater than the memory of the local host, the following may be required (**NOTE** in order to use the glance cli commands a keystone user is required as it does not work with SSO accounts, please discuss this with your support represntative to request a keystone account if this is required):
+    If the image size is greater than the memory of the local host, the following may be required:
         
         glance image-download --file <output-location> --progress <id-of-image-to-download>
+
+    > [!NOTE]
+    > As glance CLI commands don't work with SSO accounts, you'll need a keystone user to run this command. Contact UKCloud Support to request a keystone account, if necessary.
 
 4. To upload the source volume image to the target region:
 
