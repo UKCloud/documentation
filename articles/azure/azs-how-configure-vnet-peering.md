@@ -114,7 +114,7 @@ After a virtual machine is created in each virtual network, they can be peered t
 
 3. Click **OK**
 
-If done correctly, Azure stack hub will create the peering rule in the other virtual network automatically 
+If done correctly, Azure stack hub will create the peering rule in the other virtual network automatically. To check this, go to the other virtual network and check the peering.
 
 ### Testing connection
 
@@ -143,26 +143,26 @@ To test the connection you need to allow your pc through the nsg to use rdp and 
 
 }
 
-To test the connection by pinging one of the virtual machines from the other. To do this, some firewall rules needs to be allowed in each virtual machine.
+To test the connection by pinging one of the virtual machines from the other using windows CMD. To do this, some firewall rules needs to be changed in each virtual machine. 
 
-1. Go to the virtual machine and connect to it by downloading the RDP file.
+1. Go to the virtual machine and connect to it by downloading the RDP file, Click **Download RDP File**
 
 ![Configure virtual netork peering](images/azs-portal-peering-5.png)
 
 > [!NOTE]
-> The device you are connecting from must be allowed through the virtual machine NSG on port 3389.
+> The device's IP you are connecting from must be allowed through the virtual machine NSG on port 3389.
 
-2. Launch the RDP file and log in with the correct credentials for the virtual machine.
+2. Launch the RDP file and log in with the correct credentials for the virtual machine that you set up.
 
-3. Access the firewall advanced security (Settings>Update & Security>Windows Security>Firewall & network protection>Advanced settings) 
+3. Access the firewall advanced security (**Settings**>**Update & Security**>**Windows Security**>**Firewall & network protection**>**Advanced settings**) 
 
-4. Click on **Inbound Rules**, scroll down to *file and printer sharing (echo request - icmpv4-in)* and allow it through the firewall
+4. Click on **Inbound Rules**, scroll down to "*File and Printer Sharing (Echo Request - ICMPv4-in)*" and allow it through the firewall for ICMPv4 and ICMPv6.
 
 ![Configure virtual netork peering](images/azs-portal-peering-3.png)
 
 5. Repeat for each virtual machine
 
-6. From one of the virtual machines, the connection can be tested by pinging the other.
+6. From one of the virtual machines, the connection can be tested by pinging the other. Open windows CMD and type: "ping [*IP Address*]". If done correctly, the ping should be successfull, as shown below. 
 
 ![Configure virtual netork peering](images/azs-portal-peering-4.png)
 
