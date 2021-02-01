@@ -82,6 +82,15 @@ Each patching window is followed by 18 hours of issue resolution time, in which 
 
 The customer is responsible for notifying UKCloud of any patches (including critical patches) they require to be applied outside of their standard patching cycle via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. UKCloud will not proactively scan for or apply any patches outside of a customer's standard patching cycle. Should a customer raise a Service Request for patches to be applied outside of their standard patching cycle, our standard [Service Request resolution target](https://docs.ukcloud.com/articles/portal/ptl-how-raise-escalate-service-request.html?q=ticket) will apply, with the clock starting from the point we receive the Service Request **and** a vendor released patch being made publicly available.
 
+## Prerequisites
+
+### Operating Systems
+UKCloud will only support in-life, vendor backed operating systems such as Microsoft Windows, Red Hat Enterprise Linux and Canonical Ubuntu. Customer built operating systems (for example Gentoo Linux custom build).
+
+### Customer environment configuration
+In order for UKCloud to correctly scan for and apply OS patches, the customer must agree to and configure port 445 to be open on all virtual machines and associated operating systems opted-in to this service.
+
+
 ## Management
 
 ### How do I access my patching environment?
