@@ -23,10 +23,10 @@ This document is for customers considering purchasing UKCloud's Managed Active D
 
 It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the service.
 
+## Scope of supported servers
+
 > [!NOTE]
 > This service is not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
-
-## Scope of supported servers
 
 | Servers Supported                                   |
 |-----------------------------------------------------|

@@ -25,6 +25,9 @@ It describes the boundaries of the service, along with the division of responsib
 
 ## Scope of Supported Databases
 
+> [!NOTE]
+> This service is not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
+
 The following tables outline the varies databases that can be supported with the Managed SQL Server service:
 
 | SQL Supported                               

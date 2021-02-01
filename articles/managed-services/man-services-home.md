@@ -1,10 +1,10 @@
 ---
-title: UKCloud Managed Services
-description: Provides an overview of the Managed Services offerings UKCloud provides
+title: UKCloud Managed Services Products
+description: Provides an overview of the managed service products UKCloud provides
 services: managed-services
 author: sdixon
 reviewer: sdixon
-lastreviewed: 04/01/2021
+lastreviewed: 01/02/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -15,13 +15,16 @@ toc_fullpath: About/man-services-home.md
 toc_mdlink: man-services-home.md
 ---
 
-# UKCloud Managed Services
+# UKCloud Managed Service Products
 
-## What Managed Services does UKCloud offer?
+## What managed service products does UKCloud offer?
 
-UKCloud offers a variety of Managed Services, all focused around removing the distraction of IT hygiene, enabling organisations to focus on genuine business value.
+UKCloud offers a variety of managed service products, all focused around removing the distraction of IT hygiene, enabling organisations to focus on genuine business value.
 
-The following provides a brief overview of our Managed Services; click the links for further details.
+The following provides a brief overview of our managed service products; click the links for further details.
+
+> [!NOTE]
+> These services are not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
 
 - [**Managed IT Operations**](man-sd-managed-it-ops.md) - A portfolio of Managed Services focused on enhancing the general health of your compute assets. This portfolio is comprised of the following elements:
   
