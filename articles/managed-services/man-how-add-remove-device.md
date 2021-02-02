@@ -1,18 +1,18 @@
 ---
-title: How to change your service configuration for Managed IT Operations
-description: Describes how to change monitored items, thresholds, contact information and maintenance window details for Managed IT Operations and how to create and edit playbooks
+title: How to add and remove devices
+description: Describes how to add or remove devices from you Managed IT Operations services
 services: managed-services
-author: plopezcatalan
+author: shighmoor
 reviewer: agull
-lastreviewed: 01/02/2021
+lastreviewed: 02/02/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Change your service configuration
-toc_fullpath: Managed IT Operations/man-monitoring-how-change-config.md
-toc_mdlink: man-monitoring-how-change-config.md
+toc_title: Add and remove devices
+toc_fullpath: Managed IT Operations/man-how-add-remove-devices.md
+toc_mdlink: man-how-add-remove-devices.md
 ---
 
 # How to change your service configuration for Managed IT Operations
