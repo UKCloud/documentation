@@ -4,7 +4,7 @@ description: Shows you how to update your existing VMs to target UKCloud's appro
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 12/01/2021
+lastreviewed: 02/02/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -84,7 +84,7 @@ If your VM doesn't currently have any UKCloud repository configuration already i
 
     `yum clean all; rm -rf /var/cache/yum; yum repolist`
 
-4. Test the connection to the RHUI CDS is working:
+4. Update your system using the new repositories:
 
     `yum update`
 
@@ -112,7 +112,7 @@ If your VMs are configured to use the old RHUI (identified by an installation RP
 
     `yum clean all; rm -rf /var/cache/yum; yum repolist`
 
-5. Test the connection to the RHUI CDS is working:
+5. Update your system using the new repositories:
 
     `yum update`
 
@@ -131,6 +131,20 @@ After downloading the appropriate file to the VM, you can use `yum update` to up
 ## Troubleshooting
 
 The primary issues you may encounter are:
+
+### Public key Requirements
+
+You may be asked to confirm installation of Red Hat public keys on your first package install(s) if they are not already there. They are as follows:
+
+	`Fingerprint: 567e 347a d004 4ade 55ba 8a5f 199e 2f91 fd43 1d51
+Package    : redhat-release-server-7.5-8.el7.x86_64 (@anaconda/7.5)
+From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release`
+
+	`Fingerprint: 43a6 e49c 4a38 f4be 9abf 2a53 4568 9c88 2fa6 58e0
+Package    : redhat-release-server-7.5-8.el7.x86_64 (@anaconda/7.5)
+From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release`
+
+The keys can be verified at [Red hat](https://access.redhat.com/security/team/key)
 
 ### DNS Failure
 
