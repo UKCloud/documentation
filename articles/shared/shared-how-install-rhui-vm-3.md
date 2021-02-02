@@ -148,7 +148,7 @@ Package    : redhat-release-server-7.5-8.el7.x86_64 (@anaconda/7.5)
 From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 ```
 
-The keys can be verified at [Red hat](https://access.redhat.com/security/team/key)
+You can verify the keys via Red Hat's [Product Signing Keys](https://access.redhat.com/security/team/key) page.
 
 ### DNS failure
 
