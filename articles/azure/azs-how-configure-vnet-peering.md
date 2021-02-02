@@ -118,31 +118,6 @@ If done correctly, Azure stack hub will create the peering rule in the other vir
 
 ### Testing connection
 
-{ - could link to new part of guide for connecting to vm
-
-To test the connection you need to allow your pc through the nsg to use rdp and access the vm
-
-1. Go into each nsg, click on imbound security rules and click add
-
-2. Fill out the perameters 
-
-    - **source** ip address
-    - **source port ranges** * (any)
-    - **destination** set to your public IP
-    - **destination port** set to 3389 (rdp)
-    - **protocl** any
-    - **action** allow
-    - **priority** bump it up abit
-    - **name** name the rule
-    - **descripton** Describe the rule
-
-3. Click **Add**
-
-> [!NOTE]
-> repeat for each nsg
-
-}
-
 To test the connection by pinging one of the virtual machines from the other using windows CMD. To do this, some firewall rules needs to be changed in each virtual machine. 
 
 1. Go to the virtual machine and connect to it by downloading the RDP file, Click **Download RDP File**
@@ -165,22 +140,3 @@ To test the connection by pinging one of the virtual machines from the other usi
 6. From one of the virtual machines, the connection can be tested by pinging the other. Open windows CMD and type: "ping [*IP Address*]". If done correctly, the ping should be successfull, as shown below. 
 
 ![Configure virtual netork peering](images/azs-portal-peering-4.png)
-
-## Hub and Spoke virtual network peering
-
-The hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub.
-
-### Configuring the Hub
-
-1. create hub vnet
-
-2. create vpn gateway in the vnet with a pub ip
-
-**image of creating vnet gateway**
-
-3. Create spoke vnet
-
-4. add peering to hub
-
-5. add peering to both sides
-
