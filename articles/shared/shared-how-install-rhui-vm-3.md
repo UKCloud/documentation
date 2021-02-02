@@ -132,21 +132,25 @@ After downloading the appropriate file to the VM, you can use `yum update` to up
 
 The primary issues you may encounter are:
 
-### Public key Requirements
+### Public key requirements
 
 You may be asked to confirm installation of Red Hat public keys on your first package install(s) if they are not already there. They are as follows:
 
-	`Fingerprint: 567e 347a d004 4ade 55ba 8a5f 199e 2f91 fd43 1d51
+```none
+Fingerprint: 567e 347a d004 4ade 55ba 8a5f 199e 2f91 fd43 1d51
 Package    : redhat-release-server-7.5-8.el7.x86_64 (@anaconda/7.5)
 From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release`
+```
 
-	`Fingerprint: 43a6 e49c 4a38 f4be 9abf 2a53 4568 9c88 2fa6 58e0
+```none
+Fingerprint: 43a6 e49c 4a38 f4be 9abf 2a53 4568 9c88 2fa6 58e0
 Package    : redhat-release-server-7.5-8.el7.x86_64 (@anaconda/7.5)
-From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release`
+From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+```
 
 The keys can be verified at [Red hat](https://access.redhat.com/security/team/key)
 
-### DNS Failure
+### DNS failure
 
 Check the DNS lookup is working and you have the correct entry for Assured and Elevated.
 
