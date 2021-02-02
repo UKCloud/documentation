@@ -132,7 +132,7 @@ After downloading the appropriate file to the VM, you can use `yum update` to up
 
 The primary issues you may encounter are:
 
-### Public key requirements
+### Product signing key requirements
 
 You may be asked to confirm installation of Red Hat public keys on your first package install(s) if they are not already there. They are as follows:
 
