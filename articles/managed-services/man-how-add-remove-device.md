@@ -80,11 +80,18 @@ If there's a new device that you want to add to your Managed IT Operations servi
    >
    > The devices you populated on the **Device Information** tab will then either auto-populate or appear in the dropdown list, depending on which tab you're on.
 
-8. When you've finished completing the spreadsheet, in your My Calls ticket either click **Select files** and browse to the completed spreadsheet or drag the spreadsheet into the template.
+8. When you've finished completing the spreadsheet, in your My Calls ticket, either click **Select files** and browse to the completed spreadsheet or drag the spreadsheet into the template.
 
-9. Complete any additional information in the ticket template
+   ![Upload Add or Remove devices spreadsheet](images/man-change-devices-upload-submit.png)
 
-### Removing a monitored device
+9. Enter the date from which you want the changes to be effective.
+
+10. When you're done, click **Review & Submit** then **Submit**.
+
+   As per our standard customer service targets, we aim to resolve your request within two working days.
+
+## Removing a monitored device from a Managed IT Operations service
+
 
 
 
@@ -163,57 +170,9 @@ For the majority of changes, you'll need to populate the Managed IT Operations s
 
    As per our standard customer service targets, we aim to resolve your request within two working days.
 
-### Changing contact information
+## Related articles
 
-All contact information is captured using playbooks. A playbook is a set of instructions detailing whom we should contact in different scenarios. For example, alerts could go to `support@example.com`, but for an AD directory server, they might go to `adsupport@example.com`. In addition, you can add an escalation contact for urgent alerts, whereby our Cloud Operations team can email or call another agreed contact in certain circumstances.
 
-To add a new contact:
-
-1. In My Calls, raise a ticket using the **Managed IT Operations - Playbooks** template.
-
-2. Select **Add Playbook**.
-
-3. You'll be provided with a link to the Managed IT Operations Playbook (UK-FRM-262). Click the link to download the file.
-
-4. Follow the instructions provided in the downloaded document to complete the form. If you have any questions, contact UKCloud Support.
-
-5. The Service Request will be fulfilled within the agreed SLA and a playbook ID will be provided to you as part of the closure of the request.
-
-To update a contact:
-
-1. In My Calls, raise a ticket using the **Managed IT Operations - Playbooks** template.
-
-2. Select **Update Playbook**.
-
-3. You'll be provided with a link to the Managed IT Operations Playbook (UK-FRM-262). Click the link to download the file.
-
-4. In the **Playbook code** field, enter the ID of the playbook that you want to change then upload. Alternatively, if you have the original form then you can upload this with the amendments included. If you're not sure of your playbook ID, contact UKCloud Support.
-
-### Providing notification of maintenance windows
-
-If you're planning maintenance that will affect a monitored device, provide details on the maintenance window, including any instructions for how we should deal with alerts that occur during the maintenance period.
-
-1. In My Calls, raise a ticket using the **Managed IT Operations - Maintenance Window** template.
-
-2. If you want to inform us of maintenance windows on multiple devices, from the **Maintenance Window on a Single Device?** list, select **No**.
-
-   For more informatio about notifying us of maintenance windows on multiple devices, see [*Filling out the Managed IT Operations spreadsheet*](#filling-out-the-managed-it-operations-spreadsheet)
-
-3. If you're adding maintenace information for a single device, in the **Device Name** field, enter the name of the device to which the maintenance window applies.
-
-4. In the **Device IP Address** field, enter the IP address of the device.
-
-5. In the **Start Date / Time** field, use the date picker to specify the beginning of the maintenance window.
-
-6. In the **End Date / Time** field, use the date picker to specify the end of the maintenance window.
-
-7. In the **Reason for Maintenance** field, enter details of what kind of maintenance is taking place during the specified period.
-
-8. In the **Special Instructions for UKCloud during the Maintenance Window** field, let us know how you want us to respond to alerts during the maintenance window.
-
-    ![Maintenance Window](images/man-monitoring-maintenance.png)
-
-9. When you're done, click **Review & Submit** then **Submit**.
 
 ## Feedback
 
