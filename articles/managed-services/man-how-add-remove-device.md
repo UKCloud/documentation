@@ -15,11 +15,13 @@ toc_fullpath: Managed IT Operations/man-how-add-remove-devices.md
 toc_mdlink: man-how-add-remove-devices.md
 ---
 
-# How to change your service configuration for Managed IT Operations
+# How to add and remove devices
 
 ## Overview
 
-With Managed IT Operations, we provide several options to complement our Managed Monitoring as a Service offering:
+Managed IT Operations provides several options focused on enhancing the general health of your compute assets:
+
+- Managed Monitoring as a Service
 
 - Anti-Virus as a Service
 
@@ -27,76 +29,27 @@ With Managed IT Operations, we provide several options to complement our Managed
 
 - Runbook Automation (coming soon)
 
-With Managed Monitoring as a Service, our Cloud Operations team monitors your devices, receiving and reacting to any abnormal events, only escalating those events that genuinely require your attention.
-
-When we first provision the service, we set it up with default thresholds for the devices you've selected to monitor, unless you specified different thresholds in your initial request. At any time, you can raise a Service Request, via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, to change these thresholds and other service configuration details.
-
-This article provides information about the default monitoring thresholds and alerting procedures and shows you how to change your service configuration. It also covers any changes that you may want to make relating to the additional service options.
-
 > [!IMPORTANT]
-> You must subscribe to Managed Monitoring as a Service to be able to also subscribe to any of the additional service options.
+> You must subscribe to Managed Monitoring as a Service to be able to also subscribe to any of the other service options.
 
-## Managed Monitoring as a Service default configuration
+This article provides information about how to add and remove devices within your Managed IT Operations services.
 
-### Default monitoring thresholds
-
-Managed Monitoring as a Service thresholds determine when alerts are raised against your monitored devices. The following table shows the default thresholds used by the service. If you want to use different thresholds you can identify these in your initial request or change them later.
-
-Item                                 | Alert type     | Default threshold
--------------------------------------|----------------|------------------
-Processor load                       | Major Alert    | 80%
-Processor load                       | Critical Alert | 90%
-Available memory                     | Major Alert    | 85%
-Available memory                     | Critical Alert | 95%
-Swap space used                      | Major Alert    | 80%
-Global disk space used               | Major Alert    | 75%
-Global disk space used               | Critical       | 85%
-Specific file system disk space used | Major Alert    | 75%
-Specific file system disk space used | Critical Alert | 85%
-
-### Default alert handling procedures
-
-If a threshold is exceeded, a major or critical alert is raised as appropriate. The procedure followed for these alerts is dependent on the alert type and whether you have identified the device as critical. The following table shows the default alert handling procedures for the different alert types and criticality.
-
-Alert type     | Critical item | UKCloud action
----------------|---------------|---------------
-Major Alert    | No            | <ol><li>Incident logged against the escalation contact via the UKCloud Portal.</li><li>Email notification to escalation contact with ticket details.</li><li>Ticket remains as "Waiting for Customer" until customer acknowledges and closes the incident via the UKCloud Portal.</li></ol>
-Major Alert    | Yes           | As above.
-Critical Alert | No            | As above.
-Critical Alert | Yes           | <ol><li>Incident logged against the escalation contact via the UKCloud Portal.</li><li>Email notification to escalation contact with ticket details.</li><li>Ticket remains as "Waiting for Customer" until customer acknowledges and closes the incident via the UKCloud Portal.</li><li>Phone call to escalation contact. If no response, then voicemail and update ticket with voicemail details.</li><ol>
-
-## Making changes to your service configuration
-
-To make any changes to your Managed Monitoring as a Service, you must log a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. For general information about raising a Service Request, see [*How to use My Calls in the UKCloud Portal*](../portal/ptl-how-use-my-calls.md).
-
-If you want to make changes, you'll be provided with a link to download a spreadsheet to specify the list of items that need amending. This will be the same spreadsheet that was originally used during your onboarding. When filling out the spreadsheet, ensure that you follow the instructions on the form. If you want to download the file ahead of raising the request, click [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1642866877&Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D). You can attach the file to the request offering before submitting to UKCloud.
-
-You can change the following service configurations:
-
-- [*Add or remove a monitored device*](#adding-or-removing-a-monitored-device)
-
-- [*Add or remove a managed service option*](#adding-or-removing-a-managed-service) (for example, Anti-Virus or Patching)
-
-- [*Amend credentials*](#amending-credentials)
-
-- [*Change monitoring thresholds*](#changing-monitoring-thresholds)
-
-- [*Amend the type of monitoring*](#amending-the-type-of-monitoring)
-
-- [*Amend patching schedules*](#amending-patching-schedules)
-
-### Adding a device to Managed Monitoring as a service
+## Adding a device to a Managed IT Operations service
 
 If there's a new device that you want to add to your Managed IT Operations service, you can let us know by raising a Service Request.
 
 1. In My Calls, raise a ticket using the **Managed IT Operations - Make changes to my managed devices** template.
 
+   ![Managed IT Operations - Make changes to my managed devices template](images/man-change-devices.png)
+
 2. Download the Managed IT Operations - Add or Remove Device spreadsheet (UKC-FRM-303) linked in the template.
 
-   ![Download link in the Makes changes to my managed devices template](images/man-monitoring-change-devices-link.png)
+   ![Download link in the Makes changes to my managed devices template](images/man-change-devices-link.png)
 
    > [!TIP]
-   > If you want to download the spreadsheet in advance, you can download it from [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1642866877&Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D)
+   > Each tab in the spreadsheet includes instructions on how to complete that tab.
+   >
+   > If you want to download the spreadsheet in advance, you can download it from [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1642866877&Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D).
 
 3. On the **Credentials** tab, add the details of any credentials required for the device.
 
@@ -106,22 +59,30 @@ If there's a new device that you want to add to your Managed IT Operations servi
 
 6. Specify the service to which you want to add the device by selecting **Yes** in the appropriate column.
 
-   For example, to add the device to Patching as a Service, select **Yes** from the list in the **Patching** column.
+   For example, to add the device to Managed Monitoring as a Service, select **Yes** from the list in the **ManagedMonitoring** column.
 
-   ![Adding a device to a service]()
+   ![Adding a device to Managed Monitoring as a Service](images/man-change-devices-add-mmaas.png)
 
-7. Make any changes to the relevant service tab as necessary.
+7. Make any changes to the relevant service tab(s) as necessary.
 
-   For example, if you're adding a device to Patching as a Service, update the information on the **Patching** tab as necessary.
+   For example, if you're adding a device to Managed Monitoring as a Service, update the information on the **Monitoring** tabs as necessary.
+
+   For more information about completing the different tabs see:
+
+   - [*How to update managed monitoring settings*](man-monitoring-how-update-settings.md)
+
+   - [*How to update patching settings*](man-patching-how-update-settings.md)
 
    > [!TIP]
-   > You can auto-populate device names from the first tab onto each of the service tabs. If the tab doesn't auto-populate, in the **Data** ribbon, select **Refresh All**.
+   > Device names from the first tab are auto-populated into each of the service tabs. If the information doesn't auto-populate, in the **Data** ribbon, select **Refresh All**.
    >
    > ![Refresh All option in Microsoft Excel](images/man-monitoring-excel-refresh.png)
    >
    > The devices you populated on the **Device Information** tab will then either auto-populate or appear in the dropdown list, depending on which tab you're on.
 
-8. When you're done, save the spreadsheet and upload it to the 
+8. When you've finished completing the spreadsheet, in your My Calls ticket either click **Select files** and browse to the completed spreadsheet or drag the spreadsheet into the template.
+
+9. Complete any additional information in the ticket template
 
 ### Removing a monitored device
 
