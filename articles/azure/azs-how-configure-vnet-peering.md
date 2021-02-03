@@ -140,3 +140,23 @@ To test the connection by pinging one of the virtual machines from the other usi
 6. From one of the virtual machines, the connection can be tested by pinging the other. Open windows CMD and type: "ping [*IP Address*]". If done correctly, the ping should be successfull, as shown below. 
 
 ![Configure virtual netork peering](images/azs-portal-peering-4.png)
+
+## How to configure a Hub and Spoke tapology with virtual network peering using the UKCloud Azure Stack Hub portal
+
+## Hub and Spoke virtual network peering
+
+The hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub.
+
+### Configuring the Hub
+
+1. create hub vnet
+
+2. create vpn gateway in the vnet with a pub ip
+
+**image of creating vnet gateway**
+
+3. Create spoke vnet
+
+4. add peering to hub
+
+5. add peering to both sides
