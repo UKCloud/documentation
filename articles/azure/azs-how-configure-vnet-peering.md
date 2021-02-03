@@ -143,20 +143,31 @@ To test the connection by pinging one of the virtual machines from the other usi
 
 ## How to configure a Hub and Spoke tapology with virtual network peering using the UKCloud Azure Stack Hub portal
 
-## Hub and Spoke virtual network peering
+The hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub. This central point allows you to be able to connect to one vnet to have access to every vnet connected to the hub,
 
-The hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub.
+## Overview
+
+A lot of the required step are in the guide above 
 
 ### Configuring the Hub
 
-1. create hub vnet
+the vnets created will be the same process as [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub) the only difference is you need atleast 3 and the peering is configured different
 
-2. create vpn gateway in the vnet with a pub ip
+1. create 3 vnets (hub spoke 1 and 2) configured as shown in [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub)
 
-**image of creating vnet gateway**
+2. 
 
-3. Create spoke vnet
+3. add peering to hub for both spokes 
+ 
+> [!NOTE]
+> in my testing it doesnt automatcally create the peering on the spoke when configuring on hub
 
-4. add peering to hub
+4. add peering to both sides
 
-5. add peering to both sides
+5. allow gateway transit on hub
+
+6. bish bash bosh, its done
+
+The connection can be tested by creating a vm in each vnet and testing conectivity after allowing icmp through the firewall
+
+Hub and spoke 1 should be able to ping eachother, Hub and spoke 2 should be able to ping eachother, but spoke 1 and spoke 2 shouldnt be able to ping eachother
