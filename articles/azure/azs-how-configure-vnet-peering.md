@@ -143,13 +143,17 @@ To test the connection by pinging one of the virtual machines from the other usi
 
 ## How to configure a Hub and Spoke tapology with virtual network peering using the UKCloud Azure Stack Hub portal
 
-The hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub. This central point allows you to be able to connect to one vnet to have access to every vnet connected to the hub,
+The hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub. This central point allows you to be able to connect to one vnet to have access to every vnet connected to the hub. This is easily configured just by adding another Virtual network to your resource group and peering it with an exesting one, declaring the virtual network you peered it with the hub.
+
+This allows the hub virtual network to communitcate with every other virtual networks (spokes). Below is a short guide on how to add the third Virtual network to make it a hub and spoke topology using Azure Stack Hub.
 
 ## Overview
 
 A lot of the required step are in the guide above 
 
 ### Configuring the Hub
+
+To conifgure the hub and spoke topology, all that needs to be done is set one of the vnets as the hub and peer every other vnet to it, these will be the spokes
 
 the vnets created will be the same process as [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub) the only difference is you need atleast 3 and the peering is configured different
 
