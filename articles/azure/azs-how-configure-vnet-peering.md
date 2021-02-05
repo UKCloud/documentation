@@ -153,25 +153,6 @@ A lot of the required step are in the guide above
 
 ### Configuring the Hub
 
-To conifgure the hub and spoke topology, all that needs to be done is set one of the vnets as the hub and peer every other vnet to it, these will be the spokes
+To conifgure the hub and spoke topology, all that needs to be done is declare one of the virtual networks as the hub and peer every other virtual network to it, these will be the spokes.
 
-the vnets created will be the same process as [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub) the only difference is you need atleast 3 and the peering is configured different
-
-1. create 3 vnets (hub spoke 1 and 2) configured as shown in [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub)
-
-2. 
-
-3. add peering to hub for both spokes 
- 
-> [!NOTE]
-> in my testing it doesnt automatcally create the peering on the spoke when configuring on hub
-
-4. add peering to both sides
-
-5. allow gateway transit on hub
-
-6. bish bash bosh, its done
-
-The connection can be tested by creating a vm in each vnet and testing conectivity after allowing icmp through the firewall
-
-Hub and spoke 1 should be able to ping eachother, Hub and spoke 2 should be able to ping eachother, but spoke 1 and spoke 2 shouldnt be able to ping eachother
+The virtual networks created will be the same process as [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub). Just make sure all spokes are connected to one central virtual network
