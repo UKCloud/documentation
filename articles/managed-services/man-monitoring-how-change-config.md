@@ -216,7 +216,7 @@ To add a monitoring element:
 
 - [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
 
-- [*How to provide notification of maintenance windows*](man-how-notify-maintenance.md)
+- [*How to provide notification of maintenance windows for Managed IT Operations*](man-how-notify-maintenance.md)
 
 ## Feedback
 

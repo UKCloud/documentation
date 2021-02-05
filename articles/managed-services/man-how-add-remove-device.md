@@ -129,7 +129,7 @@ If you have a device that you no longer want to monitor, you can remove it from 
 
 - [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
 
-- [*How to provide notification of maintenance windows*](man-how-notify-maintenance.md)
+- [*How to provide notification of maintenance windows for Managed IT Operations*](man-how-notify-maintenance.md)
 
 ## Feedback
 
