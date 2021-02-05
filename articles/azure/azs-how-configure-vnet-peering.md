@@ -147,10 +147,6 @@ The hub is a virtual network in Azure that acts as a central point of connectivi
 
 This allows the hub virtual network to communitcate with every other virtual networks (spokes). Below is a short guide on how to add the third Virtual network to make it a hub and spoke topology using Azure Stack Hub.
 
-## Overview
-
-A lot of the required step are in the guide above 
-
 ### Configuring the Hub
 
 To conifgure the hub and spoke topology, all that needs to be done is declare one of the virtual networks as the hub and peer every other virtual network to it, these will be the spokes.
