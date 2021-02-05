@@ -72,7 +72,7 @@ The UKCloud monitoring system is capable of using either `snmpv2c` or `snmpv3` t
 
 8. Enter the date from which you want the changes to be effective.
 
-9.  When you're done, click **Review & Submit** then **Submit**.
+9. When you're done, click **Review & Submit** then **Submit**.
 
    As per our standard customer service targets, we aim to resolve your request within two working days.
 
@@ -212,7 +212,7 @@ To add a monitoring element:
 
 - [*Default monitoring thresholds and alert handling procedures*](man-ref-defaults.md)
 
-- [*How to add and remove devices*](man-how-add-remove-devices.md)
+- [*How to add devices to and remove devices from Managed IT Operations*](man-how-add-remove-devices.md)
 
 - [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
 

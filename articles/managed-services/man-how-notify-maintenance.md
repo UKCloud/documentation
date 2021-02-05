@@ -81,7 +81,7 @@ If the maintenance window affects multiple devices, you'll need to fill out the 
 
 ## Related articles
 
-- [*How to add and remove devices*](man-how-add-remove-devices.md)
+- [*How to add devices to and remove devices from Managed IT Operations*](man-how-add-remove-devices.md)
 
 - [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
 
