@@ -21,7 +21,7 @@ toc_mdlink: man-ref-defaults.md
 
 With Managed Monitoring as a Service, our Cloud Operations team monitors your devices, receiving and reacting to any abnormal events, only escalating those events that genuinely require your attention.
 
-When we first provision the service, we set it up with default thresholds for the devices you've selected to monitor, unless you specified different thresholds in your initial request. At any time, you can raise a Service Request, via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, to change these thresholds and other service configuration details. For more details about how to do this, see [*How to update managed monitoring settings*](man-monitoring-how-update-settings.md).
+When we first provision the service, we set it up with default thresholds for the devices you've selected to monitor, unless you specified different thresholds in your initial request. At any time, you can raise a Service Request, via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, to change these thresholds and other service configuration details. For more details about how to do this, see [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md).
 
 This article provides information about the default monitoring thresholds and alerting procedures.
 
@@ -56,11 +56,11 @@ Critical Alert | Yes           | <ol><li>Incident logged against the escalation 
 
 ## Related articles
 
-- [*How to update managed monitoring settings*](man-monitoring-how-update-settings.md)
-
 - [*How to add and remove devices*](man-how-add-remove-devices.md)
 
-- [*How to update contact information*](man-how-update-contact-info.md)
+- [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
+
+- [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
 
 - [*How to provide notification of maintenance windows*](man-how-notify-maintenance.md)
 

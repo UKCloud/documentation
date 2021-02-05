@@ -1,10 +1,10 @@
 ---
-title: How to add and remove devices
-description: Describes how to add or remove devices from you Managed IT Operations services
+title: How to add devices to and remove devices from Managed IT Operations
+description: Describes how to add or remove devices from your Managed IT Operations services, such as Managed Monitoring as a Service and Patching as a Service
 services: managed-services
 author: shighmoor
 reviewer: agull
-lastreviewed: 02/02/2021
+lastreviewed: 04/02/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -15,7 +15,7 @@ toc_fullpath: Managed IT Operations/man-how-add-remove-devices.md
 toc_mdlink: man-how-add-remove-devices.md
 ---
 
-# How to add and remove devices
+# How to add devices to and remove devices from Managed IT Operations
 
 ## Overview
 
@@ -29,29 +29,31 @@ Managed IT Operations provides several options focused on enhancing the general 
 
 - Runbook Automation (coming soon)
 
+This article provides information about how to add devices to and remove devices from these Managed IT Operations service options.
+
 > [!IMPORTANT]
 > You must subscribe to Managed Monitoring as a Service to be able to also subscribe to any of the other service options.
 
-This article provides information about how to add and remove devices within your Managed IT Operations services.
+To make changes, you'll need to fill in the appropriate details in the Managed IT Operations - Add or Remove Device spreadsheet (UKC-FRM-303) spreadsheet, which enables us to automate your requested changes. This is the same spreadsheet as the one you used to originally set up your service. The Service Request template will include a link to download the spreadsheet. When filling out the spreadsheet, ensure that you follow the instructions provided.
+
+If you want to download the spreadsheet ahead of raising the request, click [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1642866877&Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D).
 
 ## Adding a device to a Managed IT Operations service
 
-If there's a new device that you want to add to your Managed IT Operations service, you can let us know by raising a Service Request.
+If you have a new device that you want monitored, you can add it to your Managed IT Operations service.
 
 1. In My Calls, raise a ticket using the **Managed IT Operations - Make changes to my managed devices** template.
 
    ![Managed IT Operations - Make changes to my managed devices template](images/man-change-devices.png)
 
-2. Download the Managed IT Operations - Add or Remove Device spreadsheet (UKC-FRM-303) linked in the template.
+2. Download the spreadsheet linked in the template.
 
    ![Download link in the Makes changes to my managed devices template](images/man-change-devices-link.png)
 
    > [!TIP]
    > Each tab in the spreadsheet includes instructions on how to complete that tab.
-   >
-   > If you want to download the spreadsheet in advance, you can download it from [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1642866877&Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D).
 
-3. On the **Credentials** tab, add the details of any credentials required for the device.
+3. In the **Credentials** tab of the spreadsheet, add the details of any credentials required for the device.
 
 4. On the **Device Information** tab, add the details of the device that you want to add, including the device name, IP address and OS family.
 
@@ -63,24 +65,24 @@ If there's a new device that you want to add to your Managed IT Operations servi
 
    ![Adding a device to Managed Monitoring as a Service](images/man-change-devices-add-mmaas.png)
 
-7. Make any changes to the relevant service tab(s) as necessary.
+7. Make any changes to the relevant service option tab(s) as necessary.
 
    For example, if you're adding a device to Managed Monitoring as a Service, update the information on the **Monitoring** tabs as necessary.
 
    For more information about completing the different tabs see:
 
-   - [*How to update managed monitoring settings*](man-monitoring-how-update-settings.md)
+   - [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
 
-   - [*How to update patching settings*](man-patching-how-update-settings.md)
+   - [*How to define patching windows for Patching as a Service*](man-patching-how-define-window.md)
 
    > [!TIP]
-   > Device names from the first tab are auto-populated into each of the service tabs. If the information doesn't auto-populate, in the **Data** ribbon, select **Refresh All**.
+   > Device names from the **Device Information** tab are auto-populated into each of the service option tabs. If the information doesn't auto-populate, in the **Data** ribbon, select **Refresh All**.
    >
    > ![Refresh All option in Microsoft Excel](images/man-monitoring-excel-refresh.png)
    >
-   > The devices you populated on the **Device Information** tab will then either auto-populate or appear in the dropdown list, depending on which tab you're on.
+   > Device names will then either auto-populate or appear in the dropdown list, depending on which tab you're on.
 
-8. When you've finished completing the spreadsheet, in your My Calls ticket, either click **Select files** and browse to the completed spreadsheet or drag the spreadsheet into the template.
+8. When you've finished completing the spreadsheet, in your My Calls ticket either click **Select files** and browse to the completed spreadsheet or drag the spreadsheet into the template.
 
    ![Upload Add or Remove devices spreadsheet](images/man-change-devices-upload-submit.png)
 
@@ -88,91 +90,46 @@ If there's a new device that you want to add to your Managed IT Operations servi
 
 10. When you're done, click **Review & Submit** then **Submit**.
 
-   As per our standard customer service targets, we aim to resolve your request within two working days.
+    As per our standard customer service targets, we aim to resolve your request within two working days.
 
 ## Removing a monitored device from a Managed IT Operations service
 
-
-
-
-### Making changes to my devices
-
-If there's a new device that you want to add to your Managed Monitoring as a Service, or if there's a device that you no longer want to be monitored, you can let us know by raising a Service Request.
+If you have a device that you no longer want to monitor, you can remove it from your Managed IT Operations service.
 
 1. In My Calls, raise a ticket using the **Managed IT Operations - Make changes to my managed devices** template.
 
+   ![Managed IT Operations - Make changes to my managed devices template](images/man-change-devices.png)
+
 2. Download the spreadsheet linked in the template.
 
-   ![Download link in Make changes to my managed devices template](images/man-monitoring-change-devices-link.png)
-
-3. Complete the spreadsheet.
-
-   For more information about filling in the spreadsheet, see [*Filling out the Managed IT Operations spreadsheet*](#filling-out-the-managed-it-operations-spreadsheet).
-
-### Filling out the Managed IT Operations spreadsheet
-
-For the majority of changes, you'll need to populate the Managed IT Operations spreadsheet. This enables us to automate any changes you've requested and therefore provide a more efficient service.
-
-1. In My Calls, raise a ticket using the appropriate Managed IT Operations template.
-
-   For example, if you want to add new devices to your service, raise a ticket using the **Make changes to my managed devices** template
-
-2. Within the template, you'll be provided with a link to the Managed IT Operations spreadsheet (UKC-FRM-303). Click the link to download the file.
-
-   ![Download link for Managed IT Operations spreadsheet](images/man-monitoring-template-link.png)
+   ![Download link in the Makes changes to my managed devices template](images/man-change-devices-link.png)
 
    > [!TIP]
-   > If you want to download the spreadsheet in advance, you can download it from [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1642866877&Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D).
+   > Each tab in the spreadsheet includes instructions on how to complete that tab.
 
-3. Fill out the appropriate tabs in the spreadsheet, depending on the configuration changes you want to make.
+3. In the **Device Information** tab of the spreadsheet, in the column for the service from which you want to remove the device, select **No**.
 
-   > [!TIP]
-   > At the top of each tab you can find information about how to complete that tab. If you have any questions, contact UKCloud Support.
+   For example, to remove a device from Patching as a Service, select **No** from the list in the **Patching** column
 
-   - **Credentials** - The credentials listed here should be those that need to be selected within the other tabs for use by individual services.
+4. When you've finished completing the spreadsheet, in your My Calls ticket either click **Select files** and browse to the completed spreadsheet or drag the spreadsheet into the template.
 
-   - **Device Information** - Use this tab to add or remove devices from the various services. For example, if you want to add a device to Patching as a Service, complete the various fields and then select **Yes** in the **Patching** column. You will then need to complete the **Patching** tab.
+   ![Upload Add or Remove devices spreadsheet](images/man-change-devices-upload-submit.png)
 
-     ![Adding devices to Patching as a Servie on the Device Information tab](images/man-monitoring-change-devices-patching.png)
+5. Enter the date from which you want the changes to be effective.
 
-     If you want to remove a device, change the value to **No** under the appropriate service.
-
-   - **Monitoring - Device Settings** - Use this tab to define the monitoring method. The device field can be auto-populated from the **Device Information** tab.
-
-   - **Monitoring - Overrides** - Use this tab to amend the default threshold and handling procedures listed [above](#managed-monitoring-as-a-service-default-configuration)
-
-   - **Monitoring - Advanced** - Use this tab to add additional monitors to the default monitoring.
-
-   - **Patching** - Use this tab to add, remove or change patching windows and methods.
-
-4. If you're adding or removing devices, you'll need to populate the **Device Information** tab.
-
-   ![Device Information tab](images/man-monitoring-change-devices-info.png)
-
-   Each tab includes instructions for how to complete the form.
-
-   ![Instructions on Device Information tab](images/man-monitoring-change-devices-info-help.png)
-
-5. To update monitoring methods, thresholds or add additional monitoring methods, complete the appropriate **Monitoring** tab.
-
-   > [!TIP]
-   > You can auto-populate device names from the first tab onto each of the **Monitoring** tabs. If the tab doesn't auto-populate, in the **Data** ribbon, select **Refresh All**.
-   >
-   > ![Refresh All option in Microsoft Excel](images/man-monitoring-excel-refresh.png)
-   >
-   > The devices you populated on the **Device Information** tab will then either auto-populate or appear in the dropdown list, depending on which tab you're on.
-
-6. For adding new devices to Patching as a Service or to change patching schedules, you'll need to complete the **Device Information** tab to add those devices to Patching as a Service. Once you select **Yes** from the dropdown list under Patching, you can then auto-populate it into the **Patching** tab. You must complete the **Patching** tab to select your preferred patching window. UKCloud will select the appropriate patching method based on the operating system of the device, so you should select **Automatically Select** from the options.
-
-7. When you've finished completing the spreadsheet, in your ticket either click **Select files** and browse to the completed spreadsheet or drag the spreadsheet into the template.
-
-8. When you're done, click **Review & Submit** then **Submit**.
+6. When you're done, click **Review & Submit** then **Submit**.
 
    As per our standard customer service targets, we aim to resolve your request within two working days.
 
 ## Related articles
 
+- [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
 
+- [*How to define patching windows for Patching as a Service*](man-patching-how-define-window.md)
+
+- [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
+
+- [*How to provide notification of maintenance windows*](man-how-notify-maintenance.md)
 
 ## Feedback
 
