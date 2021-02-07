@@ -62,6 +62,8 @@ You can browse the list of installer RPM files [here](https://rh-cds.ukcloud.com
 
 - [RHEL 6 EUS](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL6-EUS-2.0-2.noarch.rpm)
 
+- [RHEL 6 ELS](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL6-ELS-2.0-2.noarch.rpm)
+
 - [RHEL 7 Standard](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL7-STANDARD-2.0-5.noarch.rpm)
 
 - [RHEL 7 EUS](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL7-EUS-2.0-2.noarch.rpm)

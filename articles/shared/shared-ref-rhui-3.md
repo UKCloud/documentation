@@ -55,6 +55,12 @@ The UKCloud RHUI service supplies access to the following repository groups. Eac
 
 - Red Hat Enterprise Linux 6 Server - Extended Update Support - Supplementary (RPMs) from RHUI (6Server-x86_64)
 
+### RHEL6-ELS
+
+- Red Hat Enterprise Linux 6 Server - Extended Life Cycle Support (RPMs) from RHUI (6Server-x86_64)
+
+- Red Hat Enterprise Linux 6 Server - Extended Life Cycle Support - Optional (RPMs) from RHUI (6Server-x86_64)
+
 ### RHEL7-Standard
 
 - Red Hat Enterprise Linux 7 Server - Extras from RHUI (RPMs) (x86_64)
