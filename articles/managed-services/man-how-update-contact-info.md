@@ -4,7 +4,7 @@ description: Describes how to add new contact information and update contact inf
 services: managed-services
 author: shighmoor
 reviewer: agull
-lastreviewed: 05/02/2021
+lastreviewed: 08/02/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: man-how-update-contact-info.md
 
 ## Overview
 
-It's important to keep that contact information for your Managed IT Operations service up to date, so that, in the event of an alert that requires your attention, we can quickly get in touch with the relevant person within your organisation.
+It's important to keep the contact information for your Managed IT Operations service up to date, so that, in the event of an alert that requires your attention, we can quickly get in touch with the relevant person within your organisation.
 
 All contact information is captured using playbooks. A playbook is a set of instructions that determine the actions to perform in response to a certain scenario. In the case of contact information, for example, all alerts could go to `support@example.com`, but for an Active Director server, they might go to `adsupport@example.com`. In addition, you can add an escalation contact for urgent alerts, whereby our Cloud Operations team can email or call another agreed contact in certain circumstances.
 
@@ -69,6 +69,24 @@ To update a contact:
 6. Provide any **Additional Details** regarding the playbook, if necessary.
 
 7. When you're done, click **Review & Submit** then **Submit**.
+
+   The Service Request will be fulfilled within the agreed SLA.
+
+### Removing an existing contact
+
+If you want to completely remove a contact from your Managed IT Operations service, you need to delete the corresponding playbook.
+
+1. In My Calls, raise a ticket using the **Managed IT Operations - Playbooks** template.
+
+2. From the **Action** list, select **Delete Playbook**.
+
+   ![Delete Playbook](images/man-delete-playbook.png)
+
+3. In the **Playbook Code(s) to delete** field, enter the ID of the playbook that contains the contact that you want to delete.
+
+4. In the **Additional Details** field, you can enter information about the specific contact that you want to remove to confirm the details.
+
+5. When you're done, click **Review & Submit** then **Submit**.
 
    The Service Request will be fulfilled within the agreed SLA.
 
