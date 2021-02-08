@@ -86,7 +86,7 @@ The customer is responsible for notifying UKCloud of any patches (including crit
 
 ### Operating systems
 
-UKCloud will only support in-life, vendor-backed operating systems, such as Microsoft Windows, Red Hat Enterprise Linux and Canonical Ubuntu. Customer-built operating systems (for example Gentoo Linux custom build).
+UKCloud will only support in-life, vendor-backed operating systems, such as Microsoft Windows, Red Hat Enterprise Linux and Canonical Ubuntu. Customer-built operating systems (for example Gentoo Linux custom build) are unsupported by this service.
 
 ### Customer environment configuration
 
