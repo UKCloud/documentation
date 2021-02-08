@@ -4,7 +4,7 @@ description: Frequently asked questions for general connectivity
 services: connectivity
 author: mwarner
 reviewer: nstobbart
-lastreviewed: 19/07/2018
+lastreviewed: 10/12/2020
 
 toc_rootlink: FAQs
 toc_sub1: 
