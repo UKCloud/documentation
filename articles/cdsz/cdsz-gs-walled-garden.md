@@ -87,6 +87,7 @@ The diagrams below provide examples for both options.
 
 > [!NOTE]
 > For both options:
+>
 > - You cannot route public IP addresses to the vCNS Edges in the Walled Garden
 > - The Org VDC networks 192.168.XXX.XX in the examples below are illustrative and you should replace these with your own details
 > - You must have one VM in the Walled Garden VDC connecting to both vCNS Edges
@@ -109,7 +110,7 @@ When you've built your VMs and networking, you can start to test the environment
 
 As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can verify appropriate providers on the [NCSC web site](https://www.ncsc.gov.uk/section/products-services/verify-supplier?q=&defaultTypes=organisation&sort=date%2Bdesc&start=0&rows=20).
 
-Before beginning the ITHC, notify UKCloud by raising a service request in [My Calls](https://portal.skyscapecloud.com/support/ivanti) and completing the [*External Security Review Test (ESRT) application form*](https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad). Ideally, we require five working days' notice before the work is due to be carried out.
+Before beginning the ITHC, notify UKCloud by raising a service request in [My Calls](https://portal.skyscapecloud.com/support/ivanti) and completing the [*External Security Review Test (ESRT) application form*](https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-231%20External%20Security%20Review%20Testing%20application%20form.docx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1601158257&Signature=juLGEEXii6buW2ciPz3eUpkHF1w%3D). Ideally, we require five working days' notice before the work is due to be carried out.
 
 The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.
 

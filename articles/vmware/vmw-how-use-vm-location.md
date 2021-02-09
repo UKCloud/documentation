@@ -61,7 +61,7 @@ You can also obtain the location of a VM via the via the API, looking at the met
 
 The following has been created as an example script to obtain the VM location:
 
-https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxx/metadata
+https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-xxx/metadata
 
 Replace the `xxx` with the relevant VM ID.
 
