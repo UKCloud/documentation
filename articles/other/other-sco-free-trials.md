@@ -39,8 +39,6 @@ Exclusions are:
 
 - Basic Managed VM
 
-- HSCN, unless you already have an HSCN connection
-
 - Services covered by the [SFIA Rate Card](http://www.ukcloud.com/sfia)
 
 - Dedicated Compute option in UKCloud for VMware
@@ -50,6 +48,8 @@ Exclusions are:
 - Private Cloud for Storage
 
 - Private Cloud for Oracle Software
+
+- Government network where Code of Connection is not held (PSN, HSCN etc, see Connectivity FAQs) 
 
 - Products in alpha or beta testing - these will be treated differently to free trials
 
