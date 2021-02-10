@@ -28,6 +28,10 @@ The Health and Social Care Network (HSCN) is designed to provide a solution for 
 
 No. We can provide a HSCN connection only to customers who use our cloud services.
 
+### Can I use UKCloud's HSCN connection for my PoC on UKCloud's cloud services?
+
+Yes. If you are using UKCloud for a PoC and have signed up to the terms within the HSCN Connection Agreement, then we can grant you HSCN access for your PoC.
+
 ### Does UKCloud provide local connections to the HSCN network?
 
 No. We can't arrange HSCN connections to third party offices. We only enable our customers and partners to provide services via the HSCN, using applications and solutions hosted on the UKCloud cloud platform.
@@ -40,21 +44,25 @@ You can find information about other connectivity methods and answers to general
 
 You must sign up to the terms of the HSCN Connection Agreement before you can have access to the HSCN: <https://digital.nhs.uk/services/health-and-social-care-network/new-to-hscn/connecting-to-hscn>
 
-1) If you think you have signed the Connection Agreement, go to <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/> and search either using your organisation name or ODS code.
+1) If you think you have signed the Connection Agreement, go to <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/> and search either using your organisation name or ODS code (if you dont know your ODS code this can be found at <https://odsportal.digital.nhs.uk/>).
 
 2) If you haven't yet received an invitation to complete your Connection Agreement, contact <enquiries@nhsdigital.nhs.uk> to request access to their online portal.
 
 3) Once you have access to the NHS Digital online portal, sign your Connection Agreement and submit it to NHS Digital.
 
-Alternatively, you can request a new UKCloud Master Services Agreement (MSA v11.0), which contains the flow-down of the HSCN Connection Agreement terms. If you sign and submit this, you're automatically signing up to the terms of the Connection Agreement and do not need to sign a separate Connection Agreement with NHS Digital. If you'd like to sign the MSA v11.0, contact your Account Manager.
+Alternatively, you can request a new UKCloud Master Services Agreement (MSA v11.0 or later), which contains the flow-down of the HSCN Connection Agreement terms. If you sign and submit this, you're automatically signing up to the terms of the Connection Agreement and do not need to sign a separate Connection Agreement with NHS Digital. If you'd like to sign the MSA, contact your Account Manager.
 
 UKCloud will validate that you've signed up to the terms of the HSCN Connection Agreement before connecting you to HSCN.
+
+### Why isn't my Connection Agreement showing up in the HSCN Connection Agreement Portal?
+
+Sometimes organisations have signed the HSCN Connection Agreement but it doesn't show up in the HSCN Portal. If this happens you can either contact NHS Digial <enquiries@nhsdigital.nhs.uk> and ask them to update the Portal, then once we see your organisation Agreement in the Portal we can give you HSCN access, or for expediency you can send a copy of your signed Agreement to us, which means we can give you HSCN access straight away, and then we can ask NHS Digital to update their records for your organisation.
 
 ### What is UKCloud's ODS code? 
 
 The UKCloud ODS code is 8J561.
 
-You can find all ODS and connection agreements at <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/>.
+You can find all ODS codes at <https://odsportal.digital.nhs.uk/> and connection agreements at <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/>.
 
 ### UKCloud are not on NHS Digital's CN-SP list, can you provide HSCN?
 
@@ -116,7 +124,7 @@ Once you're aligned with the HSCN Connection Agreement terms, either by signing 
 
 You can get HSCN connectivity in one of two ways.
 
-1) Sign your own Connection Agreement. Have this counter-signed by NHS Digital and then send us a copy.
+1) Sign your own HSCN Connection Agreement. 
 
 2) Sign up to UKCloud's MSA (version 11.0 onwards) as a consumer of our services and we cover you with the flow-down of the Connection Agreement terms. No need to get NHS Digital to counter-sign an Agreement.
 
