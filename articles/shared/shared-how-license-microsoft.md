@@ -103,7 +103,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
   - SQL Developer can only be utilised on a shared platform to test the SQL element of a solution and cannot be used to provide end-user services. If you want to provide SQL services to end-users, SQL Enterprise or SQL Standard must be purchased.
 
-  - We can provide Microsoft SQL Standard Server licences on a per hour basis, Microsoft SQL Enterprise licences billed on a monthly basis or Microsoft SQL Web licenses billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Microsoft SQL Web is currently priced at £10.95 per pair of cores per month with a minimum of 4 cores per VM.
+  - We can provide Microsoft SQL Standard Server licences on a per hour basis, Microsoft SQL Enterprise licences billed on a monthly basis or Microsoft SQL Web licenses billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Microsoft SQL Web is currently priced at £10.95 per pair of cores per month with a minimum of 4 cores per VM. Note that SQL Web is only for use to support public and internet accessible web pages, sites, applications and services. You cannot use it to support line of business applications (for example, Customer Relationship Management, Enterprise Resource Management and other similar applications).
 
   - Microsoft Mobility - this is a valid option for both SQL Standard and Enterprise.
 
