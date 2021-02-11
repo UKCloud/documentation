@@ -44,7 +44,7 @@ You can find information about other connectivity methods and answers to general
 
 You must sign up to the terms of the HSCN Connection Agreement before you can have access to the HSCN: <https://digital.nhs.uk/services/health-and-social-care-network/new-to-hscn/connecting-to-hscn>
 
-1) If you think you have signed the Connection Agreement, go to <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/> and search either using your organisation name or ODS code (if you dont know your ODS code this can be found at <https://odsportal.digital.nhs.uk/>).
+1) If you think you have signed the Connection Agreement, go to <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/> and search either using your organisation name or ODS code (if you don't know your ODS code, you can find it at <https://odsportal.digital.nhs.uk/>).
 
 2) If you haven't yet received an invitation to complete your Connection Agreement, contact <enquiries@nhsdigital.nhs.uk> to request access to their online portal.
 
@@ -56,7 +56,11 @@ UKCloud will validate that you've signed up to the terms of the HSCN Connection 
 
 ### Why isn't my Connection Agreement showing up in the HSCN Connection Agreement Portal?
 
-Sometimes organisations have signed the HSCN Connection Agreement but it doesn't show up in the HSCN Portal. If this happens you can either contact NHS Digial <enquiries@nhsdigital.nhs.uk> and ask them to update the Portal, then once we see your organisation Agreement in the Portal we can give you HSCN access, or for expediency you can send a copy of your signed Agreement to us, which means we can give you HSCN access straight away, and then we can ask NHS Digital to update their records for your organisation.
+You may find that, although you've signed the HSCN Connection Agreement, it doesn't show up in the HSCN Portal. If this happens you can either:
+
+- Contact NHS Digial (<enquiries@nhsdigital.nhs.uk>) and ask them to update the Portal. When we can see your organisation agreement in the Portal we can give you HSCN access.
+
+- For expediency, you can send a copy of your signed Agreement to us, and we can give you HSCN access straight away. We can then request that NHS Digital update their records for your organisation.
 
 ### What is UKCloud's ODS code? 
 
