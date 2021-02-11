@@ -49,7 +49,7 @@ Exclusions are:
 
 - Private Cloud for Oracle Software
 
-- Government network where Code of Connection is not held (PSN, HSCN etc, see Connectivity FAQs) 
+- Government network where Code of Connection is not held (for example, PSN or HSCN; see relevant connectivity FAQ)
 
 - Products in alpha or beta testing - these will be treated differently to free trials
 
