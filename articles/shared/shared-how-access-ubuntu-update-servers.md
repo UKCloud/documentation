@@ -4,7 +4,7 @@ description: Provides information about accessing the Ubuntu repository servers
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 29/09/2020
+lastreviewed: 11/02/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,39 +19,57 @@ toc_mdlink: shared-how-access-ubuntu-update-servers.md
 
 ## Overview
 
-When you create a virtual machine (VM) with an Ubuntu licence on it, you need to register the VM in order to receive updates for it. This guide explains how to access the Ubuntu repository servers to receive updates. Depending on whether your VM is on UKCloud's Assured OFFICIAL or Elevated OFFICIAL platform, there's a different process to follow.
+When you create a virtual machine (VM) with an Ubuntu licence on it, you need to register the VM in order to receive updates for it. This guide explains how to access the Ubuntu repository servers to receive updates.
 
 Before you attempt to establish connections to an Ubuntu repository server, you need to make sure your VMs can communicate with the Ubuntu server which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 ## Assured OFFICIAL platform
 
-UKCloud's Assured OFFICIAL platform is internet facing, so you can simply configure your VM to connect to the internet, and use standard update tools such as apt-get to talk directly to the publicly available Ubuntu repositories.
+UKCloud's Assured OFFICIAL platform is internet facing, so you can either configure your VM to connect to the internet, and use standard update tools such as apt-get to talk directly to the publicly available Ubuntu repositories or you can use the UKCloud-managed repository servers.
 
 ## Elevated OFFICIAL platform
 
 UKCloud's Elevated OFFICIAL platform doesn't natively connect to the internet, and the PSN Protected network doesn't have any Ubuntu repository servers. To connect to an Ubuntu repository server for updates, you can use UKCloud-managed repository servers or a UKCloud Walled Garden.
 
+## Prerequisites
+
+There are two prerequisites for performing this operation:
+
+- The VM can resolve to the Repo Server DNS records (contact UKCloud Support for the IP addresses for the Elevated records). You can achieve this several different ways:
+
+  - Use internet DNS records to resolve the Assured Repo Server
+
+  - Configure an A record on your local DNS for the Elevated Repo Server
+
+  - Configure an `/etc/hosts` file entry with the appropriate information
+
+- All VMs using the service must be able to access the Repo servers on port TCP/443 (HTTPS). Ensure that you have configured SNAT and firewall policies on your edge gateway device. If you have any questions about this, contact UKCloud Supp
+ort.
+
+### Locations
+
+> [!NOTE]
+> These locations are accessible only from within the UKCloud network.
+
 ### UKCloud-managed repository servers
 
-We provide Ubuntu repositories for the 16.04, 18.04 and 20.04 LTS versions of Ubuntu on our Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.
+We provide Ubuntu repositories for the 16.04 (Xenial), 18.04 (Bionic) and 20.04 (Focal) LTS versions of Ubuntu on both our Assured OFFICIAL and Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.
 
 - For 16.04:
 
-        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_xenial.list
+        sudo wget -P /etc/apt/sources.list.d https://rh-cds.ukcloud.com/ubuntu/repofiles/ukcloud_xenial.list
 
 - For 18.04:
 
-        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_bionic.list
+        sudo wget -P /etc/apt/sources.list.d https//rh-cds.ukcloud.com/ubuntu/repofiles/ukcloud_bionic.list
  
 - For 20.04:
 
-        sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_focal.list
+        sudo wget -P /etc/apt/sources.list.d https://rh-cds.ukcloud.com/ubuntu/repofiles/ukcloud_focal.list
 
 We also recommend that you rename the default `/etc/apt/sources.list` file to reduce the likelihood of errors during the update process that stem from attempts to access the internet-based Canonical Partner repositories. To do this, use the following command:
 
     sudo mv /etc/apt/sources.list /etc/apt/sources.list.old
-
-Replace x.y with the first two octets of the Elevated OFFICIAL public IP addresses. If you're not sure what these are, contact UKCloud Support.
 
 ### Walled Garden
 
