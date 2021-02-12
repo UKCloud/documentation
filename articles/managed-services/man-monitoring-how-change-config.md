@@ -29,9 +29,12 @@ This article shows you how to change your Managed Monitoring as a Service config
 
 To make any changes to Managed Monitoring as a Service, log a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. For general information about raising a Service Request, see [*How to use My Calls in the UKCloud Portal*](../portal/ptl-how-use-my-calls.md).
 
-To make changes, you'll need to fill in the appropriate details in the Managed IT Operations - Add or Remove Device spreadsheet (UKC-FRM-303) spreadsheet, which enables us to automate your requested changes. This is the same spreadsheet as the one you used to originally set up your service. The Service Request template will include a link to download the spreadsheet. When filling out the spreadsheet, ensure that you follow the instructions provided.
+To make changes, you'll need to fill in the appropriate details in the Managed IT Operations - Add or Remove Device spreadsheet (UKC-FRM-303) spreadsheet, which enables us to automate your requested changes. This is the same spreadsheet as the one you used to originally set up your service. The Service Request template includes a link to download the spreadsheet. When filling out the spreadsheet, ensure that you follow the instructions provided.
 
 If you want to download the spreadsheet ahead of raising the request, click [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1642866877&Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D).
+
+> [!NOTE]
+> If you're not sure how to complete the spreadsheet or need help with any of the details, contact UKCloud Support.
 
 ### Defining the monitoring method
 
@@ -192,7 +195,7 @@ To add a monitoring element:
    URL_CONTENT        | AlertTarget    | The URL to check; this may be HTTPS or HTTP
    &nbsp;             | AlertArgument1 | The response code to check for
    &nbsp;             | AlertArgument2 | The string to check for in the returned content
-   CERT_EXPIRY        | AlertTarget    | 
+   CERT_EXPIRY        | AlertTarget    | The HTTPS to check for an expired certificate
    HOST_PORT          | AlertTarget    | The port number of the endpoint to check
    WINDOWS_SERVICE    | AlertTarget    | The service name to check the status of
    AGENT_PORT         | AlertTarget    | The port number of the endpoint that the agent installed on the device should be checking

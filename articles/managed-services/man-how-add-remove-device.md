@@ -34,9 +34,12 @@ This article provides information about how to add devices to and remove devices
 > [!IMPORTANT]
 > You must subscribe to Managed Monitoring as a Service to be able to also subscribe to any of the other service options.
 
-To make changes, you'll need to fill in the appropriate details in the Managed IT Operations - Add or Remove Device spreadsheet (UKC-FRM-303) spreadsheet, which enables us to automate your requested changes. This is the same spreadsheet as the one you used to originally set up your service. The Service Request template will include a link to download the spreadsheet. When filling out the spreadsheet, ensure that you follow the instructions provided.
+To make changes, you'll need to fill in the appropriate details in the Managed IT Operations - Add or Remove Device spreadsheet (UKC-FRM-303) spreadsheet, which enables us to automate your requested changes. This is the same spreadsheet as the one you used to originally set up your service. The Service Request template includes a link to download the spreadsheet. When filling out the spreadsheet, ensure that you follow the instructions provided.
 
 If you want to download the spreadsheet ahead of raising the request, click [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1642866877&Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D).
+
+> [!NOTE]
+> If you're not sure how to complete the spreadsheet or need help with any of the details, contact UKCloud Support.
 
 ## Adding a device to a Managed IT Operations service
 
