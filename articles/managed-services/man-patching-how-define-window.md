@@ -77,7 +77,7 @@ A patching window determines when the patching will take place on a monitored de
    - **disabled** - Do not attempt to snapshot the virtual machine prior to patching. Use this option for virtual machines that are unable to have snapshots and environments where snapshots are not available.
 
    > [!NOTE]
-   > Currently, snapshot functionality is available on in UKCloud for VMware environments.
+   > Currently, snapshot functionality is available only in UKCloud for VMware environments.
 
 9. When you've finished completing the spreadsheet, in your My Calls ticket either click **Select files** and browse to the completed spreadsheet or drag the spreadsheet into the template.
 
