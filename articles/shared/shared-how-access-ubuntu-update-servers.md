@@ -23,37 +23,36 @@ When you create a virtual machine (VM) with an Ubuntu licence on it, you need to
 
 Before you attempt to establish connections to an Ubuntu repository server, you need to make sure your VMs can communicate with the Ubuntu server which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
-## Assured OFFICIAL platform
+### Assured OFFICIAL platform
 
 UKCloud's Assured OFFICIAL platform is internet facing, so you can either configure your VM to connect to the internet, and use standard update tools such as apt-get to talk directly to the publicly available Ubuntu repositories or you can use the UKCloud-managed repository servers.
 
-## Elevated OFFICIAL platform
+### Elevated OFFICIAL platform
 
-UKCloud's Elevated OFFICIAL platform doesn't natively connect to the internet, and the PSN Protected network doesn't have any Ubuntu repository servers. To connect to an Ubuntu repository server for updates, you can use UKCloud-managed repository servers or a UKCloud Walled Garden.
+UKCloud’s Elevated OFFICIAL platform doesn't have native access to Ubuntu repository servers. To connect to an Ubuntu repository server for updates, you can use UKCloud-managed repository servers or a UKCloud Walled Garden.
 
 ## Prerequisites
 
-There are two prerequisites for performing this operation:
+There are two prerequisites for accessing Ubuntu update servers:
 
-- The VM can resolve to the Repo Server DNS records (contact UKCloud Support for the IP addresses for the Elevated records). You can achieve this several different ways:
+- The VM must be able to resolve to the repository server DNS records (contact UKCloud Support for the IP addresses for the Elevated records). You can achieve this several different ways:
 
-  - Use internet DNS records to resolve the Assured Repo Server
+  - Use internet DNS records to resolve the Assured repository server
 
-  - Configure an A record on your local DNS for the Elevated Repo Server
+  - Configure an A record on your local DNS for the Elevated repository server
 
   - Configure an `/etc/hosts` file entry with the appropriate information
 
-- All VMs using the service must be able to access the Repo servers on port TCP/443 (HTTPS). Ensure that you have configured SNAT and firewall policies on your edge gateway device. If you have any questions about this, contact UKCloud Supp
-ort.
+- All VMs using the service must be able to access the repository servers on port TCP/443 (HTTPS). Ensure that you have configured SNAT and firewall policies on your edge gateway device. If you have any questions about this, contact UKCloud Support.
 
-### Locations
-
-> [!NOTE]
-> These locations are accessible only from within the UKCloud network.
+## Accessing Ubuntu update servers
 
 ### UKCloud-managed repository servers
 
-We provide Ubuntu repositories for the 16.04 (Xenial), 18.04 (Bionic) and 20.04 (Focal) LTS versions of Ubuntu on both our Assured OFFICIAL and Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.
+> [!NOTE]
+> The repository servers listed below are accessible only from within the UKCloud network.
+
+We provide Ubuntu repositories for the 16.04 (Xenial), 18.04 (Bionic) and 20.04 (Focal) LTS versions of Ubuntu on both our Assured OFFICIAL and Elevated OFFICIAL security domains, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.
 
 - For 16.04:
 
@@ -73,9 +72,9 @@ We also recommend that you rename the default `/etc/apt/sources.list` file to re
 
 ### Walled Garden
 
-Choose this option only if you want full control of Ubuntu updates and are already thinking of deploying a UKCloud Walled Garden. This option involves pulling updates into the Assured platform, and using UKCloud's Walled Garden to move them to the Elevated platform.
+Choose this option only if you want full control of Ubuntu updates and are already thinking of deploying a UKCloud Walled Garden. This option involves pulling updates into the Assured platform and using UKCloud's Walled Garden to move them to the Elevated platform.
 
-It's a much more complex solution than using UKCloud-managed repository servers, and you have sole responsibility for deploying and managing it.
+It's a much more complex solution than using UKCloud-managed repository servers and you have sole responsibility for deploying and managing it.
 
 For more information about the Walled Garden, see the [*Getting Started Guide for Cross Domain Security Zone*](../cdsz/cdsz-gs-walled-garden.md).
 
