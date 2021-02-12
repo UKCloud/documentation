@@ -12,6 +12,8 @@
     href: conn-faq-hybridconnect.md
   - name: Janet connectivity FAQs
     href: conn-faq-janet.md
+  - name: LECN FAQs
+    href: conn-faq-lecn.md
   - name: N3 connectivity FAQs
     href: conn-faq-n3.md
   - name: Neustar DDoS Protection from UKCloud FAQs

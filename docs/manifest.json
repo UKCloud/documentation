@@ -3561,6 +3561,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-lecn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-lecn.html",
+          "hash": "nAX+WfOHnamTzFafewxFlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-faq-n3.md",
       "output": {
         ".html": {
@@ -3950,7 +3962,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "27jSmGwtIIPhRkN4j87U+Q=="
+          "hash": "YOWflVHQ59X2C9N6Dh3/TA=="
         }
       },
       "is_incremental": false,
@@ -22122,7 +22134,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 452,
+          "total_file_count": 453,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
