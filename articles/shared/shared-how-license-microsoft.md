@@ -30,7 +30,7 @@ UKCloud offers three ways to license Microsoft software for use on our compute p
 
 - You can submit a [Microsoft Licence Mobility Verification form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) to use your own existing licensing
 
-- If you have the application licensing such as SQL on your own monthly reported SPLA. In this case, you will need to provide a confirmation to your UKCloud Service Delivery Manager or raise a support ticket and provide the SPLA details in case of an audit.
+- You can use your own monthly reported SPLA, for example if you have SPLA application licensing for SQL. In this case, you'll need to provide a confirmation to your UKCloud Service Delivery Manager or raise a support ticket and provide the SPLA details in case of an audit.
 
 ## Microsoft Server licensing
 
