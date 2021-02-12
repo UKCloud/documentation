@@ -24,11 +24,13 @@ toc_mdlink: shared-how-license-microsoft.md
 
 This article provides information on how you can apply Microsoft licensing on our platform and the options available to you.
 
-UKCloud offers two ways to license Microsoft software for use on our compute platform, providing you with the flexibility you need to deliver your application workloads in line with Microsoft requirements and obligations:
+UKCloud offers three ways to license Microsoft software for use on our compute platform, providing you with the flexibility you need to deliver your application workloads in line with Microsoft requirements and obligations:
 
 - UKCloud can purchase licences monthly for you
 
 - You can submit a [Microsoft Licence Mobility Verification form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) to use your own existing licensing
+
+- If you have the application licensing such as SQL on your own monthly reported SPLA. In this case, you will need to provide a confirmation to your UKCloud Service Delivery Manager or raise a support ticket and provide the SPLA details in case of an audit.
 
 ## Microsoft Server licensing
 
