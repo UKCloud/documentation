@@ -29,7 +29,7 @@ UKCloud's Assured OFFICIAL platform is internet facing, so you can either config
 
 ### Elevated OFFICIAL platform
 
-UKCloud’s Elevated OFFICIAL platform doesn't have native access to Ubuntu repository servers. To connect to an Ubuntu repository server for updates, you can use UKCloud-managed repository servers or a UKCloud Walled Garden.
+UKCloud's Elevated OFFICIAL platform doesn't have native access to Ubuntu repository servers. To connect to an Ubuntu repository server for updates, you can use UKCloud-managed repository servers or a UKCloud Walled Garden.
 
 ## Prerequisites
 
