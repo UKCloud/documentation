@@ -5662,30 +5662,24 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-how-notify-maintenance.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-how-notify-maintenance.html",
-          "hash": "yA5ofGOgDfF7ES/hwnFf8g=="
+          "hash": "NXAiv2HX6i4hSlxRTsxe6A=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-how-update-contact-info.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-how-update-contact-info.html",
-          "hash": "KAqHxaCcSRCCe9dJQlEbLQ=="
+          "hash": "JN4RDWvvl0q5cN2Gt8T7vw=="
         }
       },
       "is_incremental": false,
@@ -5704,15 +5698,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-monitoring-how-change-config.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-how-change-config.html",
-          "hash": "d1y/JVJlqf36iyZlTtMZXw=="
+          "hash": "TdPUeIltE17y3e0xuPrvbQ=="
         }
       },
       "is_incremental": false,
@@ -5755,15 +5746,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-patching-how-define-window.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-patching-how-define-window.html",
-          "hash": "UbgmGPGOyDVwcNYKTO+5Rg=="
+          "hash": "m3oYK8UdoDqbPx6wjhrRkg=="
         }
       },
       "is_incremental": false,
@@ -5782,15 +5770,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-ref-defaults.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-ref-defaults.html",
-          "hash": "PCRVFtU3xmQMSpC+nrI7yg=="
+          "hash": "2HDbxYvXw8zM6k2tlTTfQw=="
         }
       },
       "is_incremental": false,
@@ -5917,15 +5902,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/managed-services/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "ghgSbouzRKAo2NmTsLlokQ=="
+          "hash": "MlsHO7pSP6HO9vfrhBWN8A=="
         }
       },
       "is_incremental": false,

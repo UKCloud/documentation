@@ -33,7 +33,7 @@
 - name: Managed IT Operations
   items:
   - name: Add and remove devices
-    href: man-how-add-remove-devices.md
+    href: man-how-add-remove-device.md
   - name: Managed IT Operations Service Definition
     href: man-sd-managed-it-ops.md
   - name: Provide notification of maintenance windows
