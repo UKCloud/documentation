@@ -4,7 +4,7 @@ description: Shows the whitelist of standard internet ports on the UKCloud manag
 services: connectivity
 author: Sue Highmoor
 reviewer: hbrunt
-lastreviewed: 16/12/2019
+lastreviewed: 15/02/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -24,11 +24,11 @@ For UKCloud regions 1 and 2, we consulted with NCSC and the Pan Government Accre
 You still need to enable access on your own edge gateway firewall to allow access, but this avoids having to request UKCloud to make similar changes.
 
 > [!NOTE]
-> In regions 5 and 6, there is no whitelist of common ports: all ports are open.
+> In regions 5, 6, 13 & 14, there is no whitelist of common ports: all ports are open.
 
 The security of your estate is your responsibility and we highly recommend that you review your edge gateway configuration, regardless of the region in which it is located, to verify that the access controls in place are in accordance with your own required security policy. We also recommend that you do not disable your firewall, even in test environments.
 
-This whitelist policy applies to the Assured OFFICIAL security domain only, where connectivity is established using internet routable addresses and where access is to and from the internet or other customers on the UKCloud platform. Other whitelists are maintained for other connectivity types. The Elevated OFFICIAL security domain is completely locked down by default with no ports open by default.
+This whitelist policy applies to the Assured OFFICIAL security domain only, where connectivity is established using internet routable addresses and where access is to and from the internet or other customers on the UKCloud platform. Other whitelists are maintained for other connectivity types. 
 
 If you require access outside of the standard whitelist, you can request this via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
@@ -104,6 +104,8 @@ The following diagram shows the status of standard internet ports. The permitted
 - POP3S - 995
 
 - Windows KMS - 1688
+
+- OpenPGP - 11371
 
 ### UDP ports
 
