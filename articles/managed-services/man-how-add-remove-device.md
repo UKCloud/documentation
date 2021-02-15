@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Add and remove devices
-toc_fullpath: Managed IT Operations/man-how-add-remove-devices.md
-toc_mdlink: man-how-add-remove-devices.md
+toc_fullpath: Managed IT Operations/man-how-add-remove-device.md
+toc_mdlink: man-how-add-remove-device.md
 ---
 
 # How to add devices to and remove devices from Managed IT Operations
