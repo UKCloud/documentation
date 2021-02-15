@@ -5461,10 +5461,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-monitoring-contacts.png",
+      "source_relative_path": "articles/managed-services/images/man-add-playbook.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-monitoring-contacts.png"
+          "relative_path": "articles/managed-services/images/man-add-playbook.png"
         }
       },
       "is_incremental": false,
@@ -5472,10 +5472,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-monitoring-devices.png",
+      "source_relative_path": "articles/managed-services/images/man-change-devices-add-mmaas.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-monitoring-devices.png"
+          "relative_path": "articles/managed-services/images/man-change-devices-add-mmaas.png"
         }
       },
       "is_incremental": false,
@@ -5483,10 +5483,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-monitoring-maintenance.png",
+      "source_relative_path": "articles/managed-services/images/man-change-devices-link.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-monitoring-maintenance.png"
+          "relative_path": "articles/managed-services/images/man-change-devices-link.png"
         }
       },
       "is_incremental": false,
@@ -5494,10 +5494,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-monitoring-multiple-upload.png",
+      "source_relative_path": "articles/managed-services/images/man-change-devices-upload-submit.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-monitoring-multiple-upload.png"
+          "relative_path": "articles/managed-services/images/man-change-devices-upload-submit.png"
         }
       },
       "is_incremental": false,
@@ -5505,10 +5505,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-monitoring-multiple-xls.png",
+      "source_relative_path": "articles/managed-services/images/man-change-devices.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-monitoring-multiple-xls.png"
+          "relative_path": "articles/managed-services/images/man-change-devices.png"
         }
       },
       "is_incremental": false,
@@ -5516,10 +5516,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-monitoring-playbooks.png",
+      "source_relative_path": "articles/managed-services/images/man-delete-playbook.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-monitoring-playbooks.png"
+          "relative_path": "articles/managed-services/images/man-delete-playbook.png"
         }
       },
       "is_incremental": false,
@@ -5527,10 +5527,43 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-monitoring-thresholds.png",
+      "source_relative_path": "articles/managed-services/images/man-maintenance-multiple-devices.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-monitoring-thresholds.png"
+          "relative_path": "articles/managed-services/images/man-maintenance-multiple-devices.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-maintenance-single-device.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-maintenance-single-device.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-monitoring-excel-refresh.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-monitoring-excel-refresh.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-patching-patching-window.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-patching-patching-window.png"
         }
       },
       "is_incremental": false,
@@ -5553,6 +5586,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/managed-services/images/man-sd-managed-it-ops.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-services/images/man-update-playbook.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-services/images/man-update-playbook.png"
         }
       },
       "is_incremental": false,
@@ -5607,6 +5651,48 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-how-add-remove-device.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-how-add-remove-device.html",
+          "hash": "5KnbGtGbyiwsP2ghh/VEtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-how-notify-maintenance.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-how-notify-maintenance.html",
+          "hash": "yA5ofGOgDfF7ES/hwnFf8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-how-update-contact-info.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-how-update-contact-info.html",
+          "hash": "KAqHxaCcSRCCe9dJQlEbLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-monitoring-faq.md",
       "output": {
         ".html": {
@@ -5618,12 +5704,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-monitoring-how-change-config.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-how-change-config.html",
-          "hash": "ytsBdHFbjGDJgrFWI39kXw=="
+          "hash": "d1y/JVJlqf36iyZlTtMZXw=="
         }
       },
       "is_incremental": false,
@@ -5666,12 +5755,42 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-patching-how-define-window.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-patching-how-define-window.html",
+          "hash": "UbgmGPGOyDVwcNYKTO+5Rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/managed-services/man-patching-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-patching-sco.html",
           "hash": "6Mm+t+b7wf6z51jPyqwtWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-ref-defaults.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-ref-defaults.html",
+          "hash": "PCRVFtU3xmQMSpC+nrI7yg=="
         }
       },
       "is_incremental": false,
@@ -5798,12 +5917,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/managed-services/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "NAFcjwllzM15jZ1mImzY0A=="
+          "hash": "ghgSbouzRKAo2NmTsLlokQ=="
         }
       },
       "is_incremental": false,
@@ -22134,7 +22256,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 453,
+          "total_file_count": 458,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

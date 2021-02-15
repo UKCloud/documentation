@@ -32,8 +32,14 @@
     href: man-sd-network.md
 - name: Managed IT Operations
   items:
+  - name: Add and remove devices
+    href: man-how-add-remove-devices.md
   - name: Managed IT Operations Service Definition
     href: man-sd-managed-it-ops.md
+  - name: Provide notification of maintenance windows
+    href: man-how-notify-maintenance.md
+  - name: Update contact information
+    href: man-how-update-contact-info.md
   - name: Anti-Virus as a Service
     items:
     - name: Anti-Virus as a Service FAQs
@@ -44,8 +50,10 @@
       href: man-ref-sentinelone-datacollection.md
   - name: Managed Monitoring as a Service
     items:
-    - name: Change your service configuration
+    - name: Change service configuration
       href: man-monitoring-how-change-config.md
+    - name: Default thresholds and procedures
+      href: man-ref-defaults.md
     - name: Managed Monitoring as a Service FAQs
       href: man-monitoring-faq.md
     - name: Managed Monitoring as a Service Service Scope
@@ -54,6 +62,8 @@
       href: man-monitoring-how-use-customer-polling.md
   - name: Patching as a Service
     items:
+    - name: Define patching windows
+      href: man-patching-how-define-window.md
     - name: Patching as a Service FAQs
       href: man-patching-faq.md
     - name: Patching as a Service Service Scope
