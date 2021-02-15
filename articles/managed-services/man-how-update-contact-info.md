@@ -33,7 +33,7 @@ To add a new contact:
 
 2. From the **Action** list, select **Add Playbook**.
 
-   ![Add Playbook](images/man-playbook-template.png)
+   ![Add Playbook](images/man-add-playbook.png)
 
 3. You'll be provided with a link to the Contact Playbook Submission form (UK-FRM-262). Click the link to download the document.
 
@@ -92,7 +92,7 @@ If you want to completely remove a contact from your Managed IT Operations servi
 
 ## Related articles
 
-- [*How to add devices to and remove devices from Managed IT Operations*](man-how-add-remove-devices.md)
+- [*How to add devices to and remove devices from Managed IT Operations*](man-how-add-remove-device.md)
 
 - [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
 

@@ -91,7 +91,7 @@ A patching window determines when the patching will take place on a monitored de
 
 ## Related articles
 
-- [*How to add devices to and remove devices from Managed IT Operations*](man-how-add-remove-devices.md)
+- [*How to add devices to and remove devices from Managed IT Operations*](man-how-add-remove-device.md)
 
 - [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
 
