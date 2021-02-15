@@ -4,7 +4,7 @@ description: Provides information about plans to flatten the PSN Assured and PSN
 services: connectivity
 author: Sue Highmoor
 reviewer: hbrunt
-lastreviewed: 16/12/2019
+lastreviewed: 15/02/2021
 
 toc_rootlink: Reference
 toc_sub1: 
