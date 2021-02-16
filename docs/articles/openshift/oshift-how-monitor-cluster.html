@@ -8,7 +8,7 @@
     <title>How to monitor your OpenShift cluster </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to monitor your OpenShift cluster ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@
 <h1 id="how-to-monitor-your-openshift-cluster">How to monitor your OpenShift cluster</h1>
 
 <h2 id="overview">Overview</h2>
-<p>UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.</p>
+<p>UKCloud for Managed OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.</p>
 <p>This guide explains how you can set up a simple system to monitor an OpenShift cluster.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>This guide assumes familiarity with the Linux command line, and with the <code>oc</code> command set to manage an OpenShift cluster.</p>
@@ -159,53 +159,57 @@ $ curl -k -H &quot;Authorization: Bearer ${token}&quot; \
 <p>You'll need to customise the query above by providing the correct values for endpoint and token.</p>
 <p>This API call returns a reasonable amount of JSON-encoded data, which may be hard to parse using shell commands. It's also necessary to fetch items from various places within this data. The Python program in the following section shows you how to accomplish this.</p>
 <h2 id="using-the-openshift-api-to-obtain-cluster-status">Using the OpenShift API to obtain cluster status</h2>
-<p>The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy.</p>
+<p>The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy. It has been tested using Python 3.7.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <code>ENDPOINT</code> parameter in the code is an example for OpenShift v3. For OpenShift v4 clusters, you'll need to change the port number from <code>8443</code> to <code>6443</code>. API URLs for OpenShift v4 begin with <code>https://api.</code> rather than <code>https://ocp.</code>.</p>
+</div>
 <pre><code class="lang-python">#!/usr/bin/env python3
 import urllib.request
 import json
 import ssl
 
 def get_all_nodes(endpoint, token):
-    &quot;&quot;&quot;Fetch the nodes data from the openshift cluster&quot;&quot;&quot;
-    request = urllib.request.Request(endpoint + &quot;/api/v1/nodes&quot;)
-    request.add_header('Authorization', 'Bearer ' + token)
-    request.add_header('Accept', 'application/json')
-    ssl_context = None  # or ssl._create_unverified_context()
-    result = urllib.request.urlopen(request, context=ssl_context)
-    return result.read()
+    &quot;&quot;&quot;Fetch the nodes data from the openshift cluster&quot;&quot;&quot;
+    request = urllib.request.Request(endpoint + &quot;/api/v1/nodes&quot;)
+    request.add_header('Authorization', 'Bearer ' + token)
+    request.add_header('Accept', 'application/json')
+    ssl_context = None  # or ssl._create_unverified_context()
+    result = urllib.request.urlopen(request, context=ssl_context)
+    return result.read()
 
 def get_status_from_node(data_item):
-    &quot;&quot;&quot; Extract the status conditions from the data&quot;&quot;&quot;
-    addresses = data_item['status']['addresses']
-    address = None
-    for addr in addresses:
-        if addr['type'] == 'Hostname':
-            address = addr['address']
-    return {'hostname': address,
-            'conditions': data_item['status']['conditions']}
+    &quot;&quot;&quot; Extract the status conditions from the data&quot;&quot;&quot;
+    addresses = data_item['status']['addresses']
+    address = None
+    for addr in addresses:
+        if addr['type'] == 'Hostname':
+            address = addr['address']
+    return {'hostname': address,
+            'conditions': data_item['status']['conditions']}
 
 def find_faults(cond_data):
-    &quot;&quot;&quot; find whether each node is in a failed state&quot;&quot;&quot;
-    cells = []
-    for node in cond_data:
-        hostname = node['hostname']
-        state = 'OK  '
-        for cond in node['conditions']:
-            if cond['status'] != &quot;False&quot; and cond['type'] != &quot;Ready&quot;:
-                state = 'FAIL'
-            elif cond['status'] != &quot;True&quot; and cond['type'] == &quot;Ready&quot;:
-                state = 'FAIL'
-        cells.append('{} {} '.format(state, hostname))
-    return cells
+    &quot;&quot;&quot; find whether each node is in a failed state&quot;&quot;&quot;
+    cells = []
+    for node in cond_data:
+        hostname = node['hostname']
+        state = 'OK  '
+        for cond in node['conditions']:
+            if cond['status'] != &quot;False&quot; and cond['type'] != &quot;Ready&quot;:
+                state = 'FAIL'
+            elif cond['status'] != &quot;True&quot; and cond['type'] == &quot;Ready&quot;:
+                state = 'FAIL'
+        cells.append('{} {} '.format(state, hostname))
+    return cells
 
 def main():
-    all_nodes = json.loads(get_all_nodes(ENDPOINT, TOKEN))
-    all_conditions = []
-    for node in all_nodes['items']:
-        all_conditions.append(get_status_from_node(node))
-    print(&quot;Status of Cluster at {}&quot;.format(ENDPOINT))
-    for node in find_faults(all_conditions):
-        print(node)
+    all_nodes = json.loads(get_all_nodes(ENDPOINT, TOKEN))
+    all_conditions = []
+    for node in all_nodes['items']:
+        all_conditions.append(get_status_from_node(node))
+    print(&quot;Status of Cluster at {}&quot;.format(ENDPOINT))
+    for node in find_faults(all_conditions):
+        print(node)
 
 ENDPOINT = 'https://ocp.my-cluster-url.ukcloud.com:8443'
 TOKEN = 'eyJhb...the.179.char.token'
@@ -217,11 +221,11 @@ main()
 </div>
 <p><a href="https://ukcloud.com/hub/news/simple-openshift-monitoring/">https://ukcloud.com/hub/news/simple-openshift-monitoring/</a></p>
 <h2 id="next-steps">Next steps</h2>
-<p>For more information about UKCloud for OpenShift service, see:</p>
+<p>For more information about UKCloud for Managed OpenShift service, see:</p>
 <ul>
-<li><p><a href="oshift-gs.html"><em>Getting Started Guide for UKCloud for OpenShift</em></a></p>
+<li><p><a href="oshift-gs.html"><em>Getting Started Guide for UKCloud for Managed OpenShift</em></a></p>
 </li>
-<li><p><a href="oshift-faq.html"><em>UKCloud for OpenShift FAQs</em></a></p>
+<li><p><a href="oshift-faq.html"><em>UKCloud for Managed OpenShift FAQs</em></a></p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
@@ -235,6 +239,19 @@ main()
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -253,7 +270,7 @@ main()
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

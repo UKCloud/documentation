@@ -8,7 +8,7 @@
     <title>How to configure a load balancer </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure a load balancer ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,42 +94,45 @@
 <h1 id="how-to-configure-a-load-balancer">How to configure a load balancer</h1>
 
 <h2 id="overview">Overview</h2>
-<p>One of the functions of the edge gateway is to act as a basic Layer 3 load balancer, distributing IP traffic to a pool of servers while appearing as a single virtual server. The load balancing methods offered are round-robin, IP hash, URI, HTTP header or least connected.</p>
+<p>One of the functions of the edge gateway is to act as a basic load balancer, distributing IP traffic to a pool of servers while appearing as a single virtual server. The load balancing methods offered are round-robin, IP hash, URI, HTTP header or least connected.</p>
 <p>Bear in mind, however, that the edge gateway load balancer is quite basic. If you need to meet more complex requirements, you'll need provide your own third-party virtual load balancer.</p>
 <h2 id="configuring-a-load-balancer">Configuring a load balancer</h2>
 <p>To configure a load balancer:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to configure the load balancer.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the edge gateway in which you want to configure the load balancer.</p>
 </li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>Select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
+<li><p>On the <em>Edge Gateways</em> page, select the edge that you want to configure and click <strong>Services</strong>.</p>
+<p><img src="images/vmw-vcd10.1-edge-btn-services.png" alt="Services button"></p>
 </li>
-<li><p>Select the <strong>Load Balancer</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-load-balancer.png" alt="Load Balancer tab"></p>
+<li><p>On the <em>Edge Gateway</em> page, select the <strong>Load Balancer</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-load-balancer.png" alt="Load Balancer tab"></p>
 </li>
-<li><p>On the <strong>Global Configuration</strong> tab, enable the <strong>Enabled</strong> option.</p>
+<li><p>Select the <strong>Global Configuration</strong> tab, then select the <strong>Status</strong> option.</p>
 </li>
-<li><p>If you have a syslog server configured, enable the <strong>Enable Logging</strong> option.</p>
+<li><p>Select the <strong>Acceleration Enabled</strong> option if you want to use the Layer 4 engine rather than Layer 7.</p>
+</li>
+<li><p>If you have a syslog server configured, select the <strong>Enable Logging</strong> option and select the <strong>Log Level</strong>.</p>
 <p>For more information about syslog servers, see <a href="vmw-how-access-syslog-data-adv.html"><em>How to access syslog data for your advanced gateway</em></a></p>
+<p><img src="images/vmw-vcd10.1-edge-load-balancer-config.png" alt="Load balancer - Global Configuration tab"></p>
 </li>
 <li><p>Click <strong>Save changes</strong>.</p>
 </li>
 </ol>
-<h3 id="configuring-a-pool-server">Configuring a pool server</h3>
-<p>Pool servers are the real servers that will be masked by the load balancer.</p>
+<h3 id="configuring-a-server-pool">Configuring a server pool</h3>
+<p>Server pools are the real servers that are masked by the load balancer.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Before you configure the pool of servers, make a list of their IP addresses so that you can populate the pool later in the procedure.</p>
 </div>
 <ol>
-<li><p>Select the <strong>Pools</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-load-balancer-pools.png" alt="Pools tab"></p>
+<li><p>On the <strong>Load Balancer</strong> tab of the <em>Edge Gateway</em> page, select the <strong>Pools</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-load-balancer-pools.png" alt="Load balancer - Pools tab"></p>
 </li>
 <li><p>Click the <strong>+</strong> button.</p>
-<p><img src="images/vmw-vcd-load-balancer-btn-add-pool-adv.png" alt="Add pool button"></p>
+<p><img src="images/vmw-vcd10.1-load-balancer-btn-add-pool.png" alt="Add pool button"></p>
 </li>
 <li><p>In the <em>Add Pool</em> dialog box, enter a <strong>Name</strong> and <strong>Description</strong>.</p>
 <div class="NOTE">
@@ -138,41 +141,45 @@
 </div>
 </li>
 <li><p>From the <strong>Algorithm</strong> list, select the load balancing algorithm to use.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>For a description of the different algorithms, see the <a href="https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-769B5EE4-A1AA-43A9-83A3-C4B47EF0DFEB.html">Add a Server Pool for Load Balancing</a> VMware article.</p>
+</div>
 </li>
-<li><p>From the <strong>Monitors</strong> list, select the monitors policy.</p>
+<li><p>From the <strong>Monitors</strong> list, select the monitors policy to use.</p>
 </li>
-<li><p>Enable the <strong>Transparent</strong> option if you want IP addresses to be transparent.</p>
-<p><img src="images/vmw-vcd-adv-edge-load-balancer-add-pool.png" alt="Add Pool dialog box"></p>
+<li><p>Select the <strong>Transparent</strong> option if you want IP addresses to be transparent.</p>
+<p><img src="images/vmw-vcd10.1-edge-load-balancer-add-pool.png" alt="Add Pool dialog box"></p>
 </li>
 <li><p>In the <em>Members</em> section, click <strong>+</strong>.</p>
-<p><img src="images/vmw-vcd-load-balancer-btn-add-member-adv.png" alt="Add member button"></p>
+<p><img src="images/vmw-vcd10.1-load-balancer-btn-add-member.png" alt="Add member button"></p>
 </li>
-<li><p>In the <em>Add Member</em> dialog box, in the <strong>Name</strong> field, enter the server <strong>Name</strong>, <strong>IP Address</strong>, <strong>Port</strong> and <strong>Weight</strong>. When you're done, click <strong>Keep</strong>.</p>
-<p><img src="images/vmw-vcd-load-balancer-add-member-adv.png" alt="Add Member dialog box"></p>
+<li><p>In the <em>Add Member</em> dialog box, enter the server <strong>Name</strong>, <strong>IP Address</strong>, <strong>Port</strong> and <strong>Weight</strong>. When you're done, click <strong>Keep</strong>.</p>
+<p><img src="images/vmw-vcd10.1-load-balancer-add-member.png" alt="Add Member dialog box"></p>
 </li>
 <li><p>Add more pool members as required and when you're done, click <strong>Keep</strong>.</p>
 </li>
 <li><p>To view the status of pool members, click <strong>Show Pool Statistics</strong>.</p>
-<p><img src="images/vmw-vcd-adv-edge-load-balancer-pool-stats.png" alt="Show Pool Statistics button"></p>
+<p><img src="images/vmw-vcd10.1-edge-load-balancer-pool-stats.png" alt="Show Pool Statistics button"></p>
 </li>
 </ol>
 <h3 id="configuring-a-virtual-server">Configuring a virtual server</h3>
 <p>A virtual server masks the pool of real servers and presents a single IP address.</p>
 <ol>
-<li><p>Select the <strong>Virtual Servers</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-load-balancer-servers.png" alt="Virtual Servers tab"></p>
+<li><p>On the <strong>Load Balancer</strong> tab of the <em>Edge Gateway</em> page, select the <strong>Virtual Servers</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-load-balancer-servers.png" alt="Virtual Servers tab"></p>
 </li>
 <li><p>Click the <strong>+</strong> button.</p>
-<p><img src="images/vmw-vcd-load-balancer-btn-add-server-adv.png" alt="Add virtual server button"></p>
+<p><img src="images/vmw-vcd10.1-load-balancer-btn-add-server.png" alt="Add virtual server button"></p>
 </li>
 <li><p>In the <em>Add Virtual Server</em> dialog box, enable the <strong>Enable Virtual Server</strong> option.</p>
 </li>
-<li><p>Enter a <strong>Name</strong> for the virtual server, assign it a virtual <strong>IP Address</strong>, and assign it to the server pool you want to mask. You can also choose which services you want to apply to the virtual server. When you're done, click <strong>Keep</strong>.</p>
-<p><img src="images/vmw-vcd-load-balancer-add-virtual-server-adv.png" alt="Add Virtual Server dialog box"></p>
+<li><p>Enter a <strong>Name</strong> for the virtual server, assign it a virtual <strong>IP Address</strong>, and assign it to the server pool you want to mask (<strong>Default Pool</strong>). You can also choose which services you want to apply to the virtual server. When you're done, click <strong>Keep</strong>.</p>
+<p><img src="images/vmw-vcd10.1-load-balancer-add-virtual-server.png" alt="Add Virtual Server dialog box"></p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
-<p>In this article you've learned how to create firewall rules. For other edge gateway configuration tasks, see:</p>
+<p>In this article you've learned how to configure a load balancer. For other edge gateway configuration tasks, see:</p>
 <ul>
 <li><p><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
 </li>
@@ -196,6 +203,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -214,7 +234,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

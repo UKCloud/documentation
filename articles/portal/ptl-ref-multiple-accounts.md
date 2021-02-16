@@ -3,6 +3,8 @@ title: Partitioning projects or end customers using UKCloud accounts
 description: 
 services: portal
 author: Sophie Wake
+reviewer: dbroderick
+lastreviewed: 03/08/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -81,7 +83,7 @@ There are two options that you can choose from to manage your projects and end c
 
 ## Creating multiple accounts
 
-When you bring a new workload to UKCloud, your Service Delivery Manager or Customer Success Manager (CSM) will discuss your requirements and whether you want to create an additional account. If you decide that an additional account is best for your setup, UKCloud will create it for you. Once the additional account is created, the Portal administrator for the account can then add existing UKCloud Portal users to the account by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or add new users to the UKCloud Portal onto the new account, which the administrator can add themselves.
+When you bring a new workload to UKCloud, your Service Delivery Manager (SDM) will discuss your requirements and whether you want to create an additional account. If you decide that an additional account is best for your setup, UKCloud will create it for you. Once the additional account is created, the Portal administrator for the account can then add existing UKCloud Portal users to the account by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or add new users to the UKCloud Portal onto the new account, which the administrator can add themselves.
 
 ## Related articles
 

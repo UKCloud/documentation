@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to obtain full IPsec VPN configuration via the vCloud API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to obtain full IPsec VPN configuration via the vCloud API ">
+    <meta name="generator" content="docfx 2.53.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/enablement/enbl-how-obtain-vpn-config.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-obtain-full-ipsec-vpn-configuration-via-the-vcloud-api">How to obtain full IPsec VPN configuration via the vCloud API</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Due to changes in VMware Cloud Director and how edge configuration is stored and retrieved, the current documented process for retrieving the edge gateway configuration does not include the full IPsec VPN configuration, specifically the Pre-Shared Key (PSK).</p>
+<p>Through testing, UKCloud has identified how to obtain the full IPsec configuration, but unfortunately not as a single configuration file. You must obtain and query the IPsec VPN configuration separately.</p>
+<p>This article provides instruction on how to obtain the PSK of your configured IPsec VPNs on an edge gateway via the vCloud API. This can also be achieved via the VMware Cloud Director GUI.</p>
+<p>The PSK is not necessarily required when updating edge or VPN configuration. Changes in configuration to an existing VPN can be applied to an edge via the API without the PSK being present in the XML body. In this case, the PSK will remain unaltered. If you're configuring a new VPN or updating the PSK, then this information will need to be present in the XML body.</p>
+<p>For instructions on how to export, amend and post the configuration from one edge gateway to another, see <a href="enbl-how-migrate-edge-config.html"><em>How to migrate edge configuration data to another edge</em></a>.</p>
+<h2 id="retrieving-the-edge-gateway-api-endpoint">Retrieving the edge gateway API endpoint</h2>
+<p>Follow the instructions in <a href="enbl-how-migrate-edge-config.html"><em>How to migrate edge configuration data to another edge</em></a>, up to and including <em>Retrieving edge gateway configuration via the API</em>. As per this section of the article, you should be able to retrieve the API endpoint of your edge gateway.</p>
+<p>For example:</p>
+<p><code>https://&lt;api_url&gt;/api/admin/edgeGateway/&lt;edge_id&gt;</code></p>
+<p>The endpoint you need to obtain the full IPsec configuration is slightly different to this, however, following this method you'll be able to retrieve the edge ID that you need. Append the edge ID to the following endpoint:</p>
+<p><code>https://&lt;api_url&gt;/network/edges/&lt;edge_id&gt;</code></p>
+<h2 id="obtaining-edge-gateway-configuration">Obtaining edge gateway configuration</h2>
+<p>Performing a GET request against the API endpoint shown in the previous section will return a more detailed configuration of your edge gateway, including additional parameters for your IPsec VPNs that weren't previously returned. However, the PSK will be obfuscated.</p>
+<p>To display the PSK, you need to amend the endpoint to only obtain the IPsec configuration and append an additional switch to display the sensitive data:</p>
+<p><code>https://&lt;api_url&gt;/network/edges/&lt;edge_id&gt;/ipsec/config?showSensitiveData=true</code></p>
+<p>A GET request against this endpoint should now return the full IPsec configuration, along with the PSK in plain text.</p>
+<h2 id="applying-the-new-configuration">Applying the new configuration</h2>
+<p>Unfortunately, you cannot post this XML configuration back to an edge, and will also be unable to modify the edge via this API endpoint. You'll need to format your XML configuration and apply it as documented in the <em>Modifying the IPsec VPN configuration</em> and <em>Applying the new configuration</em> sections of <a href="../vmware/vmw-how-change-ipsec-vpn-api.html"><em>How to change IPsec VPN settings via the vCloud API</em></a>.</p>
+<p>As mentioned earlier in this article, you can post the VPN configuration to the edge without the PSK being present in the XML configuration. The PSK will remain the same. However, if you need to amend the PSK or configure a new VPN, you can find instructions for this in the <em>Amending the shared secret</em> section of the article linked above.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>If you need any further assistance, or if you want to discuss any aspect of this service or settings specific to your domain, log a support ticket via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

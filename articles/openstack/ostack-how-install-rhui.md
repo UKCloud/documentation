@@ -2,9 +2,9 @@
 title: How to install Red Hat Update Infrastructure on an existing OpenStack instance
 description: Shows you how to update your existing OpenStack Instances to target UKCloud's approved Red Hat Update Infrastructure (RHUI)
 services: openstack
-author: Sue Highmoor
-reviewer: Matt Gough
-lastreviewed: 12/03/2020
+author: shighmoor
+reviewer: nmathews
+lastreviewed: 10/12/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -29,7 +29,7 @@ There are two prerequisites for performing this operation:
 
 - The host can resolve to the RHUI DNS records (contact Customer Support for the IP addresses and domain names for these records). You can achieve this by configuring an A record on your local DNS or configuring  an `/etc/hosts` file with the appropriate information. For internet connectivity, the required domain name is in public DNS.
 
-- All hosts using the service must be able to access the local RHUA server on port 443 (HTTPS). Ensure that the configured Security Groups allow outbound connectivity on port 443. If you have any questions on this, contact UKCloud Support.
+- All hosts using the service must be able to access the local RHUI server on port 443 (HTTPS). Ensure that the configured Security Groups allow outbound connectivity on port 443. If you have any questions on this, contact UKCloud Support.
 
 ## Installation
 

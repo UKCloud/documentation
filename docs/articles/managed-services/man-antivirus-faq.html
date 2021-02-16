@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Anti-Virus as a Service FAQs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Anti-Virus as a Service FAQs ">
+    <meta name="generator" content="docfx 2.53.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/managed-services/man-antivirus-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="anti-virus-as-a-service-faqs">Anti-Virus as a Service FAQs</h1>
+
+<h2 id="service">Service</h2>
+<h3 id="what-is-the-service">What is the service?</h3>
+<p>As customer solutions start to expand beyond their own data centres into embracing the benefits of leveraging multi-cloud, the day-to-day management and control of anti-virus and endpoint protection across various technology stacks and locations become highly complex and resource intensive. Anti-Virus as a Service helps to reduce these challenges, whilst increasing your level of trust and confidence in the security health of of your solution stack.</p>
+<p>Anti-Virus as a Service provides you with the confidence that your environments are protected from the dangers of viruses and malware, all without the usual headaches associated with the deployment, management and operation of an anti-virus solution.</p>
+<h3 id="what-technologies-do-you-use">What technologies do you use?</h3>
+<p>Building on the capabilities of our <a href="man-monitoring-sco.html">Managed Monitoring as a Service</a>, UKCloud uses the industry-leading endpoint security platform <a href="https://www.sentinelone.com/">SentinelOne</a> as the engine for Anti-Virus as a Service, harnessing the power of machine learning to providing protection that goes beyond that of traditional anti-virus or anti-malware solutions.</p>
+<p>For further details as to how we leverage SentinelOne as an approved third party in the delivery of this service, see the <a href="https://docs.ukcloud.com/articles/managed-services/man-antivirus-sco.html">Anti-Virus as a Service Service Scope</a>.</p>
+<h3 id="what-actions-will-ukcloud-perform-on-positive-detection">What actions will UKCloud perform on positive detection?</h3>
+<p>Our service uses the following two detection types:</p>
+<table>
+<thead>
+<tr>
+<th>Detection Type</th>
+<th>Description</th>
+<th>Default Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Malicious</td>
+<td>SentinelOne has detected a file or process as being harmful</td>
+<td><ul><li>Quarantine the affected file<li>Notify the customer</li></li></ul></td>
+</tr>
+<tr>
+<td>Suspicious</td>
+<td>SentinelOne has detected a file or process as having the potential to be harmful</td>
+<td><ul><li>Notify the customer<li>Take no action on the affected file</li></li></ul></td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-do-i-get-alerted-on-events">How do I get alerted on events?</h3>
+<p>All alerting will be performed via a support ticket or any special escalation process agreed between UKCloud and the customer.</p>
+<h3 id="how-does-ukcloud-provide-urgent-maintenance-notifications-and-incident-reports">How does UKCloud provide urgent maintenance notifications and incident reports?</h3>
+<p>We don't envisage any scenarios that prevent UKCloud from meeting the Anti-Virus as a Service platform availability KPI defined within the <a href="man-antivirus-sco.html">Service Scope</a> for this service. Current Service Status and past incident reports are published on the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Should the central Anti-Virus as a Service platform become unavailable, any SentinelOne agents installed locally to the endpoint will remain active and continue to provide protection.</p>
+</div>
+<h2 id="about-sentinelone">About SentinelOne</h2>
+<h3 id="what-is-sentinelone">What is SentinelOne?</h3>
+<p>The SentinelOne Singularity platform is an industry-first data lake that seamlessly fuses together the data, access, control and integration planes of its endpoint protection (EPP), endpoint detection and response (EDR), IoT security and cloud workload protection (CWPP) into a centralised platform.</p>
+<h3 id="how-good-is-sentinelone">How good is SentinelOne?</h3>
+<p>SentinelOne is regularly apprised by industry-leading analyst firms and independent third-party testing such as:</p>
+<ul>
+<li><p>Gartner Best Endpoint Detection and Response (EDR) Solutions as Reviewed by Customers.</p>
+</li>
+<li><p>Gartner Best Endpoint Protection Platforms (EPP) as Reviewed by Customers.</p>
+</li>
+<li><p>SentinelOne received 100% ratings across all testing categories in Protection Accuracy, Legitimate Accuracy and Total Accuracy in <a href="https://www.businesswire.com/news/home/20201008005586/en/SentinelOne-Receives-Highest-Possible-Rating-Across-All-Critical-Categories-in-SE-Labs-Breach-Response-Test-Wins-Best-New-Endpoint-Award">SE Labs's Breach Response Test</a>.</p>
+</li>
+<li><p>MITRE ATT&amp;CK APT29 report:</p>
+<ul>
+<li><p>SentinelOne Singularity Platform had the highest number of combined high-quality detections and the highest number of automated correlations.</p>
+</li>
+<li><p>SentinelOne grouped all data over the 3-day MITRE test into a mere 11 console alerts, with each alert containing all the details within. Fewer alerts in the Management console are better than more alerts, and Singularity successfully grouped together relevant related data, context and correlation, making it easier for analysts to understand and act.</p>
+</li>
+<li><p>SentinelOne had the highest number of tool-only detections and the highest number of human/MDR detections.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Analysts are drowning in data and simply aren't able to keep up with sophisticated attack vectors. SentinelOne helps turn data into stories, so analysts can focus on the alerts that matter most.</p>
+<h3 id="which-certifications-does-sentinelone-have">Which certifications does SentinelOne have?</h3>
+<p>SentinelOne participates in a variety of testing and has won awards. The most recent third-party tests and awards include:</p>
+<ul>
+<li><p>MITRE ATT&amp;CK APT29 report: Highest number of combined high-quality detections and the highest number of automated correlations, highest number of tool-only detections and the highest number of human/MDR detections.</p>
+</li>
+<li><p>The first and only Next Gen cybersecurity solution to receive VB100 certification from Virus Bulletin. The VB100 certification is a well-respected recognition in the anti-virus and malware communities due to its stringent testing requirements.</p>
+</li>
+<li><p>Gartner Best Endpoint Detection and Response (EDR) Solutions as Reviewed by Customers.</p>
+</li>
+<li><p>Gartner Best Endpoint Protection Platforms (EPP) as Reviewed by Customers.</p>
+</li>
+<li><p>Passmark's January 2019 performance test compares SentinelOne to several legacy AV products. Testing showed that SentinelOne performs better than other vendors when the agent is under heavy load. During normal user workload, customers typically see less than 5% CPU load.</p>
+</li>
+</ul>
+<h2 id="endpoint-security">Endpoint security</h2>
+<h3 id="what-is-endpoint-security-software">What is endpoint security software?</h3>
+<p>Endpoint security software is a program that is installed on laptops, desktops and/or servers that protects them from the slew of attacks that can infect an endpoint – malware, exploits, live attacks, script-based attacks, and more – with the purpose of stealing data, profiting financially or otherwise harming systems, individuals or organizations.</p>
+<h3 id="is-endpoint-security-the-same-as-anti-virus">Is endpoint security the same as anti-virus?</h3>
+<p>Endpoint security solution is not an anti-virus. Anti-virus is an antiquated, legacy technology that relies on malware file signatures. SentinelOne Endpoint Security does not use traditional anti-virus signatures to spot malicious attacks. Instead, it uses a combination of static machine learning analysis and dynamic behavioral analysis to protect systems. All files are evaluated in real time before they execute and as they execute. Because SentinelOne technology does not use signatures, you don't have to worry about network intensive updates or local system I/O intensive daily disk scans.</p>
+<h3 id="sentinelone-provides-next-gen-endpoint-protection-what-is-this">SentinelOne provides &quot;Next Gen endpoint protection&quot;. What is this?</h3>
+<p>Next Gen endpoint security solutions are proactive. They preempt and predict threats in a number of ways. By evaluating all activity in a network, both in the kernel and in user space, these tools keep a close eye on anything that looks suspicious. Machine learning processes are proficient at predicting where an attack will occur. Security tools may use things like out-of-band monitoring to make the surveillance more robust and to catch viruses, malware and other kinds of attacks early.</p>
+<h3 id="what-detection-capabilities-does-sentinelone-have">What detection capabilities does SentinelOne have?</h3>
+<p>SentinelOne utilises multiple cascading engines: reputation, StaticAI and ActiveEDR capabilities to prevent and detect different types of attacks at different phases.</p>
+<ul>
+<li><p>Detection - Patented Behavioral AI recognizes malicious actions regardless of vector. SentinelOne is the only endpoint security vendor to detect fileless, zero-day and nation-grade attacks in real time.</p>
+</li>
+<li><p>Prevention - Static AI on the endpoint prevents attacks inline in real time. Consistently ranked for highest efficacy and lowest false-positives, SentinelOne's static AI model replaces legacy antivirus.</p>
+</li>
+</ul>
+<h3 id="does-sentinelone-provide-malware-prevention">Does SentinelOne provide malware prevention?</h3>
+<p>SentinelOne is designed to prevent all kinds of attacks, including those from malware. SentinelOne's Endpoint Prevention (EPP) component uses StaticAI Prevention to analyse (online or offline) executable files pre-execution; this replaces the need for traditional signatures, which are easily bypassed, require constant updating and require resource-intensive scans on the device.</p>
+<p>The SentinelOne engine also performs analysis of PDF, Microsoft OLE documents (legacy MS Office) and MS Office XML formats (modern MS Office) as well as other kinds of files that may contain executable code. The goal of StaticAI in the product is to detect commodity and some novel malware with a compact, on-agent machine learning model that serves as a substitute for the large signature databases used in legacy AV products.</p>
+<h3 id="can-sentinelone-detect-in-memory-attacks">Can SentinelOne detect in-memory attacks?</h3>
+<p>SentinelOne can detect in-memory attacks.</p>
+<p>SentinelOne is integrated with hardware-based Intel® Threat Detection Technology (Intel TDT) for accelerated Memory Scanning capabilities.</p>
+<h3 id="will-the-sentinelone-agent-slow-down-my-endpoints">Will the SentinelOne agent slow down my endpoints?</h3>
+<p>The SentinelOne agent does not slow down the endpoint on which it is installed. The SentinelOne agent is designed to have as little impact on the end user as possible while still providing effective protection both online and offline.</p>
+<p>In contrast to other anti-malware products that require constant <code>.dat</code> file signature updates and daily disk scans, the agent instead uses static file AI and behavioral AI, which saves on CPU, memory and disk I/O. End users have better computer performance as a result. System resource consumption will vary depending on system workload.</p>
+<h2 id="management">Management</h2>
+<h3 id="how-do-i-access-my-anti-virus-as-a-service-environment">How do I access my Anti-Virus as a Service environment?</h3>
+<p>As it is assumed UKCloud will manage all anti-virus aspects as part of this service, there is currently no environment for customers to access.</p>
+<h3 id="how-do-i-manage-my-services">How do I manage my services?</h3>
+<p>As it is assumed UKCloud will manage all anti-virus aspects as part of this service, there is currently no way for a customer to directly manage this service.</p>
+<p>Any changes to the service for items such as file or folder exclusions should be requested initially by raising a ticket within the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the Portal. Alternatively, you can contact UKCloud Support by phone or email.</p>
+<h3 id="how-do-i-instantiate-a-manual-or-scheduled-scan">How do I instantiate a manual or scheduled scan?</h3>
+<p>Unlike traditional anti-virus solutions, SentinelOne's real-time AI threat recognition capabilities prevents viruses from embedding themselves into systems, removing the traditional concept of ad-hoc full system scans.</p>
+<h3 id="do-i-get-access-to-a-dashboard-or-reports">Do I get access to a dashboard or reports?</h3>
+<p>As it is assumed UKCloud will manage all anti-virus aspects as part of this service, there are currently no dashboard or reporting features for customers to access.</p>
+<h2 id="support">Support</h2>
+<h3 id="how-do-i-raise-a-support-ticket">How do I raise a support ticket?</h3>
+<p>The secure online <a href="https://portal.ukcloud.com/login">UKCloud Portal</a> provides most common service management functionality. You can raise tickets within the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the Portal. Alternatively, you can contact UKCloud Support by phone or email.</p>
+<h3 id="what-are-your-service-maintenance-windows">What are your service maintenance windows?</h3>
+<p>See <a href="../other/other-ref-maintenance-windows.html"><em>Understanding UKCloud service maintenance windows</em></a>.</p>
+<h3 id="can-ukcloud-provide-notifications-for-service-status-and-maintenance">Can UKCloud provide notifications for service status and maintenance?</h3>
+<p>Yes, you can subscribe to the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a> to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see <a href="../other/other-how-subscribe-service-status.html"><em>How to subscribe to service status notifications</em></a>.</p>
+<h2 id="onboarding">Onboarding</h2>
+<h3 id="how-can-i-get-started-with-the-service">How can I get started with the service?</h3>
+<p>Within 5 business days of accepting an order, UKCloud will create the customer's anti-virus environment and commence anti-virus any environments in-line with the Device Group schedules they have opted-in to.</p>
+<h3 id="is-there-a-free-trial">Is there a free trial?</h3>
+<p>Due to the initial complexity of configuring the anti-virus environment, UKCloud is currently unable to offer a free trial of this service.</p>
+<h2 id="billing-and-legal">Billing and legal</h2>
+<h3 id="what-is-the-smallest-unit-of-time-i-will-be-billed-for">What is the smallest unit of time I will be billed for?</h3>
+<p>The minimum unit of time for use is monthly. Part months will be rounded up.</p>
+<h3 id="will-i-be-charged-for-resources-in-a-shut-off-state">Will I be charged for resources in a 'shut off' state?</h3>
+<p>UKCloud will continue to charge for any resources for which you have elected to have anti-virus protection regardless of the state they're in. To stop any charges, you'll need to raise a ticket within the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the Portal. Alternatively, you can contact UKCloud Support by phone or email.</p>
+<h3 id="how-can-i-view-billing-information">How can I view billing information?</h3>
+<p>Online visibility of real-time or historic billing information is currently not available as a service provided by UKCloud.</p>
+<h3 id="how-can-i-pay-for-the-services">How can I pay for the services?</h3>
+<p>Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.</p>
+<h3 id="what-are-the-termination-fees">What are the termination fees?</h3>
+<p>There are no termination costs for this service.</p>
+<h2 id="security">Security</h2>
+<h3 id="do-i-need-to-install-an-agent-on-my-endpoints-to-enable-this-service">Do I need to install an agent on my endpoints to enable this service?</h3>
+<p>Yes, you'll need to deploy the SentinelOne agent to each endpoint so that it can run autonomously on each device, without reliance on an internet connection. The agent sits at the kernel level and monitors all processes in real time. This process is performed by the agent's Dynamic Behavioral Tracking engine, and enables users to see exactly what happened on an endpoint at each stage of execution. This includes origin, patient zero, process and file activity, registry event, network connections and forensic data.</p>
+<h3 id="how-is-any-data-related-to-this-service-kept-secure">How is any data related to this service kept secure?</h3>
+<p>UKCloud will deploy and manage all agents used to deliver this service, with all traffic being passed via HTTPS.</p>
+<p>Any customer data that UKCloud collects as part of this service will never leave a UKCloud data centre or be shared with a third party.</p>
+<h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
+<p>Protective monitoring is included with all our IaaS platforms and follows GPG 13.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

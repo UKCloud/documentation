@@ -2,9 +2,9 @@
 title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
-author: Sue Highmoor
-reviewer: ccampbell
-lastreviewed: 20/03/2020
+author: shighmoor
+reviewer: tlaryea 
+lastreviewed: 18/11/2020
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -19,6 +19,126 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.9.0
+
+Date: 1st December 2020
+
+Bug fix and feature update
+
+Details:
+ 
+- Support non-ASCII characters when logging in to VMware Cloud Director 10
+
+- Change "My Security Events" to "Security Operations Service" and remove account-specific events
+
+## Release 2.6.0
+
+Date: 18th November 2020
+
+Feature update
+
+Details:
+ 
+- Remove bandwidth monitoring information from the Portal My VMs pages and the API
+
+## Release 2.4.0
+
+Date: 28th October 2020
+
+Feature update
+
+Details:
+
+- Remove VM storage information from the Portal My VMs pages
+
+- Stop returning VM storage values within the Portal API
+
+- Zero values are returned to avoid breaking software that expects the field
+
+## Release 2.2.2
+
+Date: 15th September 2020 
+
+Bug fix
+
+Details:
+
+- If VMware Cloud Director login fails ensure the login 'Confirm' button is active
+
+## Release 2.1.2
+
+Date: 18th August 2020
+
+Bug fix
+
+Details:
+
+- Users resetting their password weren't given an SSO session
+
+## Release 2.1.0
+
+Date: 7th August 2020
+
+Feature update
+
+Details:
+
+- Simplify and improve the experience of OpenStack users in the Portal
+
+## Release 1.144.0
+
+Date: 14th July 2020
+
+Bug fix
+
+Details:
+
+- Prevented situation where a customer might be presented with a blank page when switching to a newly created account
+
+## Release 1.143.0
+
+Date: 7th July 2020
+
+Feature update
+
+Details:
+
+- Passwords must now be a minimum of 12 characters and not contain personal information
+
+- Captcha has been removed from the forgotten password page
+
+## Release 1.141.1
+
+Date: 24th June 2020
+
+Bug fix
+
+Details:
+
+- Improved page flow when session timeout occurs
+
+## Release 1.141.0
+
+Date: 18th June 2020
+
+Performance update
+
+Details:
+
+- Improve efficiency of Portal API compute service endpoint
+
+## Release 1.139.0
+
+Date: 13th May 2020
+
+Feature update
+
+Details:
+
+- Disable ability for users to change their emails.
+
+- Remove unneeded VM sizes field from billing table.
+
 ## Release 1.132.0
 
 Date: 20th March 2020
@@ -27,7 +147,7 @@ Feature update
 
 Details:
 
-- Improved success messaging when locking user accounts. 
+- Improved success messaging when locking user accounts.
 
 ## Release 1.129.0
 
@@ -167,7 +287,7 @@ Date: 29th May 2019
 
 Feature update
 
-Details: Added new OpenStack Permissions tab behind a feature flag to support user access management of Single Sign-on enabled services. Updated status page links to support move to https://status.ukcloud.com.
+Details: Added new OpenStack Permissions tab behind a feature flag to support user access management of Single Sign-on enabled services. Updated status page links to support move to <https://status.ukcloud.com>.
 
 ## Release 1.104.0
 
@@ -239,7 +359,7 @@ Date: 11th December 2018
 
 Feature update
 
-Details: Added Knowledge Centre banner in Elevated to support move to https://docs.ukcloud.com.
+Details: Added Knowledge Centre banner in Elevated to support move to <https://docs.ukcloud.com>.
 
 ## Release 1.90.0
 
@@ -247,7 +367,7 @@ Date: 21st November 2018
 
 Bug fix
 
-Details: Updated additional Portal Knowledge Centre links following move to https://docs.ukcloud.com.
+Details: Updated additional Portal Knowledge Centre links following move to <https://docs.ukcloud.com>.
 
 ## Release 1.89.0
 
@@ -423,7 +543,7 @@ Date: 6th June 2017
 
 Bug fix
 
-Details: Fixed a bug within the bandwidth showback section of the Portal, as some customers were unable to see their bandwidth utilisation metrics. For more details on how to retrive bandwidth showback metrics, please see this FAQ.  
+Details: Fixed a bug within the bandwidth showback section of the Portal, as some customers were unable to see their bandwidth utilisation metrics. For more details on how to retrive bandwidth showback metrics, please see this FAQ.
 
 ## Release 1.55.5
 
@@ -447,7 +567,7 @@ Date: 27th April 2017
 
 Feature updates and bug fixes
 
-Details: Updated Edge Gateway IPSec configuration User Interface. Based upon customer feedback we have organised the SLA report by creation date, found within the Reports section of the Portal.  
+Details: Updated Edge Gateway IPSec configuration User Interface. Based upon customer feedback we have organised the SLA report by creation date, found within the Reports section of the Portal.
 
 ## Release 1.52.1
 
@@ -455,13 +575,13 @@ Date: 4th April 2017
 
 Bug fix
 
-Details: Fixed an issue on the My Calls form preventing tickets from being created which have the Incident Classification field populated.  
+Details: Fixed an issue on the My Calls form preventing tickets from being created which have the Incident Classification field populated.
 
 ## Release 1.52.0
 
 Date: 4th April 2017
 
-Feature updates and bug fixes  
+Feature updates and bug fixes
 
 Details: Allow customers to create/build compute services within eligible zones through the Portal UI. Cleaned up display of wide tables which was causing issues for users with narrow monitors or low resolution displays.
 
@@ -471,13 +591,13 @@ Date: 28th March 2017
 
 Feature updates and bug fixes
 
-Details: Launch of self service of VDCs and Edge Gateways through the Portal UI. This will be available to Administrators of compute services in regions 5 & 6, enabling more of our customers to use the self-service provisioning functionality that currently existing within the Portal API. Fixed a bug that was causing an error message to be displayed when a customer tries to modify an edge without an IPSec Configuration in the IPSEC Configuration tool pages. This ensures customers are better informed about how to use the tool.  
+Details: Launch of self service of VDCs and Edge Gateways through the Portal UI. This will be available to Administrators of compute services in regions 5 & 6, enabling more of our customers to use the self-service provisioning functionality that currently existing within the Portal API. Fixed a bug that was causing an error message to be displayed when a customer tries to modify an edge without an IPSec Configuration in the IPSEC Configuration tool pages. This ensures customers are better informed about how to use the tool.
 
 ## Release 1.50.0
 
 Date: 16th March 2017
 
-Feature updates and bug fixes  
+Feature updates and bug fixes
 
 Details: Added Admin API endpoints to help find out if a VM has a Snapshot protection policy associated with it. Fixed a bug that was causing issues on the My VMs page where there was no associated edge gateway with the Enterprise Compute Cloud service.
 
@@ -503,7 +623,7 @@ Date: 27th February 2017
 
 Feature updates and bug fixes
 
-Details: New link in the Portal within the Knowledge Centre section which provides at a glance a list of all articles currently available. Bug fix to replace all instances of Skyscape to UKCloud to be consistent with brand and a bug fix that now allows customers to view correct details of the account they are viewing.  
+Details: New link in the Portal within the Knowledge Centre section which provides at a glance a list of all articles currently available. Bug fix to replace all instances of Skyscape to UKCloud to be consistent with brand and a bug fix that now allows customers to view correct details of the account they are viewing.
 
 ## Release 1.48.1
 
@@ -519,7 +639,7 @@ Date: 16th February 2017
 
 Feature updates and bug fixes
 
-Details: Added validation of VDC names to the API endpoint. Updated the main menu of the UKCloud portal to add more clarity for customers. Extended the availability of the provisioning tool to allow for self-provisioning of edges in the Elevated environment. Added self-provisioning reports via API and added more information to build statuses in the API. Fixed a bug that was preventing a contact's OpenStack permissions from being persistent. A fix for rendering snapshot protection text and tab has been completed. Small CSS fixes to improve layout and a fix to the user interface which now retains the VDC information after changing the default snapshot retention.  
+Details: Added validation of VDC names to the API endpoint. Updated the main menu of the UKCloud portal to add more clarity for customers. Extended the availability of the provisioning tool to allow for self-provisioning of edges in the Elevated environment. Added self-provisioning reports via API and added more information to build statuses in the API. Fixed a bug that was preventing a contact's OpenStack permissions from being persistent. A fix for rendering snapshot protection text and tab has been completed. Small CSS fixes to improve layout and a fix to the user interface which now retains the VDC information after changing the default snapshot retention.
 
 ## Release 1.47.0
 
@@ -565,7 +685,7 @@ Details: Corrected wording for retention policy forms.
 
 Date: 15th December 2016
 
-Bug fix and feature updates   
+Bug fix and feature updates
 
 Details: Updated link to confirmation syntax to ensure alert dialog pops up on atmos and notifications pages. Fix redirect after login so that when a user follows a deep link to tan article in the Knowledge Centre, after login, the user is redirected to the linked page. Updated Zerto text and URLs for Assured and Elevated so customers are redirected to the correct Zerto login page.
 
@@ -573,7 +693,7 @@ Details: Updated link to confirmation syntax to ensure alert dialog pops up on a
 
 Date: 13th December 2016
 
-Bug fix and feature updates  
+Bug fix and feature updates
 
 Details: Removal of CSV exports and changing them to HTML displays. Addition of admin API endpoint to retrieve a VDC audit record. Addition of API endpoint to allow users (with admin permission) to create vOrgs. Bug fixed regarding the number of articles returned in the Knowledge Centre as this was incorrect. Fixed link in "my_vms" to filter by correct category to allow customers to view documentation relevant to their search.
 
@@ -581,7 +701,7 @@ Details: Removal of CSV exports and changing them to HTML displays. Addition of 
 
 Date: 13th December 2016
 
-Maintenance release    
+Maintenance release
 
 Details: My Calls security enhancements.
 
@@ -597,7 +717,7 @@ Details: Addition of article type GUIDs for Service Definitions. Updated links i
 
 Date: 23rd November 2016
 
-Feature updates  
+Feature updates
 
 Details: Allow customers to filter articles in the Knowledge Centre by the subject, "UKCloud for OpenStack". Replacement of sidekiq functionality to make backup policy changes and start using rabbit mq with the new avamar-worker.
 
@@ -605,15 +725,15 @@ Details: Allow customers to filter articles in the Knowledge Centre by the subje
 
 Date: 29th November 2016
 
-Bug fixes and functionality updates    
+Bug fixes and functionality updates
 
-Details: Bug fixed regarding locked landesk tickets and min or issues. Fixes applied to the admin portal API authentication to improve security. Adding the functionality to display the users company and account name in the menu bar even if they only have one account.  
+Details: Bug fixed regarding locked landesk tickets and min or issues. Fixes applied to the admin portal API authentication to improve security. Adding the functionality to display the users company and account name in the menu bar even if they only have one account.
 
 ## Release 1.41.0
 
 Date: 23rd November 2016
 
-Feature update    
+Feature update
 
 Details: Support added for client-side zipping in the Portal and uploading files to landesk which allows customers to upload screenshots, logs and other files to tickets.
 
@@ -621,7 +741,7 @@ Details: Support added for client-side zipping in the Portal and uploading files
 
 Date: 23rd November 2016
 
-Functionality updates   
+Functionality updates
 
 Details: Addition of OpenStack support for sending user creation requests, password changes and assigning/unassigning OpenStack projects. Addition of article type GUIDs to the lookup files for the creation of new article types.
 
@@ -629,7 +749,7 @@ Details: Addition of OpenStack support for sending user creation requests, passw
 
 Date: 17th November 2016
 
-Functionality updates    
+Functionality updates
 
 Details: Adding tests to Contacts model to ensure emails will not be duplicated when users create new contacts. Adding the admin portal API back and the ability to alter a backup policy. Addition of a VM backup whitelist table to enable tracking of which VMS are being backed up. Addition of the ability to get and update AvamarAudit records via the admin API.
 
@@ -637,7 +757,7 @@ Details: Adding tests to Contacts model to ensure emails will not be duplicated 
 
 Date: 15th November 2016
 
-Maintenance release    
+Maintenance release
 
 Details: Movement of errbit host and API key configs to environment variables as part of the containerisation project.
 
@@ -645,7 +765,7 @@ Details: Movement of errbit host and API key configs to environment variables as
 
 Date: 11th November 2016
 
-Functionality update    
+Functionality update
 
 Details: Addition of a button to allow customers to mark all notifications as read.
 
@@ -653,15 +773,15 @@ Details: Addition of a button to allow customers to mark all notifications as re
 
 Date: 9th November 2016
 
-Functionality and feature updates    
+Functionality and feature updates
 
-Details: the Knowledge Centre search has been updated to force the search engine treat all terms individually to make it easier for customers to search for a specific article. Log Portal API requests to ElasticSearch. Enhancement to the companies page by displaying company ID on the admins Portal Company page, and adding "DataTables" to make searching and pagination easier. Addition of VDC and vApp name to vMotion events API.  
+Details: the Knowledge Centre search has been updated to force the search engine treat all terms individually to make it easier for customers to search for a specific article. Log Portal API requests to ElasticSearch. Enhancement to the companies page by displaying company ID on the admins Portal Company page, and adding "DataTables" to make searching and pagination easier. Addition of VDC and vApp name to vMotion events API.
 
 ## Release 1.37.3
 
 Date: 1st November 2016
 
-Bug fixes and functionality updates    
+Bug fixes and functionality updates
 
 Details: Rewrite of Knowledge Centre article categories to reflect G-Cloud 8 changes. Bug fixes in the Knowledge Centre CSS to allow customers to view changes made to the stylesheets.
 
@@ -669,7 +789,7 @@ Details: Rewrite of Knowledge Centre article categories to reflect G-Cloud 8 cha
 
 Date: 31st October 2016
 
-Bug fixes   
+Bug fixes
 
 Details: Bug fixes regarding permissions for Compute services missing off the contact edit page
 
@@ -677,15 +797,15 @@ Details: Bug fixes regarding permissions for Compute services missing off the co
 
 Date: 25th October 2016
 
-Bug fixes and functionality updates    
+Bug fixes and functionality updates
 
-Details: Added condition to fix error where contacts without an associated user account couldn't be edited. Added a message to the API endpoint my_vm. Added the ability for users to clone permissions from a chosen contact on the edit permissions page which should speed up the contact-creation process. Addition of rescue blocks to the API to log to Airbrake and return apologetic responses to the users when handling errors. Added pagination ability to the API to enable faster, smaller queries being made to the API. Fixed bug from the Rails upgrade that has prevented the Avamar Audits displaying int he Admin Portal. added the ability to resubmit failed backup policy changes via the Admin Portal.  
+Details: Added condition to fix error where contacts without an associated user account couldn't be edited. Added a message to the API endpoint my_vm. Added the ability for users to clone permissions from a chosen contact on the edit permissions page which should speed up the contact-creation process. Addition of rescue blocks to the API to log to Airbrake and return apologetic responses to the users when handling errors. Added pagination ability to the API to enable faster, smaller queries being made to the API. Fixed bug from the Rails upgrade that has prevented the Avamar Audits displaying int he Admin Portal. added the ability to resubmit failed backup policy changes via the Admin Portal.
 
 ## Release 1.36.3
 
 Date: 17th October 2016
 
-Maintenance release    
+Maintenance release
 
 Details: Maintenance release for support
 
@@ -693,7 +813,7 @@ Details: Maintenance release for support
 
 Date: 10th October 2016
 
-New feature    
+New feature
 
 Details: Ability to add password confirmation checks to the edit-user forms in the front and back end
 
@@ -701,7 +821,7 @@ Details: Ability to add password confirmation checks to the edit-user forms in t
 
 Date: 3rd October 2016
 
-Bug fix   
+Bug fix
 
 Details: Fixes bug preventing edge gateway deployments in the Portal API
 
@@ -709,7 +829,7 @@ Details: Fixes bug preventing edge gateway deployments in the Portal API
 
 Date: 3rd October 2016
 
-Maintenance release   
+Maintenance release
 
 Details: Maintenance release for support
 
@@ -717,7 +837,7 @@ Details: Maintenance release for support
 
 Date: 30th September 2016
 
-New Feature/Bug fix  
+New Feature/Bug fix
 
 Details: New API to show DRS (vMotion) event to the user. Allow users to alter a backup policy if the last attempt was successful
 

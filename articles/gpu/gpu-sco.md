@@ -17,6 +17,9 @@ toc_mdlink: gpu-sco.md
 
 # Cloud GPU Service Scope
 
+> [!IMPORTANT]
+> Cloud GPU has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Cloud GPU customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
 ## About this document
 
 This document describes the boundaries of the Cloud GPU service, along with the division of responsibilities between you and UKCloud, to facilitate the provisioning and ongoing use of the service.
@@ -80,7 +83,7 @@ Unavailability applies to the inability to connect to a new GPU resource in the 
 
 The SLA of 99.90% supersedes any other SLA relating to the VM that the GPU is associated with.
 
-Emergency and planned maintenance is excluded from calculations.
+Planned and Emergency Maintenance are excluded from calculations.
 
 You are entitled to claim Service Credits for outages to services where the SLA falls below 99.90%. For more about how we calculate SLAs, see the [*SLA Definition*](../other/other-ref-sla-definition.md).
 
@@ -120,9 +123,9 @@ UKCloud reserve the right to proactively move a GPU-enabled VM to another GPU-en
 
 **Licencing.** We provide the GRID licence which is included within the GPU price.
 
-UKCloud can also provide Operating Systems (OS) licensing, and is mandatory with respect to Windows Server. For more information, see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+UKCloud can also provide Operating Systems (OS) licensing, and is mandatory with respect to Windows Server. For more information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
-**VM server images.** We provide base GPU-enabled VM images for the OS for which we provide licensing. You can access these from vCloud Director once the GPU-enabled image has been made available to you.
+**VM server images.** We provide base GPU-enabled VM images for the OS for which we provide licensing. You can access these from VMware Cloud Director once the GPU-enabled image has been made available to you.
 
 **Update services.** We make update repositories available for all software for which we provide licensing. We don't provide software update facilities for non-UKCloud licensed software.
 
@@ -136,7 +139,7 @@ A full overview of the connectivity options and network architecture is availabl
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
 
 We do not provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to monitor at this level.
 
@@ -146,9 +149,9 @@ In line with UKCloud's SISP, we provide notification of customer-impacting secur
 
 You can access, manage and view the GPU-connected VMs in the same way that you would manage the rest of your UKCloud for VMware service. Access only those features allowed by their role, in any of the following ways:
 
-- **vCloud Director API.** Enables the programmatic creation and management of GPU-enabled VMs inside the platform.
+- **vCloud API.** Enables the programmatic creation and management of GPU-enabled VMs inside the platform.
 
-- **vCloud Director Graphical User Interface.** Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions) and manage GPU-enabled VMs.
+- **VMware Cloud Director tenant portal.** Provides a graphical interface to access the VMware Cloud Director environment (depending on assigned permissions) and manage GPU-enabled VMs.
 
 - **UKCloud Portal.** Enables the creation of compute services and subsequently, PRIORITY VDCs and the requesting of GPU resources for environments. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the UKCloud Portal.
 
@@ -162,13 +165,11 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Customer service
 
-**Customer Success Manager (CSM).** For the first 90 days of the service, you have access to a UKCloud CSM. They will help you with your adoption of the UKCloud Cloud GPU service, including finding relevant systems and using UKCloud tools and processes.
+**Cloud Architect.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. They are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
 
-**Cloud Architects.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. They are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
+**Service Delivery Manager (SDM).** An assigned point of contact who will provide any assistance you require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
-**Service Delivery Manager.** After the initial 90 days, you'll be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
-
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is outlined in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
+**Support Desk.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is outlined in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -178,25 +179,17 @@ Alongside the responsibilities outlined in the [*UKCloud for VMware Service Scop
 
 Outside of the creation of your UKCloud for VMware resources needed to support your GPU service, customers can request the addition of GPU capabilities in GPU-enabled zones via the service request option, and the service will be available within 10 working days.
 
-If you request access to Cloud GPU resources for existing VMs that are not in a GPU-enabled zone, our CSMs will work with you to configure new UKCloud for VMware, High Performance Compute or UKCloud for OpenStack services in the correct zone.
+If you request access to Cloud GPU resources for existing VMs that are not in a GPU-enabled zone, our SDMs will work with you to configure new UKCloud for VMware, High Performance Compute or UKCloud for OpenStack services in the correct zone.
 
 UKCloud has created several videos, helpful guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the [Knowledge Centre](https://docs.ukcloud.com/).
 
-As previously mentioned, you will be assigned a Customer Success Manager (CSM) to provide any assistance required during the first 90 days of the service.
+As previously mentioned, your Service Delivery Manager (SDM) will provide any assistance during the provisioning of the service.
 
 UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.
 
 ## Service constraints
 
-UKCloud will adhere to the following in terms of maintenance windows:
-
-"Planned Maintenance" means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide you with at least fourteen (14) days' advance notice of the Planned Maintenance if you will be affected.
-
-If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
-
-"Emergency Maintenance" means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall: a) provide affected customers with at least six (6) hours' advance notice and b) carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
-
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
+For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 You should be aware of some of the limitations of parts of the SLA. The disruptive nature of GPU hardware failures means that in the event of a GPU hardware failure, the VM will also fail.
 

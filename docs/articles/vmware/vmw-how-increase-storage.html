@@ -8,7 +8,7 @@
     <title>How to increase block storage for a virtual machine </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to increase block storage for a virtual machine ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,25 +96,17 @@
 <h2 id="overview">Overview</h2>
 <p>You can increase the block storage available for a virtual machine (VM) as long as the increase does not exceed the limits of your storage policy allocation.</p>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>Before increasing the size of block storage for a VM, consider the following:</p>
-<ul>
-<li><p>If the VM has a snapshot, you'll need to remove this before making changes to the hard disk size. You may need to perform a re-scan from the OS level.</p>
-</li>
-<li><p>To ensure optimal vMotion performance, each hard disk should not exceed 2TB. For more information, see <a href="vmw-ref-vmdk-limits.html"><em>Virtual machine disk limits and considerations</em></a>.</p>
-</li>
-<li><p>There is an upper limit of 2TB per disk for any VM that uses UKCloud's Snapshot Protection.</p>
-</li>
-</ul>
+<p>Before increasing the size of block storage for a VM, if the VM has a snapshot, you'll need to remove this before making changes to the hard disk size. You may need to perform a re-scan from the OS level.</p>
 <h2 id="checking-storage-allocation">Checking storage allocation</h2>
 <p>Before increasing block storage for a VM, you can check the storage allocation for its VDC:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains your VM.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the VM.</p>
 </li>
-<li><p>In the left navigation panel, select <strong>Storage Policies</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-storage-policies.png" alt="Storage Policies menu option in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Storage</em> select <strong>Storage Policies</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-storage-policies.png" alt="Storage Policies menu option in VMware Cloud Director"></p>
 </li>
 <li><p>In the row for the appropriate storage policy, check the <strong>Limit</strong> column.</p>
-<p><img src="images/vmw-vcd-storage-limit.png" alt="Storage policy limit"></p>
+<p><img src="images/vmw-vcd10.1-storage-limit.png" alt="Storage policy limit"></p>
 </li>
 </ol>
 <div class="NOTE">
@@ -124,15 +116,22 @@
 <h2 id="increasing-storage-for-a-virtual-machine">Increasing storage for a virtual machine</h2>
 <p>To increase the amount of block storage for your VM:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains your VM.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the VM.</p>
 </li>
-<li><p>In the <em>Virtual Machines</em> page, in the card for your VM, click <strong>Details</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-vm-details.png" alt="VM Details menu option"></p>
+<li><p>In the card for your VM, click <strong>Details</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-vm-details.png" alt="VM Details menu option"></p>
 </li>
-<li><p>Expand the <em>Hardware</em> section.</p>
+<li><p>Under <em>Hardware</em>, select <strong>Hard Disks</strong>.</p>
 </li>
-<li><p>In the <em>Hard Disks</em> section, in the row for the hard disk that you want to increase, enter the new value (in MB) in the <strong>Size</strong> field.</p>
-<p><img src="images/vmw-vcd-vm-hardware.png" alt="Hard disk size"></p>
+<li><p>Click <strong>Edit</strong>.</p>
+<p><img src="images/vmw-vcd10.1-btn-vm-hard-disks-edit.png" alt="Edit hard disks button"></p>
+</li>
+<li><p>In the <em>Edit Hard Disks</em> dialog box, in the row for the hard disk that you want to increase, enter the new value in the <strong>Size</strong> field.</p>
+<p><img src="images/vmw-vcd10.1-edit-hard-disks.png" alt="Edit Hard Disks dialog box"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Make sure to select the correct units (<strong>MB</strong> or <strong>GB</strong>) from the list in the <strong>Size</strong> field.</p>
+</div>
 </li>
 <li><p>If required, you can add more hard disks to your VM by clicking <strong>Add</strong> and specifying the details for the new disk.</p>
 </li>
@@ -150,6 +149,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -168,7 +180,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

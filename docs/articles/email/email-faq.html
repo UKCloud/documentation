@@ -8,7 +8,7 @@
     <title>Email and Collaboration as a Service FAQs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Email and Collaboration as a Service FAQs ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -93,6 +93,10 @@
                   
 <h1 id="email-and-collaboration-as-a-service-faqs">Email and Collaboration as a Service FAQs</h1>
 
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.</p>
+</div>
 <h2 id="what-is-the-service">What is the service?</h2>
 <p>Email and Collaboration as a Service provides a range of productivity tools, including email, calendaring and tasks, which help an organisation's end users to work in a secure, efficient and effective way.</p>
 <div class="NOTE">
@@ -105,9 +109,6 @@
 <p>The service is charged per mailbox per month (or part thereof) which includes 1GB of mailbox storage. There is a charge of £1 per 1GB of additional storage per mailbox per month. Charges vary depending on the number of mailboxes and whether the service is hosted in the OFFICIAL Assured or Elevated platform. The pricing is stacked and applied for the number of mailboxes within the specified tier. For example, our first 2 tiers are, 1 - 499 and 500 - 999; if you have 600 mailboxes you will pay the first 499 at Tier 1 rate and the next 101 at the Tier 2 rate, the introduction of additional mailboxes up to a total of 999 will be charged at Tier 2 rate, when the number of mailboxes exceeds 999 the additional mailboxes will be charged at Tier 3 rate.</p>
 <h2 id="does-ukcloud-offer-a-free-trial">Does UKCloud offer a free trial?</h2>
 <p>No. As Email and Collaboration has been removed from sale, a free trial is no longer available.</p>
-<h2 id="what-happens-when-my-trial-comes-to-an-end">What happens when my trial comes to an end?</h2>
-<p>Your Cloud Architect or CSM will contact you when your trial is due to end, either because you have used up all of your credits or because you have reached 30 days (whichever is sooner).</p>
-<p>At the end of your trial, you can transition to production or cease the trial.</p>
 <h2 id="where-is-the-service-hosted">Where is the service hosted?</h2>
 <p>The service is delivered from two secure UK data centres by UKCloud.</p>
 <h2 id="does-my-data-leave-the-uk">Does my data leave the UK?</h2>
@@ -122,7 +123,7 @@
 <p>There are several configuration options for using the PSN email relays. These can provide either resiliency across multiple PSN relays or give you an opportunity to just use a single relay (in case of maintenance on the other).</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>For Email services in regions 1, 2, 7 and 8, you’ll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.</p>
+<p>For Email services in regions 1, 2, 7 and 8, you'll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.</p>
 </div>
 <ul>
 <li><p>Create a local host file entry on your mail system or a DNS entry on your internal DNS server with a name of your choice that is configured with both PSN relay IP addresses.</p>
@@ -133,7 +134,7 @@
 </li>
 </ul>
 <h2 id="is-the-service-pan-government-accredited">Is the service Pan Government Accredited?</h2>
-<p>UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.</p>
+<p>UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.</p>
 <p>We are now required to self-assess our services, with customers then responsible for assessing and selecting the most appropriate cloud services which meet their individual security requirements.</p>
 <p>We provide confidence that the service still meets the highest level of information assurance, which is why we continue to conduct independent testing and validation of our platform, and have the findings made available to our customers and partners, enabling their SIROs to make an informed decision about self-asserting any service they choose to consume.</p>
 <p>Email and Collaboration as a Service is suitable for all data classified at OFFICIAL, including OFFICIAL-SENSITIVE, under the Government Security Classification Policy (GSCP), and for legacy IL0--IL4 solutions.</p>
@@ -152,7 +153,7 @@
 <p>In addition, the solution includes Messaging Application Programming Interface (MAPI) synchronisation to Microsoft Outlook 2013/2010/2007/2003 with full delegate, offline access and support for S/MIME</p>
 <h2 id="can-i-migrate-my-email-from-another-service-or-data-store">Can I migrate my email from another service or data store?</h2>
 <p>Yes. The solution includes a migration wizard to help you migrate from an existing solution to Email and Collaboration as a Service.</p>
-<p>We can help facilitate a bulk migration to the platform using local data import. This is priced on a time-and-materials basis from the UKCloud <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf"><em>SFIA Rate Card</em></a>.</p>
+<p>We can help facilitate a bulk migration to the platform using local data import. This is priced on a time-and-materials basis from the UKCloud <a href="http://www.ukcloud.com/sfia">SFIA Rate Card</a>.</p>
 <p>We can also recommend partners who specialise in this service.</p>
 <h2 id="can-i-use-a-specific-email-domain-name">Can I use a specific email domain name?</h2>
 <p>Yes, you can use any domain name that you have registered, that is hosted by a DNS provider, and is authorised for use on your required network connection.</p>
@@ -173,15 +174,14 @@
 <h2 id="what-is-the-briefcase-functionality">What is the briefcase functionality?</h2>
 <p>Briefcase is a document storing and sharing function that allows users to upload files to the mail store, so that they can access those files from anywhere via the Email and Collaboration as a Service mail client.</p>
 <h2 id="what-are-the-default-class-of-service-settings">What are the default Class of Service settings?</h2>
-<p>A Class of Service exists for each e-mail domain and defines the features, access privileges and default preferences that a new user account receives. For existing accounts, if a setting has been specified within the client’s Preferences tab, it will take precedence; otherwise the Class of Service setting will be applied. All new accounts will inherit the settings from the Class of Service. For information about the default Class of Service settings, or to request that a setting is changed from the default, raise a Service Request via the My Calls section of the UKCloud Portal.</p>
+<p>A Class of Service exists for each e-mail domain and defines the features, access privileges and default preferences that a new user account receives. For existing accounts, if a setting has been specified within the client's Preferences tab, it will take precedence; otherwise the Class of Service setting will be applied. All new accounts will inherit the settings from the Class of Service. For information about the default Class of Service settings, or to request that a setting is changed from the default, raise a Service Request via the My Calls section of the UKCloud Portal.</p>
 <h2 id="how-long-does-it-take-to-get-the-solution-up-and-running">How long does it take to get the solution up and running?</h2>
 <p>Within five days of accepting your order, we'll create your primary administrator account and send you a welcome pack, which includes the URL for the UKCloud Portal, mailbox services and associated authentication details.</p>
 <p>Your administrator can then set policies, create additional user accounts and allocate roles and privileges for users within their project or organisation. Each user can then log on and begin using the service.</p>
 <p>Set up of client-based software or mobile devices may be required, depending on your chosen access methods.</p>
 <p>The length of time for the solution to be fully operational depends on the amount of work you require once you've received the welcome pack.</p>
-<h2 id="what-are-your-service-maintenance-windows">What are your service maintenance windows?</h2>
-<p>As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days advance notice of planned maintenance.</p>
-<p>As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.</p>
+<h3 id="what-are-your-service-maintenance-windows">What are your service maintenance windows?</h3>
+<p>See <a href="../other/other-ref-maintenance-windows.html"><em>Understanding UKCloud service maintenance windows</em></a>.</p>
 <h2 id="can-i-use-the-service-as-a-short-term-solution-such-as-for-a-couple-of-months">Can I use the service as a short-term solution, such as for a couple of months?</h2>
 <p>Yes. The service is paid for monthly in arrears, and there is no termination charge for cancelling it. Please note that it is your responsibility to extract all of your data prior to the service being terminated, after which we will erase all data.</p>
 <h2 id="how-can-i-pay-for-the-service">How can I pay for the service?</h2>
@@ -216,6 +216,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -234,7 +247,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

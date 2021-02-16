@@ -2,16 +2,16 @@
 title: Synchronous Protection Service Scope
 description: Outlines important details regarding the Synchronous Protection service
 services: vmware
-author: Steve Hall
-reviewer: Guy Martin
+author: shall
+reviewer: gmartin
 lastreviewed: 22/03/2019
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Synchronous Protection Service Scope
-toc_fullpath: Service Scope/vmw-sco-synchronous-protection.md
+toc_fullpath: Service Information/vmw-sco-synchronous-protection.md
 toc_mdlink: vmw-sco-synchronous-protection.md
 ---
 
@@ -30,7 +30,7 @@ Synchronous Protection is one of a variety of on‑platform protection options a
 
 ## About Synchronous Protection
 
-The UKCloud for VMware Synchronous Protection service option is designed to offer geographical protection of your live environments across both of our sites (Farnborough and Corsham; 60 miles apart). To achieve this, we utilise synchronous replication between sites to ensure that any changes made to your environment are committed to arrays in both sites before the write is confirmed as being complete to the VM OS.
+The UKCloud for VMware Synchronous Protection service option is designed to offer geographical protection of your live environments across both of our sites (Farnborough and Corsham; 60 miles apart). To achieve this, we utilise synchronous replication between sites to ensure that any changes made to your environment are committed to arrays in both sites before the write is confirmed as being complete to the VM OS.
 
 Synchronous Protection provides a replica of data (for any data written, and flushed to disk) and then enables the ability to migrate your VMs between the sites while they are running, offering a greater level of protection for live environments.
 
@@ -52,7 +52,7 @@ Within each site we've architected a platform with a minimum of N+1 resilience, 
 
 ## RPO and RTO
 
-Synchronous Protection provides a disaster recovery service with an RPO of almost 0 seconds. The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks.
+Synchronous Protection provides a disaster recovery service with an RPO of almost 0 seconds. The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks.
 
 For clarity, this product does not use asynchronous replication technologies. The recovery point is the last write to disk with no historical recovery points (there is no ability to "roll back" to a previous version). If asynchronous replication with historical recovery points is required, consider [Journaling Protection](vmw-sco-journaling-protection.md).
 
@@ -130,7 +130,7 @@ Split site (OTV networking and management networking) | Automatic or manual | Mu
 
 ## Failover timing
 
-The amount of time it takes for your services to failover will depend on the failure scenario, but generally the failover will take as long as the VM needs to reboot plus a small amount of additional time to invoke the failover - about 45 seconds. Some scenarios, such as a "split brain", can take longer, leading to an outage of two hours.
+The amount of time it takes for your services to failover will depend on the failure scenario, but generally the failover will take as long as the VM needs to reboot plus a small amount of additional time to invoke the failover - about 45 seconds. Some scenarios, such as a "split brain", can take longer, leading to an outage of two hours.
 
 ## Alerting and reporting
 
@@ -140,7 +140,7 @@ You can also receive alerts via email subscription or using the [Service Status 
 
 We'll contact you after a failover to inform you that our actions are complete.
 
-We do not currently provide alerts when a VM is moved to a different site. However, you can check the location of your VMs. For more information, see [*How to use VM location in vCloud Director*](vmw-how-use-vm-location.md).
+We do not currently provide alerts when a VM is moved to a different site. However, you can check the location of your VMs. For more information, see [*How to use VM location*](vmw-how-use-vm-location.md).
 
 ## Networking
 
@@ -212,7 +212,7 @@ If we accept your request, we'll schedule the work to start at the time you spec
 
 ## Failover testing charges
 
-We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) - level 3 Apply). Longer testing periods will need to be approved by UKCloud.
+We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the [SFIA Rate Card](http://www.ukcloud.com/sfia) - level 3 Apply). Longer testing periods will need to be approved by UKCloud.
 
 ## Feedback
 

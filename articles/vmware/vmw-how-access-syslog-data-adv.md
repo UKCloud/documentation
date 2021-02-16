@@ -2,9 +2,9 @@
 title: How to access syslog data for your advanced gateway
 description: Explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your advanced gateway
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+author: shighmoor
+reviewer: lthangarajah
+lastreviewed: 21/06/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -118,55 +118,43 @@ If you have multiple NSX edges under a single NFT, you can gather the data from 
 
 After setting up your syslog collector, you need to make sure that your NSX edge sends network traffic to the log.
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC to which the NSX edge belongs.
+1. In the VMware Cloud Director, select the VDC to which the NSX edge belongs.
 
-2. In the left navigation panel, click **Edges**.
+2. In the left navigation panel, under *Networking*, select **Edges**.
 
-    ![Edges menu option](images/vmw-vcd-mnu-edges.png)
-
-3. Select the edge that you want to configure and click **Configure Services**.
-
-    ![Configure Services](images/vmw-vcd-edge-btn-config.png)
+3. Select the edge that you want to configure and click **Services**.
 
 4. Select the **Edge Settings** tab.
 
-    ![Edge Settings tab](images/vmw-vcd-adv-edge-tab-settings.png)
-
 5. Click **Edit Syslog Server**.
-
-    ![Edit Syslog Server button](images/vmw-vcd-btn-syslog-server.png)
 
 6. In the *Edit Syslog Server* dialog box, in the **Syslog Server** field, enter the IP address of your syslog server then click **Keep**.
 
-    ![Edit Syslog Server dialog box](images/vmw-vcd-edit-syslog-server.png)
-
 7. Select the **Firewall Rules** tab.
 
-8. For each firewall rule that you want to log, select the **Enable logging** check box.
+8. For each firewall rule that you want to log, select the **Enable logging** check box, then click **Save changes**.
 
     ![Logging firewall rules](images/vmw-vcd-logging-firewall.png)
 
-9. When you're done, click **Save changes**.
+9. Select the **NAT** tab.
 
-10. Select the **NAT** tab.
-
-11. For each NAT rule that you want to log, select the rule, click the **Edit** icon, select the **Enable logging** option then click **Keep**.
+10. For each NAT rule that you want to log, select the rule, click the **Edit** icon, select the **Enable logging** option then click **Keep**.
 
     ![Logging NAT rules](images/vmw-vcd-logging-nat.png)
 
-12. When you're done, click **Save changes**.
+11. When you're done, click **Save changes**.
 
-13. Select the **Load Balancer** tab.
+12. Select the **Load Balancer** tab.
 
-14. On the **Global Configuration** tab, select the **Enable Logging** option.
+13. On the **Global Configuration** tab, select the **Enable Logging** option.
 
-15. From the **Log Level** list, select the logging level.
+14. From the **Log Level** list, select the logging level.
 
     ![Logging load balancer](images/vmw-vcd-logging-load-balancer.png)
 
     You can find more detailed steps for editing load balancer settings in [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
 
-16. When you're done, click **Save changes**.
+15. When you're done, click **Save changes**.
 
 ## Sample syslog captures
 

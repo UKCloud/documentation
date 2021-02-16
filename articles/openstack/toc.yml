@@ -22,8 +22,6 @@
     href: ostack-how-create-heat-template.md
   - name: Create load balancing services
     href: ostack-how-create-load-balancer.md
-  - name: Create new users
-    href: ostack-how-create-users.md
   - name: Create static IPs for OpenStack instances
     href: ostack-how-static-ip.md
   - name: Install Red Hat Update Infrastructure on an existing OpenStack instance
@@ -62,9 +60,13 @@
     href: ostack-ref-live-migration.md
   - name: OpenStack public image versioning
     href: ostack-ref-public-image-versioning.md
-- name: Service Definition
+  - name: OpenStack region migration tooling
+    href: ostack-ref-migrations.md
+- name: Service Information
   items:
-  - name: UKCloud for OpenStack Service Definition
+  - name: Pricing information
+    href: ostack-ref-pricing.md
+  - name: Service Definition
     href: ostack-sd.md
 - name: Service Scope
   items:

@@ -3,8 +3,8 @@ title: How to resize a disk using PowerShell
 description: Provides help for resizing a disk using PowerShell on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -74,26 +74,26 @@ From your PowerShell window:
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your Azure Stack Hub environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
 $RGName = "<output form="ResourceGroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="VMName" name="result" style="display: inline;">MyVM</output>"
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Stop-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize managed OS disk
-$Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
+$Disk = Get-AzDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
 $Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">200</output>
-Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
+Update-AzDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
 # Start the VM
-Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Start-AzVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 
 ### [Unmanaged Disk](#tab/tabid-b/tabid-1)
@@ -104,25 +104,25 @@ From your PowerShell window:
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your Azure Stack Hub environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
 $RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="VMName" name="result2" style="display: inline;">MyVM</output>"
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Stop-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize unmanaged OS disk
 $VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">200</output>
-Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+Update-AzVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
-Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Start-AzVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 
 ### [Managed Disk](#tab/tabid-a/tabid-2)
@@ -133,8 +133,8 @@ From your PowerShell window:
 $ArmEndpoint = "<output form="armendpoint2" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your Azure Stack Hub environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
 $RGName = "<output form="ResourceGroup2" name="result" style="display: inline;">MyResourceGroup</output>"
@@ -142,18 +142,18 @@ $VMName = "<output form="VMName2" name="result" style="display: inline;">MyVM</o
 $DiskLun = <output form="LUN" name="result" style="display: inline;">0</output>
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Stop-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize managed data disk
-$Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.DataDisks[$DiskLun].Name
+$Disk = Get-AzDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.DataDisks[$DiskLun].Name
 $Disk.DiskSizeGB = <output form="DiskSize2" name="result" style="display: inline;">200</output>
-Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
+Update-AzDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
 # Start the VM
-Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Start-AzVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 
 ### [Unmanaged Disk](#tab/tabid-b/tabid-2)
@@ -164,8 +164,8 @@ From your PowerShell window:
 $ArmEndpoint = "<output form="armendpoint2" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your Azure Stack Hub environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
 $RGName = "<output form="ResourceGroup2" name="result2" style="display: inline;">MyResourceGroup</output>"
@@ -173,17 +173,17 @@ $VMName = "<output form="VMName2" name="result2" style="display: inline;">MyVM</
 $DiskLun = <output form="LUN" name="result2" style="display: inline;">0</output>
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Stop-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize unmanaged data disk
 $VM.StorageProfile.DataDisks[$DiskLun].DiskSizeGB = <output form="DiskSize2" name="result2" style="display: inline;">200</output>
-Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+Update-AzVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
-Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Start-AzVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 
 ***
@@ -208,7 +208,8 @@ Enter details below to provide values for the variables in the following scripts
 
     ```powershell
     # Obtain public IP of your VM based on the variables from above
-    $IpAddress= (Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object -FilterScript { $_.IpConfiguration.Id -like "*$VMName*" })
+    $NICName = (Get-AzNetworkInterface -ResourceGroupName $RGName | Where-Object -FilterScript { $_.VirtualMachine.Id -like "*$VMName*"}).Name
+    $IpAddress = Get-AzPublicIpAddress -ResourceGroupName $RGName | Where-Object -FilterScript { $_.IpConfiguration.Id -like "*$NICName*" }
     # Start RDP session to your VM
     Start-Process "mstsc" -ArgumentList "/v:$($IpAddress.IpAddress)"
     ```

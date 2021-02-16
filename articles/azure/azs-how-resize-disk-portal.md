@@ -3,8 +3,8 @@ title: How to resize a disk using the UKCloud Azure Stack Hub portal
 description: Provides help for resizing a disk using the portal on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
-reviewer: BaileyLawson
-lastreviewed: 15/04/2019 11:00:00
+reviewer: William Turner
+lastreviewed: 15/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -45,29 +45,31 @@ To complete the steps in this article, you must have appropriate access to a sub
 5. In the *Disks* blade, select the disk you would like to resize.
 
     > [!Note]
-    > Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.
-
-6. In the disk's blade, enter the desired size of the disk in GiB in the **Size** field.
-
-    > [!Note]
+    > - Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.
     > - Disks can only be resized to a larger size.
     > - Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both are provided below.
 
 # [Resizing managed disks](#tab/tabid-1)
 
-![Managed disk resize](images/azs-browser-vm-disk-size-managed.png)
+1. In the disk's blade, select **Configuration**.
+
+2. Enter the desired size of the disk in GiB in the **Size** field.
+
+    ![Managed disk resize](images/azs-browser-vm-disk-size-managed.png)
+
+3. When you're done, click **Save**.
 
 # [Resizing unmanaged disks](#tab/tabid-2)
 
-![Unmanaged disk resize](images/azs-browser-vm-disk-size.png)
+1. Enter the desired size of the disk in GiB in the **Size** field.
+
+    ![Unmanaged disk resize](images/azs-browser-vm-disk-size.png)
+
+2. When you're done, click **Save**.
 
 ***
 
-7. When you're done, click **Save**.
-
-    ![VM disks save button](images/azs-browser-vm-disk-save-button.png)
-
-8. You can monitor the progress of the disk resizing by clicking the **Notifications** icon.
+6. You can monitor the progress of the disk resizing by clicking the **Notifications** icon.
 
    ![Notification showing updating virtual machine disk](images/azsp_createvm_progress.png)
 

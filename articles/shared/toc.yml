@@ -1,0 +1,42 @@
+- name: About
+  items:
+  - name: Understanding UKCloud shared services
+    href: shared-ref-overview.md
+- name: How To
+  items:
+  - name: Access CentOS update servers
+    href: shared-how-access-centos-update-servers.md
+  - name: Access Red Hat update servers (RHUI 2)
+    href: shared-how-access-redhat-update-servers.md
+  - name: Access Red Hat update servers (RHUI 3)
+    href: shared-how-access-redhat-update-servers-3.md
+  - name: Access Ubuntu update servers
+    href: shared-how-access-ubuntu-update-servers.md
+  - name: Bring your own Red Hat licensing
+    href: shared-how-license-red-hat.md
+  - name: Connect to the UKCloud Windows Server Update Services (WSUS)
+    href: shared-how-connect-windows-update.md
+  - name: Install Red Hat Update Infrastructure (RHUI 2)
+    href: shared-how-install-rhui-vm.md
+  - name: Install Red Hat Update Infrastructure (RHUI 3)
+    href: shared-how-install-rhui-vm-3.md
+  - name: License Microsoft software on the UKCloud platform
+    href: shared-how-license-microsoft.md
+  - name: License Windows VMs using the UKCloud KMS
+    href: shared-how-setup-kms.md
+- name: Reference
+  items:
+  - name: Access to virtual machines on the UKCloud platform
+    href: shared-ref-access-to-vms.md
+  - name: Network Time Protocol server access
+    href: shared-ref-network-time-server.md
+  - name: Red Hat Update Infrastructure overview (RHUI 2)
+    href: shared-ref-rhui.md
+  - name: Red Hat Update Infrastructure Overview (RHUI 3)
+    href: shared-ref-rhui-3.md
+- name: Videos
+  items:
+  - name: Connecting a VM to WSUS
+    href: shared-vid-wsus.md
+  - name: Licensing Windows VMs using the KMS
+    href: shared-vid-licensing-kms.md

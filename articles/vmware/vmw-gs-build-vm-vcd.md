@@ -1,10 +1,10 @@
 ---
-title: How to build a virtual machine with UKCloud for VMware
-description: Describes how to get up and running with UKCloud for VMware by showing you how to use vCloud Director to quickly spin up a virtual machine from scratch and connect it to the internet (Assured OFFICIAL security domain only)
+title: How to build a virtual machine with UKCloud for VMware (vCloud Director 9.7)
+description: Describes how to get up and running with UKCloud for VMware by showing you how to use vCloud Director 9.7 to quickly spin up a virtual machine from scratch and connect it to the internet (Assured OFFICIAL security domain only)
 services: vmware
-author: Sue Highmoor
+author: shighmoor
 reviewer:
-lastreviewed: 05/10/2018 12:14:25
+lastreviewed: 05/10/2018
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -16,18 +16,20 @@ toc_fullpath: Getting Started/vmw-gs-build-vm-vcd.md
 toc_mdlink: vmw-gs-build-vm-vcd.md
 ---
 
-# How to build a virtual machine with UKCloud for VMware
+# How to build a virtual machine with UKCloud for VMware (vCloud Director 9.7)
 
 ## Overview
 
-This guide leads you through the three basic steps for using UKCloud for VMware to quickly build a simple virtual machine (VM) in vCloud Director, and connect it to the internet.
+This guide leads you through the three basic steps for using UKCloud for VMware to quickly build a simple virtual machine (VM) in vCloud Director 9.7, and connect it to the internet.
 
 For more information about how to use other vCloud Director functions to make the most of UKCloud for VMware and create more complex virtual data centres (VDCs), take a look at the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
 
 The three steps covered in this guide are:
 
 1. Create a network (to move requests around your VMs)
+
 2. Configure the edge gateway (in this guide we focus on the firewall and NAT configuration)
+
 3. Create a virtual machine
 
 If you follow these steps, you can have a VM up and running with a connection to the internet in about 20 to 25 minutes.
@@ -92,7 +94,7 @@ First, you need to create a network that can connect to external networks outsid
 
 13. Click **Next**.
 
-14. When you connect a network to the outside world, it's important that you control exactly what can access your environment via that network. UKCloud for VMWare uses edge gateways to do this.
+14. When you connect a network to the outside world, it's important that you control exactly what can access your environment via that network. UKCloud for VMware uses edge gateways to do this.
 
     In the *Edge Connection* page, select the edge that you want your new network to use (we'll work more with the edge gateway later on).
 
