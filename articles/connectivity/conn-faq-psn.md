@@ -159,7 +159,7 @@ If you don't have an existing contract with Vodafone, a billing account and reme
 
 ### How do I order PSN connectivity?
 
-When placing an order through your account manager or when raising a service request, you need to provide evidence of your entitlement to connect to the PSN.
+When placing an order through your Client Director or when raising a service request, you need to provide evidence of your entitlement to connect to the PSN.
 
 You will also need to provide updated PSN approval when your certificate expires.
 
