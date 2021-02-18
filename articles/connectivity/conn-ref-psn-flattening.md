@@ -24,8 +24,6 @@ The Public Services Network (PSN) has been flattened to converge PSN Assured and
 
 The flattened PSN network enables better collaboration between local government, blue light services and central government departments, allowing for more joined-up services, including counter-terrorism initiatives and centralised intelligence, to improve the lives of UK citizens.
 
-The information in this article is also available in our [PSN flattening - an update](https://ukcloud.com/hub/news/psn-flattening-an-update/) blog post.
-
 ## PSN and CDSZ
 
 Although it may now be possible to bypass the Cross Domain Security Zone (CDSZ) to communicate between Elevated and Assured environments using the flattened PSN, you should consider the following:
