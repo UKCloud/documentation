@@ -2,8 +2,8 @@
 title: Email and Collaboration fair use policy
 description: Outlines what is considered to be fair use of UKCloud's Email and Collaboration service
 services: email
-author: SHighmoor
-reviewer:
+author: shighmoor
+reviewer: shansford
 lastreviewed: 15/12/2020 
 
 toc_rootlink: Reference
