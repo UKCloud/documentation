@@ -97,7 +97,7 @@
 <p>UKCloud utilises a hybrid solution Distributed Denial of Service (DDoS) mitigation service to help protect customers against DDoS attacks. The hybrid service comprises local DDoS mitigation appliances to mitigate smaller attacks, failing over to the cloud if attacks exceed local capacity. For more information on this specific service, see <a href="conn-faq-ddos.html"><em>DDoS mitigation service FAQ</em></a>.</p>
 <h2 id="issue">Issue</h2>
 <p>Although DDoS mitigation is a valuable service, there are some considerations to be aware of that could impact your environment if not accounted for, for example by causing VPN failures or slow applications.</p>
-<p>These may not be apparent in normal local operation of the DDoS service, but only come to light when larger attacks are mitigated via the cloud. This is because, during cloud mitigation, traffic is tunnelled, adding IP overhead. This could potentially cause packet fragmentation, resulting in the issues mentioned above.</p>
+<p>These may not be apparent in normal local operation of the DDoS service, but only come to light when larger attacks are mitigated via the cloud. This is because, during cloud mitigation, traffic is tunnelled from our supplier to UKCloud, adding IP overhead. This could potentially cause packet fragmentation, resulting in the issues mentioned above.</p>
 <h2 id="recommendation">Recommendation</h2>
 <p>To avoid issues related to fragmentation, UKCloud recommends the following settings/protocols:</p>
 <ul>
