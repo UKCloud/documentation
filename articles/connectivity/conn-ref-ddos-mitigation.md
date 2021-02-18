@@ -2,8 +2,8 @@
 title: DDoS mitigation causing VPN failures and slow applications
 description: Explains how customers can reduce IPsec and MTU issues to allow packets to traverse the internet and enter the UKCloud platform
 services: connectivity
-author: Sue Highmoor
-reviewer: Nick Stobbart
+author: shighmoor
+reviewer: nstobbart
 lastreviewed: 15/02/2021
 toc_rootlink: Reference
 toc_sub1: 
