@@ -38,7 +38,7 @@ This guide is intended for customers who have:
 
 Before you can start to implement a walled garden, you must have completed and passed the appropriate application process. For more information, see the [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
-After your Walled Garden application has been approved, a service request is raised to implement the Walled Garden virtual data centre (VDC) and, if necessary, Elevated and Assured VDCs.
+After your Walled Garden application has been approved, a service request is raised to implement the Walled Garden Virtual Data Centre (VDC) and, if necessary, Elevated and Assured VDCs.
 
 > [!NOTE]
 > If a service request for this implementation already exists, the existing request is used and a new one is not raised.
@@ -55,11 +55,11 @@ During the provisioning of the Walled Garden service, we'll ask you for some add
 
 - If you're connecting new or existing VDCs to the Walled Garden VDC.
 
-  - If you're connecting to existing VDCs, we'll need to know information such as NFT details, customer account, and so on.
+  - If you're connecting to existing VDCs, we'll need to know information such as network firewall tennant (NFT) details, customer account, and so on.
 
 - The external source IP addresses from which you'd like to access the Assured VDC (up to a maximum of 50).
 
-    These IP addresses are the locations from which you can build and test the environment (for example, offices or end user premises).
+  - These IP addresses are the locations from which you can build and test the environment (for example, offices or end user premises).
 
 The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Service Delivery Manager (SDM) will send you the information you need to access it.
 
@@ -73,7 +73,7 @@ It is important to remember that while the UKCloud Portal for the Assured securi
 
 First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md) and [*How to build a virtual machine with UKCloud for VMware*](../vmware/vmw-gs-build-vm-vcd.md).
 
-You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or NAT rules.
+You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or network address transition (NAT) rules.
 
 #### Networking examples
 
@@ -90,7 +90,7 @@ The diagrams below provide examples for both options.
 >
 > - You cannot route public IP addresses to the vCNS Edges in the Walled Garden
 > - The Org VDC networks 192.168.XXX.XX in the examples below are illustrative and you should replace these with your own details
-> - You must have one VM in the Walled Garden VDC connecting to both vCNS Edges
+> - You must have one virutal machine (VM) in the Walled Garden VDC connecting to both vCNS Edges
 > - Each of the examples below assumes that the appropriate firewall rules are in place
 > - You must apply an SNAT rule in the Elevated security domain to enable connectivity to UKCloud services
 
@@ -100,7 +100,7 @@ The diagrams below provide examples for both options.
 
 ### Building your virtual machines
 
-The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the VMware Cloud Director catalog or from template VMs as OVF files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
+The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the VMware Cloud Director catalog or from template VMs as open virtualisation format (OVF) files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
 
 ### Testing your environment
 
