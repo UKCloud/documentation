@@ -8,7 +8,7 @@
     <title>UKCloud for Oracle Software Service Definition </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Oracle Software Service Definition ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -93,20 +93,15 @@
                   
 <h1 id="ukcloud-for-oracle-software-service-definition">UKCloud for Oracle Software Service Definition</h1>
 
-<h2 id="why-ukcloud">Why UKCloud?</h2>
-<p>UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government’s Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.</p>
-<p>We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud’s technical experts.</p>
-<p><img src="images/ukc-services.png" alt="UKCloud services"></p>
 <h2 id="what-is-ukcloud-for-oracle-software">What is UKCloud for Oracle Software?</h2>
-<p>UKCloud for Oracle provides a proven Oracle Infrastructure as a Service that's tailor made for running your Oracle workloads in the cloud. This service enables you to move technologies such as Oracle Database, Oracle WebLogic Server, Oracle Fusion Applications, E-Business Suite and more to our secure sovereign cloud platform quickly and easily whilst enjoying the economies of scale of the cloud. You can then connect your Oracle applications to the non-Oracle workloads that you have within the rest of the multi-cloud ecosystem. It is billed hourly with no minimum contracts and supported free of charge.</p>
-<p>For full information regarding this product, we have <a href="orcl-sco.html">Service Scopes</a>, <a href="orcl-faq.html">FAQs</a> and other relevant documents on our <a href="https://docs.ukcloud.com">Knowledge Centre</a>.</p>
+<p>UKCloud for Oracle Software provides a proven Oracle Infrastructure as a Service that's tailor made for running your Oracle workloads in the cloud. This service enables you to move technologies such as Oracle Database, Oracle WebLogic Server, Oracle Primavera, E-Business Suite and more to our secure sovereign cloud platform quickly and easily, while enjoying the economies of scale of the cloud. You can then connect your Oracle applications to the non-Oracle workloads that you have within the rest of the multi-cloud ecosystem. It is billed hourly and supported free of charge.</p>
 <h2 id="what-the-service-can-help-you-achieve">What the service can help you achieve</h2>
 <ul>
 <li><p>Overcome licencing barriers of putting Oracle software in the cloud using Oracle hypervisor technology</p>
 </li>
-<li><p>Remove reliance on on-premise Oracle infrastructure by running Oracle workloads within the cloud</p>
+<li><p>Achieve your data centre modernisation strategy by moving both legacy and modern Oracle workloads to the cloud</p>
 </li>
-<li><p>Streamline Oracle licencing by adjusting VM resources to suit performance and only licence the x86 or SPARC CPU cores used</p>
+<li><p>Streamline Oracle licensing by adjusting VM resources to suit performance and only licence the CPU cores used</p>
 </li>
 <li><p>Improve data locality by having your Oracle workloads next to your other cloud workloads</p>
 </li>
@@ -114,102 +109,23 @@
 </li>
 </ul>
 <h2 id="product-options">Product options</h2>
-<p>The service is designed to be flexible and allows you to mix and match from a range of pre-defined options for each virtual machine and change them when required.</p>
-<h3 id="security-domain">Security domain</h3>
-<p>Choose the security domain in which you want to run your workload</p>
-<ul>
-<li><p>Assured OFFICIAL - DDoS-protected internet, PSN, HSCN and Janet</p>
-</li>
-<li><p>Elevated OFFICIAL - PSN and RLI</p>
-</li>
-<li><p>Above OFFICIAL - SLI and Crypto</p>
-</li>
-</ul>
-<h3 id="public-or-private">Public or Private</h3>
-<ul>
-<li><p>Public - Share the multi tenant cloud as trusted users of UKCloud for Oracle Software</p>
-</li>
-<li><p>Private - See the <a href="../private-cloud/prc-sd-orcl.html"><em>Private Cloud for Oracle Software Service Definition</em></a> for more information</p>
-</li>
-<li><p>Dedicated - Private compute nodes on the public UKCloud for Oracle Software</p>
-</li>
-</ul>
-<h3 id="oracle-cpu-type">Oracle CPU type</h3>
-<p>Define the chipset needed to power your workload</p>
-<ul>
-<li><p>x86</p>
-</li>
-<li><p>SPARC</p>
-</li>
-</ul>
-<h3 id="vm-resource">VM resource</h3>
-<p>Define the OVM resources needed to power your workload</p>
-<ul>
-<li><p>Number of Cores - Increments of 1 core</p>
-</li>
-<li><p>Amount of Memory - Increments of 1 GiB</p>
-</li>
-</ul>
-<h3 id="storage">Storage</h3>
-<p>Define the storage required to deliver your application. All storage is persistent and resilient to local hardware failures. Workloads can use multiple storage profiles</p>
-<ul>
-<li><p>Tier 1 - High I/O storage</p>
-</li>
-<li><p>Tier 2 - General purpose storage</p>
-</li>
-</ul>
-<h3 id="local-protection">Local protection</h3>
-<p>Choose the local protection required for your application in the event of a local host failure. This option is configured within each Oracle VM config menu. This is for x86 options only.</p>
-<ul>
-<li><p>Non HA OVM - UKC will manually migrate OVM to new host within same UKC Oracle region (You will need to restart the the OVM)</p>
-</li>
-<li><p>HA OVM - OVM will automatically be migrated to new host within same UKC Oracle region (Restart of OVM is automated but not guaranteed)</p>
-</li>
-</ul>
-<h3 id="backup--remote-protection">Backup &amp; remote protection</h3>
-<p>UKCloud for Oracle Softwatre doesn't include infrastructure level backup and restore or remote protection products. Instead we offer an underpinning infrastructure that can support technologies that are compatible with Oracle VMs such as Oracle Data Guard and Oracle RMAN data protection solutions</p>
-<ul>
-<li><p>Multi Cloud Backup Storage - Compatible with Oracle RMAN and other DDBoost aware backup applicatons. See the <a href="../other/other-sd-mcbs.html"><em>Multi-Cloud Backup Storage Service Definition</em></a> for more info</p>
-</li>
-<li><p>Second Oracle region - Use Oracle Data Guard or other Oracle compatible replication technologies to create a DR environment in a second Oracle region</p>
-</li>
-</ul>
+<p>The service is designed to be flexible and enables you to mix and match from a range of pre-defined options for each virtual machine and change them when required.</p>
+<p><img src="images/orcl-product-options-g12.png" alt="UKCloud for Oracle Software product options"></p>
 <h2 id="pricing-and-packaging">Pricing and packaging</h2>
-<p>UKCloud for Oracle Software VMs start at 9p per hour, and full pricing with all options including licensing and connectivity available in the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
+<p>UKCloud for Oracle Software VMs start at 9p per hour. Full pricing with all options, including licensing and connectivity, is available in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <h2 id="accreditation-and-information-assurance">Accreditation and information assurance</h2>
-<p>The security of our platform is our number one priority. We’ve always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the <a href="https://ukcloud.com/governance/">UKCloud website</a>.</p>
+<p>The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors and management system assessors. Details are available on the <a href="https://ukcloud.com/governance/">UKCloud website</a>.</p>
 <h2 id="connectivity-options">Connectivity options</h2>
-<p>UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a> which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.</p>
+<p>UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <h2 id="an-sla-you-can-trust">An SLA you can trust</h2>
-<p>We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the <a href="../other/other-ref-sla-definition.html"><em>SLA defintion article</em></a> on the UKCloud Knowledge Centre.</p>
-<table>
-<thead>
-<tr>
-<th> </th>
-<th>UKCloud for Oracle Software</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Service level agreement</strong></td>
-<td><strong>Non-HA x86:</strong> 99.95%<br><strong>HA x86:</strong> 99.99%<br><strong>SPARC / Dedicated SPARC with resilience:</strong> 99.95%<br><strong>Dedicated SPARC without resilience:</strong> 95.00%</td>
-</tr>
-<tr>
-<td><strong>Portal level agreement</strong></td>
-<td>99.90%</td>
-</tr>
-<tr>
-<td><strong>Measurement of SLA</strong></td>
-<td>The service is deemed unavailable if a customer is unable to restart a VM after it becomes unresponsive due to a fault recognised as the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking, such as physical firewalls and routers.<br>Oracle workloads are pinned to processor cores and will power off in the event of a host failure. Migrations are not live and VM restart will be required. UKCloud will advise customers if VM restart is required.<br><b>HA-enabled x86 VMs</b> will be automatically moved to a new host in the event of a host failure, but may require restarting. Automatic movement of VMs is covered by the HA x86 SLA. Customers are responsible for enabling the HA feature on x86 VMs and for restarting VMs.<br><b>Non-HA x86 VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the Non-HA x86 SLA. Customers are responsible for restarting VMs<br><b>SPARC VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the SPARC SLAs. Customers are responsible for restarting VMs.</td>
-</tr>
-<tr>
-<td><strong>Key exclusions</strong></td>
-<td>The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</li></li></ul></td>
-</tr>
-</tbody>
-</table>
+<p>We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the <a href="../other/other-ref-sla-definition.html"><em>SLA definition</em></a>.</p>
 <h2 id="the-small-print">The small print</h2>
-<p>For full terms and conditions including onboarding and responsibilities, please refer to the <a href="../other/other-ref-terms-and-conditions.html"><em>Terms and conditions documents</em></a>.</p>
+<p>For full terms and conditions, including onboarding and responsibilities, refer to the <a href="../other/other-ref-terms-and-conditions.html"><em>Terms and conditions documents</em></a>.</p>
+<p>For more information about this service, see the <a href="orcl-sco.html"><em>Service Scope</em></a> and <a href="orcl-faq.html"><em>FAQs</em></a>.</p>
+<h2 id="why-ukcloud">Why UKCloud?</h2>
+<p>UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.</p>
+<p><img src="images/ukc-services-g12.png" alt="UKCloud services"></p>
+<p>We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -221,6 +137,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -239,7 +168,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

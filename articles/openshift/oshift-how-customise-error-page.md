@@ -3,11 +3,11 @@ title: How to customise the OpenShift router error page
 description: Explains how to change the Application Not Available (503) error page served by the OpenShift routers
 services: openshift
 author: Gareth Ellner
-reviewer: gsmith
-lastreviewed: 20/11/2019
+reviewer: Gareth Ellner
+lastreviewed: 16/12/2020
 
 toc_rootlink: How To
-toc_sub1:
+toc_sub1: OpenShift v3.x
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -20,7 +20,7 @@ toc_mdlink: oshift-how-customise-error-page.md
 
 ## Overview
 
-UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
+UKCloud for Managed OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
 
 This article explains how you can edit the *Application Not Available* (503 error) page, which is returned to users by OpenShift routers when an application is unavailable or when an invalid route is accessed.
 
@@ -30,7 +30,7 @@ This article assumes familiarity with the Linux command line, and with the `oc` 
 
 ### Prerequisites
 
-To complete the steps in this article, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc login`. Your account must have access to edit objects in the "default" project. 
+To complete the steps in this article, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc login`. Your account must have access to edit objects in the "default" project.
 
 Your OpenShift cluster must be version 3.x.
 
@@ -44,7 +44,7 @@ Your OpenShift cluster must be version 3.x.
     Cache-Control: private, max-age=0, no-cache, no-store
     Connection: close
     Content-Type: text/html
-    
+
     <html>
     <head>
     ...
@@ -56,36 +56,36 @@ Your OpenShift cluster must be version 3.x.
     $ oc project default
     $ oc create configmap haproxy-custom-configs --from-file=error-page-503.http
     ```
-       
+
 3. Attach the configmap as a volume to the router deployment config:
 
     ```none
     $ oc set volume dc/router --add --name custom-configs -t configmap --configmap-name=haproxy-custom-configs -m /var/lib/haproxy/conf/error-page-503.http --sub-path=error-page-503.http
     ````
-       
-5. If your cluster is multi-network (connected to HSCN, VRF, and so on), you may want to repeat this for the router-private configmap so that the private network routers also serve the custom page:      
+
+5. If your cluster is multi-network (connected to HSCN, VRF, and so on), you may want to repeat this for the router-private configmap so that the private network routers also serve the custom page:
 
     ```none
     $ oc set volume dc/router-private --add --name custom-configs -t configmap --configmap-name=haproxy-custom-configs -m /var/lib/haproxy/conf/error-page-503.http --sub-path=error-page-503.http
     ```
-	   
+
 ## Reverting to the default Application Not Available page
 
 To revert the above changes and return to the default error page, run the following:
 
 ```none
-$ oc set volume dc/router --remove --name custom-configs 
+$ oc set volume dc/router --remove --name custom-configs
 $ oc set volume dc/router-private --remove --name custom-configs # (if router-private was edited)
 $ oc delete configmap haproxy-custom-configs
 ```
 
 ## Next steps
 
-For more information about the UKCloud for OpenShift service, see:
+For more information about the UKCloud for Managed OpenShift service, see:
 
-- [*Getting Started Guide for UKCloud for OpenShift*](oshift-gs.md)
+- [*Getting Started Guide for UKCloud for Managed OpenShift*](oshift-gs.md)
 
-- [*UKCloud for OpenShift FAQs*](oshift-faq.md)
+- [*UKCloud for Managed OpenShift FAQs*](oshift-faq.md)
 
 ## Feedback
 

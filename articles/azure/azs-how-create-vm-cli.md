@@ -4,7 +4,7 @@ description: Provides help for creating a virtual machine on UKCloud for Microso
 services: azure-stack
 author: Bailey Lawson
 reviewer: William Turner
-lastreviewed: 25/03/2020 11:00:00
+lastreviewed: 30/03/2020 11:00:00
 
 toc_rootlink: Users
 toc_sub1: How To

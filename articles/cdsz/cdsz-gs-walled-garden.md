@@ -2,9 +2,9 @@
 title: Getting Started Guide for the Cross Domain Security Zone
 description: Provides information to get up and running with the Cross Domain Security Zone
 services: cdsz
-author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+author: shighmoor
+reviewer: ecorfield
+lastreviewed: 18/09/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -61,7 +61,7 @@ During the provisioning of the Walled Garden service, we'll ask you for some add
 
     These IP addresses are the locations from which you can build and test the environment (for example, offices or end user premises).
 
-The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Customer Success Manager (CSM) will send you the information you need to access it.
+The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Service Delivery Manager (SDM) will send you the information you need to access it.
 
 ## Building your Walled Garden service
 
@@ -87,6 +87,7 @@ The diagrams below provide examples for both options.
 
 > [!NOTE]
 > For both options:
+>
 > - You cannot route public IP addresses to the vCNS Edges in the Walled Garden
 > - The Org VDC networks 192.168.XXX.XX in the examples below are illustrative and you should replace these with your own details
 > - You must have one VM in the Walled Garden VDC connecting to both vCNS Edges
@@ -99,7 +100,7 @@ The diagrams below provide examples for both options.
 
 ### Building your virtual machines
 
-The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the vCloud Director catalog or from template VMs as OVF files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
+The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the VMware Cloud Director catalog or from template VMs as OVF files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
 
 ### Testing your environment
 
@@ -109,7 +110,7 @@ When you've built your VMs and networking, you can start to test the environment
 
 As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can verify appropriate providers on the [NCSC web site](https://www.ncsc.gov.uk/section/products-services/verify-supplier?q=&defaultTypes=organisation&sort=date%2Bdesc&start=0&rows=20).
 
-Before beginning the ITHC, notify UKCloud by raising a service request in [My Calls](https://portal.skyscapecloud.com/support/ivanti) and completing the [*External Security Review Test (ESRT) application form*](https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad). Ideally, we require five working days' notice before the work is due to be carried out.
+Before beginning the ITHC, notify UKCloud by raising a service request in [My Calls](https://portal.skyscapecloud.com/support/ivanti) and completing the [*External Security Review Test (ESRT) application form*](https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-231%20External%20Security%20Review%20Testing%20application%20form.docx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1601158257&Signature=juLGEEXii6buW2ciPz3eUpkHF1w%3D). Ideally, we require five working days' notice before the work is due to be carried out.
 
 The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.
 

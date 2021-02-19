@@ -3,8 +3,8 @@ title: How to create an Azure Kubernetes Service cluster using the UKCloud Azure
 description: Create an Azure Kubernetes Service cluster using Azure Stack Hub
 services: azure-stack
 author: Bailey Lawson
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 03/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -17,6 +17,9 @@ toc_mdlink: azs-how-create-aks.md
 ---
 
 # How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack Hub portal
+
+> [!WARNING]
+> Using the Kubernetes Azure Stack Hub Marketplace item to deploy clusters is now deprecated and should only be used as a proof-of-concept. For supported Kubernetes clusters on Azure Stack Hub, use [the AKS engine](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-2002).
 
 ## Overview
 
@@ -58,7 +61,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    **Linux VM admin username** - The username for the Linux virtual machines that are part of the Kubernetes cluster.
 
-   **SSH public key** - SSH public key used for authentication to all Linux machines created as part of the the Kubernetes cluster.
+   **SSH public key** - SSH public key used for authentication to all Linux machines created as part of the Kubernetes cluster.
 
    **Master Profile DNS prefix** - This must be a region-unique name, for example k8s-12345. Try to choose the same name as the resource group as best practice.
 

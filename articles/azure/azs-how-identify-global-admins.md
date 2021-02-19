@@ -3,8 +3,8 @@ title: How to identify your Azure global administrators
 description: How to identify your Azure global administrators
 services: azure-stack
 author: Paul Brown
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: William Turner
+lastreviewed: 02/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -38,11 +38,11 @@ To complete the steps in this guide, you must have appropriate access to the pub
 
     ![Roles and Administrators in New blade](images/azs-roles-admins.png)
 
-4. In the *Role* blade, scroll down and select **Global administrator**.
+4. In the *Roles and administrators* blade, scroll down and select **Global administrator**.
 
     ![Global administrator group in role blade](images/azs-global-admin-group.png)
 
-5. The *Global administrator - members* blade will be displayed listing the members of that group.
+5. The *Global administrator | Assignments* blade will be displayed listing the members of that role.
 
 ## Next steps
 

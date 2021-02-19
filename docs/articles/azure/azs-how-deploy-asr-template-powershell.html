@@ -8,7 +8,7 @@
     <title>How to deploy a Site Recovery template to Azure Stack Hub </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to deploy a Site Recovery template to Azure Stack Hub ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -122,7 +122,7 @@
 <ul>
 <li><p><a href="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1">Windows</a> - This extension disables Remote User Access control and allows WMI and File and Printer sharing on the firewall</p>
 </li>
-<li><p><a href="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Extensions/Linux/SetRootPassword.sh">Linux</a> - This extension sets the root password to the input parameter, as root access is required for Azure Site Recovery</p>
+<li><p><a href="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh">Linux</a> - This extension sets the root password to the input parameter, as root access is required for Azure Site Recovery</p>
 </li>
 </ul>
 </li>
@@ -353,13 +353,13 @@
 $StackArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 ## Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
 
 ## Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Declare template variables
 $StackResourceGroup = "<output form="AzsRGName" name="result" style="display: inline;">MyResourceGroup</output>"
@@ -392,11 +392,11 @@ $LinuxRootPassword = '<output form="LinuxPassword" name="result" style="display:
 $TemplateUri = "https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/ARM%20Templates/Azure%20Site%20Recovery%20-%20Config%20Server/azuredeploy.json"
 
 # Validate that resource group, virtual network and subnet exist
-$TestRG = Get-AzureRmResourceGroup -Name $StackResourceGroup
+$TestRG = Get-AzResourceGroup -Name $StackResourceGroup
 if ($TestRG) {
-    $TestVNet = Get-AzureRmVirtualNetwork -Name $StackVNetName -ResourceGroupName $StackResourceGroup
+    $TestVNet = Get-AzVirtualNetwork -Name $StackVNetName -ResourceGroupName $StackResourceGroup
     if ($TestVNet) {
-        $TestSubnet = Get-AzureRmVirtualNetworkSubnetConfig -Name $StackSubnetName -VirtualNetwork $TestVNet
+        $TestSubnet = Get-AzVirtualNetworkSubnetConfig -Name $StackSubnetName -VirtualNetwork $TestVNet
         if ($TestSubnet) {
             Write-Output -InputObject "Validated resource group, virtual network and subnet successfully"
         }
@@ -447,13 +447,13 @@ $TemplateParameters = @{
 }
 
 # Test deployment
-$TestDeployment = Test-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
+$TestDeployment = Test-AzResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
 
 # Deploy ARM template
 if ($TestDeployment.Count -eq 0) {
     Write-Output -InputObject "Deploying ARM template..."
     Write-Warning -Message "This may take a while..."
-    New-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters -Name "AzureSiteRecovery"
+    New-AzResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters -Name "AzureSiteRecovery"
 }
 else {
     Write-Warning -Message "Unable to deploy ARM template due to following issue(s):"
@@ -474,6 +474,19 @@ else {
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -492,7 +505,7 @@ else {
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

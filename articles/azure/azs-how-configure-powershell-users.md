@@ -3,8 +3,8 @@ title: How to configure the Azure Stack Hub user's PowerShell environment
 description: Configure the Azure Stack Hub user's PowerShell environment
 services: azure-stack
 author: Chris Black
-reviewer: Daniel Brennand
-lastreviewed: 27/03/2020 09:58:00
+reviewer: rjarvis
+lastreviewed: 25/11/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -49,16 +49,26 @@ Set-ExecutionPolicy RemoteSigned
 # PowerShell commands for Azure Stack Hub are installed through the PSGallery repository
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
-  
+
+# Install the latest version of PowerShellGet
+Install-Module -Name PowerShellGet -Force
+
 # Uninstall existing versions of Azure/Azure Stack Hub PowerShell
-Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
-  
-# Install the AzureRM.BootStrapper module. Select Yes when prompted to install NuGet
-Install-Module -Name AzureRM.BootStrapper -Verbose
+Get-Module -Name Azs.*, Azure*, Az.* -ListAvailable | Uninstall-Module -Force -Verbose
+
+# On some older systems, you may need to explicitly set the TLS 1.2 security protocol to be able to interact with PowerShell Gallery
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# Install the Az.BootStrapper module
+Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
-Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
-Install-Module -Name AzureStack -RequiredVersion 1.8.1 -Verbose
+Install-AzProfile -Profile 2019-03-01-hybrid -Force
+Install-Module -Name AzureStack -RequiredVersion 2.0.2-preview -AllowPrerelease
+
+# Confirm the installation
+Get-Module -Name "Az*" -ListAvailable
+Get-Module -Name "Azs*" -ListAvailable
 </code></pre>
 
 ## Configure the user environment and sign in to Azure Stack Hub
@@ -71,11 +81,12 @@ Set-ExecutionPolicy RemoteSigned
 # Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Register an AzureRM environment that targets your Azure Stack Hub instance
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+# Register an Az environment that targets your Azure Stack Hub instance
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
+
 </code></pre>
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
@@ -86,8 +97,8 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 # Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Register an AzureRM environment that targets your Azure Stack Hub instance
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+# Register an Az environment that targets your Azure Stack Hub instance
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Credentials
 $AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
@@ -96,7 +107,7 @@ $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -For
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Sign in to your environment
-Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
+Connect-AzAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
 </code></pre>
 
 ## Test the connectivity
@@ -104,9 +115,9 @@ Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
 Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack Hub. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named "MyResourceGroup":
 
 <pre><code class="language-PowerShell"># Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
-New-AzureRmResourceGroup -Name "MyResourceGroup" -Location $Location
+New-AzResourceGroup -Name "MyResourceGroup" -Location $Location
 </code></pre>
 
 ## Next steps

@@ -1,6 +1,6 @@
 ---
 title: How to interact with the vCloud REST API using PowerShell and Python
-description: A brief introduction on how to start interacting with the vCloud Director REST API with PowerShell and Python
+description: A brief introduction on how to start interacting with the vCloud REST API with PowerShell and Python
 services: vmware
 author: Sue Highmoor
 reviewer: Dylan Coombes
@@ -47,7 +47,7 @@ The first thing you'll need to do is log in to the Portal and get your API crede
 
 Select API from the menu on the top right, you'll then get all of the credentials for each of the vCloud Orgs that you have access to. Note down the username field for the one you are going to interact with.
 
-For more detailed instructions, see [*How to access vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+For more detailed instructions, see [*How to access VMware Cloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
 
 ## Getting Started
 

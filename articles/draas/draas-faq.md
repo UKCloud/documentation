@@ -33,7 +33,7 @@ Yes, you can test running applications on the UKCloud platform to ensure failove
 
 ### What is the cost to test failover?
 
-When you perform a test recovery, any VMs recovered are charged at the prices associated with recovered VM sizes. See the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for details on VM prices. It's important to note that you will continue to be charged as long as the failover test is active. Once the failover test is stopped, you will no longer be charged for the VMs.
+When you perform a test recovery, any VMs recovered are charged at the prices associated with recovered VM sizes. See the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for details on VM prices. It's important to note that you will continue to be charged as long as the failover test is active. Once the failover test is stopped, you will no longer be charged for the VMs.
 
 ### What VMware and Hyper-V versions are supported for recovery on UKCloud?
 
@@ -49,7 +49,7 @@ The Zerto technology that underpins the Disaster Recovery as a Service service o
 
 Yes, all licensing for Zerto used within Disaster Recovery as a Service is included.
 
-The price of Disaster Recovery as a Service is based on the storage tier that the VM is being replicated to. For more information please see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+The price of Disaster Recovery as a Service is based on the storage tier that the VM is being replicated to. For more information please see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### What connectivity options do I have?
 
@@ -84,6 +84,20 @@ UKCloud will make the appropriate Zerto software versions available.
 ### Can I failback to my own data centre or third party data centre?
 
 Yes, once you've tested or performed a live failover you can failback onto your own infrastructure using the self-service Zerto Portal.
+
+### How do I ensure that I have complete recovery in the event of a disaster?
+
+- **Maintain a full copy of your mission critical workloads (data and applications) outside of your production environment** - If your workloads are running on UKCloud we recommend protection to the opposite site (Farnborough or Corsham) from where your production workload resides.
+
+- **Test DR regularly** – Remember your DR is only as good as your testing. Ensure tests are clearly defined to provide business confidence. UKCloud's DRaaS solution, powered by Zerto, simplifies testing and has no impact on production workloads.
+
+- **Ensure production changes are reflected in your DR plan** – If you make changes to existing workloads or add new workloads, ensure these VMs have been included within your virtual protection groups. Update tests to cover these changes.
+
+- **Document your DR plan** - And ensure documentation is easily accessible in the event of a disaster.
+
+- **Training** – Ensure knowledge is shared amongst your team. Get the team involved and make sure they're familiar with the recovery processes.
+
+For more guidance, see the Zerto and UKCloud [Disaster Recovery 101](https://ukcloud.com/wp-content/uploads/2020/06/zerto-ebook-v2.pdf) ebook.
 
 ## Feedback
 

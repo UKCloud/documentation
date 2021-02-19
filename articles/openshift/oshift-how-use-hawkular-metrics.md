@@ -3,11 +3,11 @@ title: How to use the Hawkular Metrics API
 description: Shows how to structure basic queries to the Hawkular Metrics API in order to get resource statistics back
 services: openshift
 author: Kieran O'Neill
-reviewer: George Smith
-lastreviewed: 22/11/2019 12:39:20
+reviewer: Gareth Ellner
+lastreviewed: 16/12/2020
 
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: OpenShift v3.x
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -33,9 +33,9 @@ This guide is intended to give you enough information to formulate basic memory 
     ```
 
     Where `$token` is a variable storing the output of `oc whoami -t` from an OpenShift user with the correct permissions to view metrics and `$cluster-url` is the domain suffix of your cluster.
-    
+
     For example, if your cluster URL is `https://ocp.openshift-test.cna.ukcloud.com:8443`, your query would be the following:
-    
+
     ``` bash
     curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/metrics "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
     ```

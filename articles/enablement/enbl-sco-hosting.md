@@ -2,9 +2,9 @@
 title: Cloud Enablement - Server/Storage Hosting Service Scope
 description: outlines important details regarding Cloud enablement for server / storage hosting
 services: enablement
-author: Steve Hall
-reviewer:
-lastreviewed: 23/07/2018 11:55:40
+author: shall
+reviewer: bchallis
+lastreviewed: 08/12/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -23,7 +23,7 @@ This document describes the Cloud Enablement services available for hosting serv
 
 ## About Cloud Enablement
 
-The Cloud Enablement service provides basic facilities for your own hardware installed in our data centre for the purpose of utilising our cloud.
+The Cloud Enablement service provides basic facilities for your own hardware to be installed in our data centre for the purpose of utilising our cloud.
 
 The table provides an overview of the Cloud Enablement services available for hosting servers and storage. If the usage scenario you need isn't shown in the table, contact us to discuss your requirements.
 
@@ -31,36 +31,37 @@ Please note that ANY device placed within the UKCloud estate must be done so to 
 
 &nbsp; | &nbsp;
 -------|-------
-**Use case** | You may have complex systems that can't be virtualised (for example database clusters or legacy applications).</br>You may also have large amounts of storage you wish to host with us, so that you can integrate it with our UKCloud for VMware offering  
+**Use case** | You may have complex systems that cannot be virtualised (for example database clusters or legacy applications).<br>You may also have small amounts of network-attached storage you want to host with us, so that you can integrate it with, for example, our UKCloud for VMware offering.
 **Service type** | Server/storage hosting
 **Security level** | Assured OFFICIAL and Elevated OFFICIAL
+**Cloud Enablement sizing** | One bay = 10U, 1kW of power
 **Hosted device** | Physical server or storage appliance
-**Typical device size** | Depends on solution
+**Hosted device(s) allowed** | Depends on solution. UKCloud will work with the customer to understand the requirement and assess the suitability of the devices that the customer wants to locate within Cloud Enablement.
+**Hosted device power draw** | Customer devices within a single 10U bay have a combined average power draw of no more than 1kW. Average power draw will be assessed based on vendor material supplied by the customer as part of the engagement with UKCloud prior to installation of devices.
 **Service level (default)** | Single data centre, no automatic failover
-**Cloud Enablement requirement</br>(one bay = 10U, 1kW per month)** | Depends on solution
-**Cost** | Depends on solution
-**Resilience available?** | You can provision devices to both data centres but you can't use the data centre interconnects to replicate data between the  solutions                         |
+**Cost** | Priced per 10U bay<br>£2,000 up front charge<br>£500 pcm<br>Additional install visits charged at SFIA rate
+**Resilience available?** | We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a self-managed resilient solution (in which case, the resilience options below are required).
 **Failover responsibility** | Customer
-**Resilience requirement</br>(1 bay = 10U, 1kw per month)** | Depends on solution               |
+**Resilience requirement<br>(1 bay = 10U, 1kW of power)** | Depends on solution
 **Resilience cost** | Depends on solution
-**Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (e.g. Cloud Enablement in region 5 cannot be stretched to region 6)
-**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal                    |
+**Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (for example, Cloud Enablement in region 5 cannot be stretched to region 6).
+**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## What connectivity does the server/storage hosting service provide?
 
 The VPN service provides up to two ports:
 
-- Cloud Enablement in regions 1, 2, 7 & 8 offers fibre-0nly connectivity
+- Cloud Enablement in regions 1, 2, 7 & 8 offers copper connectivity only
 
 - Cloud Enablement in regions 5 & 6 offers connectivity via SFP, so customers can use fibre or copper
 
 - The connection is into a shared switch.
 
-## What is the port speed of connection?
+## What are the port speeds of connection?
 
-- In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
+- In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
 
-- In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10Gbps (fibre only)
+- In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10Gbps (fibre only)
 
 ## Who manages the switch?
 
@@ -68,7 +69,7 @@ We manage the shared switch - the initial logical configuration is included in t
 
 ## Is there any switch redundancy within a rack?
 
-We don't currently offer switch redundancy.
+We do not currently offer switch redundancy.
 
 ## What's included in the setup fee?
 

@@ -21,13 +21,7 @@ toc_mdlink: orcl-faq.md
 
 ### What is UKCloud for Oracle Software?
 
-UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. This service sits within UKCloud's genuine assured cloud services portfolio, enabling you to leverage the benefits of digital transformation while maintaining your investment and integration with traditional Oracle-based services.
-
-UKCloud for Oracle has two compute technologies: x86 and SPARC.
-
-- x86 is used for most Oracle workloads that leverage Intel or AMD processors
-
-- SPARC is designed for workloads that utilise SPARC chips to support certain legacy workloads
+UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. 
 
 ### What is provided in the service?
 
@@ -35,11 +29,11 @@ For further details on the service, and what is provided, please view the [*UKCl
 
 ### Do UKCloud offer an SLA for this service?
 
-Yes. There is a service credit-backed SLA of 99.95% for non-HA enabled x86 VMs, and 99.99% for HA enabled x86 VMs. SPARC machines, and Dedicated SPARC servers with resilience have an SLA of 99.95%. Dedicated SPARC servers without resilience have an SLA of 95.00%.
+Yes. There is a service credit-backed SLA of 99.95% for non-HA enabled VMs, and 99.99% for HA enabled VMs.
 
 The SLA excludes faults within your control or external networking connections such as internet, PSN, Janet or HSCN.
 
-For further details regarding the SLA, please review the relevant section within the [*Service Definition*](orcl-sd.md).
+For further details regarding the SLA, see the [*Service level agreement definition*](../other/other-ref-sla-definition.md).
 
 ### Is the UKCloud for Oracle Software environment a separate physical hosting platform with external connectivity via the UKCloud for VMware platform?
 
@@ -157,7 +151,7 @@ Providing that the software products adhere to the guidelines above, the followi
 
 - Oracle 9i R2 DB with partitioning; OEM;
 
-- Oracle 10g R1 & R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM
+- Oracle 10g R1 & R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM
 
 - WebLogic 10 Platform
 

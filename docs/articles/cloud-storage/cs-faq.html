@@ -8,7 +8,7 @@
     <title>Cloud Storage FAQs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cloud Storage FAQs ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -97,7 +97,7 @@
 <h3 id="what-is-the-service">What is the service?</h3>
 <p>Cloud Storage from UKCloud is a secure next-generation storage platform designed to address a wide variety of use cases. It's based on Dell EMC Elastic Cloud Storage (ECS), which is an object storage technology natively optimised for cloud storage in terms of scale, resilience and accessibility.</p>
 <h3 id="where-will-my-data-be-physically-stored">Where will my data be physically stored?</h3>
-<p>Data will be stored in one or both of our highly resilient tier 3, UK-sovereign data centres, which are separated by over 100km.</p>
+<p>Data will be stored in one or both of our highly resilient tier 3, UK-sovereign data centres, which are separated by over 100km.</p>
 <h3 id="how-much-data-can-i-store">How much data can I store?</h3>
 <p>Our Cloud Storage solution can scale to multi-Petabytes across multiple sites, meeting the most demanding storage requirements.</p>
 <h3 id="how-many-copies-of-my-data-are-included">How many copies of my data are included?</h3>
@@ -123,9 +123,9 @@
 <h3 id="how-frequently-can-i-back-up-data">How frequently can I back up data?</h3>
 <p>The frequency of data backup is defined and managed by your organisation administrator.</p>
 <p>UKCloud's object storage is however highly durable and can automatically recover from disk and node failure, negating the need for a backup.</p>
-<h3 id="what-reports-can-i-get-about-storage-usage">What reports can I get about storage usage? </h3>
+<h3 id="what-reports-can-i-get-about-storage-usage">What reports can I get about storage usage?</h3>
 <p>We provide tools for monitoring used capacity and storage growth via the UKCloud Portal.</p>
-<h3 id="what-software-tools-are-provided">What software tools are provided? </h3>
+<h3 id="what-software-tools-are-provided">What software tools are provided?</h3>
 <p>UKCloud does not provide software tools for accessing the platform as storage is accessed via APIs, supporting S3.</p>
 <p>You can however directly connect any S3-compatible tools to your storage (for example, S3 Browser and Cyberduck).</p>
 <h3 id="how-do-i-create-new-cloud-storage-users">How do I create new Cloud Storage users?</h3>
@@ -137,8 +137,7 @@
 <p>Cloud Storage on the Assured OFFICIAL domain can be managed over the internet (or other connectivity) via the UKCloud Portal.</p>
 <p>For the Elevated OFFICIAL domain, security requirements are stricter and require either a PSN-approved connection, UKCloud Secure Remote Access or CAPS-approved encryption.</p>
 <h3 id="what-are-your-service-maintenance-windows">What are your service maintenance windows?</h3>
-<p>As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days' advance notice of planned maintenance.</p>
-<p>As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours advance notice of emergency maintenance.</p>
+<p>See <a href="../other/other-ref-maintenance-windows.html"><em>Understanding UKCloud service maintenance windows</em></a>.</p>
 <h3 id="does-the-cloud-storage-solution-support-browser-based-form-post-upload">Does the Cloud Storage solution support browser-based form POST upload?</h3>
 <p>Cloud Storage fully supports standard REST API commands (Post, Put, Get, Delete, and Head).</p>
 <p>Cloud Storage's RESTful APIs support the use of HTML forms to create and update objects.</p>
@@ -198,7 +197,7 @@
 <p>UKCloud's Cross Domain Security Zone allows you to use a customer-designed and managed Walled Garden to enable communication between platforms.</p>
 <p>For more information, see the <a href="../cdsz/cdsz-sd.html"><em>Cross Domain Security Zone Service Definition</em></a>.</p>
 <h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
-<p>Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in <a href="../other/other-ref-promon.html"><em>Protective Monitoring from UKCloud</em></a>.</p>
+<p>Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in <a href="../other/other-ref-promon.html"><em>Protective Monitoring from UKCloud</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -210,6 +209,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -228,7 +240,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

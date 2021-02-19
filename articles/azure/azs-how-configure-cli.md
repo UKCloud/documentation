@@ -20,7 +20,7 @@ toc_mdlink: azs-how-configure-cli.md
 
 In this article, we will guide you through the process of installing and using the Azure command-line interface (CLI) to manage Azure Stack Hub. Azure CLI can be used to manage resources such as create virtual machines, deploy Azure Resource Manager templates, etc.
 
-## Official Documentation
+## Microsoft documentation
 
 [Azure CLI command reference for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-2018-03-01-hybrid)
 

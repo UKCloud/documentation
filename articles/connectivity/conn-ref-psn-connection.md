@@ -3,8 +3,8 @@ title: PSN connection compliance
 description: A diagram showing the evidence you need to provide to obtain connection to the PSN from your UKCloud environment
 services: connectivity
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/04/2019
+reviewer: Sam Dawkins
+lastreviewed: 21/08/2020
 
 toc_rootlink: Reference
 toc_sub1: 

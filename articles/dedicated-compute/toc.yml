@@ -1,6 +1,6 @@
-- name: Service Definition
+- name: Service Information
   items:
-  - name: UKCloud Dedicated Compute v2 Service Definition
+  - name: Service Definition
     href: dc-sd.md
 - name: Service Scope
   items:

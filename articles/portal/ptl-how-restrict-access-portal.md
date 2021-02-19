@@ -1,10 +1,10 @@
 ---
 title: How to restrict access to the UKCloud Portal
-description: Shows how to create a whitelist of IP addresses to restrict access to the UKCloud Portal
+description: Shows how to create an allowlist of IP addresses to restrict access to the UKCloud Portal
 services: portal
-author: Sue Highmoor
-reviewer:
-lastreviewed: 15/11/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 01/12/2020
 
 toc_rootlink: How To
 toc_sub1: 
@@ -20,7 +20,7 @@ toc_mdlink: ptl-how-restrict-access-portal.md
 
 ## Overview
 
-You can restrict access to the UKCloud Portal by creating a whitelist of acceptable IP addresses. This helps to prevent access to the Portal from unauthorised sources as users will only be able to log in to the Portal if their request originates from an IP address on the whitelist.
+You can restrict access to the UKCloud Portal by creating an allowlist of acceptable IP addresses. This helps to prevent access to the Portal from unauthorised sources as users will only be able to log in to the Portal if their request originates from an IP address on the allowlist.
 
 > [!NOTE]
 > When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
@@ -50,22 +50,19 @@ To restrict access to the Portal:
 
 6. Select **Enable Portal IP address access restriction**.
 
-7. To add an IP address to the whitelist, click **Add IP** in the *Account wide* section and enter the IP addresses that you want to whitelist.
+7. To add an IP address to the allowlist, click **Add IP** in the *Account wide* section and enter the IP addresses that you want to allow.
 
-    ![Account-wide IP address whitelist security setting for the UKCloud Portal](images/ptl-settings-ip-portal-account.png)
+    ![Account-wide IP address allowlist security setting for the UKCloud Portal](images/ptl-settings-ip-portal-account.png)
 
-8. To whitelist an IP address for a specific user, in addition to the account-wide IP addresses, click **Add IP** in the *Individual users* section, enter the email address for the user and the IP addresses that you want to whitelist.
+8. To allow an IP address for a specific user, in addition to the account-wide IP addresses, click **Add IP** in the *Individual users* section, enter the email address for the user and the IP addresses that you want to allow.
 
-    ![Individual user IP address whitelist security setting for the UKCloud Portal](images/ptl-settings-ip-portal-user.png)
-
-    > [!NOTE]
-    > When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
+    ![Individual user IP address allowlist security setting for the UKCloud Portal](images/ptl-settings-ip-portal-user.png)
 
 9. When you're done, click **Save**.
 
 ## Next steps
 
-You can also restrict access to the vCloud API. For more information, see [*How to restrict access to the vCloud API*](ptl-how-restrict-access-vcloud-api.md)
+You can also restrict access to VMware Cloud Director. For more information, see [*How to restrict access to VMware Cloud Director*](ptl-how-restrict-access-vcloud-api.md)
 
 ## Feedback
 

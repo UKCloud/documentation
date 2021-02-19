@@ -3,8 +3,8 @@ title: How to create static IPs for OpenStack instances
 description: Instructions on how to create static IPs and assign them to instances
 services: openstack
 author: Bryce Nicholls
-reviewer: scassidy
-lastreviewed: 08/01/2019
+reviewer: bnicholls
+lastreviewed: 07/04/2020
 toc_rootlink: How to
 toc_sub1:
 toc_sub2:

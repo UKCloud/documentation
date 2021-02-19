@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Managed Monitoring from UKCloud Service Scope </title>
+    <title>Managed Monitoring as a Service Service Scope </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Managed Monitoring from UKCloud Service Scope ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="title" content="Managed Monitoring as a Service Service Scope ">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,13 +91,13 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="managed-monitoring-from-ukcloud-service-scope">Managed Monitoring from UKCloud Service Scope</h1>
+<h1 id="managed-monitoring-as-a-service-service-scope">Managed Monitoring as a Service Service Scope</h1>
 
 <h2 id="about-this-document">About this document</h2>
-<p>This document is for customers considering purchasing our Managed Monitoring from UKCloud service.</p>
+<p>This document is for customers considering purchasing Managed Monitoring as a Service.</p>
 <p>It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the service.</p>
-<h2 id="about-managed-monitoring-from-ukcloud">About Managed Monitoring from UKCloud</h2>
-<p>Managed Monitoring from UKCloud is UKCloud's multi-cloud monitoring service, designed for customers who want to:</p>
+<h2 id="about-managed-monitoring-as-a-service">About Managed Monitoring as a Service</h2>
+<p>Managed Monitoring as a Service is UKCloud's multi-cloud monitoring service, designed for customers who want to:</p>
 <ul>
 <li><p>Incorporate, consolidate and extend your current monitoring platforms and any new requirements in to a single, as a service, solution</p>
 </li>
@@ -107,15 +107,15 @@
 </li>
 <li><p>Concentrate on creating and managing applications and increasing business value rather than managing virtual infrastructure</p>
 </li>
-<li><p>Reduce the number of ‘false-positive’ alerts and associated out of hours call-outs. Utilise UKCloud’s 24x7x365 Network Operations Centre to be the initial responder to events, only escalating those that genuinely need further investigation</p>
+<li><p>Reduce the number of 'false-positive' alerts and associated out of hours call-outs. Utilise UKCloud's 24x7x365 Network Operations Centre (NOC) to be the initial responder to events, only escalating those that genuinely need further investigation</p>
 </li>
 <li><p>Increase the uptime of your IT estate through faster identification, triage and alert escalations</p>
 </li>
-<li><p>Leverage the insights that UKCloud’s AIOps platform can provide in identifying trends and anomalies</p>
+<li><p>Leverage the insights that UKCloud's AIOps platform can provide in identifying trends and anomalies</p>
 </li>
 </ul>
-<h2 id="scope-of-managed-monitoring-from-ukcloud">Scope of Managed Monitoring from UKCloud</h2>
-<p>The following table outlines the scope of the Managed Monitoring from UKCloud service:</p>
+<h2 id="scope-of-managed-monitoring-as-a-service">Scope of Managed Monitoring as a Service</h2>
+<p>The following table outlines the scope of Managed Monitoring as a Service:</p>
 <table>
 <thead>
 <tr>
@@ -126,42 +126,76 @@
 <tbody>
 <tr>
 <td>Event Monitors</td>
-<td>- Ping check <br> - SNMP check  <br> - Application port checks <br> - Webhooks (only HTTP/HTTPS RestAPI inbound to UKCloud) <br> - Operating system service status change</td>
+<td>- Ping check <br> - SNMP check  <br> - Open port check <br> - Deviation of Windows Server service from an 'agreed good' status <br> - URL response check <br>- HTTPS certificate expiry check<br> - Webhooks* (only HTTP/HTTPS RestAPI inbound to UKCloud)</td>
 </tr>
 <tr>
 <td>Compute, Disk, Memory (CDM) Monitoring</td>
-<td>Reactive monitoring and alerting  of Compute, Disk and Memory capacity events. <br> Thresholds will initially be set with default values unless otherwise advised by the customer. <br> Changes to default thresholds can be requested via a service request from within the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</td>
+<td>Reactive monitoring and alerting  of Compute, Disk and Memory capacity events. <br> Thresholds will initially be set with default values unless otherwise advised by the customer.</td>
 </tr>
 <tr>
 <td>Alerting</td>
-<td>UKCloud will alert customers via a support ticket based on above triggers.</td>
-</tr>
-<tr>
-<td>Automated Remediation</td>
-<td>Pre-approved reboots of compute resources in response to an alert to help ensure service availability. <br> UKCloud is currently unable to offer this element of the service to any compute resources being monitored outside of a UKCloud operated cloud stack.</td>
+<td>UKCloud will alert customers via their chosen notification method (support ticket with email notification or phone escalation) based on a threshold breach of one of the above elements.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="service-provisioning">Service provisioning</h2>
-<p>You can request Managed Monitoring from UKCloud via your Service Delivery Manager or by using the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
-<p>Within 5 business days of accepting an order, UKCloud will create the customer's monitoring environment with default thresholds (unless otherwise specified) and commence monitoring any environments that have been elected by the customer to be monitored.</p>
-<h2 id="customer-responsibilities">Customer responsibilities</h2>
-<p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.</p>
-<p>Allowing UKCloud access into your environments to capture any necessary metrics, alerts or triggers within the customer's environment required to provide accurate and reliable monitoring.</p>
-<p>Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
-<h2 id="published-features-not-currently-available">Published features not currently available</h2>
-<p>The following features published in the <a href="man-sd-monitoring.html"><em>Managed Monitoring from UKCloud Service Definition</em></a> are not currently available:</p>
+<p>* May require engagement with a Cloud Architect to ensure correct integration</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can request changes to default thresholds via a service request from within the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+</div>
+<h2 id="service-level-agreement">Service Level Agreement</h2>
+<h3 id="service-levels">Service levels</h3>
+<p>Service levels for Managed Monitoring as a Service are spilt out into the following two targets:</p>
 <ul>
-<li><p>Application Performance Management (APM)</p>
+<li><p><strong>Availability</strong> - UKCloud offers an availability SLA of 99.99% (excluding Planned Maintenance) for all elements of our monitoring service that reside within UKCloud's direct control. For the avoidance of doubt, this scope covers the entire data flow path from the VPN termination point within our 'Management Bubble' through to the customer ticket notification being generated by our IT service management tooling (Ivanti).</p>
 </li>
-<li><p>Pulling metrics or events from resources deployed outside of a UKCloud operated cloud stack (client-side push events may be considered)</p>
-</li>
-<li><p>Network performance and availability monitoring</p>
-</li>
-<li><p>Execution of customer defined ‘playbook’</p>
+<li><p><strong>Alert Notification</strong> - UKCloud will notify the customer within 15 minutes of the point when UKCloud receives any event meeting the agreed conditions to trigger an alert. The method of notification will be dependent upon the Alert Type the customer has defined against the event as per the following table.</p>
 </li>
 </ul>
-<p>We are actively working on delivering these features.</p>
+<h4 id="default-alert-handling-procedures">Default Alert handling procedures</h4>
+<table>
+<thead>
+<tr>
+<th>Alert Code</th>
+<th>Alert Type</th>
+<th>UKCloud Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E1</td>
+<td>Critical</td>
+<td>1 - Incident Logged against the Escalation Contact via the UKCloud Portal<br>2 - Email notification to Escalation Contact with ticket details (Automatic by Ivanti)<br>3 - Ticket remains on <strong>Logged</strong> until customer acknowledges and closes the incident via the UKCloud Portal <br>4 - (OPTIONAL) Phone call to Escalation Contact; if no response then voicemail and update ticket with voicemail details</td>
+</tr>
+<tr>
+<td>E2</td>
+<td>General</td>
+<td>1 - Incident Logged against the Escalation Contact via the UKCloud Portal<br>2 - Email notification to Escalation Contact with ticket details (Automatic by Ivanti)<br>3 - Ticket remains on <strong>Logged</strong> until customer acknowledges and closes the incident via the UKCloud Portal <br>4 - Ticket will automatically be closed if no further update is received after 7 calendar days</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service-level-exclusions">Service level exclusions</h3>
+<p>UKCloud excludes any time needed to complete Planned or Emergency Maintenance from any time-based calculations related to service availability. In these events, you'll be notified accordingly as described in our <a href="https://docs.ukcloud.com/articles/other/other-ref-terms-and-conditions.html">Terms and Conditions</a>. Other exceptions may also be outlined in the Terms and Conditions. In addition, any elements outside of UKCloud's direct control (as outlined in 'Availability' above) will not be included in any service availability or Service Credit calculations.</p>
+<h3 id="service-credits">Service Credits</h3>
+<p>Managed Monitoring as a Service customers can raise a request for Service Credits if they feel a breach of the Service Level Agreement has occurred. Customers are entitled to claim 1% of Managed Monitoring as a Service spend, per affected customer environment, where one of the following conditions are met:</p>
+<ul>
+<li><p>Per 1% breach of Availability target</p>
+</li>
+<li><p>Per 5 minutes over Alert Notification target</p>
+</li>
+</ul>
+<p>A monthly cap on Service Credits applies, up to and not beyond the full amount a customer is charged for the Managed Monitoring as a Service service within the same billing period that Service Credit entitlement occurred.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A claim for Service Credits against the Alert Notification target cannot be raised within the same period where a claim for Availability Service Credits has also been made.</p>
+</div>
+<h2 id="service-provisioning">Service provisioning</h2>
+<p>You can request Managed Monitoring as a Service via your Service Delivery Manager or by using the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>Within 5 business days of accepting an order, UKCloud will create the customer's monitoring environment with default thresholds (unless otherwise specified) and commence monitoring any environments that have been elected to be monitored by the customer.</p>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<p>The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.</p>
+<p>Allowing UKCloud access into customer environments to capture any necessary metrics, alerts or triggers required to provide accurate and reliable monitoring.</p>
+<p>Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -173,6 +207,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -191,7 +238,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

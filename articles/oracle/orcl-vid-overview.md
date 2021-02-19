@@ -1,30 +1,30 @@
 ---
-title: Oracle Enterprise Manager Cloud Control console overview video
-description: Shows a video that provides an introduction to the Oracle Enterprise Manager (OEM) Cloud Control 13c Console
+title: (Video) Overview of Oracle Self Service Portal
+description: Shows a video that provides an introduction to the Oracle Self Service Portal
 services: oracle
-author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 20/09/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 03/11/2019
 toc_rootlink: Videos
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: OEM Cloud Control console overview
+toc_title: Overview of Oracle Self Service Portal
 toc_fullpath: Videos/orcl-vid-overview.md
 toc_mdlink: orcl-vid-overview.md
 ---
 
-# Oracle Enterprise Manager Cloud Control console overview video
+# Video: Overview of Oracle Self Service Portal
 
 The following video provides an introduction to the Oracle Enterprise Manager (OEM) Cloud Control 13c Console, showing you the different tasks that you can perform.
 
 <div class="row">
   <div class="col-md-10">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/juhKzvCV4-g" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/1tBv7dVDzbw" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://www.youtube.com/watch?v=juhKzvCV4-g">Oracle Enterprise Manager Cloud Control 13c Console Overview</a> on <a href="https://www.youtube.com/channel/UCnlFUyOWcS4iE_HK-ZEcNGw">YouTube</a>
+    <p><a href="https://www.youtube.com/watch?v=1tBv7dVDzbw">Overview of Oracle Self Service Portal</a> on <a href="https://www.youtube.com/channel/UCnlFUyOWcS4iE_HK-ZEcNGw">YouTube</a>
   </div>
 </div>
 

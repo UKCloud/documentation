@@ -3,8 +3,8 @@ title: IPsec VPN Foundation and PRIME profiles
 description: Provides information about UKCloud for VMware's support of Foundation and PRIME profiles
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 21/03/2019 13:53:58
+reviewer: Simon Delaney
+lastreviewed: 17/06/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

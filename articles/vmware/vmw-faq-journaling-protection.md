@@ -149,7 +149,7 @@ We do not currently plan to offer an SLA around the service. However, the real t
 
 ### Is Zerto licensing included?
 
-Yes, it is included with the Journaling Protection option for use with the 2, 7, 14 day or 28 day retention policies.
+Yes, it is included with the Journaling Protection option for use with the 2, 7, 14 or 28 day retention policies.
 
 ### Will a VPG still be protected if one or more VMs are powered off?
 

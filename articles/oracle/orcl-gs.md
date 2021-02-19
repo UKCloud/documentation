@@ -30,7 +30,7 @@ This guide is intended for customers who want to get up and running with UKCloud
 
 ## Introduction to UKCloud for Oracle Software
 
-Many applications running in the UK public sector today have a backbone powered by Oracle software. They include ERP solutions, finance systems (such as payroll), HR systems and wide variety of citizen‑supporting applications.
+Many applications running in the UK Public Sector today have a backbone powered by Oracle software. They include ERP solutions, finance systems (such as payroll), HR systems and wide variety of citizen‑supporting applications.
 
 Oracle solutions have traditionally been subject to licensing and technical requirements that have made it challenging to carry out cloud transition projects and meet the government's Cloud First policy.
 
@@ -72,21 +72,21 @@ UKCloud for Oracle Software does not include Oracle licensing but, because the p
 
 UKCloud ensures that hard partitioning is in place in all customer guest VMs in order to conform to Oracle licensing policies. When you create or modify a VM, automatic CPU pinning ensures that the VM won't use any CPUs other than the ones specifically pinned to the VM's vCPUs.
 
-If you have any questions about Oracle licensing, contact your Cloud Architect, Customer Success Manager or Service Delivery Manager.
+If you have any questions about Oracle licensing, contact your Cloud Architect or Service Delivery Manager (SDM).
 
 If you require assistance building out your Oracle solution, we can put you in contact with one or our partners who specialises in Oracle technologies.
 
 ### Your UKCloud for Oracle Software estate
 
-The management of your Oracle estate is split between Oracle Enterprise Manager (OEM) and vCloud Director:
+The management of your Oracle estate is split between Oracle Enterprise Manager (OEM) and VMware Cloud Director:
 
 - Use OEM to build and manage your VMs and templates
 
-- Use vCloud Director to create your VM networks and configure your edge gateway, including firewall rules and VPN connections
+- Use VMware Cloud Director to create your VM networks and configure your edge gateway, including firewall rules and VPN connections
 
 ![UKCloud for Oracle Software architecture](images/orcl-architecture.png)
 
-When you first purchase UKCloud for Oracle Software, your Customer Success Manager (CSM) creates an Oracle tenant to act as a top‑level container for your Oracle VMs. As your estate grows, you can add more tenants to logically organise your resources.
+When you first purchase UKCloud for Oracle Software, your SDM creates an Oracle tenant to act as a top‑level container for your Oracle VMs. As your estate grows, you can add more tenants to logically organise your resources.
 
 Within your Oracle tenant you can create the VMs that comprise your Oracle applications.
 
@@ -157,7 +157,7 @@ On this page, you can:
 UKCloud uses The *Notification Center* to communicate alerts about the objects in your UKCloud for Oracle Software environment.
 
 > [!NOTE]
-> For notifications about planned maintenance windows, service incidents and new features, see the UKCloud Portal.
+> For notifications about Planned Maintenance and service incidents, see the [UKCloud Service Status page](https://status.ukcloud.com).
 
 1. In the Cloud Control console, click the notifications icon.
 
@@ -269,10 +269,10 @@ On the *Infrastructure -- Oracle VM Cloud Services* page you can view and manage
 
 Before you can start using the VMs in your Oracle environment, you need to create the network that connects the VMs to each other, and potentially also to the outside world. This network enables your VMs to communicate with each other or access external networks. A single Oracle tenant can have multiple networks. When UKCloud sets up a new Oracle tenant for you, we'll usually create an edge gateway for that tenant, but the creation of any networks is your responsibility.
 
-Networking and connectivity for UKCloud for Oracle Software is managed within vCloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.
+Networking and connectivity for UKCloud for Oracle Software is managed within VMware Cloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.
 
 > [!NOTE]
-> Because you create your network in vCloud Director, you'll see references to VMware terminology, such as organisations and virtual data centres (VDCs). In UKCloud for Oracle Software, an Oracle tenant is equivalent to a VDC.
+> Because you create your network in VMware Cloud Director, you'll see references to VMware terminology, such as organisations and virtual data centres (VDCs). In UKCloud for Oracle Software, an Oracle tenant is equivalent to a VDC.
 
 There are two types of network:
 
@@ -284,7 +284,7 @@ There are two types of network:
 
 An edge gateway controls how traffic from the outside world comes into and out of your environment. It is very important to make sure that your edge gateway is configured correctly to make your applications available but also secure.
 
-The tools for configuring your edge gateway are provided within vCloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.
+The tools for configuring your edge gateway are provided within VMware Cloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.
 
 Your edge gateway provides the following services:
 
@@ -353,8 +353,6 @@ This section provides a glossary of terms specific to UKCloud for Oracle Softwar
 **Assured OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides access to public networks, such as the internet, PSN, HSCN or Janet.
 
 **Cloud Console**&nbsp;&nbsp;System management software from Oracle that delivers centralized monitoring, administration, and life-cycle management functionality for the complete IT infrastructure, including systems running Oracle and non-Oracle technologies.
-
-**Customer Success Manager (CSM)**&nbsp;&nbsp;A UKCloud Customer Services role aimed at providing you with any assistance you require during onboarding and the first 90 days of using a UKCloud service.
 
 **edge gateway**&nbsp;&nbsp;A virtual router that provides VDC network services such as DHCP, firewall, NAT, static routing, VPN and load balancing.
 

@@ -3,8 +3,8 @@ title: PSN Assured - permitted standard ports
 description: Outline of the whitelist of standard PSN Assured ports on the UKCloud managed perimeter firewalls
 services: connectivity
 author: Sue Highmoor
-reviewer:
-lastreviewed: 20/07/2018 18:37:23
+reviewer: thallsmith
+lastreviewed: 06/08/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,19 +17,19 @@ toc_mdlink: conn-ref-psn-permitted-ports.md
 
 # PSN Assured - permitted standard ports
 
-The following whitelist of common ports will be open as standard on the platform and allow connectivity to/from the PSN Assured network. This policy has been built in accordance with version 2.3(2) of the PSN IL2 GCSX Take on Guide.
+The following whitelist of common ports will be open as standard on the platform and allow connectivity to/from the PSN network. This policy has been built in accordance with version 2.3(2) of the PSN IL2 GCSX Take on Guide.
 
-Customers still need to enable access on their own vShield edge firewalls to allow access but this change avoids having to request UKCloud to make similar changes.
+Customers still need to enable access on their own edge gateway firewalls to allow access but this change avoids having to request UKCloud to make similar changes.
 
-Customers are encouraged to review their vShield edge configurations to verify that the access controls that are in place are in accordance with their own required security policy.
+Customers are encouraged to review their edge configurations to verify that the access controls that are in place are in accordance with their own required security policy.
 
 This whitelist policy applies to the Assured OFFICIAL platform only where connectivity is established over PSN using PSN routable addresses.
 
-If you require access outside of the standard whitelist this can be requested via the support section of the UKCloud Portal.
+If you require access outside of the standard whitelist this can be requested via the My Calls section of the UKCloud Portal.
 
 ![PSN assured whitelisted ports](images/psn_assured_whitelist_ports.png)
 
-## Inbound access from the Internet to your vShield Edge Gateway
+## Inbound access from the internet to your edge gateway
 
 ### TCP PORTS
 
@@ -45,7 +45,7 @@ None
 
 None
 
-## Outbound access to the Internet from your vShield Edge Gateway
+## Outbound access to the internet from your edge gateway
 
 ### TCP PORTS
 

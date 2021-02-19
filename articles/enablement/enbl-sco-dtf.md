@@ -65,7 +65,7 @@ You need to bring a valid form of photo ID with you - a passport or driving lice
 
 If you bring an encrypted drive with you, this must be a hardware encrypted drive only. You are not allowed to bring a software encrypted drive, as installation of non-UKCloud software is not authorised.
 
-If you intend to bring your own devices with you to use in the Data Transfer Facility, you must complete the [SIRO approval form](https://portal.skyscapecloud.com/support/knowledge_centre/15ac1fa0-a724-432e-91ec-6c9d17c42c9c).
+If you intend to bring your own devices with you to use in the Data Transfer Facility, you must complete the [SIRO approval form](https://cas.cor00005.ukcloud.com/Docs/Documents/UKC-FRM-166%20-%20Data%20Transfer%20Facility%20Siro%20Approval%20form.docx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1643745580&Signature=tKjHa3KjHTLJmWrVmBs3QQiU2%2BY%3D).
 
 ## During your visit
 
@@ -141,7 +141,7 @@ Supported virtual machine (VM) formats:
 
 - Maximum single VM size: 1.5TB
 
-If your VMs are in a different format, you can use the OVF Tool and VMware vCenter Converter to upload them.
+If your VMs are in a different format, you can use the OVF Tool and VMware vCenter Converter to upload them.
 
 ## Supported network ports and protocols
 
@@ -179,7 +179,7 @@ Access to environments on other networks (e.g HSCN or PSN) will require addition
 
 ## Platform performance
 
-The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.
+The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.
 
 For a transfer time calculator, go to <https://techinternets.com/copy_calc?do>.
 

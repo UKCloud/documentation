@@ -3,8 +3,8 @@ title: How to add a managed disk to a virtual machine using the UKCloud Azure St
 description: Provides help adding managed disks to a virtual machine on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
-reviewer: BaileyLawson 
-lastreviewed: 15/04/2019 11:00:00
+reviewer: William Turner 
+lastreviewed: 17/04/2020
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -96,10 +96,7 @@ If you're adding a new disk:
 
     - **Location** - This will be frn00006, which is the location of the Azure Stack Hub.
 
-    - **Account type** - Standard disks (HDD) are backed by magnetic drives and are preferable for applications where data is accessed infrequently.
-
-        > [!Note]
-        > Currently, only standard disks (HDD) are available in UKCloud for Microsoft Azure.
+    - **Account type** - Whilst both *Standard HDD* and *Premium SSD* are available options, in Azure Stack Hub there is no difference between the two in terms of performance or pricing. Storage speed is instead determined by the size of the virtual machine that the disk is attached to. The *Premium SSD* option is only available to prevent compatibility issues with the Azure API.
 
     - **Source type** - Create a disk from a snapshot of another disk, a blob in a storage account, or create an empty disk.
 
@@ -107,15 +104,21 @@ If you're adding a new disk:
 
     ![Create managed disk](images/azs-browser-add-vm-disk.png)
 
-3. You can monitor the progress of your deployment by clicking the **Notifications** icon.
+3. Click the **Create** button. Once it has been created, the *Disks* blade will be shown again with the new disk displayed under the **Data disks** section.
+
+4. Click the **Save** button.
+
+    ![Create managed disk](images/azs-browser-button-save-add-data-disk.png)
+
+5. You can monitor the progress of your deployment by clicking the **Notifications** icon.
 
     ![Deployment progress alert](images/azs-browser-notification-disks-progress.png)
 
-4. When the deployment is finished, the notification will change to *Successfully updated virtual machine disks*.
+6. When the deployment is finished, the notification will change to *Successfully updated virtual machine disks*.
 
     ![Deployment complete alert](images/azs-browser-notification-disks-complete.png)
 
-5. You can view the disk by navigating to the VM that the disk was added to, then select **Disks**.
+7. You can view the disk by navigating to the VM that the disk was added to, then select **Disks**.
 
     ![VM Data disks](images/azs-browser-disks.png)
 

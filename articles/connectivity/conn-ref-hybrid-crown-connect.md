@@ -2,9 +2,9 @@
 title: HybridConnect vs CrownConnect (Private Connectivity)
 description: Outlines the difference between HybridConnect and CrownConnect and explains when each should be used
 services: connectivity
-author: Sue Highmoor
-reviewer: hbrunt
-lastreviewed: 16/12/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 07/12/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -33,7 +33,7 @@ Known Service Providers with presence<sup>*</sup> within A9 and SQ17:
 
 - Vodafone
 
-- CenturyLink
+- Lumen (Formerly CenturyLink)
 
 - Virgin Media
 
@@ -69,6 +69,10 @@ Monthly charge | £150 (1Gb bandwidth)<br>£300 (10Gb bandwidth) | £200 (1Gb po
 ## Lead times
 
 Lead times vary depending on product. HybridConnect can normally be delivered within a couple of weeks due to the locality of the termination points to UKCloud's core network, however CrownConnect is dependent on fibre installation from the termination point into UKCloud's core network location. The lead time of delivery of this fibre depends on the distance from the termination point to the core network location, but typically customers should expect 3 to 4 weeks from order to delivery.
+
+## Minimum commit
+
+For both products, there is a minimum commit of 6 months. In the case of early termination, you will be liable for any remaining balance.
 
 ## Comparison table
 
