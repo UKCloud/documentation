@@ -100,7 +100,7 @@ The diagrams below provide examples for both options.
 
 ### Building your virtual machines
 
-The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the VMware Cloud Director catalog or from template VMs as open virtualisation format (OVF) files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
+The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the VMware Cloud Director catalog or from template VMs as Open Virtualisation Format (OVF) files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
 
 ### Testing your environment
 
