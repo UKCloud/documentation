@@ -3,8 +3,8 @@ title: Protection for Distributed Denial of Service (DDoS) attacks
 description: This article provides information regarding UKCloud's protection against Distributed Denial of Service (DDoS) attacks
 services: connectivity
 author: Sue Highmoor
-reviewer: hbrunt
-lastreviewed: 16/12/2019
+reviewer: Nick Stobbart
+lastreviewed: 22/02/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -25,45 +25,21 @@ UKCloud has enhanced the solutions used to protect the underlying internet-facin
 
 <sup>^</sup> Distributed Denial of Service (DDoS) is a specific type of attack designed to cause the target system to become unavailable. Specifically, this type of attack is highly distributed as the attack traffic comes from a diverse global network of attackers. This is similar to the analogy 'death by a thousand daggers'.
 
-## Options considered
-
-UKCloud evaluated the following three options to provide protection for DDoS attacks:
-
-### Option 1 - Build our own DDoS mitigation solution
-
-This option would entail UKCloud increasing the capacity of the platform by upgrading our ISP connections and it would require the procurement, implementation and on-going management of specialist DDoS mitigation products (for example, Arbor or Radware), which would incur significant up-front and on-going costs. Most importantly, as DDoS attacks are increasing in size and frequency, as well as attack vectors forever changing, it is clear that a sub-scale option like this would not provide effective mitigation in the long term.
-
-### Option 2 - Procure DDoS detection and mitigation services from our upstream ISPs
-
-UKCloud has confirmed that each of our upstream ISPs can provide a level of DDoS mitigation within their networks. These ISPs each have up to 100 Gb network capacity, which makes it less likely that they would be overwhelmed by a typical DDoS attack. However, their solutions are typically based on technologies from individual DDoS mitigation product vendors (typically Arbor) and so they can only provide generalised and automated DDoS protection services. Further, these solutions are only effective within the ISP network and each ISP works independently of each another, so UKCloud would have to procure the service from each ISP individually and co-ordinate them in the event of an attack.
-
-### Option 3 - Leverage a specialist DDoS mitigation service
-
-There are a number of specialist DDoS mitigation service providers such as Akamai (previously Prolexic), Black Lotus (now part of Level3), Neustar and Verisign. Each service provider has created a global network of scrubbing centres which operate at terabit (1000 Gb+) scale. The scrubbing centres use multiple DDoS mitigation techniques (both commercial and proprietary), which ensures they are even able to mitigate attacks that are designed to exploit weaknesses in individual DDoS mitigation products (such as Arbor). Their terabit scale also ensures that they can mitigate even the largest 100 Gb+ attacks, which could overwhelm ISP solutions. Therefore, it is not surprising that these services are used by most major retailers, financial institutions and service providers. On the other hand, these specialist services are typically more expensive to buy than any other option.
-
-## Chosen implementation
-
-Having carefully considered the options, UKCloud:
-
-- Discounted option 1 because it is sub-scale and likely to be ineffectual against larger DDoS attacks and more complex DDoS attacks.
-
-- Discounted option 2 because the effectiveness of the DDoS mitigation varies across ISPs which places a higher burden on UKCloud operational teams and a lower consistency of service to our customers.
-
-- Focused on option 3 as these specialist services provide a more consistent and deterministic service (regardless of the route traffic takes into the platform), more effective DDoS mitigation and protection and superior incident reporting, enabling UKCloud to provide our customers with the details they need when reporting to GovCERT.
+## UKCloud implementation
 
 UKCloud has selected one of the leading global providers of DDoS mitigation services, which provides specialist DDoS mitigation capabilities to the largest online organisations worldwide. The service includes an array of DDoS mitigation technologies and specialist security analysts who operate a 24x7 security operations centre. This enables DDoS attacks to be detected and mitigated typically within five minutes.
 
-UKCloud has performed extensive testing of the DDoS mitigation service, which has helped identify a number of customer-affecting issues that we had not anticipated. Based on the learning from this evaluation period, we've adjusted our design to incorporate a hybrid of option 1 (local DDoS mitigation appliances), which automatically signal and involve option 3 (cloud based DDoS mitigation) as appropriate.
-
-This solution has now been implemented on the UKCloud platform. If your system is the target for a DDoS attack, UKCloud will notify you individually and work with you to provide the necessary information about the attack to submit into CERT-UK and GovCERT.
+If your system is the target for a DDoS attack, UKCloud will notify you individually and work with you to provide the necessary information about the attack to submit into CERT-UK and GovCERT.
 
 ## How it works
 
-UKCloud uses the internet standard BGP (border gateway protocol) to advertise preferred routes for our entire public IP address space to travel directly into our cloud platform via our multiple Tier 1 ISP connections. This ensures that all inbound traffic destined to workloads hosted on the UKCloud platform has a direct route into our platform and is not subjected to increased latency or additional network hops. Our Tier 1 ISPs pass traffic directly into specialist DDoS mitigation appliances (Arbor), which are hosted within each of UKCloud's data centres. Our local DDoS mitigation appliances are operated by our DDoS mitigation partner and so benefit from specialist 24x7 monitoring and management. All inbound traffic is inspected by the DDoS mitigation appliances, providing a first line of countermeasures and automatically signalling our DDoS mitigation partner. This configuration enables the DDoS mitigation partner to automatically and immediately detect when an attack is being mounted and implement appropriate countermeasures, including redirecting traffic through their terabit-scale scrubbing centres, as appropriate. These solutions typically begin mitigating DDoS attacks within five to ten minutes.
+UKCloud uses the internet standard routing protocol BGP (border gateway protocol) to advertise preferred routes for our entire public IP address space to travel directly into our cloud platform via our multiple Tier 1 ISP connections. This ensures that all inbound traffic destined to workloads hosted on the UKCloud platform has a direct route into our platform and is not subjected to increased latency or additional network hops. Our Tier 1 ISPs pass traffic directly into specialist DDoS mitigation appliances (Netscout), which are hosted within each of UKCloud's data centres. Our local DDoS mitigation appliances are operated by our DDoS mitigation partner and so benefit from specialist 24x7 monitoring and management. 
+
+All inbound traffic is inspected by the DDoS mitigation appliances, providing a first line of countermeasures and automatically signalling our DDoS mitigation partner. This configuration enables the DDoS mitigation partner to automatically and immediately detect when an attack is being mounted and implement appropriate countermeasures, including redirecting traffic through their terabit-scale scrubbing centres, as appropriate. These solutions typically begin mitigating DDoS attacks within five to ten minutes.
 
 ![DDoS protection HLD](images/ddos_protection.png)
 
-1. All inbound traffic is routed directly to UKCloud-hosted DDoS mitigation appliances via BGP.
+1. All inbound traffic is routed directly to UKCloud via BGP and passes through our onsite DDoS mitigation appliances.
 
 2. The UKCloud DDoS mitigation appliances automatically alert our DDoS mitigation partner who have specialist engineers, processes and additional DDoS-mitigation technology to detect and mitigate DDoS attacks.
 
