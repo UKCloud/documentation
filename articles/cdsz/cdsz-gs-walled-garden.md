@@ -38,7 +38,7 @@ This guide is intended for customers who have:
 
 Before you can start to implement a walled garden, you must have completed and passed the appropriate application process. For more information, see the [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
-After your Walled Garden application has been approved, a service request is raised to implement the Walled Garden Virtual Data Centre (VDC) and, if necessary, Elevated and Assured VDCs.
+After your Walled Garden application has been approved, a service request is raised to implement the Walled Garden virtual data centre (VDC) and, if necessary, Elevated and Assured VDCs.
 
 > [!NOTE]
 > If a service request for this implementation already exists, the existing request is used and a new one is not raised.
@@ -73,7 +73,7 @@ It is important to remember that while the UKCloud Portal for the Assured securi
 
 First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md) and [*How to build a virtual machine with UKCloud for VMware*](../vmware/vmw-gs-build-vm-vcd.md).
 
-You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or network address transition (NAT) rules.
+You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or network address translation (NAT) rules.
 
 #### Networking examples
 
