@@ -1,70 +1,125 @@
 ---
-title: UKCloud Service Definitions
-description: List of Service Definitions for UKCloud services, including terms and conditions
+title: UKCloud Service Definitions, Service Scopes and pricing information
+description: List of articles providing service information about UKCloud services, including Service Definitions, Service Scopes and pricing information
 services: Other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 26/09/2020
+lastreviewed: 15/02/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud Service Definitions
+toc_title: Service Definitions, Service Scopes and pricing information
 toc_fullpath: Reference/other-ref-service-definitions.md
 toc_mdlink: other-ref-service-definitions.md
 ---
 
-# UKCloud Service Definitions
+# UKCloud Service Definitions, Service Scopes and pricing information
 
-This article provides a list of Service Definitions for UKCloud services. The list also includes our terms and conditions.
+This article provides a list of articles that provide service information about UKCloud services, including Service Definitions, Service Scopes and pricing information.
 
-## Service Definitions
+- **Service Definitions** provide an overview of what a particular service does
 
-### Multi-cloud technology stacks
+- **Service Scopes** provide technical details for a particular service or service option
 
-[UKCloud for Managed OpenShift](../openshift/oshift-sd.md)<br>
-[UKCloud for Microsoft Azure](../azure/azs-sd.md)<br>
-[UKCloud for OpenStack](../openstack/ostack-sd.md)<br>
-[UKCloud for Oracle Software](../oracle/orcl-sd.md)<br>
-[UKCloud for VMware](../vmware/vmw-sd.md)
+- **Pricing information** articles provide pricing examples and supporting information
 
-### Multi-cloud enabling services
+## Multi-cloud technology stacks
 
-[Cloud Storage](../cloud-storage/cs-sd.md)<br>
-[Cross Domain Security Zone](../cdsz/cdsz-sd.md)<br>
-[Dedicated Compute v2](../dedicated-compute/dc-sd.md)<br>
-[Disaster Recovery as a Service](../draas/draas-sd.md)<br>
-[Migration to the Cloud](../migration/migr-sd.md)<br>
-[Neustar DDoS Protection from UKCloud](../connectivity/conn-sd-ddosprotect.md)<br>
-[Neustar UltraDNS from UKCloud](../connectivity/conn-sd-ultradns.md)<br>
-[Secure Remote Access](../sra/sra-sd.md)<br>
-[Security Operations Service](../soc/soc-sd.md)<br>
-[UKCloud Desktop as a Service](../daas/daas-sd.md)<br>
-[VMware Licence Service](../vmware/vmw-sd-vls.md)
+Service | Service Definition | Service Scope | Pricing information
+--------|--------------------|---------------|--------------------
+UKCloud for Managed OpenShift | [here](../openshift/oshift-sd.md) | [here](../openshift/oshift-sco.md) | [here](../openshift/oshift-ref-pricing.md)
+UKCloud for Microsoft Azure | [here](../azure/azs-sd.md) | [here](../azure/azs-sco.md) | [here](../azure/azs-ref-pricing.md)
+UKCloud for OpenStack | [here](../openstack/ostack-sd.md) | [here](../openstack/ostack-sco.md) | [here](../openstack/ostack-ref-pricing.md)
+UKCloud for Oracle Software | [here](../oracle/orcl-sd.md) | [here](../oracle/orcl-sco.md) | [here](../oracle/orcl-ref-pricing.md)
+UKCloud for VMware | [here](../vmware/vmw-sd.md) | [here](../vmware/vmw-sco.md) | [here](../vmware/vmw-ref-pricing.md)
 
-### Private Cloud
+### Service options
 
-[Private Cloud](../private-cloud/prc-sd.md)<br>
-[Private Cloud for Oracle Software](../private-cloud/prc-sd-orcl.md)<br>
-[Private Cloud for Storage](../private-cloud/prc-sd-storage.md)
+#### UKCloud for OpenStack
 
-### Managed services
+Service option | Service Scope
+---------------|--------------
+Hystax Acura Workload Migration | [here](../openstack/ostack-sco-hystax.md)
+Self Service Backup and Restoration (TrilioVault) | [here](../openstack/ostack-sco-triliovault.md)
 
-[Managed IT Operations Service Definition](../managed-services/man-sd-managed-it-ops.md)<br>
-[Managed Active Directory Support](../managed-services/man-sd-ad.md)<br>
-[Managed Remote Desktop Services Support](../managed-services/man-sd-rds.md)<br>
-[Managed SQL Server](../managed-services/man-sd-sqlserver.md)<br>
-[Managed Web Server](../managed-services/man-sd-webserver.md)<br>
-[Extended Network Support from UKCloud](../managed-services/man-sd-network.md)
+#### UKCloud for VMware
 
-### Support services
+Service option | Service Scope
+---------------|--------------
+Bring Your Own Firewall | [here](../vmware/vmw-sco-byof.md)
+Journaling Protection | [here](../vmware/vmw-sco-journaling-protection.md)
+Snapshot Protection | [here](../vmware/vmw-sco-snapshot-protection.md)
 
-[Professional Services](../pro-services/ps-sd.md)<br>
+## Multi-cloud enabling services
 
-## Terms and conditions
+Service | Service Definition | Service Scope | Pricing information
+--------|--------------------|---------------|--------------------
+Cloud Storage | [here](../cloud-storage/cs-sd.md) | [here](../cloud-storage/cs-sco.md) | [here](../cloud-storage/cs-ref-pricing.md)
+Cross Domain Security Zone (CDSZ) | [here](../cdsz/cdsz-sd.md) | [here](../cdsz/cdsz-sco.md) | [here](../cdsz/cdsz-ref-pricing.md)
+Dedicated Compute v2 | [here](../dedicated-compute/dc-sd.md) | [here](../dedicated-compute/dc-sco.md) | N/A
+Disaster Recovery as a Service (DRaaS) | [here](../draas/draas-sd.md) | [here](../draas/draas-sco.md) | N/A
+Migration to the Cloud | [here](../migration/migr-sd.md) | N/A | N/A
+Secure Remote Access (SRA) | [here](../sra/sra-sd.md) | [here](../sra/sra-sco.md) | [here](../sra/sra-ref-pricing.md)
+Security Operations Service | [here](../soc/soc-sd.md) | N/A | N/A
+UKCloud Desktop as a Service | [here](../daas/daas-sd.md) | N/A | [here](../daas/daas-ref-pricing.md)
+VMware Licence Service (VLS) | [here](../vmware/vmw-sd-vls.md) | [here](../vmware/vmw-sco-vls.md) | N/A
 
-[UKCloud Terms and Conditions](other-ref-terms-and-conditions.md)
+## Connectivity services
+
+Service | Service Definition | Service Scope
+--------|--------------------|--------------
+Neustar DDoS Protection from UKCloud | [here](../connectivity/conn-sd-ddosprotect.md) | [here](../connectivity/conn-sco-app-ddos.md)
+Neustar UltraDNS from UKCloud | [here](../connectivity/conn-sd-ultradns.md) | [here](../connectivity/conn-sco-glb.md)
+
+## Private cloud services
+
+Service | Service Definition | Service Scope
+--------|--------------------|--------------
+Private Cloud | [here](../private-cloud/prc-sd.md) | [here](../private-cloud/prc-sco.md)
+Private Cloud for Oracle Software | [here](../private-cloud/prc-sd-orcl.md) | [here](../private-cloud/prc-sco-orcl.md)
+Private Cloud for Storage | [here](../private-cloud/prc-sd-storage.md) | [here](../private-cloud/prc-sco-storage.html)
+
+## Managed services
+
+Service | Service Definition | Service Scope
+--------|--------------------|--------------
+Managed IT Operations | [here](../managed-services/man-sd-managed-it-ops.md) | N/A
+Managed Active Directory Support | [here](../managed-services/man-sd-ad.md) | [here](../managed-services/man-ad-sco.md)
+Managed Remote Desktop Services Support | [here](../managed-services/man-sd-rds.md) | N/A
+Managed SQL Server | [here](../managed-services/man-sd-sqlserver.md) | [here](../managed-services/man-sqlserver-sco.md)
+Managed Web Server | [here](../managed-services/man-sd-webserver.md) | [here](../managed-services/man-webserver-sco.md)
+Extended Network Support from UKCloud | [here](../managed-services/man-sd-network.md) | N/A
+
+### Service options
+
+#### Managed IT Operations
+
+Service option | Service Scope
+---------------|--------------
+Managed Monitoring as a Service | [here](../managed-services/man-monitoring-sco.md)
+Anti-Virus as a Service | [here](../managed-services/man-antivirus-sco.md)
+Patching as a Service | [here](../managed-services/man-patching-sco.md)
+
+## Support services
+
+Service | Service Definition | Service Scope
+--------|--------------------|--------------
+Professional Services | [here](../pro-services/ps-sd.md) | N/A
+Big Cloud Enablement | N/A | [here](../enablement/enbl-sco-bigcolo.md)
+Cloud Enablement - CAPS/CPA-approved VPN | N/A | [here](../enablement/enbl-sco-capscpa.md)
+Cloud Enablement - Server/Storage Hosting | N/A | [here](../enablement/enbl-sco-hosting.md)
+Cloud Enablement - VPN solutions | N/A | [here](../enablement/enbl-sco-vpn.md)
+Data Transfer - Region to Region | N/A | [here](../enablement/enbl-sco-transfer-regions.md)
+Data Transfer between Assured and Elevated | N/A | [here](../enablement/enbl-sco-transfer-assured-elevated.md)
+Data Transfer Facility | N/A | [here](../enablement/enbl-sco-dtf.md)
+Mass Transfer Facility | N/A | [here](../enablement/enbl-sco-mtf-na.md)
+Free Trials | N/A | [here](../other/other-sco-free-trials.md)
+
+## Related articles
+
+- [*UKCloud Terms and Conditions*](other-ref-terms-and-conditions.md)
 
 ## Feedback
 
