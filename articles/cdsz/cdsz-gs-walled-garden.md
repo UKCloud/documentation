@@ -90,7 +90,7 @@ The diagrams below provide examples for both options.
 >
 > - You cannot route public IP addresses to the vCNS Edges in the Walled Garden
 > - The Org VDC networks 192.168.XXX.XX in the examples below are illustrative and you should replace these with your own details
-> - You must have one virutal machine (VM) in the Walled Garden VDC connecting to both vCNS Edges
+> - You must have one virtual machine (VM) in the Walled Garden VDC connecting to both vCNS Edges
 > - Each of the examples below assumes that the appropriate firewall rules are in place
 > - You must apply an SNAT rule in the Elevated security domain to enable connectivity to UKCloud services
 
