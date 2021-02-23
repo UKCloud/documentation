@@ -3,8 +3,8 @@ title: How to create a custom image from a VM on Azure Stack Hub using the UKClo
 description: Provides details on how to create a custom image from a VM using the portal
 services: azure-stack
 author: Daniel Brennand
-reviewer:
-lastreviewed: 06/04/2020
+reviewer: wmaher-UKCloud
+lastreviewed: 23/02/2021
 
 toc_rootlink: Users
 toc_sub1: How To
