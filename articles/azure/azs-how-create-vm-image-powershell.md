@@ -126,13 +126,13 @@ Run the following PowerShell code:
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Declare variables
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
@@ -152,15 +152,15 @@ $Password = "<output form="vmpassword" name="result" style="display: inline;">Pa
 $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
 
 # Get VM details
-$VM = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
+$VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
 
 if ($VM) {
     # Stop the VM
     Write-Output -InputObject "Stopping VM and marking as generalised..."
-    Stop-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
+    Stop-AzVM -Name $VMName -ResourceGroupName $RGName -Force
 
     # Mark VM as Generalised
-    Set-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Generalized
+    Set-AzVM -Name $VMName -ResourceGroupName $RGName -Generalized
 }
 else {
     Write-Error -Message "VM with name: $VMName does not exist in resource group: $RGName"
@@ -168,18 +168,18 @@ else {
 }
 
 # Create new resource group
-New-AzureRmResourceGroup -Name $NewRGName -Location $Location
+New-AzResourceGroup -Name $NewRGName -Location $Location
 
 # Create VM image
 Write-Output -InputObject "Creating image of VM: $VMName"
-$ImageConfig = New-AzureRmImageConfig -Location $Location -SourceVirtualMachineId $VM.Id
-$Image = New-AzureRmImage -ResourceGroupName $NewRGName -ImageName $ImageName -Image $ImageConfig
+$ImageConfig = New-AzImageConfig -Location $Location -SourceVirtualMachineId $VM.Id
+$Image = New-AzImage -ResourceGroupName $NewRGName -ImageName $ImageName -Image $ImageConfig
 
 # Delete the VM
-Remove-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Remove-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Get image to check OS type
-$Image = Get-AzureRmImage | Where-Object -FilterScript { $_.Name -like $ImageName }
+$Image = Get-AzImage | Where-Object -FilterScript { $_.Name -like $ImageName }
 
 # Depending on the OS type, open either an RDP or SSH port and provision correct size
 # WARNING - These ports will be exposed to the internet. Edit the rules after creation to limit inbound traffic to known IP addresses
@@ -199,10 +199,10 @@ else {
 
 # Create new VM from custom image
 Write-Output -InputObject "Creating VM from image: $ImageName... (This may take a while)"
-New-AzureRmVM -ResourceGroupName $NewRGName -Location $Location -Name $NewVMName -ImageName $ImageName -Credential $Credential -VirtualNetworkName $VNetName -SubnetName $SubnetName -PublicIpAddressName $PublicIPName -SecurityGroupName $NsgName -OpenPorts $OpenPorts -Size $Size
+New-AzVM -ResourceGroupName $NewRGName -Location $Location -Name $NewVMName -ImageName $ImageName -Credential $Credential -VirtualNetworkName $VNetName -SubnetName $SubnetName -PublicIpAddressName $PublicIPName -SecurityGroupName $NsgName -OpenPorts $OpenPorts -Size $Size
 
 # Remove source resource group
-Remove-AzureRmResourceGroup -ResourceGroupName $RGName -Location $Location -Confirm
+Remove-AzResourceGroup -ResourceGroupName $RGName -Location $Location -Confirm
 </code></pre>
 
 ### [Unmanaged Disk](#tab/tabid-d)
@@ -215,13 +215,13 @@ Run the following PowerShell code:
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Declare variables
 $VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
@@ -241,15 +241,15 @@ $Password = "<output form="vmpassword" name="result2" style="display: inline;">P
 $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
 
 # Get VM details
-$VM = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
+$VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
 
 if ($VM) {
     # Stop the VM
     Write-Output -InputObject "Stopping VM and marking as generalised..."
-    Stop-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
+    Stop-AzVM -Name $VMName -ResourceGroupName $RGName -Force
 
     # Mark VM as Generalised
-    Set-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Generalized
+    Set-AzVM -Name $VMName -ResourceGroupName $RGName -Generalized
 }
 else {
     Write-Error -Message "VM with name: $VMName does not exist in resource group: $RGName"
@@ -264,19 +264,19 @@ if (-not $VHDUri) {
 }
 
 # Create new resource group
-New-AzureRmResourceGroup -Name $NewRGName -Location $Location
+New-AzResourceGroup -Name $NewRGName -Location $Location
 
 # Create VM image
 Write-Output -InputObject "Creating image of VM: $VMName"
-$ImageConfig = New-AzureRmImageConfig -Location $Location
-$ImageConfig = Set-AzureRmImageOsDisk -Image $ImageConfig -OsType $VM.StorageProfile.OsDisk.OsType -OsState "Generalized" -BlobUri $VHDUri
-$Image = New-AzureRmImage -ResourceGroupName $NewRGName -Image $ImageConfig -ImageName $ImageName
+$ImageConfig = New-AzImageConfig -Location $Location
+$ImageConfig = Set-AzImageOsDisk -Image $ImageConfig -OsType $VM.StorageProfile.OsDisk.OsType -OsState "Generalized" -BlobUri $VHDUri
+$Image = New-AzImage -ResourceGroupName $NewRGName -Image $ImageConfig -ImageName $ImageName
 
 # Delete the VM
-Remove-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+Remove-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Get image to check OS type
-$Image = Get-AzureRmImage | Where-Object -FilterScript { $_.Name -like $ImageName }
+$Image = Get-AzImage | Where-Object -FilterScript { $_.Name -like $ImageName }
 
 # Depending on the OS type, open either an RDP or SSH port and provision correct size
 if ($Image.StorageProfile.OsDisk.OsType -like "Windows") {
@@ -294,10 +294,10 @@ else {
 
 # Create new VM from custom image
 Write-Output -InputObject "Creating VM from image: $ImageName... (This may take a while)"
-New-AzureRmVM -ResourceGroupName $NewRGName -Location $Location -Name $NewVMName -ImageName $ImageName -Credential $Credential -VirtualNetworkName $VNetName -SubnetName $SubnetName -PublicIpAddressName $PublicIPName -SecurityGroupName $NsgName -OpenPorts $OpenPorts -Size $Size
+New-AzVM -ResourceGroupName $NewRGName -Location $Location -Name $NewVMName -ImageName $ImageName -Credential $Credential -VirtualNetworkName $VNetName -SubnetName $SubnetName -PublicIpAddressName $PublicIPName -SecurityGroupName $NsgName -OpenPorts $OpenPorts -Size $Size
 
 # Remove source resource group
-Remove-AzureRmResourceGroup -ResourceGroupName $RGName -Location $Location -Confirm
+Remove-AzResourceGroup -ResourceGroupName $RGName -Location $Location -Confirm
 </code></pre>
 
 ***
