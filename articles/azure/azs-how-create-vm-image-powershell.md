@@ -28,6 +28,8 @@ This article explains how to create a custom image from a VM on Azure Stack Hub,
 
 To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
+Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md).
+
 ## High-level Process Overview
 
 1. Generalise the virtual machine.
