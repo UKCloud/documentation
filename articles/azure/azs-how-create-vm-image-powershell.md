@@ -82,7 +82,7 @@ Before you begin, ensure your PowerShell environment is set up as detailed in [C
 
 2. Run the following command: `sudo su` and enter your user password if prompted.
 
-3. Run the following command: `waagent -deprovision+user -force && shutdown -h now`
+3. Run the following command: `waagent -deprovision+user -force`
 
 4. Wait for the VM to shutdown. Your SSH session will be closed.
 
