@@ -3,7 +3,7 @@ title: How to create a custom image from a VM on Azure Stack Hub using PowerShel
 description: Provides details on how to create a custom image from a VM using Powershell
 services: azure-stack
 author: Daniel Brennand
-reviewer:
+reviewer: wmaher-UKCloud
 lastreviewed: 06/04/2020
 
 toc_rootlink: Users
