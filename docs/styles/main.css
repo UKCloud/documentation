@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5 {
   background-color: var(--color-background-alert-warning);
   border-color: var(--color-background-alert-warning);
 }
-.IMPORTANT {
+.IMPORTANT, .CAUTION {
   color: var(--color-foreground-alert-important);
   background-color: var(--color-background-alert-important);
   border-color: var(--color-background-alert-important);
