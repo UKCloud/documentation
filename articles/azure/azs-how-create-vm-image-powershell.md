@@ -84,11 +84,9 @@ Before you begin, ensure your PowerShell environment is set up as detailed in [C
 
 3. Run the following command: `waagent -deprovision+user -force`
 
-4. Wait for the VM to shutdown. Your SSH session will be closed.
+4. Wait a minute for the generalistion process to complete before continuing 
 
-    > [!TIP]
-    > The generalisation process is complete once your VM is in a stopped state.
-
+   
 ***
 
 ## Creating the image
