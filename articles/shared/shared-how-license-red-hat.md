@@ -1,10 +1,10 @@
 ---
 title: How to bring your own Red Hat licensing
-description: Outlines the options for Red Hat licencing and how to use your own licensing
+description: Outlines the options for Red Hat licensing and how to use your own licensing
 services: shared-services
 author: shall
-reviewer: shighmoor
-lastreviewed: 22/10/2019
+reviewer: pcantle
+lastreviewed: 25/02/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: shared-how-license-red-hat.md
 
 ## Overview
 
-UKCloud offers UKCloud for VMware with a variety of operating systems to suit your application requirements.
+UKCloud offers a variety of operating systems to suit your application requirements.
 
 ## Options
 
@@ -49,9 +49,9 @@ If you want to take advantage of your own existing Red Hat licensing or purchase
 
 6. Fill in the Service Request form, making sure to provide the following information in the **Additional Details** field:
 
-    - The date you want to use your own licencing from
+    - The date you want to use your own licensing from
 
-    - Whether you want your own licencing to affect specific VMs, specific VDCs or all of your VMs under your organisation
+    - Whether you want your own licensing to affect specific VMs, specific VDCs or all of your VMs under your organisation
 
 7. When you're done, click **Review & Submit**.
 
