@@ -277,7 +277,8 @@ Remove-AzVM -ResourceGroupName $RGName -Name $VMName -Force
 $Image = Get-AzImage | Where-Object -FilterScript { $_.Name -like $ImageName }
 
 # Depending on the OS type, open either an RDP or SSH port and provision correct size
-# WARNING - These ports will be exposed to the internet. Edit the rules after
+# WARNING - These ports will be exposed to the internet. Edit the rules after creation to limit inbound traffic to known IP addresses
+
 if ($Image.StorageProfile.OsDisk.OsType -like "Windows") {
     $OpenPorts = 3389
     if (-not $Size) {
