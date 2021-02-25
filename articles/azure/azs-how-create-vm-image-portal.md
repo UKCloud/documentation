@@ -62,7 +62,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. Run the following command: `waagent -deprovision+user -force`
 
-4. Wait a minute for the generalistion process to complete before continuing 
+4. Wait a minute for the generalisation process to complete before continuing 
 ***
 
 ## Creating the image
