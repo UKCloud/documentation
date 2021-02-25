@@ -62,7 +62,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. Run the following command: `waagent -deprovision+user -force`
 
-4. Wait a minute for the generalisation process to complete before continuing 
+4. Wait a minute for the generalisation process to complete before continuing
 ***
 
 ## Creating the image
@@ -105,6 +105,8 @@ To complete the steps in this article, you must have appropriate access to a sub
 12. Click the VM image.
 
 13. In the *new* page, click **Create VM**.
+
+    ![Create VM from image](images/azs-browser-create-vm-from-image.png)
 
 14. Enter a **Name**, **Username**, **Authentication type**, **Password** and **Resource group** for the new VM, then click **OK**.
 
