@@ -305,6 +305,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-vm-image-portal.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-vm-image-portal.html",
+          "hash": "rOo31ARrM+NEtbNpXqQYWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-vm-image-powershell.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-vm-image-powershell.html",
+          "hash": "t10dHFEO3tGp2h0FH5bWmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-vm-portal.md",
       "output": {
         ".html": {
@@ -857,6 +881,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-capture-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-capture-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-create-aks-basics.png",
       "output": {
         "resource": {
@@ -872,6 +907,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-create-aks-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-image.png"
         }
       },
       "is_incremental": false,
@@ -1000,6 +1046,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-vm-from-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-vm-from-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-create-vnetwork-gateway.png",
       "output": {
         "resource": {
@@ -1015,6 +1072,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-csp-auth-signin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-custom-image-resource-group.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-custom-image-resource-group.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-custom-image-vm-summary.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-custom-image-vm-summary.png"
         }
       },
       "is_incremental": false,
@@ -2155,6 +2234,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-windows-sys-prep.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-windows-sys-prep.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs_advancedaccesspolicies.png",
       "output": {
         "resource": {
@@ -2335,7 +2425,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "MbFrQemB5zXlgQa059ALag=="
+          "hash": "OxRIAhey4JX409pmaxRtqw=="
         }
       },
       "is_incremental": false,
@@ -3637,7 +3727,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-ddos-protection.html",
-          "hash": "BQhlVR2LeKMF3MbWY5tW/A=="
+          "hash": "3Y6cniMp3/XT3m59huZtpw=="
         }
       },
       "is_incremental": false,
@@ -10617,7 +10707,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "4w91VqOwA0pCxGEfGU/JQA=="
+          "hash": "eg7hgDI1NF1lTcxWdCBMrg=="
         }
       },
       "is_incremental": false,
@@ -10936,12 +11026,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-service-definitions.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "mNzzzXCmuOBEARWAgyp0tA=="
+          "hash": "PP+zppkekxshYvUxzX2arw=="
         }
       },
       "is_incremental": false,
@@ -11097,7 +11190,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "14QNIlTEEvPNf/TaoCtgMA=="
+          "hash": "B51XPPYBtLOK1lF8JPfgXw=="
         }
       },
       "is_incremental": false,
@@ -21859,7 +21952,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-service-options.html",
-          "hash": "UacWQ/HZWvWgttkXRkp68A=="
+          "hash": "bmWaW9TccsNsct65lMD5ZA=="
         }
       },
       "is_incremental": false,
@@ -22238,7 +22331,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 458,
+          "total_file_count": 460,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

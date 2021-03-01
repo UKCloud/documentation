@@ -54,6 +54,8 @@
     href: other-ref-ukcloud-monitoring.md
   - name: Protective Monitoring from UKCloud
     href: other-ref-promon.md
+  - name: Service Definitions, Service Scopes and pricing information
+    href: other-ref-service-definitions.md
   - name: Service maintenance windows
     href: other-ref-maintenance-windows.md
   - name: Services at a glance
@@ -76,8 +78,6 @@
     href: other-ref-pricing-guide.md
   - name: UKCloud products and services
     href: other-ref-products-overview.md
-  - name: UKCloud Service Definitions
-    href: other-ref-service-definitions.md
   - name: UKCloud Service Status page
     href: other-ref-status-page.md
   - name: UKCloud Terms and Conditions
