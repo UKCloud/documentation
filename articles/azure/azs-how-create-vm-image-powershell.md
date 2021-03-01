@@ -86,8 +86,7 @@ Before you begin, ensure your PowerShell environment is set up as detailed in [C
 
 3. Run the following command: `waagent -deprovision+user -force`
 
-4. Wait a minute for the generalisation process to complete before continuing
-
+4. Wait a minute for the generalisation process to complete before continuing.
 
 ***
 

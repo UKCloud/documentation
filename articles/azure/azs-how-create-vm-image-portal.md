@@ -41,7 +41,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. In the *System Preparation Tool*, from the **System Cleanup Action** list, select **Enter System Out-of-Box Experience (OOBE)**.
 
-4. Ensure the **Generalize** check box is selected.
+4. Ensure the **Generalise** check box is selected.
 
 5. From the **Shutdown Options** list, select **Shutdown**.
 
@@ -62,7 +62,8 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. Run the following command: `waagent -deprovision+user -force`
 
-4. Wait a minute for the generalisation process to complete before continuing
+4. Wait a minute for the generalisation process to complete before continuing.
+
 ***
 
 ## Creating the image
@@ -76,7 +77,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     For more detailed instructions, see [Getting Started Guide for UKCloud for Microsoft Azure](azs-gs.md).
 
-2. In the *favorites* panel, select **Virtual machines**.
+2. In the *favourites* panel, select **Virtual machines**.
 
 3. In the *Virtual machines* blade, select the VM that you want to capture.
 
