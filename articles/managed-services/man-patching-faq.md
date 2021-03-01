@@ -4,7 +4,7 @@ description: Frequently asked questions for Patching as a Service
 services: managed-services
 author: Steve Dixon
 reviewer:
-lastreviewed: 08/10/2020 15:17:17
+lastreviewed: 01/03/2021 15:17:17
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
@@ -63,6 +63,18 @@ The following diagram shows the six available cut-off dates and associated Devic
 > * Customers are advised to use ***Device Groups A to E*** to test patches on VMs within a representative non-production environment.
 >
 > * Customers are advised to use ***Device Groups F to J*** to apply patches on VMs within their production environments on the basis that no issues ave been identified in their non-production environments.
+
+### How do I recover from applying a patch which may have had an adverse effect on my environment?
+
+The onus is upon the customer to test any patches in a representative non-production environment in order to detect any adverse impact of applying patches prior to release within production environments.
+
+For customers using this service on our UKCloud for VMware platform, UKCloud will endeavour to create a recovery point of a VM immediately prior to applying patches. As we cannot guarantee the creation of a recovery point (for example, open files may block the creation of a recovery point) UKCloud provides the following options customers can choose as to how patching as a service should proceed should the creation of a recovery point fail
+
+- Hard (Default option): The patching system will attempt to snapshot the virtual machine, and if it cannot perform the snapshot it will not apply any patches to the virtual machine.
+- Soft: The patching system will attempt to snapshot the virtual machine, but if it does not succeed it will continue to apply any outstanding patches to the VM.
+- Disabled: For virtual machines not running on the UKCloud VMware platform, or for virtual machines which are unable to have snapshots taken, this should be selected. This prevents the Patching system from attempting to snapshot the virtual machine prior to applying patches.
+
+UKCloud will retain any successful recovery points for a maximum of 48 hours, therefore it is imperative that customers check for any potential patching issues within 48 hours of any patches being applied
 
 ### Windows patches vs Linux package updates
 
