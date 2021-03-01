@@ -162,7 +162,7 @@ if ($VM) {
     Set-AzVM -Name $VMName -ResourceGroupName $RGName -Generalized
 }
 else {
-    Write-Error -Message "VM with name: $VMName does not exist in resource group: $RGName"
+    Write-Error -Message "VM with name: $VMName does not exist in resource group: $RGName."
     break
 }
 
@@ -170,7 +170,7 @@ else {
 New-AzResourceGroup -Name $NewRGName -Location $Location
 
 # Create VM image
-Write-Output -InputObject "Creating image of VM: $VMName"
+Write-Output -InputObject "Creating image of VM: $VMName."
 $ImageConfig = New-AzImageConfig -Location $Location -SourceVirtualMachineId $VM.Id
 $Image = New-AzImage -ResourceGroupName $NewRGName -ImageName $ImageName -Image $ImageConfig
 
@@ -250,7 +250,7 @@ if ($VM) {
     Set-AzVM -Name $VMName -ResourceGroupName $RGName -Generalized
 }
 else {
-    Write-Error -Message "VM with name: $VMName does not exist in resource group: $RGName"
+    Write-Error -Message "VM with name: $VMName does not exist in resource group: $RGName."
     break
 }
 
@@ -265,7 +265,7 @@ if (-not $VHDUri) {
 New-AzResourceGroup -Name $NewRGName -Location $Location
 
 # Create VM image
-Write-Output -InputObject "Creating image of VM: $VMName"
+Write-Output -InputObject "Creating image of VM: $VMName."
 $ImageConfig = New-AzImageConfig -Location $Location
 $ImageConfig = Set-AzImageOsDisk -Image $ImageConfig -OsType $VM.StorageProfile.OsDisk.OsType -OsState "Generalized" -BlobUri $VHDUri
 $Image = New-AzImage -ResourceGroupName $NewRGName -Image $ImageConfig -ImageName $ImageName
