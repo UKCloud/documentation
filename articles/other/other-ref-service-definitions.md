@@ -79,7 +79,7 @@ Service | Service Definition | Service Scope
 --------|--------------------|--------------
 Private Cloud | [here](../private-cloud/prc-sd.md) | [here](../private-cloud/prc-sco.md)
 Private Cloud for Oracle Software | [here](../private-cloud/prc-sd-orcl.md) | [here](../private-cloud/prc-sco-orcl.md)
-Private Cloud for Storage | [here](../private-cloud/prc-sd-storage.md) | [here](../private-cloud/prc-sco-storage.html)
+Private Cloud for Storage | [here](../private-cloud/prc-sd-storage.md) | [here](../private-cloud/prc-sco-storage.md)
 
 ## Managed services
 
@@ -114,7 +114,7 @@ Cloud Enablement - VPN solutions | N/A | [here](../enablement/enbl-sco-vpn.md)
 Data Transfer - Region to Region | N/A | [here](../enablement/enbl-sco-transfer-regions.md)
 Data Transfer between Assured and Elevated | N/A | [here](../enablement/enbl-sco-transfer-assured-elevated.md)
 Data Transfer Facility | N/A | [here](../enablement/enbl-sco-dtf.md)
-Mass Transfer Facility | N/A | [here](../enablement/enbl-sco-mtf-na.md)
+Mass Transfer Facility | N/A | [here](../enablement/enbl-sco-mtf-nas.md)
 Free Trials | N/A | [here](../other/other-sco-free-trials.md)
 
 ## Related articles
