@@ -39,7 +39,7 @@ Before you begin, ensure your PowerShell environment is set up as detailed in [C
     > [!IMPORTANT]
     > The image **must** be created in the same resource group that you are planning to create the new virtual machine in.
     >
-    > In other words, we are creating a **new resource group** to contain the image and the new virtual machine in.
+    > In other words, we are creating a **new resource group** to contain the image and the new virtual machine.
 
 3. Create a custom image from the virtual machine, ensuring that it is created in the new resource group.
 
