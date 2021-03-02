@@ -2,9 +2,9 @@
 title: Patching as a Service FAQs
 description: Frequently asked questions for Patching as a Service
 services: managed-services
-author: Steve Dixon
-reviewer:
-lastreviewed: 01/03/2021 15:17:17
+author: sdixon
+reviewer: sdixon
+lastreviewed: 01/03/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
@@ -64,17 +64,19 @@ The following diagram shows the six available cut-off dates and associated Devic
 >
 > * Customers are advised to use ***Device Groups F to J*** to apply patches on VMs within their production environments on the basis that no issues ave been identified in their non-production environments.
 
-### How do I recover from applying a patch which may have had an adverse effect on my environment?
+### How do I recover from applying a patch that may have had an adverse effect on my environment?
 
-The onus is upon the customer to test any patches in a representative non-production environment in order to detect any adverse impact of applying patches prior to release within production environments.
+Before applying patches within a production environment, it is the customer's responsibility to test those patches in a representative non-production environment to detect any potential adverse impact within the production environment.
 
-For customers using this service on our UKCloud for VMware platform, UKCloud will endeavour to create a recovery point of a VM immediately prior to applying patches. As we cannot guarantee the creation of a recovery point (for example, open files may block the creation of a recovery point) UKCloud provides the following options customers can choose as to how patching as a service should proceed should the creation of a recovery point fail
+For customers using Patching as a Service on our UKCloud for VMware platform, UKCloud will endeavour to create a recovery point of a VM immediately prior to applying patches. As we cannot guarantee the creation of a recovery point (for example, open files may block the creation of a recovery point), UKCloud provides the following options for customers to choose from to determine how Patching as a Service should proceed should the creation of a recovery point fail:
 
-- Hard (Default option): The patching system will attempt to snapshot the virtual machine, and if it cannot perform the snapshot it will not apply any patches to the virtual machine.
-- Soft: The patching system will attempt to snapshot the virtual machine, but if it does not succeed it will continue to apply any outstanding patches to the VM.
-- Disabled: For virtual machines not running on the UKCloud VMware platform, or for virtual machines which are unable to have snapshots taken, this should be selected. This prevents the Patching system from attempting to snapshot the virtual machine prior to applying patches.
+- Hard (default option): The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will not proceed.
 
-UKCloud will retain any successful recovery points for a maximum of 48 hours, therefore it is imperative that customers check for any potential patching issues within 48 hours of any patches being applied
+- Soft: The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will still proceed.
+
+- Disabled: The patching system will not attempt to snapshot the virtual machine prior to applying any patches. This option is for virtual machines not running on the UKCloud VMware platform, or for virtual machines that are unable to have snapshots taken.
+
+UKCloud will retain any successful recovery points for a maximum of 48 hours, therefore it is essential that customers check for any potential issues within 48 hours of any patches being applied.
 
 ### Windows patches vs Linux package updates
 
