@@ -128,6 +128,18 @@
 </li>
 </ul>
 </div>
+<h3 id="how-do-i-recover-from-applying-a-patch-that-may-have-had-an-adverse-effect-on-my-environment">How do I recover from applying a patch that may have had an adverse effect on my environment?</h3>
+<p>Before applying patches within a production environment, it is the customer's responsibility to test those patches in a representative non-production environment to detect any potential adverse impact within the production environment.</p>
+<p>For customers using Patching as a Service on our UKCloud for VMware platform, UKCloud will endeavour to create a recovery point of a VM immediately prior to applying patches. As we cannot guarantee the creation of a recovery point (for example, open files may block the creation of a recovery point), UKCloud provides the following options for customers to choose from to determine how Patching as a Service should proceed should the creation of a recovery point fail:</p>
+<ul>
+<li><p>Hard (default option): The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will not proceed.</p>
+</li>
+<li><p>Soft: The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will still proceed.</p>
+</li>
+<li><p>Disabled: The patching system will not attempt to snapshot the virtual machine prior to applying any patches. This option is for virtual machines not running on the UKCloud VMware platform, or for virtual machines that are unable to have snapshots taken.</p>
+</li>
+</ul>
+<p>UKCloud will retain any successful recovery points for a maximum of 48 hours, therefore it is essential that customers check for any potential issues within 48 hours of any patches being applied.</p>
 <h3 id="windows-patches-vs-linux-package-updates">Windows patches vs Linux package updates</h3>
 <p>There are major differences between the way that Microsoft releases patches for its Windows OSs and the way that most Linux distribution vendors provide updates. The key difference is:</p>
 <ul>
