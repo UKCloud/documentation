@@ -37,6 +37,10 @@ It describes the boundaries of the service, along with the division of responsib
 > [!NOTE]
 > Web server services only, including FTP. Additional services, such as load balancing and mail proxy, are out of scope.
 
+All servers which constitute this service must be patched to within 90 days of the most recent patches released by the vendor. Should UKCloud find during onboarding any exceptions to this policy, UKCloud has the right to cancel this service after consultation with the customer.
+
+UKCloud's Professional Services team can be engaged, at cost to the customer, to assess and apply outstanding patches prior to commencement of this service.
+
 ## Supported configurations
 
 | Supported configurations |

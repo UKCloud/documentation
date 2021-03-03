@@ -31,6 +31,10 @@ UKCloud uses the same technologies we use in house to monitor events across our 
 
 This service also leverages the benefits of AIOps (see below).
 
+## Do I need to instal an agent within my VM to enable this service?
+
+By default UKCloud will provide this service without the use of an agent by utilising SNMP traps. In situations where non SNMP events need to be collected, UKCloud may opt to provide a dedicated Monitoring Agent which can be deployed into the customer's VM to provide a more advanced method of event collection. In order to ensure the correct operation of the Monitoring Agent once installed, port 5666 will need to be opened on Linux VMs, and port 5985 and/or port 5986 must be opened for Windows VMs.
+
 ### What is AIOps?
 
 The term *AIOps* stands for *artificial intelligence for IT operations*. AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies.

@@ -32,6 +32,10 @@ It describes the boundaries of the service, along with the division of responsib
 |-----------------------------------------------------|
 | Windows Server 2012+ (all editions that support AD) |
 
+All servers which constitute this service must be patched to within 90 days of the most recent patches released by Microsoft. Should UKCloud find during onboarding any exceptions to this policy, UKCloud has the right to cancel this service after consultation with the customer.
+
+UKCloud's Professional Services team can be engaged, at cost to the customer, to assess and apply outstanding patches prior to commencement of this service.
+
 ## Supported configurations
 
 | Supported configurations                                                                                                                                       |
