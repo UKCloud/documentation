@@ -117,7 +117,7 @@ The following steps outline the process for the [Azure and Azure Stack Hub SPN c
 $AppName = "<output form="appname" name="result" style="display: inline;">TestApp</output>"
 $AppURL = "<output form="appurl" name="result" style="display: inline;">https://test.app</output>"
 # You can also generate a GUID app password by using: (New-Guid).Guid
-$AppPassword = "<output form="apppassword" name="result" style="display: inline;">Password123!</output>"
+$AppPassword = '<output form="apppassword" name="result" style="display: inline;">Password123!</output>'
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
 $TenantDomain = "<output form="tenantdomain" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
@@ -129,7 +129,7 @@ $AzureStackRole = "<output form="azurestackrole" name="result" style="display: i
 
 # Create your Public Azure admin credentials in order to log in to your Azure subscription which you will be creating your SPN in
 $PublicAzureAdminUsername = "<output form="azureusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
-$PublicAzureAdminPassword = ConvertTo-SecureString -String "<output form="azurepassword" name="result" style="display: inline;">Password123!</output>" -AsPlainText -Force
+$PublicAzureAdminPassword = ConvertTo-SecureString -String '<output form="azurepassword" name="result" style="display: inline;">Password123!</output>' -AsPlainText -Force
 $PublicAzureAdminCreds = New-Object -TypeName "System.Management.Automation.PSCredential" -ArgumentList $PublicAzureAdminUsername, $PublicAzureAdminPassword
 
 # Log in to your public Azure subscription and Azure AD you will be creating your SPN in
@@ -207,7 +207,7 @@ Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Create your Azure Stack Hub Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
 $AzureStackUsernameAdmin = "<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
-$AzureStackUserPasswordAdmin = ConvertTo-SecureString -String "<output form="azspassword" name="result" style="display: inline;">Password123!</output>" -AsPlainText -Force
+$AzureStackUserPasswordAdmin = ConvertTo-SecureString -String '<output form="azspassword" name="result" style="display: inline;">Password123!</output>' -AsPlainText -Force
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
 # Login to Azure Stack Hub as Admin (Subscription Owner)
@@ -279,7 +279,7 @@ foreach ($Item in $SPN) {
 $AppName = "<output form="appname" name="result2" style="display: inline;">TestApp</output>"
 $AppURL = "<output form="appurl" name="result2" style="display: inline;">https://test.app</output>"
 # You can also generate a GUID app password by using: (New-Guid).Guid
-$AppPassword = "<output form="apppassword" name="result2" style="display: inline;">Password123!</output>"
+$AppPassword = '<output form="apppassword" name="result2" style="display: inline;">Password123!</output>'
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
 $TenantDomain = "<output form="tenantdomain" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
@@ -292,7 +292,7 @@ Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Create your Azure Stack Hub admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
 $AzureStackUsernameAdmin = "<output form="azsusername" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>"
-$AzureStackUserPasswordAdmin = ConvertTo-SecureString -String "<output form="azspassword" name="result2" style="display: inline;">Password123!</output>" -AsPlainText -Force
+$AzureStackUserPasswordAdmin = ConvertTo-SecureString -String '<output form="azspassword" name="result2" style="display: inline;">Password123!</output>' -AsPlainText -Force
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
 # Login to Azure Stack Hub as admin (Subscription Owner) and Azure AD
