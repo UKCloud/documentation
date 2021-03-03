@@ -214,7 +214,7 @@ $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCrede
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCredAdmin
 
 # Find application details from Azure AD
-$AzureStackApp = Get-AzureRmADApplication -DisplayName $AppGet.DisplayName
+$AzureStackApp = Get-AzureRmADApplication -DisplayNameStartWith $AppGet.DisplayName
 
 # Find Object Id of your Service Principal Name in Azure Stack Hub
 $SPNAzureStackGet = Get-AzureRmADServicePrincipal -SearchString $AzureStackApp.DisplayName
