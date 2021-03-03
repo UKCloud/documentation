@@ -214,10 +214,10 @@ $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCrede
 Connect-AzAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCredAdmin
 
 # Find application details from Azure AD
-$AzureStackApp = Get-AzADApplication -DisplayNameStartWith $AppGet.DisplayName
+$AzureStackApp = Get-AzADApplication -DisplayName $AppGet.DisplayName
 
 # Find Object Id of your Service Principal Name in Azure Stack Hub
-$SPNAzureStackGet = Get-AzADServicePrincipal -SearchString $AzureStackApp.DisplayName
+$SPNAzureStackGet = Get-AzADServicePrincipal -DisplayName $AzureStackApp.DisplayName
 $SPNAzureStackGet
 
 # Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack Hub
