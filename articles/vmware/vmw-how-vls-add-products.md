@@ -153,13 +153,13 @@ When you've finished adding all of your metered products and the collection time
 
 ## Setting licence packs
 
-When you've completed the addition of VMware products to the Usage Meter and it has done a discovery of the environment, you need to configure the discovered VLS licences to the correct billing category.
+When you've completed the addition of VMware products to the Usage Meter and it has performed a discovery of the environment, you need to configure the discovered VLS licences to the correct billing category.
 
 1. In the top-right menu of the Usage Meter web application, select **Licenses**.
 
-2. On the _Billing Categories_ tab, against each discovered UKCloud Provided licence, from the **Billing Category** list, select **VCPP**
+2. On the _Billing Categories_ tab, against each discovered UKCloud-provided licence, from the **Billing Category** list, select **VCPP**.
 
-3. Any old licences that were not supplied by UKCloud under VLS should be set as **Perpetual**
+3. For any old licences that were not supplied by UKCloud under VLS, select **Perpetual**.
 
 ## Next steps
 
