@@ -58,7 +58,9 @@ See documentation here on [how to create a new VM on Azure Stack Hub](azs-how-cr
 
 ## [Existing VM](#tab/tabid-2)
 
-Continue with guide below
+Continue with guide below.
+
+***
 
 ### [Linux](#tab/tabid-a/tabid-1)
 
