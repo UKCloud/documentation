@@ -2,9 +2,9 @@
 title: Managed Monitoring as a Service FAQs
 description: Frequently asked questions for Managed Monitoring as a Service
 services: managed-services
-author: Steve Dixon
-reviewer:
-lastreviewed: 20/08/2019 15:17:17
+author: sdixon
+reviewer: sdixon
+lastreviewed: 03/03/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
@@ -31,9 +31,9 @@ UKCloud uses the same technologies we use in house to monitor events across our 
 
 This service also leverages the benefits of AIOps (see below).
 
-## Do I need to instal an agent within my VM to enable this service?
+## Do I need to install an agent within my VM to enable this service?
 
-By default UKCloud will provide this service without the use of an agent by utilising SNMP traps. In situations where non SNMP events need to be collected, UKCloud may opt to provide a dedicated Monitoring Agent which can be deployed into the customer's VM to provide a more advanced method of event collection. In order to ensure the correct operation of the Monitoring Agent once installed, port 5666 will need to be opened on Linux VMs, and port 5985 and/or port 5986 must be opened for Windows VMs.
+By default, UKCloud will provide this service without the use of an agent by utilising SNMP traps. In situations where non-SNMP events need to be collected, UKCloud may opt to provide a dedicated Monitoring Agent, which can be deployed into the customer's VM to provide a more advanced method of event collection. To ensure the correct operation of the Monitoring Agent once installed, port 5666 will need to be opened on Linux VMs, and port 5985 and/or port 5986 must be opened for Windows VMs.
 
 ### What is AIOps?
 
