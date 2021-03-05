@@ -2,9 +2,9 @@
 title: External security review testing
 description: Provides an overview of the processes surrounding the request of External Security Review Testing or Penetration Testing
 services: other
-author: Sue Highmoor
-reviewer: gsmith
-lastreviewed: 13/11/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 02/03/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -21,10 +21,10 @@ toc_mdlink: other-ref-external-security-review-testing.md
 
 All UKCloud services, and their underlying infrastructure are suitable for supporting OFFICIAL and OFFICIAL-SENSITIVE data. We achieve this via a robust risk management system that meets stringent requirements and best practice industry standards. We also complete a comprehensive IT Security Health Check of the entire infrastructure, undertaken by an external assessment organisation, on a regular basis. UKCloud has implemented all 14 NCSC Cloud Security Principles.
 
-However, to ensure that you are able to meet your own legislative, regulatory and/or contractual requirements, UKCloud provides a service to assist customers in undertaking appropriate security reviews of the services above the underlying platform. In this way, we will co-operate with reasonable requests in arranging, conducting and reviewing the results of such reviews and/or tests.
+However, to ensure that you're able to meet your own legislative, regulatory and/or contractual requirements, UKCloud provides a service to assist you in undertaking appropriate security reviews of the services above the underlying platform. In this way, we'll co-operate with reasonable requests in arranging, conducting and reviewing the results of such reviews and/or tests.
 
 > [!IMPORTANT]
-> Within the terms and conditions of the service (full details included with the application form), you (and any third parties or agents you engage) must treat any results or information of these tests as confidential, safeguard it accordingly and not disclose any confidential information belonging to the other party. Further, any activities or testing performed outside of the agreed scope will be treated as malicious and/or unauthorised activity which may result in a breach of contract, service cessation and legal consequences. If you have any questions relating to UKCloud's policies and procedures in place to mitigate risk within the underlying platform, contact us for further information.
+> Within the terms and conditions of the service, you (and any third parties or agents you engage) must treat any results or information of these tests as confidential, safeguard it accordingly and not disclose any confidential information belonging to the other party. Further, any activities or testing performed outside of the agreed scope will be treated as malicious and/or unauthorised activity, which may result in a breach of contract, service cessation and legal consequences. If you have any questions relating to UKCloud's policies and procedures in place to mitigate risk within the underlying platform, contact us for further information.
 >
 > Confidential information includes, but is not limited to all commercial, marketing, financial, technical, security, personnel, operational and similar information, including trade secrets, "know how", brand marks, trademarks and other proprietary information.
 
@@ -36,7 +36,7 @@ As above, the underlying technology platform supporting UKCloud's services and c
 
 Within UKCloud for VMware, the platform extends to the perimeter of the your vCloud organisation with the edge gateway acting as the boundary.
 
-An example of this is depicted in the diagram below and therefore the edge gateway, along with everything to the right, is your responsibility and can be included within the scope of your security test.
+An example of this is depicted in the diagram below, which shows that the edge gateway, along with everything to the right, is your responsibility and can be included within the scope of your security test.
 
 ![Scope of external security review testing](images/other-esrt-scope.png)
 
@@ -46,29 +46,63 @@ UKCloud will cooperate with you to support external penetration testing requirem
 
 To request permission to perform a test, you must:
 
-1. Raise a Service Request within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for the test.
+1. In the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, raise a ticket using the **ESRT / Pen Test** template.
 
-2. Complete the External Security Review Test (ESRT) application form (UKC-FRM-231 - available on request) and attach the completed document (**in full**) to your Service Request. If you want to share any other relevant information (for example, a formal scope), you should also attach this to your Service Request.
+   ![ESRT / Pen Test template](images/other-esrt-sr-template.png)
 
-On receipt of the Service Request and ESRT form, UKCloud will review the submission at the next possible Change Advisory Board (CAB) and provide an update in the Service Request, either:
+   > [!TIP]
+   > You can find the **ESRT / Pen Test** template under **UKCloud Generic Services** or search for it using the **Search for a Request Offering** field.
 
-- Where the request is approved, to convey technical authority to proceed with the test at the date and time specified, and in accordance with the documented testing scope
+2. On the *Customer and Contact Details* page, select the **UKCloud Service** for which you want to perform the test.
 
-- Where the request is not approved, to convey the result and the reasons for it, enabling you to decide whether to withdraw or resubmit the request
+3. Enter the details of two people to act as points of contact for the testing, then click **Continue**.
+
+   ![Customer and Contact Details page](images/other-esrt-sr-contact.png)
+
+4. On the *Testing Scope* page, select the **Environment ID** of the environment in which you'll be performing the test.
+
+   > [!TIP]
+   > If the list doesn't include any IDs, you can enter the environment ID in the **Additional Details** field.
+
+5. In the **IPs to be tested** field, enter the external IP addresses to access the environments that you want to include in the test.
+
+6. In the **Start Date/Time** fields indicate when you plan to start your testing.
+
+7. In the **End Date/Time** fields, indicate when you plan to complete your testing.
+
+8. In the **Additional Details** field, enter any other information that you think would be useful, then click **Continue**.
+
+   ![Testing Scope page](images/other-esrt-sr-scope.png)
+
+9. On the *Testing Organisation* page, enter your organisation details.
+
+10. In the **Source IP Address for Tests** field, enter ???, then click **Continue**.
+
+    ![Testing Organisation page](images/other-esrt-sr-org.png)
+
+11. On the *Testing Conditions* page, thoroughly review the terms and conditions of the service, and if you're happy, accept the conditions and then click **Continue**.
+
+12. Review your selections, then click **Submit**.
+
+    > [!NOTE]
+    > If you want to share any other relevant information (for example, a formal scope), you can attach this to your Service Request.
+
+On receipt of the Service Request, UKCloud will review the submission at the next possible Change Advisory Board (CAB) and provide an update in the Service Request, either:
+
+- Where the request is approved, to convey technical authority to proceed with the test at the date and time specified, and in accordance with the documented testing scope.
+
+- Where the request is not approved, to convey the result and the reasons for it, enabling you to decide whether to withdraw or resubmit the request.
 
 > [!NOTE]
 > If testing is to be conducted in both Assured and Elevated security domains, you must complete separate requests for each system.
 
-> [!IMPORTANT]
-> If the resultant ESRT form contains RESTRICTED content and cannot be emailed, contact our support team for alternative communication methods.
-
 ## Testing access points
 
-Customers may test from two locations:
+You may test from two locations:
 
-**External (from outside the virtual environment)** – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. These tests will traverse UKCloud's physical network edge, and enter your vCloud organisation through the edge gateway.
+- **External (from outside the virtual environment)** – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. These tests will traverse UKCloud's physical network edge, and enter your vCloud organisation through the edge gateway.
 
-**Internal (from inside the virtual environment)** – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. It is expected that you would provision a virtual machine (VM) within your vCloud organisation to act as a launch-pad for testing. Any testers would then upload relevant tools to this VM to execute tests within your organisation.
+- **Internal (from inside the virtual environment)** – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. It is expected that you would provision a virtual machine (VM) within your vCloud organisation to act as a launch-pad for testing. Any testers would then upload relevant tools to this VM to execute tests within your organisation.
 
 If you don't have a compute service prior to testing to use for this purpose, you can provision a new compute service, which will be billed under as normal consumption.
 
@@ -77,10 +111,6 @@ If you don't have a compute service prior to testing to use for this purpose, yo
 For a test to commence, UKCloud must complete a number of administrative tasks to facilitate the activity. This may result in a cost, chargeable as one day's work from the [SFIA Rate Card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
 
 In some circumstances, additional time may be required but this will be outlined prior to tests commencing.
-
-## External Security Review Test (ESRT) application form
-
-To receive a copy of the External Security Review Test (ESRT) application form, contact <support@ukcloud.com>.
 
 ## Feedback
 
