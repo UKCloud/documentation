@@ -4,6 +4,8 @@
     href: man-services-home.md
 - name: Advanced Managed Services
   items:
+  - name: Advanced Managed Services FAQs
+    href: man-adv-managed-svcs-faq.md
   - name: Managed Active Directory Support
     items:
     - name: Managed Active Directory Support Service Definition

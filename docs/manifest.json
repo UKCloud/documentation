@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-spn-powershell.html",
-          "hash": "oT35OCMTKajGeQMo/kp7jQ=="
+          "hash": "w84gDdao6rcGJbhxnDAUHw=="
         }
       },
       "is_incremental": false,
@@ -5709,7 +5709,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-ad-sco.html",
-          "hash": "XdbJjdWzbfX6BgKzuciypw=="
+          "hash": "7mjLN4nXfP6B4lk1Ogp25w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-services/man-adv-managed-svcs-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-services/man-adv-managed-svcs-faq.html",
+          "hash": "0ti9CdpC1Zp9K5RDFf77/A=="
         }
       },
       "is_incremental": false,
@@ -5781,7 +5793,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-monitoring-faq.html",
-          "hash": "Q8RSlhkYwaVXhHtfcQAnZA=="
+          "hash": "K7v3uFDjdJe1gAVz9vw/pA=="
         }
       },
       "is_incremental": false,
@@ -5853,7 +5865,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-patching-sco.html",
-          "hash": "6Mm+t+b7wf6z51jPyqwtWg=="
+          "hash": "vT54tGT16cB6LqqUFyFw5Q=="
         }
       },
       "is_incremental": false,
@@ -5973,7 +5985,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sqlserver-sco.html",
-          "hash": "4+1oGJF12JrKbyGeQnvsvA=="
+          "hash": "itPJkgBGALWmocwg8ujx2Q=="
         }
       },
       "is_incremental": false,
@@ -5985,7 +5997,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-webserver-sco.html",
-          "hash": "DlmHhjjiiD9jLpUoT1jOKw=="
+          "hash": "wXJmjEMnEiZiDKziqugDKQ=="
         }
       },
       "is_incremental": false,
@@ -5997,7 +6009,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/toc.html",
-          "hash": "MlsHO7pSP6HO9vfrhBWN8A=="
+          "hash": "J3kHm/OIzHaDsm6ZJepmOw=="
         }
       },
       "is_incremental": false,
@@ -10707,7 +10719,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "eg7hgDI1NF1lTcxWdCBMrg=="
+          "hash": "5C9wl+A81Sc9jDjh2ZDUuw=="
         }
       },
       "is_incremental": false,
@@ -21649,7 +21661,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vls-add-products.html",
-          "hash": "L9wRtyVUaUS//7vbmsv1Cg=="
+          "hash": "2q+frYHpx9P5Jv1cXFTVpg=="
         }
       },
       "is_incremental": false,
@@ -22328,7 +22340,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 460,
+          "total_file_count": 461,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
