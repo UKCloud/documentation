@@ -2,20 +2,20 @@
 title: Advanced Managed Services FAQs
 description: Frequently asked questions for Advanced Managed Services
 services: managed-services
-author: Steve Dixon
+author: sdixon
 reviewer:
-lastreviewed: 03/03/2021 15:17:17
+lastreviewed: 03/03/2021
 toc_rootlink: Advanced Managed Services
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Anti-Virus as a Service FAQs
+toc_title: Advanced Managed Services FAQs
 toc_fullpath: Advanced Managed Services/man-adv-managed-svcs-faq.md
 toc_mdlink: man-adv-managed-svcs-faq.md
 ---
 
-# Advanced Managed Services
+# Advanced Managed Services FAQs
 
 ## Service
 
@@ -23,27 +23,33 @@ toc_mdlink: man-adv-managed-svcs-faq.md
 
 Advanced Managed Services is a suite of specialised managed support products focused on the middleware and back-end services supporting your solutions. This suite is comprised of the following products:
 
-- **Managed SQL Server** - Provides monitoring and support for your SQL servers. This level of monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your SQL services are operating effectively.
-- **Managed Web Server** - Provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers. This level of monitoring and support, when coupled with proactive operating system patching, provides you with the confidence that your web services are operating effectively.
-- **Managed Active Directory (AD) Support** - Provides you with monitoring and support for your AD services and supporting Windows servers. This level of monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your AD services are operating effectively.
-- **Managed Remote Desktop Services (RDS) Support** - Provides you with monitoring and support for your RDS and supporting Windows servers. This level of monitoring and support, when coupled with pro-active Windows patching, provides you with the confidence that your RDS services are operating effectively.
+- **Managed SQL Server** - Provides monitoring and support for your SQL servers.
+
+- **Managed Web Server** - Provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers.
+
+- **Managed Active Directory (AD) Support** - Provides you with monitoring and support for your AD services and supporting Windows servers.
+
+- **Managed Remote Desktop Services (RDS) Support** - Provides you with monitoring and support for your RDS and supporting Windows servers.
 
 ### Does UKCloud deliver these services directly?
 
 Due to the technical competencies required to safely deliver these services, UKCloud may call upon the services of [Bell Integration](https://www.bell-integration.com/) to offer specialist level 3 support services and technical expertise.
 
-UKCloud will always be your single point of contact and retain ownership for all support incidents & service request, using Bell Integration as a 3rd line resolver group to augment our existing support capabilities for the technologies listed above. All UKCloud’s standard service levels will still be applicable on the occasions where we escalate to Bell Integration for additional support.
+UKCloud will always be your single point of contact and retain ownership for all support incidents and service requests, using Bell Integration as a third-line resolver group to augment our existing support capabilities for the technologies listed above. All UKCloud’s standard service levels will still be applicable on the occasions where we escalate to Bell Integration for additional support.
 
-Situations where UKCloud may call upon the specialisms of Bell Integration may include: 
+Situations where UKCloud may call upon the specialisms of Bell Integration include: 
 
-- Patching of the above services to help ensuring the health of your environments.
-- 3rd line incident support escalations.
-- Assistant in a basic level of tuning and optimisation.
-- Assistance with back-up and recovery tasks specific to the technologies listed above.
+- Patching of the above services to help ensure the health of your environments
 
-### Why have UKCloud chosen to embed Bell Integration in the delivery of these services
+- Third-line incident support escalations
 
-Bell Integration as a UK based organisation that has a pedigree of offering specialised IT and Managed Services since 1996.
+- Assistance in a basic level of tuning and optimisation
+
+- Assistance with backup and recovery tasks specific to the technologies listed above
+
+### Why have UKCloud chosen to embed Bell Integration in the delivery of these services?
+
+Bell Integration is a UK based organisation with a pedigree of offering specialised IT and Managed Services since 1996.
 
 ## Support
 
@@ -67,7 +73,7 @@ Within 5 business days of accepting an order, UKCloud will endeavor to enable se
 
 ### Is there a free trial?
 
-Due to the initial complexity of configuring the anti-virus environment, UKCloud is currently unable to offer a free trial of this service.
+Due to the initial complexity of configuring the required environments, UKCloud is currently unable to offer a free trial of this service.
 
 ## Billing and legal
 
@@ -95,13 +101,13 @@ There are no termination costs for this service once minimum term commitments ha
 
 ### Do I need to install an agent on my endpoints to enable this service?
 
-Where possible UKCloud will provide these services without the use of an agent by utilising SNMP traps. In situations where non SNMP events need to be collected, UKCloud may opt to provide a dedicated Agent which can be deployed into the customer's VM to provide a more advanced method of event collection. In order to ensure the correct operation of the Agent once installed, port 5666 will need to be opened on Linux VMs, and port 5985 and/or port 5986 must be opened for Windows VMs.
+Where possible UKCloud will provide these services without the use of an agent by utilising SNMP traps. In situations where non SNMP events need to be collected, UKCloud may opt to provide a dedicated agent, which can be deployed into the customer's VM to provide a more advanced method of event collection. To ensure the correct operation of the agent once installed, port 5666 will need to be opened on Linux VMs, and port 5985 and/or port 5986 must be opened for Windows VMs.
 
 ### How is any data related to this service kept secure?
 
-Bell Integration have undergone a through vendor assessment and approval programme by UKCloud, and as such we have verified that Bell holds several certifications including LR ISO 9001 – Quality Management, LR ISO 14001 – Environmental Management and LR ISO 27001 - Information Security. UKCloud undertakes through vendor selection and on-going vendor management processes, along with strict access control and auditing measures to ensure the security and integrity of UKCloud’s customer data and services.
+Bell Integration has undergone a thorough vendor assessment and approval programme by UKCloud, and as such we have verified that Bell holds several certifications including LR ISO 9001 – Quality Management, LR ISO 14001 – Environmental Management and LR ISO 27001 - Information Security. UKCloud undertakes thorough vendor selection and ongoing vendor management processes, along with strict access control and auditing measures to ensure the security and integrity of UKCloud’s customer data and services.
 
-In addition, UKCloud has ensured strict controls that ensure any customer data which may need to be shared with Bell information still only remains accessible to pre-approved Security Cleared (SC) operatives based within the UK.
+In addition, UKCloud has ensured strict controls that ensure any customer data that may need to be shared with Bell information still only remains accessible to pre-approved Security Cleared (SC) operatives based within the UK.
 
 ### Is there a protective monitoring service?
 
