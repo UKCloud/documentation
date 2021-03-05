@@ -4,7 +4,7 @@ description: List of FAQs for UKCloud services, technology, connections and proc
 services: Other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/02/2021
+lastreviewed: 05/03/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -75,6 +75,11 @@ Private Cloud             | [here](../private-cloud/prc-faq.md)
 Private Cloud for Storage | [here](../private-cloud/prc-faq-storage.md)
 
 ## Managed services
+
+Service                   | FAQ
+--------------------------|----
+Managed IT Operations     | N/A (see below for FAQs for specific service options)
+Advanced Managed Services | [here](../managed-services/man-adv-managed-svcs-faq.md)
 
 ### Service options
 
