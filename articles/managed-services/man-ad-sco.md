@@ -2,7 +2,7 @@
 title: Managed Active Directory Support Service Scope
 description: Outlines important details regarding UKCloud's Managed Active Directory (AD) Support service
 services: managed-services
-author: Steve Dixon
+author: sdixon
 reviewer:
 lastreviewed: 28/01/2021
 toc_rootlink: Advanced Managed Services
@@ -31,6 +31,10 @@ It describes the boundaries of the service, along with the division of responsib
 | Servers Supported                                   |
 |-----------------------------------------------------|
 | Windows Server 2012+ (all editions that support AD) |
+
+All servers that constitute this service must be patched to within 90 days of the most recent patches released by Microsoft. During onboarding, should UKCloud find any exceptions to this policy, UKCloud has the right to cancel this service after consultation with the customer.
+
+Customers can engage UKCloud's Professional Services team to assess and apply outstanding patches prior to commencement of this service (additional costs apply).
 
 ## Supported configurations
 

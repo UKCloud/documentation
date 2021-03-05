@@ -2,7 +2,7 @@
 title: Patching as a Service Service Scope
 description: Outlines important details regarding Patching as a Service
 services: managed-services
-author: Steve Dixon
+author: sdixon
 reviewer:
 lastreviewed: 15/09/2020
 toc_rootlink: Managed IT Operations
@@ -27,6 +27,16 @@ It describes the boundaries of the service, along with the division of responsib
 
 > [!NOTE]
 > This service is not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
+
+| Servers Supported                                     |
+|-------------------------------------------------------|
+| In-life Windows Server                                |
+| In-life RPM based Linux distributions (RHEL/CentOS)   |
+| In-life Debian based Linux distributions (Ubuntu)     |
+
+All servers that constitute this service must be patched to within 90 days of the most recent patches released by Microsoft. During onboarding, should UKCloud find any exceptions to this policy, UKCloud has the right to cancel this service after consultation with the customer.
+
+Customers can engage UKCloud's Professional Services team to assess and apply outstanding patches prior to commencement of this service (additional costs apply).
 
 The following tables outline the boundaries of responsibilities for Patching as a Service.
 
