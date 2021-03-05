@@ -71,6 +71,9 @@ Enter details below to provide values for the variables in the scripts in this a
 
 2. From an elevated (administrator) PowerShell console, run either the custom script extension or PowerShell script to download the required module and execute the backup process:
 
+> [!IMPORTANT]
+> As the MARS script will be pulled from GitHub the VM must have internet access.
+
 ## [Custom script extension](#tab/tabid-1)
 
 <pre><code class="language-PowerShell"># Initialise environment and variables
