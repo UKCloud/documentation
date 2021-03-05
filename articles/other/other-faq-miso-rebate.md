@@ -2,9 +2,9 @@
 title: MISO rebate FAQs
 description: Frequently asked questions for MISO rebate
 services: other
-author: Matt Warner
-reviewer:
-lastreviewed: 23/07/2018 14:44:15
+author: mwarner
+reviewer: pheathman
+lastreviewed: 11/12/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -21,7 +21,7 @@ toc_mdlink: other-faq-miso-rebate.md
 
 ### What is the MISO rebate?
 
-Crown Commercial Service (CCS) operates a 0.75% management charge for every service sold through the G-Cloud framework agreements. The 0.75% charge is calculated from monthly reports submitted by G-Cloud suppliers to the CCS Management Information System Online (MISO).
+Crown Commercial Service (CCS) operates a management charge of between 0.75% and 1.15% for every service sold through the G-Cloud framework agreements. This charge is calculated from monthly reports submitted by G-Cloud suppliers to the CCS Management Information System Online (MISO).
 
 We'll rebate 0.5% of the charge that partners incur as a result of selling our services via G-Cloud.
 
