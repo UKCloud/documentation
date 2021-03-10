@@ -3,8 +3,8 @@ title: UKCloud for Microsoft Azure
 description: Home page for UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: Chris Black
-lastreviewed: 28/11/2019
+reviewer: wturner123
+lastreviewed: 10/03/2021
 toc_rootlink: About
 toc_sub1:
 toc_sub2:
