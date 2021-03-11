@@ -2,9 +2,9 @@
 title: How to use the UKCloud Pricing Estimation Tool
 description: Describes how to use the UKCloud Pricing Estimation Tool
 services: other
-author: Dan Baker
-reviewer: George Smith
-lastreviewed: 13/11/2019 14:29:01
+author: dbaker
+reviewer: shighmoor
+lastreviewed: 11/03/2021
 
 toc_rootlink: How To
 toc_sub1: 
@@ -20,47 +20,23 @@ toc_mdlink: other-how-use-pricing-tool.md
 
 ## Overview
 
-The UKCloud Pricing Estimation Tool has been created to assist in the cost estimation of our core services. Refer to the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for information regarding service options, pricing options, any required set up fees and product rules. To achieve the most accurate estimate please consult with one of our Cloud Architects.
+The UKCloud Pricing Estimation Tool is a Windows application that has been created to assist in the cost estimation of our core services. Refer to the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for information regarding service options, pricing options, any required set up fees and product rules. To achieve the most accurate estimate, contact your Service Delivery Manager.
 
 > [!IMPORTANT]
 > You should always ensure that you're using the latest version of the Pricing Estimation Tool by downloading the latest version from [UKCloud Price Estimation Tool](https://ukcloud.com/price-estimator-tool/). Also, note that this tool provides an estimate based on the selections you make. Your actual consumption of the service may be different, resulting in higher or lower actual costs.
 
 > [!NOTE]
-> There are some known bugs in the latest versions of the tool. For more information see [Known bugs with the UKCloud Pricing Estimation Tool](other-ref-pricing-tool-bugs.md)
+> For information about known bugs in the latest versions of the tool, see [Known bugs with the UKCloud Pricing Estimation Tool](other-ref-pricing-tool-bugs.md).
 
-## Installing the tool
+## Installing the Pricing Estimation Tool
 
-The Windows version of the tool is provided as a  `.exe` file and the MacOS version is packaged as a `.dmg` file.
-
-Once you've downloaded the install file from the UKCloud web site, depending on the version of the tool you're using, you may need to install it first.
-
-### Installing the Windows version
-
-For Windows, the download is provided as a `.exe` file and you can open it straight from the download by double-clicking the file.
+The Pricing Estimation Tool is provided as a Windows  `.exe` file and you can open it straight from the download by double-clicking the file.
 
 ![Windows download](images/pricing-estimator-download-1.png)
 
-### Installing the Mac version
+## Creating an estimation
 
-1. For MacOS, the download is provided as a `.dmg` file. To install the Mac version, double-click to mount the `.dmg` image file.
-
-    ![Mac Download](images/pricing-estimator-mac-install-1.png)
-
-    This will open the image as a window.
-
-    ![Mounted image](images/pricing-estimator-mac-install-2.png)
-
-2. Drag the app into your applications folder.
-
-    ![Dragging the app into applications](images/pricing-estimator-mac-install-3.png)
-
-3. Open your applications folder and double-click the app **G10EstimatingTool.app**. You can identify this app by the UKCloud logo.
-
-    ![Opening the app](images/pricing-estimator-mac-install-4.png)
-
-## Using the tool
-
-Both the Mac and Windows versions of the tool operate the same way. This guide shows the Windows version, but the MacOS version is identical.
+To use the Pricing Estimation Tool to create a cost estimation:
 
 1. Open the tool and click **Add** to begin your estimate.
 
