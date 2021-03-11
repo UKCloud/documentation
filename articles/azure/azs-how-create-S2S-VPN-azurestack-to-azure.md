@@ -426,23 +426,23 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
    - **IKE Phase 1**
 
-        - **Encryption** - Set the type to **AES256** from the dropdown menu.
+        - **Encryption** - Select **AES256**
 
-        - **Integrity/PRF** - Set the type to **SHA384** from the dropdown menu.
+        - **Integrity/PRF** - Select **SHA384**
 
-        - **DH Group** - Set the type to **ECP384** from the dropdown menu.
+        - **DH Group** - Select **ECP384**
 
    - **IKE Phase 2**
 
-        - **IPsec Encryption** - Set the type to **GCMAES256** from the dropdown menu.
+        - **IPsec Encryption** - Select **GCMAES256**
 
-        - **IPsec Integrity** - Set the type to **GCMAES256** from the dropdown menu.
+        - **IPsec Integrity** - Select **GCMAES256**
 
-        - **PFS Group** - Set the type to **ECP384** from the dropdown menu.
+        - **PFS Group** - Select **ECP384**
 
-   - **IPsec SA lifetime in KiloBytes** - Set the value to **102400000**.
+   - **IPsec SA lifetime in KiloBytes** - Enter **102400000**
 
-   - **IPSec SA lifetime in seconds** - Set the value to **27000**.
+   - **IPSec SA lifetime in seconds** - Enter **27000**
 
      ![Add new connection](images/azs-public-vpn-connection-configuration.png)
 
