@@ -73,7 +73,7 @@ First, you'll need to create a virtual network. This virtual network will be abl
 
         ![Create new virtual network](images/azs-browser-create-virtual-network.png)
 
-   - **Address Space** - The virtual network's address range in CIDR notation. This must not overlap the address space of the public Azure virtual network.
+   - **Address Space** - The virtual network's address range in CIDR notation (for example, 192.168.1.0). This must not overlap the address space of the public Azure virtual network.
 
    - **Subnet Name** - The name of the first subnet within the virtual network.
 
@@ -247,7 +247,7 @@ You'll also need to create a virtual network in public Azure. This virtual netwo
 
        ![Create new virtual network](images/azs-public-browser-new-virtual-network-blade.png)
 
-   - **Address Space** - The virtual network's address range in CIDR notation. This must not overlap the address space of the Azure Stack Hub virtual network.
+   - **Address Space** - The virtual network's address range in CIDR notation (for example, 192.168.1.0). This must not overlap the address space of the Azure Stack Hub virtual network.
 
    - **Subnet Name** - The name of the first subnet within the virtual network.
 
