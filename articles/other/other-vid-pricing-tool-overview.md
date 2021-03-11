@@ -2,9 +2,9 @@
 title: UKCloud Pricing Estimation Tool overview video
 description: Shows a video that provides an overview of the Pricing Estimation Tool
 services: other
-author: Dan Baker
-reviewer: Sue Highmoor
-lastreviewed: 24/09/2019
+author: dbaker
+reviewer: shall
+lastreviewed: 11/03/2021
 
 toc_rootlink: Videos
 toc_sub1: 
@@ -18,7 +18,7 @@ toc_mdlink: other-vid-pricing-tool-overview.md
 
 # UKCloud Pricing Estimation Tool overview video
 
-The following video provides an overview of the UKCloud [Pricing Estimation tool](https://ukcloud.com/price-estimator-tool/).
+The following video provides an overview of the [UKCloud Pricing Estimation Tool](https://ukcloud.com/price-estimator-tool/).
 
 <div class="row">
   <div class="col-md-10">
