@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-v4-update.md
 
 ## Update Information
 
-In OpenShift version 4, updates of the cluster and operating system of the nodes have been exposed to the customer through the cluster. You can update clusters through the UI and the cluster will then deal with updating the relevant operator components and the OS version of the RHCOS nodes running as masters, infras and workers. The OS version of the nodes is tied to the version of the cluster and is thoroughly tested by Red Hat pipelines prior to release.
+In OpenShift version 4, updates of the cluster and operating system of the nodes have been exposed to the customer through the cluster. You can update clusters through the UI and the cluster will then deal with updating the relevant operator components and the OS version of the RHCOS nodes running as controlplanes, infras and workers. The OS version of the nodes is tied to the version of the cluster and is thoroughly tested by Red Hat pipelines prior to release.
 
 ## Supported Strategy
 
@@ -40,8 +40,6 @@ There are three update channels available to choose from:
 
 - You must be a cluster admin user
 
-- You must contact UKCloud Support and ask for an etcd backup to be taken to ensure there is a restore point in case of corruption during the update
-
 ### Process
 
 1. In the UI, navigate to **Administration > Cluster Settings**.
@@ -56,11 +54,17 @@ There are three update channels available to choose from:
 
 5. This will return you to the cluster settings screen where you can see the updates progress represented as a percentage.
 
+### Mandatory updates
+
+We require customers to remain no further than 1 minor version behind the latest release. This means when 4.x is released you will need to be running 4.x-1 minimum. We ask this so we can ensure that security and bug fixes are applied in a timely manner to minimise any risk to your applications. If you are still running 4.x-2 or greater 2 weeks after the release of 4.x then we will reach out to arrange an upgrade. If a month after the release of 4.x the update has not been applied then UKCloud will initiate this on behalf of customers.
+
 ## Further information
 
 For some additional information regarding upgrading a cluster, see the following OpenShift documentation:
 
-- <https://docs.openshift.com/container-platform/4.5/updating/updating-cluster.html>
+- <https://docs.openshift.com/container-platform/4.7/updating/updating-cluster-between-minor.html>
+- <https://docs.openshift.com/container-platform/4.7/updating/updating-cluster.html>
+- <https://docs.openshift.com/container-platform/4.7/updating/updating-cluster-cli.html>
 
 ## Feedback
 
