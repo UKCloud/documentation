@@ -418,7 +418,7 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
      ![Add new connection](images/azs-public-browser-add-connection-blade.png)
 
-6. Navigate to your connection by clicking **Connections**, in the **virtual network gateway**.
+6. Navigate to your connection by clicking **Connections** in the **virtual network gateway**.
 
 7. In the **Configuration** blade, enter the following information to configure the custom IPsec policy to allow a site-to-site connection between Azure Stack Hub and public Azure:
 
