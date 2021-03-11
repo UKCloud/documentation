@@ -3,8 +3,8 @@ title: Understanding the difference between GB and GiB
 description: Explains the difference between GB and GiB and why it's important
 services: other
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 16/04/2019
+reviewer: myoung
+lastreviewed: 10/12/2020
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -19,6 +19,8 @@ toc_mdlink: other-ref-gib.md
 # Understanding the difference between GB and GiB
 
 ## Overview
+
+This article explains why an operating system can report a different disk drive capacity to that specified by the vendor of the drive. UKCloud charges per GiB, rather than per GB, to ensure that you only pay for what you actually use. 
 
 This article provides information about disk capacity and explains when viewed by an operating system, why the capacity of a drive differs from what is reported by a vendor.
 
