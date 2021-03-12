@@ -2,9 +2,9 @@
 title: Supported customer update strategy for version 4 clusters
 description: Provides information on supported strategies for self-service customer updates
 services: openshift
-author: Kieran O'Neill
+author: koneill
 reviewer: 
-lastreviewed: 24/07/2020
+lastreviewed: 12/03/2021
 toc_rootlink: Reference
 toc_sub1: v4
 toc_sub2:
