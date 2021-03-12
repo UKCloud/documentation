@@ -72,7 +72,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 1. Create a [public Azure and Azure Stack Hub service principal name (SPN)](azs-how-create-spn-powershell.md).
 
-2. From an elevated (administrator) PowerShell console, run either the custom script extension or PowerShell script to download the required module and execute the backup process:
+2. From an elevated (administrator) PowerShell console, run either the custom script extension or PowerShell script to download the required module and execute the backup process. The PowerShell script must be run from inside the target VM, whereas the custom script extension can be executed from a local machine.
 
 > [!IMPORTANT]
 > As the MARS script will be pulled from GitHub the VM must have internet access.
