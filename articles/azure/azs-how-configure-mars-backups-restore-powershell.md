@@ -104,17 +104,19 @@ $Location = (Get-AzLocation).Location
 $ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
 $ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
 $TenantID = "<output form="tenantid" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
+$AzureResourceGroup = "<output form="azureresourcegroup" name="result" style="display: inline;">AzureStackBackupRG</output>"
 $VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
 $EncryptionKey = "<output form="encryptionkey" name="result" style="display: inline;">ExampleEncryptionKey</output>"
 $AzureLocation = "<output form="azurelocation" name="result" style="display: inline;">ukwest</output>"
-$BackupDays = '"<output form="backupdays" name="result" style="display: inline;">Wednesday, Sunday</output>"'
-$BackupTimes = '"<output form="backuptimes" name="result" style="display: inline;">16:00, 20:00</output>"'
-$FoldersToBackup = '"<output form="folderstobackup" name="result" style="display: inline;">C:\Users, C:\Important\*.txt</output>"'
+$BackupDays = "<output form="backupdays" name="result" style="display: inline;">Wednesday,Sunday</output>"
+$BackupTimes = "<output form="backuptime1" name="result" style="display: inline;">10:00</output><output form="backuptime2" name="result" style="display: inline;"></output><output form="backuptime3" name="result" style="display: inline;"></output>"
+$RetentionLength = "<output form="retentionlength" name="result" style="display: inline;">7</output>"
+$FoldersToBackup = "<output form="folderstobackup" name="result" style="display: inline;">C:\Users,C:\Temp</output>"
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
 $CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">AzureBackupConfig.ps1</output>"
 $FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
-$ScriptArguments = "<output form="scriptargs" name="result" style="display: inline;">-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow</output>"
+$ScriptArguments = "-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -AzureResourceGroup $AzureResourceGroup -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow</output>"
 $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Windows VM
@@ -131,14 +133,16 @@ $ScriptName = "AzureBackupConfig.ps1"
 $ClientID = "<output form="clientid" name="result2" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
 $ClientSecret = "<output form="clientsecret" name="result2" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
 $TenantID = "<output form="tenantid" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
+$AzureResourceGroup = "<output form="azureresourcegroup" name="result2" style="display: inline;">AzureStackBackupRG</output>"
 $VaultName = "<output form="vaultname" name="result2" style="display: inline;">AzureStackVault</output>"
 $EncryptionKey = "<output form="encryptionkey" name="result2" style="display: inline;">ExampleEncryptionKey</output>"
 $AzureLocation = "<output form="azurelocation" name="result2" style="display: inline;">ukwest</output>"
-$BackupDays = '"<output form="backupdays" name="result2" style="display: inline;">Wednesday, Sunday</output>"'
-$BackupTimes = '"<output form="backuptimes" name="result2" style="display: inline;">16:00, 20:00</output>"'
-$FoldersToBackup = '"<output form="folderstobackup" name="result2" style="display: inline;">C:\Users, C:\Important\*.txt</output>"'
+$BackupDays = "<output form="backupdays" name="result2" style="display: inline;">Wednesday,Sunday</output>"
+$BackupTimes = "<output form="backuptime1" name="result2" style="display: inline;">10:00</output><output form="backuptime2" name="result2" style="display: inline;"></output><output form="backuptime3" name="result2" style="display: inline;"></output>"
+$RetentionLength = "<output form="retentionlength" name="result2" style="display: inline;">7</output>"
+$FoldersToBackup = "<output form="folderstobackup" name="result2" style="display: inline;">C:\Users,C:\Temp</output>"
 $FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
-$ScriptArguments = "<output form="scriptargs" name="result2" style="display: inline;">-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow</output>"
+$ScriptArguments = "-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow</output>"
 
 # Download the AzureBackupConfig.ps1 script
 Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script..."
