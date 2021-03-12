@@ -2,9 +2,9 @@
 title: UKCloud for Managed OpenShift lifecycle and patch management
 description: Provides an overview of how UKCloud manages the patching and lifecycle support of its OpenShift service
 services: openshift
-author: Steve Dixon
-reviewer: Kieran O'Neill
-lastreviewed: 20/03/2020
+author: sdixon
+reviewer: koneill
+lastreviewed: 12/03/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -29,19 +29,19 @@ Administrators and operators of the UKCloud for Managed OpenShift service.
 
 Red Hat's official versioning for their OpenShift Container Platform is _**X.Y**_ where _**X**_ indicates the major version and _**Y**_ indicates a minor version.
 
-Although Red Hat officially fully support each major _**X**_ version of the OpenShift Container Platform for five years, as a service provider, this duration is too long for UKCloud to ensure the highest levels of security, performance and features. As such, UKCloud will officially support the current **_(X.Y)_** and previous minor version **_(X.Y-1)_**. As minor versions are released roughly every six months, this provides the assurance that your environments will be fully supported by UKCloud for a minimum of twelve months.
+Although Red Hat officially fully supports each major _**X**_ version of the OpenShift Container Platform for five years, as a service provider, this duration is too long for UKCloud to ensure the highest levels of security, performance and features. As such, UKCloud will officially support the current **_(X.Y)_** and previous minor version **_(X.Y-1)_**. As minor versions are released roughly every six months, this provides the assurance that your environments will be fully supported by UKCloud for a minimum of twelve months.
 
 ![Lifecycle](images/oshift-supported-versions.png)
 
 ### Upgrades of major _**X**_ and minor _**Y**_ versions
 
-Currently, UKCloud does not offer in-place upgrades between major versions. Minor version upgrades can be triggered by customers inside the cluster at any time, this provides you with total flexibility to upgrade at a time convenient to you.
+Currently, UKCloud does not offer in-place upgrades between major versions. Customers can trigger minor version upgrades inside the cluster at any time, providing total flexibility to upgrade at a convenient time.
 
-We do require customers to stay on supported versions so ask that upgrades are done in a timely manner to stay on a Y-1 release. More information on performing updates and when we will contact you if you aren't on Y-1 can be found here: <need update branch merged first to add URL to these docs>
+We require customers to stay on UKCloud-supported versions, so ask that upgrades are done in a timely manner to stay on a Y-1 release. For more information on performing updates and what happens if customers aren't on Y-1, see [*Supported customer update strategy for version 4 clusters*](oshift-how-v4-update.md). <need update branch merged first to add URL to these docs>
 
 ### Patching within current version
 
-Red Hat routinely releases patches for vulnerabilities or issues identified within the currently supported version of OpenShift. These patches will be released to the stable update channel when they are confirmed to be fit for production workloads.
+Red Hat routinely releases patches for vulnerabilities or issues identified within the currently supported version of OpenShift. UKCloud will release these patches to the stable update channel when they are confirmed to be fit for production workloads.
 
 ## Feedback
 
