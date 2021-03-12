@@ -4,7 +4,7 @@ description: Provides an overview of the processes surrounding the request of Ex
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 11/03/2021
+lastreviewed: 12/03/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -28,21 +28,22 @@ However, to ensure that you're able to meet your own legislative, regulatory and
 >
 > Confidential information includes, but is not limited to all commercial, marketing, financial, technical, security, personnel, operational and similar information, including trade secrets, "know how", brand marks, trademarks and other proprietary information.
 
-This article provides useful information for undertaking appropriate security reviews of your services above the underlying UKCloud platform. It highlights the notice requirement for performing penetration tests, and provides access to the form that you must complete before arrangements can be made.
+This article provides useful information for undertaking appropriate security reviews of your services above the underlying UKCloud platform. It highlights the notice requirement for performing penetration tests, and steps through the process for arranging the testing.
 
 ## Service scope
 
 As above, the underlying technology platform supporting UKCloud's services and customer management tools, for example the UKCloud Portal, are fully tested for our Assured and Elevated security domains. You will therefore be testing from a cloud consumer rather than a cloud management perspective.
 
-Within UKCloud for VMware, the platform extends to the perimeter of the your vCloud organisation with the edge gateway acting as the boundary.
+For example, within UKCloud for VMware, the platform extends to the perimeter of the your vCloud organisation with the edge gateway acting as the boundary. The diagram below shows that the edge gateway, along with everything to the right, is your responsibility and can be included within the scope of your security test.
 
-An example of this is depicted in the diagram below, which shows that the edge gateway, along with everything to the right, is your responsibility and can be included within the scope of your security test.
-
-![Scope of external security review testing](images/other-esrt-scope.png)
+![Scope of external security review testing for UKCloud for VMware](images/other-esrt-scope.png)
 
 ## Engagement and operation of tests
 
 UKCloud will cooperate with you to support external penetration testing requirements, subject to four (4) working days' notice being given as long as the following activities have been completed.
+
+> [!NOTE]
+> If testing is to be conducted in both Assured and Elevated security domains, you must complete separate requests for each system.
 
 To request permission to perform a test, you must:
 
@@ -74,9 +75,9 @@ To request permission to perform a test, you must:
 
    ![Testing Scope page](images/other-esrt-sr-scope.png)
 
-9. On the *Testing Organisation* page, enter your organisation details.
+9. On the *Testing Organisation* page, enter contact details for the organisation that will be completing the testing.
 
-10. In the **Source IP Address for Tests** field, enter ???, then click **Continue**.
+10. In the **Source IP Address for Tests** field, enter the IP address from which the testing will originate, then click **Continue**.
 
     ![Testing Organisation page](images/other-esrt-sr-org.png)
 
@@ -87,24 +88,19 @@ To request permission to perform a test, you must:
     > [!NOTE]
     > If you want to share any other relevant information (for example, a formal scope), you can attach this to your Service Request.
 
-On receipt of the Service Request, UKCloud will review the submission at the next possible Change Advisory Board (CAB) and provide an update in the Service Request, either:
+13. On receipt of the Service Request, UKCloud will review the submission at the next possible Change Advisory Board (CAB) and provide an update in the Service Request, either:
 
-- Where the request is approved, to convey technical authority to proceed with the test at the date and time specified, and in accordance with the documented testing scope.
+    - Where the request is approved, to convey technical authority to proceed with the test at the date and time specified, and in accordance with the documented testing scope.
 
-- Where the request is not approved, to convey the result and the reasons for it, enabling you to decide whether to withdraw or resubmit the request.
-
-> [!NOTE]
-> If testing is to be conducted in both Assured and Elevated security domains, you must complete separate requests for each system.
+    - Where the request is not approved, to convey the result and the reasons for it, enabling you to decide whether to withdraw or resubmit the request.
 
 ## Testing access points
 
 You may test from two locations:
 
-- **External (from outside the virtual environment)** – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. These tests will traverse UKCloud's physical network edge, and enter your vCloud organisation through the edge gateway.
+- **External (from outside the virtual environment)** – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. For example for UKCloud for VMware, these tests will traverse UKCloud's physical network edge, and enter your vCloud organisation through the edge gateway.
 
-- **Internal (from inside the virtual environment)** – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. It is expected that you would provision a virtual machine (VM) within your vCloud organisation to act as a launch-pad for testing. Any testers would then upload relevant tools to this VM to execute tests within your organisation.
-
-If you don't have a compute service prior to testing to use for this purpose, you can provision a new compute service, which will be billed under as normal consumption.
+- **Internal (from inside the virtual environment)** – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. It is expected that you would provision a virtual machine (VM) or instance within your environment (which will be billed under as normal consumption) to act as a launch-pad for testing. Any testers would then upload relevant tools to this VM to execute tests within your organisation.
 
 ## Pricing
 
