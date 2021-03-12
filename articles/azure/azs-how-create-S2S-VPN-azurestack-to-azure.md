@@ -3,8 +3,8 @@ title: How to create a site-to-site connection between Azure Stack Hub and publi
 description: Create a site-to-site VPN gateway connection between Azure Stack Hub and public Azure using the UKCloud Azure Stack Hub portal
 services: azure-stack
 author: dbrennand
-reviewer: rjarvis
-lastreviewed: 19/10/2020
+reviewer: wturner123
+lastreviewed: 12/03/2021
 
 toc_rootlink: Users
 toc_sub1: How To
