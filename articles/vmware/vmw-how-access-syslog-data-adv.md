@@ -59,7 +59,7 @@ The simplest scenario is to gather syslog data from a single NSX edge into one c
 
     - **Name:** Customer defined
 
-    - **Gateway:** `100.127.255.249`
+    - **Gateway:** `100.127.255.249/29`
 
     - **Subnet Mask:** `255.255.255.248`
 
