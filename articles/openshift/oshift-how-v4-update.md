@@ -56,7 +56,7 @@ There are three update channels available to choose from:
 
 ### Mandatory updates
 
-We require customers to remain no further than one (1) minor version behind the latest release. This means when 4.x is released you must be running 4.x-1 at a minimum. This ensures that we can apply security and bug fixes in a timely manner to minimise any risk to your applications. If you're still running 4.x-2 or older two weeks after the release of 4.x, we'll reach out to arrange an upgrade. If a month after the release of 4.x the update has not been applied, UKCloud will initiate the update on behalf of the customer.
+We require customers to remain no further than one (1) minor version behind the latest release. This means when 4.x is released you must be running 4.x-1 at a minimum. This ensures that we can apply security and bug fixes in a timely manner to minimise any risk to your applications. If you're still running 4.x-2 or older two weeks after the release of 4.x we'll reach out, via a service request in the name of the main contact, to arrange an upgrade. If a month after the release of 4.x the update has not been applied, UKCloud will initiate the update on behalf of the customer.
 
 ## Further information
 
