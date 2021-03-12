@@ -79,6 +79,13 @@ Enter details below to provide values for the variables in the scripts in this a
 
 ## [Custom script extension](#tab/tabid-1)
 
+> [!WARNING]
+> Spaces are not permitted within the individual script arguments passed to the Set-AzVMCustomScriptExtension cmdlet.
+>
+> For example, <code>Monday, Thursday</code> should be passed as <code>Monday,Thursday</code>.
+>
+> This also means that you cannot have any spaces in the folders to backup, e.g. <code>C:\My Folder</code>. If these are required, you must use the alternative PowerShell script and execute the code inside the VM itself.
+
 <pre><code class="language-PowerShell"># Initialise environment and variables
 
 # Declare endpoint
