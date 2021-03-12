@@ -2,9 +2,9 @@
 title: How to access VMware Cloud Director through the vCloud API
 description: Describes how to get started with the vCloud API
 services: vmware
-author: Sue Highmoor
-reviewer: Dylan Coombes
-lastreviewed: 5/11/2019 13:30:00
+author: shighmoor
+reviewer: dcoombes
+lastreviewed: 05/11/2019
 
 toc_rootlink: How To
 toc_sub1:

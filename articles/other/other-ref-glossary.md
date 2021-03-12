@@ -267,7 +267,7 @@ For more information, see the [Journaling Protection service scope](../vmware/vm
 
 ### Jumpstart
 
-A service providing skilled engineers and architects, on an hourly or daily basis, who can help design and build UKCloud solutions for you. For example, by helping you configure IPsec connectivity to UKCloud, create an Active Directory domain, build Terrform or Ansible templates for OpenStack or prepare applications for deployment to OpenShift.
+A service providing skilled engineers and architects, on an hourly or daily basis, who can help design and build UKCloud solutions for you. For example, by helping you configure IPsec connectivity to UKCloud, create an Active Directory domain, build Terraform or Ansible templates for OpenStack or prepare applications for deployment to OpenShift.
 
 For more information, see the [Jumpstart FAQs](../other/other-faq-jumpstart.md).
 
@@ -551,17 +551,17 @@ A UKCloud service that provides a platform to deliver, protect and manage deskto
 
 For more information, see the [UKCloud Desktop as a Service Service Definition](../daas/daas-sd.md).
 
-### UKCloud for Microsoft Azure
-
-A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
-
-For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
-
 ### UKCloud for Managed OpenShift
 
 A UKCloud PaaS service that delivers a secure, private deployment of OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks including HCSN and Janet.
 
 For more information, see the [UKCloud for Managed OpenShift service definition](../openshift/oshift-sd.md).
+
+### UKCloud for Microsoft Azure
+
+A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
+
+For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
 
 ### UKCloud for OpenStack
 

@@ -62,7 +62,7 @@ AB     | Tier1StorageIncluded              | Tier 1 storage amount that is not c
 AC     | Tier1StorageChargeable            | Tier1StorageUsed + Tier1SnapshotUsed - Tier1StorageIncluded | OpenStack, VMware
 AD     | Tier1StoragePricePerHour          | Service catalogue price for Tier 1 storage and security domain converted into hourly charge per GiB | OpenStack, VMware
 AE     | Tier1StoragePrice                 | Tier1StorageChargeable * Tier1StoragePricePerHour * UsageHoursWithinPeriod | OpenStack, VMware
-AF     | Tier2StorageUsed                  | Tier 2 torage allocated | OpenStack, VMware
+AF     | Tier2StorageUsed                  | Tier 2 storage allocated | OpenStack, VMware
 AG     | Tier2SnapshotStorageUsed          | Tier 2 storage allocated for vCloud snapshots | VMware
 AH     | Tier2StorageIncluded              | Tier 2 storage amount that is not charged (60GiB of Tier 2 storage is included if powered on (10GiB for Micro VMS)) | VMware
 AI     | Tier2StorageChargeable            | Tier2StorageUsed + Tier2SnapshotUsed - Tier2StorageIncluded | OpenStack, VMware

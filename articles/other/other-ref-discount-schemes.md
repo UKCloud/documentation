@@ -31,7 +31,7 @@ If the customer has an existing contract, they need to accept a Contract Change 
 
 PO value      | Discount level
 --------------|---------------
-<250K         | 0%
+<£250K         | 0%
 £250K-£499K   | 9%
 £500K-£749K   | 13%
 £750K-£1,499K | 16%
@@ -43,7 +43,7 @@ PO value      | Discount level
 
 - At the end of each month, UKCloud will do one of two things:
 
-  - If the actual usage is above the committed value, UKCloud will take the value from the monthly commitment line item and teh remaining balance from the overspend line item.
+  - If the actual usage is above the committed value, UKCloud will take the value from the monthly commitment line item and the remaining balance from the overspend line item.
 
   - If the actual usage is below the set value, UKCloud will bill the customer the committed value.
 

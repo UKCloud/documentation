@@ -77,17 +77,7 @@ Inter-service messaging | Utilise a resilient message queuing architecture to ha
 Databases | Every database has a high availability option. We recommend that you adopt an N+1 clustered database model (but avoid shared disk architectures), in conjunction with sharding or asynchronous replication technologies, to create a replica of this database in another location.
 Data | Make sure you take a copy of your application or database data at appropriate intervals to meet your Recovery Point Objective (RPO) and store the copy somewhere outside your current site.
 
-### UKCloud for Microsoft Azure
-
-In UKCloud for Microsoft Azure, you can use availability sets to spread VMs across multiple fault domains and update domains. In the event of downtime in one domain due to a hardware failure or Planned Maintenance, VMs in the affected domain are restarted in another domain. For more information, see [Providing high availability](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-overview?view=azs-1908#providing-high-availability).
-
-A load balancer spreads incoming requests across multiple VMs, helping with scale and availability. For more information, see [*How to create a load balancer using the UKCloud Azure Stack Hub portal*](../azure/azs-how-create-load-balancer.md).
-
-With Azure Site Recovery, you can replicate a VM to a different region for disaster recovery. For more information, see [*How to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell*](../azure/azs-how-deploy-asr-template-powershell.md).
-
-Use SQL Always On to ensure the availability of SQL server. For more information, see [*How to deploy an SQL template to Azure Stack Hub using PowerShell*](../azure/azs-how-deploy-sql-template-powershell.md).
-
-### UKCloud for OpenShift
+### UKCloud for Managed OpenShift
 
 Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from Neustar UltraDNS from UKCloud) to ensure traffic is redirected should a region or cluster level availability issue occur.
 
@@ -102,6 +92,16 @@ Within each OpenShift cluster deployment there are a number of features that sup
 - We recommend always having more than one application node deployed in each cluster. If you only have one node for your application containers, a single host failure could affect all applications deployed in the cluster as they'd have nowhere to fail over to within the cluster until the node is recovered and returned to service.
 
 - You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of >1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform's understanding of any problematic containers.
+
+### UKCloud for Microsoft Azure
+
+In UKCloud for Microsoft Azure, you can use availability sets to spread VMs across multiple fault domains and update domains. In the event of downtime in one domain due to a hardware failure or Planned Maintenance, VMs in the affected domain are restarted in another domain. For more information, see [Providing high availability](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-overview?view=azs-1908#providing-high-availability).
+
+A load balancer spreads incoming requests across multiple VMs, helping with scale and availability. For more information, see [*How to create a load balancer using the UKCloud Azure Stack Hub portal*](../azure/azs-how-create-load-balancer.md).
+
+With Azure Site Recovery, you can replicate a VM to a different region for disaster recovery. For more information, see [*How to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell*](../azure/azs-how-deploy-asr-template-powershell.md).
+
+Use SQL Always On to ensure the availability of SQL server. For more information, see [*How to deploy an SQL template to Azure Stack Hub using PowerShell*](../azure/azs-how-deploy-sql-template-powershell.md).
 
 ### UKCloud for OpenStack
 

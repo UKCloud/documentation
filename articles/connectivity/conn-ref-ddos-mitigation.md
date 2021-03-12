@@ -2,9 +2,9 @@
 title: DDoS mitigation causing VPN failures and slow applications
 description: Explains how customers can reduce IPsec and MTU issues to allow packets to traverse the internet and enter the UKCloud platform
 services: connectivity
-author: Sue Highmoor
-reviewer: caldridge
-lastreviewed: 03/03/2020
+author: shighmoor
+reviewer: nstobbart
+lastreviewed: 15/02/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -25,7 +25,7 @@ UKCloud utilises a hybrid solution Distributed Denial of Service (DDoS) mitigati
 
 Although DDoS mitigation is a valuable service, there are some considerations to be aware of that could impact your environment if not accounted for, for example by causing VPN failures or slow applications.
 
-These may not be apparent in normal local operation of the DDoS service, but only come to light when larger attacks are mitigated via the cloud. This is because, during cloud mitigation, traffic is tunnelled, adding IP overhead. This could potentially cause packet fragmentation, resulting in the issues mentioned above.
+These may not be apparent in normal local operation of the DDoS service, but only come to light when larger attacks are mitigated via the cloud. This is because, during cloud mitigation, traffic is tunnelled from our supplier to UKCloud, adding IP overhead. This could potentially cause packet fragmentation, resulting in the issues mentioned above.
 
 ## Recommendation
 

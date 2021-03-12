@@ -224,7 +224,7 @@ To locate the IPsec VPN settings, open a new text editor window and copy and pas
 <GatewayIpsecVpnService>
    <IsEnabled>true</IsEnabled>
    <Endpoint>
-      <Network type="application/vnd.vmware.admin.network+xml" href="https://api.vcd.portal.ukcloud.com/api/admin/network/3c284ec8-2850- ba77-098c-7f697a3d8769"/>
+      <Network type="application/vnd.vmware.admin.network+xml" href="https://api.vcd.portal.skyscapecloud.com/api/admin/network/3c284ec8-2850- ba77-098c-7f697a3d8769"/>
       <PublicIp>37.26.88.73</PublicIp>
    </Endpoint>
    <Tunnel>

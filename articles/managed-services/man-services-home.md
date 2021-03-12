@@ -1,29 +1,32 @@
 ---
-title: UKCloud Managed Services
-description: Provides an overview of the Managed Services offerings UKCloud provides
+title: UKCloud managed service products
+description: Provides an overview of the managed service products UKCloud provides
 services: managed-services
 author: sdixon
 reviewer: sdixon
-lastreviewed: 04/01/2021
+lastreviewed: 01/02/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud Managed Services Overview
+toc_title: UKCloud managed service products
 toc_fullpath: About/man-services-home.md
 toc_mdlink: man-services-home.md
 ---
 
-# UKCloud Managed Services
+# UKCloud managed service products
 
-## What Managed Services does UKCloud offer?
+## What managed service products does UKCloud offer?
 
-UKCloud offers a variety of Managed Services, all focused around removing the distraction of IT hygiene, enabling organisations to focus on genuine business value.
+UKCloud offers a variety of managed service products, all focused around removing the distraction of IT hygiene, enabling organisations to focus on genuine business value.
 
-The following provides a brief overview of our Managed Services; click the links for further details.
+The following provides a brief overview of our managed service products; click the links for further details.
 
-- [**Managed IT Operations**](man-sd-managed-it-ops.md) - A portfolio of Managed Services focused on enhancing the general health of your compute assets. This portfolio is comprised of the following elements:
+> [!NOTE]
+> These services are not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
+
+- [**Managed IT Operations**](man-sd-managed-it-ops.md) - A portfolio of managed services focused on enhancing the general health of your compute assets. This portfolio is comprised of the following elements:
   
   - [**_Managed Monitoring as a Service_**](man-monitoring-sco.md) - The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate, leveraging the power of AIOps to reduce the amount of noise you traditionally had to filter through, enabling you to focus on the critical events that really matter.
 
@@ -41,9 +44,9 @@ The following provides a brief overview of our Managed Services; click the links
 
   - [**_Managed Web Server_**](man-sd-webserver.md) - Provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers. This level of monitoring and support, when coupled with proactive operating system patching, provides you with the confidence that your web services are operating effectively.
 
-  - [**_Managed Active Directory (AD) Support_**](man-sd-ad.md) - Provides you with monitoring and support for your Active Directory services and supporting Windows servers. This level of monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your AD services are operating effectively.
+  - [**_Managed Active Directory (AD) Support_**](man-sd-ad.md) - Provides you with monitoring and support for your AD services and supporting Windows servers. This level of monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your AD services are operating effectively.
 
-  - [**_Managed Remote Desktop Services (RDS) Support_**](man-sd-rds.md) - Provides you with monitoring and support for your Remote Desktop Services and supporting Windows servers. This level of monitoring and support, when coupled with pro-active Windows patching, provides you with the confidence that your RDS services are operating effectively.
+  - [**_Managed Remote Desktop Services (RDS) Support_**](man-sd-rds.md) - Provides you with monitoring and support for your RDS and supporting Windows servers. This level of monitoring and support, when coupled with pro-active Windows patching, provides you with the confidence that your RDS services are operating effectively.
 
 - [**Extended Network Support from UKCloud**](man-sd-network.md) - Enables customers to choose from an extensive list of officially supported network appliances with UKCloud undertaking the initial deployment (or assuming ownership of valid existing networks) and configuration of the various elements of your virtual network, along with the ongoing monitoring and support.
 

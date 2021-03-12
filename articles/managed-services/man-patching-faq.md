@@ -2,9 +2,9 @@
 title: Patching as a Service FAQs
 description: Frequently asked questions for Patching as a Service
 services: managed-services
-author: Steve Dixon
-reviewer:
-lastreviewed: 08/10/2020 15:17:17
+author: sdixon
+reviewer: sdixon
+lastreviewed: 01/03/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
@@ -64,6 +64,20 @@ The following diagram shows the six available cut-off dates and associated Devic
 >
 > * Customers are advised to use ***Device Groups F to J*** to apply patches on VMs within their production environments on the basis that no issues ave been identified in their non-production environments.
 
+### How do I recover from applying a patch that may have had an adverse effect on my environment?
+
+Before applying patches within a production environment, it is the customer's responsibility to test those patches in a representative non-production environment to detect any potential adverse impact within the production environment.
+
+For customers using Patching as a Service on our UKCloud for VMware platform, UKCloud will endeavour to create a recovery point of a VM immediately prior to applying patches. As we cannot guarantee the creation of a recovery point (for example, open files may block the creation of a recovery point), UKCloud provides the following options for customers to choose from to determine how Patching as a Service should proceed should the creation of a recovery point fail:
+
+- Hard (default option): The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will not proceed.
+
+- Soft: The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will still proceed.
+
+- Disabled: The patching system will not attempt to snapshot the virtual machine prior to applying any patches. This option is for virtual machines not running on the UKCloud VMware platform, or for virtual machines that are unable to have snapshots taken.
+
+UKCloud will retain any successful recovery points for a maximum of 48 hours, therefore it is essential that customers check for any potential issues within 48 hours of any patches being applied.
+
 ### Windows patches vs Linux package updates
 
 There are major differences between the way that Microsoft releases patches for its Windows OSs and the way that most Linux distribution vendors provide updates. The key difference is:
@@ -77,6 +91,20 @@ To make best use of existing tooling within those Linux distributions, our servi
 ### What if the application of a patch fails?
 
 Each patching window is followed by 18 hours of issue resolution time, in which issues during automatic patching are investigated and may involve actions such as manual application of patches, and so on. Following the end of this window, the customer will be contacted by UKCloud Support with the current state. If more time is required, this will be arranged at that point.
+
+### What if I require additional patches outside of my standard patching cycle?
+
+The customer is responsible for notifying UKCloud of any patches (including critical patches) they require to be applied outside of their standard patching cycle via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. UKCloud will not proactively scan for or apply any patches outside of a customer's standard patching cycle. Should a customer raise a Service Request for patches to be applied outside of their standard patching cycle, our standard [Service Request resolution target](https://docs.ukcloud.com/articles/portal/ptl-how-raise-escalate-service-request.html?q=ticket) will apply, with the clock starting from the point we receive the Service Request **and** a vendor released patch being made publicly available.
+
+## Prerequisites
+
+### Operating systems
+
+UKCloud will only support in-life, vendor-backed operating systems, such as Microsoft Windows, Red Hat Enterprise Linux and Canonical Ubuntu. Customer-built operating systems (for example Gentoo Linux custom build) are unsupported by this service.
+
+### Customer environment configuration
+
+For UKCloud to correctly scan for and apply OS patches, the customer must agree to and configure port 445 to be open on all virtual machines and associated operating systems opted-in to this service.
 
 ## Management
 

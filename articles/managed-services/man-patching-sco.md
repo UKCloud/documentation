@@ -2,7 +2,7 @@
 title: Patching as a Service Service Scope
 description: Outlines important details regarding Patching as a Service
 services: managed-services
-author: Steve Dixon
+author: sdixon
 reviewer:
 lastreviewed: 15/09/2020
 toc_rootlink: Managed IT Operations
@@ -24,6 +24,19 @@ This document is for customers considering purchasing Patching as a Service.
 It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the service.
 
 ## Scope of Patching as a Service
+
+> [!NOTE]
+> This service is not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
+
+| Servers Supported                                     |
+|-------------------------------------------------------|
+| In-life Windows Server                                |
+| In-life RPM based Linux distributions (RHEL/CentOS)   |
+| In-life Debian based Linux distributions (Ubuntu)     |
+
+All servers that constitute this service must be patched to within 90 days of the most recent patches released by Microsoft. During onboarding, should UKCloud find any exceptions to this policy, UKCloud has the right to cancel this service after consultation with the customer.
+
+Customers can engage UKCloud's Professional Services team to assess and apply outstanding patches prior to commencement of this service (additional costs apply).
 
 The following tables outline the boundaries of responsibilities for Patching as a Service.
 
@@ -56,15 +69,17 @@ Configuring agents             | R       | A/C      |                           
 
 ### Patching as a Service - Applying patches
 
-Patching element                                              | UKCloud | Customer | UKCloud - Professional Services | Notes
---------------------------------------------------------------|---------|----------|---------------------------------|------
-Scanning customer VMs for applicable patches                  | A/R     | I        |                                 |
-Approving patches                                             | C       | A/R      |                                 | Although UKCloud will validate the quality of patches being supplied, the customer is ultimately responsible for ensuring the application of any patches will not corrupt their environments
-Taking a snapshot of a VM prior to applying patches           | A/R     | I        |                                 |
-Ensuring the success of VM snapshot prior to applying patches | A/R     | R/A      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
-Applying customer approved patches                            | A/R     |          |                                 |
-Ensuring the success of customer approved patches             | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
-Restoring from snapshot if patching fails                     | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+Patching element                                                  | UKCloud | Customer | UKCloud - Professional Services | Notes
+------------------------------------------------------------------|---------|----------|---------------------------------|------
+Scheduled scanning of customer VMs for applicable patches         | A/R     | I        |                                 |
+Approving patches                                                 | C       | A/R      |                                 | Although UKCloud will validate the quality of patches being supplied, the customer is ultimately responsible for ensuring the application of any patches will not corrupt their environments
+Taking a snapshot of a VM prior to applying patches               | A/R     | I        |                                 |
+Ensuring the success of VM snapshot prior to applying patches     | A/R     | R/A      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+Applying customer approved patches                                | A/R     | I        |                                 |
+Ensuring the success of customer approved patches                 | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+Restoring from snapshot if patching fails                         | A/R     | R/C      |                                 | See [General support and troubleshooting](#general-support-and-troubleshooting)
+Identification of patches outside customer defined patching cycle | I       | A/R      |                                 | Customer will notify UKCloud via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal of any specific patches to be applied outside of the normal schedule of the service
+Application of patches outside customer defined patching cycle    | A/R     | I        |                                 | Subject to UKCloud's standard Service Request service target and patches being made publicly available by the vendor
 
 ## General support and troubleshooting
 

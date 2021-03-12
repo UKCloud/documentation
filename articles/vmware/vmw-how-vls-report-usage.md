@@ -92,7 +92,7 @@ To enable automatic reporting:
 
     - **Name**: Enter the name for the reporting, for example, `UKCloud VLS reports`
 
-    - **Reporting Day**: Select the day on which you want to send the reports (you must provide usage reports to UKCloud within the first five working days of each month)
+    - **Reporting Day**: Select **1**
 
     - **Reports**: Select the **Customer Monthly Usage** and **Monthly Usage** check boxes
 

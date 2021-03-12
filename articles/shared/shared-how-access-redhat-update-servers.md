@@ -1,6 +1,6 @@
 ---
-title: How to access Red Hat update servers
-description: Provides information about accessing Red Hat updates using Red Hat Update Infrastructure (RHUI)
+title: How to access Red Hat update servers (RHUI 2)
+description: Provides information about accessing Red Hat updates using Red Hat Update Infrastructure (RHUI 2)
 services: shared-services
 author: shighmoor
 reviewer: pcantle
@@ -10,18 +10,25 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Access Red Hat update servers
+toc_title: Access Red Hat update servers (RHUI 2)
 toc_fullpath: How To/shared-how-access-redhat-update-servers.md
 toc_mdlink: shared-how-access-redhat-update-servers.md
 ---
 
-# How to access Red Hat update servers
+# How to access Red Hat update servers (RHUI 2)
+
+> [!IMPORTANT]
+> As RHUI 2 is [scheduled for decommission](https://status.ukcloud.com/incidents/z5jz2wbcwf4f), you should consider updating to RHUI 3. For more information, see [*How to install and use Red hat Update Infrastructure (RHUI 3)*](shared-how-install-rhui-vm-3.md).
 
 ## Overview
 
 UKCloud has implemented a Red Hat Update Infrastructure (RHUI) to provide automatic updates to our Red Hat customers in the Assured OFFICIAL and Elevated OFFICIAL security domains. The benefits over the existing system are the reliable availability of patch updates and Red Hat approved OS templates.
 
 Before you attempt to establish a connection to RHUI, you need to make sure your virtual machines (VMs) can communicate with the RHUI, which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the articles for creating [NAT](../vmware/vmw-how-create-nat-rules.md) and [firewall](../vmware/vmw-how-create-firewall-rules.md) rules.
+
+### Intended audience
+
+This article is intended for customers who have not yet migrated to RHUI v3. If you need information for RHUI 3, see [*How to access Red Hat update servers (RHUI 3)*](shared-how-access-redhat-update-servers-3.md).
 
 ## New Red Hat VM templates
 

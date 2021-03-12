@@ -19,6 +19,18 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.11.3
+
+Date: 19th February 2021
+
+Bug fix and feature update
+
+Details:
+ 
+- Allow customers to create compute services in Zone 2D
+
+- Adjust session timeout logic (now the SSO session has a higher priority)
+
 ## Release 2.9.0
 
 Date: 1st December 2020

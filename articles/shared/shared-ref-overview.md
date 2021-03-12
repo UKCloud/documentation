@@ -4,14 +4,14 @@ description: Provides an overview of UKCloud's shared services
 services: shared-services
 author: shighmoor
 reviewer:
-lastreviewed: 05/10/2020
-toc_rootlink: Reference
+lastreviewed: 15/01/2021
+toc_rootlink: About
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Understanding UKCloud shared services
-toc_fullpath: Reference/shared-ref-overview.md
+toc_fullpath: About/shared-ref-overview.md
 toc_mdlink: shared-ref-overview.md
 ---
 
@@ -25,19 +25,37 @@ UKCloud provides various shared services, including update servers, licensing se
 
 ### Update servers
 
-- [Red Hat update servers]()
+- [*How to access CentOS update servers*](shared-how-access-centos-update-servers.md)
 
-- [Centos update servers]()
+- *How to access Red Hat update servers*
 
-- [Ubuntu update servers]()
+  - [RHUI 2](shared-how-access-redhat-update-servers.md)
 
-### Licensing services
+  - [RHUI 3](shared-how-access-redhat-update-servers-3.md)
 
-- [UKCloud Key Management Server]()
+- [*How to access Ubuntu update servers*](shared-how-access-ubuntu-update-servers.md)
+
+- [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](shared-how-connect-windows-update.md)
+
+  - [Video](shared-vid-wsus.md)
+
+### Licensing
+
+#### Red Hat licensing
+
+- [*How to bring your own Red Hat licensing*](shared-how-license-red-hat.md)
+
+#### Microsoft licensing
+
+- [*How to license Microsoft applications/software on the UKCloud platform*](shared-how-license-microsoft.md)
+
+- [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md)
+
+  - [Video](shared-vid-licensing-kms.md)
 
 ### Network Time Protocol servers
 
-- [Network Time Protocol server]()
+- [*Network Time Server access*](shared-ref-network-time-server.md)
 
 ## Feedback
 

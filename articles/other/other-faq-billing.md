@@ -3,8 +3,9 @@ title: Invoice and billing FAQs
 description: Frequently asked questions about invoicing and billing
 services: other
 author: shighmoor
-reviewer:
-lastreviewed: 07/01/2019
+reviewer: pheathman
+lastreviewed: 11/12/2020
+
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:

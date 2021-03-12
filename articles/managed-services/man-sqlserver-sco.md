@@ -2,7 +2,7 @@
 title: Managed SQL Server Service Scope
 description: Outlines important details regarding UKCloud's Managed SQL Server service
 services: managed-services
-author: Steve Dixon
+author: sdixon
 reviewer:
 lastreviewed: 18/09/2020
 toc_rootlink: Advanced Managed Services
@@ -25,9 +25,12 @@ It describes the boundaries of the service, along with the division of responsib
 
 ## Scope of Supported Databases
 
+> [!NOTE]
+> This service is not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
+
 The following tables outline the varies databases that can be supported with the Managed SQL Server service:
 
-| SQL Supported                               
+| SQL Supported
 |-------------
 | Microsoft SQL Server 16 to 19  - Enterprise
 | Microsoft SQL Server 16 to 19  - Standard
@@ -43,6 +46,10 @@ The following tables outline the varies databases that can be supported with the
 | Single deployment
 | HA - clustered
 | Always-On availability groups
+
+All servers that constitute this service must be patched to within 90 days of the most recent patches released by the vendor. During onboarding, should UKCloud find any exceptions to this policy, UKCloud has the right to cancel this service after consultation with the customer.
+
+Customers can engage UKCloud's Professional Services team to assess and apply outstanding patches prior to commencement of this service (additional costs apply).
 
 ## Scope of Managed SQL Server service
 
