@@ -124,6 +124,13 @@ Write-Output -InputObject "Adding custom script extension to VM: $VMName"
 Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 
+> [!TIP]
+> If the script fails and you need to see detailed error messages, the custom script extension logs can be found in the below folder on the virtual machine:
+>
+> ```powershell
+> C:\Packages\Plugins\Microsoft.Compute.CustomScriptExtension\X.X.X\Status
+> ```
+
 ## [PowerShell script](#tab/tabid-2)
 
 <pre><code class="language-PowerShell"># Declare variables
