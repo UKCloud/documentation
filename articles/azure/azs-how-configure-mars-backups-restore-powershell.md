@@ -149,7 +149,7 @@ $BackupTimes = "<output form="backuptime1" name="result2" style="display: inline
 $RetentionLength = "<output form="retentionlength" name="result2" style="display: inline;">7</output>"
 $FoldersToBackup = "<output form="folderstobackup" name="result2" style="display: inline;">C:\Users,C:\Temp</output>"
 $FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
-$ScriptArguments = "-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow</output>"
+$ScriptArguments = "-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -AzureResourceGroup $AzureResourceGroup -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow</output>"
 
 # Download the AzureBackupConfig.ps1 script
 Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script..."
