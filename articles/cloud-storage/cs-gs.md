@@ -47,7 +47,7 @@ Cloud Storage:
 
 - Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery
 
-ECS provides an API that you can use to manage your cloud storage. The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS, as shown in the *S3 API supported and unsupported features* section of the [*Elastic Cloud Storage (ECS) Data Access Guide*](http://doc.isilon.com/ECS/3.5/DataAccessGuide/GUID-E21545D1-8529-4E72-A49A-EE0834A201A9.html).
+ECS provides an API that you can use to manage your cloud storage. The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS, as shown in the *S3 API supported and unsupported features* section of the [*Elastic Cloud Storage (ECS) Data Access Guide*](http://doc.isilon.com/ECS/3.6/DataAccessGuide/GUID-E21545D1-8529-4E72-A49A-EE0834A201A9.html).
 
 > [!NOTE]
 > The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API.
@@ -123,11 +123,11 @@ To help get you started, you can find developer resources on the Amazon web site
 
 For details of the supported and unsupported S3 operations on ECS, see:
 
-<http://doc.isilon.com/ECS/3.5/DataAccessGuide/GUID-E21545D1-8529-4E72-A49A-EE0834A201A9.html>
+<http://doc.isilon.com/ECS/3.6/DataAccessGuide/GUID-E21545D1-8529-4E72-A49A-EE0834A201A9.html>
 
 You may also find the *Elastic Cloud Storage (ECS) Data Access Guide* useful:
 
-<http://doc.isilon.com/ECS/3.5/DataAccessGuide/GUID-CA0B1CAA-35BA-433D-8EB3-304DB47BE3CC.html>
+<http://doc.isilon.com/ECS/3.6/DataAccessGuide/GUID-CA0B1CAA-35BA-433D-8EB3-304DB47BE3CC.html>
 
 > [!NOTE]
 > Currently, the HSCN DNS service doesn't allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, `bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk`). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via HSCN you'll need to make sure your client tools support suffix buckets.
