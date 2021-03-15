@@ -1,24 +1,24 @@
 ---
-title: GeoDrive Client 2.0 overview video
-description: Shows a video that provides an overview of the GeoDrive Client 2.0
+title: Dell EMC GeoDrive overview video
+description: Shows a video that provides an overview of Dell EMC GeoDrive
 services: cloud-storage
-author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 20/09/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 15/03/2021
 
 toc_rootlink: Videos
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: GeoDrive Client 2.0 overview
+toc_title: Dell EMC GeoDrive overview
 toc_fullpath: Videos/cs-vid-geodrive2-client-overview.md
 toc_mdlink: cs-vid-geodrive2-client-overview.md
 ---
 
-# GeoDrive Client 2.0 overview video
+# Dell EMC GeoDrive overview video
 
-The following video provides an overview of the GeoDrive Client 2.0 and its user interface, highlighting key sections of the UI and useful features.
+The following video provides an overview of Dell EMC GeoDrive and its user interface, highlighting key sections of the UI and useful features.
 
 <div class="row">
   <div class="col-md-10">
@@ -33,7 +33,7 @@ The following video provides an overview of the GeoDrive Client 2.0 and its user
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
 
-- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+- [*How to install Dell EMC GeoDrive*](cs-how-install-geodrive2-client.md)
 
 ## Feedback
 
