@@ -60,7 +60,7 @@ We provide Ubuntu repositories for the 16.04 (Xenial), 18.04 (Bionic) and 20.04 
 
 - For 18.04:
 
-        sudo wget -P /etc/apt/sources.list.d https//rh-cds.ukcloud.com/ubuntu/repofiles/ukcloud_bionic.list
+        sudo wget -P /etc/apt/sources.list.d https://rh-cds.ukcloud.com/ubuntu/repofiles/ukcloud_bionic.list
  
 - For 20.04:
 
