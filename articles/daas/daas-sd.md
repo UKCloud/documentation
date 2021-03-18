@@ -58,7 +58,7 @@ Medium Desktop                 | 2    | 4         | 50            | £43.00
 Large Desktop                  | 4    | 8         | 50            | £60.00
 Extra Large Desktop            | 8    | 16        | 100           | £100.00
 
-Additional memory is £3.50 per GiB per month (additional memory is limited based on the desktop option selected. For further details, see the UKCloud Desktop as a Service Service Scope).
+Additional memory is £3.50 per GiB per month (additional memory is limited based on the desktop option selected. For further details, get into contact with your Service Delivery Manager).
 
 ### Session hosting
 
