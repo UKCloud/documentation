@@ -2623,6 +2623,9 @@ state | String | The state of the build<br>Valid values:<br>- approved -- edge g
 
 Returns a list of VMotion events that occurred in the specified account over the last 12 hours.
 
+> [!NOTE]
+> This endpoint has been deprecated. It no longer returns any data and will be removed in a future Portal release. For additional information please log a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+
 ### Request
 
 #### Request body
@@ -2664,9 +2667,6 @@ resp = conn.get("/api/accounts/#{account_id}/platform_visibility/vmotion_events"
 #### Response body
 
 Returns an array of VMotion events for the last 12 hours.
-
-> [!NOTE]
-> The maximum number of characters displayed for the VM and vApp names is 32 characters. If your VM or vApp names are longer than this, only the first 32 characters will be shown.
 
 #### Example response
 
