@@ -2624,7 +2624,7 @@ state | String | The state of the build<br>Valid values:<br>- approved -- edge g
 Returns a list of VMotion events that occurred in the specified account over the last 12 hours.
 
 > [!NOTE]
-> This endpoint has been deprecated. It no longer returns any data and will be removed in a future Portal release. For additional information please log a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+> This endpoint has been deprecated. It no longer returns any data and will be removed in a future Portal release. For additional information, log a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### Request
 
