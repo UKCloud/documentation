@@ -141,7 +141,7 @@
 </li>
 <li><p><a href="https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL7-EUS-2.0-2.noarch.rpm">RHEL 7 EUS</a></p>
 </li>
-<li><p><a href="https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL8-STANDARD-2.0-3.noarch.rpm">RHEL 8 Standard</a></p>
+<li><p><a href="https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL8-STANDARD-2.0-7.noarch.rpm">RHEL 8 Standard</a></p>
 </li>
 </ul>
 <p>If you require the high availability (HA) package, raise a Service Request directly via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal and we'll provide you with a download location.</p>
@@ -204,6 +204,13 @@ Package    : redhat-release-server-7.5-8.el7.x86_64 (@anaconda/7.5)
 From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 </code></pre>
 <p>You can verify the keys via Red Hat's <a href="https://access.redhat.com/security/team/key">Product Signing Keys</a> page.</p>
+<h3 id="issues-when-erasing-the-old-ilx-client-packages">Issues when erasing the old ILx-Client packages</h3>
+<p>If your systems are still pointing to the old, decomissioned RHUI when you try to remove the corresponding RPM, you may receive timeout messages as follows:</p>
+<pre><code class="lang-none">Timeout on https://rhua.skyscapecloud.com/pulp/repos/content/dist/rhel/rhui/server/x/xServer/x86_64/repo/os/repodata/repomd.xml: (28, 'Connection timed out after 30001 milliseconds')
+</code></pre>
+<p>You can rectify this by executing the following when you erase the RPM (where x is 2 or 3, depending on Assured or Elevated):</p>
+<pre><code class="lang-none">yum --disablerepo=\* erase $(rpm -qa|grep ILx-Client)
+</code></pre>
 <h3 id="dns-failure">DNS failure</h3>
 <p>Check the DNS lookup is working and you have the correct entry for Assured and Elevated.</p>
 <h3 id="443-not-accessible">443 not accessible</h3>
