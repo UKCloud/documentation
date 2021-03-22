@@ -68,7 +68,7 @@ You can browse the list of installer RPM files [here](https://rh-cds.ukcloud.com
 
 - [RHEL 7 EUS](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL7-EUS-2.0-2.noarch.rpm)
 
-- [RHEL 8 Standard](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL8-STANDARD-2.0-3.noarch.rpm)
+- [RHEL 8 Standard](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL8-STANDARD-2.0-7.noarch.rpm)
 
 If you require the high availability (HA) package, raise a Service Request directly via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and we'll provide you with a download location.
 
@@ -151,6 +151,20 @@ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 ```
 
 You can verify the keys via Red Hat's [Product Signing Keys](https://access.redhat.com/security/team/key) page.
+
+### Issues when erasing the old ILX-Client packages
+
+If your systems are still pointing to the old, decomissioned RHUI when you try to remove the corresponding RPM, you may receive timeout messages as follows:
+
+```none
+Timeout on https://rhua.skyscapecloud.com/pulp/repos/content/dist/rhel/rhui/server/x/xServer/x86_64/repo/os/repodata/repomd.xml: (28, 'Connection timed out after 30001 milliseconds')
+```
+
+You can rectify this by executing the following when you erase the RPM (where X is 2 or 3 depending on Assured or Elevated)
+
+```none
+yum --disablerepo=\* erase $(rpm -qa|grep ILX-Client)
+```
 
 ### DNS failure
 
