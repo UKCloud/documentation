@@ -2,9 +2,9 @@
 title: How to set up Email on Android, Windows or Blackberry devices
 description: Contains an overview of mobility options for Zimbra Collaboration Suite (ZCS), as well as information on how to set up Zimbra Mobile for most smartphones on specific operating systems
 services: email
-author: Sue Highmoor
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+author: shighmoor
+reviewer: bchallis
+lastreviewed: 17/03/2021
 
 toc_rootlink: How To
 toc_sub1:
