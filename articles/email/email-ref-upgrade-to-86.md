@@ -2,9 +2,9 @@
 title: Upgrade to Email and Collaboration as a Service
 description: Outlines the improvements UKCloud's upgrade to its Email and Collaboration as a Service to Zimbra 8.6.0 will deliver
 services: email
-author: Sue Highmoor
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+author: shighmoor
+reviewer: bchallis
+lastreviewed: 17/03/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,6 +19,9 @@ toc_mdlink: email-ref-upgrade-to-86.md
 
 > [!IMPORTANT]
 > Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
+> [!IMPORTANT]
+> PSN Email Relay provided by Vodafone is end-of-life as of 31 March 2021. After this date, anyone using the PSN will not be able to use email over this network, including all email services from UKCloud on the PSN. Internet-connected email services from UKCloud will continue to function after this date.
 
 ## Overview
 
