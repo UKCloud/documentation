@@ -2,9 +2,9 @@
 title: Getting Started Guide for Email and Collaboration as a Service
 description: Provides information to get up and running with Email and Collaboration as a Service
 services: email
-author: Sue Highmoor
-reviewer: mperry
-lastreviewed: 28/10/2019
+author: shighmoor
+reviewer: bchallis
+lastreviewed: 17/03/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
