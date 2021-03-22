@@ -102,40 +102,15 @@
 <h2 id="elevated-official-platform">Elevated OFFICIAL platform</h2>
 <p>Our Elevated OFFICIAL security domain doesn't natively connect to the internet, and the PSN network doesn't have any CentOS repo servers. To receive CentOS updates, you can use UKCloud-managed repository servers or a Walled Garden. Both options are described below.</p>
 <h3 id="option-1-ukcloud-managed-repository-servers">Option 1. UKCloud-managed repository servers</h3>
-<p>We provide both CentOS standard repositories and EPEL (Extra Packages for Enterprise Linux) for CentOS 6, 7  and 8 on our Elevated OFFICIAL security domain.</p>
+<p>We provide both CentOS standard repositories and EPEL (Extra Packages for Enterprise Linux) for CentOS 7  and 8 on our Elevated OFFICIAL security domain.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>CentOS6.x is deprecated. You can view details of the CentOS Public Mirror Site <a href="http://mirror.centos.org/centos/6.10/readme">here</a>.</p>
+<p>CentOS6.x and EPEL-6 are deprecated and packages are no longer provided by UKCloud. You can view details of the CentOS Public Mirror Site <a href="http://mirror.centos.org/centos/6.10/readme">here</a>.</p>
 </div>
 <p>For both Assured and Elevated OFFICIAL security domains, you can configure your systems to reference the following server: <code>https://rh-cds.ukcloud.com</code>. In Assured, this domain is configured in DNS, so you'll automatically be able to resolve it. For Elevated, you'll need to contact UKCloud Support to get the correct IP address and add an entry to <code>/etc/hosts</code> on your systems, or add an entry to your own internal DNS, to be able to resolve it.</p>
 <p>To access CentOS base files, you have 2 options.</p>
 <h4 id="create-your-own-configuration-file">Create your own configuration file</h4>
-<p>Create a file called <code>centos-&lt;x&gt;.repo</code> in <code>/etc/yum.repos.d</code>, where <code>&lt;x&gt;</code> is either 6, 7 or 8 depending on your version of CentOS, and populate it with the following:</p>
-<p><strong>CentOS 6:</strong></p>
-<pre><code class="lang-none">[centos-6-base]
-name=centos-6-base
-baseurl=https://rh-cds.ukcloud.com/centos/packages/centos-6-base/
-gpgcheck=1
-enabled=1
-gpgkey=https://rh-cds.ukcloud.com/centos/keys/RPM-GPG-KEY-CentOS-6
-sslverify=1
-
-[centos-6-updates]
-name=centos-6-updates
-baseurl=https://rh-cds.ukcloud.com/centos/packages/centos-6-updates/
-gpgcheck=1
-enabled=1
-gpgkey=https://rh-cds.ukcloud.com/centos/keys/RPM-GPG-KEY-CentOS-6
-sslverify=1
-
-[centos-6-extras]
-name=centos-6-extras
-baseurl=https://rh-cds.ukcloud.com/centos/packages/centos-6-extras/
-gpgcheck=1
-enabled=1
-gpgkey=https://rh-cds.ukcloud.com/centos/keys/RPM-GPG-KEY-CentOS-6
-sslverify=1
-</code></pre>
+<p>Create a file called <code>centos-&lt;x&gt;.repo</code> in <code>/etc/yum.repos.d</code>, where <code>&lt;x&gt;</code> is either 7 or 8 depending on your version of CentOS, and populate it with the following:</p>
 <p><strong>CentOS 7:</strong></p>
 <pre><code class="lang-none">[centos-7-base]
 name=centos-7-base
@@ -186,16 +161,7 @@ enabled=1
 gpgkey=https://rh-cds.ukcloud.com/centos/keys/RPM-GPG-KEY-CentOS-Official
 sslverify=1
 </code></pre>
-<p>To access CentOS EPEL files, create a file called <code>epel_&lt;x&gt;.repo</code> in <code>/etc/yum.repos.d</code>, where <code>&lt;x&gt;</code> is either 6,7 or 8 depending on your version of CentOS, and populate it with the following:</p>
-<p><strong>CentOS 6:</strong></p>
-<pre><code class="lang-none">[epel-6]
-name=Extra Packages for Enterprise Linux 6 - $basearch
-baseurl=https://rh-cds.ukcloud.com/centos/packages/epel-6/
-enabled=1
-gpgcheck=1
-gpgkey=https://rh-cds.ukcloud.com/centos/keys/RPM-GPG-KEY-EPEL-6
-sslverify=1
-</code></pre>
+<p>To access CentOS EPEL files, create a file called <code>epel_&lt;x&gt;.repo</code> in <code>/etc/yum.repos.d</code>, where <code>&lt;x&gt;</code> is either 7 or 8 depending on your version of CentOS, and populate it with the following:</p>
 <p><strong>CentOS 7:</strong></p>
 <pre><code class="lang-none">[epel-7]
 name=Extra Packages for Enterprise Linux 7 - $basearch
@@ -215,7 +181,7 @@ gpgkey=https://rh-cds.ukcloud.com/centos/keys/RPM-GPG-KEY-EPEL-8
 sslverify=1
 </code></pre>
 <h4 id="download-the-configuration-file">Download the configuration file</h4>
-<p>Download the repo configuration file directly from the repo server, using the following command (where <code>&lt;x&gt;</code> is either 6, 7 or 8 depending on your version of CentOS):</p>
+<p>Download the repo configuration file directly from the repo server, using the following command (where <code>&lt;x&gt;</code> is either 7 or 8 depending on your version of CentOS):</p>
 <p><strong>CentOS base updates and extras:</strong></p>
 <pre><code class="lang-none">wget -P /etc/yum.repos.d/ https://rh-cds.ukcloud.com/centos/repofiles/centos-x.repo
 </code></pre>
