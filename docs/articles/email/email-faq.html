@@ -97,6 +97,10 @@
 <h5>Important</h5>
 <p>Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.</p>
 </div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>PSN Email Relay provided by Vodafone is end-of-life as of 31 March 2021. After this date, anyone using the PSN will not be able to use email over this network, including all email services from UKCloud on the PSN. Internet-connected email services from UKCloud will continue to function after this date.</p>
+</div>
 <h2 id="what-is-the-service">What is the service?</h2>
 <p>Email and Collaboration as a Service provides a range of productivity tools, including email, calendaring and tasks, which help an organisation's end users to work in a secure, efficient and effective way.</p>
 <div class="NOTE">
@@ -115,24 +119,6 @@
 <p>As the solution is delivered from UK data centres by a UK company, your data doesn't leave the UK when at rest. In addition, the solution provides encrypted client connectivity using FIPS 140‑2 and S/MIME for digital signatures and email encryption. There are also tools to configure administration rights, create audit trails and set access controls for application and data sharing.</p>
 <h2 id="how-is-email-and-collaboration-supported">How is Email and Collaboration supported?</h2>
 <p>UKCloud manages and supports the platform in the UK. Depending on the mail client you choose, it may be supported by the third-party provider and not covered under our SLA. Wherever possible, UKCloud will also work with Zimbra to help resolve any compatibility issues.</p>
-<h2 id="can-i-use-email-and-collaboration-in-the-ukcloud-elevated-security-domain">Can I use Email and Collaboration in the UKCloud Elevated security domain?</h2>
-<p>Yes, Email and Collaboration as a Service is available on both the Assured and Elevated OFFICIAL security domains.</p>
-<h2 id="can-i-use-email-and-collaboration-over-closed-networks-such-as-psn-hscn-or-janet">Can I use Email and Collaboration over closed networks such as PSN, HSCN or Janet?</h2>
-<p>Yes, you can connect via PSN, Janet and HSCN; via legacy GCF networks including PNN; or by HybridConnect using your own dedicated circuits such as CPS-encrypted tunnels, leased lines or MPLS.</p>
-<h2 id="how-can-i-configure-my-email-server-to-use-the-psn-email-relays-mtas">How can I configure my email server to use the PSN email relays (MTAs)?</h2>
-<p>There are several configuration options for using the PSN email relays. These can provide either resiliency across multiple PSN relays or give you an opportunity to just use a single relay (in case of maintenance on the other).</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>For Email services in regions 1, 2, 7 and 8, you'll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.</p>
-</div>
-<ul>
-<li><p>Create a local host file entry on your mail system or a DNS entry on your internal DNS server with a name of your choice that is configured with both PSN relay IP addresses.</p>
-</li>
-<li><p>Configure your email system to use both of the PSN relay IP addresses as a RelayHost.</p>
-</li>
-<li><p>Configure your email system to use just one of the PSN relay IP addresses. This could be useful if there's any maintenance work happening that could affect the second IP address.</p>
-</li>
-</ul>
 <h2 id="is-the-service-pan-government-accredited">Is the service Pan Government Accredited?</h2>
 <p>UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.</p>
 <p>We are now required to self-assess our services, with customers then responsible for assessing and selecting the most appropriate cloud services which meet their individual security requirements.</p>
@@ -158,7 +144,7 @@
 <h2 id="can-i-use-a-specific-email-domain-name">Can I use a specific email domain name?</h2>
 <p>Yes, you can use any domain name that you have registered, that is hosted by a DNS provider, and is authorised for use on your required network connection.</p>
 <h2 id="can-ukcloud-host-dns">Can UKCloud host DNS?</h2>
-<p>Unfortunately, UKCloud is not a DNS host provider. However, there are a number of established providers in the UK. Please contact UKCloud if you need assistance in this area.</p>
+<p>UKCloud can offer DNS services in partnership with Neustar, ask your Service Delivery Manager for more information.</p>
 <h2 id="is-my-data-visible-to-other-organisations-on-the-platform">Is my data visible to other organisations on the platform?</h2>
 <p>No, none of the data held within your organisation's Email and Collaboration as a Service is visible to any other organisation or user.</p>
 <h2 id="is-there-a-minimum-number-of-mailboxes-required">Is there a minimum number of mailboxes required?</h2>
