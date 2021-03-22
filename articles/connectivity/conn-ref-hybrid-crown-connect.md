@@ -2,9 +2,9 @@
 title: HybridConnect vs CrownConnect (Private Connectivity)
 description: Outlines the difference between HybridConnect and CrownConnect and explains when each should be used
 services: connectivity
-author: shighmoor
-reviewer: shighmoor
-lastreviewed: 07/12/2020
+author: nstobbart
+reviewer: nstobbart
+lastreviewed: 22/03/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -36,8 +36,6 @@ Known Service Providers with presence<sup>*</sup> within A9 and SQ17:
 - Lumen (Formerly CenturyLink)
 
 - Virgin Media
-
-- Interoute
 
 - GTT
 
