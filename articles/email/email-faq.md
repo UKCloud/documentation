@@ -2,9 +2,9 @@
 title: Email and Collaboration as a Service FAQs
 description: Frequently asked questions for Email and Collaboration as a Service
 services: email
-author: Matt Warner
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+author: mwarner
+reviewer: bchallis
+lastreviewed: 17/03/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -19,6 +19,9 @@ toc_mdlink: email-faq.md
 
 > [!IMPORTANT]
 > Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
+> [!IMPORTANT]
+> PSN Email Relay provided by Vodafone is end-of-life as of 31 March 2021. After this date, anyone using the PSN will not be able to use email over this network, including all email services from UKCloud on the PSN. Internet-connected email services from UKCloud will continue to function after this date.
 
 ## What is the service?
 
@@ -50,27 +53,6 @@ As the solution is delivered from UK data centres by a UK company, your data doe
 ## How is Email and Collaboration supported?
 
 UKCloud manages and supports the platform in the UK. Depending on the mail client you choose, it may be supported by the third-party provider and not covered under our SLA. Wherever possible, UKCloud will also work with Zimbra to help resolve any compatibility issues.
-
-## Can I use Email and Collaboration in the UKCloud Elevated security domain?
-
-Yes, Email and Collaboration as a Service is available on both the Assured and Elevated OFFICIAL security domains.
-
-## Can I use Email and Collaboration over closed networks such as PSN, HSCN or Janet?
-
-Yes, you can connect via PSN, Janet and HSCN; via legacy GCF networks including PNN; or by HybridConnect using your own dedicated circuits such as CPS-encrypted tunnels, leased lines or MPLS.
-
-## How can I configure my email server to use the PSN email relays (MTAs)?
-
-There are several configuration options for using the PSN email relays. These can provide either resiliency across multiple PSN relays or give you an opportunity to just use a single relay (in case of maintenance on the other).
-
-> [!NOTE]
-> For Email services in regions 1, 2, 7 and 8, you'll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.
-
-- Create a local host file entry on your mail system or a DNS entry on your internal DNS server with a name of your choice that is configured with both PSN relay IP addresses.
-
-- Configure your email system to use both of the PSN relay IP addresses as a RelayHost.
-
-- Configure your email system to use just one of the PSN relay IP addresses. This could be useful if there's any maintenance work happening that could affect the second IP address.
 
 ## Is the service Pan Government Accredited?
 
@@ -110,7 +92,7 @@ Yes, you can use any domain name that you have registered, that is hosted by a D
 
 ## Can UKCloud host DNS?
 
-Unfortunately, UKCloud is not a DNS host provider. However, there are a number of established providers in the UK. Please contact UKCloud if you need assistance in this area.
+UKCloud can offer DNS services in partnership with Neustar, ask your Service Delivery Manager for more information.
 
 ## Is my data visible to other organisations on the platform?
 
