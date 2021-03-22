@@ -98,7 +98,7 @@ To activate the service, UKCloud will make the required licence keys available t
 
 VLS covers the following:
 
-- vSphere, vRealize Operations, vSAN, NSX, SRM, plus all other licences captured by the vCloud Usage Meter
+- vSphere, vRealize Operations, vSAN, NSX, SRM, Horizon plus all other licences captured by the vCloud Usage Meter
 
 - Existing licence bundles (Essentials Plus Kits, and so on) will be broken into their standard element licence parts
 
@@ -113,6 +113,7 @@ VLS requires the mandatory installation of the vCloud Usage Meter on the custome
 - For customers on a Fixed Price package, the Usage Meter is required for audit purposes and to determine when an uncommitted provision would be a lower cost.
 
 - For customers on a Fully Metered package, the Usage Meter captures all the VMware usage covered by the VLS agreement during the month and creates a report with the number of units consumed for each VMware bundle. This report of total units is used by UKCloud to calculate the customer's invoice for each month and enables the customer to be flexible on what they use in any given month, rather than be committed up front.
+- Horizon reporting is manually provided at the end of each month by capturing the 'maximum concurrency' reported int eh Horizon portal.
 
 - If both Fixed Price and Fully Metered elements exist in the same environment, then it will be necessary to deploy two Usage Meters.
 
@@ -136,9 +137,11 @@ As the Usage Meter is installed in an environment that UKCloud has no access to:
 
 The basis of VLS is that the customer is not committed to any specific VMware modules or usage, which converts their VMware usage from an upfront capital expenditure to a flexible monthly operational expenditure. This enables the customer to increase, decrease, test and remove environments and functionality as they require.
 
-As a result, VLS depends on the vCloud Usage Meter to collect the actual monthly usage on an hourly basis. At the end of each month, the report will identify the exact number of units consumed against the set VMware bundle codes, which is then used to create a total points usage. This total number of points is used to calcuate the customer's invoice for the month and it is therefore essential to ensure that the Usage Meter is correctly configured and that reports are sent to UKCloud.
+As a result, VLS depends on the vCloud Usage Meter to collect the actual monthly usage on an hourly basis. At the end of each month, the report will identify the exact number of units consumed against the set VMware bundle codes, which is then used to create a total points usage. This total number of points is used to calculate the customer's invoice for the month and it is therefore essential to ensure that the Usage Meter is correctly configured and that reports are sent to UKCloud.
 
-It is the customer's responsibility to send the output reports to <vls@ukcloud.com> within five (5) working days of the last day of the reporting month (that is, 6 November 2020 for October 2020 usage). It is essential that this is completed so that the usage can be added to UKCloud's VMware usage and reported to VMware. A Knowledge Centre article explains how the usage must be reported.
+With the current version of Usage Meter, Horizon maximum monthly concurrency must be manually reported to UKCloud, by email to vls@ukcloud.com.
+
+As part of the configuration of the Usage Meter, automatic reporting on the 1st of each month is emailed to vls@ukcloud.com. If for any reason this fails or cannot be configured, it will be the customers responsibility to manually send reports within five (5) working days of the last day of the reporting month (that is, 6 November 2021 for October 2021 usage). It is essential that this is completed so that the usage can be added to UKCloud's VMware usage and reported to VMware. A Knowledge Centre article explains how the usage must be reported.
 
 - If the reports are not received within five working days, the customer's assigned Service Delivery Manager will contact them to request the reports.
 
@@ -156,6 +159,8 @@ VLS includes your VMware usage and support via our experienced VMware Customer S
 For more information regarding support hours, SLA and escalation, see the [*How to raise and escalate support tickets with customer support*](https://docs.ukcloud.com/articles/portal/ptl-how-raise-escalate-service-request.html) article on the Knowledge Centre.
 
 Note that there is no limit to the number of tickets that customers can raise.
+
+Horizon support is limited to the functionality of the Horizon VDI solution and does not include ‘desktop end user’ support, Image Support or the additional support of application being run through the Horizon VDI solution.
 
 ## Customer responsibilities
 
@@ -192,7 +197,7 @@ Fully Metered | Pay-as-you-go - only pay for what you use. Consumption is calcul
 
 ### Payment options
 
-VLS is charged per point consumed. There are two payment options available for VLS.
+There are two payment options available for VLS.
 
 Payment option | Description | Benefits
 ---------------|-------------|---------
@@ -205,7 +210,7 @@ For both of the above options, where, for whatever reason, a usage report is una
 
 For full pricing information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
-Note that there is a discount level over 100,000 consumed points per month.
+Note that there is a discount level over £40,000 spent per month.
 
 ### Invoicing
 
