@@ -2,9 +2,9 @@
 title: Getting Started Guide for Email and Collaboration as a Service
 description: Provides information to get up and running with Email and Collaboration as a Service
 services: email
-author: Sue Highmoor
-reviewer: mperry
-lastreviewed: 28/10/2019
+author: shighmoor
+reviewer: bchallis
+lastreviewed: 17/03/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -20,6 +20,9 @@ toc_mdlink: email-gs.md
 
 > [!IMPORTANT]
 > Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
+> [!IMPORTANT]
+> PSN Email Relay provided by Vodafone is end-of-life as of 31 March 2021. After this date, anyone using the PSN will not be able to use email over this network, including all email services from UKCloud on the PSN. Internet-connected email services from UKCloud will continue to function after this date.
 
 ## Overview
 
@@ -86,11 +89,7 @@ Refer to the *Zimbra Collaboration Supported Systems* document for the most up t
 
 The Zimbra administration console is a browser-based user interface for managing your mailbox server and mailbox accounts.
 
-The way you access the administration console depends on which security domain you use:
-
-- The Assured OFFICIAL console is accessible from the internet or via the PSN Assured network (depending on the service selected)
-
-- The Elevated OFFICIAL console is accessible only via the PSN Protected network (and other interconnecting networks)
+The Assured OFFICIAL console is accessible from the internet.
 
 We'll provide you with the URL for the administration console along with your account details.
 
