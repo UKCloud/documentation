@@ -2,9 +2,9 @@
 title: Email and Collaboration as a Service FAQs
 description: Frequently asked questions for Email and Collaboration as a Service
 services: email
-author: Matt Warner
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+author: mwarner
+reviewer: bchallis
+lastreviewed: 17/03/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
