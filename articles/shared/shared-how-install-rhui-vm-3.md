@@ -152,7 +152,7 @@ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 
 You can verify the keys via Red Hat's [Product Signing Keys](https://access.redhat.com/security/team/key) page.
 
-### Issues when erasing the old ILX-Client packages
+### Issues when erasing the old ILx-Client packages
 
 If your systems are still pointing to the old, decomissioned RHUI when you try to remove the corresponding RPM, you may receive timeout messages as follows:
 
@@ -160,10 +160,10 @@ If your systems are still pointing to the old, decomissioned RHUI when you try t
 Timeout on https://rhua.skyscapecloud.com/pulp/repos/content/dist/rhel/rhui/server/x/xServer/x86_64/repo/os/repodata/repomd.xml: (28, 'Connection timed out after 30001 milliseconds')
 ```
 
-You can rectify this by executing the following when you erase the RPM (where X is 2 or 3 depending on Assured or Elevated)
+You can rectify this by executing the following when you erase the RPM (where x is 2 or 3, depending on Assured or Elevated):
 
 ```none
-yum --disablerepo=\* erase $(rpm -qa|grep ILX-Client)
+yum --disablerepo=\* erase $(rpm -qa|grep ILx-Client)
 ```
 
 ### DNS failure
