@@ -30,7 +30,7 @@ Whether purchasing new licences or providing support and maintenance on an exist
 
 ## Application process
 
-Customers wanting to discuss the suitability of the service and gain a comparative cost estimate for their VMware environment under the VLS programme should contact us at <info@ukcloud.com> or contact your Account Director. To provide an indicative quote, we will need:
+Customers wanting to discuss the suitability of the service and gain a comparative cost estimate for their VMware environment under the VLS programme should contact us at <info@ukcloud.com> or contact your Client Director. To provide an indicative quote, we will need:
 
 - The customer's written authorisation to request data from VMware on the existing licence estate and renewal details
 
@@ -70,7 +70,7 @@ In addition to the emailed welcome pack, a Service Delivery Manager will contact
 
 ### UKCloud Portal access
 
-All UKCloud customers have access to the UKCloud Portal, where they can access the My Calls ticketing system to raise service requests. We also use the UKCloud Portal to track and log all customer enquiries, requests, support issues, communications, and information.
+All UKCloud customers have access to the UKCloud Portal, where they can access the My Calls ticketing system to raise service requests. We also use the UKCloud Portal to track and log all customer enquiries, requests, support issues, communications and information.
 
 ### Knowledge Centre
 
@@ -122,7 +122,7 @@ UKCloud will make the URL of the recommended Usage Meter available to the custom
 
 - UKCloud provides detailed instructions in the Knowledge Centre for the installation, configuration and reporting of the Usage Meter (see the list of articles at the end of this Service Scope).
 
-- It is the customers responsibility to install and configure the Usage Meter prior to using the service as it is required for reporting and invoicing. The customer can utilise UKCloud Professional Services at an additional cost if assistance is required for this task.
+- It is the customer's responsibility to install and configure the Usage Meter prior to using the service as it is required for reporting and invoicing. The customer can utilise UKCloud Professional Services at an additional cost if assistance is required for this task.
 
 As the Usage Meter is installed in an environment that UKCloud has no access to:
 
@@ -130,7 +130,7 @@ As the Usage Meter is installed in an environment that UKCloud has no access to:
 
 - Customers will need to monitor the Usage Meter to ensure that data is not missing or that the meter has not failed. If there is an issue, it is the responsibility of the customer to resolve this issue or raise a service request to seek assistance.
 
-- It is the customer's responsibility to update the Usage Meter when required when a new version is provided by UKCloud. The customer will be advised as to when the update must be implemented and this may be a requirement for the reporting to be accurate.
+- It is the customer's responsibility to update the Usage Meter when required when a new version is provided by UKCloud. The customer will be advised as to when the update must be implemented, and this may be a requirement for the reporting to be accurate.
 
 - It is the customer's responsibility to add new products to the Usage Meter so that usage is collected.
 
@@ -142,7 +142,7 @@ As a result, VLS depends on the vCloud Usage Meter to collect the actual monthly
 
 With the current version of Usage Meter, Horizon maximum monthly concurrency must be manually reported to UKCloud, by email, to vls@ukcloud.com.
 
-As part of the configuration of the Usage Meter, automatic reporting on the 1st of each month is emailed to vls@ukcloud.com. If, for any reason, this fails or cannot be configured, it will be the customers responsibility to manually send reports within five (5) working days of the last day of the reporting month (that is, 6 November 2021 for October 2021 usage). It is essential that this is completed so that the usage can be added to UKCloud's VMware usage and reported to VMware. A Knowledge Centre article explains how the usage must be reported.
+As part of the configuration of the Usage Meter, automatic reporting on the 1st of each month is emailed to vls@ukcloud.com. If, for any reason, this fails or cannot be configured, it will be the customer's responsibility to manually send reports within five (5) working days of the last day of the reporting month (that is, 6 November 2021 for October 2021 usage). It is essential that this is completed so that the usage can be added to UKCloud's VMware usage and reported to VMware. A Knowledge Centre article explains how the usage must be reported.
 
 - If the reports are not received within five working days, the customer's assigned Service Delivery Manager will contact them to request the reports.
 
@@ -161,7 +161,7 @@ For more information regarding support hours, SLA and escalation, see the [*How 
 
 Note that there is no limit to the number of tickets that customers can raise.
 
-Horizon support is limited to the functionality of the Horizon VDI solution and does not include ‘desktop end user’ support, image support or the additional support of applications being run through the Horizon VDI solution.
+Horizon support is limited to the functionality of the Horizon VDI solution and does not include 'desktop end user' support, image support or the additional support of applications being run through the Horizon VDI solution.
 
 ## Customer responsibilities
 
@@ -179,22 +179,22 @@ In addition to the responsibilities already mentioned in this Service Scope, cus
 
 - Customers may be asked on occasion to run authorised scripts on their VMware environment for the purpose of maintaining the environment or assisting in fixing reported issues.
 
-- Customers will be advised on how to resolve an issue, and will be responsible for implementing that fix.
+- Customers will be advised on how to resolve an issue and will be responsible for implementing that fix.
 
-- To assist in the resolution of an issue, the customer may be required to share screens using Microsoft Teams or other collaboration application with our support team.
+- To assist in the resolution of an issue, the customer may be required to share screens using Microsoft Teams or other collaboration applications with our support team.
 
 - All support issues must come directly to UKCloud support, and not directly to VMware as UKCloud are contracted to provide support. It is UKCloud's responsibility to escalate an issue to VMware directly if required.
 
 ## Pricing and billing
 
-### Pricing packages 
+### Pricing packages
 
 There are two packages available for pricing.
 
 Package       | Description | Use case | Payment options
 --------------|-------------|----------|----------------
 Fixed Price   | A fixed cost for a specific set of licences, irrespective of the actual usage made of the licences during the month. The price is set at the beginning of the year. | Customers who have a good idea of their usage for the next year and need certainty in their budgets.| Committed 
-Fully Metered | Pay-as-you-go - only pay for what you use. Consumption is calculated and the customer invoiced based on actual usage at the end of each month. | Customers who need the ability to scale up and down as required. | Committed<br>Uncommitted 
+Fully Metered | Pay-as-you-go - only pay for what you use. Consumption is calculated and the customer invoiced based on actual usage at the end of each month. | Customers who need the ability to scale up and down as required. | Committed<br>Uncommitted
 
 ### Payment options
 
