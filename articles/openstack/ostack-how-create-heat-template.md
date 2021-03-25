@@ -3,8 +3,8 @@ title: How to create and deploy a basic Heat template
 description: Instructions on how to deploy a basic heat template
 services: openstack
 author: Bryce Nicholls
-reviewer: Matt Gough
-lastreviewed: 13/03/2020
+reviewer: Bryce Nicholls
+lastreviewed: 25/03/2021
 toc_rootlink: How to
 toc_sub1:
 toc_sub2:
