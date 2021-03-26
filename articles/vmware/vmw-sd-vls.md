@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the VMware Licence Serv
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 21/09/2020
+lastreviewed: 26/03/2021
 toc_rootlink: Service Information
 toc_sub1: VMware Licence Service
 toc_sub2:
@@ -19,91 +19,87 @@ toc_mdlink: vmw-sd-vls.md
 
 ## What is the VMware Licence Service?
 
-The VMware Licence Service (VLS) is an innovative licensing model designed with VMware to make it easier to modernise your existing VMware environments as you migrate to the cloud. VLS enables you to exchange the fixed cost of your ongoing VMware Support and Subscription (SnS) Service for existing perpetual VMware licences with a VMware Cloud Provider Programme (VCPP) consumption-based licence provided by UKCloud.
+VMware Licence Service (VLS) complements our Managed IT Operations service, by offering a managed VMware licence service ideally suited to customers who:
 
-This ideally suits customers who:
+- Are planning, or have already started, a multi-cloud strategy, where the operational costs associated with workloads can seamlessly move to the cloud provider as workloads migrate.
 
-- Want to migrate to a full rental/consumption-based OPEX model rather than a fixed-cost (that is, CAPEX-centric) model on either an annual or monthly basis
+- Want to upgrade their on-premises VMware estate, with NSX, vSAN, SRM, vROps, Network Insight and Horizon, to enhance performance, security and resource allocation to enable the seamless migration to the cloud. VLS enables these enhancements for short deployment periods in the most cost-effective way.
 
-- Want to expand their VMware estate without the associated upfront capital expense
+- Want to migrate to a full rental/consumption-based OPEX model rather than a fixed-cost (CAPEX-centric) model on either an annual or monthly basis.
 
-- Are in the middle of cloud migration and are seeing a steady decrease in their on-premises requirements, and therefore seek a flexible licensing model rather than a more traditional three-year Enterprise License Agreement (ELA)
+- Want the flexibility to accommodate rapid changes in the virtualised and end-user demand within their organisation, especially given the current variable demands on secure end-user capabilities.
 
-- Want to benefit from UKCloud's partnership with VMware to switch to a viable, cost-effective and efficient model offered by VMware
+- Are now ready, as part of their strategic cloud direction, to allow third-party expertise to provide enhanced confidence in the health of the IT estate, with none of the traditionally associated internal resource effort.
+
+- Are looking for VMware support from UK-based, security cleared, UK nationals, ensuring data integrity and compliance even in the most challenging of environments.
 
 ## What the service can help you achieve
 
-- **Reduce costs.** VLS calculates your VMware support costs on a different basis to standard fixed CPU licences by utilising UKCloud's bulk purchasing cost advantage, which typically delivers 15-25% cost reductions.
+- **Only pay for what you use.** Your consumption is based on the output reporting of the VMware Usage Meter, which directly relates to your actual operational elements. No longer pay for licences sitting on shelves or deployed into powered-off servers.
 
-- **Financial efficiency.** Choice of annual or monthly payments depending on your specific circumstances or organisation requirements, with incremental discounts delivered for annual payment.
-
-- **Only pay for what you use.** Your consumption is based on the output reporting of the VMware usage meter, which directly relates to your actual operational licences. No longer pay for licences sitting on shelves or on powered-off servers.
+- **Operational excellence.** UKCloud's highly experienced Service Delivery team is available to provide advise and guidance. Under VLS, the environment is enhanced through the provision of NSX and vRLI, in addition to the recommended deployment of VMware Skyline.
 
 - **Scalability.** VMware metered licensing is entirely flexible, so can scale up and down as your needs change.
 
-- **Flexibility.** An easier and more cost-effective method for adopting new VMware technologies, without committing to the purchase cost of perpetual licenses. Utilise enhanced features or capabilities with just a small monthly increase in consumption reporting.
+- **Flexibility.** An easier and more cost-effective method for adopting new VMware technologies. Enhanced features or capabilities can be utilised with just a small monthly increase in consumption reporting.
 
-- **Mix and match SnS with VLS.** You can utilise both traditional SnS and VLS in the same environment so that existing support arrangements can continue, with new VLS licences layered on top.
+- **Financial efficiency.** Choice of annual or monthly payments depending on your specific circumstances or organisation requirements, with incremental discounts delivered for annual payment.
 
-## Advantages of utilising UKCloud
+## Why UKCloud for VLS?
 
-- VLS is a service delivered by UKCloud, a specialist VMware Cloud Verified Provider, headquartered in the UK and dedicated to serving public sector organisations with over eight years' experience in providing and supporting VMware cloud workloads.
+- **A UK company.** UKCloud owns and operates a UK-sovereign, industry-leading, multi-cloud platform, located within the Government's Crown Campus.
 
-- UK-based, award-winning service desk, manned 24/7 by vetted and security-cleared experts.
+- **VMware certified specialist.** UKCloud is the largest cloud provider in the UK, specialising in the delivery of VMware-based cloud services solely to UK government, health, education and the third sector.
 
-- Every UKCloud customer has a designated Service Delivery Manager regardless of usage or number of workloads.
+- **Unique service proposition.** VLS was exclusively developed in the UK by VMware and UKCloud to create a key building block for enabling migration to multi-cloud (a mix of true public cloud and secure private cloud, spanning one-premises, Crown Campus and hyperscaler).
 
-- Migration to multi-cloud (a mix of true public cloud and secure private cloud spanning on-premises, Crown Campus and hyperscaler) becomes cheaper, faster and safer with UKCloud's portfolio of Cloud Services, Professional Services and Managed Services.
+- **Cloud migration.** Delivered faster and safer with UKCloud's wide portfolio of Cloud Services, Professional Services and Managed Services.
 
-- Fixed-price or metered service available.
+- **UK-based support.** Dedicated 24/7 UK telephone and ticket support with access to UKCloud's technical experts. First- and second-line support is provided from the award-winning UKCloud service desk, with additional support provided by VMware.
+
+- **Service Delivery Manager.** Every VLS customer is designated a Service Delivery Manager (SDM) for ongoing support, monthly performance reporting and active service monitoring.
 
 ## Licence eligibility
 
 - **Includes:**
 
-  - vROps, vSAN, NSX, SRM, Workstation
+  - vSphere, vROps, vSAN, NSX, SRM and Horizon
 
-  - All licences that are captured in the usage meter
+  - All other licences that are captured in the Usage Meter
 
 - **Excludes:**
 
   - WSP1, Avi Networks, Velocloud, Carbon Black, Pivotal (until these appear on the VCPP product guide)
 
-## What's involved?
+## VLS managed service elements
 
-To administer VLS, three changes are required to the existing VMware environment:
+There are several options for how to deploy VLS, depdending on the breadth of the managed service options the customer has selected and the extent to which UKCloud Professional Services are deployed to support the setup and transition into operation.
 
-- New licence keys must be 'injected' into all VMware products covered under VLS, as these keys represent the new consumption-based service arrangement. This is a very simple activity that can be done by the customer or UKCloud. As part of the onboarding the customer will ensure that all elements of the environment are on a supported version of VMware software.
+The following are the key steps of a typical deployment completed by UKCloud:
 
-- The VMware metering tool will be deployed as this delivers accurate consumption / utilisation that enables variable costs to be compared against the pre-agreed fixed cost.
+- **Workload analysis.** Current usage for licence types, deployment quantities, VM and vRAM allocations are identified and assessed. Recommendations are made to tune as necessary and the outcome is then used to baseline future estimated consumption.
 
-  - The customer is responsible for providing the usage reports to UKCloud within the first five working days of each month. Failure to do so is a breach of contract and costs will be estimated.
+- **Usage Meter.** Deployment and setup, and, if sufficiently in advance, data is used to validate estimated consumption. Automated emails are configured for reporting consumption to UKCloud. Horizon currently requires manual reporting.
 
-- Customers will be supported by UKCloud's experienced technical services team and will receive the same level of support as they would directly from VMware. Any remediation of the customer environment will be performed by the customer.
+- **VCPP licence keys.** New licence keys are applied to all VMware products covered under VLS. UKCloud will provide the licence keys at the correct operating software level for the existing environment.
 
-## What's included?
+- **Software/patching levels.** Software/patch updates will be provided by UKCloud as required to ensure the ongoing support of the environment. Schedules will be agreed through the Service Delivery team.
 
-The service is designed to be flexible and comes with our standard onboarding:
+- **Service operations.** The customer will be set up on the UKCloud Portal. Incidents will either be notified by the customer or reporting will be automated through Managed Monitoring as a Service, if selected.
 
-- **Creation of a UKCloud Portal account.** Enabling you to access our ticketing system and notifications centre.
+- **Service delivery management.** The assigned SDM will be available to support any incidents that occur. A monthly report/meeting will ensure continuity on all aspects. Topics covered will include:
 
-- **UKCloud licensing keys.** We will create and distribute unique VMware licence keys for you to use with this service for the relevant software.
+  - Service incidents
 
-- **Knowledge Centre.** Access to our extensive library of articles to assist you in using VMware on a self-service basis.
+  - Billing/consumption reporting
 
-- **Support services.** UKCloud becomes the authorised 24/7 service desk for VMware support and provides first and second-line support for the VMware products within the environment, and will manage escalations for third-line support via the VMware engineering team as appropriate. All tickets are prioritised and full details are available in our [Knowledge Centre](../portal/ptl-how-raise-escalate-service-request.md).
+  - Capacity and future planning
 
-Additional, optional services are available, including the following:
+  - Support/patch levels
 
-- **Enhanced onboarding.** UKCloud can install and configure the VMware Usage Meter and replace existing perpetual licence keys with VCPP licence keys across all applicable VMware products within the environment.
+  - Environment/performance enhancements
 
-- **Monitoring and management service.** UKCloud can remotely monitor the VMware products within the environment, alert you of any incidents if appropriate and provide a high level of engagement appropriate with the level of managed services. This may include patching, capacity management, performance management or supporting non-VMware products (Storage Array, Physical Network).
-
-- **Professional services.** UKCloud can provide specialist Professional Services to help you assess your environment, create an actionable cloud strategy and migrate workloads to the UKCloud multi-cloud environment. UKCloud can also provide expert services to help you adopt cloud-native approaches such as DevOps, automation, and containerisation.
-
-## Pricing and packaging
-
-VLS starts at 43p per point per month for academia. Full pricing is available in the [*UKCloud Pricing Guide*](https://ukcloud.com/pricing-guide).
+  - Migration strategy/next steps
 
 ## Accreditation and information assurance
 
