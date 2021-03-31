@@ -62,7 +62,10 @@ UKCloud offers a variety of ways for you to run and license Windows desktop work
 
 - UKCloud Desktop as a Service. A purpose-built VDI/remote working solution aimed at enabling customers to virtualise their desktop usage, including all of the licensing required. Details are available within the Knowledge Centre for more information.
 
-- Purchasing Windows 10 Enterprise licences from UKCloud. As a Microsoft CSP, UKCloud is able to purchase and provide Windows 10 Enterprise licences for customers on an annual basis, charged per month. To utilise this service, create a Service Request stating the number and version of licences required.
+- Purchasing Windows 10 Enterprise licences from UKCloud. As a Microsoft CSP, UKCloud is able to purchase and provide Windows 10 Enterprise licences for customers on a monthly basis, charged per month. To utilise this service, create a Service Request stating the number and version of licences required.
+
+ [!NOTE]
+    > In order for this subscription service to work, the devices or virtual machines that require Windows 10 Enterprise licenses must be internet connected as the administrator must be able to add users to the Mirosoft Portal and assign licenses to the connected virtual machine or device. If this is not possible, custoemr can purchase perpetual licenses from their reseller and assign licenses by adding license keys, and then following the QMTH process below.
 
 - Bring your own Windows 10 Enterprise licensing via Qualified MultiTenant Hoster (QMTH). As a Tier 1 direct CSP, UKCloud is an authorised partner on the QMTH program. The QMTH program enables you to purchase Microsoft 10 Enterprise licences and use them on our multi-tenant cloud platform. To bring your own licences, raise a Service Request stating the number of licences and your Microsoft subscription ID.
 
