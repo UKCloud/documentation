@@ -6274,6 +6274,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-v4-update.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-v4-update.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/ptl-contacts-btn-edit.png",
       "output": {
         "resource": {
@@ -6648,6 +6659,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-v4-update.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-v4-update.html",
+          "hash": "CN9YzohURniXu9mMQDpBFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-view-proxy-logs.md",
       "output": {
         ".html": {
@@ -6832,7 +6855,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "1f4ZLrGDodGcqTtMOPa6BQ=="
+          "hash": "MbUaB5bNMONgq3Y3fUCiug=="
         }
       },
       "is_incremental": false,
@@ -22340,7 +22363,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 461,
+          "total_file_count": 462,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

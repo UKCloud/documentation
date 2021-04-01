@@ -84,6 +84,10 @@
       href: oshift-ref-deploy-app-into-service-mesh.md
     - name: DNS zone forwarding in OpenShift clusters
       href: oshift-ref-dns-zone-forwarding-v4.md
+  - name: v4
+    items:
+    - name: Supported customer update strategy for version 4 clusters
+      href: oshift-how-v4-update.md
 - name: Service Information
   items:
   - name: Pricing information
