@@ -51,7 +51,7 @@ The following product options apply only to OpenShift Container Platform (OCP) v
 
 ## Pricing and packaging
 
-UKCloud for Managed OpenShift pricing starts at £1.13. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for Managed OpenShift pricing starts at £0.75. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
