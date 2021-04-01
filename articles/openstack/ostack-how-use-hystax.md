@@ -3,8 +3,8 @@ title: How to migrate workloads on OpenStack using Hystax Acura | UKCloud Ltd
 description: Provides information on how to use Hystax Acura to move workloads within your OpenStack environment
 services: openstack
 author: Steve Dixon
-reviewer:
-lastreviewed: 04/03/2020
+reviewer: Bryce Nicholls
+lastreviewed: 25/03/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -46,6 +46,13 @@ Hystax Acura Control Panel is a management portal deployed and managed by UKClou
 These are the agents that are installed within a guest Linux or Windows operating system, which communicate with the Hystax Acura Control Panel to coordinate and manage workload migrations.
 
 ## Migrating OpenStack workloads
+
+> [!IMPORTANT]
+> **Ensure that you've created a network and conntected to a router on the target project.**
+>
+> It's advisable to replicate the network configuration and RFC1918 IP schema onto the target project to avoid any configuration issues.
+>
+> The target instance must be connected to a network and router for the Hystax agent to replicate the instance.
 
 To perform cloud migration you need to complete the following steps:
  
