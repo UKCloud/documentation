@@ -110,6 +110,12 @@
 <h3 id="hystax-acura-agents">Hystax Acura agents</h3>
 <p>These are the agents that are installed within a guest Linux or Windows operating system, which communicate with the Hystax Acura Control Panel to coordinate and manage workload migrations.</p>
 <h2 id="migrating-openstack-workloads">Migrating OpenStack workloads</h2>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><strong>Ensure that you've created a network and conntected to a router on the target project.</strong></p>
+<p>It's advisable to replicate the network configuration and RFC1918 IP schema onto the target project to avoid any configuration issues.</p>
+<p>The target instance must be connected to a network and router for the Hystax agent to replicate the instance.</p>
+</div>
 <p>To perform cloud migration you need to complete the following steps:</p>
 <h3 id="replication-flow">Replication flow</h3>
 <ol>

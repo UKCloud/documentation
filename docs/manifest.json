@@ -3775,7 +3775,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-internet-permitted-ports.html",
-          "hash": "m7Hh2sMcbdCOwPoBcSJzWQ=="
+          "hash": "Q198dGW8LYtF2DbKuGD5BQ=="
         }
       },
       "is_incremental": false,
@@ -3938,6 +3938,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/conn-internet-allow-list-ports-v1_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/conn-internet-allow-list-ports-v1_4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/connectivity/images/conn-psn-connection-compliance.png",
       "output": {
         "resource": {
@@ -3986,17 +3997,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/connectivity/images/ddos_protection.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/connectivity/images/internet_whitelist_ports_v1_3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/connectivity/images/internet_whitelist_ports_v1_3.png"
         }
       },
       "is_incremental": false,
@@ -9204,7 +9204,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-hystax.html",
-          "hash": "llwLpIiCplDbHvAc9H8j3w=="
+          "hash": "j5mQobGKE6D3WbMCtXxxJA=="
         }
       },
       "is_incremental": false,
