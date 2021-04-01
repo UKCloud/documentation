@@ -46,12 +46,13 @@ Hystax Acura Control Panel is a management portal deployed and managed by UKClou
 These are the agents that are installed within a guest Linux or Windows operating system, which communicate with the Hystax Acura Control Panel to coordinate and manage workload migrations.
 
 ## Migrating OpenStack workloads
-> :warning: 
->**Ensure you have created a network and conntected to a router on the target project**
+
+> [!IMPORTANT]
+> **Ensure that you've created a network and conntected to a router on the target project.**
 >
-> It is advisable to replicate the network configuration and RFC1918 IP schema onto the target project to avoid any configuration issues.
+> It's advisable to replicate the network configuration and RFC1918 IP schema onto the target project to avoid any configuration issues.
 >
->The target instance needs to be connected to a network and router for the Hystax agent to replicate the instance.
+> The target instance must be connected to a network and router for the Hystax agent to replicate the instance.
 
 To perform cloud migration you need to complete the following steps:
  
