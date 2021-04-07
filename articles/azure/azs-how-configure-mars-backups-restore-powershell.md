@@ -60,9 +60,9 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$VMName        | Name of the virtual machine in Azure Stack Hub                         | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
 | \$CustomScriptFileName        | The name of the custom script file                         | <form oninput="result.value=customscriptfilename.value" id="customscriptfilename" style="display: inline;"><input type="text" id="customscriptfilename" name="customscriptfilename" style="display: inline;" placeholder="AzureBackupConfig.ps1"/></form> |
 | \$FileUri        | URL to the custom script                          | <form oninput="result.value=fileuri.value;result2.value=fileuri.value" id="fileuri" style="display: inline;"><input type="text" id="fileuri" name="fileuri" style="display: inline;" placeholder="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1"/></form> |
-| \$ClientID    | The application ID of a service principal with contributor permissions in Azure                 | <form oninput="result.value=clientid.value;result2.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
+| \$ClientId    | The application ID of a service principal with contributor permissions in Azure                 | <form oninput="result.value=clientid.value;result2.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
 | \$ClientSecret    | The password of the service principal specified in the ClientId parameter                 | <form oninput="result.value=clientsecret.value;result2.value=clientsecret.value" id="clientsecret" style="display: inline;"><input type="text" id="clientsecret" name="clientsecret" style="display: inline;" placeholder="ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]="/></form> |
-| \$TenantID    | The Tenant/Directory ID of your AAD domain                 | <form oninput="result.value=tenantid.value;result2.value=tenantid.value" id="tenantid" style="display: inline;"><input type="text" id="tenantid" name="tenantid" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
+| \$TenantId    | The Tenant/Directory ID of your AAD domain                 | <form oninput="result.value=tenantid.value;result2.value=tenantid.value" id="tenantid" style="display: inline;"><input type="text" id="tenantid" name="tenantid" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
 | \$AzureResourceGroup    | The name of the resource group to be created in public Azure, where the Recovery Services vault will reside                 | <form oninput="result.value=azureresourcegroup.value;result2.value=azureresourcegroup.value" id="azureresourcegroup" style="display: inline;"><input type="text" id="azureresourcegroup" name="azureresourcegroup" style="display: inline;" placeholder="AzureStackBackupRG"/></form> |
 | \$VaultName    | The name of the Recovery Services vault to be created in public Azure                 | <form oninput="result.value=vaultname.value;result2.value=vaultname.value" id="vaultname" style="display: inline;"><input type="text" id="vaultname" name="vaultname" style="display: inline;" placeholder="AzureStackVault"/></form> |
 | \$EncryptionKey    | The encryption key to encrypt the backups with, must be at least 16 characters and no greater than 40 characters in length                 | <form oninput="result.value=encryptionkey.value;result2.value=encryptionkey.value" id="encryptionkey" style="display: inline;"><input type="text" id="encryptionkey" name="encryptionkey" style="display: inline;" placeholder="ExampleEncryptionKey"/></form> |
@@ -105,9 +105,9 @@ Connect-AzAccount -EnvironmentName "AzureStackUser"
 $Location = (Get-AzLocation).Location
 
 # Input variables
-$ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientId = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
 $ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
-$TenantID = "<output form="tenantid" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
+$TenantId = "<output form="tenantid" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
 $AzureResourceGroup = "<output form="azureresourcegroup" name="result" style="display: inline;">AzureStackBackupRG</output>"
 $VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
 $EncryptionKey = "<output form="encryptionkey" name="result" style="display: inline;">ExampleEncryptionKey</output>"
@@ -120,7 +120,7 @@ $RGName = "<output form="resourcegroup" name="result" style="display: inline;">M
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
 $CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">AzureBackupConfig.ps1</output>"
 $FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
-$ScriptArguments = "-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -AzureResourceGroup $AzureResourceGroup -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow</output>"
+$ScriptArguments = "-ClientId $ClientId -ClientSecret $ClientSecret -TenantId $TenantId -AzureResourceGroup $AzureResourceGroup -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow</output>"
 $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Windows VM
@@ -141,9 +141,9 @@ Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupNa
 $ScriptPath = "C:\Users\$env:USERNAME\Downloads"
 $ScriptName = "AzureBackupConfig.ps1"
 
-$ClientID = "<output form="clientid" name="result2" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientId = "<output form="clientid" name="result2" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
 $ClientSecret = "<output form="clientsecret" name="result2" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
-$TenantID = "<output form="tenantid" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
+$TenantId = "<output form="tenantid" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
 $AzureResourceGroup = "<output form="azureresourcegroup" name="result2" style="display: inline;">AzureStackBackupRG</output>"
 $VaultName = "<output form="vaultname" name="result2" style="display: inline;">AzureStackVault</output>"
 $EncryptionKey = "<output form="encryptionkey" name="result2" style="display: inline;">ExampleEncryptionKey</output>"
@@ -153,7 +153,7 @@ $BackupTimes = "<output form="backuptime1" name="result2" style="display: inline
 $RetentionLength = "<output form="retentionlength" name="result2" style="display: inline;">7</output>"
 $FoldersToBackup = "<output form="folderstobackup" name="result2" style="display: inline;">C:\Users,C:\Temp</output>"
 $FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
-$ScriptArguments = "-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -AzureResourceGroup $AzureResourceGroup -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow</output>"
+$ScriptArguments = "-ClientId $ClientId -ClientSecret $ClientSecret -TenantId $TenantId -AzureResourceGroup $AzureResourceGroup -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow</output>"
 
 # Download the AzureBackupConfig.ps1 script
 Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script..."
