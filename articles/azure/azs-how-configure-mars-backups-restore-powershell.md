@@ -106,7 +106,7 @@ $Location = (Get-AzLocation).Location
 
 # Input variables
 $ClientId = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
-$ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
+$ClientSecret = '<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>'
 $TenantId = "<output form="tenantid" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
 $AzureResourceGroup = "<output form="azureresourcegroup" name="result" style="display: inline;">AzureStackBackupRG</output>"
 $VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
@@ -142,7 +142,7 @@ $ScriptPath = "C:\Users\$env:USERNAME\Downloads"
 $ScriptName = "AzureBackupConfig.ps1"
 
 $ClientId = "<output form="clientid" name="result2" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
-$ClientSecret = "<output form="clientsecret" name="result2" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
+$ClientSecret = '<output form="clientsecret" name="result2" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>'
 $TenantId = "<output form="tenantid" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
 $AzureResourceGroup = "<output form="azureresourcegroup" name="result2" style="display: inline;">AzureStackBackupRG</output>"
 $VaultName = "<output form="vaultname" name="result2" style="display: inline;">AzureStackVault</output>"
