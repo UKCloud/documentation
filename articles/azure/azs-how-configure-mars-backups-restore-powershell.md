@@ -24,6 +24,10 @@ Recovery Services vaults store all backups and recovery points you create over t
 
 This article explains how to set up the Microsoft Azure Recovery Services (MARS) agent to backup and restore files and folders from Azure Stack Hub VMs to Recovery Services vaults.
 
+> [!NOTE]
+> By default a new Recovery Services vault will be created by the code below.
+> If you do not wish to create one - you can use the ExistingVault switch in the [AzureBackupConfig script]((https://github.com/UKCloud/AzureStack/blob/master/Users/Extensions/Windows/AzureBackupConfig.ps1)).
+
 ## Microsoft documentation
 
 [MARS agent support matrix](https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix-mars-agent)
@@ -56,7 +60,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$VMName        | Name of the virtual machine in Azure Stack Hub                         | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
 | \$CustomScriptFileName        | The name of the custom script file                         | <form oninput="result.value=customscriptfilename.value" id="customscriptfilename" style="display: inline;"><input type="text" id="customscriptfilename" name="customscriptfilename" style="display: inline;" placeholder="AzureBackupConfig.ps1"/></form> |
 | \$FileUri        | URL to the custom script                          | <form oninput="result.value=fileuri.value;result2.value=fileuri.value" id="fileuri" style="display: inline;"><input type="text" id="fileuri" name="fileuri" style="display: inline;" placeholder="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1"/></form> |
-| \$ClientID    | The application ID of a service principal with contributor permissions on Azure                 | <form oninput="result.value=clientid.value;result2.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
+| \$ClientID    | The application ID of a service principal with contributor permissions in Azure                 | <form oninput="result.value=clientid.value;result2.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
 | \$ClientSecret    | The password of the service principal specified in the ClientId parameter                 | <form oninput="result.value=clientsecret.value;result2.value=clientsecret.value" id="clientsecret" style="display: inline;"><input type="text" id="clientsecret" name="clientsecret" style="display: inline;" placeholder="ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]="/></form> |
 | \$TenantID    | The Tenant/Directory ID of your AAD domain                 | <form oninput="result.value=tenantid.value;result2.value=tenantid.value" id="tenantid" style="display: inline;"><input type="text" id="tenantid" name="tenantid" style="display: inline;" placeholder="contoso.onmicrosoft.com"/></form> |
 | \$AzureResourceGroup    | The name of the resource group to be created in public Azure, where the Recovery Services vault will reside                 | <form oninput="result.value=azureresourcegroup.value;result2.value=azureresourcegroup.value" id="azureresourcegroup" style="display: inline;"><input type="text" id="azureresourcegroup" name="azureresourcegroup" style="display: inline;" placeholder="AzureStackBackupRG"/></form> |
