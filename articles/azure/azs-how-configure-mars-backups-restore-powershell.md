@@ -120,7 +120,7 @@ $ScriptArguments = "-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $T
 $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Windows VM
-Write-Output -InputObject "Adding custom script extension to VM: $VMName"
+Write-Output -InputObject "Adding custom script extension to VM: $VMName."
 Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 
@@ -157,7 +157,7 @@ $OutPath = Join-Path -Path $ScriptPath -ChildPath $ScriptName
 Invoke-WebRequest -Uri $FileUri -OutFile $OutPath
 
 # Run the AzureBackupConfig.ps1 script
-Write-Output -InputObject "Running AzureBackupConfig.ps1 with provided parameters"
+Write-Output -InputObject "Running AzureBackupConfig.ps1 with provided parameters."
 powershell -Command "$ScriptPath\$ScriptName $ScriptArguments"
 </code></pre>
 
