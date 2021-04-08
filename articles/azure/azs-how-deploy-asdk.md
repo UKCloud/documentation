@@ -30,12 +30,14 @@ The ASDK is used in two modes within UKCloud:
 
 Detailed specifications can be found [here](https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-deploy-considerations)
 
-| Device     | Details         |
-|------------|-----------------|
-| CPU        | \>=16 cores     |
-| RAM        | \>=192GB        |
-| OS Disks   | \>=200GB        |
-| Data Disks | \>=4 \* \>=240G |
+| Device                | Details                                                                                                     |
+| --------------------- | ----------------------------------------------------------------------------------------------------------- |
+| CPU                   | \>=16 cores                                                                                                 |
+| RAM                   | \>=192GB                                                                                                    |
+| OS Disks              | \>=200GB                                                                                                    |
+| Data Disks            | \>=4 \* \>=240G                                                                                             |
+| Network: NIC          | \>= Windows Server 2012 R2 Certification. No specialized features required.                                 |
+| HW logo certification | \>= [Certified for Windows Server 2012 R2](https://www.windowsservercatalog.com/content.aspx?ctf=logo.htm). |
 
 ### [Virtual Deployment](#tab/tabid-1)
 
@@ -83,20 +85,20 @@ Implement the following steps from the Microsoft documentation:
 The following details should be used:
 
 | Option        | Parameter                                                                          |
-|---------------|------------------------------------------------------------------------------------|
+| ------------- | ---------------------------------------------------------------------------------- |
 | NTP           | 46.227.200.76                                                                      |
 | DNS Forwarder | 8.8.8.8                                                                            |
 | Drivers       | Browse to path of either the extracted Cisco drivers or the extracted VMware tools |
-| Computer Name | Anything but "azurestack", for example, "azurestackhost"                            |
+| Computer Name | Anything but "azurestack", for example, "azurestackhost"                           |
 | Static IP     | IP details assigned to the current interface                                       |
 
 ### [Virtual Deployment](#tab/tabid-1)
 
 Before running the installer, open `C:\AzureStack\_Installer\asdk-installer.ps1` and edit as follows:
 
-| Line Number | Current Code | Updated code |
-|-------------|--------------|--------------|
-| 1917 | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object -FilterScript { $_.isboot -eq $true }).Model -match 'null') {` |
+| Line Number | Current Code                                                                             | Updated code                                                                                     |
+| ----------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| 1917        | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object -FilterScript { $_.isboot -eq $true }).Model -match 'null') {` |
 
 To edit, run:
 
@@ -132,12 +134,12 @@ Implement the following steps from the Microsoft documentation:
 
 The following details should be used:
 
-| Option        | Parameter     |
-|---------------|---------------|
-| NTP           | 46.227.200.76 |
-| DNS Forwarder | 8.8.8.8       |
+| Option        | Parameter                                                                                                                                                              |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| NTP           | 46.227.200.76                                                                                                                                                          |
+| DNS Forwarder | 8.8.8.8                                                                                                                                                                |
 | Type          | Azure AD - this should be either your own AAD account where you are the system admin or one you have setup for Azure Stack Hub, for example, `contoso.onmicrosoft.com` |
-| Static IP     | Different IP than what you currently have, for example, if your current IP is 10.0.0.101 then you could use 10.0.0.191. |
+| Static IP     | Different IP than what you currently have, for example, if your current IP is 10.0.0.101 then you could use 10.0.0.191.                                                |
 
 ### [Virtual Deployment](#tab/tabid-1)
 
@@ -158,10 +160,10 @@ Then you need to run the copied InstallAzureStackPOC.ps1 command to create the R
 
 Open `C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1` and edit as follows:
 
-| Line Number | Current code | Updated code | Reference |
-|-------------|--------------|--------------|-----------|
-| 780 | `PartNumber = $_.PartNumber.Trim();` | `PartNumber = $_.PartNumber;` | <https://social.msdn.microsoft.com/Forums/en-US/f9060fe2-4408-41a4-b387-09a3e9a09f00/ltstacktracegtat-line-762-in?forum=AzureStack> |
-| 1202 | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine` | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0` |   |
+| Line Number | Current code                                                                                                                           | Updated code                                                                                             | Reference                                                                                                                           |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| 780         | `PartNumber = $_.PartNumber.Trim();`                                                                                                   | `PartNumber = $_.PartNumber;`                                                                            | <https://social.msdn.microsoft.com/Forums/en-US/f9060fe2-4408-41a4-b387-09a3e9a09f00/ltstacktracegtat-line-762-in?forum=AzureStack> |
+| 1202        | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine` | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0` |                                                                                                                                     |
 
 To edit, run:
 
