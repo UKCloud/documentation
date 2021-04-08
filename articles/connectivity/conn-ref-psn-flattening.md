@@ -2,9 +2,9 @@
 title: PSN flattening
 description: Provides information about plans to flatten the PSN Assured and PSN Protected networks
 services: connectivity
-author: Sue Highmoor
-reviewer: hbrunt
-lastreviewed: 16/12/2019
+author: shighmoor
+reviewer: nstobbart
+lastreviewed: 15/02/2021
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -23,8 +23,6 @@ toc_mdlink: conn-ref-psn-flattening.md
 The Public Services Network (PSN) has been flattened to converge PSN Assured and PSN Protected into a single network. Traffic can now flow between VMs in our Assured and Elevated security domains over the flattened PSN network.
 
 The flattened PSN network enables better collaboration between local government, blue light services and central government departments, allowing for more joined-up services, including counter-terrorism initiatives and centralised intelligence, to improve the lives of UK citizens.
-
-The information in this article is also available in our [PSN flattening - an update](https://ukcloud.com/hub/news/psn-flattening-an-update/) blog post.
 
 ## PSN and CDSZ
 

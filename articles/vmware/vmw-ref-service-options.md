@@ -2,9 +2,9 @@
 title: UKCloud for VMware options
 description: Provides information about the different choices you can make when building your UKCloud for VMware service
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 25/02/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -21,11 +21,7 @@ toc_mdlink: vmw-ref-service-options.md
 
 Each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is completely configurable, and gives you the flexibility to use different service levels, virtual machine (VM) sizes, security domains, connectivity and data protection options.
 
-![UKCloud for VMware options](images/vmw-vmware-options.png)
-
-^ All workloads include 60GB of Tier 2 storage for free, all storage is persistent and resilient to local hardware failures. Workloads can use multiple storage profiles
-
-^^ All customers can use catalogue and template-based recovery
+![UKCloud for VMware options](images/vmw-product-options-g12.png)
 
 ## Security domain
 
@@ -33,7 +29,7 @@ The UKCloud provides two security domains:
 
 - Assured OFFICIAL provides access to public networks, such as the internet, PSN, HCSN and Janet
 
-- Elevated OFFICIAL provides access to restricted networks such as PSN
+- Elevated OFFICIAL provides access to restricted networks, such as RLI, with no direct internet connectivity
 
 Choose the security domain your workload needs to use.
 
@@ -67,11 +63,19 @@ The UKCloud for VMware service offers three different protection options for you
 
 - **Catalogue and template-based recovery** is a configuration management solution that can reprovision stateless servers to a new VM when required, using standard and catalogue-based VM templates.
 
-- **Snapshot Protection** provides a daily backup of your VMs. You can select a retention period of either 14 or 28 days.
+- **Snapshot Protection** provides a daily backup of your VMs. You can select a retention period of either 14 or 28 days. For more information, see the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md).
 
-- **Journaling Protection** uses journals to store all write operations made to your VMs on a separate UKCloud site.
+- **Journaling Protection** uses journals to store all write operations made to your VMs on a separate UKCloud site. For more information, see the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md).
 
 Choose the application and data protection needed for your solution. You can choose only one protection option to cover both VMs and storage. For example, if you choose Journaling Protection for your VMs, you cannot then choose 14-day Snapshot Protection for your storage; Journaling Protection will apply to both.
+
+## Advanced management options
+
+The Advanced Management bundle provides:
+
+- Advanced monitoring, provided by the vRealize Operations (vROps) Tenant Appliance. Using advanced monitoring, you can view metrics and reports relating to your UKCloud for VMware environment. For more information, see [*How to access advanced monitoring using the vRealize Operations Tenant Appliance*](vmw-how-vrops-use.md).
+
+- Additional distributed networking functionality. For more information, see [*Advanced networking options for UKCloud for VMware*](vmw-ref-advanced-networking.md)
 
 ## Feedback
 

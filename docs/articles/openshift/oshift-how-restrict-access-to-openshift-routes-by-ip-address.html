@@ -8,7 +8,7 @@
     <title>How to restrict access to OpenShift routes by IP address </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to restrict access to OpenShift routes by IP address ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,17 +98,17 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>OpenShift developers who have created and deployed services into OpenShift, and created and exposed routes for those services. This article describes how to further secure access to those exposed routes by allowing only trusted IPs to access them.</p>
 <h2 id="restricting-access-to-a-route">Restricting access to a route</h2>
-<p>After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to whitelist.</p>
+<p>After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to add to the allow-list.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Whitelisting a IP address automatically blacklists everything else.</p>
+<p>Adding this annotation for an IP address or list of addresses/subnets automatically denies all traffic from addresses outside this list.</p>
 </div>
 <p>You apply the annotation to a route in the following manner:</p>
 <pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist=&quot;&lt;ip_address&gt;&quot;
 </code></pre>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>You must do this for every route that you wish to apply the whitelisting to.</p>
+<p>You must do this for every route that you wish to apply the restriction to.</p>
 </div>
 <h2 id="examples">Examples</h2>
 <p>To allow a single IP address through to the route, use the following:</p>
@@ -126,11 +126,26 @@
 <p>To delete the IPs from the annotation, you can run the command:</p>
 <pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist-
 </code></pre>
+<h2 id="known-issues">Known issues</h2>
+<p>As of OpenShift version 4.4+, pod DNS lookups will return the internal IP of a route rather than the public IP. This means traffic will not leave the cluster for pod to route communication. For a route with an allow-list to accept traffic from a pod in the same cluster, you must add the internal cluster subnet to the allow-list rather than the cluster's egress IP. The following examples show a lookup from a local client machine and from inside a pod, demonstrating the difference in resolution:</p>
+<p><strong>DNS lookup on local machine:</strong></p>
+<p><img src="images/oshift-local-lookup.png" alt="Local machine lookup"></p>
+<p><strong>DNS lookup from inside a pod:</strong></p>
+<p><img src="images/oshift-pod-lookup.png" alt="Pod lookup"></p>
+<p>In this case you would run the following command to apply an allow-list to your route (assuming your cluster local subnet is 10.0.0.0/24):</p>
+<pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist=&quot;10.0.0.0/24&quot;
+</code></pre>
 <h2 id="more-information">More information</h2>
-<p>For further information, see the following: <a href="https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html">OpenShift Documentation</a></p>
+<p>For further information, see the following OpenShift documentation:</p>
+<ul>
+<li><p><a href="https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html">OpenShift v3</a></p>
+</li>
+<li><p><a href="https://docs.openshift.com/container-platform/4.5/networking/routes/route-configuration.html">OpenShift v4</a></p>
+</li>
+</ul>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled.</p>
+<p>This functionality is available by default in UKCloud for Managed OpenShift deployments of version 3.10 or later. For all previous versions, you must raise a request with UKCloud to have this functionality enabled.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
@@ -143,6 +158,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -161,7 +189,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

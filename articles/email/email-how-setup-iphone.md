@@ -2,9 +2,9 @@
 title: How to set up Email and Collaboration on an iPhone or iPad
 description: Provides information on how to set up the UKCloud Email and Collaboration service on an iPhone or iPad
 services: email
-author: Sue Highmoor
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+author: shighmoor
+reviewer: bchallis
+lastreviewed: 17/03/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -18,6 +18,12 @@ toc_mdlink: email-how-setup-iphone.md
 
 # How to set up Email and Collaboration on an iPhone or iPad
 
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
+> [!IMPORTANT]
+> PSN Email Relay provided by Vodafone is end-of-life as of 31 March 2021. After this date, anyone using the PSN will not be able to use email over this network, including all email services from UKCloud on the PSN. Internet-connected email services from UKCloud will continue to function after this date.
+
 ## Overview
 
 Zimbra Collaboration Server Network Edition with Zimbra Mobile enabled integrates natively over the air with the Mail, Contact and Calendar applications on any Apple iPhone, iPod Touch or iPad. By using the ActiveSync protocol no additional download is required, only that WiFi or a wireless data plan is enabled. After a simple configuration step you can work virtually anywhere with your Zimbra account on the go.
@@ -30,26 +36,26 @@ You can use the Apple iPhone to access your Zimbra account three primary ways:
 
 - Enter IMAP/POP3 email settings
 
-For more information about ActiveSync, go to <https://en.wikipedia.org/wiki/ActiveSync>.
+For more information about ActiveSync, go to <https://en.wikipedia.org/wiki/ActiveSync>.
 
 > [!IMPORTANT]
 > Performing the following steps may delete all of the existing contacts on your iPhone. This is a common problem for iPhone users when creating a new ActiveSync account. You should ensure that you have backed up all of your contacts before proceeding.
 
 ## Installation and setup for iPhone
 
-1. On your iPhone Home screen, tap the **Settings** icon.
+1. On your iPhone Home screen, tap the **Settings** icon.
 
     ![Settings icon on iPhone Home screen](images/email-iphone-home.png)
 
-2. Scroll down and select **Passwords & Accounts**.
+2. Scroll down and select **Passwords & Accounts**.
 
     ![Mail, Contacts, Calendars](images/email-iphone-settings.png)
 
-3. Select **Add Account**.
+3. Select **Add Account**.
 
     ![Add Account](images/email-iphone-add-account.png)
 
-4. Choose **Exchange**.
+4. Choose **Exchange**.
 
     ![Exchange](images/email-iphone-exchange.png)
 
@@ -67,7 +73,7 @@ For more information about ActiveSync, go to <https://en.wikipedia.org/wiki/Act
   
 6. Click **Next**.
 
-7. Enter your server details as supplied by your UKCloud Customer Success Manager.
+7. Enter your server details as supplied by your UKCloud Service Delivery Manager (SDM).
 
 8. Synchronise **Mail**, **Contacts**, and/or **Calendars** as you prefer by setting the appropriate sliders to on.
 
@@ -85,7 +91,7 @@ You can now edit your global or account-specific settings as described in the ne
 
 When you have successfully set up your account, you should begin to see mail folders, contacts, and your calendar(s) appear on your device. When the synchronization completes, you can edit your global or account-specific settings.
 
-In **Passwords & Accounts** you can set global or account-specific usability controls for your email account(s), including setting the number of messages to show, how many lines of an email to preview, font size, how often to sync, and more.
+In **Passwords & Accounts** you can set global or account-specific usability controls for your email account(s), including setting the number of messages to show, how many lines of an email to preview, font size, how often to sync, and more.
 
 ![Zimbra settings](images/email-iphone-zimbra-settings.png)
 

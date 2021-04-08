@@ -8,7 +8,7 @@
     <title>PSN for Policing and enhanced regime FAQs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PSN for Policing and enhanced regime FAQs ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,13 +94,13 @@
 <h1 id="psn-for-policing-and-enhanced-regime-faqs">PSN for Policing and enhanced regime FAQs</h1>
 
 <h2 id="what-is-psn-for-policing">What is PSN for Policing?</h2>
-<p>The Public Services Network for Policing is a closed user group (CUG) operated by Vodafone over the PSN-A, using cryptographic overlays, connecting all UK police forces. Supplier CUGs are also available.</p>
+<p>The Public Services Network for Policing is a closed user group (CUG) operated by Vodafone over the PSN, using cryptographic overlays, connecting all UK police forces. Supplier CUGs are also available.</p>
 <h2 id="what-is-the-enhanced-regime">What is the Enhanced Regime?</h2>
-<p>The Enhanced Regime is sometimes referred to as the PSN in Policing (Protect), which is a set of controls over and above PSN-P encryption. It is generally used to exchange data between police and non-police organisations.</p>
+<p>The Enhanced Regime is sometimes referred to as the PSN in Policing (Protect), which is a set of controls over and above the encryption that is run on parts of the PSN that were PSN Protected (PSN-P) when it was a separate network to PSN Assured (PSN-A). It's generally used to exchange data between police and non-police organisations.</p>
 <h2 id="why-are-there-two-policing-networks">Why are there two policing networks?</h2>
-<p>The PSN-P is based on the IPED (Inter-Provider Encryption Domain) to enable multiple DNSPs to provide competition. The downside of this is that this introduces latency issues and throughput concerns. There are also a lot of non-police organisations on the PSN-P so police have less trust of this community. Due to this, non-police organisations will use the PSN-P with additional controls (Enhanced Regime), as this is easier to consume, but police will use the CUG over the PSN-A (PSN for Policing).</p>
+<p>Legacy PSN-P was based on the Inter-Provider Encryption Domain (IPED) to enable multiple DNSPs to provide competition. Since the merge of PSN-A and PSN-P this IPED still exists with those connections that were PSN-P before the flattening, however the downside of IPED is that it introduces latency issues and throughput concerns. There were also a lot of non-police organisations on the PSN-P so police had less trust of this community. Due to this, non-police organisations use the PSN-P with additional controls (Enhanced Regime), as this is easier to consume, but police use the CUG over the PSN (PSN for Policing).</p>
 <h2 id="can-data-get-between-the-psn-for-policing-cug-and-the-enhanced-regime">Can data get between the PSN for Policing CUG and the Enhanced Regime?</h2>
-<p>Yes. There are gateways, external to UKCloud, that allow data to traverse the two networks. This is managed and controlled by Vodafone. For questions relating to this gateway please contact Vodafone or the PSN for Policing Authority.</p>
+<p>Yes. There are gateways, external to UKCloud that allow data to traverse the two networks. This is managed and controlled by Vodafone. For questions relating to this gateway please contact Vodafone or the PSN for Policing Authority.</p>
 <h2 id="how-do-i-get-on-the-psn-for-policing-or-the-enhanced-regime">How do I get on the PSN for Policing or the Enhanced Regime?</h2>
 <p>You will need to contact the PSN for Policing Information Assurance team: (<a href="mailto:information.assurance@homeoffice.pnn.police.uk">information.assurance@homeoffice.pnn.police.uk</a>)</p>
 <ul>
@@ -116,36 +116,36 @@
 </li>
 </ul>
 <h2 id="can-i-connect-directly-to-the-ukcloud-elevated-official-platform-using-a-psn-for-policing-cug">Can I connect directly to the UKCloud Elevated OFFICIAL platform using a PSN for Policing CUG?</h2>
-<p>Yes. Even though the PSN for Policing is an overlay on the PSN-A, the connection in will be installed as a private circuit into UKCloud, provided and managed by Vodafone. This means it can be terminated in the Elevated Cloud platform. Please see our <a href="conn-faq-hybridconnect.html"><em>HybridConnect FAQs</em></a> for more information around connecting your own line into the UKCloud platform.</p>
+<p>Yes. The PSN for Policing the connection will be installed as a private circuit into UKCloud, provided and managed by Vodafone. This means it can be terminated in the Elevated Cloud platform. Please see our <a href="conn-faq-hybridconnect.html"><em>HybridConnect FAQs</em></a> for more information around connecting your own line into the UKCloud platform.</p>
 <h2 id="can-i-connect-directly-to-the-ukcloud-elevated-official-platform-using-the-enhanced-regime">Can I connect directly to the UKCloud Elevated OFFICIAL platform using the Enhanced Regime?</h2>
-<p>Yes. The Enhanced Regime is a set of additional controls over the PSN-P, which terminates in the Elevated platform.</p>
+<p>Yes. The Enhanced Regime is a set of additional controls over what was the PSN-P, which terminates in the Elevated platform.</p>
 <h2 id="can-i-connect-directly-to-the-ukcloud-assured-official-platform-using-a-psn-for-policing-cug">Can I connect directly to the UKCloud Assured OFFICIAL platform using a PSN for Policing CUG?</h2>
-<p>Yes. As the connection is installed as a private circuit into UKCloud, provided and managed by Vodafone, you can terminate it into the Assured Official platform. It is worth remembering that the PSN for Policing Authority may influence where this connection is terminated.</p>
+<p>Yes. As the connection is installed as a private circuit into UKCloud, provided and managed by Vodafone, you can terminate it into the Assured Official platform. It's worth remembering that the PSN for Policing Authority may influence where this connection is terminated.</p>
 <h2 id="can-i-have-a-combination-of-government-community-networks-and-private-accredited-networks-into-the-same-ukcloud-solution-including-the-psn-for-policing-networks">Can I have a combination of government community networks and private accredited networks into the same UKCloud solution, including the PSN for Policing networks?</h2>
-<p>Yes, subject to compliance with information assurance requirements, as only organisations that demonstrate compliance with the appropriate <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/193704/PSN_Compliance_Zero_tolerance_approach.pdf">code of connections</a> (for example PSN compliance certificate or approved N3 (IGSoC) can have access to government community networks.</p>
+<p>Yes, subject to compliance with information assurance requirements, as only organisations that demonstrate compliance with the appropriate code of connection (for example PSN compliance certificate or HSCN Connection Agreement) can have access to government community networks.</p>
 <p>You should be careful not to misconfigure self-managed components of the solution (OS, application) to 'bridge' between government community networks (PSN) and private networks. This concern must be addressed by accreditation of the customer-managed components - preferably via PSN Accreditation. Local departmental accreditation by a public-sector customer is also allowed. This applies to solutions on both our Assured OFFICIAL and Elevated OFFICIAL cloud platforms.</p>
 <h2 id="what-if-i-have-been-given-some-ips-for-connection-to-the-enhanced-regime">What if I have been given some IPs for connection to the Enhanced Regime?</h2>
-<p>You will need to liaise with Vodafone to ensure that these IPs are associated with your service within UKCloud. You may be asked by Vodafone for your circuit reference numbers, please raise a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal to obtain these.</p>
-<p>You will then need to have these IPs added to your accounts, you can do this via a service request. UKCloud may need to work with Vodafone to advertise these IPs this process can take up to 10 days to facilitate. Once complete, you will then be able to provide your service over the new IPs.</p>
-<h2 id="can-i-swap-out-my-existing-psn-p-ips-for-enhanced-regime-ips">Can I swap out my existing PSN-P IPs for Enhanced Regime IPs?</h2>
+<p>You'll need to liaise with Vodafone to ensure that these IPs are associated with your service within UKCloud. You may be asked by Vodafone for your circuit reference numbers. Raise a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal to obtain these.</p>
+<p>You'll then need to have these IPs added to your accounts. You can do this via a service request. UKCloud may need to work with Vodafone to advertise these IPs, which can take up to 10 days to facilitate. Once complete, you'll then be able to provide your service over the new IPs.</p>
+<h2 id="can-i-swap-out-my-existing-psn-ips-for-enhanced-regime-ips">Can I swap out my existing PSN IPs for Enhanced Regime IPs?</h2>
 <p>Yes. The process is the same as above except there may be an element of disruption to the service as the IP addresses are exchanged.</p>
 <p>You should liaise with UKCloud to find a suitable time to do this, to minimise any disruption.</p>
 <h2 id="how-do-i-get-psn-for-policing-or-enhanced-regime-ip-addresses">How do I get PSN for Policing or Enhanced Regime IP addresses?</h2>
-<p>If you are connected to a PSN for Policing CUG then you will be provided with an IP range by Vodafone.</p>
-<p>If you are connected to the Enhanced Regime, then you will be provided an IP range by Home Office. You will need to raise a service request with us via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal to have these IPs added to the UKCloud firewalls. This may have a lead time of a few days.</p>
+<p>If you are connected to a PSN for Policing CUG, you'll be provided with an IP range by Vodafone.</p>
+<p>If you are connected to the Enhanced Regime, you'll be provided an IP range by Home Office. You'll need to raise a service request with us via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal to have these IPs added to the UKCloud firewalls. This may have a lead time of a few days.</p>
 <h2 id="how-long-is-the-lead-time-to-get-a-psn-for-policing-network-connected-to-my-solution">How long is the lead time to get a PSN for Policing network connected to my solution?</h2>
-<p>This varies depending on the solution and the network you wish to connect to. It will take time to gain the accreditation needed through the PSN for Policing Authority, there will then be a lead time to get the connectivity provisioned into your solution.</p>
+<p>This varies depending on the solution and the network you want to connect to. It will take time to gain the accreditation needed through the PSN for Policing Authority. There will then be a lead time to get the connectivity provisioned into your solution.</p>
 <ul>
-<li><p>When connecting to a PSN for Policing CUG, you will need to wait for Vodafone to provision the connectivity into the UKCloud data centres. Because of this you will need to factor in an extended lead time.</p>
+<li><p>When connecting to a PSN for Policing CUG, you'll need to wait for Vodafone to provision the connectivity into the UKCloud data centres. Because of this you'll need to factor in an extended lead time.</p>
 </li>
-<li><p>When connecting to the Enhanced Regime you will need to obtain IPs from the Home Office and have them made available to your solution by UKCloud. This will have a shorter lead time to implement that a CUG network, however it may still take a few weeks to do.</p>
+<li><p>When connecting to the Enhanced Regime you'll need to obtain IPs from the Home Office and have them made available to your solution by UKCloud. This will have a shorter lead time to implement that a CUG network, however it may still take a few weeks to do.</p>
 </li>
 </ul>
 <h2 id="how-much-does-the-psn-for-policing-networks-cost">How much does the PSN for Policing networks cost?</h2>
-<p>The PSN for Policing CUG will be provided by Vodafone as a single-tenant installation so will be treated as a leased line. There will be Vodafone charges for this service that are outside of UKCloud's control. UKCloud will treat this as a HybridConnect service and will bill accordingly. For more information, please see the <a href="conn-faq-hybridconnect.html"><em>HybridConnect FAQs</em></a>.</p>
-<p>The Enhanced Regime has additional controls over the PSN-P and as such customers will be billed in accordance with PSN-P pricing. For more information, please see the <a href="conn-faq-psn.html"><em>PSN FAQs</em></a>.</p>
+<p>The PSN for Policing CUG will be provided by Vodafone as a single-tenant installation so will be treated as a leased line. There will be Vodafone charges for this service that are outside of UKCloud's control. UKCloud will treat this as a HybridConnect service and will bill accordingly. For more information, see the <a href="conn-faq-hybridconnect.html"><em>HybridConnect FAQs</em></a>.</p>
+<p>The Enhanced Regime has additional controls over the PSN and as such customers will be billed in accordance with PSN pricing. For more information, see the <a href="conn-faq-psn.html"><em>PSN FAQs</em></a>.</p>
 <h2 id="general-connectivity-questions">General connectivity questions</h2>
-<p>If you have questions about connectivity in general, please see the <a href="conn-faq.html"><em>General connectivity FAQs</em></a>.</p>
+<p>If you have questions about connectivity in general, see the <a href="conn-faq.html"><em>General connectivity FAQs</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -157,6 +157,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -175,7 +188,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

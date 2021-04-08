@@ -3,11 +3,12 @@ title: How to configure Portworx replication
 description: Explains how to configure volume replication in a Portworx integrated OpenShift cluster
 services: openshift
 author: Ben Bacon
-reviewer:
-lastreviewed: 14/10/2019
+reviewer: Kieran O'Neill
+lastreviewed: 21/10/2020
+
 toc_rootlink: How To
-toc_sub1: Use Portworx with OpenShift
-toc_sub2:
+toc_sub1: OpenShift v3.x
+toc_sub2: Portworx
 toc_sub3:
 toc_sub4:
 toc_title: Configure Portworx volume replication
@@ -19,11 +20,11 @@ toc_mdlink: oshift-how-configure-portworx-volume-replication.md
 
 ## Overview
 
-Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how to configure replication for Portworx volumes. 
+Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how to configure replication for Portworx volumes.
 
 ### Intended audience
 
-This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster (or later) and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. For one of the steps you will also need to have `jq` installed.
+This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. For one of the steps you will also need to have `jq` installed.
 
 If you're interested in a free 30 day trial of Portworx, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
@@ -68,7 +69,7 @@ You can increase or decrease the replication factor for a Portworx volume after 
     ```
 
     > [!NOTE]
-    > The `pxctl` binary is available within the Portworx container, therefore the easiest way to execute commands against the Portworx cluster is to do so remotely using the [`oc exec`](https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html) command. 
+    > The `pxctl` binary is available within the Portworx container, therefore the easiest way to execute commands against the Portworx cluster is to do so remotely using the [`oc exec`](https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html) command.
 
 2. To reduce command complexity, we will set an environment variable named PX_POD containing the name of a Portworx pod so we can re-use it throughout the article.
 

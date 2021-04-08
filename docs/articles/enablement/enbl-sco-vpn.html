@@ -8,7 +8,7 @@
     <title>Cloud Enablement - VPN solutions Service Scope </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cloud Enablement - VPN solutions Service Scope ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,7 +96,7 @@
 <h2 id="about-this-document">About this document</h2>
 <p>This document describes the Cloud Enablement services available for VPN solutions. For information regarding CPA-approved (or equivalent standard) VPN solutions, see the relevant service scope.</p>
 <h2 id="about-cloud-enablement">About Cloud Enablement</h2>
-<p>The Cloud Enablement service provides basic facilities for your own hardware installed in our data centre for the purpose of utilising our cloud.</p>
+<p>The Cloud Enablement service provides basic facilities for your own hardware to be installed in our data centre for the purpose of utilising our cloud.</p>
 <p>The table provides an overview of the Cloud Enablement services available for VPN solutions. If the usage scenario you need isn't shown in the table, contact us to discuss your requirements.</p>
 <table>
 <thead>
@@ -108,7 +108,7 @@
 <tbody>
 <tr>
 <td><strong>Use case</strong></td>
-<td>You don't want to use the vCNS Edge VPN capability and want to  install your own</td>
+<td>You want to install your own VPN capability instead of using the one provided by the NSX edge gateway.</td>
 </tr>
 <tr>
 <td><strong>Service type</strong></td>
@@ -119,55 +119,55 @@
 <td>Assured OFFICIAL</td>
 </tr>
 <tr>
+<td><strong>Service level (default)</strong></td>
+<td>Single data centre, no automatic failover</td>
+</tr>
+<tr>
 <td><strong>Hosted device</strong></td>
-<td>VPN</td>
+<td>VPN device (for example, firewall)</td>
+</tr>
+<tr>
+<td><strong>Cloud Enablement sizing</strong></td>
+<td>One bay = 10U, 1kW of power</td>
 </tr>
 <tr>
 <td><strong>Typical device size</strong></td>
 <td>1U / 2U</td>
 </tr>
 <tr>
-<td><strong>Service level (default)</strong></td>
-<td>Single data centre, no automatic failover</td>
+<td><strong>Hosted device(s) allowed</strong></td>
+<td>Depends on solution. UKCloud will work with the customer to understand the requirement and assess the suitability of the devices that the customer wants to locate within Cloud Enablement.</td>
 </tr>
 <tr>
-<td><strong>Cloud Enablement requirement<br>(one bay = 10U, 1kW per month)</strong></td>
-<td>One bay in one UKCloud data centre</td>
+<td><strong>Hosted device power draw</strong></td>
+<td>Customer devices within a single 10U bay have a combined average power draw of no more than 1kW. Average power draw will be assessed based on vendor material supplied by the customer as part of the engagement with UKCloud prior to installation of devices.</td>
 </tr>
 <tr>
 <td><strong>Cost</strong></td>
-<td>£2,000 setup fee plus £500 per month</td>
+<td>Priced per 10U bay<br>£2,000 up front charge<br>£500 pcm<br>Additional install visits charged at SFIA rate</td>
 </tr>
 <tr>
 <td><strong>Resilience available?</strong></td>
-<td>We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a  self-managed resilient solution (in which case the resilience options below are required).</td>
+<td>We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a  self-managed resilient solution.</td>
 </tr>
 <tr>
 <td><strong>Failover responsibility</strong></td>
 <td>Customer</td>
 </tr>
 <tr>
-<td><strong>Resilience requirement<br>(1 bay = 10U, 1kw per month)</strong></td>
-<td>One bay in our Farnborough data centre<br>One bay in our Corsham data centre</td>
-</tr>
-<tr>
-<td><strong>Resilience cost</strong></td>
-<td>£4,000 setup fee plus £1,000 per month</td>
-</tr>
-<tr>
 <td><strong>Notes</strong></td>
-<td>Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (eg Cloud Enablement in region 5 cannot be stretched to region 6)</td>
+<td>Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (for example, Cloud Enablement in region 5 cannot be stretched to region 6).</td>
 </tr>
 <tr>
 <td><strong>Next steps</strong></td>
-<td>Raise a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal</td>
+<td>Raise a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="what-connectivity-does-the-vpn-service-provide">What connectivity does the VPN service provide?</h2>
 <p>The VPN service provides up to two ports:</p>
 <ul>
-<li><p>Cloud Enablement in regions 1, 2, 7 &amp; 8 offers fibre-only connectivity</p>
+<li><p>Cloud Enablement in regions 1, 2, 7 &amp; 8 offers copper only connectivity</p>
 </li>
 <li><p>Cloud Enablement in regions 5 &amp; 6 offers connectivity via SFP, so customers can use fibre or copper</p>
 </li>
@@ -176,15 +176,15 @@
 </ul>
 <h2 id="what-is-the-port-speed-of-connection">What is the port speed of connection?</h2>
 <ul>
-<li><p>In regions 1, 2, 7 &amp; 8, the port speed is up to 1 Gbps</p>
+<li><p>In regions 1, 2, 7 &amp; 8, the port speed is up to 1 Gbps</p>
 </li>
-<li><p>In regions 5 &amp; 6, the port speed can be either 1Gbps (copper or fibre) or 10 Gbps (fibre only)</p>
+<li><p>In regions 5 &amp; 6, the port speed can be either 1Gbps (copper or fibre) or 10 Gbps (fibre only)</p>
 </li>
 </ul>
 <h2 id="who-manages-the-switch">Who manages the switch?</h2>
 <p>We manage the shared switch - the initial logical configuration is included in the setup fee. Additional configuration (of your devices to your solution) is a chargeable service.</p>
 <h2 id="is-there-any-switch-redundancy-within-a-rack">Is there any switch redundancy within a rack?</h2>
-<p>We don't currently offer switch redundancy.</p>
+<p>We do not currently offer switch redundancy.</p>
 <h2 id="whats-included-in-the-setup-fee">What's included in the setup fee?</h2>
 <h3 id="the-setup-fee-covers">The setup fee covers</h3>
 <ul>
@@ -242,6 +242,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -260,7 +273,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

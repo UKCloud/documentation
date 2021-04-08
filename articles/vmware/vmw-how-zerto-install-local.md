@@ -3,8 +3,8 @@ title: How to install and configure Zerto in your local environment
 description: This guide describes the steps you need to perform in your local environment to set up Zerto
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: jpaddock
+lastreviewed: 01/05/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -54,7 +54,7 @@ UKCloud provides a version of ZVM that is compatible with the Zerto software on 
 1. Download and run the executable file from the link provided by UKCloud.
 
     > [!NOTE]
-    > Install ZVM on a Windows 2008r2 or 2012r2 server, ideally with nothing else running on it.
+    > Install ZVM on a Windows Server 2008 R2 SP1 (KB3033929 and KB2864202 or relevant superseded KBs), 2012 R2, 2016 or 2019 server, ideally with nothing else running on it.
 
 2. On the *Welcome* page of the *Zerto Virtual Replication Installation for VMware vSphere* wizard, read the information provided then click **NEXT**.
 
@@ -78,7 +78,7 @@ UKCloud provides a version of ZVM that is compatible with the Zerto software on 
 
 12. The first time you log in, you'll need to enter licensing details.
 
-    As you are using ZVM as part of a UKCloud service, select **Pair to a site with a license** and enter the **Site Address** and **Port**     provided by UKCloud.
+    As you are using ZVM as part of a UKCloud service, select **Pair to a site with a license** and enter the **Site Address** and **Port** provided by UKCloud.
 
 13. Click **START**.
 
@@ -108,13 +108,13 @@ For information about how to create a site-to-site VPN, see [*How to configure I
 
 The following table lists the minimum firewall rules required for Zerto to pair and replicate with the UKCloud platform.
 
-Source device | Target service | Port | Direction | Purpose
---------------|----------------|------|-----------|---------
-Customer ZVM | Service Provider ZCC | TCP 9081 | Bi-directional | ZVM to ZCC communication
-Customer VRA | Service Provider ZCC | TCP 4007, 9082 and up^ | Bi-directional | TCP control communication between source and target VRAs and ZCC
-Customer VRA | Service Provider ZCC | TCP 4008, 9082 and up^ | Bi-directional | TCP communication to pass data between source and target VRAs and ZCC
+Source device | Target service       | Port                 | Direction      | Purpose
+--------------|----------------------|----------------------|----------------|---------
+Customer ZVM  | Service Provider ZCC | TCP 9081             | Bi-directional | ZVM to ZCC communication
+Customer VRA  | Service Provider ZCC | TCP 4007<sup>*</sup> | Bi-directional | TCP control communication between source and target VRAs and ZCC
+Customer VRA  | Service Provider ZCC | TCP 4008<sup>*</sup> | Bi-directional | TCP communication to pass data between source and target VRAs and ZCC
 
-^ We recommend that you use ports 9082 to 9200 to allow for increase in VRA on source and target sites
+<sup>*</sup> We recommend that you use ports 9082 to 9200 to allow for increase in VRA on source and target sites.
 
 ## Next steps
 

@@ -1,10 +1,10 @@
 ---
 title: How to view storage profile usage
-description: Explains how to view your storage usage in vCloud Director using the API
+description: Explains how to view your storage usage using the vCloud API
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 12/10/2018 17:42:06
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 23/10/2020
 
 toc_rootlink: How To
 toc_sub1: 
@@ -20,22 +20,34 @@ toc_mdlink: vmw-how-view-storage-usage.md
 
 ## Overview
 
-Before allocating more disk space in your UKCloud for VMware account, it is useful to check how much of your allocated space has been used.
+Before allocating more disk space in your UKCloud for VMware account, it's useful to check how much of your allocated space has been used.
 
-## Viewing your storage usage (vCloud Director)
+## Viewing a VDC's storage usage (Tenant Portal)
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, go to the card for your data centre.
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, find the card for the VDC.
 
-2. The *Storage* section shows how much storage you're currently using as well as the amount of allocated storage.
+2. The *Storage* section shows how much storage the VDC is currently using as well as the amount of allocated storage.
 
-    ![VDC card showing storage usage and allocation](images/vmw-vcd-storage.png)
+    ![VDC card showing storage usage and allocation](images/vmw-vcd10.1-vdc-storage.png)
 
-## Viewing your storage usage (vCloud API)
+## Viewing a VM's storage usage (Tenant Portal)
+
+In the VMware Cloud Director 10.1 Tenant Portal, you can see how much storage an individual VM is currently using.
+
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the VM.
+
+2. Find the card for the VM.
+
+3. The *Storage* section shows how much storage the VM is currently using.
+
+    ![VM card showing storage usage and allocation](images/vmw-vcd10.1-vm-storage.png)
+
+## Viewing a VDC's storage usage (vCloud API)
 
 To check your storage profile usage programmatically, you need to call the appropriate vCloud REST API endpoint.
 
 > [!NOTE]
-> Before calling this endpoint, you must first authenticate your session as described in [*How to access vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+> Before calling this endpoint, you must first authenticate your session as described in [*How to access VMware Cloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
 
 We've provided some sample code to show how to make this call on our [GitHub repository](https://github.com/ukcloud/knowledge_centre/tree/master/StorageProfileUsage).
 

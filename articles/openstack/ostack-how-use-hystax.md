@@ -3,8 +3,8 @@ title: How to migrate workloads on OpenStack using Hystax Acura | UKCloud Ltd
 description: Provides information on how to use Hystax Acura to move workloads within your OpenStack environment
 services: openstack
 author: Steve Dixon
-reviewer:
-lastreviewed: 04/03/2020
+reviewer: Bryce Nicholls
+lastreviewed: 25/03/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -47,6 +47,13 @@ These are the agents that are installed within a guest Linux or Windows operatin
 
 ## Migrating OpenStack workloads
 
+> [!IMPORTANT]
+> **Ensure that you've created a network and conntected to a router on the target project.**
+>
+> It's advisable to replicate the network configuration and RFC1918 IP schema onto the target project to avoid any configuration issues.
+>
+> The target instance must be connected to a network and router for the Hystax agent to replicate the instance.
+
 To perform cloud migration you need to complete the following steps:
  
 ### Replication flow
@@ -69,7 +76,7 @@ To perform cloud migration you need to complete the following steps:
     
     - **Linux agent** - an internal agent that can be deployed to any number of customer Linux virtual or physical machines. Refer to <http://docs.hystax.com/devices_protection.html#install-windows-and-linux-agents> and the [Operating Systems Compatibility Matrix](https://hystax.com/wp-content/uploads/2019/12/Hystax_Acura-Compatibility-Matrix.pdf).
  
-4. When any of the agents are deployed, the machine with it (or all machines on the same ESXi host where the agent is located) will appear in Hystax Acura Control Panel under customer dashboard in the Discovered state.
+4. When any of the agents are deployed, the machine with the Hystax agent will appear in Hystax Acura Control Panel under customer dashboard in the Discovered state.
    
 5. To start replication of machines, select the machines and click **Start replication** under **Bulk actions** or for any of the machines specifically. After **Start replication** is performed, machines will be replicated to a target cloud, first, Hystax Acura takes full replica and, later, incremental replicas according to a schedule set globally for all the machines or for any group of machines or for any machines specifically.
 
@@ -130,6 +137,10 @@ Run the following steps on a default Ubuntu setup for a successful migration:
 4. Reboot the Ubuntu instance.
 
 5. At this point the Ubuntu instance is ready to be replicated and migrated.
+
+### Migrating Centos/RHEL workloads
+
+You may encounter an issue where the instance fails to boot in the cloud site after migration, and instead enters a dracut debug state. In this the case, in the source instance, run `dracut -fMa qemu`. Replicate and re-run the migration and the issue should be resolved.
 
 ### Migrating Microsoft Windows workloads
 

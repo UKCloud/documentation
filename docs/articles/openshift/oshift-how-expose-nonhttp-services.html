@@ -8,7 +8,7 @@
     <title>How to expose non-http services externally </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to expose non-http services externally ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@
 <h1 id="how-to-expose-non-http-services-externally">How to expose non-http services externally</h1>
 
 <h2 id="overview">Overview</h2>
-<p>UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.</p>
+<p>UKCloud for Managed OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.</p>
 <p>This article explains how you can expose services outside of your OpenShift cluster without using routes.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>This article assumes familiarity with services and routes in OpenShift and access to an account with cluster-admin permissions.</p>
@@ -114,23 +114,23 @@
 </div>
 <h2 id="exposing-your-service">Exposing your service</h2>
 <p>Now you need to create the service you would like to expose. Create the service as usual, then patch the local IP we gave you into the service as its external IP using the following command (the example uses a local IP of 10.2.1.120):</p>
-<pre><code>oc patch svc &lt;service_name&gt; -p '{&quot;spec&quot;:{&quot;externalIPs&quot;:[&quot;10.2.1.120&quot;]}}'
+<pre><code class="lang-sh">oc patch svc &lt;service_name&gt; -p '{&quot;spec&quot;:{&quot;externalIPs&quot;:[&quot;10.2.1.120&quot;]}}'
 </code></pre>
 <h2 id="deploying-ipfailover">Deploying ipfailover</h2>
 <p>OpenShift has a feature called ipfailover that you can use to make an external IP accessible on a subset of nodes in the cluster. Use ipfailover to make your service available on the external IP. Enter the following commands to deploy ipfailover (you must have cluster-admin permissions):</p>
-<pre><code>oc create sa ipfailover
+<pre><code class="lang-sh">oc create sa ipfailover
 </code></pre>
-<pre><code>oc adm policy add-scc-to-user privileged -z ipfailover
+<pre><code class="lang-sh">oc adm policy add-scc-to-user privileged -z ipfailover
 </code></pre>
-<pre><code>oc adm ipfailover --virtual-ips=10.2.1.120 --watch-port=0 --replicas=&lt;amount_of_compute_nodes&gt; --selector=&quot;node-role.kubernetes.io/compute=true&quot; --vrrp-id-offset=0 --create
+<pre><code class="lang-sh">oc adm ipfailover --virtual-ips=10.2.1.120 --watch-port=0 --replicas=&lt;amount_of_compute_nodes&gt; --selector=&quot;node-role.kubernetes.io/compute=true&quot; --vrrp-id-offset=0 --create
 </code></pre>
 <p>You'll need to pass the IP you've patched into the service as an external IP, using the --virtual-ips argument. You can use any node-selector you like for the --selector argument but make sure it's a valid node label. You must set --watch-port to 0 for the ipfailover deployment to work. The --replicas argument should equal the amount of nodes matching your --selector label. You will need to increment --vrrp-id-offset by one for each ipfailover deployment in your cluster, for example to expose another external IP your command might look like the following:</p>
-<pre><code>oc adm ipfailover --virtual-ips=10.2.1.121 --watch-port=0 --replicas=&lt;amount_of_compute_nodes&gt; --selector=&quot;node-role.kubernetes.io/compute=true&quot; --vrrp-id-offset=1 --create
+<pre><code class="lang-sh">oc adm ipfailover --virtual-ips=10.2.1.121 --watch-port=0 --replicas=&lt;amount_of_compute_nodes&gt; --selector=&quot;node-role.kubernetes.io/compute=true&quot; --vrrp-id-offset=1 --create
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You can only deploy one instance of ipfailover per project. Also, the deployment may sometimes go into a pending state. If this happens ensure that you've incremented --vrrp-id-offset (if necessary) and have given the ipfailover service account the required permissions inside the project you are deploying in:</p>
-<pre><code>oc adm policy add-scc-to-user privileged -z ipfailover
+<pre><code class="lang-sh">oc adm policy add-scc-to-user privileged -z ipfailover
 </code></pre>
 </div>
 <p>You can now access your service on the public IP tied to the external IP.</p>
@@ -151,6 +151,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -169,7 +182,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

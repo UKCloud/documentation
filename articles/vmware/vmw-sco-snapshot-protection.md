@@ -5,13 +5,13 @@ services: vmware
 author: Steve Hall
 reviewer: George Smith
 lastreviewed: 28/10/2019 13:50:39
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Snapshot Protection Service Scope
-toc_fullpath: Service Scope/vmw-sco-snapshot-protection.md
+toc_fullpath: Service Information/vmw-sco-snapshot-protection.md
 toc_mdlink: vmw-sco-snapshot-protection.md
 ---
 
@@ -57,7 +57,7 @@ We do not guarantee successful snapshots.
 
 We can provide you with guidance on suitable candidates for Snapshot Protection (data change rate/size).
 
-VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your Service Delivery Manager if this scenario applies to one or more of your VMs.
+VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Contact your Service Delivery Manager if this scenario applies to one or more of your VMs.
 
 VM snapshots may be attempted more than once to obtain successful status.
 
@@ -85,9 +85,9 @@ The UKCloud Cloud Storage platform may be an appropriate target for self‑manag
 
 The service is not backed by service credits.
 
-### Planned maintenance
+### Planned Maintenance
 
-On occasion, planned maintenance will take precedence over VM snapshots. If there's a potential disruption, we'll highlight this to you via the service [status page](https://status.ukcloud.com/) and UKCloud Portal notifications system.
+On occasion, Planned Maintenance will take precedence over VM snapshots. If there's a potential disruption, we'll highlight this to you via the [UKCloud Service Status page](https://status.ukcloud.com/).
 
 ## Snapshot management
 

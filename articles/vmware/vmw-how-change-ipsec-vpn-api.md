@@ -1,6 +1,6 @@
 ---
 title: How to change IPsec VPN settings via the vCloud API
-description: Provides a step by step guide to manipulating the IPsec VPN configuration applied to an edge gateway via the vCloud Director API
+description: Provides a step by step guide to manipulating the IPsec VPN configuration applied to an edge gateway via the vCloud API
 services: vmware
 author: Sue Highmoor
 reviewer:
@@ -16,7 +16,7 @@ toc_fullpath: How To/vmw-how-change-ipsec-vpn-api.md
 toc_mdlink: vmw-how-change-ipsec-vpn-api.md
 ---
 
-# How to change IPsec VPN settings via the vCloud Director API
+# How to change IPsec VPN settings via the vCloud API
 
 ## Overview
 
@@ -26,7 +26,7 @@ Use cases:
 
 - Enabling customers to quickly amend IPsec configurations
 
-    Modifications of this nature are not possible in the vCloud Director graphical user interface without first deleting the existing IPsec VPN configuration entirely and re-entering the settings. Depending on the number of tunnels, this can be a lengthy task. Making changes to the IPsec VPN configuration via the vCloud API can greatly speed up this process.
+    Modifications of this nature are not possible in the VMware Cloud Director graphical user interface without first deleting the existing IPsec VPN configuration entirely and re-entering the settings. Depending on the number of tunnels, this can be a lengthy task. Making changes to the IPsec VPN configuration via the vCloud API can greatly speed up this process.
 
 - Edge gateway configuration data
 
@@ -36,7 +36,7 @@ Use cases:
 
 Before using the vCloud API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see [*How to install a REST client to access the vCloud API*](vmw-how-install-vcloud-api-rest-client.md).
 
-You also need to find your API credentials. For more information, see [*How to access vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md)
+You also need to find your API credentials. For more information, see [*How to access VMware Cloud Director through the vCloud API*](vmw-how-access-vcloud-api.md)
 
 ## Obtaining an authorisation token
 
@@ -224,7 +224,7 @@ To locate the IPsec VPN settings, open a new text editor window and copy and pas
 <GatewayIpsecVpnService>
    <IsEnabled>true</IsEnabled>
    <Endpoint>
-      <Network type="application/vnd.vmware.admin.network+xml" href="https://api.vcd.portal.ukcloud.com/api/admin/network/3c284ec8-2850- ba77-098c-7f697a3d8769"/>
+      <Network type="application/vnd.vmware.admin.network+xml" href="https://api.vcd.portal.skyscapecloud.com/api/admin/network/3c284ec8-2850- ba77-098c-7f697a3d8769"/>
       <PublicIp>37.26.88.73</PublicIp>
    </Endpoint>
    <Tunnel>
@@ -323,7 +323,7 @@ When you've updated the relevant sections of the configuration, you can apply it
 
 9. To submit the new configuration, click **Send**.
 
-10. The status of the edge gateway as viewed from vCloud Director will briefly show as **Updating Configuration**. Once this process has completed, right click the edge gateway and select **Configure Services**.
+10. The status of the edge gateway as viewed from VMware Cloud Director will briefly show as **Updating Configuration**. Once this process has completed, right click the edge gateway and select **Configure Services**.
 
 11. In the *Configure Services* window select the **VPN** tab.
 

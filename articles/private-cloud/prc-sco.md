@@ -69,7 +69,7 @@ Your compute solution can be:
 
 ## Upfront deployment charges
 
-You will be charged an upfront design and deployment fee before hardware is procured and installation is scheduled. See the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for more information.
+You will be charged an upfront design and deployment fee before hardware is procured and installation is scheduled. See the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for more information.
 
 ## Installation
 
@@ -167,7 +167,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
 - Providing you with visibility of capacity utilisation to ensure capacity planning can be effectively performed
 
-- Your assigned Service Delivery Manager will attend any required service reviews and project progress calls that you need
+- Your assigned Service Delivery Manager (SDM) will attend any required service reviews and project progress calls that you need
 
 - Notifying you of any maintenance windows and agreeing a suitable time to implement
 
@@ -219,7 +219,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
 ## To progress further
 
-For further information, contact your Service Delivery Manager to request more information or to place an order.
+Contact your SDM to request more information or to place an order.
 
 ## Feedback
 

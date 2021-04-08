@@ -2,9 +2,9 @@
 title: HybridConnect FAQs
 description: Frequently asked questions for HybridConnect
 services: connectivity
-author: Matt Warner
-reviewer: hbrunt
-lastreviewed: 16/12/2019
+author: mwarner
+reviewer: shighmoor
+lastreviewed: 07/12/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -64,7 +64,7 @@ Yes. You can deploy a private circuit into each data centre and use the UKCloud 
 
 If the primary private circuit were to fail, you could get to the primary data centre (DC1) via the private circuit into the second data centre (DC2) and across the UKCloud DCI. In this case, you must use 'reserved bandwidth'.
 
-There may be setup costs (aligned to the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)), depending on the complexity of the requirement.
+There may be setup costs (aligned to the [SFIA Rate Card](http://www.ukcloud.com/sfia)), depending on the complexity of the requirement.
 
 ## How will HybridConnect connect to my UKCloud environment?
 
@@ -72,13 +72,17 @@ The way that HybridConnect connects to your UKCloud environment depends on the r
 
 ## How do I initiate and process a HybridConnect installation?
 
-You need to either contact your account director or raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal.
+You need to either contact your Client Director or raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal.
 
 ## How much do you charge for a HybridConnect connection?
 
-There is a one‑off charge of £2,000.
+There is a one‑off charge of £1,000 and then a monthly charge of £150 for a 1Gb port and £300 for a 10Gb port.
 
-## General connectivity questions 
+## Is there a minimum commit for HybridConnect?
+
+There is a minimum commit of 6 months for HybridConnect. In the case of early termination, you will be liable for any remaining balance.
+
+## General connectivity questions
 
 If you have questions about connectivity in general, please see the [*General connectivity FAQs*](conn-faq.md).
 

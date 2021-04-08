@@ -25,7 +25,7 @@ Free trials provide you with a live environment on the UKCloud platform to test 
 
 Prior to your trial, you will be engaged by a Cloud Architect to identify the goals you are working towards, and to ensure that your trial meets them.
 
-Throughout the trial period, we will assign you a Customer Success Manager (CSM), who will provide support for any issues you may encounter or questions you may have.
+Throughout the trial period, we will assign you a Service Delivery Manager (SDM), who will provide support for any issues you may encounter or questions you may have.
 
 At the end of your free trial, you can seamlessly move to a billed service, leveraging any of the work you have already completed in the live trial environment.
 
@@ -39,9 +39,7 @@ Exclusions are:
 
 - Basic Managed VM
 
-- HSCN, unless you already have an HSCN connection
-
-- Services covered by the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
+- Services covered by the [SFIA Rate Card](http://www.ukcloud.com/sfia)
 
 - Dedicated Compute option in UKCloud for VMware
 
@@ -50,6 +48,8 @@ Exclusions are:
 - Private Cloud for Storage
 
 - Private Cloud for Oracle Software
+
+- Government network where Code of Connection is not held (for example, PSN or HSCN; see relevant connectivity FAQ)
 
 - Products in alpha or beta testing - these will be treated differently to free trials
 
@@ -69,6 +69,8 @@ Free trials are:
 
 - Trials are excluded from any SLA credits
 
+- Customers are liable for any software licensing even though the service is not in production (this includes software such as Microsoft Server OS, Microsoft SQL, and Microsoft Applications (including Office 365))
+
 ## How does the free trial work?
 
 Requesting a trial:
@@ -83,11 +85,11 @@ During your trial:
 
 - Use your credits for any eligible service within your environment within 30 days, unless stated differently in the Service Scope
 
-- Contact your CSM with any issues or questions
+- Contact your SDM with any issues or questions
 
 Ending your trial
 
-- You will be contacted by your Cloud Architect or CSM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner)
+- You will be contacted by your Cloud Architect or SDM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner)
 
 - You have the option to transition to production or cease the trial
 

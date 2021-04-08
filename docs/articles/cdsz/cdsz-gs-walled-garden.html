@@ -8,7 +8,7 @@
     <title>Getting Started Guide for the Cross Domain Security Zone </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for the Cross Domain Security Zone ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -123,20 +123,22 @@
 </li>
 <li><p>If you're connecting new or existing VDCs to the Walled Garden VDC.</p>
 <ul>
-<li>If you're connecting to existing VDCs, we'll need to know information such as NFT details, customer account, and so on.</li>
+<li>If you're connecting to existing VDCs, we'll need to know information such as network firewall tennant (NFT) details, customer account, and so on.</li>
 </ul>
 </li>
 <li><p>The external source IP addresses from which you'd like to access the Assured VDC (up to a maximum of 50).</p>
-<p>These IP addresses are the locations from which you can build and test the environment (for example, offices or end user premises).</p>
+<ul>
+<li>These IP addresses are the locations from which you can build and test the environment (for example, offices or end user premises).</li>
+</ul>
 </li>
 </ul>
-<p>The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Customer Success Manager (CSM) will send you the information you need to access it.</p>
+<p>The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Service Delivery Manager (SDM) will send you the information you need to access it.</p>
 <h2 id="building-your-walled-garden-service">Building your Walled Garden service</h2>
 <p>As soon as you have access to your environment, you can start to build your Walled Garden services.</p>
 <p>It is important to remember that while the UKCloud Portal for the Assured security domain is accessible from the internet, the Portal for the Elevated security domain and Walled Garden services is accessible only through the PSN Protected network or through UKCloud's Secure Remote Access (SRA) service.</p>
 <h3 id="setting-up-your-networking">Setting up your networking</h3>
 <p>First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a> and <a href="../vmware/vmw-gs-build-vm-vcd.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
-<p>You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or NAT rules.</p>
+<p>You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or network address translation (NAT) rules.</p>
 <h4 id="networking-examples">Networking examples</h4>
 <p>There are two options for networking between the VDCs in the Walled Garden service:</p>
 <ul>
@@ -152,7 +154,7 @@
 <ul>
 <li>You cannot route public IP addresses to the vCNS Edges in the Walled Garden</li>
 <li>The Org VDC networks 192.168.XXX.XX in the examples below are illustrative and you should replace these with your own details</li>
-<li>You must have one VM in the Walled Garden VDC connecting to both vCNS Edges</li>
+<li>You must have one virtual machine (VM) in the Walled Garden VDC connecting to both vCNS Edges</li>
 <li>Each of the examples below assumes that the appropriate firewall rules are in place</li>
 <li>You must apply an SNAT rule in the Elevated security domain to enable connectivity to UKCloud services</li>
 </ul>
@@ -160,12 +162,12 @@
 <p><img src="images/cdsz-static-routes-snat.jpg" alt="Option 1 example: Static routes &amp; SNAT in Elevated"></p>
 <p><img src="images/cdsz-snat-dnat.jpg" alt="Option 2 example: SNAT/DNAT transit address"></p>
 <h3 id="building-your-virtual-machines">Building your virtual machines</h3>
-<p>The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the vCloud Director catalog or from template VMs as OVF files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+<p>The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the VMware Cloud Director catalog or from template VMs as Open Virtualization Format (OVF) files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
 <h3 id="testing-your-environment">Testing your environment</h3>
 <p>When you've built your VMs and networking, you can start to test the environment. If you've configured the networking correctly, your VMs should be able to talk to each other across the Walled Garden. If you have any issues, check your network rules.</p>
 <h3 id="performing-the-it-health-check">Performing the IT Health Check</h3>
 <p>As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can verify appropriate providers on the <a href="https://www.ncsc.gov.uk/section/products-services/verify-supplier?q=&amp;defaultTypes=organisation&amp;sort=date%2Bdesc&amp;start=0&amp;rows=20">NCSC web site</a>.</p>
-<p>Before beginning the ITHC, notify UKCloud by raising a service request in <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> and completing the <a href="https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad"><em>External Security Review Test (ESRT) application form</em></a>. Ideally, we require five working days' notice before the work is due to be carried out.</p>
+<p>Before beginning the ITHC, notify UKCloud by raising a service request in <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> and completing the <a href="https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-231%20External%20Security%20Review%20Testing%20application%20form.docx?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1601158257&amp;Signature=juLGEEXii6buW2ciPz3eUpkHF1w%3D"><em>External Security Review Test (ESRT) application form</em></a>. Ideally, we require five working days' notice before the work is due to be carried out.</p>
 <p>The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.</p>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to the Cross Domain Security Zone Walled
@@ -194,6 +196,19 @@ Garden.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -212,7 +227,7 @@ Garden.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

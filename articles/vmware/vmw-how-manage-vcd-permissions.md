@@ -1,25 +1,33 @@
 ---
-title: How to manage permissions for vCloud Director
-description: Shows how to manage and adjust permissions and roles for vCloud Director within the UKCloud Portal
+title: How to manage VMware Cloud Director permissions in the UKCloud Portal
+description: Shows how to manage and adjust permissions and roles for VMware Cloud Director within the UKCloud Portal
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 06/11/2020
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Manage permissions for vCloud Director
+toc_title: Manage VMware Cloud Director permissions
 toc_fullpath: How To/vmw-how-manage-vcd-permissions.md
 toc_mdlink: vmw-how-manage-vcd-permissions.md
 ---
 
-# How to manage permissions for vCloud Director
+# How to manage VMware Cloud Director permissions in the UKCloud Portal
+
+## Overview
+
+In the UKCloud Portal, you can control the access that a Portal user has to the different virtual data centres (VDCs) in your organisation.
+
+### Intended audience
+
+To complete the steps in this guide you must be a Portal administrator.
 
 ## Configuring permissions
 
-To configure permissions for a portal user:
+To configure permissions for a Portal user:
 
 1. Log in to the UKCloud Portal as an administrator.
 
@@ -29,7 +37,7 @@ To configure permissions for a portal user:
 
     ![All Contacts menu option in UKCloud Portal](images/ptl-menu-all-contacts.png)
 
-3. On the *Contacts* page, use the **Search** field to find the user to whom you want to assign or revoke vCloud Director permissions and then click the **Edit** button.
+3. On the *Contacts* page, use the **Search** field to find the user to whom you want to assign or revoke permissions and then click the **Edit** button.
 
     ![Edit button for Portal contact](images/ptl-contacts-btn-edit.png)
 
@@ -37,58 +45,21 @@ To configure permissions for a portal user:
 
     ![Permissions tab for Portal contact](images/ptl-contacts-tab-permissions.png)
 
-5. In the *Permissions for UKCloud for VMware* section, you'll see a list of virtual data centres (VDCs) and the associated permissions available for the portal user.
+5. In the *Permissions for UKCloud for VMware* section, you'll see a list of VDCs and the associated user roles available for the Portal user.
 
-    Select the permission level you want to assign to the user, then scroll to the bottom of the page and click **Save**.
+    Select the role you want to assign to the user, then scroll to the bottom of the page and click **Save**.
 
-## User types and privileges
+## User roles and access rights
 
-The first table shows the user types (operations); the second table shows the exact privileges each user type has.
+For a list of the access rights each of the listed user roles has, see the [Rights in Predefined Global Tenant Roles]( 
+https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-AE42A8F6-868C-4FC0-B224-87CA0F3D6350.html#GUID-AE42A8F6-868C-4FC0-B224-87CA0F3D6350) VMware article.
 
-Operation | Allows the user administrative access to the given vCloud Director organisation with:
-----------|--------------------------------------------------------------------------------------
-Console Only (CO) | Permissions for Console access only
-vApp User (VU) | Permissions for a vApp User
-vApp Author (VA) | Permissions for a vApp Author
-Catalogue Author (CA) |  Permissions for a Catalogue Author
-Admin (ADM) | All permissions
+### API Only role
 
-Group | Privilege | CO | VU | VA | CA | ADM
-------|-----------|----|----|----|----|-----
-Catalog | Add a vApp from My Cloud | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Change Owner | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &check;
-&nbsp; | Create/Delete a new Catalog | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Edit Catalog Properties | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Publish a Catalog | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Share a Catalog | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | View Private and Shared Catalogs | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | View Published Catalogs | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &check;
-Catalog Item | Add to My Cloud | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Copy/Move a vApp Template/Media | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Create/Upload a vApp Template/Media | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Enable vApp Template Download | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | Edit vApp Template / Media Properties | &nbsp; | &nbsp; | &nbsp; | &check; | &check;
-&nbsp; | View vApp Templates/Media | &nbsp; | &check; | &check; |&check; | &check;
-Disk | Change Owner | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Create a Disk | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Delete a Disk | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Edit Disk Properties | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | View Disk Properties | &nbsp; | &check; | &check; | &check; | &check;
-vApp | Access to VM Console | &check; | &check; | &check; | &check; | &check;
-&nbsp; | Change Owner | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &check;
-&nbsp; | Copy a vApp | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Create/Reconfigure a vApp | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Create/Revert/Remove a Snapshot | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Delete a vApp | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Edit vApp Properties | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Edit VM CPU | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Edit VM Hard Disk | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Edit VM Memory | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Edit VM Network | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Edit VM Properties | &nbsp; | &check; | &check; | &check; | &check;
-&nbsp; | Manage VM Password Settings | &check; | &check; | &check; | &check; | &check;
-&nbsp; | Share a vApp | &nbsp; | &nbsp; | &check; | &check; | &check;
-&nbsp; | Start/Stop/Suspend/Reset a vApp | &nbsp; | &check; | &check; | &check; | &check;
+UKCloud have created an **API Only** role that restricts users with VMware Cloud Director permissions to accessing VMware Cloud Director solely via the API, with no GUI access.
+
+> [!NOTE]
+> The **API Only** role must be selected in addition to one of the VMware Cloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
 
 ## Feedback
 

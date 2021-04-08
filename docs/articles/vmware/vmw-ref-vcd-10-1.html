@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Changes in VMware Cloud Director 10.1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Changes in VMware Cloud Director 10.1 ">
+    <meta name="generator" content="docfx 2.53.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-vcd-10-1.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="changes-in-vmware-cloud-director-101">Changes in VMware Cloud Director 10.1</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article provides information about the changes introduced in VMware Cloud Director 10.1.</p>
+<h2 id="new-features">New features</h2>
+<p>VMware Cloud Director 10.1 provides the following new features.</p>
+<ul>
+<li><p>UI enhancements in the HTML5 Tenant Portal:</p>
+<ul>
+<li><p>Hamburger bar replaced with a menu bar</p>
+</li>
+<li><p>New Applications menu to manage vApps and VMs across data centres</p>
+</li>
+<li><p>New vApp and VM card design</p>
+</li>
+<li><p>New Resources view for VMs and vApps</p>
+</li>
+<li><p>Ability to change the catalog owner</p>
+</li>
+<li><p>Ability to edit the OVF properties of a vApp and VM</p>
+</li>
+<li><p>Option to power on a vApp after vApp deployment</p>
+</li>
+<li><p>vApp templates are differentiated from unexpired templates with a new grid column</p>
+</li>
+<li><p>External IP is showing on the vApp details page</p>
+</li>
+<li><p>Ability to delete Shadow VMs</p>
+</li>
+</ul>
+</li>
+<li><p>Terraform VMware Cloud Director Provider, updated to version 2.8, enables you to access infrastructure-as-code</p>
+</li>
+</ul>
+<p>For more information about new features in VMware Cloud Director 10.1, see <a href="https://cloudsolutions.vmware.com/assets/blta3bfbeafb64db8f8/What_s_New_with_VMware_Cloud_Director_10.1.pdf">https://cloudsolutions.vmware.com/assets/blta3bfbeafb64db8f8/What_s_New_with_VMware_Cloud_Director_10.1.pdf</a>.</p>
+<h2 id="legacy-ui">Legacy UI</h2>
+<p>The Legacy UI is no longer available in VMware Cloud Director 10.1. All tasks can now be performed using the HTML5-based Tenant Portal, removing the requirement for the Flash browser plugin.</p>
+<h2 id="browser-support">Browser support</h2>
+<p>VMware Cloud Director 10.1 is compatible with the current major and previous major releases of the following browsers:</p>
+<ul>
+<li><p>Google Chrome</p>
+</li>
+<li><p>Mozilla Firefox</p>
+</li>
+<li><p>Microsoft Edge</p>
+</li>
+<li><p>Microsoft Internet Explorer 11</p>
+</li>
+</ul>
+<h2 id="changes-to-apis">Changes to APIs</h2>
+<p>VMware Cloud Director 10.1 supports the VMware Cloud Director API version 34.0 (see <a href="https://code.vmware.com/apis/912/vmware-cloud-director">https://code.vmware.com/apis/912/vmware-cloud-director</a>). For information about the changes to the VMware Cloud Director API for this version, see <a href="https://code.vmware.com/apis/912/vmware-cloud-director/doc/diff/index.html">VMare Cloud Director API Schema Differences</a>.</p>
+<p>VMware Cloud Director 10.1 is the last release of VMware Cloud Director to support vCloud API 30.0. The 30.0 and 31.0 versions of the API are deprecated in this release and will not be supported in future releases.</p>
+<p>The following API versions are still available:</p>
+<ul>
+<li><p>30.0 (deprecated)</p>
+</li>
+<li><p>31.0 (deprecated)</p>
+</li>
+<li><p>32.0</p>
+</li>
+<li><p>33.0</p>
+</li>
+<li><p>34.0</p>
+</li>
+</ul>
+<h3 id="sandbox-for-testing-vcloud-api">Sandbox for testing vCloud API</h3>
+<p>UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<a href="https://vcd.latest.ukcloud.com/login/">https://vcd.latest.ukcloud.com/login/</a>) has been upgraded to VMware Cloud Director 10.1.2.</p>
+<p>To gain access to the sandbox, raise a Service Request via My Calls on the UKCloud Portal.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Some VMware Cloud Director features may be available in the sandbox that will not be enabled in UKCloud for VMware after the 10.1 upgrade. If there's a 10.1 feature that you're particularly interested in, contact your Service Delivery Manager to register interest so that we can consider it for our roadmap.</p>
+</div>
+<h2 id="known-issues">Known issues</h2>
+<p>Known issues you may experience following the upgrade to VMware Cloud Director 10.1 include:</p>
+<h3 id="known-issues-in-vmware-cloud-director">Known issues in VMware Cloud Director</h3>
+<ul>
+<li><p>If you enable the <strong>Enable VM to join domain</strong> options, you will not be able to amend the hardware configuration of the VM. There is currently no workaround for this issue, so you should ensure that you do not enable this setting.</p>
+</li>
+<li><p>Guest customisation is failing in the following:</p>
+<ul>
+<li><p>For existing VMs - Windows 2012, Windows 2012R2 and Windows 2016</p>
+</li>
+<li><p>For new VMs - Windows 2012, Windows 2012R2</p>
+</li>
+</ul>
+<p>When setting a new administrator password and/or changing the IP address then forcing re-customisation at power-on, the settings are ignored.</p>
+<p>The workaround is to deploy the template, but before powering on, change the VM type to Windows 2016. Power on using Force Customization.</p>
+</li>
+</ul>
+<h3 id="known-issues-in-the-ukcloud-portal">Known issues in the UKCloud Portal</h3>
+<ul>
+<li><p>Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal (see <a href="../portal/ptl-how-restrict-access-vcloud-api.html"><em>How to restrict access to VMware Cloud Director</em></a>). If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.</p>
+</li>
+<li><p>Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal (see <a href="vmw-how-view-storage-usage.html"><em>How to view storage profile usage</em></a>).</p>
+</li>
+</ul>
+<p>For other known issues with VMware Cloud Director 10.1, see the <a href="https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html">VMware Cloud Director 10.1 Release Notes</a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

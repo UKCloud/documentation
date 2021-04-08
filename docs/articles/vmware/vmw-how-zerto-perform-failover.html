@@ -8,7 +8,7 @@
     <title>How to perform a failover </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to perform a failover ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,7 +96,7 @@
 <h2 id="overview">Overview</h2>
 <p>You may want to perform a failover in the following circumstances:</p>
 <ul>
-<li><p>To recover virtual machines (VMs) after a disaster, if you're using Disaster Recovery as a Service or the UKCloud for VMware Journaling Protection option</p>
+<li><p>To recover virtual machines (VMs) after an issue or disaster, if you're using Disaster Recovery as a Service or the UKCloud for VMware Journaling Protection option</p>
 </li>
 <li><p>To migrate workloads from a local, on-premises environment onto the UKCloud platform</p>
 </li>
@@ -113,23 +113,23 @@
 <p>When you run a test failover, a test VM is created for each of your protected VMs in a sandbox on the target site, using the test network specified in the virtual protection group (VPG). During the test, your VMs' journals continue to be updated and new checkpoints generated, ensuring that your VMs remain protected and can be fully recovered in the event of an actual live failover.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>When the test failover has been instantiated, Zerto will automatically start up the test failover VMs. It is critically important that you do not power on (or power off) the VMs manually in vCloud Director before the failover is completely instantiated. Changing the state of the VMs in vCloud Director before the failover process is complete will result in corruption of the VPG. If you power off a failed-over VMs while a test failover is in progress, replication of live VMs will be affected.</p>
+<p>When the test failover has been instantiated, Zerto will automatically start up the test failover VMs. It is critically important that you do not power on (or power off) the VMs manually in VMware Cloud Director before the failover is completely instantiated. Changing the state of the VMs in VMware Cloud Director before the failover process is complete will result in corruption of the VPG. If you power off failed-over VMs while a test failover is in progress, replication of live VMs will be affected.</p>
 </div>
 <ol>
 <li><p>Log in to the ZSSP.</p>
 <p>For more detailed instructions, see <a href="vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a>.</p>
 <p>Use the ZSSP login link for the zone in which your target VDC is located.</p>
 </li>
-<li><p>At the bottom of the page, make sure that the failover toggle is set to <strong>TEST</strong> and click <strong>FAILOVER</strong>.</p>
-<p><img src="images/perform-image-1.png" alt="test"></p>
+<li><p>At the bottom of the page, click <strong>Test</strong>.</p>
+<p><img src="images/vmw-zerto-btn-failover-test.png" alt="Test failover option"></p>
 </li>
-<li><p>In the <em>Failover Test</em> wizard, in the <em>SELECT VPGs</em> page, select one or more VPGs that you want to test then click <strong>NEXT</strong>.</p>
-<p><img src="images/perform-image-2.png" alt="My VMs"></p>
+<li><p>In the <em>Failover Test</em> wizard, on the <em>Select VPGs</em> page, select one or more VPGs that you want to test then click <strong>Next</strong>.</p>
+<p><img src="images/vmw-zerto-failover-test-vpgs.png" alt="Failover Test wizard - Select VPGs page"></p>
 </li>
-<li><p>The <em>EXECUTION PARAMETERS</em> page shows the most recent checkpoint added to the journal. If you want to use a different checkpoint for the test, click the <strong>Checkpoint</strong> time.</p>
-<p><img src="images/perform-image-3.png" alt="My VMs"></p>
+<li><p>The <em>Execute Parameters</em> page shows the most recent checkpoint added to the journal. If you want to use a different checkpoint for the test, click the <strong>Checkpoint</strong> time.</p>
+<p><img src="images/vmw-zerto-failover-test-params-checkpoint.png" alt="Failover Test wizard - Execute Parameters page"></p>
 </li>
-<li><p>In the <em>Checkpoints</em> dialog, select the checkpoint that you want to use:</p>
+<li><p>In the <em>Checkpoints</em> dialog box, select the checkpoint that you want to use:</p>
 <ul>
 <li><p><strong>Latest</strong> to use the latest checkpoint</p>
 </li>
@@ -140,18 +140,18 @@
 <li><p><strong>Select from all available checkpoints</strong> to select a specific checkpoint from the list below</p>
 </li>
 </ul>
-<p><img src="images/perform-image-4.png" alt="My VMs"></p>
+<p><img src="images/vmw-zerto-failover-test-checkpoints.png" alt="Checkpoints dialog box for test failover"></p>
 </li>
-<li><p>Click <strong>OK</strong> then click <strong>NEXT</strong>.</p>
+<li><p>Click <strong>OK</strong> then click <strong>Next</strong>.</p>
 </li>
-<li><p>In the <em>FAILOVER TEST</em> page, review the diagram to see the number of VPGs and VMs included in the test and where they will be recovered to, then click <strong>START FAILOVER TEST</strong>.</p>
+<li><p>In the <em>Failover Test</em> page, review the diagram to see the number of VPGs and VMs included in the test and where they will be recovered to, then click <strong>Start Failover Test</strong>.</p>
 <p>The test begins with an initialisation period, during which the VMs are created in scratch volumes on the target site.</p>
 </li>
 <li><p>You can check the status of the test by clicking the <strong>VPG Name</strong> on the <em>VPGs</em> tab.</p>
 </li>
 <li><p>To stop the test, on the <em>VPGs</em> tab, click the <strong>VPG Name</strong> and click the <strong>Stop test</strong> icon.</p>
 </li>
-<li><p>In the <em>Stop Test</em> dialog, from the <strong>Result</strong> list, choose whether the test succeeded or failed, then click <strong>STOP</strong>.</p>
+<li><p>In the <em>Stop Test</em> dialog, from the <strong>Result</strong> list, choose whether the test succeeded or failed, then click <strong>Stop</strong>.</p>
 <p>You can also provide additional <strong>Notes</strong> to describe the test scenario.</p>
 <p>After you stop the test, the test VMs are powered off and removed.</p>
 </li>
@@ -160,25 +160,21 @@
 <p>In the event of a disaster, you'll need to run a live failover to recover your VMs. You can also use live failover to migrate your workloads to the target site.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>When the failover has been instantiated, Zerto will automatically start up the failover VMs. It is critically important that you do not power on (or power off) the VMs manually in vCloud Director before the failover is completely instantiated. Changing the state of the VMs in vCloud Director before the failover process is complete will result in corruption of the VPG and potentially the failure of the disaster recovery process.</p>
+<p>When the failover has been instantiated, Zerto will automatically start up the failover VMs. It is critically important that you do not power on (or power off) the VMs manually in VMware Cloud Director before the failover is completely instantiated. Changing the state of the VMs in VMware Cloud Director before the failover process is complete will result in corruption of the VPG and potentially the failure of the disaster recovery process.</p>
 </div>
 <ol>
 <li><p>Log in to the ZSSP.</p>
 <p>For more detailed instructions, see <a href="vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a>.</p>
 <p>Use the ZSSP login link for the zone in which your target VDC (for recovery or migration) is located.</p>
 </li>
-<li><p>At the bottom of the page, make sure that the failover toggle is set to <strong>LIVE</strong> and click <strong>FAILOVER</strong>.</p>
-<p><img src="images/perform-image-5.png" alt="My VMs"></p>
+<li><p>At the bottom of the page, click <strong>Failover</strong>.</p>
+<p><img src="images/vmw-zerto-btn-failover-live.png" alt="Live failover option"></p>
 </li>
-<li><p>In the <em>Failover</em> wizard, in the <em>SELECT VPGs</em> page, select one or more VPGs that you want to failover or migrate then click <strong>NEXT</strong>.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>The red border around the wizard provides a visual cue that you are performing a live failover, rather than a test.</p>
-</div>
-<p><img src="images/perform-image-6.png" alt="My VMs"></p>
+<li><p>In the <em>Failover Live</em> wizard, on the <em>Select VPGs</em> page, select one or more VPGs that you want to failover or migrate then click <strong>Next</strong>.</p>
+<p><img src="images/vmw-zerto-failover-live-vpgs.png" alt="Failover Live wizard - Select VPGs page"></p>
 </li>
-<li><p>The <em>EXECUTION PARAMETERS</em> page shows the most recent checkpoint added to the journal. If you want to use a different checkpoint, click the <strong>Checkpoint</strong> time.</p>
-<p><img src="images/perform-image-7.png" alt="My VMs"></p>
+<li><p>The <em>Execute Parameters</em> page shows the most recent checkpoint added to the journal. If you want to use a different checkpoint, click the <strong>Checkpoint</strong> time.</p>
+<p><img src="images/vmw-zerto-failover-live-params-checkpoint.png" alt="Failover Live wizard - Execute Parameters page"></p>
 </li>
 <li><p>In the <em>Checkpoints</em> dialog, select the checkpoint that you want to use:</p>
 <ul>
@@ -191,11 +187,11 @@
 <li><p><strong>Select from all available checkpoints</strong> to select a specific checkpoint from the list below</p>
 </li>
 </ul>
-<p><img src="images/perform-image-8.png" alt="My VMs"></p>
+<p><img src="images/vmw-zerto-failover-live-checkpoints.png" alt="Checkpoints dialog box for live failover"></p>
 </li>
 <li><p>Click <strong>OK</strong>.</p>
 </li>
-<li><p>The commit policy gives you the opportunity to check the integrity of the recovered or migrated VMs before committing the failover. To change the commit policy, select the <strong>Commit Policy</strong> field and choose:</p>
+<li><p>The commit policy gives you the opportunity to check the integrity of the recovered or migrated VMs before committing the failover. To change the commit policy, click the <strong>Commit Policy</strong> field and select:</p>
 <ul>
 <li><p><strong>Auto-Commit</strong> if you want to automatically commit the failover after a specified amount of time if there is no user interaction. Set the amount of time in the <strong>After</strong> field, up to a maximum of 1440 minutes (24 hours). If you want the failover to be immediately committed, enter 0.</p>
 </li>
@@ -205,7 +201,7 @@
 </li>
 </ul>
 </li>
-<li><p>The shutdown policy determines what happens to the source VMs in the event of a failover. To change the shutdown policy, select the <strong>VM Shutdown</strong> field and choose:</p>
+<li><p>The VM shutdown policy determines what happens to the source VMs in the event of a failover. To change the shutdown policy, click the <strong>VM Shutdown</strong> field and select:</p>
 <ul>
 <li><p><strong>No</strong> to leave the source VMs as they are before starting the failover.</p>
 </li>
@@ -215,15 +211,15 @@
 </li>
 </ul>
 </li>
-<li><p>Reverse protection ensures that when the source VMs are failed over to the target site, the source site becomes the new target site to ensure that the VMs are still protected. To enable reverse protection, select the <strong>Reverse Protection</strong> field and select the check box.</p>
+<li><p>Reverse protection ensures that when the source VMs are failed over to the target site, the source site becomes the new target site so that the VMs are still protected. To enable reverse protection, click the <strong>Reverse Protection</strong> field and select the check box.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Reverse protection uses the original source VM's virtual disks to pre‑seed the reverse replication, therefore enabling reverse protection will make changes to the source VMs.</p>
 </div>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>In the <em>FAILOVER</em> page, review the diagram to see the number of VPGs and VMs included in the failover and where they will be recovered or migrated to, then click <strong>START FAILOVER</strong>.</p>
+<li><p>In the <em>Failover</em> page, review the diagram to see the number of VPGs and VMs included in the failover and where they will be recovered or migrated to, then click <strong>Start Failover</strong>.</p>
 <p>The failover process creates the VMs in the target site to the selected point in time.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -235,13 +231,13 @@
 <h5>Note</h5>
 <p>As soon as a live failover is committed, the journal is destroyed and you cannot go back and select a different checkpoint. However, provided reverse protection is not enabled, the original VMs on the source site remain in place.</p>
 </div>
-<p>When the commit is completed, the VPG will show as being in <strong>Needs Configuration</strong> state. When in this state, editing the VPG configuration may cause reverse protection to begin. If this is not desired, then you should delete VPG as soon as it reaches the <strong>Needs Configuration</strong> state.</p>
+<p>When the commit is completed, the VPG will show as being in <strong>Needs Configuration</strong> state. When in this state, editing the VPG configuration may cause reverse protection to begin. If this is not desired, then you should delete the VPG as soon as it reaches the <strong>Needs Configuration</strong> state.</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
 <p>Your VMs are now running in the target site, which is now your primary site.</p>
 <p>For Disaster Recovery as a Service and Journaling Protection, to return to the source site (or a different site) after the disaster has been resolved, perform a failover to move them to the source site.</p>
-<p>For Migration to the Cloud, as soon as you are happy with how your workloads are running in on the UKCloud platform, you can tidy up the source environment.</p>
+<p>For Migration to the Cloud, as soon as you are happy with how your workloads are running on the UKCloud platform, you can tidy up the source environment.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -253,6 +249,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -271,7 +280,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

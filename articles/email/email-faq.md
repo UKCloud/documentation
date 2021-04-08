@@ -2,9 +2,9 @@
 title: Email and Collaboration as a Service FAQs
 description: Frequently asked questions for Email and Collaboration as a Service
 services: email
-author: Matt Warner
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+author: mwarner
+reviewer: bchallis
+lastreviewed: 17/03/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -16,6 +16,12 @@ toc_mdlink: email-faq.md
 ---
 
 # Email and Collaboration as a Service FAQs
+
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
+> [!IMPORTANT]
+> PSN Email Relay provided by Vodafone is end-of-life as of 31 March 2021. After this date, anyone using the PSN will not be able to use email over this network, including all email services from UKCloud on the PSN. Internet-connected email services from UKCloud will continue to function after this date.
 
 ## What is the service?
 
@@ -36,12 +42,6 @@ The service is charged per mailbox per month (or part thereof) which includes 1G
 
 No. As Email and Collaboration has been removed from sale, a free trial is no longer available.
 
-## What happens when my trial comes to an end?
-
-Your Cloud Architect or CSM will contact you when your trial is due to end, either because you have used up all of your credits or because you have reached 30 days (whichever is sooner).
-
-At the end of your trial, you can transition to production or cease the trial.
-
 ## Where is the service hosted?
 
 The service is delivered from two secure UK data centres by UKCloud.
@@ -54,30 +54,9 @@ As the solution is delivered from UK data centres by a UK company, your data doe
 
 UKCloud manages and supports the platform in the UK. Depending on the mail client you choose, it may be supported by the third-party provider and not covered under our SLA. Wherever possible, UKCloud will also work with Zimbra to help resolve any compatibility issues.
 
-## Can I use Email and Collaboration in the UKCloud Elevated security domain?
-
-Yes, Email and Collaboration as a Service is available on both the Assured and Elevated OFFICIAL security domains.
-
-## Can I use Email and Collaboration over closed networks such as PSN, HSCN or Janet?
-
-Yes, you can connect via PSN, Janet and HSCN; via legacy GCF networks including PNN; or by HybridConnect using your own dedicated circuits such as CPS-encrypted tunnels, leased lines or MPLS.
-
-## How can I configure my email server to use the PSN email relays (MTAs)?
-
-There are several configuration options for using the PSN email relays. These can provide either resiliency across multiple PSN relays or give you an opportunity to just use a single relay (in case of maintenance on the other).
-
-> [!NOTE]
-> For Email services in regions 1, 2, 7 and 8, you’ll need to ensure that the firewall that manages access to the PSN network is set to allow traffic to the IP addresses of both relays on TCP/25.
-
-- Create a local host file entry on your mail system or a DNS entry on your internal DNS server with a name of your choice that is configured with both PSN relay IP addresses.
-
-- Configure your email system to use both of the PSN relay IP addresses as a RelayHost.
-
-- Configure your email system to use just one of the PSN relay IP addresses. This could be useful if there's any maintenance work happening that could affect the second IP address.
-
 ## Is the service Pan Government Accredited?
 
-UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.
+UKCloud's existing PGA still applies to the infrastructure underpinning our services, but since the move to the Government Security Classification Policy (GSCP), we are no longer able to seek PGA for our services.
 
 We are now required to self-assess our services, with customers then responsible for assessing and selecting the most appropriate cloud services which meet their individual security requirements.
 
@@ -103,7 +82,7 @@ In addition, the solution includes Messaging Application Programming Interface (
 
 Yes. The solution includes a migration wizard to help you migrate from an existing solution to Email and Collaboration as a Service.
 
-We can help facilitate a bulk migration to the platform using local data import. This is priced on a time-and-materials basis from the UKCloud [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf).
+We can help facilitate a bulk migration to the platform using local data import. This is priced on a time-and-materials basis from the UKCloud [SFIA Rate Card](http://www.ukcloud.com/sfia).
 
 We can also recommend partners who specialise in this service.
 
@@ -113,7 +92,7 @@ Yes, you can use any domain name that you have registered, that is hosted by a D
 
 ## Can UKCloud host DNS?
 
-Unfortunately, UKCloud is not a DNS host provider. However, there are a number of established providers in the UK. Please contact UKCloud if you need assistance in this area.
+UKCloud can offer DNS services in partnership with Neustar, ask your Service Delivery Manager for more information.
 
 ## Is my data visible to other organisations on the platform?
 
@@ -125,7 +104,7 @@ Yes, there is a minimum charge of 25 mailboxes per month required to set up Emai
 
 ## Is any spam software included?
 
-Yes, mail hygiene is provided via Cisco IronPort® for internet-facing solutions, providing protection against spam and malware. In addition, there is a centralised mail scanning solution within the PSN; combined with the fact that as a restricted network, spam is much less of an issue than with internet connections.
+Yes, mail hygiene is provided via Cisco IronPort&reg; for internet-facing solutions, providing protection against spam and malware. In addition, there is a centralised mail scanning solution within the PSN; combined with the fact that as a restricted network, spam is much less of an issue than with internet connections.
 
 ## Is there a mail archive solution?
 
@@ -145,7 +124,7 @@ Briefcase is a document storing and sharing function that allows users to upload
 
 ## What are the default Class of Service settings?
 
-A Class of Service exists for each e-mail domain and defines the features, access privileges and default preferences that a new user account receives. For existing accounts, if a setting has been specified within the client’s Preferences tab, it will take precedence; otherwise the Class of Service setting will be applied. All new accounts will inherit the settings from the Class of Service. For information about the default Class of Service settings, or to request that a setting is changed from the default, raise a Service Request via the My Calls section of the UKCloud Portal.
+A Class of Service exists for each e-mail domain and defines the features, access privileges and default preferences that a new user account receives. For existing accounts, if a setting has been specified within the client's Preferences tab, it will take precedence; otherwise the Class of Service setting will be applied. All new accounts will inherit the settings from the Class of Service. For information about the default Class of Service settings, or to request that a setting is changed from the default, raise a Service Request via the My Calls section of the UKCloud Portal.
 
 ## How long does it take to get the solution up and running?
 
@@ -157,11 +136,9 @@ Set up of client-based software or mobile devices may be required, depending on 
 
 The length of time for the solution to be fully operational depends on the amount of work you require once you've received the welcome pack.
 
-## What are your service maintenance windows?
+### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days advance notice of planned maintenance.
-
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Can I use the service as a short-term solution, such as for a couple of months?
 

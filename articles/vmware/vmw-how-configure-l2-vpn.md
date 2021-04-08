@@ -2,17 +2,17 @@
 title: How to configure an L2 VPN
 description: Describes how to configure your Layer 2 VPN (L2 VPN), available as an advanced networking option with UKCloud for VMware
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 31/01/2019 09:49:35
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 17/11/2020
 
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: Advanced networking
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Configure an L2 VPN
-toc_fullpath: How To/vmw-how-configure-l2-vpn.md
+toc_fullpath: How To/Advanced networking/vmw-how-configure-l2-vpn.md
 toc_mdlink: vmw-how-configure-l2-vpn.md
 ---
 
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-configure-l2-vpn.md
 
 ## Overview
 
-UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Advanced Management bundle (additional charges apply). With L2 VPN you can stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.
+UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Advanced Management bundle (additional charges apply). With L2 VPN you can stretch the same L2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.
 
 L2 VPN is an extension of the edge's SSL functionality. It enables you to configure a tunnel between two sites, extending a logical switch across both sites. The tunnel means that virtual machines (VMs) remain on the same subnet if they are moved between the two sites, enabling you to extend your data centre across multiple sites. An NSX edge at one site can provide all services to VMs on the other site.
 
@@ -71,7 +71,7 @@ To set up L2 VPN, you need to configure an L2 VPN server on the destination edge
     > [!NOTE]
     > To stretch the subnet across the two sites, make sure you use the desired address space on both networks.
 
-2. For each network, select the network and, on the *General* tab, click **Edit**
+2. For each network, select the network and, on the *General* tab/page, click **Edit**
 
 3. In the *Edit network* dialog box, select the **Connection** tab.
 
@@ -83,96 +83,94 @@ To set up L2 VPN, you need to configure an L2 VPN server on the destination edge
 
 ### Creating certificates
 
-1. In vCloud Director, access the edge gateway settings for the destination edge gateway.
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the *destination* edge gateway.
 
-    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
+2. In the left navigation panel, under *Networking*, select **Edges**.
 
-2. Select the **Certificates** tab.
+    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-3. Click **+ CA Certificate**.
+3. Select the *destination* edge gateway and click **Services**.
+
+    ![Services option](images/vmw-vcd10.1-edge-btn-services.png)
+
+4. Select the **Certificates** tab.
+
+5. Click **+ CA Certificate**.
 
     ![Add CA Certification button](images/vmw-vcd91-l2vpn-btn-add-cert.png)
 
-4. Add the certificate to use for the L2 VPN server then click **Keep**.
+6. Add the certificate to use for the L2 VPN server then click **Keep**.
 
     ![Create SSL Trust Object dialog box](images/vmw-vcd91-l2vpn-create-ssl-trust-object.png)
 
-5. Repeat this process for the source edge gateway.
+7. Repeat this process for the *source* edge gateway.
 
 ### Configuring the L2 VPN server on the destination edge gateway
 
-The L2 VPN server is the destination edge gateway to which the client is to be connected.
+The L2 VPN server is the *destination* edge gateway to which the client is to be connected.
 
-1. In vCloud Director, access the edge gateway settings for the destination edge gateway.
+1. On the *Edge Gateway* page for the *destination* edge gateway, select the **VPN** tab, then the **L2 VPN** tab.
 
-    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
-
-2. Select the **VPN** tab, then the **L2 VPN** tab.
-
-3. For **L2VPN Mode**, select **Server**.
+2. For **L2VPN Mode**, select **Server**.
 
     ![L2 VPN Server option](images/vmw-vcd91-l2vpn-server.png)
 
-4. On the **Server Global** tab, from the **Listener IP** list, select the primary or secondary IP address of an external interface of the NSX edge.
+3. On the **Server Global** tab, from the **Listener IP** list, select the primary or secondary IP address of an external interface of the NSX edge.
 
-5. In the **Listener Port** field, enter the port to use for your L2 VPN. The default port is `443`.
+4. In the **Listener Port** field, enter the port to use for your L2 VPN. The default port is `443`.
 
-6. Select the **Encryption Algorithm** to use for communication between the server and the client.
+5. Select the **Encryption Algorithm** to use for communication between the server and the client.
 
     ![L2 VPN server configuration settings](images/vmw-vcd91-l2vpn-server-config.png)
 
-7. In the *Service Certificate Details* section, click **Change Server Certificate**.
+6. In the *Service Certificate Details* section, click **Change Server Certificate**.
 
     ![L2 VPN server certificate details](images/vmw-vcd91-l2vpn-server-cert.png)
 
-8. Select the **Validate Server Certificate** option, select the certificate you created earlier then click **OK**.
+7. Select the **Validate Server Certificate** option, select the certificate you created earlier then click **OK**.
 
-9. Click **Save changes**.
+8. Click **Save changes**.
 
-10. Select the **Server Sites** tab.
+9. Select the **Server Sites** tab.
 
-11. Click the **+** button.
+10. Click the **+** button.
 
     ![Add peer site button](images/vmw-vcd91-l2vpn-btn-add-site.png)
 
-12. In the *Add Peer Site* dialog box, specify details for the peer site to enable other sites to connect to the L2 VPN server, then click **Keep**.
+11. In the *Add Peer Site* dialog box, specify details for the peer site to enable other sites to connect to the L2 VPN server, then click **Keep**.
 
     ![Add Peer Site dialog box](images/vmw-vcd91-l2vpn-add-peer-site.png)
 
-13. Click **Save changes**.
+12. Click **Save changes**.
 
 ### Configuring the L2 VPN client on the source edge gateway
 
-The L2 VPN client is the source edge gateway that initiates communication with the destination edge (L2 VPN server).
+The L2 VPN client is the *source* edge gateway that initiates communication with the destination edge (L2 VPN server).
 
 > [!NOTE]
 > If the source site is not backed by NSX, you can deploy a standalone edge as the L2 VPN client. For information see [*Deploying a standalone edge as an L2 VPN client*](#deploying-a-standalone-edge-as-an-l2-vpn-client).
 
-1. In vCloud Director, access the edge gateway settings.
+1. On the *Edge Gateway* page for the *source* edge gateway, select the **VPN** tab, then the **L2 VPN** tab.
 
-    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
-
-2. Select the **VPN** tab, then the **L2 VPN** tab.
-
-3. For **L2VPN Mode**, select **Client**.
+2. For **L2VPN Mode**, select **Client**.
 
     ![L2 VPN Client option](images/vmw-vcd91-l2vpn-client.png)
 
-4. In the **Server Address** field, enter the address of the L2 VPN server that you set up in the previous section. The address can be the host name or IP address.
+3. In the **Server Address** field, enter the address of the L2 VPN server that you set up in the previous section. The address can be the host name or IP address.
 
-5. In the **Server Port** field, enter the port to use for your L2 VPN. The default port is `443`.
+4. In the **Server Port** field, enter the port to use for your L2 VPN. The default port is `443`.
 
-6. Select the **Encryption Algorithm** for communicating with the server.
+5. Select the **Encryption Algorithm** for communicating with the server.
 
-7. Click **Select Sub-Interfaces** and select the sub interfaces to be stretched to the server.
+6. Click **Select Sub-Interfaces** and select the sub interfaces to be stretched to the server.
 
-8. In the **Egress Optimization Gateway Address** field, if the default gateway for VMs is the same across the two sites, enter the gateway IP addresses of the sub interfaces or the IP addresses to which traffic should not flow over the tunnel.
+7. In the **Egress Optimization Gateway Address** field, if the default gateway for VMs is the same across the two sites, enter the gateway IP addresses of the sub interfaces or the IP addresses to which traffic should not flow over the tunnel.
 
-9. In the *User Details* section, enter the user credentials to connect to the L2 VPN server.
+8. In the *User Details* section, enter the user credentials to connect to the L2 VPN server.
 
     ![L2 VPN client configuration settings](images/vmw-vcd91-l2vpn-client-config.png)
 
-10. Click **Save changes**.
+9. Click **Save changes**.
 
 ### Completing L2 VPN configuration
 
@@ -180,23 +178,19 @@ The L2 VPN client is the source edge gateway that initiates communication with t
 
 2. Configure firewall and NAT rules on both the destination and source edge gateways to allow traffic to pass between the L2 VPN server and the L2 VPN client.
 
-3. Enable L2 VPN on the destination edge gateway.
+3. Enable L2 VPN on the *destination* edge gateway.
 
-    1. In vCloud Director, access the edge gateway settings.
+    a. On the *Edge Gateway* page for the *destination* edge gateway, select the **VPN** tab, then the **L2 VPN** tab.
 
-        For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
+    b. For **L2VPN Mode**, select **Server**.
 
-    2. Select the **VPN** tab, then the **L2 VPN** tab.
-
-    3. For **L2VPN Mode**, select **Server**.
-
-    4. Select the **Enabled** option.
+    c. Select the **Enabled** option.
 
         ![Enable L2 VPN](images/vmw-vcd91-l2vpn-enable.png)
 
-    5. Click **Save changes**.
+    d. Click **Save changes**.
 
-4. Repeat the steps above to enable L2 VPN on the source edge gateway (setting **L2VPN Mode** to **Client**).
+4. Repeat the steps above to enable L2 VPN on the *source* edge gateway (setting **L2VPN Mode** to **Client**).
 
 ### Deploying a standalone edge as an L2 VPN client
 
@@ -208,7 +202,7 @@ If the source site is not backed by NSX, you can deploy a standalone edge as the
 
 2. Create a port group and convert it to a sub interface.
 
-3. You can now set up your L2 VPN by following the steps below, using the standalone edge as the source edge gateway.
+3. You can now set up your L2 VPN by following the steps below, using the standalone edge as the *source* edge gateway.
 
     - [*Creating certificates*](#creating-certificates)
 

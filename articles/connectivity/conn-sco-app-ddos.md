@@ -1,6 +1,6 @@
 ---
-title: SiteProtect Advanced DDoS Mitigation Service Scope
-description: Outlines important details regarding the SiteProtect Advanced DDoS Mitigation (previously Application-tuned DDoS protection) service
+title: Neustar DDoS Protection from UKCloud Service Scope
+description: Outlines important details regarding the Neustar DDoS Protection from UKCloud (previously SiteProtect Advanced DDoS Mitigation) service
 services: connectivity
 author: Steve Hall
 reviewer: hbrunt
@@ -10,26 +10,26 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: SiteProtect Advanced DDoS Mitigation Service Scope
+toc_title: Neustar DDoS Protection from UKCloud Service Scope
 toc_fullpath: Service Scope/conn-sco-app-ddos.md
 toc_mdlink: conn-sco-app-ddos.md
 ---
 
-# SiteProtect Advanced DDoS Mitigation Service Scope
+# Neustar DDoS Protection from UKCloud Service Scope
 
 ## About this document
 
-This document is intended to provide additional information regarding the optional SiteProtect Advanced DDoS Mitigation (previously Application-tuned DDoS protection) service that is available for UKCloud services. This is an additional service to the standard DDoS protection that is provided for all Assured UKCloud services. It is recommended that all customers consult with a cloud architect when considering this option to ensure it is right for their solution, including options when applying the service. For additional information, please refer to the [*SiteProtect Advanced DDoS Mitigation FAQs*](conn-faq-app-ddos.md).
+This document is intended to provide additional information regarding the optional Neustar DDoS Protection from UKCloud (previously SiteProtect Advanced DDoS Mitigation) service that is available for UKCloud services. This is an additional service to the standard DDoS protection that is provided for all Assured UKCloud services. It is recommended that all customers consult with a cloud architect when considering this option to ensure it is right for their solution, including options when applying the service. For additional information, please refer to the [*Neustar DDoS Protection from UKCloud FAQs*](conn-faq-app-ddos.md).
 
-## SiteProtect Advanced DDoS Mitigation
+## Neustar DDoS Protection from UKCloud
 
-While the default UKCloud DDoS protection offers protection for the UKCloud community, it is not specific to any one customer. SiteProtect Advanced DDoS Mitigation from Neustar is a fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site. In addition, there are multiple deployment configurations available within the portal to meet your needs, and the solution is flexible depending on your specific requirements.
+While the default UKCloud DDoS protection offers protection for the UKCloud community, it is not specific to any one customer. Neustar DDoS Protection from UKCloud is a fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site. In addition, there are multiple deployment configurations available within the portal to meet your needs, and the solution is flexible depending on your specific requirements.
 
 The cloud-based service mitigates attacks in the cloud, far away from your infrastructure and with the bandwidth and flexibility to repel today's largest attacks. Using proven methodologies, Neustar's experienced DDoS fighters intelligently match technology to threats, surgically derailing even the most complex attacks.
 
 The Always-On Hybrid managed solution removes the burden of DDoS with an on-site Arbor appliance for smaller DDoS attacks combined with cloud-based failover for larger, sustained attacks. Remote management of monitoring, detecting and responding to DDoS attacks minimizes downtime and frees your valuable resources.
 
-UKCloud has partnered with Neustar for the provision of this service due to their global presence, experience, success in DDoS protection and traffic monitoring, established service and loyal customer base. In addition, we also offer an [*UltraDNS*](conn-sco-glb.md) service with Neustar to offer a complete traffic monitoring and protection solution.
+UKCloud has partnered with Neustar for the provision of this service due to their global presence, experience, success in DDoS protection and traffic monitoring, established service and loyal customer base. In addition, we also offer a [*Neustar UltraDNS from UKCloud*](conn-sco-glb.md) service to offer a complete traffic monitoring and protection solution.
 
 ## Cloud-based scrubbing
 

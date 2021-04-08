@@ -3,8 +3,8 @@ title: Cloud Storage Service Scope
 description: Outlines important details regarding Cloud Storage
 services: cloud-storage
 author: Steve Hall
-reviewer:
-lastreviewed: 20/08/2019 16:46:31
+reviewer: Steve relf
+lastreviewed: 08/12/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -102,7 +102,7 @@ We manage the physical firewalls that face public and secure networks.
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.
 
 We don't provide Protective Monitoring services within your estate - it is your responsibility to act at this level.
 
@@ -120,13 +120,11 @@ You can request a migration through a Service Request. Migrations may be between
 
 ## Customer service
 
-**Customer Success Manager (CSM).** For the first 90 days of the service, you have access to a UKCloud Customer Success Manager, who will help you with your adoption of the UKCloud Cloud Storage service, including finding relevant systems and using UKCloud tools and processes.
+**Cloud Architect.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions.
 
-**Cloud Architects.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions.
+**Service Delivery Manager (SDM).** An assigned point of contact who will provide any assistance you require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
-**Service Delivery Managers.** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
-
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
+**Support Desk.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -150,20 +148,7 @@ UKCloud also has a large ecosystem of partners who can deliver additional servic
 
 ## Service constraints
 
-UKCloud will adhere to the following in terms of maintenance windows:
-
-"Planned Maintenance" means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide affected customers with at least fourteen (14) days'
-notice of the Planned Maintenance.
-
-If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered.
-
-"Emergency Maintenance" means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall:
-
-a)  provide affected customers with at least six (6) hours' advance notice and
-
-b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
-
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
+For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Supporting documents and resources
 

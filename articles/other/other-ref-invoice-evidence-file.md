@@ -62,7 +62,7 @@ AB     | Tier1StorageIncluded              | Tier 1 storage amount that is not c
 AC     | Tier1StorageChargeable            | Tier1StorageUsed + Tier1SnapshotUsed - Tier1StorageIncluded | OpenStack, VMware
 AD     | Tier1StoragePricePerHour          | Service catalogue price for Tier 1 storage and security domain converted into hourly charge per GiB | OpenStack, VMware
 AE     | Tier1StoragePrice                 | Tier1StorageChargeable * Tier1StoragePricePerHour * UsageHoursWithinPeriod | OpenStack, VMware
-AF     | Tier2StorageUsed                  | Tier 2 torage allocated | OpenStack, VMware
+AF     | Tier2StorageUsed                  | Tier 2 storage allocated | OpenStack, VMware
 AG     | Tier2SnapshotStorageUsed          | Tier 2 storage allocated for vCloud snapshots | VMware
 AH     | Tier2StorageIncluded              | Tier 2 storage amount that is not charged (60GiB of Tier 2 storage is included if powered on (10GiB for Micro VMS)) | VMware
 AI     | Tier2StorageChargeable            | Tier2StorageUsed + Tier2SnapshotUsed - Tier2StorageIncluded | OpenStack, VMware
@@ -124,7 +124,7 @@ The key changes to the evidence file are as follows:
 
 - **Cloud GPU** (columns V, W, X and Y) - will include details and a breakdown of Cloud GPU compute charges.
 
-- **vCloud Snapshot storage** (columns AA, AG and AM) - charges will appear in this column if a VM is manually snapshotted in vCloud Director. Charges for the storage will not be applied for October, though values may appear in these columns. Billing will commence from November 1 2017.
+- **vCloud Snapshot storage** (columns AA, AG and AM) - charges will appear in this column if a VM is manually snapshotted in VMware Cloud Director. Charges for the storage will not be applied for October, though values may appear in these columns. Billing will commence from November 1 2017.
 
 - **Breakdown of protection costs** (columns AT, AX, AY and AZ) - new columns added to better understand the breakdown of protecting each storage option.
 

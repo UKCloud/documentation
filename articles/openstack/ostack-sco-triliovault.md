@@ -1,10 +1,10 @@
 ---
-title: Self Service Backup and Restoration (TrilioVault) Service Scope | UKCloud Ltd
+title: Self Service Backup and Restoration (TrilioVault) Service Scope
 description: Outlines important details regarding Self Service Backup and Restoration (TrilioVault) for UKCloud for OpenStack
 services: openstack
 author: Steve Dixon
-reviewer: Steve Dixon
-lastreviewed: 03/01/2020
+reviewer: Darren Butts
+lastreviewed: 08/01/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -81,9 +81,9 @@ This service is not backed by Service Credits.
 
 The UKCloud support team can help provide customers with the support around investigating any failures on request.
 
-## Planned maintenance
+## Planned Maintenance
 
-On occasion, planned maintenance of the OpenStack platform will take precedence over this service. If there's a potential disruption, we'll highlight this to you via the service status page and UKCloud Portal notifications system.
+On occasion, Planned Maintenance of the OpenStack platform will take precedence over this service. If there's a potential disruption, we'll highlight this to you via the [UKCloud Service Status page](https://status.ukcloud.com).
 
 ## Additional data protection services
 

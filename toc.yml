@@ -28,25 +28,29 @@
     topicHref: articles/cdsz/cdsz-gs-walled-garden.md
   - name: Dedicated Compute
     topicHref: articles/dedicated-compute/dc-sd.md
+  - name: Desktop as a Service
+    topicHref: articles/daas/daas-sd.md
   - name: Disaster Recovery as a Service
     topicHref: articles/draas/draas-gs.md
   - name: Email and Collaboration 
     topicHref: articles/email/email-gs.md
   - name: High Performance Compute
-    topicHref: articles/hpc/hpc-ref-overview.md
+    topicHref: articles/hpc/hpc-sd.md
   - name: Managed Services
-    topicHref: articles/managed-services/man-sd-compute.md
+    topicHref: articles/managed-services/man-services-home.md
   - name: Migration to the Cloud 
     topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
   - name: Private Cloud
     topicHref: articles/private-cloud/prc-sd.md
+  - name: Professional Services
+    topicHref: articles/pro-services/ps-sd.md
   - name: Secure Remote Access
     topicHref: articles/sra/sra-gs.md
-  - name: Third-Party Software
-    topicHref: articles/third-party/third-ref-eula.md
-  - name: Transition Services
-    topicHref: articles/transition-services/trans-sd.md
+  - name: Security Operations Service
+    topicHref: articles/soc/soc-sd.md   
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
+  - name: Shared Services
+    topicHref: articles/shared/shared-ref-overview.md
   - name: Other
     topicHref: articles/other/other-ref-services-by-region.md
