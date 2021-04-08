@@ -36,7 +36,7 @@ Detailed specifications can be found [here](https://docs.microsoft.com/en-us/azu
 | RAM                   | \>=192GB                                                                                                    |
 | OS Disks              | \>=200GB                                                                                                    |
 | Data Disks            | \>=4 \* \>=240G                                                                                             |
-| Network: NIC          | \>= Windows Server 2012 R2 Certification. No specialized features required.                                 |
+| NIC                   | \>= Windows Server 2012 R2 Certification. No specialized features required.                                 |
 | HW logo certification | \>= [Certified for Windows Server 2012 R2](https://www.windowsservercatalog.com/content.aspx?ctf=logo.htm). |
 
 ### [Virtual Deployment](#tab/tabid-1)
