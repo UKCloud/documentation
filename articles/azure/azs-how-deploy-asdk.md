@@ -3,8 +3,8 @@ title: How to deploy and configure the Azure Stack Hub Development Kit
 description: Deploy and configure the Azure Stack Hub Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
-reviewer: William Turner
-lastreviewed: 26/05/2020
+reviewer: William Turner and Chris Black
+lastreviewed: 08/04/2020
 
 toc_rootlink: Operators
 toc_sub1: How To
