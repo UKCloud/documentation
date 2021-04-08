@@ -52,7 +52,7 @@ VMware HW version must be \>=11, and CPU virtual extension pass-through must be 
 
 ### [Physical Deployment](#tab/tabid-2)
 
-The first two drives must be setup in a RAID 1 configuration, with the rest passed through as JBOD (Just a Bunch Of Drives). Additionally, you need to specify your VLAN as ACCESS in the CIMC.
+The first two drives must be setup in a RAID 1 configuration, with the rest passed through as JBoD (Just a Bunch Of Disks). Additionally, you need to specify your VLAN as ACCESS in the CIMC.
 
 ***
 
