@@ -293,7 +293,7 @@ $AzsPassword = 'Password123!'
 $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
-$Session = New-PSSession -ComputerName AzS-ERCS01 -Credential $AzsCred -ConfigurationName PrivilegedEndpoint
+$Session = New-PSSession -ComputerName AzS-ERCS01 -Credential $AzsCred -ConfigurationName PrivilegedEndpoint -SessionOption (New-PSSessionOption -Culture en-US -UICulture en-US)
 
 Enter-PSSession $Session
 
