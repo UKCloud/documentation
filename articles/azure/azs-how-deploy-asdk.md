@@ -74,7 +74,7 @@ On the RAID 1 disk, the following drivers must be downloaded, extracted and inst
 
 ## Step 3 - Initial setup
 
-Download the appliance and prep the virtual disk (vhdx) for the ASDK.
+Download the appliance and prep the virtual disk (VHDX) for the ASDK.
 
 Implement the following steps from the Microsoft documentation:
 
@@ -124,7 +124,7 @@ No additional steps.
 
 <br>
 
-Once step 3 is complete the box will have been rebooted from the vhdx downloaded above.
+Once step 3 is complete the box will have been rebooted from the VHDX downloaded above.
 
 ## Step 4 - Install ASDK
 
