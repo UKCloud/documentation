@@ -2,9 +2,9 @@
 title: UKCloud Portal security settings
 description: Provides information about the various security settings available in the UKCloud Portal, including two-factor authentication (2FA) and IP restrictions
 services: portal
-author: Sue Highmoor
-reviewer:
-lastreviewed: 15/11/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 09/04/2021
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -24,24 +24,22 @@ The UKCloud Portal provides various settings to enable you to provide additional
 
 > [!TIP]
 > A green tick next to a section indicates that particular security setting has been enabled.
+> 
+> ![Enabled security setting](images/ptl-security-settings-enabled.png)
 
-![Enabled security setting](images/ptl-security-settings-enabled.png)
+- **Password expiration** - Set passwords to expire after a specified number of days. This ensures that users change their passwords frequently.
 
-- **Password expiration** - Set passwords to expire after a specified number of days. This ensures that users change their passwords frequently. For more information, see [*How to set up password expiration*](ptl-how-setup-password-expiration.md).
+- **Google two-factor authentication (2FA)** - Add an extra level of authentication whereby users provide a security code from an authenticator app (such as Google Authenticator or Authy) as well as their password to confirm their identity.
 
-- **Google two-factor authentication (2FA)** - Add an extra level of authentication whereby users provide a security code from an authenticator app (such as Google Authenticator or Authy) as well as their password to confirm their identity. For more information, see [*How to enable two-factor authentication in the UKCloud Portal*](ptl-how-setup-2fa.md).
+- **Portal access restriction by IP address** - Restrict access so that users can only log in to the Portal from specific IP addresses.
 
-- **Portal access restriction by IP address** - Restrict access so that users can only log in to the Portal from specific IP addresses. For more information, see [*How to restrict access to the Portal*](ptl-how-restrict-access-portal.md).
-
-- **VMware Cloud Director access restriction by IP address** - Restrict access so that users can only access VMware Cloud Director from specific IP addresses. For more information, see [*How to restrict access to VMware Cloud Director*](ptl-how-restrict-access-vcloud-api.md).
+- **VMware Cloud Director access restriction by IP address** - Restrict access so that users can only access VMware Cloud Director from specific IP addresses.
 
 To change Portal security settings:
 
-1. Log in to the UKCloud Portal as an administrator.
+1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as an administrator.
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
-
-2. If necessary, switch to the account for which you want to change the security settings.
+2. If necessary, [*switch to the account*](ptl-how-switch-account.md) for which you want to change the security settings.
 
 3. In the navigation panel, select **Settings**.
 
@@ -51,7 +49,17 @@ To change Portal security settings:
 
     ![Security Settings tab of the Settings page](images/ptl-settings-tab-security.png)
 
-5. Click a section to expand it, make changes as required and when you're done, click **Save**.
+5. Click a section to expand it, make changes as required:
+
+   - [*How to set up password expiration*](ptl-how-setup-password-expiration.md)
+
+   - [*How to enable two-factor authentication in the UKCloud Portal*](ptl-how-setup-2fa.md)
+
+   - [*How to restrict access to the Portal*](ptl-how-restrict-access-portal.md)
+
+   - [*How to restrict access to VMware Cloud Director*](ptl-how-restrict-access-vcloud-api.md)
+
+6. When you're done, click **Save**.
 
 ## Feedback
 

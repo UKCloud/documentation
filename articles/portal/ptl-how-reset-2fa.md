@@ -2,9 +2,9 @@
 title: How to reset two-factor authentication for a user account
 description: Describes how to reset two-factor authentication (2FA) for a user account
 services: portal
-author: Sue Highmoor
-reviewer: 
-lastreviewed: 10/02/2020
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 09/04/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -30,11 +30,9 @@ This article is intended for Portal administrators who need to reset a Portal us
 
 ## Resetting 2FA for a user account
 
-1. Log in to the UKCloud Portal as a Portal administrator.
+1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as a Portal administrator.
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
-
-2. If necessary, switch to the account to which the user belongs.
+2. If necessary, [*switch to the account*](ptl-how-switch-account.md) to which the user belongs.
 
 3. In the navigation panel, expand **Contacts**, then select **All Contacts**.
 
@@ -47,6 +45,10 @@ This article is intended for Portal administrators who need to reset a Portal us
 5. In the *Confirm* dialog box, click **Yes** to continue.
 
 6. The next time the user attempts to log in, they'll be prompted to set up their 2FA again. For more information, see [*How to set up two-factor authentication for a user account*](ptl-how-setup-2fa.md).
+
+## Related articles
+
+- [*How to enable two-factor authentication in the UKCloud Portal*](ptl-how-enable-2fa.md)
 
 ## Feedback
 
