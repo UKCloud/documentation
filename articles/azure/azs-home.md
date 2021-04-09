@@ -3,10 +3,10 @@ title: UKCloud for Microsoft Azure
 description: Home page for UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: Chris Black
-lastreviewed: 28/11/2019
+reviewer: wturner123
+lastreviewed: 08/04/2021
 toc_rootlink: About
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -26,9 +26,6 @@ toc_mdlink: azs-home.md
 # UKCloud for Microsoft Azure
 
 UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.
-
-# Azure Stack family announcement
-<b>Azure Stack has become a family of products! Azure Stack is now Azure Stack Hub! You can read more about it [here](https://aka.ms/AzsFamAnnounce).</b>
 
 ## Let's get started
 
