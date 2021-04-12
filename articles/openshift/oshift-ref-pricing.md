@@ -19,7 +19,7 @@ toc_mdlink: oshift-ref-pricing.md
 
 ## Overview
 
-UKCloud for Managed OpenShift pricing starts at £0.75 per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for Managed OpenShift pricing can be as low as £0.74 per hour (using committed annual pricing option). Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 OpenShift is packaged to provide you with a high level of flexibility to scale your environments inline with your workloads.
 
