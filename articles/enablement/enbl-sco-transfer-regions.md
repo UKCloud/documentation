@@ -4,7 +4,7 @@ description: Outlines how to move VMware workloads between regions on the UKClou
 services: enablement
 author: shall
 reviewer: 
-lastreviewed: 13/03/2020
+lastreviewed: 03/03/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
