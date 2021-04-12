@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-home.html",
-          "hash": "KunWdEZmu/O8wffjAE181A=="
+          "hash": "FWqH1gPdXifMaSOu9QFhgw=="
         }
       },
       "is_incremental": false,
@@ -125,6 +125,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-configure-mars-backups-restore-powershell.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-configure-mars-backups-restore-powershell.html",
+          "hash": "ECB9Twa49C1zh2N5+M5cIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-configure-powershell-operators.md",
       "output": {
         ".html": {
@@ -165,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-S2S-VPN-azurestack-to-azure.html",
-          "hash": "QfZKrV58PzvN+4qiVvcPFA=="
+          "hash": "MV+u3qK6Ne5t8KMR+W1eVw=="
         }
       },
       "is_incremental": false,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-deploy-asdk.html",
-          "hash": "AEqB4WcCupFW0sUZI6+3Dg=="
+          "hash": "MG4akyN/3lc3sIzP7JuzeQ=="
         }
       },
       "is_incremental": false,
@@ -914,6 +926,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-gateway-subnet.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-gateway-subnet.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-create-image.png",
       "output": {
         "resource": {
@@ -1039,6 +1062,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-create-virtual-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-virtual-network2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-virtual-network2.png"
         }
       },
       "is_incremental": false,
@@ -1772,6 +1806,127 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-confirm-recovery-volume-unmount.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-confirm-recovery-volume-unmount.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-browse.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-browse.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-getting-started.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-getting-started.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-select-recovery-mode.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-select-recovery-mode.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-select-volume-date.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-select-volume-date.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-unmount.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data-wizard-unmount.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-data.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-mounted-backup-volume-drag-drop.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-mounted-backup-volume-drag-drop.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-mounted-backup-volume-files.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-mounted-backup-volume-files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-msft-azure-backup-recover-mounted-backup-volume.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-msft-azure-backup-recover-mounted-backup-volume.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-portal-add-group.png",
       "output": {
         "resource": {
@@ -2091,6 +2246,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-public-browser-new-virtual-network-blade2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-public-browser-new-virtual-network-blade2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-public-browser-new-virtual-network-blade3.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-public-browser-new-virtual-network-blade3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-public-browser-new-virtual-network-gateway.png",
       "output": {
         "resource": {
@@ -2205,6 +2382,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-public-browser-virtual-network-subnets-button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-public-vpn-connection-configuration.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-public-vpn-connection-configuration.png"
         }
       },
       "is_incremental": false,
@@ -2425,7 +2613,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "OxRIAhey4JX409pmaxRtqw=="
+          "hash": "vwEWRLion0pshcIJrWr88w=="
         }
       },
       "is_incremental": false,
@@ -22363,7 +22551,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 462,
+          "total_file_count": 463,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

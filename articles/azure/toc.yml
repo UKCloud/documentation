@@ -14,6 +14,8 @@
       href: azs-gs.md
   - name: How To
     items:
+    - name: Backup and restore files and folders - PowerShell
+      href: azs-how-configure-mars-backups-restore-powershell.md
     - name: Configure Azure Monitor for VMs on Azure Stack Hub
       href: azs-how-setup-monitoring.md
     - name: Configure custom script extensions
@@ -84,7 +86,7 @@
       items:
       - name: Create a site-to-site VPN connection - PowerShell
         href: azs-how-create-S2S-VPN-ps.md
-      - name: Create a site-to-site VPN connection between Azure Stack Hub and Public Azure - Portal
+      - name: Create a site-to-site VPN connection between Azure Stack Hub and public Azure - Portal
         href: azs-how-create-S2S-VPN-azurestack-to-azure.md
     - name: Create a Virtual Machine
       items:
