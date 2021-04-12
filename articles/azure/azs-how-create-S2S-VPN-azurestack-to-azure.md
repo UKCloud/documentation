@@ -34,7 +34,7 @@ To create a site-to-site VPN connection between Azure Stack Hub and public Azure
 
 2. [*Set up VPN on the public Azure side*](#set-up-vpn-on-the-public-azure-side)
 
-3. [*Update local gateway IPs*](#update-the-local-gateway-ips-in-azure-stack-hub-and-public-azure)
+3. [*Update local gateway IPs*](#update-the-local-gateway-address-spaces-and-ips-in-azure-stack-hub-and-public-azure)
 
 4. [*Verify the VPN connection*](#verify-the-vpn-connection)
 
