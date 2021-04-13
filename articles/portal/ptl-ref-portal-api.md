@@ -318,7 +318,7 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
             {
               "VMs": [
                 {
-                  "_id": 2
+                  "_id": 2,
                   "billedHoursPoweredOff": 0,
                   "billedHoursPoweredOn": 0,
                   "estimatedMonthlyTotal": "0.00",
@@ -333,8 +333,6 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
                   "inBackup": true,
                   "lastBackupStatus": "Successful",
                   "lastBackup": "Completed on the night of: 23/06/2015",
-                  "inBackup": true,
-                  "lastBackupStatus": "Successful",
                   "retentionLength":28,
                   "backups":[
                     {
@@ -345,7 +343,7 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
                       "snapshotRemovalEnd":"24/06/2015 01:35"
                     }
                   ]
-                }]
+                }],
               "name": "Demo vApp 2",
               "urn": "urn:vcloud:vapp:ca8517e8-e4f5-4289-8563-3afb86577972"
             }
