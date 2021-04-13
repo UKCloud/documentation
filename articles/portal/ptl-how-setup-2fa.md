@@ -41,7 +41,7 @@ When you first log in to a Portal account that has 2FA enabled, you'll be prompt
 
    We've tested 2FA with Google Authenticator, which is a smart phone app, and Authy, which is available as a smart phone app, desktop app or Chrome plug-in. Other authenticator apps may also be compatible but have not been tested.
 
-2. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal), providing your user name and password as usual.
+2. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal), providing your user name and password as usual.
 
 3. Using your authenticator app, scan the QR code or enter the security key shown in *Step 2* of the *Configure your two-factor authentication* dialog box.
 

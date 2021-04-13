@@ -37,7 +37,7 @@ The UKCloud Portal provides various settings to enable you to provide additional
 
 To change Portal security settings:
 
-1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as an administrator.
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as an administrator.
 
 2. If necessary, [*switch to the account*](ptl-how-switch-account.md) for which you want to change the security settings.
 

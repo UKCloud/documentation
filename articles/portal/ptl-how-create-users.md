@@ -30,7 +30,7 @@ To create Portal users, you must be a Portal administrator.
 
 To create a new user:
 
-1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as an administrator.
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as an administrator.
 
 2. If necessary, [*switch to the account*](ptl-how-switch-account.md) that creates the services you want the user to be able to access.
 

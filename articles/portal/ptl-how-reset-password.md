@@ -39,7 +39,7 @@ In the event that an administrator requires a password or memorable word reset, 
 
 To change your own password or memorable word:
 
-1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as usual.
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as usual.
 
 2. At the top right-hand corner, click your user name, and select **Change password**.
 
@@ -57,7 +57,7 @@ To change your own password or memorable word:
 
 If a user forgets their password or memorable word, an administrator can reset them:
 
-1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as an administrator.
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as an administrator.
 
 2. In the navigation panel, expand **Contacts** then select **All contacts**.
 

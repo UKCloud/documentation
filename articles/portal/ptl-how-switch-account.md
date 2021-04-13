@@ -30,7 +30,7 @@ Any Portal user with access to multiple accounts can switch between those accoun
 
 To switch to a different account:
 
-1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal).
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal).
 
 2. The Portal toolbar indicates the current customer account that you are working in.
 

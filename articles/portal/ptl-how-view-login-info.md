@@ -37,7 +37,7 @@ To view Portal login information, you must be a Portal administrator
 
 ## Viewing login history
 
-1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as an administrator.
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as an administrator.
 
 2. If necessary, [*switch to the account*](ptl-how-switch-account.md) for which you want to view the login report.
 
