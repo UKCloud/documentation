@@ -4,7 +4,7 @@ description: Provides information about the UKCloud Red Hat Update Infrastructur
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 11/01/2021
+lastreviewed: 13/04/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -31,7 +31,7 @@ The RHUI services consist of:
 
 ### Intended audience
 
-This article is intended for customers who have migrated to RHUI v3. If you need information for RHUI 2, see [*Red Hat Update Infrastructure overview (RHUI 2)*](shared-ref-rhui.md).
+This article is intended for customers who have configured their systems to use RHUI v3.
 
 ## Repository groups
 
@@ -88,6 +88,8 @@ The UKCloud RHUI service supplies access to the following repository groups. Eac
 - Red Hat Enterprise Linux 8 for x86_64 - BaseOS from RHUI (RPMs) (8)
 
 - Red Hat Enterprise Linux 8 for x86_64 - Supplementary (RPMs) from RHUI (8)
+
+- Red Hat CodeReady Linux Builder for RHEL 8 x86_64 (RPMs) from RHUI (8)
 
 ## High Availability
 

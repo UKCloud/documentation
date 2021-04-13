@@ -25,7 +25,7 @@ Before you attempt to establish a connection to RHUI Content Delivery Systems (C
 
 ### Intended audience
 
-This article is intended for customers who have migrated to RHUI v3. If you need information for RHUI 2, see [*How to access Red Hat update servers (RHUI 2)*](shared-how-access-redhat-update-servers.md).
+This article is intended for customers who have migrated their systems to use RHUI v3.
 
 ## New Red Hat VM templates
 
