@@ -26,10 +26,8 @@
     href: vmw-gs.md
 - name: How To
   items:
-  - name: Access syslog data for your advanced gateway
-    href: vmw-how-access-syslog-data-adv.md
   - name: Access syslog data for your edge gateway
-    href: vmw-how-access-syslog-data.md
+    href: vmw-how-access-syslog-data-adv.md
   - name: Access the Zerto Self-Service Portal
     href: vmw-how-zerto-access-zssp.md
   - name: Access VMware Cloud Director through the vCloud API

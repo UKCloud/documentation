@@ -6971,7 +6971,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-pricing.html",
-          "hash": "cnLPkNbo/+3gVECOWRiCjw=="
+          "hash": "RDcvQo6ph1JHc+sFihXR5w=="
         }
       },
       "is_incremental": false,
@@ -7031,7 +7031,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sd.html",
-          "hash": "jCHyGF6XV4kIfoYHMOR8YQ=="
+          "hash": "P31EFgyjLzUgH3WVbtWcQQ=="
         }
       },
       "is_incremental": false,
@@ -10990,7 +10990,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "VewKC4HRbhIGLX8V8dc96Q=="
+          "hash": "vhacVeujapvVp+fjYM7H4A=="
         }
       },
       "is_incremental": false,
@@ -11594,6 +11594,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-login-history-search.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-login-history-search.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-login-history-show-entries.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-login-history-show-entries.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-login-history.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-login-history.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-login.png",
       "output": {
         "resource": {
@@ -11649,10 +11682,43 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-customer-account-current.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-customer-account-current.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mnu-customer-account.png",
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-mnu-customer-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-export-login-history.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-export-login-history.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-login-history.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-login-history.png"
         }
       },
       "is_incremental": false,
@@ -12265,6 +12331,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-update-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-update-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-update-user-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-update-user-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl_mnu-my-calls.png",
       "output": {
         "resource": {
@@ -12299,24 +12387,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-create-users.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-create-users.html",
-          "hash": "Oough59qzA9E9dRakDLcfw=="
+          "hash": "+PGQ1ggPjWq98FEZn805Pw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-enable-2fa.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-enable-2fa.html",
-          "hash": "caveyKjx4+auhQf3JFugSg=="
+          "hash": "tr06ryl4LVkV1KpJK/t6hw=="
         }
       },
       "is_incremental": false,
@@ -12347,24 +12441,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-reset-2fa.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-reset-2fa.html",
-          "hash": "+Uy0JmfsnATx9dW3sj2HgA=="
+          "hash": "DMdrnLroHNdrc6AL5ZiUPg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-reset-password.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-reset-password.html",
-          "hash": "L0PKxwZadV3NYgwdijxiXA=="
+          "hash": "JMpNeOVTDqBbyNYQsWTwNA=="
         }
       },
       "is_incremental": false,
@@ -12395,24 +12495,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-setup-2fa.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-2fa.html",
-          "hash": "2kzWk4DVlUd3HzfJwMDtaA=="
+          "hash": "K4GSB1DhnkkHXIob3ehVaw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-setup-password-expiration.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-password-expiration.html",
-          "hash": "/XQaA2ANuCGYsZBYl0VqaQ=="
+          "hash": "72sESyUwQ4+WzaZbgohKSg=="
         }
       },
       "is_incremental": false,
@@ -12425,6 +12531,21 @@
         ".html": {
           "relative_path": "articles/portal/ptl-how-signup-notifications.html",
           "hash": "Foeufx8B4JMCCqhWwyD1bg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-how-switch-account.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-how-switch-account.html",
+          "hash": "3eVUzrVI6qTA1900AZPGKA=="
         }
       },
       "is_incremental": false,
@@ -12467,12 +12588,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-view-login-info.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-view-login-info.html",
-          "hash": "9PuAc9XXKXdvbXTWRgSxLg=="
+          "hash": "PPWvVP7Y0gDFvtGdKDrFLg=="
         }
       },
       "is_incremental": false,
@@ -12527,12 +12651,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-ref-security-settings.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-security-settings.html",
-          "hash": "L4hYaEIhiknJ2APhittGiA=="
+          "hash": "N1Jndvdanc9C0aMFmyjYwA=="
         }
       },
       "is_incremental": false,
@@ -12580,7 +12707,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "EKcxy4UAGdtIK1CVZjI4iQ=="
+          "hash": "fH3Z925nSpFSjSqx+knqkA=="
         }
       },
       "is_incremental": false,
@@ -21200,7 +21327,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "yHIv/xkxmQNbl/VG8G8HXQ=="
+          "hash": "z1MJ6lK8Gz+KMR/q4Uh6Cw=="
         }
       },
       "is_incremental": false,
@@ -21332,19 +21459,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-syslog-data-adv.html",
-          "hash": "k71xA+BQute29FqFdUyD0w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-access-syslog-data.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-access-syslog-data.html",
-          "hash": "cw/BSI9Vi+Fh63FHOwBC0g=="
+          "hash": "lV5zEBk1nKimTMLsTN3abw=="
         }
       },
       "is_incremental": false,
@@ -21440,7 +21555,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-load-balancer.html",
-          "hash": "rIqwJGPRe4/8vWyyogTyPQ=="
+          "hash": "+VneraVtttsAzouVpPno0A=="
         }
       },
       "is_incremental": false,
@@ -21476,7 +21591,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-firewall-rules.html",
-          "hash": "rlHc4LS5Mh+YQ4vqjAKeng=="
+          "hash": "eZGTBMk83ooHpexmm/R3iA=="
         }
       },
       "is_incremental": false,
@@ -21500,7 +21615,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-nat-rules.html",
-          "hash": "9h6oOVmUMIT+pidmi8YkWw=="
+          "hash": "iTm6XhVDildu2o3444Ub+A=="
         }
       },
       "is_incremental": false,

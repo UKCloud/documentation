@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access syslog data for your advanced gateway </title>
+    <title>How to access syslog data for your edge gateway </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access syslog data for your advanced gateway ">
+    <meta name="title" content="How to access syslog data for your edge gateway ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-syslog-data-for-your-advanced-gateway">How to access syslog data for your advanced gateway</h1>
+<h1 id="how-to-access-syslog-data-for-your-edge-gateway">How to access syslog data for your edge gateway</h1>
 
 <h2 id="overview">Overview</h2>
 <p>Your NSX edge is globally configured to send syslog messages to a specific IP address (<code>100.127.255.250</code>). By configuring a new network or IP address within your virtual data centre (VDC) and deploying a collector with the syslog IP address, you can access your NSX edge syslog data. You can then use this data to check:</p>
@@ -131,9 +131,9 @@
 <ol>
 <li><p>Create a new routed network with the following details:</p>
 <ul>
-<li><p><strong>Org Network Name:</strong> Customer defined</p>
+<li><p><strong>Name:</strong> Customer defined</p>
 </li>
-<li><p><strong>Gateway:</strong> <code>100.127.255.249</code></p>
+<li><p><strong>Gateway:</strong> <code>100.127.255.249/29</code></p>
 </li>
 <li><p><strong>Subnet Mask:</strong> <code>255.255.255.248</code></p>
 </li>
@@ -175,10 +175,6 @@
 </li>
 <li><p>On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:</p>
 <ul>
-<li><p><strong>Applied On:</strong> <em><code>nft_network</code></em></p>
-</li>
-<li><p><strong>Name:</strong> Syslog traffic (or any other name you prefer)</p>
-</li>
 <li><p><strong>Network:</strong> <code>100.127.255.248/29</code></p>
 </li>
 <li><p><strong>Next Hop IP:</strong> The TRANSIT IP address of the syslog edge</p>
@@ -198,7 +194,7 @@
 <h2 id="enabling-logging">Enabling logging</h2>
 <p>After setting up your syslog collector, you need to make sure that your NSX edge sends network traffic to the log.</p>
 <ol>
-<li><p>In the VMware Cloud Director, select the VDC to which the NSX edge belongs.</p>
+<li><p>In VMware Cloud Director, select the VDC to which the NSX edge belongs.</p>
 </li>
 <li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
 </li>

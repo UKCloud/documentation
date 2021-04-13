@@ -94,7 +94,7 @@
 <h1 id="pricing-information-for-ukcloud-for-managed-openshift">Pricing information for UKCloud for Managed OpenShift</h1>
 
 <h2 id="overview">Overview</h2>
-<p>UKCloud for Managed OpenShift pricing starts at £1.13 per hour. Full pricing with all options, including licensing and connectivity, is available in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
+<p>UKCloud for Managed OpenShift pricing can be as low as £0.74 per hour (using committed annual pricing option). Full pricing with all options, including licensing and connectivity, is available in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <p>OpenShift is packaged to provide you with a high level of flexibility to scale your environments inline with your workloads.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -103,7 +103,7 @@
 <h2 id="ukcloud-deployed-red-hat-openshift-container-platform">UKCloud deployed Red Hat OpenShift Container Platform</h2>
 <p>This deployment option provides a full Red Hat OCP that has been deployed by UKCloud and is ready to consume without delay.</p>
 <p>We will deploy an OpenShift cluster that contain multiple nodes: control plane nodes, infrastructure nodes for infrastructure services and application nodes for application servers. The number of nodes within your cluster will dictate the monthly charge.</p>
-<h3 id="control-plane-and-infrastructure-nodes">Control Plane and infrastructure nodes</h3>
+<h3 id="control-plane-and-infrastructure-nodes">Control plane and infrastructure nodes</h3>
 <p>OpenShift requires a minimum of three control plane nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services such as ingress controllers, metrics, developer console and aggregated logging.</p>
 <h3 id="application-nodes">Application nodes</h3>
 <p>You'll need at least one application node to run your application and we recommend a minimum of two nodes for resilience.</p>
@@ -123,33 +123,12 @@
 </ul>
 <section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
 
-<p><strong>Control plane nodes:</strong> 3 x m1.medium<br>
+<p><strong>Control plane:</strong> 3 x control plane nodes<br>
 <strong>Infrastructure nodes:</strong> None<br>
-<strong>Application nodes:</strong> 2 x m1.small (monthly pricing)<br>
+<strong>Application nodes:</strong> 2 x m1.small<br>
 <strong>Persistent volume storage used:</strong> 60GiB Tier 2 persistent volume storage<br></p>
-<p><strong>Control plane node cost per month</strong></p>
-<p>Three m1.medium control plane nodes cost 3 x £0.170 per hour = <strong>£0.510</strong> per hour.</p>
-<p>In an average <strong>730</strong> hour month, the monthly control plane node cost works out at:</p>
-<table>
-<thead>
-<tr>
-<th>Hours in operation</th>
-<th>x</th>
-<th>Control plane node cost</th>
-<th>=</th>
-<th>Control plane node cost per month</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>730</td>
-<td>x</td>
-<td>£0.510</td>
-<td>=</td>
-<td><strong>£372.30</strong></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Control plane cost per month</strong></p>
+<p>Monthly pricing for the control plane costs <strong>£412</strong> per month.</p>
 <p><strong>Infrastructure node cost per month</strong></p>
 <p>There are no infrastructure nodes, so there is no infrastructure node cost.</p>
 <div class="NOTE">
@@ -157,7 +136,7 @@
 <p>As there are no infrastructure nodes, aggregated logging is not available.</p>
 </div>
 <p><strong>Application node cost per month</strong></p>
-<p>Two m1.small application nodes cost 2 x £237.00 per month = <strong>£474.00</strong>.</p>
+<p>Monthly pricing for two m1.small application nodes costs 2 x £134 per month = <strong>£268</strong>.</p>
 <p><strong>Storage cost per month</strong></p>
 <p>Tier 2 persistent block storage costs <strong>£0.10</strong> per GiB month, so the storage cost for 60GiB is <strong>£6.00</strong>.</p>
 <p><strong>Total basic cost</strong></p>
@@ -165,7 +144,7 @@
 <table>
 <thead>
 <tr>
-<th>Control plane node cost</th>
+<th>Control plane cost</th>
 <th>+</th>
 <th>Infrastructure cost</th>
 <th>+</th>
@@ -178,75 +157,33 @@
 </thead>
 <tbody>
 <tr>
-<td>£372.30</td>
+<td>£412</td>
 <td>+</td>
 <td>£0.00</td>
 <td>+</td>
-<td>£474.00</td>
+<td>£268</td>
 <td>+</td>
 <td>£6.00</td>
 <td>=</td>
-<td><strong>£852.30</strong></td>
+<td><strong>£686.00</strong></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="tabpanel_CeZOj-G++Q_tab-2" role="tabpanel" data-tab="tab-2" aria-hidden="true" hidden="hidden">
 
-<p><strong>Control plane nodes:</strong> 3 x m1.medium<br>
+<p><strong>Control plane:</strong> 3 x control plane nodes<br>
 <strong>Infrastructure nodes:</strong> 2 x m1.medium<br>
-<strong>Application nodes:</strong> 2 x m1.small node and 1 x r1.medium (monthly pricing)<br>
+<strong>Application nodes:</strong> 2 x m1.small and 1 x r1.medium<br>
 <strong>Persistent volume storage used:</strong> 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br></p>
-<p><strong>Control plane node cost per month</strong></p>
-<p>Three m1.medium control plane nodes cost 3 x £0.170 per hour = <strong>£0.510</strong> per hour.</p>
-<p>In an average <strong>730</strong> hour month, the monthly control plane node cost works out at:</p>
-<table>
-<thead>
-<tr>
-<th>Hours in operation</th>
-<th>x</th>
-<th>Control plane node cost</th>
-<th>=</th>
-<th>Control plane node cost per month</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>730</td>
-<td>x</td>
-<td>£0.510</td>
-<td>=</td>
-<td><strong>£372.30</strong></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Control plane cost per month</strong></p>
+<p>Monthly pricing for the control plane costs <strong>£412</strong> per month.</p>
 <p><strong>Infrastructure node cost per month</strong></p>
-<p>Two m1.medium infrastructure nodes cost 2 x £0.170 per hour = <strong>£0.340</strong> per hour.</p>
-<p>In an average <strong>730</strong> hour month, the monthly infrastructure node cost works out at:</p>
-<table>
-<thead>
-<tr>
-<th>Hours in operation</th>
-<th>x</th>
-<th>Infrastructure node cost</th>
-<th>=</th>
-<th>Infrastructure node cost per month</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>730</td>
-<td>x</td>
-<td>£0.340</td>
-<td>=</td>
-<td><strong>£248.20</strong></td>
-</tr>
-</tbody>
-</table>
+<p>Monthly pricing for two m1.medium infrastructure nodes costs 2 x £115 per month = <strong>£230</strong>.</p>
 <p><strong>Application node cost per month</strong></p>
-<p>Two m1.small application nodes cost 2 x £237.00 per month = <strong>£474.00</strong>.</p>
-<p>One r1.medium application node costs <strong>£641.90</strong> per month.</p>
-<p>The total cost of application nodes is £474.00 + £641.90 = <strong>£1,115.90</strong> per month.</p>
+<p>Monthly pricing for two m1.small application nodes cost 2 x £134 per month = <strong>£268</strong>.</p>
+<p>Monthly pricing for one r1.medium application node costs <strong>£457</strong> per month.</p>
+<p>The total cost of application nodes is £268 + £457 = <strong>£725</strong> per month.</p>
 <p><strong>Storage cost per month</strong></p>
 <p>Tier 2 persistent block storage costs <strong>£0.10</strong> per GiB month, so the storage cost for 60GiB is <strong>£6.00</strong>.</p>
 <p>Tier 1 persistent block storage costs <strong>£0.25</strong> per GiB month, so the storage cost for 40GiB is <strong>£10.00</strong>.</p>
@@ -256,7 +193,7 @@
 <table>
 <thead>
 <tr>
-<th>Control plane node cost</th>
+<th>Control plane cost</th>
 <th>+</th>
 <th>Infrastructure cost</th>
 <th>+</th>
@@ -269,74 +206,33 @@
 </thead>
 <tbody>
 <tr>
-<td>£372.30</td>
+<td>£412</td>
 <td>+</td>
-<td>£248.20</td>
+<td>£230</td>
 <td>+</td>
-<td>£1,115.90</td>
+<td>£725</td>
 <td>+</td>
 <td>£16.00</td>
 <td>=</td>
-<td><strong>£1,749.40</strong></td>
+<td><strong>£1,383.00</strong></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="tabpanel_CeZOj-G++Q_tab-3" role="tabpanel" data-tab="tab-3" aria-hidden="true" hidden="hidden">
 
-<p><strong>Control plane nodes:</strong> 3 x m1.medium<br>
+<p>The following provides an example of hourly pricing using an r1.medium application node for burst workloads.</p>
+<p><strong>Control plane:</strong> 3 x control plane nodes<br>
 <strong>Infrastructure nodes:</strong> 2 x m1.medium<br>
-<strong>Application nodes:</strong> 2 x m1.small node (monthly pricing) and 1 x r1.medium (hourly pricing)<br>
+<strong>Application nodes:</strong> 2 x m1.small (monthly) and 1 x r1.medium (hourly)<br>
 <strong>Persistent volume storage used:</strong> 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br></p>
 <p><strong>Control plane node cost per month</strong></p>
-<p>Three m1.medium control plane nodes cost 3 x £0.170 per hour = <strong>£0.510</strong> per hour.</p>
-<p>In an average <strong>730</strong> hour month, the monthly control plane node cost works out at:</p>
-<table>
-<thead>
-<tr>
-<th>Hours in operation</th>
-<th>x</th>
-<th>Control plane node cost</th>
-<th>=</th>
-<th>Control plane node cost per month</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>730</td>
-<td>x</td>
-<td>£0.510</td>
-<td>=</td>
-<td><strong>£372.30</strong></td>
-</tr>
-</tbody>
-</table>
+<p>Monthly pricing for the control plane costs <strong>£412</strong> per month.</p>
 <p><strong>Infrastructure node cost per month</strong></p>
-<p>Two m1.medium infrastructure nodes cost 2 x £0.170 per hour = <strong>£0.340</strong> per hour.</p>
-<p>In an average <strong>730</strong> hour month, the monthly infrastructure node cost works out at:</p>
-<table>
-<thead>
-<tr>
-<th>Hours in operation</th>
-<th>x</th>
-<th>Infrastructure node cost</th>
-<th>=</th>
-<th>Infrastructure node cost per month</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>730</td>
-<td>x</td>
-<td>£0.340</td>
-<td>=</td>
-<td><strong>£248.20</strong></td>
-</tr>
-</tbody>
-</table>
+<p>Monthly pricing for two m1.medium infrastructure nodes costs 2 x £115 per month = <strong>£230</strong>.</p>
 <p><strong>Application node cost per month</strong></p>
-<p>Two m1.small application nodes cost 2 x £237.00 per month = <strong>£474.00</strong>.</p>
-<p>One r1.medium application node with hourly pricing costs <strong>£1.41</strong> per hour</p>
+<p>Monthly pricing for two m1.small application nodes costs 2 x £134 per month = <strong>£268</strong>.</p>
+<p>Hourly pricing for one r1.medium application node costs <strong>£0.65</strong> per hour</p>
 <p>If the r1.medium application node is used for <strong>200</strong> hours to cover increased demand, the monthly cost works out at:</p>
 <table>
 <thead>
@@ -352,13 +248,13 @@
 <tr>
 <td>200</td>
 <td>x</td>
-<td>£1.41</td>
+<td>£0.65</td>
 <td>=</td>
-<td><strong>£282.00</strong></td>
+<td><strong>£130</strong></td>
 </tr>
 </tbody>
 </table>
-<p>The total cost of application nodes is £474.00 + £282.00 = <strong>£756.00</strong> per month.</p>
+<p>The total cost of application nodes is £268 + £130 = <strong>£398</strong> per month.</p>
 <p><strong>Storage cost per month</strong></p>
 <p>Tier 2 persistent block storage costs <strong>£0.10</strong> per GiB month, so the storage cost for 60GiB is <strong>£6.00</strong>.</p>
 <p>Tier 1 persistent block storage costs <strong>£0.25</strong> per GiB month, so the storage cost for 40GiB is <strong>£10.00</strong>.</p>
@@ -368,7 +264,7 @@
 <table>
 <thead>
 <tr>
-<th>Control plane node cost</th>
+<th>Control plane cost</th>
 <th>+</th>
 <th>Infrastructure cost</th>
 <th>+</th>
@@ -381,15 +277,15 @@
 </thead>
 <tbody>
 <tr>
-<td>£372.30</td>
+<td>£412</td>
 <td>+</td>
-<td>£248.20</td>
+<td>£230</td>
 <td>+</td>
-<td>£756.00</td>
+<td>£398</td>
 <td>+</td>
 <td>£16.00</td>
 <td>=</td>
-<td><strong>£1,392.50</strong></td>
+<td><strong>£1,056.00</strong></td>
 </tr>
 </tbody>
 </table>
