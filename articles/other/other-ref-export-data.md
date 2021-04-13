@@ -2,9 +2,9 @@
 title: Methods for exporting data
 description: Provides some general information in relation to the methods available to customers to export data away from UKCloud when needed
 services: other
-author: Sue Highmoor
-reviewer: ecorfield
-lastreviewed: 05/05/2020
+author: shighmoor
+reviewer: dbroderick
+lastreviewed: 13/04/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -35,9 +35,9 @@ You can use any of the following methods to export data:
 
 - Internet, government secure network or leased line data copy
 
-- Data load room (self-service)
+- Data Transfer Facility (self-service)
 
-- Data load room (UKCloud SFIA)
+- Mass Transfer Facility (UKCloud)
 
 - Customer-hosted equipment
 
@@ -45,21 +45,21 @@ You can use any of the following methods to export data:
 
 All customers have some form of connectivity to the UKCloud platform to consume services, whether that be an internet facing connection or through one of the approved or government secure network connections. These connections are used for the management of services and may also have been used for copying data to the UKCloud platform. Therefore, the first option for exporting data is to make use of these existing connections.
 
-### Data load room (self-service)
+### Data Transfer Facility (self-service)
 
 If you want to make use of UKCloud's facilities, we maintain a data room where you can access both the Assured and Elevated security domains by appointment. Your staff or assigned representatives can attend site for a pre-booked number of days and copy data to the provided machines, with the expectation that this data is then moved onto removable media, for example USB hard disks, to be transported.
 
 For more information about booking and using this service, see the [Data Transfer Facility Service Scope](../enablement/enbl-sco-dtf.md).
 
-### Data load room (UKCloud SFIA)
+### Mass Transfer Facility (UKCloud)
 
-Similar to the self service option, this option copies data from your environment to, typically, removable media provided by you.
+Similar to the Data Transfer Facility, this option copies data from your environment to, typically, removable media provided by you.
 
-For more information about booking and using this service, see the [Data Transfer Facility Service Scope](../enablement/enbl-sco-dtf.md).
+For more information about booking and using this service, see the [Mass Transfer Facility Service Scope](../enablement/enbl-sco-mtf-nas.md).
 
 ### Customer-hosted equipment
 
-Where you have hosted equipment at a UKCloud data centre for part of the solution, for example the hosting of communications equipment, you can also leverage this in a similar way to the data load room. If you have equipment hosted at UKCloud, you may request access using a normal Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+Where you have hosted equipment at a UKCloud data centre for part of the solution, for example the hosting of communications equipment, you can also leverage this in a similar way to the data room. If you have equipment hosted at UKCloud, you may request access using a normal Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 
