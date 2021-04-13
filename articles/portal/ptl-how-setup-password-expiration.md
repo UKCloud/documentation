@@ -2,9 +2,9 @@
 title: How to set up password expiration
 description: Shows how to ensure that users regularly change their passwords by having passwords expire after a specified number of days
 services: portal
-author: Sue Highmoor
-reviewer:
-lastreviewed: 07/11/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 09/04/2021
 
 toc_rootlink: How To
 toc_sub1: 
@@ -26,11 +26,9 @@ You can set Portal passwords to expire after a specified number of days to ensur
 
 To set up password expiration:
 
-1. Log in to the UKCloud Portal as an administrator
+1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as an administrator.
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
-
-2. If necessary, switch to the account for which you want to change the security settings.
+2. If necessary, [*switch to the account*](ptl-how-switch-account.md) for which you want to change the security settings.
 
 3. In the navigation panel, select **Settings**.
 

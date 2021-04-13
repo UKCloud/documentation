@@ -2,9 +2,9 @@
 title: How to view login information
 description: Explains how to access a report of who has logged into your environment
 services: portal
-author: Sue Highmoor
-reviewer: Lewis Dean
-lastreviewed: 16/10/2019 11:00:00
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 09/04/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -31,23 +31,39 @@ The UKCloud Portal provides a report of who has logged into your account over th
 > [!NOTE]
 > To ensure appropriate segregation, if you have access to multiple accounts, you must switch accounts to view login information for each account.
 
+### Intended audience
+
+To view Portal login information, you must be a Portal administrator
+
 ## Viewing login history
 
-1. Log into the UKCloud Portal.
+1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as an administrator.
 
-2. In the navigation panel, click **Reports** and then **Login history**.
+2. If necessary, [*switch to the account*](ptl-how-switch-account.md) for which you want to view the login report.
 
-3. The resulting table provides a list of all the users who have logged in to your environment over the last 30 days.
+3. In the navigation panel, click **Reports** and then **Login history**.
 
-    The table indicates the name of the user, the date and time of each login and the IP address from which the login occurred. You can sort the results by user name, date or IP address.
+   ![Login history menu option](images/ptl-mnu-login-history.png)
 
-4. Use the **Next** link at the bottom of the table to page through the results, or click a page number to go directly to that page.
+4. The resulting table provides a list of all the users who have logged in to your environment over the last 30 days.
 
-    By default, the table lists 10 records at a time. You can use the drop down list at the top left of the table to increase the number of records shown per page to **25**, **50** or **100**.
+   The table indicates the name of the user, the date and time of each login and the IP address from which the login occurred. You can sort the results by user name, date or IP address.
 
-5. Use the **Search** field to find a particular user or IP address.
+   ![Login history](images/ptl-login-history.png)
 
-6. To export the login data, click the **Actions** tab and choose **Export login history**.
+5. Use the **Next** link at the bottom of the table to page through the results, or click a page number to go directly to that page.
+
+   By default, the table lists 10 records at a time. You can use the drop down list at the top left of the table to increase the number of records shown per page to **25**, **50** or **100**.
+
+   ![Show entries option](images/ptl-login-history-show-entries.png)
+
+6. Use the **Search** field at the top right of the table to find a particular user or IP address.
+
+   ![Search field](images/ptl-login-history-search.png)
+
+7. To export the login data, click the **Actions** tab and select **Export login history**.
+
+   ![Export login history menu option](images/ptl-mnu-export-login-history.png)
 
 ## Feedback
 
