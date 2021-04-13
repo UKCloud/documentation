@@ -12387,9 +12387,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-create-users.md",
       "output": {
@@ -12402,9 +12399,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-enable-2fa.md",
       "output": {
@@ -12441,9 +12435,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-reset-2fa.md",
       "output": {
@@ -12456,9 +12447,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-reset-password.md",
       "output": {
@@ -12495,9 +12483,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-setup-2fa.md",
       "output": {
@@ -12510,9 +12495,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-setup-password-expiration.md",
       "output": {
@@ -12537,9 +12519,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-switch-account.md",
       "output": {
@@ -12588,9 +12567,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-view-login-info.md",
       "output": {
@@ -12651,9 +12627,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-ref-security-settings.md",
       "output": {
