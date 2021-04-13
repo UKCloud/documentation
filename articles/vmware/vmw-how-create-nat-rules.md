@@ -77,7 +77,7 @@ To create a DNAT rule:
 
 10. If you have a syslog server configured, select the **Enable logging** option.
 
-    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
+    For more information about syslog servers, see [*How to access syslog data for your edge gateway*](vmw-how-access-syslog-data-adv.md).
 
     ![Add DNAT Rule dialog box](images/vmw-vcd10.1-add-dnat.png)
 
@@ -121,7 +121,7 @@ To create an SNAT rule:
 
 9. If you have a syslog server configured, select the **Enable logging** option.
 
-    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
+    For more information about syslog servers, see [*How to access syslog data for your edge gateway*](vmw-how-access-syslog-data-adv.md).
 
     ![Add SNAT Rule dialog box](images/vmw-vcd10.1-add-snat.png)
 
@@ -159,7 +159,7 @@ If you have an IPv6 network and need to communicate to an IPv4 network, you'll n
 
 9. If you have a syslog server configured, select the **Enable logging** option.
 
-    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
+    For more information about syslog servers, see [*How to access syslog data for your edge gateway*](vmw-how-access-syslog-data-adv.md).
 
     ![Add NAT64 Rule dialog box](images/vmw-vcd10.1-add-nat64.png)
 

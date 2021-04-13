@@ -48,7 +48,7 @@ To configure a load balancer:
 
 7. If you have a syslog server configured, select the **Enable Logging** option and select the **Log Level**.
 
-    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md)
+    For more information about syslog servers, see [*How to access syslog data for your edge gateway*](vmw-how-access-syslog-data-adv.md)
 
     ![Load balancer - Global Configuration tab](images/vmw-vcd10.1-edge-load-balancer-config.png)
 
