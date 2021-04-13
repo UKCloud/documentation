@@ -4,7 +4,7 @@ description: Provides information about accessing Red Hat updates using Red Hat 
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 12/01/2021
+lastreviewed: 13/04/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
