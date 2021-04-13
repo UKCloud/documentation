@@ -333,8 +333,6 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
                   "inBackup": true,
                   "lastBackupStatus": "Successful",
                   "lastBackup": "Completed on the night of: 23/06/2015",
-                  "inBackup": true,
-                  "lastBackupStatus": "Successful",
                   "retentionLength":28,
                   "backups":[
                     {
