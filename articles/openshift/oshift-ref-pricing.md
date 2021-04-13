@@ -119,6 +119,8 @@ Control plane cost | + | Infrastructure cost | + | Application node cost | + | S
 
 ### [Example 3: Hourly application node pricing](#tab/tab-3)
 
+The following provides an example of hourly pricing for burst workloads. 
+
 **Control plane:** 3 x control plane nodes<br>
 **Infrastructure nodes:** 2 x m1.medium<br>
 **Application nodes:** 2 x m1.small (monthly) and 1 x r1.medium (hourly)<br>
