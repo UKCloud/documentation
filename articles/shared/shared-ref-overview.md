@@ -3,8 +3,8 @@ title: Understanding UKCloud shared services
 description: Provides an overview of UKCloud's shared services
 services: shared-services
 author: shighmoor
-reviewer:
-lastreviewed: 15/01/2021
+reviewer: shighmoor
+lastreviewed: 13/04/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -27,11 +27,7 @@ UKCloud provides various shared services, including update servers, licensing se
 
 - [*How to access CentOS update servers*](shared-how-access-centos-update-servers.md)
 
-- *How to access Red Hat update servers*
-
-  - [RHUI 2](shared-how-access-redhat-update-servers.md)
-
-  - [RHUI 3](shared-how-access-redhat-update-servers-3.md)
+- [*How to access Red Hat update servers*](shared-how-access-redhat-update-servers-3.md)
 
 - [*How to access Ubuntu update servers*](shared-how-access-ubuntu-update-servers.md)
 
