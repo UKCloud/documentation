@@ -4,7 +4,7 @@ description: Shows you how to update your existing VMs to target UKCloud's appro
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 02/02/2021
+lastreviewed: 13/04/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -33,7 +33,7 @@ This latest version of RHUI replaces the previous version (from 2015), which is 
 
 ### Intended audience
 
-This article is intended for customers who have migrated to RHUI v3. If you need information for RHUI 2, see [*How to install and use Red Hat Update Infrastructure (RHUI 2)*](shared-how-install-rhui-vm.md).
+This article is intended for customers who have configured their systems to use to RHUI v3.
 
 ## Prerequisites
 

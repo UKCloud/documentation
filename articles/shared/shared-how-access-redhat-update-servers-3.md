@@ -4,7 +4,7 @@ description: Provides information about accessing Red Hat updates using Red Hat 
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 12/01/2021
+lastreviewed: 13/04/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -25,7 +25,7 @@ Before you attempt to establish a connection to RHUI Content Delivery Systems (C
 
 ### Intended audience
 
-This article is intended for customers who have migrated to RHUI v3. If you need information for RHUI 2, see [*How to access Red Hat update servers (RHUI 2)*](shared-how-access-redhat-update-servers.md).
+This article is intended for customers who have migrated their systems to use RHUI v3.
 
 ## New Red Hat VM templates
 
