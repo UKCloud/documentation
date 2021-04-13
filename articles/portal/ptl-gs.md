@@ -186,7 +186,7 @@ The Portal navigation panel provides access to all the functionality available i
 
   - The Zerto Self-Service Portal (ZSSP) where you can manage Journaling Protection, Disaster Recovery to the Cloud and Workload Migration to the Cloud (see [*How to perform a failover*](../vmware/vmw-how-zerto-perform-failover.md)).
 
-- **Communities** - Access the UKCloud Community LinkedIn group, Content Hub and UKCloud repositories on GitHub.
+- **Communities** - Access the UKCloud LinkedIn group, Content Hub and UKCloud repositories on GitHub.
 
 ### Content area
 
