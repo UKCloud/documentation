@@ -30,7 +30,7 @@ This article is intended for Portal administrators who need to reset a Portal us
 
 ## Resetting 2FA for a user account
 
-1. [*Log in to the UKCloud Portal*](ptl-gs.html#logging-in-to-the-ukcloud-portal) as a Portal administrator.
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as a Portal administrator.
 
 2. If necessary, [*switch to the account*](ptl-how-switch-account.md) to which the user belongs.
 
