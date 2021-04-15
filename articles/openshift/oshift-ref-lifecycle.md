@@ -37,7 +37,7 @@ Although Red Hat officially fully supports each major _**X**_ version of the Ope
 
 Currently, UKCloud does not offer in-place upgrades between major versions. Customers can trigger minor version upgrades inside the cluster at any time, providing total flexibility to upgrade at a convenient time.
 
-We require customers to stay on UKCloud-supported versions, so ask that upgrades are done in a timely manner to stay on a Y-1 release. For more information on performing updates and what happens if customers aren't on Y-1, see [*Supported customer update strategy for version 4 clusters*](oshift-how-v4-update.md). <need update branch merged first to add URL to these docs>
+We require customers to stay on UKCloud-supported versions, so ask that upgrades are done in a timely manner to stay on a Y-1 release. For more information on performing updates and what happens if customers aren't on Y-1, see [*Supported customer update strategy for version 4 clusters*](oshift-how-v4-update.md).
 
 ### Patching within current version
 
