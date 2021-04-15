@@ -73,7 +73,13 @@ To manage permissions for a specific vApp:
 
     - Select the check box for the user.
 
-    - From the **Access Level** list, select the appropriate permission level: **Read Only**, **Read/Write** or **Full Control**.
+    - From the **Access Level** list, select the appropriate permission level:
+
+      - **Read Only** - View the VMs in the vApp but make no changes
+
+      - **Read/Write** - View and make changes to the VMs in the vApp; create new VMs
+
+      - **Full Control** - View, edit and create VMs; change permissions of other users
 
     ![vApp Access Level](images/vmw-vcd10.1-share-vapp.png)
 
