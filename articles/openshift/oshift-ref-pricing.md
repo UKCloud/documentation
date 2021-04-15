@@ -1,6 +1,6 @@
 ---
-title: Pricing information for UKCloud for Managed OpenShift
-description: Provides useful information about UKCloud for Managed OpenShift pricing, including pricing examples
+title: Pricing information for UKCloud for Red Hat OpenShift
+description: Provides useful information about UKCloud for Red Hat OpenShift pricing, including pricing examples
 services: openshift
 author: shighmoor
 reviewer:
@@ -15,11 +15,11 @@ toc_fullpath: Service Information/oshift-ref-pricing.md
 toc_mdlink: oshift-ref-pricing.md
 ---
 
-# Pricing information for UKCloud for Managed OpenShift
+# Pricing information for UKCloud for Red Hat OpenShift
 
 ## Overview
 
-UKCloud for Managed OpenShift pricing can be as low as £0.74 per hour (using committed annual pricing option). Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for Red Hat OpenShift pricing can be as low as 74p per hour (using committed annual pricing option). Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 OpenShift is packaged to provide you with a high level of flexibility to scale your environments inline with your workloads.
 
@@ -168,7 +168,7 @@ Control plane cost | + | Infrastructure cost | + | Application node cost | + | S
 
 ## Discount options
 
-The following discount and purchase schemes are available with UKCloud for Managed OpenShift:
+The following discount and purchase schemes are available with UKCloud for Red Hat OpenShift:
 
 - Commitment discount - application node pricing is available at hourly, monthly or annual rates, with the relevant discounts built in
 
@@ -212,7 +212,7 @@ We offer a 30-day free trial so that you can test and evaluate our service witho
 
 ## Service scope
 
-For information about what is and isn't included in the UKCloud for Managed OpenShift service, as well as UKCloud and customer responsibilities, see the [*UKCloud for Managed OpenShift Service Scope*](oshift-sco.md).
+For information about what is and isn't included in the UKCloud for Red Hat OpenShift service, as well as UKCloud and customer responsibilities, see the [*UKCloud for Red Hat OpenShift Service Scope*](oshift-sco.md).
 
 ## Feedback
 

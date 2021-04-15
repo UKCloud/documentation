@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the High Performance Co
 services: hpc
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -19,7 +19,6 @@ toc_mdlink: hpc-sd.md
 
 > [!IMPORTANT]
 > High Performance Compute has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing High Performance Compute customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
-
 
 ## What is High Performance Compute?
 
@@ -45,7 +44,7 @@ The service is designed to be flexible and enables you to mix and match from a r
 
 ## Pricing and packaging
 
-High Performance Compute starts at 5p per hour. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+High Performance Compute pricing can be as low as 5p per hour. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

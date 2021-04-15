@@ -19,7 +19,7 @@ toc_mdlink: vmw-ref-pricing.md
 
 ## Overview
 
-UKCloud for VMware VMs start at 1p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for VMware VM pricing can be as low as 1p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 UKCloud for VMware VMs are priced per hour. Your bills are based on actual consumption, so if you're not using a VM, you can turn it off so you don't need to pay for it.
 

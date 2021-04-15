@@ -1,25 +1,25 @@
 ---
-title: UKCloud for Managed OpenShift Service Definition
-description: Provides an overview of what is provided by the UKCloud for Managed OpenShift service
+title: UKCloud for Red Hat OpenShift Service Definition
+description: Provides an overview of what is provided by the UKCloud for Red Hat OpenShift service
 services: openshift
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 21/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Managed OpenShift Service Definition
+toc_title: UKCloud for Red Hat OpenShift Service Definition
 toc_fullpath: Service Information/oshift-sd.md
 toc_mdlink: oshift-sd.md
 ---
 
-# UKCloud for Managed OpenShift Service Definition
+# UKCloud for Red Hat OpenShift Service Definition
 
-## What is UKCloud for Managed OpenShift?
+## What is UKCloud for Red Hat OpenShift?
 
-UKCloud for Managed OpenShift provides a secure, private deployment of Red Hat's OpenShift Container Platform. The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
+UKCloud for Red Hat OpenShift provides a secure, private deployment of Red Hat's OpenShift Container Platform. The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
 
 UKCloud deploys, scales, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure or platform services.
 
@@ -47,11 +47,11 @@ The service enables you to select from a number of configuration options includi
 
 The following product options apply only to OpenShift Container Platform (OCP) v4 or higher.
 
-![UKCloud for Managed OpenShift product options](images/oshift-product-options-g12.png)
+![UKCloud for Red Hat OpenShift product options](images/oshift-product-options-g12.png)
 
 ## Pricing and packaging
 
-UKCloud for Managed OpenShift pricing starts at £0.74. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for Red Hat OpenShift pricing can be as low as 74p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

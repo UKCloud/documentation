@@ -19,7 +19,7 @@ toc_mdlink: orcl-ref-pricing.md
 
 ## Overview
 
-UKCloud for Oracle Software VMs start at 9p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for Oracle Software VM pricing can be as low as 9p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 Oracle workloads are priced per hour for compute resources, and monthly for storage. Your bills are based on the resources you actually allocate to your solution. In contrast to traditional hosting models, this ensures that there's no lock-in to unnecessarily licensed or under-utilised hardware.
 

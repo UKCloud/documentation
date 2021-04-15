@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the UKCloud Dedicated C
 services: dedicated-compute
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -45,7 +45,7 @@ The service is designed to be flexible and allows you to choose from the list be
 
 ## Pricing and packaging
 
-Pricing is from £4,200 per/month/host (specification: CISCO UCS B200 M5 – 2 x 18 Core 512 GiB RAM). Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Dedicated Compute v2 pricing can be as low as £4,200 per/month/host (specification: CISCO UCS B200 M5 – 2 x 18 Core 512 GiB RAM). Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

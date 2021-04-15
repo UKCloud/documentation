@@ -87,7 +87,7 @@ Session user licence (required for each user accessing via RDSH) is £15.00.
 
 ## Pricing and packaging
 
-UKCloud Desktop as a Service can achieve an effective price from £24.30 per desktop per month or £12.15* per user per month for Session Hosting access (*excluding RDS hosting). Full pricing with all options, including licensing and connectivity, are available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Additional UKCloud commitment discounts apply for this service.
+UKCloud Desktop as a Service can be as low as £24.30 per desktop per month or £12.15* per user per month for Session Hosting access (*excluding RDS hosting). Full pricing with all options, including licensing and connectivity, are available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Additional UKCloud commitment discounts apply for this service.
 
 ## Customer considerations
 

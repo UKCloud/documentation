@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Managed SQL Server 
 services: managed-services
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 23/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Advanced Managed Services
 toc_sub1: Managed SQL Server
 toc_sub2:
@@ -45,7 +45,7 @@ We see our Managed SQL Server service as being the perfect blend of having the f
 
 ## Pricing and packaging
 
-Price per SQL instance starts from £494 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Managed SQL Server pricing can be as low as £494 per SQL instance per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Migration to the Cl
 services: migration
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -35,7 +35,7 @@ Continuous replication gives you the ability to carry out multiple tests on UKCl
 
 ## Pricing and packaging
 
-Migration to the Cloud is priced per VM plus the storage. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Migration to the Cloud pricing can be as low as 2.5p. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Managed Active Dire
 services: managed-services
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 23/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Advanced Managed Services
 toc_sub1: Managed Active Directory Support
 toc_sub2:
@@ -42,7 +42,7 @@ Organisations often struggle to find or fund the resources required to ensure th
 
 ## Pricing and packaging
 
-Pricing starts from £445 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Managed Active Directory Support pricing can be as low as £445 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

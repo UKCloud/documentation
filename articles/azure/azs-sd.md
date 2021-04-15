@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the UKCloud for Microso
 services: azure-stack
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 21/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Users
 toc_sub1: Service Information
 toc_sub2:
@@ -69,7 +69,7 @@ UKCloud can support with your licensing, management and utilisation of tenancies
 
 ## Pricing and packaging
 
-UKCloud for Microsoft Azure VMs start at 3p per hour. Full pricing with all options, including public Azure, licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for Microsoft Azure VM pricing can be as low as 3p per hour. Full pricing with all options, including public Azure, licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

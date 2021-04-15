@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Cloud Storage servi
 services: cloud-storage
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -43,7 +43,7 @@ This service is designed to be flexible and enables you to mix and match from a 
 
 ## Pricing and packaging
 
-UKCloud's Cloud Storage starts from 1.46p per GiB per month. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud's Cloud Storage pricing can be as low as 1.46p per GiB per month. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

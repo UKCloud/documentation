@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Extended Network Su
 services: managed-services
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Extended Network Support
 toc_sub1: 
 toc_sub2:
@@ -47,7 +47,7 @@ The service is designed to be flexible and allows you to choose from the options
 
 ## Pricing and packaging
 
-Prices start from £100 per month for a supported VLAN. Full pricing with all options including licensing and connectivity is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Extended Network Support pricing can be as low as £100 per month for a supported VLAN. Full pricing with all options including licensing and connectivity is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
