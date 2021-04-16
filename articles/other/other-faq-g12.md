@@ -4,7 +4,7 @@ description: Frequently asked questions (FAQs) for our G-Cloud 12 services
 services: other
 author:  shall
 reviewer: shighmoor
-lastreviewed: 25/09/2020
+lastreviewed: 16/04/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -94,6 +94,8 @@ For information about any of the updated services listed below, see [*UKCloud Se
 ### What's new in the UKCloud for OpenShift service?
 
 With a slight change in name to UKCloud for Managed OpenShift, this service now offers customers on OCPv4 or higher the option for hourly pricing alongside the traditional monthly pricing.
+
+Since the G-Cloud 12 launch, the product has been renamed to UKCloud for Red Hat OpenShift.
 
 ### What's new in the CloudSOC service?
 
