@@ -173,7 +173,7 @@ The migration of VMs within our platform is very closely aligned with how we ope
 
 As migrating workloads involves enabling Journaling Protection on your source VMs, those VMs (and any associated storage) will incur the appropriate additional Journaling Protection charges for the duration of the migration. Once your migration is complete, you should be sure to remove the original VMs from the source site to avoid additional charges.
 
-Find out more about how to migrate your workloads between UKCloud regions in [*How to migrate your workloads between UKCloud regions*](vmw-how-zerto-migrate-between-regions.md).
+Find out more about how to migrate your workloads between UKCloud regions in [*How to migrate your workloads between UKCloud regions*](../enablement/enbl-how-zerto-migrate-between-regions.md).
 
 ## Feedback
 
