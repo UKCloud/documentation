@@ -24,10 +24,10 @@ This article is designed to provide you with a top level comparison for our main
 
 &nbsp;                                   | Setup cost | Minimum commit                 | Onboarding time | Termination notice
 -----------------------------------------|------------|--------------------------------|-----------------|-------------------
-**UKCloud for Managed OpenShift**        | No         | 1 month                        | 5 days          | 30 days
 **UKCloud for Microsoft Azure**          | No         | 1 hour                         | 4 hours         | 30 days
 **UKCloud for OpenStack**                | No         | 1 hour                         | 4 hours         | 30 days
 **UKCloud for Oracle Software**          | No         | 1 hour (VM); 1 month (Storage) | 5 days          | 30 days
+**UKCloud for Red Hat OpenShift**        | No         | 1 month                        | 5 days          | 30 days
 **UKCloud for VMware**                   | No         | 1 hour                         | 4 hours         | 30 days
 **Cloud GPU**                            | No         | 1 hour                         | 10 days         | 30 days
 **Cloud Storage**                        | No         | 1 month                        | 1 day           | 30 days
@@ -49,10 +49,10 @@ This article is designed to provide you with a top level comparison for our main
 
 &nbsp;                                   | Min VM size     | Max VM size       | Billing units                               | Free trial
 -----------------------------------------|-----------------|-------------------|---------------------------------------------|-----------
-**UKCloud for Managed OpenShift**        | N/A             | N/A               | Per node per month                          | Yes
 **UKCloud for Microsoft Azure**          | 1 vCPU, 768 MiB | 64 vCPU, 128 GiB  | Per VM per hour                             | Yes
 **UKCloud for OpenStack**                | 1 vCPU, 500 MiB | 56 vCPU, 440 GiB  | Per instance per hour                       | Yes
 **UKCloud for Oracle Software**          | 1 Core, 8 GiB   | 12 Cores, 128 GiB | Per VM per hour (per GiB per month storage) | Yes
+**UKCloud for Red Hat OpenShift**        | N/A             | N/A               | Per node per month                          | Yes
 **UKCloud for VMware**                   | 1 vCPU, 500 MiB | 12 vCPU, 128 GiB  | Per VM per hour                             | Yes
 **Cloud GPU**                            | N/A             | N/A               | per hour (per month for HPC)                | Yes
 **Cloud Storage**                        | N/A             | N/A               | Monthly                                     | Yes
@@ -74,10 +74,10 @@ This article is designed to provide you with a top level comparison for our main
 
 &nbsp;                                   | SLA                                          | Service credits - data plane                                         | Service credits - Control plane        | Planned Maintenance
 -----------------------------------------|----------------------------------------------|----------------------------------------------------------------------|----------------------------------------|--------------------
-**UKCloud for Managed OpenShift**        | 99.95%                                       | 3% of monthly spend for affected UKCloud deployed OpenShift platform | 1% per 1% or part thereof below 99.90% | Excluded
 **UKCloud for Microsoft Azure**          | Single instance=99.90%, dual instance=99.95% | 5% per 5% or part thereof below SLA                                  | 1% per 1% or part thereof below 99.90% | Excluded
 **UKCloud for OpenStack**                | 99.95%                                       | 2% of monthly region spend/10% of monthly global spend               | 1% per 1% or part thereof below 99.90% | Excluded
 **UKCloud for Oracle Software**          | Non-HA=99.95% , HA=99.99%                    | 10% of monthly spend of affected OVM                                 | 1% per 1% or part thereof below 99.90% | Excluded
+**UKCloud for Red Hat OpenShift**        | 99.95%                                       | 3% of monthly spend for affected UKCloud deployed OpenShift platform | 1% per 1% or part thereof below 99.90% | Excluded
 **UKCloud for VMware**                   | ESSENTIAL/PRIORITY=99.95%, POWER=99.99%      | 3% (ESSENTIAL), 5% (POWER/PRIORITY) or part thereof below SLA        | 1% per 1% or part thereof below 99.90% | Included (ESSENTIAL/POWER), Excluded (PRIORITY)
 **Cloud GPU**                            | 99.90%                                       | 3% of monthly spend per 5% below SLA                                 | 1% per 1% or part thereof below 99.90% | Excluded
 **Cloud Storage**                        | STANDARD=99.95%, ENHANCED=99.99%             | STANDARD=10% monthly spend, ENHANCED=15% monthly spend               | 1% per 1% or part thereof below 99.90% | Excluded
@@ -99,10 +99,10 @@ This article is designed to provide you with a top level comparison for our main
 
 &nbsp;                                   | Discount schemes
 -----------------------------------------|-----------------
-**UKCloud for Managed OpenShift**        | Commitment, Cloud Credits
 **UKCloud for Microsoft Azure**          | Commitment, Annual subscription, Cloud Credits
 **UKCloud for OpenStack**                | Commitment, Annual subscription, Cloud Credits
 **UKCloud for Oracle Software**          | Commitment, Annual subscription, Cloud Credits
+**UKCloud for Red Hat OpenShift**        | Commitment, Cloud Credits
 **UKCloud for VMware**                   | Commitment, Annual subscription, Cloud Credits
 **Cloud GPU**                            | Commitment, Annual subscription, Cloud Credits
 **Cloud Storage**                        | Cloud Credits, product-specific discounts available

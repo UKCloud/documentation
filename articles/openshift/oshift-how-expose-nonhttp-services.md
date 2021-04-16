@@ -20,7 +20,7 @@ toc_mdlink: oshift-how-expose-nonhttp-services.md
 
 ## Overview
 
-UKCloud for Managed OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
+UKCloud for Red Hat OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
 
 This article explains how you can expose services outside of your OpenShift cluster without using routes.
 

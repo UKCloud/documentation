@@ -73,18 +73,6 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 **Availability commitment** | 99.90%
 **Service Credit**          | 1% of monthly spend per 1% below the service level target or part thereof for services.
 
-### UKCloud for Managed OpenShift
-
-&nbsp;                       | UKCloud for Managed OpenShift
------------------------------|------------------------------
-**Availability commitment**  | 99.95% (control plane)<br>99.95% (data plane)
-**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days)
-**Emergency Maintenance**    | Excluded
-**Planned Maintenance**      | Excluded
-**Measurement of SLA**       | Unavailability applies when the OpenShift environment becomes unresponsive owing to a fault in the UKCloud-controlled OpenShift infrastructure and services which lies within:<ul><li>UKCloud-controlled components such as the virtual infrastructure, storage, power, and physical firewalls and routers<li>UKCloud-maintained OpenShift services (master nodes, infrastructure nodes, routing layer)</ul>
-**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within user control, that is, any code owned and controlled by the customer<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Issues arising from bugs introduced as part of any new releases published by Red Hat (UKCloud will conduct thorough testing prior to applying any new releases)</ul>
-**Service Credit**           | 3% of monthly spend for affected UKCloud deployed OpenShift platform
-
 ### UKCloud for Microsoft Azure
 
 &nbsp;                       | UKCloud for Microsoft Azure (public multi-tenant)
@@ -120,6 +108,18 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 **Measurement of SLA**       | The service is deemed unavailable if a customer is unable to restart a VM after it becomes unresponsive due to a fault recognised as the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking, such as physical firewalls and routers.<br>As Oracle workloads are pinned to processor cores, VMs will only be automatically moved in the event of a host failure if the HA feature has been enabled by the customer on each VM. Customers are responsible for enabling the HA feature. If the HA feature is not enabled, UKCloud will need to move Oracle VMs to a new host so they can be restarted. The manual movement of VMs is covered by the Non-HA SLA.<br>Customers are responsible for restarting VMs and should configure alerts to be notified if an Oracle VM failure occurs. This will not be a live migration and an application restart will be required. Customers will be advised if an action is to be performed.
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
 **Service Credit**           | 10% of monthly spend
+
+### UKCloud for Red Hat OpenShift
+
+&nbsp;                       | UKCloud for Red Hat OpenShift
+-----------------------------|------------------------------
+**Availability commitment**  | 99.95% (control plane)<br>99.95% (data plane)
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days)
+**Emergency Maintenance**    | Excluded
+**Planned Maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies when the OpenShift environment becomes unresponsive owing to a fault in the UKCloud-controlled OpenShift infrastructure and services which lies within:<ul><li>UKCloud-controlled components such as the virtual infrastructure, storage, power, and physical firewalls and routers<li>UKCloud-maintained OpenShift services (master nodes, infrastructure nodes, routing layer)</ul>
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within user control, that is, any code owned and controlled by the customer<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Issues arising from bugs introduced as part of any new releases published by Red Hat (UKCloud will conduct thorough testing prior to applying any new releases)</ul>
+**Service Credit**           | 3% of monthly spend for affected UKCloud deployed OpenShift platform
 
 ### UKCloud for VMware
 

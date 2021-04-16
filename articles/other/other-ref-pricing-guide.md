@@ -23,10 +23,10 @@ For pricing information for UKCloud services, see the following documents on the
 
 This document provides the pricing for our multi-cloud technology and cloud support products, options and other services:
 
-UKCloud for Managed OpenShift<br>
 UKCloud for Microsoft Azure<br>
 UKCloud for OpenStack<br>
 UKCloud for Oracle Software<br>
+UKCloud for Red Hat OpenShift<br>
 UKCloud for VMware<br>
 VMware Licence Service (VLS)<br>
 Cloud Storage<br>
@@ -64,10 +64,10 @@ This document outlines:
 
 We also have additional pricing information, including pricing examples, for the following:
 
-[UKCloud for Managed OpenShift](../openshift/oshift-ref-pricing.md)<br>
 [UKCloud for Microsoft Azure](../azure/azs-ref-pricing.md)<br>
 [UKCloud for OpenStack](../openstack/ostack-ref-pricing.md)<br>
 [UKCloud for Oracle Software](../oracle/orcl-ref-pricing.md)<br>
+[UKCloud for Red Hat OpenShift](../openshift/oshift-ref-pricing.md)<br>
 [UKCloud for VMware](../vmware/vmw-ref-pricing.md)<br>
 [Cloud Storage](../cloud-storage/cs-ref-pricing.md)<br>
 [Cross Domain Security Zone](../cdsz/cdsz-ref-pricing.md)<br>

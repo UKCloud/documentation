@@ -1,6 +1,6 @@
 ---
-title: UKCloud for Managed OpenShift Service Scope
-description: Outlines important details regarding UKCloud for Managed OpenShift
+title: UKCloud for Red Hat OpenShift Service Scope
+description: Outlines important details regarding UKCloud for Red Hat OpenShift
 services: openshift
 author: shighmoor
 reviewer: shighmoor
@@ -10,32 +10,32 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Managed OpenShift Service Scope
+toc_title: UKCloud for Red Hat OpenShift Service Scope
 toc_fullpath: Service Information/oshift-sco.md
 toc_mdlink: oshift-sco.md
 ---
 
-# UKCloud for Managed OpenShift Service Scope
+# UKCloud for Red Hat OpenShift Service Scope
 
 ## About this Service Scope
 
-If you are considering purchasing our UKCloud for Managed OpenShift service, this article describes the boundaries of the service, along with the division of responsibilities between you and UKCloud to facilitate the provisioning and ongoing use of the service.
+If you are considering purchasing our UKCloud for Red Hat OpenShift service, this article describes the boundaries of the service, along with the division of responsibilities between you and UKCloud to facilitate the provisioning and ongoing use of the service.
 
-## About UKCloud for Managed OpenShift
+## About UKCloud for Red Hat OpenShift
 
-UKCloud for Managed OpenShift is UKCloud's OpenShift powered Kubernetes Platform as a Service (PaaS). The service provides a secure, private deployment of the Red Hat&trade; OpenShift&trade; Container Platform. The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
+UKCloud for Red Hat OpenShift is UKCloud's OpenShift powered Kubernetes Platform as a Service (PaaS). The service provides a secure, private deployment of the Red Hat&trade; OpenShift&trade; Container Platform. The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
 
 UKCloud deploys, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure.
 
-For more information about what the service offers, see the [*UKCloud for Managed OpenShift Service Definition*](oshift-sd.md).
+For more information about what the service offers, see the [*UKCloud for Red Hat OpenShift Service Definition*](oshift-sd.md).
 
 ### Key service capabilities
 
-UKCloud for Managed OpenShift provides:
+UKCloud for Red Hat OpenShift provides:
 
 - A secure and scalable UK-based platform connected to the internet and government networks including PSN, HSCN, Janet and RLI
 
-- Secure customer separation - UKCloud for Managed OpenShift management components and container hosts are dedicated to you, deployed on independently verified, assured multi-tenant infrastructure
+- Secure customer separation - UKCloud for Red Hat OpenShift management components and container hosts are dedicated to you, deployed on independently verified, assured multi-tenant infrastructure
 
 - Ability to deploy and manage containers using standardised tools and RESTful APIs
 
@@ -65,17 +65,17 @@ Typical use cases include:
 
 ## Service implementation
 
-UKCloud for Managed OpenShift is built using Red Hat's OpenShift Container Platform (OCP) v4, which is the enterprise-hardened version of OKD (previously Origins) v4, which extends the open source Kubernetes project.
+UKCloud for Red Hat OpenShift is built using Red Hat's OpenShift Container Platform (OCP) v4, which is the enterprise-hardened version of OKD (previously Origins) v4, which extends the open source Kubernetes project.
 
-UKCloud for Managed OpenShift is built as an isolated single-tenant environment on top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS service, helping to deliver the benefits of single-tenant isolation with the economics and flexibility of multi-tenant infrastructure.
+UKCloud for Red Hat OpenShift is built as an isolated single-tenant environment on top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS service, helping to deliver the benefits of single-tenant isolation with the economics and flexibility of multi-tenant infrastructure.
 
-UKCloud for Managed OpenShift is available in our Assured OFFICIAL and Elevated OFFICIAL security domains on our Tier 1 platform. UKCloud for Managed OpenShift is available on our Tier 2 platform for workloads that require greater levels of security.
+UKCloud for Red Hat OpenShift is available in our Assured OFFICIAL and Elevated OFFICIAL security domains on our Tier 1 platform. UKCloud for Red Hat OpenShift is available on our Tier 2 platform for workloads that require greater levels of security.
 
 ### Deployment options
 
-UKCloud for Managed OpenShift is packaged to provide you with a high level of flexibility to scale your environments inline with your workloads.
+UKCloud for Red Hat OpenShift is packaged to provide you with a high level of flexibility to scale your environments inline with your workloads.
 
-With UKCloud for Managed OpenShift, we deploy an OpenShift cluster that contains multiple nodes: nodes for the cluster control plane, infrastructure nodes for additional services, such as ingress controllers, metrics, developer console and aggregated logging, and application nodes for your containerised applications.
+With UKCloud for Red Hat OpenShift, we deploy an OpenShift cluster that contains multiple nodes: nodes for the cluster control plane, infrastructure nodes for additional services, such as ingress controllers, metrics, developer console and aggregated logging, and application nodes for your containerised applications.
 
 > [!NOTE]
 > An operational OpenShift cluster requires a minimum of three control plane nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services, such as ingress controllers, metrics, developer console and aggregated logging. You'll need at least one application node to run your application and we recommend a minimum of two nodes for resilience.
@@ -107,7 +107,7 @@ Containers in OpenShift by default don't persist data. Every time an application
 
 ### Optional extras
 
-To complement your UKCloud for Managed OpenShift service, UKCloud offers the following value-added options.
+To complement your UKCloud for Red Hat OpenShift service, UKCloud offers the following value-added options.
 
 > [!NOTE]
 > Some of these extras will carry supplementary charges; please see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for full details.
@@ -142,7 +142,7 @@ By default, UKCloud will provide 90-day Let's Encrypt SSL certificates for your 
 
 #### Container native storage
 
-To facilitate the deployment of stateful workloads, UKCloud for Managed OpenShift offers dynamically provisioned persistent storage. It is vital that any persistent workloads utilise the appropriate storage policy for the workload to ensure no data loss when a container restarts. The customer is responsible for backup and disaster recovery of any data stored in persistent volumes.
+To facilitate the deployment of stateful workloads, UKCloud for Red Hat OpenShift offers dynamically provisioned persistent storage. It is vital that any persistent workloads utilise the appropriate storage policy for the workload to ensure no data loss when a container restarts. The customer is responsible for backup and disaster recovery of any data stored in persistent volumes.
 
 ### Backup/recovery and disaster recovery
 
@@ -154,7 +154,7 @@ Although OpenShift is designed to deploy and manage stateless applications (appl
 
 #### Scalability
 
-As a true cloud platform, UKCloud for Managed OpenShift provides full elasticity and scalability. However, to protect the integrity of the platform and manage customer spend, soft limits on the number and size of application instances will be in place. These limits may be extended on request.
+As a true cloud platform, UKCloud for Red Hat OpenShift provides full elasticity and scalability. However, to protect the integrity of the platform and manage customer spend, soft limits on the number and size of application instances will be in place. These limits may be extended on request.
 
 #### Persistent volumes
 
@@ -162,7 +162,7 @@ In line with current restrictions on the OpenStack service that underpins OpenSh
 
 ### Published features not currently available
 
-The following features published in the [UKCloud for Managed OpenShift Service Definition](oshift-sd.md) are not currently available:
+The following features published in the [UKCloud for Red Hat OpenShift Service Definition](oshift-sd.md) are not currently available:
 
 - Janet, PSN and RLI connectivity
 
@@ -172,19 +172,19 @@ Although these features are not currently available, they will be considered on 
 
 ### How to buy
 
-You can request UKCloud for Managed OpenShift by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or, for new enquires, visit the [Contact Us](https://ukcloud.com/contact/) page of our website.
+You can request UKCloud for Red Hat OpenShift by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or, for new enquires, visit the [Contact Us](https://ukcloud.com/contact/) page of our website.
 
 ### Onboarding
 
 Within 5 business days of accepting an order, UKCloud will create your primary account and send a Welcome Pack, which includes the URLs for the UKCloud Portal and the [*Getting Started Guide*](oshift-gs.md).
 
-UKCloud for Managed OpenShift is delivered as a private Platform-as-a-Service (PaaS). Each customer will be provided with an isolated OpenShift cluster within which they can build their containerised solutions.
+UKCloud for Red Hat OpenShift is delivered as a private Platform-as-a-Service (PaaS). Each customer will be provided with an isolated OpenShift cluster within which they can build their containerised solutions.
 
 By default, only a single user account will be created per cluster, this user can then create additional users within the cluster by managing account users via the UKCloud Portal.
 
 ## Platform management
 
-UKCloud for Managed OpenShift is managed directly by the customer, using OpenShift's dashboard, the UKCloud Portal, and APIs associated with both.
+UKCloud for Red Hat OpenShift is managed directly by the customer, using OpenShift's dashboard, the UKCloud Portal, and APIs associated with both.
 
 UKCloud maintains responsibility for routine patching and upgrades of the OpenShift platform in-line with the published [*OpenShift life cycle and patch management process*](oshift-ref-lifecycle.md).
 
@@ -196,7 +196,7 @@ You are responsible for:
 
 - Self-managing the environment including workload deployment, in-cluster workload segregation, network policy management, storage requests and management, and so on.
 
-- Maintaining an original copy or backup copy of the data used in the UKCloud for Managed OpenShift service (see [*Backup/recovery and disaster recovery*](#backuprecovery-and-disaster-recovery)).
+- Maintaining an original copy or backup copy of the data used in the UKCloud for Red Hat OpenShift service (see [*Backup/recovery and disaster recovery*](#backuprecovery-and-disaster-recovery)).
 
 - Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
 
@@ -204,13 +204,13 @@ You are responsible for:
 
 ## Support
 
-We monitor, maintain and support our controlled UKCloud for Managed OpenShift infrastructure and services, including:
+We monitor, maintain and support our controlled UKCloud for Red Hat OpenShift infrastructure and services, including:
 
 - UKCloud-controlled components, such as the virtual infrastructure, storage, power and physical firewalls and routers
 
 - UKCloud-maintained OpenShift services (for example, router service, DEAs, health manager, cloud controller, control plane nodes, worker nodes, routing layer)
 
-UKCloud for Managed OpenShift includes full UKCloud support as standard at no additional charge. For more information about how the support process works, see [*How to raise and escalate support tickets with customer support*](../portal/ptl-how-raise-escalate-service-request.md).
+UKCloud for Red Hat OpenShift includes full UKCloud support as standard at no additional charge. For more information about how the support process works, see [*How to raise and escalate support tickets with customer support*](../portal/ptl-how-raise-escalate-service-request.md).
 
 In addition, you'll be assigned a Service Delivery Manager (SDM) to provide any assistance you may require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
@@ -224,11 +224,11 @@ All UKCloud customers have access to the UKCloud Portal, where they can access t
 
 ### Knowledge Centre
 
-To assist you in using our services and all associated functionality, the UKCloud Knowledge Centre is continually maintained to provide the latest information. Key articles for UKCloud for Managed OpenShift are listed at the end of this Service Scope.
+To assist you in using our services and all associated functionality, the UKCloud Knowledge Centre is continually maintained to provide the latest information. Key articles for UKCloud for Red Hat OpenShift are listed at the end of this Service Scope.
 
 ### Protective Monitoring
 
-Protective Monitoring is available for UKCloud for Managed OpenShift. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
+Protective Monitoring is available for UKCloud for Red Hat OpenShift. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
 ## Service availability
 
@@ -236,19 +236,19 @@ You are entitled to claim Service Credits for outages to services that take you 
 
 ### Service maintenance windows
 
-For UKCloud for Managed OpenShift, Planned and Emergency are not included in the SLA.
+For UKCloud for Red Hat OpenShift, Planned and Emergency are not included in the SLA.
 
 For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Pricing and billing
 
-For UKCloud for Managed OpenShift pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). For additional pricing information related to this service, including pricing examples, billing information, additional fees and free trial information, see [*Pricing information for UKCloud for Managed OpenShift*](oshift-ref-pricing.md).
+For UKCloud for Red Hat OpenShift pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). For additional pricing information related to this service, including pricing examples, billing information, additional fees and free trial information, see [*Pricing information for UKCloud for Red Hat OpenShift*](oshift-ref-pricing.md).
 
-To help understand the potential cost of our UKCloud for Managed OpenShift service for your specific requirements, you can download our [Pricing Estimation Tool](https://ukcloud.com/price-estimator-tool/).
+To help understand the potential cost of our UKCloud for Red Hat OpenShift service for your specific requirements, you can download our [Pricing Estimation Tool](https://ukcloud.com/price-estimator-tool/).
 
 ## Termination of service
 
-You can terminate your UKCloud for Managed OpenShift service by providing us with no less than 30 days' notice. There are no termination fees for the service.
+You can terminate your UKCloud for Red Hat OpenShift service by providing us with no less than 30 days' notice. There are no termination fees for the service.
 
 At the point of termination, you're responsible for extracting your own data from the platform if required. UKCloud may make an additional charge for transferring data out of the service. For more information, see [*Terminating your UKCloud services*](../other/other-ref-offboarding.md).
 
@@ -256,15 +256,15 @@ At the point of termination, all customer data, accounts and access will be perm
 
 ## Supporting information
 
-For more information about UKCloud for Managed OpenShift, see the following:
+For more information about UKCloud for Red Hat OpenShift, see the following:
 
-- [*UKCloud for Managed OpenShift Service Definition*](oshift-sd.md)
+- [*UKCloud for Red Hat OpenShift Service Definition*](oshift-sd.md)
 
-- [*Pricing information for UKCloud for Managed OpenShift*](oshift-ref-pricing.md)
+- [*Pricing information for UKCloud for Red Hat OpenShift*](oshift-ref-pricing.md)
 
-- [*Getting Started Guide for UKCloud for Managed OpenShift*](oshift-gs.md)
+- [*Getting Started Guide for UKCloud for Red Hat OpenShift*](oshift-gs.md)
 
-- [*UKCloud for Managed OpenShift FAQs*](oshift-faq.md)
+- [*UKCloud for Red Hat OpenShift FAQs*](oshift-faq.md)
 
 - [*UKCloud Terms and Conditions*](../other/other-ref-terms-and-conditions.md)
 

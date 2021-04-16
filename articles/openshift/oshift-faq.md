@@ -1,6 +1,6 @@
 ---
-title: UKCloud for Managed OpenShift FAQs
-description: Frequently asked questions about our UKCloud for Managed OpenShift service
+title: UKCloud for Red Hat OpenShift FAQs
+description: Frequently asked questions about our UKCloud for Red Hat OpenShift service
 services: openshift
 author: mwarner
 reviewer: shighmoor
@@ -10,26 +10,26 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Managed OpenShift FAQs
+toc_title: UKCloud for Red Hat OpenShift FAQs
 toc_fullpath: FAQs/oshift-faq.md
 toc_mdlink: oshift-faq.md
 ---
 
-# UKCloud for Managed OpenShift FAQs
+# UKCloud for Red Hat OpenShift FAQs
 
-### What is UKCloud for Managed OpenShift?
+### What is UKCloud for Red Hat OpenShift?
 
-UKCloud for Managed OpenShift is UKCloud's OpenShift powered Kubernetes Platform as a Service (PaaS). The service provides a secure, private deployment of the Red Hat&trade; OpenShift&trade; Container Platform. The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
+UKCloud for Red Hat OpenShift is UKCloud's OpenShift powered Kubernetes Platform as a Service (PaaS). The service provides a secure, private deployment of the Red Hat&trade; OpenShift&trade; Container Platform. The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
 
 UKCloud deploys, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure or platform services.
 
-For an overview what the service offers, see the [*UKCloud for Managed OpenShift Service Definition*](oshift-sd.md). For specific details about the implementation and boundaries of the service, see the [*UKCloud for Managed OpenShift Service Scope*](oshift-sco.md).
+For an overview what the service offers, see the [*UKCloud for Red Hat OpenShift Service Definition*](oshift-sd.md). For specific details about the implementation and boundaries of the service, see the [*UKCloud for Red Hat OpenShift Service Scope*](oshift-sco.md).
 
-### Why deliver UKCloud for Managed OpenShift as a cloud service?
+### Why deliver UKCloud for Red Hat OpenShift as a cloud service?
 
-Although UKCloud for Managed OpenShift is a simple, benefits-rich service to consume, it's a complex platform of inter-dependent servers and services, whose deployment, configuration and maintenance requires time and expertise.
+Although UKCloud for Red Hat OpenShift is a simple, benefits-rich service to consume, it's a complex platform of inter-dependent servers and services, whose deployment, configuration and maintenance requires time and expertise.
 
-By offering this service, we take on all that complexity so that customers can immediately realise the value of UKCloud for Managed OpenShift by simply consuming it.
+By offering this service, we take on all that complexity so that customers can immediately realise the value of UKCloud for Red Hat OpenShift by simply consuming it.
 
 ### Does my data leave the UK?
 
@@ -37,13 +37,13 @@ As the service is delivered from UK data centres by a UK company, your data does
 
 ### Is the service Pan Government Accredited?
 
-UKCloud's existing PGA continues to apply to the infrastructure underpinning our services. But since the move to the Government Security Classification Policy (GSCP), we can no longer seek PGA for newer services, such as UKCloud for Managed OpenShift.
+UKCloud's existing PGA continues to apply to the infrastructure underpinning our services. But since the move to the Government Security Classification Policy (GSCP), we can no longer seek PGA for newer services, such as UKCloud for Red Hat OpenShift.
 
 We are now required to self-assert our services, with customers taking responsibility for assessing and selecting the most appropriate cloud services to meet their individual security requirements.
 
 We provide confidence that our OpenShift service still meets the highest level of information assurance, which is why we continue to have our platform independently tested and validated, and have the findings made available to customers and partners. This enables SIROs to make an informed decision about any service they choose to consume.
 
-### What languages and frameworks are compatible with UKCloud for Managed OpenShift?
+### What languages and frameworks are compatible with UKCloud for Red Hat OpenShift?
 
 The service supports many popular development frameworks and languages such as:
 
@@ -65,7 +65,7 @@ The service supports many popular development frameworks and languages such as:
 
 For the full list please visit https://access.redhat.com/articles/2176281?hsLang=en-us
 
-### Does UKCloud for Managed OpenShift support any data services?
+### Does UKCloud for Red Hat OpenShift support any data services?
 
 Our OpenShift service provides popular open source data service packages deployable within the platform, all supported by the global open source community, including:
 
@@ -79,9 +79,9 @@ Our OpenShift service provides popular open source data service packages deploya
 
 Note that these services are offered 'as is' with no management, support or availability commitment from UKCloud. We strongly suggest customers ensure they maintain a original copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, a data service provided by a managed service provider on our UKCloud for VMware platform.
 
-### How scalable is UKCloud for Managed OpenShift?
+### How scalable is UKCloud for Red Hat OpenShift?
 
-As a true cloud platform, UKCloud for Managed OpenShift provides full elasticity and scalability. However, in order to protect the integrity of the platform and manage customer spend, soft limits on the number and size of application instances will be in place. These limits may be extended upon request.
+As a true cloud platform, UKCloud for Red Hat OpenShift provides full elasticity and scalability. However, in order to protect the integrity of the platform and manage customer spend, soft limits on the number and size of application instances will be in place. These limits may be extended upon request.
 
 ### Which ports are open to the platform from the internet by default?
 

@@ -1,6 +1,6 @@
 ---
-title: Making the most of your UKCloud for Managed OpenShift trial
-description: Provides information to get up and running with UKCloud for Managed OpenShift trials
+title: Making the most of your UKCloud for Red Hat OpenShift trial
+description: Provides information to get up and running with UKCloud for Red Hat OpenShift trials
 services: openshift
 author: Mudasar Hussain
 reviewer: Gareth Ellner
@@ -11,26 +11,26 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Making the most of your UKCloud for Managed OpenShift trial
+toc_title: Making the most of your UKCloud for Red Hat OpenShift trial
 toc_fullpath: Reference/oshift-ref-trial.md
 toc_mdlink: oshift-ref-trial.md
 ---
 
-# Making the most of your UKCloud for Managed OpenShift trial
+# Making the most of your UKCloud for Red Hat OpenShift trial
 
 ## Overview
 
-Welcome to your UKCloud for Managed OpenShift trial. Your trial OpenShift cluster is a secure, single-tenant private deployment on UKCloud's Assured OpenStack cloud. During an OpenShift trial, the OpenShift cluster is typically only connected to the internet, however connectivity to many other government community networks is available in OpenShift clusters after the trial phase. The purpose of an OpenShift trial is for you to get hands-on experience with Red Hat&trade; OpenShift container orchestration technology to see if it is the correct technology for you.
+Welcome to your UKCloud for Red Hat OpenShift trial. Your trial OpenShift cluster is a secure, single-tenant private deployment on UKCloud's Assured OpenStack cloud. During an OpenShift trial, the OpenShift cluster is typically only connected to the internet, however connectivity to many other government community networks is available in OpenShift clusters after the trial phase. The purpose of an OpenShift trial is for you to get hands-on experience with Red Hat&trade; OpenShift container orchestration technology to see if it is the correct technology for you.
 
 ### Intended audience
 
 This article is intended for developers who have signed up for an OpenShift trial with UKCloud. Developers are expected to have a good understanding of containerisation and container orchestration technologies to maximise their benefit from an OpenShift trial.
 
-## Introduction to UKCloud for Managed OpenShift trials
+## Introduction to UKCloud for Red Hat OpenShift trials
 
 OpenShift provides a platform-as-a-service, which means that you don't need to worry about the underlying hardware or operating system. Instead, you can focus on developing, deploying, scaling and monitoring your applications in OpenShift, maximising your return on investment in terms of money and time.
 
-With UKCloud for Managed OpenShift, you have administrator access to your cluster, giving you the control you need to create, deploy and administer your environment as you see fit.
+With UKCloud for Red Hat OpenShift, you have administrator access to your cluster, giving you the control you need to create, deploy and administer your environment as you see fit.
 
 All OpenShift deployments get a Foundation Pack, which includes the management and orchestration planes. These are essentially three control plane nodes, three infrastructure nodes and load balancers for the control and data planes.
 

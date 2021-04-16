@@ -385,7 +385,7 @@ OFFICIAL data that requires specific handling to mitigate risk. Security measure
 
 ### OpenShift
 
-*See:* [UKCloud for Managed OpenShift](#ukcloud-for-managed-openshift)
+*See:* [UKCloud for Red Hat OpenShift](#ukcloud-for-managed-openshift)
 
 ### OpenStack
 
@@ -551,12 +551,6 @@ A UKCloud service that provides a platform to deliver, protect and manage deskto
 
 For more information, see the [UKCloud Desktop as a Service Service Definition](../daas/daas-sd.md).
 
-### UKCloud for Managed OpenShift
-
-A UKCloud PaaS service that delivers a secure, private deployment of OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks including HCSN and Janet.
-
-For more information, see the [UKCloud for Managed OpenShift service definition](../openshift/oshift-sd.md).
-
 ### UKCloud for Microsoft Azure
 
 A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
@@ -568,6 +562,12 @@ For more information, see the [UKCloud for Microsoft Azure service definition](.
 A UKCloud IaaS service, powered by OpenStack, that provides a cloud platform specifically designed around the needs of digital communities, and engineered to facilitate true cloud-native applications.
 
 For more information, see the [UKCloud for OpenStack service definition](../openstack/ostack-sd.md).
+
+### UKCloud for Red Hat OpenShift
+
+A UKCloud PaaS service that delivers a secure, private deployment of OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks including HCSN and Janet.
+
+For more information, see the [UKCloud for Red Hat OpenShift service definition](../openshift/oshift-sd.md).
 
 ### UKCloud for VMware
 
