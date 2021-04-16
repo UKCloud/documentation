@@ -19,7 +19,7 @@ toc_mdlink: sra-ref-pricing.md
 
 ## Overview
 
-Secure Remote Access (SRA) is priced per licence per calendar month (regardless of how many days it is used in the month) from £5.00. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Secure Remote Access (SRA) pricing can be as low as £5.00 per licence per month (regardless of how many days it is used in the month). Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 The pricing model for SRA has two parts:
 

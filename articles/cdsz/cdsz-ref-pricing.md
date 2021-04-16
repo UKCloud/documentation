@@ -19,7 +19,7 @@ toc_mdlink: cdsz-ref-pricing.md
 
 ## Overview
 
-Cross Domain Security Zone (CDSZ) starts at £500 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Cross Domain Security Zone (CDSZ) pricing can be as low as £500 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 The self-managed Walled Garden is priced with a baseline monthly fee, with additional charges based on the number of VMs required to run the solution and their Snapshot Protection options.
 

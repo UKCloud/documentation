@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Secure Remote Acces
 services: sra
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -31,7 +31,7 @@ SRA uses NCSC Assured VPN technologies and the secure walled garden architectura
 
 ## Pricing and packaging
 
-This service is priced per licence per calendar month from £5.00 Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Secure Remote Access pricing can be as low as £5.00 per licence per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Disaster Recovery a
 services: draas
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -45,7 +45,7 @@ This service is designed to be flexible and enables you to choose the level of p
 
 ## Pricing and packaging
 
-Disaster Recovery as a Service starts at 2.5p per hour. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Disaster Recovery as a Service pricing can be as low as 2.5p per hour. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

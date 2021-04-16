@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by Security Operations Ser
 services: soc
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 21/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -53,7 +53,7 @@ Service tier | Description
 
 ## Pricing and packaging
 
-Pricing starts from £1.96 per asset per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Customers will also need to purchase the appropriate UKCloud infrastructure to host the Security Operations Service solution.
+Security Operations Service pricing can be as low as £1.96 per asset per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Customers will also need to purchase the appropriate UKCloud infrastructure to host the Security Operations Service solution.
 
 ## Accreditation and information assurance
 

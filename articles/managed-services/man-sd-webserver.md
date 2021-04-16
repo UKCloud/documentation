@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Managed Web Server 
 services: managed-services
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 23/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Advanced Managed Services
 toc_sub1: Managed Web Server
 toc_sub2:
@@ -41,7 +41,7 @@ Organisations often struggle to find or fund the resources required to ensure th
 
 ## Pricing and packaging
 
-Pricing starts from £247 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Managed Web Server pricing can be as low as £247 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

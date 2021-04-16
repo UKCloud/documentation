@@ -45,7 +45,7 @@ The service is designed to be flexible and enables you to choose from the list b
 
 ## Pricing and packaging
 
-Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Private Cloud pricing can be as low as £150 per VM per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

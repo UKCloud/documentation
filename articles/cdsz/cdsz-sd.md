@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Cross Domain Securi
 services: cdsz
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -43,7 +43,7 @@ We provide self-service access to the Cross Domain Security Zone so that you can
 
 ## Pricing and packaging
 
-Cross Domain Security Zone starts at £500 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Cross Domain Security Zone pricing can be as low as £500 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

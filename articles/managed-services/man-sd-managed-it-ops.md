@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Managed IT Operatio
 services: managed-services
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 16/07/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -65,7 +65,7 @@ This service is designed to be flexible and allows you to mix and match from a r
 
 ## Pricing and packaging
 
-Prices start from £12.50 per month for a customer endpoint device. Full pricing with all options, including volume discounts, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Managed IT Operations pricing can be as low as £12.50 per month for a customer endpoint device. Full pricing with all options, including volume discounts, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 

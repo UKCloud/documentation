@@ -19,7 +19,7 @@ toc_mdlink: ostack-ref-pricing.md
 
 ## Overview
 
-UKCloud for OpenStack instances start at 1p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for OpenStack instance pricing can be as low as 1p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Instances
 

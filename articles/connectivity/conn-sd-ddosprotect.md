@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Neustar DDoS Protec
 services: connectivity
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 22/09/2020
+lastreviewed: 15/04/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -45,7 +45,7 @@ The service is designed to be flexible and enables you to choose from the list b
 
 ## Pricing and packaging
 
-Pricing from £2,240. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Neustar DDoS Protection from UKCloud pricing can be as low as £2,240. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
