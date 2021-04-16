@@ -90,8 +90,6 @@
     href: vmw-how-manipulate-power-states-powercli.md
   - name: Migrate vApps between virtual data centres
     href: vmw-how-migrate-vapp.md
-  - name: Migrate your workloads between UKCloud regions
-    href: vmw-how-zerto-migrate-between-regions.md
   - name: Perform a failover
     href: vmw-how-zerto-perform-failover.md
   - name: Retrieve utilisation metrics for your virtual machines

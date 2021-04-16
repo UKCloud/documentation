@@ -5118,6 +5118,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-how-zerto-migrate-between-regions.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-how-zerto-migrate-between-regions.html",
+          "hash": "NTIyLpZDMHbkb9228ent7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-ref-services.md",
       "output": {
         ".html": {
@@ -5218,7 +5230,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-transfer-regions.html",
-          "hash": "KGRqJxld8HFcrDsNbUaxqQ=="
+          "hash": "73f8SXN+FRacfc8Q5M9URA=="
         }
       },
       "is_incremental": false,
@@ -5644,12 +5656,67 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-zerto-migrate-journal-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-zerto-migrate-journal-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-zerto-migrate-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-zerto-migrate-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-zerto-mnu-move-vpg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-zerto-mnu-move-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-zerto-move-params.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-zerto-move-params.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-zerto-move-vpgs.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-zerto-move-vpgs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/enablement/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "9RLKljwSJ6vijWuAV8Q3Ag=="
+          "hash": "48kZJGhkC/T9GS6bFajayA=="
         }
       },
       "is_incremental": false,
@@ -21139,65 +21206,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-zerto-migrate-journal-overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-zerto-migrate-journal-overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-zerto-migrate-overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-zerto-migrate-overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-mnu-edit-vpg.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-zerto-mnu-edit-vpg.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-zerto-mnu-move-vpg.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-zerto-mnu-move-vpg.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-zerto-move-params.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-zerto-move-params.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-zerto-move-vpgs.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-zerto-move-vpgs.png"
         }
       },
       "is_incremental": false,
@@ -21264,7 +21276,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "z1MJ6lK8Gz+KMR/q4Uh6Cw=="
+          "hash": "j65Keao+4vIHqC0uF0fDEA=="
         }
       },
       "is_incremental": false,
@@ -21288,7 +21300,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-journaling-protection.html",
-          "hash": "C7wNzJG/ocfq835MiJ7GNQ=="
+          "hash": "IpyKvlxzk7dL0Orj8XaH2g=="
         }
       },
       "is_incremental": false,
@@ -22033,18 +22045,6 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-install-local.html",
           "hash": "LaGpyd9YI667u0Irti9ivQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-zerto-migrate-between-regions.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-zerto-migrate-between-regions.html",
-          "hash": "gyfWeC0DspF0wUKAOev6+w=="
         }
       },
       "is_incremental": false,
