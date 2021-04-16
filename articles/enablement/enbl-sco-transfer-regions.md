@@ -61,7 +61,7 @@ The actual Zerto transfer service will be provided without charge for the transf
 
 - Once the Zerto tool has been provisioned, customers are responsible for the selection of VMs and data, and the actual transfer. If required, UKCloud can provide assistance via our Professional Services team, which can be arranged via your Service Delivery Manager.
 
-The [*How to migrate your workloads between UKCloud regions*](../vmware/vmw-how-zerto-migrate-between-regions.md) article on the Knowledge Centre provides all the information you'll require to understand the tool as well as configuration details and step-by-step instructions.
+The [*How to migrate your workloads between UKCloud regions*](../enablement/enbl-how-zerto-migrate-between-regions.md) article on the Knowledge Centre provides all the information you'll require to understand the tool as well as configuration details and step-by-step instructions.
 
 ## Service availability
 
@@ -71,7 +71,7 @@ As a free service for data transfer between regions, customers are not entitled 
 
 The following documents contain more information about the Zerto and the service options:
 
-- [*How to migrate your workloads between UKCloud regions*](../vmware/vmw-how-zerto-migrate-between-regions.md)
+- [*How to migrate your workloads between UKCloud regions*](../enablement/enbl-how-zerto-migrate-between-regions.md)
 
 - [*How to access the Zerto Self-Service Portal*](../vmware/vmw-how-zerto-access-zssp.md)
 
