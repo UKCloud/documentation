@@ -29,10 +29,10 @@ This article provides a list of articles that provide service information about 
 
 Service | Service Definition | Service Scope | Pricing information
 --------|--------------------|---------------|--------------------
-UKCloud for Managed OpenShift | [here](../openshift/oshift-sd.md) | [here](../openshift/oshift-sco.md) | [here](../openshift/oshift-ref-pricing.md)
 UKCloud for Microsoft Azure | [here](../azure/azs-sd.md) | [here](../azure/azs-sco.md) | [here](../azure/azs-ref-pricing.md)
 UKCloud for OpenStack | [here](../openstack/ostack-sd.md) | [here](../openstack/ostack-sco.md) | [here](../openstack/ostack-ref-pricing.md)
 UKCloud for Oracle Software | [here](../oracle/orcl-sd.md) | [here](../oracle/orcl-sco.md) | [here](../oracle/orcl-ref-pricing.md)
+UKCloud for Red Hat OpenShift | [here](../openshift/oshift-sd.md) | [here](../openshift/oshift-sco.md) | [here](../openshift/oshift-ref-pricing.md)
 UKCloud for VMware | [here](../vmware/vmw-sd.md) | [here](../vmware/vmw-sco.md) | [here](../vmware/vmw-ref-pricing.md)
 
 ### Service options

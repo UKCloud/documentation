@@ -1,5 +1,5 @@
 ---
-title: Security best practices for UKCloud for Managed OpenShift
+title: Security best practices for UKCloud for Red Hat OpenShift
 description: Provides security best practices in OpenShift that you could follow to keep the risk of attack to your UKCloud OpenShift deployment to a minimum
 services: openshift
 author: Mudasar Hussain
@@ -15,17 +15,17 @@ toc_fullpath: Reference/oshift-ref-security-best-practices.md
 toc_mdlink: oshift-ref-security-best-practices.md
 ---
 
-# Security best practices for UKCloud for Managed OpenShift
+# Security best practices for UKCloud for Red Hat OpenShift
 
 ## Overview
 
-As is the nature of technology, any cloud-based service is vulnerable to exploits from both hackers and insiders just the same as traditional environments. Such risks include data stealing, crypto-mining, ransomware and service disruption to name a few. Although the nature of running container-based workloads reduces the threat to your underlying infrastructure, that threat is not completely eliminated and you should still take care when designing, developing and deploying your container-based workloads to minimise the risks to those deployments in UKCloud for Managed OpenShift.
+As is the nature of technology, any cloud-based service is vulnerable to exploits from both hackers and insiders just the same as traditional environments. Such risks include data stealing, crypto-mining, ransomware and service disruption to name a few. Although the nature of running container-based workloads reduces the threat to your underlying infrastructure, that threat is not completely eliminated and you should still take care when designing, developing and deploying your container-based workloads to minimise the risks to those deployments in UKCloud for Red Hat OpenShift.
 
-This article sets out some best practices to follow to minimise the attack vector to a UKCloud for Managed OpenShift cluster and its workloads.
+This article sets out some best practices to follow to minimise the attack vector to a UKCloud for Red Hat OpenShift cluster and its workloads.
 
 ### Intended audience
 
-This article is intended for anyone who is using UKCloud for Managed OpenShift. It highlights some of the best practices to keep OpenShift workloads secure.
+This article is intended for anyone who is using UKCloud for Red Hat OpenShift. It highlights some of the best practices to keep OpenShift workloads secure.
 
 ## Role Based Access Control
 
@@ -95,7 +95,7 @@ Within OpenShift, you can expose your services using routes. Creating a route to
 
 ## Control plane and data plane lockdown
 
-As part of the UKCloud for Managed OpenShift service we offer the ability to lock down the control plane and/or data planes to your cluster to specific IP addresses or subnets. This helps to protect each of these if you know the acceptable sources for all traffic (for example only allowing control plane access from an office network or VPN). This is done with the use of security groups at the cloud platform layer outside OpenShift. You can apply these restrictions at the time of cluster deployment or later by raising a Service Request to the UKCloud OpenShift Support team via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. The information we require to apply these rules is: the plane you would like these applied to, for example, control plane or data plane (specify internet or community network if applicable) and the source addresses or ranges that will be allowed access. When services are protected by these controls, any non-matched traffic is dropped before it reaches OpenShift.
+As part of the UKCloud for Red Hat OpenShift service we offer the ability to lock down the control plane and/or data planes to your cluster to specific IP addresses or subnets. This helps to protect each of these if you know the acceptable sources for all traffic (for example only allowing control plane access from an office network or VPN). This is done with the use of security groups at the cloud platform layer outside OpenShift. You can apply these restrictions at the time of cluster deployment or later by raising a Service Request to the UKCloud OpenShift Support team via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. The information we require to apply these rules is: the plane you would like these applied to, for example, control plane or data plane (specify internet or community network if applicable) and the source addresses or ranges that will be allowed access. When services are protected by these controls, any non-matched traffic is dropped before it reaches OpenShift.
 
 ## Whitelisting
 

@@ -20,7 +20,7 @@ toc_mdlink: oshift-how-monitor-cluster.md
 
 ## Overview
 
-UKCloud for Managed OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
+UKCloud for Red Hat OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
 
 This guide explains how you can set up a simple system to monitor an OpenShift cluster.
 
@@ -166,11 +166,11 @@ main()
 
 ## Next steps
 
-For more information about UKCloud for Managed OpenShift service, see:
+For more information about UKCloud for Red Hat OpenShift service, see:
 
-- [*Getting Started Guide for UKCloud for Managed OpenShift*](oshift-gs.md)
+- [*Getting Started Guide for UKCloud for Red Hat OpenShift*](oshift-gs.md)
 
-- [*UKCloud for Managed OpenShift FAQs*](oshift-faq.md)
+- [*UKCloud for Red Hat OpenShift FAQs*](oshift-faq.md)
 
 ## Feedback
 

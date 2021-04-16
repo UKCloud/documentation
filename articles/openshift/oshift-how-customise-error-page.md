@@ -20,7 +20,7 @@ toc_mdlink: oshift-how-customise-error-page.md
 
 ## Overview
 
-UKCloud for Managed OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
+UKCloud for Red Hat OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
 
 This article explains how you can edit the *Application Not Available* (503 error) page, which is returned to users by OpenShift routers when an application is unavailable or when an invalid route is accessed.
 
@@ -81,11 +81,11 @@ $ oc delete configmap haproxy-custom-configs
 
 ## Next steps
 
-For more information about the UKCloud for Managed OpenShift service, see:
+For more information about the UKCloud for Red Hat OpenShift service, see:
 
-- [*Getting Started Guide for UKCloud for Managed OpenShift*](oshift-gs.md)
+- [*Getting Started Guide for UKCloud for Red Hat OpenShift*](oshift-gs.md)
 
-- [*UKCloud for Managed OpenShift FAQs*](oshift-faq.md)
+- [*UKCloud for Red Hat OpenShift FAQs*](oshift-faq.md)
 
 ## Feedback
 

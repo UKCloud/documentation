@@ -95,10 +95,10 @@ You'll receive a monthly invoice, with payment automatically taken from your Clo
 
 &nbsp;                                | Commitment discount | Annual subscription discount | Cloud Credits
 --------------------------------------|---------------------|------------------------------|--------------
-UKCloud for Managed OpenShift         | &check;             | &nbsp;                       | &check;
 UKCloud for Microsoft Azure           | &check;             | &check;                      | &check;
 UKCloud for OpenStack                 | &check;             | &check;                      | &check;
 UKCloud for Oracle Software           | &check;             | &check;                      | &check;
+UKCloud for Red Hat OpenShift         | &check;             | &nbsp;                       | &check;
 UKCloud for VMware                    | &check;             | &check;                      | &check;
 Cloud Storage                         | Product-specific discounts available | Product-specific discounts available | &check;
 Cross Domain Security Zone            | &check;             | &nbsp;                       | &check;

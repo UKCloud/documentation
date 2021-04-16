@@ -19,10 +19,6 @@ toc_mdlink: other-ref-products-overview.md
 
 ## Multi-cloud technology stacks
 
-### UKCloud for Managed OpenShift
-
-A platform designed for developers to create and share applications without worrying about IaaS. This service uses Red Hat OpenShift.
-
 ### UKCloud for Microsoft Azure
 
 This compute service can be powered by either a UKCloud-based Microsoft Azure Stack Hub, or Azure Public Cloud depending on your needs. The UKCloud-based version of Azure Stack Hub offers similar features and functionality, but with native connectivity to government networks, a trusted community and our security assurance.
@@ -30,6 +26,10 @@ This compute service can be powered by either a UKCloud-based Microsoft Azure St
 ### UKCloud for OpenStack
 
 This service is powered by Red Hat OpenStack, an open source cloud computing platform that provides a flexible virtual data centre (VDC) management platform built for the digital age.
+
+### UKCloud for Red Hat OpenShift
+
+A platform designed for developers to create and share applications without worrying about IaaS. This service uses Red Hat OpenShift.
 
 ### UKCloud for VMware
 

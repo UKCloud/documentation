@@ -55,7 +55,7 @@ Security domain | Services | Zone
 -----------------|---------|-----
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone F
 &nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone 21
-&nbsp; | **UKCloud for Managed OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone 21
+&nbsp; | **UKCloud for Red Hat OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone 21
 &nbsp; | **UKCloud for Microsoft Azure**<br>*Connectivity:* Internet<br>IaaS services | Zone 22
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 12
@@ -102,7 +102,7 @@ Security domain | Service | Zone
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone B
 &nbsp; | **UKCloud for OpenStack** (OSP10)<br>*Connectivity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2 | Zone C
 &nbsp; | **UKCloud for OpenStack** (OSP13)<br>*Connectivity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2 | Zone 26
-&nbsp; | **UKCloud for Managed OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone C
+&nbsp; | **UKCloud for Red Hat OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone C
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone D
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN | All zones

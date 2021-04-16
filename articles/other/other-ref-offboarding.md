@@ -84,14 +84,6 @@ There are no termination costs associated with cancelling UKCloud services. Howe
 
 ### Multi-cloud technology stacks
 
-#### [UKCloud for Managed OpenShift](#tab/tabid-1)
-
-Customer responsibilities | UKCloud responsibilities
---------------------------|-------------------------
-Pods | Entire environment
-Projects |
-Volumes |
-
 #### [UKCloud for Microsoft Azure](#tab/tabid-2)
 
 Customer responsibilities | UKCloud responsibilities
@@ -109,6 +101,14 @@ Floating IPs |
 Volumes |
 Volume snapshots |
 Images |
+
+#### [UKCloud for Red Hat OpenShift](#tab/tabid-1)
+
+Customer responsibilities | UKCloud responsibilities
+--------------------------|-------------------------
+Pods | Entire environment
+Projects |
+Volumes |
 
 #### [UKCloud for VMware](#tab/tabid-4)
 

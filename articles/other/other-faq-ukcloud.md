@@ -23,10 +23,10 @@ This article provides a list of the FAQs available covering UKCloud services, te
 
 Service                       | FAQ
 ------------------------------|----
-UKCloud for Managed OpenShift | [here](../openshift/oshift-faq.md)
 UKCloud for Microsoft Azure   | [here](../azure/azs-faq.md)
 UKCloud for OpenStack         | [here](../openstack/ostack-faq.md)
 UKCloud for Oracle Software   | [here](../oracle/orcl-faq.md)
+UKCloud for Red Hat OpenShift | [here](../openshift/oshift-faq.md)
 UKCloud for VMware            | [here](../vmware/vmw-faq.md)
 
 ### Service options
