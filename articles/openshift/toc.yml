@@ -92,7 +92,7 @@
   items:
   - name: Pricing information
     href: oshift-ref-pricing.md
-  - name: UKCloud for Managed OpenShift Service Definition
-    href: oshift-sd.md
   - name: UKCloud for Managed OpenShift Service Scope
     href: oshift-sco.md
+  - name: UKCloud for Red Hat OpenShift Service Definition
+    href: oshift-sd.md

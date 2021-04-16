@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-pricing.html",
-          "hash": "T0BIX52UM6hnLvNNeAcCBw=="
+          "hash": "fEwER1ZDtIPUvpI3rLYU9g=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sd.html",
-          "hash": "0z6hcasgb4R61lJgLVbsFA=="
+          "hash": "jEWNOGjRkJjQAF2s3TWTjw=="
         }
       },
       "is_incremental": false,
@@ -2685,7 +2685,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-ref-pricing.html",
-          "hash": "FhB9Q+VlqQMfrrtmxaNwXQ=="
+          "hash": "cWmEOtGJpKfBABzFxO5Oew=="
         }
       },
       "is_incremental": false,
@@ -2709,7 +2709,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sd.html",
-          "hash": "J0dyarEsPoqYaGsZejJnvg=="
+          "hash": "OmZVJKpf+tuyIL/ZU28Blg=="
         }
       },
       "is_incremental": false,
@@ -2906,7 +2906,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-ref-pricing.html",
-          "hash": "6uxbN/jWi55moWcOFDxzHg=="
+          "hash": "4BanxbWdaYHAICQ4NRerow=="
         }
       },
       "is_incremental": false,
@@ -2942,7 +2942,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sd.html",
-          "hash": "8gXSnvekTqWEPJRkt6I8TA=="
+          "hash": "U3HdmDT9GOoA0SIPeOGQ+Q=="
         }
       },
       "is_incremental": false,
@@ -4095,7 +4095,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-sd-ddosprotect.html",
-          "hash": "qebHlASCmhFbHjaQeV1Oow=="
+          "hash": "N0DoeJuIELRfa3nV6hMJfg=="
         }
       },
       "is_incremental": false,
@@ -4107,7 +4107,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-sd-ultradns.html",
-          "hash": "eW1nCx+IM4wMUwGJKzxbcw=="
+          "hash": "U7Ks/jdIIRNXhLylI8ZCSQ=="
         }
       },
       "is_incremental": false,
@@ -4264,7 +4264,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/daas/daas-sd.html",
-          "hash": "lVpKkz7qTghetj8h0pRYJQ=="
+          "hash": "N8HJuZSTFDSyDdc/KHRYmw=="
         }
       },
       "is_incremental": false,
@@ -4311,7 +4311,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/dedicated-compute/dc-sd.html",
-          "hash": "kf/MAcS+jWRQhIkcCbGjyQ=="
+          "hash": "gFzSZMeHJ//E1jEbGztgKQ=="
         }
       },
       "is_incremental": false,
@@ -4427,7 +4427,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-sd.html",
-          "hash": "Kx57/MznFstFUHG5kr6RyQ=="
+          "hash": "GE8nX06u88cBvJC1ALy9zw=="
         }
       },
       "is_incremental": false,
@@ -5697,7 +5697,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/hpc/hpc-sd.html",
-          "hash": "Kx2WfyoPkOKWJpW1E6sBmg=="
+          "hash": "YyU9v6wL6AfQ+w0+3gadWw=="
         }
       },
       "is_incremental": false,
@@ -6089,7 +6089,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-ad.html",
-          "hash": "uGIET0Ity2oDjtAxAuH9BQ=="
+          "hash": "iWgpgxghYfjwg85OiCZiDA=="
         }
       },
       "is_incremental": false,
@@ -6101,7 +6101,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-managed-it-ops.html",
-          "hash": "fITRuP2wLjaRLCZU462kug=="
+          "hash": "qYX8xBTeHVSaxFeNfCDmqw=="
         }
       },
       "is_incremental": false,
@@ -6113,7 +6113,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-network.html",
-          "hash": "HRwQzANMoETjPLAU/5TxTA=="
+          "hash": "xWUicuRr+6hf4kimPxZOcA=="
         }
       },
       "is_incremental": false,
@@ -6125,7 +6125,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-rds.html",
-          "hash": "RM22GWD929z6R7LiAPRnBQ=="
+          "hash": "7/brMXXRYfy95jDJ3oBWdA=="
         }
       },
       "is_incremental": false,
@@ -6137,7 +6137,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-sqlserver.html",
-          "hash": "+YQMkbC06bctscFE1xt2uA=="
+          "hash": "FbiKFWpS9PZmh5NEm+QFHQ=="
         }
       },
       "is_incremental": false,
@@ -6149,7 +6149,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-services/man-sd-webserver.html",
-          "hash": "+Qcycg99ITuVPYE+v0s0/A=="
+          "hash": "zDYWhlhiWJz49PkDEpPljQ=="
         }
       },
       "is_incremental": false,
@@ -6277,7 +6277,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/migr-sd.html",
-          "hash": "aaWsOLnxGrhHDn194uKUsg=="
+          "hash": "Ej58ZBEha9SvvpgX8d+0iQ=="
         }
       },
       "is_incremental": false,
@@ -6971,7 +6971,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-pricing.html",
-          "hash": "RDcvQo6ph1JHc+sFihXR5w=="
+          "hash": "sT3b/OHmMhRN9e3N7qQAoQ=="
         }
       },
       "is_incremental": false,
@@ -7031,7 +7031,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sd.html",
-          "hash": "P31EFgyjLzUgH3WVbtWcQQ=="
+          "hash": "KfWq+LCQySrje7LeVyvyRA=="
         }
       },
       "is_incremental": false,
@@ -7043,7 +7043,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "MbUaB5bNMONgq3Y3fUCiug=="
+          "hash": "j6t5EktQRZVNeQ4CzNGWew=="
         }
       },
       "is_incremental": false,
@@ -9511,7 +9511,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-pricing.html",
-          "hash": "t7De2+6oQjQ6RiY4Gi+CDA=="
+          "hash": "rnrGUO8qX9Nr/vS0xHlBHA=="
         }
       },
       "is_incremental": false,
@@ -9583,7 +9583,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sd.html",
-          "hash": "IFAEBqA54u5I75uTEC59tw=="
+          "hash": "FnpB+W6tNBjNPp+9lTi1gw=="
         }
       },
       "is_incremental": false,
@@ -10123,7 +10123,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-pricing.html",
-          "hash": "gz2REpXN3e4ZWNKAHszCYw=="
+          "hash": "zJ1xvf5k7WCe49IpVjmf1w=="
         }
       },
       "is_incremental": false,
@@ -10195,7 +10195,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sd.html",
-          "hash": "5BokRuWPi+c7ieggFirUyg=="
+          "hash": "m9EeLDO2JMVq4QRwtDnrRw=="
         }
       },
       "is_incremental": false,
@@ -12796,7 +12796,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-orcl.html",
-          "hash": "SDVXNV8NKVk62RrTCeknpA=="
+          "hash": "0f0wkdzErJ6nipmoE/fJWA=="
         }
       },
       "is_incremental": false,
@@ -12808,7 +12808,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-storage.html",
-          "hash": "fOH3DHwtQs5se4YjDVDLkA=="
+          "hash": "sahlYoZFUKBrtrh3tWpbxw=="
         }
       },
       "is_incremental": false,
@@ -12820,7 +12820,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd.html",
-          "hash": "9bsiXxLAN/CiPeAxHEhy5g=="
+          "hash": "pJSa7zY4nDVjzxB+o4530A=="
         }
       },
       "is_incremental": false,
@@ -13169,7 +13169,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/soc/soc-sd.html",
-          "hash": "ctWnv/WlCXIHRURQoROPjQ=="
+          "hash": "AvqrzT+3dHiWLie+QlIbKA=="
         }
       },
       "is_incremental": false,
@@ -13318,7 +13318,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-ref-pricing.html",
-          "hash": "CrN4trwJCRopdqQIRE3lHg=="
+          "hash": "8ZPbXnDEcTaI4RwrLud1tg=="
         }
       },
       "is_incremental": false,
@@ -13342,7 +13342,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sd.html",
-          "hash": "2e1RgvgVla+BgpBJDy9/EQ=="
+          "hash": "On3UPMKpQNxmNH5Xzoac6Q=="
         }
       },
       "is_incremental": false,
@@ -22212,7 +22212,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-pricing.html",
-          "hash": "6EPZj6B2i95HGefIFTK7gQ=="
+          "hash": "+elKiUYWFB6purRTruPzrw=="
         }
       },
       "is_incremental": false,
@@ -22500,7 +22500,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sd.html",
-          "hash": "daaAHGayhiv0QMBrxEqy/A=="
+          "hash": "EjSFsxhbLD9bMgwJk/L6WA=="
         }
       },
       "is_incremental": false,
