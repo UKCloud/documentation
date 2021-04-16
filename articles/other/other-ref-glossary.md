@@ -385,7 +385,7 @@ OFFICIAL data that requires specific handling to mitigate risk. Security measure
 
 ### OpenShift
 
-*See:* [UKCloud for Red Hat OpenShift](#ukcloud-for-managed-openshift)
+*See:* [UKCloud for Red Hat OpenShift](#ukcloud-for-red-hat-openshift)
 
 ### OpenStack
 
