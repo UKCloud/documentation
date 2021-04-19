@@ -4,7 +4,7 @@ description: Shows you how to update your existing VMs to target UKCloud's appro
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 13/04/2021
+lastreviewed: 19/04/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -33,13 +33,13 @@ This latest version of RHUI replaces the previous version (from 2015), which is 
 
 ### Intended audience
 
-This article is intended for customers who have configured their systems to use to RHUI v3.
+This article is intended for customers who have configured / intend to configure their systems to use to RHUI v3.
 
 ## Prerequisites
 
 There are two prerequisites for performing this operation:
 
-- The VM can resolve to the RHUI CDS DNS records (contact UKCloud Support for the IP addresses for the Elevated records). You can achieve this several different ways:
+- The VM can resolve the RHUI CDS DNS record `rh-cds.ukcloud.com` (contact UKCloud Support for the IP addresses for the Elevated records). You can achieve this several different ways:
 
   - Use internet DNS records to resolve the Assured CDS
 
