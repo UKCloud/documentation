@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-disable-weak-cipher-suites-enable-hsts.md
 
 ## Overview
 
-This article outlines steps to increase the security of externally exposed routes from your OpenShift cluster, through the use of more secure cipher suites and HSTS.
+This article outlines steps to increase the security of externally exposed routes from your OpenShift cluster, through the use of more secure cipher suites and HTTP Strict Transport Security (HSTS).
 
 ### Intended audience
 
@@ -57,6 +57,31 @@ There are no weak ciphers supported by the OpenShift `IngressController` since b
 
 ```
 oc edit ingresscontroller default -n openshift-ingress-operator
+```
+
+As an example, the below would omit cipher suites using the DHE key exchange:
+
+```
+apiVersion: operator.openshift.io/v1
+kind: IngressController
+metadata:
+  name: example
+  namespace: openshift-ingress-operator
+spec:
+  tlsSecurityProfile:
+    type: Custom
+    custom:
+      ciphers:
+        - TLS_AES_128_GCM_SHA256
+        - TLS_AES_256_GCM_SHA384
+        - TLS_CHACHA20_POLY1305_SHA256
+        - ECDHE-ECDSA-AES128-GCM-SHA256
+        - ECDHE-RSA-AES128-GCM-SHA256
+        - ECDHE-ECDSA-AES256-GCM-SHA384
+        - ECDHE-RSA-AES256-GCM-SHA384
+        - ECDHE-ECDSA-CHACHA20-POLY1305
+        - ECDHE-RSA-CHACHA20-POLY1305
+      minTLSVersion: VersionTLS12
 ```
 
 #### Control plane
