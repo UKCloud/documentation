@@ -52,7 +52,7 @@ You must sign up to the terms of the HSCN Connection Agreement before you can ha
 
 Alternatively, you can request a new UKCloud Master Services Agreement (MSA v11.0 or later), which contains the flow-down of the HSCN Connection Agreement terms. If you sign and submit this, you're automatically signing up to the terms of the Connection Agreement and do not need to sign a separate Connection Agreement with NHS Digital. If you'd like to sign the MSA, contact your Account Manager.
 
-UKCloud will validate that you've signed up to the terms of the HSCN Connection Agreement before connecting you to HSCN.
+UKCloud will validate that you've signed up to the terms of the HSCN Connection Agreement before connecting your UKCloud environments to HSCN.
 
 ### Why isn't my Connection Agreement showing up in the HSCN Connection Agreement Portal?
 
@@ -88,7 +88,11 @@ The UKCloud assured cloud platform is connected to the HSCN in geographically di
 
 Billing for HSCN connectivity is monthly in arrears. Charges are included in your monthly invoice, along with charges for your UKCloud services.
 
-We charge for each separate connection on the UKCloud platform at the service vOrg/project level. UKCloud pricing is available via the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+We charge for each UKCloud environment (aka Service) connected to HSCN - eg each VMware Organisation or each OpenStack Project. Within each of these Services a customer may have multiple vDCs or routers that can connect to the HSCN. Example: If you have a VMware Organisation in UKCloud Region 5 and a VMware Organisation and an OpenStack Project in Region 6 and want HSCN connected to all three then this means there are three Services, which would mean 3x HSCN connections that would be billed.
+
+If you have many environments that you want to connect to HSCN then you can use our Unlimited option which is a flat monthly fee, regardless of how many Services are connected to HSCN. You may find this is more cost-effective based on your cloud architecture.
+
+UKCloud's HSCN pricing is available via the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### Is there a minimum commitment period?
 
