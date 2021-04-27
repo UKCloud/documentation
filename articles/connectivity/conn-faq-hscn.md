@@ -3,8 +3,8 @@ title: HSCN connectivity FAQs
 description: Frequently asked questions for HSCN Connectivity
 services: connectivity
 author: mwarner
-reviewer: nstobbart
-lastreviewed: 10/12/2020
+reviewer: bchallis
+lastreviewed: 27/04/2021
 
 toc_rootlink: FAQs
 toc_sub1: 
@@ -88,9 +88,9 @@ The UKCloud assured cloud platform is connected to the HSCN in geographically di
 
 Billing for HSCN connectivity is monthly in arrears. Charges are included in your monthly invoice, along with charges for your UKCloud services.
 
-We charge for each UKCloud environment (aka Service) connected to HSCN - eg each VMware Organisation or each OpenStack Project. Within each of these Services a customer may have multiple vDCs or routers that can connect to the HSCN. Example: If you have a VMware Organisation in UKCloud Region 5 and a VMware Organisation and an OpenStack Project in Region 6 and want HSCN connected to all three then this means there are three Services, which would mean 3x HSCN connections that would be billed.
+We charge for each UKCloud environment/service connected to HSCN , for example, each VMware compute service (vOrg) or each OpenStack project. Within each of these services, a customer may have multiple VDCs or routers that can connect to the HSCN. For example, a customer with a VMware compute service in UKCloud Region 5 and a VMware compute service and an OpenStack project in Region 6 wanting HSCN connected to all three of these services will be billed for three HSCN connections.
 
-If you have many environments that you want to connect to HSCN then you can use our Unlimited option which is a flat monthly fee, regardless of how many Services are connected to HSCN. You may find this is more cost-effective based on your cloud architecture.
+If you have many environments that you want to connect to HSCN, then you can use our Unlimited option, which is a flat monthly fee, regardless of how many services are connected to HSCN. You may find this is more cost-effective based on your cloud architecture.
 
 UKCloud's HSCN pricing is available via the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
