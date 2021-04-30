@@ -206,6 +206,10 @@
     href: vmw-sco-dedicated-compute.md
   - name: Journaling Protection Service Scope
     href: vmw-sco-journaling-protection.md
+  - name: On-Premises VMware Extended Support Service Definition
+    href: vmw-sd-extended-vmw-support.md
+  - name: On-Premises VMware Extended Support Service Scope
+    href: vmw-sco-extended-vmw-support.md
   - name: Snapshot Protection Service Scope
     href: vmw-sco-snapshot-protection.md
   - name: Synchronous Protection Service Scope

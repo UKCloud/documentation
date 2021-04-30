@@ -21276,7 +21276,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "j65Keao+4vIHqC0uF0fDEA=="
+          "hash": "O9yKrReYUZFcTNbeRgpw+w=="
         }
       },
       "is_incremental": false,
@@ -22424,6 +22424,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-sco-extended-vmw-support.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-sco-extended-vmw-support.html",
+          "hash": "NYoChsw4WlwsuUfxhV4CUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-sco-journaling-protection.md",
       "output": {
         ".html": {
@@ -22464,7 +22476,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-vls.html",
-          "hash": "HX1nDdxGdWJvldydOqiHAg=="
+          "hash": "SyTt30hosX0PAtyOoBfzmg=="
         }
       },
       "is_incremental": false,
@@ -22477,6 +22489,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
           "hash": "YGh0ASubnSz67XVITsuecg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-sd-extended-vmw-support.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-sd-extended-vmw-support.html",
+          "hash": "WLP7kaFSfXyj4zbPWW6OhQ=="
         }
       },
       "is_incremental": false,
@@ -22603,7 +22627,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 460,
+          "total_file_count": 462,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
