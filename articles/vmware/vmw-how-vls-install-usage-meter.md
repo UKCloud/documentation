@@ -2,7 +2,7 @@
 title: How to install the vCloud Usage Meter for the VMware Licence Service
 description: Provides instructions for how to install the vCloud Usage Meter for the VMware Licence Service (VLS)
 services: vmware
-author: Sue Highmoor
+author: shighmoor
 reviewer:
 lastreviewed: 04/08/2020
 toc_rootlink: How To
@@ -209,11 +209,11 @@ First, you need to configure a provider and and email server:
 
     - **Email**: Enter the email address to use as the sender address on any system generated emails
 
-    - **Partner ID**: Enter the details given to you during the onboarding of your service. If you are installing usage meter for inital scoping of your environment, then please enter 12345
+    - **Partner ID**: Enter the details given to you during the onboarding of your service (if you're installing the Usage Meter for the inital scoping of your environment, enter 12345)
 
-    - **Contract Number**: Enter the details given to you during the onboarding of your service. If you are installing usage meter for inital scoping of your environment, then please enter 12345
+    - **Contract Number**: Enter the details given to you during the onboarding of your service (if you're installing the Usage Meter for the inital scoping of your environment, enter 12345)
 
-    - **Site ID**: Enter the details given to you during the onboarding of your service, if you are installing usage meter for inital scoping of your environment, then please enter 99
+    - **Site ID**: Enter the details given to you during the onboarding of your service (if you're installing the Usage Meter for the inital scoping of your environment, enter 99)
 
 4. Click **Save**.
 
