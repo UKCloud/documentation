@@ -21,25 +21,25 @@ toc_mdlink: other-ref-product-status.md
 
 This articles provides a list of UKCloud products that are no longer available for sale (end-of-sale or end-of-life).
 
-- End-of-sale (EOS) products are no longer available to new customers, but are still supported for existing customers
+- End-of-sale (EOS) products are no longer available to new customers, but are still supported for existing customers.
 
-  - Details of the product are removed from relevant frameworks and the UKCloud website
+  - Details of the product are removed from relevant frameworks and the UKCloud website.
 
-  - Development work on the product, including new features, major updates and hardware refreshes, ceases
+  - Development work on the product, including new features, major updates and hardware refreshes, ceases.
 
-  - Existing customers of the product will be notified of the EOS status of the product along with a proposed end-of-life (EOL) date, which will be a minimum of 90 days from the EOS announcement. During the time between EOS and EOL, our support team is on hand to assist customers in the migration to an alternative solution and supporting resources remain available on the Knowledge Centre
+  - Existing customers of the product will be notified of the EOS status of the product along with a proposed end-of-life (EOL) date, which will be a minimum of 90 days from the EOS announcement. During the time between EOS and EOL, our support team is on hand to assist customers in the migration to an alternative solution and supporting resources remain available on the Knowledge Centre.
 
-  - Standard support for the product is still provided, including security and OS updates, ITHC, service desk and Knowledge Centre articles
+  - Standard support for the product is still provided, including security and OS updates, ITHC, service desk and Knowledge Centre articles.
 
-  - Once all customer workloads are removed for the product, the end-of-life phase begins
+  - Once all customer workloads are removed for the product, the end-of-life phase begins.
 
-- End-of-life (EOL) products are no longer available to new or existing customers
+- End-of-life (EOL) products are no longer available to new or existing customers.
 
-  - No customer workloads for the product, with existing customers migrated to new solutions
+  - No customer workloads for the product, with existing customers migrated to new solutions.
 
-  - Support no longer provided
+  - Support no longer provided.
 
-  - All supporting resources removed from the Knowledge Centre
+  - All supporting resources removed from the Knowledge Centre.
 
 For more information about any of our EOS or EOL products, contact your Service Delivery Manager or email <servicedelivery@ukcloud.com>.
 
