@@ -128,13 +128,6 @@ VPGs for Journaling Protection |
 
 ### Multi-cloud enabling
 
-#### [Cloud GPU](#tab/tabid-5)
-
-Customer responsibilities | UKCloud responsibilities
---------------------------|-------------------------
-Uninstall NVIDIA software | Remove GPU mapping from virtual machine
-Power off GPU-enabled virtual machine |
-
 #### [Cloud Storage](#tab/tabid-6)
 
 Customer responsibilities | UKCloud responsibilities

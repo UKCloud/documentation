@@ -170,23 +170,6 @@ Tier 2 Storage cost        | AK
 
 UKCloud for OpenStack storage costs also include any images and backups you have, which are listed as separate rows in the evidence file. Look for rows with the service type (column H) of `OpenStack Image` and `OpenStack Instance Backup Storage`.
 
-## Cloud GPU charges
-
-### How are my Cloud GPU charges calculated?
-
-Costs for Cloud GPU are shown against VMware VMs in the following columns of the evidence file:
-
-Description                         | Column
-------------------------------------|-------
-GPU type (compute or visualisation) | V
-GPU cost                            | Y
-
-The cost of a GPU VM depends on whether it is for compute or visualisation (column X).
-
-### How can I see how many GPU VMs I have?
-
-To find out how many GPU VMs you have, look for rows with a service type (column H) of `VMware VM` that include a GPU count (column W).
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

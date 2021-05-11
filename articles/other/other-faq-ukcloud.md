@@ -44,7 +44,6 @@ Sharing catalogs         | [here](../vmware/vmw-faq-sharing-catalogs.md)
 
 Service                                | FAQ
 ---------------------------------------|----
-Cloud GPU                              | [here](../gpu/gpu-faq.md)
 Cloud Storage                          | [here](../cloud-storage/cs-faq.md)
 Cross Domain Security Zone (CDSZ)      | [here](../cdsz/cdsz-faq.md)
 Disaster Recovery as a Service (DRaaS) | [here](../draas/draas-faq.md)

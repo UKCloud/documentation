@@ -133,18 +133,6 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
 **Service Credit**           | **ESSENTIAL:** 3% of monthly spend per 5% below service level target or part thereof for affected compute platform<br>**POWER:** 5% of monthly spend per 5% below service level target or part thereof for affected compute platform<br>**PRIORITY:** 5% of monthly spend per 5% below service level target or part thereof for affected compute platform<br>**Protection-improved Service Credit**:<ul><li>Combination of **Snapshot Protection** with the **POWER** service type increases Service Credits to 10% of monthly spend per 5% below service level target or part thereof for affected compute platform<li>Inclusion of **Synchronous Protection** increases Service Credits to 15% of monthly spend per 5% below service level target or part thereof for affected compute platform</ul>
 
-### Cloud GPU
-
-&nbsp;                       | Cloud GPU
------------------------------|----------
-**Availability commitment**  | 99.90%
-**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days)
-**Emergency Maintenance**    | Excluded
-**Planned Maintenance**      | Excluded
-**Measurement of SLA**       | Unavailability applies to inability to connect to a new GPU resource in the event of a failure of a GPU service within a single zone. Failure condition is following a hardware fault recognised at the IaaS layer or below and within UKCloud-controlled components.
-**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
-**Service Credit**           | 3% of monthly spend per 5% below service level target or part thereof for affected compute platform
-
 ### Cloud Storage
 
 &nbsp;                       | Cloud Storage
