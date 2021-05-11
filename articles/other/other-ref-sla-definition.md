@@ -201,18 +201,6 @@ Due to the service being dependent on connectivity between the customer data cen
 
 SLA varies based on the chosen cloud technology. See the appropriate section of this article for more information.
 
-### High Performance Compute
-
-&nbsp;                       | High Performance Compute
------------------------------|-------------------------
-**Availability commitment**  | 99.90%
-**Availability calculation** | Availability is calculated based on processor core hours. This is calculated by dividing the actual number of processor core hours that were available by the potential number of processor core hours that could have been available.<br>This is based on the number of hours in the billing month (for example, 744 hours for months with 31 days).
-**Emergency Maintenance**    | Excluded
-**Planned Maintenance**      | Excluded
-**Measurement of SLA**       | Unavailability applies to processor cores that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers
-**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues and dependency on individual VMs<li>Routine failures of individual hosts<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Specific VMs and data using ephemeral storage</ul>
-**Service Credit**           | 5% of monthly spend for the affected compute platform
-
 ### Managed Monitoring as a Service
 
 Service levels for Managed Monitoring as a Service are split into the following two targets:
