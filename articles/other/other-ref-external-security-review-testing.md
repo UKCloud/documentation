@@ -3,8 +3,8 @@ title: External security review testing
 description: Provides an overview of the processes surrounding the request of External Security Review Testing or Penetration Testing
 services: other
 author: Sue Highmoor
-reviewer: gsmith
-lastreviewed: 13/11/2019
+reviewer: Darren B CSE
+lastreviewed: 13/05/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -46,7 +46,7 @@ UKCloud will cooperate with you to support external penetration testing requirem
 
 To request permission to perform a test, you must:
 
-1. Raise a Service Request within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for the test.
+1. Raise a Service Request within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal using the ESRT / Pen Test form.
 
 2. Complete the External Security Review Test (ESRT) application form (UKC-FRM-231 - available on request) and attach the completed document (**in full**) to your Service Request. If you want to share any other relevant information (for example, a formal scope), you should also attach this to your Service Request.
 
@@ -77,10 +77,6 @@ If you don't have a compute service prior to testing to use for this purpose, yo
 For a test to commence, UKCloud must complete a number of administrative tasks to facilitate the activity. This may result in a cost, chargeable as one day's work from the [SFIA Rate Card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
 
 In some circumstances, additional time may be required but this will be outlined prior to tests commencing.
-
-## External Security Review Test (ESRT) application form
-
-To receive a copy of the External Security Review Test (ESRT) application form, contact <support@ukcloud.com>.
 
 ## Feedback
 
