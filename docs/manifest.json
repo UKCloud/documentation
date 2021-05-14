@@ -10415,6 +10415,50 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-esrt-sr-contact.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-esrt-sr-contact.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-esrt-sr-org.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-esrt-sr-org.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-esrt-sr-scope.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-esrt-sr-scope.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-esrt-sr-template.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-esrt-sr-template.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/other-github-compare-changes.png",
       "output": {
         "resource": {
@@ -11141,7 +11185,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-external-security-review-testing.html",
-          "hash": "7n1doyfljA6Xlfp9BxYCNQ=="
+          "hash": "JPK7eaHEBP8rH9h8KZF0Rg=="
         }
       },
       "is_incremental": false,
@@ -13081,7 +13125,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-access-ubuntu-update-servers.html",
-          "hash": "BlTOO4mh2jMkqo/ImoZm2w=="
+          "hash": "45nlnAch3tu706k03JriJg=="
         }
       },
       "is_incremental": false,
