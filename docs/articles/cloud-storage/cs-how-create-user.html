@@ -95,6 +95,10 @@
 
 <h2 id="overview">Overview</h2>
 <p>Cloud Storage is UKCloud's object storage solution based on Dell EMC Elastic Cloud Storage (ECS). Although you'll mostly interact with Cloud Storage through the API, you can create new Cloud Storage users in the UKCloud Portal.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>New users will initially only have access to buckets that they create, not to any existing buckets. To grant access to existing buckets, either configure this yourself using the ECS S3 API, or raise a Service Request.</p>
+</div>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have been granted access to the relevant namespace.</p>
 <h2 id="creating-a-new-cloud-storage-user">Creating a new Cloud Storage user</h2>
@@ -110,7 +114,9 @@
 </li>
 <li><p>Click the <strong>Add new user</strong> button.</p>
 </li>
-<li><p>In the <em>Create ECS User</em> dialog box, make a note of the <strong>User ID</strong> and <strong>Secret Key</strong> and then click <strong>Close</strong>.</p>
+<li><p>In the <em>Create ECS User</em> dialog box, click <strong>Create</strong>.</p>
+</li>
+<li><p>Make a note of the <strong>User ID</strong> and <strong>Secret Key</strong> and then click <strong>Close</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>After you close this dialog box, you will not be able to see the secret key again in the UKCloud Portal. If you do not make a note of the secret key or if you forget or lose it, you will need to reset it again. For information about how to do this, see <a href="cs-how-reset-secret-key.html"><em>How to reset your Cloud Storage secret key</em></a>.</p>
@@ -119,13 +125,13 @@
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
-<p>This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:</p>
+<p>In this article, you learned how to create a new Cloud Storage user. For more information about how to use the Cloud Storage service, see the following articles:</p>
 <ul>
 <li><p><a href="cs-gs.html"><em>Getting Started Guide for Cloud Storage</em></a></p>
 </li>
 <li><p><a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a></p>
 </li>
-<li><p><a href="cs-how-install-geodrive2-client.html"><em>How to install the GeoDrive Client 2.0</em></a></p>
+<li><p><a href="cs-how-install-geodrive2-client.html"><em>How to install Dell EMC GeoDrive</em></a></p>
 </li>
 <li><p><a href="cs-how-use-file-browsers.html"><em>How to use file browsers with Cloud Storage</em></a></p>
 </li>

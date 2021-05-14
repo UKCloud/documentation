@@ -111,10 +111,8 @@
 </div>
 <p>In this article, we'll look at a couple of the many applications that enable you to browse an object storage system.</p>
 <p>The inclusion of applications in this article should not be taken as an endorsement or recommendation of them by UKCloud. However, we have tested them with our Cloud Storage service and verified that they work correctly.</p>
-<div class="NOTE">
-<h5>Note</h5>
+<h3 id="a-note-about-s3-browser-extensions">A note about S3 browser extensions</h3>
 <p>While there are S3 browser extensions available, none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.</p>
-</div>
 <h2 id="api-endpoints">API endpoints</h2>
 <p>Cloud Storage provides different API endpoints to access your storage, depending on the UKCloud site and connectivity type you are using. Make sure you use the correct endpoint to ensure the best possible performance for your solution.</p>
 <p>S3 API endpoints:</p>
@@ -145,11 +143,10 @@
 <p>Cyberduck is an open source cross platform file browser for HTTP based object storage solutions. It utilises the S3 endpoints to establish connectivity with the ECS platform over HTTPS.</p>
 <p>To install and configure Cyberduck:</p>
 <ol>
-<li><p>Download <a href="https://cyberduck.io/">Cyberduck</a>.</p>
+<li><p>Download <a href="https://cyberduck.io/">Cyberduck</a> and install it using either the default settings or specifying your own configuration.</p>
 </li>
-<li><p>Install Cyberduck using either the default settings or specifying your own configuration.</p>
-</li>
-<li><p>Download the Cloud Storage Cyberduck profile from <a href="https://community.emc.com/docs/DOC-27683">Connecting to ECS with Cyberduck</a>.</p>
+<li><p>Raise a Service Request, using the <strong>Other Service Request</strong> template, to access the Cloud Storage Cyberduck profile.</p>
+<p>For more detailed instructions, see <a href="../portal/ptl-how-use-my-calls.html"><em>How to use My Calls to raise and monitor support tickets</em></a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If you download this profile using a browser, ensure the file name is <code>.cyberduckprofile</code>.</p>
@@ -186,16 +183,12 @@
 <li><p>After you've authenticated yourself with your secret key, you can view, upload and download files as normal.</p>
 <p><img src="images/cs-file-browsers-6.png" alt="Cyberduck interface"></p>
 </li>
-<li><p>For additional information, see <a href="https://community.emc.com/docs/DOC-27683">Connecting to ECS with Cyberduck</a>.</p>
-</li>
 </ol>
 <h2 id="s3-browser">S3 Browser</h2>
-<p>S3 Browser is a Windows client for Amazon S3 that you can easily configure to work with the S3 compatible API on Cloud Storage. It’s free for personal use; a licence fee is payable for business use.</p>
+<p>S3 Browser is a Windows client for Amazon S3 that you can easily configure to work with the S3 compatible API on Cloud Storage. It's free for personal use; a licence fee is payable for business use.</p>
 <p>To install and configure S3 Browser:</p>
 <ol>
-<li><p>Download <a href="https://s3browser.com/">S3 Browser</a>.</p>
-</li>
-<li><p>Execute the installer and follow the prompts in the wizard to complete the installation.</p>
+<li><p>Download <a href="https://s3browser.com/">S3 Browser</a>, execute the installer and follow the prompts in the wizard to complete the installation.</p>
 </li>
 <li><p>The first time you launch S3 Browser, you'll be prompted for your account credentials. Fill in the form with your Cloud Storage credentials:</p>
 <p>a. From the <strong>Account Type</strong> list, select <strong>S3 Compatible Storage</strong>.</p>
@@ -223,9 +216,7 @@
 </li>
 <li><p><a href="cs-how-create-user.html"><em>How to create a new Cloud Storage user in the UKCloud Portal</em></a></p>
 </li>
-<li><p><a href="cs-how-install-geodrive2-client.html"><em>How to install the GeoDrive Client 2.0</em></a></p>
-</li>
-<li><p><a href="cs-how-use-file-browsers.html"><em>How to use file browsers with Cloud Storage</em></a></p>
+<li><p><a href="cs-how-install-geodrive2-client.html"><em>How to install Dell EMC GeoDrive</em></a></p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>

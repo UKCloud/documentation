@@ -10,7 +10,7 @@
   items:
   - name: Create a new Cloud Storage user
     href: cs-how-create-user.md
-  - name: Install the GeoDrive Client 2.0
+  - name: Install Dell EMC GeoDrive
     href: cs-how-install-geodrive2-client.md
   - name: Interact with ECS using Python and Boto
     href: cs-how-use-ecs-python-boto.md
@@ -36,5 +36,5 @@
     href: cs-sco.md
 - name: Videos
   items:
-  - name: GeoDrive Client 2.0 overview
+  - name: Dell EMC GeoDrive overview
     href: cs-vid-geodrive2-client-overview.md
