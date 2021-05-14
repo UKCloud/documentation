@@ -21,7 +21,7 @@ This article provides a list of completed Portal releases.
 
 ## Release 2.13.0
 
-Date: TBC
+Date: 12th May 2021
 
 Bug fix
 
