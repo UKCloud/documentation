@@ -4,7 +4,7 @@ description: Explains what UKCloud monitors and how we manage alerts created by 
 services: other
 author: Sue Highmoor
 reviewer: dselwood
-lastreviewed: 24/04/2020
+lastreviewed: 12/04/2021
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -133,13 +133,17 @@ Licence usage | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | Y
 &nbsp; | HybridConnect | &nbsp; | &nbsp; | &nbsp; | &nbsp; | Y
 &nbsp; | HSCN | &nbsp; | &nbsp; | &nbsp; | &nbsp; | Y
 
-## Cloud Storage
+### Cloud Storage
 
 Element | Self-service tools | &nbsp; | What you can monitor
 --------|--------------------|--------|---------------------
 &nbsp;  | Portal | API       | &nbsp;
 **Billing metrics** | &nbsp; | &nbsp; | Y
 **Usage** | Y | Y | Y
+
+### UKCloud Managed Services
+
+UKCloud also offers a variety of managed service products, all focused around removing the distraction of IT hygiene, enabling organisations to focus on genuine business value. For more information, see [*UKCloud managed service products*](../managed-services/man-services-home.md).
 
 ## Continual improvement
 
