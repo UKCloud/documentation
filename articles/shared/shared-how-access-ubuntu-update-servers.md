@@ -86,11 +86,14 @@ The primary issues you may encounter are:
 
 When running `sudo apt-get upgrade` you may receive errors similar to the following:
 
-- 404 Not Found:
-	E: Failed to fetch https://rh-cds.ukcloud.com/ubuntu/dists/<version>/main/binary-i386/Packages
+```none
+404 Not Found:
+    E: Failed to fetch https://rh-cds.ukcloud.com/ubuntu/dists/<version>/main/binary-i386/Packages
+```
 
-This is due to UKCloud not hosting packages for i386 architecture.  You can rectify this by executing the following
-	sudo apt-get purge ".*:i386"; sudo dpkg --remove-architecture i386
+This is due to UKCloud not hosting packages for i386 architecture. You can rectify this by executing the following:
+
+`sudo apt-get purge ".*:i386"; sudo dpkg --remove-architecture i386`
 
 ## Feedback
 
