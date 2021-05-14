@@ -2,9 +2,9 @@
 title: How to reset your Cloud Storage secret key
 description: Describes how to reset your Cloud Storage secret key
 services: cloud-storage
-author: Sue Highmoor
+author: shighmoor
 reviewer: nwayman
-lastreviewed: 24/02/2020
+lastreviewed: 12/03/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -36,26 +36,26 @@ For security purposes, the UKCloud Portal does not display secret keys, if you f
 
 2. Click the **Users** button for the namespace for which you want to reset the secret key.
 
-    ![Users button](images/cs-portal-btn-users.png)
+   ![Users button](images/cs-portal-btn-users.png)
 
 3. The *Users* tab lists the different user IDs associated with the namespace.
 
-    ![Users page](images/cs-portal-users.png)
+   ![Users page](images/cs-portal-users.png)
 
 4. Click the **Reset Secret** button next to the appropriate user ID.
 
 5. Click **OK** to confirm that you want to reset the secret key.
 
-    ![Reset Secret dialog box](images/cs-portal-reset-secret.png)
+   ![Reset Secret dialog box](images/cs-portal-reset-secret.png)
 
 6. Stay on the current page until a popup dialog box displays the new secret key.
 
-    ![New secret key](images/cs-portal-new-key.png)
+   ![New secret key](images/cs-portal-new-key.png)
 
 7. Make a note of the key and then click **Close**.
 
-    > [!NOTE]
-    > After you close this dialog box, you will not be able to see the secret key again in the UKCloud Portal. If you do not make a note of the secret key or if you forget or lose it, you will need to reset it again.
+   > [!NOTE]
+   > After you close this dialog box, you will not be able to see the secret key again in the UKCloud Portal. If you do not make a note of the secret key or if you forget or lose it, you will need to reset it again.
 
 ## Next steps
 
@@ -67,7 +67,7 @@ This guide has shown you how to reset your Cloud Storage secret key. For informa
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+- [*How to install Dell EMC GeoDrive*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 

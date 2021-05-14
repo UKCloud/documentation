@@ -2,9 +2,9 @@
 title: How to use file browsers with Cloud Storage
 description: Using file browsers with Cloud Storage
 services: cloud-storage
-author: Dan Baker
+author: dbaker
 reviewer: nwayman
-lastreviewed: 24/02/2020
+lastreviewed: 12/03/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -38,8 +38,9 @@ In this article, we'll look at a couple of the many applications that enable you
 
 The inclusion of applications in this article should not be taken as an endorsement or recommendation of them by UKCloud. However, we have tested them with our Cloud Storage service and verified that they work correctly.
 
-> [!NOTE]
-> While there are S3 browser extensions available, none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.
+### A note about S3 browser extensions
+
+While there are S3 browser extensions available, none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.
 
 ## API endpoints
 
@@ -71,82 +72,78 @@ Cyberduck is an open source cross platform file browser for HTTP based object st
 
 To install and configure Cyberduck:
 
-1. Download [Cyberduck](https://cyberduck.io/).
+1. Download [Cyberduck](https://cyberduck.io/) and install it using either the default settings or specifying your own configuration.
 
-2. Install Cyberduck using either the default settings or specifying your own configuration.
+2. Raise a Service Request, using the **Other Service Request** template, to access the Cloud Storage Cyberduck profile.
 
-3. Download the Cloud Storage Cyberduck profile from [Connecting to ECS with Cyberduck](https://community.emc.com/docs/DOC-27683).
+   For more detailed instructions, see [*How to use My Calls to raise and monitor support tickets*](../portal/ptl-how-use-my-calls.md).
 
-    > [!NOTE]
-    > If you download this profile using a browser, ensure the file name is `.cyberduckprofile`.
+   > [!NOTE]
+   > If you download this profile using a browser, ensure the file name is `.cyberduckprofile`.
 
-4. Browse to the downloaded file and double click to open it.
+3. Browse to the downloaded file and double click to open it.
 
-    ![Cyberduck icon](images/cs-file-browsers-1.png)
+   ![Cyberduck icon](images/cs-file-browsers-1.png)
 
-5. Complete the fields in the new connection dialog box:
+4. Complete the fields in the new connection dialog box:
 
-    - Ensure you enter the correct endpoint in the **Server** field, as shown in [API endpoints](#api-endpoints)
+   - Ensure you enter the correct endpoint in the **Server** field, as shown in [API endpoints](#api-endpoints)
 
-    - The **Access Key ID** is your User ID, which you can find in the *Storage* section of the UKCloud Portal
+   - The **Access Key ID** is your User ID, which you can find in the *Storage* section of the UKCloud Portal
 
-    - When you're done, click the **x** icon to close the dialog box
+   - When you're done, click the **x** icon to close the dialog box
 
-    ![s3 configuration](images/cs-file-browsers-2.png)
+   ![s3 configuration](images/cs-file-browsers-2.png)
 
-6. You can see the new connection in the Cyberduck UI.
+5. You can see the new connection in the Cyberduck UI.
 
-    ![New connection window](images/cs-file-browsers-3.png)
+   ![New connection window](images/cs-file-browsers-3.png)
 
-7. Right-click the connection and select **Connect to server**.
+6. Right-click the connection and select **Connect to server**.
 
-    ![Connect to server](images/cs-file-browsers-4.png)
+   ![Connect to server](images/cs-file-browsers-4.png)
 
-8. In the *Login* dialog box, in the **Secret Access Key** field, enter your Cloud Storage secret key.
+7. In the *Login* dialog box, in the **Secret Access Key** field, enter your Cloud Storage secret key.
 
-    If you've forgotten or don't know your secret key, you can reset it in the *Storage* section of the Portal.
+   If you've forgotten or don't know your secret key, you can reset it in the *Storage* section of the Portal.
 
-    > [!NOTE]
-    > Unless you want the password to be saved, deselect the **Save password** check box.
+   > [!NOTE]
+   > Unless you want the password to be saved, deselect the **Save password** check box.
 
-    ![s3 login](images/cs-file-browsers-5.png)
+   ![s3 login](images/cs-file-browsers-5.png)
 
-9. After you've authenticated yourself with your secret key, you can view, upload and download files as normal.
+8. After you've authenticated yourself with your secret key, you can view, upload and download files as normal.
 
-    ![Cyberduck interface](images/cs-file-browsers-6.png)
-
-10. For additional information, see [Connecting to ECS with Cyberduck](https://community.emc.com/docs/DOC-27683).
+   ![Cyberduck interface](images/cs-file-browsers-6.png)
 
 ## S3 Browser
 
-S3 Browser is a Windows client for Amazon S3 that you can easily configure to work with the S3 compatible API on Cloud Storage. It’s free for personal use; a licence fee is payable for business use.
+S3 Browser is a Windows client for Amazon S3 that you can easily configure to work with the S3 compatible API on Cloud Storage. It's free for personal use; a licence fee is payable for business use.
 
 To install and configure S3 Browser:
 
-1. Download [S3 Browser](https://s3browser.com/).
+1. Download [S3 Browser](https://s3browser.com/), execute the installer and follow the prompts in the wizard to complete the installation.
 
-2. Execute the installer and follow the prompts in the wizard to complete the installation.
+2. The first time you launch S3 Browser, you'll be prompted for your account credentials. Fill in the form with your Cloud Storage credentials:
 
-3. The first time you launch S3 Browser, you'll be prompted for your account credentials. Fill in the form with your Cloud Storage credentials:
+   a. From the **Account Type** list, select **S3 Compatible Storage**.
 
-    a. From the **Account Type** list, select **S3 Compatible Storage**.
+   b. Ensure you enter the correct endpoint in the **REST Endpoint** field, as shown in [API endpoints](#api-endpoints).
 
-    b. Ensure you enter the correct endpoint in the **REST Endpoint** field, as shown in [API endpoints](#api-endpoints).
+   c. The **Access Key ID** is your User ID, which you can find in the *Storage* section of the Portal.
 
-    c. The **Access Key ID** is your User ID, which you can find in the *Storage* section of the Portal.
+   d. The **Secret Access Key** is your secret key. If you've forgotten or don't know your secret key, you can reset it in the *Storage* section of the Portal.
 
-    d. The **Secret Access Key** is your secret key. If you've forgotten or don't know your secret key, you can reset it in the *Storage* section of the Portal.
+   e. If you're using version 6.*x*.*x* of the browser, be sure to select **Use secure transfer (SSL/TLS)**. This option is not available or necessary for version 5.*x*.*x*.
 
-    e. If you're using version 6.*x*.*x* of the browser, be sure to select **Use secure transfer (SSL/TLS)**. This option is not available or necessary for version 5.*x*.*x*.
+   ![S3 Browser Edit Account dialog box](images/cs-file-browsers-s3.png)
 
-    ![S3 Browser Edit Account dialog box](images/cs-file-browsers-s3.png)
+3. When you're done, click **Save changes**. The application automatically connects to Cloud Storage and displays your buckets (if you have any).
 
-4. When you're done, click **Save changes**. The application automatically connects to Cloud Storage and displays your buckets (if you have any).
+4. For detailed usage instructions, see the documentation available on the S3 Browser web site.
 
-5. For detailed usage instructions, see the documentation available on the S3 Browser web site.
-
-    > [!NOTE]
-    > Not all S3 features are implemented by the ECS S3 compatible API, so some functionality may not work. However, common file operations (create, read, write and delete) all work well.
+   > [!NOTE]
+   > Not all S3 features are implemented by the ECS S3 compatible API, so some functionality may not work. However, common file operations (create, read, write and delete) all work well.
 
 ## Next steps
 
@@ -158,9 +155,7 @@ This article has shown you how to browse Cloud Storage buckets using a couple of
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
+- [*How to install Dell EMC GeoDrive*](cs-how-install-geodrive2-client.md)
 
 ## Feedback
 
