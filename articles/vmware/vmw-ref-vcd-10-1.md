@@ -100,7 +100,7 @@ Known issues you may experience following the upgrade to VMware Cloud Director 1
 
 ### Known issues in VMware Cloud Director
 
-- If you enable the **Enable VM to join domain** options, you will not be able to amend the hardware configuration of the VM. There is currently no workaround for this issue, so you should ensure that you do not enable this setting.
+- If you have a VM which has, or has had in the past, enabled the **Enable VM to join domain** options, you will not be able to amend the hardware configuration of the VM. A workaround is available from UKCloud support, please raise a support ticket to obtain the workaround. 
 
 - Guest customisation is failing in the following:
 
