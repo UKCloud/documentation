@@ -116,10 +116,11 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Office 365**
 
-  - UKCloud licensing - we are now able to provide Office 365 and Microsoft 365 subscriptions on a monthly basis under our CSP agreement. Please contact your Service Delivery Manager or raise a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, stating your Microsoft tenant ID (if available) and the number of subscriptions required.
+  - UKCloud licensing - we are now able to provide Office 365 and Microsoft 365 subscriptions on a monthly basis under our CSP agreement. Contact your Service Delivery Manager or raise a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, stating your Microsoft tenant ID (if available) and the number of subscriptions required.
 
   - Microsoft Mobility - this is a valid option for Office 365 ProPlus licences as long as you have valid Software Assurance in place. To take advantage of this option, you must manage your Office 365 implementation and ensure you have the correct number of licences to reflect your user count. This option is available via the QMTH program, and more information is available on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/).
-  - You can use your subscriptions on the UKCloud platform using our QMTH programme as a direct Tier 1 CSP. Please raise a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, stating your Microsoft tenant ID and the number of subscriptions you wish to use.
+
+  - You can use your subscriptions on the UKCloud platform using our QMTH programme as a direct Tier 1 CSP. Raise a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, stating your Microsoft tenant ID and the number of subscriptions you want to use.
 
 - **Remote Desktop Server Access Licence**
 
