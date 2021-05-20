@@ -26,7 +26,7 @@ This article provides information on how you can apply Microsoft licensing on ou
 
 UKCloud offers three ways to license Microsoft software for use on our compute platform, providing you with the flexibility you need to deliver your application workloads in line with Microsoft requirements and obligations:
 
-- UKCloud can purchase licences monthly for you
+- UKCloud can purchase licences monthly for you via SPLA or CSP
 
 - You can submit a [Microsoft Licence Mobility Verification form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) to use your own existing licensing
 
@@ -79,7 +79,7 @@ In addition, you can also bring your own Microsoft desktop licensing for use on 
 
 As stated, all Microsoft applications on the UKCloud platform must be licensed appropriately by either UKCloud or by using your own existing licensing. There are two options available to you:
 
-- **UKCloud's Microsoft licensing and usage billing.** The standard licensing approach is for us to provide Microsoft licences on a per hour or monthly basis depending on the application. These are     retrospectively billed based on your usage of an associated VM for each month. For this option to be valid, you must ensure that you have informed us of all Microsoft installations by raising a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, detailing the VM names, the application and specific version/level. Not all applications are available using this option, and the Microsoft application list within this document states the eligibility of this option per application.
+- **UKCloud's Microsoft licensing and usage billing.** The standard licensing approach is for us to provide Microsoft licences on a per hour or monthly basis depending on the application. These are retrospectively billed based on your usage of an associated VM for each month. For this option to be valid, you must ensure that you have informed us of all Microsoft installations by raising a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, detailing the VM names, the application and specific version/level. Not all applications are available using this option, and the Microsoft application list within this document states the eligibility of this option per application.
 
 - **Bring your own Microsoft licensing.** If your organisation has an existing SPLA or Academic licensing contract with Microsoft, or if you want to license your Microsoft software directly, we can offer the option of your organisation using your own Microsoft software licensing.
 
@@ -116,9 +116,10 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Office 365**
 
-  - UKCloud licensing - we are not able to provide Microsoft Office 365 licensing.
+  - UKCloud licensing - we are now able to provide Office 365 and Microsoft 365 subscriptions on a monthly basis under our CSP agreement. Please contact your Service Delivery Manager or raise a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, stating your Microsoft tenant ID (if available) and the number of subscriptions required.
 
   - Microsoft Mobility - this is a valid option for Office 365 ProPlus licences as long as you have valid Software Assurance in place. To take advantage of this option, you must manage your Office 365 implementation and ensure you have the correct number of licences to reflect your user count. This option is available via the QMTH program, and more information is available on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/).
+  - You can use your subscriptions on the UKCloud platform using our QMTH programme as a direct Tier 1 CSP. Please raise a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, stating your Microsoft tenant ID and the number of subscriptions you wish to use.
 
 - **Remote Desktop Server Access Licence**
 
