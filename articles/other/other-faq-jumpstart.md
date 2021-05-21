@@ -2,9 +2,9 @@
 title: Jumpstart FAQs
 description: Frequently asked questions about UKCloud's Jumpstart service
 services: other
-author: Vrush Sumanoharan
-reviewer:
-lastreviewed: 15/02/2019 11:57:34
+author: vsumanoharan
+reviewer: shighmoor
+lastreviewed: 21/05/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -31,13 +31,13 @@ UKCloud’s standard support services are limited to ensuring the availability a
 
 Jumpstart is a flexible service that you can use for a wide range of projects. Some examples of recent projects where Jumpstart has helped include:
 
-- Configuring IPSec connectivity to UKCloud
+- Configuring IPsec connectivity to UKCloud
 
 - Building a highly available SQL cluster
 
 - Creating an Active Directory domain
 
-- Building Terraform / Ansible templates for OpenStack
+- Building Terraform and Ansible templates for OpenStack
 
 - Setting up global load balancing services
 
@@ -49,15 +49,15 @@ UKCloud have a team of consultants, with skill sets aligned to the services offe
 
 - Consultant DevOps Engineers, experts in:
 
-  - Cloud native technologies
+  - Cloud-native technologies
   
-  - OpenStack, OpenShift, Azure technologies and Cloud Storage
+  - OpenStack, OpenShift, Azure technologies and cloud storage
   
-  - Infrastructure as Code
+  - Infrastructure as code
   
-  - Configuration Management
+  - Configuration management
   
-  - Continuous Integration 
+  - Continuous integration 
   
   - Containerisation
   
@@ -65,7 +65,7 @@ UKCloud have a team of consultants, with skill sets aligned to the services offe
   
 - Consultant Cloud Engineers, experts in:
   
-  - VMware, Oracle, Azure technologies and Cloud Storage
+  - VMware, Oracle, Azure technologies and cloud storage
   
   - Database technologies
   
@@ -77,14 +77,13 @@ UKCloud have a team of consultants, with skill sets aligned to the services offe
 
 - Subject matter experts in:
 
-  - UKCloud products and 3rd party associates
+  - UKCloud products and third-party associates
   
-  - Disaster Recovery technology, namely Zerto 
+  - Disaster recovery technology, namely Zerto 
 
-  - Cyber Security
+  - Cyber security
 
   - Architecture design
-
 
 ### What will UKCloud be responsible for?
 
@@ -92,11 +91,11 @@ Jumpstart is designed to provide additional skills and resources during the buil
 
 ### How can I order Jumpstart?
 
-For existing customers, you can raise a ticket in the UKCloud Portal requesting access to Jumpstart services. If you are not already a UKCloud customer, you should first discuss Jumpstart with an Account Director or Cloud Architect.
+Existing customers can raise a ticket in the UKCloud Portal requesting access to Jumpstart services. If you're not already a UKCloud customer, you should first discuss Jumpstart with your Client Director or contact <info@ukcloud.com>.
 
 ### What do I need to do before my project can start?
 
-It's important that any prerequisites such as cloud environment deployment, connectivity and assurance activities are completed prior to a Jumpstart engineer commencing work. Your Jumpstart engineer will discuss these prerequisites during the initial kick-off call or meeting. We will create a pre-flight checklist to track progress against these activities.
+It's important that any prerequisites, such as cloud environment deployment, connectivity and assurance activities, are completed prior to a Jumpstart engineer commencing work. Your Jumpstart engineer will discuss these prerequisites during the initial kick-off call or meeting. We will create a pre-flight checklist to track progress against these activities.
 
 ### How do I know what my Jumpstart engineer is working on?
 
@@ -104,19 +103,19 @@ Prior to commencing a Jumpstart engagement, the engineer will estimate the tasks
 
 ### How much does the Jumpstart service cost?
 
-Both the consultancy and engineering time for the Jumpstart service is sold in packs of four days at a price of £3500. This equates to 32 hours of Jumpstart time. 
+Both the consultancy and engineering time for the Jumpstart service is sold in packs of four days at a price of £3,500. This equates to 32 hours of Jumpstart time. 
 
 ### When will I be billed?
 
-You will be billed for Jumpstart hours consumed during the month at the end of each month.
+You'll be billed at the end of each month for Jumpstart hours consumed during that month.
 
-### What happens if I don’t use up all of the time I purchased?
+### What happens if I don't use up all of the time I purchased?
 
-It is common to have some time remaining at the end of a Jumpstart engagement. You can use this time on-demand for up to one year following the initial Jumpstart order. Common uses for this time include help, advice and modifications. Note though that there is no SLA associated with Jumpstart and it is not designed to be used as a support service.
+It's common to have some time remaining at the end of a Jumpstart engagement. You can use this time on demand for up to one year following the initial Jumpstart order. Common uses for this time include help, advice and modifications. Note though that there is no SLA associated with Jumpstart and it's not designed to be used as a support service.
 
-### How can I re-engage a jumpstart consultant after a period of inactivity?
+### How can I re-engage a Jumpstart consultant after a period of inactivity?
 
-During the initial period of a Jumpstart engagement the project is considered to be active. During an active Jumpstart, your project will be scheduled as part of an engineer’s workload and they will be available to spend time on your project at short notice. Once a Jumpstart project enters an inactive state you'll then need to raise a ticket in the Portal to re-engage an engineer. Quick activities (typically one hour or less) will usually be dealt with quickly while longer activities will need scheduling into an engineer’s workload.
+During the initial period of a Jumpstart engagement the project is considered to be active. During an active Jumpstart, your project will be scheduled as part of an engineer’s workload and they'll be available to spend time on your project at short notice. Once a Jumpstart project enters an inactive state you'll then need to raise a ticket in the Portal to re-engage an engineer. Quick activities (typically one hour or less) will usually be dealt with quickly while longer activities will need scheduling into an engineer’s workload.
 
 ## Feedback
 
