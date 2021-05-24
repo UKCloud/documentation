@@ -8,7 +8,7 @@
     <title>How to create a custom image from a VM on Azure Stack Hub using PowerShell </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a custom image from a VM on Azure Stack Hub using PowerShell ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -128,16 +128,16 @@
 <h5>Warning</h5>
 <p>Once you've generalised a VM, you <strong>cannot</strong> log back into it.</p>
 </div>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Windows</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-a" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Windows</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">Linux</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-b" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-b" data-tab="tabid-b" tabindex="-1">Linux</a>
 </li>
 </ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
+<section id="tabpanel_bHGHmlrG6S_tabid-a" role="tabpanel" data-tab="tabid-a">
 
 <ol>
 <li><p>Log in to your Windows VM using Remote Desktop Protocol (RDP).</p>
@@ -160,7 +160,7 @@
 </li>
 </ol>
 </section>
-<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_bHGHmlrG6S_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
 
 <ol>
 <li><p>Log in to your Linux VM using Secure Shell (SSH).</p>
@@ -257,16 +257,16 @@
 </tr>
 </tbody>
 </table>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-c" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-c" data-tab="tabid-c" tabindex="0" aria-selected="true">Managed Disk</a>
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-c" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-c" data-tab="tabid-c" tabindex="0" aria-selected="true">Managed Disk</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-d" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-d" data-tab="tabid-d" tabindex="-1">Unmanaged Disk</a>
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-d" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-d" data-tab="tabid-d" tabindex="-1">Unmanaged Disk</a>
 </li>
 </ul>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-c" role="tabpanel" data-tab="tabid-c">
+<section id="tabpanel_bHGHmlrG6S-1_tabid-c" role="tabpanel" data-tab="tabid-c">
 
 <p>Run the following PowerShell code:</p>
 <pre><code class="language-PowerShell"># Initialise environment and variables
@@ -353,7 +353,7 @@ New-AzVM -ResourceGroupName $NewRGName -Location $Location -Name $NewVMName -Ima
 Remove-AzResourceGroup -ResourceGroupName $RGName -Location $Location -Confirm
 </code></pre>
 </section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-d" role="tabpanel" data-tab="tabid-d" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_bHGHmlrG6S-1_tabid-d" role="tabpanel" data-tab="tabid-d" aria-hidden="true" hidden="hidden">
 
 <p>Run the following PowerShell code:</p>
 <pre><code class="language-PowerShell"># Initialise environment and variables
