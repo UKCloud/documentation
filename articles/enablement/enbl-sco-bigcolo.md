@@ -127,6 +127,10 @@ If you need to install and configure additional device(s) within your solution, 
 
 If, in the unlikely event of a power failure, you'd like your hardware restarted, you must provide **laminated** work instructions (totalling no more than a double-sided A4 page), which must be placed within your Big Cloud Enablement rack space.
 
+## Decommissioning 
+
+If you wish to decommission your Big Cloud Enablement service you will need to provide a minimum of 30 days' notice and are responsible for the removal of your equipment. Visits to remove equipment are counted towards your allocation of maintenance access days and if you need additional days then these additional escorted visits will be charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
