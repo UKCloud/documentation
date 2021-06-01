@@ -117,7 +117,7 @@ If, in the unlikely event of a power failure, you would like your hardware resta
 
 ## Decommissioning 
 
-If you wish to decommission your Cloud Enablement service you will need to provide a minimum of 30 days' notice and are responsible for the removal of your equipment. Visits to remove equipment are counted towards your allocation of maintenance access days and if you need additional days then these additional escorted visits will be charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
+If you want to decommission your Cloud Enablement service you must provide a minimum of 30 days' notice and are responsible for the removal of your equipment. Visits to remove equipment are counted towards your allocation of maintenance access days and if you need additional days, these additional escorted visits will be charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
 
 ## Feedback
 
