@@ -3,8 +3,8 @@ title: How to license Microsoft software on the UKCloud platform
 description: Explains how Microsoft software, such as Windows Server and SQL, is licensed on the UKCloud platform
 services: shared-services
 author: shall
-reviewer: pcantle
-lastreviewed: 29/09/2020
+reviewer: shall
+lastreviewed: 27/05/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -20,17 +20,23 @@ toc_mdlink: shared-how-license-microsoft.md
 ## Overview
 
 > [!IMPORTANT]
-> It is **your** responsibility to ensure that you have a valid licence for any software installed on the UKCloud platform if applicable.
+> It is **your** responsibility to ensure that you have a valid licence for any software installed on the UKCloud platform if applicable. Contact your Service Delivery Manager or raise a support ticket if you have any concerns regarding the licensing of your workload and any applications. Microsoft perform regular audits, and in the event that your workloads have been operating without the correct level of licensing in place, UKCloud reserves the right to apply retrospective billing for the missing licensing and to place the relevant licence orders against our SPLA agreement.
 
 This article provides information on how you can apply Microsoft licensing on our platform and the options available to you.
 
 UKCloud offers three ways to license Microsoft software for use on our compute platform, providing you with the flexibility you need to deliver your application workloads in line with Microsoft requirements and obligations:
 
-- UKCloud can purchase licences monthly for you via SPLA or CSP
+- UKCloud can purchase licences monthly for you via our Microsoft Services Provider License Agreement (SPLA) or Cloud Solution Provider (CSP) Program.
 
-- You can submit a [Microsoft Licence Mobility Verification form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) to use your own existing licensing
+- You can submit a [Microsoft Licence Mobility Verification form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) to use your own existing licensing. This must be done **before** you use the application on the UKCloud platform.
 
 - You can use your own monthly reported SPLA, for example if you have SPLA application licensing for SQL. In this case, you'll need to provide a confirmation to your UKCloud Service Delivery Manager or raise a support ticket and provide the SPLA details in case of an audit.
+
+## Microsoft SPLA 
+
+Microsoft SPLA is a Service Provider License Agreement. Licences are reported on a monthly basis under SPLA, are non-perpetual and UKCloud uses the per processor/per core model. The core model is ideal for a multi-tenant public cloud as although every physical core on every server will need a licence, an unlimited number of users can access the licensed product. Core licensing is required when the number of users cannot be counted or fluctuates. It's important to note that customers do not need to license SALs when UKCloud are licensing per core. UKCloud uses this method for licensing Microsoft Server, which enables us to charge customers per hour that their VMs use Microsoft Server. 
+
+When using SPLA licensing, customers don't need to purchase Software Assurance as they'll automatically get the latest version rights and can choose any version of the operating system or applcation that suits their requirements. UKCloud has a wide range of versions available in the UKCloud product catalog and can make other versions available on request. It's important to note however, that customers don't get any of the other benefits that Software Assurance offers.
 
 ## Microsoft Server licensing
 
@@ -104,53 +110,57 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Microsoft SQL**
 
-  - You do not need to purchase licensing for MySQL, SQL Express or PostgreSQL. However, if you are using SQL Standard or Enterprise for development purposes you are **required** by Microsoft to have valid licensing in place.
+  - You don't need to purchase licensing for MySQL, SQL Express or PostgreSQL. However, if you're using SQL Standard or Enterprise for development purposes you're **required** by Microsoft to have valid licensing in place.
 
   - SQL Developer can only be utilised on a shared platform to test the SQL element of a solution and cannot be used to provide end-user services. If you want to provide SQL services to end-users, SQL Enterprise or SQL Standard must be purchased.
 
   - We can provide Microsoft SQL Standard Server licences on a per hour basis, Microsoft SQL Enterprise licences billed on a monthly basis or Microsoft SQL Web licenses billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Microsoft SQL Web is currently priced at £10.95 per pair of cores per month with a minimum of 4 cores per VM. Note that SQL Web is only for use to support public and internet accessible web pages, sites, applications and services. You cannot use it to support line of business applications (for example, Customer Relationship Management, Enterprise Resource Management and other similar applications).
 
-  - Microsoft Mobility - this is a valid option for both SQL Standard and Enterprise.
+  - Microsoft Mobility. This is a valid option for both SQL Standard and Enterprise.
 
   - Under SPLA licensing you only need to purchase the SQL server licence and you do not need to purchase Server Access Licences (SAL).
 
+  - Failover rights. For any operating system environment (OSE) in which you run instances of the server software, you may run up to the same number of passive failover instances in a separate OSE for temporary support. The number of physical and virtual processors used in that separate OSE must not exceed the number of physical and virtual processors used in the corresponding OSE in which the active instances are running. You may run the passive failover instances on a server other than the licensed server. 
+
 - **Office 365**
 
-  - UKCloud licensing - we are now able to provide Office 365 and Microsoft 365 subscriptions on a monthly basis under our CSP agreement. Contact your Service Delivery Manager or raise a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, stating your Microsoft tenant ID (if available) and the number of subscriptions required.
+  - UKCloud licensing. We're now able to provide Office 365 and Microsoft 365 subscriptions on a monthly basis under our CSP agreement. Contact your Service Delivery Manager or raise a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, stating your Microsoft tenant ID (if available) and the number of subscriptions required.
 
-  - Microsoft Mobility - this is a valid option for Office 365 ProPlus licences as long as you have valid Software Assurance in place. To take advantage of this option, you must manage your Office 365 implementation and ensure you have the correct number of licences to reflect your user count. This option is available via the QMTH program, and more information is available on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/).
+  - Microsoft Mobility. This is a valid option for Office 365 ProPlus licences as long as you have valid Software Assurance in place. To take advantage of this option, you must manage your Office 365 implementation and ensure you have the correct number of licences to reflect your user count. This option is available via the QMTH program, and more information is available on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/).
 
   - You can use your subscriptions on the UKCloud platform using our QMTH programme as a direct Tier 1 CSP. Raise a Generic Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, stating your Microsoft tenant ID and the number of subscriptions you want to use.
 
 - **Remote Desktop Server Access Licence**
 
-  - UKCloud licensing - we are able to provide Microsoft Remote Desktop (RDS) SAL on a monthly basis only. These are retrospectively billed, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). To use these licences, you must raise a Service Request prior to their use to register them on the UKCloud platform and provision a dedicated RDS licence server. To assign and validate the licences, we will need to arrange a session to connect to your server.
+There's a separate licence for Windows Remote Desktop Services (RDS) that you'll need to use, as the standard Windows license does not cover RDS. Also note that there's no concurrency within SPLA, so the total number of users provisioned to access the RDS environment will need to be licensed. 
 
-  - Microsoft Mobility - this is a valid option for RDS licences.
+  - UKCloud licensing. We're able to provide Microsoft RDS SAL on a monthly basis only. These are retrospectively billed, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). To use these licences, you must raise a Service Request prior to their use to register them on the UKCloud platform and provision a dedicated RDS licence server. To assign and validate the licences, we will need to arrange a session to connect to your server.
+
+  - Microsoft Mobility. This is a valid option for RDS licences.
 
 - **System Center**
 
-  - We are unable to offer this on our public cloud platform in any form.
+  - We're unable to offer this on our public cloud platform in any form.
   
-  - It is available for customers running dedicated or Private Cloud environments, in which case it can be purchased via UKCloud's SPLA agreement. Please contact Support to arrange for System Center licensing to be implemented on 1 or more of your private hosts.
+  - It's available for customers running dedicated or Private Cloud environments, in which case it can be purchased via UKCloud's SPLA agreement. Please contact Support to arrange for System Center licensing to be implemented on 1 or more of your private hosts.
 
 - **SharePoint**
 
-  - UKCloud licensing - we are not currently able to offer licences for this application.
+  - UKCloud licensing. We're not currently able to offer licences for this application.
 
-  - Microsoft Mobility - Sharepoint Server or Sharepoint Server for internet sites can be licensed through Licence Mobility, only if Software Assurance is in place. Once verified by Microsoft you'll be able to use the SharePoint software on the UKCloud platform.
+  - Microsoft Mobility. Sharepoint Server or Sharepoint Server for internet sites can be licensed through Licence Mobility, only if Software Assurance is in place. Once verified by Microsoft you'll be able to use the SharePoint software on the UKCloud platform.
 
 - **Office**
 
-  - UKCloud licensing - UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we'll bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+  - UKCloud licensing. UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we'll bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
-  - Microsoft Mobility - this is not available via Microsoft Mobility and must be provided by UKCloud.
+  - Microsoft Mobility. This is not available via Microsoft Mobility and must be provided by UKCloud.
 
 - **Visual Studio**
 
-  - UKCloud licensing - UKCloud can offer licensing for this software. You need to tell us how many users will be accessing the software and we'll bill you on a per user, per month basis. The only versions of Visual Studio permitted by Microsoft are Enterprise and Professional.
+  - UKCloud licensing. UKCloud can offer licensing for this software. You need to tell us how many users will be accessing the software and we'll bill you on a per user, per month basis. The only versions of Visual Studio permitted by Microsoft are Enterprise and Professional.
 
-  - Microsoft Mobility - this is not available via Microsoft Mobility and must be provided by UKCloud.
+  - Microsoft Mobility. This is not available via Microsoft Mobility and must be provided by UKCloud.
 
 - **Other Microsoft Products**
 
