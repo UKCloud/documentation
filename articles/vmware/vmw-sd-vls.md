@@ -25,7 +25,11 @@ VMware Licence Service (VLS) complements our Managed IT Operations service, by o
 
 - Want to upgrade their on-premises VMware estate, with NSX, vSAN, SRM, vROps, Network Insight and Horizon, to enhance performance, security and resource allocation to enable the seamless migration to the cloud. VLS enables these enhancements for short deployment periods in the most cost-effective way.
 
-- Want to migrate to a full rental/consumption-based OPEX model rather than a fixed-cost (CAPEX-centric) model on either an annual or monthly basis.
+- Want to migrate to a full rental/consumption-based OPEX model rather than a fixed-cost (CAPEX-centric) model on either an annual or 
+
+
+
+ly basis.
 
 - Want the flexibility to accommodate rapid changes in the virtualised and end-user demand within their organisation, especially given the current variable demands on secure end-user capabilities.
 
@@ -57,7 +61,7 @@ VMware Licence Service (VLS) complements our Managed IT Operations service, by o
 
 - **UK-based support.** Dedicated 24/7 UK telephone and ticket support with access to UKCloud's technical experts. First- and second-line support is provided from the award-winning UKCloud service desk, with additional support provided by VMware.
 
-- **Service Delivery Manager.** Every VLS customer is designated a Service Delivery Manager (SDM) for ongoing support, monthly performance reporting and active service monitoring.
+- **Service Delivery Manager.** Every VLS customer is designated a Service Delivery Manager (SDM) for ongoing support, quarterly performance reporting and active service monitoring.
 
 ## Licence eligibility
 
@@ -87,7 +91,7 @@ The following are the key steps of a typical deployment completed by UKCloud:
 
 - **Service operations.** The customer will be set up on the UKCloud Portal. Incidents will either be notified by the customer or reporting will be automated through Managed Monitoring as a Service, if selected.
 
-- **Service delivery management.** The assigned SDM will be available to support any incidents that occur. A monthly report/meeting will ensure continuity on all aspects. Topics covered will include:
+- **Service delivery management.** The assigned SDM will be available to support any incidents that occur. A quarterly report/meeting will ensure continuity on all aspects. Topics covered will include:
 
   - Service incidents
 
