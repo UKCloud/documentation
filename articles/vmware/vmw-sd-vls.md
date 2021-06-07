@@ -25,11 +25,7 @@ VMware Licence Service (VLS) complements our Managed IT Operations service, by o
 
 - Want to upgrade their on-premises VMware estate, with NSX, vSAN, SRM, vROps, Network Insight and Horizon, to enhance performance, security and resource allocation to enable the seamless migration to the cloud. VLS enables these enhancements for short deployment periods in the most cost-effective way.
 
-- Want to migrate to a full rental/consumption-based OPEX model rather than a fixed-cost (CAPEX-centric) model on either an annual or 
-
-
-
-ly basis.
+- Want to migrate to a full rental/consumption-based OPEX model rather than a fixed-cost (CAPEX-centric) model on either an annual or monthly basis.
 
 - Want the flexibility to accommodate rapid changes in the virtualised and end-user demand within their organisation, especially given the current variable demands on secure end-user capabilities.
 
