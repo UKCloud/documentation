@@ -20,21 +20,12 @@ toc_mdlink: oshift-how-use-netpol.md
 
 ## Overview
 
-In OpenShift v3.11 clusters deployed from mid-February 2019, the default SDN plugin has been changed from ovs-multitenant to ovs-networkpolicy. This gives you the ability to create NetworkPolicy objects which allow granular control over the flow of communication between the pods, services and projects inside your cluster.
-
-By default, we create a NetworkPolicy object, named `allow-from-same-and-privileged-namespaces`, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.
+In clusters deployed since May 2021, by default you will find NetworkPolicy objects, named `allow-from-same-namespace` and `allow-from-ingress-routers` in every project created after the cluster is deployed. The effect of these is to ensure that pod IPs and services are only accessible from pods inside that same project, or via routes.
 
 This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kubernetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the `oc label` commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.
 
-## Verifying the cluster SDN
-
-In order to verify if the cluster has the ovs-networkpolicy SDN you can use the following command:
-
-```oc get clusternetwork```
-
-This will show redhat/openshift-ovs-networkpolicy under the PLUGIN NAME. If this shows ovs-multitenant instead and you wish to use NetworkPolicy objects you will need to raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to look at the options for switching SDN.
 > [!NOTE]
-> You need to have cluster-reader or higher privilege in the cluster for this command to work.
+> If your OpenShift v4 cluster was deployed before May 2021 and you would like the NetworkPolicy objects added to the default project template, please raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Interacting with NetworkPolicy objects
 
@@ -46,103 +37,71 @@ You can interact with NetworkPolicy objects from the command line using the full
 
 `oc get netpol <name> -o yaml` - Provides yaml output of the named NetworkPolicy object. Useful to reference existing rules when creating new objects.
 
+> [!NOTE]
+> If you delete the default NetworkPolicy objects from a project, that project's Pod IPs and services will be accessible from all other projects. This is not recommended; it would be preferable to explicitly specify additional NetworkPolicy objects to enable the required cross-project communication.
+
 ## Example of connecting services from two different projects
 
-NetworkPolicy objects are scoped at the project level. This means if you create a NetworkPolicy object using a template it will be created inside the project you're in and the rules will apply to pods within that project, with the exception of remote projects you may be referencing inside the rule. The object without any rules will look like the following:
+NetworkPolicy objects are scoped at the project level. This means if you create a NetworkPolicy object using a template it will be created inside the project you're in and the rules will apply to pods within that project. The object without any rules will look like the following:
 
 ```
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: <desired_name_of_object>
-  namespace: <desired_project> (if not provided this will default to the project you are in when you run oc create)
+  name: <desired_name_of_networkpolicy>
+  namespace: <desired_project> #(if not provided this will default to the project you are in when you run oc create)
 spec:
 ```
 
-Inside the spec key, you can pass in rules that determine what the NetworkPolicy object does. The first thing you need to consider is the pods you want to target. You can do this using the `podSelector` key.
+Inside the spec key, you can pass in rules that determine what the NetworkPolicy object does.
+
+### Matching specific pods using podSelector clauses
 
 You can use this to match all pods in a project or alternatively to match all pods with a certain label. You can leave the key blank to match all pods in a project or you can match all pods with a certain label. In our example, we want to match pods with the label `role=webserver`:
 
 ```
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: webserver-egress
-  namespace: webserver
-spec:
-  podSelector:
-    matchLabels:
-      role: webserver
-```
-
-We've matched the pods inside our webserver project that have the label `role=webserver`. Now we want to allow these pods to connect to a service inside a project we've named database. To do this, we'll use a namespace selector, which evaluates projects based on a label. In this case, we're going to be looking for the namespace label `database=true`. First, we need to ensure that this label is applied using the following command:
-
-> [!NOTE]
-> The cluster administrator role is required to add labels to namespaces.
-
-``` oc label namespace database database=true ```
-
-Our example NetworkPolicy object now looks like the following:
-
-```
-apiVersion: extensions/v1beta1
-kind: NetworkPolicy
-metadata:
-  name: webserver-egress
-  namespace: webserver
-spec:
-  podSelector:
-    matchLabels:
-      role: webserver
-  egress:
-  - to:
-    - namespaceSelector:
-        matchLabels:
-          database: "true"
-```
-
-We now have a template for a NetworkPolicy object that matches any pods labelled `role=webserver` inside the webserver project and allows them to communicate out to any projects labelled `database=true`. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:
-
-```
-apiVersion: extensions/v1beta1
-kind: NetworkPolicy
-metadata:
-  name: database-ingress
+  name: webserver-ingess
   namespace: database
 spec:
   podSelector:
     matchLabels:
-      role: database
-  ingress:
-  - from:
-    - namespaceSelector:
-        matchLabels:
-          webserver: "true"
+      role: webserver
 ```
 
-This object is created in the database project and matches any pods in the project with the label `role=database` and allows ingress traffic from any project labelled `webserver=true`. To achieve our desired outcome, we need to label our webserver project as follows:
+### Matching all pods in specific projects using namespaceSelector clauses
+
+Alternatively, we may want to allow all pods in one or more project(s) to connect to a service inside the "database" project. To do this, we'll use a namespace selector, which evaluates projects based on a label. In this case, we're going to be looking for the namespace label `webserveraccess=true`. First, we need to ensure that this label is applied to one or more project(s) using the following command:
 
 > [!NOTE]
 > The cluster administrator role is required to add labels to namespaces.
 
-``` oc label namespace webserver webserver=true ```
+``` oc label namespace exampleproject webserveraccess=true ```
 
-In our example, we've saved our templates in files called netpol.yaml and netpol1.yaml. Use the following commands to create the objects, substituting in the relevant filename:
+```
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: webserver-namespace-access
+  namespace: database
+spec:
+  namespaceSelector:
+    matchLabels:
+      webserveraccess: true
+```
+
+In our example, we've saved our templates in files called netpol.yaml. Use the following command to create the object, substituting in the relevant filename:
 
 ``` oc create -f netpol.yaml ```
-
-``` oc create -f netpol1.yaml ```
-
-Now we've created the objects, any pods inside the webserver project matching the label `role=webserver` can communicate out to the service inside the database project exposed by pods matching the label `role=database`.
 
 > [!NOTE]
 > You can test connectivity by curling the desired target service from the terminal of a pod that has been allowed access to the service. You can find the terminal in the UI or use `oc rsh` to enter the pod.
 
 ## Further information
 
-To get a full understanding of the capabilities and options of a NetworkPolicy object we recommend reading: <https://kubernetes.io/docs/concepts/services-networking/network-policies>
-
-Documentation on efficient NetworkPolicy rules: <https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-using-networkpolicy-efficiently>
+To get a full understanding of NetworkPolicy objects in OpenShift v4 we recommend reading: <https://docs.openshift.com/container-platform/4.7/networking/network_policy/about-network-policy.html>
 
 ## Feedback
 
