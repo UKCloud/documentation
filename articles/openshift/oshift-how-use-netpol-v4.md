@@ -38,7 +38,7 @@ You can interact with NetworkPolicy objects from the command line using the full
 `oc get netpol <name> -o yaml` - Provides yaml output of the named NetworkPolicy object. Useful to reference existing rules when creating new objects.
 
 > [!NOTE]
-> If you delete the default NetworkPolicy objects from a project, that project's Pod IPs and services will be accessible from all other projects. This is not recommended; it would be preferable to explicitly specify additional NetworkPolicy objects to enable the required cross-project communication. Only users with cluster-admin privelidges can add, edit or delete NetworkPolicies from a project.
+> If you delete the default NetworkPolicy objects from a project, that project's Pod IPs and services will be accessible from all other projects. This is not recommended; it would be preferable to explicitly specify additional NetworkPolicy objects to enable the required cross-project communication. Only users with cluster-admin priviledges can add, edit or delete NetworkPolicies from a project.
 
 ## Example of connecting services from two different projects
 
@@ -76,7 +76,7 @@ spec:
 Alternatively, we may want to allow all pods in one or more project(s) to connect to a service inside the "database" project. To do this, we'll use a namespace selector, which evaluates projects based on a label. In this case, we're going to be looking for the namespace label `webserveraccess=true`. First, we need to ensure that this label is applied to one or more project(s) using the following command:
 
 > [!NOTE]
-> The cluster administrator role is required to add labels to namespaces.
+> Your user must have cluster-admin  priviledges to add labels to namespaces and to create NetworkPolicies.
 
 ``` oc label namespace exampleproject webserveraccess=true ```
 
