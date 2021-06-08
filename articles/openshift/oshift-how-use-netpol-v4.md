@@ -20,7 +20,7 @@ toc_mdlink: oshift-how-use-netpol.md
 
 ## Overview
 
-In clusters deployed since May 2021, by default you will find NetworkPolicy objects, named `allow-from-same-namespace` and `allow-from-ingress-routers` in every project created after the cluster is deployed. The effect of these is to ensure that pod IPs and services are only accessible from pods inside that same project, or via routes.
+By default you will find NetworkPolicy objects, named `allow-from-same-namespace` and `allow-from-ingress-routers` in every project created after the cluster is deployed (in clusters deployed since May 2021). The effect of these is to ensure that pod IPs and services are only accessible from pods inside that same project, or via routes.
 
 This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kubernetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the `oc label` commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.
 
@@ -29,7 +29,7 @@ This document refers to namespaces and projects. A project is an OpenShift const
 
 ## Interacting with NetworkPolicy objects
 
-You can interact with NetworkPolicy objects from the command line using the full name networkpolicy or short name netpol, for example:
+You can interact with NetworkPolicy objects from the command line using the full name NetworkPolicy or short name netpol, for example:
 
 `oc get netpol` - List NetworkPolicy objects in the current project.
 
@@ -38,7 +38,7 @@ You can interact with NetworkPolicy objects from the command line using the full
 `oc get netpol <name> -o yaml` - Provides yaml output of the named NetworkPolicy object. Useful to reference existing rules when creating new objects.
 
 > [!NOTE]
-> If you delete the default NetworkPolicy objects from a project, that project's Pod IPs and services will be accessible from all other projects. This is not recommended; it would be preferable to explicitly specify additional NetworkPolicy objects to enable the required cross-project communication.
+> If you delete the default NetworkPolicy objects from a project, that project's Pod IPs and services will be accessible from all other projects. This is not recommended; it would be preferable to explicitly specify additional NetworkPolicy objects to enable the required cross-project communication. Only users with cluster-admin privelidges can add, edit or delete NetworkPolicies from a project.
 
 ## Example of connecting services from two different projects
 
