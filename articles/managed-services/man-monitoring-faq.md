@@ -50,6 +50,8 @@ To ensure the correct operation of the Monitoring Agent once installed, the foll
     - Simple Network Management Protocol (SNMP) - Port 161 over UDP
     - Internet Control Message Protocol (ICMP)
 
+## General
+
 ### What is AIOps?
 
 The term *AIOps* stands for *artificial intelligence for IT operations*. AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies.
