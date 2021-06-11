@@ -37,7 +37,7 @@ This service also leverages the benefits of AIOps (see below).
 
 By default, UKCloud will provide this service without the use of an agent by utilising SNMP traps. In situations where non-SNMP events need to be collected, UKCloud may opt to provide a dedicated Monitoring Agent, which can be deployed into the customer's VM to provide a more advanced method of event collection.
 
-### Do I need to open any specific firewalls ports or allow firewall rules?
+### Do I need to open any specific firewall ports or allow firewall rules?
 
 To ensure the correct operation of the Monitoring Agent once installed, the following ports and services will need to be opened
 
