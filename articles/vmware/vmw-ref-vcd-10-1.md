@@ -4,7 +4,7 @@ description: Provides information about the changes in VMware Cloud Director 10.
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 05/01/2020
+lastreviewed: 11/06/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -100,25 +100,13 @@ Known issues you may experience following the upgrade to VMware Cloud Director 1
 
 ### Known issues in VMware Cloud Director
 
-- If you've enabled the **Enable VM to join domain** options for a VM, either currently or in the past, you won't be able to amend the hardware configuration of the VM. If you encounter this issue, you can raise a Service Request to obtain a workaround. 
-
-- Guest customisation is failing in the following:
-
-  - For existing VMs - Windows 2012, Windows 2012R2 and Windows 2016
-
-  - For new VMs - Windows 2012, Windows 2012R2
-
-  When setting a new administrator password and/or changing the IP address then forcing re-customisation at power-on, the settings are ignored.
-
-  The workaround is to deploy the template, but before powering on, change the VM type to Windows 2016. Power on using Force Customization.
+See [*Known issues in VMware Cloud Director*](vmw-ref-vcd-known-issues.md).
 
 ### Known issues in the UKCloud Portal
 
 - Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal (see [*How to restrict access to VMware Cloud Director*](../portal/ptl-how-restrict-access-vcloud-api.md)). If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.
 
 - Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal (see [*How to view storage profile usage*](vmw-how-view-storage-usage.md)).
-
-For other known issues with VMware Cloud Director 10.1, see the [VMware Cloud Director 10.1 Release Notes](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html).
 
 ## Feedback
 
