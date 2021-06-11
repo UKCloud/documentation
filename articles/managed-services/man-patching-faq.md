@@ -104,11 +104,11 @@ UKCloud will only support in-life, vendor-backed operating systems, such as Micr
 
 ### Customer environment configuration
 
-**General** - For UKCloud to correctly scan for and apply OS patches, the customer must agree to enabling and configuring the Server Message Block (SMB) protocol by ensuring Ports 445 and 139 (both are over TCP) are open on all virtual machines and associated operating systems opted-in to this service.
+**General** - For UKCloud to correctly scan for and apply OS patches, the customer must agree to enabling and configuring the Server Message Block (SMB) protocol by ensuring ports 445 and 139 (both over TCP) are open on all virtual machines and associated operating systems opted-in to this service.
 
 **Linux Only** - To provide secure communication between UKCloud's centralised patch management platform and a customer's virtual machine, we use key-based SSH sessions, reducing the need to share credentials. As such, we'll need the following prerequisites to be fulfilled ***on each virtual machine*** subscribing to this service:
 
-- An allow rule for Port 22 (SSH) on your virtual machine's firewall (for example, iptables).
+- An allow rule for port 22 (SSH) on your virtual machine's firewall (for example, iptables).
 
 - A local user account with passwordless sudo access. You'll need to share details of this account with UKCloud when onboarding to this service.
 
