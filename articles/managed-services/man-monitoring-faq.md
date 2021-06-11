@@ -39,16 +39,23 @@ By default, UKCloud will provide this service without the use of an agent by uti
 
 ### Do I need to open any specific firewall ports or allow firewall rules?
 
-To ensure the correct operation of the Monitoring Agent once installed, the following ports and services will need to be opened
+To ensure the correct operation of the Monitoring Agent once installed, you must open the following ports and services:
 
 - Linux
-    - Nagios Remote Plugin Executor (NRPE) - Port 5666
-    - Simple Network Management Protocol (SNMP) - Port 161 over UDP
-    - Internet Control Message Protocol (ICMP)
+
+  - Nagios Remote Plugin Executor (NRPE) - Port 5666
+  
+  - Simple Network Management Protocol (SNMP) - Port 161 over UDP
+  
+  - Internet Control Message Protocol (ICMP)
+
 - Windows
-    - Windows Remote Management (WinRM) - Ports 5985 & 5986
-    - Simple Network Management Protocol (SNMP) - Port 161 over UDP
-    - Internet Control Message Protocol (ICMP)
+  
+  - Windows Remote Management (WinRM) - Ports 5985 & 5986
+  
+  - Simple Network Management Protocol (SNMP) - Port 161 over UDP
+  
+  - Internet Control Message Protocol (ICMP)
 
 ## General
 
