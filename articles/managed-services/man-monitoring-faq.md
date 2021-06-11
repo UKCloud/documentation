@@ -31,9 +31,24 @@ UKCloud uses the same technologies we use in house to monitor events across our 
 
 This service also leverages the benefits of AIOps (see below).
 
-## Do I need to install an agent within my VM to enable this service?
+## Prerequisites
 
-By default, UKCloud will provide this service without the use of an agent by utilising SNMP traps. In situations where non-SNMP events need to be collected, UKCloud may opt to provide a dedicated Monitoring Agent, which can be deployed into the customer's VM to provide a more advanced method of event collection. To ensure the correct operation of the Monitoring Agent once installed, port 5666 will need to be opened on Linux VMs, and port 5985 and/or port 5986 must be opened for Windows VMs.
+### Do I need to install an agent within my VM to enable this service?
+
+By default, UKCloud will provide this service without the use of an agent by utilising SNMP traps. In situations where non-SNMP events need to be collected, UKCloud may opt to provide a dedicated Monitoring Agent, which can be deployed into the customer's VM to provide a more advanced method of event collection.
+
+### Do I need to open any specific firewalls ports or allow firewall rules?
+
+To ensure the correct operation of the Monitoring Agent once installed, the following ports and services will need to be opened
+
+- Linux
+    - Nagios Remote Plugin Executor (NRPE) - Port 5666
+    - Simple Network Management Protocol (SNMP) - Port 161 over UDP
+    - Internet Control Message Protocol (ICMP)
+- Windows
+    - Windows Remote Management (WinRM) - Ports 5985 & 5986
+    - Simple Network Management Protocol (SNMP) - Port 161 over UDP
+    - Internet Control Message Protocol (ICMP)
 
 ### What is AIOps?
 
