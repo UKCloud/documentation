@@ -41,17 +41,35 @@ Dates are displayed using the American MM/DD/YYYY format.
 
 It isn't currently possible to change the date formatting. We've raised a request with VMware to enable the customisation of date formatting.
 
-## Subsequent vApp searches still display previous vApp name
+## vApp search functionality doesn't work correctly
 
 ### Issue
 
-Searching for a vApp using the right hand menu, then searching for a different vApp updates the VMs listed but doesn't update the name displayed at the top of the page.
+1. Search for a vApp using the search icon on the right-hand side of the menu bar.
 
-Any options selected from the Actions menu apply to the first searched vApp not the second one.
+   ![Search icon](images/vmw-vcd-issue-search1.png)
+
+2. Select the vApp.
+
+   ![Select vApp](images/vmw-vcd-issue-search2.png)
+
+3. The details of the vApp are displayed, including the VMs contained in the vApp.
+
+   ![List of VMs](images/vmw-vcd-issue-search3.png)
+
+4. Search for a different vApp using the same search method and select it.
+
+5. The details of the second vApp are displayed, but the name of vApp is still shown as the first vApp.
+
+   ![Second vApp](images/vmw-vcd-issue-search4.png)
+
+6. Any options selected from the Actions menu will apply to the first searched vApp not the second one.
 
 ### Solution
 
 We recommend searching for vApps by clicking vApps in the left navigation panel, then using the search functionality on the vApps page.
+
+![Search functionality on the vApps page](images/vmw-vcd-issue-search5.png)
 
 ## Cannot amend VM hardware configuration
 
