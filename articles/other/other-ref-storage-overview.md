@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Storage options on the UKCloud platform
-toc_fullpath: Reference/vmw-ref-storage-overview.md
-toc_mdlink: vmw-ref-storage-overview.md
+toc_fullpath: Reference/other-ref-storage-overview.md
+toc_mdlink: other-ref-storage-overview.md
 ---
 
 # Storage options on the UKCloud platform
