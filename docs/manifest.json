@@ -11563,15 +11563,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/other/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "2GqnbIHSru0AKt1sti65UVA3ZlOHDbxY2yov+HtTkO8="
+          "hash": "8JWtzcGUyLoyHsjMXga0MQMuvPp3xtm7R2WM69Bsaq8="
         }
       },
       "is_incremental": false,
