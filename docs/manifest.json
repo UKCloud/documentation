@@ -10757,6 +10757,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-storage-options.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-storage-options.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/pricing-bug-mac-1.png",
       "output": {
         "resource": {
@@ -11445,6 +11456,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-storage-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-storage-overview.html",
+          "hash": "7v51mRiGGR/q0AhmCW/nOwpTdSawy2b6nRdCBgT8di4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-terms-and-conditions-g12.md",
       "output": {
         ".html": {
@@ -11540,12 +11563,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/other/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "6WU3V3ZmDvr/XEios3SBsrT2b6l0jS+MXFoaVGWHG/k="
+          "hash": "2GqnbIHSru0AKt1sti65UVA3ZlOHDbxY2yov+HtTkO8="
         }
       },
       "is_incremental": false,
@@ -14432,50 +14458,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/tier_1_comparison.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/tier_1_comparison.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/tier_1_data_dist.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/tier_1_data_dist.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/tier_1_high_writes.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/tier_1_high_writes.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/tier_1_small_writes.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/tier_1_small_writes.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/ukc-services-g12.png",
       "output": {
         "resource": {
@@ -16823,6 +16805,61 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-insert-cd.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-issue-search1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-issue-search1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-issue-search2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-issue-search2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-issue-search3.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-issue-search3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-issue-search4.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-issue-search4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-issue-search5.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-issue-search5.png"
         }
       },
       "is_incremental": false,
@@ -21344,7 +21381,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "fDbCR1D83Uyg+L7cOf2nGkYX7YC2TTYm+JRo03f4aQk="
+          "hash": "Uq26Usec/E8C5aSayN8SEGi1T+BWH3bYWwU+NDN3I7c="
         }
       },
       "is_incremental": false,
@@ -22324,18 +22361,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-tier1-storage.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-tier1-storage.html",
-          "hash": "9i87zxvuDTDF2HEA4nwE+bx9GJ6aeUIoZYVv31XNHTE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-trouble-ipsec-nsx64.md",
       "output": {
         ".html": {
@@ -22376,7 +22401,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-10-1.html",
-          "hash": "QvGwgJxLYKqtrY9zGoOejdtfi8qcmX5Bb0dYh/s0O+g="
+          "hash": "Bl9dmx0ldzrRTe/6rJadWHTgc250or5xCH39S58u/Gw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-vcd-known-issues.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-vcd-known-issues.html",
+          "hash": "wVof1jkh2RiDJCUtlSapFdcteIWWMfd1Ae06/olVJeg="
         }
       },
       "is_incremental": false,
@@ -22695,7 +22732,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 464,
+          "total_file_count": 465,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
