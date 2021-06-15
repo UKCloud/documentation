@@ -38,7 +38,7 @@ D      | vDC                               | Name of the virtual data centre | V
 E      | ResourceName                      | Client-friendly name of the resource | OpenStack, VMware
 F      | Resource Id                       | Identifier of the resource | OpenStack, VMware
 G      | OSID                              | Operating system | VMware
-H      | Service                           | The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 1 Encrypted<br>OpenStack Block Storage Tier 2<br>OpenStack Block Storage Tier 2 Encrypted<br>OpenStack Image<br>OpenStack Instance Backup Storage<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM | OpenStack, VMware
+H      | Service                           | The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 1 Encrypted<br>OpenStack Block Storage Tier 2<br>OpenStack Block Storage Tier 2 Encrypted<br>OpenStack Image<br>OpenStack Instance Backup Storage<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM | OpenStack, VMware
 I      | Metadata                          | Customer VM metadata | VMware
 J      | StartTime                         | Charging period start time on the EventDate, in UTC | OpenStack, VMware
 K      | EndTime                           | Charging period end time on the EventDate, in UTC | OpenStack, VMware
