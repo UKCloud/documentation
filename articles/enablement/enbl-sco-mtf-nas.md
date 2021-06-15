@@ -27,7 +27,7 @@ You can use UKCloud's Mass Transfer Facility to move virtualised environments in
 
 - Between our data centres in Farnborough and Corsham
 
-It's useful if, for example, you don't have enough network bandwidth for large transfers, or if you don't have a Cross Domain Security Zone (CDSZ) service in place.
+For example, it's useful if you don't have enough network bandwidth for large transfers, or if you don't have a Cross Domain Security Zone (CDSZ) service in place.
 
 ### NAS
 
@@ -67,7 +67,7 @@ When raising the Service Request, provide as much information as possible. For e
 
 ## Before sending us your device
 
-Your SIRO, compliance officer or other person responsible for your IT security, must provide confirmation that your device is free of any viruses or malware.
+Your SIRO, compliance officer or other person responsible for your IT security must provide confirmation that your device is free of any viruses or malware.
 
 We'll send you a form to fill in and send back to us by email before sending the NAS, HDD or USB, to ensure there are no issues ahead of its delivery.
 
@@ -77,7 +77,7 @@ This service is based on the transfer of whole artifacts, for example VMs, not i
 
 For UKCloud for VMware, your VMs can be in OVF or OVA format. The hardware version must be 11 or lower and you need to remove any network cards and any mounted media files, such as ISOs, from the VM's hardware configuration prior to the creation of the OVA or OVF file.
 
-Use of the Mass Transfer Facility is charged per the current [SFIA Rate Card](http://www.ukcloud.com/sfia), based on the *Enable* rate. You will be billed only for the time it takes for the engineer to set up, manage and detach the device. Due to the nature of the service and the time to transfer data, you won't be charged for the time it takes to transfer the data. We reserve the right to add additional charges should any remediation work be required during the process. The minimum charge is half of a business day.
+Use of the Mass Transfer Facility is charged per the current [SFIA Rate Card](http://www.ukcloud.com/sfia), based on the *Enable* rate. You'll only be billed for the time it takes for the engineer to set up, manage and detach the device. Due to the nature of the service and the time to transfer data, you won't be charged for the time it takes to transfer the data. We reserve the right to add additional charges should any remediation work be required during the process. The minimum charge is half of a business day.
 
 ## Anticipated transfer speeds
 
