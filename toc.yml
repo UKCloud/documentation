@@ -34,8 +34,6 @@
     topicHref: articles/draas/draas-gs.md
   - name: Email and Collaboration 
     topicHref: articles/email/email-gs.md
-  - name: High Performance Compute
-    topicHref: articles/hpc/hpc-sd.md
   - name: Managed Services
     topicHref: articles/managed-services/man-services-home.md
   - name: Migration to the Cloud 
