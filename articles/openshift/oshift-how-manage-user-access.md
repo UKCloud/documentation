@@ -3,8 +3,8 @@ title: How to manage OpenShift access in the UKCloud Portal
 description: Shows how to provide access to OpenShift clusters for UKCloud Portal users so that they can benefit from two-factor authentication (2FA)
 services: openshift
 author: Sue Highmoor
-reviewer: gellner
-lastreviewed: 23/04/2020
+reviewer: koneill
+lastreviewed: 19/04/2021
 
 toc_rootlink: How To
 toc_sub1:

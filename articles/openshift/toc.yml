@@ -16,6 +16,8 @@
     href: oshift-how-backup-directories-database.md
   - name: Build an OpenShift application from a private GitHub repo
     href: oshift-how-build-app-private-repo.md
+  - name: Disable weak cipher suites and enable HSTS
+    href: oshift-how-disable-weak-cipher-suites-enable-hsts.md
   - name: How to expand OpenShift persistent volumes
     href: oshift-how-expand-persistent-vols.md
   - name: Manage OpenShift access

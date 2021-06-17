@@ -117,6 +117,10 @@ We do not currently offer switch redundancy.
 
 If, in the unlikely event of a power failure, you would like your hardware restarted, provide **laminated** work instructions (totalling no more than a double-sided A4 page) that you can place within your Cloud Enablement rack space.
 
+## Decommissioning 
+
+If you want to decommission your Cloud Enablement service you must provide a minimum of 30 days' notice and are responsible for the removal of your equipment. Visits to remove equipment are counted towards your allocation of maintenance access days and if you need additional days, these additional escorted visits will be charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
