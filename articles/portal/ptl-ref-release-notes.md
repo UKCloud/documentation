@@ -23,7 +23,7 @@ This article provides a list of completed Portal releases.
 
 Date: 16th June 2021
 
-Feature update:
+Feature update
 
 Details:
 
