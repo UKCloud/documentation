@@ -2,9 +2,9 @@
 title: Getting Started Guide for Journaling Protection
 description: Provides information to get up and running with Journaling Protection in UKCloud for VMware
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+author: shighmoor
+reviewer: acirel
+lastreviewed: 10/06/2021
 
 toc_rootlink: Getting Started
 toc_sub1: 

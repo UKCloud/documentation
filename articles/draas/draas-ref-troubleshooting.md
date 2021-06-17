@@ -2,9 +2,9 @@
 title: Troubleshooting Disaster Recovery as a Service
 description: This guide helps you get your Disaster Recovery to the Cloud service (powered by Zerto) up and running
 services: draas
-author: Dan Baker
-reviewer:
-lastreviewed: 04/09/2018 10:05:55
+author: dbaker
+reviewer: acirel
+lastreviewed: 04/06/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

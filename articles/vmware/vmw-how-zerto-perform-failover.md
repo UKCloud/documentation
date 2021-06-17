@@ -2,9 +2,9 @@
 title: How to perform a failover
 description: This article shows you how to use the Zerto Self-Service Portal to perform a test or live failover
 services: vmware
-author: Steve Hall
-reviewer: gsohal
-lastreviewed: 16/04/2020
+author: shall
+reviewer: acirel
+lastreviewed: 10/06/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -32,7 +32,7 @@ With Disaster Recovery as a Service and Journaling Protection, you can also run 
 
 ### Intended audience
 
-To perform the steps in this guide you need access to the Zerto Self-Service Portal (ZSSP) in the target zone.
+To perform the steps in this guide you need access to the Zerto Self-Service Portal (ZSSP) in either the source or target zone.
 
 ## Running a test failover
 
@@ -43,13 +43,11 @@ When you run a test failover, a test VM is created for each of your protected VM
 > [!NOTE]
 > When the test failover has been instantiated, Zerto will automatically start up the test failover VMs. It is critically important that you do not power on (or power off) the VMs manually in VMware Cloud Director before the failover is completely instantiated. Changing the state of the VMs in VMware Cloud Director before the failover process is complete will result in corruption of the VPG. If you power off failed-over VMs while a test failover is in progress, replication of live VMs will be affected.
 
-1. Log in to the ZSSP.
-
-    For more detailed instructions, see [*How to access the Zerto Self-Service Portal*](vmw-how-zerto-access-zssp.md).
+1. [*Log in to the ZSSP*](vmw-how-zerto-access-zssp.md).
 
     Use the ZSSP login link for the zone in which your target VDC is located.
 
-2. At the bottom of the page, click **Test**.
+2. At the bottom of the page, select **Failover**, then **Test**.
 
    ![Test failover option](images/vmw-zerto-btn-failover-test.png)
 

@@ -132,7 +132,7 @@ Before you can start using DRaaS, you need to prepare your local environment by:
 
 - Creating a secure site-to-site VPN between your local environment and the UKCloud platform
 
-For more information, see [*How to install and configure Zerto in your local environment*](../vmware/vmw-how-zerto-install-local.md).
+For more information, see [*How to install and configure Zerto in your local environment*](draas-how-zerto-install-local.md).
 
 ### Configure networking on the recovery site
 
