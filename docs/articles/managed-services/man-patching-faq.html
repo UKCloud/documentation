@@ -8,7 +8,7 @@
     <title>Patching as a Service FAQs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Patching as a Service FAQs ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -157,10 +157,10 @@
 <h3 id="operating-systems">Operating systems</h3>
 <p>UKCloud will only support in-life, vendor-backed operating systems, such as Microsoft Windows, Red Hat Enterprise Linux and Canonical Ubuntu. Customer-built operating systems (for example Gentoo Linux custom build) are unsupported by this service.</p>
 <h3 id="customer-environment-configuration">Customer environment configuration</h3>
-<p><strong>General</strong> - For UKCloud to correctly scan for and apply OS patches, the customer must agree to and configure port 445 to be open on all virtual machines and associated operating systems opted-in to this service.</p>
+<p><strong>General</strong> - For UKCloud to correctly scan for and apply OS patches, the customer must agree to enabling and configuring the Server Message Block (SMB) protocol by ensuring ports 445 and 139 (both over TCP) are open on all virtual machines and associated operating systems opted-in to this service.</p>
 <p><strong>Linux Only</strong> - To provide secure communication between UKCloud's centralised patch management platform and a customer's virtual machine, we use key-based SSH sessions, reducing the need to share credentials. As such, we'll need the following prerequisites to be fulfilled <em><strong>on each virtual machine</strong></em> subscribing to this service:</p>
 <ul>
-<li><p>An allow rule for Port 22 (SSH) on your virtual machine's firewall (for example, iptables).</p>
+<li><p>An allow rule for port 22 (SSH) on your virtual machine's firewall (for example, iptables).</p>
 </li>
 <li><p>A local user account with passwordless sudo access. You'll need to share details of this account with UKCloud when onboarding to this service.</p>
 </li>

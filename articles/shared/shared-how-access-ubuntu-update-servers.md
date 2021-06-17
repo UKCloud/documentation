@@ -4,7 +4,7 @@ description: Provides information about accessing the Ubuntu repository servers
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 11/02/2021
+lastreviewed: 12/05/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -77,6 +77,23 @@ Choose this option only if you want full control of Ubuntu updates and are alrea
 It's a much more complex solution than using UKCloud-managed repository servers and you have sole responsibility for deploying and managing it.
 
 For more information about the Walled Garden, see the [*Getting Started Guide for Cross Domain Security Zone*](../cdsz/cdsz-gs-walled-garden.md).
+
+## Troubleshooting
+
+The primary issues you may encounter are:
+
+### Errors when updating packages due to architecture type
+
+When running `sudo apt-get upgrade` you may receive errors similar to the following:
+
+```none
+404 Not Found:
+    E: Failed to fetch https://rh-cds.ukcloud.com/ubuntu/dists/<version>/main/binary-i386/Packages
+```
+
+This is due to UKCloud not hosting packages for i386 architecture. You can rectify this by executing the following:
+
+`sudo apt-get purge ".*:i386"; sudo dpkg --remove-architecture i386`
 
 ## Feedback
 

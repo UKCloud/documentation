@@ -164,6 +164,8 @@
     href: vmw-ref-trouble-ipsec-nsx64.md
   - name: IPsec VPN Foundation and PRIME profiles
     href: vmw-ref-ipsec-vpn.md
+  - name: Known Issues in VMware Cloud Director
+    href: vmw-ref-vcd-known-issues.md
   - name: Known working and non-working firewalls
     href: vmw-ref-byof-working-firewalls.md
   - name: Managing your UKCloud for VMware environment using the UKCloud Portal API
@@ -182,8 +184,6 @@
     href: vmw-ref-shared-secret-issues.md
   - name: TCP_TW_REUSE and TCP_TW_RECYCLE settings
     href: vmw-ref-twreuse.md
-  - name: Tier 1 storage
-    href: vmw-ref-tier1-storage.md
   - name: Troubleshooting advanced monitoring (vROps)
     href: vmw-ref-vrops-trouble.md
   - name: UKCloud for VMware options

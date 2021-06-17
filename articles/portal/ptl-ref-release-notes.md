@@ -3,8 +3,8 @@ title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: shighmoor
-reviewer: tlaryea 
-lastreviewed: 18/11/2020
+reviewer: myoung 
+lastreviewed: 12/05/2021
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -19,6 +19,16 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.13.0
+
+Date: 12th May 2021
+
+Bug fix
+
+Details:
+
+- Removal of old documentation link from user removal popup
+
 ## Release 2.11.3
 
 Date: 19th February 2021
@@ -26,7 +36,7 @@ Date: 19th February 2021
 Bug fix and feature update
 
 Details:
- 
+
 - Allow customers to create compute services in Zone 2D
 
 - Adjust session timeout logic (now the SSO session has a higher priority)
@@ -38,7 +48,7 @@ Date: 1st December 2020
 Bug fix and feature update
 
 Details:
- 
+
 - Support non-ASCII characters when logging in to VMware Cloud Director 10
 
 - Change "My Security Events" to "Security Operations Service" and remove account-specific events
@@ -50,7 +60,7 @@ Date: 18th November 2020
 Feature update
 
 Details:
- 
+
 - Remove bandwidth monitoring information from the Portal My VMs pages and the API
 
 ## Release 2.4.0

@@ -66,6 +66,8 @@
     href: other-ref-services-by-region.md
   - name: SLA definition
     href: other-ref-sla-definition.md
+  - name: Storage options on the UKCloud platform
+    href: other-ref-storage-overview.md
   - name: System requirements for services on the UKCloud platform
     href: other-ref-browsers.md
   - name: Terminating your UKCloud services
