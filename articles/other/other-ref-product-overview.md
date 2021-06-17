@@ -29,12 +29,10 @@ This article is designed to provide you with a top level comparison for our main
 **UKCloud for Oracle Software**          | No         | 1 hour (VM); 1 month (Storage) | 5 days          | 30 days
 **UKCloud for Red Hat OpenShift**        | No         | 1 month                        | 5 days          | 30 days
 **UKCloud for VMware**                   | No         | 1 hour                         | 4 hours         | 30 days
-**Cloud GPU**                            | No         | 1 hour                         | 10 days         | 30 days
 **Cloud Storage**                        | No         | 1 month                        | 1 day           | 30 days
 **Cross Domain Security Zone**           | No         | 1 month                        | 5 days          | 30 days
 **Disaster Recovery as a Service**       | No         | 1 hour                         | 4 hours         | 30 days
 **Email & Collaboration as a Service**   | No         | 25 mailboxes                   | 5 days          | 30 days
-**High Performance Compute**             | No         | 24 months                      | N/A             | 30 days and early termination fee
 **Managed Monitoring as a Service**      | No         | 1 month                        | 5 days          | 30 days
 **Migration to the Cloud**               | No         | 1 hour                         | 4 hours         | 30 days
 **Private Cloud**                        | 10% of asset cost (CAPEX), From £10k (OPEX) | 3 - 24 months | N/A | 30 days and early termination fee
@@ -54,12 +52,10 @@ This article is designed to provide you with a top level comparison for our main
 **UKCloud for Oracle Software**          | 1 Core, 8 GiB   | 12 Cores, 128 GiB | Per VM per hour (per GiB per month storage) | Yes
 **UKCloud for Red Hat OpenShift**        | N/A             | N/A               | Per node per month                          | Yes
 **UKCloud for VMware**                   | 1 vCPU, 500 MiB | 12 vCPU, 128 GiB  | Per VM per hour                             | Yes
-**Cloud GPU**                            | N/A             | N/A               | per hour (per month for HPC)                | Yes
 **Cloud Storage**                        | N/A             | N/A               | Monthly                                     | Yes
 **Cross Domain Security Zone**           | 1 vCPU, 2 GiB   | 8vCPU, 96 GiB     | Monthly for baseline, hourly for VM         | No
 **Disaster Recovery as a Service**       | N/A             | N/A               | Per VM per hour                             | Yes
 **Email & Collaboration as a Service**   | N/A             | N/A               | Monthly per mailbox                         | Yes
-**High Performance Compute**             | N/A             | N/A               | Pack + storage per month                    | No
 **Managed Monitoring as a Service**      | N/A             | N/A               | Monthly                                     | &nbsp;
 **Migration to the Cloud**               | N/A             | N/A               | Per VM per hour                             | Yes
 **Private Cloud**                        | N/A             | N/A               | Monthly                                     | No
@@ -79,12 +75,10 @@ This article is designed to provide you with a top level comparison for our main
 **UKCloud for Oracle Software**          | Non-HA=99.95% , HA=99.99%                    | 10% of monthly spend of affected OVM                                 | 1% per 1% or part thereof below 99.90% | Excluded
 **UKCloud for Red Hat OpenShift**        | 99.95%                                       | 3% of monthly spend for affected UKCloud deployed OpenShift platform | 1% per 1% or part thereof below 99.90% | Excluded
 **UKCloud for VMware**                   | ESSENTIAL/PRIORITY=99.95%, POWER=99.99%      | 3% (ESSENTIAL), 5% (POWER/PRIORITY) or part thereof below SLA        | 1% per 1% or part thereof below 99.90% | Included (ESSENTIAL/POWER), Excluded (PRIORITY)
-**Cloud GPU**                            | 99.90%                                       | 3% of monthly spend per 5% below SLA                                 | 1% per 1% or part thereof below 99.90% | Excluded
 **Cloud Storage**                        | STANDARD=99.95%, ENHANCED=99.99%             | STANDARD=10% monthly spend, ENHANCED=15% monthly spend               | 1% per 1% or part thereof below 99.90% | Excluded
 **Cross Domain Security Zone**           | 99.90%                                       | 10% of monthly spend                                                 | 1% per 1% or part thereof below 99.90% | Excluded
 **Disaster Recovery as a Service**       | N/A                                          | N/A                                                                  | N/A                                    | N/A
 **Email & Collaboration as a Service**   | 99.99%                                       | 10% of monthly spend per 5% below SLA                                | 1% per 1% or part thereof below 99.90% | Excluded
-**High Performance Compute**             | 99.90%                                       | 5% of monthly spend for the affected compute platform                | 1% per 1% or part thereof below 99.90% | Excluded
 **Managed Monitoring as a Service**      | 99.99%                                       | 1% of Managed Monitoring as a Service spend, per affected customer environment | N/A                          | Excluded
 **Migration to the Cloud**               | N/A                                          | N/A                                                                  | N/A                                    | N/A
 **Private Cloud**                        | 99.99%                                       | 10% of monthly spend                                                 | 1% per 1% or part thereof below 99.90% | Excluded
@@ -104,12 +98,10 @@ This article is designed to provide you with a top level comparison for our main
 **UKCloud for Oracle Software**          | Commitment, Annual subscription, Cloud Credits
 **UKCloud for Red Hat OpenShift**        | Commitment, Cloud Credits
 **UKCloud for VMware**                   | Commitment, Annual subscription, Cloud Credits
-**Cloud GPU**                            | Commitment, Annual subscription, Cloud Credits
 **Cloud Storage**                        | Cloud Credits, product-specific discounts available
 **Cross Domain Security Zone**           | Commitment, Cloud Credits
 **Disaster Recovery as a Service**       | Cloud Credits
 **Email & Collaboration as a Service**   | Commitment, Cloud Credits
-**High Performance Compute**             | Cloud Credits
 **Managed Monitoring as a Service**      | Commitment, Cloud Credits
 **Migration to the Cloud**               | Cloud Credits
 **Private Cloud**                        | Cloud Credits
@@ -123,13 +115,7 @@ This article is designed to provide you with a top level comparison for our main
 ***
 
 > [!NOTE]
-> The following products are no longer available for sale. They are included in this article to support existing customers of the product only:
->
-> - High Performance Compute
->
-> - Email and Collaboration as a Service
->
-> - Cloud GPU
+> Email and Collaboration as a Service is no longer available for sale. It is included in this article to support existing customers of the product only.
 
 ## Feedback
 
