@@ -314,52 +314,6 @@
 <li><p>The amount billed to the Customer is therefore £7,440 - £223.20= <strong>£7,216.80</strong></p>
 </li>
 </ul>
-<h2 id="cloud-gpu">Cloud GPU</h2>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>This service is no longer available for sale. The following information is provided to support existing customers of the service only.</p>
-</div>
-<h3 id="what-is-the-sla-for-cloud-gpu">What is the SLA for Cloud GPU?</h3>
-<p>The SLA for Cloud GPU is 99.90%.</p>
-<h3 id="how-is-the-sla-measured">How is the SLA measured?</h3>
-<p>Unavailability applies to the inability to connect to a new GPU resource in the event of a failure of a GPU service within a single zone. Failure condition is following a hardware fault recognised at the IaaS layer or below, and within UKCloud-controlled components.</p>
-<h3 id="how-does-this-change-the-sla-of-my-ukcloud-for-vmware-vms">How does this change the SLA of my UKCloud for VMware VMs?</h3>
-<p>The SLA of 99.90% supersedes any other SLA relating to the VM that the GPU is associated with.</p>
-<h3 id="is-maintenance-included-in-this-calculation">Is maintenance included in this calculation?</h3>
-<p>Planned and Emergency Maintenance are excluded from calculations.</p>
-<h3 id="how-do-you-monitor-the-availability-of-cloud-gpu">How do you monitor the availability of Cloud GPU?</h3>
-<p>We use NVIDIA GRID to relay health information from each individual GPU to our Network Operations Centre (NOC) monitoring tools. If a GPU alert is generated that shows GPU failure we will attempt to move any workloads from that GPU onto a new GPU. If we are unable to move the VM to a new GPU, then an SLA event is triggered.</p>
-<h3 id="can-you-give-me-a-worked-example-for-cloud-gpu-sla">Can you give me a worked example for Cloud GPU SLA?</h3>
-<p>Example factors</p>
-<ul>
-<li><p>Total hours in January = 744</p>
-</li>
-<li><p>Cost of a GPU per hour = £1.28</p>
-</li>
-<li><p>Availability Commitment = 99.90%</p>
-</li>
-<li><p>Service Credit Payment = 3%</p>
-</li>
-</ul>
-<p>Scenario - A GPU enabled VM is running and available for the month of January except for a two-hour period when the service is deemed unavailable.</p>
-<p>Are Service Credits applicable?</p>
-<ul>
-<li><p>Total minutes in the month = 44,640</p>
-</li>
-<li><p>Total minutes service available = 44,520</p>
-</li>
-<li><p>The two-hour outage means Percentage Availability of service is 99.73% which is below the Availability Commitment of 99.90% - the customer is therefore eligible for a Service Credit.</p>
-</li>
-</ul>
-<p>How much is payable?</p>
-<ul>
-<li><p>The bill for the customer at the end of the month would be £952.32 (before credits are applied)</p>
-</li>
-<li><p>The Service Credit is 3% of the amount billed to that VM during the calendar month = £28.57</p>
-</li>
-<li><p>The amount billed to the customer is therefore £952.32 - £28.57 = £923.75</p>
-</li>
-</ul>
 <h2 id="ukcloud-for-oracle-software">UKCloud for Oracle Software</h2>
 <h3 id="how-do-you-offer-an-sla-on-ukcloud-for-oracle-software">How do you offer an SLA on UKCloud for Oracle Software?</h3>
 <p>UKCloud monitors two main components of the UKCloud for Oracle Software service to provide the best overall measure of service availability. The first component is the physical host server that the Oracle Virtual Machine (OVM) is running on. This confirms that the OVM has resources and can be available. The second component is the data store which ensures that the storage associated with the OVM is accessible. By monitoring these two components, UKCloud believes that we can provide the best overall view of the availability of the service.</p>

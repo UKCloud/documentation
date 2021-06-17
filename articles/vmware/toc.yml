@@ -96,10 +96,6 @@
     href: vmw-how-retrieve-utilisation-metrics.md
   - name: Securely manage permissions for a specific vApp
     href: vmw-how-manage-vapp-permissions.md
-  - name: Set up Cloud GPU Compute for VMware
-    href: vmw-how-setup-gpu-compute.md
-  - name: Set up Cloud GPU Visualisation for VMware
-    href: vmw-how-setup-gpu-visualisation.md
   - name: Upgrade your edge gateway
     href: vmw-how-upgrade-edge.md
   - name: Upload ISO or FLP media
