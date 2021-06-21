@@ -3,8 +3,8 @@ title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: shighmoor
-reviewer: myoung 
-lastreviewed: 12/05/2021
+reviewer: aboyton 
+lastreviewed: 16/06/2021
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -18,6 +18,16 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 2.14.0
+
+Date: 16th June 2021
+
+Feature update
+
+Details:
+
+- Allow customers to create compute services in Zone 2E
 
 ## Release 2.13.0
 
