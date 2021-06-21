@@ -2,9 +2,9 @@
 title: Journaling Protection FAQs
 description: Frequently asked questions for Journaling Protection (powered by Zerto)
 services: vmware
-author: Matt Warner
-reviewer:
-lastreviewed: 25/07/2018 15:32:54
+author: mwarner
+reviewer: acirel
+lastreviewed: 07/06/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -93,17 +93,17 @@ The charge if the VM was turned off for the whole month:
 
 Currently, you can carry out the following actions using Journaling Protection:
 
-- Define Virtual Protection Groups (VPGs) which map to one or more vApp. These will allow you to maintain a set of rules that will apply to all VMs within the VPG. Rules include settings such as the journaling location and network mapping
+- Define virtual protection groups (VPGs) that map to one or more vApp. These allow you to maintain a set of rules that apply to all VMs within the VPG. Rules include settings such as the journaling location and network mapping.
 
-- State a desired location that the VM journal is to be stored in (for example, another UKCloud region)
+- State a desired location that the VM journal is to be stored in (for example, another UKCloud region).
 
-- View the current RPO and RTO (recovery point objective) or RTO (recovery time objectives) are for their protected VMs.
+- View the current RPO (recovery point objective) and RTO (recovery time objectives) for your protected VMs.
 
-- Self-service restore vApps from a journal via the portal from any point contained within the journal
+- Restore vApps (self-service) from a journal via the portal from any point contained within the journal.
 
-- View real-time notifications within the Zerto portal to check if VMs are not meeting RPO or RTO targets
+- View real-time notifications within the Zerto portal to check if VMs are not meeting RPO or RTO targets.
 
-- Perform disaster recovery tests by recovering vApps into the recovery destination
+- Perform disaster recovery tests by recovering vApps into the recovery destination.
 
 ### Can I set different retention policies for my vApps?
 
@@ -111,7 +111,7 @@ Yes. Each vApp maps to a VPG, and each VPG can have its own retention policy. Fo
 
 ### Is this a managed service?
 
-No. UKCloud have implemented Journaling Protection to be available for UKCloud for VMware workloads as an on-platform service and will ensure that the service is available and updated accordingly. Once the service has been available for your workloads, you will be responsible for managing the service via the UKCloud or Journaling Protection portal (powered by Zerto).
+No. UKCloud have implemented Journaling Protection to be available for UKCloud for VMware workloads as an on-platform service and will ensure that the service is available and updated accordingly. Once the service has been available for your workloads, you will be responsible for managing the service via the UKCloud for Journaling Protection portal (powered by Zerto).
 
 ### How do I make changes to my Journaling Protection?
 
@@ -159,7 +159,7 @@ The one exception to this is if you have an existing VPG, and one VM is powered 
 
 ### Is Journaling Protection enabled in all regions?
 
-Journaling Protection is currently enabled in all regions. However, only regions 5 and 6 are used as the recovery destination regions due to performance and capacity management reasons. In order to check the latest status as to what services are available in each region, please check [*UKCloud services by region*](../other/other-ref-services-by-region.md).
+Journaling Protection is currently enabled in all regions. However, only regions 5, 6, 13 and 14 are used as the recovery destination regions due to performance and capacity management reasons. To check the latest status as to which services are available in each region, see [*UKCloud services by region*](../other/other-ref-services-by-region.md).
 
 ### Can I use Journaling Protection with VDCs that are in the same data centre?
 

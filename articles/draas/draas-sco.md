@@ -2,9 +2,9 @@
 title: Disaster Recovery as a Service Service Scope
 description: outlines important details regarding the Disaster Recovery to the Cloud service
 services: draas
-author: Steve Hall
-reviewer: Guy Martin
-lastreviewed: 28/06/2019
+author: shall
+reviewer: acirel
+lastreviewed: 27/05/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -61,7 +61,7 @@ If you require support managing your local Zerto installation, we have a wide ec
 
 ## Frequency and timing
 
-UKCloud's Disaster Recovery as a Service is designed to provide recovery points that are as little as seconds behind the running VM.
+UKCloud's Disaster Recovery as a Service is designed to provide recovery points that are only seconds behind the running VM.
 
 Our standard profile provides:
 

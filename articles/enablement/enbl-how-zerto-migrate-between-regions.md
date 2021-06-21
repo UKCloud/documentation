@@ -3,8 +3,8 @@ title: How to migrate your workloads between UKCloud regions
 description: This article describes how to migrate your existing UKCloud for VMware workloads from one region in our cloud platform to another
 services: enablement
 author: shall
-reviewer: gsohal
-lastreviewed: 15/04/2020
+reviewer: acirel
+lastreviewed: 10/06/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -123,42 +123,47 @@ Within Zerto, you have two options for migrating your workloads:
 
 To move a VPG:
 
-1. [*Log in to ZSSP*](../vmware/vmw-how-zerto-access-zssp.md) using the ZSSP login link for the zone in which your target VDC is located.
+1. [*Log in to ZSSP*](../vmware/vmw-how-zerto-access-zssp.md).
 
-2. From the **Actions** menu, select **Move VPG**.
+   Use the ZSSP login link for the zone in which your target VDC is located.
 
-   ![Move VPG menu option](images/vmw-zerto-mnu-move-vpg.png)
+2. At the bottom of the page, select **Move**, then **VPG**.
+
+   ![Move VPG menu option](images/enbl-zerto-mnu-move-vpg.png)
 
 3. In the *Move* wizard, on the *Select VPGs* page, select one or more VPGs that you want to move then click **Next**.
 
-   ![Move wizard - Select VPGs page](images/vmw-zerto-move-vpgs.png)
+   ![Move wizard - Select VPGs page](images/enbl-zerto-move-vpgs.png)
+
+   > [!NOTE]
+   > When you move a VPG, you cannot select which checkpoint to use. Zerto uses the most recent checkpoint.
 
 4. On the *Execute Parameters* page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, click the **Commit Policy** field and select:
 
-    - **Auto-Commit** if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.
+   - **Auto-Commit** if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.
 
-    - **Auto-Rollback** if you want to automatically roll back the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440  minutes (24 hours). If you want the move to be immediately rolled back, enter 0.
+   - **Auto-Rollback** if you want to automatically roll back the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440  minutes (24 hours). If you want the move to be immediately rolled back, enter 0.
 
-    - **None** if you do not want to apply a commit policy. You must manually commit or roll back the move.
+   - **None** if you do not want to apply a commit policy. You must manually commit or roll back the move.
 
 5. The source VMs must be powered off before they can be migrated. If the VMs cannot be gracefully shut down, you can force a shutdown. To force shutdown, select the **Force Shutdown** check box. If you do not select this option and the VMs cannot be gracefully shut down, the move process fails.
 
 6. Reverse protection ensures that when the source VMs are migrated to the target region, the source region becomes the new target region. Reverse protection is enabled by default, but you should disable it by clicking the **Reverse Protection** field and deselecting the **Reverse** check box.
 
-   ![Move wizard - Execute Parameters page](images/vmw-zerto-move-params.png)
+   ![Move wizard - Execute Parameters page](images/enbl-zerto-move-params.png)
 
 7. Click **Next**.
 
 8. On the *Move* page, review the diagram to see the number of VPGs and VMs included in the move and where they'll be moved to, then click **Start Move**.
 
-    The move process creates the VMs in the target region.
+   The move process creates the VMs in the target region.
 
-    > [!NOTE]
-    > If a VM already exists on the target region with the same name as one of the source VMs, a number is added to the end of the target VM name to ensure that it is unique.
+   > [!NOTE]
+   > If a VM already exists on the target region with the same name as one of the source VMs, a number is added to the end of the target VM name to ensure that it is unique.
 
 9. If you set a commit policy with a time greater than zero, you can check the integrity of the migrated VMs before committing (or rolling back) the migration. When you've finished testing, you can either wait for the time to elapse before the auto commit or auto rollback, or on the *VPGs* tab, click the **VPG Name** and then click the **Commit** or **Rollback** icon as required.
 
-    After the migrated VMs are up and running and committed in the target region, the powered off VMs in the source region are removed from the source region and data from the journal is promoted to the migrated VMs. You should have disabled reverse protection to stop your migrated VMs from being protected on the source region.
+   After the migrated VMs are up and running and committed in the target region, the powered off VMs in the source region are removed from the source region and data from the journal is promoted to the migrated VMs. You should have disabled reverse protection to stop your migrated VMs from being protected on the source region.
 
 ## Next steps
 
