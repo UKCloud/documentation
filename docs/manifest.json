@@ -11158,18 +11158,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-hadoop-proposition.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-hadoop-proposition.html",
-          "hash": "ABJzTOO39AgsfxqZHQl6SlPVg2xR2P9KtZHzNE9pAGI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-high-availability.md",
       "output": {
         ".html": {
@@ -11486,7 +11474,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "8JWtzcGUyLoyHsjMXga0MQMuvPp3xtm7R2WM69Bsaq8="
+          "hash": "bapETXtEiZdHAjtIjLFh2m8O8najkXn/XSy38J4gcjM="
         }
       },
       "is_incremental": false,
@@ -22535,7 +22523,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 460,
+          "total_file_count": 459,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -28,8 +28,6 @@
   items:
   - name: Best practice customer guide
     href: other-ref-best-practice-guide.md
-  - name: Big Data & Hadoop Service Proposition
-    href: other-ref-hadoop-proposition.md
   - name: Cloud economics
     href: other-ref-cloud-economics.md
   - name: Data centre advance notice requirements
