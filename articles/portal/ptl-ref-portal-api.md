@@ -1036,7 +1036,7 @@ Parameter name | Description | Type | Mandatory (Default)
 ---------------|-------------|------|--------------------
 type | The object type; must be Vorg | String | Y
 name | The name of the vOrg | String | Y
-zone id | The zone in which to create the vOrg</br>Valid values:</br>- B (for region 5, Assured)</br>- D (for region 5, Elevated)</br>- F (for region 6, Assured)</br>- 12 (for region 6, Elevated)<br>-2D (region 13, Assured)<br>-2E (region 14, Assured) | String | Y
+zone id | The zone in which to create the vOrg</br>Valid values:</br>- B (for region 5, Assured)</br>- D (for region 5, Elevated)</br>- F (for region 6, Assured)</br>- 12 (for region 6, Elevated)<br>- 2D (region 13, Assured)<br>- 2E (region 14, Assured) | String | Y
 
 #### URI parameters
 
