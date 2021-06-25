@@ -4,7 +4,7 @@ description: Outlines important details regarding UKCloud's Managed Web Server s
 services: managed-services
 author: Steve Dixon
 reviewer:
-lastreviewed: 28/01/2021
+lastreviewed: 25/06/2021
 toc_rootlink: Advanced Managed Services
 toc_sub1: Managed Web Server
 toc_sub2:
@@ -60,7 +60,7 @@ The following tables outline the boundaries of responsibilities for the Managed 
 | Deploy                                 | N               | Y        | £                             |
 | Post deployment config                 | N               | Y        | £                             |
 | Initial instantiation of HA/clustering | N               | Y        | £                             |
-| Disaster recovery planning and design  | N               | Y        | N                             |
+| Disaster recovery planning and design  | N               | Y        | £                             |
 
 ### Transition
 
@@ -68,7 +68,7 @@ The following tables outline the boundaries of responsibilities for the Managed 
 |-------------------------------------------------------------|-----------------|----------|-------------------------------|
 | Existing web services validation (quality/integrity/design) | N               | Y        | £                             |
 | Customer data (for example, sites/domain) migrations        | N               | Y        | £                             |
-| Implementation of disaster recovery                         | N               | Y        | N                             |
+| Implementation of disaster recovery                         | N               | Y         |£                              |
 
 ### In-life - Monitoring
 
@@ -76,20 +76,18 @@ The following tables outline the boundaries of responsibilities for the Managed 
 |---------------------------------------------------------------------------------------|-----------------|----------|-------------------------------|
 | IaaS platform and networking (UKCloud platform - hypervisor and infrastructure below) | Y               | N        | N                             |
 | VM availability                                                                       | Y               | N        | N                             |
-| VM CDM monitoring                                                                     | Y               | N        | N                             |
+| VM CPU, Disk, Memory (CDM) monitoring                                                 | Y               | N        | N                             |
 | Web server service availability                                                       | Y               | N        | N                             |
 | Web server service status change                                                      | Y               | N        | N                             |
 | Web server backup pass/fail                                                           | Y               | N        | N                             |
 | HA replication monitoring                                                             | Y               | N        | N                             |
-| Site certificates - providing/self-signing/renewing                                   | N               | Y        | N                             |
-| Site certificates - applying                                                          | Y               | N        | N                             |
-| Site certificates - expiry monitoring                                                 | Y               | N        | N                             |
+| Site certificates: Expiry monitoring                                                  | Y               | N        | N                             |
 
 ### In-life - Patching
 
 | Element                                                            | UKCloud Support | Customer | UKCloud Professional Services |
 |--------------------------------------------------------------------|-----------------|----------|-------------------------------|
-| Web server (y and z stream/minor/in-version patches)               | N               | N        | N                             |
+| Web server (y and z stream/minor/in-version patches)               | Y               | N        | N                             |
 | Web server major version Upgrades                                  | N               | Y        | £                             |
 | Validation of patches against additional modules                   | N               | Y        | £                             |
 | Validation of patches against third-party integrated apps/services | N               | Y        | £                             |
@@ -111,6 +109,9 @@ The following tables outline the boundaries of responsibilities for the Managed 
 | Installation of additional modules                                                                                                     | N               | Y        | £                             |
 | Management and administration of data and resources within the web server (for example sites, domains, FTP users, general permissions) | N               | Y        | £                             |
 | Encryption and all associated key management                                                                                           | N               | Y        | N                             |
+| Site certificates: Providing/self-signing/renewing                                                                                     | N               | Y        | N                             |
+| Site certificates: Applying                                                                                                            | Y               | N        | N                             |
+| Site Certificates: General Management (excluding providing/procuring/self-signing/renewing)                                            | Y               | N        | N                             |
 
 ### In-life - Troubleshooting and remediation
 
@@ -121,7 +122,7 @@ The following tables outline the boundaries of responsibilities for the Managed 
 | Ad-hoc performance issues (remediation)                                                  | Y (basic)                             | Y        | £                             |
 | Web server services issues (for example, services fail to start, service keeps stopping) | Y                                     | N        | N                             |
 | Issue with IaaS/VM                                                                       | Y                                     | N        | N                             |
-| Expansion of virtual capacity                                                            | Y (in consultation with the customer) | N        | N                             |
+| Expansion of virtual capacity                                                            | N                                     | Y        | £                             |
 | Web server service errors (identification and triage)                                    | Y                                     | N        | N                             |
 | Web server service errors (remediation)                                                  | Y                                     | N        | N                             |
 | Customer sites/domains integrity and validation                                          | N                                     | Y        | £                             |
