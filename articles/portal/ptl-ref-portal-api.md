@@ -1020,7 +1020,7 @@ Creates a vOrg in the specified account in the specified zone.
 The authenticated user who creates the vOrg is automatically granted full administrative control of the compute service, enabling creation of VDCs and edge gateways immediately via the Portal API.
 
 > [!NOTE]
-> This API endpoint is available only in Regions 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
+> This API endpoint is available in regions 5, 6, 13 and 14 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
 ### Request
 
@@ -1036,7 +1036,7 @@ Parameter name | Description | Type | Mandatory (Default)
 ---------------|-------------|------|--------------------
 type | The object type; must be Vorg | String | Y
 name | The name of the vOrg | String | Y
-zone id | The zone in which to create the vOrg</br>Valid values:</br>- B (for Region 5, Assured)</br>- D (for Region 5, Elevated)</br>- F (for Region 6, Assured)</br>- 12 (for Region 6, Elevated) | String | Y
+zone id | The zone in which to create the vOrg</br>Valid values:</br>- B (for region 5, Assured)</br>- D (for region 5, Elevated)</br>- F (for region 6, Assured)</br>- 12 (for region 6, Elevated)<br>-2D (region 13, Assured)<br>-2E (region 14, Assured) | String | Y
 
 #### URI parameters
 
@@ -1169,7 +1169,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 Returns information about the progress of a specific vOrg build.
 
 > [!NOTE]
-> This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
+> This API endpoint is available in regions 5, 6, 13 and 14 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
 ### Request
 
@@ -1663,7 +1663,7 @@ curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/1/vorgs/
 Creates a VDC in the specified account under the specified compute service (vOrg).
 
 > [!NOTE]
-> This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
+> This API endpoint is available in regions 5, 6, 13 and 14 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
 ### Request
 
@@ -1832,7 +1832,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 Returns information about the progress of a specific VDC build.
 
 > [!NOTE]
-> This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
+> This API endpoint is available in regions 5, 6, 13 and 14 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
 ### Request
 
@@ -2202,7 +2202,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 Creates an edge gateway in the specified account under the specified organisation and VDC.
 
 > [!NOTE]
-> This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
+> This API endpoint is available in regions 5, 6, 13 and 14 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
 ### Request
 
@@ -2327,7 +2327,7 @@ state | String | The state of the build<br>Valid values:<br>-approved -- edge ga
 Provides information about the progress of a specific edge gateway build.
 
 > [!NOTE]
-> This API endpoint is available only in Region 5 and 6 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
+> This API endpoint is available in regions 5, 6, 13 and 14 (for information about regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md)).
 
 ### Request
 

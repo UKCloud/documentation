@@ -149,7 +149,7 @@ The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE an
 
 For regions 1, 2, 7 or 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size.
 
-For regions 5 or 6, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.
+For regions 5, 6, 13 or 14, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.
 
 ### Can I restrict the automated VM snapshot backup to specific files or directories?
 

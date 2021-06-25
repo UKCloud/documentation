@@ -28,8 +28,7 @@ For more information about any of the API endpoints used in this guide, see the 
 
 ## About the examples in this guide
 
-The examples in this guide use endpoints that are available only in regions 5 and 6 of the UKCloud platform. If your environment is in a different region, you won't be able to use these endpoints yourself, however you should still find the guide useful as a reference for how to
-use the Portal API. For more information about UKCloud regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md).
+The examples in this guide use endpoints that are available only in regions 5, 6, 13 and 14 of the UKCloud platform. If your environment is in a different region, you won't be able to use these endpoints yourself, however you should still find the guide useful as a reference for how to use the Portal API. For more information about UKCloud regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md).
 
 The examples in this guide are shown as curl commands, but you may find it easier to work with the API by installing a REST client (for example, Insomnia).
 
