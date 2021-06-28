@@ -19,7 +19,7 @@ toc_mdlink: vmw-ref-powercli-vcloud.md
 
 To establish a connection to VMware Cloud Director using PowerShell, use the following command:
 
-    Connect-CIServer -Server <API-URL> -org <ORG-ID> -User <USERNAME> -Password <PASSWORD>
+    Connect-CIServer -Server <API-URL> -Org <ORG-ID> -User <USERNAME> -Password <PASSWORD>
 
 You can find the details for API-URL, ORG-ID, and USERNAME in the UKCloud Portal, under the API section of the top right menu.
 
