@@ -3,8 +3,8 @@ title: Cloning vApps using PowerCLI
 description: Provides customers with a scripted facility to clone an existing vApp.
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: John Whititngham
+lastreviewed: 28/06/2021 10:30:00
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,9 +17,9 @@ toc_mdlink: vmw-ref-cloning-vapps.md
 
 # Cloning vApps using PowerCLI
 
-The vApp can be cloned whilst it is running as long as there is enough storage available on the source storage profiles, associated with the existing vApp. There is a manual GUI option where the vApp can be copied on the UKCloud Portal however this can be a lengthy process if there are number of vApps needing to be copied over. A good use case for this example would be if a customer was utilising like for like copies of production for pre-production environments.
+The vApp can be cloned whilst it is running as long as there is enough storage available on the source storage profiles associated with the existing vApp. There is a manual GUI option where the vApp can be copied on the UKCloud Portal, however this can be a lengthy process if there are number of vApps needing to be copied over. A good use case for this example would be if a customer was utilising like for like copies of production for pre-production environments.
 
-In order to do the cloning efficiently a PowerCLI script is required. This article will guide you through the scripts required to automate the process of cloning, as well as removing this once a vApp is no longer required. The PowerCLI scripts can be plugged into various different configuration like tools such as Puppet or Chef and can also be integrated into orchestration tools such as Jenkins.
+In order to do the cloning efficiently a PowerCLI script is required. This article will guide you through the scripts required to automate the process of cloning, as well as removing the cloned vApp once it is no longer required. The PowerCLI scripts can be plugged into various different configuration like tools such as Puppet or Chef and can also be integrated into orchestration tools such as Jenkins and Ansible.
 
 ### Script to clone vApps
 
@@ -29,11 +29,11 @@ The example script clones the specified vApp into an existing catalogue within t
 
 ### Stop and remove vApp using PowerCLI
 
-When a vApp has been used and is no longer required, there is a remove PowerCLI script that provides an automated way of removing the cloned environment. This script stops the vAPP and then deletes it from the catalogue specified.
+When a vApp has been used and is no longer required, there is a remove PowerCLI script that provides an automated way of removing the cloned environment. This script stops the vApp and then deletes it from the catalogue specified.
 
 The scripts are executed using VMware vSphere PowerCLI. VMware vSphere PowerCLI is a command-line interface (CLI) tool for automating vSphere and vCloud management.
 
-You can download the tool from: <https://my.vmware.com/web/vmware/details?downloadGroup=PCLI600R3&productId=536>.
+Download, installation and reference documentation is provided on the VMware Developer portal: <https://developer.vmware.com/powercli>.
 
 ![Screenshot of vSphere PowerCLI](images/vsphere_powercli.png)
 
