@@ -2,9 +2,9 @@
 title: PowerCLI command for interacting with the vCloud API
 description: Details the PowerCLI command to use when interacting with the vCloud API from PowerCLI
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+author: shighmoor
+reviewer: jwhittingham
+lastreviewed: 28/06/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
