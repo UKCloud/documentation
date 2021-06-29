@@ -2,9 +2,9 @@
 title: Virtual machine data recovery options
 description: Provides an overview of the data recovery options available for your VMs
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+author: shighmoor
+reviewer: jpaddock
+lastreviewed: 28/06/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,13 +19,15 @@ toc_mdlink: vmw-ref-vm-data-recovery.md
 
 ## Introduction
 
-There are three methods of creating a recovery point for your virtual machines (VMs):
+There are four methods of creating a recovery point for your virtual machines (VMs):
 
 - VM snapshot - provides the ability to rollback or recover from a change. We recommend that snapshots on a single VM do not span more than 14 days for performance reasons elaborated on below.
 
 - VM copy - creates a master image to clone additional VMs from an existing VM.
 
 - VM backup - provides disaster recovery from file corruption or deletion.
+
+- Journaling Protection - provides a self-service replication and recovery tool utilising journals to capture changes.
 
 Each of these methods is discussed below to ensure that you are able to backup and recover your data in the most efficient and appropriate way.
 
@@ -81,7 +83,7 @@ In the card for the VM that you want to copy, select **Actions** then **Copy to*
 
 You should view backup as a disaster recovery mechanism, whereby you can restore entire environments or individual files in the event of the original becoming unavailable as a result of corruption or accidental deletion.
 
-You can add any VM to the automated snapshot backup schedule so that it is automatically backed up on a daily basis. You can choose to retain snapshot backups for either 14 or 28 days. Data is backed up at the hypervisor level and provides a crash‑consistent image.
+You can add any VM to the automated snapshot backup schedule so that it is automatically backed up on a daily basis (Snapshot Protection). You can choose to retain snapshot backups for either 14 or 28 days. Data is backed up at the hypervisor level and provides a crash‑consistent image.
 
 ### Use case
 
@@ -98,6 +100,28 @@ Time taken for a restoration request to be completed (dependent on the amount of
 ### How to add a VM to the automated snapshot backup schedule
 
 For information about how to add a VM to the automated backup schedule, see [*How to manage snapshot protection for your VMs*](vmw-how-manage-snapshot-protection.md).
+
+## Journaling Protection
+
+A disaster recovery mechanism, which utilises a journal to capture changes that take place within a vApp. The contents of the journal are stored in a different UKCloud region.
+
+![Journaling process](images/vmw-zerto-journaling.png)
+
+### Use case
+
+In the event of a disruption to service &ndash; either at the service provider level (loss of infrastructure) or something localised to the application (ransomware attack, problematic software upgrade), you can recover the VMs into your recovery site, either with minimal data loss or to a specified point in time.
+
+### Pros
+
+The journal can span up to 28 days of a VM's history, with recovery points just seconds apart, allowing for a near zero recovery point objective (RPO). Journaling Protection provides self-service recovery and disaster recovery testing via the fully-featured portal.
+
+### Cons
+
+Journaling Protection is not a managed service, so it's the customer's responsibility to manage the service via the portal.
+
+### How to set up Journaling Protection
+
+For information about how to set up Journaling Protection, see the [*Getting Started Guide for Journaling Protection*](vmw-gs-journaling.md).
 
 ## Feedback
 
