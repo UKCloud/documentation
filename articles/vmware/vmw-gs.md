@@ -94,7 +94,7 @@ If you have the appropriate permissions, you can use the Portal to create a comp
 3. On the *Build Compute Service* page, from the **Zone** radio buttons, select the zone in which you want to create the new compute service.
 
     > [!NOTE]
-    > In the Portal, you can create compute services only in zones in regions 5 and 6.
+    > To create a compute service using the Portal, your environment must be in region 5, 6, 13 or 14.
 
 4. Enter a **Compute Service Name**.
 
@@ -130,19 +130,19 @@ After creating your compute service, the next step is to create one or more VDCs
 > You can also create a VDC using the Portal API. For more information, see [*UKCloud Portal API Reference Guide*](../portal/ptl-ref-portal-api.md#post-apiaccountsaccount_idvorgsvorg_idvdcs)
 
 > [!NOTE]
-> You can build VDCs in any of your compute services in regions 5 and 6, including those created by support tickets or the Portal API, not just those you created using the Portal.
+> You can build VDCs in any of your compute services in regions 5, 6, 13 and 14, including those created by support tickets or the Portal API, not just those you created using the Portal.
 
 1. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service in which you want to create the VDC.
 
     > [!NOTE]
-    > To create a VDC using the Portal, the compute service must be in region 5 or 6.
+    > To create a VDC using the Portal, the compute service must be in region 5, 6, 13 or 14.
 
     ![Compute services menu option](images/vmw-portal-mnu-select-compute-service.png)
 
 2. From the **Actions** menu, select **Build VDC**.
 
     > [!NOTE]
-    > If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5 or 6.
+    > If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5, 6, 13 or 14.
 
     ![Build VDC menu option](images/vmw-portal-mnu-build-vdc.png)
 
