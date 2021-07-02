@@ -177,7 +177,7 @@
 <p>The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE and is available on both UKCloud platforms: Assured OFFICIAL (formerly IL2) and Elevated OFFICIAL (formerly IL3).</p>
 <h3 id="do-large-vms-affect-snapshot-backups">Do large VMs affect snapshot backups?</h3>
 <p>For regions 1, 2, 7 or 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size.</p>
-<p>For regions 5 or 6, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.</p>
+<p>For regions 5, 6, 13 or 14, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.</p>
 <h3 id="can-i-restrict-the-automated-vm-snapshot-backup-to-specific-files-or-directories">Can I restrict the automated VM snapshot backup to specific files or directories?</h3>
 <p>No, this is not currently possible. You can implement your own protection solution if this is a requirement.</p>
 <h3 id="where-is-the-protected-data-stored">Where is the protected data stored?</h3>
