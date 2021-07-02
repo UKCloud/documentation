@@ -4,7 +4,7 @@ description: Provides instructions regarding disabling insecure cipher suites an
 services: openshift
 author: Ben Bacon
 reviewer: 
-lastreviewed: 24/06/2020
+lastreviewed: 14/06/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
