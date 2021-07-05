@@ -4,7 +4,7 @@ description: Outlines important details regarding UKCloud's Managed SQL Server s
 services: managed-services
 author: sdixon
 reviewer:
-lastreviewed: 18/09/2020
+lastreviewed: 05/07/2021
 toc_rootlink: Advanced Managed Services
 toc_sub1: Managed SQL Server
 toc_sub2:
@@ -107,9 +107,13 @@ Element                               | UKCloud Support | Customer | UKCloud Pro
 Backup configuration & implementation | Y               | N        | N
 Backup troubleshooting                | Y               | N        | N
 Backup restoration                    | Y               | N        | N
-Restoration troubleshooting           | Y               | N        | N
+Verification of backup data validity  | N               | Y        | N
+Backup restoration troubleshooting    | Y               | N        | N
 DR testing                            | N               | Y        | £
 DR invocation (where already defined) | Y               | N        | N
+
+> [!NOTE]
+> Although UKCloud is responsible for checking the integrity of SQL backups from a pass/fail/error monitoring perspective, the customer is ultimately responsible for verifying the validity of their backups. UKCloud strongly suggests the customer routinely recovers their database to a secondary instance and connects a copy of their application to verify it operates as expected. **As UKCloud has no understanding of a customer's application, backup data validation sits outside of the scope of this service.**
 
 ### In-life - Administration (DBA)
 
