@@ -1,0 +1,5 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+
+<div id="contentPost">
+    <button class="mishi-chat" id="mishi-chat" onclick="openChatWindow()"></button>
+</div>

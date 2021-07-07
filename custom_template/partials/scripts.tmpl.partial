@@ -20,3 +20,26 @@
 
   gtag('config', 'UA-57433193-6');
 </script>
+
+<!-- Global site Mishi chat bot -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{_rel}}styles/conversationWindow.js"></script>
+<script type="text/javascript" src="https://platform.mishi.ai/static/common/js/jquery-ui.min.js"></script>
+<!-- Breaks more menu button -->
+<!-- <script type="text/javascript" src="https://platform.mishi.ai/static/common/js/bootstrap.min.js"></script> -->
+<script type="text/javascript" src="https://platform.mishi.ai/static/common/js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="https://platform.mishi.ai/static/common/js/moment.js"></script>
+<script type="text/javascript" src="https://platform.mishi.ai/static/common/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="https://platform.mishi.ai/static/common/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="https://platform.mishi.ai/static/common/js/validator.min.js"></script>
+
+<script>
+    var ChatInst = null;
+    function openChatWindow() {
+        if (ChatInst) mishiChat().displayChat();
+        else ChatInst = mishiChat().create({title: "Mishi", client_id: "b-413aa656-5185-11eb-ad2f-0631f78817de", bot_id: "9146501a-3033-44d9-8f21-8bad2b39dc40", profileName: "Guest"});
+    }
+    setTimeout(function () {
+        openChatWindow();
+    }, 5000);
+</script>

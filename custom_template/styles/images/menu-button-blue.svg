@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>menu-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#2ACCDD" offset="0%"></stop>
+            <stop stop-color="#4C97E6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="My-Bots" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-617.000000, -667.000000)">
+        <g id="menu-button" transform="translate(617.000000, 667.000000)">
+            <g id="Group-3" fill="url(#linearGradient-1)">
+                <path d="M10.5,0 C4.704,0 0,4.704 0,10.5 C0,16.296 4.704,21 10.5,21 C16.296,21 21,16.296 21,10.5 C21,4.704 16.296,0 10.5,0 Z" id="Fill-1"></path>
+            </g>
+            <path d="M16.09825,9.8035 L4.90175,9.8035 C4.5115,9.8035 4.1965,10.10975 4.1965,10.5 C4.1965,10.88325 4.5115,11.1965 4.90175,11.1965 L16.09825,11.1965 C16.4885,11.1965 16.8035,10.88325 16.8035,10.5 C16.8035,10.10975 16.4885,9.8035 16.09825,9.8035 Z" id="Fill-4" fill="#FFFFFF"></path>
+            <path d="M16.09825,5.59825 L4.90175,5.59825 C4.5115,5.59825 4.1965,5.91325 4.1965,6.3035 C4.1965,6.685 4.5115,7 4.90175,7 L16.09825,7 C16.4885,7 16.8035,6.685 16.8035,6.3035 C16.8035,5.91325 16.4885,5.59825 16.09825,5.59825 Z" id="Fill-5" fill="#FFFFFF"></path>
+            <path d="M16.09825,14 L4.90175,14 C4.5115,14 4.1965,14.315 4.1965,14.6965 C4.1965,15.08675 4.5115,15.40175 4.90175,15.40175 L16.09825,15.40175 C16.4885,15.40175 16.8035,15.08675 16.8035,14.6965 C16.8035,14.315 16.4885,14 16.09825,14 Z" id="Fill-6" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
