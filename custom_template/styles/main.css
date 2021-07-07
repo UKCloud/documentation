@@ -19,6 +19,9 @@
   --color-background-alert-warning: #664b00;
   --color-foreground-alert-important: #a94442;
   --color-background-alert-important: #651b01;
+  --color-foreground-more-hover: #30545f;
+  --color-foreground-more: #ccd5dc;
+  --color-background-more: #2d2d30;
 }
 
 body.light-theme {
@@ -42,6 +45,9 @@ body.light-theme {
   --color-background-alert-warning: #fcf8e3;
   --color-foreground-alert-important: #a94442;
   --color-background-alert-important: #f2dede;
+  --color-foreground-more-hover: #333333;
+  --color-foreground-more: #333333;
+  --color-background-more: #ffffff;
 }
 
 @font-face {
@@ -128,12 +134,22 @@ a:hover {
   transition: all .2s ease;
 }
 
+.dropdown-menu {
+  background: var(--color-background-more)
+}
+
+.dropdown-menu > li > a {
+  color: var(--color-foreground-more)
+}
+
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   background-color: #0ca;
-  color: #30545f;
+  /*color: #30545f;*/
+  color: var(--color-foreground-more-hover);
   transition: all .2s ease;
 }
+
 
 .navbar-inverse {
   background-color: var(--color-background-navbar);
