@@ -1505,7 +1505,7 @@ function mishiChat() {
     this.create = function (config) {
         if (!config.client_id || chatWindowInst)
             return false;
-        config.botIcon = "../../styles/images/bot.png";
+        config.botIcon = "https://platform.mishi.ai/web/images/bot.png";
         config.orgId = "d7947ee8-c3e1-4548-8400-d5215e69b7d0";
         config.senderId = "user@email.com or any unique id";
         config.isAnonymous = true;

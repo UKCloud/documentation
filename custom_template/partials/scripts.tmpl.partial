@@ -23,7 +23,8 @@
 
 <!-- Global site Mishi chat bot -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="{{_rel}}styles/conversationWindow.js"></script>
+<!-- <script type="text/javascript" src="{{_rel}}styles/conversationWindow.js"></script> -->
+<script type="text/javascript" src="https://platform.mishi.ai/web/clients/UKCloud/conversationWindow.js"></script>
 <script type="text/javascript" src="https://platform.mishi.ai/static/common/js/jquery-ui.min.js"></script>
 <!-- Breaks more menu button -->
 <!-- <script type="text/javascript" src="https://platform.mishi.ai/static/common/js/bootstrap.min.js"></script> -->

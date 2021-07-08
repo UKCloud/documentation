@@ -949,14 +949,6 @@ code {
 
 }
 
-.page {
-  background-image: url('../styles/images/mishi_bgg.png');
-  width: 100%;
-  height: 900px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .mishi-chat:active,
 .mishi-chat:focus,
 .mishi-chat:hover {
@@ -976,5 +968,4 @@ code {
   background: transparent;
   background-image: url('../styles/images/launch.gif');
   background-size: cover;
-
 } 
