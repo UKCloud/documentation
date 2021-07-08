@@ -8,7 +8,7 @@
     <title>Managed SQL Server Service Scope </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Managed SQL Server Service Scope ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -395,7 +395,13 @@
 <td>N</td>
 </tr>
 <tr>
-<td>Restoration troubleshooting</td>
+<td>Verification of backup data validity</td>
+<td>N</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Backup restoration troubleshooting</td>
 <td>Y</td>
 <td>N</td>
 <td>N</td>
@@ -414,6 +420,10 @@
 </tr>
 </tbody>
 </table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Although UKCloud is responsible for checking the integrity of SQL backups from a pass/fail/error monitoring perspective, the customer is ultimately responsible for verifying the validity of their backups. UKCloud strongly suggests the customer routinely recovers their database to a secondary instance and connects a copy of their application to verify it operates as expected. <strong>As UKCloud has no understanding of a customer's application, backup data validation sits outside of the scope of this service.</strong></p>
+</div>
 <h3 id="in-life---administration-dba">In-life - Administration (DBA)</h3>
 <table>
 <thead>
@@ -656,7 +666,7 @@
           </div>
         </div>
       </footer>
-      
+
       <div id="cookie-cta" style="display: none;" aria-hidden="true">
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
