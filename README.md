@@ -1,5 +1,7 @@
 # Welcome to the UKCloud Knowledge Centre
 
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/UKCloud/documentation)
+
 ## Overview
 
 The UKCloud Knowledge Centre provides over 200 articles to help you understand and work with our platform. Articles include:
