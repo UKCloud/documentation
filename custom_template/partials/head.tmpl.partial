@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="{{_rel}}styles/docfx.vendor.css">
   <link rel="stylesheet" href="{{_rel}}styles/docfx.css">
   <link rel="stylesheet" href="{{_rel}}styles/main.css">
-  <link rel="stylesheet" type="text/css" href="{{_rel}}styles/conversationWindow.css"/>
-  <!-- <link rel="stylesheet" type="text/css" href="https://platform.mishi.ai/web/clients/UKCloud/conversationWindow.css"/> -->
+  <!-- <link rel="stylesheet" type="text/css" href="{{_rel}}styles/conversationWindow.css"/> -->
+  <link rel="stylesheet" type="text/css" href="https://platform.mishi.ai/web/clients/UKCloud/conversationWindow.css"/>
 
   <meta property="docfx:navrel" content="{{_navRel}}">
   <meta property="docfx:tocrel" content="{{_tocRel}}">
