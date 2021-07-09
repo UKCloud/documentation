@@ -13,20 +13,26 @@
 body.dark-theme {
   --color-bot-foreground: #ccd5dc;
   --color-bot-foreground-button: #27a18f;
+  --color-bot-foreground-button-disabled:  rgba(255, 255, 255, 0.11);
   --color-bot-foreground-placeholder: #ccd5dc;
   --color-bot-foreground-input: #ffffff;
   --color-bot-background: #2d2d30;
-  --color-bot-border: #2d2d30;
+  --color-bot-background-button: rgba(255, 255, 255, 0.05);
+  --color-bot-background-button-disabled: rgba(255, 255, 255, 0.04);
+  --color-bot-border: #4b4f56;
   --color-bot-background-chat:#2d2d30;
 }
 
 body.light-theme {
   --color-bot-foreground: #4b4f56;
   --color-bot-foreground-button: #27a18f;
+  --color-bot-foreground-button-disabled: rgba(0, 0, 0, 0.26);
   --color-bot-foreground-placeholder: #c2c2c2;
   --color-bot-foreground-input: #000000;
   --color-bot-background: #ffffff;
-  --color-bot-border: #e7e7e7;
+  --color-bot-background-button: #e0e0e0;
+  --color-bot-background-button-disabled: #f5f5f5;
+  --color-bot-border: #d5d5d5;
   --color-bot-background-chat: #ffffff; 
 }
 /* .wrapper {
@@ -193,7 +199,8 @@ body.light-theme {
   box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.1);
   border: none;
   position: relative;
-  background-color: #fff;
+  /* Causes unwanted white rounding around bottom left edge */
+  /* background-color: #fff; */
   background-clip: padding-box;
   border-radius: 15px;
   outline: 0;
@@ -208,7 +215,8 @@ body.light-theme {
   padding-left: 35px;
 }
 .mishi-chat-window-parent .chat-window-input-group input {
-  border: solid 1px #e2e2e2;
+  /* border: solid 1px #e2e2e2; */
+  border: solid 1px var(--color-bot-border);
   border-radius: 10px;
   padding: 0px 15px;
   margin-bottom:0;
@@ -240,7 +248,8 @@ body.light-theme {
   position: relative;
   border-radius: 15px;
   /* background: #ffffff; */
-  background: #ffff;
+  /* Causes unwanted white rounding around bottom left edge */
+  /* background: #ffff; */
   margin-bottom: 20px;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -624,7 +633,8 @@ body.light-theme {
   /* background: #ccc; */
   background: var(--color-bot-background-chat);
   /* border: 1px solid white; */
-  border: 0.5px solid #d5d5d5 !important;
+  /* border: 0.5px solid #d5d5d5 !important; */
+  border: 0.5px solid var(--color-bot-border) !important;
   margin: 5px 0 0 10px;
   max-width: 78%;
   color: var(--color-bot-foreground);
@@ -956,24 +966,32 @@ body.light-theme {
   font-size: 13px;
   /* background: #f2f4f6; */
   /* background: #ccc; */
-  background: var(--color-bot-background-chat);
-  border-left: 0.5px solid #d5d5d5;
+  /* background: var(--color-bot-background-chat); */
+  background: var(--color-bot-background-button);
+  border-left: 0.5px solid var(--color-bot-border);
+  border-right: 0.5px solid var(--color-bot-border);
+  border-bottom: 0.5px solid var(--color-bot-border);
+  /* border-left: 0.5px solid #d5d5d5;
   border-right: 0.5px solid #d5d5d5;
-  border-bottom: 0.5px solid #d5d5d5;
+  border-bottom: 0.5px solid #d5d5d5; */
   letter-spacing: 0.5px;
 }
-.mishi-chat-window-parent .template-button:hover {
+/* .mishi-chat-window-parent .template-button:hover {
   background-color: var(--accent-color) !important;
   color: #fff;
   font-weight: 400 !important;
   letter-spacing: 0.5px !important;
-}
+} */
 .mishi-chat-window-parent .template-button.quick-reply.disabled {
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  color: var(--color-bot-foreground-button-disabled);
+  background-color: var(--color-bot-background-button-disabled);
   cursor: auto;
 }
 .mishi-chat-window-parent .template-button.disabled {
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  color: var(--color-bot-foreground-button-disabled);
+  background-color: var(--color-bot-background-button-disabled);
   cursor: auto;
 }
 .mishi-chat-window-parent .template-button.quick-reply {
@@ -984,8 +1002,10 @@ body.light-theme {
   margin: 2px;
   /* border: 1px solid #f9f7f7;
         background: #f9f7f7; */
-  border: 0.5px solid #e6e7e8;
-  background: #ffffff;
+  /* border: 0.5px solid #e6e7e8; */
+  border: 0.5px solid var(--color-bot-border);
+  /* background: #ffffff; */
+  background: var(--color-bot-background-button);
 }
 .mishi-chat-window-parent .template-button:last-of-type:not(.quick-reply) {
   border-radius: 0px 0px 10px 10px;
@@ -1137,7 +1157,7 @@ body.light-theme {
 .mishi-chat-window-parent .typing-indicator {
   visibility: hidden;
   position: absolute;
-  background-color: #f2f2f2;
+  background-color: var(--color-bot-foreground-button);
   width: auto;
   border-radius: 20px;
   padding: 6px;
@@ -1611,10 +1631,12 @@ body.light-theme {
   display: none;
   position: absolute;
   z-index:999;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-color: var(--color-bot-border);
   width: auto;
   border-radius: 20px 20px 20px 0;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--color-bot-border);
+  /* border: 1px solid #e5e5e5; */
   bottom: 50px;
   left: 18px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -1630,7 +1652,8 @@ body.light-theme {
   box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.15);
 }
 .mishi-chat-window-parent .mishi_menu-items > ul > .tooltip-text > li {
-  border-bottom: 0.5px solid #e6e7e8;
+  /* border-bottom: 0.5px solid #e6e7e8; */
+  border-bottom: 0.5px solid var(--color-bot-border);
   text-align: center;
   display: block;
   /* color: #6F63C3; */
