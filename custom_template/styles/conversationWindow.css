@@ -1626,7 +1626,7 @@ body.light-theme {
   padding: 0;
   width: 100px;
   width: 170px;
-  background-color: white;
+  background-color: var(--color-bot-background);
   box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.15);
 }
 .mishi-chat-window-parent .mishi_menu-items > ul > .tooltip-text > li {
