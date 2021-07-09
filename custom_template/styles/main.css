@@ -966,6 +966,7 @@ code {
   border-radius: 50px;
   outline: none;
   background: transparent;
-  background-image: url('../styles/images/launch.gif');
+  /* background-image: url('../styles/images/launch.gif'); */
+  background-image: url('https://platform.mishi.ai/web/images/UKCloud/launch-icon.png');
   background-size: cover;
 } 
