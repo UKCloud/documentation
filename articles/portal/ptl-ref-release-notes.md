@@ -28,6 +28,7 @@ Feature update
 Details:
 
 - Allow customers to access Zerto for pods 2D and 2E
+
 - Update wording on My Calls page
 
 ## Release 2.14.0
