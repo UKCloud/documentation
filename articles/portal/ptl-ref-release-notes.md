@@ -27,7 +27,7 @@ Feature update
 
 Details:
 
-- Allow customers to access Zerto for pods 2D and 2E
+- Allow customers to access Zerto for zones 2D and 2E
 
 - Update wording on My Calls page
 
