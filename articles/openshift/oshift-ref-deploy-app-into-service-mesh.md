@@ -3,8 +3,8 @@ title: Deploying an application into OpenShift Service Mesh
 description:
 services: openshift
 author: Andrew Garner
-reviewer:
-lastreviewed: 22/07/2020
+reviewer: Andrew Garner
+lastreviewed: 13/07/2021
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v4.x
@@ -32,7 +32,7 @@ This article is intended for teams familiar with OpenShift, microservices and th
 
 - Familiarity with the concepts involved in a Service Mesh.
 
-- The OpenShift Service Mesh (OSM) Operator is installed into your OpenShift cluster. See the [OpenShift documentation](https://docs.openshift.com/container-platform/4.5/service_mesh/service_mesh_install/preparing-ossm-installation.html) for an installation guide.
+- The OpenShift Service Mesh (OSM) Operator is installed into your OpenShift cluster. See the [OpenShift documentation](https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/preparing-ossm-installation.html) for an installation guide.
 
 - The istio-system project exists and the target project for the sample application deployment has been added to the OSM `ServiceMeshMemberRole` configuration.
 
@@ -62,15 +62,17 @@ Pods must have specific labels for Pilot to manage traffic routing and for Kiali
 
 ## Example application
 
-Weaveworks has a sample microservice-based application called the Sock Shop that UKCloud has modified to run inside an OpenShift Service Mesh. See the sample code on GitHub at https://github.com/UKCloud/sock-shop-service-mesh.
+Weaveworks has a sample microservice-based application called the Sock Shop that UKCloud has modified to run inside OSM v1. See the sample code on GitHub at https://github.com/UKCloud/sock-shop-service-mesh.
+
+With the release of OSM v2, Red Hat have documented how to install a sample application into OSM v2, details of which can be found [here](https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/ossm-create-mesh.html#ossm-tutorial-bookinfo-overview_ossm-create-mesh)
 
 ## References
 
 - Weaveworks Sock Shop project - https://microservices-demo.github.io/
 
-- UKCloud Sock Shop for OSM - https://github.com/UKCloud/sock-shop-service-mesh
+- UKCloud Sock Shop for OSM v1 - https://github.com/UKCloud/sock-shop-service-mesh
 
-- Deploying applications on Red Hat OpenShift Service Mesh - https://docs.openshift.com/container-platform/4.5/service_mesh/service_mesh_day_two/prepare-to-deploy-applications-ossm.html
+- Deploying applications on Red Hat OpenShift Service Mesh v2 - https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/ossm-create-mesh.html
 
 ## Feedback
 
