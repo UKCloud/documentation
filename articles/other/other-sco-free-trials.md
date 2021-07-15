@@ -39,7 +39,7 @@ Exclusions are:
 
 - Basic Managed VM
 
-- Services covered by the [SFIA Rate Card](http://www.ukcloud.com/sfia)
+- Services covered by the [SFIA Rate Card](https://ukcloud.com/sfia)
 
 - Dedicated Compute option in UKCloud for VMware
 

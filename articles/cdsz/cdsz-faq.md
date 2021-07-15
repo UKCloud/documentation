@@ -78,7 +78,7 @@ No.
 
 Because a Walled Garden solution is bespoke, we offer an assurance wrap to guide customers towards an effective design that will help to maximise their chances of meeting compliance requirements.
 
-The variable nature of Walled Garden solutions means we may charge for complex assurance wraps. This is done on a [SFIA Rate Card](http://www.ukcloud.com/sfia) basis, according to the number of days' assistance needed.
+The variable nature of Walled Garden solutions means we may charge for complex assurance wraps. This is done on a [SFIA Rate Card](https://ukcloud.com/sfia) basis, according to the number of days' assistance needed.
 
 ### What is the process for approving a Walled Garden?
 

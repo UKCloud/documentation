@@ -64,7 +64,7 @@ Yes. You can deploy a private circuit into each data centre and use the UKCloud 
 
 If the primary private circuit were to fail, you could get to the primary data centre (DC1) via the private circuit into the second data centre (DC2) and across the UKCloud DCI. In this case, you must use 'reserved bandwidth'.
 
-There may be setup costs (aligned to the [SFIA Rate Card](http://www.ukcloud.com/sfia)), depending on the complexity of the requirement.
+There may be setup costs (aligned to the [SFIA Rate Card](https://ukcloud.com/sfia)), depending on the complexity of the requirement.
 
 ## How will HybridConnect connect to my UKCloud environment?
 

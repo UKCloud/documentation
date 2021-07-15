@@ -50,7 +50,7 @@ Security Operations Service<br>
 UKCloud Desktop as a Service<br>
 Professional Services<br>
 
-**[UKCloud Skills Framework for the Information Age (SFIA) UKCloud Rate Card and Definitions](http://www.ukcloud.com/sfia)**
+**[UKCloud Skills Framework for the Information Age (SFIA) UKCloud Rate Card and Definitions](https://ukcloud.com/sfia)**
 
 This document outlines:
 

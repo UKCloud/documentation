@@ -115,13 +115,13 @@ Due to the secure nature of UKCloud's sites, unscheduled maintenance access may 
 
 ### Out-of-hours maintenance access
 
-Out-of-hours access will be granted at UKCloud's discretion and is charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
+Out-of-hours access will be granted at UKCloud's discretion and is charged as per the [SFIA rate card](https://ukcloud.com/sfia) (Level 4 - Enable).
 
 ### Additional maintenance access
 
-If you require more than eight visits per year for maintenance, these additional escorted visits will be charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
+If you require more than eight visits per year for maintenance, these additional escorted visits will be charged as per the [SFIA rate card](https://ukcloud.com/sfia) (Level 4 - Enable).
 
-If you need to install and configure additional device(s) within your solution, these escorted visits will be charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
+If you need to install and configure additional device(s) within your solution, these escorted visits will be charged as per the [SFIA rate card](https://ukcloud.com/sfia) (Level 4 - Enable).
 
 ## Power failure
 
@@ -129,7 +129,7 @@ If, in the unlikely event of a power failure, you'd like your hardware restarted
 
 ## Decommissioning 
 
-If you want to decommission your Big Cloud Enablement service you must provide a minimum of 30 days' notice and are responsible for the removal of your equipment. Visits to remove equipment are counted towards your allocation of maintenance access days and if you need additional days, these additional escorted visits will be charged as per the [SFIA rate card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
+If you want to decommission your Big Cloud Enablement service you must provide a minimum of 30 days' notice and are responsible for the removal of your equipment. Visits to remove equipment are counted towards your allocation of maintenance access days and if you need additional days, these additional escorted visits will be charged as per the [SFIA rate card](https://ukcloud.com/sfia) (Level 4 - Enable).
 
 ## Feedback
 

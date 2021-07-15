@@ -104,7 +104,7 @@ You may test from two locations:
 
 ## Pricing
 
-For a test to commence, UKCloud must complete a number of administrative tasks to facilitate the activity. This may result in a cost, chargeable as one day's work from the [SFIA Rate Card](http://www.ukcloud.com/sfia) (Level 4 - Enable).
+For a test to commence, UKCloud must complete a number of administrative tasks to facilitate the activity. This may result in a cost, chargeable as one day's work from the [SFIA Rate Card](https://ukcloud.com/sfia) (Level 4 - Enable).
 
 In some circumstances, additional time may be required but this will be outlined prior to tests commencing.
 

@@ -46,7 +46,7 @@ Once the quote is supplied and the customer wants to place an order, they must p
 
 ## Service provisioning
 
-To implement the VLS service, there are some simple steps that need to be completed both by UKCloud and the customer. The details that follow assume that the customer has a good understanding of VMware and can carry out the required actions. Note that, if required, UKCloud can provide assistance in these actions at an additional charge, based on our [SFIA Rate Card](http://www.ukcloud.com/sfia) for Professional Services.
+To implement the VLS service, there are some simple steps that need to be completed both by UKCloud and the customer. The details that follow assume that the customer has a good understanding of VMware and can carry out the required actions. Note that, if required, UKCloud can provide assistance in these actions at an additional charge, based on our [SFIA Rate Card](https://ukcloud.com/sfia) for Professional Services.
 
 ### Welcome pack
 
@@ -225,7 +225,7 @@ The customer will receive a monthly report from their Service Delivery Manager b
 
 This Service Scope sets out the responsibilities of UKCloud and the customer. Although the actions that the customer is responsible for are supported by UKCloud via Knowledge Centre articles and the support team, if a customer requires additional support with their on-premises estate or the installation and configuration of any element of VMware or the Usage Meter, we can arrange for our Professional Services team to assist.
 
-These additional services are charged as per our [SFIA Rate Card](http://www.ukcloud.com/sfia).
+These additional services are charged as per our [SFIA Rate Card](https://ukcloud.com/sfia).
 
 If a customer requires the assistance of our Professional Services, they can either contact our support team or their Service Delivery Manager.
 

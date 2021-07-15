@@ -108,7 +108,7 @@ If you choose an assurance wrap review for your proposed implementation, the UKC
 > UKCloud takes no ownership or responsibility for the implementation or running of your proposed solution or ownership for any risks to the data.
 
 > [!NOTE]
-> UKCloud reserves the right to charge [SFIA](http://www.ukcloud.com/sfia) day rate charges for time spent on customer projects if you disengage with the assurance wrap review process before completion.
+> UKCloud reserves the right to charge [SFIA](https://ukcloud.com/sfia) day rate charges for time spent on customer projects if you disengage with the assurance wrap review process before completion.
 
 At the end of the review period, you will have generated all the necessary documents to apply for your CDSZ service (as listed in [Required documents](#required-documents)).
 
