@@ -7,12 +7,12 @@ reviewer:
 lastreviewed: 
 
 toc_rootlink: How To
-toc_sub1:
+toc_sub1: OpenShift v4.x
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Use NetworkPolicy objects in OpenShift v4
-toc_fullpath: How To/oshift-how-use-netpol-v4.md
+toc_fullpath: How To/OpenShift v4.x/oshift-how-use-netpol-v4.md
 toc_mdlink: oshift-how-use-netpol.md
 ---
 
