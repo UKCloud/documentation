@@ -19,6 +19,18 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.15.0
+
+Date: 13th July 2021
+
+Feature update
+
+Details:
+
+- Allow customers to access Zerto for zones 2D and 2E
+
+- Update wording on My Calls page
+
 ## Release 2.14.0
 
 Date: 16th June 2021
