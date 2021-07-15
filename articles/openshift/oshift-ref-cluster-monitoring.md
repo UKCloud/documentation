@@ -4,7 +4,7 @@ description: Provides information on the Prometheus monitoring stack deployed wi
 services: openshift
 author: Kieran O'Neill
 reviewer: Andrew Garner
-lastreviewed: 22/06/2020
+lastreviewed: 13/07/2021
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
@@ -41,7 +41,7 @@ It is possible to inject additional configuration into the stack. However, this 
 
 ## Grafana Dashboards
 
-If you navigate to the Grafana web UI you'll be able to access a number of pre-configured dashboards. These dashboards provide insight into the compute resource usage at cluster, node and pod levels. There are also USE Method dashboards at the cluster and node level. Click the dropdown in the top left on the home dashboard to select which dashboard you'd like to view.
+If you navigate to the Grafana web UI you'll be able to access a number of pre-configured dashboards. These dashboards provide insight into the compute resource usage at cluster, node and pod levels. There are also [USE Method](https://www.brendangregg.com/usemethod.html) dashboards, monitoring Utilisation, Saturation and Errors, at the cluster and node level. Click the dropdown in the top left on the home dashboard to select which dashboard you'd like to view.
 
 Configuring custom dashboards isn't a supported option. If you require custom dashboards we recommend standing up your own grafana instance and connecting that into the cluster monitoring Prometheus.
 
