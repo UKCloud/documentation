@@ -102,7 +102,7 @@
 <ul>
 <li><p>Familiarity with the concepts involved in a Service Mesh.</p>
 </li>
-<li><p>The OpenShift Service Mesh (OSM) Operator is installed into your OpenShift cluster. See the <a href="https://docs.openshift.com/container-platform/4.5/service_mesh/service_mesh_install/preparing-ossm-installation.html">OpenShift documentation</a> for an installation guide.</p>
+<li><p>The OpenShift Service Mesh (OSM) Operator is installed into your OpenShift cluster. See the <a href="https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/preparing-ossm-installation.html">OpenShift documentation</a> for an installation guide.</p>
 </li>
 <li><p>The istio-system project exists and the target project for the sample application deployment has been added to the OSM <code>ServiceMeshMemberRole</code> configuration.</p>
 </li>
@@ -120,14 +120,15 @@
 <h3 id="pods">Pods</h3>
 <p>Pods must have specific labels for Pilot to manage traffic routing and for Kiali to display the service mesh correctly. Pods must have metadata labels called <code>app</code> and <code>version</code>, which identify the microservice application and the version of the application code running in the pod.</p>
 <h2 id="example-application">Example application</h2>
-<p>Weaveworks has a sample microservice-based application called the Sock Shop that UKCloud has modified to run inside an OpenShift Service Mesh. See the sample code on GitHub at <a href="https://github.com/UKCloud/sock-shop-service-mesh">https://github.com/UKCloud/sock-shop-service-mesh</a>.</p>
+<p>Weaveworks has a sample microservice-based application called the Sock Shop that UKCloud has modified to run inside OSM v1. See the sample code on GitHub at <a href="https://github.com/UKCloud/sock-shop-service-mesh">https://github.com/UKCloud/sock-shop-service-mesh</a>.</p>
+<p>With the release of OSM v2, Red Hat has documented how to install a sample application into OSM v2. You can find more details in the <a href="https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/ossm-create-mesh.html#ossm-tutorial-bookinfo-overview_ossm-create-mesh">Red Hat Service Mesh documentation</a>.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><p>Weaveworks Sock Shop project - <a href="https://microservices-demo.github.io/">https://microservices-demo.github.io/</a></p>
 </li>
-<li><p>UKCloud Sock Shop for OSM - <a href="https://github.com/UKCloud/sock-shop-service-mesh">https://github.com/UKCloud/sock-shop-service-mesh</a></p>
+<li><p>UKCloud Sock Shop for OSM v1 - <a href="https://github.com/UKCloud/sock-shop-service-mesh">https://github.com/UKCloud/sock-shop-service-mesh</a></p>
 </li>
-<li><p>Deploying applications on Red Hat OpenShift Service Mesh - <a href="https://docs.openshift.com/container-platform/4.5/service_mesh/service_mesh_day_two/prepare-to-deploy-applications-ossm.html">https://docs.openshift.com/container-platform/4.5/service_mesh/service_mesh_day_two/prepare-to-deploy-applications-ossm.html</a></p>
+<li><p>Deploying applications on Red Hat OpenShift Service Mesh v2 - <a href="https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/ossm-create-mesh.html">https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/ossm-create-mesh.html</a></p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>

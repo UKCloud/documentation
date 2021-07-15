@@ -107,7 +107,7 @@
 <h2 id="accessing-web-uis">Accessing Web UIs</h2>
 <p><code>oc get routes -n openshift-monitoring</code> will give you the URLs you can use to access Prometheus, Alertmanager and Grafana UIs. You'll need to prepend <code>https://</code> to the addresses.</p>
 <h2 id="grafana-dashboards">Grafana Dashboards</h2>
-<p>If you navigate to the Grafana web UI you'll be able to access a number of pre-configured dashboards. These dashboards provide insight into the compute resource usage at cluster, node and pod levels. There are also USE Method dashboards at the cluster and node level. Click the dropdown in the top left on the home dashboard to select which dashboard you'd like to view.</p>
+<p>If you navigate to the Grafana web UI you'll be able to access a number of pre-configured dashboards. These dashboards provide insight into the compute resource usage at cluster, node and pod levels. There are also <a href="https://www.brendangregg.com/usemethod.html">USE Method</a> dashboards, monitoring Utilisation, Saturation and Errors, at the cluster and node level. Click the dropdown in the top left on the home dashboard to select which dashboard you'd like to view.</p>
 <p>Configuring custom dashboards isn't a supported option. If you require custom dashboards we recommend standing up your own grafana instance and connecting that into the cluster monitoring Prometheus.</p>
 <h2 id="further-information">Further information</h2>
 <p>Below are some useful OpenShift documentation pages regarding OpenShift cluster monitoring:</p>

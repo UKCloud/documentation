@@ -58,6 +58,10 @@
         href: oshift-how-use-portworx-encrypted-volumes.md
       - name: Use Portworx shared volumes
         href: oshift-how-use-portworx-shared-volumes.md
+  - name: OpenShift v4.x
+    items:
+    - name: Use NetworkPolicy objects in OpenShift v4
+      href: oshift-how-use-netpol.md
 - name: Reference
   items:
   - name: Lifecycle and patch management
@@ -86,8 +90,6 @@
       href: oshift-ref-deploy-app-into-service-mesh.md
     - name: DNS zone forwarding in OpenShift clusters
       href: oshift-ref-dns-zone-forwarding-v4.md
-  - name: v4
-    items:
     - name: Supported customer update strategy for version 4 clusters
       href: oshift-how-v4-update.md
 - name: Service Information

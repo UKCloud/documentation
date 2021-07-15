@@ -6808,6 +6808,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-use-netpol-v4.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-use-netpol-v4.html",
+          "hash": "UgCV19oj7oqCJau+w5q5U0gl6VjCnP8Nav1tnZIJnLA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-use-netpol.md",
       "output": {
         ".html": {
@@ -6884,7 +6896,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-cluster-monitoring.html",
-          "hash": "AuR7IQmbsFid/lxOLwTj9ytizWcRXpoirucr5okIvs0="
+          "hash": "hfT2zTOu/Wup94Xkmel0s7fUxYWz9AleTWMqrIlY8LY="
         }
       },
       "is_incremental": false,
@@ -6896,7 +6908,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-deploy-app-into-service-mesh.html",
-          "hash": "h4ACYQBPEHFo8eLp+Ue9SGfUIsuC2bizNmXYKAq8HmM="
+          "hash": "kvExT9ULqY/DSgU6TrbIj1xBvRFh0QJMrSpa2RBRZxU="
         }
       },
       "is_incremental": false,
@@ -7040,7 +7052,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "TXKf0k4vkfC5zSPNv273gIS5Helyp0qmu4HZY8BQMlw="
+          "hash": "kc5FUXGCcyrN9HIBEDugCVDXBHGVGinqeq55LOY9+C8="
         }
       },
       "is_incremental": false,
@@ -22523,7 +22535,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 459,
+          "total_file_count": 460,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
