@@ -64,7 +64,7 @@ Pods must have specific labels for Pilot to manage traffic routing and for Kiali
 
 Weaveworks has a sample microservice-based application called the Sock Shop that UKCloud has modified to run inside OSM v1. See the sample code on GitHub at https://github.com/UKCloud/sock-shop-service-mesh.
 
-With the release of OSM v2, Red Hat have documented how to install a sample application into OSM v2, details of which can be found [here](https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/ossm-create-mesh.html#ossm-tutorial-bookinfo-overview_ossm-create-mesh)
+With the release of OSM v2, Red Hat has documented how to install a sample application into OSM v2. You can find more details in the [Red Hat Service Mesh documentation](https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/ossm-create-mesh.html#ossm-tutorial-bookinfo-overview_ossm-create-mesh).
 
 ## References
 
