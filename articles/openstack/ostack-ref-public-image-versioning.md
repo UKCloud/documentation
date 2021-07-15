@@ -3,8 +3,8 @@ title: OpenStack public image versioning
 description: Describes how image versioning works in the UKCloud public catalog for UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
-reviewer: Bryce Nicholls
-lastreviewed: 24/04/2020
+reviewer: srelf
+lastreviewed: 15/07/2021
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:

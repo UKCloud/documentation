@@ -3,8 +3,8 @@ title: How to create static IPs for OpenStack instances
 description: Instructions on how to create static IPs and assign them to instances
 services: openstack
 author: Bryce Nicholls
-reviewer: bnicholls
-lastreviewed: 07/04/2020
+reviewer: srelf
+lastreviewed: 15/07/2021
 toc_rootlink: How to
 toc_sub1:
 toc_sub2:
@@ -187,7 +187,7 @@ A port is a connection point for attaching a single device, such as the NIC of a
 
 The following Red Hat document provides more options for configuring ports when using UKCloud for OpenStack.
 
-[*Red Hat OpenStack Platform 10 Command-Line Interface Reference for configuring ports*](https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/port.html)
+[*Red Hat OpenStack Platform 13 Command-Line Interface Reference for configuring ports*](https://docs.openstack.org/python-openstackclient/queens/cli/command-objects/port.html)
 
 ## Feedback
 
