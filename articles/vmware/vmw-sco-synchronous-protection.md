@@ -212,7 +212,7 @@ If we accept your request, we'll schedule the work to start at the time you spec
 
 ## Failover testing charges
 
-We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the [SFIA Rate Card](http://www.ukcloud.com/sfia) - level 3 Apply). Longer testing periods will need to be approved by UKCloud.
+We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the [SFIA Rate Card](https://ukcloud.com/sfia) - level 3 Apply). Longer testing periods will need to be approved by UKCloud.
 
 ## Feedback
 

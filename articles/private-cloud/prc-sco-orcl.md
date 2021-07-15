@@ -120,7 +120,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 ### Your UKCloud Hosted responsibilities
 
-- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. Note that due to the secure nature of the site, at least 24 hours' notice is required. Engineers must be escorted and this is charged at a [SFIA](http://www.ukcloud.com/sfia) day rate.
+- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. Note that due to the secure nature of the site, at least 24 hours' notice is required. Engineers must be escorted and this is charged at a [SFIA](https://ukcloud.com/sfia) day rate.
 
 ### Your CHDC Hosted responsibilities
 

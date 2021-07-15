@@ -82,7 +82,7 @@ In addition, the solution includes Messaging Application Programming Interface (
 
 Yes. The solution includes a migration wizard to help you migrate from an existing solution to Email and Collaboration as a Service.
 
-We can help facilitate a bulk migration to the platform using local data import. This is priced on a time-and-materials basis from the UKCloud [SFIA Rate Card](http://www.ukcloud.com/sfia).
+We can help facilitate a bulk migration to the platform using local data import. This is priced on a time-and-materials basis from the UKCloud [SFIA Rate Card](https://ukcloud.com/sfia).
 
 We can also recommend partners who specialise in this service.
 
