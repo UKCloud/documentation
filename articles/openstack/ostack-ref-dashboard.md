@@ -24,8 +24,8 @@ For an overview on how to use OpenStack's Horizon dashboard to drive the platfor
 
 | Region              | OpenStack Version                      | Documentation |
 |---------------------|----------------------------------------|---------------|
-| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR> (Newton Release) | [*Red Hat OpenStack Platform 10 - Introduction to the OpenStack Dashboard*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-10-Introduction_to_the_OpenStack_Dashboard-en-US.pdf) |
-| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | [*Red Hat OpenStack Platform 13 - Introduction to the OpenStack Dashboard* ](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-13-Introduction_to_the_OpenStack_Dashboard-en-US.pdf) |
+| COR00005 | OpenStack Platform 10 <BR> (Newton Release) | [*Red Hat OpenStack Platform 10 - Introduction to the OpenStack Dashboard*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-10-Introduction_to_the_OpenStack_Dashboard-en-US.pdf) |
+| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | [*Red Hat OpenStack Platform 13 - Introduction to the OpenStack Dashboard* ](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-13-Introduction_to_the_OpenStack_Dashboard-en-US.pdf) |
 
 ## Feedback
 

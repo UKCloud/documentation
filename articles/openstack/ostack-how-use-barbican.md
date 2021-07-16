@@ -19,7 +19,7 @@ toc_mdlink: ostack-how-use-barbican.md
 # Using Barbican Key Management as a Service (KMaaS)
 
 > [!NOTE]
-> This article does not apply to OpenStack Regions running the Pike release and lower (currently COR00005 and FRN00006). All newer Regions offer native Key Management as a Service
+> This article does not apply to OpenStack Regions running the Pike release and lower (currently COR00005). All other Regions offer native Key Management as a Service
 
 ## Overview
 

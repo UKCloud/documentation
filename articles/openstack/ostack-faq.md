@@ -169,8 +169,8 @@ The answer to this depends on which of UKCloud's OpenStack platforms you are usi
 
 | Region              | OpenStack version                      | LBaaS supported? |
 |---------------------|----------------------------------------|------------------|
-| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services. <BR> UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution. |
-| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* - Uses the [OpenStack Octavia](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
+| COR00005 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services. <BR> UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution. |
+| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* - Uses the [OpenStack Octavia](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
   
 <i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i>
 
@@ -230,8 +230,8 @@ The answer to this depends on which of UKCloud's OpenStack services you are usin
 
 | Region              | OpenStack version                      | Encrypted volumes supported? |
 |---------------------|----------------------------------------|------------------|
-| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as Red Hat's Newton release does not support native Key Management as a Service (KMaaS) to underpin encryption  |
-| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* |
+| COR00005 | OpenStack Platform 10 <BR>(Newton Release) | No, as Red Hat's Newton release does not support native Key Management as a Service (KMaaS) to underpin encryption  |
+| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* |
 
 <i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i>
 
@@ -289,8 +289,8 @@ The answer to this depends on which of UKCloud's OpenStack platforms you are usi
 
 | Region              | OpenStack version                      | KMaaS supported? |
 |---------------------|----------------------------------------|------------------|
-| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, customers will need to deploy their own Key Management solution. |
-| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes, using OpenStack's Barbican service. You can find further information [here](https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html). |
+| COR00005 | OpenStack Platform 10 <BR>(Newton Release) | No, customers will need to deploy their own Key Management solution. |
+| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | Yes, using OpenStack's Barbican service. You can find further information [here](https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html). |
 
 ### What reports can I get about instances performance?
 
