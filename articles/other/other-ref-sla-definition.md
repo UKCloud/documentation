@@ -161,7 +161,7 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 
 &nbsp;                       | Dedicated Compute v2
 -----------------------------|---------------------
-**Availability commitment**  | 99.95%
+**Availability commitment**  | 99.99%
 **Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days)
 **Emergency Maintenance**    | Excluded
 **Planned Maintenance**      | Excluded
