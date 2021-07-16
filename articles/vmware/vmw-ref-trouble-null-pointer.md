@@ -2,9 +2,9 @@
 title: Fixing your advanced gateway if you encounter NullPointerException error
 description: Intended for customers who are experiencing the NullPointerException error when attempting to view their edge gateway properties
 services: vmware
-author: Sue Highmoor
-reviewer: lthangarajah
-lastreviewed: 20/08/2019
+author: shighmoor
+reviewer: jpaddock
+lastreviewed: 16/07/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
