@@ -249,7 +249,7 @@
 <p><code># apt-get install ntp</code></p>
 </li>
 <li><p>When the installation is complete, update the configuration file to point to UKCloud's NTP servers.</p>
-<p><code># pico /etc/ntp.config</code></p>
+<p><code># pico /etc/ntp.conf</code></p>
 </li>
 <li><p>Use the arrow keys to scroll down until you reach the lines beginning with <code>server</code>. Change the first two lines to reflect the UKCloud servers, and comment out the remaining two lines.</p>
 <p>Contact UKCloud Support for the UKCloud server IP addresses.</p>
@@ -259,7 +259,7 @@
 <p>To configure administration options:</p>
 <ol>
 <li><p>Log on to the admin interface at:</p>
-<p><code>https://&lt;ip_address&gt;/admin</code></p>
+<p><code>https://&lt;ip_address&gt;:943/admin</code></p>
 </li>
 <li><p>To set the hostname, under <em>Configuration</em>, select <strong>Network Settings</strong> and then set the <strong>Hostname or IP Address</strong> to either a public IP address or a fully qualified domain name (FQDN) that your client will be able to resolve.</p>
 </li>
@@ -330,7 +330,7 @@ certificates necessary to establish a VPN connection.</p>
 <p>If connecting via SSH, it's best practice to connect with a non-privileged account, then sudo to root if needed. This prevents an attacker from brute-forcing the root password.</p>
 <ol>
 <li><p>Enter the following command:</p>
-<p><code># pico /etc/ssh/sshd-**-_config</code></p>
+<p><code># pico /etc/ssh/sshd_config</code></p>
 </li>
 <li><p>Use the arrow keys to scroll down the file, and change the <code>PermitRootLogin</code> to <code>no</code>.</p>
 </li>
