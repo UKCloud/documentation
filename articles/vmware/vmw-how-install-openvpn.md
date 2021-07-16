@@ -3,8 +3,8 @@ title: How to install and configure OpenVPN
 description: Details the steps required to obtain, deploy and configure an OpenVPN virtual appliance to obtain remote access to your virtual data centres running on the UKCloud platform
 services: vmware
 author: shighmoor
-reviewer: jpaddock
-lastreviewed: 14/05/2020
+reviewer: thallsmith
+lastreviewed: 01/07/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -192,7 +192,7 @@ Installing NTP is good practice anyway, but is required if you intend to use two
 
 2. When the installation is complete, update the configuration file to point to UKCloud's NTP servers.
 
-    `# pico /etc/ntp.config`
+    `# pico /etc/ntp.conf`
 
 3. Use the arrow keys to scroll down until you reach the lines beginning with `server`. Change the first two lines to reflect the UKCloud servers, and comment out the remaining two lines.
 
@@ -204,7 +204,7 @@ To configure administration options:
 
 1. Log on to the admin interface at:
 
-    `https://<ip_address>/admin`
+    `https://<ip_address>:943/admin`
 
 2. To set the hostname, under *Configuration*, select **Network Settings** and then set the **Hostname or IP Address** to either a public IP address or a fully qualified domain name (FQDN) that your client will be able to resolve.
 
@@ -291,7 +291,7 @@ If connecting via SSH, it's best practice to connect with a non-privileged accou
 
 1. Enter the following command:
 
-    `# pico /etc/ssh/sshd-**-_config`
+    `# pico /etc/ssh/sshd_config`
 
 2. Use the arrow keys to scroll down the file, and change the `PermitRootLogin` to `no`.
 
