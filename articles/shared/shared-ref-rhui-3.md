@@ -4,7 +4,7 @@ description: Provides information about the UKCloud Red Hat Update Infrastructur
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 13/04/2021
+lastreviewed: 19/07/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -49,12 +49,6 @@ The UKCloud RHUI service supplies access to the following repository groups. Eac
 
 - Red Hat Software Collections for RHEL Server from RHUI (RPMs) (6Server-x86_64)
 
-### RHEL6-EUS
-
-- Red Hat Enterprise Linux 6 Server - Extended Update Support (RPMs) from RHUI (6Server-x86_64)
-
-- Red Hat Enterprise Linux 6 Server - Extended Update Support - Supplementary (RPMs) from RHUI (6Server-x86_64)
-
 ### RHEL6-ELS
 
 - Red Hat Enterprise Linux 6 Server - Extended Life Cycle Support (RPMs) from RHUI (6Server-x86_64)
@@ -73,14 +67,6 @@ The UKCloud RHUI service supplies access to the following repository groups. Eac
 
 - Red Hat Software Collections RPMs for Red Hat Enterprise Linux 7 Server from RHUI (7Server-x86_64)
 
-### RHEL7-EUS
-
-- Red Hat Enterprise Linux 7 Server - Extended Update Support - Optional (RPMs) from RHUI (7Server-x86_64)
-
-- Red Hat Enterprise Linux 7 Server - Extended Update Support (RPMs) from RHUI (7Server-x86_64)
-
-- Red Hat Enterprise Linux 7 Server - Extended Update Support - Supplementary (RPMs) from RHUI (7Server-x86_64)
-
 ### RHEL8-Standard
 
 - Red Hat Enterprise Linux 8 for x86_64 - AppStream from RHUI (RPMs) (8)
@@ -90,6 +76,10 @@ The UKCloud RHUI service supplies access to the following repository groups. Eac
 - Red Hat Enterprise Linux 8 for x86_64 - Supplementary (RPMs) from RHUI (8)
 
 - Red Hat CodeReady Linux Builder for RHEL 8 x86_64 (RPMs) from RHUI (8)
+
+## Extended Update Support (EUS)
+
+Red Hat have taken the decision to deprecate the release of the XServer package sets in EUS. Instead, specific minor releases (6.x, 7.x) are available. The following [article](https://access.redhat.com/solutions/4710991) contains further information. If you require EUS for a specific Red hat release(s), then please raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section in the UKCloud Portal.
 
 ## High Availability
 
