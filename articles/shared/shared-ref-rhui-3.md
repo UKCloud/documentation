@@ -79,7 +79,7 @@ The UKCloud RHUI service supplies access to the following repository groups. Eac
 
 ## Extended Update Support (EUS)
 
-Red Hat have taken the decision to deprecate the release of the XServer package sets in EUS. Instead, specific minor releases (6.x, 7.x) are available. The following [article](https://access.redhat.com/solutions/4710991) contains further information. If you require EUS for a specific Red hat release(s), then please raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section in the UKCloud Portal.
+Red Hat have deprecated the release of the XServer package sets in EUS. Instead, specific minor releases (6.x, 7.x) are available. The following [article](https://access.redhat.com/solutions/4710991) contains further information. If you require EUS for a specific Red hat release, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## High Availability
 
