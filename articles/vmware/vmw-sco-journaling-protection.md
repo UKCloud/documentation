@@ -95,7 +95,7 @@ UKCloud have disabled some areas of the self-service portal as they are for serv
 
 The self-service portal provides live real time reporting of your solution and the current level of protection being provided to your vApp.
 
-The self-service portal will also provide customers with alerts should the target RPO of their VPG exceed the threshold, or the associated journal size grows beyond the expected size. In both these scenarios, UKCloud will also receive a platform monitoring alert and investigate the cause.
+The self-service portal will also provide customers with alerts should the target RPO of their VPG exceed the threshold, or the associated journal size grows beyond the expected size. In both these scenarios, UKCloud will also receive a platform monitoring alert and will perform further investigations if this frequently alerts.
 
 Additionally, the self-service portal provides visibility of an activity log of the actions against a particular VM and a list of any errors captured on the platform.
 

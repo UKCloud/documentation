@@ -51,6 +51,8 @@ As UKCloud's Disaster Recovery as a Service and  Migration to the Cloud services
 
 UKCloud provides a version of ZVM that is compatible with the Zerto software on the UKCloud platform.
 
+If Microsoft .NET Framework is not installed, you'll be prompted to install the required version of .NET Framework, which is included as part of the Zerto installation package. After you install .NET Framework, the machine automatically restarts and the Zerto installation begins.
+
 1. Download and run the executable file from the link provided by UKCloud.
 
     > [!NOTE]

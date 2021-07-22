@@ -45,7 +45,7 @@ Given the nature of this service, with part of the solution hosted on your site,
 
 - Your environment must meet the minimum specification required by the solution (that you can find [here](draas-gs.md#system-requirements)). This covers software versions, limitations around the types of VMs that can be protected and the minimum WAN connectivity speeds
 
-- Installation and configuration of Zerto components including the ZVM (Zerto Virtual Manager) and ZRA (Zerto Replication Appliance)
+- Installation and configuration of Zerto components including the ZVM (Zerto Virtual Manager) and VRA (Virtual Replication Appliance)
 
 - Creation of a VPN to connect to UKCloud
 
