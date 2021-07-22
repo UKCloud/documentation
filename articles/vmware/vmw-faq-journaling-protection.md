@@ -153,9 +153,9 @@ Yes, it is included with the Journaling Protection option for use with the 2, 7,
 
 ### Will a VPG still be protected if one or more VMs are powered off?
 
-In normal circumstances, if a VM within a VPG is powered off this will not impact the protection as remaining powered-on VMs will continue to replicate as normal. This includes the scenario when a new VM is added to a VPG and the new VM is in powered off state - in this instance the VM would need to be powered on to create its initial sync, and existing VMs will continue to replicate as normal.
+We recommend that you do not power off a VM if it's included in a protected vApp. Although powering off a VM may not immediately affect the protection of the vApp, if Zerto attempts to access the powered off VM, it could cause replication of all the VMs in the vApp to cease. If a powered-off VM causes an issue with vApp protection, Zerto will issue an alert.
 
-The one exception to this is if you have an existing VPG, and one VM is powered off, and at some point afterwards the VPG goes in a bitmap / delta sync (normally due to network contention or high periods of writes on a protected VM). In this case, the powered-off VM prevents the VPG from completing the sync and the VPG replication will be halted; this will trigger an alert within the Zerto portal.
+If you add a powered-off VM to a protected vApp, the VM will not be protected until you've powered it on and Zerto has performed the initial sync. In this case, the powered-off VM will not affect the protection of the vApp.
 
 ### Is Journaling Protection enabled in all regions?
 
