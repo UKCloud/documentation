@@ -4,7 +4,7 @@ description: Shows how Portal administrators can use the UKCloud Portal to creat
 services: openstack
 author: Sue Highmoor
 reviewer: Ben Saunders
-lastreviewed: 02/04/2020
+lastreviewed: 22/07/2021
 
 toc_rootlink: How To
 toc_sub1:
