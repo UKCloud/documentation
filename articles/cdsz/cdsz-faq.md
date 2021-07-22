@@ -140,7 +140,7 @@ See [*Understanding UKCloud service maintenance windows*](../other/other-ref-mai
 
 CDSZ has a minimum commitment period of one month.
 
-Walled Garden billing is based on the solution design. You pay a monthly rental fee, with additional charges based on the number of VMs required to run the solution. Please note the £500 monthly charge applies for each Walled Garden and not per customer. 
+Walled Garden billing is based on the solution design. You pay a monthly rental fee, with additional charges based on the number of VMs required to run the solution. The monthly charge applies for each Walled Garden, not per customer.
 
 For existing UKCloud Guard customers, billing is based on the amount of data transferred between domains. You buy a starter pack which includes an amount of data that can be transferred. You're billed at an incremental rate for data transferred above the starter pack threshold.
 
