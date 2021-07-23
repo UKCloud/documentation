@@ -106,6 +106,9 @@
 <h3 id="how-does-ukcloud-provide-urgent-maintenance-notifications-and-incident-reports">How does UKCloud provide urgent maintenance notifications and incident reports?</h3>
 <p>We do not envisage any scenarios that prevent UKCloud in meeting the availability KPI defined within the <a href="https://docs.ukcloud.com/articles/managed-services/man-patching-sco.html">Service Scope</a> for this service.</p>
 <p>Current Service Status reports and past incident reports are published on the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a>.</p>
+<h3 id="what-type-of-patches-will-be-applied">What type of patches will be applied?</h3>
+<p>For Microsoft operating systems we'll scan for and recommend applying any patches classified by Microsoft as being 'Security Patches' of any severity (Critical to Low). Additional patches for items such as 'Feature Packs' or general driver updates are excluded from this service.</p>
+<p>For Linux operating systems we'll scan for and recommend applying any packages that have an update available in the repositories specified within the guest operating system (equivalent to manually running a <code>yum update list</code> command in RHEL or CentOS).</p>
 <h3 id="how-does-the-patching-cycle-work">How does the patching cycle work?</h3>
 <p>OS vendors such as Microsoft release updates for their operating systems and associated packages in two ways:</p>
 <ul>
