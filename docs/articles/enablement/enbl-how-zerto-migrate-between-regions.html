@@ -177,13 +177,18 @@
 </ul>
 <p>To move a VPG:</p>
 <ol>
-<li><p><a href="../vmware/vmw-how-zerto-access-zssp.html"><em>Log in to ZSSP</em></a> using the ZSSP login link for the zone in which your target VDC is located.</p>
+<li><p><a href="../vmware/vmw-how-zerto-access-zssp.html"><em>Log in to ZSSP</em></a>.</p>
+<p>Use the ZSSP login link for the zone in which your target VDC is located.</p>
 </li>
-<li><p>From the <strong>Actions</strong> menu, select <strong>Move VPG</strong>.</p>
-<p><img src="images/vmw-zerto-mnu-move-vpg.png" alt="Move VPG menu option"></p>
+<li><p>At the bottom of the page, select <strong>Move</strong>, then <strong>VPG</strong>.</p>
+<p><img src="images/enbl-zerto-mnu-move-vpg.png" alt="Move VPG menu option"></p>
 </li>
 <li><p>In the <em>Move</em> wizard, on the <em>Select VPGs</em> page, select one or more VPGs that you want to move then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-zerto-move-vpgs.png" alt="Move wizard - Select VPGs page"></p>
+<p><img src="images/enbl-zerto-move-vpgs.png" alt="Move wizard - Select VPGs page"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When you move a VPG, you cannot select which checkpoint to use. Zerto uses the most recent checkpoint.</p>
+</div>
 </li>
 <li><p>On the <em>Execute Parameters</em> page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, click the <strong>Commit Policy</strong> field and select:</p>
 <ul>
@@ -198,7 +203,7 @@
 <li><p>The source VMs must be powered off before they can be migrated. If the VMs cannot be gracefully shut down, you can force a shutdown. To force shutdown, select the <strong>Force Shutdown</strong> check box. If you do not select this option and the VMs cannot be gracefully shut down, the move process fails.</p>
 </li>
 <li><p>Reverse protection ensures that when the source VMs are migrated to the target region, the source region becomes the new target region. Reverse protection is enabled by default, but you should disable it by clicking the <strong>Reverse Protection</strong> field and deselecting the <strong>Reverse</strong> check box.</p>
-<p><img src="images/vmw-zerto-move-params.png" alt="Move wizard - Execute Parameters page"></p>
+<p><img src="images/enbl-zerto-move-params.png" alt="Move wizard - Execute Parameters page"></p>
 </li>
 <li><p>Click <strong>Next</strong>.</p>
 </li>

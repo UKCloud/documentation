@@ -119,7 +119,7 @@
 </ul>
 <h3 id="system-requirements">System requirements</h3>
 <p>To use our Workload Migration service, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.</p>
-<p>The following table lists the requirements for Workload Migration, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform:</p>
+<p>The following table lists the requirements for Workload Migration, based on the currently deployed version of Zerto Virtual Replication (8.5U2) on the UKCloud platform:</p>
 <table>
 <thead>
 <tr>
@@ -134,11 +134,11 @@
 </tr>
 <tr>
 <td>VMware vCenter</td>
-<td>vCenter Server 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
+<td>vCenter Server 6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1</td>
 </tr>
 <tr>
 <td>Microsoft SCVMM</td>
-<td>2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM<br>2016 and Server Core: RTM Rollup 3-5, 6</td>
+<td>2016 and Server Core: RTM Rollup 3-5, 6, 7, 8, 2019 and Server Core: RTM Rollup 1</td>
 </tr>
 <tr>
 <td><strong>Hosts</strong></td>
@@ -146,11 +146,11 @@
 </tr>
 <tr>
 <td>VMware ESXi</td>
-<td>5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
+<td>6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1</td>
 </tr>
 <tr>
 <td>Microsoft Hyper-V</td>
-<td>2012 R2 and Server Core<br>Windows 2016 Server</td>
+<td>Windows 2016 Server, Microsoft Hyper-V Server 2019</td>
 </tr>
 <tr>
 <td><strong>Virtual Machines Hardware Version</strong></td>
@@ -158,14 +158,14 @@
 </tr>
 <tr>
 <td>VMware</td>
-<td>7-11, 13, 14</td>
+<td>7-9, 10-11, 13, 14, 15, 17, 18</td>
 </tr>
 <tr>
 <td>Hyper-V</td>
 <td>Generation 1 &amp; 2</td>
 </tr>
 <tr>
-<td><strong>Disaster Recovery as a Service</strong></td>
+<td><strong>Migration to the Cloud</strong></td>
 <td> </td>
 </tr>
 <tr>
@@ -213,7 +213,7 @@
 <li><p>Creating a secure site-to-site VPN between your local environment and the UKCloud platform</p>
 </li>
 </ul>
-<p>For more information, see <a href="../vmware/vmw-how-zerto-install-local.html"><em>How to install and configure Zerto in your local environment</em></a>.</p>
+<p>For more information, see <a href="../draas/draas-how-zerto-install-local.html"><em>How to install and configure Zerto in your local environment</em></a>.</p>
 <h3 id="configure-networking-on-the-target-site">Configure networking on the target site</h3>
 <p>You must configure any internally and externally routed networks in your UKCloud target VDC to duplicate those in your local environment. You must also configure the edge gateway with the same firewall, NAT and other rules. You'll create the mapping between these networks when you create your VPG.</p>
 <p>When you migrate your workloads, external access to the UKCloud VDC will be via a different IP address. You'll need to account for any required DNS changes and external connectivity configuration (such as VPNs), to ensure continued external access. Utilising UKCloud's VMware cloud, you can configure this in advance. Alternatively, you can use load balancing technologies to manage a seamless switch between environments.</p>
@@ -230,14 +230,18 @@
 </ul>
 <p>To move a VPG:</p>
 <ol>
-<li><p>Login to ZSSP using the ZSSP login link for the zone in which your target VDC is located.</p>
-<p>If you need more detailed instructions, see <a href="../vmware/vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a>.</p>
+<li><p><a href="../vmware/vmw-how-zerto-access-zssp.html"><em>Login to the ZSSP</em></a>.</p>
+<p>Use the ZSSP login link for the zone in which your target VDC is located.</p>
 </li>
-<li><p>From the <strong>Actions</strong> menu, select <strong>Move VPG</strong>.</p>
+<li><p>At the bottom of the page, select <strong>Move</strong>, then <strong>VPG</strong>.</p>
 <p><img src="images/migr-zerto-mnu-move-vpg.png" alt="Move VPG option in the Zerto Self-Service Portal"></p>
 </li>
 <li><p>In the <em>Move</em> wizard, on the <em>Select VPGs</em> page, select one or more VPGs that you want to move then click <strong>Next</strong>.</p>
 <p><img src="images/migr-zerto-move-vpgs.png" alt="Select VPG page of Move wizard"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When you move a VPG, you cannot select which checkpoint to use. Zerto uses the most recent checkpoint.</p>
+</div>
 </li>
 <li><p>On the <em>Execute Parameters</em> page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, click the <strong>Commit Policy</strong> field and select:</p>
 <ul>

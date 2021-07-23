@@ -4379,7 +4379,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-faq.html",
-          "hash": "NISPvsWbKqc5K7RiNfxySPsTN+uZSxa4XxXT/rrJuzQ="
+          "hash": "zIX+DW6ALmUeMr/HeSTmb68TrurM1IrGWrqGF0+zq2Y="
         }
       },
       "is_incremental": false,
@@ -4391,7 +4391,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-gs.html",
-          "hash": "Uc0JnDlSy11JFvSjcpS33EkUdJ1Wh1aQz/WODN/cQYA="
+          "hash": "tmo3LOpqnU3g8Hj+SjVMsWa+pS/8+nlrlPhI6EvKLiw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/draas/draas-how-zerto-install-local.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/draas/draas-how-zerto-install-local.html",
+          "hash": "mzhhpVgs7ytb4f3kc3SEa0fgqQRWVaOdKvzJ2gv7Eac="
         }
       },
       "is_incremental": false,
@@ -4415,7 +4430,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-sco.html",
-          "hash": "g89PA7ab+Ah2AELLs4fTf9SKg/KRX+DKpYtMD0Rg7jw="
+          "hash": "omhlMpM6E9iZhRCgWI+eC8eeorY1ijiBAlIcIKVI+VU="
         }
       },
       "is_incremental": false,
@@ -4440,6 +4455,17 @@
         ".html": {
           "relative_path": "articles/draas/draas-vid-zerto-dr.html",
           "hash": "lNk/FMBaIQ1nq//3h8XgFZk9xGIV252Bcq/qjUL2/x0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/draas/images/draas-configure-zerto-ipsec.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/draas/images/draas-configure-zerto-ipsec.png"
         }
       },
       "is_incremental": false,
@@ -4484,7 +4510,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/toc.html",
-          "hash": "aqcaY2Q5kQeWGZk9QmTU7Q83OHgGa6uDD/WOLwz9sTM="
+          "hash": "QNlaobaXFVLFfCeo1ntqJZXBgQiTPMPS4ytPbAi87XA="
         }
       },
       "is_incremental": false,
@@ -5122,7 +5148,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-how-zerto-migrate-between-regions.html",
-          "hash": "nDjTvWD9OCrlE2kK59FOLS0S6iDTvlWC9XQDX51RlYY="
+          "hash": "YV/Y4wyKVWBTcpQFL0y/FAh/tqAu/TYQXBU2YSaSY7Y="
         }
       },
       "is_incremental": false,
@@ -5265,6 +5291,39 @@
       "output": {
         "resource": {
           "relative_path": "articles/enablement/images/enbl-config.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/enbl-zerto-mnu-move-vpg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/enbl-zerto-mnu-move-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/enbl-zerto-move-params.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/enbl-zerto-move-params.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/enbl-zerto-move-vpgs.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/enbl-zerto-move-vpgs.png"
         }
       },
       "is_incremental": false,
@@ -5672,39 +5731,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/enablement/images/vmw-zerto-migrate-overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/enablement/images/vmw-zerto-mnu-move-vpg.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/enablement/images/vmw-zerto-mnu-move-vpg.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/enablement/images/vmw-zerto-move-params.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/enablement/images/vmw-zerto-move-params.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/enablement/images/vmw-zerto-move-vpgs.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/enablement/images/vmw-zerto-move-vpgs.png"
         }
       },
       "is_incremental": false,
@@ -6238,7 +6264,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/migr-how-zerto-migrate-to-ukcloud.html",
-          "hash": "ABgkD0H+dgbhesP8DtvI27xdxRn68I5OAGjNicF0bzA="
+          "hash": "1uuoTI/mc/oL1sh7nlcozVoEpFjcB0JJpU23DNEKF3k="
         }
       },
       "is_incremental": false,
@@ -6274,7 +6300,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/toc.html",
-          "hash": "3DS76/X20YcJ3ayIOLwKZPfjdarXtT4/BOjseCUaiqw="
+          "hash": "McuL/5fzkX74AzKZuVzs46NVRkodw30OznQKLirRNsk="
         }
       },
       "is_incremental": false,
@@ -13486,17 +13512,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/cloud_registration.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/configure-zerto-image-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/configure-zerto-image-1.png"
         }
       },
       "is_incremental": false,
@@ -20940,6 +20955,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-create-vpg-replicate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-create-vpg-replicate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-create-vpg.png",
       "output": {
         "resource": {
@@ -21116,6 +21142,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-homepage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-homepage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-zerto-journaling.png",
       "output": {
         "resource": {
@@ -21181,34 +21218,12 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/zertomanupdate.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/zertomanupdate.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/zertopageupdate.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/zertopageupdate.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/vmware/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "UVEbSHuAY6p7A077Ght0W4XbUgq9E6BlukBrNUVR/Uo="
+          "hash": "l9rL3Ok5LFqz1OE5Bb1OoDabZ3IZw6ALlmmMiFe//n0="
         }
       },
       "is_incremental": false,
@@ -21232,7 +21247,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-journaling-protection.html",
-          "hash": "jPvKvHAzamMxmgOXq2XyGaR0Hh22xZ+/7ONyprV9JoA="
+          "hash": "rYbAFYI9kb6qa7Ugu+byoSBJjjgXjYgxNJsO6dvy4yc="
         }
       },
       "is_incremental": false,
@@ -21928,7 +21943,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-access-zssp.html",
-          "hash": "nserTSnASeRm9OKccZwoJaaKHUgzMVKBqk2PXX9s3rc="
+          "hash": "lH0r1FgFjgHgZY6Sssn1QdjTZYizx9Psboksr1R9o/Q="
         }
       },
       "is_incremental": false,
@@ -21940,31 +21955,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-create-vpg.html",
-          "hash": "GnM/AGFjUXLUoOs0WXdHg+2spCNv6iTadL6uWwu0eHQ="
+          "hash": "BPuA7R1k/OLdpqUGHAK6XFSJy9Ufnk2vGPg+35/ZHK8="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-zerto-install-local.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-zerto-install-local.html",
-          "hash": "rMkq72sRhP4d+31OCSSVDFuZqekltzp+MJlDAMFGAU4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-zerto-perform-failover.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-perform-failover.html",
-          "hash": "uS+H9zOoN8lK0vHxV3cdU8vlRfdnKMOkG//rS4psZqM="
+          "hash": "Fu2hlcKuUQpfLewGl5/mw6x3jAkVcnHo624Jyj4qeh0="
         }
       },
       "is_incremental": false,
@@ -22348,7 +22354,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-journaling-protection.html",
-          "hash": "TDHzXR+wlztnqCK+yolmGfCuCxyp4QZHU8ohGv9BFo4="
+          "hash": "ETCcoDZ56TTDR/wY1WBuG07qkp/k9wrLcrU2YEnCQA0="
         }
       },
       "is_incremental": false,

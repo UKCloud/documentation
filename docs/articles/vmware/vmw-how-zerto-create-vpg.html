@@ -109,18 +109,21 @@
 <p>For Journaling Protection, you must have access to the Zerto Self-Service Portal in the UKCloud zone in which the VMs that you want to protect are located.</p>
 <p>For Disaster Recovery as a Service or Migration to the Cloud, you must have access to the Zerto Virtual Manager Web Client in the local environment in which the VMs that you want to protect or migrate are located.</p>
 <h2 id="creating-a-virtual-protection-group-in-the-zerto-self-service-portal-journaling-protection">Creating a virtual protection group in the Zerto Self-Service Portal (Journaling Protection)</h2>
+<p>To create a VPG for Journaling Protection, use the Zerto Self-Service Portal. You must first create the initial VPG to specify the vApp to protect and the recovery site to use. After the initial creation, you can then edit the VPG to specify what happens during the recovery process.</p>
+<h3 id="creating-a-virtual-protection-group">Creating a virtual protection group</h3>
 <p>If you're creating a VPG for Journaling Protection, you specify the vApp to protect and all the VMs in that vApp are included in the VPG.</p>
 <ol>
-<li><p>Log in to the ZSSP using the ZSSP login link for the zone in which the VMs that you want to protect are located.</p>
-<p>For more detailed instructions, see <a href="vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a>.</p>
+<li><p><a href="vmw-how-zerto-access-zssp.html"><em>Log in to the ZSSP</em></a>.</p>
+<p>Use the ZSSP login link for the zone in which the VMs that you want to protect are located.</p>
 </li>
-<li><p>Select the <em>VPGs</em> tab and then click <strong>NEW VPG</strong>.</p>
-<p><img src="images/vmw-zerto-btn-new-vpg.png" alt="NEW VPG option"></p>
+<li><p>Select the <em>VPGs</em> tab and then click <strong>New VPG</strong>.</p>
+<p><img src="images/vmw-zerto-btn-new-vpg.png" alt="New VPG option"></p>
 </li>
 <li><p>In the <em>Create VPG</em> dialog, specify the <strong>VPG Name</strong>.</p>
 <p>The name must be unique and contain no more than 80 characters.</p>
 </li>
 <li><p>Select the vApp that contains the VMs that you want to protect.</p>
+<p><img src="images/vmw-zerto-create-vpg.png" alt="Create VPG dialog box - Select vApp"></p>
 </li>
 <li><p>From the <strong>Recovery Site</strong> list, select your target site.</p>
 </li>
@@ -138,15 +141,17 @@
 <li><p>Journaling Protection 28 Day Retention</p>
 </li>
 </ul>
-<p><img src="images/vmw-zerto-create-vpg.png" alt="Create VPG dialog box"></p>
+<p><img src="images/vmw-zerto-create-vpg-replicate.png" alt="Create VPG dialog box - Replication options"></p>
 </li>
 <li><p>Click <strong>Save</strong>.</p>
 <p>At this point, the selected VMs are synchronised to the target site. This synchronisation between the source site and target site may take some time, depending on the size of the VMs.</p>
 <p>After the initial synchronisation, all the VMs in the VPG are fully protected and all write operations to those VMs are sent to the journal.</p>
 </li>
-<li><p>After the initial creation of your VPG, you need to edit it to determine what happens during recovery.</p>
-</li>
-<li><p>On the <em>VPGs</em> tab, select your VPG then click the three dots.</p>
+</ol>
+<h2 id="editing-virtual-protection-group-properties">Editing virtual protection group properties</h2>
+<p>After the initial creation of your VPG, you need to edit it to determine what happens during recovery.</p>
+<ol>
+<li><p>In the <em>VPGs</em> tab of the Zerto Self-Service Portal, select your VPG then click the three dots.</p>
 <p><img src="images/vmw-zerto-btn-vpg-options.png" alt="VPG options"></p>
 </li>
 <li><p>Select <strong>Edit VPG</strong></p>
@@ -181,7 +186,7 @@
 </li>
 <li><p>The <em>Storage</em> page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).</p>
 <p><img src="images/vmw-zerto-edit-vpg-storage.png" alt="Edit VPG - Storage page"></p>
-<p>If you want to edit the storage settings for a VM, select the VM and then click <strong>EDIT SELECTED</strong>.</p>
+<p>If you want to edit the storage settings for a VM, select the VM and then click <strong>Edit Selected</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Make sure that the <strong>Thin</strong> checkbox is selected for all VMs.</p>
@@ -218,7 +223,7 @@
 <ol>
 <li><p>Log in to the ZVM Web Client.</p>
 </li>
-<li><p>Select the <strong>VPGs</strong> tab and then click <strong>NEW VPG</strong>.</p>
+<li><p>Select the <strong>VPGs</strong> tab and then click <strong>New VPG</strong>.</p>
 </li>
 <li><p>On the <em>New VPG</em> page of the <em>Create VPG</em> dialog, specify the <strong>VPG Name</strong>.</p>
 </li>
@@ -260,7 +265,7 @@
 </li>
 <li><p>The <em>Storage</em> page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).</p>
 </li>
-<li><p>If you want to edit the storage settings for a VM, select the VM and then click <strong>EDIT SELECTED</strong>.</p>
+<li><p>If you want to edit the storage settings for a VM, select the VM and then click <strong>Edit Selected</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Make sure that the <strong>Thin</strong> checkbox is selected for all VMs.</p>
