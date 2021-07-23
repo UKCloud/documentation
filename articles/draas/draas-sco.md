@@ -2,9 +2,9 @@
 title: Disaster Recovery as a Service Service Scope
 description: outlines important details regarding the Disaster Recovery to the Cloud service
 services: draas
-author: Steve Hall
-reviewer: Guy Martin
-lastreviewed: 28/06/2019
+author: shall
+reviewer: acirel
+lastreviewed: 27/05/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -45,7 +45,7 @@ Given the nature of this service, with part of the solution hosted on your site,
 
 - Your environment must meet the minimum specification required by the solution (that you can find [here](draas-gs.md#system-requirements)). This covers software versions, limitations around the types of VMs that can be protected and the minimum WAN connectivity speeds
 
-- Installation and configuration of Zerto components including the ZVM (Zerto Virtual Manager) and ZRA (Zerto Replication Appliance)
+- Installation and configuration of Zerto components including the ZVM (Zerto Virtual Manager) and VRA (Virtual Replication Appliance)
 
 - Creation of a VPN to connect to UKCloud
 
@@ -61,7 +61,7 @@ If you require support managing your local Zerto installation, we have a wide ec
 
 ## Frequency and timing
 
-UKCloud's Disaster Recovery as a Service is designed to provide recovery points that are as little as seconds behind the running VM.
+UKCloud's Disaster Recovery as a Service is designed to provide recovery points that are only seconds behind the running VM.
 
 Our standard profile provides:
 

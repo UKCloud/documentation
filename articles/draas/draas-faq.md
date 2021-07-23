@@ -2,9 +2,9 @@
 title: Disaster Recovery as a Service FAQs
 description: Frequently asked questions for Disaster Recovery as a Service (Powered by Zerto)
 services: draas
-author: Matt Warner
-reviewer: gmartin
-lastreviewed: 30/08/2019
+author: mwarner
+reviewer: acirel
+lastreviewed: 04/06/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -37,9 +37,9 @@ When you perform a test recovery, any VMs recovered are charged at the prices as
 
 ### What VMware and Hyper-V versions are supported for recovery on UKCloud?
 
-For information about the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform, see the [Interoperability Matrix for All Zerto Software Versions](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
+For information about the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (8.5U2) on the UKCloud platform, see the [Interoperability Matrix for All Zerto Software Versions](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
 
-The hypervisor management plane (such as VMware vCenter server) must be installed for Zerto to be compatible with your environment - this means that free hypervisor versions may not be supported.
+The hypervisor management plane (such as VMware vCenter server) must be installed for Zerto to be compatible with your environment. This means that free hypervisor versions may not be supported.
 
 ### Is the Zerto protection technology available for physical servers?
 
@@ -69,7 +69,7 @@ Disaster Recovery as a Service addresses server-attached disks, however for appl
 
 ### How is it billed?
 
-The pricing for Disaster Recovery as a Service is simple. You only pay for the data you have allocated to your local VMs. So, for example if your existing VMs use 100GiB of UKCloud protected storage, that's all you'll pay UKCloud to protect based on the tier of storage and retention period chosen.
+The pricing for Disaster Recovery as a Service is simple. You only pay for the data you have allocated to your local VMs. So, for example if your existing VMs use 100GB of UKCloud protected storage, that's all you'll pay UKCloud to protect based on the tier of storage and retention period chosen.
 
 ### How do I modify replication in the UKCloud Elevated environment?
 
@@ -97,7 +97,7 @@ Yes, once you've tested or performed a live failover you can failback onto your 
 
 - **Training** – Ensure knowledge is shared amongst your team. Get the team involved and make sure they're familiar with the recovery processes.
 
-For more guidance, see the Zerto and UKCloud [Disaster Recovery 101](https://ukcloud.com/wp-content/uploads/2020/06/zerto-ebook-v2.pdf) ebook.
+For more guidance, see the Zerto and UKCloud [Disaster Recovery 101](https://info.ukcloud.com/ebook/zerto-disaster-recovery) ebook.
 
 ## Feedback
 

@@ -1,18 +1,18 @@
 ---
 title: How to install and configure Zerto in your local environment
 description: This guide describes the steps you need to perform in your local environment to set up Zerto
-services: vmware
-author: Steve Hall
-reviewer: jpaddock
-lastreviewed: 01/05/2020
+services: draas
+author: shall
+reviewer: acirel
+lastreviewed: 10/06/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Install and configure Zerto in your local environment
-toc_fullpath: How To/vmw-how-zerto-install-local.md
-toc_mdlink: vmw-how-zerto-install-local.md
+toc_fullpath: How To/draas-how-zerto-install-local.md
+toc_mdlink: draas-how-zerto-install-local.md
 ---
 
 # How to install and configure Zerto in your local environment
@@ -25,9 +25,9 @@ If you want to use UKCloud's Disaster Recovery as a Service or Migration to the 
 
 - Migration to the Cloud enables you to move your workloads from a local, on-premises environment onto the UKCloud platform.
 
-Our Disaster Recovery as a Service and Migration to the Cloud services are powered by Zerto, a leading provider of disaster recovery software for the cloud, so you'll need to install Zerto software in your local environment to enable the replication of your workloads to the UKCloud platform. You'll also need to create a IPsec VPN to connect your local environment to the UKCloud.
+Our Disaster Recovery as a Service and Migration to the Cloud services are powered by Zerto, a leading provider of disaster recovery software for the cloud, so you'll need to install Zerto software in your local environment to enable the replication of your workloads to the UKCloud platform. You'll also need to create a IPsec VPN to connect your local environment to the UKCloud platform.
 
-   ![IPsec](images/configure-zerto-image-1.png)
+   ![IPsec VPN to connect local environment to UKCloud](images/draas-configure-zerto-ipsec.png)
 
 ### Intended audience
 
@@ -51,10 +51,12 @@ As UKCloud's Disaster Recovery as a Service and  Migration to the Cloud services
 
 UKCloud provides a version of ZVM that is compatible with the Zerto software on the UKCloud platform.
 
+If Microsoft .NET Framework is not installed, you'll be prompted to install the required version of .NET Framework, which is included as part of the Zerto installation package. After you install .NET Framework, the machine automatically restarts and the Zerto installation begins.
+
 1. Download and run the executable file from the link provided by UKCloud.
 
     > [!NOTE]
-    > Install ZVM on a Windows Server 2008 R2 SP1 (KB3033929 and KB2864202 or relevant superseded KBs), 2012 R2, 2016 or 2019 server, ideally with nothing else running on it.
+    > Install ZVM on a Windows Server 2012 R2, 2016 or 2019 server, ideally with nothing else running on it.
 
 2. On the *Welcome* page of the *Zerto Virtual Replication Installation for VMware vSphere* wizard, read the information provided then click **NEXT**.
 
