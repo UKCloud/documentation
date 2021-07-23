@@ -45,9 +45,9 @@ Current Service Status reports and past incident reports are published on the [U
 
 ### What type of patches will be applied?
 
-For Microsoft Operating Systems we will scan for and recommend applying any patches classified by Microsoft as being 'Security Patches' of any severity (Critical to Low). Additional patches for items such as 'Feature Packs' or general driver updates are excluded from this service.
+For Microsoft operating systems we'll scan for and recommend applying any patches classified by Microsoft as being 'Security Patches' of any severity (Critical to Low). Additional patches for items such as 'Feature Packs' or general driver updates are excluded from this service.
 
-For Linux operating systems we will scan for and recommend applying any packages which have an update available in the repositories specified within the guest operating system (equivalent to manually running a `yum update list` command in RHEL or CentOS).
+For Linux operating systems we'll scan for and recommend applying any packages that have an update available in the repositories specified within the guest operating system (equivalent to manually running a `yum update list` command in RHEL or CentOS).
 
 ### How does the patching cycle work?
 
