@@ -69,7 +69,7 @@ When you run a test failover, a test VM is created for each of your protected VM
 
    - **Select from all available checkpoints** to select a specific checkpoint from the list below
 
-   ![Checkpoints dialog box for test failover](images/vmw-zerto-failover-checkpoints.png)
+   ![Checkpoints dialog box for test failover](images/vmw-zerto-failover-test-checkpoints.png)
 
 6. Click **OK** then click **Next**.
 
