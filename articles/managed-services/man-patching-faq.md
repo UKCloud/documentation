@@ -4,7 +4,7 @@ description: Frequently asked questions for Patching as a Service
 services: managed-services
 author: sdixon
 reviewer: sdixon
-lastreviewed: 01/03/2021
+lastreviewed: 23/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
@@ -42,6 +42,12 @@ All alerting will be performed via a support ticket or any special escalation pr
 We do not envisage any scenarios that prevent UKCloud in meeting the availability KPI defined within the [Service Scope](https://docs.ukcloud.com/articles/managed-services/man-patching-sco.html) for this service.
 
 Current Service Status reports and past incident reports are published on the [UKCloud Service Status page](https://status.ukcloud.com/).
+
+### What type of patches will be applied?
+
+For Microsoft operating systems we'll scan for and recommend applying any patches classified by Microsoft as being 'Security Patches' of any severity (Critical to Low). Additional patches for items such as 'Feature Packs' or general driver updates are excluded from this service.
+
+For Linux operating systems we'll scan for and recommend applying any packages that have an update available in the repositories specified within the guest operating system (equivalent to manually running a `yum update list` command in RHEL or CentOS).
 
 ### How does the patching cycle work?
 
