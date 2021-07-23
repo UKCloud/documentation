@@ -106,7 +106,7 @@ If Microsoft .NET Framework is not installed, you'll be prompted to install the 
 
 As you'll be replicating your VMs from your local environment onto the UKCloud platform, you need to create a secure connection between the two sites. You can do this by creating a site-to-site VPN.
 
-For information about how to create a site-to-site VPN, see [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md).
+For information about how to create a site-to-site VPN, see [*How to configure IPsec VPN*](../vmware/vmw-how-configure-ipsec-vpn.md).
 
 The following table lists the minimum firewall rules required for Zerto to pair and replicate with the UKCloud platform.
 
@@ -120,7 +120,7 @@ Customer VRA  | Service Provider ZCC | TCP 4008<sup>*</sup> | Bi-directional | T
 
 ## Next steps
 
-Now that you have prepared your local environment for Disaster Recovery as a Service or  Migration to the Cloud, you can create a virtual protection group (VPG) to identify the VMs that you want to protect or migrate. For more information, see [*How to create a virtual protection group*](vmw-how-zerto-create-vpg.md).
+Now that you have prepared your local environment for Disaster Recovery as a Service or  Migration to the Cloud, you can create a virtual protection group (VPG) to identify the VMs that you want to protect or migrate. For more information, see [*How to create a virtual protection group*](../vmware/vmw-how-zerto-create-vpg.md).
 
 ## Feedback
 
