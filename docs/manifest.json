@@ -4398,15 +4398,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/draas/draas-how-zerto-install-local.md",
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-how-zerto-install-local.html",
-          "hash": "mzhhpVgs7ytb4f3kc3SEa0fgqQRWVaOdKvzJ2gv7Eac="
+          "hash": "3gPGXIu/ENF5/7/BEjpAy+QMtX+6iIzolSC37n5geeg="
         }
       },
       "is_incremental": false,
@@ -21962,15 +21959,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-zerto-perform-failover.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-perform-failover.html",
-          "hash": "Fu2hlcKuUQpfLewGl5/mw6x3jAkVcnHo624Jyj4qeh0="
+          "hash": "KlZOP0oKluPefaJEOY0GaC8KrGZnImTeF33KJRytdUE="
         }
       },
       "is_incremental": false,
