@@ -16,11 +16,11 @@ toc_fullpath: How To/vmw-how-create-vm-from-template.md
 toc_mdlink: vmw-how-create-vm-from-template.md
 ---
 
-# How to create a VM from a template
+# How to create a virtual machine from a template
 
 ## Overview
 
-To simplify the process of creating a VM, you can use a pre-built VM template from a catalog.
+To simplify the process of creating a virtual machine (VM), you can use a pre-built VM template from a catalog.
 
 For information about catalogs, see [*How to create a catalog*](vmw-how-create-catalog.md). For information about creating a VM from scratch, see [*How to create a VM from scratch*](vmw-how-create-vm-from-scratch.md).
 
@@ -103,6 +103,11 @@ For information about catalogs, see [*How to create a catalog*](vmw-how-create-c
     > If the MAC address for a newly added NIC is blank, click **Save** to generate one.
 
     ![VM details - NICs page](images/vmw-vcd10.1-vm-details-nics.png)
+
+    > [!NOTE]
+    > We recommend using the VMXNET3 network adapter where possible. The VMXNET virtual network adapter has no physical counterpart and is optimised for performance in a VM. Because operating system vendors don't provide built-in drivers for this card you must install VMware Tools to have a driver for the VMXNET network adapter available.
+    >
+    > If you want a more comprehensive guide on network adapter types, see the VMware documentation for [Network Adapter Basics](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AF9E24A8-2CFA-447B-AC83-35D563119667.html).
 
 ## Feedback
 
