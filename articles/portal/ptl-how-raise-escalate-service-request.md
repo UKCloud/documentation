@@ -22,9 +22,9 @@ toc_mdlink: ptl-how-raise-escalate-service-request.md
 
 This article provides information about how the support process works at UKCloud and what to expect when you raise a support ticket (incident or service request), including support hours, target response times and the escalation process.
 
-- Incidents - for ongoing faults and outages
+- Incidents - for outages and loss of service
 
-- Service requests - for requesting new services, changes to existing services, system information, restoring backups or requesting logs
+- Service requests - for requesting a new service, changing an existing service or raising other non-service impacting requests and queries
 
 > [!TIP]
 > Before raising an incident, you can check the [UKCloud Service Status page](https://status.ukcloud.com/) to see if there's a known issue on the platform that we're already working on.
