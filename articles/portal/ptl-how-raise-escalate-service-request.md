@@ -32,7 +32,7 @@ This article provides information about how the support process works at UKCloud
 ## Incident priorities
 
 > [!NOTE]
-> Incidents are for ongoing faults and outages. If you're raising a ticket against an incident that has been resolved, raise a service request instead.
+> Incidents are for ongoing outages and loss of service. If you're raising a ticket against an incident that has been resolved, raise a service request instead.
 
 &nbsp; | &nbsp;
 -----------|-----------
@@ -59,9 +59,9 @@ Customers should ensure they complete basic checks before contacting UKCloud, an
 
 Methods for contacting The UKCloud team are as follows:
 
-- UKCloud Portal (Assured) - <https://portal.ukcloud.com/>
+- UKCloud Portal (Assured) / MyCalls - <https://portal.ukcloud.com/>
 
-- UKCloud Portal (Elevated) - Contact your Portal administrator or Service Delivery Manager (SDM)
+- UKCloud Portal (Elevated) / MyCalls - Access to elevated portal required
 
 - Telephone - 01252 303 300 (select option 2)
 
