@@ -3,8 +3,8 @@ title: How to access syslog data for your edge gateway
 description: Explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your edge gateway
 services: vmware
 author: shighmoor
-reviewer: lthangarajah
-lastreviewed: 21/06/2019
+reviewer: jpaddock
+lastreviewed: 29/06/2021
 
 toc_rootlink: How To
 toc_sub1:
