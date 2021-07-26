@@ -2,7 +2,7 @@
 title: Getting Started Guide for the UKCloud Portal
 description: Provides information to get up and running with the UKCloud Portal
 services: portal
-author: Sue Highmoor
+author: shighmoor
 reviewer: shighmoor
 lastreviewed: 02/06/2020
 
@@ -24,21 +24,21 @@ The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you c
 
 - Raise and monitor support tickets
 
-- View notifications relating to the UKCloud platform
-
-- View cyber security news
-
-- View information about your UKCloud for VMware service, including VM information and backup reports
+- View information about your UKCloud for VMware service, including virtual machine (VM) information, backup reports and build history
 
 - Create compute services, virtual data centres (VDCs) and edge gateways within your UKCloud for VMware environment
 
-- Access VMware Cloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall
+- Access VMware Cloud Director to work with your UKCloud for VMware environment, for example to create and manage VMs, build VDC networks or configure your firewall
 
 - Access the OpenStack Horizon dashboard to work with your UKCloud for OpenStack environment, for example to build your network infrastructure, set up access and security and launch instances
 
-- Access the Azure Stack Hub portal to manage your UKCloud for Microsoft Azure environment, for example to create virtual machines
+- Access the Azure Stack Hub portal to manage your UKCloud for Microsoft Azure environment, for example to create VMs
 
-- View information about your Cloud Storage service, including secret keys and storage consumption
+- View consumption information for your Cloud Storage service, reset secret keys and create new users
+
+- View major incident (MI) notifications relating to the UKCloud platform
+
+- View cyber security news
 
 This Getting Started Guide provides an overview of the functionality available within the Portal.
 
@@ -51,7 +51,7 @@ This Getting Started Guide is intended for any user with access to the Portal.
 
 ## Before you begin
 
-You should have received your Portal login credentials from your Portal administrator. If you're the Portal administrator, your Service Delivery Manager (SDM) will have provided you with your login credentials.
+You should have received your Portal login credentials from your Portal administrator. If you're the Portal administrator, a member of the Service Delivery team will provide your login credentials.
 
 The Portal works with Google Chrome, Microsoft Edge and Mozilla Firefox.
 
@@ -63,16 +63,16 @@ The first thing you need to do is log in.
 
     - **Assured OFFICIAL:** <https://portal.ukcloud.com>
 
-    - **Elevated OFFICIAL:** Contact your Portal administrator or SDM
+    - **Elevated OFFICIAL:** Contact your Portal administrator, your Service Delivery Manager (or <servicedelivery@ukcloud.com>), or UKCloud Support (call 01252 303 300 and select option 2)
 
 2. On the log in page, enter your credentials and click **Log in**.
 
-    ![UKCloud Portal Log in page](images/ptl-login.png)
+    ![UKCloud Portal log in page](images/ptl-login.png)
 
     > [!TIP]
     > If you've forgotten your password, click the **Forgotten password?** link to request a password reset.
 
-    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or SDM. You'll be prompted to change this temporary password.
+    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or the Service Delivery team. You'll be prompted to change this temporary password.
 
     > [!NOTE]
     > If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.
