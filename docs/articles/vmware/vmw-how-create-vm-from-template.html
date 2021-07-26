@@ -91,10 +91,10 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-vm-from-a-template">How to create a VM from a template</h1>
+<h1 id="how-to-create-a-virtual-machine-from-a-template">How to create a virtual machine from a template</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To simplify the process of creating a VM, you can use a pre-built VM template from a catalog.</p>
+<p>To simplify the process of creating a virtual machine (VM), you can use a pre-built VM template from a catalog.</p>
 <p>For information about catalogs, see <a href="vmw-how-create-catalog.html"><em>How to create a catalog</em></a>. For information about creating a VM from scratch, see <a href="vmw-how-create-vm-from-scratch.html"><em>How to create a VM from scratch</em></a>.</p>
 <h2 id="creating-a-vm-from-a-template">Creating a VM from a template</h2>
 <ol>
@@ -170,6 +170,11 @@ created.</p>
 <p>If the MAC address for a newly added NIC is blank, click <strong>Save</strong> to generate one.</p>
 </div>
 <p><img src="images/vmw-vcd10.1-vm-details-nics.png" alt="VM details - NICs page"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We recommend using the VMXNET3 network adapter where possible. The VMXNET virtual network adapter has no physical counterpart and is optimised for performance in a VM. Because operating system vendors don't provide built-in drivers for this card you must install VMware Tools to have a driver for the VMXNET network adapter available.</p>
+<p>If you want a more comprehensive guide on network adapter types, see the VMware documentation for <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AF9E24A8-2CFA-447B-AC83-35D563119667.html">Network Adapter Basics</a>.</p>
+</div>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
