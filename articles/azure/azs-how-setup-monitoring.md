@@ -131,55 +131,56 @@ To complete the steps in this article, you must have appropriate access to a sub
     | \$WorkspaceId        | The log analytics workspace ID                           | <form oninput="result.value=workspaceid.value" id="workspaceid" style="display: inline;"><input type="text" id="workspaceid" name="workspaceid" style="display: inline;" placeholder="a40470ff-d8a0-4d37-ba13-274d4649a674"/></form> |
     | \$NetworkSecurityGroupName        | The name of the network security group to apply the inbound port 443 rule to                           | <form oninput="result.value=networksecuritygroupname.value" id="networksecuritygroupname" style="display: inline;"><input type="text" id="networksecuritygroupname" name="networksecuritygroupname" style="display: inline;" placeholder="AzureStackHubVMNSG"/></form> |
 
-<pre><code class="language-PowerShell"># Declare variables
-$ResourceGroupName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
-$VMName = "<output form="vmname" name="result" style="display: inline;">AzureStackHubVM</output>"
-$WorkspaceKey = "<output form="workspacekey" name="result" style="display: inline;">2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ==</output>"
-$PublicSettings = "{'workspaceId': '<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>'}"
-$ProtectedSettings = "{'workspaceKey': `'$WorkspaceKey`'}"
-$Location = (Get-AzLocation).Location
+    <pre>
+    <code class="language-PowerShell"># Declare variables
+    $ResourceGroupName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+    $VMName = "<output form="vmname" name="result" style="display: inline;">AzureStackHubVM</output>"
+    $WorkspaceKey = "<output form="workspacekey" name="result" style="display: inline;">2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ==</output>"
+    $PublicSettings = "{'workspaceId': '<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>'}"
+    $ProtectedSettings = "{'workspaceKey': `'$WorkspaceKey`'}"
+    $Location = (Get-AzLocation).Location
 
-# Get the virtual machine to apply the custom script extensions to
-$VM = Get-AzVM -ResourceGroupName $ResourceGroupName -VMName $VMName
+    # Get the virtual machine to apply the custom script extensions to
+    $VM = Get-AzVM -ResourceGroupName $ResourceGroupName -VMName $VMName
 
-# Obtain network security group, create the port 443 inbound network security group rule and apply the rule to it
-Get-AzNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzNetworkSecurityGroup
+    # Obtain network security group, create the port 443 inbound network security group rule and apply the rule to it
+    Get-AzNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzNetworkSecurityGroup
 
-# Determine if VM is Windows or Linux based
-if ($VM.OsProfile.WindowsConfiguration) {
-    $DependencyAgentType = "DependencyAgentWindows"
-    $DependencyAgentVersion = "9.5"
-    $MonitoringAgentType = "MicrosoftMonitoringAgent"
-    $MonitoringAgentVersion = "1.0"
-}
-else {
-    $DependencyAgentType = "DependencyAgentLinux"
-    $DependencyAgentVersion = "9.7"
-    $MonitoringAgentType = "OmsAgentForLinux"
-    $MonitoringAgentVersion = "1.12"
-}
+    # Determine if VM is Windows or Linux based
+    if ($VM.OsProfile.WindowsConfiguration) {
+        $DependencyAgentType = "DependencyAgentWindows"
+        $DependencyAgentVersion = "9.10"
+        $MonitoringAgentType = "MicrosoftMonitoringAgent"
+        $MonitoringAgentVersion = "1.0"
+    }
+    else {
+        $DependencyAgentType = "DependencyAgentLinux"
+        $DependencyAgentVersion = "9.10"
+        $MonitoringAgentType = "OmsAgentForLinux"
+        $MonitoringAgentVersion = "1.13"
+    }
 
-# Deploy DependencyAgent extension
-Set-AzVMExtension -ExtensionName "DependencyAgent" `
-                  -ResourceGroupName $VM.ResourceGroupName `
-                  -VMName $VM.Name `
-                  -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
-                  -ExtensionType $DependencyAgentType `
-                  -TypeHandlerVersion $DependencyAgentVersion `
-                  -Location $Location `
-                  -Verbose
+    # Deploy DependencyAgent extension
+    Set-AzVMExtension -ExtensionName "DependencyAgent" `
+                      -ResourceGroupName $VM.ResourceGroupName `
+                      -VMName $VM.Name `
+                      -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
+                      -ExtensionType $DependencyAgentType `
+                      -TypeHandlerVersion $DependencyAgentVersion `
+                      -Location $Location `
+                      -Verbose
 
-# Deploy Microsoft.EnterpriseCloud.Monitoring extension
-Set-AzVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
-                  -ResourceGroupName $VM.ResourceGroupName `
-                  -VMName $VM.Name `
-                  -Publisher "Microsoft.EnterpriseCloud.Monitoring" `
-                  -ExtensionType $MonitoringAgentType `
-                  -TypeHandlerVersion $MonitoringAgentVersion `
-                  -SettingString $PublicSettings `
-                  -ProtectedSettingString $ProtectedSettings `
-                  -Location $Location `
-                  -Verbose</code></pre>
+    # Deploy Microsoft.EnterpriseCloud.Monitoring extension
+    Set-AzVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
+                      -ResourceGroupName $VM.ResourceGroupName `
+                      -VMName $VM.Name `
+                      -Publisher "Microsoft.EnterpriseCloud.Monitoring" `
+                      -ExtensionType $MonitoringAgentType `
+                      -TypeHandlerVersion $MonitoringAgentVersion `
+                      -SettingString $PublicSettings `
+                      -ProtectedSettingString $ProtectedSettings `
+                      -Location $Location `
+                      -Verbose</code></pre>
 
 6. Continue to step 8.
 
