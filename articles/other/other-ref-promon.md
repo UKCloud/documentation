@@ -59,10 +59,9 @@ You can search and filter the feed on the *Cyber Security News* page to define e
 
 The *Security Operations Service* page in the UKCloud Portal, accessed via the navigation panel under *Monitoring*, shows the number of logs processed against the UKCloud platform by our Security Operations Service.
 
-Any threat information specific to your account is raised as a My Calls ticket to ensure that it's seen in a timely manner by the relevant person.
+All Portal users can access the *Cyber Security News* page.
 
-> [!NOTE]
-> To view the *Security Operations Service* page, you must have **Read** monitoring permissions on the page. For more information, see [*Portal permissions*](../portal/ptl-ref-overview-permissions.md#permissions-for-monitoring).
+Any threat information specific to your account is raised as a My Calls ticket to ensure that it's seen in a timely manner by the relevant person.
 
 ### Example security incidents
 
