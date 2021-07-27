@@ -112,6 +112,14 @@ To perform cloud migration you need to complete the following steps:
 
     ![Hystax Status Success](images/hystax10.jpg)
 
+
+> [!IMPORTANT]
+> **Cleanup procedure**
+>
+> 1. Once the instance / workload has been replicated and is running, raise a support request to flatten the replicated volume of the target instance.
+>
+> 2. After you have had confirmation that the volume has been flattened and you are happy the instance is working as expected, you can delete the workload from hystax.
+
 ## Known issues
 
 The Hystax Acura service is under constant development. The following are the known issues in the current release of the software, which should be resolved in the next release.
