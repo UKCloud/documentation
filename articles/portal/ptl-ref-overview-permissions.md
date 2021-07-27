@@ -3,8 +3,8 @@ title: Portal permissions
 description: A guide to the various permissions available to Portal users and what behaviour they enable
 services: portal
 author: Sue Highmoor
-reviewer: Gsmith
-lastreviewed: 25/02/2020
+reviewer: Ben Saunders
+lastreviewed: 27/07/2021
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -22,6 +22,12 @@ toc_mdlink: ptl-ref-overview-permissions.md
 System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.
 
 ![Portal permissions page](images/portal_permissions.png)
+
+Some user permissions are controlled on other pages. See the following guides:
+
+* [*How to manage My Calls users*](ptl-how-manage-my-calls.html)
+* [*How to manage OpenShift access in the UKCloud Portal*](oshift-how-manage-user-access.html)
+* [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](ostack-how-manage-accounts-portal.html)
 
 ## User is admin?
 
@@ -45,15 +51,6 @@ A contact is just contact details, they may not necessarily have an actual user 
 ------ | ------ | ---- | ------ | ------ | ---
 **Contact** | Can create a new contact for that account. | Can view existing contacts in that account. | Can edit existing contacts but cannot create new ones. | Can delete existing contacts. | All of the above.
 **User** | Can create a user associated to a contact for that account and assign permissions. | Can view existing users for contacts. | Can edit existing users and their permissions. | Can delete existing users from contacts. | All of the above.
-
-## Permissions for Support
-
-Support permissions dictate whether a user can view other users support tickets.
-
-&nbsp; | Read | Update | All
------- | ---- | ------ | ---
-**User support tickets** | Can view their own support tickets.| Can update their own support tickets. | All of the above.
-**Account support tickets** | Can view all tickets logged by users across that account. | Can update anyone's support ticket across that account. | All of the above.
 
 ## Permissions for UKCloud for VMware
 
@@ -85,10 +82,6 @@ Users need to be granted access to the relevant namespace. Once access is grante
 ## Permissions for Billing
 
 Users with **API** permissions can retrieve billing information using the Portal API. For more information, see the *GET /api/billing/billing-csv* section of the [*UKCloud Portal API Reference Guide*](ptl-ref-portal-api.md).
-
-## Permissions for Monitoring
-
-Users with **Read** permissions can view information from the Protective Monitoring service on the *Security Operations Service* page.
 
 ## Feedback
 
