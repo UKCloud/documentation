@@ -1,10 +1,10 @@
 ---
 title: How to add devices to and remove devices from Managed IT Operations
 description: Describes how to add or remove devices from your Managed IT Operations services, such as Managed Monitoring as a Service and Patching as a Service
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: agull
-lastreviewed: 04/02/2021
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:

@@ -1,10 +1,10 @@
 ---
 title: Managed Monitoring as a Service FAQs
 description: Frequently asked questions for Managed Monitoring as a Service
-services: managed-services
-author: sdixon
-reviewer: sdixon
-lastreviewed: 03/03/2021
+services: managed-operations
+author: Steve Dixon
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:

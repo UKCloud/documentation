@@ -1,10 +1,10 @@
 ---
 title: Default monitoring thresholds and alert handling procedures
 description: Lists the default monitoring thresholds and alert handling procedures defined for the Managed IT Operations Managed Monitoring as a Service option 
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: agull
-lastreviewed: 02/02/2021
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:

@@ -1,10 +1,10 @@
 ---
 title: Data collected by UKCloud's Anti-Virus as a Service
 description: Provides information about any customer data that may be collected when subscribed to UKCloud's Anti-Virus as a Service
-services: managed-services
+services: managed-operations
 author: Steve Dixon
-reviewer: 
-lastreviewed: 09/11/2020
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Anti-Virus as a Service
 toc_sub2:

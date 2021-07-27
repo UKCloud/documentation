@@ -1,17 +1,17 @@
 ---
 title: Managed Remote Desktop Services Support Service Definition
 description: Provides an overview of what is provided by the Managed Remote Desktop Services Support service
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 15/04/2021
-toc_rootlink: Advanced Managed Services
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
+toc_rootlink: Advanced Support Services
 toc_sub1: Managed Remote Desktop Services
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Managed Remote Desktop Services Support Service Definition
-toc_fullpath: Advanced Managed Services/Managed Remote Desktop Services/man-sd-rds.md
+toc_fullpath: Advanced Support Services/Managed Remote Desktop Services/man-sd-rds.md
 toc_mdlink: man-sd-rds.md
 ---
 

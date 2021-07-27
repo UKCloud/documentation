@@ -1,47 +1,51 @@
 ---
-title: Managed Web Server Service Definition
-description: Provides an overview of what is provided by the Managed Web Server service
-services: managed-services
+title: Managed SQL Server Service Definition
+description: Provides an overview of what is provided by the Managed SQL Server service
+services: managed-operations
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 15/04/2021
-toc_rootlink: Advanced Managed Services
-toc_sub1: Managed Web Server
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
+toc_rootlink: Advanced Support Services
+toc_sub1: Managed SQL Server
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Managed Web Server Service Definition
-toc_fullpath: Advanced Managed Services/Managed Web Server/man-sd-webserver.md
-toc_mdlink: man-sd-webserver.md
+toc_title: Managed SQL Server Service Definition
+toc_fullpath: Advanced Support Services/Managed SQL Server/man-sd-sqlserver.md
+toc_mdlink: man-sd-sqlserver.md
 ---
 
-# Managed Web Server Service Definition
+# Managed SQL Server Service Definition
 
-## What is Managed Web Server?
+## What is Managed SQL Server?
 
-Our Managed Web Server service aims to remove the day-to-day burden of having to ensure your IIS or Apache web services and supporting Windows or Linux servers are stable, secure, and available.
+Our Managed SQL Server service aims to remove the day-to-day burden of having to ensure your SQL servers are stable, secure and available.
 
-Web server services underpin any website or cloud-based applications and are responsible for delivering data and content that is requested via internet protocols, be it over the internet or internally as part of an intranet. As cloud-based applications become ever more mission critical, it's essential that the supporting web server services are kept in the best possible health.
+SQL servers provide the backbone for customer facing solutions but deliver no direct value on their own. Organisations that operate a limited, or sometimes non-existent, DBA team are often faced with the difficult decision to either focus on the delivery of business value projects or spend time responding to production issues, or simply 'keeping the lights on'.
 
-Organisations often struggle to find or fund the resources required to ensure the ongoing health and availability of their web hosting environment. With UKCloud's Managed Web Server services, we provide you with full 24x7x365 monitoring and support for IIS or Apache and supporting Windows or Linux servers across your multi-cloud estate, be it on-premises, on our cloud or on a cloud deployment elsewhere. This level of monitoring and support, when coupled with proactive operating system patching, provides you with the confidence that your web services are operating effectively, enabling you to focus on your business outcomes.
+With UKCloud's Managed SQL Server service, we provide you with full 24x7x365 monitoring and support for your SQL servers across your multi-cloud estate, be it on-premises, on our cloud or on a cloud deployment elsewhere. This level of monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your SQL services are operating effectively, enabling you to focus on your business outcomes.
+
+We see our Managed SQL Server service as being the perfect blend of having the flexibility of a bespoke SQL server, with all the operation and support efficiencies of Database as a Service (DBaaS).
 
 ## What the service can help you achieve
 
 - **Do more** – Free your technical resources to focus on business value projects
 
-- **Reduce complexity** – A single contract to support your web server services footprint across any cloud
+- **Reduce complexity** – A single contract to support your SQL footprint across any cloud
 
-- **Peace of mind** – Protect your web server configuration with our built-in backup service
+- **Save money** – Reduce your operating costs by outsourcing the bulk of your DBA function
 
-- **Virtually grow your team** – Leverage the skills and experience of an entire team of IIS and Apache experts
+- **Peace of mind** – Protect your important data with our built-in backup service
+
+- **Virtually grow your team** – Leverage the skills and experience of an entire team of SQL experts
 
 - **Understand your costs** – Our costs are fixed so you don't have to worry about deciphering and understanding SFIA day rates
 
-- **Remove your pain** – Move towards consuming web services as a commodity service
+- **Remove your pain** – Move towards consuming databases as a commodity service
 
 ## Pricing and packaging
 
-Managed Web Server pricing can be as low as £247 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Managed SQL Server pricing can be as low as £494 per SQL instance per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
@@ -57,7 +61,7 @@ We understand that enterprise workloads need a dependable service that underpins
 
 ## The small print
 
-A minimum term of twelve months applies to the Account Management fee and Web Server Instance Support fees. Any additional Web Server Instances will automatically initiate a new 12-month Account Management term and 12-month term for the new additional Web Server Instance. That is, the Account Management fee shall always run in parallel with the most current Support Fee term. Should early termination be invoked, the customer shall be liable for the remaining balance of the term (both Account Management and Support Fee). For example, if a customer's spend is £1,000 per month and they terminate at month nine, they are liable for the remaining three months/£3,000 in full and shall pay within 30 days of invoice.
+A minimum term of twelve months applies to the Account Management fee and SQL Instance Support fees. Any additional SQL Instances will automatically initiate a new 12-month Account Management term and 12-month term for the new additional SQL Instance. That is, the Account Management fee shall always run in parallel with the most current Support Fee term. Should early termination be invoked, the customer shall be liable for the remaining balance of the term (both Account Management and Support fee). For example, if a customer's spend is £1,000 per month and they terminate at month nine, they are liable for the remaining three months/£3,000 in full and shall pay within 30 days of invoice.
 
 For full terms and conditions including onboarding and responsibilities, refer to the [*Terms and conditions documents*](../other/other-ref-terms-and-conditions.md).
 

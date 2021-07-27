@@ -1,10 +1,10 @@
 ---
 title: How to provide notification of maintenance windows for Managed IT Operations
 description: Describes how to provide notification of maintenance windows for Managed IT Operations
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: agull
-lastreviewed: 05/02/2021
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:

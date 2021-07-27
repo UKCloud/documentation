@@ -1,10 +1,10 @@
 ---
 title: Managed Monitoring as a Service Service Scope
 description: Outlines important details regarding Managed Monitoring as a Service
-services: managed-services
+services: managed-operations
 author: Steve Dixon
-reviewer:
-lastreviewed: 07/10/2020
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:

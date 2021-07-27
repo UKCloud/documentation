@@ -1,27 +1,27 @@
 ---
-title: Advanced Managed Services FAQs
-description: Frequently asked questions for Advanced Managed Services
-services: managed-services
-author: sdixon
-reviewer:
-lastreviewed: 03/03/2021
-toc_rootlink: Advanced Managed Services
+title: Advanced Support Services FAQs
+description: Frequently asked questions for Advanced Support Services
+services: managed-operations
+author: Steve Dixon
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
+toc_rootlink: Advanced Support Services
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Advanced Managed Services FAQs
-toc_fullpath: Advanced Managed Services/man-adv-managed-svcs-faq.md
-toc_mdlink: man-adv-managed-svcs-faq.md
+toc_title: Advanced Support Services FAQs
+toc_fullpath: Advanced Support Services/man-adv-support-svcs-faq.md
+toc_mdlink: man-adv-support-svcs-faq.md
 ---
 
-# Advanced Managed Services FAQs
+# Advanced Support Services FAQs
 
 ## Service
 
 ### What is the service?
 
-Advanced Managed Services is a suite of specialised managed support products focused on the middleware and back-end services supporting your solutions. This suite is comprised of the following products:
+Advanced Support Services is a suite of specialised support products focused on the middleware and back-end services supporting your solutions. This suite is comprised of the following products:
 
 - **Managed SQL Server** - Provides monitoring and support for your SQL servers.
 

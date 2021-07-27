@@ -1,10 +1,10 @@
 ---
 title: How to use my own polling (monitoring) tooling with Managed Monitoring as a Service
 description: Describes how you can connect your own polling (monitoring) tooling to UKCloud's Managed Monitoring as a Service
-services: managed-services
-author: sdixon
-reviewer: shighmoor
-lastreviewed: 16/10/2020
+services: managed-operations
+author: Steve Dixon
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:

@@ -1,10 +1,10 @@
 ---
 title: Managed IT Operations Service Definition
 description: Provides an overview of what is provided by the Managed IT Operations service
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 15/04/2021
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -51,17 +51,13 @@ This service provides you with the building blocks to utilise essential operatio
 
 This service is designed to be flexible and allows you to mix and match from a range of pre-defined options and change them when required. The elements that make up this service consist of the following:
 
-<div style="text-align:center"><img alt="Managed IT Operations prooduct options" src="images/man-sd-managed-it-ops.png" /></div>
+<div style="text-align:center"><img alt="Managed IT Operations product options" src="images/man-sd-managed-it-ops.png" /></div>
 
 - **Managed Monitoring as a Service** *(mandatory)* The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate, leveraging the power of AIOps to reduce the amount of noise you traditionally had to filter through, enabling you to focus on the critical events that really matter.
-
-- **Managed VM Recovery Point** *(optional add-on)* Ensures your VM is protected on a nightly basis, providing confidence that you can request your entire VM or individual files to be restored from an RPO within the previous 24 hours.
 
 - **Patching as a Service** *(optional add-on)* Provides routine OS patch management for compute instances deployed across UKCloud's multi-cloud. It helps you accelerate business value by removing the burden of basic OS hygiene, letting you focus your attention above the operating system.
 
 - **Anti-Virus as a Service** *(optional add-on)* Provides you with the confidence that your environments are protected from the dangers of viruses and malware, all without the usual headaches associated with the deployment, management, and operation of an antivirus solution.
-
-- **Runbook Automation** *(optional add-on)* Enables UKCloud to execute predefined basic actions in response to well understood events to achieve a specific outcome, helping to accelerate your time to resolution for known issues.
 
 ## Pricing and packaging
 

@@ -1,10 +1,10 @@
 ---
 title: How to change your service configuration for Managed Monitoring as a Service
 description: Describes how to override default thresholds, define the monitoring method and add additional monitoring elements for Managed Monitoring as a Service 
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: agull
-lastreviewed: 05/02/2021
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:

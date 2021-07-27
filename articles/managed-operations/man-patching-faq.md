@@ -1,10 +1,10 @@
 ---
 title: Patching as a Service FAQs
 description: Frequently asked questions for Patching as a Service
-services: managed-services
-author: sdixon
-reviewer: sdixon
-lastreviewed: 23/07/2021
+services: managed-operations
+author: Steve Dixon
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
