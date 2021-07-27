@@ -2,8 +2,8 @@
 title: Portal permissions
 description: A guide to the various permissions available to Portal users and what behaviour they enable
 services: portal
-author: Sue Highmoor
-reviewer: Ben Saunders
+author: shighmoor
+reviewer: bsaunders
 lastreviewed: 27/07/2021
 toc_rootlink: Reference
 toc_sub1:
@@ -23,11 +23,13 @@ System administrators are presented with several options to control user permiss
 
 ![Portal permissions page](images/portal_permissions.png)
 
-Some user permissions are controlled on other pages. See the following guides:
+Some user permissions are controlled on other pages. See the following articles:
 
-* [*How to manage My Calls users*](ptl-how-manage-my-calls.html)
-* [*How to manage OpenShift access in the UKCloud Portal*](../openshift/oshift-how-manage-user-access.html)
-* [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](../openstack/ostack-how-manage-accounts-portal.html)
+- [*How to manage My Calls users*](ptl-how-manage-my-calls.md)
+
+- [*How to manage OpenShift access in the UKCloud Portal*](../openshift/oshift-how-manage-user-access.md)
+
+- [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](../openstack/ostack-how-manage-accounts-portal.md)
 
 ## User is admin?
 
