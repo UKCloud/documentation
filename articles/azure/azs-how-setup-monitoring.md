@@ -145,13 +145,27 @@ $VM = Get-AzVM -ResourceGroupName $ResourceGroupName -VMName $VMName
 # Obtain network security group, create the port 443 inbound network security group rule and apply the rule to it
 Get-AzNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzNetworkSecurityGroup
 
+# Determine if VM is Windows or Linux based
+if ($VM.OsProfile.WindowsConfiguration) {
+    $DependencyAgentType = "DependencyAgentWindows"
+    $DependencyAgentVersion = "9.5"
+    $MonitoringAgentType = "MicrosoftMonitoringAgent"
+    $MonitoringAgentVersion = "1.0"
+}
+else {
+    $DependencyAgentType = "DependencyAgentLinux"
+    $DependencyAgentVersion = "9.7"
+    $MonitoringAgentType = "OmsAgentForLinux"
+    $MonitoringAgentVersion = "1.12"
+}
+
 # Deploy DependencyAgent extension
 Set-AzVMExtension -ExtensionName "DependencyAgent" `
                   -ResourceGroupName $VM.ResourceGroupName `
                   -VMName $VM.Name `
                   -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
-                  -ExtensionType "DependencyAgentLinux" `
-                  -TypeHandlerVersion 9.7 `
+                  -ExtensionType $DependencyAgentType `
+                  -TypeHandlerVersion $DependencyAgentVersion `
                   -Location $Location `
                   -Verbose
 
@@ -160,8 +174,8 @@ Set-AzVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
                   -ResourceGroupName $VM.ResourceGroupName `
                   -VMName $VM.Name `
                   -Publisher "Microsoft.EnterpriseCloud.Monitoring" `
-                  -ExtensionType "OmsAgentForLinux" `
-                  -TypeHandlerVersion 1.12 `
+                  -ExtensionType $MonitoringAgentType `
+                  -TypeHandlerVersion $MonitoringAgentVersion `
                   -SettingString $PublicSettings `
                   -ProtectedSettingString $ProtectedSettings `
                   -Location $Location `
