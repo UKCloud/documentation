@@ -59,9 +59,9 @@ Customers should ensure they complete basic checks before contacting UKCloud, an
 
 Methods for contacting The UKCloud team are as follows:
 
-- UKCloud Portal (Assured) / MyCalls - <https://portal.ukcloud.com/>
+- UKCloud Portal (Assured) / My Calls - <https://portal.ukcloud.com/>
 
-- UKCloud Portal (Elevated) / MyCalls - Access to elevated portal required
+- UKCloud Portal (Elevated) / My Calls - Access to Elevated Portal required
 
 - Telephone - 01252 303 300 (select option 2)
 
