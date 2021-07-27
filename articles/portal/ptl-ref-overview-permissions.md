@@ -26,8 +26,8 @@ System administrators are presented with several options to control user permiss
 Some user permissions are controlled on other pages. See the following guides:
 
 * [*How to manage My Calls users*](ptl-how-manage-my-calls.html)
-* [*How to manage OpenShift access in the UKCloud Portal*](oshift-how-manage-user-access.html)
-* [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](ostack-how-manage-accounts-portal.html)
+* [*How to manage OpenShift access in the UKCloud Portal*](../openshift/oshift-how-manage-user-access.html)
+* [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](../openstack/ostack-how-manage-accounts-portal.html)
 
 ## User is admin?
 
