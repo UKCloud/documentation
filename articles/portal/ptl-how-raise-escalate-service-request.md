@@ -2,9 +2,9 @@
 title: How to raise and escalate support tickets with customer support
 description: Provides an overview of the process for raising incidents and service requests with UKCloud customer support (helpdesk), as well as how to escalate them if necessary
 services: other
-author: Sue Highmoor
-reviewer: aperrett
-lastreviewed: 23/10/2019
+author: shighmoor
+reviewer: ngatehouse
+lastreviewed: 26/07/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -32,7 +32,7 @@ This article provides information about how the support process works at UKCloud
 ## Incident priorities
 
 > [!NOTE]
-> Incidents are for ongoing faults and outages. If you're raising a ticket against an incident that has been resolved, raise a service request instead.
+> Incidents are for ongoing outages and loss of service. If you're raising a ticket against an incident that has been resolved, raise a service request instead.
 
 &nbsp; | &nbsp;
 -----------|-----------
@@ -59,9 +59,9 @@ Customers should ensure they complete basic checks before contacting UKCloud, an
 
 Methods for contacting The UKCloud team are as follows:
 
-- UKCloud Portal (Assured) - <https://portal.ukcloud.com/>
+- UKCloud Portal (Assured) / My Calls - <https://portal.ukcloud.com/>
 
-- UKCloud Portal (Elevated) - Contact your Portal administrator or Service Delivery Manager (SDM)
+- UKCloud Portal (Elevated) / My Calls - Access to Elevated Portal required
 
 - Telephone - 01252 303 300 (select option 2)
 
