@@ -164,22 +164,22 @@ To complete the steps in this article, you must have appropriate access to a sub
     Set-AzVMExtension -ExtensionName "DependencyAgent" `
                       -ResourceGroupName $VM.ResourceGroupName `
                       -VMName $VM.Name `
+                      -Location $Location `
                       -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
                       -ExtensionType $DependencyAgentType `
                       -TypeHandlerVersion $DependencyAgentVersion `
-                      -Location $Location `
                       -Verbose
 
     # Deploy Microsoft.EnterpriseCloud.Monitoring extension
     Set-AzVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
                       -ResourceGroupName $VM.ResourceGroupName `
                       -VMName $VM.Name `
+                      -Location $Location `
                       -Publisher "Microsoft.EnterpriseCloud.Monitoring" `
                       -ExtensionType $MonitoringAgentType `
                       -TypeHandlerVersion $MonitoringAgentVersion `
                       -SettingString $PublicSettings `
                       -ProtectedSettingString $ProtectedSettings `
-                      -Location $Location `
                       -Verbose</code></pre>
 
 6. Continue to step 8.
