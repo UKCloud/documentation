@@ -2,9 +2,9 @@
 title: How to migrate workloads on OpenStack using Hystax Acura | UKCloud Ltd
 description: Provides information on how to use Hystax Acura to move workloads within your OpenStack environment
 services: openstack
-author: Steve Dixon
-reviewer: Bryce Nicholls
-lastreviewed: 25/03/2021
+author: sdixon
+reviewer: bnicholls
+lastreviewed: 27/07/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -111,6 +111,13 @@ To perform cloud migration you need to complete the following steps:
 7. When you are done with test migration you can delete it and start a new one. For the final cutover, just detach Hystax Acura from the migration and Hystax Acura will stop tracking any resources belonging to this migration.
 
     ![Hystax Status Success](images/hystax10.jpg)
+
+> [!IMPORTANT]
+> **Cleanup procedure**
+>
+> 1. Once the instance / workload has been replicated and is running, raise a service request to flatten the replicated volume of the target instance.
+>
+> 2. After you've had confirmation that the volume has been flattened and you're happy the instance is working as expected, you can delete the workload from Hystax Acura.
 
 ## Known issues
 
