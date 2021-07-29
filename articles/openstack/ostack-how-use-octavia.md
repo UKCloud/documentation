@@ -182,6 +182,22 @@ The requirement is to create an HTTP Load Balancer across existing servers.
 
 ![Create a Load Balancer](images/ostack-octavia-001-load-balancer-details-example.PNG)
 
+#### Create a Listener
+
+![Create a Listener](images/ostack-octavia-002-listener-details-example.png)
+
+#### Create a Pool
+
+![Create a Pool](images/ostack-octavia-003-pool-details-example.png)
+
+#### Add two Members to the Pool
+
+![Add two members to the Pool](images/ostack-octavia-004-pool-members-example.png)
+
+#### Create a Health Monitor
+
+![Create a Health Monitor](images/ostack-octavia-005-monitor-details-example.png)
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
