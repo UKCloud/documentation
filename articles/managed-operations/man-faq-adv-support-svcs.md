@@ -2,8 +2,8 @@
 title: Advanced Support Services FAQs
 description: Frequently asked questions for Advanced Support Services
 services: managed-operations
-author: Steve Dixon
-reviewer: Steve Dixon
+author: sdixon
+reviewer: sdixon
 lastreviewed: 27/07/2021
 toc_rootlink: Advanced Support Services
 toc_sub1: 
@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Advanced Support Services FAQs
-toc_fullpath: Advanced Support Services/man-adv-support-svcs-faq.md
-toc_mdlink: man-adv-support-svcs-faq.md
+toc_fullpath: Advanced Support Services/man-faq-adv-support-svcs.md
+toc_mdlink: man-faq-adv-support-svcs.md
 ---
 
 # Advanced Support Services FAQs
@@ -35,7 +35,7 @@ Advanced Support Services is a suite of specialised support products focused on 
 
 Due to the technical competencies required to safely deliver these services, UKCloud may call upon the services of [Bell Integration](https://www.bell-integration.com/) to offer specialist level 3 support services and technical expertise.
 
-UKCloud will always be your single point of contact and retain ownership for all support incidents and service requests, using Bell Integration as a third-line resolver group to augment our existing support capabilities for the technologies listed above. All UKCloud’s standard service levels will still be applicable on the occasions where we escalate to Bell Integration for additional support.
+UKCloud will always be your single point of contact and retain ownership for all support incidents and service requests, using Bell Integration as a third-line resolver group to augment our existing support capabilities for the technologies listed above. All UKCloud's standard service levels will still be applicable on the occasions where we escalate to Bell Integration for additional support.
 
 Situations where UKCloud may call upon the specialisms of Bell Integration include: 
 
@@ -105,7 +105,7 @@ Where possible UKCloud will provide these services without the use of an agent b
 
 ### How is any data related to this service kept secure?
 
-Bell Integration has undergone a thorough vendor assessment and approval programme by UKCloud, and as such we have verified that Bell holds several certifications including LR ISO 9001 – Quality Management, LR ISO 14001 – Environmental Management and LR ISO 27001 - Information Security. UKCloud undertakes thorough vendor selection and ongoing vendor management processes, along with strict access control and auditing measures to ensure the security and integrity of UKCloud’s customer data and services.
+Bell Integration has undergone a thorough vendor assessment and approval programme by UKCloud, and as such we have verified that Bell holds several certifications including LR ISO 9001 – Quality Management, LR ISO 14001 – Environmental Management and LR ISO 27001 - Information Security. UKCloud undertakes thorough vendor selection and ongoing vendor management processes, along with strict access control and auditing measures to ensure the security and integrity of UKCloud's customer data and services.
 
 In addition, UKCloud has ensured strict controls that ensure any customer data that may need to be shared with Bell information still only remains accessible to pre-approved Security Cleared (SC) operatives based within the UK.
 

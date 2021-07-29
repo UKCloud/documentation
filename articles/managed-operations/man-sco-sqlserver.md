@@ -2,8 +2,8 @@
 title: Managed SQL Server Service Scope
 description: Outlines important details regarding UKCloud's Managed SQL Server service
 services: managed-operations
-author: Steve Dixon
-reviewer: Steve Dixon
+author: sdixon
+reviewer: sdixon
 lastreviewed: 27/07/2021
 toc_rootlink: Advanced Support Services
 toc_sub1: Managed SQL Server
@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Managed SQL Server Service Scope
-toc_fullpath: Advanced Support Services/Managed SQL Server/man-sqlserver-sco.md
-toc_mdlink: man-sqlserver-sco.md
+toc_fullpath: Advanced Support Services/Managed SQL Server/man-sco-sqlserver.md
+toc_mdlink: man-sco-sqlserver.md
 ---
 
 # Managed SQL Server Service Scope

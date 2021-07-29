@@ -2,17 +2,17 @@
 title: Anti-Virus as a Service FAQs
 description: Frequently asked questions for Anti-Virus as a Service
 services: managed-operations
-author: Steve Dixon
-reviewer: Steve Dixon
-lastreviewed: 27/07/2021 15:17:17
+author: sdixon
+reviewer: sdixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Anti-Virus as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Anti-Virus as a Service FAQs
-toc_fullpath: Managed IT Operations/Anti-Virus as a Service/man-antivirus-faq.md
-toc_mdlink: man-antivirus-faq.md
+toc_fullpath: Managed IT Operations/Anti-Virus as a Service/man-faq-antivirus.md
+toc_mdlink: man-faq-antivirus.md
 ---
 
 # Anti-Virus as a Service FAQs

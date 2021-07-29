@@ -2,8 +2,8 @@
 title: Anti-Virus as a Service Service Scope
 description: Outlines important details regarding Anti-Virus as a Service
 services: managed-operations
-author: Steve Dixon
-reviewer: Steve Dixon
+author: sdixon
+reviewer: sdixon
 lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Anti-Virus as a Service
@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Anti-Virus as a Service Service Scope
-toc_fullpath: Managed IT Operations/Anti-Virus as a Service/man-antivirus-sco.md
-toc_mdlink: man-antivirus-sco.md
+toc_fullpath: Managed IT Operations/Anti-Virus as a Service/man-sco-antivirus.md
+toc_mdlink: man-sco-antivirus.md
 ---
 
 # Anti-Virus as a Service Service Scope

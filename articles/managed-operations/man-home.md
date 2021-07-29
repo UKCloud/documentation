@@ -3,7 +3,7 @@ title: UKCloud managed operations products
 description: Provides an overview of the managed operations products UKCloud provides
 services: managed-operations
 author: sdixon
-reviewer: Steve Dixon
+reviewer: sdixon
 lastreviewed: 27/07/2021
 toc_rootlink: About
 toc_sub1: 
