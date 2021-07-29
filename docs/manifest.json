@@ -5217,7 +5217,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-mtf-nas.html",
-          "hash": "6CalCBYw1fanj5VQTb3H5i8j6F+TH/IXP4J7bdwShp4="
+          "hash": "AUJ7npe1bJA0u2f8fO0GdKdTnQ0czvr0xigp8u6Fd8g="
         }
       },
       "is_incremental": false,
@@ -5253,7 +5253,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-transfer-regions.html",
-          "hash": "iu3fEgK3Y7sL9ySQpHbDMYoIU2FxbbISRnKR+BM+F9I="
+          "hash": "LjW9H2jF8YODNNsQAmXHk7U9tgX4BHPoIv7iI6N8Kko="
         }
       },
       "is_incremental": false,
@@ -5747,10 +5747,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-add-playbook.png",
+      "source_relative_path": "articles/managed-operations/images/man-add-playbook.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-add-playbook.png"
+          "relative_path": "articles/managed-operations/images/man-add-playbook.png"
         }
       },
       "is_incremental": false,
@@ -5758,10 +5758,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-change-devices-add-mmaas.png",
+      "source_relative_path": "articles/managed-operations/images/man-change-devices-add-mmaas.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-change-devices-add-mmaas.png"
+          "relative_path": "articles/managed-operations/images/man-change-devices-add-mmaas.png"
         }
       },
       "is_incremental": false,
@@ -5769,10 +5769,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-change-devices-link.png",
+      "source_relative_path": "articles/managed-operations/images/man-change-devices-link.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-change-devices-link.png"
+          "relative_path": "articles/managed-operations/images/man-change-devices-link.png"
         }
       },
       "is_incremental": false,
@@ -5780,10 +5780,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-change-devices-upload-submit.png",
+      "source_relative_path": "articles/managed-operations/images/man-change-devices-upload-submit.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-change-devices-upload-submit.png"
+          "relative_path": "articles/managed-operations/images/man-change-devices-upload-submit.png"
         }
       },
       "is_incremental": false,
@@ -5791,10 +5791,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-change-devices.png",
+      "source_relative_path": "articles/managed-operations/images/man-change-devices.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-change-devices.png"
+          "relative_path": "articles/managed-operations/images/man-change-devices.png"
         }
       },
       "is_incremental": false,
@@ -5802,10 +5802,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-delete-playbook.png",
+      "source_relative_path": "articles/managed-operations/images/man-delete-playbook.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-delete-playbook.png"
+          "relative_path": "articles/managed-operations/images/man-delete-playbook.png"
         }
       },
       "is_incremental": false,
@@ -5813,10 +5813,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-maintenance-multiple-devices.png",
+      "source_relative_path": "articles/managed-operations/images/man-maintenance-multiple-devices.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-maintenance-multiple-devices.png"
+          "relative_path": "articles/managed-operations/images/man-maintenance-multiple-devices.png"
         }
       },
       "is_incremental": false,
@@ -5824,10 +5824,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-maintenance-single-device.png",
+      "source_relative_path": "articles/managed-operations/images/man-maintenance-single-device.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-maintenance-single-device.png"
+          "relative_path": "articles/managed-operations/images/man-maintenance-single-device.png"
         }
       },
       "is_incremental": false,
@@ -5835,10 +5835,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-monitoring-excel-refresh.png",
+      "source_relative_path": "articles/managed-operations/images/man-monitoring-excel-refresh.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-monitoring-excel-refresh.png"
+          "relative_path": "articles/managed-operations/images/man-monitoring-excel-refresh.png"
         }
       },
       "is_incremental": false,
@@ -5846,10 +5846,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-patching-patching-window.png",
+      "source_relative_path": "articles/managed-operations/images/man-patching-patching-window.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-patching-patching-window.png"
+          "relative_path": "articles/managed-operations/images/man-patching-patching-window.png"
         }
       },
       "is_incremental": false,
@@ -5857,10 +5857,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-patching-patchingcycle.png",
+      "source_relative_path": "articles/managed-operations/images/man-patching-patchingcycle.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-patching-patchingcycle.png"
+          "relative_path": "articles/managed-operations/images/man-patching-patchingcycle.png"
         }
       },
       "is_incremental": false,
@@ -5868,10 +5868,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-sd-managed-it-ops.png",
+      "source_relative_path": "articles/managed-operations/images/man-sd-managed-it-ops.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-sd-managed-it-ops.png"
+          "relative_path": "articles/managed-operations/images/man-sd-managed-it-ops.png"
         }
       },
       "is_incremental": false,
@@ -5879,10 +5879,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/man-update-playbook.png",
+      "source_relative_path": "articles/managed-operations/images/man-update-playbook.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/man-update-playbook.png"
+          "relative_path": "articles/managed-operations/images/man-update-playbook.png"
         }
       },
       "is_incremental": false,
@@ -5890,10 +5890,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-services/images/ukc-services-g12.png",
+      "source_relative_path": "articles/managed-operations/images/ukc-services-g12.png",
       "output": {
         "resource": {
-          "relative_path": "articles/managed-services/images/ukc-services-g12.png"
+          "relative_path": "articles/managed-operations/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -5901,11 +5901,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-ad-sco.md",
+      "source_relative_path": "articles/managed-operations/man-faq-adv-support-svcs.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-ad-sco.html",
-          "hash": "xaS/A8cs3RoU2naUQxJXp9AnQzVV5BObuiNs9eX783s="
+          "relative_path": "articles/managed-operations/man-faq-adv-support-svcs.html",
+          "hash": "lGQWpavhEdzv/OcB/BL4PuyGZ+ULsNoofEzTXuJxRRo="
         }
       },
       "is_incremental": false,
@@ -5913,11 +5913,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-adv-managed-svcs-faq.md",
+      "source_relative_path": "articles/managed-operations/man-faq-antivirus.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-adv-managed-svcs-faq.html",
-          "hash": "LxnY3nD6S9LwG2XIfbUqSjjNd1Z7blPL+fbNTFnnT/4="
+          "relative_path": "articles/managed-operations/man-faq-antivirus.html",
+          "hash": "hBEJ8J2atbPWvOI86nRbkytlQz3p2wGGe/f7MASsOPc="
         }
       },
       "is_incremental": false,
@@ -5925,11 +5925,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-antivirus-faq.md",
+      "source_relative_path": "articles/managed-operations/man-faq-monitoring.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-antivirus-faq.html",
-          "hash": "YhY5ee43H5IrOM9Byxodh3g3/gmskJr2/yiOno8YsJ8="
+          "relative_path": "articles/managed-operations/man-faq-monitoring.html",
+          "hash": "mOIf6ysU0pIR5EXLGgnUTW2PQbmTldV9Xfh5GkvAI48="
         }
       },
       "is_incremental": false,
@@ -5937,11 +5937,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-antivirus-sco.md",
+      "source_relative_path": "articles/managed-operations/man-faq-patching.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-antivirus-sco.html",
-          "hash": "aVTa2EoJK6lECf7SzYtPSQ1IoMnjmS1PFrUFulfMpj8="
+          "relative_path": "articles/managed-operations/man-faq-patching.html",
+          "hash": "qQW2IUZ4XJ/yr6rDzRE021Ap7z+CSW4aNw7QIQXXoWI="
         }
       },
       "is_incremental": false,
@@ -5949,11 +5949,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-how-add-remove-device.md",
+      "source_relative_path": "articles/managed-operations/man-home.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-how-add-remove-device.html",
-          "hash": "gblALX+ahQV3yGNDItcHAH4O3vc807XGjuubGPg70EE="
+          "relative_path": "articles/managed-operations/man-home.html",
+          "hash": "NXkq6z3yQh20c0D32GKLqskURUV8raaZkaNoGoou2ic="
         }
       },
       "is_incremental": false,
@@ -5961,11 +5961,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-how-notify-maintenance.md",
+      "source_relative_path": "articles/managed-operations/man-how-add-remove-device.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-how-notify-maintenance.html",
-          "hash": "Afc7WzmJAxX0lt8FoF357/1e5aSt86f4fXbY0opmJhg="
+          "relative_path": "articles/managed-operations/man-how-add-remove-device.html",
+          "hash": "gz/JlYdrpwxfnWdibqwGJXJZX4vLbrStAvkVLFPKidM="
         }
       },
       "is_incremental": false,
@@ -5973,11 +5973,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-how-update-contact-info.md",
+      "source_relative_path": "articles/managed-operations/man-how-monitoring-change-config.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-how-update-contact-info.html",
-          "hash": "+61k6guK4wwe4nIqk4osrfRd8q/OII9BzO2owioFw/w="
+          "relative_path": "articles/managed-operations/man-how-monitoring-change-config.html",
+          "hash": "hrkS9WJjg58Y0uulGUcp6jLlkgJTOJT0k8M0sFFKtHw="
         }
       },
       "is_incremental": false,
@@ -5985,11 +5985,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-monitoring-faq.md",
+      "source_relative_path": "articles/managed-operations/man-how-monitoring-use-customer-polling.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-monitoring-faq.html",
-          "hash": "FqFY0Ih7jqk4kN2wr1ytYGcbMSUSlmLUbxsq38YXj9A="
+          "relative_path": "articles/managed-operations/man-how-monitoring-use-customer-polling.html",
+          "hash": "GnDmwL1tlHV83jo1ksHigzWP2K0T4zRPqyoA0oQ9d7I="
         }
       },
       "is_incremental": false,
@@ -5997,11 +5997,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-monitoring-how-change-config.md",
+      "source_relative_path": "articles/managed-operations/man-how-notify-maintenance.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-monitoring-how-change-config.html",
-          "hash": "321zjPnuPb9JkZQO3raXoCWGgl/+HHErXUdoPbO7GdQ="
+          "relative_path": "articles/managed-operations/man-how-notify-maintenance.html",
+          "hash": "rz5UfG1ssd32EGnIv8NXc+/5k2Ddkf/P3ZPOGHOaaSY="
         }
       },
       "is_incremental": false,
@@ -6009,11 +6009,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-monitoring-how-use-customer-polling.md",
+      "source_relative_path": "articles/managed-operations/man-how-patching-define-window.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-monitoring-how-use-customer-polling.html",
-          "hash": "BOC24GX8zrTZ6mVh/7Hdq/2xil+mA1DWHX0CyCummcc="
+          "relative_path": "articles/managed-operations/man-how-patching-define-window.html",
+          "hash": "DJFCwPsWaiLFvJKg9Pr8NdgxsdX9bUkocj0IclTfOqI="
         }
       },
       "is_incremental": false,
@@ -6021,11 +6021,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-monitoring-sco.md",
+      "source_relative_path": "articles/managed-operations/man-how-update-contact-info.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-monitoring-sco.html",
-          "hash": "jBrBqIuJSI8JCfrzS4UzqWEOkj+9O2rX1tVGzcfiPY0="
+          "relative_path": "articles/managed-operations/man-how-update-contact-info.html",
+          "hash": "cxEX4X5Ahv2zwQ04HJYVQIb45gZcTBi21SALFqK3Z/Y="
         }
       },
       "is_incremental": false,
@@ -6033,11 +6033,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-patching-faq.md",
+      "source_relative_path": "articles/managed-operations/man-ref-defaults.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-patching-faq.html",
-          "hash": "GumebNgqZAFGGtfXMPYjSXzO2u83lAmYoqREK0JNmow="
+          "relative_path": "articles/managed-operations/man-ref-defaults.html",
+          "hash": "IUJYZRkhovwUXR5uSyIkJwRlqg6Vua0BtCWiOFP5SEw="
         }
       },
       "is_incremental": false,
@@ -6045,11 +6045,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-patching-how-define-window.md",
+      "source_relative_path": "articles/managed-operations/man-ref-sentinelone-datacollection.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-patching-how-define-window.html",
-          "hash": "vYVQNj0AGyoAeVC2YC1Qz03hKYuuJrzen+8Msnw6pIE="
+          "relative_path": "articles/managed-operations/man-ref-sentinelone-datacollection.html",
+          "hash": "AttmIxQRbV/6YLcKXejT9NNaWg1Bei5EMQaw1V09U0o="
         }
       },
       "is_incremental": false,
@@ -6057,11 +6057,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-patching-sco.md",
+      "source_relative_path": "articles/managed-operations/man-sco-ad.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-patching-sco.html",
-          "hash": "7U/UYyYqT6YiNDlRDzfrcCu+Rk5xCzMW8l2U4aF+vWM="
+          "relative_path": "articles/managed-operations/man-sco-ad.html",
+          "hash": "5aE+tWYhkURiJOiZF83IrR78GrZ0Sq8A0vfg4rsnV6k="
         }
       },
       "is_incremental": false,
@@ -6069,11 +6069,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-ref-defaults.md",
+      "source_relative_path": "articles/managed-operations/man-sco-antivirus.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-ref-defaults.html",
-          "hash": "+l5PC07OcNbpTHvciyGQdKlnyfe9xETRjai5f81bD+0="
+          "relative_path": "articles/managed-operations/man-sco-antivirus.html",
+          "hash": "0J1N2lUMC5WnNIlShmXAG0EZOrGc6gWY1Cxz3JK9Gqk="
         }
       },
       "is_incremental": false,
@@ -6081,11 +6081,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-ref-sentinelone-datacollection.md",
+      "source_relative_path": "articles/managed-operations/man-sco-monitoring.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-ref-sentinelone-datacollection.html",
-          "hash": "jIAwFj10ur8aKtl7Q/VX8cbs2oVwJx1c3UQ3heFd9Vk="
+          "relative_path": "articles/managed-operations/man-sco-monitoring.html",
+          "hash": "TR0511io835I32uv8K2C5sV4qKb+GYB3BM1Lrz7Wmcc="
         }
       },
       "is_incremental": false,
@@ -6093,11 +6093,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sd-ad.md",
+      "source_relative_path": "articles/managed-operations/man-sco-patching.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-sd-ad.html",
-          "hash": "WME/GzciWspkx1a1WX489fORLnDfg9eqYLLpweq7bCE="
+          "relative_path": "articles/managed-operations/man-sco-patching.html",
+          "hash": "J6hNMm2Aea5RFbZSdty6PhJgyGe9hlQty4h+GYpFeu0="
         }
       },
       "is_incremental": false,
@@ -6105,11 +6105,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sd-managed-it-ops.md",
+      "source_relative_path": "articles/managed-operations/man-sco-sqlserver.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-sd-managed-it-ops.html",
-          "hash": "5NWEClllJXzG0yG0AGPw2+VgjMfEBOnykA8j+XRz0HM="
+          "relative_path": "articles/managed-operations/man-sco-sqlserver.html",
+          "hash": "QAiMJ3R8QlyggMrn5ktiQRhQgaD9KieA8n2YmYeE2+I="
         }
       },
       "is_incremental": false,
@@ -6117,11 +6117,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sd-network.md",
+      "source_relative_path": "articles/managed-operations/man-sco-webserver.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-sd-network.html",
-          "hash": "Re9Gry0FwPm34kswvVXJBnQ9Sh2oYQxkguVawKGdeDk="
+          "relative_path": "articles/managed-operations/man-sco-webserver.html",
+          "hash": "N8sRn5+qZamq3hjiuTkeKXC9wm3LWiDLblu3iBpB0Bo="
         }
       },
       "is_incremental": false,
@@ -6129,11 +6129,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sd-rds.md",
+      "source_relative_path": "articles/managed-operations/man-sd-ad.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-sd-rds.html",
-          "hash": "vtJpzZNGpRQ+CrivkaszfhevTY/lAlvFbTMI2SJHOTo="
+          "relative_path": "articles/managed-operations/man-sd-ad.html",
+          "hash": "cIEamMBCKTNoGFFp37sff9dC1GO1A7XICN2tXKSuuMo="
         }
       },
       "is_incremental": false,
@@ -6141,11 +6141,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sd-sqlserver.md",
+      "source_relative_path": "articles/managed-operations/man-sd-managed-it-ops.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-sd-sqlserver.html",
-          "hash": "HCPf7l0pxJglg1ggcRE0lQuOJ+FZVxqGmBQFf1iuufg="
+          "relative_path": "articles/managed-operations/man-sd-managed-it-ops.html",
+          "hash": "C9aw9zjzX0Rf1zpx2RIfStfmRCvX13WKlPsF3cxs/dw="
         }
       },
       "is_incremental": false,
@@ -6153,11 +6153,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sd-webserver.md",
+      "source_relative_path": "articles/managed-operations/man-sd-network.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-sd-webserver.html",
-          "hash": "rbCPDiBuav9nGYpFCWX2KnSDqTNJGVyDwkbnOwW130M="
+          "relative_path": "articles/managed-operations/man-sd-network.html",
+          "hash": "rjj/9AQcnCwShbmVeZsH4lvs8Ydbb2AI6hrv3fKXTdA="
         }
       },
       "is_incremental": false,
@@ -6165,11 +6165,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-services-home.md",
+      "source_relative_path": "articles/managed-operations/man-sd-rds.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-services-home.html",
-          "hash": "VfS4jkr1khHXmDnA1MIPlDg1SdEgnYipO0VwqSrB+b4="
+          "relative_path": "articles/managed-operations/man-sd-rds.html",
+          "hash": "+0y7n4mTCcYA/khpufcZWHbML5wJREFwjngj94XXfkg="
         }
       },
       "is_incremental": false,
@@ -6177,11 +6177,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-sqlserver-sco.md",
+      "source_relative_path": "articles/managed-operations/man-sd-sqlserver.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-sqlserver-sco.html",
-          "hash": "emj7eN9b0F0bLJQMkFEuZGTh9/0a7vgyNr+sb18YsTc="
+          "relative_path": "articles/managed-operations/man-sd-sqlserver.html",
+          "hash": "XNyeJGAEm+me+qRSnkTYEUbgIH9xTud+8m+50mqQTiw="
         }
       },
       "is_incremental": false,
@@ -6189,11 +6189,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/managed-services/man-webserver-sco.md",
+      "source_relative_path": "articles/managed-operations/man-sd-webserver.md",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/man-webserver-sco.html",
-          "hash": "F5nMplJsoGBkdr/HZoLe/txVN9R16ypQaHKF26PaDXY="
+          "relative_path": "articles/managed-operations/man-sd-webserver.html",
+          "hash": "zCu+OYy5Rq5NgjkYxlvKnGxthAc0lsnwwkGqpTES6d4="
         }
       },
       "is_incremental": false,
@@ -6201,11 +6201,11 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "articles/managed-services/toc.yml",
+      "source_relative_path": "articles/managed-operations/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "articles/managed-services/toc.html",
-          "hash": "u2HdSYNQMqotTK20q+RuRnKtEzsgU0mvaC50GYctexc="
+          "relative_path": "articles/managed-operations/toc.html",
+          "hash": "RzufZP1sIfT+ryo9af4dRgnzuVzDFm968y9SVHxq0oE="
         }
       },
       "is_incremental": false,
@@ -9351,7 +9351,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-manage-accounts-portal.html",
-          "hash": "ypQbrhEoe6tNnR8UaOpwVJ6rgeE/DgRHSZUa/u7pViE="
+          "hash": "MEYzIWIgckpnjfK2jNB2TisQpK0ScRrDZWBdiBItmV0="
         }
       },
       "is_incremental": false,
@@ -9399,7 +9399,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-static-ip.html",
-          "hash": "W7sCVtCiH2Nve4XDftYx3BDeE2/Srmj9WMw3vGthdI0="
+          "hash": "sF4HGtsWUaSnxrz6/FbuCxYshDGVKBnQ6qITDk/ggnA="
         }
       },
       "is_incremental": false,
@@ -9483,7 +9483,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-auto-scaling.html",
-          "hash": "FfKP9tuF3AFIMZ6csSuAT1aB8suyRip9hc6FiEeG9XU="
+          "hash": "h31tRsuIDHJlkc/STYvfiNAgGYd2n9wuOClLUKb968A="
         }
       },
       "is_incremental": false,
@@ -9495,7 +9495,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-cli-clients.html",
-          "hash": "OpI0hKRtbRcm3/2EYCUNnG3hP6jDr204CXA+tHtxmYM="
+          "hash": "lNLMATf+XCLPYhLsu1uF7URyO8MQxu1O/lKwVJHwG7Y="
         }
       },
       "is_incremental": false,
@@ -10969,7 +10969,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-g12.html",
-          "hash": "4zfNoYvUtUaMgoszzV9jSNZa/2l0CUzopdFb872Rl2g="
+          "hash": "+bAL0Y9Rz2mmHZl7X6Ej8HiP38s/3g8tcYf0DFZL9ao="
         }
       },
       "is_incremental": false,
@@ -11017,7 +11017,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "9YyTsXcE8BV/mStHrps6KphKICayFRU89RxrRG045EM="
+          "hash": "jrac0UxhImZnkn4sqNbCn/aYJZ08nlIPa3+vDVYYR04="
         }
       },
       "is_incremental": false,
@@ -11185,7 +11185,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "2VmIc7EdaYqKUJugFoliqlTmWFYU6XRdPRbJXnkL8l8="
+          "hash": "VdeSCfaoy1obv1lE/AfustCmXkUXSaVMLRrNrPjh+Ww="
         }
       },
       "is_incremental": false,
@@ -11305,7 +11305,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-product-status.html",
-          "hash": "TsP75flo21cW9ET/A2kyVloCAdFBNLEIeKogcYg94iU="
+          "hash": "l8CII4iYsTnqZ5pKK6TUn46wpM1pCXzZd7c5K5k1J5Y="
         }
       },
       "is_incremental": false,
@@ -11317,7 +11317,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "7rC4e/hsvNwol9ubATlcX+ZbV9Gisb2Cd9veeFeDRpw="
+          "hash": "q+1oDIBQrMcFOKoS+KIxBYdj03sTnWK0CqWgkeTa5n8="
         }
       },
       "is_incremental": false,
@@ -11341,7 +11341,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "J72Qpm2r9ipoBi5wMD7wisCOmWH/giLUTUAjT4VR5p8="
+          "hash": "jGNqF36Ddc7YOyYyjXv27V24EbdzcCKBLwr9JD1eg9s="
         }
       },
       "is_incremental": false,
@@ -11461,7 +11461,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-ukcloud-monitoring.html",
-          "hash": "S7dPZU06u11CTmVCNc9Hjnqwr3NO4RNzzasO2L7g/tc="
+          "hash": "FUQ6TmCxjIpCPVZx131hR8pA8M7g2LLqDb5UfeWvWBk="
         }
       },
       "is_incremental": false,
@@ -22491,7 +22491,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "KI7YRMJyqK1hG/eZ9tHem0P1gbx/YMPFHhd4MjkxCQ0="
+          "hash": "oUYT2IngycEzKYXha49g63zGB5++fBoqZ7sGtxE7HyU="
         }
       },
       "is_incremental": false,
@@ -22514,7 +22514,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "QvyxSzajHj9RwSZ/UPqyh6SCwJjlwZexfLN0xOX9xtU="
+          "hash": "tQaQM0cbDLI84F9fHsZV6mS6wEQ6+sD7zUbj60Qj+xw="
         }
       },
       "is_incremental": false,

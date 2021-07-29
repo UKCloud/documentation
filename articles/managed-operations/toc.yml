@@ -1,17 +1,17 @@
 - name: About
   items:
-  - name: UKCloud managed service products
-    href: man-services-home.md
-- name: Advanced Managed Services
+  - name: UKCloud managed operations products
+    href: man-home.md
+- name: Advanced Support Services
   items:
-  - name: Advanced Managed Services FAQs
-    href: man-adv-managed-svcs-faq.md
+  - name: Advanced Support Services FAQs
+    href: man-faq-adv-support-svcs.md
   - name: Managed Active Directory Support
     items:
     - name: Managed Active Directory Support Service Definition
       href: man-sd-ad.md
     - name: Managed Active Directory Support Service Scope
-      href: man-ad-sco.md
+      href: man-sco-ad.md
   - name: Managed Remote Desktop Services
     items:
     - name: Managed Remote Desktop Services Support Service Definition
@@ -21,13 +21,13 @@
     - name: Managed SQL Server Service Definition
       href: man-sd-sqlserver.md
     - name: Managed SQL Server Service Scope
-      href: man-sqlserver-sco.md
+      href: man-sco-sqlserver.md
   - name: Managed Web Server
     items:
     - name: Managed Web Server Service Definition
       href: man-sd-webserver.md
     - name: Managed Web Server Service Scope
-      href: man-webserver-sco.md
+      href: man-sco-webserver.md
 - name: Extended Network Support
   items:
   - name: Extended Network Support from UKCloud Service Definition
@@ -45,28 +45,28 @@
   - name: Anti-Virus as a Service
     items:
     - name: Anti-Virus as a Service FAQs
-      href: man-antivirus-faq.md
+      href: man-faq-antivirus.md
     - name: Anti-Virus as a Service Service Scope
-      href: man-antivirus-sco.md
+      href: man-sco-antivirus.md
     - name: Data collected by Anti-Virus as a Service
       href: man-ref-sentinelone-datacollection.md
   - name: Managed Monitoring as a Service
     items:
     - name: Change service configuration
-      href: man-monitoring-how-change-config.md
+      href: man-how-monitoring-change-config.md
     - name: Default thresholds and procedures
       href: man-ref-defaults.md
     - name: Managed Monitoring as a Service FAQs
-      href: man-monitoring-faq.md
+      href: man-faq-monitoring.md
     - name: Managed Monitoring as a Service Service Scope
-      href: man-monitoring-sco.md
+      href: man-sco-monitoring.md
     - name: Use your own polling (monitoring) tooling
-      href: man-monitoring-how-use-customer-polling.md
+      href: man-how-monitoring-use-customer-polling.md
   - name: Patching as a Service
     items:
     - name: Define patching windows
-      href: man-patching-how-define-window.md
+      href: man-how-patching-define-window.md
     - name: Patching as a Service FAQs
-      href: man-patching-faq.md
+      href: man-faq-patching.md
     - name: Patching as a Service Service Scope
-      href: man-patching-sco.md
+      href: man-sco-patching.md
