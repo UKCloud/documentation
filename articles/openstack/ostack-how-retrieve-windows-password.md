@@ -4,7 +4,7 @@ description: Describes how to retrieve the password for an OpenStack instance th
 services: openstack
 author: Sue Highmoor
 reviewer: Bryce Nicholls
-lastreviewed: 24/04/2020
+lastreviewed: 24/04/2021
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
