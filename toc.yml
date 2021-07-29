@@ -32,8 +32,8 @@
     topicHref: articles/draas/draas-gs.md
   - name: Email and Collaboration 
     topicHref: articles/email/email-gs.md
-  - name: Managed Services
-    topicHref: articles/managed-services/man-services-home.md
+  - name: Managed Operations
+    topicHref: articles/managed-operations/man-operations-home.md
   - name: Migration to the Cloud 
     topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
   - name: Private Cloud
