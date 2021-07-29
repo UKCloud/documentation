@@ -4,7 +4,7 @@ description: Outlines how to use the OpenStack Command Line Client on a Microsof
 services: openstack
 author: Sue Highmoor
 reviewer: Bryce Nicholls
-lastreviewed: 24/04/2020
+lastreviewed: 23/07/2021
 
 toc_rootlink: How To
 toc_sub1:
