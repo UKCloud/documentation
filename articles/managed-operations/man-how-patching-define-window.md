@@ -1,18 +1,18 @@
 ---
 title: How to define patching windows for Patching as a Service
 description: Describes how to define patching windows for Patching as a Service
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: agull
-lastreviewed: 05/02/2021
+reviewer: sdixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Define patching windows
-toc_fullpath: Managed IT Operations/Patching as a Service/man-patching-how-define-window.md
-toc_mdlink: man-patching-how-define-window.md
+toc_fullpath: Managed IT Operations/Patching as a Service/man-how-patching-define-window.md
+toc_mdlink: man-how-patching-define-window.md
 ---
 
 # How to define patching windows for Patching as a Service

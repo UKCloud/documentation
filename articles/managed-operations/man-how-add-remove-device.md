@@ -1,10 +1,10 @@
 ---
 title: How to add devices to and remove devices from Managed IT Operations
 description: Describes how to add or remove devices from your Managed IT Operations services, such as Managed Monitoring as a Service and Patching as a Service
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: agull
-lastreviewed: 04/02/2021
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -74,9 +74,9 @@ If you have a new device that you want monitored, you can add it to your Managed
 
    For more information about completing the different tabs see:
 
-   - [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
+   - [*How to change your service configuration for Managed Monitoring as a Service*](man-how-monitoring-change-config.md)
 
-   - [*How to define patching windows for Patching as a Service*](man-patching-how-define-window.md)
+   - [*How to define patching windows for Patching as a Service*](man-how-patching-define-window.md)
 
    > [!TIP]
    > Device names from the **Device Information** tab are auto-populated into each of the service option tabs. If the information doesn't auto-populate, in the **Data** ribbon, select **Refresh All**.
@@ -126,9 +126,9 @@ If you have a device that you no longer want to monitor, you can remove it from 
 
 ## Related articles
 
-- [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
+- [*How to change your service configuration for Managed Monitoring as a Service*](man-how-monitoring-change-config.md)
 
-- [*How to define patching windows for Patching as a Service*](man-patching-how-define-window.md)
+- [*How to define patching windows for Patching as a Service*](man-how-patching-define-window.md)
 
 - [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
 

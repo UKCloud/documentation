@@ -1,18 +1,18 @@
 ---
 title: Patching as a Service Service Scope
 description: Outlines important details regarding Patching as a Service
-services: managed-services
+services: managed-operations
 author: sdixon
-reviewer:
-lastreviewed: 15/09/2020
+reviewer: sdixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Patching as a Service Service Scope
-toc_fullpath: Managed IT Operations/Patching as a Service/man-patching-sco.md
-toc_mdlink: man-patching-sco.md
+toc_fullpath: Managed IT Operations/Patching as a Service/man-sco-patching.md
+toc_mdlink: man-sco-patching.md
 ---
 
 # Patching as a Service Service Scope

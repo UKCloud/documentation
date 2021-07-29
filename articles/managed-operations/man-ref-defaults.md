@@ -1,10 +1,10 @@
 ---
 title: Default monitoring thresholds and alert handling procedures
 description: Lists the default monitoring thresholds and alert handling procedures defined for the Managed IT Operations Managed Monitoring as a Service option 
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: agull
-lastreviewed: 02/02/2021
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
@@ -21,7 +21,7 @@ toc_mdlink: man-ref-defaults.md
 
 With Managed Monitoring as a Service, our Cloud Operations team monitors your devices, receiving and reacting to any abnormal events, only escalating those events that genuinely require your attention.
 
-When we first provision the service, we set it up with default thresholds for the devices you've selected to monitor, unless you specified different thresholds in your initial request. At any time, you can raise a Service Request, via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, to change these thresholds and other service configuration details. For more details about how to do this, see [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md).
+When we first provision the service, we set it up with default thresholds for the devices you've selected to monitor, unless you specified different thresholds in your initial request. At any time, you can raise a Service Request, via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, to change these thresholds and other service configuration details. For more details about how to do this, see [*How to change your service configuration for Managed Monitoring as a Service*](man-how-monitoring-change-config.md).
 
 This article provides information about the default monitoring thresholds and alerting procedures.
 
@@ -58,7 +58,7 @@ Critical Alert | Yes           | <ol><li>Incident logged against the escalation 
 
 - [*How to add devices to and remove devices from Managed IT Operations*](man-how-add-remove-device.md)
 
-- [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
+- [*How to change your service configuration for Managed Monitoring as a Service*](man-how-monitoring-change-config.md)
 
 - [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
 

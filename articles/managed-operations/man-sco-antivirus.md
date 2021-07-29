@@ -1,18 +1,18 @@
 ---
 title: Anti-Virus as a Service Service Scope
 description: Outlines important details regarding Anti-Virus as a Service
-services: managed-services
-author: Steve Dixon
-reviewer:
-lastreviewed: 21/09/2020
+services: managed-operations
+author: sdixon
+reviewer: sdixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Anti-Virus as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Anti-Virus as a Service Service Scope
-toc_fullpath: Managed IT Operations/Anti-Virus as a Service/man-antivirus-sco.md
-toc_mdlink: man-antivirus-sco.md
+toc_fullpath: Managed IT Operations/Anti-Virus as a Service/man-sco-antivirus.md
+toc_mdlink: man-sco-antivirus.md
 ---
 
 # Anti-Virus as a Service Service Scope
@@ -71,9 +71,9 @@ Action upon detection - Suspicious objects                    | A/R      | R/C  
 
 UKCloud harnesses the market-leading cyber security services of [SentinelOne](https://https://www.sentinelone.com/) as the engine that powers our Anti-Virus as a Service product.
 
-To ensure the utmost accuracy, reliability and protection of our [Anti-Virus as a Service](https://docs.ukcloud.com/articles/managed-services/man-sd-managed-it-ops.html) product, SentinelOne Agents must be installed on any customer end-point (VM) opted in to this service. The SentinelOne Agent exchanges key endpoint metadata securely between any customer endpoint that has the SentinelOne agent installed and SentinelOne's central cloud platform, which sits outside of UKCloud's data centres.
+To ensure the utmost accuracy, reliability and protection of our [Anti-Virus as a Service](man-sd-managed-it-ops.md) product, SentinelOne Agents must be installed on any customer end-point (VM) opted in to this service. The SentinelOne Agent exchanges key endpoint metadata securely between any customer endpoint that has the SentinelOne agent installed and SentinelOne's central cloud platform, which sits outside of UKCloud's data centres.
 
-For a full list of the data that may be exchanged between the SentinelOne Agent and SentinelOne's central cloud platform, see [Data collected by UKCloud's Anti-Virus as a Service](https://docs.ukcloud.com/articles/managed-services/man-ref-sentinelone-datacollection.html).
+For a full list of the data that may be exchanged between the SentinelOne Agent and SentinelOne's central cloud platform, see [Data collected by UKCloud's Anti-Virus as a Service](man-ref-sentinelone-datacollection.md).
 
 In using UKCloud's Antivirus as a Service, customers must also be aware of and agree to the [SentinelOne Terms of Service](https://www.sentinelone.com/legal/terms-of-service/).
 

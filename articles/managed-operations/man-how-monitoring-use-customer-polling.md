@@ -1,18 +1,18 @@
 ---
 title: How to use my own polling (monitoring) tooling with Managed Monitoring as a Service
 description: Describes how you can connect your own polling (monitoring) tooling to UKCloud's Managed Monitoring as a Service
-services: managed-services
+services: managed-operations
 author: sdixon
-reviewer: shighmoor
-lastreviewed: 16/10/2020
+reviewer: sdixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Use your own polling (monitoring) tooling
-toc_fullpath: Managed IT Operations/Managed Monitoring as a Service/man-monitoring-how-use-customer-polling.md
-toc_mdlink: man-monitoring-how-use-customer-polling.md
+toc_fullpath: Managed IT Operations/Managed Monitoring as a Service/man-how-monitoring-use-customer-polling.md
+toc_mdlink: man-how-monitoring-use-customer-polling.md
 ---
 
 # How to use your own polling (monitoring) tooling with Managed Monitoring as a Service
@@ -53,7 +53,7 @@ In addition to being able to forward alert information, the data must contain th
 
 ### Non-standard monitoring checks
 
-Our standard checks are outlined in the [*Managed Monitoring as a Service Service Scope*](man-monitoring-sco.md). If non-standard monitoring checks are required, these must be confirmed as cleared by UKCloud before go-ahead can be given.
+Our standard checks are outlined in the [*Managed Monitoring as a Service Service Scope*](man-sco-monitoring.md). If non-standard monitoring checks are required, these must be confirmed as cleared by UKCloud before go-ahead can be given.
 
 ## Connectivity between the customer and UKCloud 
 

@@ -1,17 +1,17 @@
 ---
 title: Managed Web Server Service Definition
 description: Provides an overview of what is provided by the Managed Web Server service
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 15/04/2021
-toc_rootlink: Advanced Managed Services
+reviewer: sdixon
+lastreviewed: 27/07/2021
+toc_rootlink: Advanced Support Services
 toc_sub1: Managed Web Server
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Managed Web Server Service Definition
-toc_fullpath: Advanced Managed Services/Managed Web Server/man-sd-webserver.md
+toc_fullpath: Advanced Support Services/Managed Web Server/man-sd-webserver.md
 toc_mdlink: man-sd-webserver.md
 ---
 

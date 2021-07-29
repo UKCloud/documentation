@@ -1,18 +1,18 @@
 ---
 title: Managed Active Directory Support Service Scope
 description: Outlines important details regarding UKCloud's Managed Active Directory (AD) Support service
-services: managed-services
+services: managed-operations
 author: sdixon
-reviewer:
-lastreviewed: 28/01/2021
-toc_rootlink: Advanced Managed Services
+reviewer: sdixon
+lastreviewed: 27/07/2021
+toc_rootlink: Advanced Support Services
 toc_sub1: Managed Active Directory Support
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Managed Active Directory Support Service Scope
-toc_fullpath: Advanced Managed Services/Managed Active Directory Support/man-ad-sco.md
-toc_mdlink: man-ad-sco.md
+toc_fullpath: Advanced Support Services/Managed Active Directory Support/man-sco-ad.md
+toc_mdlink: man-sco-ad.md
 ---
 
 # Managed Active Directory Support Service Scope

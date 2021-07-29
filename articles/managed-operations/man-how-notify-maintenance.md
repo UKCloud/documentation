@@ -1,10 +1,10 @@
 ---
 title: How to provide notification of maintenance windows for Managed IT Operations
 description: Describes how to provide notification of maintenance windows for Managed IT Operations
-services: managed-services
+services: managed-operations
 author: shighmoor
-reviewer: agull
-lastreviewed: 05/02/2021
+reviewer: Steve Dixon
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -83,9 +83,9 @@ If the maintenance window affects multiple devices, you'll need to fill out the 
 
 - [*How to add devices to and remove devices from Managed IT Operations*](man-how-add-remove-device.md)
 
-- [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
+- [*How to change your service configuration for Managed Monitoring as a Service*](man-how-monitoring-change-config.md)
 
-- [*How to define patching windows for Patching as a Service*](man-patching-how-define-window.md)
+- [*How to define patching windows for Patching as a Service*](man-how-patching-define-window.md)
 
 - [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
 

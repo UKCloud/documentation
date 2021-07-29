@@ -191,7 +191,7 @@ For more information, see the [UKCloud for VMware service definition](../vmware/
 
 The Extended Network Support from UKCloud service reduces the burden customer traditionally must consider in supporting their virtual network infrastructure to enable the reliable and stable connectivity for their solution.
 
-For more information, see the [Extended Network Support service definition](../managed-services/man-sd-network.md).
+For more information, see the [Extended Network Support service definition](../managed-operations/man-sd-network.md).
 
 ## F
 
@@ -289,7 +289,7 @@ Let us know your thoughts and ideas by sending an email to <feedback@ukcloud.com
 
 A UKCloud advanced managed service that provides you with monitoring and support for your Active Directory services and supporting Windows servers.
 
-For more information, see the [Managed Active Directory Support Service Definition](../managed-services/man-sd-ad.md).
+For more information, see the [Managed Active Directory Support Service Definition](../managed-operations/man-sd-ad.md).
 
 *See also:* [Managed IT Operations](#managed-it-operations)
 
@@ -297,7 +297,7 @@ For more information, see the [Managed Active Directory Support Service Definiti
 
 Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, Managed VM recovery points, patching as a service, antivirus as a service and runbook automation. This service provides you with the building blocks to utilise essential operational delivery services.
 
-For more information, see the [Managed IT Operations Service Definition](../managed-services/man-sd-managed-it-ops.md).
+For more information, see the [Managed IT Operations Service Definition](../managed-operations/man-sd-managed-it-ops.md).
 
 ### Managed Monitoring as a Service
 
@@ -307,7 +307,7 @@ For more information, see the [Managed IT Operations Service Definition](../mana
 
 A UKCloud advanced managed service that provides you with monitoring and support for your Remote Desktop Services and supporting Windows servers.
 
-For more information, see the [Managed Remote Desktop Services Support Service Definition](../managed-services/man-sd-rds.md).
+For more information, see the [Managed Remote Desktop Services Support Service Definition](../managed-operations/man-sd-rds.md).
 
 *See also:* [Managed IT Operations](#managed-it-operations)
 
@@ -315,7 +315,7 @@ For more information, see the [Managed Remote Desktop Services Support Service D
 
 A UKCloud advanced managed service that provides monitoring and support for your SQL servers.
 
-For more information, see the [Managed SQL Server Service Definition](../managed-services/man-sd-sqlserver.md).
+For more information, see the [Managed SQL Server Service Definition](../managed-operations/man-sd-sqlserver.md).
 
 *See also:* [Managed IT Operations](#managed-it-operations)
 
@@ -323,7 +323,7 @@ For more information, see the [Managed SQL Server Service Definition](../managed
 
 A UKCloud advanced managed service that provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers.
 
-For more information, see the [Managed Web Server Service Definition](../managed-services/man-sd-webserver.md).
+For more information, see the [Managed Web Server Service Definition](../managed-operations/man-sd-webserver.md).
 
 *See also:* [Managed IT Operations](#managed-it-operations)
 

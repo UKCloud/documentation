@@ -141,9 +141,9 @@ Element | Self-service tools | &nbsp; | What you can monitor
 **Billing metrics** | &nbsp; | &nbsp; | Y
 **Usage** | Y | Y | Y
 
-### UKCloud Managed Services
+### UKCloud managed operations products
 
-UKCloud also offers a variety of managed service products, all focused around removing the distraction of IT hygiene, enabling organisations to focus on genuine business value. For more information, see [*UKCloud managed service products*](../managed-services/man-services-home.md).
+UKCloud also offers a variety of managed service products, all focused around removing the distraction of IT hygiene, enabling organisations to focus on genuine business value. For more information, see [*UKCloud managed service products*](../managed-operations/man-home.md).
 
 ## Continual improvement
 

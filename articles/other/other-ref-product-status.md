@@ -67,7 +67,7 @@ Appvia Hub from UKCloud (Third-Party Software) | November 2020 | UKCloud ecosyst
 Cisco AppDynamics from UKCloud (Third-Party Software) | November 2020 | UKCloud ecosystem of software partners
 CommVault Complete Backup & Recovery from UKCloud (Third-Party Software) | November 2020 | UKCloud ecosystem of software partners
 HyTrust from UKCloud (Third-Party Software) | November 2020 | Native encryption
-Moogsoft AIOps from UKCloud (Third-Party Software) | November 2020 | [Managed Monitoring as a Service](../managed-services/man-monitoring-sco.md)
+Moogsoft AIOps from UKCloud (Third-Party Software) | November 2020 | [Managed Monitoring as a Service](../managed-operations/man-sco-monitoring.md)
 Portworx Enterprise from UKCloud (Third-Party Software) | November 2020 | UKCloud ecosystem of software partners
 XQ Cyber CyberScore from UKCloud (Third-Party Software) | February 2020 | [Security Operations Service](../soc/soc-sd.md)
 

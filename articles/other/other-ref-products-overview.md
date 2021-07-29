@@ -99,7 +99,7 @@ This service provides single-tenant compute, where your compute needs are hosted
 
 This service provides single-tenant storage, where your data is hosted either in one of our data centres (to gain the benefits of our Assured OFFICIAL and Elevated OFFICIAL security domains), or in your Crown Hosting Data Centre (CHDC).
 
-## Managed services
+## Managed operations
 
 ### Managed IT Operations
 

@@ -1,18 +1,18 @@
 ---
 title: Managed Monitoring as a Service FAQs
 description: Frequently asked questions for Managed Monitoring as a Service
-services: managed-services
+services: managed-operations
 author: sdixon
 reviewer: sdixon
-lastreviewed: 03/03/2021
+lastreviewed: 27/07/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Managed Monitoring as a Service FAQs
-toc_fullpath: Managed IT Operations/Managed Monitoring as a Service/man-monitoring-faq.md
-toc_mdlink: man-monitoring-faq.md
+toc_fullpath: Managed IT Operations/Managed Monitoring as a Service/man-faq-monitoring.md
+toc_mdlink: man-faq-monitoring.md
 ---
 
 # Managed Monitoring as a Service FAQs
@@ -73,7 +73,7 @@ All alerting will be performed via a support ticket or any special escalation pr
 
 ### Can I use my existing polling (monitoring) tooling with this service?
 
-We've designed our Managed Monitoring as a Service solution to be extensible with existing monitoring technology you may have already invested in. We cannot guarantee compatibility with all monitoring tooling, but for information about what to consider if this is something you want to do, see [*How to use your own polling (monitoring) tooling with Managed Monitoring as a Service*](man-monitoring-how-use-customer-polling.md).
+We've designed our Managed Monitoring as a Service solution to be extensible with existing monitoring technology you may have already invested in. We cannot guarantee compatibility with all monitoring tooling, but for information about what to consider if this is something you want to do, see [*How to use your own polling (monitoring) tooling with Managed Monitoring as a Service*](man-how-monitoring-use-customer-polling.md).
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
