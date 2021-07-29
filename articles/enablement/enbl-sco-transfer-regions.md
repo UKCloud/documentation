@@ -30,7 +30,7 @@ The Data Transfer – Region to Region service enables customers to move their U
 
 ## Application process
 
-Customers wanting to transfer UKCloud for VMware workloads between regions on the UKCloud platform will need to raise a service request for the Zerto tool to be implemented in their environment. To commence the service, there's a ticket template available under service requests within My Calls.
+Customers wanting to transfer UKCloud for VMware workloads between regions on the UKCloud platform will need to raise a service request for the Zerto tool to be implemented in their environment. To commence the service, raise a Service Request within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Implementation
 

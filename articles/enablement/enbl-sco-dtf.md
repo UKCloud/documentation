@@ -2,9 +2,9 @@
 title: Data Transfer Facility Service Scope
 description: Outlines important details regarding the Data Transfer Facility
 services: enablement
-author: Steve Hall
-reviewer: Edward Corfield
-lastreviewed: 24/03/2020
+author: shall
+reviewer: srelf
+lastreviewed: 17/05/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
