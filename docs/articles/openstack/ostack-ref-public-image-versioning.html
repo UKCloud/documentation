@@ -95,22 +95,16 @@
 
 <h2 id="overview">Overview</h2>
 <p>When you create an instance in OpenStack, its disk is cloned from an image managed by OpenStack. To get you started quickly, we publish a public catalog on our platform that provides several instance images for commonly-used instance sizes and operating systems.</p>
-<p>To provide you with both predictability and access to the latest updates, without having to provide an unmanageably large catalog, we use a long-term support (LTS) approach for our OpenStack public image catalog.</p>
 <h2 id="image-versioning">Image versioning</h2>
-<p>In our public catalog, we keep the original version of the image in the catalog for the lifetime of that distribution (providing predictability). We also maintain a second version of the release of the template that we patch and replace as necessary during the distribution (providing you with access to the latest version).</p>
-<p>This means that:</p>
-<ul>
-<li><p>The LTS (original version) is predictable both in deployment state and UUID within OpenStack</p>
-</li>
-<li><p>The current version is not predictable in deployment as patches are applied and the UUID changes when the image is updated</p>
-</li>
-</ul>
+<p>We update our supported images once a quarter. We will not remove images from the platform until they are no longer in use by any customer.</p>
+<p>UKCloud always recommends using the latest available image, and recommends that all instances have their packages updated as often as possible.</p>
 <h2 id="image-naming-convention">Image naming convention</h2>
-<p>Within the public catalog, images are named using the following naming convention:</p>
-<p><code>&lt;distributionName&gt;-&lt;distributionVersionNumber&gt;-LTS</code></p>
-<p><code>&lt;distributionName&gt;-&lt;distributionVersionNumber&gt;-CURRENT</code></p>
+<p>Within the public catalog, we use the following image naming convention to enable you to easily identify images and select the best image to meet your requirements:</p>
+<p><code>&lt;distributionName&gt;-&lt;distributionVersionNumber&gt;-CURRENT</code> - This will be the most recent image for the quarter.</p>
+<p><code>&lt;distributionName&gt;-&lt;distributionVersionNumber&gt;-&lt;DATE&gt;</code> - The date indicates when the image was rotated from being the current image.</p>
 <p>For example:</p>
 <p><code>win2012-r2-CURRENT</code></p>
+<p><code>win2012-r2-01-01-2019</code></p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
