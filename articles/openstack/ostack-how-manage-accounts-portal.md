@@ -3,8 +3,8 @@ title: How to manage UKCloud for OpenStack accounts in the UKCloud Portal
 description: Shows how Portal administrators can use the UKCloud Portal to create user accounts and set access permissions for UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
-reviewer: Ben Saunders
-lastreviewed: 02/04/2020
+reviewer: Bryce Nicholls
+lastreviewed: 22/07/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -93,20 +93,6 @@ To access OpenStack:
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md).
 
 5. You can now work with your OpenStack projects within the OpenStack Horizon dashboard.
-
-## Removing an OpenStack account via the UKCloud Portal
-
-Removing a user's account in the Portal will also remove their access to OpenStack.
-
-1. In the UKCloud Portal, if necessary, switch to the account that includes the OpenStack project.
-
-2. In the Portal navigation panel, expand **Contacts** option and select **All Contacts**.
-
-    ![All Contacts menu option in UKCloud Portal](images/ptl-menu-all-contacts.png)
-
-3. On the *Contacts* page, use the **Search** field to locate the user and click the **Remove** button.
-
-    ![Remove button for Portal contact](images/ptl-contacts-btn-remove.png)
 
 ## Next steps
 
