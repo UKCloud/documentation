@@ -180,7 +180,7 @@ The requirement is to create an HTTP Load Balancer across existing servers.
 
 #### Create a Load Balancer
 
-![Create a Load Balancer](/images/ostack-octavia-001-load-balancer-details-example.PNG)
+![Create a Load Balancer](images/ostack-octavia-001-load-balancer-details-example.PNG)
 
 ## Feedback
 
