@@ -3,8 +3,8 @@ title: How to use the OpenStack API using an SSO enabled user
 description: Explains the changes needed to make use of the OpenStack API with an SSO enabled user.
 services: openstack
 author: srelf
-reviewer: 
-lastreviewed: 27/05/2020
+reviewer: srelf 
+lastreviewed: 15/07/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
