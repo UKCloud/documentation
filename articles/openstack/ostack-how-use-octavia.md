@@ -177,3 +177,11 @@ The requirement is to create an HTTP Load Balancer across existing servers.
     | id                  | d7007382-43e1-40d2-9439-ebd9b0418931 |
 
 ### Horizon Example
+
+#### Create a Load Balancer
+
+![Create a Load Balancer](/images/ostack-octavia-001-load-balancer-details-example.PNG)
+
+## Feedback
+
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
