@@ -27,9 +27,9 @@ Anti-Virus as a Service provides you with the confidence that your environments 
 
 ### What technologies do you use?
 
-Building on the capabilities of our [Managed Monitoring as a Service](man-monitoring-sco.md), UKCloud uses the industry-leading endpoint security platform [SentinelOne](https://www.sentinelone.com/) as the engine for Anti-Virus as a Service, harnessing the power of machine learning to providing protection that goes beyond that of traditional anti-virus or anti-malware solutions.
+Building on the capabilities of our [Managed Monitoring as a Service](man-sco-monitoring.md), UKCloud uses the industry-leading endpoint security platform [SentinelOne](https://www.sentinelone.com/) as the engine for Anti-Virus as a Service, harnessing the power of machine learning to providing protection that goes beyond that of traditional anti-virus or anti-malware solutions.
 
-For further details as to how we leverage SentinelOne as an approved third party in the delivery of this service, see the [Anti-Virus as a Service Service Scope](https://docs.ukcloud.com/articles/managed-services/man-antivirus-sco.html).
+For further details as to how we leverage SentinelOne as an approved third party in the delivery of this service, see the [Anti-Virus as a Service Service Scope](man-sco-antivirus.md).
 
 ### What actions will UKCloud perform on positive detection?
 
@@ -46,7 +46,7 @@ All alerting will be performed via a support ticket or any special escalation pr
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-We don't envisage any scenarios that prevent UKCloud from meeting the Anti-Virus as a Service platform availability KPI defined within the [Service Scope](man-antivirus-sco.md) for this service. Current Service Status and past incident reports are published on the [UKCloud Service Status page](https://status.ukcloud.com/).
+We don't envisage any scenarios that prevent UKCloud from meeting the Anti-Virus as a Service platform availability KPI defined within the [Service Scope](man-sco-antivirus.md) for this service. Current Service Status and past incident reports are published on the [UKCloud Service Status page](https://status.ukcloud.com/).
 
 > [!NOTE]
 > Should the central Anti-Virus as a Service platform become unavailable, any SentinelOne agents installed locally to the endpoint will remain active and continue to provide protection.

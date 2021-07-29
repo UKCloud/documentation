@@ -81,16 +81,16 @@ Private Cloud | [here](../private-cloud/prc-sd.md) | [here](../private-cloud/prc
 Private Cloud for Oracle Software | [here](../private-cloud/prc-sd-orcl.md) | [here](../private-cloud/prc-sco-orcl.md)
 Private Cloud for Storage | [here](../private-cloud/prc-sd-storage.md) | [here](../private-cloud/prc-sco-storage.md)
 
-## Managed services
+## Managed operations
 
 Service | Service Definition | Service Scope
 --------|--------------------|--------------
-Managed IT Operations | [here](../managed-services/man-sd-managed-it-ops.md) | N/A
-Managed Active Directory Support | [here](../managed-services/man-sd-ad.md) | [here](../managed-services/man-ad-sco.md)
-Managed Remote Desktop Services Support | [here](../managed-services/man-sd-rds.md) | N/A
-Managed SQL Server | [here](../managed-services/man-sd-sqlserver.md) | [here](../managed-services/man-sqlserver-sco.md)
-Managed Web Server | [here](../managed-services/man-sd-webserver.md) | [here](../managed-services/man-webserver-sco.md)
-Extended Network Support from UKCloud | [here](../managed-services/man-sd-network.md) | N/A
+Managed IT Operations | [here](../managed-operations/man-sd-managed-it-ops.md) | N/A
+Managed Active Directory Support | [here](../managed-operations/man-sd-ad.md) | [here](../managed-operations/man-sco-ad.md)
+Managed Remote Desktop Services Support | [here](../managed-operations/man-sd-rds.md) | N/A
+Managed SQL Server | [here](../managed-operations/man-sd-sqlserver.md) | [here](../managed-operations/man-sco-sqlserver.md)
+Managed Web Server | [here](../managed-operations/man-sd-webserver.md) | [here](../managed-operations/man-sco-webserver.md)
+Extended Network Support from UKCloud | [here](../managed-operations/man-sd-network.md) | N/A
 
 ### Service options
 
@@ -98,9 +98,9 @@ Extended Network Support from UKCloud | [here](../managed-services/man-sd-networ
 
 Service option | Service Scope
 ---------------|--------------
-Managed Monitoring as a Service | [here](../managed-services/man-monitoring-sco.md)
-Anti-Virus as a Service | [here](../managed-services/man-antivirus-sco.md)
-Patching as a Service | [here](../managed-services/man-patching-sco.md)
+Managed Monitoring as a Service | [here](../managed-operations/man-sco-monitoring.md)
+Anti-Virus as a Service | [here](../managed-operations/man-sco-antivirus.md)
+Patching as a Service | [here](../managed-operations/man-sco-patching.md)
 
 ## Support services
 

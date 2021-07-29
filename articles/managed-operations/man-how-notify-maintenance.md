@@ -83,9 +83,9 @@ If the maintenance window affects multiple devices, you'll need to fill out the 
 
 - [*How to add devices to and remove devices from Managed IT Operations*](man-how-add-remove-device.md)
 
-- [*How to change your service configuration for Managed Monitoring as a Service*](man-monitoring-how-change-config.md)
+- [*How to change your service configuration for Managed Monitoring as a Service*](man-how-monitoring-change-config.md)
 
-- [*How to define patching windows for Patching as a Service*](man-patching-how-define-window.md)
+- [*How to define patching windows for Patching as a Service*](man-how-patching-define-window.md)
 
 - [*How to update contact information for Managed IT Operations*](man-how-update-contact-info.md)
 

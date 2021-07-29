@@ -3,7 +3,7 @@ title: Extended Network Support from UKCloud Service Definition
 description: Provides an overview of what is provided by the Extended Network Support from UKCloud service
 services: managed-operations
 author: shighmoor
-reviewer: Steve Dixon
+reviewer: sdixon
 lastreviewed: 27/07/2021
 toc_rootlink: Extended Network Support
 toc_sub1: 

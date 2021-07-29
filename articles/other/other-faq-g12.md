@@ -113,11 +113,11 @@ The only change to our VMware-based service is the addition of advanced monitori
 
 ### What is happening to Basic Managed Compute?
 
-Basic Managed Compute has now been replaced by our new managed services portfolio, offering a much wider range of options to suit customer needs. For more information, see the [*Managed IT Operations Service definition*](../managed-services/man-sd-managed-it-ops.md).
+Basic Managed Compute has now been replaced by our new managed operations portfolio, offering a much wider range of options to suit customer needs. For more information, see the [*Managed IT Operations Service definition*](../managed-operations/man-sd-managed-it-ops.md).
 
 ### What is happening to Managed Monitoring?
 
-Managed Monitoring has now been replaced by our new managed services portfolio, offering a much wider range of options to suit customer needs. For more information, see the [*Managed IT Operations Service definition*](../managed-services/man-sd-managed-it-ops.md).
+Managed Monitoring has now been replaced by our new managed operations portfolio, offering a much wider range of options to suit customer needs. For more information, see the [*Managed IT Operations Service definition*](../managed-operations/man-sd-managed-it-ops.md).
 
 ### What is happening to Cloud GPU?
 

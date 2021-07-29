@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: UKCloud managed operations products
-toc_fullpath: About/man-operations-home.md
-toc_mdlink: man-operations-home.md
+toc_fullpath: About/man-home.md
+toc_mdlink: man-home.md
 ---
 
 # UKCloud managed operations products
@@ -28,11 +28,11 @@ The following provides a brief overview of our managed operations products; clic
 
 - [**Managed IT Operations**](man-sd-managed-it-ops.md) - A portfolio of managed operations products focused on enhancing the general health of your compute assets. This portfolio is comprised of the following elements:
   
-  - [**_Managed Monitoring as a Service_**](man-monitoring-sco.md) - The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate, leveraging the power of AIOps to reduce the amount of noise you traditionally had to filter through, enabling you to focus on the critical events that really matter.
+  - [**_Managed Monitoring as a Service_**](man-sco-monitoring.md) - The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate, leveraging the power of AIOps to reduce the amount of noise you traditionally had to filter through, enabling you to focus on the critical events that really matter.
 
-  - [**_Patching as a Service_**](man-patching-sco.md) - Provides routine OS patch management for compute instances. It helps you accelerate business value by removing the burden of basic OS hygiene, letting you focus your attention above the operating system.
+  - [**_Patching as a Service_**](man-sco-patching.md) - Provides routine OS patch management for compute instances. It helps you accelerate business value by removing the burden of basic OS hygiene, letting you focus your attention above the operating system.
 
-  - [**_Anti-Virus as a Service_**](man-antivirus-sco.md) - Provides you with the confidence that your environments are protected from the dangers of viruses and malware, all without the usual headaches associated with the deployment, management, and operation of an antivirus solution.
+  - [**_Anti-Virus as a Service_**](man-sco-antivirus.md) - Provides you with the confidence that your environments are protected from the dangers of viruses and malware, all without the usual headaches associated with the deployment, management, and operation of an antivirus solution.
 
 - **Advanced Support Services** - A suite of specialised support products focused on the middleware and back-end services supporting your solutions. This suite is comprised of the following products:
 

@@ -4,7 +4,7 @@ description: List of FAQs for UKCloud services, technology, connections and proc
 services: Other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 05/03/2021
+lastreviewed: 29/07/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -73,12 +73,12 @@ Service                   | FAQ
 Private Cloud             | [here](../private-cloud/prc-faq.md)
 Private Cloud for Storage | [here](../private-cloud/prc-faq-storage.md)
 
-## Managed services
+## Managed operations
 
 Service                   | FAQ
 --------------------------|----
 Managed IT Operations     | N/A (see below for FAQs for specific service options)
-Advanced Managed Services | [here](../managed-services/man-adv-managed-svcs-faq.md)
+Advanced Support Services | [here](../managed-operations/man-faq-adv-support-svcs.md)
 
 ### Service options
 
@@ -86,9 +86,9 @@ Advanced Managed Services | [here](../managed-services/man-adv-managed-svcs-faq.
 
 Service option                  | FAQ
 --------------------------------|----
-Managed Monitoring as a Service | [here](../managed-services/man-monitoring-faq.md)
-Anti-Virus as a Service         | [here](../managed-services/man-antivirus-faq.md)
-Patching as a Service           | [here](../managed-services/man-patching-faq.md)
+Managed Monitoring as a Service | [here](../managed-operations/man-faq-monitoring.md)
+Anti-Virus as a Service         | [here](../managed-operations/man-faq-antivirus.md)
+Patching as a Service           | [here](../managed-operations/man-faq-patching.md)
 
 ## Support services
 

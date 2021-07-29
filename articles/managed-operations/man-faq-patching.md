@@ -27,7 +27,7 @@ With Patching as a Service, we provide routine OS patch management for compute i
 
 ### What technologies do you use?
 
-Built on the capabilities of our [Managed Monitoring as a Service](https://docs.ukcloud.com/articles/managed-services/man-monitoring-sco.html), UKCloud uses a combination of patches released directly by the vendor coupled with [Ivanti Security Controls](https://www.ivanti.com/products/security-controls), a market-leading enterprise patch management and control solution, as the key technologies to deliver Patching as a Service.
+Built on the capabilities of our [Managed Monitoring as a Service](man-sco-monitoring.md), UKCloud uses a combination of patches released directly by the vendor coupled with [Ivanti Security Controls](https://www.ivanti.com/products/security-controls), a market-leading enterprise patch management and control solution, as the key technologies to deliver Patching as a Service.
 
 ### Do I get access to a dashboard or reports?
 
@@ -39,7 +39,7 @@ All alerting will be performed via a support ticket or any special escalation pr
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-We do not envisage any scenarios that prevent UKCloud in meeting the availability KPI defined within the [Service Scope](https://docs.ukcloud.com/articles/managed-services/man-patching-sco.html) for this service.
+We do not envisage any scenarios that prevent UKCloud in meeting the availability KPI defined within the [Service Scope](man-sco-patching.md) for this service.
 
 Current Service Status reports and past incident reports are published on the [UKCloud Service Status page](https://status.ukcloud.com/).
 
@@ -63,6 +63,8 @@ The following diagram shows the six available cut-off dates and associated Devic
 
 <div style="text-align:center"><img alt="Patching Cycles" src="images/man-patching-patchingcycle.png" /></div>
 
+<br>
+
 > [!NOTE]
 > * Patching cycle is two weeks long (dates above show day number from beginning of each cycle rather than day of month).
 >
@@ -76,11 +78,11 @@ Before applying patches within a production environment, it is the customer's re
 
 For customers using Patching as a Service on our UKCloud for VMware platform, UKCloud will endeavour to create a recovery point of a VM immediately prior to applying patches. As we cannot guarantee the creation of a recovery point (for example, open files may block the creation of a recovery point), UKCloud provides the following options for customers to choose from to determine how Patching as a Service should proceed should the creation of a recovery point fail:
 
-- Hard (default option): The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will not proceed.
+* Hard (default option): The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will not proceed.
 
-- Soft: The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will still proceed.
+* Soft: The patching system will attempt to snapshot the virtual machine prior to applying any patches. If the snapshot is unsuccessful, patching will still proceed.
 
-- Disabled: The patching system will not attempt to snapshot the virtual machine prior to applying any patches. This option is for virtual machines not running on the UKCloud VMware platform, or for virtual machines that are unable to have snapshots taken.
+* Disabled: The patching system will not attempt to snapshot the virtual machine prior to applying any patches. This option is for virtual machines not running on the UKCloud VMware platform, or for virtual machines that are unable to have snapshots taken.
 
 UKCloud will retain any successful recovery points for a maximum of 48 hours, therefore it is essential that customers check for any potential issues within 48 hours of any patches being applied.
 
@@ -100,7 +102,7 @@ Each patching window is followed by 18 hours of issue resolution time, in which 
 
 ### What if I require additional patches outside of my standard patching cycle?
 
-The customer is responsible for notifying UKCloud of any patches (including critical patches) they require to be applied outside of their standard patching cycle via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. UKCloud will not proactively scan for or apply any patches outside of a customer's standard patching cycle. Should a customer raise a Service Request for patches to be applied outside of their standard patching cycle, our standard [Service Request resolution target](https://docs.ukcloud.com/articles/portal/ptl-how-raise-escalate-service-request.html?q=ticket) will apply, with the clock starting from the point we receive the Service Request **and** a vendor released patch being made publicly available.
+The customer is responsible for notifying UKCloud of any patches (including critical patches) they require to be applied outside of their standard patching cycle via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. UKCloud will not proactively scan for or apply any patches outside of a customer's standard patching cycle. Should a customer raise a Service Request for patches to be applied outside of their standard patching cycle, our standard [Service Request resolution target](../portal/ptl-how-raise-escalate-service-request.md) will apply, with the clock starting from the point we receive the Service Request **and** a vendor released patch being made publicly available.
 
 ## Prerequisites
 
@@ -114,11 +116,11 @@ UKCloud will only support in-life, vendor-backed operating systems, such as Micr
 
 **Linux Only** - To provide secure communication between UKCloud's centralised patch management platform and a customer's virtual machine, we use key-based SSH sessions, reducing the need to share credentials. As such, we'll need the following prerequisites to be fulfilled ***on each virtual machine*** subscribing to this service:
 
-- An allow rule for port 22 (SSH) on your virtual machine's firewall (for example, iptables).
+* An allow rule for port 22 (SSH) on your virtual machine's firewall (for example, iptables).
 
-- A local user account with passwordless sudo access. You'll need to share details of this account with UKCloud when onboarding to this service.
+* A local user account with passwordless sudo access. You'll need to share details of this account with UKCloud when onboarding to this service.
 
-- UKCloud will provide you with a public SSH key during the onboarding process. You'll need to append this key to the `authorized_keys` file, located at `~/.ssh/authorized_keys` within the home directory of the user you created in the step above.
+* UKCloud will provide you with a public SSH key during the onboarding process. You'll need to append this key to the `authorized_keys` file, located at `~/.ssh/authorized_keys` within the home directory of the user you created in the step above.
 
 ## Management
 

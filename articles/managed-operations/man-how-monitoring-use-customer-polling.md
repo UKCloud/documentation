@@ -53,7 +53,7 @@ In addition to being able to forward alert information, the data must contain th
 
 ### Non-standard monitoring checks
 
-Our standard checks are outlined in the [*Managed Monitoring as a Service Service Scope*](man-monitoring-sco.md). If non-standard monitoring checks are required, these must be confirmed as cleared by UKCloud before go-ahead can be given.
+Our standard checks are outlined in the [*Managed Monitoring as a Service Service Scope*](man-sco-monitoring.md). If non-standard monitoring checks are required, these must be confirmed as cleared by UKCloud before go-ahead can be given.
 
 ## Connectivity between the customer and UKCloud 
 
