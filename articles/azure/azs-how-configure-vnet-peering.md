@@ -69,7 +69,7 @@ First, create two virtual networks. These virtual networks will be able to commu
     ![Create new virtual network](images/azs-portal-vnet-config-2.png)
 
 > [!NOTE]
-> When creating the second virtual network, make sure to use a different address space than the first, otherwise they will not be able to communicate
+> When creating the second virtual network, make sure to use a different address space than the first, otherwise they will not be able to communicate.
 
 6. Click **Create**.
 
@@ -94,7 +94,7 @@ For more detailed instructions on how to create a virtual machine, see the [*How
 
 After a virtual machine has been created in each virtual network, they can be peered together.
 
-1. Click on one of the created virtual networks and click **Add**
+1. Click on one of the created virtual networks and click **Add**.
 
 ![Configure virtual network peering](images/azs-portal-peering-1.png)
 
@@ -120,7 +120,7 @@ If done correctly, Azure Stack Hub will create the peering rule in the other vir
 
 The connection can be tested by pinging one of the virtual machines from inside the other virtual machine. To do this, some firewall rules need to be changed in each virtual machine.
 
-1. Go to the virtual machine and connect to it by downloading the RDP file, click **Download RDP File**
+1. Go to the virtual machine and connect to it by downloading the RDP file, click **Download RDP File**.
 
 ![Configure virtual network peering](images/azs-portal-peering-5.png)
 
@@ -129,11 +129,11 @@ The connection can be tested by pinging one of the virtual machines from inside 
 
 2. Launch the RDP file and log in with the correct credentials for the virtual machine that you set up.
 
-3. Access the firewall advanced security (**Settings**>**Update & Security**>**Windows Security**>**Firewall & network protection**>**Advanced settings**)
+3. Access the firewall advanced security (**Settings**>**Update & Security**>**Windows Security**>**Firewall & network protection**>**Advanced settings**).
 
 4. Click on **Inbound Rules**, scroll down to "*File and Printer Sharing (Echo Request - ICMPv4-in)*" and allow it through the firewall for ICMPv4 and ICMPv6.
 
-![Configure virtual netork peering](images/azs-portal-peering-3.png)
+![Configure virtual network peering](images/azs-portal-peering-3.png)
 
 5. Repeat for the other virtual machine.
 
@@ -151,4 +151,4 @@ This allows the hub virtual network to communicate with either of the virtual ne
 
 To configure the hub and spoke topology, all that needs to be done is declare one of the virtual networks as the hub and peer every other virtual network to it, these will be the spokes.
 
-The virtual networks created will be the same process as [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub). Just make sure all spokes are connected to one central virtual network
+The virtual networks created will be the same process as [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub). Just make sure all spokes are connected to one central virtual network.
