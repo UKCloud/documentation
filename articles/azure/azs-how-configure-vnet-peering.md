@@ -141,14 +141,17 @@ The connection can be tested by pinging one of the virtual machines from inside 
 
 ![Configure virtual network peering](images/azs-portal-peering-4.png)
 
-## How to configure a Hub and Spoke topology with virtual network peering using the UKCloud Azure Stack Hub portal
+## How to create a Hub and Spoke configuration with virtual network peering using the UKCloud Azure Stack Hub portal
 
-The hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub. This central point (hub) allows one virtual network to have access to every virtual network that is connected to the hub. This is easily configured for the above setup by declaring one of the virtual networks as the 'hub', then creating another network which will peer to the 'hub' network alongside the existing one.
+In a typical hub and spoke configuration, the hub is a virtual network that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub. The hub allows one virtual network to have access to every virtual network that is connected to the hub. This is easily configured for the above setup by declaring one of the virtual networks as the 'hub', then creating another network which will peer to the 'hub' network alongside the existing one.
 
 This allows the hub virtual network to communicate with either of the virtual networks that are peered to it (spokes). Below is a short guide on how to add the third virtual network.
 
 ### Configuring the Hub
 
-To configure the hub and spoke topology, all that needs to be done is declare one of the virtual networks as the hub and peer every other virtual network to it, these will be the spokes.
+The two virtual networks created in this guide will be referred to as "VNet-A" and "VNet-B". VNet-A will be the 'hub' network, with VNet-B becoming a 'spoke' network.
 
-The virtual networks created will be the same process as [Create two virtual networks in Azure Stack Hub](#Create-two-virtual-networks-in-Azure-Stack-Hub). Just make sure all spokes are connected to one central virtual network.
+We then need to create a third virtual network, which will be referred to as "VNet-C". This network will act as another 'spoke'.
+
+VNet-C will then be peered to VNet-A, creating a simple hub and spoke topology as explained above. See below for a diagram of this setup:
+[diagram TBC]
