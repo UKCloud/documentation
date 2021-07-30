@@ -143,15 +143,20 @@ The connection can be tested by pinging one of the virtual machines from inside 
 
 ## How to create a Hub and Spoke configuration with virtual network peering using the UKCloud Azure Stack Hub portal
 
-In a typical hub and spoke configuration, the hub is a virtual network that acts as a central point of connectivity to your on-premises network. The spokes are virtual networks that peer with the hub. The hub allows one virtual network to have access to every virtual network that is connected to the hub. This is easily configured for the above setup by declaring one of the virtual networks as the 'hub', then creating another network which will peer to the 'hub' network alongside the existing one.
+In a typical hub and spoke configuration, the hub is a virtual network that acts as a central point of connectivity between multiple virtual networks. These networks are the 'spokes', that peer directly to the hub network. They can utilise the services deployed on the hub, such as a VPN gateway, without having to deploy them individually on every network.
 
-This allows the hub virtual network to communicate with either of the virtual networks that are peered to it (spokes). Below is a short guide on how to add the third virtual network.
+This topology is easily configured for the above setup by declaring one of the virtual networks as the 'hub', then creating another network which will peer to the 'hub' network alongside the existing one.
+
+This allows the hub virtual network to communicate with either of the virtual networks that are peered to it (spokes). The below section explains how to add this third virtual network.
 
 ### Configuring the Hub
 
-The two virtual networks created in this guide will be referred to as "VNet-A" and "VNet-B". VNet-A will be the 'hub' network, with VNet-B becoming a 'spoke' network.
+The two virtual networks created in this guide will be referred to as "VNet-A" and "VNet-B". VNet-A will be the 'hub' network, with VNet-B becoming one of the 'spoke' networks.
 
 We then need to create a third virtual network, which will be referred to as "VNet-C". This network will act as another 'spoke'.
 
 VNet-C will then be peered to VNet-A, creating a simple hub and spoke topology as explained above. See below for a diagram of this setup:
 [diagram TBC]
+
+> [!NOTE]
+> Transitive peering is not supported between the spoke networks. In the above configuration, you must directly peer VNet-B to VNet-C to allow connectivity between them.
