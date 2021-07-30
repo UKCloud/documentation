@@ -33,7 +33,7 @@ Octavia currently supports a number of configurations:
 ### If you intend to manage with the OpenStackCLI
 
 - Octavia uses port 13876 for communication. This port will need to be open to manage Octavia.
-- A recent version of the OpenStackCLI if managing vi
+- A recent version of the OpenStackCLI
 
 ## Use Cases
 
