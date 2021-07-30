@@ -3,8 +3,8 @@ title: How to use webhooks to receive service status notifications
 description: Describes how to processes HTTP POST updates provided by webhooks from the UKCloud Service Status page
 services: other
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 11/07/2019
+reviewer: dselwood
+lastreviewed: 30/07/2021
 
 toc_rootlink: How To
 toc_sub1: 
