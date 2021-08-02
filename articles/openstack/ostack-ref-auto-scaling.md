@@ -4,7 +4,7 @@ description: Shows how to automatically scale out your OpenStack compute instanc
 services: openstack
 author: Sue Highmoor
 reviewer: srelf
-lastreviewed: 24/04/2020 10:33:48
+lastreviewed: 15/07/2021
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
