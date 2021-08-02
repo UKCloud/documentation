@@ -4,7 +4,7 @@ description: Provides information to get up and running with the UKCloud Portal
 services: portal
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 02/06/2020
+lastreviewed: 30/07/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -100,7 +100,7 @@ Each user account is associated with one or more customer accounts. Within the P
 ![Account menu](images/ptl-mnu-customer-account.png)
 
 > [!NOTE]
-> When you switch between accounts, you may be prompted to enter a 2FA code again if this additional security measure has been enabled by your Portal administrator.
+> When you switch between accounts, you may be prompted to enter a 2FA code again if this additional security measure has been enabled by the Portal administrator of that account.
 
 In the toolbar, you can also click your username to access the following options:
 
@@ -148,13 +148,13 @@ The Portal navigation panel provides access to all the functionality available i
 
   - **Backup Summary** - Provides access to summary reports of Snapshot Protection status for each of the account's compute services (see [*How to manage Snapshot Protection for your VMs*](../vmware/vmw-how-manage-snapshot-protection.md)).
 
-- **Settings** - Change various Portal settings, including key contacts, password expiration period, two factor authentication and IP address restrictions (Portal administrators only).
+- **Settings** - (Portal administrators only) Change various Portal settings, including key contacts, password expiration period, two factor authentication and IP address restrictions (see [*UKCloud Portal security settings*](ptl-ref-security-settings.md)).
 
-- **Contacts** - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (**All Contacts**) or just those with administration permissions (**Admin Contacts**). Portal administrators can create new users, reset other users' passwords and change other users' Portal permissions (see [*An Overview of Portal Permissions*](ptl-ref-overview-permissions.md)).
+- **Contacts** - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (**All Contacts**) or just those with administration permissions (**Admin Contacts**). Portal administrators can create new users, reset other users' passwords and change other users' Portal permissions (see [*Portal permissions*](ptl-ref-overview-permissions.md)).
 
 - **VMware Cloud** - Provides access to UKCloud for VMware compute services. Expand this option and then select the compute service with which you want to work (see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md)).
 
-- **Oracle Cloud** - Provides access to the OEM Cloud Control console for UKCloud for Oracle Software (see the [*Getting Started Guide for UKCloud for Oracle Software*](../oracle/orcl-gs.md)).
+- **Oracle Cloud** - Provides access to the Oracle Enterprise Manager (OEM) Cloud Control console for UKCloud for Oracle Software (see the [*Getting Started Guide for UKCloud for Oracle Software*](../oracle/orcl-gs.md)).
 
 - **OpenStack Cloud** - Provides access to the OpenStack Horizon dashboard for UKCloud for OpenStack (see the [*Getting Started Guide for UKCloud for OpenStack*](../openstack/ostack-gs.md)).
 
