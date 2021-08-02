@@ -77,8 +77,6 @@ Both policies have a 10TiB quota of storage to allow for rapid expansion of serv
 
 - Workloads can use multiple storage profiles
 
-- Micro sized VMs have a fixed allocation of 10GiB of Tier 2 storage which cannot be increased
-
 ## Protection
 
 Customers have a range of automated, on-platform protection options to choose from for their environments:
