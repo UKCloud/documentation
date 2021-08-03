@@ -4,7 +4,7 @@ description: Provides information to get up and running with Disaster Recovery a
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 11/11/2019
+lastreviewed: 27/05/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
