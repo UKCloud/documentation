@@ -4,7 +4,7 @@ description: Outlines important details regarding the Journaling Protection serv
 services: vmware
 author: shall
 reviewer:
-lastreviewed: 24/07/2018
+lastreviewed: 24/06/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
