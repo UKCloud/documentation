@@ -18,9 +18,9 @@ toc_mdlink: conn-ref-janet.md
 
 # Requesting Janet connectivity to your UKCloud workloads
 
-To request Janet connectivity to your UKCloud workloads, you must first be authorised by Jisc. If you have not already completed this process, you'll need to contact Jisc at <https://www.jisc.ac.uk/contact>.
+Any organisation can use Janet if the workload they are connecting is benefitting UK Public Sector.
 
-Once authorised, you'll need to raise a Service Request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) and identify the virtual data centre (VDC) that you want to have network access. As standard, you'll be provisioned with one IP address, however there is an an option to have additional IP addresses (at the standard cost of £20 per IP) if there is a justified business case.
+To get access, you'll need to raise a Service Request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) and identify the virtual data centre (VDC) that you want to have network access. Within the ticket you should put a brief description of what your workoad is doing for UK Public Sector. As standard, you'll be provisioned with one IP address, however there is an an option to have additional IP addresses (at the standard cost of £20 per IP) if there is a justified business case.
 
 > [!NOTE]
 > It may take up to two working days to provision this connection.
