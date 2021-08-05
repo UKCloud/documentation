@@ -3,8 +3,8 @@ title: HSCN and SSL certificates
 description: Outlines how you can get SSL certificates for web services hosted on HSCN
 services: connectivity
 author: Sue Highmoor
-reviewer: Chris Aldridge
-lastreviewed: 06/08/2020 16:30
+reviewer: nstobbart
+lastreviewed: 05/08/2021
 
 toc_rootlink: Reference
 toc_sub1: 
