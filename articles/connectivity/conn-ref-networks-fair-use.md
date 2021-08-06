@@ -3,8 +3,8 @@ title: Networks fair use policy
 description: Outlines what is considered to be fair use of UKCloud network access across the UKCloud multi-cloud platform
 services: connectivity
 author: Sue Highmoor
-reviewer:
-lastreviewed: 07/08/2020 
+reviewer: nstobbart
+lastreviewed: 05/08/2021
 
 toc_rootlink: Reference
 toc_sub1: 
