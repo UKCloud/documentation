@@ -3,8 +3,8 @@ title: Telecommunications Service Provider engagement
 description: Outlines the engagement process, demarcation points and responsibilities of all parties  regarding provisioning connectivity into UKCloud via HybridConnect
 services: connectivity
 author: Sue Highmoor
-reviewer: thallsmith
-lastreviewed: 13/08/2020
+reviewer: nstobbart
+lastreviewed: 04/08/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -58,8 +58,6 @@ The following telcos have a presence in Ark MMRs:
 - Lumen (Formerly CenturyLink)<sup>*</sup>
 
 - Virgin Media<sup>*</sup>
-
-- Interoute<sup>*</sup>
 
 - GTT<sup>*</sup>
 
