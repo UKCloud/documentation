@@ -2,9 +2,9 @@
 title: Understanding PSN core services
 description: Outlines the responsibilities between you and UKCloud with regards to Public Services Network (PSN) core services, such as DNS and email filtering. 
 services: connectivity
-author: Sue Highmoor
+author: shighmoor
 reviewer: nstobbart
-lastreviewed: 05/08/2021 16:08
+lastreviewed: 05/08/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -29,7 +29,7 @@ In this article, we use PSN to represent both PSN Protected and PSN Assured unle
 
 ## PSN core services
 
-While you can procure PSN connectivity from multiple service providers, PSN core services are provided by Vodafone (gateways) & Nominet (DNS). Traditionally, this was through the GSI Convergence Framework (GCF), whereby all core services were bundled into a single contract, regardless of whether you used them all.
+While you can procure PSN connectivity from multiple service providers, PSN core services are provided by Vodafone (gateways) and Nominet (DNS). Traditionally, this was through the GSI Convergence Framework (GCF), whereby all core services were bundled into a single contract, regardless of whether you used them all.
 
 Core services include:
 
