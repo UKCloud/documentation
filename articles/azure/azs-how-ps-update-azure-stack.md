@@ -4,7 +4,7 @@ description: Azure Stack Hub update procedure guide for support
 services: azure-stack
 author: Chris Black
 reviewer: William Turner
-lastreviewed: 03/04/2020
+lastreviewed: 09/08/2021
 
 toc_rootlink: Operators
 toc_sub1: How To
