@@ -66,7 +66,7 @@ In this section we will create a load balancer with a public IP address.
 
         - Select either **Dynamic** or **Static** from the **Assignment** options. We recommend selecting the **Static** option when creating a load balancer.
 
-    - ![Create new load balancer](images/azs-browser-create-load-balancer.png)
+     ![Create new load balancer](images/azs-browser-create-load-balancer.png)
 
 6. Click **Review + create**, then click **Create** on the review blade.
 
@@ -90,7 +90,7 @@ In this section we will create a virtual network and two virtual machines which 
 
 4. In the **Create virtual network** blade, enter the following information:
 
-    - **Basics** tab
+    - *Basics*
 
         - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
@@ -100,9 +100,9 @@ In this section we will create a virtual network and two virtual machines which 
 
         - **Region** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
-    - ![Create new virtual network - Basics](images/azs-browser-create-virtual-network.png)
+     ![Create new virtual network - Basics](images/azs-browser-create-virtual-network.png)
 
-    - **IP Addresses** tab
+    - *IP Addresses*
 
         - **IPv4 address space** - The virtual network's address range in CIDR notation (for example, 192.168.1.0/16).
 
@@ -110,7 +110,7 @@ In this section we will create a virtual network and two virtual machines which 
 
         - **Subnet address range** - The subnet's address range in CIDR notation (for example, 192.168.1.0/24). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
 
-    - ![Create new virtual network - IP Addresses](images/azs-browser-create-virtual-network2.png)
+     ![Create new virtual network - IP Addresses](images/azs-browser-create-virtual-network2.png)
 
 5. Click **Review + create**, then click **Create** on the review blade.
 
