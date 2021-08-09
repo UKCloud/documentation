@@ -67,13 +67,11 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    **Kubernetes master pool profile count** - The number of master nodes for the Kubernetes cluster. This value should be an odd number.
 
-   **The VMSize of Kubernetes master VMs** - The VM size of each master node. For information about the different available VM sizes, see [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
+   **The virtual machine size of the Kubernetes master nodes** - The VM size of each master node. For information about the different available VM sizes, see [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
    **Kubernetes node pool profile count** - The number of agents for the Kubernetes cluster.
 
-   **The VMSize of Kubernetes node VMs** - The VM size of each agent node.
-
-   **The Storage Profile** - The storage profile for the Kubernetes cluster.
+   **The virtual machine size of the Kubernetes linux agent nodes** - The VM size of each agent node.
 
    **Azure Stack Hub identity system** - Azure Stack Hub identity provider - defaults to AzureAD
 
