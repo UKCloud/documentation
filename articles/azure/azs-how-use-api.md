@@ -99,19 +99,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzureStackUserPassword     | The password of a user for Azure Stack Hub  | <form oninput="result.value=azspassword.value;result2.value=azspassword.value" id="azspassword" style="display: inline;"><input type="text" id="azspassword" name="azspassword" style="display: inline;" placeholder="Password123!"/></form> |
 | \$ClientID     | The application ID to authenticate against the Azure Stack Hub API   | <form oninput="result.value=clientid.value;result2.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="1950a258-227b-4e31-a9cf-717495945fc2"/></form> |
 
-### [Bash](#tab/tabid-1)
-
-<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token.
-curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" \
--H "Content-Type: application/x-www-form-urlencoded" \
---data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" \
---data-urlencode "grant_type=password" \
---data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" \
---data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" \
---data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
-</code></pre>
-
-### [PowerShell](#tab/tabid-2)
+### [PowerShell](#tab/tabid-1)
 
 <pre><code class="language-PowerShell"># Declare variables
 $Tenant = "<output form="tenant" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
@@ -129,6 +117,30 @@ $AuthRequestBody = @{
 $AuthResp = Invoke-RestMethod -Method "POST" -Uri "https://login.microsoftonline.com/$Tenant/oauth2/token" -Body $AuthRequestBody -ContentType "application/x-www-form-urlencoded"
 
 $AuthResp
+</code></pre>
+
+### [Bash (Linux)](#tab/tabid-2)
+
+<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token.
+curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" \
+-H "Content-Type: application/x-www-form-urlencoded" \
+--data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" \
+--data-urlencode "grant_type=password" \
+--data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" \
+--data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" \
+--data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
+</code></pre>
+
+### [Bash (Windows)](#tab/tabid-3)
+
+<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token.
+curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" ^
+-H "Content-Type: application/x-www-form-urlencoded" ^
+--data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" ^
+--data-urlencode "grant_type=password" ^
+--data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" ^
+--data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" ^
+--data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
 </code></pre>
 
 ***
@@ -151,13 +163,7 @@ $AuthResp
 
 5. You must include this token in the Authorization header of each subsequent API request, for example:
 
-    ### [Bash](#tab/tabid-1)
-
-    ```bash
-    curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
-    ```
-
-    ### [PowerShell](#tab/tabid-2)
+    ### [PowerShell](#tab/tabid-1)
 
     ```powershell
     # Add access token to header object for subsequent API requests
@@ -165,6 +171,12 @@ $AuthResp
 
     # Query the Azure Stack Hub API for subscriptions
     Invoke-RestMethod -Method "GET" -Uri "https://management.frn00006.azure.ukcloud.com/subscriptions" -Headers $AuthHeader -Body @{"api-version" = "2017-12-01"} -ContentType "application/x-www-form-urlencoded"
+    ```
+
+    ### [Bash](#tab/tabid-2)
+
+    ```bash
+    curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
     ```
 
     ***
