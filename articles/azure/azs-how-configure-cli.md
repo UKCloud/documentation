@@ -215,7 +215,7 @@ Use the following steps to connect to Azure Stack Hub:
       az --help
       ```
 
-7. To list commands for specific subgroup run:
+7. To list commands for a specific subgroup run:
 
       ```azurecli
       az <subgroupname> --help
