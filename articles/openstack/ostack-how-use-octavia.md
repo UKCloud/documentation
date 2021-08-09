@@ -194,6 +194,8 @@ The requirement is to create an HTTP Load Balancer across existing servers.
 
 ![Add two members to the Pool](images/ostack-octavia-004-pool-members-example.png)
 
+Note: For each member you add, click on the ">" next to the IP address to open up the monitor details and enter the IP address and port for the Health Monitor to use (which may be the same details as the member IP and port).
+
 #### Create a Health Monitor
 
 ![Create a Health Monitor](images/ostack-octavia-005-monitor-details-example.png)
