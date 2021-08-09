@@ -256,6 +256,12 @@ If the resource group is created successfully, the previous command outputs the 
 }
 ```
 
+To remove the above resource group, run the following command:
+
+```azurecli
+az group delete -n MyResourceGroup
+```
+
 ## Known issues
 
 There are some known issues that you must be aware of when using CLI in Azure Stack Hub:
