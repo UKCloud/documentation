@@ -3,8 +3,8 @@ title: How to configure the Azure Stack Hub user's Azure CLI environment | Based
 description: Learn how to use the cross-platform command-line interface (CLI) to manage and deploy resources on Azure Stack Hub
 services: azure-stack
 author: Chris Black
-reviewer: Daniel Brennand
-lastreviewed: 25/03/2020 17:03:00
+reviewer: William Turner
+lastreviewed: 09/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -85,7 +85,7 @@ To start the Azure CLI docker container, run the following command:
 
 > [!CAUTION]
 > If you are running Docker Desktop on Windows and receive the following error:
-> 
+>
 > ```cmd
 > C:\Program Files\Docker\Docker\Resources\bin\docker.exe: image operating system "linux" cannot be used on this platform.
 > ```
