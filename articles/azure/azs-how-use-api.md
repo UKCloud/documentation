@@ -101,7 +101,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 ### [Windows](#tab/tabid-1)
 
-PowerShell 5.1, PowerShell 7, or Bash
+PowerShell 5.1, PowerShell 7, or Command Line
 
 ### [Linux](#tab/tabid-2)
 
@@ -129,7 +129,7 @@ $AuthResp = Invoke-RestMethod -Method "POST" -Uri "https://login.microsoftonline
 $AuthResp
 </code></pre>
 
-### [Bash](#tab/tabid-b/tabid-1)
+### [Command Line](#tab/tabid-b/tabid-1)
 
 <pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token.
 curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" ^
@@ -183,7 +183,13 @@ curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="re
     Invoke-RestMethod -Method "GET" -Uri "https://management.frn00006.azure.ukcloud.com/subscriptions" -Headers $AuthHeader -Body @{"api-version" = "2017-12-01"} -ContentType "application/x-www-form-urlencoded"
     ```
 
-    ### [Bash](#tab/tabid-b)
+    ### [Command Line](#tab/tabid-b/tabid-1)
+
+    ```bash
+    curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
+    ```
+
+    ### [Bash](#tab/tabid-b/tabid-2)
 
     ```bash
     curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
