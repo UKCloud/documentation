@@ -48,29 +48,27 @@ In this section we will create a load balancer with a public IP address.
 
 5. In the **Create load balancer** blade, enter the following information:
 
-   - **Name** - The name of the load balancer.
+    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
-   - **Type** - You can use internal load balancers to balance traffic from private IP addresses. Public load balancers can balance traffic originating from public IP addresses. For this example we will be creating a public load balancer.
+    - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
-   - **Public IP Address** - The public IP address that will be assigned to this load balancer. To create a new public IP address:
+    - **Name** - The name of the load balancer.
 
-     - Select **Create new** from the **Public IP address** options.
+    - **Region** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
-     - Enter a name for the public IP address.
+    - **Type** - You can use internal load balancers to balance traffic from private IP addresses. Public load balancers can balance traffic originating from public IP addresses. For this example we will be creating a public load balancer.
 
-     - Expand the *Configure public IP address* section.
+    - **Public IP address** - The public IP address that will be assigned to this load balancer. To create a new public IP address:
 
-     - Select either **Dynamic** or **Static** from the **Assignment** options. We recommend selecting the **Static** option when creating a load balancer.
+        - Select **Create new** from the **Public IP address** options.
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
+        - Enter a name for the public IP address.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
+        - Select either **Dynamic** or **Static** from the **Assignment** options. We recommend selecting the **Static** option when creating a load balancer.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
+    ![Create new load balancer](images/azs-browser-create-load-balancer.png)
 
-     ![Create new load balancer](images/azs-browser-create-load-balancer.png)
-
-6. Click **Create**.
+6. Click **Review + create**, then click **Create** on the review blade.
 
 ## Create back-end servers
 
