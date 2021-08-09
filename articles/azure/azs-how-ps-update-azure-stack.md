@@ -30,7 +30,7 @@ Prerequisites from a Windows-based external client.
 > [!IMPORTANT]
 > Always consult Microsoft documentation for your specific Update Version
 >
-> Example -> [1902 Update](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-update-1902)
+> Example -> [2102 Update](https://docs.microsoft.com/en-us/azure-stack/operator/release-notes?view=azs-2102)
 
 ## High Level Overview of the process
 
