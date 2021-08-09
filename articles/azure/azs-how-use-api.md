@@ -3,8 +3,8 @@ title: How to use the Azure Stack Hub API
 description: Describes how to use the Azure Stack Hub API with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: Daniel Brennand
-lastreviewed: 01/04/2020
+reviewer: William Turner
+lastreviewed: 09/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -101,7 +101,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 ### [Bash](#tab/tabid-1)
 
-<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token. 
+<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token.
 curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" \
 -H "Content-Type: application/x-www-form-urlencoded" \
 --data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" \
