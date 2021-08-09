@@ -106,7 +106,7 @@ curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="re
 -H "Content-Type: application/x-www-form-urlencoded" \
 --data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" \
 --data-urlencode "grant_type=password" \
---data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output> \
+--data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" \
 --data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" \
 --data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
 </code></pre>
