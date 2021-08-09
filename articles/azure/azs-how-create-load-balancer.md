@@ -66,7 +66,7 @@ In this section we will create a load balancer with a public IP address.
 
         - Select either **Dynamic** or **Static** from the **Assignment** options. We recommend selecting the **Static** option when creating a load balancer.
 
-    ![Create new load balancer](images/azs-browser-create-load-balancer.png)
+    - ![Create new load balancer](images/azs-browser-create-load-balancer.png)
 
 6. Click **Review + create**, then click **Create** on the review blade.
 
@@ -90,23 +90,29 @@ In this section we will create a virtual network and two virtual machines which 
 
 4. In the **Create virtual network** blade, enter the following information:
 
-   - **Name** - The name of the virtual network.
+    - **Basics** tab
 
-   - **Address Space** - The virtual network's address range in CIDR notation (for example, 192.168.1.0/16).
+        - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
+        - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
+        - **Name** - The name of the virtual network.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
+        - **Region** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
-   - **Subnet Name** - The name of the first subnet within the virtual network.
+    - ![Create new virtual network - Basics](images/azs-browser-create-virtual-network.png)
 
-   - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0/24). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
+    - **IP Addresses** tab
 
-     ![Create new virtual network](images/azs-browser-create-virtual-network.png)
+        - **IPv4 address space** - The virtual network's address range in CIDR notation (for example, 192.168.1.0/16).
 
-5. Click **Create**.
+        - **Subnet name** - The name of the first subnet within the virtual network.
+
+        - **Subnet address range** - The subnet's address range in CIDR notation (for example, 192.168.1.0/24). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
+
+    - ![Create new virtual network - IP Addresses](images/azs-browser-create-virtual-network2.png)
+
+5. Click **Review + create**, then click **Create** on the review blade.
 
 ### Create the virtual machines
 
