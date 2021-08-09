@@ -242,7 +242,19 @@ az group create -n MyResourceGroup -l frn00006
 
 If the resource group is created successfully, the previous command outputs the following properties of the newly created resource:
 
-![Resource group create output](https://docs.microsoft.com/en-us/azure/azure-stack/user/media/azure-stack-connect-cli/image1.png)
+```azurecli
+{
+  "id": "/subscriptions/{removed}/resourceGroups/MyResourceGroup",
+  "location": "frn00006",
+  "managedBy": null,
+  "name": "MyResourceGroup",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": null
+}
+```
 
 ## Known issues
 
