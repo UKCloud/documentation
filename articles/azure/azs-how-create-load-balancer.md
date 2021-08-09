@@ -4,7 +4,7 @@ description: Provides help for creating a load balancer on UKCloud for Microsoft
 services: azure-stack
 author: Bailey Lawson
 reviewer: William Turner
-lastreviewed: 30/03/2020
+lastreviewed: 09/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -125,7 +125,7 @@ In this section we will create a virtual network and two virtual machines which 
     ![List of VM images in Compute blade](images/azsp_computeblade.png)
 
 4. In the **Create virtual machine** blade, in the **Basics** step, enter general information about the VM, including a name, credentials and resource group, then click **OK**.
-  
+
    ![Create virtual machine > Basics](images/azsp_createvm_basics.png)
 
 5. In the *Size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
@@ -182,7 +182,7 @@ In this section we will create NSG rules to allow inbound traffic.
    - **Name** - The name of the security rule.
 
    - **Description** - A description of the security rule.
-  
+
     ![Add an inbound security rule](images/azs-browser-add-in-security-rule.png)
 
 6. Click **Add**.
@@ -234,7 +234,7 @@ When creating a load balancer, you can use a health probe to monitor the status 
    - **Interval** - The number of seconds between probe attempts.
 
    - **Unhealthy threshold** - The number of consecutive probe failures that must occur before a virtual machine is considered unhealthy and is removed from the pool.
-  
+
     ![Add a health probe](images/azs-browser-add-health-probe.png)
 
 6. Click **OK**.
