@@ -128,32 +128,38 @@ In this section we will create a virtual network and two virtual machines which 
 
     ![List of VM images in Compute blade](images/azsp_computeblade.png)
 
-4. In the **Create virtual machine** blade, in the **Basics** step, enter general information about the VM, including a name, credentials and resource group, then click **OK**.
+4. In the **Create virtual machine** blade, in the **Basics** step, enter general information about the VM, including a name, credentials and resource group.
 
-   ![Create virtual machine > Basics](images/azsp_createvm_basics.png)
+5. Click *Change size* under the currently selected VM size to view all the available sizes. Select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
-5. In the *Size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
+    For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
 
-   For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
+    > [!TIP]
+    > By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click **See all sizes**.
 
-   > [!TIP]
-   > By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click **View all**.
+    ![Create virtual machine > Size](images/azsp_createvm_size.png)
 
-   ![Create virtual machine > Size](images/azsp_createvm_size.png)
+6. The VM needs to belong to an availability set. To create a new availability set:
 
-6. In the **Settings** step, change any of the optional settings as required for your VM, then click **OK**. Ensure that the virtual network created earlier is selected and that the VM belongs to an availability set. To create a new availability set:
+    - Select **Availability set** from the **Availability options** dropdown
 
-   - Click **Availability set** on the **Create virtual machine** blade.
+    - Select **Create new** under the new **Availability set** dropdown.
 
-   - Select **Create new** on the **Change availability set** blade.
+    - In the **Create new** blade, enter a name for the availability set and choose the number of fault domains and update domains, then click **OK**.
 
-   - Enter a name for the availability set and the number of fault domains and update domains, then click **OK**.
+    ![Create virtual machine > Create availability set](images/azsp_createvm_availabilityset.png)
 
-   ![Create virtual machine > Settings](images/azs-browser-vm-settings-as.png)
+    ![Create virtual machine > Basics](images/azsp_createvm_basics.png)
 
-7. In the **Summary** step, review the selections you've made and then click **OK** to start the deployment.
+7. Once all done, go to the **Networking** tab
 
-8. Create another VM, ensuring that the **Availability set**, **Virtual network**, **Subnet** and **Network Security Group** are the same.
+8. Ensure that the virtual network and subnet created earlier are selected, then click **Review + create**
+
+    ![Create virtual machine > Networking](images/azsp_createvm_networking.png)
+
+9. In the **Review + create** step, review the selections you've made and then click **Create** to start the deployment.
+
+10. Create another VM, ensuring that the **Availability set**, **Virtual network**, **Subnet** and **Network Security Group** are the same.
 
 ### Create network security group rules
 
@@ -171,11 +177,11 @@ In this section we will create NSG rules to allow inbound traffic.
 
    - **Source** - The source filter can be Any, an IP address range, or a default tag. It specifies the incoming traffic from a specific source IP address range that will be allowed or denied by this rule.
 
-   - **Source port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
+   - **Source port ranges** - Provide a single port, such as 80; a port range, such as 1024-65535; or a comma-separated list of single ports and/or port ranges, such as 80,1024-65535. This specifies on which ports traffic will be allowed or denied by this rule. Provide an asterisk (\*) to allow traffic on any port.
 
    - **Destination** - The destination filter can be Any, an IP address range, or a default tag. It specifies the outgoing traffic for a specific destination IP address range that will be allowed or denied by this rule.
 
-   - **Destination port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
+   - **Destination port ranges** - Provide a single port, such as 80; a port range, such as 1024-65535; or a comma-separated list of single ports and/or port ranges, such as 80,1024-65535. This specifies on which ports traffic will be allowed or denied by this rule. Provide an asterisk (\*) to allow traffic on any port.
 
    - **Protocol** - Specify whether to allow inbound traffic using UDP, TCP or both.
 
@@ -205,15 +211,19 @@ To spread traffic load across the VMs, you must create a back-end address pool. 
 
 5. In the **Add backend pool** blade, enter a name for the backend pool.
 
-6. Select **Availability set** for the **Associated to** option, then select the availability set that you created in the previous section.
+6. Select the virtual network created earlier.
 
-7. Click the **+ Add a target network IP configuration** button, select the first VM you created in the previous section and select the network IP to be associated with the back-end pool.
+7. Select **Virtual machines** for the **Associated to** option.
 
-8. Repeat step 7 for the second VM.
+8. Click the **+Add** button in the *Virtual machines* section.
+
+9. In the **Add virtual machines to backend pool** blade, select the two virtual machines created earlier amd click **Add**.
+
+   ![Add a backend pool > Add VMs](images/azs-browser-add-backend-pool-vms.png)
+
+10. Click the **Add** button on the **Add backend pool** blade.
 
    ![Add a backend pool](images/azs-browser-add-backend-pool.png)
-
-9. Click **OK**.
 
 ### Create a health probe
 
@@ -279,9 +289,9 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
       - **Client IP and protocol** specifies that successive requests from the same client IP address and protocol combination will be handled by the same virtual machine.
 
-   - **Idle timeout** - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.
+   - **Idle timeout (minutes)** - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.
 
-   - **Floating IP** - Can be enabled to change the IP address mapping scheme to allow for additional flexibility, see [here](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-multivip-overview) for further details.
+   - **Floating IP (direct server return)** - Can be enabled to change the IP address mapping scheme to allow for additional flexibility, see [here](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-multivip-overview) for further details.
 
     ![Add a load balancing rule](images/azs-browser-add-lb-rule.png)
 
