@@ -165,6 +165,9 @@ In this section we will create a virtual network and two virtual machines which 
 
 In this section we will create NSG rules to allow inbound traffic.
 
+> [!NOTE]
+> For testing purposes, we will create a rule to allow all inbound traffic on port 80 (HTTP) in order to access the web server home page on both of the virtual machines.
+
 1. Navigate to your network security group by clicking on **All services** in the favourites panel, then selecting **Network security groups** under the networking section.
 
 2. Select the network security group your VMs are using from the list.
@@ -229,6 +232,9 @@ To spread traffic load across the VMs, you must create a back-end address pool. 
 
 When creating a load balancer, you can use a health probe to monitor the status of your application. In Azure Stack Hub, the health probe adds and removes VMs from the load balancer back-end pool based on their current status.
 
+> [!NOTE]
+> Again, for testing purposes, we will create the health probe to monitor traffic on port 80 (HTTP).
+
 1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
 
 2. From the list, select the load balancer you created earlier.
@@ -256,6 +262,9 @@ When creating a load balancer, you can use a health probe to monitor the status 
 ### Create a load balancing rule
 
 A load balancer rule defines how traffic is distributed between VMs. The rule listens for traffic on a front-end IP address, then distributes it among the back-end pool.
+
+> [!NOTE]
+> Again, for testing purposes, we will create the load balancer rule for port 80 (HTTP).
 
 1. Navigate to your load balancer by clicking on **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
 
