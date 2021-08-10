@@ -3,8 +3,8 @@ title: How to create a VM using the UKCloud Azure Stack Hub portal
 description: Create a virtual machine in UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: wmaher-UKCloud
-lastreviewed: 09/03/2021 
+reviewer: William Turner
+lastreviewed: 10/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -48,24 +48,36 @@ VMs provide the basic compute building blocks in Azure Stack Hub. You can create
 
     ![List of VM images in Compute blade](images/azsp_computeblade.png)
 
-5. In the *Create virtual machine* blade, in the *Basics* step, enter general information about the VM, including a name, credentials and resource group, then click **OK**.
+5. In the *Create virtual machine* blade, in the *Basics* step, enter general information about the VM, including a name, credentials and resource group.
 
     ![Create virtual machine > Basics](images/azsp_createvm_basics.png)
 
-6. In the *Size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
+6. Click **Change size** under the currently selected VM size to view all the available sizes. Select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
     For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>
 
     ![Create virtual machine > Size](images/azsp_createvm_size.png)
 
-7. In the *Settings* step, change any of the optional settings as required for your VM, then click **OK**.
+7. Change any of the optional settings located in the other tabs, then click **Review + create**.
 
-    ![Create virtual machine > Settings](images/azsp_createvm_settings_v1811.png)
+    >[!NOTE]
+    >For storage, "managed disks" are selected by default.
 
->[!NOTE]
->As of version 1811 for storage "managed disks" are selected by default and you need to select the public inbound ports you want enabled.
+    ![Create virtual machine > Disks](images/azsp_createvm_disks.png)
 
-8. In the *Summary* step, review the selections you've made and then click **OK** to start the deployment.
+    >[!NOTE]
+    >There will be no public inbound ports open on the network security group if left unchanged.
+
+    ![Create virtual machine > Networking](images/azsp_createvm_networking.png)
+
+    >[!NOTE]
+    >By default, boot diagnostics will be switched on for the virtual machine.
+
+    ![Create virtual machine > Management](images/azsp_createvm_management.png)
+
+8. In the *Review + create* step, review the selections you've made and then click **Create** to start the deployment.
+
+    ![Create virtual machine > Review](images/azsp_createvm_review.png)
 
 9. You can monitor the progress of your VM's deployment by clicking the **Notifications** icon.
 
