@@ -137,7 +137,7 @@ In this section we will create a virtual network and two virtual machines which 
     > [!TIP]
     > By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click **See all sizes**.
 
-    ![Create virtual machine > Size](images/azsp_createvm_size.png)
+    ![Create virtual machine > Size](images/azsp_lb_createvm_size.png)
 
 6. The VM needs to belong to an availability set. To create a new availability set:
 
@@ -147,15 +147,15 @@ In this section we will create a virtual network and two virtual machines which 
 
     - In the **Create new** blade, enter a name for the availability set and choose the number of fault domains and update domains, then click **OK**.
 
-    ![Create virtual machine > Create availability set](images/azsp_createvm_availabilityset.png)
+    ![Create virtual machine > Create availability set](images/azsp_lb_createvm_availabilityset.png)
 
-    ![Create virtual machine > Basics](images/azsp_createvm_basics.png)
+    ![Create virtual machine > Basics](images/azsp_lb_createvm_basics.png)
 
 7. Once all done, go to the **Networking** tab
 
 8. Ensure that the virtual network and subnet created earlier are selected, then click **Review + create**
 
-    ![Create virtual machine > Networking](images/azsp_createvm_networking.png)
+    ![Create virtual machine > Networking](images/azsp_lb_createvm_networking.png)
 
 9. In the **Review + create** step, review the selections you've made and then click **Create** to start the deployment.
 
