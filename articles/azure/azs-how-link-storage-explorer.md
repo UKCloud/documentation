@@ -30,31 +30,35 @@ In this article, you will learn how to link Azure Stack Hub subscriptions to the
 
 1. Download and install Storage Explorer [here](https://azure.microsoft.com/en-us/features/storage-explorer/).
 
-    ![Storage Explorer installation guide - Step 1](images/azs-browser-storage-tool-download.png)
+    ![Storage Explorer installation guide - Download](images/azs-browser-storage-tool-download.png)
 
 2. From the **Edit** menu, select **Target Azure Stack Hub APIs** then restart Storage Explorer.
 
-    ![Storage Explorer installation guide - Step 2](images/azs-installation-storage-tool-1.png)
+    ![Storage Explorer installation guide - Target ASH APIs](images/azs-installation-storage-tool-target-apis.png)
 
 3. Once re-launched navigate to accounts.
 
-    ![Storage Explorer installation guide - Step 3](images/azs-installation-storage-tool-2.png)
+    ![Storage Explorer installation guide - Accounts](images/azs-installation-storage-tool-accounts.png)
 
 4. Select **Add an account...**
 
-    ![Storage Explorer installation guide - Step 4](images/azs-installation-storage-tool-3.png)
+    ![Storage Explorer installation guide - Add account](images/azs-installation-storage-tool-add-account.png)
 
-5. Select **Add an Azure Account** \> **Azure**, then click **Next**.
+5. Select **Subscription**.
 
-    ![Storage Explorer installation guide - Step 5](images/azs-installation-storage-tool-4.png)
+    ![Storage Explorer installation guide - Select resource](images/azs-installation-storage-tool-select-resource.png)
 
-6. Sign in with your Azure Stack Hub credentials when prompted.
+6. Select **Add an Azure Account** \> **Azure**, then click **Next**.
 
-    ![Storage Explorer installation guide - Step 6](images/azs-installation-storage-tool-5.png)
+    ![Storage Explorer installation guide - Select environment](images/azs-installation-storage-tool-select-environment.png)
 
-7. Click **Apply**.
+7. Sign in with your Azure Stack Hub credentials when prompted.
 
-    ![Storage Explorer installation guide - Step 7](images/azs-installation-storage-tool-6.png)
+    ![Storage Explorer installation guide - Sign in](images/azs-installation-storage-tool-signin.png)
+
+8. Click **Apply**.
+
+    ![Storage Explorer installation guide - Apply](images/azs-installation-storage-tool-apply.png)
 
 Now that you've linked Storage Explorer to Azure Stack Hub, you can access all of your storage accounts.
 
