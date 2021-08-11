@@ -86,6 +86,9 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
     ![New client secret > Add](images/azs-browser-spn-new-secret-value.png)
 
+    > [!IMPORTANT]
+    > It is not possible to retrieve the secret value again after navigating away from this screen. Therefore, you should make sure you have taken a copy of it before moving on.
+
 ## Configure role-based access control for the SPN on Azure Stack Hub
 
 1. Log in to the UKCloud Azure Stack Hub portal.
