@@ -4,7 +4,7 @@ description: Provides help for linking Azure Storage Explorer to Azure Stack Hub
 services: azure-stack
 author: David Woffendin
 reviewer: William Turner
-lastreviewed: 02/04/2020
+lastreviewed: 11/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -22,15 +22,13 @@ toc_mdlink: azs-how-link-storage-explorer.md
 
 In this article, you will learn how to link Azure Stack Hub subscriptions to the Azure Storage Explorer. Azure Storage Explorer is a standalone application that allows you to easily work with Azure Stack Hub storage data on Windows, macOS and Linux. With this application, you can easily download and upload objects to Azure Stack Hub, which makes tasks such as downloading and uploading data disks to VMs very easy.
 
-If you need to install Azure Storage Explorer, please click [here](https://azure.microsoft.com/en-us/features/storage-explorer/) and install it.
-
 ## Microsoft documentation
 
 - [Connect Storage Explorer to an Azure Stack Hub subscription with Azure AD](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-storage-connect-se?view=azs-2002#connect-to-an-azure-stack-hub-subscription-with-azure-ad)
 
 ## Installation and setup
 
-1. Download and install Storage Explorer.
+1. Download and install Storage Explorer [here](https://azure.microsoft.com/en-us/features/storage-explorer/).
 
     ![Storage Explorer installation guide - Step 1](images/azs-browser-storage-tool-download.png)
 
