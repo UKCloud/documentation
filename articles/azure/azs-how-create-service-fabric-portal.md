@@ -4,7 +4,7 @@ description: Provides help for creating a Service Fabric cluster on UKCloud for 
 services: azure-stack
 author: Bailey Lawson
 reviewer: William Turner
-lastreviewed: 02/04/2020
+lastreviewed: 11/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
