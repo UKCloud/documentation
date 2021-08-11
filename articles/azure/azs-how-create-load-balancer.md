@@ -180,11 +180,11 @@ In this section we will create NSG rules to allow inbound traffic.
 
    - **Source** - The source filter can be Any, an IP address range, or a default tag. It specifies the incoming traffic from a specific source IP address range that will be allowed or denied by this rule.
 
-   - **Source port ranges** - Provide a single port, such as 80; a port range, such as 1024-65535; or a comma-separated list of single ports and/or port ranges, such as 80,1024-65535. This specifies for which ports traffic will be allowed or denied by this rule. Provide an asterisk (\*) to allow traffic on any port.
+   - **Source port ranges** - Provide a single port, such as 80; a port range, such as 1024-65535; or a comma-separated list of single ports and/or port ranges, such as 80,1024-65535. This specifies which ports traffic will be allowed or denied by this rule. Provide an asterisk (\*) to allow traffic on any port.
 
    - **Destination** - The destination filter can be Any, an IP address range, or a default tag. It specifies the outgoing traffic for a specific destination IP address range that will be allowed or denied by this rule.
 
-   - **Destination port ranges** - Provide a single port, such as 80; a port range, such as 1024-65535; or a comma-separated list of single ports and/or port ranges, such as 80,1024-65535. This specifies for which ports traffic will be allowed or denied by this rule. Provide an asterisk (\*) to allow traffic on any port.
+   - **Destination port ranges** - Provide a single port, such as 80; a port range, such as 1024-65535; or a comma-separated list of single ports and/or port ranges, such as 80,1024-65535. This specifies which ports traffic will be allowed or denied by this rule. Provide an asterisk (\*) to allow traffic on any port.
 
    - **Protocol** - Specify whether to allow inbound traffic using UDP, TCP or both.
 
