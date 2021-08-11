@@ -76,9 +76,15 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 3. Under *Client secrets*, click the **+ New client secret** button.
 
+    ![New client secret](images/azs-browser-spn-new-secret.png)
+
 4. Enter a description for the key, select a expiry duration, then click **Add**.
 
+    ![New client secret > Add](images/azs-browser-spn-new-secret-add.png)
+
 5. Copy the displayed value for the key and store it somewhere secure. This value is referred to as the SPN Client Secret.
+
+    ![New client secret > Add](images/azs-browser-spn-new-secret-value.png)
 
 ## Configure role-based access control for the SPN on Azure Stack Hub
 
