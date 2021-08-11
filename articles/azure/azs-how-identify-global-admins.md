@@ -44,6 +44,8 @@ To complete the steps in this guide, you must have appropriate access to the pub
 
 5. The *Global administrator | Assignments* blade will be displayed listing the members of that role.
 
+    ![Global administrator assignments](images/azs-global-admin-assignments.png)
+
 ## Next steps
 
 For more information about UKCloud for Microsoft Azure, see:
