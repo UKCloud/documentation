@@ -50,23 +50,39 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 5. In the *Create key vault* blade, enter the following information:
 
-   - **Name** - The name of the key vault.
+    - *Basics*
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
+        - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window.
+        - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window.
 
-   - **Location** - This will be `frn00006`, which is the Azure Stack Hub region.
+        - **Key vault name** - The name of the key vault.
 
-   - **Access policies** - Configure who can access the key vault and what permissions they have.
+        - **Region** - This will be `frn00006`, which is the Azure Stack Hub region.
 
-     ![Create new key vault](images/azs-browser-create-key-vault.png)
+        - **Pricing tier** - Azure Stack Hub only offers the Standard pricing tier.
 
-6. Click **Create**.
+          ![Create new key vault > Basics](images/azs-browser-create-key-vault-basics.png)
 
-7. You can monitor the progress of your Key Vault's deployment by clicking the **Notifications** icon.
+    - *Access policy*
 
-   ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
+        - **Enable Access to:** - Allow specific Azure resources to access certificates and secrets from the key vault.
+
+        - **Current Access Policies** - Select **+Add access policy** to configure the permissions that a user, group or service principal has to the key vault.
+
+          ![Create new key vault > Access policy](images/azs-browser-create-key-vault-accesspolicy.png)
+
+          ![Create new key vault > Access policy > Add](images/azs-browser-create-key-vault-accesspolicy-add.png)
+
+6. Click **Review + create**.
+
+7. In the **Review + create** step, review the selections you've made and then click **Create** to start the deployment.
+
+    ![!Create new key vault > Review](images/azs-browser-create-key-vault-review.png)
+
+8. You can monitor the progress of your Key Vault's deployment by clicking the **Notifications** icon.
+
+    ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
 
 ### Adding a certificate to the key vault
 
