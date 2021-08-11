@@ -146,6 +146,8 @@ You also need the thumbprint of the certificate(s). For information about how to
 
 2. In the search bar, search for **Service Fabric Cluster**.
 
+   ![Service Fabric Cluster in marketplace](images/azs-browser-new-servicefabriccluster.png)
+
 3. Select **Service Fabric Cluster** and click **Create**.
 
 4. In the **Basics** blade, enter the following information and click **OK**:
@@ -165,8 +167,6 @@ You also need the thumbprint of the certificate(s). For information about how to
    - **DNS Service** - Select **Yes** to use DNS service, which is an optional system service that enables you to map DNS names to a service name and discover other services using the DNS protocol. If you have applications with existing URLs that you intend to use with Service Fabric, DNS service will help you use the standard DNS protocol (as an alternative to the Service Fabric Naming service) for resolving service names.
 
    - **Repair Manager** - Select **Yes** to use Repair Manager to enable patch orchestration on node types with a durability of bronze, which helps keep your VMs up to date.
-
-   - **Diagnostic Data Age In Days** - Specify the number of days to keep the Service Fabric diagnostic log in the diagnostics store.
 
    - **Service Fabric deployment package URL** - Specify the URL to download the Service Fabric deployment package from. For disconnected scenarios, download the service fabric package from the URL specified and upload it to a blob, then enable anonymous access and specify the URL here.
 
