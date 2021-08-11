@@ -66,7 +66,7 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
     - *Access policy*
 
-        - **Enable Access to:** - Allow specific Azure resources to access certificates and secrets from the key vault.
+        - **Enable Access to:** - Select the first two check boxes to allow access to the key vault for virtual machines and the Azure Resource Manager.
 
         - **Current Access Policies** - Select **+Add access policy** to configure the permissions that a user, group or service principal has to the key vault.
 
@@ -116,33 +116,25 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 ### Gathering key vault and certificate information
 
-During configuration of the Service Fabric cluster, you must provide several details relating to the key vault and certificates. You must also configure access to the key vault for virtual machines and the Azure Resource Manager.
+During configuration of the Service Fabric cluster, you must provide several details relating to the key vault and certificates.
 
 1. Once you have deployed the key vault, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security* section.
 
 2. Select your key vault from the list.
 
-3. In the *Settings* section of the key vault's blade, select **Access policies**.
+3. In the *Settings* section of the key vault blade, select **Properties**.
 
-4. On the *Access policies* page, click **Click to show advanced access policies**.
+4. Copy the **Resource ID** and store it for later use.
 
-5. Select the top two check boxes, then click the **Save** button.
+5. In the *Settings* section of the key vault blade, select **Secrets**.
 
-![Advanced access policies](images/azs_advancedaccesspolicies.png)
+6. On the *Secrets* blade, select the certificate you added in the previous section.
 
-6. In the *Settings* section of the key vault blade, select **Properties**.
+7. On the certificate's blade, select the current version.
 
-7. Copy the **Resource ID** and store it for later use.
+8. Copy the **Secret Identifier**.
 
-8. Select **Secrets**.
-
-9. On the *Secrets* page, select the certificate you added in the previous section.
-
-10. On the certificate's blade, select the current version.
-
-11. Copy the **Secret Identifier**.
-
-12. Repeat for each certificate that you are going to use for the Service Fabric cluster.
+9. Repeat for each certificate that you are going to use for the Service Fabric cluster.
 
 You also need the thumbprint of the certificate(s). For information about how to find this information, see [here](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate).
 
@@ -153,8 +145,6 @@ You also need the thumbprint of the certificate(s). For information about how to
    ![New option in favourites panel](images/azsp_newmenu.png)
 
 2. In the search bar, search for **Service Fabric Cluster**.
-
-   ![Compute option in New blade](images/azsp_computeblade.png)
 
 3. Select **Service Fabric Cluster** and click **Create**.
 
