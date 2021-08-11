@@ -60,18 +60,18 @@ VMs provide the basic compute building blocks in Azure Stack Hub. You can create
 
 7. Change any of the optional settings located in the other tabs, then click **Review + create**.
 
-    >[!NOTE]
-    >For storage, "managed disks" are selected by default.
+    > [!NOTE]
+    > For storage, *managed disks* are selected by default.
 
     ![Create virtual machine > Disks](images/azsp_createvm_disks.png)
 
-    >[!NOTE]
-    >There will be no public inbound ports open on the network security group if left unchanged.
+    > [!NOTE]
+    > There will be no public inbound ports open on the network security group if left unchanged.
 
     ![Create virtual machine > Networking](images/azsp_createvm_networking.png)
 
-    >[!NOTE]
-    >By default, boot diagnostics will be switched on for the virtual machine.
+    > [!NOTE]
+    > By default, boot diagnostics will be switched on for the virtual machine.
 
     ![Create virtual machine > Management](images/azsp_createvm_management.png)
 
