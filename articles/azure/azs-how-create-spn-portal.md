@@ -68,7 +68,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 ## Gathering SPN credentials
 
-1. On the blade that has now opened, copy the **Application ID** and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.
+1. On the blade that has now opened, copy the **Application (client) ID** and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.
 
     ![Copy Application ID](images/azs-browser-select-SPN-App-ID.png)
 
