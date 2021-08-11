@@ -218,12 +218,14 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Cluster Certificate thumbprint** - Cluster certificate thumbprint that you gathered earlier. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7`**.
 
-   - **Server Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of
+   - **Server Certificate URL** - The Secret Identifier of the server certificate that you gathered in the previous section. It should be in the format of
     **`https://<VaultEndpoint>/secrets/<SecretName>/<SecretVersion>`**.
 
    - **Server Certificate thumbprint** - Server certificate thumbprint that you gathered earlier. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7`**.
 
    - **Use Reverse Proxy Certificate** - You may specify an SSL certificate to be used by the reverse proxy you have enabled. Doing so will cause the reverse proxy to communicate using HTTPS. If no certificate is specified, then the reverse proxy will communicate using HTTP instead.
+
+   - **Application Certificate URL** - The Secret Identifier of the application certificate that you gathered in the previous section. It should be in the format of **`https://<VaultEndpoint>/secrets/<SecretName>/<SecretVersion>`**.
 
    - **Admin Client Certificate Thumbprints** - Comma separated list of admin client certificate thumbprints. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7,0272251171BA32CEC7938A65B8A6A553AA2D3283`**.
 
@@ -231,7 +233,7 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    ![Create Service Fabric cluster > Security](images/azs-browser-create-sf-security.png)
 
-8. Click **OK**, then **Create**.
+8. In the *Summary* blade, click **OK**. Then in the *Buy* blade, click **Create**.
 
 9. You can monitor the progress of your Service Fabric cluster's deployment by clicking the **Notifications** icon.
 
