@@ -65,7 +65,7 @@ VMs provide the basic compute building blocks in Azure Stack Hub. You can create
 
     ![Create virtual machine > Disks](images/azsp_createvm_disks.png)
 
-    > [!NOTE]
+    > [!IMPORTANT]
     > There will be no public inbound ports open on the network security group if left unchanged.
 
     ![Create virtual machine > Networking](images/azsp_createvm_networking.png)
