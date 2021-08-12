@@ -40,7 +40,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
-2. In the favorites panel, select **All services**, then, in the *Compute* section, select **Disks**.
+2. In the favourites panel, select **All services**, then, in the *Compute* section, select **Disks**.
 
     ![All services - disks](images/azs-browser-allservices-disks.png)
 
@@ -116,7 +116,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## Creating a virtual machine from a managed disk
 
-1. In the favorites panel, select **All services**, then, in the *Compute* section, select **Disks**.
+1. In the favourites panel, select **All services**, then, in the *Compute* section, select **Disks**.
 
     ![All services - disks](images/azs-browser-allservices-disks.png)
 
