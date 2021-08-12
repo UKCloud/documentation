@@ -49,9 +49,13 @@ To create a group in the Azure portal:
     > [!TIP]
     > You can find the Azure Active Directory by selecting **All services** and scrolling down to the *Security + Identity* section.
 
-3. Select **Groups** and then **All groups**.
+3. Select **Groups**.
+
+    ![Groups blade](images/azs-portal-groups.png)
 
 4. Click the **New group** option.
+
+    ![Groups blade > New group](images/azs-portal-new-group.png)
 
 5. From the **Group type** list, select **Security**.
 
@@ -64,7 +68,7 @@ To create a group in the Azure portal:
     > [!NOTE]
     > The **Dynamic** option requires at least a Premium P1 license in Azure AD. If you do not meet this requirement, the dropdown is automatically set to **Assigned** and you will not be able to select the **Dynamic** option.
 
-    ![Group blade](images/azs-portal-add-group.png)
+    ![Groups blade > Add group](images/azs-portal-add-group.png)
 
 9. Click **Create**.
 
