@@ -176,6 +176,17 @@ The requirement is to create an HTTP Load Balancer across existing servers.
     | type                | HTTP                                 |
     | id                  | d7007382-43e1-40d2-9439-ebd9b0418931 |
 
+#### Assign a Floating IP
+
+If you need to, allocate a Floating IP from a network with
+
+    openstack floating ip create NETWORK-ID-STRING
+
+Assign the Floating IP to the Load Balancer VIP port
+
+    openstack floating ip set --port LOAD-BALANCER-VIP-PORT-ID FLOATING-IP-ID
+    
+
 ### Horizon Example
 
 #### Create a Load Balancer
