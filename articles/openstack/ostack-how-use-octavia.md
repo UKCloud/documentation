@@ -94,7 +94,9 @@ The requirement is to create an HTTP Load Balancer across existing servers.
     | listeners           |                                      |
     | name                | my-lbaas                             |
     | operating_status    | OFFLINE                              |
-    | pools               |                                      |
+    | pools               |                                      |  
+    ....
+    | vip_port_id         | fa434d5d-ccd7-462a-920d-9c284420a57c |
     
 #### Create a Listener
 
