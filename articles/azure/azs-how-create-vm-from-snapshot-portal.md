@@ -65,7 +65,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Region** - This will be the location of the Azure Stack Hub.
 
-    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage.
+    - **Storage type** - Choose either Standard (HDD) or Premium (SSD) storage.
 
     ![Create snapshot from disk - Populate & Create](images/azs-browser-create-snapshot.png)
 
@@ -118,7 +118,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![All services - disks](images/azs-browser-allservices-disks.png)
 
-2. From the list, click the name of the disk that you want to create a virtual machine from. If you have been following this guide, then this will be the disk that you just created from the snapshot.
+2. From the list, click the name of the disk that you want to create a virtual machine from. If you have been following this guide from the start, then this will be the disk that you just created from the snapshot.
 
     ![Disks blade](images/azs-browser-disks-list-new.png)
 
