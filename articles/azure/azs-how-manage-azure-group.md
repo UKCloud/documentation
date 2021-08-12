@@ -4,14 +4,14 @@ description: Describes how to apply the appropriate Azure Stack Hub permissions 
 services: azure-stack
 author: Sue Highmoor
 reviewer: William Turner
-lastreviewed: 03/04/2020
+lastreviewed: 12/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Manage Azure user groups and permissions 
+toc_title: Manage Azure user groups and permissions
 toc_fullpath: Users/How To/azs-how-manage-azure-group.md
 toc_mdlink: azs-how-manage-azure-group.md
 ---
