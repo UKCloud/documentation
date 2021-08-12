@@ -200,6 +200,13 @@ Note: For each member you add, click on the ">" next to the IP address to open u
 
 ![Create a Health Monitor](images/ostack-octavia-005-monitor-details-example.png)
 
+#### Assign a Floating IP
+
+Once the Load Balancer has been created you will generally want to associate a Floating IP with it. To do this you need to drop down the option menu next to the newly created Load Balancer and select "Associate Floating IP" and then on the next screen select an existing Floating IP or an IP Pool to assign an address from.
+
+![Edit Load Balancer](images/ostack-octavia-006-load-balancer-edit-example.png)
+![Associate Floating IP](images/ostack-octavia-007-floating-ip-example.png)
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
