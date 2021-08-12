@@ -74,6 +74,8 @@ To create a group in the Azure portal:
 
 10. To add users to the group, open the group, select **Members** then click **Add members**.
 
+    ![Groups blade > Add members](images/azs-portal-add-group-members.png)
+
 ## Granting Azure permissions
 
 After setting up the user group in Azure, you need to go to the UKCloud Azure Stack Hub portal to grant the appropriate permissions to the group.
