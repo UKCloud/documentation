@@ -57,19 +57,19 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 5. In the *Create snapshot* blade, enter the following information:
 
-    - **Name** - The name of the snapshot
-
-    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription
+    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription.
 
     - **Resource group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
-    - **Location** - This will be the location of the Azure Stack Hub
+    - **Name** - The name of the snapshot.
 
-    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage
+    - **Region** - This will be the location of the Azure Stack Hub.
+
+    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage.
 
     ![Create snapshot from disk - Populate & Create](images/azs-browser-create-snapshot.png)
 
-6. When you're done, click the **Create** button to create the snapshot.
+6. When you're done, click the **Review + create** button and then the **Create** button to create the snapshot.
 
 7. You can monitor the progress of the snapshot creation by clicking the **Notifications** icon.
 
@@ -87,28 +87,26 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. In the *Create managed disk* blade, enter the following information:
 
-    - **Name** - The name of the disk
-
-    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription
+    - **Subscription** - This will be your UKCloud for Microsoft Azure subscription.
 
     - **Resource group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
-    - **Location** - This will be the location of the Azure Stack Hub
+    - **Disk name** - The name of the disk.
 
-    - **Account type** - Choose either Standard (HDD) or Premium (SSD) storage
+    - **Region** - This will be the location of the Azure Stack Hub.
 
-    - **Source type** - Select *Snapshot*
+    - **Source type** - Select *Snapshot*.
 
-        - **Source snapshot** - Select the previously created snapshot
+        - **Source snapshot** - Select the previously created snapshot.
 
-    - **Size** - This will be set to the size of the source disk that the snapshot was created from
+    - **Size** - This will be set to the size of the source disk that the snapshot was created from.
 
         > [!NOTE]
         > You can increase the size if necessary, but you cannot decrease it below the original size.
 
     ![Create disk from snapshot](images/azs-browser-create-disk-from-snapshot.png)
 
-4. When you're done, click the **Create** button to create the disk.
+4. When you're done, click the **Review + create** button and then the **Create** button to create the disk.
 
 5. You can monitor the progress of the disk creation by clicking the **Notifications** icon.
 
@@ -120,9 +118,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![All services - disks](images/azs-browser-allservices-disks.png)
 
-2. From the list, click the name of the disk that you want to create a virtual machine from.
+2. From the list, click the name of the disk that you want to create a virtual machine from. If you have been following this guide, then this will be the disk that you just created from the snapshot.
 
-    ![Disks blade](images/azs-browser-disks-list.png)
+    ![Disks blade](images/azs-browser-disks-list-new.png)
 
 3. In the new blade for the selected disk, under *Overview*, ensure that **Disk state** is listed as *Unattached*. If it isn't, you'll need to detach the disk from the VM before you can use it.
 
@@ -130,11 +128,11 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. At the top of the blade, click **Create VM**.
 
-5. In the *Create virtual machine* blade, in the *Basics* step, enter a virtual machine name and either select an existing resource group or create a new one, then click **OK**.
+5. In the *Create virtual machine* blade, in the *Basics* step, enter general information about the VM, including a name, credentials and resource group.
 
     ![Create VM from disk - Basics](images/azs-browser-disk-vm-basics.png)
 
-6. In the *Choose a size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
+6. Click **Change size** under the currently selected VM size to view all the available sizes. Select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
     For information about the different available VM sizes, see [https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes)
 
