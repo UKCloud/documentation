@@ -89,7 +89,11 @@ To grant Azure permissions to a group:
     > [!TIP]
     > If you can't see **Subscriptions** in your favourites panel, click **All services** and then **Subscriptions**. You can add **Subscriptions** to your favourites panel by clicking the star icon.
 
+    ![All services > Subscriptions](images/azs-browser-all-services-subscriptions.png)
+
 3. Select your subscription for UKCloud for Microsoft Azure.
+
+    ![Subscriptions](images/azs-browser-subscriptions.png)
 
 4. Select **Access control (IAM)**.
 
