@@ -28,7 +28,7 @@ Symptoms include bluescreens of the operating system, random network dropouts.
 The fix is to install VMware Tools and replace the network adaptor with a VMXNET3 adaptor.
 
 > [!NOTE]
-> Currently, to change the adapter type, you'll need to navigate to the vCloud Director Legacy UI. To do this, in the top-right corner of the vCloud Director Tenant UI, click your user name, then select **Legacy UI**.
+> Currently, to change the adapter type, you'll need to navigate to the Legacy UI. To do this, in the top-right corner of the VMware Cloud Director tenant portal, click your user name, then select **Legacy UI**.
 
 There are a couple of things you should be aware of when doing this:
 

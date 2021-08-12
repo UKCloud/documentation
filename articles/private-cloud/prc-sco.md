@@ -69,7 +69,7 @@ Your compute solution can be:
 
 ## Upfront deployment charges
 
-You will be charged an upfront design and deployment fee before hardware is procured and installation is scheduled. See the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for more information.
+You will be charged an upfront design and deployment fee before hardware is procured and installation is scheduled. See the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for more information.
 
 ## Installation
 

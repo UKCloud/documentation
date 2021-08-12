@@ -2,9 +2,9 @@
 title: How to migrate your workloads to the UKCloud platform
 description: Describes how to migrate your existing workloads from your local, on-premises environment onto our cloud platform
 services: migration
-author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 17:56:05
+author: shighmoor
+reviewer: acirel
+lastreviewed: 10/06/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -22,11 +22,11 @@ toc_mdlink: migr-how-zerto-migrate-to-ukcloud.md
 
 UKCloud makes it easy for you to seamlessly migrate your existing workloads from a local VMware or Hyper-V powered data centre to our cloud platform.
 
-Our workload migration service is powered by Zerto, a leading provider of disaster recovery software for the cloud.
+Our Workload Migration service is powered by Zerto, a leading provider of disaster recovery software for the cloud.
 
 ### Intended audience
 
-This guide is intended for users who want to migrate their workloads onto the UKCloud platform.
+This article is intended for users who want to migrate their workloads onto the UKCloud platform.
 
 ## Before you begin
 
@@ -50,20 +50,20 @@ You should consider the following:
 
 To use our Workload Migration service, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.
 
-The following table lists the requirements for Workload Migration, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform:
+The following table lists the requirements for Workload Migration, based on the currently deployed version of Zerto Virtual Replication (8.5U2) on the UKCloud platform:
 
 Product | Supported Version
 --------|------------------
 **Management Plane** | &nbsp;
-VMWare vCenter | vCenter Server 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1
-Microsoft SCVMM | 2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM<br>2016 and Server Core: RTM Rollup 3-5, 6
+VMware vCenter | vCenter Server 6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1
+Microsoft SCVMM | 2016 and Server Core: RTM Rollup 3-5, 6, 7, 8, 2019 and Server Core: RTM Rollup 1
 **Hosts** | &nbsp;
-VMWare ESXi | 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1
-Microsoft Hyper-V | 2012 R2 and Server Core<br>Windows 2016 Server
+VMware ESXi | 6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1
+Microsoft Hyper-V | Windows 2016 Server, Microsoft Hyper-V Server 2019
 **Virtual Machines Hardware Version** | &nbsp;
-VMWare | 7-11, 13, 14
+VMware | 7-9, 10-11, 13, 14, 15, 17, 18
 Hyper-V | Generation 1 & 2
-**Disaster Recovery as a Service** | &nbsp;
+**Migration to the Cloud** | &nbsp;
 **Connectivity** | &nbsp;
 Full duplex internet connection | 5Mb/s minimum
 IPsec VPN | NA
@@ -86,9 +86,9 @@ For a complete list of hypervisor features supported when using Workload Migrati
 
 To migrate your workloads to the UKCloud platform, you must have a VDC in the intended target site. If you already have a compute service in the UKCloud site, you can use an existing VDC or you can create a new one using:
 
-- The UKCloud Portal (for more information see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md))
+- The UKCloud Portal (see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md))
 
-- The UKCloud Portal API (for more information see the [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md))
+- The UKCloud Portal API (see the [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md))
 
 If you don't already have a compute service in the UKCloud site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Workload Migration Service Request.
 
@@ -100,7 +100,7 @@ Before you can start migrating your workloads to UKCloud, you need to prepare yo
 
 - Creating a secure site-to-site VPN between your local environment and the UKCloud platform
 
-For more information, see [*How to install and configure Zerto in your local environment*](../vmware/vmw-how-zerto-install-local.md).
+For more information, see [*How to install and configure Zerto in your local environment*](../draas/draas-how-zerto-install-local.md).
 
 ### Configure networking on the target site
 
@@ -110,8 +110,7 @@ When you migrate your workloads, external access to the UKCloud VDC will be via 
 
 ### Create a virtual protection group
 
-A virtual protection group (VPG) is a collection of VMs that are grouped together for migration. When you create a VPG, a replica of each VM disk is created on the target UKCloud site. These replica virtual disks are then populated with the data in the source VMs by synchronising the
-source VMs with the target site replicas.
+A virtual protection group (VPG) is a collection of VMs that are grouped together for migration. When you create a VPG, a replica of each VM disk is created on the target UKCloud site. These replica virtual disks are then populated with the data in the source VMs by synchronising the source VMs with the target site replicas.
 
 For more information, see [*How to create a virtual protection group*](../vmware/vmw-how-zerto-create-vpg.md).
 
@@ -125,44 +124,47 @@ Within Zerto, you have two options for migrating your workloads:
 
 To move a VPG:
 
-1. Login to ZSSP.
+1. [*Login to the ZSSP*](../vmware/vmw-how-zerto-access-zssp.md).
 
-    If you need more detailed instructions, see [*How to access the Zerto Self-Service Portal*](../vmware/vmw-how-zerto-access-zssp.md). Use the ZSSP login link for the zone in which your target VDC is located.
+   Use the ZSSP login link for the zone in which your target VDC is located.
 
-2. From the **ACTIONS** menu at the bottom of the page, choose **MOVE VPG**.
+2. At the bottom of the page, select **Move**, then **VPG**.
 
-    ![Move VPG option in the Zerto Self-Service Portal](images/migr-zerto_move-vpg.png)
+   ![Move VPG option in the Zerto Self-Service Portal](images/migr-zerto-mnu-move-vpg.png)
 
-3. In the *Move* wizard, on the *Select VPGs* page, select one or more VPGs that you want to move then click **NEXT**.
+3. In the *Move* wizard, on the *Select VPGs* page, select one or more VPGs that you want to move then click **Next**.
 
-    ![Select VPG page of Move wizard](images/migr-zerto-move-select-vpg.png)
+   ![Select VPG page of Move wizard](images/migr-zerto-move-vpgs.png)
 
-4. On the *EXECUTION PARAMETERS* page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, select the **Commit Policy** field and choose:
+   > [!NOTE]
+   > When you move a VPG, you cannot select which checkpoint to use. Zerto uses the most recent checkpoint.
 
-    - **Auto-Commit** if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.
+4. On the *Execute Parameters* page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, click the **Commit Policy** field and select:
 
-    - **Auto-Rollback** if you want to automatically roll back the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately rolled back, enter 0.
+   - **Auto-Commit** if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.
 
-    - **None** if you do not want to apply a commit policy. You must manually commit or roll back the move.
+   - **Auto-Rollback** if you want to automatically roll back the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately rolled back, enter 0.
+
+   - **None** if you do not want to apply a commit policy. You must manually commit or roll back the move.
 
 5. The source VMs must be powered off before they can be migrated. If the VMs cannot be gracefully shut down, you can force a shutdown. To force shutdown, select the **Force Shutdown** check box. If you do not select this option and the VMs cannot be gracefully shut down, the move process fails.
 
-6. Reverse protection ensures that when the source VMs are migrated to the target site, the source site becomes the new target site. Reverse protection is enabled by default, but you can disable it by clicking the **Reverse Protection** field and deselecting the **REVERSE** check box.
+6. Reverse protection ensures that when the source VMs are migrated to the target site, the source site becomes the new target site. Reverse protection is enabled by default, but you can disable it by clicking the **Reverse Protection** field and deselecting the **Reverse** check box.
 
-    ![Execution Parameters page of Move wizard](images/migr-zerto-move-execution-parameters.png)
+   ![Execute Parameters page of Move wizard](images/migr-zerto-move-params.png)
 
-7. Click **NEXT**.
+7. Click **Next**.
 
-8. On the *MOVE* page, review the diagram to see the number of VPGs and VMs included in the move and where they will be moved to, then click **START MOVE**.
+8. On the *Move* page, review the diagram to see the number of VPGs and VMs included in the move and where they will be moved to, then click **Start Move**.
 
-    The move process creates the VMs in the target site.
+   The move process creates the VMs in the target site.
 
-    > [!NOTE]
-    > If a VM already exists on the target site with the same name as one of the source VMs, a number is added to the end of the target VM name to ensure that it is unique.
+   > [!NOTE]
+   > If a VM already exists on the target site with the same name as one of the source VMs, a number is added to the end of the target VM name to ensure that it's unique.
 
 9. If you set a commit policy with a time greater than zero, you can check the integrity of the migrated VMs before committing (or rolling back) the migration. When you've finished testing, you can either wait for the time to elapse before the auto commit or auto rollback, or on the *VPGs* tab, click the **VPG Name** and then click the **Commit** or **Rollback** icon as required.
 
-    After the migrated VMs are up and running and committed in the target site, the powered off VMs in the source site are removed from the source site and data from the journal is promoted to the migrated VMs. If you enabled reverse protection, the migrated VMs are protected on the source site.
+   After the migrated VMs are up and running and committed in the target site, the powered off VMs in the source site are removed from the source site and data from the journal is promoted to the migrated VMs. If you enabled reverse protection, the migrated VMs are protected on the source site.
 
 ## Next steps
 

@@ -2,9 +2,9 @@
 title: Journaling Protection FAQs
 description: Frequently asked questions for Journaling Protection (powered by Zerto)
 services: vmware
-author: Matt Warner
-reviewer:
-lastreviewed: 25/07/2018 15:32:54
+author: mwarner
+reviewer: acirel
+lastreviewed: 07/06/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -93,17 +93,17 @@ The charge if the VM was turned off for the whole month:
 
 Currently, you can carry out the following actions using Journaling Protection:
 
-- Define Virtual Protection Groups (VPGs) which map to one or more vApp. These will allow you to maintain a set of rules that will apply to all VMs within the VPG. Rules include settings such as the journaling location and network mapping
+- Define virtual protection groups (VPGs) that map to one or more vApp. These allow you to maintain a set of rules that apply to all VMs within the VPG. Rules include settings such as the journaling location and network mapping.
 
-- State a desired location that the VM journal is to be stored in (for example, another UKCloud region)
+- State a desired location that the VM journal is to be stored in (for example, another UKCloud region).
 
-- View the current RPO and RTO (recovery point objective) or RTO (recovery time objectives) are for their protected VMs.
+- View the current RPO (recovery point objective) and RTO (recovery time objectives) for your protected VMs.
 
-- Self-service restore vApps from a journal via the portal from any point contained within the journal
+- Restore vApps (self-service) from a journal via the portal from any point contained within the journal.
 
-- View real-time notifications within the Zerto portal to check if VMs are not meeting RPO or RTO targets
+- View real-time notifications within the Zerto portal to check if VMs are not meeting RPO or RTO targets.
 
-- Perform disaster recovery tests by recovering vApps into the recovery destination
+- Perform disaster recovery tests by recovering vApps into the recovery destination.
 
 ### Can I set different retention policies for my vApps?
 
@@ -111,7 +111,7 @@ Yes. Each vApp maps to a VPG, and each VPG can have its own retention policy. Fo
 
 ### Is this a managed service?
 
-No. UKCloud have implemented Journaling Protection to be available for UKCloud for VMware workloads as an on-platform service and will ensure that the service is available and updated accordingly. Once the service has been available for your workloads, you will be responsible for managing the service via the UKCloud or Journaling Protection portal (powered by Zerto).
+No. UKCloud have implemented Journaling Protection to be available for UKCloud for VMware workloads as an on-platform service and will ensure that the service is available and updated accordingly. Once the service has been available for your workloads, you will be responsible for managing the service via the UKCloud for Journaling Protection portal (powered by Zerto).
 
 ### How do I make changes to my Journaling Protection?
 
@@ -149,17 +149,17 @@ We do not currently plan to offer an SLA around the service. However, the real t
 
 ### Is Zerto licensing included?
 
-Yes, it is included with the Journaling Protection option for use with the 2, 7, 14 day or 28 day retention policies.
+Yes, it is included with the Journaling Protection option for use with the 2, 7, 14 or 28 day retention policies.
 
 ### Will a VPG still be protected if one or more VMs are powered off?
 
-In normal circumstances, if a VM within a VPG is powered off this will not impact the protection as remaining powered-on VMs will continue to replicate as normal. This includes the scenario when a new VM is added to a VPG and the new VM is in powered off state - in this instance the VM would need to be powered on to create its initial sync, and existing VMs will continue to replicate as normal.
+We recommend that you do not power off a VM if it's included in a protected vApp. Although powering off a VM may not immediately affect the protection of the vApp, if Zerto attempts to access the powered off VM, it could cause replication of all the VMs in the vApp to cease. If a powered-off VM causes an issue with vApp protection, Zerto will issue an alert.
 
-The one exception to this is if you have an existing VPG, and one VM is powered off, and at some point afterwards the VPG goes in a bitmap / delta sync (normally due to network contention or high periods of writes on a protected VM). In this case, the powered-off VM prevents the VPG from completing the sync and the VPG replication will be halted; this will trigger an alert within the Zerto portal.
+If you add a powered-off VM to a protected vApp, the VM will not be protected until you've powered it on and Zerto has performed the initial sync. In this case, the powered-off VM will not affect the protection of the vApp.
 
 ### Is Journaling Protection enabled in all regions?
 
-Journaling Protection is currently enabled in all regions. However, only regions 5 and 6 are used as the recovery destination regions due to performance and capacity management reasons. In order to check the latest status as to what services are available in each region, please check [*UKCloud services by region*](../other/other-ref-services-by-region.md).
+Journaling Protection is currently enabled in all regions. However, only regions 5, 6, 13 and 14 are used as the recovery destination regions due to performance and capacity management reasons. To check the latest status as to which services are available in each region, see [*UKCloud services by region*](../other/other-ref-services-by-region.md).
 
 ### Can I use Journaling Protection with VDCs that are in the same data centre?
 
@@ -173,7 +173,7 @@ The migration of VMs within our platform is very closely aligned with how we ope
 
 As migrating workloads involves enabling Journaling Protection on your source VMs, those VMs (and any associated storage) will incur the appropriate additional Journaling Protection charges for the duration of the migration. Once your migration is complete, you should be sure to remove the original VMs from the source site to avoid additional charges.
 
-Find out more about how to migrate your workloads between UKCloud regions in [*How to migrate your workloads between UKCloud regions*](vmw-how-zerto-migrate-between-regions.md).
+Find out more about how to migrate your workloads between UKCloud regions in [*How to migrate your workloads between UKCloud regions*](../enablement/enbl-how-zerto-migrate-between-regions.md).
 
 ## Feedback
 

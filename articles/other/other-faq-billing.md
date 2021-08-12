@@ -2,9 +2,10 @@
 title: Invoice and billing FAQs
 description: Frequently asked questions about invoicing and billing
 services: other
-author: Sue Highmoor
-reviewer:
-lastreviewed: 07/01/2019 13:14:56
+author: shighmoor
+reviewer: pheathman
+lastreviewed: 11/12/2020
+
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -26,8 +27,6 @@ We send out invoices on the first day of each month for the previous month's usa
 ### How can I pay?
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
-
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### How is my invoice formatted?
 
@@ -105,7 +104,7 @@ Geo-resilient Storage used | AL
 Geo-resilient Storage cost | AQ
 
 > [!NOTE]
-> 60GiB of Tier 2 storage is included in the pricing for all VMs whilst they are powered on, except for Micro, which has 10giB of included storage. For VMs in powered-off state, consumed storage will be charged at the prevailing rate.
+> 60GiB of Tier 2 storage is included in the pricing for all VMs whilst they are powered on, except for Micro, which has 10GiB of included storage. For VMs in powered-off state, consumed storage will be charged at the prevailing rate.
 
 ### What are the protection costs for my VMs?
 
@@ -136,7 +135,7 @@ You can add metadata to your individual VMs, which propagates to the evidence fi
 > [!NOTE]
 > The VM metadata will be listed in the evidence file on the day after you tag the VM. For example, if you tag your VM on the 3rd, the metadata will be listed in the evidence file from the 4th, unless a VM power cycle occurs on the 3rd.
 
-The [*How to use VM location in vCloud Director*](../vmware/vmw-how-use-vm-location.md) article includes information about how to access metadata for your VMs.
+The [*How to use VM location*](../vmware/vmw-how-use-vm-location.md) article includes information about how to access metadata for your VMs.
 
 ## UKCloud for OpenStack charges
 
@@ -170,23 +169,6 @@ Tier 2 Storage used        | AF
 Tier 2 Storage cost        | AK
 
 UKCloud for OpenStack storage costs also include any images and backups you have, which are listed as separate rows in the evidence file. Look for rows with the service type (column H) of `OpenStack Image` and `OpenStack Instance Backup Storage`.
-
-## Cloud GPU charges
-
-### How are my Cloud GPU charges calculated?
-
-Costs for Cloud GPU are shown against VMware VMs in the following columns of the evidence file:
-
-Description                         | Column
-------------------------------------|-------
-GPU type (compute or visualisation) | V
-GPU cost                            | Y
-
-The cost of a GPU VM depends on whether it is for compute or visualisation (column X).
-
-### How can I see how many GPU VMs I have?
-
-To find out how many GPU VMs you have, look for rows with a service type (column H) of `VMware VM` that include a GPU count (column W).
 
 ## Feedback
 

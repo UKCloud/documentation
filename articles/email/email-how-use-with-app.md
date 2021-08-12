@@ -2,9 +2,9 @@
 title: How to use UKCloud's email service with your application
 description: Walks through the process for configuring your application to use our Email and Collaboration service
 services: email
-author: Sue Highmoor
-reviewer: mperry
-lastreviewed: 29/10/2019
+author: shighmoor
+reviewer: bchallis
+lastreviewed: 17/03/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -18,9 +18,15 @@ toc_mdlink: email-how-use-with-app.md
 
 # How to use UKCloud's email service with your application
 
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
+> [!IMPORTANT]
+> PSN Email Relay provided by Vodafone is end-of-life as of 31 March 2021. After this date, anyone using the PSN will not be able to use email over this network, including all email services from UKCloud on the PSN. Internet-connected email services from UKCloud will continue to function after this date.
+
 ## Overview
 
-Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and HSCN, where few mail relay providers are available.
+Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using secure government networks such as HSCN, where few mail relay providers are available.
 
 In this guide, we'll walk you through the process for configuring your application to use our Email & Collaboration service.
 
@@ -31,18 +37,6 @@ The service provides enterprise-class functionality for end-users, on a per-mail
 Although the service was designed with end-users in mind, there's nothing to stop you using the supported protocols to allow an application to access a mailbox in order to send or receive email. This will generally be achieved via SMTP or POP3 over TLS.
 
 It's worth noting that there's a minimum commitment of 25 mailboxes with this service --- but they don't all have to be used.
-
-## Email on the Elevated OFFICIAL platform
-
-The instructions in this document are written for the UKCloud Assured OFFICIAL (formerly PGA IL2)
-
-platform, which is internet facing. If you wish to send and/or receive mail on the UKCloud Elevated OFFICIAL platform, the same general instructions apply, but there are a few differences to be aware of:
-
-- The Elevated mail platform is PSN facing, so you'll need a PSN- or GCF- registered domain name in order to use the service
-
-- The hostname for UKCloud's mail server is different, and will be provided to you once your order has been processed
-
-- By default, you'll only be able to connect to UKCloud's mail server using HTTPS --- you'll need to raise a service request in the Elevated portal to request access from your virtual data centre to the UKCloud mail server via SMTP, POP3 or IMAP as required
 
 ## Getting started with Email and Collaboration
 

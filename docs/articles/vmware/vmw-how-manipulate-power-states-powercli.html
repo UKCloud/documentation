@@ -8,7 +8,7 @@
     <title>How to manipulate power states with PowerCLI </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to manipulate power states with PowerCLI ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@
 <h1 id="how-to-manipulate-power-states-with-powercli">How to manipulate power states with PowerCLI</h1>
 
 <h2 id="overview">Overview</h2>
-<p>PowerCLI is a command line interface tool developed by VMware and built upon Microsoft PowerShell. The tool is designed to enable manipulation, automation, management and control over vSphere and vCloud Director assets.</p>
+<p>PowerCLI is a command line interface tool developed by VMware and built upon Microsoft PowerShell. The tool is designed to enable manipulation, automation, management and control over vSphere and VMware Cloud Director assets.</p>
 <p>PowerCLI can help you realise some of the fundamental benefits of cloud computing, such as on-demand self-service. Controlling virtual machine power states programmatically, to turn off compute elements when they are no longer required, can help you save up to 70% on your compute costs by taking advantage of hourly billing. For example, you could power off an internal room-booking system when staff are at home during evenings and weekends.</p>
 <p>This article describes the basics of how to use PowerCLI to power VMs and vApps on and off via a script, and then automate the script so that it can run unattended.</p>
 <h2 id="before-you-begin">Before you begin</h2>
@@ -103,7 +103,7 @@
 <p>UKCloud recommends installing PowerCLI onto a reference management machine, separate from the controlled environment. This management machine should not be powered off, and could be a standalone virtual server within UKCloud, or any other Windows machine with HTTP access to the UKCloud API URL.</p>
 <p>You may also find a good script editor useful. There are several available for free, such as PowerShell ISE, Visual Studio Code and Notepad++.</p>
 <h2 id="connecting-to-the-ukcloud-cloud-platform">Connecting to the UKCloud cloud platform</h2>
-<p>Your PowerCLI script needs to connect to vCloud Director using a privileged account, so we recommend that you create a user in the UKCloud Portal with only <strong>API Only</strong> access. This ensures that the account cannot be used to access the GUI, limiting the risk associated with an administrative account. Also, as an <strong>API Only</strong> account cannot utilise additional security features, such as Google 2-Step Verification, it is advisable to restrict the account so that it can log in only from specific IP addresses. You can configure these permissions under the <strong>Contacts</strong> section of the UKCloud Portal (for more information, see <a href="vmw-how-manage-vcd-permissions.html"><em>How to manage permissions for vCloud Director</em></a>).</p>
+<p>Your PowerCLI script needs to connect to VMware Cloud Director using a privileged account, so we recommend that you create a user in the UKCloud Portal with only <strong>API Only</strong> access. This ensures that the account cannot be used to access the GUI, limiting the risk associated with an administrative account. Also, as an <strong>API Only</strong> account cannot utilise additional security features, such as Google 2-Step Verification, it is advisable to restrict the account so that it can log in only from specific IP addresses. You can configure these permissions under the <strong>Contacts</strong> section of the UKCloud Portal (for more information, see <a href="vmw-how-manage-vcd-permissions.html"><em>How to manage permissions for VMware Cloud Director</em></a>).</p>
 <p>You usually log in to the portal using an email address and password. For <strong>API Only</strong> access a unique user ID is generated for each UKCloud account you want to log into. You need to specify these unique identifiers when running the scripts to connect to the UKCloud environment.</p>
 <p>You can find API credentials and URL details on the UKCloud Portal when you have logged in:</p>
 <ol>
@@ -136,13 +136,13 @@
 <p><code>$vApps = $Get-CIVapp</code></p>
 </li>
 <li><p>This returns all of the vApps and put them into a variable. You'll want to specify which vApp you want to change the power state of by filtering for the right name, for example:</p>
-<p><code>$MyVApp = Get-CIVapp | Where {$_.Name -match “My vApp”}</code></p>
+<p><code>$MyVApp = Get-CIVapp | Where {$_.Name -match &quot;My vApp&quot;}</code></p>
 <p>This returns any vApp in your Organisation where the name contains the string <code>My vApp</code>.</p>
 </li>
 <li><p>To control the power state, use the <code>Start-CIVApp</code> and <code>Stop-CIVAppGuest</code> cmdlets.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>You should use the <code>-RunAsync</code> parameter as this will hand the task over to vCloud. If you don't use this, the task can fail if it takes too long or for any number of other issues that won’t happen if vCloud is handling the task.</p>
+<p>You should use the <code>-RunAsync</code> parameter as this will hand the task over to vCloud. If you don't use this, the task can fail if it takes too long or for any number of other issues that won't happen if vCloud is handling the task.</p>
 </div>
 <p>Here is how this looks:</p>
 <pre><code class="lang-none">$MyVApp | Start-CIVApp -RunASync
@@ -150,16 +150,16 @@ $MyVApp | Stop-CIVAppGuest -RunASync
 </code></pre>
 </li>
 <li><p>You may also want to create a check so that the script turns the vApp on or off depending on it's current power state. You can do this by checking the current status and starting or stopping the vApp accordingly:</p>
-<pre><code class="lang-none">If ($MyVApp.Status -match “On”){
+<pre><code class="lang-none">If ($MyVApp.Status -match &quot;On&quot;){
     $MyVApp | Stop-CIVAppGuest -RunASync
 }else{$MyVApp | Start-CIVApp}
 </code></pre>
 </li>
 <li><p>You may want put some measures in place to force a shutdown using <code>Stop-CIVapp</code>. For example, in the event that the vApp fails to power down after five minutes, you could have the following:</p>
-<pre><code class="lang-none">If ($MyVApp.Status -match “On”){
+<pre><code class="lang-none">If ($MyVApp.Status -match &quot;On&quot;){
     $MyVApp | Stop-CIVAppGuest -RunASync
     Start-Sleep -Seconds 300
-    If ($MyVApp.Status -NotMatch “PoweredOff”){
+    If ($MyVApp.Status -NotMatch &quot;PoweredOff&quot;){
         $MyVApp | StopCIVapp -RunAsync
     }
 }else{$MyVApp | Start-CIVApp}
@@ -215,6 +215,19 @@ $MyVApp | Stop-CIVAppGuest -RunASync
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -233,7 +246,7 @@ $MyVApp | Stop-CIVAppGuest -RunASync
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

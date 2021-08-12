@@ -2,9 +2,9 @@
 title: How to set up two-factor authentication for a user account
 description: Describes how to set up two-factor authentication (2FA) for a user account
 services: portal
-author: Sue Highmoor
-reviewer: wllewellyn
-lastreviewed: 07/02/2020
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 09/04/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -37,19 +37,21 @@ This article is intended for any Portal user who needs to set up 2FA to log in t
 
 When you first log in to a Portal account that has 2FA enabled, you'll be prompted to set up 2FA:
 
-1. Log in to the UKCloud Portal, providing your user name and password as usual.
+1. Install an authenticator app, if you don't already have one, that is compatible with the UKCloud Portal.
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
+   We've tested 2FA with Google Authenticator, which is a smart phone app, and Authy, which is available as a smart phone app, desktop app or Chrome plug-in. Other authenticator apps may also be compatible but have not been tested.
 
-2. Install an authenticator app if you don't already have one which is compatible with the UKCloud Portal. We've tested 2FA with Google Authenticator, which is a smart phone app, and Authy, which is available as a smart phone app, desktop app or Chrome plug-in. Other authenticator apps may also be compatible but have not been tested. Once you've installed the authenticator app, scan the QR code or copy the security key.
+2. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal), providing your user name and password as usual.
 
-    This is a one-off set up and does not need to be repeated as part of the normal Portal log-in process.
+3. Using your authenticator app, scan the QR code or enter the security key shown in *Step 2* of the *Configure your two-factor authentication* dialog box.
+
+    This is a one-off set up and does not need to be repeated as part of the normal Portal login process.
 
     ![Configure your two-factor authentication dialog box](images/ptl-2fa-setup.png)
 
-3. When you've installed and set up your authenticator app, enter the 6 digit code provided by the app in the *Configure your two-factor authentication* dialog box and click **Confirm code** to log in to the Portal.
+4. Enter the 6 digit code provided by your authenticator app in *Step 3* of the *Configure your two-factor authentication* dialog box and click **Confirm code** to log in to the Portal.
 
-4. For future logins to the Portal, use your authenticator app to generate a 2FA code to confirm your identity and complete the log in process.
+5. For future logins to the Portal, use your authenticator app to generate a 2FA code to confirm your identity and complete the log in process.
 
 ## Related videos
 

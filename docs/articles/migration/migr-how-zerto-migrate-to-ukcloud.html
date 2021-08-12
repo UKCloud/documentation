@@ -8,7 +8,7 @@
     <title>How to migrate your workloads to the UKCloud platform </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to migrate your workloads to the UKCloud platform ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -95,9 +95,9 @@
 
 <h2 id="overview">Overview</h2>
 <p>UKCloud makes it easy for you to seamlessly migrate your existing workloads from a local VMware or Hyper-V powered data centre to our cloud platform.</p>
-<p>Our workload migration service is powered by Zerto, a leading provider of disaster recovery software for the cloud.</p>
+<p>Our Workload Migration service is powered by Zerto, a leading provider of disaster recovery software for the cloud.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>This guide is intended for users who want to migrate their workloads onto the UKCloud platform.</p>
+<p>This article is intended for users who want to migrate their workloads onto the UKCloud platform.</p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>When you request Workload Migration, UKCloud provides you with:</p>
 <ul>
@@ -119,7 +119,7 @@
 </ul>
 <h3 id="system-requirements">System requirements</h3>
 <p>To use our Workload Migration service, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.</p>
-<p>The following table lists the requirements for Workload Migration, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform:</p>
+<p>The following table lists the requirements for Workload Migration, based on the currently deployed version of Zerto Virtual Replication (8.5U2) on the UKCloud platform:</p>
 <table>
 <thead>
 <tr>
@@ -133,39 +133,39 @@
 <td> </td>
 </tr>
 <tr>
-<td>VMWare vCenter</td>
-<td>vCenter Server 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
+<td>VMware vCenter</td>
+<td>vCenter Server 6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1</td>
 </tr>
 <tr>
 <td>Microsoft SCVMM</td>
-<td>2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM<br>2016 and Server Core: RTM Rollup 3-5, 6</td>
+<td>2016 and Server Core: RTM Rollup 3-5, 6, 7, 8, 2019 and Server Core: RTM Rollup 1</td>
 </tr>
 <tr>
 <td><strong>Hosts</strong></td>
 <td> </td>
 </tr>
 <tr>
-<td>VMWare ESXi</td>
-<td>5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
+<td>VMware ESXi</td>
+<td>6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1</td>
 </tr>
 <tr>
 <td>Microsoft Hyper-V</td>
-<td>2012 R2 and Server Core<br>Windows 2016 Server</td>
+<td>Windows 2016 Server, Microsoft Hyper-V Server 2019</td>
 </tr>
 <tr>
 <td><strong>Virtual Machines Hardware Version</strong></td>
 <td> </td>
 </tr>
 <tr>
-<td>VMWare</td>
-<td>7-11, 13, 14</td>
+<td>VMware</td>
+<td>7-9, 10-11, 13, 14, 15, 17, 18</td>
 </tr>
 <tr>
 <td>Hyper-V</td>
 <td>Generation 1 &amp; 2</td>
 </tr>
 <tr>
-<td><strong>Disaster Recovery as a Service</strong></td>
+<td><strong>Migration to the Cloud</strong></td>
 <td> </td>
 </tr>
 <tr>
@@ -199,9 +199,9 @@
 <h3 id="create-a-target-vdc">Create a target VDC</h3>
 <p>To migrate your workloads to the UKCloud platform, you must have a VDC in the intended target site. If you already have a compute service in the UKCloud site, you can use an existing VDC or you can create a new one using:</p>
 <ul>
-<li><p>The UKCloud Portal (for more information see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>)</p>
+<li><p>The UKCloud Portal (see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>)</p>
 </li>
-<li><p>The UKCloud Portal API (for more information see the <a href="../portal/ptl-how-use-api.html"><em>How to use the UKCloud Portal API</em></a>)</p>
+<li><p>The UKCloud Portal API (see the <a href="../portal/ptl-how-use-api.html"><em>How to use the UKCloud Portal API</em></a>)</p>
 </li>
 </ul>
 <p>If you don't already have a compute service in the UKCloud site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Workload Migration Service Request.</p>
@@ -213,13 +213,12 @@
 <li><p>Creating a secure site-to-site VPN between your local environment and the UKCloud platform</p>
 </li>
 </ul>
-<p>For more information, see <a href="../vmware/vmw-how-zerto-install-local.html"><em>How to install and configure Zerto in your local environment</em></a>.</p>
+<p>For more information, see <a href="../draas/draas-how-zerto-install-local.html"><em>How to install and configure Zerto in your local environment</em></a>.</p>
 <h3 id="configure-networking-on-the-target-site">Configure networking on the target site</h3>
 <p>You must configure any internally and externally routed networks in your UKCloud target VDC to duplicate those in your local environment. You must also configure the edge gateway with the same firewall, NAT and other rules. You'll create the mapping between these networks when you create your VPG.</p>
 <p>When you migrate your workloads, external access to the UKCloud VDC will be via a different IP address. You'll need to account for any required DNS changes and external connectivity configuration (such as VPNs), to ensure continued external access. Utilising UKCloud's VMware cloud, you can configure this in advance. Alternatively, you can use load balancing technologies to manage a seamless switch between environments.</p>
 <h3 id="create-a-virtual-protection-group">Create a virtual protection group</h3>
-<p>A virtual protection group (VPG) is a collection of VMs that are grouped together for migration. When you create a VPG, a replica of each VM disk is created on the target UKCloud site. These replica virtual disks are then populated with the data in the source VMs by synchronising the
-source VMs with the target site replicas.</p>
+<p>A virtual protection group (VPG) is a collection of VMs that are grouped together for migration. When you create a VPG, a replica of each VM disk is created on the target UKCloud site. These replica virtual disks are then populated with the data in the source VMs by synchronising the source VMs with the target site replicas.</p>
 <p>For more information, see <a href="../vmware/vmw-how-zerto-create-vpg.html"><em>How to create a virtual protection group</em></a>.</p>
 <h3 id="migrate-your-workloads">Migrate your workloads</h3>
 <p>Within Zerto, you have two options for migrating your workloads:</p>
@@ -231,16 +230,20 @@ source VMs with the target site replicas.</p>
 </ul>
 <p>To move a VPG:</p>
 <ol>
-<li><p>Login to ZSSP.</p>
-<p>If you need more detailed instructions, see <a href="../vmware/vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a>. Use the ZSSP login link for the zone in which your target VDC is located.</p>
+<li><p><a href="../vmware/vmw-how-zerto-access-zssp.html"><em>Login to the ZSSP</em></a>.</p>
+<p>Use the ZSSP login link for the zone in which your target VDC is located.</p>
 </li>
-<li><p>From the <strong>ACTIONS</strong> menu at the bottom of the page, choose <strong>MOVE VPG</strong>.</p>
-<p><img src="images/migr-zerto_move-vpg.png" alt="Move VPG option in the Zerto Self-Service Portal"></p>
+<li><p>At the bottom of the page, select <strong>Move</strong>, then <strong>VPG</strong>.</p>
+<p><img src="images/migr-zerto-mnu-move-vpg.png" alt="Move VPG option in the Zerto Self-Service Portal"></p>
 </li>
-<li><p>In the <em>Move</em> wizard, on the <em>Select VPGs</em> page, select one or more VPGs that you want to move then click <strong>NEXT</strong>.</p>
-<p><img src="images/migr-zerto-move-select-vpg.png" alt="Select VPG page of Move wizard"></p>
+<li><p>In the <em>Move</em> wizard, on the <em>Select VPGs</em> page, select one or more VPGs that you want to move then click <strong>Next</strong>.</p>
+<p><img src="images/migr-zerto-move-vpgs.png" alt="Select VPG page of Move wizard"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When you move a VPG, you cannot select which checkpoint to use. Zerto uses the most recent checkpoint.</p>
+</div>
 </li>
-<li><p>On the <em>EXECUTION PARAMETERS</em> page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, select the <strong>Commit Policy</strong> field and choose:</p>
+<li><p>On the <em>Execute Parameters</em> page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, click the <strong>Commit Policy</strong> field and select:</p>
 <ul>
 <li><p><strong>Auto-Commit</strong> if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the <strong>After</strong> field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.</p>
 </li>
@@ -252,16 +255,16 @@ source VMs with the target site replicas.</p>
 </li>
 <li><p>The source VMs must be powered off before they can be migrated. If the VMs cannot be gracefully shut down, you can force a shutdown. To force shutdown, select the <strong>Force Shutdown</strong> check box. If you do not select this option and the VMs cannot be gracefully shut down, the move process fails.</p>
 </li>
-<li><p>Reverse protection ensures that when the source VMs are migrated to the target site, the source site becomes the new target site. Reverse protection is enabled by default, but you can disable it by clicking the <strong>Reverse Protection</strong> field and deselecting the <strong>REVERSE</strong> check box.</p>
-<p><img src="images/migr-zerto-move-execution-parameters.png" alt="Execution Parameters page of Move wizard"></p>
+<li><p>Reverse protection ensures that when the source VMs are migrated to the target site, the source site becomes the new target site. Reverse protection is enabled by default, but you can disable it by clicking the <strong>Reverse Protection</strong> field and deselecting the <strong>Reverse</strong> check box.</p>
+<p><img src="images/migr-zerto-move-params.png" alt="Execute Parameters page of Move wizard"></p>
 </li>
-<li><p>Click <strong>NEXT</strong>.</p>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>On the <em>MOVE</em> page, review the diagram to see the number of VPGs and VMs included in the move and where they will be moved to, then click <strong>START MOVE</strong>.</p>
+<li><p>On the <em>Move</em> page, review the diagram to see the number of VPGs and VMs included in the move and where they will be moved to, then click <strong>Start Move</strong>.</p>
 <p>The move process creates the VMs in the target site.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If a VM already exists on the target site with the same name as one of the source VMs, a number is added to the end of the target VM name to ensure that it is unique.</p>
+<p>If a VM already exists on the target site with the same name as one of the source VMs, a number is added to the end of the target VM name to ensure that it's unique.</p>
 </div>
 </li>
 <li><p>If you set a commit policy with a time greater than zero, you can check the integrity of the migrated VMs before committing (or rolling back) the migration. When you've finished testing, you can either wait for the time to elapse before the auto commit or auto rollback, or on the <em>VPGs</em> tab, click the <strong>VPG Name</strong> and then click the <strong>Commit</strong> or <strong>Rollback</strong> icon as required.</p>
@@ -282,6 +285,19 @@ source VMs with the target site replicas.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -300,7 +316,7 @@ source VMs with the target site replicas.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

@@ -3,8 +3,8 @@ title: Cloud Storage Service Scope
 description: Outlines important details regarding Cloud Storage
 services: cloud-storage
 author: Steve Hall
-reviewer:
-lastreviewed: 20/08/2019 16:46:31
+reviewer: Steve relf
+lastreviewed: 08/12/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -70,7 +70,7 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
 - **Command Line Interface (CLI).** CLI tools enable access from the command line by translating commands into the relevant API calls.
 
-- **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md).
+- **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see [*How to install Dell EMC GeoDrive*](cs-how-install-geodrive2-client.md).
 
 - **UKCloud Portal.** Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md).
 
@@ -102,7 +102,7 @@ We manage the physical firewalls that face public and secure networks.
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.
 
 We don't provide Protective Monitoring services within your estate - it is your responsibility to act at this level.
 
@@ -148,20 +148,7 @@ UKCloud also has a large ecosystem of partners who can deliver additional servic
 
 ## Service constraints
 
-UKCloud will adhere to the following in terms of maintenance windows:
-
-"Planned Maintenance" means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide affected customers with at least fourteen (14) days'
-notice of the Planned Maintenance.
-
-If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered.
-
-"Emergency Maintenance" means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall:
-
-a)  provide affected customers with at least six (6) hours' advance notice and
-
-b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
-
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
+For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Supporting documents and resources
 
@@ -175,7 +162,7 @@ The following documents contain more information about Cloud Storage and the ser
 
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 
-- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+- [*How to install Dell EMC GeoDrive*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 

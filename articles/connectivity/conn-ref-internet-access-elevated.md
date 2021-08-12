@@ -2,9 +2,9 @@
 title: Internet access to the Elevated OFFICIAL security domain
 description: Provides information about the process for providing internet access to the UKCloud Elevated OFFICIAL security domain
 services: connectivity
-author: Sue Highmoor
-reviewer: hbrunt
-lastreviewed: 16/12/2019
+author: shighmoor
+reviewer: nstobbart
+lastreviewed: 15/02/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,9 +19,9 @@ toc_mdlink: conn-ref-internet-access-elevated.md
 
 ## Overview
 
-UKCloud's Elevated OFFICIAL security domain is natively connected to secure government networks such as PSN Protected; there is no direct internet connectivity. If you want access to the internet, we operate an internet gateway service that enables limited access to internet resources from our Elevated security domain.
+UKCloud's Elevated OFFICIAL security domain is natively connected to secure government networks; there is no direct internet connectivity. If you want access to the internet, we operate an internet gateway service that enables limited access to internet resources from our Elevated security domain.
 
-The internet gateway isn't designed to support general web access, rich web applications or patch downloads. Instead, it's intended to facilitate access to basic web services such as postcode lookups, payment card authorisation, mapping data, and so on. Only white-labelled web services may be accessed via the gateway.
+The internet gateway isn't designed to support general web access, rich web applications or patch downloads. Instead, it's intended to facilitate access to basic web services such as postcode lookups, payment card authorisation, mapping data, and so on. Only web services identified via an allow-list may be accessed via the gateway.
 
 ![Data flow from the Elevated Platform to the Internet](images/data-flow.png)
 

@@ -27,7 +27,7 @@ There are two approaches to applying for CDSZ services:
 
 - A light touch design review/self-assessment route for customers with simple implementations, or those who are experienced at designing secure solutions. This enables customers who are comfortable with the risk associated with their data to choose which controls and evidence they feel is appropriate to self-certify their cross domain solution.
 
-- An assurance wrap style approach with UKCloud’s experienced professionals for more complex implementations or those customers who would like support and guidance when developing their solutions. This enables customers who require more support to submit their proposed solution with confidence that it effectively mitigates against risk.
+- An assurance wrap style approach with UKCloud's experienced professionals for more complex implementations or those customers who would like support and guidance when developing their solutions. This enables customers who require more support to submit their proposed solution with confidence that it effectively mitigates against risk.
 
 In this document, the *customer* is the UKCloud customer, who may or may not be the ultimate end user of the application. The customer will be responsible for completing any compliance process with the end user, including obtaining sign-off from the relevant data owner. The data owner should be a permanent employee at the data owning organisation with evidence of data ownership, for example an IT Security Officer (ITSO), Senior Information Risk Owner (SIRO) or accreditor.
 
@@ -108,7 +108,7 @@ If you choose an assurance wrap review for your proposed implementation, the UKC
 > UKCloud takes no ownership or responsibility for the implementation or running of your proposed solution or ownership for any risks to the data.
 
 > [!NOTE]
-> UKCloud reserves the right to charge [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) day rate charges for time spent on customer projects if you disengage with the assurance wrap review process before completion.
+> UKCloud reserves the right to charge [SFIA](https://ukcloud.com/sfia) day rate charges for time spent on customer projects if you disengage with the assurance wrap review process before completion.
 
 At the end of the review period, you will have generated all the necessary documents to apply for your CDSZ service (as listed in [Required documents](#required-documents)).
 

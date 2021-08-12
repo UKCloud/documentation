@@ -3,8 +3,8 @@ title: Command-line clients for UKCloud for OpenStack
 description: Collects the help content from the OpenStack command-line clients, for reference
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 02/08/2018 14:45:48
+reviewer: Bryce Nicholls
+lastreviewed: 15/07/2021
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -25,8 +25,8 @@ The following Red Hat documents collects the help content from the OpenStack com
 
 | Region              | OpenStack Version                      | Documentation |
 |---------------------|----------------------------------------|---------------|
-| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | [*Red Hat OpenStack Platform 10 Command-Line Interface Reference*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html-single/command-line_interface_reference_guide/index) |
-| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | [*Red Hat OpenStack Platform 13 Command-Line Interface Reference*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/command_line_interface_reference/index) |
+| COR00005  | OpenStack Platform 10 <BR>(Newton Release) | [*Red Hat OpenStack Platform 10 Command-Line Interface Reference*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html-single/command-line_interface_reference_guide/index) |
+| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | [*Red Hat OpenStack Platform 13 Command-Line Interface Reference*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/command_line_interface_reference/index) |
 
 ## Feedback
 

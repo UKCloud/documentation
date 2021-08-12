@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access vCloud Director through the vCloud API </title>
+    <title>How to access VMware Cloud Director through the vCloud API </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access vCloud Director through the vCloud API ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="title" content="How to access VMware Cloud Director through the vCloud API ">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,10 +91,10 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-vcloud-director-through-the-vcloud-api">How to access vCloud Director through the vCloud API</h1>
+<h1 id="how-to-access-vmware-cloud-director-through-the-vcloud-api">How to access VMware Cloud Director through the vCloud API</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To perform some tasks within your UKCloud for VMware environment, you may need to access vCloud Director through the vCloud API. This guide shows you how to access the vCloud API.</p>
+<p>To perform some tasks within your UKCloud for VMware environment, you may need to access VMware Cloud Director through the vCloud API. This guide shows you how to access the vCloud API.</p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>Before using the vCloud API, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see <a href="vmw-how-install-vcloud-api-rest-client.html"><em>How to install a REST client to access the vCloud API</em></a>.</p>
 <h2 id="finding-your-vcloud-api-credentials">Finding your vCloud API credentials</h2>
@@ -135,7 +135,7 @@
 </li>
 </ol>
 <h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
-<p>To start interacting with the vCloud API, you first need to obtain an <code>x-vcloud-authorization</code> token; to do this you need to adjust some settings in the RESTClient.</p>
+<p>To start interacting with the vCloud API, you first need to obtain an <code>x-vmware-vcloud-access-token</code> token; to do this you need to adjust some settings in the RESTClient.</p>
 <ol>
 <li><p>In your browser, click the <strong>RESTClient</strong> icon.</p>
 <p><img src="images/vmw-firefox-restclient-icon.png" alt="RESTClient icon"></p>
@@ -170,25 +170,25 @@
 <li><p>The <em>Headers</em> section should now be displayed, containing the Accept header.</p>
 <p><img src="images/vmw-restclient-accept-header.png" alt="Headers section with Accept header"></p>
 </li>
-<li><p>The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a <code>x-vcloud-authorization</code> token, so click the <strong>Send</strong> button.</p>
+<li><p>The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a <code>x-vmware-vcloud-access-token</code> token, so click the <strong>Send</strong> button.</p>
 </li>
-<li><p>When a response is received the <strong>Headers</strong> tab in the <em>Response</em> section will be populated, including an <code>x-vcloud-authorization</code> token.</p>
+<li><p>When a response is received the <strong>Headers</strong> tab in the <em>Response</em> section will be populated, including an <code>x-vmware-vcloud-access-token</code> token.</p>
 <p><img src="images/vmw-restclient-authentication-token.png" alt="API response with authentication token"></p>
 </li>
-<li><p>The <code>x-vcloud-authorization</code> token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word <code>x-vcloud-authorization</code>.</p>
+<li><p>The <code>x-vmware-vcloud-access-token</code> token becomes part of an Authorization header, which will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word <code>x-vmware-vcloud-access-token</code>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If at any point while following the instructions in this guide, the output displayed in the RESTClient does not look similar to that shown in the images, you can use the value of the <strong>Status Code</strong> field to determine what went wrong and needs investigation. In this case above, <strong>Status Code</strong> received was HTTP 200 OK, which means that the request succeeded. For a list of HTTP response codes, see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP Response Codes</a>.</p>
 </div>
 </li>
-<li><p>To add an <code>x-vcloud-authorization</code> header, from the <strong>Headers</strong> menu, select <strong>Custom Header</strong>.</p>
+<li><p>Next, add an Authorization header. To do this, from the <strong>Headers</strong> menu, select <strong>Custom Header</strong>.</p>
 </li>
-<li><p>In the <em>Request Header</em> dialog box, in the <strong>Name</strong> field enter <code>x-vcloud-authorization</code>.</p>
+<li><p>In the <em>Request Header</em> dialog box, in the <strong>Name</strong> field enter 'Authorization'.</p>
 </li>
-<li><p>In the <strong>Value</strong> field, paste the string of characters copied in the previous step, then click <strong>Okay</strong>.</p>
+<li><p>In the <strong>Value</strong> field, enter 'Bearer ' (with a trailing space), then paste the string of characters copied in the previous step, then click <strong>Okay</strong>.</p>
 <p><img src="images/vmw-restclient-request-headers-token.png" alt="Authorization token in request headers"></p>
 </li>
-<li><p>Now that you've obtained an <code>x-vcloud-authorization</code> token, you can remove the Basic Authentication Header. Click the <strong>x</strong> in the upper right-hand corner of the header.</p>
+<li><p>Now that you've obtained an <code>x-vmware-vcloud-access-token</code> token, you can remove the Basic Authentication Header. Click the <strong>x</strong> in the upper right-hand corner of the header.</p>
 <p><img src="images/vmw-restclient-basic-authentication-remove.png" alt="Remove basic authentication"></p>
 <p>You must send this token in a header with any subsequent requests to authenticate yourself with the vCloud API.</p>
 </li>
@@ -204,6 +204,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -222,7 +235,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

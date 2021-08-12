@@ -8,7 +8,7 @@
     <title>Disaster Recovery as a Service Service Scope </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Disaster Recovery as a Service Service Scope ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,7 +98,7 @@
 <p>Disaster Recovery as a Service provides a seamless way to failover from your own data centre to the UKCloud for VMware service. You can use this service as part of your own business continuity or disaster recovery processes.</p>
 <p>With this service, you're charged for the amount of data that you're protecting and are only charged for VMs when they are powered on during a live or test failover.</p>
 <h2 id="about-disaster-recovery-as-a-service">About Disaster Recovery as a Service</h2>
-<p>Disaster Recovery as a Service is a powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and UKCloud's disaster recovery enabled regions. This means that, in the event of a VM being compromised such as a local hardware failure, a power outage or security incidents such as theft or WAN connectivity disruption, you can quickly recover your VMs to the UKCloud platform and ensure that the disruption to your service is minimised.</p>
+<p>Disaster Recovery as a Service is a powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and UKCloud's disaster recovery enabled regions. This means that, in the event of a VM being compromised such as a local hardware failure, a power outage or security incident, such as theft or WAN connectivity disruption, you can quickly recover your VMs to the UKCloud platform and ensure that the disruption to your service is minimised.</p>
 <p>Once configured, you can protect VMs by adding them to a virtual protection group (VPG). Each VM in the VPG is synchronised to your recovery site on UKCloud, and a journal is created. After this initial sync, each subsequent write operation to the VM is processed as normal on your site and a copy is asynchronously sent to the recovery site and written to the journal.</p>
 <p>When the specified journal history length is reached (for example, 14 days), as new journal entries are created, older entries are written to the recovery VM's virtual disks.</p>
 <p>Every few seconds, a checkpoint is written to every journal for each VM in the VPG to ensure crash-consistency between the VMs. If you need to recover your VMs, you select a checkpoint to recover to. For example, in the case of a virus you could recover to a checkpoint from before the virus attack.</p>
@@ -109,11 +109,11 @@
 <ul>
 <li><p>Your environment must meet the minimum specification required by the solution (that you can find <a href="draas-gs.html#system-requirements">here</a>). This covers software versions, limitations around the types of VMs that can be protected and the minimum WAN connectivity speeds</p>
 </li>
-<li><p>Installation and configuration of Zerto components including the ZVM (Zerto Virtual Manager) and ZRA (Zerto Replication Appliance)</p>
+<li><p>Installation and configuration of Zerto components including the ZVM (Zerto Virtual Manager) and VRA (Virtual Replication Appliance)</p>
 </li>
 <li><p>Creation of a VPN to connect to UKCloud</p>
 </li>
-<li><p>Ensuring that the local instances of Zerto are upgraded to remain compatible with the current version utilised by UKCloud. You will be notified via the notifications section on the UKCloud Portal when the version is upgraded on the UKCloud platform</p>
+<li><p>Ensuring that the local instances of Zerto are upgraded to remain compatible with the current version utilised by UKCloud. You will be notified when the version is upgraded on the UKCloud platform</p>
 </li>
 <li><p>Local network tuning and firewall configurations</p>
 </li>
@@ -122,7 +122,7 @@
 <p>You are responsible for troubleshooting issues within your own estate.</p>
 <p>If you require support managing your local Zerto installation, we have a wide ecosystem of partners that can assist.</p>
 <h2 id="frequency-and-timing">Frequency and timing</h2>
-<p>UKCloud's Disaster Recovery as a Service is designed to provide recovery points that are as little as seconds behind the running VM.</p>
+<p>UKCloud's Disaster Recovery as a Service is designed to provide recovery points that are only seconds behind the running VM.</p>
 <p>Our standard profile provides:</p>
 <ul>
 <li><p>Target RPO of 5 minutes</p>
@@ -131,26 +131,26 @@
 </li>
 </ul>
 <p>At present, we've not enabled the ability for you to configure custom profiles.</p>
-<p>If the target RPO is exceeded, you and UKCloud will be notified via the Zerto Self-Service Portal.</p>
+<p>If the target RPO is exceeded, you and UKCloud will be notified via the Zerto Self-Service Portal (ZSSP).</p>
 <p>Factors that can affect the RPO are:</p>
 <ul>
 <li><p><strong>Rate of change of the data on a VM.</strong> VMs with a large rate of change in the data will potentially achieve a slightly longer RPO than VMs that have a lower rate of change</p>
 </li>
 <li><p><strong>Any network latency or storage performance challenges.</strong> We monitor our estate to ensure that network and storage performance are in line with platform expectations. Any deviations are alerted to our technical teams to resolve.</p>
 </li>
-<li><p><strong>WAN network performance.</strong> Low throughput WAN connections are unlikely to be able to transfer large amounts of data to UKCloud. This can make initial sync challenging for larger VMs.</p>
+<li><p><strong>WAN network performance.</strong> Low throughput WAN connections are unlikely to be able to transfer large amounts of data to UKCloud. This can make the initial sync challenging for larger VMs.</p>
 </li>
 </ul>
 <p>Additionally, the service raises an alert if the size of a VM's journal exceeds 75% of the original VM. This alert helps to understand if your solution is adequately protected.</p>
-<p>Disaster Recovery as a Service captures data only while a VM is powered on. If a VM is deleted in vCloud Director, it will IMMEDIATELY delete the associated journal.</p>
+<p>Disaster Recovery as a Service captures data only while a VM is powered on. If a VM is deleted in VMware Cloud Director, it will IMMEDIATELY delete the associated journal.</p>
 <h3 id="what-sla-do-you-offer-on-disaster-recovery-as-a-service">What SLA do you offer on Disaster Recovery as a Service?</h3>
 <p>We don't offer an SLA around the VMs protected by our Disaster Recovery as a Service. However, the status of VMs is monitored continuously, and the UKCloud support team investigates all failures or service degradation.</p>
 <h3 id="other">Other</h3>
-<p>The service is not backed by service credits.</p>
+<p>The service is not backed by Service Credits.</p>
 <p>On occasion, planned maintenance may disrupt the operation of the Disaster Recovery as a Service. This may lead to the service being unavailable, or a temporary increase to the RPO you may be able to achieve on the platform.</p>
-<p>If there's a potential disruption, we'll highlight this to you via the service <a href="https://status.ukcloud.com/">status page</a> and UKCloud Portal notifications system.</p>
+<p>If there's a potential disruption, we'll highlight this to you via the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a>.</p>
 <h2 id="disaster-recovery-as-a-service-management">Disaster Recovery as a Service management</h2>
-<p>You can self-manage your protected environment via the Zerto Self-Service Portal. This portal enables you to:</p>
+<p>You can self-manage your protected environment via the ZSSP. This portal enables you to:</p>
 <ul>
 <li><p>Configure virtual protection groups</p>
 </li>
@@ -165,23 +165,23 @@
 <li><p>Perform live failovers</p>
 </li>
 </ul>
-<p>We've disabled some areas of the Zerto Self-Service Portal as they're for services we don't presently support. These include:</p>
+<p>We've disabled some areas of the ZSSP as they're for services we don't presently support. These include:</p>
 <ul>
-<li>Backup to external systems. At present, you cannot export your journal to external backup targets (such as UKCloud Cloud Storage). We've identified a compliance issue with this solution which we're working to address. Until this is addressed, the feature will remain unavailable.</li>
+<li>Backup to external systems. At present, you cannot export your journal to external backup targets (such as UKCloud Cloud Storage). We've identified a compliance issue with this solution, which we're working to address. Until this is addressed, the feature will remain unavailable.</li>
 </ul>
 <p>Additionally, the following scenarios cannot be protected:</p>
 <ul>
 <li><p>VMs with virtual disks with individual disks greater than 3TB</p>
 </li>
-<li><p>VMs which are clustered using shared virtual disks</p>
+<li><p>VMs that are clustered using shared virtual disks</p>
 </li>
 </ul>
 <h2 id="alerting-and-reporting">Alerting and reporting</h2>
-<p>The Zerto Self-Service Portal provides live real-time reporting of your solution and the current level of protection being provided to your VMs.</p>
+<p>The ZSSP provides live real-time reporting of your solution and the current level of protection being provided to your VMs.</p>
 <p>The portal also raises alerts if the target RPO of your VPG exceed the threshold, or if the associated journal size grows beyond the expected size. In both these scenarios, UKCloud also receives a platform monitoring alert and will investigate the cause.</p>
-<p>Additionally, the portal provides an activity log of the actions against a particular VM and a list of any errors captured on the platform.</p>
+<p>Additionally, the ZSSP provides an activity log of the actions against a particular VM and a list of any errors captured on the platform.</p>
 <h2 id="failover">Failover</h2>
-<p>The Zerto Self-Service Portal enables you to failover to your recovery site.</p>
+<p>The ZSSP enables you to failover to your recovery site.</p>
 <p>When this is initiated, Disaster Recovery as a Service fails over the VMs inside a VPG, restoring the data and state of the VMs to the desired point from the journal. Disaster Recovery as a Service can also replicate any internal networking rules.</p>
 <p>You need to:</p>
 <ul>
@@ -203,6 +203,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -221,7 +234,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

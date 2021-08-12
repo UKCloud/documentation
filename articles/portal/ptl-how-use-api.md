@@ -3,8 +3,8 @@ title: How to use the UKCloud Portal API
 description: Demonstrates how to use the Portal API by stepping you through the process of creating a VDC
 services: portal
 author: Sue Highmoor
-reviewer: wllewellyn
-lastreviewed: 24/10/2019
+reviewer: ccouzens
+lastreviewed: 08/12/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -28,28 +28,9 @@ For more information about any of the API endpoints used in this guide, see the 
 
 ## About the examples in this guide
 
-The examples in this guide use endpoints that are available only in regions 5 and 6 of the UKCloud platform. If your environment is in a different region, you won't be able to use these endpoints yourself, however you should still find the guide useful as a reference for how to
-use the Portal API. For more information about UKCloud regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md).
+The examples in this guide use endpoints that are available only in regions 5, 6, 13 and 14 of the UKCloud platform. If your environment is in a different region, you won't be able to use these endpoints yourself, however you should still find the guide useful as a reference for how to use the Portal API. For more information about UKCloud regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md).
 
 The examples in this guide are shown as curl commands, but you may find it easier to work with the API by installing a REST client (for example, Insomnia).
-
-Before reading this guide, you may find it useful to understand the following:
-
-- **Versioning** - The Portal API uses a version scheme that you can specify in the Accept header:
-
-        Accept: application/vnd-skyscapecloud-v1
-
-    The examples in this guide use V1 of the API. As V1 is the default version, the examples don't explicitly set the API version.
-
-- **Accept headers** - Within your API call, set the `Accept` header for the type of response you'd like returned:
-
-  - `Accept: application/json` - for a response in JSON format
-
-  - `Accept: application/xml` - for a response in XML format
-
-       The examples in this guide accept JSON responses. As JSON is the default format, the examples don't explicitly set the response type. If you require XML responses, you must include the appropriate `Accept` header.
-
-       You can add `.json` or `.xml` to the end of the API endpoint URL to override the `Accept` header.
 
 ## Authenticating to the API
 
@@ -69,10 +50,11 @@ The Portal API uses session authentication. Before calling any of the API endpoi
         read portal_email # Enter your Portal email address
         read -s portal_password # Enter your Portal password
         
-        curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d '{
-          "email": "'"$portal_email"'",
-          "password": "'"$portal_password"'"
-        }' -H 'Content-Type: application/json'
+        authentication_body="$(
+          jq --arg email "$portal_email" --arg password "$portal_password" --null-input '{email: $email, password: $password}'
+        )"
+        
+        curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d "$authentication_body" -H 'Content-Type: application/json'
         ```
 
 3. If the authentication is successful, the endpoint returns a cookie that provides authentication for the next 900 seconds (15 minutes) and a response that tells you how long the session will last:
@@ -100,7 +82,7 @@ To create a VDC, you need to know the ID of the account in which you want to cre
     For example:
 
     ```
-    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | json_pp
+    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | jq
     ```
 
     If you need to authenticate to the Portal API first, see [Authenticating to the API](#authenticating-to-the-api).
@@ -134,7 +116,7 @@ Each account can have multiple vOrgs associated with it, so you also need to kno
         For example:
 
         ```
-        curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/' | json_pp
+        curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/' | jq
         ```
 
 3. This returns a list of vOrgs associated with the specified account.
@@ -231,7 +213,7 @@ When you have the account and vOrg IDs, you can go ahead and create your VDC.
         In our example, the build ID is `9`, so we can send the following request:
 
     ```
-    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/9' | json_pp
+    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/9' | jq
     ```
 
 6. If the build has started and is still in progress, the `state` changes to `running`. For example:
@@ -243,7 +225,7 @@ When you have the account and vOrg IDs, you can go ahead and create your VDC.
         "id": "9",
         "attributes": {
           "createdAt": "2016-07-28T14:16:11+01:00",
-          "createdBy": "user\@example.com",
+          "createdBy": "user@example.com",
           "state": "running"
         }
       }
@@ -299,7 +281,7 @@ The first thing you need to do is find the URN of the VDC for which you want to 
         For example:
 
         ```
-        curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | json_pp
+        curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | jq
         ```
 
 3. This returns a list of VDCs associated with the specified vOrg.
@@ -400,7 +382,7 @@ Now that you have your VDC URN, you can use the Portal API to create your edge g
     For example:
 
     ```
-    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/10' | json_pp
+    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/10' | jq
     ```
 
 6. when the edge gateway has been successfully created, the `state` changes to completed. For example:

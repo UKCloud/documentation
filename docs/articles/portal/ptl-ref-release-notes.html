@@ -8,7 +8,7 @@
     <title>Portal release notes </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Portal release notes ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,6 +94,131 @@
 <h1 id="portal-release-notes">Portal release notes</h1>
 
 <p>This article provides a list of completed Portal releases.</p>
+<h2 id="release-2150">Release 2.15.0</h2>
+<p>Date: 13th July 2021</p>
+<p>Feature update</p>
+<p>Details:</p>
+<ul>
+<li><p>Allow customers to access Zerto for zones 2D and 2E</p>
+</li>
+<li><p>Update wording on My Calls page</p>
+</li>
+</ul>
+<h2 id="release-2140">Release 2.14.0</h2>
+<p>Date: 16th June 2021</p>
+<p>Feature update</p>
+<p>Details:</p>
+<ul>
+<li>Allow customers to create compute services in Zone 2E</li>
+</ul>
+<h2 id="release-2130">Release 2.13.0</h2>
+<p>Date: 12th May 2021</p>
+<p>Bug fix</p>
+<p>Details:</p>
+<ul>
+<li>Removal of old documentation link from user removal popup</li>
+</ul>
+<h2 id="release-2113">Release 2.11.3</h2>
+<p>Date: 19th February 2021</p>
+<p>Bug fix and feature update</p>
+<p>Details:</p>
+<ul>
+<li><p>Allow customers to create compute services in Zone 2D</p>
+</li>
+<li><p>Adjust session timeout logic (now the SSO session has a higher priority)</p>
+</li>
+</ul>
+<h2 id="release-290">Release 2.9.0</h2>
+<p>Date: 1st December 2020</p>
+<p>Bug fix and feature update</p>
+<p>Details:</p>
+<ul>
+<li><p>Support non-ASCII characters when logging in to VMware Cloud Director 10</p>
+</li>
+<li><p>Change &quot;My Security Events&quot; to &quot;Security Operations Service&quot; and remove account-specific events</p>
+</li>
+</ul>
+<h2 id="release-260">Release 2.6.0</h2>
+<p>Date: 18th November 2020</p>
+<p>Feature update</p>
+<p>Details:</p>
+<ul>
+<li>Remove bandwidth monitoring information from the Portal My VMs pages and the API</li>
+</ul>
+<h2 id="release-240">Release 2.4.0</h2>
+<p>Date: 28th October 2020</p>
+<p>Feature update</p>
+<p>Details:</p>
+<ul>
+<li><p>Remove VM storage information from the Portal My VMs pages</p>
+</li>
+<li><p>Stop returning VM storage values within the Portal API</p>
+</li>
+<li><p>Zero values are returned to avoid breaking software that expects the field</p>
+</li>
+</ul>
+<h2 id="release-222">Release 2.2.2</h2>
+<p>Date: 15th September 2020</p>
+<p>Bug fix</p>
+<p>Details:</p>
+<ul>
+<li>If VMware Cloud Director login fails ensure the login 'Confirm' button is active</li>
+</ul>
+<h2 id="release-212">Release 2.1.2</h2>
+<p>Date: 18th August 2020</p>
+<p>Bug fix</p>
+<p>Details:</p>
+<ul>
+<li>Users resetting their password weren't given an SSO session</li>
+</ul>
+<h2 id="release-210">Release 2.1.0</h2>
+<p>Date: 7th August 2020</p>
+<p>Feature update</p>
+<p>Details:</p>
+<ul>
+<li>Simplify and improve the experience of OpenStack users in the Portal</li>
+</ul>
+<h2 id="release-11440">Release 1.144.0</h2>
+<p>Date: 14th July 2020</p>
+<p>Bug fix</p>
+<p>Details:</p>
+<ul>
+<li>Prevented situation where a customer might be presented with a blank page when switching to a newly created account</li>
+</ul>
+<h2 id="release-11430">Release 1.143.0</h2>
+<p>Date: 7th July 2020</p>
+<p>Feature update</p>
+<p>Details:</p>
+<ul>
+<li><p>Passwords must now be a minimum of 12 characters and not contain personal information</p>
+</li>
+<li><p>Captcha has been removed from the forgotten password page</p>
+</li>
+</ul>
+<h2 id="release-11411">Release 1.141.1</h2>
+<p>Date: 24th June 2020</p>
+<p>Bug fix</p>
+<p>Details:</p>
+<ul>
+<li>Improved page flow when session timeout occurs</li>
+</ul>
+<h2 id="release-11410">Release 1.141.0</h2>
+<p>Date: 18th June 2020</p>
+<p>Performance update</p>
+<p>Details:</p>
+<ul>
+<li>Improve efficiency of Portal API compute service endpoint</li>
+</ul>
+<h2 id="release-11390">Release 1.139.0</h2>
+<p>Date: 13th May 2020</p>
+<p>Feature update</p>
+<p>Details:</p>
+<ul>
+<li><p>Disable ability for users to change their emails.</p>
+</li>
+<li><p>Remove unneeded VM sizes field from billing table.</p>
+</li>
+</ul>
 <h2 id="release-11320">Release 1.132.0</h2>
 <p>Date: 20th March 2020</p>
 <p>Feature update</p>
@@ -606,6 +731,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -624,7 +762,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

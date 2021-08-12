@@ -2,9 +2,9 @@
 title: Protective Monitoring from UKCloud
 description: Provides information about UKCloud's Protective Monitoring service
 services: other
-author: Sue Highmoor
-reviewer:
-lastreviewed: 05/12/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 07/12/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -45,7 +45,7 @@ We do not share a feed from our platform protective monitoring to customers, so 
 
 ## Cyber Security News page
 
-The *Cyber Security News* page in the UKCloud Portal, located under Monitoring, lets you see, at a glance, general threat briefs and security news from around the world as analysed by e2e-assure.
+The *Cyber Security News* page in the UKCloud Portal, accessed via the navigation panel under *Monitoring*, lets you see, at a glance, general threat briefs and security news from around the world as analysed by e2e-assure.
 
 All Portal users can access the *Cyber Security News* page.
 
@@ -55,18 +55,13 @@ A more in-depth description of the threat is included below the headline. This p
 
 You can search and filter the feed on the *Cyber Security News* page to define exactly what content you want to see. Use the search bar to query specific words or phrases within the threat briefs. To access filtering options, to edit the priority and date range you want to see in your feed or search results, click **Advanced Search**.
 
-## My Security Events page
+## Security Operations Service page
 
-The *Security Events* page in the UKCloud Portal, located under Monitoring, lets you see, at a glance, threat information specific to your account.
+The *Security Operations Service* page in the UKCloud Portal, accessed via the navigation panel under *Monitoring*, shows the number of logs processed against the UKCloud platform by our Security Operations Service.
 
-> [!NOTE]
-> To view the *Security Events* page, you must have **Read** monitoring permissions on the page. For more information, see [*Portal permissions*](../portal/ptl-ref-overview-permissions.md#permissions-for-monitoring).
+All Portal users can access the *Cyber Security News* page.
 
-Any threat information listed on the *Security Events* page is also raised as a My Calls ticket to ensure that it's seen in a timely manner by the relevant person.
-
-Currently, the *Security Events* page only includes information for internet connectivity to UKCloud for VMware in the Assured OFFICIAL security domain. All other services are still supported by UKCloud's Protective Monitoring service and our security team will inform you of security incidents for those other services via My Calls.
-
-If you'd like to request that other services are included on the *Security Events* page, send an email to <feedback@ukcloud.com>.
+Any threat information specific to your account is raised as a My Calls ticket to ensure that it's seen in a timely manner by the relevant person.
 
 ### Example security incidents
 

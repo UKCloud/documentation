@@ -3,8 +3,8 @@ title: How to use My Calls to raise and monitor support tickets | UKCloud Ltd
 description: Provides an overview of the functionality provided by My Calls
 services: portal
 author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 27/02/2020
+reviewer: Darren Broderick
+lastreviewed: 01/04/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -48,13 +48,7 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
 3. Click **Go to My Calls Portal**.
 
-4. For additional security, re-enter your UKCloud Portal user credentials to access My Calls.
-
-    ![My Calls login page](images/ptl-mycalls-login.png)
-
-    If two-factor authentication (2FA) has been enabled for your account, you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here.
-
-5. The My Calls home page shows a simple view of all tickets that have been raised.
+4. The My Calls home page shows a simple view of all tickets that have been raised.
 
     ![My Calls home page](images/ptl-mycalls-home.png)
 
@@ -111,7 +105,7 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
     ![Service Catalog](images/ptl-mycalls-service-catalog.png)
 
-3. Select the incident template that you want to use (for example, **VMWare Incident**).
+3. Select the incident template that you want to use (for example, **VMware Incident**).
 
     ![Incident template](images/ptl-mycalls-template-incident.png)
 
@@ -230,6 +224,8 @@ Answer the questions in the survey and when you're done, click **Save**.
 - For information about what else you can do in the UKCloud Portal, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
 
 ## Related videos
+
+- [*Creating support tickets in My Calls*](ptl-vid-mycalls.md)
 
 - [*UKCloud Portal overview video*](ptl-vid-portal.md)
 

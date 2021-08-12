@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Retrieving snapshot summaries for multiple accounts using the Portal API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Retrieving snapshot summaries for multiple accounts using the Portal API ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-snapshot-summary-api.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="retrieving-snapshot-summaries-for-multiple-accounts-using-the-portal-api">Retrieving snapshot summaries for multiple accounts using the Portal API</h1>
+
+<h2 id="overview">Overview</h2>
+<p>In the UKCloud Portal, you can view backup summary reports for all the compute services (vOrgs) in an account (see the <a href="vmw-how-manage-snapshot-protection.html#monitoring-the-status-of-snapshot-protection"><em>Monitoring the status of Snapshot Protection</em></a> section of <em>How to manage Snapshot Protection for your VMs</em>).</p>
+<p>If you want to retrieve snapshot information from multiple accounts, rather than navigating to each account and viewing separate reports, you can use the Portal API to retrieve and aggregate the information and pipe it into a single list or export it into a file.</p>
+<p>This article provides an example script to demonstrate how you can use the Portal API to retrieve a snapshot summary for all your compute services across multiple accounts.</p>
+<h2 id="about-the-portal-api-endpoints">About the Portal API endpoints</h2>
+<p>The <code>compute_services</code> API endpoint retrieves information about each compute service in an account. The information includes backup details for each VM:</p>
+<pre><code class="lang-none">&quot;inBackup&quot;: true,
+&quot;lastBackupStatus&quot;: &quot;Successful&quot;,
+&quot;lastBackup&quot;: &quot;Completed on the night of: 24/04/2020&quot;,
+&quot;retentionLength&quot;:28,
+&quot;backups&quot;:[
+  {
+    &quot;status&quot;:&quot;Completed&quot;,&quot;backupSlot&quot;:&quot;night of: 24/04/2020&quot;,
+    &quot;backupStart&quot;:&quot;24/04/2020 01:32&quot;,
+    &quot;backupEnd&quot;:&quot;24/04/2020 01:35&quot;,
+    &quot;snapshotRemovalStart&quot;:&quot;24/04/2020 01:34&quot;,
+    &quot;snapshotRemovalEnd&quot;:&quot;24/04/2020 01:35&quot;
+</code></pre>
+<p>For more information, see the <a href="../portal/ptl-ref-portal-api.html#get-apiaccounts"><em>GET /api/accounts</em></a> section of the <em>UKCloud Portal API Reference Guide</em>.</p>
+<p>The <code>accounts</code> endpoint returns the account IDs of each account associated with the currently authenticated user (see the <a href="../portal/ptl-ref-portal-api.html#get-apiaccountsaccount_idcompute_services"><em>GET /api/accounts/:account_id/compute_services</em></a> section of the <em>UKCloud Portal API Reference Guide</em>). You can then use these IDs with the <code>compute_services</code> endpoint to loop through each account, retrieving all the backup information in a single operation.</p>
+<h2 id="about-the-script">About the script</h2>
+<p>After authenticating with the API, the example script pipes in objects retrieved using the <code>accounts</code> endpoint and uses the ID field to loop through all accounts associated with the authenticated user and retrieve the compute services for them, providing information on organisations, VDCs, vApps and VMs. The script generates a snapshot summary report from selected fields and this report can be listed in the pipeline or exported to a <code>.csv</code> file.</p>
+<h2 id="the-script">The script</h2>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Edit the script to provide your Portal user name and password and to select your preferred output method.</p>
+</div>
+<pre><code class="lang-none">Function Get-UKCComputeService{
+
+Param (
+    [Parameter(ValueFromPipeline)]$Accounts
+)
+    Process {
+        Foreach ($Account in $Accounts){
+            $ComputeEP = &quot;https://portal.skyscapecloud.com/api/accounts/&quot; + $Account.id + &quot;/compute_services&quot;
+            Invoke-RestMethod -Method GET -Uri $ComputeEP -WebSession $CoreSession
+        }
+    }
+}
+
+##################################################################################################################################
+
+### Initial authentication - token will expire after 15 minutes - fill in your portal email and password and they will be passed into the body of the request
+$PortalEmail = &quot;YourPortalUsername&quot;
+$PortalPassword = &quot;YourPortalPassword&quot;
+Invoke-WebRequest -Uri https://portal.skyscapecloud.com/api/authenticate -Method POST -Body @{email=$PortalEmail;password=$PortalPassword} -SessionVariable CoreSession
+
+### Retrieve the accounts that your Portal user has access to
+$Accounts = Invoke-RestMethod -Method GET -Uri &quot;https://portal.skyscapecloud.com/api/accounts&quot; -WebSession $CoreSession
+
+### Retrieve the compute services associated with those accounts
+$ComputeServices = $Accounts | Get-UKCComputeService
+
+### Loop through and drill down to build a backup report for each VM
+$Report = Foreach ($ComputeService in $ComputeServices){
+    Foreach ($vOrg in $ComputeService.vOrgs){
+        Foreach ($VDC in $vOrg.VDCs){
+            Foreach ($vApp in $VDC.vApps){
+                Foreach ($VM in $VApp.VMs){
+                    [PSCustomObject]@{
+                        Organisation = $vOrg.serviceId
+                        VDC = $VDC.name
+                        vApp = $vApp.name
+                        VM = $VM.name
+                        &quot;Last Backup Status&quot; = $VM.lastBackupStatus
+                        &quot;In Backup&quot; = $VM.inBackup
+                        &quot;Last Backup Date&quot; = $VM.LastBackup
+                    }
+                }
+            }
+        }
+    }
+}
+
+### Output report to pipeline
+$Report | Out-Gridview
+
+(Or to export as a .csv as follows):
+
+$Report | Export-Csv -Path &quot;Drive:\path\filename - $(Get-Date -Format 'yyyy.MM.dd').csv&quot; -NoTypeInformation
+</code></pre>
+<h2 id="example">Example</h2>
+<pre><code class="lang-none">$Accounts = Invoke-RestMethod -Method GET -Uri &quot;https://portal.skyscapecloud.com/api/accounts&quot; -WebSession $CoreSession
+$Accounts | Get-UKCComputeService
+#&gt;
+Param (
+    [Parameter(ValueFromPipeline)]$Accounts
+)
+    Process {
+        Foreach ($Account in $Accounts){
+            $ComputeEP = &quot;https://portal.skyscapecloud.com/api/accounts/&quot; + $Account.id + &quot;/compute_services&quot;
+            Invoke-RestMethod -Method GET -Uri $ComputeEP -WebSession $CoreSession
+        }
+    }
+}
+</code></pre>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

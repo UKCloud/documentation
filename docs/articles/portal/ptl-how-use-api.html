@@ -8,7 +8,7 @@
     <title>How to use the UKCloud Portal API </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use the UKCloud Portal API ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,27 +98,8 @@
 <p>This guide shows you how to use the API by providing a worked example that steps through the process of creating a new virtual data centre (VDC).</p>
 <p>For more information about any of the API endpoints used in this guide, see the <a href="ptl-ref-portal-api.html"><em>UKCloud Portal API User Guide</em></a>.</p>
 <h2 id="about-the-examples-in-this-guide">About the examples in this guide</h2>
-<p>The examples in this guide use endpoints that are available only in regions 5 and 6 of the UKCloud platform. If your environment is in a different region, you won't be able to use these endpoints yourself, however you should still find the guide useful as a reference for how to
-use the Portal API. For more information about UKCloud regions, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>.</p>
+<p>The examples in this guide use endpoints that are available only in regions 5, 6, 13 and 14 of the UKCloud platform. If your environment is in a different region, you won't be able to use these endpoints yourself, however you should still find the guide useful as a reference for how to use the Portal API. For more information about UKCloud regions, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>.</p>
 <p>The examples in this guide are shown as curl commands, but you may find it easier to work with the API by installing a REST client (for example, Insomnia).</p>
-<p>Before reading this guide, you may find it useful to understand the following:</p>
-<ul>
-<li><p><strong>Versioning</strong> - The Portal API uses a version scheme that you can specify in the Accept header:</p>
-<pre><code>  Accept: application/vnd-skyscapecloud-v1
-</code></pre>
-<p>The examples in this guide use V1 of the API. As V1 is the default version, the examples don't explicitly set the API version.</p>
-</li>
-<li><p><strong>Accept headers</strong> - Within your API call, set the <code>Accept</code> header for the type of response you'd like returned:</p>
-<ul>
-<li><p><code>Accept: application/json</code> - for a response in JSON format</p>
-</li>
-<li><p><code>Accept: application/xml</code> - for a response in XML format</p>
-<p>The examples in this guide accept JSON responses. As JSON is the default format, the examples don't explicitly set the response type. If you require XML responses, you must include the appropriate <code>Accept</code> header.</p>
-<p>You can add <code>.json</code> or <code>.xml</code> to the end of the API endpoint URL to override the <code>Accept</code> header.</p>
-</li>
-</ul>
-</li>
-</ul>
 <h2 id="authenticating-to-the-api">Authenticating to the API</h2>
 <p>The Portal API uses session authentication. Before calling any of the API endpoints, you must first authenticate to the API.</p>
 <ol>
@@ -133,10 +114,11 @@ use the Portal API. For more information about UKCloud regions, see <a href="../
 <pre><code>read portal_email # Enter your Portal email address
 read -s portal_password # Enter your Portal password
 
-curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d '{
-  &quot;email&quot;: &quot;'&quot;$portal_email&quot;'&quot;,
-  &quot;password&quot;: &quot;'&quot;$portal_password&quot;'&quot;
-}' -H 'Content-Type: application/json'
+authentication_body=&quot;$(
+  jq --arg email &quot;$portal_email&quot; --arg password &quot;$portal_password&quot; --null-input '{email: $email, password: $password}'
+)&quot;
+
+curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d &quot;$authentication_body&quot; -H 'Content-Type: application/json'
 </code></pre>
 </li>
 </ul>
@@ -162,7 +144,7 @@ curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST 
 <ol>
 <li><p>If you need to find your account ID, send a GET request to the accounts endpoint to return a list of all your accounts.</p>
 <p>For example:</p>
-<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | json_pp
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | jq
 </code></pre>
 <p>If you need to authenticate to the Portal API first, see <a href="#authenticating-to-the-api">Authenticating to the API</a>.</p>
 </li>
@@ -188,7 +170,7 @@ curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST 
 <ul>
 <li><p><code>account_id</code> - the ID of the account in which you want to create your VDC</p>
 <p>For example:</p>
-<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/' | json_pp
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/' | jq
 </code></pre>
 </li>
 </ul>
@@ -286,7 +268,7 @@ Location: /api/vdc-builds/9
 <p>In our example, the build ID is <code>9</code>, so we can send the following request:</p>
 </li>
 </ul>
-<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/9' | json_pp
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/9' | jq
 </code></pre>
 </li>
 <li><p>If the build has started and is still in progress, the <code>state</code> changes to <code>running</code>. For example:</p>
@@ -296,7 +278,7 @@ Location: /api/vdc-builds/9
     &quot;id&quot;: &quot;9&quot;,
     &quot;attributes&quot;: {
       &quot;createdAt&quot;: &quot;2016-07-28T14:16:11+01:00&quot;,
-      &quot;createdBy&quot;: &quot;user\@example.com&quot;,
+      &quot;createdBy&quot;: &quot;user@example.com&quot;,
       &quot;state&quot;: &quot;running&quot;
     }
   }
@@ -343,7 +325,7 @@ Location: /api/vdc-builds/9
 <li><p><code>vorg_id</code> - the ID of the vOrg to which the VDC belongs</p>
 <p>To find a vOrg ID, see <a href="#requesting-a-list-of-vorgs">Requesting a list of vOrgs</a>.</p>
 <p>For example:</p>
-<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | json_pp
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | jq
 </code></pre>
 </li>
 </ul>
@@ -438,7 +420,7 @@ Location: /api/edge-gateway-builds/10
 <li><code>build_id</code> - the ID of the build process</li>
 </ul>
 <p>For example:</p>
-<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/10' | json_pp
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/10' | jq
 </code></pre>
 </li>
 <li><p>when the edge gateway has been successfully created, the <code>state</code> changes to completed. For example:</p>
@@ -472,6 +454,19 @@ Location: /api/edge-gateway-builds/10
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -490,7 +485,7 @@ Location: /api/edge-gateway-builds/10
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

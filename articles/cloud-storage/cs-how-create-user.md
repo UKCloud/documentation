@@ -2,9 +2,9 @@
 title: How to create a new Cloud Storage user in the UKCloud Portal
 description: Describes how to create a new Cloud Storage user in the UKCloud Portal
 services: cloud-storage
-author: Sue Highmoor
+author: shighmoor
 reviewer: nwayman
-lastreviewed: 24/02/2020
+lastreviewed: 15/03/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -21,6 +21,9 @@ toc_mdlink: cs-how-create-user.md
 ## Overview
 
 Cloud Storage is UKCloud's object storage solution based on Dell EMC Elastic Cloud Storage (ECS). Although you'll mostly interact with Cloud Storage through the API, you can create new Cloud Storage users in the UKCloud Portal.
+
+> [!NOTE]
+> New users will initially only have access to buckets that they create, not to any existing buckets. To grant access to existing buckets, either configure this yourself using the ECS S3 API, or raise a Service Request.
 
 ### Intended audience
 
@@ -42,7 +45,9 @@ To create a new Cloud Storage user:
 
 4. Click the **Add new user** button.
 
-5. In the *Create ECS User* dialog box, make a note of the **User ID** and **Secret Key** and then click **Close**.
+5. In the *Create ECS User* dialog box, click **Create**.
+
+6. Make a note of the **User ID** and **Secret Key** and then click **Close**.
 
     > [!NOTE]
     > After you close this dialog box, you will not be able to see the secret key again in the UKCloud Portal. If you do not make a note of the secret key or if you forget or lose it, you will need to reset it again. For information about how to do this, see [*How to reset your Cloud Storage secret key*](cs-how-reset-secret-key.md).
@@ -51,13 +56,13 @@ To create a new Cloud Storage user:
 
 ## Next steps
 
-This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
+In this article, you learned how to create a new Cloud Storage user. For more information about how to use the Cloud Storage service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
 
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 
-- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+- [*How to install Dell EMC GeoDrive*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 

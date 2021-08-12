@@ -61,7 +61,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    **Linux VM admin username** - The username for the Linux virtual machines that are part of the Kubernetes cluster.
 
-   **SSH public key** - SSH public key used for authentication to all Linux machines created as part of the the Kubernetes cluster.
+   **SSH public key** - SSH public key used for authentication to all Linux machines created as part of the Kubernetes cluster.
 
    **Master Profile DNS prefix** - This must be a region-unique name, for example k8s-12345. Try to choose the same name as the resource group as best practice.
 

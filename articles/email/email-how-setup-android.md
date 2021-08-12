@@ -2,9 +2,9 @@
 title: How to set up Email on Android, Windows or Blackberry devices
 description: Contains an overview of mobility options for Zimbra Collaboration Suite (ZCS), as well as information on how to set up Zimbra Mobile for most smartphones on specific operating systems
 services: email
-author: Sue Highmoor
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+author: shighmoor
+reviewer: bchallis
+lastreviewed: 17/03/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -17,6 +17,12 @@ toc_mdlink: email-how-setup-android.md
 ---
 
 # How to set up Email and Collaboration on Android, Windows or Blackberry mobile devices
+
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
+
+> [!IMPORTANT]
+> PSN Email Relay provided by Vodafone is end-of-life as of 31 March 2021. After this date, anyone using the PSN will not be able to use email over this network, including all email services from UKCloud on the PSN. Internet-connected email services from UKCloud will continue to function after this date.
 
 ## Overview
 
@@ -53,11 +59,11 @@ You may also need to know:
 
 ## Installation and setup
 
-1. From your Android Home screen, tap the **Applications** button and go to the **Settings** icon.
+1. From your Android Home screen, tap the **Applications** button and go to the **Settings** icon.
 
     ![Settings icon](images/email-android-ico-settings.png)
 
-2. Under *Accounts*, tap **Add account**.
+2. Under *Accounts*, tap **Add account**.
 
     ![Add account option](images/email-android-mnu-add-account.png)
 

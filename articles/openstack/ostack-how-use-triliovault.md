@@ -3,8 +3,8 @@ title: How to use TrilioVault for self-service backup in OpenStack
 description: Provides information on how to use TrilioVault within your OpenStack environment
 services: openstack
 author: Steve Dixon
-reviewer:
-lastreviewed: 18/09/2019
+reviewer: Steve Relf
+lastreviewed: 08/12/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -47,6 +47,10 @@ Benefits of this solution include:
 ## Understanding Concepts
 
 Before starting to use TrilioVault, it is necessary to know a few commonly used concepts in TrilioVault. Below are some of the important terms in OpenStack and TrilioVault.
+
+## Getting Started
+
+If you are currently using an SSO-enabled account to access the OpenStack platform and you want to make use of the TrilioVault service,  raise a support ticket and request a Keystone account for Trilio management.
 
 ### TrilioVault Dashboard
 

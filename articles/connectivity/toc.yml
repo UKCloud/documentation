@@ -1,7 +1,5 @@
 - name: FAQs
   items:
-  - name: Bandwidth monitoring FAQs
-    href: conn-faq-bandwidth-monitoring.md
   - name: DDoS mitigation service FAQs
     href: conn-faq-ddos.md
   - name: Emergency Services Network FAQs
@@ -14,16 +12,18 @@
     href: conn-faq-hybridconnect.md
   - name: Janet connectivity FAQs
     href: conn-faq-janet.md
+  - name: LECN FAQs
+    href: conn-faq-lecn.md
   - name: N3 connectivity FAQs
     href: conn-faq-n3.md
+  - name: Neustar DDoS Protection from UKCloud FAQs
+    href: conn-faq-app-ddos.md
+  - name: Neustar UltraDNS from UKCloud FAQs
+    href: conn-faq-glb.md
   - name: PSN connectivity FAQs
     href: conn-faq-psn.md
   - name: PSN for Policing and enhanced regime FAQs
     href: conn-faq-psn-police.md
-  - name: SiteProtect Advanced DDoS Mitigation FAQs
-    href: conn-faq-app-ddos.md
-  - name: UltraDNS FAQs
-    href: conn-faq-glb.md
 - name: Reference
   items:
   - name: DDoS mitigation causing VPN failures and slow applications
@@ -52,11 +52,17 @@
     href: conn-ref-telco-enagagement.md
   - name: Understanding PSN core services
     href: conn-ref-psn-core-services.md
+- name: Service Information
+  items:
+  - name: Neustar DDoS Protection from UKCloud Service Definition
+    href: conn-sd-ddosprotect.md
+  - name: Neustar UltraDNS from UKCloud Service Definition
+    href: conn-sd-ultradns.md
 - name: Service Scope
   items:
-  - name: SiteProtect Advanced DDoS Mitigation Service Scope
+  - name: Neustar DDoS Protection from UKCloud Service Scope
     href: conn-sco-app-ddos.md
-  - name: UltraDNS Service Scope
+  - name: Neustar UltraDNS from UKCloud Service Scope
     href: conn-sco-glb.md
 - name: Troubleshooting
   items:

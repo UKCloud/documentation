@@ -8,7 +8,7 @@
     <title>How to access the Zerto Self-Service Portal </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to access the Zerto Self-Service Portal ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -109,23 +109,21 @@
 </li>
 <li><p>Perform test and live failovers</p>
 </li>
-<li><p>Move VPGs to migrate workloads from your local environment to the UKCloud platform</p>
-</li>
 </ul>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have log in details for the appropriate ZSSP.</p>
 <h2 id="which-zerto-self-service-portal-should-i-use">Which Zerto Self-Service Portal should I use?</h2>
 <p>The ZSSP you use depends on what you are trying to do:</p>
 <ul>
-<li><p>To create a VPG for Journaling Protection, use the ZSSP in the zone where the VMs you are protecting are located</p>
+<li><p>To create a VPG for Journaling Protection, use the ZSSP in the zone in which the VMs you are protecting are located.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment. For the latest version of ZVM, contact UKCloud Customer Support.</p>
+<p>To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment. For the latest version of ZVM, contact UKCloud Support.</p>
 </div>
 </li>
-<li><p>To perform a test or live failover for Disaster Recovery to the Cloud, Journaling Protection or Workload Migration, use the ZSSP in the zone where your target VDC (for recovery or migration) is located</p>
+<li><p>To perform a test or live failover for Disaster Recovery to the Cloud, Journaling Protection or Workload Migration, use the ZSSP in the zone where your target VDC (for recovery or migration) is located.</p>
 </li>
-<li><p>To move a VPG for Workload Migration, use the ZSSP in the UKCloud zone where your target VDC is located</p>
+<li><p>To move a VPG for Workload Migration, use the ZSSP in the UKCloud zone where your target VDC is located.</p>
 </li>
 </ul>
 <h2 id="accessing-the-zerto-self-service-portal">Accessing the Zerto Self-Service Portal</h2>
@@ -135,24 +133,23 @@
 <p>If you want to create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the ZVM Web Client in your local environment.</p>
 </div>
 <ol>
-<li><p>Log in to the UKCloud Portal.</p>
-<p>For detailed instructions, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+<li><p><a href="../portal/ptl-gs.html"><em>Log in to the UKCloud Portal</em></a>.</p>
 </li>
-<li><p>In the navigation panel, expand <strong>TOOLS</strong> and then select <strong>Journaling Protection (Zerto)</strong>.</p>
+<li><p>In the navigation panel, expand <strong>Tools</strong> and then select <strong>Journaling Protection (Zerto)</strong>.</p>
 <p><img src="images/vmw-portal-mnu-journaling.png" alt="Journaling Protection menu option in UKCloud Portal"></p>
 </li>
 <li><p>On the <em>Journaling Protection (Zerto)</em> page, click the <strong>Go to Zerto Login Page</strong> link for the appropriate UKCloud zone (for more information, see <a href="#which-zerto-self-service-portal-should-i-use"><em>Which Zerto Self-Service Portal should I use?</em></a>).</p>
 <p><img src="images/vmw-portal-journaling.png" alt="Journaling Protection page in UKCloud Portal"></p>
 </li>
 <li><p>Enter your log in credentials, including your <strong>ZORG</strong> name.</p>
-<p><img src="images/zertomanupdate.png" alt="Zerto log in page"></p>
+<p><img src="images/vmw-zerto-login.png" alt="Zerto log in page"></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>These credentials are different from the ones you use to log in to the UKCloud Portal. If you're not sure what they are, raise a Service Request through <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a>.</p>
 </div>
 </li>
 <li><p>After you log in, you'll see the main ZSSP page.</p>
-<p><img src="images/zertopageupdate.png" alt="Zerto dashboard"></p>
+<p><img src="images/vmw-zerto-homepage.png" alt="Main Zerto ZSSP page"></p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
@@ -178,6 +175,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -196,7 +206,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

@@ -8,7 +8,7 @@
     <title>Getting Started Guide for Disaster Recovery as a Service </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for Disaster Recovery as a Service ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -104,7 +104,7 @@
 <p>When you have set up DRaaS for your VMs, every write operation to the protected VMs is copied and stored in a journal on the recovery site. This means that in the event of a VM being compromised, you can quickly recover the VM to a point in time before the disaster took place.</p>
 <p>You add disaster recovery protection to your VMs by adding them to a virtual protection group (VPG). Each VM in the VPG is synchronised to the recovery site on the UKCloud platform, and a journal is created. After this initial synchronisation, each subsequent write operation to the VM is processed as normal on the original site and a copy is asynchronously sent to the UKCloud site and written to the journal.</p>
 <p><img src="images/draas-zerto-draas.png" alt="Disaster recovery process"></p>
-<p>Each journal entry exists in the journal for 14 days (the journal history). When the journal history is reached, as new journal entries are created, older entries are written to the recovery VM's virtual disks.</p>
+<p>Each journal entry exists in the journal for 2, 7, 14 or 28 days (the journal history) depending on your selected service level. When the journal history is reached, as new journal entries are created, older entries are written to the recovery VM's virtual disks.</p>
 <p>Every few seconds, a checkpoint is written to every journal for each VM in the VPG to ensure crash-consistency between the VMs. If you need to recover a VM, you select a checkpoint to recover to. For example, in the case of a security incident, you could recover to a checkpoint from before the incident. During recovery, the VMs are created in a vApp on the recovery site and the recovery disks for each VM are attached to the recovered VM. Information in the journal is then promoted to the VM to bring it up to the date and time of the selected checkpoint.</p>
 <p><img src="images/draas-zerto-recovery.png" alt="Recovery process"></p>
 <p>Two terms you may hear in connection with disaster recovery are recovery point objective (RPO) and recovery time objective (RTO).</p>
@@ -135,12 +135,12 @@
 </li>
 <li><p>Disaster Recovery as a Service captures every action. When a VM is deleted, the associated journal is also deleted.</p>
 </li>
-<li><p>We provide a single default service profile. The details of this are available in the DRaaS Service Scope. We do not currently provide the option for you to create custom profiles.</p>
+<li><p>We provide service profiles for 2, 7, 14 and 28 day retention. The details of these are available in the <a href="draas-sco.html"><em>Disaster Recovery as a Service Service Scope</em></a>. We do not currently provide the option for you to create custom profiles.</p>
 </li>
 </ul>
 <h3 id="system-requirements">System requirements</h3>
 <p>To use DRaaS, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.</p>
-<p>The following table lists the requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform:</p>
+<p>The following table lists the requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (8.5U2) on the UKCloud platform:</p>
 <table>
 <thead>
 <tr>
@@ -154,32 +154,32 @@
 <td> </td>
 </tr>
 <tr>
-<td>VMWare vCenter</td>
-<td>vCenter Server 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
+<td>VMware vCenter</td>
+<td>vCenter Server 6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1</td>
 </tr>
 <tr>
 <td>Microsoft SCVMM</td>
-<td>2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM<br>2016 and Server Core: RTM Rollup 3-5, 6</td>
+<td>2016 and Server Core: RTM Rollup 3-5, 6, 7, 8, 2019 and Server Core: RTM Rollup 1</td>
 </tr>
 <tr>
 <td><strong>Hosts</strong></td>
 <td> </td>
 </tr>
 <tr>
-<td>VMWare ESXi</td>
-<td>5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
+<td>VMware ESXi</td>
+<td>6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1</td>
 </tr>
 <tr>
 <td>Microsoft Hyper-V</td>
-<td>2012 R2 and Server Core<br>Windows 2016 Server</td>
+<td>Windows 2016 Server, Microsoft Hyper-V Server 2019</td>
 </tr>
 <tr>
 <td><strong>Virtual Machines Hardware Version</strong></td>
 <td> </td>
 </tr>
 <tr>
-<td>VMWare</td>
-<td>7-11, 13, 14</td>
+<td>VMware</td>
+<td>7-9, 10-11, 13, 14, 15, 17, 18</td>
 </tr>
 <tr>
 <td>Hyper-V</td>
@@ -235,7 +235,7 @@
 <li><p>Creating a secure site-to-site VPN between your local environment and the UKCloud platform</p>
 </li>
 </ul>
-<p>For more information, see <a href="../vmware/vmw-how-zerto-install-local.html"><em>How to install and configure Zerto in your local environment</em></a>.</p>
+<p>For more information, see <a href="draas-how-zerto-install-local.html"><em>How to install and configure Zerto in your local environment</em></a>.</p>
 <h3 id="configure-networking-on-the-recovery-site">Configure networking on the recovery site</h3>
 <p>You must configure any internally and externally routed networks in your UKCloud recovery VDC to duplicate those in your local environment. You must also configure the edge gateway with the same firewall, NAT and other rules.</p>
 <p>You'll create the mapping between these networks when you create your VPG (see <a href="../vmware/vmw-how-zerto-create-vpg.html"><em>How to create a virtual protection group</em></a>).</p>
@@ -275,6 +275,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -293,7 +306,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

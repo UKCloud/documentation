@@ -1,10 +1,10 @@
 ---
 title: How to create firewall rules
-description: Shows how to create firewall rules within vCloud Director
+description: Shows how to create firewall rules within the VMware Cloud Director tenant portal
 services: vmware
-author: Sue Highmoor
-reviewer: lthangarajah
-lastreviewed: 21/06/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 17/09/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-create-firewall-rules.md
 
 ## Overview
 
-vCloud Director provides a fully featured layer 3 firewall to control transit from inside to outside security boundaries, and within the various VDC networks you create.
+VMware Cloud Director provides a fully featured layer 3 firewall to control transit from inside to outside security boundaries, and within the various VDC networks you create.
 
 When you specify networks or IP addresses, you can use:
 
@@ -33,71 +33,74 @@ When you specify networks or IP addresses, you can use:
 - The keywords `internal`, `external` or `any`
 
 > [!NOTE]
-> NAT rules only work if the firewall is enabled. For security reasons, you should ensure that the firewall is always enabled.
+> For security reasons, you should ensure that the firewall is always enabled.
 
 ## Creating firewall rules
 
 To create a firewall rule:
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway in which you to create the firewall rules.
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway in which you want to create the firewall rules.
 
-2. In the left navigation panel, click **Edges**.
+2. In the left navigation panel, under *Networking*, select **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
+    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-3. Select the edge that you want to configure and click **Configure Services**.
+3. On the *Edge Gateways* page, select the edge that you want to configure and click **Services**.
 
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
+    ![Configure Services button](images/vmw-vcd10.1-edge-btn-services.png)
 
-4. Select the **Firewall** tab.
+4. On the *Edge Gateway* page, select the **Firewall** tab.
 
-    ![Firewall tab](images/vmw-vcd-adv-edge-tab-firewall.png)
+    ![Firewall tab](images/vmw-vcd10.1-edge-tab-firewall.png)
 
-5. Click the **+** button to add a new row to the firewall rules table.
+5. On the *Firewall Rules* page, click the **+** button to add a new row to the firewall rules table.
 
-    ![Add firewall button](images/vmw-vcd-adv-edge-firewall-add.png)
+    ![Add firewall button](images/vmw-vcd10.1-edge-firewall-add.png)
 
-6. For the **New Rule**, specify a **Name**.
+6. In the row for your new rule, select the **Name** field and enter a name for the rule.
 
-    ![New firewall rule](images/vmw-vcd-edge-firewall-new-rule.png)
+    ![New firewall rule](images/vmw-vcd10.1-edge-firewall-new-rule.png)
 
-7. In the **Source** and **Destination** fields, specify the source and destination addresses for the firewall rule.
+    > [!NOTE]
+    > When you first create a rule, it's set to Any, Any, Any, Accept, as shown above. We strongly advise that you do not use these default settings for any firewall rule as this allows all traffic through.
+
+7. Select the **Source** and **Destination** fields and specify the source and destination addresses for the firewall rule.
 
     - To specify an IP address or range, click **IP** and enter the appropriate **Value**. When you're done, click **Keep**.
 
-        ![Source IP Address dialog box](images/vmw-vcd-adv-edge-firewall-source-ip.png)
+        ![Source IP Address dialog box](images/vmw-vcd10.1-edge-firewall-source-ip.png)
 
-    - To specify a group of VMs or IPs, click **+** and select the desired objects. When you're done, click **Keep**.
+    - To specify a group of VMs or IP addresses, click **+** and select the desired objects. When you're done, click **Keep**.
 
-        ![Select objects dialog box](images/vmw-vcd-adv-edge-firewall-select-objects.png)
+        ![Select objects dialog box](images/vmw-vcd10.1-edge-firewall-select-objects.png)
 
-    - If you're likely to reuse a group of the same source or destination IP addresses in multiple rules, select the **Grouping Objects** tab and click **+** to create an IP set. You can then select this IP set in the *Select objects* dialog box.
+    - If you're likely to reuse a the same group of source or destination IP addresses in multiple rules, select the **Grouping Objects** tab and click **+** to create an IP set. You can then select this IP set in the *Select objects* dialog box.
 
-        ![New IP Set dialog box](images/vmw-vcd-adv-edge-firewall-ip-set.png)
+        ![New IP Set dialog box](images/vmw-vcd10.1-edge-firewall-ip-set.png)
 
-8. In the **Service** field, click **+** and, in the *Add Service* dialog box, specify the **Protocol**, **Source Port** and **Destination Port** for the rule. When you're done, click **Keep**.
+8. Select the **Service** field and click **+**.
 
-    ![Add Service dialog box](images/vmw-vcd-adv-edge-firewall-add-service.png)
+9. In the *Add Service* dialog box, specify the **Protocol**, **Source Port** and **Destination Port** for the rule. When you're done, click **Keep**.
 
-9. Select whether the rule is an **Accept** or **Deny** rule.
+    ![Add Service dialog box](images/vmw-vcd10.1-edge-firewall-add-service.png)
 
-10. If you have a syslog server configured, select the **Enable logging** check box.
+10. Select the **Action** field, and from the list select whether the rule is an **Accept** or **Deny** rule.
 
-    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
+11. If you have a syslog server configured, select the **Enable logging** check box.
 
-11. Click **Save changes**.
+    For more information about syslog servers, see [*How to access syslog data for your edge gateway*](vmw-how-access-syslog-data-adv.md).
 
-    ![Save changes link on Firewall tab](images/vmw-vcd-adv-edge-firewall-save.png)
+12. Click **Save changes**.
+
+    ![Save changes link on Firewall tab](images/vmw-vcd10.1-edge-firewall-save.png)
 
 ## Example
 
 A common use case for a firewall rule is to allow SSH through from the internet. The following example uses allocated public IP addresses.
 
-When your VDC is provisioned in the:
+- For VDCs in the Assured OFFICIAL security domain, you're assigned five public IP addresses
 
-- Assured OFFICIAL platform, you're assigned five public IP addresses
-
-- Elevated OFFICIAL platform, you're assigned three PSN IP addresses
+- For VDCs in the Elevated OFFICIAL security domain, you're assigned three PSN IP addresses
 
 In the example below, the source is `any` (any IP address within the VDC). The source port is also `any`. The destination is a public IP address and the destination port is `443` for HTTPS.
 

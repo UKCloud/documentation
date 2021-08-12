@@ -8,7 +8,7 @@
     <title>Bring Your Own Firewall - Known working and non-working firewalls </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Bring Your Own Firewall - Known working and non-working firewalls ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,8 +94,8 @@
 <h1 id="bring-your-own-firewall---known-working-and-non-working-firewalls">Bring Your Own Firewall - Known working and non-working firewalls</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>The UKCloud Bring Your Own Firewall service option enables you to install your own virtual firewall within your compute environment instead of using the vCNS device we provide as standard. This enables you to use technology with which you are already familiar and which offers the exact functionality that meets your requirements.</p>
-<p>While we provide you with a vDC that enables you to use whichever firewall technology you want and do not impose any specific restrictions, this guide aims to provide information about technology that is known to work or not work on our platform.</p>
+<p>The UKCloud Bring Your Own Firewall service option enables you to install your own virtual firewall within your compute environment instead of using the NSX Edge Services Gateway device we provide as standard. This enables you to use technology with which you are already familiar and which offers the exact functionality that meets your requirements.</p>
+<p>While we provide you with a VDC that enables you to use whichever firewall technology you want and do not impose any specific restrictions, this guide aims to provide information about technology that is known to work or not work on our platform.</p>
 <p>By requesting the Bring Your Own Firewall option, you accept that you are entirely responsible for sourcing, licensing, installing, configuring and maintaining your firewall. UKCloud will not be able to offer any support for issues caused by the use of a non-standard firewall.</p>
 <h2 id="known-working-firewalls">Known working firewalls</h2>
 <p>The following firewall technology has been successfully deployed and configured on the UKCloud platform.</p>
@@ -113,16 +113,14 @@
 <li><p>Palo Alto VM300 running PanOS 7.01</p>
 </li>
 <li><p>Cisco Cloud Services Router 1000v (Cisco CSR1000v)</p>
-<p>While CSR1000v version 3.16 is supported in both vSphere and vCloud Director deployments, there is a compatibility issue with OVF templates built on legacy hardware configurations (hardware version 7).</p>
+<p>While CSR1000v version 3.16 is supported in both vSphere and VMware Cloud Director deployments, there is a compatibility issue with OVF templates built on legacy hardware configurations (hardware version 7).</p>
 <p>To ensure that your CSR1000v router operates correctly, ensure that your OVF template is built on the most recent hardware version (9 or above).</p>
-<p>For more information see:</p>
-<p><a href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2107517">https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2107517</a></p>
 </li>
 </ul>
 <h2 id="known-non-working-firewalls">Known non-working firewalls</h2>
 <p>The following firewall technology is known to not work with the UKCloud platform.</p>
 <h3 id="cisco-asav">Cisco ASAv</h3>
-<p>This product is not supported in vCloud Director and therefore will not work on the UKCloud platform.</p>
+<p>This product is not supported in VMware Cloud Director and therefore will not work on the UKCloud platform.</p>
 <p>For more information, see:</p>
 <ul>
 <li><p><a href="https://www.cisco.com/c/en/us/td/docs/security/asa/asa93/asav/quick-start/asav-quick/asav-vmware.html">https://www.cisco.com/c/en/us/td/docs/security/asa/asa93/asav/quick-start/asav-quick/asav-vmware.html</a></p>
@@ -141,6 +139,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -159,7 +170,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

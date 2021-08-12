@@ -5,13 +5,13 @@ services: vmware
 author: Steve Hall
 reviewer: Guy Martin
 lastreviewed: 26/06/2019
-toc_rootlink: Service Scope
-toc_sub1: 
+toc_rootlink: Service Information
+toc_sub1: UKCloud for VMware
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for VMware Service Scope
-toc_fullpath: Service Scope/vmw-sco.md
+toc_title: Service Scope
+toc_fullpath: Service Information/UKCloud for VMware/vmw-sco.md
 toc_mdlink: vmw-sco.md
 ---
 
@@ -35,7 +35,7 @@ Your UKCloud service architecture is as follows:
 
 **Account.** We use accounts to separate financial ownership. An account could represent an organisation, a customer contract, or a specific project. An account can also have several UKCloud services associated with it, such as UKCloud for VMware, Cloud Storage and UKCloud for OpenStack. You can also use accounts to separate users based on access requirements or permissions.
 
-**Organisation (vOrg).** This represents your UKCloud for VMware service inside vCloud Director and on the UKCloud Portal. There is a 1:1 mapping of service to vOrg.
+**Organisation (vOrg).** This represents your UKCloud for VMware service inside VMware Cloud Director and on the UKCloud Portal. There is a 1:1 mapping of service to vOrg.
 
 **Virtual data centre (VDC).** A VDC is where you define your workload type and build your virtual machines (VMs). You can create VDCs through the UKCloud Portal or the Portal API.
 
@@ -51,7 +51,7 @@ ESSENTIAL     | Contended             | Configured to meet requested performance
 POWER         | Uncontended (CPU/GiB) | Pre-emptively optimises performance and availability
 PRIORITY      | Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption
 
-**VM size.** There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.
+**VM size.** There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through VMware Cloud Director.
 
 Full details of the available service options are outlined in the [*Service Definition*](vmw-sd.md).
 
@@ -77,8 +77,6 @@ Both policies have a 10TiB quota of storage to allow for rapid expansion of serv
 
 - Workloads can use multiple storage profiles
 
-- Micro sized VMs have a fixed allocation of 10GiB of Tier 2 storage which cannot be increased
-
 ## Protection
 
 Customers have a range of automated, on-platform protection options to choose from for their environments:
@@ -87,7 +85,7 @@ Customers have a range of automated, on-platform protection options to choose fr
 
 **Snapshot Protection.** 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the Service Request is raised. See the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md) for full details.
 
-**Journaling Protection.** A non-invasive, self-service disaster recovery solution with configurable recovery points, providing near real-time data protection. The standard journaling profile provides a target RPO of 5 minutes and a journal history of 2, 7, 14 or 28 days. The [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md) covers the full details of this protection option.
+**Journaling Protection.** A non-invasive, self-service disaster recovery solution with configurable recovery points, providing near real-time data protection. Journaling profiles provide a target RPO of 5 minutes and journal histories of 2, 7, 14 or 28 days. The [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md) covers the full details of this protection option.
 
 ## Advanced management
 
@@ -128,11 +126,11 @@ You are entitled to claim Service Credits for outages to services that take you 
 
   - Internally this includes, but isn't limited to, the vSphere and ESX versions, and the hardware version of the platform.
 
-  - Externally this includes the available versions of the edge gateway and vCloud Director.
+  - Externally this includes the available versions of the edge gateway and VMware Cloud Director.
 
 - Promiscuous mode is disabled.
 
-- You can set affinity or anti-affinity rules through vCloud Director so that VMs do, or do not, run on the same physical host.
+- You can set affinity or anti-affinity rules through VMware Cloud Director so that VMs do, or do not, run on the same physical host.
 
 - You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies). We do not support customer implementations inside a VM.
 
@@ -144,13 +142,13 @@ You are entitled to claim Service Credits for outages to services that take you 
 
 - Red Hat Enterprise Linux licensing
 
-For the latest available licences, please check the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+For the latest available licences, please check the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If you're providing your own licensing, you should inform UKCloud by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for a retrospective discount.
 
 For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.
 
-**VM server images.** We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from vCloud Director.
+**VM server images.** We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from VMware Cloud Director.
 
 You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.
 
@@ -201,7 +199,7 @@ Full customer and UKCloud responsibilities can be found in the [*Bring Your Own 
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
 
 We don't provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to act at this level.
 
@@ -211,9 +209,9 @@ In line with UKCloud's SISP, we provide notification of customer-impacting secur
 
 Users can access, manage and view the UKCloud for VMware service, accessing only those features allowed by their role, in any of the following ways:
 
-- **vCloud Director API.** Enables the programmatic creation and management of VMs inside the platform.
+- **vCloud API.** Enables the programmatic creation and management of VMs inside the platform.
 
-- **vCloud Director graphical UI.** Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions).
+- **VMware Cloud Director tenant portal.** Provides a graphical interface to access the VMware Cloud Director environment (depending on assigned permissions).
 
 - **UKCloud Portal.** Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.
 
@@ -221,7 +219,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Service migration
 
-You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 Customers are free to migrate their workloads. You can also request a migration through a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. Migrations may be between:
 
@@ -267,19 +265,7 @@ UKCloud also has a large ecosystem of partners who can deliver additional servic
 
 ## Service constraints
 
-UKCloud will adhere to the following in terms of maintenance windows:
-
-"Planned Maintenance" means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide affected customers with at least fourteen (14) days' notice of the Planned Maintenance.
-
-If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For ESSENTIAL and POWER services this event will count in SLA calculations. For VMs running as a PRIORITY configuration, this time will be excluded from the availability calculation.
-
-"Emergency Maintenance" means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall:
-
-a)  provide affected customers with at least six (6) hours' advance notice and
-
-b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
-
-If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.
+For information about Planned and Emergency Maintenance, see [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
 ## Supporting documents and resources
 

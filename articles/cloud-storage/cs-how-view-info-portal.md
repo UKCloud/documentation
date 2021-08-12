@@ -2,9 +2,9 @@
 title: How to view Cloud Storage information in the UKCloud Portal
 description: Describes how to access information about your Cloud Storage service in the UKCloud Portal
 services: cloud-storage
-author: Sue Highmoor
+author: shighmoor
 reviewer: nwayman
-lastreviewed: 24/02/2020
+lastreviewed: 12/03/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -111,7 +111,7 @@ This guide has shown you how you can view information about your Cloud Storage s
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+- [*How to install Dell EMC GeoDrive*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 

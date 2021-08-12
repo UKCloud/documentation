@@ -14,6 +14,8 @@
       href: azs-gs.md
   - name: How To
     items:
+    - name: Backup and restore files and folders - PowerShell
+      href: azs-how-configure-mars-backups-restore-powershell.md
     - name: Configure Azure Monitor for VMs on Azure Stack Hub
       href: azs-how-setup-monitoring.md
     - name: Configure custom script extensions
@@ -60,6 +62,12 @@
         href: azs-how-configure-cli.md
       - name: Configure the Azure Stack Hub user's PowerShell environment
         href: azs-how-configure-powershell-users.md
+    - name: Create a Custom Image from a VM
+      items:
+      - name: Create a custom image from a VM - Portal
+        href: azs-how-create-vm-image-portal.md
+      - name: Create a custom image from a VM - PowerShell
+        href: azs-how-create-vm-image-powershell.md
     - name: Create a Key Vault
       items:
       - name: Create a key vault - Portal
@@ -78,7 +86,7 @@
       items:
       - name: Create a site-to-site VPN connection - PowerShell
         href: azs-how-create-S2S-VPN-ps.md
-      - name: Create a site-to-site VPN connection between Azure Stack Hub and Public Azure - Portal
+      - name: Create a site-to-site VPN connection between Azure Stack Hub and public Azure - Portal
         href: azs-how-create-S2S-VPN-azurestack-to-azure.md
     - name: Create a Virtual Machine
       items:
@@ -102,13 +110,13 @@
       href: azs-ref-known-issues.md
     - name: Understanding UKCloud for Microsoft Azure
       href: azs-ref-overview.md
-  - name: Service Definition
+  - name: Service Information
     items:
-    - name: UKCloud for Microsoft Azure Service Definition
+    - name: Pricing information
+      href: azs-ref-pricing.md
+    - name: Service Definition
       href: azs-sd.md
-  - name: Service Scope
-    items:
-    - name: UKCloud for Microsoft Azure Service Scope
+    - name: Service Scope
       href: azs-sco.md
   - name: Videos
     items:

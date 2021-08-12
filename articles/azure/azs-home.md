@@ -3,10 +3,10 @@ title: UKCloud for Microsoft Azure
 description: Home page for UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer: Chris Black
-lastreviewed: 28/11/2019
+reviewer: wturner123
+lastreviewed: 08/04/2021
 toc_rootlink: About
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -26,9 +26,6 @@ toc_mdlink: azs-home.md
 # UKCloud for Microsoft Azure
 
 UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.
-
-# Azure Stack family announcement
-<b>Azure Stack has become a family of products! Azure Stack is now Azure Stack Hub! You can read more about it [here](https://aka.ms/AzsFamAnnounce).</b>
 
 ## Let's get started
 
@@ -59,7 +56,7 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
 
 <div class="flex-box">
   <strong><ul><li><p><a href="azs-sd.md">Service Definition</a></li></p></ul></strong>
-  <strong><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></li></p></ul></strong>
+  <strong><ul><li><p><a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a></li></p></ul></strong>
   <strong><ul><li><p><a href="azs-sco.md">Service Scope</a></li></p></ul></strong>
   <strong><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</a></li></p></ul></strong>
   <strong><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></li></p></ul></strong>

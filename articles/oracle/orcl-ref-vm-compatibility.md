@@ -62,7 +62,7 @@ If you select the **Template** option on the upload page, then the uploader will
 
 ## Upload size
 
-For any uploads larger than 500 MB, you'll need to allow sufficient time for the upload to complete before clicking the **Upload** button or it will fail and the item will not appear in your software library. There is currently no upload progress indicator on OEM. Oracle is aware of this but are treating it as an enhancement request therefore there's currently no indication of when the upload progress indicator will be added on future releases of the platform software.
+For any uploads larger than 500 MB, you'll need to allow sufficient time for the upload to complete before clicking the **Upload** button or it will fail and the item will not appear in your software library. There is currently no upload progress indicator on OEM. Oracle is aware of this but are treating it as an enhancement request therefore there's currently no indication of when the upload progress indicator will be added on future releases of the platform software.
 
 ## Feedback
 

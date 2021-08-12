@@ -62,7 +62,7 @@ After you've removed all of the items from your account that you're responsible 
 
 - Remove your account (and company, if necessary).
 
-- Return any prepaid sums for services that you have not consumed (unless otherwise identified in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)).
+- Return any prepaid sums for services that you have not consumed (unless otherwise identified in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide)).
 
 - Arrange to return all confidential information.
 
@@ -76,7 +76,7 @@ There are no termination costs associated with cancelling UKCloud services. Howe
 
 - We reserve the right to pass through third-party price rises that are not within our direct control.
 
-- If you use service options with minimum terms, such as UltraDNS or SiteProtect Advanced DDoS Mitigation, you will continue to be charged for these until the end of those terms.
+- If you use service options with minimum terms, such as Neustar UltraDNS from UKCloud or Neustar DDoS Protection from UKCloud, you will continue to be charged for these until the end of those terms.
 
 - We reserve the right to charge for any content that you leave in your environment or for retrieving and returning your content.
 
@@ -84,19 +84,11 @@ There are no termination costs associated with cancelling UKCloud services. Howe
 
 ### Multi-cloud technology stacks
 
-#### [UKCloud for Microsoft Azure](#tab/tabid-1)
+#### [UKCloud for Microsoft Azure](#tab/tabid-2)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 Resource groups (which contain virtual machines, storage and virtual networks) | User subscriptions, offers, plans and quotas
-
-#### [UKCloud for OpenShift](#tab/tabid-2)
-
-Customer responsibilities | UKCloud responsibilities
---------------------------|-------------------------
-Pods | Entire environment
-Projects |
-Volumes |
 
 #### [UKCloud for OpenStack](#tab/tabid-3)
 
@@ -110,12 +102,15 @@ Volumes |
 Volume snapshots |
 Images |
 
-<!-- #### [UKCloud for Oracle Software](#tab/tabid-4)
+#### [UKCloud for Red Hat OpenShift](#tab/tabid-1)
 
 Customer responsibilities | UKCloud responsibilities
---------------------------|------------------------- -->
+--------------------------|-------------------------
+Pods | Entire environment
+Projects |
+Volumes |
 
-#### [UKCloud for VMware](#tab/tabid-5)
+#### [UKCloud for VMware](#tab/tabid-4)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
@@ -133,21 +128,14 @@ VPGs for Journaling Protection |
 
 ### Multi-cloud enabling
 
-#### [Cloud GPU](#tab/tabid-6)
-
-Customer responsibilities | UKCloud responsibilities
---------------------------|-------------------------
-Uninstall NVIDIA software | Remove GPU mapping from virtual machine
-Power off GPU-enabled virtual machine |
-
-#### [Cloud Storage](#tab/tabid-7)
+#### [Cloud Storage](#tab/tabid-6)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 Data | Default bucket
 Customer-created buckets | Accounts
 
-#### [Cross Domain Security Zone](#tab/tabid-8)
+#### [Cross Domain Security Zone](#tab/tabid-7)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
@@ -159,27 +147,27 @@ Catalogs |
 Org VDC networks |
 NAT/firewall/DHCP/static routes/VPN |
 
-#### [Disaster Recovery as a Service](#tab/tabid-9)
+#### [Disaster Recovery as a Service](#tab/tabid-8)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 On-premises ZVMs and VRAs | ZORG/assigned VDCs
 VPGs |
 
-#### [Email and Collaboration](#tab/tabid-10)
+#### [Email and Collaboration](#tab/tabid-9)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 Mail accounts | Final admin account
 
-#### [Migration to the Cloud](#tab/tabid-12)
+#### [Migration to the Cloud](#tab/tabid-10)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 On-premises ZVMs and VRAs | ZORG/assigned VDCs
 VPGs |
 
-#### [Secure Remote Access](#tab/tabid-14)
+#### [Secure Remote Access](#tab/tabid-11)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
@@ -190,7 +178,7 @@ ISOs | VDC
 Catalogs | vOrg
 &nbsp; | Certificates and Active Directory
 
-#### [Connectivity](#tab/tabid-15)
+#### [Connectivity](#tab/tabid-12)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
@@ -198,14 +186,14 @@ Customer-provided private networks | External network connections
 Customer-provided IP ranges | Allocated IP ranges
 Customer co-lo'd kit | Private VLANs/VRFs
 
-#### [Cloud Enablement](#tab/tabid-16)
+#### [Cloud Enablement](#tab/tabid-13)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 Remove customer equipment from Cloud Enablement bays | Escort customer to remove equipment from Cloud Enablement bays
 &nbsp; | Remove physical and logical networking
 
-#### [Big Cloud Enablement](#tab/tabid-17)
+#### [Big Cloud Enablement](#tab/tabid-14)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------

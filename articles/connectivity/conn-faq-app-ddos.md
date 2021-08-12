@@ -1,6 +1,6 @@
 ---
-title: SiteProtect Advanced DDoS Mitigation FAQs
-description: Frequently asked questions for SiteProtect Advanced DDoS Mitigation (previously Application-tuned DDoS protection)
+title: Neustar DDoS Protection from UKCloud FAQs
+description: Frequently asked questions for Neustar DDoS Protection from UKCloud (previously SiteProtect Advanced DDoS Mitigation)
 services: connectivity
 author: Matt Warner
 reviewer: hbrunt
@@ -10,16 +10,16 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: SiteProtect Advanced DDoS Mitigation FAQs
+toc_title: Neustar DDoS Protection from UKCloud FAQs
 toc_fullpath: FAQs/conn-faq-app-ddos.md
 toc_mdlink: conn-faq-app-ddos.md
 ---
 
-# SiteProtect Advanced DDoS Mitigation FAQs
+# Neustar DDoS Protection from UKCloud FAQs
 
-## What is SiteProtect Advanced DDoS Mitigation?
+## What is Neustar DDoS Protection from UKCloud?
 
-SiteProtect Advanced DDoS Mitigation (previously Application-tuned DDoS protection) from Neustar is a fully-managed DDoS protection solution, backed by an industry-leading security operations team, that scrubs your website's malicious traffic to ensure only clean, legitimate traffic is delivered to your site. It's available in multiple deployment configurations to meet your needs and is flexible depending on your specific requirements.
+Neustar DDoS Protection from UKCloud (previously SiteProtect Advanced DDoS Mitigation) is a fully-managed DDoS protection solution, backed by an industry-leading security operations team, that scrubs your website's malicious traffic to ensure only clean, legitimate traffic is delivered to your site. It's available in multiple deployment configurations to meet your needs and is flexible depending on your specific requirements.
 
 The cloud-based service mitigates attacks in the cloud, far away from your infrastructure, with the bandwidth and flexibility to repel today's largest attacks. Using proven methodologies, Neustar's experienced DDoS fighters intelligently match technology to threats, surgically derailing even the most complex attacks.
 
@@ -27,11 +27,11 @@ The always-on hybrid managed solution removes the burden of DDoS with an on-site
 
 ## Who supplies the DDoS service?
 
-The SiteProtect Advanced DDoS Mitigation service is supplied and managed by Neustar.
+The Neustar DDoS Protection from UKCloud service is supplied and managed by Neustar.
 
 ## Who is Neustar?
 
-Founded in 1996, Neustar, Inc. (NYSE: NSR) is a trusted, neutral provider of real-time information and analysis to the internet, telecommunications, entertainment, advertising and marketing industries throughout the world. Neustar delivers real-time information and analytics for over 6 billion physical and virtual addresses, provides instantaneous answers to more than 27 billion queries from the internet each day, and answers over 300,000 questions every second.
+Founded in 1996, Neustar, Inc. (NYSE: NSR) is a trusted, neutral provider of real-time information and analysis to the internet, telecommunications, entertainment, advertising and marketing industries throughout the world. Neustar delivers real-time information and analytics for over 6 billion physical and virtual addresses, provides instantaneous answers to more than 27 billion queries from the internet each day, and answers over 300,000 questions every second.
 
 ## How is this different from standard UKCloud DDoS protection?
 

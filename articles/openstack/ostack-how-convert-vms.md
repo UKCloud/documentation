@@ -3,8 +3,8 @@ title: How to convert virtual machines to run in OpenStack
 description: Outlines the process for importing virtual machines from other clouds and running them on OpenStack's KVM hypervisor using virt-v2v
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 26/10/2018 16:54:31
+reviewer: dbutts
+lastreviewed: 06/08/2020
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
@@ -28,43 +28,32 @@ This article is intended for operators who have the capability to download a VM 
 ## Supported conversions
 
 You can use `virt-v2v` to convert VMs running the following operating systems to run on KVM:
-
-- Red Hat Enterprise Linux 3.9
-
-- Red Hat Enterprise Linux 4
-
-- Red Hat Enterprise Linux 5
-
-- Red Hat Enterprise Linux 6
-
-- Red Hat Enterprise Linux 7.1 and later
-
-- Windows XP
-
-- Windows Vista
-
-- Windows 7
-
-- Windows 8
-
-- Windows 8.1
-
-- Windows 10
-
-- Windows Server 2003
-
-- Windows Server 2008
-
-- Windows Server 2008 R2
-
-- Windows Server 2012
-
-- Windows Server 2012 R2
-
-- Windows Server 2016
+|Guest OS|RHEL 7 host|RHEL 8 host|
+|--|--|--|
+|Red Hat Enterprise Linux 5|Supported|Not supported|
+|Red Hat Enterprise Linux 6|Supported|Supported|
+|Red Hat Enterprise Linux 7|Supported|Supported|
+|Red Hat Enterprise Linux 8|Not supported|Supported|
+|SUSE Linux Enterprise Server 11, SP4 and later [1]|Supported On RHEL 7.7 and later|Supported|
+|SUSE Linux Enterprise Server 12|Supported|Supported|
+|SUSE Linux Enterprise Server 15|Supported|Supported|
+|Windows 8|Supported|Not supported|
+|Windows 8.1|Supported|Not supported|
+|Windows 10|Supported|Supported|
+|Windows Server 2008|Supported|Not supported|
+|Windows Server 2008 R2|Supported|Not supported|
+|Windows Server 2012|Supported|Not supported|
+|Windows Server 2012 R2|Supported|Not supported|
+|Windows Server 2016|Supported|Supported|
+|Windows Server 2019|Supported|Supported|
+|Debian [2]|Technology Preview in RHEL 7.4 and later|Technology Preview|
+|Ubuntu [2]|Technology Preview in RHEL 7.4 and later|Technology Preview|
 
 > [!NOTE]
 > `virt-v2v` may convert VMs running other Linux operating systems, such as Debian and Ubuntu, but these conversions are not supported.
+> 
+> [!NOTE]
+> As of January 2020 some operating systems are not supported for conversion on RHEL 8 but they are still supported on RHEL 7 as the table above shows.
 
 Conversions from the following hypervisors are supported:
 

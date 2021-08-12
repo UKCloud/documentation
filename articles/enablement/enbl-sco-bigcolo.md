@@ -3,8 +3,8 @@ title: Big Cloud Enablement Service Scope
 description: Outlines how UKCloud provides co-location of your own hardware in our data centres
 services: enablement
 author: Bart Challis
-reviewer: 
-lastreviewed: 06/02/2020
+reviewer: Nick Stobbart
+lastreviewed: 20/10/2020
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -35,14 +35,15 @@ The table below provides an overview of the Big Cloud Enablement services availa
 Use case | You may have complex systems that can't be virtualised (for example, database clusters or legacy applications).<br>You may also have large amounts of storage (for example, private file storage) you want to host with us, so that you can integrate it with our compute offerings.
 Service type | Co-location of physical infrastructure
 Security level | Assured OFFICIAL, Elevated OFFICIAL and Tier 2
-Hosted device | Physical server, networking device or storage appliance
+Hosted device | Physical servers, networking devices or storage appliances
 Useable U count | 40U
 Service level (default) | Single data centre, no automatic failover
 PDU specifications per rack | 2 x 16A single phase PDUs per rack with A and B power supplies<br>Each PDU has 36 x C13 and 6 x C19 sockets
-Max power draw per rack | 4kW
+Hosted device(s) allowed | Depends on solution. UKCloud will work with the customer to understand the requirement and assess the suitability of the devices that the customer wants to locate within Cloud Enablement.
+Max power draw per rack | Customer devices within a single 40u rack have a combined average power draw of no more than 4kW. Average power draw will be assessed based vendor material supplied by the customer as part of the engagement with UKCloud prior to installation of devices, and reviewed whenever any additional equipment is added.
 Networking | Bespoke networking based on customer requirement.<br>Big Cloud Enablement price excludes any networking components.
-Contiguous racks | Contiguous racks are not guaranteed if not purchased together on a single order. UKCloud can reserve racks for a maximum of 6 months before charging for full use. This is at UKCloud’s discretion.
-Resilience available? | You can provision multiple Big Cloud Enablement services within a single site or into both data centres, but you'll need to manage any resilience within the hardware.
+Contiguous racks | Contiguous racks are not guaranteed if not purchased together on a single order. UKCloud can reserve racks for a maximum of 6 months before charging for full use. This is at UKCloud's discretion.
+Resilience available? | You can provision multiple Big Cloud Enablement services within a single or dual sites, but you'll need to manage any resilience within the hardware.
 Failover responsibility | Customer
 Resilience cost | Depends on solution
 Notes | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Big Cloud Enablement into other regions (for example, Big Cloud Enablement in region 5 cannot be stretched to region 6).
@@ -50,7 +51,7 @@ Next steps | Raise a service request via the [My Calls](https://portal.skyscapec
 
 ## Big Cloud Enablement connectivity
 
-Connectivity within the solution will be bespoke to your requirements. You can bring your own switches and manage them, or you can ask UKCloud to purchase and manage switches on your behalf. Switches purchased by UKCloud will be Arista, and port count/speed and so on will be agreed between you and UKCloud.
+Connectivity within the solution will be bespoke to your requirements. You can bring your own switches and manage them, or you can ask UKCloud to purchase and manage switches on your behalf. Switches purchased by UKCloud will be agreed based on the solution, and port count/speed will be agreed between you and UKCloud.
 
 ## Connectivity port speed
 
@@ -114,17 +115,21 @@ Due to the secure nature of UKCloud's sites, unscheduled maintenance access may 
 
 ### Out-of-hours maintenance access
 
-Out-of-hours access will be granted at UKCloud's discretion and is charged as per the [*SFIA rate card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) (Level 4 - Enable).
+Out-of-hours access will be granted at UKCloud's discretion and is charged as per the [SFIA rate card](https://ukcloud.com/sfia) (Level 4 - Enable).
 
 ### Additional maintenance access
 
-If you require more than eight visits per year for maintenance, these additional escorted visits will be charged as per the [*SFIA rate card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) (Level 4 - Enable).
+If you require more than eight visits per year for maintenance, these additional escorted visits will be charged as per the [SFIA rate card](https://ukcloud.com/sfia) (Level 4 - Enable).
 
-If you need to install and configure additional device(s) within your solution, these escorted visits will be charged as per the [*SFIA rate card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) (Level 4 - Enable).
+If you need to install and configure additional device(s) within your solution, these escorted visits will be charged as per the [SFIA rate card](https://ukcloud.com/sfia) (Level 4 - Enable).
 
 ## Power failure
 
 If, in the unlikely event of a power failure, you'd like your hardware restarted, you must provide **laminated** work instructions (totalling no more than a double-sided A4 page), which must be placed within your Big Cloud Enablement rack space.
+
+## Decommissioning 
+
+If you want to decommission your Big Cloud Enablement service you must provide a minimum of 30 days' notice and are responsible for the removal of your equipment. Visits to remove equipment are counted towards your allocation of maintenance access days and if you need additional days, these additional escorted visits will be charged as per the [SFIA rate card](https://ukcloud.com/sfia) (Level 4 - Enable).
 
 ## Feedback
 

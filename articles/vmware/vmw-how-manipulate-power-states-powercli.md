@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-manipulate-power-states-powercli.md
 
 ## Overview
 
-PowerCLI is a command line interface tool developed by VMware and built upon Microsoft PowerShell. The tool is designed to enable manipulation, automation, management and control over vSphere and vCloud Director assets.
+PowerCLI is a command line interface tool developed by VMware and built upon Microsoft PowerShell. The tool is designed to enable manipulation, automation, management and control over vSphere and VMware Cloud Director assets.
 
 PowerCLI can help you realise some of the fundamental benefits of cloud computing, such as on-demand self-service. Controlling virtual machine power states programmatically, to turn off compute elements when they are no longer required, can help you save up to 70% on your compute costs by taking advantage of hourly billing. For example, you could power off an internal room-booking system when staff are at home during evenings and weekends.
 
@@ -38,7 +38,7 @@ You may also find a good script editor useful. There are several available for f
 
 ## Connecting to the UKCloud cloud platform
 
-Your PowerCLI script needs to connect to vCloud Director using a privileged account, so we recommend that you create a user in the UKCloud Portal with only **API Only** access. This ensures that the account cannot be used to access the GUI, limiting the risk associated with an administrative account. Also, as an **API Only** account cannot utilise additional security features, such as Google 2-Step Verification, it is advisable to restrict the account so that it can log in only from specific IP addresses. You can configure these permissions under the **Contacts** section of the UKCloud Portal (for more information, see [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)).
+Your PowerCLI script needs to connect to VMware Cloud Director using a privileged account, so we recommend that you create a user in the UKCloud Portal with only **API Only** access. This ensures that the account cannot be used to access the GUI, limiting the risk associated with an administrative account. Also, as an **API Only** account cannot utilise additional security features, such as Google 2-Step Verification, it is advisable to restrict the account so that it can log in only from specific IP addresses. You can configure these permissions under the **Contacts** section of the UKCloud Portal (for more information, see [*How to manage permissions for VMware Cloud Director*](vmw-how-manage-vcd-permissions.md)).
 
 You usually log in to the portal using an email address and password. For **API Only** access a unique user ID is generated for each UKCloud account you want to log into. You need to specify these unique identifiers when running the scripts to connect to the UKCloud environment.
 
@@ -82,14 +82,14 @@ For more information on PowerCLI, there's a wide range of documentation from VMw
 
 2. This returns all of the vApps and put them into a variable. You'll want to specify which vApp you want to change the power state of by filtering for the right name, for example:
 
-    `$MyVApp = Get-CIVapp | Where {$_.Name -match “My vApp”}`
+    `$MyVApp = Get-CIVapp | Where {$_.Name -match "My vApp"}`
 
     This returns any vApp in your Organisation where the name contains the string `My vApp`.
 
 3. To control the power state, use the `Start-CIVApp` and `Stop-CIVAppGuest` cmdlets.
 
     > [!IMPORTANT]
-    > You should use the `-RunAsync` parameter as this will hand the task over to vCloud. If you don't use this, the task can fail if it takes too long or for any number of other issues that won’t happen if vCloud is handling the task.
+    > You should use the `-RunAsync` parameter as this will hand the task over to vCloud. If you don't use this, the task can fail if it takes too long or for any number of other issues that won't happen if vCloud is handling the task.
 
     Here is how this looks:
 
@@ -101,7 +101,7 @@ For more information on PowerCLI, there's a wide range of documentation from VMw
 4. You may also want to create a check so that the script turns the vApp on or off depending on it's current power state. You can do this by checking the current status and starting or stopping the vApp accordingly:
 
     ```none
-    If ($MyVApp.Status -match “On”){
+    If ($MyVApp.Status -match "On"){
         $MyVApp | Stop-CIVAppGuest -RunASync
     }else{$MyVApp | Start-CIVApp}
     ```
@@ -109,10 +109,10 @@ For more information on PowerCLI, there's a wide range of documentation from VMw
 5. You may want put some measures in place to force a shutdown using `Stop-CIVapp`. For example, in the event that the vApp fails to power down after five minutes, you could have the following:
 
     ```none
-    If ($MyVApp.Status -match “On”){
+    If ($MyVApp.Status -match "On"){
         $MyVApp | Stop-CIVAppGuest -RunASync
         Start-Sleep -Seconds 300
-        If ($MyVApp.Status -NotMatch “PoweredOff”){
+        If ($MyVApp.Status -NotMatch "PoweredOff"){
             $MyVApp | StopCIVapp -RunAsync
         }
     }else{$MyVApp | Start-CIVApp}
