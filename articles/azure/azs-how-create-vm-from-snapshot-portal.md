@@ -4,7 +4,7 @@ description: Provides help for creating a virtual machine from a managed disk sn
 services: azure-stack
 author: William Turner
 reviewer: William Turner
-lastreviewed: 26/05/2020
+lastreviewed: 12/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
