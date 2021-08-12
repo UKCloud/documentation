@@ -138,13 +138,21 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Create VM from disk - Size](images/azs-browser-disk-vm-size.png)
 
-7. In the *Settings* step, change any of the optional settings as required for your VM, then click **OK**.
+7. Change any of the optional settings located in the other tabs, then click **Review + create**.
 
-    ![Create VM from disk - Settings](images/azs-browser-disk-vm-settings.png)
+    > [!IMPORTANT]
+    > There will be no public inbound ports open on the network security group if left unchanged.
 
-8. In the *Summary* step, review the selections you've made and then click **OK** to start the deployment.
+    ![Create virtual machine > Networking](images/azs-browser-disk-vm-networking.png)
 
-    ![Create VM from disk - Summary](images/azs-browser-disk-vm-summary.png)
+    > [!NOTE]
+    > By default, boot diagnostics will be switched on for the virtual machine.
+
+    ![Create virtual machine > Management](images/azs-browser-disk-vm-management.png)
+
+8. In the *Review + create* step, review the selections you've made and then click **Create** to start the deployment.
+
+    ![Create virtual machine > Review](images/azs-browser-disk-vm-review.png)
 
 9. You can monitor the progress of your VM's deployment by clicking the **Notifications** icon.
 
