@@ -194,8 +194,8 @@ $VirtualMachine = Add-AzVMNetworkInterface -Id $NetworkInterface.Id -VM $Virtual
 
 # Apply the OS disk properties
 $VirtualMachine = switch ("-$($Disk.OsType)") {
-    "-Linux" { Set-AzVMOSDisk -VM $VirtualMachine -ManagedDiskId $NewDisk.Id -StorageAccountType "StandardLRS" -CreateOption "Attach" -Linux }
-    "-Windows" { Set-AzVMOSDisk -VM $VirtualMachine -ManagedDiskId $NewDisk.Id -StorageAccountType "StandardLRS" -CreateOption "Attach" -Windows }
+    "-Linux" { Set-AzVMOSDisk -VM $VirtualMachine -ManagedDiskId $NewDisk.Id -StorageAccountType Standard_LRS -CreateOption "Attach" -Linux }
+    "-Windows" { Set-AzVMOSDisk -VM $VirtualMachine -ManagedDiskId $NewDisk.Id -StorageAccountType Standard_LRS -CreateOption "Attach" -Windows }
 }
 
 # Enable boot diagnostics
