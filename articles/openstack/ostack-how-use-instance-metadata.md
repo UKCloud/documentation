@@ -2,9 +2,9 @@
 title: How to use OpenStack instance metadata
 description: Shows you how to add metadata to an instance and how to retrieve instance metadata
 services: openstack
-author: Sue Highmoor
-reviewer:
-lastreviewed: 02/08/2018 14:45:48
+author: shighmoor
+reviewer: nmathews
+lastreviewed: 10/12/2020
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
@@ -29,7 +29,7 @@ This article shows you how to add metadata to an instance and how to retrieve in
 
 When you create a new instance using the OpenStack API, use the `property` flag to include metadata:
 
-    -- property <key>=<value
+    --property <key>=<value
 
 For exmaple:
 

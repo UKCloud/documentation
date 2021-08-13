@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to define patching windows for Patching as a Service </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to define patching windows for Patching as a Service ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/managed-operations/man-how-patching-define-window.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-define-patching-windows-for-patching-as-a-service">How to define patching windows for Patching as a Service</h1>
+
+<h2 id="overview">Overview</h2>
+<p>With Patching as a Service, an option of our Managed IT Operations service, our Cloud Operations team provides routine OS patch management for compute instances, removing the burden of basic OS hygiene so that you can focus your attention above the operating system.</p>
+<p>This article provides information about how to specify patching windows for your devices and also other changes that you may want to make to your Patching as a Service.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>You must subscribe to Managed Monitoring as a Service to be able to also subscribe to Patching as a Service.</p>
+</div>
+<p>To make changes, you'll need to fill in the appropriate details in the Managed IT Operations - Add or Remove Device spreadsheet (UKC-FRM-303) spreadsheet, which enables us to automate your requested changes. This is the same spreadsheet as the one you used to originally set up your service. The Service Request template includes a link to download the spreadsheet. When filling out the spreadsheet, ensure that you follow the instructions provided.</p>
+<p>If you want to download the spreadsheet ahead of raising the request, click <a href="https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1642866877&amp;Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D">here</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you're not sure how to complete the spreadsheet or need help with any of the details, contact UKCloud Support.</p>
+</div>
+<h2 id="specifying-a-patching-window-for-a-device">Specifying a patching window for a device</h2>
+<p>A patching window determines when the patching will take place on a monitored device. You define a patching window for a device by adding it to a patching group. The patching groups are divided into two phases within a two week cycle that begins every other Tuesday in line with software vendor patching schedules. The first phase centres on the first weekend, and the second phase around the second weekend. An example where this may be useful is to select the first phase to patch staging devices and the second phase to patch production devices, thereby providing several days between the patching cycles.</p>
+<ol>
+<li><p>In My Calls, raise a ticket using the <strong>Managed IT Operations - Make changes to my managed devices</strong> template.</p>
+</li>
+<li><p>Download the spreadsheet linked in the template.</p>
+<p><img src="images/man-change-devices-link.png" alt="Download link in the Makes changes to my managed devices template"></p>
+</li>
+<li><p>On the <strong>Credentials</strong> tab of the spreadsheet, add the set of credentials to be used for patching purposes if these are different from the administrative credentials used for the device.</p>
+</li>
+<li><p>On the <strong>Device Information</strong> tab, enter the details of the device(s) for which you want to specify the patching window, making sure to select <strong>Yes</strong> in the <strong>Patching</strong> column.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can find the details of your devices on previous spreadsheets if you have them. If you don't, and can't remember your device details, contact UKCloud Support, who will be able to provide you with the necessary information.</p>
+</div>
+</li>
+<li><p>On the <strong>Patching</strong> tab, in the row for the appropriate device, from the list in the <strong>DevicePatchingGroup</strong> column, select the patching group you want to add the device to.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Device names from the <strong>Device Information</strong> tab are auto-populated into the <strong>Patching</strong> tab. If the information doesn't auto-populate, in the <strong>Data</strong> ribbon, select <strong>Refresh All</strong>.</p>
+<p><img src="images/man-monitoring-excel-refresh.png" alt="Refresh All option in Microsoft Excel"></p>
+<p>Device names will then auto-populate in the <strong>PrimaryDeviceName</strong> column.</p>
+</div>
+</li>
+<li><p>If you specified separate patching credentials on the <strong>Credentials</strong> tab, in the <strong>PatchingCredentials</strong> column, select the name of the credentials to use when applying patches to the device.</p>
+</li>
+<li><p>In the <strong>PatchingMethod</strong> column, select <strong>Automatically Select - Default</strong>. This ensures that UKCloud can select the most appropriate patching method for the device based on the supported operating system and service requirements.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Do not select either of the other patching methods unless previously discussed and agreed with UKCloud.</p>
+</div>
+<p><img src="images/man-patching-patching-window.png" alt="Specifying a patching window for a device"></p>
+</li>
+<li><p>In the <strong>SnapshotBehaviour</strong> column, select the preferred behaviour for snapshots prior to performing the patching:</p>
+<ul>
+<li><p><strong>hard</strong> - Attempt to snapshot the virtual machine prior to patching. If the snapshot is not successful, patching will not proceed. This is the default option.</p>
+</li>
+<li><p><strong>soft</strong> - Attempt to snapshot the virtual machine prior to patching. If the snapshot is not successful, patching will still proceed.</p>
+</li>
+<li><p><strong>disabled</strong> - Do not attempt to snapshot the virtual machine prior to patching. Use this option for virtual machines that are unable to have snapshots and environments where snapshots are not available.</p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Currently, snapshot functionality is available only in UKCloud for VMware environments.</p>
+</div>
+</li>
+<li><p>When you've finished completing the spreadsheet, in your My Calls ticket either click <strong>Select files</strong> and browse to the completed spreadsheet or drag the spreadsheet into the template.</p>
+<p><img src="images/man-change-devices-upload-submit.png" alt="Upload Add or Remove devices spreadsheet"></p>
+</li>
+<li><p>Enter the date from which you want the changes to be effective.</p>
+</li>
+<li><p>When you're done, click <strong>Review &amp; Submit</strong> then <strong>Submit</strong>.</p>
+</li>
+</ol>
+<p>As per our standard customer service targets, we aim to resolve your request within two working days.</p>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><p><a href="man-how-add-remove-device.html"><em>How to add devices to and remove devices from Managed IT Operations</em></a></p>
+</li>
+<li><p><a href="man-how-update-contact-info.html"><em>How to update contact information for Managed IT Operations</em></a></p>
+</li>
+<li><p><a href="man-how-notify-maintenance.html"><em>How to provide notification of maintenance windows for Managed IT Operations</em></a></p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

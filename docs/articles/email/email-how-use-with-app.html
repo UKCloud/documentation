@@ -8,7 +8,7 @@
     <title>How to use UKCloud's email service with your application </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use UKCloud's email service with your application ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -93,24 +93,21 @@
                   
 <h1 id="how-to-use-ukclouds-email-service-with-your-application">How to use UKCloud's email service with your application</h1>
 
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>PSN Email Relay provided by Vodafone is end-of-life as of 31 March 2021. After this date, anyone using the PSN will not be able to use email over this network, including all email services from UKCloud on the PSN. Internet-connected email services from UKCloud will continue to function after this date.</p>
+</div>
 <h2 id="overview">Overview</h2>
-<p>Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and HSCN, where few mail relay providers are available.</p>
+<p>Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using secure government networks such as HSCN, where few mail relay providers are available.</p>
 <p>In this guide, we'll walk you through the process for configuring your application to use our Email &amp; Collaboration service.</p>
 <h2 id="ukcloud-email-and-collaboration-as-a-service">UKCloud Email and Collaboration as a Service</h2>
 <p>The service provides enterprise-class functionality for end-users, on a per-mailbox, per- month pricing model. It offers several options for mailbox access, including POP3, IMAP4 and SMTP --- all with TLS (SSL) encryption --- as well as HTTPS. Exchange ActiveSync is also supported.</p>
 <p>Although the service was designed with end-users in mind, there's nothing to stop you using the supported protocols to allow an application to access a mailbox in order to send or receive email. This will generally be achieved via SMTP or POP3 over TLS.</p>
 <p>It's worth noting that there's a minimum commitment of 25 mailboxes with this service --- but they don't all have to be used.</p>
-<h2 id="email-on-the-elevated-official-platform">Email on the Elevated OFFICIAL platform</h2>
-<p>The instructions in this document are written for the UKCloud Assured OFFICIAL (formerly PGA IL2)</p>
-<p>platform, which is internet facing. If you wish to send and/or receive mail on the UKCloud Elevated OFFICIAL platform, the same general instructions apply, but there are a few differences to be aware of:</p>
-<ul>
-<li><p>The Elevated mail platform is PSN facing, so you'll need a PSN- or GCF- registered domain name in order to use the service</p>
-</li>
-<li><p>The hostname for UKCloud's mail server is different, and will be provided to you once your order has been processed</p>
-</li>
-<li><p>By default, you'll only be able to connect to UKCloud's mail server using HTTPS --- you'll need to raise a service request in the Elevated portal to request access from your virtual data centre to the UKCloud mail server via SMTP, POP3 or IMAP as required</p>
-</li>
-</ul>
 <h2 id="getting-started-with-email-and-collaboration">Getting started with Email and Collaboration</h2>
 <p>To start creating mailboxes on the Email and Collaboration service, you first need to decide on a domain name, which must be a real-world, registered domain name. You can use a new domain name, or simply delegate a sub-domain of your organisation's existing domain name.</p>
 <p>You'll need to configure your chosen domain's MX record as <code>mail.skyscapecs.net</code>.</p>
@@ -196,6 +193,19 @@ connect = mail.ukcloud.com:465
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -214,7 +224,7 @@ connect = mail.ukcloud.com:465
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

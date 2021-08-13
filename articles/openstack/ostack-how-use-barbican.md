@@ -3,8 +3,8 @@ title: How to use Barbican KMaaS on UKCloud for OpenStack
 description: Provides information on using Barbican Key Management as a Service (KMaaS) within your OpenStack environment
 services: openstack
 author: Steve Dixon
-reviewer:
-lastreviewed: 14/08/2019 15:17:17
+reviewer: Bryce Nicholls
+lastreviewed: 24/09/2020
 
 toc_rootlink: How To
 toc_sub1:
@@ -19,7 +19,7 @@ toc_mdlink: ostack-how-use-barbican.md
 # Using Barbican Key Management as a Service (KMaaS)
 
 > [!NOTE]
-> This article does not apply to OpenStack Regions running the Pike release and lower (currently COR00005 and FRN00006). All newer Regions offer native Key Management as a Service
+> This article does not apply to OpenStack Regions running the Pike release and lower (currently COR00005). All other Regions offer native Key Management as a Service
 
 ## Overview
 

@@ -19,7 +19,7 @@ toc_mdlink: vmw-how-manage-snapshot-protection.md
 
 ## Overview
 
-Protection technologies are tools used to enable you to design resilience into your cloud solutions. They protect data and provide you with the ability to recover from system outages - either caused by a disruption to the physical delivery of a service or as a result of corruption of your primary system.
+Protection technologies are tools used to enable you to design resilience into your cloud solutions. They protect data and provide you with the ability to recover from system outages - either caused by a disruption to the physical delivery of a service or as a result of corruption of your primary system.
 
 The UKCloud platform offers a variety of protection options, including Snapshot Protection. Snapshot Protection automatically takes an image of your virtual machine (VM) every 24 hours and stores the image outside the core platform for either 14 or 28 days, depending on your chosen snapshot retention profile.
 

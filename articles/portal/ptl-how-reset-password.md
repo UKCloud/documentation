@@ -1,10 +1,10 @@
 ---
 title: How to reset your UKCloud Portal password or memorable word
-description: Explains how to reset or update your UKCloud Portal password or memorable word
+description: Explains how to reset or update your own UKCloud Portal password or memorable word or another user's
 services: portal
-author: Sue Highmoor
-reviewer: Lewis Dean
-lastreviewed: 16/10/2019 11:00:00
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 09/04/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -24,38 +24,56 @@ We recommend that you change your password at least every 90 days.
 
 When you contact UKCloud Support, you may be asked to provide letters from a memorable word to authenticate yourself. You can change your memorable word at any time.
 
-## Resetting your own password or memorable word
+### Intended audience
 
-To change your own password or memorable word:
+Any Portal user can reset their own password or memorable word.
 
-1. Log in to the UKCloud Portal as usual.
-
-2. At the top right-hand corner, click your user name, and select **Change password**.
-
-3. Change your password or memorable word as required.
-
-4. Click **Save**.
-
-## Resetting another user's password or memorable word
-
-If a user forgets their password or memorable word, an administrator can reset them:
-
-1. Log in to the UKCloud Portal as an administrator.
-
-2. In the navigation panel, expand **Contacts** then select **All contacts**.
-
-3. Locate the user and click the **Edit** button for that user.
-
-4. Select the **Edit contact** tab, then the **User** tab.
-
-5. Update the password or memorable word as required.
-
-6. Click **Save**.
+To reset another user's password or memorable word, you must be a Portal administrator.
 
 > [!NOTE]
 > For users of the Elevated OFFICIAL Portal, any changes to a user's password or memorable word must be completed by an administrator.
 
 In the event that an administrator requires a password or memorable word reset, and no other administrators are available, contact UKCloud Support on 01252 303300 and select option 2.
+
+## Resetting your own password or memorable word
+
+To change your own password or memorable word:
+
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as usual.
+
+2. At the top right-hand corner, click your user name, and select **Change password**.
+
+   ![Change password menu option](images/ptl-mnu-change-password.png)
+
+3. Enter your **Current password** to confirm your identity.
+
+4. Change your password or memorable word as required.
+
+   ![Update Password and Memorable Word](images/ptl-update-password.png)
+
+5. Click **Save**.
+
+## Resetting another user's password or memorable word
+
+If a user forgets their password or memorable word, an administrator can reset them:
+
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as an administrator.
+
+2. In the navigation panel, expand **Contacts** then select **All contacts**.
+
+   ![All contacts menu option](images/ptl-mnu-all-contacts.png)
+
+3. Locate the user and click the **Edit** button for that user.
+
+   ![Edit contact button](images/ptl-contact-btn-edit.png)
+
+4. On the **Edit contact** tab, select the **User** tab.
+
+5. Update the password or memorable word as required.
+
+   ![Edit user](images/ptl-update-user-password.png)
+
+6. Click **Save**.
 
 ## Feedback
 

@@ -8,7 +8,7 @@
     <title>Invoice and billing FAQs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Invoice and billing FAQs ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,7 +98,6 @@
 <p>We send out invoices on the first day of each month for the previous month's usage.</p>
 <h3 id="how-can-i-pay">How can I pay?</h3>
 <p>Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.</p>
-<p>If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.</p>
 <h3 id="how-is-my-invoice-formatted">How is my invoice formatted?</h3>
 <p>Your invoice includes a line for each chargeable service. For example, there might be a row for your UKCloud for VMware charges, one for Cloud Storage and another for HSCN connectivity.</p>
 <h3 id="what-is-the-evidence-file">What is the evidence file?</h3>
@@ -224,7 +223,7 @@
 </table>
 <div class="NOTE">
 <h5>Note</h5>
-<p>60GiB of Tier 2 storage is included in the pricing for all VMs whilst they are powered on, except for Micro, which has 10giB of included storage. For VMs in powered-off state, consumed storage will be charged at the prevailing rate.</p>
+<p>60GiB of Tier 2 storage is included in the pricing for all VMs whilst they are powered on, except for Micro, which has 10GiB of included storage. For VMs in powered-off state, consumed storage will be charged at the prevailing rate.</p>
 </div>
 <h3 id="what-are-the-protection-costs-for-my-vms">What are the protection costs for my VMs?</h3>
 <p>Protection costs for your VM are listed in the following columns of the evidence file:</p>
@@ -269,7 +268,7 @@
 <h5>Note</h5>
 <p>The VM metadata will be listed in the evidence file on the day after you tag the VM. For example, if you tag your VM on the 3rd, the metadata will be listed in the evidence file from the 4th, unless a VM power cycle occurs on the 3rd.</p>
 </div>
-<p>The <a href="../vmware/vmw-how-use-vm-location.html"><em>How to use VM location in vCloud Director</em></a> article includes information about how to access metadata for your VMs.</p>
+<p>The <a href="../vmware/vmw-how-use-vm-location.html"><em>How to use VM location</em></a> article includes information about how to access metadata for your VMs.</p>
 <h2 id="ukcloud-for-openstack-charges">UKCloud for OpenStack charges</h2>
 <h3 id="how-are-my-ukcloud-for-openstack-charges-calculated">How are my UKCloud for OpenStack charges calculated?</h3>
 <p>The cost of your UKCloud for OpenStack instances is determined by adding together the cost of your compute and storage. You can find these individual costs in the following columns of the evidence file in rows of the service type (column H) of <code>OpenStack Virtual Machine</code>:</p>
@@ -328,30 +327,6 @@
 </tbody>
 </table>
 <p>UKCloud for OpenStack storage costs also include any images and backups you have, which are listed as separate rows in the evidence file. Look for rows with the service type (column H) of <code>OpenStack Image</code> and <code>OpenStack Instance Backup Storage</code>.</p>
-<h2 id="cloud-gpu-charges">Cloud GPU charges</h2>
-<h3 id="how-are-my-cloud-gpu-charges-calculated">How are my Cloud GPU charges calculated?</h3>
-<p>Costs for Cloud GPU are shown against VMware VMs in the following columns of the evidence file:</p>
-<table>
-<thead>
-<tr>
-<th>Description</th>
-<th>Column</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GPU type (compute or visualisation)</td>
-<td>V</td>
-</tr>
-<tr>
-<td>GPU cost</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<p>The cost of a GPU VM depends on whether it is for compute or visualisation (column X).</p>
-<h3 id="how-can-i-see-how-many-gpu-vms-i-have">How can I see how many GPU VMs I have?</h3>
-<p>To find out how many GPU VMs you have, look for rows with a service type (column H) of <code>VMware VM</code> that include a GPU count (column W).</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -363,6 +338,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -381,7 +369,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

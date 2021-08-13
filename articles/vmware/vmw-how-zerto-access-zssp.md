@@ -2,17 +2,17 @@
 title: How to access the Zerto Self-Service Portal
 description: Describes how to access the Zerto Self-Service Portal (ZSSP) to manage Disaster Recovery to the Cloud, Journaling Protection and Workload Migration
 services: vmware
-author: Sue Highmoor
-reviewer: Gurcharan Sohal
-lastreviewed: 24/03/2020
+author: shighmoor
+reviewer: acirel
+lastreviewed: 04/06/2021
 
 toc_rootlink: How To
-toc_sub1:
+toc_sub1: Journaling Protection
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Access the Zerto Self-Service Portal
-toc_fullpath: How To/vmw-how-zerto-access-zssp.md
+toc_fullpath: How To/Journaling Protection/vmw-how-zerto-access-zssp.md
 toc_mdlink: vmw-how-zerto-access-zssp.md
 ---
 
@@ -34,8 +34,6 @@ The Zerto Self-Service Portal (ZSSP) provides access to all the tools you need t
 
 - Perform test and live failovers
 
-- Move VPGs to migrate workloads from your local environment to the UKCloud platform
-
 ### Intended audience
 
 To complete the steps in this guide you must have log in details for the appropriate ZSSP.
@@ -44,14 +42,14 @@ To complete the steps in this guide you must have log in details for the appropr
 
 The ZSSP you use depends on what you are trying to do:
 
-- To create a VPG for Journaling Protection, use the ZSSP in the zone where the VMs you are protecting are located
+- To create a VPG for Journaling Protection, use the ZSSP in the zone in which the VMs you are protecting are located.
 
     > [!NOTE]
-    > To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment. For the latest version of ZVM, contact UKCloud Customer Support.
+    > To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment. For the latest version of ZVM, contact UKCloud Support.
 
-- To perform a test or live failover for Disaster Recovery to the Cloud, Journaling Protection or Workload Migration, use the ZSSP in the zone where your target VDC (for recovery or migration) is located
+- To perform a test or live failover for Disaster Recovery to the Cloud, Journaling Protection or Workload Migration, use the ZSSP in the zone where your target VDC (for recovery or migration) is located.
 
-- To move a VPG for Workload Migration, use the ZSSP in the UKCloud zone where your target VDC is located
+- To move a VPG for Workload Migration, use the ZSSP in the UKCloud zone where your target VDC is located.
 
 ## Accessing the Zerto Self-Service Portal
 
@@ -60,11 +58,9 @@ If you want to create a VPG for Journaling Protection, run a test or live failov
 > [!NOTE]
 > If you want to create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the ZVM Web Client in your local environment.
 
-1. Log in to the UKCloud Portal.
+1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.md).
 
-    For detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
-
-2. In the navigation panel, expand **TOOLS** and then select **Journaling Protection (Zerto)**.
+2. In the navigation panel, expand **Tools** and then select **Journaling Protection (Zerto)**.
 
     ![Journaling Protection menu option in UKCloud Portal](images/vmw-portal-mnu-journaling.png)
 
@@ -74,14 +70,14 @@ If you want to create a VPG for Journaling Protection, run a test or live failov
 
 4. Enter your log in credentials, including your **ZORG** name.
 
-    ![Zerto log in page](images/zertomanupdate.png)
+    ![Zerto log in page](images/vmw-zerto-login.png)
 
     > [!NOTE]
     > These credentials are different from the ones you use to log in to the UKCloud Portal. If you're not sure what they are, raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti).
 
 5. After you log in, you'll see the main ZSSP page.
 
-    ![Zerto dashboard](images/zertopageupdate.png)
+    ![Main Zerto ZSSP page](images/vmw-zerto-homepage.png)
 
 ## Next steps
 

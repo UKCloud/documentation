@@ -3,8 +3,8 @@ title: How to move resources between OpenStack regions
 description: Helps you understand how you can move resources between OpenStack regions
 services: openstack
 author: Sue Highmoor
-reviewer: scassidy
-lastreviewed: 08/01/2020
+reviewer: bnicholls
+lastreviewed: 29/01/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -46,6 +46,8 @@ Corsham | 00005 (cor00005.cni.ukcloud.com) | 0000c-1
 &nbsp; | &nbsp; | 0000c-2
 Farnborough | 00006 (frn00006.cni.ukcloud.com) | 00021-1
 &nbsp; | &nbsp; | 00021-2
+Corsham 2 | 00005 (cor00005-2.cni.ukcloud.com) | 00026-1
+&nbsp; | &nbsp; | 00026-2
 
 Details correct at date of publication. Current details can be found in the UKCloud Knowledge Centre.
 
@@ -79,7 +81,14 @@ The following provides a code example of how to achieve this export and import o
 
 4. To download source image snapshot, enter the following command:
 
+        openstack image save <id-of-image-to-download> --file <image-name> 
+
+    If the image size is greater than the memory of the local host, the following may be required:
+       
         glance image-download --file <output-location> --progress <id-of-image-to-download>
+
+    > [!NOTE]
+    > As glance CLI commands don't work with SSO accounts, you'll need a keystone user to run this command. Contact UKCloud Support to request a keystone account, if necessary.
 
 5. To upload source image to the target region:
 
@@ -87,7 +96,7 @@ The following provides a code example of how to achieve this export and import o
 
     - Enter the following command:
 
-          glance image-create --progress --file <path-to-file-to-upload> --disk-format qcow2 --container-format bare --name <name-for-upload>
+          openstack image create  --file <path-to-file-to-upload> --disk-format qcow2 --container-format bare <name-for-upload>
 
 6. You can now start the migrated instance from file you've just uploaded.
 
@@ -123,11 +132,18 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
 2. Upload the source volume to the OpenStack Glance image repository using the following command:
 
-        cinder --os-volume-api-version 2 upload-to-image <volume id> <name>
+        openstack image create --volume <volume id> <name>
 
 3. Download the source volume image to your local device using the following command:
 
+        openstack image save <id-of-image-to-download> --file <image-name> 
+
+    If the image size is greater than the memory of the local host, the following may be required:
+        
         glance image-download --file <output-location> --progress <id-of-image-to-download>
+
+    > [!NOTE]
+    > As glance CLI commands don't work with SSO accounts, you'll need a keystone user to run this command. Contact UKCloud Support to request a keystone account, if necessary.
 
 4. To upload the source volume image to the target region:
 
@@ -135,7 +151,7 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
     - Enter the following command:
 
-          glance image-create --progress --file <path-to-file-to-upload> --disk-format qcow2 --container-format bare --name <name-for-upload>
+          openstack image create  --file <path-to-file-to-upload> --disk-format raw --container-format bare <name-for-upload>
 
 5. To create a new volume in the target region based upon the original source volume, enter the following command:
 
@@ -147,7 +163,7 @@ You can find more information about UKCloud's sites, regions and zones in the fo
 
 - [Understanding sites, regions and zones](../other/other-ref-sites-regions-zones.md)
 
-- [Sites, regions and zones map and reference table](../other/other-ref-srz-table.md)
+- [UKCloud services by region](../other/other-ref-services-by-region.md)
 
 You can find full details for the OpenStack command-line interface (OpenStack CLI) at:
 

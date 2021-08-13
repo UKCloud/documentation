@@ -8,7 +8,7 @@
     <title>How to configure VM update management on Azure Stack Hub </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure VM update management on Azure Stack Hub ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -213,16 +213,16 @@
 <li><p>Log in to the <a href="https://portal.frn00006.azure.ukcloud.com">Azure Stack Hub portal</a>.</p>
 </li>
 </ol>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Portal</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-a" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Portal</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1">PowerShell</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-b" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-b" data-tab="tabid-b" tabindex="-1">PowerShell</a>
 </li>
 </ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
+<section id="tabpanel_bHGHmlrG6S_tabid-a" role="tabpanel" data-tab="tabid-a">
 
 <ol start="6">
 <li><p>Navigate to the VM that you want to enable Azure Monitor on and under <em>Settings</em>, select the <em>Extensions</em> blade.</p>
@@ -244,7 +244,7 @@
 </li>
 </ol>
 </section>
-<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_bHGHmlrG6S_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
 
 <ol start="6">
 <li><p>Execute the following PowerShell script to setup the <strong>Azure Monitor Dependency Agent</strong> and <strong>Azure Monitor, Update and Configuration Management</strong> extensions.</p>
@@ -292,16 +292,16 @@
  $WorkspaceKey = "<output form="workspacekey" name="result" style="display: inline;">2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ==</output>"
  $PublicSettings = "{'workspaceId': '<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>'}"
  $ProtectedSettings = "{'workspaceKey': `'$WorkspaceKey`'}"
- $Location = (Get-AzureRmLocation).Location
+ $Location = (Get-AzLocation).Location
 
  # Get the virtual machine to apply the custom script extensions to
- $VM = Get-AzureRmVM -ResourceGroupName $ResourceGroupName -VMName $VMName
+ $VM = Get-AzVM -ResourceGroupName $ResourceGroupName -VMName $VMName
 
  # Obtain network security group, create the port 443 inbound network security group rule and apply the rule to it
- Get-AzureRmNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzureRmNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzureRmNetworkSecurityGroup
+ Get-AzNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzNetworkSecurityGroup
 
  # Deploy DependencyAgent extension
- Set-AzureRmVMExtension -ExtensionName "DependencyAgent" `
+ Set-AzVMExtension -ExtensionName "DependencyAgent" `
  -ResourceGroupName $VM.ResourceGroupName `
  -VMName $VM.Name `
  -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
@@ -311,7 +311,7 @@
  -Verbose
 
  # Deploy Microsoft.EnterpriseCloud.Monitoring extension
- Set-AzureRmVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
+ Set-AzVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
  -ResourceGroupName $VM.ResourceGroupName `
  -VMName $VM.Name `
  -Publisher "Microsoft.EnterpriseCloud.Monitoring" `
@@ -417,6 +417,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -435,7 +448,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

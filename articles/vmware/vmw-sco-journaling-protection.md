@@ -2,16 +2,16 @@
 title: Journaling Protection Service Scope
 description: Outlines important details regarding the Journaling Protection service, powered by Zerto
 services: vmware
-author: Steve Hall
+author: shall
 reviewer:
-lastreviewed: 24/07/2018 13:50:39
-toc_rootlink: Service Scope
+lastreviewed: 24/06/2021
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Journaling Protection Service Scope
-toc_fullpath: Service Scope/vmw-sco-journaling-protection.md
+toc_fullpath: Service Information/vmw-sco-journaling-protection.md
 toc_mdlink: vmw-sco-journaling-protection.md
 ---
 
@@ -39,7 +39,7 @@ Every few seconds a checkpoint is written to every journal for each VM in the VP
 
 UKCloud's Journaling Protection service is designed to provide customers with recovery points that are as little as seconds behind the running VM.
 
-UKCloud's standard journaling profile provides:
+UKCloud's standard journaling profiles provide:
 
 - Target RPO of 5 Minutes
 
@@ -57,7 +57,7 @@ Factors that can affect the RPO are:
 
 Additionally, the service will also alert if a customer's journal exceeds 75% in size of the original VM. This alert is utilised to understand if the customer's solution is being protected adequately.
 
-Journaling Protection only works for VM's currently on the platform -- it will only capture data whilst a VM is turned on. If a VM is deleted in vCloud Director -- Journaling Protection will IMMEDIATELY delete the associated journal.
+Journaling Protection only works for VMs currently on the platform and it will only capture data whilst a VM is turned on. If a VM is deleted in VMware Cloud Director, Journaling Protection will IMMEDIATELY delete the associated journal.
 
 ### What SLA do you offer on Journaling Protection?
 
@@ -67,7 +67,7 @@ UKCloud do not offer an SLA around the VMs protected by UKCloud's Journaling Pro
 
 The service is not backed by service credits.
 
-On occasion, planned maintenance may disrupt the operation of the Journaling Protection service. This may lead to the service being unavailable, or a temporary increase to the RPO a customer may be able to achieve on the platform.
+On occasion, Planned Maintenance may disrupt the operation of the Journaling Protection service. This may lead to the service being unavailable, or a temporary increase to the RPO a customer may be able to achieve on the platform.
 
 If there's a potential disruption, we'll highlight this to you via the service [status page](https://status.ukcloud.com/) and UKCloud Portal notifications system.
 
@@ -95,7 +95,7 @@ UKCloud have disabled some areas of the self-service portal as they are for serv
 
 The self-service portal provides live real time reporting of your solution and the current level of protection being provided to your vApp.
 
-The self-service portal will also provide customers with alerts should the target RPO of their VPG exceed the threshold, or the associated journal size grows beyond the expected size. In both these scenarios, UKCloud will also receive a platform monitoring alert and investigate the cause.
+The self-service portal will also provide customers with alerts should the target RPO of their VPG exceed the threshold, or the associated journal size grows beyond the expected size. In both these scenarios, UKCloud will also receive a platform monitoring alert and will perform further investigations if this frequently alerts.
 
 Additionally, the self-service portal provides visibility of an activity log of the actions against a particular VM and a list of any errors captured on the platform.
 

@@ -36,7 +36,7 @@ UKCloud for Microsoft Azure IaaS currently provides:
 
 #### Compute
 
-Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack Hub. Virtual machine sizes supported are:
+Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack Hub. Virtual machine sizes supported are:
 
 - General purpose: Basic A series, standard A & Av2 series, D & Dv2 series, DS & DSv2 series
 
@@ -60,13 +60,13 @@ You can find the full list of supported virtual machine sizes [here](https://doc
 
 #### Network
 
-- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure Stack Hub. This can be configured via the UI, API and other tooling.
+- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure Stack Hub. This can be configured via the UI, API and other tooling.
 
-- Load balancers (IPv4 only) - Deploy basic load balancers.
+- Load balancers (IPv4 only) - Deploy basic load balancers.
 
-- VPN gateway - Use the Azure Stack Hub VPN gateway to create site-to-site VPNs to remote infrastructure.
+- VPN gateway - Use the Azure Stack Hub VPN gateway to create site-to-site VPNs to remote infrastructure.
 
-- Routing - Configure basic custom defined routing on virtual networks.
+- Routing - Configure basic custom defined routing on virtual networks.
 
 ### What technology is UKCloud for Microsoft Azure based on?
 
@@ -169,13 +169,11 @@ The secure online [UKCloud Portal](https://portal.ukcloud.com/) provides most co
 
 ### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days' advance notice of planned maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
+### Can UKCloud provide notifications for service status and maintenance?
 
-### Can I configure email alerts from the portal?
-
-Yes, you can receive portal notifications to the email address associated with your UKCloud Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.
+Yes, you can subscribe to the [UKCloud Service Status page](https://status.ukcloud.com/) to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see [*How to subscribe to service status notifications*](../other/other-how-subscribe-service-status.md).
 
 ## Onboarding
 
@@ -208,8 +206,6 @@ For infrastructure solutions, you'll be billed by the smallest unit of time whic
 ### How can I pay for the services?
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
-
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### Are there any termination fees?
 

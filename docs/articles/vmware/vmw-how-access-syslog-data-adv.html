@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access syslog data for your advanced gateway </title>
+    <title>How to access syslog data for your edge gateway </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access syslog data for your advanced gateway ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="title" content="How to access syslog data for your edge gateway ">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-syslog-data-for-your-advanced-gateway">How to access syslog data for your advanced gateway</h1>
+<h1 id="how-to-access-syslog-data-for-your-edge-gateway">How to access syslog data for your edge gateway</h1>
 
 <h2 id="overview">Overview</h2>
 <p>Your NSX edge is globally configured to send syslog messages to a specific IP address (<code>100.127.255.250</code>). By configuring a new network or IP address within your virtual data centre (VDC) and deploying a collector with the syslog IP address, you can access your NSX edge syslog data. You can then use this data to check:</p>
@@ -131,9 +131,9 @@
 <ol>
 <li><p>Create a new routed network with the following details:</p>
 <ul>
-<li><p><strong>Org Network Name:</strong> Customer defined</p>
+<li><p><strong>Name:</strong> Customer defined</p>
 </li>
-<li><p><strong>Gateway:</strong> <code>100.127.255.249</code></p>
+<li><p><strong>Gateway:</strong> <code>100.127.255.249/29</code></p>
 </li>
 <li><p><strong>Subnet Mask:</strong> <code>255.255.255.248</code></p>
 </li>
@@ -175,10 +175,6 @@
 </li>
 <li><p>On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:</p>
 <ul>
-<li><p><strong>Applied On:</strong> <em><code>nft_network</code></em></p>
-</li>
-<li><p><strong>Name:</strong> Syslog traffic (or any other name you prefer)</p>
-</li>
 <li><p><strong>Network:</strong> <code>100.127.255.248/29</code></p>
 </li>
 <li><p><strong>Next Hop IP:</strong> The TRANSIT IP address of the syslog edge</p>
@@ -198,29 +194,22 @@
 <h2 id="enabling-logging">Enabling logging</h2>
 <p>After setting up your syslog collector, you need to make sure that your NSX edge sends network traffic to the log.</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC to which the NSX edge belongs.</p>
+<li><p>In VMware Cloud Director, select the VDC to which the NSX edge belongs.</p>
 </li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
 </li>
-<li><p>Select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services"></p>
+<li><p>Select the edge that you want to configure and click <strong>Services</strong>.</p>
 </li>
 <li><p>Select the <strong>Edge Settings</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-settings.png" alt="Edge Settings tab"></p>
 </li>
 <li><p>Click <strong>Edit Syslog Server</strong>.</p>
-<p><img src="images/vmw-vcd-btn-syslog-server.png" alt="Edit Syslog Server button"></p>
 </li>
 <li><p>In the <em>Edit Syslog Server</em> dialog box, in the <strong>Syslog Server</strong> field, enter the IP address of your syslog server then click <strong>Keep</strong>.</p>
-<p><img src="images/vmw-vcd-edit-syslog-server.png" alt="Edit Syslog Server dialog box"></p>
 </li>
 <li><p>Select the <strong>Firewall Rules</strong> tab.</p>
 </li>
-<li><p>For each firewall rule that you want to log, select the <strong>Enable logging</strong> check box.</p>
+<li><p>For each firewall rule that you want to log, select the <strong>Enable logging</strong> check box, then click <strong>Save changes</strong>.</p>
 <p><img src="images/vmw-vcd-logging-firewall.png" alt="Logging firewall rules"></p>
-</li>
-<li><p>When you're done, click <strong>Save changes</strong>.</p>
 </li>
 <li><p>Select the <strong>NAT</strong> tab.</p>
 </li>
@@ -260,6 +249,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -278,7 +280,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

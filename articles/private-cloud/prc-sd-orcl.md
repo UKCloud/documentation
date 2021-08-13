@@ -2,34 +2,24 @@
 title: Private Cloud for Oracle Software Service Definition
 description: Provides an overview of what is provided by the Private Cloud for Oracle Software service
 services: private-cloud
-author: Sue Highmoor
-reviewer:
-lastreviewed: 02/07/2019
-toc_rootlink: Service Definition
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 15/04/2021
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Private Cloud for Oracle Software Service Definition
-toc_fullpath: Service Definition/prc-sd-orcl.md
+toc_fullpath: Service Information/prc-sd-orcl.md
 toc_mdlink: prc-sd-orcl.md
 ---
 
 # Private Cloud for Oracle Software Service Definition
 
-## Why UKCloud?
-
-UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government’s Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.
-
-We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud’s technical experts.
-
-![UKCloud services](images/ukc-services.png)
-
 ## What is Private Cloud for Oracle Software?
 
-Private Cloud for Oracle Software enables you to have private implementations of Oracle’s Engineered Systems within UKCloud’s assured, sovereign datacentres, Crown Hosting Data Centres or even on-premise. It enables you to have a tailored Oracle environment specifically for the high performance or big data analytical platforms that are proprietary to Oracle, whilst connecting to workloads that you have within the rest of our multi-cloud ecosystem, including UKCloud for Oracle Software – a multi-tenant cloud option for Oracle VMs.
-
-For full information regarding this product, we have [Service Scopes](prc-sco-orcl.md) and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
+Private Cloud for Oracle Software enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premises. It enables you to have a tailored Oracle environment specifically for the high performance or big data analytical platforms that are proprietary to Oracle, while connecting to workloads that you have within the rest of our multi-cloud ecosystem, including UKCloud for Oracle Software – a multi-tenant cloud option for Oracle VMs.
 
 ## What the service can help you achieve
 
@@ -45,113 +35,41 @@ For full information regarding this product, we have [Service Scopes](prc-sco-or
 
 ## Product options
 
-The service is designed to be flexible and allows you to mix and match from a range of pre-defined options for each virtual machine and change them when required.
+The service is designed to be flexible and enables you to mix and match from a range of pre-defined options for each virtual machine and change them when required.
 
-### Security Domain
-
-Choose the security domain in which you want to run your application
-
-- Assured OFFICIAL - DDoS-protected internet, PSN, HSCN and Janet
-
-- Elevated OFFICIAL - PSN and RLI
-
-- Above OFFICIAL (UKCloudX) - SLI and Crypto
-
-### Workload Location
-
-Choose the place you want you Private Cloud for Oracle Software to be situated
-
-- UKCloud Hosted
-
-- Crown Hosting Data Centres
-
-- On-Premises
-
-### Oracle Engineered System
-
-Define the Oracle Engineered System to fit your requirements
-
-- Oracle Exadata
-
-- Oracle Private Cloud Appliance
-
-- Oracle Private Cloud at Customer
-
-- Other Oracle Engineered Systems
-
-### Packaging
-
-Decide if you want UKCloud to purchase, host and manage the Private Cloud on your behalf. Not all options are available for all Engineered Systems
-
-- All Inclusive - UKCloud will design, purchase and manage the Private Cloud on your behalf. Purchase options include Capex and Opex models
-
-- UKCloud Managed - You design and purchase the Private Cloud and UKCloud will manage it on your behalf
-
-- Customer Managed - You design and purchase the Private Cloud and host it in UKCloud but manage it yourself
+![Private Cloud for Oracle product options](images/prc-orcl-product-options-g12.png)
 
 ## Pricing and packaging
 
-Pricing for Private Cloud for Oracle Software starts at £2,000 per month, and full pricing with all options including licensing and connectivity available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+Private Cloud for Oracle Software pricing can be as low as £2,000 per month. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
-The security of our platform is our number one priority. We’ve always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
+The security of our platform is our number one priority. We've always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors and management system assessors. Details are available on the [UKCloud website](https://ukcloud.com/governance/).
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## An SLA you can trust
 
-We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
-
-<table>
-  <tr>
-    <th></th>
-    <th colspan="2">Private Cloud for Oracle Software</th>
-  <tr>
-    <td><b>Service level agreement</b></td>
-    <td colspan="2">99.99%</td>
-  </tr>
-  <tr>
-    <td><b>Portal level agreement</b></td>
-    <td colspan="2">99.90%</td>
-  </tr>
-  <tr>
-    <td><b>Measurement of SLA</b></td>
-    <td>Applies to All-Inclusive and UKCloud Managed</td>
-    <td>Availability of all or part of the Private Cloud for Oracle Software.</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Applies to UKCloud Hosted</td>
-    <td>Availability of power and cooling to your Private Cloud for Oracle infrastructure.</td>
-  </tr>
-  <tr>
-    <td><b>Key exclusions</b></td>
-    <td>Applies to All-Inclusive and UKCloud Managed</td>
-    <td>Deletion or modification of files by customer resulting in data loss.<br>Any access provided by you to your user base that takes the Oracle system beyond its recommended performance and connectivity thresholds.</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Applies to Customer Managed and UKCloud Managed</td>
-    <td>As above, plus; any loss of connectivity or data including data corruption as a result of you or your suppliers installing new or additional components into the system.</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Applies to UKCloud Hosted</td>
-    <td>As above, plus; any platform outages of the Private Cloud for Oracle Software infrastructure caused by the party managing the Oracle infrastructure hosted within UKCloud, or by failures at the physical or logical infrastructure layer outside of UKCloud’s responsibility.</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Applies to CHDC hosted or On-Premise</td>
-    <td>As above, plus; any platform outages of the Private Cloud for Oracle Software infrastructure caused by DC failures outside of UKCloud Control</td>
-  </tr>
-</table>
+We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the [*SLA definition*](../other/other-ref-sla-definition.md).
 
 ## The small print
 
-For full terms and conditions including onboarding and responsibilities, please refer to the [*Terms and conditions documents*](../other/other-ref-terms-and-conditions.md).
+Private Cloud for Oracle Software operates a minimum commitment of 24 months. Early exit charges apply if you exit this service whilst still within the minimum commitment term. If you exit the service within the minimum commit then UKCloud will bill all the remaining committed term's fees and asset costs within the final invoice.
+
+For full terms and conditions, including onboarding and responsibilities, refer to the [*Terms and conditions documents*](../other/other-ref-terms-and-conditions.md).
+
+For more information about this service, see the [*Service Scope*](prc-sco-orcl.md).
+
+## Why UKCloud?
+
+UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
+
+![UKCloud services](images/ukc-services-g12.png)
+
+We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
 ## Feedback
 

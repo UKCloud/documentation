@@ -8,7 +8,7 @@
     <title>Synchronous Protection Service Scope </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Synchronous Protection Service Scope ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -102,7 +102,7 @@
 <p>We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.</p>
 </div>
 <h2 id="about-synchronous-protection">About Synchronous Protection</h2>
-<p>The UKCloud for VMware Synchronous Protection service option is designed to offer geographical protection of your live environments across both of our sites (Farnborough and Corsham; 60 miles apart). To achieve this, we utilise synchronous replication between sites to ensure that any changes made to your environment are committed to arrays in both sites before the write is confirmed as being complete to the VM OS.</p>
+<p>The UKCloud for VMware Synchronous Protection service option is designed to offer geographical protection of your live environments across both of our sites (Farnborough and Corsham; 60 miles apart). To achieve this, we utilise synchronous replication between sites to ensure that any changes made to your environment are committed to arrays in both sites before the write is confirmed as being complete to the VM OS.</p>
 <p>Synchronous Protection provides a replica of data (for any data written, and flushed to disk) and then enables the ability to migrate your VMs between the sites while they are running, offering a greater level of protection for live environments.</p>
 <p>Your service is only ever presented out of one of these sites (a VM exists in only one location at a time), but a synchronous copy between the sites ensures that an exact copy is stored in the second site, which can be brought online, with zero data loss, in the event of a failure.</p>
 <h2 id="synchronous-protection-availability">Synchronous Protection availability</h2>
@@ -113,7 +113,7 @@
 <p>If a failure affects several VMs, they will be restarted in no particular order. We do not offer any controls to programmatically manage this - in most scenarios, the restart is automatic. If you need your VMs or vApps to be started in a particular order, we recommend that you restart them manually.</p>
 <p>Within each site we've architected a platform with a minimum of N+1 resilience, including routers and switches.</p>
 <h2 id="rpo-and-rto">RPO and RTO</h2>
-<p>Synchronous Protection provides a disaster recovery service with an RPO of almost 0 seconds. The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks.</p>
+<p>Synchronous Protection provides a disaster recovery service with an RPO of almost 0 seconds. The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks.</p>
 <p>For clarity, this product does not use asynchronous replication technologies. The recovery point is the last write to disk with no historical recovery points (there is no ability to &quot;roll back&quot; to a previous version). If asynchronous replication with historical recovery points is required, consider <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
 <h2 id="unplanned-failover-process">Unplanned failover process</h2>
 <p>We monitor the underlying physical infrastructure including the blades, routers and switches. There are a variety of scenarios that can trigger an unplanned failover event.</p>
@@ -244,12 +244,12 @@
 </tbody>
 </table>
 <h2 id="failover-timing">Failover timing</h2>
-<p>The amount of time it takes for your services to failover will depend on the failure scenario, but generally the failover will take as long as the VM needs to reboot plus a small amount of additional time to invoke the failover - about 45 seconds. Some scenarios, such as a &quot;split brain&quot;, can take longer, leading to an outage of two hours.</p>
+<p>The amount of time it takes for your services to failover will depend on the failure scenario, but generally the failover will take as long as the VM needs to reboot plus a small amount of additional time to invoke the failover - about 45 seconds. Some scenarios, such as a &quot;split brain&quot;, can take longer, leading to an outage of two hours.</p>
 <h2 id="alerting-and-reporting">Alerting and reporting</h2>
 <p>A failover is a rare event and will normally be a result of a Major Incident. In these cases, we communicate to the wider community via the appropriate Portal and, if you have already reported an incident, via the ticket or by phone.</p>
 <p>You can also receive alerts via email subscription or using the <a href="https://status.ukcloud.com/">Service Status page.</a></p>
 <p>We'll contact you after a failover to inform you that our actions are complete.</p>
-<p>We do not currently provide alerts when a VM is moved to a different site. However, you can check the location of your VMs. For more information, see <a href="vmw-how-use-vm-location.html"><em>How to use VM location in vCloud Director</em></a>.</p>
+<p>We do not currently provide alerts when a VM is moved to a different site. However, you can check the location of your VMs. For more information, see <a href="vmw-how-use-vm-location.html"><em>How to use VM location</em></a>.</p>
 <h2 id="networking">Networking</h2>
 <p>For internet‑bound traffic, we manage an autonomous Border Gate Protocol (BGP) service that enables us to intelligently redirect traffic without affecting your IP address allocation.</p>
 <p>The resilience of the external connectivity into the Elevated OFFICIAL security domain depends upon, and is generally provided by, the access network. Behind the router layer, we have designed a network that stretches between our two sites. This allows for network connectivity (if installed in one site) to remain if your virtual firewall and UKCloud's physical firewall are in separate and alternative sites.</p>
@@ -303,7 +303,7 @@
 <p>When we receive the request, we'll respond either accepting or rejecting it. Note that we require a minimum of five working days notice prior to the request.</p>
 <p>If we accept your request, we'll schedule the work to start at the time you specified as long as it is within office hours (0900 - 1730).</p>
 <h2 id="failover-testing-charges">Failover testing charges</h2>
-<p>We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf"><em>SFIA Rate Card</em></a> - level 3 Apply). Longer testing periods will need to be approved by UKCloud.</p>
+<p>We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the <a href="https://ukcloud.com/sfia">SFIA Rate Card</a> - level 3 Apply). Longer testing periods will need to be approved by UKCloud.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -315,6 +315,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -333,7 +346,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

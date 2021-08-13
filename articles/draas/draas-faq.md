@@ -2,9 +2,9 @@
 title: Disaster Recovery as a Service FAQs
 description: Frequently asked questions for Disaster Recovery as a Service (Powered by Zerto)
 services: draas
-author: Matt Warner
-reviewer: gmartin
-lastreviewed: 30/08/2019
+author: mwarner
+reviewer: acirel
+lastreviewed: 04/06/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -33,13 +33,13 @@ Yes, you can test running applications on the UKCloud platform to ensure failove
 
 ### What is the cost to test failover?
 
-When you perform a test recovery, any VMs recovered are charged at the prices associated with recovered VM sizes. See the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for details on VM prices. It's important to note that you will continue to be charged as long as the failover test is active. Once the failover test is stopped, you will no longer be charged for the VMs.
+When you perform a test recovery, any VMs recovered are charged at the prices associated with recovered VM sizes. See the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for details on VM prices. It's important to note that you will continue to be charged as long as the failover test is active. Once the failover test is stopped, you will no longer be charged for the VMs.
 
 ### What VMware and Hyper-V versions are supported for recovery on UKCloud?
 
-For information about the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform, see the [Interoperability Matrix for All Zerto Software Versions](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
+For information about the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (8.5U2) on the UKCloud platform, see the [Interoperability Matrix for All Zerto Software Versions](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
 
-The hypervisor management plane (such as VMware vCenter server) must be installed for Zerto to be compatible with your environment - this means that free hypervisor versions may not be supported.
+The hypervisor management plane (such as VMware vCenter server) must be installed for Zerto to be compatible with your environment. This means that free hypervisor versions may not be supported.
 
 ### Is the Zerto protection technology available for physical servers?
 
@@ -49,7 +49,7 @@ The Zerto technology that underpins the Disaster Recovery as a Service service o
 
 Yes, all licensing for Zerto used within Disaster Recovery as a Service is included.
 
-The price of Disaster Recovery as a Service is based on the storage tier that the VM is being replicated to. For more information please see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+The price of Disaster Recovery as a Service is based on the storage tier that the VM is being replicated to. For more information please see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### What connectivity options do I have?
 
@@ -69,7 +69,7 @@ Disaster Recovery as a Service addresses server-attached disks, however for appl
 
 ### How is it billed?
 
-The pricing for Disaster Recovery as a Service is simple. You only pay for the data you have allocated to your local VMs. So, for example if your existing VMs use 100GiB of UKCloud protected storage, that's all you'll pay UKCloud to protect based on the tier of storage and retention period chosen.
+The pricing for Disaster Recovery as a Service is simple. You only pay for the data you have allocated to your local VMs. So, for example if your existing VMs use 100GB of UKCloud protected storage, that's all you'll pay UKCloud to protect based on the tier of storage and retention period chosen.
 
 ### How do I modify replication in the UKCloud Elevated environment?
 
@@ -84,6 +84,20 @@ UKCloud will make the appropriate Zerto software versions available.
 ### Can I failback to my own data centre or third party data centre?
 
 Yes, once you've tested or performed a live failover you can failback onto your own infrastructure using the self-service Zerto Portal.
+
+### How do I ensure that I have complete recovery in the event of a disaster?
+
+- **Maintain a full copy of your mission critical workloads (data and applications) outside of your production environment** - If your workloads are running on UKCloud we recommend protection to the opposite site (Farnborough or Corsham) from where your production workload resides.
+
+- **Test DR regularly** – Remember your DR is only as good as your testing. Ensure tests are clearly defined to provide business confidence. UKCloud's DRaaS solution, powered by Zerto, simplifies testing and has no impact on production workloads.
+
+- **Ensure production changes are reflected in your DR plan** – If you make changes to existing workloads or add new workloads, ensure these VMs have been included within your virtual protection groups. Update tests to cover these changes.
+
+- **Document your DR plan** - And ensure documentation is easily accessible in the event of a disaster.
+
+- **Training** – Ensure knowledge is shared amongst your team. Get the team involved and make sure they're familiar with the recovery processes.
+
+For more guidance, see the Zerto and UKCloud [Disaster Recovery 101](https://info.ukcloud.com/ebook/zerto-disaster-recovery) ebook.
 
 ## Feedback
 

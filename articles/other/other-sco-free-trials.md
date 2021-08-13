@@ -39,9 +39,7 @@ Exclusions are:
 
 - Basic Managed VM
 
-- HSCN, unless you already have an HSCN connection
-
-- Services covered by the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
+- Services covered by the [SFIA Rate Card](https://ukcloud.com/sfia)
 
 - Dedicated Compute option in UKCloud for VMware
 
@@ -50,6 +48,8 @@ Exclusions are:
 - Private Cloud for Storage
 
 - Private Cloud for Oracle Software
+
+- Government network where Code of Connection is not held (for example, PSN or HSCN; see relevant connectivity FAQ)
 
 - Products in alpha or beta testing - these will be treated differently to free trials
 
@@ -68,6 +68,8 @@ Free trials are:
 - Not available for any products and services you are already consuming, unless you are testing a significantly different use case or, if you are a partner, testing a solution for a different customer
 
 - Trials are excluded from any SLA credits
+
+- Customers are liable for any software licensing even though the service is not in production (this includes software such as Microsoft Server OS, Microsoft SQL, and Microsoft Applications (including Office 365))
 
 ## How does the free trial work?
 

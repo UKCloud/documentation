@@ -20,7 +20,7 @@ toc_mdlink: vmw-vid-build-vdc-portal.md
 A short tutorial video that guides you through the process of building a VDC using the UKCloud Portal.
 
 > [!NOTE]
-> To build a VDC using the Portal, your compute service must exist in region 5 or 6. If your compute service is in a different region, contact UKCloud Support to request a new VDC.
+> To build a VDC using the Portal, your compute service must exist in region 5, 6, 13 or 14. If your compute service is in a different region, contact UKCloud Support to request a new VDC.
 
 <div class="row">
   <div class="col-md-10">

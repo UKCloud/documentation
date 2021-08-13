@@ -2,9 +2,9 @@
 title: How to use webhooks to receive service status notifications
 description: Describes how to processes HTTP POST updates provided by webhooks from the UKCloud Service Status page
 services: other
-author: Sue Highmoor
-reviewer:
-lastreviewed: 
+author: shighmoor
+reviewer: dselwood
+lastreviewed: 30/07/2021
 
 toc_rootlink: How To
 toc_sub1: 
@@ -27,7 +27,7 @@ This article provides sample PHP code that processes webhook HTTP POST updates f
 > [!IMPORTANT]
 > Input directly from the internet should never be trusted! Before implementing this code please ensure you have safely sanitized all user input and taken the relevant security precautions to prevent yourself from being hacked. UKCloud takes no responsibility for any damage caused to any system by use of this code.
 
-After you upload the file containing your code to your public web server, you can use the endpoint to subscribe to webhook notifications on the UKCloud Service Status page. For more information, see [*How to view UKCloud service status information*](other-how-view-status-info.md).
+After you upload the file containing your code to your public web server, you can use the endpoint to subscribe to webhook notifications on the UKCloud Service Status page. For more information, see [*Understanding the UKCloud Service Status page*](other-ref-status-page.md).
 
 ![Webhook notifications](images/other-status-webhook.png)
 

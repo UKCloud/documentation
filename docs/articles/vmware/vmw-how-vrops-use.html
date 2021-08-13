@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to access advanced monitoring using the vRealize Operations Tenant Appliance </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to access advanced monitoring using the vRealize Operations Tenant Appliance ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-vrops-use.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-access-advanced-monitoring-using-the-vrealize-operations-tenant-appliance">How to access advanced monitoring using the vRealize Operations Tenant Appliance</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud for VMware provides advanced monitoring, powered by the vRealize Operations (vROps) Tenant Appliance, as part of its Advanced Management bundle (additional charges apply). Using advanced monitoring, you can view metrics and reports relating to your UKCloud for VMware environment.</p>
+<p>Advanced monitoring enables you to:</p>
+<ul>
+<li><p>Monitor and manage workloads - Over 400 different metrics available for CPU, memory and storage</p>
+</li>
+<li><p>Identify workload optimisation options - Use analytics displaying the overall health of the platform to optimise your workloads</p>
+</li>
+<li><p>Rightsize your VMs - Identify if your VMs can be resized to reduce costs or improve performance</p>
+</li>
+<li><p>View optimisation history - Identify issues over a given time frame and make adjustments as necessary</p>
+</li>
+</ul>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To access advanced monitoring you must be a VMware Cloud Director administrator.</p>
+<h2 id="accessing-advanced-monitoring-metrics">Accessing advanced monitoring metrics</h2>
+<p>To access advanced monitoring metrics:</p>
+<ol>
+<li><p>In the VMware Cloud Director menu, select <strong>Operations Manager</strong>.</p>
+</li>
+<li><p>In the left navigation panel, under <em>Dashboards</em>, select <strong>Organization Overview</strong></p>
+<p><img src="images/vmw-vrops-mnu-overview.png" alt="Organization Overview menu option"></p>
+</li>
+<li><p>In the <em>Organization Overview</em> dashboard you can view basic metrics and reporting for your organisation, including CPU, memory and storage.</p>
+<p><img src="images/vmw-vrops-org-overview.png" alt="Basic metrics in the Organization Overview dashboard"></p>
+<p>The overview dashboard also provides:</p>
+<ul>
+<li><p>A summary of VDC, vApp and VM metrics</p>
+</li>
+<li><p>A list of recent alerts that have been generated</p>
+</li>
+<li><p>A set of key metrics</p>
+</li>
+</ul>
+<p><img src="images/vmw-vrops-org-overview-more.png" alt="vApp and VDC summary information in the Organization Overview dashboard"></p>
+<p>You can drill down into any of these for further details.</p>
+</li>
+<li><p>In the left navigation panel, select a different dashboard to drill down into metrics for:</p>
+<ul>
+<li><p>Organization VDCs</p>
+</li>
+<li><p>vApps</p>
+</li>
+<li><p>Virtual Machines</p>
+</li>
+</ul>
+<p>Double-click a VDC, vApp or VM to view metrics for a specific resource.</p>
+</li>
+</ol>
+<h2 id="creating-custom-reports-using-the-metric-selector">Creating custom reports using the Metric Selector</h2>
+<p>The vRealize Operations Tenant Appliance provides several out-of-the-box charts to get you started and provide the basic information you need to monitor your environment. However, to fully leverage the hundreds of metrics collected by vRealize Operations, you can create your own custom charts to view the exact information you need.</p>
+<p>To create custom reports:</p>
+<ol>
+<li><p>In the left navigation panel of the <em>Operations Manager</em>, under <em>Dashboards</em>, select <strong>Metric Selector</strong>.</p>
+<p><img src="images/vmw-vrops-mnu-metric-selector.png" alt="Metric Selector menu option in the Operations Manager"></p>
+</li>
+<li><p>At the top of the <em>Metric Selector</em>, choose the resources to include in your custom chart.</p>
+<p><img src="images/vmw-vrops-metric-selector-resources.png" alt="Select resources in the Metric Selector"></p>
+</li>
+<li><p>In the bottom half of the <em>Metric Selector</em>, in the left panel, select the metrics that you want to show for your selected resources.</p>
+</li>
+<li><p>Above the chart, select a <strong>Start Date</strong> and <strong>End Date</strong> to apply to your selected metrics.</p>
+<p><img src="images/vmw-vrops-metric-selector-metrics.png" alt="Select metrics and date range in the Metric Selector"></p>
+</li>
+<li><p>To export your custom chart, click the <strong>Export</strong> button.</p>
+<p><img src="images/vmw-vrops-metric-selector-btn-export.png" alt="Export button in the Metric Selector"></p>
+</li>
+</ol>
+<h2 id="viewing-monitoring-alerts">Viewing monitoring alerts</h2>
+<p>If objects in your environment are not behaving as expected, vRealize Operations creates alerts to inform you of potential issues so that you can take steps to remediate them.</p>
+<p>To view monitoring alerts:</p>
+<ol>
+<li><p>In the left navigation panel of the <em>Operations Manager</em>, under <em>Monitoring</em>, select <strong>Alerts</strong>.</p>
+<p><img src="images/vmw-vrops-mnu-alerts.png" alt="Alerts menu option"></p>
+</li>
+<li><p>The <em>Alerts</em> dashboard provides an overview of the alerts raised against your organisation.</p>
+<p><img src="images/vmw-vrops-alerts.png" alt="Alerts dashboard"></p>
+<p>You can drill down into any of these alerts for further details.</p>
+</li>
+</ol>
+<h2 id="accessing-advanced-monitoring-metrics-via-the-vrealize-operations-api">Accessing advanced monitoring metrics via the vRealize Operations API</h2>
+<p>vRealize Operations provides a REST API that you can use to programmatically interact with the collected metrics. The entry point URL for the API is:</p>
+<p><code>https://&lt;vrops-ip&gt;/suite-api/api</code></p>
+<p>For more information about the vRealize Operations API, see the <a href="https://docs.vmware.com/en/vRealize-Operations-Manager/8.1/com.vmware.vcom.api.doc/GUID-79DD20A4-2F38-4EAB-94BF-771DF2C596B1.html">vRealize Operations Manager API Programming Guide</a>.</p>
+<p>For a useful blog showing how to use the vRealize Operations API, see <a href="https://blogs.vmware.com/management/2019/02/extracting-data-from-vrealize-operations-with-the-rest-apis.html">https://blogs.vmware.com/management/2019/02/extracting-data-from-vrealize-operations-with-the-rest-apis.html</a>.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>If you encounter any problems accessing monitoring metrics and reports, see <a href="vmw-ref-vrops-trouble.html"><em>Troubleshooting the vRealize Operations Tenant Appliance for advanced monitoring</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

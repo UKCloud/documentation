@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>UKCloud for OpenShift lifecycle and patch management </title>
+    <title>UKCloud for Red Hat OpenShift lifecycle and patch management </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="UKCloud for OpenShift lifecycle and patch management ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="title" content="UKCloud for Red Hat OpenShift lifecycle and patch management ">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,25 +91,22 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="ukcloud-for-openshift-life-cycle-and-patch-management">UKCloud for OpenShift life cycle and patch management</h1>
+<h1 id="ukcloud-for-red-hat-openshift-life-cycle-and-patch-management">UKCloud for Red Hat OpenShift life cycle and patch management</h1>
 
 <h2 id="overview">Overview</h2>
 <p>This article outlines the lifecycle of UKCloud-supported OpenShift releases, along with UKCloud's approach to patching existing OpenShift environments so that you can effectively plan, deploy and support your infrastructure. The purpose of this article is to provide as much transparency as possible, but UKCloud may make exceptions from the process described should the need arise.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>Administrators and operators of the UKCloud for OpenShift service.</p>
+<p>Administrators and operators of the UKCloud for Red Hat OpenShift service.</p>
 <h2 id="lifecycle-management">Lifecycle management</h2>
 <p>Red Hat's official versioning for their OpenShift Container Platform is <em><strong>X.Y</strong></em> where <em><strong>X</strong></em> indicates the major version and <em><strong>Y</strong></em> indicates a minor version.</p>
-<p>Although Red Hat officially fully support each major <em><strong>X</strong></em> version of the OpenShift Container Platform for five years, as a service provider, this duration is too long for UKCloud to ensure the highest levels of security, performance and features. As such, UKCloud will officially support the current <strong><em>(X.Y)</em></strong> and previous two minor versions <strong><em>(X.Y-1) and (X.Y-2)</em></strong>. As minor versions are released roughly every six months, this provides the assurance that your environments will be fully supported by UKCloud for a minimum of twelve months.</p>
+<p>Although Red Hat officially fully supports each major <em><strong>X</strong></em> version of the OpenShift Container Platform for five years, as a service provider, this duration is too long for UKCloud to ensure the highest levels of security, performance and features. As such, UKCloud will officially support the current <strong><em>(X.Y)</em></strong> and previous minor version <strong><em>(X.Y-1)</em></strong>. As minor versions are released roughly every six months, this provides the assurance that your environments will be fully supported by UKCloud for a minimum of twelve months.</p>
+<p>To illustrate this, the green shaded areas in the image below, show which versions UKCloud would support for different released versions.</p>
 <p><img src="images/oshift-supported-versions.png" alt="Lifecycle"></p>
 <h3 id="upgrades-of-major-x-and-minor-y-versions">Upgrades of major <em><strong>X</strong></em> and minor <em><strong>Y</strong></em> versions</h3>
-<p>Currently, UKCloud does not offer in-place upgrades. This provides you with total flexiblility to upgrade at a time convenient to you, as well as providing the ability to test existing code and applications against any new versions prior to moving in to production.</p>
-<p>To facilitate any upgrades, UKCloud will deploy a new environment to customers based on the latest tested and approved release of OpenShift free of charge for thirty days in order to conduct any testing and migrate workloads over to the new environment. At the end of thirty days, UKCloud will shut down and remove the old environment to prevent any double-charging.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>UKCloud will actively work with you during this period to help ensure a smooth migration and will not turn off any old environments until until you advise us that it's safe to do so.</p>
-</div>
+<p>Currently, UKCloud does not offer in-place upgrades between major versions. Customers can trigger minor version upgrades inside the cluster at any time, providing total flexibility to upgrade at a convenient time.</p>
+<p>We require customers to stay on UKCloud-supported versions, so ask that upgrades are done in a timely manner to stay on a Y-1 release. For more information on performing updates and what happens if customers aren't on Y-1, see <a href="oshift-how-v4-update.html"><em>Supported customer update strategy for version 4 clusters</em></a>.</p>
 <h3 id="patching-within-current-version">Patching within current version</h3>
-<p>Red Hat routinely releases patches for vulnerabilities or issues identified within the currently supported version of OpenShift. Once UKCloud has reviewed and tested any patches as being fit for release in to production, we will advise you of the patch and schedule a convenient time to apply it.</p>
+<p>Red Hat routinely releases patches for vulnerabilities or issues identified within the currently supported version of OpenShift. UKCloud will release these patches to the stable update channel when they are confirmed to be fit for production workloads.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -121,6 +118,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -139,7 +149,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

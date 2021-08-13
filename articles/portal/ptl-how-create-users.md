@@ -2,9 +2,9 @@
 title: How to create a new user in the UKCloud Portal
 description: Shows how to create users in the UKCloud Portal
 services: portal
-author: Sue Highmoor
-reviewer: mperry
-lastreviewed: 13/11/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 09/04/2021
 
 toc_rootlink: How To
 toc_sub1: 
@@ -22,18 +22,17 @@ toc_mdlink: ptl-how-create-users.md
 
 You can create users in the UKCloud Portal to enable them to work with UKCloud services.
 
+### Intended audience
+
+To create Portal users, you must be a Portal administrator.
+
 ## Creating a new user
 
 To create a new user:
 
-1. Log in to the UKCloud Portal
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as an administrator.
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
-
-    > [!NOTE]
-    > You must log in as a Portal administrator.
-
-2. If necessary, switch to the account that creates the services you want the user to be able to access.
+2. If necessary, [*switch to the account*](ptl-how-switch-account.md) that creates the services you want the user to be able to access.
 
 3. In the navigation panel, expand **Contacts**, then select **All Contacts**.
 
@@ -43,7 +42,7 @@ To create a new user:
 
     ![Add new contact menu option](images/ptl-mnu-add-new-contact.png)
 
-5. On the *New Contact* page, provide the user's name and contact information, then click **Save**.
+5. On the **New Contact** tab, provide the user's name and contact information, then click **Save**.
 
     ![New Contact page](images/ptl-new-contact.png)
 
@@ -51,11 +50,11 @@ To create a new user:
 
     - [*How to manage My Calls users*](ptl-how-manage-my-calls.md)
 
-    - [*How to manage permissions for vCloud Director*](../vmware/vmw-how-manage-vcd-permissions.md)
+    - [*How to manage permissions for VMware Cloud Director*](../vmware/vmw-how-manage-vcd-permissions.md)
 
     - [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](../openstack/ostack-how-manage-accounts-portal.md)
 
-    - [*How to create new UKCloud for OpenShift users in the UKCloud Portal*](../openshift/oshift-how-create-users.md)
+    - [*How to manage OpenShift access in the UKCloud Portal*](../openshift/oshift-how-manage-user-access.md)
 
     - [*Portal permissions*](ptl-ref-overview-permissions.md)
 

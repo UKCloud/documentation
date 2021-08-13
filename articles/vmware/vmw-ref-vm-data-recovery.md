@@ -2,9 +2,9 @@
 title: Virtual machine data recovery options
 description: Provides an overview of the data recovery options available for your VMs
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+author: shighmoor
+reviewer: jpaddock
+lastreviewed: 28/06/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -81,7 +81,7 @@ In the card for the VM that you want to copy, select **Actions** then **Copy to*
 
 You should view backup as a disaster recovery mechanism, whereby you can restore entire environments or individual files in the event of the original becoming unavailable as a result of corruption or accidental deletion.
 
-You can add any VM to the automated snapshot backup schedule so that it is automatically backed up on a daily basis. You can choose to retain snapshot backups for either 14 or 28 days. Data is backed up at the hypervisor level and provides a crash‑consistent image.
+You can add any VM to the automated snapshot backup schedule so that it is automatically backed up on a daily basis (Snapshot Protection). You can choose to retain snapshot backups for either 14 or 28 days. Data is backed up at the hypervisor level and provides a crash‑consistent image.
 
 ### Use case
 

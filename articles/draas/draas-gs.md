@@ -4,7 +4,7 @@ description: Provides information to get up and running with Disaster Recovery a
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 11/11/2019
+lastreviewed: 27/05/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -40,7 +40,7 @@ You add disaster recovery protection to your VMs by adding them to a virtual pro
 
 ![Disaster recovery process](images/draas-zerto-draas.png)
 
-Each journal entry exists in the journal for 14 days (the journal history). When the journal history is reached, as new journal entries are created, older entries are written to the recovery VM's virtual disks.
+Each journal entry exists in the journal for 2, 7, 14 or 28 days (the journal history) depending on your selected service level. When the journal history is reached, as new journal entries are created, older entries are written to the recovery VM's virtual disks.
 
 Every few seconds, a checkpoint is written to every journal for each VM in the VPG to ensure crash-consistency between the VMs. If you need to recover a VM, you select a checkpoint to recover to. For example, in the case of a security incident, you could recover to a checkpoint from before the incident. During recovery, the VMs are created in a vApp on the recovery site and the recovery disks for each VM are attached to the recovered VM. Information in the journal is then promoted to the VM to bring it up to the date and time of the selected checkpoint.
 
@@ -74,24 +74,24 @@ You should consider the following:
 
 - Disaster Recovery as a Service captures every action. When a VM is deleted, the associated journal is also deleted.
 
-- We provide a single default service profile. The details of this are available in the DRaaS Service Scope. We do not currently provide the option for you to create custom profiles.
+- We provide service profiles for 2, 7, 14 and 28 day retention. The details of these are available in the [*Disaster Recovery as a Service Service Scope*](draas-sco.md). We do not currently provide the option for you to create custom profiles.
 
 ### System requirements
 
 To use DRaaS, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.
 
-The following table lists the requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform:
+The following table lists the requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (8.5U2) on the UKCloud platform:
 
 Product | Supported Version
 --------|------------------
 **Management Plane** | &nbsp;
-VMWare vCenter | vCenter Server 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1
-Microsoft SCVMM | 2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM<br>2016 and Server Core: RTM Rollup 3-5, 6
+VMware vCenter | vCenter Server 6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1
+Microsoft SCVMM | 2016 and Server Core: RTM Rollup 3-5, 6, 7, 8, 2019 and Server Core: RTM Rollup 1
 **Hosts** | &nbsp;
-VMWare ESXi | 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1
-Microsoft Hyper-V | 2012 R2 and Server Core<br>Windows 2016 Server
+VMware ESXi | 6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1
+Microsoft Hyper-V | Windows 2016 Server, Microsoft Hyper-V Server 2019
 **Virtual Machines Hardware Version** | &nbsp;
-VMWare | 7-11, 13, 14
+VMware | 7-9, 10-11, 13, 14, 15, 17, 18
 Hyper-V | Generation 1 & 2
 **Disaster Recovery as a Service** | &nbsp;
 **Connectivity** | &nbsp;
@@ -132,7 +132,7 @@ Before you can start using DRaaS, you need to prepare your local environment by:
 
 - Creating a secure site-to-site VPN between your local environment and the UKCloud platform
 
-For more information, see [*How to install and configure Zerto in your local environment*](../vmware/vmw-how-zerto-install-local.md).
+For more information, see [*How to install and configure Zerto in your local environment*](draas-how-zerto-install-local.md).
 
 ### Configure networking on the recovery site
 

@@ -2,9 +2,9 @@
 title: UKCloud services by region
 description: Shows the regions in each UKCloud site and lists the services and connectivity options that are available in each of those regions
 services: other
-author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 16/09/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 01/03/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,7 +17,17 @@ toc_mdlink: other-ref-services-by-region.md
 
 # UKCloud services by region
 
-## Farnborough
+## Overview
+
+This articles provides a quick reference for which services are available in the different UKCloud regions.
+
+## Sites, regions and zones
+
+The diagram below illustrates the locations of the different regions and zones on the UKCloud platform.
+
+![Sites, regions and zones on the UKCloud platform](images/other-sites-regions-zones.png)
+
+## Services in Farnborough
 
 ### Region 1 (00001)
 
@@ -44,20 +54,26 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownCo
 Security domain | Services | Zone
 -----------------|---------|-----
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone F
-&nbsp; | **Cloud GPU**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*Workloads:* Compute, Visualisation | Zone F
-&nbsp; | **UKCloud for Oracle Software**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*Storage:* Tier 1, Tier 2 | Zone 1A
 &nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone 21
-&nbsp; | **UKCloud for OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone 21
+&nbsp; | **UKCloud for Red Hat OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone 21
 &nbsp; | **UKCloud for Microsoft Azure**<br>*Connectivity:* Internet<br>IaaS services | Zone 22
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 12
-&nbsp; | **Cloud GPU**<br>*Connectivity:* PSN, HybridConnect<br>*Workloads:* Compute, Visualisation | Zone 12
-&nbsp; | **Cloud Storage** (All zones)<br>*Connectivity:* PSN | All zones
+&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN | All zones
 
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
-## Corsham
+### Region 13 (00013)
+
+Security domain | Services | Zone
+-----------------|---------|-----
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 2D
+
+*Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
+
+## Services in Corsham
 
 ### Region 2 (00002)
 
@@ -84,14 +100,21 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownCo
 Security domain | Service | Zone
 -----------------|--------|-----
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone B
-&nbsp; | **Cloud GPU**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*Workloads:* Compute, Visualisation | Zone B
 &nbsp; | **UKCloud for OpenStack** (OSP10)<br>*Connectivity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2 | Zone C
 &nbsp; | **UKCloud for OpenStack** (OSP13)<br>*Connectivity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2 | Zone 26
-&nbsp; | **UKCloud for OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone C
+&nbsp; | **UKCloud for Red Hat OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone C
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone D
-&nbsp; | **Cloud GPU**<br>*Connectivity:* PSN, HybridConnect<br>*Workloads:* Compute, Visualisation | Zone D
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN | All zones
+
+*Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
+
+### Region 14 (00014)
+
+Security domain | Services | Zone
+-----------------|---------|-----
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 2E
 
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access
@@ -101,8 +124,6 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownCo
 If you're interested in any of the following services, contact one of our Cloud Architects for further information:
 
 - Dedicated Compute
-
-- High Performance Compute
 
 - Private Cloud
 

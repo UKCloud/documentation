@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to backup and restore files and folders on Azure Stack Hub VMs using PowerShell </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to backup and restore files and folders on Azure Stack Hub VMs using PowerShell ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-configure-mars-backups-restore-powershell.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-automatically-backup-and-restore-files-and-folders-on-azure-stack-hub-vms-using-powershell">How to automatically backup and restore files and folders on Azure Stack Hub VMs using PowerShell</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Recovery Services vaults store all backups and recovery points you create over time, and contain the backup policy applied to backed up machines.</p>
+<p>This article explains how to set up the Microsoft Azure Recovery Services (MARS) agent to backup and restore files and folders from Azure Stack Hub VMs to Recovery Services vaults.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>By default a new Recovery Services vault will be created by the code below.
+If you do not wish to create one - you can use the ExistingVault switch in the <a href="(https://github.com/UKCloud/AzureStack/blob/master/Users/Extensions/Windows/AzureBackupConfig.ps1)">AzureBackupConfig script</a>.</p>
+</div>
+<h2 id="microsoft-documentation">Microsoft documentation</h2>
+<p><a href="https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix-mars-agent">MARS agent support matrix</a></p>
+<p><a href="https://docs.microsoft.com/en-us/azure/backup/backup-configure-vault">Backup Windows machines using MARS</a></p>
+<p><a href="https://docs.microsoft.com/en-us/azure/backup/backup-architecture#architecture-direct-backup-of-on-premises-windows-server-machines-or-azure-vm-files-or-folders">MARS agent backup process</a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To complete the steps in this article, you must have appropriate access to a subscription in both the public Azure and Azure Stack Hub portals.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The MARS agent is <strong>only</strong> supported on Windows VMs. Linux VMs are <strong>not</strong> supported.</p>
+</div>
+<h1 id="backup">Backup</h1>
+<h2 id="setup-the-mars-agent-using-powershell">Setup the MARS agent using PowerShell</h2>
+<p>You can find the script used in this article <a href="https://github.com/UKCloud/AzureStack/blob/master/Users/Extensions/Windows/AzureBackupConfig.ps1">here</a>. It provides docstrings on additional parameters that are not used in this article.</p>
+<h3 id="declare-variables">Declare variables</h3>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
+<td><form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>$RGName</td>
+<td>Name of the resource group in Azure Stack Hub which the VM resides in</td>
+<td><form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$VMName</td>
+<td>Name of the virtual machine in Azure Stack Hub</td>
+<td><form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"></form></td>
+</tr>
+<tr>
+<td>$CustomScriptFileName</td>
+<td>The name of the custom script file</td>
+<td><form oninput="result.value=customscriptfilename.value" id="customscriptfilename" style="display: inline;"><input type="text" id="customscriptfilename" name="customscriptfilename" style="display: inline;" placeholder="AzureBackupConfig.ps1"></form></td>
+</tr>
+<tr>
+<td>$FileUri</td>
+<td>URL to the custom script</td>
+<td><form oninput="result.value=fileuri.value;result2.value=fileuri.value" id="fileuri" style="display: inline;"><input type="text" id="fileuri" name="fileuri" style="display: inline;" placeholder="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1"></form></td>
+</tr>
+<tr>
+<td>$ClientId</td>
+<td>The application ID of a service principal with contributor permissions in Azure</td>
+<td><form oninput="result.value=clientid.value;result2.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"></form></td>
+</tr>
+<tr>
+<td>$ClientSecret</td>
+<td>The password of the service principal specified in the ClientId parameter</td>
+<td><form oninput="result.value=clientsecret.value;result2.value=clientsecret.value" id="clientsecret" style="display: inline;"><input type="text" id="clientsecret" name="clientsecret" style="display: inline;" placeholder="ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]="></form></td>
+</tr>
+<tr>
+<td>$TenantId</td>
+<td>The Tenant/Directory ID of your AAD domain</td>
+<td><form oninput="result.value=tenantid.value;result2.value=tenantid.value" id="tenantid" style="display: inline;"><input type="text" id="tenantid" name="tenantid" style="display: inline;" placeholder="contoso.onmicrosoft.com"></form></td>
+</tr>
+<tr>
+<td>$AzureResourceGroup</td>
+<td>The name of the resource group to be created in public Azure, where the Recovery Services vault will reside</td>
+<td><form oninput="result.value=azureresourcegroup.value;result2.value=azureresourcegroup.value" id="azureresourcegroup" style="display: inline;"><input type="text" id="azureresourcegroup" name="azureresourcegroup" style="display: inline;" placeholder="AzureStackBackupRG"></form></td>
+</tr>
+<tr>
+<td>$VaultName</td>
+<td>The name of the Recovery Services vault to be created in public Azure</td>
+<td><form oninput="result.value=vaultname.value;result2.value=vaultname.value" id="vaultname" style="display: inline;"><input type="text" id="vaultname" name="vaultname" style="display: inline;" placeholder="AzureStackVault"></form></td>
+</tr>
+<tr>
+<td>$EncryptionKey</td>
+<td>The encryption key to encrypt the backups with, must be at least 16 characters and no greater than 40 characters in length</td>
+<td><form oninput="result.value=encryptionkey.value;result2.value=encryptionkey.value" id="encryptionkey" style="display: inline;"><input type="text" id="encryptionkey" name="encryptionkey" style="display: inline;" placeholder="ExampleEncryptionKey"></form></td>
+</tr>
+<tr>
+<td>$AzureLocation</td>
+<td>The location in public Azure to deploy the Recovery Services vault</td>
+<td><form oninput="result.value=azurelocation.value;result2.value=azurelocation.value" id="azurelocation" style="display: inline;"><input type="text" id="azurelocation" name="azurelocation" style="display: inline;" placeholder="ukwest"></form></td>
+</tr>
+<tr>
+<td>$BackupDays</td>
+<td>A comma separated list of the days to backup on</td>
+<td><form oninput="result.value=Array.apply(null, backupdays.selectedOptions).map(function(option){return option.value;});result2.value=Array.apply(null, backupdays.selectedOptions).map(function(option){return option.value;});" id="backupdays" style="display: inline;"><select id="backupdays" name="backupdays" multiple=""><option value="Monday">Monday<option value="Tuesday">Tuesday<option value="Wednesday">Wednesday<option value="Thursday">Thursday<option value="Friday">Friday<option value="Saturday">Saturday<option value="Sunday">Sunday</select></form></td>
+</tr>
+<tr>
+<td>$BackupTime1</td>
+<td>The first time to backup at on the specified backup days</td>
+<td><form oninput="result.value=backuptime1.value;result2.value=backuptime1.value" id="backuptime1" style="display: inline;"><input type="time" id="backuptime1" name="backuptime1" style="display: inline;"></form></td>
+</tr>
+<tr>
+<td>$BackupTime2</td>
+<td>The second time to backup at on the specified backup days (leave blank if not required)</td>
+<td><form oninput="result.value=(backuptime2.value)?','+backuptime2.value:'';result2.value=(backuptime2.value)?','+backuptime2.value:'';" id="backuptime2" style="display: inline;"><input type="time" id="backuptime2" name="backuptime2" style="display: inline;"></form></td>
+</tr>
+<tr>
+<td>$BackupTime3</td>
+<td>The third time to backup at on the specified backup days (leave blank if not required)</td>
+<td><form oninput="result.value=(backuptime3.value)?','+backuptime3.value:'';result2.value=(backuptime3.value)?','+backuptime3.value:'';" id="backuptime3" style="display: inline;"><input type="time" id="backuptime3" name="backuptime3" style="display: inline;"></form></td>
+</tr>
+<tr>
+<td>$RetentionLength</td>
+<td>The number of days to keep each backup for</td>
+<td><form oninput="result.value=retentionlength.value;result2.value=retentionlength.value" id="retentionlength" style="display: inline;"><input type="text" id="retentionlength" name="retentionlength" style="display: inline;" placeholder="7"></form></td>
+</tr>
+<tr>
+<td>$FoldersToBackup</td>
+<td>A comma separated list of folders to backup. By default it will backup all drives</td>
+<td><form oninput="result.value=folderstobackup.value;result2.value=folderstobackup.value" id="folderstobackup" style="display: inline;"><input type="text" id="folderstobackup" name="folderstobackup" style="display: inline;" placeholder="C:\Users,C:\Temp"></form></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Create a <a href="azs-how-create-spn-powershell.html">public Azure and Azure Stack Hub service principal name (SPN)</a>.</p>
+</li>
+<li><p>From an elevated (administrator) PowerShell console, run either the custom script extension or PowerShell script to download the required module and execute the backup process. The PowerShell script must be run from inside the target VM, whereas the custom script extension can be executed from a local machine.</p>
+</li>
+</ol>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>As the MARS script will be pulled from GitHub the VM must have internet access.</p>
+</div>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Custom script extension</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">PowerShell script</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Spaces are not permitted within the individual script arguments passed to the Set-AzVMCustomScriptExtension cmdlet.</p>
+<p>For example, <code>Monday, Thursday</code> should be passed as <code>Monday,Thursday</code>.</p>
+<p>This also means that you cannot have any spaces in the folders to backup, e.g. <code>C:\My Folder</code>. If these are required, you must use the alternative PowerShell script and execute the code inside the VM itself.</p>
+</div>
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Add environment
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+# Login
+Connect-AzAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack Hub
+$Location = (Get-AzLocation).Location
+
+# Input variables
+$ClientId = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientSecret = '<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>'
+$TenantId = "<output form="tenantid" name="result" style="display: inline;">contoso.onmicrosoft.com</output>"
+$AzureResourceGroup = "<output form="azureresourcegroup" name="result" style="display: inline;">AzureStackBackupRG</output>"
+$VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
+$EncryptionKey = "<output form="encryptionkey" name="result" style="display: inline;">ExampleEncryptionKey</output>"
+$AzureLocation = "<output form="azurelocation" name="result" style="display: inline;">ukwest</output>"
+$BackupDays = "<output form="backupdays" name="result" style="display: inline;">Wednesday,Sunday</output>"
+$BackupTimes = "<output form="backuptime1" name="result" style="display: inline;">10:00</output><output form="backuptime2" name="result" style="display: inline;"></output><output form="backuptime3" name="result" style="display: inline;"></output>"
+$RetentionLength = "<output form="retentionlength" name="result" style="display: inline;">7</output>"
+$FoldersToBackup = "<output form="folderstobackup" name="result" style="display: inline;">C:\Users,C:\Temp</output>"
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">AzureBackupConfig.ps1</output>"
+$FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
+$ScriptArguments = "-ClientId $ClientId -ClientSecret $ClientSecret -TenantId $TenantId -AzureResourceGroup $AzureResourceGroup -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow"
+$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
+
+# Add custom script extension to existing Windows VM
+Write-Output -InputObject "Adding custom script extension to VM: $VMName."
+Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If the script fails and you need to see detailed error messages, the custom script extension logs can be found in the below folder on the virtual machine:</p>
+<pre><code class="lang-powershell">C:\Packages\Plugins\Microsoft.Compute.CustomScriptExtension\X.X.X\Status
+</code></pre>
+</div>
+</section>
+<section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="language-PowerShell"># Declare variables
+$ScriptPath = "C:\Users\$env:USERNAME\Downloads"
+$ScriptName = "AzureBackupConfig.ps1"
+
+$ClientId = "<output form="clientid" name="result2" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientSecret = '<output form="clientsecret" name="result2" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>'
+$TenantId = "<output form="tenantid" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
+$AzureResourceGroup = "<output form="azureresourcegroup" name="result2" style="display: inline;">AzureStackBackupRG</output>"
+$VaultName = "<output form="vaultname" name="result2" style="display: inline;">AzureStackVault</output>"
+$EncryptionKey = "<output form="encryptionkey" name="result2" style="display: inline;">ExampleEncryptionKey</output>"
+$AzureLocation = "<output form="azurelocation" name="result2" style="display: inline;">ukwest</output>"
+$BackupDays = "<output form="backupdays" name="result2" style="display: inline;">Wednesday,Sunday</output>"
+$BackupTimes = "<output form="backuptime1" name="result2" style="display: inline;">10:00</output><output form="backuptime2" name="result2" style="display: inline;"></output><output form="backuptime3" name="result2" style="display: inline;"></output>"
+$RetentionLength = "<output form="retentionlength" name="result2" style="display: inline;">7</output>"
+$FoldersToBackup = "<output form="folderstobackup" name="result2" style="display: inline;">C:\Users,C:\Temp</output>"
+$FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
+$ScriptArguments = "-ClientId $ClientId -ClientSecret $ClientSecret -TenantId $TenantId -AzureResourceGroup $AzureResourceGroup -VaultName $VaultName -EncryptionKey $EncryptionKey -AzureLocation $AzureLocation -BackupDays $BackupDays -BackupTimes $BackupTimes -RetentionLength $RetentionLength -FoldersToBackup $FoldersToBackup -BackupNow"
+
+# Download the AzureBackupConfig.ps1 script
+Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script..."
+$OutPath = Join-Path -Path $ScriptPath -ChildPath $ScriptName
+Invoke-WebRequest -Uri $FileUri -OutFile $OutPath
+
+# Run the AzureBackupConfig.ps1 script
+Write-Output -InputObject "Running AzureBackupConfig.ps1 with provided parameters."
+powershell -Command "$ScriptPath\$ScriptName $ScriptArguments"
+</code></pre>
+</section>
+</div>
+<h1 id="restore">Restore</h1>
+<h2 id="restore-files-and-folders-using-the-mars-agent-gui">Restore files and folders using the MARS agent GUI</h2>
+<ol>
+<li><p>On your desktop, click the <strong>Microsoft Azure Backup</strong> shortcut.</p>
+<p><img src="images/azs-msft-azure-backup-icon.png" alt="Microsoft Azure Backup icon"></p>
+</li>
+<li><p>In Microsoft Azure Backup, in the right menu under <em>Actions</em>, click <strong>Recover Data</strong>.</p>
+<p><img src="images/azs-msft-azure-backup-recover-data.png" alt="Microsoft Azure Recovery Services Agent recover data"></p>
+</li>
+<li><p>On the <em>Getting Started</em> page of the <em>Recover Data Wizard</em>, select <strong>This server</strong> and click <strong>Next</strong>.</p>
+<p><img src="images/azs-msft-azure-backup-recover-data-wizard-getting-started.png" alt="Microsoft Azure Recovery Services Agent recover data wizard getting started"></p>
+</li>
+<li><p>On the <em>Select Recovery Mode</em> page, select <strong>Individual files and folders</strong> and click <strong>Next</strong>.</p>
+<p><img src="images/azs-msft-azure-backup-recover-data-wizard-select-recovery-mode.png" alt="Microsoft Azure Recovery Services Agent recover data wizard select recovery mode"></p>
+</li>
+<li><p>On the <em>Select Volume and Date</em> page, select the:</p>
+<ul>
+<li><p><strong>Volume</strong> to restore files and folders from using the dropdown menu</p>
+</li>
+<li><p><strong>Date</strong> of the backup to restore from</p>
+</li>
+<li><p><strong>Time</strong> of the backup to restore from</p>
+<p><img src="images/azs-msft-azure-backup-recover-data-wizard-select-volume-date.png" alt="Microsoft Azure Recovery Services Agent recover data wizard select volume and date"></p>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Mount</strong>.</p>
+<p>The Microsoft Azure Recovery Services Agent will begin mounting the volume from the specific backup date and time.</p>
+</li>
+<li><p>On the <em>Browse and Recover Files</em> page, click <strong>Browse</strong> to view the contents of the mounted backup volume.</p>
+<p><img src="images/azs-msft-azure-backup-recover-data-wizard-browse.png" alt="Microsoft Azure Recovery Services Agent recover data wizard browse"></p>
+<p>A file explorer window will open showing your backed up files and folders.</p>
+<p><img src="images/azs-msft-azure-backup-recover-mounted-backup-volume.png" alt="Microsoft Azure Recovery Services Agent mounted backup volume"></p>
+<p><img src="images/azs-msft-azure-backup-recover-mounted-backup-volume-files.png" alt="Microsoft Azure Recovery Services Agent mounted backup volume files"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can drag and drop files and folders to restore them to a desired location on the VM.</p>
+<p><img src="images/azs-msft-azure-backup-recover-mounted-backup-volume-drag-drop.png" alt="Microsoft Azure Recovery Services Agent mounted backup volume drag and drop"></p>
+</div>
+</li>
+<li><p>When you're done, in the <em>Recover Data Wizard</em>, click <strong>Unmount</strong> to detach the backup volume from the VM.</p>
+<p><img src="images/azs-msft-azure-backup-recover-data-wizard-unmount.png" alt="Microsoft Azure Recovery Services Agent recover data wizard unmount"></p>
+</li>
+<li><p>In the <em>Confirm Recovery Volume Unmount</em> dialog box, click <strong>Yes</strong>.</p>
+<p><img src="images/azs-msft-azure-backup-recover-confirm-recovery-volume-unmount.png" alt="Microsoft Azure Recovery Services Agent recover confirm recovery volume unmount"></p>
+</li>
+<li><p>The recovery volume will now detach from the VM. You have successfully restored files and folders using the MARS agent GUI.</p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

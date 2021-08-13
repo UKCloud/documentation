@@ -8,7 +8,7 @@
     <title>Understanding PSN core services </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Understanding PSN core services ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,31 +94,29 @@
 <h1 id="understanding-psn-core-services">Understanding PSN core services</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This document outlines the responsibilities between you and UKCloud with regards to Public Services Network (PSN) core services, such as DNS and email filtering.</p>
+<p>This document outlines the responsibilities between you and UKCloud with regards to Public Services Network (PSN) core services, such as DNS.</p>
 <p>The intended audience is organisations who are either consuming or presenting a service over the PSN --- both PSN Assured and PSN Protected.</p>
 <p>To be connected to the PSN, you must have a PSN compliance certificate. For more information, see <a href="https://www.gov.uk/guidance/public-services-network-psn-compliance">https://www.gov.uk/guidance/public-services-network-psn-compliance</a>.</p>
 <p>In this article, we use PSN to represent both PSN Protected and PSN Assured unless otherwise specified.</p>
 <h2 id="psn-core-services">PSN core services</h2>
-<p>While you can procure PSN connectivity from multiple service providers, PSN core services are provided by Vodafone only. Traditionally, this was through the GSI Convergence Framework (GCF), whereby all core services were bundled into a single contract, regardless of whether you used them all.</p>
+<p>While you can procure PSN connectivity from multiple service providers, PSN core services are provided by Vodafone (gateways) and Nominet (DNS). Traditionally, this was through the GSI Convergence Framework (GCF), whereby all core services were bundled into a single contract, regardless of whether you used them all.</p>
 <p>Core services include:</p>
 <ul>
 <li><p>DNS</p>
-</li>
-<li><p>Network Time Protocol (NTP)</p>
-</li>
-<li><p>Email filtering and relay</p>
 </li>
 <li><p>Gateways to other networks, both government and public</p>
 </li>
 </ul>
 <p>UKCloud has procured PSN connectivity on your behalf, giving you access to the PSN through a shared bandwidth model. We'll supply you with PSN IP addresses, enabling you to present and consume services over the PSN.</p>
-<p>PSN connectivity <strong>does not</strong> grant you access to PSN core services. Access to these must be purchased as a separate contract with Vodafone, and is available through Government Digital Marketplace (G-Cloud) or via Direct Award through the Network Services Framework with Vodafone. If you are a commercial organisation then you can take a contract out directly with Vodafone for core services.</p>
+<p>PSN connectivity <strong>does not</strong> grant you access to PSN core services. Access to these must be purchased as a separate contract with Vodafone, and is available through Government Digital Marketplace (G-Cloud) or via Direct Award through the Network Services Framework with Vodafone. If you are a commercial organisation then you can take a contract out directly with Vodafone or Nominet for core services.</p>
 <h2 id="making-changes-to-psn-core-services">Making changes to PSN core services</h2>
-<p>When you have a contract with Vodafone for PSN core services, you can add and change these to suit your service.</p>
-<p>To add or change the core services, complete the appropriate forms and send them to Vodafone for approval to raise a change. Depending on the contract you have with Vodafone, you will need to raise these changes differently.</p>
+<p>When you have a contract with Vodafone or Nominet for PSN core services, you can add and change these to suit your service.</p>
+<p>To add or change the core services, complete the appropriate forms and send them to Vodafone or Nominet for approval to raise a change. Depending on the contract you have with Vodafone or Nominet , you will need to raise these changes differently.</p>
 <h3 id="gcf-contract-customers">GCF contract customers</h3>
 <p>If you have a GCF contract still in place with Vodafone, complete and submit the GCF change form:</p>
 <p><a href="https://www.gov.uk/government/publications/gcf-customer-change-form">https://www.gov.uk/government/publications/gcf-customer-change-form</a></p>
+<p>For DNS changes a ticket should be raised with Nominet:</p>
+<p><a href="https://nominetpsn.atlassian.net">https://nominetpsn.atlassian.net</a></p>
 <h3 id="g-cloud-direct-award-or-commercial-contract-customers">G-Cloud, direct award or commercial contract customers</h3>
 <p>If you have contracted through G-Cloud, have been directly awarded a contract or have a commercial contract with Vodafone, complete and submit the PSN change forms:</p>
 <p><a href="https://www.gov.uk/government/publications/psn-dns-change-forms">https://www.gov.uk/government/publications/psn-dns-change-forms</a></p>
@@ -127,28 +125,27 @@
 <p>As per GDS guidance, requests for new PSN domain names must be accompanied by the PSN domain name authorisation form. This needs to be completed by the domain contract owner.</p>
 <p>All requests for changes to the core services must come from the core service contract owner. If anyone else requests changes then they will be referred to the contract owner, which could cause a delay.</p>
 <h3 id="customer-responsibility">Customer responsibility</h3>
-<p>When you're given PSN connectivity by UKCloud, we'll provide you with all the IP information you require to submit a PSN core service change request to Vodafone. You are responsible for the creation of domain names and additional information that may need to be submitted in the change form.</p>
+<p>When you're given PSN connectivity by UKCloud, we'll provide you with all the IP information you require to submit a PSN core service change request to Vodafone or Nominet. You are responsible for the creation of domain names and additional information that may need to be submitted in the change form.</p>
 <p>You are responsible for completing and submitting the PSN core service change forms.</p>
 <h3 id="ukclouds-responsibility">UKCloud's responsibility</h3>
-<p>UKCloud has no responsibility for facilitating a contract between Vodafone and our customers or partners for PSN core services. You must approach and contract with Vodafone directly.</p>
+<p>UKCloud has no responsibility for facilitating a contract between Vodafone or Nominet and our customers or partners for PSN core services. You must approach and contract with Vodafone or Nominet directly.</p>
 <p>UKCloud has no responsibility for completing or submitting any change forms for changes to PSN core services on behalf of customers or partners. We may help you complete the form but you are ultimately responsible for validating and submitting the forms. UKCloud does not accept responsibility for incorrect information supplied within the change forms.</p>
 <h3 id="complex-responsibility">Complex responsibility</h3>
 <p>In certain circumstances, there may be complex aspects to responsibility:</p>
 <ul>
-<li><p><strong>Scenario 1</strong> - If a non-government organisation has not got a direct contract with Vodafone, but is contracted through a managed service provider, then responsibilities may be shared between the organisation and MSP.</p>
+<li><p><strong>Scenario 1</strong> - If a non-government organisation has not got a direct contract with Vodafone or Nominet, but is contracted through a managed service provider, then responsibilities may be shared between the organisation and MSP.</p>
 <p>Both parties may need to complete the form, however as per GDS guidance, it is ultimately the domain contract owner who owns the validation and submission of the forms. The domain contract should sit with the non-government organisation and not the managed service provider.</p>
 </li>
-<li><p><strong>Scenario 2</strong> - If a non-government organisation is currently hosted on a different hosting provider, and is thinking about moving to UKCloud, then they need to consider their current contracting relationship for core services with Vodafone.</p>
-<p>If the non-government organisation has no direct contract with Vodafone but is contracted through the hosting provider, then when they move to UKCloud they may need to take out a new contract directly with Vodafone for PSN core services.</p>
+<li><p><strong>Scenario 2</strong> - If a non-government organisation is currently hosted on a different hosting provider, and is thinking about moving to UKCloud, then they need to consider their current contracting relationship for core services with Vodafone or Nominet.</p>
+<p>If the non-government organisation has no direct contract with Vodafone or Nominet but is contracted through the hosting provider, then when they move to UKCloud they may need to take out a new contract directly with Vodafone or Nominet for PSN core services.</p>
 <p>Another consideration is the domain contract ownership. As only the domain contract owner can validate and submit change requests, it's important to ensure that the domain is owned by the non-government organisation, and not the hosting provider. If the hosting provider is the current domain contract owner, then the non-government organisation should work with the hosting provider to change the ownership before moving services to UKCloud.</p>
 </li>
 </ul>
 <h2 id="new-psn-dns">New PSN DNS</h2>
-<p>A new PSN DNS is being developed that will be free at the point of use for PSN users, relieving them of the responsibility to contract with Vodafone for DNS services. This is currently not fully operational so should not yet be relied upon, however it may be worth signing up to have early access to it upon availability.</p>
+<p>A new PSN DNS is being developed that will be free at the point of use for PSN users, relieving them of the responsibility to contract with Nominet for DNS services.</p>
 <p>For more information visit <a href="https://www.gov.uk/guidance/introducing-the-uk-public-sector-dns">https://www.gov.uk/guidance/introducing-the-uk-public-sector-dns</a></p>
 <h2 id="more-information">More information</h2>
 <p>For more information about PSN, see the <a href="conn-faq-psn.html"><em>Public Services Network (PSN) FAQs</em></a>.</p>
-<p>For an overview of the future of PSN, including updates about email and DNS services, see our blog post, <a href="https://ukcloud.com/hub/news/the-new-future-of-psn/"><em>The new future of PSN</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -160,6 +157,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -178,7 +188,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

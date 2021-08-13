@@ -2,9 +2,9 @@
 title: Hystax Acura Workload Migration Service Scope
 description: Outlines important details regarding Hystax Acura Workload Migration
 services: openstack
-author: Steve Dixon
-reviewer:
-lastreviewed: 28/02/2020
+author: sdixon
+reviewer: bnicholls
+lastreviewed: 19/03/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:

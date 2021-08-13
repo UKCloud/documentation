@@ -4,7 +4,7 @@ description: Outlines how to move VMware workloads between regions on the UKClou
 services: enablement
 author: shall
 reviewer: 
-lastreviewed: 13/03/2020
+lastreviewed: 03/03/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -30,7 +30,7 @@ The Data Transfer – Region to Region service enables customers to move their U
 
 ## Application process
 
-Customers wanting to transfer UKCloud for VMware workloads between regions on the UKCloud platform will need to raise a service request for the Zerto tool to be implemented in their environment. To commence the service, there's a ticket template available under service requests within My Calls.
+Customers wanting to transfer UKCloud for VMware workloads between regions on the UKCloud platform will need to raise a service request for the Zerto tool to be implemented in their environment. To commence the service, raise a Service Request within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Implementation
 
@@ -51,7 +51,7 @@ If you need to transfer workloads between security domains (Assured and Elevated
 
 The actual Zerto transfer service will be provided without charge for the transfer of workloads, with the following restrictions:
 
-- The service is free of charge for the first 10 working days. After 10 working days, the service will be charged as per the standard Journaling Protection costs in the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+- The service is free of charge for the first 10 working days. After 10 working days, the service will be charged as per the standard Journaling Protection costs in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 - Customers are required to inform UKCloud via a service request to confirm that the transfer is complete. The service will then be stopped, which will prevent further billing.
 
@@ -61,7 +61,7 @@ The actual Zerto transfer service will be provided without charge for the transf
 
 - Once the Zerto tool has been provisioned, customers are responsible for the selection of VMs and data, and the actual transfer. If required, UKCloud can provide assistance via our Professional Services team, which can be arranged via your Service Delivery Manager.
 
-The [*How to migrate your workloads between UKCloud regions*](../vmware/vmw-how-zerto-migrate-between-regions.md) article on the Knowledge Centre provides all the information you'll require to understand the tool as well as configuration details and step-by-step instructions.
+The [*How to migrate your workloads between UKCloud regions*](../enablement/enbl-how-zerto-migrate-between-regions.md) article on the Knowledge Centre provides all the information you'll require to understand the tool as well as configuration details and step-by-step instructions.
 
 ## Service availability
 
@@ -71,7 +71,7 @@ As a free service for data transfer between regions, customers are not entitled 
 
 The following documents contain more information about the Zerto and the service options:
 
-- [*How to migrate your workloads between UKCloud regions*](../vmware/vmw-how-zerto-migrate-between-regions.md)
+- [*How to migrate your workloads between UKCloud regions*](../enablement/enbl-how-zerto-migrate-between-regions.md)
 
 - [*How to access the Zerto Self-Service Portal*](../vmware/vmw-how-zerto-access-zssp.md)
 
@@ -81,4 +81,4 @@ The following documents contain more information about the Zerto and the service
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

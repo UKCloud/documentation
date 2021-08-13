@@ -8,7 +8,7 @@
     <title>Secure Remote Access Service Scope </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Secure Remote Access Service Scope ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -110,7 +110,7 @@
 <p>Both options require the same submission documentation to enable UKCloud to provision the service. This is documented in <a href="../cdsz/cdsz-ref-application-process.html"><em>UKCloud Cross Domain Security Zone application process</em></a>.</p>
 <h2 id="service-architecture">Service architecture</h2>
 <p>SRA utilizes Cisco AnyConnect as the underlying VPN technology. UKCloud manages the VPN termination and the certificate generation and revocation. The customer will manage the installation of Cisco AnyConnect and installing the certificates onto authorized devices.</p>
-<p>The SRA walled garden is a VMware-only environment, utilizing VMware vCloud Director as the management orchestrator for the service. An SRA walled garden is a virtual datacenter (VDC) in which you can build virtual machines and virtual networks in order to inspect and protect data moving between Assured and Elevated cloud environments. You can find more information about architecting an SRA environment in the <a href="sra-gs.html"><em>Getting Started Guide for Secure Remote Access</em></a>.</p>
+<p>The SRA walled garden is a VMware-only environment, utilizing VMware Cloud Director as the management orchestrator for the service. An SRA walled garden is a virtual datacenter (VDC) in which you can build virtual machines and virtual networks in order to inspect and protect data moving between Assured and Elevated cloud environments. You can find more information about architecting an SRA environment in the <a href="sra-gs.html"><em>Getting Started Guide for Secure Remote Access</em></a>.</p>
 <p>An SRA walled garden is a VMware only environment, however you can connect it to non-VMware cloud environments within UKCloud, such as Oracle or OpenStack.</p>
 <p>UKCloud will provision one free-of-charge Small VM within the SRA walled garden to allow customers access to the Elevated Portal in order to manage the SRA walled garden. Customers may choose to delete this VM once they have configured their own access VM.</p>
 <h2 id="storage-options">Storage options</h2>
@@ -163,7 +163,7 @@
 <ul>
 <li><p>Internally this includes, but isn't limited to, the vSphere and ESX versions, and the hardware version of the platform.</p>
 </li>
-<li><p>Externally this includes the available versions of the edge gateway and vCloud Director.</p>
+<li><p>Externally this includes the available versions of the edge gateway and VMware Cloud Director.</p>
 </li>
 </ul>
 </li>
@@ -176,7 +176,7 @@
 <ul>
 <li><p>You can specify Farnborough or Corsham as the site where you'd like to have your SRA service provisioned. We'll try to accommodate requests and will advise you if we are unable do so.</p>
 </li>
-<li><p>You can set affinity or anti-affinity rules through vCloud Director so that VMs do, or do not, run on the same physical host.</p>
+<li><p>You can set affinity or anti-affinity rules through VMware Cloud Director so that VMs do, or do not, run on the same physical host.</p>
 </li>
 </ul>
 <h2 id="operating-systems">Operating systems</h2>
@@ -188,18 +188,18 @@
 <li><p>Red Hat Enterprise Linux licensing</p>
 </li>
 </ul>
-<p>For the latest available licences, see the <a href="https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
+<p>For the latest available licences, see the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <p>You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.</p>
 <p>For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.</p>
 <h3 id="vm-server-images">VM server images</h3>
-<p>We provide base VM images for the operating systems for which we provide licensing. You can access these from vCloud Director.</p>
+<p>We provide base VM images for the operating systems for which we provide licensing. You can access these from VMware Cloud Director.</p>
 <p>You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.</p>
 <h3 id="update-services">Update services</h3>
 <p>We make update repositories available for all software for which we provide licensing. We don't provide software update facilities for non-UKCloud licensed software.</p>
 <h3 id="anti-virus">Anti-virus</h3>
 <p>We do not provide anti-virus software as part of the service.</p>
 <h2 id="networks">Networks</h2>
-<p>From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the vCloud Director tenant portal or vCloud API.</p>
+<p>From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the VMware Cloud Director tenant portal or vCloud API.</p>
 <p>You can find more information about networking within the SRA walled garden in the <a href="../cdsz/cdsz-gs-walled-garden.html"><em>Getting Started Guide for the Cross Domain Security Zone Walled Garden</em></a>.</p>
 <h2 id="edge-gateway">Edge gateway</h2>
 <ul>
@@ -221,9 +221,9 @@
 <h2 id="platform-management">Platform management</h2>
 <p>Users can access, manage and view the SRA service, accessing only those features allowed by their role, in any of the following ways:</p>
 <ul>
-<li><p><strong>vCloud Director API.</strong> Enables the programmatic creation and management of VMs inside the SRA walled garden.</p>
+<li><p><strong>vCloud API.</strong> Enables the programmatic creation and management of VMs inside the SRA walled garden.</p>
 </li>
-<li><p><strong>vCloud Director tenant portal.</strong> Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions).</p>
+<li><p><strong>VMware Cloud Director tenant portal.</strong> Provides a graphical interface to access the VMware Cloud Director environment (depending on assigned permissions).</p>
 </li>
 <li><p><strong>UKCloud Portal.</strong> Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to incident and request management is also possible through the Portal.</p>
 </li>
@@ -274,17 +274,7 @@
 <p>UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the Knowledge Centre.</p>
 <p>UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.</p>
 <h2 id="service-constraints">Service constraints</h2>
-<p>UKCloud will adhere to the following in terms of maintenance windows:</p>
-<ul>
-<li><p><em>Planned Maintenance</em> means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide affected customers with at least fourteen (14) days' notice of the Planned Maintenance.</p>
-<p>If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered.</p>
-</li>
-<li><p><em>Emergency Maintenance</em> means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall:</p>
-<p>a) provide affected customers with at least six (6) hours' advance notice and</p>
-<p>b) carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.</p>
-<p>If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation.</p>
-</li>
-</ul>
+<p>For information about Planned and Emergency Maintenance, see <a href="../other/other-ref-maintenance-windows.html"><em>Understanding UKCloud service maintenance windows</em></a>.</p>
 <h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
 <p>The following documents contain more information about SRA and the service options:</p>
 <ul>
@@ -306,6 +296,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -324,7 +327,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

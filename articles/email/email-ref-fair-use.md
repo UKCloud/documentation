@@ -2,9 +2,9 @@
 title: Email and Collaboration fair use policy
 description: Outlines what is considered to be fair use of UKCloud's Email and Collaboration service
 services: email
-author: Sue Highmoor
-reviewer:
-lastreviewed: 30/11/2018 09:38:50
+author: shighmoor
+reviewer: shansford
+lastreviewed: 15/12/2020 
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -17,6 +17,9 @@ toc_mdlink: email-ref-fair-use.md
 ---
 
 # Email and Collaboration fair use policy
+
+> [!IMPORTANT]
+> Email and Collaboration has been retired from sale by UKCloud. We will continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing Email and Collaboration customers with access to support documentation and we will continue to update it as required. For new requests, contact your Account Manager or Service Delivery Manager.
 
 ## Overview
 

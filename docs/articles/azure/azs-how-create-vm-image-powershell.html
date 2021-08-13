@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a custom image from a VM on Azure Stack Hub using PowerShell </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a custom image from a VM on Azure Stack Hub using PowerShell ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-vm-image-powershell.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-custom-image-from-a-vm-on-azure-stack-hub-using-powershell">How to create a custom image from a VM on Azure Stack Hub using PowerShell</h1>
+
+<h2 id="overview">Overview</h2>
+<p>You can create an image resource from a generalised virtual machine (VM) that is stored as either a managed disk or an unmanaged disk in a storage account. You can then use the image to create multiple VMs.</p>
+<p>This article explains how to create a custom image from a VM on Azure Stack Hub, which you can then use to deploy other VMs.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.</p>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack Hub user's PowerShell environment</a>.</p>
+<h2 id="high-level-process-overview">High-level Process Overview</h2>
+<ol>
+<li><p>Generalise the virtual machine.</p>
+</li>
+<li><p>Create a new resource group.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The image <strong>must</strong> be created in the same resource group that you are planning to create the new virtual machine in.</p>
+<p>In other words, we are creating a <strong>new resource group</strong> to contain the image and the new virtual machine.</p>
+</div>
+</li>
+<li><p>Create a custom image from the virtual machine, ensuring that it is created in the new resource group.</p>
+</li>
+<li><p>Delete the virtual machine.</p>
+</li>
+<li><p>Deploy a second virtual machine from the image, which can only be created in the new resource group.</p>
+</li>
+<li><p>Delete the resource group which contained the original virtual machine.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>The last step is only applicable if there are no other resources, such as other virtual machines, in the original resource group.</p>
+</div>
+</li>
+</ol>
+<h2 id="generalise-your-vm">Generalise your VM</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Once you've generalised a VM, you <strong>cannot</strong> log back into it.</p>
+</div>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-a" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Windows</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-b" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-b" data-tab="tabid-b" tabindex="-1">Linux</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_tabid-a" role="tabpanel" data-tab="tabid-a">
+
+<ol>
+<li><p>Log in to your Windows VM using Remote Desktop Protocol (RDP).</p>
+</li>
+<li><p>Open a PowerShell console or command prompt as administrator and run the following command: <code>C:\Windows\System32\Sysprep\sysprep.exe</code></p>
+</li>
+<li><p>In the <em>System Preparation Tool</em>, from the <strong>System Cleanup Action</strong> list, select <strong>Enter System Out-of-Box Experience (OOBE)</strong>.</p>
+</li>
+<li><p>Ensure the <strong>Generalise</strong> check box is selected.</p>
+</li>
+<li><p>From the <strong>Shutdown Options</strong> list, select <strong>Shutdown</strong>.</p>
+<p>See the image below for an example:</p>
+<p><img src="images/azs-windows-sys-prep.png" alt="Windows sysprep example"></p>
+</li>
+<li><p>Click <strong>OK</strong> and wait for the VM to shutdown. Your RDP session will be closed.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The generalisation process is complete once your VM is in a stopped state.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="tabpanel_bHGHmlrG6S_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li><p>Log in to your Linux VM using Secure Shell (SSH).</p>
+</li>
+<li><p>Run the following command: <code>sudo su</code> and enter your user password if prompted.</p>
+</li>
+<li><p>Run the following command: <code>waagent -deprovision+user -force</code></p>
+</li>
+<li><p>Wait a minute for the generalisation process to complete before continuing.</p>
+</li>
+</ol>
+</section>
+</div>
+<h2 id="creating-the-image">Creating the image</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Capturing a VM image will make the VM unusable and <strong>cannot</strong> be undone.</p>
+</div>
+<h3 id="declare-variables">Declare variables</h3>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ArmEndpoint</td>
+<td>Azure Resource Manager endpoint for Azure Stack Hub</td>
+<td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>$RGName</td>
+<td>Name of the resource group</td>
+<td><form oninput="result.value=resourcegroup.value;result2.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$NewRGName</td>
+<td>Name of the resource group for the virtual machine to be created within</td>
+<td><form oninput="result.value=newresourcegroup.value;result2.value=newresourcegroup.value" id="newresourcegroup" style="display: inline;"><input type="text" id="newresourcegroup" name="newresourcegroup" style="display: inline;" placeholder="MyNewResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$VMName</td>
+<td>Name of the virtual machine to be created</td>
+<td><form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"></form></td>
+</tr>
+<tr>
+<td>$ImageName</td>
+<td>Name of the new custom image to be created</td>
+<td><form oninput="result.value=imagename.value;result2.value=imagename.value" id="imagename" style="display: inline;"><input type="text" id="imagename" name="imagename" style="display: inline;" placeholder="MyCustomImage"></form></td>
+</tr>
+<tr>
+<td>$NewVMName</td>
+<td>Name of the new virtual machine to be created</td>
+<td><form oninput="result.value=newvmname.value;result2.value=newvmname.value" id="newvmname" style="display: inline;"><input type="text" id="newvmname" name="newvmname" style="display: inline;" placeholder="MyNewVMFromImage"></form></td>
+</tr>
+<tr>
+<td>$Size</td>
+<td>Size of the new virtual machine to be created</td>
+<td><form oninput="result.value=size.value;result2.value=size.value" id="size" style="display: inline;"><input type="text" id="size" name="size" style="display: inline;" placeholder="Standard_DS2_v2"></form></td>
+</tr>
+<tr>
+<td>$VNetName</td>
+<td>Name of the virtual network to be created</td>
+<td><form oninput="result.value=vnetname.value;result2.value=vnetname.value" id="vnetname" style="display: inline;"><input type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="MyVNetwork"></form></td>
+</tr>
+<tr>
+<td>$SubnetName</td>
+<td>Name of the subnet</td>
+<td><form oninput="result.value=subnetname.value;result2.value=subnetname.value" id="subnetname" style="display: inline;"><input type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="MySubnet"></form></td>
+</tr>
+<tr>
+<td>$NSGName</td>
+<td>Name of the network security group to be created</td>
+<td><form oninput="result.value=nsgname.value;result2.value=nsgname.value" id="nsgname" style="display: inline;"><input type="text" id="nsgname" name="nsgname" style="display: inline;" placeholder="MyNSG"></form></td>
+</tr>
+<tr>
+<td>$PublicIPName</td>
+<td>Name of the public IP to be created</td>
+<td><form oninput="result.value=publicipname.value;result2.value=publicipname.value" id="publicipname" style="display: inline;"><input type="text" id="publicipname" name="publicipname" style="display: inline;" placeholder="MyPublicIP"></form></td>
+</tr>
+<tr>
+<td>$Username</td>
+<td>Username of the VM to be created</td>
+<td><form oninput="result.value=vmusername.value;result2.value=vmusername.value" id="vmusername" style="display: inline;"><input type="text" id="vmusername" name="vmusername" style="display: inline;" placeholder="MyUser"></form></td>
+</tr>
+<tr>
+<td>$Password</td>
+<td>Password of the VM to be created</td>
+<td><form oninput="result.value=vmpassword.value;result2.value=vmpassword.value" id="vmpassword" style="display: inline;"><input type="text" id="vmpassword" name="vmpassword" style="display: inline;" placeholder="Password123!"></form></td>
+</tr>
+</tbody>
+</table>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-c" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-c" data-tab="tabid-c" tabindex="0" aria-selected="true">Managed Disk</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-d" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-d" data-tab="tabid-d" tabindex="-1">Unmanaged Disk</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-1_tabid-c" role="tabpanel" data-tab="tabid-c">
+
+<p>Run the following PowerShell code:</p>
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Add environment
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+# Login
+Connect-AzAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack Hub
+$Location = (Get-AzLocation).Location
+
+# Declare variables
+$VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$ImageName = "<output form="imagename" name="result" style="display: inline;">MyCustomImage</output>"
+
+# Declare variables to create a new VM from the image
+$NewVMName = "<output form="newvmname" name="result" style="display: inline;">MyNewVMFromImage</output>"
+$NewRGName = "<output form="newresourcegroup" name="result" style="display: inline;">MyNewResourceGroup</output>"
+$Size = "<output form="size" name="result" style="display: inline;">Standard_DS2_v2</output>"
+$VNetName = "<output form="vnetname" name="result" style="display: inline;">MyVNetwork</output>"
+$SubnetName = "<output form="subnetname" name="result" style="display: inline;">MySubnet</output>"
+$NSGName = "<output form="nsgname" name="result" style="display: inline;">MyNSG</output>"
+$PublicIPName = "<output form="publicipname" name="result" style="display: inline;">MyPublicIP</output>"
+$Username = "<output form="vmusername" name="result" style="display: inline;">MyUser</output>"
+$Password = "<output form="vmpassword" name="result" style="display: inline;">Password123!</output>" | ConvertTo-SecureString -Force -AsPlainText
+$Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+
+# Get VM details
+$VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
+
+if ($VM) {
+    # Stop the VM
+    Write-Output -InputObject "Stopping VM and marking as generalised..."
+    Stop-AzVM -Name $VMName -ResourceGroupName $RGName -Force
+
+    # Mark VM as Generalised
+    Set-AzVM -Name $VMName -ResourceGroupName $RGName -Generalized
+}
+else {
+    Write-Error -Message "VM with name: $VMName does not exist in resource group: $RGName."
+    break
+}
+
+# Create new resource group
+New-AzResourceGroup -Name $NewRGName -Location $Location
+
+# Create VM image
+Write-Output -InputObject "Creating image of VM: $VMName."
+$ImageConfig = New-AzImageConfig -Location $Location -SourceVirtualMachineId $VM.Id
+$Image = New-AzImage -ResourceGroupName $NewRGName -ImageName $ImageName -Image $ImageConfig
+
+# Delete the VM
+Remove-AzVM -ResourceGroupName $RGName -Name $VMName -Force
+
+# Get image to check OS type
+$Image = Get-AzImage | Where-Object -FilterScript { $_.Name -like $ImageName }
+
+# Depending on the OS type, open either an RDP or SSH port and provision correct size
+# WARNING - These ports will be exposed to the internet. Edit the rules after creation to limit inbound traffic to known IP addresses
+if ($Image.StorageProfile.OsDisk.OsType -like "Windows") {
+    $OpenPorts = 3389
+    if (-not $Size) {
+        $Size = "Standard_DS2_v2"
+    }
+}
+else {
+    $OpenPorts = 22
+    if (-not $Size) {
+        $Size = "Standard_DS1_v2"
+    }
+}
+
+# Create new VM from custom image
+Write-Output -InputObject "Creating VM from image: $ImageName... (This may take a while)"
+New-AzVM -ResourceGroupName $NewRGName -Location $Location -Name $NewVMName -ImageName $ImageName -Credential $Credential -VirtualNetworkName $VNetName -SubnetName $SubnetName -PublicIpAddressName $PublicIPName -SecurityGroupName $NsgName -OpenPorts $OpenPorts -Size $Size
+
+# Remove source resource group
+Remove-AzResourceGroup -ResourceGroupName $RGName -Location $Location -Confirm
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_tabid-d" role="tabpanel" data-tab="tabid-d" aria-hidden="true" hidden="hidden">
+
+<p>Run the following PowerShell code:</p>
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Add environment
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+# Login
+Connect-AzAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack Hub
+$Location = (Get-AzLocation).Location
+
+# Declare variables
+$VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
+$RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
+$ImageName = "<output form="imagename" name="result2" style="display: inline;">MyCustomImage</output>"
+
+# Declare variables to create a new VM from the image
+$NewVMName = "<output form="newvmname" name="result2" style="display: inline;">MyNewVMFromImage</output>"
+$NewRGName = "<output form="newresourcegroup" name="result2" style="display: inline;">MyNewResourceGroup</output>"
+$Size = "<output form="size" name="result2" style="display: inline;">Standard_DS2_v2</output>"
+$VNetName = "<output form="vnetname" name="result2" style="display: inline;">MyVNetwork</output>"
+$SubnetName = "<output form="subnetname" name="result2" style="display: inline;">MySubnet</output>"
+$NSGName = "<output form="nsgname" name="result2" style="display: inline;">MyNSG</output>"
+$PublicIPName = "<output form="publicipname" name="result2" style="display: inline;">MyPublicIP</output>"
+$Username = "<output form="vmusername" name="result2" style="display: inline;">MyUser</output>"
+$Password = "<output form="vmpassword" name="result2" style="display: inline;">Password123!</output>" | ConvertTo-SecureString -Force -AsPlainText
+$Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+
+# Get VM details
+$VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
+
+if ($VM) {
+    # Stop the VM
+    Write-Output -InputObject "Stopping VM and marking as generalised..."
+    Stop-AzVM -Name $VMName -ResourceGroupName $RGName -Force
+
+    # Mark VM as Generalised
+    Set-AzVM -Name $VMName -ResourceGroupName $RGName -Generalized
+}
+else {
+    Write-Error -Message "VM with name: $VMName does not exist in resource group: $RGName."
+    break
+}
+
+# Get the VM VHD URI
+$VHDUri = $VM.StorageProfile.OsDisk.Vhd.Uri
+if (-not $VHDUri) {
+    Write-Error -Message "Failed to retrieve VHD URI."
+    break
+}
+
+# Create new resource group
+New-AzResourceGroup -Name $NewRGName -Location $Location
+
+# Create VM image
+Write-Output -InputObject "Creating image of VM: $VMName."
+$ImageConfig = New-AzImageConfig -Location $Location
+$ImageConfig = Set-AzImageOsDisk -Image $ImageConfig -OsType $VM.StorageProfile.OsDisk.OsType -OsState "Generalized" -BlobUri $VHDUri
+$Image = New-AzImage -ResourceGroupName $NewRGName -Image $ImageConfig -ImageName $ImageName
+
+# Delete the VM
+Remove-AzVM -ResourceGroupName $RGName -Name $VMName -Force
+
+# Get image to check OS type
+$Image = Get-AzImage | Where-Object -FilterScript { $_.Name -like $ImageName }
+
+# Depending on the OS type, open either an RDP or SSH port and provision correct size
+# WARNING - These ports will be exposed to the internet. Edit the rules after creation to limit inbound traffic to known IP addresses
+if ($Image.StorageProfile.OsDisk.OsType -like "Windows") {
+    $OpenPorts = 3389
+    if (-not $Size) {
+        $Size = "Standard_DS2_v2"
+    }
+}
+else {
+    $OpenPorts = 22
+    if (-not $Size) {
+        $Size = "Standard_DS1_v2"
+    }
+}
+
+# Create new VM from custom image
+Write-Output -InputObject "Creating VM from image: $ImageName... (This may take a while)"
+New-AzVM -ResourceGroupName $NewRGName -Location $Location -Name $NewVMName -ImageName $ImageName -Credential $Credential -VirtualNetworkName $VNetName -SubnetName $SubnetName -PublicIpAddressName $PublicIPName -SecurityGroupName $NsgName -OpenPorts $OpenPorts -Size $Size
+
+# Remove source resource group
+Remove-AzResourceGroup -ResourceGroupName $RGName -Location $Location -Confirm
+</code></pre>
+</section>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

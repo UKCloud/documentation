@@ -35,7 +35,7 @@ System administrators and mobile workers can securely access workloads running o
 
 ### Do I have to buy other UKCloud services to use UKCloud SRA?
 
-Yes. UKCloud SRA is available only to customers purchasing other UKCloud services such as UKCloud for VMware, Cloud Storage or UKCloud for OpenShift.
+Yes. UKCloud SRA is available only to customers purchasing other UKCloud services such as UKCloud for VMware, Cloud Storage or UKCloud for Red Hat OpenShift.
 
 ### Is a free trial available for the service?
 
@@ -149,7 +149,7 @@ We aim to carry out the assessment within five days of receiving the business ca
 
 If you need help gathering appropriate evidence, or effectively designing your SRA solution, we offer an assurance wrap review to guide you towards an effective design that will help to maximise your chances of meeting compliance requirements.
 
-The variable nature of the engagement means we charge for the assurance wrap on a [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) basis, depending on the number of days' support needed.
+The variable nature of the engagement means we charge for the assurance wrap on a [SFIA Rate Card](https://ukcloud.com/sfia) basis, depending on the number of days' support needed.
 
 ### What is the assurance process for approving an SRA solution?
 
@@ -245,7 +245,7 @@ We use consumption-based billing for licences, and these are in packs. You'll be
 
 For example, if you usually operate with nine certificates for an SRA instance, you'd be billed for a 10-pack of licences. If, one month, you run a project that requires three more certificates for additional engineers, you'd be billed for a 25-pack of licences for that month. When you go back to nine certificates for your usual engineer access, you'd go back to being billed for a 10-pack of licences.
 
-For more information about the different licence packs, see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+For more information about the different licence packs, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Security
 

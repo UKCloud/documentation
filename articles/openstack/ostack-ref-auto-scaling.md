@@ -3,8 +3,8 @@ title: Auto Scaling for UKCloud for OpenStack
 description: Shows how to automatically scale out your OpenStack compute instances in response to system usage
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 02/08/2018 14:45:48
+reviewer: srelf
+lastreviewed: 15/07/2021
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -24,8 +24,8 @@ The following Red Hat document describes how to automatically scale out your com
 
 | Region              | OpenStack Version                      | Documentation |
 |---------------------|----------------------------------------|---------------|
-| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | [*Red Hat OpenStack Platform 10 Auto Scaling for Compute*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/auto_scaling_for_compute/Red_Hat_OpenStack_Platform-8-Auto_Scaling_for_Compute-en-US.pdf) |
-| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | [*Red Hat OpenStack Platform 13 Auto Scaling for Compute*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/auto_scaling_for_instances/index) |
+| COR00005 | OpenStack Platform 10 <BR>(Newton Release) | [*Red Hat OpenStack Platform 10 Auto Scaling for Compute*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/auto_scaling_for_compute/Red_Hat_OpenStack_Platform-8-Auto_Scaling_for_Compute-en-US.pdf) |
+| COR00005-2 <BR> FRN00006| OpenStack Platform 13 <BR> (Queens Release) | [*Red Hat OpenStack Platform 13 Auto Scaling for Compute*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/auto_scaling_for_instances/index) |
 
 
 ## Feedback

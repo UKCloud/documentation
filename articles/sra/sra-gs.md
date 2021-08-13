@@ -3,8 +3,8 @@ title: Getting Started Guide for Secure Remote Access
 description: Provides information to get up and running with Secure Remote Access
 services: sra
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: George Smith
+lastreviewed: 06/08/2020
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -93,13 +93,11 @@ We request that you paste the contents of the CSR file directly into a ticket fo
 
 ## VPN Cisco AnyConnect client setup
 
-To access your SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices (requires UKCloud Portal login).
+To access your SRA VDC you need to raise a service request to acquire the Cisco AnyConnect client and install (requires UKCloud Portal login).
 
 For each OS there is the main Cisco AnyConnect client software install and an additional executable to enable the FIPS capability. You need to run both.
 
-### Download link
 
-<https://portal.skyscapecloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084>
 
 ### Linux
 
@@ -145,7 +143,7 @@ If a client is upgraded from a previous install then the following post installa
 
 ## Post-installation configuration
 
-Once you've installed the AnyConnect software and certificates on your device, you need to install the connection profile which is available in the Knowledge Centre (<https://portal.skyscapecloud.com/support/knowledge_centre/25a7111c-139e-4fd2-a52c-3412689bf1d3>). Unzip the file and copy the xml to the following location:
+Once you've installed the AnyConnect software and certificates on your device, you need to install the connection profile, which is available from UKCloud Support. Unzip the file and copy the xml to the following location:
 
 OS type | CPA XML location
 --------|-----------------
@@ -154,9 +152,7 @@ Windows | `C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile`
 
 ### For Linux only
 
-In addition to the AnyConnect profile, you also need to install a local policy which is available in the Knowledge Centre:
-
-<https://portal.skyscapecloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea>
+In addition to the AnyConnect profile, you also need to install a local policy, which is available from UKCloud Support.
 
 Unzip the file and copy it to: `/opt/cisco/anyconnect/AnyConnectLocalPolicy.xml`.
 
@@ -262,7 +258,7 @@ There is no direct access to the Elevated portal once the AnyConnect client conn
 
 In most instances we'll create a virtual machine (VM) within the SRA VDC that you can VPN into in order to log in to the Elevated portal to provision and manage your SRA and Elevated VDC. Once this VM is deployed, it becomes your responsibility to manage and maintain it. This VM will be billed according to standard UKCloud billing process.
 
-Addresses to hit the Elevated portal and vCloud Director API can be obtained by raising a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+To obtain addresses for the Elevated portal and vCloud API, raise a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

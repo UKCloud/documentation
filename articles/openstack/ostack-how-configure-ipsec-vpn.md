@@ -3,8 +3,8 @@ title: How to configure IPsec VPN in OpenStack
 description: Provides instructions for deploying an instance into your OpenStack project to function as a VPN endpoint
 services: openstack
 author: Sue Highmoor
-reviewer: 
-lastreviewed: 18/11/2019
+reviewer: Bryce Nicholls
+lastreviewed: 11/01/2021
 
 toc_rootlink: How To
 toc_sub1: 
@@ -24,7 +24,7 @@ This article provides instructions for deploying an instance into your OpenStack
 
 - To other projects
 
-- To vCloud Director VDCs
+- To VMware Cloud Director VDCs
 
 - Back to your own infrastructure in-house
 
@@ -255,9 +255,9 @@ Alternatively, you can define the same static route using the OpenStack CLI:
 
 At this point, you now want to ensure that the other end of the VPN tunnel is also configured. If you are connecting two OpenStack projects, you can repeat the steps above to deploy another pfSense appliance into the remote project.
 
-Connecting an IPsec tunnel to an edge gateway in a UKCloud for VMware environment can be problematic, as the vCloud Director web console doesn't set the local identifier correctly. You have to use a REST client against the vCloud Director API to manually correct the tunnel configuration. This process is documented in [*How to change IPsec VPN settings via the vCloud Director API*](../vmware/vmw-how-change-ipsec-vpn-api.md).
+Connecting an IPsec tunnel to an edge gateway in a UKCloud for VMware environment can be problematic, as the VMware Cloud Director web console doesn't set the local identifier correctly. You have to use a REST client against the vCloud API to manually correct the tunnel configuration. This process is documented in [*How to change IPsec VPN settings via the vCloud API*](../vmware/vmw-how-change-ipsec-vpn-api.md).
 
-However, we also provide a Ruby script in our GitHub repository that you can use, with the `vshield-configuration.yaml` sample configuration file, to automate the interaction with the vCloud Director API to correctly set up the VPN endpoint from scratch, without having to use the web console. For more information about this script, see [here](https://github.com/UKCloud/ukcloud-vpn).
+However, we also provide a Ruby script in our GitHub repository that you can use, with the `vshield-configuration.yaml` sample configuration file, to automate the interaction with the vCloud API to correctly set up the VPN endpoint from scratch, without having to use the web console. For more information about this script, see [here](https://github.com/UKCloud/ukcloud-vpn).
 
 ## Check the tunnel status
 

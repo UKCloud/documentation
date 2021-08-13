@@ -3,8 +3,8 @@ title: Best practice customer guide
 description: Provides useful best practice information and other helpful advice to ensure good performance from our products
 services: vmware
 author: Dan Baker
-reviewer:
-lastreviewed: 17/08/2018 13:00:42
+reviewer: cantrobusholder
+lastreviewed: 02/07/2020
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -37,8 +37,7 @@ You should remove snapshots that are no longer needed within 24-48 hours. If sna
 
 - You may be billed for additional storage due to the size of the snapshot
 
-To reduce this potential impact, ensure that you remove any old snapshots within 48 hours once they are no longer needed. For more information, see the following articles: [*Virtual machine disk limits and considerations*](../vmware/vmw-ref-vmdk-limits.md)
-and [*Snapshot Protection FAQs*](../vmware/vmw-faq-snapshot-protection.md).
+To reduce this potential impact, ensure that you remove any old snapshots within 48 hours once they are no longer needed. For more information, see the following articles: [*Virtual machine disk limits and considerations*](../vmware/vmw-ref-vmdk-limits.md) and [*Snapshot Protection FAQs*](../vmware/vmw-faq-snapshot-protection.md).
 
 ### Resolving failed backups
 
@@ -98,13 +97,13 @@ Your edge gateway is globally configured to send syslog messages to a specific I
 
 - Load balancer health
 
-For more information, see [*How to access syslog data for your edge gateway*](../vmware/vmw-how-access-syslog-data.md).
+For more information, see [*How to access syslog data for your edge gateway*](../vmware/vmw-how-access-syslog-data-adv.md).
 
 ### Choosing the appropriate compute sizing
 
 At UKCloud, we're proud to provide a range of products, solutions and pricing tailored to suit the needs of your business. We've designed our compute 't-shirt' sizes with the optimum level of RAM and CPU to deliver ideal performance. However, if these levels are increased, this may degrade performance over time.
 
-For more information on the range of VM sizes that we offer, see our latest [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+For more information on the range of VM sizes that we offer, see our latest [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Best Practices - general information
 
@@ -122,7 +121,7 @@ If you're already a nominated administrator and would like to set up an addition
 
 ### Subscribing to platform updates
 
-To provide you with the latest information on the availability and overall health of our platforms, we have set-up the [UKCloud status page](https://status.ukcloud.com/). This page shows the status of our services and connections, split by region and zone, and details of planned maintenance.
+To provide you with the latest information on the availability and overall health of our platforms, we have set-up the [UKCloud Service Status page](https://status.ukcloud.com/). This page shows the status of our services and connections, split by region and zone, and details of Planned Maintenance.
 
 To subscribe to updates, at the bottom of the page, click **Subscribe**, enter your email address then select the services you're interested in. You'll receive an email confirming your subscription to the status page; be sure to click **Verify** to ensure you'll receive updates on your selected services.
 
@@ -158,8 +157,8 @@ System administrators and mobile workers can securely access workloads running o
 
 - If you have multiple certificates to renew or revoke, you can do this in a single service request by selecting the **Renew and/or Revoke multiple SRAS Certificates** option in the UKCloud Portal. Attach the *Secure Remote Access bulk renewal/revoke form* containing all the certificates.
 
-For more information, see the following articles: [*Secure Remote Access FAQs*](../sra/sra-faq.md), [*Secure Remote Access Factsheet*](https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf) and [*Secure Remote Access Service Definition*](../sra/sra-sd.md).
+For more information, see the [*Secure Remote Access FAQs*](../sra/sra-faq.md) and [*Secure Remote Access Service Definition*](../sra/sra-sd.md).
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <feedback@ukcloud.com>.
+If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

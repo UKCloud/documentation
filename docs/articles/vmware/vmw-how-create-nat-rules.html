@@ -8,7 +8,7 @@
     <title>How to create NAT rules </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create NAT rules ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@
 <h1 id="how-to-create-nat-rules">How to create NAT rules</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Network Address Translation (NAT) allows the source or destination IP address to be changed to enable traffic to transition through a router or gateway.</p>
+<p>Network address translation (NAT) allows the source or destination IP address to be changed to enable traffic to transition through a router or gateway.</p>
 <p>You can use three types of NAT within your edge gateway:</p>
 <ul>
 <li><p><a href="#creating-a-dnat-rule">Destination NAT (DNAT)</a> - changes the destination IP of the packet</p>
@@ -111,13 +111,7 @@
 <li><p>The private transit networks provided by UKCloud for PSN and HSCN connectivity</p>
 </li>
 </ul>
-<p>It's worth noting that for both DNAT and SNAT:</p>
-<ul>
-<li><p>The NAT rule will be applied to the edge gateway, rather than to the internal VDC network</p>
-</li>
-<li><p>The firewall needs to be open for NAT rules</p>
-</li>
-</ul>
+<p>It's worth noting that, for both DNAT and SNAT, the NAT rule will be applied to the edge gateway, rather than to the internal VDC network</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>NAT rules only work if the firewall is enabled. For security reasons, you should ensure that the firewall is always enabled.</p>
@@ -126,21 +120,22 @@
 <p>DNAT changes the destination IP address of a packet and performs the reverse function for any replies. You can use DNAT to publish a service located in a private network on a public IP address.</p>
 <p>To create a DNAT rule:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to create the DNAT rule.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the edge gateway in which you want to create the DNAT rule.</p>
 </li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>Select the edge that you want to configure and click the <strong>Configure Services</strong> button.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
+<li><p>On the <em>Edge Gateways</em> page, select the edge that you want to configure and click the <strong>Services</strong> button.</p>
+<p><img src="images/vmw-vcd10.1-edge-btn-services.png" alt="Services button"></p>
 </li>
-<li><p>Select the <strong>NAT</strong> tab.</p>
-<p><img src="images/vmw-vcd-edge-tab-nat.png" alt="NAT tab"></p>
+<li><p>On the <em>Edge Gateway</em> page, select the <strong>NAT</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-nat.png" alt="NAT tab"></p>
 </li>
-<li><p>In the <em>NAT44 Rules</em> section, click <strong>+ DNAT Rule</strong>.</p>
-<p><img src="images/vmw-vcd-btn-add-dnat.png" alt="Add DNAT Rule button"></p>
+<li><p>In the <em>NAT44 Rules</em> section, click <strong>DNAT Rule</strong>.</p>
+<p><img src="images/vmw-vcd10.1-btn-add-dnat.png" alt="Add DNAT Rule button"></p>
 </li>
-<li><p>In the <em>Add DNAT Rule</em> dialog box, from the <strong>Applied On</strong> list, select the interface on which to apply the rule. Unless you have special requirements, this will be the external network (usually named nti* or nft*).</p>
+<li><p>In the <em>Add DNAT Rule</em> dialog box, from the <strong>Applied On</strong> list, select the interface on which to apply the rule.</p>
+<p>Unless you have special requirements, this will be the external network (usually named nti* or nft*).</p>
 </li>
 <li><p>Enter an <strong>Original IP/Range</strong> and a <strong>Translated IP/Range</strong>.</p>
 </li>
@@ -149,59 +144,65 @@
 <li><p>Make sure the <strong>Enabled</strong> option is selected.</p>
 </li>
 <li><p>If you have a syslog server configured, select the <strong>Enable logging</strong> option.</p>
-<p>For more information about syslog servers, see <a href="vmw-how-access-syslog-data-adv.html"><em>How to access syslog data for your advanced gateway</em></a>.</p>
-<p><img src="images/vmw-vcd-add-dnat-adv.png" alt="Add DNAT Rule dialog box"></p>
+<p>For more information about syslog servers, see <a href="vmw-how-access-syslog-data-adv.html"><em>How to access syslog data for your edge gateway</em></a>.</p>
+<p><img src="images/vmw-vcd10.1-add-dnat.png" alt="Add DNAT Rule dialog box"></p>
 </li>
-<li><p>When you're done, click <strong>Keep</strong> then <strong>Save changes</strong>.</p>
+<li><p>When you're done, click <strong>Keep</strong>.</p>
+</li>
+<li><p>Add more NAT rules as required, then click <strong>Save changes</strong>.</p>
 </li>
 </ol>
 <h2 id="creating-an-snat-rule">Creating an SNAT rule</h2>
 <p>SNAT changes the source IP address of a packet and performs the reverse function for any replies.</p>
-<p>When connecting to an external network, such as the internet, to access services (for example, DNS), you need to define an SNAT rule to translate your internal address into something available on the external network (for example, PSN, internet).</p>
+<p>When connecting to an external network, such as the internet, to access services (for example, DNS), you need to define an SNAT rule to translate your internal addresses into something available on the external network (for example, PSN or internet).</p>
 <p>To create an SNAT rule:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to create the SNAT rule.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the edge gateway in which you want to create the SNAT rule.</p>
 </li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>..</p>
+<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>Select the edge that you want to configure and click the <strong>Configure Services</strong> button.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
+<li><p>On the <em>Edge Gateways</em> page, select the edge that you want to configure and click the <strong>Services</strong> button.</p>
+<p><img src="images/vmw-vcd10.1-edge-btn-services.png" alt="Services button"></p>
 </li>
-<li><p>Select the <strong>NAT</strong> tab.</p>
-<p><img src="images/vmw-vcd-edge-tab-nat.png" alt="NAT tab"></p>
+<li><p>On the <em>Edge Gateway</em> page, select the <strong>NAT</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-nat.png" alt="NAT tab"></p>
 </li>
-<li><p>In the <em>NAT44 Rules</em> section, click <strong>+ SNAT Rule</strong>.</p>
-<p><img src="images/vmw-vcd-btn-add-snat.png" alt="Add SNAT Rule button"></p>
+<li><p>In the <em>NAT44 Rules</em> section, click <strong>SNAT Rule</strong>.</p>
+<p><img src="images/vmw-vcd10.1-btn-add-snat.png" alt="Add SNAT Rule button"></p>
 </li>
-<li><p>In the <em>Add SNAT Rule</em> dialog box, from the <strong>Applied On</strong> list, select the interface on which to apply the rule. Unless you have special requirements, this will be the external network (usually named nti* or nft*).</p>
+<li><p>In the <em>Add SNAT Rule</em> dialog box, from the <strong>Applied On</strong> list, select the interface on which to apply the rule.</p>
+<p>Unless you have special requirements, this will be the external network (usually named nti* or nft*).</p>
 </li>
 <li><p>Enter an <strong>Original Source IP/Range</strong> and a <strong>Translated Source IP/Range</strong>.</p>
 </li>
 <li><p>Make sure the <strong>Enabled</strong> option is selected.</p>
 </li>
 <li><p>If you have a syslog server configured, select the <strong>Enable logging</strong> option.</p>
-<p>For more information about syslog servers, see <a href="vmw-how-access-syslog-data-adv.html"><em>How to access syslog data for your advanced gateway</em></a>.</p>
-<p><img src="images/vmw-vcd-add-snat-adv.png" alt="Add SNAT Rule dialog box"></p>
+<p>For more information about syslog servers, see <a href="vmw-how-access-syslog-data-adv.html"><em>How to access syslog data for your edge gateway</em></a>.</p>
+<p><img src="images/vmw-vcd10.1-add-snat.png" alt="Add SNAT Rule dialog box"></p>
 </li>
-<li><p>When you're done, click <strong>Keep</strong> then <strong>Save changes</strong>.</p>
+<li><p>When you're done, click <strong>Keep</strong></p>
+</li>
+<li><p>Add more NAT rules as required, then click <strong>Save changes</strong>.</p>
 </li>
 </ol>
 <h2 id="creating-a-nat64-rule">Creating a NAT64 rule</h2>
 <p>If you have an IPv6 network and need to communicate to an IPv4 network, you'll need to translate IP addresses to enable that communication.</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to create the SNAT rule.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the edge gateway in which you want to create the NAT64 rule.</p>
 </li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>Select the edge that you want to configure and click the <strong>Configure Services</strong> button.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
+<li><p>In the <em>Edge Gateways</em> page, select the edge that you want to configure and click the <strong>Services</strong> button.</p>
+<p><img src="images/vmw-vcd10.1-edge-btn-services.png" alt="Services button"></p>
 </li>
-<li><p>Select the <strong>NAT</strong> tab.</p>
-<p><img src="images/vmw-vcd-edge-tab-nat.png" alt="NAT tab"></p>
+<li><p>In the <em>Edge Gateway</em> page, select the <strong>NAT</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-nat.png" alt="NAT tab"></p>
 </li>
 <li><p>In the <em>NAT64 Rules</em> section, click <strong>+ NAT64 Rule</strong>.</p>
+<p><img src="images/vmw-vcd10.1-btn-add-nat64.png" alt="Add NAT64 Rule button"></p>
 </li>
 <li><p>In the <em>Add NAT64 Rule</em> dialog box, in the <strong>Match Ipv6 Destination Prefix</strong> field, enter the IPv6 address to use to translate IPv6 destinations to IPv4 destinations.</p>
 </li>
@@ -210,8 +211,8 @@
 <li><p>Make sure the <strong>Enabled</strong> option is selected.</p>
 </li>
 <li><p>If you have a syslog server configured, select the <strong>Enable logging</strong> option.</p>
-<p>For more information about syslog servers, see <a href="vmw-how-access-syslog-data-adv.html"><em>How to access syslog data for your advanced gateway</em></a>.</p>
-<p><img src="images/vmw-vcd-add-nat64.png" alt="Add NAT64 Rule dialog box"></p>
+<p>For more information about syslog servers, see <a href="vmw-how-access-syslog-data-adv.html"><em>How to access syslog data for your edge gateway</em></a>.</p>
+<p><img src="images/vmw-vcd10.1-add-nat64.png" alt="Add NAT64 Rule dialog box"></p>
 </li>
 <li><p>When you're done, click <strong>Keep</strong> then <strong>Save changes</strong>.</p>
 </li>
@@ -241,6 +242,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -259,7 +273,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

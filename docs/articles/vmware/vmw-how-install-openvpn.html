@@ -8,7 +8,7 @@
     <title>How to install and configure OpenVPN </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to install and configure OpenVPN ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -101,6 +101,9 @@
 <h5>Note</h5>
 <p>OpenVPN is a licensed product. Without a licence key, you are limited to only two concurrent VPN connections. If you require additional concurrent connections, you'll need to obtain and install a licence key.</p>
 </div>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>To ensure you're running the latest release of OpenVPN, we recommend that you download the latest version of the appliance directly from the OpenVPN website:</p>
+<p><a href="https://openvpn.net/downloads/openvpn-as-latest-vmware.ova">https://openvpn.net/downloads/openvpn-as-latest-vmware.ova</a></p>
 <h2 id="preparing-your-virtual-data-centre">Preparing your virtual data centre</h2>
 <h3 id="create-a-new-vdc-network">Create a new VDC network</h3>
 <p>To secure your environment, we recommend that you deploy the OpenVPN appliance into a new, routed VDC network. Ideally, no other virtual machines (VMs) should connect to this network. This enables you to tightly control access from VPN clients to the VMs in your environment using firewall rules on the edge gateway. However, if you're approaching the network interface limit of your edge gateway, it's possible to deploy the OpenVPN appliance into an existing network.</p>
@@ -120,39 +123,32 @@
 </li>
 </ul>
 <p>For more information, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
-<h2 id="obtaining-the-latest-openvpn-appliance">Obtaining the latest OpenVPN appliance</h2>
-<p>To ensure you're running the latest release of OpenVPN, we recommend that you download the latest version of the appliance directly from the OpenVPN website:</p>
-<ol>
-<li><p>Go to the following location to download the latest OVA file:</p>
-<p><a href="https://swupdate.openvpn.org/appliances/AS2.ova">https://swupdate.openvpn.org/appliances/AS2.ova</a></p>
-</li>
-<li><p>In vCloud Director, click the menu icon and select <strong>Libraries</strong>.</p>
-</li>
-<li><p>To upload the OVA file to a catalog, see <a href="vmw-how-create-catalog.html"><em>How to create a catalog</em></a>.</p>
-</li>
-</ol>
 <h2 id="deploying-the-openvpn-appliance">Deploying the OpenVPN appliance</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You may need to run the commands in the following steps as root (sudo).</p>
+</div>
 <p>To deploy the OpenVPN appliance:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to deploy the OpenVPN appliance.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which you want to deploy the OpenVPN appliance.</p>
 </li>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Compute</em>, select <strong>vApps</strong>.</p>
+<p><img src="images/vmw-vcd10.1-tab-vapps.png" alt="vApps tab in VMware Cloud Director"></p>
 </li>
-<li><p>Click <strong>Add vApp from OVF</strong>.</p>
-<p><img src="images/vmw-vcd-btn-vapp-from-ovf.png" alt="Add vApp from OVF option"></p>
+<li><p>Click <strong>New</strong>, then select <strong>Add vApp from OVF</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-vapp-from-ovf.png" alt="Add vApp from OVF option"></p>
 </li>
-<li><p>Select the OVA that you downloaded then click <strong>Next</strong>.</p>
+<li><p>Select the OpenVPN OVA that you downloaded then click <strong>Next</strong>.</p>
 </li>
 <li><p>Review the details of the OVA to confirm that it's the right image then click <strong>Next</strong>.</p>
 </li>
-<li><p>The appliance will be deployed as a single VM inside a vApp. Provide a <strong>Name</strong> and (optinal) <strong>Description</strong> for the vApp then click <strong>Next</strong>.</p>
+<li><p>The appliance will be deployed as a single VM inside a vApp. Provide a <strong>Name</strong> and (optional) <strong>Description</strong> for the vApp then click <strong>Next</strong>.</p>
 </li>
 <li><p>Provide a valid NetBIOS host name and your desired storage policy then click <strong>Next</strong>.</p>
 </li>
 <li><p>Configure the network by selecting <strong>Switch to the advanced networking workflow</strong>.</p>
 </li>
-<li><p>Select the network adapter type, network and IP pool assignment (<strong>Manual</strong>) then click <strong>Next</strong>.</p>
+<li><p>Select the network adapter type, network and IP pool assignment (<strong>Manual</strong>), assign a valid IP from within your range, then click <strong>Next</strong>.</p>
 </li>
 <li><p>Select the number of vCPUs, sockets and memory this appliance will have then click <strong>Next</strong>.</p>
 </li>
@@ -164,7 +160,11 @@
 <h2 id="performing-initial-configuration">Performing initial configuration</h2>
 <p>To perform initial configuration:</p>
 <ol>
-<li><p>In vCloud Director, open the console for your OpenVPN VM.</p>
+<li><p>In VMware Cloud Director (under <strong>Compute &gt; Virtual Machines</strong>), open the console for your OpenVPN VM.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you haven't already done so, you may need to download the VMware Remote Console.</p>
+</div>
 </li>
 <li><p>Log in to the VM as the root user.</p>
 <div class="TIP">
@@ -202,8 +202,7 @@
 <li><p>When you've completed the setup wizard, you'll need to create user accounts and passwords on the local operating system (unless you configured an LDAP directory).</p>
 </li>
 <li><p>If you opted to use the default <code>openvpn</code> account, you'll need to configure its password:</p>
-<pre><code> #passwd openvpn
-</code></pre>
+<p><code>#passwd openvpn</code></p>
 </li>
 <li><p>Press <strong>^D</strong> to log off the console, but before you do so, there are some additional system configurations, detailed in the following sections, that you might want to perform while you're connected to the console.</p>
 </li>
@@ -212,26 +211,24 @@
 <p>During our tests, the DNS resolver configuration was not added by the VMware customisations.</p>
 <ol>
 <li><p>Enter the following command:</p>
-<pre><code> # pico /etc/network/interfaces
-</code></pre>
+<p><code># pico /etc/network/interfaces</code></p>
 </li>
-<li><p>Use the arrow keys to scroll down. Below the line specifying the default gateway, add the following:</p>
-<pre><code> dns-nameservers 8.8.8.8
-</code></pre>
+<li><p>Use the arrow keys to scroll down. At the first free line specify your DNS servers, for example:</p>
+<p><code>dns-nameservers 8.8.8.8</code></p>
 </li>
-<li><p>Press <strong>^O</strong> to save the file, then <strong>^X</strong> to exit the text editor.</p>
+<li><p>Press <strong>^O</strong> to save the file, then press <strong>Enter</strong> to confirm the file name.</p>
+</li>
+<li><p>Press <strong>^X</strong> to exit the text editor.</p>
 </li>
 <li><p>Restart the networking service for the change to take effect:</p>
-<pre><code> # service networking restart
-</code></pre>
+<p><code># systemctl restart systemd-networkd.service</code></p>
 </li>
 </ol>
 <h3 id="configure-the-keyboard">Configure the keyboard</h3>
 <p>The default configuration is for a US keyboard. To reconfigure for UK:</p>
 <ol>
 <li><p>Enter the following command:</p>
-<pre><code> # dpkg-reconfigure keyboard-configuration
-</code></pre>
+<p><code># dpkg-reconfigure keyboard-configuration</code></p>
 </li>
 <li><p>Step through the wizard. There's no need to restart anything when you're finished.</p>
 </li>
@@ -240,8 +237,7 @@
 <p>It's a good idea to apply the latest upgrades to the system.</p>
 <ol>
 <li><p>Enter the following command:</p>
-<pre><code> # apt-get update &amp;&amp; apt-get upgrade
-</code></pre>
+<p><code># apt-get update &amp;&amp; apt-get upgrade</code></p>
 </li>
 <li><p>You'll be prompted to approve the installation of any updates.</p>
 </li>
@@ -250,12 +246,10 @@
 <p>Installing NTP is good practice anyway, but is required if you intend to use two-factor authentication via Google Authenticator.</p>
 <ol>
 <li><p>Enter the following command:</p>
-<pre><code> # apt-get install ntp
-</code></pre>
+<p><code># apt-get install ntp</code></p>
 </li>
 <li><p>When the installation is complete, update the configuration file to point to UKCloud's NTP servers.</p>
-<pre><code> # pico /etc/ntp.config
-</code></pre>
+<p><code># pico /etc/ntp.conf</code></p>
 </li>
 <li><p>Use the arrow keys to scroll down until you reach the lines beginning with <code>server</code>. Change the first two lines to reflect the UKCloud servers, and comment out the remaining two lines.</p>
 <p>Contact UKCloud Support for the UKCloud server IP addresses.</p>
@@ -265,9 +259,9 @@
 <p>To configure administration options:</p>
 <ol>
 <li><p>Log on to the admin interface at:</p>
-<p><code>https://&lt;ip_address&gt;/admin</code></p>
+<p><code>https://&lt;ip_address&gt;:943/admin</code></p>
 </li>
-<li><p>To set the hostname, under <em>Configuration</em>, select <strong>Server Network Settings</strong> and then set the <strong>Hostname or IP Address</strong> to either a public IP address or a fully qualified domain name (FQDN) that your client will be able to resolve.</p>
+<li><p>To set the hostname, under <em>Configuration</em>, select <strong>Network Settings</strong> and then set the <strong>Hostname or IP Address</strong> to either a public IP address or a fully qualified domain name (FQDN) that your client will be able to resolve.</p>
 </li>
 <li><p>Save the settings on this page.</p>
 </li>
@@ -296,21 +290,21 @@
 <li><p>Log in to the OpenVPN VM console as the root user.</p>
 </li>
 <li><p>Enter the following command:</p>
-<pre><code> # passwd
-</code></pre>
+<p><code># passwd</code></p>
 </li>
 </ol>
 <h3 id="lock-down-unused-ports-with-iptables">Lock down unused ports with iptables</h3>
 <p>The OpenVPN configuration utility adds the required <code>ALLOW</code> entries to <code>iptables</code> automatically. To deny all other traffic, enter the following command:</p>
-<pre><code># iptables -A INPUT -j DROP
-</code></pre>
+<p><code># iptables -A INPUT -j DROP</code></p>
 <h3 id="enable-two-factor-authentication-via-google-authenticator">Enable two-factor authentication via Google Authenticator</h3>
 <p>You can enable two-factor authentication via the OpenVPN administration interface.</p>
 <ol>
 <li><p>Log on to the administration interface with the default account at:</p>
 <p><code>https://&lt;ip_address&gt;/admin</code></p>
 </li>
-<li><p>Under <em>Configuration</em>, select <strong>Client Settings</strong> then click the checkbox to enable Google Authenticator support.</p>
+<li><p>From the menu, select <strong>Authentication</strong> then <strong>General</strong>.</p>
+</li>
+<li><p>Set <strong>Enable Google Authenticator MFA</strong> to <strong>Yes</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Users will need to enter or scan the Google Authenticator secret by logging into the client portal (<code>http://&lt;ip_address&gt;/</code>). When they've configured the secret, they should click the <strong>I scanned the QR code</strong> button to enforce two-factor authentication.</p>
@@ -329,15 +323,14 @@ certificates necessary to establish a VPN connection.</p>
 </li>
 <li><p>Under <em>Configuration</em>, select <strong>Server Network Settings</strong>.</p>
 </li>
-<li><p>Under <em>Service Forwarding</em> in the <em>VPN Server</em> section, clear the check boxes for <strong>Admin Web Server</strong> and <strong>Client Web Server</strong>.</p>
+<li><p>Under <em>Service Forwarding</em>, in the <em>VPN Server</em> section, set <strong>Admin Web Server</strong> and <strong>Client Web Server</strong> to <strong>No</strong>.</p>
 </li>
 </ol>
 <h3 id="disable-root-ssh-login">Disable root SSH login</h3>
 <p>If connecting via SSH, it's best practice to connect with a non-privileged account, then sudo to root if needed. This prevents an attacker from brute-forcing the root password.</p>
 <ol>
 <li><p>Enter the following command:</p>
-<pre><code> # pico /etc/ssh/sshd\_config
-</code></pre>
+<p><code># pico /etc/ssh/sshd_config</code></p>
 </li>
 <li><p>Use the arrow keys to scroll down the file, and change the <code>PermitRootLogin</code> to <code>no</code>.</p>
 </li>
@@ -347,20 +340,18 @@ certificates necessary to establish a VPN connection.</p>
 <p>To disable the default account:</p>
 <ol>
 <li><p>Enter the following command:</p>
-<pre><code> # pico /usr/local/openvpn_as/etc/as.conf
-</code></pre>
+<p><code># pico /usr/local/openvpn_as/etc/as.conf</code></p>
 </li>
 <li><p>Use the arrow keys to scroll down the file until you see entries starting with <code>boot_pam_users</code>.</p>
 </li>
 <li><p>Comment out the entry for the user name you chose for the default account. Usually this is the <code>boot_pam_users.0=</code> entry.</p>
 </li>
 <li><p>Restart the OpenVPN service for the change to take effect:</p>
-<pre><code> # service restart openvpnas
-</code></pre>
+<p><code># systemctl restart openvpnas.service</code></p>
 </li>
 </ol>
 <h2 id="more-help">More help</h2>
-<p>If you have any issues regarding the updating or support of Microsoft Server, contact the UKCloud support team by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>If you have any issues regarding the updating or support of OpenVPN, contact the UKCloud support team by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -372,6 +363,19 @@ certificates necessary to establish a VPN connection.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -390,7 +394,7 @@ certificates necessary to establish a VPN connection.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

@@ -2,8 +2,8 @@
 title: UKCloud for VMware FAQs
 description: Frequently asked questions for UKCloud for VMware
 services: vmware
-author: Matt Warner
-reviewer: Guy Martin
+author: mwarner
+reviewer: gmartin
 lastreviewed: 20/08/2019
 toc_rootlink: FAQs
 toc_sub1: 
@@ -37,7 +37,7 @@ However, customers can use multiple VDCs to deliver their solution.
 
 ESSENTIAL VMs are contended: VMs contend for memory and processor resources.
 
-POWER & PRIORITY VMs: UKCloud has implemented a combination of technical and process controls (for example, an ISO 20000-certified capacity management process) to ensure that these VMs don't contend for memory or processor resources.
+POWER & PRIORITY VMs: UKCloud has implemented a combination of technical and process controls (for example, an ISO 20000-certified capacity management process) to ensure that these VMs don't contend for memory or processor resources.
 
 POWER VMs operate where automated rebalancing is enabled to pre-emptively optimise performance and availability.
 
@@ -61,7 +61,7 @@ If you want to migrate a vApp larger than 1.5TiB, you'll need to engage the UKCl
 
 ### What hypervisor do you use?
 
-UKCloud's environment is built using VMware vSphere, the most ubiquitous and mature hypervisor available. Secure multi-tenancy is achieved with VMware vCloud Director.
+UKCloud's environment is built using VMware vSphere, the most ubiquitous and mature hypervisor available. Secure multi-tenancy is achieved with VMware Cloud Director.
 
 ### Can I have a read-only account in vCloud for monitoring?
 
@@ -75,7 +75,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 ### What VM sizes are available?
 
-UKCloud offers a variety of *T-shirt sizes* to meet customers' needs. The smallest configuration is 0.5GiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
+UKCloud offers a variety of *T-shirt sizes* to meet customers' needs. The smallest configuration is 0.5GiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
 
 Check the [*UKCloud for VMware Service Definition*](vmw-sd.md) for more details on the currently available sizes.
 
@@ -84,7 +84,7 @@ Check the [*UKCloud for VMware Service Definition*](vmw-sd.md) for more details 
 
 ### Can I resize a VM?
 
-Yes, you can change vCPU, RAM and storage allocations via the self-service vCloud Director tenant portal and vCloud API.
+Yes, you can change vCPU, RAM and storage allocations via the self-service vCloud Director/VMware Cloud Tenant Portal and vCloud API.
 
 You can add or remove processors and memory from VMs if the OS supports the 'hot add' capability.
 
@@ -104,11 +104,11 @@ For a transfer time calculator, go to: <https://techinternets.com/copy_calc?do>
 
 If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.
 
-Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via NAS, HDD or USB devices that are plugged directly into your environment. Please check the [*Mass Transfer Facility Service Scope*](../enablement/enbl-sco-mtf-nas.md) or the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for further details.
+Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via NAS, HDD or USB devices that are plugged directly into your environment. Please check the [*Mass Transfer Facility Service Scope*](../enablement/enbl-sco-mtf-nas.md) or the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for further details.
 
 ### Does UKCloud offer encryption on the VM?
 
-Not by default, however UKCloud can supply licensing for [*HyTrust DataControl*](../third-party/third-sd-hytrust.md). This solution offers powerful data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle, from deployment to decommission.
+Not by default, however UKCloud can supply licensing for HyTrust DataControl. This solution offers powerful data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle, from deployment to decommission.
 
 Alternatively, you can implement encryption using the technology of your choice inside the VM's operating system.
 
@@ -191,7 +191,7 @@ UKCloud also offers the additional benefits of a Distributed Firewall (DFW). An 
 
 ### How do I create and manage firewall rules?
 
-Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the vCloud Director tenant portal and vCloud API.
+Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the VMware Cloud Director tenant portal and vCloud API.
 
 On-boarding guides and associated video tutorials are available to help customers configure and manage their firewalls.
 
@@ -206,13 +206,14 @@ This service, how to order it, and the constraints it may place on operation, is
 The Advanced Management bundle includes Distributed Firewall (DFW), Distributed Logical Router (DLR), Layer 2 VPN and vROPs Tenant Monitoring and Metrics.
 
 > [!NOTE]
-> * The Advanced Management bundle may not be available in all regions and zones.
-> 
-> * The bundle is enabled at an organisation (vOrg) level, therefore all VMs within the organisation will be uplifted. See the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf) for details.
+>
+> - The Advanced Management bundle may not be available in all regions and zones.
+>
+> - The bundle is enabled at an organisation (vOrg) level, therefore all VMs within the organisation will be uplifted. See the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) for details.
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-You can view these on the [Notifications page](https://portal.ukcloud.com/notifications) of the UKCloud Portal. In addition, you can view Service Status information on the [Service Status page](https://status.ukcloud.com/).
+You can view these, as well as general service status information on the [UKCloud Service Status page](https://status.ukcloud.com/).
 
 ### Do you offer dynamic or static IP addresses?
 
@@ -230,7 +231,7 @@ For internet-facing services a third-party DNS provider will be required.
 
 ### Is Network Time Protocol available for time synchronisation?
 
-Yes, this is available for Assured OFFICIAL and Elevated OFFICIAL. See [*Network Time Protocol server access*](vmw-ref-network-time-server.md) for details.
+Yes, this is available for Assured OFFICIAL and Elevated OFFICIAL. See [*Network Time Protocol server access*](../shared/shared-ref-network-time-server.md) for details.
 
 ### Can UKCloud provide SSL certificates or can existing SSL certificates be used?
 
@@ -250,7 +251,7 @@ Yes, you can configure load balancing within the service and it is included with
 
 Yes, you can deploy your own load-balancing virtual appliance (for example, F5, Stingray, Zeus) if support for other algorithms is required.
 
-In addition, UKCloud offers UltraDNS - an authoritative DNS and global load balancing service from Neustar, which you can customise for your own specific requirements. An [*FAQ*](../connectivity/conn-faq-glb.md) and [*Service Scope*](../connectivity/conn-sco-glb.md) are available in the Knowledge Centre.
+In addition, UKCloud offers Neustar UltraDNS from UKCloud - an authoritative DNS and global load balancing service, which you can customise for your own specific requirements. An [*FAQ*](../connectivity/conn-faq-glb.md) and [*Service Scope*](../connectivity/conn-sco-glb.md) are available in the Knowledge Centre.
 
 ## Storage
 
@@ -264,7 +265,7 @@ The exception is Micro sized VMs. These have a fixed 10GiB allocation that canno
 
 No, storage pooling isn't possible. Each VM must have a minimum of 60GiB (except Micro VMs).
 
-You can quickly and easily allocate additional storage via the self-service vCloud Director tenant portal or vCloud API. Additional storage is charged on a per-GiB basis as listed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+You can quickly and easily allocate additional storage via the self-service VMware Cloud Director tenant portal or vCloud API. Additional storage is charged on a per-GiB basis as listed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### Is storage persistent?
 
@@ -288,7 +289,7 @@ Talk to your UKCloud Account Director or Cloud Architect to understand if Tier 1
 
 ### What are independent disks?
 
-Independent disks are a technology provided natively by VMware vCloud Director, and are included as options by default in the UKCloud service. They can only be created via the API, and cannot be created though the user interface. UKCloud has provided some advice on how to create and control them [here](https://github.com/UKCloud/vcloud-independent-disks).
+Independent disks are a technology provided natively by VMware Cloud Director, and are included as options by default in the UKCloud service. They can only be created via the API, and cannot be created though the user interface. UKCloud has provided some advice on how to create and control them [here](https://github.com/UKCloud/vcloud-independent-disks).
 
 Independent disks are stand-alone virtual disks that you create in organization VDCs. Administrators and users who have adequate rights can create, remove, and update independent disks, and connect them to virtual machines.
 
@@ -346,11 +347,11 @@ For support, you'll need to log a request with UKCloud, who will log the ticket 
 
 ### Do you have a Key Management System (KMS) for activating Windows?
 
-Yes, a step-by-step guide on configuring and using this service is included in [*How to license Windows VMs using the UKCloud Key Management Server*](vmw-how-setup-kms.md). 
+Yes, a step-by-step guide on configuring and using this service is included in [*How to license Windows VMs using the UKCloud Key Management Server*](../shared/shared-how-setup-kms.md).
 
 ### How do I control a VM?
 
-You control a VM via the vCloud Director tenant portal or vCloud API. Controls include stop, start, restart, load media, clone, snapshot, and so on.
+You control a VM via the VMware Cloud Director tenant portal or vCloud API. Controls include stop, start, restart, load media, clone, snapshot, and so on.
 
 ### Do you monitor VMs?
 
@@ -387,7 +388,7 @@ In addition, we provide access to common templates provided by the Bitnami servi
 
 Microsoft terms and conditions preclude customers from using their own licence agreements for Windows Server in the Cloud. That means all licensing for Windows Server operating systems must be provided by UKCloud.
 
-Microsoft offers License Mobility, a scheme that allows a customer to provide additional software such as Exchange, SQL and so on, as long as the customer has appropriate Microsoft licensing as per the licence terms and conditions and usage rights. In order to use License Mobility, you must complete the form that is available in the from the Microsoft web site and send this by post to Microsoft. For more information, see [*How to licence Microsoft applications/software on the UKCloud platform*](vmw-how-license-microsoft.md).
+Microsoft offers License Mobility, a scheme that allows a customer to provide additional software such as Exchange, SQL and so on, as long as the customer has appropriate Microsoft licensing as per the licence terms and conditions and usage rights. In order to use License Mobility, you must complete the form that is available in the from the Microsoft web site and send this by post to Microsoft. For more information, see [*How to licence Microsoft applications/software on the UKCloud platform*](../shared/shared-how-license-microsoft.md).
 
 If you require SQL licensing to be provided by UKCloud, this can be done by completing a Service Request from the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. SQL standard licensing is charged per hour per VM, whilst SQL Enterprise is charged monthly per VM. It is essential that UKCloud are informed of every instance of SQL on the platform, and that you complete a Licence Mobility form for all licences that you use on the UKCloud platform.
 
@@ -433,15 +434,11 @@ For the Elevated OFFICIAL security domain, security requirements are stricter an
 
 ### What are your service maintenance windows?
 
-As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days' advance notice of planned maintenance.
+See [*Understanding UKCloud service maintenance windows*](../other/other-ref-maintenance-windows.md).
 
-As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.
+### Can UKCloud provide notifications for service status and maintenance?
 
-### Can I configure email alerts from the Portal?
-
-Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is available in both the Assured and Elevated Portals.
-
-You can also sign up to service status notifications from the [UKCloud Service Status page](https://status.ukcloud.com/). For more information, see [*How to view the UKCloud Service Status page*](../other/other-how-view-status-info.md)
+Yes, you can subscribe to the [UKCloud Service Status page](https://status.ukcloud.com/) to be alerted to service status and maintenance notifications. Notifications can be via email, text, webhook or Atom/RSS feed. For more information, see [*How to subscribe to service status notifications*](../other/other-how-subscribe-service-status.md).
 
 ## Onboarding
 
@@ -471,7 +468,7 @@ At the end of your trial, you have the option to transition to production or cea
 
 ### Can I create a clone of my environment?
 
-Yes, you can do this through the vCloud Director tenant portal. This operation can also be performed programmatically via the vCloud API.
+Yes, you can do this through the VMware Cloud Director tenant portal. This operation can also be performed programmatically via the vCloud API.
 
 It's not possible to restrict the automated VM snapshot backup to specific files or directories. You can install your own backup service and use our Cloud Storage service if you need more flexibility.
 
@@ -485,9 +482,9 @@ Synchronous Protection is no longer available as protection option for UKCloud f
 
 A snapshot is NOT a copy of the VMDK. Creating a snapshot locks out the base VMDK file and any changes to the data are written to the snapshot delta VMDK. If you want to roll back to the point in time that the snapshot was created and discard any changes since, you can revert the snapshot, which essentially deletes it and discards any changes. If you are happy with the changes made since the snapshot was created, you can delete the snapshot, which essentially consolidated all changes back into the base VMDK. For advice on best practice regarding snapshots, see [*Virtual machine disk limits and considerations*](vmw-ref-vmdk-limits.md).
 
-You can create snapshots using the vCloud Director tenant portal and these are stored in the same zone as the source VM. This is not to be confused with the UKCloud Snapshot Protection service, which uses a temporary snapshot to backup the VM to an external system in another UKCloud site.
+You can create snapshots using the VMware Cloud Director tenant portal and these are stored in the same zone as the source VM. This is not to be confused with the UKCloud Snapshot Protection service, which uses a temporary snapshot to backup the VM to an external system in another UKCloud site.
 
-For further reference, [*Virtual machine data recovery options*](vmw-ref-vm-data-recovery.md) explains the different recovery options available to you through vCloud Director.
+For further reference, [*Virtual machine data recovery options*](vmw-ref-vm-data-recovery.md) explains the different recovery options available to you through VMware Cloud Director.
 
 ### Can I restrict automated VM snapshot backup to specific files or directories?
 
@@ -573,8 +570,6 @@ Billing information is available via the UKCloud Portal.
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
-If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
-
 ### What are the termination fees?
 
 There are no termination costs for this service. Customers are responsible for extracting their own data from the UKCloud for VMware if required.
@@ -589,7 +584,7 @@ For example, if a VM was switched off for a total of 890 minutes but was on for 
 
 ### Will I be charged for creating snapshots?
 
-Snapshot Protection can be purchased with any VM and will be charged for in accordance with the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf). Self-service snapshots created within vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
+Snapshot Protection can be purchased with any VM and will be charged for in accordance with the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). Self-service snapshots created within VMware Cloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
 
 ## Security
 
@@ -605,7 +600,7 @@ For more information, see the [*Cross Domain Security Zone Service Definition*](
 
 ### Is there a protective monitoring service?
 
-Protective Monitoring is included for our IaaS platform and follows GPG 13.
+Protective Monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 

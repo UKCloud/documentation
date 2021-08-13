@@ -8,7 +8,7 @@
     <title>Comparison of UKCloud for VMware against hyperscalers </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Comparison of UKCloud for VMware against hyperscalers ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -112,7 +112,7 @@
 <p>To validate the performance of our platform, UKCloud has been running automated tests to compare the performance of UKCloud for VMware against two leading proprietary public cloud platforms: Amazon Web Services and Microsoft Azure.</p>
 <p>The benchmarking was based on the PerfKit Benchmarker tool which was originally developed by Google and made available to the open source community. PerfKit is designed to provide a repeatable, consistent and open way of measuring cloud performance.</p>
 <p>PerfKit was configured to specifically compare UKCloud for VMware in Region 6, Zone F with AWS EU-West 2 (London) region and the Azure London region. The benchmarks ran throughout August 2017 and average values for the month are reported below.</p>
-<p>UKCloud have worked on extending Perfkit to directly support vCloud Director based clouds, this is available from the UKCloud Github pages and will be contributed back to the core repository. This will enable you to run your own benchmarks with up-to-date data, allowing for a ready comparison of our performance against other public cloud providers. You will also be able to compare performance from a set time period of your choice.</p>
+<p>UKCloud have worked on extending Perfkit to directly support VMware Cloud Director-based clouds, this is available from the UKCloud Github pages and will be contributed back to the core repository. This will enable you to run your own benchmarks with up-to-date data, allowing for a ready comparison of our performance against other public cloud providers. You will also be able to compare performance from a set time period of your choice.</p>
 <h2 id="benchmark-results">Benchmark results</h2>
 <p>UKCloud performed a suite of tests to assess the performance of various components of the platform, as well as some end-to-end system tests. The rest of this article provides more detail regarding each of the benchmark results.</p>
 <div class="NOTE">
@@ -139,7 +139,7 @@
 <p>Random read is a measure of how quickly multiple small files can be read from random areas on a disk. Random read performance is measured in input-output operations per second with the number shown below an indication of the maximum number of reads. Random write uses the same disk pattern as random read but data is written to the disk rather than read.</p>
 <p>The graph below shows that the UKCloud platform performs 2.5 times faster random read IOPs than AWS and over 15 times faster than Azure. For random write, the UKCloud platform performs 9 times more IOPs than AWS and almost 61 times more than Azure.</p>
 <p>This means that enterprise applications such as relational databases which are disk-intensive (require high I/O), perform better on the UKCloud platform.</p>
-<p>Databases and applications that are disk intensive are often slowed down by their storage, hence the increased popularity of Solid State Drives (SSD). However, as the graph below shows, UKCloud provides fast storage access allowing applications to rapidly access and process data, resulting in faster applications compared to AWS and Azure’s equivalent storage option.</p>
+<p>Databases and applications that are disk intensive are often slowed down by their storage, hence the increased popularity of Solid State Drives (SSD). However, as the graph below shows, UKCloud provides fast storage access allowing applications to rapidly access and process data, resulting in faster applications compared to AWS and Azure's equivalent storage option.</p>
 <p><img src="images/vmw-benchmark-random-io.png" alt="Random IO performance"></p>
 <h3 id="sequential-io-performance-iops">Sequential IO performance (IOPS)</h3>
 <p>Sequential read is a disk access pattern where large continuous blocks of data are read from adjacent locations on the disk. Sequential write is the same pattern, but data is written to the disk rather than read. These kinds of disk access patterns are common when accessing large multimedia files such as music, video and images. They are also important for data warehouses and analytics applications.</p>
@@ -214,6 +214,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -232,7 +245,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

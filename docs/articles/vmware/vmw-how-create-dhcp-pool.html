@@ -8,7 +8,7 @@
     <title>How to create a DHCP pool </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a DHCP pool ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,33 +94,34 @@
 <h1 id="how-to-create-a-dhcp-pool">How to create a DHCP pool</h1>
 
 <h2 id="overview">Overview</h2>
-<p>With VDC networks you have the option of creating an IP pool of addresses to be assigned automatically or manually (known as a static IP pool). These addresses are injected into virtual machines (VMs) via VMware Tools during Guest Customisation. They appear in the usual places in Windows and Linux where you would interrogate IP settings, and show as static addresses.</p>
+<p>With VDC networks you have the option of creating an IP pool of addresses to be assigned automatically or manually (known as a static IP pool). These addresses are injected into virtual machines (VMs) via VMware Tools during guest customisation. They appear in the usual places in Windows and Linux where you would interrogate IP settings and show as static addresses.</p>
 <p>In some situations, you may require true DHCP functionality in your VMs, so that IP addresses are shown as dynamically defined. As with an IP pool, you're defining a non-overlapping range of IP addresses to use on the network.</p>
-<h2 id="creating-a-dhcp-pool-for-an-advanced-gateway">Creating a DHCP pool for an advanced gateway</h2>
+<h2 id="creating-a-dhcp-pool">Creating a DHCP pool</h2>
 <p>To create a DHCP pool:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to create the DHCP pool.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the edge gateway in which you want to create the DHCP pool.</p>
 </li>
-<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+<li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>Select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
-<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
+<li><p>Select the edge that you want to configure and click <strong>Services</strong>.</p>
+<p><img src="images/vmw-vcd10.1-edge-btn-services.png" alt="Services button"></p>
 </li>
 <li><p>Select the <strong>DHCP</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-dhcp.png" alt="DHCP tab"></p>
+<p><img src="images/vmw-vcd10.1-edge-tab-dhcp.png" alt="DHCP tab"></p>
 </li>
-<li><p>On the <strong>Pools</strong> tab, click the <strong>Add</strong> button.</p>
-<p><img src="images/vmw-vcd-btn-add-dhcp-adv.png" alt="Add DHCP button"></p>
+<li><p>Select the <strong>Pools</strong> tab, then click the <strong>Create</strong> button.</p>
+<p><img src="images/vmw-vcd10.1-btn-add-dhcp.png" alt="Add DHCP button"></p>
 </li>
-<li><p>Select the network to which you want to apply the DHCP pool, then define an IP range for the pool. You can leave the lease times as default or change them.</p>
-<p><img src="images/vmw-vcd-add-dhcp-pool-adv.png" alt="Add DHCP Pool dialog box"></p>
+<li><p>In the <em>Add DHCP Pool</em> dialog box, define an IP range for the pool. You can leave the lease times as default or change them.</p>
+<p><img src="images/vmw-vcd10.1-add-dhcp-pool.png" alt="Add DHCP Pool dialog box"></p>
 </li>
 <li><p>When you're finished, click <strong>Keep</strong>.</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
-<p>In this article you've learned how to create a DHCP pool. For other edge gateway configuration tasks, see:</p>
+<p>In this article you've learned how to create a DHCP pool. Next, you need to make sure there's a VDC network, configured with a matching gateway and range, connected to the edge. Any VMs attached to this network and configured for DHCP will pick up an IP address from the pool. For more information about creating a network, see <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em>*</a>.</p>
+<p>For other edge gateway configuration tasks, see:</p>
 <ul>
 <li><p><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
 </li>
@@ -144,6 +145,19 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -162,7 +176,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

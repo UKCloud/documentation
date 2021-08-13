@@ -8,7 +8,7 @@
     <title>How to deploy and configure the Azure Stack Hub Development Kit </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to deploy and configure the Azure Stack Hub Development Kit ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,13 +96,13 @@
 <p>The Azure Stack Hub Development Kit (ASDK) is a single server instance of Azure Stack Hub. It is not fit for production workloads and has some subtle differences vs the real Azure Stack Hub integrate appliance, however for most test scenarios it will suffice.</p>
 <p>The ASDK is used in two modes within UKCloud:</p>
 <ul>
-<li><p>Physical hardware (pre-production) - Community support with Microsoft</p>
+<li><p>Physical hardware (pre-production) - Community support with Microsoft.</p>
 </li>
-<li><p>Virtual servers (development and testing) - not officially supported by Microsoft This document covers two scenarios, building from scratch and redeploying.</p>
+<li><p>Virtual servers (development and testing) - Not officially supported by Microsoft.</p>
 </li>
 </ul>
 <h2 id="step-1---hardware-pre-requisites">Step 1 - Hardware pre-requisites</h2>
-<p>Detailed specifications are here - <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy">https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy</a></p>
+<p>Detailed specifications can be found <a href="https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-deploy-considerations">here</a></p>
 <table>
 <thead>
 <tr>
@@ -117,7 +117,7 @@
 </tr>
 <tr>
 <td>RAM</td>
-<td>&gt;=128GB</td>
+<td>&gt;=192GB</td>
 </tr>
 <tr>
 <td>OS Disks</td>
@@ -125,55 +125,76 @@
 </tr>
 <tr>
 <td>Data Disks</td>
-<td>&gt;=4 * &gt;=250G</td>
+<td>&gt;=4 * &gt;=240G</td>
+</tr>
+<tr>
+<td>NIC</td>
+<td>&gt;= Windows Server 2012 R2 Certification. No specialized features required.</td>
+</tr>
+<tr>
+<td>HW logo certification</td>
+<td>&gt;= <a href="https://www.windowsservercatalog.com/content.aspx?ctf=logo.htm">Certified for Windows Server 2012 R2</a>.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Virtualisation Note:</strong> VMware HW must be &gt;=11, CPU virtual extension pass-through must be enabled</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Virtual Deployment</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">Physical Deployment</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<p>VMware HW version must be &gt;=11, and CPU virtual extension pass-through must be enabled.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>If you deploy your VM with Hardware Version 11 and Operating System Family as Windows Server 2016 you will not be able to create S2D Cluster as disk UUIDs are not exposed.</p>
-<p>Either create it with Windows Server 2012 and change later or in Configuration Parameters -&gt; Click Add Row. In the Name column, enter disk.EnableUUID.
-In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.</p>
-</div>
-<p><strong>Physical Note:</strong> The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC</p>
-<h2 id="step-2---install-base-operating-system">Step 2 - Install base operating system</h2>
-<p>Install Windows Server 2016 to the OS disk implementing a static IP address.</p>
-<p><strong>Physical Note:</strong> This the RAID 1 disk, the following drivers must be downloaded, extracted and installed:</p>
-<p><a href="https://software.cisco.com/download/release.html?mdfid=286281356&amp;softwareid=283291009&amp;os=Windows%202016%2064-bit&amp;release=3.0(3a)&amp;relind=AVAILABLE&amp;rellifecycle=&amp;reltype=latest">https://software.cisco.com/download/release.html?mdfid=286281356&amp;softwareid=283291009&amp;os=Windows%202016%2064-bit&amp;release=3.0(3a)&amp;relind=AVAILABLE&amp;rellifecycle=&amp;reltype=latest</a></p>
-<p><strong>Virtualisation Note:</strong> VMware tools must be installed and the VMware Tools drivers must be exported onto the c: drive (VMwareKB), also disks have to be online and initialised as MBR</p>
-<h2 id="step-3---initial-setup">Step 3 - Initial setup</h2>
-<p>Download the appliance and prep the virtual disk (vhdx) for the ASDK.</p>
-<p>Implement the following steps from the guide: <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script">https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script</a></p>
 <ul>
-<li><p>Download and extract the development kit</p>
+<li><p>Either create it with Windows Server 2012 and change it later.</p>
 </li>
-<li><p>Prepare the development kit host</p>
+<li><p>Or in Configuration Parameters, click Add Row. In the Name column, enter disk.EnableUUID. In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and the cluster should build.</p>
 </li>
 </ul>
-<p><strong>Virtualisation Note:</strong> Before running the installer, open &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; and edit as follows:</p>
-<table>
-<thead>
-<tr>
-<th>Line Number</th>
-<th>Current Code</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1372</td>
-<td><code>elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'Virtual Disk') {</code></td>
-<td><code>elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'null') {</code></td>
-</tr>
-</tbody>
-</table>
-<p>To run:</p>
-<pre><code class="lang-powershell">Get-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; | foreach {($_ -replace &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{&quot;, &quot;elseif ((get-disk | Where-Object -FilterScript {`$====_.isboot -eq `$true}).Model -match 'null') {&quot;) -replace &quot;====&quot;,&quot;&quot;} | Set-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -Force
-</code></pre>
-<p>To verify:</p>
-<pre><code class="lang-powershell">Select-String -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -Pattern &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{&quot;
-</code></pre>
+</div>
+</section>
+<section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>The first two drives must be setup in a RAID 1 configuration, with the rest passed through as JBoD (Just a Bunch Of Disks). Additionally, you need to specify your VLAN as ACCESS in the CIMC.</p>
+</section>
+</div>
+<h2 id="step-2---install-base-operating-system">Step 2 - Install base operating system</h2>
+<p>Install Windows Server 2016 to the OS disk implementing a static IP address.</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Virtual Deployment</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-2" data-tab="tabid-2" tabindex="-1">Physical Deployment</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-1_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<p>VMware tools must be installed and the VMware Tools drivers must be exported onto the C: drive (VMwareKB). Additionally, the disks have to be online and initialised as MBR.</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>On the RAID 1 disk, the following drivers must be downloaded, extracted and installed:</p>
+<p><a href="https://software.cisco.com/download/release.html?mdfid=286281356&amp;softwareid=283291009&amp;os=Windows%202016%2064-bit&amp;release=3.0(3a)&amp;relind=AVAILABLE&amp;rellifecycle=&amp;reltype=latest">https://software.cisco.com/download/release.html?mdfid=286281356&amp;softwareid=283291009&amp;os=Windows%202016%2064-bit&amp;release=3.0(3a)&amp;relind=AVAILABLE&amp;rellifecycle=&amp;reltype=latest</a></p>
+</section>
+</div>
+<h2 id="step-3---initial-setup">Step 3 - Initial setup</h2>
+<p>Download the appliance and prep the virtual disk (VHDX) for the ASDK.</p>
+<p>Implement the following steps from the Microsoft documentation:</p>
+<ul>
+<li><p><a href="https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-download">Download and extract the development kit</a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-prepare-host">Prepare the development kit host</a></p>
+</li>
+</ul>
 <p>The following details should be used:</p>
 <table>
 <thead>
@@ -185,7 +206,7 @@ In the Value column, enter TRUE. This will show correct disk IDs in Get-Physical
 <tbody>
 <tr>
 <td>NTP</td>
-<td>13.79.239.69</td>
+<td>46.227.200.76</td>
 </tr>
 <tr>
 <td>DNS Forwarder</td>
@@ -197,7 +218,7 @@ In the Value column, enter TRUE. This will show correct disk IDs in Get-Physical
 </tr>
 <tr>
 <td>Computer Name</td>
-<td>Anything but &quot;azurestack&quot;, eg: &quot;azurestackhost&quot;</td>
+<td>Anything but &quot;azurestack&quot;, for example, &quot;azurestackhost&quot;</td>
 </tr>
 <tr>
 <td>Static IP</td>
@@ -205,11 +226,56 @@ In the Value column, enter TRUE. This will show correct disk IDs in Get-Physical
 </tr>
 </tbody>
 </table>
-<p>Once step 3 is complete the box will have been rebooted from the vhdx downloaded above.</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Virtual Deployment</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-2" data-tab="tabid-2" tabindex="-1">Physical Deployment</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-2_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<p>Before running the installer, open <code>C:\AzureStack\_Installer\asdk-installer.ps1</code> and edit as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Line Number</th>
+<th>Current Code</th>
+<th>Updated code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1917</td>
+<td><code>elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {</code></td>
+<td><code>elseif ((get-disk | Where-Object -FilterScript { $_.isboot -eq $true }).Model -match 'null') {</code></td>
+</tr>
+</tbody>
+</table>
+<p>To edit, run:</p>
+<pre><code class="lang-powershell">$GetScript = Get-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot;
+
+$GetScript = $GetScript | ForEach-Object { ($_ -replace &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{&quot;, &quot;elseif ((get-disk | Where-Object -FilterScript { `$====_.isboot -eq `$true }).Model -match 'null') {&quot;) -replace &quot;====&quot;,&quot;&quot; }
+
+$GetScript | Set-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -Force
+</code></pre>
+<p>To verify, run:</p>
+<pre><code class="lang-powershell">Select-String -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -Pattern &quot;elseif \(\(get-disk \| Where-Object -FilterScript \`{ \`$`_.isboot -eq \`$true \`}\).Model -match 'null'\) \`{&quot;
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-2_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>No additional steps.</p>
+</section>
+</div>
+<br>
+<p>Once step 3 is complete the box will have been rebooted from the VHDX downloaded above.</p>
 <h2 id="step-4---install-asdk">Step 4 - Install ASDK</h2>
-<p>Implement the following steps from the guide: <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script">https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script</a></p>
+<p>Implement the following steps from the Microsoft documentation:</p>
 <ul>
-<li>Deploy the development kit</li>
+<li><a href="https://docs.microsoft.com/en-us/azure-stack/asdk/asdk-install">Deploy the development kit</a></li>
 </ul>
 <p>The following details should be used:</p>
 <table>
@@ -222,7 +288,7 @@ In the Value column, enter TRUE. This will show correct disk IDs in Get-Physical
 <tbody>
 <tr>
 <td>NTP</td>
-<td>13.79.239.69</td>
+<td>46.227.200.76</td>
 </tr>
 <tr>
 <td>DNS Forwarder</td>
@@ -230,17 +296,111 @@ In the Value column, enter TRUE. This will show correct disk IDs in Get-Physical
 </tr>
 <tr>
 <td>Type</td>
-<td>Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com</td>
+<td>Azure AD - this should be either your own AAD account where you are the system admin or one you have setup for Azure Stack Hub, for example, <code>contoso.onmicrosoft.com</code></td>
 </tr>
 <tr>
 <td>Static IP</td>
-<td>Different IP than what you currently have - eg. 10.0.0.101 was my box 10.0.0.191 I set up - or just current IP + 1</td>
+<td>Different IP than what you currently have, for example, if your current IP is 10.0.0.101 then you could use 10.0.0.191.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Physical Note:</strong> Before running the installation, make sure only one network adapter is enabled, otherwise install will fail.</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-3">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-3_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-3_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Virtual Deployment</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-3_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-3_tabid-2" data-tab="tabid-2" tabindex="-1">Physical Deployment</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-3_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>If the installer cannot see any network adapters - you can manually install VMware Tools and reboot the box.</p>
+</div>
+<p>After completing the wizard BUT before clicking deploy, copy the command as the install will fail.</p>
+<pre><code class="lang-powershell">E:\AzureStack_Installer\asdk-installer.ps1
+
+Initialize environment. Please wait...
+</code></pre>
+<p>This will just end with nothing after exiting the installer wizard.</p>
+<p>Then you need to run the copied InstallAzureStackPOC.ps1 command to create the Roles directory, which will contain the below script.</p>
+<p>Open <code>C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1</code> and edit as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Line Number</th>
+<th>Current code</th>
+<th>Updated code</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>780</td>
+<td><code>PartNumber = $_.PartNumber.Trim();</code></td>
+<td><code>PartNumber = $_.PartNumber;</code></td>
+<td><a href="https://social.msdn.microsoft.com/Forums/en-US/f9060fe2-4408-41a4-b387-09a3e9a09f00/ltstacktracegtat-line-762-in?forum=AzureStack">https://social.msdn.microsoft.com/Forums/en-US/f9060fe2-4408-41a4-b387-09a3e9a09f00/ltstacktracegtat-line-762-in?forum=AzureStack</a></td>
+</tr>
+<tr>
+<td>1202</td>
+<td><code>($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine</code></td>
+<td><code>($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>To edit, run:</p>
+<pre><code class="lang-powershell">$GetScript = Get-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot;
+
+$GetScript = $GetScript | ForEach-Object { $_ -replace &quot;$_.PartNumber.Trim\(\);&quot;, &quot;$_.PartNumber;&quot; }
+$GetScript = $GetScript | ForEach-Object { $_ -replace &quot;\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine&quot;, &quot;(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0&quot; }
+
+$GetScript | Set-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Force
+</code></pre>
+<p>To verify, run:</p>
+<pre><code class="lang-powershell">Select-String -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Pattern &quot;PartNumber = \`$_.PartNumber;&quot;
+
+Select-String -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Pattern &quot;\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0&quot;
+</code></pre>
+<p>After you've modified it, run:</p>
+<pre><code class="lang-powershell">$AdminPass = ConvertTo-SecureString -String 'Password123'-AsPlainText -Force
+$Username = &quot;azurestackadmin@&lt;domain&gt;.onmicrosoft.com&quot;
+$Password = &quot;&lt;password&gt;&quot;
+$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
+$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+
+cd C:\CloudDeployment\Setup
+.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName &lt;domain&gt;.onmicrosoft.com -DNSForwarder 8.8.8.8 -TimeServer 46.227.200.76
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-3_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>Before running the installation, make sure only one network adapter is enabled, otherwise the install will fail.</p>
 <p>For some reason the driver injection does not work and you have to manually add Ethernet Adapters from Device Manager, then disable everything but management-0. Configure its IP address and then run the install.</p>
-<p><strong>Important:</strong> 1803 install failed with the error below.</p>
+</div>
+<p>Example of Automated Physical Kit Deployment:</p>
+<pre><code class="lang-powershell">$AdminPass = ConvertTo-SecureString -String 'Password123' -AsPlainText -Force
+$Username = &quot;azurestackadmin@&lt;domain&gt;.onmicrosoft.com&quot;
+$Password = &quot;&lt;password&gt;&quot;
+$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
+$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+
+cd C:\CloudDeployment\Setup
+.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $Credentials -InfraAzureDirectoryTenantName &lt;domain&gt;.onmicrosoft.com -DNSForwarder 8.8.8.8 -TimeServer 46.227.200.76
+</code></pre>
+</section>
+</div>
+<br>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Do not set the <code>InfraAzureDirectoryTenantAdminCredential</code> parameter if the AAD account has MFA enabled as you will not be able to authenticate correctly. Instead, leave it blank and you will be prompted for the AAD account a few minutes after you run the script.</p>
+</div>
+<h3 id="fix-for-potential-installation-failure">Fix for Potential Installation Failure</h3>
+<p>1803 install failed with the below error:</p>
 <pre><code class="lang-powershell">Invoke-EceAction : Type 'Deployment' of Role 'Domain' raised an exception: 'AzS-DC01' failed to start.
 Virtual machine 'AzS-DC01' could not be started because the hypervisor is not running.
 'AzS-DC01' failed to start. (Virtual machine ID DA2A3A2D-F30B-42C3-AB39-C4BF11E07CEE)
@@ -273,80 +433,41 @@ At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
  + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
  + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
 </code></pre>
-<p>Verification of Physical kit showed that Virtualisation is in fact enabled but Hyper-V is not starting on boot.</p>
-<p>To verify run you can run systeminfo and it will show whether BIOS is set correctly etc... In our case it was set correctly. Only Boot settings were not.</p>
-<p>To fix it run from elevated command/powershell prompt:</p>
+<p>Verification of Physical kit showed that virtualisation is in fact enabled but Hyper-V is not starting on boot.</p>
+<p>To verify, you can run systeminfo and it will show whether the BIOS is set correctly, and so on. In our case it was set correctly, only the boot settings were not.</p>
+<p>To fix it, run the below from an elevated command prompt:</p>
 <pre><code class="lang-powershell">BCDEDIT /Set {current} hypervisorlaunchtype auto
 </code></pre>
 <p>Then reboot the box and continue the install.</p>
-<p>Example of Automated Physical Kit Deployment:</p>
-<pre><code class="lang-powershell">$AdminPass = ConvertTo-SecureString -String 'Password123' -AsPlainText -Force
-$Username = &quot;azurestackadmin@&lt;domain&gt;.onmicrosoft.com&quot;
-$Password = &quot;&lt;password&gt;&quot;
-$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
-$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+<h2 id="post-deployment-troubleshooting">Post-Deployment Troubleshooting</h2>
+<h3 id="service-principal-creation-failed-during-registration-process">Service Principal creation failed during registration process</h3>
+<p>When registering the ASDK, you may experience a timeout during the Service Principal creation. If you inspect the action plan you will see that this is actually caused by an issue with connecting to the below addresses, which are the client and admin portals.</p>
+<pre><code class="lang-xml">TCP connection failed for the following VIPs: 'SDRInternal' 192.168.105.8:19007 'SDRInternal' 192.168.105.8:19000.
+</code></pre>
+<p>A potential fix is to try increasing the memory and disk space of the 'AzS' virtual machines in Hyper-V manager. As a general guide, make sure that you assign enough memory to meet the <em>Memory Demand</em> listed in the <strong>Memory</strong> tab for each virtual machine.</p>
+<p>After making any changes, you should restart the ASDK as follows:</p>
+<pre><code class="lang-powershell"># Create your Credentials
+$AzsUsername = &quot;AzureStack\CloudAdmin&quot;
+$AzsPassword = 'Password123!'
+$AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
+$AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
-cd C:\CloudDeployment\Setup
-.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $Credentials -InfraAzureDirectoryTenantName &lt;domain&gt;.onmicrosoft.com -NatIPv4Subnet 51.179.198.224/28 -NatIPv4Address 51.179.198.227 -NatIPv4DefaultGateway 51.179.198.225 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
-</code></pre>
-<p><strong>Virtualisation Note:</strong> after completing the wizard BUT before clicking install copy the command as the install will fail.</p>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>If the installer cannot see any network adapters - you can install manually VMware Tools and reboot the box. It will work then.</p>
-</div>
-<pre><code class="lang-powershell">E:\AzureStack_Installer\asdk-installer.ps1
+$Session = New-PSSession -ComputerName AzS-ERCS01 -Credential $AzsCred -ConfigurationName PrivilegedEndpoint -SessionOption (New-PSSessionOption -Culture en-US -UICulture en-US)
 
-Initialize environment. Please wait...
-</code></pre>
-<p>This will just end with nothing.</p>
-<p>Then you need to run the copied InstallAzureStackPOC.ps1 to create the Roles directory.</p>
-<p>Open, &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; and edit as follows:</p>
-<table>
-<thead>
-<tr>
-<th>Line Number</th>
-<th>Current code</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>521</td>
-<td><code>$physicalMachine.IsVirtualMachine | Should Be $false</code></td>
-<td><code>$physicalMachine.IsVirtualMachine | Should Be $true</code></td>
-</tr>
-<tr>
-<td>521</td>
-<td><code>($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine</code></td>
-<td><code>($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0</code></td>
-</tr>
-</tbody>
-</table>
-<p>To edit run:</p>
-<pre><code class="lang-powershell">Get-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; | foreach {$_ -replace  &quot;\`$physicalMachine.IsVirtualMachine \| Should Be \`$false&quot;,&quot;`$physicalMachine.IsVirtualMachine | Should Be `$true&quot;} | Set-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Force
-</code></pre>
-<p>And then run:</p>
-<pre><code class="lang-powershell">Get-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; | foreach {$_ -replace &quot;\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine&quot;, &quot;(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0&quot;} | Set-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Force
-</code></pre>
-<p>To verify run:</p>
-<pre><code class="lang-powershell">Select-String -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Pattern &quot;\`$physicalMachine.IsVirtualMachine \| Should Be \`$true&quot;
-Select-String -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Pattern &quot;\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0&quot;
-</code></pre>
-<p>After you modified it, run:</p>
-<pre><code class="lang-powershell">$AdminPass = ConvertTo-SecureString -String 'Password123'-AsPlainText -Force
-$Username = &quot;azurestackadmin@&lt;domain&gt;.onmicrosoft.com&quot;
-$Password = &quot;&lt;password&gt;&quot;
-$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
-$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+Enter-PSSession $Session
 
-cd C:\CloudDeployment\Setup
-.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName &lt;domain&gt;.onmicrosoft.com -NatIPv4Subnet 10.0.0.0/24 -NatIPv4Address 10.0.0.191 -NatIPv4DefaultGateway 10.0.0.1 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
+# This will shutdown the machine after a few minutes. You will need to manually start the VM again once it is shutdown (e.g. through VMWare vCloud Director)
+Stop-AzureStack
+
+# When the machine is back up, create the PSSession again and run the below command to retrieve the status of Start-AzureStack
+Get-ActionStatus Start-AzureStack
 </code></pre>
-<p>If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@&lt;domain&gt;.onmicrosoft.com</p>
+<p>If the above does not resolve the issue, then you will likely need to redeploy the ASDK from the beginning.</p>
+<h2 id="useful-links">Useful Links</h2>
 <ul>
-<li><p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md">Develop templates for Azure Stack Hub</a></p>
+<li><p><a href="https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-develop-templates">Develop templates for Azure Stack Hub</a></p>
 </li>
-<li><p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md">Deploy templates with PowerShell</a></p>
+<li><p><a href="https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-deploy-template-powershell">Deploy templates with PowerShell</a></p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
@@ -360,6 +481,19 @@ cd C:\CloudDeployment\Setup
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -378,7 +512,7 @@ cd C:\CloudDeployment\Setup
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2020. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

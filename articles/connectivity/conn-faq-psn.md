@@ -2,9 +2,9 @@
 title: PSN connectivity FAQs
 description: Frequently asked questions for PSN connectivity
 services: connectivity
-author: Matt Warner
-reviewer:
-lastreviewed: 20/07/2018 18:37:23
+author: mwarner
+reviewer: nstobbart
+lastreviewed: 10/12/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -23,15 +23,11 @@ toc_mdlink: conn-faq-psn.md
 
 The Public Services Network (PSN) is the government's high-performance network, which helps public sector organisations work together, reduce duplication and share resources.
 
-### What is the difference between PSN Assured and PSN Protected?
-
-PSN Assured carries non-encrypted traffic at the network and application layers, whereas PSN Protected carries traffic that contains a shared IPsec encrypted overlay.
-
 ### Who is entitled to connect to the PSN network?
 
-Any organisation that is approved by the PSN can connect.
+Any organisation that is approved by the PSN authority can connect.
 
-If you want PSN connectivity, you must have proven to the PSN that your infrastructure is sufficiently secure to connect to or be consumed via the PSN. This means that you must have successfully completed the process of obtaining a PSN Code of Connection (CoCo).
+If you want PSN connectivity, you must have proven to the PSN authority that your infrastructure is sufficiently secure to connect to or be consumed via the PSN. This means that you must have successfully completed the process of obtaining a PSN Code of Connection (CoCo).
 
 In addition, if you're a partner selling a managed service over the PSN connectivity, you must either:
 
@@ -56,6 +52,10 @@ You must have a CoCo before you can apply for a CoP and list the UKCloud Service
 ### What are UKCloud's PSN service numbers?
 
 Click [here](https://www.gov.uk/government/publications/public-services-network-psn-service-compliance/psn-compliant-services) for a list of our PSN approved services.
+
+### What happened to PSN Assured and PSN Protected?
+
+Previously, PSN Assured carried non-encrypted traffic at the network and application layers, whereas PSN Protected carried traffic that contained a shared IPsec encrypted overlay. However PSN has now been flattened into one network as detailed in [PSN flattening](https://docs.ukcloud.com/articles/connectivity/conn-ref-psn-flattening.html)
 
 ### Do you have any general connectivity questions?
 
@@ -83,11 +83,11 @@ Yes, subject to compliance with information assurance requirements, as only orga
 
 You should be careful not to misconfigure self‑managed components of the solution (OS, application) to 'bridge' between government community networks (PSN) and private networks. This concern must be addressed by accreditation of the customer-managed components - preferably via PSN Accreditation. Local departmental accreditation by a public-sector customer is also allowed. This applies to solutions on both our Assured OFFICIAL and Elevated OFFICIAL cloud platforms.
 
-The UKCloud Assured OFFICIAL cloud platform features connectivity to the PSN Assured Service (previously IL2). This is provided via resilient, high‑capacity PSN circuits from VMB installed into each of our data centres.
+The UKCloud Assured OFFICIAL security domain features connectivity to the PSN Assured Service (previously IL2). This is provided via resilient, high‑capacity PSN circuits from Virgin Media installed into each of our data centres.
 
-The UKCloud Elevated OFFICIAL cloud platform is connected to the encrypted PSN Protected Service (previously IL3) via the IPED. This is provided using circuits from Vodafone into each UKCloud data centre. The PSN Protected Service also provides onward connectivity to legacy government community networks such as PNN and CJX.
+The UKCloud Elevated OFFICIAL security domain is connected to the encrypted PSN Protected Service (previously IL3) via the IPED. This is provided using circuits from Vodafone into each UKCloud data centre. The PSN Protected Service also provides onward connectivity to legacy government community networks such as PNN and CJX.
 
-For both PSN services, we use our data centre interconnectivity (DCI) to provide additional resilience through triangulation.
+For both PSN services, we use our data centre interconnects (DCI) to provide additional resilience through triangulation.
 
 ### How have you implemented your GSI connections?
 
@@ -125,9 +125,9 @@ With the PSN IP addresses, you can establish:
 
 - Source NAT - all outbound traffic to other resources on the PSN will appear to come from one of these IPv4 addresses.
 
-- Destination NAT - all inbound traffic from other resources on the PSN must be targeted at one of these IPv4 addresses. You can translate the PSN IPv4 address to an internal (RFC 1918) IP address assigned to a VM or, preferably, to the edge gateway load balancer.
+- Destination NAT - all inbound traffic from other resources on the PSN must be targeted at one of these IPv4 addresses. You can translate the PSN IPv4 address to an internal (RFC 1918) IP address assigned to a VM or, preferably, to the edge gateway load balancer.
 
-- A VPN - an IPsec VPN between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
+- A VPN - an IPsec VPN between the IPv4 address of the virtual firewall and the IPv4 address of the firewall at another site. Once the VPN has been established, both sites can directly access the internal (RFC 1918) IP addresses.
 
 Before additional IPv4 addresses can be allocated, you'll need to demonstrate your use of:
 
@@ -135,15 +135,15 @@ Before additional IPv4 addresses can be allocated, you'll need to demonstrate yo
 
 - Host headers - enabling web servers to accept connections for several URLs via a single externally routable IP address
 
-- VPN tunnelling - enabling the use of internal (RFC 1918) IP addresses for non‑production services such as UAT and development
+- VPN tunnelling - enabling the use of internal (RFC 1918) IP addresses for non‑production services such as UAT and development
 
 ### Is the PSN connection into UKCloud shared by all environments connected to the PSN?
 
 PSN is a shared connection and all UKCloud PSN‑enabled customers use a shared bandwidth model.
 
-### Does each PSN environment have a maximum limit assigned to it?
+### Does each PSN connection have a maximum bandwidth limit assigned to it?
 
-We don't publish limits associated with PSN bandwidth as we capacity‑manage this link to ensure there is always enough bandwidth for our customers. Consumption of PSN bandwidth is based on the actual volume of data transferred (outbound) per month.
+We don't publish limits associated with PSN bandwidth as we capacity manage the link to ensure there is always enough bandwidth for our customers. Consumption of PSN bandwidth is based on the actual volume of data transferred (outbound) per month.
 
 ### What is the notice period for PSN termination?
 
@@ -153,13 +153,13 @@ The notice period for PSN termination is 30 days.
 
 You'll need to complete the PSN DNS order form, PSN domain name authorisation request form and the PSN customer change form. You can find these forms at: <https://www.gov.uk/government/publications/psn-dns-change-forms>
 
-You then need to submit the completed forms to: <gcforderdesk@vodafone.com>
+You then need to submit the completed forms to: <frameworkschange@vodafone.com> 
 
 If you don't have an existing contract with Vodafone, a billing account and remedy name will need to be created.
 
 ### How do I order PSN connectivity?
 
-When placing an order through your account manager or when raising a service request, you need to provide evidence of your entitlement to connect to the PSN.
+When placing an order through your Client Director or when raising a service request, you need to provide evidence of your entitlement to connect to the PSN.
 
 You will also need to provide updated PSN approval when your certificate expires.
 
@@ -171,17 +171,17 @@ Changes depend on whether you're on PSN Assured or PSN Protected and whether you
 
 - If you're on PSN Assured, you'll be charged for outbound data used in the month once you have exceeded 1TB.
 
-- If you're on PSN Protected, you'll be charged a monthly starter pack fee for the outbound data used which provides 250GB per month. Additional usage will be charged as per the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+- If you're on PSN Protected, you'll be charged a monthly starter pack fee for the outbound data used which provides 250GB per month. Additional usage will be charged as per the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 - For either service, if you have the Unmetered Data Transfer option, you'll be charged a set fee for the month.
 
 We charge for each separate connection on the UKCloud platform.
 
-UKCloud pricing is available via the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+UKCloud pricing is available via the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### How does PSN for Policing work?
 
-Cryptographic overlays on top of the PSN network are created that prevent PSN customers from seeing the closed Police network.
+Cryptographic overlays on top of the PSN network are created that prevent PSN customers from seeing the closed Police network. See the [*PSN for Policing and enhanced regime FAQs*](conn-faq-psn-police.md).
 
 Please engage with a UKCloud Cloud Architect for more details.
 
@@ -193,27 +193,27 @@ We suggest an MTU size of 1400 bytes for further information. For more informati
 
 The [guidance](https://www.gov.uk/government/groups/public-services-network) from PSN Authority is as follows:
 
-- The PSN CoCo from non-government organisations is called the PSN Service Provision Compliance Certificate. This certificate is the one that is relevant to workloads facing PSN -- there are other PSN CoCos, however are not applicable for non-government organisations.
+- The PSN CoCo from non-government organisations is called the PSN Service Provision Compliance Certificate. This certificate is the one that is relevant to workloads facing PSN -- there are other PSN CoCos, however are not applicable for non-government organisations.
 
-- You can present us with one of two CoCos. If you present us with a *PSN Service Provision Compliance Certificate* then it needs to be applicable to that project or a blanket Service Provision Compliance Certificate, covering many projects that you are doing. The other PSN CoCo, *PSN Connection Compliance Certificate*, allows the access to connect to PSN to send and receive data from services on it, including creating PSN-connected environments for yourselves on UKCloud.
+- You can present us with one of two CoCos. If you present us with a *PSN Service Provision Compliance Certificate* then it needs to be applicable to that project or a blanket Service Provision Compliance Certificate, covering many projects that you are doing. The other PSN CoCo, *PSN Connection Compliance Certificate*, allows the access to connect to PSN to send and receive data from services on it, including creating PSN-connected environments for yourselves on UKCloud.
 
 ### I am a government organisation, what do I need to show you to get PSN connectivity for my UKCloud environment?
 
-You must do either of the following:
+You must do one of the following:
 
 - Supply us with a project specific PSN Service Provision Compliance Certificate
 
-- Supply us with a blanket PSN Service Provision Compliance Certificate that covers all projects you are doing
+- Supply us with a blanket PSN Service Provision Compliance Certificate that covers all projects you are doing
 
 - Supply us with a PSN Connection Compliance Certificate, validating that you are connected to PSN
 
 ### I am a non-government organisation but I am supplying a service to a single government organisation. What do I need to show you to get PSN connectivity to my environment?
 
-- If the government customer is supplying the CoCo, this must be a blanket or project specific PSN Service Provision Compliance Certificate, covering all projects that the government organisation is doing and we must see a statement from the government organisation's SIRO/IA with confirmation to use their CoCo.
+- If the government customer is supplying the CoCo, this must be a blanket or project specific PSN Service Provision Compliance Certificate, covering all projects that the government organisation is doing and we must see a statement from the government organisation's SIRO/IA with confirmation to use their CoCo.
 
 - If the government customer is not supplying them with the CoCo, they will need to apply for a PSN Service Provision Compliance Certificate for themselves.
 
-A PSN Connection Compliance Certificate is not an acceptable CoCo.
+A PSN Connection Compliance Certificate is not an acceptable CoCo.
 
 ### I am a non-government organisation providing a service to multiple government organisations. What do I need to show you to get PSN connectivity to my environment?
 
