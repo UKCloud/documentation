@@ -91,7 +91,7 @@ $VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
 # Shutdown the VM
 $VM | Stop-AzVm -Force
 
-# Retrieve the disk object
+# Retrieve the OS disk object
 $Disk = Get-AzDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
 </code></pre>
 
@@ -100,7 +100,7 @@ $Disk = Get-AzDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDis
 <pre><code class="language-PowerShell"># Declare the name of the disk
 $DiskName = "<output form="diskname" name="result" style="display: inline;">MyDisk_OsDisk</output>"
 
-# Retrieve the disk object
+# Retrieve the OS disk object
 $Disk = Get-AzDisk -ResourceGroupName $RGName -DiskName $DiskName
 </code></pre>
 
