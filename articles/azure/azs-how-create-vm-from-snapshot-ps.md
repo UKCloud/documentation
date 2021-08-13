@@ -66,13 +66,13 @@ Enter details below to provide values for the variables in the following scripts
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 ## Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 ## Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
-$Location = (Get-AzureRmLocation).Location
+$Location = (Get-AzLocation).Location
 
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
@@ -80,20 +80,20 @@ $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</ou
 $SSName = "<output form="ssname" name="result" style="display: inline;">MySnapshot</output>"
 
 # Set the VM object
-$VM = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
+$VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
 
 # Set the disk object
-$Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
+$Disk = Get-AzDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
 
 # Create the snapshot configuration
 Write-Output -InputObject "Creating snapshot"
 $SnapshotConfig = switch ("<output form="vmtype" name="result" style="display: inline;">-Linux</output>") {
-    "-Linux" { New-AzureRmSnapshotConfig -SourceUri $Disk.Id -OsType "Linux" -CreateOption "Copy" -Location $Location }
-    "-Windows" { New-AzureRmSnapshotConfig -SourceUri $Disk.Id -OsType "Windows" -CreateOption "Copy" -Location $Location }
+    "-Linux" { New-AzSnapshotConfig -SourceUri $Disk.Id -OsType "Linux" -CreateOption "Copy" -Location $Location }
+    "-Windows" { New-AzSnapshotConfig -SourceUri $Disk.Id -OsType "Windows" -CreateOption "Copy" -Location $Location }
 }
 
 # Take the snapshot
-$Snapshot = New-AzureRmSnapshot -Snapshot $SnapshotConfig -SnapshotName $SSName -ResourceGroupName $RGName
+$Snapshot = New-AzSnapshot -Snapshot $SnapshotConfig -SnapshotName $SSName -ResourceGroupName $RGName
 
 Write-Output -InputObject "Snapshot created successfully"
 </code></pre>
@@ -106,14 +106,14 @@ $NewDiskName = "<output form="newdisk" name="result" style="display: inline;">Ne
 
 # Create a new resource group
 Write-Output -InputObject "Creating resource group"
-New-AzureRmResourceGroup -Name $NewRGName -Location $Location
+New-AzResourceGroup -Name $NewRGName -Location $Location
 
 # Create the new disk config
 Write-Output -InputObject "Creating new managed disk"
-$NewDiskConfig = New-AzureRmDiskConfig -Location $Location -CreateOption "Copy" -SourceResourceId $Snapshot.Id
+$NewDiskConfig = New-AzDiskConfig -Location $Location -CreateOption "Copy" -SourceResourceId $Snapshot.Id
 
 # Create the new disk
-$NewDisk = New-AzureRmDisk -DiskName $NewDiskName -Disk $NewDiskConfig -ResourceGroupName $NewRGName
+$NewDisk = New-AzDisk -DiskName $NewDiskName -Disk $NewDiskConfig -ResourceGroupName $NewRGName
 
 Write-Output -InputObject "New managed disk created successfully"
 </code></pre>
@@ -136,35 +136,35 @@ $VMSize = "<output form="vmsize" name="result" style="display: inline;">Standard
 
 # Create a new storage account
 Write-Output -InputObject "Creating storage account"
-$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $NewRGName -Type "Standard_LRS" -Name $SAName
+$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $NewRGName -Type "Standard_LRS" -Name $SAName
 
 ## Create network resources
 
 # Create a subnet configuration
 Write-Output -InputObject "Creating virtual network"
-$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
+$SubnetConfig = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
 
 # Create a virtual network
-$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $NewRGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
+$VirtualNetwork = New-AzVirtualNetwork -ResourceGroupName $NewRGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
 
 # Create a public IP address
 Write-Output -InputObject "Creating public IP address"
-$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $NewRGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
+$PublicIP = New-AzPublicIpAddress -ResourceGroupName $NewRGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
 
 # Create network security group rule (SSH or RDP)
 Write-Output -InputObject "Creating SSH/RDP network security rule"
 $SecurityGroupRule = switch ("<output form="vmtype" name="result2" style="display: inline;">-Linux</output>") {
-    "-Linux" { New-AzureRmNetworkSecurityRuleConfig -Name "SSH-Rule" -Description "Allow SSH" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 22 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
-    "-Windows" { New-AzureRmNetworkSecurityRuleConfig -Name "RDP-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 3389 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
+    "-Linux" { New-AzNetworkSecurityRuleConfig -Name "SSH-Rule" -Description "Allow SSH" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 22 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
+    "-Windows" { New-AzNetworkSecurityRuleConfig -Name "RDP-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 3389 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
 }
 
 # Create a network security group
 Write-Output -InputObject "Creating network security group"
-$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $NewRGName -Location $Location -Name $NSGName -SecurityRules $SecurityGroupRule
+$NetworkSG = New-AzNetworkSecurityGroup -ResourceGroupName $NewRGName -Location $Location -Name $NSGName -SecurityRules $SecurityGroupRule
 
 # Create a virtual network card and associate it with the public IP address and NSG
 Write-Output -InputObject "Creating network interface card"
-$NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $NewRGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
+$NetworkInterface = New-AzNetworkInterface -Name $NICName -ResourceGroupName $NewRGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
 
 ## Create the virtual machine
 
@@ -174,7 +174,7 @@ $Password = '<output form="vmpassword" name="result" style="display: inline;">Pa
 $Credential = New-Object -TypeName PSCredential -ArgumentList ($Username, $Password)
 
 # Create the virtual machine configuration object
-$VirtualMachine = New-AzureRmVMConfig -VMName $NewVMName -VMSize $VMSize
+$VirtualMachine = New-AzVMConfig -VMName $NewVMName -VMSize $VMSize
 
 # Enable the provisioning of the VM Agent
 if ($VirtualMachine.OSProfile.WindowsConfiguration) {
@@ -182,17 +182,17 @@ if ($VirtualMachine.OSProfile.WindowsConfiguration) {
 }
 
 # Add Network Interface Card
-$VirtualMachine = Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id -VM $VirtualMachine
+$VirtualMachine = Add-AzVMNetworkInterface -Id $NetworkInterface.Id -VM $VirtualMachine
 
 # Apply the OS disk properties
-$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -ManagedDiskId $NewDisk.Id -StorageAccountType "StandardLRS" -CreateOption "Attach" <output form="vmtype" name="result3" style="display: inline;">-Linux</output>
+$VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -ManagedDiskId $NewDisk.Id -StorageAccountType "StandardLRS" -CreateOption "Attach" <output form="vmtype" name="result3" style="display: inline;">-Linux</output>
 
 # Enable boot diagnostics
-$VirtualMachine = Set-AzureRmVMBootDiagnostics -VM $VirtualMachine -Enable -StorageAccountName $SAName -ResourceGroupName $NewRGName
+$VirtualMachine = Set-AzVMBootDiagnostics -VM $VirtualMachine -Enable -StorageAccountName $SAName -ResourceGroupName $NewRGName
 
 # Create the virtual machine
 Write-Output -InputObject "Creating virtual machine"
-$NewVM = New-AzureRmVM -ResourceGroupName $NewRGName -Location $Location -VM $VirtualMachine
+$NewVM = New-AzVM -ResourceGroupName $NewRGName -Location $Location -VM $VirtualMachine
 $NewVM
 Write-Output -InputObject "Virtual machine created successfully"
 </code></pre>
