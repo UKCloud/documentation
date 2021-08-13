@@ -140,7 +140,7 @@ $NewDisk = New-AzDisk -DiskName $NewDiskName -Disk $NewDiskConfig -ResourceGroup
 
 <pre><code class="language-PowerShell"># Input Variables
 $NewVMName = "<output form="newvmname" name="result" style="display: inline;">NewVM</output>"
-$SAName = "<output form="saname" name="result" style="display: inline;">MyStorageAccount<span id="RandNum2"></span></output>".ToLower()
+$SAName = "<output form="saname" name="result" style="display: inline;">MyStorageAccount<span id="RandNum"></span></output>".ToLower()
 $SubnetName = "<output form="subnetname" name="result" style="display: inline;">MySubnet</output>"
 $SubnetRange = "<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>"
 $VNetName = "<output form="vnetname" name="result" style="display: inline;">MyVNetwork</output>"
@@ -153,7 +153,7 @@ $VMSize = "<output form="vmsize" name="result" style="display: inline;">Standard
 ## Create storage resources
 
 # Create a new storage account
-$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $NewRGName -Type "Standard_LRS" -Name $SAName
+$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $NewRGName -Type Standard_LRS -Name $SAName
 
 ## Create network resources
 
@@ -209,3 +209,5 @@ $NewVM
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
+
+<script>document.getElementById("RandNum").innerHTML = Math.round(Math.random()*100000000)</script>
