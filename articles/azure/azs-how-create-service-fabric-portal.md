@@ -4,7 +4,7 @@ description: Provides help for creating a Service Fabric cluster on UKCloud for 
 services: azure-stack
 author: Bailey Lawson
 reviewer: William Turner
-lastreviewed: 02/04/2020
+lastreviewed: 11/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -50,23 +50,39 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 5. In the *Create key vault* blade, enter the following information:
 
-   - **Name** - The name of the key vault.
+    - **Basics** tab
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
+        - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window.
+        - **Resource group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window.
 
-   - **Location** - This will be `frn00006`, which is the Azure Stack Hub region.
+        - **Key vault name** - The name of the key vault.
 
-   - **Access policies** - Configure who can access the key vault and what permissions they have.
+        - **Region** - This will be `frn00006`, which is the Azure Stack Hub region.
 
-     ![Create new key vault](images/azs-browser-create-key-vault.png)
+        - **Pricing tier** - Azure Stack Hub only offers the Standard pricing tier.
 
-6. Click **Create**.
+          ![Create new key vault > Basics](images/azs-browser-create-key-vault-basics.png)
 
-7. You can monitor the progress of your Key Vault's deployment by clicking the **Notifications** icon.
+    - **Access policy** tab
 
-   ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
+        - **Enable Access to:** - Select the first two check boxes to allow access to the key vault for virtual machines and the Azure Resource Manager.
+
+        - **Current Access Policies** - Select **+Add access policy** to configure the permissions that a user, group or service principal has to the key vault.
+
+          ![Create new key vault > Access policy](images/azs-browser-create-key-vault-accesspolicy.png)
+
+          ![Create new key vault > Access policy > Add](images/azs-browser-create-key-vault-accesspolicy-add.png)
+
+6. Click **Review + create**.
+
+7. On the **Review + create** tab, review the selections you've made and then click **Create** to start the deployment.
+
+    ![!Create new key vault > Review](images/azs-browser-create-key-vault-review.png)
+
+8. You can monitor the progress of your key vault's deployment by clicking the **Notifications** icon.
+
+    ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
 
 ### Adding a certificate to the key vault
 
@@ -80,9 +96,9 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 5. In the *Create a secret* blade, enter the following information:
 
-   - **Upload Options** - Select the **Certificate** option.
+   - **Upload options** - Select the **Certificate** option.
 
-   - **Upload Certificate** - Select the .pfx certificate to upload.
+   - **Upload certificate** - Select the .pfx certificate to upload.
 
    - **Name** - The name of the certificate to identify it within the Key Vault.
 
@@ -100,33 +116,25 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 ### Gathering key vault and certificate information
 
-During configuration of the Service Fabric cluster, you must provide several details relating to the key vault and certificates. You must also configure access to the key vault for virtual machines and the Azure Resource Manager.
+During configuration of the Service Fabric cluster, you must provide several details relating to the key vault and certificates.
 
 1. Once you have deployed the key vault, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security* section.
 
 2. Select your key vault from the list.
 
-3. In the *Settings* section of the key vault's blade, select **Access policies**.
+3. In the *Settings* section of the key vault blade, select **Properties**.
 
-4. On the *Access policies* page, click **Click to show advanced access policies**.
+4. Copy the **Resource ID** and store it for later use.
 
-5. Select the top two check boxes, then click the **Save** button.
+5. In the *Settings* section of the key vault blade, select **Secrets**.
 
-![Advanced access policies](images/azs_advancedaccesspolicies.png)
+6. On the *Secrets* blade, select the certificate you added in the previous section.
 
-6. In the *Settings* section of the key vault blade, select **Properties**.
+7. On the certificate's blade, select the current version.
 
-7. Copy the **Resource ID** and store it for later use.
+8. Copy the **Secret Identifier**.
 
-8. Select **Secrets**.
-
-9. On the *Secrets* page, select the certificate you added in the previous section.
-
-10. On the certificate's blade, select the current version.
-
-11. Copy the **Secret Identifier**.
-
-12. Repeat for each certificate that you are going to use for the Service Fabric cluster.
+9. Repeat for each certificate that you are going to use for the Service Fabric cluster.
 
 You also need the thumbprint of the certificate(s). For information about how to find this information, see [here](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate).
 
@@ -138,7 +146,7 @@ You also need the thumbprint of the certificate(s). For information about how to
 
 2. In the search bar, search for **Service Fabric Cluster**.
 
-   ![Compute option in New blade](images/azsp_computeblade.png)
+   ![Service Fabric Cluster in marketplace](images/azs-browser-new-servicefabriccluster.png)
 
 3. Select **Service Fabric Cluster** and click **Create**.
 
@@ -159,8 +167,6 @@ You also need the thumbprint of the certificate(s). For information about how to
    - **DNS Service** - Select **Yes** to use DNS service, which is an optional system service that enables you to map DNS names to a service name and discover other services using the DNS protocol. If you have applications with existing URLs that you intend to use with Service Fabric, DNS service will help you use the standard DNS protocol (as an alternative to the Service Fabric Naming service) for resolving service names.
 
    - **Repair Manager** - Select **Yes** to use Repair Manager to enable patch orchestration on node types with a durability of bronze, which helps keep your VMs up to date.
-
-   - **Diagnostic Data Age In Days** - Specify the number of days to keep the Service Fabric diagnostic log in the diagnostics store.
 
    - **Service Fabric deployment package URL** - Specify the URL to download the Service Fabric deployment package from. For disconnected scenarios, download the service fabric package from the URL specified and upload it to a blob, then enable anonymous access and specify the URL here.
 
@@ -212,12 +218,14 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Cluster Certificate thumbprint** - Cluster certificate thumbprint that you gathered earlier. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7`**.
 
-   - **Server Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of
+   - **Server Certificate URL** - The Secret Identifier of the server certificate that you gathered in the previous section. It should be in the format of
     **`https://<VaultEndpoint>/secrets/<SecretName>/<SecretVersion>`**.
 
    - **Server Certificate thumbprint** - Server certificate thumbprint that you gathered earlier. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7`**.
 
    - **Use Reverse Proxy Certificate** - You may specify an SSL certificate to be used by the reverse proxy you have enabled. Doing so will cause the reverse proxy to communicate using HTTPS. If no certificate is specified, then the reverse proxy will communicate using HTTP instead.
+
+   - **Application Certificate URL** - The Secret Identifier of the application certificate that you gathered in the previous section. It should be in the format of **`https://<VaultEndpoint>/secrets/<SecretName>/<SecretVersion>`**.
 
    - **Admin Client Certificate Thumbprints** - Comma separated list of admin client certificate thumbprints. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7,0272251171BA32CEC7938A65B8A6A553AA2D3283`**.
 
@@ -225,7 +233,7 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    ![Create Service Fabric cluster > Security](images/azs-browser-create-sf-security.png)
 
-8. Click **OK**, then **Create**.
+8. In the *Summary* blade, click **OK**. Then in the *Buy* blade, click **Create**.
 
 9. You can monitor the progress of your Service Fabric cluster's deployment by clicking the **Notifications** icon.
 
