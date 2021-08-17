@@ -53,13 +53,16 @@ You can use `virt-v2v` to convert VMs running the following operating systems to
 > `virt-v2v` may convert VMs running other Linux operating systems, such as Debian and Ubuntu, but these conversions are not supported.
 > 
 > [!NOTE]
-> As of January 2020 some operating systems are not supported for conversion on RHEL 8 but they are still supported on RHEL 7 as the table above shows.
+> As of January 2021 some operating systems are not supported for conversion on RHEL 8 but they are still supported on RHEL 7 as the table above shows.
 
 Conversions from the following hypervisors are supported:
 
 - Red Hat Enterprise Linux 5 Xen
 
-- VMware vSphere ESX / ESX(i) - versions 3.5, 4.0, 4.1, 5.0, 5.1, 5.5, 6.0, 6.5, 6.7
+- VMware vSphere ESX / ESX(i) - versions 6.0, 6.5, 6.7 and 7.0
+
+> [!NOTE]
+> Conversions from any hypervisor not listed above may in some cases work, but are not supported.
 
 > [!NOTE]
 > VMware appliances based on Photon OS are not supported and cannot be converted using `virt-v2v`.
@@ -72,7 +75,7 @@ Conversions from the following hypervisors are supported:
 
     - For general instructions on how to use the `virt-v2v` tool, see the following page on the Red Hat Customer Portal:
 
-    [Converting Virtual Machines from Other Hypervisors to KVM with virt-v2v in RHEL 7](https://access.redhat.com/articles/1351473)
+    [Converting Virtual Machines from Other Hypervisors to KVM with virt-v2v in RHEL 7 and RHEL 8](https://access.redhat.com/articles/1351473)
 
     - For specific instructions on how to export a guest VM from VMware as an OVA file and import it into KVM see the following page on the Red Hat Customer Portal:
 
@@ -84,7 +87,7 @@ Conversions from the following hypervisors are supported:
 
     b. Expand the **Compute** menu on the left side of the Horizon dashboard and select **Images**.
 
-    ![Images page](images/ostack-horizon-images.png)
+    ![Images_page](images/ostack-v2v-001-images.png)
 
     c. Click the **Create Image** button.
 
@@ -92,14 +95,15 @@ Conversions from the following hypervisors are supported:
 
     d. In the *Create Image* page, browse for the image you want to import, complete the rest of the details on the page, then click Create Image.
 
-    ![Create Image page](images/ostack-horizon-create-image.png)
+    ![Create Image](images/ostack-v2v-002-create-image.png)
+
 
     e. Depending on the size of the image, the import process may take up to an hour to complete. You can view progress of the import from the Images page of the OpenStack dashboard.
 
 4. When the import process is complete, you'll be able to use your newly imported image in the same way as any other image stored in OpenStack's image catalog (Glance).
 
 > [!NOTE]
-> The above instructions assume you're using RHEL 7 to run the `virt-v2v` tool, however you can install the `virt-v2v` tool on other Linux operating systems.
+> The above instructions assume you're using RHEL 7 or RHEL 8 to run the `virt-v2v` tool, however you can install the `virt-v2v` tool on other Linux operating systems.
 
 ## Next steps
 
