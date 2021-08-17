@@ -23,11 +23,11 @@ toc_mdlink: azs-how-link-storage-explorer.md
 In this article, you will learn how to link Azure Stack Hub subscriptions to the Azure Storage Explorer. Azure Storage Explorer is a standalone application that allows you to easily work with Azure Stack Hub storage data on Windows, macOS and Linux. With this application, you can easily download and upload objects to Azure Stack Hub, which makes tasks such as downloading and uploading data disks to VMs very easy.
 
 > [!IMPORTANT]
-> Whilst the latest version of Storage Explorer works fine with Azure Stack Hub storage objects, it currently does not allow you to copy/paste objects from a container in Azure Stack Hub to a container in public Azure. For further information, see the associated GitHub issue [here](https://github.com/microsoft/AzureStorageExplorer/issues/4464).
+> Whilst the latest version of Storage Explorer works fine with Azure Stack Hub storage objects, it currently doesn't allow you to copy and paste objects from a container in Azure Stack Hub to a container in public Azure. For further information, see the [associated GitHub issue](https://github.com/microsoft/AzureStorageExplorer/issues/4464).
 >
-> If you need to do this, then you must install v1.13.1 of Storage Explorer, found [here](https://github.com/microsoft/AzureStorageExplorer/releases/tag/v1.13.1).
+> If you need to copy and paste objects to public Azure, then you must install [v1.13.1 of Storage Explorer](https://github.com/microsoft/AzureStorageExplorer/releases/tag/v1.13.1).
 >
-> Please note that the setup process for this version will differ slightly to the steps below.
+> Note that the setup process for this version will differ slightly to the steps below.
 
 ## Microsoft documentation
 
