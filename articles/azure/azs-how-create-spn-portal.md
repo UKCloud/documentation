@@ -4,7 +4,7 @@ description: Learn how to create a service principal name (SPN) to manage your A
 services: azure-stack
 author: Bailey Lawson
 reviewer: William Turner
-lastreviewed: 31/03/2020
+lastreviewed: 11/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -68,7 +68,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 ## Gathering SPN credentials
 
-1. On the blade that has now opened, copy the **Application ID** and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.
+1. On the blade that has now opened, copy the **Application (client) ID** and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.
 
     ![Copy Application ID](images/azs-browser-select-SPN-App-ID.png)
 
@@ -76,9 +76,18 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 3. Under *Client secrets*, click the **+ New client secret** button.
 
+    ![New client secret](images/azs-browser-spn-new-secret.png)
+
 4. Enter a description for the key, select a expiry duration, then click **Add**.
 
+    ![New client secret > Add](images/azs-browser-spn-new-secret-add.png)
+
 5. Copy the displayed value for the key and store it somewhere secure. This value is referred to as the SPN Client Secret.
+
+    ![New client secret > Add](images/azs-browser-spn-new-secret-value.png)
+
+    > [!IMPORTANT]
+    > It is not possible to retrieve the secret value again after navigating away from this screen. Therefore, you should make sure you have taken a copy of it before moving on.
 
 ## Configure role-based access control for the SPN on Azure Stack Hub
 
