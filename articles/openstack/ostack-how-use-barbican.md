@@ -23,7 +23,7 @@ toc_mdlink: ostack-how-use-barbican.md
 
 ## Overview
 
-OpenStack Key Manager (Barbican) is the secrets manager for Red Hat OpenStack Platform. You can use the barbican API and command line to centrally manage the certificates, keys, and passwords used by OpenStack services. 
+OpenStack Key Manager (Barbican) is the secrets manager for Red Hat OpenStack Platform. You can use the Barbican API and command line to centrally manage the certificates, keys, and passwords used by OpenStack services. 
 
 Barbican currently supports the following use cases described in this guide:
 
@@ -57,7 +57,7 @@ Use cases for Barbican include:
 
 ### Adding new secrets
 
-Create a test secret. For example:
+A secret and payload can be created with a single command as below:
 
 ```none
 $ openstack secret store --name testSecret --payload 'TestPayload'
@@ -80,12 +80,29 @@ $ openstack secret store --name testSecret --payload 'TestPayload'
 ---------------------------------------------------------------------------------------------------+
 ```
 
+Once a secret has been created the payload cannot be changed, you can only delete the whole secret. As an alternative to creating the secret and payload at the same time it is possible to create the secret and then set the payload. Again, once the payload is set it cannot be changed.
+
 ### Updating secrets
 
 You cannot change the payload of a secret (other than deleting the secret), but if you initially created a secret without specifying a payload, you can later add a payload to it by using the `update` function. For example:
 
 ```none
-$ openstack secret update https://192.168.123.163:9311/v1/secrets/ca34a264-fd09-44a1-8856-c6e7116c3b16 'TestPayload-updated'
+$ openstack secret store --name testSecret2
++--------------+------------------------------------------------------------------------------------+
+| Field | Value |
++--------------+------------------------------------------------------------------------------------+
+| Secret href | https://192.168.123.163:9311/v1/secrets/ca34a264-fd09-44a1-8856-c6e7116c3b16 |
+| Name | testSecret2 |
+| Created | None |
+| Status | None |
+| Content types | None |
+| Algorithm | aes |
+| Bit length | 256 |
+| Secret type | opaque |
+| Mode | cbc |
+| Expiration | None |
+---------------------------------------------------------------------------------------------------+
+$ openstack secret update https://192.168.123.163:9311/v1/secrets/ca34a264-fd09-44a1-8856-c6e7116c3b16 'TestPayload2-updated'
 ```
 
 ### Deleting secrets
