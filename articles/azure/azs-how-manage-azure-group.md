@@ -4,14 +4,14 @@ description: Describes how to apply the appropriate Azure Stack Hub permissions 
 services: azure-stack
 author: Sue Highmoor
 reviewer: William Turner
-lastreviewed: 03/04/2020
+lastreviewed: 12/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Manage Azure user groups and permissions 
+toc_title: Manage Azure user groups and permissions
 toc_fullpath: Users/How To/azs-how-manage-azure-group.md
 toc_mdlink: azs-how-manage-azure-group.md
 ---
@@ -49,9 +49,13 @@ To create a group in the Azure portal:
     > [!TIP]
     > You can find the Azure Active Directory by selecting **All services** and scrolling down to the *Security + Identity* section.
 
-3. Select **Groups** and then **All groups**.
+3. Select **Groups**.
+
+    ![Groups blade](images/azs-portal-groups.png)
 
 4. Click the **New group** option.
+
+    ![Groups blade > New group](images/azs-portal-new-group.png)
 
 5. From the **Group type** list, select **Security**.
 
@@ -64,11 +68,13 @@ To create a group in the Azure portal:
     > [!NOTE]
     > The **Dynamic** option requires at least a Premium P1 license in Azure AD. If you do not meet this requirement, the dropdown is automatically set to **Assigned** and you will not be able to select the **Dynamic** option.
 
-    ![Group blade](images/azs-portal-add-group.png)
+    ![Groups blade > Add group](images/azs-portal-add-group.png)
 
 9. Click **Create**.
 
 10. To add users to the group, open the group, select **Members** then click **Add members**.
+
+    ![Groups blade > Add members](images/azs-portal-add-group-members.png)
 
 ## Granting Azure permissions
 
@@ -83,7 +89,11 @@ To grant Azure permissions to a group:
     > [!TIP]
     > If you can't see **Subscriptions** in your favourites panel, click **All services** and then **Subscriptions**. You can add **Subscriptions** to your favourites panel by clicking the star icon.
 
+    ![All services > Subscriptions](images/azs-browser-all-services-subscriptions.png)
+
 3. Select your subscription for UKCloud for Microsoft Azure.
+
+    ![Subscriptions](images/azs-browser-subscriptions.png)
 
 4. Select **Access control (IAM)**.
 
