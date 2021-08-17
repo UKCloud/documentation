@@ -19,6 +19,16 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 2.18.0
+
+Date: 9th August 2021
+
+Bug fix
+
+Details:
+
+- Present a more useful error message when attempting to modify My Calls, OpenShift or OpenStack permissions on a contact that has not yet been fully set up
+
 ## Release 2.15.0
 
 Date: 13th July 2021
