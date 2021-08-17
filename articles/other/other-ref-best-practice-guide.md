@@ -1,8 +1,8 @@
 ---
 title: Best practice customer guide
 description: Provides useful best practice information and other helpful advice to ensure good performance from our products
-services: vmware
-author: Dan Baker
+services: other
+author: dbaker
 reviewer: cantrobusholder
 lastreviewed: 02/07/2020
 toc_rootlink: Reference
@@ -27,7 +27,7 @@ This section provides some best practices to ensure you get the most out of UKCl
 
 ### Removing out of date snapshots
 
-Snapshot Protection automatically takes an image of the protected VM every 24 hours and stores the image outside the core platform for either 14 or 28 days, depending on your chosen snapshot retention profile.
+A VMware snapshot is a way to make a point in time copy of your VM and is useful if you want to preserve the state of your virtual machine so you can repeatedly return to the same state.
 
 You should remove snapshots that are no longer needed within 24-48 hours. If snapshots aren't removed, this can cause the following issues:
 
@@ -58,14 +58,6 @@ For example, if it is important that your application has very low latency, you 
 If you're considering setting affinity rules, please be aware of the impact this may have if a host becomes unavailable at any time.
 
 For information on affinity and anti-affinity rules, see [*How to use affinity and anti-affinity rules*](../vmware/vmw-how-use-affinity-rules.md).
-
-### Maintaining updated VMware Tools
-
-VMware provides tools that we recommend you install into any virtual machines running on UKCloud. These tools provide additional features, such as automated customisation, as well as improved performance by implementing optimised drivers, such as storage, network and display.
-
-As UKCloud releases upgraded products, VMware Tools may become out of date and you may experience slow performance and potentially some failures.
-
-For information on how to ensure your VMware Tools are up to date, see [*VMware Tools installation*](../vmware/vmw-ref-vmware-tools-installation.md).
 
 ### Enabling firewalls
 
