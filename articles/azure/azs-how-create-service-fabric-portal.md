@@ -50,11 +50,11 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 5. In the *Create key vault* blade, enter the following information:
 
-    - *Basics*
+    - **Basics** tab
 
         - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
-        - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window.
+        - **Resource group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window.
 
         - **Key vault name** - The name of the key vault.
 
@@ -64,7 +64,7 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
           ![Create new key vault > Basics](images/azs-browser-create-key-vault-basics.png)
 
-    - *Access policy*
+    - **Access policy** tab
 
         - **Enable Access to:** - Select the first two check boxes to allow access to the key vault for virtual machines and the Azure Resource Manager.
 
@@ -76,11 +76,11 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 6. Click **Review + create**.
 
-7. In the **Review + create** step, review the selections you've made and then click **Create** to start the deployment.
+7. On the **Review + create** tab, review the selections you've made and then click **Create** to start the deployment.
 
     ![!Create new key vault > Review](images/azs-browser-create-key-vault-review.png)
 
-8. You can monitor the progress of your Key Vault's deployment by clicking the **Notifications** icon.
+8. You can monitor the progress of your key vault's deployment by clicking the **Notifications** icon.
 
     ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
 
@@ -96,9 +96,9 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 5. In the *Create a secret* blade, enter the following information:
 
-   - **Upload Options** - Select the **Certificate** option.
+   - **Upload options** - Select the **Certificate** option.
 
-   - **Upload Certificate** - Select the .pfx certificate to upload.
+   - **Upload certificate** - Select the .pfx certificate to upload.
 
    - **Name** - The name of the certificate to identify it within the Key Vault.
 
