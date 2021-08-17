@@ -98,6 +98,10 @@
         href: azs-how-create-vm-ps.md
       - name: Create a virtual machine - Terraform
         href: azs-how-create-vm-terraform.md
+    - name: Create a VM from a Disk Snapshot
+      items:
+      - name: Create a VM from a disk snapshot - PowerShell
+        href: azs-how-create-vm-from-snapshot-ps.md
     - name: Resize a disk
       items:
       - name: Resize a disk - Portal

@@ -317,6 +317,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-vm-from-snapshot-ps.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-vm-from-snapshot-ps.html",
+          "hash": "Vxky6hS249nEBQNXQJZpbKwhJL9y3LOja5wWgVwhcCU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-vm-image-portal.md",
       "output": {
         ".html": {
@@ -2613,7 +2625,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "oYD6gn8YW9WVzfn26E0tpZHL5yWNYJxfXUhLkb8qFnk="
+          "hash": "1vJm8gdKV5FMpVq2bPqpOlTR2euYHuH7D9Pt9IaEXMQ="
         }
       },
       "is_incremental": false,
@@ -11077,7 +11089,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "mkA2WaTr9jxqmFWGjNXD76C2MUKZMSB1NgFRuZL+Spw="
+          "hash": "xD5eLKeDBum5iVQFOcD2q0PbgSbkrREIQhPjZVttawc="
         }
       },
       "is_incremental": false,
@@ -12719,7 +12731,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-release-notes.html",
-          "hash": "KJKnGRDcXJfN1kNNzJehzRcjj+taGr1a7ImKllLNS7g="
+          "hash": "TGVMCOk+afb0ayTs/cWwD3P/8DtyGLy44a7JYfvXoLc="
         }
       },
       "is_incremental": false,
@@ -22535,7 +22547,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 460,
+          "total_file_count": 461,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
