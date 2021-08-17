@@ -27,7 +27,7 @@ Bug fix
 
 Details:
 
-- Present a more useful error message when attempting to modify My Calls, OpenShift, or OpenStack permissions on a contact that has not yet been fully set up
+- Present a more useful error message when attempting to modify My Calls, OpenShift or OpenStack permissions on a contact that has not yet been fully set up
 
 ## Release 2.15.0
 
