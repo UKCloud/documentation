@@ -29,7 +29,7 @@ This article is intended for operators who have the capability to download a VM 
 
 You can use `virt-v2v` to convert VMs running the following operating systems to run on KVM:
 |Guest OS|RHEL 7 host|RHEL 8 host|
-|--|--|--|
+|---|---|---|
 |Red Hat Enterprise Linux 5|Supported|Not supported|
 |Red Hat Enterprise Linux 6|Supported|Supported|
 |Red Hat Enterprise Linux 7|Supported|Supported|
