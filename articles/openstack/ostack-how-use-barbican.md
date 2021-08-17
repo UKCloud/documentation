@@ -80,7 +80,7 @@ Once a secret has been created the payload cannot be changed, you can only delet
 
 ### Updating secrets
 
-You cannot change the payload of a secret (other than deleting the secret), but if you initially created a secret without specifying a payload, you can later add a payload to it by using the `update` function. For example:
+To create a secret without a payload and then separately update it you would use:
 
 ```none
 $ openstack secret store --name testSecret2
@@ -111,7 +111,7 @@ $ openstack secret delete https://192.168.123.163:9311/v1/secrets/ecc7b2a4-f0b0-
 
 ### Generating a symmetric key
 
-Symmetric keys are suitable for certain tasks, such as nova disk encryption and swift object encryption.
+Symmetric keys are suitable for certain tasks, such as nova disk encryption and swift object encryption. Rather than creating a secret directly, we create an "order" that is fulfilled by Barbican based upon the settings we use:
 
 1. Generate a new 256-bit key using `order create` and store it in Barbican. For example:
 
