@@ -23,6 +23,8 @@ To see the currently available scripts, go to our public [GitHub repository](htt
 
 ## Related articles
 
+The process for migrating instances and volumes is covered in the following article:
+
 - [_How to migrate workloads on OpenStack using Hystax Acura_](ostack-how-use-hystax.md)
 
 ## Feedback
