@@ -83,21 +83,45 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. Once deployment is complete, navigate to the resource group you placed the Log Analytics workspace in.
 
-    - Click the newly created workspace. On the new blade, under *Settings*, select **Advanced settings**, then select **Windows Servers** or **Linux Servers** depending on the VM type you want to add analytics too.
+    - Click the newly created workspace. On the new blade, under *Settings*, select **Agents management**.
     Note down the **Workspace ID** and **Primary Key** values.
 
        ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
-    - Within *Advanced settings*, select the *Data* blade, and click **Windows Performance Counters** or **Linux Performance Counters**
+4. (Optional) Enable additional logs and performance counters
 
-    - Ensure all counters are selected and click **Add the selected performance counters**
+    - Under *Settings*, select **Agents configuration**.
 
-        > [!NOTE]
-        > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
+    ### [Windows](#tab/tabid-c)
 
-    - Click **Save**
+    #### Event logs
 
-        ![Performance counters](images/azs-browser-example-performance-counters.png)
+    - Click **Add windows event log**
+
+    - Select an event log from the dropdown and use the checkboxes to determine the severities that you want to collect.
+
+      > [!NOTE]
+      > If the log you want to add does not appear in the list, you can still add it by typing in the full name of the log. You can find the full name of the log in event viewer. Open the *Properties* page for the log and copy the string from the **Full Name** field.
+
+    - Click **Apply**
+
+      ![Windows event logs](images/azs-browser-agent-configuration-windows-event-logs.png)
+
+    #### Performance counters
+
+      ![Windows performance counters](images/azs-browser-agent-configuration-perf-counters-windows.png)
+
+    ### [Linux](#tab/tabid-d)
+
+    #### Syslog
+
+      ![Syslog](images/azs-browser-agent-configuration-syslog.png)
+
+    #### Performance counters
+
+      ![Linux performance counters](images/azs-browser-agent-configuration-perf-counters-linux.png)
+
+    ***
 
 # [PowerShell](#tab/tabid-b)
 
