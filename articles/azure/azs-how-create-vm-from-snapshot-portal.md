@@ -122,7 +122,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Disks blade](images/azs-browser-disks-list-new.png)
 
-3. In the new blade for the selected disk, under *Overview*, ensure that **Disk state** is listed as *Unattached*. If it isn't, you'll need to detach the disk from the VM before you can use it.
+3. In the new blade for the selected disk, under *Overview*, ensure that **Disk state** is listed as *Unattached*. If it isn't, you'll need to detach the disk from the VM before you can use it. This can only be done by deleting the VM that the disk is attached to.
 
     ![New disk blade - Unattached](images/azs-browser-disk-unattached.png)
 
