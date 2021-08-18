@@ -134,7 +134,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 6. Click **Change size** under the currently selected VM size to view all the available sizes. Select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
-    For information about the different available VM sizes, see [https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes)
+    For information about the different available VM sizes, see [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
     ![Create VM from disk - Size](images/azs-browser-disk-vm-size.png)
 
