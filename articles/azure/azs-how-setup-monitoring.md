@@ -31,7 +31,7 @@ Azure Monitor is the platform service that provides a single source for monitori
 
 In this article we will enable the following solutions for Azure Stack Hub VMs:
 
--  [Azure Monitor for VMs](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-overview)
+- [Azure Monitor for VMs](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-overview)
 
 ## Prerequisites
 
