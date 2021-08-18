@@ -42,6 +42,10 @@ To complete the steps in this article, you must have appropriate access to a sub
 > [!WARNING]
 > Before proceeding, check [here](https://docs.microsoft.com/en-gb/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems) that your VMs' OS version is supported.
 
+### Creating the Log Analytics workspace
+
+# [Portal](#tab/tabid-a)
+
 1. Log in to the [public Azure portal](https://portal.azure.com).
 
 2. Create a Log Analytics workspace in your Azure subscription:
@@ -95,21 +99,29 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         ![Performance counters](images/azs-browser-example-performance-counters.png)
 
-4. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
+# [PowerShell](#tab/tabid-b)
+
+to-do
+
+***
+
+### Install extensions
 
 # [Portal](#tab/tabid-a)
 
-5. Navigate to the VM that you want to enable Azure Monitor on and under *Settings*, select the *Extensions* blade.
+1. Log in to the [Azure Stack Hub portal](https://portal.frn00006.azure.ukcloud.com).
+
+2. Navigate to the VM that you want to enable Azure Monitor on and under *Settings*, select the *Extensions* blade.
 
     > [!WARNING]
     > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
 
-6. Click **Add** at the top, select the extension **Azure Monitor Dependency Agent**, click **Create** and then **OK**.
+3. Click **Add** at the top, select the extension **Azure Monitor Dependency Agent**, click **Create** and then **OK**.
 
     > [!WARNING]
     > Wait for the deployment to finish before continuing.
 
-7. Click **Add** at the top, select the extension **Azure Monitor, Update and Configuration Management** and then click **Create**.
+4. Click **Add** at the top, select the extension **Azure Monitor, Update and Configuration Management** and then click **Create**.
 
     - Provide the extension with the **Workspace ID** and **Primary Key** values (noted down previously).
 
@@ -117,7 +129,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 # [PowerShell](#tab/tabid-b)
 
-5. Execute the following PowerShell script to setup the **Azure Monitor Dependency Agent** and **Azure Monitor, Update and Configuration Management** extensions.
+1. Execute the following PowerShell script to setup the **Azure Monitor Dependency Agent** and **Azure Monitor, Update and Configuration Management** extensions.
 
     ### Declare variables
 
@@ -182,30 +194,30 @@ To complete the steps in this article, you must have appropriate access to a sub
                       -ProtectedSettingString $ProtectedSettings `
                       -Verbose</code></pre>
 
-6. Continue to step 8.
-
 ***
 
-8. In public Azure, on the top left, click the hamburger icon and select **Monitor**.
+# [Portal](#tab/tabid-1)
+
+1. In public Azure, on the top left, click the hamburger icon and select **Monitor**.
 
     ![Public Azure Hamburger menu](images/azs-browser-public-azure-hamburger-menu-monitor.png)
 
-9. In the new blade under *Insights*, click **Virtual Machines**.
+2. In the new blade under *Insights*, click **Virtual Machines**.
 
-10. You will see three usage analytics tabs (**Get Started**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
+3. You will see three usage analytics tabs (**Get Started**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
 
     > [!CAUTION]
     > The **Get Started** tab does **not** show Azure Stack Hub VMs.
 
     ![Public Azure monitor virtual machines](images/azs-browser-public-azure-monitor-virtual-machines.png)
 
-11. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**:
+4. At the top, click the *Performance* tab, then on the right, move the switch from **Azure** to **Hybrid**:
 
     ![Public Azure Hybrid switch](images/azs-browser-hybrid-switch.png)
 
-12. A prompt will appear to upgrade the workspace, click **Upgrade**. In the new blade, click **Upgrade** again.
+5. A prompt will appear to upgrade the workspace, click **Upgrade**. In the new blade, click **Upgrade** again.
 
-13. Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled **Azure Monitor for VMs** on.
+6. Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled **Azure Monitor for VMs** on.
 
     ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
 
@@ -213,6 +225,8 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     > [!NOTE]
     > It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure Monitor enabled VMs.
+
+***
 
 ## Feedback
 
