@@ -3,8 +3,8 @@ title: OpenStack region migration tooling
 description: Explains the tooling that UKCloud can provide to assist with customer migrations.
 services: openstack
 author: Steve Relf
-reviewer: 
-lastreviewed: 27/08/2020
+reviewer: Blane Bramble
+lastreviewed: 18/08/2021
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
