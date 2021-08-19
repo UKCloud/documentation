@@ -41,6 +41,8 @@ The following firewall technology has been successfully deployed and configured 
 
 - Palo Alto VM300 running PanOS 7.01
 
+### Cisco firewalls/routers
+
 - Cisco Cloud Services Router 1000v (Cisco CSR1000v)
 
     While CSR1000v version 3.16 is supported in both vSphere and VMware Cloud Director deployments, there is a compatibility issue with OVF templates built on legacy hardware configurations (hardware version 7).
