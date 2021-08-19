@@ -139,6 +139,8 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 # [PowerShell](#tab/tabid-b)
 
+1. Execute the following PowerShell script to create the log analytics workspace.
+
     | Variable name   | Variable description                                               | Input            |
     |-----------------|--------------------------------------------------------------------|------------------|
     | \$WorkspaceName    | The name of the log analytics workspace                 | <form oninput="result.value=workspacename.value" id="workspacename" style="display: inline;"><input type="text" id="workspacename" name="workspacename" style="display: inline;" placeholder="MyWorkspace"/></form> |
