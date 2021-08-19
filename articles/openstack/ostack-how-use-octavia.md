@@ -17,7 +17,7 @@ toc_mdlink: ostack-how-use-octavia.md
 ---
 # Using Octavia Load Balancing as a Service (LBaaS)
 > [!NOTE]
-> TBD: region restrictions
+> This article does not apply to OpenStack Regions running OpenStack Platform 10 (OSP10) and lower (currently COR00005).
 ## Overview
 
 Octavia is the OpenStack Load Balancing as a Service (LBaaS) solution and forms part of the solution to availability and scaling that modern systems require.
