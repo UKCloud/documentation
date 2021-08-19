@@ -2,9 +2,9 @@
 title: Secure Remote Access FAQs
 description: Frequently asked questions for Secure Remote Access
 services: sra
-author: Matt Warner
-reviewer:
-lastreviewed: 02/08/2018 16:00:52
+author: mwarner
+reviewer: bchallis
+lastreviewed: 13/08/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
