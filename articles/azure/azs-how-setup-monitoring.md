@@ -62,24 +62,20 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Provide the following:
 
-        - A **unique** name for the **Log Analytics Workspace**, for example: `DefaultLAWorkspace`
-
         - A **Subscription** to link the workspace to
 
         - A **Resource group** to host the workspace in
 
-        - A **Location** to host the workspace in
+        - A **unique** name for the **Log Analytics Workspace**, for example: `DefaultLAWorkspace`
+
+        - A **Region** to host the workspace in
 
             > [!NOTE]
-            > Azure Monitor for VMs supports a Log Analytics Workspace in the these [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics).
-
-        - A **Pricing tier** to use
+            > Azure Monitor for VMs supports a Log Analytics Workspace in the following [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics).
 
             ![Log Analytics Workspace creation](images/azs-browser-example-log-analytics-workspace.png)
 
-            *The example above shows the blade with all items filled out.*
-
-    - Click **OK** once finished. The Log Analytics Workspace will now begin deploying. A notification will appear in the top right of the portal.
+    - Click **Review + Create** once finished, then click **Create**. The Log Analytics Workspace will now begin deploying. A notification will appear in the top right of the portal.
 
 3. Once deployment is complete, navigate to the resource group you placed the Log Analytics Workspace in.
 
