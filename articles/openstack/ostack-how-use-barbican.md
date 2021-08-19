@@ -2,8 +2,8 @@
 title: How to use Barbican KMaaS on UKCloud for OpenStack
 description: Provides information on using Barbican Key Management as a Service (KMaaS) within your OpenStack environment
 services: openstack
-author: Steve Dixon
-reviewer: Blane Bramble
+author: sdixon
+reviewer: bbramble
 lastreviewed: 17/08/2021
 
 toc_rootlink: How To
@@ -19,7 +19,7 @@ toc_mdlink: ostack-how-use-barbican.md
 # Using Barbican Key Management as a Service (KMaaS)
 
 > [!NOTE]
-> This article does not apply to OpenStack Regions running the Pike release and lower (currently COR00005). All other Regions offer native Key Management as a Service
+> This article does not apply to OpenStack regions running the Pike release and lower (currently COR00005). All other regions offer native Key Management as a Service
 
 ## Overview
 
@@ -27,19 +27,19 @@ OpenStack Key Manager (Barbican) is the secrets manager for Red Hat OpenStack Pl
 
 Barbican currently supports the following use cases described in this guide:
 
-- Symmetric encryption keys - used for Block Storage (cinder) volume encryption, ephemeral disk encryption, and Object Storage (swift) encryption, among others.
+- Symmetric encryption keys - used for Block Storage (Cinder) volume encryption, ephemeral disk encryption, and Object Storage (Swift) encryption, among others.
 
 - Asymmetric keys and certificates- used for glance image signing and verification, among others.
 
 ## Prerequisites
 
-- Barbican uses port 13311 for communication. This port will need to be open for Barbican to work
+- Barbican uses port 13311 for communication. This port will need to be open for Barbican to work.
 
-- Running a recent version of the OpenStackCLI . To check for an update run:
+- You must be running a recent version of the OpenStackCLI. To check for an update run:
 
-```none
-pip install --upgrade python-openstackclient 
-```
+  ```none
+  pip install --upgrade python-openstackclient 
+  ```
 
 ## Use Cases
 
@@ -47,7 +47,7 @@ Use cases for Barbican include:
 
 - Image signature verification
 
-- LBaaS services
+- Load Balancing as a Service (LBaaS) services
 
 - Volume encryption (coming soon)
 
@@ -57,30 +57,31 @@ Use cases for Barbican include:
 
 ### Adding new secrets
 
-A secret and payload can be created with a single command as below:
+You can create a secret and payload with a single command as below:
 
-    $ openstack secret store --name testSecret --payload 'TestPayload'
+```none
+$ openstack secret store --name testSecret --payload 'TestPayload'
++---------------+------------------------------------------------------------------------------------+
+| Field         | Value                                                                              |
++---------------+------------------------------------------------------------------------------------+
+| Secret href   | https://192.168.123.163:9311/v1/secrets/ecc7b2a4-f0b0-47ba-b451-0f7d42bc1746       |
+| Name          | testSecret                                                                         |
+| Created       | None                                                                               |
+| Status        | None                                                                               |
+| Content types | None                                                                               |
+| Algorithm     | aes                                                                                |
+| Bit length    | 256                                                                                |
+| Secret type   | opaque                                                                             |
+| Mode          | cbc                                                                                |
+| Expiration    | None                                                                               |
+-----------------------------------------------------------------------------------------------------+
+```
 
-    +---------------+------------------------------------------------------------------------------------+
-    | Field         | Value                                                                              |
-    +---------------+------------------------------------------------------------------------------------+
-    | Secret href   | https://192.168.123.163:9311/v1/secrets/ecc7b2a4-f0b0-47ba-b451-0f7d42bc1746       |
-    | Name          | testSecret                                                                         |
-    | Created       | None                                                                               |
-    | Status        | None                                                                               |
-    | Content types | None                                                                               |
-    | Algorithm     | aes                                                                                |
-    | Bit length    | 256                                                                                |
-    | Secret type   | opaque                                                                             |
-    | Mode          | cbc                                                                                |
-    | Expiration    | None                                                                               |
-    -----------------------------------------------------------------------------------------------------+
-
-Once a secret has been created the payload cannot be changed, you can only delete the whole secret. As an alternative to creating the secret and payload at the same time it is possible to create the secret and then set the payload. Again, once the payload is set it cannot be changed.
+Once you've created a secret the payload cannot be changed, you can only delete the whole secret. As an alternative to creating the secret and payload at the same time you can create the secret and then set the payload. Again, once you've set the payload, it cannot be changed.
 
 ### Updating secrets
 
-To create a secret without a payload and then separately update it you would use:
+To create a secret without a payload and then separately update it, use the following command:
 
 ```none
 $ openstack secret store --name testSecret2
@@ -111,7 +112,7 @@ $ openstack secret delete https://192.168.123.163:9311/v1/secrets/ecc7b2a4-f0b0-
 
 ### Generating a symmetric key
 
-Symmetric keys are suitable for certain tasks, such as nova disk encryption and swift object encryption. Rather than creating a secret directly, we create an "order" that is fulfilled by Barbican based upon the settings we use:
+Symmetric keys are suitable for certain tasks, such as nova disk encryption and Swift object encryption. Rather than creating a secret directly, create an order that Barbican fulfils based upon the settings used:
 
 1. Generate a new 256-bit key using `order create` and store it in Barbican. For example:
 
@@ -183,7 +184,7 @@ Symmetric keys are suitable for certain tasks, such as nova disk encryption and 
 
 ### Listing secrets
 
-Secrets are identified by their URI, indicated as a `href` value. This example shows the secret you created in the previous steps:
+Secrets are identified by their URI, indicated as an `href` value. This example shows the secret created in the previous steps:
 
 ```none
 $ openstack secret list
