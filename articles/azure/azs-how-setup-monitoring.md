@@ -143,7 +143,7 @@ to-do
 
 ***
 
-### Install extensions
+### Installing the extensions
 
 # [Portal](#tab/tabid-a)
 
