@@ -54,11 +54,11 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - In the search bar, search for `log analytics`
 
-        ![Log Analytics search](images/azs-browser-search-log-analytics.png)
-
     - Click **Log Analytics Workspace**
 
     - Click **Create**
+
+        ![Log Analytics search](images/azs-browser-search-log-analytics.png)
 
     - Provide the following:
 
