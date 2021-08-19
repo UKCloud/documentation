@@ -139,7 +139,82 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 # [PowerShell](#tab/tabid-b)
 
-to-do
+| Variable name   | Variable description                                               | Input            |
+|-----------------|--------------------------------------------------------------------|------------------|
+| \$WorkspaceName    | The name of the log analytics workspace                 | <form oninput="result.value=workspacename.value" id="workspacename" style="display: inline;"><input type="text" id="workspacename" name="workspacename" style="display: inline;" placeholder="MyWorkspace"/></form> |
+| \$WorkspaceResourceGroupName        | Name of the resource group which the workspace resides in                           | <form oninput="result.value=workspaceresourcegroup.value;result1.value=workspaceresourcegroup.value" id="workspaceresourcegroup" style="display: inline;"><input type="text" id="workspaceresourcegroup" name="workspaceresourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+| \$WorkspaceLocation        | The region to deploy the log analytics workspace and resource group in                          | <form oninput="result.value=workspacelocation.value" id="workspacelocation" style="display: inline;"><input type="text" id="workspacelocation" name="workspacelocation" style="display: inline;" placeholder="UKSouth"/></form> |
+
+<pre>
+<code class="language-PowerShell"># Install module
+Install-Module -Name "Az.OperationalInsights" -Scope AllUsers -Verbose -Force
+
+# Initialise environment and variables
+
+## Login to public Azure
+Connect-AzAccount -Environment "AzureCloud"
+
+## Create workspace analytics specific resources
+
+# Input variables
+
+$LogAnalyticsWorkspaceName = "<output form="workspacename" name="result" style="display: inline;">MyWorkspace</output>"
+$LogAnalyticsWorkspaceResourceGroupName = "<output form="workspaceresourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$LogAnalyticsWorkspaceLocation = "<output form="workspacelocation" name="result" style="display: inline;">UKSouth</output>"
+
+# Check if the Log Analytics resource group exists, If it doesn't exist then create it
+try {
+    $LogAnalyticsWorkspaceResourceGroup = Get-AzResourceGroup -Name $LogAnalyticsWorkspaceResourceGroupName -Location $LogAnalyticsWorkspaceLocation -Verbose -ErrorAction Stop
+}
+catch {
+    Write-Warning -Message "Log Analytics workspace resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" in location ""$($LogAnalyticsWorkspaceLocation)"" doesn't exist. Creating now..."
+    try {
+        $LogAnalyticsWorkspaceResourceGroup = New-AzResourceGroup -Name $LogAnalyticsWorkspaceResourceGroupName -Location $LogAnalyticsWorkspaceLocation -Verbose -ErrorAction Stop
+    }
+    catch {
+        Write-Error -Message "Failed to create Log Analytics workspace resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" in location ""$($LogAnalyticsWorkspaceLocation)"":`n$($_.Exception.Message)"
+        throw
+    }
+}
+# Check if the Log Analytics workspace exists, If it doesn't exist then create it
+try {
+    Write-Verbose "Attempting to retrieve Log Analytics workspace ""$($LogAnalyticsWorkspaceName)"" in resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" and location ""$($LogAnalyticsWorkspaceLocation)""."
+    $LogAnalyticsWorkspace = Get-AzOperationalInsightsWorkspace -ResourceGroupName $LogAnalyticsWorkspaceResourceGroup.ResourceGroupName -Name $LogAnalyticsWorkspaceName -Verbose -ErrorAction Stop
+}
+catch {
+    try {
+        Write-Warning -Message "Log Analytics workspace ""$($LogAnalyticsWorkspaceName)"" in location ""$($LogAnalyticsWorkspaceLocation)"" doesn't exist. Creating now..."
+        $LogAnalyticsWorkspace = New-AzOperationalInsightsWorkspace -ResourceGroupName $LogAnalyticsWorkspaceResourceGroup.ResourceGroupName -Name $LogAnalyticsWorkspaceName -Location $LogAnalyticsWorkspaceLocation -Verbose -ErrorAction Stop
+    }
+    catch {
+        Write-Error -Message "Failed to create Log Analytics workspace ""$($LogAnalyticsWorkspaceName)"" in resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" and location ""$($LogAnalyticsWorkspaceLocation)"":`n$($_.Exception.Message)"
+        throw
+    }
+}
+try {
+    # Get Log Analytics workspace GUID and primary key
+    Write-Verbose -Message "Attempting to retrieve Log Analytics workspace ""$($LogAnalyticsWorkspace.Name)"" GUID, primary key and base64 encode them."
+    $EncodedWorkspaceGuid = [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes(($LogAnalyticsWorkspace.CustomerId).GUID))
+    $WorkspaceKey = (Get-AzOperationalInsightsWorkspaceSharedKey -ResourceGroupName $LogAnalyticsWorkspace.ResourceGroupName -Name $LogAnalyticsWorkspace.Name -Verbose -ErrorAction Stop).PrimarySharedKey
+    $EncodedWorkspaceKey = [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes($WorkspaceKey))
+}
+catch {
+    Write-Error -Message "Failed to obtain Log Analytics workspace ""$($LogAnalyticsWorkspace.Name)"" GUID or primary key:`n$($_.Exception.Message)"
+    throw
+}
+
+## Configure Windows event log counters
+$EventLogNames = @("System", "Application", "Setup")
+foreach ($EventLogName in $EventLogNames) {
+    $null = New-AzOperationalInsightsWindowsEventDataSource `
+        -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName `
+        -WorkspaceName $LogAnalyticsWorkspaceName `
+        -Name "$($EventLogName) Event Log" `
+        -EventLogName $EventLogName `
+        -CollectErrors `
+        -CollectWarnings `
+        -CollectInformation
+}</code></pre>
 
 ***
 
