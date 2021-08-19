@@ -3,8 +3,8 @@ title: How to configure Azure Monitor for VMs on Azure Stack Hub
 description: Describes how to configure Azure Monitor for VMs on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+reviewer: William Turner
+lastreviewed: 19/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -56,7 +56,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         ![Log Analytics search](images/azs-browser-search-log-analytics.png)
 
-    - Click **Log Analytics**
+    - Click **Log Analytics Workspace**
 
     - Click **Create**
 
