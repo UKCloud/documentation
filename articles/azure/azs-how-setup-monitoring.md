@@ -236,7 +236,7 @@ to-do
 
 # [Portal](#tab/tabid-1)
 
-1. In public Azure, on the top left, click the hamburger icon and select **Monitor**.
+1. In public Azure, select **Monitor** from the favourites menu on the left.
 
     ![Public Azure Hamburger menu](images/azs-browser-public-azure-hamburger-menu-monitor.png)
 
