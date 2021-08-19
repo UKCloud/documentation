@@ -94,20 +94,26 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ### [Windows](#tab/tabid-c)
 
-    #### Event logs
+    #### Windows event logs
 
     - Click **Add windows event log**
 
-    - Select an event log from the dropdown and use the checkboxes to determine the severities that you want to collect.
+    - Select an event log from the dropdown and use the checkboxes to determine the severities that you want to collect for this log.
 
       > [!NOTE]
       > If the log you want to add does not appear in the list, you can still add it by typing in the full name of the log. You can find the full name of the log in event viewer. Open the *Properties* page for the log and copy the string from the **Full Name** field.
 
-    - Click **Apply**
+    - Repeat for each event log you require, then click **Apply**
 
       ![Windows event logs](images/azs-browser-agent-configuration-windows-event-logs.png)
 
-    #### Performance counters
+    #### Windows performance counters
+
+    - Click **Add performance counter**
+
+    - Select a counter from the dropdown. The sample rate can be adjusted to increase or decrease the amount of data collected for this counter.
+
+    - Repeat for each performance counter you require, then click **Apply**
 
       ![Windows performance counters](images/azs-browser-agent-configuration-perf-counters-windows.png)
 
@@ -115,9 +121,21 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     #### Syslog
 
+    - Click **Add facility**
+
+    - Select a facility from the dropdown and use the checkboxes to determine the severities that you want to collect for this facility.
+
+    - Repeat for each facility you require, then click **Apply**
+
       ![Syslog](images/azs-browser-agent-configuration-syslog.png)
 
-    #### Performance counters
+    #### Linux performance counters
+
+    - Click **Add performance counter**
+
+    - Select a counter from the dropdown. The sample rate can be adjusted to increase or decrease the amount of data collected for this counter.
+
+    - Repeat for each performance counter you require, then click **Apply**
 
       ![Linux performance counters](images/azs-browser-agent-configuration-perf-counters-linux.png)
 
