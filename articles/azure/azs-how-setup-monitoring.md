@@ -42,13 +42,13 @@ To complete the steps in this article, you must have appropriate access to a sub
 > [!WARNING]
 > Before proceeding, check [here](https://docs.microsoft.com/en-gb/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems) that your VMs' OS version is supported.
 
-### Creating the Log Analytics workspace
+### Creating the Log Analytics Workspace
 
 # [Portal](#tab/tabid-a)
 
 1. Log in to the [public Azure portal](https://portal.azure.com).
 
-2. Create a Log Analytics workspace in your Azure subscription:
+2. Create a Log Analytics Workspace in your Azure subscription:
 
     - Click **Create a resource**
 
@@ -71,22 +71,22 @@ To complete the steps in this article, you must have appropriate access to a sub
         - A **Location** to host the workspace in
 
             > [!NOTE]
-            > Azure Monitor for VMs supports a Log Analytics workspace in the these [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics).
+            > Azure Monitor for VMs supports a Log Analytics Workspace in the these [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics).
 
         - A **Pricing tier** to use
 
-            ![Log Analytics workspace creation](images/azs-browser-example-log-analytics-workspace.png)
+            ![Log Analytics Workspace creation](images/azs-browser-example-log-analytics-workspace.png)
 
             *The example above shows the blade with all items filled out.*
 
-    - Click **OK** once finished. The Log Analytics workspace will now begin deploying. A notification will appear in the top right of the portal.
+    - Click **OK** once finished. The Log Analytics Workspace will now begin deploying. A notification will appear in the top right of the portal.
 
-3. Once deployment is complete, navigate to the resource group you placed the Log Analytics workspace in.
+3. Once deployment is complete, navigate to the resource group you placed the Log Analytics Workspace in.
 
     - Click the newly created workspace. On the new blade, under *Settings*, select **Agents management**.
     Note down the **Workspace ID** and **Primary Key** values.
 
-       ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
+       ![Log Analytics Workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
 4. (Optional) Enable additional logs and performance counters
 
