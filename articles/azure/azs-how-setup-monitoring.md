@@ -204,7 +204,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         throw
     }
 
-    ## Configure Windows event log counters
+    ## Configure Windows event log data sources
     $EventLogNames = @("System", "Application", "Setup")
     foreach ($EventLogName in $EventLogNames) {
         $null = New-AzOperationalInsightsWindowsEventDataSource `
