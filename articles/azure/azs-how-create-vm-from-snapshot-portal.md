@@ -122,7 +122,12 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Disks blade](images/azs-browser-disks-list-new.png)
 
-3. In the new blade for the selected disk, under *Overview*, ensure that **Disk state** is listed as *Unattached*. If it isn't, you'll need to detach the disk from the VM before you can use it. This can only be done by deleting the VM that the disk is attached to.
+3. In the new blade for the selected disk, under *Overview*, ensure that **Disk state** is listed as *Unattached*.
+
+    > [!IMPORTANT]
+    > If your disk is not in the *Unattached* state, you will have to delete the virtual machine object it is attached to.
+    >
+    > You can **only** detach data disks, **not** OS disks, from a virtual machine.
 
     ![New disk blade - Unattached](images/azs-browser-disk-unattached.png)
 
@@ -150,11 +155,11 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Create virtual machine > Management](images/azs-browser-disk-vm-management.png)
 
-8. In the *Review + create* step, review the selections you've made and then click **Create** to start the deployment.
+8.  In the *Review + create* step, review the selections you've made and then click **Create** to start the deployment.
 
     ![Create virtual machine > Review](images/azs-browser-disk-vm-review.png)
 
-9. You can monitor the progress of your VM's deployment by clicking the **Notifications** icon.
+9.  You can monitor the progress of your VM's deployment by clicking the **Notifications** icon.
 
     ![Create VM from disk - Notification](images/azs-browser-disk-vm-notification.png)
 
