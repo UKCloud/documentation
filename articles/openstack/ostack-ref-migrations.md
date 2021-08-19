@@ -2,8 +2,8 @@
 title: OpenStack region migration tooling
 description: Explains the tooling that UKCloud can provide to assist with customer migrations.
 services: openstack
-author: Steve Relf
-reviewer: Blane Bramble
+author: srelf
+reviewer: bbramble
 lastreviewed: 18/08/2021
 toc_rootlink: Reference
 toc_sub1:
@@ -23,9 +23,7 @@ To see the currently available scripts, go to our public [GitHub repository](htt
 
 ## Related articles
 
-The process for migrating instances and volumes is covered in the following article:
-
-- [_How to migrate workloads on OpenStack using Hystax Acura_](ostack-how-use-hystax.md)
+The process for migrating instances and volumes is covered in [_How to migrate workloads on OpenStack using Hystax Acura_](ostack-how-use-hystax.md).
 
 ## Feedback
 
