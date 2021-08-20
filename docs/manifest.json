@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-service-fabric-portal.html",
-          "hash": "8KbJnW2y/TauB4ERP8yfrHjqafFtqNJ97mCLOif9MBc="
+          "hash": "Q5YrvJGSIGwjFYhJD/F3VBvCWnAlhUBkUL1F0oQStTA="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-spn-portal.html",
-          "hash": "tlNCSid/WwmfXSordkiYPeldW0pA7MMMVYrvvMpA0us="
+          "hash": "N3pFGroLVNvCiKI+wemfkzwLIa49LXTw+WE1eCFozC4="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-cli.html",
-          "hash": "JZUV1xk0033bfLM1gi9AQCQ2RViakQ/716Va3DUU3ZY="
+          "hash": "eMNWAoplPaDv47H6juc/zgMKo8L+EU4EQ/m006opaPo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-vm-from-snapshot-portal.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-vm-from-snapshot-portal.html",
+          "hash": "AcMT2ajgKjQHuDofqx+RkOyAPx3S2rjj+MAhbnL5/Wo="
         }
       },
       "is_incremental": false,
@@ -429,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-identify-global-admins.html",
-          "hash": "p2vsWPzdMLsydY07t8OgejcKV3lP7fbrp/pNJweO5rg="
+          "hash": "GBBNcyUK9nfqnduAy0T+FDRI1j3uvDpOLl0tNAkjLRk="
         }
       },
       "is_incremental": false,
@@ -441,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-link-storage-explorer.html",
-          "hash": "uAVGE+NmdBcPmb5MdHzTEd06ncUxvOfUfmn2STcRl9I="
+          "hash": "lMJpE2QWHn2WpNXWcaYrnfTM4lCNV7ra1TV91OGIzDU="
         }
       },
       "is_incremental": false,
@@ -465,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-manage-azure-group.html",
-          "hash": "iHSfw5EAAvUkxFvXslZQHmy0zhJ/jdnFzgzqq6LJwsc="
+          "hash": "CSZ47SMohD5JQtCmY3xQzJB/f7zbtf/aqcAmFiDR5xo="
         }
       },
       "is_incremental": false,
@@ -641,17 +653,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-ad.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azs-ad.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-MS-SfB-agreement.png",
       "output": {
         "resource": {
@@ -788,6 +789,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-all-services-connections-networking.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-all-services-subscriptions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-all-services-subscriptions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-allservices-disks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-allservices-disks.png"
         }
       },
       "is_incremental": false,
@@ -938,6 +961,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-disk-from-snapshot-progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-disk-from-snapshot-progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-disk-from-snapshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-disk-from-snapshot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-create-gateway-subnet.png",
       "output": {
         "resource": {
@@ -953,6 +998,50 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-create-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-key-vault-accesspolicy-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-key-vault-accesspolicy-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-key-vault-accesspolicy.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-key-vault-accesspolicy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-key-vault-basics.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-key-vault-basics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-key-vault-review.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-key-vault-review.png"
         }
       },
       "is_incremental": false,
@@ -1059,6 +1148,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-snapshot-progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-snapshot-progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-snapshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-snapshot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-create-spn.png",
       "output": {
         "resource": {
@@ -1140,6 +1251,138 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-custom-image-vm-summary.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disk-unattached.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disk-unattached.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disk-vm-basics.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disk-vm-basics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disk-vm-management.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disk-vm-management.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disk-vm-networking.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disk-vm-networking.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disk-vm-notification.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disk-vm-notification.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disk-vm-review.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disk-vm-review.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disk-vm-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disk-vm-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disk-vm-size.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disk-vm-size.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disk-vm-summary.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disk-vm-summary.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disks-list-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disks-list-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disks-list-new.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disks-list-new.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disks-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disks-list.png"
         }
       },
       "is_incremental": false,
@@ -1444,6 +1687,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-new-servicefabriccluster.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-new-servicefabriccluster.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-notification-disks-complete.png",
       "output": {
         "resource": {
@@ -1587,10 +1841,54 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-spn-new-secret-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-spn-new-secret-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-spn-new-secret-value.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-spn-new-secret-value.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-spn-new-secret.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-spn-new-secret.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-storage-tool-download.png",
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-storage-tool-download.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-subscriptions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-subscriptions.png"
         }
       },
       "is_incremental": false,
@@ -1686,6 +1984,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-create-snapshot-disk.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-create-snapshot-disk.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-createvm-progress-complete.png",
       "output": {
         "resource": {
@@ -1719,6 +2028,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-global-admin-assignments.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-global-admin-assignments.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-global-admin-group.png",
       "output": {
         "resource": {
@@ -1741,10 +2061,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-1.png",
+      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-accounts.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-installation-storage-tool-1.png"
+          "relative_path": "articles/azure/images/azs-installation-storage-tool-accounts.png"
         }
       },
       "is_incremental": false,
@@ -1752,10 +2072,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-2.png",
+      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-add-account.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-installation-storage-tool-2.png"
+          "relative_path": "articles/azure/images/azs-installation-storage-tool-add-account.png"
         }
       },
       "is_incremental": false,
@@ -1763,10 +2083,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-3.png",
+      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-apply.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-installation-storage-tool-3.png"
+          "relative_path": "articles/azure/images/azs-installation-storage-tool-apply.png"
         }
       },
       "is_incremental": false,
@@ -1774,10 +2094,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-4.png",
+      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-select-environment.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-installation-storage-tool-4.png"
+          "relative_path": "articles/azure/images/azs-installation-storage-tool-select-environment.png"
         }
       },
       "is_incremental": false,
@@ -1785,10 +2105,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-5.png",
+      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-select-resource.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-installation-storage-tool-5.png"
+          "relative_path": "articles/azure/images/azs-installation-storage-tool-select-resource.png"
         }
       },
       "is_incremental": false,
@@ -1796,10 +2116,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-6.png",
+      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-signin.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-installation-storage-tool-6.png"
+          "relative_path": "articles/azure/images/azs-installation-storage-tool-signin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-installation-storage-tool-target-apis.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-installation-storage-tool-target-apis.png"
         }
       },
       "is_incremental": false,
@@ -1939,6 +2270,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-add-group-members.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-add-group-members.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-portal-add-group.png",
       "output": {
         "resource": {
@@ -2049,6 +2391,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-groups.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-groups.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-portal-home.png",
       "output": {
         "resource": {
@@ -2086,6 +2439,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-portal-new-favourite-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-new-group.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-new-group.png"
         }
       },
       "is_incremental": false,
@@ -2445,17 +2809,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs_advancedaccesspolicies.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azs_advancedaccesspolicies.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/azure/images/azsp_computeblade.png",
       "output": {
         "resource": {
@@ -2625,7 +2978,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "1vJm8gdKV5FMpVq2bPqpOlTR2euYHuH7D9Pt9IaEXMQ="
+          "hash": "N5n1o/6TWVwvpfX54crsdXXb/TyVxkpvh+cEIwlSXro="
         }
       },
       "is_incremental": false,
@@ -7876,32 +8229,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-availability-zone-list.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-availability-zone-list.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-cli-example.png",
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-cli-example.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-cli-flavor-list.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-cli-flavor-list.png"
         }
       },
       "is_incremental": false,
@@ -7935,17 +8266,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-flavor-list.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-floating-ip-create.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-floating-ip-create.png"
         }
       },
       "is_incremental": false,
@@ -8525,17 +8845,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-image-list.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-image-list.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-neutron-floatingip-associate.png",
       "output": {
         "resource": {
@@ -8690,54 +8999,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-openstack-net-create.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-openstack-net-create.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-openstack-subnet-create.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-openstack-subnet-create.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-pip-installed.png",
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-pip-installed.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-port-create.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-port-create.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-port-list.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-port-list.png"
         }
       },
       "is_incremental": false,
@@ -8903,39 +9168,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-rhui-volumelocation.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-router-list.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-router-list.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-server-create-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-server-create-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-server-create-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-server-create-2.png"
         }
       },
       "is_incremental": false,
@@ -9250,18 +9482,24 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "Ko4IRavJi51408XBEYD2oP/4X0YIvggVn102DFROzLQ="
+          "hash": "vOGyaB7OHzB80TL643JbSB5Cacglc58N0fXKzHnrbxI="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-gs.md",
       "output": {
@@ -9274,12 +9512,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-home.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "XlUflORCgCdddJqH0xnChReRFeetERCCaToMkFJY9NA="
+          "hash": "rXYz3XiQaibcW7IEc64QpZI8/84hYrO/b0uAhi+AvcI="
         }
       },
       "is_incremental": false,
@@ -9328,18 +9569,6 @@
         ".html": {
           "relative_path": "articles/openstack/ostack-how-create-heat-template.html",
           "hash": "EGpSGw4e0IbCKo/Mnn8VtCyrMZa6L9/gcpCmJUCKvd4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/openstack/ostack-how-create-load-balancer.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openstack/ostack-how-create-load-balancer.html",
-          "hash": "qLP5d8q3WVbw4D/odwpfO5o6Q0+MOc72euGPtYadDi4="
         }
       },
       "is_incremental": false,
@@ -9435,7 +9664,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-barbican.html",
-          "hash": "NXGm7d9d+iKHdUFN051nnMfgraYirfYh1swwJr3lF6Y="
+          "hash": "Sw8nracKbpyw9qaGj9PkR7zRNUXb8iEUWgIPgQJPu8o="
         }
       },
       "is_incremental": false,
@@ -9543,7 +9772,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-migrations.html",
-          "hash": "dr0nTv8aElZTedoPOVxR6j7BRxtqNKVVzbmqx93oBvw="
+          "hash": "ufKfPnyjLcaX3vJqwp9lTRbVOS+chpLcA1q4BpJzb7E="
         }
       },
       "is_incremental": false,
@@ -9663,7 +9892,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "vnY/7H7lkjB0YZAmegpffGCrCmLK1fhHe7zWbZRE9Wc="
+          "hash": "yqHcpu6QWlU9PI/vCSH/b4Lq5Ncc9g8h9/ncO5eZW7U="
         }
       },
       "is_incremental": false,
@@ -11204,12 +11433,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-high-availability.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "JRLhJ9sWjfkbKr1iXPb50ublCdINNOxFokYOvBdAO90="
+          "hash": "Vk0zSY0GnlRiy82prmm6PWlcmZHJfQgvHagzM4pVTKo="
         }
       },
       "is_incremental": false,
@@ -13441,7 +13673,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sco.html",
-          "hash": "l4GXI3iBonJM5GX4N8tKr4TEO5KuXF6QAAbgJV51be8="
+          "hash": "PxPY6g2UAQRK/+T4kG4Mh+qUgm7MVYVxP+2w4at1KR4="
         }
       },
       "is_incremental": false,

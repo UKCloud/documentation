@@ -42,7 +42,7 @@
       href: azs-how-link-storage-explorer.md
     - name: List VM extensions - PowerShell
       href: azs-how-list-vm-extensions.md
-    - name: 'Manage Azure user groups and permissions '
+    - name: Manage Azure user groups and permissions
       href: azs-how-manage-azure-group.md
     - name: Move a VM to a new virtual network - PowerShell
       href: azs-how-move-vm-new-vnet-ps.md
@@ -100,6 +100,8 @@
         href: azs-how-create-vm-terraform.md
     - name: Create a VM from a Disk Snapshot
       items:
+      - name: Create a VM from a disk snapshot - Portal
+        href: azs-how-create-vm-from-snapshot-portal.md
       - name: Create a VM from a disk snapshot - PowerShell
         href: azs-how-create-vm-from-snapshot-ps.md
     - name: Resize a disk

@@ -141,16 +141,23 @@
 </ol>
 <h2 id="gathering-spn-credentials">Gathering SPN credentials</h2>
 <ol>
-<li><p>On the blade that has now opened, copy the <strong>Application ID</strong> and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.</p>
+<li><p>On the blade that has now opened, copy the <strong>Application (client) ID</strong> and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.</p>
 <p><img src="images/azs-browser-select-SPN-App-ID.png" alt="Copy Application ID"></p>
 </li>
 <li><p>On the blade menu, click the <strong>Certificates &amp; secrets</strong> button.</p>
 </li>
 <li><p>Under <em>Client secrets</em>, click the <strong>+ New client secret</strong> button.</p>
+<p><img src="images/azs-browser-spn-new-secret.png" alt="New client secret"></p>
 </li>
 <li><p>Enter a description for the key, select a expiry duration, then click <strong>Add</strong>.</p>
+<p><img src="images/azs-browser-spn-new-secret-add.png" alt="New client secret &gt; Add"></p>
 </li>
 <li><p>Copy the displayed value for the key and store it somewhere secure. This value is referred to as the SPN Client Secret.</p>
+<p><img src="images/azs-browser-spn-new-secret-value.png" alt="New client secret &gt; Add"></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>It is not possible to retrieve the secret value again after navigating away from this screen. Therefore, you should make sure you have taken a copy of it before moving on.</p>
+</div>
 </li>
 </ol>
 <h2 id="configure-role-based-access-control-for-the-spn-on-azure-stack-hub">Configure role-based access control for the SPN on Azure Stack Hub</h2>
