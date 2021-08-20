@@ -9482,45 +9482,36 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "vOGyaB7OHzB80TL643JbSB5Cacglc58N0fXKzHnrbxI="
+          "hash": "F1OeDX6+IdCEDZc4H+QAkcNlZxAeRNEc9NDdoCcYEos="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "lV4CJvAl7LsHqEVpM7qraGND88xsU9GMNI6OW+UvYvQ="
+          "hash": "mwMWGpY/HVyKH0f/JMIDyzwAQE5eNmUxuTI/K9h7wZA="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-home.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "rXYz3XiQaibcW7IEc64QpZI8/84hYrO/b0uAhi+AvcI="
+          "hash": "ZBstG+yodKrP4vKj4DaUCn8aWaxoRYGmwfe+Zf4JpZE="
         }
       },
       "is_incremental": false,
@@ -11433,15 +11424,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-high-availability.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "Vk0zSY0GnlRiy82prmm6PWlcmZHJfQgvHagzM4pVTKo="
+          "hash": "tvojy4m3kj9FPMobgIeGKcIsxtWZLRwyszbEacyvYF0="
         }
       },
       "is_incremental": false,
