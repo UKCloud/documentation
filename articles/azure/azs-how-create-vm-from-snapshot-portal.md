@@ -2,8 +2,8 @@
 title: How to create a virtual machine from a disk snapshot using the UKCloud Azure Stack Hub portal
 description: Provides help for creating a virtual machine from a managed disk snapshot using the portal on UKCloud for Microsoft Azure
 services: azure-stack
-author: William Turner
-reviewer: William Turner
+author: wturner
+reviewer: wturner
 lastreviewed: 12/08/2021
 
 toc_rootlink: Users
@@ -85,7 +85,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Disks blade - Add](images/azs-browser-disks-list-add.png)
 
-3. In the *Create managed disk* blade, enter the following information:
+3. In the *Create a managed disk* blade, enter the following information:
 
     - **Subscription** - This will be your UKCloud for Microsoft Azure subscription.
 
@@ -133,7 +133,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. At the top of the blade, click **Create VM**.
 
-5. In the *Create virtual machine* blade, in the *Basics* step, enter general information about the VM, including a name, credentials and resource group.
+5. In the *Create a virtual machine* blade, in the *Basics* step, enter general information about the VM, including a name, credentials and resource group.
 
     ![Create VM from disk - Basics](images/azs-browser-disk-vm-basics.png)
 
