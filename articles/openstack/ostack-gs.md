@@ -250,7 +250,7 @@ In OpenStack, you choices are restricted to a number of pre-defined *flavors* th
 
     \> openstack flavor list
 
-![List of OpenStack flavors from CLI](images/ostack-cli-flavor-list.png)
+![List of OpenStack flavors from CLI](images/ostack-flavor-list.png)
 
 ### Choosing your storage type
 
