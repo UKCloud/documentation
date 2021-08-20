@@ -72,6 +72,10 @@ The following diagram shows the six available cut-off dates and associated Devic
 >
 > * Customers are advised to use ***Device Groups F to J*** to apply patches on VMs within their production environments on the basis that no issues ave been identified in their non-production environments.
 
+### Does my server/virtual machine need to be powered-on for the patching service to run?
+
+In order for the patching service to operate correctly VMs must be in a powered-on and available state throughout the patching schedule selected by the customer. Unfortunately the patching service is currently unable to change the power state of any server or virtual machine ahead of the selected patching schedule. Any server/VM in a powered-off state during the selected patching schedule will not be scanned for missing patches or have missing patches applied.
+
 ### How do I recover from applying a patch that may have had an adverse effect on my environment?
 
 Before applying patches within a production environment, it is the customer's responsibility to test those patches in a representative non-production environment to detect any potential adverse impact within the production environment.
