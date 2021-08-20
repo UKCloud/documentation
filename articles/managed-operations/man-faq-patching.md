@@ -74,7 +74,7 @@ The following diagram shows the six available cut-off dates and associated Devic
 
 ### Does my server/virtual machine need to be powered-on for the patching service to run?
 
-In order for the patching service to operate correctly VMs must be in a powered-on and available state throughout the patching schedule selected by the customer. Unfortunately the patching service is currently unable to change the power state of any server or virtual machine ahead of the selected patching schedule. Any server/VM in a powered-off state during the selected patching schedule will not be scanned for missing patches or have missing patches applied.
+In order for the patching service to operate correctly, VMs must be in a powered-on and available state throughout the patching schedule selected by the customer. Unfortunately, the patching service is currently unable to change the power state of any server or virtual machine ahead of the selected patching schedule. Any server/VM in a powered-off state during the selected patching schedule will not be scanned for missing patches or have missing patches applied.
 
 ### How do I recover from applying a patch that may have had an adverse effect on my environment?
 
