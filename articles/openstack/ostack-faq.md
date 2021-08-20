@@ -169,7 +169,7 @@ The answer to this depends on which of UKCloud's OpenStack platforms you are usi
 
 | Region              | OpenStack version                      | LBaaS supported? |
 |---------------------|----------------------------------------|------------------|
-| COR00005 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services. <BR> UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution. |
+| COR00005 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services. |
 | COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* - Uses the [OpenStack Octavia](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
   
 <i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i>

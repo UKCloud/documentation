@@ -24,10 +24,9 @@ UKCloud for OpenStack is engineered specifically for organisations embracing dig
 First, take a look at our [Getting Started Guide](ostack-gs.md) to learn the basics, then you can:
 
 <div class="row">
-  <div class="col-md-3"><ul><li><p><a href="ostack-how-convert-vms.md">Convert virtual machines</a></p></li></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="ostack-how-create-heat-template.md">Create and deploy a Heat template</a></p></li></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="ostack-how-create-load-balancer.md">Create load balancing services</a></p></li></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="ostack-how-recover-instance.md">Recover from failure</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="ostack-how-convert-vms.md">Convert virtual machines</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="ostack-how-create-heat-template.md">Create and deploy a Heat template</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="ostack-how-recover-instance.md">Recover from failure</a></p></li></ul></div>
 </div>
 
 ## Useful videos
