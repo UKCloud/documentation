@@ -4,7 +4,7 @@ description: Frequently asked questions for Patching as a Service
 services: managed-operations
 author: sdixon
 reviewer: sdixon
-lastreviewed: 27/07/2021
+lastreviewed: 20/08/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
@@ -71,6 +71,10 @@ The following diagram shows the six available cut-off dates and associated Devic
 > * Customers are advised to use ***Device Groups A to E*** to test patches on VMs within a representative non-production environment.
 >
 > * Customers are advised to use ***Device Groups F to J*** to apply patches on VMs within their production environments on the basis that no issues ave been identified in their non-production environments.
+
+### Does my server/virtual machine need to be powered-on for the patching service to run?
+
+For the patching service to operate correctly, VMs must be in a powered-on and available state throughout the patching schedule selected by the customer. The patching service is currently unable to change the power state of any server or virtual machine ahead of the selected patching schedule. Any server or VM in a powered-off state during the selected patching schedule will not be scanned for missing patches or have missing patches applied.
 
 ### How do I recover from applying a patch that may have had an adverse effect on my environment?
 
