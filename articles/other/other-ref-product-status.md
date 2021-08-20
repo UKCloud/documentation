@@ -4,7 +4,7 @@ description: Provides information about UKCloud products currently end-of-sale (
 services: other
 author: shighmoor
 reviewer:
-lastreviewed: 05/07/2021
+lastreviewed: 20/08/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -50,11 +50,11 @@ For more information about any of our EOS or EOL products, contact your Service 
 Product | Proposed EOL date | Alternative solution | Additional notes
 --------|-------------------|----------------------|-----------------
 UKCloud for OpenStack - OSP10 | 1 July 2021 | UKCloud for OpenStack - OSP13 | As part of our evergreening strategy, UKCloud will be retiring our OSP10 region on July 1 2021. Customers are requested to migrate to OSP13 before this date. Customers requiring assistance with this process can contact their Service Delivery Manager or email <servicedelivery@ukcloud.com>.
-Cross Domain Security Zone - Cross Domain Guard | July 2021 | [Cross Domain Security Zone - Walled Garden](../cdsz/cdsz-sd.md) | Assurance wrap required for Walled Garden to ensure the proposed solution is secure.
-UKCloud for Microsoft Azure - Multi-tenant | 31 August 2021 | [Public Azure with UKCloud as CSP](../azure/azs-how-use-ukc-csp.md) / [UKCloud for Microsoft Azure](../azure/azs-sd.md) - Private cloud / [UKCloud for VMware](../vmware/vmw-sd.md), [UKCloud for OpenStack](../openstack/ostack-sd.md)  or [UKCloud for Managed OpenShift](../openshift/oshift-sd.md) | For a multi-tenant solution, customers can migrate to Public Azure with support from UKCloud, a Tier 1 direct CSP.<br>UKCloud can offer private cloud for customers wanting to stay with a Microsoft solution, or customers may consider moving to one of UKCloud's other technology stacks for a multi-tenant solution.
-Email and Collaboration as a Service | 31 August 2021 | UKCloud partner / Office365; contact your Service Delivery Manager or email <partners@ukcloud.com> | Working with a UKCloud partner on a Zimbra solution opens up additional benefits to customers.<br>Or customers can move to Office365 for a much richer collaborative experience.
-Dedicated Compute v1 | 31 August 2021 | [Dedicated Compute v2](../dedicated-compute/dc-sd.md) | The updated Dedicated Compute v2 service offers both cost and performance benefits over the v1 service. There's a significant increase to 32 cores and 512GiB RAM in v2.
+Cross Domain Security Zone - Cross Domain Guard | September 2021 | [Cross Domain Security Zone - Walled Garden](../cdsz/cdsz-sd.md) | Assurance wrap required for Walled Garden to ensure the proposed solution is secure.
 UKCloud for Oracle Software | October 2021 | [Private Cloud for Oracle Software](../private-cloud/prc-sd-orcl.md) / [Dedicated Compute v2](../dedicated-compute/dc-sd.md) | Private Cloud for Oracle Software enables customers to have private implementations of Oracle's Engineered Systems.<br>Dedicated Compute v2 provides a flexible solution that can accommodate complicated Oracle licensing rules.
+UKCloud for Microsoft Azure - Multi-tenant | November 2021 | [Public Azure with UKCloud as CSP](../azure/azs-how-use-ukc-csp.md) / [UKCloud for Microsoft Azure](../azure/azs-sd.md) - Private cloud / [UKCloud for VMware](../vmware/vmw-sd.md), [UKCloud for OpenStack](../openstack/ostack-sd.md)  or [UKCloud for Managed OpenShift](../openshift/oshift-sd.md) | For a multi-tenant solution, customers can migrate to Public Azure with support from UKCloud, a Tier 1 direct CSP.<br>UKCloud can offer private cloud for customers wanting to stay with a Microsoft solution, or customers may consider moving to one of UKCloud's other technology stacks for a multi-tenant solution.
+Email and Collaboration as a Service | May 2022 | UKCloud partner / Office365; contact your Service Delivery Manager or email <partners@ukcloud.com> | Working with a UKCloud partner on a Zimbra solution opens up additional benefits to customers.<br>Or customers can move to Office365 for a much richer collaborative experience.
+Dedicated Compute v1 | TBD | [Dedicated Compute v2](../dedicated-compute/dc-sd.md) | The updated Dedicated Compute v2 service offers both cost and performance benefits over the v1 service. There's a significant increase to 32 cores and 512GiB RAM in v2.
 UKCloud for VMware - Synchronous Protection (previously called ENHANCED) | TBD | [Journaling Protection](../vmware/vmw-sco-journaling-protection.md) / [Snapshot Protection](../vmware/vmw-sco-snapshot-protection.md) | Journaling Protection offers a much more resilient solution, is on-demand and is more cost efficient.
 
 ### End of life products
