@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-portal.html",
-          "hash": "sfp6L29LShc7CfBLOcJRp77Y6j7n3S/UDZr7n7McPp8="
+          "hash": "4cdfta4mQ33JieMA1/kBCja/SxBCTuZMcYGBr27AjS4="
         }
       },
       "is_incremental": false,
@@ -2853,10 +2853,54 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_disks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_disks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_management.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_management.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_networking.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_networking.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azsp_createvm_progress.png",
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azsp_createvm_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_review.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_review.png"
         }
       },
       "is_incremental": false,

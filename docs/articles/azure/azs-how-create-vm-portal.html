@@ -113,23 +113,32 @@
 <li><p>In the <em>Compute</em> blade, select the template that you want to use for your VM.</p>
 <p><img src="images/azsp_computeblade.png" alt="List of VM images in Compute blade"></p>
 </li>
-<li><p>In the <em>Create virtual machine</em> blade, in the <em>Basics</em> step, enter general information about the VM, including a name, credentials and resource group, then click <strong>OK</strong>.</p>
+<li><p>In the <em>Create a virtual machine</em> blade, in the <em>Basics</em> step, enter general information about the VM, including a name, credentials and resource group.</p>
 <p><img src="images/azsp_createvm_basics.png" alt="Create virtual machine &gt; Basics"></p>
 </li>
-<li><p>In the <em>Size</em> step, select the appropriate size for your VM, depending on its purpose, then click <strong>Select</strong>.</p>
-<p>For information about the different available VM sizes, see <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes</a></p>
+<li><p>Still in the <em>Basics</em> step, click <strong>Change size</strong> under the currently selected VM size to view all the available sizes. Select the appropriate size for your VM, depending on its purpose, then click <strong>Select</strong>.</p>
+<p>For information about the different available VM sizes, see <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes</a>.</p>
 <p><img src="images/azsp_createvm_size.png" alt="Create virtual machine &gt; Size"></p>
 </li>
-<li><p>In the <em>Settings</em> step, change any of the optional settings as required for your VM, then click <strong>OK</strong>.</p>
-<p><img src="images/azsp_createvm_settings_v1811.png" alt="Create virtual machine &gt; Settings"></p>
-</li>
-</ol>
+<li><p>Change any of the optional settings located in the other tabs, then click <strong>Review + create</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>As of version 1811 for storage &quot;managed disks&quot; are selected by default and you need to select the public inbound ports you want enabled.</p>
+<p>For storage, managed disks are selected by default (<em>Disks</em> step).</p>
 </div>
-<ol start="8">
-<li><p>In the <em>Summary</em> step, review the selections you've made and then click <strong>OK</strong> to start the deployment.</p>
+<p><img src="images/azsp_createvm_disks.png" alt="Create virtual machine &gt; Disks"></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>There will be no public inbound ports open on the network security group if left unchanged (<em>Networking</em> step).</p>
+</div>
+<p><img src="images/azsp_createvm_networking.png" alt="Create virtual machine &gt; Networking"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>By default, boot diagnostics will be switched on for the virtual machine (<em>Management</em> step).</p>
+</div>
+<p><img src="images/azsp_createvm_management.png" alt="Create virtual machine &gt; Management"></p>
+</li>
+<li><p>In the <em>Review + create</em> step, review the selections you've made and then click <strong>Create</strong> to start the deployment.</p>
+<p><img src="images/azsp_createvm_review.png" alt="Create virtual machine &gt; Review"></p>
 </li>
 <li><p>You can monitor the progress of your VM's deployment by clicking the <strong>Notifications</strong> icon.</p>
 <p><img src="images/azsp_createvm_progress.png" alt="Notification showing VM deployment in progress"></p>
