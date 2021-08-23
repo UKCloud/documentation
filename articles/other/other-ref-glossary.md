@@ -207,12 +207,6 @@ A network service that controls traffic into and out of your environment using d
 
 ## H
 
-### Hadoop
-
-An open source collection of tools designed specifically to capture, store and process the massive amount of data created by new technologies such as Internet of Things (IoT) sensors, 'Smart' devices and cites and artificial intelligence.
-
-For more information, see the [UKCloud Big Data & Hadoop service proposition](https://ukcloud.com/wp-content/uploads/2019/02/ukc-svc-124-ukcloud-hadoop-proposition.pdf).
-
 ### Health and Social Care Network (HSCN)
 
 A government network designed to provide a solution for hospitals, medical centres and GPs to collaborate and access services over a secure, high speed network. One of UKCloud's connectivity options, available on the Assured OFFICIAL security domain.
