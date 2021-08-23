@@ -2,8 +2,8 @@
 title: How to create a VM using the UKCloud Azure Stack Hub portal
 description: Create a virtual machine in UKCloud for Microsoft Azure
 services: azure-stack
-author: Sue Highmoor
-reviewer: William Turner
+author: shighmoor
+reviewer: wturner
 lastreviewed: 10/08/2021
 
 toc_rootlink: Users
@@ -48,30 +48,30 @@ VMs provide the basic compute building blocks in Azure Stack Hub. You can create
 
     ![List of VM images in Compute blade](images/azsp_computeblade.png)
 
-5. In the *Create virtual machine* blade, in the *Basics* step, enter general information about the VM, including a name, credentials and resource group.
+5. In the *Create a virtual machine* blade, in the *Basics* step, enter general information about the VM, including a name, credentials and resource group.
 
     ![Create virtual machine > Basics](images/azsp_createvm_basics.png)
 
-6. Click **Change size** under the currently selected VM size to view all the available sizes. Select the appropriate size for your VM, depending on its purpose, then click **Select**.
+6. Still in the *Basics* step, click **Change size** under the currently selected VM size to view all the available sizes. Select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
-    For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>
+    For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
 
     ![Create virtual machine > Size](images/azsp_createvm_size.png)
 
 7. Change any of the optional settings located in the other tabs, then click **Review + create**.
 
     > [!NOTE]
-    > For storage, *managed disks* are selected by default.
+    > For storage, managed disks are selected by default (*Disks* step).
 
     ![Create virtual machine > Disks](images/azsp_createvm_disks.png)
 
     > [!IMPORTANT]
-    > There will be no public inbound ports open on the network security group if left unchanged.
+    > There will be no public inbound ports open on the network security group if left unchanged (*Networking* step).
 
     ![Create virtual machine > Networking](images/azsp_createvm_networking.png)
 
     > [!NOTE]
-    > By default, boot diagnostics will be switched on for the virtual machine.
+    > By default, boot diagnostics will be switched on for the virtual machine (*Management* step).
 
     ![Create virtual machine > Management](images/azsp_createvm_management.png)
 
