@@ -163,48 +163,53 @@ To complete the steps in this article, you must have appropriate access to a sub
     $LogAnalyticsWorkspaceResourceGroupName = "<output form="workspaceresourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
     $LogAnalyticsWorkspaceLocation = "<output form="workspacelocation" name="result" style="display: inline;">UKSouth</output>"
 
-    # Check if the Log Analytics resource group exists, If it doesn't exist then create it
+    # Check if the Log Analytics resource group exists, if it doesn't exist then create it
     try {
         $LogAnalyticsWorkspaceResourceGroup = Get-AzResourceGroup -Name $LogAnalyticsWorkspaceResourceGroupName -Location $LogAnalyticsWorkspaceLocation -Verbose -ErrorAction Stop
     }
     catch {
-        Write-Warning -Message "Log Analytics workspace resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" in location ""$($LogAnalyticsWorkspaceLocation)"" doesn't exist. Creating now..."
+        Write-Warning -Message "Log Analytics Workspace resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" in location ""$($LogAnalyticsWorkspaceLocation)"" doesn't exist. Creating now..."
         try {
             $LogAnalyticsWorkspaceResourceGroup = New-AzResourceGroup -Name $LogAnalyticsWorkspaceResourceGroupName -Location $LogAnalyticsWorkspaceLocation -Verbose -ErrorAction Stop
         }
         catch {
-            Write-Error -Message "Failed to create Log Analytics workspace resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" in location ""$($LogAnalyticsWorkspaceLocation)"":`n$($_.Exception.Message)"
+            Write-Error -Message "Failed to create Log Analytics Workspace resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" in location ""$($LogAnalyticsWorkspaceLocation)"":`n$($_.Exception.Message)"
             throw
         }
     }
-    # Check if the Log Analytics workspace exists, If it doesn't exist then create it
+    # Check if the Log Analytics Workspace exists, if it doesn't exist then create it
     try {
-        Write-Verbose "Attempting to retrieve Log Analytics workspace ""$($LogAnalyticsWorkspaceName)"" in resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" and location ""$($LogAnalyticsWorkspaceLocation)""."
+        Write-Verbose "Attempting to retrieve Log Analytics Workspace ""$($LogAnalyticsWorkspaceName)"" in resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" and location ""$($LogAnalyticsWorkspaceLocation)""."
         $LogAnalyticsWorkspace = Get-AzOperationalInsightsWorkspace -ResourceGroupName $LogAnalyticsWorkspaceResourceGroup.ResourceGroupName -Name $LogAnalyticsWorkspaceName -Verbose -ErrorAction Stop
     }
     catch {
         try {
-            Write-Warning -Message "Log Analytics workspace ""$($LogAnalyticsWorkspaceName)"" in location ""$($LogAnalyticsWorkspaceLocation)"" doesn't exist. Creating now..."
+            Write-Warning -Message "Log Analytics Workspace ""$($LogAnalyticsWorkspaceName)"" in location ""$($LogAnalyticsWorkspaceLocation)"" doesn't exist. Creating now..."
             $LogAnalyticsWorkspace = New-AzOperationalInsightsWorkspace -ResourceGroupName $LogAnalyticsWorkspaceResourceGroup.ResourceGroupName -Name $LogAnalyticsWorkspaceName -Location $LogAnalyticsWorkspaceLocation -Verbose -ErrorAction Stop
         }
         catch {
-            Write-Error -Message "Failed to create Log Analytics workspace ""$($LogAnalyticsWorkspaceName)"" in resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" and location ""$($LogAnalyticsWorkspaceLocation)"":`n$($_.Exception.Message)"
+            Write-Error -Message "Failed to create Log Analytics Workspace ""$($LogAnalyticsWorkspaceName)"" in resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" and location ""$($LogAnalyticsWorkspaceLocation)"":`n$($_.Exception.Message)"
             throw
         }
     }
     try {
-        # Get Log Analytics workspace GUID and primary key
-        Write-Verbose -Message "Attempting to retrieve Log Analytics workspace ""$($LogAnalyticsWorkspace.Name)"" GUID, primary key and base64 encode them."
+        # Get Log Analytics Workspace GUID and primary key
+        Write-Verbose -Message "Attempting to retrieve Log Analytics Workspace ""$($LogAnalyticsWorkspace.Name)"" GUID, primary key and base64 encode them."
         $EncodedWorkspaceGuid = [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes(($LogAnalyticsWorkspace.CustomerId).GUID))
         $WorkspaceKey = (Get-AzOperationalInsightsWorkspaceSharedKey -ResourceGroupName $LogAnalyticsWorkspace.ResourceGroupName -Name $LogAnalyticsWorkspace.Name -Verbose -ErrorAction Stop).PrimarySharedKey
         $EncodedWorkspaceKey = [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes($WorkspaceKey))
     }
     catch {
-        Write-Error -Message "Failed to obtain Log Analytics workspace ""$($LogAnalyticsWorkspace.Name)"" GUID or primary key:`n$($_.Exception.Message)"
+        Write-Error -Message "Failed to obtain Log Analytics Workspace ""$($LogAnalyticsWorkspace.Name)"" GUID or primary key:`n$($_.Exception.Message)"
         throw
-    }
+    }</code></pre>
 
-    ## Configure Windows event log data sources
+2. (Optional) Enable additional logs and performance counters
+
+    ### [Windows](#tab/tabid-c)
+
+    <pre>
+    <code class="language-PowerShell"># Windows event logs
     $EventLogNames = @("System", "Application", "Setup")
     foreach ($EventLogName in $EventLogNames) {
         $null = New-AzOperationalInsightsWindowsEventDataSource `
@@ -215,7 +220,26 @@ To complete the steps in this article, you must have appropriate access to a sub
             -CollectErrors `
             -CollectWarnings `
             -CollectInformation
-    }</code></pre>
+    }
+
+    # Windows performance counters
+    New-AzOperationalInsightsWindowsPerformanceCounterDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $WorkspaceName -ObjectName "Memory" -InstanceName "*" -CounterName "Available MBytes" -IntervalSeconds 20 -Name "Example Windows Performance Counter"
+
+    # Enable IIS Log Collection using agent
+    Enable-AzOperationalInsightsIISLogCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $WorkspaceName</code></pre>
+
+    ### [Linux](#tab/tabid-d)
+
+    <pre>
+    <code class="language-PowerShell"># Linux performance counters
+    New-AzOperationalInsightsLinuxPerformanceObjectDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $WorkspaceName -ObjectName "Logical Disk" -InstanceName "*" -CounterNames @("% Used Inodes", "Free Megabytes", "% Used Space", "Disk Transfers/sec", "Disk Reads/sec", "Disk Writes/sec") -IntervalSeconds 20 -Name "Example Linux Disk Performance Counters"
+    Enable-AzOperationalInsightsLinuxPerformanceCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $WorkspaceName
+
+    # Linux Syslog
+    New-AzOperationalInsightsLinuxSyslogDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $WorkspaceName -Facility "kern" -CollectEmergency -CollectAlert -CollectCritical -CollectError -CollectWarning -Name "Example kernel syslog collection"
+    Enable-AzOperationalInsightsLinuxSyslogCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $WorkspaceName</code></pre>
+
+    ***
 
 ***
 
