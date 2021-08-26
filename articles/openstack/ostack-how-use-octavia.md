@@ -75,9 +75,7 @@ For this example you will need;
 
 - An existing OpenStack network and subnet
 
-- Two servers providing HTTP over port 80
-
-- The servers respond to a request for `/monitor.html` with a valid page
+- Two servers providing HTTP over port 80 (the servers must respond to a request for /monitor.html with a valid page)
 
 ### CLI example
 
