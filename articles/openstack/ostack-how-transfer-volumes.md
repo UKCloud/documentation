@@ -35,7 +35,7 @@ Customers may require the ability to move volumes between projects.
 > [!NOTE]
 > You will require a RC file for both the source project and the destination project.
 
-> [!NOTE]
+> [!CAUTION]
 > Do not transfer volumes between projects that have snapshots. As this process will break the snapshots.
 
 - Source the source project RC file
