@@ -70,31 +70,31 @@ To start interacting with the Cloud Director API, you first need to obtain an `x
 
         /api/sessions
 
-    ![API URL](images/vmw-restclient-request-method-post1.png)
+    ![API URL](images/vmw-restclient-request-method-post1.PNG)
 
 3. Next add a Basic Authentication header. To do this, expand the *Authentication* section and click **Add Credentials**.
 
-    ![Basic Authentication section](images/vmw-restclient-basic-authentication1.png)
+    ![Basic Authentication section](images/vmw-restclient-basic-authentication1.PNG)
 
 4. In the *Basic Authorization* dialog box, in the **Username** field, enter your API username recorded earlier from the Portal API page.
 
 5. In the **Password** field, enter your UKCloud Portal password and then click **Save**.
 
-    ![Basic Authentication dialog box](images/vmw-restclient-authentication-details1.png)
+    ![Basic Authentication dialog box](images/vmw-restclient-authentication-details1.PNG)
 
 6. Next add an Accept header. To do this, expand the *Custom Headers* section and click **Add New Header**.
 
-    ![Custom Header section](images/vmw-restclient-custom-header1.png)
+    ![Custom Header section](images/vmw-restclient-custom-header1.PNG)
 
 7. In the *Header* dialog box, in the **Name** field, enter `Accept`.
 
 8. In the **Value** field enter `application/*+xml;version=34.0`.
 
-    ![Header dialog box](images/Request_Headers_dialog_box_2.1.png)
+    ![Header dialog box](images/Request_Headers_dialog_box_2.1.PNG)
 
 9. The table in the *Headers* section now displays the Accept header.
 
-    ![Headers section with Accept header](images/vmw-restclient-accept-header1.png)
+    ![Headers section with Accept header](images/vmw-restclient-accept-header1.PNG)
 
 10. The REST client has now got all the required settings in place to make a request to the Cloud Director API to obtain a `x-vmware-vcloud-access-token` token, so click **Send Request**.
 
