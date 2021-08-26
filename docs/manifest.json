@@ -9043,6 +9043,83 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-octavia-001-load-balancer-details-example.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-octavia-001-load-balancer-details-example.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-octavia-002-listener-details-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-octavia-002-listener-details-example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-octavia-003-pool-details-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-octavia-003-pool-details-example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-octavia-004-pool-members-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-octavia-004-pool-members-example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-octavia-005-monitor-details-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-octavia-005-monitor-details-example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-octavia-006-load-balancer-edit-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-octavia-006-load-balancer-edit-example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-octavia-007-floating-ip-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-octavia-007-floating-ip-example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-pip-installed.png",
       "output": {
         "resource": {
@@ -9743,6 +9820,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-use-octavia.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-use-octavia.html",
+          "hash": "9Rdk1zLsne43GaltHIuEKs1goAkLY9mztH3FTUFjvT8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-use-triliovault.md",
       "output": {
         ".html": {
@@ -9927,7 +10016,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "yqHcpu6QWlU9PI/vCSH/b4Lq5Ncc9g8h9/ncO5eZW7U="
+          "hash": "2ohHRPgnFq1/53Ei/QOvxCRQYjYAFkRXog+GTCNC6cs="
         }
       },
       "is_incremental": false,
@@ -22811,7 +22900,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 461,
+          "total_file_count": 462,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

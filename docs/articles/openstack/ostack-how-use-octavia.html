@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use Octavia Load Balancing as a Service on UKCloud for OpenStack </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use Octavia Load Balancing as a Service on UKCloud for OpenStack ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-use-octavia.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-use-octavia-load-balancing-as-a-service-on-ukcloud-for-openstack">How to use Octavia Load Balancing as a Service on UKCloud for OpenStack</h1>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>This article does not apply to OpenStack regions running OpenStack Platform 10 (OSP10) and lower (currently COR00005).</p>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Octavia is the OpenStack Load Balancing as a Service (LBaaS) solution and forms part of the solution for availability and scaling that modern systems require.</p>
+<p>Octavia currently supports a number of configurations:</p>
+<ul>
+<li><p>TCP, HTTP, HTTPS, terminated HTTP and UDP support</p>
+</li>
+<li><p>Source IP, round robin and least connections balancing</p>
+</li>
+<li><p>Health monitoring using ping, HTTP, TLS Hello and UDP</p>
+</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>If you intend to manage with the OpenStackCLI, you should consider the following:</p>
+<ul>
+<li><p>Octavia uses port 13876 for communication. This port will need to be open to manage Octavia.</p>
+</li>
+<li><p>You must be using a recent version of the OpenStackCLI.</p>
+</li>
+</ul>
+<h2 id="use-cases">Use cases</h2>
+<p>Use cases for Octavia include:</p>
+<ul>
+<li><p>Scaling out website traffic by balancing it over multiple servers</p>
+</li>
+<li><p>Increasing the availability of a service with active-standby or active-active pools</p>
+</li>
+</ul>
+<h2 id="octavia-components">Octavia components</h2>
+<p>Octavia consists of a number of service components that need to be configured as follows:</p>
+<ul>
+<li><p><strong>Load balancer.</strong> The load balancer sits at the top of the Octavia component stack. The Octavia load balancer connects to an OpenStack network and provides the entry point for traffic. You may assign a load balancer a floating IP to connect it to internet traffic.</p>
+</li>
+<li><p><strong>Listener.</strong> An Octavia listener defines an IP protocol and service that the load balancer will accept. This can be TCP, UDP, HTTP or HTTPS (direct or terminated). Each load balancer may have multiple listeners to support more than one service (for example, HTTP and HTTPS).</p>
+</li>
+<li><p><strong>Pool.</strong> An Octavia pool defines a list of servers that will accept the traffic from the listener. As with the listener, you select the protocol for the pool to use.</p>
+</li>
+<li><p><strong>Member.</strong> Each Octavia pool needs to contain a number of members. These specify the IP address and port of the servers (or services) that will be used to service the requests. You can also define a separate monitoring IP and port distinct from the request ones if needed.</p>
+</li>
+<li><p><strong>Health monitor.</strong> The health monitor defines how Octavia can check that the member resources are online and available, automatically removing or re-adding from the list of members in a pool should it be required. The type of check performed is configurable, as is the frequency of checks, timeout and number of failed (or successful) checks required for the status of a member to be changed.</p>
+</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<h3 id="assumptions">Assumptions</h3>
+<p>You must create an HTTP load balancer across existing servers.</p>
+<p>For this example you'll need:</p>
+<ul>
+<li><p>An existing OpenStack router</p>
+</li>
+<li><p>An existing OpenStack network and subnet</p>
+</li>
+<li><p>Two servers providing HTTP over port 80 (the servers must respond to a request for /monitor.html with a valid page)</p>
+</li>
+</ul>
+<h3 id="cli-example">CLI example</h3>
+<h4 id="create-a-load-balancer">Create a load balancer</h4>
+<pre><code class="lang-none">openstack loadbalancer create --name &quot;my-lbaas&quot; --vip-network-id NETWORK-ID-STRING
++---------------------+--------------------------------------+
+| Field               | Value                                |
++---------------------+--------------------------------------+
+| admin_state_up      | True                                 |
+| availability_zone   |                                      |
+| created_at          | 2021-07-29T09:13:40                  |
+| description         |                                      |
+| flavor_id           | None                                 |
+| id                  | 5e815730-8cde-4d31-8761-f50422767c49 |
+| listeners           |                                      |
+| name                | my-lbaas                             |
+| operating_status    | OFFLINE                              |
+| pools               |                                      |  
+....
+| vip_port_id         | fa434d5d-ccd7-462a-920d-9c284420a57c |
+</code></pre>
+<h4 id="create-a-listener">Create a listener</h4>
+<pre><code class="lang-none">openstack loadbalancer listener create --name &quot;my-lbaas-listener-http&quot;  --protocol HTTP --protocol-port 80 5e815730-8cde-4d31-8761-f50422767c49
++-----------------------------+--------------------------------------+
+| Field                       | Value                                |
++-----------------------------+--------------------------------------+
+| admin_state_up              | True                                 |
+| connection_limit            | -1                                   |
+| created_at                  | 2021-07-29T09:17:01                  |
+| default_pool_id             | None                                 |
+| default_tls_container_ref   | None                                 |
+| description                 |                                      |
+| id                          | 20f6ceda-b77f-433f-b171-fbc93668c536 |
+| insert_headers              | None                                 |
+| l7policies                  |                                      |
+| loadbalancers               | 5e815730-8cde-4d31-8761-f50422767c49 |
+| name                        | my-lbaas-listener-http               |
+</code></pre>
+<h4 id="create-a-pool">Create a pool</h4>
+<pre><code class="lang-none">openstack loadbalancer pool create --name &quot;my-lbaas-pool-http&quot; --protocol HTTP --listener 20f6ceda-b77f-433f-b171-fbc93668c536 --lb-algorithm ROUND_ROBIN
++----------------------+--------------------------------------+
+| Field                | Value                                |
++----------------------+--------------------------------------+
+| admin_state_up       | True                                 |
+| created_at           | 2021-07-29T10:23:56                  |
+| description          |                                      |
+| healthmonitor_id     |                                      |
+| id                   | 0ca45218-23a5-44f3-8de5-50cd7984ae4d |
+| lb_algorithm         | ROUND_ROBIN                          |
+| listeners            | 20f6ceda-b77f-433f-b171-fbc93668c536 |
+| loadbalancers        | 5e815730-8cde-4d31-8761-f50422767c49 |
+| members              |                                      |
+| name                 | my-lbaas-pool-http                   |
+</code></pre>
+<h4 id="add-two-members-to-the-pool">Add two members to the pool</h4>
+<pre><code class="lang-none">openstack loadbalancer member create --name &quot;my-lbaas-member-1&quot; --address 10.1.1.134 --protocol-port 80 0ca45218-23a5-44f3-8de5-50cd7984ae4d
++---------------------+--------------------------------------+
+| Field               | Value                                |
++---------------------+--------------------------------------+
+| address             | 10.1.1.134                           |
+| admin_state_up      | True                                 |
+| created_at          | 2021-07-29T10:27:20                  |
+| id                  | e6cd5dc2-b44a-440e-bae0-45dfa1cd9490 |
+| name                | my-lbaas-member-1                    |
+
+openstack loadbalancer member create --name &quot;my-lbaas-member-2&quot; --address 10.1.1.58 --protocol-port 80 0ca45218-23a5-44f3-8de5-50cd7984ae4d
++---------------------+--------------------------------------+
+| Field               | Value                                |
++---------------------+--------------------------------------+
+| address             | 10.1.1.58                            |
+| admin_state_up      | True                                 |
+| created_at          | 2021-07-29T10:27:54                  |
+| id                  | b835edce-8157-4802-bce2-33817cf9354f |
+| name                | my-lbaas-member-2                    |
+</code></pre>
+<h4 id="create-a-health-monitor">Create a health monitor</h4>
+<pre><code class="lang-none">openstack loadbalancer healthmonitor create --name &quot;my-lbaas-monitor&quot; --http-method GET --type HTTP  --url-path /monitor.html --delay 5 --timeout 5 --max-retries 3 0ca45218-23a5-44f3-8de5-50cd7984ae4d
++---------------------+--------------------------------------+
+| Field               | Value                                |
++---------------------+--------------------------------------+
+| project_id          | 665575955ea34177bb9f7105bcc9782d     |
+| name                | my-lbaas-monitor                     |
+| admin_state_up      | True                                 |
+| pools               | 0ca45218-23a5-44f3-8de5-50cd7984ae4d |
+| created_at          | 2021-07-29T10:32:15                  |
+| provisioning_status | PENDING_CREATE                       |
+| updated_at          | None                                 |
+| delay               | 5                                    |
+| expected_codes      | 200                                  |
+| max_retries         | 3                                    |
+| http_method         | GET                                  |
+| timeout             | 5                                    |
+| max_retries_down    | 3                                    |
+| url_path            | /monitor.html                        |
+| type                | HTTP                                 |
+| id                  | d7007382-43e1-40d2-9439-ebd9b0418931 |
+</code></pre>
+<h4 id="assign-a-floating-ip">Assign a floating IP</h4>
+<p>If you need to, allocate a Floating IP from a network with</p>
+<pre><code class="lang-none">openstack floating ip create NETWORK-ID-STRING
+</code></pre>
+<p>Assign the Floating IP to the Load Balancer VIP port</p>
+<pre><code class="lang-none">openstack floating ip set --port LOAD-BALANCER-VIP-PORT-ID FLOATING-IP-ID
+</code></pre>
+<h3 id="horizon-example">Horizon example</h3>
+<h4 id="create-a-load-balancer-1">Create a load balancer</h4>
+<p><img src="images/ostack-octavia-001-load-balancer-details-example.PNG" alt="Create Load Balancer &gt; Load Balancer Details page"></p>
+<h4 id="create-a-listener-1">Create a listener</h4>
+<p><img src="images/ostack-octavia-002-listener-details-example.png" alt="Create Load Balancer &gt; Listener Details page"></p>
+<h4 id="create-a-pool-1">Create a pool</h4>
+<p><img src="images/ostack-octavia-003-pool-details-example.png" alt="Create Load Balancer &gt; Pool Details page"></p>
+<h4 id="add-two-members-to-the-pool-1">Add two members to the pool</h4>
+<p><img src="images/ostack-octavia-004-pool-members-example.png" alt="Create Load Balancer &gt; Pool Members page"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For each member you add, click <strong>&gt;</strong> next to the IP address to open up the monitor details and enter the IP address and port for the health monitor to use (which may be the same details as the member IP and port).</p>
+</div>
+<h4 id="create-a-health-monitor-1">Create a health monitor</h4>
+<p><img src="images/ostack-octavia-005-monitor-details-example.png" alt="Create Load Balancer &gt; Monitor Details page"></p>
+<h4 id="assign-a-floating-ip-1">Assign a floating IP</h4>
+<p>Once you've created the load balancer, you'll generally want to associate a floating IP with it. To do this you need expand the dropdown option menu next to the newly created load balancer, select <strong>Associate Floating IP</strong> and then on the next screen, select an existing floating IP or an IP pool to assign an address from.</p>
+<p><img src="images/ostack-octavia-006-load-balancer-edit-example.png" alt="Load balancer options menu"></p>
+<p><img src="images/ostack-octavia-007-floating-ip-example.png" alt="Associate Floating IP Address page"></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

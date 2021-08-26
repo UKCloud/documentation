@@ -36,6 +36,8 @@
     href: ostack-how-retrieve-windows-password.md
   - name: Use Barbican Key Management as a Service
     href: ostack-how-use-barbican.md
+  - name: Use Octavia Load Balancing as a Service
+    href: ostack-how-use-octavia.md
   - name: Use OpenStack instance metadata
     href: ostack-how-use-instance-metadata.md
   - name: Use the OpenStack API with an SSO user
