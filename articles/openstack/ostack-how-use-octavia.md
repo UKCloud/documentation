@@ -67,11 +67,13 @@ Octavia consists of a number of service components that need to be configured as
 
 ### Assumptions
 
-The requirement is to create an HTTP load balancer across existing servers.
+You have a requirement requirement to create an HTTP load balancer across existing servers.
+
+For this example you will need;
 
 - An existing OpenStack router 
 
-- An existing OpenStack ntwork and subnet
+- An existing OpenStack network and subnet
 
 - Two servers providing HTTP over port 80
 
