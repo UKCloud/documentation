@@ -70,7 +70,7 @@ To start interacting with the Cloud Director API, you first need to obtain an `x
 
         /api/sessions
 
-    ![API URL](images/vmw-restclient-request-method-post1.PNG)
+    ![API URL](images/vmw-restclient-request-method-post1.png)
 
 3. Next add a Basic Authentication header. To do this, expand the *Authentication* section and click **Add Credentials**.
 
@@ -90,7 +90,7 @@ To start interacting with the Cloud Director API, you first need to obtain an `x
 
 8. In the **Value** field enter `application/*+xml;version=34.0`.
 
-    ![Header dialog box](images/Request_Headers_dialog_box_2.1.PNG)
+    ![Header dialog box](images/Request_Headers_dialog_box_2.1.png)
 
 9. The table in the *Headers* section now displays the Accept header.
 
