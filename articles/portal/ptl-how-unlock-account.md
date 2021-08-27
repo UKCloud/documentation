@@ -2,9 +2,9 @@
 title: How to unlock a user account
 description: Explains how a Portal administrator can unlock a Portal user account
 services: portal
-author: Sue Highmoor
-reviewer: William Llewellyn
-lastreviewed: 07/08/2020
+author: shighmoor
+reviewer: dbroderick
+lastreviewed: 10/08/2021
 
 toc_rootlink: How To
 toc_sub1:
