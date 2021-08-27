@@ -90,7 +90,7 @@ To import a `.vmx` file:
 
     - `username` is your UKCloud Portal user ID
 
-    - `apiURL` is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access VMware Cloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+    - `apiURL` is your Cloud Director API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md).
 
     - `computeServiceID` is the ID of your UKCloud compute service (sometimes also called an org or vOrg)
 
@@ -127,7 +127,7 @@ To upload an ISO image:
 
     - `username` is your UKCloud Portal user ID
 
-    - `apiURL` is your vCloud API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access VMware Cloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+    - `apiURL` is your Cloud Director API URL. This URL is different depending on the region in which your environment is located. For more information, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md).
 
     - `targetVDC` is the VDC where you want to upload the file
 

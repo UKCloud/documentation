@@ -27,9 +27,9 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
     <https://code.vmware.com/web/tool/12.0.0/vmware-powercli>
 
-2. Open your PowerCLI session and connect to vCloud.
+2. Open your PowerCLI session and connect to Cloud Director.
 
-    You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [*Finding your vCloud API credentials*](vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).
+    You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [*Finding your Cloud Director API credentials*](vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).
 
 3. Copy the following function and paste it into a .psm1 file:
 
@@ -44,7 +44,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
         $webclient.Headers.Add("x-vcloud-authorization",$EdgeView.Client.SessionKey)
 
-        $webclient.Headers.Add("accept","application/*+xml;version=32.0")
+        $webclient.Headers.Add("accept","application/*+xml;version=34.0")
 
         $edgeview.id -match "(?<=urn:vcloud:gateway:).*"
 
