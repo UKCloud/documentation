@@ -94,7 +94,7 @@
 <h1 id="how-to-retrieve-utilisation-metrics-for-your-virtual-machines">How to retrieve utilisation metrics for your virtual machines</h1>
 
 <h2 id="overview">Overview</h2>
-<p>You can use the vCloud API to retrieve current or historic utilisation metrics for a virtual machine (VM). You can retrieve the following utilisation metrics:</p>
+<p>You can use the Cloud Director API to retrieve current or historic utilisation metrics for a virtual machine (VM). You can retrieve the following utilisation metrics:</p>
 <ul>
 <li><p>Average CPU usage (%)</p>
 </li>
@@ -119,15 +119,15 @@
 <p>You can also find utilisation metrics for a VM in VMware Cloud Director by selecting <strong>Details</strong> and expanding the <em>Monitoring Chart</em> section.</p>
 </div>
 <h3 id="intended-audience">Intended audience</h3>
-<p>To retrieve the utilisation metrics using the API, you must be logged into the vCloud API as an administrator, Catalog Author or vApp Author.</p>
+<p>To retrieve the utilisation metrics using the API, you must be logged into the Cloud Director API as an administrator, Catalog Author or vApp Author.</p>
 <h2 id="retrieving-current-utilisation-metrics">Retrieving current utilisation metrics</h2>
-<p>Current metrics are values collected at the time the request is processed by the server. You can use the vCloud API to retrieve a list of current metric values, one for each category.</p>
+<p>Current metrics are values collected at the time the request is processed by the server. You can use the Cloud Director API to retrieve a list of current metric values, one for each category.</p>
 <p>You can retrieve current utilisation metrics for VMs in all regions.</p>
 <ol>
-<li><p>Log in to the vCloud API.</p>
-<p>For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>.</p>
+<li><p>Log in to the Cloud Director API.</p>
+<p>For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the Cloud Director API</em></a>.</p>
 </li>
-<li><p>Send the following request to the vCloud API to retrieve the current utilisation metrics for the VM.</p>
+<li><p>Send the following request to the Cloud Director API to retrieve the current utilisation metrics for the VM.</p>
 <pre><code class="lang-none">GET https://&lt;vcloud_api_url&gt;/api/vApp/&lt;vm_id&gt;/metrics/current
 </code></pre>
 <table>
@@ -141,7 +141,7 @@
 <tbody>
 <tr>
 <td><code>vcloud_api_url</code></td>
-<td>The URL you use to access the vCloud API</td>
+<td>The URL you use to access the Cloud Director API</td>
 <td><code>api.vcd.portal.skyscapecloud.com</code></td>
 </tr>
 <tr>
@@ -155,7 +155,7 @@
 <pre><code class="lang-none">GET https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
 </code></pre>
 </li>
-<li><p>The vCloud API response includes each of the current metric values, for example:</p>
+<li><p>The Cloud Director API response includes each of the current metric values, for example:</p>
 <pre><code class="lang-none">&lt;CurrentUsage xmlns=&quot;http://www.vmware.com/vcloud/v1.5&quot; ...&gt;
 
     &lt;Link
@@ -192,16 +192,16 @@
 </li>
 </ol>
 <h2 id="curl-example">Curl example</h2>
-<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=32.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
+<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
 </code></pre>
 <h2 id="retrieving-historic-utilisation-metrics">Retrieving historic utilisation metrics</h2>
 <p>Historic metrics are collected and stored for three months. You can retrieve historic metrics for the last 24 hours of metric history.</p>
 <p>You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.</p>
 <ol>
-<li><p>Log in to the vCloud API.</p>
-<p>For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>.</p>
+<li><p>Log in to the Cloud Director API.</p>
+<p>For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the Cloud Director API</em></a>.</p>
 </li>
-<li><p>Send the following request to the vCloud API to retrieve the historic utilisation metrics for the VM.</p>
+<li><p>Send the following request to the Cloud Director API to retrieve the historic utilisation metrics for the VM.</p>
 <pre><code class="lang-none">GET https://&lt;vcloud_api_url&gt;/api/vApp/&lt;vm_id&gt;/metrics/historic
 </code></pre>
 <table>
@@ -215,7 +215,7 @@
 <tbody>
 <tr>
 <td><code>vcloud_api_url</code></td>
-<td>The URL you use to access the vCloud API</td>
+<td>The URL you use to access the Cloud Director API</td>
 <td><code>api.vcd.pod0000b.sys00005.portal.skyscapecloud.com</code></td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@
 <pre><code class="lang-none">GET https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
 </code></pre>
 </li>
-<li><p>The vCloud API response includes historic metric values for the last 24 hours, for example:</p>
+<li><p>The Cloud Director API response includes historic metric values for the last 24 hours, for example:</p>
 <pre><code class="lang-none">&lt;HistoricUsage xmlns=&quot;http://www.vmware.com/vcloud/v1.5&quot; ...&gt;
 
     &lt;Link
@@ -338,7 +338,7 @@
 </li>
 </ol>
 <h2 id="curl-example-1">Curl example</h2>
-<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=32.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
+<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
 </code></pre>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>

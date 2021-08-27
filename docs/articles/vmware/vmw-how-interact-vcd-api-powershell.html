@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to interact with the vCloud REST API using PowerShell and Python </title>
+    <title>How to interact with the Cloud Director REST API using PowerShell and Python </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to interact with the vCloud REST API using PowerShell and Python ">
+    <meta name="title" content="How to interact with the Cloud Director REST API using PowerShell and Python ">
     <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,12 +91,12 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-interact-with-the-vcloud-rest-api-using-powershell-and-python">How to interact with the vCloud REST API using PowerShell and Python</h1>
+<h1 id="how-to-interact-with-the-cloud-director-rest-api-using-powershell-and-python">How to interact with the Cloud Director REST API using PowerShell and Python</h1>
 
 <h2 id="pre-work">Pre Work</h2>
 <h3 id="useful-links">Useful Links</h3>
-<p>You can find the schema reference for version 32.0 of the vCloud API here:</p>
-<p><a href="https://code.vmware.com/apis/553/vcloud">https://code.vmware.com/apis/553/vcloud</a></p>
+<p>You can find the schema reference for version 34.0 of the Cloud Director API here:</p>
+<p><a href="https://code.vmware.com/apis/912/vmware-cloud-director">https://code.vmware.com/apis/912/vmware-cloud-director</a></p>
 <h3 id="powershell">PowerShell</h3>
 <p>With PowerShell, you'll need v3 or higher. To check this, open PowerShell and enter <code>$psversiontable</code> at the prompt. You should see something like the following:</p>
 <p><img src="images/powershellandpython1.png" alt="PowerShell version details"></p>
@@ -107,8 +107,8 @@
 <h3 id="getting-your-credentials">Getting your credentials</h3>
 <p>The first thing you'll need to do is log in to the Portal and get your API credentials:</p>
 <p><img src="images/api_menu.png" alt="Link to API credentials in the Portal"></p>
-<p>Select API from the menu on the top right, you'll then get all of the credentials for each of the vCloud Orgs that you have access to. Note down the username field for the one you are going to interact with.</p>
-<p>For more detailed instructions, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a>.</p>
+<p>Select API from the menu on the top right, you'll then get all of the credentials for each of the Cloud Director Orgs that you have access to. Note down the username field for the one you are going to interact with.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the Cloud Director API</em></a>.</p>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="powershell-1">PowerShell</h3>
 <ol>
@@ -117,7 +117,7 @@
 
 $Global:Authorization = &quot;&quot;
 
-$Global:Accept = &quot;application/*+xml;version=32.0&quot;
+$Global:Accept = &quot;application/*+xml;version=34.0&quot;
 
 $Global:xvCloudAuthorization = &quot;&quot;
 
@@ -161,7 +161,7 @@ Function Get-vCloudRequest($EndPoint)
 <li><p>To log in enter:</p>
 <p><code>New-vCloudLogin –Username &quot;myuser@org&quot; –Password &quot;yourportalpassword&quot;</code></p>
 </li>
-<li><p>Use the username that you copied from the Portal earlier and your Portal password. This will log in to vCloud and add your authorisation header to a global variable for use in the next function:</p>
+<li><p>Use the username that you copied from the Portal earlier and your Portal password. This will log in to Cloud Director and add your authorisation header to a global variable for use in the next function:</p>
 <p><code>$VMS = Get-vCloudRequest –EndPoint &quot;query?type=vm&quot;</code></p>
 </li>
 <li><p>This will get the first 25 VMs in your Org and store them in <code>$VMS</code> as an XML output, which you can inspect or export as you want.</p>
@@ -183,7 +183,7 @@ SkyscapeURL = &quot;https://&lt;API URL from portal&gt;/api&quot;
 
 Authorization = &quot;&quot;
 
-Accept = &quot;application/*+xml;version=32.0&quot;
+Accept = &quot;application/*+xml;version=34.0&quot;
 
 xvCloudAuthorization = &quot;&quot;
 
@@ -240,7 +240,7 @@ print data
 </li>
 <li><p>You can run this script by entering:</p>
 <p><code>C:\python27\python.exe c:\vcloud_demo.py</code></p>
-<p>The above example will log you into vCloud and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same parameters as the examples in the PowerShell script above.</p>
+<p>The above example will log you into Cloud Director and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same parameters as the examples in the PowerShell script above.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>

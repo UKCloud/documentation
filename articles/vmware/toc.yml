@@ -28,11 +28,11 @@
   items:
   - name: Access syslog data for your edge gateway
     href: vmw-how-access-syslog-data-adv.md
-  - name: Access VMware Cloud Director through the vCloud API
+  - name: Access VMware Cloud Director through the Cloud Director API
     href: vmw-how-access-vcloud-api.md
   - name: Build an edge gateway using the UKCloud Portal
     href: vmw-how-build-edge.md
-  - name: Change IPsec VPN settings via the vCloud API
+  - name: Change IPsec VPN settings via the Cloud Director API
     href: vmw-how-change-ipsec-vpn-api.md
   - name: Configure a load balancer
     href: vmw-how-configure-load-balancer.md
@@ -68,11 +68,9 @@
     href: vmw-how-find-ip-addresses.md
   - name: Increase block storage for a VM
     href: vmw-how-increase-storage.md
-  - name: Install a REST client to access the vCloud API
-    href: vmw-how-install-vcloud-api-rest-client.md
   - name: Install and configure OpenVPN
     href: vmw-how-install-openvpn.md
-  - name: Interact with the vCloud REST API using PowerShell and Python
+  - name: Interact with the Cloud Director REST API using PowerShell and Python
     href: vmw-how-interact-vcd-api-powershell.md
   - name: Locate your virtual data centre on the UKCloud platform
     href: vmw-how-locate-vdc.md

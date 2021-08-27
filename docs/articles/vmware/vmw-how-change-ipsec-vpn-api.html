@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to change IPsec VPN settings via the vCloud API </title>
+    <title>How to change IPsec VPN settings via the Cloud Director API </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to change IPsec VPN settings via the vCloud API ">
+    <meta name="title" content="How to change IPsec VPN settings via the Cloud Director API ">
     <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,24 +91,24 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-change-ipsec-vpn-settings-via-the-vcloud-api">How to change IPsec VPN settings via the vCloud API</h1>
+<h1 id="how-to-change-ipsec-vpn-settings-via-the-cloud-director-api">How to change IPsec VPN settings via the Cloud Director API</h1>
 
 <h2 id="overview">Overview</h2>
 <p>This guide shows you how to retrieve, modify, and submit blocks of XML that represent the configuration of the IPsec VPN tunnels. The guide covers modifications to the local and peer IP addresses, local and peer IDs as well the addition or removal of local and peer subnets. In addition to this, the guide also outlines the steps required to modify the shared secret key used on a given IPsec VPN tunnel.</p>
 <p>Use cases:</p>
 <ul>
 <li><p>Enabling customers to quickly amend IPsec configurations</p>
-<p>Modifications of this nature are not possible in the VMware Cloud Director graphical user interface without first deleting the existing IPsec VPN configuration entirely and re-entering the settings. Depending on the number of tunnels, this can be a lengthy task. Making changes to the IPsec VPN configuration via the vCloud API can greatly speed up this process.</p>
+<p>Modifications of this nature are not possible in the VMware Cloud Director graphical user interface without first deleting the existing IPsec VPN configuration entirely and re-entering the settings. Depending on the number of tunnels, this can be a lengthy task. Making changes to the IPsec VPN configuration via the Cloud Director API can greatly speed up this process.</p>
 </li>
 <li><p>Edge gateway configuration data</p>
 <p>You can also use the steps in this guide to obtain a backup of the current configuration applied to an edge gateway. You can then use this to restore the configuration of the edge gateway at a later point in time. By following the instructions in this guide you can make amendments to the IPsec VPN configuration without first needing to engage with UKCloud Support.</p>
 </li>
 </ul>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>Before using the vCloud API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see <a href="vmw-how-install-vcloud-api-rest-client.html"><em>How to install a REST client to access the vCloud API</em></a>.</p>
-<p>You also need to find your API credentials. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the vCloud API</em></a></p>
+<p>Before using the Cloud Director API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient, but you can use your preferred client.</p>
+<p>You also need to find your API credentials. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the Cloud Director API</em></a></p>
 <h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
-<p>To start interacting with the vCloud API, you first need to obtain an <code>x-vcloud-authorization</code> token; to do this you need to adjust some settings in RESTClient.</p>
+<p>To start interacting with the Cloud Director API, you first need to obtain an <code>x-vcloud-authorization</code> token; to do this you need to adjust some settings in RESTClient.</p>
 <ol>
 <li><p>In your browser, click the <strong>RESTClient</strong> icon.</p>
 <p><img src="images/vmw-firefox-restclient-icon.png" alt="RESTClient icon"></p>
@@ -137,13 +137,13 @@
 </li>
 <li><p>In the <em>Request Header</em> dialog box, in the <strong>Name</strong> field, enter <code>Accept</code></p>
 </li>
-<li><p>In the <strong>Value</strong> field enter <code>application/*+xml;version=32.0</code> and then click <strong>Okay</strong>.</p>
+<li><p>In the <strong>Value</strong> field enter <code>application/*+xml;version=34.0</code> and then click <strong>Okay</strong>.</p>
 <p><img src="images/vmw-restclient-request-headers.png" alt="Request Headers dialog box"></p>
 </li>
 <li><p>The <em>Headers</em> section should now be displayed, containing the Accept header.</p>
 <p><img src="images/vmw-restclient-accept-header.png" alt="Headers section with Accept header"></p>
 </li>
-<li><p>The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a <code>x-vcloud-authorization</code> token, so click the <strong>Send</strong> button.</p>
+<li><p>The RESTClient has now got all the required settings in place to make a request to the Cloud Director API to obtain a <code>x-vcloud-authorization</code> token, so click the <strong>Send</strong> button.</p>
 </li>
 <li><p>When a response is received the <strong>Headers</strong> tab in the <em>Response</em> section will be populated, including an <code>x-vcloud-authorization</code> token.</p>
 <p><img src="images/vmw-restclient-authentication-token.png" alt="API response with authentication token"></p>
@@ -162,17 +162,17 @@
 <p><img src="images/vmw-restclient-request-headers-token.png" alt="Authorization token in request headers"></p>
 </li>
 <li><p>Now that you've obtained an <code>x-vcloud-authorization</code> token, you can remove the Basic Authentication Header. Click the <strong>x</strong> in the upper right-hand corner of the header.</p>
-<p><img src="images/vmw-restclient-basic-authentication-remove.png" alt="Remove basic authentication">## Retrieving organisation details via the API</p>
+<p><img src="images/vmw-restclient-basic-authentication-remove.png" alt="Remove basic authentication"></p>
 </li>
 </ol>
 <h2 id="retrieving-organisation-details-via-the-api">Retrieving organisation details via the API</h2>
-<p>Now that you've obtained an <code>x-vcloud-authorization</code> token, you can call the vCloud API to retrieve the information that you need about your organisation to set up your IPsec VPN.</p>
+<p>Now that you've obtained an <code>x-vcloud-authorization</code> token, you can call the Cloud Director API to retrieve the information that you need about your organisation to set up your IPsec VPN.</p>
 <ol>
 <li><p>Set the <strong>Method</strong> to <strong>GET</strong>.</p>
 <p><img src="images/vmw-restclient-method-get.png" alt="GET request method"></p>
 </li>
 <li><p>In the <em>Response</em> section, select the <strong>Preview</strong> tab.</p>
-<p>This view lists the links that you can use to drill down into the various objects exposed via the vCloud API. Of interest in the output below is a link that will, when queried, return details about the organisation and the objects contained within it.</p>
+<p>This view lists the links that you can use to drill down into the various objects exposed via the Cloud Director API. Of interest in the output below is a link that will, when queried, return details about the organisation and the objects contained within it.</p>
 <p><img src="images/vmw-restclient-get-vorg.png" alt="Link for retrieving compute service details"></p>
 <p>The link should look something like:</p>
 <pre><code> https://&lt;api_url&gt;/api/org/&lt;org_id&gt;
@@ -182,7 +182,7 @@
 <p><img src="images/vmw-restclient-get-vorg-url.png" alt="API call to get compute service details"></p>
 </li>
 <li><p>Click <strong>Send</strong>.</p>
-<p>After a short amount of time the contents of the Response <strong>Preview</strong> tab will be updated to reflect the response from the vCloud API to your latest request, including links to each VDC in the organisation.</p>
+<p>After a short amount of time the contents of the Response <strong>Preview</strong> tab will be updated to reflect the response from the Cloud Director API to your latest request, including links to each VDC in the organisation.</p>
 </li>
 </ol>
 <h2 id="retrieving-virtual-data-centre-details-via-the-api">Retrieving virtual data centre details via the API</h2>
@@ -190,7 +190,7 @@
 <ol>
 <li><p>Copy the link for the VDC containing the target edge gateway for your IPsec VPN.</p>
 <p>The link should look something like:</p>
-<pre><code> https&gt;//&lt;api_url&gt;/api/vdc/&lt;vdc_id&gt;
+<pre><code> https://&lt;api_url&gt;/api/vdc/&lt;vdc_id&gt;
 </code></pre>
 </li>
 <li><p>Click <strong>Send</strong>.</p>
@@ -251,7 +251,7 @@
 <ol>
 <li><p>Select the Response <strong>Preview</strong> tab of the RESTClient.</p>
 </li>
-<li><p>Scroll down to the opening <code>&lt;Configuration&gt;</code> tag and highlight     everything up to and including the closing <code>&lt;\Configuration&gt;</code> tag. The length of the XML to copy is dependent on the number of NAT, firewall rules and another configuration applied to the edge gateway.</p>
+<li><p>Scroll down to the opening <code>&lt;Configuration&gt;</code> tag and highlight everything up to and including the closing <code>&lt;\Configuration&gt;</code> tag. The length of the XML to copy is dependent on the number of NAT, firewall rules and another configuration applied to the edge gateway.</p>
 </li>
 <li><p>With the contents of the <code>&lt;Configuration&gt;</code> tags highlighted, right click and select <strong>Copy</strong>.</p>
 </li>
@@ -300,7 +300,7 @@
 <h3 id="modifying-the-local-endpoint-ip-and-local-id">Modifying the local endpoint IP and local ID</h3>
 <p>You can change the local IP and local ID by editing the contents between the opening <code>&lt;localIpAddress&gt;</code> and closing <code>&lt;/localIpAddress&gt;</code> and
 <code>&lt;localId&gt;</code> and <code>&lt;/localId&gt;</code> tags.</p>
-<p>This is by far the most commonly performed modification to the IPsec VPN configuration via the vCloud API. You can use this to change the local IP address from the IP address assigned to the edge gateway on the transit network to the IP address assigned to the edge gateways on the public network. For the tunnel to come up successfully, the local IP address must be set to the edge gateway's public IP address. The local ID must also match the public IP address specified.</p>
+<p>This is by far the most commonly performed modification to the IPsec VPN configuration via the Cloud Director API. You can use this to change the local IP address from the IP address assigned to the edge gateway on the transit network to the IP address assigned to the edge gateways on the public network. For the tunnel to come up successfully, the local IP address must be set to the edge gateway's public IP address. The local ID must also match the public IP address specified.</p>
 <h3 id="modifying-the-peer-endpoint-ip-and-peer-id">Modifying the peer endpoint IP and peer ID</h3>
 <p>If you need to move the remote endpoint of the tunnel to a new device or IP address, then you can adjust the <code>&lt;PeerIpAddress&gt;</code> and <code>&lt;PeerId&gt;</code> tags.</p>
 <p>When changing the peer IP address of the tunnel you must ensure that the peer ID is also updated to match the new peer IP address.</p>

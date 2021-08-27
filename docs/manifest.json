@@ -5530,7 +5530,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-how-migrate-edge-config.html",
-          "hash": "v996Jp7JcV9nakuHzb0odz6Dh+9pE+uhWPx+7iq5ois="
+          "hash": "wJ1QIONoBKvJadyP5oGGu0TssmKM8NsjLd6FQAptxbQ="
         }
       },
       "is_incremental": false,
@@ -12832,7 +12832,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "FUbNlyOb1D+jOxG2Su1orqEv4MxqSoyvCBPGMKe+a8k="
+          "hash": "YPw20xkrYs2lJlFntZhnfYb5fLu64+UX7RF6Cu/Tb3c="
         }
       },
       "is_incremental": false,
@@ -13830,17 +13830,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/HWVersion.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/Request_Headers_dialog_box_2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/Request_Headers_dialog_box_2.png"
         }
       },
       "is_incremental": false,
@@ -15014,65 +15003,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-firefox-find-add-ons.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-firefox-find-add-ons.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-firefox-restclient-add.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-firefox-restclient-add.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-firefox-restclient-icon.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-firefox-restclient-icon.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-firefox-restclient-install.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-firefox-restclient-install.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-firefox-restclient.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-firefox-restclient.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-firefox-results-restclient.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-firefox-results-restclient.png"
         }
       },
       "is_incremental": false,
@@ -15432,6 +15366,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-accept-header1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-accept-header1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-api-url.png",
       "output": {
         "resource": {
@@ -15447,6 +15392,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-restclient-authentication-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-authentication-details1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-authentication-details1.PNG"
         }
       },
       "is_incremental": false,
@@ -15498,10 +15454,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-basic-authentication1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-basic-authentication1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-custom-header.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-restclient-custom-header.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-custom-header1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-custom-header1.PNG"
         }
       },
       "is_incremental": false,
@@ -15553,6 +15531,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-request-headers-token1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-request-headers-token1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-request-headers.png",
       "output": {
         "resource": {
@@ -15564,10 +15553,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-request-headers1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-request-headers1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-request-method-post.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-restclient-request-method-post.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-request-method-post1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-request-method-post1.PNG"
         }
       },
       "is_incremental": false,
@@ -21585,7 +21596,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "l9rL3Ok5LFqz1OE5Bb1OoDabZ3IZw6ALlmmMiFe//n0="
+          "hash": "Vs62gwTnjHCe5qhijk2M9+433r6zZm4aeOk+xHxE0Jg="
         }
       },
       "is_incremental": false,
@@ -21729,7 +21740,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-vcloud-api.html",
-          "hash": "L8xszpNDGBUD8hf8N0CIfjlsE346fgAa2LYHQJoK8aw="
+          "hash": "FtyUmV81hR2e4EaIEGGNjVL4lN5nqFamwf/v4sDzGzY="
         }
       },
       "is_incremental": false,
@@ -21753,7 +21764,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-change-ipsec-vpn-api.html",
-          "hash": "baBoPBOluDpDV3iqyRH196fCupJbE5+KvAuP/MFL0iM="
+          "hash": "IARaf0uRbHfD5ZWT2+p4z5BTE5mBDmzovgoyNW9gthc="
         }
       },
       "is_incremental": false,
@@ -22001,23 +22012,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-install-vcloud-api-rest-client.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-install-vcloud-api-rest-client.html",
-          "hash": "8i16vIAtQzpro2rtH2g8Z7v4H7630V5OYUhs2BLqP1c="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-interact-vcd-api-powershell.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-interact-vcd-api-powershell.html",
-          "hash": "UruI0j4afFHNjMy6R84taV9sBEt8abWM96gnG0ki/Rc="
+          "hash": "byhzQSwR3RHETo/GE82SQQwrA8lUJiqCeuIiSEqm5Uk="
         }
       },
       "is_incremental": false,
@@ -22113,7 +22112,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-ps-export-edge-data.html",
-          "hash": "olM2vWMgjTdoAxOAHkGJh/WEfIdjwmYGtgz0qr3JXt0="
+          "hash": "SiVewnZqAP7WmzcibUe9qHvoj3p6EELI2B9KpPcbnFA="
         }
       },
       "is_incremental": false,
@@ -22125,7 +22124,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-retrieve-utilisation-metrics.html",
-          "hash": "2eJmiWQnLTFT3suo1ihiIB9JvQwKYfmK7HsElh23reM="
+          "hash": "7i0gH5j9BJGKFq71DZEONyyhpfv5U9sKjlelx785z8o="
         }
       },
       "is_incremental": false,
@@ -22185,7 +22184,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-ovf-tool.html",
-          "hash": "Inx/2qA01YUCOD+aPqzQRaeI7MEKR7vSBEKoNAtYUlU="
+          "hash": "CfExeegClbEFYf1TUymTYVpm1LWKg9HWL2G1pXQwkJY="
         }
       },
       "is_incremental": false,
@@ -22209,7 +22208,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-view-storage-usage.html",
-          "hash": "Gn6uNqj0uKfGf0ExhzGkAppRIkA1i5zPgGqyieJG5K0="
+          "hash": "T29gGmE/bR9ZLxki6mAxKEb71pyhoy1GqX1MrurLApg="
         }
       },
       "is_incremental": false,
@@ -22569,7 +22568,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-10-1.html",
-          "hash": "Bl9dmx0ldzrRTe/6rJadWHTgc250or5xCH39S58u/Gw="
+          "hash": "Ge4FZoFa0wA6z52s/Gf2CKz37Mhi6YiNDWsxBsq8nQU="
         }
       },
       "is_incremental": false,
@@ -22593,7 +22592,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcloud-connector.html",
-          "hash": "1iWCDC3GJAUDwzhHUXvBUzMZNbKhdOCux8Hacf+YyBw="
+          "hash": "qKFCA6Kpax/Vxy9O2lim5V9Iv2A4hm+mBfP7mtiOX18="
         }
       },
       "is_incremental": false,
@@ -22900,7 +22899,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 462,
+          "total_file_count": 461,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
