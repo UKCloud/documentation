@@ -4,7 +4,7 @@ description: Describes how to get started with the Cloud Director API
 services: vmware
 author: shighmoor
 reviewer: gsmith
-lastreviewed: 01/08/2021
+lastreviewed: 27/08/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -62,60 +62,74 @@ Before using the Cloud Director API, you first need to find your API credentials
 
 ## Obtaining an authorisation token
 
-To start interacting with the Cloud Director API, you first need to obtain an `x-vmware-vcloud-access-token` token; to do this you need to adjust some settings in your chosen REST client. The steps below show provide an example of how to do this in YARC.
+To start interacting with the Cloud Director API, you first need to obtain an `x-vmware-vcloud-access-token` token; to do this you need to adjust some settings in your chosen REST client. The steps below provide an example of how to do this in YARC.
 
-1. In the YARC client, in list of methods, select **POST**.
+1. Open your REST client.
 
-2. In the **URL** field, enter the API URL you recorded earlier and add the following to the end of the URL:
+2. Create a POST request to obtain the token using the API URL you recorded earlier, adding the following to the end of the URL:
 
         /api/sessions
 
+   a. To do this in YARC, from the list of methods, select **POST**.
+
+   b. In the **URL** field, enter the API URL followed by `/api/sessions`.
+
     ![API URL](images/vmw-restclient-request-method-post1.png)
 
-3. Next add a Basic Authentication header. To do this, expand the *Authentication* section and click **Add Credentials**.
+3. Add a Basic Authentication header.
 
-    ![Basic Authentication section](images/vmw-restclient-basic-authentication1.png)
+   a. To do this in YARC, expand the *Authentication* section and click **Add Credentials**.
 
-4. In the *Basic Authorization* dialog box, in the **Username** field, enter your API username recorded earlier from the Portal API page.
+      ![Basic Authentication section](images/vmw-restclient-basic-authentication1.png)
 
-5. In the **Password** field, enter your UKCloud Portal password and then click **Save**.
+   b. In the *Basic Authorization* dialog box, in the **Username** field, enter your API username recorded earlier from the Portal API page.
 
-    ![Basic Authentication dialog box](images/vmw-restclient-authentication-details1.png)
+   c. In the **Password** field, enter your UKCloud Portal password and then click **Save**.
 
-6. Next add an Accept header. To do this, expand the *Custom Headers* section and click **Add New Header**.
+      ![Basic Authentication dialog box](images/vmw-restclient-authentication-details1.png)
 
-    ![Custom Header section](images/vmw-restclient-custom-header1.png)
+4. Add an Accept header.
 
-7. In the *Header* dialog box, in the **Name** field, enter `Accept`.
+   a. To do this in YARC, expand the *Custom Headers* section and click **Add New Header**.
 
-8. In the **Value** field enter `application/*+xml;version=34.0`.
+      ![Custom Header section](images/vmw-restclient-custom-header1.png)
 
-    ![Header dialog box](images/vmw-restclient-request-headers1.png)
+   b. In the *Header* dialog box, in the **Name** field, enter `Accept`.
 
-9. The table in the *Headers* section now displays the Accept header.
+   c. In the **Value** field enter `application/*+xml;version=34.0`.
 
-    ![Headers section with Accept header](images/vmw-restclient-accept-header1.png)
+      ![Header dialog box](images/vmw-restclient-request-headers1.png)
 
-10. The REST client has now got all the required settings in place to make a request to the Cloud Director API to obtain a `x-vmware-vcloud-access-token` token, so click **Send Request**.
+   d. The table in the *Headers* section now displays the Accept header.
 
-11. When a response is received the **Response Headers** tab in the *Response* section will be populated, including an `x-vmware-vcloud-access-token` token.
+     ![Headers section with Accept header](images/vmw-restclient-accept-header1.png)
 
-    ![API response with authentication token](images/vmw-restclient-authentication-token.png)
+5. Your REST client has now got all the required settings in place to make a request to the Cloud Director API to obtain a `x-vmware-vcloud-access-token` token, so send the request.
 
-12. The `x-vmware-vcloud-access-token` token becomes part of an Authorization header, which will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word `x-vmware-vcloud-access-token`.
+6. If the request is successful, in the response, you'll see an `x-vmware-vcloud-access-token` token.
 
-    > [!NOTE]
-    > If at any point while following the instructions in this guide, the output displayed in the REST client does not look similar to that shown in the images, you can use the value of the **Response Status** field to determine what went wrong and needs investigation. In this case above, **Response Status** received was `200 - OK, which means that the request succeeded. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+   In YARC you can find this in the *Response* section on the **Response Headers** tab.
 
-13. Next, add an Authorization header. To do this, in the *Headers* section, select **Add New Header**.
+   ![API response with authentication token](images/vmw-restclient-authentication-token.png)
 
-14. In the *Header* dialog box, in the **Name** field enter 'Authorization'.
+7. The `x-vmware-vcloud-access-token` token becomes part of an Authorization header, which replaces the Basic Authentication header added earlier.
 
-15. In the **Value** field, enter `Bearer ` (with a trailing space), then paste the string of characters copied in the previous step, then click **Save**.
+   In the response, highlight and copy the string of characters displayed after the word `x-vmware-vcloud-access-token`.
 
-    ![Authorization token in request headers](images/vmw-restclient-request-headers-token1.png)
+   > [!NOTE]
+   > If at any point while following the instructions in this article, the output displayed in the REST client does not look similar to that shown in the images, you can use the value of the returned HTTP response code to determine what went wrong and needs investigation. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
-16. Now that you've obtained an `x-vmware-vcloud-access-token` token, you can remove the Basic Authentication that you added in step 4.
+8. Add an Authorization header.
+
+   a. To do this in YARC, in the *Headers* section, select **Add New Header**.
+
+   b. In the *Header* dialog box, in the **Name** field enter `Authorization`.
+
+   c. In the **Value** field, enter `Bearer ` (with a trailing space), paste the string of characters copied in the previous step, then click **Save**.
+
+      ![Authorization token in request headers](images/vmw-restclient-request-headers-token1.png)
+
+9. Now that you've obtained an `x-vmware-vcloud-access-token` token, you can remove the Basic Authentication that you added in step 3.
 
 ## Feedback
 

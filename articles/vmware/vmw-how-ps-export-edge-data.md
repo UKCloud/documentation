@@ -29,7 +29,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
 2. Open your PowerCLI session and connect to Cloud Director.
 
-    You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [*Finding your Cloud Director API credentials*](vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).
+    You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [*Finding your Cloud Director API credentials*](vmw-how-access-vcloud-api.md#finding-your-cloud-director-api-credentials).
 
 3. Copy the following function and paste it into a .psm1 file:
 
