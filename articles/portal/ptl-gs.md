@@ -120,7 +120,7 @@ In the toolbar, you can also click your username to access the following options
 
 - **Two-Factor Auth** - Set up two-factor authentication (2FA) for your user account (see [*How to set up two-factor authentication for a user account*](ptl-how-setup-2fa.md)).
 
-- **API** - View the information you need to use the vCloud API (see [*How to access VMware Cloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md)).
+- **API** - View the information you need to use the Cloud Director API (see [*How to access VMware Cloud Director through the Coud Director API*](../vmware/vmw-how-access-vcloud-api.md)).
 
 - **Feedback** - Send an email to UKCloud (<feedback@ukcloud.com>) with feedback on the Portal or any other aspect of your UKCloud experience.
 

@@ -23,17 +23,17 @@ When moving VMware workloads between regions on the UKCloud platform, if you wan
 
 While the migration of edge configuration is not a common process, there are certain activities that may require this to make the transition from one edge to another much simpler and quicker. The main reason this would likely be needed is when migrating workloads between regions, where, for the most part, the edge configuration needs to remain the same, but some amendments, such as a change in IP address, are required.
 
-This article explains how to use the vCloud API to export configuration from an NSX edge, make the necessary amendments and then apply this configuration to a different edge.
+This article explains how to use the Cloud Director API to export configuration from an NSX edge, make the necessary amendments and then apply this configuration to a different edge.
 
 ## Before you begin
 
-Before using the vCloud API to migrate edge configuration data, you should install a REST client to enable you to easily access the vCloud API and interact with the relevant endpoints. For information about installing a REST client, see [*How to install a REST client to access the vCloud API*](../vmware/vmw-how-install-vcloud-api-rest-client.md). You can use an alternative API client if you prefer.
+Before using the Cloud Director API to migrate edge configuration data, you should install a REST client to enable you to easily access the Cloud Director API and interact with the relevant endpoints. This example uses the RESTClient browser plug in, but you can use an alternative API client if you prefer.
 
-You also need to obtain your API credentials. For more information, see [*How to access VMware Cloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md).
+You also need to obtain your API credentials. For more information, see [*How to access VMware Cloud Director through the Cloud Director API*](../vmware/vmw-how-access-vcloud-api.md).
 
 ## Obtaining an authorisation token
 
-To start interacting with the vCloud API, you first need to obtain an `x-vcloud-authorization` token; to do this you need to adjust some settings in RESTClient.
+To start interacting with the Cloud Director API, you first need to obtain an `x-vcloud-authorization` token; to do this you need to adjust some settings in RESTClient.
 
 1. In your browser, click the **RESTClient** icon.
 
@@ -69,7 +69,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
 9. In the *Request Header* dialog box, in the **Name** field, enter `Accept`
 
-10. In the **Value** field enter `application/*+xml;version=32.0` and then click **Okay**.
+10. In the **Value** field enter `application/*+xml;version=34.0` and then click **Okay**.
 
     ![Request Headers dialog box](images/vmw-restclient-request-headers.png)
 
@@ -77,7 +77,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
     ![Headers section with Accept header](images/vmw-restclient-accept-header.png)
 
-12. The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a `x-vcloud-authorization` token, so click the **Send** button.
+12. The RESTClient has now got all the required settings in place to make a request to the Cloud Director API to obtain a `x-vcloud-authorization` token, so click the **Send** button.
 
 13. When a response is received, the **Headers** tab in the *Response* section will be populated, including an `x-vcloud-authorization` token.
 
@@ -102,7 +102,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
 ## Retrieving organisation details via the API
 
-Now that you've obtained an `x-vcloud-authorization` token, you can call the vCloud API to retrieve the information that you need about your organisation to extract your edge configuration data.
+Now that you've obtained an `x-vcloud-authorization` token, you can call the Cloud Director API to retrieve the information that you need about your organisation to extract your edge configuration data.
 
 1. Set the **Method** to **GET**.
 
@@ -110,7 +110,7 @@ Now that you've obtained an `x-vcloud-authorization` token, you can call the vCl
 
 2. In the *Response* section, select the **Preview** tab.
 
-    This view lists the links that you can use to drill down into the various objects exposed via the vCloud API. Of interest in the output below is a link that will, when queried, return details about the organisation and the objects contained within it.
+    This view lists the links that you can use to drill down into the various objects exposed via the Cloud Director API. Of interest in the output below is a link that will, when queried, return details about the organisation and the objects contained within it.
 
     ![Link for retrieving compute service details](images/vmw-restclient-get-vorg.png)
 
@@ -124,7 +124,7 @@ Now that you've obtained an `x-vcloud-authorization` token, you can call the vCl
 
 4. Click **Send**.
 
-    After a short amount of time the contents of the Response **Preview** tab will be updated to reflect the response from the vCloud API to your latest request, including links to each virtual data centre (VDC) in the organisation.
+    After a short amount of time the contents of the Response **Preview** tab will be updated to reflect the response from the Cloud Director API to your latest request, including links to each virtual data centre (VDC) in the organisation.
 
 ## Retrieving virtual data centre details via the API
 

@@ -1,29 +1,29 @@
 ---
-title: How to interact with the vCloud REST API using PowerShell and Python
-description: A brief introduction on how to start interacting with the vCloud REST API with PowerShell and Python
+title: How to interact with the Cloud Director REST API using PowerShell and Python
+description: A brief introduction on how to start interacting with the Cloud Director REST API with PowerShell and Python
 services: vmware
-author: Sue Highmoor
-reviewer: Dylan Coombes
-lastreviewed: 15/11/2019 15:05:00
+author: shighmoor
+reviewer: dcoombes
+lastreviewed: 15/11/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Interact with the vCloud REST API using PowerShell and Python
+toc_title: Interact with the Cloud Director REST API using PowerShell and Python
 toc_fullpath: How To/vmw-how-interact-vcd-api-powershell.md
 toc_mdlink: vmw-how-interact-vcd-api-powershell.md
 ---
 
-# How to interact with the vCloud REST API using PowerShell and Python
+# How to interact with the Cloud Director REST API using PowerShell and Python
 
 ## Pre Work
 
 ### Useful Links
 
-You can find the schema reference for version 32.0 of the vCloud API here:
+You can find the schema reference for version 34.0 of the Cloud Director API here:
 
-<https://code.vmware.com/apis/553/vcloud>
+<https://code.vmware.com/apis/912/vmware-cloud-director>
 
 ### PowerShell
 
@@ -45,9 +45,9 @@ The first thing you'll need to do is log in to the Portal and get your API crede
 
 ![Link to API credentials in the Portal](images/api_menu.png)
 
-Select API from the menu on the top right, you'll then get all of the credentials for each of the vCloud Orgs that you have access to. Note down the username field for the one you are going to interact with.
+Select API from the menu on the top right, you'll then get all of the credentials for each of the Cloud Director Orgs that you have access to. Note down the username field for the one you are going to interact with.
 
-For more detailed instructions, see [*How to access VMware Cloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
+For more detailed instructions, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md).
 
 ## Getting Started
 
@@ -60,7 +60,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
    $Global:Authorization = ""
 
-   $Global:Accept = "application/*+xml;version=32.0"
+   $Global:Accept = "application/*+xml;version=34.0"
 
    $Global:xvCloudAuthorization = ""
 
@@ -107,7 +107,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
    `New-vCloudLogin –Username "myuser@org" –Password "yourportalpassword"`
 
-4. Use the username that you copied from the Portal earlier and your Portal password. This will log in to vCloud and add your authorisation header to a global variable for use in the next function:
+4. Use the username that you copied from the Portal earlier and your Portal password. This will log in to Cloud Director and add your authorisation header to a global variable for use in the next function:
 
    `$VMS = Get-vCloudRequest –EndPoint "query?type=vm"`
 
@@ -136,7 +136,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
    Authorization = ""
 
-   Accept = "application/*+xml;version=32.0"
+   Accept = "application/*+xml;version=34.0"
 
    xvCloudAuthorization = ""
 
@@ -195,7 +195,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
     `C:\python27\python.exe c:\vcloud_demo.py`
 
-    The above example will log you into vCloud and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same parameters as the examples in the PowerShell script above.
+    The above example will log you into Cloud Director and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same parameters as the examples in the PowerShell script above.
 
 ## Feedback
 

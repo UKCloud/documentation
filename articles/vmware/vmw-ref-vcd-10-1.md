@@ -85,9 +85,9 @@ The following API versions are still available:
 
 - 34.0
 
-### Sandbox for testing vCloud API
+### Sandbox for testing Cloud Director API
 
-UKCloud provides sandboxes to enable you to test the next versions of the VMware Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/login/>) has been upgraded to VMware Cloud Director 10.1.2.
+UKCloud provides sandboxes to enable you to test the next versions of the Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/login/>) has been upgraded to VMware Cloud Director 10.1.2.
 
 To gain access to the sandbox, raise a Service Request via My Calls on the UKCloud Portal.
 
@@ -104,9 +104,9 @@ See [*Known issues in VMware Cloud Director*](vmw-ref-vcd-known-issues.md).
 
 ### Known issues in the UKCloud Portal
 
-- Changes to the vCloud authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal (see [*How to restrict access to VMware Cloud Director*](../portal/ptl-how-restrict-access-vcloud-api.md)). If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.
+- Changes to the Cloud Director authentication API mean that the UKCloud Portal function to restrict IP access to the API also restricts access to the VMware Cloud Director Tenant Portal (see [*How to restrict access to VMware Cloud Director*](../portal/ptl-how-restrict-access-vcloud-api.md)). If you have set up these restrictions, you'll need to confirm that the additional restriction of access to the Tenant Portal does not cause issues.
 
-- Changes to the vCloud API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal (see [*How to view storage profile usage*](vmw-how-view-storage-usage.md)).
+- Changes to the Cloud Director API mean that we are no longer able to display VM storage information in the My VMs area of the UKCloud Portal. Instead, you can access storage usage information within the VMware Cloud Director Tenant Portal (see [*How to view storage profile usage*](vmw-how-view-storage-usage.md)).
 
 ## Feedback
 
