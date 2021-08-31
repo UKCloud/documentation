@@ -3,8 +3,8 @@ title: Pricing information for UKCloud for Microsoft Azure
 description: Provides useful information about UKCloud for Microsoft Azure pricing, including pricing examples
 services: azure-stack
 author: shighmoor
-reviewer:
-lastreviewed: 25/09/2020
+reviewer: Chris Black
+lastreviewed: 31/08/2021
 toc_rootlink: Users
 toc_sub1: Service Information
 toc_sub2:
