@@ -223,7 +223,7 @@ Infrequently, Microsoft will require an audit of the SPLA Software Services deli
 
 To ensure that your company can fulfil the requirements of this compliance audit and remain in compliance with the SPLA Program’s rules and requirements, Microsoft is requesting that your company enable UKCloud LTD and EY to gather the necessary information from these restricted-access servers. 
 
-To accomplish this, please use [EY's Inventory tool Script](https://github.com/UKCloud/documentation/blob/master/articles/shared/assets/EY-Inventory-Tool.zip), ran with "Option 2". Details The results can then be uploaded as per the email, and UKCloud will handle the obfuscation of data before handing over to EY. Documentation on how to run and use the EY scripts are enclosed in the zip file linked above, and Section 3.3 gives details on this.
+To accomplish this, please use [EY's Inventory tool Script](https://github.com/UKCloud/documentation/raw/master/articles/shared/assets/EY-Inventory-Tool.zip), ran with "Option 2". Details The results can then be uploaded as per the email, and UKCloud will handle the obfuscation of data before handing over to EY. Documentation on how to run and use the EY scripts are enclosed in the zip file linked above, and Section 3.3 gives details on this.
 
 Please note that the MBSA signed between Microsoft and UKCloud LTD includes a confidentiality clause, and that the provisions of this clause are also applicable to these servers; only data associated to the deployment of Microsoft products will therefore be communicated to Microsoft.
 
