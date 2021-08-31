@@ -4,7 +4,7 @@ description: Lists the steps required to set up UKCloud as your public Azure Clo
 services: azure-stack
 author: Sue Highmoor
 reviewer: Steve Hall
-lastreviewed: 31/08/21
+lastreviewed: 31/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
