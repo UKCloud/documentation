@@ -217,6 +217,27 @@ To install Microsoft SQL Server Standard or Enterprise edition, you can either u
 
 As soon as you've completed the form and the actions have been confirmed, your organisation is responsible for ensuring that there are enough eligible licences to cover the specified Microsoft-based VMs on the UKCloud platform.
 
+## Microsoft Audits
+
+Infrequently, Microsoft will require an audit of the SPLA Software Services delivered by UKCloud LTD. This review is 
+currently undertaken by Ernst & Young (EY), the independent audit firm selected by Microsoft to conduct this process.
+You will receive an email to confirm in the event this is required.
+
+To ensure that your company can fulfil the requirements of this compliance audit and remain in compliance with the SPLA 
+Program’s rules and requirements, Microsoft is requesting that your company enable UKCloud LTD and EY to gather the 
+necessary information from these restricted-access servers. 
+
+To accomplish this, please use [EY's Inventory tool Script](https://github.com/UKCloud/documentation/blob/master/articles/shared/assets/EY-Inventory-Tool.zip), 
+ran with "Option 2". Details The results can then be uploaded as per the 
+email, and UKCloud will handle the obfuscation of data before handing over to 
+EY.
+Documentation on how to run and use the EY scripts are enclosed in the zip file
+linked above, and Section 3.3 gives details on this.
+
+Please note that the MBSA signed between Microsoft and UKCloud LTD includes a confidentiality clause, and that the 
+provisions of this clause are also applicable to these servers; only data associated to the deployment of Microsoft 
+products will therefore be communicated to Microsoft.
+
 ## Support
 
 If you have any issues regarding updating, or the support of Microsoft Server, contact the UKCloud support team by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
