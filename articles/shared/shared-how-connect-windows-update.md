@@ -3,8 +3,8 @@ title: How to connect to the UKCloud Windows Server Update Services (WSUS)
 description: Shows how to connect to the UKCloud Windows Server Update Services (WSUS) to keep your VMs up to date
 services: shared-services
 author: shighmoor
-reviewer: jpaddock
-lastreviewed: 01/04/2020
+reviewer: pcantle
+lastreviewed: 01/08/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -16,6 +16,17 @@ toc_mdlink: shared-how-connect-windows-update.md
 ---
 
 # How to connect to the UKCloud Windows Server Update Services (WSUS)
+
+> [!NOTE]
+> UKCloud are making important updates to NTP services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com)
+> Additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO what is detailed below)
+> on port TCP/8530 and TCP/8531. Please note, for these new systems below, you *do NOT* need TCP/443 to be allowed.
+>
+> - Assured
+>   1. 51.179.212.114
+>   2. 51.179.215.210
+>
+> For Elevated (and any other networks/zones) IP Addresses, please raise a request using the [UKCloud Portal](https://portal.skyscapecloud.com/login)
 
 ## Overview
 

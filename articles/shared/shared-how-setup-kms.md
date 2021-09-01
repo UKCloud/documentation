@@ -3,8 +3,8 @@ title: How to license Windows VMs using the UKCloud KMS
 description: Shows how to register virtual machines with the KMS within VMwareCloud Director
 services: shared-services
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 06/11/2019
+reviewer: pcantle
+lastreviewed: 01/09/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -17,6 +17,18 @@ toc_mdlink: shared-how-setup-kms.md
 ---
 
 # How to license Windows VMs using the UKCloud Key Management Server
+
+> [!NOTE]
+> UKCloud are making important updates to KMS services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com)
+> Additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO kms.ukcloud.com detailed below)
+> on port TCP/1688
+> 
+> - Assured
+>   1. 51.179.212.115
+>   2. 51.179.215.211
+> 
+> For Elevated (and any other networks/zones) IP Addresses, please raise a request using the [UKCloud Portal](https://portal.skyscapecloud.com/login)
+
 
 ## Overview
 

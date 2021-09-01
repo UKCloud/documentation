@@ -3,8 +3,8 @@ title: Network Time Protocol server access
 description: This guide shows you how to configure access to the Network Time Protocol (NTP) server
 services: shared-services
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 06/11/2020
+reviewer: pcantle
+lastreviewed: 01/09/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,6 +19,23 @@ toc_mdlink: shared-ref-network-time-server.md
 
 The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's customers. It is available in both the Assured OFFICIAL and Elevated OFFICIAL security domains.
 
+> [!NOTE]
+> UKCloud are making important updates to NTP services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com)
+> Additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO what is detailed below)
+> on port UDP/123
+>
+> - Assured
+>   1. 51.179.212.116 
+>   2. 51.179.212.117
+>   3. 51.179.212.118
+>   4. 51.179.212.116
+>   5. 51.179.215.212
+>   6. 51.179.215.213
+>   7. 51.179.215.214
+>   8. 51.179.215.215
+>
+> For Elevated (and any other networks/zones) IP Addresses, please raise a request using the [UKCloud Portal](https://portal.skyscapecloud.com/login) 
+
 ## Assured OFFICIAL Platform
 
 Update the NTP server of your Assured virtual machines with one or both of the following IP addresses:
@@ -26,16 +43,6 @@ Update the NTP server of your Assured virtual machines with one or both of the f
 `37.26.90.192`
 
 `37.26.94.232`
-
-## Elevated OFFICIAL Platform
-
-Update the NTP server of your Elevated virtual machines with one or both of the following IP addresses:
-
-`x.y.89.96`
-
-`x.y.93.144`
-
-Replace `x.y` with the first two octets of the Elevated OFFICIAL public IP addresses. If you are unsure of these, contact UKCloud Support.
 
 You may need to adjust your firewall and NAT rules to allow communication between the NTP server of your virtual machines and the UKCloud network time server.
 
