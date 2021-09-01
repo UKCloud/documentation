@@ -18,7 +18,7 @@ toc_mdlink: shared-how-setup-kms.md
 
 # How to license Windows VMs using the UKCloud Key Management Server
 
-> [!NOTE]
+> [!IMPORTANT]
 > UKCloud are making important updates to KMS services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com)
 > Additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO kms.ukcloud.com detailed below)
 > on port TCP/1688
