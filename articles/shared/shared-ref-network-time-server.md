@@ -21,7 +21,7 @@ The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's
 
 > [!IMPORTANT]
 > UKCloud are making important updates to NTP services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com)
-> Additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO what is detailed below)
+> In preperation for this service improvement, additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO what is detailed below)
 > on port UDP/123
 >
 > - Assured
