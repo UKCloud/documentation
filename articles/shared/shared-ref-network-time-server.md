@@ -20,7 +20,7 @@ toc_mdlink: shared-ref-network-time-server.md
 The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's customers. It is available in both the Assured OFFICIAL and Elevated OFFICIAL security domains.
 
 > [!IMPORTANT]
-> UKCloud are making important updates to NTP services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com)
+> UKCloud are making important updates to NTP services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com/incidents/820kym82cmjz)
 > In preperation for this service improvement and go-live, additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO what is detailed below)
 > on port UDP/123
 >
