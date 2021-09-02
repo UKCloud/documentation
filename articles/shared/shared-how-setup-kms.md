@@ -20,7 +20,7 @@ toc_mdlink: shared-how-setup-kms.md
 
 > [!IMPORTANT]
 > UKCloud will be making important updates to KMS services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com)
-> In preperation for this service improvement, additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO kms.ukcloud.com detailed below)
+> In preperation for this service improvement and go-live, additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO kms.ukcloud.com detailed below)
 > on port TCP/1688. 
 > 
 > - Assured
