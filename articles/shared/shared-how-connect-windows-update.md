@@ -18,15 +18,17 @@ toc_mdlink: shared-how-connect-windows-update.md
 # How to connect to the UKCloud Windows Server Update Services (WSUS)
 
 > [!IMPORTANT]
-> UKCloud are making important updates to NTP services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com/incidents/820kym82cmjz)
-> In preperation for this service improvement and go-live, additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO what is detailed below)
-> on port TCP/8530 and TCP/8531. Please note, for these new systems below, you *do NOT* need TCP/443 to be allowed.
+> UKCloud is making important updates to WSUS services. For more details see the [UKCloud Service Status page](https://status.ukcloud.com/incidents/820kym82cmjz).
+> 
+> In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port TCP/8530 and TCP/8531. Note that, for these new systems below, you *do not* need to allow TCP/443.
 >
 > - Assured
->   1. 51.179.212.114
->   2. 51.179.215.210
+> 
+>   - 51.179.212.114
+>   
+>   - 51.179.215.210
 >
-> For Elevated (and any other networks/zones) IP Addresses, please raise a request using the [UKCloud Portal](https://portal.skyscapecloud.com/login)
+> - For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal
 
 ## Overview
 
