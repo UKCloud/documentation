@@ -20,21 +20,29 @@ toc_mdlink: shared-ref-network-time-server.md
 The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's customers. It is available in both the Assured OFFICIAL and Elevated OFFICIAL security domains.
 
 > [!IMPORTANT]
-> UKCloud are making important updates to NTP services. Details can be found on the [UKCloud Status Page](https://status.ukcloud.com/incidents/820kym82cmjz)
-> In preperation for this service improvement and go-live, additional Edge Firewall rules will be required to allow access to the following IP addresses (IN ADDITION TO what is detailed below)
-> on port UDP/123
+> UKCloud is making important updates to NTP services. For more details, see the [UKCloud Service Status page](https://status.ukcloud.com/incidents/820kym82cmjz).
+> 
+> In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port UDP/123:
 >
 > - Assured
->   1. 51.179.212.116 
->   2. 51.179.212.117
->   3. 51.179.212.118
->   4. 51.179.212.116
->   5. 51.179.215.212
->   6. 51.179.215.213
->   7. 51.179.215.214
->   8. 51.179.215.215
+> 
+>   - 51.179.212.116
+>   
+>   - 51.179.212.117
+>   
+>   - 51.179.212.118
+>   
+>   - 51.179.212.116
+>   
+>   - 51.179.215.212
+>   
+>   - 51.179.215.213
+>   
+>   - 51.179.215.214
+>   
+>   - 51.179.215.215
 >
-> For Elevated (and any other networks/zones) IP Addresses, please raise a request using the [UKCloud Portal](https://portal.skyscapecloud.com/login) 
+> - For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal 
 
 ## Assured OFFICIAL Platform
 
