@@ -217,6 +217,17 @@ To install Microsoft SQL Server Standard or Enterprise edition, you can either u
 
 As soon as you've completed the form and the actions have been confirmed, your organisation is responsible for ensuring that there are enough eligible licences to cover the specified Microsoft-based VMs on the UKCloud platform.
 
+## Microsoft audits
+
+Infrequently, Microsoft will require an audit of the SPLA software services delivered by UKCloud. This review is currently undertaken by Ernst & Young (EY), the independent audit firm selected by Microsoft to conduct this process. If you're required to participate in such an audit, you'll receive an email from UKCloud to provide the necessary data.
+
+To fulfil the requirements of this compliance audit and remain in compliance with the SPLA program’s rules and requirements, Microsoft will request that you enable UKCloud and EY to gather the necessary information from your restricted-access servers. 
+
+To accomplish this, you'll need to run [EY's Inventory tool Script](https://github.com/UKCloud/documentation/raw/master/articles/shared/assets/EY-Inventory-Tool.zip), using **Option 2**. After running the script, you should upload the results to UKCloud as per the instructions in the initial email. UKCloud will then handle the obfuscation of data before handing it over to EY. The zip file linked above includes documentation with information about the EY scripts, with Section 3.3 providing specific usage details of how to run and use the script to scan all devices in Active Directory.
+
+> [!NOTE]
+> The MBSA signed between Microsoft and UKCloud includes a confidentiality clause, and the provisions of this clause are also applicable to these servers; only data associated to the deployment of Microsoft products will therefore be communicated to Microsoft.
+
 ## Support
 
 If you have any issues regarding updating, or the support of Microsoft Server, contact the UKCloud support team by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
