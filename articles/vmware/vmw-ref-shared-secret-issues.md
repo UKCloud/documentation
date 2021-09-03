@@ -2,9 +2,9 @@
 title: Shared Secret Length Issues IPSec VPN - Watchguard/Sonicwall
 description: Outlines a potential issue and it's resolution for using an IPsec VPN tunnel with Watchguard or Sonicwall devices
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+author: shighmoor
+reviewer: pmanchili
+lastreviewed: 02/08/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -28,6 +28,20 @@ There is a possible shared secret mismatch.
 vCloud-created AES256 IPSec VPNs create a random shared secret by default with a length of 64 characters.
 
 From testing, we recommend that you reduce the shared secret to the minimum 32 character length. This should enable the VPN to establish the tunnel without an issue.
+
+For information about how to configure your IPSec VPN settings, see [*How to configure IPSec VPN*](vmw-how-configure-ipsec-vpn.md). You can change the shared key on the **Global Configuration** tab.
+
+## Related articles
+
+- [*IPSec VPN Foundation and PRIME profiles*](vmw-ref-ipsec-vpn.md)
+
+## Related information
+
+You can also find more information about configuring IPSec VPN in the following VMware documentation:
+
+- [Configure the IPsec VPN Site Connections for the Edge Gateway](https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-EDFE41C7-C93C-41E7-8437-85163C5278B1.html)
+
+- [Configure IPsec VPN](https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-1B933A00-56CE-4375-8824-6DDEC76A19F8.html)
 
 ## Feedback
 
