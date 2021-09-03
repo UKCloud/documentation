@@ -3,8 +3,8 @@ title: Pricing information for UKCloud for Microsoft Azure
 description: Provides useful information about UKCloud for Microsoft Azure pricing, including pricing examples
 services: azure-stack
 author: shighmoor
-reviewer:
-lastreviewed: 25/09/2020
+reviewer: Chris Black
+lastreviewed: 31/08/2021
 toc_rootlink: Users
 toc_sub1: Service Information
 toc_sub2:
@@ -100,10 +100,6 @@ Payment can be made by direct bank transfer. You can find bank details for payme
 ## Termination fees
 
 There are no termination fees for the service. You are responsible for extracting your own data from the platform if required. UKCloud may make an additional charge for transferring data out of the service.
-
-## Free trials
-
-We offer a 30-day free trial so that you can test and evaluate our service without commitment. Your trial provides you with a live environment on the UKCloud platform to test our services and verify whether they are suited to your needs. If you're new to UKCloud, you can request a trial via the [UKCloud website trial page](https://ukcloud.com/free-trial-sign-up). If you're an existing customer, contact your Service Delivery Manager. For more information about free trials, see the [*Free Trials Service Scope*](../other/other-sco-free-trials.md).
 
 ## Service scope
 
