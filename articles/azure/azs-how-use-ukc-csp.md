@@ -3,8 +3,8 @@ title: How to use UKCloud as your public Azure Cloud Solution Provider | UKCloud
 description: Lists the steps required to set up UKCloud as your public Azure Cloud Solution Provider (CSP)
 services: azure-stack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 25/02/2020
+reviewer: Steve Hall
+lastreviewed: 31/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
