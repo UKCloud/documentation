@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-pricing.html",
-          "hash": "DGYhkaJbhsV/dxWMqrz1A5c0kGdYF7ZHsGNviPHZL8Y="
+          "hash": "5mwz5cULQE6CJISFs5Goq2pFUqm/qUs2D9mZMjXTESU="
         }
       },
       "is_incremental": false,
@@ -13478,7 +13478,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-connect-windows-update.html",
-          "hash": "EC+6qdUYzrHqZOUClhUgaQDPIoCRlmqWEfP0icAXXNU="
+          "hash": "licx9Rzvvn/0NkNp8EbjIjpRH8HviUrsVV7pmSa24mc="
         }
       },
       "is_incremental": false,
@@ -13526,7 +13526,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-setup-kms.html",
-          "hash": "XQeOesUq4teD4RKhijFy7NiJrkiZsyK1urbVirZGgfk="
+          "hash": "wUqGnWbrCe5EbfFcHnJB+qYQne83Ao/tzrbJbQcLyCo="
         }
       },
       "is_incremental": false,
@@ -13550,7 +13550,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-ref-network-time-server.html",
-          "hash": "g1jcki6BULKF1ldYyezYy7oi7mt9s7qC7G0Ugt6+mLg="
+          "hash": "4g9ncjV3nZ4SnL28byy46Z412zRAPUMIpAdUjz//oqY="
         }
       },
       "is_incremental": false,

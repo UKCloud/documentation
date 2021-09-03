@@ -93,6 +93,23 @@
                   
 <h1 id="how-to-connect-to-the-ukcloud-windows-server-update-services-wsus">How to connect to the UKCloud Windows Server Update Services (WSUS)</h1>
 
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>UKCloud is making important updates to WSUS services. For more details, see the <a href="https://status.ukcloud.com/incidents/820kym82cmjz">UKCloud Service Status page</a>.</p>
+<p>In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port TCP/8530 and TCP/8531. Note that, for these new systems below, you <em>do not</em> need to allow TCP/443.</p>
+<ul>
+<li><p>Assured</p>
+<ul>
+<li><p>51.179.212.114</p>
+</li>
+<li><p>51.179.215.210</p>
+</li>
+</ul>
+</li>
+<li><p>For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal</p>
+</li>
+</ul>
+</div>
 <h2 id="overview">Overview</h2>
 <p>When you create a virtual machine (VM) running a Windows Server operating system, you need to register it with the UKCloud Windows Server Update Services to receive updates for it.</p>
 <div class="NOTE">

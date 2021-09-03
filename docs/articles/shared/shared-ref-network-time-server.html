@@ -94,16 +94,45 @@
 <h1 id="network-time-server-access">Network Time Server access</h1>
 
 <p>The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's customers. It is available in both the Assured OFFICIAL and Elevated OFFICIAL security domains.</p>
-<h2 id="assured-official-platform">Assured OFFICIAL Platform</h2>
-<p>Update the NTP server of your Assured virtual machines with one or both of the following IP addresses:</p>
-<p><code>37.26.90.192</code></p>
-<p><code>37.26.94.232</code></p>
-<h2 id="elevated-official-platform">Elevated OFFICIAL Platform</h2>
-<p>Update the NTP server of your Elevated virtual machines with one or both of the following IP addresses:</p>
-<p><code>x.y.89.96</code></p>
-<p><code>x.y.93.144</code></p>
-<p>Replace <code>x.y</code> with the first two octets of the Elevated OFFICIAL public IP addresses. If you are unsure of these, contact UKCloud Support.</p>
-<p>You may need to adjust your firewall and NAT rules to allow communication between the NTP server of your virtual machines and the UKCloud network time server.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>UKCloud is making important updates to NTP services. For more details, see the <a href="https://status.ukcloud.com/incidents/820kym82cmjz">UKCloud Service Status page</a>.</p>
+<p>In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port UDP/123:</p>
+<ul>
+<li><p>Assured</p>
+<ul>
+<li><p>51.179.212.116</p>
+</li>
+<li><p>51.179.212.117</p>
+</li>
+<li><p>51.179.212.118</p>
+</li>
+<li><p>51.179.212.116</p>
+</li>
+<li><p>51.179.215.212</p>
+</li>
+<li><p>51.179.215.213</p>
+</li>
+<li><p>51.179.215.214</p>
+</li>
+<li><p>51.179.215.215</p>
+</li>
+</ul>
+</li>
+<li><p>For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal</p>
+</li>
+</ul>
+</div>
+<h2 id="using-the-ukcloud-ntp-server">Using the UKCloud NTP server</h2>
+<p>Update the NTP server of your Assured OFFICIAL virtual machines (VMs) with one or both of the following IP addresses:</p>
+<ul>
+<li><p><code>37.26.90.192</code></p>
+</li>
+<li><p><code>37.26.94.232</code></p>
+</li>
+</ul>
+<p>For Elevated OFFICIAL VMs, raise a Service Request via the My Calls section of the Elevated UKCloud Portal to get the appropriate IP address.</p>
+<p>You may need to adjust your firewall and NAT rules to allow communication between the NTP server of your VMs and the UKCloud network time server.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
