@@ -210,6 +210,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     <pre>
     <code class="language-PowerShell"># Windows event logs
+    ## The below example will create data sources for the event logs "System", "Application" and "Setup", with all severities being collected
     $EventLogNames = @("System", "Application", "Setup")
     foreach ($EventLogName in $EventLogNames) {
         $null = New-AzOperationalInsightsWindowsEventDataSource `
@@ -222,7 +223,15 @@ To complete the steps in this article, you must have appropriate access to a sub
             -CollectInformation
     }
 
+    # ---- Performance counter format ----
+    # To select all instances of a counter, add (*) after the object name:
+    #    Object name(*)\Counter name
+
+    # To select a specific instance of a counter, add (Instance name) after the object name:
+    #    Object name(Instance name)\Counter name
+
     # Windows performance counters
+    ## The below example will create the counter "Memory(*)\Available MBytes"
     New-AzOperationalInsightsWindowsPerformanceCounterDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName -ObjectName "Memory" -InstanceName "*" -CounterName "Available MBytes" -IntervalSeconds 20 -Name "Example Windows Performance Counter"
 
     # Enable IIS Log Collection using agent
@@ -232,11 +241,13 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     <pre>
     <code class="language-PowerShell"># Linux performance counters
+    ## The below example will create multiple counters "% Used Inodes", "Free Megabytes", "% Used Space", "Disk Transfers/sec", "Disk Reads/sec" and "Disk Writes/sec", all under the parent counter "Logical Disk"
     New-AzOperationalInsightsLinuxPerformanceObjectDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName -ObjectName "Logical Disk" -InstanceName "*" -CounterNames @("% Used Inodes", "Free Megabytes", "% Used Space", "Disk Transfers/sec", "Disk Reads/sec", "Disk Writes/sec") -IntervalSeconds 20 -Name "Example Linux Disk Performance Counters"
     Enable-AzOperationalInsightsLinuxPerformanceCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName
 
     # Linux Syslog
-    New-AzOperationalInsightsLinuxSyslogDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName -Facility "kern" -CollectEmergency -CollectAlert -CollectCritical -CollectError -CollectWarning -Name "Example kernel syslog collection"
+    ## The below example will create a data source for the "kern" facility, with all severities being collected
+    New-AzOperationalInsightsLinuxSyslogDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName -Facility "kern" -CollectEmergency -CollectAlert -CollectCritical -CollectError -CollectWarning -CollectNotice -CollectInfo -CollectDebug -Name "Example kernel Syslog collection"
     Enable-AzOperationalInsightsLinuxSyslogCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName</code></pre>
 
     ***
