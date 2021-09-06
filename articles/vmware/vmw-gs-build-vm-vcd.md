@@ -107,7 +107,7 @@ First, you need to create a network that can connect to external networks outsid
 
 16. A VM needs an IP address to identify it on the network.
 
-    In the *Static IP Pools* page, identify the range of IP addresses that VMs connecting to this network can use then click **Add**. For example, if your **Gateway CIDR** is `192.168.1.0/24`, you can use the `192.168.1.10-192.168.1.100` range for your static IP pool, giving 91 usable internal IP addresses.
+    In the *Static IP Pools* page, identify the range of IP addresses that VMs connecting to this network can use then click **Add**. For example, if your **Gateway CIDR** is `192.168.1.1/24`, you can use the `192.168.1.10-192.168.1.100` range for your static IP pool, giving 91 usable internal IP addresses.
 
     ![New Organization VDC Network dialog box - Static IP Pools](images/vmw-vcd-add-network-ip-pool-ex.png)
 
