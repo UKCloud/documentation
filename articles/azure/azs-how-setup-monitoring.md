@@ -84,7 +84,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
        ![Log Analytics Workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
-4. (Optional) Configure data sources for additional logs
+4. (Optional) Configure additional data sources
 
     - Under *Settings*, select **Agents configuration**.
 
@@ -94,10 +94,14 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Click **Add windows event log**
 
-    - Select an event log from the dropdown and use the checkboxes to determine the severities that you want to collect for this log.
+    - Select an event log from the dropdown and use the checkboxes to determine the severities that you want to collect for this log type.
 
       > [!NOTE]
-      > If the log you want to add does not appear in the list, you can still add it by typing in the full name of the log. You can find the full name of the log in event viewer. Open the *Properties* page for the log and copy the string from the **Full Name** field.
+      > If the log type you want to add does not appear in the list, you can still add it by typing in the full name. You can find the full name of the log type in Event Viewer. Open the *Properties* page for the log type and copy the string from the **Full Name** field.
+      >
+      > ![Event Viewer log type](images/azs-event-viewer-log-type.png)
+      >
+      > ![Event Viewer log type > Properties](images/azs-event-viewer-log-type-properties.png)
 
     - Repeat for each event log you require, then click **Apply**
 
