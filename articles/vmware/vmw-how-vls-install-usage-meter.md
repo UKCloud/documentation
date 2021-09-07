@@ -29,7 +29,7 @@ This article provides all the information you need to install the Usage Meter in
 
 To install and perform initial configuration of the Usage Meter, you need the following:
 
-- Usage Meter OVA and hot patch 5, available [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_VLS/UsageMeter.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1627052235&Signature=fuLTrucDhJbZwGMqswWndKsy6fQ%3D)
+- Usage Meter OVA and hot patch 5, available [here](https://cas.cor00005.ukcloud.com/Docs/UKCloud_VLS/UsageMeter.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1662507263&Signature=FENoZByW4nCooyjpUjd12%2B8DWdo%3D)
 
 - A Static IP address, DNS server IP address and DNS domain name
 
