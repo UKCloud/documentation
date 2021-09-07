@@ -217,7 +217,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     ## The below example will create data sources for the event logs "System", "Application" and "Setup", with all severities being collected
     $EventLogNames = @("System", "Application", "Setup")
     foreach ($EventLogName in $EventLogNames) {
-        $null = New-AzOperationalInsightsWindowsEventDataSource `
+        New-AzOperationalInsightsWindowsEventDataSource `
             -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName `
             -WorkspaceName $LogAnalyticsWorkspaceName `
             -Name "$($EventLogName) Event Log" `
