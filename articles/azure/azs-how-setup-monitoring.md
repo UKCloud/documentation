@@ -289,7 +289,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 1. Execute the following PowerShell script to setup the **Azure Monitor Dependency Agent** and **Azure Monitor, Update and Configuration Management** extensions.
 
-    ### Declare variables
+    #### Declare variables
 
     Enter details below to provide values for the variables in the following script in this article:
 
@@ -297,16 +297,18 @@ To complete the steps in this article, you must have appropriate access to a sub
     |-----------------|--------------------------------------------------------------------|------------------|
     | \$VMName    | The name of the virtual machine                 | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="AzureStackHubVM"/></form> |
     | \$ResourceGroupName        | Name of the resource group which the VM resides in                           | <form oninput="result.value=resourcegroup.value;result1.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+    | \$NetworkSecurityGroupName        | The name of the network security group to apply the inbound port 443 rule to                           | <form oninput="result.value=networksecuritygroupname.value" id="networksecuritygroupname" style="display: inline;"><input type="text" id="networksecuritygroupname" name="networksecuritygroupname" style="display: inline;" placeholder="AzureStackHubVMNSG"/></form> |
     | \$WorkspaceKey        | The log analytics workspace primary key                           | <form oninput="result.value=workspacekey.value" id="workspacekey" style="display: inline;"><input type="text" id="workspacekey" name="workspacekey" style="display: inline;" placeholder="2Fzno02qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ=="/></form> |
     | \$WorkspaceId        | The log analytics workspace ID                           | <form oninput="result.value=workspaceid.value" id="workspaceid" style="display: inline;"><input type="text" id="workspaceid" name="workspaceid" style="display: inline;" placeholder="a40470ff-d8a0-4d37-ba13-274d4649a674"/></form> |
-    | \$NetworkSecurityGroupName        | The name of the network security group to apply the inbound port 443 rule to                           | <form oninput="result.value=networksecuritygroupname.value" id="networksecuritygroupname" style="display: inline;"><input type="text" id="networksecuritygroupname" name="networksecuritygroupname" style="display: inline;" placeholder="AzureStackHubVMNSG"/></form> |
 
     <pre>
     <code class="language-PowerShell"># Declare variables
-    $ResourceGroupName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
     $VMName = "<output form="vmname" name="result" style="display: inline;">AzureStackHubVM</output>"
+    $ResourceGroupName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+    $NetworkSecurityGroupName = "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>"
     $WorkspaceKey = "<output form="workspacekey" name="result" style="display: inline;">2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ==</output>"
-    $PublicSettings = "{'workspaceId': '<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>'}"
+    $WorkspaceId = "<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>"
+    $PublicSettings = "{'workspaceId': `'$WorkspaceId`'}"
     $ProtectedSettings = "{'workspaceKey': `'$WorkspaceKey`'}"
     $Location = (Get-AzLocation).Location
 
@@ -314,7 +316,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     $VM = Get-AzVM -ResourceGroupName $ResourceGroupName -VMName $VMName
 
     # Obtain network security group, create the port 443 inbound network security group rule and apply the rule to it
-    Get-AzNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzNetworkSecurityGroup
+    Get-AzNetworkSecurityGroup -Name $NetworkSecurityGroupName -ResourceGroupName $ResourceGroupName | New-AzNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzNetworkSecurityGroup
 
     # Determine if VM is Windows or Linux based
     if ($VM.OsProfile.WindowsConfiguration) {
@@ -383,6 +385,38 @@ To complete the steps in this article, you must have appropriate access to a sub
     ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
 
     ![Monitor map example](images/azs-browser-example-monitor-map.png)
+
+***
+
+### Executing KQL queries to retrieve data from the Log Analytics Workspace
+
+# [Portal](#tab/tabid-a)
+
+1. Navigate to the Log Analytics Workspace you created.
+
+2. Under *General*, click **Logs**.
+
+3. Enter the KQL query in the *New Query 1** tab, then click **Run**.
+
+    The below example will select data from the event log table "Event", filtering for events of type "System" and containing the phrase "was unexpected", then sorted by the "TimeGenerated" field in descending order.
+
+    ![Monitor stats example](images/azs-browser-log-analytics-query.png)
+
+# [PowerShell](#tab/tabid-b)
+
+<pre>
+<code class="language-PowerShell"># Declare KQL query
+## The below example will select data from the event log table "Event", filtering for events of type "System" and containing the phrase "was unexpected", then sorted by the "TimeGenerated" field in descending order
+$Query = 'Event | where EventLog == "System" | search "was unexpected" | sort by TimeGenerated desc'
+
+# Execute the KQL query and obtain the results
+$QueryResults = Invoke-AzOperationalInsightsQuery -WorkspaceId $WorkspaceId -Query $Query -Timespan "$(New-TimeSpan -Hours 48)"
+
+# Convert the results to a PowerShell array object
+$ResultsArray = [System.Linq.Enumerable]::ToArray($QueryResults.Results)
+
+# Print the array
+$ResultsArray</code></pre>
 
 ***
 
