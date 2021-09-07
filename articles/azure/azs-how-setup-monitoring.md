@@ -71,7 +71,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         - A **Region** to host the workspace in
 
             > [!NOTE]
-            > Azure Monitor for VMs supports a Log Analytics Workspace in the following [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics).
+            > Azure Monitor for VMs supports a Log Analytics Workspace in the following [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/vm/vminsights-configure-workspace?tabs=CLI#supported-regions).
 
             ![Log Analytics Workspace creation](images/azs-browser-example-log-analytics-workspace.png)
 
