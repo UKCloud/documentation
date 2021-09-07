@@ -212,8 +212,8 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ### [Windows](#tab/tabid-c)
 
-    <pre>
-    <code class="language-PowerShell"># Windows event logs
+    ```powershell
+    # Windows event logs
     ## The below example will create data sources for the event logs "System", "Application" and "Setup", with all severities being collected
     $EventLogNames = @("System", "Application", "Setup")
     foreach ($EventLogName in $EventLogNames) {
@@ -227,19 +227,21 @@ To complete the steps in this article, you must have appropriate access to a sub
             -CollectInformation
     }
 
-    # ---- Performance counter format ----
-    # To select all instances of a counter, add (*) after the object name:
-    #    Object name(*)\Counter name
+    <# ---- Performance counter format ----
+     To select all instances of a counter, add (*) after the object name:
+        Object name(*)\Counter name
 
-    # To select a specific instance of a counter, add (Instance name) after the object name:
-    #    Object name(Instance name)\Counter name
+     To select a specific instance of a counter, add (Instance name) after the object name:
+        Object name(Instance name)\Counter name
+    #>
 
     # Windows performance counters
     ## The below example will create the counter "Memory(*)\Available MBytes"
     New-AzOperationalInsightsWindowsPerformanceCounterDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName -ObjectName "Memory" -InstanceName "*" -CounterName "Available MBytes" -IntervalSeconds 20 -Name "Example Windows Performance Counter"
 
     # Enable IIS Log Collection using agent
-    Enable-AzOperationalInsightsIISLogCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName</code></pre>
+    Enable-AzOperationalInsightsIISLogCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName
+    ```
 
     ### [Linux](#tab/tabid-d)
 
