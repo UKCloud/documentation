@@ -3,8 +3,8 @@ title: How to install the vCloud Usage Meter for the VMware Licence Service
 description: Provides instructions for how to install the vCloud Usage Meter for the VMware Licence Service (VLS)
 services: vmware
 author: shighmoor
-reviewer:
-lastreviewed: 04/08/2020
+reviewer: mperry
+lastreviewed: 06/08/2021
 toc_rootlink: How To
 toc_sub1: VMware Licence Service
 toc_sub2:
