@@ -66,7 +66,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         - A **Resource group** to host the workspace in
 
-        - A **unique** name for the **Log Analytics Workspace**, for example: `DefaultLAWorkspace`
+        - A **unique** name for the **Log Analytics Workspace**
 
         - A **Region** to host the workspace in
 
