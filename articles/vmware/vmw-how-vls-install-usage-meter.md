@@ -3,8 +3,8 @@ title: How to install the vCloud Usage Meter for the VMware Licence Service
 description: Provides instructions for how to install the vCloud Usage Meter for the VMware Licence Service (VLS)
 services: vmware
 author: shighmoor
-reviewer:
-lastreviewed: 04/08/2020
+reviewer: mperry
+lastreviewed: 06/08/2021
 toc_rootlink: How To
 toc_sub1: VMware Licence Service
 toc_sub2:
@@ -29,7 +29,7 @@ This article provides all the information you need to install the Usage Meter in
 
 To install and perform initial configuration of the Usage Meter, you need the following:
 
-- Usage Meter OVA and hot patch 5, available [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_VLS/UsageMeter.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1627052235&Signature=fuLTrucDhJbZwGMqswWndKsy6fQ%3D)
+- Usage Meter OVA and hot patch 5, available [here](https://cas.cor00005.ukcloud.com/Docs/UKCloud_VLS/UsageMeter.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1662507263&Signature=FENoZByW4nCooyjpUjd12%2B8DWdo%3D)
 
 - A Static IP address, DNS server IP address and DNS domain name
 
