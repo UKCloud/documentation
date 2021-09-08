@@ -4,7 +4,7 @@ description: Provides help for creating a virtual machine scale set on UKCloud f
 services: azure-stack
 author: Shaion O'Niel
 reviewer: William Turner
-lastreviewed: 14/04/2020
+lastreviewed: 08/09/2021
 
 toc_rootlink: Users
 toc_sub1: How To
