@@ -84,11 +84,11 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 7. You can monitor the progress of your scale set's deployment by clicking the **Notifications** icon.
 
-    ![Deployment in progress notification](images/azsp_createvm_progress.png)
+    ![Deployment in progress notification](images/azs_browser_create_scale_set_deployment_progress.png)
 
 8. When the deployment is finished, the notification will change to *Deployment succeeded*.
 
-    ![Deployment complete](images/azsp_createvm_deployment_success.png)
+    ![Deployment complete](images/azs_browser_create_scale_set_deployment_success.png)
 
 9. After the scale set has deployed, you can view it by clicking **All Services** in the favourites panel, then select **Virtual machine scale sets** from the *compute* section.
 
