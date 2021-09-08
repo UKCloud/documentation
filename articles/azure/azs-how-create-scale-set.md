@@ -78,6 +78,10 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Subnet** – This is a subnet within the selected virtual network.
 
+    - **NIC network security group** - The network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, the virtual machines in the scale set.
+
+    - **Public inbound ports** - Allow traffic on a subset of common inbound ports.
+
     ![Create scale set](images/azs-browser-create-scale-set.png)
 
 6. When you are done, click **Create**.
