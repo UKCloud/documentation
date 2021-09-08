@@ -388,7 +388,10 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ***
 
-### Executing KQL queries to retrieve data from the Log Analytics Workspace
+### Executing Kusto Query Language (KQL) queries to retrieve data from the Log Analytics Workspace
+
+> [!TIP]
+> For more information on using KQL queries, see [Tutorial: Use Kusto queries](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuremonitor).
 
 # [Portal](#tab/tabid-a)
 
