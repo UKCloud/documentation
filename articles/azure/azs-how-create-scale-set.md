@@ -78,7 +78,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Subnet** – This is a subnet within the selected virtual network.
 
-    ![BASICS page](images/azs-browser-create-scale-set.png)
+    ![Create scale set](images/azs-browser-create-scale-set.png)
 
 6. When you are done, click **Create**.
 
