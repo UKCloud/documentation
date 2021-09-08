@@ -111,15 +111,21 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Scale set scaling button](images/azs-browser-button-scaling.png)
 
-2. Increase or decrease the number of instances using the slide bar.
+2. Increase or decrease the number of instances using the slide bar, then click **Save** to commit the change.
 
     ![Scaling slide bar](images/azs-browser-instance-count-slidebar.png)
 
-3. Once you have selected the desired number of instances click **Save** to commit the change.
+3. A prompt will notify you once the configuration has been updated.
 
-    ![Save number of instances for the scale set](images/azs-browser-button-save-instance-count.png)
+    ![Instance count updated notification](images/azs-browser-instance-count-updated.png)
 
-4. A prompt will notify you once the configuration has been updated.
+4. In the blade for the scale set, select **Instances** under *Settings*.
+
+    ![Scale set instances button](images/azs-browser-button-instances.png)
+
+5. Depending on how you modified the instance count, there will either be new instances in the *Creating* state, or existing ones in the *Deleting* state.
+
+    ![Scale set instances updating](images/azs-browser-instances-updating.png)
 
 ## Feedback
 
