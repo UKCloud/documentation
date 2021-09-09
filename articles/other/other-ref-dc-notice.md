@@ -2,9 +2,9 @@
 title: Data centre advance notice requirements
 description: Referencing the Data Centre's advanced notice requirements
 services: other
-author: Matt Warner
-reviewer: gsmith
-lastreviewed: 05/11/2019
+author: mwarner
+reviewer: jstevens
+lastreviewed: 30/07/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -31,6 +31,8 @@ For all requests to visit a data centre in either Farnborough or Corsham to carr
 To create a request to visit a data centre, raise a service request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 For customers requiring a new installation of hardware into one of the data centres, a new request must be submitted via [My Calls](https://portal.skyscapecloud.com/support/ivanti), which will involve engagement with a UKCloud technical architect for design and to set up networking. Data centre access cannot be arranged until this review has been completed, so please advise us as soon as possible.
+
+When we confirm your request, we'll let you know any specific details for access.
 
 ## Installing hardware in a UKCloud data centre
 
