@@ -115,7 +115,11 @@ This article is designed to provide you with a top level comparison for our main
 ***
 
 > [!NOTE]
-> Email and Collaboration as a Service is no longer available for sale. It is included in this article to support existing customers of the product only.
+> The following products are no longer available for sale. They are included in this article to support existing customers of the products only.
+>
+> - Email and Collaboration as a Service
+>
+> - UKCloud for Oracle Software
 
 ## Feedback
 

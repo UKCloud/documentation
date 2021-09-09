@@ -89,7 +89,7 @@ For more information about the discount and purchase schemes offered by UKCloud,
 
 - Microsoft Windows Server licences must be provided by UKCloud and you'll be billed per hour based on the powered-on state of the host VM.
 
-- If you want to host Oracle solutions on our platform, consult our Cloud Architects, or consider our Dedicated Compute v2 or UKCloud for Oracle Software services to avoid licensing issues.
+- If you want to host Oracle solutions on our platform, consult our Cloud Architects, or consider our Dedicated Compute v2 or Private Cloud for Oracle Software services to avoid licensing issues.
 
 ## Billing and payment information
 

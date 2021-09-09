@@ -17,6 +17,9 @@ toc_mdlink: orcl-ref-vm-compatibility.md
 
 # VM compatibility with UKCloud for Oracle Software
 
+> [!IMPORTANT]
+> UKCloud for Oracle Software has been retired from sale by UKCloud. We'll continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we'll continue to update it as required. For new Oracle requests, contact your Client Director or Service Delivery Manager.
+
 ## Introduction
 
 This article outlines what you need to do to make sure your Oracle VMs (OVMs) are compatible with UKCloud for Oracle Software service. You may find this useful if you're moving VMs from UKCloud for VMware to UKCloud for Oracle Software.

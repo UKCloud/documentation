@@ -99,6 +99,9 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 
 ### UKCloud for Oracle Software
 
+> [!IMPORTANT]
+> This service is no longer available for sale. The following information is provided to support existing customers of the service only.
+
 &nbsp;                       | UKCloud for Oracle Software
 -----------------------------|----------------------------
 **Availability commitment**  | **Non-HA:** 99.95%<br>**HA:** 99.99%
@@ -174,6 +177,9 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 Due to the service being dependent on connectivity between the customer data centre and UKCloud, we are unable to offer an SLA relating to the performance of this service. For full details of the SLA for the UKCloud for VMware platform that hosts the solution, see [*UKCloud for VMware*](#ukcloud-for-vmware).
 
 ### Email and Collaboration as a Service
+
+> [!IMPORTANT]
+> This service is no longer available for sale. The following information is provided to support existing customers of the service only.
 
 &nbsp;                       | Email and Collaboration as a Service
 -----------------------------|-------------------------------------
