@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-pricing.html",
-          "hash": "5mwz5cULQE6CJISFs5Goq2pFUqm/qUs2D9mZMjXTESU="
+          "hash": "UchQTFGW9IJ8bayqtsHmeTg+z436DhcIYLxPI5E1dd0="
         }
       },
       "is_incremental": false,
@@ -9908,7 +9908,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-pricing.html",
-          "hash": "Gcxm5Fj8cpcE4+Gpyi1Ab8MlhoxUbhwWlAPzKXp/hTo="
+          "hash": "VMwWLnb7HHo9mkKlFYz29xzYg5gxa45yiLAc6x9OI1I="
         }
       },
       "is_incremental": false,
@@ -10424,7 +10424,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-faq.html",
-          "hash": "U7mTMaz8k7HZp+R5LFXeCEnaysEzmHqGYhOOP8rvSdw="
+          "hash": "OlusC48JzcoVZXewVYuzR8iQJjzNny1E3Eu0jA3cgZ0="
         }
       },
       "is_incremental": false,
@@ -10436,7 +10436,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-gs.html",
-          "hash": "7cajxXlO/nR1KS/SOHVOLCUM/Tj7GqyrINvDV7SRxqE="
+          "hash": "5R4aCIUnUVJ4k6eElgPyygVmPxJXMA/LotfUMZXvrE4="
         }
       },
       "is_incremental": false,
@@ -10448,7 +10448,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-home.html",
-          "hash": "GK8yCA0zRXCVQFkfziHlrLIvljqcdgpp15TE/wZKwWI="
+          "hash": "pABCqgKy8VKK1qmDnCzTKoFrB1mJDui2Z6QcqPVxxY8="
         }
       },
       "is_incremental": false,
@@ -10460,7 +10460,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-how-build-vm.html",
-          "hash": "u8NadTQRI/XSlhnMyO2u21mQ7qnkfCCLvpR6+1RlOpY="
+          "hash": "fM0L+oAM0k+fb0/C4K0yPQuNQg/m4d8ZFl9+Yo9reBM="
         }
       },
       "is_incremental": false,
@@ -10472,7 +10472,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-how-enable-ha.html",
-          "hash": "jjsfOGSVjxg/NF0EHB4TG2l0kEyW6mwzFpId0KEdzDI="
+          "hash": "JZWarNpxRs33+rmaNapUR74/Ia5W81bbEDdBo//KJpU="
         }
       },
       "is_incremental": false,
@@ -10484,7 +10484,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-bug-self-service.html",
-          "hash": "M/HkCmPUWZXMPdaTWpdMBJn12mOuZcjEK25Wrn8YdGQ="
+          "hash": "nD+cyPmz+mfpNHse6mbe4x/N1Mab7eS/1RT1VG1YeMY="
         }
       },
       "is_incremental": false,
@@ -10496,7 +10496,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-db-backup.html",
-          "hash": "LyQrceIl0YZ71aBuo1qSS4zdwuNbPX2zVm50nGvYoh4="
+          "hash": "mt/81yigiB/Wu8h3cOgG0e3r7P6DFGOJyJr4kiVTuWc="
         }
       },
       "is_incremental": false,
@@ -10508,7 +10508,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-licensing.html",
-          "hash": "vOIM3PMN6Tbt9VfCNypGPMErHWIwYk+caPBhkD9qN1k="
+          "hash": "7Tlcjdlc5jbIWK9r9P3vsXVDSwLAamuJOXayWlljQD8="
         }
       },
       "is_incremental": false,
@@ -10520,7 +10520,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-pricing.html",
-          "hash": "3AidxOXEmJMNBZDS0IUB7pNvhuaY5a3jyYKNf7N1ZLA="
+          "hash": "aGg8Lhcvfo54PBjz2qyeBctWYwLAvlmBq83LywQ72YI="
         }
       },
       "is_incremental": false,
@@ -10532,7 +10532,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-rac.html",
-          "hash": "7e24h68ToVQXTA4wr4q7/BBftsBCuE2Ue3vhkv1lRt4="
+          "hash": "GoHt//fgEwWbCFo62LjKsOIixjfxOWN6IhmKJI71abI="
         }
       },
       "is_incremental": false,
@@ -10544,7 +10544,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-solaris-aix.html",
-          "hash": "gaxLm3PbCfPnOv2dntDapQd3iQtMzO+i79gKLaE4nfo="
+          "hash": "JFxrYvlADP066KQkrP2fSgzyRlbpI4yNMmHMbhgWzc4="
         }
       },
       "is_incremental": false,
@@ -10556,7 +10556,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-templates.html",
-          "hash": "rNUH+dxgu8T3eYycyMUt9ar5J2fkFuhgrU+c3M2RMxY="
+          "hash": "4CQSNXW4i67N4P1hzkgDpedMVv11zusZo2XfomFnork="
         }
       },
       "is_incremental": false,
@@ -10568,7 +10568,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-vm-compatibility.html",
-          "hash": "kSAGVbnznXhBvDk2D2Phby+vWYFDLi9c9Rt3w4GQG8Y="
+          "hash": "PTO8qlfM2J1+Ol7l3fK0HtUEoLK0q6BRfQElskhvsQQ="
         }
       },
       "is_incremental": false,
@@ -10580,7 +10580,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "7vhxij1fGqYcwPiqdDeuwXy4TIvg8I/2aJuaMLpc1eA="
+          "hash": "1s6fbBqpcvS/O/90DyVLuu6SFUYwE3/zcUIZpMk0uKk="
         }
       },
       "is_incremental": false,
@@ -10592,7 +10592,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sd.html",
-          "hash": "QrfesH0/K1QKEUHtBJZZanHH8oA/ThVEg7htFh7xbys="
+          "hash": "jqzSfUC7za0D8Dw1DSqlR1UOP29Tdq9B22/fHYP7avY="
         }
       },
       "is_incremental": false,
@@ -10604,7 +10604,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-vid-overview.html",
-          "hash": "zh/2OgvQJgXb9/EO77FtRepb8XSJAsaXZEg6+yta9Z8="
+          "hash": "vGQ+XIPkfauR0r4mKMDULAQqds3CCcceIvyKTwGEPG0="
         }
       },
       "is_incremental": false,
@@ -11370,7 +11370,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-sla.html",
-          "hash": "wLcoLbw4Hux9WxmG1qxL/9wHm8GW93bsskxDXMmh90c="
+          "hash": "m+mKBgpScyJFf6ZSoWlD+YZYXTxTjCydIJiiINhzxqM="
         }
       },
       "is_incremental": false,
@@ -11562,7 +11562,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "tvojy4m3kj9FPMobgIeGKcIsxtWZLRwyszbEacyvYF0="
+          "hash": "IewJhaM+W7abYkCY3Vmp6csarbqjx9Fywde4DCwj2lk="
         }
       },
       "is_incremental": false,
@@ -11658,7 +11658,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-product-overview.html",
-          "hash": "/rjD3S47nhCEJYmGXPf99lrfip9BRH4CpUsH8MOoq0U="
+          "hash": "pylBJ1qUTcbKuBtzfgohEz3jVM2H8Sd9zJUYOlUjNAM="
         }
       },
       "is_incremental": false,
@@ -11742,7 +11742,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "/Nlb6LMn4t3RVTspi75zJU5/xZl9NLCR7tXF+QU2RLU="
+          "hash": "KkxqqPjS3pu14GUNpPblwb8Iou0OVDGVKmX/44KP/lo="
         }
       },
       "is_incremental": false,
@@ -11838,7 +11838,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-sco-free-trials.html",
-          "hash": "uqP7ujTIkgv/zegNdoRQzq4aMkWP/doQMONG58fr8Ro="
+          "hash": "KDLypViLtVd9SLW8f8KJkhDcJOQKY9eyjJgZmM53VY8="
         }
       },
       "is_incremental": false,
@@ -22484,7 +22484,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-pricing.html",
-          "hash": "X6+aLfUYH6mcbEHcJR+nvupGzYqzuKjeMmazNrzpFmo="
+          "hash": "gIP++wmWl9zjKrux8GDKrlvJDJhvheXaMj3nxZ1rA98="
         }
       },
       "is_incremental": false,

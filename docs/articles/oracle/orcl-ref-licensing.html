@@ -93,6 +93,10 @@
                   
 <h1 id="oracle-licensing-on-the-ukcloud-platform">Oracle licensing on the UKCloud platform</h1>
 
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>UKCloud for Oracle Software has been retired from sale by UKCloud. We'll continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we'll continue to update it as required. For new Oracle requests, contact your Client Director or Service Delivery Manager.</p>
+</div>
 <h2 id="overview">Overview</h2>
 <p>Due to the licensing rules regarding Oracle, it is not possible to install and run processor-based Oracle software on UKCloud for VMware, UKCloud for OpenStack or UKCloud for Microsoft Azure. However, you can use UKCloud for Oracle Software to run Oracle applications and databases. This is a solution specifically designed using Oracle VM hypervisor technology to enable Oracle licensing to be used correctly. It is also financially efficient as you only need to license software for resources used.</p>
 <p>However, you still need to be mindful of Oracle licensing when using UKCloud for Oracle Software. UKCloud can resell all Oracle software and support contracts and can provide advice where required to help.</p>
@@ -106,7 +110,7 @@
 <p><code>Number of cores used = Total number of vCPUs running OEL (i.e., add up all OEL VMs vCPUs) / 2</code></p>
 <p><code>Number of hosts you need OEL support contracts for (rounded up to nearest whole number) = Number of cores used / 20 (the number of useable cores per host)</code></p>
 <h2 id="per-processor">Per processor</h2>
-<p>This type of licence is typical of Oracle Database (both Enterprise and Standard) and enables you to have as many users as you need for a fixed cost ‘per processor’ that the servers run on.</p>
+<p>This type of licence is typical of Oracle Database (both Enterprise and Standard) and enables you to have as many users as you need for a fixed cost 'per processor' that the servers run on.</p>
 <p>As UKCloud runs Oracle VM (OVM) as the hypervisor technology for UKCloud for Oracle Software, you can simply license the processors (cores) that you require for your application and database VMs, rather than <em>all</em> the processors within the cluster.</p>
 <p>The VMs are pinned to host cores to maintain licence compliance so you should be aware of licensing implications of using features such as High Availability (HA) or clustering technologies, such as Real Application Clusters (RAC). With the HA feature (see <a href="orcl-how-enable-ha.html"><em>How to enable high availability for your Oracle VMs</em></a>), VMs will power off in the event of a host failure and will be restarted on another host in the cluster. Typically, processor-based licences will allow a certain number of 'failover days' per year (typically 10 days), including maintenance scenarios, so you should be aware of this number and remove VMs from any HA policy if your VM has moved due to maintenance or server downtime for close to the number of days stated in the licence agreement.</p>
 <p>If you're replicating using technologies like RAC, you'll need to make sure you're licensing enough processors to cover the additional VMs within the cluster.</p>
