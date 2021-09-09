@@ -17,6 +17,9 @@ toc_mdlink: orcl-ref-licensing.md
 
 # Oracle licensing on the UKCloud platform
 
+> [!IMPORTANT]
+> UKCloud for Oracle Software has been retired from sale by UKCloud. We'll continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we'll continue to update it as required. For new Oracle requests, contact your Client Director or Service Delivery Manager.
+
 ## Overview
 
 Due to the licensing rules regarding Oracle, it is not possible to install and run processor-based Oracle software on UKCloud for VMware, UKCloud for OpenStack or UKCloud for Microsoft Azure. However, you can use UKCloud for Oracle Software to run Oracle applications and databases. This is a solution specifically designed using Oracle VM hypervisor technology to enable Oracle licensing to be used correctly. It is also financially efficient as you only need to license software for resources used.
@@ -38,7 +41,7 @@ Oracle Enterprise Linux (OEL) is a free x86 operating system (OS) that Oracle pr
 
 ## Per processor
 
-This type of licence is typical of Oracle Database (both Enterprise and Standard) and enables you to have as many users as you need for a fixed cost ‘per processor’ that the servers run on.
+This type of licence is typical of Oracle Database (both Enterprise and Standard) and enables you to have as many users as you need for a fixed cost 'per processor' that the servers run on.
 
 As UKCloud runs Oracle VM (OVM) as the hypervisor technology for UKCloud for Oracle Software, you can simply license the processors (cores) that you require for your application and database VMs, rather than *all* the processors within the cluster.
 

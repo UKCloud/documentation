@@ -17,6 +17,9 @@ toc_mdlink: orcl-ref-db-backup.md
 
 # Best practice guidelines for Oracle Database backup
 
+> [!IMPORTANT]
+> UKCloud for Oracle Software has been retired from sale by UKCloud. We'll continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we'll continue to update it as required. For new Oracle requests, contact your Client Director or Service Delivery Manager.
+
 ## Overview
 
 This article provides some guidelines for setting up and managing Oracle Database backups for workloads on the UKCloud for Oracle Software service.

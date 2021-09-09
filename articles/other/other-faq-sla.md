@@ -303,6 +303,9 @@ How much is payable?
 
 ## UKCloud for Oracle Software
 
+> [!IMPORTANT]
+> This service is no longer available for sale. The following information is provided to support existing customers of the service only.
+
 ### How do you offer an SLA on UKCloud for Oracle Software?
 
 UKCloud monitors two main components of the UKCloud for Oracle Software service to provide the best overall measure of service availability. The first component is the physical host server that the Oracle Virtual Machine (OVM) is running on. This confirms that the OVM has resources and can be available. The second component is the data store which ensures that the storage associated with the OVM is accessible. By monitoring these two components, UKCloud believes that we can provide the best overall view of the availability of the service.

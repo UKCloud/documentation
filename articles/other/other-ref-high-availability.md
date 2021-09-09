@@ -99,6 +99,9 @@ To help your applications cope with variable demand, you can configure Orchestra
 
 ### UKCloud for Oracle Software
 
+> [!IMPORTANT]
+> This service is no longer available for sale. The following information is provided to support existing customers of the service only.
+
 In UKCloud for Oracle Software, you can enable HA on a virtual machine so that it can be automatically migrated to a surviving node in the event of a failure. For more information, see [*How to enable high availability for your Oracle VMs*](../oracle/orcl-how-enable-ha.md).
 
 If your VM is running an Oracle database and you're using hard partitioning to reduce licensing costs, virtual CPUs are pinned to physical cores and the HA option is not available. In the event of a failure, VMs must be manually migrated to a new host and will require restarting.

@@ -17,6 +17,9 @@ toc_mdlink: orcl-vid-overview.md
 
 # Video: Overview of Oracle Self Service Portal
 
+> [!IMPORTANT]
+> UKCloud for Oracle Software has been retired from sale by UKCloud. We'll continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we'll continue to update it as required. For new Oracle requests, contact your Client Director or Service Delivery Manager.
+
 The following video provides an introduction to the Oracle Enterprise Manager (OEM) Cloud Control 13c Console, showing you the different tasks that you can perform.
 
 <div class="row">
