@@ -1,10 +1,10 @@
 ---
-title: How to request a new VLS license
+title: How to request a new VLS licence
 description: Provides instructions for how to request a new VLS licence in preparation for a VMware product upgrade
 services: vmware
 author: shighmoor
-reviewer:
-lastreviewed: 22/09/2020
+reviewer: mperry
+lastreviewed: 07/09/2021
 toc_rootlink: How To
 toc_sub1: VMware Licence Service
 toc_sub2:
@@ -15,7 +15,7 @@ toc_fullpath: How To/VMware Licence Service/vmw-how-vls-request-licence.md
 toc_mdlink: vmw-how-vls-request-licence.md
 ---
 
-# How to request a new VLS license
+# How to request a new VLS licence
 
 ## Overview
 
