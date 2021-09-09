@@ -4,7 +4,7 @@ description: Provides help for resizing a disk using the portal on UKCloud for M
 services: azure-stack
 author: Shaion O'Niel
 reviewer: William Turner
-lastreviewed: 15/04/2020
+lastreviewed: 09/09/2021
 
 toc_rootlink: Users
 toc_sub1: How To
