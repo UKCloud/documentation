@@ -37,8 +37,8 @@ C      | vAPP                              | Name of the vApp | VMware
 D      | vDC                               | Name of the virtual data centre | VMware
 E      | ResourceName                      | Client-friendly name of the resource | OpenStack, VMware
 F      | Resource Id                       | Identifier of the resource | OpenStack, VMware
-G      | OSID                              | Operating system | VMware
-H      | Service                           | The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 1 Encrypted<br>OpenStack Block Storage Tier 2<br>OpenStack Block Storage Tier 2 Encrypted<br>OpenStack Image<br>OpenStack Instance Backup Storage<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM | OpenStack, VMware
+G      | OSID                              | Operating system | OpenStack,VMware
+H      | Service                           | The UKCloud service to which the charge applies:<br>OpenShift Application<br>OpenShift Control Plane<br>OpenShift Infrastructure<br>OpenShift Master<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 1 Encrypted<br>OpenStack Block Storage Tier 2<br>OpenStack Block Storage Tier 2 Encrypted<br>OpenStack Image<br>OpenStack Instance Backup Storage<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM | OpenStack, VMware
 I      | Metadata                          | Customer VM metadata | VMware
 J      | StartTime                         | Charging period start time on the EventDate, in UTC | OpenStack, VMware
 K      | EndTime                           | Charging period end time on the EventDate, in UTC | OpenStack, VMware
@@ -84,11 +84,24 @@ AX     | Tier1ProtectionTotalPrice         | The cost of protection for Tier 1 s
 AY     | Tier2ProtectionTotalPrice         | The cost of protection for Tier 2 storage. This could be journaling or snapshot or both<br>(Tier2StorageChargeable - Tier2SnapshotUsed) * Tier2ProtectionPricePerHour * UsageHours | VMware
 AZ     | Geo-resilientProtectionTotalPrice | The cost of protection for geo-resilient storage. As 14 day snapshot is included with synchronous protection, this is only for when 28 day snapshot protection is taken with geo-resilient storage.<br>(Geo-resilientStorageChargeable - Geo-resilientSnapshotUsed) * Geo-resilientProtectionPricePerHour * UsageHours | VMware
 BA     | ProtectionTotalPrice              | Total cost for protection in period (0 if no protection)<br>(ComputeProtectionTotalPrice + Tier1ProtectionTotalPrice + Tier2ProtectionTotalPrice + Geo-resilientProtectionTotalPrice)         | VMware
-BB     | LicensePricePerHour               | Licence charges for the VM | VMware
-BC     | LicenseTotalPrice                 | LicensePricePerHour * UsageHoursWithinPeriod
+BB     | LicensePricePerHour               | Licence charges for the VM | OpenStack,VMware
+BC     | LicenseTotalPrice                 | LicensePricePerHour * UsageHoursWithinPeriod | OpenStack,VMware
 BD     | TotalPrice                        | ComputeTotalPrice + GPUTotalPrice + Tier1StoragePrice + Tier2StoragePrice + Geo-resilientStoragePrice + ProtectionTotalPrice + LicenseTotalPrice | OpenStack, VMware
 
 ## Key changes to the Evidence File (November 2017 onwards)
+
+### August 2021
+
+Support for OpenShift infrastructure VMs on OpenStack has been added to the evidence files.
+
+- Column H : has 4 new service types
+    - OpenShift Application
+    - OpenShift Control Plane
+    - OpenShift Infrastructure
+    - OpenShift Master
+
+- Columns BB and BC
+    - OpenShift infrastructure on OpenStack carries a license charge.
 
 ### March 2020
 
