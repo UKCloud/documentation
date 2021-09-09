@@ -38,14 +38,24 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. In the *Virtual machines* blade, select the virtual machine that the disk is attached to.
 
-4. In the virtual machine's blade, select **Disks**.
+4. In the *Overview* blade, click **Stop** and then **OK**. Wait for the virtual machine to successfully shutdown before continuing.
 
-    ![Disks button within VM](images/azs-browser-vm-menu-disks-button.png)
+    > [!NOTE]
+    > Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.
+    >
+    > This step can be skipped if the virtual machine is already in the *Stopped (deallocated)* state, as seen below.
+    >
+    > ![VM deallocated state](images/azs-browser-vm-deallocated-state.png)
 
-5. In the *Disks* blade, select the disk you would like to resize.
+    ![Stop VM button](images/azs-browser-vm-stop-button.png)
+
+5. In the virtual machine's blade, select **Disks**.
+
+6. In the *Disks* blade, select the disk you would like to resize.
+
+    ![VM disks list](images/azs-browser-vm-disks-list.png)
 
     > [!Note]
-    > - Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.
     > - Disks can only be resized to a larger size.
     > - Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both are provided below.
 
@@ -69,9 +79,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ***
 
-6. You can monitor the progress of the disk resizing by clicking the **Notifications** icon.
+7. You can monitor the progress of the disk resizing by clicking the **Notifications** icon.
 
-   ![Notification showing updating virtual machine disk](images/azsp_createvm_progress.png)
+   ![Notification showing updating virtual machine disk](images/azs-browser-update-disk-progress.png)
 
 ## Expanding the volume
 
