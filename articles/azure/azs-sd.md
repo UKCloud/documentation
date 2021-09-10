@@ -19,7 +19,7 @@ toc_mdlink: azs-sd.md
 
 ## What is UKCloud for Microsoft Azure Stack Hub?
 
-UKCloud for Microsoft Azure Stack Hub harnesses the innovation of Microsoft's Azure Stack Hub platform. The service is delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK Public Sector organisations and their industry partners. UKCloud can also support your deployments on Azure public or manage private Azure Stack Hub environments, giving you one partner for all your Microsoft Azure environments.
+UKCloud for Microsoft Azure Stack Hub harnesses the innovation of Microsoft's Azure Stack Hub platform. The service is delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK Public Sector organisations and their industry partners. UKCloud can also support your deployments on Azure public, giving you one partner for all your Microsoft Azure environments.
 
 ## What the service can help you achieve
 
