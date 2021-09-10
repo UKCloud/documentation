@@ -118,27 +118,25 @@
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
 
 <p>Sign in to your development workstation and install CLI. Azure Stack Hub requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the <a href="https://docs.microsoft.com/cli/azure/install-azure-cli">Install Azure CLI 2.0</a> article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:</p>
-<pre><code class="lang-azurecli">   bash-5.0# az --version
-   azure-cli                          2.2.0
+<pre><code class="lang-azurecli">   bash-5.1# az --version
+   azure-cli                         2.27.0
 
-   command-modules-nspkg              2.0.3
-   core                               2.2.0
-   nspkg                              3.0.4
-   telemetry                          1.0.4
+   core                              2.27.0
+   telemetry                          1.0.6
 
    Python location '/usr/local/bin/python'
    Extensions directory '/root/.azure/cliextensions'
 
-   Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
-   [GCC 8.3.0]
+   Python (Linux) 3.8.9 (default, Apr 15 2021, 05:07:04)
+   [GCC 10.2.1 20201203]
 
    Legal docs and information: aka.ms/AzureCliLegal
 
 
-
    Your CLI is up-to-date.
 
-   Please let us know how we are doing: https://aka.ms/clihats
+   Please let us know how we are doing: https://aka.ms/azureclihats
+   and let us know if you're interested in trying out our newest features: https://aka.ms/CLIUXstudy
 </code></pre>
 <p>You should see the version of Azure CLI and other dependent libraries that are installed on your computer.</p>
 </section>
@@ -163,29 +161,27 @@
 <p>Ensure Docker Desktop on Windows is set to <strong>Linux containers</strong>.</p>
 </div>
 <p>This command will execute an interactive terminal session inside the container and remove it on exit.</p>
-<p>You will now be in the container's interactive terminal session and see the following prompt: <code>bash-5.0#</code>.</p>
+<p>You will now be in the container's interactive terminal session and see the following prompt: <code>bash-X.X#</code>.</p>
 <p>You can run <code>az --version</code> to verify the Azure CLI is working correctly:</p>
-<pre><code class="lang-azurecli">   bash-5.0# az --version
-   azure-cli                          2.2.0
+<pre><code class="lang-azurecli">   bash-5.1# az --version
+   azure-cli                         2.27.0
 
-   command-modules-nspkg              2.0.3
-   core                               2.2.0
-   nspkg                              3.0.4
-   telemetry                          1.0.4
+   core                              2.27.0
+   telemetry                          1.0.6
 
    Python location '/usr/local/bin/python'
    Extensions directory '/root/.azure/cliextensions'
 
-   Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
-   [GCC 8.3.0]
+   Python (Linux) 3.8.9 (default, Apr 15 2021, 05:07:04)
+   [GCC 10.2.1 20201203]
 
    Legal docs and information: aka.ms/AzureCliLegal
 
 
-
    Your CLI is up-to-date.
 
-   Please let us know how we are doing: https://aka.ms/clihats
+   Please let us know how we are doing: https://aka.ms/azureclihats
+   and let us know if you're interested in trying out our newest features: https://aka.ms/CLIUXstudy
 </code></pre>
 </section>
 </div>
@@ -289,7 +285,7 @@ True        AzureStackUser     2019-03-01-hybrid
 <pre><code class="lang-azurecli">az --help
 </code></pre>
 </li>
-<li><p>To list commands for specific subgroup run:</p>
+<li><p>To list commands for a specific subgroup run:</p>
 <pre><code class="lang-azurecli">az &lt;subgroupname&gt; --help
 </code></pre>
 </li>
@@ -308,7 +304,21 @@ az login -u "<output form="username" name="result2" style="display: inline;">use
 <pre><code class="lang-azurecli">az group create -n MyResourceGroup -l frn00006
 </code></pre>
 <p>If the resource group is created successfully, the previous command outputs the following properties of the newly created resource:</p>
-<p><img src="https://docs.microsoft.com/en-us/azure/azure-stack/user/media/azure-stack-connect-cli/image1.png" alt="Resource group create output"></p>
+<pre><code class="lang-azurecli">{
+  &quot;id&quot;: &quot;/subscriptions/{removed}/resourceGroups/MyResourceGroup&quot;,
+  &quot;location&quot;: &quot;frn00006&quot;,
+  &quot;managedBy&quot;: null,
+  &quot;name&quot;: &quot;MyResourceGroup&quot;,
+  &quot;properties&quot;: {
+    &quot;provisioningState&quot;: &quot;Succeeded&quot;
+  },
+  &quot;tags&quot;: null,
+  &quot;type&quot;: null
+}
+</code></pre>
+<p>To remove the above resource group, run the following command:</p>
+<pre><code class="lang-azurecli">az group delete -n MyResourceGroup
+</code></pre>
 <h2 id="known-issues">Known issues</h2>
 <p>There are some known issues that you must be aware of when using CLI in Azure Stack Hub:</p>
 <ul>

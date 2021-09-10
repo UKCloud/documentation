@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-cli.html",
-          "hash": "cTfPVy8ssRKBkI65MCKjsC2b7tcWK9jmFecDfzGyTwc="
+          "hash": "KO1NJjfJgTVeaaH72FHYDguC6+5fbK3fgIHyh9yKt20="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-aks.html",
-          "hash": "VHdj4mExyzpEbInu0OKFo8wo/YKqXTmXllQT9rs7Pnk="
+          "hash": "i4NyjJJKzUGlhja11rE4bsXpYr1UcVtum2z/Lee8OIU="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-load-balancer.html",
-          "hash": "TwzfdLpzU0ZlNVtwtC6LchP7rub8XIlQqH3pDQlTQMU="
+          "hash": "FbLt63UjTGIUc8+GeJ275KqU6qKUMMatSWLG5Dubs1c="
         }
       },
       "is_incremental": false,
@@ -501,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
-          "hash": "G0Blg3HhafkFkYXLBMFiTmbFq0qH9xvqqngvVxUr4dY="
+          "hash": "yTdMFP8Yq5X+VH+u7O4/KsklnRg8tpz6vfi1uAXjIWA="
         }
       },
       "is_incremental": false,
@@ -549,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-setup-monitoring.html",
-          "hash": "/t4QpvUkmtL+YqYmP4ybkePNLYw4rsx4er6YO6gexlY="
+          "hash": "HqI7YLiw1I1XIsTzDti+m4qIznnj7NephOhR0StDO5Q="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-use-api.html",
-          "hash": "/uvNQLTzt0ck0h4Y/QdSbfeLKdn9SlqjwFSt7rgoM80="
+          "hash": "JCAT6dKkgVirTdJjXu+hoMIDzQ1H83pB9efca8jxBmc="
         }
       },
       "is_incremental": false,
@@ -708,6 +708,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-add-backend-pool-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-add-backend-pool-vms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-add-backend-pool.png",
       "output": {
         "resource": {
@@ -778,6 +789,50 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-add-vm-disk.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-agent-configuration-perf-counters-linux.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-agent-configuration-perf-counters-linux.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-agent-configuration-perf-counters-windows.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-agent-configuration-perf-counters-windows.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-agent-configuration-syslog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-agent-configuration-syslog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-agent-configuration-windows-event-logs.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-agent-configuration-windows-event-logs.png"
         }
       },
       "is_incremental": false,
@@ -1588,6 +1643,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-log-analytics-query.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-log-analytics-query.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-log-analytics-workspace-advanced-settings.png",
       "output": {
         "resource": {
@@ -2010,6 +2076,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-email-csp-invitation.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-event-viewer-log-type-properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-event-viewer-log-type-properties.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-event-viewer-log-type.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-event-viewer-log-type.png"
         }
       },
       "is_incremental": false,
@@ -2945,6 +3033,50 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azsp_deploymentblade.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_lb_createvm_availabilityset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_lb_createvm_availabilityset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_lb_createvm_basics.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_lb_createvm_basics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_lb_createvm_networking.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_lb_createvm_networking.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_lb_createvm_size.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_lb_createvm_size.png"
         }
       },
       "is_incremental": false,

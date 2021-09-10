@@ -195,24 +195,34 @@
 <div class="tabGroup" id="tabgroup_bHGHmlrG6S">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Bash</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Windows</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">PowerShell</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">Linux</a>
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token. 
-curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" \
--H "Content-Type: application/x-www-form-urlencoded" \
---data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" \
---data-urlencode "grant_type=password" \
---data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output> \
---data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" \
---data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
-</code></pre>
+
+<p>PowerShell 5.1, PowerShell 7, or Command Line</p>
 </section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>PowerShell 7 or Bash</p>
+</section>
+</div>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-a" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">PowerShell</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Command Line</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Bash</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-1_tabid-a" role="tabpanel" data-tab="tabid-a">
 <pre><code class="language-PowerShell"># Declare variables
 $Tenant = "<output form="tenant" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
 $UserName = "<output form="azsusername" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>"
@@ -229,6 +239,28 @@ $AuthRequestBody = @{
 $AuthResp = Invoke-RestMethod -Method "POST" -Uri "https://login.microsoftonline.com/$Tenant/oauth2/token" -Body $AuthRequestBody -ContentType "application/x-www-form-urlencoded"
 
 $AuthResp
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
+<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token.
+curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" ^
+-H "Content-Type: application/x-www-form-urlencoded" ^
+--data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" ^
+--data-urlencode "grant_type=password" ^
+--data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" ^
+--data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" ^
+--data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="language-bash"># Send POST request to Azure REST authentication/login endpoint to retrieve access token.
+curl -X "POST" "https://login.microsoftonline.com/<output form="tenant" name="result" style="display: inline;">contoso.onmicrosoft.com</output>/oauth2/token" \
+-H "Content-Type: application/x-www-form-urlencoded" \
+--data-urlencode "client_id=<output form="clientid" name="result" style="display: inline;">1950a258-227b-4e31-a9cf-717495945fc2</output>" \
+--data-urlencode "grant_type=password" \
+--data-urlencode "username=<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" \
+--data-urlencode "password=<output form="azspassword" name="result" style="display: inline;">Password123!</output>" \
+--data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
 </code></pre>
 </section>
 </div>
@@ -249,27 +281,35 @@ $AuthResp
 </code></pre>
 </li>
 <li><p>You must include this token in the Authorization header of each subsequent API request, for example:</p>
-<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-2">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S-1_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Bash</a>
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-a" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">PowerShell</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S-1_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-2" data-tab="tabid-2" tabindex="-1">PowerShell</a>
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Command Line</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Bash</a>
 </li>
 </ul>
-<section id="tabpanel_bHGHmlrG6S-1_tabid-1" role="tabpanel" data-tab="tabid-1">
-
-<pre><code class="lang-bash">curl -H &quot;Authorization: Bearer eyJ0eXAiOi...truncated for readability...&quot; 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
-</code></pre>
-</section>
-<section id="tabpanel_bHGHmlrG6S-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_bHGHmlrG6S-2_tabid-a" role="tabpanel" data-tab="tabid-a">
 
 <pre><code class="lang-powershell"># Add access token to header object for subsequent API requests
 $AuthHeader = @{&quot;Authorization&quot; = &quot;Bearer $($AuthResp.access_token)&quot;}
 
 # Query the Azure Stack Hub API for subscriptions
 Invoke-RestMethod -Method &quot;GET&quot; -Uri &quot;https://management.frn00006.azure.ukcloud.com/subscriptions&quot; -Headers $AuthHeader -Body @{&quot;api-version&quot; = &quot;2017-12-01&quot;} -ContentType &quot;application/x-www-form-urlencoded&quot;
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-2_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-bash">curl -H &quot;Authorization: Bearer eyJ0eXAiOi...truncated for readability...&quot; 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-2_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-bash">curl -H &quot;Authorization: Bearer eyJ0eXAiOi...truncated for readability...&quot; 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2017-12-01'
 </code></pre>
 </section>
 </div>

@@ -95,7 +95,7 @@
 
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Using the Kubernetes Azure Stack Hub Marketplace item to deploy clusters is now deprecated and should only be used as a proof-of-concept. For supported Kubernetes clusters on Azure Stack Hub, use <a href="https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-2002">the AKS engine</a>.</p>
+<p>Using the Kubernetes Azure Stack Hub Marketplace item to deploy clusters is now deprecated and should only be used as a proof-of-concept. For supported Kubernetes clusters on Azure Stack Hub, use <a href="https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-overview">the AKS engine</a>.</p>
 </div>
 <h2 id="overview">Overview</h2>
 <p>Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cluster in Azure Stack Hub. AKS reduces the complexity and operational overhead of managing Kubernetes by offloading much of that responsibility to Azure Stack Hub. As a hosted Kubernetes service, Azure Stack Hub handles critical tasks like health monitoring and maintenance for you.</p>
@@ -126,10 +126,9 @@
 <p><strong>SSH public key</strong> - SSH public key used for authentication to all Linux machines created as part of the Kubernetes cluster.</p>
 <p><strong>Master Profile DNS prefix</strong> - This must be a region-unique name, for example k8s-12345. Try to choose the same name as the resource group as best practice.</p>
 <p><strong>Kubernetes master pool profile count</strong> - The number of master nodes for the Kubernetes cluster. This value should be an odd number.</p>
-<p><strong>The VMSize of Kubernetes master VMs</strong> - The VM size of each master node. For information about the different available VM sizes, see <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">here</a>.</p>
+<p><strong>The virtual machine size of the Kubernetes master nodes</strong> - The VM size of each master node. For information about the different available VM sizes, see <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">here</a>.</p>
 <p><strong>Kubernetes node pool profile count</strong> - The number of agents for the Kubernetes cluster.</p>
-<p><strong>The VMSize of Kubernetes node VMs</strong> - The VM size of each agent node.</p>
-<p><strong>The Storage Profile</strong> - The storage profile for the Kubernetes cluster.</p>
+<p><strong>The virtual machine size of the Kubernetes linux agent nodes</strong> - The VM size of each agent node.</p>
 <p><strong>Azure Stack Hub identity system</strong> - Azure Stack Hub identity provider - defaults to AzureAD</p>
 <p><strong>Service principal clientId</strong> - The Service Principal application ID (used by the Kubernetes Azure cloud provider). More help <a href="https://github.com/Azure/acs-engine/blob/master/docs/serviceprincipal.md">here</a>.</p>
 <p><strong>Service principal client secret</strong> - The Service Principal Client secret.</p>

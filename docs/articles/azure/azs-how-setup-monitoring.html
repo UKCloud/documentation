@@ -99,95 +99,312 @@
 <p>You can find out more about Azure Stack Hub's built-in Azure Monitor capabilities in the following article <a href="https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-metrics-azure-data">Use Azure Monitor on Azure Stack Hub</a>.</p>
 </div>
 <h2 id="overview">Overview</h2>
-<p>This article will explain how to utilise public Azure Monitor with Azure Stack Hub and <strong>not</strong> the built-in Azure Monitor.</p>
-<p>Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive, and otherwise take action on the metrics and logs coming from resources in Azure.</p>
-<p>In this article we will enable the following solutions for Azure Stack Hub VMs:</p>
+<p>This article explain how to utilise public Azure Monitor with Azure Stack Hub <strong>instead of</strong> the built-in Azure Monitor.</p>
+<p>Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive and otherwise take action on the metrics and logs coming from resources in Azure.</p>
+<p>In this article we'll enable the following solutions for Azure Stack Hub VMs:</p>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-overview">Azure Monitor for VMs</a></li>
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack Hub portal.</p>
+<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack Hub portals.</p>
 <h2 id="enabling-azure-monitor-for-vms">Enabling Azure Monitor for VMs</h2>
 <div class="WARNING">
 <h5>Warning</h5>
 <p>Before proceeding, check <a href="https://docs.microsoft.com/en-gb/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems">here</a> that your VMs' OS version is supported.</p>
 </div>
+<h3 id="creating-the-log-analytics-workspace">Creating the Log Analytics Workspace</h3>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-a" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Portal</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-b" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-b" data-tab="tabid-b" tabindex="-1">PowerShell</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-2_tabid-a" role="tabpanel" data-tab="tabid-a">
+
 <ol>
 <li><p>Log in to the <a href="https://portal.azure.com">public Azure portal</a>.</p>
 </li>
-<li><p>Create a Log Analytics workspace in your Azure subscription:</p>
+<li><p>Create a Log Analytics Workspace in your Azure subscription:</p>
 <ul>
 <li><p>Click <strong>Create a resource</strong></p>
 </li>
 <li><p>In the search bar, search for <code>log analytics</code></p>
-<p><img src="images/azs-browser-search-log-analytics.png" alt="Log Analytics search"></p>
 </li>
-<li><p>Click <strong>Log Analytics</strong></p>
+<li><p>Click <strong>Log Analytics Workspace</strong></p>
 </li>
 <li><p>Click <strong>Create</strong></p>
+<p><img src="images/azs-browser-search-log-analytics.png" alt="Log Analytics search"></p>
 </li>
 <li><p>Provide the following:</p>
 <ul>
-<li><p>A <strong>unique</strong> name for the <strong>Log Analytics Workspace</strong>, for example: <code>DefaultLAWorkspace</code></p>
-</li>
 <li><p>A <strong>Subscription</strong> to link the workspace to</p>
 </li>
 <li><p>A <strong>Resource group</strong> to host the workspace in</p>
 </li>
-<li><p>A <strong>Location</strong> to host the workspace in</p>
+<li><p>A <em>unique</em> <strong>Name</strong> for the Log Analytics Workspace</p>
+</li>
+<li><p>A <strong>Region</strong> to host the workspace in</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Azure Monitor for VMs supports a Log Analytics workspace in the these <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#log-analytics">regions</a>.</p>
+<p>Azure Monitor for VMs supports Log Analytics Workspace in the following <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/vm/vminsights-configure-workspace?tabs=PowerShell#supported-regions">regions</a>.</p>
 </div>
-</li>
-<li><p>A <strong>Pricing tier</strong> to use</p>
-<p><img src="images/azs-browser-example-log-analytics-workspace.png" alt="Log Analytics workspace creation"></p>
-<p><em>The example above shows the blade with all items filled out.</em></p>
+<p><img src="images/azs-browser-example-log-analytics-workspace.png" alt="Log Analytics Workspace creation"></p>
 </li>
 </ul>
 </li>
-<li><p>Click <strong>OK</strong> once finished. The Log Analytics workspace will now begin deploying. A notification will appear in the top right of the portal.</p>
+<li><p>Click <strong>Review + Create</strong> once finished, then click <strong>Create</strong>. The Log Analytics Workspace will now begin deploying. A notification will appear in the top right of the portal.</p>
 </li>
 </ul>
 </li>
-<li><p>Once deployment is complete, navigate to the resource group you placed the Log Analytics workspace in.</p>
+<li><p>Once deployment is complete, navigate to the resource group you placed the Log Analytics Workspace in.</p>
 <ul>
-<li><p>Click the newly created workspace. On the new blade, under <em>Settings</em>, select <strong>Advanced settings</strong>, then select <strong>Windows Servers</strong> or <strong>Linux Servers</strong> depending on the VM type you want to add analytics too.
-Note down the <strong>Workspace ID</strong> and <strong>Primary Key</strong> values.</p>
-<p><img src="images/azs-browser-log-analytics-workspace-advanced-settings.png" alt="Log Analytics workspace advanced settings"></p>
+<li><p>Click the newly created workspace.</p>
 </li>
-<li><p>Within <em>Advanced settings</em>, select the <em>Data</em> blade, and click <strong>Windows Performance Counters</strong> or <strong>Linux Performance Counters</strong></p>
+<li><p>On the new blade, under <em>Settings</em>, select <strong>Agents management</strong>.</p>
 </li>
-<li><p>Ensure all counters are selected and click <strong>Add the selected performance counters</strong></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>For Linux performance counters, ensure <strong>Apply below configuration to my machines</strong> is selected.</p>
-</div>
-</li>
-<li><p>Click <strong>Save</strong></p>
-<p><img src="images/azs-browser-example-performance-counters.png" alt="Performance counters"></p>
+<li><p>Note down the <strong>Workspace ID</strong> and <strong>Primary Key</strong> values.</p>
+<p><img src="images/azs-browser-log-analytics-workspace-advanced-settings.png" alt="Log Analytics Workspace advanced settings"></p>
 </li>
 </ul>
 </li>
-<li><p>Log in to the <a href="https://portal.frn00006.azure.ukcloud.com">Azure Stack Hub portal</a>.</p>
-</li>
-</ol>
+<li><p>(Optional) Configure additional data sources</p>
+<ul>
+<li>Under <em>Settings</em>, select <strong>Agents configuration</strong>.</li>
+</ul>
 <div class="tabGroup" id="tabgroup_bHGHmlrG6S">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-a" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Portal</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-c" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-c" data-tab="tabid-c" tabindex="0" aria-selected="true">Windows</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-b" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-b" data-tab="tabid-b" tabindex="-1">PowerShell</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-d" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-d" data-tab="tabid-d" tabindex="-1">Linux</a>
 </li>
 </ul>
-<section id="tabpanel_bHGHmlrG6S_tabid-a" role="tabpanel" data-tab="tabid-a">
+<section id="tabpanel_bHGHmlrG6S_tabid-c" role="tabpanel" data-tab="tabid-c">
+<h4 id="windows-event-logs">Windows event logs</h4>
+<ul>
+<li><p>Click <strong>Add windows event log</strong></p>
+</li>
+<li><p>Select an event log from the dropdown and use the checkboxes to determine the severities that you want to collect for this log type.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If the log type you want to add does not appear in the list, you can add it by typing in the full name. You can find the full name of the log type in Event Viewer. Open the <em>Properties</em> page for the log type and copy the string from the <strong>Full Name</strong> field.</p>
+<p><img src="images/azs-event-viewer-log-type.png" alt="Event Viewer log type"></p>
+<p><img src="images/azs-event-viewer-log-type-properties.png" alt="Event Viewer log type &gt; Properties"></p>
+</div>
+</li>
+<li><p>Repeat for each event log you require, then click <strong>Apply</strong></p>
+<p><img src="images/azs-browser-agent-configuration-windows-event-logs.png" alt="Windows event logs"></p>
+</li>
+</ul>
+<h4 id="windows-performance-counters">Windows performance counters</h4>
+<ul>
+<li><p>Click <strong>Add performance counter</strong></p>
+</li>
+<li><p>Select a counter from the dropdown. You can adjust the sample rate to increase or decrease the amount of data collected for this counter.</p>
+</li>
+<li><p>Repeat for each performance counter you require, then click <strong>Apply</strong></p>
+<p><img src="images/azs-browser-agent-configuration-perf-counters-windows.png" alt="Windows performance counters"></p>
+</li>
+</ul>
+</section>
+<section id="tabpanel_bHGHmlrG6S_tabid-d" role="tabpanel" data-tab="tabid-d" aria-hidden="true" hidden="hidden">
+<h4 id="syslog">Syslog</h4>
+<ul>
+<li><p>Click <strong>Add facility</strong></p>
+</li>
+<li><p>Select a facility from the dropdown and use the checkboxes to determine the severities that you want to collect for this facility.</p>
+</li>
+<li><p>Repeat for each facility you require, then click <strong>Apply</strong></p>
+<p><img src="images/azs-browser-agent-configuration-syslog.png" alt="Syslog"></p>
+</li>
+</ul>
+<h4 id="linux-performance-counters">Linux performance counters</h4>
+<ul>
+<li><p>Click <strong>Add performance counter</strong></p>
+</li>
+<li><p>Select a counter from the dropdown. You can adjust the sample rate to increase or decrease the amount of data collected for this counter.</p>
+</li>
+<li><p>Repeat for each performance counter you require, then click <strong>Apply</strong></p>
+<p><img src="images/azs-browser-agent-configuration-perf-counters-linux.png" alt="Linux performance counters"></p>
+</li>
+</ul>
+</section>
+</div>
+</li>
+</ol>
+</section>
+<section id="tabpanel_bHGHmlrG6S-2_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
 
-<ol start="5">
+<ol>
+<li><p>Execute the following PowerShell script to create the log analytics workspace.</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$WorkspaceName</td>
+<td>The name of the log analytics workspace</td>
+<td><form oninput="result.value=workspacename.value" id="workspacename" style="display: inline;"><input type="text" id="workspacename" name="workspacename" style="display: inline;" placeholder="MyWorkspace"></form></td>
+</tr>
+<tr>
+<td>$WorkspaceResourceGroupName</td>
+<td>The name of the resource group which the log analytics workspace resides in</td>
+<td><form oninput="result.value=workspaceresourcegroup.value;result1.value=workspaceresourcegroup.value" id="workspaceresourcegroup" style="display: inline;"><input type="text" id="workspaceresourcegroup" name="workspaceresourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$WorkspaceLocation</td>
+<td>The region to deploy the log analytics workspace and resource group in</td>
+<td><form oninput="result.value=workspacelocation.value" id="workspacelocation" style="display: inline;"><input type="text" id="workspacelocation" name="workspacelocation" style="display: inline;" placeholder="UKSouth"></form></td>
+</tr>
+</tbody>
+</table>
+ <pre>
+ <code class="language-PowerShell"># Install module
+ Install-Module -Name "Az.OperationalInsights" -Scope AllUsers -Verbose -Force
+
+ # Initialise environment and variables
+
+ ## Login to public Azure
+ Connect-AzAccount -Environment "AzureCloud"
+
+ ## Create workspace analytics specific resources
+
+ # Input variables
+ $LogAnalyticsWorkspaceName = "<output form="workspacename" name="result" style="display: inline;">MyWorkspace</output>"
+ $LogAnalyticsWorkspaceResourceGroupName = "<output form="workspaceresourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+ $LogAnalyticsWorkspaceLocation = "<output form="workspacelocation" name="result" style="display: inline;">UKSouth</output>"
+
+ # Check if the Log Analytics resource group exists, if it doesn't exist then create it
+ try {
+     $LogAnalyticsWorkspaceResourceGroup = Get-AzResourceGroup -Name $LogAnalyticsWorkspaceResourceGroupName -Location $LogAnalyticsWorkspaceLocation -Verbose -ErrorAction Stop
+ }
+ catch {
+     Write-Warning -Message "Log Analytics Workspace resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" in location ""$($LogAnalyticsWorkspaceLocation)"" doesn't exist. Creating now..."
+     try {
+         $LogAnalyticsWorkspaceResourceGroup = New-AzResourceGroup -Name $LogAnalyticsWorkspaceResourceGroupName -Location $LogAnalyticsWorkspaceLocation -Verbose -ErrorAction Stop
+     }
+     catch {
+         Write-Error -Message "Failed to create Log Analytics Workspace resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" in location ""$($LogAnalyticsWorkspaceLocation)"":`n$($_.Exception.Message)"
+         throw
+     }
+ }
+ # Check if the Log Analytics Workspace exists, if it doesn't exist then create it
+ try {
+     Write-Verbose "Attempting to retrieve Log Analytics Workspace ""$($LogAnalyticsWorkspaceName)"" in resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" and location ""$($LogAnalyticsWorkspaceLocation)""."
+     $LogAnalyticsWorkspace = Get-AzOperationalInsightsWorkspace -ResourceGroupName $LogAnalyticsWorkspaceResourceGroup.ResourceGroupName -Name $LogAnalyticsWorkspaceName -Verbose -ErrorAction Stop
+ }
+ catch {
+     try {
+         Write-Warning -Message "Log Analytics Workspace ""$($LogAnalyticsWorkspaceName)"" in location ""$($LogAnalyticsWorkspaceLocation)"" doesn't exist. Creating now..."
+         $LogAnalyticsWorkspace = New-AzOperationalInsightsWorkspace -ResourceGroupName $LogAnalyticsWorkspaceResourceGroup.ResourceGroupName -Name $LogAnalyticsWorkspaceName -Location $LogAnalyticsWorkspaceLocation -Verbose -ErrorAction Stop
+     }
+     catch {
+         Write-Error -Message "Failed to create Log Analytics Workspace ""$($LogAnalyticsWorkspaceName)"" in resource group ""$($LogAnalyticsWorkspaceResourceGroupName)"" and location ""$($LogAnalyticsWorkspaceLocation)"":`n$($_.Exception.Message)"
+         throw
+     }
+ }
+ try {
+     # Get Log Analytics Workspace GUID and primary key
+     Write-Verbose -Message "Attempting to retrieve Log Analytics Workspace ""$($LogAnalyticsWorkspace.Name)"" GUID, primary key and base64 encode them."
+     $EncodedWorkspaceGuid = [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes(($LogAnalyticsWorkspace.CustomerId).GUID))
+     $WorkspaceKey = (Get-AzOperationalInsightsWorkspaceSharedKey -ResourceGroupName $LogAnalyticsWorkspace.ResourceGroupName -Name $LogAnalyticsWorkspace.Name -Verbose -ErrorAction Stop).PrimarySharedKey
+     $EncodedWorkspaceKey = [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes($WorkspaceKey))
+ }
+ catch {
+     Write-Error -Message "Failed to obtain Log Analytics Workspace ""$($LogAnalyticsWorkspace.Name)"" GUID or primary key:`n$($_.Exception.Message)"
+     throw
+ }</code></pre>
+</li>
+<li><p>(Optional) Configure data sources for additional logs</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-c" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-c" data-tab="tabid-c" tabindex="0" aria-selected="true">Windows</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-d" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-d" data-tab="tabid-d" tabindex="-1">Linux</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-1_tabid-c" role="tabpanel" data-tab="tabid-c">
+
+<pre><code class="lang-powershell"># Windows event logs
+## The below example will create data sources for the event logs &quot;System&quot;, &quot;Application&quot; and &quot;Setup&quot;, with all severities being collected
+$EventLogNames = @(&quot;System&quot;, &quot;Application&quot;, &quot;Setup&quot;)
+foreach ($EventLogName in $EventLogNames) {
+    New-AzOperationalInsightsWindowsEventDataSource `
+        -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName `
+        -WorkspaceName $LogAnalyticsWorkspaceName `
+        -Name &quot;$($EventLogName) Event Log&quot; `
+        -EventLogName $EventLogName `
+        -CollectErrors `
+        -CollectWarnings `
+        -CollectInformation
+}
+
+&lt;# ---- Performance counter format ----
+ To select all instances of a counter, add (*) after the object name:
+    Object name(*)\Counter name
+
+ To select a specific instance of a counter, add (Instance name) after the object name:
+    Object name(Instance name)\Counter name
+#&gt;
+
+# Windows performance counters
+## The below example will create the counter &quot;Memory(*)\Available MBytes&quot;
+New-AzOperationalInsightsWindowsPerformanceCounterDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName -ObjectName &quot;Memory&quot; -InstanceName &quot;*&quot; -CounterName &quot;Available MBytes&quot; -IntervalSeconds 20 -Name &quot;Example Windows Performance Counter&quot;
+
+# Enable IIS Log Collection using agent
+Enable-AzOperationalInsightsIISLogCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_tabid-d" role="tabpanel" data-tab="tabid-d" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-powershell"># Linux performance counters
+## The below example will create multiple counters &quot;% Used Inodes&quot;, &quot;Free Megabytes&quot;, &quot;% Used Space&quot;, &quot;Disk Transfers/sec&quot;, &quot;Disk Reads/sec&quot; and &quot;Disk Writes/sec&quot;, all under the parent counter &quot;Logical Disk&quot;
+New-AzOperationalInsightsLinuxPerformanceObjectDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName -ObjectName &quot;Logical Disk&quot; -InstanceName &quot;*&quot; -CounterNames @(&quot;% Used Inodes&quot;, &quot;Free Megabytes&quot;, &quot;% Used Space&quot;, &quot;Disk Transfers/sec&quot;, &quot;Disk Reads/sec&quot;, &quot;Disk Writes/sec&quot;) -IntervalSeconds 20 -Name &quot;Example Linux Disk Performance Counters&quot;
+## Enable the collection of performance counters from Linux computers
+Enable-AzOperationalInsightsLinuxPerformanceCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName
+
+# Linux Syslog
+## The below example will create a data source for the &quot;kern&quot; facility, with all severities being collected
+New-AzOperationalInsightsLinuxSyslogDataSource -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName -Facility &quot;kern&quot; -CollectEmergency -CollectAlert -CollectCritical -CollectError -CollectWarning -CollectNotice -CollectInfo -CollectDebug -Name &quot;Example kernel Syslog collection&quot;
+## Enable the collection of Syslog data from Linux computers
+Enable-AzOperationalInsightsLinuxSyslogCollection -ResourceGroupName $LogAnalyticsWorkspaceResourceGroupName -WorkspaceName $LogAnalyticsWorkspaceName
+</code></pre>
+</section>
+</div>
+</li>
+</ol>
+</section>
+</div>
+<h3 id="installing-the-extensions">Installing the extensions</h3>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-3">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-3_tabid-a" role="tab" aria-controls="tabpanel_bHGHmlrG6S-3_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Portal</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-3_tabid-b" role="tab" aria-controls="tabpanel_bHGHmlrG6S-3_tabid-b" data-tab="tabid-b" tabindex="-1">PowerShell</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-3_tabid-a" role="tabpanel" data-tab="tabid-a">
+
+<ol>
+<li><p>Log in to the <a href="https://portal.frn00006.azure.ukcloud.com">Azure Stack Hub portal</a>.</p>
+</li>
 <li><p>Navigate to the VM that you want to enable Azure Monitor on and under <em>Settings</em>, select the <em>Extensions</em> blade.</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>For any monitoring to work correctly, the VM <strong>must</strong> have HTTPS (Port 443) enabled in the <strong>Network Security Group</strong> rules.</p>
+<p>For any monitoring to work correctly, the VM <strong>must</strong> have HTTPS (port 443) enabled in the <strong>Network Security Group</strong> rules.</p>
 </div>
 </li>
 <li><p>Click <strong>Add</strong> at the top, select the extension <strong>Azure Monitor Dependency Agent</strong>, click <strong>Create</strong> and then <strong>OK</strong>.</p>
@@ -198,18 +415,18 @@ Note down the <strong>Workspace ID</strong> and <strong>Primary Key</strong> val
 </li>
 <li><p>Click <strong>Add</strong> at the top, select the extension <strong>Azure Monitor, Update and Configuration Management</strong> and then click <strong>Create</strong>.</p>
 <ul>
-<li><p>Provide the extension with the <strong>Workspace ID</strong> and <strong>Primary Key</strong> values (noted down previously).</p>
+<li><p>Provide the extension with the <strong>Workspace ID</strong> and <strong>Primary Key</strong> values (noted down previously), then click <strong>OK</strong>.</p>
 <p><img src="images/azs-browser-log-analytics-enable-update-management.png" alt="VM enable update management"></p>
 </li>
 </ul>
 </li>
 </ol>
 </section>
-<section id="tabpanel_bHGHmlrG6S_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_bHGHmlrG6S-3_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
 
-<ol start="5">
+<ol>
 <li><p>Execute the following PowerShell script to setup the <strong>Azure Monitor Dependency Agent</strong> and <strong>Azure Monitor, Update and Configuration Management</strong> extensions.</p>
-<h3 id="declare-variables">Declare variables</h3>
+<h4 id="declare-variables">Declare variables</h4>
 <p>Enter details below to provide values for the variables in the following script in this article:</p>
 <table>
 <thead>
@@ -227,8 +444,13 @@ Note down the <strong>Workspace ID</strong> and <strong>Primary Key</strong> val
 </tr>
 <tr>
 <td>$ResourceGroupName</td>
-<td>Name of the resource group which the VM resides in</td>
+<td>The name of the resource group which the VM resides in</td>
 <td><form oninput="result.value=resourcegroup.value;result1.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$NetworkSecurityGroupName</td>
+<td>The name of the network security group to apply the inbound port 443 rule to</td>
+<td><form oninput="result.value=networksecuritygroupname.value" id="networksecuritygroupname" style="display: inline;"><input type="text" id="networksecuritygroupname" name="networksecuritygroupname" style="display: inline;" placeholder="AzureStackHubVMNSG"></form></td>
 </tr>
 <tr>
 <td>$WorkspaceKey</td>
@@ -240,18 +462,16 @@ Note down the <strong>Workspace ID</strong> and <strong>Primary Key</strong> val
 <td>The log analytics workspace ID</td>
 <td><form oninput="result.value=workspaceid.value" id="workspaceid" style="display: inline;"><input type="text" id="workspaceid" name="workspaceid" style="display: inline;" placeholder="a40470ff-d8a0-4d37-ba13-274d4649a674"></form></td>
 </tr>
-<tr>
-<td>$NetworkSecurityGroupName</td>
-<td>The name of the network security group to apply the inbound port 443 rule to</td>
-<td><form oninput="result.value=networksecuritygroupname.value" id="networksecuritygroupname" style="display: inline;"><input type="text" id="networksecuritygroupname" name="networksecuritygroupname" style="display: inline;" placeholder="AzureStackHubVMNSG"></form></td>
-</tr>
 </tbody>
 </table>
- <pre><code class="language-PowerShell"># Declare variables
- $ResourceGroupName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+ <pre>
+ <code class="language-PowerShell"># Declare variables
  $VMName = "<output form="vmname" name="result" style="display: inline;">AzureStackHubVM</output>"
+ $ResourceGroupName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+ $NetworkSecurityGroupName = "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>"
  $WorkspaceKey = "<output form="workspacekey" name="result" style="display: inline;">2Fzno00qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ==</output>"
- $PublicSettings = "{'workspaceId': '<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>'}"
+ $WorkspaceId = "<output form="workspaceid" name="result" style="display: inline;">a40470ef-d8a0-4d37-ba13-274d4649a674</output>"
+ $PublicSettings = "{'workspaceId': `'$WorkspaceId`'}"
  $ProtectedSettings = "{'workspaceKey': `'$WorkspaceKey`'}"
  $Location = (Get-AzLocation).Location
 
@@ -259,38 +479,58 @@ Note down the <strong>Workspace ID</strong> and <strong>Primary Key</strong> val
  $VM = Get-AzVM -ResourceGroupName $ResourceGroupName -VMName $VMName
 
  # Obtain network security group, create the port 443 inbound network security group rule and apply the rule to it
- Get-AzNetworkSecurityGroup -Name "<output form="networksecuritygroupname" name="result" style="display: inline;">AzureStackHubVMNSG</output>" -ResourceGroupName "<output form="resourcegroup" name="result1" style="display: inline;">MyResourceGroup</output>" | New-AzNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzNetworkSecurityGroup
+ Get-AzNetworkSecurityGroup -Name $NetworkSecurityGroupName -ResourceGroupName $ResourceGroupName | New-AzNetworkSecurityRuleConfig -Name "Port443-Rule" -Description "Allow port 443" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 443 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" | Set-AzNetworkSecurityGroup
+
+ # Determine if VM is Windows or Linux based
+ if ($VM.OsProfile.WindowsConfiguration) {
+     $DependencyAgentType = "DependencyAgentWindows"
+     $DependencyAgentVersion = "9.10"
+     $MonitoringAgentType = "MicrosoftMonitoringAgent"
+     $MonitoringAgentVersion = "1.0"
+ }
+ else {
+     $DependencyAgentType = "DependencyAgentLinux"
+     $DependencyAgentVersion = "9.10"
+     $MonitoringAgentType = "OmsAgentForLinux"
+     $MonitoringAgentVersion = "1.13"
+ }
 
  # Deploy DependencyAgent extension
  Set-AzVMExtension -ExtensionName "DependencyAgent" `
- -ResourceGroupName $VM.ResourceGroupName `
- -VMName $VM.Name `
- -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
- -ExtensionType "DependencyAgentLinux" `
- -TypeHandlerVersion 9.7 `
- -Location $Location `
- -Verbose
+                   -ResourceGroupName $VM.ResourceGroupName `
+                   -VMName $VM.Name `
+                   -Location $Location `
+                   -Publisher "Microsoft.Azure.Monitoring.DependencyAgent" `
+                   -ExtensionType $DependencyAgentType `
+                   -TypeHandlerVersion $DependencyAgentVersion `
+                   -Verbose
 
  # Deploy Microsoft.EnterpriseCloud.Monitoring extension
  Set-AzVMExtension -ExtensionName "Microsoft.EnterpriseCloud.Monitoring" `
- -ResourceGroupName $VM.ResourceGroupName `
- -VMName $VM.Name `
- -Publisher "Microsoft.EnterpriseCloud.Monitoring" `
- -ExtensionType "OmsAgentForLinux" `
- -TypeHandlerVersion 1.12 `
- -SettingString $PublicSettings `
- -ProtectedSettingString $ProtectedSettings `
- -Location $Location `
- -Verbose</code></pre>
-</li>
-<li><p>Continue to step 8.</p>
+                   -ResourceGroupName $VM.ResourceGroupName `
+                   -VMName $VM.Name `
+                   -Location $Location `
+                   -Publisher "Microsoft.EnterpriseCloud.Monitoring" `
+                   -ExtensionType $MonitoringAgentType `
+                   -TypeHandlerVersion $MonitoringAgentVersion `
+                   -SettingString $PublicSettings `
+                   -ProtectedSettingString $ProtectedSettings `
+                   -Verbose</code></pre>
 </li>
 </ol>
 </section>
 </div>
+<h3 id="configuring-the-log-analytics-workspace">Configuring the Log Analytics Workspace</h3>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-4">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-4_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-4_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Portal</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-4_tabid-1" role="tabpanel" data-tab="tabid-1">
 
-<ol start="8">
-<li><p>In public Azure, on the top left, click the hamburger icon and select <strong>Monitor</strong>.</p>
+<ol>
+<li><p>In public Azure, select <strong>Monitor</strong> from the favourites menu on the left.</p>
 <p><img src="images/azs-browser-public-azure-hamburger-menu-monitor.png" alt="Public Azure Hamburger menu"></p>
 </li>
 <li><p>In the new blade under <em>Insights</em>, click <strong>Virtual Machines</strong>.</p>
@@ -307,15 +547,60 @@ Note down the <strong>Workspace ID</strong> and <strong>Primary Key</strong> val
 </li>
 <li><p>A prompt will appear to upgrade the workspace, click <strong>Upgrade</strong>. In the new blade, click <strong>Upgrade</strong> again.</p>
 </li>
-<li><p>Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled <strong>Azure Monitor for VMs</strong> on.</p>
-<p><img src="images/azs-browser-example-monitor-stats.png" alt="Monitor stats example"></p>
-<p><img src="images/azs-browser-example-monitor-map.png" alt="Monitor map example"></p>
+<li><p>Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you've enabled <strong>Azure Monitor for VMs</strong> on.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure Monitor enabled VMs.</p>
 </div>
+<p><img src="images/azs-browser-example-monitor-stats.png" alt="Monitor stats example"></p>
+<p><img src="images/azs-browser-example-monitor-map.png" alt="Monitor map example"></p>
 </li>
 </ol>
+</section>
+</div>
+<h3 id="executing-kusto-query-language-kql-queries-to-retrieve-data-from-the-log-analytics-workspace">Executing Kusto Query Language (KQL) queries to retrieve data from the Log Analytics Workspace</h3>
+<div class="TIP">
+<h5>Tip</h5>
+<p>For more information on using KQL queries, see <a href="https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuremonitor">Tutorial: Use Kusto queries</a>.</p>
+</div>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-5">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-5_tabid-a" role="tab" aria-controls="tabpanel_bHGHmlrG6S-5_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Portal</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-5_tabid-b" role="tab" aria-controls="tabpanel_bHGHmlrG6S-5_tabid-b" data-tab="tabid-b" tabindex="-1">PowerShell</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-5_tabid-a" role="tabpanel" data-tab="tabid-a">
+
+<ol>
+<li><p>Navigate to the Log Analytics Workspace you created.</p>
+</li>
+<li><p>Under <em>General</em>, click <strong>Logs</strong>.</p>
+</li>
+<li><p>Enter the KQL query in the <em>New Query 1</em> tab, then click <strong>Run</strong>.</p>
+<p>The below example will select data from the event log table <code>Event</code>, filtering for events of type <code>System</code> and containing the phrase <code>was unexpected</code>, then sorted by the <code>TimeGenerated</code> field in descending order.</p>
+<p><img src="images/azs-browser-log-analytics-query.png" alt="Monitor stats example"></p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_bHGHmlrG6S-5_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+<pre>
+<code class="language-PowerShell"># Declare KQL query
+## The below example will select data from the event log table "Event", filtering for events of type "System" and containing the phrase "was unexpected", then sorted by the "TimeGenerated" field in descending order
+$Query = 'Event | where EventLog == "System" | search "was unexpected" | sort by TimeGenerated desc'
+
+# Execute the KQL query and obtain the results
+$QueryResults = Invoke-AzOperationalInsightsQuery -WorkspaceId $WorkspaceId -Query $Query -Timespan "$(New-TimeSpan -Hours 48)"
+
+# Convert the results to a PowerShell array object
+$ResultsArray = [System.Linq.Enumerable]::ToArray($QueryResults.Results)
+
+# Print the array
+$ResultsArray</code></pre>
+</section>
+</div>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
