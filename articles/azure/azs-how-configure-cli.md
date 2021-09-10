@@ -3,8 +3,8 @@ title: How to configure the Azure Stack Hub user's Azure CLI environment | Based
 description: Learn how to use the cross-platform command-line interface (CLI) to manage and deploy resources on Azure Stack Hub
 services: azure-stack
 author: Chris Black
-reviewer: Daniel Brennand
-lastreviewed: 25/03/2020 17:03:00
+reviewer: William Turner
+lastreviewed: 09/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -39,27 +39,25 @@ In this article, we will guide you through the process of installing and using t
 Sign in to your development workstation and install CLI. Azure Stack Hub requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli) article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:
 
    ```azurecli
-      bash-5.0# az --version
-      azure-cli                          2.2.0
+      bash-5.1# az --version
+      azure-cli                         2.27.0
 
-      command-modules-nspkg              2.0.3
-      core                               2.2.0
-      nspkg                              3.0.4
-      telemetry                          1.0.4
+      core                              2.27.0
+      telemetry                          1.0.6
 
       Python location '/usr/local/bin/python'
       Extensions directory '/root/.azure/cliextensions'
 
-      Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
-      [GCC 8.3.0]
+      Python (Linux) 3.8.9 (default, Apr 15 2021, 05:07:04)
+      [GCC 10.2.1 20201203]
 
       Legal docs and information: aka.ms/AzureCliLegal
 
 
-
       Your CLI is up-to-date.
 
-      Please let us know how we are doing: https://aka.ms/clihats
+      Please let us know how we are doing: https://aka.ms/azureclihats
+      and let us know if you're interested in trying out our newest features: https://aka.ms/CLIUXstudy
    ```
 
 You should see the version of Azure CLI and other dependent libraries that are installed on your computer.
@@ -85,7 +83,7 @@ To start the Azure CLI docker container, run the following command:
 
 > [!CAUTION]
 > If you are running Docker Desktop on Windows and receive the following error:
-> 
+>
 > ```cmd
 > C:\Program Files\Docker\Docker\Resources\bin\docker.exe: image operating system "linux" cannot be used on this platform.
 > ```
@@ -93,32 +91,30 @@ To start the Azure CLI docker container, run the following command:
 
 This command will execute an interactive terminal session inside the container and remove it on exit.
 
-You will now be in the container's interactive terminal session and see the following prompt: `bash-5.0#`.
+You will now be in the container's interactive terminal session and see the following prompt: `bash-X.X#`.
 
 You can run `az --version` to verify the Azure CLI is working correctly:
 
 ```azurecli
-   bash-5.0# az --version
-   azure-cli                          2.2.0
+   bash-5.1# az --version
+   azure-cli                         2.27.0
 
-   command-modules-nspkg              2.0.3
-   core                               2.2.0
-   nspkg                              3.0.4
-   telemetry                          1.0.4
+   core                              2.27.0
+   telemetry                          1.0.6
 
    Python location '/usr/local/bin/python'
    Extensions directory '/root/.azure/cliextensions'
 
-   Python (Linux) 3.6.9 (default, Nov 15 2019, 03:58:01)
-   [GCC 8.3.0]
+   Python (Linux) 3.8.9 (default, Apr 15 2021, 05:07:04)
+   [GCC 10.2.1 20201203]
 
    Legal docs and information: aka.ms/AzureCliLegal
 
 
-
    Your CLI is up-to-date.
 
-   Please let us know how we are doing: https://aka.ms/clihats
+   Please let us know how we are doing: https://aka.ms/azureclihats
+   and let us know if you're interested in trying out our newest features: https://aka.ms/CLIUXstudy
 ```
 
 ***
@@ -219,7 +215,7 @@ Use the following steps to connect to Azure Stack Hub:
       az --help
       ```
 
-7. To list commands for specific subgroup run:
+7. To list commands for a specific subgroup run:
 
       ```azurecli
       az <subgroupname> --help
@@ -246,7 +242,25 @@ az group create -n MyResourceGroup -l frn00006
 
 If the resource group is created successfully, the previous command outputs the following properties of the newly created resource:
 
-![Resource group create output](https://docs.microsoft.com/en-us/azure/azure-stack/user/media/azure-stack-connect-cli/image1.png)
+```azurecli
+{
+  "id": "/subscriptions/{removed}/resourceGroups/MyResourceGroup",
+  "location": "frn00006",
+  "managedBy": null,
+  "name": "MyResourceGroup",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": null
+}
+```
+
+To remove the above resource group, run the following command:
+
+```azurecli
+az group delete -n MyResourceGroup
+```
 
 ## Known issues
 
