@@ -2,9 +2,9 @@
 title: Snapshot Protection Service Scope
 description: Outlines important details regarding the Snapshot Protection service
 services: vmware
-author: Steve Hall
-reviewer: George Smith
-lastreviewed: 28/10/2019 13:50:39
+author: shall
+reviewer: gsmith
+lastreviewed: 07/09/2021 
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -119,7 +119,7 @@ Restores are performed outside of the backup window, unless a P1 incident is inv
 
 ### What you get
 
-We'll instantiate a new VM. This will incur additional storage charges. However, we can also restore over the existing VM if desired.
+We'll instantiate a new VM. This will incur additional storage charges.
 
 We'll provide an image from a successful snapshot of your choice from within the policy length (that is, the last 14 or 28 days).
 
