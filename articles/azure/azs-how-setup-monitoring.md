@@ -359,6 +359,8 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ***
 
+### Configuring the Log Analytics Workspace
+
 # [Portal](#tab/tabid-1)
 
 1. In public Azure, select **Monitor** from the favourites menu on the left.
