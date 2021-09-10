@@ -98,21 +98,21 @@
 <ul>
 <li><p>Raise and monitor support tickets</p>
 </li>
-<li><p>View notifications relating to the UKCloud platform</p>
-</li>
-<li><p>View cyber security news</p>
-</li>
-<li><p>View information about your UKCloud for VMware service, including VM information and backup reports</p>
+<li><p>View information about your UKCloud for VMware service, including virtual machine (VM) information, backup reports and build history</p>
 </li>
 <li><p>Create compute services, virtual data centres (VDCs) and edge gateways within your UKCloud for VMware environment</p>
 </li>
-<li><p>Access VMware Cloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall</p>
+<li><p>Access VMware Cloud Director to work with your UKCloud for VMware environment, for example to create and manage VMs, build VDC networks or configure your firewall</p>
 </li>
 <li><p>Access the OpenStack Horizon dashboard to work with your UKCloud for OpenStack environment, for example to build your network infrastructure, set up access and security and launch instances</p>
 </li>
-<li><p>Access the Azure Stack Hub portal to manage your UKCloud for Microsoft Azure environment, for example to create virtual machines</p>
+<li><p>Access the Azure Stack Hub portal to manage your UKCloud for Microsoft Azure environment, for example to create VMs</p>
 </li>
-<li><p>View information about your Cloud Storage service, including secret keys and storage consumption</p>
+<li><p>View consumption information for your Cloud Storage service, reset secret keys and create new users</p>
+</li>
+<li><p>View major incident (MI) notifications relating to the UKCloud platform</p>
+</li>
+<li><p>View cyber security news</p>
 </li>
 </ul>
 <p>This Getting Started Guide provides an overview of the functionality available within the Portal.</p>
@@ -123,7 +123,7 @@
 <p>The options you can see and tasks you can perform within the Portal depend on the services available in your account and the permissions you've been granted by your Portal administrator.</p>
 </div>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>You should have received your Portal login credentials from your Portal administrator. If you're the Portal administrator, your Service Delivery Manager (SDM) will have provided you with your login credentials.</p>
+<p>You should have received your Portal login credentials from your Portal administrator. If you're the Portal administrator, a member of the Service Delivery team will provide your login credentials.</p>
 <p>The Portal works with Google Chrome, Microsoft Edge and Mozilla Firefox.</p>
 <h2 id="logging-in-to-the-ukcloud-portal">Logging in to the UKCloud Portal</h2>
 <p>The first thing you need to do is log in.</p>
@@ -132,17 +132,17 @@
 <ul>
 <li><p><strong>Assured OFFICIAL:</strong> <a href="https://portal.ukcloud.com">https://portal.ukcloud.com</a></p>
 </li>
-<li><p><strong>Elevated OFFICIAL:</strong> Contact your Portal administrator or SDM</p>
+<li><p><strong>Elevated OFFICIAL:</strong> Contact your Portal administrator, your Service Delivery Manager (or <a href="mailto:servicedelivery@ukcloud.com">servicedelivery@ukcloud.com</a>), or UKCloud Support (call 01252 303 300 and select option 2)</p>
 </li>
 </ul>
 </li>
 <li><p>On the log in page, enter your credentials and click <strong>Log in</strong>.</p>
-<p><img src="images/ptl-login.png" alt="UKCloud Portal Log in page"></p>
+<p><img src="images/ptl-login.png" alt="UKCloud Portal log in page"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>If you've forgotten your password, click the <strong>Forgotten password?</strong> link to request a password reset.</p>
 </div>
-<p>If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or SDM. You'll be prompted to change this temporary password.</p>
+<p>If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or the Service Delivery team. You'll be prompted to change this temporary password.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.</p>
@@ -168,7 +168,7 @@
 <p><img src="images/ptl-mnu-customer-account.png" alt="Account menu"></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>When you switch between accounts, you may be prompted to enter a 2FA code again if this additional security measure has been enabled by your Portal administrator.</p>
+<p>When you switch between accounts, you may be prompted to enter a 2FA code again if this additional security measure has been enabled by the Portal administrator of that account.</p>
 </div>
 <p>In the toolbar, you can also click your username to access the following options:</p>
 <p><img src="images/ptl-mnu-user-account.png" alt="User menu"></p>
@@ -220,13 +220,13 @@
 </li>
 </ul>
 </li>
-<li><p><strong>Settings</strong> - Change various Portal settings, including key contacts, password expiration period, two factor authentication and IP address restrictions (Portal administrators only).</p>
+<li><p><strong>Settings</strong> - (Portal administrators only) Change various Portal settings, including key contacts, password expiration period, two factor authentication and IP address restrictions (see <a href="ptl-ref-security-settings.html"><em>UKCloud Portal security settings</em></a>).</p>
 </li>
-<li><p><strong>Contacts</strong> - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (<strong>All Contacts</strong>) or just those with administration permissions (<strong>Admin Contacts</strong>). Portal administrators can create new users, reset other users' passwords and change other users' Portal permissions (see <a href="ptl-ref-overview-permissions.html"><em>An Overview of Portal Permissions</em></a>).</p>
+<li><p><strong>Contacts</strong> - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (<strong>All Contacts</strong>) or just those with administration permissions (<strong>Admin Contacts</strong>). Portal administrators can create new users, reset other users' passwords and change other users' Portal permissions (see <a href="ptl-ref-overview-permissions.html"><em>Portal permissions</em></a>).</p>
 </li>
 <li><p><strong>VMware Cloud</strong> - Provides access to UKCloud for VMware compute services. Expand this option and then select the compute service with which you want to work (see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>).</p>
 </li>
-<li><p><strong>Oracle Cloud</strong> - Provides access to the OEM Cloud Control console for UKCloud for Oracle Software (see the <a href="../oracle/orcl-gs.html"><em>Getting Started Guide for UKCloud for Oracle Software</em></a>).</p>
+<li><p><strong>Oracle Cloud</strong> - Provides access to the Oracle Enterprise Manager (OEM) Cloud Control console for UKCloud for Oracle Software (see the <a href="../oracle/orcl-gs.html"><em>Getting Started Guide for UKCloud for Oracle Software</em></a>).</p>
 </li>
 <li><p><strong>OpenStack Cloud</strong> - Provides access to the OpenStack Horizon dashboard for UKCloud for OpenStack (see the <a href="../openstack/ostack-gs.html"><em>Getting Started Guide for UKCloud for OpenStack</em></a>).</p>
 </li>
