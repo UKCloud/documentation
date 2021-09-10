@@ -75,9 +75,9 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 
 ### UKCloud for Microsoft Azure Stack Hub
 
-&nbsp;                       | Private Cloud
------------------------------|-------------
-**Availability commitment**  | 99.99%
+&nbsp;                       | UKCloud for Microsoft Azure Stack Hub
+-----------------------------|--------------------------------------
+**Availability commitment**  | 99.90%
 **Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days)
 **Emergency Maintenance**    | Excluded
 **Planned Maintenance**      | Excluded
