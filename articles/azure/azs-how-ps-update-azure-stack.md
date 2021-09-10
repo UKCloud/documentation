@@ -4,7 +4,7 @@ description: Azure Stack Hub update procedure guide for support
 services: azure-stack
 author: Chris Black
 reviewer: William Turner
-lastreviewed: 03/04/2020
+lastreviewed: 09/08/2021
 
 toc_rootlink: Operators
 toc_sub1: How To
@@ -30,7 +30,7 @@ Prerequisites from a Windows-based external client.
 > [!IMPORTANT]
 > Always consult Microsoft documentation for your specific Update Version
 >
-> Example -> [1902 Update](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-update-1902)
+> Example -> [2102 Update](https://docs.microsoft.com/en-us/azure-stack/operator/release-notes?view=azs-2102)
 
 ## High Level Overview of the process
 
@@ -38,16 +38,16 @@ Prerequisites from a Windows-based external client.
 >
 > We strongly recommend that you notify users of any maintenance operations, and that you schedule normal maintenance windows during non-business hours as much as possible. Maintenance operations may affect both user workloads and portal operations.
 
-1. Raise a pre-emptive case with Microsoft prior to starting the Update.
-
-2. Go to the **Update** blade on the Administration Portal.
+1. Go to the **Update** blade on the Administration Portal.
 
     > [!IMPORTANT]
     > From 1807 onwards you no longer need to download Update and Hotfix packages manually.
     >
     > They are automatically pulled by Azure Stack Hub itself and will show as **update available** in the portal.
 
-3. Start the Update process.
+2. Start the Update process.
+
+3. If the update process fails for any reason, raise a support case with Microsoft immediately.
 
 ## Feedback
 
