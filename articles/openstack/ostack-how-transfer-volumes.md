@@ -28,7 +28,7 @@ This article provides examples of how to transfer volumes between OpenStack proj
 
 This article is intended for anyone responsible for the design and implementation of applications and services deployed on UKCloud OpenStack service. Users should be familiar with using the OpenStack dashboard and API or CLI.
 
-## Transferring volumes between Projects.
+## Transferring volumes between projects
 
 > [!NOTE]
 > You'll require a RC file for both the source project and the destination project.
