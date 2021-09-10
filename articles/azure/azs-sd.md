@@ -1,10 +1,10 @@
 ---
-title: UKCloud for Microsoft Azure Service Definition
+title: UKCloud for Microsoft Azure Stack Hub Service Definition
 description: Provides an overview of what is provided by the UKCloud for Microsoft Azure service
 services: azure-stack
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 15/04/2021
+reviewer: shall
+lastreviewed: 10/09/2021
 toc_rootlink: Users
 toc_sub1: Service Information
 toc_sub2:
@@ -15,11 +15,11 @@ toc_fullpath: Users/Service Information/azs-sd.md
 toc_mdlink: azs-sd.md
 ---
 
-# UKCloud for Microsoft Azure Service Definition
+# UKCloud for Microsoft Azure Stack Hub Service Definition
 
-## What is UKCloud for Microsoft Azure?
+## What is UKCloud for Microsoft Azure Stack Hub?
 
-UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure Stack Hub platform. The service is delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK Public Sector organisations and their industry partners. UKCloud can also support your deployments on Azure public or manage private Azure Stack Hub environments, giving you one partner for all your Microsoft Azure environments.
+UKCloud for Microsoft Azure Stack Hub harnesses the innovation of Microsoft's Azure Stack Hub platform. The service is delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK Public Sector organisations and their industry partners. UKCloud can also support your deployments on Azure public or manage private Azure Stack Hub environments, giving you one partner for all your Microsoft Azure environments.
 
 ## What the service can help you achieve
 
@@ -39,11 +39,9 @@ UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure Stack 
 
 The service is designed to be flexible and enables you to mix and match from a range of pre-defined options for each virtual machine.
 
-![UKCloud for Microsoft Azure product options](images/azs-product-options-g12.png)
+![UKCloud for Microsoft Azure Stack Hub product options](images/azs-product-options-g12.png)
 
-### Additional deployment options
-
-#### Private Cloud
+#### Private Cloud deployment
 
 IaaS and PaaS on a dedicated infrastructure. Service options include:
 
@@ -63,13 +61,15 @@ IaaS and PaaS on a dedicated infrastructure. Service options include:
 
   - Flexible purchase options. Based on CapEx, OpEx or bring your own infrastructure.
 
+### Additional deployment options
+
 #### Microsoft Azure's public cloud services
 
 UKCloud can support with your licensing, management and utilisation of tenancies on the Microsoft public cloud. Get in touch to find out more.
 
 ## Pricing and packaging
 
-UKCloud for Microsoft Azure VM pricing can be as low as 3p per hour. Full pricing with all options, including public Azure, licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for Microsoft Azure Stack Hub VM pricing can be as low as 3p per hour. Full pricing with all options, including public Azure, licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
