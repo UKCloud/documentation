@@ -2,9 +2,9 @@
 title: How to create a load balancer for Azure Stack Hub
 description: Provides help for creating a load balancer on UKCloud for Microsoft Azure
 services: azure-stack
-author: Bailey Lawson
-reviewer: William Turner
-lastreviewed: 30/03/2020
+author: blawson
+reviewer: wturner
+lastreviewed: 09/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -20,7 +20,7 @@ toc_mdlink: azs-how-create-load-balancer.md
 
 ## Overview
 
-A load balancer provides scale and availability by spreading incoming requests across multiple virtual machines within a load balancing pool. This guide shows you how to create a pool of back-end servers and a load balancer to spread traffic across them. In this example, the load balancer spreads traffic across two web servers.
+A load balancer provides scale and availability by spreading incoming requests across multiple virtual machines within a load balancing pool. This article shows you how to create a pool of back-end servers and a load balancer to spread traffic across them. In this example, the load balancer spreads traffic across two web servers.
 
 ### Intended audience
 
@@ -28,7 +28,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Creating a load balancer
 
-In this section we will create a load balancer with a public IP address.
+In this section we'll create a load balancer with a public IP address.
 
 1. Log in to the Azure Stack Hub portal.
 
@@ -38,7 +38,7 @@ In this section we will create a load balancer with a public IP address.
 
    ![Create a resource option in favourites panel](images/azsp_newmenu.png)
 
-3. In the **New** blade, select **Networking**.
+3. In the *New* blade, select **Networking**.
 
    ![Networking option in New blade](images/azs-browser-new-networking.png)
 
@@ -46,35 +46,33 @@ In this section we will create a load balancer with a public IP address.
 
    ![Create new networking resource](images/azs-browser-networking-create.png)
 
-5. In the **Create load balancer** blade, enter the following information:
+5. In the *Create load balancer* blade, enter the following information:
 
-   - **Name** - The name of the load balancer.
+    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
-   - **Type** - You can use internal load balancers to balance traffic from private IP addresses. Public load balancers can balance traffic originating from public IP addresses. For this example we will be creating a public load balancer.
+    - **Resource group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
-   - **Public IP Address** - The public IP address that will be assigned to this load balancer. To create a new public IP address:
+    - **Name** - The name of the load balancer.
 
-     - Select **Create new** from the **Public IP address** options.
+    - **Region** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
-     - Enter a name for the public IP address.
+    - **Type** - You can use internal load balancers to balance traffic from private IP addresses. Public load balancers can balance traffic originating from public IP addresses. For this example we will be creating a public load balancer.
 
-     - Expand the *Configure public IP address* section.
+    - **Public IP address** - The public IP address that will be assigned to this load balancer. To create a new public IP address:
 
-     - Select either **Dynamic** or **Static** from the **Assignment** options. We recommend selecting the **Static** option when creating a load balancer.
+        - Select **Create new** from the **Public IP address** options.
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
+        - Enter a name for the public IP address.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
+        - Select either **Dynamic** or **Static** from the **Assignment** options. We recommend selecting the **Static** option when creating a load balancer.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
+      ![Create new load balancer](images/azs-browser-create-load-balancer.png)
 
-     ![Create new load balancer](images/azs-browser-create-load-balancer.png)
-
-6. Click **Create**.
+6. Click **Review + create**, then click **Create** on the review blade.
 
 ## Create back-end servers
 
-In this section we will create a virtual network and two virtual machines which exist on this network. This will form the back-end pool of the load balancer.
+In this section we'll create a virtual network and two virtual machines which exist on this network. This will form the back-end pool of the load balancer.
 
 ### Create a virtual network
 
@@ -82,7 +80,7 @@ In this section we will create a virtual network and two virtual machines which 
 
    ![Create a resource option in favourites panel](images/azsp_newmenu.png)
 
-2. In the **New** blade, select **Networking**.
+2. In the *New* blade, select **Networking**.
 
    ![Networking option in New blade](images/azs-browser-new-networking.png)
 
@@ -90,25 +88,31 @@ In this section we will create a virtual network and two virtual machines which 
 
    ![Create new networking resource](images/azs-browser-networking-create.png)
 
-4. In the **Create virtual network** blade, enter the following information:
+4. In the *Create virtual network* blade, enter the following information:
 
-   - **Name** - The name of the virtual network.
+    - **Basics** tab
 
-   - **Address Space** - The virtual network's address range in CIDR notation (for example, 192.168.1.0/16).
+        - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
+        - **Resource group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop out window.
+        - **Name** - The name of the virtual network.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
+        - **Region** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
-   - **Subnet Name** - The name of the first subnet within the virtual network.
+      ![Create new virtual network - Basics](images/azs-browser-create-virtual-network.png)
 
-   - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0/24). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
+    - **IP Addresses** tab
 
-     ![Create new virtual network](images/azs-browser-create-virtual-network.png)
+        - **IPv4 address space** - The virtual network's address range in CIDR notation (for example, 192.168.1.0/16).
 
-5. Click **Create**.
+        - **Subnet name** - The name of the first subnet within the virtual network.
+
+        - **Subnet address range** - The subnet's address range in CIDR notation (for example, 192.168.1.0/24). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
+
+      ![Create new virtual network - IP Addresses](images/azs-browser-create-virtual-network2.png)
+
+5. Click **Review + create**, then click **Create** on the review blade.
 
 ### Create the virtual machines
 
@@ -116,73 +120,82 @@ In this section we will create a virtual network and two virtual machines which 
 
    ![Create a resource option in favourites panel](images/azsp_newmenu.png)
 
-2. In the **New** blade, select **Compute**.
+2. In the *New* blade, select **Compute**.
 
    ![Compute option in New blade](images/azsp_newblade.png)
 
-3. In the **Compute** blade, select the template that you want to use for your VM.
+3. In the *Compute* blade, select the template that you want to use for your VM.
 
     ![List of VM images in Compute blade](images/azsp_computeblade.png)
 
-4. In the **Create virtual machine** blade, in the **Basics** step, enter general information about the VM, including a name, credentials and resource group, then click **OK**.
-  
-   ![Create virtual machine > Basics](images/azsp_createvm_basics.png)
+4. In the *Create virtual machine* blade, in the **Basics** step, enter general information about the VM, including a name, credentials and resource group.
 
-5. In the *Size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
+    ![Create virtual machine > Basics](images/azsp_lb_createvm_basics.png)
 
-   For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
+5. Click **Change size** under the currently selected VM size to view all the available sizes. Select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
-   > [!TIP]
-   > By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click **View all**.
+    For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
 
-   ![Create virtual machine > Size](images/azsp_createvm_size.png)
+    > [!TIP]
+    > By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click **See all sizes**.
 
-6. In the **Settings** step, change any of the optional settings as required for your VM, then click **OK**. Ensure that the virtual network created earlier is selected and that the VM belongs to an availability set. To create a new availability set:
+    ![Create virtual machine > Size](images/azsp_lb_createvm_size.png)
 
-   - Click **Availability set** on the **Create virtual machine** blade.
+6. The VM needs to belong to an availability set. To create a new availability set:
 
-   - Select **Create new** on the **Change availability set** blade.
+    - Select **Availability set** from the **Availability options** dropdown.
 
-   - Enter a name for the availability set and the number of fault domains and update domains, then click **OK**.
+    - Select **Create new** under the new **Availability set** dropdown.
 
-   ![Create virtual machine > Settings](images/azs-browser-vm-settings-as.png)
+    - In the *Create new* blade, enter a **Name** for the availability set, select the number of **Fault domains** and **Update domains**, then click **OK**.
 
-7. In the **Summary** step, review the selections you've made and then click **OK** to start the deployment.
+    ![Create virtual machine > Create availability set](images/azsp_lb_createvm_availabilityset.png)
 
-8. Create another VM, ensuring that the **Availability set**, **Virtual network**, **Subnet** and **Network Security Group** are the same.
+7. After completeing information on the **Basics** tab, select the **Networking** tab.
+
+8. Ensure that the **Virtual network** and **Subnet** you created earlier are selected, then click **Review + create**
+
+    ![Create virtual machine > Networking](images/azsp_lb_createvm_networking.png)
+
+9. In the **Review + create** step, review the selections you've made and then click **Create** to start the deployment.
+
+10. Create another VM, ensuring that the **Availability set**, **Virtual network**, **Subnet** and **Network Security Group** are the same.
 
 ### Create network security group rules
 
-In this section we will create NSG rules to allow inbound traffic.
+In this section we'll create network security group (NSG) rules to allow inbound traffic.
 
-1. Navigate to your network security group by clicking on **All services** in the favourites panel, then selecting **Network security groups** under the networking section.
+> [!NOTE]
+> For testing purposes, we'll create a rule to allow all inbound traffic on port 80 (HTTP) in order to access the web server home page on both of the virtual machines.
+
+1. Navigate to your network security group by clicking **All services** in the favourites panel, then selecting **Network security groups** under the *Networking* section.
 
 2. Select the network security group your VMs are using from the list.
 
-3. In the blade for your network security group, select **Inbound security rules** under the **Settings** section.
+3. In the blade for your network security group, select **Inbound security rules** under the *Settings* section.
 
-4. Click the **+Add** button.
+4. Click the **Add** button.
 
-5. In the **Add inbound security rule** blade, enter the following information:
+5. In the *Add inbound security rule* blade, enter the following information:
 
    - **Source** - The source filter can be Any, an IP address range, or a default tag. It specifies the incoming traffic from a specific source IP address range that will be allowed or denied by this rule.
 
-   - **Source port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
+   - **Source port ranges** - Provide a single port, such as 80; a port range, such as 1024-65535; or a comma-separated list of single ports and/or port ranges, such as 80,1024-65535. This specifies which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
 
    - **Destination** - The destination filter can be Any, an IP address range, or a default tag. It specifies the outgoing traffic for a specific destination IP address range that will be allowed or denied by this rule.
 
-   - **Destination port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
+   - **Destination port ranges** - Provide a single port, such as 80; a port range, such as 1024-65535; or a comma-separated list of single ports and/or port ranges, such as 80,1024-65535. This specifies which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
 
-   - **Protocol** - Specify whether to allow inbound traffic using UDP, TCP or both.
+   - **Protocol** - Select whether to allow inbound traffic using UDP, TCP or both.
 
-   - **Action** - Choose whether the rule allows or denies the traffic specified.
+   - **Action** - Select whether the rule allows or denies the traffic specified.
 
-   - **Priority** - Rules are processed in priority order; the lower the number, the higher the priority. We recommend leaving gaps between rules - 100, 200, 300, etc. - so that it's easier to add new rules without having to edit existing rules.
+   - **Priority** - Rules are processed in priority order; the lower the number, the higher the priority. We recommend leaving gaps between rule priority numbers, for example, 100, 200, 300, so that it's easier to add new rules without having to edit existing rules.
 
    - **Name** - The name of the security rule.
 
    - **Description** - A description of the security rule.
-  
+
     ![Add an inbound security rule](images/azs-browser-add-in-security-rule.png)
 
 6. Click **Add**.
@@ -191,39 +204,46 @@ In this section we will create NSG rules to allow inbound traffic.
 
 To spread traffic load across the VMs, you must create a back-end address pool. This pool contains the IP addresses of the VMs.
 
-1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
+1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the *Networking* section.
 
 2. From the list, select the load balancer you created earlier.
 
-3. In the blade for your load balancer, select **Backend pools** under the **Settings** section.
+3. In the blade for your load balancer, select **Backend pools** under the *Settings* section.
 
-4. Click the **+Add** button.
+4. Click the **Add** button.
 
-5. In the **Add backend pool** blade, enter a name for the backend pool.
+5. In the *Add backend pool* blade, enter a name for the backend pool.
 
-6. Select **Availability set** for the **Associated to** option, then select the availability set that you created in the previous section.
+6. Select the virtual network you created earlier.
 
-7. Click the **+ Add a target network IP configuration** button, select the first VM you created in the previous section and select the network IP to be associated with the back-end pool.
+7. Select **Virtual machines** for the **Associated to** option.
 
-8. Repeat step 7 for the second VM.
+8. Click the **Add** button in the *Virtual machines* section.
+
+9. In the *Add virtual machines to backend pool* blade, select the two virtual machines you created earlier amd click **Add**.
+
+   ![Add a backend pool > Add VMs](images/azs-browser-add-backend-pool-vms.png)
+
+10. Click the **Add** button at the bottom of the the *Add backend pool* blade.
 
    ![Add a backend pool](images/azs-browser-add-backend-pool.png)
-
-9. Click **OK**.
 
 ### Create a health probe
 
 When creating a load balancer, you can use a health probe to monitor the status of your application. In Azure Stack Hub, the health probe adds and removes VMs from the load balancer back-end pool based on their current status.
 
-1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
+> [!NOTE]
+> Again, for testing purposes, we'll create the health probe to monitor traffic on port 80 (HTTP).
+
+1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the *Networking* section.
 
 2. From the list, select the load balancer you created earlier.
 
-3. In the blade for your load balancer, select **Health Probes** under the **Settings** section.
+3. In the blade for your load balancer, select **Health Probes** under the *Settings* section.
 
-4. Click the **+Add** button.
+4. Click the **Add** button.
 
-5. In the **Add health probe** blade, enter the following information:
+5. In the *Add health probe* blade, enter the following information:
 
    - **Name** - The name of your health probe.
 
@@ -234,7 +254,7 @@ When creating a load balancer, you can use a health probe to monitor the status 
    - **Interval** - The number of seconds between probe attempts.
 
    - **Unhealthy threshold** - The number of consecutive probe failures that must occur before a virtual machine is considered unhealthy and is removed from the pool.
-  
+
     ![Add a health probe](images/azs-browser-add-health-probe.png)
 
 6. Click **OK**.
@@ -243,15 +263,18 @@ When creating a load balancer, you can use a health probe to monitor the status 
 
 A load balancer rule defines how traffic is distributed between VMs. The rule listens for traffic on a front-end IP address, then distributes it among the back-end pool.
 
-1. Navigate to your load balancer by clicking on **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
+> [!NOTE]
+> Again, for testing purposes, we'll create the load balancer rule for port 80 (HTTP).
+
+1. Navigate to your load balancer by clicking on **All services** in the favourites panel, then selecting **Load balancers** under the *Networking* section.
 
 2. From the list, select the load balancer you created earlier.
 
-3. In the blade for your load balancer, select **Load balancing rules** under the **Settings** section.
+3. In the blade for your load balancer, select **Load balancing rules** under the *Settings* section.
 
-4. Click the **+Add** button.
+4. Click the **Add** button.
 
-5. In the **Add load balancing rule** blade, enter the following information:
+5. In the *Add load balancing rule* blade, enter the following information:
 
    - **Name** - The name of your load balancing rule.
 
@@ -267,7 +290,7 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
    - **Health probe** - The selected probe is used by this rule to determine which virtual machines in the back-end pool are healthy and can receive load-balanced traffic. Select the probe that you created in the previous section.
 
-   - **Session Persistence** - Session persistence specifies that traffic from a client should be handled by the same virtual machine in the back-end pool for the duration of a session.
+   - **Session persistence** - Session persistence specifies that traffic from a client should be handled by the same virtual machine in the back-end pool for the duration of a session.
 
       - **None** specifies that successive requests from the same client may be handled by any virtual machine.
 
@@ -275,9 +298,9 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
       - **Client IP and protocol** specifies that successive requests from the same client IP address and protocol combination will be handled by the same virtual machine.
 
-   - **Idle timeout** - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.
+   - **Idle timeout (minutes)** - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.
 
-   - **Floating IP** - Can be enabled to change the IP address mapping scheme to allow for additional flexibility, see [here](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-multivip-overview) for further details.
+   - **Floating IP (direct server return)** - Can be enabled to change the IP address mapping scheme to allow for additional flexibility, see [here](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-multivip-overview) for further details.
 
     ![Add a load balancing rule](images/azs-browser-add-lb-rule.png)
 
@@ -287,13 +310,13 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
 After installing the application that is being load-balanced on each of the VMs, the load balancer is ready to test.
 
-1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
+1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the *Networking* section.
 
 2. From the list, select the load balancer you created earlier.
 
-3. Copy the **Public IP address** from the **Overview** section.
+3. Copy the **Public IP address** from the *Overview* section.
 
-4. Test the connection to your application. For example, if the app is a web server, paste the public IP into the address bar of your browser. The home page of the web server should be displayed.
+4. Test the connection to your application. For example, if the application is a web server, paste the public IP into the address bar of your browser. The home page of the web server should be displayed.
 
 ## Feedback
 
