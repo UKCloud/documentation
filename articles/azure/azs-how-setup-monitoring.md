@@ -2,8 +2,8 @@
 title: How to configure Azure Monitor for VMs on Azure Stack Hub
 description: Describes how to configure Azure Monitor for VMs on Azure Stack Hub
 services: azure-stack
-author: Daniel Brennand
-reviewer: William Turner
+author: dbrennand
+reviewer: wturner
 lastreviewed: 08/09/2021
 
 toc_rootlink: Users
@@ -25,17 +25,17 @@ toc_mdlink: azs-how-setup-monitoring.md
 
 ## Overview
 
-This article will explain how to utilise public Azure Monitor with Azure Stack Hub and **not** the built-in Azure Monitor.
+This article explain how to utilise public Azure Monitor with Azure Stack Hub **instead of** the built-in Azure Monitor.
 
-Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive, and otherwise take action on the metrics and logs coming from resources in Azure.
+Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive and otherwise take action on the metrics and logs coming from resources in Azure.
 
-In this article we will enable the following solutions for Azure Stack Hub VMs:
+In this article we'll enable the following solutions for Azure Stack Hub VMs:
 
 - [Azure Monitor for VMs](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-overview)
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack Hub portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack Hub portals.
 
 ## Enabling Azure Monitor for VMs
 
@@ -66,12 +66,12 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         - A **Resource group** to host the workspace in
 
-        - A **unique** name for the **Log Analytics Workspace**
+        - A *unique* **Name** for the Log Analytics Workspace
 
         - A **Region** to host the workspace in
 
             > [!NOTE]
-            > Azure Monitor for VMs supports a Log Analytics Workspace in the following [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/vm/vminsights-configure-workspace?tabs=PowerShell#supported-regions).
+            > Azure Monitor for VMs supports Log Analytics Workspace in the following [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/vm/vminsights-configure-workspace?tabs=PowerShell#supported-regions).
 
             ![Log Analytics Workspace creation](images/azs-browser-example-log-analytics-workspace.png)
 
@@ -79,8 +79,11 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. Once deployment is complete, navigate to the resource group you placed the Log Analytics Workspace in.
 
-    - Click the newly created workspace. On the new blade, under *Settings*, select **Agents management**.
-    Note down the **Workspace ID** and **Primary Key** values.
+    - Click the newly created workspace.
+
+    - On the new blade, under *Settings*, select **Agents management**.
+
+    - Note down the **Workspace ID** and **Primary Key** values.
 
        ![Log Analytics Workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
@@ -97,7 +100,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     - Select an event log from the dropdown and use the checkboxes to determine the severities that you want to collect for this log type.
 
       > [!NOTE]
-      > If the log type you want to add does not appear in the list, you can still add it by typing in the full name. You can find the full name of the log type in Event Viewer. Open the *Properties* page for the log type and copy the string from the **Full Name** field.
+      > If the log type you want to add does not appear in the list, you can add it by typing in the full name. You can find the full name of the log type in Event Viewer. Open the *Properties* page for the log type and copy the string from the **Full Name** field.
       >
       > ![Event Viewer log type](images/azs-event-viewer-log-type.png)
       >
@@ -111,7 +114,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Click **Add performance counter**
 
-    - Select a counter from the dropdown. The sample rate can be adjusted to increase or decrease the amount of data collected for this counter.
+    - Select a counter from the dropdown. You can adjust the sample rate to increase or decrease the amount of data collected for this counter.
 
     - Repeat for each performance counter you require, then click **Apply**
 
@@ -133,7 +136,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Click **Add performance counter**
 
-    - Select a counter from the dropdown. The sample rate can be adjusted to increase or decrease the amount of data collected for this counter.
+    - Select a counter from the dropdown. You can adjust the sample rate to increase or decrease the amount of data collected for this counter.
 
     - Repeat for each performance counter you require, then click **Apply**
 
@@ -148,7 +151,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     | Variable name   | Variable description                                               | Input            |
     |-----------------|--------------------------------------------------------------------|------------------|
     | \$WorkspaceName    | The name of the log analytics workspace                 | <form oninput="result.value=workspacename.value" id="workspacename" style="display: inline;"><input type="text" id="workspacename" name="workspacename" style="display: inline;" placeholder="MyWorkspace"/></form> |
-    | \$WorkspaceResourceGroupName        | Name of the resource group which the log analytics workspace resides in                           | <form oninput="result.value=workspaceresourcegroup.value;result1.value=workspaceresourcegroup.value" id="workspaceresourcegroup" style="display: inline;"><input type="text" id="workspaceresourcegroup" name="workspaceresourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+    | \$WorkspaceResourceGroupName        | The name of the resource group which the log analytics workspace resides in                           | <form oninput="result.value=workspaceresourcegroup.value;result1.value=workspaceresourcegroup.value" id="workspaceresourcegroup" style="display: inline;"><input type="text" id="workspaceresourcegroup" name="workspaceresourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
     | \$WorkspaceLocation        | The region to deploy the log analytics workspace and resource group in                          | <form oninput="result.value=workspacelocation.value" id="workspacelocation" style="display: inline;"><input type="text" id="workspacelocation" name="workspacelocation" style="display: inline;" placeholder="UKSouth"/></form> |
 
     <pre>
@@ -272,7 +275,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 2. Navigate to the VM that you want to enable Azure Monitor on and under *Settings*, select the *Extensions* blade.
 
     > [!WARNING]
-    > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
+    > For any monitoring to work correctly, the VM **must** have HTTPS (port 443) enabled in the **Network Security Group** rules.
 
 3. Click **Add** at the top, select the extension **Azure Monitor Dependency Agent**, click **Create** and then **OK**.
 
@@ -296,7 +299,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     | Variable name   | Variable description                                               | Input            |
     |-----------------|--------------------------------------------------------------------|------------------|
     | \$VMName    | The name of the virtual machine                 | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="AzureStackHubVM"/></form> |
-    | \$ResourceGroupName        | Name of the resource group which the VM resides in                           | <form oninput="result.value=resourcegroup.value;result1.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+    | \$ResourceGroupName        | The name of the resource group which the VM resides in                           | <form oninput="result.value=resourcegroup.value;result1.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
     | \$NetworkSecurityGroupName        | The name of the network security group to apply the inbound port 443 rule to                           | <form oninput="result.value=networksecuritygroupname.value" id="networksecuritygroupname" style="display: inline;"><input type="text" id="networksecuritygroupname" name="networksecuritygroupname" style="display: inline;" placeholder="AzureStackHubVMNSG"/></form> |
     | \$WorkspaceKey        | The log analytics workspace primary key                           | <form oninput="result.value=workspacekey.value" id="workspacekey" style="display: inline;"><input type="text" id="workspacekey" name="workspacekey" style="display: inline;" placeholder="2Fzno02qWtiyVWbyvxelAFbjyMGsAgRDpolEmaf8ndiIbi4g8Uht+TNU/aTLEzkVw5/eA9K65+W3pKfiP7GYRQ=="/></form> |
     | \$WorkspaceId        | The log analytics workspace ID                           | <form oninput="result.value=workspaceid.value" id="workspaceid" style="display: inline;"><input type="text" id="workspaceid" name="workspaceid" style="display: inline;" placeholder="a40470ff-d8a0-4d37-ba13-274d4649a674"/></form> |
@@ -377,7 +380,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 5. A prompt will appear to upgrade the workspace, click **Upgrade**. In the new blade, click **Upgrade** again.
 
-6. Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you have enabled **Azure Monitor for VMs** on.
+6. Upon refreshing the page, the prompt will disappear and the workspace will begin showing usage analytics for the VMs you've enabled **Azure Monitor for VMs** on.
 
     > [!NOTE]
     > It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure Monitor enabled VMs.
@@ -399,9 +402,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Under *General*, click **Logs**.
 
-3. Enter the KQL query in the *New Query 1** tab, then click **Run**.
+3. Enter the KQL query in the *New Query 1* tab, then click **Run**.
 
-    The below example will select data from the event log table "Event", filtering for events of type "System" and containing the phrase "was unexpected", then sorted by the "TimeGenerated" field in descending order.
+    The below example will select data from the event log table `Event`, filtering for events of type `System` and containing the phrase `was unexpected`, then sorted by the `TimeGenerated` field in descending order.
 
     ![Monitor stats example](images/azs-browser-log-analytics-query.png)
 
