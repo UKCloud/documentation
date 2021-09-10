@@ -4,7 +4,7 @@ description: Create an Azure Kubernetes Service cluster using Azure Stack Hub
 services: azure-stack
 author: Bailey Lawson
 reviewer: William Turner
-lastreviewed: 03/04/2020
+lastreviewed: 09/08/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -19,7 +19,7 @@ toc_mdlink: azs-how-create-aks.md
 # How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack Hub portal
 
 > [!WARNING]
-> Using the Kubernetes Azure Stack Hub Marketplace item to deploy clusters is now deprecated and should only be used as a proof-of-concept. For supported Kubernetes clusters on Azure Stack Hub, use [the AKS engine](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-2002).
+> Using the Kubernetes Azure Stack Hub Marketplace item to deploy clusters is now deprecated and should only be used as a proof-of-concept. For supported Kubernetes clusters on Azure Stack Hub, use [the AKS engine](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-overview).
 
 ## Overview
 
@@ -67,13 +67,11 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    **Kubernetes master pool profile count** - The number of master nodes for the Kubernetes cluster. This value should be an odd number.
 
-   **The VMSize of Kubernetes master VMs** - The VM size of each master node. For information about the different available VM sizes, see [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
+   **The virtual machine size of the Kubernetes master nodes** - The VM size of each master node. For information about the different available VM sizes, see [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
    **Kubernetes node pool profile count** - The number of agents for the Kubernetes cluster.
 
-   **The VMSize of Kubernetes node VMs** - The VM size of each agent node.
-
-   **The Storage Profile** - The storage profile for the Kubernetes cluster.
+   **The virtual machine size of the Kubernetes linux agent nodes** - The VM size of each agent node.
 
    **Azure Stack Hub identity system** - Azure Stack Hub identity provider - defaults to AzureAD
 
