@@ -2,9 +2,9 @@
 title: How to share images between two projects
 description: Helps you understand how you can share images between two projects.
 services: openstack
-author: Steve Relf
+author: srelf
 reviewer:
-lastreviewed:
+lastreviewed: 26/08/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,36 +20,46 @@ toc_mdlink: ostack-how-share-images.md
 
 ## Overview
 
+You may require the ability to use multiple projects, but may want to use custom images across those projects. Sharing images between projects enables you to create master images in a single project, and then share them into multiple other projects.
+
 This article provides examples of how to share images between OpenStack projects in the same region.
 
 ### Intended audience
 
-Anyone responsible for the design and implementation of applications and services deployed on UKCloud OpenStack service, and should be familiar with using the OpenStack dashboard and API/CLI.
+This article is intended for anyone responsible for the design and implementation of applications and services deployed on UKCloud's OpenStack service. Users should be familiar with using the OpenStack dashboard and API or CLI.
 
-## Background
-
-Customers may require the ability to use multiple projects, but may wish to share custom images between those projects. This allows for master images to be created in a single project, and then shared into multiple other projects.
-
-## Sharing images between projects.
+## Sharing images between projects
 
 > [!NOTE]
 > You will require a RC file for both the source project and the destination project.
 
-- Source the source project RC file
-- Locate the destination project
- - openstack project list
-- Locate the image you wish to share
- - openstack image list
-- Set the image as shareable.
- - openstack image set --shared image-id
-- share the image with the destination project
- - glance member-create image-id dest-project-id
-- Source the destination RC file
-- Check that the image share is pending
- - openstack image member list image-id
-- Accept the image share
- - openstack  image set --accept image-id
+1. Source the source project RC file.
 
+2. Locate the destination project:
+
+   `openstack project list`
+
+3. Locate the image you want to share:
+
+   `openstack image list`
+
+4. Set the image as shareable:
+
+   `openstack image set --shared image-id`
+   
+5. Share the image with the destination project:
+
+   `glance member-create image-id dest-project-id`
+
+6. Source the destination RC file.
+
+7. Check that the image share is pending:
+
+   `openstack image member list image-id`
+
+9. Accept the image share:
+
+   `openstack image set --accept image-id`
 
 ## Feedback
 
