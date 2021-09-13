@@ -289,17 +289,17 @@ try {
     $AppGet
 
     # Create a Service Principal Name (SPN) for the application created earlier
-    $SPN = New-AzADServicePrincipal -ApplicationId $AppGet.AppId
+    $SPN = New-AzADServicePrincipal -ApplicationId $AppGet.ApplicationId
 
     Write-Output -InputObject "Waiting for the SPN to be created..."
     Start-Sleep -Seconds 35
 
     # Assign the Service Principal Name a role
-    New-AzRoleAssignment -RoleDefinitionName $PublicAzureRole -ServicePrincipalName $AppGet.AppId | Out-Null
+    New-AzRoleAssignment -RoleDefinitionName $PublicAzureRole -ServicePrincipalName $AppGet.ApplicationId | Out-Null
     Get-AzRoleAssignment -ObjectId $SPN.Id.Guid
 }
 catch {
-    Write-Error -Message "$($_.Exception.Message)"
+    Write-Error -Message $_.Exception.Message
     break
 }
 
@@ -330,7 +330,7 @@ Get-AzADApplication -ObjectId $AppGet.ObjectId | Select-Object -Property *
 
 # Create your SPN credentials login
 # Note: Username is "ApplicationId"
-$SPNCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AppGet.AppId, $AppPasswordSecure
+$SPNCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AppGet.ApplicationId, $AppPasswordSecure
 
 # Log in to public Azure using SPN account
 Connect-AzAccount -Credential $SPNCreds -ServicePrincipal -TenantId $TenantDomain
@@ -380,7 +380,7 @@ Remove-AzResourceGroup -Name $AzureStackResourceGroup -Force
 $SPN = [PSCustomObject]@{
     ArmEndpoint    = $ArmEndpoint
     SubscriptionId = $SubId.SubscriptionId
-    ClientId       = $AppGet.AppId
+    ClientId       = $AppGet.ApplicationId
     ClientSecret   = $AppPassword
     TenantId       = $SubId.TenantId
 }
@@ -451,23 +451,23 @@ try {
     $AppGet
 
     # Create a Service Principal Name (SPN) for the application created earlier
-    $SPN = New-AzADServicePrincipal -ApplicationId $AppGet.AppId
+    $SPN = New-AzADServicePrincipal -ApplicationId $AppGet.ApplicationId
 
     Write-Output -InputObject "Waiting for the SPN to be created..."
     Start-Sleep -Seconds 35
 
     # Assign the Service Principal Name a role
-    New-AzRoleAssignment -RoleDefinitionName "Owner" -ServicePrincipalName $AppGet.AppId | Out-Null
+    New-AzRoleAssignment -RoleDefinitionName "Owner" -ServicePrincipalName $AppGet.ApplicationId | Out-Null
     Get-AzRoleAssignment -ObjectId $SPN.Id.Guid
 }
 catch {
-    Write-Error -Message "$($_.Exception.Message)"
+    Write-Error -Message $_.Exception.Message
     break
 }
 
 # Create your SPN credentials login
 # Note: (Username is "ApplicationId")
-$AzureStackCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AppGet.AppId, $AppPasswordSecure
+$AzureStackCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AppGet.ApplicationId, $AppPasswordSecure
 
 # Log in to Azure Stack Hub using SPN account
 Connect-AzAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCred -ServicePrincipal -TenantId $TenantDomain
@@ -485,7 +485,7 @@ Remove-AzResourceGroup -Name $AzureStackResourceGroup -Force
 $SPN = [PSCustomObject]@{
     ArmEndpoint    = $ArmEndpoint
     SubscriptionId = $SubId.SubscriptionId
-    ClientId       = $AppGet.AppId
+    ClientId       = $AppGet.ApplicationId
     ClientSecret   = $AppPassword
     TenantId       = $SubId.TenantId
 }

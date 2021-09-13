@@ -149,12 +149,12 @@
 <td>G</td>
 <td>OSID</td>
 <td>Operating system</td>
-<td>VMware</td>
+<td>OpenStack, VMware</td>
 </tr>
 <tr>
 <td>H</td>
 <td>Service</td>
-<td>The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 1 Encrypted<br>OpenStack Block Storage Tier 2<br>OpenStack Block Storage Tier 2 Encrypted<br>OpenStack Image<br>OpenStack Instance Backup Storage<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM</td>
+<td>The UKCloud service to which the charge applies:<br>OpenShift Application<br>OpenShift Control Plane<br>OpenShift Infrastructure<br>OpenShift Master<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 1 Encrypted<br>OpenStack Block Storage Tier 2<br>OpenStack Block Storage Tier 2 Encrypted<br>OpenStack Image<br>OpenStack Instance Backup Storage<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM</td>
 <td>OpenStack, VMware</td>
 </tr>
 <tr>
@@ -431,13 +431,13 @@
 <td>BB</td>
 <td>LicensePricePerHour</td>
 <td>Licence charges for the VM</td>
-<td>VMware</td>
+<td>OpenStack, VMware</td>
 </tr>
 <tr>
 <td>BC</td>
 <td>LicenseTotalPrice</td>
 <td>LicensePricePerHour * UsageHoursWithinPeriod</td>
-<td></td>
+<td>OpenStack, VMware</td>
 </tr>
 <tr>
 <td>BD</td>
@@ -448,6 +448,23 @@
 </tbody>
 </table>
 <h2 id="key-changes-to-the-evidence-file-november-2017-onwards">Key changes to the Evidence File (November 2017 onwards)</h2>
+<h3 id="august-2021">August 2021</h3>
+<p>Support for OpenShift infrastructure VMs on OpenStack has been added to the evidence files.</p>
+<ul>
+<li><p>Column H : has 4 new service types</p>
+<ul>
+<li>OpenShift Application</li>
+<li>OpenShift Control Plane</li>
+<li>OpenShift Infrastructure</li>
+<li>OpenShift Master</li>
+</ul>
+</li>
+<li><p>Columns BB and BC</p>
+<ul>
+<li>OpenShift infrastructure on OpenStack carries a license charge.</li>
+</ul>
+</li>
+</ul>
 <h3 id="march-2020">March 2020</h3>
 <p>Support for new OpenStack services has been added to the evidence files.</p>
 <ul>
