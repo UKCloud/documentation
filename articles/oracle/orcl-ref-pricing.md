@@ -3,8 +3,8 @@ title: Pricing information for UKCloud for Oracle Software
 description: Provides useful information about UKCloud for Oracle Software pricing, including pricing examples
 services: oracle
 author: shighmoor
-reviewer:
-lastreviewed: 25/09/2020
+reviewer: shighmoor
+lastreviewed: 14/09/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:

@@ -3,8 +3,8 @@ title: Pricing information for Cross Domain Security Zone
 description: Provides useful information about Cross Domain Security Zone pricing, including pricing examples
 services: cdsz
 author: shighmoor
-reviewer:
-lastreviewed: 25/09/2020
+reviewer: shighmoor
+lastreviewed: 14/09/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:

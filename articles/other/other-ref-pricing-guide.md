@@ -4,7 +4,7 @@ description: Provides links to the UKCloud Pricing Guide and SFIA Rate Card
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 26/09/2020
+lastreviewed: 14/09/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

@@ -3,8 +3,8 @@ title: Pricing information for Secure Remote Access
 description: Provides useful information about Secure Remote Access pricing, including pricing examples
 services: sra
 author: shighmoor
-reviewer:
-lastreviewed: 25/09/2020
+reviewer: shighmoor
+lastreviewed: 14/09/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
