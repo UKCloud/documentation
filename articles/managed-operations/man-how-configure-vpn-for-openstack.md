@@ -221,7 +221,7 @@ The final step is to set up the VPN endpoints using the pfSense dashboard.
 
 3. Once you're logged in, you should see the following dashboard:
 
-   ![pfSense dashboard](man-mmaas-openstack-pfsense-dashboard.png)
+   ![pfSense dashboard](images/man-mmaas-openstack-pfsense-dashboard.png)
 
 4. In the top navigation bar, go to **VPN** > **IPSec** > under **tunnels** > **Add P1**. Provide the following information (this must match the IPSec):
 
