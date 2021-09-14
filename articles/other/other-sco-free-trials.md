@@ -2,9 +2,9 @@
 title: Free trials Service Scope
 description: Outlines important details regarding free trials
 services: other
-author: Steve Hall
-reviewer:
-lastreviewed: 23/07/2018 14:44:15
+author: shall
+reviewer: jwalmsley
+lastreviewed: 14/09/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -25,7 +25,7 @@ Free trials provide you with a live environment on the UKCloud platform to test 
 
 Prior to your trial, you will be engaged by a Cloud Architect to identify the goals you are working towards, and to ensure that your trial meets them.
 
-Throughout the trial period, we will assign you a Dedicated Support Engineer, who will provide support for any issues you may encounter or questions you may have.
+Throughout the trial period, we will assign you a dedicated Support Engineer, who will provide support for any issues you may encounter or questions you may have.
 
 At the end of your free trial, you can seamlessly move to a billed service, leveraging any of the work you have already completed in the live trial environment.
 
