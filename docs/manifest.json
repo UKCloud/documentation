@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sd.html",
-          "hash": "qXAl56Oo5hpw7BCXQuf5/2XBKLJgJVw7sLh7CoZVptU="
+          "hash": "jfZSVJOCKbuUQRWcxaCQU8cq7F775lMOSxmsw/z74Kk="
         }
       },
       "is_incremental": false,
@@ -9902,6 +9902,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-share-images.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-share-images.html",
+          "hash": "mj9LIiXsPytA1ZPmZSjPGftSac6IxUnM3tK0cnSg/F4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-static-ip.md",
       "output": {
         ".html": {
@@ -10170,7 +10182,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "2ohHRPgnFq1/53Ei/QOvxCRQYjYAFkRXog+GTCNC6cs="
+          "hash": "K0+68UDkyDHng1AIXj/Ro8m+V8H9KXwmWYQuKioBR7c="
         }
       },
       "is_incremental": false,
@@ -11896,7 +11908,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "KkxqqPjS3pu14GUNpPblwb8Iou0OVDGVKmX/44KP/lo="
+          "hash": "x4rbI39ziiGUi2YYMh+K89EDRe09FePiw812mpVCj9Y="
         }
       },
       "is_incremental": false,
@@ -23053,7 +23065,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 461,
+          "total_file_count": 462,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

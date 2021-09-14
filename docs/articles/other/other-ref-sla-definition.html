@@ -153,13 +153,13 @@
 <thead>
 <tr>
 <th> </th>
-<th>UKCloud for Microsoft Azure (public multi-tenant)</th>
+<th>UKCloud for Microsoft Azure</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Availability commitment</strong></td>
-<td>99.90% (single VM - deployed inside an availability zone)<br>99.95% (single VM - two instances deployed inside an availability zone)</td>
+<td>99.90%</td>
 </tr>
 <tr>
 <td><strong>Availability calculation</strong></td>
@@ -175,15 +175,15 @@
 </tr>
 <tr>
 <td><strong>Measurement of SLA</strong></td>
-<td>Unavailability applies to existing VMs that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers</td>
+<td>Unavailability applies to existing VMs when the compute platform becomes inaccessible due to a fault recognised at the IaaS layer or lower:<ul><li>Fault is not within the customer's control (OS configuration, customer applications and customer networks)<li>Fault is within UKCloud-controlled components such as the dedicated compute infrastructure, UKCloud data centre facilities, physical firewalls and routers</li></li></ul></td>
 </tr>
 <tr>
 <td><strong>Key exclusions</strong></td>
-<td>The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</li></li></ul></td>
+<td>The following are examples of what is not covered:<br><strong>All-inclusive, platform only and platform only in CHDC:</strong><ul><li>Deletion or modification of VM by customer<li>Any access provided by you to your user base that takes the compute system beyond its recommended performance and connectivity thresholds<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Any connectivity between data centres that is out of the control of UKCloud</li></li></li></li></ul><strong>Customer-supplied hardware:</strong><ul><li>As above, plus any loss of connectivity or data, including data corruption, as a result of you or your suppliers installing new or additional capacity to the compute system</li></ul><strong>CHDC:</strong><ul><li>As above, plus any platform outages causing disruption to power and cooling (as they're out of UKCloud's control)</li></ul></td>
 </tr>
 <tr>
 <td><strong>Service Credit</strong></td>
-<td>5% of monthly spend per 5% below service level target or part thereof for affected compute platform.</td>
+<td>10% of monthly spend for Private Cloud</td>
 </tr>
 </tbody>
 </table>
@@ -642,7 +642,7 @@
 </tr>
 <tr>
 <td><strong>Service Credit</strong></td>
-<td>10% of monthly spend for Private Cloud.</td>
+<td>10% of monthly spend for Private Cloud</td>
 </tr>
 </tbody>
 </table>
@@ -720,7 +720,7 @@
 </tr>
 <tr>
 <td><strong>Service Credit</strong></td>
-<td>10% of monthly spend for Private Cloud for Storage.</td>
+<td>10% of monthly spend for Private Cloud for Storage</td>
 </tr>
 </tbody>
 </table>

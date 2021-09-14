@@ -34,6 +34,8 @@
     href: ostack-how-move-resources.md
   - name: Retrieve your Windows password on UKCloud for OpenStack
     href: ostack-how-retrieve-windows-password.md
+  - name: Share images between projects
+    href: ostack-how-share-images.md
   - name: Use Barbican Key Management as a Service
     href: ostack-how-use-barbican.md
   - name: Use Octavia Load Balancing as a Service
