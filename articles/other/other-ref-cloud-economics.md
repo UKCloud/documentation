@@ -2,7 +2,7 @@
 title: Cloud economics
 description: One of the core benefits of true cloud services is the utility price models that they are based on. This pricing is designed to facilitate new levels of agility, flexibility and scalability in stark contrast to traditional solutions
 services: other
-author: Matt Warner
+author: mwarner
 reviewer: shall
 lastreviewed: 14/09/2021
 toc_rootlink: Reference
@@ -37,7 +37,7 @@ Some non-production environments may only be required during certain times of th
 
 ## Are your servers right-sized?
 
-A significant aspect of cloud computing is self-service. It's very easy to increase the processing, memory or storage resources of your servers; you may want to start small and scale up, as and when you need more capacity instead of starting big and leaving those resources under-utilised as this increases your operating costs. It is also important to note that VMs can also be scaled down when resource requirements shrink, so you can reduce your hourly costs and avaoid wastage. Additionally, some customers prefer to have a higher number of smaller sized VMs working in a cluster for redundancy and load balancing, rather than a smaller number of expensive large VMs.
+A significant aspect of cloud computing is self-service; it's very easy to increase the processing, memory or storage resources of your servers. You may want to start small and scale up, as and when you need more capacity, instead of starting big and leaving resources under-utilised as this increases your operating costs. It's also important to note that you can also scale down VMs when resource requirements shrink, so you can reduce your hourly costs and avaoid wastage. Additionally, some customers prefer to have a higher number of smaller sized VMs working in a cluster for redundancy and load balancing, rather than a smaller number of large expensive VMs.
 
 ## Do you need those redundant VMs?
 
