@@ -2,9 +2,9 @@
 title: How to add products to the vCloud Usage Meter
 description: Provides instructions for how to add products to the vCloud Usage Meter for the VMware Licence Service
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 31/07/2020
+author: shighmoor
+reviewer: mperry
+lastreviewed: 07/09/2021
 toc_rootlink: How To
 toc_sub1: VMware Licence Service
 toc_sub2:

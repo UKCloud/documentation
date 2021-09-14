@@ -2,9 +2,9 @@
 title: How to report licence usage for the VMware Licence Service
 description: Provides instructions for how to create the licence usage report for the VMware Licence Service
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 31/07/2020
+author: shighmoor
+reviewer: mperry
+lastreviewed: 07/09/2021
 toc_rootlink: How To
 toc_sub1: VMware Licence Service
 toc_sub2:
