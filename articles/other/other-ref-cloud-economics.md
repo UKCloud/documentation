@@ -3,8 +3,8 @@ title: Cloud economics
 description: One of the core benefits of true cloud services is the utility price models that they are based on. This pricing is designed to facilitate new levels of agility, flexibility and scalability in stark contrast to traditional solutions
 services: other
 author: Matt Warner
-reviewer: vsumanoharan
-lastreviewed: 22/06/2020
+reviewer: shall
+lastreviewed: 14/09/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,17 +17,17 @@ toc_mdlink: other-ref-cloud-economics.md
 
 # Cloud Economics
 
-Pricing for virtual machines (VMs) provided on UKCloud's multi-cloud platform, is based on actual consumption (per VM, per hour, per GB per month). It's essential that you base your cloud solution on predicted usage rather than your predicted peak demand for example. Unlike traditional IT solutions, cloud-based computing can scale depending on workload requirements so you only need to account for standard usage.
+Pricing for virtual machines (VMs) provided on UKCloud's multi-cloud platform, is based on actual consumption (per VM, per hour, per GiB per month). It's essential that you base your cloud solution on predicted usage rather than your predicted peak demand. Unlike traditional IT solutions, cloud-based computing can scale depending on workload requirements so you only need to account for standard usage.
 
 To help you specify your cloud solution, you should consider the following:
 
 ## What's the ramp up period from zero to full utilisation?
 
-If your business-as-usual solution requires 50 servers and your go-live is in six months’ time, it's likely that you might only begin with five servers and then slowly increase the number of servers as you near your go-live date for example.
+If your business-as-usual solution requires 50 servers and your go-live is in six months’ time, it's likely that you might only begin with five servers and then slowly increase the number of servers as you near your go-live date.
 
 ## Do all the servers have to run all the time?
 
-As VMs are charged by the hour, you can make significant savings by turning off your VMs when they are not required (for example, overnight or during weekends).
+As VMs are charged by the hour, you can make significant savings by powering off your VMs when they are not required (for example, overnight or during weekends).
 
 ## Would you benefit from an annual subscription?
 
@@ -37,7 +37,7 @@ Some non-production environments may only be required during certain times of th
 
 ## Are your servers right-sized?
 
-A significant aspect of cloud computing is self-service. It's very easy to increase the processing, memory or storage resources of your servers; you may want to start small and scale up, as and when you need more capacity instead of starting big and leaving those resources under-utilised as this increases your operating costs.
+A significant aspect of cloud computing is self-service. It's very easy to increase the processing, memory or storage resources of your servers; you may want to start small and scale up, as and when you need more capacity instead of starting big and leaving those resources under-utilised as this increases your operating costs. It is also important to note that VMs can also be scaled down when resource requirements shrink, so you can reduce your hourly costs and avaoid wastage. Additionally, some customers prefer to have a higher number of smaller sized VMs working in a cluster for redundancy and load balancing, rather than a smaller number of expensive large VMs.
 
 ## Do you need those redundant VMs?
 
