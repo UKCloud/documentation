@@ -98,42 +98,127 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>This article is intended for operators who have the capability to download a VM image from their current hypervisor and upload images to UKCloud's OpenStack service. In addition, this article assumes that operators are familiar with Linux and its command line.</p>
 <h2 id="supported-conversions">Supported conversions</h2>
-<p>You can use <code>virt-v2v</code> to convert VMs running the following operating systems to run on KVM:
-|Guest OS|RHEL 7 host|RHEL 8 host|
-|--|--|--|
-|Red Hat Enterprise Linux 5|Supported|Not supported|
-|Red Hat Enterprise Linux 6|Supported|Supported|
-|Red Hat Enterprise Linux 7|Supported|Supported|
-|Red Hat Enterprise Linux 8|Not supported|Supported|
-|SUSE Linux Enterprise Server 11, SP4 and later [1]|Supported On RHEL 7.7 and later|Supported|
-|SUSE Linux Enterprise Server 12|Supported|Supported|
-|SUSE Linux Enterprise Server 15|Supported|Supported|
-|Windows 8|Supported|Not supported|
-|Windows 8.1|Supported|Not supported|
-|Windows 10|Supported|Supported|
-|Windows Server 2008|Supported|Not supported|
-|Windows Server 2008 R2|Supported|Not supported|
-|Windows Server 2012|Supported|Not supported|
-|Windows Server 2012 R2|Supported|Not supported|
-|Windows Server 2016|Supported|Supported|
-|Windows Server 2019|Supported|Supported|
-|Debian [2]|Technology Preview in RHEL 7.4 and later|Technology Preview|
-|Ubuntu [2]|Technology Preview in RHEL 7.4 and later|Technology Preview|</p>
+<p>You can use <code>virt-v2v</code> to convert VMs running the following operating systems to run on KVM:</p>
+<table>
+<thead>
+<tr>
+<th>Guest OS</th>
+<th>RHEL 7 host</th>
+<th>RHEL 8 host</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red Hat Enterprise Linux 5</td>
+<td>Supported</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>Red Hat Enterprise Linux 6</td>
+<td>Supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Red Hat Enterprise Linux 7</td>
+<td>Supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Red Hat Enterprise Linux 8</td>
+<td>Not supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>SUSE Linux Enterprise Server 11, SP4 and later</td>
+<td>Supported on RHEL 7.7 and later</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>SUSE Linux Enterprise Server 12</td>
+<td>Supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>SUSE Linux Enterprise Server 15</td>
+<td>Supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Windows 8</td>
+<td>Supported</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>Windows 8.1</td>
+<td>Supported</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>Windows 10</td>
+<td>Supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Windows Server 2008</td>
+<td>Supported</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>Windows Server 2008 R2</td>
+<td>Supported</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>Windows Server 2012</td>
+<td>Supported</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>Windows Server 2012 R2</td>
+<td>Supported</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>Windows Server 2016</td>
+<td>Supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Windows Server 2019</td>
+<td>Supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Debian</td>
+<td>Technology Preview in RHEL 7.4 and later</td>
+<td>Technology Preview</td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td>Technology Preview in RHEL 7.4 and later</td>
+<td>Technology Preview</td>
+</tr>
+</tbody>
+</table>
 <div class="NOTE">
 <h5>Note</h5>
 <p><code>virt-v2v</code> may convert VMs running other Linux operating systems, such as Debian and Ubuntu, but these conversions are not supported.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>As of January 2020 some operating systems are not supported for conversion on RHEL 8 but they are still supported on RHEL 7 as the table above shows.</p>
+<p>As of January 2021 some operating systems are not supported for conversion on RHEL 8 but they are still supported on RHEL 7 as the table above shows.</p>
 </div>
 <p>Conversions from the following hypervisors are supported:</p>
 <ul>
 <li><p>Red Hat Enterprise Linux 5 Xen</p>
 </li>
-<li><p>VMware vSphere ESX / ESX(i) - versions 3.5, 4.0, 4.1, 5.0, 5.1, 5.5, 6.0, 6.5, 6.7</p>
+<li><p>VMware vSphere ESX / ESX(i) - versions 6.0, 6.5, 6.7 and 7.0</p>
 </li>
 </ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Conversions from any hypervisor not listed above may in some cases work, but are not supported.</p>
+</div>
 <div class="NOTE">
 <h5>Note</h5>
 <p>VMware appliances based on Photon OS are not supported and cannot be converted using <code>virt-v2v</code>.</p>
@@ -144,22 +229,22 @@
 </li>
 <li><p>Convert the source hypervisor image to an OpenStack KVM compatible image (QCOW2) using the following:</p>
 <ul>
-<li>For general instructions on how to use the <code>virt-v2v</code> tool, see the following page on the Red Hat Customer Portal:</li>
+<li><p>For general instructions on how to use the <code>virt-v2v</code> tool, see the following page on the Red Hat Customer Portal:</p>
+<p><a href="https://access.redhat.com/articles/1351473">Converting VMs from other hypervisors to KVM with virt-v2v in RHEL 7 and RHEL 8</a></p>
+</li>
+<li><p>For specific instructions on how to export a guest VM from VMware as an OVA file and import it into KVM see the following page on the Red Hat Customer Portal:</p>
+<p><a href="https://access.redhat.com/articles/1351963">Export a guest VM from VMware as an OVA file and import it into KVM</a></p>
+</li>
 </ul>
-<p><a href="https://access.redhat.com/articles/1351473">Converting Virtual Machines from Other Hypervisors to KVM with virt-v2v in RHEL 7</a></p>
-<ul>
-<li>For specific instructions on how to export a guest VM from VMware as an OVA file and import it into KVM see the following page on the Red Hat Customer Portal:</li>
-</ul>
-<p><a href="https://access.redhat.com/articles/1351963">Export a guest virtual machine from VMware as an OVA file and import it into KVM</a></p>
 </li>
 <li><p>Upload your new QCOW2 image to OpenStack (Glance) using the following steps:</p>
 <p>a. Log in to the UKCloud OpenStack region to which you want to upload your image.</p>
 <p>b. Expand the <strong>Compute</strong> menu on the left side of the Horizon dashboard and select <strong>Images</strong>.</p>
-<p><img src="images/ostack-horizon-images.png" alt="Images page"></p>
+<p><img src="images/ostack-v2v-001-images.png" alt="Images page"></p>
 <p>c. Click the <strong>Create Image</strong> button.</p>
 <p><img src="images/ostack-horizon-btn-create-image.png" alt="Create Image button"></p>
-<p>d. In the <em>Create Image</em> page, browse for the image you want to import, complete the rest of the details on the page, then click Create Image.</p>
-<p><img src="images/ostack-horizon-create-image.png" alt="Create Image page"></p>
+<p>d. In the <em>Create Image</em> page, browse for the image you want to import, complete the rest of the details on the page, then click <strong>Create Image</strong>.</p>
+<p><img src="images/ostack-v2v-002-create-image.png" alt="Create Image page"></p>
 <p>e. Depending on the size of the image, the import process may take up to an hour to complete. You can view progress of the import from the Images page of the OpenStack dashboard.</p>
 </li>
 <li><p>When the import process is complete, you'll be able to use your newly imported image in the same way as any other image stored in OpenStack's image catalog (Glance).</p>
@@ -167,7 +252,7 @@
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The above instructions assume you're using RHEL 7 to run the <code>virt-v2v</code> tool, however you can install the <code>virt-v2v</code> tool on other Linux operating systems.</p>
+<p>The above instructions assume you're using RHEL 7 or RHEL 8 to run the <code>virt-v2v</code> tool, however you can install the <code>virt-v2v</code> tool on other Linux operating systems.</p>
 </div>
 <h2 id="next-steps">Next steps</h2>
 <p>You can find more information about the <code>virt-v2v</code> tool on the official project page:</p>

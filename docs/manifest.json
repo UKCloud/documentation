@@ -9428,6 +9428,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-v2v-001-images.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-v2v-001-images.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-v2v-002-create-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-v2v-002-create-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-vpn-horizon-static-route.png",
       "output": {
         "resource": {
@@ -9800,7 +9822,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-convert-vms.html",
-          "hash": "07lksceazc3vDWjmr8F6/U6HltDt2aOV7qafnLNExm4="
+          "hash": "zCTpCTJZ2k9sTC/vSE+yqLlK1e23EZ9XwgvIcp/o1cU="
         }
       },
       "is_incremental": false,
@@ -11970,7 +11992,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-sco-free-trials.html",
-          "hash": "KDLypViLtVd9SLW8f8KJkhDcJOQKY9eyjJgZmM53VY8="
+          "hash": "jDg1QmXIwWKHae+1KGhrK8BRVD5soIv2g5B9mNY/HUY="
         }
       },
       "is_incremental": false,
