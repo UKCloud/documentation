@@ -3,8 +3,8 @@ title: UKCloud for Microsoft Azure Service Definition
 description: Provides an overview of what is provided by the UKCloud for Microsoft Azure service
 services: azure-stack
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 15/04/2021
+reviewer: shall
+lastreviewed: 10/09/2021
 toc_rootlink: Users
 toc_sub1: Service Information
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: azs-sd.md
 
 ## What is UKCloud for Microsoft Azure?
 
-UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure Stack Hub platform. The service is delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK Public Sector organisations and their industry partners. UKCloud can also support your deployments on Azure public or manage private Azure Stack Hub environments, giving you one partner for all your Microsoft Azure environments.
+UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure Stack Hub platform. The service is delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diverse requirements of UK public sector organisations and their industry partners. UKCloud can also support your deployments on Azure public, giving you one partner for all your Microsoft Azure environments.
 
 ## What the service can help you achieve
 
@@ -41,9 +41,7 @@ The service is designed to be flexible and enables you to mix and match from a r
 
 ![UKCloud for Microsoft Azure product options](images/azs-product-options-g12.png)
 
-### Additional deployment options
-
-#### Private Cloud
+### Private Cloud deployment
 
 IaaS and PaaS on a dedicated infrastructure. Service options include:
 
@@ -62,6 +60,8 @@ IaaS and PaaS on a dedicated infrastructure. Service options include:
   - Location. Deploy and manage from a variety of locations: UKCloud hosted, Crown Hosting or your own data centres.
 
   - Flexible purchase options. Based on CapEx, OpEx or bring your own infrastructure.
+
+### Additional deployment options
 
 #### Microsoft Azure's public cloud services
 
