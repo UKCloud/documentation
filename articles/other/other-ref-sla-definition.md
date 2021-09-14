@@ -73,10 +73,10 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 **Availability commitment** | 99.90%
 **Service Credit**          | 1% of monthly spend per 1% below the service level target or part thereof for services.
 
-### UKCloud for Microsoft Azure Stack Hub
+### UKCloud for Microsoft Azure
 
-&nbsp;                       | UKCloud for Microsoft Azure Stack Hub
------------------------------|--------------------------------------
+&nbsp;                       | UKCloud for Microsoft Azure
+-----------------------------|----------------------------
 **Availability commitment**  | 99.90%
 **Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days)
 **Emergency Maintenance**    | Excluded
