@@ -3,8 +3,8 @@ title: SLA definition
 description: Definition of the UKCloud service level agreement (SLA)
 services: other
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 06/10/2020
+reviewer: shall
+lastreviewed: 10/09/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -75,15 +75,15 @@ UKCloud monitors the customer self-service UKCloud Portal, (<https://portal.ukcl
 
 ### UKCloud for Microsoft Azure
 
-&nbsp;                       | UKCloud for Microsoft Azure (public multi-tenant)
------------------------------|--------------------------------------------------
-**Availability commitment**  | 99.90% (single VM - deployed inside an availability zone)<br>99.95% (single VM - two instances deployed inside an availability zone)
+&nbsp;                       | UKCloud for Microsoft Azure
+-----------------------------|----------------------------
+**Availability commitment**  | 99.90%
 **Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days)
 **Emergency Maintenance**    | Excluded
 **Planned Maintenance**      | Excluded
-**Measurement of SLA**       | Unavailability applies to existing VMs that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers
-**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
-**Service Credit**           | 5% of monthly spend per 5% below service level target or part thereof for affected compute platform.
+**Measurement of SLA**       | Unavailability applies to existing VMs when the compute platform becomes inaccessible due to a fault recognised at the IaaS layer or lower:<ul><li>Fault is not within the customer's control (OS configuration, customer applications and customer networks)<li>Fault is within UKCloud-controlled components such as the dedicated compute infrastructure, UKCloud data centre facilities, physical firewalls and routers</ul>
+**Key exclusions**           | The following are examples of what is not covered:<br>**All-inclusive, platform only and platform only in CHDC:**<ul><li>Deletion or modification of VM by customer<li>Any access provided by you to your user base that takes the compute system beyond its recommended performance and connectivity thresholds<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Any connectivity between data centres that is out of the control of UKCloud</ul>**Customer-supplied hardware:**<ul><li>As above, plus any loss of connectivity or data, including data corruption, as a result of you or your suppliers installing new or additional capacity to the compute system</ul>**CHDC:**<ul><li>As above, plus any platform outages causing disruption to power and cooling (as they're out of UKCloud's control)</ul>
+**Service Credit**           | 10% of monthly spend for Private Cloud
 
 ### UKCloud for OpenStack
 
@@ -243,7 +243,7 @@ Due to the service being dependent on connectivity between the customer data cen
 **Planned Maintenance**      | Excluded
 **Measurement of SLA**       | Unavailability applies to existing VMs when the compute platform becomes inaccessible due to a fault recognised at the IaaS layer or lower:<ul><li>Fault is not within the customer's control (OS configuration, customer applications and customer networks)<li>Fault is within UKCloud-controlled components such as the dedicated compute infrastructure, UKCloud data centre facilities, physical firewalls and routers</ul>
 **Key exclusions**           | The following are examples of what is not covered:<br>**All-inclusive, platform only and platform only in CHDC:**<ul><li>Deletion or modification of VM by customer<li>Any access provided by you to your user base that takes the compute system beyond its recommended performance and connectivity thresholds<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Any connectivity between data centres that is out of the control of UKCloud</ul>**Customer-supplied hardware:**<ul><li>As above, plus any loss of connectivity or data, including data corruption, as a result of you or your suppliers installing new or additional capacity to the compute system</ul>**CHDC:**<ul><li>As above, plus any platform outages causing disruption to power and cooling (as they're out of UKCloud's control)</ul>
-**Service Credit**           | 10% of monthly spend for Private Cloud.
+**Service Credit**           | 10% of monthly spend for Private Cloud
 
 ### Private Cloud for Oracle Software
 
@@ -267,7 +267,7 @@ Due to the service being dependent on connectivity between the customer data cen
 **Planned Maintenance**      | Excluded
 **Measurement of SLA**       | Availability of all or part of the storage infrastructure
 **Key exclusions**           | The following are examples of what is not covered:<br>**All-Inclusive, UKCloud Hosted and Crown Campus Hosted:**<ul><li>Deletion or modification of files by customer resulting in data loss<li>Any access provided by you to your user base that takes the storage system beyond its recommended performance and connectivity thresholds<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Any connectivity between data centres that is out of the control of UKCloud</ul>**Customer-supplied hardware:**<ul><li>As above, plus any loss of connectivity or data, including data corruption, as a result of you or your suppliers installing new or additional capacity to the storage system</ul>**Applies to Crown Campus Hosted:**<ul><li>As above, plus any platform outages causing disruption to power and cooling (as they're out of UKCloud's control)</ul>
-**Service Credit** | 10% of monthly spend for Private Cloud for Storage.
+**Service Credit** | 10% of monthly spend for Private Cloud for Storage
 
 ### Secure Remote Access
 
