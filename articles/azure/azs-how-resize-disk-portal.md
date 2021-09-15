@@ -41,7 +41,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 4. In the *Overview* blade, click **Stop** and then **OK**. Wait for the virtual machine to successfully shutdown before continuing.
 
     > [!NOTE]
-    > - You can only resize a disk when it is unattached from the VM or the virtual machine is deallocated.
+    > - You can only resize a disk when it is unattached from the virtual machine, or the virtual machine is deallocated.
     >
     > - You can skip this step if the virtual machine is already in the *Stopped (deallocated)* state, as seen below.
     >
@@ -57,7 +57,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     > [!NOTE]
     > - You can only resize a disk to a larger size.
-    > 
+    >
     > - Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both are provided below.
 
 # [Resizing managed disks](#tab/tabid-1)
