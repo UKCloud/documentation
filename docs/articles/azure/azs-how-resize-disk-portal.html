@@ -8,7 +8,7 @@
     <title>How to resize a disk using the UKCloud Azure Stack Hub portal </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to resize a disk using the UKCloud Azure Stack Hub portal ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.58.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@
 <h1 id="how-to-resize-a-disk-using-the-ukcloud-azure-stack-hub-portal">How to resize a disk using the UKCloud Azure Stack Hub portal</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The UKCloud Azure Stack Hub portal allows you to resize virtual machine (VM) disks. This article shows you how to resize disks that are mounted to a VM, and will work for both managed and unmanaged disks.</p>
+<p>The UKCloud Azure Stack Hub portal enables you to resize virtual machine (VM) disks. This article shows you how to resize disks that are mounted to a VM, and will work for both managed and unmanaged disks.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.</p>
 <h2 id="resizing-disks-that-are-mounted-to-a-vm">Resizing disks that are mounted to a VM</h2>
@@ -107,16 +107,30 @@
 </li>
 <li><p>In the <em>Virtual machines</em> blade, select the virtual machine that the disk is attached to.</p>
 </li>
-<li><p>In the virtual machine's blade, select <strong>Disks</strong>.</p>
-<p><img src="images/azs-browser-vm-menu-disks-button.png" alt="Disks button within VM"></p>
-</li>
-<li><p>In the <em>Disks</em> blade, select the disk you would like to resize.</p>
+<li><p>In the <em>Overview</em> blade, click <strong>Stop</strong> and then <strong>OK</strong>. Wait for the virtual machine to successfully shutdown before continuing.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <ul>
-<li>Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.</li>
-<li>Disks can only be resized to a larger size.</li>
-<li>Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both are provided below.</li>
+<li><p>You can only resize a disk when it is unattached from the virtual machine, or the virtual machine is deallocated.</p>
+</li>
+<li><p>You can skip this step if the virtual machine is already in the <em>Stopped (deallocated)</em> state, as seen below.</p>
+<p><img src="images/azs-browser-vm-deallocated-state.png" alt="VM deallocated state"></p>
+</li>
+</ul>
+</div>
+<p><img src="images/azs-browser-vm-stop-button.png" alt="Stop VM button"></p>
+</li>
+<li><p>In the virtual machine's blade, select <strong>Disks</strong>.</p>
+</li>
+<li><p>In the <em>Disks</em> blade, select the disk you want to resize.</p>
+<p><img src="images/azs-browser-vm-disks-list.png" alt="VM disks list"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<ul>
+<li><p>You can only resize a disk to a larger size.</p>
+</li>
+<li><p>Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both are provided below.</p>
+</li>
 </ul>
 </div>
 </li>
@@ -135,7 +149,7 @@
 <ol>
 <li><p>In the disk's blade, select <strong>Configuration</strong>.</p>
 </li>
-<li><p>Enter the desired size of the disk in GiB in the <strong>Size</strong> field.</p>
+<li><p>In the <strong>Size</strong> field, enter the desired size of the disk in GiB.</p>
 <p><img src="images/azs-browser-vm-disk-size-managed.png" alt="Managed disk resize"></p>
 </li>
 <li><p>When you're done, click <strong>Save</strong>.</p>
@@ -145,7 +159,7 @@
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 
 <ol>
-<li><p>Enter the desired size of the disk in GiB in the <strong>Size</strong> field.</p>
+<li><p>In the <strong>Size</strong> field, enter the desired size of the disk in GiB.</p>
 <p><img src="images/azs-browser-vm-disk-size.png" alt="Unmanaged disk resize"></p>
 </li>
 <li><p>When you're done, click <strong>Save</strong>.</p>
@@ -154,13 +168,13 @@
 </section>
 </div>
 
-<ol start="6">
+<ol start="7">
 <li><p>You can monitor the progress of the disk resizing by clicking the <strong>Notifications</strong> icon.</p>
-<p><img src="images/azsp_createvm_progress.png" alt="Notification showing updating virtual machine disk"></p>
+<p><img src="images/azs-browser-update-disk-progress.png" alt="Notification showing updating virtual machine disk"></p>
 </li>
 </ol>
 <h2 id="expanding-the-volume">Expanding the volume</h2>
-<p>After expanding the disk, you may need to go into the OS and expand the volume to actually use the newly allocated space. To do so, follow the steps below:</p>
+<p>After expanding the disk, you may need to go into the OS and expand the volume to actually use the newly allocated space.</p>
 <div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
 <ul role="tablist">
 <li role="presentation">

@@ -8,7 +8,7 @@
     <title>How to create a VM scale set </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a VM scale set ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.58.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -145,16 +145,20 @@
 </li>
 <li><p><strong>Subnet</strong> – This is a subnet within the selected virtual network.</p>
 </li>
+<li><p><strong>NIC network security group</strong> - The network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, the virtual machines in the scale set.</p>
+</li>
+<li><p><strong>Public inbound ports</strong> - Allow traffic on a subset of common inbound ports.</p>
+</li>
 </ul>
-<p><img src="images/azs-browser-create-scale-set.png" alt="BASICS page"></p>
+<p><img src="images/azs-browser-create-scale-set.png" alt="Create scale set"></p>
 </li>
 <li><p>When you are done, click <strong>Create</strong>.</p>
 </li>
 <li><p>You can monitor the progress of your scale set's deployment by clicking the <strong>Notifications</strong> icon.</p>
-<p><img src="images/azsp_createvm_progress.png" alt="Deployment in progress notification"></p>
+<p><img src="images/azs_browser_create_scale_set_deployment_progress.png" alt="Deployment in progress notification"></p>
 </li>
 <li><p>When the deployment is finished, the notification will change to <em>Deployment succeeded</em>.</p>
-<p><img src="images/azsp_createvm_deployment_success.png" alt="Deployment complete"></p>
+<p><img src="images/azs_browser_create_scale_set_deployment_success.png" alt="Deployment complete"></p>
 </li>
 <li><p>After the scale set has deployed, you can view it by clicking <strong>All Services</strong> in the favourites panel, then select <strong>Virtual machine scale sets</strong> from the <em>compute</em> section.</p>
 <p><img src="images/azs-browser-select-all-services.png" alt="All resources menu"></p>
@@ -175,13 +179,17 @@
 <li><p>In the blade for the scale set, select <strong>Scaling</strong> under <em>Settings</em>.</p>
 <p><img src="images/azs-browser-button-scaling.png" alt="Scale set scaling button"></p>
 </li>
-<li><p>Increase or decrease the number of instances using the slide bar.</p>
+<li><p>Increase or decrease the number of instances using the slide bar, then click <strong>Save</strong> to commit the change.</p>
 <p><img src="images/azs-browser-instance-count-slidebar.png" alt="Scaling slide bar"></p>
 </li>
-<li><p>Once you have selected the desired number of instances click <strong>Save</strong> to commit the change.</p>
-<p><img src="images/azs-browser-button-save-instance-count.png" alt="Save number of instances for the scale set"></p>
-</li>
 <li><p>A prompt will notify you once the configuration has been updated.</p>
+<p><img src="images/azs-browser-instance-count-updated.png" alt="Instance count updated notification"></p>
+</li>
+<li><p>In the blade for the scale set, select <strong>Instances</strong> under <em>Settings</em>.</p>
+<p><img src="images/azs-browser-button-instances.png" alt="Scale set instances button"></p>
+</li>
+<li><p>Depending on how you modified the instance count, there will either be new instances in the <em>Creating</em> state, or existing ones in the <em>Deleting</em> state.</p>
+<p><img src="images/azs-browser-instances-updating.png" alt="Scale set instances updating"></p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
