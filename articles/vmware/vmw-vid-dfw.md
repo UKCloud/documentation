@@ -2,9 +2,9 @@
 title: VMware Distributed Firewall video
 description: Shows a video that provides an technical explanation of VMware's Distributed Firewall (DFW)
 services: vmware
-author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 20/09/2019
+author: shighmoor
+reviewer: jmoore
+lastreviewed: 15/09/2021
 toc_rootlink: Videos
 toc_sub1: 
 toc_sub2:
