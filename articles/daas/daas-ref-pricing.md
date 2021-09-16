@@ -3,8 +3,8 @@ title: Pricing information for UKCloud Desktop as a Service
 description: Provides useful information about UKCloud Desktop as a Service pricing, including pricing examples
 services: daas
 author: shighmoor
-reviewer:
-lastreviewed: 28/09/2020
+reviewer: shighmoor
+lastreviewed: 14/09/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
