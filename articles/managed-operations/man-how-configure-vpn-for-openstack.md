@@ -2,7 +2,7 @@
 title: How to configure a VPN to enable Monitoring of OpenStack instances with Managed Monitoring as a Service
 description: Describes how to set up a VPN so that you can use UKCloud's Managed Monitoring as a Service to monitor your OpenStack instances
 services: managed-operations
-author: agull
+author: arapisarda
 reviewer: 
 lastreviewed: 16/09/2021
 toc_rootlink: Managed IT Operations
@@ -111,7 +111,7 @@ The next step is to attach the network to the router.
 
 You'll need to apply security groups to the VPN server to be able to talk to the other side.
 
-1. Expand **Network*** then select **Security Groups**.
+1. Expand **Network** then select **Security Groups**.
 
 2. Click the **Create Security Group** button.
 
