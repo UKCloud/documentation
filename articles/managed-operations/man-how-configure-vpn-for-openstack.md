@@ -4,7 +4,7 @@ description: Describes how to set up a VPN so that you can use UKCloud's Managed
 services: managed-operations
 author: agull
 reviewer: 
-lastreviewed: 13/09/2021
+lastreviewed: 16/09/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
@@ -37,7 +37,9 @@ The steps for installing and configuring pfSense are:
 
 5. [Deploy the VPN instance](#deploying-the-vpn-instance).
 
-6. [Set up the VPN endpoints](#setting-up-the-vpn-endpoints).
+6. [Configure networking for the VPN endpoint](#configuring-networking-for-the-vpn-endpoint).
+
+7. [Configure the VPN endpoint](#configuring-the-vpn-endpoint).
 
 ### Creating a pfSense image
 
@@ -109,7 +111,7 @@ The next step is to attach the network to the router.
 
 You'll need to apply security groups to the VPN server to be able to talk to the other side.
 
-1. Expand **Compute*** then select **Access & Security**.
+1. Expand **Network*** then select **Security Groups**.
 
 2. Click the **Create Security Group** button.
 
@@ -179,9 +181,17 @@ You're now ready to deploy the instance.
 
 4. Click **Launch Instance**.
 
-5. On the *Instances* page, in the dropdown for your new instance, select **Associate Floating IP**.
+### Configuring networking for the VPN endpoint
 
-6. You'll need to add two **Allowed Address Pairs** entries for the instance's port.
+Next, you'll need to configure networking for the VPN endpoint.
+
+1. On the *Instances* page, in the dropdown for your new instance, select **Associate Floating IP**.
+
+2. In the *Manage Floating IP Associations* dialog box, from the **IP Address** list, select a public IP address.
+
+3. From the **Port to be associated** list, select the local IP address of the VPN instance.
+
+4. You'll need to add two **Allowed Address Pairs** entries for the instance's port.
 
    - In the Horizon dashboard, expand **Networks** then select **Network**.
 
@@ -197,7 +207,7 @@ You're now ready to deploy the instance.
 
    - Create a second address pair for the peer subnet and click **Submit**.
 
-7. You need to add a static route to the OpenStack router to ensure that traffic for the Opsview collectors are routed via the VPN.
+5. You need to add a static route to the OpenStack router to ensure that traffic for the Opsview collectors are routed via the VPN.
 
    - In the Horizon dashboard, expand **Network** then click **Routers**.
 
@@ -211,11 +221,11 @@ You're now ready to deploy the instance.
 
      - **Next Hop:** The private IP for the VPN instance.
 
-### Setting up the VPN endpoints
+### Configuring the VPN endpoint
 
-The final step is to set up the VPN endpoints using the pfSense dashboard.
+The final step is to configure the VPN endpoint using the pfSense dashboard.
 
-1. Providing the security groups are set up correctly, whilst on you local machine and using the IP address specified in the SSH & Web Access security group, browse to `http://<floating-ip>`. This floating IP was set in step 5.
+1. Providing the security groups are set up correctly, whilst on you local machine and using the IP address specified in the SSH & Web Access security group, browse to `http://<floating-ip>` (using the floating IP you set in the previous section).
 
 2. You can find pfSense administrator credentials in [Default Username and Password](https://docs.netgate.com/pfsense/en/latest/usermanager/defaults.html) or you can contact UKCloud Support.
 
@@ -223,7 +233,7 @@ The final step is to set up the VPN endpoints using the pfSense dashboard.
 
    ![pfSense dashboard](images/man-mmaas-openstack-pfsense-dashboard.png)
 
-4. In the top navigation bar, go to **VPN** > **IPSec** > under **tunnels** > **Add P1**. Provide the following information (this must match the IPSec):
+4. In the top navigation bar, go to **VPN** > **IPsec** > under **tunnels** > **Add P1**. Provide the following information (this must match the IPsec):
 
    - **General Information**
 
@@ -259,7 +269,7 @@ The final step is to set up the VPN endpoints using the pfSense dashboard.
 
 5. Click **Save**.
 
-6. Go to **VPN** > **IPSec** > expand **Show Phase 2 Entries** > **Add P2**. Provide the following information:
+6. Go to **VPN** > **IPsec** > expand **Show Phase 2 Entries** > **Add P2**. Provide the following information:
 
    - **General Information**
 
@@ -279,15 +289,19 @@ The final step is to set up the VPN endpoints using the pfSense dashboard.
 
 7. Click **Save**.
 
-8. You must apply firewall rules on the pfSense WAN interface to let traffic in and out.
+   Your IPsec configuration should look similar to the following:
+
+   ![IPsec settings in pfSense dashboard](images/man-mmaas-openstack-pfsense-ipsec.png)
+
+8. You'll need to apply firewall rules on the pfSense WAN interface to let traffic in and out.
 
    - Go to **Firewall** > **Rules** > **WAN** > **Add**.
 
    - Leave everything as default, but under **Protocol**, change **TCP** to **Any**.
 
-9. You must apply firewall rules on the pfSense IPSec interface to let traffic in and out.
+9. You'll need to apply firewall rules on the pfSense IPsec interface to let traffic in and out.
 
-   - Go to **Firewall** > **Rules** > **IPSec** > **Add**.
+   - Go to **Firewall** > **Rules** > **IPsec** > **Add**.
 
    - Leave everything as default, but under **Protocol**, change **TCP** to **Any**.
 
