@@ -2,9 +2,9 @@
 title: Private Cloud for Storage Service Scope
 description: Outlines important details regarding Private Cloud for Storage
 services: private-cloud
-author: Sue Highmoor
-reviewer:
-lastreviewed: 28/06/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 14/09/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:

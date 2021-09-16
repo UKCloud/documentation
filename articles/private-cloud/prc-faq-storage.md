@@ -2,9 +2,9 @@
 title: Private Cloud for Storage FAQs
 description: Frequently asked questions for Private Cloud for Storage
 services: private-cloud
-author: Matt Warner
-reviewer:
-lastreviewed: 19/07/2018 17:56:05
+author: mwarner
+reviewer: shighmoor
+lastreviewed: 14/09/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
