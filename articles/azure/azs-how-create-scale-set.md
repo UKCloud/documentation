@@ -4,7 +4,7 @@ description: Provides help for creating a virtual machine scale set on UKCloud f
 services: azure-stack
 author: Shaion O'Niel
 reviewer: William Turner
-lastreviewed: 14/04/2020
+lastreviewed: 08/09/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -78,17 +78,21 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Subnet** – This is a subnet within the selected virtual network.
 
-    ![BASICS page](images/azs-browser-create-scale-set.png)
+    - **NIC network security group** - The network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, the virtual machines in the scale set.
+
+    - **Public inbound ports** - Allow traffic on a subset of common inbound ports.
+
+    ![Create scale set](images/azs-browser-create-scale-set.png)
 
 6. When you are done, click **Create**.
 
 7. You can monitor the progress of your scale set's deployment by clicking the **Notifications** icon.
 
-    ![Deployment in progress notification](images/azsp_createvm_progress.png)
+    ![Deployment in progress notification](images/azs_browser_create_scale_set_deployment_progress.png)
 
 8. When the deployment is finished, the notification will change to *Deployment succeeded*.
 
-    ![Deployment complete](images/azsp_createvm_deployment_success.png)
+    ![Deployment complete](images/azs_browser_create_scale_set_deployment_success.png)
 
 9. After the scale set has deployed, you can view it by clicking **All Services** in the favourites panel, then select **Virtual machine scale sets** from the *compute* section.
 
@@ -111,15 +115,21 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Scale set scaling button](images/azs-browser-button-scaling.png)
 
-2. Increase or decrease the number of instances using the slide bar.
+2. Increase or decrease the number of instances using the slide bar, then click **Save** to commit the change.
 
     ![Scaling slide bar](images/azs-browser-instance-count-slidebar.png)
 
-3. Once you have selected the desired number of instances click **Save** to commit the change.
+3. A prompt will notify you once the configuration has been updated.
 
-    ![Save number of instances for the scale set](images/azs-browser-button-save-instance-count.png)
+    ![Instance count updated notification](images/azs-browser-instance-count-updated.png)
 
-4. A prompt will notify you once the configuration has been updated.
+4. In the blade for the scale set, select **Instances** under *Settings*.
+
+    ![Scale set instances button](images/azs-browser-button-instances.png)
+
+5. Depending on how you modified the instance count, there will either be new instances in the *Creating* state, or existing ones in the *Deleting* state.
+
+    ![Scale set instances updating](images/azs-browser-instances-updating.png)
 
 ## Feedback
 
