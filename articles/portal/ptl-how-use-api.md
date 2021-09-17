@@ -2,7 +2,7 @@
 title: How to use the UKCloud Portal API
 description: Demonstrates how to use the Portal API by stepping you through the process of creating a VDC
 services: portal
-author: Sue Highmoor
+author: shighmoor
 reviewer: wllewellyn
 lastreviewed: 17/09/2021
 
@@ -44,26 +44,25 @@ The Portal API uses session authentication. Before calling any of the API endpoi
 
     - password - the password you use to log in to the UKCloud Portal
 
-        For example:
+      For example:
 
-        ```
-        read portal_email # Enter your Portal email address
-        read -s portal_password # Enter your Portal password
+      ```
+      read portal_email # Enter your Portal email address
+      read -s portal_password # Enter your Portal password
         
-        authentication_body="$(
-          jq --arg email "$portal_email" --arg password "$portal_password" --null-input '{email: $email, password: $password}'
-        )"
+      authentication_body="$(
+      jq --arg email "$portal_email" --arg password "$portal_password" --null-input '{email: $email, password: $password}'
+      )"
         
-        curl -c /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d "$authentication_body" -H 'Content-Type: application/json'
-        ```
+      curl -c /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d "$authentication_body" -H 'Content-Type: application/json'
+      ```
 
-        Note; please install jq if you don't have it already:
-        ```
-        Mac:
-        brew install jq
-        Linux:
-        sudo apt-get install jq
-        ```
+      > [!NOTE]
+      > Install jq if you don't already have it:
+      > 
+      > Mac: `brew install jq`
+      > 
+      > Linux: `sudo apt-get install jq`
 
 3. If the authentication is successful, the endpoint returns a cookie that provides authentication for the next 900 seconds (15 minutes) and a response that tells you how long the session will last:
 
@@ -75,11 +74,11 @@ The Portal API uses session authentication. Before calling any of the API endpoi
 
 The steps for creating a VDC are:
 
-- [Requesting a list of accounts](#requesting-a-list-of-accounts)
+- [Request a list of accounts](#requesting-a-list-of-accounts)
 
-- [Requesting a list of vOrgs](#requesting-a-list-of-vorgs)
+- [Request a list of vOrgs](#requesting-a-list-of-vorgs)
 
-- [Creating a VDC](#creating-a-vdc)
+- [Create a VDC](#creating-a-vdc)
 
 ### Requesting a list of accounts
 
@@ -264,9 +263,9 @@ After creating your VDC, you need to create an edge gateway so that your users c
 
 The steps for creating an edge gateway are:
 
-- [Finding the VDC URN](#finding-the-vdc-urn)
+- [Find the VDC URN](#finding-the-vdc-urn)
 
-- [Creating an edge gateway](#creating-an-edge-gateway)
+- [Create an edge gateway](#creating-an-edge-gateway)
 
 ### Finding the VDC URN
 
