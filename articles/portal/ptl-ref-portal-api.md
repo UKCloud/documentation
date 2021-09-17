@@ -3,8 +3,8 @@ title: UKCloud Portal API Reference Guide
 description: Shows how to interact with the UKCloud Portal via use of an application programming interface (API)
 services: portal
 author: shighmoor
-reviewer: ccouzens
-lastreviewed: 08/12/2020
+reviewer: wllewellyn
+lastreviewed: 17/09/2021
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -77,7 +77,10 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -c /tmp/cookies.txt -X POST -H 'Content-Type: application/json' -d '{"email": "email@example.com", "password": "password"}' 'https://portal.skyscapecloud.com/api/authenticate'
+read portal_email # Enter your Portal email address
+read -s portal_password # Enter your Portal password
+
+curl -c /tmp/cookies.txt -X POST -H 'Content-Type: application/json' -d '{"email": "'"$portal_email"'", "password": "'"$portal_password"'"}' 'https://portal.skyscapecloud.com/api/authenticate'
 ```
 
 #### Example request (Ruby)
