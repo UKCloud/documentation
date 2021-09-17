@@ -184,7 +184,10 @@ or in <a href="https://github.com/UKCloud/create-vdc-with-edge-portal-api-demo/b
 <h4 id="uri-parameters">URI parameters</h4>
 <p>None</p>
 <h4 id="example-request-curl">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -c /tmp/cookies.txt -X POST -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;email@example.com&quot;, &quot;password&quot;: &quot;password&quot;}' 'https://portal.skyscapecloud.com/api/authenticate'
+<pre><code class="lang-bash">read portal_email # Enter your Portal email address
+read -s portal_password # Enter your Portal password
+
+curl -c /tmp/cookies.txt -X POST -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;'&quot;$portal_email&quot;'&quot;, &quot;password&quot;: &quot;'&quot;$portal_password&quot;'&quot;}' 'https://portal.skyscapecloud.com/api/authenticate'
 </code></pre>
 <h4 id="example-request-ruby">Example request (Ruby)</h4>
 <pre><code>conn = Faraday.new('https://portal.skyscapecloud.com') { |f| f.request :json }
