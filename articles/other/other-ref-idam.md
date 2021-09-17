@@ -2,9 +2,9 @@
 title: Understanding UKCloud's Identity & Access Management API
 description: Provides information on managing permissions using the Identity & Access Management API
 services: other
-author: Simon Fish
-reviewer:
-lastreviewed: 08/11/2018 10:25:23
+author: sfish
+reviewer: bsaunders
+lastreviewed: 17/09/2021
 
 toc_rootlink: Reference
 toc_sub1:
