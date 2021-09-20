@@ -118,7 +118,7 @@ authentication_body=&quot;$(
 jq --arg email &quot;$portal_email&quot; --arg password &quot;$portal_password&quot; --null-input '{email: $email, password: $password}'
 )&quot;
 
-curl -c /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d &quot;$authentication_body&quot; -H 'Content-Type: application/json'
+  curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d &quot;$authentication_body&quot; -H 'Content-Type: application/json'
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
@@ -150,7 +150,7 @@ curl -c /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X 
 <ol>
 <li><p>If you need to find your account ID, send a GET request to the accounts endpoint to return a list of all your accounts.</p>
 <p>For example:</p>
-<pre><code>curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | jq
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | jq
 </code></pre>
 <p>If you need to authenticate to the Portal API first, see <a href="#authenticating-to-the-api">Authenticating to the API</a>.</p>
 </li>
@@ -176,7 +176,7 @@ curl -c /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X 
 <ul>
 <li><p><code>account_id</code> - the ID of the account in which you want to create your VDC</p>
 <p>For example:</p>
-<pre><code>curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/' | jq
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/' | jq
 </code></pre>
 </li>
 </ul>
@@ -231,7 +231,7 @@ long and can include any character except <code>+</code></p>
 </li>
 </ul>
 <p>For example:</p>
-<pre><code>curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' -i -X POST -d '{
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' -i -X POST -d '{
   &quot;data&quot;: {
     &quot;type&quot;: &quot;VDC&quot;,
     &quot;attributes&quot;: {
@@ -274,7 +274,7 @@ Location: /api/vdc-builds/9
 <p>In our example, the build ID is <code>9</code>, so we can send the following request:</p>
 </li>
 </ul>
-<pre><code>curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/9' | jq
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/9' | jq
 </code></pre>
 </li>
 <li><p>If the build has started and is still in progress, the <code>state</code> changes to <code>running</code>. For example:</p>
@@ -331,7 +331,7 @@ Location: /api/vdc-builds/9
 <li><p><code>vorg_id</code> - the ID of the vOrg to which the VDC belongs</p>
 <p>To find a vOrg ID, see <a href="#requesting-a-list-of-vorgs">Requesting a list of vOrgs</a>.</p>
 <p>For example:</p>
-<pre><code>curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | jq
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | jq
 </code></pre>
 </li>
 </ul>
@@ -390,7 +390,7 @@ Location: /api/vdc-builds/9
 </li>
 </ul>
 <p>For example:</p>
-<pre><code>curl -b /tmp/cookies.txt -i 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways' -X POST -d '{
+<pre><code>curl -b cookies.txt -i 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways' -X POST -d '{
   &quot;data&quot;: {
     &quot;type&quot;: &quot;EdgeGateway&quot;,
     &quot;attributes&quot;: {
@@ -426,7 +426,7 @@ Location: /api/edge-gateway-builds/10
 <li><code>build_id</code> - the ID of the build process</li>
 </ul>
 <p>For example:</p>
-<pre><code>curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/10' | jq
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/10' | jq
 </code></pre>
 </li>
 <li><p>when the edge gateway has been successfully created, the <code>state</code> changes to completed. For example:</p>
