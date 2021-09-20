@@ -54,8 +54,8 @@ The Portal API uses session authentication. Before calling any of the API endpoi
       jq --arg email "$portal_email" --arg password "$portal_password" --null-input '{email: $email, password: $password}'
       )"
         
-      curl -c /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d "$authentication_body" -H 'Content-Type: application/json'
-      ```
+        curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d "$authentication_body" -H 'Content-Type: application/json'
+        ```
 
       > [!NOTE]
       > Install jq if you don't already have it:
@@ -89,7 +89,7 @@ To create a VDC, you need to know the ID of the account in which you want to cre
     For example:
 
     ```
-    curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | jq
+    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | jq
     ```
 
     If you need to authenticate to the Portal API first, see [Authenticating to the API](#authenticating-to-the-api).
@@ -123,7 +123,7 @@ Each account can have multiple vOrgs associated with it, so you also need to kno
         For example:
 
         ```
-        curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/' | jq
+        curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/' | jq
         ```
 
 3. This returns a list of vOrgs associated with the specified account.
@@ -175,7 +175,7 @@ When you have the account and vOrg IDs, you can go ahead and create your VDC.
     For example:
 
     ```
-    curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' -i -X POST -d '{
+    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' -i -X POST -d '{
       "data": {
         "type": "VDC",
         "attributes": {
@@ -220,7 +220,7 @@ When you have the account and vOrg IDs, you can go ahead and create your VDC.
         In our example, the build ID is `9`, so we can send the following request:
 
     ```
-    curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/9' | jq
+    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/vdc-builds/9' | jq
     ```
 
 6. If the build has started and is still in progress, the `state` changes to `running`. For example:
@@ -288,7 +288,7 @@ The first thing you need to do is find the URN of the VDC for which you want to 
         For example:
 
         ```
-        curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | jq
+        curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | jq
         ```
 
 3. This returns a list of VDCs associated with the specified vOrg.
@@ -349,7 +349,7 @@ Now that you have your VDC URN, you can use the Portal API to create your edge g
     For example:
 
     ```
-    curl -b /tmp/cookies.txt -i 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways' -X POST -d '{
+    curl -b cookies.txt -i 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways' -X POST -d '{
       "data": {
         "type": "EdgeGateway",
         "attributes": {
@@ -389,7 +389,7 @@ Now that you have your VDC URN, you can use the Portal API to create your edge g
     For example:
 
     ```
-    curl -b /tmp/cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/10' | jq
+    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/edge-gateway-builds/10' | jq
     ```
 
 6. when the edge gateway has been successfully created, the `state` changes to completed. For example:
