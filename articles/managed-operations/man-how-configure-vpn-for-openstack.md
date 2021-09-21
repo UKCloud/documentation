@@ -87,7 +87,7 @@ We recommend creating a new network for the VPN to reside on.
 
    - **Subnet Details** tab:
 
-     - **DNS Name Servers:** Enter `8.8.8.8`.
+     - **DNS Name Servers:** Enter `8.8.8.8` or your preferred DNS server.
 
 4. Click **Create**.
 
@@ -103,7 +103,7 @@ The next step is to attach the network to the router.
 
    - **Subnet:** Select the network the VPN will sit on.
 
-   - **IP Address:** Leave this blank so the gateway address you picked in the previous will be chosen.
+   - **IP Address:** Leave this blank so the gateway address you picked in the previous step will be chosen.
 
 4. Click **Submit**.
 
@@ -207,7 +207,7 @@ Next, you'll need to configure networking for the VPN endpoint.
 
    - Create a second address pair for the peer subnet and click **Submit**.
 
-5. You need to add a static route to the OpenStack router to ensure that traffic for the Opsview collectors are routed via the VPN.
+5. You need to add a static route to the OpenStack router to ensure that UKCloud Monitoring infrastructure is routed via the VPN.
 
    - In the Horizon dashboard, expand **Network** then click **Routers**.
 
