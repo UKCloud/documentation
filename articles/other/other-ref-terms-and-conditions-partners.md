@@ -4,7 +4,7 @@ description: These main terms apply to UKCloud Partners
 services: other
 author: shighmoor
 reviewer: dbooton
-lastreviewed: 28/08/2020
+lastreviewed: 24/09/2021
 
 toc_rootlink: Reference
 toc_sub1: 

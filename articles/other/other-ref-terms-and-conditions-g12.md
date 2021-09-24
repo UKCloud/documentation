@@ -3,8 +3,8 @@ title: UKCloud Ltd G-Cloud 12 Terms and Conditions
 description: These main terms apply to Public Sector customers buying direct from UKCloud via the G-Cloud Framework 
 services: other
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 26/09/2020
+reviewer: dbooton
+lastreviewed: 24/09/2021
 
 toc_rootlink: Reference
 toc_sub1: 
