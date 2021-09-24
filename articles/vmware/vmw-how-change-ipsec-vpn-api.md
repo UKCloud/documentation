@@ -2,9 +2,9 @@
 title: How to change IPsec VPN settings via the Cloud Director API
 description: Provides a step by step guide to manipulating the IPsec VPN configuration applied to an edge gateway via the Cloud Director API
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+author: shighmoor
+reviewer: gsmith
+lastreviewed: 25/08/2021
 
 toc_rootlink: How To
 toc_sub1:
