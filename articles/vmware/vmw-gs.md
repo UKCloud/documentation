@@ -4,7 +4,7 @@ description: Provides information to get up and running with UKCloud for VMware
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 24/09/2021
+lastreviewed: 27/09/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -109,7 +109,7 @@ If you have the appropriate permissions, you can use the Portal to create a comp
 After creating your compute service, the next step is to create one or more VDCs.
 
 > [!NOTE]
-> You can also create a VDC using the Portal API. For more information, see [*UKCloud Portal API Reference Guide*](../portal/ptl-ref-portal-api.md#post-apiaccountsaccount_idvorgsvorg_idvdcs)
+> You can also create a VDC using the Portal API. For more information, see [*UKCloud Portal API Reference Guide*](../portal/ptl-ref-portal-api.md#post-apiaccountsaccount_idvorgsvorg_idvdcs).
 
 > [!NOTE]
 > You can build VDCs in any of your compute services in regions 5, 6, 13 and 14, including those created by support tickets or the Portal API, not just those you created using the Portal.
@@ -170,9 +170,9 @@ After you've created your compute service and VDC, you can start to build up you
 
     ![Compute services menu option](images/vmw-portal-mnu-compute-services.png)
 
-2. On the **vCloud Director** tab, for additional security, re-enter your UKCloud Portal password, then click **Confirm**.
+2. On the **VMware Cloud Director** tab, for additional security, re-enter your UKCloud Portal password, then click **Confirm**.
 
-    ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
+    ![VMware Cloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
 3. VMware Cloud Director launches in your browser window.
 
@@ -230,39 +230,20 @@ For more detailed information about the different aspects of your UKCloud for VM
 
 ## Glossary
 
-This section provides a glossary of terms specific to UKCloud for VMware.
+This section provides a glossary of terms specific to UKCloud for VMware. For a full list of terms, see the [*UKCloud Glossary*](../other/other-ref-glossary.md).
 
-**account**&nbsp;&nbsp;Within the UKCloud for VMware environment there are two types of account:
-
-- **customer account** --- A collection of related compute services associated with a particular customer or partner.
-
-- **user account** --- The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.
-
-**company**&nbsp;&nbsp;A UKCloud construct to organise business accounts. Each company can own
-multiple accounts.
-
-**compute service**&nbsp;&nbsp;A top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogues, users and resources.
-
-**UKCloud for VMware**&nbsp;&nbsp;A UKCloud IaaS service that provides a compute infrastructure
-specifically designed to deliver traditional enterprise applications to the cloud.
-
-**ESSENTIAL**&nbsp;&nbsp;A type of VM that may have contended resource allocation. Automated
-rebalancing is enabled to ensure the workload receives the requested performance.
-
-**POWER**&nbsp;&nbsp;A type of VM with uncontended compute resource allocation. Automated
-balancing is enabled to pre-emptively optimise performance and availability.
-
-**PRIORITY**&nbsp;&nbsp;A type of VM with uncontended compute resource allocation. Automated
-balancing is configured to reduce workload movement around the platform, reducing workload disruption.
-
-**vApp**&nbsp;&nbsp;A container for VMs that enables you to group related VMs together to
-manage them in one place.
-
-**virtual data centre (VDC)**&nbsp;&nbsp;A container for VMs, where each VM has the same workload characteristics and access to the same resources, such as networking infrastructure,
-storage and external connectivity.
-
-**virtual machine (VM)**&nbsp;&nbsp;Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM's
-resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.
+Term | Definition
+-----|-----------
+**account** | Within the UKCloud for VMware environment there are two types of account:<br><ul><li>**customer account** &ndash; A collection of related compute services associated with a particular customer or partner.</li><li>**user account** &ndash; The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.</li></ul>
+**company** | A UKCloud construct to organise business accounts. Each company can own multiple accounts.
+**compute service** | A top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogues, users and resources.
+**UKCloud for VMware** | A UKCloud IaaS service that provides a compute infrastructure specifically designed to deliver traditional enterprise applications to the cloud.
+**ESSENTIAL** | A type of VM that may have contended resource allocation. Automated rebalancing is enabled to ensure the workload receives the requested performance.
+**POWER** | A type of VM with uncontended compute resource allocation. Automated balancing is enabled to pre-emptively optimise performance and availability.
+**PRIORITY** | A type of VM with uncontended compute resource allocation. Automated balancing is configured to reduce workload movement around the platform, reducing workload disruption.
+**vApp** | A container for VMs that enables you to group related VMs together to manage them in one place.
+**virtual data centre (VDC)** | A container for VMs, where each VM has the same workload characteristics and access to the same resources, such as networking infrastructure, storage and external connectivity.
+**virtual machine (VM)** | Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM's resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.
 
 ## Feedback
 
