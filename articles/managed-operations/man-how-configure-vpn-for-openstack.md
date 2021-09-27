@@ -1,5 +1,5 @@
 ---
-title: How to configure a VPN to enable Monitoring of OpenStack instances with Managed Monitoring as a Service
+title: How to configure a VPN to enable monitoring of OpenStack instances with Managed Monitoring as a Service
 description: Describes how to set up a VPN so that you can use UKCloud's Managed Monitoring as a Service to monitor your OpenStack instances
 services: managed-operations
 author: arapisarda
@@ -10,7 +10,7 @@ toc_sub1: Managed Monitoring as a Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Use your own polling (monitoring) tooling
+toc_title: Configure VPN to enable monitoring of OpenStack instances
 toc_fullpath: Managed IT Operations/Managed Monitoring as a Service/man-how-configure-vpn-for-openstack.md
 toc_mdlink: man-how-configure-vpn-for-openstack.md
 ---
