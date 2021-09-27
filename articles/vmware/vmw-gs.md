@@ -4,7 +4,7 @@ description: Provides information to get up and running with UKCloud for VMware
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 10/09/2020
+lastreviewed: 24/09/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -20,23 +20,19 @@ toc_mdlink: vmw-gs.md
 
 ## Overview
 
-If you're new to UKCloud, you'll probably have received a link to this guide as part of your welcome email. It will help you to get started using UKCloud for VMware.
+UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware technology, that enables you to either migrate existing workloads or create new workloads on our secure sovereign cloud platform quickly and easily whilst enjoying the economies of scale of the cloud.
 
-The Getting Started Guide provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.
+This Getting Started Guide helps get you up and running using UKCloud for VMware, providing basic information about how to log in and set up your environment.
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a VMware Cloud Director administrator.
-
-## Before you begin
-
-You should have received your UKCloud Portal login credentials from your Service Delivery Manager (SDM).
+This article is intended for any new UKCloud for VMware user. To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a VMware Cloud Director administrator.
 
 ## Introductions to UKCloud for VMware
 
-We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable, and gives you the flexibility to use different service levels, VM sizes, security domains, connectivity and data protection options.
+We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable and gives you the flexibility to use different service levels, VM sizes, security domains, connectivity and data protection options.
 
-You can build completely tailored solutions by mixing and matching service options. The choice doesn't lock you to one service or size and you can always change it later.
+You can build completely tailored solutions by mixing and matching service options. The choice doesn't lock you in to one service or size and you can always change it later.
 
 Services within UKCloud belong to an account, which in turn belongs to a company. A company can own multiple accounts. You can use accounts to create separate environments for different projects or, in the case of UKCloud partners, to create separate environments for different customers. Within an account you can have multiple UKCloud services, one of which could be UKCloud for VMware. You can have multiple instances of a service within an account.
 
@@ -44,31 +40,17 @@ Services within UKCloud belong to an account, which in turn belongs to a company
 
 ## Logging in to the UKCloud Portal
 
-The first thing you need to do to get started with UKCloud for VMware is to log in to the UKCloud Portal.
+You access your UKCloud for VMware environment through the UKCloud Portal, so the first thing you need to do to get started is to log in to the Portal.
 
-1. Go to the appropriate URL, depending on the security domain in which your service is located:
+The location of the Portal depends on the security domain your service is located in:
 
-    - **Assured OFFICIAL:** <https://portal.ukcloud.com>
+- **Assured OFFICIAL:** <https://portal.ukcloud.com>
 
-    - **Elevated OFFICIAL:** Contact your Portal administrator or SDM
+- **Elevated OFFICIAL:** Contact your Portal administrator, your Service Delivery Manager (or <servicedelivery@ukcloud.com>), or UKCloud Support (call 01252 303 300 and select option 2)
 
-2. On the *Log in* page, enter your credentials and click **Sign in**.
+You'll need your Portal credentials, which you should have received from your Portal administrator or the Service Delivery team. You may also need to set up two-factor authentication (2FA).
 
-    ![UKCloud Portal Log in page](images/ptl-login.png)
-
-    > [!TIP]
-    > If you've forgotten your password, click the **Forgotten password?** link to request a password reset.
-
-    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or SDM. You'll be prompted to change this temporary password.
-
-3. If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)
-
-    ![Two-Factor Authentication dialog box](images/vmw-portal-2fa.png)
-
-    > [!NOTE]
-    > If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.
-
-For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
+For detailed instructions for how to log in to the Portal, and for more information about all the functionality it provides, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
 ## Creating your UKCloud for VMware estate
 
@@ -148,11 +130,11 @@ After creating your compute service, the next step is to create one or more VDCs
 
 3. On the *Build VDC* page, from the **VM Type** radio buttons, select the option that describes the characteristics of the workload of the VDC:
 
-    - **ESSENTIAL**---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.
+    - **ESSENTIAL.** For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.
 
-    - **POWER**---For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.
+    - **POWER.** For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.
 
-    - **PRIORITY**---For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.
+    - **PRIORITY.** For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.
 
 4. Enter a **VDC Name**.
 
@@ -192,7 +174,7 @@ After you've created your compute service and VDC, you can start to build up you
 
     ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-3. VMware Cloud Director launches in your browser window. The version depends on where your service is located within the UKCloud platform.
+3. VMware Cloud Director launches in your browser window.
 
     ![VMware Cloud Director Home page](images/vmw-vcd10.1-home-page.png)
 
