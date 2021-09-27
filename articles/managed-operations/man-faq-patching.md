@@ -76,9 +76,9 @@ The following diagram shows the six available cut-off dates and associated Devic
 
 For the patching service to operate correctly, VMs must be in a powered-on and available state throughout the patching schedule selected by the customer. The patching service is currently unable to change the power state of any server or virtual machine ahead of the selected patching schedule. Any server or VM in a powered-off state during the selected patching schedule will not be scanned for missing patches or have missing patches applied.
 
-### Why are Virtual Appliances excluded from the scope of this service?
+### Why are virtual appliances excluded from the scope of this service?
 
-Due to the tightly coupled nature of the operating system and application created when a vendor releases a Virtual Appliance, there is a high risk of corruption the Virtual Appliance and its service availability should standard operating system patches be applied. This risk becomes even greater should a vendor modify the operating system a Virtual Appliance is based upon, something which is outside of UKCloud's control.   
+Due to the tightly coupled nature of the operating system and application created when a vendor releases a virtual appliance, there's a high risk of corruption of the virtual appliance and its service availability should standard operating system patches be applied. This risk becomes even greater should a vendor modify the operating system a virtual appliance is based upon, something which is outside of UKCloud's control.   
 
 ### How do I recover from applying a patch that may have had an adverse effect on my environment?
 
