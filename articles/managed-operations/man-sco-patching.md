@@ -28,11 +28,13 @@ It describes the boundaries of the service, along with the division of responsib
 > [!NOTE]
 > This service is not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
 
-| Servers Supported                                     |
+| Operating Systems Supported                                     |
 |-------------------------------------------------------|
 | In-life Windows Server                                |
 | In-life RPM based Linux distributions (RHEL/CentOS)   |
 | In-life Debian based Linux distributions (Ubuntu)     |
+
+**Virtual Appliances based upon the above operating systems are outside the scope of this service.**
 
 All servers that constitute this service must be patched to within 90 days of the most recent patches released by Microsoft. During onboarding, should UKCloud find any exceptions to this policy, UKCloud has the right to cancel this service after consultation with the customer.
 
