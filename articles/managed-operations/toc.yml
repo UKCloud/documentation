@@ -54,14 +54,14 @@
     items:
     - name: Change service configuration
       href: man-how-monitoring-change-config.md
+    - name: Configure VPN to enable monitoring of OpenStack instances
+      href: man-how-configure-vpn-for-openstack.md
     - name: Default thresholds and procedures
       href: man-ref-defaults.md
     - name: Managed Monitoring as a Service FAQs
       href: man-faq-monitoring.md
     - name: Managed Monitoring as a Service Service Scope
       href: man-sco-monitoring.md
-    - name: Use your own polling (monitoring) tooling
-      href: man-how-configure-vpn-for-openstack.md
     - name: Use your own polling (monitoring) tooling
       href: man-how-monitoring-use-customer-polling.md
   - name: Patching as a Service
