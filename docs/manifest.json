@@ -6453,6 +6453,61 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/managed-operations/images/man-mmaas-openstack-pfsense-dashboard.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-operations/images/man-mmaas-openstack-pfsense-dashboard.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-operations/images/man-mmaas-openstack-pfsense-ipsec.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-operations/images/man-mmaas-openstack-pfsense-ipsec.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-operations/images/man-mmaas-openstack-vpn-security-group1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-operations/images/man-mmaas-openstack-vpn-security-group1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-operations/images/man-mmaas-openstack-vpn-security-group2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-operations/images/man-mmaas-openstack-vpn-security-group2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/managed-operations/images/man-mmaas-openstack-vpn-security-group3.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/managed-operations/images/man-mmaas-openstack-vpn-security-group3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/managed-operations/images/man-monitoring-excel-refresh.png",
       "output": {
         "resource": {
@@ -6584,6 +6639,18 @@
         ".html": {
           "relative_path": "articles/managed-operations/man-how-add-remove-device.html",
           "hash": "AKFHCdV8/QiPr9uYG1TDmWe97ek2YPG6Gao/r+gU5FM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/managed-operations/man-how-configure-vpn-for-openstack.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/managed-operations/man-how-configure-vpn-for-openstack.html",
+          "hash": "k7Ub8mluOAv0Ae47L1pxcejlaCMOtZAnZgSl5r9SWd0="
         }
       },
       "is_incremental": false,
@@ -6823,7 +6890,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/toc.html",
-          "hash": "RzufZP1sIfT+ryo9af4dRgnzuVzDFm968y9SVHxq0oE="
+          "hash": "7LT0Y7tJ7JvJA9tRieUhV+Dx+KExycsxgyGyx9qIBNs="
         }
       },
       "is_incremental": false,
@@ -23142,7 +23209,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 462,
+          "total_file_count": 463,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to configure a VPN to enable Monitoring of OpenStack instances with Managed Monitoring as a Service </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to configure a VPN to enable Monitoring of OpenStack instances with Managed Monitoring as a Service ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/managed-operations/man-how-configure-vpn-for-openstack.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-configure-a-vpn-to-enable-monitoring-of-openstack-instances-with-managed-monitoring-as-a-service">How to configure a VPN to enable Monitoring of OpenStack instances with Managed Monitoring as a Service</h1>
+
+<h2 id="overview">Overview</h2>
+<p>To enable monitoring of your OpenStack instances using Managed Monitoring as a Service, you must stand up an OpenStack instance containing either a VPN appliance or an operating system with a VPN application installed. We recommend using pfSense as it has been tried and tested on the UKCloud platform.</p>
+<p>This article shows how to set up pfSense as a VPN to use for monitoring OpenStack instances.</p>
+<h2 id="installing-and-configuring-pfsense">Installing and configuring pfSense</h2>
+<p>The steps for installing and configuring pfSense are:</p>
+<ol>
+<li><p><a href="#creating-a-pfsense-image">Create a pfSense image</a>.</p>
+</li>
+<li><p><a href="#setting-up-the-network">Set up the network</a>.</p>
+</li>
+<li><p><a href="#attaching-the-network-to-the-router">Attach the network to the router</a>.</p>
+</li>
+<li><p><a href="#applying-security-groups">Apply security groups</a>.</p>
+</li>
+<li><p><a href="#deploying-the-vpn-instance">Deploy the VPN instance</a>.</p>
+</li>
+<li><p><a href="#configuring-networking-for-the-vpn-endpoint">Configure networking for the VPN endpoint</a>.</p>
+</li>
+<li><p><a href="#configuring-the-vpn-endpoint">Configure the VPN endpoint</a>.</p>
+</li>
+</ol>
+<h3 id="creating-a-pfsense-image">Creating a pfSense image</h3>
+<p>To obtain the latest pfSense image, raise a service request via the My Calls section of the UKCloud Portal.</p>
+<ol>
+<li><p>In the OpenStack Horizon dashboard, expand <strong>Compute</strong> then select <strong>Images</strong>.</p>
+</li>
+<li><p>Click the <strong>Create Image</strong> button.</p>
+</li>
+<li><p>In the <em>Create Image</em> dialog box, in the <strong>Image Name</strong> field, enter an appropriate name for the image, for example, <code>pfSense2.4.4_http</code>.</p>
+</li>
+<li><p>In the <strong>File</strong> field, click <strong>Browse</strong> and locate the pfSense image.</p>
+</li>
+<li><p>From the <strong>Format</strong> list, select <strong>QCOW2 - QEMU Emulator</strong>.</p>
+</li>
+<li><p>In the <strong>Minimum Disk</strong> field, enter <code>60</code>.</p>
+</li>
+<li><p>Click <strong>Create Image</strong>.</p>
+</li>
+</ol>
+<h3 id="setting-up-the-network">Setting up the network</h3>
+<p>We recommend creating a new network for the VPN to reside on.</p>
+<ol>
+<li><p>Expand <strong>Network</strong> then select <strong>Networks</strong>.</p>
+</li>
+<li><p>Click the <strong>Create Network</strong> button.</p>
+</li>
+<li><p>In the <em>Create Network</em> dialog box, provide the following information:</p>
+<ul>
+<li><p><strong>Networks</strong> tab:</p>
+<ul>
+<li><p><strong>Network Name:</strong> Enter <code>VPN Bridge</code> or something similar.</p>
+</li>
+<li><p>Don't change any of the remaining options.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Subnet</strong> tab:</p>
+<ul>
+<li><p><strong>Subnet Name:</strong> Leave blank.</p>
+</li>
+<li><p><strong>Network Address:</strong> The network subnet in a CIDR format. The subnet should not already be in use and the subnet mask should be <code>x.x.x.0/28</code>.</p>
+</li>
+<li><p><strong>IP Version:</strong> Select <code>IPv4</code>.</p>
+</li>
+<li><p><strong>Gateway IP:</strong> The IP dedicated to the gateway of the network. For ease of use, use the network address but ensure that the last octet is a <code>.1</code>, for example, <code>192.168.0.1</code>.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Subnet Details</strong> tab:</p>
+<ul>
+<li><strong>DNS Name Servers:</strong> Enter <code>8.8.8.8</code> or your preferred DNS server.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3 id="attaching-the-network-to-the-router">Attaching the network to the router</h3>
+<p>The next step is to attach the network to the router.</p>
+<ol>
+<li><p>Expand <strong>Network</strong> then select <strong>Network Topology</strong>.</p>
+</li>
+<li><p>Hover over the internet router and click <strong>Add Interface</strong>.</p>
+</li>
+<li><p>In the <em>Add Interface</em>* dialog box, provide the following information:</p>
+<ul>
+<li><p><strong>Subnet:</strong> Select the network the VPN will sit on.</p>
+</li>
+<li><p><strong>IP Address:</strong> Leave this blank so the gateway address you picked in the previous step will be chosen.</p>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Submit</strong>.</p>
+</li>
+</ol>
+<h3 id="applying-security-groups">Applying security groups</h3>
+<p>You'll need to apply security groups to the VPN server to be able to talk to the other side.</p>
+<ol>
+<li><p>Expand <strong>Network</strong> then select <strong>Security Groups</strong>.</p>
+</li>
+<li><p>Click the <strong>Create Security Group</strong> button.</p>
+</li>
+<li><p>In the <em>Create Security Group</em> dialog box, in the <strong>Name</strong> field, enter <code>UKCloud IT Operations VPN</code> then click <strong>Create</strong>.</p>
+</li>
+<li><p>Apply the following security group rules, where the <strong>Remote IP Prefix</strong> is your peer endpoint, as provided by UKCloud.</p>
+<p><img src="images/man-mmaas-openstack-vpn-security-group1.png" alt="Security group rules for UKCloud IT Operations security group"></p>
+</li>
+<li><p>Create a second security group with the name <code>SSH &amp; Web Access</code> with the following rules, where the <strong>Remote IP Prefix</strong> is <strong>your</strong> public IP address and the <strong>Port Range</strong> is 443 and 22 (HTTPS and SSH). This enables you to access the pfSense console and web GUI.</p>
+<p><img src="images/man-mmaas-openstack-vpn-security-group2.png" alt="Security group rules for SSH &amp; Web Access security group"></p>
+</li>
+<li><p>Create a third security group with the name <code>Managed Monitoring Ports</code>.</p>
+<ul>
+<li><p>The rules for this security group allow the UKCloud IT Operations subnet to communicate with the ports that are required to be monitored as specified in the MITO Data Capture Form. You must also allow ICMP to and from the local and peer subnets.</p>
+</li>
+<li><p>The Ingress entry IP address must be the UKCloud IT Operations subnet, which will be provided by UKCloud.</p>
+</li>
+<li><p>The Egress entry IP address must be the required monitored subnet(s), which are specified in the MITO Data Capture form.</p>
+</li>
+</ul>
+<p><img src="images/man-mmaas-openstack-vpn-security-group3.png" alt="Security group rules for Managed Monitoring Ports security group"></p>
+</li>
+<li><p>If you have opted for UKCloud Patching as a Service you must also create an additional security group with the name <code>Managed Patching Ports</code>.</p>
+<p>The rules for this security group allow the UKCloud IT Operations subnet to communicate through the VPN to patch the machines on the patching ports. Raise a service request to obtain the ports that require opening.</p>
+</li>
+</ol>
+<h3 id="deploying-the-vpn-instance">Deploying the VPN instance</h3>
+<p>You're now ready to deploy the instance.</p>
+<ol>
+<li><p>Expand <strong>Compute</strong> then select <strong>Instances</strong>.</p>
+</li>
+<li><p>Click the <strong>Launch Instances</strong> button.</p>
+</li>
+<li><p>In the <em>Launch Instance</em> dialog box, provide the following information:</p>
+<ul>
+<li><p><strong>Details</strong> tab:</p>
+<ul>
+<li><p><strong>Instance Name:</strong> Enter <code>MMaaS-VPN-Endpoint</code> or similar.</p>
+</li>
+<li><p><strong>Description:</strong> Leave blank.</p>
+</li>
+<li><p><strong>Availability Zone:</strong> Select <strong>Any Availability Zone</strong>.</p>
+</li>
+<li><p><strong>Count:</strong> Enter <code>1</code>.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Source</strong> tab:</p>
+<ul>
+<li><p><strong>Select Boot Source:</strong> Select <strong>Image</strong>.</p>
+</li>
+<li><p><strong>Create New Volume:</strong> Select <strong>No</strong>.</p>
+</li>
+<li><p>Select your pfSense image from the list of images.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Flavor</strong> tab:</p>
+<ul>
+<li>Select <strong>t1.large</strong>.</li>
+</ul>
+</li>
+<li><p><strong>Networks</strong> tab:</p>
+<ul>
+<li>Select the network that you created earlier.</li>
+</ul>
+</li>
+<li><p><strong>Security Groups</strong> tab:</p>
+<ul>
+<li>Select the security groups that you created earlier: UKCloud IT Operations VPN, SSH &amp; Web Access, Managed Monitoring Ports, Managed Patching Ports (if applicable).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Launch Instance</strong>.</p>
+</li>
+</ol>
+<h3 id="configuring-networking-for-the-vpn-endpoint">Configuring networking for the VPN endpoint</h3>
+<p>Next, you'll need to configure networking for the VPN endpoint.</p>
+<ol>
+<li><p>On the <em>Instances</em> page, in the dropdown for your new instance, select <strong>Associate Floating IP</strong>.</p>
+</li>
+<li><p>In the <em>Manage Floating IP Associations</em> dialog box, from the <strong>IP Address</strong> list, select a public IP address.</p>
+</li>
+<li><p>From the <strong>Port to be associated</strong> list, select the local IP address of the VPN instance.</p>
+</li>
+<li><p>You'll need to add two <strong>Allowed Address Pairs</strong> entries for the instance's port.</p>
+<ul>
+<li><p>In the Horizon dashboard, expand <strong>Networks</strong> then select <strong>Network</strong>.</p>
+</li>
+<li><p>Click your VPN network's name.</p>
+</li>
+<li><p>Select the <strong>Ports</strong> tab.</p>
+</li>
+<li><p>Click the port that corresponds to the instance's internal IP address.</p>
+</li>
+<li><p>Click <strong>Allowed Address Pairs</strong> then <strong>+</strong>.</p>
+</li>
+<li><p>Create an address pair for the local subnet and click <strong>Submit</strong>.</p>
+</li>
+<li><p>Create a second address pair for the peer subnet and click <strong>Submit</strong>.</p>
+</li>
+</ul>
+</li>
+<li><p>You need to add a static route to the OpenStack router to ensure that UKCloud Monitoring infrastructure is routed via the VPN.</p>
+<ul>
+<li><p>In the Horizon dashboard, expand <strong>Network</strong> then click <strong>Routers</strong>.</p>
+</li>
+<li><p>Select your internet router.</p>
+</li>
+<li><p>On the <strong>Static Routes</strong> tab, click the <strong>Add Static Route</strong> button.</p>
+</li>
+<li><p>In the <em>Add Static Route</em> dialog box, provide the following information:</p>
+<ul>
+<li><p><strong>Destination CIDR:</strong> The UKCloud IT Operations subnet.</p>
+</li>
+<li><p><strong>Next Hop:</strong> The private IP for the VPN instance.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="configuring-the-vpn-endpoint">Configuring the VPN endpoint</h3>
+<p>The final step is to configure the VPN endpoint using the pfSense dashboard.</p>
+<ol>
+<li><p>Providing the security groups are set up correctly, whilst on you local machine and using the IP address specified in the SSH &amp; Web Access security group, browse to <code>http://&lt;floating-ip&gt;</code> (using the floating IP you set in the previous section).</p>
+</li>
+<li><p>You can find pfSense administrator credentials in <a href="https://docs.netgate.com/pfsense/en/latest/usermanager/defaults.html">Default Username and Password</a> or you can contact UKCloud Support.</p>
+</li>
+<li><p>Once you're logged in, you should see the following dashboard:</p>
+<p><img src="images/man-mmaas-openstack-pfsense-dashboard.png" alt="pfSense dashboard"></p>
+</li>
+<li><p>In the top navigation bar, go to <strong>VPN</strong> &gt; <strong>IPsec</strong> &gt; under <strong>tunnels</strong> &gt; <strong>Add P1</strong>. Provide the following information (this must match the IPsec):</p>
+<ul>
+<li><p><strong>General Information</strong></p>
+<ul>
+<li><p><strong>Key Exchange version:</strong> IKEv2</p>
+</li>
+<li><p><strong>Internet Protocol:</strong> IPv4</p>
+</li>
+<li><p><strong>Interface:</strong> WAN</p>
+</li>
+<li><p><strong>Remote Gateway:</strong> This will be provided by UKCloud</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Phase 1 Proposal (Authentication)</strong></p>
+<ul>
+<li><p><strong>My Identifier - IP address:</strong> <floating-ip><p>
+</floating-ip></li>
+<li><p><strong>Peer Identifier - IP address:</strong> This will be provided by UKCloud</p>
+</li>
+<li><p><strong>Pre-Shared Key:</strong> This will be provided by UKCloud</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Phase 1 Proposal (Encyption Algorithm)</strong></p>
+<ul>
+<li><p><strong>Algorithm:</strong> AES</p>
+</li>
+<li><p><strong>Key length:</strong> 256 bits</p>
+</li>
+<li><p><strong>Hash:</strong> SHA256</p>
+</li>
+<li><p><strong>DH Group:</strong> 16 (4096 bit)</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Advanced Options</strong></p>
+<ul>
+<li>Leave all as default</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
+</li>
+<li><p>Go to <strong>VPN</strong> &gt; <strong>IPsec</strong> &gt; expand <strong>Show Phase 2 Entries</strong> &gt; <strong>Add P2</strong>. Provide the following information:</p>
+<ul>
+<li><p><strong>General Information</strong></p>
+<ul>
+<li><p><strong>Disabled:</strong> Leave unselected</p>
+</li>
+<li><p>AES | 256 bits</p>
+</li>
+<li><p><strong>Hash Algorithms:</strong> SHA256</p>
+</li>
+<li><p><strong>PFS key group:</strong> 16 (4096 bit)</p>
+</li>
+<li><p><strong>Lifetime:</strong> 3600</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Advanced Configuration</strong></p>
+<ul>
+<li>Leave the rest blank</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
+<p>Your IPsec configuration should look similar to the following:</p>
+<p><img src="images/man-mmaas-openstack-pfsense-ipsec.png" alt="IPsec settings in pfSense dashboard"></p>
+</li>
+<li><p>You'll need to apply firewall rules on the pfSense WAN interface to let traffic in and out.</p>
+<ul>
+<li><p>Go to <strong>Firewall</strong> &gt; <strong>Rules</strong> &gt; <strong>WAN</strong> &gt; <strong>Add</strong>.</p>
+</li>
+<li><p>Leave everything as default, but under <strong>Protocol</strong>, change <strong>TCP</strong> to <strong>Any</strong>.</p>
+</li>
+</ul>
+</li>
+<li><p>You'll need to apply firewall rules on the pfSense IPsec interface to let traffic in and out.</p>
+<ul>
+<li><p>Go to <strong>Firewall</strong> &gt; <strong>Rules</strong> &gt; <strong>IPsec</strong> &gt; <strong>Add</strong>.</p>
+</li>
+<li><p>Leave everything as default, but under <strong>Protocol</strong>, change <strong>TCP</strong> to <strong>Any</strong>.</p>
+</li>
+</ul>
+</li>
+<li><p>Contact UKCloud Support to confirm that the VPN tunnel is up between the UKCloud IT Operations subnet and your monitored subnet.</p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>
