@@ -34,7 +34,7 @@ It describes the boundaries of the service, along with the division of responsib
 | In-life RPM based Linux distributions (RHEL/CentOS)   |
 | In-life Debian based Linux distributions (Ubuntu)     |
 
-**Virtual Appliances based upon the above operating systems are outside the scope of this service.**
+**Virtual appliances based upon the above operating systems are outside the scope of this service.**
 
 All servers that constitute this service must be patched to within 90 days of the most recent patches released by Microsoft. During onboarding, should UKCloud find any exceptions to this policy, UKCloud has the right to cancel this service after consultation with the customer.
 
