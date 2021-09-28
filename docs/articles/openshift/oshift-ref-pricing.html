@@ -94,7 +94,7 @@
 <h1 id="pricing-information-for-ukcloud-for-red-hat-openshift">Pricing information for UKCloud for Red Hat OpenShift</h1>
 
 <h2 id="overview">Overview</h2>
-<p>UKCloud for Red Hat OpenShift pricing can be as low as 74p per hour (using committed annual pricing option). Full pricing with all options, including licensing and connectivity, is available in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
+<p>UKCloud for Red Hat OpenShift pricing can be as low as 83p per hour (using committed annual pricing option). Full pricing with all options, including licensing and connectivity, is available in the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <p>OpenShift is packaged to provide you with a high level of flexibility to scale your environments inline with your workloads.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -125,7 +125,7 @@
 
 <p><strong>Control plane:</strong> 3 x control plane nodes<br>
 <strong>Infrastructure nodes:</strong> None<br>
-<strong>Application nodes:</strong> 2 x m1.small<br>
+<strong>Application nodes:</strong> 2 x m1.medium<br>
 <strong>Persistent volume storage used:</strong> 60GiB Tier 2 persistent volume storage<br></p>
 <p><strong>Control plane cost per month</strong></p>
 <p>Monthly pricing for the control plane costs <strong>£412</strong> per month.</p>
@@ -136,7 +136,7 @@
 <p>As there are no infrastructure nodes, aggregated logging is not available.</p>
 </div>
 <p><strong>Application node cost per month</strong></p>
-<p>Monthly pricing for two m1.small application nodes costs 2 x £134 per month = <strong>£268</strong>.</p>
+<p>Monthly pricing for two m1.medium application nodes costs 2 x £200 per month = <strong>£400</strong>.</p>
 <p><strong>Storage cost per month</strong></p>
 <p>Tier 2 persistent block storage costs <strong>£0.10</strong> per GiB month, so the storage cost for 60GiB is <strong>£6.00</strong>.</p>
 <p><strong>Total basic cost</strong></p>
@@ -161,11 +161,11 @@
 <td>+</td>
 <td>£0.00</td>
 <td>+</td>
-<td>£268</td>
+<td>£400</td>
 <td>+</td>
 <td>£6.00</td>
 <td>=</td>
-<td><strong>£686.00</strong></td>
+<td><strong>£818.00</strong></td>
 </tr>
 </tbody>
 </table>
@@ -174,16 +174,16 @@
 
 <p><strong>Control plane:</strong> 3 x control plane nodes<br>
 <strong>Infrastructure nodes:</strong> 2 x m1.medium<br>
-<strong>Application nodes:</strong> 2 x m1.small and 1 x r1.medium<br>
+<strong>Application nodes:</strong> 2 x m1.medium and 1 x r1.medium<br>
 <strong>Persistent volume storage used:</strong> 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br></p>
 <p><strong>Control plane cost per month</strong></p>
 <p>Monthly pricing for the control plane costs <strong>£412</strong> per month.</p>
 <p><strong>Infrastructure node cost per month</strong></p>
 <p>Monthly pricing for two m1.medium infrastructure nodes costs 2 x £115 per month = <strong>£230</strong>.</p>
 <p><strong>Application node cost per month</strong></p>
-<p>Monthly pricing for two m1.small application nodes cost 2 x £134 per month = <strong>£268</strong>.</p>
+<p>Monthly pricing for two m1.medium application nodes cost 2 x £200 per month = <strong>£400</strong>.</p>
 <p>Monthly pricing for one r1.medium application node costs <strong>£457</strong> per month.</p>
-<p>The total cost of application nodes is £268 + £457 = <strong>£725</strong> per month.</p>
+<p>The total cost of application nodes is £400 + £457 = <strong>£857</strong> per month.</p>
 <p><strong>Storage cost per month</strong></p>
 <p>Tier 2 persistent block storage costs <strong>£0.10</strong> per GiB month, so the storage cost for 60GiB is <strong>£6.00</strong>.</p>
 <p>Tier 1 persistent block storage costs <strong>£0.25</strong> per GiB month, so the storage cost for 40GiB is <strong>£10.00</strong>.</p>
@@ -210,11 +210,11 @@
 <td>+</td>
 <td>£230</td>
 <td>+</td>
-<td>£725</td>
+<td>£857</td>
 <td>+</td>
 <td>£16.00</td>
 <td>=</td>
-<td><strong>£1,383.00</strong></td>
+<td><strong>£1,515.00</strong></td>
 </tr>
 </tbody>
 </table>
@@ -224,14 +224,14 @@
 <p>The following provides an example of hourly pricing using an r1.medium application node for burst workloads.</p>
 <p><strong>Control plane:</strong> 3 x control plane nodes<br>
 <strong>Infrastructure nodes:</strong> 2 x m1.medium<br>
-<strong>Application nodes:</strong> 2 x m1.small (monthly) and 1 x r1.medium (hourly)<br>
+<strong>Application nodes:</strong> 2 x m1.medium (monthly) and 1 x r1.medium (hourly)<br>
 <strong>Persistent volume storage used:</strong> 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br></p>
 <p><strong>Control plane node cost per month</strong></p>
 <p>Monthly pricing for the control plane costs <strong>£412</strong> per month.</p>
 <p><strong>Infrastructure node cost per month</strong></p>
 <p>Monthly pricing for two m1.medium infrastructure nodes costs 2 x £115 per month = <strong>£230</strong>.</p>
 <p><strong>Application node cost per month</strong></p>
-<p>Monthly pricing for two m1.small application nodes costs 2 x £134 per month = <strong>£268</strong>.</p>
+<p>Monthly pricing for two m1.medium application nodes costs 2 x £200 per month = <strong>£400</strong>.</p>
 <p>Hourly pricing for one r1.medium application node costs <strong>£0.65</strong> per hour</p>
 <p>If the r1.medium application node is used for <strong>200</strong> hours to cover increased demand, the monthly cost works out at:</p>
 <table>
@@ -254,7 +254,7 @@
 </tr>
 </tbody>
 </table>
-<p>The total cost of application nodes is £268 + £130 = <strong>£398</strong> per month.</p>
+<p>The total cost of application nodes is £400 + £130 = <strong>£530</strong> per month.</p>
 <p><strong>Storage cost per month</strong></p>
 <p>Tier 2 persistent block storage costs <strong>£0.10</strong> per GiB month, so the storage cost for 60GiB is <strong>£6.00</strong>.</p>
 <p>Tier 1 persistent block storage costs <strong>£0.25</strong> per GiB month, so the storage cost for 40GiB is <strong>£10.00</strong>.</p>
@@ -281,11 +281,11 @@
 <td>+</td>
 <td>£230</td>
 <td>+</td>
-<td>£398</td>
+<td>£530</td>
 <td>+</td>
 <td>£16.00</td>
 <td>=</td>
-<td><strong>£1,056.00</strong></td>
+<td><strong>£1,188.00</strong></td>
 </tr>
 </tbody>
 </table>
