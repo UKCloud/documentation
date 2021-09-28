@@ -4,7 +4,7 @@ description: Provides useful information about UKCloud for Red Hat OpenShift pri
 services: openshift
 author: shighmoor
 reviewer:
-lastreviewed: 01/04/2021
+lastreviewed: 28/09/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -48,7 +48,7 @@ Application node pricing includes a Red Hat OpenShift subscription component.
 
 **Control plane:** 3 x control plane nodes<br>
 **Infrastructure nodes:** None<br>
-**Application nodes:** 2 x m1.small<br>
+**Application nodes:** 2 x m1.medium<br>
 **Persistent volume storage used:** 60GiB Tier 2 persistent volume storage<br>
 
 **Control plane cost per month**
@@ -64,7 +64,7 @@ There are no infrastructure nodes, so there is no infrastructure node cost.
 
 **Application node cost per month**
 
-Monthly pricing for two m1.small application nodes costs 2 x £134 per month = **£268**.
+Monthly pricing for two m1.medium application nodes costs 2 x £200 per month = **£400**.
 
 **Storage cost per month**
 
@@ -76,13 +76,13 @@ Calculate the total basic cost by adding together the control plane, infrastruct
 
 Control plane cost | + | Infrastructure cost | + | Application node cost | + | Storage cost | = | Total basic cost per month
 -------------------|---|---------------------|---|-----------------------|---|--------------|---|---------------------------
-£412               | + | £0.00               | + | £268                  | + |  £6.00       | = |  **£686.00**
+£412               | + | £0.00               | + | £400                  | + |  £6.00       | = |  **£818.00**
 
 ### [Example 2: Medium deployment](#tab/tab-2)
 
 **Control plane:** 3 x control plane nodes<br>
 **Infrastructure nodes:** 2 x m1.medium<br>
-**Application nodes:** 2 x m1.small and 1 x r1.medium<br>
+**Application nodes:** 2 x m1.medium and 1 x r1.medium<br>
 **Persistent volume storage used:** 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br>
 
 **Control plane cost per month**
@@ -95,11 +95,11 @@ Monthly pricing for two m1.medium infrastructure nodes costs 2 x £115 per month
 
 **Application node cost per month**
 
-Monthly pricing for two m1.small application nodes cost 2 x £134 per month = **£268**.
+Monthly pricing for two m1.medium application nodes cost 2 x £200 per month = **£400**.
 
 Monthly pricing for one r1.medium application node costs **£457** per month.
 
-The total cost of application nodes is £268 + £457 = **£725** per month.
+The total cost of application nodes is £400 + £457 = **£857** per month.
 
 **Storage cost per month**
 
@@ -115,7 +115,7 @@ Calculate the total basic cost by adding together the control plane, infrastruct
 
 Control plane cost | + | Infrastructure cost | + | Application node cost | + | Storage cost | = | Total basic cost per month
 -------------------|---|---------------------|---|-----------------------|---|--------------|---|---------------------------
-£412               | + | £230                | + | £725                  | + |  £16.00      | = |  **£1,383.00**
+£412               | + | £230                | + | £857                  | + |  £16.00      | = |  **£1,515.00**
 
 ### [Example 3: Hourly application node pricing](#tab/tab-3)
 
@@ -123,7 +123,7 @@ The following provides an example of hourly pricing using an r1.medium applicati
 
 **Control plane:** 3 x control plane nodes<br>
 **Infrastructure nodes:** 2 x m1.medium<br>
-**Application nodes:** 2 x m1.small (monthly) and 1 x r1.medium (hourly)<br>
+**Application nodes:** 2 x m1.medium (monthly) and 1 x r1.medium (hourly)<br>
 **Persistent volume storage used:** 60GiB Tier 2 persistent volume storage and 40GiB Tier 1 persistent storage<br>
 
 **Control plane node cost per month**
@@ -136,7 +136,7 @@ Monthly pricing for two m1.medium infrastructure nodes costs 2 x £115 per month
 
 **Application node cost per month**
 
-Monthly pricing for two m1.small application nodes costs 2 x £134 per month = **£268**.
+Monthly pricing for two m1.medium application nodes costs 2 x £200 per month = **£400**.
 
 Hourly pricing for one r1.medium application node costs **£0.65** per hour
 
@@ -146,7 +146,7 @@ Hours in operation | x | Application node cost | = | Application node cost per m
 -------------------|---|-----------------------|---|-----------------------------------
 200                | x | £0.65                 | = | **£130**
 
-The total cost of application nodes is £268 + £130 = **£398** per month.
+The total cost of application nodes is £400 + £130 = **£530** per month.
 
 **Storage cost per month**
 
@@ -162,7 +162,7 @@ Calculate the total basic cost by adding together the control plane, infrastruct
 
 Control plane cost | + | Infrastructure cost | + | Application node cost | + | Storage cost | = | Total basic cost
 -------------------|---|---------------------|---|-----------------------|---|--------------|---|-----------------
-£412               | + | £230                | + | £398                  | + |  £16.00      | = |  **£1,056.00**
+£412               | + | £230                | + | £530                  | + |  £16.00      | = |  **£1,188.00**
 
 ***
 
