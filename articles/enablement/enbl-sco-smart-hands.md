@@ -21,6 +21,8 @@ toc_mdlink: enbl-sco-smart-hands.md
 
 UKCloud offers a Smart Hands service, available for customers using our Cloud Enablement service. This service can be used for a number of different requirements such as a physical 'push-button' task, replacing hardware and checking equipment statuses.
 
+This service is subject to the availability of UKCloud engineers to perform the work. UKCloud reserves the right to turn down or reschedule requests where the request conflicts with other planned or emergency work or is outside the scope of the Smart Hands service. We will communicate with you if this happens.
+
 ## Inclusions
 
 The following are examples of the core tasks that Smart Hands can be requested for:
@@ -76,7 +78,15 @@ Once the task requested has been completed, the Engineer will contact you to con
 
 The Service Request will be updated to show that that the task has been completed and the duration of the activity before closing the ticket.
 
-## How much does this service cost?
+## Smart Hands Standby
+
+Customers may wish to reserve a UKCloud Engineer to perform Smart Hands work during a time window, but may not necessarily know when the Engineer will be required. For example power-cycling colocated hardware at random times during overnight upgrades. 
+
+Customers may use Smart Hands Standby to reserve a UKCloud Engineer for an 8 hour window who is on-call to perform tasks as required. The Smart Hands Standby is charged at the SFIA Rate ‘Follow – Client Interface’. This is in addition to the standard Smart Hands hourly rate which is applied when the Engineer is performing the activities.
+
+In the event that the reserved engineer is required to perform Emergency maintenance for UKCloud during the Smart Hands Standby Window, this will take priority over the on-call reservation. In the event this happens it will be communicated to you and we will make best efforts to accomodate your work during the emergency maintenance.
+
+## How much does Smart Hands cost?
 
 The cost for Smart Hands is charged in hourly increments at a rate of £85 per hour with a minimum of 1 hour.
 
