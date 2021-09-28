@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the UKCloud for Red Hat
 services: openshift
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/04/2021
+lastreviewed: 28/09/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -51,7 +51,7 @@ The following product options apply only to OpenShift Container Platform (OCP) v
 
 ## Pricing and packaging
 
-UKCloud for Red Hat OpenShift pricing can be as low as 74p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud for Red Hat OpenShift pricing can be as low as 83p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
