@@ -4,7 +4,7 @@ description: Shows you how to update your existing VMs to target UKCloud's appro
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 19/04/2021
+lastreviewed: 28/09/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -28,8 +28,6 @@ As of November 2020, UKCloud implemented the latest version of RHUI to continue 
 - Replication of packages between Assured and Elevated is significantly faster.
 
 - Root CA signed SSL certificates are now in use for HTTPS communication to the RHUI Content Delivery Systems (CDS).
-
-This latest version of RHUI replaces the previous version (from 2015), which is soon to be decommissioned.
 
 ### Intended audience
 
@@ -60,13 +58,9 @@ You can browse the list of installer RPM files [here](https://rh-cds.ukcloud.com
 
 - [RHEL 6 Standard](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL6-STANDARD-2.0-3.noarch.rpm)
 
-- [RHEL 6 EUS](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL6-EUS-2.0-2.noarch.rpm)
-
 - [RHEL 6 ELS](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL6-ELS-2.0-2.noarch.rpm)
 
 - [RHEL 7 Standard](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL7-STANDARD-2.0-5.noarch.rpm)
-
-- [RHEL 7 EUS](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL7-EUS-2.0-2.noarch.rpm)
 
 - [RHEL 8 Standard](https://rh-cds.ukcloud.com/redhat/client_rpms/UKCloud-Client-RHEL8-STANDARD-2.0-7.noarch.rpm)
 

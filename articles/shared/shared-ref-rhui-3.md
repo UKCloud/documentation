@@ -4,7 +4,7 @@ description: Provides information about the UKCloud Red Hat Update Infrastructur
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 19/07/2021
+lastreviewed: 28/09/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -36,18 +36,6 @@ This article is intended for customers who have configured their systems to use 
 ## Repository groups
 
 The UKCloud RHUI service supplies access to the following repository groups. Each group is installed by a configuration RPM. You can install only one configuration RPM per client machine.
-
-### RHEL6-Standard
-
-- Red Hat Enterprise Linux 6 Server - Extras from RHUI (RPMs) (x86_64)
-
-- Red Hat Enterprise Linux 6 Server - Optional from RHUI (RPMs) (6Server-x86_64)
-
-- Red Hat Enterprise Linux 6 Server from RHUI (RPMs) (6Server-x86_64)
-     
-- Red Hat Enterprise Linux 6 Server - Supplementary from RHUI (RPMs) (6Server-x86_64)
-
-- Red Hat Software Collections for RHEL Server from RHUI (RPMs) (6Server-x86_64)
 
 ### RHEL6-ELS
 
