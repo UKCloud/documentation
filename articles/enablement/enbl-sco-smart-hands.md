@@ -3,8 +3,8 @@ title: Smart Hands Service Scope
 description: Outlines important details regarding the Smart Hands service
 services: enablement
 author: Steve Hall
-reviewer: jstevens
-lastreviewed: 27/10/2020
+reviewer: bchallis
+lastreviewed: 28/09/2021
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -19,9 +19,9 @@ toc_mdlink: enbl-sco-smart-hands.md
 
 ## About this service
 
-UKCloud offers a Smart Hands service, available for customers using our Cloud Enablement service. This service can be used for a number of different requirements such as a physical 'push-button' task, replacing hardware and checking equipment statuses.
+UKCloud offers a Smart Hands service, available for customers using our Cloud Enablement service. You can use this service for a number of different requirements, such as a physical 'push-button' task, replacing hardware or checking the status of equipment.
 
-This service is subject to the availability of UKCloud engineers to perform the work. UKCloud reserves the right to turn down or reschedule requests where the request conflicts with other planned or emergency work or is outside the scope of the Smart Hands service. We will communicate with you if this happens.
+This service is subject to the availability of UKCloud engineers to perform the work. UKCloud reserves the right to turn down or reschedule requests where they conflict with other planned or emergency work, or are outside the scope of the Smart Hands service. We'll communicate with you if this happens.
 
 ## Inclusions
 
@@ -80,11 +80,11 @@ The Service Request will be updated to show that that the task has been complete
 
 ## Smart Hands Standby
 
-Customers may wish to reserve a UKCloud Engineer to perform Smart Hands work during a time window, but may not necessarily know when the Engineer will be required. For example power-cycling colocated hardware at random times during overnight upgrades. 
+If you need to reserve a UKCloud engineer to perform Smart Hands work during a time window, but do not know specficially when the engineer will be required within that window, you can use Smart Hands Standby. For example, you may need to power-cycle colocated hardware at random times during an overnight upgrade.
 
-Customers may use Smart Hands Standby to reserve a UKCloud Engineer for an 8 hour window who is on-call to perform tasks as required. The Smart Hands Standby is charged at the SFIA Rate ‘Follow – Client Interface’. This is in addition to the standard Smart Hands hourly rate which is applied when the Engineer is performing the activities.
+With Smart Hands Standby, you can reserve a UKCloud engineer for an 8-hour window to be on call to perform tasks as required. Smart Hands Standby is charged at the [SFIA Rate](https://ukcloud.com/sfia) ‘Follow – Client Interface’. This is in addition to the standard Smart Hands hourly rate, which is applied when the engineer is performing the activities.
 
-In the event that the reserved engineer is required to perform Emergency maintenance for UKCloud during the Smart Hands Standby Window, this will take priority over the on-call reservation. In the event this happens it will be communicated to you and we will make best efforts to accomodate your work during the emergency maintenance.
+In the event that the reserved engineer is required to perform emergency maintenance for UKCloud during the Smart Hands Standby window, this will take priority over the on-call reservation. In the event this happens we'll communicate this to you and we'll make best efforts to accomodate your work during the emergency maintenance.
 
 ## How much does Smart Hands cost?
 
