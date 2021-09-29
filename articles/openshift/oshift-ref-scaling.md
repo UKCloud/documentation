@@ -40,6 +40,9 @@ If you'd like to scale up your cluster, raise a Service Request via the [My Call
 > [!NOTE]
 > The network connectivity you request for the scaled up nodes must be present in the cluster.
 
+> [!NOTE]
+> OpenShift v4 clusters support self-service scaling. You can find out more information in [How To Scale OpenShift v4](oshift-how-v4-scale.md).
+
 ### Further information
 
 Below are some useful OpenShift documentation pages regarding scaling of a cluster:
