@@ -21,22 +21,18 @@ In OpenShift v4 clusters, worker nodes are managed by "MachineSets". These are o
 
 To view available MachineSets and their current scale, check the "Compute ... MachineSets" section of the OpenShift web console, or run the following oc command:
 
-    ```bash
     oc get MachineSets -n openshift-machine-api
-    ```
+
 
 To scale a MachineSet up or down, set the scale against the MachineSet in the OpenShift web console, or run:
 
-    ```bash
     oc scale MachineSet <machinesetname> -n openshift-machine-api --replicas=<scale>
-	# Where <machinesetname> is the name of the MachineSet to scale, and <scale> is the number of workers desired from that MachineSet
-    ```
+    # Where <machinesetname> is the name of the MachineSet to scale, and <scale> is the number of workers desired from that MachineSet
+
 
 After approximately 3 minutes, the new nodes should be visible in the OpenShift web console or in the output of:
 
-    ```bash
     oc get nodes
-    ```
 	
 > [!NOTE]
 > When a MachineSet is scaled down, some workers will be drained and deleted. Workloads will automatically restart on remaining nodes if sufficient capacity remains. If all worker MachineSets are scaled to "0", workloads may stop completely.
