@@ -52,14 +52,14 @@ UKCloud offers three charging models for OpenShift workers:
 Hourly MachineSets are particularly useful for short-term testing or for bursts of demand.
 
 By default, UKCloud OpenShift clusters have the following MachineSets available:
-- <clusterid>-hourly-m1-medium - 4 CPU, 16GB RAM - charged by the hour
-- <clusterid>-monthly-m1-medium - 4 CPU, 16GB RAM - charged by the month
-- <clusterid>-hourly-r1-small - 8 CPU, 16GB RAM - charged by the hour
-- <clusterid>-monthly-r1-small - 8 CPU, 16GB RAM - charged by the month
-- <clusterid>-hourly-m1-large - 4 CPU, 32B RAM - charged by the hour
-- <clusterid>-monthly-m1-large - 4 CPU, 32GB RAM - charged by the month
-- <clusterid>-hourly-r1-medium -  8 CPU, 32GB RAM - charged by the month
-- <clusterid>-monthly-r1-medium - 8 CPU, 32GB RAM - charged by the month
+- `<clusterid>-hourly-m1-medium` - 4 CPU, 16GB RAM - charged by the hour
+- `<clusterid>-monthly-m1-medium` - 4 CPU, 16GB RAM - charged by the month
+- `<clusterid>-hourly-r1-small` - 8 CPU, 16GB RAM - charged by the hour
+- `<clusterid>-monthly-r1-small` - 8 CPU, 16GB RAM - charged by the month
+- `<clusterid>-hourly-m1-large` - 4 CPU, 32B RAM - charged by the hour
+- `<clusterid>-monthly-m1-large` - 4 CPU, 32GB RAM - charged by the month
+- `<clusterid>-hourly-r1-medium` -  8 CPU, 32GB RAM - charged by the month
+- `<clusterid>-monthly-r1-medium` - 8 CPU, 32GB RAM - charged by the month
 
 Costs for each flavour and charging model can be found in section 2.1.3 of the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide)
 
