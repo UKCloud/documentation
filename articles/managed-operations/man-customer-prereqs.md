@@ -43,6 +43,8 @@ Please ensure the following ports are permitted on both your permitter and opera
 
 - Windows Remote Management (WinRM) - Ports 5985 & 5986
 
+- Internet Control Message Protocol (ICMP)
+
 #### Linux & Windows (Agentless)
 
 - Simple Network Management Protocol (SNMP) - Port 161 over UDP
