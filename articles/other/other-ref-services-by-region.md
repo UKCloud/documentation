@@ -68,7 +68,7 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownCo
 
 Security domain | Services | Zone
 -----------------|---------|-----
-Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 2D
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2, Always-on data at rest encryption (D@RE)<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 2D
 
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access
@@ -99,7 +99,7 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownCo
 
 Security domain | Service | Zone
 -----------------|--------|-----
-Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone B
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2, Always-on data at rest encryption (D@RE)<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone B
 &nbsp; | **UKCloud for OpenStack** (OSP10)<br>*Connectivity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2 | Zone C
 &nbsp; | **UKCloud for OpenStack** (OSP13)<br>*Connectivity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2 | Zone 26
 &nbsp; | **UKCloud for Red Hat OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone C

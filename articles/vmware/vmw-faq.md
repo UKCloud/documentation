@@ -108,9 +108,13 @@ Alternatively, we offer the Mass Transfer Facility option enabling customers to 
 
 ### Does UKCloud offer encryption on the VM?
 
-Not by default, however UKCloud can supply licensing for HyTrust DataControl. This solution offers powerful data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle, from deployment to decommission.
+UKCloud for VMware provides always-on data at rest encryption (D@RE) in Regions 13 and 14.
 
-Alternatively, you can implement encryption using the technology of your choice inside the VM's operating system.
+In other regions UKCloud can supply licensing for HyTrust DataControl. Alternatively, you can implement encryption using the technology of your choice inside the VM's operating system.
+
+### Does your data at rest encryption solution provide FIPS 140-2 or Common Criteria certification?
+
+We use Pure Storage for our data at rest encryption solution in regions 13 and 14, which is FIPS 140-2 and Common Criteria certified.
 
 ### Is UKCloud's encryption service available for UKCloud for VMware?
 
