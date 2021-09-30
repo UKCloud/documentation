@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Scale an OpenShift v4 cluster
-toc_fullpath: How To/oshift-how-v4-scale.md
-toc_mdlink: oshift-how-v4-scale.md
+toc_fullpath: How To/oshift-how-scale-cluster-v4.md
+toc_mdlink: oshift-how-scale-cluster-v4.md
 ---
 
 # How to scale an OpenShift v4 cluster
