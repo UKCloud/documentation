@@ -1,6 +1,6 @@
 ---
 title: Managing your UKCloud for VMware environment using the UKCloud Portal API
-description: Explains how changes to the platform architecture affect how you use the Portal API when working with solutions that span multiple regions
+description: Explains how the UKCloud platform architecture affect how you use the Portal API when working with solutions that span multiple regions
 services: vmware
 author: shighmoor
 reviewer: jpaddock
@@ -29,7 +29,7 @@ Sites, regions and zones within the UKCloud platform enable you to design resili
 
 For more information, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md).
 
-## API authentication credentials 
+## API authentication credentials and endpoints
 
 When managing the platform through the Portal API, if you've designed your solution across multiple regions, you must use different credentials for each environment that you're managing. Also, because each region has its own management instance, you must use the API endpoints that apply specifically to the region. This is important to remember so that you call the correct endpoints if your solution is deployed across multiple regions. You can find out which endpoints to use by clicking your username in the top right corner of the UKCloud Portal home page and selecting **API**:
 
