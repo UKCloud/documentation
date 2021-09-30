@@ -32,7 +32,50 @@ This guide assumes familiarity with the Linux command line, and with the `oc` co
 
 To complete the steps in this guide, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc` login.
 
-## Generating an authentication token
+## Monitoring Stack
+
+Openshift cluster's at UKCloud have a pre-installed monitoring stack allowing administrators and users to gain deep insights into the health and performance of their cluster and applications. This monitoring stack is updated and maintained by Red Hat.
+
+You can see what monitoring has been set up but logging into the OpenShift console and navigating to the monitoring section as seen here:
+
+![OpenShift Monitoring Section](images/oshift-monitoring-section.png)
+
+This monitoring stack provides users a centralised viewpoint for all alerts, events and statistics occuring in the cluster. By default, Red Hat has implement monitoring for core components of the cluster such as the etcd, OpenShift API server, Image Registry and more.
+
+### Enable Workload Monitoring
+
+By default, workloads are not monitored. However, cluster admins can enable monitoring for projects in the by following these steps:
+
+1. Log in to OpenShift on the command line:
+
+       oc login ...
+       oc project openshift-monitoring
+
+2. Edit the **cluster-monitoring-config** ConfigMap:
+
+       oc edit configmap cluster-monitoring-config
+
+3. Add the enableUserWorkload line in data/config.yaml:
+
+       apiVersion: v1
+       kind: ConfigMap
+       metadata:
+         name: cluster-monitoring-config
+         namespace: openshift-monitoring
+       data:
+         config.yaml: |
+           enableUserWorkload: true
+
+4. Save the file to apply the changes. 
+
+[!NOTE]
+It may take a couple of minutes for the **prometheus-operator, prometheus-user-workload** and **thanos-ruler-user-workload** to create new pods. This will consume more vCPU, memory and disk resources on the infra Nodes.
+
+## Monitoring via the OpenShift API
+
+All OpenShift clusters expose an API that can be used to gather an alerts or statistics. Below is a step-by-step guide on how to set it up.
+
+### Generating an authentication token
 
 The first step is to create a service account within your OpenShift cluster that your monitoring system can use, and create an authentication token for it.
 
@@ -60,7 +103,7 @@ The first step is to create a service account within your OpenShift cluster that
        oc adm policy add-cluster-role-to-user cluster-reader \
        system:serviceaccount:openshift-infra:monitoring
 
-## Reading the authentication token
+### Reading the authentication token
 
 Next, you need to retrieve the authentication token that you created in the previous step.
 
@@ -83,7 +126,7 @@ Next, you need to retrieve the authentication token that you created in the prev
 
     This lists a few values, including the 179-character authentication token.
 
-## Using the authentication token
+### Using the authentication token
 
 The OpenShift API provides a way of determining the health of the cluster; the data required to do this is obtainable by requesting the API at `/api/vi/nodes`. You must supply the authentication token in the HTTP `Authorization` header.
 
@@ -98,7 +141,7 @@ You'll need to customise the query above by providing the correct values for end
 
 This API call returns a reasonable amount of JSON-encoded data, which may be hard to parse using shell commands. It's also necessary to fetch items from various places within this data. The Python program in the following section shows you how to accomplish this.
 
-## Using the OpenShift API to obtain cluster status
+### Using the OpenShift API to obtain cluster status
 
 The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy. It has been tested using Python 3.7.
 
