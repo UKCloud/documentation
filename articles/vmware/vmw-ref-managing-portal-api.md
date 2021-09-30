@@ -2,9 +2,9 @@
 title: Managing your UKCloud for VMware environment using the UKCloud Portal API
 description: Explains how changes to the platform architecture affect how you use the Portal API when working with solutions that span multiple regions
 services: vmware
-author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+author: shighmoor
+reviewer: jpaddock
+lastreviewed: 16/07/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,23 +17,27 @@ toc_mdlink: vmw-ref-managing-portal-api.md
 
 # Managing your UKCloud for VMware environment using the UKCloud Portal API
 
-With the development of the UKCloud for VMware service for G‑Cloud 8, we've introduced some changes to the architecture underpinning the platform. The change in architecture introduces the concept of sites, regions and zones to enable you to design resilience into your solutions in a way that works best for you.
+## Overview
 
-- **Sites** will be a familiar concept if you're already on the UKCloud platform. We have two sites, one in Corsham and one in Farnborough, creating the ability to deploy disaster‑resilient solutions across two geographically disparate locations.
+Sites, regions and zones within the UKCloud platform enable you to design resilience into your solutions in the way that works best for you.
 
-- **Regions** are a new concept in UKCloud for VMware. Within each site we have independent regions, enabling you to create resilient solutions within a single site, allowing for protection such as synchronous replication between applications or databases.
+- **Sites.** We have two sites, one in Corsham and one in Farnborough, creating the ability to deploy disaster‑resilient solutions across two geographically disparate locations.
 
-- A region is made up of **zones**. A zone typically relates to a single service, and there is usually only one service zone per region. However, in the case of UKCloud for VMware, there may be multiple UKCloud for VMware zones in a single region, enabling you to build up services that are underpinned by different compute and storage but the same network.
+- **Regions.** Within each site we have independent regions, enabling you to create resilient solutions within a single site, allowing for protection such as synchronous replication between applications or databases.
+
+- **Zones.** A region is made up of zones. A zone typically relates to a single service, and there is usually only one service zone per region.
 
 For more information, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md).
 
-When managing the platform through the Portal API, if you've designed your solution across multiple regions, you must use different credentials for each environment that you're managing. Also, because each region has its own management instance, you must use the API endpoints that apply specifically to the region. This is important to remember so that you call the correct endpoints if your solution is deployed across multiple regions. You can find out which endpoints to use by clicking your username in the top right corner of the UKCloud Portal home page and selecting API:
+## API authentication credentials 
 
-![Link to API credentials in the Portal](images/api_menu.png)
+When managing the platform through the Portal API, if you've designed your solution across multiple regions, you must use different credentials for each environment that you're managing. Also, because each region has its own management instance, you must use the API endpoints that apply specifically to the region. This is important to remember so that you call the correct endpoints if your solution is deployed across multiple regions. You can find out which endpoints to use by clicking your username in the top right corner of the UKCloud Portal home page and selecting **API**:
 
-Using the API page to find the correct API URL for each region:
+![Link to API credentials in the Portal](images/vmw-portal-mnu-api.png)
 
-![Example API credentials](images/api_details.png)
+You can then use the information on the API page to find the correct API URL and credentials for each environment:
+
+![Example API credentials](images/vmw-portal-api-details.png)
 
 ## Feedback
 
