@@ -76,11 +76,11 @@ It may take a couple of minutes for the **prometheus-operator, prometheus-user-w
 Red Hat has provide an exhaustive amount of information in setting up what metrics to collect from applications and the alerts that can be created from them. To view more information please read:
 
 [Managing Metrics]{https://docs.openshift.com/container-platform/4.8/monitoring/managing-metrics.html}
-[Managing alerts]{https://docs.openshift.com/container-platform/4.8/monitoring/managing-alerts.html}
+[Managing Alerts]{https://docs.openshift.com/container-platform/4.8/monitoring/managing-alerts.html}
 
 ## Monitoring via the OpenShift API
 
-All OpenShift clusters expose an API that can be used to gather an alerts or statistics. Below is a step-by-step guide on how to set it up.
+All OpenShift clusters expose an API that can be used to gather alerts or statistics. Below is a step-by-step guide on how to set it up.
 
 ### Generating an authentication token
 
