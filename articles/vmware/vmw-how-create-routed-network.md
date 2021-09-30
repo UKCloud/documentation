@@ -4,7 +4,7 @@ description: Shows how to create a routed VDC network within the VMware Cloud Di
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 14/09/2020
+lastreviewed: 28/09/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -91,7 +91,7 @@ There are two network flavours, isolated and routed:
 
 ## Next steps
 
-Now you've created your network to connect your VDC with the outside world, may want to configure your edge gateway to control what traffic is allowed into and out of your VDC. You may also want to start building some VMs. For a walkthrough on how to do this, see [*How to build a virtual machine with UKCloud for VMware*](vmw-gs-build-vm-vcd.md).
+Now you've created your network to connect your VDC with the outside world, you may want to configure your edge gateway to control what traffic is allowed into and out of your VDC. You may also want to start building some VMs. For a walkthrough on how to do this, see [*How to build a virtual machine with UKCloud for VMware*](vmw-gs-build-vm-vcd.md).
 
 ## Feedback
 
