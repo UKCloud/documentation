@@ -34,7 +34,7 @@ To complete the steps in this guide, you must have the `oc` command installed an
 
 ## Monitoring Stack
 
-Openshift cluster's at UKCloud have a pre-installed monitoring stack allowing administrators and users to gain deep insights into the health and performance of their cluster and applications. This monitoring stack is updated and maintained by Red Hat.
+Openshift clusters at UKCloud have a pre-installed monitoring stack allowing administrators and users to gain deep insights into the health and performance of their cluster and applications. This monitoring stack is updated and maintained by Red Hat.
 
 You can see what monitoring has been set up but logging into the OpenShift console and navigating to the monitoring section as seen here:
 
@@ -44,7 +44,7 @@ This monitoring stack provides users a centralised viewpoint for all alerts, eve
 
 ### Enable Workload Monitoring
 
-By default, workloads are not monitored. However, cluster admins can enable monitoring for projects in the by following these steps:
+By default, workloads are not monitored. However, cluster admins can enable monitoring for projects by following these steps:
 
 1. Log in to OpenShift on the command line:
 
@@ -70,6 +70,13 @@ By default, workloads are not monitored. However, cluster admins can enable moni
 
 [!NOTE]
 It may take a couple of minutes for the **prometheus-operator, prometheus-user-workload** and **thanos-ruler-user-workload** to create new pods. This will consume more vCPU, memory and disk resources on the infra Nodes.
+
+### More information
+
+Red Hat has provide an exhaustive amount of information in setting up what metrics to collect from applications and the alerts that can be created from them. To view more information please read:
+
+[Managing Metrics]{https://docs.openshift.com/container-platform/4.8/monitoring/managing-metrics.html}
+[Managing alerts]{https://docs.openshift.com/container-platform/4.8/monitoring/managing-alerts.html}
 
 ## Monitoring via the OpenShift API
 
