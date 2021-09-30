@@ -10070,6 +10070,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-transfer-volumes.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-transfer-volumes.html",
+          "hash": "Dmrk5fc3rM9X7RxiPWHNcZtDb7ybcZKW51Y0ruyY5Qo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-use-api-sso.md",
       "output": {
         ".html": {
@@ -10326,7 +10338,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "K0+68UDkyDHng1AIXj/Ro8m+V8H9KXwmWYQuKioBR7c="
+          "hash": "xCVtNIgQYSD9Dvtf4HBCMtGs0ybAcPdErg1g6YIVTJQ="
         }
       },
       "is_incremental": false,
@@ -12028,7 +12040,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-services-by-region.html",
-          "hash": "9WWufXhfBYbjfFronfwbQfc39usrjppPDDJeqPx6vEU="
+          "hash": "5TQx2pREocT9yE69OPTNjlqC9ZNJbYtlxLHvAC8u9H4="
         }
       },
       "is_incremental": false,
@@ -20032,6 +20044,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-dns-isolated.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-dns-isolated.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-new-network-dns.png",
       "output": {
         "resource": {
@@ -21978,7 +22001,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "1/tgx7GVnq70yX5+Tiy6Gpyje9Kr3AFp75Ckl57m6JI="
+          "hash": "m1SENenaLAeAyw78F9KuCTe9CYwYVDiWgCC4/4uiJcc="
         }
       },
       "is_incremental": false,
@@ -22014,7 +22037,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "fEJ2NBQeU4gEoDtEZrAO199t51gMvxyQIBVDcP9q/n8="
+          "hash": "Numt8ODxjxKBHJvKYPXeAvHBUKGE6e213N/+BUyixZY="
         }
       },
       "is_incremental": false,
@@ -22182,7 +22205,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-isolated-network.html",
-          "hash": "HZ73BagMLKrpykbR5SPMuP5JFBLWa7Yy4cMqUsmnm/k="
+          "hash": "SPm5WIXClxZwwfV4X/7sAyAVpwsuUSTgLIB7NbXUrco="
         }
       },
       "is_incremental": false,
@@ -22206,7 +22229,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-routed-network.html",
-          "hash": "cfMwygXZNWLORaJhXlrROtFNvHs+kOkCSpX7UDx4kFc="
+          "hash": "QwANPy8kuklFDE2b0TPw7bc+fOeLrMfVDly0ZMe8dvM="
         }
       },
       "is_incremental": false,
@@ -23209,7 +23232,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 463,
+          "total_file_count": 464,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

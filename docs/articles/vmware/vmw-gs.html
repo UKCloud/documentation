@@ -94,45 +94,26 @@
 <h1 id="getting-started-guide-for-ukcloud-for-vmware">Getting Started Guide for UKCloud for VMware</h1>
 
 <h2 id="overview">Overview</h2>
-<p>If you're new to UKCloud, you'll probably have received a link to this guide as part of your welcome email. It will help you to get started using UKCloud for VMware.</p>
-<p>The Getting Started Guide provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.</p>
+<p>UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware technology, that enables you to either migrate existing workloads or create new workloads on our secure sovereign cloud platform quickly and easily whilst enjoying the economies of scale of the cloud.</p>
+<p>This Getting Started Guide helps get you up and running using UKCloud for VMware, providing basic information about how to log in and set up your environment.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a VMware Cloud Director administrator.</p>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>You should have received your UKCloud Portal login credentials from your Service Delivery Manager (SDM).</p>
+<p>This article is intended for any new UKCloud for VMware user. To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a VMware Cloud Director administrator.</p>
 <h2 id="introductions-to-ukcloud-for-vmware">Introductions to UKCloud for VMware</h2>
-<p>We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable, and gives you the flexibility to use different service levels, VM sizes, security domains, connectivity and data protection options.</p>
-<p>You can build completely tailored solutions by mixing and matching service options. The choice doesn't lock you to one service or size and you can always change it later.</p>
+<p>We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable and gives you the flexibility to use different service levels, VM sizes, security domains, connectivity and data protection options.</p>
+<p>You can build completely tailored solutions by mixing and matching service options. The choice doesn't lock you in to one service or size and you can always change it later.</p>
 <p>Services within UKCloud belong to an account, which in turn belongs to a company. A company can own multiple accounts. You can use accounts to create separate environments for different projects or, in the case of UKCloud partners, to create separate environments for different customers. Within an account you can have multiple UKCloud services, one of which could be UKCloud for VMware. You can have multiple instances of a service within an account.</p>
 <p><img src="images/vmw-organisation.png" alt="UKCloud account organisation"></p>
 <h2 id="logging-in-to-the-ukcloud-portal">Logging in to the UKCloud Portal</h2>
-<p>The first thing you need to do to get started with UKCloud for VMware is to log in to the UKCloud Portal.</p>
-<ol>
-<li><p>Go to the appropriate URL, depending on the security domain in which your service is located:</p>
+<p>You access your UKCloud for VMware environment through the UKCloud Portal, so the first thing you need to do to get started is to log in to the Portal.</p>
+<p>The location of the Portal depends on the security domain your service is located in:</p>
 <ul>
 <li><p><strong>Assured OFFICIAL:</strong> <a href="https://portal.ukcloud.com">https://portal.ukcloud.com</a></p>
 </li>
-<li><p><strong>Elevated OFFICIAL:</strong> Contact your Portal administrator or SDM</p>
+<li><p><strong>Elevated OFFICIAL:</strong> Contact your Portal administrator, your Service Delivery Manager (or <a href="mailto:servicedelivery@ukcloud.com">servicedelivery@ukcloud.com</a>), or UKCloud Support (call 01252 303 300 and select option 2)</p>
 </li>
 </ul>
-</li>
-<li><p>On the <em>Log in</em> page, enter your credentials and click <strong>Sign in</strong>.</p>
-<p><img src="images/ptl-login.png" alt="UKCloud Portal Log in page"></p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>If you've forgotten your password, click the <strong>Forgotten password?</strong> link to request a password reset.</p>
-</div>
-<p>If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or SDM. You'll be prompted to change this temporary password.</p>
-</li>
-<li><p>If your Portal administrator has enabled two-factor authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)</p>
-<p><img src="images/vmw-portal-2fa.png" alt="Two-Factor Authentication dialog box"></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.</p>
-</div>
-</li>
-</ol>
-<p>For more information about the UKCloud Portal and all the functionality it provides, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+<p>You'll need your Portal credentials, which you should have received from your Portal administrator or the Service Delivery team. You may also need to set up two-factor authentication (2FA).</p>
+<p>For detailed instructions for how to log in to the Portal, and for more information about all the functionality it provides, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
 <h2 id="creating-your-ukcloud-for-vmware-estate">Creating your UKCloud for VMware estate</h2>
 <p>When you first access UKCloud for VMware, you'll need to create a compute service (sometimes called a vOrg) to act as a top-level container for your cloud resources. As your estate grows, you can add more compute services to logically organise your resources.</p>
 <p>Within your compute service, you create VDCs to contain your VMs. VMs in the same VDC share workload characteristics and have access to the same resources, such as networking infrastructure, storage and external connectivity. We recommend that you organise related VMs within vApps to make your applications easier to manage. For example, you can start all the VMs within a vApp with a single operation, rather than having to start up each VM separately. vApps are also useful to help maintain crash‑consistency within an application in the event of a disaster.</p>
@@ -182,7 +163,7 @@
 <p>After creating your compute service, the next step is to create one or more VDCs.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You can also create a VDC using the Portal API. For more information, see <a href="../portal/ptl-ref-portal-api.html#post-apiaccountsaccount_idvorgsvorg_idvdcs"><em>UKCloud Portal API Reference Guide</em></a></p>
+<p>You can also create a VDC using the Portal API. For more information, see <a href="../portal/ptl-ref-portal-api.html#post-apiaccountsaccount_idvorgsvorg_idvdcs"><em>UKCloud Portal API Reference Guide</em></a>.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
@@ -205,11 +186,11 @@
 </li>
 <li><p>On the <em>Build VDC</em> page, from the <strong>VM Type</strong> radio buttons, select the option that describes the characteristics of the workload of the VDC:</p>
 <ul>
-<li><p><strong>ESSENTIAL</strong>---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.</p>
+<li><p><strong>ESSENTIAL.</strong> For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.</p>
 </li>
-<li><p><strong>POWER</strong>---For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.</p>
+<li><p><strong>POWER.</strong> For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.</p>
 </li>
-<li><p><strong>PRIORITY</strong>---For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.</p>
+<li><p><strong>PRIORITY.</strong> For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.</p>
 </li>
 </ul>
 </li>
@@ -242,10 +223,10 @@
 <li><p>In the Portal navigation panel expand <strong>VMware Cloud</strong> then select your compute service.</p>
 <p><img src="images/vmw-portal-mnu-compute-services.png" alt="Compute services menu option"></p>
 </li>
-<li><p>On the <strong>vCloud Director</strong> tab, for additional security, re-enter your UKCloud Portal password, then click <strong>Confirm</strong>.</p>
-<p><img src="images/vmw-portal-vcd-login.png" alt="vCloud Director tab in UKCloud Portal"></p>
+<li><p>On the <strong>VMware Cloud Director</strong> tab, for additional security, re-enter your UKCloud Portal password, then click <strong>Confirm</strong>.</p>
+<p><img src="images/vmw-portal-vcd-login.png" alt="VMware Cloud Director tab in UKCloud Portal"></p>
 </li>
-<li><p>VMware Cloud Director launches in your browser window. The version depends on where your service is located within the UKCloud platform.</p>
+<li><p>VMware Cloud Director launches in your browser window.</p>
 <p><img src="images/vmw-vcd10.1-home-page.png" alt="VMware Cloud Director Home page"></p>
 </li>
 <li><p>The tasks you can perform in VMware Cloud Director will depend on the permissions you have been granted.</p>
@@ -304,31 +285,57 @@
 </li>
 </ul>
 <h2 id="glossary">Glossary</h2>
-<p>This section provides a glossary of terms specific to UKCloud for VMware.</p>
-<p><strong>account</strong>  Within the UKCloud for VMware environment there are two types of account:</p>
-<ul>
-<li><p><strong>customer account</strong> --- A collection of related compute services associated with a particular customer or partner.</p>
-</li>
-<li><p><strong>user account</strong> --- The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.</p>
-</li>
-</ul>
-<p><strong>company</strong>  A UKCloud construct to organise business accounts. Each company can own
-multiple accounts.</p>
-<p><strong>compute service</strong>  A top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogues, users and resources.</p>
-<p><strong>UKCloud for VMware</strong>  A UKCloud IaaS service that provides a compute infrastructure
-specifically designed to deliver traditional enterprise applications to the cloud.</p>
-<p><strong>ESSENTIAL</strong>  A type of VM that may have contended resource allocation. Automated
-rebalancing is enabled to ensure the workload receives the requested performance.</p>
-<p><strong>POWER</strong>  A type of VM with uncontended compute resource allocation. Automated
-balancing is enabled to pre-emptively optimise performance and availability.</p>
-<p><strong>PRIORITY</strong>  A type of VM with uncontended compute resource allocation. Automated
-balancing is configured to reduce workload movement around the platform, reducing workload disruption.</p>
-<p><strong>vApp</strong>  A container for VMs that enables you to group related VMs together to
-manage them in one place.</p>
-<p><strong>virtual data centre (VDC)</strong>  A container for VMs, where each VM has the same workload characteristics and access to the same resources, such as networking infrastructure,
-storage and external connectivity.</p>
-<p><strong>virtual machine (VM)</strong>  Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM's
-resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.</p>
+<p>This section provides a glossary of terms specific to UKCloud for VMware. For a full list of terms, see the <a href="../other/other-ref-glossary.html"><em>UKCloud Glossary</em></a>.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>account</strong></td>
+<td>Within the UKCloud for VMware environment there are two types of account:<br><ul><li><strong>customer account</strong> – A collection of related compute services associated with a particular customer or partner.</li><li><strong>user account</strong> – The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.</li></ul></td>
+</tr>
+<tr>
+<td><strong>company</strong></td>
+<td>A UKCloud construct to organise business accounts. Each company can own multiple accounts.</td>
+</tr>
+<tr>
+<td><strong>compute service</strong></td>
+<td>A top-level container within a customer account that includes a VMware Cloud Director organization and its VDCs, catalogues, users and resources.</td>
+</tr>
+<tr>
+<td><strong>UKCloud for VMware</strong></td>
+<td>A UKCloud IaaS service that provides a compute infrastructure specifically designed to deliver traditional enterprise applications to the cloud.</td>
+</tr>
+<tr>
+<td><strong>ESSENTIAL</strong></td>
+<td>A type of VM that may have contended resource allocation. Automated rebalancing is enabled to ensure the workload receives the requested performance.</td>
+</tr>
+<tr>
+<td><strong>POWER</strong></td>
+<td>A type of VM with uncontended compute resource allocation. Automated balancing is enabled to pre-emptively optimise performance and availability.</td>
+</tr>
+<tr>
+<td><strong>PRIORITY</strong></td>
+<td>A type of VM with uncontended compute resource allocation. Automated balancing is configured to reduce workload movement around the platform, reducing workload disruption.</td>
+</tr>
+<tr>
+<td><strong>vApp</strong></td>
+<td>A container for VMs that enables you to group related VMs together to manage them in one place.</td>
+</tr>
+<tr>
+<td><strong>virtual data centre (VDC)</strong></td>
+<td>A container for VMs, where each VM has the same workload characteristics and access to the same resources, such as networking infrastructure, storage and external connectivity.</td>
+</tr>
+<tr>
+<td><strong>virtual machine (VM)</strong></td>
+<td>Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM's resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

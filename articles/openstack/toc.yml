@@ -36,6 +36,8 @@
     href: ostack-how-retrieve-windows-password.md
   - name: Share images between projects
     href: ostack-how-share-images.md
+  - name: Transfer volumes between projects
+    href: ostack-how-transfer-volumes.md
   - name: Use Barbican Key Management as a Service
     href: ostack-how-use-barbican.md
   - name: Use Octavia Load Balancing as a Service
