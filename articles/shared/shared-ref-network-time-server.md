@@ -42,7 +42,7 @@ The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's
 >   
 >   - 51.179.215.215
 >
->   In your client `ntp/chrony` configuration file, you can point to the hostname `ntp.ukcloud.com` which will reference all of the above IP addresses.
+>   In your client `ntp/chrony` configuration file, you can point to the hostname `ntp.ukcloud.com`, which will reference all of the above IP addresses.
 >
 > - For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal 
 
