@@ -2,9 +2,9 @@
 title: How to monitor your OpenShift cluster
 description: Explains how to set up a simple system to monitor an OpenShift Cloud Native Application Platform cluster
 services: openshift
-author: Sue Highmoor
-reviewer: Gareth Ellner
-lastreviewed: 22/12/2020
+author: shighmoor
+reviewer: alillistone
+lastreviewed: 30/09/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -32,30 +32,30 @@ This guide assumes familiarity with the Linux command line, and with the `oc` co
 
 To complete the steps in this guide, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc` login.
 
-## Monitoring Stack
+## Monitoring via the monitoring stack
 
-Openshift clusters at UKCloud have a pre-installed monitoring stack allowing administrators and users to gain deep insights into the health and performance of their cluster and applications. This monitoring stack is updated and maintained by Red Hat.
+OpenShift clusters at UKCloud have a pre-installed monitoring stack enabling administrators and users to gain deeper insights into the health and performance of their clusters and applications. This monitoring stack is updated and maintained by Red Hat.
 
-You can see what monitoring has been set up but logging into the OpenShift console and navigating to the monitoring section as seen here:
+You can see what monitoring has been set up by logging into the OpenShift console and selecting the Monitoring option in the navigation panel.
 
-![OpenShift Monitoring Section](images/oshift-monitoring-section.png)
+![OpenShift monitoring section](images/oshift-monitoring-section.png)
 
-This monitoring stack provides users a centralised viewpoint for all alerts, events and statistics occuring in the cluster. By default, Red Hat has implement monitoring for core components of the cluster such as the etcd, OpenShift API server, Image Registry and more.
+The monitoring stack provides users with a centralised viewpoint for all alerts, events and statistics occuring in the cluster. By default, Red Hat has implemented monitoring for core components of the cluster such as the etcd, OpenShift API server, Image Registry and more.
 
-### Enable Workload Monitoring
+### Enabling workload monitoring
 
-By default, workloads are not monitored. However, cluster admins can enable monitoring for projects by following these steps:
+By default, workloads are not monitored. However, cluster administrators can enable monitoring for projects:
 
 1. Log in to OpenShift on the command line:
 
        oc login ...
        oc project openshift-monitoring
 
-2. Edit the **cluster-monitoring-config** ConfigMap:
+2. Edit the `cluster-monitoring-config` ConfigMap:
 
        oc edit configmap cluster-monitoring-config
 
-3. Add the enableUserWorkload line in data/config.yaml:
+3. Add the `enableUserWorkload` line in `data/config.yaml`:
 
        apiVersion: v1
        kind: ConfigMap
@@ -69,22 +69,23 @@ By default, workloads are not monitored. However, cluster admins can enable moni
 4. Save the file to apply the changes. 
 
 [!NOTE]
-It may take a couple of minutes for the **prometheus-operator, prometheus-user-workload** and **thanos-ruler-user-workload** to create new pods. This will consume more vCPU, memory and disk resources on the infra Nodes.
+It may take a couple of minutes for the `prometheus-operator`, `prometheus-user-workload` and `thanos-ruler-user-workload` to create new pods. This will consume more vCPU, memory and disk resources on the infrastructure nodes.
 
 ### More information
 
-Red Hat has provide an exhaustive amount of information in setting up what metrics to collect from applications and the alerts that can be created from them. To view more information please read:
+Red Hat provides detailed documentation to help you set up the metrics to collect from applications and the alerts that can be created from them. For more information, see:
 
-[Managing Metrics]{https://docs.openshift.com/container-platform/4.8/monitoring/managing-metrics.html}
-[Managing Alerts]{https://docs.openshift.com/container-platform/4.8/monitoring/managing-alerts.html}
+- [Managing Metrics](https://docs.openshift.com/container-platform/4.8/monitoring/managing-metrics.html)
+
+- [Managing Alerts](https://docs.openshift.com/container-platform/4.8/monitoring/managing-alerts.html)
 
 ## Monitoring via the OpenShift API
 
-All OpenShift clusters expose an API that can be used to gather alerts or statistics. Below is a step-by-step guide on how to set it up.
+All OpenShift clusters expose an API that you can use to gather alerts or statistics.
 
 ### Generating an authentication token
 
-The first step is to create a service account within your OpenShift cluster that your monitoring system can use, and create an authentication token for it.
+The first step to using the API to monitor your OpenShift cluster is to create a service account within the cluster that your monitoring system can use, and create an authentication token for it.
 
 > [!TIP]
 > The token may have already been created, so it's worth checking first.
@@ -154,7 +155,6 @@ The code example below uses the OpenShift API to obtain information about the he
 
 > [!TIP]
 > The `ENDPOINT` parameter in the code is an example for OpenShift v3. For OpenShift v4 clusters, you'll need to change the port number from `8443` to `6443`. API URLs for OpenShift v4 begin with `https://api.` rather than `https://ocp.`.
-
 
 ```python
 #!/usr/bin/env python3
