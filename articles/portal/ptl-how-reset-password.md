@@ -30,9 +30,6 @@ Any Portal user can reset their own password or memorable word.
 
 To reset another user's password or memorable word, you must be a Portal administrator.
 
-> [!NOTE]
-> For users of the Elevated OFFICIAL Portal, any changes to a user's password or memorable word must be completed by an administrator.
-
 In the event that an administrator requires a password or memorable word reset, and no other administrators are available, contact UKCloud Support on 01252 303300 and select option 2.
 
 ## Resetting your own password or memorable word
