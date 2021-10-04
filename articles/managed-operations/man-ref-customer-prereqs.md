@@ -77,7 +77,7 @@ On Windows Server, you can install SNMP through the Roles and Features wizard.
 
 Managed Monitoring as a Service relies on an IPsec VPN being configured on your environment's edge appliance. For VMware, this will be an Edge Gateway, whereas in OpenStack this will be a customer deployed (or assisted by UKCloud) VPN server. By default, UKCloud recommends a PFSense appliance.
 
-UKCloud will provide you with the VPN standards, including the pre-shared key, peer endpoint and peer subnet to configure the VPN.
+UKCloud will provide you with the VPN standards and configuration, including the pre-shared key, peer endpoint and peer subnet to configure the VPN.
 
 ## Anti-Virus as a Service
 
