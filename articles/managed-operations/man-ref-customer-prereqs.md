@@ -35,7 +35,7 @@ Ensure the following ports listed below are permitted on both your perimeter and
 
 #### Linux & Windows (Agentless)
 
-- Simple Network Management Protocol (SNMP) - Port 161 over UDP
+- Simple Network Management Protocol (SNMP) - UDP/161
 
 - Internet Control Message Protocol (ICMP)
 
