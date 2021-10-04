@@ -53,6 +53,10 @@ Ensure the following ports listed below are permitted on both your perimeter and
 
 - Internet Control Message Protocol (ICMP)
 
+> [!NOTE]
+>
+> Any custom ports you would like monitored. E.g. Monitor the state of a web server on port TCP/443. Port TCP/443 must be allowed through from the UKCloud management bubble subnet.
+
 ### Operating system services
 
 SNMP is required for agentless monitoring.
