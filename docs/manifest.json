@@ -11687,15 +11687,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-ukcloud.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "P9PWP16BUB4QppQTPlU+PK97Zosf4vFjUfBUKyqUsxI="
+          "hash": "xnewcLMrM2LlVfhisjggl4FUsv/SexU/q1r4pOsqSxE="
         }
       },
       "is_incremental": false,
@@ -11858,15 +11855,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-glossary.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "18NwWsqO2G5bsWUsONfIGFzPb+wnzsyi6ooovEynd4Q="
+          "hash": "RXMKzooiWIqXwQCTGzxcF8uUhLU/1q5EmH9XXBxgC1Y="
         }
       },
       "is_incremental": false,
