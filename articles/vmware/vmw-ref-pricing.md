@@ -3,8 +3,8 @@ title: Pricing information for UKCloud for VMware
 description: Provides useful information about UKCloud for VMware pricing, including pricing examples
 services: vmware
 author: shighmoor
-reviewer:
-lastreviewed: 25/09/2020
+reviewer: shighmoor
+lastreviewed: 24/09/2021
 toc_rootlink: Service Information
 toc_sub1: UKCloud for VMware
 toc_sub2:
@@ -71,7 +71,7 @@ An application with lower priority workloads, such as temporary applications, da
 **Workload type:** ESSENTIAL<br>
 **VM size:** Small<br>
 **Block storage used:** 100GiB Tier 2 block storage<br>
-**Protection option:** Catalogue and template-based recovery<br>
+**Protection option:** 14-day Snapshot Protection<br>
 **Advanced management:** No<br>
 **Operating system:** Red Hat Enterprise Linux
 
@@ -79,7 +79,7 @@ An application with lower priority workloads, such as temporary applications, da
 
 A Small ESSENTIAL VM in the Assured OFFICIAL security domain costs **£0.040** per hour.
 
-The chosen protection option (Catalogue and template-based recovery) is **free of charge**.
+14-day Snapshot Protection for a Small VM costs **£0.06** per hour.
 
 Red Hat Enterprise Linux OS licensing for a Small VM costs **£0.040** per hour.
 
@@ -87,7 +87,7 @@ In an average **730** hour month, the monthly VM cost works out at:
 
 Hours in operation | x | (VM     | + | Protection | + | Licensing) | = | VM cost per month
 -------------------|---|---------|---|------------|---|------------|---|------------------
-730                | x | (£0.040 | + | £0.00      | + | £0.040)    | = | **£58.40**
+730                | x | (£0.040 | + | £0.06      | + | £0.040)    | = | **£102.20**
 
 The Advanced Management bundle is not required so there is no additional uplift.
 
@@ -97,11 +97,11 @@ A Small VM includes 60GiB of free Tier 2 block storage, so an additional **40GiB
 
 Tier 2 block storage costs **£0.10** per GiB month.
 
-The chosen protection option (Catalogue and template-based recovery) is **free of charge**.
+14-day Snapshot Protection for storage costs **£0.10** per GiB month.
 
 (Storage | + | Protection) | x | GiB used | = | Storage cost per month
 ---------|---|-------------|---|----------|---|-----------------------
-(£0.10   | + | £0.00)      | x | 40       | = | **£4.00**
+(£0.10   | + | £0.10)      | x | 40       | = | **£8.00**
 
 **Total basic cost**
 
@@ -109,7 +109,7 @@ Calculate the total basic cost by adding together the monthly VM and storage cos
 
 VM cost per month | + | Storage cost per month | = | Total basic cost
 ------------------|---|------------------------|---|-----------------
-£58.40            | + | £4.00                  | = | **£62.40**
+£102.20           | + | £8.00                  | = | **£110.20**
 
 ### [Example 2](#tab/tabid-2)
 
