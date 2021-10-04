@@ -41,15 +41,15 @@ Ensure the following ports listed below are permitted on both your perimeter and
 
 #### Linux (Agent-based)
 
-- Nagios Remote Plugin Executor (NRPE) - Port 5666
+- Nagios Remote Plugin Executor (NRPE) - TCP/5666
 
 - Internet Control Message Protocol (ICMP)
 
 #### Windows (Agent-based)
 
-- Nagios Remote Plugin Executor (NRPE) - Port 5666
+- Nagios Remote Plugin Executor (NRPE) - TCP/5666
 
-- Windows Remote Management (WinRM) - Ports 5985 & 5986
+- Windows Remote Management (WinRM) - TCP/5985 & TCP/5986
 
 - Internet Control Message Protocol (ICMP)
 
@@ -99,7 +99,7 @@ UKCloud only supports in-life, vendor-backed operating systems, such as Microsof
 
 To provide secure communication between UKCloud's centralised patch management platform and your virtual machine, we use key-based SSH sessions, reducing the need to share credentials. As such, you'll need to fulfil the following prerequisites on each virtual machine subscribing to this service:
 
-- An allow rule for port 22 (SSH) on your virtual machine's firewall (for example, iptables).
+- An allow rule for port TCP/22 (SSH) on your virtual machine's firewall (for example, iptables).
 
 - A local user account with passwordless sudo access. You'll need to share details of this account with UKCloud when onboarding to this service.
 
@@ -109,7 +109,7 @@ To provide secure communication between UKCloud's centralised patch management p
 
 #### Windows
 
-For UKCloud to correctly scan for and apply operating system patches, you must agree to enable and configure the Server Message Block (SMB) protocol by ensuring ports 445 and 139 (both over TCP) are open on all virtual machines and associated operating systems opted-in to this service. Furthermore, there must be a bi-directional rule allowing port 3121 (over TCP) on your edge appliance and operating system firewall.
+For UKCloud to correctly scan for and apply operating system patches, you must agree to enable and configure the Server Message Block (SMB) protocol by ensuring ports TCP/445 and TCP/139 are open on all virtual machines and associated operating systems opted-in to this service. Furthermore, there must be a bi-directional rule allowing port TCP/3121 on your edge appliance and operating system firewall.
 
 Furthermore, you must create a patching user which is an administrator on the virtual machine and has access to the Control Panel. Finally, you must enable the "Remote Registry" service on all virtual machines and enable Filer and Print Sharing for all networks.
 
