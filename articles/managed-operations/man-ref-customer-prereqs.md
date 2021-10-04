@@ -109,7 +109,7 @@ To provide secure communication between UKCloud's centralised patch management p
 
 #### Windows Server
 
-For UKCloud to correctly scan for and apply operating system patches, you must agree to enable and configure the Server Message Block (SMB) protocol by ensuring ports TCP/445 and TCP/139 are open on all virtual machines and associated operating systems opted-in to this service. Furthermore, there must be a bi-directional rule allowing port TCP/3121 on your edge appliance and operating system firewall. For further details, please read the [Agentless Patch Scanning Prerequisites](https://forums.ivanti.com/s/article/Agentless-Patch-Scanning-Prerequisites?language=en_US) article by Ivanti.
+For UKCloud to correctly scan for and apply operating system patches, you must agree to enable and configure the Server Message Block (SMB) protocol by ensuring ports TCP/445 and TCP/139 are open on all virtual machines and associated operating systems opted-in to this service. Furthermore, there must be a bi-directional rule allowing port TCP/3121 on your edge appliance and operating system firewall. For further details, please see the vendor's documentation found [here](https://forums.ivanti.com/s/article/Agentless-Patch-Scanning-Prerequisites?language=en_US).
 
 Furthermore, you must create a patching user which is an administrator on the virtual machine and has access to the Control Panel. Finally, you must enable the "Remote Registry" service on all virtual machines and enable Filer and Print Sharing for all networks.
 
