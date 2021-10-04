@@ -94,7 +94,7 @@ Patching as a Service           | [here](../managed-operations/man-faq-patching.
 
 Service                               | FAQ
 --------------------------------------|----
-Jumpstart                             | [here](../pro-services/ps-faq-jumpstart..md)
+Jumpstart                             | [here](../pro-services/ps-faq-jumpstart.md)
 G-Cloud 12 enhancements and additions | [here](other-faq-g12.md)
 Invoice and billing                   | [here](other-faq-billing.md)
 Service Level Agreement               | [here](other-faq-sla.md)

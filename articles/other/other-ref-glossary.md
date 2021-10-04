@@ -263,7 +263,7 @@ For more information, see the [Journaling Protection service scope](../vmware/vm
 
 A service providing skilled engineers and architects, on an hourly or daily basis, who can help design and build UKCloud solutions for you. For example, by helping you configure IPsec connectivity to UKCloud, create an Active Directory domain, build Terraform or Ansible templates for OpenStack or prepare applications for deployment to OpenShift.
 
-For more information, see the [Jumpstart FAQs](../pro-services/ps-faq-jumpstart..md).
+For more information, see the [Jumpstart FAQs](../pro-services/ps-faq-jumpstart.md).
 
 ## K
 
