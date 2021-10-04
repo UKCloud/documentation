@@ -21,7 +21,7 @@ toc_mdlink: man-ref-customer-prereqs.md
 
 Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. For more information, see the [*Managed IT Operations Service Definition*](man-sd-managed-it-ops.md).
 
-Before UKCloud can begin onboarding your virtual machines onto this service, your environment **must** meet the the following prerequisites.
+Before UKCloud can begin onboarding your virtual machines onto this service, your environment **must** meet the the prerequisites outlined in this article.
 
 ## Managed Monitoring as a Service
 
@@ -54,15 +54,13 @@ Ensure the following ports listed below are permitted on both your perimeter and
 - Internet Control Message Protocol (ICMP)
 
 > [!NOTE]
->
-> Any custom ports you would like monitored. E.g. Monitor the state of a web server on port TCP/443. Port TCP/443 must be allowed through from the UKCloud management bubble subnet.
+> Add any custom ports you'd like monitored. For example, to monitor the state of a web server on port TCP/443, port TCP/443 must be allowed through from the UKCloud management bubble subnet.
 
 ### Operating system services
 
 SNMP is required for agentless monitoring.
 
 > [!NOTE]
->
 > The SNMP service **must** be configured to start on boot.
 
 #### Linux
@@ -75,7 +73,7 @@ On Windows Server, you can install SNMP through the Roles and Features wizard.
 
 ### VPN configuration
 
-Managed Monitoring as a Service relies on an IPsec VPN being configured on your environment's edge appliance. For VMware, this will be an Edge Gateway, whereas in OpenStack this will be a customer deployed (or assisted by UKCloud) VPN server. By default, UKCloud recommends a PFSense appliance.
+Managed Monitoring as a Service relies on an IPsec VPN being configured on your environment's edge appliance. For VMware, this will be an edge gateway, whereas in OpenStack this will be a customer deployed (or assisted by UKCloud) VPN server. By default, UKCloud recommends a pfSense appliance.
 
 UKCloud will provide you with the VPN standards and configuration, including the pre-shared key, peer endpoint and peer subnet to configure the VPN.
 
@@ -105,13 +103,13 @@ To provide secure communication between UKCloud's centralised patch management p
 
 - The `/etc/ssh/sshd_config` configuration file must be configured to allow SSH access for the patching user you created in the step above.
 
-- UKCloud will provide you with a public SSH key during the onboarding process. You'll need to append this key to the `authorized_keys` file, located at `~/.ssh/authorized_keys` within the home directory of the user you created in the step above. As part of the onboarding process, UKCloud is willing to perform this action as long as the above requirements are already met.
+- UKCloud will provide you with a public SSH key during the onboarding process. You'll need to append this key to the `authorized_keys` file, located at `~/.ssh/authorized_keys` within the home directory of the user you created in the step above. As part of the onboarding process, UKCloud can perform this action as long as the above requirements are already met.
 
 #### Windows Server
 
 For UKCloud to correctly scan for and apply operating system patches, you must agree to enable and configure the Server Message Block (SMB) protocol by ensuring ports TCP/445 and TCP/139 are open on all virtual machines and associated operating systems opted-in to this service. Furthermore, there must be a bi-directional rule allowing port TCP/3121 on your edge appliance and operating system firewall. For further details, please see the vendor's documentation found [here](https://forums.ivanti.com/s/article/Agentless-Patch-Scanning-Prerequisites?language=en_US).
 
-Furthermore, you must create a patching user which is an administrator on the virtual machine and has access to the Control Panel. Finally, you must enable the "Remote Registry" service on all virtual machines and enable Filer and Print Sharing for all networks.
+Furthermore, you must create a patching user that is an administrator on the virtual machine and has access to the Control Panel. Finally, you must enable the Remote Registry service on all virtual machines and enable Filer and Print Sharing for all networks.
 
 ##### Domain joined
 
