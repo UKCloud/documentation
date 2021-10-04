@@ -107,6 +107,10 @@ To provide secure communication between UKCloud's centralised patch management p
 
 - UKCloud will provide you with a public SSH key during the onboarding process. You'll need to append this key to the `authorized_keys` file, located at `~/.ssh/authorized_keys` within the home directory of the user you created in the step above.
 
+> [!NOTE]
+>
+> As part of the onboarding process, UKCloud is willing to perform this action as long as the above requirements are already met.
+
 #### Windows Server
 
 For UKCloud to correctly scan for and apply operating system patches, you must agree to enable and configure the Server Message Block (SMB) protocol by ensuring ports TCP/445 and TCP/139 are open on all virtual machines and associated operating systems opted-in to this service. Furthermore, there must be a bi-directional rule allowing port TCP/3121 on your edge appliance and operating system firewall.
