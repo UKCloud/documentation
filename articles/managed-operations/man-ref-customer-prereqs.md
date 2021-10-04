@@ -91,7 +91,7 @@ Patching as a Service provides routine OS patch management for compute instances
 
 ### Operating systems
 
-UKCloud only supports in-life, vendor-backed operating systems, such as Microsoft Windows, Red Hat Enterprise Linux and Canonical Ubuntu. Customer-built operating systems (for example Gentoo Linux custom build) are unsupported by this service.
+UKCloud only supports in-life, vendor-backed operating systems, such as Microsoft Windows, Red Hat Enterprise Linux and Canonical Ubuntu. Customer-built operating systems (for example Gentoo Linux custom build) are unsupported by this service. Virtual software appliances are also unsupported by this service.
 
 ### Customer environment configuration
 
