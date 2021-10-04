@@ -33,7 +33,7 @@ By default, UKCloud provides this service without the use of an agent by utilisi
 
 Ensure the following ports listed below are permitted on both your perimeter and operating system firewalls from the UKCloud management bubble subnet. UKCloud will provide you with the subnet.
 
-#### Linux & Windows (Agentless)
+#### Linux & Windows Server (Agentless)
 
 - Simple Network Management Protocol (SNMP) - UDP/161
 
@@ -45,7 +45,7 @@ Ensure the following ports listed below are permitted on both your perimeter and
 
 - Internet Control Message Protocol (ICMP)
 
-#### Windows (Agent-based)
+#### Windows Server (Agent-based)
 
 - Nagios Remote Plugin Executor (NRPE) - TCP/5666
 
@@ -69,9 +69,9 @@ SNMP is required for agentless monitoring.
 
 On Linux, you can install SNMP from the operating system's public repository.
 
-#### Windows
+#### Windows Server
 
-On Windows, you can install SNMP through the Roles and Features wizard.
+On Windows server, you can install SNMP through the Roles and Features wizard.
 
 ### VPN configuration
 
@@ -107,7 +107,7 @@ To provide secure communication between UKCloud's centralised patch management p
 
 - UKCloud will provide you with a public SSH key during the onboarding process. You'll need to append this key to the `authorized_keys` file, located at `~/.ssh/authorized_keys` within the home directory of the user you created in the step above.
 
-#### Windows
+#### Windows Server
 
 For UKCloud to correctly scan for and apply operating system patches, you must agree to enable and configure the Server Message Block (SMB) protocol by ensuring ports TCP/445 and TCP/139 are open on all virtual machines and associated operating systems opted-in to this service. Furthermore, there must be a bi-directional rule allowing port TCP/3121 on your edge appliance and operating system firewall.
 
