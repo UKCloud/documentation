@@ -71,7 +71,7 @@ On Linux, you can install SNMP from the operating system's public repository.
 
 #### Windows Server
 
-On Windows server, you can install SNMP through the Roles and Features wizard.
+On Windows Server, you can install SNMP through the Roles and Features wizard.
 
 ### VPN configuration
 
