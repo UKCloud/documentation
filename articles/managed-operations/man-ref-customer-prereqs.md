@@ -31,7 +31,7 @@ By default, UKCloud provides this service without the use of an agent by utilisi
 
 ### Customer environment configuration
 
-Ensure the following ports listed below are permitted on both your permitter and operating system firewalls.
+Ensure the following ports listed below are permitted on both your perimeter and operating system firewalls.
 
 #### Linux (Agent-based)
 
