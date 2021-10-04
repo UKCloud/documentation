@@ -4,7 +4,7 @@ description: Shows how to find your allocated external IP addresses within the V
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 13/10/2020
+lastreviewed: 04/10/2021
 
 toc_rootlink: How To
 toc_sub1:

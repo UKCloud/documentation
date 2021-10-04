@@ -4,7 +4,7 @@ description: Shows how to create an isolated VDC network within the VMware Cloud
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 23/10/2020
+lastreviewed: 04/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -99,7 +99,7 @@ When you've created your vApp network and assigned VMs to it, you may want to re
 
 6. The *IP Management* pages display the IP settings for the vApp network, including **Static Pools**, **DNS** and **DHCP**. Click **Edit** on these pages to adjust these settings.
 
-    For more information about enabling DHCP for your vApp network, see [*Enabling DHCP](#enabling-dhcp).
+    For more information about enabling DHCP for your vApp network, see [*Enabling DHCP*](#enabling-dhcp).
 
 7. On the *Services* page you can set up firewall and NAT rules for your vApp network. For more information, see [*Creating firewall rules*](#creating-firewall-rules) and [*Creating NAT rules*](#creating-nat-rules).
 
@@ -107,9 +107,7 @@ When you've created your vApp network and assigned VMs to it, you may want to re
 
 ### Enabling DHCP
 
-DHCP isn't enabled by default.
-
-For more information about DHCP, see [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md).
+DHCP isn't enabled by default. For more information about DHCP, see [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md).
 
 To enable DHCP:
 
@@ -167,7 +165,7 @@ NAT rules, enabled by default, enable mapping between internal VM interfaces and
 
 For more information about NAT rules, see [*How to create NAT rules*](vmw-how-create-nat-rules.md).
 
-To edit the mapping rules for a VM:
+To edit the NAT rules for a VM:
 
 1. In the left navigation panel, select **vApps**.
 
@@ -271,27 +269,13 @@ vApp network 2          | To-vapp2   | `192.168.2.0/24` | `192.168.0.101`
 > [!NOTE]
 > Make sure your firewall rules allow traffic on the static routes.
 
-## vApp fencing
+## Related articles
 
-Fencing a vApp allows identical VMs within different vApps to be powered on without conflict, by isolating the MAC and IP addresses of the VMs. This feature is particularly useful if you are copying vApps or creating catalog images of vApps where these details can't be altered.
+- [*How to create a vApp*](vmw-how-create-vapp.md)
 
-vApp fencing can be done during or after vApp creation. It is done when the VMs within the vApp sit on the VDC network, rather than on their own vApp network.
+- [*How to apply vApp fencing*](vmw-how-apply-vapp-fencing.md)
 
-To apply vApp fencing:
-
-1. In the left navigation panel, select **vApps**.
-
-2. In the card for the vApp, select **Details**.
-
-3. Select **Networks**.
-
-4. In the *vApp Fencing* section, click **Edit**.
-
-    ![Edit button for vApp network fencing](images/vmw-vcd10.1-btn-vapp-network-fence.png)
-
-5. Select the **Fence vApp** option then click **OK**.
-
-    ![Edit vApp Fencing dialog box](images/vmw-vcd-vapp-fencing.png)
+- [*How to migrate vApps between virtual data centres*](vmw-how-migrate-vapp.md)
 
 ## Feedback
 

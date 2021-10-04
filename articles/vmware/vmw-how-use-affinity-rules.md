@@ -4,7 +4,7 @@ description: Describes how to use affinity and anti-affinity rules to control th
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 13/10/2020
+lastreviewed: 04/10/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -25,7 +25,7 @@ Affinity and anti-affinity rules determine whether or not VMs are kept together 
 
 - Anti-affinity rules ensure that VMs are distributed across different hosts
 
-For example, if it is important that your application has very low latency, you can create affinity rules to make sure that the application's VMs are always kept on the same host. If you want your application to be robust in the event of host failures, you can create anti-affinity rules to spread the VMs across multiple hosts.
+For example, if it's important that your application has very low latency, you can create affinity rules to make sure that the application's VMs are always kept on the same host. If you want your application to be robust in the event of host failures, you can create anti-affinity rules to spread the VMs across multiple hosts.
 
 > [!IMPORTANT]
 > Excessive use of affinity and anti-affinity rules can cause unpredictable VM and platform performance issues. For example, VMs involved in rules may have an increased likelihood of migrating between hosts simultaneously. Adding a large number of VMs to an affinity rule may cause performance issues if all of the VMs become busy simultaneously. An anti-affinity rule with a large number of VMs may not be honoured if the platform is unable to place the VMs on separate hosts.
