@@ -31,7 +31,7 @@ By default, UKCloud provides this service without the use of an agent by utilisi
 
 ### Customer environment configuration
 
-Ensure the following ports listed below are permitted on both your perimeter and operating system firewalls.
+Ensure the following ports listed below are permitted on both your perimeter and operating system firewalls from the UKCloud management bubble subnet. UKCloud will provide you with the subnet.
 
 #### Linux (Agent-based)
 
