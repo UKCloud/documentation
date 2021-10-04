@@ -105,11 +105,7 @@ To provide secure communication between UKCloud's centralised patch management p
 
 - The `/etc/ssh/sshd_config` configuration file must be configured to allow SSH access for the patching user you created in the step above.
 
-- UKCloud will provide you with a public SSH key during the onboarding process. You'll need to append this key to the `authorized_keys` file, located at `~/.ssh/authorized_keys` within the home directory of the user you created in the step above.
-
-> [!NOTE]
->
-> As part of the onboarding process, UKCloud is willing to perform this action as long as the above requirements are already met.
+- UKCloud will provide you with a public SSH key during the onboarding process. You'll need to append this key to the `authorized_keys` file, located at `~/.ssh/authorized_keys` within the home directory of the user you created in the step above. As part of the onboarding process, UKCloud is willing to perform this action as long as the above requirements are already met.
 
 #### Windows Server
 
