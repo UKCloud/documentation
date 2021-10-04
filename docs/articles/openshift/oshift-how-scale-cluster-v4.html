@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to scale an OpenShift v4 cluster </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to scale an OpenShift v4 cluster ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-scale-cluster-v4.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-scale-an-openshift-v4-cluster">How to scale an OpenShift v4 cluster</h1>
+
+<h2 id="overview">Overview</h2>
+<p>In OpenShift v4 clusters, worker nodes are managed by &quot;MachineSets&quot;. These are objects that define the configuration of worker nodes, and can be scaled to set the number of workers of that type in the cluster.</p>
+<h2 id="scaling-an-openshift-v4-cluster">Scaling an OpenShift v4 cluster</h2>
+<p>To view available MachineSets and their current scale, check the <em>Compute ... MachineSets</em> section of the OpenShift web console, or run the following oc command:</p>
+<pre><code>oc get MachineSets -n openshift-machine-api
+</code></pre>
+<p>To scale a MachineSet up or down, set the scale against the MachineSet in the OpenShift web console, or run:</p>
+<pre><code>oc scale MachineSet &lt;machinesetname&gt; -n openshift-machine-api --replicas=&lt;scale&gt;
+</code></pre>
+<p>Where <code>&lt;machinesetname&gt;</code> is the name of the MachineSet to scale, and <code>&lt;scale&gt;</code> is the number of workers desired from that MachineSet.</p>
+<p>After approximately three minutes, the new nodes should be visible in the OpenShift web console or in the output of:</p>
+<pre><code>oc get nodes
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When you scale down a MachineSet, some workers will be drained and deleted. Workloads will automatically restart on remaining nodes if sufficient capacity remains. If all worker MachineSets are scaled to &quot;0&quot;, workloads may stop completely.</p>
+</div>
+<h3 id="default-machinesets-available">Default MachineSets available</h3>
+<p>UKCloud offers three charging models for OpenShift workers:</p>
+<ul>
+<li><p><strong>Hourly</strong> - This is charged by the hour, with a one hour minimum charge.</p>
+</li>
+<li><p><strong>Monthly</strong> - This is charged by the month, with a one month minimum charge. However, when used for the entire month, the cost is lower than running a hourly worker for the entire month.</p>
+</li>
+<li><p><strong>Annual</strong> - This is charged by the year, with a one year minimum charge. However, when used for the entire year, the cost is lower than running a monthly worker for the entire year. If you'd like to add annual MachineSets to your cluster, raise a Service Request via the My Calls section of the UKCloud Portal and provide us with the size and network connectivity of the MachineSets you'd like to add.</p>
+</li>
+</ul>
+<p>Hourly MachineSets are particularly useful for short-term testing or for bursts of demand.</p>
+<p>By default, UKCloud OpenShift clusters have the following MachineSets available:</p>
+<ul>
+<li><p><code>&lt;clusterid&gt;-hourly-m1-medium</code> - 4 CPU, 16GB RAM, charged by the hour</p>
+</li>
+<li><p><code>&lt;clusterid&gt;-monthly-m1-medium</code> - 4 CPU, 16GB RAM, charged by the month</p>
+</li>
+<li><p><code>&lt;clusterid&gt;-hourly-r1-small</code> - 8 CPU, 16GB RAM, charged by the hour</p>
+</li>
+<li><p><code>&lt;clusterid&gt;-monthly-r1-small</code> - 8 CPU, 16GB RAM, charged by the month</p>
+</li>
+<li><p><code>&lt;clusterid&gt;-hourly-m1-large</code> - 4 CPU, 32B RAM, charged by the hour</p>
+</li>
+<li><p><code>&lt;clusterid&gt;-monthly-m1-large</code> - 4 CPU, 32GB RAM, charged by the month</p>
+</li>
+<li><p><code>&lt;clusterid&gt;-hourly-r1-medium</code> -  8 CPU, 32GB RAM, charged by the hour</p>
+</li>
+<li><p><code>&lt;clusterid&gt;-monthly-r1-medium</code> - 8 CPU, 32GB RAM, charged by the month</p>
+</li>
+</ul>
+<p>For information about costs for each flavour and charging model, see section 2.1.3 of the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>UKCloud can add MachineSets for larger node flavours. If this is something you require, raise a Service Request via the My Calls section of the UKCloud Portal and provide us with the size and network connectivity of the MachineSets you'd like to add.</p>
+</div>
+<h3 id="further-information">Further information</h3>
+<p>For more information, see the Red Hat OpenShift Documentation:
+<a href="https://docs.openshift.com/container-platform/4.8/machine_management/manually-scaling-machineset.html">https://docs.openshift.com/container-platform/4.8/machine_management/manually-scaling-machineset.html</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

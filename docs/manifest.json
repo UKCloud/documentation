@@ -7067,6 +7067,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-monitoring-section.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-monitoring-section.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/oshift-overview.png",
       "output": {
         "resource": {
@@ -7448,7 +7459,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-monitor-cluster.html",
-          "hash": "x7jYsN2lKtlrIJ+ade7NlRQmFhD3jWBoQ22TDVLcoTw="
+          "hash": "jMUZBMe2ow75zURa8x4zsVjPyQNq2Tzp0pveBTfjlS8="
         }
       },
       "is_incremental": false,
@@ -7497,6 +7508,18 @@
         ".html": {
           "relative_path": "articles/openshift/oshift-how-restrict-access-to-openshift-routes-by-ip-address.html",
           "hash": "nzffpF9NfL6SB6yVTgPbZB+pRh0t592Vc4el5McRHzY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-scale-cluster-v4.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-scale-cluster-v4.html",
+          "hash": "6pB+kmtqun/vhOgd/zPu4cOyJ6IAESBc/4lj5T4lORs="
         }
       },
       "is_incremental": false,
@@ -7700,7 +7723,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-scaling.html",
-          "hash": "nbAhwxd7pdU5SxxZoMmHb5nUeYVvjEX2kBawZtRJ6J8="
+          "hash": "QYa/WAL63ghpAidxIrZ234o8RAsDep2K8Jrl7DBBAKY="
         }
       },
       "is_incremental": false,
@@ -7760,7 +7783,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "kc5FUXGCcyrN9HIBEDugCVDXBHGVGinqeq55LOY9+C8="
+          "hash": "Dvb85+Gqmuwd96WAsornSg3+qFFmBTjSL+jx8iwpCGs="
         }
       },
       "is_incremental": false,
@@ -22817,7 +22840,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-pricing.html",
-          "hash": "6IkQpLBStJobprV2ppXK5Kxq5ycyzQHcuA5oh3cXCXM="
+          "hash": "9M0KzFY1/EFC2QaxwtptthMWx442P36u1L7CV2NSWlM="
         }
       },
       "is_incremental": false,
@@ -23232,7 +23255,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 464,
+          "total_file_count": 465,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

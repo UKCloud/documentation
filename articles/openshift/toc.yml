@@ -60,8 +60,10 @@
         href: oshift-how-use-portworx-shared-volumes.md
   - name: OpenShift v4.x
     items:
+    - name: Scale an OpenShift v4 cluster
+      href: oshift-how-scale-cluster-v4.md
     - name: Use NetworkPolicy objects in OpenShift v4
-      href: oshift-how-use-netpol.md
+      href: oshift-how-use-netpol-v4.md
 - name: Reference
   items:
   - name: Lifecycle and patch management
