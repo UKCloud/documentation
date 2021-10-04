@@ -33,6 +33,12 @@ By default, UKCloud provides this service without the use of an agent by utilisi
 
 Ensure the following ports listed below are permitted on both your perimeter and operating system firewalls from the UKCloud management bubble subnet. UKCloud will provide you with the subnet.
 
+#### Linux & Windows (Agentless)
+
+- Simple Network Management Protocol (SNMP) - Port 161 over UDP
+
+- Internet Control Message Protocol (ICMP)
+
 #### Linux (Agent-based)
 
 - Nagios Remote Plugin Executor (NRPE) - Port 5666
@@ -44,12 +50,6 @@ Ensure the following ports listed below are permitted on both your perimeter and
 - Nagios Remote Plugin Executor (NRPE) - Port 5666
 
 - Windows Remote Management (WinRM) - Ports 5985 & 5986
-
-- Internet Control Message Protocol (ICMP)
-
-#### Linux & Windows (Agentless)
-
-- Simple Network Management Protocol (SNMP) - Port 161 over UDP
 
 - Internet Control Message Protocol (ICMP)
 
