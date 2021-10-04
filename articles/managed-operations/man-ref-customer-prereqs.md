@@ -107,17 +107,7 @@ To provide secure communication between UKCloud's centralised patch management p
 
 For UKCloud to correctly scan for and apply operating system patches, you must agree to enable and configure the Server Message Block (SMB) protocol by ensuring ports 445 and 139 (both over TCP) are open on all virtual machines and associated operating systems opted-in to this service. Furthermore, there must be a bi-directional rule allowing port 3121 (over TCP) on your edge appliance and operating system firewall.
 
-Furthermore, several other prerequisites are required. 
-
-- You must create a patching user, which must:
-
-  - Be an admin on the virtual machine
-
-  - Have access to the Control Panel
-
-  - Filer and Print Sharing enabled for all networks
-
-- The customer virtual machines must also be running the "Remote Registry" service
+Furthermore, you must create a patching user which is an administrator on the virtual machine and has access to the Control Panel. Finally, you must enable the "Remote Registry" service on all virtual machines and enable Filer and Print Sharing for all networks.
 
 ##### Domain joined
 
