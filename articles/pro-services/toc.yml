@@ -1,3 +1,7 @@
+- name: FAQs
+  items:
+  - name: Jumpstart FAQs
+    href: ps-faq-jumpstart.md
 - name: Service Information
   items:
   - name: Service Definition

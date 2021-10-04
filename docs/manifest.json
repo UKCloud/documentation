@@ -11664,18 +11664,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-faq-jumpstart.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-faq-jumpstart.html",
-          "hash": "7dm8T/6gcKZcldy8RRZkH/RqgoRbSC4mozLL1rPlYMc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-miso-rebate.md",
       "output": {
         ".html": {
@@ -11699,12 +11687,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-ukcloud.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "VuqrjvgrXvX2fJmOoTcTK0i7xIoAcKF9zFsee5k+/yc="
+          "hash": "g8WWdlPQ0I8wDHRG6C/QY85SAvvNRmpg5Sy/FsbN0ag="
         }
       },
       "is_incremental": false,
@@ -11867,12 +11858,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-glossary.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "BqOz3t+Zl8OGVPgfJ40JTmyEG35S8wzmfnRv49r1a44="
+          "hash": "OoEh47gaY9qrUDfLZVqTD5fmQV/BPbsunbW3vS3sU3Q="
         }
       },
       "is_incremental": false,
@@ -12196,7 +12190,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "bapETXtEiZdHAjtIjLFh2m8O8najkXn/XSy38J4gcjM="
+          "hash": "uIA+juMglWDWEJq+RnqW2EbhqyMg/aC7fYuGK14YgTY="
         }
       },
       "is_incremental": false,
@@ -13238,7 +13232,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-reset-password.html",
-          "hash": "cTVOhd9tt3OHcaNAGdmBkudSyUBc+HA501ERZvitbKk="
+          "hash": "8T7Q9X8sm2w6d0avw0VFHK6SUOV3WZ+glyJHyoQO/dk="
         }
       },
       "is_incremental": false,
@@ -13648,6 +13642,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/pro-services/ps-faq-jumpstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/pro-services/ps-faq-jumpstart.html",
+          "hash": "ZRPTdvsH0Z+DcVlnpN24xdHjY+jIOfHlL8YQyIE66Xw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/pro-services/ps-sd.md",
       "output": {
         ".html": {
@@ -13664,7 +13670,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/pro-services/toc.html",
-          "hash": "sohoAWxS0N8aMMfUELgvzGlJLlrMmbSWxHAC+EAgiXM="
+          "hash": "gRWaeVBObxEsP6NbwK0Jl8GBcDUAjCd1HEBzGaXzb9A="
         }
       },
       "is_incremental": false,
@@ -13872,7 +13878,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-ref-network-time-server.html",
-          "hash": "IYCOyrL1AbJqsSKaChpisS8b7oZsOH+Z4WxKChgLQK0="
+          "hash": "S5Vm3WVmOd5w/8pKsNng8eGDydG3XegO7kHZm/fomQA="
         }
       },
       "is_incremental": false,
