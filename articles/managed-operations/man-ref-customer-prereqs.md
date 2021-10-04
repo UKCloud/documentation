@@ -25,7 +25,7 @@ Before UKCloud can begin onboarding your virtual machines onto this service, you
 
 ## Managed Monitoring as a Service
 
-with Managed Monitoring as a Service, UKCloud becomes your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate. For more information, see the [*Managed Monitoring as a Service Service Scope*](man-sco-monitoring.md).
+With Managed Monitoring as a Service, UKCloud becomes your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate. For more information, see the [*Managed Monitoring as a Service Service Scope*](man-sco-monitoring.md).
 
 By default, UKCloud provides this service without the use of an agent by utilising SNMP traps. In situations where we need to collect non-SNMP events, we may opt to provide a dedicated Monitoring Agent, which can be deployed on to your virtual machines to provide a more advanced method of event collection.
 
