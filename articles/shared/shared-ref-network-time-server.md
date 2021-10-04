@@ -4,7 +4,7 @@ description: This guide shows you how to configure access to the Network Time Pr
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 01/09/2021
+lastreviewed: 01/10/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -32,7 +32,7 @@ The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's
 >   
 >   - 51.179.212.118
 >   
->   - 51.179.212.116
+>   - 51.179.212.119
 >   
 >   - 51.179.215.212
 >   
@@ -41,6 +41,8 @@ The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's
 >   - 51.179.215.214
 >   
 >   - 51.179.215.215
+>
+>   In your client `ntp/chrony` configuration file, you can point to the hostname `ntp.ukcloud.com`, which will reference all of the above IP addresses.
 >
 > - For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal 
 
