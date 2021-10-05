@@ -2,9 +2,9 @@
 title: How to create an SPN for Azure Stack Hub using PowerShell
 description: Learn how to create a service principal name (SPN) to manage your Azure Stack Hub using PowerShell
 services: azure-stack
-author: Chris Black
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+author: cblack
+reviewer: wturner
+lastreviewed: 05/10/2021
 
 toc_rootlink: Users
 toc_sub1: How To
