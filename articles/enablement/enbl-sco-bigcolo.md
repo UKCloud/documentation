@@ -2,8 +2,8 @@
 title: Big Cloud Enablement Service Scope
 description: Outlines how UKCloud provides co-location of your own hardware in our data centres
 services: enablement
-author: Bart Challis
-reviewer: Thomas Hallsmith
+author: bchallis
+reviewer: thallsmith
 lastreviewed: 05/10/2021
 toc_rootlink: Service Scope
 toc_sub1: 
