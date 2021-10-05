@@ -1,10 +1,10 @@
 ---
 title: How to create a virtual machine from scratch
-description: Shows how to create virtual machines from scratch within the VMware Cloud Director tenant portal
+description: Shows how to create virtual machines from scratch within VMware Cloud Director
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 18/09/2020
+lastreviewed: 05/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -80,7 +80,7 @@ For information about creating a VM from a template, see [*How to create a VM fr
     > [!TIP]
     > When setting the storage size, be sure to select the appropriate units (**MB**, **GB** or **TB**).
 
-11. In the *Networking* section, if necessary, click **Customize** to configure network settings. You can set the **IP Mode** to determine how IP addresses are assigned:
+11. In the *Networking* section, click **Customize** to configure network settings, if necessary. You can set the **IP Mode** to determine how IP addresses are assigned:
 
     - **DHCP** VMware Cloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.
 
@@ -98,31 +98,38 @@ For information about creating a VM from a template, see [*How to create a VM fr
 
 13. Back in the *Add VMs* dialog box, you can add more VMs or click **Add** when you're done.
 
-    You can monitor progress in the *Add VMs* dialog box, or click **Cancel** to return to the list of vApps while the VM is created in the background.
-
     The VM will be deployed without any operating system.
 
 ## Installing an operating system into the VM
+
+When you create a VM from scratch, it's initially deployed without any operating system. So, after you've created it, you need to install the appropriate operating system.
 
 1. On the card for the vApp that contains the VM, click **Actions** then select **Power On**.
 
     This starts the vApp and all the VMs within it.
 
-2. In the left navigation panel, select **Virtual Machines** to view a list of VMs within the VDC.
+2. In the card for the vApp that contains the new VM, click **Details**.
 
-3. In the card for your VM, click **VM Console**.
+   ![VM Details menu option](images/vmw-vcd10.1-mnu-vapp-details.png)
 
-4. As with a physical server, no virtual CD or DVD is available at first boot, so the server will attempt to PXE boot.
+3. Select **Virtual Machines**.
+
+4. Click the **VM Console** option for the VM.
+
+   > [!TIP]
+   > For a standalone VM, in the left navigation panel, under *Compute*, select **Virtual Machines** to view a list of all VMs within the VDC. Then, in the card for your new VM, click **VM Console**.
+
+5. As with a physical server, no virtual CD or DVD is available at first boot, so the server will attempt to PXE boot.
 
     ![VM console](images/vmw-vcd-vm-console-bare-metal.png)
 
-5. In the main VMware Cloud Director interface (not the console), in the card for the VM you want to work with, select **Actions** then **Insert Media**.
+6. In the main VMware Cloud Director interface (not the console), in the row for your VM, select the actions menu (three dots) then **Insert Media**.
 
     ![Insert Media menu option](images/vmw-vcd10.1-mnu-insert-media.png)
 
-6. In the *Insert CD* dialog box, select the ISO image you want to mount from a catalog, then click **Insert**.
+7. In the *Insert CD* dialog box, select the ISO image you want to mount from a catalog, then click **Insert**.
 
-7. In the card for the VM, select **Actions** then **Reset** to reset the VM so that it picks up the virtual CD/DVD.
+8. In the row for the VM, select the actions menu (three dots) then **Reset** to reset the VM so that it picks up the virtual CD/DVD.
 
     ![Reset VM menu option](images/vmw-vcd10.1-mnu-reset-vm.png)
 
@@ -130,9 +137,9 @@ For information about creating a VM from a template, see [*How to create a VM fr
 
     ![Installing CentOS Linux 7](images/vmw-vcd91-vm-install-os.png)
 
-8. Carry out the operating system install as normal. When you've finished, remember to install VMware Tools.
+9. Carry out the operating system install as normal.
 
-    For more information, see [*VMware Tools installation*](vmw-ref-vmware-tools-installation.md).
+   When you've finished, remember to install VMware Tools (for more information, see [*VMware Tools installation*](vmw-ref-vmware-tools-installation.md)).
 
 ## Feedback
 
