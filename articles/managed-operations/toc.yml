@@ -36,6 +36,8 @@
   items:
   - name: Add and remove devices
     href: man-how-add-remove-device.md
+  - name: Managed IT Operations prerequisites
+    href: man-ref-customer-prereqs.md
   - name: Managed IT Operations Service Definition
     href: man-sd-managed-it-ops.md
   - name: Provide notification of maintenance windows
