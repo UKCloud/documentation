@@ -113,7 +113,7 @@ Furthermore, you must create a patching user that is an administrator on the vir
 
 ##### Domain joined
 
-If the Windows virtual machines are domain joined, the device must be using domain administrator credentials.
+If the Windows virtual machines are domain joined, the user must be using domain administrator credentials.
 
 ##### Standalone
 
