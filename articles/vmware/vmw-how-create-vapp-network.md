@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-create-vapp-network.md
 
 ## Overview
 
-In addition to virtual data centre (VDC) networking, you can create individual vApp networks to have even greater control over your network infrastructure.
+In addition to virtual data center (VDC) networking, you can create individual vApp networks to have even greater control over your network infrastructure.
 
 vApp networks enable you to create smaller networks within individual vApps that have a vApp edge, similar to the edge gateway on your VDC. Although a vApp edge isn't as feature rich as a VDC edge, it enables you to create firewall and NAT rules to separate your VDC networks from your vApp virtual machines (VMs). This means you can create some quite complex networks to satisfy application needs.
 
