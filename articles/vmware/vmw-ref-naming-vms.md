@@ -17,7 +17,7 @@ toc_mdlink: vmw-ref-naming-vms.md
 
 # Naming virtual machines
 
-Due to restrictions on the characters permitted for virtual machines (VM) in the current version of ESXi hosts on the UKCloud platform, you should be aware of the following:
+Due to restrictions on the characters permitted for virtual machines (VMs) in the current version of ESXi hosts on the UKCloud platform, you should be aware of the following:
 
 - When naming VMs in your infrastructure we would advise not using special characters. 
 
