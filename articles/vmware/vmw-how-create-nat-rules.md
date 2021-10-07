@@ -4,7 +4,7 @@ description: Shows how to configure network address translation within the VMwar
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 18/09/2020
+lastreviewed: 07/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -53,7 +53,7 @@ To create a DNAT rule:
 
     ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-3. On the *Edge Gateways* page, select the edge that you want to configure and click the **Services** button.
+3. On the *Edge Gateways* page, select the edge that you want to configure and click **Services**.
 
     ![Services button](images/vmw-vcd10.1-edge-btn-services.png)
 
@@ -61,7 +61,7 @@ To create a DNAT rule:
 
     ![NAT tab](images/vmw-vcd10.1-edge-tab-nat.png)
 
-5. In the *NAT44 Rules* section, click **DNAT Rule**.
+5. In the *NAT44 Rules* section, click the **DNAT Rule** button.
 
     ![Add DNAT Rule button](images/vmw-vcd10.1-btn-add-dnat.png)
 
@@ -95,11 +95,11 @@ To create an SNAT rule:
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway in which you want to create the SNAT rule.
 
-2. In the left navigation panel, under *Networking*, select **Edges**..
+2. In the left navigation panel, under *Networking*, select **Edges**.
 
     ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-3. On the *Edge Gateways* page, select the edge that you want to configure and click the **Services** button.
+3. On the *Edge Gateways* page, select the edge that you want to configure and click **Services**.
 
     ![Services button](images/vmw-vcd10.1-edge-btn-services.png)
 
@@ -107,7 +107,7 @@ To create an SNAT rule:
 
     ![NAT tab](images/vmw-vcd10.1-edge-tab-nat.png)
 
-5. In the *NAT44 Rules* section, click **SNAT Rule**.
+5. In the *NAT44 Rules* section, click the **SNAT Rule** button.
 
     ![Add SNAT Rule button](images/vmw-vcd10.1-btn-add-snat.png)
 
@@ -139,15 +139,15 @@ If you have an IPv6 network and need to communicate to an IPv4 network, you'll n
 
     ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-3. In the *Edge Gateways* page, select the edge that you want to configure and click the **Services** button.
+3. On the *Edge Gateways* page, select the edge that you want to configure and click **Services**.
 
     ![Services button](images/vmw-vcd10.1-edge-btn-services.png)
 
-4. In the *Edge Gateway* page, select the **NAT** tab.
+4. On the *Edge Gateway* page, select the **NAT** tab.
 
     ![NAT tab](images/vmw-vcd10.1-edge-tab-nat.png)
 
-5. In the *NAT64 Rules* section, click **+ NAT64 Rule**.
+5. In the *NAT64 Rules* section, click the **NAT64 Rule** button.
 
     ![Add NAT64 Rule button](images/vmw-vcd10.1-btn-add-nat64.png)
 
