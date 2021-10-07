@@ -31,11 +31,7 @@ The following firewall technology has been successfully deployed and configured 
 
 ### pfSense firewalls
 
-- pfSense v2.2.4 i386
-
-- pfSense v2.3.1 i386
-
-- pfSense v2.3.1 amd64
+- pfSense-CE-2.5.2 AMD64
 
 ### Palo Alto firewalls
 
