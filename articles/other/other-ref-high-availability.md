@@ -2,9 +2,9 @@
 title: High availability on the UKCloud platform
 description: Describes how the UKCloud platform supports the development of highly available applications
 services: other
-author: Sue Highmoor
-reviewer:
-lastreviewed: 01/11/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 07/10/2021
 
 toc_rootlink: Reference
 toc_sub1:
@@ -47,7 +47,7 @@ We offer a number of different connectivity options for you to gain access to ou
 Connectivity option | High-availability considerations
 --------------------|---------------------------------
 Internet            | Multiple, redundant, high-speed internet links with DDoS mitigation to protect the platform as a whole.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available via different RIPE IP addresses (ideally on different IP network ranges).
-PSN/HSCN/Janet      | Redundant, high-speed connectivity with automatic failover.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available.
+PSN/HSCN            | Redundant, high-speed connectivity with automatic failover.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available.
 HybridConnect       | Enables you to bring your own secure connectivity into the UKCloud environment.<br>We provide colocation services for hardware and can assist in the design.<br>We recommend that you deploy an additional HybridConnect service in another site to ensure that you have redundant connectivity into a second site.<br>We recommend that you use routing protocols to enable automated failover.
 
 ### Supplementary services for high availability
