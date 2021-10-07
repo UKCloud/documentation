@@ -4,7 +4,7 @@ description: Describes how to view and update the different virtual machine (VM)
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 13/10/2020
+lastreviewed: 04/10/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

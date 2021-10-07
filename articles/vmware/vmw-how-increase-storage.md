@@ -4,7 +4,7 @@ description: Describes how to increase the block storage available to a virtual 
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 23/10/2020
+lastreviewed: 04/10/2021
 
 toc_rootlink: How To
 toc_sub1:
