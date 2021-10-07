@@ -136,12 +136,21 @@
 <li><p>When you're done, click <strong>OK</strong>.</p>
 </li>
 <li><p>Back in the <em>Add VMs</em> dialog box, you can create more VMs or click <strong>Add</strong> when you're done.</p>
-<p>You can monitor progress in the <em>Add VMs</em> dialog box, or click <strong>Cancel</strong> to return to the list of vApps while the VM is created in the background.</p>
 </li>
-<li><p>In the left navigation panel, under <em>Compute</em>, select <strong>Virtual Machines</strong> to view a list of VMs within the VDC.</p>
-<p><img src="images/vmw-vcd10.1-tab-vms.png" alt="Virtual Machines tab"></p>
+</ol>
+<h2 id="editing-the-properties-of-a-new-vm">Editing the properties of a new VM</h2>
+<p>After you initially create your VM, you'll probably want to edit some of the properties to finish setting it up.</p>
+<ol>
+<li><p>In the card for the vApp that contains the new VM, click <strong>Details</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-vapp-details.png" alt="VM Details menu option"></p>
 </li>
-<li><p>In the card for your new VM, select <strong>Details</strong>.</p>
+<li><p>Select <strong>Virtual Machines</strong>.</p>
+</li>
+<li><p>Click the VM to edit its properties.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To edit the properties of a standalone VM, in the left navigation panel, under <em>Compute</em>, select <strong>Virtual Machines</strong> to view a list of all VMs within the VDC. Then, in the card for your new VM, click <strong>Details</strong>.</p>
+</div>
 </li>
 <li><p>On the <em>General</em> page, click <strong>Edit</strong>.</p>
 <p><img src="images/vmw-vcd10.1-vm-details-general-edit.png" alt="VM details - General page - Edit button"></p>
@@ -149,10 +158,10 @@
 <li><p>In the <em>Edit VM</em> dialog box, from the <strong>Storage Policy</strong> list, select a storage policy to assign the VM to, then click <strong>Save</strong>.</p>
 <p><img src="images/vmw-vcd10.1-vm-details-general.png" alt="Edit VM dialog box"></p>
 </li>
-<li><p>Under <em>Hardware</em>, select <strong>Hard Disks</strong>, then click <strong>Edit</strong> to configure storage or <strong>Add</strong> more disks.</p>
+<li><p>Under <em>Hardware</em>, select <strong>Hard Disks</strong>, then click <strong>Edit</strong> to configure storage or <strong>Add</strong> more disks. Click <strong>Save</strong> when done.</p>
 <p><img src="images/vmw-vcd10.1-vm-details-hard-disks.png" alt="VM details - Hard Disks page"></p>
 </li>
-<li><p>Select <strong>Compute</strong>, then click <strong>Edit</strong> to configure <em>CPU</em> and <em>Memory</em>.</p>
+<li><p>Select <strong>Compute</strong>, then click the appropriate <strong>Edit</strong> link to configure <em>CPU</em> and <em>Memory</em>.</p>
 <p><img src="images/vmw-vcd10.1-vm-details-compute.png" alt="VM details - Compute page"></p>
 </li>
 <li><p>Select <strong>NICs</strong>, then click <strong>Edit</strong> to configure network settings You can set the <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
@@ -165,6 +174,7 @@ created.</p>
 <li><p><strong>Static - Manual</strong> is similar to IP Pool, but you need to enter a valid <strong>IP Address</strong> from the pool, which the VM will then keep.</p>
 </li>
 </ul>
+<p>Click <strong>Save</strong> when done.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>If the MAC address for a newly added NIC is blank, click <strong>Save</strong> to generate one.</p>

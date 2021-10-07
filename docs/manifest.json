@@ -19980,6 +19980,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vapp-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vapp-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-vapp-from-ovf.png",
       "output": {
         "resource": {
@@ -20325,6 +20336,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-network-static-routing.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-new-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-new-vm.png"
         }
       },
       "is_incremental": false,
@@ -21964,7 +21986,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "Vs62gwTnjHCe5qhijk2M9+433r6zZm4aeOk+xHxE0Jg="
+          "hash": "NklTSvixxpdmX8STnj4dVi4LG853N7erljkKT5q2lvU="
         }
       },
       "is_incremental": false,
@@ -22109,6 +22131,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-vcloud-api.html",
           "hash": "0Htouk5OH75ARIRtfZttPtxeKlFiV6SFHk+lRHp4xFo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-apply-vapp-fencing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-apply-vapp-fencing.html",
+          "hash": "kiUgJzL2UZU62D4yY5GB+oSjskvDbHiwpiZYccRarXg="
         }
       },
       "is_incremental": false,
@@ -22288,7 +22322,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vapp-network.html",
-          "hash": "ccjQc/jkmZyRNP2ARc19UpyfPPsMFcDz7swnPRjHi2Q="
+          "hash": "n8S5uoT7oqvNprhi/9eRcy7Qk4Z6/naJfeQR2YiqVD4="
         }
       },
       "is_incremental": false,
@@ -22300,7 +22334,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vapp.html",
-          "hash": "04qGKYja9fbgzSaTznA6m+yhmkK0YiAk2XyEkHU0X7I="
+          "hash": "dQODNrAEczD86MboSfrmC8FpdE5A89u+pFfG1B78T1E="
         }
       },
       "is_incremental": false,
@@ -22312,7 +22346,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vm-from-scratch.html",
-          "hash": "Y0E4xJtHeNv8wF+AUqjrl8om5Kr9H65kLMyfeD6N0do="
+          "hash": "UOliIgdcFtjReqVCli0COVByjSUend0xxh5PWqDROws="
         }
       },
       "is_incremental": false,
@@ -22324,7 +22358,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vm-from-template.html",
-          "hash": "jzxJhj8QTNFhzJ/Me/8+IDgWX6J/bKSp9TxyaC8q1KY="
+          "hash": "r9IP41/XHT9/5eGZqO0pDpNCKDGIzXfAPORWJOeenX0="
         }
       },
       "is_incremental": false,
@@ -22540,7 +22574,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-affinity-rules.html",
-          "hash": "3JWp2YzOgqeYstJMlwWiJVvEwKsN/uIcMMNT4s74GJk="
+          "hash": "4WYaw6B61Y0hRegLO8vl9EJmNuUtbrct348pCdiwGoE="
         }
       },
       "is_incremental": false,
@@ -22781,18 +22815,6 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-ipsec-vpn.html",
           "hash": "W4+FIlJxYyrniqBci+fLTBSJ20lFZO4230sMrzyphlk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-managing-portal-api.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-managing-portal-api.html",
-          "hash": "vrWlqm45Ps4RwdCxQ509k7fGP6XOw0dyz84wPMP0uwk="
         }
       },
       "is_incremental": false,

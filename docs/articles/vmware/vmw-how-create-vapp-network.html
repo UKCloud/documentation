@@ -94,7 +94,7 @@
 <h1 id="how-to-create-a-vapp-network">How to create a vApp network</h1>
 
 <h2 id="overview">Overview</h2>
-<p>In addition to virtual data centre (VDC) networking, you can create individual vApp networks to have even greater control over your network infrastructure.</p>
+<p>In addition to virtual data center (VDC) networking, you can create individual vApp networks to have even greater control over your network infrastructure.</p>
 <p>vApp networks enable you to create smaller networks within individual vApps that have a vApp edge, similar to the edge gateway on your VDC. Although a vApp edge isn't as feature rich as a VDC edge, it enables you to create firewall and NAT rules to separate your VDC networks from your vApp virtual machines (VMs). This means you can create some quite complex networks to satisfy application needs.</p>
 <p>The vApp network diagram below shows the vApp edge.</p>
 <p><img src="images/vmw-vapp-network.png" alt="vApp network"></p>
@@ -159,7 +159,7 @@
 <li><p>The <em>General</em> page displays general network settings. Click <strong>Edit</strong> to adjust these settings.</p>
 </li>
 <li><p>The <em>IP Management</em> pages display the IP settings for the vApp network, including <strong>Static Pools</strong>, <strong>DNS</strong> and <strong>DHCP</strong>. Click <strong>Edit</strong> on these pages to adjust these settings.</p>
-<p>For more information about enabling DHCP for your vApp network, see <a href="#enabling-dhcp">*Enabling DHCP</a>.</p>
+<p>For more information about enabling DHCP for your vApp network, see <a href="#enabling-dhcp"><em>Enabling DHCP</em></a>.</p>
 </li>
 <li><p>On the <em>Services</em> page you can set up firewall and NAT rules for your vApp network. For more information, see <a href="#creating-firewall-rules"><em>Creating firewall rules</em></a> and <a href="#creating-nat-rules"><em>Creating NAT rules</em></a>.</p>
 </li>
@@ -167,8 +167,7 @@
 </li>
 </ol>
 <h3 id="enabling-dhcp">Enabling DHCP</h3>
-<p>DHCP isn't enabled by default.</p>
-<p>For more information about DHCP, see <a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a>.</p>
+<p>DHCP isn't enabled by default. For more information about DHCP, see <a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a>.</p>
 <p>To enable DHCP:</p>
 <ol>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
@@ -216,7 +215,7 @@
 <h3 id="creating-nat-rules">Creating NAT rules</h3>
 <p>NAT rules, enabled by default, enable mapping between internal VM interfaces and external IP addresses.</p>
 <p>For more information about NAT rules, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
-<p>To edit the mapping rules for a VM:</p>
+<p>To edit the NAT rules for a VM:</p>
 <ol>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 </li>
@@ -351,24 +350,15 @@
 <h5>Note</h5>
 <p>Make sure your firewall rules allow traffic on the static routes.</p>
 </div>
-<h2 id="vapp-fencing">vApp fencing</h2>
-<p>Fencing a vApp allows identical VMs within different vApps to be powered on without conflict, by isolating the MAC and IP addresses of the VMs. This feature is particularly useful if you are copying vApps or creating catalog images of vApps where these details can't be altered.</p>
-<p>vApp fencing can be done during or after vApp creation. It is done when the VMs within the vApp sit on the VDC network, rather than on their own vApp network.</p>
-<p>To apply vApp fencing:</p>
-<ol>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><p><a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a></p>
 </li>
-<li><p>In the card for the vApp, select <strong>Details</strong>.</p>
+<li><p><a href="vmw-how-apply-vapp-fencing.html"><em>How to apply vApp fencing</em></a></p>
 </li>
-<li><p>Select <strong>Networks</strong>.</p>
+<li><p><a href="vmw-how-migrate-vapp.html"><em>How to migrate vApps between virtual data centres</em></a></p>
 </li>
-<li><p>In the <em>vApp Fencing</em> section, click <strong>Edit</strong>.</p>
-<p><img src="images/vmw-vcd10.1-btn-vapp-network-fence.png" alt="Edit button for vApp network fencing"></p>
-</li>
-<li><p>Select the <strong>Fence vApp</strong> option then click <strong>OK</strong>.</p>
-<p><img src="images/vmw-vcd-vapp-fencing.png" alt="Edit vApp Fencing dialog box"></p>
-</li>
-</ol>
+</ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

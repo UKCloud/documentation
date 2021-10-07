@@ -152,7 +152,7 @@
 <p>When setting the storage size, be sure to select the appropriate units (<strong>MB</strong>, <strong>GB</strong> or <strong>TB</strong>).</p>
 </div>
 </li>
-<li><p>In the <em>Networking</em> section, if necessary, click <strong>Customize</strong> to configure network settings. You can set the <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
+<li><p>In the <em>Networking</em> section, click <strong>Customize</strong> to configure network settings, if necessary. You can set the <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
 <ul>
 <li><p><strong>DHCP</strong> VMware Cloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.</p>
 </li>
@@ -171,34 +171,41 @@ created.</p>
 <li><p>When you're done, click <strong>OK</strong>.</p>
 </li>
 <li><p>Back in the <em>Add VMs</em> dialog box, you can add more VMs or click <strong>Add</strong> when you're done.</p>
-<p>You can monitor progress in the <em>Add VMs</em> dialog box, or click <strong>Cancel</strong> to return to the list of vApps while the VM is created in the background.</p>
 <p>The VM will be deployed without any operating system.</p>
 </li>
 </ol>
 <h2 id="installing-an-operating-system-into-the-vm">Installing an operating system into the VM</h2>
+<p>When you create a VM from scratch, it's initially deployed without any operating system. So, after you've created it, you need to install the appropriate operating system.</p>
 <ol>
 <li><p>On the card for the vApp that contains the VM, click <strong>Actions</strong> then select <strong>Power On</strong>.</p>
 <p>This starts the vApp and all the VMs within it.</p>
 </li>
-<li><p>In the left navigation panel, select <strong>Virtual Machines</strong> to view a list of VMs within the VDC.</p>
+<li><p>In the card for the vApp that contains the new VM, click <strong>Details</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-vapp-details.png" alt="VM Details menu option"></p>
 </li>
-<li><p>In the card for your VM, click <strong>VM Console</strong>.</p>
+<li><p>Select <strong>Virtual Machines</strong>.</p>
+</li>
+<li><p>Click the <strong>VM Console</strong> option for the VM.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>For a standalone VM, in the left navigation panel, under <em>Compute</em>, select <strong>Virtual Machines</strong> to view a list of all VMs within the VDC. Then, in the card for your new VM, click <strong>VM Console</strong>.</p>
+</div>
 </li>
 <li><p>As with a physical server, no virtual CD or DVD is available at first boot, so the server will attempt to PXE boot.</p>
 <p><img src="images/vmw-vcd-vm-console-bare-metal.png" alt="VM console"></p>
 </li>
-<li><p>In the main VMware Cloud Director interface (not the console), in the card for the VM you want to work with, select <strong>Actions</strong> then <strong>Insert Media</strong>.</p>
+<li><p>In the main VMware Cloud Director interface (not the console), in the row for your VM, select the actions menu (three dots) then <strong>Insert Media</strong>.</p>
 <p><img src="images/vmw-vcd10.1-mnu-insert-media.png" alt="Insert Media menu option"></p>
 </li>
 <li><p>In the <em>Insert CD</em> dialog box, select the ISO image you want to mount from a catalog, then click <strong>Insert</strong>.</p>
 </li>
-<li><p>In the card for the VM, select <strong>Actions</strong> then <strong>Reset</strong> to reset the VM so that it picks up the virtual CD/DVD.</p>
+<li><p>In the row for the VM, select the actions menu (three dots) then <strong>Reset</strong> to reset the VM so that it picks up the virtual CD/DVD.</p>
 <p><img src="images/vmw-vcd10.1-mnu-reset-vm.png" alt="Reset VM menu option"></p>
 <p>After a short while the VM will start the boot process and pick up the CD/DVD. Resize the VM console if necessary or go to full screen.</p>
 <p><img src="images/vmw-vcd91-vm-install-os.png" alt="Installing CentOS Linux 7"></p>
 </li>
-<li><p>Carry out the operating system install as normal. When you've finished, remember to install VMware Tools.</p>
-<p>For more information, see <a href="vmw-ref-vmware-tools-installation.html"><em>VMware Tools installation</em></a>.</p>
+<li><p>Carry out the operating system install as normal.</p>
+<p>When you've finished, remember to install VMware Tools (for more information, see <a href="vmw-ref-vmware-tools-installation.html"><em>VMware Tools installation</em></a>).</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>

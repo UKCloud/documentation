@@ -30,6 +30,8 @@
     href: vmw-how-access-syslog-data-adv.md
   - name: Access VMware Cloud Director through the Cloud Director API
     href: vmw-how-access-vcloud-api.md
+  - name: Apply vApp fencing
+    href: vmw-how-apply-vapp-fencing.md
   - name: Build an edge gateway using the UKCloud Portal
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the Cloud Director API
@@ -162,8 +164,6 @@
     href: vmw-ref-vcd-known-issues.md
   - name: Known working and non-working firewalls
     href: vmw-ref-byof-working-firewalls.md
-  - name: Managing your UKCloud for VMware environment using the UKCloud Portal API
-    href: vmw-ref-managing-portal-api.md
   - name: Naming virtual machines
     href: vmw-ref-naming-vms.md
   - name: Nested hypervisors
