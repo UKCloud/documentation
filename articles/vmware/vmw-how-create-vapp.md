@@ -1,10 +1,10 @@
 ---
 title: How to create a vApp
-description: Shows you how to create create vApps from scratch within the VMware Cloud Director tenant portal
+description: Shows you how to create create vApps from scratch within VMware Cloud Director
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 19/09/2020
+lastreviewed: 05/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -46,11 +46,16 @@ In this article we'll look at how to create a vApp from scratch.
 
 6. Click **Add Virtual Machine** to populate the vApp with VMs.
 
+   > [!NOTE]
+   > You can click **Create** at this point to create an empty vApp and add VMs to it later.
+
 7. In the *New VM* dialog box, select:
 
-    - **New** to create a VM from scratch, without using a template (see [*How to create a virtual machine from scratch*](vmw-how-create-vm-from-scratch.md)).
+    - **New** to create a VM from scratch, without using a template (see [*How to create a virtual machine from scratch*](vmw-how-create-vm-from-scratch.md), starting from step 5).
 
-    - **From Template** to create a VM from an existing template (see [*How to create a VM from a template*](vmw-how-create-vm-from-template.md)).
+    - **From Template** to create a VM from an existing template (see [*How to create a VM from a template*](vmw-how-create-vm-from-template.md), starting from step 5).
+
+   ![New VM dialog box](images/vmw-vcd10.1-vapp-new-vm.png)
 
 8. When you've finished adding VMs to your vApp, in the *New vApp* dialog box, click **Create**.
 

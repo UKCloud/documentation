@@ -1,10 +1,10 @@
 ---
 title: How to create a virtual machine from a template
-description: Shows how to create virtual machines from a template within the VMware Cloud Director tenant portal
+description: Shows how to create virtual machines from a template within VMware Cloud Director
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 18/09/2020
+lastreviewed: 05/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -66,31 +66,38 @@ For information about catalogs, see [*How to create a catalog*](vmw-how-create-c
 
 9. Back in the *Add VMs* dialog box, you can create more VMs or click **Add** when you're done.
 
-    You can monitor progress in the *Add VMs* dialog box, or click **Cancel** to return to the list of vApps while the VM is created in the background.
+## Editing the properties of a new VM
 
-10. In the left navigation panel, under *Compute*, select **Virtual Machines** to view a list of VMs within the VDC.
+After you initially create your VM, you'll probably want to edit some of the properties to finish setting it up.
 
-    ![Virtual Machines tab](images/vmw-vcd10.1-tab-vms.png)
+1. In the card for the vApp that contains the new VM, click **Details**.
 
-11. In the card for your new VM, select **Details**.
+   ![VM Details menu option](images/vmw-vcd10.1-mnu-vapp-details.png)
 
-12. On the *General* page, click **Edit**.
+2. Select **Virtual Machines**.
+
+3. Click the VM to edit its properties.
+
+   > [!TIP]
+   > To edit the properties of a standalone VM, in the left navigation panel, under *Compute*, select **Virtual Machines** to view a list of all VMs within the VDC. Then, in the card for your new VM, click **Details**.
+
+4. On the *General* page, click **Edit**.
 
     ![VM details - General page - Edit button](images/vmw-vcd10.1-vm-details-general-edit.png)
 
-13. In the *Edit VM* dialog box, from the **Storage Policy** list, select a storage policy to assign the VM to, then click **Save**.
+5. In the *Edit VM* dialog box, from the **Storage Policy** list, select a storage policy to assign the VM to, then click **Save**.
 
     ![Edit VM dialog box](images/vmw-vcd10.1-vm-details-general.png)
 
-14. Under *Hardware*, select **Hard Disks**, then click **Edit** to configure storage or **Add** more disks.
+6. Under *Hardware*, select **Hard Disks**, then click **Edit** to configure storage or **Add** more disks. Click **Save** when done.
 
     ![VM details - Hard Disks page](images/vmw-vcd10.1-vm-details-hard-disks.png)
 
-15. Select **Compute**, then click **Edit** to configure *CPU* and *Memory*.
+7. Select **Compute**, then click the appropriate **Edit** link to configure *CPU* and *Memory*.
 
     ![VM details - Compute page](images/vmw-vcd10.1-vm-details-compute.png)
 
-16. Select **NICs**, then click **Edit** to configure network settings You can set the **IP Mode** to determine how IP addresses are assigned:
+8. Select **NICs**, then click **Edit** to configure network settings You can set the **IP Mode** to determine how IP addresses are assigned:
 
     - **DHCP** VMware Cloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.
 
@@ -98,6 +105,8 @@ For information about catalogs, see [*How to create a catalog*](vmw-how-create-c
     created.
 
     - **Static - Manual** is similar to IP Pool, but you need to enter a valid **IP Address** from the pool, which the VM will then keep.
+
+    Click **Save** when done.
 
     > [!TIP]
     > If the MAC address for a newly added NIC is blank, click **Save** to generate one.
