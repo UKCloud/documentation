@@ -4,7 +4,7 @@ description: Shows you how to create a catalog within the VMware Cloud Director 
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 17/09/2020
+lastreviewed: 07/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -68,9 +68,9 @@ The first step is to create an empty catalog:
 
 There are two ways to populate a catalog:
 
-- By [creating a template from an OVF package](#creating-a-template-from-an-ovf-package)
+- [*Create a template from an OVF package*](#creating-a-template-from-an-ovf-package)
 
-- By [creating a template from an existing vApp](#adding-an-existing-vapp)
+- [*Create a template from an existing vApp*](#adding-an-existing-vapp)
 
 ### Creating a template from an OVF package
 
@@ -96,7 +96,7 @@ To upload an OVF package and assign it to a catalog:
 
 4. Click **Next**.
 
-5. On the *Review details* page, confirm the details of the OVF template and then click **Next**.
+5. On the *Review Details* page, confirm the details of the OVF template and then click **Next**.
 
 6. On the *Select vApp Template Name* page, enter a **Name** and **Description** for the template.
 
@@ -120,17 +120,17 @@ To upload an OVF package and assign it to a catalog:
 
     You can add both running and stopped vApps to the catalog, although it's worth noting that creating a catalog image from a running vApp could affect performance.
 
-4. In the *Add to Catalog* dialog box, click the **Catalog** list, then select the catalog you want to add the vApp to.
+4. In the *Add to Catalog* dialog box, from the **Catalog** list, select the catalog you want to add the vApp to.
 
 5. Give the vApp template a **Name** and **Description** and define whether vApps deployed using this template are identical or customisable.
 
-    You can also overwrite an existing catalog item. If the catalog you are adding the vApp to is published externally, you'll see a warning.
+    You can also overwrite an existing catalog item. If the catalog you're adding the vApp to is published externally, you'll see a warning.
 
     ![Add to Catalog dialog box](images/vmw-vcd10.1-add-to-catalog.png)
 
 6. When you're done, click **OK**.
 
-    A status bar will appear on top with the message: **Please wait**. You can close the window and check the progress by expanding the *Recent Tasks* section at the bottom of the VMware Cloud Director interface.
+   You can check the progress by expanding the *Recent Tasks* section at the bottom of the VMware Cloud Director interface.
 
 ## Feedback
 
