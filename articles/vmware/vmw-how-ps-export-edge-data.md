@@ -68,7 +68,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
 3. Enter the following command to import the function:
 
-   `Import-Module [PATH TO PSM1 FILE]`
+   `Import-Module <path-to-psm1-file>`
     
 4. Connect to VMware Cloud Director using the following commands, swapping the `<user-name>` and `<org-id>` with your credentials and the `<api-url>` with your region details (which is the API URL without the `http://` part):
    
@@ -108,7 +108,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
    You can drill down further into the object's properties to retrieve more details. For example, using `$Config.firewall[0].source`, you can examine the source of the first retrieved firewall rule.
 
-9. Data such as source addresses is presented as objects in objects, so if you want to export the data to a CSV, we recommend first using code like that shown below to extract these values and present them at the top level.
+9. Data such as source addresses is presented as objects in objects, so if you want to export the data to a CSV, we recommend first using code like that shown below to extract these values and present them at the top level. You could add these functions to your previously created `.psm1` file and import them as before.
 
    ```none
    function Get-FirewallDetails ($config)
