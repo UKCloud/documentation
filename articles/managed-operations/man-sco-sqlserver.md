@@ -57,8 +57,8 @@ The following tables outline the boundaries of responsibilities for the Managed 
 
 ### Pre-life
 
-Element                                                 | UKCloud Support | Customer | UKC Professional Services
---------------------------------------------------------|-----------------|----------|--------------------------
+Element                                                 | UKCloud Support | Customer | UKCloud Professional Services
+--------------------------------------------------------|-----------------|----------|------------------------------
 Design                                                  | N               | Y        | £
 Deploy                                                  | N               | Y        | £
 Post Deployment Config                                  | N               | Y        | £
@@ -95,9 +95,9 @@ Weekly maintenance plans pass/fail  | Y               | N        | N
 Element                                 | UKCloud Support | Customer | UKCloud Professional Services | Notes
 ----------------------------------------|-----------------|----------|-------------------------------|------
 VM OS (y & z stream/in-version patches) | Y               | N        | N                             |
-VM OS Major Version Upgrades            | N               | Y        | £                             | Customer will need to liaise with UKC if they intend to perform major upgrade
+VM OS major version upgrades            | N               | Y        | £                             | Customer will need to liaise with UKCloud if they intend to perform major upgrade
 SQL (y & z stream/in-version patches)   | Y               | N        | N                             | Within 60 days of public release by the vendor, UKCloud will advise the customer of recommended SQL patches to be applied
-SQL major version upgrades              | N               | Y        | £                             | Customer will need to liaise with UKC if they intend to perform major upgrade
+SQL major version upgrades              | N               | Y        | £                             | Customer will need to liaise with UKCloud if they intend to perform major upgrade
 Client connectors                       | N               | Y        | £                             |
 
 ### In-life - Data protection and housekeeping
@@ -131,22 +131,22 @@ Quarterly SQL Server performance reviews                           | Y          
 
 ### In-life - Troubleshooting and remediation
 
-Element                                                                          | UKCloud Support | Customer | UKC Professional Services | Notes
----------------------------------------------------------------------------------|-----------------|----------|---------------------------|------
-Replication                                                                      | N               | Y        | £                         |
-Issues with Always-On availability groups                                        | Y               | N        | N                         |
-Ad-hoc performance issues (identification)                                       | Basic - Y       | N        | N                         |
-Ad-hok performance issues (remediation)                                          | Basic - Y       | Y        | £                         |
-SQL Server services issues (e.g. services fail to start, services keep stopping) | Y               | N        | N                         |
-Issue with IaaS/VM                                                               | Y               | N        | N                         |
-Expansion of virtual capacity                                                    | Y               | N        | N                         | In consultation with customer
-SQL Server errors (identification & triage)                                      | Y               | N        | N                         |
-SQL Server errors (remediation)                                                  | Basic -Y        | Y        | N                         |
-Customer data integrity and validation                                           | N               | Y        | £                         |
-Issues with queries/triggers/stored procedures                                   | N               | Y        | £                         |
-Remediate issues identified with integrity checks                                | Y               | N        | N                         |
-Remediate failures/errors in statistics updates                                  | Y               | N        | N                         |
-Remediate failures/errors in maintenance plans                                   | Y               | N        | N                         |
+Element                                                                          | UKCloud Support | Customer | UKCloud Professional Services | Notes
+---------------------------------------------------------------------------------|-----------------|----------|-------------------------------|------
+Replication                                                                      | N               | Y        | £                             |
+Issues with Always-On availability groups                                        | Y               | N        | N                             |
+Ad-hoc performance issues (identification)                                       | Basic - Y       | N        | N                             |
+Ad-hok performance issues (remediation)                                          | Basic - Y       | Y        | £                             |
+SQL Server services issues (e.g. services fail to start, services keep stopping) | Y               | N        | N                             |
+Issue with IaaS/VM                                                               | Y               | N        | N                             |
+Expansion of virtual capacity                                                    | Y               | N        | N                             | In consultation with customer
+SQL Server errors (identification & triage)                                      | Y               | N        | N                             |
+SQL Server errors (remediation)                                                  | Basic -Y        | Y        | N                             |
+Customer data integrity and validation                                           | N               | Y        | £                             |
+Issues with queries/triggers/stored procedures                                   | N               | Y        | £                             |
+Remediate issues identified with integrity checks                                | Y               | N        | N                             |
+Remediate failures/errors in statistics updates                                  | Y               | N        | N                             |
+Remediate failures/errors in maintenance plans                                   | Y               | N        | N                             |
 Work with 3rd parties to assist with the troubleshooting and support of applications hosted on the named SQL Server | Y | N | N | The support and troubleshooting service is limited to the diagnosis of issues relating to Microsoft SQL Server
 
 ## General support and troubleshooting
