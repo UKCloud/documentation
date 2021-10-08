@@ -1,6 +1,6 @@
 ---
 title: How to export edge gateway configuration data using PowerShell
-description: This article describes how to use PowerCLI to extract Edge Gateway configuration data
+description: This article describes how to use PowerCLI to extract edge gateway configuration data
 services: vmware
 author: shall
 reviewer: acirel
@@ -25,7 +25,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
 1. Install PowerCLI from VMware:
 
-    <https://code.vmware.com/web/tool/12.0.0/vmware-powercli>
+   <https://code.vmware.com/web/tool/12.0.0/vmware-powercli>
 
 2. Copy the following function and paste it into a `.psm1` file:
 
@@ -66,11 +66,11 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
    }
    ```
 
-3. Enter the following command to import the function.
+3. Enter the following command to import the function:
 
    `Import-Module [PATH TO PSM1 FILE]`
     
-4. Connect to VMware Cloud Director using the following commands, swapping the <user-name> and <org-id> with your credentials and the <api-url> with your region details (which is the API URL without the `http://` part):
+4. Connect to VMware Cloud Director using the following commands, swapping the `<user-name>` and `<org-id>` with your credentials and the `<api-url>` with your region details (which is the API URL without the `http://` part):
    
    ```none
    $credential = Get-Credential -Message "Enter your Cloud Director password?" -UserName <user-name>
@@ -81,7 +81,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
    > [!TIP]
    > You can find your credentials and region information in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [*Finding your Cloud Director API credentials*](vmw-how-access-vcloud-api.md#finding-your-cloud-director-api-credentials).
    >
-   > Make sure to use the Username rather than the API Username.
+   > Make sure to use the **Username** rather than the **API Username**.
    > 
    > ![API credentials](images/vmw-ps-export-edge-data-api-creds.png)
     
