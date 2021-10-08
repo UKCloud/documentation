@@ -96,8 +96,8 @@ Element                                 | UKCloud Support | Customer | UKCloud P
 ----------------------------------------|-----------------|----------|-------------------------------|------
 VM OS (y & z stream/in-version patches) | Y               | N        | N                             |
 VM OS Major Version Upgrades            | N               | Y        | £                             | Customer will need to liaise with UKC if they intend to perform major upgrade
-SQL (y & z stream/in-version patches)   | Y               | N        | N                             |
-SQL major version upgrades              | N               | Y        | £                             | Customer will need to laisse with UKC if they intend to perform major upgrade
+SQL (y & z stream/in-version patches)   | Y               | N        | N                             | Within 60 days of public release by the vendor, UKCloud will advise the customer of recommended SQL patches to be applied
+SQL major version upgrades              | N               | Y        | £                             | Customer will need to liaise with UKC if they intend to perform major upgrade
 Client connectors                       | N               | Y        | £                             |
 
 ### In-life - Data protection and housekeeping
