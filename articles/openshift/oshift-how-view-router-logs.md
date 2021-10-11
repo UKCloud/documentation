@@ -2,8 +2,8 @@
 title: How to view your OpenShift router logs
 description: Explains how to view the logs on the OpenShift routers
 services: openshift
-author: Gareth Ellner
-reviewer: Alex Lillistone
+author: gellner
+reviewer: alillistone
 lastreviewed: 11/10/2021
 
 toc_rootlink: How To
