@@ -78,7 +78,7 @@ Enter details below to provide values for the variables in the scripts in this a
 > [!IMPORTANT]
 > Azure AD Graph has been on a deprecation path since June 30, 2020, and will be retired on June 30, 2022. After June 30, 2022, apps will no longer receive responses from the Azure AD Graph endpoint `https://graph.windows.net/`.
 >
-> As of October 2021, the Az PowerShell module is still using the deprecated Azure AD Graph API for cmdlets targeting Azure Active Directory (e.g. Get-AzAdApplication). However, Microsoft [have stated that they will update the module](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/automate-and-manage-azure-ad-tasks-at-scale-with-the-microsoft/bc-p/2436184/highlight/true#M3513) to use the newer and supported 'Microsoft Graph' API.
+> As of October 2021, the Az PowerShell module is still using the deprecated Azure AD Graph API for cmdlets targeting Azure Active Directory (e.g. Get-AzAdApplication). However, Microsoft [has stated that they will update the module](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/automate-and-manage-azure-ad-tasks-at-scale-with-the-microsoft/bc-p/2436184/highlight/true#M3513) to use the newer and supported 'Microsoft Graph' API.
 
 ## [Public Azure and Azure Stack Hub SPN](#tab/tabid-1)
 
