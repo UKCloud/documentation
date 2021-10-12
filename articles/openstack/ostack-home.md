@@ -179,8 +179,7 @@ toc_mdlink: ostack-home.md
       <li><p><a href="../openshift/oshift-sd.md">UKCloud for Red Hat OpenShift</a></p></li>
       <li><p><a href="../cloud-storage/cs-sd.md">Cloud Storage</a></p></li>
       <li><p><a href="../connectivity/conn-faq.md">Connectivity options</a></p></li>
-      <li><p><a href="../managed-services/man-sd-managed-it-ops.md">Managed IT Operations</a></p></li>
-      <li><p><a href="vmw-sd-vls.md">VMware Licence Service (VLS)</a></p></li>
+      <li><p><a href="../managed-operations/man-sd-managed-it-ops.md">Managed IT Operations</a></p></li>
     </ul>
   </div>
 </div>
@@ -193,6 +192,30 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-4">
+    <p><strong>The right cloud for every platform.</strong> Our unique, multi-cloud offering allows public sector organisations to modernise legacy workloads across the board. Rehost traditional systems with UKCloud for VMware, or explore new and emerging technologies with OpenShift. No matter your digital maturity, we can help you build a cloud specific to your needs.</p>
+  </div>
+  <div class="col-md-4">
+    <p><strong>An award-winning customer experience.</strong> The customer sits at the heart of everything we do. Whether that's through our 24/7 support function. A service we provide at no extra charge. Or by giving every single one of our customers a dedicated Service Delivery Manager – regardless of workload size.</p>
+  </div>
+  <div class="col-md-4">
+    <p><strong>Dedicated to the public sector.</strong> From our unique assurance and connectivity options to the people we employ &ndash; everything we do comes back to our mission to help public sector organisations deliver better digital services at a lower cost.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <p><strong>Uncompromising security and integrity.</strong> Our UK-based data centres help protect your organisation from regulations such as GDPR, whilst our unique assurance and connectivity options enable you to move your most secure and sensitive systems to the cloud. Our government-grade data centres are all manned and protected by a team of security-cleared staff.</p>
+  </div>
+  <div class="col-md-4">
+    <p><strong>Champions of innovation.</strong> Why build when you can buy? We've partnered with over 300 specialist organisations who have built their pioneering digital services on top of our government-grade infrastructure. From AI to RPA, our partner ecosystem has you covered.</p>
+  </div>
+  <div class="col-md-4">
+    <p><strong>Committed to doing the right thing.</strong> From paying our taxes to undergraduate and apprentice programmes. From Carbon Neutral solutions to charity work. Everything we do can be traced back to our commitment to doing the right thing.</p>
+  </div>
+</div>
+
 <!-- Feedback -->
 
 <div class="row">
@@ -201,43 +224,8 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
-
-
-## Useful videos
-
 <div class="row">
-  <div class="col-md-6">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/XcQYz--CNiM" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/watch?v=XcQYz--CNiM">OpenStack Horizon Dashboard Overview</a></p>
-  </div>
-  <div class="col-md-6">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/c471rZ2euHQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>  
-    <p><a href="https://www.youtube.com/watch?v=c471rZ2euHQ">OpenStack Self-Service Backup and Restoration (TrilioVault)</a></p>
+  <div class="col-md-12">
+    <p>We want to know what you think. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
   </div>
 </div>
-
-## Other resources
-
-<div class="row">
-  <div class="col-md-4"><ul><li><p><a href="ostack-sd.md">Service Definition</a></p></li></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a></p></li></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</a></p></li></ul></div>
-</div>
-
-<div class="row">
-  <div class="col-md-4"><ul><li><p><a href="ostack-sco.md">Service Scope</a></p></li></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></li></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</a></p></li></ul></div>
-</div>
-
-## Still have questions?
-
-Find answers to common questions in our [UKCloud for OpenStack FAQ](ostack-faq.md).
-
-## Get in touch
-
-We want to know what you think. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
