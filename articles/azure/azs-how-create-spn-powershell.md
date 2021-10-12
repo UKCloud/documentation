@@ -76,9 +76,9 @@ Enter details below to provide values for the variables in the scripts in this a
 ## Create a service principal name
 
 > [!IMPORTANT]
-> Azure AD Graph has been on a deprecation path since June 30, 2020, and will be retired on June 30, 2022. After June 30, 2022, apps will no longer receive responses from the Azure AD Graph endpoint `https://graph.windows.net/`.
+> Azure AD Graph has been on a deprecation path since 30th June 2020, and will be retired on 30th June 2022. After 30th June 2022, applications will no longer receive responses from the Azure AD Graph endpoint `https://graph.windows.net/`.
 >
-> As of October 2021, the Az PowerShell module is still using the deprecated Azure AD Graph API for cmdlets targeting Azure Active Directory (e.g. Get-AzAdApplication). However, Microsoft [has stated that they will update the module](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/automate-and-manage-azure-ad-tasks-at-scale-with-the-microsoft/bc-p/2436184/highlight/true#M3513) to use the newer and supported 'Microsoft Graph' API.
+> As of October 2021, the Az PowerShell module is still using the deprecated Azure AD Graph API for cmdlets targeting Azure Active Directory (for example, Get-AzAdApplication). However, Microsoft [has stated that they will update the module](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/automate-and-manage-azure-ad-tasks-at-scale-with-the-microsoft/bc-p/2436184/highlight/true#M3513) to use the newer and supported Microsoft Graph API.
 
 ## [Public Azure and Azure Stack Hub SPN](#tab/tabid-1)
 
@@ -168,7 +168,7 @@ catch {
     break
 }
 
-# Get 'Microsoft Graph' SPN
+# Get Microsoft Graph SPN
 $GraphSPN = Get-MgServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'"
 # Get all available Application permissions (Role) for Microsoft Graph
 $AllApplicationPermissions = $GraphSPN.AppRoles
@@ -200,15 +200,15 @@ $RequiredDelegatedPermissionNames = @(
 )
 $RequiredDelegatedPermissions = $AllDelegatedPermissions | Where-Object -FilterScript { $_.Value -in $RequiredDelegatedPermissionNames }
 
-# Create a RequiredResourceAccess object containing the required Application and Delegated permissions
+# Create a RequiredResourceAccess object containing the required application and delegated permissions
 $RequiredPermissions = New-Object -TypeName "Microsoft.Graph.PowerShell.Models.MicrosoftGraphRequiredResourceAccess"
 $RequiredPermissions.ResourceAppId = $GraphSPN.AppId
-# Create Application permission objects (Role)
+# Create application permission objects (Role)
 foreach ($RequiredApplicationPermission in $RequiredApplicationPermissions) {
     $NewApplicationPermission = New-Object -TypeName "Microsoft.Graph.PowerShell.Models.MicrosoftGraphResourceAccess" -Property @{ Id = $RequiredApplicationPermission.Id; Type = "Role" }
     $RequiredPermissions.ResourceAccess += $NewApplicationPermission
 }
-# Create Delegated permission objects (Scope)
+# Create delegated permission objects (Scope)
 foreach ($RequiredDelegatedPermission in $RequiredDelegatedPermissions) {
     $NewDelegatedPermission = New-Object -TypeName "Microsoft.Graph.PowerShell.Models.MicrosoftGraphResourceAccess" -Property @{ Id = $RequiredDelegatedPermission.Id; Type = "Scope" }
     $RequiredPermissions.ResourceAccess += $NewDelegatedPermission
