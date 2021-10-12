@@ -3,8 +3,8 @@ title: Bring Your Own Firewall - Known working and non-working firewalls
 description: This guide provides information about firewall technology that is known to work or not work on the UKCloud platform.
 services: vmware
 author: shighmoor
-reviewer: 
-lastreviewed: 19/07/2018
+reviewer: thallsmith
+lastreviewed: 19/08/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -31,15 +31,13 @@ The following firewall technology has been successfully deployed and configured 
 
 ### pfSense firewalls
 
-- pfSense v2.2.4 i386
-
-- pfSense v2.3.1 i386
-
-- pfSense v2.3.1 amd64
+- pfSense-CE-2.5.2 AMD64
 
 ### Palo Alto firewalls
 
 - Palo Alto VM300 running PanOS 7.01
+
+### Cisco firewalls/routers
 
 - Cisco Cloud Services Router 1000v (Cisco CSR1000v)
 
