@@ -11443,17 +11443,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/other/images/other-unite-quiz.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/other-unite-quiz.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/other/images/pricing-bug-mac-1.png",
       "output": {
         "resource": {
@@ -12190,18 +12179,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-unite-quiz.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-unite-quiz.html",
-          "hash": "X2kEUBwLsvW3GescSzfak8E/xz1nU4AnrD61yLQpCfE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-sco-free-trials.md",
       "output": {
         ".html": {
@@ -12242,7 +12219,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "P4d1KKszio5vGkS+AONeXCKm/1c53pDQI0lfgOzxmXU="
+          "hash": "uIA+juMglWDWEJq+RnqW2EbhqyMg/aC7fYuGK14YgTY="
         }
       },
       "is_incremental": false,
@@ -23268,7 +23245,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "mHQQhCr7ca7N6GyiYA00ToyMbQI+0r5nwvmZVOs6P6E="
+          "hash": "K44TbJML1fDVdETHoiJBpM2RWNHwy1qU2When2Tu3KA="
         }
       },
       "is_incremental": false,
@@ -23312,7 +23289,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 467,
+          "total_file_count": 466,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
