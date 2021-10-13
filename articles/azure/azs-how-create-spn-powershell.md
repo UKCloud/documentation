@@ -2,9 +2,9 @@
 title: How to create an SPN for Azure Stack Hub using PowerShell
 description: Learn how to create a service principal name (SPN) to manage your Azure Stack Hub using PowerShell
 services: azure-stack
-author: Chris Black
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+author: cblack
+reviewer: wturner
+lastreviewed: 05/10/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -40,14 +40,14 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 Prerequisites from a Windows-based external client are:
 
-- PowerShell 5.1, AzureStack and Azure AD PowerShell Modules
+- PowerShell 5.1, AzureStack and Microsoft Graph PowerShell Modules
 
   - [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md)
 
-  - Azure AD PowerShell Module:
+  - Microsoft Graph PowerShell Module:
 
     ```powershell
-    Install-Module -Name AzureAD -Force -Verbose
+    Install-Module -Name Microsoft.Graph -Force -Verbose
     ```
 
 - Azure Active Directory
@@ -74,6 +74,11 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzureStackRole           | Role to assign SPN in Azure Stack Hub                             | <form oninput="result.value=azurestackrole.value;result2.value=azurestackrole.value" id="azurestackrole" style="display: inline;"><input type="text" id="azurestackrole" name="azurestackrole" style="display: inline;" placeholder="Owner"/></form> |
 
 ## Create a service principal name
+
+> [!IMPORTANT]
+> Azure AD Graph has been on a deprecation path since 30th June 2020, and will be retired on 30th June 2022. After 30th June 2022, applications will no longer receive responses from the Azure AD Graph endpoint `https://graph.windows.net/`.
+>
+> As of October 2021, the Az PowerShell module is still using the deprecated Azure AD Graph API for cmdlets targeting Azure Active Directory (for example, Get-AzAdApplication). However, Microsoft [has stated that they will update the module](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/automate-and-manage-azure-ad-tasks-at-scale-with-the-microsoft/bc-p/2436184/highlight/true#M3513) to use the newer and supported Microsoft Graph API.
 
 ## [Public Azure and Azure Stack Hub SPN](#tab/tabid-1)
 
@@ -133,7 +138,7 @@ $PublicAzureAdminPassword = ConvertTo-SecureString -String '<output form="azurep
 $PublicAzureAdminCreds = New-Object -TypeName "System.Management.Automation.PSCredential" -ArgumentList $PublicAzureAdminUsername, $PublicAzureAdminPassword
 
 # Log in to your public Azure subscription and Azure AD you will be creating your SPN in
-Connect-AzureAD -Credential $PublicAzureAdminCreds -TenantId $TenantDomain
+Connect-MgGraph -TenantId $TenantDomain -Scopes "Directory.AccessAsUser.All"
 Connect-AzAccount -Credential $PublicAzureAdminCreds
 
 # List subscriptions
@@ -163,30 +168,61 @@ catch {
     break
 }
 
-# Grant permission to Azure Active Directory to SPN
-$Required = New-Object -TypeName "Microsoft.Open.AzureAD.Model.RequiredResourceAccess"
-$Required.ResourceAppId = "00000002-0000-0000-c000-000000000000"
-$Acc1 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "5778995a-e1bf-45b8-affa-663a9f3f4d04", "Role"
-$Acc2 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "abefe9df-d5a9-41c6-a60b-27b38eac3efb", "Role"
-$Acc3 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "78c8a3c8-a07e-4b9e-af1b-b5ccab50a175", "Role"
-$Acc4 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "1138cb37-bd11-4084-a2b7-9f71582aeddb", "Role"
-$Acc5 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "9728c0c4-a06b-4e0e-8d1b-3d694e8ec207", "Role"
-$Acc6 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "824c81eb-e3f8-4ee6-8f6d-de7f50d565b7", "Role"
-$Acc7 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "1cda74f2-2616-4834-b122-5cb1b07f8a59", "Role"
-$Acc8 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "aaff0dfd-0295-48b6-a5cc-9f465bc87928", "Role"
-$Acc9 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "a42657d6-7f20-40e3-b6f0-cee03008a62a", "Scope"
-$Acc10 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "5778995a-e1bf-45b8-affa-663a9f3f4d04", "Scope"
-$Acc11 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "78c8a3c8-a07e-4b9e-af1b-b5ccab50a175", "Scope"
-$Acc12 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "970d6fa6-214a-4a9b-8513-08fad511e2fd", "Scope"
-$Acc13 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "6234d376-f627-4f0f-90e0-dff25c5211a3", "Scope"
-$Acc14 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "c582532d-9d9e-43bd-a97c-2667a28ce295", "Scope"
-$Acc15 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "cba73afc-7f69-4d86-8450-4978e04ecd1a", "Scope"
-$Acc16 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "311a71cc-e848-46a1-bdf8-97ff7156d8e6", "Scope"
-$Acc17 = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList "2d05a661-f651-4d57-a595-489c91eda336", "Scope"
-$Required.ResourceAccess = $Acc1, $Acc2, $Acc3, $Acc4, $Acc5, $Acc6, $Acc7, $Acc8, $Acc9, $Acc10, $Acc11, $Acc12, $Acc13, $Acc14, $Acc15, $Acc16, $Acc17
+# Get Microsoft Graph SPN
+$GraphSPN = Get-MgServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'"
+# Get all available Application permissions (Role) for Microsoft Graph
+$AllApplicationPermissions = $GraphSPN.AppRoles
+# Get all available Delegated permissions (Scope) for Microsoft Graph
+$AllDelegatedPermissions = $GraphSPN.Oauth2PermissionScopes
 
-Set-AzADApplication -ObjectId $AppGet.ObjectId -RequiredResourceAccess $Required | Out-Null
-Get-AzADApplication -ObjectId $AppGet.ObjectId | Select-Object -Property *
+# Filter down to the required permissions
+$RequiredApplicationPermissionNames = @(
+    "Member.Read.Hidden",
+    "Application.ReadWrite.OwnedBy",
+    "Application.ReadWrite.All",
+    "Domain.ReadWrite.All",
+    "Directory.Read.All",
+    "Directory.ReadWrite.All",
+    "Device.ReadWrite.All"
+)
+$RequiredApplicationPermissions = $AllApplicationPermissions | Where-Object -FilterScript { $_.Value -in $RequiredApplicationPermissionNames }
+
+$RequiredDelegatedPermissionNames = @(
+    "User.Read",
+    "User.ReadBasic.All",
+    "User.Read.All",
+    "Group.Read.All",
+    "Group.ReadWrite.All",
+    "Directory.Read.All",
+    "Directory.ReadWrite.All",
+    "Directory.AccessAsUser.All",
+    "Member.Read.Hidden"
+)
+$RequiredDelegatedPermissions = $AllDelegatedPermissions | Where-Object -FilterScript { $_.Value -in $RequiredDelegatedPermissionNames }
+
+# Create a RequiredResourceAccess object containing the required application and delegated permissions
+$RequiredPermissions = New-Object -TypeName "Microsoft.Graph.PowerShell.Models.MicrosoftGraphRequiredResourceAccess"
+$RequiredPermissions.ResourceAppId = $GraphSPN.AppId
+# Create application permission objects (Role)
+foreach ($RequiredApplicationPermission in $RequiredApplicationPermissions) {
+    $NewApplicationPermission = New-Object -TypeName "Microsoft.Graph.PowerShell.Models.MicrosoftGraphResourceAccess" -Property @{ Id = $RequiredApplicationPermission.Id; Type = "Role" }
+    $RequiredPermissions.ResourceAccess += $NewApplicationPermission
+}
+# Create delegated permission objects (Scope)
+foreach ($RequiredDelegatedPermission in $RequiredDelegatedPermissions) {
+    $NewDelegatedPermission = New-Object -TypeName "Microsoft.Graph.PowerShell.Models.MicrosoftGraphResourceAccess" -Property @{ Id = $RequiredDelegatedPermission.Id; Type = "Scope" }
+    $RequiredPermissions.ResourceAccess += $NewDelegatedPermission
+}
+$RequiredPermissions.ResourceAccess
+
+# Add the permissions to the application
+Update-MgApplication -ApplicationId $AppGet.ObjectId.Guid -RequiredResourceAccess $RequiredPermissions
+
+# Grant admin consent for the new permissions
+# The error "no reply URLs configured" can be safely ignored, the consent will have worked, this simply means that you have no redirect URIs configured for your app registration
+Start-Process -FilePath "https://login.microsoftonline.com/common/adminconsent?client_id=$($AppGet.ApplicationId)"
+
+Get-MgApplication -ApplicationId $AppGet.ObjectId | Select-Object -Property *
 
 # Create your SPN credentials login
 # Note: Username is "ApplicationId"
@@ -295,8 +331,7 @@ $AzureStackUsernameAdmin = "<output form="azsusername" name="result2" style="dis
 $AzureStackUserPasswordAdmin = ConvertTo-SecureString -String '<output form="azspassword" name="result2" style="display: inline;">Password123!</output>' -AsPlainText -Force
 $AzureStackCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureStackUsernameAdmin, $AzureStackUserPasswordAdmin
 
-# Login to Azure Stack Hub as admin (Subscription Owner) and Azure AD
-Connect-AzureAD -Credential $AzureStackCredAdmin -TenantId $TenantDomain
+# Login to Azure Stack Hub as admin (Subscription Owner)
 Connect-AzAccount -EnvironmentName "AzureStackUser" -Credential $AzureStackCredAdmin
 
 # List subscriptions
