@@ -2,16 +2,16 @@
 title: Self Service Backup and Restoration (TrilioVault) Service Scope
 description: Outlines important details regarding Self Service Backup and Restoration (TrilioVault) for UKCloud for OpenStack
 services: openstack
-author: Steve Dixon
-reviewer: Darren Butts
+author: sdixon
+reviewer: dbutts
 lastreviewed: 08/01/2021
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Self Service Backup and Restoration (TrilioVault) Service Scope
-toc_fullpath: Service Scope/ostack-sco-triliovault.md
+toc_fullpath: Service Information/ostack-sco-triliovault.md
 toc_mdlink: ostack-sco-triliovault.md
 ---
 
