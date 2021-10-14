@@ -93,6 +93,8 @@ UKCloud only supports in-life, vendor-backed operating systems, such as Microsof
 
 ### Customer environment configuration
 
+If you've opted for taking snapshots of your virtual machines prior to patching, then the environment must be hosted in VMware and the name of the virtual machine(s) in Cloud Director must match the hostname in the OS.
+
 #### Linux
 
 To provide secure communication between UKCloud's centralised patch management platform and your virtual machine, we use key-based SSH sessions, reducing the need to share credentials. As such, you'll need to fulfil the following prerequisites on each virtual machine subscribing to this service:
