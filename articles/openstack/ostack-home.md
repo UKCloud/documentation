@@ -27,8 +27,10 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-8"> 
+    <!-- brief introduction -->
     <p>UKCloud for OpenStack provides you with all the tools you need to modernise legacy workloads and kick-start your journey to cloud-native. By hosting your applications on our government-grade platform, you can start to deliver a true cloud-native experience for your most secure and sensitive systems. Enjoy the benefits of elastic infrastructure as code and rapid deployment times with UKCloud for OpenStack.</p>
-    <p>Which propositions do we want link OpenStack to?</p>
+    <!-- the big picture - propositions -->
+    <p>UKCloud for OpenStack takes your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>Data Centre Modernisation</strong></a> to the next level, where you can start to create truly cloud-native applications that harness all the benefits of cloud.</p>
   </div>
   <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
