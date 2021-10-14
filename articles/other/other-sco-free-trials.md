@@ -5,13 +5,13 @@ services: other
 author: shall
 reviewer: jwalmsley
 lastreviewed: 14/09/2021
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Free trials Service Scope
-toc_fullpath: Service Scope/other-sco-free-trials.md
+toc_fullpath: Service Information/other-sco-free-trials.md
 toc_mdlink: other-sco-free-trials.md
 ---
 

@@ -3,16 +3,16 @@ title: Cross Domain Security Zone Service Scope
 description: Outlines important details regarding UKCloud's Cross Domain Security Zone (CDSZ)
 services: cdsz
 author: bchallis
-reviewer: 
+reviewer: bchallis
 lastreviewed: 30/08/2019
 
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Cross Domain Security Zone Service Scope
-toc_fullpath: Service Scope/cdsz-sco.md
+toc_title: Service Scope
+toc_fullpath: Service Information/cdsz-sco.md
 toc_mdlink: cdsz-sco.md
 ---
 

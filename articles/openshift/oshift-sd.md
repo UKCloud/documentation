@@ -10,7 +10,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Red Hat OpenShift Service Definition
+toc_title: Service Definition
 toc_fullpath: Service Information/oshift-sd.md
 toc_mdlink: oshift-sd.md
 ---

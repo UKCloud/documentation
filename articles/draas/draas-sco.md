@@ -5,13 +5,13 @@ services: draas
 author: shall
 reviewer: acirel
 lastreviewed: 27/05/2021
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Disaster Recovery as a Service Service Scope
-toc_fullpath: Service Scope/draas-sco.md
+toc_title: Service Scope
+toc_fullpath: Service Information/draas-sco.md
 toc_mdlink: draas-sco.md
 ---
 
