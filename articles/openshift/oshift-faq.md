@@ -63,7 +63,7 @@ The service supports many popular development frameworks and languages such as:
 
 - GoLang
 
-For the full list please visit https://access.redhat.com/articles/2176281?hsLang=en-us & https://access.redhat.com/articles/4763741
+For the full list, see https://access.redhat.com/articles/2176281?hsLang=en-us and https://access.redhat.com/articles/4763741.
 
 ### Does UKCloud for Red Hat OpenShift support any data services?
 
