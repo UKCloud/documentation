@@ -4,7 +4,7 @@ description: Home page for UKCloud for OpenStack
 services: openstack
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 12/10/2021
+lastreviewed: 14/10/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -70,13 +70,63 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-4">
-    <p><strong>Working with volumes</strong></p>
+    <p><strong>Working with instances</strong></p>
   </div>
   <div class="col-md-4">
     <p><strong>Working with networks</strong></p>
   </div>
   <div class="col-md-4">
+    <p><strong>Automation and orchestration</strong></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <p style="text-indent:15px"><a href="ostack-how-static-ip.md">Create static IPs for OpenStack instances</a></p>
+    <p style="text-indent:15px"><a href="ostack-how-recover-instance.md">Manage how your instance recovers from a host failure</a></p>
+    <p style="text-indent:15px"><a href="ostack-how-cloud-config.md">Configure an instance using cloud-config</a></p>
+    <p style="text-indent:15px"><a href="ostack-how-convert-vms.md">Convert virtual machines</a></p>
+    <p style="text-indent:15px"><a href="ostack-how-install-rhui.md">Install RHUI on an existing OpenStack instance</a></p>
+    <p style="text-indent:15px"><a href="ostack-how-use-instance-metadata.md">Use OpenStack instance metadata</a></p>
+    <p style="text-indent:15px"><a href="ostack-ref-public-image-versioning.md">OpenStack public image versioning</a></p>
+    <p style="text-indent:15px"><a href="ostack-ref-live-migration.md">Live migrations</a></p>
+  </div>
+  <div class="col-md-4">
+    <p style="text-indent:15px"><a href="ostack-how-configure-ipsec-vpn.md">Configure IPsec VPN in OpenStack</a></p>
+    <p style="text-indent:15px"><a href="ostack-how-use-octavia.md">Use Octavia Load Balancing as a Service</a></p>
+  </div>
+  <div class="col-md-4">
+    <p style="text-indent:15px"><a href="ostack-how-create-heat-template.md">Create and deploy a basic Heat template</a></p>
+    <p style="text-indent:15px"><a href="ostack-ref-cli-clients.md">Command-line clients for UKCloud for OpenStack</a></p>
+    <p style="text-indent:15px"><a href="ostack-ref-auto-scaling.md">Auto Scaling for UKCloud for OpenStack</a></p>
+    <p style="text-indent:15px"><a href="ostack-how-use-api-sso.md">Use the OpenStack API with an SSO user</a></p>
+    <p style="text-indent:15px"><a href="ostack-how-use-cli.md">Use the OpenStackClient on Microsoft operating systems</a></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
     <p><strong>Working with backups</strong></p>
+  </div>
+  <div class="col-md-4">
+    <p><strong>Security</strong></p>
+  </div>
+  <div class="col-md-4">
+    <p><strong>Workload migration</strong></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <p style="text-indent:15px"><a href="ostack-how-use-triliovault.md">Use TrilioVault for self-service backup</a></p>
+  </div>
+  <div class="col-md-4">
+    <p style="text-indent:15px"><a href="ostack-how-use-barbican.md">Use Barbican Key Management as a Service</a></p>
+  </div>
+  <div class="col-md-4">
+    <p style="text-indent:15px"><a href="ostack-how-move-resources.md">Move resources between OpenStack regions</a></p>
+    <p style="text-indent:15px"><a href="ostack-ref-migrations.md">OpenStack region migration tooling</a></p>
+    <p style="text-indent:15px"><a href="ostack-how-use-hystax.md">Migrate workloads on OpenStack using Hystax Acura</a></p>
   </div>
 </div>
 
@@ -129,17 +179,17 @@ toc_mdlink: ostack-home.md
 <div class="row">
   <div class="col-md-12">
     <p>The <a href="https://ukcloud.com/pricing-guide"><strong>UKCloud Pricing Guide</strong></a> lists all our product pricing. For examples of how pricing works for UKCloud for OpenStack, take a look at our <a href="ostack-ref-pricing.md"><strong>Pricing information</strong></a> article.</p>
-    <p>To buy UKCloud for OpenStack:</p>
+    <p><strong>To buy UKCloud for OpenStack:</strong></p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6">
-    <p><strong>If you're already a UKCloud customer</strong></p>
+    <p><em>If you're already a UKCloud customer</em></p>
     <p>Raise a Service Request, contact your Service Delivery Manager or email <a href="mailto:servicedelivery@ukcloud.com">servicedelivery@ukcloud.com</a></p>
   </div>
   <div class="col-md-6">
-    <p><strong>If you're a new UKCloud customer</strong></p>
+    <p><em>If you're a new UKCloud customer</em></p>
     <p><a href="https://ukcloud.com/contact/"><strong>Contact us</strong></a> via our website or call us on 01252 303 300</p>
   </div>
 </div>
@@ -169,20 +219,16 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-6">
-    <ul>
-      <li><p><a href="ostack-sco-triliovault.md">Self Service Backup and Restoration (TrilioVault)</a></p></li>
-      <li><p><a href="ostack-sco-hystax.md">Hystax Acura Workload Migration</a></p></li>
-      <li><p><a href="ostack-how-use-barbican.md">Key Management as a Service (Barbican)</a></p></li>
-      <li><p><a href="ostack-how-use-octavia.md">Load Balancing as a Service (Octavia)</a></p></li>
-    </ul>
+      <p style="text-indent:15px"><a href="ostack-sco-triliovault.md">Self Service Backup and Restoration (TrilioVault)</a></p>
+      <p style="text-indent:15px"><a href="ostack-sco-hystax.md">Hystax Acura Workload Migration</a></p>
+      <p style="text-indent:15px"><a href="ostack-how-use-barbican.md">Key Management as a Service (Barbican)</a></p>
+      <p style="text-indent:15px"><a href="ostack-how-use-octavia.md">Load Balancing as a Service (Octavia)</a></p>
   </div>
   <div class="col-md-6">
-    <ul>
-      <li><p><a href="../openshift/oshift-sd.md">UKCloud for Red Hat OpenShift</a></p></li>
-      <li><p><a href="../cloud-storage/cs-sd.md">Cloud Storage</a></p></li>
-      <li><p><a href="../connectivity/conn-faq.md">Connectivity options</a></p></li>
-      <li><p><a href="../managed-operations/man-sd-managed-it-ops.md">Managed IT Operations</a></p></li>
-    </ul>
+      <p style="text-indent:15px"><a href="../openshift/oshift-sd.md">UKCloud for Red Hat OpenShift</a></p>
+      <p style="text-indent:15px"><a href="../cloud-storage/cs-sd.md">Cloud Storage</a></p>
+      <p style="text-indent:15px"><a href="../connectivity/conn-faq.md">Connectivity options</a></p>
+      <p style="text-indent:15px"><a href="../managed-operations/man-sd-managed-it-ops.md">Managed IT Operations</a></p>
   </div>
 </div>
 
@@ -196,10 +242,10 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-4">
-    <p><strong>The right cloud for every platform.</strong> Our unique, multi-cloud offering allows public sector organisations to modernise legacy workloads across the board. Rehost traditional systems with UKCloud for VMware, or explore new and emerging technologies with OpenShift. No matter your digital maturity, we can help you build a cloud specific to your needs.</p>
+    <p><strong>The right cloud for every platform.</strong> Modernise legacy workloads across the board by rehosting traditional systems with UKCloud for VMware or exploring new and emerging technologies with OpenShift. We can help you build a cloud specific to your needs.</p>
   </div>
   <div class="col-md-4">
-    <p><strong>An award-winning customer experience.</strong> The customer sits at the heart of everything we do. Whether that's through our 24/7 support function. A service we provide at no extra charge. Or by giving every single one of our customers a dedicated Service Delivery Manager – regardless of workload size.</p>
+    <p><strong>An award-winning customer experience.</strong> The customer sits at the heart of everything we do. Whether that's through our 24/7 support function – a service we provide at no extra charge – or by giving every single one of our customers a dedicated Service Delivery Manager.</p>
   </div>
   <div class="col-md-4">
     <p><strong>Dedicated to the public sector.</strong> From our unique assurance and connectivity options to the people we employ &ndash; everything we do comes back to our mission to help public sector organisations deliver better digital services at a lower cost.</p>
@@ -208,10 +254,10 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-4">
-    <p><strong>Uncompromising security and integrity.</strong> Our UK-based data centres help protect your organisation from regulations such as GDPR, whilst our unique assurance and connectivity options enable you to move your most secure and sensitive systems to the cloud. Our government-grade data centres are all manned and protected by a team of security-cleared staff.</p>
+    <p><strong>Uncompromising security and integrity.</strong> Our UK-based data centres help protect your organisation from regulations such as GDPR, whilst our unique assurance and connectivity options enable you to move your most secure and sensitive systems to the cloud.</p>
   </div>
   <div class="col-md-4">
-    <p><strong>Champions of innovation.</strong> Why build when you can buy? We've partnered with over 300 specialist organisations who have built their pioneering digital services on top of our government-grade infrastructure. From AI to RPA, our partner ecosystem has you covered.</p>
+    <p><strong>Champions of innovation.</strong> We've partnered with over 300 specialist organisations who have built their pioneering digital services on top of our government-grade infrastructure. From AI to RPA, our partner ecosystem has you covered.</p>
   </div>
   <div class="col-md-4">
     <p><strong>Committed to doing the right thing.</strong> From paying our taxes to undergraduate and apprentice programmes. From Carbon Neutral solutions to charity work. Everything we do can be traced back to our commitment to doing the right thing.</p>
