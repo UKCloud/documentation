@@ -93,7 +93,7 @@ UKCloud only supports in-life, vendor-backed operating systems, such as Microsof
 
 ### Customer environment configuration
 
-If the customer has opted for taking snapshots of their virtual machines prior to patching, then the environment must be hosted in VMware and the name of the virtual machine(s) in Cloud Director must match the hostname in the OS.
+If you've opted for taking snapshots of your virtual machines prior to patching, then the environment must be hosted in VMware and the name of the virtual machine(s) in Cloud Director must match the hostname in the OS.
 
 #### Linux
 
