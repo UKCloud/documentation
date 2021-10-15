@@ -3,8 +3,8 @@ title: How to locate your virtual data centre on the UKCloud platform
 description: Describes how to use the Tenant Portal or vCloud API to find out where your VDC is located within the UKCloud platform
 services: vmware
 author: shall
-reviewer: shighmoor
-lastreviewed: 23/10/2020
+reviewer: jpaddock
+lastreviewed: 12/10/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -29,14 +29,16 @@ Knowing where your VDCs are located can be useful for:
 
 - Providing additional information to help with support call resolution
 
-This article describes how to find out where your VDC is within the UKCloud platform. You can use the VMware Cloud Director tenant portal or the API.
+This article describes how to find out where your VDC is within the UKCloud platform. You can use the VMware Cloud Director Tenant Portal or the API.
 
 The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 > [!NOTE]
 > If you want to find the location of a specific VM within a VDC, you can use VM location. For more information, see [*How to use VM location*](vmw-how-use-vm-location.md).
 
-## Finding the location of a VDC
+## Finding the location of a VDC (Tenant Portal)
+
+You can view a VDC's metadata in the VMware Cloud Director Tenant Portal to find out where the VDC is located.
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that you want to locate.
 
@@ -52,11 +54,14 @@ The information provided by the VDC metadata is read-only. If you want to change
 
     - **provider-zone** - indicates the zone in which your VDC is located, for example **1(AF2)** or **B**
 
-    <!-- ![VDC location metadata](images/vmw-vcd10.1-vdc-location-metadata.png) -->
-
-4. When you're done, click **Cancel**.
+    ![VDC location metadata](images/vmw-vcd10.1-vdc-location-metadata.png)
 
 ### A note about Synchronous Protection
+
+> [!NOTE]
+> Synchronous Protection is no longer available as a protection option for UKCloud for VMware. UKCloud offers two alternative data protection solutions: [Jounaling Protection (Zerto)](vmw-sco-journaling-protection.md) and [Snapshot Protection](vmw-sco-snapshot-protection.md). Contact your Service Delivery Manager for more information.
+>
+> We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
 
 If you set up your VDC to use Synchronous Protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:
 
@@ -68,9 +73,9 @@ If you set up your VDC to use Synchronous Protection, then the VDC is stretched 
 
 - **provider-zone** - indicates that your VDC is stretched across multiple zones, for example **1(AE1) or 2(AE2)**
 
-## Finding the location of a VDC using the vCloud API
+## Finding the location of a VDC (Cloud Director API)
 
-You can also find the location of your VDC by calling the vCloud API. For more information about the vCloud API, see the [VMware Cloud Director API
+You can also find the location of your VDC by calling the Cloud Director API. For more information about the Cloud Director API, see the [VMware Cloud Director API
 ](https://code.vmware.com/apis/912/vmware-cloud-director).
 
 For example, to retrieve all the metadata for a specified VDC, call the `GET /vcd/<id>/metadata` endpoint.
