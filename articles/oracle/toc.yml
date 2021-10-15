@@ -38,9 +38,7 @@
     href: orcl-ref-pricing.md
   - name: Service Definition
     href: orcl-sd.md
-- name: Service Scope
-  items:
-  - name: UKCloud for Oracle Software Service Scope
+  - name: Service Scope
     href: orcl-sco.md
 - name: Videos
   items:

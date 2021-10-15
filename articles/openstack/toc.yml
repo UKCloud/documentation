@@ -68,16 +68,14 @@
     href: ostack-ref-migrations.md
 - name: Service Information
   items:
-  - name: Pricing information
-    href: ostack-ref-pricing.md
-  - name: Service Definition
-    href: ostack-sd.md
-- name: Service Scope
-  items:
   - name: Hystax Acura Workload Migration Service Scope
     href: ostack-sco-hystax.md
+  - name: Pricing information
+    href: ostack-ref-pricing.md
   - name: Self Service Backup and Restoration (TrilioVault) Service Scope
     href: ostack-sco-triliovault.md
+  - name: Service Definition
+    href: ostack-sd.md
   - name: UKCloud for OpenStack Service Scope
     href: ostack-sco.md
 - name: Videos

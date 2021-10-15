@@ -98,7 +98,7 @@
   items:
   - name: Pricing information
     href: oshift-ref-pricing.md
-  - name: UKCloud for Red Hat OpenShift Service Definition
+  - name: Service Definition
     href: oshift-sd.md
-  - name: UKCloud for Red Hat OpenShift Service Scope
+  - name: Service Scope
     href: oshift-sco.md

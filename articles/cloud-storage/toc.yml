@@ -30,9 +30,7 @@
     href: cs-ref-pricing.md
   - name: Service Definition
     href: cs-sd.md
-- name: Service Scope
-  items:
-  - name: Cloud Storage Service Scope
+  - name: Service Scope
     href: cs-sco.md
 - name: Videos
   items:

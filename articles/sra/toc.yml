@@ -16,7 +16,5 @@
     href: sra-ref-pricing.md
   - name: Service Definition
     href: sra-sd.md
-- name: Service Scope
-  items:
-  - name: Secure Remote Access Service Scope
+  - name: Service Scope
     href: sra-sco.md

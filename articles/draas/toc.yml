@@ -18,9 +18,7 @@
   items:
   - name: Service Definition
     href: draas-sd.md
-- name: Service Scope
-  items:
-  - name: Disaster Recovery as a Service Service Scope
+  - name: Service Scope
     href: draas-sco.md
 - name: Videos
   items:

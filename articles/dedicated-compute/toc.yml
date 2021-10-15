@@ -2,7 +2,5 @@
   items:
   - name: Service Definition
     href: dc-sd.md
-- name: Service Scope
-  items:
-  - name: Dedicated Compute v2 Service Scope
+  - name: Service Scope
     href: dc-sco.md

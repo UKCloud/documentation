@@ -22,7 +22,5 @@
     href: cdsz-ref-pricing.md
   - name: Service Definition
     href: cdsz-sd.md
-- name: Service Scope
-  items:
-  - name: Cross Domain Security Zone Service Scope
+  - name: Service Scope
     href: cdsz-sco.md

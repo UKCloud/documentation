@@ -10,7 +10,7 @@
     href: enbl-how-zerto-migrate-between-regions.md
   - name: Obtain full IPsec VPN configuration
     href: enbl-how-obtain-vpn-config.md
-- name: Service Scope
+- name: Service Information
   items:
   - name: Big Cloud Enablement Service Scope
     href: enbl-sco-bigcolo.md
