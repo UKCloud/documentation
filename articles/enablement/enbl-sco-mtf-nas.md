@@ -5,13 +5,13 @@ services: enablement
 author: shall
 reviewer: srelf
 lastreviewed: 21/05/2021
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Mass Transfer Facility Service Scope
-toc_fullpath: Service Scope/enbl-sco-mtf-nas.md
+toc_fullpath: Service Information/enbl-sco-mtf-nas.md
 toc_mdlink: enbl-sco-mtf-nas.md
 ---
 

@@ -5,13 +5,13 @@ services: enablement
 author: shall
 reviewer: 
 lastreviewed: 03/03/2021
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Data Transfer - Region to Region Service Scope
-toc_fullpath: Service Scope/enbl-sco-transfer-regions.md
+toc_fullpath: Service Information/enbl-sco-transfer-regions.md
 toc_mdlink: enbl-sco-transfer-regions.md
 ---
 

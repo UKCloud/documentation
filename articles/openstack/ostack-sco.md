@@ -2,16 +2,16 @@
 title: UKCloud for OpenStack Service Scope
 description: Outlines important details regarding Cloud Native Infrastructure
 services: openstack
-author: Steve Hall
-reviewer: Steven Relf
+author: shall
+reviewer: srelf
 lastreviewed: 08/12/2020
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: UKCloud for OpenStack Service Scope
-toc_fullpath: Service Scope/ostack-sco.md
+toc_fullpath: Service Information/ostack-sco.md
 toc_mdlink: ostack-sco.md
 ---
 

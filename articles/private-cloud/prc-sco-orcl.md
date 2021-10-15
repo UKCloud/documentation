@@ -3,16 +3,16 @@ title: Private Cloud for Oracle Software Service Scope
 description: Outlines important details regarding Private Cloud for Oracle Software
 services: private-cloud
 author: shighmoor
-reviewer:
+reviewer: shighmoor
 lastreviewed: 02/07/2019
 
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Private Cloud for Oracle Software Service Scope
-toc_fullpath: Service Scope/prc-sco-orcl.md
+toc_fullpath: Service Information/prc-sco-orcl.md
 toc_mdlink: prc-sco-orcl.md
 ---
 

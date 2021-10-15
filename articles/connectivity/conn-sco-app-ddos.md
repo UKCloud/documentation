@@ -2,16 +2,16 @@
 title: Neustar DDoS Protection from UKCloud Service Scope
 description: Outlines important details regarding the Neustar DDoS Protection from UKCloud (previously SiteProtect Advanced DDoS Mitigation) service
 services: connectivity
-author: Steve Hall
+author: shall
 reviewer: hbrunt
 lastreviewed: 16/12/2019
-toc_rootlink: Service Scope
+toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Neustar DDoS Protection from UKCloud Service Scope
-toc_fullpath: Service Scope/conn-sco-app-ddos.md
+toc_fullpath: Service Information/conn-sco-app-ddos.md
 toc_mdlink: conn-sco-app-ddos.md
 ---
 
