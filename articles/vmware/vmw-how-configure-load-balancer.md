@@ -4,7 +4,7 @@ description: Shows how to configure a load balancer within the VMware Cloud Dire
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/09/2020
+lastreviewed: 15/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -42,9 +42,9 @@ To configure a load balancer:
 
     ![Load Balancer tab](images/vmw-vcd10.1-edge-tab-load-balancer.png)
 
-5. Select the **Global Configuration** tab, then select the **Status** option.
+5. On the **Global Configuration**, select the **Enabled** status option.
 
-6. Select the **Acceleration Enabled** option if you want to use the Layer 4 engine rather than Layer 7.
+6. Select the **Acceleration Enabled** status option if you want to use the Layer 4 engine rather than Layer 7.
 
 7. If you have a syslog server configured, select the **Enable Logging** option and select the **Log Level**.
 
@@ -111,7 +111,7 @@ A virtual server masks the pool of real servers and presents a single IP address
 
     ![Add virtual server button](images/vmw-vcd10.1-load-balancer-btn-add-server.png)
 
-3. In the *Add Virtual Server* dialog box, enable the **Enable Virtual Server** option.
+3. In the *Add Virtual Server* dialog box, select the **Enable Virtual Server** option.
 
 4. Enter a **Name** for the virtual server, assign it a virtual **IP Address**, and assign it to the server pool you want to mask (**Default Pool**). You can also choose which services you want to apply to the virtual server. When you're done, click **Keep**.
 

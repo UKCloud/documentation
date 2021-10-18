@@ -4,7 +4,7 @@ description: Shows how to configure static routing within the VMware Cloud Direc
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 18/09/2020
+lastreviewed: 15/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,9 +20,9 @@ toc_mdlink: vmw-how-create-static-route.md
 
 ## Overview
 
-Static routing enables you to configure your edge gateway with knowledge of other networks which are not directly connected to it. It's particularly useful if you need to route between virtual data centres (VDCs) in the same vOrg, or route traffic to vApp networks. Static routing is the only option on edge gateways; dynamic routing protocols cannot be used.
+Static routing enables you to configure your edge gateway with knowledge of other networks that are not directly connected to it. It's particularly useful if you need to route between virtual data centres (VDCs) in the same vOrg, or route traffic to vApp networks. Static routing is the only option on edge gateways; dynamic routing protocols cannot be used.
 
-As an example, you may have a vApp network `192.168.8.0/24` routed to a VDC network called `Front end network`. You could create a static route to enable traffic to get to the outside IP of the vApp edge at `192.168.4.33` (a NAT will exist there).
+As an example, you may have a vApp network, `192.168.8.0/24`, routed to a VDC network called `Front end network`. You could create a static route to enable traffic to get to the outside IP of the vApp edge at `192.168.4.33` (a NAT will exist there).
 
 > [!IMPORTANT]
 > Selecting **Default gateway is not set** in the **Applied On** list under the *Static Routing Default Gateway* section will remove all existing static routes.  However, setting a global default **Gateway IP** when it is configured with **Default gateway is not set** will retain the entries on the Static Routes tab.

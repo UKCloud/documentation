@@ -4,7 +4,7 @@ description: Shows how to configure DHCP within the VMware Cloud Director tenant
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 17/09/2020
+lastreviewed: 15/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -42,9 +42,9 @@ To create a DHCP pool:
 
     ![DHCP tab](images/vmw-vcd10.1-edge-tab-dhcp.png)
 
-5. Select the **Pools** tab, then click the **Create** button.
+5. On the **Pools** tab, click the **+** button.
 
-    ![Add DHCP button](images/vmw-vcd10.1-btn-add-dhcp.png)
+    ![Add DHCP button](images/vmw-vcd10.1-edge-btn-add-dhcp.png)
 
 6. In the *Add DHCP Pool* dialog box, define an IP range for the pool. You can leave the lease times as default or change them.
 

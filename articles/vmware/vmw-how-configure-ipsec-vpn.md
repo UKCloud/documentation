@@ -4,7 +4,7 @@ description: Shows how to configure IPsec VPN within the VMware Cloud Director t
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/09/2020
+lastreviewed: 15/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -60,25 +60,27 @@ To configure IPsec VPN, you need to follow these general steps (each of these st
 
     ![Services option](images/vmw-vcd10.1-edge-btn-services.png)
 
-4. On the *Edge Gateway* page, select the **VPN** tab, then the **IPsec VPN** tab.
+4. On the *Edge Gateway* page, select the **VPN** tab.
 
     ![IPsec VPN tab](images/vmw-vcd10.1-edge-tab-ipsec-vpn.png)
 
-5. Select the **IPsec VPN Sites** tab.
+5. On the **IPsec VPN** tab, select the **IPsec VPN Sites** tab.
 
     ![IPsec VPN sites tab](images/vmw-vcd10.1-edge-tab-ipsec-vpn-sites.png)
 
 6. Click the **+** button.
 
+   ![Add IPsec VPN site button](images/vmw-vcd10.1-edge-btn-add-ipsec-vpn-site.png)
+
 7. In the *Add IPsec VPN* dialog box, select the **Enabled** option.
 
 8. Select the **Enable perfect forward secrecy (PFS)** option if your on-premises/remote site has that capability.
 
-9. In the **Name** field, enter a name for  your IPsec VPN.
+9. In the **Name** field, enter a name for your IPsec VPN.
 
 10. The **Local ID** field is usually set to the same value as the **Local Endpoint** (see next step).
 
-11. In the **Local Endpoint** field, enter the external IP address of your edge gateway (as noted in the *Prerequisites*).
+11. In the **Local Endpoint** field, enter the external IP address of your edge gateway (as noted in the [*Before you begin*](#before-you-begin) section above).
 
 12. In the **Local Subnets** field, enter the organisation networks that can be accessed via the VPN from the remote location. If you enter multiple local subnets, separate them with commas.
 
@@ -163,7 +165,7 @@ When the VPN tunnel is up and running, you'll need to create firewall rules on t
 
 Key points to note:
 
-- You need to create a firewall rule for both directions, that is, from data centre to VDC and from VDC to data centre.
+- You need to create two firewall rules: one for each direction, that is, from data centre to VDC and from VDC to data centre.
 
 - For data centre to VDC, set:
 
@@ -179,7 +181,7 @@ Key points to note:
 
 ## Configuring the external data centre gateway firewall
 
-When the VPN tunnel is up and running, you may need to create firewall rules and routes on your on-premises gateway or other internal firewall for traffic passing over the tunnel. This is outside of the scope of this article and will depend on your specific premises network configuration.
+You may also need to create firewall rules and routes on your on-premises gateway or other internal firewall for traffic passing over the tunnel. This is outside of the scope of this article and will depend on your specific premises network configuration.
 
 ## Validating the tunnel
 
@@ -196,6 +198,8 @@ To verify the tunnel status:
 1. On the *Edge Gateways* page, select the edge that you want to validate and click **Services**.
 
 2. Select the **Statistics** tab and then the **IPsec VPN** tab.
+
+   ![Statistics tab for IPsec VPN](images/vmw-vcd10.1-edge-tab-statistics-ipsec-vpn.png)
 
 3. For each configured tunnel, if you can see a tick, the tunnel is up and running and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.
 
