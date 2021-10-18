@@ -3,8 +3,8 @@ title: How to view storage profile usage
 description: Explains how to view your storage usage using the Cloud Director API
 services: vmware
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 23/10/2020
+reviewer: jpaddock
+lastreviewed: 12/10/2021
 
 toc_rootlink: How To
 toc_sub1: 
@@ -24,6 +24,8 @@ Before allocating more disk space in your UKCloud for VMware account, it's usefu
 
 ## Viewing a VDC's storage usage (Tenant Portal)
 
+In the VMware Cloud Director Tenant Portal, you can see how much storage a VDC is currently using.
+
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, find the card for the VDC.
 
 2. The *Storage* section shows how much storage the VDC is currently using as well as the amount of allocated storage.
@@ -32,7 +34,7 @@ Before allocating more disk space in your UKCloud for VMware account, it's usefu
 
 ## Viewing a VM's storage usage (Tenant Portal)
 
-In the VMware Cloud Director 10.1 Tenant Portal, you can see how much storage an individual VM is currently using.
+In the VMware Cloud Director Tenant Portal, you can see how much storage an individual VM is currently using.
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the VM.
 
