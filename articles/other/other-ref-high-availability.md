@@ -4,7 +4,7 @@ description: Describes how the UKCloud platform supports the development of high
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 07/10/2021
+lastreviewed: 18/10/2021
 
 toc_rootlink: Reference
 toc_sub1:
@@ -110,19 +110,19 @@ To achieve high availability for your Oracle database, you can use Real Applicat
 
 ### UKCloud for Red Hat OpenShift
 
-Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from Neustar UltraDNS from UKCloud) to ensure traffic is redirected should a region or cluster level availability issue occur.
-
-We also offer the option to have the Portworx storage solution configured in your cluster by UKCloud during deployment. This enables further resilience for your applications by offering highly-available storage, which significantly reduces container failover times, adds multi-attach storage to enable multiple containers to read/write the same volume on different nodes and the ability to replicate and migrate workloads between clusters to aid disaster recovery.
+Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilising a global load balancer or DNS failover service (such as Neustar UltraDNS from UKCloud) to ensure traffic is redirected should a region or cluster level availability issue occur.
 
 Within each OpenShift cluster deployment there are a number of features that support high availability and resilience:
 
-- Each OpenShift cluster is deployed with at least three master nodes responsible for the availability of the cluster API, etcd and other core components.
+- Each OpenShift cluster is deployed with three control plane nodes responsible for the availability of the cluster API, etcd and other core components.
 
-- Ingress traffic comes via resilient UKCloud managed load balancers into the cluster. It enters the cluster via resilient router pods deployed on the OpenShift infrastructure nodes.
+- Ingress traffic comes via a VIP (Virtual IP) shared between the cluster nodes and resilient router pods deployed on the OpenShift infrastructure nodes.
 
 - We recommend always having more than one application node deployed in each cluster. If you only have one node for your application containers, a single host failure could affect all applications deployed in the cluster as they'd have nowhere to fail over to within the cluster until the node is recovered and returned to service.
 
-- You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of >1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform's understanding of any problematic containers.
+- You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of >1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform's understanding of any problematic containers. You should apply a Pod Disruption Budget to each multi-pod application to ensure that no outage is seen during cluster updates and other maintenance.
+
+- You can obtain additional storage resilience by using OpenShift Data Foundation (formerly known as OpenShift Container Storage). This is an optional install that maintains three copies of all data on the OpenShift-level. It enables multi-attach ("RWX") persistent volumes, which allow compatible persistent applications to run in a resilient fashion.
 
 ### UKCloud for VMware
 
