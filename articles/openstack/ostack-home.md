@@ -4,7 +4,7 @@ description: Home page for UKCloud for OpenStack
 services: openstack
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/10/2021
+lastreviewed: 18/10/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -30,7 +30,7 @@ toc_mdlink: ostack-home.md
     <!-- brief introduction -->
     <p>UKCloud for OpenStack provides you with all the tools you need to modernise legacy workloads and kick-start your journey to cloud-native. By hosting your applications on our government-grade platform, you can start to deliver a true cloud-native experience for your most secure and sensitive systems. Enjoy the benefits of elastic infrastructure as code and rapid deployment times with UKCloud for OpenStack.</p>
     <!-- the big picture - propositions -->
-    <p>UKCloud for OpenStack takes your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>Data Centre Modernisation</strong></a> journey to the next level, where you can start to create truly cloud-native applications that harness all the benefits of cloud.</p>
+    <p>UKCloud for OpenStack takes your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>Data Centre Modernisation</strong></a> and <a href="https://ukcloud.com/solutions/digital-workplace/"><strong>Digital</strong></a> journeys to the next level, where you can start to create truly cloud-native applications that harness the latest <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>Innovative</strong></a> technology and all the benefits of a <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>Sovereign Cloud</strong></a>.</p>
   </div>
   <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
@@ -43,7 +43,7 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-12">
-    <h2><img src="images/home-ukc-logo.png">Lets's get started!</h2>
+    <h2><img src="images/home-ukc-logo.png">Let's get started!</h2>
   </div>
 </div>
 
