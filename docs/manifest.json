@@ -7303,7 +7303,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-faq.html",
-          "hash": "VpJxRHO5m39xNOpbn0IyVEJn2d0hd+kB0oDUUrcnF1U="
+          "hash": "TFvidvLVRAnydzej1Qd6mdHaNy1u/TexeVTyy4r63Oc="
         }
       },
       "is_incremental": false,
@@ -19166,17 +19166,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-dhcp.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-dhcp.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-dnat.png",
       "output": {
         "resource": {
@@ -19474,6 +19463,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-btn-add-dhcp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-btn-add-dhcp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-btn-add-ipsec-vpn-site.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-btn-add-ipsec-vpn-site.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-btn-add-static-route.png",
       "output": {
         "resource": {
@@ -19720,6 +19731,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-static-route.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-statistics-ipsec-vpn.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-statistics-ipsec-vpn.png"
         }
       },
       "is_incremental": false,
@@ -20347,6 +20369,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd10.1-vapp-new-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-vdc-location-metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-vdc-location-metadata.png"
         }
       },
       "is_incremental": false,
@@ -22202,7 +22235,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-ipsec-vpn.html",
-          "hash": "E7/iWkbQFGT1tZUnRZ8wqkuzCfJVj3ItqRler6ZY3hY="
+          "hash": "Xgp8eqWt+HE7spXf1Vtx4Yhw5/FBxISxIZHGK/oazAQ="
         }
       },
       "is_incremental": false,
@@ -22226,7 +22259,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-load-balancer.html",
-          "hash": "hT18dhOvr14xAS6X06ChtQG3e+cwD7uCCb3L01u43tU="
+          "hash": "nXHOIcNLfXyreBOODeMVEpZrEP25zK1zqqfqO2FQYv0="
         }
       },
       "is_incremental": false,
@@ -22250,7 +22283,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-dhcp-pool.html",
-          "hash": "q+aZit118IDPIzlaAx4epC12J3v0I7/6NzB0DlNbuZk="
+          "hash": "s7+I1NghX8l95ybfkzHMi1gm9csruYlWjEV/aMHRnFI="
         }
       },
       "is_incremental": false,
@@ -22310,7 +22343,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-static-route.html",
-          "hash": "n6mlTL7i/hgqZUfc7rISAoiNBgI6tIElGb8xO29bLWs="
+          "hash": "Q9p4WqUj8QVhMoO/okas+hAD/5OKx+pvWn1JplM3sPo="
         }
       },
       "is_incremental": false,
@@ -22430,7 +22463,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-locate-vdc.html",
-          "hash": "cy+PyHFXg6i7ZuSnhRsRj9FQu9OXHyImspk4g30+IGo="
+          "hash": "RyWcpCX9PZjDl5wE6N6ilYpDJo5K1GdhPInAfe4f2Bo="
         }
       },
       "is_incremental": false,
@@ -22610,7 +22643,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-view-storage-usage.html",
-          "hash": "j2B+F4HbQo8Xk1S27LkysMUdhzA0b4m6E002Ke159r4="
+          "hash": "NsTNbw2ZHLlSH+UVgqTFrcK61dtC1wKpxh9DKIH0oQo="
         }
       },
       "is_incremental": false,
@@ -23018,7 +23051,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vmdk-limits.html",
-          "hash": "nMLM1frcpR1pbUxKUBsNoIpPoKF6PmiuKdE/dywWQwg="
+          "hash": "Id42RcR+Ou/LcwS16g27DZI4IlVjN+fLI2gOowTZmaY="
         }
       },
       "is_incremental": false,

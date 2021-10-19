@@ -130,23 +130,24 @@
 <li><p>On the <em>Edge Gateways</em> page, select the edge that you want to configure and click <strong>Services</strong>.</p>
 <p><img src="images/vmw-vcd10.1-edge-btn-services.png" alt="Services option"></p>
 </li>
-<li><p>On the <em>Edge Gateway</em> page, select the <strong>VPN</strong> tab, then the <strong>IPsec VPN</strong> tab.</p>
+<li><p>On the <em>Edge Gateway</em> page, select the <strong>VPN</strong> tab.</p>
 <p><img src="images/vmw-vcd10.1-edge-tab-ipsec-vpn.png" alt="IPsec VPN tab"></p>
 </li>
-<li><p>Select the <strong>IPsec VPN Sites</strong> tab.</p>
+<li><p>On the <strong>IPsec VPN</strong> tab, select the <strong>IPsec VPN Sites</strong> tab.</p>
 <p><img src="images/vmw-vcd10.1-edge-tab-ipsec-vpn-sites.png" alt="IPsec VPN sites tab"></p>
 </li>
 <li><p>Click the <strong>+</strong> button.</p>
+<p><img src="images/vmw-vcd10.1-edge-btn-add-ipsec-vpn-site.png" alt="Add IPsec VPN site button"></p>
 </li>
 <li><p>In the <em>Add IPsec VPN</em> dialog box, select the <strong>Enabled</strong> option.</p>
 </li>
 <li><p>Select the <strong>Enable perfect forward secrecy (PFS)</strong> option if your on-premises/remote site has that capability.</p>
 </li>
-<li><p>In the <strong>Name</strong> field, enter a name for  your IPsec VPN.</p>
+<li><p>In the <strong>Name</strong> field, enter a name for your IPsec VPN.</p>
 </li>
 <li><p>The <strong>Local ID</strong> field is usually set to the same value as the <strong>Local Endpoint</strong> (see next step).</p>
 </li>
-<li><p>In the <strong>Local Endpoint</strong> field, enter the external IP address of your edge gateway (as noted in the <em>Prerequisites</em>).</p>
+<li><p>In the <strong>Local Endpoint</strong> field, enter the external IP address of your edge gateway (as noted in the <a href="#before-you-begin"><em>Before you begin</em></a> section above).</p>
 </li>
 <li><p>In the <strong>Local Subnets</strong> field, enter the organisation networks that can be accessed via the VPN from the remote location. If you enter multiple local subnets, separate them with commas.</p>
 </li>
@@ -225,7 +226,7 @@
 <p>When the VPN tunnel is up and running, you'll need to create firewall rules on the edge gateway for any traffic passing over the tunnel. For how to do this, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <p>Key points to note:</p>
 <ul>
-<li><p>You need to create a firewall rule for both directions, that is, from data centre to VDC and from VDC to data centre.</p>
+<li><p>You need to create two firewall rules: one for each direction, that is, from data centre to VDC and from VDC to data centre.</p>
 </li>
 <li><p>For data centre to VDC, set:</p>
 <ul>
@@ -245,7 +246,7 @@
 </li>
 </ul>
 <h2 id="configuring-the-external-data-centre-gateway-firewall">Configuring the external data centre gateway firewall</h2>
-<p>When the VPN tunnel is up and running, you may need to create firewall rules and routes on your on-premises gateway or other internal firewall for traffic passing over the tunnel. This is outside of the scope of this article and will depend on your specific premises network configuration.</p>
+<p>You may also need to create firewall rules and routes on your on-premises gateway or other internal firewall for traffic passing over the tunnel. This is outside of the scope of this article and will depend on your specific premises network configuration.</p>
 <h2 id="validating-the-tunnel">Validating the tunnel</h2>
 <p>When you've configured both ends of the IPsec tunnel, the connection should start without any issues.</p>
 <div class="NOTE">
@@ -261,6 +262,7 @@
 <li><p>On the <em>Edge Gateways</em> page, select the edge that you want to validate and click <strong>Services</strong>.</p>
 </li>
 <li><p>Select the <strong>Statistics</strong> tab and then the <strong>IPsec VPN</strong> tab.</p>
+<p><img src="images/vmw-vcd10.1-edge-tab-statistics-ipsec-vpn.png" alt="Statistics tab for IPsec VPN"></p>
 </li>
 <li><p>For each configured tunnel, if you can see a tick, the tunnel is up and running and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.</p>
 <div class="NOTE">
