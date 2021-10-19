@@ -4,7 +4,7 @@ description: Provides information regarding DNS zone forwarding which can be con
 services: openshift
 author: bbacon
 reviewer: gellner
-lastreviewed: 219/10/2021
+lastreviewed: 19/10/2021
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
