@@ -2,9 +2,9 @@
 title: (Video) Using Zerto Virtual Manager to perform disaster recovery testing
 description: Shows how to use Zerto Virtual Manager to perform disaster recovery (DR) testing
 services: draas
-author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 21/07/2020
+author: shighmoor
+reviewer: gsohal
+lastreviewed: 18/10/2021
 toc_rootlink: Videos
 toc_sub1: 
 toc_sub2:
