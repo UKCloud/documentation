@@ -3,8 +3,8 @@ title: UKCloud for Red Hat OpenShift FAQs
 description: Frequently asked questions about our UKCloud for Red Hat OpenShift service
 services: openshift
 author: mwarner
-reviewer: shighmoor
-lastreviewed: 12/10/2020
+reviewer: alillistone
+lastreviewed: 13/10/2020
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -63,7 +63,7 @@ The service supports many popular development frameworks and languages such as:
 
 - GoLang
 
-For the full list please visit https://access.redhat.com/articles/2176281?hsLang=en-us
+For the full list, see https://access.redhat.com/articles/2176281?hsLang=en-us and https://access.redhat.com/articles/4763741.
 
 ### Does UKCloud for Red Hat OpenShift support any data services?
 
