@@ -2,9 +2,9 @@
 title: DNS zone forwarding in OpenShift clusters
 description: Provides information regarding DNS zone forwarding which can be configured in OpenShift clusters
 services: openshift
-author: Kieran O'Neill
-reviewer: 
-lastreviewed: 25/11/2020
+author: koneill
+reviewer: gellner
+lastreviewed: 19/11/2021
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v4.x
@@ -70,7 +70,7 @@ You can implement your own zone forwarding by editing DNS operator config. The s
 
 ## Further information
 
-<https://docs.openshift.com/container-platform/4.6/networking/dns-operator.html#nw-dns-forward_dns-operator>
+<https://docs.openshift.com/container-platform/4.9/networking/dns-operator.html#nw-dns-forward_dns-operator>
 
 ## Feedback
 
