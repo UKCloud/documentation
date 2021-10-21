@@ -3,8 +3,8 @@ title: Bring Your Own Firewall Service Scope
 description: Outlines important details regarding Bring Your Own Firewall
 services: other
 author: shall
-reviewer: sdelaney
-lastreviewed: 06/10/2020
+reviewer: swthomas
+lastreviewed: 19/10/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -57,7 +57,7 @@ By requesting to have the edge gateway device removed and their own firewall tec
 
 - Customers are responsible for sourcing their own licensing arrangement with the 3rd party firewall provider.
 
-- Customers are responsible for installing and configuring the firewall device. Guidance on how this might be done can be found in the [*Bring your own firewall to UKCloud Blueprint*](https://ukcloud.com/app/uploads/2021/02/ukc-gen-310-bring-your-own-firewall-blueprint.pdf).
+- Customers are responsible for installing and configuring the firewall device.
 
 - UKCloud do not offer any support of customer installed firewall replacements. This includes but is not limited to install, configuration and troubleshooting issues.
 
