@@ -2,9 +2,9 @@
 title: DNS zone forwarding in OpenShift clusters
 description: Provides information regarding DNS zone forwarding which can be configured in OpenShift clusters to enhance service discovery on deployments with private networks
 services: openshift
-author: Ben Bacon
-reviewer: Kieran O'Neill
-lastreviewed: 21/10/2020
+author: bbacon
+reviewer: gellner
+lastreviewed: 19/10/2021
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
