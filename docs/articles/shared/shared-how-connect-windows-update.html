@@ -97,6 +97,8 @@
 <h5>Important</h5>
 <p>UKCloud is making important updates to WSUS services. For more details, see the <a href="https://status.ukcloud.com/incidents/820kym82cmjz">UKCloud Service Status page</a>.</p>
 <p>In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port TCP/8530 and TCP/8531. Note that, for these new systems below, you <em>do not</em> need to allow TCP/443.</p>
+<p>Due to the changes above, once the switch-over from the <strong>old</strong> WSUS systems to the <strong>new</strong> WSUS systems happens (due on 30th November 2021), you'll need to append the SSL port (8531) to the FQDN of the WSUS systems. For example:</p>
+<p><code>https://wsus.frn.ukcloud.com:8531</code></p>
 <ul>
 <li><p>Assured</p>
 <ul>
