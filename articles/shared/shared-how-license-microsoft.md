@@ -132,7 +132,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Remote Desktop Server Access Licence**
 
-There's a separate licence for Windows Remote Desktop Services (RDS) that you'll need to use, as the standard Windows license does not cover RDS. Also note that there's no concurrency within SPLA, so the total number of users provisioned to access the RDS environment will need to be licensed. 
+  There's a separate licence for Windows Remote Desktop Services (RDS) that you'll need to use, as the standard Windows license does not cover RDS. Also note that there's no concurrency within SPLA, so the total number of users provisioned to access the RDS environment will need to be licensed. 
 
   - UKCloud licensing. We're able to provide Microsoft RDS SAL on a monthly basis only. These are retrospectively billed, and the pricing is available within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). To use these licences, you must raise a Service Request prior to their use to register them on the UKCloud platform and provision a dedicated RDS licence server. To assign and validate the licences, we will need to arrange a session to connect to your server.
 
@@ -221,9 +221,9 @@ As soon as you've completed the form and the actions have been confirmed, your o
 
 Infrequently, Microsoft will require an audit of the SPLA software services delivered by UKCloud. This review is currently undertaken by Ernst & Young (EY), the independent audit firm selected by Microsoft to conduct this process. If you're required to participate in such an audit, you'll receive an email from UKCloud to provide the necessary data.
 
-To fulfil the requirements of this compliance audit and remain in compliance with the SPLA program’s rules and requirements, Microsoft will request that you enable UKCloud and EY to gather the necessary information from your restricted-access servers. 
+To fulfil the requirements of this compliance audit and remain in compliance with the SPLA program's rules and requirements, Microsoft will request that you enable UKCloud and EY to gather the necessary information from your restricted-access servers. 
 
-To accomplish this, you'll need to run [EY's Inventory tool Script](https://github.com/UKCloud/documentation/raw/master/articles/shared/assets/EY-Inventory-Tool.zip), using **Option 2**. After running the script, you should upload the results to UKCloud as per the instructions in the initial email. UKCloud will then handle the obfuscation of data before handing it over to EY. The zip file linked above includes documentation with information about the EY scripts, with Section 3.3 providing specific usage details of how to run and use the script to scan all devices in Active Directory.
+To accomplish this, you'll need to run [EY's Inventory tool Script](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Shared_Services/EY-Inventory-Tool.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1666373254&Signature=2Xxc8koNzSQ1IdEMhreF8R9%2BMsI%3D), using **Option 2**. After running the script, you should upload the results to UKCloud as per the instructions in the initial email. UKCloud will then handle the obfuscation of data before handing it over to EY. The zip file linked above includes documentation with information about the EY scripts, with Section 3.3 providing specific usage details of how to run and use the script to scan all devices in Active Directory.
 
 > [!NOTE]
 > The MBSA signed between Microsoft and UKCloud includes a confidentiality clause, and the provisions of this clause are also applicable to these servers; only data associated to the deployment of Microsoft products will therefore be communicated to Microsoft.
