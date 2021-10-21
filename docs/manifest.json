@@ -7395,18 +7395,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-how-configure-portworx-volume-replication.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openshift/oshift-how-configure-portworx-volume-replication.html",
-          "hash": "WfmgG4TyzzLWwf9bOXXPhhg2uWLhrGLniUf8EDPUSag="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-customise-error-page.md",
       "output": {
         ".html": {
@@ -7491,18 +7479,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-how-portworx-snapshots.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openshift/oshift-how-portworx-snapshots.html",
-          "hash": "NBnwZtoqUfJ90YfaZJsJHQw5AZgn08f32+5K7FbMuBY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-publish-routes-on-multiple-networks.md",
       "output": {
         ".html": {
@@ -7575,30 +7551,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-how-use-portworx-encrypted-volumes.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openshift/oshift-how-use-portworx-encrypted-volumes.html",
-          "hash": "n/edrh/VSq0X0bS+qjSLdjk70LpyOmWXCI+CHEik/jI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-how-use-portworx-shared-volumes.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openshift/oshift-how-use-portworx-shared-volumes.html",
-          "hash": "FR/Rj6egw61QvvJg8kXVuWJwSn9qOBT5N/YBp4L3MoM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-v4-update.md",
       "output": {
         ".html": {
@@ -7663,7 +7615,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-dns-zone-forwarding-v4.html",
-          "hash": "DBy5d/9SKZ7P+sX5EnWgvJkZVCSSN63Tm+lKudPyY0Q="
+          "hash": "bUSRLlVHuq2rZy1PzCjswnp+HEjxZ+BeZxT9YCo9c8M="
         }
       },
       "is_incremental": false,
@@ -7795,7 +7747,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "Vclkg/6VdANG4kFm8VExl8Q0cvXoOVQCqVonvS3Au48="
+          "hash": "ayYPcBTHsBW9EK6Ajp3OutTIHBuwzEV0caocEawf7po="
         }
       },
       "is_incremental": false,
@@ -23322,7 +23274,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 466,
+          "total_file_count": 462,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
