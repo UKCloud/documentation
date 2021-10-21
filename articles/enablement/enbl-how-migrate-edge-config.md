@@ -3,8 +3,8 @@ title: How to migrate edge configuration data to another edge
 description: Describes how to migrate edge configuration data to another edge
 services: enablement
 author: brees
-reviewer: 
-lastreviewed: 27/08/2020
+reviewer: brees
+lastreviewed: 07/10/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -27,78 +27,13 @@ This article explains how to use the Cloud Director API to export configuration 
 
 ## Before you begin
 
-Before using the Cloud Director API to migrate edge configuration data, you should install a REST client to enable you to easily access the Cloud Director API and interact with the relevant endpoints. This example uses the RESTClient browser plug in, but you can use an alternative API client if you prefer.
-
-You also need to obtain your API credentials. For more information, see [*How to access VMware Cloud Director through the Cloud Director API*](../vmware/vmw-how-access-vcloud-api.md).
+Before using the Cloud Director API to migrate edge configuration data, we recommend that you install a REST client that enables you to access the API using a more intuitive interface. The steps in this article use a plugin called YARC; if you use a different client, some of the steps will be different.
 
 ## Obtaining an authorisation token
 
-To start interacting with the Cloud Director API, you first need to obtain an `x-vcloud-authorization` token; to do this you need to adjust some settings in RESTClient.
+To start interacting with the Cloud Director API, you first need to find your API credentials and use those to obtain an `x-vcloud-authorization` token.
 
-1. In your browser, click the **RESTClient** icon.
-
-    ![RESTClient icon](images/vmw-firefox-restclient-icon.png)
-
-2. From the **Method** menu, select **POST**.
-
-    ![POST request method](images/vmw-restclient-request-method-post.png)
-
-3. In the **API** field, enter the API URL you recorded earlier and append the following:
-
-    `/api/sessions`
-
-    ![API URL](images/vmw-restclient-api-url.png)
-
-4. Next, add a Basic Authentication header. To do this, from the **Authentication** menu at the top of the REST Client, select **Basic Authentication**.
-
-    ![Basic Authentication menu option](images/vmw-restclient-basic-authentication.png)
-
-5. In the *Basic Authentication* dialog box, in the **Username** field, enter your API username recorded earlier from the API page.
-
-6. In the **Password** field enter your UKCloud Portal password and then click **Okay**.
-
-    ![Basic Authentication dialog box](images/vmw-restclient-authentication-details.png)
-
-7. The *Request* section now includes an Authorization header.
-
-    ![Authorization header](images/vmw-restclient-authentication-header.png)
-
-8. Next, add an Accept header. To do this, from the **Headers** menu, select **Custom Header**.
-
-    ![Custom Header menu option](images/vmw-restclient-custom-header.png)
-
-9. In the *Request Header* dialog box, in the **Name** field, enter `Accept`
-
-10. In the **Value** field enter `application/*+xml;version=34.0` and then click **Okay**.
-
-    ![Request Headers dialog box](images/vmw-restclient-request-headers.png)
-
-11. The *Headers* section should now be displayed, containing the Accept header.
-
-    ![Headers section with Accept header](images/vmw-restclient-accept-header.png)
-
-12. The RESTClient has now got all the required settings in place to make a request to the Cloud Director API to obtain a `x-vcloud-authorization` token, so click the **Send** button.
-
-13. When a response is received, the **Headers** tab in the *Response* section will be populated, including an `x-vcloud-authorization` token.
-
-    ![API response with authentication token](images/vmw-restclient-authentication-token.png)
-
-14. The `x-vcloud-authorization` token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word `x-vcloud-authorization`.
-
-    > [!NOTE]
-    > If at any point while following the instructions in this guide, the output displayed in the REST Client does not look similar to that shown in the images, you can use the value of the **Status Code** field to determine what went wrong and needs investigation. In this case above, the **Status Code** received was `HTTP 200 OK`, which means that the request succeeded. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
-
-15. To add an `x-vcloud-authorization` header, from the **Headers** menu, select **Custom Header**.
-
-16. In the *Request Header* dialog box, in the **Name** field enter `x-vcloud-authorization`.
-
-17. In the **Value** field, paste the string of characters copied in the previous step, then click **Okay**.
-
-    ![Authorization token in request headers](images/vmw-restclient-request-headers-token.png)
-
-18. Now that you've obtained an `x-vcloud-authorization` token, you can remove the Basic Authentication Header. Click the **x** in the upper right-hand corner of the header.
-
-    ![Remove basic authentication](images/vmw-restclient-basic-authentication-remove.png)
+For detailed steps for how to do this, see [*How to access VMware Cloud Director through the Cloud Director API*](../vmware/vmw-how-access-vcloud-api.md).
 
 ## Retrieving organisation details via the API
 
