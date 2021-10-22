@@ -2,9 +2,9 @@
 title: IPsec VPN Foundation and PRIME profiles
 description: Provides information about UKCloud for VMware's support of Foundation and PRIME profiles
 services: vmware
-author: Sue Highmoor
-reviewer: Simon Delaney
-lastreviewed: 17/06/2020
+author: shighmoor
+reviewer: swthomas
+lastreviewed: 21/10/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -71,8 +71,6 @@ Currently, this configuration is not available via the NSX edge gateway included
 - For more information about IPsec VPN and the Foundation and PRIME profiles, see the NCSC guidance at [Using IPsec to protect data](https://www.ncsc.gov.uk/guidance/using-ipsec-protect-data).
 
 - For a list of third-party firewalls known to work with UKCloud for VMware, see [*Bring Your Own Firewall - Known working and non-working firewalls*](https://docs.ukcloud.com/articles/vmware/vmw-ref-byof-working-firewalls.html).
-
-- For information about how to implement your own firewall within UKCloud for VMware, see the [*Bring your own firewall to UKCloud*](https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-310-bring-your-own-firewall-blueprint.pdf) blueprint.
 
 ## Feedback
 
