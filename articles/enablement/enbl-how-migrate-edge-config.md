@@ -3,8 +3,8 @@ title: How to migrate edge configuration data to another edge
 description: Describes how to migrate edge configuration data to another edge
 services: enablement
 author: brees
-reviewer: brees
-lastreviewed: 07/10/2021
+reviewer: shighmoor
+lastreviewed: 22/10/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -39,65 +39,81 @@ For detailed steps for how to do this, see [*How to access VMware Cloud Director
 
 Now that you've obtained an `x-vcloud-authorization` token, you can call the Cloud Director API to retrieve the information that you need about your organisation to extract your edge configuration data.
 
-1. Set the **Method** to **GET**.
+To retrieve organisation information using the YARC client:
 
-    ![GET request method](images/vmw-restclient-method-get.png)
+1. In the *Response* section returned by the request when you obtained your authorisation token, select the **Response Body** tab.
 
-2. In the *Response* section, select the **Preview** tab.
+   This view lists the links that you can use to drill down into the various objects exposed via the Cloud Director API. Of interest in the output below is a link that will, when queried, return details about the organisation and the objects contained within it.
 
-    This view lists the links that you can use to drill down into the various objects exposed via the Cloud Director API. Of interest in the output below is a link that will, when queried, return details about the organisation and the objects contained within it.
+   ![Link for retrieving organisation details](images/vmw-restclient-get-vorg.png)
 
-    ![Link for retrieving compute service details](images/vmw-restclient-get-vorg.png)
+   The link should look something like:
 
-    The link should look something like:
+   `https://<api_url>/api/org/<org_id>`
 
-    `https://<api_url>/api/org/<org_id>`
+2. Copy the URL and paste it into the Request **URL** field.
 
-3. Copy the URL and paste it into the Request **URL** field.
+   ![API call to get organisation details](images/vmw-restclient-get-vorg-url.png)
 
-    ![API call to get compute service details](images/vmw-restclient-get-vorg-url.png)
+3. From the list of methods, select **GET**.
 
-4. Click **Send**.
+   ![GET request method](images/vmw-restclient-method-get.png)
 
-    After a short amount of time the contents of the Response **Preview** tab will be updated to reflect the response from the Cloud Director API to your latest request, including links to each virtual data centre (VDC) in the organisation.
+4. Click **Send Request**.
+
+   After a short amount of time the contents of the **Response Body** tab will be updated to reflect the response from the Cloud Director API to your latest request.
 
 ## Retrieving virtual data centre details via the API
 
 When locating the VDC and exporting the edge configuration, perform this for both the existing environment and the new environment that you'll be migrating to.
 
-To retrieve details about the VDCs in an organisation:
+To retrieve details about the VDCs in an organisation using the YARC client:
 
-1. Copy the link for the VDC that contains the edge gateway.
+1. From the previous **Response Body**, copy the link to query the list of VDCs in the organisaton.
 
-    The link should look something like:
+   ![Link for querying VDCs](images/vmw-restclient-get-vorg-query-link.png)
 
-    `https>//<api_url>/api/vdc/<vdc_id>`
+   The link should look something like:
 
-2. Click **Send**.
+   `https://<api_url>/api/query?type=orgVdc`
 
-    The contents of the Response **Preview** tab will be updated again.
+2. Paste the query link into the **URL** field at the top of the page (the method should still be set to **GET**) and click **Send Request**.
+
+   The contents of the **Response Body** tab will be updated again.
+
+3. From the new **Response Body**, copy the link for the VDC that contains the edge gateway.
+
+   ![Link for retrieving VDC details](images/vmw-restclient-get-vdc-link.png)
+
+   The link will be in the `OrgVdcRecord` section, and will look something like:
+
+   `https://<api-url>/api/vdc/<vdc-id>`
+
+4. Paste the VDC link into the **URL** field at the top of the page (the method should still be set to **GET**) and click **Send Request**.
+
+   The contents of the **Response Body** tab will be updated again.
 
 ## Retrieving edge gateway configuration via the API
 
-To retrieve details of the edge gateway configuration:
+To retrieve details of the edge gateway configuration using the YARC client:
 
-1. The response this time will probably be quite long. To easily locate a specific section in the response, use your browser's search utility. You can invoke this in Firefox by pressing **CTRL+F**. In the search dialog window at the bottom of the screen, enter `edgeGateways` and then click the down arrow button to locate a section that looks similar to the one shown below:
+1. The response this time will probably be quite long. To easily locate a specific section in the response, use your browser's search utility (typically accessed by pressing **CTRL+F**). In the search field, enter `edgeGateways` and then click the down arrow button to locate a section that looks similar to the one shown below:
 
-    `<Link rel="edgeGateways" href="https://<api_url>/api/admin/vdc/<vdc_id>/edgeGateways" type="application/vnd.vmware.vcloud.query.records+xml" />`
+   `<Link rel="edgeGateways" href="https://<api_url>/api/admin/vdc/<vdc_id>/edgeGateways" type="application/vnd.vmware.vcloud.query.records+xml" />`
 
-2. Copy the link ending in `/edgeGateways` and paste it into the URL field at the top of the RESTClient. Ensure that the **Method** drop down is set to **GET** and click **Send**.
+2. Copy the link ending in `/edgeGateways` and paste it into the **URL** field at the top of the REST client. Ensure that the method is still set to **GET** and click **Send Request**.
 
-    If this request is successful, the response will contain a link to the edge gateway which, when queried, will return the configuration of the edge gateway. Once you've received a response, use your browser's search utility to locate the `EdgeGatewayRecord` section within the response.
+   Once you've received a response, use your browser's search utility to locate the `EdgeGatewayRecord` section. This section contains a link that you can query to return the configuration of the edge gateway.
 
-    `<EdgeGatewayRecord gatewayStatus="READY" haStatus="UP" isBusy="false" name="<edge_name>" numberOfExtNetworks="1" numberOfOrgNetworks="8" vdc="https://<api_url>/api/vdc/<vdc_id>" href="https://<api_url>/api/admin/edgeGateway/<edge_id>"     task="https://<api_url>/api/task/<task_id>" isSyslogServerSettingInSync="true" taskOperation="networkConfigureEdgeGatewayServices" taskStatus="success" taskDetails=" " />`
+   ![Link for retrieved edge configuration details](images/vmw-restclient-get-edge-link.png)
 
 3. Within the `EdgeGatewayRecord` section of the above from the response, locate the link to the edge gateway that starts with the following:
 
-    `https://<api_url>/api/admin/edgeGateway/`
+   `https://<api_url>/api/admin/edgeGateway/`
 
-4. At the end of the URL will be a unique identifier for the edge gateway within the VDC. Copy this link, paste it into the URL field and then click **Send**.
+4. At the end of the URL you'll find a unique identifier for the edge gateway within the VDC. Copy the whole link, paste it into the **URL** field (the method should still be set to **GET**) and then click **Send Request**.
 
-    After a short amount of time the current configuration of the edge gateway will be displayed in a block of XML.
+   After a short amount of time the current configuration of the edge gateway will be displayed in a block of XML.
 
 ## Reviewing and updating the edge gateway configuration
 
@@ -110,27 +126,21 @@ The example below shows a high‑level overview of the structure of the XML bloc
 ```xml
 <EdgeGateway>
    <Configuration>
-      <GatewayBackingConfig>
-      </GatewayBackingConfig>
-      <GatewayInterfaces>
-      </GatewayInterfaces>
+      <GatewayBackingConfig> </GatewayBackingConfig>
+      <GatewayInterfaces> </GatewayInterfaces>
       <EdgeGatewayServiceConfiguration>
-         <FirewallService>
-         </FirewallService>
-         <NatService>
-         </NatService>
-         <GatewayIpsecVpnService>
-         </GatewayIpsecVpnService>
-         <StaticRoutingService>
-         </StaticRoutingService>
-         <LoadBalancerService>
-         </LoadBalancerService>
+         <GatewayDhcpService> </GatewayDhcpService>
+         <FirewallService> </FirewallService>
+         <NatService> </NatService>
+         <GatewayIpsecVpnService> </GatewayIpsecVpnService>
+         <StaticRoutingService> </StaticRoutingService>
+         <LoadBalancerService> </LoadBalancerService>
       </EdgeGatewayServiceConfiguration>
    </Configuration>
 </EdgeGateway\>
 ```
 
-This is the configuration that you'll need to amend prior to posting it back to your new edge. Depending on your specific configuration and requirements, different sections of the configuration may or may not require editing. Copy and paste all of this configuration into a text editor, for example Notepad++, for editing.
+This is the configuration that you'll need to amend prior to posting it back to your new edge. Depending on your specific configuration and requirements, different sections of the configuration may or may not require editing. Copy and paste all of this configuration into a text editor for editing.
 
 ### Configuration that must be changed
 
@@ -150,10 +160,10 @@ Providing you keep your private address ranges the same as your original environ
 <NatService>
      <IsEnabled>true</IsEnabled>
          <NatRule>
-             <Description></Description>
-                 <RuleType></RuleType>
-                 <IsEnabled></IsEnabled>
-                 <Id></Id>
+             <Description> </Description>
+                 <RuleType> </RuleType>
+                 <IsEnabled> </IsEnabled>
+                 <Id> </Id>
                  <GatewayNatRule>
                      <Interface href=https://<api_url>/api/admin/network/<interface-id> name="nft00xxxxx" type="application/vnd.vmware.admin.network+xml" />
                      <OriginalIp>x.x.x.x</OriginalIp>
@@ -171,7 +181,7 @@ For VPN configuration, you'll need to replace the interface references and names
 
 Remember that when amending VPN configuration, and particularly the local endpoint IP address, you'll also need to make configuration changes on the peer side to mirror those amendments.
 
-If you're using a Pre-Shared Key (PSK) for IPsec VPN authentication, the key will not be exported as part of this configuration. You can retrieve the key either through the VMware Cloud Director GUI or by querying an additional API endpoint (see [_How to obtain full IPsec VPN configuration via the vCloud API_](enbl-how-obtain-vpn-config.md)).
+If you're using a Pre-Shared Key (PSK) for IPsec VPN authentication, the key will not be exported as part of this configuration. You can retrieve the key either through the VMware Cloud Director GUI or by querying an additional API endpoint (see [*How to obtain full IPsec VPN configuration via the vCloud API*](enbl-how-obtain-vpn-config.md)).
 
 ## Applying the new configuration
 
@@ -179,65 +189,69 @@ When you've amended the configuration with the necessary elements of the new edg
 
 To easily identify and resolve any possible issues when applying the configuration, posting the configuration to the edge in the individual configurable items may be easier. For example, apply the amended firewall rules, then apply the NAT rules and so on.
 
-The steps below outline how to apply the amended configuration to your new edge gateway:
+The steps below outline how to apply the amended configuration to your new edge gateway using the YARC client.
 
 1. Enclose the new configuration in a pair of `<EdgeGatewayServiceConfiguration>` tags, for example:
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <EdgeGatewayServiceConfiguration xmlns="http://www.vmware.com/vcloud/v1.5">
+   ```xml
+   <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+   <EdgeGatewayServiceConfiguration xmlns="http://www.vmware.com/vcloud/v1.5">
 
-    <NatService>
-        <IsEnabled>true</IsEnabled>
-            <NatRule>
-                <Description></Description>
-                    <RuleType></RuleType>
-                    <IsEnabled></IsEnabled>
-                    <Id></Id>
-                    <GatewayNatRule>
-                        <Interface href=https://<api_url>/api/admin/network/<interface-id> name="nft00xxxxx" type="application/vnd.vmware.admin.network+xml" />
-                        <OriginalIp>x.x.x.x</OriginalIp>
-                        <TranslatedIp>y.y.y.y</TranslatedIp>
-                    </GatewayNatRule>
-            </NatRule>
-    </NatService>
+   <NatService>
+       <IsEnabled>true</IsEnabled>
+           <NatRule>
+               <Description></Description>
+                   <RuleType></RuleType>
+                   <IsEnabled></IsEnabled>
+                   <Id></Id>
+                   <GatewayNatRule>
+                       <Interface href=https://<api_url>/api/admin/network/<interface-id> name="nft00xxxxx" type="application/vnd.vmware.admin.network+xml" />
+                       <OriginalIp>x.x.x.x</OriginalIp>
+                       <TranslatedIp>y.y.y.y</TranslatedIp>
+                   </GatewayNatRule>
+           </NatRule>
+   </NatService>
 
-    </EdgeGatewayServiceConfiguration>
-    ```
+   </EdgeGatewayServiceConfiguration>
+   ```
 
-2. Copy and paste this configuration into the Request *Body* section of the RESTClient.
+2. Copy and paste this configuration into the **Payload** field of the *Request Settings** section.
 
-3. From the **Method** list, select **POST**.
+3. Select the **POST** method.
 
 4. Append the following to the URL of the **new** edge gateway in the **URL** field:
 
-    `/action/configureServices`
+   `/action/configureServices`
 
-    For example, if the original contents of the URL were:
+   For example, if the original contents of the URL were:
 
-    `https://<api_url>/api/admin/edgeGateway/<id>`
+   `https://<api_url>/api/admin/edgeGateway/<id>`
 
-    The updated URL would be:
+   The updated URL would be:
 
-    `https://<api_url>/api/admin/edgeGateway/<id>/action/configureServices`
+   `https://<api_url>/api/admin/edgeGateway/<id>/action/configureServices`
 
-5. You must also add another header to the RESTClient prior to submitting the new configuration.
+   ![POST request to update edge configuration](images/vmw-restclient-post-edge-config.png)
 
-    From the **Headers** menu at the top of the RESTClient select **Custom Header**.
+5. You must also add another header prior to submitting the new configuration.
+
+   In the *Custom Headers* section, select **Add New Header**.
 
 6. In the **Name** field, enter **Content-Type**.
 
-7. In the **Attribute Value** field enter the following:
+7. In the **Value** field enter the following:
 
-    `application/vnd.vmware.admin.edgeGatewayServiceConfiguration+xml`
+   `application/vnd.vmware.admin.edgeGatewayServiceConfiguration+xml`
 
-8. Click **Okay**.
+   ![Header dialog box in YARC](images/vmw-restclient-request-headers-content-type.png)
 
-9. To submit the new configuration, click **Send**.
+8. Click **Save**.
 
-10. The status of the edge gateway as viewed from VMware Cloud Director will briefly show as **Updating Configuration**. Once this process has completed, click the edge gateway and select **Configure Services**.
+9. To submit the new configuration, click **Send Request**.
 
-11. In the *Configure Services* window, verify that the configuration has been applied successfully.
+10. The status of the edge gateway as viewed from VMware Cloud Director will briefly show as **Updating Configuration**. Once this process has completed, select the edge gateway and click **Services**.
+
+11. On the appropriate tab of the *Edge Gateway* page, verify that the configuration has been applied successfully.
 
 ## Next steps
 
