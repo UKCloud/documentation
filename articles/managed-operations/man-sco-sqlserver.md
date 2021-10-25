@@ -4,7 +4,7 @@ description: Outlines important details regarding UKCloud's Managed SQL Server s
 services: managed-operations
 author: sdixon
 reviewer: sdixon
-lastreviewed: 27/07/2021
+lastreviewed: 25/10/2021
 toc_rootlink: Advanced Support Services
 toc_sub1: Managed SQL Server
 toc_sub2:
@@ -125,7 +125,7 @@ Triggers/stored procedures                                         | N          
 Client connector configuration                                     | N               | Y        | £
 Tuning (once a month per instance)                                 | Y               | N        | N
 Maintenance plans (define & implement - inc. index reorg/rebuilds) | Y               | N        | N
-Weekly statistics update for top query optimiser performance       | Y               | N        | N
+Monthly statistics update for top query optimiser performance      | Y               | N        | N
 Daily database integrity check for database corruption             | Y               | N        | N
 Quarterly SQL Server performance reviews                           | Y               | N        | N
 
