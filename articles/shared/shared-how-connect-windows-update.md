@@ -20,7 +20,7 @@ toc_mdlink: shared-how-connect-windows-update.md
 > [!IMPORTANT]
 > UKCloud is making important updates to WSUS services. For more details, see the [UKCloud Service Status page](https://status.ukcloud.com/incidents/820kym82cmjz).
 > 
-> In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port TCP/8530 and TCP/8531. Note that, for these new systems below, you *do not* need to allow TCP/443.
+> In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port TCP/8530 and TCP/8531. Note that, for these new systems below, you *do not* need to allow TCP/443 (but you will be required to update the FQDN used - detailed below). However, in order to help facilitate a smooth transition TCP/443 will still be available for a duration post-change. We would, however, encourage you to update your systems to use TCP/8531 (which is the Microsoft standard) for encrypted communications. Upon completion of a successful migration to the new services, further communications will be issued to detail the turning off of TCP/443 for this service.
 >
 > Due to the changes above, once the switch-over from the **old** WSUS systems to the **new** WSUS systems happens (due on 30th November 2021), you'll need to append the SSL port (8531) to the FQDN of the WSUS systems. For example:
 >
