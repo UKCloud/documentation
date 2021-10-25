@@ -4,7 +4,7 @@ description: Shows how to create firewall rules within the VMware Cloud Director
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 17/09/2020
+lastreviewed: 07/10/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -74,9 +74,10 @@ To create a firewall rule:
 
         ![Select objects dialog box](images/vmw-vcd10.1-edge-firewall-select-objects.png)
 
-    - If you're likely to reuse a the same group of source or destination IP addresses in multiple rules, select the **Grouping Objects** tab and click **+** to create an IP set. You can then select this IP set in the *Select objects* dialog box.
-
-        ![New IP Set dialog box](images/vmw-vcd10.1-edge-firewall-ip-set.png)
+      > [TIP]
+      > If you're likely to reuse the same group of source or destination IP addresses in multiple rules, select the **Grouping Objects** tab and click **+** to create an IP set. You can then select this IP set in the *Select objects* dialog box.
+      >
+      >    ![New IP Set dialog box](images/vmw-vcd10.1-edge-firewall-ip-set.png)
 
 8. Select the **Service** field and click **+**.
 
