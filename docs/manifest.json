@@ -15664,6 +15664,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-ps-export-edge-data-api-creds.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-ps-export-edge-data-api-creds.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-accept-header.png",
       "output": {
         "resource": {
@@ -22019,7 +22030,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-snapshot-protection.html",
-          "hash": "Ajc2m82SYatu3aTP2vSlj6HYez/DIWtWvxcQL3tzVxw="
+          "hash": "1kcwdt278yUF84rOc5RiUB1TyEBcL4NePVxCkuui2jM="
         }
       },
       "is_incremental": false,
@@ -22223,7 +22234,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-catalog.html",
-          "hash": "+2gnp/70l2Z1E4fNL88pFN7EiApKbJ/9odAlUtt5ilU="
+          "hash": "vXEgoPmYohYzHr9+UGQTLbGksr69GCKgB/NP3iTlPRg="
         }
       },
       "is_incremental": false,
@@ -22247,7 +22258,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-firewall-rules.html",
-          "hash": "nZQUxeG0FH+lwH0TPQiCY7xpaIy591kzqlURj3jppxo="
+          "hash": "Af23xeBKnub0behKzG0OQ9gJJY6r31OY2QUSA+qjBc4="
         }
       },
       "is_incremental": false,
@@ -22271,7 +22282,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-nat-rules.html",
-          "hash": "LBsx9ebiedme8l8jTzkcDHhKsO5Kkqzvjfoc4dEvbVE="
+          "hash": "ODbqm3JHFuuzzEHA6xIdLQYhPiwOyfyFs/YJ8Kvjquc="
         }
       },
       "is_incremental": false,
@@ -22499,7 +22510,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-ps-export-edge-data.html",
-          "hash": "8NY03MuOfgvmhCpNQFNWN1x1ZQstP6NcMciDAymGqe8="
+          "hash": "Qg6wCMIx+fxQILEXJF8rs3uVI1BFLVMXQbxHu6et3yc="
         }
       },
       "is_incremental": false,
@@ -22799,7 +22810,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-ipsec-vpn.html",
-          "hash": "W4+FIlJxYyrniqBci+fLTBSJ20lFZO4230sMrzyphlk="
+          "hash": "TswmoD3oKnX7toX+aCx7oPZ4smjLCAki+C2ah+TRRe4="
         }
       },
       "is_incremental": false,
@@ -22811,7 +22822,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-naming-vms.html",
-          "hash": "g7zKacHJsvQFXumWx39qyOOkLWKFsvyfAT1usnbJ3Xo="
+          "hash": "Y3FUQ8Eqvj/CyO//RQ9g6aeMf9s2rrMwrzN6WGxYucQ="
         }
       },
       "is_incremental": false,
@@ -23099,7 +23110,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-snapshot-protection.html",
-          "hash": "4VR9j7szedj5+LoaAz+3zG3WjCggaFml9cOtJNdLmEk="
+          "hash": "yhx+ikFGRXZs6EhxtIxdiegROXzeOohMigG5gzKk7HU="
         }
       },
       "is_incremental": false,

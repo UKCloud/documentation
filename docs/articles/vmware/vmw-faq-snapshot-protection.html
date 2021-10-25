@@ -146,6 +146,7 @@
 <p>The time it takes to add snapshot protection to a VM varies depending on how many other requests are in the queue. While the request is processed, the button in the <strong>Snapshot Protection</strong> column changes to an amber <strong>Processing</strong> button.</p>
 <p>When the process has completed, the button changes back to green and will indicate the snapshot policy you chose for the VM (<strong>14‑day</strong> or <strong>28‑day</strong>). If the process fails, the button changes to a red <strong>Failed</strong> button. In this situation, contact the UKCloud support team to resolve the issue.</p>
 <p>The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.</p>
+<p>Due to the higher rate of new data on a VM's initial snapshot backup, each new VM is automatically configured with 'overtime' enabled on it's first backup. This enables it to run to successful completion beyond the standard backup window (20:00-08:00) if required. This helps to ensure the initial backup completes on the first attempt, particularly for large or high change rate VMs. The flag is removed after the first successful backup.</p>
 <h3 id="can-i-change-the-snapshot-policy-for-my-vm-at-any-time">Can I change the snapshot policy for my VM at any time?</h3>
 <p>Yes, there are no restrictions. After your changes have been processed, they will be applied to the snapshot taken in the next backup window.</p>
 <h3 id="how-are-my-automated-vm-snapshots-restored">How are my automated VM snapshots restored?</h3>
@@ -160,7 +161,7 @@
 <p>Data is stored for 14 or 28 days, depending on the retention policy you choose.</p>
 <h3 id="can-i-set-my-own-schedules">Can I set my own schedules?</h3>
 <p>We do not currently support custom schedules.</p>
-<h3 id="can-i-snapshot-a-vm-on-demand">Can I snapshot a VM on demand?</h3>
+<h3 id="can-i-take-a-snapshot-backup-against-a-vm-on-demand">Can I take a snapshot backup against a VM on demand?</h3>
 <p>Not with the UKCloud automated VM snapshot service.</p>
 <p>If you need to snapshot autonomously, you can install your own protection service and use our Cloud Storage service.</p>
 <h3 id="is-the-automated-vm-snapshot-backup-full-or-incremental">Is the automated VM snapshot backup full or incremental?</h3>
@@ -176,8 +177,8 @@
 <h3 id="what-type-of-data-is-the-automated-vm-snapshot-backup-solution-suitable-for">What type of data is the automated VM snapshot backup solution suitable for?</h3>
 <p>The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE and is available on both UKCloud platforms: Assured OFFICIAL (formerly IL2) and Elevated OFFICIAL (formerly IL3).</p>
 <h3 id="do-large-vms-affect-snapshot-backups">Do large VMs affect snapshot backups?</h3>
-<p>For regions 1, 2, 7 or 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size.</p>
-<p>For regions 5, 6, 13 or 14, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.</p>
+<p>For regions 1, 2, 7 and 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size in these regions.</p>
+<p>For regions 5, 6, 13 and 14, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.</p>
 <h3 id="can-i-restrict-the-automated-vm-snapshot-backup-to-specific-files-or-directories">Can I restrict the automated VM snapshot backup to specific files or directories?</h3>
 <p>No, this is not currently possible. You can implement your own protection solution if this is a requirement.</p>
 <h3 id="where-is-the-protected-data-stored">Where is the protected data stored?</h3>
@@ -198,7 +199,7 @@
 </ul>
 <h3 id="do-i-need-to-install-any-software-on-my-vms">Do I need to install any software on my VMs?</h3>
 <p>The automated VM snapshot backup works directly with the cloud platform to capture the entire VM, so there is no need to install any software within the VM.</p>
-<p>If you prefer an application‑consistent backup (rather than a crash‑consistent backup), we recommend that you install VM tools and configure appropriate pre-backup and post-backup scripts.</p>
+<p>We do recommend that you install VMware Tools on all VMs running on UKCloud for VMware. For more information, see <a href="vmw-ref-vmware-tools-installation.html"><em>VMware Tools installation</em></a>.</p>
 <h3 id="if-a-vm-is-deleted-how-long-will-existing-snapshot-backups-be-retained">If a VM is deleted, how long will existing snapshot backups be retained?</h3>
 <p>The UKCloud platform automates the deletion of backups as they reach their retention date. Therefore, 14 or 28 days after the VM is deleted, depending on your chosen profile, the last snapshot backup will automatically be removed from the platform and consequently be unavailable for restore.</p>
 <h3 id="how-and-when-am-i-notified-of-snapshot-backup-failures">How and when am I notified of snapshot backup failures?</h3>
@@ -249,7 +250,7 @@
 <p>Yes, you can set retention polices at a VDC level, meaning that all VMs within the VDC will inherit the retention policy set.</p>
 <h3 id="what-happens-if-i-add-vms-to-a-vdc-that-has-a-defined-retention-policy">What happens if I add VMs to a VDC that has a defined retention policy?</h3>
 <p>All VMs that are created once a VDC policy is set will be automatically added into the protection policy. If you decide to change the VDC policy, you can choose to apply the new policy to ALL existing VMs in the VDC. Further details can be found in the <a href="vmw-sco-snapshot-protection.html">Snapshot Protection Service Scope</a> and guidance on how to apply protection to VMs and VDCs can be found in the <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
-<h3 id="are-snapshot-policies-automatically-applied-to-vms">Are Snapshot policies automatically applied to VMs?</h3>
+<h3 id="are-snapshot-policies-automatically-applied-to-vms">Are snapshot policies automatically applied to VMs?</h3>
 <p>Protection products are not automatically applied to VMs running on the UKCloud platform, therefore you must explicitly select the protection option that best meets your requirements.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>

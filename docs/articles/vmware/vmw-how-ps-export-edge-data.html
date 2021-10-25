@@ -100,14 +100,9 @@
 <li><p>Install PowerCLI from VMware:</p>
 <p><a href="https://code.vmware.com/web/tool/12.0.0/vmware-powercli">https://code.vmware.com/web/tool/12.0.0/vmware-powercli</a></p>
 </li>
-<li><p>Open your PowerCLI session and connect to Cloud Director.</p>
-<p>You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see <a href="vmw-how-access-vcloud-api.html#finding-your-cloud-director-api-credentials"><em>Finding your Cloud Director API credentials</em></a>.</p>
-</li>
-<li><p>Copy the following function and paste it into a .psm1 file:</p>
-<pre><code>Function Get-EdgeConfig ($EdgeGateway)
-
+<li><p>Copy the following function and paste it into a <code>.psm1</code> file:</p>
+<pre><code class="lang-none">function Get-EdgeConfig ($EdgeGateway)
 {
-
     $Edgeview = $EdgeGateway | get-ciview
 
     $webclient = New-Object system.net.webclient
@@ -139,36 +134,43 @@
     $EGWConfXML.edge.features.DHCP
 
     Return $Holder
-
 }
-
 </code></pre>
 </li>
-<li><p>Enter the following command to import the function.</p>
-<pre><code> Import-Module [PATH TO PSM1 FILE]
+<li><p>Enter the following command to import the function:</p>
+<p><code>Import-Module &lt;path-to-psm1-file&gt;</code></p>
+</li>
+<li><p>Connect to VMware Cloud Director using the following commands, swapping the <code>&lt;user-name&gt;</code> and <code>&lt;org-id&gt;</code> with your credentials and the <code>&lt;api-url&gt;</code> with your region details (which is the API URL without the <code>http://</code> part):</p>
+<pre><code class="lang-none">$credential = Get-Credential -Message &quot;Enter your Cloud Director password?&quot; -UserName &lt;user-name&gt;
+
+$vcd = Connect-CIServer -Server &lt;api-url&gt; -Org &lt;org-id&gt; -Credential $credential
 </code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can find your credentials and region information in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see <a href="vmw-how-access-vcloud-api.html#finding-your-cloud-director-api-credentials"><em>Finding your Cloud Director API credentials</em></a>.</p>
+<p>Make sure to use the <strong>Username</strong> rather than the <strong>API Username</strong>.</p>
+<p><img src="images/vmw-ps-export-edge-data-api-creds.png" alt="API credentials"></p>
+</div>
 </li>
 <li><p>Find your edge gateways by entering the following command:</p>
-<pre><code> $Gateways = Search-Cloud -QueryType EdgeGateway
-</code></pre>
+<p><code>$Gateways = Search-Cloud -QueryType EdgeGateway</code></p>
 </li>
 <li><p>Inspect the <code>$Gateways</code> variable and identify the edge for which you want to export configuration data.</p>
 </li>
 <li><p>Retrieve the configuration data for your chosen edge.</p>
 <p>For example, to retrieve configuration data for the first edge in the <code>$Gateways</code> variable, enter the following command:</p>
-<pre><code> $Config = Get-EdgeConfig -EdgeGateway $Gateways[0]
-</code></pre>
+<p><code>$Config = Get-EdgeConfig -EdgeGateway $Gateways[0]</code></p>
 </li>
 <li><p>Inspect the <code>$Config</code> variable. It will have the following properties:</p>
-<pre><code> $Config.Firewall = All the firewall rules
- $Config.NAT = All the NAT rules
- $Config.LoadBalancer = All load balancer rules
- $Config.DHCP = All DHCP pools
+<pre><code class="lang-none">$Config.Firewall = All the firewall rules
+$Config.NAT = All the NAT rules
+$Config.LoadBalancer = All load balancer rules
+$Config.DHCP = All DHCP pools
 </code></pre>
 <p>You can drill down further into the object's properties to retrieve more details. For example, using <code>$Config.firewall[0].source</code>, you can examine the source of the first retrieved firewall rule.</p>
 </li>
-<li><p>Data such as source addresses is presented as objects in objects, so if you want to export the data to a CSV, we recommend first using code like that shown below to extract these values and present them at the top level.</p>
-<pre><code>function Get-FirewallDetails ($config)
+<li><p>Data such as source addresses is presented as objects in objects, so if you want to export the data to a CSV, we recommend first using code like that shown below to extract these values and present them at the top level. You could add these functions to your previously created <code>.psm1</code> file and import them as before.</p>
+<pre><code class="lang-none">function Get-FirewallDetails ($config)
 {
     foreach ($fwrule in $config.firewall){
         $protocol = $fwrule.application.service.protocol
@@ -209,7 +211,7 @@ function Get-NatDetails ($config)
 <p>You can then run <code>Get-FirewallDetails $Config</code> to make the results more export-friendly.</p>
 </li>
 <li><p>To export this data to a CSV file, enter a command such as:</p>
-<pre><code>$Config.Firewall | Export-csv -path c:\users\myaccount\desktop\firewallrules.csv
+<pre><code class="lang-none">$Config.Firewall | Export-csv -path c:\users\myaccount\desktop\firewallrules.csv
 
 $Config.Nat | Export-csv -path c:\users\myaccount\desktop\natrules.csv -notypeinformation
 </code></pre>
