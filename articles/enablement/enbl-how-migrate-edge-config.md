@@ -4,7 +4,7 @@ description: Describes how to migrate edge configuration data to another edge
 services: enablement
 author: brees
 reviewer: shighmoor
-lastreviewed: 22/10/2021
+lastreviewed: 25/10/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -53,13 +53,17 @@ To retrieve organisation information using the YARC client:
 
 2. Copy the URL and paste it into the Request **URL** field.
 
+3. You must be in admin mode to retrieve the list of VDCs in the organisation, so change the URL to:
+
+   `https://<api_url>/api/admin/org/<org_id>`
+
    ![API call to get organisation details](images/vmw-restclient-get-vorg-url.png)
 
-3. From the list of methods, select **GET**.
+4. From the list of methods, select **GET**.
 
    ![GET request method](images/vmw-restclient-method-get.png)
 
-4. Click **Send Request**.
+5. Click **Send Request**.
 
    After a short amount of time the contents of the **Response Body** tab will be updated to reflect the response from the Cloud Director API to your latest request.
 
@@ -69,27 +73,19 @@ When locating the VDC and exporting the edge configuration, perform this for bot
 
 To retrieve details about the VDCs in an organisation using the YARC client:
 
-1. From the previous **Response Body**, copy the link to query the list of VDCs in the organisaton.
+1. The response this time will probably be quite long. To easily locate a specific section in the response, use your browser's search utility (typically accessed by pressing **CTRL+F**). In the search field, enter `Vdcs` to locate a section that looks similar to the one shown below:
 
-   ![Link for querying VDCs](images/vmw-restclient-get-vorg-query-link.png)
+   ```xml
+   <Vdcs>
+        <Vdc href="https://<api-url>/api/vdc/<vdc1-id>" id="urn:vcloud:vdc:<vdc1-id>" name="<vdc-name>" type="application/vnd.vmware.vcloud.vdc+xml"/>
+        <Vdc href="https://<api-url>/api/vdc/<vdc2-id>" id="urn:vcloud:vdc:<vdc2-id>" name="<vdc-name>" type="application/vnd.vmware.vcloud.vdc+xml"/>
+        <Vdc href="https://<api-url>/api/vdc/<vdc3-id>" id="urn:vcloud:vdc:<vdc3-id>" name="<vdc-name>" type="application/vnd.vmware.vcloud.vdc+xml"/>
+    </Vdcs>
+    ```
 
-   The link should look something like:
+2. Copy the link for the VDC that contains the edge gateway.
 
-   `https://<api_url>/api/query?type=orgVdc`
-
-2. Paste the query link into the **URL** field at the top of the page (the method should still be set to **GET**) and click **Send Request**.
-
-   The contents of the **Response Body** tab will be updated again.
-
-3. From the new **Response Body**, copy the link for the VDC that contains the edge gateway.
-
-   ![Link for retrieving VDC details](images/vmw-restclient-get-vdc-link.png)
-
-   The link will be in the `OrgVdcRecord` section, and will look something like:
-
-   `https://<api-url>/api/vdc/<vdc-id>`
-
-4. Paste the VDC link into the **URL** field at the top of the page (the method should still be set to **GET**) and click **Send Request**.
+3. Paste the VDC link into the **URL** field at the top of the page (the method should still be set to **GET**) and click **Send Request**.
 
    The contents of the **Response Body** tab will be updated again.
 
@@ -97,13 +93,13 @@ To retrieve details about the VDCs in an organisation using the YARC client:
 
 To retrieve details of the edge gateway configuration using the YARC client:
 
-1. The response this time will probably be quite long. To easily locate a specific section in the response, use your browser's search utility (typically accessed by pressing **CTRL+F**). In the search field, enter `edgeGateways` and then click the down arrow button to locate a section that looks similar to the one shown below:
+1. Use your browser's search utility to locate the `edgeGateways` link, which will look similar to:
 
    `<Link rel="edgeGateways" href="https://<api_url>/api/admin/vdc/<vdc_id>/edgeGateways" type="application/vnd.vmware.vcloud.query.records+xml" />`
 
 2. Copy the link ending in `/edgeGateways` and paste it into the **URL** field at the top of the REST client. Ensure that the method is still set to **GET** and click **Send Request**.
 
-   Once you've received a response, use your browser's search utility to locate the `EdgeGatewayRecord` section. This section contains a link that you can query to return the configuration of the edge gateway.
+   Once you've received a response, locate the `EdgeGatewayRecord` section for the edge gateway.
 
    ![Link for retrieved edge configuration details](images/vmw-restclient-get-edge-link.png)
 

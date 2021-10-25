@@ -3,8 +3,8 @@ title: How to interact with the Cloud Director REST API using PowerShell and Pyt
 description: A brief introduction on how to start interacting with the Cloud Director REST API with PowerShell and Python
 services: vmware
 author: shighmoor
-reviewer: dcoombes
-lastreviewed: 15/11/2019
+reviewer: acirel
+lastreviewed: 25/10/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -43,9 +43,9 @@ You'll then need to install the package: <https://pypi.org/project/requests/>
 
 The first thing you'll need to do is log in to the Portal and get your API credentials:
 
-![Link to API credentials in the Portal](images/api_menu.png)
+![Link to API credentials in the Portal](images/vmw-portal-mnu-api.png)
 
-Select API from the menu on the top right, you'll then get all of the credentials for each of the Cloud Director Orgs that you have access to. Note down the username field for the one you are going to interact with.
+Select API from the menu on the top right, you'll then get all of the credentials for each of the Cloud Director organisations that you have access to. Note down the **API URL** and **API Username** for the organisation you want to interact with.
 
 For more detailed instructions, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md).
 
@@ -56,7 +56,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 1. Copy and paste the following script into a .psm1 file:
 
    ```none
-   $Global:SkyscapeURL = "https://<API URL from Portal>/api"
+   $Global:SkyscapeURL = "https://<api-url>/api"
 
    $Global:Authorization = ""
 
@@ -132,7 +132,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
    import requests
 
-   SkyscapeURL = "https://<API URL from portal>/api"
+   SkyscapeURL = "https://<api-url>/api"
 
    Authorization = ""
 
@@ -178,11 +178,11 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
        return (res.content)
 
-    # login to vcloud
+    # login to Cloud Director
 
     New_vCloudLogin("user@org","mypassword")
 
-    # demo query, get all VM's and print them to screen
+    # demo query, get all VMs and print them to screen
 
     data = Get_vCloudRequest("query?type=vm")
 
