@@ -211,7 +211,7 @@ The steps below outline how to apply the amended configuration to your new edge 
    </EdgeGatewayServiceConfiguration>
    ```
 
-2. Copy and paste this configuration into the **Payload** field of the *Request Settings** section.
+2. Copy and paste this configuration into the **Payload** field of the *Request Settings* section.
 
 3. Select the **POST** method.
 

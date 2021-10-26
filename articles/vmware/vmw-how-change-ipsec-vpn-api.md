@@ -231,7 +231,7 @@ The steps below outline how to apply the amended your IPsec VPN configuration us
 
 1. Enclose the new configuration in a pair of `<EdgeGatewayServiceConfiguration>` tags.
 
-2. Copy and paste this configuration into the **Payload** field of the *Request Settings** section.
+2. Copy and paste this configuration into the **Payload** field of the *Request Settings* section.
 
 3. Select the **POST** method.
 
