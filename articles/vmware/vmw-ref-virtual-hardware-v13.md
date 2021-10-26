@@ -21,37 +21,39 @@ toc_mdlink: vmw-ref-virtual-hardware-v13.md
 
 In comparison to Virtual Hardware v12, Virtual Hardware v13 enables UKCloud to support increased maximum memory, an NVMe Controller and PVRDMA (Paravirtual RDMA). 
 
-Supported Guest OS's can be found via [VMWare's Compatibility Guide] (https://www.vmware.com/resources/compatibility/search.php?deviceCategory=software). Setting "Product Release Version" to "EXI 6.5 U3".
-
+You can find a list of supported guest OSs via the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php?deviceCategory=software) (set **Product Release Version** to **ESXi 6.5 U3**).
 
 ## When do these changes take effect?
 
-UKCloud has enabled hardware version 13 across our entire UKCloud for VMware estate. Please note, across specific enviroments, Virtual Hardware 14 is present, and the default (not limted to):
+UKCloud has enabled Virtual Hardware v13 across our entire UKCloud for VMware estate. 
+
+Note that Virtual Hardware v14 is currently available in the following regions (with the remainder to follow):
+
 - Region 1,2,7,8  
 
 - Zone 2e (Region 14)
 
-- Zone 2d(Region 13)
+- Zone 2d (Region 13)
 
-- Zone 1(Region 6)
+- Zone 1 (Region 6)
 
-- Some Compute
-
-Please reach our to your Service Delivery Manager for more information.
+Contact your Service Delivery Manager for more information.
 
 Any new virtual machines (VMs) will, by default, be created with the updated virtual hardware version. 
 
 Any existing VMs and templates will continue to use their currently configured virtual hardware version until such time as you select to change this. Any clones/copies of VMs or templates will retain the same virtual hardware version as the source image.
 
+## How do I manually upgrade the Virtual Hardware version of my VM?
+
 Prior to upgrading the Virtual Hardware version, you should note the following:
 
-- You cannot downgrade the hardware version of the virtual machines in a vApp
+- You cannot downgrade the hardware version of the virtual machines in a vApp.
 
 - The vApp/VMs must be stopped and its virtual machines must have the latest version of VMware Tools installed.
 
-UKCloud recommend following VMWare's [upgrading virtual hardware version] (https://kb.vmware.com/s/article/1010675) guide
+We recommend referring to the following VMware documentation for mre information: [Upgrading a virtual machine to the latest hardware version](https://kb.vmware.com/s/article/1010675).
 
-## How do I manually upgrade the Virtual Hardware version of my VM?
+To upgrade the Virtual Hardware version of a VM:
 
 1. Log into the UKCloud Portal and access VMware Cloud Director.
 
@@ -67,7 +69,7 @@ UKCloud recommend following VMWare's [upgrading virtual hardware version] (https
 
 The update of CPU features may result in some operating systems being reconfigured on their next reboot. We advise that you monitor the first reboot of any VMs to ensure any OS configuration changes apply correctly.
 
-For other precautions, and guidance, please visit VMWare's [upgrading virtual hardware version] (https://kb.vmware.com/s/article/1010675)
+For other precautions and guidance, see the following VMware documentation: [Upgrading a virtual machine to the latest hardware version](https://kb.vmware.com/s/article/1010675).
 
 ## Feedback
 
