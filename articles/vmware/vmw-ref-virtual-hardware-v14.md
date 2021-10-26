@@ -25,7 +25,7 @@ You can find a list of supported guest OSs via the [VMware Compatibility Guide](
 
 ## When do these changes take effect?
 
-Currently, UKCloud has enabled these upgrades across the following regions, with the remainder follow:
+Currently, UKCloud has enabled these upgrades across the following regions (with the remainder to follow):
 
 - Region 1,2,7,8  
 
