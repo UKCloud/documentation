@@ -1,6 +1,6 @@
 ---
-title: Availability of Virtual Hardware version 11
-description: UKCloud has upgraded UKCloud for VMware to expose Virtual Hardware version 11
+title: Availability of Virtual Hardware version 14
+description: UKCloud has upgraded UKCloud for VMware to expose Virtual Hardware version 14
 services: vmware
 author: shighmoor
 reviewer: swthomas
@@ -15,9 +15,9 @@ toc_fullpath: Reference/vmw-ref-virtual-hardware-v14.md
 toc_mdlink: vmw-ref-virtual-hardware-v14.md
 ---
 
-# Availability of Virtual Hardware version 11
+# Availability of Virtual Hardware version 14
 
-## What does Virtual Hardware v11 provide?
+## What does Virtual Hardware v14 provide?
 
 In comparison to Virtual Hardware v13, Virtual Hardware v14 enables UKCloud to support NVDIMM controller, 64 NVDIMM devices, Virtual I/O MMU, Virtual TPM and Microsoft VBS.
 

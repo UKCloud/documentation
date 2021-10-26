@@ -1,6 +1,6 @@
 ---
-title: Availability of Virtual Hardware version 11
-description: UKCloud has upgraded UKCloud for VMware to expose Virtual Hardware version 11
+title: Availability of Virtual Hardware version 13
+description: UKCloud has upgraded UKCloud for VMware to expose Virtual Hardware version 13
 services: vmware
 author: shighmoor
 reviewer: swthomas
@@ -15,7 +15,7 @@ toc_fullpath: Reference/vmw-ref-virtual-hardware-v13.md
 toc_mdlink: vmw-ref-virtual-hardware-v13.md
 ---
 
-# Availability of Virtual Hardware version 11
+# Availability of Virtual Hardware version 13
 
 ## What does Virtual Hardware v13 provide?
 
