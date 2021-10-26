@@ -31,13 +31,13 @@ Before using the Cloud Director API to migrate edge configuration data, we recom
 
 ## Obtaining an authorisation token
 
-To start interacting with the Cloud Director API, you first need to find your API credentials and use those to obtain an `x-vcloud-authorization` token.
+To start interacting with the Cloud Director API, you first need to find your API credentials and use those to obtain an `x-vmware-vcloud-access-token` token.
 
 For detailed steps for how to do this, see [*How to access VMware Cloud Director through the Cloud Director API*](../vmware/vmw-how-access-vcloud-api.md).
 
 ## Retrieving organisation details via the API
 
-Now that you've obtained an `x-vcloud-authorization` token, you can call the Cloud Director API to retrieve the information that you need about your organisation to extract your edge configuration data.
+Now that you've obtained an `x-vmware-vcloud-access-token` token, you can call the Cloud Director API to retrieve the information that you need about your organisation to extract your edge configuration data.
 
 To retrieve organisation information using the YARC client:
 
