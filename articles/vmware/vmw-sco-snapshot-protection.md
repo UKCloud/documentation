@@ -51,21 +51,27 @@ We cannot guarantee the time at which your VM will have a snapshot taken inside 
 
 There's a system hard stop at 09:00, at which time any active snapshots are cancelled.
 
+Due to the higher rate of new data on a VM's initial snapshot backup, each new VM is automatically configured with 'overtime' enabled on it's first backup. This enables it to run to successful completion beyond the standard backup window (20:00-08:00) if required. This helps to ensure the initial backup completes on the first attempt, particularly for large or high change rate VMs. The flag is removed after the first successful backup.
+
 ### Success rate
 
 We do not guarantee successful snapshots.
 
 We can provide you with guidance on suitable candidates for Snapshot Protection (data change rate/size).
 
-VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Contact your Service Delivery Manager if this scenario applies to one or more of your VMs.
+For regions 1, 2, 7 and 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size in these regions.
+
+For regions 5, 6, 13 and 14, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.
 
 VM snapshots may be attempted more than once to obtain successful status.
 
 Only the final state will count in our calculations.
 
+Partial snapshots and those with errors count as failed.
+
 Any snapshots still in progress at 09:00 are considered as failed.
 
-Partial snapshots and those with errors count as failed.
+Due to the higher rate of new data on a VM's initial snapshot backup, each new VM is automatically configured with 'overtime' enabled on it's first backup. This enables it to run to successful completion beyond the standard backup window (20:00-08:00) if required. This helps to ensure the initial backup completes on the first attempt, particularly for large or high change rate VMs. The flag is removed after the first successful backup.
 
 ### Reruns
 
@@ -127,7 +133,7 @@ You'll need to make any necessary switchover/networking changes.
 
 ### Fair use policy
 
-You can request up to four restores per month. If you request more than this, we will suggest a cloud architect investigate.
+You can request up to four restores per month. If you request more than this, we will suggest a Cloud Architect investigate.
 
 The total number of VMs (or disks) in a restore request should not exceed five.
 
@@ -143,7 +149,7 @@ We'll proactively investigate failures on the platform on the following triggers
 
 - Platform:
 
-  - More than 50 missed VMs (VMs that should be in policy, but have not     been backed up)
+  - More than 50 missed VMs (VMs that should be in policy, but have not been backed up)
 
   - Less than 99% success rate for VM snapshot
 

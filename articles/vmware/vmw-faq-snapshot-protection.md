@@ -2,9 +2,9 @@
 title: Snapshot Protection FAQs
 description: Frequently asked questions for Snapshot Protection
 services: vmware
-author: Matt Warner
-reviewer: George Smith
-lastreviewed: 23/10/2019 16:00
+author: mwarner
+reviewer: tpowell
+lastreviewed: 08/12/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -87,6 +87,8 @@ When the process has completed, the button changes back to green and will indica
 
 The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.
 
+Due to the higher rate of new data on a VM's initial snapshot backup, each new VM is automatically configured with 'overtime' enabled on it's first backup. This enables it to run to successful completion beyond the standard backup window (20:00-08:00) if required. This helps to ensure the initial backup completes on the first attempt, particularly for large or high change rate VMs. The flag is removed after the first successful backup.
+
 ### Can I change the snapshot policy for my VM at any time?
 
 Yes, there are no restrictions. After your changes have been processed, they will be applied to the snapshot taken in the next backup window.
@@ -115,7 +117,7 @@ Data is stored for 14 or 28 days, depending on the retention policy you choose.
 
 We do not currently support custom schedules.
 
-### Can I snapshot a VM on demand?
+### Can I take a snapshot backup against a VM on demand?
 
 Not with the UKCloud automated VM snapshot service.
 
@@ -147,9 +149,9 @@ The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE an
 
 ### Do large VMs affect snapshot backups?
 
-For regions 1, 2, 7 or 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size.
+For regions 1, 2, 7 and 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size in these regions.
 
-For regions 5, 6, 13 or 14, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.
+For regions 5, 6, 13 and 14, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.
 
 ### Can I restrict the automated VM snapshot backup to specific files or directories?
 
@@ -183,7 +185,7 @@ The larger the VM, the longer the restore time:
 
 The automated VM snapshot backup works directly with the cloud platform to capture the entire VM, so there is no need to install any software within the VM.
 
-If you prefer an application‑consistent backup (rather than a crash‑consistent backup), we recommend that you install VM tools and configure appropriate pre-backup and post-backup scripts.
+We do recommend that you install VMware Tools on all VMs running on UKCloud for VMware. For more information, see [*VMware Tools installation*](vmw-ref-vmware-tools-installation.md).
 
 ### If a VM is deleted, how long will existing snapshot backups be retained?
 
@@ -255,11 +257,10 @@ Yes, you can set retention polices at a VDC level, meaning that all VMs within t
 
 All VMs that are created once a VDC policy is set will be automatically added into the protection policy. If you decide to change the VDC policy, you can choose to apply the new policy to ALL existing VMs in the VDC. Further details can be found in the [Snapshot Protection Service Scope](vmw-sco-snapshot-protection.md) and guidance on how to apply protection to VMs and VDCs can be found in the [*How to manage Snapshot Protection for your VMs*](vmw-how-manage-snapshot-protection.md).
 
-### Are Snapshot policies automatically applied to VMs?
+### Are snapshot policies automatically applied to VMs?
 
 Protection products are not automatically applied to VMs running on the UKCloud platform, therefore you must explicitly select the protection option that best meets your requirements.
 
 ## Feedback
-
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

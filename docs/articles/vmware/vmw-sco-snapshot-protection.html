@@ -114,14 +114,17 @@
 <p>Snapshots take place 365 days of the year and are started inside the UKCloud‑defined window: 20:00-08:00. Snapshots are not started before 20:00 or after 08:00.</p>
 <p>We cannot guarantee the time at which your VM will have a snapshot taken inside this window; the time may also vary from day to day. The time of a snapshot is reported via the UKCloud Portal the next day.</p>
 <p>There's a system hard stop at 09:00, at which time any active snapshots are cancelled.</p>
+<p>Due to the higher rate of new data on a VM's initial snapshot backup, each new VM is automatically configured with 'overtime' enabled on it's first backup. This enables it to run to successful completion beyond the standard backup window (20:00-08:00) if required. This helps to ensure the initial backup completes on the first attempt, particularly for large or high change rate VMs. The flag is removed after the first successful backup.</p>
 <h3 id="success-rate">Success rate</h3>
 <p>We do not guarantee successful snapshots.</p>
 <p>We can provide you with guidance on suitable candidates for Snapshot Protection (data change rate/size).</p>
-<p>VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Contact your Service Delivery Manager if this scenario applies to one or more of your VMs.</p>
+<p>For regions 1, 2, 7 and 8, large VMs (2 TiB+) with high change rates are not recommended for Snapshot Protection, as the service will spend longer trying to establish what has changed and then attempt to back all of it up. You should take an alternative backup approach with VMs of this size in these regions.</p>
+<p>For regions 5, 6, 13 and 14, you can use Snapshot Protection for large VMs. However, you should still consider the impact of recovery time for large VMs.</p>
 <p>VM snapshots may be attempted more than once to obtain successful status.</p>
 <p>Only the final state will count in our calculations.</p>
-<p>Any snapshots still in progress at 09:00 are considered as failed.</p>
 <p>Partial snapshots and those with errors count as failed.</p>
+<p>Any snapshots still in progress at 09:00 are considered as failed.</p>
+<p>Due to the higher rate of new data on a VM's initial snapshot backup, each new VM is automatically configured with 'overtime' enabled on it's first backup. This enables it to run to successful completion beyond the standard backup window (20:00-08:00) if required. This helps to ensure the initial backup completes on the first attempt, particularly for large or high change rate VMs. The flag is removed after the first successful backup.</p>
 <h3 id="reruns">Reruns</h3>
 <p>We may attempt to rerun a failed snapshot inside the window, depending on the failure code.</p>
 <p>We will not rerun snapshots outside the window.</p>
@@ -158,7 +161,7 @@
 <p>We'll provide an image from a successful snapshot of your choice from within the policy length (that is, the last 14 or 28 days).</p>
 <p>You'll need to make any necessary switchover/networking changes.</p>
 <h3 id="fair-use-policy">Fair use policy</h3>
-<p>You can request up to four restores per month. If you request more than this, we will suggest a cloud architect investigate.</p>
+<p>You can request up to four restores per month. If you request more than this, we will suggest a Cloud Architect investigate.</p>
 <p>The total number of VMs (or disks) in a restore request should not exceed five.</p>
 <h2 id="kpis">KPIs</h2>
 <p>We'll proactively investigate failures on the platform on the following triggers:</p>
@@ -173,7 +176,7 @@
 </li>
 <li><p>Platform:</p>
 <ul>
-<li><p>More than 50 missed VMs (VMs that should be in policy, but have not     been backed up)</p>
+<li><p>More than 50 missed VMs (VMs that should be in policy, but have not been backed up)</p>
 </li>
 <li><p>Less than 99% success rate for VM snapshot</p>
 </li>
