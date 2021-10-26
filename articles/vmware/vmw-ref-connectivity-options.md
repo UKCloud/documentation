@@ -2,7 +2,7 @@
 title: Understanding connectivity options in UKCloud for VMware
 description: Describes the two different architecture designs used in UKCloud for VMware so that you can better understand your environment and more effectively design your solutions
 services: vmware
-author: shihmoor
+author: shighmoor
 reviewer: swthomas
 lastreviewed: 26/10/2021
 toc_rootlink: Reference
