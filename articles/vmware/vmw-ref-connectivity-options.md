@@ -2,8 +2,8 @@
 title: Understanding connectivity options in UKCloud for VMware
 description: Describes the two different architecture designs used in UKCloud for VMware so that you can better understand your environment and more effectively design your solutions
 services: vmware
-author: Sue Highmoor
-reviewer: Samuel Thomas
+author: shighmoor
+reviewer: swthomas
 lastreviewed: 26/10/2021
 toc_rootlink: Reference
 toc_sub1: 
@@ -137,7 +137,7 @@ If you change from a UKCloud‑provided firewall to your own firewall, we'll red
 
 ### IP address allocations
 
-When you create a new vOrg, we'll provide you with a number of usable IP addresses per vDC, depending on the network you're connecting to:
+When you create a new vOrg, we'll provide you with a number of usable IP addresses per VDC, depending on the network you're connecting to:
 
 - Internet - 5 x usable IPs
 
