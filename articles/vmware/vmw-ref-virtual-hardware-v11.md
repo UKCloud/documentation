@@ -2,8 +2,8 @@
 title: Availability of Virtual Hardware version 11
 description: UKCloud has upgraded UKCloud for VMware to expose Virtual Hardware version 11
 services: vmware
-author: Sue Highmoor
-reviewer: Samuel Thomas
+author: shighmoor
+reviewer: swthomas
 lastreviewed: 26/10/2021
 toc_rootlink: Reference
 toc_sub1: 
@@ -65,7 +65,7 @@ Prior to upgrading the Virtual Hardware version, you should note the following:
 
 The update of CPU features may result in some operating systems being reconfigured on their next reboot. We advise that you monitor the first reboot of any VMs to ensure any OS configuration changes apply correctly.
 
-For other precautions, and guidance, please visit VMWare's [guide] (https://kb.vmware.com/s/article/1010675)
+For other precautions and guidance, see the following VMware documentation: [Upgrading a virtual machine to the latest hardware version](https://kb.vmware.com/s/article/1010675).
 
 ## Feedback
 
