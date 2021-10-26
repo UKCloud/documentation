@@ -4,7 +4,7 @@ description: Describes how the UKCloud platform supports the development of high
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 18/10/2021
+lastreviewed: 26/10/2021
 
 toc_rootlink: Reference
 toc_sub1:
@@ -44,11 +44,11 @@ Storage infrastructure | Redundant power supplies and fans<br>Redundant dual sto
 
 We offer a number of different connectivity options for you to gain access to our services.
 
-Connectivity option | High-availability considerations
---------------------|---------------------------------
-Internet            | Multiple, redundant, high-speed internet links with DDoS mitigation to protect the platform as a whole.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available via different RIPE IP addresses (ideally on different IP network ranges).
-PSN/HSCN            | Redundant, high-speed connectivity with automatic failover.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available.
-HybridConnect       | Enables you to bring your own secure connectivity into the UKCloud environment.<br>We provide colocation services for hardware and can assist in the design.<br>We recommend that you deploy an additional HybridConnect service in another site to ensure that you have redundant connectivity into a second site.<br>We recommend that you use routing protocols to enable automated failover.
+Connectivity option        | High-availability considerations
+---------------------------|---------------------------------
+Internet                   | Multiple, redundant, high-speed internet links with DDoS mitigation to protect the platform as a whole.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available via different RIPE IP addresses (ideally on different IP network ranges).
+PSN/HSCN                   | Redundant, high-speed connectivity with automatic failover.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available.
+HybridConnect/CrownConnect | Enables you to bring your own secure connectivity into the UKCloud environment.<br>We provide colocation services for hardware and can assist in the design.<br>We recommend that you deploy an additional HybridConnect service in another site to ensure that you have redundant connectivity into a second site.<br>We recommend that you use routing protocols to enable automated failover.
 
 ### Supplementary services for high availability
 
@@ -56,7 +56,7 @@ In addition to the high-availability features provided as-standard on our platfo
 
 High-availability consideration | Notes
 --------------------------------|------
-[Neustar UltraDNS from UKCloud](../connectivity/conn-sco-glb.md) | Enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.
+[Neustar UltraDNS from UKCloud](../connectivity/conn-sco-glb.md) | Authoritative DNS that enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.
 [Neustar DDoS Protection from UKCloud](../connectivity/conn-sco-app-ddos.md) | A fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site.
 [Disaster Recovery as a Service](../draas/draas-sd.md) | A powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and the UKCloud platform.
 Replicated backup | Enables your services to be backed up and the backup data replicated to another site.
