@@ -3,8 +3,8 @@ title: Sharing catalogs FAQs
 description: Frequently asked questions for sharing catalogs
 services: vmware
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 23/10/2020
+reviewer: swthomas
+lastreviewed: 27/10/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
