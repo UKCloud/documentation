@@ -40,7 +40,7 @@ Before using the Cloud Director API to view and update IPsec VPN settings, we re
 
 To start interacting with the Cloud Director API, you first need to find your API credentials and use those to obtain an `x-vmware-vcloud-access-token` token.
 
-For detailed steps for how to do this, see [*How to access VMware Cloud Director through the Cloud Director API*](../vmw-how-access-vcloud-api.md).
+For detailed steps for how to do this, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md).
 
 ## Retrieving organisation details via the API
 
