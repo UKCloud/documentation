@@ -4,7 +4,7 @@ description: Describes how the UKCloud platform supports the development of high
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 26/10/2021
+lastreviewed: 01/11/2021
 
 toc_rootlink: Reference
 toc_sub1:
@@ -89,7 +89,7 @@ Use SQL Always On to ensure the availability of SQL server. For more information
 
 ### UKCloud for OpenStack
 
-OpenStack Platform 13 (OSP13) provides Load Balancing-as-a-Service (LBaaS) as a native feature. For more information see the [*Load Balancing-as-a-Service (LBaaS) with Octavia*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) chapter of the OpenStack Networking Guide.
+OpenStack Platform 13 (OSP13) provides Load Balancing-as-a-Service (LBaaS) as a native feature. For more information see the OpenStack [Using Octavia for Load Balancing-as-a-Service](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html-single/using_octavia_for_load_balancing-as-a-service/index) networking guide.
 
 To improve the resilience of your UKCloud for OpenStack applications, you can move resources (for example, instance images and volumes) between the different regions currently offered by UKCloud. For more information, see [*How to move resources between OpenStack regions*](../openstack/ostack-how-move-resources.md).
 
