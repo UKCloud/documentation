@@ -96,7 +96,7 @@ To start interacting with the Cloud Director API, you first need to obtain an `x
 
    b. In the *Header* dialog box, in the **Name** field, enter `Accept`.
 
-   c. In the **Value** field enter `application/*+xml;version=34.0`.
+   c. In the **Value** field enter `application/*+xml;version=34.0` and then click **Save**.
 
       ![Header dialog box](images/vmw-restclient-request-headers1.png)
 
@@ -125,7 +125,7 @@ To start interacting with the Cloud Director API, you first need to obtain an `x
 
    b. In the *Header* dialog box, in the **Name** field enter `Authorization`.
 
-   c. In the **Value** field, enter `Bearer ` (with a trailing space), paste the string of characters copied in the previous step, then click **Save**.
+   c. In the **Value** field, enter `Bearer ` (with a trailing space) followed by the string of characters copied in the previous step, then click **Save**.
 
       ![Authorization token in request headers](images/vmw-restclient-request-headers-token1.png)
 
