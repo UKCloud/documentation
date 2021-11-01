@@ -144,8 +144,10 @@
   items:
   - name: Advanced networking options
     href: vmw-ref-advanced-networking.md
-  - name: Availability of Virtual Hardware version 11
-    href: vmw-ref-virtual-hardware-v11.md
+  - name: Availability of Virtual Hardware version 13
+    href: vmw-ref-virtual-hardware-v13.md
+  - name: Availability of Virtual Hardware version 14
+    href: vmw-ref-virtual-hardware-v14.md
   - name: Changes in VMware Cloud Director 10.1
     href: vmw-ref-vcd-10-1.md
   - name: Cloning vApps using PowerCLI

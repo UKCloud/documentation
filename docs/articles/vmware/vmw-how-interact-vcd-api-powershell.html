@@ -106,14 +106,14 @@
 <p>You'll then need to install the package: <a href="https://pypi.org/project/requests/">https://pypi.org/project/requests/</a></p>
 <h3 id="getting-your-credentials">Getting your credentials</h3>
 <p>The first thing you'll need to do is log in to the Portal and get your API credentials:</p>
-<p><img src="images/api_menu.png" alt="Link to API credentials in the Portal"></p>
-<p>Select API from the menu on the top right, you'll then get all of the credentials for each of the Cloud Director Orgs that you have access to. Note down the username field for the one you are going to interact with.</p>
+<p><img src="images/vmw-portal-mnu-api.png" alt="Link to API credentials in the Portal"></p>
+<p>Select API from the menu on the top right, you'll then get all of the credentials for each of the Cloud Director organisations that you have access to. Note down the <strong>API URL</strong> and <strong>API Username</strong> for the organisation you want to interact with.</p>
 <p>For more detailed instructions, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the Cloud Director API</em></a>.</p>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="powershell-1">PowerShell</h3>
 <ol>
 <li><p>Copy and paste the following script into a .psm1 file:</p>
-<pre><code class="lang-none">$Global:SkyscapeURL = &quot;https://&lt;API URL from Portal&gt;/api&quot;
+<pre><code class="lang-none">$Global:SkyscapeURL = &quot;https://&lt;api-url&gt;/api&quot;
 
 $Global:Authorization = &quot;&quot;
 
@@ -179,7 +179,7 @@ Function Get-vCloudRequest($EndPoint)
 
 import requests
 
-SkyscapeURL = &quot;https://&lt;API URL from portal&gt;/api&quot;
+SkyscapeURL = &quot;https://&lt;api-url&gt;/api&quot;
 
 Authorization = &quot;&quot;
 
@@ -225,11 +225,11 @@ def Get_vCloudRequest(endpoint):
 
    return (res.content)
 
-# login to vcloud
+# login to Cloud Director
 
 New_vCloudLogin(&quot;user@org&quot;,&quot;mypassword&quot;)
 
-# demo query, get all VM's and print them to screen
+# demo query, get all VMs and print them to screen
 
 data = Get_vCloudRequest(&quot;query?type=vm&quot;)
 
