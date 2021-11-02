@@ -4,7 +4,7 @@ description: Frequently asked questions about our UKCloud for Red Hat OpenShift 
 services: openshift
 author: mwarner
 reviewer: alillistone
-lastreviewed: 13/10/2020
+lastreviewed: 13/10/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
