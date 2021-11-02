@@ -3,8 +3,8 @@ title: UKCloud for Red Hat OpenShift Service Scope
 description: Outlines important details regarding UKCloud for Red Hat OpenShift
 services: openshift
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 06/11/2020
+reviewer: steve dixon
+lastreviewed: 02/11/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -23,7 +23,7 @@ If you are considering purchasing our UKCloud for Red Hat OpenShift service, thi
 
 ## About UKCloud for Red Hat OpenShift
 
-UKCloud for Red Hat OpenShift is UKCloud's OpenShift powered Kubernetes Platform as a Service (PaaS). The service provides a secure, private deployment of the Red Hat&trade; OpenShift&trade; Container Platform. The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
+UKCloud for Red Hat OpenShift is UKCloud's OpenShift powered Kubernetes Platform as a Service (PaaS). The service provides a secure, private deployment of the [Red Hat&trade; OpenShift&trade; Container Platform](https://www.redhat.com/en/technologies/cloud-computing/openshift/container-platform). The service is delivered as a managed platform, enabling developers to build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud-native applications and accelerate digital transformation.
 
 UKCloud deploys, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure.
 
@@ -65,7 +65,7 @@ Typical use cases include:
 
 ## Service implementation
 
-UKCloud for Red Hat OpenShift is built using Red Hat's OpenShift Container Platform (OCP) v4, which is the enterprise-hardened version of OKD (previously Origins) v4, which extends the open source Kubernetes project.
+UKCloud for Red Hat OpenShift is built using Red Hat's OpenShift Container Platform (OCP) v4, which is the enterprise-hardened version of [OKD](https://www.okd.io/) (previously Origins) v4, which extends the open source Kubernetes project.
 
 UKCloud for Red Hat OpenShift is built as an isolated single-tenant environment on top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS service, helping to deliver the benefits of single-tenant isolation with the economics and flexibility of multi-tenant infrastructure.
 
@@ -78,17 +78,17 @@ UKCloud for Red Hat OpenShift is packaged to provide you with a high level of fl
 With UKCloud for Red Hat OpenShift, we deploy an OpenShift cluster that contains multiple nodes: nodes for the cluster control plane, infrastructure nodes for additional services, such as ingress controllers, metrics, developer console and aggregated logging, and application nodes for your containerised applications.
 
 > [!NOTE]
-> An operational OpenShift cluster requires a minimum of three control plane nodes to provide the control plane and we recommend a minimum of two infrastructure nodes to provide additional services, such as ingress controllers, metrics, developer console and aggregated logging. You'll need at least one application node to run your application and we recommend a minimum of two nodes for resilience.
+> An operational OpenShift cluster requires a ***Control Plane*** consisting of a minimum of three control plane nodes and we recommend a minimum of two ***Infrastructure Nodes*** to provide additional services, such as ingress controllers, metrics, developer console and aggregated logging. You'll need at least one ***Application Node*** to run your application, however we recommend a minimum of two nodes for resilience.
 
-#### Master nodes
+#### Control Plane
 
-Master nodes provide the foundation OpenShift services to support the orchestration and management of the container runtime environments. An operational OpenShift cluster requires a minimum of three control plane nodes for API, scheduling and etcd key-value store.
+The Control Plane provide the foundation OpenShift services to support the orchestration and management of the container runtime environments. An operational OpenShift cluster requires a minimum of three control plane nodes for API, scheduling and etcd key-value store.
 
-#### Infrastructure nodes
+#### Infrastructure Nodes
 
 Infrastructure nodes provide supporting services such as OpenShift routers, registry, metric collection and aggregated logging. Infrastructure nodes are not mandatory, but we recommend a minimum of two infrastructure nodes to provide integrated cluster services.
 
-#### Application nodes
+#### Application Nodes
 
 Application nodes provide the compute resources to host your containerised applications and services. We strongly recommend the initial deployment of two or more application nodes for production environments to provide resilience to your workloads in the event of the failure of a single node.
 
@@ -184,7 +184,7 @@ By default, only a single user account will be created per cluster, this user ca
 
 ## Platform management
 
-UKCloud for Red Hat OpenShift is managed directly by the customer, using OpenShift's dashboard, the UKCloud Portal, and APIs associated with both.
+UKCloud for Red Hat OpenShift is operated directly by the customer, using OpenShift's dashboard, the UKCloud Portal, and APIs associated with both.
 
 UKCloud maintains responsibility for routine patching and upgrades of the OpenShift platform in-line with the published [*OpenShift life cycle and patch management process*](oshift-ref-lifecycle.md).
 
