@@ -4,7 +4,7 @@ description: Shows how to connect to the UKCloud Windows Server Update Services 
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 20/10/2021
+lastreviewed: 04/11/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -22,15 +22,18 @@ toc_mdlink: shared-how-connect-windows-update.md
 > 
 > In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port TCP/8530 and TCP/8531. Note that, for these new systems below, you *do not* need to allow TCP/443.
 >
-> Due to the changes above, once the switch-over from the **old** WSUS systems to the **new** WSUS systems happens (due on 30th November 2021), you'll need to append the SSL port (8531) to the FQDN of the WSUS systems. For example:
->
->  `https://wsus.frn.ukcloud.com:8531`
->
-> - Assured
+> - Assured IP Addresses
 > 
 >   - 51.179.212.114
 >   
 >   - 51.179.215.210
+>
+>
+> Due to the changes above, once the switch-over from the **old** WSUS systems to the **new** WSUS systems happens (due on 30th November 2021), you'll need to append the SSL port (8531) to the FQDN of the WSUS systems. For example:
+>
+>  `https://wsus.frn.ukcloud.com:8531` and `https://wsus.cor.ukcloud.com:8531`
+>
+> Please be aware that the domain names `wsus.frn.ukcloud.com` and `wsus.cor.ukcloud.com` are to be used in both ASSURED and ELEVATED. Please update your ELEVATED host files accordingly.
 >
 > - For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal
 
