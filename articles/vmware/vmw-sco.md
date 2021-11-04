@@ -2,9 +2,9 @@
 title: UKCloud for VMware Service Scope
 description: Outlines important details regarding UKCloud for VMware
 services: vmware
-author: Steve Hall
-reviewer: Guy Martin
-lastreviewed: 26/06/2019
+author: shall
+reviewer: gmartin
+lastreviewed: 28/10/2021
 toc_rootlink: Service Information
 toc_sub1: UKCloud for VMware
 toc_sub2:
