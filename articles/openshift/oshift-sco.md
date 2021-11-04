@@ -3,7 +3,7 @@ title: UKCloud for Red Hat OpenShift Service Scope
 description: Outlines important details regarding UKCloud for Red Hat OpenShift
 services: openshift
 author: shighmoor
-reviewer: steve dixon
+reviewer: sdixon
 lastreviewed: 02/11/2021
 toc_rootlink: Service Information
 toc_sub1: 
@@ -78,19 +78,19 @@ UKCloud for Red Hat OpenShift is packaged to provide you with a high level of fl
 With UKCloud for Red Hat OpenShift, we deploy an OpenShift cluster that contains multiple nodes: nodes for the cluster control plane, infrastructure nodes for additional services, such as ingress controllers, metrics, developer console and aggregated logging, and application nodes for your containerised applications.
 
 > [!NOTE]
-> An operational OpenShift cluster requires a ***Control Plane*** consisting of a minimum of three control plane nodes and we recommend a minimum of two ***Infrastructure Nodes*** to provide additional services, such as ingress controllers, metrics, developer console and aggregated logging. You'll need at least one ***Application Node*** to run your application, however we recommend a minimum of two nodes for resilience.
+> An operational OpenShift cluster requires a ***Control Plane***, consisting of a minimum of three Control Plane Nodes, and we recommend a minimum of two ***Infrastructure Nodes*** to provide additional services, such as ingress controllers, metrics, developer console and aggregated logging. You'll need at least one ***Application Node*** to run your application, however we recommend a minimum of two nodes for resilience.
 
 #### Control Plane
 
-The Control Plane provide the foundation OpenShift services to support the orchestration and management of the container runtime environments. An operational OpenShift cluster requires a minimum of three control plane nodes for API, scheduling and etcd key-value store.
+The Control Plane provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. An operational OpenShift cluster requires a minimum of three Control Plane Nodes for API, scheduling and etcd key-value store.
 
 #### Infrastructure Nodes
 
-Infrastructure nodes provide supporting services such as OpenShift routers, registry, metric collection and aggregated logging. Infrastructure nodes are not mandatory, but we recommend a minimum of two infrastructure nodes to provide integrated cluster services.
+Infrastructure Nodes provide supporting services such as OpenShift routers, registry, metric collection and aggregated logging. Infrastructure Nodes are not mandatory, but we recommend a minimum of two Infrastructure Nodes to provide integrated cluster services.
 
 #### Application Nodes
 
-Application nodes provide the compute resources to host your containerised applications and services. We strongly recommend the initial deployment of two or more application nodes for production environments to provide resilience to your workloads in the event of the failure of a single node.
+Application Nodes provide the compute resources to host your containerised applications and services. We strongly recommend the initial deployment of two or more Application Nodes for production environments to provide resilience to your workloads in the event of the failure of a single node.
 
 ### Storage options
 
