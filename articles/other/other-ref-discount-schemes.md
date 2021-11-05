@@ -4,7 +4,7 @@ description: Provides information about the different discount and purchase sche
 services: other
 author: shighmoor
 reviewer:
-lastreviewed: 03/12/2020
+lastreviewed: 04/11/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: other-ref-discount-schemes.md
 
 ## Overview
 
-UKCloud provides several discount and purchase schemes.
+UKCloud provides several discount and purchase schemes, including commitment and annual subscription discounts and our Cloud Credits purchasing scheme.
 
 ## Commitment discount
 
