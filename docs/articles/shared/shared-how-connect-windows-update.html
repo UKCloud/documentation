@@ -97,10 +97,8 @@
 <h5>Important</h5>
 <p>UKCloud is making important updates to WSUS services. For more details, see the <a href="https://status.ukcloud.com/incidents/820kym82cmjz">UKCloud Service Status page</a>.</p>
 <p>In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port TCP/8530 and TCP/8531. Note that, for these new systems below, you <em>do not</em> need to allow TCP/443.</p>
-<p>Due to the changes above, once the switch-over from the <strong>old</strong> WSUS systems to the <strong>new</strong> WSUS systems happens (due on 30th November 2021), you'll need to append the SSL port (8531) to the FQDN of the WSUS systems. For example:</p>
-<p><code>https://wsus.frn.ukcloud.com:8531</code></p>
 <ul>
-<li><p>Assured</p>
+<li><p>Assured OFFICIAL IP addresses</p>
 <ul>
 <li><p>51.179.212.114</p>
 </li>
@@ -111,6 +109,9 @@
 <li><p>For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal</p>
 </li>
 </ul>
+<p>Due to the changes above, once the switch-over from the <strong>old</strong> WSUS systems to the <strong>new</strong> WSUS systems happens (due on 30th November 2021), you'll need to append the SSL port (8531) to the FQDN of the WSUS systems. For example:</p>
+<p><code>https://wsus.frn.ukcloud.com:8531</code> and <code>https://wsus.cor.ukcloud.com:8531</code></p>
+<p>Be aware that you should use the domain names <code>wsus.frn.ukcloud.com</code> and <code>wsus.cor.ukcloud.com</code> in both Assured OFFICIAL and Elevated OFFICIAL. You should update your Elevated host files accordingly.</p>
 </div>
 <h2 id="overview">Overview</h2>
 <p>When you create a virtual machine (VM) running a Windows Server operating system, you need to register it with the UKCloud Windows Server Update Services to receive updates for it.</p>
