@@ -1,10 +1,10 @@
 ---
-title: How to build a virtual machine with UKCloud for VMware (vCloud Director 9.7)
-description: Describes how to get up and running with UKCloud for VMware by showing you how to use vCloud Director 9.7 to quickly spin up a virtual machine from scratch and connect it to the internet (Assured OFFICIAL security domain only)
+title: How to build a virtual machine with UKCloud for VMware
+description: Describes how to get up and running with UKCloud for VMware by showing you how to use VMware Cloud Director to quickly spin up a virtual machine from scratch and connect it to the internet (Assured OFFICIAL security domain only)
 services: vmware
 author: shighmoor
-reviewer:
-lastreviewed: 05/10/2018
+reviewer: shighmoor
+lastreviewed: 05/11/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -16,21 +16,21 @@ toc_fullpath: Getting Started/vmw-gs-build-vm-vcd.md
 toc_mdlink: vmw-gs-build-vm-vcd.md
 ---
 
-# How to build a virtual machine with UKCloud for VMware (vCloud Director 9.7)
+# How to build a virtual machine with UKCloud for VMware
 
 ## Overview
 
-This guide leads you through the three basic steps for using UKCloud for VMware to quickly build a simple virtual machine (VM) in vCloud Director 9.7, and connect it to the internet.
+This article leads you through the three basic steps for using UKCloud for VMware to quickly build a simple virtual machine (VM) in VMware Cloud Director, and connect it to the internet.
 
-For more information about how to use other vCloud Director functions to make the most of UKCloud for VMware and create more complex virtual data centres (VDCs), take a look at the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
+For more information about how to use other Cloud Director functions to make the most of UKCloud for VMware and create more complex virtual data centres (VDCs), take a look at the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
 
-The three steps covered in this guide are:
+The three steps covered in this article are:
 
 1. Create a network (to move requests around your VMs)
 
-2. Configure the edge gateway (in this guide we focus on the firewall and NAT configuration)
+2. Configure the edge gateway (in this article we focus on the firewall and NAT configuration)
 
-3. Create a virtual machine
+3. Create a VM
 
 If you follow these steps, you can have a VM up and running with a connection to the internet in about 20 to 25 minutes.
 
@@ -42,86 +42,86 @@ You should have created a compute service and VDC within your account. For more 
 
 You should also have created an edge gateway, which enables communication between your VDC and the outside world. For more information, see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md).
 
-## Create a network
+To perform the tasks in this article, you'll need to open Cloud Director:
 
-Before you can start building VMs in your VDC, you need to create the network that connects the VMs to each other and the outside world.
+1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.md).
 
-First, you need to create a network that can connect to external networks outside your VDC (including the internet). This is called an *external routed network*. You can find more information about routed networks in [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
-
-1. Log in to the UKCloud Portal.
-
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
-
-2. Select your account.
+2. If necessary, select your account.
 
 3. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service in which you want to create your VM.
 
     > [!TIP]
     > If you haven't created a compute service yet, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md#building-a-compute-service).
 
-4. On the **vCloud Director** tab, enter your Portal password and click **Confirm**.
+4. On the **VMware Cloud Director** tab, enter your Portal password and click **Confirm**.
 
-    ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
+    ![VMware Cloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-5. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
+## Create a network
 
-    > [!TIP]
-    > If you haven't created a VDC yet, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md#building-a-virtual-data-centre).
+Before you can start building VMs in your VDC, you need to create the network that connects the VMs to each other and the outside world.
 
-6. You're creating a network, so, in the left navigation panel, select **Networks**.
+First, you need to create a network that can connect to external networks outside your VDC (including the internet). This is called an *external routed network*. You can find more information about routed networks in [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
 
-    ![Network menu option](images/vmw-vcd-tab-networks.png)
+1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
 
-7. To create a new network, click the **Add** button.
+   > [!TIP]
+   > If you haven't created a VDC yet, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md#building-a-virtual-data-centre).
 
-    ![Add network button](images/vmw-vcd-btn-add-network.png)
+2. You're creating a network, so, in the left navigation panel, select **Networks**.
 
-8. You want your VM to connect to the internet (rather than just other VMs in the same VDC), so in the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed**.
+   ![Network menu option](images/vmw-vcd10.1-tab-networks.png)
 
-    ![New Organization VDC Network dialog box - Network Type - Routed](images/vmw-vcd-add-network-routed-type.png)
+3. To create a new network, click the **New** button.
+
+   ![New network button](images/vmw-vcd10.1-btn-new-network.png)
+
+4. You want your VM to connect to the internet (rather than just other VMs in the same VDC), so in the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed**.
+
+   ![New Organization VDC Network dialog box - Network Type - Routed](images/vmw-vcd10.1-new-network-routed-type.png)
+
+5. Click **Next**.
+
+6. In the *General* page, give the network a **Name** and **Description**.
+
+7. In the **Gateway CIDR** field, enter the details for the gateway address.
+
+8. The **Shared** option enables you to make your network available to other VDCs within the same region so that VMs can communicate with each other, regardless of which VDC they are in. For example, you may have a single repository server that provides updates for all the VMs in a region.
+
+   For the purposes of this tutorial, leave the **Shared** option deselected.
+
+   ![New Organization VDC Network dialog box - General](images/vmw-vcd10.1-new-network-general-ex.png)
 
 9. Click **Next**.
 
-10. In the *General* page, give the network a **Name** and **Description**.
-
-11. In the **Gateway CIDR** field, enter the details for the gateway address.
-
-12. You can make your network available to other VDCs within the same region so that VMs can communicate with each other, regardless of which VDC they are in. For example, you may have a single repository server that provides updates for all the VMs in a region.
-
-    For the purposes of this exercise, leave the **Shared** option deselected.
-
-    ![New Organization VDC Network dialog box - General](images/vmw-vcd-add-network-general-ex.png)
-
-13. Click **Next**.
-
-14. When you connect a network to the outside world, it's important that you control exactly what can access your environment via that network. UKCloud for VMware uses edge gateways to do this.
+10. When you connect a network to the outside world, it's important that you control exactly what can access your environment via that network. UKCloud for VMware uses edge gateways to do this.
 
     In the *Edge Connection* page, select the edge that you want your new network to use (we'll work more with the edge gateway later on).
 
-    ![New Organization VDC Network dialog box - Edge Connection](images/vmw-vcd-add-network-routed-edge.png)
+    ![New Organization VDC Network dialog box - Edge Connection](images/vmw-vcd10.1-new-network-routed-edge-ex.png)
 
     > [!TIP]
     > If you haven't created an edge gateway, see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md).
 
-15. Click **Next**.
+11. For the purposes of this tutorial, you can ignore the other fields on this page, so click **Next**.
 
-16. A VM needs an IP address to identify it on the network.
+12. A VM needs an IP address to identify it on the network.
 
     In the *Static IP Pools* page, identify the range of IP addresses that VMs connecting to this network can use then click **Add**. For example, if your **Gateway CIDR** is `192.168.1.1/24`, you can use the `192.168.1.10-192.168.1.100` range for your static IP pool, giving 91 usable internal IP addresses.
 
-    ![New Organization VDC Network dialog box - Static IP Pools](images/vmw-vcd-add-network-ip-pool-ex.png)
+    ![New Organization VDC Network dialog box - Static IP Pools](images/vmw-vcd10.1-new-network-ip-pool-ex.png)
 
-17. Click **Next**.
+13. Click **Next**.
 
-18. In the *DNS* page, enter your DNS information.
+14. In the *DNS* page, enter your DNS information.
 
-    ![New Organization VDC Network dialog box - DNS](images/vmw-vcd-add-network-dns-ex.png)
+    ![New Organization VDC Network dialog box - DNS](images/vmw-vcd10.1-new-network-dns.png)
 
-19. Click **Next**.
+15. Click **Next**.
 
-20. In the *Ready to Complete* page, review your selections then click **Finish**.
+16. In the *Ready to Complete* page, review your selections then click **Finish**.
 
-    ![New Organization VDC Network dialog box - Ready to Complete](images/vmw-vcd-add-network-ready-ex.png)
+    ![New Organization VDC Network dialog box - Ready to Complete](images/vmw-vcd10.1-new-network-ready-ex.png)
 
 ## Configure the edge gateway
 
