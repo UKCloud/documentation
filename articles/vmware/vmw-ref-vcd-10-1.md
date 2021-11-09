@@ -3,8 +3,8 @@ title: Changes in VMware Cloud Director 10.1
 description: Provides information about the changes in VMware Cloud Director 10.1
 services: vmware
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 11/06/2021
+reviewer: swthomas
+lastreviewed: 09/11/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -49,7 +49,7 @@ VMware Cloud Director 10.1 provides the following new features.
 
 - Terraform VMware Cloud Director Provider, updated to version 2.8, enables you to access infrastructure-as-code
 
-For more information about new features in VMware Cloud Director 10.1, see <https://cloudsolutions.vmware.com/assets/blta3bfbeafb64db8f8/What_s_New_with_VMware_Cloud_Director_10.1.pdf>.
+For more information about new features in VMware Cloud Director 10.1, see <https://docs.vmware.com/en/VMware-Cloud-Director/10.1/rn/VMware-Cloud-Director-101-Release-Notes.html>.
 
 ## Legacy UI
 
