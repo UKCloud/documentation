@@ -4,7 +4,7 @@ description: Describes how to get up and running with UKCloud for VMware by show
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 05/11/2021
+lastreviewed: 09/11/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -48,10 +48,11 @@ To perform the tasks in this article, you'll need to open Cloud Director:
 
 2. If necessary, select your account.
 
+   ![Portal account menu](images/vmw-portal-select-account.png)
+
 3. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service in which you want to create your VM.
 
-    > [!TIP]
-    > If you haven't created a compute service yet, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md#building-a-compute-service).
+   ![Compute services menu option](images/vmw-portal-mnu-compute-services.png)
 
 4. On the **VMware Cloud Director** tab, enter your Portal password and click **Confirm**.
 
@@ -63,28 +64,25 @@ Before you can start building VMs in your VDC, you need to create the network th
 
 First, you need to create a network that can connect to external networks outside your VDC (including the internet). This is called an *external routed network*. You can find more information about routed networks in [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
+1. In the VMware Cloud Director *Virtual Datacenters* dashboard, select your VDC.
 
-   > [!TIP]
-   > If you haven't created a VDC yet, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md#building-a-virtual-data-centre).
+2. You're creating a network, so, in the left navigation panel, under *Networking*, select **Networks**.
 
-2. You're creating a network, so, in the left navigation panel, select **Networks**.
+   ![Network menu option in Cloud Director](images/vmw-vcd10.1-tab-networks.png)
 
-   ![Network menu option](images/vmw-vcd10.1-tab-networks.png)
-
-3. To create a new network, click the **New** button.
+3. To create a new network, click **New**.
 
    ![New network button](images/vmw-vcd10.1-btn-new-network.png)
 
-4. You want your VM to connect to the internet (rather than just other VMs in the same VDC), so in the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed**.
+4. You want your VM to connect to the internet (rather than just other VMs in the same VDC), so on the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed**.
 
    ![New Organization VDC Network dialog box - Network Type - Routed](images/vmw-vcd10.1-new-network-routed-type.png)
 
 5. Click **Next**.
 
-6. In the *General* page, give the network a **Name** and **Description**.
+6. On the *General* page, give the network a **Name** and **Description**.
 
-7. In the **Gateway CIDR** field, enter the details for the gateway address.
+7. In the **Gateway CIDR** field, enter the details for the gateway address, for example `192.168.1.1/24`.
 
 8. The **Shared** option enables you to make your network available to other VDCs within the same region so that VMs can communicate with each other, regardless of which VDC they are in. For example, you may have a single repository server that provides updates for all the VMs in a region.
 
@@ -96,30 +94,31 @@ First, you need to create a network that can connect to external networks outsid
 
 10. When you connect a network to the outside world, it's important that you control exactly what can access your environment via that network. UKCloud for VMware uses edge gateways to do this.
 
-    In the *Edge Connection* page, select the edge that you want your new network to use (we'll work more with the edge gateway later on).
+    On the *Edge Connection* page, select the edge that you want your new network to use (we'll work more with the edge gateway later on).
 
     ![New Organization VDC Network dialog box - Edge Connection](images/vmw-vcd10.1-new-network-routed-edge-ex.png)
 
-    > [!TIP]
-    > If you haven't created an edge gateway, see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md).
+    For the purposes of this tutorial, you can ignore the other fields on this page.
 
-11. For the purposes of this tutorial, you can ignore the other fields on this page, so click **Next**.
+11. Click **Next**.
 
-12. A VM needs an IP address to identify it on the network.
+12. VMs need IP addresses to identify them on the network, so you'll need to create a pool of IP addresses that your VMs can use.
 
-    In the *Static IP Pools* page, identify the range of IP addresses that VMs connecting to this network can use then click **Add**. For example, if your **Gateway CIDR** is `192.168.1.1/24`, you can use the `192.168.1.10-192.168.1.100` range for your static IP pool, giving 91 usable internal IP addresses.
+    On the *Static IP Pools* page, identify the range of IP addresses that VMs connecting to this network can use then click **Add**.
+
+    For example, if your **Gateway CIDR** is `192.168.1.1/24`, you could use the `192.168.1.10-192.168.1.100` range for your static IP pool, giving 91 usable internal IP addresses.
 
     ![New Organization VDC Network dialog box - Static IP Pools](images/vmw-vcd10.1-new-network-ip-pool-ex.png)
 
 13. Click **Next**.
 
-14. In the *DNS* page, enter your DNS information.
+14. On the *DNS* page, enter your DNS information.
 
     ![New Organization VDC Network dialog box - DNS](images/vmw-vcd10.1-new-network-dns.png)
 
 15. Click **Next**.
 
-16. In the *Ready to Complete* page, review your selections then click **Finish**.
+16. On the *Ready to Complete* page, review your selections then click **Finish**.
 
     ![New Organization VDC Network dialog box - Ready to Complete](images/vmw-vcd10.1-new-network-ready-ex.png)
 
@@ -127,22 +126,19 @@ First, you need to create a network that can connect to external networks outsid
 
 The edge gateway is possibly the most complex part of the VDC because of its high level of functionality. The following steps show you how to quickly configure the edge gateway to enable you to access the internet from a VM.
 
-> [!IMPORTANT]
-> NAT rules only work if the firewall is enabled. For security reasons, you should ensure that the firewall is always enabled.
+1. In the VMware Cloud Director *Virtual Datacenters* dashboard, select your VDC.
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
+2. This time you're working with the edge gateway, so in the left navigation panel, under *Networking*, click **Edges**.
 
-2. This time you're working with the edge gateway, so in the left navigation panel, click **Edges**.
+    ![Edges menu option in Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
+3. Select the radio button for the edge gateway you want to work with and click **Services**.
 
-3. Select the edge gateway you want to work with and click the **Configure Services** button.
-
-    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
+    ![Configure Services button](images/vmw-vcd10.1-edge-btn-services.png)
 
 4. Each tab in the *Edge Gateway* dialog box provides access to a different service provided by the edge gateway. The main tabs are:
 
-    ![Tabs on the Edge Gateway dialog box](images/vmw-vcd-edge-tabs.png)
+    ![Tabs on the Edge Gateway dialog box](images/vmw-vcd10.1-edge-tabs.png)
 
     - **Firewall** - As well as a physical firewall, you can control which networks and ports can communicate through the edge gateway. You'll set up some firewall rules later in this exercise.
 
@@ -154,98 +150,137 @@ The edge gateway is possibly the most complex part of the VDC because of its hig
 
     - **Load Balancer** - The edge gateway provides simple HTTP and HTTPS load balancing using round robin. For more information, see [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
 
-    - **VPN** - IPsec site‑to‑site VPN is available on the edge gateway. You can configure an IPsec VPN within vCloud Director, but you may need to perform additional configuration through the API. For more information, see [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md).
+    - **VPN** - IPsec site‑to‑site VPN is available on the edge gateway. You can configure an IPsec VPN within Cloud Director, but you may need to perform additional configuration through the API. For more information, see [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md).
 
     To access the internet from a VM, you'll need to create firewall rules to determine who can access your network and NAT rules to route traffic within your network.
 
 ### Creating firewall rules
 
-Let's start with firewall rules:
+Let's start with firewall rules. To enable your VMs to communicate with the outside world, you need configure your edge gateway to allow traffic out of your VDC.
 
-1. In the *Edge Gateway* dialog box, select the **Firewall** tab.
+1. In the *Edge Gateway* dialog box, make sure the **Firewall** tab is selected.
+
+   ![Firewall tab](images/vmw-vcd10.1-edge-tab-firewall.png)
 
 2. Make sure the **Enabled** option is selected.
 
-    ![Enabled option on Firewall tab](images/vmw-vcd-adv-edge-firewall-enabled.png)
+    ![Enabled option on Firewall tab](images/vmw-vcd10.1-edge-firewall-enabled.png)
+
+   > [!IMPORTANT]
+   > For security reasons, you should ensure that the firewall is always enabled.
 
 3. Click the **+** button to add a new row to the firewall rules table.
 
-    ![Add button on Firewall tab](images/vmw-vcd-adv-edge-firewall-add.png)
+    ![Add button and new firewall rule](images/vmw-vcd10.1-edge-btn-firewall-add-rule.png)
 
-4. Edit the values in the row for the **New Rule** using the settings below:
+4. Select each of the fields in the row for the **New Rule** and update them as shown below:
 
     - **Name** - `HTTPS outbound`
 
     - **Source** - `internal`
 
-        Click **+** (Add object) button, select **Internal**, click the right arrow button, then click **Keep**.
+      - Click the **+** (Add object) button
+
+        ![Add object button for firewall source](images/vmw-vcd10.1-edge-btn-firewall-add-source.png)
+
+      - In the *Select objects* dialog box, select **Internal**, click the right arrow button, then click **Keep**.
+
+        ![Select objects dialog box for firewall source](images/vmw-vcd10.1-edge-firewall-source-internal.png)
 
     - **Destination** - `external`
 
-        Click **+** (Add object) button, select **External**, click the right arrow button, then click **Keep**.
+      - Click the **+** (Add object) button.
 
-    - **Service** - Click the **+** button and enter the following values in the *Add Service* dialog box
+        ![Add object button for firewall destination](images/vmw-vcd10.1-edge-btn-firewall-add-dest.png)
+
+      - In the *Select objects* dialog box, select **External**, click the right arrow button, then click **Keep**.
+
+        ![Select objects dialog box for firewall destination](images/vmw-vcd10.1-edge-firewall-source-external.png)
+
+    - **Service** - `tcp:443:any`
+
+      - Click the **+** button.
+
+        ![Add service button for firewall rule](images/vmw-vcd10.1-edge-btn-firewall-add-service.png)
+
+      - Enter the following values in the *Add Service* dialog box:
   
-      - **Protocol** - **TCP**
+        - **Protocol** - **TCP**
 
-      - **Source Port** - `any`
+        - **Source Port** - `any`
 
-      - **Destination Port** - `443`
+        - **Destination Port** - `443`
 
-        ![Add Service dialog box](images/vmw-vcd-edge-firewall-add-service.png)
+          ![Add Service dialog box](images/vmw-vcd10.1-edge-firewall-add-service-ex.png)
 
-      Click **Keep** when you're done.
+        - Click **Keep** when you're done.
 
     - **Action** - **Accept**
 
-    These settings allow traffic from the VMs (**Source** = `internal`) to reach destinations outside your VDC (**Destination** = `external`) on port `443` (HTTPS). You'll need to repeat these steps for ports `80` (HTTP) and `53` (DNS).
+      ![Firewall accept rule](images/vmw-vcd10.1-edge-firewall-accept-rule.png)
+
+    These settings allow traffic from the VMs inside your VDC (**Source** = `internal`) to reach destinations outside the VDC (**Destination** = `external`) on port `443` (HTTPS).
+
+    You'll need to repeat these steps for ports `80` (HTTP) and `53` (DNS).
 
     > [!NOTE]
     > For DNS, the protocol should be UDP.
 
     You can also allow traffic to reach your VMs from outside your VDC by swapping the **Source** and **Destination** values. However, because this opens up your firewall to a lot of traffic, we recommend that you first complete this guide to get comfortable with general networking concepts, and then take a look at the information in [*How to create firewall rules*](vmw-how-create-firewall-rules.md) where you can find out how to lock the firewall down.
 
-    ![New firewall rule](images/vmw-vcd-edge-firewall-new-rule.png)
+    ![New firewall rule](images/vmw-vcd10.1-edge-firewall-new-rule-ex.png)
 
 5. Click **Save changes**.
 
-    ![Save changes link on Firewall tab](images/vmw-vcd-adv-edge-firewall-save.png)
+    ![Save changes link on Firewall tab](images/vmw-vcd10.1-edge-firewall-save.png)
 
 ### Creating NAT rules
 
-Now that you've set up the firewall rules, you can create NAT rules:
+Now that you've set up the firewall rules, you can create NAT rules. NAT rules enable traffic to move through the edge gateway to your VMs.
+
+For the VMs in your VDC to access the internet, you need to translate the internal IP addresses to the public IP internet addresses provided by UKCloud when you set up your service.
+
+> [!IMPORTANT]
+> NAT rules only work if the firewall is enabled.
 
 1. In the *Edge Gateways* dialog box, select the **NAT** tab.
 
-    ![NAT tab in vCloud Director](images/vmw-vcd-edge-tab-nat.png)
+    ![NAT tab in vCloud Director](images/vmw-vcd10.1-edge-tab-nat.png)
 
 2. In the *NAT44 Rules* section, click the **SNAT Rule** button to create a source NAT (SNAT) rule to translate internal IP addresses into something that the external network can understand.
 
-    ![Add SNAT Rule button](images/vmw-vcd-btn-add-snat.png)
+    ![Add SNAT Rule button](images/vmw-vcd10.1-btn-add-snat.png)
 
-3. In the *Add SNAT Rule* dialog box, from the **Applied on** list, choose the edge gateway to which you want to apply the SNAT rule.
+3. In the *Add SNAT Rule* dialog box, from the **Applied on** list, choose the edge gateway that you want to apply the SNAT rule to.
 
-4. In the **Original Source IP/Range** field, enter the range of addresses you created when you created the network in the previous exercise.
+4. In the **Original Source IP/Range** field, enter the range of addresses you created when you created the network in the previous exercise. These are the internal addresses used by the VDC's VMs.
 
 5. In the **Translated Source IP/Range** field, enter one or more of the external IP addresses provided to you by UKCloud.
 
-    If you are not sure what your IP addresses are, see [*How to find your allocated external IP addresses*](vmw-how-find-ip-addresses.md).
+6. Make sure the **Enabled** option is selected.
 
-    ![Add SNAT Rule dialog box](images/vmw-vcd-edge-snat-add.png)
+    ![Add SNAT Rule dialog box](images/vmw-vcd10.1-edge-add-snat-ex.png)
 
-6. When you're done, click **Keep** and then **Save changes**.
+    > [!TIP]
+    > If you're not sure what your external IP addresses are, see [*How to find your allocated external IP addresses*](vmw-how-find-ip-addresses.md).
 
-    ![Save changes link on NAT tab](images/vmw-vcd-edge-nat-save.png)
+7. When you're done, click **Keep**.
 
-    You can also add destination NAT (DNAT) rules to translate external IP addresses to route traffic to the appropriate internal addresses. However, because the firewall only provides outbound access to the internet, we don't need to add DNAT rules at the moment.
+   You can also add destination NAT (DNAT) rules to translate external IP addresses to route traffic to the appropriate internal addresses. However, because at the moment the firewall only provides outbound access to the internet, you don't need to add DNAT rules just yet.
 
-    You can find more information about setting up NAT rules in [*How to create NAT rules*](vmw-how-create-nat-rules.md).
+   You can find more information about setting up NAT rules in [*How to create NAT rules*](vmw-how-create-nat-rules.md).
+
+   ![New SNAT rule](images/vmw-vcd10.1-edge-snat-new-rule-ex.png)
+
+8. Click **Save changes**.
+
+    ![Save changes link on NAT tab](images/vmw-vcd10.1-edge-nat-save.png)
 
 ## Create a virtual machine
 
 Now that you've laid the groundwork, it's time to create your VM. The best way to do this is to create a virtual application (vApp). You can think of a vApp as a container for your VMs; it enables you to group related VMs together to manage them in one place. See [*How to create a vApp*](vmw-how-create-vapp.md) to find out more.
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
+1. In the VMware Cloud Director *Virtual Datacenters* dashboard, select your VDC.
 
 2. In the left navigation panel, click **vApps**.
 
@@ -297,13 +332,17 @@ Now that you've laid the groundwork, it's time to create your VM. The best way t
 
 16. You don't need to change anything in the other sections, so click **Save**.
 
-17. If your VM is not already powered on, in the card for the VM, select **Actions** then **Power On**.
+## Testing your virtual machine
 
-18. Click the monitor icon to open the popout console and go through the setup procedure.
+To test if your VM is working and can access the internet:
+
+1. If your VM is not already powered on, in the card for the VM, select **Actions** then **Power On**.
+
+2. Click the monitor icon to open the popout console and go through the setup procedure.
 
     ![Monitor icon to start popout console](images/vmw-vcd91-ico-console.png)
 
-19. To confirm that you have connectivity to the internet and have an assigned IP address:
+3. To confirm that your VM has connectivity to the internet and has an assigned IP address:
 
     - Type `ipconfig` into the Command Prompt. If you've configured the networking correctly, your VM will return an IP address.
 
