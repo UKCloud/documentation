@@ -37,7 +37,7 @@ You can use the Cloud Director API to retrieve current or historic utilisation m
 
 - Amount of disk used (KB)
 
-You can retrieve current utilisation metrics for VMs in all UKCloud regions; you can retrieve historic metrics for VMs in regions 5 and 6.
+You can retrieve current utilisation metrics for VMs in all UKCloud regions; you can retrieve historic metrics for VMs across all regions.
 
 > [!NOTE]
 > You can also find utilisation metrics for a VM in VMware Cloud Director by selecting **Details** and expanding the *Monitoring Chart* section.
