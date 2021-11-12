@@ -30,7 +30,7 @@ For information about creating a VM from a template, see [*How to create a VM fr
 
 2. In the left navigation panel, under *Compute*, select **vApps** to view a list of vApps within the VDC.
 
-    ![vApps tab in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
+    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-vapps.png)
 
     > [!TIP]
     > To create a standalone VM, in the left navigation panel, select **Virtual Machines**, then click **New VM**.

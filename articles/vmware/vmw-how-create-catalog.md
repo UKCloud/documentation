@@ -112,7 +112,7 @@ To upload an OVF package and assign it to a catalog:
 
 2. In the left navigation panel, select **vApps**.
 
-    ![vApps menu option](images/vmw-vcd10.1-tab-vapps.png)
+    ![vApps menu option](images/vmw-vcd10.1-mnu-vapps.png)
 
 3. In the card for the vApp that you want to add to the catalog, select **Actions** then **Add To Catalog**.
 

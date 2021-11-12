@@ -68,7 +68,7 @@ First, you need to create a network that can connect to external networks outsid
 
 2. You're creating a network, so, in the left navigation panel, under *Networking*, select **Networks**.
 
-   ![Network menu option in Cloud Director](images/vmw-vcd10.1-tab-networks.png)
+   ![Network menu option in Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
 
 3. To create a new network, click **New**.
 

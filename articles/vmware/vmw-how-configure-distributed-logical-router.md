@@ -84,7 +84,7 @@ After you've enabled distributed routing, you can create your distributed networ
 
 2. In the left navigation panel, select **Networks**.
 
-    ![Network tab in VMware Cloud Director](images/vmw-vcd10.1-tab-networks.png)
+    ![Network tab in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
 
 3. Click **New**.
 

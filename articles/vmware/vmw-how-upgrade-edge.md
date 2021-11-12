@@ -89,7 +89,7 @@ To upgrade an isolated network edge, you need to reset the network. This forces 
 
 2. In the left navigation panel, select **Networks**.
 
-    ![Networks menu option in VMware Cloud Director](images/vmw-vcd10.1-tab-networks.png)
+    ![Networks menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
 
 3. On the *Networks* page, select the isolated network that contains the edge you want to upgrade and click **Reset**.
 
@@ -120,7 +120,7 @@ One way to upgrade a vApp network edge is to reset the vApp network.
 
 2. In the left navigation panel, select **vApps**.
 
-    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
+    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-vapps.png)
 
 3. On the *vApps* page, in the card for the vApp, click **Details**.
 
@@ -143,7 +143,7 @@ Another way to upgrade a vApp network is to shut down the vApp and restart it. R
 
 2. In the left navigation panel, select **vApps**.
 
-    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
+    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-vapps.png)
 
 3. On the *vApps* pages, in the card for the vApp, select **Actions**, then **Power Off** or **Stop**.
 
