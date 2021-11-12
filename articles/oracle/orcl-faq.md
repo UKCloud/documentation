@@ -26,7 +26,7 @@ Whilst UKCloud for Oracle Software has been retired from sale, we do offer other
 
 ### Dedicated Compute
 
-For small Oracle environments we continue to offer [*Dedicated Compute*](../dedicated-compute/prc-sd.md) for both Assured and Elevated OFFICIAL. This is on our UKCloud for VMware service and utilises dedicated VMware hosts within the cloud. You should be sure to understand your licensing restrictions around VMs on small host clusters before installing Oracle software on VMs. Some Oracle software requires you to license all processors in a host cluster as Oracle doesn't recognise VMware as a hard partition for licences.
+For small Oracle environments we continue to offer [*Dedicated Compute*](../dedicated-compute/dc-sd.md) for both Assured and Elevated OFFICIAL. This is on our UKCloud for VMware service and utilises dedicated VMware hosts within the cloud. You should be sure to understand your licensing restrictions around VMs on small host clusters before installing Oracle software on VMs. Some Oracle software requires you to license all processors in a host cluster as Oracle doesn't recognise VMware as a hard partition for licences.
 
 ### Private Cloud
 
