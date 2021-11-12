@@ -10772,15 +10772,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-faq.html",
-          "hash": "87xCs6aapKGR5wQcnXWvoYN7ZG2syjGmGuTFR2KV13o="
+          "hash": "Wn3hxDAf9Oaq82ISRweUBxLoMOVFOZquT6w3avWQHxw="
         }
       },
       "is_incremental": false,
