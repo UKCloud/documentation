@@ -2,9 +2,9 @@
 title: How to retrieve utilisation metrics for your virtual machines
 description: This guide shows how you can use the Cloud Director API to retrieve current and historic utilisation metrics for a virtual machine
 services: vmware
-author: Steve Hall
-reviewer:
-lastreviewed: 06/11/2020
+author: shall
+reviewer: sxthomas
+lastreviewed: 12/11/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -37,7 +37,7 @@ You can use the Cloud Director API to retrieve current or historic utilisation m
 
 - Amount of disk used (KB)
 
-You can retrieve current utilisation metrics for VMs in all UKCloud regions; you can retrieve historic metrics for VMs across all regions.
+You can retrieve current and historic utilisation metrics for VMs in all UKCloud regions.
 
 > [!NOTE]
 > You can also find utilisation metrics for a VM in VMware Cloud Director by selecting **Details** and expanding the *Monitoring Chart* section.
