@@ -262,7 +262,7 @@ You can set various options to personalise your experience in the Cloud Control 
 
 ## Building virtual machines
 
-Your Oracle applications will consist of one or more VMs. In the Cloud Console, you create a VM by requesting a server. You can base your VMs on assemblies or templates.
+Your Oracle applications will consist of one or more VMs. Due to the core pinning required for Oracle VMs in order to create  Oracle VMs on the cloud, you will need to raise a ticket so we can create the VMs on your behalf and you can then configure them.
 
 On the *Infrastructure -- Oracle VM Cloud Services* page you can view and manage all your Oracle VMs.
 
