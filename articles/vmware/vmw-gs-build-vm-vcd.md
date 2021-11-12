@@ -4,7 +4,7 @@ description: Describes how to get up and running with UKCloud for VMware by show
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/11/2021
+lastreviewed: 12/11/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -52,11 +52,11 @@ To perform the tasks in this article, you'll need to open Cloud Director:
 
 3. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service in which you want to create your VM.
 
-   ![Compute services menu option](images/vmw-portal-mnu-compute-services.png)
+   ![Compute services menu option](images/vmw-portal-mnu-compute-services-ex.png)
 
 4. On the **VMware Cloud Director** tab, enter your Portal password and click **Confirm**.
 
-    ![VMware Cloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
+    ![VMware Cloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login-ex.png)
 
 ## Create a network
 
@@ -72,7 +72,7 @@ First, you need to create a network that can connect to external networks outsid
 
 3. To create a new network, click **New**.
 
-   ![New network button](images/vmw-vcd10.1-btn-new-network.png)
+   ![New network option](images/vmw-vcd10.1-btn-new-network.png)
 
 4. You want your VM to connect to the internet (rather than just other VMs in the same VDC), so on the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed**.
 
@@ -134,7 +134,7 @@ The edge gateway is possibly the most complex part of the VDC because of its hig
 
 3. Select the radio button for the edge gateway you want to work with and click **Services**.
 
-    ![Configure Services button](images/vmw-vcd10.1-edge-btn-services.png)
+    ![Edge gateway Services option](images/vmw-vcd10.1-edge-btn-services.png)
 
 4. Each tab in the *Edge Gateway* dialog box provides access to a different service provided by the edge gateway. The main tabs are:
 
@@ -284,17 +284,22 @@ Now that you've laid the groundwork, it's time to create your VM. The best way t
 
 2. In the left navigation panel, click **vApps**.
 
-    ![vApps menu option in vCloud Director](images/vmw-vcd-tab-vapps.png)
+    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-vapps.png)
 
 3. In this exercise, you'll create the vApp from scratch, so click **New vApp**.
 
-    ![New vApp button](images/vmw-vcd-btn-new-vapp.png)
+    ![New vApp option](images/vmw-vcd10.1-btn-new-vapp-ex.png)
+
+    > [!TIP]
+    > If your VDC already contains one or more vApps, click **New**, then select **New vApp**.
+    >
+    > ![New vApp menu option](images/vmw-vcd10.1-mnu-new-vapp.png)
 
 4. In the *New vApp* dialog box, give the vApp a **Name** and **Description**.
 
 5. Click **Add Virtual Machine**.
 
-    ![Add Virtual Machine button in New vApp dialog box](images/vmw-vcd-btn-add-vm-new.png)
+    ![Add Virtual Machine button in New vApp dialog box](images/vmw-vcd10.1-btn-vapp-add-new.png)
 
 6. In the *New VM* dialog box, you can create your VM. Enter a **Name**, **Computer Name** and **Description** for the VM.
 
@@ -307,42 +312,43 @@ Now that you've laid the groundwork, it's time to create your VM. The best way t
 
 8. From the list of **Templates**, select the one you want to use.
 
-9. Click **OK*.
+   ![New VM dialog box](images/vmw-vcd10.1-new-vm-template-ex.png)
 
-    > [!IMPORTANT]
-    > By default, the **Power on** check box is selected for new VMs. If you do not want the VM to power on and start incurring charges immediately, make sure to deselect this check box.
+9. In the *NICs* section, select **Connected**.
 
-10. Back in the *New vApp* dialog box, you can add more VMs if you want, but for now click **Create** to create the vApp and the single VM.
+10. In the **Networks** list you should see the network that you created in the first exercise. Select this network to connect your VM to the network.
 
-11. There are some more configuration tasks to complete for your new VM, so in the left navigation panel, select **Virtual Machines** to list all the VMs in the VDC.
+11. From the **IP Mode** list, choose **Static - IP Pool** to assign the VM an IP address from the IP pool you defined earlier when you created your network.
 
-    ![Virtual Machines menu option](images/vmw-vcd-tab-vms.png)
+    ![New VM dialog box - NICs](images/vmw-vcd10.1-new-vm-template-nics-ex.png)
 
-12. In the card for your new VM, click **Details**.
+12. If possible, from the **Network Adapter Type** list, select VMXNET3 for optimised performance.
 
-13. In the *General* section, you can change the VM name in the **Name** field, but keep the default **Storage Policy** option.
+13. Click **OK**.
 
-    ![VM details General section](images/vmw-vcd-vm-details-general.png)
-
-14. Expand the *Hardware* section and, in the **NICs** section, click **Add** and select the externally routed **Network** you created in the first exercise.
-
-15. From the **IP Mode** list, choose **Static - IP Pool** to use the IP pool you defined earlier when you created your network.
-
-    ![VM details Hardware section](images/vmw-vcd-vm-details-hardware.png)
-
-16. You don't need to change anything in the other sections, so click **Save**.
+14. Back in the *New vApp* dialog box, you can add more VMs if you want, but for now click **Create** to create the vApp and the single VM.
 
 ## Testing your virtual machine
 
-To test if your VM is working and can access the internet:
+When your vApp and VM have been successfully created, you can test if your VM is working and can access the internet.
 
-1. If your VM is not already powered on, in the card for the VM, select **Actions** then **Power On**.
+1. If your vApp is not already powered on, in the card for the vApp, select **Actions** then **Power On**. This powers on all the VMs within the vApp.
 
-2. Click the monitor icon to open the popout console and go through the setup procedure.
+   ![vApp Power On menu option](images/vmw-vcd10.1-mnu-vapp-power-on.png)
 
-    ![Monitor icon to start popout console](images/vmw-vcd91-ico-console.png)
+2. In the card for the vApp, click **Details**.
 
-3. To confirm that your VM has connectivity to the internet and has an assigned IP address:
+   ![vApp Details menu option](images/vmw-vcd10.1-mnu-vapp-details-ex.png)
+
+3. Select the **Virtual Machines** tab to list all the VMs within the vApp.
+
+   ![Virtual Machines tab](images/vmw-vcd10.1-tab-vapp-vms.png)
+
+4. Click **VM Console** to open the popout web console and go through the setup procedure.
+
+    ![VM Console option](images/vmw-vcd10.1-mnu-vm-console.png)
+
+5. To confirm that your VM has connectivity to the internet and has an assigned IP address:
 
     - Type `ipconfig` into the Command Prompt. If you've configured the networking correctly, your VM will return an IP address.
 
