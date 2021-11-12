@@ -2,9 +2,9 @@
 title: UKCloud for Oracle Software Service Scope
 description: Outlines important details regarding UKCloud for Oracle Software
 services: oracle
-author: Steve Hall
-reviewer: Bart Challis
-lastreviewed: 01/07/2019
+author: shall
+reviewer: bchallis
+lastreviewed: 11/11/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -111,11 +111,7 @@ All service requests will be triaged by UKCloud. We reserve the right to escalat
 
 UKCloud actively capacity-manages the cloud platform to ensure you have access to the resources you request.
 
-The UKCloud platform is designed using sites, regions and zones. The relationship between them is shown below:
-
-![Geographical diversity](images/oracle-image-1.png)
-
-This service is only available in Corsham.
+The service is only available in Corsham.
 
 We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.
 
@@ -165,7 +161,7 @@ Bring Your Own Firewall is currently not available for UKCloud for Oracle Softwa
 
 We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
 
-It is your responsbility to source ProMon services for your VMs. We can provide Protective Monitoring services above the hypervisor (for example, for your VM) upon request using our [*Security Operations Service*]
+It's the customer's responsbility to source ProMon services for their VMs. We can provide Protective Monitoring services above the hypervisor (for example, for your VM) upon request using our [*Security Operations Service*].
 
 In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.
 
