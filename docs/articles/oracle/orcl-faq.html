@@ -97,6 +97,13 @@
 <h5>Important</h5>
 <p>UKCloud for Oracle Software has been retired from sale by UKCloud. We'll continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we'll continue to update it as required. For new Oracle requests, contact your Client Director or Service Delivery Manager.</p>
 </div>
+<h2 id="how-can-i-put-a-new-oracle-workload-on-ukcloud">How can I put a new Oracle workload on UKCloud?</h2>
+<p>Whilst UKCloud for Oracle Software has been retired from sale, we do offer other options that you can take advantage of to run Oracle on UKCloud.</p>
+<h3 id="dedicated-compute">Dedicated Compute</h3>
+<p>For small Oracle environments we continue to offer <a href="../dedicated-compute/prc-sd.md"><em>Dedicated Compute</em></a> for both Assured and Elevated OFFICIAL. This is on our UKCloud for VMware service and utilises dedicated VMware hosts within the cloud. You should be sure to understand your licensing restrictions around VMs on small host clusters before installing Oracle software on VMs. Some Oracle software requires you to license all processors in a host cluster as Oracle doesn't recognise VMware as a hard partition for licences.</p>
+<h3 id="private-cloud">Private Cloud</h3>
+<p>For larger Oracle requirements we continue to offer our <a href="../private-cloud/prc-sd.html"><em>Private Cloud</em></a> service for both Assured OFFICIAL and Elevated OFFICIAL, which you can use in conjunction with Oracle VM hypervisor.</p>
+<p>Alternatively, if you want to use Oracle proprietary hardware, such as Exadata, then we can support the hosting and management of certain Oracle technologies. See <a href="../private-cloud/prc-sd-orcl.html"><em>Private Cloud for Oracle Software</em></a> for more information.</p>
 <h2 id="general">General</h2>
 <h3 id="what-is-ukcloud-for-oracle-software">What is UKCloud for Oracle Software?</h3>
 <p>UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications.</p>
@@ -111,15 +118,12 @@
 <h3 id="what-technology-is-ukcloud-for-oracle-software-based-on">What technology is UKCloud for Oracle Software based on?</h3>
 <p>For the x86 Oracle service, UKCloud have chosen to utilise Oracle's own Oracle Virtual Machine (OVM) technology to underpin its UKCloud for Oracle Software platform.</p>
 <p>Current stack is Oracle VM Server-&gt; Oracle VM Manager-&gt; Oracle Enterprise Manager.</p>
-<h3 id="which-oracle-architectures-are-suitable-for-deployment-on-the-ukcloud-platform">Which Oracle architectures are suitable for deployment on the UKCloud platform?</h3>
-<p>UKCloud are currently working on a &quot;known good&quot; list of architectures that will allow customers to ascertain if UKCloud's platform is suitable for hosting their Oracle workloads.</p>
-<p>Please engage with a UKCloud solutions architect to see how we can help with your requirements.</p>
 <h3 id="how-can-i-backup-my-ukcloud-for-oracle-software-environment">How can I backup my UKCloud for Oracle Software environment?</h3>
 <p>The UKCloud for Oracle Software platform is based on an underpinning infrastructure that can support native Oracle technologies such as Data Guard and RMAN data protection solutions.</p>
 <h3 id="if-im-using-oracle-data-guard-will-i-need-to-have-the-same-size-dr-vms-as-my-primary-vms">If I'm using Oracle Data Guard, will I need to have the same size DR VMs as my primary VMs?</h3>
 <p>No. While you will need to have the same CPU and storage allocation, you can reduce your RAM allocation by 50% in your DR VMs and ramp up if you need to invoke DR.</p>
 <h3 id="can-i-use-ukclouds-mass-data-transfer-facility-to-import-my-oracle-data">Can I use UKCloud's Mass Data Transfer Facility to import my Oracle data?</h3>
-<p>While this is not currently available, this is being investigated by the development team.</p>
+<p>No, this service is not currently available for Oracle data.</p>
 <h3 id="can-i-have-a-dedicated-ukcloud-for-oracle-software-environment">Can I have a dedicated UKCloud for Oracle Software environment?</h3>
 <p>Yes. If you prefer a dedicated environment, UKCloud offer the <a href="../private-cloud/prc-sd.html"><em>Private Cloud service</em></a> for both Assured OFFICIAL and Elevated OFFICIAL. Alternatively, if you want to use Oracle proprietary hardware, then we can support the hosting and management of certain Oracle technologies - see <a href="../private-cloud/prc-sd-orcl.html"><em>Private Cloud for Oracle Software</em></a> for more information.</p>
 <h3 id="is-the-ram-virtual-or-physical">Is the RAM virtual or physical?</h3>
@@ -134,7 +138,7 @@
 <h3 id="is-this-a-managed-service">Is this a managed service?</h3>
 <p>No. UKCloud maintain and manage the underlying infrastructure that your solution is based on, but we do not manage your UKCloud for Oracle Software solution. If you need your solution managed, there are a number of accredited Oracle partners within the UKCloud partner network that will be able to help.</p>
 <h3 id="are-templates-available-for-solution-components">Are templates available for solution components?</h3>
-<p>UKCloud will provide a set of base OS templates (assemblies) based on Oracle Linux and Microsoft.</p>
+<p>UKCloud provides a set of base OS templates (assemblies) based on Oracle Linux and Microsoft.</p>
 <p>You can also create your own assemblies and upload reusable software images.</p>
 <h3 id="how-do-i-increase-or-decrease-resources">How do I increase or decrease resources?</h3>
 <p>Currently, processor, memory and storage allocations are changed by raising a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. This is because of the resource pinning that OVM does on the underlying hypervisor.</p>
@@ -193,7 +197,8 @@
 <p>For software not listed above, please visit the <a href="https://support.oracle.com/epmos/faces/CertifyHome">Oracle support webpage</a>. You will need to have an Oracle Support account to log in.</p>
 <h2 id="licensing">Licensing</h2>
 <h3 id="does-this-service-include-oracle-licensing">Does this service include Oracle licensing?</h3>
-<p>No, you are responsible for ensuring that you have purchased the appropriate licensing for the UKCloud for Oracle Software solution in line with the components installed and the cores, RAM and storage utilised on the UKCloud platform. For more information, see <a href="orcl-ref-licensing.html"><em>Oracle licensing on the UKCloud platform</em></a>.</p>
+<p>UKCloud is responsible for licencing the Oracle VM hypervisor and associated service components.</p>
+<p>You're responsible for ensuring that you've purchased the appropriate Oracle licensing for your Oracle solution in line with the cores, RAM and storage utilised on the UKCloud platform. For more information, see <a href="orcl-ref-licensing.html"><em>Oracle licensing on the UKCloud platform</em></a>.</p>
 <h3 id="does-ukcloud-for-oracle-software-provide-guidance-on-oracle-licensing">Does UKCloud for Oracle Software provide guidance on Oracle licensing?</h3>
 <p><a href="orcl-ref-licensing.html"><em>Oracle licensing on the UKCloud platform</em></a> provides details outlining how to ensure that Oracle is licensed appropriately on the platform.</p>
 <h3 id="does-ukcloud-have-any-terms-and-conditions-regarding-oracle-licensing">Does UKCloud have any terms and conditions regarding Oracle licensing?</h3>

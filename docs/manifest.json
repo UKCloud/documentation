@@ -10772,12 +10772,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-faq.html",
-          "hash": "tJu8jEH0i7To3Tk+cgGnudtWaujBD2MpVW5zpOtNMOA="
+          "hash": "87xCs6aapKGR5wQcnXWvoYN7ZG2syjGmGuTFR2KV13o="
         }
       },
       "is_incremental": false,
@@ -10933,7 +10936,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "OMLRdDNL56DEnok1Ux6+T/QLIEF0WSwUJv2qya2C0pY="
+          "hash": "fqsPdYfUaIWk61DeinM9FaOcZVPoVBHZUefhh8QjL+0="
         }
       },
       "is_incremental": false,
@@ -22670,7 +22673,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-ovf-tool.html",
-          "hash": "FeKHeuMLqP8hqf8MIIsTRbkxxsGD8hVdxN19rEYf1Wg="
+          "hash": "ucVVz41dcBKB57DVIbPbZRmigZbp0fCBladd4kE1TIY="
         }
       },
       "is_incremental": false,
