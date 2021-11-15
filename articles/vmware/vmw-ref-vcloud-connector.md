@@ -3,8 +3,8 @@ title: VMware vCloud Connector
 description: Covers the use of VMware vCloud Connector with the UKCloud platform
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: swthomas
+lastreviewed: 15/11/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -14,6 +14,13 @@ toc_title: VMware vCloud Connector
 toc_fullpath: Reference/vmw-ref-vcloud-connector.md
 toc_mdlink: vmw-ref-vcloud-connector.md
 ---
+# vCloud Connector End Of Life
+
+vCloud Connector has become end of life, and is no longer supported. 
+
+UKCloud offers Disaster Recovery as a Service (DRaaS), powered by Zerto, to support active migration across environments. 
+Please visit [*UKCloud Disaster Recovery as a Service](vmw-how-access-vcloud-api.md#finding-your-cloud-director-api-credentials) to find more information.
+
 
 # VMware vCloud Connector
 
