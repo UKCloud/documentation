@@ -3,8 +3,8 @@ title: Troubleshooting the vRealize Operations Tenant Appliance for advanced mon
 description: Describes how to resolve issues with the advanced monitoring options in UKCloud for VMware provided by the vRealize Operations (vROps) Tenant Appliance
 services: vmware
 author: shighmoor
-reviewer:  
-lastreviewed: 20/11/2020
+reviewer: swthomas
+lastreviewed: 15/11/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
