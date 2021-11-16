@@ -4,7 +4,7 @@ description: Provides advice on how to migrate your applications to UKCloud for 
 services: oracle
 author: Sue Highmoor
 reviewer: bchallis
-lastreviewed: 24/01/2020
+lastreviewed: 16/11/2021
 
 toc_rootlink: Reference
 toc_sub1: 
