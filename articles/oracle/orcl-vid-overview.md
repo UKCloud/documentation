@@ -4,7 +4,7 @@ description: Shows a video that provides an introduction to the Oracle Self Serv
 services: oracle
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 03/11/2019
+lastreviewed: 16/11/2021
 toc_rootlink: Videos
 toc_sub1: 
 toc_sub2:
