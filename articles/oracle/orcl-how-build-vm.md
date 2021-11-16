@@ -21,6 +21,13 @@ toc_mdlink: orcl-how-build-vm.md
 > [!IMPORTANT]
 > UKCloud for Oracle Software has been retired from sale by UKCloud. We'll continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we'll continue to update it as required. For new Oracle requests, contact your Client Director or Service Delivery Manager.
 
+> [!IMPORTANT]
+> Due to a bug that has been identified within the Oracle cloud placement engine, until further notice, customers on the Oracle cloud will be unable to perform the following tasks through the Oracle cloud portal:
+>Create new VMs
+>Modify the compute and storage resources available to existing VMs
+>Until this issue is resolved, we ask that customers raise a Service Request via the My Calls section of the UKCloud Portal so that UKCloud can provision Oracle VMs and VM resources on your behalf.
+> See [*Oracle cloud self-service functionality*](orcl-ref-bug-self-service.md) for more information on how to raise a ticket for the creation of an Oracle VM.
+
 ## Overview
 
 UKCloud for Oracle Software provides Infrastructure-as-a-Service (IaaS), powered by Oracle VM (OVM) technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications.
