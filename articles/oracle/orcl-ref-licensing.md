@@ -2,7 +2,7 @@
 title: Oracle licensing on the UKCloud platform
 description: Outlines the licensing options for customers wanting to use Oracle on the UKCloud Platform
 services: oracle
-author: Sue Highmoor
+author: shighmoor
 reviewer: bchallis
 lastreviewed: 16/11/2021
 toc_rootlink: Reference
