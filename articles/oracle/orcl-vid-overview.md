@@ -3,7 +3,7 @@ title: (Video) Overview of Oracle Self Service Portal
 description: Shows a video that provides an introduction to the Oracle Self Service Portal
 services: oracle
 author: shighmoor
-reviewer: shighmoor
+reviewer: bchallis
 lastreviewed: 16/11/2021
 toc_rootlink: Videos
 toc_sub1: 
