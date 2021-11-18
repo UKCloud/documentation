@@ -2,9 +2,9 @@
 title: Getting Started Guide for UKCloud for Oracle Software
 description: Provides information to get up and running with UKCloud for Oracle Software
 services: oracle
-author: Sue Highmoor
-reviewer: fbordacchini
-lastreviewed: 15/10/2019
+author: shighmoor
+reviewer: bchallis
+lastreviewed: 12/11/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -262,7 +262,7 @@ You can set various options to personalise your experience in the Cloud Control 
 
 ## Building virtual machines
 
-Your Oracle applications will consist of one or more VMs. In the Cloud Console, you create a VM by requesting a server. You can base your VMs on assemblies or templates.
+Your Oracle applications will consist of one or more VMs. Due to the core pinning required to create Oracle VMs on the cloud, you'll need to raise a ticket so we can create the VMs on your behalf, which you can then configure.
 
 On the *Infrastructure -- Oracle VM Cloud Services* page you can view and manage all your Oracle VMs.
 
