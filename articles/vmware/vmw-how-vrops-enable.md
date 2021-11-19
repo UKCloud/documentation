@@ -76,7 +76,7 @@ If you no longer want access to advanced monitoring, you must disable the vReali
 
 After you've enabled the vRealize Operations Tenant Appliance, you can start to access metrics and reports through the *Operations Manager*. For more information, see [*How to access advanced monitoring using the vRealize Operations Tenant Appliance*](vmw-how-vrops-use.md).
 
-The UKCloud for VMware Advanced Management bundle also includes advanced networking options. For more information, see [*Advanced networking options for UKCloud for VMware*](vmw-ref-advanced-networking.md).
+The UKCloud for VMware Advanced Management bundle also includes advanced networking options. For more information, see [*Advanced management options for UKCloud for VMware*](vmw-ref-advanced-mgmt.md).
 
 ## Feedback
 
