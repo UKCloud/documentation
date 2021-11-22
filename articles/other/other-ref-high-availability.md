@@ -4,7 +4,7 @@ description: Describes how the UKCloud platform supports the development of high
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 01/11/2021
+lastreviewed: 22/11/2021
 
 toc_rootlink: Reference
 toc_sub1:
@@ -63,6 +63,8 @@ Replicated backup | Enables your services to be backed up and the backup data re
 [Cloud Storage](../cloud-storage/cs-sd.md) | Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).
 [Professional Services](../pro-services/ps-sd.md) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
 
+For information about product-specific availability features, see the appropriate section below.
+
 ## Application design considerations
 
 If you're designing your application specifically for the cloud, we recommend reviewing the [12-factor cloud application design model](https://12factor.net/).
@@ -88,6 +90,8 @@ With Azure Site Recovery, you can replicate a VM to a different region for disas
 Use SQL Always On to ensure the availability of SQL server. For more information, see [*How to deploy an SQL template to Azure Stack Hub using PowerShell*](../azure/azs-how-deploy-sql-template-powershell.md).
 
 ### UKCloud for OpenStack
+
+TrilioVault on UKCloud for OpenStack provides a self-service solution that takes point-in-time backups of workloads and supports multiple recovery options to recover your workloads in case of any outages. For more information, see [*How to use TrilioVault for self-service backup in OpenStack*](ostack-how-use-triliovault.md).
 
 OpenStack Platform 13 (OSP13) provides Load Balancing-as-a-Service (LBaaS) as a native feature. For more information see the OpenStack [Using Octavia for Load Balancing-as-a-Service](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html-single/using_octavia_for_load_balancing-as-a-service/index) networking guide.
 
