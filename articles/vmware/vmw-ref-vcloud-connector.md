@@ -51,10 +51,6 @@ Username: `1-1-1@1-1-1-abcdef`
 
 For more information, see [*How to access VMware Cloud Director through the Cloud Director API](vmw-how-access-vcloud-api.md#finding-your-cloud-director-api-credentials).
 
-## More information
-
-For more information about vCloud Connector, visit https://www.vmware.com/uk/products/vcloud-connector.
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
