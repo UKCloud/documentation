@@ -18,7 +18,7 @@ toc_mdlink: vmw-ref-vcloud-connector.md
 # VMware vCloud Connector
 
 > [!IMPORTANT]
-> VMware vCloud Connector is no longer supported by VMware. 
+> VMware vCloud Connector is now end-of-life and is no longer supported. 
 >
 > UKCloud offers Disaster Recovery as a Service (DRaaS), powered by Zerto, to support active migration across environments. See the [*Disaster Recovery as a Service Service Definition*](../draas/draas-sd.md) for more information.
 
