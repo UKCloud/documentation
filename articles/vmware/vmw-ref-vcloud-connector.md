@@ -2,7 +2,7 @@
 title: VMware vCloud Connector
 description: Covers the use of VMware vCloud Connector with the UKCloud platform
 services: vmware
-author: Sue Highmoor
+author: shighmoor
 reviewer: swthomas
 lastreviewed: 15/11/2021
 toc_rootlink: Reference
@@ -14,15 +14,13 @@ toc_title: VMware vCloud Connector
 toc_fullpath: Reference/vmw-ref-vcloud-connector.md
 toc_mdlink: vmw-ref-vcloud-connector.md
 ---
-# vCloud Connector End Of Life
-
-vCloud Connector has become end of life, and is no longer supported. 
-
-UKCloud offers Disaster Recovery as a Service (DRaaS), powered by Zerto, to support active migration across environments. 
-Please visit [*UKCloud Disaster Recovery as a Service](https://ukcloud.com/our-products/disaster-recovery-as-a-service/) to find more information.
-
 
 # VMware vCloud Connector
+
+> [!IMPORTANT]
+> VMware vCloud Connector is now end-of-life and is no longer supported. 
+>
+> UKCloud offers Disaster Recovery as a Service (DRaaS), powered by Zerto, to support active migration across environments. See the [*Disaster Recovery as a Service Service Definition*](../draas/draas-sd.md) for more information.
 
 VMware vCloud Connector links your internal private cloud with UKCloud so that you can manage them as a single hybrid environment and transfer workloads back and forth.
 
@@ -49,7 +47,7 @@ When authenticating to our vCloud endpoints using vCloud Connector, the details 
 URL: `api.vcd.portal.skyscapecloud.com/api`
 Username: `1-1-1@1-1-1-abcdef`
 
-For more information, see [*How to access VMware Cloud Director through the Cloud Director API](vmw-how-access-vcloud-api.md#finding-your-cloud-director-api-credentials).
+For more information, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md#finding-your-cloud-director-api-credentials).
 
 ## Feedback
 
