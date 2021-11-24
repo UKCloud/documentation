@@ -64,13 +64,13 @@ You can retrieve current utilisation metrics for VMs in all regions.
 
     Parameter | Description | Example
     ----------|-------------|--------
-    `vcloud_api_url` | The URL you use to access the Cloud Director API | `api.vcd.portal.skyscapecloud.com`
+    `vcloud_api_url` | The URL you use to access the Cloud Director API | `vcd.portal.skyscapecloud.com`
     `vm_id` | The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in VMware Cloud Director | `vm-12345678-aaaa-bbbb-cccc-1234567890ab`
 
     For example:
 
     ```none
-    GET https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
+    GET https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
     ```
 
 3. The Cloud Director API response includes each of the current metric values, for example:
@@ -80,7 +80,7 @@ You can retrieve current utilisation metrics for VMs in all regions.
 
         <Link
             rel="up"
-            href="https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab"
+            href="https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab"
             type="application/vnd.vmware.vcloud.vm+xml">
 
         <Metric name="cpu.usage.average"
@@ -113,14 +113,14 @@ You can retrieve current utilisation metrics for VMs in all regions.
 ## Curl example
 
 ```none
-curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
+curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
 ```
 
 ## Retrieving historic utilisation metrics
 
 Historic metrics are collected and stored for three months. You can retrieve historic metrics for the last 24 hours of metric history.
 
-You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.
+You can retrieve historic utilisation metrics for VMs in all regions.
 
 1. Log in to the Cloud Director API.
 
@@ -134,13 +134,13 @@ You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.
 
     Parameter | Description | Example
     ----------|-------------|--------
-    `vcloud_api_url` | The URL you use to access the Cloud Director API | `api.vcd.pod0000b.sys00005.portal.skyscapecloud.com`
+    `vcloud_api_url` | The URL you use to access the Cloud Director API | `vcd.pod0000b.sys00005.portal.skyscapecloud.com`
     `vm_id` | The GUID of the VM for which you want to retrieve utilisation metrics<br>You can find the GUID of the VM using the API or at the end of the URL in the VM details page in VMware Cloud Director | `vm-12345678-aaaa-bbbb-cccc-1234567890ab`
 
     For example:
 
     ```none
-    GET https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
+    GET https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
     ```
 
 3. The Cloud Director API response includes historic metric values for the last 24 hours, for example:
@@ -150,7 +150,7 @@ You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.
 
         <Link
             rel="up"
-            href="https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab"
+            href="https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab"
             type="application/vnd.vmware.vcloud.vm+xml">
 
         <MetricSeries
@@ -255,7 +255,7 @@ You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.
 ## Curl example
 
 ```none
-curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
+curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
 ```
 
 ## Feedback
