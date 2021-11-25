@@ -142,8 +142,8 @@
       href: vmw-how-vls-request-licence.md
 - name: Reference
   items:
-  - name: Advanced networking options
-    href: vmw-ref-advanced-networking.md
+  - name: Advanced management options
+    href: vmw-ref-advanced-mgmt.md
   - name: Availability of Virtual Hardware version 13
     href: vmw-ref-virtual-hardware-v13.md
   - name: Availability of Virtual Hardware version 14
