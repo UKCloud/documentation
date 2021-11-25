@@ -53,11 +53,7 @@ There are a number of Access Management activities which UKCloud can assist with
 
 ### Password reset
 
-In the event that you need to reset your password:
-
-- For the Assured OFFICIAL Portal, a self-service facility is available from the log on page. Alternatively your administrator can change your password.
-
-- For the Elevated OFFICIAL Portal, your password or memorable word will need to be changed by your administrator.
+In the event that you need to reset your password, a self-service facility is available from the log on page. Alternatively your administrator can change your password.
 
 UKCloud Support will advise you of the names of your administrators if required.
 
