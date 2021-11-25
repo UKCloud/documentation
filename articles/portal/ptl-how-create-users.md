@@ -46,6 +46,11 @@ To create a new user:
 
     ![New Contact page](images/ptl-new-contact.png)
 
+    The email address that you provide will be used to identify the new user when they log in to the portal,
+    and also to contact them in various situations. It will also be set as their password reset email
+    address - the address to which a reset code is sent if they forget their password - but they will be able
+    to change this to something different if they need to.
+
 6. After you've created the user account, you can grant the user access to the different services available in the account. This process varies depending on the service:
 
     - [*How to manage My Calls users*](ptl-how-manage-my-calls.md)
