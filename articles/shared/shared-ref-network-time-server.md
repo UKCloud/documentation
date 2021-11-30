@@ -4,7 +4,7 @@ description: This guide shows you how to configure access to the Network Time Pr
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 01/10/2021
+lastreviewed: 01/12/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,44 +19,30 @@ toc_mdlink: shared-ref-network-time-server.md
 
 The UKCloud Network Time Protocol (NTP) server is available for use by UKCloud's customers. It is available in both the Assured OFFICIAL and Elevated OFFICIAL security domains.
 
-> [!IMPORTANT]
-> UKCloud is making important updates to NTP services. For more details, see the [UKCloud Service Status page](https://status.ukcloud.com/incidents/820kym82cmjz).
-> 
-> In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port UDP/123:
->
-> - Assured
-> 
->   - 51.179.212.116
->   
->   - 51.179.212.117
->   
->   - 51.179.212.118
->   
->   - 51.179.212.119
->   
->   - 51.179.215.212
->   
->   - 51.179.215.213
->   
->   - 51.179.215.214
->   
->   - 51.179.215.215
->
->   In your client `ntp/chrony` configuration file, you can point to the hostname `ntp.ukcloud.com`, which will reference all of the above IP addresses.
->
-> - For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal 
 
 ## Using the UKCloud NTP server
 
-Update the NTP server of your Assured OFFICIAL virtual machines (VMs) with one or both of the following IP addresses:
+In your client `ntp/chrony` configuration file, you can either configure your VMs to use the hostname `ntp.ukcloud.com` or any number of the following IP Addresses:
 
-- `37.26.90.192`
+- `51.179.212.116`
 
-- `37.26.94.232`
+- `51.179.212.117`
+
+- `51.179.212.118`
+
+- `51.179.212.119`
+
+- `51.179.215.212`
+
+- `51.179.215.213`
+
+- `51.179.215.214`
+
+- `51.179.215.215`
 
 For Elevated OFFICIAL VMs, raise a Service Request via the My Calls section of the Elevated UKCloud Portal to get the appropriate IP address.
 
-You may need to adjust your firewall and NAT rules to allow communication between the NTP server of your VMs and the UKCloud network time server.
+You may need to adjust your edge gateway's firewall and NAT rules to allow communication between the NTP servers on port UDP/123 and your VMs.
 
 ## Feedback
 
