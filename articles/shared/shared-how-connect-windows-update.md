@@ -26,7 +26,7 @@ When you create a virtual machine (VM) running a Windows Server operating system
 
 Before you establish a connection to the update service, you need to ensure your VMs can communicate with the update server, which exists outside your cloud organisation.
 
-This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports `8530` and `8531` on your firewall to the following IP Addresses `51.179.212.114` and `51.179.215.210`. For more information on how to do this, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
+This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports `8530` and `8531` on your firewall to the following IP addresses `51.179.212.114` and `51.179.215.210`. For more information on how to do this, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 ## Configuring Windows update
 
@@ -43,7 +43,7 @@ In this section you'll need to use the appropriate address depending on the loca
     - For Elevated OFFICIAL, raise a Service Request via the My Calls section of the Elevated UKCloud Portal to get the appropriate IP address
 
     > [!NOTE]
-    > Ensure that you can resolve these hostname via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+    > Ensure that you can resolve these hostnames via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 3. Ensure that you have the full certificate chain installed. If not, you may have to install the certificates into your VM manually.
 
