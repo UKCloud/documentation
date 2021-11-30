@@ -70,8 +70,12 @@ To allow this communication, you need to create a source network address transla
 
 5. If an error message appears indicating that the KMS server can't be contacted, it means either that the edge gateway hasn't been configured correctly or that DNS can't be retrieved. Try again by issuing the same command but using the IP address of the activation server:
 
-        `C:\ > slmgr /skms  <51.179.212.115>:1688` or `C:\ > slmgr /skms <51.179.215.211>:1688`
+        C:\ > slmgr /skms  51.179.212.115:1688
 
+   or:
+
+        C:\ > slmgr /skms  51.179.215.211:1688
+        
     ![Windows Script Host dialog box](images/shared-windows-kms-activate-ip.png)
 
 6. Click **OK**, then from the same command line window, enter:
