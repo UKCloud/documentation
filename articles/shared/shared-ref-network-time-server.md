@@ -42,7 +42,7 @@ In your client `ntp/chrony` configuration file, you can either configure your VM
 
 For Elevated OFFICIAL VMs, raise a Service Request via the My Calls section of the Elevated UKCloud Portal to get the appropriate IP address.
 
-You may need to adjust your Edge/firewall and NAT rules to allow communication between the NTP servers on port UDP/123 and your VMs.
+You may need to adjust your edge gateway's firewall and NAT rules to allow communication between the NTP servers on port UDP/123 and your VMs.
 
 ## Feedback
 
