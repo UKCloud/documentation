@@ -26,7 +26,7 @@ When you create a virtual machine (VM) running a Windows Server operating system
 
 Before you establish a connection to the update service, you need to ensure your VMs can communicate with the update server, which exists outside your cloud organisation.
 
-This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports `8530` and `8531` on your firewall to the following IP Addresses `51.79.212.114` and `51.179.215.210`. For more information on how to do this, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
+This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports `8530` and `8531` on your firewall to the following IP Addresses `51.179.212.114` and `51.179.215.210`. For more information on how to do this, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 ## Configuring Windows update
 
