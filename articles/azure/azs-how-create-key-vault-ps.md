@@ -58,9 +58,14 @@ Connect-AzAccount -EnvironmentName "AzureStackUser"
 # Get location of Azure Stack Hub
 $Location = (Get-AzLocation).Location
 
-# Select resource group
+# Declare variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VaultName = "<output form="vaultname" name="result" style="display: inline;">MyVault</output>"
+
+# Check if resource group exists and create if it does not
+if (-not (Get-AzResourceGroup | Where-Object -Property ResourceGroupName -eq $RGName)) {
+    New-AzResourceGroup -Name $RGName -Location $Location
+}
 
 # Create a new vault
 New-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName -Location $Location
@@ -82,7 +87,7 @@ $Secret = Set-AzKeyVaultSecret -VaultName $VaultName -Name $SecretName -SecretVa
 # Display URL
 $Secret.Id
 
-# Display value
+# Display encrypted value
 $Secret.SecretValue
 </code></pre>
 
