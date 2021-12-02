@@ -13173,7 +13173,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "LD/lGVAjoGgaDwT4A0I6rZ0A8mSMJFHJAgrlMGOfN4M="
+          "hash": "v7lfI9e0tzDhOtSBNp3VLNEFusP+zSGu0YJ1LBWbJiE="
         }
       },
       "is_incremental": false,
@@ -13185,7 +13185,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-change-email-address.html",
-          "hash": "z2CzQ8jFuJyT81cHkPv/7w08zZ4TFRPTYUE8PPTjxto="
+          "hash": "Fobs7D+pgft+f6GZtsrs7FHngoUqQ9W1wAt8JdxEW5s="
         }
       },
       "is_incremental": false,
@@ -13197,7 +13197,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-create-users.html",
-          "hash": "3/BalunwcqSAq85m1D4PxqVXyU8YEszAijRzA3EuM98="
+          "hash": "TpNfh8bShi+VJMmAM9RiZsBdXJQIQwVIV/v63ruUnSw="
         }
       },
       "is_incremental": false,
@@ -16053,28 +16053,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-task-trigger.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-tp-ipsec-fix1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-tp-ipsec-fix1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-tp-ipsec-fix2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-tp-ipsec-fix2.png"
         }
       },
       "is_incremental": false,
@@ -21410,7 +21388,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "uiWVFKb3Jko5781mOc+L+t0/Fv50GfYEmPdkRegGL1M="
+          "hash": "+fKHSoZVjh+4X2Y8KMXetA3OQomNTt+kNGzrw9pWPxE="
         }
       },
       "is_incremental": false,
@@ -22342,18 +22320,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-trouble-ipsec-nsx64.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-trouble-ipsec-nsx64.html",
-          "hash": "+81JNuyh1rTi1g/SVjPsh/KcWO/cNmhyDk42Qby/SuE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-trouble-null-pointer.md",
       "output": {
         ".html": {
@@ -22725,7 +22691,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 463,
+          "total_file_count": 462,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
