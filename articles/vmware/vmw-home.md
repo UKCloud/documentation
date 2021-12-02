@@ -34,7 +34,7 @@ toc_mdlink: vmw-home.md
     <!-- brief introduction -->
     <p>Rehosting legacy applications is the most important step when it comes to sustainable transformation. By removing the burden of having to maintain your own data centre, you and your team can start to focus on more strategic projects. And for applications where VMware is a critical component, UKCloud offers a secure, government-grade platform for you to transition to the cloud.</p>
     <!-- link to propositions -->
-    <p>With UKCloud for VMware you can take the first steps on your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> and <a href="https://ukcloud.com/solutions/digital-workplace/"><strong>digital transformation</strong></a> journeys. With the right digital foundations, you can harness the latest <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovative technologies</strong></a> to deliver improved outcomes with the added benefit and assurance of it running on a <a href="https://ukcloud.com/solutions/secure-cloud/"><strong>secure</strong></a>and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>.</p>
+    <p>With UKCloud for VMware you can take the first steps on your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> and <a href="https://ukcloud.com/solutions/digital-workplace/"><strong>digital transformation</strong></a> journeys. With the right digital foundations, you can harness the latest <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovative technologies</strong></a> to deliver improved outcomes with the added benefit and assurance of it running on a <a href="https://ukcloud.com/solutions/secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>.</p>
   </div>
   <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
@@ -218,7 +218,7 @@ toc_mdlink: vmw-home.md
 <div class="row">
   <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="ttps://www.youtube.com/embed/bnpF3B6XmOQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/bnpF3B6XmOQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p><a href="https://www.youtube.com/watch?v=bnpF3B6XmOQ">Building a virtual data centre</a></p>
   </div>
@@ -302,7 +302,7 @@ toc_mdlink: vmw-home.md
       <p style="margin-left:15px"><a href="../soc/soc-sd.md"><strong>Security Operations Service.</strong></a> People, processes and tooling to assist with cyber monitoring capabilities.</p>
       <p style="margin-left:15px"><a href="../pro-services/ps-sd.md"><strong>Professional Services.</strong></a> Help with solution design and digitisation projects.</p>
       <p style="margin-left:15px"><a href="../cdsz/cdsz-sd.md"><strong>Cross Domain Security Zone.</strong></a> Enable data communication between assured and elevated security domains.</p>
-      <p style="margin-left:15px"><a href="../connectivity/conn-faq.md"><strong>Private Cloud</strong></a> or <a href="../dedicated-compute/dc-sd.md"><strong>Dedicated Compute.</strong></a> For workloads that require custom configurations, such as large instances, or complex licensing requirements.</p>
+      <p style="margin-left:15px"><a href="../private-cloud/prc-sd.md"><strong>Private Cloud</strong></a> or <a href="../dedicated-compute/dc-sd.md"><strong>Dedicated Compute.</strong></a> For workloads that require custom configurations, such as large instances, or complex licensing requirements.</p>
       <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md"><strong>Cloud Storage.</strong></a> Cost effective unstructured object storage for data archive.</p>
   </div>
 </div>
