@@ -4,7 +4,7 @@ description: Home page for UKCloud for OpenStack
 services: openstack
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 18/10/2021
+lastreviewed: 02/12/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -223,16 +223,16 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md">Tier 1 storage.</a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
-      <p style="margin-left:15px"><a href="ostack-sco-triliovault.md">Self Service Backup and Restoration (TrilioVault).</a> On-platform self-service backup and restoration for OpenStack.</p>
+      <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
+      <p style="margin-left:15px"><a href="ostack-sco-triliovault.md"><strong>Self Service Backup and Restoration (TrilioVault).</strong></a> On-platform self-service backup and restoration for OpenStack.</p>
   </div>
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md">Managed IT Operations.</a> Reduce the amount of time spent on managing your IT infrastructure.</p>
-      <p style="margin-left:15px"><a href="../soc/soc-sd.md">Security Operations Service.</a> People, processes and tooling to assist with cyber monitoring capabilities.</p>
-      <p style="margin-left:15px"><a href="../pro-services/ps-sd.md">Professional Services.</a> Help with solution design and digitisation projects.</p>
-      <p style="margin-left:15px"><a href="../cdsz/cdsz-sd.md">Cross Domain Security Zone.</a> Enable data communication between assured and elevated security domains.</p>
-      <p style="margin-left:15px"><a href="../connectivity/conn-faq.md">Private Cloud.</a> For workloads that require custom configurations, such as large instances, or complex licensing requirements.</p>
-      <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md">Cloud Storage.</a> Cost effective unstructured object storage for data archive.</p>
+      <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md"><strong>Managed IT Operations.</strong></a> Reduce the amount of time spent on managing your IT infrastructure.</p>
+      <p style="margin-left:15px"><a href="../soc/soc-sd.md"><strong>Security Operations Service.</strong></a> People, processes and tooling to assist with cyber monitoring capabilities.</p>
+      <p style="margin-left:15px"><a href="../pro-services/ps-sd.md"><strong>Professional Services.</strong></a> Help with solution design and digitisation projects.</p>
+      <p style="margin-left:15px"><a href="../cdsz/cdsz-sd.md"><strong>Cross Domain Security Zone.</strong></a> Enable data communication between assured and elevated security domains.</p>
+      <p style="margin-left:15px"><a href="../connectivity/conn-faq.md"><strong>Private Cloud.</strong></a> For workloads that require custom configurations, such as large instances, or complex licensing requirements.</p>
+      <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md"><strong>Cloud Storage.</strong></a> Cost effective unstructured object storage for data archive.</p>
   </div>
 </div>
 
