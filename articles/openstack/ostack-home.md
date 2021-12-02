@@ -30,7 +30,7 @@ toc_mdlink: ostack-home.md
     <!-- brief introduction -->
     <p>UKCloud for OpenStack provides you with all the tools you need to modernise legacy workloads and kick-start your journey to cloud-native. By hosting your applications on our government-grade platform, you can start to deliver a true cloud-native experience for your most secure and sensitive systems. Enjoy the benefits of elastic infrastructure as code and rapid deployment times with UKCloud for OpenStack.</p>
     <!-- the big picture - propositions -->
-    <p>UKCloud for OpenStack takes your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> and <a href="https://ukcloud.com/solutions/digital-workplace/"><strong>digital</strong></a> journeys to the next level, where you can start to create truly cloud-native applications that harness the latest <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovative technology</strong></a> and all the benefits of a <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>.</p>
+    <p>UKCloud for OpenStack takes your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> and <a href="https://ukcloud.com/solutions/digital-workplace/"><strong>digital transformation</strong></a> journeys to the next level. Start creating truly cloud-native applications that harness the latest <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovative technologies</strong></a> and all the benefits of a <a href="https://ukcloud.com/solutions/secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>.</p>
   </div>
   <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
@@ -231,7 +231,7 @@ toc_mdlink: ostack-home.md
       <p style="margin-left:15px"><a href="../soc/soc-sd.md"><strong>Security Operations Service.</strong></a> People, processes and tooling to assist with cyber monitoring capabilities.</p>
       <p style="margin-left:15px"><a href="../pro-services/ps-sd.md"><strong>Professional Services.</strong></a> Help with solution design and digitisation projects.</p>
       <p style="margin-left:15px"><a href="../cdsz/cdsz-sd.md"><strong>Cross Domain Security Zone.</strong></a> Enable data communication between assured and elevated security domains.</p>
-      <p style="margin-left:15px"><a href="../connectivity/conn-faq.md"><strong>Private Cloud.</strong></a> For workloads that require custom configurations, such as large instances, or complex licensing requirements.</p>
+      <p style="margin-left:15px"><a href="../private-cloud/prc-sd.md"><strong>Private Cloud.</strong></a> For workloads that require custom configurations, such as large instances, or complex licensing requirements.</p>
       <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md"><strong>Cloud Storage.</strong></a> Cost effective unstructured object storage for data archive.</p>
   </div>
 </div>
