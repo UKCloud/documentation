@@ -30,7 +30,7 @@ toc_mdlink: ostack-home.md
     <!-- brief introduction -->
     <p>UKCloud for OpenStack provides you with all the tools you need to modernise legacy workloads and kick-start your journey to cloud-native. By hosting your applications on our government-grade platform, you can start to deliver a true cloud-native experience for your most secure and sensitive systems. Enjoy the benefits of elastic infrastructure as code and rapid deployment times with UKCloud for OpenStack.</p>
     <!-- the big picture - propositions -->
-    <p>UKCloud for OpenStack takes your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>Data Centre Modernisation</strong></a> and <a href="https://ukcloud.com/solutions/digital-workplace/"><strong>Digital</strong></a> journeys to the next level, where you can start to create truly cloud-native applications that harness the latest <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>Innovative</strong></a> technology and all the benefits of a <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>Sovereign Cloud</strong></a>.</p>
+    <p>UKCloud for OpenStack takes your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> and <a href="https://ukcloud.com/solutions/digital-workplace/"><strong>digital</strong></a> journeys to the next level, where you can start to create truly cloud-native applications that harness the latest <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovative technology</strong></a> and all the benefits of a <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>.</p>
   </div>
   <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
@@ -49,7 +49,7 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-12">
-    <p>For a general product overview, see the <a href="ostack-sd.md"><strong>Service Definition</strong></a>. For more in-depth product details, see the <a href="ostack-sco.md"><strong>Service Scope</strong></a>.</p>
+    <p>For a general product overview, see the <a href="ostack-sd.md"><strong>Service Definition</strong></a>. If you need more in-depth product details, see the <a href="ostack-sco.md"><strong>Service Scope</strong></a>.</p>
     <p>The <a href="ostack-gs.md"><strong>Getting Started Guide</strong></a> provides an overview of the functionality available with UKCloud for OpenStack and introduces some of the key concepts and tasks, including setting up your infrastructure and security and launching instances.</p>
   </div>
 </div>
@@ -64,7 +64,7 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-12">
-    <p>Once you understand the basics of UKCloud for OpenStack, take a look at the following articles to get an idea of what else you can do:</p>
+    <p>Once you understand the basics of UKCloud for OpenStack, take a look at the articles listed below to get an idea of what else you can do.</p>
   </div>
 </div>
 
@@ -144,8 +144,7 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-12">
-    <p>Find answers to common questions in our UKCloud for OpenStack <a href="ostack-faq.md"><strong>FAQ</strong></a>.</p>
-    <p>Use the table of contents on the left to browse all UKCloud for OpenStack articles or use the search box at the top to search the whole Knowledge Centre.</p>
+    <p>Find answers to common questions in our UKCloud for OpenStack <a href="ostack-faq.md"><strong>FAQ</strong></a>.</p> Use the table of contents on the left to browse all UKCloud for OpenStack articles or use the search box at the top to search the whole Knowledge Centre.</p>
     <p>For more information about UKCloud and how we work, browse our <a href="https://ukcloud.com/"><strong>website</strong></a>.</p>
   </div>
 </div>
@@ -209,7 +208,7 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-12">
-    <p>Some additional options and products you might want to consider using with UKCloud for OpenStack (* additional charges apply):</p>
+    <p>To get the most out of our platform, see below for some additional options and products you might want to consider using with UKCloud for OpenStack (additional charges apply).</p>
   </div>
 </div>
 
@@ -224,16 +223,16 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="ostack-sco-triliovault.md">Self Service Backup and Restoration (TrilioVault)</a><sup>*</sup></p>
-      <p style="margin-left:15px"><a href="ostack-sco-hystax.md">Hystax Acura Workload Migration</a></p>
-      <p style="margin-left:15px"><a href="ostack-how-use-barbican.md">Key Management as a Service (Barbican)</a></p>
-      <p style="margin-left:15px"><a href="ostack-how-use-octavia.md">Load Balancing as a Service (Octavia)</a></p>
+      <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md">Tier 1 storage.</a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
+      <p style="margin-left:15px"><a href="ostack-sco-triliovault.md">Self Service Backup and Restoration (TrilioVault).</a> On-platform self-service backup and restoration for OpenStack.</p>
   </div>
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="../openshift/oshift-sd.md">UKCloud for Red Hat OpenShift</a><sup>*</sup></p>
-      <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md">Cloud Storage</a><sup>*</sup></p>
-      <p style="margin-left:15px"><a href="../connectivity/conn-faq.md">Connectivity options</a><sup>*</sup></p>
-      <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md">Managed IT Operations</a><sup>*</sup></p>
+      <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md">Managed IT Operations.</a> Reduce the amount of time spent on managing your IT infrastructure.</p>
+      <p style="margin-left:15px"><a href="../soc/soc-sd.md">Security Operations Service.</a> People, processes and tooling to assist with cyber monitoring capabilities.</p>
+      <p style="margin-left:15px"><a href="../pro-services/ps-sd.md">Professional Services.</a> Help with solution design and digitisation projects.</p>
+      <p style="margin-left:15px"><a href="../cdsz/cdsz-sd.md">Cross Domain Security Zone.</a> Enable data communication between assured and elevated security domains.</p>
+      <p style="margin-left:15px"><a href="../connectivity/conn-faq.md">Private Cloud.</a> For workloads that require custom configurations, such as large instances, or complex licensing requirements.</p>
+      <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md">Cloud Storage.</a> Cost effective unstructured object storage for data archive.</p>
   </div>
 </div>
 
