@@ -291,11 +291,12 @@ toc_mdlink: vmw-home.md
 
 <div class="row">
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
       <p style="margin-left:15px"><a href="vmw-ref-service-options.md"><strong>VM types.</strong></a> Tailor the compute characteristics of the VM to support the requirements of your workload.</p>
       <p style="margin-left:15px"><a href="vmw-ref-advanced-mgmt.md"><strong>Advanced management.</strong></a> Add distributed networking and advanced monitoring options (vROps).</p>
       <p style="margin-left:15px"><a href="vmw-sco-snapshot-protection.md"><strong>Snapshot Protection.</strong></a> A cost effective daily backup service.</p>
       <p style="margin-left:15px"><a href="vmw-sco-journaling-protection.md"><strong>Journaling Protection.</strong></a> Recovery solution for essential production workloads.</p>
+      <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
+      <p style="margin-left:15px"><a href="../other/other-ref-security-domains.md"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
   </div>
   <div class="col-md-6">
       <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md"><strong>Managed IT Operations.</strong></a> Reduce the amount of time spent on managing your IT infrastructure.</p>
@@ -304,6 +305,12 @@ toc_mdlink: vmw-home.md
       <p style="margin-left:15px"><a href="../cdsz/cdsz-sd.md"><strong>Cross Domain Security Zone.</strong></a> Enable data communication between assured and elevated security domains.</p>
       <p style="margin-left:15px"><a href="../private-cloud/prc-sd.md"><strong>Private Cloud</strong></a> or <a href="../dedicated-compute/dc-sd.md"><strong>Dedicated Compute.</strong></a> For workloads that require custom configurations, such as large instances, or complex licensing requirements.</p>
       <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md"><strong>Cloud Storage.</strong></a> Cost effective unstructured object storage for data archive.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p>If you want to find out more about any of these options or products, contact your Service Delivery Manager or email <a href="mailto:servicedelivery@ukcloud.com"><strong>servicedelivery@ukcloud.com</strong></a></p>
   </div>
 </div>
 
