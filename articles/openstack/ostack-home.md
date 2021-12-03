@@ -144,7 +144,7 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-12">
-    <p>Find answers to common questions in our UKCloud for OpenStack <a href="ostack-faq.md"><strong>FAQ</strong></a>.</p> Use the table of contents on the left to browse all UKCloud for OpenStack articles or use the search box at the top to search the whole Knowledge Centre.</p>
+    <p>Find answers to common questions in our UKCloud for OpenStack <a href="ostack-faq.md"><strong>FAQ</strong></a>. Use the table of contents on the left to browse all UKCloud for OpenStack articles or use the search box at the top to search the whole Knowledge Centre.</p>
     <p>For more information about UKCloud and how we work, browse our <a href="https://ukcloud.com/"><strong>website</strong></a>.</p>
   </div>
 </div>
