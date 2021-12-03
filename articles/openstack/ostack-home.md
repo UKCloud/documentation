@@ -149,7 +149,7 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
-<!-- Videos -->
+<!-- begin Videos -->
 
 <div class="row">
   <div class="col-md-12">
@@ -158,19 +158,23 @@ toc_mdlink: ostack-home.md
 </div>
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
       <iframe src="https://www.youtube.com/embed/XcQYz--CNiM" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p><a href="https://www.youtube.com/watch?v=XcQYz--CNiM">OpenStack Horizon Dashboard Overview</a></p>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
       <iframe src="https://www.youtube.com/embed/c471rZ2euHQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>  
     <p><a href="https://www.youtube.com/watch?v=c471rZ2euHQ">OpenStack Self-Service Backup and Restoration (TrilioVault)</a></p>
   </div>
+  <div class="col-md-4">
+  </div>
 </div>
+
+<!-- end Videos>
 
 <!-- Information about how to buy -->
 
@@ -223,8 +227,9 @@ toc_mdlink: ostack-home.md
 
 <div class="row">
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
       <p style="margin-left:15px"><a href="ostack-sco-triliovault.md"><strong>Self Service Backup and Restoration (TrilioVault).</strong></a> On-platform self-service backup and restoration for OpenStack.</p>
+      <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
+      <p style="margin-left:15px"><a href="../other/other-ref-security-domains.md"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
   </div>
   <div class="col-md-6">
       <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md"><strong>Managed IT Operations.</strong></a> Reduce the amount of time spent on managing your IT infrastructure.</p>
@@ -233,6 +238,12 @@ toc_mdlink: ostack-home.md
       <p style="margin-left:15px"><a href="../cdsz/cdsz-sd.md"><strong>Cross Domain Security Zone.</strong></a> Enable data communication between assured and elevated security domains.</p>
       <p style="margin-left:15px"><a href="../private-cloud/prc-sd.md"><strong>Private Cloud.</strong></a> For workloads that require custom configurations, such as large instances, or complex licensing requirements.</p>
       <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md"><strong>Cloud Storage.</strong></a> Cost effective unstructured object storage for data archive.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p>If you want to find out more about any of these options or products, contact your Service Delivery Manager or email <a href="mailto:servicedelivery@ukcloud.com"><strong>servicedelivery@ukcloud.com</strong></a></p>
   </div>
 </div>
 
