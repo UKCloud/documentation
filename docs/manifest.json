@@ -13831,7 +13831,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-connect-windows-update.html",
-          "hash": "US6074emJXc8DhvYJesxIlc38Lac27qC/iOY1vwVzDA="
+          "hash": "b7fkLSiqOcZM1kqtFj3EtvHgSrUHvBz9hyKsR1+4v1g="
         }
       },
       "is_incremental": false,
@@ -13915,7 +13915,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-ref-overview.html",
-          "hash": "1bd0kED6+Xs2HnPAnngcOk2tORpddrNpq+9RawTkTXA="
+          "hash": "Fd48si+4VrjefUOkc9AXDlChg95buygl0i93NlPg44o="
         }
       },
       "is_incremental": false,
@@ -13946,24 +13946,12 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/shared/shared-vid-wsus.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/shared/shared-vid-wsus.html",
-          "hash": "XLpL6nCIbOxqou0bWK0E4toiI5+dxe2heIBiafRppc0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/shared/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/shared/toc.html",
-          "hash": "+0E4jAViio8KL6EMzMSkGh06zTjuSgFsWSihq9IjZhY="
+          "hash": "iCVl4r3SwZ4BG8NLtFE+TRbXb8bUGAmKr68w8R3U5fQ="
         }
       },
       "is_incremental": false,
@@ -22691,7 +22679,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 462,
+          "total_file_count": 461,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
