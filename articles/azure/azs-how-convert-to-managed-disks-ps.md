@@ -2,9 +2,9 @@
 title: How to convert a virtual machine to use managed disks using PowerShell
 description: Provides help for converting a virtual machine from unmanaged to managed disks on UKCloud for Microsoft Azure
 services: azure-stack
-author: Bailey Lawson
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+author: blawson
+reviewer: wturner
+lastreviewed: 06/12/2021
 
 toc_rootlink: Users
 toc_sub1: How To
