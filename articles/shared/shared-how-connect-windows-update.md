@@ -105,10 +105,6 @@ These settings will depend on your current setup. The [Configure Group Policy Se
 > [!NOTE]
 > UKCloud are not responsible for content published on the URLs in the above guide. If you believe the link is broken or is no longer relevant, contact UKCloud Customer Support via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-## Related videos
-
-- [*Connecting a VM to UKCloud's Windows Server Update Services (WSUS) video*](../shared/shared-vid-wsus.md)
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
