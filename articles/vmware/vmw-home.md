@@ -205,7 +205,7 @@ toc_mdlink: vmw-home.md
   </div>
 </div>
 
-<!-- end Find More>
+<!-- end Find More -->
 
 <!-- begin Videos -->
 
@@ -314,7 +314,7 @@ toc_mdlink: vmw-home.md
   </div>
 </div>
 
-<!-- end Additional Products>
+<!-- end Additional Products -->
 
 <!-- begin Why UKCloud -->
 
