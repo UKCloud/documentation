@@ -159,6 +159,8 @@ If you're an <strong>Azure Stack Hub service operator</strong>, UKCloud can shar
   </div>
 </div>
 
+<!-- end List of Articles -->
+
 <!-- begin Find More -->
 
 <div class="row">
@@ -174,7 +176,7 @@ If you're an <strong>Azure Stack Hub service operator</strong>, UKCloud can shar
   </div>
 </div>
 
-<!-- end Find More>
+<!-- end Find More -->
 
 <!-- begin Videos -->
 
@@ -269,7 +271,7 @@ If you're an <strong>Azure Stack Hub service operator</strong>, UKCloud can shar
   </div>
 </div>
 
-<!-- end Additional Products>
+<!-- end Additional Products -->
 
 <!-- begin Why UKCloud -->
 
