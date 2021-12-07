@@ -4,12 +4,8 @@ description: Frequently asked questions for PSN connectivity
 services: connectivity
 author: mwarner
 reviewer: nstobbart
-lastreviewed: 10/12/2020
+lastreviewed: 07/12/2021
 toc_rootlink: FAQs
-toc_sub1: 
-toc_sub2:
-toc_sub3:
-toc_sub4:
 toc_title: PSN connectivity FAQs
 toc_fullpath: FAQs/conn-faq-psn.md
 toc_mdlink: conn-faq-psn.md
@@ -65,7 +61,7 @@ You can find information about other connectivity methods and answers to general
 
 ### Can I connect to your Elevated OFFICIAL security domain using the unencrypted PSN Assured Service?
 
-No. We currently support connectivity to the unencrypted PSN Assured Service via our Assured OFFICIAL cloud platform only. The PSN Assured Service is [CAS(T) compliant](http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx) and so suitable for some OFFICIAL data (previously IL2 data).
+No. We currently support connectivity to the unencrypted PSN Assured Service via our Assured OFFICIAL cloud platform only. The PSN Assured Service is suitable for some OFFICIAL data (previously IL2 data).
 
 Customers wanting to use the Elevated OFFICIAL cloud platform typically have more sensitive requirements related to the confidentiality and integrity of their data, and so are more likely to require the encrypted PSN Protected Service. Only the encrypted PSN Protected Service can connect to legacy IL3 networks such as GSI.
 
@@ -79,7 +75,7 @@ PSN CUGs are DNSP specific, and so potentially lock customers in, as these conne
 
 ### Can I have a combination of government community networks and private accredited networks into the same UKCloud solution?
 
-Yes, subject to compliance with information assurance requirements, as only organisations that demonstrate compliance with the appropriate [code of connections](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/193704/PSN_Compliance_Zero_tolerance_approach.pdf) (for example PSN compliance certificate or HSCN Connection Agreement) can have access to government community networks.
+Yes, subject to compliance with information assurance requirements, as only organisations that demonstrate compliance with the appropriate code of connections (for example PSN compliance certificate or HSCN Connection Agreement) can have access to government community networks.
 
 You should be careful not to misconfigure self‑managed components of the solution (OS, application) to 'bridge' between government community networks (PSN) and private networks. This concern must be addressed by accreditation of the customer-managed components - preferably via PSN Accreditation. Local departmental accreditation by a public-sector customer is also allowed. This applies to solutions on both our Assured OFFICIAL and Elevated OFFICIAL cloud platforms.
 
@@ -107,7 +103,7 @@ You request connectivity to the PSN by raising a Service Request via the [My Cal
 
 If your solution requires many PSN IP addresses, we may need more time to work with you to get your PSN IP addresses configured to work with your solution hosted on our cloud platform.
 
-If you require [additional PSN IP addresses](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/81660/PSN-IP-Address-Allocation-Guidance-v1-4.pdf), you'll need to request them from the PSN.
+If you require [additional PSN IP addresses](https://www.gov.uk/government/publications/public-services-network-psn-ip-address-allocation), you'll need to request them from the PSN.
 
 ### Do you provide an SLA on PSN connectivity?
 
@@ -119,7 +115,7 @@ We've designed our cloud to give you complete control and autonomy over the priv
 
 You can use the self-managed virtual firewall to implement a VPN tunnel, network address translation (NAT) and load balancing to control how you publish the services within your VDC to external networks.
 
-For PSN connections to either of our security domains, the PSN has provided us with a [limited allocation of PSN IP addresses](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/81660/PSN-IP-Address-Allocation-Guidance-v1-4.pdf). The PSN requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN. We will work with you to facilitate the allocation of your PSN IP addresses to your services hosted on our cloud platforms.
+For PSN connections to either of our security domains, the PSN has provided us with a [limited allocation of PSN IP addresses](https://www.gov.uk/government/publications/public-services-network-psn-ip-address-allocation). The PSN requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN. We will work with you to facilitate the allocation of your PSN IP addresses to your services hosted on our cloud platforms.
 
 With the PSN IP addresses, you can establish:
 
