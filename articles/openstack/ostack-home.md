@@ -17,13 +17,17 @@ toc_mdlink: ostack-home.md
 
 # UKCloud for OpenStack
 
-<!-- Tagline -->
+<!-- begin Tagline -->
 
 <div class="row">
   <div class="col-md-12">
     <p class="text-center" style="padding:25px;font-size:22px"><strong>Develop agile cloud native workloads underpinned by open source technology</strong></p>
   </div>
 </div>
+
+<!-- end Tagline -->
+
+<!-- begin Introduction -->
 
 <div class="row">
   <div class="col-md-8"> 
@@ -39,7 +43,9 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
-<!-- Getting started information -->
+<!-- end Introduction -->
+
+<!-- begin Getting Started -->
 
 <div class="row">
   <div class="col-md-12">
@@ -54,7 +60,9 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
-<!-- Most important articles -->
+<!-- end Getting Started -->
+
+<!-- begin List of Articles -->
 
 <div class="row">
   <div class="col-md-12">
@@ -134,7 +142,9 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
-<!-- How to find more information -->
+<!-- end List of Articles -->
+
+<!-- begin Find More -->
 
 <div class="row">
   <div class="col-md-12">
@@ -148,6 +158,8 @@ toc_mdlink: ostack-home.md
     <p>For more information about UKCloud and how we work, browse our <a href="https://ukcloud.com/"><strong>website</strong></a>.</p>
   </div>
 </div>
+
+<!-- end Find More -->
 
 <!-- begin Videos -->
 
@@ -174,9 +186,9 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
-<!-- end Videos>
+<!-- end Videos -->
 
-<!-- Information about how to buy -->
+<!-- begin How to Buy -->
 
 <div class="row">
   <div class="col-md-12">
@@ -202,7 +214,9 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
-<!-- Other products that add value -->
+<!-- end How to Buy -->
+
+<!-- begin Additional Products -->
 
 <div class="row">
   <div class="col-md-12">
@@ -228,8 +242,8 @@ toc_mdlink: ostack-home.md
 <div class="row">
   <div class="col-md-6">
       <p style="margin-left:15px"><a href="ostack-sco-triliovault.md"><strong>Self Service Backup and Restoration (TrilioVault).</strong></a> On-platform self-service backup and restoration for OpenStack.</p>
+      <p style="margin-left:15px"><a href="../other/other-ref-security-domains.md"><strong>Hystax Acura Workload Migration.</strong></a> Migrate workloads between UKCloud for OpenStack regions.</p>
       <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
-      <p style="margin-left:15px"><a href="../other/other-ref-security-domains.md"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
   </div>
   <div class="col-md-6">
       <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md"><strong>Managed IT Operations.</strong></a> Reduce the amount of time spent on managing your IT infrastructure.</p>
@@ -247,7 +261,9 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
-<!-- Why UKCloud -->
+<!-- end Additional Products -->
+
+<!-- begin Why UKCloud -->
 
 <div class="row">
   <div class="col-md-12">
@@ -279,7 +295,9 @@ toc_mdlink: ostack-home.md
   </div>
 </div>
 
-<!-- Feedback -->
+<!-- end Why UKCloud -->
+
+<!-- begin Feedback -->
 
 <div class="row">
   <div class="col-md-12">
@@ -292,3 +310,5 @@ toc_mdlink: ostack-home.md
     <p>We want to know what you think. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com"><strong>feedback@ukcloud.com</strong></a>.</p>
   </div>
 </div>
+
+<!-- end Feedback -->
