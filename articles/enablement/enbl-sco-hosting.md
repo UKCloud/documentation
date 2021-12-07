@@ -3,13 +3,9 @@ title: Cloud Enablement - Server/Storage Hosting Service Scope
 description: outlines important details regarding Cloud enablement for server / storage hosting
 services: enablement
 author: shall
-reviewer: bchallis
-lastreviewed: 08/12/2020
+reviewer: nstobbart
+lastreviewed: 07/12/2021
 toc_rootlink: Service Information
-toc_sub1: 
-toc_sub2:
-toc_sub3:
-toc_sub4:
 toc_title: Cloud Enablement - Server/Storage Hosting Service Scope
 toc_fullpath: Service Information/enbl-sco-hosting.md
 toc_mdlink: enbl-sco-hosting.md
@@ -53,15 +49,15 @@ The VPN service provides up to two ports:
 
 - Cloud Enablement in regions 1, 2, 7 & 8 offers copper connectivity only
 
-- Cloud Enablement in regions 5 & 6 offers connectivity via SFP, so customers can use fibre or copper
+- Cloud Enablement in regions 5, 6, 13 & 14 offers connectivity via SFP, so customers can use fibre or copper
 
 - The connection is into a shared switch.
 
 ## What are the port speeds of connection?
 
-- In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
+- In regions 1, 2, 7 & 8 the port speed is up to 1 Gbps
 
-- In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10Gbps (fibre only)
+- In regions 5, 6, 13 & 14 the port speed can be either 1Gbps (copper or fibre) or 10Gbps (fibre only)
 
 ## Who manages the switch?
 
