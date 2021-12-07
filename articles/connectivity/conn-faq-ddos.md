@@ -2,8 +2,8 @@
 title: DDoS mitigation service FAQs
 description: Frequently asked questions for our DDoS mitigation service
 services: connectivity
-author: Matt Warner
-reviewer: Nick Stobbart
+author: mwarner
+reviewer: nstobbart
 lastreviewed: 07/12/2021
 toc_rootlink: FAQs
 toc_title: DDoS mitigation service FAQs
