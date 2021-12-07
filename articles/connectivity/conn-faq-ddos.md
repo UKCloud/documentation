@@ -4,12 +4,8 @@ description: Frequently asked questions for our DDoS mitigation service
 services: connectivity
 author: Matt Warner
 reviewer: Nick Stobbart
-lastreviewed: 10/12/2020
+lastreviewed: 07/12/2021
 toc_rootlink: FAQs
-toc_sub1: 
-toc_sub2:
-toc_sub3:
-toc_sub4:
 toc_title: DDoS mitigation service FAQs
 toc_fullpath: FAQs/conn-faq-ddos.md
 toc_mdlink: conn-faq-ddos.md
@@ -47,11 +43,9 @@ During a DDoS attack, there is negligible additional latency to outbound traffic
 
 ## What is the largest attack that the DDoS mitigation service can withstand?
 
-The specialist provider of DDoS mitigation is designed to withstand multiple simultaneous DDoS attacks. The service is continually being expanded in line with traffic volumes and the capacity of the scrubbing centres currently exceeds 1.5Tbit/s. The typical DDoS attack<sup>1</sup> is less than 2 Gbit/s but attacks of 50 to 60 Gbit/s are not uncommon and some attacks are beginning to exceed 100 Gbit/s.
+The specialist provider of DDoS mitigation is designed to withstand multiple simultaneous DDoS attacks. The service is continually being expanded in line with traffic volumes and the capacity of the scrubbing centres currently exceeds 12+Tbit/s. The typical DDoS attack is less than 2 Gbit/s but attacks of 50 to 60 Gbit/s are not uncommon and some attacks are beginning to exceed 1Tbit/s.
 
 UKCloud subscribe to a tier of service designed to mitigate a specific level of attack. If the attack begins to exceed this level, UKCloud will work with the customer under attack and implement 'null routing' for the targeted IP address to ensure that all other customers continue to benefit from normal service.
-
-<sup>1</sup> <https://www.sans.org/reading-room/whitepapers/analyst/ddos-attacks-advancing-enduring-survey-34700>
 
 ## Does the DDoS mitigation service protect me against all types of 'denial of service' attacks?
 
