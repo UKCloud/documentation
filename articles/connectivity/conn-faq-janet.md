@@ -4,7 +4,7 @@ description: Frequently asked questions for Janet connectivity
 services: connectivity
 author: mwarner
 reviewer: nstobbart
-lastreviewed: 16/12/2020
+lastreviewed: 07/12/2021
 
 toc_rootlink: FAQs
 toc_sub1: 
