@@ -15,7 +15,7 @@ toc_mdlink: enbl-sco-vpn.md
 
 ## About this document
 
-This document describes the Cloud Enablement services available for VPN solutions. F
+This document describes the Cloud Enablement services available for VPN solutions. 
 
 ## About Cloud Enablement
 
