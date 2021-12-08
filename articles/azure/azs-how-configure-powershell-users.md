@@ -51,20 +51,22 @@ Set-ExecutionPolicy RemoteSigned
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 
 # Install the latest version of PowerShellGet
-Install-Module -Name PowerShellGet -Force
+Install-Module -Name PowerShellGet -Force</code></pre>
 
-# Uninstall existing versions of Azure/Azure Stack Hub PowerShell
+Close and reopen your elevated PowerShell session to load the newly installed version of the PowerShellGet module.
+
+<pre><code class="language-PowerShell"># Uninstall existing versions of Azure/Azure Stack Hub PowerShell
 Get-Module -Name Azs.*, Azure*, Az.* -ListAvailable | Uninstall-Module -Force -Verbose
 
 # On some older systems, you may need to explicitly set the TLS 1.2 security protocol to be able to interact with PowerShell Gallery
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 # Install the Az.BootStrapper module
-Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
+Install-Module -Name Az.BootStrapper -Force
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
-Install-AzProfile -Profile 2019-03-01-hybrid -Force
-Install-Module -Name AzureStack -RequiredVersion 2.0.2-preview -AllowPrerelease
+Install-AzProfile -Profile 2020-09-01-hybrid -Force
+Install-Module -Name AzureStack -RequiredVersion 2.1.1
 
 # Confirm the installation
 Get-Module -Name "Az*" -ListAvailable
