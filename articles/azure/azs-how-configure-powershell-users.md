@@ -51,7 +51,8 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 
 # Install the latest version of PowerShellGet
-Install-Module -Name PowerShellGet -Force</code></pre>
+Install-Module -Name PowerShellGet -Force
+</code></pre>
 
 Close and reopen your elevated PowerShell session to load the newly installed version of the PowerShellGet module.
 
