@@ -93,6 +93,9 @@ Connect-AzAccount -EnvironmentName "AzureStackAdmin"
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
 
+> [!WARNING]
+> This method will **not** work if multi-factor authentication is required for your AAD account. You must use the other method that does not have the -Credential parameter on the Connect-AzAccount cmdlet.
+
 <pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
