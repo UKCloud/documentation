@@ -90,19 +90,23 @@ If you're adding a new disk:
 
 2. In the **Name** field select **Create disk** and enter the following information:
 
-    - **Name** - The name of the disk.
+    - **Disk name** - The name of the disk.
 
     - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
     - **Location** - This will be frn00006, which is the location of the Azure Stack Hub.
 
-    - **Account type** - Whilst both *Standard HDD* and *Premium SSD* are available options, in Azure Stack Hub there is no difference between the two in terms of performance or pricing. Storage speed is instead determined by the size of the virtual machine that the disk is attached to. The *Premium SSD* option is only available to prevent compatibility issues with the Azure API.
-
     - **Source type** - Create a disk from a snapshot of another disk, a blob in a storage account, or create an empty disk.
 
-    - **Size** - The size of the disk in GiB.
+    - **Size** - Select **Change size** to change the size of the disk and it's storage type.
+
+        - **Storage type** - Whilst both *Standard HDD* and *Premium SSD* are available options, in Azure Stack Hub there is no difference between the two in terms of performance or pricing. Storage speed is instead determined by the size of the virtual machine that the disk is attached to. The *Premium SSD* option is only available to prevent compatibility issues with the Azure API.
+
+        - **Custom disk size (GiB)** - The size of the disk in GiB.
 
     ![Create managed disk](images/azs-browser-add-vm-disk.png)
+
+    ![Create managed disk - Size](images/azs-browser-add-vm-disk-size.png)
 
 3. Click the **Create** button. Once it has been created, the *Disks* blade will be shown again with the new disk displayed under the **Data disks** section.
 
