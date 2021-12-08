@@ -4,7 +4,7 @@ description: Provides help adding managed disks to a virtual machine on UKCloud 
 services: azure-stack
 author: soniel
 reviewer: wturner
-lastreviewed: 06/12/2021
+lastreviewed: 08/12/2021
 
 toc_rootlink: Users
 toc_sub1: How To
