@@ -2,9 +2,9 @@
 title: How to configure the Azure Stack Hub user's PowerShell environment
 description: Configure the Azure Stack Hub user's PowerShell environment
 services: azure-stack
-author: Chris Black
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+author: cblack
+reviewer: wturner
+lastreviewed: 08/12/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -45,7 +45,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 <pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
-  
+
 # PowerShell commands for Azure Stack Hub are installed through the PSGallery repository
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
