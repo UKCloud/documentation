@@ -44,7 +44,7 @@ Enter details below to provide values for the variables in the scripts in this a
 ## Install Azure Stack Hub PowerShell
 
 <pre><code class="language-PowerShell"># Set Execution Policy
-Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 # PowerShell commands for Azure Stack Hub are installed through the PSGallery repository
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
@@ -78,7 +78,7 @@ Get-Module -Name "Azs*" -ListAvailable
 ### Azure Active Directory (AAD) based deployments
 
 <pre><code class="language-PowerShell"># Set Execution Policy
-Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 # Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
