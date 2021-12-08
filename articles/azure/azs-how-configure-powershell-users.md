@@ -87,9 +87,7 @@ $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;
 Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
-Connect-AzAccount -EnvironmentName "AzureStackUser"
-
-</code></pre>
+Connect-AzAccount -EnvironmentName "AzureStackUser"</code></pre>
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
 
