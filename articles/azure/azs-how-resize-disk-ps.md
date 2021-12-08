@@ -206,24 +206,23 @@ Enter details below to provide values for the variables in the following scripts
 
 1. Open an RDP connection to your VM.
 
-    ```powershell
-    # Obtain public IP of your VM based on the variables from above
+    <pre><code class="language-PowerShell"> # Obtain public IP of your VM based on the variables from above
     $NICName = (Get-AzNetworkInterface -ResourceGroupName $RGName | Where-Object -FilterScript { $_.VirtualMachine.Id -like "*$VMName*"}).Name
     $IpAddress = Get-AzPublicIpAddress -ResourceGroupName $RGName | Where-Object -FilterScript { $_.IpConfiguration.Id -like "*$NICName*" }
     # Start RDP session to your VM
-    Start-Process "mstsc" -ArgumentList "/v:$($IpAddress.IpAddress)"
-    ```
+    Start-Process "mstsc" -ArgumentList "/v:$($IpAddress.IpAddress)"</code></pre>
 
-2. From your PowerShell window:
+2. Within the RDP session, open a PowerShell window.
 
-    <pre><code class="language-PowerShell"># Resize partition based on drive letter
+3. From the PowerShell window:
+
+    <pre><code class="language-PowerShell"> # Resize partition based on drive letter
     ## Declare drive letter
     $DriveLetter = "<output form="DriveLetter" name="result" style="display: inline;">C</output>"
     ## Find maximum size of the partition based on drive letter
     $MaxSize = (Get-PartitionSupportedSize -DriveLetter $DriveLetter).SizeMax
     ## Resize the partition
-    Resize-Partition -DriveLetter $DriveLetter -Size $MaxSize
-    </code></pre>
+    Resize-Partition -DriveLetter $DriveLetter -Size $MaxSize</code></pre>
 
 ### [Linux VM](#tab/tabid-d)
 
