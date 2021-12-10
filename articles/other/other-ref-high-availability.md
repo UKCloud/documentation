@@ -91,7 +91,7 @@ Use SQL Always On to ensure the availability of SQL server. For more information
 
 ### UKCloud for OpenStack
 
-TrilioVault on UKCloud for OpenStack provides a self-service solution that takes point-in-time backups of workloads and supports multiple recovery options to recover your workloads in case of any outages. For more information, see [*How to use TrilioVault for self-service backup in OpenStack*](ostack-how-use-triliovault.md).
+TrilioVault on UKCloud for OpenStack provides a self-service solution that takes point-in-time backups of workloads and supports multiple recovery options to recover your workloads in case of any outages. For more information, see [*How to use TrilioVault for self-service backup in OpenStack*](../openstack/ostack-how-use-triliovault.md).
 
 OpenStack Platform 13 (OSP13) provides Load Balancing-as-a-Service (LBaaS) as a native feature. For more information see the OpenStack [Using Octavia for Load Balancing-as-a-Service](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html-single/using_octavia_for_load_balancing-as-a-service/index) networking guide.
 
