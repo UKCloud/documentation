@@ -11897,15 +11897,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-high-availability.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "LuVI+iPPV5MBdQz5U4x2TShA2sDyKEtq6RUuSY4jdRw="
+          "hash": "7FOWqY1PhQPnrCG3d7H9V8BE+z409Pt69G9p/5761MA="
         }
       },
       "is_incremental": false,
