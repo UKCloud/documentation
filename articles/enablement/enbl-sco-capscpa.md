@@ -1,29 +1,33 @@
 ---
-title: Cloud Enablement - VPN Service Scope
-description: Outlines important details regarding Cloud Enablement services available for VPN solutions.
+title: Cloud Enablement - CAPS/CPA-approved VPN Service Scope
+description: Outlines important details regarding Cloud Enablement services available for CAPS and CPA-approved (or equivalent standard) VPN solutions.
 services: enablement
 author: shall
-reviewer: nstobbart
-lastreviewed: 06/12/2021
+reviewer: bchallis
+lastreviewed: 08/12/2020
 toc_rootlink: Service Information
-toc_title: Cloud Enablement - VPN Service Scope
+toc_sub1: 
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: Cloud Enablement - CAPS/CPA-approved VPN Service Scope
 toc_fullpath: Service Information/enbl-sco-capscpa.md
 toc_mdlink: enbl-sco-capscpa.md
 ---
 
-# Cloud Enablement - VPN Service Scope
+# Cloud Enablement - CAPS/CPA-approved VPN Service Scope
 
 ## About this document
 
-This document describes the Cloud Enablement services available for VPN solutions.
+This document describes the Cloud Enablement services available for CAPS and CPA-approved (or equivalent standard) VPN solutions.
 
 ## About Cloud Enablement
 
 The Cloud Enablement service provides basic facilities for your own hardware to be installed in our data centre for the purpose of utilising our cloud.
 
-The table provides an overview of the Cloud Enablement services available for VPN solutions. If the usage scenario you need isn't shown in the table, contact us to discuss your requirements.
+The table provides an overview of the Cloud Enablement services available for CAPS and CPA-approved (or equivalent standard) VPN solutions. If the usage scenario you need isn't shown in the table, contact us to discuss your requirements.
 
-Use case | Chosen connectivity option:<br> encryption is required on the chosen line
+Use case | Chosen connectivity option:<br>CPA-approved (or equivalent standard) encryption is needed on the chosen line
 -------------|---------------------------------------
 **Service type** | Connectivity
 **Security level** | Elevated OFFICIAL
@@ -39,7 +43,7 @@ Use case | Chosen connectivity option:<br> encryption is required on the chosen 
 **Resilience requirement<br>(1 bay = 10U, 1kw of power)**| One bay in our Farnborough data centres<br>One bay in our Corsham data centres
 **Resilience cost** | £4,000 setup fee plus £1,000 per month
 **Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (for example, Cloud Enablement in region 5 cannot be stretched to region 6).
-**Next steps** | Raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.<br>You will also need to complete the Assurance Wrap form so that we can create a Walled Garden for you within the Cross Domain Security Zone.
+**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.<br>You will also need to complete the Assurance Wrap form so that we can create a Walled Garden for you within the Cross Domain Security Zone.
 
 ## What connectivity does the VPN service provide?
 
@@ -47,7 +51,7 @@ The VPN service provides up to two ports:
 
 - Cloud Enablement in regions 1, 2, 7 & 8 offers copper connectivity only
 
-- Cloud Enablement in regions 5, 6, 13 & 14 offers connectivity via SFP, so customers can use fibre or copper
+- Cloud Enablement in regions 5 & 6 offers connectivity via SFP, so customers can use fibre or copper
 
 - The connection is into a shared switch.
 
@@ -55,7 +59,7 @@ The VPN service provides up to two ports:
 
 - In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
 
-- In regions 5, 6, 13 & 14 the port speed can be either 1Gbps (copper or fibre) or 10 Gbps (fibre only)
+- In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10 Gbps (fibre only)
 
 ## Who manages the switch?
 
