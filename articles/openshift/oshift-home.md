@@ -77,45 +77,9 @@ toc_mdlink: oshift-home.md
   </div>
 </div>
 
-<!-- articles -->
-<p style="margin-left:15px"><a href="oshift-how-backup-directories-database.md">Back up and restore container directories and databases</a></p>
-<p style="margin-left:15px"><a href="oshift-how-build-app-private-repo.md">Build an OpenShift application from a private GitHub repo</a></p>
-<p style="margin-left:15px"><a href="oshift-how-disable-weak-cipher-suites-enable-hsts.md">Disable weak cipher suites and enable HSTS</a></p>
-<p style="margin-left:15px"><a href="oshift-how-expand-persistent-vols.md">Expand OpenShift persistent volumes</a></p>
-<p style="margin-left:15px"><a href="oshift-how-manage-user-access.md">Manage OpenShift access</a></p>
-<p style="margin-left:15px"><a href="oshift-how-monitor-cluster.md">Monitor your OpenShift cluster</a></p>
-<p style="margin-left:15px"><a href="oshift-how-restrict-access-to-openshift-routes-by-ip-address.md">Restrict access to OpenShift routes by IP address</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-lifecycle.md">Lifecycle and patch management</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-trial.md">Making the most of your UKCloud for Red Hat OpenShift trial</a></p>
-
-v4.x
-<p style="margin-left:15px"><a href="oshift-how-scale-cluster-v4.md">Scale an OpenShift v4 cluster</a></p>
-<p style="margin-left:15px"><a href="oshift-how-use-netpol-v4.md">Use NetworkPolicy objects in OpenShift v4</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-deploy-app-into-service-mesh.md">Deploying an application into OpenShift Service Mesh</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-dns-zone-forwarding-v4.md">DNS zone forwarding in OpenShift clusters</a></p>
-<p style="margin-left:15px"><a href="oshift-how-v4-update.md">Supported customer update strategyfor version 4 clusters</a></p>
-
-v3.x
-<p style="margin-left:15px"><a href="oshift-how-backup-migrate.md">Backup, restore and migrate OpenShift resources</a></p>
-<p style="margin-left:15px"><a href="oshift-how-customise-error-page.md">Customise the router error page</a></p>
-<p style="margin-left:15px"><a href="oshift-how-expose-nonhttp-services.md">Expose non-http services externally</a></p>
-<p style="margin-left:15px"><a href="oshift-how-obtain-usage-metrics.md">Obtain usage metrics for OpenShift capacity management</a></p>
-<p style="margin-left:15px"><a href="oshift-how-add-domains-proxy-allow-list.md">Permit outbound internet access in deployments with government community network connectivity</a></p>
-<p style="margin-left:15px"><a href="oshift-how-publish-routes-on-multiple-networks.md">Publish application routes to multiple external networks</a></p>
-<p style="margin-left:15px"><a href="oshift-how-use-netpol.md">Use NetworkPolicy objects</a></p>
-<p style="margin-left:15px"><a href="oshift-how-use-hawkular-metrics.md">Use the Hawkular Metrics API</a></p>
-<p style="margin-left:15px"><a href="oshift-how-view-proxy-logs.md">View proxy logs in a multi-network OpenShift cluster</a></p>
-<p style="margin-left:15px"><a href="oshift-how-view-router-logs.md">View your router logs</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-no-proxy.md">Community network proxy configuration</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-scaling.md">Considerations when scaling an OpenShift cluster</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-kibana-dashboards.md">Custom dashboards provided with aggregated logging Kibana</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-dns-zone-forwarding.md">DNS zone forwarding in OpenShift clusters</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-cluster-monitoring.md">OpenShift integrated cluster monitoring</a></p>
-<p style="margin-left:15px"><a href="oshift-ref-security-best-practices.md">Security best practices</a></p>
-
 <div class="row">
   <div class="col-md-4">
-    <p><strong>Managing your clusters</strong></p>
+    <p><strong>Managing your environment</strong></p>
   </div>
   <div class="col-md-4">
     <p><strong>Working with networks</strong></p>
@@ -127,13 +91,34 @@ v3.x
 
 <div class="row">
   <div class="col-md-4">
-    <p style="margin-left:15px"><a href="vmw-how-create-vapp.md">Create a vApp</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-build-app-private-repo.md">Build an OpenShift application from a private GitHub repo</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-expand-persistent-vols.md">Expand OpenShift persistent volumes</a></p>
+    <p style="margin-left:15px"><a href="oshift-ref-lifecycle.md">Lifecycle and patch management</a></p>
+    <p style="margin-left:15px"><a href="oshift-ref-trial.md">Making the most of your UKCloud for Red Hat OpenShift trial</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-scale-cluster-v4.md">Scale an OpenShift v4 cluster</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-v4-update.md">Supported customer update strategy for version 4 clusters</a></p>
+    <p style="margin-left:15px"><a href="oshift-ref-scaling.md">Considerations when scaling an OpenShift cluster (v3.x)</a></p>
   </div>
   <div class="col-md-4">
-    <p style="margin-left:15px"><a href="vmw-ref-connectivity-options.md">Understanding connectivity options</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-use-netpol-v4.md">Use NetworkPolicy objects in OpenShift v4</a></p>
+    <p style="margin-left:15px"><a href="oshift-ref-deploy-app-into-service-mesh.md">Deploying an application into OpenShift Service Mesh (v4.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-ref-dns-zone-forwarding-v4.md">DNS zone forwarding in OpenShift clusters (v4.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-ref-no-proxy.md">Community network proxy configuration (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-customise-error-page.md">Customise the router error page (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-expose-nonhttp-services.md">Expose non-http services externally (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-add-domains-proxy-allow-list.md">Permit outbound internet access in deployments with government community network connectivity (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-publish-routes-on-multiple-networks.md">Publish application routes to multiple external networks (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-use-netpol.md">Use NetworkPolicy objects (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-ref-dns-zone-forwarding.md">DNS zone forwarding in OpenShift clusters (v3.x)</a></p>
   </div>
   <div class="col-md-4">
-    <p style="margin-left:15px"><a href="vmw-how-build-edge.md">Build an edge gateway using the UKCloud Portal</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-monitor-cluster.md">Monitor your OpenShift cluster</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-obtain-usage-metrics.md">Obtain usage metrics for OpenShift capacity management (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-use-hawkular-metrics.md">Use the Hawkular Metrics API (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-view-proxy-logs.md">View proxy logs in a multi-network OpenShift cluster (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-view-router-logs.md">View your router logs (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-ref-kibana-dashboards.md">Custom dashboards provided with aggregated logging Kibana (v3.x)</a></p>
+    <p style="margin-left:15px"><a href="oshift-ref-cluster-monitoring.md">OpenShift integrated cluster monitoring (v3.x)</a></p>
   </div>
 </div>
 
@@ -151,13 +136,18 @@ v3.x
 
 <div class="row">
   <div class="col-md-4">
-    <p style="margin-left:15px"><a href="vmw-how-create-vapp.md">Create a vApp</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-backup-directories-database.md">Back up and restore container directories and databases</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-backup-migrate.md">Back up, restore and migrate OpenShift resources (v3.x)</a></p>
   </div>
   <div class="col-md-4">
-    <p style="margin-left:15px"><a href="vmw-ref-connectivity-options.md">Understanding connectivity options</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-disable-weak-cipher-suites-enable-hsts.md">Disable weak cipher suites and enable HSTS</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-manage-user-access.md">Manage OpenShift access</a></p>
+    <p style="margin-left:15px"><a href="oshift-how-restrict-access-to-openshift-routes-by-ip-address.md">Restrict access to OpenShift routes by IP address</a></p>
+
+    <p style="margin-left:15px"><a href="oshift-ref-security-best-practices.md">Security best practices (v3.x)</a></p>
   </div>
   <div class="col-md-4">
-    <p style="margin-left:15px"><a href="vmw-how-build-edge.md">Build an edge gateway using the UKCloud Portal</a></p>
+    <p style="margin-left:15px"></p>
   </div>
 </div>
 
