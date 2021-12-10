@@ -4,7 +4,7 @@ description: Home page for UKCloud for Microsoft Azure
 services: azure-stack
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 03/12/2021
+lastreviewed: 09/12/2021
 toc_rootlink: About
 toc_sub1:
 toc_sub2:
@@ -34,7 +34,7 @@ toc_mdlink: azs-home.md
     <!-- brief introduction -->
     <p>UKCloud for Microsoft Azure can deliver a fully managed Azure hybrid cloud solution that enables you to unlock the potential of the cloud &ndash; for all workloads regardless of location. Use Azure Stack Hub to run applications in our UK-sovereign data centres or take advantage of our CSP status to get the most out of Azure public &dash; all with the support and guidance of our Microsoft experts.</p>
     <!-- link to propositions -->
-    <p>Accelerate your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> journey by using Azure services that enable you to <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovate</strong></a> with modern architectures and next-gen tooling, all within our <a href="https://ukcloud.com/solutions/secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>. Then take the next steps to a <a href="https://ukcloud.com/multi-cloud/"><strong>hybrid cloud</strong></a> where you can leverage the best of all clouds.</p>
+    <p>Accelerate your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> journey by using Azure services that enable organisations and governments to unlock the value of their data and drive business <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovation</strong></a>. Adopt modern architectures and next-gen tooling, all within our <a href="https://ukcloud.com/hub/news/what-is-secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>, then take the next steps to a <a href="https://ukcloud.com/multi-cloud/"><strong>hybrid cloud</strong></a> where you can leverage the best of all clouds.</p>
   </div>
   <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
