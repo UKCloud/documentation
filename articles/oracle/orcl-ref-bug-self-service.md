@@ -5,13 +5,13 @@ services: oracle
 author: Sue Highmoor
 reviewer: bchallis
 lastreviewed: 16/11/2021
-toc_rootlink: Reference
-toc_sub1: 
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: Reference
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Oracle cloud self-service functionality
-toc_fullpath: Reference/orcl-ref-bug-self-service.md
+toc_fullpath: UKCloud for Oracle Software/Reference/orcl-ref-bug-self-service.md
 toc_mdlink: orcl-ref-bug-self-service.md
 ---
 

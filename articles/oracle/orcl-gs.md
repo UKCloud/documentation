@@ -6,13 +6,13 @@ author: shighmoor
 reviewer: bchallis
 lastreviewed: 12/11/2021
 
-toc_rootlink: Getting Started
-toc_sub1:
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: Getting Started
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: UKCloud for Oracle Software
-toc_fullpath: Getting Started/orcl-gs.md
+toc_fullpath: UKCloud for Oracle Software/Getting Started/orcl-gs.md
 toc_mdlink: orcl-gs.md
 ---
 

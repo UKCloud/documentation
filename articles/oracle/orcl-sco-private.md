@@ -6,14 +6,14 @@ author: shighmoor
 reviewer: shighmoor
 lastreviewed: 02/07/2019
 
-toc_rootlink: Service Information
+toc_rootlink: Private Cloud for Oracle Software
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Private Cloud for Oracle Software Service Scope
-toc_fullpath: Service Information/prc-sco-orcl.md
-toc_mdlink: prc-sco-orcl.md
+toc_title: Service Scope
+toc_fullpath: Service Information/orcl-sco-private.md
+toc_mdlink: orcl-sco-private.md
 ---
 
 # Private Cloud for Oracle Software Service Scope

@@ -1,18 +1,18 @@
 ---
 title: Private Cloud for Oracle Software Service Definition
 description: Provides an overview of what is provided by the Private Cloud for Oracle Software service
-services: private-cloud
+services: oracle
 author: shighmoor
 reviewer: shighmoor
 lastreviewed: 15/04/2021
-toc_rootlink: Service Information
+toc_rootlink: Private Cloud for Oracle Software
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Private Cloud for Oracle Software Service Definition
-toc_fullpath: Service Information/prc-sd-orcl.md
-toc_mdlink: prc-sd-orcl.md
+toc_title: Service Definition
+toc_fullpath: Private Cloud for Oracle Software/orcl-sd-private.md
+toc_mdlink: orcl-sd-private.md
 ---
 
 # Private Cloud for Oracle Software Service Definition
@@ -37,7 +37,7 @@ Private Cloud for Oracle Software enables you to have private implementations of
 
 The service is designed to be flexible and enables you to mix and match from a range of pre-defined options for each virtual machine and change them when required.
 
-![Private Cloud for Oracle product options](images/prc-orcl-product-options-g12.png)
+![Private Cloud for Oracle product options](images/orcl-product-options-private-g12.png)
 
 ## Pricing and packaging
 
@@ -61,7 +61,7 @@ Private Cloud for Oracle Software operates a minimum commitment of 24 months. Ea
 
 For full terms and conditions, including onboarding and responsibilities, refer to the [*Terms and conditions documents*](../other/other-ref-terms-and-conditions.md).
 
-For more information about this service, see the [*Service Scope*](prc-sco-orcl.md).
+For more information about this service, see the [*Service Scope*](orcl-sco-private.md).
 
 ## Why UKCloud?
 

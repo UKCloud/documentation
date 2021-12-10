@@ -5,13 +5,13 @@ services: oracle
 author: mwarner
 reviewer: bchallis
 lastreviewed: 11/11/2021
-toc_rootlink: FAQs
-toc_sub1: 
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: FAQs
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: UKCloud for Oracle Software FAQs
-toc_fullpath: FAQs/orcl-faq.md
+toc_fullpath: UKCloud for Oracle Software/FAQs/orcl-faq.md
 toc_mdlink: orcl-faq.md
 ---
 
@@ -32,7 +32,7 @@ For small Oracle environments we continue to offer [*Dedicated Compute*](../dedi
 
 For larger Oracle requirements we continue to offer our [*Private Cloud*](../private-cloud/prc-sd.md) service for both Assured OFFICIAL and Elevated OFFICIAL, which you can use in conjunction with Oracle VM hypervisor.
 
-Alternatively, if you want to use Oracle proprietary hardware, such as Exadata, then we can support the hosting and management of certain Oracle technologies. See [*Private Cloud for Oracle Software*](../private-cloud/prc-sd-orcl.md) for more information.
+Alternatively, if you want to use Oracle proprietary hardware, such as Exadata, then we can support the hosting and management of certain Oracle technologies. See [*Private Cloud for Oracle Software*](orcl-sd-private.md) for more information.
 
 ## General
 
@@ -76,7 +76,7 @@ No, this service is not currently available for Oracle data.
 
 ### Can I have a dedicated UKCloud for Oracle Software environment?
 
-Yes. If you prefer a dedicated environment, UKCloud offer the [*Private Cloud service*](../private-cloud/prc-sd.md) for both Assured OFFICIAL and Elevated OFFICIAL. Alternatively, if you want to use Oracle proprietary hardware, then we can support the hosting and management of certain Oracle technologies - see [*Private Cloud for Oracle Software*](../private-cloud/prc-sd-orcl.md) for more information.
+Yes. If you prefer a dedicated environment, UKCloud offer the [*Private Cloud service*](../private-cloud/prc-sd.md) for both Assured OFFICIAL and Elevated OFFICIAL. Alternatively, if you want to use Oracle proprietary hardware, then we can support the hosting and management of certain Oracle technologies - see [*Private Cloud for Oracle Software*](orcl-sd-private.md) for more information.
 
 ### Is the RAM virtual or physical?
 
