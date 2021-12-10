@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-add-managed-disks-portal.html",
-          "hash": "FBfPbZLsi4hIEsA2BszL0e2KJaZaBWUYYJkLWTrDK5I="
+          "hash": "O2ftR3pG0kmDQ3o6z3xio6c5jijnoagh/2ADH6doGkY="
         }
       },
       "is_incremental": false,
@@ -778,6 +778,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-add-lb-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-add-vm-disk-size.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-add-vm-disk-size.png"
         }
       },
       "is_incremental": false,
@@ -4389,7 +4400,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-ddos.html",
-          "hash": "Qo4UBjvcmXTmWABeYMtnS0nMtKvPmxbaJqrWfporclM="
+          "hash": "GU+j9PDnuAIefk4kC7wg57Nm71IYQX/5SUgPaeYAbKI="
         }
       },
       "is_incremental": false,
@@ -4437,7 +4448,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-hybridconnect.html",
-          "hash": "tVnyNFIY+YDYVckaJphVUoCKxCg2hyMJh7OjPT6nwLk="
+          "hash": "VXGdR8OpCAugkPv33BLEGY2XILNDYRGK8xcALkYtmRY="
         }
       },
       "is_incremental": false,
@@ -4485,7 +4496,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-psn-police.html",
-          "hash": "se++pjCVO61Prx81SU8vxXBucduvLt/yp+ONXEWLG0w="
+          "hash": "p0VRD8RUes1AjyWN8OOPjMwpJGs73GM7EZCp1kLklvU="
         }
       },
       "is_incremental": false,
@@ -4497,7 +4508,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-psn.html",
-          "hash": "40h0AW34maEy1cKLS2X4jsc/ghNX70NgIMH/bXoXMXw="
+          "hash": "6WyZMDkYfTztiqWja3dJiLB7gxmvqLxH5Q0CpmOFZcg="
         }
       },
       "is_incremental": false,
@@ -4509,7 +4520,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq.html",
-          "hash": "fRaJdcohalN5qhxI/Gj9wXhPo9Rwh2T/M+5Ll86KRR8="
+          "hash": "ql5I1AS2wXGC2EIvjqGyG5/aE7DYD8sL3OOR45ZBM1k="
         }
       },
       "is_incremental": false,
@@ -5823,7 +5834,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-hosting.html",
-          "hash": "kJ77UCSS49KBPh66NPZKeixuoVU6ctWF0CawEAgmkIQ="
+          "hash": "HlWXdjZbTvLOGN4XSI6aSw6kF3V0DwzR8aIwbrJBJRk="
         }
       },
       "is_incremental": false,
@@ -11783,19 +11794,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "6cE5hvpaohUU4K2lS4eAxM9XOjwemikPuQe+kXKhc1s="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-browsers.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-browsers.html",
-          "hash": "rMVchKPwg1sBukplyaELD+NJWmDrN0DTuvP9Hr1F+lE="
+          "hash": "7bDHx4bu+Ifj8mVo4iCQGwS00c0eLMgY6RAEQKvRImQ="
         }
       },
       "is_incremental": false,
@@ -11898,12 +11897,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-high-availability.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "2/O6F8G6pbQfAN6kzebpZWnI+5P54Fn+T0SNmlOU9m0="
+          "hash": "LuVI+iPPV5MBdQz5U4x2TShA2sDyKEtq6RUuSY4jdRw="
         }
       },
       "is_incremental": false,
@@ -12215,7 +12217,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "3YfbWtRvXSnJWlKGRW7r8tCtU01NH2IZIbOD5BHEIn4="
+          "hash": "QbeNE9z2nIdzt50YlwoSsH4QujIjhM9KkUzmPIVxkxA="
         }
       },
       "is_incremental": false,
@@ -22679,7 +22681,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 461,
+          "total_file_count": 460,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
