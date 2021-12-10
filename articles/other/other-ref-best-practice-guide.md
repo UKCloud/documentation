@@ -97,6 +97,20 @@ At UKCloud, we're proud to provide a range of products, solutions and pricing ta
 
 For more information on the range of VM sizes that we offer, see our latest [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
+### Locating your VDCs
+
+UKCloud provides information about the location of a VDC in the VDC metadata. Using this metadata, you can locate a VDC by site, region and zone. Knowing where your VDCs are located can be useful for:
+
+- Determining how resilient your applications are
+
+- Determining how maintenance or an unplanned outage may affect your applications
+
+- Providing additional information to help with support call resolution
+
+- More detailed billing information per VM
+
+For more information, see [*How to locate your virtual data centre on the UKCloud platform*](../vmware/vmw-how-locate-vdc.md).
+
 ## Best Practices - general information
 
 ### Maintaining up-to-date contacts for your account
@@ -119,20 +133,6 @@ To subscribe to updates, at the bottom of the page, click **Subscribe**, enter y
 
 For more information on finding the region and zone, see [*How to locate your virtual data centre on the UKCloud platform*](../vmware/vmw-how-locate-vdc.md). If you're experiencing issues that aren't reflected on the status page, please contact us through the [UKCloud Portal](https://portal.ukcloud.com/).
 
-### Locating your VDCs
-
-UKCloud provides information about the location of a VDC in the VDC metadata. Using this metadata, you can locate a VDC by site, region and zone. Knowing where your VDCs are located can be useful for:
-
-- Determining how resilient your applications are
-
-- Determining how maintenance or an unplanned outage may affect your applications
-
-- Providing additional information to help with support call resolution
-
-- More detailed billing information per VM
-
-For more information, see [*How to locate your virtual data centre on the UKCloud platform*](../vmware/vmw-how-locate-vdc.md).
-
 ### Renewing, adding and revoking SRA certificates
 
 Secure Remote Access (SRA) certificates enable you to securely connect to UKCloud's Elevated OFFICIAL security domain using NCSC-approved internet virtual private network (VPN) technologies and the walled garden architectural pattern.
@@ -150,6 +150,10 @@ System administrators and mobile workers can securely access workloads running o
 - If you have multiple certificates to renew or revoke, you can do this in a single service request by selecting the **Renew and/or Revoke multiple SRAS Certificates** option in the UKCloud Portal. Attach the *Secure Remote Access bulk renewal/revoke form* containing all the certificates.
 
 For more information, see the [*Secure Remote Access FAQs*](../sra/sra-faq.md) and [*Secure Remote Access Service Definition*](../sra/sra-sd.md).
+
+### Software versions
+
+It's your responsibility to ensure that you're using supported versions of any software that you install in your environment on the UKCloud platform. If you encounter issues that relate to old and out-of-support versions of software, although we'll make our best efforts to assist, we cannot guarantee that we'll be able to resolve those issues. We reserve the right to request that any out-of-support software be updated before working on support tickets.
 
 ## Feedback
 
