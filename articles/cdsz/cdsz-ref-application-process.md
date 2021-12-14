@@ -19,15 +19,11 @@ toc_mdlink: cdsz-ref-application-process.md
 
 ## Overview
 
-The UKCloud Cross Domain Security Zone (CDSZ) enables you to securely transfer data between our Assured OFFICIAL and Elevated OFFICIAL security domains using NCSC-approved cross-domain security patterns. Using the CDSZ you can create applications that are accessible to citizens, but ensure data safety.
+The UKCloud Cross Domain Security Zone (CDSZ) enables you to securely transfer data between our Assured OFFICIAL and Elevated OFFICIAL security domains.
 
 This document provides an overview of the UKCloud process to be used by customers wanting to purchase CDSZ services (Walled Garden and Secure Remote Access).
 
-There are two approaches to applying for CDSZ services:
-
-- A light touch design review/self-assessment route for customers with simple implementations, or those who are experienced at designing secure solutions. This enables customers who are comfortable with the risk associated with their data to choose which controls and evidence they feel is appropriate to self-certify their cross domain solution.
-
-- An assurance wrap style approach with UKCloud's experienced professionals for more complex implementations or those customers who would like support and guidance when developing their solutions. This enables customers who require more support to submit their proposed solution with confidence that it effectively mitigates against risk.
+When applying for CDSZ services, customers may work with our Cloud Architects who can support and guide customers around designing an architecture that is appropriate for their requirements around risk mitigation. It is the responsibility of the customer to work with their data owner to ensure they are comfortable with the risk associated with their data and to choose which controls they feel is appropriate within their CDSZ.
 
 In this document, the *customer* is the UKCloud customer, who may or may not be the ultimate end user of the application. The customer will be responsible for completing any compliance process with the end user, including obtaining sign-off from the relevant data owner. The data owner should be a permanent employee at the data owning organisation with evidence of data ownership, for example an IT Security Officer (ITSO), Senior Information Risk Owner (SIRO) or accreditor.
 
