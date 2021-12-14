@@ -3,8 +3,8 @@ title: MISO rebate FAQs
 description: Frequently asked questions for MISO rebate
 services: other
 author: mwarner
-reviewer: pheathman
-lastreviewed: 11/12/2020
+reviewer: dbooton
+lastreviewed: 13/12/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
