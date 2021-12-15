@@ -3,8 +3,8 @@ title: How to securely manage permissions for a specific vApp
 description: Shows how to extend permissions to users for a specific vApp, ensuring that those users cannot also access other vApps or settings
 services: vmware
 author: shall
-reviewer: shighmoor
-lastreviewed: 06/11/2020
+reviewer: swthomas
+lastreviewed: 15/12/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
