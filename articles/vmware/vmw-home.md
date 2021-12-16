@@ -4,7 +4,7 @@ description: Home page for UKCloud for VMware
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 02/12/2021
+lastreviewed: 16/12/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -285,7 +285,7 @@ toc_mdlink: vmw-home.md
     <p><strong>Product options</strong></p>
   </div>
   <div class="col-md-6">
-    <p><strong>Additional products</strong></p>
+    <p><strong>Complementary products</strong></p>
   </div>
 </div>
 
@@ -296,7 +296,7 @@ toc_mdlink: vmw-home.md
       <p style="margin-left:15px"><a href="vmw-sco-snapshot-protection.md"><strong>Snapshot Protection.</strong></a> A cost effective daily backup service.</p>
       <p style="margin-left:15px"><a href="vmw-sco-journaling-protection.md"><strong>Journaling Protection.</strong></a> Recovery solution for essential production workloads.</p>
       <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
-      <p style="margin-left:15px"><a href="../other/other-ref-security-domains.md"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
+      <p style="margin-left:15px"><a href="vmw-ref-service-options.md"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
   </div>
   <div class="col-md-6">
       <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md"><strong>Managed IT Operations.</strong></a> Reduce the amount of time spent on managing your IT infrastructure.</p>
