@@ -4,7 +4,7 @@ description: Home page for UKCloud for Red Hat OpenShift
 services: openshift
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/12/2021
+lastreviewed: 16/12/2021
 
 toc_rootlink: About
 toc_sub1: 
@@ -244,7 +244,7 @@ toc_mdlink: oshift-home.md
     <p><strong>Product options</strong></p>
   </div>
   <div class="col-md-6">
-    <p><strong>Additional products</strong></p>
+    <p><strong>Complementary products</strong></p>
   </div>
 </div>
 
