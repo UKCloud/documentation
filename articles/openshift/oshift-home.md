@@ -253,7 +253,7 @@ toc_mdlink: oshift-home.md
       <p style="margin-left:15px"><a href="oshift-sd.md"><strong>Additional Control Plane Nodes.</strong></a> An operational cluster requires a minimum of three Control Plane Nodes. Depending on your workloads or solution, you may need more.</p>
       <p style="margin-left:15px"><a href="oshift-sd.md"><strong>Additional Infrastructure Nodes.</strong></a> Infrastructure Nodes are not mandatory, but we recommend a minimum of two to provide integrated cluster services. You may want more if you require additional services.</p>
       <p style="margin-left:15px"><a href="oshift-sd.md"><strong>Additional Application Nodes.</strong></a> You need at least one Application Node to run your application, however we recommend a minimum of two nodes for resilience. You may need more for duplicated or new applications.</p>
-      <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md"><strong>Registry storage</strong></a> The OpenShift image registry persistent storage is hosted on UKCloud Cloud Storage.
+      <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md"><strong>Registry storage.</strong></a> The OpenShift image registry persistent storage is hosted on UKCloud Cloud Storage.
       <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
   </div>
   <div class="col-md-6">
