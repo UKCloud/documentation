@@ -4,7 +4,7 @@ description: Home page for UKCloud for Microsoft Azure
 services: azure-stack
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/12/2021
+lastreviewed: 16/12/2021
 toc_rootlink: About
 toc_sub1:
 toc_sub2:
@@ -248,13 +248,13 @@ If you're an <strong>Azure Stack Hub service operator</strong>, UKCloud can shar
     <p><strong>Product options</strong></p>
   </div>
   <div class="col-md-6">
-    <p><strong>Additional products</strong></p>
+    <p><strong>Complementary products</strong></p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="../other/other-ref-security-domains.md"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
+      <p style="margin-left:15px"><a href="azs-sd.md"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
   </div>
   <div class="col-md-6">
       <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md"><strong>Managed IT Operations.</strong></a> Reduce the amount of time spent on managing your IT infrastructure.</p>
