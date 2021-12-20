@@ -64,7 +64,7 @@ The `using_curl.md` page provides an example of how to use CURL to call the REST
 The example makes two calls to the API. The first call authenticates the session:
 
 ``` curl
-curl -u %VCD_USERNAME%@%VCD_ORG%:%VCD_PASSWORD%  -H "Accept: application/*+xml;version=5.6" -X POST -i https://api.vcd.portal.skyscapecloud.com/api/sessions
+curl -u %VCD_USERNAME%@%VCD_ORG%:%VCD_PASSWORD%  -H "Accept: application/*+xml;version=5.6" -X POST -i https://vcd.portal.skyscapecloud.com/api/sessions
 ```
 
 > [!TIP]
@@ -73,7 +73,7 @@ curl -u %VCD_USERNAME%@%VCD_ORG%:%VCD_PASSWORD%  -H "Accept: application/*+xml;v
 Having authenticated successfully and received an `x-vcloud-authorisation` header in the response, the second call passes the authentication token as a header on the request:
 
 ``` curl
-curl -H "x-vcloud-authorization: a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6" -H "Accept: application/*+xml;version=5.6" -i  https://api.vcd.portal.skyscapecloud.com/api/query?type=orgVdcStorageProfile
+curl -H "x-vcloud-authorization: a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6" -H "Accept: application/*+xml;version=5.6" -i  https://vcd.portal.skyscapecloud.com/api/query?type=orgVdcStorageProfile
 ```
 
 This call returns an XML structure, in which you can see an `OrgVdcStorageProfileRecord` element containing the following properties:

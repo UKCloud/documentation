@@ -100,7 +100,7 @@ To import a `.vmx` file:
 
     For example:
 
-          ovftool --vCloudTemplate --acceptAllEulas --overwrite centos71.vmx "vcloud://auser@api.vcd.portal.skyscapecloud.com:443?org=1-2-3-a4b56c& vappTemplate=centos71&catalog=OVFTool-test"
+          ovftool --vCloudTemplate --acceptAllEulas --overwrite centos71.vmx "vcloud://auser@vcd.portal.skyscapecloud.com:443?org=1-2-3-a4b56c& vappTemplate=centos71&catalog=OVFTool-test"
 
     > [!TIP]
     > Make sure you use double quotes (`"`) rather than single quotes (`'`).
@@ -139,7 +139,7 @@ To upload an ISO image:
 
     For example:
 
-          ovftool -st="ISO" "C:\example.iso\" "vcloud://auser@api.vcd.portal.skyscapecloud.com:443?vdc=myVDC&org=1-2-3-a4b56c&media=CentOS_ISO&catalog=OVFTool-test"
+          ovftool -st="ISO" "C:\example.iso\" "vcloud://auser@vcd.portal.skyscapecloud.com:443?vdc=myVDC&org=1-2-3-a4b56c&media=CentOS_ISO&catalog=OVFTool-test"
 
     > [!TIP]
     > Make sure you use double quotes (`"`) rather than single quotes (`'`).
