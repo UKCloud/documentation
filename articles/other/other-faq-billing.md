@@ -3,8 +3,8 @@ title: Invoice and billing FAQs
 description: Frequently asked questions about invoicing and billing
 services: other
 author: shighmoor
-reviewer: pheathman
-lastreviewed: 11/12/2020
+reviewer: lhudson
+lastreviewed: 07/12/2021
 
 toc_rootlink: FAQs
 toc_sub1: 
@@ -22,7 +22,7 @@ toc_mdlink: other-faq-billing.md
 
 ### When will I be billed?
 
-We send out invoices on the first day of each month for the previous month's usage.
+We send out invoices on the first workday of each month for the previous month's usage.
 
 ### How can I pay?
 
