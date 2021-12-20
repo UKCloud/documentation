@@ -2,9 +2,9 @@
 title: TCP_TW_REUSE and TCP_TW_RECYCLE settings
 description: Describes the role of TCP_TW_reuse and TCP_TW_recycle settings on edge gateways, and how these may affect TCP connections in some scenarios.
 services: vmware
-author: Sue Highmoor
-reviewer: lthangarajah
-lastreviewed: 11/06/2019
+author: shighmoor
+reviewer: swthomas
+lastreviewed: 20/12/2021
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
