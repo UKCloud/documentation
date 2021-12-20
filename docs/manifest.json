@@ -3266,7 +3266,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-gs-walled-garden.html",
-          "hash": "mDWSYgokgw5bBESSn46sCOCpx4EjCjiH3qLOs26RDT8="
+          "hash": "EAy0wG+q0BZFnE8R7QFKAxBgtnO/cRYZNrQFnD6q1pg="
         }
       },
       "is_incremental": false,
@@ -3290,7 +3290,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-ref-application-process.html",
-          "hash": "W1bdOcp/KPnB1xog3ryCg8GkLKoj0IGPcO/FgtRUoNU="
+          "hash": "4yklvYpKGdjvgXFO+YR5ZVzQp8OaLwIUSXI//04PTJ0="
         }
       },
       "is_incremental": false,
@@ -10762,6 +10762,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-product-options-private-g12.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-product-options-private-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/oracle/images/orcl-solaris-aix.png",
       "output": {
         "resource": {
@@ -10788,7 +10799,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-faq.html",
-          "hash": "Wn3hxDAf9Oaq82ISRweUBxLoMOVFOZquT6w3avWQHxw="
+          "hash": "J/qH3kWNewQE+Fxf5LkFda9jt8CyNoH1Wm0oZ2gT3Co="
         }
       },
       "is_incremental": false,
@@ -10801,18 +10812,6 @@
         ".html": {
           "relative_path": "articles/oracle/orcl-gs.html",
           "hash": "j/BFCxb/s2s2F1lRceLnxerj5UnQc8kSz9WioxvHiog="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/oracle/orcl-home.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/oracle/orcl-home.html",
-          "hash": "y+oY7FqZA3wMrRKTTCyBmibC3PHzqouYrSgZVJyIMmo="
         }
       },
       "is_incremental": false,
@@ -10940,11 +10939,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-sco-private.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-sco-private.html",
+          "hash": "beoK/MI6AJl2p+lP10f+7+n5v8lKJZ8NCUIOzPrrVFs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
           "hash": "fqsPdYfUaIWk61DeinM9FaOcZVPoVBHZUefhh8QjL+0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-sd-private.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-sd-private.html",
+          "hash": "i8cd2+EfMb+VdxooCJth7l9aSvVqGPq+Nt2/QM5GCsE="
         }
       },
       "is_incremental": false,
@@ -10980,7 +11003,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "Q68qGQEJxAp/0hy/nvSuy70yQZQsFw/cZRNkY9fCBjs="
+          "hash": "fS+XFBE0YSNhuX7iBqrxVYMW3Q3eU/hSNiS1fbMBYmA="
         }
       },
       "is_incremental": false,
@@ -11890,7 +11913,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "RXMKzooiWIqXwQCTGzxcF8uUhLU/1q5EmH9XXBxgC1Y="
+          "hash": "bOMnxb1PWziVQ+p2ryKR7cYhsqIAdfn1KQaR94SVbDI="
         }
       },
       "is_incremental": false,
@@ -12010,7 +12033,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-product-status.html",
-          "hash": "BBX9+XnwrTBtFgRFWwBMfFEfQ1gXQ1ybaBLYbKRZX9I="
+          "hash": "WFWCImLKedQjBxf6Y0DiFZO/PbjvVsjt3UhsTAsDcss="
         }
       },
       "is_incremental": false,
@@ -12046,7 +12069,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "f4oMwPt7bkr4SRy/iibURTeFXAVQz/heqAcTJaPZlP8="
+          "hash": "x2919sqJF15QlRGuNE2iNvaOpthffBK90VJQoKqzeHY="
         }
       },
       "is_incremental": false,
@@ -12435,6 +12458,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-menu-all-contacts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-menu-all-contacts.png"
         }
       },
       "is_incremental": false,
@@ -13091,6 +13125,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-settings-ip-api-enable.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-settings-ip-api-enable.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-settings-ip-api-user.png",
       "output": {
         "resource": {
@@ -13106,6 +13151,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-settings-ip-portal-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-settings-ip-portal-enable.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-settings-ip-portal-enable.png"
         }
       },
       "is_incremental": false,
@@ -13268,7 +13324,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-restrict-access-portal.html",
-          "hash": "IEj33rlSSQFpmhFIElPiblJU9T9MnNgDwey2CgEvlrA="
+          "hash": "e5Qp0jg6mSb443lsVK7JlQh+L1x8P2t3PNC+md7JiFg="
         }
       },
       "is_incremental": false,
@@ -13280,7 +13336,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-restrict-access-vcloud-api.html",
-          "hash": "QJT17ym2LToA8j0UsUqvF1a2ToCDebtCHGMTS47A53g="
+          "hash": "logMiX8VEkYgrIj6A2tN3RF2LWNbsvzu9GqHERmdjTw="
         }
       },
       "is_incremental": false,
@@ -13492,17 +13548,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/private-cloud/images/prc-orcl-product-options-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/private-cloud/images/prc-orcl-product-options-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/private-cloud/images/prc-product-options-g12.png",
       "output": {
         "resource": {
@@ -13560,18 +13605,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/private-cloud/prc-sco-orcl.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/private-cloud/prc-sco-orcl.html",
-          "hash": "Ws/+1YjSz6YENprgY0JyMjjg5xH8U6rJAu7SUcqInxs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/private-cloud/prc-sco-storage.md",
       "output": {
         ".html": {
@@ -13589,18 +13622,6 @@
         ".html": {
           "relative_path": "articles/private-cloud/prc-sco.html",
           "hash": "KOA036DpD8hbn1rtukHxF9DHLb79jrTzXt6mg67kCu8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/private-cloud/prc-sd-orcl.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/private-cloud/prc-sd-orcl.html",
-          "hash": "BGIMobDnPbg0F8eYyFVVz7dmgE1BepiHVu56PleYSfw="
         }
       },
       "is_incremental": false,
@@ -13636,7 +13657,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/toc.html",
-          "hash": "Ysx95XzeUMoVC8kk4ReBBePBoOwuluBHLR09AlTZiII="
+          "hash": "5tpcTJCgiN53eDgcnpwzLDzLtRGy/Dkzd4wJobIGAtY="
         }
       },
       "is_incremental": false,
@@ -14694,10 +14715,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/powershellandpython1.png",
+      "source_relative_path": "articles/vmware/images/ptl-backup-summary-report.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/powershellandpython1.png"
+          "relative_path": "articles/vmware/images/ptl-backup-summary-report.png"
         }
       },
       "is_incremental": false,
@@ -14705,10 +14726,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/powershellandpython2.png",
+      "source_relative_path": "articles/vmware/images/ptl-backup-summary-reports.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/powershellandpython2.png"
+          "relative_path": "articles/vmware/images/ptl-backup-summary-reports.png"
         }
       },
       "is_incremental": false,
@@ -14731,6 +14752,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/ptl-contacts-btn-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-contacts-permissions-vmw.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-contacts-permissions-vmw.png"
         }
       },
       "is_incremental": false,
@@ -14771,6 +14803,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-mnu-backup-summary.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-mnu-backup-summary.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/ptl-mnu-my-calls.png",
       "output": {
         "resource": {
@@ -14793,10 +14836,98 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-mnu-export.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-mnu-export.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/ptl-myvms-select-vdc.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/ptl-myvms-select-vdc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-snapshot-manage-vdc.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-snapshot-manage-vdc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-snapshot-policy-vdc.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-snapshot-policy-vdc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-snapshot-policy.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-snapshot-policy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-snapshots-manage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-snapshots-manage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-snapshots.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-snapshots.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-tab-snapshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-tab-snapshot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-tab-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-tab-vms.png"
         }
       },
       "is_incremental": false,
@@ -14837,6 +14968,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-vm-backup-status.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-vm-backup-status.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/ptl-myvms-vm-info.png",
       "output": {
         "resource": {
@@ -14848,10 +14990,54 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-myvms-vm-snapshots.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-myvms-vm-snapshots.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/ptl-myvms-vms.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/ptl-myvms-vms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-snapshot-excluded.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-snapshot-excluded.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-snapshot-fail.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-snapshot-fail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-snapshot-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-snapshot-success.png"
         }
       },
       "is_incremental": false,
@@ -14874,171 +15060,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/public_catalogs.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-10.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-10.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-11.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-11.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-13.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-13.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-14.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-14.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-15.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-15.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-4.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-5.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-6.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-7.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-7.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-8.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-8.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/snapshot-image-9.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/snapshot-image-9.png"
         }
       },
       "is_incremental": false,
@@ -15431,6 +15452,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-api-username.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-api-username.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-portal-build-compute-service-fail.png",
       "output": {
         "resource": {
@@ -15684,6 +15716,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-powershell-version.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-powershell-version.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-product-options-g12.png",
       "output": {
         "resource": {
@@ -15699,6 +15742,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-ps-export-edge-data-api-creds.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-python-version.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-python-version.png"
         }
       },
       "is_incremental": false,
@@ -20260,6 +20314,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-share-vapp-specific.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-share-vapp-specific.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-share-vapp.png",
       "output": {
         "resource": {
@@ -21807,7 +21872,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-interact-vcd-api-powershell.html",
-          "hash": "St32OPZQFHx2vtUvrLSm4vGijjBo2AfF+Tp5oNamNco="
+          "hash": "q5GC4xDmxK8y2t4ISfUbZxhDFVSJjo+PJN+pEIwwPBQ="
         }
       },
       "is_incremental": false,
@@ -21831,19 +21896,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-snapshot-protection.html",
-          "hash": "Cp6BDHBZmKpdtrO/5S4mnrmWlErRWh579t3VSTZRA3E="
+          "hash": "8tvaAop/5Zeub1wPOF/KdvQr+512q4Q2oBJJ3NA58aU="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-manage-vapp-permissions.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-vapp-permissions.html",
-          "hash": "2tHz+WNg7U5wTqJpz7RWXnvR8leVw7W1fQldnwRM4CM="
+          "hash": "newe/+SZlC37A3uCEqaNdB59vibvQT1pKiBjT+jks+k="
         }
       },
       "is_incremental": false,
@@ -21855,7 +21923,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-vcd-permissions.html",
-          "hash": "4e2aVyDHAEklvoimPJks4xz99tzXiqrWYuNBTGhWTFQ="
+          "hash": "abQzSfsUGJBwlJK3cY/Jx88ENRrVd+jlYe/xxHET0Gw="
         }
       },
       "is_incremental": false,
@@ -21891,7 +21959,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-portal-view-vms.html",
-          "hash": "0CnG4sWCguoqKdnSHGN+dRNTDt7gAZ6QEzAM4hbyD7c="
+          "hash": "WkI6SP+kW+LOEQn/jlJaxG00CGnXd5WbwJSAYhzmXGs="
         }
       },
       "is_incremental": false,
@@ -22335,7 +22403,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-10-1.html",
-          "hash": "QaUW8OXtiKrwZZEIHDGkedf8XZEFiGM3tfXUlZ29t3c="
+          "hash": "ogUU+BFYcB6xsLOT/awYun0DqfTzlMK+uSYBYr7JL/Y="
         }
       },
       "is_incremental": false,
@@ -22634,7 +22702,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "K44TbJML1fDVdETHoiJBpM2RWNHwy1qU2When2Tu3KA="
+          "hash": "nC0I+9Zh/4x+4AcAH6Yu6bG76eIJHyeNgslAwhrQFNY="
         }
       },
       "is_incremental": false,
@@ -22657,7 +22725,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "tQaQM0cbDLI84F9fHsZV6mS6wEQ6+sD7zUbj60Qj+xw="
+          "hash": "Ej5U3qFp9XJw+pN0B7Vb2lmrM0sV90++rQ7BXHIut3c="
         }
       },
       "is_incremental": false,
@@ -22678,7 +22746,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 460,
+          "total_file_count": 459,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

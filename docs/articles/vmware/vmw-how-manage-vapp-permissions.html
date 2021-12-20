@@ -102,23 +102,23 @@
 <li><p>Log into the Portal as the appropriate user.</p>
 </li>
 <li><p>Click the drop down list in the top right of the Portal pane and click <strong>API</strong>.</p>
-<p><img src="images/vmw-portal-mnu-api.png" alt="API"></p>
+<p><img src="images/vmw-portal-mnu-api.png" alt="API menu option in the UKCloud Portal"></p>
 </li>
-<li><p>For the vOrg to which the vApp belongs, make a note of the <strong>Username</strong>.</p>
-<p><img src="images/vmw-portal-api-details.png" alt="Username"></p>
+<li><p>For the compute service to which the vApp belongs, make a note of the <strong>Username</strong>.</p>
+<p><img src="images/vmw-portal-api-username.png" alt="API Username"></p>
 </li>
 </ol>
 <h2 id="setting-vmware-cloud-director-permissions-in-the-ukcloud-portal">Setting VMware Cloud Director permissions in the UKCloud Portal</h2>
 <ol>
-<li><p>Log in to the UKCloud Portal as an administrator.</p>
+<li><p><a href="../portal/ptl-gs.html#logging-in-to-the-ukcloud-portal"><em>Log in to the UKCloud Portal</em></a> as an administrator.</p>
 </li>
-<li><p>Select the account to which the vApp belongs.</p>
+<li><p>If necessary, select the account to which the vApp belongs.</p>
 </li>
-<li><p>In the left-hand menu, click <strong>Contacts</strong> and then <strong>All Contacts</strong>.</p>
-<p><img src="images/ptl-menu-all-contacts.png" alt="contacts"></p>
+<li><p>In the navigation panel, expand the <strong>Contacts</strong> option and select <strong>All Contacts</strong>.</p>
+<p><img src="images/ptl-menu-all-contacts.png" alt="All Contacts menu option in UKCloud Portal"></p>
 </li>
-<li><p>Edit the users to whom you want to grant permissions and ensure that, on the <strong>Permissions</strong> tab, only the <strong>vApp User</strong> option is selected for the vOrg to which the vApp belongs.</p>
-<p><img src="images/ptl-contact-permissions-vapp-user.png" alt="vApp user"></p>
+<li><p>Edit the users to whom you want to grant permissions and ensure that, in the <em>Permissions for UKCloud for VMware</em> section of the <strong>Permissions</strong> tab, only the <strong>vApp User</strong> option is selected for the compute service to which the vApp belongs.</p>
+<p><img src="images/ptl-contact-permissions-vapp-user.png" alt="vApp User permission for UKCloud for VMware"></p>
 <p>You can also create new users if required.</p>
 </li>
 </ol>
@@ -128,13 +128,14 @@
 <li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the vApp.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-<p><img src="images/vmw-vcd10.1-tab-vapps.png" alt="vApps tab in VMware Cloud Director"></p>
+<p><img src="images/vmw-vcd10.1-tab-vapps.png" alt="vApps menu option in VMware Cloud Director"></p>
 </li>
 <li><p>In the card for the vApp, click <strong>Details</strong>.</p>
 </li>
 <li><p>Select <strong>Sharing</strong> then <strong>Edit</strong>.</p>
 </li>
-<li><p>In the <em>Share</em> dialog box, from the <strong>Share with</strong> radio buttons, select <strong>Share with specific users or groups</strong>.</p>
+<li><p>In the <em>Share</em> dialog box, from the <strong>Share with</strong> radio buttons, select <strong>Specific Users and Groups</strong>.</p>
+<p><img src="images/vmw-vcd10.1-share-vapp-specific.png" alt="Share with specific users or groups option"></p>
 </li>
 <li><p>For each user to whom you want to grant permissions:</p>
 <ul>
@@ -151,7 +152,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="images/vmw-vcd10.1-share-vapp.png" alt="vApp Access Level"></p>
+<p><img src="images/vmw-vcd10.1-share-vapp.png" alt="Share dialog box with access levels"></p>
 </li>
 <li><p>When you're done setting permissions for all users, click <strong>Share</strong>.</p>
 </li>

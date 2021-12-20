@@ -99,11 +99,13 @@
 <p><a href="https://code.vmware.com/apis/912/vmware-cloud-director">https://code.vmware.com/apis/912/vmware-cloud-director</a></p>
 <h3 id="powershell">PowerShell</h3>
 <p>With PowerShell, you'll need v3 or higher. To check this, open PowerShell and enter <code>$psversiontable</code> at the prompt. You should see something like the following:</p>
-<p><img src="images/powershellandpython1.png" alt="PowerShell version details"></p>
+<p><img src="images/vmw-powershell-version.png" alt="PowerShell version details"></p>
 <p>If <code>PSVersion</code> is less than 3.0, you'll need to upgrade. The v4 package is available here: <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=40855">https://www.microsoft.com/en-gb/download/details.aspx?id=40855</a>.</p>
 <h3 id="python">Python</h3>
-<p>You'll need to install Python 2.7: <a href="https://www.python.org/downloads/release/python-2716/">https://www.python.org/downloads/release/python-2716/</a></p>
-<p>You'll then need to install the package: <a href="https://pypi.org/project/requests/">https://pypi.org/project/requests/</a></p>
+<p>Install Python 3.10: <a href="https://www.python.org/downloads">https://www.python.org/downloads</a></p>
+<p>Then, install the package: <a href="https://pypi.org/project/requests/">https://pypi.org/project/requests/</a></p>
+<p>You can check your version of Python and whether the requests package is installed by typing the following commands:</p>
+<p><img src="images/vmw-python-version.png" alt="Python version details"></p>
 <h3 id="getting-your-credentials">Getting your credentials</h3>
 <p>The first thing you'll need to do is log in to the Portal and get your API credentials:</p>
 <p><img src="images/vmw-portal-mnu-api.png" alt="Link to API credentials in the Portal"></p>
@@ -199,7 +201,7 @@ def New_vCloudLogin(username,password):
 
    Pair = &quot;{username}:{password}&quot;.format(username=username,password=password)
 
-   EncodedPair = base64.b64encode(Pair)
+   {{EncodedPair }}= base64.b64encode(Pair.encode('utf-8')).decode()
 
    Authorization = &quot;Basic %s&quot; % str(EncodedPair)
 
@@ -239,7 +241,7 @@ print data
 <li><p>Now, click <strong>Start</strong> and enter <code>cmd</code>. This will bring up a command prompt.</p>
 </li>
 <li><p>You can run this script by entering:</p>
-<p><code>C:\python27\python.exe c:\vcloud_demo.py</code></p>
+<p><code>C:\python310\python.exe c:\vcloud_demo.py</code></p>
 <p>The above example will log you into Cloud Director and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same parameters as the examples in the PowerShell script above.</p>
 </li>
 </ol>
