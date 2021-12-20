@@ -69,6 +69,8 @@ VMware Cloud Director 10.1 is compatible with the current major and previous maj
 
 ## Changes to APIs
 
+### Supported API versions
+
 VMware Cloud Director 10.1 supports the VMware Cloud Director API version 34.0 (see <https://code.vmware.com/apis/912/vmware-cloud-director>). For information about the changes to the VMware Cloud Director API for this version, see [VMare Cloud Director API Schema Differences](https://code.vmware.com/apis/912/vmware-cloud-director/doc/diff/index.html).
 
 VMware Cloud Director 10.1 is the last release of VMware Cloud Director to support vCloud API 30.0. The 30.0 and 31.0 versions of the API are deprecated in this release and will not be supported in future releases.
@@ -84,6 +86,10 @@ The following API versions are still available:
 - 33.0
 
 - 34.0
+
+### Changes to API URL
+
+The format of the VMware Cloud Director API URL has changed from `api.vcd.xxx` to `vcd.xxx`. You can find the Cloud Director API URL for your service in the UKCloud Portal. For more information, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md).
 
 ### Sandbox for testing Cloud Director API
 
