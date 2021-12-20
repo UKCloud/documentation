@@ -21903,9 +21903,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-manage-vapp-permissions.md",
       "output": {
