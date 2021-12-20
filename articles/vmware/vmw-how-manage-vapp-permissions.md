@@ -3,8 +3,8 @@ title: How to securely manage permissions for a specific vApp
 description: Shows how to extend permissions to users for a specific vApp, ensuring that those users cannot also access other vApps or settings
 services: vmware
 author: shall
-reviewer: shighmoor
-lastreviewed: 06/11/2020
+reviewer: swthomas
+lastreviewed: 15/12/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -31,25 +31,25 @@ For each user to whom you want to grant permissions on the vApp, you need the VM
 
 2. Click the drop down list in the top right of the Portal pane and click **API**.
 
-    ![API](images/vmw-portal-mnu-api.png)
+    ![API menu option in the UKCloud Portal](images/vmw-portal-mnu-api.png)
 
-3. For the vOrg to which the vApp belongs, make a note of the **Username**.
+3. For the compute service to which the vApp belongs, make a note of the **Username**.
 
-    ![Username](images/vmw-portal-api-details.png)
+    ![API Username](images/vmw-portal-api-username.png)
 
 ## Setting VMware Cloud Director permissions in the UKCloud Portal
 
-1. Log in to the UKCloud Portal as an administrator.
+1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.html#logging-in-to-the-ukcloud-portal) as an administrator.
 
-2. Select the account to which the vApp belongs.
+2. If necessary, select the account to which the vApp belongs.
 
-3. In the left-hand menu, click **Contacts** and then **All Contacts**.
+3. In the navigation panel, expand the **Contacts** option and select **All Contacts**.
 
-    ![contacts](images/ptl-menu-all-contacts.png)
+    ![All Contacts menu option in UKCloud Portal](images/ptl-menu-all-contacts.png)
 
-4. Edit the users to whom you want to grant permissions and ensure that, on the **Permissions** tab, only the **vApp User** option is selected for the vOrg to which the vApp belongs.
+4. Edit the users to whom you want to grant permissions and ensure that, in the *Permissions for UKCloud for VMware* section of the **Permissions** tab, only the **vApp User** option is selected for the compute service to which the vApp belongs.
 
-    ![vApp user](images/ptl-contact-permissions-vapp-user.png)
+    ![vApp User permission for UKCloud for VMware](images/ptl-contact-permissions-vapp-user.png)
 
     You can also create new users if required.
 
@@ -61,13 +61,15 @@ To manage permissions for a specific vApp:
 
 2. In the left navigation panel, select **vApps**.
 
-    ![vApps tab in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
+    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
 
 3. In the card for the vApp, click **Details**.
 
 4. Select **Sharing** then **Edit**.
 
-5. In the *Share* dialog box, from the **Share with** radio buttons, select **Share with specific users or groups**.
+5. In the *Share* dialog box, from the **Share with** radio buttons, select **Specific Users and Groups**.
+
+   ![Share with specific users or groups option](images/vmw-vcd10.1-share-vapp-specific.png)
 
 6. For each user to whom you want to grant permissions:
 
@@ -81,7 +83,7 @@ To manage permissions for a specific vApp:
 
       - **Full Control** - View, edit and create VMs; change permissions of other users
 
-    ![vApp Access Level](images/vmw-vcd10.1-share-vapp.png)
+    ![Share dialog box with access levels](images/vmw-vcd10.1-share-vapp.png)
 
 7. When you're done setting permissions for all users, click **Share**.
 
