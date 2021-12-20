@@ -39,7 +39,7 @@ For each user to whom you want to grant permissions on the vApp, you need the VM
 
 ## Setting VMware Cloud Director permissions in the UKCloud Portal
 
-1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.html#logging-in-to-the-ukcloud-portal) as an administrator.
+1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.md#logging-in-to-the-ukcloud-portal) as an administrator.
 
 2. If necessary, select the account to which the vApp belongs.
 
