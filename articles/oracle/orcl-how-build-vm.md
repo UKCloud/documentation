@@ -6,13 +6,13 @@ author: shighmoor
 reviewer: bchallis
 lastreviewed: 16/11/2021
 
-toc_rootlink: How To
-toc_sub1:
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Build an Oracle virtual machine
-toc_fullpath: How To/orcl-how-build-vm.md
+toc_fullpath: UKCloud for Oracle Software/How To/orcl-how-build-vm.md
 toc_mdlink: orcl-how-build-vm.md
 ---
 

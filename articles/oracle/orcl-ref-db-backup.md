@@ -5,13 +5,13 @@ services: oracle
 author: fbordacchini
 reviewer: bchallis
 lastreviewed: 16/11/2021
-toc_rootlink: Reference
-toc_sub1: 
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: Reference
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Best practice guidelines for Oracle Database backup
-toc_fullpath: Reference/orcl-ref-db-backup.md
+toc_fullpath: UKCloud for Oracle Software/Reference/orcl-ref-db-backup.md
 toc_mdlink: orcl-ref-db-backup.md
 ---
 

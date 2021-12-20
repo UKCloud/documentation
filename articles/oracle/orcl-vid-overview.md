@@ -5,13 +5,13 @@ services: oracle
 author: shighmoor
 reviewer: bchallis
 lastreviewed: 16/11/2021
-toc_rootlink: Videos
-toc_sub1: 
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: Videos
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Overview of Oracle Self Service Portal
-toc_fullpath: Videos/orcl-vid-overview.md
+toc_fullpath: UKCloud for Oracle Software/Videos/orcl-vid-overview.md
 toc_mdlink: orcl-vid-overview.md
 ---
 

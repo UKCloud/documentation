@@ -78,7 +78,7 @@ Neustar UltraDNS from UKCloud | [here](../connectivity/conn-sd-ultradns.md) | [h
 Service | Service Definition | Service Scope
 --------|--------------------|--------------
 Private Cloud | [here](../private-cloud/prc-sd.md) | [here](../private-cloud/prc-sco.md)
-Private Cloud for Oracle Software | [here](../private-cloud/prc-sd-orcl.md) | [here](../private-cloud/prc-sco-orcl.md)
+Private Cloud for Oracle Software | [here](../oracle/orcl-sd-private.md) | [here](../oracle/orcl-sco-private.md)
 Private Cloud for Storage | [here](../private-cloud/prc-sd-storage.md) | [here](../private-cloud/prc-sco-storage.md)
 
 ## Managed operations

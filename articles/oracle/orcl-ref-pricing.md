@@ -5,13 +5,13 @@ services: oracle
 author: shighmoor
 reviewer: shighmoor
 lastreviewed: 14/09/2021
-toc_rootlink: Service Information
-toc_sub1: 
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: Service Information
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Pricing information
-toc_fullpath: Service Information/orcl-ref-pricing.md
+toc_fullpath: UKCloud for Oracle Software/Service Information/orcl-ref-pricing.md
 toc_mdlink: orcl-ref-pricing.md
 ---
 
