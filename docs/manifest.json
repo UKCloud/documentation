@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-home.html",
-          "hash": "vyI3RYfH2kThW52LWu7vOulWuHfjvCVx47OlvGWye2w="
+          "hash": "3OMEx8dvPahjvc2K73jNjw0lO8zTC8doA8Sy7o7AcaE="
         }
       },
       "is_incremental": false,
@@ -3220,6 +3220,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azsp_vmsmenu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/home-ukc-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/home-ukc-logo.png"
         }
       },
       "is_incremental": false,
@@ -14440,6 +14451,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/home-ukc-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/home-ukc-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/integration_plugin.jpg",
       "output": {
         "resource": {
@@ -21560,7 +21582,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-home.html",
-          "hash": "bhjd1DJTcsNmTr1VfyI74H1AaikWgXyOeJQ4BwHp4+U="
+          "hash": "sR7MXNXKSkhf9Jvw20GEsW+1uAKTsbCkc8VFOKaak2c="
         }
       },
       "is_incremental": false,
