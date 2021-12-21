@@ -3,8 +3,8 @@ title: How to refresh the vRealize Operations Tenant Appliance in your UKCloud f
 description: Shows how to refresh the vRealize Operations (vROps) Tenant Appliance after adding new VDCs to your compute service
 services: vmware
 author: shighmoor
-reviewer:  
-lastreviewed: 20/11/2020
+reviewer: shighmoor
+lastreviewed: 21/12/2021
 toc_rootlink: How To
 toc_sub1: Advanced monitoring
 toc_sub2:
@@ -15,11 +15,11 @@ toc_fullpath: Reference/Advanced monitoring/vmw-how-vrops-refresh.md
 toc_mdlink: vmw-how-vrops-refresh.md
 ---
 
-# How to refresh the vRealize Operations (vROps) Tenant Appliance in your UKCloud for VMware environment
+# How to refresh the vRealize Operations Tenant Appliance in your UKCloud for VMware environment
 
 ## Overview
 
-If a user uses the Portal GUI or API to add a new VDC to a compute service after the vRealize Operations (vROps) Tenant Appliance has been enabled, the Tenant Appliance must be refreshed to include the new VDC in the metrics.
+If a user uses the Portal GUI or API to add a new VDC to a compute service after the vRealize Operations (vROps) Tenant Appliance has been enabled, you must refresh the Tenant Appliance to include the new VDC in the metrics.
 
 ### Intended audience
 
@@ -27,9 +27,13 @@ To refresh the vRealize Operations Tenant Appliance, you must be a VMware Cloud 
 
 ## Refreshing the vRealize Operations Tenant Appliance
 
-1. In the VMware Cloud Director menu, select **Libraries**.
+1. In VMware Cloud Director, in the top menu, select **Libraries**.
+
+    ![Libraries menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-libraries.png)
 
 2. In the left navigation panel, under *Services*, select **Service Library**.
+
+   ![Service Library option](images/vmw-vcd10.1-mnu-service-library.png)
 
 3. In the *vROps - Refresh Monitoring* card, click **Execute**.
 
