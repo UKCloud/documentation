@@ -91,12 +91,11 @@ toc_mdlink: vmw-home.md
 <div class="row">
   <div class="col-md-4">
     <p style="margin-left:15px"><a href="vmw-how-create-vapp.md">Create a vApp</a></p>
-    <p style="margin-left:15px"><a href="vmw-how-create-vm-from-template.md">create a virtual machine from a template</a></p>
+    <p style="margin-left:15px"><a href="vmw-how-create-vm-from-template.md">Create a virtual machine from a template</a></p>
     <p style="margin-left:15px"><a href="vmw-how-create-vm-from-scratch.md">Create a virtual machine from scratch</a></p>
     <p style="margin-left:15px"><a href="vmw-how-update-vm-settings.md">View and update virtual machine settings</a></p>
     <p style="margin-left:15px"><a href="vmw-how-use-affinity-rules.md">Use affinity and anti‑affinity rules</a></p>
     <p style="margin-left:15px"><a href="vmw-ref-vmware-tools-installation.md">VMware Tools installation</a></p>
-    <p style="margin-left:15px"><a href="vmw-ref-windows-server-activation.md">Windows Server activation</a></p>
   </div>
   <div class="col-md-4">
     <p style="margin-left:15px"><a href="vmw-ref-connectivity-options.md">Understanding connectivity options</a></p>
@@ -291,12 +290,12 @@ toc_mdlink: vmw-home.md
 
 <div class="row">
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="vmw-ref-service-options.md"><strong>VM types.</strong></a> Tailor the compute characteristics of the VM to support the requirements of your workload.</p>
+      <p style="margin-left:15px"><a href="vmw-ref-service-options.md#workload-vm-type"><strong>VM types.</strong></a> Tailor the compute characteristics of the VM to support the requirements of your workload.</p>
       <p style="margin-left:15px"><a href="vmw-ref-advanced-mgmt.md"><strong>Advanced management.</strong></a> Add distributed networking and advanced monitoring options (vROps).</p>
       <p style="margin-left:15px"><a href="vmw-sco-snapshot-protection.md"><strong>Snapshot Protection.</strong></a> A cost effective daily backup service.</p>
       <p style="margin-left:15px"><a href="vmw-sco-journaling-protection.md"><strong>Journaling Protection.</strong></a> Recovery solution for essential production workloads.</p>
       <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
-      <p style="margin-left:15px"><a href="vmw-ref-service-options.md"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
+      <p style="margin-left:15px"><a href="vmw-ref-service-options.md#security-domain"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
   </div>
   <div class="col-md-6">
       <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md"><strong>Managed IT Operations.</strong></a> Reduce the amount of time spent on managing your IT infrastructure.</p>
