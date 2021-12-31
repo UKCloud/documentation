@@ -3,8 +3,8 @@ title: How to install Red Hat Update Infrastructure on an existing OpenStack ins
 description: Shows you how to update your existing OpenStack Instances to target UKCloud's approved Red Hat Update Infrastructure (RHUI)
 services: openstack
 author: shighmoor
-reviewer: nmathews
-lastreviewed: 10/12/2020
+reviewer: bnicholls
+lastreviewed: 31/12/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
