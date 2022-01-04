@@ -2,9 +2,9 @@
 title: Making the most of your UKCloud for Red Hat OpenShift trial
 description: Provides information to get up and running with UKCloud for Red Hat OpenShift trials
 services: openshift
-author: Mudasar Hussain
-reviewer: Gareth Ellner
-lastreviewed: 04/12/2020
+author: mhussain
+reviewer: gellner
+lastreviewed: 04/01/2022
 
 toc_rootlink: Reference
 toc_sub1:
@@ -32,21 +32,17 @@ OpenShift provides a platform-as-a-service, which means that you don't need to w
 
 With UKCloud for Red Hat OpenShift, you have administrator access to your cluster, giving you the control you need to create, deploy and administer your environment as you see fit.
 
-All OpenShift deployments get a Foundation Pack, which includes the management and orchestration planes. These are essentially three control plane nodes, three infrastructure nodes and load balancers for the control and data planes.
-
-During a trial, each cluster is also provisioned with two small Runtime Packs. These are essentially two OpenStack VMs running RedHat Atomic OS with 16GB RAM, two vCPUs and 100GB disks each. This is also the minimum number of Runtime Packs UKCloud recommends in each OpenShift deployment in order to provide minimal resilience and enable interruption free patching. After the trial phase it is possible to deploy larger and more nodes for your cluster.
-
-**OpenShift documentation:** [*OpenShift Container Platform architecture*](https://docs.openshift.com/container-platform/4.6/architecture/architecture.html)
+**OpenShift documentation:** [*OpenShift Container Platform architecture*](https://docs.openshift.com/container-platform/4.9/architecture/architecture.html)
 
 ## GUI and CLI Access
 
 To access the OpenShift cluster GUI, you need an internet-enabled device running an HTML5-capable browser. You will also be set up for access to the UKCloud Portal and given the relevant access to your OpenShift deployment.
 
-**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html)
+**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.9/web_console/odc-about-developer-perspective.html)
 
 In addition to GUI access, you can also access OpenShift through the CLI. To do this, you need to install the `oc` client on your machines. To avoid any compatibility issues please install the same version of the `oc` client as your OpenShift cluster. 
 
-**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html)
+**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html)
 
 ## Storage
 
@@ -60,11 +56,11 @@ OpenShift is deployed with an internal image registry making use of UKCloud's ob
 
 You should take care when creating your container images to ensure the images do not run as root. You should set up containers to run as a user who has just enough rights to run the container workload.
 
-**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/4.6/openshift_images/create-images.html)
+**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/4.9/openshift_images/create-images.html)
 
 ## RedHat OpenShift Getting Started Documentation
 
-**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html), [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI commands*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI commands*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/administrator-cli-commands.html)
+**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.9/web_console/odc-about-developer-perspective.html), [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI commands*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI commands*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/administrator-cli-commands.html)
 
 ## Feedback
 
