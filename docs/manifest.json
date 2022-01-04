@@ -14880,28 +14880,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-create-vapp-template-catalog.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-create-vapp-template-catalog.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-create-vapp-template-source.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-create-vapp-template-source.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-dc-contingency1.png",
       "output": {
         "resource": {
@@ -14957,17 +14935,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-firefox-restclient-icon.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-firefox-restclient-icon.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-l2vpn-ukc-no-nsx.png",
       "output": {
         "resource": {
@@ -15001,32 +14968,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-mnu-vm-details.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-mnu-vm-details.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-organisation.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-organisation.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-portal-2fa.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-portal-2fa.png"
         }
       },
       "is_incremental": false,
@@ -15199,17 +15144,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-portal-memorable-word.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-portal-memorable-word.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-portal-mnu-api.png",
       "output": {
         "resource": {
@@ -15353,43 +15287,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-accept-header.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-accept-header.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-accept-header1.PNG",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-restclient-accept-header1.PNG"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-api-url.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-api-url.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-authentication-details.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-authentication-details.png"
         }
       },
       "is_incremental": false,
@@ -15408,17 +15309,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-authentication-header.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-authentication-header.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-authentication-token.png",
       "output": {
         "resource": {
@@ -15430,43 +15320,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-basic-authentication-remove.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-basic-authentication-remove.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-basic-authentication.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-basic-authentication.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-basic-authentication1.PNG",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-restclient-basic-authentication1.PNG"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-custom-header.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-custom-header.png"
         }
       },
       "is_incremental": false,
@@ -15489,17 +15346,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-restclient-get-edge-link.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-get-vdc-link.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-get-vdc-link.png"
         }
       },
       "is_incremental": false,
@@ -15562,17 +15408,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-request-headers-token.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-request-headers-token.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-request-headers-token1.png",
       "output": {
         "resource": {
@@ -15584,32 +15419,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-request-headers.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-request-headers.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-request-headers1.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-restclient-request-headers1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-restclient-request-method-post.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-restclient-request-method-post.png"
         }
       },
       "is_incremental": false,
@@ -15632,17 +15445,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-srz.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-storage-policy-types.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-storage-policy-types.png"
         }
       },
       "is_incremental": false,
@@ -17993,28 +17795,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vmrc-download.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vmrc-download.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vmware-options.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vmware-options.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vrops-alerts.png",
       "output": {
         "resource": {
@@ -18228,28 +18008,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-zerto-create-vpg.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-zerto-dashboard.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-zerto-dashboard.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-zerto-draas.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-zerto-draas.png"
         }
       },
       "is_incremental": false,
