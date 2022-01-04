@@ -42,9 +42,9 @@ Login details are the same as for the *API interaction through PowerCLI*
 
 ## vCloud Connector endpoint authentication
 
-When authenticating to our vCloud endpoints using vCloud Connector, the details needed are the same as for the vCloud API. For example:
+When authenticating to our VMware Cloud Director endpoints using vCloud Connector, the details needed are the same as for the Cloud Director API. For example:
 
-URL: `api.vcd.portal.skyscapecloud.com/api`
+URL: `vcd.portal.skyscapecloud.com/api`
 Username: `1-1-1@1-1-1-abcdef`
 
 For more information, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md#finding-your-cloud-director-api-credentials).

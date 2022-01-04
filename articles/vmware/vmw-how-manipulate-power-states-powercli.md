@@ -54,7 +54,7 @@ You can find API credentials and URL details on the UKCloud Portal when you have
 
     The example in this article uses the Assured OFFICIAL, internet connected security domain. The **API URL**, **Username** and **Password** are unique to each security domain and you should check via the Portal before connecting. The **API URL** for PowerCLI requires you to omit the `https://` from the start, so for the above example the actual endpoint you would use is:
 
-    `api.vcd.portal.skyscapecloud.com`
+    `vcd.portal.skyscapecloud.com`
 
 To connect to the UKCloud platform with PowerCLI:
 
