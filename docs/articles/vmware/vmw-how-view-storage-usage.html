@@ -132,14 +132,14 @@
 </li>
 </ul>
 <p>The example makes two calls to the API. The first call authenticates the session:</p>
-<pre><code class="lang-curl">curl -u %VCD_USERNAME%@%VCD_ORG%:%VCD_PASSWORD%  -H &quot;Accept: application/*+xml;version=5.6&quot; -X POST -i https://api.vcd.portal.skyscapecloud.com/api/sessions
+<pre><code class="lang-curl">curl -u %VCD_USERNAME%@%VCD_ORG%:%VCD_PASSWORD%  -H &quot;Accept: application/*+xml;version=5.6&quot; -X POST -i https://vcd.portal.skyscapecloud.com/api/sessions
 </code></pre>
 <div class="TIP">
 <h5>Tip</h5>
 <p>On Linux, use <code>$VCD_USERNAME</code> instead of <code>%VCD_USERNAME%</code>.</p>
 </div>
 <p>Having authenticated successfully and received an <code>x-vcloud-authorisation</code> header in the response, the second call passes the authentication token as a header on the request:</p>
-<pre><code class="lang-curl">curl -H &quot;x-vcloud-authorization: a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6&quot; -H &quot;Accept: application/*+xml;version=5.6&quot; -i  https://api.vcd.portal.skyscapecloud.com/api/query?type=orgVdcStorageProfile
+<pre><code class="lang-curl">curl -H &quot;x-vcloud-authorization: a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6&quot; -H &quot;Accept: application/*+xml;version=5.6&quot; -i  https://vcd.portal.skyscapecloud.com/api/query?type=orgVdcStorageProfile
 </code></pre>
 <p>This call returns an XML structure, in which you can see an <code>OrgVdcStorageProfileRecord</code> element containing the following properties:</p>
 <pre><code class="lang-none">storageLimitMB=&quot;512000&quot; storageUsedMB=&quot;65536&quot;
