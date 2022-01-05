@@ -2,9 +2,9 @@
 title: How to build an OpenShift application from a private GitHub repository
 description: Shows how to build an OpenShift application where the source code is in a private GitHub repository secured with an SSH key pair
 services: openshift
-author: Andy Watkins
-reviewer: Gareth Ellner
-lastreviewed: 16/12/2020
+author: awatkins
+reviewer: gellner
+lastreviewed: 05/01/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -119,7 +119,7 @@ oc new-app --template <app-name>
 
 - [blog.lucywyman.me](https://blog.lucywyman.me/deploy-private-git-repo-to-openshift.html)
 
-- [Openshift documentation on source-clone-secrets](https://docs.openshift.com/container-platform/4.6/builds/creating-build-inputs.html#builds-adding-source-clone-secrets_creating-build-inputs)
+- [Openshift documentation on source-clone-secrets](https://docs.openshift.com/container-platform/4.9/cicd/builds/creating-build-inputs.html)
 
 ## Feedback
 
