@@ -3,8 +3,8 @@ title: Emergency Services Network FAQs
 description: Frequently asked questions about the Emergency Services Network (ESN)
 services: connectivity
 author: mwarner
-reviewer: nstobbart
-lastreviewed: 15/01/2021
+reviewer: thallsmith
+lastreviewed: 05/01/2022
 
 toc_rootlink: FAQs
 toc_sub1: 
