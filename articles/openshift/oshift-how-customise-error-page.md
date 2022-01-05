@@ -2,9 +2,9 @@
 title: How to customise the OpenShift router error page
 description: Explains how to change the Application Not Available (503) error page served by the OpenShift routers
 services: openshift
-author: Gareth Ellner
-reviewer: Gareth Ellner
-lastreviewed: 16/12/2020
+author: gellner
+reviewer: gellner
+lastreviewed: 05/01/2022
 
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
