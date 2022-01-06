@@ -42,7 +42,7 @@ To access the OpenShift cluster GUI, you need an internet-enabled device running
 
 In addition to GUI access, you can also access OpenShift through the CLI. To do this, you need to install the `oc` client on your machines. To avoid any compatibility issues please install the same version of the `oc` client as your OpenShift cluster. 
 
-**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html)
+**OpenShift documentation:** [*Getting started with the OpenShift CLI*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html)
 
 ## Storage
 
@@ -60,7 +60,7 @@ You should take care when creating your container images to ensure the images do
 
 ## RedHat OpenShift Getting Started Documentation
 
-**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.9/web_console/odc-about-developer-perspective.html), [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI commands*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI commands*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/administrator-cli-commands.html)
+**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.9/web_console/odc-about-developer-perspective.html), [*Getting started with the OpenShift CLI*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html), [*OpenShift CLI developer command reference*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/developer-cli-commands.html), and [*OpenShift CLI administrator command reference*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/administrator-cli-commands.html)
 
 ## Feedback
 
