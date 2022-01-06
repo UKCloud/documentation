@@ -2,7 +2,7 @@
 title: UKCloud for OpenStack FAQs
 description: Frequently asked questions for UKCloud for OpenStack
 services: openstack
-author: Matt Warner
+author: mwarner
 reviewer: bnicholls
 lastreviewed: 31/12/2021
 toc_rootlink: FAQs
