@@ -2,7 +2,7 @@
 title: How to expose non-http services externally
 description: Explains how to expose services outside of your OpenShift cluster without using HTTP or HTTPS
 services: openshift
-author: koeill
+author: koneill
 reviewer: gellner
 lastreviewed: 05/01/2022
 toc_rootlink: How To
