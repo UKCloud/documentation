@@ -2,7 +2,7 @@
 title: How to restrict access to OpenShift routes by IP address
 description: Restrict access to OpenShift routes by IP address
 services: openshift
-author: mussain
+author: mhussain
 reviewer: gellner
 lastreviewed: 04/01/2022
 toc_rootlink: How To
