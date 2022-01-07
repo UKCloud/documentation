@@ -137,13 +137,7 @@ When your service has been provisioned, you can implement your proposed solution
 
 ## Stage 6: On-going compliance
 
-On an annual basis, UKCloud requires evidence of on-going compliance. You will be contacted by your Service Delivery Manager to review the existing documents and inform us if any of the details or approvals have changed.
-
-If you're connecting to a PSN Protected enabled VDC, proof of PSN compliance (a copy of PSN CoCo or PSN CoP) must be provided on a yearly basis.
-
-Once the relevant PSN certificate (if required) is provided, and provided there are no changes the original design, your CDSZ service will continue without interruption.  
-
-If, after examination of the existing documents, you identify that there have been changes, for example if the design has changed from the initial solution or there is a different data owner approver, it is your responsibility to submit a revised evidence pack within 15 days. A UKCloud representative will contact you to discuss your changes.
+It is the customer’s responsibility to build, manage and ensure they use appropriate risk management to understand and mitigate identified risks. It is your responsibility to work with your data owner to ensure you're comfortable with the risk associated with your data, and to choose which controls you feel are appropriate within your CDSZ.
 
 ## Feedback
 
