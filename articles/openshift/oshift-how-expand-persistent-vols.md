@@ -2,9 +2,9 @@
 title: How to expand OpenShift persistent volumes
 description: Outlines methods to expand OpenShift persistent volumes.
 services: openshift
-author: Gareth Ellner
-reviewer: Gareth Ellner
-lastreviewed: 18/12/2020
+author: gellner
+reviewer: gellner
+lastreviewed: 04/01/2022
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
@@ -178,6 +178,7 @@ Filesystem                             Size  Used Avail Use% Mounted on
 ## Further reading
 
 <https://docs.openshift.com/container-platform/3.11/dev_guide/expanding_persistent_volumes.html#expanding_file_system_pvc>
+<https://docs.openshift.com/container-platform/4.9/storage/expanding-persistent-volumes.html#expanding-pvc-filesystem_expanding-persistent-volumes>
 
 ## Feedback
 

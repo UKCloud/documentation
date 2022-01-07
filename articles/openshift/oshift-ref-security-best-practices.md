@@ -2,9 +2,9 @@
 title: Security best practices for UKCloud for Red Hat OpenShift
 description: Provides security best practices in OpenShift that you could follow to keep the risk of attack to your UKCloud OpenShift deployment to a minimum
 services: openshift
-author: Mudasar Hussain
-reviewer: Steve Mulholland
-lastreviewed: 15/12/2020
+author: mhussain
+reviewer: gellner
+lastreviewed: 04/01/2022
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
 toc_sub2:
