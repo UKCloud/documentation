@@ -3,7 +3,7 @@ title: How to move resources between OpenStack regions
 description: Helps you understand how you can move resources between OpenStack regions
 services: openstack
 author: Sue Highmoor
-reviewer: rbeck
+reviewer: ribeck
 lastreviewed: 07/01/2022
 
 toc_rootlink: How To
