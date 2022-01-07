@@ -2,9 +2,9 @@
 title: UKCloud for OpenStack FAQs
 description: Frequently asked questions for UKCloud for OpenStack
 services: openstack
-author: Matt Warner
-reviewer: SteveRelf
-lastreviewed: 08/12/2020
+author: mwarner
+reviewer: bnicholls
+lastreviewed: 31/12/2021
 toc_rootlink: FAQs
 toc_sub1:
 toc_sub2:
@@ -170,7 +170,7 @@ The answer to this depends on which of UKCloud's OpenStack platforms you are usi
 | Region              | OpenStack version                      | LBaaS supported? |
 |---------------------|----------------------------------------|------------------|
 | COR00005 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services. |
-| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* - Uses the [OpenStack Octavia](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
+| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | Uses the [OpenStack Octavia](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
   
 <i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i>
 

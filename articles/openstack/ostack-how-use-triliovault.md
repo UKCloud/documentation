@@ -2,9 +2,9 @@
 title: How to use TrilioVault for self-service backup in OpenStack
 description: Provides information on how to use TrilioVault within your OpenStack environment
 services: openstack
-author: Steve Dixon
-reviewer: Steve Relf
-lastreviewed: 08/12/2020
+author: sdixon
+reviewer: bnicholls
+lastreviewed: 31/12/2021
 
 toc_rootlink: How To
 toc_sub1:

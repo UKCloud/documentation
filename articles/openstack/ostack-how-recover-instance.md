@@ -3,8 +3,8 @@ title: How to manage how your instance recovers from a host failure
 description: Describes how to control what happens to your instances in the event of a service interruption to the availability of a host
 services: openstack
 author: shighmoor
-reviewer: nmathews
-lastreviewed: 10/12/2020
+reviewer: bnicholls
+lastreviewed: 31/12/2021
 
 toc_rootlink: How To
 toc_sub1:
