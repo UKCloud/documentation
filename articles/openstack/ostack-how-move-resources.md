@@ -3,8 +3,8 @@ title: How to move resources between OpenStack regions
 description: Helps you understand how you can move resources between OpenStack regions
 services: openstack
 author: Sue Highmoor
-reviewer: bnicholls
-lastreviewed: 29/01/2021
+reviewer: rbeck
+lastreviewed: 07/01/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -65,9 +65,9 @@ The following provides a code example of how to achieve this export and import o
 
     Note the `ID` of your source instance as shown in the resulting output.
 
-2. To create the snapshot of the source instance, enter the following command:
+2. To create the image of the source instance, enter the following command:
 
-        openstack server image create --name <snapshot-name> <id-of-server>
+        openstack server image create --name <name-for-image> <id-of-server>
 
     Note the `id` shown in the resulting output.
 
@@ -79,7 +79,7 @@ The following provides a code example of how to achieve this export and import o
 
 4. To download source image snapshot, enter the following command:
 
-        openstack image save <id-of-image-to-download> --file <image-name> 
+        openstack image save <id-of-image-to-download> --file <output-location> 
 
     If the image size is greater than the memory of the local host, the following may be required:
        
@@ -120,21 +120,21 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
           openstack volume list
 
-        If your source volume shows as being Attached to in the resulting output then note the `ID` of your source volume and proceed to step 1b, otherwise note the `ID` of your source volume and proceed to step 2.
+        If your source volume shows as being 'Attached to' in the resulting output then note the `ID` of your source volume and proceed to step 1b, otherwise note the `ID` of your source volume and proceed to step 2.
 
     b. To detach your source volume from an instance, enter the following command:
 
-        openstack server remove volume \<server id\> \<volume id\>
+        openstack server remove volume <id-of-server> <id-of-volume>
 
     Double check the volume has been detached by running the command in step 1a.
 
 2. Upload the source volume to the OpenStack Glance image repository using the following command:
 
-        openstack image create --volume <volume id> <name>
+        openstack image create --volume <id-of-volume> <name-for-image>
 
 3. Download the source volume image to your local device using the following command:
 
-        openstack image save <id-of-image-to-download> --file <image-name> 
+        openstack image save <id-of-image-to-download> --file <output-location>
 
     If the image size is greater than the memory of the local host, the following may be required:
         
@@ -149,11 +149,11 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
     - Enter the following command:
 
-          openstack image create  --file <path-to-file-to-upload> --disk-format raw --container-format bare <name-for-upload>
+          openstack image create --file <path-to-file-to-upload> --disk-format raw --container-format bare <name-for-upload>
 
 5. To create a new volume in the target region based upon the original source volume, enter the following command:
 
-        openstack volume create --image <uploaded-image> --size <size-of-volume-to-create> --type <TIER1/TIER2> <Name>
+        openstack volume create --image <id-of-image> --size <size-of-volume-to-create> --type <TIER1/TIER2> <name-for-volume>
 
 ## Next steps
 
