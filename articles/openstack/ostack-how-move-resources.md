@@ -20,11 +20,11 @@ toc_mdlink: ostack-how-move-resources.md
 
 ## Overview
 
-This article provides examples of how to move OpenStack resources (for example, instance images and volumes) between the different independent regions currently offered by UKCloud to help ensure the highest level of application resilience and availability.
+This article provides examples of how to move OpenStack resources (for example, instance, images and volumes) between the different independent regions currently offered by UKCloud to help ensure the highest level of application resilience and availability.
 
 ### Intended audience
 
-Anyone responsible for the design and implementation of applications and services deployed on UKCloud OpenStack service, and should be familiar with using the OpenStack dashboard and API/CLI.
+Anyone responsible for the design and implementation of applications and services deployed on UKCloud for OpenStack, and should be familiar with using the OpenStack dashboard and API/CLI.
 
 ## Background
 
@@ -42,8 +42,6 @@ The following table outlines the regions and zones that are currently available 
 
 Site | Region | Zone
 -----|--------|-----
-Corsham | 00005 (cor00005.cni.ukcloud.com) | 0000c-1
-&nbsp; | &nbsp; | 0000c-2
 Farnborough | 00006 (frn00006.cni.ukcloud.com) | 00021-1
 &nbsp; | &nbsp; | 00021-2
 Corsham 2 | 00005 (cor00005-2.cni.ukcloud.com) | 00026-1
