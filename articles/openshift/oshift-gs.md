@@ -3,8 +3,8 @@ title: Getting Started Guide for UKCloud for Red Hat OpenShift
 description: Provides information to get up and running with UKCloud for Red Hat OpenShift
 services: openshift
 author: Sue Highmoor
-reviewer: Gareth Ellner
-lastreviewed: 04/12/2020
+reviewer: Alex Lillistone
+lastreviewed: 07/01/2022
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -63,7 +63,7 @@ UKCloud for Red Hat OpenShift provides a full Red Hat OpenShift Container Platfo
 
 ![OpenShift pods and containers](images/oshift-pods-containers.png)
 
-**OpenShift documentation:** [*OpenShift Container Platform architecture*](https://docs.openshift.com/container-platform/4.6/architecture/architecture.html) and [*Understanding container security*](https://docs.openshift.com/container-platform/4.6/security/container_security/security-understanding.html)
+**OpenShift documentation:** [*OpenShift Container Platform architecture*](https://docs.openshift.com/container-platform/4.9/architecture/architecture.html) and [*Understanding container security*](https://docs.openshift.com/container-platform/4.9/security/container_security/security-understanding.html)
 
 ## Before you begin
 
@@ -73,7 +73,7 @@ As part of your onboarding, UKCloud will provide you with a URL and credentials 
 
 In addition, we recommend the installation of the OpenShift CLI on your device.
 
-**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html)
+**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html)
 
 ## Initial environment
 
@@ -92,7 +92,7 @@ If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later,
 
 If your OpenShift cluster uses an earlier version of OCP, you will need to use your separate OpenShift credentials to log in to the console.
 
-**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html)
+**OpenShift documentation:** [*About the Developer perspective in the web console*](https://docs.openshift.com/container-platform/4.9/web_console/odc-about-developer-perspective.html)
 
 ## Using the command-line interface
 
@@ -103,9 +103,9 @@ If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later,
 Alternatively, you can obtain the CLI login command (including login token) from the OpenShift console by clicking your user name and selecting **Copy Login Command**.
 
 > [!NOTE]
-> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Understanding and creating service accounts*](https://docs.openshift.com/container-platform/4.6/authentication/understanding-and-creating-service-accounts.html) documentation.
+> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Understanding and creating service accounts*](https://docs.openshift.com/container-platform/4.9/authentication/understanding-and-creating-service-accounts.html) documentation.
 
-**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI commands*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI commands*](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/administrator-cli-commands.html)
+**OpenShift documentation:** [*Getting started with the CLI*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html), [*Developer CLI commands*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/developer-cli-commands.html), and [*Administrator CLI commands*](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/administrator-cli-commands.html)
 
 ## Using the API
 
@@ -113,23 +113,23 @@ Alternatively, you can obtain the CLI login command (including login token) from
 
 These REST APIs can be used to manage end-user applications, the cluster, and the users of the cluster.
 
-**OpenShift documentation:** [*API index*](https://docs.openshift.com/container-platform/4.6/rest_api/index.html)
+**OpenShift documentation:** [*API index*](https://docs.openshift.com/container-platform/4.9/rest_api/index.html)
 
 ## Developing and deploying applications
 
 OpenShift Container Platform is designed for building and deploying applications. You can begin your application's development from scratch using OpenShift Container Platform directly or develop locally then use OpenShift Container Platform to deploy your fully developed application.
 
-**OpenShift documentation:** [*Understanding OpenShift Container Platform development*](https://docs.openshift.com/container-platform/4.6/architecture/understanding-development.html)
+**OpenShift documentation:** [*Understanding OpenShift Container Platform development*](https://docs.openshift.com/container-platform/4.9/architecture/understanding-development.html)
 
 ## Creating and using images
 
 Containers in OpenShift Container Platform are based on Docker-formatted container images. An image is a binary that includes all the requirements for running a single container, as well as metadata describing its needs and capabilities. Containers only have access to resources defined in the image unless you give the container additional access when creating it.
 
-**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/4.6/openshift_images/create-images.html)
+**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/4.9/openshift_images/create-images.html)
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for Red Hat OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform Documentation*](https://docs.openshift.com/container-platform/4.6/welcome/index.html). Take care to change to the correct version of the documentation to match the version of your cluster.
+In this Getting Started Guide, you've learned the basics about UKCloud for Red Hat OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform Documentation*](https://docs.openshift.com/container-platform/4.9/welcome/index.html). Take care to change to the correct version of the documentation to match the version of your cluster.
 
 ## Glossary
 
