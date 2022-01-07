@@ -3,8 +3,8 @@ title: How to configure an OpenStack instance using cloud-config
 description: Describes how to use cloud-config (user-data) to configure an OpenStack instance
 services: openstack
 author: srelf
-reviewer: nmathews
-lastreviewed: 28/01/2021
+reviewer: ribeck
+lastreviewed: 07/01/2022
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
