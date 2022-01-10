@@ -3,8 +3,8 @@ title: UKCloud Ltd Product-Specific Terms and Conditions
 description: Lists terms that apply to specific UKCloud products and services 
 services: other
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 17/12/2020
+reviewer: dbooton
+lastreviewed: 08/12/2021
 
 toc_rootlink: Reference
 toc_sub1: 
