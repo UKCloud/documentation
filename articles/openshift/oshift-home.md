@@ -143,7 +143,6 @@ toc_mdlink: oshift-home.md
     <p style="margin-left:15px"><a href="oshift-how-disable-weak-cipher-suites-enable-hsts.md">Disable weak cipher suites and enable HSTS</a></p>
     <p style="margin-left:15px"><a href="oshift-how-manage-user-access.md">Manage OpenShift access</a></p>
     <p style="margin-left:15px"><a href="oshift-how-restrict-access-to-openshift-routes-by-ip-address.md">Restrict access to OpenShift routes by IP address</a></p>
-
     <p style="margin-left:15px"><a href="oshift-ref-security-best-practices.md">Security best practices (v3.x)</a></p>
   </div>
   <div class="col-md-4">
