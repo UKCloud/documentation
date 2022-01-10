@@ -7068,6 +7068,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/home-ukc-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/home-ukc-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/oshift-architecture.png",
       "output": {
         "resource": {
@@ -7405,7 +7416,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-home.html",
-          "hash": "FTxVukH9yzqc0jPCm5xF6aORQ4Ip0o1syyy34MaRL3o="
+          "hash": "jbTsVCH080Pu+S9KW9pLbpgsrLjKBs6OXkstaAq2v9A="
         }
       },
       "is_incremental": false,
@@ -10067,7 +10078,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-move-resources.html",
-          "hash": "0IUIoKsfIIpeMYbPgH8yEkNUejo9f0zK9rK95/Abhh4="
+          "hash": "7lg+XTxl4yQz6KQd7FtDo9ysytsQ3a8MUbQD9hcDDfI="
         }
       },
       "is_incremental": false,
@@ -15606,17 +15617,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-add-media.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-btn-add-media.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-btn-add-network.png",
       "output": {
         "resource": {
@@ -16090,6 +16090,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-media.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-media.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-btn-add-nat64.png",
       "output": {
         "resource": {
@@ -16552,6 +16563,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-select.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-edge-select.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-edge-tab-dhcp.png",
       "output": {
         "resource": {
@@ -16871,6 +16893,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-ops-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-ops-manager.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-reset-vm.png",
       "output": {
         "resource": {
@@ -16886,6 +16919,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-service-library.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd10.1-mnu-service-library.png"
         }
       },
       "is_incremental": false,
@@ -17652,6 +17696,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-l2vpn-enable-source.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-l2vpn-enable-source.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd91-l2vpn-enable.png",
       "output": {
         "resource": {
@@ -17810,6 +17865,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vrops-disable-card.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vrops-disable.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vrops-disable.png"
         }
       },
       "is_incremental": false,
@@ -18467,7 +18533,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-l2-vpn.html",
-          "hash": "BKMIuFu5nsNBuMo6Kojcl/6uxGCw4f1jQbbzbHrzm9M="
+          "hash": "M8Hux3a6xb7T3GgSWTXIGDFvIWIvw2dOhgCdWM3DHVU="
         }
       },
       "is_incremental": false,
@@ -18815,7 +18881,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-upload-media-iso-flp.html",
-          "hash": "Q3UF4u0WI8K3ipmpPNv1wuPS1Ci3+4dB56v+ZMAa7sc="
+          "hash": "awJltm1+j8AHHY7RKNzOeYVUDpTlAbddGZN2diCfmT4="
         }
       },
       "is_incremental": false,
@@ -18923,7 +18989,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vrops-enable.html",
-          "hash": "IFNMuH96ImCJufXY52wOpQCYaoVLPNPGQexKGHHHcds="
+          "hash": "NGcqz+PIuP8+zHeSxVaqzvAXDH8JcO1rmnwZ6MjU6JY="
         }
       },
       "is_incremental": false,
@@ -18935,7 +19001,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vrops-refresh.html",
-          "hash": "/AdZ6pmEZn0lxODTPStdDEWb3rSXZKGRWj4Z47oOqWQ="
+          "hash": "hTsR6mv2CUwOlbenrcKa+gy5AwJpmK8093LDXDf5ryk="
         }
       },
       "is_incremental": false,
@@ -18947,7 +19013,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vrops-use.html",
-          "hash": "lXH7KsIa8ZqW313EsZ/Acw7PFOsg0F9BgqMCbff7OPg="
+          "hash": "ufsGh1W6dN/e4JjA/fa6oC5oyrWyROLYTHotBKzVAA4="
         }
       },
       "is_incremental": false,

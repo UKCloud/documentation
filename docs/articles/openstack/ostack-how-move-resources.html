@@ -96,7 +96,7 @@
 <h2 id="overview">Overview</h2>
 <p>This article provides examples of how to move OpenStack resources (for example, instance images and volumes) between the different independent regions currently offered by UKCloud to help ensure the highest level of application resilience and availability.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>Anyone responsible for the design and implementation of applications and services deployed on UKCloud OpenStack service, and should be familiar with using the OpenStack dashboard and API/CLI.</p>
+<p>Anyone responsible for the design and implementation of applications and services deployed on UKCloud for OpenStack, and should be familiar with using the OpenStack dashboard and API/CLI.</p>
 <h2 id="background">Background</h2>
 <p>UKCloud's OpenStack service has been engineered specifically for today's modern, digital, cloud based applications. Unlike our VMware service, OpenStack expects applications to be designed with resilience engineered at the application level, rather than relying upon the underlying cloud infrastructure. To cater for this, our OpenStack service offers the following two resiliency concepts:</p>
 <ul>
@@ -117,16 +117,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Corsham</td>
-<td>00005 (cor00005.cni.ukcloud.com)</td>
-<td>0000c-1</td>
-</tr>
-<tr>
-<td> </td>
-<td> </td>
-<td>0000c-2</td>
-</tr>
 <tr>
 <td>Farnborough</td>
 <td>00006 (frn00006.cni.ukcloud.com)</td>
@@ -165,8 +155,8 @@
 </ul>
 <p>Note the <code>ID</code> of your source instance as shown in the resulting output.</p>
 </li>
-<li><p>To create the snapshot of the source instance, enter the following command:</p>
-<pre><code> openstack server image create --name &lt;snapshot-name&gt; &lt;id-of-server&gt;
+<li><p>To create the image of the source instance, enter the following command:</p>
+<pre><code> openstack server image create --name &lt;name-for-image&gt; &lt;id-of-server&gt;
 </code></pre>
 <p>Note the <code>id</code> shown in the resulting output.</p>
 </li>
@@ -176,7 +166,7 @@
 <p>Once complete, the <code>status</code> field should show as <code>active</code>.</p>
 </li>
 <li><p>To download source image snapshot, enter the following command:</p>
-<pre><code> openstack image save &lt;id-of-image-to-download&gt; --file &lt;image-name&gt; 
+<pre><code> openstack image save &lt;id-of-image-to-download&gt; --file &lt;output-location&gt; 
 </code></pre>
 <p>If the image size is greater than the memory of the local host, the following may be required:</p>
 <pre><code> glance image-download --file &lt;output-location&gt; --progress &lt;id-of-image-to-download&gt;
@@ -214,20 +204,20 @@
 <li><p>Enter the following command:</p>
 <pre><code>openstack volume list
 </code></pre>
-<p>If your source volume shows as being Attached to in the resulting output then note the <code>ID</code> of your source volume and proceed to step 1b, otherwise note the <code>ID</code> of your source volume and proceed to step 2.</p>
+<p>If your source volume shows as being <code>Attached to</code> in the resulting output then note the <code>ID</code> of your source volume and proceed to step 1b, otherwise note the <code>ID</code> of your source volume and proceed to step 2.</p>
 </li>
 </ul>
 <p>b. To detach your source volume from an instance, enter the following command:</p>
-<pre><code> openstack server remove volume \&lt;server id\&gt; \&lt;volume id\&gt;
+<pre><code> openstack server remove volume &lt;id-of-server&gt; &lt;id-of-volume&gt;
 </code></pre>
 <p>Double check the volume has been detached by running the command in step 1a.</p>
 </li>
 <li><p>Upload the source volume to the OpenStack Glance image repository using the following command:</p>
-<pre><code> openstack image create --volume &lt;volume id&gt; &lt;name&gt;
+<pre><code> openstack image create --volume &lt;id-of-volume&gt; &lt;name-for-image&gt;
 </code></pre>
 </li>
 <li><p>Download the source volume image to your local device using the following command:</p>
-<pre><code> openstack image save &lt;id-of-image-to-download&gt; --file &lt;image-name&gt; 
+<pre><code> openstack image save &lt;id-of-image-to-download&gt; --file &lt;output-location&gt;
 </code></pre>
 <p>If the image size is greater than the memory of the local host, the following may be required:</p>
 <pre><code> glance image-download --file &lt;output-location&gt; --progress &lt;id-of-image-to-download&gt;
@@ -242,13 +232,13 @@
 <li><p>Source the target region's <code>cred rc</code> file</p>
 </li>
 <li><p>Enter the following command:</p>
-<pre><code>openstack image create  --file &lt;path-to-file-to-upload&gt; --disk-format raw --container-format bare &lt;name-for-upload&gt;
+<pre><code>openstack image create --file &lt;path-to-file-to-upload&gt; --disk-format raw --container-format bare &lt;name-for-upload&gt;
 </code></pre>
 </li>
 </ul>
 </li>
 <li><p>To create a new volume in the target region based upon the original source volume, enter the following command:</p>
-<pre><code> openstack volume create --image &lt;uploaded-image&gt; --size &lt;size-of-volume-to-create&gt; --type &lt;TIER1/TIER2&gt; &lt;Name&gt;
+<pre><code> openstack volume create --image &lt;id-of-image&gt; --size &lt;size-of-volume-to-create&gt; --type &lt;TIER1/TIER2&gt; &lt;name-for-volume&gt;
 </code></pre>
 </li>
 </ol>
