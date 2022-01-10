@@ -10000,15 +10000,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-home.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "xA9S984k7BJFmcjeNF15NHwWHrUJt5aX1W9bZTuSqS4="
+          "hash": "Z0KZncEICSSYicj9264nDUdv34SwviewmdGd8B+e0dM="
         }
       },
       "is_incremental": false,
