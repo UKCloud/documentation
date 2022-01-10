@@ -242,7 +242,7 @@ toc_mdlink: ostack-home.md
 <div class="row">
   <div class="col-md-6">
       <p style="margin-left:15px"><a href="ostack-sco-triliovault.md"><strong>Self Service Backup and Restoration (TrilioVault).</strong></a> On-platform self-service backup and restoration for OpenStack.</p>
-      <p style="margin-left:15px"><a href="ostack-sco-hystax..md"><strong>Hystax Acura Workload Migration.</strong></a> Migrate workloads between UKCloud for OpenStack regions.</p>
+      <p style="margin-left:15px"><a href="ostack-sco-hystax.md"><strong>Hystax Acura Workload Migration.</strong></a> Migrate workloads between UKCloud for OpenStack regions.</p>
       <p style="margin-left:15px"><a href="../other/other-ref-storage-overview.md"><strong>Tier 1 storage.</strong></a> Improved performance for workloads requiring higher disk throughput and IOPS.</p>
   </div>
   <div class="col-md-6">
