@@ -20,7 +20,7 @@ toc_mdlink: ostack-how-move-resources.md
 
 ## Overview
 
-This article provides examples of how to move OpenStack resources (for example, instance, images and volumes) between the different independent regions currently offered by UKCloud to help ensure the highest level of application resilience and availability.
+This article provides examples of how to move OpenStack resources (for example, instance images and volumes) between the different independent regions currently offered by UKCloud to help ensure the highest level of application resilience and availability.
 
 ### Intended audience
 
@@ -120,7 +120,7 @@ To achieve this across different regions, the use of a VPN may be required. Deta
 
           openstack volume list
 
-        If your source volume shows as being 'Attached to' in the resulting output then note the `ID` of your source volume and proceed to step 1b, otherwise note the `ID` of your source volume and proceed to step 2.
+        If your source volume shows as being `Attached to` in the resulting output then note the `ID` of your source volume and proceed to step 1b, otherwise note the `ID` of your source volume and proceed to step 2.
 
     b. To detach your source volume from an instance, enter the following command:
 
