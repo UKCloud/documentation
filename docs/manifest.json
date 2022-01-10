@@ -8481,6 +8481,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/home-ukc-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/home-ukc-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/hystax1.jpg",
       "output": {
         "resource": {
@@ -9989,12 +10000,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-home.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "ss42WieadxkeP7UcDCfbXhVrphOOycYFtC7ut54XlL8="
+          "hash": "HSSd0mHEvRoFJEGeWKn7hDJOEeR0POznz1uUbe/wc4k="
         }
       },
       "is_incremental": false,
