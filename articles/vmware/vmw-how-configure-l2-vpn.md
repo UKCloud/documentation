@@ -69,7 +69,7 @@ To set up L2 VPN, you need to configure an L2 VPN server on the destination edge
    > [!NOTE]
    > To stretch the subnet across the two sites, make sure you use the desired address space on both networks.
 
-2. For each network, select the network and, on the *General* page, click **Edit**
+2. For each network, select the network and, on the *General* page, click **Edit**.
 
 3. In the *Edit network* dialog box, select the **Connection** tab.
 
