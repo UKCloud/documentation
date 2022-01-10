@@ -3,8 +3,8 @@ title: How to configure IPsec VPN in OpenStack
 description: Provides instructions for deploying an instance into your OpenStack project to function as a VPN endpoint
 services: openstack
 author: Sue Highmoor
-reviewer: Bryce Nicholls
-lastreviewed: 11/01/2021
+reviewer: Richard Beck
+lastreviewed: 10/01/2022
 
 toc_rootlink: How To
 toc_sub1: 
@@ -80,7 +80,7 @@ Alternatively, you can clone the repository locally and use the OpenStack CLI to
 
 ## Setting up the VPN stack
 
-The pfSense appliance assumes that if will have at least two network interface controllers (NICs) attached to it: one attached to the WAN and one or more attached to internal networks. To fit this into an existing infrastructure deployed in your project, and to avoid any nasty routing loops, the `pfsense.yaml` HEAT template creates a new WAN network along with an interface on your existing router. This provides the WAN interface for pfSense and has a floating IP address associated with it for the internet-facing endpoint of the VPN tunnel.
+The pfSense appliance assumes that it will have at least two network interface controllers (NICs) attached to it: one attached to the WAN and one or more attached to internal networks. To fit this into an existing infrastructure deployed in your project, and to avoid any nasty routing loops, the `pfsense.yaml` HEAT template creates a new WAN network along with an interface on your existing router. This provides the WAN interface for pfSense and has a floating IP address associated with it for the internet-facing endpoint of the VPN tunnel.
 
 The LAN interface of the pfSense appliance attaches to your existing internal network. Both WAN and LAN interfaces in the pfSense appliance image in the public catalog are configured for DHCP. This enables the interface to seamlessly configure against your existing infrastructure.
 
