@@ -2,8 +2,8 @@
 title: How to backup, restore and migrate OpenShift resources
 description: Provides a starting point for using Velero to backup and restore cluster resources and migrate between clusters
 services: openshift
-author: Kieran O'Neill
-reviewer: Alex Lillistone
+author: koneill
+reviewer: alillistone
 lastreviewed: 10/01/2022
 
 toc_rootlink: How To

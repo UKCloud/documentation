@@ -2,8 +2,8 @@
 title: Getting Started Guide for UKCloud for Red Hat OpenShift
 description: Provides information to get up and running with UKCloud for Red Hat OpenShift
 services: openshift
-author: Sue Highmoor
-reviewer: Alex Lillistone
+author: shighmoor
+reviewer: alillistone
 lastreviewed: 07/01/2022
 
 toc_rootlink: Getting Started

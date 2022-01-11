@@ -2,8 +2,8 @@
 title: How to use the Hawkular Metrics API
 description: Shows how to structure basic queries to the Hawkular Metrics API in order to get resource statistics back
 services: openshift
-author: Kieran O'Neill
-reviewer: Alex Lillistone
+author: koneill
+reviewer: alillistone
 lastreviewed: 10/01/2022
 
 toc_rootlink: How To
