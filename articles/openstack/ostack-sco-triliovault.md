@@ -3,8 +3,8 @@ title: Self Service Backup and Restoration (TrilioVault) Service Scope
 description: Outlines important details regarding Self Service Backup and Restoration (TrilioVault) for UKCloud for OpenStack
 services: openstack
 author: sdixon
-reviewer: dbutts
-lastreviewed: 08/01/2021
+reviewer: ribeck
+lastreviewed: 11/01/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -55,7 +55,7 @@ TrilioVault is chargeable based on the number of instances protected and the cap
 
 ## How can TrilioVault be used as a Disaster Recovery (DR) tool?
 
-By default, TrilioVault is not a DR tool, however in the event UKCloud declares a DR scenario in your primary datacentre, we can repoint TrilioVault to make your backup target site also become the recovery site, ensuring we can restore any and all workloads to a secondary datacentre in the event of a diaster event in your primary datacentre.
+By default, TrilioVault is not a DR tool, however in the event UKCloud declares a DR scenario in your primary datacentre, we can repoint TrilioVault to make your backup target site also become the recovery site, ensuring we can restore any and all workloads to a secondary datacentre in the event of a disaster event in your primary datacentre.
 
 ## Frequency and timing
 
