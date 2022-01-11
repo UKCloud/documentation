@@ -2,7 +2,7 @@
 title: (Video) OpenStack self-service backup with TrilioVault
 description: Shows a video that provides an overview of the self-service backup and restoration feature provided by TrilioVault
 services: openstack
-author: Sue Highmoor
+author: shighmoor
 reviewer: ribeck 
 lastreviewed: 10/01/2022
 
