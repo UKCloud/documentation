@@ -2,7 +2,7 @@
 title: How to configure IPsec VPN in OpenStack
 description: Provides instructions for deploying an instance into your OpenStack project to function as a VPN endpoint
 services: openstack
-author: Sue Highmoor
+author: shighmoor
 reviewer: ribeck
 lastreviewed: 11/01/2022
 
