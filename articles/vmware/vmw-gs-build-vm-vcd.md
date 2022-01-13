@@ -4,7 +4,7 @@ description: Describes how to get up and running with UKCloud for VMware by show
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 12/11/2021
+lastreviewed: 13/01/2022
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -130,29 +130,33 @@ The edge gateway is possibly the most complex part of the VDC because of its hig
 
 2. This time you're working with the edge gateway, so in the left navigation panel, under *Networking*, click **Edges**.
 
-    ![Edges menu option in Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+   ![Edges menu option in Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-3. Select the radio button for the edge gateway you want to work with and click **Services**.
+3. Select the edge gateway you want to work with.
 
-    ![Edge gateway Services option](images/vmw-vcd10.1-edge-btn-services.png)
+   ![Select edge gateway](images/vmw-vcd10.1-edge-select.png)
 
-4. Each tab in the *Edge Gateway* dialog box provides access to a different service provided by the edge gateway. The main tabs are:
+4. Click **Services**.
 
-    ![Tabs on the Edge Gateway dialog box](images/vmw-vcd10.1-edge-tabs.png)
+    ![Services option](images/vmw-vcd10.1-edge-btn-services.png)
 
-    - **Firewall** - As well as a physical firewall, you can control which networks and ports can communicate through the edge gateway. You'll set up some firewall rules later in this exercise.
+5. Each tab in the *Edge Gateway* dialog box provides access to a different service provided by the edge gateway. The main tabs are:
 
-    - **DHCP** - The edge gateway can act as a DHCP server for VMs connected to Org networks connected to an edge. The DHCP tab shows DHCP information for any VDC networks that have been configured with DHCP, and so acts as a centralised view. For more information, see [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md).
+   ![Tabs on the Edge Gateway dialog box](images/vmw-vcd10.1-edge-tabs.png)
 
-    - **NAT** - Network address translation, both in (DNAT) and out (SNAT) of the edge gateway. You'll set up some NAT rules later in this exercise.
+   - **Firewall** - As well as a physical firewall, you can control which networks and ports can communicate through the edge gateway. You'll set up some firewall rules later in this exercise.
 
-    - **Routing** - You can provide static routes from the edge gateway to other networks, for example networks in other VDCs in your compute service. For more information, see [*How to create a static route*](vmw-how-create-static-route.md).
+   - **DHCP** - The edge gateway can act as a DHCP server for VMs connected to Org networks connected to an edge. The DHCP tab shows DHCP information for any VDC networks that have been configured with DHCP, and so acts as a centralised view. For more information, see [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md).
 
-    - **Load Balancer** - The edge gateway provides simple HTTP and HTTPS load balancing using round robin. For more information, see [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
+   - **NAT** - Network address translation, both in (DNAT) and out (SNAT) of the edge gateway. You'll set up some NAT rules later in this exercise.
 
-    - **VPN** - IPsec site‑to‑site VPN is available on the edge gateway. You can configure an IPsec VPN within Cloud Director, but you may need to perform additional configuration through the API. For more information, see [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md).
+   - **Routing** - You can provide static routes from the edge gateway to other networks, for example networks in other VDCs in your compute service. For more information, see [*How to create a static route*](vmw-how-create-static-route.md).
 
-    To access the internet from a VM, you'll need to create firewall rules to determine who can access your network and NAT rules to route traffic within your network.
+   - **Load Balancer** - The edge gateway provides simple HTTP and HTTPS load balancing using round robin. For more information, see [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
+
+   - **VPN** - IPsec site‑to‑site VPN is available on the edge gateway. You can configure an IPsec VPN within Cloud Director, but you may need to perform additional configuration through the API. For more information, see [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md).
+
+   To access the internet from a VM, you'll need to create firewall rules to determine who can access your network and NAT rules to route traffic within your network.
 
 ### Creating firewall rules
 
@@ -164,75 +168,75 @@ Let's start with firewall rules. To enable your VMs to communicate with the outs
 
 2. Make sure the **Enabled** option is selected.
 
-    ![Enabled option on Firewall tab](images/vmw-vcd10.1-edge-firewall-enabled.png)
+   ![Enabled option on Firewall tab](images/vmw-vcd10.1-edge-firewall-enabled.png)
 
    > [!IMPORTANT]
    > For security reasons, you should ensure that the firewall is always enabled.
 
 3. Click the **+** button to add a new row to the firewall rules table.
 
-    ![Add button and new firewall rule](images/vmw-vcd10.1-edge-btn-firewall-add-rule.png)
+   ![Add button and new firewall rule](images/vmw-vcd10.1-edge-btn-firewall-add-rule.png)
 
 4. Select each of the fields in the row for the **New Rule** and update them as shown below:
 
-    - **Name** - `HTTPS outbound`
+   - **Name** - `HTTPS outbound`
 
-    - **Source** - `internal`
+   - **Source** - `internal`
 
-      - Click the **+** (Add object) button
+     - Click the **+** (Add object) button
 
-        ![Add object button for firewall source](images/vmw-vcd10.1-edge-btn-firewall-add-source.png)
+       ![Add object button for firewall source](images/vmw-vcd10.1-edge-btn-firewall-add-source.png)
 
-      - In the *Select objects* dialog box, select **Internal**, click the right arrow button, then click **Keep**.
+     - In the *Select objects* dialog box, select **Internal**, click the right arrow button, then click **Keep**.
 
-        ![Select objects dialog box for firewall source](images/vmw-vcd10.1-edge-firewall-source-internal.png)
+       ![Select objects dialog box for firewall source](images/vmw-vcd10.1-edge-firewall-source-internal.png)
 
-    - **Destination** - `external`
+   - **Destination** - `external`
 
-      - Click the **+** (Add object) button.
+     - Click the **+** (Add object) button.
 
-        ![Add object button for firewall destination](images/vmw-vcd10.1-edge-btn-firewall-add-dest.png)
+       ![Add object button for firewall destination](images/vmw-vcd10.1-edge-btn-firewall-add-dest.png)
 
-      - In the *Select objects* dialog box, select **External**, click the right arrow button, then click **Keep**.
+     - In the *Select objects* dialog box, select **External**, click the right arrow button, then click **Keep**.
 
-        ![Select objects dialog box for firewall destination](images/vmw-vcd10.1-edge-firewall-source-external.png)
+       ![Select objects dialog box for firewall destination](images/vmw-vcd10.1-edge-firewall-source-external.png)
 
-    - **Service** - `tcp:443:any`
+   - **Service** - `tcp:443:any`
 
-      - Click the **+** button.
+     - Click the **+** button.
 
-        ![Add service button for firewall rule](images/vmw-vcd10.1-edge-btn-firewall-add-service.png)
+       ![Add service button for firewall rule](images/vmw-vcd10.1-edge-btn-firewall-add-service.png)
 
-      - Enter the following values in the *Add Service* dialog box:
+     - Enter the following values in the *Add Service* dialog box:
   
-        - **Protocol** - **TCP**
+       - **Protocol** - **TCP**
 
-        - **Source Port** - `any`
+       - **Source Port** - `any`
 
-        - **Destination Port** - `443`
+       - **Destination Port** - `443`
 
-          ![Add Service dialog box](images/vmw-vcd10.1-edge-firewall-add-service-ex.png)
+         ![Add Service dialog box](images/vmw-vcd10.1-edge-firewall-add-service-ex.png)
 
-        - Click **Keep** when you're done.
+       - Click **Keep** when you're done.
 
-    - **Action** - **Accept**
+   - **Action** - **Accept**
 
-      ![Firewall accept rule](images/vmw-vcd10.1-edge-firewall-accept-rule.png)
+     ![Firewall accept rule](images/vmw-vcd10.1-edge-firewall-accept-rule.png)
 
-    These settings allow traffic from the VMs inside your VDC (**Source** = `internal`) to reach destinations outside the VDC (**Destination** = `external`) on port `443` (HTTPS).
+   These settings allow traffic from the VMs inside your VDC (**Source** = `internal`) to reach destinations outside the VDC (**Destination** = `external`) on port `443` (HTTPS).
 
-    You'll need to repeat these steps for ports `80` (HTTP) and `53` (DNS).
+   You'll need to repeat these steps for ports `80` (HTTP) and `53` (DNS).
 
-    > [!NOTE]
-    > For DNS, the protocol should be UDP.
+   > [!NOTE]
+   > For DNS, the protocol should be UDP.
 
-    You can also allow traffic to reach your VMs from outside your VDC by swapping the **Source** and **Destination** values. However, because this opens up your firewall to a lot of traffic, we recommend that you first complete this guide to get comfortable with general networking concepts, and then take a look at the information in [*How to create firewall rules*](vmw-how-create-firewall-rules.md) where you can find out how to lock the firewall down.
+   You can also allow traffic to reach your VMs from outside your VDC by swapping the **Source** and **Destination** values. However, because this opens up your firewall to a lot of traffic, we recommend that you first complete this guide to get comfortable with general networking concepts, and then take a look at the information in [*How to create firewall rules*](vmw-how-create-firewall-rules.md) where you can find out how to lock the firewall down.
 
-    ![New firewall rule](images/vmw-vcd10.1-edge-firewall-new-rule-ex.png)
+   ![New firewall rule](images/vmw-vcd10.1-edge-firewall-new-rule-ex.png)
 
 5. Click **Save changes**.
 
-    ![Save changes link on Firewall tab](images/vmw-vcd10.1-edge-firewall-save.png)
+   ![Save changes link on Firewall tab](images/vmw-vcd10.1-edge-firewall-save.png)
 
 ### Creating NAT rules
 
@@ -245,11 +249,11 @@ For the VMs in your VDC to access the internet, you need to translate the intern
 
 1. In the *Edge Gateways* dialog box, select the **NAT** tab.
 
-    ![NAT tab in vCloud Director](images/vmw-vcd10.1-edge-tab-nat.png)
+   ![NAT tab in vCloud Director](images/vmw-vcd10.1-edge-tab-nat.png)
 
 2. In the *NAT44 Rules* section, click the **SNAT Rule** button to create a source NAT (SNAT) rule to translate internal IP addresses into something that the external network can understand.
 
-    ![Add SNAT Rule button](images/vmw-vcd10.1-btn-add-snat.png)
+   ![Add SNAT Rule button](images/vmw-vcd10.1-btn-add-snat.png)
 
 3. In the *Add SNAT Rule* dialog box, from the **Applied on** list, choose the edge gateway that you want to apply the SNAT rule to.
 
@@ -259,10 +263,10 @@ For the VMs in your VDC to access the internet, you need to translate the intern
 
 6. Make sure the **Enabled** option is selected.
 
-    ![Add SNAT Rule dialog box](images/vmw-vcd10.1-edge-add-snat-ex.png)
+   ![Add SNAT Rule dialog box](images/vmw-vcd10.1-edge-add-snat-ex.png)
 
-    > [!TIP]
-    > If you're not sure what your external IP addresses are, see [*How to find your allocated external IP addresses*](vmw-how-find-ip-addresses.md).
+   > [!TIP]
+   > If you're not sure what your external IP addresses are, see [*How to find your allocated external IP addresses*](vmw-how-find-ip-addresses.md).
 
 7. When you're done, click **Keep**.
 
@@ -274,7 +278,7 @@ For the VMs in your VDC to access the internet, you need to translate the intern
 
 8. Click **Save changes**.
 
-    ![Save changes link on NAT tab](images/vmw-vcd10.1-edge-nat-save.png)
+   ![Save changes link on NAT tab](images/vmw-vcd10.1-edge-nat-save.png)
 
 ## Create a virtual machine
 
@@ -284,29 +288,29 @@ Now that you've laid the groundwork, it's time to create your VM. The best way t
 
 2. In the left navigation panel, click **vApps**.
 
-    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-vapps.png)
+   ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-vapps.png)
 
 3. In this exercise, you'll create the vApp from scratch, so click **New vApp**.
 
-    ![New vApp option](images/vmw-vcd10.1-btn-new-vapp-ex.png)
+   ![New vApp option](images/vmw-vcd10.1-btn-new-vapp-ex.png)
 
-    > [!TIP]
-    > If your VDC already contains one or more vApps, click **New**, then select **New vApp**.
-    >
-    > ![New vApp menu option](images/vmw-vcd10.1-mnu-new-vapp.png)
+   > [!TIP]
+   > If your VDC already contains one or more vApps, click **New**, then select **New vApp**.
+   >
+   > ![New vApp menu option](images/vmw-vcd10.1-mnu-new-vapp.png)
 
 4. In the *New vApp* dialog box, give the vApp a **Name** and **Description**.
 
 5. Click **Add Virtual Machine**.
 
-    ![Add Virtual Machine button in New vApp dialog box](images/vmw-vcd10.1-btn-vapp-add-new.png)
+   ![Add Virtual Machine button in New vApp dialog box](images/vmw-vcd10.1-btn-vapp-add-new.png)
 
 6. In the *New VM* dialog box, you can create your VM. Enter a **Name**, **Computer Name** and **Description** for the VM.
 
-    > [!TIP]
-    > The **Name** is to identify the VM, the **Computer Name** is the host name of the VM.
-    >
-    > The **Computer Name** is copied from the **Name** field but can contain only alphanumeric characters and hyphens so you may need to edit it if your VM **Name** contains spaces or special characters.
+   > [!TIP]
+   > The **Name** is to identify the VM, the **Computer Name** is the host name of the VM.
+   >
+   > The **Computer Name** is copied from the **Name** field but can contain only alphanumeric characters and hyphens so you may need to edit it if your VM **Name** contains spaces or special characters.
 
 7. The easiest way to create a VM is to use a pre-built template from a catalog, so from the **Type** radio buttons, select **From Template**.
 
@@ -346,15 +350,15 @@ When your vApp and VM have been successfully created, you can test if your VM is
 
 4. Click **VM Console** to open the popout web console and go through the setup procedure.
 
-    ![VM Console option](images/vmw-vcd10.1-mnu-vm-console.png)
+   ![VM Console option](images/vmw-vcd10.1-mnu-vm-console.png)
 
 5. To confirm that your VM has connectivity to the internet and has an assigned IP address:
 
-    - Type `ipconfig` into the Command Prompt. If you've configured the networking correctly, your VM will return an IP address.
+   - Type `ipconfig` into the Command Prompt. If you've configured the networking correctly, your VM will return an IP address.
 
-    - Open an internet browser page and navigate to an external web page
+   - Open an internet browser page and navigate to an external web page
 
-    - Ping the IP address of your DNS (for example, `8.8.8.8`) through the command line.
+   - Ping the IP address of your DNS (for example, `8.8.8.8`) through the command line.
 
 ## Next steps
 
