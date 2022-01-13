@@ -2,9 +2,9 @@
 title: How to view proxy logs in a multi-network OpenShift cluster | UKCloud Ltd
 description: Explains how to view the logs of the squid proxy in your cluster
 services: openshift
-author: Kieran O'Neill
-reviewer: Steve Mulholland
-lastreviewed: 15/12/2020
+author: koneill
+reviewer: alillistone
+lastreviewed: 07/01/2022
 
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x

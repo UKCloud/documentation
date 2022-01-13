@@ -2,9 +2,9 @@
 title: Getting Started Guide for UKCloud for OpenShift v3.x
 description: Provides information to get up and running with UKCloud for OpenShift v3.x
 services: openshift
-author: Sue Highmoor
-reviewer: Gareth Ellner
-lastreviewed: 04/12/2020
+author: shighmoor
+reviewer: alillistone
+lastreviewed: 10/01/2022
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x

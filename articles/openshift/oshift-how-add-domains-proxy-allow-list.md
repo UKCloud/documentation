@@ -2,9 +2,9 @@
 title: How to permit outbound access to internet hosts in deployments with government community network connectivity
 description: Outlines methods to securely permit access to internet hosts in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
-author: Ben Bacon
-reviewer: smulholland
-lastreviewed: 15/12/2020
+author: bbacon
+reviewer: gellner
+lastreviewed: 10/01/2022
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
 toc_sub2:
