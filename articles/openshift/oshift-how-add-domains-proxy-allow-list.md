@@ -4,7 +4,7 @@ description: Outlines methods to securely permit access to internet hosts in v3.
 services: openshift
 author: bbacon
 reviewer: gellner
-lastreviewed: 10/01/202
+lastreviewed: 10/01/2022
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
 toc_sub2:
