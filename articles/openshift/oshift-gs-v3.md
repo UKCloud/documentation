@@ -4,7 +4,7 @@ description: Provides information to get up and running with UKCloud for OpenShi
 services: openshift
 author: shighmoor
 reviewer: alillistone
-lastreviewed: 10/01/2020
+lastreviewed: 10/01/2022
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
