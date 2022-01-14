@@ -3,8 +3,8 @@ title: How to enable the vRealize Operations Tenant Appliance to access advanced
 description: Shows how to enable the vRealize Operations (vROps) Tenant Appliance in UKCloud for VMware to gain access to advanced monitoring capabilities
 services: vmware
 author: shighmoor
-reviewer:  
-lastreviewed: 20/11/2020
+reviewer: shighmoor
+lastreviewed: 21/12/2021
 toc_rootlink: How To
 toc_sub1: Advanced monitoring
 toc_sub2:
@@ -42,9 +42,13 @@ To enable the vRealize Operations Tenant Appliance, you must be a VMware Cloud D
 
 To make advanced monitoring available for your UKCloud for VMware environment, you need to enable the vRealize Operations Tenant Appliance:
 
-1. In the VMware Cloud Director menu, select **Libraries**.
+1. In VMware Cloud Director, in the top menu, select **Libraries**.
+
+    ![Libraries menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-libraries.png)
 
 2. In the left navigation panel, under *Services*, select **Service Library**.
+
+   ![Service Library option](images/vmw-vcd10.1-mnu-service-library.png)
 
 3. In the *vROps - Enable Monitoring* card, click **Execute**.
 
@@ -60,9 +64,13 @@ To make advanced monitoring available for your UKCloud for VMware environment, y
 
 If you no longer want access to advanced monitoring, you must disable the vRealize Operations Tenant Appliance:
 
-1. In the VMware Cloud Director menu, select **Libraries**.
+1. In VMware Cloud Director, in the top menu, select **Libraries**.
+
+    ![Libraries menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-libraries.png)
 
 2. In the left navigation panel, under *Services*, select **Service Library**.
+
+   ![Service Library option](images/vmw-vcd10.1-mnu-service-library.png)
 
 3. In the *vROps - Disable Monitoring* card, click **Execute**.
 
@@ -70,13 +78,15 @@ If you no longer want access to advanced monitoring, you must disable the vReali
 
 4. In the *vROps - Disable Monitoring* dialog box, click **Finish**.
 
+   ![vROps - Disable Monitoring dialog box](images/vmw-vrops-disable.png)
+
 5. You can monitor the progress in the *Recent Tasks* panel.
 
 ## Next steps
 
 After you've enabled the vRealize Operations Tenant Appliance, you can start to access metrics and reports through the *Operations Manager*. For more information, see [*How to access advanced monitoring using the vRealize Operations Tenant Appliance*](vmw-how-vrops-use.md).
 
-The UKCloud for VMware Advanced Management bundle also includes advanced networking options. For more information, see [*Advanced networking options for UKCloud for VMware*](vmw-ref-advanced-networking.md).
+The UKCloud for VMware Advanced Management bundle also includes advanced networking options. For more information, see [*Advanced management options for UKCloud for VMware*](vmw-ref-advanced-mgmt.md).
 
 ## Feedback
 

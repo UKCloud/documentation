@@ -19,19 +19,15 @@ toc_mdlink: cdsz-ref-application-process.md
 
 ## Overview
 
-The UKCloud Cross Domain Security Zone (CDSZ) enables you to securely transfer data between our Assured OFFICIAL and Elevated OFFICIAL security domains using NCSC-approved cross-domain security patterns. Using the CDSZ you can create applications that are accessible to citizens, but ensure data safety.
+The UKCloud Cross Domain Security Zone (CDSZ) enables you to securely transfer data between our Assured OFFICIAL and Elevated OFFICIAL security domains.
 
-This document provides an overview of the UKCloud process to be used by customers wanting to purchase CDSZ services (Walled Garden and Secure Remote Access).
+This article provides an overview of the UKCloud process you should use when purchasing CDSZ services (Walled Garden and Secure Remote Access).
 
-There are two approaches to applying for CDSZ services:
+When applying for CDSZ services, you may want to work with our Cloud Architects, who can provide support and guidance for designing an architecture that is appropriate for your requirements regarding risk mitigation. It's your responsibility to work with your data owner to ensure you're comfortable with the risk associated with your data, and to choose which controls you feel are appropriate within your CDSZ.
 
-- A light touch design review/self-assessment route for customers with simple implementations, or those who are experienced at designing secure solutions. This enables customers who are comfortable with the risk associated with their data to choose which controls and evidence they feel is appropriate to self-certify their cross domain solution.
+This article is intended for use by the UKCloud customer, who may or may not be the ultimate end user of the application. You'll be responsible for completing any compliance process with the end user, including obtaining sign-off from the relevant data owner. The data owner should be a permanent employee at the data owning organisation with evidence of data ownership, for example an IT Security Officer (ITSO), Senior Information Risk Owner (SIRO) or accreditor.
 
-- An assurance wrap style approach with UKCloud's experienced professionals for more complex implementations or those customers who would like support and guidance when developing their solutions. This enables customers who require more support to submit their proposed solution with confidence that it effectively mitigates against risk.
-
-In this document, the *customer* is the UKCloud customer, who may or may not be the ultimate end user of the application. The customer will be responsible for completing any compliance process with the end user, including obtaining sign-off from the relevant data owner. The data owner should be a permanent employee at the data owning organisation with evidence of data ownership, for example an IT Security Officer (ITSO), Senior Information Risk Owner (SIRO) or accreditor.
-
-The data owner can choose to sign off for a single CDSZ implementation or setup a *Tell Us Once* agreement that signs off all future CDSZ implementations for the customer on behalf of the data owning organisation. UKCloud will maintain a list of all Tell Us Once agreements and any subsequent CDSZ applications by the customer on behalf of the data owner should reference this agreement.
+The data owner can choose to sign off for a single CDSZ implementation or setup a *Tell Us Once* agreement that signs off all future CDSZ implementations for you on behalf of the data owning organisation. UKCloud will maintain a list of all Tell Us Once agreements and any subsequent CDSZ applications by you on behalf of the data owner should reference this agreement.
 
 ## Process overview
 
@@ -51,14 +47,14 @@ Stage | Name | Description
 
 ## Required documents
 
-When you apply for a CDSZ service, you must provide the following documents to show that you have identified and mitigated for any risks:
+When you apply for a CDSZ service, you must provide the following documents to show that you've identified and mitigated for any risks:
 
 - Details of your proposed implementation that covers the intended design in the CDSZ, the Assured and Elevated VDCs you are connecting to and data flows.
 
-- Evidence (for example, email or signed document) of acceptance of risk from the data owning organisation. This should also indicate if this acceptance is a Tell Us Once agreement that will also apply to future CDSZ implementations by the customer on behalf of the data owner.
+- Evidence (for example, email or signed document) of acceptance of risk from the data owning organisation. This should also indicate if this acceptance is a Tell Us Once agreement that will also apply to future CDSZ implementations by you on behalf of the data owner.
 
     > [!NOTE]
-    > If a Tell Us Once agreement is already in place between the customer and the data owner, this evidence is not required, but the customer should indicate that such an agreement is in place so that UKCloud can confirm against our list of trusted partners for the data owner.
+    > If a Tell Us Once agreement is already in place between you and the data owner, this evidence is not required, but you should indicate that such an agreement is in place so that UKCloud can confirm against our list of trusted partners for the data owner.
 
 - An explicit statement, as part of the Service Request, that the solution has been reviewed by a named UKCloud Cloud Architect or that you do not require a review. The named Cloud Architect must provide review notes as evidence that the review took place. See [Stage 3: Design review](#stage-3-design-review).
 
@@ -100,9 +96,9 @@ If you choose an assurance wrap review for your proposed implementation, the UKC
 
 - Advice and guidance for how to design secure solutions with appropriate monitoring and logging
 
-- Conversation between UKCloud SIRO and customer SIRO or nominated representative covering risk management and mitigation, with further workshops if required
+- Conversation between UKCloud SIRO and your SIRO or nominated representative covering risk management and mitigation, with further workshops if required
 
-- Review of customer-defined ITHC scope and summary with a Cloud Architect
+- Review of your ITHC scope and summary with a Cloud Architect
 
 > [!NOTE]
 > UKCloud takes no ownership or responsibility for the implementation or running of your proposed solution or ownership for any risks to the data.

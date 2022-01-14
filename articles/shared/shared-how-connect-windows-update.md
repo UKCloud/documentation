@@ -4,7 +4,7 @@ description: Shows how to connect to the UKCloud Windows Server Update Services 
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 04/11/2021
+lastreviewed: 01/12/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -17,27 +17,6 @@ toc_mdlink: shared-how-connect-windows-update.md
 
 # How to connect to the UKCloud Windows Server Update Services (WSUS)
 
-> [!IMPORTANT]
-> UKCloud is making important updates to WSUS services. For more details, see the [UKCloud Service Status page](https://status.ukcloud.com/incidents/820kym82cmjz).
-> 
-> In preparation for this service improvement and go-live, in addition to the steps detailed in the remainder of this article, you'll also need to create additional edge firewall rules to allow access to the following IP addresses on port TCP/8530 and TCP/8531.
-> 
-> Note that, for these new systems below, you *do not* need to allow TCP/443 (but you will be required to update the FQDN used - detailed below). However, to help facilitate a smooth transition TCP/443 will still be available for a period of time post-change. We would, however, encourage you to update your systems to use TCP/8531 (which is the Microsoft standard) for encrypted communications. Upon completion of a successful migration to the new services, further communications will be issued to detail the turning off of TCP/443 for this service.
->
-> - Assured OFFICIAL IP addresses
-> 
->   - 51.179.212.114
->   
->   - 51.179.215.210
->
-> - For Elevated OFFICIAL IP addresses (and any other networks or zones), raise a service request via the My Calls section of the UKCloud Portal
-> 
-> Due to the changes above, once the switch-over from the **old** WSUS systems to the **new** WSUS systems happens (due on 30th November 2021), you'll need to append the SSL port (8531) to the FQDN of the WSUS systems. For example:
->
->  `https://wsus.frn.ukcloud.com:8531` and `https://wsus.cor.ukcloud.com:8531`
->
-> Be aware that you should use the domain names `wsus.frn.ukcloud.com` and `wsus.cor.ukcloud.com` in both Assured OFFICIAL and Elevated OFFICIAL. You should update your Elevated host files accordingly.
-
 ## Overview
 
 When you create a virtual machine (VM) running a Windows Server operating system, you need to register it with the UKCloud Windows Server Update Services to receive updates for it.
@@ -47,7 +26,7 @@ When you create a virtual machine (VM) running a Windows Server operating system
 
 Before you establish a connection to the update service, you need to ensure your VMs can communicate with the update server, which exists outside your cloud organisation.
 
-This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports `443` and `8530` on your firewall to the update server. For more information on how to do this, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
+This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports `8530` and `8531` on your firewall to the following IP addresses `51.179.212.114` and `51.179.215.210`. For more information on how to do this, see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md) and [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 ## Configuring Windows update
 
@@ -57,14 +36,14 @@ In this section you'll need to use the appropriate address depending on the loca
 
 2. Test connectivity to the update servers by opening an Internet Explorer browser window, then opening a connection to one of the update servers on:
 
-    - `https://wsus.cor.ukcloud.com` (Assured OFFICIAL, Corsham)
+    - `https://wsus.cor.ukcloud.com:8531` (Assured OFFICIAL, Corsham)
 
-    - `https://wsus.frn.ukcloud.com` (Assured OFFICIAL, Farnborough)
+    - `https://wsus.frn.ukcloud.com:8531` (Assured OFFICIAL, Farnborough)
 
     - For Elevated OFFICIAL, raise a Service Request via the My Calls section of the Elevated UKCloud Portal to get the appropriate IP address
 
     > [!NOTE]
-    > Ensure that you can resolve this name via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+    > Ensure that you can resolve these hostnames via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 3. Ensure that you have the full certificate chain installed. If not, you may have to install the certificates into your VM manually.
 
@@ -79,13 +58,13 @@ In this section you'll need to use the appropriate address depending on the loca
     In the Select Certificate Store select the option Show Physical Stores.<br>
     Install the certificate into Trusted Root Certification authorities/local PC.<br>
     <br>
-    **For Windows Server 2012 and 2016:**<br>
+    **For Windows Server 2012 through to 2022:**<br>
     On the welcome screen of the Certificate import wizard, select Local Machine, then click Next.<br>
     Select Place all certificates in the following store, and click Browse.<br>
     Select Trusted Root Certification Authorities and click OK.<br>
     Click Next and confirm the import settings, then click Finish.
 
-4. Restart your browser and open a connection to `https://wsus.cor.ukcloud.com`, `https://wsus.frn.ukcloud.com` or the appropriate Elevated IP address.
+4. Restart your browser and open a connection to `https://wsus.cor.ukcloud.com:8531`, `https://wsus.frn.ukcloud.com:8531` or the appropriate Elevated IP address/port.
 
 5. Confirm that no certificate warnings appear and that the full certificate chain is present.
 
@@ -95,7 +74,7 @@ In this section you'll need to use the appropriate address depending on the loca
 
 8. Enable and configure the following settings:
 
-    - Specify intranet Microsoft update service location —  in both boxes enter `https://wsus.cor.ukcloud.com`, `https://wsus.frn.ukcloud.com` or the appropriate Elevated IP address
+    - Specify intranet Microsoft update service location —  in both boxes enter `https://wsus.cor.ukcloud.com:8531`, `https://wsus.frn.ukcloud.com:8531` or the appropriate Elevated IP address
 
     - Configure Automatic Updates — enter required settings
 
@@ -125,10 +104,6 @@ These settings will depend on your current setup. The [Configure Group Policy Se
 
 > [!NOTE]
 > UKCloud are not responsible for content published on the URLs in the above guide. If you believe the link is broken or is no longer relevant, contact UKCloud Customer Support via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
-
-## Related videos
-
-- [*Connecting a VM to UKCloud's Windows Server Update Services (WSUS) video*](../shared/shared-vid-wsus.md)
 
 ## Feedback
 

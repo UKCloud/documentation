@@ -128,12 +128,12 @@
 <p>OpenShift Container Platform is an open source PaaS, developed and supported by Red Hat and based around common technologies, such as containers and the Kubernetes container cluster manager for enterprise application development.</p>
 <p>UKCloud for Red Hat OpenShift provides a full Red Hat OpenShift Container Platform that has been deployed by UKCloud and is ready to consume without delay. You can then create one or more OpenShift projects in which you can run multiple pods, with each pod containing a group of related containers.</p>
 <p><img src="images/oshift-pods-containers.png" alt="OpenShift pods and containers"></p>
-<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.6/architecture/architecture.html"><em>OpenShift Container Platform architecture</em></a> and <a href="https://docs.openshift.com/container-platform/4.6/security/container_security/security-understanding.html"><em>Understanding container security</em></a></p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.9/architecture/architecture.html"><em>OpenShift Container Platform architecture</em></a> and <a href="https://docs.openshift.com/container-platform/4.9/security/container_security/security-understanding.html"><em>Understanding container security</em></a></p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>To complete the steps in this guide, you must have access to an OpenShift environment, along with an internet-enabled device capable of running an HTML5 capable browser.</p>
 <p>As part of your onboarding, UKCloud will provide you with a URL and credentials to access your OpenShift environment.</p>
 <p>In addition, we recommend the installation of the OpenShift CLI on your device.</p>
-<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html"><em>Getting started with the CLI</em></a></p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html"><em>Getting started with the CLI</em></a></p>
 <h2 id="initial-environment">Initial environment</h2>
 <p>OpenShift clusters can be deployed with flexible sizing, including different options for worker node sizes. We recommend a mininum of two worker nodes to provide resiliency. OpenShift v4 clusters provide the option of hourly pricing and self-service scaling.</p>
 <p>For more information about sizing options for OpenShift, see <a href="oshift-ref-pricing.html"><em>Pricing information for UKCloud for Red Hat OpenShift</em></a>. If you'd like to expand an existing cluster, you can request this by raising a Service Request through the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
@@ -145,28 +145,28 @@
 <p>To log in to the OpenShift web console using your Portal credentials, your Portal account must have been granted access to the cluster.</p>
 </div>
 <p>If your OpenShift cluster uses an earlier version of OCP, you will need to use your separate OpenShift credentials to log in to the console.</p>
-<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.6/web_console/odc-about-developer-perspective.html"><em>About the Developer perspective in the web console</em></a></p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.9/web_console/odc-about-developer-perspective.html"><em>About the Developer perspective in the web console</em></a></p>
 <h2 id="using-the-command-line-interface">Using the command-line interface</h2>
 <p>With the OpenShift Container Platform command line interface (CLI), you can create applications and manage OpenShift Container Platform projects from a terminal.</p>
 <p>If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later, when you enter the login command, you'll be given a URL to use to log in using your Portal credentials. Go to this URL and you'll be prompted for your Portal credentials and, if you've set up 2FA, your 2FA code. This will take you to a page with your API token, the command to run to log in to the CLI and curl request to use to log in to the CLI.</p>
 <p>Alternatively, you can obtain the CLI login command (including login token) from the OpenShift console by clicking your user name and selecting <strong>Copy Login Command</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift <a href="https://docs.openshift.com/container-platform/4.6/authentication/understanding-and-creating-service-accounts.html"><em>Understanding and creating service accounts</em></a> documentation.</p>
+<p>The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift <a href="https://docs.openshift.com/container-platform/4.9/authentication/understanding-and-creating-service-accounts.html"><em>Understanding and creating service accounts</em></a> documentation.</p>
 </div>
-<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html"><em>Getting started with the CLI</em></a>, <a href="https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/developer-cli-commands.html"><em>Developer CLI commands</em></a>, and <a href="https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/administrator-cli-commands.html"><em>Administrator CLI commands</em></a></p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html"><em>Getting started with the CLI</em></a>, <a href="https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/developer-cli-commands.html"><em>Developer CLI commands</em></a>, and <a href="https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/administrator-cli-commands.html"><em>Administrator CLI commands</em></a></p>
 <h2 id="using-the-api">Using the API</h2>
 <p>The OpenShift Container Platform distribution of Kubernetes includes the Kubernetes v1 REST API and the OpenShift v1 REST API. These are RESTful APIs accessible via HTTPS on the OpenShift Container Platform control plane servers.</p>
 <p>These REST APIs can be used to manage end-user applications, the cluster, and the users of the cluster.</p>
-<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.6/rest_api/index.html"><em>API index</em></a></p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.9/rest_api/index.html"><em>API index</em></a></p>
 <h2 id="developing-and-deploying-applications">Developing and deploying applications</h2>
 <p>OpenShift Container Platform is designed for building and deploying applications. You can begin your application's development from scratch using OpenShift Container Platform directly or develop locally then use OpenShift Container Platform to deploy your fully developed application.</p>
-<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.6/architecture/understanding-development.html"><em>Understanding OpenShift Container Platform development</em></a></p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.9/architecture/understanding-development.html"><em>Understanding OpenShift Container Platform development</em></a></p>
 <h2 id="creating-and-using-images">Creating and using images</h2>
 <p>Containers in OpenShift Container Platform are based on Docker-formatted container images. An image is a binary that includes all the requirements for running a single container, as well as metadata describing its needs and capabilities. Containers only have access to resources defined in the image unless you give the container additional access when creating it.</p>
-<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.6/openshift_images/create-images.html"><em>Creating images</em></a></p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/4.9/openshift_images/create-images.html"><em>Creating images</em></a></p>
 <h2 id="next-steps">Next steps</h2>
-<p>In this Getting Started Guide, you've learned the basics about UKCloud for Red Hat OpenShift. For more information, see the OpenShift documentation at <a href="https://docs.openshift.com/container-platform/4.6/welcome/index.html"><em>OpenShift Container Platform Documentation</em></a>. Take care to change to the correct version of the documentation to match the version of your cluster.</p>
+<p>In this Getting Started Guide, you've learned the basics about UKCloud for Red Hat OpenShift. For more information, see the OpenShift documentation at <a href="https://docs.openshift.com/container-platform/4.9/welcome/index.html"><em>OpenShift Container Platform Documentation</em></a>. Take care to change to the correct version of the documentation to match the version of your cluster.</p>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to UKCloud for Red Hat OpenShift.</p>
 <p><strong>cluster</strong>  One or more control plane nodes and a set of worker nodes.</p>
@@ -223,7 +223,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

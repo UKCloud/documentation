@@ -3,15 +3,15 @@ title: (Video) Overview of Oracle Self Service Portal
 description: Shows a video that provides an introduction to the Oracle Self Service Portal
 services: oracle
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 03/11/2019
-toc_rootlink: Videos
-toc_sub1: 
+reviewer: bchallis
+lastreviewed: 16/11/2021
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: Videos
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Overview of Oracle Self Service Portal
-toc_fullpath: Videos/orcl-vid-overview.md
+toc_fullpath: UKCloud for Oracle Software/Videos/orcl-vid-overview.md
 toc_mdlink: orcl-vid-overview.md
 ---
 

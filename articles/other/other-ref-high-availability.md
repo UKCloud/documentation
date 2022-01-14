@@ -2,9 +2,9 @@
 title: High availability on the UKCloud platform
 description: Describes how the UKCloud platform supports the development of highly available applications
 services: other
-author: Sue Highmoor
-reviewer:
-lastreviewed: 01/11/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 22/11/2021
 
 toc_rootlink: Reference
 toc_sub1:
@@ -44,11 +44,11 @@ Storage infrastructure | Redundant power supplies and fans<br>Redundant dual sto
 
 We offer a number of different connectivity options for you to gain access to our services.
 
-Connectivity option | High-availability considerations
---------------------|---------------------------------
-Internet            | Multiple, redundant, high-speed internet links with DDoS mitigation to protect the platform as a whole.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available via different RIPE IP addresses (ideally on different IP network ranges).
-PSN/HSCN/Janet      | Redundant, high-speed connectivity with automatic failover.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available.
-HybridConnect       | Enables you to bring your own secure connectivity into the UKCloud environment.<br>We provide colocation services for hardware and can assist in the design.<br>We recommend that you deploy an additional HybridConnect service in another site to ensure that you have redundant connectivity into a second site.<br>We recommend that you use routing protocols to enable automated failover.
+Connectivity option        | High-availability considerations
+---------------------------|---------------------------------
+Internet                   | Multiple, redundant, high-speed internet links with DDoS mitigation to protect the platform as a whole.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available via different RIPE IP addresses (ideally on different IP network ranges).
+PSN/HSCN                   | Redundant, high-speed connectivity with automatic failover.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available.
+HybridConnect/CrownConnect | Enables you to bring your own secure connectivity into the UKCloud environment.<br>We provide colocation services for hardware and can assist in the design.<br>We recommend that you deploy an additional HybridConnect service in another site to ensure that you have redundant connectivity into a second site.<br>We recommend that you use routing protocols to enable automated failover.
 
 ### Supplementary services for high availability
 
@@ -56,12 +56,14 @@ In addition to the high-availability features provided as-standard on our platfo
 
 High-availability consideration | Notes
 --------------------------------|------
-[Neustar UltraDNS from UKCloud](../connectivity/conn-sco-glb.md) | Enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.
+[Neustar UltraDNS from UKCloud](../connectivity/conn-sco-glb.md) | Authoritative DNS that enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.
 [Neustar DDoS Protection from UKCloud](../connectivity/conn-sco-app-ddos.md) | A fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site.
 [Disaster Recovery as a Service](../draas/draas-sd.md) | A powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and the UKCloud platform.
 Replicated backup | Enables your services to be backed up and the backup data replicated to another site.
 [Cloud Storage](../cloud-storage/cs-sd.md) | Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).
 [Professional Services](../pro-services/ps-sd.md) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
+
+For information about product-specific availability features, see the appropriate section below.
 
 ## Application design considerations
 
@@ -89,7 +91,9 @@ Use SQL Always On to ensure the availability of SQL server. For more information
 
 ### UKCloud for OpenStack
 
-OpenStack Platform 13 (OSP13) provides Load Balancing-as-a-Service (LBaaS) as a native feature. For more information see the [*Load Balancing-as-a-Service (LBaaS) with Octavia*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) chapter of the OpenStack Networking Guide.
+TrilioVault on UKCloud for OpenStack provides a self-service solution that takes point-in-time backups of workloads and supports multiple recovery options to recover your workloads in case of any outages. For more information, see [*How to use TrilioVault for self-service backup in OpenStack*](../openstack/ostack-how-use-triliovault.md).
+
+OpenStack Platform 13 (OSP13) provides Load Balancing-as-a-Service (LBaaS) as a native feature. For more information see the OpenStack [Using Octavia for Load Balancing-as-a-Service](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html-single/using_octavia_for_load_balancing-as-a-service/index) networking guide.
 
 To improve the resilience of your UKCloud for OpenStack applications, you can move resources (for example, instance images and volumes) between the different regions currently offered by UKCloud. For more information, see [*How to move resources between OpenStack regions*](../openstack/ostack-how-move-resources.md).
 
@@ -110,19 +114,19 @@ To achieve high availability for your Oracle database, you can use Real Applicat
 
 ### UKCloud for Red Hat OpenShift
 
-Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from Neustar UltraDNS from UKCloud) to ensure traffic is redirected should a region or cluster level availability issue occur.
-
-We also offer the option to have the Portworx storage solution configured in your cluster by UKCloud during deployment. This enables further resilience for your applications by offering highly-available storage, which significantly reduces container failover times, adds multi-attach storage to enable multiple containers to read/write the same volume on different nodes and the ability to replicate and migrate workloads between clusters to aid disaster recovery.
+Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilising a global load balancer or DNS failover service (such as Neustar UltraDNS from UKCloud) to ensure traffic is redirected should a region or cluster level availability issue occur.
 
 Within each OpenShift cluster deployment there are a number of features that support high availability and resilience:
 
-- Each OpenShift cluster is deployed with at least three master nodes responsible for the availability of the cluster API, etcd and other core components.
+- Each OpenShift cluster is deployed with three control plane nodes responsible for the availability of the cluster API, etcd and other core components.
 
-- Ingress traffic comes via resilient UKCloud managed load balancers into the cluster. It enters the cluster via resilient router pods deployed on the OpenShift infrastructure nodes.
+- Ingress traffic comes via a VIP (Virtual IP) shared between the cluster nodes and resilient router pods deployed on the OpenShift infrastructure nodes.
 
 - We recommend always having more than one application node deployed in each cluster. If you only have one node for your application containers, a single host failure could affect all applications deployed in the cluster as they'd have nowhere to fail over to within the cluster until the node is recovered and returned to service.
 
-- You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of >1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform's understanding of any problematic containers.
+- You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of >1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform's understanding of any problematic containers. You should apply a Pod Disruption Budget to each multi-pod application to ensure that no outage is seen during cluster updates and other maintenance.
+
+- You can obtain additional storage resilience by using OpenShift Data Foundation (formerly known as OpenShift Container Storage). This is an optional install that maintains three copies of all data on the OpenShift-level. It enables multi-attach ("RWX") persistent volumes, which allow compatible persistent applications to run in a resilient fashion.
 
 ### UKCloud for VMware
 

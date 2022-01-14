@@ -2,16 +2,16 @@
 title: UKCloud for Oracle Software Service Scope
 description: Outlines important details regarding UKCloud for Oracle Software
 services: oracle
-author: Steve Hall
-reviewer: Bart Challis
-lastreviewed: 01/07/2019
-toc_rootlink: Service Information
-toc_sub1: 
+author: shall
+reviewer: bchallis
+lastreviewed: 11/11/2021
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: Service Information
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Service Scope
-toc_fullpath: Service Information/orcl-sco.md
+toc_fullpath: UKCloud for Oracle Software/Service Information/orcl-sco.md
 toc_mdlink: orcl-sco.md
 ---
 
@@ -48,9 +48,9 @@ You can also use accounts to separate users based on access requirements or perm
 
 The UKCloud for Oracle Software infrastructure is uncontended and configured to optimise the performance and availability of Oracle workloads. There is only one service configuration on the UKCloud for Oracle Software platform, ensuring that OVMs are pinned to cores to stop OVM movement that would unbalance applications.
 
-Customers can self-configure OVMs by the number of cores, and amount of memory and storage needed. OVMs can be reconfigured to adjust resources in line with changing performance requirements.
+Customers can configure OVMs by the number of cores, and amount of memory and storage needed. OVMs can be reconfigured to adjust resources in line with changing performance requirements.
 
-Self-service management is done through the Oracle Enterprise Management Portal, accessed through the UKCloud Portal.
+VM creation and sizing increases are currently available via service request to ensure that the platform remains balanced &mdash; this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM or change the size of a VM. For more information, see [*Oracle cloud self-service functionality*](orcl-ref-bug-self-service.md).
 
 Full details of the available service options are outlined in the [*Service Definition*](orcl-sd.md).
 
@@ -67,7 +67,7 @@ All storage is persistent and resilient to local hardware failures. Multiple sto
 
 ## Storage policies
 
-We provide you with access to two storage policies: tier 1 and tier 2.
+We provide you with access to two block storage policies: tier 1 and tier 2.
 
 We will initially provide you with a tier 2 storage policy, however you can request tier 1 storage be added to your Oracle Tenant so you can create additional disks with tier 1 storage on your OVMs.
 
@@ -111,11 +111,7 @@ All service requests will be triaged by UKCloud. We reserve the right to escalat
 
 UKCloud actively capacity-manages the cloud platform to ensure you have access to the resources you request.
 
-The UKCloud platform is designed using sites, regions and zones. The relationship between them is shown below:
-
-![Geographical diversity](images/oracle-image-1.png)
-
-You can specify Farnborough or Corsham as the site where you would like to have your service provisioned, and we will try to accommodate requests and will advise you if we are unable do so.
+The service is only available in Corsham.
 
 We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.
 
@@ -165,7 +161,7 @@ Bring Your Own Firewall is currently not available for UKCloud for Oracle Softwa
 
 We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
 
-We don't provide Protective Monitoring services above the hypervisor (for example, for your VM). Components above this infrastructure are your own responsibility to provide an appropriate protective monitoring capability.
+It's the customer's responsbility to source ProMon services for their VMs. We can provide Protective Monitoring services above the hypervisor (for example, for your VM) upon request using our [*Security Operations Service*].
 
 In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.
 
@@ -233,7 +229,7 @@ The following documents contain more information about UKCloud for Oracle Softwa
 
 - [*UKCloud for Oracle Software Service Definition*](orcl-sd.md)
 
-- [*UKCloud Terms & Conditions for G-Cloud 11*](../other/other-ref-terms-and-conditions.md)
+- [*UKCloud Terms & Conditions for G-Cloud 12*](../other/other-ref-terms-and-conditions.md)
 
 - [*Understanding connectivity options in UKCloud for VMware*](../vmware/vmw-ref-connectivity-options.md)
 

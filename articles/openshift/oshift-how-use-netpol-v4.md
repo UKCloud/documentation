@@ -105,7 +105,7 @@ oc create -f netpol.yaml
 
 ## Further information
 
-To get a full understanding of NetworkPolicy objects in OpenShift v4 we recommend reading: <https://docs.openshift.com/container-platform/4.7/networking/network_policy/about-network-policy.html>
+To get a full understanding of NetworkPolicy objects in OpenShift v4 we recommend reading: <https://docs.openshift.com/container-platform/4.9/networking/network_policy/about-network-policy.html>
 
 ## Feedback
 

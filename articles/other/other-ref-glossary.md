@@ -429,7 +429,7 @@ Note the difference between Private Cloud, which is a single-tenant environment 
 
 A UKCloud IaaS service that enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premises.
 
-For more information, see the [Private Cloud for Oracle Software service definition](../private-cloud/prc-sd-orcl.md).
+For more information, see the [Private Cloud for Oracle Software service definition](../oracle/orcl-sd-private.md).
 
 ### Private Cloud for Storage
 

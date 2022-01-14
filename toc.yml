@@ -9,7 +9,7 @@
   topicHref: articles/openstack/ostack-home.md
 - name: Oracle
   href: articles/oracle/
-  topicHref: articles/oracle/orcl-home.md
+  topicHref: articles/oracle/orcl-sd-private.md
 - name: VMware
   href: articles/vmware/
   topicHref: articles/vmware/vmw-home.md

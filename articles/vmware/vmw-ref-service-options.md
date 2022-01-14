@@ -73,9 +73,11 @@ Choose the application and data protection needed for your solution. You can cho
 
 The Advanced Management bundle provides:
 
-- Advanced monitoring, provided by the vRealize Operations (vROps) Tenant Appliance. Using advanced monitoring, you can view metrics and reports relating to your UKCloud for VMware environment. For more information, see [*How to access advanced monitoring using the vRealize Operations Tenant Appliance*](vmw-how-vrops-use.md).
+- Advanced monitoring, provided by the vRealize Operations (vROps) Tenant Appliance, enabling you to view metrics and reports relating to your UKCloud for VMware environment.
 
-- Additional distributed networking functionality. For more information, see [*Advanced networking options for UKCloud for VMware*](vmw-ref-advanced-networking.md)
+- Additional distributed networking functionality: Distributed Firewall (DFW), Distributed Logical Router (DLR) and L2 VPN.
+
+For more information, see [*Advanced management for UKCloud for VMware*](vmw-ref-advanced-mgmt.md)
 
 ## Feedback
 

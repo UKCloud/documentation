@@ -142,8 +142,8 @@
       href: vmw-how-vls-request-licence.md
 - name: Reference
   items:
-  - name: Advanced networking options
-    href: vmw-ref-advanced-networking.md
+  - name: Advanced management options
+    href: vmw-ref-advanced-mgmt.md
   - name: Availability of Virtual Hardware version 13
     href: vmw-ref-virtual-hardware-v13.md
   - name: Availability of Virtual Hardware version 14
@@ -158,8 +158,6 @@
     href: vmw-ref-edge-ha.md
   - name: Fixing your advanced gateway if you encounter NullPointerException error
     href: vmw-ref-trouble-null-pointer.md
-  - name: Fixing your IPsec VPN following upgrade to NSX 6.4
-    href: vmw-ref-trouble-ipsec-nsx64.md
   - name: IPsec VPN Foundation and PRIME profiles
     href: vmw-ref-ipsec-vpn.md
   - name: Known Issues in VMware Cloud Director

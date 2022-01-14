@@ -4,12 +4,8 @@ description: Frequently asked questions for PSN for Policing and enhanced regime
 services: connectivity
 author: mwarner
 reviewer: nstobbart
-lastreviewed: 10/12/2020
+lastreviewed: 07/12/2021
 toc_rootlink: FAQs
-toc_sub1: 
-toc_sub2:
-toc_sub3:
-toc_sub4:
 toc_title: PSN for Policing and enhanced regime FAQs
 toc_fullpath: FAQs/conn-faq-psn-police.md
 toc_mdlink: conn-faq-psn-police.md

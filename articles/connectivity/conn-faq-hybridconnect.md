@@ -3,13 +3,9 @@ title: HybridConnect FAQs
 description: Frequently asked questions for HybridConnect
 services: connectivity
 author: mwarner
-reviewer: shighmoor
-lastreviewed: 07/12/2020
+reviewer: nstobbart
+lastreviewed: 07/12/2021
 toc_rootlink: FAQs
-toc_sub1: 
-toc_sub2:
-toc_sub3:
-toc_sub4:
 toc_title: HybridConnect FAQs
 toc_fullpath: FAQs/conn-faq-hybridconnect.md
 toc_mdlink: conn-faq-hybridconnect.md
@@ -24,9 +20,9 @@ HybridConnect makes it easy for you to create hybrid clouds by securely connecti
 These include connectivity to Crown Hosting facilities and to secure suites in UKCloud data centres, third-party data centres, at compatible cloud service providers, and in other customer data centre facilities.
 Available private connections include:
 
-- CAS(T)-compliant circuits (leased lines and MPLS) with CPA-approved (or equivalent standard) overlay encryption
+- Leased lines/MPLS Circuits with optional overlay encryption
 
-- CPA-approved (or equivalent standard) VPN solutions, which may be hosted for secure connectivity over the internet
+- VPN solutions, which may be hosted for secure connectivity over the internet
 
 - Secure fibre connectivity within UKCloud data centres
 
@@ -42,9 +38,9 @@ All connections are subject to available capacity.
 
 ## If my data centre is on the same campus as a UKCloud data centre, can I connect via direct fibre?
 
-Yes. NCSC recognises an intra-campus bonded fibre connection as being equivalent to CAS(T) and therefore appropriate for accessing the UKCloud Assured OFFICIAL cloud platform.
+Yes. NCSC recognises an intra-campus bonded fibre connection as appropriate for accessing the UKCloud Assured OFFICIAL cloud platform.
 
-CPA‑approved (or equivalent standard) overlay encryption should be used to make the fibre connection appropriate for accessing the Elevated OFFICIAL cloud platform.
+An overlay encryption should be used to make the fibre connection appropriate for accessing the Elevated OFFICIAL cloud platform.
 
 Fibre running between the data centres can be protected using Kopex shielding as an alternative.
 

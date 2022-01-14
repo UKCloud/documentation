@@ -3,8 +3,8 @@ title: How to use the VMware OVF Tool
 description: Describes how to use the VMware OVF Tool to assist in the distribution of virtual machines and vApps
 services: vmware
 author: shall
-reviewer: dcoombesukc
-lastreviewed: 06/11/2020
+reviewer: swthomas
+lastreviewed: 11/11/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -31,7 +31,7 @@ The VMware OVF Tool is a conversion program freely downloadable from VMware that
 
 You can download the OVF Tool via the following link:
 
-<https://my.vmware.com/group/vmware/get-download?downloadGroup=OVFTOOL430UPDATE3>
+<https://customerconnect.vmware.com/downloads/get-download?downloadGroup=OVFTOOL443>
 
 You must have a VMware account to download the tool. You can download the OVF Tool for Windows 32-bit and 64-bit, Linux 32-bit and 64-bit, or Mac OS X.
 
@@ -50,7 +50,7 @@ The OVF Tool is a CLI tool, so some level of familiarity with CMD commands helps
 
 You can also find the OVF Tool User Guide at:
 
-<https://www.vmware.com/support/developer/ovf/>
+<https://developer.vmware.com/docs/11748/ovf-tool-user-s-guide>
 
 ## Basic import and export commands
 
@@ -100,7 +100,7 @@ To import a `.vmx` file:
 
     For example:
 
-          ovftool --vCloudTemplate --acceptAllEulas --overwrite centos71.vmx "vcloud://auser@api.vcd.portal.skyscapecloud.com:443?org=1-2-3-a4b56c& vappTemplate=centos71&catalog=OVFTool-test"
+          ovftool --vCloudTemplate --acceptAllEulas --overwrite centos71.vmx "vcloud://auser@vcd.portal.skyscapecloud.com:443?org=1-2-3-a4b56c& vappTemplate=centos71&catalog=OVFTool-test"
 
     > [!TIP]
     > Make sure you use double quotes (`"`) rather than single quotes (`'`).
@@ -139,7 +139,7 @@ To upload an ISO image:
 
     For example:
 
-          ovftool -st="ISO" "C:\example.iso\" "vcloud://auser@api.vcd.portal.skyscapecloud.com:443?vdc=myVDC&org=1-2-3-a4b56c&media=CentOS_ISO&catalog=OVFTool-test"
+          ovftool -st="ISO" "C:\example.iso\" "vcloud://auser@vcd.portal.skyscapecloud.com:443?vdc=myVDC&org=1-2-3-a4b56c&media=CentOS_ISO&catalog=OVFTool-test"
 
     > [!TIP]
     > Make sure you use double quotes (`"`) rather than single quotes (`'`).

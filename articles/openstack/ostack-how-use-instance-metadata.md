@@ -3,8 +3,8 @@ title: How to use OpenStack instance metadata
 description: Shows you how to add metadata to an instance and how to retrieve instance metadata
 services: openstack
 author: shighmoor
-reviewer: nmathews
-lastreviewed: 10/12/2020
+reviewer: bnicholls
+lastreviewed: 31/12/2021
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:

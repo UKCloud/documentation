@@ -100,27 +100,25 @@
 <p>By default, VMs deployed on the UKCloud platform do not come with any protection services enabled. If you want Snapshot Protection for your VM, you must explicitly add it.</p>
 <p>When you add Snapshot Protection to a VM, the VM is added to a daily automated backup. Backups are automatically taken for the VM once every 24 hours, sometime between the hours of 20:00 and 08:00. The status of a VM's backup is reported daily in the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.</p>
 <p>If you encounter a problem with your VM, raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal and we can use one of your VM backups to restore the whole VM image to a new VM in your VDC. You can then use this image to restore the VM or restore any required data to your original VM.</p>
-<p>For more detailed information, see the <a href="vmw-sco-snapshot-protection.html"><em>Snapshot Protection Service Scope</em></a>.</p>
+<p>For more detailed information, see the Snapshot Protection <a href="vmw-sco-snapshot-protection.html"><em>Service Scope</em></a> and <a href="vmw-faq-snapshot-protection.html"><em>FAQ</em></a>.</p>
 <h2 id="checking-a-vms-snapshot-protection-status">Checking a VM's Snapshot Protection status</h2>
-<p>You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, find out which snapshot retention policy is currently applied to a VM, or check the status of your VM's snapshots.</p>
+<p>You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, find out which snapshot retention policy is currently applied to a VM or check the status of your VM's snapshots.</p>
 <ol>
-<li><p>Log in to the UKCloud Portal.</p>
-<p>For more detailed steps, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+<li><p><a href="../portal/ptl-gs.html#logging-in-to-the-ukcloud-portal"><em>Log in to the UKCloud Portal</em></a>.</p>
 </li>
-<li><p>If necessary, switch to the account that the VM belongs to.</p>
+<li><p>If necessary, switch to the account that you want to work in.</p>
 </li>
-<li><p>Click <strong>My VMs</strong>.</p>
-<p><img src="images/snapshot-image-1.png" alt="My VMs"></p>
-</li>
-<li><p>Select the compute service (vOrg) that the VM belongs to.</p>
+<li><p>In the Portal navigation panel, expand <strong>VMware Cloud</strong> and then select the compute service that the VM belongs to.</p>
+<p><img src="images/vmw-portal-mnu-select-compute-service.png" alt="VMware Cloud menu option"></p>
 </li>
 <li><p>Select the <strong>My VMs</strong> tab.</p>
-<p><img src="images/snapshot-image-2.png" alt="My VMs tab"></p>
+<p><img src="images/ptl-tab-myvms.png" alt="My VMs tab in the UKCloud Portal"></p>
 </li>
-<li><p>From the <strong>Currently viewing for VDC</strong> list, select the VDC that the VM belongs to.</p>
+<li><p>From the <strong>Currently viewing for VDC</strong> list, select the virtual data centre (VDC) that the VM belongs to.</p>
+<p><img src="images/ptl-myvms-select-vdc.png" alt="Select VDC"></p>
 </li>
-<li><p>Click the <strong>VMs</strong> tab.</p>
-<p><img src="images/snapshot-image-3.png" alt="VMs tab"></p>
+<li><p>Select the <strong>VMs</strong> tab.</p>
+<p><img src="images/ptl-myvms-tab-vms.png" alt="VMs tab on the My VMs page"></p>
 </li>
 <li><p>The icon in <strong>VM Backup</strong> column shows the status of each VM's most recent backup:</p>
 <table>
@@ -132,23 +130,23 @@
 </thead>
 <tbody>
 <tr>
-<td><img src="images/snapshot-image-14.png" alt="Backup Successful"></td>
+<td><img src="images/ptl-snapshot-success.png" alt="Backup Successful"></td>
 <td>Backup of the VM was successful</td>
 </tr>
 <tr>
-<td><img src="images/snapshot-image-13.png" alt="Excluded from backup"></td>
+<td><img src="images/ptl-snapshot-excluded.png" alt="Excluded from backup"></td>
 <td>The VM has been excluded from backups</td>
 </tr>
 <tr>
-<td><img src="images/snapshot-image-13.png" alt="Not in backup yet"></td>
+<td><img src="images/ptl-snapshot-excluded.png" alt="Not in backup yet"></td>
 <td>A backup has not yet been created for a VM that has recently been included in backups</td>
 </tr>
 <tr>
-<td><img src="images/snapshot-image-15.png" alt="Backup Failed"></td>
+<td><img src="images/ptl-snapshot-fail.png" alt="Backup Failed"></td>
 <td>Backup of the VM was unsuccessful</td>
 </tr>
 <tr>
-<td><img src="images/snapshot-image-15.png" alt="Excluded from backup"></td>
+<td><img src="images/ptl-snapshot-fail.png" alt="Excluded from backup"></td>
 <td>The VM has been excluded from backups but has not yet reached the end of the previous retention period<br>(when the end retention period is reached, the icon will change to the grey minus sign)</td>
 </tr>
 </tbody>
@@ -171,11 +169,11 @@
 <li><p><strong>Failed</strong> - A change in the status of Snapshot Protection for the VM failed; contact the UKCloud support team to resolve this issue.</p>
 </li>
 </ul>
-<p><img src="images/snapshot-image-4.png" alt="Snapshot Protection Status"></p>
+<p><img src="images/ptl-myvms-vm-snapshots.png" alt="Snapshot Protection Status"></p>
 </li>
 <li><p>To find out more detail about the most recent backup of a VM, or to view information about previous backups, click the <strong>VM Name</strong>.</p>
 </li>
-<li><p>In the VMs <em>Info</em> page, the following fields provide information about the most recent backup of the VM:</p>
+<li><p>In the VM's <em>Info</em> page, the following fields provide information about the most recent backup of the VM:</p>
 <ul>
 <li><p><strong>Additional information</strong> - additional information about the backup, for example if the backup was removed from the daily automated backup, if the retention period was changed, or further details of any failures.</p>
 </li>
@@ -219,11 +217,8 @@
 </li>
 </ul>
 </li>
-<li><p>Click <strong>Manage my Backups</strong> to raise a Service Request related to your backups via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal, for example, to restore a backup.</p>
-<p><img src="images/snapshot-image-5.png" alt="Manage my Backups button"></p>
-</li>
-<li><p>To view all the VM information in a single table, click the <em>Actions</em> tab and select <strong>Export VMs</strong>. You can save this page to view offline and analyse further.</p>
-<p><img src="images/snapshot-image-6.png" alt="Export VMs option"></p>
+<li><p>To view all the VM information in a single table, from the <strong>Actions</strong> menu, select <strong>Export VMs</strong>. You can save this page to view offline and analyse further.</p>
+<p><img src="images/ptl-myvms-mnu-export.png" alt="Export VMs option"></p>
 </li>
 </ol>
 <h2 id="managing-snapshot-protection-for-a-vm">Managing Snapshot Protection for a VM</h2>
@@ -237,7 +232,7 @@
 <li><p>Click the <strong>VMs</strong> tab.</p>
 </li>
 <li><p>In the <strong>Default Policy</strong> column, click the green button.</p>
-<p>The label on the button will depend on the currently applied policy:</p>
+<p>The label on the button depends on the currently applied policy:</p>
 <ul>
 <li><p><strong>Manage</strong> if there is currently no snapshot retention policy applied to the VM</p>
 </li>
@@ -246,7 +241,7 @@
 <li><p><strong>28-day</strong> if the VM's snapshot retention policy is currently 28 days</p>
 </li>
 </ul>
-<p><img src="images/snapshot-image-7.png" alt="Snapshot Protection options"></p>
+<p><img src="images/ptl-myvms-snapshots-manage.png" alt="Snapshot Protection options"></p>
 </li>
 <li><p>In the <em>Snapshot Protection Policy</em> dialog box, from the <strong>New Protection Policy</strong> list, select the snapshot retention policy that you want to apply to the VM:</p>
 <ul>
@@ -257,13 +252,13 @@
 <li><p><strong>No Backup</strong> to turn Snapshot Protection off for the VM</p>
 </li>
 </ul>
-<p><img src="images/snapshot-image-8.png" alt="Snapshot Protection Policy"></p>
+<p><img src="images/ptl-myvms-snapshot-policy.png" alt="Snapshot Protection Policy"></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If you remove Snapshot Protection from a VM, you should consider alternatives to ensure the integrity of your data in the case of disruption. In addition to Snapshot Protection, UKCloud offers Journaling Protection options, or you may want to implement your own protection solution, possibly utilising our Cloud Storage service.</p>
+<p>If you remove Snapshot Protection from a VM, you should consider alternatives to ensure the integrity of your data in the case of disruption. In addition to Snapshot Protection, UKCloud offers <a href="vmw-sco-journaling-protection.html"><em>Journaling Protection</em></a> options, or you may want to implement your own protection solution, possibly utilising our <a href="../cloud-storage/cs-sco.html"><em>Cloud Storage</em></a> service.</p>
 </div>
 </li>
-<li><p>In the <strong>Reason For Change</strong> field, provide a reason for the change to the existing snapshot retention policy.</p>
+<li><p>In the <strong>Reason For Change</strong> field, provide an explanation for why you're making the change to the existing snapshot retention policy.</p>
 </li>
 <li><p>Click <strong>Submit</strong>.</p>
 <p>The button in the <strong>Snapshot Protection</strong> column changes to an amber <strong>Processing</strong> button. When the changes have been applied, the button changes back to green with a label indicating the VM's snapshot retention policy (<strong>14-day</strong> or <strong>28-day</strong>) or <strong>Manage</strong> if you have turned off Snapshot Protection.</p>
@@ -284,6 +279,7 @@
 <li><p>From the <strong>Currently viewing for VDC</strong> list, select the VDC that you want to apply Snapshot Protection to.</p>
 </li>
 <li><p>Select the <strong>Snapshot Protection</strong> tab.</p>
+<p><img src="images/ptl-myvms-tab-snapshot.png" alt="Snapshot Protection tab on the My VMs page"></p>
 </li>
 <li><p>Next to <strong>Default VM Snapshot Protection</strong>, click the green button.</p>
 <p>The label on the button will depend on the currently applied policy:</p>
@@ -295,7 +291,7 @@
 <li><p><strong>28-day</strong> if the default snapshot retention policy is currently 28 days</p>
 </li>
 </ul>
-<p><img src="images/snapshot-image-9.png" alt="Default VM Snapshot Protection"></p>
+<p><img src="images/ptl-myvms-snapshot-manage-vdc.png" alt="Default VM Snapshot Protection"></p>
 </li>
 <li><p>In the <em>Snapshot Protection Policy</em> dialog box, from the <strong>New Protection Policy</strong> list, select the snapshot retention policy that you want to apply to the VMs in this VDC:</p>
 <ul>
@@ -306,9 +302,9 @@
 <li><p><strong>No Backup</strong> if you do not want to apply a default snapshot retention policy to the VDC</p>
 </li>
 </ul>
-<p><img src="images/snapshot-image-10.png" alt="Snapshot Protection Policy"></p>
+<p><img src="images/ptl-myvms-snapshot-policy-vdc.png" alt="Snapshot Protection Policy"></p>
 </li>
-<li><p>In the <strong>Reason For change</strong> field, provide a reason for the change to the existing snapshot retention policy.</p>
+<li><p>In the <strong>Reason For change</strong> field, provide an explanation for why you're making the change to the existing snapshot retention policy.</p>
 </li>
 <li><p>If you want to apply the chosen snapshot retention policy to existing VMs in the VDC as well as new VMs, select the <strong>Apply new policy to all existing VMs?</strong> check box.</p>
 <div class="NOTE">
@@ -328,21 +324,21 @@
 </li>
 <li><p>The <em>Default Snapshot Protection Policy History</em> section of the page lists any recent changes to the snapshot protection policy for the VDC.</p>
 </li>
-<li><p>The <em>Recent VM</em> <em>Snapshot Protection Policy Actions</em> section of the page lists any recent changes to the snapshot protection policy for VMs in the VDC.</p>
+<li><p>The <em>Recent VM Snapshot Protection Policy Actions</em> section of the page lists any recent changes to the snapshot protection policy for VMs in the VDC.</p>
 </li>
 </ol>
 <h2 id="monitoring-the-status-of-snapshot-protection">Monitoring the status of Snapshot Protection</h2>
 <p>You can monitor the status of Snapshot Protection across an entire compute service to get a general overview of how your VDCs and VMs are protected.</p>
 <ol>
-<li><p>Log in to the UKCloud Portal.</p>
-<p>For more detailed instructions, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for UKCloud Portal</em></a>.</p>
+<li><p><a href="../portal/ptl-gs.html#logging-in-to-the-ukcloud-portal"><em>Log in to the UKCloud Portal</em></a>.</p>
 </li>
-<li><p>If necessary, switch to the account that the compute service belongs to.</p>
+<li><p>If necessary, switch to the account that you want to work in.</p>
 </li>
-<li><p>In the navigation panel, expand <strong>Reports</strong> and click <strong>Backup Summary</strong>.</p>
-<p><img src="images/snapshot-image-11.png" alt="Backup summary"></p>
+<li><p>In the navigation panel, expand <strong>Reports</strong> and select <strong>Backup Summary</strong>.</p>
+<p><img src="images/ptl-mnu-backup-summary.png" alt="Backup summary"></p>
 </li>
-<li><p>Click the link for the compute service for which you want to view Snapshot Protection information.</p>
+<li><p>Click the link for the compute service that you want to view Snapshot Protection information for.</p>
+<p><img src="images/ptl-backup-summary-reports.png" alt="List of backup summary reports"></p>
 </li>
 <li><p>The <em>Snapshot Protection Summary</em> page provides the following information for the selected compute service:</p>
 <ul>
@@ -357,11 +353,11 @@
 <li><p><strong>VM Snapshot Protection Failures</strong> - A list of the VMs that encountered a Snapshot Protection failure in previous night's backups</p>
 </li>
 </ul>
-<p><img src="images/snapshot-image-12.png" alt="VM Snapshot Protection summary"></p>
+<p><img src="images/ptl-backup-summary-report.png" alt="VM Snapshot Protection summary"></p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
-<p>For more information about working with your VMs, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+<p>For more information about what you can do with your VMs in the UKCloud Portal, see <a href="vmw-how-portal-view-vms.html"><em>How to view your VMs in the UKCloud Portal</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
@@ -404,7 +400,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

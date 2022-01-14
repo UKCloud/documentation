@@ -30,7 +30,5 @@
     href: shared-ref-rhui-3.md
 - name: Videos
   items:
-  - name: Connecting a VM to WSUS
-    href: shared-vid-wsus.md
   - name: Licensing Windows VMs using the KMS
     href: shared-vid-licensing-kms.md

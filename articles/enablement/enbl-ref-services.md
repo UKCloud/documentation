@@ -3,8 +3,8 @@ title: Cloud Enablement services
 description: Lists the cloud enablement services provided by UKCloud
 services: enablement
 author: Sue Highmoor
-reviewer: ljames
-lastreviewed: 11/12/2020
+reviewer: sdixon
+lastreviewed: 26/11/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -37,7 +37,7 @@ Other enablement services that we provide to help you work with our cloud platfo
 
 - Mass Data Transfer - Enables you to move virtualised environments, in the form of VMs, into or out of your UKCloud environment using your own NAS, HDD, or USB devices. For more information, see the [*Mass Transfer Facility Service Scope*](enbl-sco-mtf-nas.md).
 
-- Data Transfer - Region to Region - Enables you to move your UKCloud for VMware workloads between regions on the UKCloud platform. For more information, see the [*Data Transfer - Region to Region Service Scope*(enbl-sco-transfer-regions.md).
+- Data Transfer - Region to Region - Enables you to move your UKCloud for VMware workloads between regions on the UKCloud platform. For more information, see the [*Data Transfer - Region to Region Service Scope*](enbl-sco-transfer-regions.md).
 
 - Data Transfer between Assured and Elevated - Enables you to move your workloads between the Assured and Elevated security domains to better meet sensitivity requirements. For more information, see the [*Data Transfer between Assured and Elevated Service Scope*](enbl-sco-transfer-assured-elevated.md).
 

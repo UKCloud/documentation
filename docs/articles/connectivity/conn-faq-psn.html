@@ -125,14 +125,14 @@
 <p>You can find information about other connectivity methods and answers to general connectivity questions in the <a href="conn-faq.html"><em>General Connectivity FAQs</em></a>.</p>
 <h2 id="service">Service</h2>
 <h3 id="can-i-connect-to-your-elevated-official-security-domain-using-the-unencrypted-psn-assured-service">Can I connect to your Elevated OFFICIAL security domain using the unencrypted PSN Assured Service?</h3>
-<p>No. We currently support connectivity to the unencrypted PSN Assured Service via our Assured OFFICIAL cloud platform only. The PSN Assured Service is <a href="http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx">CAS(T) compliant</a> and so suitable for some OFFICIAL data (previously IL2 data).</p>
+<p>No. We currently support connectivity to the unencrypted PSN Assured Service via our Assured OFFICIAL cloud platform only. The PSN Assured Service is suitable for some OFFICIAL data (previously IL2 data).</p>
 <p>Customers wanting to use the Elevated OFFICIAL cloud platform typically have more sensitive requirements related to the confidentiality and integrity of their data, and so are more likely to require the encrypted PSN Protected Service. Only the encrypted PSN Protected Service can connect to legacy IL3 networks such as GSI.</p>
 <h3 id="can-i-connect-to-the-ukcloud-elevated-official-cloud-platform-using-a-private-encrypted-psn-closed-user-group-cug">Can I connect to the UKCloud Elevated OFFICIAL cloud platform using a private encrypted PSN closed user group (CUG)?</h3>
 <p>Yes, you can use HybridConnect to deploy your own PSN circuit and associated CUG.</p>
 <p>However, the PSN strongly prefers customers to connect to PSN Services (such as the UKCloud Elevated OFFICIAL cloud platform) via the PSN Protected Service, which uses the IPED (Inter Provider Encryption Domain) to provide secure, encrypted connectivity independent of the underlying DNSP access connection.</p>
 <p>PSN CUGs are DNSP specific, and so potentially lock customers in, as these connections usually have minimum contract periods and other commercial barriers.</p>
 <h3 id="can-i-have-a-combination-of-government-community-networks-and-private-accredited-networks-into-the-same-ukcloud-solution">Can I have a combination of government community networks and private accredited networks into the same UKCloud solution?</h3>
-<p>Yes, subject to compliance with information assurance requirements, as only organisations that demonstrate compliance with the appropriate <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/193704/PSN_Compliance_Zero_tolerance_approach.pdf">code of connections</a> (for example PSN compliance certificate or HSCN Connection Agreement) can have access to government community networks.</p>
+<p>Yes, subject to compliance with information assurance requirements, as only organisations that demonstrate compliance with the appropriate code of connections (for example PSN compliance certificate or HSCN Connection Agreement) can have access to government community networks.</p>
 <p>You should be careful not to misconfigure self‑managed components of the solution (OS, application) to 'bridge' between government community networks (PSN) and private networks. This concern must be addressed by accreditation of the customer-managed components - preferably via PSN Accreditation. Local departmental accreditation by a public-sector customer is also allowed. This applies to solutions on both our Assured OFFICIAL and Elevated OFFICIAL cloud platforms.</p>
 <p>The UKCloud Assured OFFICIAL security domain features connectivity to the PSN Assured Service (previously IL2). This is provided via resilient, high‑capacity PSN circuits from Virgin Media installed into each of our data centres.</p>
 <p>The UKCloud Elevated OFFICIAL security domain is connected to the encrypted PSN Protected Service (previously IL3) via the IPED. This is provided using circuits from Vodafone into each UKCloud data centre. The PSN Protected Service also provides onward connectivity to legacy government community networks such as PNN and CJX.</p>
@@ -146,13 +146,13 @@
 <h3 id="how-long-is-the-lead-time-for-provisioning-psn-service-into-my-solution">How long is the lead time for provisioning PSN service into my solution?</h3>
 <p>You request connectivity to the PSN by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. We typically require two working days to provision the PSN service from receipt of an accepted request.</p>
 <p>If your solution requires many PSN IP addresses, we may need more time to work with you to get your PSN IP addresses configured to work with your solution hosted on our cloud platform.</p>
-<p>If you require <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/81660/PSN-IP-Address-Allocation-Guidance-v1-4.pdf">additional PSN IP addresses</a>, you'll need to request them from the PSN.</p>
+<p>If you require <a href="https://www.gov.uk/government/publications/public-services-network-psn-ip-address-allocation">additional PSN IP addresses</a>, you'll need to request them from the PSN.</p>
 <h3 id="do-you-provide-an-sla-on-psn-connectivity">Do you provide an SLA on PSN connectivity?</h3>
 <p>We provide an SLA for availability of our core services such as UKCloud for VMware. We cannot provide an SLA on external services (such as PSN) as they are outside our control. UKCloud can only provide assurance associated with the native SLAs that are offered as part of the core PSN framework.</p>
 <h3 id="what-is-your-policy-on-ip-addressing">What is your policy on IP addressing?</h3>
 <p>We've designed our cloud to give you complete control and autonomy over the private (<a href="https://tools.ietf.org/html/rfc1918">RFC 1918</a>) IP address space you deploy within your virtual data centre (VDC).</p>
 <p>You can use the self-managed virtual firewall to implement a VPN tunnel, network address translation (NAT) and load balancing to control how you publish the services within your VDC to external networks.</p>
-<p>For PSN connections to either of our security domains, the PSN has provided us with a <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/81660/PSN-IP-Address-Allocation-Guidance-v1-4.pdf">limited allocation of PSN IP addresses</a>. The PSN requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN. We will work with you to facilitate the allocation of your PSN IP addresses to your services hosted on our cloud platforms.</p>
+<p>For PSN connections to either of our security domains, the PSN has provided us with a <a href="https://www.gov.uk/government/publications/public-services-network-psn-ip-address-allocation">limited allocation of PSN IP addresses</a>. The PSN requires customers who need more than a few PSN IP addresses to use their own PSN IP allocation and, if more are needed, to justify an additional allocation directly with the PSN. We will work with you to facilitate the allocation of your PSN IP addresses to your services hosted on our cloud platforms.</p>
 <p>With the PSN IP addresses, you can establish:</p>
 <ul>
 <li><p>Source NAT - all outbound traffic to other resources on the PSN will appear to come from one of these IPv4 addresses.</p>
@@ -278,7 +278,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

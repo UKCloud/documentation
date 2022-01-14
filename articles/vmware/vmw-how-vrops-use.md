@@ -3,8 +3,8 @@ title: How to access advanced monitoring using the vRealize Operations Tenant Ap
 description: Provides information about how to access advanced monitoring metrics and reporting in UKCloud for VMware provided by the vRealize Operations (vROps) Tenant Appliance
 services: vmware
 author: shighmoor
-reviewer:  
-lastreviewed: 20/11/2020
+reviewer: shighmoor
+lastreviewed: 21/12/2021
 toc_rootlink: How To
 toc_sub1: Advanced monitoring
 toc_sub2:
@@ -39,7 +39,9 @@ To access advanced monitoring you must be a VMware Cloud Director administrator.
 
 To access advanced monitoring metrics:
 
-1. In the VMware Cloud Director menu, select **Operations Manager**.
+1. In VMware Cloud Director, in the top menu, select **More**, then **Operations Manager**.
+
+   ![Operations Manager menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-ops-manager.png)
 
 2. In the left navigation panel, under *Dashboards*, select **Organization Overview**
 
@@ -69,7 +71,7 @@ To access advanced monitoring metrics:
 
     - Virtual Machines
 
-    Double-click a VDC, vApp or VM to view metrics for a specific resource.
+    Click a VDC, vApp or VM to view metrics for a specific resource.
 
 ## Creating custom reports using the Metric Selector
 
@@ -101,11 +103,11 @@ If objects in your environment are not behaving as expected, vRealize Operations
 
 To view monitoring alerts:
 
-1. In the left navigation panel of the _Operations Manager_, under _Monitoring_, select **Alerts**.
+1. In the left navigation panel of the *Operations Manager*, under *Monitoring*, select **Alerts**.
 
     ![Alerts menu option](images/vmw-vrops-mnu-alerts.png)
 
-2. The _Alerts_ dashboard provides an overview of the alerts raised against your organisation.
+2. The *Alerts* dashboard provides an overview of the alerts raised against your organisation.
 
     ![Alerts dashboard](images/vmw-vrops-alerts.png)
 
@@ -123,7 +125,7 @@ For a useful blog showing how to use the vRealize Operations API, see <https://b
 
 ## Next steps
 
-If you encounter any problems accessing monitoring metrics and reports, see [_Troubleshooting the vRealize Operations Tenant Appliance for advanced monitoring_](vmw-ref-vrops-trouble.md).
+If you encounter any problems accessing monitoring metrics and reports, see [*Troubleshooting the vRealize Operations Tenant Appliance for advanced monitoring*](vmw-ref-vrops-trouble.md).
 
 ## Feedback
 

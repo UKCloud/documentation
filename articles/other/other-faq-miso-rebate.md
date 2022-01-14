@@ -3,8 +3,8 @@ title: MISO rebate FAQs
 description: Frequently asked questions for MISO rebate
 services: other
 author: mwarner
-reviewer: pheathman
-lastreviewed: 11/12/2020
+reviewer: dbooton
+lastreviewed: 13/12/2021
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -41,7 +41,7 @@ There are two windows per year when you can submit a claim: March and September.
 
 ### How do I apply for the MISO rebate?
 
-Send UKCloud evidence of the charges you have incurred by selling our services through G-Cloud. We have created a [form](https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-159%20UKCloud%20Partner%20Miso%20Claim.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1601391861&Signature=bhZn8dUA4rO9Uikk5Qra0eAfgF8%3D) for you to use which is available on the portal.
+Send UKCloud evidence of the charges you have incurred by selling our services through G-Cloud. We have created a [form](https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-159%20UKCloud%20Partner%20Miso%20Claim.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1667646130&Signature=b1Dzbkk%2Blqe9Ue%2FQDkFeQVHzgg4%3D) for you to use which is available on the portal.
 
 Please note, this is solely for an element of the overall MISO charge. We're not under any obligation to offer any rebate where the claim is not substantiated by sufficient evidence.
 

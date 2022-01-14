@@ -6,10 +6,6 @@
     href: prc-faq-storage.md
 - name: Service Information
   items:
-  - name: Private Cloud for Oracle Software Service Definition
-    href: prc-sd-orcl.md
-  - name: Private Cloud for Oracle Software Service Scope
-    href: prc-sco-orcl.md
   - name: Private Cloud for Storage Service Definition
     href: prc-sd-storage.md
   - name: Private Cloud for Storage Service Scope

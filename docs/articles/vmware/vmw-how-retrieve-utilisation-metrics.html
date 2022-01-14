@@ -113,7 +113,7 @@
 <li><p>Amount of disk used (KB)</p>
 </li>
 </ul>
-<p>You can retrieve current utilisation metrics for VMs in all UKCloud regions; you can retrieve historic metrics for VMs in regions 5 and 6.</p>
+<p>You can retrieve current and historic utilisation metrics for VMs in all UKCloud regions.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You can also find utilisation metrics for a VM in VMware Cloud Director by selecting <strong>Details</strong> and expanding the <em>Monitoring Chart</em> section.</p>
@@ -142,7 +142,7 @@
 <tr>
 <td><code>vcloud_api_url</code></td>
 <td>The URL you use to access the Cloud Director API</td>
-<td><code>api.vcd.portal.skyscapecloud.com</code></td>
+<td><code>vcd.portal.skyscapecloud.com</code></td>
 </tr>
 <tr>
 <td><code>vm_id</code></td>
@@ -152,7 +152,7 @@
 </tbody>
 </table>
 <p>For example:</p>
-<pre><code class="lang-none">GET https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
+<pre><code class="lang-none">GET https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
 </code></pre>
 </li>
 <li><p>The Cloud Director API response includes each of the current metric values, for example:</p>
@@ -160,7 +160,7 @@
 
     &lt;Link
         rel=&quot;up&quot;
-        href=&quot;https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab&quot;
+        href=&quot;https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab&quot;
         type=&quot;application/vnd.vmware.vcloud.vm+xml&quot;&gt;
 
     &lt;Metric name=&quot;cpu.usage.average&quot;
@@ -192,11 +192,11 @@
 </li>
 </ol>
 <h2 id="curl-example">Curl example</h2>
-<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
+<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
 </code></pre>
 <h2 id="retrieving-historic-utilisation-metrics">Retrieving historic utilisation metrics</h2>
 <p>Historic metrics are collected and stored for three months. You can retrieve historic metrics for the last 24 hours of metric history.</p>
-<p>You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.</p>
+<p>You can retrieve historic utilisation metrics for VMs in all regions.</p>
 <ol>
 <li><p>Log in to the Cloud Director API.</p>
 <p>For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the Cloud Director API</em></a>.</p>
@@ -216,7 +216,7 @@
 <tr>
 <td><code>vcloud_api_url</code></td>
 <td>The URL you use to access the Cloud Director API</td>
-<td><code>api.vcd.pod0000b.sys00005.portal.skyscapecloud.com</code></td>
+<td><code>vcd.pod0000b.sys00005.portal.skyscapecloud.com</code></td>
 </tr>
 <tr>
 <td><code>vm_id</code></td>
@@ -226,7 +226,7 @@
 </tbody>
 </table>
 <p>For example:</p>
-<pre><code class="lang-none">GET https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
+<pre><code class="lang-none">GET https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
 </code></pre>
 </li>
 <li><p>The Cloud Director API response includes historic metric values for the last 24 hours, for example:</p>
@@ -234,7 +234,7 @@
 
     &lt;Link
         rel=&quot;up&quot;
-        href=&quot;https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab&quot;
+        href=&quot;https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab&quot;
         type=&quot;application/vnd.vmware.vcloud.vm+xml&quot;&gt;
 
     &lt;MetricSeries
@@ -338,7 +338,7 @@
 </li>
 </ol>
 <h2 id="curl-example-1">Curl example</h2>
-<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
+<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
 </code></pre>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
@@ -382,7 +382,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2021. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

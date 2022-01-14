@@ -4,7 +4,7 @@ description: A brief introduction on how to start interacting with the Cloud Dir
 services: vmware
 author: shighmoor
 reviewer: acirel
-lastreviewed: 25/10/2021
+lastreviewed: 03/12/2021
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -29,15 +29,19 @@ You can find the schema reference for version 34.0 of the Cloud Director API her
 
 With PowerShell, you'll need v3 or higher. To check this, open PowerShell and enter `$psversiontable` at the prompt. You should see something like the following:
 
-![PowerShell version details](images/powershellandpython1.png)
+![PowerShell version details](images/vmw-powershell-version.png)
 
 If `PSVersion` is less than 3.0, you'll need to upgrade. The v4 package is available here: <https://www.microsoft.com/en-gb/download/details.aspx?id=40855>.
 
 ### Python
 
-You'll need to install Python 2.7: <https://www.python.org/downloads/release/python-2716/>
+Install Python 3.10: <https://www.python.org/downloads>
 
-You'll then need to install the package: <https://pypi.org/project/requests/>
+Then, install the package: <https://pypi.org/project/requests/>
+
+You can check your version of Python and whether the requests package is installed by typing the following commands:
+
+![Python version details](images/vmw-python-version.png)
 
 ### Getting your credentials
 
@@ -152,7 +156,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
        Pair = "{username}:{password}".format(username=username,password=password)
 
-       EncodedPair = base64.b64encode(Pair)
+       {{EncodedPair }}= base64.b64encode(Pair.encode('utf-8')).decode()
 
        Authorization = "Basic %s" % str(EncodedPair)
 
@@ -193,7 +197,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
 3. You can run this script by entering:
 
-    `C:\python27\python.exe c:\vcloud_demo.py`
+    `C:\python310\python.exe c:\vcloud_demo.py`
 
     The above example will log you into Cloud Director and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same parameters as the examples in the PowerShell script above.
 

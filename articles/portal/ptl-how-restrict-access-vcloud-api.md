@@ -1,10 +1,10 @@
 ---
 title: How to restrict access to VMware Cloud Director
-description: Shows how to create an allowlist of IP addresses to restrict access to the vCloud API and VMware Cloud Director
+description: Shows how to create an allowlist of IP addresses to restrict access to the VMware Cloud Director API and tenant portal
 services: portal
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 01/12/2020
+lastreviewed: 14/12/2021
 
 toc_rootlink: How To
 toc_sub1: 
@@ -20,43 +20,52 @@ toc_mdlink: ptl-how-restrict-access-vcloud-api.md
 
 ## Overview
 
-You can restrict access to VMware Cloud Director by creating an allowlist of acceptable IP addresses. This helps to prevent access from unauthorised sources as users will only be able to access VMware Cloud Director if their request originates from an IP address on the allowlist.
+You can restrict access to VMware Cloud Director by creating an allowlist of permitted IP addresses. This helps to prevent access from unauthorised sources as users will only be able to access VMware Cloud Director if their request originates from an IP address on the allowlist.
 
 > [!IMPORTANT]
-> Enabling this option restricts access to both the vCloud API and the VMware Cloud Director UI.
+>
+> - Enabling this option restricts access to both the vCloud API and the VMware Cloud Director tenant portal.
+>
+> - Be careful when entering IP addresses. Entering the wrong address may make the VMware Cloud Director inaccessible until you change the settings.
 
 > [!NOTE]
-> - Be careful when entering IP addresses. Entering the wrong address may make the API and UI inaccessible until you change the settings.
->
-> - When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
+> When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet. You must create a separate entry for each individual IP address.
 
 ## Restricting access to VMware Cloud Director
 
-1. Log in to the UKCloud Portal as an administrator
-
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as an administrator
 
 2. If necessary, switch to the account for which you want to change the security settings.
 
 3. In the navigation panel, select **Settings**.
 
-    ![Settings menu option in the UKCloud Portal](images/ptl-mnu-settings.png)
+   ![Settings menu option in the UKCloud Portal](images/ptl-mnu-settings.png)
 
 4. On the *Settings* page, select the **Security Settings** tab.
 
-    ![Security Settings tab of the Settings page](images/ptl-settings-tab-security.png)
+   ![Security Settings tab of the Settings page](images/ptl-settings-tab-security.png)
 
-5. Click **vCloud Director access restriction by IP address** to expand the section.
+5. Click **VMware Cloud Director access restriction by IP address** to expand the section.
 
-6. Select **Enable vCloud Director IP address access restriction**.
+6. Select **Enable VMware Cloud Director IP address access restriction**.
 
-7. To add an IP address to the allowlist, click **Add IP** in the *Account wide* section and enter the IP addresses that you want to allow.
+   ![Enable VMware Cloud Director IP address access restriction](images/ptl-settings-ip-api-enable.png)
 
-    ![Account-wide IP address allowlist security setting for VMware Cloud Director](images/ptl-settings-ip-api-account.png)
+7. If you want to set up an allowlist that applies to all users, in the *Account wide* section, click **Add IP** and enter the IP address that you want users to be able to access VMware Cloud Director from.
 
-8. To allow an IP address for a specific user, in addition to the account-wide IP addresses, click **Add IP** in the *Individual users* section, enter the email address for the user and the IP addresses that you want to allow.
+   If you want to specify multiple IP addresses, create a separate entry for each address.
 
-    ![Individual user IP address allowlist security setting for VMware Cloud Director](images/ptl-settings-ip-api-user.png)
+   Anyone attempting to log in to VMware Cloud Director must do so from one of the permitted IP addresses. Individual users can also have permitted IP addresses associated with their account (see next step).
+
+   ![Account-wide IP address allowlist security setting for VMware Cloud Director](images/ptl-settings-ip-api-account.png)
+
+8. If you want to set up an allowlist for an individual user, in the *Individual users* section, click **Add IP**, enter the user's login email address in the first field and the IP address that you want to allow in the second field.
+
+   If you want to specify multiple IP addresses for the user, create a separate entry for each address.
+
+   The named user must access VMware Cloud Director from one of the permitted IP addresses associated with their account or one of the account wide permitted IP addresses.
+
+   ![Individual user IP address allowlist security setting for VMware Cloud Director](images/ptl-settings-ip-api-user.png)
 
 9. When you're done, click **Save**.
 

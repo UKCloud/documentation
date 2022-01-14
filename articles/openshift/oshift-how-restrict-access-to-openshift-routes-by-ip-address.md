@@ -2,9 +2,9 @@
 title: How to restrict access to OpenShift routes by IP address
 description: Restrict access to OpenShift routes by IP address
 services: openshift
-author: Mudasar Hussain
-reviewer: Steve Mulholland
-lastreviewed: 21/12/2020 10:46:43
+author: mhussain
+reviewer: gellner
+lastreviewed: 04/01/2022
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
@@ -83,7 +83,7 @@ For further information, see the following OpenShift documentation:
 
 - [OpenShift v3](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html)
 
-- [OpenShift v4](https://docs.openshift.com/container-platform/4.5/networking/routes/route-configuration.html)
+- [OpenShift v4](https://docs.openshift.com/container-platform/4.9/networking/routes/route-configuration.html)
 
 > [!IMPORTANT]
 > This functionality is available by default in UKCloud for Red Hat OpenShift deployments of version 3.10 or later. For all previous versions, you must raise a request with UKCloud to have this functionality enabled.

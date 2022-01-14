@@ -4,7 +4,7 @@ description: Shows you how to upload ISO (CD/DVD) and FLP (floppy disk) media wi
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 06/11/2020
+lastreviewed: 21/12/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-upload-media-iso-flp.md
 
 ## Overview
 
-You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to vCloud that have already been provided by UKCloud. These media can then:
+You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to VMware Cloud Director that have already been provided by UKCloud. These media can then:
 
 - Be consumed by users within your organisation
 
@@ -28,17 +28,17 @@ You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to vClou
 
 ## Uploading ISO or FLP media
 
-1. In VMware Cloud Director, click the menu icon and select **Libraries**.
+1. In VMware Cloud Director, in the top menu, select **Libraries**.
 
-    ![Libraries menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-libraries.png)
+   ![Libraries menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-libraries.png)
 
-2. In the left navigation panel, click **Media & Other**.
+2. In the left navigation panel, under *Content Libraries*, select **Media & Other**.
 
-    ![Media & Other tab](images/vmw-vcd10.1-mnu-media.png)
+   ![Media & Other option](images/vmw-vcd10.1-mnu-media.png)
 
 3. Click **Add**.
 
-    ![Upload media button](images/vmw-vcd-btn-add-media.png)
+   ![Add media button](images/vmw-vcd10.1-btn-add-media.png)
 
 4. In the *Upload Media* dialog box, select the **Catalog** to which you want to upload the media.
 
@@ -46,11 +46,11 @@ You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to vClou
 
 6. Click the **Upload** icon and browse to the ISO or FLP file that you want to upload.
 
-    ![Upload Media dialog box](images/vmw-vcd10.1-upload-media.png)
+   ![Upload Media dialog box](images/vmw-vcd10.1-upload-media.png)
 
 7. When you're done, click **OK**.
 
-    You can monitor the progress of the upload in the *Recent Tasks* panel.
+   You can monitor the progress of the upload in the *Recent Tasks* panel.
 
 ## Feedback
 

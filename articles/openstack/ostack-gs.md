@@ -3,8 +3,8 @@ title: Getting Started Guide for UKCloud for OpenStack
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
 author: shighmoor
-reviewer: nmathews
-lastreviewed: 10/12/2020
+reviewer: bnicholls
+lastreviewed: 31/12/2021
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -30,7 +30,7 @@ This guide is intended for users who want to learn more about UKCloud for OpenSt
 
 To manage your OpenStack projects, you can log in to the OpenStack Horizon dashboard via our Single Sign-On (SSO) service, using your UKCloud Portal credentials. Additionally, if you've set up two-factor authentication (2FA) in the Portal, when logging in using your Portal credentials, you'll be prompted for a 2FA code.
 
-1. Go to the URL provided in your welcome email, for example, `https://cor00005.cni.ukcloud.com/`.
+1. Go to the URL provided in your welcome email, for example, `https://cor00005-2.cni.ukcloud.com/`.
 
 2. From the **Authenticate using** list, select:
 

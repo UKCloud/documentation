@@ -1,21 +1,21 @@
 ---
-title: Oracle cloud self-service functionality (bug notification)
+title: Oracle cloud self-service functionality
 description: Contains information about changes to the self-service functionality for UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
 reviewer: bchallis
-lastreviewed: 24/01/2020
-toc_rootlink: Reference
-toc_sub1: 
+lastreviewed: 16/11/2021
+toc_rootlink: UKCloud for Oracle Software
+toc_sub1: Reference
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Oracle cloud self-service functionality
-toc_fullpath: Reference/orcl-ref-bug-self-service.md
+toc_fullpath: UKCloud for Oracle Software/Reference/orcl-ref-bug-self-service.md
 toc_mdlink: orcl-ref-bug-self-service.md
 ---
 
-# Oracle cloud self-service functionality (bug notification)
+# Oracle cloud self-service functionality
 
 > [!IMPORTANT]
 > UKCloud for Oracle Software has been retired from sale by UKCloud. We'll continue to support all existing customers who are using this service, however, we are no longer providing this service for new workloads. This article provides existing UKCloud for Oracle Software customers with access to support documentation and we'll continue to update it as required. For new Oracle requests, contact your Client Director or Service Delivery Manager.

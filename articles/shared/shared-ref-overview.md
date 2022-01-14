@@ -3,8 +3,8 @@ title: Understanding UKCloud shared services
 description: Provides an overview of UKCloud's shared services
 services: shared-services
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 13/04/2021
+reviewer: pcantle
+lastreviewed: 30/11/2021
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -32,8 +32,6 @@ UKCloud provides various shared services, including update servers, licensing se
 - [*How to access Ubuntu update servers*](shared-how-access-ubuntu-update-servers.md)
 
 - [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](shared-how-connect-windows-update.md)
-
-  - [Video](shared-vid-wsus.md)
 
 ### Licensing
 

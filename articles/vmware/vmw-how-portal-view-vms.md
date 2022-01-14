@@ -4,7 +4,7 @@ description: Shows how to view your virtual machines within the UKCloud portal
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 03/11/2020
+lastreviewed: 14/12/2021
 
 toc_rootlink: How To
 toc_sub1:
@@ -26,21 +26,21 @@ The My VMs page in the UKCloud Portal enables you to see, at a glance, the servi
 
 To go to the My VMs page:
 
-1. Log in to the UKCloud Portal.
+1. [*Log in to the UKCloud Portal*](vmw-gs.md#logging-in-to-the-ukcloud-portal).
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](vmw-gs.md).
+2. If necessary, switch to the account that you want to work in.
 
-2. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service with which you want to work.
+3. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service with which you want to work.
 
-    ![VMware Cloud menu option](images/vmw-portal-mnu-select-compute-service.png)
+   ![VMware Cloud menu option](images/vmw-portal-mnu-select-compute-service.png)
 
-3. Click the **My VMs** tab.
+4. Select the **My VMs** tab.
 
-    ![My VMs tab in the UKCloud Portal](images/ptl-tab-myvms.png)
+   ![My VMs tab in the UKCloud Portal](images/ptl-tab-myvms.png)
 
-4. From the **Currently viewing for VDC** list, select the virtual data centre (VDC) you want to work with to see its settings.
+5. From the **Currently viewing for VDC** list, select the virtual data centre (VDC) you want to work with to see its settings.
 
-    ![Select VDC](images/ptl-myvms-select-vdc.png)
+   ![Select VDC](images/ptl-myvms-select-vdc.png)
 
 ## Viewing information about vApps
 
@@ -48,46 +48,46 @@ The **vApps** tab shows a list of the vApps within the selected VDC. The informa
 
 ![vApps tab of the My VMs page](images/ptl-myvms-vapps.png)
 
-1. Select the **vApps** tab.
+1. On the *My VMs* page, select the **vApps** tab.
 
 2. Click a vApp name to view additional information about that vApp in the **Info** tab.
 
-    ![vApp Info tab](images/ptl-myvms-vapp-info.png)
+   ![vApp Info tab](images/ptl-myvms-vapp-info.png)
 
 3. Select the **VMs** tab to see a list of the VMs within the selected vApp and their properties.
 
-    ![vApp VMs tab](images/ptl-myvms-vapp-vms.png)
+   ![vApp VMs tab](images/ptl-myvms-vapp-vms.png)
 
 4. One useful property that you can see is the backup status.
 
-    In the example above, there is no backup policy for these VMs so the backup icon is greyed out. If backups are successful there will be a green icon, if backups have failed there will be a red icon.
+   ![VM backup status](images/ptl-myvms-vm-backup-status.png)
 
-    If you need to manage your backups for a VM, click the **Manage** button. For more information, see [*How to manage Snapshot Protection for your VMs*](vmw-how-manage-snapshot-protection.md).
+   In the example above, there is no backup policy for this VM so the backup icon is greyed out. If backups are successful there will be a green icon, if backups have failed there will be a red icon.
+
+   If you need to manage your backups for a VM, click the **Manage** button. For more information, see [*How to manage Snapshot Protection for your VMs*](vmw-how-manage-snapshot-protection.md).
 
 5. Click a VM name to see additional information about it, including backup logs.
 
-6. Click **Back to vApps** to return to the main *My VMs* page.
-
 ## Viewing information about VMs
 
-The **VMs** tab displays a list of all VMs within your environment.
+The **VMs** tab displays a list of all VMs within the selected VDC.
 
 ![VMs tab of the My VMs page](images/ptl-myvms-vms.png)
 
-1. Select the **VMs** tab.
+1. On the *My VMs* tab, select the **VMs** tab.
 
-2. Click a VM to view its additional properties in the **Info** tab.
+2. Click a VM to view its additional properties, including backup logs.
 
-    ![VM Info tab](images/ptl-myvms-vm-info.png)
+   ![VM Info tab](images/ptl-myvms-vm-info.png)
 
-3. Click **Back to VMs** to return to the main *My VMs* page.
-
-## Viewing snapshot protection information
+## Viewing Snapshot Protection information
 
 The **Snapshot Protection** tab enables you to specify a snapshot retention policy to apply to all the VMs in a VDC. You can apply the policy to all new VMs or to all new and existing
 VMs.
 
-For more information about snapshot protection, see [*How to manage Snapshot Protection for your VMs*](vmw-how-manage-snapshot-protection.md).
+![Snapshot Protection tab of the My VMs page](images/ptl-myvms-snapshots.png)
+
+For more information about Snapshot Protection, see [*How to manage Snapshot Protection for your VMs*](vmw-how-manage-snapshot-protection.md).
 
 ## Feedback
 
