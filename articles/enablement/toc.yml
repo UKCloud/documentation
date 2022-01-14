@@ -24,8 +24,6 @@
     href: enbl-sco-transfer-regions.md
   - name: Data Transfer between Assured and Elevated Service Scope
     href: enbl-sco-transfer-assured-elevated.md
-  - name: Data Transfer Facility Service Scope
-    href: enbl-sco-dtf.md
   - name: Mass Transfer Facility Service Scope
     href: enbl-sco-mtf-nas.md
   - name: Smart Hands Service Scope
