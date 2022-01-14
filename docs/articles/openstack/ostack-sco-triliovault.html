@@ -119,7 +119,7 @@
 <p>TrilioVault is chargeable based on the number of instances protected and the capacity utilised to store the data.</p>
 <p>[!NOTE] The TrilioVault platform leverages cinder snapshots to get the data backed up. It initiates a snapshot for the initial full backup and leaves the snapshot there to use as the differential for the next incremental backup.  At any given time, there could be up to two snapshots visible per volume being backed up.  At the end of the backup, there should only be one left behind (used for next incremental). In short we would not recommend deleting any TrilioVault snapshots as this will impact upon the performance of your backup routine.</p>
 <h2 id="how-can-triliovault-be-used-as-a-disaster-recovery-dr-tool">How can TrilioVault be used as a Disaster Recovery (DR) tool?</h2>
-<p>By default, TrilioVault is not a DR tool, however in the event UKCloud declares a DR scenario in your primary datacentre, we can repoint TrilioVault to make your backup target site also become the recovery site, ensuring we can restore any and all workloads to a secondary datacentre in the event of a diaster event in your primary datacentre.</p>
+<p>By default, TrilioVault is not a DR tool, however in the event UKCloud declares a DR scenario in your primary datacentre, we can repoint TrilioVault to make your backup target site also become the recovery site, ensuring we can restore any and all workloads to a secondary datacentre in the event of a disaster event in your primary datacentre.</p>
 <h2 id="frequency-and-timing">Frequency and timing</h2>
 <p>As TrilioVault is fully self-service, customers have full control as to the time and frequency that any backups occur.</p>
 <h2 id="alerting-and-reporting">Alerting and reporting</h2>

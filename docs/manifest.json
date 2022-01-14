@@ -7404,7 +7404,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "D8VDRa6QMzFHU7BS3ShaP0PDPZQhr4fj5Nh7kTJfhL8="
+          "hash": "fei/iI1DgaDbkdItYIGIo9xJwMUYk5XkSBHZvPcaDrs="
         }
       },
       "is_incremental": false,
@@ -7608,7 +7608,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-use-netpol-v4.html",
-          "hash": "32swMT30JFNiCYg7yyhtS+Ul8yQdZaPQprDRGHOAwTg="
+          "hash": "SHbDVE/s5gSxXf1C9PMcMAtKqWHTOwgKvPJZnXKklrY="
         }
       },
       "is_incremental": false,
@@ -10029,7 +10029,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-configure-ipsec-vpn.html",
-          "hash": "VSDUJnTDx6aavPWQOIOR59sPUjscC/0KjTIkppW6sNM="
+          "hash": "YRprUSmErQxOeuFBRQ58zcqWvrvCsTX1S4IdN8g30ZE="
         }
       },
       "is_incremental": false,
@@ -10353,7 +10353,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sco-triliovault.html",
-          "hash": "OUvVVZmN2NpdHTmBpdNg3oty9US/mlJUSvbFV5gK+Pk="
+          "hash": "3wR3AnUpbE/yg9cvppIAyCU8MMNY37s4c9jeIQAWsWs="
         }
       },
       "is_incremental": false,
