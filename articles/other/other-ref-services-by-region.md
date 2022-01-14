@@ -36,7 +36,7 @@ Security domain | Services | Zone
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 1 (AF1, AF2, AF3, AF4)
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 
-*Enablement services:* Mass Transfer Facility, Data Transfer Facility, Cloud Enablement, Smart Hands<br>
+*Enablement services:* Mass Transfer Facility, Cloud Enablement, Smart Hands<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ### Region 7 (00007)
@@ -46,7 +46,7 @@ Security domain | Services | Zone
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 10 (EF1)
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN | All zones
 
-*Enablement services:* Mass Transfer Facility, Data Transfer Facility, Cloud Enablement, Smart Hands<br>
+*Enablement services:* Mass Transfer Facility, Cloud Enablement, Smart Hands<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ### Region 6 (00006)
@@ -82,7 +82,7 @@ Security domain | Service | Zone
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 2 (AC1, AC2, AC3, AC4)
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 
-*Enablement services:* Mass Transfer Facility, Data Transfer Facility (via Farnborough), Cloud Enablement<br>
+*Enablement services:* Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ### Region 8 (00008)
@@ -92,7 +92,7 @@ Security domain | Service | Zone
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 11 (EC1)
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN | All zones
 
-*Enablement services:* Mass Transfer Facility, Data Transfer Facility (via Farnborough), Cloud Enablement<br>
+*Enablement services:* Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ### Region 5 (00005)

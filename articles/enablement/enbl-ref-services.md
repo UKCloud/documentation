@@ -33,8 +33,6 @@ The following diagram shows the different configurations available to you for th
 
 Other enablement services that we provide to help you work with our cloud platform include:
 
-- Data Transfer Facility - Enables you to use the secure network connections at our Farnborough office to manage systems or transfer data into or out of your environments. For more information, see the [*Data Transfer Facility Service Scope*](enbl-sco-dtf.md).
-
 - Mass Data Transfer - Enables you to move virtualised environments, in the form of VMs, into or out of your UKCloud environment using your own NAS, HDD, or USB devices. For more information, see the [*Mass Transfer Facility Service Scope*](enbl-sco-mtf-nas.md).
 
 - Data Transfer - Region to Region - Enables you to move your UKCloud for VMware workloads between regions on the UKCloud platform. For more information, see the [*Data Transfer - Region to Region Service Scope*](enbl-sco-transfer-regions.md).
