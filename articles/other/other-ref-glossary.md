@@ -4,7 +4,7 @@ description: Provides definitions of commonly used UKCloud terms
 services: other
 author: hferris
 reviewer: shighmoor
-lastreviewed: 03/12/2020
+lastreviewed: 14/01/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -25,6 +25,12 @@ This article provides definitions of commonly used UKCloud terms.
 
 ## A
 
+### Above OFFICIAL
+
+Covers data classifications that go beyond OFFICIAL and OFFICIAL-SENSITIVE.
+
+*See also:* [OFFICIAL](#official), [OFFICIAL-SENSITIVE](#official-sensitive)
+
 ### Account
 
 Within the UKCloud environment there are two types of accounts:
@@ -33,15 +39,33 @@ Within the UKCloud environment there are two types of accounts:
 
 - **user account** - The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.
 
-### Application-tuned DDoS protection
+### Advanced Support Services
 
-*See:* [Neustar DDoS Protection from UKCloud](#neustar-ddos-protection-from-ukcloud)
+A suite of UKCloud Managed Operations products focused on the middleware and back-end services supporting your solutions. The suite includes the following products:
+
+- [Managed Active Directory (AD) Support](#managed-active-directory-ad-support)
+
+- [Managed Remote Desktop Services](#managed-remote-desktop-services-rds-support)
+
+- [Managed SQL Server](#managed-sql-server)
+
+- [Managed Web Server](#managed-web-server)
+
+*See also:* [Extended Network Support from UKCloud](#extended-network-support-from-ukcloud), [Managed IT Operations](#managed-it-operations)
+
+### Anti-Virus as a Service
+
+Part of the UKCloud Managed IT Operations portfolio whereby UKCloud manages the antivirus protection of your IT estate.
+
+For more information, see the [Anti-Virus as a Service Service Scope](../managed-operations/man-sco-antivirus.md).
+
+*See also:* [Managed IT Operations](#managed-it-operations), [Managed Monitoring as a Service](#managed-monitoring-as-a-service), [Patching as a Service](#patching-as-a-service)
 
 ### Assured OFFICIAL
 
 A security domain on the UKCloud platform that provides access to public networks, such as the internet, PSN, HSCN or Janet.
 
-*See also:* [Elevated OFFICIAL](#elevated-official), [OFFICIAL](#official), [OFFICIAL SENSITIVE](#official-sensitive)
+*See also:* [Elevated OFFICIAL](#elevated-official), [OFFICIAL](#official), [OFFICIAL-SENSITIVE](#official-sensitive)
 
 ### Azure
 
@@ -52,10 +76,6 @@ A security domain on the UKCloud platform that provides access to public network
 *See:* [UKCloud for Microsoft Azure](#ukcloud-for-microsoft-azure)
 
 ## B
-
-### Big Cloud Enablement
-
-*See:* [Cloud Enablement](#cloud-enablement)
 
 ### Bring Your Own Firewall (BYOF)
 
@@ -115,17 +135,23 @@ A connectivity option that enables you to bring private connectivity into servic
 
 *See also:* [HybridConnect](#hybridconnect)
 
-### Customer Success Manager (CSM)
-
-*See:* [Service Delivery Manager](#service-delivery-manager)
-
 ## D
 
-### Data centre interconnect (DCI)
+### Data Transfer - Region to Region
 
-A UKCloud connectivity service that enables self-designed and managed disaster recovery solutions, or increased connectivity resilience, by using UKCloud's assured connections between our sites.
+A UKCloud enablement service that enables you to move your UKCloud for VMware workloads between regions on the UKCloud platform. This service utilises Zerto and our Journaling Protection service option.
 
-*See also:* [Internet-based inter-data centre connectivity](#internet-based-inter-data-centre-connectivity), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
+For more information, see the [Data Transfer - Region to Region Service Scope](../enablement/enbl-sco-transfer-regions.md)
+
+*See also:* [Journaling Protection](#journaling-protection)
+
+### Data Transfer between Assured and Official
+
+A UKCloud enablement service that enables you to move your workloads between the Assured OFFICIAL and Elevated OFFICIAL security domains. This service utilises our Cross Domain Security Zone service.
+
+For more information, see the [Data Transfer between Assured and Elevated Service Scope](../enablement/enbl-sco-transfer-assured-elevated.md).
+
+*See also:* [Cross Domain Security Zone (CDSZ)](#cross-domain-security-zone-cdsz)
 
 ### Data Transfer Facility (DTF)
 
@@ -147,7 +173,7 @@ Note the difference between Dedicated Compute, which is run within our multi-ten
 
 A connectivity option available in the Assured and Elevated security domains that provides dedicated bandwidth between the two UKCloud sites.
 
-*See also:* [Internet-based inter-data centre connectivity](#internet-based-inter-data-centre-connectivity), [Data centre interconnect (DCI)](#data-centre-interconnect-dci)
+*See also:* [Internet-based inter-data centre connectivity](#internet-based-inter-data-centre-connectivity)
 
 ### Desktop as a Service (DaaS)
 
@@ -171,7 +197,7 @@ A virtual router that provides VDC network services such as DHCP, firewall, NAT,
 
 A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN.
 
-*See also:* [Assured OFFICIAL](#assured-official), [OFFICIAL](#official), [OFFICIAL SENSITIVE](#official-sensitive)
+*See also:* [Assured OFFICIAL](#assured-official), [OFFICIAL](#official), [OFFICIAL-SENSITIVE](#official-sensitive)
 
 ### Ephemeral storage
 
@@ -189,7 +215,7 @@ For more information, see the [UKCloud for VMware service definition](../vmware/
 
 ### Extended Network Support from UKCloud
 
-The Extended Network Support from UKCloud service reduces the burden customer traditionally must consider in supporting their virtual network infrastructure to enable the reliable and stable connectivity for their solution.
+A UKCloud Managed Operations service that reduces the burden customer traditionally must consider in supporting their virtual network infrastructure to enable the reliable and stable connectivity for their solution.
 
 For more information, see the [Extended Network Support service definition](../managed-operations/man-sd-network.md).
 
@@ -201,9 +227,7 @@ A network service that controls traffic into and out of your environment using d
 
 ## G
 
-### Global Load Balancing
-
-*See:* [Neustar UltraDNS from UKCloud](#neustar-ultradns-from-ukcloud)
+Got something to say? We're always interested to hear your thought on our products and services, just send us an email to <feedback@ukcloud.com>.
 
 ## H
 
@@ -225,6 +249,12 @@ For more information, see the [HybridConnect FAQs](../connectivity/conn-faq-hybr
 
 Software layer on top of the physical infrastructure that enables the virtualisation of the physical resources.
 
+### Hystax Acura Workload Migration
+
+A UKCloud for OpenStack service option for migrating workloads between UKCloud for OpenStack regions.
+
+For more information, see the [Hystax Acura Workload Migration Service Scope](../openstack/ostack-sco-hystax.md).
+
 ## I
 
 ### Impact Level (IL)
@@ -237,13 +267,13 @@ A customer provisioned compute resource within OpenStack, similar to the virtual
 
 ### Inter-data centre connectivity
 
-*See:* [Internet-based inter-data centre connectivity](#internet-based-inter-data-centre-connectivity), [Data centre interconnect (DCI)](#data-centre-interconnect-dci), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
+*See:* [Internet-based inter-data centre connectivity](#internet-based-inter-data-centre-connectivity), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
 
 ### Internet-based inter-data centre connectivity
 
 A connectivity option in the Assured security domain that provides connectivity between the two UKCloud sites using multi-tenanted, internet-facing circuits.
 
-*See also:* [Data centre interconnect (DCI)](#data-centre-interconnect-dci), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
+*See also:* [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
 
 ## J
 
@@ -281,49 +311,55 @@ Let us know your thoughts and ideas by sending an email to <feedback@ukcloud.com
 
 ### Managed Active Directory (AD) Support
 
-A UKCloud advanced managed service that provides you with monitoring and support for your Active Directory services and supporting Windows servers.
+A UKCloud Advanced Support Services product that provides you with monitoring and support for your Active Directory services and supporting Windows servers.
 
 For more information, see the [Managed Active Directory Support Service Definition](../managed-operations/man-sd-ad.md).
 
-*See also:* [Managed IT Operations](#managed-it-operations)
+*See also:* [Advanced Support Services](#advanced-support-services)
 
 ### Managed IT Operations
 
-Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, Managed VM recovery points, patching as a service, antivirus as a service and runbook automation. This service provides you with the building blocks to utilise essential operational delivery services.
+A UKCloud Managed Operations service that helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, patching as a service and antivirus as a service. This service provides you with the building blocks to utilise essential operational delivery services.
 
 For more information, see the [Managed IT Operations Service Definition](../managed-operations/man-sd-managed-it-ops.md).
 
+*See also:* [Anti-Virus as a Service](#anti-virus-as-a-service), [Managed Monitoring as a Service](#managed-monitoring-as-a-service), [Patching as a Service](#patching-as-a-service)
+
 ### Managed Monitoring as a Service
 
-*See:* [Managed IT Operations](#managed-it-operations)
+Part of the UKCloud Managed IT Operations portfolio whereby UKCloud manages the monitoring of your IT estate.
+
+For more information, see the [Managed Monitoring as a Service Service Scope](../managed-operations/man-sco-monitoring.md).
+
+*See also:* [Anti-Virus as a Service](#anti-virus-as-a-service), [Managed IT Operations](#managed-it-operations), [Patching as a Service](#patching-as-a-service)
 
 ### Managed Remote Desktop Services (RDS) Support
 
-A UKCloud advanced managed service that provides you with monitoring and support for your Remote Desktop Services and supporting Windows servers.
+A UKCloud Advanced Support Services product that provides you with monitoring and support for your Remote Desktop Services and supporting Windows servers.
 
 For more information, see the [Managed Remote Desktop Services Support Service Definition](../managed-operations/man-sd-rds.md).
 
-*See also:* [Managed IT Operations](#managed-it-operations)
+*See also:* [Advanced Support Services](#advanced-support-services)
 
 ### Managed SQL Server
 
-A UKCloud advanced managed service that provides monitoring and support for your SQL servers.
+A UKCloud Advanced Support Services product that provides monitoring and support for your SQL servers.
 
 For more information, see the [Managed SQL Server Service Definition](../managed-operations/man-sd-sqlserver.md).
 
-*See also:* [Managed IT Operations](#managed-it-operations)
+*See also:* [Advanced Support Services](#advanced-support-services)
 
 ### Managed Web Server
 
-A UKCloud advanced managed service that provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers.
+A UKCloud Advanced Support Services product that provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers.
 
 For more information, see the [Managed Web Server Service Definition](../managed-operations/man-sd-webserver.md).
 
-*See also:* [Managed IT Operations](#managed-it-operations)
+*See also:* [Advanced Support Services](#advanced-support-services)
 
 ### Mass Transfer Facility (MTF)
 
-Our Mass Transfer Facility (MTF) enables you to move virtualised environments, in the form of VMs, into and out of your UKCloud environment using your own network attached storage (NAS) device, hard disk drives (HDDs) or USB drives.
+A UKCloud enablement service that enables you to move virtualised environments, in the form of VMs, into and out of your UKCloud environment using your own network attached storage (NAS) device, hard disk drives (HDDs) or USB drives.
 
 For more information, see the [Mass Transfer Facility service scope](../enablement/enbl-sco-mtf-nas.md).
 
@@ -331,23 +367,19 @@ For more information, see the [Mass Transfer Facility service scope](../enableme
 
 A UKCloud IaaS service, powered by Zerto, that provides easy to use tools to help customers migrate workloads from their on-premises data centres to the UKCloud platform - all on a self-service basis.
 
+For more information, see the [Migration to the Cloud Service Definition](../migration/migr-sd.md).
+
 ### Multi-Cloud for Tier 2
 
-The UKCloud cloud platform for workloads that require higher assurance than OFFICIAL SENSITIVE classification. Predominantly used within the UKCloudX space of Defence and National Security.
+A series of cloud technologies, with a variety of deployment models, delivered from List X data centres and supported, managed and maintained by UK Eyes Only staff, that can be connected to secure connectivity like SLI and ROSA.
 
 *See also:* [UKCloudX](#ukcloudx)
 
 ## N
 
-### N3
-
-The NHS National Network (N3) has been replaced by the Health and Social Care Network (HSCN).
-
-*See:* [Health and Social Care Network (HSCN)](#health-and-social-care-network-hscn)
-
 ### Network firewall tenant (NFT)
 
-Single- or multi tenant instances on a network firewall (NFW). NFT architecture is used in regions 1, 2, 7 and 8.
+Single- or multi-tenant instances on a network firewall (NFW). NFT architecture is used in regions 1, 2, 7 and 8.
 
 ### NSX Edge
 
@@ -377,6 +409,12 @@ A Government Security Classification Policy (GSCP) data classification indicatin
 
 OFFICIAL data that requires specific handling to mitigate risk. Security measures required for the data will depend on the specific risks associated with that data.
 
+### On-Premises VMware Extended Support
+
+A UKCloud service that provides ongoing Level 1 and Level 2 support for VMware estates when vSphere licences are operating on currently unsupported versions, providing organisations with additional time to plan upgrades to supported levels of VMware or migrations to new platforms or services.
+
+For more information, see the [On-Premises VMware Extended Support Service Definition](..//vmware/vmw-sd-extended-vmw-support.md).
+
 ### OpenShift
 
 *See:* [UKCloud for Red Hat OpenShift](#ukcloud-for-red-hat-openshift)
@@ -394,6 +432,14 @@ OFFICIAL data that requires specific handling to mitigate risk. Security measure
 A top level container in VMware Cloud Director that contains one or more VDCs and owns all the virtual resources used by those VDCs.
 
 ## P
+
+### Patching as a Service
+
+Part of the UKCloud Managed IT Operations portfolio whereby UKCloud manages the patching of your IT estate.
+
+For more information, see the [Patching as a Service Service Scope](../managed-operations/man-sco-patching.md).
+
+*See also:* [Anti-Virus as a Service](#anti-virus-as-a-service), [Managed IT Operations](#managed-it-operations), [Managed Monitoring as a Service](#managed-monitoring-as-a-service)
 
 ### Persistent storage
 
@@ -463,7 +509,7 @@ Quickly check on the availability and overall health of the services on the UKCl
 
 ### Region
 
-A physically segregated part of the UKCloud platform with its own power infrastructure, management services and networking components, enabling you to design resilient solutions that are contained entirely within a single site.
+A physically segregated part of the UKCloud platform within a site that provides a set of services.
 
 *See also:* [Site](#site), [Zone](#zone)
 
@@ -481,11 +527,23 @@ For more information, see the [Secure Remote Access service definition](../sra/s
 
 *See also:* [Cross Domain Security Zone (CDSZ)](#cross-domain-security-zone-cdsz)
 
+### Security domain
+
+The UKCloud platform provides three security domains that support separation and control access to workloads of differing security classification (OFFICIAL, OFFICIAL-SENSITIVE, Above OFFICIAL).
+
+*See also:* [Assured OFFICIAL](#assured-official), [Elevated OFFICIAL](#elevated-official), [Tier 2](#tier-2))
+
 ### Security Operations Service
 
 Provides an always-on, cloud-hosted cyber security capability that can see all your IT systems, all the time, ensuring you have an up-to-date view of possible threats.
 
 For more information, see the [Security Operations Service service definition](../soc/soc-sd.md).
+
+### Self Service Backup and Restoration (TrilioVault)
+
+A UKCloud for OpenStack service option, powered by TrilioVault, that provides backup and restoration of your OpenStack instances.
+
+For more information, see the [Self Service Backup and Restoration (TrilioVault) Service Scope](../openstack/ostack-sco-triliovault.md).
 
 ### Service Credits
 
@@ -493,19 +551,27 @@ A compensation scheme whereby if we fall short of our service level agreement, w
 
 *See also:* [Cloud Credits](#cloud-credits)
 
+### Service Definition
+
+A Knowledge Centre article that provides an overview of a UKCloud service or product.
+
+*See also:* [Service Scope](#service-scope)
+
 ### Service Delivery Manager
 
 A UKCloud Customer Services role aimed at providing you with an assigned point of contact who will provide any assistance you require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
+
+### Service Scope
+
+A Knowledge Centre article that provides detailed information about what is and isn't included in a UKCloud service or product, including UKCloud and customer responsibilities.
+
+*See also:* [Service Definition](#service-definition)
 
 ### Site
 
 A geographically specific location. UKCloud has two UK-based sites, separated by 100 km, in Farnborough and Corsham. Building your solution across multiple sites provides resilience against scenarios such as natural disasters, targeted terrorist attacks or mass WAN failure.
 
 See also: [Region](#region), [Zone](#zone)
-
-### SiteProtect Advanced DDoS Mitigation
-
-*See:* [Neustar DDoS Protection from UKCloud](#neustar-ddos-protection-from-ukcloud)
 
 ### Smart Hands
 
@@ -521,21 +587,23 @@ For more information, see the [Snapshot Protection service scope](../vmware/vmw-
 
 ## T
 
-### Technical Account Manager (TAM)
-
-*See:* [Service Delivery Manager](#service-delivery-manager)
-
 ### Tier 1 storage
 
 Fast block storage, optimised for data warehouses, busy transactional databases and other high IO workloads.
+
+### Tier 2
+
+A security domain on the UKCloud platform that can be connected to secure connectivity like SLI and ROSA.
+
+*See also:* [Assured OFFICIAL](#assured-official), [Elevated OFFICIAL](#elevated-official)
 
 ### Tier 2 storage
 
 General all-purpose block storage, providing a balance of performance and cost.
 
-### Transition Services
+### TrilioVault
 
-*See:* [Professional Services](#professional-services)
+*See:* [Self Service Backup and Restoration (TrilioVault)](#self-service-backup-and-restoration-triliovault)
 
 ## U
 
@@ -580,10 +648,6 @@ A division of UKCloud that is dedicated to health and care, research and life sc
 A division of UKCloud specifically designed to cater for the enhanced requirements of the UK Defence and National Security sectors. The team is made up of industry experts, with first hand experience of keeping our nation safe, and experts in delivering cloud at scale. UKCloudX operates across all security domains, including Tier 2.
 
 *See:* <https://ukcloudx.com/>
-
-### UltraDNS
-
-*See:* [Neustar UltraDNS from UKCloud](#neustar-ultradns-from-ukcloud)
 
 ## V
 
@@ -639,7 +703,7 @@ The disaster recovery software that powers UKCloud's Journaling Protection, Disa
 
 ### Zone
 
-A distinct hardware installation within a region, utilising common networking infrastructure but having independent server and storage infrastructure. Ordinarily, each zone hosts only one UKCloud service, but each service, for example Enterprise Compute Cloud or Cloud Native Infrastructure, may be provided in multiple zones in each site.
+A distinct hardware installation within a region that hosts a particular UKCloud service (for example, UKCloud for VMware or UKCloud for Microsoft Azure).
 
 *See also:* [Site](#site), [Region](#region)
 
