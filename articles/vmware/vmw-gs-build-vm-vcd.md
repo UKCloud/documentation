@@ -4,7 +4,7 @@ description: Describes how to get up and running with UKCloud for VMware by show
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 13/01/2022
+lastreviewed: 14/01/2022
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -68,7 +68,7 @@ First, you need to create a network that can connect to external networks outsid
 
 2. You're creating a network, so, in the left navigation panel, under *Networking*, select **Networks**.
 
-   ![Network menu option in Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
+   ![Network menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
 
 3. To create a new network, click **New**.
 
@@ -130,7 +130,7 @@ The edge gateway is possibly the most complex part of the VDC because of its hig
 
 2. This time you're working with the edge gateway, so in the left navigation panel, under *Networking*, click **Edges**.
 
-   ![Edges menu option in Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+   ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
 3. Select the edge gateway you want to work with.
 
@@ -164,7 +164,7 @@ Let's start with firewall rules. To enable your VMs to communicate with the outs
 
 1. In the *Edge Gateway* dialog box, make sure the **Firewall** tab is selected.
 
-   ![Firewall tab](images/vmw-vcd10.1-edge-tab-firewall.png)
+   ![Edge gateway Firewall tab](images/vmw-vcd10.1-edge-tab-firewall.png)
 
 2. Make sure the **Enabled** option is selected.
 
@@ -249,7 +249,7 @@ For the VMs in your VDC to access the internet, you need to translate the intern
 
 1. In the *Edge Gateways* dialog box, select the **NAT** tab.
 
-   ![NAT tab in vCloud Director](images/vmw-vcd10.1-edge-tab-nat.png)
+   ![Edge gateway NAT tab](images/vmw-vcd10.1-edge-tab-nat.png)
 
 2. In the *NAT44 Rules* section, click the **SNAT Rule** button to create a source NAT (SNAT) rule to translate internal IP addresses into something that the external network can understand.
 
@@ -364,9 +364,9 @@ When your vApp and VM have been successfully created, you can test if your VM is
 
 In this guide, you've learned how to build a simple virtual machine and connect it to the internet.
 
-For information about more creating complex VDCs so that you can make the most of UKCloud for VMware, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md). This *Getting Started Guide* provides links to documents that describe each of the different parts of your environment in more detail.
+For information about more creating complex VDCs so that you can make the most of UKCloud for VMware, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md). This *Getting Started Guide* provides links to articles that describe each of the different parts of your environment in more detail.
 
-If you want a more comprehensive guide to the platform, take a look at the [*vCloud Director Administrator's Guide*](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-3A4FBE1E-6BDB-4AE4-93F8-D23A8DCBD1F1.html) and the [*vCloud Director Tenant Portal Guide*](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html).
+If you want a more comprehensive guide to the platform, take a look at the [*VMware Cloud Director Tenant Portal Guide*](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html).
 
 ## Feedback
 
