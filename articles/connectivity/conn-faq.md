@@ -105,13 +105,9 @@ We actively monitor and manage our connections to ensure there is appropriate co
 
 We recognise that some customers may be affected by the often extended lead times associated with provisioning new connections suitable for the Elevated OFFICIAL security domain; and that some customers may not have adequate bandwidth to handle bulk import/export activities.
 
-To help address these issues, we offer two options:
+To help address these issues, we offer a chargeable [*Mass Transfer Facility*](../enablement/enbl-sco-mtf-nas.md), enabling you to send in an HDD, USB or populated NAS box that can then be uploaded to your cloud environment by authorised UKCloud members of staff.
 
-1) A chargeable Data Transfer Facility, enabling you to access the Elevated security domain and carry out import/export activities from our secure office. Although you can bring your data/media into our office and benefit from our readily available and suitably accredited connections to the Elevated OFFICIAL security domain, for large quantities of data we recommend the use of the Mass Transfer Facility
-
-2) A chargeable Mass Transfer Facility, enabling you to send in HDDs or a populated NAS box that can then be uploaded to your cloud environment. This is aimed at customers with large amounts of data to be uploaded, which can be performed by authorised UKCloud members of staff.
-
-If you're interested in either of these services, contact our sales team to discuss your requirements.
+If you're interested in this service, contact our sales team to discuss your requirements.
 
 ## How do I configure my solution to use the UKCloud data centre interconnection?
 

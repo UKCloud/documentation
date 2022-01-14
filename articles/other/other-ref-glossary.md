@@ -127,11 +127,9 @@ A UKCloud connectivity service that enables self-designed and managed disaster r
 
 *See also:* [Internet-based inter-data centre connectivity](#internet-based-inter-data-centre-connectivity), [Dedicated inter-data centre connectivity](#dedicated-inter-data-centre-connectivity)
 
-### Data Transfer Facility (DTF)
+### Data Transfer Facility
 
-A UKCloud enablement service that enables you to use the secure network connections at our Farnborough site to manage systems or transfer data into or out of your environments. This service is useful if you don't have enough network bandwidth or are waiting for appropriately accredited connectivity to be installed.
-
-*See also:* [Mass Transfer Facility (MTF)](#mass-transfer-facility-mtf)
+*See:* [Mass Transfer Facility (MTF)](#mass-transfer-facility-mtf)
 
 ### Dedicated Compute
 

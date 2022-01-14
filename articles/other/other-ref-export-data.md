@@ -35,9 +35,7 @@ You can use any of the following methods to export data:
 
 - Internet, government secure network or leased line data copy
 
-- Data Transfer Facility (self-service)
-
-- Mass Transfer Facility (UKCloud)
+- Mass Transfer Facility
 
 - Customer-hosted equipment
 
@@ -45,15 +43,9 @@ You can use any of the following methods to export data:
 
 All customers have some form of connectivity to the UKCloud platform to consume services, whether that be an internet facing connection or through one of the approved or government secure network connections. These connections are used for the management of services and may also have been used for copying data to the UKCloud platform. Therefore, the first option for exporting data is to make use of these existing connections.
 
-### Data Transfer Facility (self-service)
-
-If you want to make use of UKCloud's facilities, we maintain a data room where you can access both the Assured and Elevated security domains by appointment. Your staff or assigned representatives can attend site for a pre-booked number of days and copy data to the provided machines, with the expectation that this data is then moved onto removable media, for example USB hard disks, to be transported.
-
-For more information about booking and using this service, see the [Data Transfer Facility Service Scope](../enablement/enbl-sco-dtf.md).
-
 ### Mass Transfer Facility (UKCloud)
 
-Similar to the Data Transfer Facility, this option copies data from your environment to, typically, removable media provided by you.
+We can copy data from your environment to, typically, removable media (NAS, HDD, USB) provided by you.
 
 For more information about booking and using this service, see the [Mass Transfer Facility Service Scope](../enablement/enbl-sco-mtf-nas.md).
 

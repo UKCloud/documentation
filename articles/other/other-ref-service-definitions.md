@@ -113,7 +113,6 @@ Cloud Enablement - Server/Storage Hosting | N/A | [here](../enablement/enbl-sco-
 Cloud Enablement - VPN solutions | N/A | [here](../enablement/enbl-sco-vpn.md)
 Data Transfer - Region to Region | N/A | [here](../enablement/enbl-sco-transfer-regions.md)
 Data Transfer between Assured and Elevated | N/A | [here](../enablement/enbl-sco-transfer-assured-elevated.md)
-Data Transfer Facility | N/A | [here](../enablement/enbl-sco-dtf.md)
 Mass Transfer Facility | N/A | [here](../enablement/enbl-sco-mtf-nas.md)
 Free Trials | N/A | [here](../other/other-sco-free-trials.md)
 

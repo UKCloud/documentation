@@ -70,7 +70,7 @@ The UKCloud for Oracle Software platform is based on an underpinning infrastruct
 
 No. While you will need to have the same CPU and storage allocation, you can reduce your RAM allocation by 50% in your DR VMs and ramp up if you need to invoke DR.
 
-### Can I use UKCloud's Mass Data Transfer Facility to import my Oracle data?
+### Can I use UKCloud's Mass Transfer Facility to import my Oracle data?
 
 No, this service is not currently available for Oracle data.
 
