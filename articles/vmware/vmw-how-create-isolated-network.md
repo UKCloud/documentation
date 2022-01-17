@@ -34,7 +34,7 @@ There are two network flavours, isolated and routed:
 
 2. In the left navigation panel, under *Networking*, select **Networks**.
 
-    ![Networks tab in VMware Cloud Director](images/vmw-vcd10.1-tab-networks.png)
+    ![Networks tab in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
 
 3. Click **New**.
 

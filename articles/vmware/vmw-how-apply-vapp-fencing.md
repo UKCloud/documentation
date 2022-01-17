@@ -32,7 +32,7 @@ To apply vApp fencing after vApp creation:
 
 1. In the left navigation panel, select **vApps**.
 
-   ![vApps tab in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
+   ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-vapps.png)
 
 2. In the card for the vApp, select **Details**.
 

@@ -70,7 +70,7 @@ To deploy the OpenVPN appliance:
 
 2. In the left navigation panel, under *Compute*, select **vApps**.
 
-    ![vApps tab in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
+    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-vapps.png)
 
 3. Click **New**, then select **Add vApp from OVF**.
 

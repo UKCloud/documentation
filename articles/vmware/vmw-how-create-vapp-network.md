@@ -37,7 +37,7 @@ The vApp network diagram below shows the vApp edge.
 
 2. In the left navigation panel, select **vApps**.
 
-    ![vApps tab in VMware Cloud Director](images/vmw-vcd10.1-tab-vapps.png)
+    ![vApps menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-vapps.png)
 
 3. In the card for the vApp, select **Actions**, then **Add Network**.
 
