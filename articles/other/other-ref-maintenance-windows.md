@@ -3,8 +3,8 @@ title: Understanding UKCloud service maintenance windows
 description: Provides information about UKCloud service maintenance windows, including Planned and Emergency Maintenance
 services: other
 author: shighmoor
-reviewer:
-lastreviewed: 24/11/2020
+reviewer: gsmith
+lastreviewed: 17/01/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
