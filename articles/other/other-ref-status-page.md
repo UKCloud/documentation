@@ -3,8 +3,8 @@ title: Understanding the UKCloud Service Status page
 description: Provides information about using the UKCloud Service Status page to view information about the status of the services on the platform
 services: other
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 05/11/2020
+reviewer: gsmith
+lastreviewed: 17/01/2022
 
 toc_rootlink: Reference
 toc_sub1: 
