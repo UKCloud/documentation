@@ -3,8 +3,8 @@ title: How to subscribe to service status notifications
 description: Describes how to subscribe to the UKCloud Service Status page to receive notifications when updates are made
 services: other
 author: shighmoor
-reviewer:
-lastreviewed: 05/11/2020
+reviewer: gsmith
+lastreviewed: 17/01/2022
 
 toc_rootlink: How To
 toc_sub1: 
