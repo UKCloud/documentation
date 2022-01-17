@@ -77,7 +77,7 @@ This service is based on the transfer of whole artifacts, for example VMs, not i
 
 For UKCloud for VMware, your VMs can be in OVF or OVA format. The hardware version must be 11 or lower and you need to remove any network cards and any mounted media files, such as ISOs, from the VM's hardware configuration prior to the creation of the OVA or OVF file.
 
-Use of the Mass Transfer Facility is charged per the current [SFIA Rate Card](http://www.ukcloud.com/sfia), based on the *Enable* rate. You'll only be billed for the time it takes for the engineer to set up, manage and detach the device. Due to the nature of the service and the time to transfer data, you won't be charged for the time it takes to transfer the data. We reserve the right to add additional charges should any remediation work be required during the process. The minimum charge is half of a business day.
+Use of the Mass Transfer Facility is charged per the current [SFIA Rate Card](https://ukcloud.com/sfia), based on the *Enable* rate. You'll only be billed for the time it takes for the engineer to set up, manage and detach the device. Due to the nature of the service and the time to transfer data, you won't be charged for the time it takes to transfer the data. We reserve the right to add additional charges should any remediation work be required during the process. The minimum charge is half of a business day.
 
 ## Anticipated transfer speeds
 
