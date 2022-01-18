@@ -2,9 +2,9 @@
 title: How to create a key vault using PowerShell
 description: Provides help for creating a key vault on UKCloud for Microsoft Azure
 services: azure-stack
-author: Bailey Lawson
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+author: blawson
+reviewer: wturner
+lastreviewed: 01/12/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -58,9 +58,14 @@ Connect-AzAccount -EnvironmentName "AzureStackUser"
 # Get location of Azure Stack Hub
 $Location = (Get-AzLocation).Location
 
-# Select resource group
+# Declare variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VaultName = "<output form="vaultname" name="result" style="display: inline;">MyVault</output>"
+
+# Check if resource group exists and create if it does not
+if (-not (Get-AzResourceGroup | Where-Object -Property ResourceGroupName -eq $RGName)) {
+    New-AzResourceGroup -Name $RGName -Location $Location
+}
 
 # Create a new vault
 New-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName -Location $Location
@@ -82,7 +87,7 @@ $Secret = Set-AzKeyVaultSecret -VaultName $VaultName -Name $SecretName -SecretVa
 # Display URL
 $Secret.Id
 
-# Display value
+# Display encrypted value
 $Secret.SecretValue
 </code></pre>
 
