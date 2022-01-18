@@ -80,7 +80,7 @@ openstack loadbalancer listener create --protocol-port 443 --protocol TERMINATED
 | name                        | listener1               |
 ```
 
-Now go back and follow [How to use Octavia Load Balancing as a Service on UKCloud for OpenStack](https://docs.ukcloud.com/articles/openstack/ostack-how-use-octavia.html) until you reach the section "Create A listener" to continue the creation of the loadbalancer.
+Now go back and follow [How to use Octavia Load Balancing as a Service on UKCloud for OpenStack](https://docs.ukcloud.com/articles/openstack/ostack-how-use-octavia.html) until to continue the creation of the loadbalancer.
 
 ### CLI example updating or changing the SSL certificate used by the listener.
 
