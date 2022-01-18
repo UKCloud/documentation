@@ -11373,6 +11373,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-manage-subscription.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-manage-subscription.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/other-status-notification-email.png",
       "output": {
         "resource": {
@@ -11802,7 +11813,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-subscribe-service-status.html",
-          "hash": "vucCLkVUVLTi/LaKDSS5e/mmZIf9LUuoLQqmipvy9g8="
+          "hash": "m8bg5V//W6neKQlvJldBfr1CzH+pAFEI8aDoSOQdmKE="
         }
       },
       "is_incremental": false,
