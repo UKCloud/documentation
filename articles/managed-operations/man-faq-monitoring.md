@@ -3,8 +3,8 @@ title: Managed Monitoring as a Service FAQs
 description: Frequently asked questions for Managed Monitoring as a Service
 services: managed-operations
 author: sdixon
-reviewer: sdixon
-lastreviewed: 27/07/2021
+reviewer: mgough
+lastreviewed: 17/01/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
@@ -39,23 +39,7 @@ By default, UKCloud will provide this service without the use of an agent by uti
 
 ### Do I need to open any specific firewall ports or allow firewall rules?
 
-To ensure the correct operation of the Monitoring Agent once installed, you must open the following ports and services:
-
-- Linux
-
-  - Nagios Remote Plugin Executor (NRPE) - Port 5666
-  
-  - Simple Network Management Protocol (SNMP) - Port 161 over UDP
-  
-  - Internet Control Message Protocol (ICMP)
-
-- Windows
-  
-  - Windows Remote Management (WinRM) - Ports 5985 & 5986
-  
-  - Simple Network Management Protocol (SNMP) - Port 161 over UDP
-  
-  - Internet Control Message Protocol (ICMP)
+To see a full list of prerequisites, including what ports need to be opened on your firewalls, see [*Managed IT Operations prerequisites*](https://docs.ukcloud.com/articles/managed-operations/man-ref-customer-prereqs.html)
 
 ## General
 
