@@ -2,9 +2,9 @@
 title: How to configure the Azure Stack Hub user's PowerShell environment
 description: Configure the Azure Stack Hub user's PowerShell environment
 services: azure-stack
-author: Chris Black
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+author: cblack
+reviewer: wturner
+lastreviewed: 08/12/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -44,27 +44,30 @@ Enter details below to provide values for the variables in the scripts in this a
 ## Install Azure Stack Hub PowerShell
 
 <pre><code class="language-PowerShell"># Set Execution Policy
-Set-ExecutionPolicy RemoteSigned
-  
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
 # PowerShell commands for Azure Stack Hub are installed through the PSGallery repository
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 
 # Install the latest version of PowerShellGet
 Install-Module -Name PowerShellGet -Force
+</code></pre>
 
-# Uninstall existing versions of Azure/Azure Stack Hub PowerShell
+Close and reopen your elevated PowerShell session to load the newly installed version of the PowerShellGet module.
+
+<pre><code class="language-PowerShell"># Uninstall existing versions of Azure/Azure Stack Hub PowerShell
 Get-Module -Name Azs.*, Azure*, Az.* -ListAvailable | Uninstall-Module -Force -Verbose
 
 # On some older systems, you may need to explicitly set the TLS 1.2 security protocol to be able to interact with PowerShell Gallery
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 # Install the Az.BootStrapper module
-Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
+Install-Module -Name Az.BootStrapper -Force
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
-Install-AzProfile -Profile 2019-03-01-hybrid -Force
-Install-Module -Name AzureStack -RequiredVersion 2.0.2-preview -AllowPrerelease
+Install-AzProfile -Profile 2020-09-01-hybrid -Force
+Install-Module -Name AzureStack -RequiredVersion 2.2.0
 
 # Confirm the installation
 Get-Module -Name "Az*" -ListAvailable
@@ -76,7 +79,7 @@ Get-Module -Name "Azs*" -ListAvailable
 ### Azure Active Directory (AAD) based deployments
 
 <pre><code class="language-PowerShell"># Set Execution Policy
-Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 # Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
@@ -86,10 +89,12 @@ Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
 Connect-AzAccount -EnvironmentName "AzureStackUser"
-
 </code></pre>
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
+
+> [!WARNING]
+> This method will **not** work if multi-factor authentication is required for your AAD account. You must use the other method that does not have the -Credential parameter on the Connect-AzAccount cmdlet.
 
 <pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
