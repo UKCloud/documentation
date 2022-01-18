@@ -8,7 +8,7 @@
     <title>How to configure the Azure Stack Hub user's PowerShell environment </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure the Azure Stack Hub user's PowerShell environment ">
-    <meta name="generator" content="docfx 2.58.4.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -135,27 +135,28 @@
 </table>
 <h2 id="install-azure-stack-hub-powershell">Install Azure Stack Hub PowerShell</h2>
 <pre><code class="language-PowerShell"># Set Execution Policy
-Set-ExecutionPolicy RemoteSigned
-  
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
 # PowerShell commands for Azure Stack Hub are installed through the PSGallery repository
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 
 # Install the latest version of PowerShellGet
 Install-Module -Name PowerShellGet -Force
-
-# Uninstall existing versions of Azure/Azure Stack Hub PowerShell
+</code></pre>
+<p>Close and reopen your elevated PowerShell session to load the newly installed version of the PowerShellGet module.</p>
+<pre><code class="language-PowerShell"># Uninstall existing versions of Azure/Azure Stack Hub PowerShell
 Get-Module -Name Azs.*, Azure*, Az.* -ListAvailable | Uninstall-Module -Force -Verbose
 
 # On some older systems, you may need to explicitly set the TLS 1.2 security protocol to be able to interact with PowerShell Gallery
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 # Install the Az.BootStrapper module
-Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
+Install-Module -Name Az.BootStrapper -Force
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
-Install-AzProfile -Profile 2019-03-01-hybrid -Force
-Install-Module -Name AzureStack -RequiredVersion 2.0.2-preview -AllowPrerelease
+Install-AzProfile -Profile 2020-09-01-hybrid -Force
+Install-Module -Name AzureStack -RequiredVersion 2.2.0
 
 # Confirm the installation
 Get-Module -Name "Az*" -ListAvailable
@@ -164,7 +165,7 @@ Get-Module -Name "Azs*" -ListAvailable
 <h2 id="configure-the-user-environment-and-sign-in-to-azure-stack-hub">Configure the user environment and sign in to Azure Stack Hub</h2>
 <h3 id="azure-active-directory-aad-based-deployments">Azure Active Directory (AAD) based deployments</h3>
 <pre><code class="language-PowerShell"># Set Execution Policy
-Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 # Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
@@ -174,9 +175,12 @@ Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
 Connect-AzAccount -EnvironmentName "AzureStackUser"
-
 </code></pre>
 <h3 id="azure-active-directory-aad-based-deployments---embedded-credentials">Azure Active Directory (AAD) based deployments - Embedded Credentials</h3>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This method will <strong>not</strong> work if multi-factor authentication is required for your AAD account. You must use the other method that does not have the -Credential parameter on the Connect-AzAccount cmdlet.</p>
+</div>
 <pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
@@ -255,7 +259,7 @@ New-AzResourceGroup -Name "MyResourceGroup" -Location $Location
           </div>
         </div>
       </footer>
-      
+
       <div id="cookie-cta" style="display: none;" aria-hidden="true">
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">

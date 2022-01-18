@@ -8,7 +8,7 @@
     <title>How to resize a disk using PowerShell </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to resize a disk using PowerShell ">
-    <meta name="generator" content="docfx 2.58.4.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -141,7 +141,7 @@
 <td><form oninput="result.value=VMNameInput.value; result2.value=VMNameInput.value" id="VMName" style="display: inline;"><input type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="MyVM"></form></td>
 </tr>
 <tr>
-<td>$Disk.DiskSizeGB</td>
+<td>$DiskSizeGB</td>
 <td>The new disk size in gigabytes. <strong>Note</strong>: The maximum size allowed for OS disks is 2048 GB</td>
 <td><form oninput="result.value=DiskSizeInput.value; result2.value=DiskSizeInput.value" id="DiskSize" style="display: inline;"><input type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="200"></form></td>
 </tr>
@@ -176,7 +176,7 @@
 <td><form oninput="result.value=VMNameInput2.value; result2.value=VMNameInput2.value" id="VMName2" style="display: inline;"><input type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="MyVM"></form></td>
 </tr>
 <tr>
-<td>$Disk.DiskSizeGB</td>
+<td>$DiskSizeGB</td>
 <td>The new disk size in gigabytes.</td>
 <td><form oninput="result.value=DiskSizeInput2.value; result2.value=DiskSizeInput2.value" id="DiskSize2" style="display: inline;"><input type="text" id="DiskSizeInput2" name="DiskSizeInput2" style="display: inline;" placeholder="200"></form></td>
 </tr>
@@ -356,22 +356,22 @@ Start-AzVM -ResourceGroupName $RGName -Name $VMName
 <h3 id="expand-the-volume">Expand the Volume</h3>
 <ol>
 <li><p>Open an RDP connection to your VM.</p>
-<pre><code class="lang-powershell"># Obtain public IP of your VM based on the variables from above
-$NICName = (Get-AzNetworkInterface -ResourceGroupName $RGName | Where-Object -FilterScript { $_.VirtualMachine.Id -like &quot;*$VMName*&quot;}).Name
-$IpAddress = Get-AzPublicIpAddress -ResourceGroupName $RGName | Where-Object -FilterScript { $_.IpConfiguration.Id -like &quot;*$NICName*&quot; }
-# Start RDP session to your VM
-Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&quot;
-</code></pre>
+ <pre><code class="language-PowerShell"> # Obtain public IP of your VM based on the variables from above
+ $NICName = (Get-AzNetworkInterface -ResourceGroupName $RGName | Where-Object -FilterScript { $_.VirtualMachine.Id -like "*$VMName*"}).Name
+ $IpAddress = Get-AzPublicIpAddress -ResourceGroupName $RGName | Where-Object -FilterScript { $_.IpConfiguration.Id -like "*$NICName*" }
+ # Start RDP session to your VM
+ Start-Process "mstsc" -ArgumentList "/v:$($IpAddress.IpAddress)"</code></pre>
 </li>
-<li><p>From your PowerShell window:</p>
- <pre><code class="language-PowerShell"># Resize partition based on drive letter
+<li><p>Within the RDP session, open a PowerShell window.</p>
+</li>
+<li><p>From the PowerShell window:</p>
+ <pre><code class="language-PowerShell"> # Resize partition based on drive letter
  ## Declare drive letter
  $DriveLetter = "<output form="DriveLetter" name="result" style="display: inline;">C</output>"
  ## Find maximum size of the partition based on drive letter
  $MaxSize = (Get-PartitionSupportedSize -DriveLetter $DriveLetter).SizeMax
  ## Resize the partition
- Resize-Partition -DriveLetter $DriveLetter -Size $MaxSize
- </code></pre>
+ Resize-Partition -DriveLetter $DriveLetter -Size $MaxSize</code></pre>
 </li>
 </ol>
 </section>
@@ -426,7 +426,7 @@ Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&q
           </div>
         </div>
       </footer>
-      
+
       <div id="cookie-cta" style="display: none;" aria-hidden="true">
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">

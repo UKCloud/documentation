@@ -8,7 +8,7 @@
     <title>Managed Monitoring as a Service FAQs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Managed Monitoring as a Service FAQs ">
-    <meta name="generator" content="docfx 2.58.4.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -104,29 +104,7 @@
 <h3 id="do-i-need-to-install-an-agent-within-my-vm-to-enable-this-service">Do I need to install an agent within my VM to enable this service?</h3>
 <p>By default, UKCloud will provide this service without the use of an agent by utilising SNMP traps. In situations where non-SNMP events need to be collected, UKCloud may opt to provide a dedicated Monitoring Agent, which can be deployed into the customer's VM to provide a more advanced method of event collection.</p>
 <h3 id="do-i-need-to-open-any-specific-firewall-ports-or-allow-firewall-rules">Do I need to open any specific firewall ports or allow firewall rules?</h3>
-<p>To ensure the correct operation of the Monitoring Agent once installed, you must open the following ports and services:</p>
-<ul>
-<li><p>Linux</p>
-<ul>
-<li><p>Nagios Remote Plugin Executor (NRPE) - Port 5666</p>
-</li>
-<li><p>Simple Network Management Protocol (SNMP) - Port 161 over UDP</p>
-</li>
-<li><p>Internet Control Message Protocol (ICMP)</p>
-</li>
-</ul>
-</li>
-<li><p>Windows</p>
-<ul>
-<li><p>Windows Remote Management (WinRM) - Ports 5985 &amp; 5986</p>
-</li>
-<li><p>Simple Network Management Protocol (SNMP) - Port 161 over UDP</p>
-</li>
-<li><p>Internet Control Message Protocol (ICMP)</p>
-</li>
-</ul>
-</li>
-</ul>
+<p>To see a full list of prerequisites, including what ports need to be opened on your firewalls, see <a href="https://docs.ukcloud.com/articles/managed-operations/man-ref-customer-prereqs.html"><em>Managed IT Operations prerequisites</em></a></p>
 <h2 id="general">General</h2>
 <h3 id="what-is-aiops">What is AIOps?</h3>
 <p>The term <em>AIOps</em> stands for <em>artificial intelligence for IT operations</em>. AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies.</p>
@@ -225,7 +203,7 @@
           </div>
         </div>
       </footer>
-      
+
       <div id="cookie-cta" style="display: none;" aria-hidden="true">
         <div class="cookie-cta-inner container">
           <div class="cookie-cta-text">
