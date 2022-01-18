@@ -30,49 +30,51 @@ You can subscribe to the Service Status page to receive updates when information
 
 1. On the UKCloud Service Status page, click the **Subscribe to Updates** button.
 
-    ![Subscribe to Updates button](images/other-status-btn-subscribe.png)
+   ![Subscribe to Updates button](images/other-status-btn-subscribe.png)
 
 2. To receive email notifications:
 
-    - Click the envelope icon, enter your email address, then click **Subscribe via Email**.
+   a. Click the envelope icon, enter your email address, then click **Subscribe via Email**.
 
-        ![Subscribe via Email](images/other-status-notification-email.png)
+      ![Subscribe via Email](images/other-status-notification-email.png)
 
-    - Confirm your subscription by clicking the **Confirm subscription** button in the email you receive.
+   b. Confirm your subscription by clicking the **Confirm subscription** button in the email you receive.
 
-    - On the *Notifications Subscription* page, you can specify individual components for which you want to receive notifications.
+   c. You can click **Manage your subscription** in any notifiation email to specify the individual components for which you want to receive notifications or to unsubscribe.
 
-        ![Notifications Subscription page](images/other-status-subscriptions.png)
+      ![Manage your subscription link](images/other-status-manage-subscription.png)
+
+      ![Notifications Subscription page](images/other-status-subscriptions.png)
 
 3. To receive text notifications:
 
-    - Click the telephone handset icon, enter your phone number, then click **Subscribe via Text Message**.
+   a. Click the telephone handset icon, enter your phone number, then click **Subscribe via Text Message**.
 
-        ![Subscribe via Text Message](images/other-status-notification-text.png)
+      ![Subscribe via Text Message](images/other-status-notification-text.png)
 
-    - Click the link in the confirmation text message you receive to manage your subscriptions.
+   b. Click the link in the confirmation text message you receive to manage your subscriptions.
 
 4. To receive webhook notifications, click the code icon (**<>**), enter the URL of the endpoint to send the webhook to and the email address to send any associated error messages, then click **Subscribe to Notifications**.
 
-    ![Subscribe via Webhook](images/other-status-notification-webhook.png)
+   ![Subscribe via Webhook](images/other-status-notification-webhook.png)
 
-    You'll need to set up an endpoint to receive the webhook requests. For more information about webhooks, see the Atlassian Statuspage documentation: [Webhook Notifications](https://help.statuspage.io/help/webhook-notifications). For example code for setting up an endpoint, see [*How to use webhooks to receive service status notifications*](other-how-use-webhooks.md).
+   You'll need to set up an endpoint to receive the webhook requests. For more information about webhooks, see the Atlassian Statuspage documentation: [Enable webhook notifications](https://support.atlassian.com/statuspage/docs/enable-webhook-notifications/). For example code for setting up an endpoint, see [*How to use webhooks to receive service status notifications*](other-how-use-webhooks.md).
 
 5. To subscribe to the Atom/RSS feed, click the RSS icon and then click the **Atom Feed** or **RSS Feed** link.
 
-    ![Subscribe to RSS](images/other-status-notification-rss.png)
+   ![Subscribe to RSS](images/other-status-notification-rss.png)
 
 ## Subscribing to a specific incident or maintenance window
 
 You can also subscribe to notifications for a specific incident or maintenance window.
 
-1. On the UKCloud Service Status page, click the **Subscribe** link in the banner for the incident or maintenance alert that you want to subscribe to.
+1. On the UKCloud Service Status page, go to the incident or maintenance alert that you want to subscribe to and click **Subscribe to Updates**.
 
-    ![Subscribe link for incident](images/other-status-incident-subscribe.png)
+   ![Subscribe link for incident](images/other-status-incident-subscribe.png)
 
 2. Enter your email address or phone number, then click **Subscribe to Incident**.
 
-    ![Subscribe to Incident dialog box](images/other-status-subscribe-incident.png)
+   ![Subscribe to Incident dialog box](images/other-status-subscribe-incident.png)
 
 ## Subscribing to Portal notifications
 
