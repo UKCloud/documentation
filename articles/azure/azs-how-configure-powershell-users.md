@@ -67,7 +67,7 @@ Install-Module -Name Az.BootStrapper -Force
 
 # Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
 Install-AzProfile -Profile 2020-09-01-hybrid -Force
-Install-Module -Name AzureStack -RequiredVersion 2.1.1
+Install-Module -Name AzureStack -RequiredVersion 2.2.0
 
 # Confirm the installation
 Get-Module -Name "Az*" -ListAvailable
