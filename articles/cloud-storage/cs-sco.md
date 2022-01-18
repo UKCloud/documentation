@@ -3,8 +3,8 @@ title: Cloud Storage Service Scope
 description: Outlines important details regarding Cloud Storage
 services: cloud-storage
 author: shall
-reviewer: srelf
-lastreviewed: 08/12/2020
+reviewer: nwayman
+lastreviewed: 09/12/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -124,7 +124,9 @@ You can request a migration through a Service Request. Migrations may be between
 
 **Service Delivery Manager (SDM).** An assigned point of contact who will provide any assistance you require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
-**Support Desk.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
+**Support Desk.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement.
+
+For more information about our award-winning customer service, see the [Customer Experience](https://ukcloud.com/ukcloud-support/customer-experience/) page on our website.
 
 ## Customer responsibilities
 
