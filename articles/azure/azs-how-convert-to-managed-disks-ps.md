@@ -2,9 +2,9 @@
 title: How to convert a virtual machine to use managed disks using PowerShell
 description: Provides help for converting a virtual machine from unmanaged to managed disks on UKCloud for Microsoft Azure
 services: azure-stack
-author: Bailey Lawson
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+author: blawson
+reviewer: wturner
+lastreviewed: 06/12/2021
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -47,6 +47,7 @@ Enter details below to provide values for the variables in the following script 
 | \$ArmEndpoint   | The Azure Resource Manager endpoint for Azure Stack Hub                | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$RGName        | Name of the resource group that the VM exists in                   | <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$VMName        | Name of the virtual machine to convert to use managed disks        | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
+| \$SAName        | Name of the storage account that contains the unmanaged disks      | <form oninput="result.value=saname.value" id="saname" style="display: inline;"><input type="text" id="saname" name="saname" style="display: inline;" placeholder="MyStorageAccount"/></form> |
 
 ### Convert the virtual machine
 
@@ -69,6 +70,7 @@ $Location = (Get-AzLocation).Location
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
+$SAName = "<output form="saname" name="result" style="display: inline;">MyStorageAccount</output>"
 
 # Retrieve virtual machine details
 $OldVM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
@@ -79,8 +81,9 @@ Remove-AzVM -Name $VMName -ResourceGroupName $RGName -Force
 
 # Create OS managed disk
 Write-Output -InputObject "Creating OS managed disk"
-$OSDiskConfig = New-AzDiskConfig -AccountType "StandardLRS" -Location $Location -DiskSizeGB $OldVM.StorageProfile.OsDisk.DiskSizeGB `
-    -SourceUri $OldVM.StorageProfile.OsDisk.Vhd.Uri -CreateOption "Import"
+$SAId = (Get-AzStorageAccount -ResourceGroupName $RGName -Name $SAName).Id
+$OSDiskConfig = New-AzDiskConfig -AccountType "Standard_LRS" -Location $Location -DiskSizeGB $OldVM.StorageProfile.OsDisk.DiskSizeGB `
+    -SourceUri $OldVM.StorageProfile.OsDisk.Vhd.Uri -StorageAccountId $SAId -CreateOption "Import"
 $OSDisk = New-AzDisk -DiskName "$($OldVM.Name)_$($OldVM.StorageProfile.OsDisk.Name)" -Disk $OSDiskConfig -ResourceGroupName $RGName
 
 # Create data managed disks
@@ -88,8 +91,8 @@ if ($OldVM.StorageProfile.DataDisks) {
     $DataDiskArray = @()
     foreach ($DataDisk in $OldVM.StorageProfile.DataDisks) {
         Write-Output -InputObject "Creating data managed disk"
-        $DataDiskConfig = New-AzDiskConfig -AccountType "StandardLRS" -Location $Location -DiskSizeGB $DataDisk.DiskSizeGB `
-            -SourceUri $DataDisk.Vhd.Uri -CreateOption "Import"
+        $DataDiskConfig = New-AzDiskConfig -AccountType "Standard_LRS" -Location $Location -DiskSizeGB $DataDisk.DiskSizeGB `
+            -SourceUri $DataDisk.Vhd.Uri -StorageAccountId $SAId -CreateOption "Import"
         $DataDiskArray += New-AzDisk -DiskName "$($OldVM.Name)_$($DataDisk.Name)" -Disk $DataDiskConfig -ResourceGroupName $RGName
     }
 }
