@@ -3,8 +3,8 @@ title: Patching as a Service Service Scope
 description: Outlines important details regarding Patching as a Service
 services: managed-operations
 author: sdixon
-reviewer: sdixon
-lastreviewed: 27/07/2021
+reviewer: mgough
+lastreviewed: 19/01/2021
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
@@ -96,6 +96,10 @@ Within 5 business days of accepting an order, UKCloud will enable the customer's
 ## Customer responsibilities
 
 Any elements within the [Scope of Patching as a Service](#scope-of-patching-as-a-service) section of this article where the customer is listed as Accountable or Responsible.
+
+Ensuring that patches are being applied properly, and contacting UKCloud support for assistance if they believe they are not.
+
+Ensuring that all devices and their operating systems are in a healthy, patch-ready state.
 
 The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.
 
