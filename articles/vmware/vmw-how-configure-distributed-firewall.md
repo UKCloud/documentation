@@ -3,8 +3,8 @@ title: How to configure a Distributed Firewall
 description: Describes how to configure a Distributed Firewall (DFW), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 13/11/2020
+reviewer: acirel
+lastreviewed: 31/12/2021
 
 toc_rootlink: How To
 toc_sub1: Advanced networking
@@ -29,7 +29,9 @@ You can have a routed or isolated network on a vApp and still use a DFW at the V
 The DFW rules can be based on Layer 2 (L2) up to Layer 4 (L4).
 
 - Layer 2 (L2) rules (Ethernet tab) are based on MAC address L2 protocols like ARP, RARP and LLDP
-- Layer 3 (L3) rules (General tab) are based on Ip source destination
+
+- Layer 3 (L3) rules (General tab) are based on IP source destination
+
 - Layer 4 (L4) uses a TCP or UDP service port
 
 L2 (Ethernet) firewall rules are processed before L3 rules. The default firewall rule allows L2 and L3 traffic to pass through your VDCs. Once you've implemented all the rules, you can change this to block. Rules are always read and enforced from top-to-bottom ordering like any traditional firewall.
@@ -67,16 +69,16 @@ To access the DFW:
 
 6. Define the L3 rule:
 
-    Field | Action | &nbsp;
-    ------|--------|-------
+    Field | Action
+    ------|-------
     Name | Enter a name for the rule. |
-    Source | Hover over the field, then click the **IP** button to enter a single IP address or an IP range. When you're done, click **Keep**. | ![Source IP Address dialog box](images/vmw-vcd91-dfw-l3-rule-source-ip.png)
-    Destination | Hover over the field, then click the **IP** button to enter a single IP address or an IP range. When you're done, click **Keep**. | ![Destination IP Address dialog box](images/vmw-vcd91-dfw-l3-rule-dest-ip.png)
-    Service | Hover over the field, then click the **IP** button to add the relevant **Protocol** and **Port**. When you're done, click **Keep**. | ![Add Service dialog box](images/vmw-vcd91-dfw-l3-rule-add-service.png)
-    Action | Select **Allow** or **Deny**. |
-    Direction | Select **In**, **Out** or **In/Out**. |
-    Packet Type | Select **IPv4**, **IPv6** or **Any**. |
-    Applied To | Hover over the field, then click the **+** button to select whether to apply the rule to an edge, Org VDC network, virtual machine, Org VDC or security group. Select the specific object then click the right arrow to add it. When you're done, click **Keep**. | ![Select objects dialog box](images/vmw-vcd91-dfw-l3-rule-select-objects.png)
+    Source | Hover over the field, then click the **IP** button to enter a single IP address or an IP range. When you're done, click **Keep**.
+    Destination | Hover over the field, then click the **IP** button to enter a single IP address or an IP range. When you're done, click **Keep**.
+    Service | Hover over the field, then click the **IP** button to add the relevant **Protocol** and **Port**. When you're done, click **Keep**.
+    Action | Select **Allow** or **Deny**.
+    Direction | Select **In**, **Out** or **In/Out**.
+    Packet Type | Select **IPv4**, **IPv6** or **Any**.
+    Applied To | Hover over the field, then click the **+** button to select whether to apply the rule to an edge, Org VDC network, virtual machine, Org VDC or security group. Select the specific object then click the right arrow to add it. When you're done, click **Keep**.
 
     ![Defining an L3 rule for DFW](images/vmw-vcd91-dfw-l3-rule.png)
 
