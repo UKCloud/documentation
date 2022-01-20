@@ -11329,17 +11329,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/other/images/other-status-history.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/other-status-history.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/other/images/other-status-incident-subscribe.png",
       "output": {
         "resource": {
@@ -12149,7 +12138,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-status-page.html",
-          "hash": "G1Lmp6PgQfVW4ODc1ka0ypdv4Jwz1mn8QooFcoZbxfQ="
+          "hash": "sprxWXCjkfBjYvUhx9hsPehenqNR336lTJn1/vSpu5k="
         }
       },
       "is_incremental": false,
