@@ -97,9 +97,9 @@ Within 5 business days of accepting an order, UKCloud will enable the customer's
 
 Any elements within the [Scope of Patching as a Service](#scope-of-patching-as-a-service) section of this article where the customer is listed as Accountable or Responsible.
 
-Ensuring that patches are being applied properly, and to contact UKCloud support for assistance if they believe they are not.
+Ensuring that patches are being applied properly, and contacting UKCloud support for assistance if they believe they are not.
 
-Ensuring that all devices and their Operating Systems are in a healthy, patch-ready state.
+Ensuring that all devices and their operating systems are in a healthy, patch-ready state.
 
 The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.
 
