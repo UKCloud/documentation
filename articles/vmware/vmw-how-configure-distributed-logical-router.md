@@ -3,8 +3,8 @@ title: How to configure a Distributed Logical Router
 description: Describes how to configure a Distributed Logical Router (DLR), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 13/11/2020
+reviewer: acirel
+lastreviewed: 31/12/2021
 
 toc_rootlink: How To
 toc_sub1: Advanced networking
