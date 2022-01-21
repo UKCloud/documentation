@@ -2,9 +2,9 @@
 title: UKCloud Cross Domain Security Zone application process
 description: Outlines the application process for the UKCloud Cross Domain Security Zone
 services: cdsz
-author: Sue Highmoor
-reviewer:
-lastreviewed: 17/07/2018 10:43:00
+author: shighmoor
+reviewer: bchallis
+lastreviewed: 07/01/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -137,7 +137,7 @@ When your service has been provisioned, you can implement your proposed solution
 
 ## Stage 6: On-going compliance
 
-It is the customer’s responsibility to build, manage and ensure they use appropriate risk management to understand and mitigate identified risks. It is your responsibility to work with your data owner to ensure you're comfortable with the risk associated with your data, and to choose which controls you feel are appropriate within your CDSZ.
+It is your responsibility to build, manage and ensure you use appropriate risk management to understand and mitigate identified risks. It is your responsibility to work with your data owner to ensure you're comfortable with the risk associated with your data, and to choose which controls you feel are appropriate within your CDSZ.
 
 ## Feedback
 
