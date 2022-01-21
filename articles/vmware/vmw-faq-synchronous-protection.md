@@ -4,7 +4,7 @@ description: Frequently asked questions for Synchronous Protection
 services: vmware
 author: mwarner
 reviewer: gmartin
-lastreviewed: 22/03/2019
+lastreviewed: 20/01/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
