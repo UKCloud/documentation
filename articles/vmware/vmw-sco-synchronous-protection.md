@@ -4,7 +4,7 @@ description: Outlines important details regarding the Synchronous Protection ser
 services: vmware
 author: shall
 reviewer: gmartin
-lastreviewed: 22/03/2019
+lastreviewed: 20/01/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
