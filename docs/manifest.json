@@ -7820,17 +7820,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/boot_times.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/boot_times.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/openstack/images/fig10-instance-details.png",
       "output": {
         "resource": {
@@ -8583,28 +8572,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/hystax9.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/mongodb.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/mongodb.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/network_performance.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/network_performance.png"
         }
       },
       "is_incremental": false,
@@ -9932,28 +9899,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/random_io.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/random_io.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openstack/images/sequential_io.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/sequential_io.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ukc-services-g12.png",
       "output": {
         "resource": {
@@ -10313,18 +10258,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/openstack/ostack-ref-ukcloud-outperforms.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openstack/ostack-ref-ukcloud-outperforms.html",
-          "hash": "fgrhAiw16GcLWhD/Mp8DaYw/Q2hprHHXamOW5rjDNb8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-sco-hystax.md",
       "output": {
         ".html": {
@@ -10401,7 +10334,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "VHd6NHgzEFacxOgBTy+QuVah/IrXMiQWY5hfMXDqN7Y="
+          "hash": "VM9ElIiQJ7UzSK9sEfoTYL8WaRPdUqJapVX1I2TJ5zg="
         }
       },
       "is_incremental": false,
@@ -14835,61 +14768,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-benchmark-mongodb.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-benchmark-mongodb.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-benchmark-network.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-benchmark-network.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-benchmark-random-io.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-benchmark-random-io.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-benchmark-redis.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-benchmark-redis.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-benchmark-seq-io.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-benchmark-seq-io.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-dc-contingency1.png",
       "output": {
         "resource": {
@@ -18370,7 +18248,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "+fKHSoZVjh+4X2Y8KMXetA3OQomNTt+kNGzrw9pWPxE="
+          "hash": "+P6Y+kpeOUIbIGVMFRk8qmKEyFSUCg5NF/7HmEqW+4U="
         }
       },
       "is_incremental": false,
@@ -19158,18 +19036,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-comparison-hyperscalers.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-comparison-hyperscalers.html",
-          "hash": "rWBn4oh2B+puEwObP1cj4QOdJUMqG2vqedAqNvNaZ40="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-connectivity-options.md",
       "output": {
         ".html": {
@@ -19673,7 +19539,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 458,
+          "total_file_count": 456,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

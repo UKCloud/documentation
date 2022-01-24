@@ -56,8 +56,6 @@
     href: ostack-ref-auto-scaling.md
   - name: Command-line clients for UKCloud for OpenStack
     href: ostack-ref-cli-clients.md
-  - name: How the UKCloud OpenStack platform outperforms hyperscalers
-    href: ostack-ref-ukcloud-outperforms.md
   - name: Introduction to the OpenStack dashboard
     href: ostack-ref-dashboard.md
   - name: Live migrations
