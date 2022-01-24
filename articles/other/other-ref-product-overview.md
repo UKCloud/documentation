@@ -4,7 +4,7 @@ description: Provides a top level comparison for our main products
 services: other
 author: shall
 reviewer: shighmoor
-lastreviewed: 01/12/2020
+lastreviewed: 21/01/2022
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -47,7 +47,7 @@ This article is designed to provide you with a top level comparison for our main
 
 &nbsp;                                   | Min VM size     | Max VM size       | Billing units                               | Free trial
 -----------------------------------------|-----------------|-------------------|---------------------------------------------|-----------
-**UKCloud for Microsoft Azure**          | 1 vCPU, 768 MiB | 64 vCPU, 128 GiB  | Per VM per hour                             | Yes
+**UKCloud for Microsoft Azure**          | 1 vCPU, 768 MiB | 64 vCPU, 128 GiB  | Per VM per hour                             | No
 **UKCloud for OpenStack**                | 1 vCPU, 500 MiB | 56 vCPU, 440 GiB  | Per instance per hour                       | Yes
 **UKCloud for Oracle Software**          | 1 Core, 8 GiB   | 12 Cores, 128 GiB | Per VM per hour (per GiB per month storage) | Yes
 **UKCloud for Red Hat OpenShift**        | N/A             | N/A               | Per node per month                          | Yes
@@ -70,7 +70,7 @@ This article is designed to provide you with a top level comparison for our main
 
 &nbsp;                                   | SLA                                          | Service credits - data plane                                         | Service credits - Control plane        | Planned Maintenance
 -----------------------------------------|----------------------------------------------|----------------------------------------------------------------------|----------------------------------------|--------------------
-**UKCloud for Microsoft Azure**          | Single instance=99.90%, dual instance=99.95% | 5% per 5% or part thereof below SLA                                  | 1% per 1% or part thereof below 99.90% | Excluded
+**UKCloud for Microsoft Azure**          | 99.90%                                       | 10% of monthly spend for Private Cloud                               | 1% per 1% or part thereof below 99.90% | Excluded
 **UKCloud for OpenStack**                | 99.95%                                       | 2% of monthly region spend/10% of monthly global spend               | 1% per 1% or part thereof below 99.90% | Excluded
 **UKCloud for Oracle Software**          | Non-HA=99.95% , HA=99.99%                    | 10% of monthly spend of affected OVM                                 | 1% per 1% or part thereof below 99.90% | Excluded
 **UKCloud for Red Hat OpenShift**        | 99.95%                                       | 3% of monthly spend for affected UKCloud deployed OpenShift platform | 1% per 1% or part thereof below 99.90% | Excluded
