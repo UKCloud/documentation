@@ -33,9 +33,6 @@ This article describes how to find out where your VDC is within the UKCloud plat
 
 The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-> [!NOTE]
-> If you want to find the location of a specific VM within a VDC, you can use VM location. For more information, see [*How to use VM location*](vmw-how-use-vm-location.md).
-
 ## Finding the location of a VDC (Tenant Portal)
 
 You can view a VDC's metadata in the VMware Cloud Director Tenant Portal to find out where the VDC is located.

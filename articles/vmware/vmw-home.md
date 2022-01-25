@@ -166,7 +166,6 @@ toc_mdlink: vmw-home.md
   <div class="col-md-4">
       <p style="margin-left:15px"><a href="vmw-how-portal-view-vms.md">View your VMs in the UKCloud Portal</a></p>
       <p style="margin-left:15px"><a href="vmw-how-locate-vdc.md">Locate your VDC on the UKCloud platform</a></p>
-      <p style="margin-left:15px"><a href="vmw-how-use-vm-location.md">Use VM location</a></p>
       <p style="margin-left:15px"><a href="vmw-how-use-ovf-tool.md">Use the VMware OVF Tool</a></p>
       <p style="margin-left:15px"><a href="vmw-how-migrate-vapp.md">Migrate vApps between virtual data centres</a></p>
   </div>

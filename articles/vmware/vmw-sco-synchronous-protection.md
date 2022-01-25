@@ -140,7 +140,7 @@ You can also receive alerts via email subscription or using the [Service Status 
 
 We'll contact you after a failover to inform you that our actions are complete.
 
-We do not currently provide alerts when a VM is moved to a different site. However, you can check the location of your VMs. For more information, see [*How to use VM location*](vmw-how-use-vm-location.md).
+We do not provide alerts when a VM is moved to a different site.
 
 ## Networking
 
