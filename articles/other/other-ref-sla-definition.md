@@ -203,6 +203,17 @@ Service levels for Managed Monitoring as a Service are split into the following 
 
 - **Alert Notification** - UKCloud will notify the customer within 15 minutes of the point when UKCloud receives any event meeting the agreed conditions to trigger an alert.
 
+Managed Monitoring as a Service customers can raise a request for Service Credits if they feel a breach of the Service Level Agreement has occurred. Customers are entitled to claim 1% of Managed Monitoring as a Service spend, per affected customer environment, where one of the following conditions are met:
+
+- Per 1% breach of Availability target
+
+- Per 5 minutes over Alert Notification target
+
+A monthly cap on Service Credits applies, up to and not beyond the full amount a customer is charged for the Managed Monitoring as a Service service within the same billing period that Service Credit entitlement occurred.
+
+> [!NOTE]
+> A claim for Service Credits against the Alert Notification target cannot be raised within the same period where a claim for Availability Service Credits has also been made.
+
 ### Migration to the Cloud
 
 Due to the service being dependent on connectivity between the customer data centre and UKCloud, we are unable to offer an SLA relating to the performance of this service.

@@ -37,9 +37,7 @@ Exclusions are:
 
 - Secure Remote Access
 
-- Basic Managed VM
-
-- Services covered by the [SFIA Rate Card](https://ukcloud.com/sfia)
+- Managed IT Operations
 
 - Dedicated Compute option in UKCloud for VMware
 
@@ -51,9 +49,13 @@ Exclusions are:
 
 - UKCloud for Microsoft Azure
 
+- Services covered by the [SFIA Rate Card](https://ukcloud.com/sfia)
+
 - Government network where Code of Connection is not held (for example, PSN or HSCN; see relevant connectivity FAQ)
 
 - Products in alpha or beta testing - these will be treated differently to free trials
+
+- End of sale products or services
 
 ## Key Aspects of a Free Trial
 
