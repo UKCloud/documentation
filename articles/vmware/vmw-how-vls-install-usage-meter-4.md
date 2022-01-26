@@ -1,18 +1,18 @@
 ---
-title: How to install the vCloud Usage Meter for the VMware Licence Service
+title: How to install the vCloud Usage Meter 4 for the VMware Licence Service
 description: Provides instructions for how to install the vCloud Usage Meter for the VMware Licence Service (VLS)
 services: vmware
-author: shighmoor
+author: mperry
 reviewer: mperry
-lastreviewed: 06/08/2021
+lastreviewed: 024/01/2022
 toc_rootlink: How To
 toc_sub1: VMware Licence Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Install the vCloud Usage Meter
-toc_fullpath: How To/VMware Licence Service/vmw-how-vls-install-usage-meter.md
-toc_mdlink: vmw-how-vls-install-usage-meter.md
+toc_title: Install the vCloud Usage Meter 4
+toc_fullpath: How To/VMware Licence Service/vmw-how-vls-install-usage-meter-4.md
+toc_mdlink: vmw-how-vls-install-usage-meter-4.md
 ---
 
 # How to install the vCloud Usage Meter for the VMware Licence Service
@@ -21,64 +21,31 @@ toc_mdlink: vmw-how-vls-install-usage-meter.md
 
 The VMware Licence Service (VLS) enables you to switch to a flexible, VMware Cloud Provider Programme (VCPP) consumption-based licensing model.
 
-As the VLS licensing model is consumption-based, you must send reports to UKCloud each month to detail your usage of VMware products. To generate these monthly reports, you need to install the vCloud Usage Meter (Usage Meter).
+As the VLS licensing model is consumption-based, you must submit reports to VMware to detail your usage of VMware products. To generate these reports, you need to install the vCloud Usage Meter (Usage Meter).
 
-This article provides all the information you need to install the Usage Meter in your UKCloud environment. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/3.6/com.vmware.vcum.usersguide.doc/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html).
+This article provides all the information you need to install the Usage Meter in your UKCloud environment. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/4.5/Getting-Started-vCloud-Usage-Meter/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html).
 
 ## Prerequisites
 
 To install and perform initial configuration of the Usage Meter, you need the following:
 
-- Usage Meter OVA and hot patch 5, available [here](https://cas.cor00005.ukcloud.com/Docs/UKCloud_VLS/UsageMeter.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1662507263&Signature=FENoZByW4nCooyjpUjd12%2B8DWdo%3D)
+- Usage Meter software, available [here](https://cas.cor00005.ukcloud.com/Docs/UKCloud_VLS/UsageMeter4x.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1674593692&Signature=lQPfSuNylwxGS8bd9E%2BIG8L4BcA%3D)
 
 - A Static IP address, DNS server IP address and DNS domain name
 
-- A vCenter network that has access to vCenter, the ESXi Host Management interface and other products to be metered
+- A vCenter network that has access to vCenter management IP and other products to be metered
 
-- A Network Protocol Profile created in vCenter (see steps [below](#creating-a-network-protocol-profile)), attached to the network where the Usage Meter will reside
+- Internet access via port 443 to the URL **ums.cloud.vmware.com** for the usage meter IP
 
-- Access to an SMTP server (if the VM won't have access to an SMTP server, let us know as soon as possible by raising a support ticket in [My Calls](https://portal.skyscapecloud.com/support/ivanti) and we'll provide the necessary information to work around this issue)
+- If using vCenter version 6.5, please see note regarding a potential deployment issue and workaround [here](https://kb.vmware.com/s/article/85154)
 
-- Two passwords created and recorded for the Usage Meter's `root` and `usgmtr` accounts
-
-- SCP or WinSCP access to the Usage Meter IP to transfer the patch file
-
-### Creating a Network Protocol Profile
-
-If you don't already have a Network Protocol Profile attached to the network where the Usage Meter will reside, you must create one before you start the installation.
-
-To create the Network Profile within vCenter:
-
-1. Log on to the vCenter where you want to host the Usage Meter.
-
-2. Navigate to the data center object in the vSphere hierarchy where you want to host the Usage Meter, then select the **Configure** tab.
-
-3. Select **Network Protocol Profiles**, then click **Add**.
-
-4. In the *Add Network Protocol Profile* dialog box, enter the following information:
-
-    - *Name and Network* page: Enter a **Name** for the profile and, in the *Assign Networks* section, select the network on which the Usage Meter will be deployed.
-
-    - *Configure IPv4* page: Enter the network **Subnet**, **Gateway** IP and **DNS server addresses**.
-
-    - *Set other network configurations* page: Enter the **DNS domain** and use the DNS domain for the **DNS search path**.
-
-    - *Ready to complete* page: Review the information you entered.
-
-5. When you're done, click **Finish**.
-
-## Installing the Usage Meter
-
-To use VLS, you must install the Usage Meter to collect usage information and generate the reports that you need to send to UKCloud.
-
-> [!NOTE]
-> The following steps use the Flex vCenter client, however they should be the same for the HTML5 client.
+- Three passwords created and recorded for the usage meter's `root`, `usagemeter` and `umauditor` accounts
 
 ### Deploying and setting up the Usage Meter appliance
 
 To deploy and set up the Usage Meter:
 
-1. Download the Usage Meter OVA file from the link provided in the [Prerequisites](#prerequisites) section.
+1. Download and unzip the Usage Meter OVA file from the link provided in the [Prerequisites](#prerequisites) section.
 
 2. In vCenter, navigate to the folder where you want to deploy the Usage Meter.
 
@@ -98,21 +65,23 @@ To deploy and set up the Usage Meter:
 
 10. Select the network you want the Usage Meter to reside on and, from the **IP Allocation** list, select **Static - Manual**.
 
-11. On the *Customize template* page, set the passwords to use for the Usage Meter `root` and `usgmtr` accounts.
+11. On the *Customize template* page, set the passwords to use for the Usage Meter `root` and `usagemeter` and `umauditor` accounts.
 
 12. Depending on the vCenter client used, expand the *Networking Properties* section and enter the following information (where possible), then click **Next**.
 
-    - **Network 1 IP Address**: Enter the IP address to assign to the Usage Meter
+    - **Hostname**: Host name of the usage meter appliance
+    
+    - **Host Network Default Gateway**: Gateway IP for the network where the Usage Meter is located
 
-    - **Gateway**: Gateway IP for the network where the Usage Meter is located
-
-    - **Domain name**: AD Domain name where the ESXi and vCenter host is located
+    - **Domain name**: The domain name of this VM
 
     - **DNS search path**: Use the AD Domain name
 
-    - **DNS servers**: Use the DNS server IPs for the domain
+    - **Domain Name Servers**: The domain name servers IP Addresses for this VM
+    
+    - **Network 1 IP Address**: Enter the IP address to assign to the Usage Meter
 
-    - **Netmask**: Subnet mask of the network where the Usage Meter is located
+    - **Network 1 Netmask. Netmask in CIDR notation.**: The network mask for this interface. Netmask in CIDR notation (e.g. input 24 for 255.255.255.0, 28 for 255.255.255.240)
 
 13. Review the configuration of the import, then click **Finish**.
 
@@ -120,147 +89,35 @@ To deploy and set up the Usage Meter:
 
 #### Setting the time zone
 
-For the data collection process to work correctly, it's important that the Usage Meter is in the same time zone as vCenter.
+To avoid configuration issues, configure the metered vCenter Server instances, the metered vROPs Manager instances, and vCloud Usage Meter to use the same time zone.
 
-1. Open the Usage Meter VM console.
+1. Once the appliance is up and running, using a browser enter the following URL https://<UM_IP_ADDRESS>:5480.
 
-2. Select the **Set Timezone** option.
+2. Log in using the root account and password.
 
-3. Enter `7` for Europe, then enter `49` for United Kingdom.
+3. In the left menu select the "Time" option.
 
-4. If the time shown for **Selected time is now** is correct, enter `1` to confirm.
+4. In the right window, this will show the current timezone setting, click edit if you wish to change the timezone setting and save the setting.
 
-#### Setting the web application password
+#### Performing usage meter registration.
 
 You access the Usage Meter via a web application. Before you can access the application, you need to set a password.
 
-1. In the Usage Meter VM console, select the **Login** option.
+1. Using a browser, connect to the URL https://<UM_IP_ADDRESS>.
 
-2. Log in with the `usgmtr` username and the password that you configured at installation.
+2. Log onto the usage meter UI using the account `usagemeter`.
 
-3. At the prompt, enter `webpass`.
+3. On first login, you will be presented with a welcome screen asking to agree to the terms and conditions, click `I agree...` and click `NEXT..`
 
-4. Enter a password for the Usage Meter web application.
+4. You will now need to configure an internet connection, if you have a HTTP/HTTPS Proxy, select the field and enter the server information and account credentials. If internet access is a direct connection, then select Direct. Click `NEXT..` to initiate a connectivity test to VMware.
 
-    > [!NOTE]
-    > Make a note of the password as you'll need it later to log in to the web application.
-
-5. Enter `exit` to log out.
-
-### Applying the latest patch to the Usage Meter appliance
-
-VMware has released several rollup patch packs for Usage Meter 3.6.1. You need to apply the latest patch: Hot patch 5.
-
-1. Download the hot patch zip file from the link provided in the [Prerequisites](#prerequisites) section.
-
-2. In vCenter, take a snapshot of the Usage Meter appliance.
-
-3. Open the Usage Meter VM console and log on as `root`.
-
-4. Edit the `/etc/ssh/sshd.conf` file using vi and, in the `# Authentication` section, change the `PermitRootLogin` option to `yes`, then save the file.
-
-5. Start the SSH service using the following command:
-
-    `service sshd start`.
-
-6. Using SCP or WinSCP, open a connection to the Usage Meter using the `root` account and transfer the hot patch zip file to the `/home/usgmtr` folder. Close SCP/WinSCP when complete.
-
-7. Switch back to the Usage Meter VM console and stop the SSH service using the following command:
-
-    `service sshd stop`
-
-8. Edit the `/etc/ssh/sshd.conf` file using vi and, in the `# Authentication` section, change the `PermitRootLogin` option back to `no`, then save the file.
-
-9. Change directory to `/home/usgmtr` and unzip the hot patch file using the following command:
-
-    `unzip vCloudUsageMeter-3.6.1.0-16604978-hot_patch_5.zip`
-
-10. Run `cat vCloudUsageMeter-3.6.1.0-16604978-hot_patch_5.rpm.sha1` to display its sha1 hash value.
-
-11. Run `sha1sum vCloudUsageMeter-3.6.1.0-16604978-hot_patch_5.rpm` and compare the output to that of the `cat` output to confirm that they match. If they don't, repeat from step 6.
-
-12. Install the patch using the following command:
-
-    `rpm --install vCloudUsageMeter-3.6.1.0-16604978-hot_patch_5.rpm`
-
-13. When the patch has installed, check the services are up and running using `service tomcat status` and, if everything has worked, the service should be active. If not, regress the snapshot taken earlier and perform the steps again.
-
-14. If the patch was applied successfully, delete the snapshot taken in step 2.
-
-### Configuring the Usage Meter
-
-After installing the Usage Meter and applying the latest patch, you need to perform a couple of configuration tasks to complete the setup of the appliance.
-
-#### Performing initial configuration
-
-First, you need to configure a provider and and email server:
-
-1. In your web browser, connect to the URL that is displayed in the Usage Meter VM console, and log in to the web application using the account `admin` and the password you created earlier.
-
-2. On first login, you'll be presented with a dialog box asking to give your permission to submit data to VMware. Click **Accept**.
-
-3. On the **Provider** tab, configure the provider as follows:
-
-    - **Company**: Enter your company name
-
-    - **Contact Name**: Enter the name of your company contact
-
-    - **Phone**: Enter a phone number for your company contact
-
-    - **Email**: Enter the email address to use as the sender address on any system generated emails
-
-    - **Partner ID**: Enter the details given to you during the onboarding of your service (if you're installing the Usage Meter for the inital scoping of your environment, enter 12345)
-
-    - **Contract Number**: Enter the details given to you during the onboarding of your service (if you're installing the Usage Meter for the inital scoping of your environment, enter 12345)
-
-    - **Site ID**: Enter the details given to you during the onboarding of your service (if you're installing the Usage Meter for the inital scoping of your environment, enter 99)
-
-4. Click **Save**.
-
-5. On the **Email** tab, configure the email server as follows:
-
-    > [!NOTE]
-    > If the Usage Meter VM doesn't have access to an SMTP server, let us know as soon as possible by raising a support ticket in [My Calls](https://portal.skyscapecloud.com/support/ivanti) and we'll provide the necessary information to work around this issue.
-
-    - **Host**: The IP address of your SMTP relay
-
-    - **Port**: Port details of the SMTP relay
-
-    - **Connection Security**: Set the type of the SMTP connection
-
-    - **User**: Enter the username if authentication is required
-
-    - **Password**: Enter the password if authentication is required
-
-6. Click **Send email** to send a test email.
-
-7. When you've completed all the fields and sent a test email, you'll be able to click **Save** on the **Email** tab.
-
-#### Completing Usage Meter configuration
-
-After finishing the initial Usage Meter configuration successfully, you can select the other tabs on the *Manage* page to complete the configuration, clicking **Save** on each tab when you're done.
-
-1. On the **Proxy** tab, in the **IP or hostname** field, enter a dummy IP to prevent the Usage Meter from sending data directly to VMware.
-
-2. On the **Collections** tab, from the **Start at minute** list, select the minute of each hour when you want the Usage Meter to attempt to collect usage information from each product.
-
-3. If you've connected the Usage Meter to your SMTP server, on the **Email Alerts** tab, complete the following fields to inform UKCloud of any failed collections:
-
-    - **From Email**: Enter a sender email address, for example, `usagemeter@<domain>`
-
-    - **To Email**: Enter `vls@ukcloud.com` (if you also want to to receive failed collection alerts, use a comma between addresses and enter your internal email address)
-
-    - **Alerts**: Ensure both **Successful collection** and **Failed collection** are selected
-
-    - **Testing**: Select **Send a test email alert after saving**
+5. If the test is successful, the Summary screen is displayed. At this point it will give you a unique usage meter ID number. You will need to copy this ID and send it to your UKCloud CSM contact, so that we can register your usage meter. Once registered you will then be able to continue with adding your products to be metered.
 
 ## Next steps
 
-This article described how to install and configure the vCloud Usage Meter. Next, you need to give the Usage Meter access to the products that you need it to report on and send monthly usage reports to UKCloud.
+This article described how to install and configure the vCloud Usage Meter 4. Next, you need to give the Usage Meter access to the products that are required to be metered for consumption.
 
-- [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products.md)
-
-- [*How to report licence usage for the VMware Licence Service*](vmw-how-vls-report-usage.md)
+- [*How to add products to the vCloud Usage Meter 4*](vmw-how-vls-add-products-4.md)
 
 ## Feedback
 
