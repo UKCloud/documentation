@@ -256,10 +256,6 @@ Once you have completed the addition of VMware products to usage meter and it ha
 3. Ensure all UKCloud VLS supplied licences have the _Licenses Category_ of **Rental**.
 4. Any old licences that were part of your old VMware perpetual licence should be set to "Perpetual" by selecting the licence, Clicking **EDIT** and changing the _License Category_ to **Perpetual**, and then click **SAVE**.
 
-## Next steps
-
-This article described how to give the Usage Meter access to the products that you need it to report on and how to monitor metering and setting the correct licence pack.
-
 If you are planning on upgrading any of your VLS-licensed VMware products, you must request new licences before upgrading. For more information, see [*How to request a new VLS license*](vmw-how-vls-request-licence.md).
 
 ## Feedback
