@@ -118,7 +118,7 @@ During busy periods, this protection can take longer to complete.
 
 ### How can I get started with the service?
 
-Within five days of accepting your order, we'll create your primary administrator account and send you a welcome pack, which includes the URL for the UKCloud Portal and associated authentication details.
+Within 1 day of accepting your order (shorter deployment times are typically achieved and can be prioritised upon request), we'll create your primary administrator account and send you a welcome pack, which includes the URL for the UKCloud Portal and associated authentication details.
 
 Once you've signed up to the service, you can access your unique credentials (User ID, Subtenant ID, resolvable hostname and shared secret) through the UKCloud Portal, which you simply enter into an EMC Cloud Tiering Appliance or other compatible automated solution.
 
