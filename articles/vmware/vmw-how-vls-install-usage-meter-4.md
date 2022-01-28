@@ -81,7 +81,7 @@ To deploy and set up the Usage Meter:
     
     - **Network 1 IP Address**: Enter the IP address to assign to the Usage Meter
 
-    - **Network 1 Netmask. Netmask in CIDR notation.**: The network mask for this interface. Netmask in CIDR notation (for example, enter 24 for 255.255.255.0 or 28 for 255.255.255.240)
+    - **Network 1 Netmask**: The network mask for this interface in CIDR notation (for example, enter 24 for 255.255.255.0 or 28 for 255.255.255.240)
 
 13. Review the configuration of the import, then click **Finish**.
 
