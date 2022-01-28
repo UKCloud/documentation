@@ -135,7 +135,7 @@
     - name: Add products to the vCloud Usage Meter
       href: vmw-how-vls-add-products.md
     - name: Add products to the vCloud Usage Meter 4
-      href: vmw-how-vls-add-products.md
+      href: vmw-how-vls-add-products-4.md
     - name: Install the vCloud Usage Meter
       href: vmw-how-vls-install-usage-meter.md
     - name: Install the vCloud Usage Meter 4
