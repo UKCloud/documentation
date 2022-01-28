@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Add products to the vCloud Usage Meter 4
-toc_fullpath: How To/VMware Licence Service/vmw-how-vls-add-products.md
-toc_mdlink: vmw-how-vls-add-products.md
+toc_fullpath: How To/VMware Licence Service/vmw-how-vls-add-products-4.md
+toc_mdlink: vmw-how-vls-add-products-4.md
 ---
 
 # How to add products to the vCloud Usage Meter 4
