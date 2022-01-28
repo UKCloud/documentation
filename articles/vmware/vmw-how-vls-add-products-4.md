@@ -249,9 +249,7 @@ Once you've finished adding all of your metered products, you can check monitori
 
 5. If collections are failing, hover the mouse over the icon in the top section to display how many errors were recorded. Click the icon to filter the bottom window and display the error messages.
 
-Check Below steps
 6. If you're unable to diagnose the cause of the errors, you can use the **Support** option from the menu bar to generate a log bundle and then raise a ticket in [My Calls](https://portal.skyscapecloud.com/support/ivanti) and attach the log for investigation.
-Check above steps
 
 ## Setting licence packs
 
