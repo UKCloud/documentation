@@ -4,7 +4,7 @@ description: This article shows how to upgrade your edge gateway to the latest v
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 05/01/2021
+lastreviewed: 31/01/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -41,7 +41,7 @@ To upgrade an isolated organisation network edge, see [*Upgrading an isolated ne
 
 #### vApp network edges
 
-vApps and vApp networks have some optional capabilities that require the use of an NSX edge services gateway in the underlying network. This is often due to the vApp being configured as "fenced", requiring you to use NAT to communicate outside of the vApp. If you've configured a vApp network with any of the following, an NSX edge services gateway is required:
+vApps and vApp networks have some optional capabilities that require the use of an NSX edge services gateway in the underlying network. This is often due to the vApp being configured as *fenced*, requiring you to use NAT to communicate outside of the vApp. If you've configured a vApp network with any of the following, an NSX edge services gateway is required:
 
 - NAT
 
@@ -57,9 +57,7 @@ To upgrade a vApp network edge, see [*Upgrading a vApp network edge*](#upgrading
 
 To complete the steps in this guide you must have access to the UKCloud Portal and VMware Cloud Director.
 
-## Upgrading an edge to the latest available version
-
-### Upgrading an organisation edge gateway
+## Upgrading an organisation edge gateway
 
 > [!IMPORTANT]
 > Before you begin the upgrade process, bear in mind that this process requires downtime as a new VM needs to be deployed for the edge gateway. There will also be a brief network disruption for the networks that are used by the edge gateway instance. You should make sure that you have planned for this downtime before proceeding.
@@ -70,15 +68,19 @@ To upgrade an organisation edge gateway you need to redeploy the edge:
 
 2. In the left navigation panel, under *Networking* select **Edges**.
 
-    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+   ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
 
-3. On the *Edge Gateways* page, select the edge that you want to configure and click **Redeploy**.
+3. On the *Edge Gateways* page, select the edge that you want to configure.
 
-    ![Redeploy button](images/vmw-vcd10.1-btn-redeploy.png)
+   ![Select edge gateway](images/vmw-vcd10.1-edge-select.png)
 
-4. In the *Confirm Redeploy* dialog box, click **OK**.
+4. Click **Redeploy**.
 
-### Upgrading an isolated network edge
+   ![Redeploy option](images/vmw-vcd10.1-btn-redeploy.png)
+
+5. In the *Confirm Redeploy* dialog box, click **OK**.
+
+## Upgrading an isolated network edge
 
 To upgrade an isolated network edge, you need to reset the network. This forces a redeployment of the edge used for the DHCP service.
 
@@ -89,15 +91,19 @@ To upgrade an isolated network edge, you need to reset the network. This forces 
 
 2. In the left navigation panel, select **Networks**.
 
-    ![Networks menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
+   ![Networks menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
 
-3. On the *Networks* page, select the isolated network that contains the edge you want to upgrade and click **Reset**.
+3. On the *Networks* page, select the isolated network that contains the edge you want to upgrade.
 
-    ![Reset network button](images/vmw-vcd10.1-btn-reset-network.png)
+   ![Select network](images/vmw-vcd10.1-network-select.png)
 
-4. In the *Reset Network* dialog box, click **OK**.
+4. Click **Reset**.
 
-### Upgrading a vApp network edge
+   ![Reset network option](images/vmw-vcd10.1-btn-reset-network.png)
+
+5. In the *Reset Network* dialog box, click **OK**.
+
+## Upgrading a vApp network edge
 
 An edge will be present on your vApp network if the network is:
 
@@ -109,7 +115,7 @@ An edge will be present on your vApp network if the network is:
 
 To upgrade a vApp network edge you can either reset the network or shut down the vApp and restart it.
 
-#### Resetting the network
+### Resetting the network
 
 One way to upgrade a vApp network edge is to reset the vApp network.
 
@@ -124,15 +130,21 @@ One way to upgrade a vApp network edge is to reset the vApp network.
 
 3. On the *vApps* page, in the card for the vApp, click **Details**.
 
+   ![vApp Details option](images/vmw-vcd10.1-mnu-vapp-details.png)
+
 4. On the vApp details page, select the **Networks** tab.
 
-5. Select the vApp network that contains the edge you want to upgrade and click **Reset**.
+5. Select the vApp network that contains the edge you want to upgrade.
+
+   ![Select vApp network](images/vmw-vcd10.1-vapp-network-select.png)
+
+6. Click **Reset**.
 
     ![Reset vApp network button](images/vmw-vcd10.1-btn-reset-vapp-network.png)
 
-6. In the *Reset Network* dialog box, click **OK**.
+7. In the *Reset Network* dialog box, click **OK**.
 
-#### Shutting down and restarting the vApp
+### Shutting down and restarting the vApp
 
 Another way to upgrade a vApp network is to shut down the vApp and restart it. Restarting the vApp in this way recreates any networks in the virtual network space and deploys fresh vApp edges with the configuration held in VMware Cloud Director.
 
