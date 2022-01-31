@@ -37,7 +37,6 @@ Service option           | FAQ
 -------------------------|----
 Journaling Protection    | [here](../vmware/vmw-faq-journaling-protection.md)
 Snapshot Protection      | [here](../vmware/vmw-faq-snapshot-protection.md)
-Service failover testing | [here](../vmware/vmw-faq-failover-testing.md)
 Sharing catalogs         | [here](../vmware/vmw-faq-sharing-catalogs.md)
 
 ## Multi-cloud enabling services
