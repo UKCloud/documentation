@@ -28,7 +28,7 @@ This Getting Started Guide helps get you up and running using UKCloud for VMware
 
 This article is intended for any new UKCloud for VMware user. To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a VMware Cloud Director administrator.
 
-## Introductions to UKCloud for VMware
+## Introduction to UKCloud for VMware
 
 We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable and gives you the flexibility to use different service levels, VM sizes, security domains, connectivity and data protection options.
 
