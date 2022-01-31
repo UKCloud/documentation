@@ -10965,83 +10965,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/other/images/fig1_platform_overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/fig1_platform_overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/fig2_sites.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/fig2_sites.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/fig3_regions.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/fig3_regions.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/fig4_services_in_regions.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/fig4_services_in_regions.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/fig5_zones.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/fig5_zones.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/fig6_services_in_zones.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/fig6_services_in_zones.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/fig7_security_domains.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/fig7_security_domains.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/other/images/kms_client_info.png",
       "output": {
         "resource": {
@@ -11222,6 +11145,72 @@
       "output": {
         "resource": {
           "relative_path": "articles/other/images/other-sites-regions-zones.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-srz-platform-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-srz-platform-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-srz-regions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-srz-regions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-srz-security-domains.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-srz-security-domains.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-srz-services-frn.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-srz-services-frn.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-srz-sites.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-srz-sites.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-srz-zones.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-srz-zones.png"
         }
       },
       "is_incremental": false,
@@ -11711,7 +11700,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "4s7LaAX2OfgECVtlbSPTf1WMIRL1CkBksaaeGS7JiiU="
+          "hash": "RJnk0eoYlBQZdTXgpF8RHHMdKaDQuZzmlPH+UwOvBcM="
         }
       },
       "is_incremental": false,
@@ -11723,7 +11712,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-contribute-knowledge.html",
-          "hash": "Xj27N9AoBMQPbeBXm9a9AX8OrXtGrioMhfDHfkxA2V8="
+          "hash": "9hiJyCjfkteZkpS93JtqhMNGTeDoxM8j9Xetd/eHoqU="
         }
       },
       "is_incremental": false,
@@ -12047,7 +12036,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sites-regions-zones.html",
-          "hash": "aL5kN91YkbTTRj86ERn1gkjuAF1i65EFeh2VIlJn4ZQ="
+          "hash": "6AyMZZCpxB5yKYUVgk7UuYW/ny25wAz0whC86hkR5ro="
         }
       },
       "is_incremental": false,
@@ -18248,19 +18237,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "nxYxcVJzKtSzPfyZO60wDB4gXCmzMkylOdBonSLJVBE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-faq-failover-testing.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-faq-failover-testing.html",
-          "hash": "mt05BI/jsnuEh/nWmBur88DHV+eYtZ9iYw/FHC9fk6w="
+          "hash": "BvigEgEujUnChliYmkRMLXsqeLclnnc2ZhvnHEif/9w="
         }
       },
       "is_incremental": false,
@@ -18356,7 +18333,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "Hyhzm94M6mm3U9S+rRmEB+kka7PLELBTlqlbPDfZcFE="
+          "hash": "GRm9fxx1/eEO+LoTe1D5PSrsm6Ih1IhEc/ILVB67+as="
         }
       },
       "is_incremental": false,
@@ -19563,7 +19540,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 458,
+          "total_file_count": 457,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

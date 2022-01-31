@@ -6,8 +6,6 @@
   items:
   - name: Journaling Protection FAQs
     href: vmw-faq-journaling-protection.md
-  - name: Service failover testing FAQs
-    href: vmw-faq-failover-testing.md
   - name: Sharing catalogs FAQs
     href: vmw-faq-sharing-catalogs.md
   - name: Snapshot Protection FAQs
