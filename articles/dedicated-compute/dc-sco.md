@@ -4,7 +4,7 @@ description: Outlines important details regarding Dedicated Compute v2
 services: dedicated-compute
 author: shall
 reviewer: gmartin
-lastreviewed: 02/11/2020
+lastreviewed: 31/01/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -99,7 +99,7 @@ You can request Dedicated Compute v2 via your Service Delivery Manager or using 
 
 The minimum commitment period to the service is 30 days. The notice period is 30 days.
 
-On receipt of all relevant information, we will deploy the service within 10 working days for standard configurations.
+On receipt of all relevant information, we will work with you to deploy the service within an agreed timeframe based on standard configurations.
 
 Dedicated Compute v2 is available only in UKCloud Regions 5 and 6.
 
