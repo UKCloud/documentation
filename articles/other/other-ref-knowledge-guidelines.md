@@ -342,7 +342,7 @@ where:
 
 - `description` indicates the purpose of the image (the description can consist of multiple words, with each word separated by a hyphen)
 
-## Typography
+## Typographic conventions
 
 Within Knowledge Centre articles we use the following typographic conventions.
 
