@@ -4,7 +4,7 @@ description: Provides guidelines for what to consider when creating and editing 
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 28/01/2021
+lastreviewed: 31/01/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,14 +17,14 @@ toc_mdlink: other-ref-knowledge-guidelines.md
 
 # UKCloud Knowledge Centre guidelines
 
-If you're contributing content to the UKCloud Knowledge Centre, it's important that you follow the guidelines listed in this article.
+If you're contributing content to the UKCloud Knowledge Centre, it's important that you adhere to the following guidelines to ensure that your article is consistent with others in the Knowledge Centre.
 
 For information about how to contribute content, see [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md).
 
 ## Sensitive content
 
 > [!IMPORTANT]
-> Content in the Knowledge Centre is publicly available to anyone, therefore it is extremely important to ensure that articles do not contain any sensitive information, including, but not limited to, user names and sensitive IP addresses. This includes information that may be in screenshots or images. If you're unsure about whether information in the article is sensitive, consult with a subject matter expert before submitting your changes.
+> Content in the Knowledge Centre is publicly available to anyone, therefore it is extremely important to ensure that articles do not contain any sensitive information, including, but not limited to, names and sensitive IP addresses. This includes information that may be in screenshots or images. If you're unsure about whether information in the article is sensitive, consult with a subject matter expert before submitting your changes.
 
 ## Submission of content
 
@@ -36,13 +36,13 @@ Article file names are constructed as follows, with each element separated by a 
 
 `<product>-<type>-<description>-<tool>.md`
 
-where:
+Where:
 
 - `product` indicates which product the topic is for, for example `vmw` for UKCloud for VMware, `conn` for Connectivity or `ptl` for the UKCloud Portal
 
 - `type` indicates the article type, for example `how` for How To Guides, `sd` for Service Definitions or `vid` for Videos
 
-- `description` indicates the purpose of the article
+- `description` indicates what the article is about (the description can consist of multiple words, with each word separated by a hyphen)
 
 - `tool` (optional) indicates if the topic is specific to a particular tool (for example, a CLI or API)
 
@@ -84,7 +84,7 @@ Use additional sections to break the article up into manageable chunks to make i
 
 Section headings should use *Sentence capitalisation* (that is, the first word should start with an uppercase letter and all other words should be all lowercase unless they are proper nouns).
 
-In How To articles, you may just have a single additional section describing the task being described in the article -- you should use gerunds (words ending in -ing) for the section headings. For example *Logging into the OpenStack Horizon dashboard*. If the article includes multiple tasks, put each task into its own section, but avoid having too many tasks in a single article.
+In How To articles, you may just have a single additional section describing the task being described in the article -- you should use gerunds (words ending in -ing) for these section headings. For example *Logging into the OpenStack Horizon dashboard*. If the article includes multiple tasks, put each task into its own section, but avoid having too many tasks in a single article.
 
 Reference Guides can include as many sections as necessary to keep the content easy to read. But don't use too many levels of subsections as it can be difficult for users to keep track of where they are if the subsections go too deep.
 
@@ -96,7 +96,7 @@ For information about creating links, see [*Links*](#links).
 
 ### Related information sections
 
-For reference articles, where possible, include a *Related articles* and/or *Related videos* section at the end to provide pointers for what to read next.
+For reference articles, where possible, include a *Related articles* and/or *Related videos* section at the end to provide pointers for what to read next. You can also include a *Related videos* section at the end of procedural articles if there is a video that shows how to perform one or more of the tasks described in the article.
 
 If there are resources outside of the Knowledge Centre that would be useful to users, for example, vendor articles or web pages, include these in a *More information* section at the end of the article.
 
@@ -110,15 +110,15 @@ If you find a problem with this article, click **Improve this Doc** to make the 
 
 **Markdown**
 
-```none
+```markdown
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
 ```
 
 ## Using markdown
 
-Knowledge Centre articles are written using GitHub markdown. For more information, see [*Basic writing and formatting syntax*](https://help.github.com/articles/basic-writing-and-formatting-syntax/).
+Knowledge Centre articles are written using GitHub markdown. For more information, see [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-As we use DocFX to generate our Knowledge Centre site, you can also use DocFX markdown to add additional features to your articles. For example, DocFX markdown provides a way of highlighting notes, tips and warnings.
+As we use DocFX to generate our Knowledge Centre site, you can also use DocFX markdown to add additional features to your articles. For example, DocFX markdown provides a way of highlighting notes, tips and warnings (for more information, see [*Notes, tips and warnings*](#notes-tips-and-warnings)).
 
 ### Headings
 
@@ -126,12 +126,14 @@ Use the `#` symbol to identify headings within the article. Use a single `#` for
 
 **Markdown:**
 
-```none
+```markdown
 # Article title
 
 ## First level heading
 
 ### Second level heading
+
+#### Third level heading
 ```
 
 ### Formatting text
@@ -140,43 +142,25 @@ Use the `#` symbol to identify headings within the article. Use a single `#` for
 
 For **bold** text, for example to identify interactive UI elements in a procedural step, enclose the text in double-asterisks.
 
-**Markdown:**
-
-```none
-Click **Improve this Doc** to open the article in GitHub.
-```
-
-**Looks like:**
-
-Click **Improve this Doc** to open the article in GitHub.
+Markdown | Looks like
+---------|-----------
+`Click **Improve this Doc** to open the article in GitHub` | Click **Improve this Doc** to open the article in GitHub
 
 #### Italics
 
 For *italic* text, for example to identify non-interacive UI elements in a procedural step, enclose the text in single asterisks.
 
-**Markdown:**
-
-```none
-On the *Open a pull request* page, provide more details about the change you've made.
-```
-
-**Looks like:**
-
-On the *Open a pull request* page, provide more details about the change you've made.
+Markdown | Looks like
+---------|-----------
+`On the *Open a pull request* page, provide more details about the change you've made.` | On the *Open a pull request* page, provide more details about the change you've made.
 
 #### Monospace
 
 For `monospace` text, enclose the text in backticks.
 
-**Markdown:**
-
-```none
-Enter the IP address, for example, `192.168.1.10`.
-```
-
-**Looks like:**
-
-Enter the IP address, for example, `192.168.1.10`.
+Markdown | Looks like
+---------|-----------
+```Enter the IP address, for example, `192.168.1.10`.``` | Enter the IP address, for example, `192.168.1.10`.
 
 ### Lists
 
@@ -236,69 +220,45 @@ Numbered lists are for lists where the order is important. A How To Guide will u
 
 #### Links to external content
 
-To link to content outside of the Knowledge Centre, use the following markdown:
+To link to content outside of the Knowledge Centre, you can include the URL directly.
 
-``` none
-<url>
-```
+Markdown | Looks like
+---------|-----------
+`<https://ukcloud.com/>` | <https://ukcloud.com/>
 
-For example, to link to <https://ukcloud.com/>, use:
+Or you can provide some descriptive link text.
 
-``` none
-<https://ukcloud.com/>
-```
-
-To use descriptive text for the link, rather than just the URL, use the following markdown:
-
-``` none
-[text](url)
-```
-
-For example, to point to the [UKCloud](https://ukcloud.com/) website, use:
-
-``` none
-[UKCloud](https://ukcloud.com/)
-```
+Markdown | Looks like
+---------|-----------
+`[UKCloud website](https://ukcloud.com/)` | [UKCloud website](https://ukcloud.com/)
 
 #### Links to other Knowledge Centre articles
 
-When linking to other Knowledge Centre articles use *italics* for the article title to identify it as an internal link.
+When linking to other Knowledge Centre articles, provide the article title as the link text and use *italics* to identify it as an internal link.
 
-- Links to other articles within the same section of the Knowledge Centre just need to point to the filename:
+- Links to other articles within the same section of the Knowledge Centre just need to point to the `.md` filename:
 
-    ``` none
-    [*topic-title*](topic-filename.md)
-    ```
-
-    For example, to point to [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md), which is within the same section of the Knowledge Centre as this article, use:
-
-    ``` none
-    [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)
-    ```
+  Markdown | Looks like
+  ---------|-----------
+  `[*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)` | [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)
 
 - Links to articles in different sections of the Knowledge Centre need to also include the appropriate folder name:
 
-    ``` none
-    [*topic-title*](../product/topic-filename.md)
-    ```
+  Markdown | Looks like
+  ---------|-----------
+  `[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)` | [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
 
-    For example, to point to the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md), which is within the `portal` section of the Knowledge Centre, use:
+You can also link to a section within an article using anchors. The anchor is the section heading, in all lowercase with spaces replaced by hyphens. To link to a section in the current article, just provide the anchor.
 
-    ``` none
-    [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
-    ```
+Markdown | Looks like
+---------|-----------
+`[*Article file naming conventions*](#article-file-naming-conventions)` | [*Article file naming conventions*](#article-file-naming-conventions)
 
-- Links to a section within the current article, use the following markdown:
+To link to a section in a different article, provide the anchor after the `.md` filename.
 
-    ``` none
-    [*section-heading*](#section-anchor)
-    ```
-
-    The `section-anchor` is the section heading, in all lowercase with spaces replaced by hyphens. For example, to point to the [*Article file naming conventions*](#article-file-naming-conventions) section within this article, use:
-
-    ``` none
-    [*Article file naming conventions*](#article-file-naming-conventions)
-    ```
+Markdown | Looks like
+---------|-----------
+`[*Logging in to the UKCloud Portal*](../portal/ptl-gs.md#logging-in-to-the-ukcloud-portal)` | [*Logging in to the UKCloud Portal*](../portal/ptl-gs.md#logging-in-to-the-ukcloud-portal)
 
 ### Notes, tips and warnings
 
@@ -311,7 +271,7 @@ A note provides important information.
 
 **Markdown:**
 
-``` none
+```none
 > [!NOTE]
 > This is a note, which provides important information.
 ```
@@ -325,7 +285,7 @@ A tip provides helpful, but not necessarily essential, information.
 
 **Markdown:**
 
-``` none
+```none
 > [!TIP]
 > This is a tip, which provides helpful information for working with a product.
 ```
@@ -339,7 +299,7 @@ Important notes provide important information that requires particular attention
 
 **Markdown:**
 
-``` none
+```none
 > [!IMPORTANT]
 > This is an important note, which requires particular attention.
 ```
@@ -353,7 +313,7 @@ Warnings provide important information about something which could have signific
 
 **Markdown:**
 
-``` none
+```none
 > [!WARNING]
 > This is a warning, which provides users with information about something which could cause significant issues if ignored.
 ```
@@ -362,11 +322,11 @@ Warnings provide important information about something which could have signific
 
 To insert an image into an article use the following markdown:
 
-``` none
-![alt-text](images/image-file-name.png)
-```
+Markdown | Looks like
+---------|-----------
+`![UKCloud logo](images/home-ukc-logo.png)` | ![UKCloud logo](images/home-ukc-logo.png)
 
-The `alt-text` is a short bit of text, read out by screen readers, that helps sight impaired users determine what the image is illustrating.
+The text inside the square brackets (`UKCloud logo` in the example above) is called *alt text*  and is a short bit of text that is shown if the image cannot be displayed. This text is also read out by screen readers, which helps users with impaired vision to determine what the image is depicting.
 
 Images used in articles are stored in a separate `images` folder below the main product folder and should use the following file naming convention:
 
@@ -380,15 +340,21 @@ where:
 
 - `ui` (optional) indicates the UI element the image is depicting, for example, `mnu` for a menu, `btn` for a button or `tab` for a tab
 
-- `description` indicates the purpose of the image
+- `description` indicates the purpose of the image (the description can consist of multiple words, with each word separated by a hyphen)
+
+## Typographic conventions
+
+Within Knowledge Centre articles we use the following typographic conventions.
+
+Element | Convention | Example
+--------|------------|--------
+All interactive UI elements (including tabs) | Use **bold** | Select the **Enable** check box.<br>From the **File** menu, select **Open**.<br>On the **VMs** tab, ...
+All non-interactive UI elements (for example, windows, pages, dialog boxes, sections on a page) | Use *italics* | On the *User account* page, ...<br>In the *Create new user* dialog box, ...<br>In the *Contact details* section of the *Create new user* dialog box, ...
+Commands, code, parameters, user-entered text | Use `monospace` | Use the `slmgr` command to ...<br>`application/*+xml;version=34.0`<br>In the **Name** field, enter `Accept`.
 
 ## Related articles
 
 - [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)
-
-## Related videos
-
-- [*Editing Knowledge Centre articles video*](other-vid-kc-contribution.md)
 
 ## Feedback
 
