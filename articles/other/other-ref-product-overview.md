@@ -30,7 +30,7 @@ This article is designed to provide you with a top level comparison for our main
 **UKCloud for VMware**                   | No         | 1 hour                         | 4 hours         | 30 days
 **Cloud Storage**                        | No         | 1 month                        | 1 day           | 30 days
 **Cross Domain Security Zone**           | No         | 1 month                        | 5 days (following validation of assurance documents) | 30 days
-**Dedicated Compute v2**                 | No         | 30 days                        | 10 working days | 30 days
+**Dedicated Compute v2**                 | No         | 30 days                        | As agreed with customer | 30 days
 **Disaster Recovery as a Service**       | No         | 1 hour                         | 4 hours         | 30 days
 **Email & Collaboration as a Service**   | No         | 25 mailboxes                   | 5 days          | 30 days
 **Managed Monitoring as a Service**      | No         | 1 month                        | 5 days          | 30 days
