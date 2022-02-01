@@ -94,8 +94,6 @@
     href: vmw-how-use-affinity-rules.md
   - name: Use the VMware OVF Tool
     href: vmw-how-use-ovf-tool.md
-  - name: Use VM location
-    href: vmw-how-use-vm-location.md
   - name: View and update virtual machine settings
     href: vmw-how-update-vm-settings.md
   - name: View storage profile usage

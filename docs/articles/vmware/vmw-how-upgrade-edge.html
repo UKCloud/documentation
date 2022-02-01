@@ -105,7 +105,7 @@
 <p>When you create an isolated organisation network in a VDC in VMware Cloud Director, DHCP services are enabled by default with a DHCP pool of any remaining IP addresses not used by any static IP pools specified for the network. A small NSX edge services gateway is deployed on the network to manage DHCP traffic. If you disable the DHCP service after creation of the network, the edge is removed.</p>
 <p>To upgrade an isolated organisation network edge, see <a href="#upgrading-an-isolated-network-edge"><em>Upgrading an isolated network edge</em></a>.</p>
 <h4 id="vapp-network-edges">vApp network edges</h4>
-<p>vApps and vApp networks have some optional capabilities that require the use of an NSX edge services gateway in the underlying network. This is often due to the vApp being configured as &quot;fenced&quot;, requiring you to use NAT to communicate outside of the vApp. If you've configured a vApp network with any of the following, an NSX edge services gateway is required:</p>
+<p>vApps and vApp networks have some optional capabilities that require the use of an NSX edge services gateway in the underlying network. This is often due to the vApp being configured as <em>fenced</em>, requiring you to use NAT to communicate outside of the vApp. If you've configured a vApp network with any of the following, an NSX edge services gateway is required:</p>
 <ul>
 <li><p>NAT</p>
 </li>
@@ -119,8 +119,7 @@
 <p>To upgrade a vApp network edge, see <a href="#upgrading-a-vapp-network-edge"><em>Upgrading a vApp network edge</em></a>.</p>
 <h2 id="intended-audience">Intended audience</h2>
 <p>To complete the steps in this guide you must have access to the UKCloud Portal and VMware Cloud Director.</p>
-<h2 id="upgrading-an-edge-to-the-latest-available-version">Upgrading an edge to the latest available version</h2>
-<h3 id="upgrading-an-organisation-edge-gateway">Upgrading an organisation edge gateway</h3>
+<h2 id="upgrading-an-organisation-edge-gateway">Upgrading an organisation edge gateway</h2>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Before you begin the upgrade process, bear in mind that this process requires downtime as a new VM needs to be deployed for the edge gateway. There will also be a brief network disruption for the networks that are used by the edge gateway instance. You should make sure that you have planned for this downtime before proceeding.</p>
@@ -132,13 +131,16 @@
 <li><p>In the left navigation panel, under <em>Networking</em> select <strong>Edges</strong>.</p>
 <p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>On the <em>Edge Gateways</em> page, select the edge that you want to configure and click <strong>Redeploy</strong>.</p>
-<p><img src="images/vmw-vcd10.1-btn-redeploy.png" alt="Redeploy button"></p>
+<li><p>On the <em>Edge Gateways</em> page, select the edge that you want to configure.</p>
+<p><img src="images/vmw-vcd10.1-edge-select.png" alt="Select edge gateway"></p>
+</li>
+<li><p>Click <strong>Redeploy</strong>.</p>
+<p><img src="images/vmw-vcd10.1-btn-redeploy.png" alt="Redeploy option"></p>
 </li>
 <li><p>In the <em>Confirm Redeploy</em> dialog box, click <strong>OK</strong>.</p>
 </li>
 </ol>
-<h3 id="upgrading-an-isolated-network-edge">Upgrading an isolated network edge</h3>
+<h2 id="upgrading-an-isolated-network-edge">Upgrading an isolated network edge</h2>
 <p>To upgrade an isolated network edge, you need to reset the network. This forces a redeployment of the edge used for the DHCP service.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
@@ -150,13 +152,16 @@
 <li><p>In the left navigation panel, select <strong>Networks</strong>.</p>
 <p><img src="images/vmw-vcd10.1-mnu-networks.png" alt="Networks menu option in VMware Cloud Director"></p>
 </li>
-<li><p>On the <em>Networks</em> page, select the isolated network that contains the edge you want to upgrade and click <strong>Reset</strong>.</p>
-<p><img src="images/vmw-vcd10.1-btn-reset-network.png" alt="Reset network button"></p>
+<li><p>On the <em>Networks</em> page, select the isolated network that contains the edge you want to upgrade.</p>
+<p><img src="images/vmw-vcd10.1-network-select.png" alt="Select network"></p>
+</li>
+<li><p>Click <strong>Reset</strong>.</p>
+<p><img src="images/vmw-vcd10.1-btn-reset-network.png" alt="Reset network option"></p>
 </li>
 <li><p>In the <em>Reset Network</em> dialog box, click <strong>OK</strong>.</p>
 </li>
 </ol>
-<h3 id="upgrading-a-vapp-network-edge">Upgrading a vApp network edge</h3>
+<h2 id="upgrading-a-vapp-network-edge">Upgrading a vApp network edge</h2>
 <p>An edge will be present on your vApp network if the network is:</p>
 <ul>
 <li><p>Connected to an organisation network</p>
@@ -167,7 +172,7 @@
 </li>
 </ul>
 <p>To upgrade a vApp network edge you can either reset the network or shut down the vApp and restart it.</p>
-<h4 id="resetting-the-network">Resetting the network</h4>
+<h3 id="resetting-the-network">Resetting the network</h3>
 <p>One way to upgrade a vApp network edge is to reset the vApp network.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
@@ -180,16 +185,20 @@
 <p><img src="images/vmw-vcd10.1-mnu-vapps.png" alt="vApps menu option in VMware Cloud Director"></p>
 </li>
 <li><p>On the <em>vApps</em> page, in the card for the vApp, click <strong>Details</strong>.</p>
+<p><img src="images/vmw-vcd10.1-mnu-vapp-details.png" alt="vApp Details option"></p>
 </li>
 <li><p>On the vApp details page, select the <strong>Networks</strong> tab.</p>
 </li>
-<li><p>Select the vApp network that contains the edge you want to upgrade and click <strong>Reset</strong>.</p>
+<li><p>Select the vApp network that contains the edge you want to upgrade.</p>
+<p><img src="images/vmw-vcd10.1-vapp-network-select.png" alt="Select vApp network"></p>
+</li>
+<li><p>Click <strong>Reset</strong>.</p>
 <p><img src="images/vmw-vcd10.1-btn-reset-vapp-network.png" alt="Reset vApp network button"></p>
 </li>
 <li><p>In the <em>Reset Network</em> dialog box, click <strong>OK</strong>.</p>
 </li>
 </ol>
-<h4 id="shutting-down-and-restarting-the-vapp">Shutting down and restarting the vApp</h4>
+<h3 id="shutting-down-and-restarting-the-vapp">Shutting down and restarting the vApp</h3>
 <p>Another way to upgrade a vApp network is to shut down the vApp and restart it. Restarting the vApp in this way recreates any networks in the virtual network space and deploys fresh vApp edges with the configuration held in VMware Cloud Director.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>

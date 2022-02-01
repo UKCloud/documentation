@@ -93,25 +93,25 @@
                   
 <h1 id="ukcloud-knowledge-centre-guidelines">UKCloud Knowledge Centre guidelines</h1>
 
-<p>If you're contributing content to the UKCloud Knowledge Centre, it's important that you follow the guidelines listed in this article.</p>
+<p>If you're contributing content to the UKCloud Knowledge Centre, it's important that you adhere to the following guidelines to ensure that your article is consistent with others in the Knowledge Centre.</p>
 <p>For information about how to contribute content, see <a href="other-how-contribute-knowledge.html"><em>How to contribute to the UKCloud Knowledge Centre</em></a>.</p>
 <h2 id="sensitive-content">Sensitive content</h2>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Content in the Knowledge Centre is publicly available to anyone, therefore it is extremely important to ensure that articles do not contain any sensitive information, including, but not limited to, user names and sensitive IP addresses. This includes information that may be in screenshots or images. If you're unsure about whether information in the article is sensitive, consult with a subject matter expert before submitting your changes.</p>
+<p>Content in the Knowledge Centre is publicly available to anyone, therefore it is extremely important to ensure that articles do not contain any sensitive information, including, but not limited to, names and sensitive IP addresses. This includes information that may be in screenshots or images. If you're unsure about whether information in the article is sensitive, consult with a subject matter expert before submitting your changes.</p>
 </div>
 <h2 id="submission-of-content">Submission of content</h2>
 <p>By submitting content you're granting UKCloud permission to use your submission in our Knowledge Centre, which is available for public consumption. In addition, you'll also be identified as a contributor to the article in our public GitHub repository.</p>
 <h2 id="article-file-naming-conventions">Article file naming conventions</h2>
 <p>Article file names are constructed as follows, with each element separated by a hyphen:</p>
 <p><code>&lt;product&gt;-&lt;type&gt;-&lt;description&gt;-&lt;tool&gt;.md</code></p>
-<p>where:</p>
+<p>Where:</p>
 <ul>
 <li><p><code>product</code> indicates which product the topic is for, for example <code>vmw</code> for UKCloud for VMware, <code>conn</code> for Connectivity or <code>ptl</code> for the UKCloud Portal</p>
 </li>
 <li><p><code>type</code> indicates the article type, for example <code>how</code> for How To Guides, <code>sd</code> for Service Definitions or <code>vid</code> for Videos</p>
 </li>
-<li><p><code>description</code> indicates the purpose of the article</p>
+<li><p><code>description</code> indicates what the article is about (the description can consist of multiple words, with each word separated by a hyphen)</p>
 </li>
 <li><p><code>tool</code> (optional) indicates if the topic is specific to a particular tool (for example, a CLI or API)</p>
 </li>
@@ -141,55 +141,84 @@
 <h3 id="further-sections">Further sections</h3>
 <p>Use additional sections to break the article up into manageable chunks to make it easier to read.</p>
 <p>Section headings should use <em>Sentence capitalisation</em> (that is, the first word should start with an uppercase letter and all other words should be all lowercase unless they are proper nouns).</p>
-<p>In How To articles, you may just have a single additional section describing the task being described in the article -- you should use gerunds (words ending in -ing) for the section headings. For example <em>Logging into the OpenStack Horizon dashboard</em>. If the article includes multiple tasks, put each task into its own section, but avoid having too many tasks in a single article.</p>
+<p>In How To articles, you may just have a single additional section describing the task being described in the article -- you should use gerunds (words ending in -ing) for these section headings. For example <em>Logging into the OpenStack Horizon dashboard</em>. If the article includes multiple tasks, put each task into its own section, but avoid having too many tasks in a single article.</p>
 <p>Reference Guides can include as many sections as necessary to keep the content easy to read. But don't use too many levels of subsections as it can be difficult for users to keep track of where they are if the subsections go too deep.</p>
 <h3 id="next-steps-section">Next steps section</h3>
 <p>For procedural articles, where possible include a <em>Next steps</em> section after describing the tasks within the article to point users to other articles that might be helpful. Lead into the list of articles by recapping what was covered in the current article.</p>
 <p>For information about creating links, see <a href="#links"><em>Links</em></a>.</p>
 <h3 id="related-information-sections">Related information sections</h3>
-<p>For reference articles, where possible, include a <em>Related articles</em> and/or <em>Related videos</em> section at the end to provide pointers for what to read next.</p>
+<p>For reference articles, where possible, include a <em>Related articles</em> and/or <em>Related videos</em> section at the end to provide pointers for what to read next. You can also include a <em>Related videos</em> section at the end of procedural articles if there is a video that shows how to perform one or more of the tasks described in the article.</p>
 <p>If there are resources outside of the Knowledge Centre that would be useful to users, for example, vendor articles or web pages, include these in a <em>More information</em> section at the end of the article.</p>
 <p>For information about creating links, see <a href="#links"><em>Links</em></a>.</p>
 <h3 id="feedback-section">Feedback section</h3>
 <p>The last section in every article should be the <em>Feedback</em> section. This provides users with information about how to provide feedback to UKCloud on their experience either with the Knowledge Centre or with our platform. The feedback section should include the following text:</p>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 <p><strong>Markdown</strong></p>
-<pre><code class="lang-none">If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to &lt;feedback@ukcloud.com&gt;.
+<pre><code class="lang-markdown">If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to &lt;feedback@ukcloud.com&gt;.
 </code></pre>
 <h2 id="using-markdown">Using markdown</h2>
-<p>Knowledge Centre articles are written using GitHub markdown. For more information, see <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/"><em>Basic writing and formatting syntax</em></a>.</p>
-<p>As we use DocFX to generate our Knowledge Centre site, you can also use DocFX markdown to add additional features to your articles. For example, DocFX markdown provides a way of highlighting notes, tips and warnings.</p>
+<p>Knowledge Centre articles are written using GitHub markdown. For more information, see <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a>.</p>
+<p>As we use DocFX to generate our Knowledge Centre site, you can also use DocFX markdown to add additional features to your articles. For example, DocFX markdown provides a way of highlighting notes, tips and warnings (for more information, see <a href="#notes-tips-and-warnings"><em>Notes, tips and warnings</em></a>).</p>
 <h3 id="headings">Headings</h3>
 <p>Use the <code>#</code> symbol to identify headings within the article. Use a single <code>#</code> for the article title and add additional <code>#</code> symbols to indicate the level of subheading for subsequent sections.</p>
 <p><strong>Markdown:</strong></p>
-<pre><code class="lang-none"># Article title
+<pre><code class="lang-markdown"># Article title
 
 ## First level heading
 
 ### Second level heading
+
+#### Third level heading
 </code></pre>
 <h3 id="formatting-text">Formatting text</h3>
 <h4 id="bold">Bold</h4>
 <p>For <strong>bold</strong> text, for example to identify interactive UI elements in a procedural step, enclose the text in double-asterisks.</p>
-<p><strong>Markdown:</strong></p>
-<pre><code class="lang-none">Click **Improve this Doc** to open the article in GitHub.
-</code></pre>
-<p><strong>Looks like:</strong></p>
-<p>Click <strong>Improve this Doc</strong> to open the article in GitHub.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Click **Improve this Doc** to open the article in GitHub</code></td>
+<td>Click <strong>Improve this Doc</strong> to open the article in GitHub</td>
+</tr>
+</tbody>
+</table>
 <h4 id="italics">Italics</h4>
 <p>For <em>italic</em> text, for example to identify non-interacive UI elements in a procedural step, enclose the text in single asterisks.</p>
-<p><strong>Markdown:</strong></p>
-<pre><code class="lang-none">On the *Open a pull request* page, provide more details about the change you've made.
-</code></pre>
-<p><strong>Looks like:</strong></p>
-<p>On the <em>Open a pull request</em> page, provide more details about the change you've made.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>On the *Open a pull request* page, provide more details about the change you've made.</code></td>
+<td>On the <em>Open a pull request</em> page, provide more details about the change you've made.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="monospace">Monospace</h4>
 <p>For <code>monospace</code> text, enclose the text in backticks.</p>
-<p><strong>Markdown:</strong></p>
-<pre><code class="lang-none">Enter the IP address, for example, `192.168.1.10`.
-</code></pre>
-<p><strong>Looks like:</strong></p>
-<p>Enter the IP address, for example, <code>192.168.1.10</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enter the IP address, for example, `192.168.1.10`.</code></td>
+<td>Enter the IP address, for example, <code>192.168.1.10</code>.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="lists">Lists</h3>
 <h4 id="bulleted-lists">Bulleted lists</h4>
 <p>Bulleted lists are for lists of items where the order doesn't matter. For lists where the items are short, incomplete sentences, you don't need to include a full stop at the end of each item. For longer sentences or multiple sentences, use full stops. But be consistent within each list; if one item in a list needs a full stop, all items that list should end in a full stop. Include an empty line in between each item in the list.</p>
@@ -244,43 +273,102 @@
 </code></pre>
 <h3 id="links">Links</h3>
 <h4 id="links-to-external-content">Links to external content</h4>
-<p>To link to content outside of the Knowledge Centre, use the following markdown:</p>
-<pre><code class="lang-none">&lt;url&gt;
-</code></pre>
-<p>For example, to link to <a href="https://ukcloud.com/">https://ukcloud.com/</a>, use:</p>
-<pre><code class="lang-none">&lt;https://ukcloud.com/&gt;
-</code></pre>
-<p>To use descriptive text for the link, rather than just the URL, use the following markdown:</p>
-<pre><code class="lang-none">[text](url)
-</code></pre>
-<p>For example, to point to the <a href="https://ukcloud.com/">UKCloud</a> website, use:</p>
-<pre><code class="lang-none">[UKCloud](https://ukcloud.com/)
-</code></pre>
+<p>To link to content outside of the Knowledge Centre, you can include the URL directly.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;https://ukcloud.com/&gt;</code></td>
+<td><a href="https://ukcloud.com/">https://ukcloud.com/</a></td>
+</tr>
+</tbody>
+</table>
+<p>Or you can provide some descriptive link text.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[UKCloud website](https://ukcloud.com/)</code></td>
+<td><a href="https://ukcloud.com/">UKCloud website</a></td>
+</tr>
+</tbody>
+</table>
 <h4 id="links-to-other-knowledge-centre-articles">Links to other Knowledge Centre articles</h4>
-<p>When linking to other Knowledge Centre articles use <em>italics</em> for the article title to identify it as an internal link.</p>
+<p>When linking to other Knowledge Centre articles, provide the article title as the link text and use <em>italics</em> to identify it as an internal link.</p>
 <ul>
-<li><p>Links to other articles within the same section of the Knowledge Centre just need to point to the filename:</p>
-<pre><code class="lang-none">[*topic-title*](topic-filename.md)
-</code></pre>
-<p>For example, to point to <a href="other-how-contribute-knowledge.html"><em>How to contribute to the UKCloud Knowledge Centre</em></a>, which is within the same section of the Knowledge Centre as this article, use:</p>
-<pre><code class="lang-none">[*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)
-</code></pre>
+<li><p>Links to other articles within the same section of the Knowledge Centre just need to point to the <code>.md</code> filename:</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)</code></td>
+<td><a href="other-how-contribute-knowledge.html"><em>How to contribute to the UKCloud Knowledge Centre</em></a></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li><p>Links to articles in different sections of the Knowledge Centre need to also include the appropriate folder name:</p>
-<pre><code class="lang-none">[*topic-title*](../product/topic-filename.md)
-</code></pre>
-<p>For example, to point to the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>, which is within the <code>portal</code> section of the Knowledge Centre, use:</p>
-<pre><code class="lang-none">[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
-</code></pre>
-</li>
-<li><p>Links to a section within the current article, use the following markdown:</p>
-<pre><code class="lang-none">[*section-heading*](#section-anchor)
-</code></pre>
-<p>The <code>section-anchor</code> is the section heading, in all lowercase with spaces replaced by hyphens. For example, to point to the <a href="#article-file-naming-conventions"><em>Article file naming conventions</em></a> section within this article, use:</p>
-<pre><code class="lang-none">[*Article file naming conventions*](#article-file-naming-conventions)
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)</code></td>
+<td><a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
+<p>You can also link to a section within an article using anchors. The anchor is the section heading, in all lowercase with spaces replaced by hyphens. To link to a section in the current article, just provide the anchor.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[*Article file naming conventions*](#article-file-naming-conventions)</code></td>
+<td><a href="#article-file-naming-conventions"><em>Article file naming conventions</em></a></td>
+</tr>
+</tbody>
+</table>
+<p>To link to a section in a different article, provide the anchor after the <code>.md</code> filename.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[*Logging in to the UKCloud Portal*](../portal/ptl-gs.md#logging-in-to-the-ukcloud-portal)</code></td>
+<td><a href="../portal/ptl-gs.html#logging-in-to-the-ukcloud-portal"><em>Logging in to the UKCloud Portal</em></a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="notes-tips-and-warnings">Notes, tips and warnings</h3>
 <h4 id="notes">Notes</h4>
 <p>A note provides important information.</p>
@@ -324,9 +412,21 @@
 </code></pre>
 <h3 id="images">Images</h3>
 <p>To insert an image into an article use the following markdown:</p>
-<pre><code class="lang-none">![alt-text](images/image-file-name.png)
-</code></pre>
-<p>The <code>alt-text</code> is a short bit of text, read out by screen readers, that helps sight impaired users determine what the image is illustrating.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>![UKCloud logo](images/home-ukc-logo.png)</code></td>
+<td><img src="images/home-ukc-logo.png" alt="UKCloud logo"></td>
+</tr>
+</tbody>
+</table>
+<p>The text inside the square brackets (<code>UKCloud logo</code> in the example above) is called <em>alt text</em>  and is a short bit of text that is shown if the image cannot be displayed. This text is also read out by screen readers, which helps users with impaired vision to determine what the image is depicting.</p>
 <p>Images used in articles are stored in a separate <code>images</code> folder below the main product folder and should use the following file naming convention:</p>
 <p><code>&lt;product&gt;-&lt;tool&gt;-&lt;ui&gt;-&lt;description&gt;.png</code></p>
 <p>where:</p>
@@ -337,16 +437,40 @@
 </li>
 <li><p><code>ui</code> (optional) indicates the UI element the image is depicting, for example, <code>mnu</code> for a menu, <code>btn</code> for a button or <code>tab</code> for a tab</p>
 </li>
-<li><p><code>description</code> indicates the purpose of the image</p>
+<li><p><code>description</code> indicates the purpose of the image (the description can consist of multiple words, with each word separated by a hyphen)</p>
 </li>
 </ul>
+<h2 id="typographic-conventions">Typographic conventions</h2>
+<p>Within Knowledge Centre articles we use the following typographic conventions.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Convention</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All interactive UI elements (including tabs)</td>
+<td>Use <strong>bold</strong></td>
+<td>Select the <strong>Enable</strong> check box.<br>From the <strong>File</strong> menu, select <strong>Open</strong>.<br>On the <strong>VMs</strong> tab, ...</td>
+</tr>
+<tr>
+<td>All non-interactive UI elements (for example, windows, pages, dialog boxes, sections on a page)</td>
+<td>Use <em>italics</em></td>
+<td>On the <em>User account</em> page, ...<br>In the <em>Create new user</em> dialog box, ...<br>In the <em>Contact details</em> section of the <em>Create new user</em> dialog box, ...</td>
+</tr>
+<tr>
+<td>Commands, code, parameters, user-entered text</td>
+<td>Use <code>monospace</code></td>
+<td>Use the <code>slmgr</code> command to ...<br><code>application/*+xml;version=34.0</code><br>In the <strong>Name</strong> field, enter <code>Accept</code>.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="related-articles">Related articles</h2>
 <ul>
 <li><a href="other-how-contribute-knowledge.html"><em>How to contribute to the UKCloud Knowledge Centre</em></a></li>
-</ul>
-<h2 id="related-videos">Related videos</h2>
-<ul>
-<li><a href="other-vid-kc-contribution.html"><em>Editing Knowledge Centre articles video</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>

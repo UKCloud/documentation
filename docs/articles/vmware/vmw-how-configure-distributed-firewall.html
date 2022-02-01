@@ -99,9 +99,12 @@
 <p><img src="images/vmw-dfw-overview.png" alt="Distributed Firewall overview"></p>
 <p>The DFW rules can be based on Layer 2 (L2) up to Layer 4 (L4).</p>
 <ul>
-<li>Layer 2 (L2) rules (Ethernet tab) are based on MAC address L2 protocols like ARP, RARP and LLDP</li>
-<li>Layer 3 (L3) rules (General tab) are based on Ip source destination</li>
-<li>Layer 4 (L4) uses a TCP or UDP service port</li>
+<li><p>Layer 2 (L2) rules (Ethernet tab) are based on MAC address L2 protocols like ARP, RARP and LLDP</p>
+</li>
+<li><p>Layer 3 (L3) rules (General tab) are based on IP source destination</p>
+</li>
+<li><p>Layer 4 (L4) uses a TCP or UDP service port</p>
+</li>
 </ul>
 <p>L2 (Ethernet) firewall rules are processed before L3 rules. The default firewall rule allows L2 and L3 traffic to pass through your VDCs. Once you've implemented all the rules, you can change this to block. Rules are always read and enforced from top-to-bottom ordering like any traditional firewall.</p>
 <p>DFW rules can have one or more of the following entities as the source or destination: Org VDC networks, virtual machines, Org VDCs, MAC sets (L2 – Ethernet), IP sets (L3 – General) or security groups.</p>
@@ -134,49 +137,40 @@
 <tr>
 <th>Field</th>
 <th>Action</th>
-<th> </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Name</td>
 <td>Enter a name for the rule.</td>
-<td></td>
 </tr>
 <tr>
 <td>Source</td>
 <td>Hover over the field, then click the <strong>IP</strong> button to enter a single IP address or an IP range. When you're done, click <strong>Keep</strong>.</td>
-<td><img src="images/vmw-vcd91-dfw-l3-rule-source-ip.png" alt="Source IP Address dialog box"></td>
 </tr>
 <tr>
 <td>Destination</td>
 <td>Hover over the field, then click the <strong>IP</strong> button to enter a single IP address or an IP range. When you're done, click <strong>Keep</strong>.</td>
-<td><img src="images/vmw-vcd91-dfw-l3-rule-dest-ip.png" alt="Destination IP Address dialog box"></td>
 </tr>
 <tr>
 <td>Service</td>
 <td>Hover over the field, then click the <strong>IP</strong> button to add the relevant <strong>Protocol</strong> and <strong>Port</strong>. When you're done, click <strong>Keep</strong>.</td>
-<td><img src="images/vmw-vcd91-dfw-l3-rule-add-service.png" alt="Add Service dialog box"></td>
 </tr>
 <tr>
 <td>Action</td>
 <td>Select <strong>Allow</strong> or <strong>Deny</strong>.</td>
-<td></td>
 </tr>
 <tr>
 <td>Direction</td>
 <td>Select <strong>In</strong>, <strong>Out</strong> or <strong>In/Out</strong>.</td>
-<td></td>
 </tr>
 <tr>
 <td>Packet Type</td>
 <td>Select <strong>IPv4</strong>, <strong>IPv6</strong> or <strong>Any</strong>.</td>
-<td></td>
 </tr>
 <tr>
 <td>Applied To</td>
 <td>Hover over the field, then click the <strong>+</strong> button to select whether to apply the rule to an edge, Org VDC network, virtual machine, Org VDC or security group. Select the specific object then click the right arrow to add it. When you're done, click <strong>Keep</strong>.</td>
-<td><img src="images/vmw-vcd91-dfw-l3-rule-select-objects.png" alt="Select objects dialog box"></td>
 </tr>
 </tbody>
 </table>
