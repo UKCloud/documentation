@@ -85,7 +85,7 @@ You cannot specifically request this as part of the service, but UKCloud retains
 
 ### Can I be alerted when a VM is moved to a different site?
 
-This feature isn't currently supported. However, you can check the location of your VMs. For more information, see [*How to use VM location*](vmw-how-use-vm-location.md).
+This feature isn't supported.
 
 ## Failover testing
 

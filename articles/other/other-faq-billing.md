@@ -135,7 +135,9 @@ You can add metadata to your individual VMs, which propagates to the evidence fi
 > [!NOTE]
 > The VM metadata will be listed in the evidence file on the day after you tag the VM. For example, if you tag your VM on the 3rd, the metadata will be listed in the evidence file from the 4th, unless a VM power cycle occurs on the 3rd.
 
-The [*How to use VM location*](../vmware/vmw-how-use-vm-location.md) article includes information about how to access metadata for your VMs.
+To access metadata for a VM, in VMware Cloud Director, in the card for the VM, click **Details** and then select the **Metadata** tab.
+
+![VM Metadata tab in VMware Cloud Director](images/other-vcd-vm-metadata.png)
 
 ## UKCloud for OpenStack charges
 
