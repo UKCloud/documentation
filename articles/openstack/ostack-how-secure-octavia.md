@@ -91,8 +91,8 @@ openstack secret store --name='tls_secret2' -t 'application/octet-stream' -e 'ba
 +---------------+----------------------------------------------------------------------------------------+
 | Field         | Value                                                                                  |
 +---------------+----------------------------------------------------------------------------------------+
-| Secret href   | https://frn00003.cni.ukcloud.com:13311/v1/secrets/<REDACTED> |
-| Name          | tls_secret2                                                                         |
+| Secret href   | https://frn00003.cni.ukcloud.com:13311/v1/secrets/<REDACTED>                           |
+| Name          | tls_secret2                                                                            |
 | Created       | None                                                                                   |
 | Status        | None                                                                                   |
 | Content types | {u'default': u'application/octet-stream'}                                              |
