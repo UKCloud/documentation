@@ -1,51 +1,51 @@
 ---
-title: How to secure a HTTPS endpoint using Octavia and Barbican.
-description: Provides information on using Octavia TERMINATED_HTTPS endpoint type.
+title: How to secure an HTTPS endpoint using Octavia and Barbican
+description: Provides information on using the Octavia TERMINATED_HTTPS endpoint type
 services: openstack
 author: srelf
-reviewer: 
-lastreviewed: 
+reviewer: shighmoor
+lastreviewed: 18/01/2022
 
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Use Octavia and Barbican to secure an HTTPS endpoint.
+toc_title: Secure an HTTPS endpoint using Octavia and Barbican
 toc_fullpath: How To/ostack-how-secure-octavia.md
 toc_mdlink: ostack-how-secure-octavia.md
 ---
 
-#  How to secure a HTTPS endpoint using Octavia and Barbican.
+#  How to secure an HTTPS endpoint using Octavia and Barbican
 
 ## Overview
 
-Octavia is the OpenStack Load Balancing as a Service (LBaaS), which provides the option to use terminated_https listeners. This type of listener accepts HTTPS connections, and then passes traffic to the backend servers on standard HTTP. This helps to reduce load on the backend servers by having all encryption/decryption happen on a seperate device.
+Octavia is the OpenStack Load Balancing as a Service (LBaaS), which provides the option to use TERMINATED_HTTPS listeners. This type of listener accepts HTTPS connections, and then passes traffic to the backend servers on standard HTTP. This helps to reduce load on the backend servers by having all encryptionand decryption happen on a seperate device.
 
-This article will provide instructions on how to make use of Octavia and Barbican to setup a terminated_https listener.
-
+This article provides instructions on how to use Octavia and Barbican to setup a TERMINATED_HTTPS listener.
 
 ## Prerequisites
 
-This guide assumes familiarity with setting up Octavia loadbalancers. For more information please see [How to use Octavia Load Balancing as a Service on UKCloud for OpenStack](https://docs.ukcloud.com/articles/openstack/ostack-how-use-octavia.html) for basic instructions.
+This article assumes familiarity with setting up Octavia load balancers. For more information, see [*How to use Octavia Load Balancing as a Service on UKCloud for OpenStack*](ostack-how-use-octavia.md) for basic instructions.
 
-- You will require a valid certificate chain in pkcs12 format
-    - You can convert from a PEM to pkcs12 format using the following command "openssl pkcs12 -export -inkey server.key -in server.crt -passout pass: -out server.p12"
+- You'll need a valid certificate chain in pkcs12 format
+
+  You can convert from a PEM to pkcs12 format using the following command: `openssl pkcs12 -export -inkey server.key -in server.crt -passout pass: -out server.p12`
 
 ## Use cases
 
-With a TLS-terminated HTTPS load balancer, web clients communicate with the load balancer over TLS protocols. The load balancer terminates the TLS session and forwards the decrypted requests to the back-end servers. By terminating the TLS session on the load balancer, we offload the CPU-intensive encryption work to the load balancer, and enable the possibility of using advanced load balancer features, like Layer 7 features and header manipulation
+With a TLS-terminated HTTPS load balancer, web clients communicate with the load balancer over TLS protocols. The load balancer terminates the TLS session and forwards the decrypted requests to the back-end servers. By terminating the TLS session on the load balancer, we offload the CPU-intensive encryption work to the load balancer, and enable the possibility of using advanced load balancer features, like Layer 7 features and header manipulation.
 
-### CLI example creating a new terminated_https listener.
+## CLI example creating a new TERMINATED_HTTPS listener
 
-#### Store your SSL certificate in Barbican
+### Store your SSL certificate in Barbican
 
 ```none
 openstack secret store --name='tls_secret1' -t 'application/octet-stream' -e 'base64' --payload="$(base64 < server.p12)"
 +---------------+----------------------------------------------------------------------------------------+
 | Field         | Value                                                                                  |
 +---------------+----------------------------------------------------------------------------------------+
-| Secret href   | https://frn00003.cni.ukcloud.com:13311/v1/secrets/<REDACTED> |
+| Secret href   | https://frn00003.cni.ukcloud.com:13311/v1/secrets/<REDACTED>                           |
 | Name          | tls_secret1                                                                            |
 | Created       | None                                                                                   |
 | Status        | None                                                                                   |
@@ -58,9 +58,9 @@ openstack secret store --name='tls_secret1' -t 'application/octet-stream' -e 'ba
 +---------------+----------------------------------------------------------------------------------------+
 ```
 
-Please follow [How to use Octavia Load Balancing as a Service on UKCloud for OpenStack](https://docs.ukcloud.com/articles/openstack/ostack-how-use-octavia.html) until you reach the section "Create A listener"
+To create the load balancer, follow the steps in [*How to use Octavia Load Balancing as a Service on UKCloud for OpenStack*](ostack-how-use-octavia.md) until you reach the section *Create a listener*.
 
-#### Create a listener
+### Create a TERMINATED_HTTPS listener
 
 ```none
 openstack loadbalancer listener create --protocol-port 443 --protocol TERMINATED_HTTPS --name listener1 --default-tls-container=$(openstack secret list | awk '/ tls_secret1 / {print $2}') my-lbaas
@@ -77,14 +77,14 @@ openstack loadbalancer listener create --protocol-port 443 --protocol TERMINATED
 | insert_headers              | None                                 |
 | l7policies                  |                                      |
 | loadbalancers               | 5e815730-8cde-4d31-8761-f50422767c49 |
-| name                        | listener1               |
+| name                        | listener1                            |
 ```
 
-Now go back and follow [How to use Octavia Load Balancing as a Service on UKCloud for OpenStack](https://docs.ukcloud.com/articles/openstack/ostack-how-use-octavia.html) to continue the creation of the loadbalancer.
+Now you've created the TERMINATED_HTTPS listener, go back to [*How to use Octavia Load Balancing as a Service on UKCloud for OpenStack*](https://docs.ukcloud.com/articles/openstack/ostack-how-use-octavia.html) and follow the remaining steps to continue the creation of the load balancer.
 
-### CLI example updating or changing the SSL certificate used by the listener.
+## CLI example updating or changing the SSL certificate used by the listener
 
-#### Upload the new SSL certificate to Barbican
+### Upload the new SSL certificate to Barbican
 
 ```none
 openstack secret store --name='tls_secret2' -t 'application/octet-stream' -e 'base64' --payload="$(base64 < server-new.p12)"
@@ -104,7 +104,8 @@ openstack secret store --name='tls_secret2' -t 'application/octet-stream' -e 'ba
 +---------------+----------------------------------------------------------------------------------------+
 ```
 
-#### Update the listener to use the new SSL certificate
+### Update the listener to use the new SSL certificate
+
 ```none
 openstack loadbalancer listener set <listener_ID> --default-tls-container-ref "https://frn00003.cni.ukcloud.com:13311/v1/secrets/SECRET_ID"
 ```
