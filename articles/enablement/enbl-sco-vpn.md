@@ -15,7 +15,7 @@ toc_mdlink: enbl-sco-vpn.md
 
 ## About this document
 
-This document describes the Cloud Enablement services available for VPN solutions. 
+This document describes the Cloud Enablement services available for VPN solutions. For information regarding CPA-approved (or equivalent standard) VPN solutions, see the relevant service scope.
 
 ## About Cloud Enablement
 
@@ -38,7 +38,7 @@ The table provides an overview of the Cloud Enablement services available for VP
 **Resilience available?** | We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a  self-managed resilient solution.
 **Failover responsibility** | Customer
 **Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (for example, Cloud Enablement in region 5 cannot be stretched to region 6).
-**Next steps** | Raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## What connectivity does the VPN service provide?
 
