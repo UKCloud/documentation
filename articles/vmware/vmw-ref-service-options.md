@@ -4,7 +4,7 @@ description: Provides information about the different choices you can make when 
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 25/02/2021
+lastreviewed: 04/02/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -55,6 +55,8 @@ Choose any additional storage needed to support your application and add as many
 
 - **Tier 2** storage provides general all-purpose block storage, providing a balance of performance and cost.
 
+For more information, see [*Storage options on the UKCloud platform*](../other/other-ref-storage-overview.md).
+
 ## Data protection options
 
 Whether you're driven by recovery point (RPO) or recovery time (RTO), you can choose the right level of automated, on-platform protection for your environments.
@@ -73,11 +75,11 @@ Choose the application and data protection needed for your solution. You can cho
 
 The Advanced Management bundle provides:
 
-- Advanced monitoring, provided by the vRealize Operations (vROps) Tenant Appliance, enabling you to view metrics and reports relating to your UKCloud for VMware environment.
-
 - Additional distributed networking functionality: Distributed Firewall (DFW), Distributed Logical Router (DLR) and L2 VPN.
 
-For more information, see [*Advanced management for UKCloud for VMware*](vmw-ref-advanced-mgmt.md)
+- Advanced monitoring, provided by the vRealize Operations (vROps) Tenant Appliance, enabling you to view metrics and reports relating to your UKCloud for VMware environment.
+
+For more information, see [*Advanced management options*](vmw-ref-advanced-mgmt.md)
 
 ## Feedback
 
