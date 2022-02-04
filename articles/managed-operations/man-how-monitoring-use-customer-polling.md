@@ -36,18 +36,16 @@ While we're confident that modern monitoring tooling, such as Opsview, ManageEng
 
 ### Alert forwarding method
 
-If you want to provide your own polling service, then it must support one of the UKCloud's accepted methods of accepting alerts, which are:
- 
-- HTTPS GET/POST
+If you want to provide your own polling service it must support one of UKCloud's accepted methods of receiving alerts, which are:
 
-- API integration with Moogsoft AIOps via HTTP/HTTPS reverse proxy
+- HTTPS GET/POST
 
 - SNMP traps
 
 - Local command execution (for example, a script that can be executed that can generate an SNMP trap or make a POST or GET request to a URL)
- 
+
 In addition to being able to forward alert information, the data must contain the hostname of the device and be able to provide a reference to a [*Playbook*](#playbooks), which will be used by UKCloud to indicate the correct contact and escalation instructions for any live alert.
- 
+
 > [!NOTE]
 > We cannot guarantee that your polling technology will be compatible with the service until the forwarding method has been investigated, confirmed and tested by UKCloud.
 
