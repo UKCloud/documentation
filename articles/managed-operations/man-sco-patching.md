@@ -3,8 +3,8 @@ title: Patching as a Service Service Scope
 description: Outlines important details regarding Patching as a Service
 services: managed-operations
 author: sdixon
-reviewer: mgough
-lastreviewed: 19/01/2021
+reviewer: sdixon
+lastreviewed: 03/02/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
