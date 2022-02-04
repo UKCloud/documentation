@@ -3,8 +3,8 @@ title: Cloud Enablement - CAPS/CPA-approved VPN Service Scope
 description: Outlines important details regarding Cloud Enablement services available for CAPS and CPA-approved (or equivalent standard) VPN solutions.
 services: enablement
 author: shall
-reviewer: bchallis
-lastreviewed: 08/12/2020
+reviewer: nstobbart
+lastreviewed: 06/12/2021
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -27,7 +27,7 @@ The Cloud Enablement service provides basic facilities for your own hardware to 
 
 The table provides an overview of the Cloud Enablement services available for CAPS and CPA-approved (or equivalent standard) VPN solutions. If the usage scenario you need isn't shown in the table, contact us to discuss your requirements.
 
-Use case | Chosen connectivity option:<br>CPA-approved (or equivalent standard) encryption is needed on the chosen line
+Use case | Chosen connectivity option:<br>CPA-approved (or equivalent standard) encryption is required on the chosen line
 -------------|---------------------------------------
 **Service type** | Connectivity
 **Security level** | Elevated OFFICIAL
@@ -51,7 +51,7 @@ The VPN service provides up to two ports:
 
 - Cloud Enablement in regions 1, 2, 7 & 8 offers copper connectivity only
 
-- Cloud Enablement in regions 5 & 6 offers connectivity via SFP, so customers can use fibre or copper
+- Cloud Enablement in regions 5, 6, 13 & 14 offers connectivity via SFP, so customers can use fibre or copper
 
 - The connection is into a shared switch.
 
@@ -59,7 +59,7 @@ The VPN service provides up to two ports:
 
 - In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
 
-- In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10 Gbps (fibre only)
+- In regions 5, 6, 13 & 14, the port speed can be either 1Gbps (copper or fibre) or 10 Gbps (fibre only)
 
 ## Who manages the switch?
 
