@@ -3,8 +3,8 @@ title: Managed Monitoring as a Service FAQs
 description: Frequently asked questions for Managed Monitoring as a Service
 services: managed-operations
 author: sdixon
-reviewer: mgough
-lastreviewed: 17/01/2021
+reviewer: sdixon
+lastreviewed: 04/02/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
@@ -29,8 +29,6 @@ With Managed Monitoring as a Service, we become your first line of support, 24 h
 
 UKCloud uses the same technologies we use in house to monitor events across our public clouds to deliver our Managed Monitoring as a Service, providing you with the confidence that well proven and understood technologies are being used to underpin this service.
 
-This service also leverages the benefits of AIOps (see below).
-
 ## Prerequisites
 
 ### Do I need to install an agent within my VM to enable this service?
@@ -42,10 +40,6 @@ By default, UKCloud will provide this service without the use of an agent by uti
 To see a full list of prerequisites, including what ports need to be opened on your firewalls, see [*Managed IT Operations prerequisites*](https://docs.ukcloud.com/articles/managed-operations/man-ref-customer-prereqs.html)
 
 ## General
-
-### What is AIOps?
-
-The term *AIOps* stands for *artificial intelligence for IT operations*. AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies.
 
 ### Do I get access to a dashboard or reports?
 
