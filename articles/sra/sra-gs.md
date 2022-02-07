@@ -30,14 +30,13 @@ This document is for customers who have:
 
 ## Post approval
 
-Once the SRA Assurance Wrap has been approved, we'll raise a Service Request for the implementation of the SRA virtual data centre (VDC) and, if needed, an Elevated VDC. (If a service request for this VDC implementation already exists, a new one won't be raised.)
+Once the SRA Assurance Wrap has been approved, we'll raise a Service Request for the implementation of the SRA virtual data centre (VDC) and, if needed, an Elevated VDC. If a service request for this VDC implementation already exists, a new one won't be raised.
 
 You can track the progress of the Service Request using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-During creation of the UKCloud SRA VDC, we'll ask you for some additional information
-via the Service Request:
+As part of the build, we may reach out to confirm some of the following details if not already defined and where appropriate:
 
-- Confirm the customer account number in Elevated as a new Org will be created under the account to contain the SRA VDC. The Org number will be used as an identifier when signing certificates.
+- Confirm your Elevated OFFICIAL customer account number as a new Org will be created under the account to contain the SRA VDC. The Org number will be used as an identifier when signing certificates.
 
 - The preferred IP pool you want to use for your client devices. If the IP Pool you'd prefer is in use by another customer then another will have to be chosen. We'll inform you if this is the case.
 
@@ -45,11 +44,9 @@ via the Service Request:
 
 - Any specified DNS servers.
 
-- The Elevated Network Firewall Tenant (NFT) number and the Elevated organisation containing it for connection into Elevated.
-
 - A certificate signing request for each remote access device.
 
-## Certificate signing request generation
+## Certificate Signing Request (CSR) generation
 
 To enable SRA access, we'll need the certificate-signing request (CSR) from each remote access device you'll be using. The certificate-generation process will vary depending on the OS of the client device.
 
@@ -57,31 +54,33 @@ To enable SRA access, we'll need the certificate-signing request (CSR) from each
 
 Follow the steps below to generate the CSR for a Windows device.
 
-1. Open the Certificates MMC snap-in (click **Start**, click **Run**, type **mmc** and then press **Enter**) select **Certificates** and then **Computer Account**.
+1. Open the Certificates MMC snap-in (click **Start**, click **Run**, type **mmc** and then press **Enter**)
 
-2. In the console tree, double-click **Personal** and then click **Certificates**.
+2. Select File > Add/Remove Snap-in > **Certificates** > Add > **Computer Account** > Next > **Local computer** > Finish
 
-3. On the **Actions** menu, point to **All Tasks**, point to **Advanced Options** and then click **Create Custom Request** to start the Certificate Enrolment wizard. Click **Next**.
+3. In the console tree, double-click **Personal** and then click **Certificates**.
 
-4. On the Custom request page, in the **Templates** list, we recommend using the **Custom Request** option as your domain policy may be incompatible with the SRA service.
+4. On the **Actions** menu, point to **All Tasks**, **Advanced Options** and then click **Create Custom Request** to start the Certificate Enrolment wizard. Click **Next**.
+
+5. On the Custom request page, in the **Templates** list, we recommend using the **Custom Request** option as your domain policy may be incompatible with the SRA service.
 
     - Select **Proceed without enrolment policy** and click **Next**.
 
-5. Select **(No template) CNG key** and ensure the **PKCS#10** radio button is selected, then click **Next**.
+6. Select **(No template) CNG key** and ensure the **PKCS#10** radio button is selected, then click **Next**.
 
-6. At the **Certificate Information** page, click the down arrow next to **Details** then click the **Properties** button.
+7. At the **Certificate Information** page, click the down arrow next to **Details** then click the **Properties** button.
 
-7. Click the **Private Key** tab, then the down arrow to the right of **Key options**.
+8. Click the **Private Key** tab, then the down arrow to the right of **Key options**.
 
-8. Change the **Key size** to **2048** and click **Apply**.
+9. Change the **Key size** to **2048** and click **Apply**.
 
     - **Optional:** If you want to back up the certificate (to protect against client device failure) click the check boxes for the **private key**. You'll be asked for a password.
 
-9. For the file format, select **Base 64** and then save the CSR.
+10. For the file format, select **Base 64** and then save the CSR.
 
-### Linux
+### Linux & Mac OS
 
-For Linux, an equivalent OpenSSL command would be the following:
+For Linux & Mac OS, an equivalent OpenSSL command would be the following:
 
     openssl req -nodes -newkey rsa:2048 -keyout myserver.key -out server.csr
 
@@ -89,14 +88,13 @@ Ensure that the key file is preserved for the later installation steps below, as
 
 ## CSR submission to UKCloud
 
-We request that you paste the contents of the CSR file directly into a ticket for us to generate the associated certificate(s), but you can also email it to us if you cannot access the Portal.
+We request that you provide the CSR in a service request via the Elevated UKCloud Portal by adding it as an attachment to the ticket so that we can generate the associated certificate(s). Should you not have access to the Elevated Portal or not be able to copy the CSR into the Elevated domain, please get in touch and we'll advise where this can be sent.
 
-## VPN Cisco AnyConnect client setup
+## Cisco AnyConnect client setup
 
-To access your SRA VDC you need to raise a service request to acquire the Cisco AnyConnect client and install (requires UKCloud Portal login).
+Upon completion of the build, as part of the getting Started pack, we will provide you with access to the required Cisco AnyConnect Client installation files.
 
-For each OS there is the main Cisco AnyConnect client software install and an additional executable to enable the FIPS capability. You need to run both.
-
+Should you or any additional users need to acquire the AnyConnect installation at a later date, please raise a service request and we can provide access to the required files.
 
 
 ### Linux
@@ -111,56 +109,48 @@ cd anyconnect-<version number>-/vpn
 sudo ./vpn_install.sh
 ```
 
-#### Enable FIPS
-
-```
-tar zxvf anyconnect-linux-64-<version number>-enableFIPS.tar.gz
-
-./ anyconnect-linux-64-<version number>-enableFIPS
-```
-
 ### Windows
 
 #### Install the AnyConnect client
 
-The windows installation has the option of `.msi` or `.iso` (that contains the `.msi`) for the AnyConnect client image. The following installs may need to be run as administrator depending on the local policy of your Windows device.
+Whilst the Windows installation may come with the full AnyConnect package, the only component required for connecting to the SRAS VPN is the `core-vpn` component. You may install the additional components if you wish.
 
-Right click on the `anyconnect-win-<version number>-pre-deploy.msi` and select Install.
+Either Right-Click on the `anyconnect-win-<version>-core-vpn-predeploy-k9.msi` and select install. Alternatively, run setup.exe and select the required components from the installation wizard.
 
-#### Enable FIPS
+### Mac OS
 
-Double click `anyconnect-EnableFIPS-win-<version number>.exe` and then enter `y` when asked at the command prompt.
+Double click the `anyconnect-macos-<version number>-predeploy-k9.dmg` file.
 
-### Mac
+In the pop-up window, double click `AnyConnect.pkg` and then follow the installation wizard to install the AnyConnect software.
 
-No further instructions required.
-
-## AnyConnect client software
-
-We'll make the latest Cisco AnyConnect client software available via the Knowledge Centre using the link above. Using the latest version of the AnyConnect client will probably be a requirement of your ITSHC or service assurance wrap so it will be worth checking the above articles periodically.
-
-If a client is upgraded from a previous install then the following post installation steps will need to be performed again to ensure the client configuration isn't reverted to the default.
+If prompted to select which components to install, the only component required for the SRAS VPN is the `core-vpn`.
 
 ## Post-installation configuration
 
-Once you've installed the AnyConnect software and certificates on your device, you need to install the connection profile, which is available from UKCloud Support. Unzip the file and copy the xml to the following location:
+Once you've installed the AnyConnect software and certificates on your device, you will need to install the required connection profile. Access to the required connection profiles will be shared via the Getting Started pack which is sent upon completion of the solution build. Should you or any additional users need to acquire the profiles at a later date, please raise a service request and we can provide access to the required files.
+
+Unzip the file and copy the XML file(s) to the following locations:
 
 OS type | CPA XML location
 --------|-----------------
-Linux/Mac | `/opt/cisco/anyconnect/profile`
+Linux/Mac OS | `/opt/cisco/anyconnect/profile`
 Windows | `C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile`
 
 ### For Linux only
 
-In addition to the AnyConnect profile, you also need to install a local policy, which is available from UKCloud Support.
+In addition to the AnyConnect profile(s), you will also need to install a local policy. If you wish to connect from a Linux device, please raise a service request and we can provide access to the required file.
 
-Unzip the file and copy it to: `/opt/cisco/anyconnect/AnyConnectLocalPolicy.xml`.
+Once you've copied the connection profile and local policy to the correct locations, you need to restart the AnyConnect service (using the command `service vpnagentd restart`) or reboot your machine.
 
-Once you've copied the connection profile and local policy to the correct locations, you need to restart the AnyConnect service (using the command service `vpnagentd restart`) or reboot the VM.
+## AnyConnect Client Upgrades
 
-## SRA certificates
+UKCloud will periodically update the minimum AnyConnect client version required to connect to the Secure Remote Access service. As per our standard notice period, we will always try to provide a minimum of 2 weeks notice where possible before performing an upgrade but **withhold the right to perform necessary upgrades at shorter notice where any security concerns dictate.**
 
-Once the SRA VDC has been set up (and Elevated VDC, if needed), we'll send you an email containing the certificates we've generated (based on the CSR sent to us as above) which you need to install onto your remote access devices.
+Automatic upgrades will be pushed to AnyConnect clients when connecting to the SRAS VPN for the first time following an upgrade. To enable automatic upgrades, port TCP/443 must be permitted to the SRAS VPN endpoints. The AnyConnect upgrade **does not** require administrative privileges on the device. Any custom measures implemented through Group Policy which restrict the installation of software or network adapters may prevent the installation of the upgrade and you may need to install the updated client on the necessary machines prior to UKCloud performing the upgrade. If you require a manual installation or would like to install the updated client ahead of time, you can raise a support request via the UKCloud Portal and we can provide you with the required Cisco AnyConnect installation files.
+
+## Certificate Installation
+
+Once your Secure Remote Access solution has been setup, we'll send you an email containing the certificates we've generated (based on the CSR sent to us as above) which you'll need to install on your remote access device.
 
 For each customer SRA service a unique IssuingCA certificate is generated and used to sign each individual device certificates. The IssuingCA certificate along with the specific certificate for the device will be emailed. Both the certificates need to be installed.
 
@@ -174,7 +164,7 @@ The certificates sent through will named as below:
 
 Follow the steps below to import the certificates into the Windows certificate store. This assumes that you have the certificates we sent accessible to the MMC:
 
-1. Open the Certificates MMC snap-in (click **Start**, click **Run**, type **mmc**, and then press **Enter**) select **Certificates** and then **Computer Account**.
+1. Open the Certificates MMC snap-in (click **Start**, click **Run**, type **mmc**, and then press **Enter**) select **Certificates** and then **Local Computer Account**.
 
 2. In the console tree, open **Trusted Root Certification Authorities**, right click **Certificates** and select **All tasks – Import - Next**.
 
@@ -192,7 +182,11 @@ Follow the steps below to import the certificates into the Windows certificate s
 
 9. Ensure that the **Place all certificates** radio button has **Personal** selected then click **Next** then **Finish**.
 
-Using the example customer **SRAS-1-1-2** you should now see the client certificate in the **Personal** store.
+10. Using the example customer **SRAS-1-1-2** you should now see the client certificate in the Personal store.
+
+**Example:**
+
+Using the example customer **SRAS-1-1-2** you should now see the client certificate in the Personal store.
 
 ![Windows certificate store](images/sra-windows-certificate-store.png)
 
@@ -202,7 +196,7 @@ Double click it and as in the examples pictures below:
 
     ![General tab of Certificate dialog](images/sra-windows-certificate-general.png)
 
-- The UID should be displayed the **Details** tab in the **Subject** line in the format SRAS-1-1-2-<Unique Number>
+- The UID should be displayed the **Details** tab in the **Subject** line in the format SRAS-1-1-2-xxx
 
     ![Details tab of Certificate dialog](images/sra-windows-certificate-details.png)
 
@@ -210,15 +204,17 @@ Double click it and as in the examples pictures below:
 
     ![Certification Path of Certificate dialog](images/sra-windows-certificate-path.png)
 
-### Linux certificate store
+### Linux & Mac OS 
 
-The Linux certificate store is just a file structure under the root or user account depending on how you use Linux OS. For the Linux client to work the following must be true:
+The Linux & Mac OS certificate store is just a file structure under the user account you'll be using to connect to the SRAS VPN. For the AnyConnect client to work, the following must be true:
 
 - All certificate files must end with the extension `.pem`
 
 - All private key files must end with the extension `.key`
 
 - A client certificate and its corresponding private key must have the same filename. For example `client.pem` and `client.key`
+
+- **The certificate and key must be owned by the same user and stored in that user's file structure.**
 
 Using the example customer issued certificate SRAS1-1-2-001.pem the files would be stored in the following locations for root. The key file generated above needs to moved and renamed appropriately.
 
@@ -228,37 +224,39 @@ PEM file certificate store folders | Type of certificates stored
 ~/.cisco/certificates/client/SRAS1-1-2-001.pem | Client certificates
 ~/.cisco/certificates/ca/clientcert.pem | Trusted CA and root certificates
 
-## Connecting to SRA
+If the above directories do not already exist, they can be manually created.
 
-Once connected to your SRA VPN, you can access your SRA walled garden via IP address or DNS name (if you have a DNS set up). Client connection methods are listed below.
+## Connecting to SRAS
 
-### Linux
+Once connected to the SRAS VPN, you can access your Elevated OFFICIAL environment via IP address or DNS name (if you have DNS configured) providing you have permitted connectivity from your assigned SRAS VPN subnet. Client connection methods are listed below.
 
-Once you've restarted AnyConnect and installed the certificates, you can use the client with the following command line:
+### Linux & Mac OS
 
-    /opt/cisco/anyconnect/bin/vpn connect sra01.ukcloud.com
+Once you've restarted AnyConnect and installed the certificates, you can use the client with the following command line (SRAS endpoints are defined in the connection profiles installed previously):
 
-Or if you use a Linux desktop the client software should be available as an icon.
+/opt/cisco/anyconnect/bin/vpn connect \<sras-endpoint\>
+
+If you use MacOS or a Linux Desktop distribution, you should be able to use the Cisco AnyConnect Graphical User Interface (GUI).
 
 ### Windows
 
-When you open the AnyConnect client you'll see a small window appear and the location of the SRA service should be populated:
+When you open the Cisco AnyConnect client, you'll see a window appear. Providing you have installed the SRAS XML profile as explained previously, you will be able to select the SRAS VPN endpoint from the dropdown box.
 
 ![Cisco AnyConnect Secure Mobility Client connection dialog box](images/sra-windows-anyconnect-client.png)
 
-Click the **Connect** button and after a couple of status checks the client should scan the certificate store and offer the relevant certificate to initiate access.
+Click the **Connect** button and after a couple of status checks the client should scan the certificate store and give you the option to select a certificate to connect with. If you have multiple certificates installed on your machine, you may need to select 'More Choices' to reveal the required certificate.
 
 ![Cisco AnyConnect Secure Mobility Client certificate selection](images/sra-windows-anyconnect-select-certificate.png)
 
-Select the certificate and click **OK**.
+Once you have selected the require certificate, AnyConnect should connect you to the SRAS VPN.
 
-## Accessing the UKCloud Portal using SRA
+## Accessing the UKCloud Portal using SRAS
 
-There is no direct access to the Elevated portal once the AnyConnect client connects.
+There is no direct access to the UKCloud Elevated Portal once the Cisco AnyConnect client connects.
 
-In most instances we'll create a virtual machine (VM) within the SRA VDC that you can VPN into in order to log in to the Elevated portal to provision and manage your SRA and Elevated VDC. Once this VM is deployed, it becomes your responsibility to manage and maintain it. This VM will be billed according to standard UKCloud billing process.
+In most cases, we will create a virtual machine (Bastion VM) within the SRA VDC that you can RDP to once connected to the VPN. From the Bastion VM, you can access and log in to the UKCloud Elevated Portal to provision and manage your SRA and Elevated environments. Once the Bastion VM is deployed, it becomes your responsibility to manage and maintain it. This VM will be billed according to the standard UKCloud billing process.
 
-To obtain addresses for the Elevated portal and vCloud API, raise a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+The IP addresses and domains for our additional shared services within the Elevated OFFICIAL platform e.g. WSUS, RHUI etc. can be obtained by raising a Service Request through the **My Calls** section of the UKCloud Portal.
 
 ## Feedback
 
