@@ -3,8 +3,8 @@ title: Understanding the difference between GB and GiB
 description: Explains the difference between GB and GiB and why it's important
 services: other
 author: shighmoor
-reviewer: myoung
-lastreviewed: 10/12/2020
+reviewer: shall
+lastreviewed: 08/02/2022
 
 toc_rootlink: Reference
 toc_sub1: 
