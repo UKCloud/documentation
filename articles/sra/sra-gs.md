@@ -3,8 +3,8 @@ title: Getting Started Guide for Secure Remote Access
 description: Provides information to get up and running with Secure Remote Access
 services: sra
 author: Sue Highmoor
-reviewer: George Smith
-lastreviewed: 06/08/2020
+reviewer: Ben Rees
+lastreviewed: 07/02/2022
 
 toc_rootlink: Getting Started
 toc_sub1:
