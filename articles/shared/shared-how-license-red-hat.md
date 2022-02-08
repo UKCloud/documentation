@@ -4,7 +4,7 @@ description: Outlines the options for Red Hat licensing and how to use your own 
 services: shared-services
 author: shall
 reviewer: pcantle
-lastreviewed: 25/02/2021
+lastreviewed: 04/02/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
