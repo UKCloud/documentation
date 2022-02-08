@@ -23,6 +23,11 @@ A virtual protection group (VPG) is a collection of virtual machines (VMs) that 
 
 After the initial synchronisation completes, any writes to disk from the VMs in the source site are sent to the target site. These writes are stored in the target site in journals.
 
+> [!NOTE]
+> We recommend that you do not power off a protected VM. If Zerto attempts to access the powered off VM, it could cause replication of all the VMs in the VPG to cease.
+>
+> If you make configuration changes to a VM, for example to add or extend disks or change the networking, you should do this while the VM is powered on if possible. If you must power off the VM, after powering it back on check the VPG to make sure there are no errors.
+
 ### Intended audience
 
 This guide is intended for users who are:

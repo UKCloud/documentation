@@ -155,6 +155,8 @@ Yes, it is included with the Journaling Protection option for use with the 2, 7,
 
 We recommend that you do not power off a VM if it's included in a protected vApp. Although powering off a VM may not immediately affect the protection of the vApp, if Zerto attempts to access the powered off VM, it could cause replication of all the VMs in the vApp to cease. If a powered-off VM causes an issue with vApp protection, Zerto will issue an alert.
 
+If you make configuration changes to a VM, for example to add or extend disks or change the networking, you should do this while the VM is powered on if possible. If you must power off the VM, after powering it back on check the VPG to make sure there are no errors.
+
 If you add a powered-off VM to a protected vApp, the VM will not be protected until you've powered it on and Zerto has performed the initial sync. In this case, the powered-off VM will not affect the protection of the vApp.
 
 ### Is Journaling Protection enabled in all regions?
