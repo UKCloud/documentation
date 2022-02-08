@@ -3,8 +3,8 @@ title: Internet - permitted standard ports in regions 1 and 2
 description: Shows the allow-list of standard internet ports on the UKCloud managed perimeter firewalls
 services: connectivity
 author: shighmoor
-reviewer: nstobbart
-lastreviewed: 15/02/2021
+reviewer: tlofthouse
+lastreviewed: 04/02/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
