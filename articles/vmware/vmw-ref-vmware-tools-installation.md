@@ -5,7 +5,7 @@ services: vmware
 author: shighmoor
 reviewer: rdavies
 lastreviewed: 08/02/2022
-toc_rootlink: How To
+toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
