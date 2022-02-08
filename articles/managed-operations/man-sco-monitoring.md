@@ -4,7 +4,7 @@ description: Outlines important details regarding Managed Monitoring as a Servic
 services: managed-operations
 author: sdixon
 reviewer: sdixon
-lastreviewed: 27/07/2021
+lastreviewed: 04/02/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: Managed Monitoring as a Service
 toc_sub2:
@@ -38,8 +38,6 @@ Managed Monitoring as a Service is UKCloud's multi-cloud monitoring service, des
 - Reduce the number of 'false-positive' alerts and associated out of hours call-outs. Utilise UKCloud's 24x7x365 Network Operations Centre (NOC) to be the initial responder to events, only escalating those that genuinely need further investigation
 
 - Increase the uptime of your IT estate through faster identification, triage and alert escalations
-
-- Leverage the insights that UKCloud's AIOps platform can provide in identifying trends and anomalies
 
 ## Scope of Managed Monitoring as a Service
 

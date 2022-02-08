@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Managed IT Operatio
 services: managed-operations
 author: shighmoor
 reviewer: Steve Dixon
-lastreviewed: 27/07/2021
+lastreviewed: 04/02/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -45,15 +45,13 @@ This service provides you with the building blocks to utilise essential operatio
 
 - Increase the uptime of your IT estate through faster identification, triage and alert escalations
 
-- Leverage the insights that UKCloud's AIOps engine can provide in identifying trends and anomalies
-
 ## Product options
 
 This service is designed to be flexible and allows you to mix and match from a range of pre-defined options and change them when required. The elements that make up this service consist of the following:
 
 <div style="text-align:center"><img alt="Managed IT Operations product options" src="images/man-sd-managed-it-ops.png" /></div>
 
-- **Managed Monitoring as a Service** *(mandatory)* The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate, leveraging the power of AIOps to reduce the amount of noise you traditionally had to filter through, enabling you to focus on the critical events that really matter.
+- **Managed Monitoring as a Service** *(mandatory)* The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate, and helping to reduce the amount of noise you traditionally had to filter through, enabling you to focus on the critical events that really matter.
 
 - **Patching as a Service** *(optional add-on)* Provides routine OS patch management for compute instances deployed across UKCloud's multi-cloud. It helps you accelerate business value by removing the burden of basic OS hygiene, letting you focus your attention above the operating system.
 
