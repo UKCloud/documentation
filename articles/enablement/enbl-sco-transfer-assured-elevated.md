@@ -3,8 +3,8 @@ title: Data Transfer between Assured and Elevated Service Scope
 description: Outlines how to move workloads between the Assured and Elevated security domains
 services: enablement
 author: shall
-reviewer: awebb
-lastreviewed: 15/02/2021
+reviewer: sdawkins
+lastreviewed: 09/02/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
