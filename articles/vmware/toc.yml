@@ -100,8 +100,6 @@
     href: vmw-how-view-storage-usage.md
   - name: View your VMs in the UKCloud Portal
     href: vmw-how-portal-view-vms.md
-  - name: VMware Tools installation
-    href: vmw-ref-vmware-tools-installation.md
   - name: Advanced monitoring
     items:
     - name: Access advanced monitoring (vROps)
@@ -186,6 +184,8 @@
     href: vmw-ref-vm-data-recovery.md
   - name: Virtual machine disk limits and considerations
     href: vmw-ref-vmdk-limits.md
+  - name: VMware Tools installation
+    href: vmw-ref-vmware-tools-installation.md
   - name: VMware vCloud Connector
     href: vmw-ref-vcloud-connector.md
   - name: Windows Server activation
