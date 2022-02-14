@@ -94,11 +94,12 @@
 <h1 id="sla-definition">SLA definition</h1>
 
 <h2 id="availability">Availability</h2>
-<p>UKCloud will use reasonable endeavours to ensure that the availability of the UKCloud service purchased by the customer (the service) in a given calendar month equals the applicable <em>availability commitment</em>. To define availability, UKCloud monitors a number of service elements — some generic, some service specific — which collectively enable the customer to use or access the service. If the availability of the service is less than the associated Availability Commitment, the customer may request Service Credits for the service within 30 calendar days of the service being deemed unavailable.</p>
+<p>UKCloud will use reasonable endeavours to ensure that the availability of the UKCloud service purchased by the customer (the service) in a given calendar month equals the applicable <em>availability commitment</em>. To define availability, UKCloud monitors a number of service elements — some generic, some service specific — which collectively enable the customer to use or access the service. If the availability of the service is less than the associated availability commitment, the customer may request Service Credits for the service within 30 calendar days of the service being deemed unavailable.</p>
 <h2 id="unavailability-and-service-level-agreement-events">Unavailability and service level agreement events</h2>
 <p>Subject to the service level agreement (SLA) limitations detailed below, the service will be considered unavailable (and an SLA event will be deemed as having taken place) if UKCloud's monitoring detects that the service or component has failed for five consecutive minutes. The total number of minutes that the service is unavailable is measured from the time that UKCloud confirms the SLA event has occurred until the time that UKCloud resolves the issue and the service becomes available to the customer. If two or more SLA events occur simultaneously, the SLA event with the longest duration will be used to determine the total number of minutes for which the service was unavailable.</p>
 <h2 id="service-credits">Service Credits</h2>
-<p>If the availability of the service for a particular month falls below the availability commitment specified in the applicable SLA (subject to the SLA limitations provided below), customers will be eligible to request Service Credits. Service Credits will be calculated as a percentage of the fees billed for the monthly period during which the SLA event occurred (to be applied at the end of the billing cycle, or of the subsequent cycle if a claim is made after an invoice has been paid).</p>
+<p>If the availability of the service for a particular month falls below the availability commitment specified in the applicable SLA (subject to the SLA limitations provided below), customers will be eligible to request Service Credits.</p>
+<p>Service Credits will be calculated as a percentage of the fees billed for the monthly period during which the SLA event occurred (to be applied at the end of the billing cycle, or of the subsequent cycle if a claim is made after an invoice has been paid). For some examples of how this might work for different services, see <a href="#worked-examples"><em>Worked examples</em></a> later in this article.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You will not be eligible to receive a Service Credit if your account has any undisputed payments outstanding beyond their due date or you are in violation of UKCloud's Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).</p>
@@ -106,9 +107,9 @@
 <h2 id="service-level-agreement-limitations">Service level agreement limitations</h2>
 <p>The following will be excluded from any time-based calculations related to the service being unavailable:</p>
 <ul>
-<li><p>Service dependent — Planned Maintenance windows (as specified in the applicable Service Definition)</p>
+<li><p>Service dependent — Planned Maintenance windows (as specified in the service-specific information below)</p>
 </li>
-<li><p>Emergency Maintenance (as specified in the applicable Service Definition)</p>
+<li><p>Emergency Maintenance (as specified in the service-specific information below)</p>
 </li>
 <li><p>Your misuse of a particular service (as defined in the UKCloud Terms and Conditions and the UKCloud System Interconnect Security Policy (SISP))</p>
 </li>
@@ -121,15 +122,13 @@
 <li><p>Any customer-defined or customer-controlled event (for example, unavailability of service resulting from inadequate customer-subscribed services, resources or configuration)</p>
 </li>
 </ul>
-<p>The customer will not be eligible to receive a Service Credit if the service account has any undisputed payments outstanding beyond their due date, or you are in violation of UKCloud's Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).</p>
+<p>The customer will not be eligible to receive a Service Credit if the service account has any undisputed payments outstanding beyond their due date, or they are in violation of UKCloud's Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).</p>
 <h2 id="service-level-agreement-claims">Service level agreement claims</h2>
 <p>To request a Service Credit, the customer must file a support ticket within thirty (30) calendar days of the relevant suspected SLA event. UKCloud will review the request and issue a Service Credit if applicable.</p>
 <p>Service Credits will be issued only to the customer that UKCloud invoices for the applicable instance of the service as a separate credit note that can be applied towards a future invoice for that service only. If the customer's contract term for the service expires or is terminated prior to a Service Credit being issued, the Service Credit will become void as of the date of the expiration or termination.</p>
-<h2 id="ukcloud-service-level-agreement-monitoring">UKCloud service level agreement monitoring</h2>
+<h2 id="service-level-agreement-by-service">Service level agreement by service</h2>
 <h3 id="generic-service-components">Generic service components</h3>
-<p>UKCloud monitors various elements across the service to ensure that availability can be measured appropriately and realistically. Some elements are generic across all services others are service specific.</p>
-<h4 id="ukcloud-portal">UKCloud Portal</h4>
-<p>UKCloud monitors the customer self-service UKCloud Portal, (<a href="https://portal.ukcloud.com">https://portal.ukcloud.com</a> (or Elevated equivalent)). This includes the UKCloud for VMware API, which provides programmatic control of the UKCloud for VMware service.</p>
+<h4 id="ukcloud-portal-sla">UKCloud Portal SLA</h4>
 <table>
 <thead>
 <tr>
@@ -148,7 +147,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ukcloud-for-microsoft-azure">UKCloud for Microsoft Azure</h3>
+<h4 id="connectivity-sla">Connectivity SLA</h4>
+<p>UKCloud does not offer any SLA covering the performance or availability of any external connection to the UKCloud platform, this includes internet, PSN, HSCN or Janet, for example. Connections between services within UKCloud are covered by the SLA representing the services, including inter-DC connectivity between UKCloud's regions and sites.</p>
+<h3 id="ukcloud-for-microsoft-azure-sla">UKCloud for Microsoft Azure SLA</h3>
 <table>
 <thead>
 <tr>
@@ -187,7 +188,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ukcloud-for-openstack">UKCloud for OpenStack</h3>
+<h3 id="ukcloud-for-openstack-sla">UKCloud for OpenStack SLA</h3>
 <table>
 <thead>
 <tr>
@@ -226,7 +227,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ukcloud-for-oracle-software">UKCloud for Oracle Software</h3>
+<h3 id="ukcloud-for-oracle-software-sla">UKCloud for Oracle Software SLA</h3>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>This service is no longer available for sale. The following information is provided to support existing customers of the service only.</p>
@@ -269,7 +270,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ukcloud-for-red-hat-openshift">UKCloud for Red Hat OpenShift</h3>
+<h3 id="ukcloud-for-red-hat-openshift-sla">UKCloud for Red Hat OpenShift SLA</h3>
 <table>
 <thead>
 <tr>
@@ -308,7 +309,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ukcloud-for-vmware">UKCloud for VMware</h3>
+<h3 id="ukcloud-for-vmware-sla">UKCloud for VMware SLA</h3>
 <table>
 <thead>
 <tr>
@@ -347,7 +348,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="cloud-storage">Cloud Storage</h3>
+<h3 id="cloud-storage-sla">Cloud Storage SLA</h3>
 <table>
 <thead>
 <tr>
@@ -386,7 +387,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="cross-domain-security-zone">Cross Domain Security Zone</h3>
+<h3 id="cross-domain-security-zone-sla">Cross Domain Security Zone SLA</h3>
 <table>
 <thead>
 <tr>
@@ -425,7 +426,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="dedicated-compute-v2">Dedicated Compute v2</h3>
+<h3 id="dedicated-compute-v2-sla">Dedicated Compute v2 SLA</h3>
 <table>
 <thead>
 <tr>
@@ -464,9 +465,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="disaster-recovery-as-a-service-draas">Disaster Recovery as a Service (DRaaS)</h3>
+<h3 id="disaster-recovery-as-a-service-draas-sla">Disaster Recovery as a Service (DRaaS) SLA</h3>
 <p>Due to the service being dependent on connectivity between the customer data centre and UKCloud, we are unable to offer an SLA relating to the performance of this service. For full details of the SLA for the UKCloud for VMware platform that hosts the solution, see <a href="#ukcloud-for-vmware"><em>UKCloud for VMware</em></a>.</p>
-<h3 id="email-and-collaboration-as-a-service">Email and Collaboration as a Service</h3>
+<h3 id="email-and-collaboration-as-a-service-sla">Email and Collaboration as a Service SLA</h3>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>This service is no longer available for sale. The following information is provided to support existing customers of the service only.</p>
@@ -509,9 +510,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="extended-network-support-from-ukcloud">Extended Network Support from UKCloud</h3>
+<h3 id="extended-network-support-from-ukcloud-sla">Extended Network Support from UKCloud SLA</h3>
 <p>SLA varies based on the chosen cloud technology. See the appropriate section of this article for more information.</p>
-<h3 id="managed-monitoring-as-a-service">Managed Monitoring as a Service</h3>
+<h3 id="managed-monitoring-as-a-service-sla">Managed Monitoring as a Service SLA</h3>
 <p>Service levels for Managed Monitoring as a Service are split into the following two targets:</p>
 <ul>
 <li><p><strong>Availability</strong> - UKCloud offers an availability SLA of 99.99% (excluding Planned Maintenance) for all elements of our monitoring service that reside within UKCloud's direct control. For the avoidance of doubt, this scope covers the entire data flow path from the VPN termination point within our 'Management Bubble' through to the customer ticket notification being generated by our IT service management tooling (Ivanti).</p>
@@ -531,9 +532,9 @@
 <h5>Note</h5>
 <p>A claim for Service Credits against the Alert Notification target cannot be raised within the same period where a claim for Availability Service Credits has also been made.</p>
 </div>
-<h3 id="migration-to-the-cloud">Migration to the Cloud</h3>
+<h3 id="migration-to-the-cloud-sla">Migration to the Cloud SLA</h3>
 <p>Due to the service being dependent on connectivity between the customer data centre and UKCloud, we are unable to offer an SLA relating to the performance of this service.</p>
-<h3 id="neustar-ddos-protection-from-ukcloud">Neustar DDoS Protection from UKCloud</h3>
+<h3 id="neustar-ddos-protection-from-ukcloud-sla">Neustar DDoS Protection from UKCloud SLA</h3>
 <table>
 <thead>
 <tr>
@@ -580,7 +581,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="neustar-ultradns-from-ukcloud">Neustar UltraDNS from UKCloud</h3>
+<h3 id="neustar-ultradns-from-ukcloud-sla">Neustar UltraDNS from UKCloud SLA</h3>
 <table>
 <thead>
 <tr>
@@ -619,7 +620,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="private-cloud">Private Cloud</h3>
+<h3 id="private-cloud-sla">Private Cloud SLA</h3>
 <table>
 <thead>
 <tr>
@@ -658,7 +659,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="private-cloud-for-oracle-software">Private Cloud for Oracle Software</h3>
+<h3 id="private-cloud-for-oracle-software-sla">Private Cloud for Oracle Software SLA</h3>
 <table>
 <thead>
 <tr>
@@ -697,7 +698,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="private-cloud-for-storage">Private Cloud for Storage</h3>
+<h3 id="private-cloud-for-storage-sla">Private Cloud for Storage SLA</h3>
 <table>
 <thead>
 <tr>
@@ -736,7 +737,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="secure-remote-access">Secure Remote Access</h3>
+<h3 id="secure-remote-access-sla">Secure Remote Access SLA</h3>
 <table>
 <thead>
 <tr>
@@ -775,10 +776,220 @@
 </tr>
 </tbody>
 </table>
-<h3 id="security-operations-service">Security Operations Service</h3>
+<h3 id="security-operations-service-sla">Security Operations Service SLA</h3>
 <p>SLA varies based on the chosen cloud technology. See the appropriate section of this article for more information.</p>
-<h3 id="vmware-licence-support">VMware Licence Support</h3>
+<h3 id="vmware-licence-support-sla">VMware Licence Support SLA</h3>
 <p>There is no SLA for this service. For information about customer service targets for support response, see <a href="../portal/ptl-how-raise-escalate-service-request.html"><em>How to raise and escalate support tickets with customer support</em></a>).</p>
+<h2 id="ukcloud-service-level-agreement-monitoring">UKCloud service level agreement monitoring</h2>
+<h3 id="generic-service-components-1">Generic service components</h3>
+<p>UKCloud monitors various elements across the service to ensure that availability can be measured appropriately and realistically. Some elements are generic across all services others are service specific.</p>
+<h4 id="ukcloud-portal">UKCloud Portal</h4>
+<p>UKCloud monitors the customer self-service UKCloud Portal, (<a href="https://portal.ukcloud.com">https://portal.ukcloud.com</a> (or Elevated equivalent)). This includes the UKCloud for VMware API, which provides programmatic control of the UKCloud for VMware service.</p>
+<p>To confirm that the Portal is available, UKCloud performs synthetic transactions by authenticating access to an account by a simulated user and retrieving a support ticket. This process demonstrates whether the UKCloud Portal is accessible and that this element of the service is available.</p>
+<p>If you're unable to access your Portal account to raise a support ticket, then you'll need to call UKCloud on 01252 303300 and select option 2.</p>
+<h3 id="ukcloud-for-openstack">UKCloud for OpenStack</h3>
+<p>UKCloud monitors three main components of the compute services within UKCloud for OpenStack to provide the best overall measure of service availability:</p>
+<ul>
+<li><p>The physical host server that instances are running on, this confirms that instances have resources and can be available.</p>
+</li>
+<li><p>The data store which ensures that the storage associated with instances is accessible.</p>
+</li>
+<li><p>The control plane API which you may use to programmatically control your UKCloud for OpenStack environment.</p>
+</li>
+</ul>
+<p>UKCloud will monitor the underlying physical servers every minute using internal systems and tools to verify that the server is responsive and available. UKCloud monitors the data stores every minute using internal systems and tools to verify the status of UKCloud for OpenStack storage services.</p>
+<p>UKCloud does not offer an SLA covering the performance of instances or their storage. However, platform capacity and resources are managed by UKCloud to ensure you receive a consistent level of service.</p>
+<p>The calculation of Service Credits will depend upon whether a customer has engineered their solution to utilise multiple availability zones and regions. For example, if an SLA event occurs and the percentage availability falls below the commitment stated in your SLA, then UKCloud will offer you a Service Credit as a percentage of the total amount billed during the month for the instances affected. You'll only receive a Service Credit if the service provided was affected, for example, the instance was turned on.</p>
+<h3 id="ukcloud-for-red-hat-openshift">UKCloud for Red Hat OpenShift</h3>
+<p>UKCloud monitors the underpinning infrastructure and UKCloud for Red Hat OpenShift services to ensure the highest levels of platform availability. In addition, we perform a synthetic transaction that mimics the publication &quot;push&quot; of an application which is accessible to a test consumer. An SLA event will be deemed to have occurred and the service deemed unavailable if the monitoring fails for five consecutive minutes.</p>
+<p>UKCloud only offers an SLA covering the availability of the service, not the durability of the data. Data generated by UKCloud for Red Hat OpenShift applications should be considered transient; as such any data which requires persistency and durability should be stored in an alternative storage solution such as UKCloud's Cloud Storage.</p>
+<h3 id="ukcloud-for-vmware">UKCloud for VMware</h3>
+<p>UKCloud monitors three main components of the UKCloud for VMware service to provide the best overall measure of service availability:</p>
+<ul>
+<li><p>The physical host server that the VM is running on. This confirms that the VM has resources and can be available.</p>
+</li>
+<li><p>The data store which ensures that the storage associated with the VM is accessible.</p>
+</li>
+<li><p>The UKCloud for VMware API (available on the <a href="https://portal.ukcloud.com/">UKCloud Portal</a>) which you may use to programmatically control your UKCloud for VMware environment.</p>
+</li>
+</ul>
+<p>By monitoring these three components, UKCloud believes that we can provide the best overall view of the availability of the service.</p>
+<p>UKCloud will monitor the underlying physical servers every minute using internal systems and tools to verify that the server is responsive and available. UKCloud monitors the UKCloud for VMware data stores every minute using internal systems and tools to verify the status of the UKCloud for VMware storage.</p>
+<p>Virtual firewalls are covered by the UKCloud management plane (IaaS layer or below) SLA. Customers can claim service credits for affected VMs in the event of an outage, where the fault is within UKCloud-controlled components. Further details are available in the <a href="other-ref-sla-definition.html"><em>SLA definition</em></a>.</p>
+<p>UKCloud does not offer an SLA covering the performance of the VM or its storage. However, server capacity and resources are managed by UKCloud to ensure you receive a consistent level of service.</p>
+<p>The number of Service Credits received depends on how long the service was unavailable for and the Service Level selected when the VM was purchased. For example, if an SLA event occurs and the percentage availability falls below the commitment stated in your SLA, then UKCloud will offer you a Service Credit as a percentage of the total amount billed during the month for the VM affected.</p>
+<p>You'll only receive a Service Credit if the service provided was affected. For example, the VM was powered on.</p>
+<h3 id="cloud-storage">Cloud Storage</h3>
+<p>For the STANDARD, UKCloud performs a synthetic transaction that mimics a user authenticating and the &quot;posting&quot; of data on to the platform. An SLA event will be deemed to have occurred and the service deemed unavailable (specifically, a failure of storage hosts and authentication sub-system) if the monitoring fails for five consecutive minutes.</p>
+<p>For for ENHANCED, UKCloud performs a synthetic transaction that mimics a user authenticating and the &quot;posting&quot; of data on to the platform. An SLA event will be deemed to have occurred and the service deemed unavailable (specifically, concurrent failure of storage hosts and authentication sub-system in both data centre locations) if the monitoring fails in both data centres at the same time for five consecutive minutes.</p>
+<p>UKCloud only offers an SLA covering the availability of the service, not the durability of the data.</p>
+<h2 id="worked-examples">Worked examples</h2>
+<p>UKCloud uses the following formula to determine the percentage that a service was available for:</p>
+<p>P = A-B x 100 / A, where: P= Percentage availability A= Total number of minutes in month B = Total number of whole minutes that service is unavailable</p>
+<h3 id="ukcloud-for-openstack-1">UKCloud for OpenStack</h3>
+<h4 id="example-factors">Example factors</h4>
+<ul>
+<li><p>Total hours in January = 744</p>
+</li>
+<li><p>Example cost of an instance per hour = £1.00</p>
+</li>
+<li><p>Availability commitment (Data plane) = 99.95%</p>
+</li>
+<li><p>Service Credit payment (Data plane) = Per region: 2% of monthly spend; Global: 10% of monthly spend</p>
+</li>
+</ul>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Scenario A - global deployment</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tab-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tab-2" data-tab="tab-2" tabindex="-1">Scenario B - single region deployment</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<p>An instance is running as part of a globally deployed solution and available for the month of January except for a two-hour period when the data plane is deemed unavailable.</p>
+<h4 id="are-service-credits-applicable">Are Service Credits applicable?</h4>
+<ul>
+<li><p>Total minutes in the month (A) = 44,640</p>
+</li>
+<li><p>Total minutes service unavailable (B) = 120</p>
+</li>
+<li><p>Percentage availability of service (P) = (44,640 - 120) x (100 / 44,640) = 99.73%</p>
+</li>
+</ul>
+<p>The two-hour outage means percentage availability of service is 99.73%, which is below the availability commitment of 99.95%. The customer is therefore eligible for a Service Credit.</p>
+<h4 id="how-much-is-payable">How much is payable?</h4>
+<ul>
+<li><p>The bill for the customer at the end of the month would be £744 (before credits are applied)</p>
+</li>
+<li><p>The Service Credit for global deployment is 10% of the amount billed to that instance during the calendar month = £74.40</p>
+</li>
+<li><p>The amount billed to the customer is therefore £744 - £74.40 = <strong>£669.60</strong></p>
+</li>
+</ul>
+</section>
+<section id="tabpanel_bHGHmlrG6S_tab-2" role="tabpanel" data-tab="tab-2" aria-hidden="true" hidden="hidden">
+
+<p>An instance is running within a single region and available for the month of January except for a two-hour period when the data plane is deemed unavailable.</p>
+<h4 id="are-service-credits-applicable-1">Are Service Credits applicable?</h4>
+<ul>
+<li><p>Total minutes in the month (A) = 44,640</p>
+</li>
+<li><p>Total minutes service unavailable (B) = 120</p>
+</li>
+<li><p>Percentage availability of service (P) = (44,640 - 120) x (100 / 44,640) = 99.73%</p>
+</li>
+</ul>
+<p>The two-hour outage means percentage availability of service is 99.73%, which is below the availability commitment of 99.95%. The customer is therefore eligible for a Service Credit.</p>
+<h4 id="how-much-is-payable-1">How much is payable?</h4>
+<ul>
+<li><p>The bill for the customer at the end of the month would be £744 (before credits are applied)</p>
+</li>
+<li><p>The Service Credit for single region deployment is 2% of the amount billed to that instance during the calendar month = £14.88</p>
+</li>
+<li><p>The amount billed to the customer is therefore £744 - £14.88 = <strong>£729.12</strong></p>
+</li>
+</ul>
+</section>
+</div>
+<h3 id="ukcloud-for-red-hat-openshift-1">UKCloud for Red Hat OpenShift</h3>
+<p>An OpenShift deployment with an expected cost of £1,000 per month, however the UKCloud synthetic transaction monitor fails for three hours so the service is deemed unavailable.</p>
+<h4 id="example-factors-1">Example factors</h4>
+<ul>
+<li><p>Total hours in January = 744</p>
+</li>
+<li><p>Example cost of deployment per month = £1,000</p>
+</li>
+<li><p>Availability commitment (Data plane) = 99.95%</p>
+</li>
+<li><p>Service Credit payment = 3% of monthly spend for affected UKCloud deployed OpenShift platform</p>
+</li>
+</ul>
+<h4 id="are-service-credits-applicable-2">Are Service Credits applicable?</h4>
+<ul>
+<li><p>Total minutes in the month (A) = 44,640</p>
+</li>
+<li><p>Total minutes service unavailable (B) = 300</p>
+</li>
+<li><p>Percentage availability of service (P) = (44,640 - 180) x (100 / 44,640) = 99.60%.</p>
+</li>
+</ul>
+<p>The three-hour outage means percentage availability of service is 99.60%, which is below the availability commitment of 99.95%. The customer is therefore eligible for a Service Credit.</p>
+<h4 id="how-much-is-payable-2">How much is payable?</h4>
+<ul>
+<li><p>The bill for the customer at the end of the month would be £1,000 (before credits are applied)</p>
+</li>
+<li><p>The Service Credit is 3% of the amount billed to that UKCloud for Red Hat OpenShift deployment during the calendar month = £30</p>
+</li>
+<li><p>The amount billed to the Customer is therefore £1,000 - £30 = <strong>£970</strong></p>
+</li>
+</ul>
+<h3 id="ukcloud-for-vmware-1">UKCloud for VMware</h3>
+<p>A POWER virtual machine is running and available for the month of January except for a one-hour period when the service is deemed unavailable.</p>
+<h4 id="example-factors-2">Example factors</h4>
+<ul>
+<li><p>Total hours in January = 744</p>
+</li>
+<li><p>Example cost of a VM per hour = £1.00</p>
+</li>
+<li><p>Availability commitment (POWER) = 99.99%</p>
+</li>
+<li><p>Service Credit payment (POWER) = 5% of monthly spend per 5% below service level target or part thereof for affected compute platform</p>
+</li>
+</ul>
+<h4 id="are-service-credits-applicable-3">Are Service Credits applicable?</h4>
+<ul>
+<li><p>Total minutes in the month (A) = 44,640</p>
+</li>
+<li><p>Total minutes service unavailable (B) = 60</p>
+</li>
+<li><p>Percentage availability of service (P) = (44,640 - 60) x (100 / 44,640) = is 99.87%</p>
+</li>
+</ul>
+<p>The one-hour outage means percentage availability of service is 99.87%, which is below the availability commitment of 99.99%. The customer is therefore eligible for a Service Credit.</p>
+<h4 id="how-much-is-payable-3">How much is payable?</h4>
+<ul>
+<li><p>The bill for the customer at the end of the month would be £744 (before credits are applied)</p>
+</li>
+<li><p>The Service Credit for a POWER VM is 5% of the amount billed to that VM during the calendar month = £37.20</p>
+</li>
+<li><p>The amount billed to the customer is therefore £744 - £37.20 = <strong>£706.80</strong></p>
+</li>
+</ul>
+<h3 id="cloud-storage-1">Cloud Storage</h3>
+<p>100GiB of STANDARD-level data is stored on the platform at an expected cost of £100 per month, however the UKCloud synthetic transaction monitor fails for two hours so the service is deemed unavailable.</p>
+<h4 id="example-factors-3">Example factors</h4>
+<ul>
+<li><p>Total hours in January = 744</p>
+</li>
+<li><p>Example cost of 100GiB of storage per month = £1.00 per hour</p>
+</li>
+<li><p>Availability Commitment (STANDARD) = 99.95%</p>
+</li>
+<li><p>Service Credit payment (STANDARD) = 10% of monthly spend</p>
+</li>
+</ul>
+<h4 id="are-service-credits-applicable-4">Are Service Credits applicable?</h4>
+<ul>
+<li><p>Total minutes in the month (A) = 44,640</p>
+</li>
+<li><p>Total minutes service unavailable (B) = 120</p>
+</li>
+<li><p>Percentage availability of service (P) = (44,640 - 120) x (100 / 44,640) = 99.73%</p>
+</li>
+</ul>
+<p>The two-hour outage means percentage availability of service is 99.73%, which is below the availability commitment of 99.95%. The customer is therefore eligible for a Service Credit.</p>
+<h4 id="how-much-is-payable-4">How much is payable?</h4>
+<ul>
+<li><p>The bill for the customer at the end of the month would be £100 (before credits are applied)</p>
+</li>
+<li><p>The Service Credit is 10% of the amount billed for that storage during the calendar month = £10</p>
+</li>
+<li><p>The amount billed to the Customer is therefore £100 - £10 = <strong>£90</strong></p>
+</li>
+</ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
