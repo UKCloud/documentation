@@ -4,7 +4,7 @@ description: List of articles providing service information about UKCloud servic
 services: Other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/02/2021
+lastreviewed: 04/02/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -31,7 +31,6 @@ Service | Service Definition | Service Scope | Pricing information
 --------|--------------------|---------------|--------------------
 UKCloud for Microsoft Azure | [here](../azure/azs-sd.md) | [here](../azure/azs-sco.md) | [here](../azure/azs-ref-pricing.md)
 UKCloud for OpenStack | [here](../openstack/ostack-sd.md) | [here](../openstack/ostack-sco.md) | [here](../openstack/ostack-ref-pricing.md)
-UKCloud for Oracle Software | [here](../oracle/orcl-sd.md) | [here](../oracle/orcl-sco.md) | [here](../oracle/orcl-ref-pricing.md)
 UKCloud for Red Hat OpenShift | [here](../openshift/oshift-sd.md) | [here](../openshift/oshift-sco.md) | [here](../openshift/oshift-ref-pricing.md)
 UKCloud for VMware | [here](../vmware/vmw-sd.md) | [here](../vmware/vmw-sco.md) | [here](../vmware/vmw-ref-pricing.md)
 
@@ -86,10 +85,7 @@ Private Cloud for Storage | [here](../private-cloud/prc-sd-storage.md) | [here](
 Service | Service Definition | Service Scope
 --------|--------------------|--------------
 Managed IT Operations | [here](../managed-operations/man-sd-managed-it-ops.md) | N/A
-Managed Active Directory Support | [here](../managed-operations/man-sd-ad.md) | [here](../managed-operations/man-sco-ad.md)
-Managed Remote Desktop Services Support | [here](../managed-operations/man-sd-rds.md) | N/A
-Managed SQL Server | [here](../managed-operations/man-sd-sqlserver.md) | [here](../managed-operations/man-sco-sqlserver.md)
-Managed Web Server | [here](../managed-operations/man-sd-webserver.md) | [here](../managed-operations/man-sco-webserver.md)
+Advanced Support Services | N/A | N/A
 Extended Network Support from UKCloud | [here](../managed-operations/man-sd-network.md) | N/A
 
 ### Service options
@@ -101,6 +97,15 @@ Service option | Service Scope
 Managed Monitoring as a Service | [here](../managed-operations/man-sco-monitoring.md)
 Anti-Virus as a Service | [here](../managed-operations/man-sco-antivirus.md)
 Patching as a Service | [here](../managed-operations/man-sco-patching.md)
+
+#### Advanced Support Services
+
+Service option | Service Definition | Service Scope
+---------------|--------------------|--------------
+Managed Active Directory Support | [here](../managed-operations/man-sd-ad.md) | [here](../managed-operations/man-sco-ad.md)
+Managed Remote Desktop Services Support | [here](../managed-operations/man-sd-rds.md) | N/A
+Managed SQL Server | [here](../managed-operations/man-sd-sqlserver.md) | [here](../managed-operations/man-sco-sqlserver.md)
+Managed Web Server | [here](../managed-operations/man-sd-webserver.md) | [here](../managed-operations/man-sco-webserver.md)
 
 ## Support services
 
