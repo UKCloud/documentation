@@ -64,7 +64,7 @@ $ComputeQuota | ForEach-Object {
 }
 
 # Retrieve Storage quota
-$StorageQuota = Get-AzStorageUsage | Select-Object -Property Name, CurrentValue, Limit
+$StorageQuota = Get-AzStorageUsage -Location $Location | Select-Object -Property Name, CurrentValue, Limit
 
 # Retrieve Network quota
 $NetworkQuota = Get-AzNetworkUsage -Location $Location | Select-Object @{ Label="Name"; Expression={ $_.ResourceType } }, CurrentValue, Limit
