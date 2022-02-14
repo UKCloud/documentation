@@ -43,7 +43,7 @@ To establish your Cloud Storage pricing, follow these steps:
 
 ## Example
 
-**Security level:** STANDARD<br>
+**Service level:** STANDARD<br>
 **Security domain:** Assured OFFICIAL<br>
 **Average monthly used storage:** 520TiB
 
@@ -61,7 +61,7 @@ Total monthly cost of storage = £5,000 + £4,500 + £324 = **£9,824**
 
 ## Discount options
 
-The following discount and purchase schemes are available with UKCloud for Microsoft Azure:
+The following discount and purchase schemes are available with Cloud Storage:
 
 - Cloud Credits
 
