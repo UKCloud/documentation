@@ -20,7 +20,7 @@ toc_mdlink: ptl-gs.md
 
 ## Overview
 
-The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you can:
+The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you can
 
 - Raise and monitor support tickets
 
