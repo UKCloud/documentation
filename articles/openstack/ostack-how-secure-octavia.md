@@ -20,7 +20,7 @@ toc_mdlink: ostack-how-secure-octavia.md
 
 ## Overview
 
-Octavia is the OpenStack Load Balancing as a Service (LBaaS), which provides the option to use TERMINATED_HTTPS listeners. This type of listener accepts HTTPS connections, and then passes traffic to the backend servers on standard HTTP. This helps to reduce load on the backend servers by having all encryptionand decryption happen on a seperate device.
+Octavia is the OpenStack Load Balancing as a Service (LBaaS), which provides the option to use TERMINATED_HTTPS listeners. This type of listener accepts HTTPS connections, and then passes traffic to the backend servers on standard HTTP. This helps to reduce load on the backend servers by having all encryption and decryption happen on a seperate device.
 
 This article provides instructions on how to use Octavia and Barbican to setup a TERMINATED_HTTPS listener.
 
