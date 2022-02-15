@@ -2,9 +2,9 @@
 title: How to retrieve your subscription quotas using PowerShell
 description: Provides help for retrieving your quotas on UKCloud for Microsoft Azure
 services: azure-stack
-author: Bailey Lawson
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+author: blawson
+reviewer: wturner
+lastreviewed: 14/02/2022
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -64,10 +64,24 @@ $ComputeQuota | ForEach-Object {
 }
 
 # Retrieve Storage quota
-$StorageQuota = Get-AzStorageUsage | Select-Object -Property Name, CurrentValue, Limit
+# $StorageQuota = Get-AzStorageUsage -Location $Location | Select-Object -Property Name, CurrentValue, Limit
+
+# As of February 2022, the above cmdlet does not run successfully against an Azure Stack Hub environment - see https://github.com/Azure/azure-powershell/issues/16595
+# A workaround to this is to call the API endpoint directly. For this you will need to obtain an access token
+# Assuming you are already authenticated with Connect-AzAccount from above, simply run Get-AzAccessToken which will return a 'token' parameter. This token will then go in the request header in the form of a hashtable, like below:
+$AuthHeader = @{"Authorization" = "Bearer $((Get-AzAccessToken).Token)" }
+
+# Use the access token to make a request to the subscriptions endpoint, as you will need the subscription ID for the next request:
+$Subscriptions = Invoke-RestMethod -Method "GET" -Uri "$($ArmEndpoint)/subscriptions" -Headers $AuthHeader -Body @{"api-version" = "2017-12-01" } -ContentType "application/x-www-form-urlencoded"
+# Select the first subscription ID, amend if not the correct subscription
+$SubscriptionId = $Subscriptions.Value.SubscriptionId | Select-Object -First 1
+
+# With the access token and the subscription ID, you can make a request to the Microsoft.Storage/usages endpoint and format the response as required:
+$Response = Invoke-RestMethod -Method "GET" -Uri "$($ArmEndpoint)/subscriptions/$($SubscriptionId)/providers/Microsoft.Storage/usages" -Headers $AuthHeader -Body @{"api-version" = "2019-06-01" } -ContentType "application/x-www-form-urlencoded"
+$StorageQuota = $Response.Value | Select-Object -Property @{ Label = "Name"; Expression = { $_.Name.LocalizedValue } }, CurrentValue, Limit
 
 # Retrieve Network quota
-$NetworkQuota = Get-AzNetworkUsage -Location $Location | Select-Object @{ Label="Name"; Expression={ $_.ResourceType } }, CurrentValue, Limit
+$NetworkQuota = Get-AzNetworkUsage -Location $Location | Select-Object -Property @{ Label = "Name"; Expression = { $_.ResourceType } }, CurrentValue, Limit
 
 # Combine quotas
 $AllQuotas = $ComputeQuota + $StorageQuota + $NetworkQuota
