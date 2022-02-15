@@ -34,6 +34,8 @@
     href: ostack-how-move-resources.md
   - name: Retrieve your Windows password on UKCloud for OpenStack
     href: ostack-how-retrieve-windows-password.md
+  - name: Secure an HTTPS endpoint using Octavia and Barbican
+    href: ostack-how-secure-octavia.md
   - name: Share images between projects
     href: ostack-how-share-images.md
   - name: Transfer volumes between projects

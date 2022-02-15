@@ -10054,6 +10054,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-secure-octavia.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-secure-octavia.html",
+          "hash": "URxAWB1h/mOeNxoXbdcmAuoNIhXTG8Sv3eRQu5wFo7c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-share-images.md",
       "output": {
         ".html": {
@@ -10334,7 +10346,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "VM9ElIiQJ7UzSK9sEfoTYL8WaRPdUqJapVX1I2TJ5zg="
+          "hash": "3m9UNHarTcEMeK/gTvmxLK3EXwwDrsYWtfchzE0M83s="
         }
       },
       "is_incremental": false,
@@ -19528,7 +19540,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 456,
+          "total_file_count": 457,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
