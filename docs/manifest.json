@@ -18249,7 +18249,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "vrvRiJGLLBjA3M1RbOruIcRRP5sSJLybyX0pVKoaHFM="
+          "hash": "QgKmk3YwJf4RxXXZph6+sQRJ2KxT8MBqRTVc1vFy89I="
         }
       },
       "is_incremental": false,
@@ -19049,18 +19049,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-edge-ha.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-edge-ha.html",
-          "hash": "xF+6UWykcPFMAgkdg9YKHRdm6gO6wkGMVn0FLtRbjxE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-ipsec-vpn.md",
       "output": {
         ".html": {
@@ -19540,7 +19528,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 457,
+          "total_file_count": 456,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

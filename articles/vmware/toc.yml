@@ -150,8 +150,6 @@
     href: vmw-ref-vcd-10-1.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
-  - name: Edge gateways and high availability
-    href: vmw-ref-edge-ha.md
   - name: Fixing your advanced gateway if you encounter NullPointerException error
     href: vmw-ref-trouble-null-pointer.md
   - name: IPsec VPN Foundation and PRIME profiles
