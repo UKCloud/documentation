@@ -2,13 +2,13 @@
 title: How to list VM extensions in Azure Stack Hub using PowerShell
 description: Learn how to list VM extensions in Azure Stack Hub with PowerShell
 services: azure-stack
-author: Paul Brown
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+author: pbrown
+reviewer: wturner
+lastreviewed: 17/02/2022
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: 
+toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: List VM extensions - PowerShell
