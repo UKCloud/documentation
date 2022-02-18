@@ -3,8 +3,8 @@ title: PSN flattening
 description: Provides information about plans to flatten the PSN Assured and PSN Protected networks
 services: connectivity
 author: shighmoor
-reviewer: nstobbart
-lastreviewed: 15/02/2021
+reviewer: bchallis
+lastreviewed: 18/02/2022
 
 toc_rootlink: Reference
 toc_sub1: 
