@@ -20,11 +20,11 @@ toc_mdlink: conn-faq-lecn.md
 
 ## What is the Law Enforcement Community Network?
 
-The Law Enforcement Community Network (LECN) is a new network being created by the Home Office. This network will replace the PSN for Policing (PSNfP) network, which is going end-of-life around the end of 2021.
+The Law Enforcement Community Network (LECN) is a new network being created by the Home Office. This network will replace the PSN for Policing (PSNfP) network, which was going end-of-life end of 2021 but delays have pushed back into 2022.
 
 ## When will the LECN be a live network?
 
-The LECN is being rolled-out during 2021 for existing services using the PSNfP. If you're already using the PSNfP, you should have been contacted by the Home Office to arrange a migration.
+The LECN is being rolled-out for existing services using the PSNfP. If you're already using the PSNfP, you should have been contacted by the Home Office to arrange a migration. If you use PSNfP and haven't been contacted by Home Office then please let your UKCloud Service Delivery Manager know and we can contact Home Office on your behalf.
 
 ## Will UKCloud have connectivity to the LECN?
 
