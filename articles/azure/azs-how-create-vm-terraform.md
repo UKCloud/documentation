@@ -728,81 +728,81 @@ resource "azurestack_virtual_machine" "vm" {
 ### Assign values to the variables in the `terraform.tfvars` file through the table found at the top of the document
 
 <pre><code class="tf">
-  arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
-  subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
-  client_id       = "<output form="client_id" name="result" style="display: inline;">applicationId</output>"
-  client_secret   = "<output form="client_secret" name="result" style="display: inline;">applicationPassword</output>"
-  tenant_id       = "<output form="tenant_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
+arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
+subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
+client_id       = "<output form="client_id" name="result" style="display: inline;">applicationId</output>"
+client_secret   = "<output form="client_secret" name="result" style="display: inline;">applicationPassword</output>"
+tenant_id       = "<output form="tenant_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
 
-  location        = "<output form="location" name="result" style="display: inline;">frn00006</output>"
-  vm_count        = <output form="vm_count" name="result" style="display: inline;">1</output>
-  vm_image_string = "<output form="vm_image" name="result" style="display: inline;">OpenLogic/CentOS/7.5/latest</output>"
-  vm_size         = "<output form="vm_size" name="result" style="display: inline;">Standard_DS2_v2</output>"
-  rg_name         = "<output form="rg_name" name="result" style="display: inline;">MyResourceGroup</output>"
-  rg_tag          = "<output form="rg_tag" name="result" style="display: inline;">Production</output>"
+location        = "<output form="location" name="result" style="display: inline;">frn00006</output>"
+vm_count        = <output form="vm_count" name="result" style="display: inline;">1</output>
+vm_image_string = "<output form="vm_image" name="result" style="display: inline;">OpenLogic/CentOS/7.5/latest</output>"
+vm_size         = "<output form="vm_size" name="result" style="display: inline;">Standard_DS2_v2</output>"
+rg_name         = "<output form="rg_name" name="result" style="display: inline;">MyResourceGroup</output>"
+rg_tag          = "<output form="rg_tag" name="result" style="display: inline;">Production</output>"
 
-  admin_username  = "<output form="vm_username" name="result" style="display: inline;">user</output>"
-  admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"
+admin_username  = "<output form="vm_username" name="result" style="display: inline;">user</output>"
+admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"
 </code></pre>
 
 ### Declare the variables here in the `variables.tf` file for use in the main script
 
 <pre><code class="tf">
-  variable "arm_endpoint" {
-    type = "string"
-  }
+variable "arm_endpoint" {
+  type = "string"
+}
 
-  variable "subscription_id" {
-    type = "string"
-  }
+variable "subscription_id" {
+  type = "string"
+}
 
-  variable "client_id" {
-    type = "string"
-  }
+variable "client_id" {
+  type = "string"
+}
 
-  variable "client_secret" {
-    type = "string"
-  }
+variable "client_secret" {
+  type = "string"
+}
 
-  variable "tenant_id" {
-    type = "string"
-  }
+variable "tenant_id" {
+  type = "string"
+}
 
-  variable "admin_username" {
-    type     = "string"
-    default  = "username"
-  }
+variable "admin_username" {
+  type     = "string"
+  default  = "username"
+}
 
-  variable "admin_password" {
-    type     = "string"
-    default  = "Password123!"
-  }
+variable "admin_password" {
+  type     = "string"
+  default  = "Password123!"
+}
 
-  variable "location" {
-    type     = "string"
-  }
+variable "location" {
+  type     = "string"
+}
 
-  variable "rg_tag" {
-    type    = "string"
-    default = "production"
-  }
+variable "rg_tag" {
+  type    = "string"
+  default = "production"
+}
 
-  variable "rg_name" {
-    type    = "string"
-  }
+variable "rg_name" {
+  type    = "string"
+}
 
-  variable "vm_count" {
-    default  = 1
-  }
+variable "vm_count" {
+  default  = 1
+}
 
-  variable "vm_image_string" {
-    type    = "string"
-  }
+variable "vm_image_string" {
+  type    = "string"
+}
 
-  variable "vm_size" {
-    type    = "string"
-    default = "Standard_DS2_v2"
-  }
+variable "vm_size" {
+  type    = "string"
+  default = "Standard_DS2_v2"
+}
 </code></pre>
 
 ## How to execute a Terraform plan
@@ -816,7 +816,7 @@ From a PowerShell prompt, navigate to the directory that contains your `tf` file
 # Check if your environment is setup correctly
 .\terraform.exe init
 
-Initializing provider plugins...
+Initialising provider plugins...
 
 The following providers do not have any version constraints in configuration,
 so the latest version was installed.
@@ -836,7 +836,7 @@ any changes that are required for your infrastructure. All Terraform commands
 should now work.
 
 If you ever set or change modules or backend configuration for Terraform,
-rerun this command to reinitialize your working directory. If you forget, other
+rerun this command to reinitialise your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
