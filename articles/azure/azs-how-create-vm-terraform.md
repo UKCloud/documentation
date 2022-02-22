@@ -816,7 +816,7 @@ From a PowerShell prompt, navigate to the directory that contains your `tf` file
 # Check if your environment is setup correctly
 .\terraform.exe init
 
-Initialising provider plugins...
+Initializing provider plugins...
 
 The following providers do not have any version constraints in configuration,
 so the latest version was installed.
@@ -836,7 +836,7 @@ any changes that are required for your infrastructure. All Terraform commands
 should now work.
 
 If you ever set or change modules or backend configuration for Terraform,
-rerun this command to reinitialise your working directory. If you forget, other
+rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
