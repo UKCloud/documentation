@@ -106,11 +106,9 @@ The process of authentication can be handled in one of two ways, either as **Env
 > [!NOTE]
 > You can also put the content of `variables.tf`  at the top of the `main.tf` file.
 
-<details><summary style="font-size: 20px">Provider Block Option</summary>
+### Example of Provider Block option
 
-[Provider Block Option](#example-of-provider-block) - you can create your **Terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables settings explicitly in said plan.
-
-### Example of Provider Block
+You can create your **Terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables settings explicitly in said plan.
 
 #### `main.tf`
 
