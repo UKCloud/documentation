@@ -59,39 +59,36 @@ You can create your **Terraform plan** by putting only the plan itself into `mai
 
 #### `variables.tf`
 
-  <pre><code class="tf">
-  variable "arm_endpoint" {}
-  variable "subscription_id" {}
-  variable "client_id" {}
-  variable "client_secret" {}
-  variable "tenant_id" {}
-  </code></pre>
+<pre><code class="tf">variable "arm_endpoint" {}
+variable "subscription_id" {}
+variable "client_id" {}
+variable "client_secret" {}
+variable "tenant_id" {}
+</code></pre>
 
 > [!NOTE]
 > You can also put the content of `variables.tf`  at the top of the `main.tf` file.
 
 #### `main.tf`
 
-  <pre><code class="tf">
-  provider "azurestack" {
-    arm_endpoint    = "${var.arm_endpoint}"
-    subscription_id = "${var.subscription_id}"
-    client_id       = "${var.client_id}"
-    client_secret   = "${var.client_secret}"
-    tenant_id       = "${var.tenant_id}"
-  }
-  </code></pre>
+<pre><code class="tf">provider "azurestack" {
+arm_endpoint    = "${var.arm_endpoint}"
+subscription_id = "${var.subscription_id}"
+client_id       = "${var.client_id}"
+client_secret   = "${var.client_secret}"
+tenant_id       = "${var.tenant_id}"
+}
+</code></pre>
 
 #### `terraform.tfvars`
 
-  <pre><code class="tf">
-  # Configure the Azure Stack Hub Provider
-  arm_endpoint    = "https://management.{region}.{domain}"
-  subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-  client_id       = "{applicationId}"
-  client_secret   = "{applicationSecret}"
-  tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-  </code></pre>
+<pre><code class="tf"># Configure the Azure Stack Hub Provider
+arm_endpoint    = "https://management.{region}.{domain}"
+subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+client_id       = "{applicationId}"
+client_secret   = "{applicationSecret}"
+tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+</code></pre>
 
 ## [Provider Block](#tab/tabid-4)
 
@@ -99,9 +96,8 @@ You can create your **Terraform plan** by putting everything in one `main.tf` fi
 
 #### `main.tf`
 
- <pre><code class="tf">
- # Configure the Azure Stack Hub Provider
- provider "azurestack" {
+<pre><code class="tf"># Configure the Azure Stack Hub Provider
+provider "azurestack" {
   arm_endpoint    = "https://management.{region}.{domain}"
   subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
   client_id       = "{applicationId}"
@@ -167,8 +163,7 @@ The examples that follow show how to create VMs using Terraform. The code change
 
 ### [Windows VM with Managed Disks](#tab/tabid-a/tabid-2)
 
-<pre><code class="tf">
-provider "azurestack" {
+<pre><code class="tf">provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
   client_id       = "${var.client_id}"
@@ -297,8 +292,7 @@ resource "azurestack_virtual_machine" "vm" {
 
 ### [Windows VM with Unmanaged Disks](#tab/tabid-b/tabid-2)
 
-<pre><code class="tf">
-provider "azurestack" {
+<pre><code class="tf">provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
   client_id       = "${var.client_id}"
@@ -446,8 +440,7 @@ resource "azurestack_virtual_machine" "vm" {
 
 ### [Linux VM with Managed Disks](#tab/tabid-a/tabid-1)
 
-<pre><code class="tf">
-provider "azurestack" {
+<pre><code class="tf">provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
   client_id       = "${var.client_id}"
@@ -577,8 +570,7 @@ resource "azurestack_virtual_machine" "vm" {
 
 ### [Linux VM with Unmanaged Disks](#tab/tabid-b/tabid-1)
 
-<pre><code class="tf">
-provider "azurestack" {
+<pre><code class="tf">provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
   client_id       = "${var.client_id}"
@@ -729,8 +721,7 @@ resource "azurestack_virtual_machine" "vm" {
 
 ### Assign values to the variables in the `terraform.tfvars` file through the table found at the top of the document
 
-<pre><code class="tf">
-arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
+<pre><code class="tf">arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
 subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
 client_id       = "<output form="client_id" name="result" style="display: inline;">applicationId</output>"
 client_secret   = "<output form="client_secret" name="result" style="display: inline;">applicationPassword</output>"
