@@ -740,48 +740,47 @@ admin_password  = "<output form="vm_password" name="result" style="display: inli
 
 ### Declare the variables here in the `variables.tf` file for use in the main script
 
-<pre><code class="tf">
-variable "arm_endpoint" {
-  type = "string"
+<pre><code class="tf">variable "arm_endpoint" {
+  type = string
 }
 
 variable "subscription_id" {
-  type = "string"
+  type = string
 }
 
 variable "client_id" {
-  type = "string"
+  type = string
 }
 
 variable "client_secret" {
-  type = "string"
+  type = string
 }
 
 variable "tenant_id" {
-  type = "string"
+  type = string
 }
 
 variable "admin_username" {
-  type     = "string"
+  type     = string
   default  = "username"
 }
 
 variable "admin_password" {
-  type     = "string"
+  type     = string
   default  = "Password123!"
 }
 
 variable "location" {
-  type     = "string"
+  type     = string
 }
 
 variable "rg_tag" {
-  type    = "string"
+  type    = string
   default = "production"
 }
 
 variable "rg_name" {
-  type    = "string"
+  type    = string
 }
 
 variable "vm_count" {
@@ -789,11 +788,11 @@ variable "vm_count" {
 }
 
 variable "vm_image_string" {
-  type    = "string"
+  type    = string
 }
 
 variable "vm_size" {
-  type    = "string"
+  type    = string
   default = "Standard_DS2_v2"
 }
 </code></pre>
@@ -807,7 +806,7 @@ From a PowerShell prompt, navigate to the directory that contains your `tf` file
 
 ```powershell
 # Check if your environment is setup correctly
-.\terraform.exe init
+terraform init
 
 Initializing provider plugins...
 
@@ -835,9 +834,9 @@ commands will detect it and remind you to do so if necessary.
 
 ```powershell
 # Verify your plan
-.\terraform.exe plan -var-file=C:\<DirectoryName>\terraform.tfvars
+terraform plan -var-file=C:\<DirectoryName>\terraform.tfvars
 # Apply your plan
-.\terraform.exe apply -var-file=C:\<DirectoryName>\terraform.tfvars
+terraform apply -var-file=C:\<DirectoryName>\terraform.tfvars
 ```
 
 > [!NOTE]
