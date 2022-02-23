@@ -51,9 +51,11 @@ In order to authenticate with Terraform you will need to have a valid Service Pr
 
 The process of authentication can be handled in one of two ways, either as **Environment Variables** or in the **Provider Block**.
 
-[Environment Variables Option](#example-of-how-variables-are-used-in-terraform) - you can create your **Terraform plan** by putting only the plan itself into `main.tf` and then keeping `variables.tf` separate. You have to declare the actual values in the `terraform.tfvars` file. This is the file that you will need to populate with your actual credential details.
+## [Environment Variables](#tab/tabid-3)
 
-### Example of how variables are used in Terraform
+You can create your **Terraform plan** by putting only the plan itself into `main.tf` and then keeping `variables.tf` separate. The actual values are declared in the `terraform.tfvars` file, such as the SPN credentials.
+
+#### Example of how variables are used in Terraform
 
 #### `variables.tf`
 
@@ -64,6 +66,9 @@ The process of authentication can be handled in one of two ways, either as **Env
   variable "client_secret" {}
   variable "tenant_id" {}
   </code></pre>
+
+> [!NOTE]
+> You can also put the content of `variables.tf`  at the top of the `main.tf` file.
 
 #### `main.tf`
 
@@ -88,25 +93,7 @@ The process of authentication can be handled in one of two ways, either as **Env
   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
   </code></pre>
 
-#### Argument reference
-
-- `arm_endpoint` - The Azure Resource Manager API Endpoint for your Azure Stack Hub instance. This will be **`https://management.{region}.{domain}`**.
-
-> [!NOTE]
-> For UKCloud, the arm_endpoint is **`https://management.frn00006.azure.ukcloud.com`**.
-
-- `subscription_id` - The ID of your Azure Stack Hub Subscription.
-
-- `client_id` - The Application GUID that you configured your Service Principal Name (SPN) to use.
-
-- `client_secret` - The Application password that you configured your Service Principal Name (SPN) to use.
-
-- `tenant_id` - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.
-
-> [!NOTE]
-> You can also put the content of `variables.tf`  at the top of the `main.tf` file.
-
-### Example of Provider Block option
+## [Provider Block](#tab/tabid-4)
 
 You can create your **Terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables settings explicitly in said plan.
 
@@ -124,9 +111,24 @@ You can create your **Terraform plan** by putting everything in one `main.tf` fi
 Rest of the file (...)
 </code></pre>
 
-Official [Variables Guide](https://www.terraform.io/intro/getting-started/variables.html)
+***
 
-</details>
+#### Argument reference
+
+- `arm_endpoint` - The Azure Resource Manager API Endpoint for your Azure Stack Hub instance. This will be **`https://management.{region}.{domain}`**.
+
+> [!NOTE]
+> For UKCloud, the arm_endpoint is **`https://management.frn00006.azure.ukcloud.com`**.
+
+- `subscription_id` - The ID of your Azure Stack Hub Subscription.
+
+- `client_id` - The Application GUID that you configured your Service Principal Name (SPN) to use.
+
+- `client_secret` - The Application password that you configured your Service Principal Name (SPN) to use.
+
+- `tenant_id` - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.
+
+Official [Variables Guide](https://www.terraform.io/language/values/variables)
 
 ## Creating a VM
 
