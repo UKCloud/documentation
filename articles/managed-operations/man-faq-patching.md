@@ -3,8 +3,8 @@ title: Patching as a Service FAQs
 description: Frequently asked questions for Patching as a Service
 services: managed-operations
 author: sdixon
-reviewer: sdixon
-lastreviewed: 20/08/2021
+reviewer: mgough
+lastreviewed: 11/02/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
@@ -53,24 +53,101 @@ For Linux operating systems we'll scan for and recommend applying any packages t
 
 OS vendors such as Microsoft release updates for their operating systems and associated packages in two ways:
 
-* To a specific schedule: "Patch Tuesday" / "Update Tuesday"
+- To a specific schedule: "Patch Tuesday" / "Update Tuesday"
 
-* Ad-hoc, throughout the course of each month
+- Ad-hoc, throughout the course of each month
 
-As such, any patching cycle needs to take into consideration the two potential release mechanisms for updates. For our Patching as a Service, we use a batch approach with specific cut-off dates, which we consider to be the best approach to maintain consistency in UKCloud's service, provide a good level of responsiveness to patch releases and also to insulate sufficiently against erroneous upstream vendor patches or errors. This means that there's a specific cut-off after which point any patches released will not be included in that cycle (see [Windows Patches vs Linux Package Updates](#windows-patches-vs-linux-package-updates)). Rather being a limitation, this ensures that we can correctly  and efficiently track activities when dealing with customer VMs.
+As such, any patching cycle needs to take into consideration the two potential release mechanisms for updates. For our Patching as a Service, we use a batch approach with specific cut-off dates, which we consider to be the best approach to maintain consistency in UKCloud's service, provide a good level of responsiveness to patch releases and also to insulate sufficiently against erroneous upstream vendor patches or errors. This means that there's a specific cut-off after which point any patches released will not be included in that cycle (see [Windows Patches vs Linux Package Updates](#windows-patches-vs-linux-package-updates)). Rather than being a limitation, this ensures that we can correctly and efficiently track activities when dealing with customer VMs.
 
-The following diagram shows the six available cut-off dates and associated Device Groups (Device Group A to J) that customers can choose to group patch some or all of their VMs:
+UKCloud's patching schedule works as detailed below.
 
-<div style="text-align:center"><img alt="Patching Cycles" src="images/man-patching-patchingcycle.png" /></div>
+**2nd Tuesday of the month (Patch Tuesday)**
 
-<br>
+- Microsoft releases critical patches for the month.
+
+**3rd Tuesday of the month**
+
+- Microsoft releases further patches addressing any issues with patches on Patch Tuesday.
+
+**3rd Wednesday of the month**
+
+- Between 00:00 and 06:00 the patching service scans all endpoints for vulnerabilities and updates the patching information in the database.
+
+- At 12:00 the patching service ceates a *Patching Notification* Service Request for each patch group for the customer's visibility. A notification email is also sent.
+
+- Customers have from the time they receive the notification to the beginning of their patch window to notify UKCloud Support if they want to opt out of any patches.
+
+**3rd Thursday of the month**
+
+- Patching commences for all patch groups on the below schedule. Steps taken during patching run are:
+
+  - Devices are put into maintenance in the UKCloud monitoring system. Managed Monitoring tickets will not be raised against devices in their patching window to avoid false positives.
+
+  - UKCloud's Linux patching system connects to all customer devices via ssh and commences applying all patches that have not been identified as opted out or permanently excluded.
+
+    - A report is attached to the previously raised Service Request and the Service Request is updated with the Linux patching outcome.
+
+  - UKCloud's Windows patching system connects performs a scan against each customer device for the patches that have not been identified as opted out or permanently excluded.
+
+    - It performs a patch deployment against each scan that found patches to apply. 
+
+    - A report is attached to the previously raised Service Request and the Service Request is updated with the Windows patching outcome.
+
+- If both the Windows and Linux patching outcomed are set to *Completed successfully* the Service Request is closed.
+
+- If either operating system outcome is set to *Completed with errors* or *Failed* the customer is updated with an email. The customer must investigate errors and contact UKCloud Support if they require assistance.
+
+- If there has been no update after two weeks, the Service Request times out and UKCloud Support is alerted that not all patching was completed for the customer's patch group. UKCloud Support will try to contact the customer before ultimately closing the Patching Notification Service Request.
+
+**5th Wednesday of the month**
+
+- Between 00:00 and 06:00 the patching service scans all endpoints for vulnerabilities and updates the patching information in the database.
+
+- At 12:00 the patching service creates Service Requests for each patch group in My Calls. A notification email is sent.
+
+- Customers have from the time they receive the notification to the beginning of their patch window to notify UKCloud Support if they want to opt out of any patches.
+
+**5th Thursday of the month**
+
+* Patching commences again for all patch groups.
+
+You can see the full schedule in the table below.
+
+| **Group** | **Day** | **Time**      | **Cycle** | &nbsp; | **Group** | **Day** | **Time**      | **Cycle** |
+|----------:|---------|---------------|-----------|--------|-----------|---------|---------------|-----------|
+| A         | Thurs   | 00:00 - 05:00 | 1         | &nbsp; | AA        | Thurs   | 00:00 - 05:00 | 2         |
+| B         | Thurs   | 06:00 - 11:00 | 1         | &nbsp; | AB        | Thurs   | 06:00 - 11:00 | 2         |
+| C         | Thurs   | 12:00 - 17:00 | 1         | &nbsp; | AC        | Thurs   | 12:00 - 17:00 | 2         |
+| D         | Thurs   | 18:00 - 23:00 | 1         | &nbsp; | AD        | Thurs   | 18:00 - 23:00 | 2         |
+| E         | Fri     | 00:00 - 05:00 | 1         | &nbsp; | AE        | Fri     | 00:00 - 05:00 | 2         |
+| F         | Fri     | 06:00 - 11:00 | 1         | &nbsp; | AF        | Fri     | 06:00 - 11:00 | 2         |
+| G         | Fri     | 12:00 - 17:00 | 1         | &nbsp; | AG        | Fri     | 12:00 - 17:00 | 2         |
+| H         | Fri     | 18:00 - 23:00 | 1         | &nbsp; | AH        | Fri     | 18:00 - 23:00 | 2         |
+| I         | Sat     | 00:00 - 05:00 | 1         | &nbsp; | AI        | Sat     | 00:00 - 05:00 | 2         |
+| J         | Sat     | 06:00 - 11:00 | 1         | &nbsp; | AJ        | Sat     | 06:00 - 11:00 | 2         |
+| K         | Sat     | 12:00 - 17:00 | 1         | &nbsp; | AK        | Sat     | 12:00 - 17:00 | 2         |
+| L         | Sat     | 18:00 - 23:00 | 1         | &nbsp; | AL        | Sat     | 18:00 - 23:00 | 2         |
+| M         | Sun     | 00:00 - 05:00 | 1         | &nbsp; | AM        | Sun     | 00:00 - 05:00 | 2         |
+| N         | Sun     | 06:00 - 11:00 | 1         | &nbsp; | AN        | Sun     | 06:00 - 11:00 | 2         |
+| O         | Sun     | 12:00 - 17:00 | 1         | &nbsp; | AO        | Sun     | 12:00 - 17:00 | 2         |
+| P         | Sun     | 18:00 - 23:00 | 1         | &nbsp; | AP        | Sun     | 18:00 - 23:00 | 2         |
+| Q         | Mon     | 00:00 - 05:00 | 1         | &nbsp; | AQ        | Mon     | 00:00 - 05:00 | 2         |
+| R         | Mon     | 06:00 - 11:00 | 1         | &nbsp; | AR        | Mon     | 06:00 - 11:00 | 2         |
+| S         | Mon     | 12:00 - 17:00 | 1         | &nbsp; | AS        | Mon     | 12:00 - 17:00 | 2         |
+| T         | Mon     | 18:00 - 23:00 | 1         | &nbsp; | AT        | Mon     | 18:00 - 23:00 | 2         |
+| U         | Tues    | 00:00 - 05:00 | 1         | &nbsp; | AU        | Tues    | 00:00 - 05:00 | 2         |
+| V         | Tues    | 06:00 - 11:00 | 1         | &nbsp; | AV        | Tues    | 06:00 - 11:00 | 2         |
+| W         | Tues    | 12:00 - 17:00 | 1         | &nbsp; | AW        | Tues    | 12:00 - 17:00 | 2         |
+| X         | Tues    | 18:00 - 23:00 | 1         | &nbsp; | AX        | Tues    | 18:00 - 23:00 | 2         |
 
 > [!NOTE]
-> * Patching cycle is two weeks long (dates above show day number from beginning of each cycle rather than day of month).
+> - The patching cycle is two weeks long (the dates in the table above show the day number from the beginning of each cycle rather than the day of the month).
 >
-> * Customers are advised to use ***Device Groups A to E*** to test patches on VMs within a representative non-production environment.
+> - the 5th and 6th weeks of the month may occur at the beginning of the following week.
 >
-> * Customers are advised to use ***Device Groups F to J*** to apply patches on VMs within their production environments on the basis that no issues ave been identified in their non-production environments.
+> - Customers are advised to use ***Device Groups A to X*** to test patches on VMs within a representative non-production environment.
+>
+> - Customers are advised to use ***Device Groups AA to AX*** to apply patches on VMs within their production environments on the basis that no issues have been identified.
 
 ### Does my server/virtual machine need to be powered-on for the patching service to run?
 
@@ -106,7 +183,9 @@ To make best use of existing tooling within those Linux distributions, our servi
 
 ### What if the application of a patch fails?
 
-Each patching window is followed by 18 hours of issue resolution time, in which issues during automatic patching are investigated and may involve actions such as manual application of patches, and so on. Following the end of this window, the customer will be contacted by UKCloud Support with the current state. If more time is required, this will be arranged at that point.
+Should the application of a patch fail, the UKCloud patching system will update the Patching Notification Service Request with the outcome. The post-patch report attached to the request will include information about which devices have failed to patch, and why. After two weeks of no updates on a Service Request related to a patching group that has failed to patch, UKCloud Support will make best efforts to contact the customer once more before closing the Service Request.
+
+It is the customer's responsibility to ensure their devices are successfully patching and to investigate any failures. UKCloud Support is available to provide assistance with troubleshooting and investigation if required, and can be contacted by updating the Patching Notification Service Request.
 
 ### What if I require additional patches outside of my standard patching cycle?
 
