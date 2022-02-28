@@ -4,7 +4,7 @@ description: Learn how to create a VM using Terraform on Azure Stack Hub
 services: azure-stack
 author: cblack
 reviewer: wturner
-lastreviewed: 22/02/2022
+lastreviewed: 28/02/2022
 
 toc_rootlink: Users
 toc_sub1: How To
