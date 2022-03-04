@@ -125,35 +125,64 @@
 <p>You only need your Service Principal Name (SPN) to be assigned to your Azure Stack Hub subscription, despite what official Terraform documentation says.</p>
 </div>
 <p>The process of authentication can be handled in one of two ways, either as <strong>Environment Variables</strong> or in the <strong>Provider Block</strong>.</p>
-<p><a href="#example-of-how-variables-are-used-in-terraform">Environment Variables Option</a> - you can create your <strong>Terraform plan</strong> by putting only the plan itself into <code>main.tf</code> and then keeping <code>variables.tf</code> separate. You have to declare the actual values in the <code>terraform.tfvars</code> file. This is the file that you will need to populate with your actual credential details.</p>
-<h3 id="example-of-how-variables-are-used-in-terraform">Example of how variables are used in Terraform:</h3>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-3" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-3" data-tab="tabid-3" tabindex="0" aria-selected="true">Environment Variables</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-4" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-4" data-tab="tabid-4" tabindex="-1">Provider Block</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_tabid-3" role="tabpanel" data-tab="tabid-3">
+
+<p>You can create your <strong>Terraform plan</strong> by putting only the plan itself into <code>main.tf</code> and then keeping <code>variables.tf</code> separate. The actual values are declared in the <code>terraform.tfvars</code> file, such as the SPN credentials.</p>
+<h4 id="example-of-how-variables-are-used-in-terraform">Example of how variables are used in Terraform</h4>
 <h4 id="variablestf"><code>variables.tf</code></h4>
-  <pre><code class="tf">
-  variable "arm_endpoint" {}
-  variable "subscription_id" {}
-  variable "client_id" {}
-  variable "client_secret" {}
-  variable "tenant_id" {}
-  </code></pre>
+<pre><code class="tf">variable "arm_endpoint" {}
+variable "subscription_id" {}
+variable "client_id" {}
+variable "client_secret" {}
+variable "tenant_id" {}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can also put the content of <code>variables.tf</code>  at the top of the <code>main.tf</code> file.</p>
+</div>
 <h4 id="maintf"><code>main.tf</code></h4>
-  <pre><code class="tf">
-  provider "azurestack" {
-    arm_endpoint    = "${var.arm_endpoint}"
-    subscription_id = "${var.subscription_id}"
-    client_id       = "${var.client_id}"
-    client_secret   = "${var.client_secret}"
-    tenant_id       = "${var.tenant_id}"
-  }
-  </code></pre>
+<pre><code class="tf">provider "azurestack" {
+arm_endpoint    = "${var.arm_endpoint}"
+subscription_id = "${var.subscription_id}"
+client_id       = "${var.client_id}"
+client_secret   = "${var.client_secret}"
+tenant_id       = "${var.tenant_id}"
+}
+</code></pre>
 <h4 id="terraformtfvars"><code>terraform.tfvars</code></h4>
-  <pre><code class="tf">
-  # Configure the Azure Stack Hub Provider
+<pre><code class="tf"># Configure the Azure Stack Hub Provider
+arm_endpoint    = "https://management.{region}.{domain}"
+subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+client_id       = "{applicationId}"
+client_secret   = "{applicationSecret}"
+tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
+
+<p>You can create your <strong>Terraform plan</strong> by putting everything in one <code>main.tf</code> file, which then contains your Provider and variables settings explicitly in said plan.</p>
+<h4 id="maintf-1"><code>main.tf</code></h4>
+<pre><code class="tf"># Configure the Azure Stack Hub Provider
+provider "azurestack" {
   arm_endpoint    = "https://management.{region}.{domain}"
   subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
   client_id       = "{applicationId}"
-  client_secret   = "{applicationSecret}"
+  client_secret   = "{applicationPassword}"
   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-  </code></pre>
+}
+Rest of the file (...)
+</code></pre>
+</section>
+</div>
 <h4 id="argument-reference">Argument reference</h4>
 <ul>
 <li><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for your Azure Stack Hub instance. This will be <strong><code>https://management.{region}.{domain}</code></strong>.</li>
@@ -172,27 +201,7 @@
 <li><p><code>tenant_id</code> - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.</p>
 </li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can also put the content of <code>variables.tf</code>  at the top of the <code>main.tf</code> file.</p>
-</div>
-<details><summary style="font-size: 20px">Provider Block Option</summary>
-<p><a href="#example-of-provider-block">Provider Block Option</a> - you can create your <strong>Terraform plan</strong> by putting everything in one <code>main.tf</code> file, which then contains your Provider and variables settings explicitly in said plan.</p>
-<h3 id="example-of-provider-block">Example of Provider Block:</h3>
-<h4 id="maintf-1"><code>main.tf</code></h4>
- <pre><code class="tf">
- # Configure the Azure Stack Hub Provider
- provider "azurestack" {
-  arm_endpoint    = "https://management.{region}.{domain}"
-  subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-  client_id       = "{applicationId}"
-  client_secret   = "{applicationPassword}"
-  tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-}
-Rest of the file (...)
-</code></pre>
-<p>Official <a href="https://www.terraform.io/intro/getting-started/variables.html">Variables Guide</a></p>
-</details>
+<p>Official <a href="https://www.terraform.io/language/values/variables">Variables Guide</a></p>
 <h2 id="creating-a-vm">Creating a VM</h2>
 <p>The examples that follow show how to create VMs using Terraform. The code changes depending on whether you are creating a VM with an unmanaged or managed disk. You can select the type of disk you want to use, which will then update the examples below with the appropriate code.</p>
 <h2 id="declare-variables">Declare variables</h2>
@@ -207,7 +216,7 @@ Rest of the file (...)
 <tbody>
 <tr>
 <td>arm_endpoint</td>
-<td>The Azure Resource Manager API endpoint for your Azure Stack Hub instance. This will be https://management.{region}.{domain}.</td>
+<td>The Azure Resource Manager API endpoint for your Azure Stack Hub instance. This will be <code>https://management.{region}.{domain}</code>.</td>
 <td><form oninput="result.value=arm_endpoint.value" id="arm_endpoint" style="display:inline;"><input type="text" id="arm_endpoint" name="arm_endpoint" style="display:inline;" placeholder="https://management.{region}.{domain}"></form></td>
 </tr>
 <tr>
@@ -258,12 +267,12 @@ Rest of the file (...)
 <tr>
 <td>vm_image</td>
 <td>The operating system you want to use</td>
-<td><form onchange="result.value=vm_image.value" id="vm_image" style="display: inline;"><select name="vm_image" id="vm_image" style="display: inline;"><option value="OpenLogic/CentOS/6.10/latest">CentOS-based 6.10<option value="OpenLogic/CentOS/6.9/latest">CentOS-based 6.9<option value="OpenLogic/CentOS/7.3/latest">CentOS-based 7.3<option value="OpenLogic/CentOS/7.5/latest" selected="">CentOS-based 7.5<option value="credativ/Debian/9/latest">Debian 9 &quot;Stretch&quot;<option value="Canonical/UbuntuServer/14.04.5-LTS/latest">Ubuntu Server 14.04 LTS<option value="Canonical/UbuntuServer/16.04-LTS/latest">Ubuntu Server 16.04 LTS<option value="Canonical/UbuntuServer/18.04-LTS/latest">Ubuntu Server 18.04 LTS<option value="MicrosoftWindowsServer/WindowsServerSemiAnnual/Datacenter-Core-1709-with-Containers-smalldisk/latest">Windows Server, version 1709 with Containers - Pay as you use<option value="MicrosoftSQLServer/SQL2016SP1-WS2016/SQLDEV/latest">Free License: SQL Server 2016 SP1 Developer on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/SQLDEV/latest">Free License: SQL Server 2016 SP2 Developer on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/Express/latest">Free License: SQL Server 2016 SP2 Express on Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/SQLDEV/latest">Free SQL Server License: SQL Server 2017 Developer on SLES 12 SP2<option value="MicrosoftSQLServer/SQL2017-WS2016/SQLDEV/latest">Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/Express/latest">Free SQL Server License: SQL Server 2017 Express on SLES 12 SP2<option value="MicrosoftSQLServer/SQL2017-WS2016/Express/latest">Free SQL Server License: SQL Server 2017 Express on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP1-WS2016/Enterprise/latest">SQL Server 2016 SP1 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP1-WS2016/Standard/latest">SQL Server 2016 SP1 Standard on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/Enterprise/latest">SQL Server 2016 SP2 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/Standard/latest">SQL Server 2016 SP2 Standard on Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/Enterprise/latest">SQL Server 2017 Enterprise on SLES 12 SP2<option value="MicrosoftSQLServer/SQL2017-WS2016/Enterprise/latest">SQL Server 2017 Enterprise Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/Standard/latest">SQL Server 2017 Standard on SLES 12 SP2<option value="/MicrosoftSQLServer/SQL2017-WS2016/Standard/latest">SQL Server 2017 Standard on Windows Server 2016<option value="MicrosoftWindowsServer/WindowsServer/2012-Datacenter/latest">Windows Server 2012 Datacenter - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2012-R2-Datacenter/latest">Windows Server 2012 R2 Datacenter - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2016-Datacenter/latest">Windows Server 2016 Datacenter - Pay-as-you-use<option value="MicrosoftWindowsServer/WindowsServer/2016-Datacenter-Server-Core/latest">Windows Server 2016 Datacenter - Server Core - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2016-Datacenter-with-Containers/latest">Windows Server 2016 Datacenter - with Containers - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter/latest">Windows Server 2019 Datacenter<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter-with-Containers/latest">Windows Server 2019 Datacenter with Containers<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter-Core/latest">Windows Server 2019 Datacenter Core<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter-Core-with-Containers/latest">Windows Server 2019 Datacenter Core with Containers</select></form></td>
+<td><form onchange="result.value=vm_image.value;result2.value=vm_image.value" id="vm_image" style="display: inline;"><select name="vm_image" id="vm_image" style="display: inline;"><option value="/UbuntuServer/Skus/14.04.5-LTS">Ubuntu Server 14.04 LTS<option value="/UbuntuServer/Skus/16.04-LTS">Ubuntu Server 16.04 LTS<option value="/UbuntuServer/Skus/18.04-LTS">Ubuntu Server 18.04 LTS<option value="/0001-com-ubuntu-server-focal/Skus/20_04-lts">Ubuntu Server 20.04 LTS<option value="/CentOS/Skus/6.9">CentOS-based 6.9<option value="/CentOS/Skus/6.10">CentOS-based 6.10<option value="/CentOS/Skus/7.3">CentOS-based 7.3<option value="/CentOS/Skus/7.5" selected="">CentOS-based 7.5<option value="/CentOS/Skus/7.6" selected="">CentOS-based 7.6<option value="/CentOS/Skus/7_8" selected="">CentOS-based 7.8<option value="/CentOS/Skus/8.0" selected="">CentOS-based 8.0<option value="/Debian/Skus/9">Debian 9 &quot;Stretch&quot;<option value="/RHEL/Skus/7.5">Red Hat Enterprise Linux 7.5<option value="/KaliServer/Skus/14.04.12-LTS">Kali Linux<option value="/WindowsServer/Skus/2008-R2-SP1">Windows Server 2008 R2 SP1 Datacenter - Pay as you use<option value="/WindowsServer/Skus/2012-Datacenter">Windows Server 2012 Datacenter - Pay as you use<option value="/WindowsServer/Skus/2012-R2-Datacenter">Windows Server 2012 R2 Datacenter - Pay as you use<option value="/WindowsServer/Skus/2016-Datacenter">Windows Server 2016 Datacenter - Pay-as-you-use<option value="/WindowsServer/Skus/2016-Datacenter-Server-Core">Windows Server 2016 Datacenter - Server Core - Pay as you use<option value="/WindowsServer/Skus/2016-Datacenter-with-Containers">Windows Server 2016 Datacenter - with Containers - Pay as you use<option value="/WindowsServer/Skus/2019-Datacenter">Windows Server 2019 Datacenter - Pay as you use<option value="/WindowsServer/Skus/2019-Datacenter-with-Containers">Windows Server 2019 Datacenter - with Containers - Pay as you use<option value="/WindowsServer/Skus/2019-Datacenter-Core">Windows Server 2019 Datacenter Core - Pay as you use<option value="/WindowsServer/Skus/2019-Datacenter-Core-with-Containers">Windows Server 2019 Datacenter Core - with Containers - Pay as you use<option value="/WindowsServer/Skus/2022-Datacenter">Windows Server 2022 Datacenter - Pay as you use<option value="/WindowsServerSemiAnnual/Skus/Datacenter-Core-1709-with-Containers-smalldisk">Windows Server, version 1709 with Containers - Pay as you use<option value="/WindowsServer/Skus/datacenter-core-2004-with-containers-smalldisk">Windows Server, version 2004 with Containers - Pay as you use<option value="/SQL2016SP1-WS2016/Skus/SQLDEV">Free License: SQL Server 2016 SP1 Developer on Windows Server 2016<option value="/SQL2016SP1-WS2016/Skus/Standard">SQL Server 2016 SP1 Standard on Windows Server 2016<option value="/SQL2016SP1-WS2016/Skus/Enterprise">SQL Server 2016 SP1 Enterprise on Windows Server 2016<option value="/SQL2016SP2-WS2016/Skus/SQLDEV">Free License: SQL Server 2016 SP2 Developer on Windows Server 2016<option value="/SQL2016SP2-WS2016/Skus/Express">Free License: SQL Server 2016 SP2 Express on Windows Server 2016<option value="/SQL2016SP2-WS2016/Skus/Standard">SQL Server 2016 SP2 Standard on Windows Server 2016<option value="/SQL2016SP2-WS2016/Skus/Enterprise">SQL Server 2016 SP2 Enterprise on Windows Server 2016<option value="/SQL2017-WS2016/Skus/SQLDEV">Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016<option value="/SQL2017-WS2016/Skus/Express">Free SQL Server License: SQL Server 2017 Express on Windows Server 2016<option value="/SQL2017-WS2016/Skus/Standard">SQL Server 2017 Standard on Windows Server 2016<option value="/SQL2017-WS2016/Skus/Enterprise">SQL Server 2017 Enterprise Windows Server 2016<option value="/SQL2017-SLES12SP2/Skus/SQLDEV">Free SQL Server License: SQL Server 2017 Developer on SLES 12 SP2<option value="/SQL2017-SLES12SP2/Skus/Express">Free SQL Server License: SQL Server 2017 Express on SLES 12 SP2<option value="/SQL2017-SLES12SP2/Skus/Standard">SQL Server 2017 Standard on SLES 12 SP2<option value="/SQL2017-SLES12SP2/Skus/Enterprise">SQL Server 2017 Enterprise on SLES 12 SP2</select></form></td>
 </tr>
 <tr>
 <td>instance_size</td>
 <td>Size of the virtual machine to be created</td>
-<td><form onchange="result.value=vm_size.value" id="vm_size" style="display: inline;"><select name="vm_size" id="vm_size" style="display: inline;"><optgroup label="Basic A"><option value="Basic_A0">Basic A0<option value="Basic_A1">Basic A1<option value="Basic_A2">Basic A2<option value="Basic_A3">Basic A3<option value="Basic_A4">Basic A4</optgroup><optgroup label="Standard A"><option value="Standard_A0">Standard A0<option value="Standard_A1">Standard A1<option value="Standard_A2">Standard A2<option value="Standard_A3">Standard A3<option value="Standard_A4">Standard A4<option value="Standard_A5">Standard A5<option value="Standard_A6">Standard A6<option value="Standard_A7">Standard A7</optgroup><optgroup label="Av2-Series"><option value="Standard_A1_v2">Standard A1 v2<option value="Standard_A2_v2">Standard A2 v2<option value="Standard_A4_v2">Standard A4 v2<option value="Standard_A8_v2">Standard A8 v2<option value="Standard_A2m_v2">Standard A2m v2<option value="Standard_A4m_v2">Standard A4m v2<option value="Standard_A8m_v2">Standard A8m v2</optgroup><optgroup label="D-Series"><option value="Standard_D1">Standard D1<option value="Standard_D2">Standard D2<option value="Standard_D3">Standard D3<option value="Standard_D4">Standard D4<option value="Standard_D11">Standard D11<option value="Standard_D12">Standard D12<option value="Standard_D13">Standard D13<option value="Standard_D14">Standard D14</optgroup><optgroup label="Dv2-Series"><option value="Standard_D1_v2">Standard D1 v2<option value="Standard_D2_v2">Standard D2 v2<option value="Standard_D3_v2">Standard D3 v2<option value="Standard_D4_v2">Standard D4 v2<option value="Standard_D5_v2">Standard D5 v2<option value="Standard_D11_v2">Standard D11 v2<option value="Standard_D12_v2">Standard D12 v2<option value="Standard_D13_v2">Standard D13 v2<option value="Standard_D14_v2">Standard D14 v2</optgroup><optgroup label="DS-Series"><option value="Standard_DS1">Standard DS1<option value="Standard_DS2">Standard DS2<option value="Standard_DS3">Standard DS3<option value="Standard_DS4">Standard DS4<option value="Standard_DS11">Standard DS11<option value="Standard_DS12">Standard DS12<option value="Standard_DS13">Standard DS13<option value="Standard_DS14">Standard DS14</optgroup><optgroup label="DSv2-Series"><option value="Standard_DS1_v2">Standard DS1 v2<option value="Standard_DS2_v2" selected="">Standard DS2 v2<option value="Standard_DS3_v2">Standard DS3 v2<option value="Standard_DS4_v2">Standard DS4 v2<option value="Standard_DS5_v2">Standard DS5 v2<option value="Standard_DS11_v2">Standard DS11 v2<option value="Standard_DS12_v2">Standard DS12 v2<option value="Standard_DS13_v2">Standard DS13 v2<option value="Standard_DS14_v2">Standard DS14 v2</optgroup><optgroup label="F-Series"><option value="Standard_F1">Standard F1<option value="Standard_F2">Standard F2<option value="Standard_F4">Standard F4<option value="Standard_F8">Standard F8<option value="Standard_F16">Standard F16</optgroup><optgroup label="Fs-Series"><option value="Standard_F1s">Standard F1s<option value="Standard_F2s">Standard F2s<option value="Standard_F4s">Standard F4s<option value="Standard_F8s">Standard F8s<option value="Standard_F16s">Standard F16s</optgroup><optgroup label="Fsv2-Series"><option value="Standard_F2s_v2">Standard F2s v2<option value="Standard_F4s_v2">Standard F4s v2<option value="Standard_F8s_v2">Standard F8s v2<option value="Standard_F16s_v2">Standard F16s v2<option value="Standard_F32s_v2">Standard F32s v2<option value="Standard_F64s_v2">Standard F64s v2</optgroup></select></form></td>
+<td><form onchange="result.value=vm_size.value;result2.value=vm_size.value" id="vm_size" style="display: inline;"><select name="vm_size" id="vm_size" style="display: inline;"><optgroup label="Basic A"><option value="Basic_A0">Basic A0<option value="Basic_A1">Basic A1<option value="Basic_A2">Basic A2<option value="Basic_A3">Basic A3<option value="Basic_A4">Basic A4</optgroup><optgroup label="Standard A"><option value="Standard_A0">Standard A0<option value="Standard_A1">Standard A1<option value="Standard_A2">Standard A2<option value="Standard_A3">Standard A3<option value="Standard_A4">Standard A4<option value="Standard_A5">Standard A5<option value="Standard_A6">Standard A6<option value="Standard_A7">Standard A7</optgroup><optgroup label="Av2-Series"><option value="Standard_A1_v2">Standard A1 v2<option value="Standard_A2_v2">Standard A2 v2<option value="Standard_A4_v2">Standard A4 v2<option value="Standard_A8_v2">Standard A8 v2<option value="Standard_A2m_v2">Standard A2m v2<option value="Standard_A4m_v2">Standard A4m v2<option value="Standard_A8m_v2">Standard A8m v2</optgroup><optgroup label="D-Series"><option value="Standard_D1">Standard D1<option value="Standard_D2">Standard D2<option value="Standard_D3">Standard D3<option value="Standard_D4">Standard D4<option value="Standard_D11">Standard D11<option value="Standard_D12">Standard D12<option value="Standard_D13">Standard D13<option value="Standard_D14">Standard D14</optgroup><optgroup label="Dv2-Series"><option value="Standard_D1_v2">Standard D1 v2<option value="Standard_D2_v2">Standard D2 v2<option value="Standard_D3_v2">Standard D3 v2<option value="Standard_D4_v2">Standard D4 v2<option value="Standard_D5_v2">Standard D5 v2<option value="Standard_D11_v2">Standard D11 v2<option value="Standard_D12_v2">Standard D12 v2<option value="Standard_D13_v2">Standard D13 v2<option value="Standard_D14_v2">Standard D14 v2</optgroup><optgroup label="DS-Series"><option value="Standard_DS1">Standard DS1<option value="Standard_DS2">Standard DS2<option value="Standard_DS3">Standard DS3<option value="Standard_DS4">Standard DS4<option value="Standard_DS11">Standard DS11<option value="Standard_DS12">Standard DS12<option value="Standard_DS13">Standard DS13<option value="Standard_DS14">Standard DS14</optgroup><optgroup label="DSv2-Series"><option value="Standard_DS1_v2" selected="">Standard DS1 v2<option value="Standard_DS2_v2">Standard DS2 v2<option value="Standard_DS3_v2">Standard DS3 v2<option value="Standard_DS4_v2">Standard DS4 v2<option value="Standard_DS5_v2">Standard DS5 v2<option value="Standard_DS11_v2">Standard DS11 v2<option value="Standard_DS12_v2">Standard DS12 v2<option value="Standard_DS13_v2">Standard DS13 v2<option value="Standard_DS14_v2">Standard DS14 v2</optgroup><optgroup label="F-Series"><option value="Standard_F1">Standard F1<option value="Standard_F2">Standard F2<option value="Standard_F4">Standard F4<option value="Standard_F8">Standard F8<option value="Standard_F16">Standard F16</optgroup><optgroup label="Fs-Series"><option value="Standard_F1s">Standard F1s<option value="Standard_F2s">Standard F2s<option value="Standard_F4s">Standard F4s<option value="Standard_F8s">Standard F8s<option value="Standard_F16s">Standard F16s</optgroup><optgroup label="Fsv2-Series"><option value="Standard_F2s_v2">Standard F2s v2<option value="Standard_F4s_v2">Standard F4s v2<option value="Standard_F8s_v2">Standard F8s v2<option value="Standard_F16s_v2">Standard F16s v2<option value="Standard_F32s_v2">Standard F32s v2<option value="Standard_F64s_v2">Standard F64s v2</optgroup></select></form></td>
 </tr>
 <tr>
 <td>rg_tag</td>
@@ -272,18 +281,18 @@ Rest of the file (...)
 </tr>
 </tbody>
 </table>
-<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Linux VM</a>
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Linux VM</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">Windows VM</a>
+<a href="#tabpanel_bHGHmlrG6S-1_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-2" data-tab="tabid-2" tabindex="-1">Windows VM</a>
 </li>
 </ul>
-<section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
+<section id="tabpanel_bHGHmlrG6S-1_tabid-1" role="tabpanel" data-tab="tabid-1">
 </section>
-<section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_bHGHmlrG6S-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 </section>
 </div>
 
@@ -296,24 +305,23 @@ Rest of the file (...)
 <h5>Tip</h5>
 <p>Resource attributes such as &quot;name&quot; can be hardcoded as opposed to using variables from the external files for the declaration.</p>
 </div>
-<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-2">
 <ul role="tablist">
 <li role="presentation" aria-hidden="true" hidden="hidden">
-<a href="#tabpanel_bHGHmlrG6S-1_tabid-a_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-a_tabid-2" data-tab="tabid-a" data-condition="tabid-2" tabindex="-1">Windows VM with Managed Disks</a>
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-a_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-a_tabid-2" data-tab="tabid-a" data-condition="tabid-2" tabindex="-1">Windows VM with Managed Disks</a>
 </li>
 <li role="presentation" aria-hidden="true" hidden="hidden">
-<a href="#tabpanel_bHGHmlrG6S-1_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Windows VM with Unmanaged Disks</a>
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Windows VM with Unmanaged Disks</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S-1_tabid-a_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-a_tabid-1" data-tab="tabid-a" data-condition="tabid-1" tabindex="0" aria-selected="true">Linux VM with Managed Disks</a>
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-a_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-a_tabid-1" data-tab="tabid-a" data-condition="tabid-1" tabindex="0" aria-selected="true">Linux VM with Managed Disks</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S-1_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Linux VM with Unmanaged Disks</a>
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Linux VM with Unmanaged Disks</a>
 </li>
 </ul>
-<section id="tabpanel_bHGHmlrG6S-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="tf">
-provider "azurestack" {
+<section id="tabpanel_bHGHmlrG6S-2_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="tf">provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
   client_id       = "${var.client_id}"
@@ -440,9 +448,8 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 </section>
-<section id="tabpanel_bHGHmlrG6S-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="tf">
-provider "azurestack" {
+<section id="tabpanel_bHGHmlrG6S-2_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="tf">provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
   client_id       = "${var.client_id}"
@@ -588,9 +595,8 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 </section>
-<section id="tabpanel_bHGHmlrG6S-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
-<pre><code class="tf">
-provider "azurestack" {
+<section id="tabpanel_bHGHmlrG6S-2_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
+<pre><code class="tf">provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
   client_id       = "${var.client_id}"
@@ -718,9 +724,8 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 </section>
-<section id="tabpanel_bHGHmlrG6S-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
-<pre><code class="tf">
-provider "azurestack" {
+<section id="tabpanel_bHGHmlrG6S-2_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
+<pre><code class="tf">provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
   client_id       = "${var.client_id}"
@@ -869,80 +874,78 @@ resource "azurestack_virtual_machine" "vm" {
 </section>
 </div>
 <h3 id="assign-values-to-the-variables-in-the-terraformtfvars-file-through-the-table-found-at-the-top-of-the-document">Assign values to the variables in the <code>terraform.tfvars</code> file through the table found at the top of the document</h3>
-<pre><code class="tf">
-  arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
-  subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
-  client_id       = "<output form="client_id" name="result" style="display: inline;">applicationId</output>"
-  client_secret   = "<output form="client_secret" name="result" style="display: inline;">applicationPassword</output>"
-  tenant_id       = "<output form="tenant_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
+<pre><code class="tf">arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
+subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
+client_id       = "<output form="client_id" name="result" style="display: inline;">applicationId</output>"
+client_secret   = "<output form="client_secret" name="result" style="display: inline;">applicationPassword</output>"
+tenant_id       = "<output form="tenant_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
 
-  location        = "<output form="location" name="result" style="display: inline;">frn00006</output>"
-  vm_count        = <output form="vm_count" name="result" style="display: inline;">1</output>
-  vm_image_string = "<output form="vm_image" name="result" style="display: inline;">OpenLogic/CentOS/7.5/latest</output>"
-  vm_size         = "<output form="vm_size" name="result" style="display: inline;">Standard_DS2_v2</output>"
-  rg_name         = "<output form="rg_name" name="result" style="display: inline;">MyResourceGroup</output>"
-  rg_tag          = "<output form="rg_tag" name="result" style="display: inline;">Production</output>"
+location        = "<output form="location" name="result" style="display: inline;">frn00006</output>"
+vm_count        = <output form="vm_count" name="result" style="display: inline;">1</output>
+vm_image_string = "<output form="vm_image" name="result" style="display: inline;">OpenLogic/CentOS/7.5/latest</output>"
+vm_size         = "<output form="vm_size" name="result" style="display: inline;">Standard_DS2_v2</output>"
+rg_name         = "<output form="rg_name" name="result" style="display: inline;">MyResourceGroup</output>"
+rg_tag          = "<output form="rg_tag" name="result" style="display: inline;">Production</output>"
 
-  admin_username  = "<output form="vm_username" name="result" style="display: inline;">user</output>"
-  admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"
+admin_username  = "<output form="vm_username" name="result" style="display: inline;">user</output>"
+admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"
 </code></pre>
 <h3 id="declare-the-variables-here-in-the-variablestf-file-for-use-in-the-main-script">Declare the variables here in the <code>variables.tf</code> file for use in the main script</h3>
-<pre><code class="tf">
-  variable "arm_endpoint" {
-    type = "string"
-  }
+<pre><code class="tf">variable "arm_endpoint" {
+  type = string
+}
 
-  variable "subscription_id" {
-    type = "string"
-  }
+variable "subscription_id" {
+  type = string
+}
 
-  variable "client_id" {
-    type = "string"
-  }
+variable "client_id" {
+  type = string
+}
 
-  variable "client_secret" {
-    type = "string"
-  }
+variable "client_secret" {
+  type = string
+}
 
-  variable "tenant_id" {
-    type = "string"
-  }
+variable "tenant_id" {
+  type = string
+}
 
-  variable "admin_username" {
-    type     = "string"
-    default  = "username"
-  }
+variable "admin_username" {
+  type     = string
+  default  = "username"
+}
 
-  variable "admin_password" {
-    type     = "string"
-    default  = "Password123!"
-  }
+variable "admin_password" {
+  type     = string
+  default  = "Password123!"
+}
 
-  variable "location" {
-    type     = "string"
-  }
+variable "location" {
+  type     = string
+}
 
-  variable "rg_tag" {
-    type    = "string"
-    default = "production"
-  }
+variable "rg_tag" {
+  type    = string
+  default = "production"
+}
 
-  variable "rg_name" {
-    type    = "string"
-  }
+variable "rg_name" {
+  type    = string
+}
 
-  variable "vm_count" {
-    default  = 1
-  }
+variable "vm_count" {
+  default  = 1
+}
 
-  variable "vm_image_string" {
-    type    = "string"
-  }
+variable "vm_image_string" {
+  type    = string
+}
 
-  variable "vm_size" {
-    type    = "string"
-    default = "Standard_DS2_v2"
-  }
+variable "vm_size" {
+  type    = string
+  default = "Standard_DS2_v2"
+}
 </code></pre>
 <h2 id="how-to-execute-a-terraform-plan">How to execute a Terraform plan</h2>
 <div class="TIP">
@@ -951,7 +954,7 @@ resource "azurestack_virtual_machine" "vm" {
 </div>
 <p>From a PowerShell prompt, navigate to the directory that contains your <code>tf</code> files (including your variable files) and run the following commands:</p>
 <pre><code class="lang-powershell"># Check if your environment is setup correctly
-.\terraform.exe init
+terraform init
 
 Initializing provider plugins...
 
@@ -977,9 +980,9 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 </code></pre>
 <pre><code class="lang-powershell"># Verify your plan
-.\terraform.exe plan -var-file=C:\&lt;DirectoryName&gt;\terraform.tfvars
+terraform plan -var-file=&quot;terraform.tfvars&quot;
 # Apply your plan
-.\terraform.exe apply -var-file=C:\&lt;DirectoryName&gt;\terraform.tfvars
+terraform apply -var-file=&quot;terraform.tfvars&quot;
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
