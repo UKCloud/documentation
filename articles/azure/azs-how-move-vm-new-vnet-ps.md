@@ -3,8 +3,8 @@ title: How to move a virtual machine to a new virtual network using PowerShell
 description: Provides help for moving a virtual machine to a new virtual network on UKCloud for Microsoft Azure
 services: azure-stack
 author: blawson
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+reviewer: wturner
+lastreviewed: 08/03/2022
 
 toc_rootlink: Users
 toc_sub1: How To
