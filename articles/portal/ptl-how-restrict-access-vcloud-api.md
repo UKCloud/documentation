@@ -24,7 +24,7 @@ You can restrict access to VMware Cloud Director by creating an allowlist of per
 
 > [!IMPORTANT]
 >
-> - Enabling this option restricts access to both the vCloud API and the VMware Cloud Director tenant portal.
+> - Enabling this option restricts access to both the VMware Cloud API and the VMware Cloud Director tenant portal.
 >
 > - Be careful when entering IP addresses. Entering the wrong address may make the VMware Cloud Director inaccessible until you change the settings.
 
