@@ -49,11 +49,11 @@ The following OpenStack projects/services are available with UKCloud for OpenSta
 
 - Neutron Networking Services
 
-- Barbican Key Management Services (*Excludes COR00005 Region*)
+- Barbican Key Management Services
 
-- Octavia Load Balancing as a Service (*Excludes COR00005 Region*)
+- Octavia Load Balancing as a Service
 
-- Self-service backup and restoration, powered by TrilioVault (*Excludes COR00005*)
+- Self-service backup and restoration, powered by TrilioVault
 
 UKCloud will look to add additional OpenStack projects to this service through future releases.
 

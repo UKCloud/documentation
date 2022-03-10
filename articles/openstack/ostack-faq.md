@@ -163,16 +163,9 @@ UKCloud doesn't provide SSL certificates, but you can use your existing ones.
 
 Some government secure networks (such as PSN and HSCN) provide SSL certificates as part of their service.
 
-### Do you offer Load Balancing as a Service (LBaaS)? 
+### Do you offer Load Balancing as a Service (LBaaS)?
 
-The answer to this depends on which of UKCloud's OpenStack platforms you are using:
-
-| Region              | OpenStack version                      | LBaaS supported? |
-|---------------------|----------------------------------------|------------------|
-| COR00005 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services. |
-| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | Uses the [OpenStack Octavia](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
-  
-<i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i>
+UKCloud for OpenStack uses the [OpenStack Octavia](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project.
 
 ### Can I deploy my own load balancer?
 
@@ -226,14 +219,7 @@ Due to a current constraint within the OpenStack project, a maximum total of 25 
 
 ### Does UKCloud offer encryption on volumes?
 
-The answer to this depends on which of UKCloud's OpenStack services you are using:
-
-| Region              | OpenStack version                      | Encrypted volumes supported? |
-|---------------------|----------------------------------------|------------------|
-| COR00005 | OpenStack Platform 10 <BR>(Newton Release) | No, as Red Hat's Newton release does not support native Key Management as a Service (KMaaS) to underpin encryption  |
-| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | In Beta* |
-
-<i> *Beta allows early access to new features for testing and feedback purposes. Although UKCloud has performed testing in production, we cannot warrant for the use within a customer's production environment. </i>
+UKCloud for OpenStack supports encrypted volumes through Key Management as a Service (KMaaS) using OpenStack's Barbican service. You can find further information [here](https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html)..
 
 ### What type of volume encryption is offered?
 
@@ -285,12 +271,7 @@ OpenStack environments in our Elevated OFFICIAL security domain can be managed v
 
 ### Does OpenStack offer Key Management as a Service (KMaaS)?
 
-The answer to this depends on which of UKCloud's OpenStack platforms you are using:
-
-| Region              | OpenStack version                      | KMaaS supported? |
-|---------------------|----------------------------------------|------------------|
-| COR00005 | OpenStack Platform 10 <BR>(Newton Release) | No, customers will need to deploy their own Key Management solution. |
-| COR00005-2 <BR> FRN00006 | OpenStack Platform 13 <BR> (Queens Release) | Yes, using OpenStack's Barbican service. You can find further information [here](https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html). |
+UKCloud for OpenStack supports Key Management as a Service (KMaaS) using OpenStack's Barbican service. You can find further information [here](https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html).
 
 ### What reports can I get about instances performance?
 
@@ -299,10 +280,6 @@ UKCloud does not currently provide instance performance reports, but you can mon
 ### Does UKCloud patch instances?
 
 No, you are responsible for the patching of your services. We make a patch repository available to you for instances on the Elevated OFFICIAL cloud platform (which cannot connect to the internet) for common operating systems that we provide.
-
-<!--### How do I find the latest patches to the UKCloud infrastructure?
-
-UKCloud maintains a Knowledge Centre article advising the current patch level of the UKCloud infrastructure. See [here](../other/other-ref-platform-patches.md). -->
 
 ### How do I access support and patches for operating systems that UKCloud licenses?
 
