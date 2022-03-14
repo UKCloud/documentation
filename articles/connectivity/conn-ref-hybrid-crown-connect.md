@@ -3,8 +3,8 @@ title: HybridConnect vs CrownConnect (Private Connectivity)
 description: Outlines the difference between HybridConnect and CrownConnect and explains when each should be used
 services: connectivity
 author: nstobbart
-reviewer: nstobbart
-lastreviewed: 22/03/2021
+reviewer: tlofthouse
+lastreviewed: 10/03/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
