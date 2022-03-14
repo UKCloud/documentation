@@ -118,7 +118,7 @@ $NewVmConfig = New-AzVMConfig -VMName $VMName -VMSize $VM.HardwareProfile.VmSize
 
 if ($ManagedDisks) {
     # Add OS disk to new VM configuration
-    if ($VM.OsProfile.WindowsConfiguration) {
+    if ($VM.StorageProfile.OsDisk.OsType -eq "Windows") {
         $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Windows
     }
     else {
@@ -132,7 +132,7 @@ if ($ManagedDisks) {
 }
 else {
     # Add OS disk to new VM configuration
-    if ($VM.OsProfile.WindowsConfiguration) {
+    if ($VM.StorageProfile.OsDisk.OsType -eq "Windows") {
         $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Windows
     }
     else {
