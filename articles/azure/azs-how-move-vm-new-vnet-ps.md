@@ -4,7 +4,7 @@ description: Provides help for moving a virtual machine to a new virtual network
 services: azure-stack
 author: blawson
 reviewer: wturner
-lastreviewed: 08/03/2022
+lastreviewed: 14/03/2022
 
 toc_rootlink: Users
 toc_sub1: How To
