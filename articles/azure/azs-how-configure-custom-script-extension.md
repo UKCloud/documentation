@@ -54,127 +54,13 @@ Select the desired deployment option:
 
 ## [New VM](#tab/tabid-1)
 
-See documentation here on [how to create a new VM on Azure Stack Hub](azs-how-create-vm-ps.md).
+See documentation here on [how to create a new VM on Azure Stack Hub](azs-how-create-vm-ps.md), then continue with the guide below.
+
+The appropriate code for either a Windows or Linux VM will need to be added to the end of the VM creation script.
 
 ## [Existing VM](#tab/tabid-2)
 
-Continue with guide below.
-
-***
-
-### [Linux](#tab/tabid-a/tabid-1)
-
-Add the following code to the end of the VM creation script when creating a Linux VM on Azure Stack Hub.
-
-#### Local disk
-
-<pre><code class="language-PowerShell"># Declare variables
-$CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">SetRootPassword.sh</output>"
-$ContainerName = "<output form="containername" name="result" style="display: inline;">customscriptextension</output>"
-$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result" style="display: inline;">customscript<span id="RandNum"></span></output>".ToLower()
-$FilePath = "<output form="filepath" name="result" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"
-$ScriptArguments = "<output form="scriptargs" name="result" style="display: inline;">Password123!</output>"
-$CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
-
-# Create a new storage account
-Write-Output -InputObject "Creating storage account and container"
-$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
-
-# Get storage account context
-$Context = $StorageAccount.Context
-$Container = New-AzStorageContainer -Name $ContainerName -Context $Context
-
-# Retrieve storage account key
-$StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
-
-# Retrieve storage blob endpoint
-$ScriptBlobUrl = $Container.Context.BlobEndPoint
-
-# Upload script extension to the storage account
-Write-Output -InputObject "Uploading custom script extension to storage account"
-Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
-
-# Creating script location string
-$ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
-
-# Add custom script extension to Linux VM
-Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
-$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
-$ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
-$ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
-Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
-</code></pre>
-
-#### File URI
-
-<pre><code class="language-PowerShell"># Declare variables
-$FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh</output>"
-$CustomScriptFileName = "<output form="customscriptfilename" name="result2" style="display: inline;">SetRootPassword.sh</output>"
-$ScriptArguments = "<output form="scriptargs" name="result2" style="display: inline;">Password123!</output>"
-$CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
-
-# Add custom script extension to Linux VM
-Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
-$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
-$ScriptSettings = @{"fileUris" = @($FileUri)};
-$ProtectedSettings = @{"commandToExecute" = $CommandToExecute};
-Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
-</code></pre>
-
-### [Windows](#tab/tabid-b/tabid-1)
-
-Add the following code to the end of the VM creation script when creating a Windows VM on Azure Stack Hub.
-
-#### Local disk
-
-<pre><code class="language-PowerShell"># Declare variables
-$CustomScriptFileName = "<output form="customscriptfilename" name="result3" style="display: inline;">VMSetupForSR.ps1</output>"
-$ContainerName = "<output form="containername" name="result2" style="display: inline;">customscriptextension</output>"
-$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result2" style="display: inline;">customscript<span id="RandNum2"></span></output>".ToLower()
-$FilePath = "<output form="filepath" name="result2" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
-$ScriptArguments = "<output form="scriptargs" name="result3" style="display: inline;">-FirewallPorts 80,443</output>"
-$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
-
-# Create a new storage account
-Write-Output -InputObject "Creating storage account and container"
-$StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
-
-# Get storage account context
-$Context = $StorageAccount.Context
-New-AzStorageContainer -Name $ContainerName -Context $Context
-
-# Retrieve storage account key
-$StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
-
-# Upload script extension to the storage account
-Write-Output -InputObject "Uploading custom script extension to storage account"
-Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
-
-# Add custom script extension to Windows VM
-Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
-</code></pre>
-
-#### File URI
-
-<pre><code class="language-PowerShell"># Declare variables
-$FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
-$CustomScriptFileName = "<output form="customscriptfilename" name="result4" style="display: inline;">VMSetupForSR.ps1</output>"
-$ScriptArguments = "<output form="scriptargs" name="result4" style="display: inline;">-FirewallPorts 80,443</output>"
-$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
-
-# Add custom script extension to Windows VM
-Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
-</code></pre>
-
-### [Linux](#tab/tabid-c/tabid-2)
-
-In your PowerShell window:
-
-#### Local disk
+Use the following code to authenticate to Azure Stack Hub, then continue with the guide below.
 
 <pre><code class="language-PowerShell"># Initialise environment and variables
 
@@ -189,8 +75,17 @@ Connect-AzAccount -EnvironmentName "AzureStackUser"
 
 # Get location of Azure Stack Hub
 $Location = (Get-AzLocation).Location
+</code></pre>
 
-# Input variables
+***
+
+### [Linux](#tab/tabid-a)
+
+In your PowerShell window:
+
+#### Local disk
+
+<pre><code class="language-PowerShell"># Input variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
 $CustomScriptFileName = "<output form="customscriptfilename" name="result5" style="display: inline;">SetRootPassword.sh</output>"
@@ -232,21 +127,7 @@ Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName
 
 #### File URI
 
-<pre><code class="language-PowerShell"># Initialise environment and variables
-
-# Declare endpoint
-$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
-
-# Add environment
-Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-
-# Login
-Connect-AzAccount -EnvironmentName "AzureStackUser"
-
-# Get location of Azure Stack Hub
-$Location = (Get-AzLocation).Location
-
-# Input variables
+<pre><code class="language-PowerShell"># Input variables
 $RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
 $CustomScriptFileName = "<output form="customscriptfilename" name="result6" style="display: inline;">SetRootPassword.sh</output>"
@@ -262,27 +143,13 @@ $ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExe
 Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
 </code></pre>
 
-### [Windows](#tab/tabid-d/tabid-2)
+### [Windows](#tab/tabid-b)
 
 In your PowerShell window:
 
 #### Local disk
 
-<pre><code class="language-PowerShell"># Initialise environment and variables
-
-# Declare endpoint
-$ArmEndpoint = "<output form="armendpoint" name="result3" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
-
-# Add environment
-Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-
-# Login
-Connect-AzAccount -EnvironmentName "AzureStackUser"
-
-# Get location of Azure Stack Hub
-$Location = (Get-AzLocation).Location
-
-# Input variables
+<pre><code class="language-PowerShell"># Input variables
 $RGName = "<output form="resourcegroup" name="result3" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result3" style="display: inline;">MyVM</output>"
 $CustomScriptFileName = "<output form="customscriptfilename" name="result7" style="display: inline;">VMSetupForSR.ps1</output>"
@@ -314,21 +181,7 @@ Set-AzVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScr
 
 #### File URI
 
-<pre><code class="language-PowerShell"># Initialise environment and variables
-
-# Declare endpoint
-$ArmEndpoint = "<output form="armendpoint" name="result4" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
-
-# Add environment
-Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
-
-# Login
-Connect-AzAccount -EnvironmentName "AzureStackUser"
-
-# Get location of Azure Stack Hub
-$Location = (Get-AzLocation).Location
-
-# Input variables
+<pre><code class="language-PowerShell"># Input variables
 $RGName = "<output form="resourcegroup" name="result4" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result4" style="display: inline;">MyVM</output>"
 $CustomScriptFileName = "<output form="customscriptfilename" name="result8" style="display: inline;">VMSetupForSR.ps1</output>"
