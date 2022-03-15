@@ -3,8 +3,8 @@ title: How to configure custom script extensions for new and existing VMs on Azu
 description: Describes how to configure custom script extensions for new and existing VMs on Azure Stack Hub
 services: azure-stack
 author: dbrennand
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+reviewer: wturner
+lastreviewed: 15/03/2022
 
 toc_rootlink: Users
 toc_sub1: How To
