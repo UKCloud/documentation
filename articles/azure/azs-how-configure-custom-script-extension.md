@@ -56,7 +56,7 @@ Select the desired deployment option:
 
 See documentation here on [how to create a new VM on Azure Stack Hub](azs-how-create-vm-ps.md), then continue with the guide below.
 
-The appropriate code for either a Windows or Linux VM will need to be added to the end of the VM creation script.
+The appropriate code for either a Windows or Linux VM will need to be appended to the end of the VM creation script.
 
 ## [Existing VM](#tab/tabid-2)
 
