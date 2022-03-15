@@ -40,25 +40,25 @@ Enter details below to provide values for the variables in the following scripts
 
 | Variable name   | Variable description                                               | Input            |
 |-----------------|--------------------------------------------------------------------|------------------|
-| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack Hub                 | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value;result3.value=armendpoint.value;result4.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack Hub                 | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$RGName        | Name of the resource group                           | <form oninput="result.value=resourcegroup.value;result2.value=resourcegroup.value;result3.value=resourcegroup.value;result4.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$VMName        | Name of the virtual machine                          | <form oninput="result.value=vmname.value;result2.value=vmname.value;result3.value=vmname.value;result4.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
-| \$CustomScriptFileName        | The name of the custom script file                         | <form oninput="result.value=customscriptfilename.value;result2.value=customscriptfilename.value;result3.value=customscriptfilename.value;result4.value=customscriptfilename.value;result5.value=customscriptfilename.value;result6.value=customscriptfilename.value;result7.value=customscriptfilename.value;result8.value=customscriptfilename.value" id="customscriptfilename" style="display: inline;"><input type="text" id="customscriptfilename" name="customscriptfilename" style="display: inline;" placeholder="SetRootPassword.sh"/></form> |
-| \$ScriptArguments        | The command to execute                          | <form oninput="result.value=scriptargs.value;result2.value=scriptargs.value;result3.value=scriptargs.value;result4.value=scriptargs.value;result5.value=scriptargs.value;result6.value=scriptargs.value;result7.value=scriptargs.value;result8.value=scriptargs.value" id="scriptargs" style="display: inline;"><input type="text" id="scriptargs" name="scriptargs" style="display: inline;" placeholder="Password123! or -FirewallPorts 80,443"/></form> |
+| \$CustomScriptFileName        | The name of the custom script file                         | <form oninput="result.value=customscriptfilename.value;result2.value=customscriptfilename.value;result3.value=customscriptfilename.value;result4.value=customscriptfilename.value" id="customscriptfilename" style="display: inline;"><input type="text" id="customscriptfilename" name="customscriptfilename" style="display: inline;" placeholder="SetRootPassword.sh"/></form> |
+| \$ScriptArguments        | The command to execute                          | <form oninput="result.value=scriptargs.value;result2.value=scriptargs.value;result3.value=scriptargs.value;result4.value=scriptargs.value" id="scriptargs" style="display: inline;"><input type="text" id="scriptargs" name="scriptargs" style="display: inline;" placeholder="Password123! or -FirewallPorts 80,443"/></form> |
 
 ### [Local Disk](#tab/tabid-c)
 
 | Variable name   | Variable description                                               | Input            |
 |-----------------|--------------------------------------------------------------------|------------------|
-| \$ContainerName        | The name of the container created in the storage blob                         | <form oninput="result.value=containername.value;result2.value=containername.value;result3.value=containername.value;result4.value=containername.value" id="containername" style="display: inline;"><input type="text" id="containername" name="containername" style="display: inline;" placeholder="customscriptextension"/></form> |
-| \$CustomScriptStorageAccountName        | The name of the new storage account                         | <form oninput="result.value=customscriptstorageaccountname.value;result2.value=customscriptstorageaccountname.value;result3.value=customscriptstorageaccountname.value;result4.value=customscriptstorageaccountname.value" id="customscriptstorageaccountname" style="display: inline;"><input type="text" id="customscriptstorageaccountname" name="customscriptstorageaccountname" style="display: inline;" placeholder="customscript"/></form> |
-| \$FilePath        | Path to the script on disk                          | <form oninput="result.value=filepath.value;result2.value=filepath.value;result3.value=filepath.value;result4.value=filepath.value" id="filepath" style="display: inline;"><input type="text" id="filepath" name="filepath" style="display: inline;" placeholder="C:\Users\User1\SetRootPassword.sh"/></form> |
+| \$ContainerName        | The name of the container created in the storage blob                         | <form oninput="result.value=containername.value;result2.value=containername.value" id="containername" style="display: inline;"><input type="text" id="containername" name="containername" style="display: inline;" placeholder="customscriptextension"/></form> |
+| \$CustomScriptStorageAccountName        | The name of the new storage account                         | <form oninput="result.value=customscriptstorageaccountname.value;result2.value=customscriptstorageaccountname.value" id="customscriptstorageaccountname" style="display: inline;"><input type="text" id="customscriptstorageaccountname" name="customscriptstorageaccountname" style="display: inline;" placeholder="customscript"/></form> |
+| \$FilePath        | Path to the script on disk                          | <form oninput="result.value=filepath.value;result2.value=filepath.value" id="filepath" style="display: inline;"><input type="text" id="filepath" name="filepath" style="display: inline;" placeholder="C:\Users\User1\SetRootPassword.sh"/></form> |
 
 ### [File URI](#tab/tabid-d)
 
 | Variable name   | Variable description                                               | Input            |
 |-----------------|--------------------------------------------------------------------|------------------|
-| \$FileUri        | URL to the custom script                          | <form oninput="result.value=fileuri.value;result2.value=fileuri.value;result3.value=fileuri.value;result4.value=fileuri.value" id="fileuri" style="display: inline;"><input type="text" id="fileuri" name="fileuri" style="display: inline;" placeholder="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh"/></form> |
+| \$FileUri        | URL to the custom script                          | <form oninput="result.value=fileuri.value;result2.value=fileuri.value" id="fileuri" style="display: inline;"><input type="text" id="fileuri" name="fileuri" style="display: inline;" placeholder="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh"/></form> |
 
 ***
 
@@ -100,11 +100,11 @@ In your PowerShell window:
 <pre><code class="language-PowerShell"># Input variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
-$CustomScriptFileName = "<output form="customscriptfilename" name="result5" style="display: inline;">SetRootPassword.sh</output>"
-$ContainerName = "<output form="containername" name="result3" style="display: inline;">customscriptextension</output>"
-$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result3" style="display: inline;">customscript<span id="RandNum3"></span></output>".ToLower()
-$FilePath = "<output form="filepath" name="result3" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"
-$ScriptArguments = "<output form="scriptargs" name="result5" style="display: inline;">Password123!</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">SetRootPassword.sh</output>"
+$ContainerName = "<output form="containername" name="result" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result" style="display: inline;">customscript<span id="RandNum3"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"
+$ScriptArguments = "<output form="scriptargs" name="result" style="display: inline;">Password123!</output>"
 $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
@@ -146,9 +146,9 @@ In your PowerShell window:
 <pre><code class="language-PowerShell"># Input variables
 $RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
-$CustomScriptFileName = "<output form="customscriptfilename" name="result6" style="display: inline;">SetRootPassword.sh</output>"
-$FileUri = "<output form="fileuri" name="result3" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh</output>"
-$ScriptArguments = "<output form="scriptargs" name="result6" style="display: inline;">Password123!</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result2" style="display: inline;">SetRootPassword.sh</output>"
+$FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh</output>"
+$ScriptArguments = "<output form="scriptargs" name="result2" style="display: inline;">Password123!</output>"
 $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Linux VM
@@ -168,11 +168,11 @@ In your PowerShell window:
 <pre><code class="language-PowerShell"># Input variables
 $RGName = "<output form="resourcegroup" name="result3" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result3" style="display: inline;">MyVM</output>"
-$CustomScriptFileName = "<output form="customscriptfilename" name="result7" style="display: inline;">VMSetupForSR.ps1</output>"
-$ContainerName = "<output form="containername" name="result4" style="display: inline;">customscriptextension</output>"
-$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result4" style="display: inline;">customscript<span id="RandNum4"></span></output>".ToLower()
-$FilePath = "<output form="filepath" name="result4" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
-$ScriptArguments = "<output form="scriptargs" name="result7" style="display: inline;">-FirewallPorts 80,443</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result3" style="display: inline;">VMSetupForSR.ps1</output>"
+$ContainerName = "<output form="containername" name="result2" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result2" style="display: inline;">customscript<span id="RandNum4"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result2" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
+$ScriptArguments = "<output form="scriptargs" name="result3" style="display: inline;">-FirewallPorts 80,443</output>"
 $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
@@ -204,9 +204,9 @@ In your PowerShell window:
 <pre><code class="language-PowerShell"># Input variables
 $RGName = "<output form="resourcegroup" name="result4" style="display: inline;">MyResourceGroup</output>"
 $VMName = "<output form="vmname" name="result4" style="display: inline;">MyVM</output>"
-$CustomScriptFileName = "<output form="customscriptfilename" name="result8" style="display: inline;">VMSetupForSR.ps1</output>"
-$FileUri = "<output form="fileuri" name="result4" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
-$ScriptArguments = "<output form="scriptargs" name="result8" style="display: inline;">-FirewallPorts 80,443</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result4" style="display: inline;">VMSetupForSR.ps1</output>"
+$FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
+$ScriptArguments = "<output form="scriptargs" name="result4" style="display: inline;">-FirewallPorts 80,443</output>"
 $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
 # Add custom script extension to existing Windows VM
