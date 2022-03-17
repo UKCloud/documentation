@@ -128,13 +128,14 @@ Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $Custom
 # Creating script location string
 $ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
 
-# Add custom script extension to existing Linux VM
+# Add custom script extension to Linux VM
 Write-Output -InputObject "Adding custom script extension to VM"
 $Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
-$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
+$Extension = $Extensions | Sort-Object -Property Version -Descending | Select-Object -First 1
+$ExtensionVersion = $Extension.Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
 $ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
-Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extension.Type -Publisher $Extension.PublisherName -ExtensionType $Extension.Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 
 ### [Linux](#tab/tabid-a/tabid-d)
@@ -154,9 +155,10 @@ $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
 # Add custom script extension to existing Linux VM
 Write-Output -InputObject "Adding custom script extension to existing virtual machine"
 $Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
-$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
+$Extension = $Extensions | Sort-Object -Property Version -Descending | Select-Object -First 1
+$ExtensionVersion = $Extension.Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
-Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extension.Type -Publisher $Extension.PublisherName -ExtensionType $Extension.Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
 </code></pre>
 
 ### [Windows](#tab/tabid-b/tabid-c)
