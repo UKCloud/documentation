@@ -27,6 +27,12 @@ If the UKCloud platform encounters storage issues, powered-on virtual machines (
 
 To confirm if a Windows VM is in read-only mode you can try to create a new file on the affected drive of the system. If you're unable to do so, the VM may be in read-only mode.
 
+The Windows Event Viewer (`eventvwr.exe`) may display the following in the system log:
+
+- Severity Level : Error, Source : Disk, EventID : 7
+
+- Severity Level : Warning, Source : Disk, EventID :51
+
 ### How to resolve a read-only Windows VM
 
 Once UKCloud has confirmed that the underlying issue has been resolved, Windows can often recover the file system. However, in cases where this is not possible, you will need to restart the VM.
