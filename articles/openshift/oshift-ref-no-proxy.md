@@ -40,9 +40,9 @@ To view the required proxy environment variables for your OpenShift cluster, you
 
 ```sh
 $ oc describe dc docker-registry -n default | grep PROXY
-      NO_PROXY:							.cluster.local,.svc,10.2.1.13,10.2.1.19,10.2.1.5,169.254.169.254,172.30.0.1,console.local-domain,cor00005.cni.ukcloud.com,frn00006.cni.ukcloud.com,master-infra-0.local-domain,master-infra-1.local-domain,master-infra-2.local-domain,worker-infra-0.local-domain,worker-infra-1.local-domain,worker-tenant-s-0.local-domain,worker-tenant-s-1.local-domain
-      HTTP_PROXY:						http://10.2.1.10:3128
-      HTTPS_PROXY:						http://10.2.1.10:3128
+      NO_PROXY:                            .cluster.local,.svc,10.2.1.13,10.2.1.19,10.2.1.5,169.254.169.254,172.30.0.1,console.local-domain,cor00005-2.cni.ukcloud.com,frn00006.cni.ukcloud.com,master-infra-0.local-domain,master-infra-1.local-domain,master-infra-2.local-domain,worker-infra-0.local-domain,worker-infra-1.local-domain,worker-tenant-s-0.local-domain,worker-tenant-s-1.local-domain
+      HTTP_PROXY:                        http://10.2.1.10:3128
+      HTTPS_PROXY:                        http://10.2.1.10:3128
 ```
 
 - `NO_PROXY`: String containing hosts/addresses to be accessed without traversing the proxy
