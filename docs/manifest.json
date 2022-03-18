@@ -15231,6 +15231,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-read-only-linux-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-read-only-linux-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-restclient-accept-header1.PNG",
       "output": {
         "resource": {
@@ -18249,7 +18260,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "QgKmk3YwJf4RxXXZph6+sQRJ2KxT8MBqRTVc1vFy89I="
+          "hash": "BkGpzdbcSpPuKgWX57nf9i08QmrpEDhVZT1W8XDUkxg="
         }
       },
       "is_incremental": false,
@@ -19253,6 +19264,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-vm-readonly.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-vm-readonly.html",
+          "hash": "XXPOOdC4jIBhgz71JGgaLZhtKVROvbn7r6kzY9n95+I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-vmdk-limits.md",
       "output": {
         ".html": {
@@ -19528,7 +19551,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 456,
+          "total_file_count": 457,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
