@@ -4,7 +4,7 @@ description: Frequently asked questions for the VMware Licence Service
 services: vmware
 author: cjames
 reviewer: shighmoor
-lastreviewed: 04/03/2022
+lastreviewed: 18/03/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -55,13 +55,13 @@ VLS will suit you if you're:
 
 Benefits of VLS include:
 
-- VMware costs are entirely OPEX with no up-front payments.
+- VMware costs under VLS are flexible and based upon actual provisioned workloads and additional commissioned functionality. It's not tied to licence ownership or CPU point.
 
 - VLS is entirely flexible, so can scale up and down, matching your requirements. Any under-consumption rolls into funding the next 12 months after the contract term.
 
 - You can change both licence type and quantity  with no penalty to meet requirements.
 
-- An easier and more cost-effective adoption of new VMware technologies. For example, you can avoid the upfront CAPEX and on-premises implementation challenges and costs normally associated with products such as NSX, vSAN and vCFem.
+- An easier and more cost-effective adoption of new VMware technologies. For example, you can avoid the upfront CAPEX and on-premises implementation challenges and costs normally associated with products such as NSX, vSAN, vCloud Foundation or Horizon.
 
 - You can adopt new VMware products as soon as they arrive on the VCPP product usage guide.  
 
@@ -77,7 +77,7 @@ Benefits of VLS include:
 
   - Service objectives for support that exceed VMware's
 
-  - A dedicated Service Delivery Manager (SDM) for every UKCloud customer 
+  - A dedicated Service Delivery Manager (SDM) for every UKCloud customer
 
 - Migration to multi-cloud (that is, a mix of true public cloud and secure private cloud spanning on-premises, Crown Campus and hyperscaler) becomes cheaper, faster and safer with UKCloud's portfolio of Cloud Services, Professional Services and Managed Services.
 
@@ -139,7 +139,7 @@ VLS does not charge for licences provided and VLS pre-payment is eligible across
 
 - Complete flexibility to start and stop licences at any time
 
-- Complete flexiblity to change licence types and quantities at any time
+- Complete flexibility to change licence types and quantities at any time
 
 - The ability to run certain licences for short periods at regular intervals and only incur costs when capabilities are live
 
@@ -163,7 +163,7 @@ Therefore, the following will apply:
 
 UKCloud can only provide VLS on vSphere software levels that are fully supported by VMware. Currently supported vSphere software levels are:
 
-- 6.5, 6.7
+- 6.5, 6.7 (these levels will end support in October 2022)
 
 - 7.0
 
@@ -181,7 +181,9 @@ For more information, see [*How to report licence usage for the VMware Licence S
 
 You can use VLS across multiple locations and consumption is calculated on the overall usage rather than any peaks in a single location.
 
-Currently, VLS is UK-focused.
+VLS is available for multi-national deployments. Check with your UKCloud Client Director for country availability.
+
+VLS support for international service is delivered in English and follows UK support hours.
 
 ### Can I swap my usage or services?
 
@@ -219,7 +221,7 @@ The term consumption is calculated using the current usage metrics that you prov
 
 ### Is there a minimum commitment?
 
-Whilst there's no official minimum value to VLS orders, it's unlikely that you'll see a significant cost difference between VLS and standard support if you have an annual support charage less than £20k.
+Whilst there's no official minimum value to VLS orders, it's unlikely that you'll see a significant cost difference between VLS and standard support if you have an annual support charge less than £20k per annum.
 
 ## Feedback
 
