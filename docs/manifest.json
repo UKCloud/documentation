@@ -18260,7 +18260,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "BkGpzdbcSpPuKgWX57nf9i08QmrpEDhVZT1W8XDUkxg="
+          "hash": "Emcnbt7XV8SSPYP8ogHKfxBWfYNj2C56rEB6ECQgkAY="
         }
       },
       "is_incremental": false,
@@ -18309,6 +18309,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-synchronous-protection.html",
           "hash": "aDpH3/4ziCvPaBGgn/zWxDN/FMnQDk6U8P/Dh395ong="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-faq-vls.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-faq-vls.html",
+          "hash": "BGU5OrbGPJf5wHoBw2MeIg8LE6jB8323YZFcpP6z4B8="
         }
       },
       "is_incremental": false,
@@ -19551,7 +19563,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 457,
+          "total_file_count": 458,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

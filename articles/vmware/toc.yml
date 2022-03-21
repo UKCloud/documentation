@@ -14,6 +14,8 @@
     href: vmw-faq-synchronous-protection.md
   - name: UKCloud for VMware FAQs
     href: vmw-faq.md
+  - name: VMware Licence Service FAQs
+    href: vmw-faq-vls.md
 - name: Getting Started
   items:
   - name: Build a virtual machine
