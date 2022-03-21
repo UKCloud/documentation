@@ -175,7 +175,7 @@ $ContainerName = "<output form="containername" name="result2" style="display: in
 $CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result2" style="display: inline;">customscript<span id="RandNum4"></span></output>".ToLower()
 $FilePath = "<output form="filepath" name="result2" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
 $ScriptArguments = "<output form="scriptargs" name="result3" style="display: inline;">-FirewallPorts 80,443</output>"
-$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
+$CommandToExecute = "powershell -ExecutionPolicy Unrestricted -file $CustomScriptFileName $ScriptArguments"
 
 # Create a new storage account
 Write-Output -InputObject "Creating storage account and container"
@@ -185,16 +185,28 @@ $StorageAccount = New-AzStorageAccount -Location $Location -ResourceGroupName $R
 $Context = $StorageAccount.Context
 $Container = New-AzStorageContainer -Name $ContainerName -Context $Context
 
-# Retrieve storage account key
-$StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+# Retrieve storage blob endpoint
+$ScriptBlobUrl = $Container.Context.BlobEndPoint
 
 # Upload script extension to the storage account
 Write-Output -InputObject "Uploading custom script extension to storage account"
 Set-AzStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
 
+# Generate temporary SAS token for accessing the blob
+$EndTime = (Get-Date).AddHours(2)
+$BlobSasToken = $Container | New-AzStorageBlobSASToken -Container $ContainerName -Blob $CustomScriptFileName -Permission rw -ExpiryTime $EndTime
+
+# Creating script location string
+$ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName + $BlobSasToken
+
 # Add custom script extension to existing Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
+$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Compute" -Type "CustomScriptExtension"
+$Extension = $Extensions | Sort-Object -Property Version -Descending | Select-Object -First 1
+$ExtensionVersion = $Extension.Version[0..2] -join ""
+$ScriptSettings = @{"fileUris" = @("$ScriptLocation") };
+$ProtectedSettings = @{"commandToExecute" = $CommandToExecute };
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extension.Type -Publisher $Extension.PublisherName -ExtensionType $Extension.Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 
 ### [Windows](#tab/tabid-b/tabid-d)
