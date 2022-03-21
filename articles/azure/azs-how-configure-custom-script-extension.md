@@ -4,7 +4,7 @@ description: Describes how to configure custom script extensions for new and exi
 services: azure-stack
 author: dbrennand
 reviewer: wturner
-lastreviewed: 15/03/2022
+lastreviewed: 21/03/2022
 
 toc_rootlink: Users
 toc_sub1: How To
