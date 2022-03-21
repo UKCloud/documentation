@@ -102,7 +102,7 @@ $RGName = "<output form="resourcegroup" name="result" style="display: inline;">M
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
 $CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">SetRootPassword.sh</output>"
 $ContainerName = "<output form="containername" name="result" style="display: inline;">customscriptextension</output>"
-$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result" style="display: inline;">customscript<span id="RandNum3"></span></output>".ToLower()
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result" style="display: inline;">customscript<span id="RandNum"></span></output>".ToLower()
 $FilePath = "<output form="filepath" name="result" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"
 $ScriptArguments = "<output form="scriptargs" name="result" style="display: inline;">Password123!</output>"
 $CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
@@ -172,7 +172,7 @@ $RGName = "<output form="resourcegroup" name="result3" style="display: inline;">
 $VMName = "<output form="vmname" name="result3" style="display: inline;">MyVM</output>"
 $CustomScriptFileName = "<output form="customscriptfilename" name="result3" style="display: inline;">VMSetupForSR.ps1</output>"
 $ContainerName = "<output form="containername" name="result2" style="display: inline;">customscriptextension</output>"
-$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result2" style="display: inline;">customscript<span id="RandNum4"></span></output>".ToLower()
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result2" style="display: inline;">customscript<span id="RandNum2"></span></output>".ToLower()
 $FilePath = "<output form="filepath" name="result2" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
 $ScriptArguments = "<output form="scriptargs" name="result3" style="display: inline;">-FirewallPorts 80,443</output>"
 $CommandToExecute = "powershell -ExecutionPolicy Unrestricted -file $CustomScriptFileName $ScriptArguments"
@@ -241,5 +241,3 @@ If you find a problem with this article, click **Improve this Doc** to make the 
 
 <script>document.getElementById("RandNum").innerHTML = Math.round(Math.random()*100000000)</script>
 <script>document.getElementById("RandNum2").innerHTML = Math.round(Math.random()*100000000)</script>
-<script>document.getElementById("RandNum3").innerHTML = Math.round(Math.random()*100000000)</script>
-<script>document.getElementById("RandNum4").innerHTML = Math.round(Math.random()*100000000)</script>
