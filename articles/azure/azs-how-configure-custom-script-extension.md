@@ -209,11 +209,16 @@ $VMName = "<output form="vmname" name="result4" style="display: inline;">MyVM</o
 $CustomScriptFileName = "<output form="customscriptfilename" name="result4" style="display: inline;">VMSetupForSR.ps1</output>"
 $FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
 $ScriptArguments = "<output form="scriptargs" name="result4" style="display: inline;">-FirewallPorts 80,443</output>"
-$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
+$CommandToExecute = "powershell -ExecutionPolicy Unrestricted -file $CustomScriptFileName $ScriptArguments"
 
-# Add custom script extension to existing Windows VM
+# Add custom script extension to Windows VM
 Write-Output -InputObject "Adding custom script extension to VM"
-Set-AzVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
+$Extensions = Get-AzVMExtensionImage -Location $Location -PublisherName "Microsoft.Compute" -Type "CustomScriptExtension"
+$Extension = $Extensions | Sort-Object -Property Version -Descending | Select-Object -First 1
+$ExtensionVersion = $Extension.Version[0..2] -join ""
+$ScriptSettings = @{"fileUris" = @("$FileUri") };
+$ProtectedSettings = @{"commandToExecute" = $CommandToExecute };
+Set-AzVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extension.Type -Publisher $Extension.PublisherName -ExtensionType $Extension.Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 
 ***
