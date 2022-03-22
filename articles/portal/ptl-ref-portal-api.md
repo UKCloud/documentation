@@ -254,7 +254,7 @@ Returns an array of accounts with the ID and name.
 Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.
 
 > [!NOTE]
-> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud API.
+> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the VMware Cloud API.
 
 ### Request
 
@@ -353,7 +353,7 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
           ]
         }
       ],
-      "name": "UKCloud Demo vCloud",
+      "name": "UKCloud Demo",
       "serviceId": "1-1-1-9836cf",
       "urn": "urn:vcloud:org:66bf4c1d-24de-4793-8bdf-95f4fd3d737f"
     }
@@ -682,7 +682,7 @@ To specify how many vOrgs to display per page of results, set the `per_page` URL
 Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).
 
 > [!NOTE]
-> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the vCloud API.
+> The billing and storage fields returned by this endpoint are retained for backwards compatibility. The data in those fields has been deprecated and 0 values are used instead. For billing information, use the [*GET /api/billing/billing-csv*](#get-apibillingbilling-csv) endpoint. For storage information, use the VMware Cloud API.
 
 ### Request
 
@@ -773,7 +773,7 @@ Returns a list of VDCs, vApps and VMs.
 
 ## GET /api/accounts/:account_id/api_credentials
 
-Returns a list of vCloud API credentials associated with the specified account.
+Returns a list of VMware Cloud API credentials associated with the specified account.
 
 ### Request
 
@@ -817,7 +817,7 @@ resp = conn.get("/api/accounts/#{account_id}/api_credentials") { |req| req.heade
 
 #### Response body
 
-Returns an array of vCloud API credentials.
+Returns an array of VMware Cloud API credentials.
 
 #### Example response
 
@@ -838,7 +838,7 @@ Returns an array of vCloud API credentials.
 
 ```
 {
-  "description":"The vCloud API credentials for a given account",
+  "description":"The VMware Cloud API credentials for a given account",
   "type": "object",
   "patternProperties": {
     "^.*\\(\\d+-\\d+-\\d+-[a-zA-Z0-9]{5,6}\\)$": {
