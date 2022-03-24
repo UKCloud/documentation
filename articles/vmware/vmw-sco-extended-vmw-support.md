@@ -196,9 +196,9 @@ For more information about VMware Extended Support, see the following:
 
 - [*On-Premises VMware Extended Support Service Definition*](vmw-sd-extended-vmw-support.md)
 
-- [*How to install the vCloud Usage Meter for the VMware Licence Service*](vmw-how-vls-install-usage-meter.md)
+- [*How to install the vCloud Usage Meter for the VMware Licence Service*](vmw-how-vls-install-usage-meter-4.md)
 
-- [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products.md)
+- [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products-4.md)
 
 ## Feedback
 

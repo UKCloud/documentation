@@ -1,6 +1,6 @@
 ---
-title: How to install the vCloud Usage Meter 4 for the VMware Licence Service
-description: Provides instructions for how to install the vCloud Usage Meter 4 for the VMware Licence Service (VLS)
+title: How to install the vCloud Usage Meter for the VMware Licence Service
+description: Provides instructions for how to install the vCloud Usage Meter for the VMware Licence Service (VLS)
 services: vmware
 author: mperry
 reviewer: mperry
@@ -10,12 +10,12 @@ toc_sub1: VMware Licence Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Install the vCloud Usage Meter 4
+toc_title: Install the vCloud Usage Meter
 toc_fullpath: How To/VMware Licence Service/vmw-how-vls-install-usage-meter-4.md
 toc_mdlink: vmw-how-vls-install-usage-meter-4.md
 ---
 
-# How to install the vCloud Usage Meter 4 for the VMware Licence Service
+# How to install the vCloud Usage Meter for the VMware Licence Service
 
 ## Overview
 
@@ -23,7 +23,7 @@ The VMware Licence Service (VLS) enables you to switch to a flexible, VMware Clo
 
 As the VLS licensing model is consumption-based, you must submit reports to VMware to detail your usage of VMware products. To generate these reports, you need to install the vCloud Usage Meter (Usage Meter).
 
-This article provides all the information you need to install the Usage Meter 4 in your UKCloud environment. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/4.5/Getting-Started-vCloud-Usage-Meter/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html).
+This article provides all the information you need to install the Usage Meter in your UKCloud environment. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/4.5/Getting-Started-vCloud-Usage-Meter/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html).
 
 ## Prerequisites
 
@@ -123,9 +123,9 @@ You access the Usage Meter via a web application. Before you can access the appl
 
 ## Next steps
 
-This article described how to install and configure the vCloud Usage Meter 4. Next, you need to give the Usage Meter access to the products that you require to be metered for consumption.
+This article described how to install and configure the vCloud Usage Meter. Next, you need to give the Usage Meter access to the products that you require to be metered for consumption.
 
-- [*How to add products to the vCloud Usage Meter 4*](vmw-how-vls-add-products-4.md)
+- [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products-4.md)
 
 ## Feedback
 

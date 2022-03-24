@@ -1,6 +1,6 @@
 ---
-title: How to add products to vCloud Usage Meter 4
-description: Provides instructions for how to add products to the vCloud Usage Meter 4 for the VMware Licence Service
+title: How to add products to vCloud Usage Meter
+description: Provides instructions for how to add products to the vCloud Usage Meter for the VMware Licence Service
 services: vmware
 author: mperry
 reviewer: mperry
@@ -10,12 +10,12 @@ toc_sub1: VMware Licence Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Add products to the vCloud Usage Meter 4
+toc_title: Add products to the vCloud Usage Meter
 toc_fullpath: How To/VMware Licence Service/vmw-how-vls-add-products-4.md
 toc_mdlink: vmw-how-vls-add-products-4.md
 ---
 
-# How to add products to the vCloud Usage Meter 4
+# How to add products to the vCloud Usage Meter
 
 ## Overview
 
@@ -23,11 +23,11 @@ The VMware Licence Service (VLS) enables you to switch to a flexible, VMware Clo
 
 As the VLS licensing model is consumption-based, you must submit reports to VMware to detail your usage of VMware products. To generate these reports, you need to install the vCloud Usage Meter (Usage Meter).
 
-This article provides all the information you need to add popular products to the Usage Meter 4. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/index.html#about-vcloud-usage-meter-0).
+This article provides all the information you need to add popular products to the Usage Meter. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/index.html#about-vcloud-usage-meter-0).
 
 ## Prerequisites
 
-You must have installed and registered the vCloud Usage Meter. For more information, see [*How to install the vCloud Usage Meter 4*](vmw-how-vls-install-usage-meter-4.md).
+You must have installed and registered the vCloud Usage Meter. For more information, see [*How to install the vCloud Usage Meter*](vmw-how-vls-install-usage-meter-4.md).
 
 ## Adding products to the Usage Meter
 
@@ -73,21 +73,21 @@ To add a vCenter Server to the Usage Meter:
 
 4. In the _vCenter / VMware Cloud Foundation_ page, click the **Add** button.
 
-6. In the **Endpoint** field, enter the host name or IP address of the vCenter Server instance. Leave the default port number as 443.
+5. In the **Endpoint** field, enter the host name or IP address of the vCenter Server instance. Leave the default port number as 443.
 
-7. In the **Username** and **Password** fields, enter the FQDN credentials of the Usage Meter user created above or created previously, for example, `usagemeter@vsphere.local`.
+6. In the **Username** and **Password** fields, enter the FQDN credentials of the Usage Meter user created above or created previously, for example, `usagemeter@vsphere.local`.
 
-8. (Optional) If you use an external Platform Services Controller, select the **Use External Platform Services Controller (PSC)** check box and enter the IP address or host name of the external Platform Services Controller.
+7. (Optional) If you use an external Platform Services Controller, select the **Use External Platform Services Controller (PSC)** check box and enter the IP address or host name of the external Platform Services Controller.
 
-9. (Optional) Confirm if vCloud Usage Meter must meter the virtual machines that are protected by all Site Recovery Manager instances, associated with the registered vCenter Server instance. To disable the metering of Site Recovery Manager, deselect the **Meter VMs protected by all SRMs** check box.
+8. (Optional) Confirm if vCloud Usage Meter must meter the virtual machines that are protected by all Site Recovery Manager instances, associated with the registered vCenter Server instance. To disable the metering of Site Recovery Manager, deselect the **Meter VMs protected by all SRMs** check box.
 
-10. Click **Add**.
+9. Click **Add**.
 
-11. For each vCenter Server instance that you add, vCloud Usage Meter presents a certificate that you must accept before proceeding.
+10. For each vCenter Server instance that you add, vCloud Usage Meter presents a certificate that you must accept before proceeding.
 
-12. To accept the certificate, on the _vCenter / VMware Cloud Foundation_ page, select the vCenter Server instance and, in the **Status** column, click **Please accept certificate**, then select the vCenter in the popup window.
+11. To accept the certificate, on the _vCenter / VMware Cloud Foundation_ page, select the vCenter Server instance and, in the **Status** column, click **Please accept certificate**, then select the vCenter in the popup window.
 
-13. In the _Certificate Info_ window, check the certificate is correct and click **ACCEPT**.
+12. In the _Certificate Info_ window, check the certificate is correct and click **ACCEPT**.
 
 Once added correctly, the status column will report an _OK_ status. If an error occurs, you'll see a message against the server instance indicating the issue.
 
