@@ -18,9 +18,6 @@ toc_mdlink: ostack-how-use-barbican.md
 
 # Using Barbican Key Management as a Service (KMaaS)
 
-> [!NOTE]
-> This article does not apply to OpenStack regions running the Pike release and lower (currently COR00005). All other regions offer native Key Management as a Service
-
 ## Overview
 
 OpenStack Key Manager (Barbican) is the secrets manager for Red Hat OpenStack Platform. You can use the Barbican API and command line to centrally manage the certificates, keys, and passwords used by OpenStack services. 

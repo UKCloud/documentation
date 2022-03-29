@@ -18,9 +18,6 @@ toc_mdlink: ostack-how-use-octavia.md
 
 # How to use Octavia Load Balancing as a Service on UKCloud for OpenStack
 
-> [!NOTE]
-> This article does not apply to OpenStack regions running OpenStack Platform 10 (OSP10) and lower (currently COR00005).
-
 ## Overview
 
 Octavia is the OpenStack Load Balancing as a Service (LBaaS) solution and forms part of the solution for availability and scaling that modern systems require.
