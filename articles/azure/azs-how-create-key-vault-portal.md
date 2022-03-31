@@ -84,7 +84,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Adding a secret to the key vault
 
-1. Once the key vault has been deployed, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security + Identity* section.
+1. Once the key vault has been deployed, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security* section.
 
 2. Select your key vault from the list.
 
