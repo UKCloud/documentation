@@ -68,7 +68,7 @@ Velero offers a tool called restic that enables backup of persistent volume data
         provider: aws
     ```
 >[!TIP]
-> If you UKCloud Object Storage bucket is located in the frn00006 ECS zone then replace "https://cas.cor00005.ukcloud.com" with "https://cas.frn00006.ukcloud.com".
+> If your UKCloud Object Storage bucket is located in the frn00006 ECS zone, replace "https://cas.cor00005.ukcloud.com" with "https://cas.frn00006.ukcloud.com".
 
 
 4. Run:
