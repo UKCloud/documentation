@@ -118,7 +118,11 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 2. On the secret's blade, select the current version.
 
+    ![Select secret version](images/azs-browser-select-secret-version.png)
+
 3. On the current version's blade, click the **Show secret value** button.
+
+    ![View secret value](images/azs-browser-view-secret-value.png)
 
 ## Feedback
 
