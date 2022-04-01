@@ -3,8 +3,8 @@ title: How to create a new Cloud Storage user in the UKCloud Portal
 description: Describes how to create a new Cloud Storage user in the UKCloud Portal
 services: cloud-storage
 author: shighmoor
-reviewer: nwayman
-lastreviewed: 15/03/2021
+reviewer: sbeck
+lastreviewed: 31/03/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -33,26 +33,32 @@ To complete the steps in this guide you must have been granted access to the rel
 
 To create a new Cloud Storage user:
 
-1. In the Portal navigation panel, expand the **Cloud Storage** option and select **ECS**.
+1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.md#logging-in-to-the-ukcloud-portal) and select your account.
 
-2. On the *Storage* tab, click the **Users** button for the namespace in which you want to create the new user:
+2. In the Portal navigation panel, expand the **Cloud Storage** option and select **ECS**.
+
+   ![ECS Cloud Storage option in the Portal menu](images/cs-portal-mnu-cloud-storage.png)
+
+3. On the *Storage* tab, click the **Users** button for the namespace in which you want to create the new user:
 
     ![Users button](images/cs-portal-btn-users.png)
 
-3. The **Users** tab lists the different user IDs associated with the namespace.
+4. The **Users** tab lists the different user IDs associated with the namespace.
 
-    ![Users page](images/cs-portal-users.png)
+5. Click the **Add new user** button.
 
-4. Click the **Add new user** button.
+   ![Add new user button](images/cs-portal-btn-add-user.png)
 
-5. In the *Create ECS User* dialog box, click **Create**.
+6. In the *Create ECS User* dialog box, click **Create**.
 
-6. Make a note of the **User ID** and **Secret Key** and then click **Close**.
+   ![Create ECS User dialog box](images/cs-portal-create-user.png)
+
+7. Make a note of the **User ID** and **Secret Key** and then click **Close**.
 
     > [!NOTE]
     > After you close this dialog box, you will not be able to see the secret key again in the UKCloud Portal. If you do not make a note of the secret key or if you forget or lose it, you will need to reset it again. For information about how to do this, see [*How to reset your Cloud Storage secret key*](cs-how-reset-secret-key.md).
 
-    ![Create ECS User dialog box](images/cs-portal-new-user.png)
+    ![Create ECS User dialog box with user details](images/cs-portal-new-user.png)
 
 ## Next steps
 

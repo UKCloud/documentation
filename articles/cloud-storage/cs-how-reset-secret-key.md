@@ -3,8 +3,8 @@ title: How to reset your Cloud Storage secret key
 description: Describes how to reset your Cloud Storage secret key
 services: cloud-storage
 author: shighmoor
-reviewer: nwayman
-lastreviewed: 12/03/2021
+reviewer: sbeck
+lastreviewed: 31/03/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -32,27 +32,31 @@ To complete the steps in this guide you must have been granted access to the rel
 
 For security purposes, the UKCloud Portal does not display secret keys, if you forget your secret key, you must reset it to generate a new one.
 
-1. In the Portal navigation panel, expand the **Cloud Storage** option and select **ECS**.
+1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.md#logging-in-to-the-ukcloud-portal) and select your account.
 
-2. Click the **Users** button for the namespace for which you want to reset the secret key.
+2. In the Portal navigation panel, expand the **Cloud Storage** option and select **ECS**.
+
+   ![ECS Cloud Storage option in the Portal menu](images/cs-portal-mnu-cloud-storage.png)
+
+3. Click the **Users** button for the namespace for which you want to reset the secret key.
 
    ![Users button](images/cs-portal-btn-users.png)
 
-3. The *Users* tab lists the different user IDs associated with the namespace.
+4. The **Users** tab lists the different user IDs associated with the namespace.
 
-   ![Users page](images/cs-portal-users.png)
+5. Click the **Reset Secret** button next to the appropriate user ID.
 
-4. Click the **Reset Secret** button next to the appropriate user ID.
+   ![Reset Secret button](images/cs-portal-btn-reset-secret.png)
 
-5. Click **OK** to confirm that you want to reset the secret key.
+6. Click **OK** to confirm that you want to reset the secret key.
 
    ![Reset Secret dialog box](images/cs-portal-reset-secret.png)
 
-6. Stay on the current page until a popup dialog box displays the new secret key.
+7. Stay on the current page until a popup dialog box displays the new secret key.
 
    ![New secret key](images/cs-portal-new-key.png)
 
-7. Make a note of the key and then click **Close**.
+8. Make a note of the key and then click **Close**.
 
    > [!NOTE]
    > After you close this dialog box, you will not be able to see the secret key again in the UKCloud Portal. If you do not make a note of the secret key or if you forget or lose it, you will need to reset it again.

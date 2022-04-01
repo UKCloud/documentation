@@ -3,8 +3,8 @@ title: Getting Started Guide for Cloud Storage
 description: Provides information to get up and running with Cloud Storage
 services: cloud-storage
 author: shighmoor
-reviewer: nwayman
-lastreviewed: 15/03/2021
+reviewer: sbeck
+lastreviewed: 31/03/2022
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -334,11 +334,11 @@ For more information, see [*How to view Cloud Storage information in the UKCloud
 
 To access your Cloud Storage service in the UKCloud Portal:
 
-1. Log in to the UKCloud Portal and select your account.
-
-   For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
+1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.md#logging-in-to-the-ukcloud-portal) and select your account.
 
 2. In the Portal navigation panel, expand the **Cloud Storage** option and select **ECS**.
+
+   ![ECS Cloud Storage option in the Portal menu](images/cs-portal-mnu-cloud-storage.png)
 
 3. You can now browse the namespaces, buckets and users in your Cloud Storage service.
 
