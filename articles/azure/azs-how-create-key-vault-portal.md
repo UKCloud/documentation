@@ -96,7 +96,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    - **Upload Options** - Manually enter a secret or upload an x.509 certificate.
 
-   - **Name** - The name of the secret.
+   - **Name** - The name of the secret. Secret names can only contain alphanumeric characters and dashes.
 
    - **Value** - The value you are storing as a secret.
 
