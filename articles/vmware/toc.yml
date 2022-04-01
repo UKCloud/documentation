@@ -226,7 +226,7 @@
   items:
   - name: Benefits of VMware L2 VPN
     href: vmw-vid-l2-vpn.md
-  - name: Build a VDC using the Portal
+  - name: Create a VDC in the Portal
     href: vmw-vid-build-vdc-portal.md
   - name: VMware Distributed Firewall
     href: vmw-vid-dfw.md
