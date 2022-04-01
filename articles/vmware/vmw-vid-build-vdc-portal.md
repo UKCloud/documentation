@@ -1,33 +1,33 @@
 ---
-title: (Video) Building a virtual data centre using the UKCloud Portal
+title: (Video) Creating a virtual data centre in the UKCloud Portal
 description: Provides a short video tutorial for how to build a virtual data centre (VDC) using the UKCloud Portal
 services: vmware
-author: Sue Highmoor
-reviewer: 
-lastreviewed: 21/11/2019
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 31/03/2022
 toc_rootlink: Videos
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Build a VDC using the Portal
+toc_title: Create a VDC in the Portal
 toc_fullpath: Videos/vmw-vid-build-vdc-portal.md
 toc_mdlink: vmw-vid-build-vdc-portal.md
 ---
 
-# Video: Building a virtual data centre using the UKCloud Portal
+# Video: Creating a virtual data centre in the UKCloud Portal
 
-A short tutorial video that guides you through the process of building a VDC using the UKCloud Portal.
+A short tutorial video that guides you through the process of creating a VDC in the UKCloud Portal.
 
 > [!NOTE]
-> To build a VDC using the Portal, your compute service must exist in region 5, 6, 13 or 14. If your compute service is in a different region, contact UKCloud Support to request a new VDC.
+> To create a VDC using the Portal, your compute service must exist in region 5, 6, 13 or 14. If your compute service is in a different region, contact UKCloud Support to request a new VDC.
 
 <div class="row">
   <div class="col-md-10">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/bnpF3B6XmOQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/0rnDPQsF8Ts" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://www.youtube.com/watch?v=bnpF3B6XmOQ">Building a virtual data centre (VDC) using the UKCloud Portal</a> on <a href="https://www.youtube.com/channel/UCnlFUyOWcS4iE_HK-ZEcNGw">YouTube</a>
+    <p><a href="https://www.youtube.com/watch?v=0rnDPQsF8Ts">Creating a virtual data centre in the UKCloud Portal</a> on <a href="https://www.youtube.com/channel/UCnlFUyOWcS4iE_HK-ZEcNGw">YouTube</a>
   </div>
 </div>
 
