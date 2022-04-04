@@ -139,10 +139,6 @@ As the underlying platform is powered by OVM technology, you can either transfer
 
 **Internet-facing solutions.** You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.
 
-**PSN-facing solutions.** You should raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to be assigned your IP address. This solution also comes with shared bandwidth (uncapped).
-
-**Janet and HSCN solutions.** You have one usable IP address, but you can request additional IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
-
 UKCloud for Oracle Software does not have a native external connectivity functionality. Therefore, UKCloud have enabled customers to manage connectivity rules, such as firewall, IPsec VPN and NAT functionality, through a VMware NSX Edge. This Edge is provisioned within the UKCloud for VMware environment and is managed using either the UKCloud Portal GUI or API.
 
 This Edge can be an existing edge in a customer's UKCloud for VMware environment, or can be provisioned as a completely new entity, specific for Oracle.
@@ -202,8 +198,6 @@ UKCloud do not currently provide migration services, however customers are free 
 - You are responsible for assessing whether the UKCloud UKCloud for Oracle Software platform can support the various requirements of your application.
 
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
-
-    If access is required over government secure networks (HSCN, Janet, RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided.
 
 - Management and administration of layers above the Oracle hypervisor (OS patching, application performance monitoring, user administration).
 
