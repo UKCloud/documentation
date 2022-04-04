@@ -68,7 +68,7 @@ Your compute solution can be:
 
 - In either our Assured OFFICIAL or Elevated OFFICIAL security domain if hosted within UKC.
 
-- Connected via the internet, HybridConnect, CrownConnect, Janet, HSCN, PSN, RLI or Secure Remote Access
+- Connected via the internet, HybridConnect, CrownConnect, Janet, HSCN, PSN, MCN or private networks
 
 ## Location and packaging options
 
