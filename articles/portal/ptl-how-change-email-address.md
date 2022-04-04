@@ -1,65 +1,57 @@
 ---
-title: How to change your email address in the UKCloud Portal
-description: Describes the process for changing your email address in the UKCloud Portal
+title: How to set your password reset email address
+description: Describes the process for changing your password reset email address in the UKCloud Portal
 services: portal
 author: shighmoor
-reviewer: bsaunders
-lastreviewed: 02/12/2021
+reviewer: shighmoor
+lastreviewed: 04/04/2022
 
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Change your email address in the Portal
+toc_title: Set your password reset email address
 toc_fullpath: How To/ptl-how-change-email-address.md
 toc_mdlink: ptl-how-change-email-address.md
 ---
 
-# How to change your email address in the UKCloud Portal
+# How to set your password reset email address
 
 ## Overview
 
-If you need to change the email address you use to log in to the UKCloud Portal, you'll need to raise a Service Request to ensure that the correct permissions are associated with the new email address and single sign-on continues to work correctly.
+Your Portal account has two associated email addresses:
 
-However, if you only need to change the email address that's used to reset your password if you forget it, you can do that in the Portal.
+- Your login email address is the one you use to log in to the UKCloud Portal. You cannot change this email address yourself. If you need to change your login email address for any reason, you must raise a Service Request to ensure that the correct permissions are associated with the new email address and that single sign-on continues to work correctly. For help with raising a Service Request, see [*How to use My Calls to raise and monitor support tickets*](ptl-how-use-my-calls.md).
 
-## Changing your login email address
+- Your password reset email address is the one that password reset links are sent to if you forget your password and request to reset it. By default this the same as your login email address. However, if you prefer you can change this to be a different email address as described in this article.
 
-1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) using your old email address.
+## Setting your password reset email address
 
-2. [*Use My Calls to raise a Service Request*](ptl-how-use-my-calls.md).
+To ensure that can still access your Portal account if you forget your password, it's important that you set your password reset email address to one that you can readily access.
 
-    > [!TIP]
-    > Use the **Generic Service Request** template.
+> [!NOTE]
+> Changing your password reset email address does not affect the email address you use to log in to the Portal.
 
-3. Enter the details as required, including:
-
-    - Your new email address
-
-    - The name of the user account (if you have multiple accounts for the same email address)
-
-4. A member of UKCloud Support will pick up the ticket and make the necessary changes.
-
-5. When the change has been completed, a member of UKCloud Support will contact you, on the email address you used to raise the ticket, to verify that the change was successful.
-
-6. Log in to the Portal using your new email address and verify that you can access My Calls.
-
-7. Confirm with UKCloud Support that the update has been successful.
-
-8. If you encounter any problems, contact UKCloud Support. If you can't access My Calls, you can call UKCloud Support on 01252 303 300 (select option 2).
-
-## Changing your password reset email address
+To set your password reset email address:
 
 1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) using your login email address.
 
 2. Click your username in the toolbar and select **Update contact details**.
 
-3. In the **Password Reset Email Address** field, enter the new email address, then click **Save**.
+   ![Change contact details menu option ](images/ptl-mnu-change-details.png)
 
-4. An email will be sent to both the old and new addresses providing information about the change.
+3. In the **Password Reset Email Address** field, enter the email address that you want to use for password reset requests, then click **Save**.
+
+   ![Password Reset Email Address field on the Update Contact Details page](images/ptl-contact-details-password-reset.png)
+
+4. An email will be sent to both the old and new email addresses providing information about the change.
 
 5. If you encounter any problems, contact UKCloud Support.
+
+## Related articles
+
+- [*How to reset your UKCloud Portal password or memorable word*](ptl-how-reset-password.md)
 
 ## Feedback
 
