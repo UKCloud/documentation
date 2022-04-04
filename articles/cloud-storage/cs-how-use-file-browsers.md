@@ -3,8 +3,8 @@ title: How to use file browsers with Cloud Storage
 description: Using file browsers with Cloud Storage
 services: cloud-storage
 author: dbaker
-reviewer: nwayman
-lastreviewed: 12/03/2021
+reviewer: sbeck
+lastreviewed: 31/03/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -83,7 +83,7 @@ To install and configure Cyberduck:
 
 3. Browse to the downloaded file and double click to open it.
 
-   ![Cyberduck icon](images/cs-file-browsers-1.png)
+   ![Cyberduck icon](images/cs-cyberduck-ico.png)
 
 4. Complete the fields in the new connection dialog box:
 
@@ -93,15 +93,15 @@ To install and configure Cyberduck:
 
    - When you're done, click the **x** icon to close the dialog box
 
-   ![s3 configuration](images/cs-file-browsers-2.png)
+   ![S3 configuration](images/cs-cyberduck-new-connection.png)
 
 5. You can see the new connection in the Cyberduck UI.
 
-   ![New connection window](images/cs-file-browsers-3.png)
+   ![New connection window](images/cs-cyberduck-new-connection-ui.png)
 
 6. Right-click the connection and select **Connect to server**.
 
-   ![Connect to server](images/cs-file-browsers-4.png)
+   ![Connect to server](images/cs-cyberduck-mnu-connect.png)
 
 7. In the *Login* dialog box, in the **Secret Access Key** field, enter your Cloud Storage secret key.
 
@@ -110,11 +110,11 @@ To install and configure Cyberduck:
    > [!NOTE]
    > Unless you want the password to be saved, deselect the **Save password** check box.
 
-   ![s3 login](images/cs-file-browsers-5.png)
+   ![s3 login](images/cs-cyberduck-login.png)
 
 8. After you've authenticated yourself with your secret key, you can view, upload and download files as normal.
 
-   ![Cyberduck interface](images/cs-file-browsers-6.png)
+   ![Cyberduck interface](images/cs-cyberduck-file-operations.png)
 
 ## S3 Browser
 
@@ -136,7 +136,7 @@ To install and configure S3 Browser:
 
    e. If you're using version 6.*x*.*x* of the browser, be sure to select **Use secure transfer (SSL/TLS)**. This option is not available or necessary for version 5.*x*.*x*.
 
-   ![S3 Browser Edit Account dialog box](images/cs-file-browsers-s3.png)
+   ![S3 Browser Edit Account dialog box](images/cs-s3browser-edit-account.png)
 
 3. When you're done, click **Save changes**. The application automatically connects to Cloud Storage and displays your buckets (if you have any).
 

@@ -3,8 +3,8 @@ title: How to interact with ECS using Python and Boto
 description: How to use Python and Boto with ECS
 services: cloud-storage
 author: pbrown
-reviewer: nwayman
-lastreviewed: 12/03/2021
+reviewer: sbeck
+lastreviewed: 31/03/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

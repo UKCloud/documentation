@@ -3,8 +3,8 @@ title: How to install Dell EMC GeoDrive
 description: Provides instructions for how to install Dell EMC GeoDrive for use with UKCloud Cloud Storage
 services: cloud-storage
 author: dbaker
-reviewer: shighmoor
-lastreviewed: 12/03/2021
+reviewer: sbeck
+lastreviewed: 31/03/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

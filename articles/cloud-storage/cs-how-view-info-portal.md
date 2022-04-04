@@ -3,8 +3,8 @@ title: How to view Cloud Storage information in the UKCloud Portal
 description: Describes how to access information about your Cloud Storage service in the UKCloud Portal
 services: cloud-storage
 author: shighmoor
-reviewer: nwayman
-lastreviewed: 12/03/2021
+reviewer: sbeck
+lastreviewed: 31/03/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -36,31 +36,31 @@ You can also use the UKCloud Portal to create new Cloud Storage users. For more 
 
 ### Intended audience
 
-To complete the steps in this guide you must have been granted access to the relevant namespace.
+To complete the steps in this guide you must have a UKCloud Portal account with access to the relevant namespace.
 
 ## Granting Portal permissions for Cloud Storage
 
-To view Cloud Storage information in the Portal, users must be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. They will also be able to see consumption data for namespaces and buckets, with a graphical representation of average consumption for buckets.
+To view Cloud Storage information in the Portal, a user must be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. They will also be able to see consumption data for namespaces and buckets, with a graphical representation of average consumption for buckets.
 
 To grant Portal permissions for Cloud Storage:
 
-1. Log in to the UKCloud Portal and select your account.
-
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
+1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.md#logging-in-to-the-ukcloud-portal) and select your account.
 
 2. In the Portal navigation panel, expand the **Contacts** option and select **All Contacts**.
 
+   ![All Contacts menu option in UKCloud Portal](images/cs-portal-mnu-all-contacts.png)
+
 3. Find the contact for whom you want to grant permissions and click the **Edit** button.
 
-    ![Edit contact button](images/cs-portal-btn-edit-contact.png)
+   ![Edit contact button](images/cs-portal-btn-edit-contact.png)
 
 4. Click the *Permissions* tab.
 
-    ![Permissions tab](images/cs-portal-tab-permissions.png)
+   ![Permissions tab](images/cs-portal-tab-permissions.png)
 
 5. Scroll down to the *Permissions for Cloud Storage* section and select the **Access** check box for the relevant namespace.
 
-    ![Cloud Storage permissions](images/cs-portal-permissions.png)
+   ![Cloud Storage permissions](images/cs-portal-permissions.png)
 
 ## Viewing namespace and bucket information
 
@@ -73,35 +73,39 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 
 1. In the Portal navigation panel, expand the **Cloud Storage** option and select **ECS**.
 
+   ![ECS Cloud Storage option in the Portal menu](images/cs-portal-mnu-cloud-storage.png)
+
 2. The *Storage* tab lists the namespaces within the currently selected account. You can see:
 
-    - The number of buckets in the namespace
+   - The number of buckets in the namespace
 
-    - The total amount of storage (in GiB) currently consumed by the objects in all the buckets in the namespace
+   - The total amount of storage (in GiB) currently consumed by the objects in all the buckets in the namespace
 
-    - The service level of the namespace:
+   - The service level of the namespace:
 
-        - STANDARD - data is stored in a single data centre
+     - STANDARD - data is stored in a single data centre
 
-        - ENHANCED - data is stored in a primary named data centre and copied to a second geographically remote data centre
+     - ENHANCED - data is stored in a primary named data centre and copied to a second geographically remote data centre
 
-    ![Namespaces page](images/cs-portal-namespaces.png)
+   ![Namespaces page](images/cs-portal-namespaces.png)
 
 3. To list the buckets in a namespace, click the **Buckets** button for the namespace.
 
-    ![Buckets button](images/cs-portal-btn-buckets.png)
+   ![Buckets button](images/cs-portal-btn-buckets.png)
 
 4. On the *Buckets* tab, you can see the following information for each bucket in the selected namespace:
 
-    - The total amount of storage (in GiB) currently consumed by the objects in the bucket
+   - The total amount of storage (in GiB) currently consumed by the objects in the bucket
 
-    - The number of objects in the bucket
+   - The number of objects in the bucket
 
-    ![Buckets page](images/cs-portal-buckets.png)
+   ![Buckets page](images/cs-portal-buckets.png)
 
 5. To view a graph that shows the amount of storage (in GiB) consumed by the objects in the bucket over the last 30 days, click the **Show Consumption** button for the bucket.
 
-    ![Consumption information](images/cs-portal-consumption.png)
+   ![Show Consumption button](images/cs-portal-btn-consumption.png)
+
+   ![Consumption information](images/cs-portal-consumption.png)
 
 ## Next steps
 
