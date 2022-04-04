@@ -3462,7 +3462,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-gs.html",
-          "hash": "KLeJIjgtrRJwSo0gEYzOXLtUxvopSZ6PAWSZZEFsBuw="
+          "hash": "xknMlx/njtFgvq12cccE+KKodt3BMn2FdVjW4GOR8vY="
         }
       },
       "is_incremental": false,
@@ -3474,7 +3474,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-create-user.html",
-          "hash": "n4Qiwo9CSn9kex2HF8kNK9EIEBHeWT7wFjiqKYEVqdc="
+          "hash": "wosnCRgqZOLRLRFK8+HyJr3ZLnv5tI+ECzG7Pc5WkD8="
         }
       },
       "is_incremental": false,
@@ -3498,7 +3498,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-reset-secret-key.html",
-          "hash": "+RDL9r9SP1fzSlFGCGVWG9Gn8YyjDkpYyf0vXUhPv/o="
+          "hash": "JAQXNPxPLAzlyUvNQYj/AOqsBJLF4yOXNcCv07mYubE="
         }
       },
       "is_incremental": false,
@@ -3522,7 +3522,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-use-file-browsers.html",
-          "hash": "MgOeUTELWRfnNAkI1O4/LHhH+ByvgDHoSLz8vriLFhU="
+          "hash": "RVAwMAc8b6AVO4OYvllUgodBdMR5+Bt1x3vSNo15ov8="
         }
       },
       "is_incremental": false,
@@ -3534,7 +3534,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-view-info-portal.html",
-          "hash": "Ytnhf6acCSmw+/VYDtrm2rwUDoSMuXinionBqTvAVwQ="
+          "hash": "DOhSUcCIUmPI1upxBonPXJhqrwpTlgUZP7FaBg+cxgU="
         }
       },
       "is_incremental": false,
@@ -3613,10 +3613,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-configuring-maintenance-step-one.jpg",
+      "source_relative_path": "articles/cloud-storage/images/cs-cyberduck-file-operations.png",
       "output": {
         "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-configuring-maintenance-step-one.jpg"
+          "relative_path": "articles/cloud-storage/images/cs-cyberduck-file-operations.png"
         }
       },
       "is_incremental": false,
@@ -3624,10 +3624,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-configuring-network-step-one.jpg",
+      "source_relative_path": "articles/cloud-storage/images/cs-cyberduck-ico.png",
       "output": {
         "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-configuring-network-step-one.jpg"
+          "relative_path": "articles/cloud-storage/images/cs-cyberduck-ico.png"
         }
       },
       "is_incremental": false,
@@ -3635,10 +3635,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-configuring-network-step-two.jpg",
+      "source_relative_path": "articles/cloud-storage/images/cs-cyberduck-login.png",
       "output": {
         "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-configuring-network-step-two.jpg"
+          "relative_path": "articles/cloud-storage/images/cs-cyberduck-login.png"
         }
       },
       "is_incremental": false,
@@ -3646,10 +3646,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-diagnostics-step-one.jpg",
+      "source_relative_path": "articles/cloud-storage/images/cs-cyberduck-mnu-connect.png",
       "output": {
         "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-diagnostics-step-one.jpg"
+          "relative_path": "articles/cloud-storage/images/cs-cyberduck-mnu-connect.png"
         }
       },
       "is_incremental": false,
@@ -3657,10 +3657,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-file-storage-1.png",
+      "source_relative_path": "articles/cloud-storage/images/cs-cyberduck-new-connection-ui.png",
       "output": {
         "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-file-storage-1.png"
+          "relative_path": "articles/cloud-storage/images/cs-cyberduck-new-connection-ui.png"
         }
       },
       "is_incremental": false,
@@ -3668,285 +3668,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-five.jpg",
+      "source_relative_path": "articles/cloud-storage/images/cs-cyberduck-new-connection.png",
       "output": {
         "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-five.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-four.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-four.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-one.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-one.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-three.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-three.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-two.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-installation-vmware-step-two.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-staring-console-VAConsole-step-one.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-staring-console-VAConsole-step-one.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-staring-console-VAConsole-step-two.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-staring-console-VAConsole-step-two.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-10.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-10.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-11.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-11.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-13.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-13.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-14.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-14.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-15.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-15.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-16.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-16.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-4.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-5.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-6.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-7.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-7.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-8.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-8.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-9.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-configuration-step-9.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-dashboard.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-dashboard.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-error-step-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-error-step-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-error-step-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-cloud-array-web-gui-error-step-2.png"
+          "relative_path": "articles/cloud-storage/images/cs-cyberduck-new-connection.png"
         }
       },
       "is_incremental": false,
@@ -4020,175 +3745,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-4.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-5.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-6.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-4.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-5.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-6.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-ext-6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-html5-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-html5-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-html5-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-html5-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-s3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-file-browsers-s3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/cloud-storage/images/cs-namespace-buckets.png",
       "output": {
         "resource": {
           "relative_path": "articles/cloud-storage/images/cs-namespace-buckets.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-btn-add-user.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-btn-add-user.png"
         }
       },
       "is_incremental": false,
@@ -4207,10 +3778,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-btn-consumption.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-btn-consumption.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/cloud-storage/images/cs-portal-btn-edit-contact.png",
       "output": {
         "resource": {
           "relative_path": "articles/cloud-storage/images/cs-portal-btn-edit-contact.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-btn-reset-secret.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-btn-reset-secret.png"
         }
       },
       "is_incremental": false,
@@ -4244,6 +3837,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/cloud-storage/images/cs-portal-consumption.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-create-user.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-create-user.png"
         }
       },
       "is_incremental": false,
@@ -4354,6 +3958,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/cloud-storage/images/cs-product-options-g12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-s3browser-edit-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-s3browser-edit-account.png"
         }
       },
       "is_incremental": false,
