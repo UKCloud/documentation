@@ -11,27 +11,27 @@ toc_fullpath: Service Information/enbl-sco-hosting.md
 toc_mdlink: enbl-sco-hosting.md
 ---
 
-# Cloud Enablement - Server/Storage Hosting Service Scope
+# Cloud Enablement Service Scope
 
 ## About this document
 
-This document describes the Cloud Enablement services available for hosting servers and storage.
+This document describes the scope and limitations of the Cloud Enablement service available for hosting devices within UKCloud's datacentres to help you use our other Services
 
 ## About Cloud Enablement
 
 The Cloud Enablement service provides basic facilities for your own hardware to be installed in our data centre for the purpose of utilising our cloud.
 
-The table provides an overview of the Cloud Enablement services available for hosting servers and storage. If the usage scenario you need isn't shown in the table, contact us to discuss your requirements.
+The table provides an overview of the Cloud Enablement services available for hosting physiclal devices. If the usage scenario you need isn't shown in the table, contact us to discuss your requirements.
 
 Please note that ANY device placed within the UKCloud estate must be done so to utilise our cloud services. If the customer does not plan to use a UKCloud service as part of their design (such as UKCloud for VMware or Cloud Storage), we can arrange for them to talk to one of our partners about their co-location requirements.
 
 &nbsp; | &nbsp;
 -------|-------
-**Use case** | You may have complex systems that cannot be virtualised (for example database clusters or legacy applications).<br>You may also have small amounts of network-attached storage you want to host with us, so that you can integrate it with, for example, our UKCloud for VMware offering.
-**Service type** | Server/storage hosting
+**Use case** | You may have complex systems that cannot be virtualised (for example database clusters or legacy applications).<br>You may have small amounts of network-attached storage you want to host with us, so that you can integrate it with another of our Services, for example, our UKCloud for VMware offering.<br>You may want to use a physical networking device such as a firewall.
+**Service type** | Device hosting
 **Security level** | Assured OFFICIAL and Elevated OFFICIAL
 **Cloud Enablement sizing** | One bay = 10U, 1kW of power
-**Hosted device** | Physical server or storage appliance
+**Hosted device** | Physical server, storage appliance or network device
 **Hosted device(s) allowed** | Depends on solution. UKCloud will work with the customer to understand the requirement and assess the suitability of the devices that the customer wants to locate within Cloud Enablement.
 **Hosted device power draw** | Customer devices within a single 10U bay have a combined average power draw of no more than 1kW. Average power draw will be assessed based on vendor material supplied by the customer as part of the engagement with UKCloud prior to installation of devices.
 **Service level (default)** | Single data centre, no automatic failover
@@ -45,7 +45,7 @@ Please note that ANY device placed within the UKCloud estate must be done so to 
 
 ## What connectivity does the server/storage hosting service provide?
 
-The VPN service provides up to two ports:
+The service provides up to two ports:
 
 - Cloud Enablement in regions 1, 2, 7 & 8 offers copper connectivity only
 
