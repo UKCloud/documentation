@@ -97,15 +97,7 @@ A UKCloud purchase scheme whereby you can purchase Cloud Credits upfront and red
 
 A UKCloud enablement service that provides basic facilities for your own hardware installed in one of our data centres for the purpose of utilising our cloud. We can host servers, storage, VPN solutions, encryption devices or switches.
 
-For more information, see the relevant Cloud Enablement service scope:
-
-- [Cloud Enablement service scope for server/storage hosting](../enablement/enbl-sco-hosting.md)
-
-- [Cloud Enablement service scope for VPN solutions](../enablement/enbl-sco-vpn.md)
-
-- [Cloud Enablement service scope for CAPS/CPA approved VPN](../enablement/enbl-sco-capscpa.md)
-
-- [Big Cloud Enablement Service Scope](../enablement/enbl-sco-bigcolo.md)
+For more information, see the [*Cloud Enablement Service Scope*](../enablement/enbl-sco-hosting.md).
 
 ### CloudSOC from UKCloud
 

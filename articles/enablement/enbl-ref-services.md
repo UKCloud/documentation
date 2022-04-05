@@ -1,31 +1,34 @@
 ---
-title: Cloud Enablement services
-description: Lists the cloud enablement services provided by UKCloud
+title: UKCloud enablement services
+description: Lists the enablement services provided by UKCloud
 services: enablement
-author: Sue Highmoor
-reviewer: sdixon
-lastreviewed: 26/11/2021
+author: sighmoor
+reviewer: shighmoor
+lastreviewed: 05/04/2022
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Cloud Enablement services
+toc_title: Enablement services
 toc_fullpath: About/enbl-ref-services.md
 toc_mdlink: enbl-ref-services.md
 ---
 
-# Cloud Enablement services
+# UKCloud enablement services
 
-As a multi-cloud provider, UKCloud knows the importance of being able to install your own hardware in our cloud platform. We call this *Cloud Enablement* because it's a key capability that enables you to use cloud services more extensively. Some examples include:
+As a multi-cloud provider, UKCloud knows the importance of being able to install your own hardware in our cloud platform. We call this *Cloud Enablement* because it's a key capability that enables you to use cloud services more extensively. Some examples include providing secure facilities for:
 
-- CAPS/CPA-approved VPN - Provides secure hosting facilities for your own CAPS and CPA-approved (or equivalent standard) hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - CAPS/CPA-approved VPN Service Scope*](enbl-sco-capscpa.md).
+- Your own hosting servers and storage hardware
 
-- Hardware Security Module (HSM) - Provides secure hosting facilities for your HSM to provide secure key management and encryption capabilities across your workloads in our cloud. For more information, see the [*Cloud Enablement - Server/Storage Hosting Service Scope*](enbl-sco-hosting.md).
+- Your own VPN hardware
 
-- VPN solutions - Provides secure facilities for your own VPN hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - VPN solutions Service Scope*](enbl-sco-vpn.md).
+- Your Hardware Security Module (HSM) to provide secure key management and encryption capabilities across your workloads
 
-- Server/Storage Hosting - Provides secure facilities for your own hosting servers and storage hardware installed in our data centre for the purpose of utilising our cloud. For more information, see the [*Cloud Enablement - Server/Storage Hosting Service Scope*](enbl-sco-hosting.md).
+For more information, see the [*Cloud Enablement Service Scope*](enbl-sco-hosting.md).
+
+> [!NOTE]
+> ANY device placed within the UKCloud estate must be done so to utilise our cloud services. If you do not plan to use a UKCloud service as part of your design (such as UKCloud for VMware or Cloud Storage), we can arrange for you to talk to one of our partners about your co-location requirements.
 
 The following diagram shows the different configurations available to you for these Cloud Enablement services:
 
