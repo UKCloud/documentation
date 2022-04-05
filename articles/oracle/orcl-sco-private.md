@@ -3,8 +3,8 @@ title: Private Cloud for Oracle Software Service Scope
 description: Outlines important details regarding Private Cloud for Oracle Software
 services: private-cloud
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 02/07/2019
+reviewer: bchallis
+lastreviewed: 04/04/2022
 
 toc_rootlink: Private Cloud for Oracle Software
 toc_sub1: 
