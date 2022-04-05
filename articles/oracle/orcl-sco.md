@@ -4,7 +4,7 @@ description: Outlines important details regarding UKCloud for Oracle Software
 services: oracle
 author: shall
 reviewer: bchallis
-lastreviewed: 11/11/2021
+lastreviewed: 04/04/2022
 toc_rootlink: UKCloud for Oracle Software
 toc_sub1: Service Information
 toc_sub2:
