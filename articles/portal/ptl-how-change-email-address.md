@@ -37,7 +37,7 @@ To set your password reset email address:
 
 1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) using your login email address.
 
-2. Click your username in the toolbar and select **Update contact details**.
+2. In the toolbar, click your username and select **Update contact details**.
 
    ![Change contact details menu option ](images/ptl-mnu-change-details.png)
 

@@ -33,8 +33,6 @@ Customers need to allocate administrators who are responsible for:
 
 - Activating and locking individual user accounts where required
 
-- Resetting passwords
-
 - Ensuring that only appropriate users are listed as administrators
 
 To avoid a situation where all administrators are unable to access services, UKCloud recommends that each customer assigns multiple administrators.
@@ -53,9 +51,7 @@ There are a number of Access Management activities which UKCloud can assist with
 
 ### Password reset
 
-In the event that you need to reset your password, a self-service facility is available from the log on page. Alternatively your administrator can change your password.
-
-UKCloud Support will advise you of the names of your administrators if required.
+In the event that you need to reset your password, a self-service facility is available from the log in page (see [*How to change or reset your UKCloud Portal password or memorable word*](ptl-how-reset-password.md)). You must make sure that your password reset email address is set to an email account that you can access. For more information, see [*How to set your password reset email address*](ptl-how-change-email-address.md).
 
 ## Feedback
 
