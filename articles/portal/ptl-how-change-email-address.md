@@ -28,7 +28,7 @@ Your Portal account has two associated email addresses:
 
 ## Setting your password reset email address
 
-To ensure that can still access your Portal account if you forget your password, it's important that you set your password reset email address to one that you can readily access.
+To ensure that you can still access your Portal account if you forget your password, it's important that you set your password reset email address to one that you can readily access.
 
 > [!NOTE]
 > Changing your password reset email address does not affect the email address you use to log in to the Portal.
