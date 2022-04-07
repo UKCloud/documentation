@@ -3,8 +3,8 @@ title: How to use UKCloud's email service with your application
 description: Walks through the process for configuring your application to use our Email and Collaboration service
 services: email
 author: shighmoor
-reviewer: bchallis
-lastreviewed: 17/03/2021
+reviewer: mperry
+lastreviewed: 07/04/2022
 
 toc_rootlink: How To
 toc_sub1:

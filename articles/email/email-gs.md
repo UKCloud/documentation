@@ -3,8 +3,8 @@ title: Getting Started Guide for Email and Collaboration as a Service
 description: Provides information to get up and running with Email and Collaboration as a Service
 services: email
 author: shighmoor
-reviewer: bchallis
-lastreviewed: 17/03/2021
+reviewer: mperry
+lastreviewed: 07/04/2022
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -103,25 +103,15 @@ To create a user account:
 
 2. Click the gear symbol in the top-right of the main panel and select **New**.
 
-    ![New account menu option](images/email-zimbra-admin-mnu-new-account.png)
-
-3. Enter an **Account name** and the user\'s **Last name** (the other fields are optional).
+3. Enter an **Account name** and the user's **Last name** (the other fields are optional).
 
 4. If the new account will be an administrator, select the **Administrator** checkbox in the *Account Setup* section.
 
-    ![New Account dialog box](images/email-zimbra-admin-new-account.png)
-
 5. Scroll down to set the initial **Password** then click **Next**.
-
-    ![New Account initial password](images/email-zimbra-admin-new-account-password.png)
 
 6. Enter the new user's contact information then click **Next**.
 
-    ![New Account Contact Information](images/email-zimbra-admin-new-account-contact-info.png)
-
 7. Enter any aliases required for the account then click **Next**.
-
-    ![New Account Aliases](images/email-zimbra-admin-new-account-aliases.png)
 
 8. Add the account to any required distribution lists then click **Next**.
 
@@ -133,11 +123,7 @@ To create a user account:
 
     - Click **Add** at the bottom of the dialog box to make the new account a member of the group.
 
-    ![New Account Member Of](images/email-zimbra-admin-new-account-member-of.png)
-
 9. Specify any forwarding rules.
-
-    ![New Account Forwarding](images/email-zimbra-admin-new-account-forwarding.png)
 
 10. Click **Finish** to complete creation of the account.
 
@@ -162,11 +148,7 @@ To access the Zimbra web client:
 
     <https://mail.ukcloud.com/>
 
-    ![Zimbra web client sign in page](images/email-zimbra-web-sign-in.png)
-
 2. Log in using your account's email address and password.
-
-    ![Zimbra web client](images/email-zimbra-web-client.png)
 
 ## Installing the Zimbra desktop client
 
@@ -182,23 +164,31 @@ Hotmail, etc.) and social networks (Facebook, Digg, Twitter, etc.) to help make 
 
 2. Once installed open the client and click the **Add New Account** button.
 
-3. From the **Account Type** list, select **Zimbra** and complete the form as shown in the image below, substituting the **Email Address** and **Password** with your account details.
+3. Complete the form as follows:
 
-    ![Zimbra desktop client New Account dialog box](images/email-zimbra-desktop-new-account.png)
+   - **Account Type:** Select **Zimbra**
+
+   - **Account Type:** Enter a name for the account
+
+   - **Email Address:** Enter your account details
+
+   - **Password:** Enter your account details
+
+   - **Incoming Server:** Enter `mail.ukcloud.com`
+
+   - **Port:** Enter `443`
+
+   - **Security:** - Select **SSL**
 
 4. When you're done, click **Validate and Save**.
 
 5. The new account will be listed.
 
-    ![New Account](images/email-zimbra-desktop-new-account-created.png)
-
 6. Click **Launch Desktop**.
-
-    ![Zimbra desktop client](images/email-zimbra-desktop-client.png)
 
 ## Configuring IMAP and POP3 clients
 
-A wide variety of IMAP and POP3 clients are available natively, or for download and use within Windows, Mac, Linux, Android, iOS and BlackBerry. There are far too many to cover in detail so examples of setting up the more common desktop applications will be detailed here.
+A wide variety of IMAP and POP3 clients are available natively, or for download and use within Windows, Mac, Linux, Android and iOS. There are far too many to cover in detail so examples of setting up the more common desktop applications will be detailed here.
 
 The following settings should work with any application that adheres to the IMAP or POP3 protocol standards. IMAP is the preferred protocol and should be used if available.
 
@@ -233,8 +223,6 @@ To configure Outlook:
 7. In the **User Name** field, enter your full email address.
 
 8. Enter your **Password**.
-
-    ![Microsoft Outlook Add New Account](images/email-outlook-new-account.png)
 
 9. Click the **More Settings** button.
 
@@ -286,8 +274,6 @@ To configure Thunderbird:
 
 7. **Re-test** the connection and click **Done** to complete the account setup.
 
-    ![Mozilla Thunderbird Mail Account Setup](images/email-tbird-account-setup.png)
-
 ## Installing the Zimbra Collaboration Suite Connector for Microsoft Outlook
 
 The Zimbra Connector for Microsoft Outlook (ZCO) provides real-time, two-way synchronization of mail, contacts, tasks, and calendar between Outlook and the Zimbra server.
@@ -304,8 +290,6 @@ To install the Zimbra Connector for Outlook:
 
 3. Under **Downloads for End Users**, select and download the appropriate version of the **Zimbra Connector for Outlook** for your environment (either 32-bit or 64-bit).
 
-    ![Download Zimbra Connector for Outlook](images/email-outlook-connector-download.png)
-
 4. Install the MSI onto your machine.
 
 5. Open Microsoft Outlook.
@@ -318,11 +302,7 @@ To install the Zimbra Connector for Outlook:
 
     - Enter the **Email Address** and **Password** of your account
 
-    ![Zimbra Server Configuration Settings](images/email-outlook-zimbra-config.png)
-
 7. Click **OK** to complete the installation and Outlook will begin to synchronise email, contacts, tasks and calendar events with the UKCloud server.
-
-    ![Zimbra server in Outlook](images/email-outlook-zimbra.png)
 
 ## Next steps
 
@@ -342,7 +322,7 @@ For more information about using Email and Collaboration as a Service, see the f
 
 - [*How to set up Email and Collaboration on an iPhone or iPad*](email-how-setup-iphone.md)
 
-- [*How to setup Email on Android, Windows or BlackBerry mobile devices*](email-how-setup-android.md)
+- [*How to setup Email on an Android device*](email-how-setup-android.md)
 
 ## Glossary
 
