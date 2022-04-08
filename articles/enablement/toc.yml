@@ -1,6 +1,6 @@
 - name: About
   items:
-  - name: Cloud Enablement services
+  - name: Enablement services
     href: enbl-ref-services.md
 - name: How To
   items:
@@ -14,12 +14,8 @@
   items:
   - name: Big Cloud Enablement Service Scope
     href: enbl-sco-bigcolo.md
-  - name: Cloud Enablement - CAPS/CPA-approved VPN Service Scope
-    href: enbl-sco-capscpa.md
-  - name: Cloud Enablement - Server/Storage Hosting Service Scope
+  - name: Cloud Enablement Service Scope
     href: enbl-sco-hosting.md
-  - name: Cloud Enablement - VPN solutions Service Scope
-    href: enbl-sco-vpn.md
   - name: Data Transfer - Region to Region Service Scope
     href: enbl-sco-transfer-regions.md
   - name: Data Transfer between Assured and Elevated Service Scope

@@ -3337,7 +3337,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sco.html",
-          "hash": "Vh9YmIZa2b6RQ/Vc08e5iGX+BCgD4nIpbbYU3j30Rzs="
+          "hash": "4cE7h03BOY0SMgqVI3jzOiDYFd+Gy5gx380PNmg+bAM="
         }
       },
       "is_incremental": false,
@@ -5412,7 +5412,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-ref-services.html",
-          "hash": "Q1lvUDQP7arO6sc0rKKmUsTdO79zpKRWxPdQIgNn3x8="
+          "hash": "feiXi8b1+54bAfZ3NuIqRIJdDDWFSR3no1nwMckFDnQ="
         }
       },
       "is_incremental": false,
@@ -5432,23 +5432,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/enablement/enbl-sco-capscpa.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/enablement/enbl-sco-capscpa.html",
-          "hash": "4WE1pNG7YE2xqr0MFFij3z7MdslXmyf3SD9SSL7KIC8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-sco-hosting.md",
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-hosting.html",
-          "hash": "ugJIZt0SqbIEySAq9tDR9TugeSmXR3Ptk3rWOwugwuU="
+          "hash": "iJzrdIcgOyCB0MsWg9xf3myghj2OMgWJf2YrXsxytqE="
         }
       },
       "is_incremental": false,
@@ -5497,18 +5485,6 @@
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-transfer-regions.html",
           "hash": "A8zN8O/dAsAOLMlXiTOnThzAisYKVPSSIaREBRaQ2eI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/enablement/enbl-sco-vpn.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/enablement/enbl-sco-vpn.html",
-          "hash": "I2fNzVhB1zYiNo587vRQxCLB9saMxyUPxlyjxu1gqqs="
         }
       },
       "is_incremental": false,
@@ -6026,7 +6002,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "ffjJfAPcf/l9QVaLGo6k4q3edsuRkeCPmbj3xaiO7bw="
+          "hash": "s3tBx5oEeaoInvcUxOw05upqB1RsghmNPQJSx/wbz8g="
         }
       },
       "is_incremental": false,
@@ -10524,7 +10500,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco-private.html",
-          "hash": "GaZE8YFg314844GDoOLegXodYTkyn5sBlSEG+vTOCdk="
+          "hash": "ouzpBhytiCkaVbvCtMeT4t+lVSutGGZhJ2x7+4hRgJM="
         }
       },
       "is_incremental": false,
@@ -10536,7 +10512,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "KdpSjFIxhg58Rwl7+6f5u/2LSEZ+pahokzMcJKa9AD8="
+          "hash": "kvD6uqPXIo7aFaT+RfShXz0wOuYqR7n+2DtepSXXyUE="
         }
       },
       "is_incremental": false,
@@ -11445,7 +11421,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-dc-notice.html",
-          "hash": "Ve3ra8sBrtPg8dCosItk/V54RsNYHXXuCy+WVtPNNIk="
+          "hash": "iMk5iOWRZaLelWsmYeXTIkscjoKwmHmU++/YqBLKN30="
         }
       },
       "is_incremental": false,
@@ -11505,7 +11481,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "9F/ob6HIUYt3FUBSck1XrA0lHKmRsVL+FIvfAXur8c4="
+          "hash": "mYmzGztM6qDbREeXTZ98xIGZ+OC4gOSzkf7AQO6w2sk="
         }
       },
       "is_incremental": false,
@@ -11661,7 +11637,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "dFd4WSNfIc3oKOURmda+oY9ym70baMYG0b6NZHuTGEA="
+          "hash": "3NygneEOUSkrRGprZ1pi6MfxOr0c/QmstLbio9Hk7Yk="
         }
       },
       "is_incremental": false,
@@ -19134,7 +19110,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "8MyOP/yrPJ+cjV4TmsD3OHwS1o38UddwiwN+YAiivdk="
+          "hash": "kk1VqBNdLSlyGDyektbSHXAxL5I0sm3HjzdGpD1OiBU="
         }
       },
       "is_incremental": false,
@@ -19157,7 +19133,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Ej5U3qFp9XJw+pN0B7Vb2lmrM0sV90++rQ7BXHIut3c="
+          "hash": "LLsV5+Sbl2W/gXfHwvwF3Vuz5QLApZkvs7RwAZ+vjCY="
         }
       },
       "is_incremental": false,
@@ -19178,7 +19154,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 458,
+          "total_file_count": 456,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
