@@ -167,7 +167,7 @@ The edge gateway acts as a basic layer 3 load balancer, including features such 
 
 We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below.
 
-We don't provide Protective Monitoring services above the hypervisor (for example, for your VM); it is your responsibility to act at this level or you can use our Security Operations Service to monitor your virtual estate upon request.
+If you require protective monitoring services above the hypervisor (for example, for your VM), we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](..//soc/soc-sd.md).
 
 In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.
 
