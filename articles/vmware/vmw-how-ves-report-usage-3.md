@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Report licence usage for VMware Extended Support
-toc_fullpath: How To/vmw-how-ves-report-usage-v3.md
-toc_mdlink: vmw-how-ves-report-usage-v3.md
+toc_fullpath: How To/vmw-how-ves-report-usage-3.md
+toc_mdlink: vmw-how-ves-report-usage-3.md
 ---
 
 # How to report licence usage for VMware Extended Support
@@ -29,9 +29,9 @@ This article provides all the information you need to use the Usage Meter to gen
 
 Before you can create usage reports, you must have:
 
-- Installed and configured the vCloud Usage Meter (see [*How to install the vCloud Usage Meter for VMware Extended Support*](vmw-how-ves-install-usage-meter-v3.md))
+- Installed and configured the vCloud Usage Meter (see [*How to install the vCloud Usage Meter for VMware Extended Support*](vmw-how-ves-install-usage-meter-3.md))
 
-- Added your VMware products to the Usage Meter and completed the discovery of the environment (see [*How to add products to the vCloud Usage Meter for VMware Extended Support*](vmw-how-ves-add-products-v3.md))
+- Added your VMware products to the Usage Meter and completed the discovery of the environment (see [*How to add products to the vCloud Usage Meter for VMware Extended Support*](vmw-how-ves-add-products-3.md))
 
 ## Creating a customer record
 

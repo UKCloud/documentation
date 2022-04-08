@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Install the vCloud Usage Meter for VMware Extended Support
-toc_fullpath: How To/vmw-how-ves-install-usage-meter-v3.md
-toc_mdlink: vmw-how-ves-install-usage-meter-v3.md
+toc_fullpath: How To/vmw-how-ves-install-usage-meter-3.md
+toc_mdlink: vmw-how-ves-install-usage-meter-3.md
 ---
 
 # How to install the vCloud Usage Meter for VMware Extended Support
