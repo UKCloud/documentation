@@ -25,6 +25,10 @@ At UKCloud, we strive to ensure that our products deliver the most value to your
 
 This section provides some best practices to ensure you get the most out of UKCloud for VMware.
 
+### Supported Browsers
+
+Currently supported browsers for VMware are recent versions (usually within the last 3 releases) of Firefox, Chrome and Edge. IE11 and Safari are not supported.
+
 ### Removing out of date snapshots
 
 A VMware snapshot is a way to make a point in time copy of your VM and is useful if you want to preserve the state of your virtual machine so you can repeatedly return to the same state.
