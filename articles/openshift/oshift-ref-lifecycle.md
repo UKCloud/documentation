@@ -3,8 +3,8 @@ title: UKCloud for Red Hat OpenShift lifecycle and patch management
 description: Provides an overview of how UKCloud manages the patching and lifecycle support of its OpenShift service
 services: openshift
 author: sdixon
-reviewer: koneill
-lastreviewed: 12/03/2021
+reviewer: gellner
+lastreviewed: 31/03/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

@@ -3,8 +3,8 @@ title: Supported customer update strategy for version 4 clusters
 description: Provides information on supported strategies for self-service customer updates
 services: openshift
 author: koneill
-reviewer: 
-lastreviewed: 12/03/2021
+reviewer: gellner
+lastreviewed: 30/03/2022
 toc_rootlink: Reference
 toc_sub1: OpenShift v4.x
 toc_sub2:
@@ -62,11 +62,11 @@ We require customers to remain no further than one (1) minor version behind the 
 
 For some additional information regarding upgrading a cluster, see the following OpenShift documentation:
 
-- <https://docs.openshift.com/container-platform/4.7/updating/updating-cluster-between-minor.html>
+- <https://docs.openshift.com/container-platform/4.10/updating/understanding-openshift-updates.html>
 
-- <https://docs.openshift.com/container-platform/4.7/updating/updating-cluster.html>
+- <https://docs.openshift.com/container-platform/4.10/updating/updating-cluster-within-minor.html>
 
-- <https://docs.openshift.com/container-platform/4.7/updating/updating-cluster-cli.html>
+- <https://docs.openshift.com/container-platform/4.10/updating/updating-cluster-cli.html>
 
 ## Feedback
 

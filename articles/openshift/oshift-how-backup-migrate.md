@@ -3,8 +3,8 @@ title: How to backup, restore and migrate OpenShift resources
 description: Provides a starting point for using Velero to backup and restore cluster resources and migrate between clusters
 services: openshift
 author: koneill
-reviewer: alillistone
-lastreviewed: 10/01/2022
+reviewer: gellner
+lastreviewed: 31/03/2022
 
 toc_rootlink: How To
 toc_sub1: OpenShift v3.x
@@ -50,7 +50,7 @@ Velero offers a tool called restic that enables backup of persistent volume data
     aws_secret_access_key=<key>
     ```
 
-3. As you're not using AWS at this point, edit the `deploy-velero.yaml` file, find the `BackupStorageLocation` and add `s3Url` and `region` to the config key mapping. For example:
+3. As you're using UKCloud's Object Storage and not AWS, edit the `deploy-velero.yaml` file, find the `BackupStorageLocation` and add `s3Url` and `region` to the config key mapping. For example:
 
     ```
     - apiVersion: velero.io/v1
@@ -67,6 +67,9 @@ Velero offers a tool called restic that enables backup of persistent volume data
           bucket: velero-test
         provider: aws
     ```
+
+> [!TIP]
+> If your UKCloud Object Storage bucket is located in the frn00006 ECS zone, replace `https://cas.cor00005.ukcloud.com` with `https://cas.frn00006.ukcloud.com`.
 
 4. Run:
 
