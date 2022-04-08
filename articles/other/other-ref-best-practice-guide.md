@@ -25,9 +25,17 @@ At UKCloud, we strive to ensure that our products deliver the most value to your
 
 This section provides some best practices to ensure you get the most out of UKCloud for VMware.
 
-### Supported Browsers
+###  Using a supported browser
 
-Currently supported browsers for VMware are recent versions (usually within the last 3 releases) of Firefox, Chrome and Edge. IE11 and Safari are not supported.
+VMware Cloud Director currently supports recent versions (usually within the last 3 releases) of the following browsers:
+
+- Mozilla Firefox
+
+- Google Chrome
+
+- Microsoft Edge
+
+Microsoft Internet Explorer 11 and Safari are not supported. If you use one of these unsupported browsers you may encounter problems when performing tasks in Cloud Director.
 
 ### Removing out of date snapshots
 
