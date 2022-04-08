@@ -4,7 +4,7 @@ description: Outlines important details regarding UKCloud's Cross Domain Securit
 services: cdsz
 author: bchallis
 reviewer: bchallis
-lastreviewed: 30/08/2019
+lastreviewed: 04/04/2004
 
 toc_rootlink: Service Information
 toc_sub1: 
@@ -167,7 +167,7 @@ The edge gateway acts as a basic layer 3 load balancer, including features such 
 
 We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below.
 
-We don't provide Protective Monitoring services above the hypervisor (for example, for your VM); it is your responsibility to act at this level.
+If you require protective monitoring services above the hypervisor (for example, for your VM), we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](..//soc/soc-sd.md).
 
 In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.
 
@@ -211,7 +211,7 @@ You are responsible for:
 
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
 
-- If access is required over government secure networks (HSCN, Janet, RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of your CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
+- If access is required over government secure networks (HSCN, Janet, MCN or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of your CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
 
 - Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).
 
