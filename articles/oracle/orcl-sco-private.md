@@ -3,8 +3,8 @@ title: Private Cloud for Oracle Software Service Scope
 description: Outlines important details regarding Private Cloud for Oracle Software
 services: private-cloud
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 02/07/2019
+reviewer: bchallis
+lastreviewed: 04/04/2022
 
 toc_rootlink: Private Cloud for Oracle Software
 toc_sub1: 
@@ -68,7 +68,7 @@ Your compute solution can be:
 
 - In either our Assured OFFICIAL or Elevated OFFICIAL security domain if hosted within UKC.
 
-- Connected via the internet, HybridConnect, CrownConnect, Janet, HSCN, PSN, RLI or Secure Remote Access
+- Connected via the internet, HybridConnect, CrownConnect, Janet, HSCN, PSN, MCN or private networks
 
 ## Location and packaging options
 
