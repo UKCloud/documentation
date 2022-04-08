@@ -1,33 +1,33 @@
 ---
-title: How to add products to the vCloud Usage Meter (v3)
-description: Provides instructions for how to add products to the vCloud Usage Meter for the VMware Licence Service
+title: How to add products to the vCloud Usage Meter for VMware Extended Support
+description: Provides instructions for how to add products to the vCloud Usage Meter for VMware Extended Support
 services: vmware
 author: shighmoor
 reviewer: mperry
 lastreviewed: 07/09/2021
 toc_rootlink: How To
-toc_sub1: VMware Licence Service
+toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Add products to the vCloud Usage Meter (v3)
-toc_fullpath: How To/VMware Licence Service/vmw-how-vls-add-products.md
-toc_mdlink: vmw-how-vls-add-products.md
+toc_title: Add products to the vCloud Usage Meter for VMware Extended Support
+toc_fullpath: How To/vmw-how-ves-add-products-v3.md
+toc_mdlink: vmw-how-ves-add-products-v3.md
 ---
 
-# How to add products to the vCloud Usage Meter (v3)
+# How to add products to the vCloud Usage Meter for VMware Extended Support
 
 ## Overview
 
-The VMware Licence Service (VLS) enables you to switch to a flexible, VMware Cloud Provider Programme (VCPP) consumption-based licensing model.
+The On-Premises VMware Extended Support (VMware Extended Support) service provides ongoing Level 1 and Level 2 support for VMware estates where vSphere licences are operating on currently unsupported versions such as v5.5 and v6.0. This provides organisations with additional time to plan upgrades to supported levels of VMware or migrations onto new platforms or services, such as UKCloud's range of public and private clouds operating at OFFICIAL and above.
 
-As the VLS licensing model is consumption-based, you must send reports to UKCloud each month to detail your usage of VMware products. To generate these monthly reports, you need to install the vCloud Usage Meter (Usage Meter) and give it access to the products that you need it to report on.
+As VMware Extended Support is consumption-based, you must send reports to UKCloud each month to detail your usage of VMware products. To generate these monthly reports, you need to install the vCloud Usage Meter (Usage Meter) and give it access to the products that you need it to report on.
 
 This article provides all the information you need to add products to the Usage Meter. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/3.6/com.vmware.vcum.usersguide.doc/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html).
 
 ## Prerequisites
 
-You must have installed and configured the vCloud Usage Meter. For more information, see [*How to install the vCloud Usage Meter (v3)*](vmw-how-vls-install-usage-meter.md).
+You must have installed and configured the vCloud Usage Meter. For more information, see [*How to install the vCloud Usage Meter for VMware Extended Support*](vmw-how-ves-install-usage-meter-3.md).
 
 ## Adding products to the Usage Meter
 
@@ -153,19 +153,19 @@ When you've finished adding all of your metered products and the collection time
 
 ## Setting licence packs
 
-When you've completed the addition of VMware products to the Usage Meter and it has performed a discovery of the environment, you need to configure the discovered VLS licences to the correct billing category.
+When you've completed the addition of VMware products to the Usage Meter and it has performed a discovery of the environment, you need to configure the discovered VMware Extended Support licences to the correct billing category.
 
 1. In the top-right menu of the Usage Meter web application, select **Licenses**.
 
 2. On the _Billing Categories_ tab, against each discovered UKCloud-provided licence, from the **Billing Category** list, select **VCPP**.
 
-3. For any old licences that were not supplied by UKCloud under VLS, select **Perpetual**.
+3. For any old licences that were not supplied by UKCloud under VMware Extended Support, select **Perpetual**.
 
 ## Next steps
 
-This article described how to give the Usage Meter access to the products that you need it to report on. Next, you need to send monthly usage reports to UKCloud so that you can be billed correctly for the VMware Licence Service. For more information, see [*How to report licence usage for the VMware Licence Service (Usage Meter v3)*](vmw-how-vls-report-usage.md).
+This article described how to give the Usage Meter access to the products that you need it to report on. Next, you need to send monthly usage reports to UKCloud so that you can be billed correctly for the VMware Licence Service. For more information, see [*How to report licence usage for VMware Extended Support*](vmw-how-ves-report-usage-v3.md).
 
-If you upgrade any of your VLS-licensed VMware products, you must request new licences before upgrading. For more information, see [*How to request a new VLS license*](vmw-how-vls-request-licence.md).
+If you upgrade any of your VMware Extended Support licensed VMware products, you must request new licences before upgrading. For more information, see [*How to request a new VLS license*](vmw-how-vls-request-licence.md).
 
 ## Feedback
 

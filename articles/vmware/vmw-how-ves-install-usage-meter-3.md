@@ -1,27 +1,27 @@
 ---
-title: How to install the vCloud Usage Meter for the VMware Licence Service (v3)
-description: Provides instructions for how to install the vCloud Usage Meter for the VMware Licence Service (VLS)
+title: How to install the vCloud Usage Meter for VMware Extended Support
+description: Provides instructions for how to install the vCloud Usage Meter for VMware Extended Support
 services: vmware
 author: shighmoor
 reviewer: mperry
 lastreviewed: 06/08/2021
 toc_rootlink: How To
-toc_sub1: VMware Licence Service
+toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Install the vCloud Usage Meter (v3)
-toc_fullpath: How To/VMware Licence Service/vmw-how-vls-install-usage-meter.md
-toc_mdlink: vmw-how-vls-install-usage-meter.md
+toc_title: Install the vCloud Usage Meter for VMware Extended Support
+toc_fullpath: How To/vmw-how-ves-install-usage-meter-v3.md
+toc_mdlink: vmw-how-ves-install-usage-meter-v3.md
 ---
 
-# How to install the vCloud Usage Meter for the VMware Licence Service (v3)
+# How to install the vCloud Usage Meter for VMware Extended Support
 
 ## Overview
 
-The VMware Licence Service (VLS) enables you to switch to a flexible, VMware Cloud Provider Programme (VCPP) consumption-based licensing model.
+The On-Premises VMware Extended Support (VMware Extended Support) service provides ongoing Level 1 and Level 2 support for VMware estates where vSphere licences are operating on currently unsupported versions such as v5.5 and v6.0. This provides organisations with additional time to plan upgrades to supported levels of VMware or migrations onto new platforms or services, such as UKCloud's range of public and private clouds operating at OFFICIAL and above.
 
-As the VLS licensing model is consumption-based, you must send reports to UKCloud each month to detail your usage of VMware products. To generate these monthly reports, you need to install the vCloud Usage Meter (Usage Meter).
+As VMware Extended Support is consumption-based, you must send reports to UKCloud each month to detail your usage of VMware products. To generate these monthly reports, you need to install the vCloud Usage Meter (Usage Meter).
 
 This article provides all the information you need to install the Usage Meter in your UKCloud environment. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/3.6/com.vmware.vcum.usersguide.doc/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html).
 
@@ -69,7 +69,7 @@ To create the Network Profile within vCenter:
 
 ## Installing the Usage Meter
 
-To use VLS, you must install the Usage Meter to collect usage information and generate the reports that you need to send to UKCloud.
+To use VMware Extended Support, you must install the Usage Meter to collect usage information and generate the reports that you need to send to UKCloud.
 
 > [!NOTE]
 > The following steps use the Flex vCenter client, however they should be the same for the HTML5 client.
@@ -258,9 +258,9 @@ After finishing the initial Usage Meter configuration successfully, you can sele
 
 This article described how to install and configure the vCloud Usage Meter. Next, you need to give the Usage Meter access to the products that you need it to report on and send monthly usage reports to UKCloud.
 
-- [*How to add products to the vCloud Usage Meter (v3)*](vmw-how-vls-add-products.md)
+- [*How to add products to the vCloud Usage Meter for VMware Extended Support*](vmw-how-ves-add-products-3.md)
 
-- [*How to report licence usage for the VMware Licence Service (Usage Meter v3)*](vmw-how-vls-report-usage.md)
+- [*How to report licence usage for VMware Extended Support*](vmw-how-ves-report-usage-3.md)
 
 ## Feedback
 

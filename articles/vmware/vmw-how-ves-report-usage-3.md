@@ -1,37 +1,37 @@
 ---
-title: How to report licence usage for the VMware Licence Service (Usage Meter v3)
-description: Provides instructions for how to create the licence usage report for the VMware Licence Service
+title: How to report licence usage for VMware Extended Support
+description: Provides instructions for how to create the licence usage report for VMware Extended Support
 services: vmware
 author: shighmoor
 reviewer: mperry
 lastreviewed: 07/09/2021
 toc_rootlink: How To
-toc_sub1: VMware Licence Service
+toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Report VLS licence usage (v3)
-toc_fullpath: How To/VMware Licence Service/vmw-how-vls-report-usage.md
-toc_mdlink: vmw-how-vls-report-usage.md
+toc_title: Report licence usage for VMware Extended Support
+toc_fullpath: How To/vmw-how-ves-report-usage-v3.md
+toc_mdlink: vmw-how-ves-report-usage-v3.md
 ---
 
-# How to report licence usage for the VMware Licence Service (Usage Meter v3)
+# How to report licence usage for VMware Extended Support
 
 ## Overview
 
-The VMware Licence Service (VLS) enables you to switch to a flexible, VMware Cloud Provider Programme (VCPP) consumption-based licensing model.
+The On-Premises VMware Extended Support (VMware Extended Support) service provides ongoing Level 1 and Level 2 support for VMware estates where vSphere licences are operating on currently unsupported versions such as v5.5 and v6.0. This provides organisations with additional time to plan upgrades to supported levels of VMware or migrations onto new platforms or services, such as UKCloud's range of public and private clouds operating at OFFICIAL and above.
 
-As the VLS licensing model is consumption-based, you must generate reports in the vCloud Usage Meter (Usage Meter) and send them to UKCloud each month to detail your usage of VMware products.
+As VMware Extended Support is consumption-based, you must generate reports in the vCloud Usage Meter (Usage Meter) and send them to UKCloud each month to detail your usage of VMware products.
 
-This article provides all the information you need to use the Usage Meter to generate usage reports for VLS. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/3.6/com.vmware.vcum.usersguide.doc/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html).
+This article provides all the information you need to use the Usage Meter to generate usage reports for VMware Extended Support. For more information about the Usage Meter, see the VMware documentation [here](https://docs.vmware.com/en/vCloud-Usage-Meter/3.6/com.vmware.vcum.usersguide.doc/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html).
 
 ## Prerequisites
 
 Before you can create usage reports, you must have:
 
-- Installed and configured the vCloud Usage Meter (see [*How to install the vCloud Usage Meter (v3)*](vmw-how-vls-install-usage-meter.md))
+- Installed and configured the vCloud Usage Meter (see [*How to install the vCloud Usage Meter for VMware Extended Support*](vmw-how-ves-install-usage-meter-v3.md))
 
-- Added your VMware products to the Usage Meter and completed the discovery of the environment (see [*How to add products to the vCloud Usage Meter (v3)*](vmw-how-vls-add-products.md))
+- Added your VMware products to the Usage Meter and completed the discovery of the environment (see [*How to add products to the vCloud Usage Meter for VMware Extended Support*](vmw-how-ves-add-products-v3.md))
 
 ## Creating a customer record
 
@@ -90,7 +90,7 @@ To enable automatic reporting:
 
 2. In the _Submit reports to self_ section, complete the fields as follows:
 
-    - **Name**: Enter the name for the reporting, for example, `UKCloud VLS reports`
+    - **Name**: Enter the name for the reporting, for example, `UKCloud VES reports`
 
     - **Reporting Day**: Select **1**
 
@@ -122,7 +122,7 @@ You can also manually generate and email the monthly usage reports.
 
 ## Related articles
 
-If you upgrade any of your VLS-licensed VMware products, you must request new licences before upgrading. For more information, see [*How to request a new VLS license*](vmw-how-vls-request-licence.md).
+If you upgrade any of your VMware Extended Support licensed VMware products, you must request new licences before upgrading. For more information, see [*How to request a new VLS license*](vmw-how-vls-request-licence.md).
 
 ## Feedback
 
