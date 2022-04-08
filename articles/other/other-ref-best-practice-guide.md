@@ -25,6 +25,18 @@ At UKCloud, we strive to ensure that our products deliver the most value to your
 
 This section provides some best practices to ensure you get the most out of UKCloud for VMware.
 
+###  Using a supported browser
+
+VMware Cloud Director currently supports recent versions (usually within the last 3 releases) of the following browsers:
+
+- Mozilla Firefox
+
+- Google Chrome
+
+- Microsoft Edge
+
+Microsoft Internet Explorer 11 and Safari are not supported. If you use one of these unsupported browsers you may encounter problems when performing tasks in Cloud Director.
+
 ### Removing out of date snapshots
 
 A VMware snapshot is a way to make a point in time copy of your VM and is useful if you want to preserve the state of your virtual machine so you can repeatedly return to the same state.
