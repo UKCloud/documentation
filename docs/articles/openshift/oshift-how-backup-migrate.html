@@ -118,7 +118,7 @@ aws_access_key_id=&lt;key&gt;
 aws_secret_access_key=&lt;key&gt;
 </code></pre>
 </li>
-<li><p>As you're not using AWS at this point, edit the <code>deploy-velero.yaml</code> file, find the <code>BackupStorageLocation</code> and add <code>s3Url</code> and <code>region</code> to the config key mapping. For example:</p>
+<li><p>As you're using UKCloud's Object Storage and not AWS, edit the <code>deploy-velero.yaml</code> file, find the <code>BackupStorageLocation</code> and add <code>s3Url</code> and <code>region</code> to the config key mapping. For example:</p>
 <pre><code>- apiVersion: velero.io/v1
   kind: BackupStorageLocation
   metadata:
@@ -134,6 +134,12 @@ aws_secret_access_key=&lt;key&gt;
     provider: aws
 </code></pre>
 </li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If your UKCloud Object Storage bucket is located in the frn00006 ECS zone, replace <code>https://cas.cor00005.ukcloud.com</code> with <code>https://cas.frn00006.ukcloud.com</code>.</p>
+</div>
+<ol start="4">
 <li><p>Run:</p>
 <p><code>oc create -f deploy-velero.yml</code></p>
 <p>This deploys a Velero project and the required resources to backup and restore resources in your cluster (excluding persistent volume data).</p>
