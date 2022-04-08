@@ -16,8 +16,6 @@
 - name: More
   nav_dropdown: true
   items:
-  - name: Cloud Enablement
-    topicHref: articles/enablement/enbl-ref-services.md
   - name: Cloud Storage
     topicHref: articles/cloud-storage/cs-gs.md
   - name: Connectivity 
@@ -32,6 +30,8 @@
     topicHref: articles/draas/draas-gs.md
   - name: Email and Collaboration 
     topicHref: articles/email/email-gs.md
+  - name: Enablement Services
+    topicHref: articles/enablement/enbl-ref-services.md
   - name: Managed Operations
     topicHref: articles/managed-operations/man-home.md
   - name: Migration to the Cloud 

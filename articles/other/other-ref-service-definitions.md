@@ -113,9 +113,7 @@ Service | Service Definition | Service Scope
 --------|--------------------|--------------
 Professional Services | [here](../pro-services/ps-sd.md) | N/A
 Big Cloud Enablement | N/A | [here](../enablement/enbl-sco-bigcolo.md)
-Cloud Enablement - CAPS/CPA-approved VPN | N/A | [here](../enablement/enbl-sco-capscpa.md)
-Cloud Enablement - Server/Storage Hosting | N/A | [here](../enablement/enbl-sco-hosting.md)
-Cloud Enablement - VPN solutions | N/A | [here](../enablement/enbl-sco-vpn.md)
+Cloud Enablement | N/A | [here](../enablement/enbl-sco-hosting.md)
 Data Transfer - Region to Region | N/A | [here](../enablement/enbl-sco-transfer-regions.md)
 Data Transfer between Assured and Elevated | N/A | [here](../enablement/enbl-sco-transfer-assured-elevated.md)
 Mass Transfer Facility | N/A | [here](../enablement/enbl-sco-mtf-nas.md)
