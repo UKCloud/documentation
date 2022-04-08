@@ -64,7 +64,7 @@ For some additional information regarding upgrading a cluster, see the following
 
 - <https://docs.openshift.com/container-platform/4.10/updating/understanding-openshift-updates.html>
 
-- <https://docs.openshift.com/container-platform/4.10/updating/updating-cluster.html>
+- <https://docs.openshift.com/container-platform/4.10/updating/updating-cluster-within-minor.html>
 
 - <https://docs.openshift.com/container-platform/4.10/updating/updating-cluster-cli.html>
 
