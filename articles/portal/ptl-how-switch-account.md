@@ -4,7 +4,7 @@ description: Shows how to switch between accounts in the UKCloud Portal
 services: portal
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/04/2021
+lastreviewed: 19/04/2022
 
 toc_rootlink: How To
 toc_sub1: 
@@ -24,7 +24,7 @@ Each Portal user account is associated with one or more customer accounts. Withi
 
 ### Intended audience
 
-Any Portal user with access to multiple accounts can switch between those accounts in the Portal.
+To switch between accounts, your user account must have access to multiple customer accounts.
 
 ## Switching accounts
 
@@ -40,7 +40,11 @@ To switch to a different account:
 
    ![Account menu](images/ptl-mnu-customer-account.png)
 
-   You can now manage the services associated with the selected account.
+4. You can now manage the services associated with the newly selected account.
+
+## Related articles
+
+- [*Partitioning projects or end customers using UKCloud accounts*](ptl-ref-multiple-accounts.md)
 
 ## Feedback
 
