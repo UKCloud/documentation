@@ -30,6 +30,8 @@
     href: vmw-how-access-syslog-data-adv.md
   - name: Access VMware Cloud Director through the Cloud Director API
     href: vmw-how-access-vcloud-api.md
+  - name: Add products to the vCloud Usage Meter for VMware Extended Support
+    href: vmw-how-ves-add-products-3.md
   - name: Apply vApp fencing
     href: vmw-how-apply-vapp-fencing.md
   - name: Build an edge gateway using the UKCloud Portal
@@ -72,6 +74,8 @@
     href: vmw-how-increase-storage.md
   - name: Install and configure OpenVPN
     href: vmw-how-install-openvpn.md
+  - name: Install the vCloud Usage Meter for VMware Extended Support
+    href: vmw-how-ves-install-usage-meter-3.md
   - name: Interact with the Cloud Director REST API using PowerShell and Python
     href: vmw-how-interact-vcd-api-powershell.md
   - name: Locate your virtual data centre on the UKCloud platform
@@ -84,6 +88,8 @@
     href: vmw-how-manipulate-power-states-powercli.md
   - name: Migrate vApps between virtual data centres
     href: vmw-how-migrate-vapp.md
+  - name: Report licence usage for VMware Extended Support
+    href: vmw-how-ves-report-usage-3.md
   - name: Retrieve utilisation metrics for your virtual machines
     href: vmw-how-retrieve-utilisation-metrics.md
   - name: Securely manage permissions for a specific vApp
@@ -129,15 +135,9 @@
   - name: VMware Licence Service
     items:
     - name: Add products to the vCloud Usage Meter
-      href: vmw-how-vls-add-products.md
-    - name: Add products to the vCloud Usage Meter 4
       href: vmw-how-vls-add-products-4.md
     - name: Install the vCloud Usage Meter
-      href: vmw-how-vls-install-usage-meter.md
-    - name: Install the vCloud Usage Meter 4
       href: vmw-how-vls-install-usage-meter-4.md
-    - name: Report VLS licence usage
-      href: vmw-how-vls-report-usage.md
     - name: Request a new VLS licence
       href: vmw-how-vls-request-licence.md
 - name: Reference

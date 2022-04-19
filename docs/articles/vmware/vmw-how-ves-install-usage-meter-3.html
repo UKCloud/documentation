@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to install the vCloud Usage Meter for VMware Extended Support </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to install the vCloud Usage Meter for VMware Extended Support ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-ves-install-usage-meter-3.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-install-the-vcloud-usage-meter-for-vmware-extended-support">How to install the vCloud Usage Meter for VMware Extended Support</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The On-Premises VMware Extended Support (VMware Extended Support) service provides ongoing Level 1 and Level 2 support for VMware estates where vSphere licences are operating on currently unsupported versions such as v5.5 and v6.0. This provides organisations with additional time to plan upgrades to supported levels of VMware or migrations onto new platforms or services, such as UKCloud's range of public and private clouds operating at OFFICIAL and above.</p>
+<p>As VMware Extended Support is consumption-based, you must send reports to UKCloud each month to detail your usage of VMware products. To generate these monthly reports, you need to install the vCloud Usage Meter (Usage Meter).</p>
+<p>This article provides all the information you need to install the Usage Meter in your UKCloud environment. For more information about the Usage Meter, see the VMware documentation <a href="https://docs.vmware.com/en/vCloud-Usage-Meter/3.6/com.vmware.vcum.usersguide.doc/GUID-AE1277B2-6B5A-4CAE-832A-DF89C1BD71DC.html">here</a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To install and perform initial configuration of the Usage Meter, you need the following:</p>
+<ul>
+<li><p>Usage Meter OVA and hot patch 5, available <a href="https://cas.cor00005.ukcloud.com/Docs/UKCloud_VLS/UsageMeter.zip?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1662507263&amp;Signature=FENoZByW4nCooyjpUjd12%2B8DWdo%3D">here</a></p>
+</li>
+<li><p>A Static IP address, DNS server IP address and DNS domain name</p>
+</li>
+<li><p>A vCenter network that has access to vCenter, the ESXi Host Management interface and other products to be metered</p>
+</li>
+<li><p>A Network Protocol Profile created in vCenter (see steps <a href="#creating-a-network-protocol-profile">below</a>), attached to the network where the Usage Meter will reside</p>
+</li>
+<li><p>Access to an SMTP server (if the VM won't have access to an SMTP server, let us know as soon as possible by raising a support ticket in <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> and we'll provide the necessary information to work around this issue)</p>
+</li>
+<li><p>Two passwords created and recorded for the Usage Meter's <code>root</code> and <code>usgmtr</code> accounts</p>
+</li>
+<li><p>SCP or WinSCP access to the Usage Meter IP to transfer the patch file</p>
+</li>
+</ul>
+<h3 id="creating-a-network-protocol-profile">Creating a Network Protocol Profile</h3>
+<p>If you don't already have a Network Protocol Profile attached to the network where the Usage Meter will reside, you must create one before you start the installation.</p>
+<p>To create the Network Profile within vCenter:</p>
+<ol>
+<li><p>Log on to the vCenter where you want to host the Usage Meter.</p>
+</li>
+<li><p>Navigate to the data center object in the vSphere hierarchy where you want to host the Usage Meter, then select the <strong>Configure</strong> tab.</p>
+</li>
+<li><p>Select <strong>Network Protocol Profiles</strong>, then click <strong>Add</strong>.</p>
+</li>
+<li><p>In the <em>Add Network Protocol Profile</em> dialog box, enter the following information:</p>
+<ul>
+<li><p><em>Name and Network</em> page: Enter a <strong>Name</strong> for the profile and, in the <em>Assign Networks</em> section, select the network on which the Usage Meter will be deployed.</p>
+</li>
+<li><p><em>Configure IPv4</em> page: Enter the network <strong>Subnet</strong>, <strong>Gateway</strong> IP and <strong>DNS server addresses</strong>.</p>
+</li>
+<li><p><em>Set other network configurations</em> page: Enter the <strong>DNS domain</strong> and use the DNS domain for the <strong>DNS search path</strong>.</p>
+</li>
+<li><p><em>Ready to complete</em> page: Review the information you entered.</p>
+</li>
+</ul>
+</li>
+<li><p>When you're done, click <strong>Finish</strong>.</p>
+</li>
+</ol>
+<h2 id="installing-the-usage-meter">Installing the Usage Meter</h2>
+<p>To use VMware Extended Support, you must install the Usage Meter to collect usage information and generate the reports that you need to send to UKCloud.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The following steps use the Flex vCenter client, however they should be the same for the HTML5 client.</p>
+</div>
+<h3 id="deploying-and-setting-up-the-usage-meter-appliance">Deploying and setting up the Usage Meter appliance</h3>
+<p>To deploy and set up the Usage Meter:</p>
+<ol>
+<li><p>Download the Usage Meter OVA file from the link provided in the <a href="#prerequisites">Prerequisites</a> section.</p>
+</li>
+<li><p>In vCenter, navigate to the folder where you want to deploy the Usage Meter.</p>
+</li>
+<li><p>From the <strong>Actions</strong> menu, select <strong>Deploy OVF Template</strong>.</p>
+</li>
+<li><p>In the <em>Deploy OVF Template</em> dialog box, select <strong>Local file</strong> and browse for the Usage Meter OVA file, then click <strong>Next</strong>.</p>
+</li>
+<li><p>Enter a <strong>Name</strong> for the VM and ensure the correct folder is selected (if not, select it now), then click <strong>Next</strong>.</p>
+</li>
+<li><p>Select a cluster or ESXi server to host the VM, then click <strong>Next</strong>.</p>
+</li>
+<li><p>Review the OVA file details, then click <strong>Next</strong>.</p>
+</li>
+<li><p>Review the licence agreement and click <strong>Accept</strong>, then click <strong>Next</strong>.</p>
+</li>
+<li><p>Select the desired data store on which to deploy the VM and, from the <strong>Select virtual disk format</strong> list, select <strong>Thin Provision</strong>, then click <strong>Next</strong>.</p>
+</li>
+<li><p>Select the network you want the Usage Meter to reside on and, from the <strong>IP Allocation</strong> list, select <strong>Static - Manual</strong>.</p>
+</li>
+<li><p>On the <em>Customize template</em> page, set the passwords to use for the Usage Meter <code>root</code> and <code>usgmtr</code> accounts.</p>
+</li>
+<li><p>Depending on the vCenter client used, expand the <em>Networking Properties</em> section and enter the following information (where possible), then click <strong>Next</strong>.</p>
+<ul>
+<li><p><strong>Network 1 IP Address</strong>: Enter the IP address to assign to the Usage Meter</p>
+</li>
+<li><p><strong>Gateway</strong>: Gateway IP for the network where the Usage Meter is located</p>
+</li>
+<li><p><strong>Domain name</strong>: AD Domain name where the ESXi and vCenter host is located</p>
+</li>
+<li><p><strong>DNS search path</strong>: Use the AD Domain name</p>
+</li>
+<li><p><strong>DNS servers</strong>: Use the DNS server IPs for the domain</p>
+</li>
+<li><p><strong>Netmask</strong>: Subnet mask of the network where the Usage Meter is located</p>
+</li>
+</ul>
+</li>
+<li><p>Review the configuration of the import, then click <strong>Finish</strong>.</p>
+</li>
+<li><p>When the appliance has been deployed, power it on.</p>
+</li>
+</ol>
+<h4 id="setting-the-time-zone">Setting the time zone</h4>
+<p>For the data collection process to work correctly, it's important that the Usage Meter is in the same time zone as vCenter.</p>
+<ol>
+<li><p>Open the Usage Meter VM console.</p>
+</li>
+<li><p>Select the <strong>Set Timezone</strong> option.</p>
+</li>
+<li><p>Enter <code>7</code> for Europe, then enter <code>49</code> for United Kingdom.</p>
+</li>
+<li><p>If the time shown for <strong>Selected time is now</strong> is correct, enter <code>1</code> to confirm.</p>
+</li>
+</ol>
+<h4 id="setting-the-web-application-password">Setting the web application password</h4>
+<p>You access the Usage Meter via a web application. Before you can access the application, you need to set a password.</p>
+<ol>
+<li><p>In the Usage Meter VM console, select the <strong>Login</strong> option.</p>
+</li>
+<li><p>Log in with the <code>usgmtr</code> username and the password that you configured at installation.</p>
+</li>
+<li><p>At the prompt, enter <code>webpass</code>.</p>
+</li>
+<li><p>Enter a password for the Usage Meter web application.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Make a note of the password as you'll need it later to log in to the web application.</p>
+</div>
+</li>
+<li><p>Enter <code>exit</code> to log out.</p>
+</li>
+</ol>
+<h3 id="applying-the-latest-patch-to-the-usage-meter-appliance">Applying the latest patch to the Usage Meter appliance</h3>
+<p>VMware has released several rollup patch packs for Usage Meter 3.6.1. You need to apply the latest patch: Hot patch 5.</p>
+<ol>
+<li><p>Download the hot patch zip file from the link provided in the <a href="#prerequisites">Prerequisites</a> section.</p>
+</li>
+<li><p>In vCenter, take a snapshot of the Usage Meter appliance.</p>
+</li>
+<li><p>Open the Usage Meter VM console and log on as <code>root</code>.</p>
+</li>
+<li><p>Edit the <code>/etc/ssh/sshd.conf</code> file using vi and, in the <code># Authentication</code> section, change the <code>PermitRootLogin</code> option to <code>yes</code>, then save the file.</p>
+</li>
+<li><p>Start the SSH service using the following command:</p>
+<p><code>service sshd start</code>.</p>
+</li>
+<li><p>Using SCP or WinSCP, open a connection to the Usage Meter using the <code>root</code> account and transfer the hot patch zip file to the <code>/home/usgmtr</code> folder. Close SCP/WinSCP when complete.</p>
+</li>
+<li><p>Switch back to the Usage Meter VM console and stop the SSH service using the following command:</p>
+<p><code>service sshd stop</code></p>
+</li>
+<li><p>Edit the <code>/etc/ssh/sshd.conf</code> file using vi and, in the <code># Authentication</code> section, change the <code>PermitRootLogin</code> option back to <code>no</code>, then save the file.</p>
+</li>
+<li><p>Change directory to <code>/home/usgmtr</code> and unzip the hot patch file using the following command:</p>
+<p><code>unzip vCloudUsageMeter-3.6.1.0-16604978-hot_patch_5.zip</code></p>
+</li>
+<li><p>Run <code>cat vCloudUsageMeter-3.6.1.0-16604978-hot_patch_5.rpm.sha1</code> to display its sha1 hash value.</p>
+</li>
+<li><p>Run <code>sha1sum vCloudUsageMeter-3.6.1.0-16604978-hot_patch_5.rpm</code> and compare the output to that of the <code>cat</code> output to confirm that they match. If they don't, repeat from step 6.</p>
+</li>
+<li><p>Install the patch using the following command:</p>
+<p><code>rpm --install vCloudUsageMeter-3.6.1.0-16604978-hot_patch_5.rpm</code></p>
+</li>
+<li><p>When the patch has installed, check the services are up and running using <code>service tomcat status</code> and, if everything has worked, the service should be active. If not, regress the snapshot taken earlier and perform the steps again.</p>
+</li>
+<li><p>If the patch was applied successfully, delete the snapshot taken in step 2.</p>
+</li>
+</ol>
+<h3 id="configuring-the-usage-meter">Configuring the Usage Meter</h3>
+<p>After installing the Usage Meter and applying the latest patch, you need to perform a couple of configuration tasks to complete the setup of the appliance.</p>
+<h4 id="performing-initial-configuration">Performing initial configuration</h4>
+<p>First, you need to configure a provider and and email server:</p>
+<ol>
+<li><p>In your web browser, connect to the URL that is displayed in the Usage Meter VM console, and log in to the web application using the account <code>admin</code> and the password you created earlier.</p>
+</li>
+<li><p>On first login, you'll be presented with a dialog box asking to give your permission to submit data to VMware. Click <strong>Accept</strong>.</p>
+</li>
+<li><p>On the <strong>Provider</strong> tab, configure the provider as follows:</p>
+<ul>
+<li><p><strong>Company</strong>: Enter your company name</p>
+</li>
+<li><p><strong>Contact Name</strong>: Enter the name of your company contact</p>
+</li>
+<li><p><strong>Phone</strong>: Enter a phone number for your company contact</p>
+</li>
+<li><p><strong>Email</strong>: Enter the email address to use as the sender address on any system generated emails</p>
+</li>
+<li><p><strong>Partner ID</strong>: Enter the details given to you during the onboarding of your service (if you're installing the Usage Meter for the inital scoping of your environment, enter 12345)</p>
+</li>
+<li><p><strong>Contract Number</strong>: Enter the details given to you during the onboarding of your service (if you're installing the Usage Meter for the inital scoping of your environment, enter 12345)</p>
+</li>
+<li><p><strong>Site ID</strong>: Enter the details given to you during the onboarding of your service (if you're installing the Usage Meter for the inital scoping of your environment, enter 99)</p>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
+</li>
+<li><p>On the <strong>Email</strong> tab, configure the email server as follows:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If the Usage Meter VM doesn't have access to an SMTP server, let us know as soon as possible by raising a support ticket in <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> and we'll provide the necessary information to work around this issue.</p>
+</div>
+<ul>
+<li><p><strong>Host</strong>: The IP address of your SMTP relay</p>
+</li>
+<li><p><strong>Port</strong>: Port details of the SMTP relay</p>
+</li>
+<li><p><strong>Connection Security</strong>: Set the type of the SMTP connection</p>
+</li>
+<li><p><strong>User</strong>: Enter the username if authentication is required</p>
+</li>
+<li><p><strong>Password</strong>: Enter the password if authentication is required</p>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Send email</strong> to send a test email.</p>
+</li>
+<li><p>When you've completed all the fields and sent a test email, you'll be able to click <strong>Save</strong> on the <strong>Email</strong> tab.</p>
+</li>
+</ol>
+<h4 id="completing-usage-meter-configuration">Completing Usage Meter configuration</h4>
+<p>After finishing the initial Usage Meter configuration successfully, you can select the other tabs on the <em>Manage</em> page to complete the configuration, clicking <strong>Save</strong> on each tab when you're done.</p>
+<ol>
+<li><p>On the <strong>Proxy</strong> tab, in the <strong>IP or hostname</strong> field, enter a dummy IP to prevent the Usage Meter from sending data directly to VMware.</p>
+</li>
+<li><p>On the <strong>Collections</strong> tab, from the <strong>Start at minute</strong> list, select the minute of each hour when you want the Usage Meter to attempt to collect usage information from each product.</p>
+</li>
+<li><p>If you've connected the Usage Meter to your SMTP server, on the <strong>Email Alerts</strong> tab, complete the following fields to inform UKCloud of any failed collections:</p>
+<ul>
+<li><p><strong>From Email</strong>: Enter a sender email address, for example, <code>usagemeter@&lt;domain&gt;</code></p>
+</li>
+<li><p><strong>To Email</strong>: Enter <code>vls@ukcloud.com</code> (if you also want to to receive failed collection alerts, use a comma between addresses and enter your internal email address)</p>
+</li>
+<li><p><strong>Alerts</strong>: Ensure both <strong>Successful collection</strong> and <strong>Failed collection</strong> are selected</p>
+</li>
+<li><p><strong>Testing</strong>: Select <strong>Send a test email alert after saving</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>This article described how to install and configure the vCloud Usage Meter. Next, you need to give the Usage Meter access to the products that you need it to report on and send monthly usage reports to UKCloud.</p>
+<ul>
+<li><p><a href="vmw-how-ves-add-products-3.html"><em>How to add products to the vCloud Usage Meter for VMware Extended Support</em></a></p>
+</li>
+<li><p><a href="vmw-how-ves-report-usage-3.html"><em>How to report licence usage for VMware Extended Support</em></a></p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>
