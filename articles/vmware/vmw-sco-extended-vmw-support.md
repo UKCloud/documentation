@@ -148,7 +148,7 @@ In addition to the responsibilities already mentioned in this Service Scope, cus
 
 - As UKCloud does not have any direct physical or network connection to the customer's environment, it is the customer's responsibility to ensure they maintain previously supported combinations of VMware software and any third-party software as identified within the compatibility matrix. See the following VMware documents for assistance:
 
-  - [VMware Lifecycle Product Matrix](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/support/product-lifecycle-matrix.pdf)
+  - [VMware Lifecycle Product Matrix](https://lifecycle.vmware.com/#/)
 
   - [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php)
 
@@ -196,9 +196,9 @@ For more information about VMware Extended Support, see the following:
 
 - [*On-Premises VMware Extended Support Service Definition*](vmw-sd-extended-vmw-support.md)
 
-- [*How to install the vCloud Usage Meter for the VMware Licence Service*](vmw-how-vls-install-usage-meter.md)
+- [*How to install the vCloud Usage Meter for the VMware Licence Service*](vmw-how-ves-install-usage-meter-3.md)
 
-- [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products.md)
+- [*How to add products to the vCloud Usage Meter*](vmw-how-ves-add-products-3.md)
 
 ## Feedback
 

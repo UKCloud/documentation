@@ -3,8 +3,8 @@ title: VMware Licence Service (VLS) Service Scope
 description: Outlines important details regarding the VMware Licence Service (VLS)
 services: vmware
 author: shall
-reviewer: shall
-lastreviewed: 22/03/2021
+reviewer: mperry
+lastreviewed: 06/04/2022
 
 toc_rootlink: Service Information
 toc_sub1: VMware Licence Service
@@ -56,17 +56,11 @@ When we receive an order from the customer, we will provide an emailed welcome p
 
 - Log in credentials for the UKCloud Portal
 
-- Links to useful VLS articles in the Knowledge Centre
+- Links to useful VLS articles in the Knowledge Centre, including instructions for setting up the vCloud Usage Meter
 
-- To set up the vCloud Usage Meter, we will provide:
+- VLS licence keys
 
-  - UKCloud VMware contract number
-
-  - UKCloud VMware partner ID
-
-  - UKCloud Site ID
-
-In addition to the emailed welcome pack, a Service Delivery Manager will contact the customer to support them with the tasks required (as outlined in this Service Scope) and answer any questions.
+In addition to the emailed welcome pack, a Service Delivery Manager (SDM) will contact the customer to support them with the tasks required (as outlined in this Service Scope) and answer any questions.
 
 ### UKCloud Portal access
 
@@ -90,7 +84,7 @@ To activate the service, UKCloud will make the required licence keys available t
 
 - The customer may be required to update or add licence keys for additional module usage.
 
-- If the customer wants to use an additional VMware module, then they can request a new licence key as per the Knowledge Centre article.
+- If the customer wants to use an additional VMware module, then they can request a new licence key as per [*How to request a new VLS licence*](vmw-how-vls-request-licence.md).
 
 - The licence keys supplied are for use with UKCloud VLS only and not for any VMware usage outside of the VLS contract. If the service is cancelled by the customer, the UKCloud issued keys are to be removed by the customer.
 
@@ -104,7 +98,9 @@ VLS covers the following:
 
 The following are NOT eligible under VLS:
 
-- WSP1, Avi Networks, Velocloud, Carbon Black, Pivotal (until these appear on the product guide)
+- Velocloud, Carbon Black, Pivotal (until these appear on the product guide)
+
+Workspace 1 (WSP1) is delivered via a parallel but separate service offering.
 
 ### Usage Meter
 
@@ -114,8 +110,6 @@ VLS requires the mandatory installation of the vCloud Usage Meter on the custome
 
 - For customers on a Fully Metered package, the Usage Meter captures all the VMware usage covered by the VLS agreement during the month and creates a report with the number of units consumed for each VMware bundle. This report of total units is used by UKCloud to calculate the customer's invoice for each month and enables the customer to be flexible on what they use in any given month, rather than be committed up front.
 
-- Horizon reporting is manually provided at the end of each month by capturing the 'maximum concurrency' reported in the Horizon portal.
-
 - If both Fixed Price and Fully Metered elements exist in the same environment, then it will be necessary to deploy two Usage Meters.
 
 UKCloud will make the URL of the recommended Usage Meter available to the customer.
@@ -124,7 +118,7 @@ UKCloud will make the URL of the recommended Usage Meter available to the custom
 
 - It is the customer's responsibility to install and configure the Usage Meter prior to using the service as it is required for reporting and invoicing. The customer can utilise UKCloud Professional Services at an additional cost if assistance is required for this task.
 
-As the Usage Meter is installed in an environment that UKCloud has no access to:
+As the Usage Meter is installed in an environment that UKCloud does not have access to:
 
 - It is the customer's responsibility to ensure that the Usage Meter is correctly configured and that it is collecting the daily data.
 
@@ -138,15 +132,13 @@ As the Usage Meter is installed in an environment that UKCloud has no access to:
 
 The basis of VLS is that the customer is not committed to any specific VMware modules or usage, which converts their VMware usage from an upfront capital expenditure to a flexible monthly operational expenditure. This enables the customer to increase, decrease, test and remove environments and functionality as they require.
 
-As a result, VLS depends on the vCloud Usage Meter to collect the actual monthly usage on an hourly basis. At the end of each month, the report will identify the exact number of units consumed against the set VMware bundle codes, which is then used to create a total points usage. This total number of points is used to calculate the customer's invoice for the month and it is therefore essential to ensure that the Usage Meter is correctly configured and that reports are sent to UKCloud.
+As a result, VLS depends on the vCloud Usage Meter to collect the actual monthly usage on an hourly basis. At the end of each month, the report will identify the exact number of units consumed against the set VMware bundle codes, which is then used to create a total points usage. This total number of points is used to calculate the customer's invoice for the month and it is therefore essential to ensure that the Usage Meter is correctly configured and that data is uploaded to VMware.
 
-With the current version of Usage Meter, Horizon maximum monthly concurrency must be manually reported to UKCloud, by email, to vls@ukcloud.com.
+As part of the configuration of the Usage Meter, usage data is uploaded to VMware on an hourly basis. If, for any reason, this fails, it will be the customer's responsibility to manually send a downloaded usage report no later than 10:59 AM UTC on the second day of the next reporting month  (that is, 10:59 AM on 2 May 2022 for April 2022 usage). It is essential that this is completed so that the usage can be calculated by VMware and reported to UKCloud.
 
-As part of the configuration of the Usage Meter, automatic reporting on the 1st of each month is emailed to vls@ukcloud.com. If, for any reason, this fails or cannot be configured, it will be the customer's responsibility to manually send reports within five (5) working days of the last day of the reporting month (that is, 6 November 2021 for October 2021 usage). It is essential that this is completed so that the usage can be added to UKCloud's VMware usage and reported to VMware. A Knowledge Centre article explains how the usage must be reported.
+- If the reports are not received in time, or the Usage Meter stops uploading data, the customer's assigned Service Delivery Manager, or UKCloud Support staff, will contact them to request the report or to request that the issue be investigated.
 
-- If the reports are not received within five working days, the customer's assigned Service Delivery Manager will contact them to request the reports.
-
-- If the reports are not received within 10 working days, the customer's invoice will be estimated based on the previous two months' usage. Once the customer's usage is received or estimated, it will be sent to their Service Delivery Manager who will include this in the monthly updates and reports so that the customer can track their usage and costs. It is important to note that the customer must send Usage Meter reports to UKCloud as this is the basis of the contract and ensures accurate reporting and invoicing.
+- If the reports are not received in time, the customer's invoice will be estimated based on the previous two months' usage. Once the customer's usage is received or estimated, it will be sent to their Service Delivery Manager who will include this in the monthly updates and reports so that the customer can track their usage and costs. It is important to note that the customer must allow uploading of Usage Meter data to VMware as this is the basis of the contract and ensures accurate reporting and invoicing.
 
 - If an estimation is used, UKCloud reserves the right to add any additional usage to future invoices once the missing reports are sent to ensure that the customer has been accurately invoiced for their actual usage and that UKCloud correctly reports all VMware usage to VMware.
 
@@ -157,7 +149,7 @@ As part of the configuration of the Usage Meter, automatic reporting on the 1st 
 
 VLS includes your VMware usage and support via our experienced VMware Customer Service infrastructure, which has been responsible for supporting our VMware-based public cloud for nine years. This support is available for all VLS issues or enquiries, and the support availability times are based on the severity of the support ticket.
 
-For more information regarding support hours, SLA and escalation, see the [*How to raise and escalate support tickets with customer support*](https://docs.ukcloud.com/articles/portal/ptl-how-raise-escalate-service-request.html) article on the Knowledge Centre.
+For more information regarding support hours, SLA and escalation, see [*How to raise and escalate support tickets with customer support*](https://docs.ukcloud.com/articles/portal/ptl-how-raise-escalate-service-request.html).
 
 Note that there is no limit to the number of tickets that customers can raise.
 
@@ -169,7 +161,7 @@ In addition to the responsibilities already mentioned in this Service Scope, cus
 
 - As UKCloud does not have any direct physical or network connection to the customer's environment, it is the customer's responsibility to ensure they are on supported versions of VMware software and that any third-party software is within the compatibility matrix. See the following VMware documents for assistance:
 
-  - [VMware Lifecycle Product Matrix](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/support/product-lifecycle-matrix.pdf)
+  - [VMware Lifecycle Product Matrix](https://lifecycle.vmware.com/#/)
 
   - [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php)
 
@@ -217,7 +209,7 @@ Note that there is a discount level over £40,000 spent per month.
 
 For monthly invoicing, VLS requires the output of the Usage Meter, and as this is not available until the end of each month, the customer will be invoiced one month in arrears.
 
-As an example, the customer must report October 2021 usage to UKCloud (<vls@ukcloud.com>) by the 6 November 2021 (within five working days). The customer will then be invoiced for this usage on the 30 November.
+As an example, the customer must report April 2022 usage to VMware by 10:59 AM on 2 May 2022. The customer will then be invoiced for this usage on 31 May 2022.
 
 The customer will receive a monthly report from their Service Delivery Manager based on their submitted Usage Meter usages and total costs.
 
@@ -237,9 +229,7 @@ If a customer ceases to use VLS, the following will apply:
 
 - UKCloud are no longer able to support the customer for any enquiries relating to their own on-premises VMware infrastructure
 
-- Usage reports are no longer required to be sent at the end of each month
-
-- The customer must ensure that they arrange for VMware support and licences through another partner or via VMware directly
+- Usage data is no longer required to be uploaded to VMware
 
 ## Supporting documents and resources
 
@@ -247,11 +237,9 @@ For more information about VLS, see the following:
 
 - [*VMware Licence Service Service Definition*](vmw-sd-vls.md)
 
-- [*How to install the vCloud Usage Meter for the VMware Licence Service*](vmw-how-vls-install-usage-meter.md)
+- [*How to install the vCloud Usage Meter for the VMware Licence Service*](vmw-how-vls-install-usage-meter-4.md)
 
-- [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products.md)
-
-- [*How to report licence usage for the VMware Licence Service*](vmw-how-vls-report-usage.md)
+- [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products-4.md)
 
 - [*How to request a new VLS licence*](vmw-how-vls-request-licence.md)
 

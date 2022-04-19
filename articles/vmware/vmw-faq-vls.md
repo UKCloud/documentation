@@ -175,8 +175,6 @@ You can receive support for vSphere licences that are out of VMware general supp
 
 As part of the onboarding process, UKCloud guides customers on how to deploy the VMware Usage Meter. This is a VMware product that is used globally by VMware customers to record and report consumption. Usage Meter sits alongside the VMware vCenter and polls usage data out of vCenter. Once you've deployed Usage Meter and correctly set it up to reference the VMware licences that are under the VLS service, then reporting is achieved automatically.
 
-For more information, see [*How to report licence usage for the VMware Licence Service*](vmw-how-vls-report-usage.md).
-
 ### Can I use VLS for multiple locations?
 
 You can use VLS across multiple locations and consumption is calculated on the overall usage rather than any peaks in a single location.
@@ -189,7 +187,7 @@ VLS support for international service is delivered in English and follows UK sup
 
 You can add new products at any time if you have sufficient keys already available. If you require extra keys, you can request these from UKCloud by opening a Service Request. New licence keys typically take four working days to be delivered. You can terminate use of products at any time, and this will be immediately reflected in the reports created by Usage Meter.
 
-Whenever you add new licences, you must add them to the Usage Meter to maintain accurate reporting. For more information about how to do this, see [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products.md).
+Whenever you add new licences, you must add them to the Usage Meter to maintain accurate reporting. For more information about how to do this, see [*How to add products to the vCloud Usage Meter*](vmw-how-vls-add-products-4.md).
 
 ### Can I upgrade the software level of my products, for example vSphere 6.7 to vSphere 7.0?
 
