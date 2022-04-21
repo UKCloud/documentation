@@ -51,7 +51,9 @@ There are a number of Access Management activities which UKCloud can assist with
 
 ### Password reset
 
-In the event that you need to reset your password, a self-service facility is available from the log in page (see [*How to change or reset your UKCloud Portal password or memorable word*](ptl-how-reset-password.md)). You must make sure that your password reset email address is set to an email account that you can access. For more information, see [*How to set your password reset email address*](ptl-how-change-email-address.md).
+We recommend that you change your password at least every 90 days. You can change your password at any time from the user account menu in the Portal. For more information, see [*How to reset your UKCloud Portal password or memorable word*](ptl-how-reset-password.md).
+
+If you forget your password, you can request a password reset link on the Portal log in page. This link will be sent to your password reset email address. By default, your password reset email address is the same as the email address you use to log in to the Portal. If you're not able to access the email account used for your login email address, you must make sure to set your password reset email address to a different email account that you can access so that you can receive password reset emails. For information about how to set your password reset email address, see [*How to set your password reset email address*](ptl-how-change-email-address.md).
 
 ## Feedback
 
