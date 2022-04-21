@@ -4,7 +4,7 @@ description: Shows how to create users in the UKCloud Portal
 services: portal
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/04/2021
+lastreviewed: 21/04/2022
 
 toc_rootlink: How To
 toc_sub1: 
@@ -36,17 +36,17 @@ To create a new user:
 
 3. In the navigation panel, expand **Contacts**, then select **All Contacts**.
 
-    ![All contacts menu option in the UKCloud Portal](images/ptl-mnu-all-contacts.png)
+   ![All contacts menu option in the UKCloud Portal](images/ptl-mnu-all-contacts.png)
 
 4. From the **Actions** menu, select **Add new contact**.
 
-    ![Add new contact menu option](images/ptl-mnu-add-new-contact.png)
+   ![Add new contact menu option](images/ptl-mnu-add-new-contact.png)
 
 5. On the **New Contact** tab, provide the user's name and contact information, then click **Save**.
 
     ![New Contact page](images/ptl-new-contact.png)
 
-    The email address that you provide is used to identify the new user when they log in to the Portal, and also to contact them in various situations. It's also used to send a password reset code if the user requests to reset a forgotten password, but the user can change this to something different if they want to.
+    The **Email** address is used to identify the new user when they log in to the Portal, and also to contact them in various situations. By default this address is also used to send a password reset code if the user requests to reset a forgotten password. If necessary, you can specify a different address for this in the **Password Reset Email Address** field. The user can also change their password reset email address at any time.
 
 6. After you've created the user account, you can grant the user access to the different services available in the account. This process varies depending on the service:
 
@@ -58,7 +58,13 @@ To create a new user:
 
     - [*How to manage OpenShift access in the UKCloud Portal*](../openshift/oshift-how-manage-user-access.md)
 
-    - [*Portal permissions*](ptl-ref-overview-permissions.md)
+## Related articles
+
+- [*Portal permissions*](ptl-ref-overview-permissions.md)
+
+- [*Portal user access*](ptl-ref-user-access.md)
+
+- [*How to change your email address in the UKCloud Portal*](ptl-how-change-email-address.md)
 
 ## Feedback
 
