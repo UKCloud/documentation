@@ -4,7 +4,7 @@ description: Shows the regions in each UKCloud site and lists the services and c
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 10/03/2022
+lastreviewed: 22/04/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -55,7 +55,7 @@ Security domain | Services | Zone
 -----------------|---------|-----
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone F
 &nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2 | Zone 21
-&nbsp; | **UKCloud for Red Hat OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone 21
+&nbsp; | **UKCloud for Red Hat OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect | Zone 21
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone 12
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN | All zones
@@ -101,7 +101,7 @@ Security domain | Service | Zone
 -----------------|--------|-----
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2, Always-on data at rest encryption (D@RE)<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone B
 &nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2 | Zone 26
-&nbsp; | **UKCloud for Red Hat OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet | Zone 26
+&nbsp; | **UKCloud for Red Hat OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect, CrownConnect | Zone 26
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet | All zones
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect, CrownConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall | Zone D
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN | All zones
