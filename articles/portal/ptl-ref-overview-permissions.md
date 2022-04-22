@@ -21,7 +21,7 @@ toc_mdlink: ptl-ref-overview-permissions.md
 
 System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.
 
-![Portal permissions page](images/portal_permissions.png)
+![Portal permissions page](images/ptl-portal_permissions.png)
 
 Some user permissions are controlled on other pages. See the following articles:
 
@@ -31,9 +31,19 @@ Some user permissions are controlled on other pages. See the following articles:
 
 - [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](../openstack/ostack-how-manage-accounts-portal.md)
 
-## User is admin?
+## Cloning permissions
 
-User gets full administrative privileges across the entire account. This includes all of the permissions listed below.
+If you're assigning permissions for a new user, you can clone the permissions of an existing user to use the same permissions for the new user.
+
+In the *Clone* section, from the **Select User** list, select the user with the permissions you want to clone, then click **Load**.
+
+![Clone user permissions](images/ptl-user-clone-permissions.png)
+
+This clones the permissions for Settings, Contacts and Billing only. You'll need to manually set the permissions for UKCloud for VMware and Cloud Storage. You'll also need to manually select the **User is admin?** check box if you want to assign the user as a Portal administrator.
+
+## Portal administrator permissions
+
+Select the **User is admin?** check box to grant the user full administrative privileges across the entire account. This includes all of the permissions listed below.
 
 ## Permissions for Settings
 
@@ -72,10 +82,12 @@ The roles exposed are:
 
 You can find further details of these roles in the [VMware Cloud Director Service Provider Admin Portal Guide](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html).
 
-In addition, UKCloud have created an API Only role that restricts users with VMware Cloud Director permissions to accessing VMware Cloud Director solely via the API, with no GUI access.
+### API Only role
+
+In addition to the VMware Cloud Director permissions, UKCloud has created an API Only role that restricts users with VMware Cloud Director permissions to accessing VMware Cloud Director solely via the API, with no GUI access.
 
 > [!NOTE]
-> The API Only role must be selected in addition to one of the VMware Cloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
+> The API Only role must be selected in addition to one of the VMware Cloud Director permissions (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
 
 ## Permissions for Cloud Storage
 
