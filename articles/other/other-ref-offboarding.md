@@ -2,9 +2,9 @@
 title: Terminating your UKCloud services
 description: Provides useful information for offboarding UKCloud services, including key customer and UKCloud responsibilities
 services: other
-author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 14/02/2020
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 22/04/2022
 
 toc_rootlink: Reference
 toc_sub1:
@@ -153,12 +153,6 @@ Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
 On-premises ZVMs and VRAs | ZORG/assigned VDCs
 VPGs |
-
-#### [Email and Collaboration](#tab/tabid-9)
-
-Customer responsibilities | UKCloud responsibilities
---------------------------|-------------------------
-Mail accounts | Final admin account
 
 #### [Migration to the Cloud](#tab/tabid-10)
 
