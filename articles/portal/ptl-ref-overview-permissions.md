@@ -31,16 +31,6 @@ Some user permissions are controlled on other pages. See the following articles:
 
 - [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](../openstack/ostack-how-manage-accounts-portal.md)
 
-## Cloning permissions
-
-If you're assigning permissions for a new user, you can clone the permissions of an existing user to use the same permissions for the new user.
-
-In the *Clone* section, from the **Select User** list, select the user with the permissions you want to clone, then click **Load**.
-
-![Clone user permissions](images/ptl-user-clone-permissions.png)
-
-This clones the permissions for Settings, Contacts and Billing only. You'll need to manually set the permissions for UKCloud for VMware and Cloud Storage. You'll also need to manually select the **User is admin?** check box if you want to assign the user as a Portal administrator.
-
 ## Portal administrator permissions
 
 Select the **User is admin?** check box to grant the user full administrative privileges across the entire account. This includes all of the permissions listed below.
