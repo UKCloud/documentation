@@ -217,7 +217,7 @@ Answer the questions in the survey and when you're done, click **Save**.
 
 ## Next steps
 
-- For more information about the UKCloud support process, see [*How to raise and escalate incidents and service requests*](ptl-how-raise-escalate-service-request.md)
+- For more information about the UKCloud support process, see [*How to raise and escalate incidents and service requests*](ptl-ref-raise-escalate-service-request.md)
 
 - For information about how administrators can give Portal users access to My Calls, see [*How to manage My Calls users*](ptl-how-manage-my-calls.md)
 

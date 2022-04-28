@@ -22,7 +22,7 @@ toc_mdlink: other-ref-complaints.md
 
 UKCloud is proud of its award-winning customer service and continually strives to provide you with the best possible customer service experience. If you are not completely satisfied with the level of service that you receive, you can raise a formal complaint.
 
-Complaints should not be raised to escalate ongoing incidents, changes or requests, which should use the existing [escalations process](../portal/ptl-how-raise-escalate-service-request.md).
+Complaints should not be raised to escalate ongoing incidents, changes or requests, which should use the existing [escalations process](../portal/ptl-ref-raise-escalate-service-request.md).
 
 ## Complaints procedure
 
