@@ -81,6 +81,9 @@ To request a password reset link:
 
    ![Reset your password dialog box - Memorable word](images/ptl-forgotten-password-reset-memword.png)
 
+   > [!NOTE]
+   > If you enter your memorable word characters incorrectly too many times your account will be locked. If this happens, you'll need to contact your administrator or UKCloud Customer Support to unlock your account.
+
 5. Enter and confirm your new password then click **Reset password**.
 
    ![Reset your password dialog box - New password](images/ptl-forgotten-password-reset.png)
