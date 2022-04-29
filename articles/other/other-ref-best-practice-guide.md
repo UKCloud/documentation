@@ -139,7 +139,7 @@ If you're already a nominated administrator and would like to set up an addition
 
 ### Setting your password reset email address
 
-If you forget your password, you can request a password reset link on the Portal log in page. This link will be sent to your password reset email address. By default, your password reset email address is the same as the email address you use to log in to the Portal. If you're not able to access the email account used for your login email address, you must make sure to set your password reset email address to a different email account that you can access so that you can receive password reset emails. For information about how to set your password reset email address, see [*How to set your password reset email address*](ptl-how-change-email-address.md).
+If you forget your password, you can request a password reset link on the Portal log in page. This link will be sent to your password reset email address. By default, your password reset email address is the same as the email address you use to log in to the Portal. If you're not able to access the email account used for your login email address, you must make sure to set your password reset email address to a different email account that you can access so that you can receive password reset emails. For information about how to set your password reset email address, see [*How to set your password reset email address*](../portal/ptl-how-change-email-address.md).
 
 ### Subscribing to platform updates
 
