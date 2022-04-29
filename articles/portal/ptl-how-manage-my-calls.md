@@ -2,9 +2,9 @@
 title: How to manage My Calls users | UKCloud Ltd
 description: Provides information for Portal administrators for how to manage My Calls users
 services: portal
-author: Sue Highmoor
-reviewer: Darren Broderick
-lastreviewed: 01/04/2021
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 29/04/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -33,35 +33,35 @@ This article is intended for Portal administrators who want to provide Portal us
 You can grant an existing Portal user access to My Calls.
 
 > [!TIP]
-> To create a new Portal user, see [*How to create a new user*](ptl-how-create-users.md).
+> To create a new Portal user, see [*How to create a new user in the UKCloud Portal*](ptl-how-create-users.md).
 
-1. Log in to the UKCloud Portal.
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal).
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
+2. If necessary, [*switch to the account*](ptl-how-switch-account.md) in which you want to work.
 
-2. In the Portal navigation panel, expand the **Contacts** option and select **All Contacts**.
+3. In the navigation panel, expand the **Contacts** option and select **All Contacts**.
 
-    ![All Contacts menu option in UKCloud Portal](images/ptl-mnu-all-contacts.png)
+   ![All Contacts menu option in UKCloud Portal](images/ptl-mnu-all-contacts.png)
 
-3. Locate the user to whom you want to grant My Calls permissions and click the **Edit** button.
+4. Locate the user to whom you want to grant My Calls permissions and click the **Edit** button.
 
-    ![Edit contact button](images/ptl-contact-btn-edit.png)
+   ![Edit contact button](images/ptl-contact-btn-edit.png)
 
-4. Select the **My Calls Permissions** tab.
+5. Select the **My Calls Permissions** tab.
 
-    ![My Calls Permissions tab](images/ptl-contact-tab-mycalls-permissions.png)
+   ![My Calls Permissions tab](images/ptl-contact-tab-mycalls-permissions.png)
 
     > [!NOTE]
     > If you receive an error message, contact UKCloud Support at <support@ukcloud.com>.
 
-5. Select **My Calls access for this User** and click **Save**.
+6. Select **My Calls access for this User**, then click **Save**.
 
-    ![My Calls access for this User option](images/ptl-contact-mycalls-access-selected.png)
+   ![My Calls access for this User option](images/ptl-contact-mycalls-access-selected.png)
 
-    > [!NOTE]
-    > To be able to access My Calls, the user must have logged into the Portal previously.
+   > [!NOTE]
+   > To be able to access My Calls, the user must have logged into the Portal previously.
 
-The user should now be able to access My Calls with the permission level *My Tickets*. To change their permission level, see [Managing My Calls user permissions](#managing-my-calls-user-permissions).
+The user should now be able to access My Calls with the permission level *My Tickets*. To change their permission level, see [*Managing My Calls user permissions*](#managing-my-calls-user-permissions).
 
 ## Managing My Calls user permissions
 
@@ -73,59 +73,58 @@ You can manage the My Calls permission level for Portal users across your accoun
 
 - *My Calls Admin* - Users with this permission level can raise support tickets, view and update any ticket raised against the account (including those raised by other users) and manage the My Calls permission levels of other users
 
-1. In the Portal navigation panel, expand the **Support** option and select **My Calls**.
+1. In the navigation panel, expand the **Support** option and select **My Calls**.
 
-    ![My Calls menu option in UKCloud Portal](images/ptl-mnu-mycalls.png)
+   ![My Calls menu option in UKCloud Portal](images/ptl-mnu-mycalls.png)
 
-2. Click **Go to My Calls Portal**.
+2. On the *UKCloud Support* page, click **Go to My Calls Portal**.
 
-3. For additional security, re-enter your UKCloud Portal user credentials to access My Calls.
+   ![Link to My Calls](images/ptl-mycalls-link.png)
 
-    ![My Calls login page](images/ptl-mycalls-login.png)
+3. In the toolbar at the top of the page, click **Role Administration**.
 
-    If two-factor authentication (2FA) has been enabled for your account, you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here.
+   ![The My Items tab in My Calls](images/ptl-mycalls-tab-admin.png)
 
-4. Select the **Role Administration** tab.
+   > [!TIP]
+   > You may need to click **More** to access the **Role Administration** option.
 
-    ![The My Items tab in My Calls](images/ptl-mycalls-tab-admin.png)
+4. From the list of users, select the user that you want to edit.
 
-5. From the list of users, select the user that you want to edit.
+   ![Select user](images/ptl-mycalls-user.png)
 
-    ![Select user](images/ptl-mycalls-user.png)
+   > [!TIP]
+   > You can filter the list of users or use the search field to find a specific user.
 
-    > [!TIP]
-    > You can filter the list of users or use the search field to find a specific user.
+5. Select the permission level you want to apply to the user: *My Tickets*, *Account Tickets* or *My Calls Admin*.
 
-6. Select the permission level you want to apply to the user: *My Tickets*, *Account Tickets* or *My Calls Admin*.
+   The options offered will depend on the current role assigned to the user. Each user can have only one permission level, so the option you select here replaces any previous permissions.
 
-    The options offered will depend on the current role assigned to the user. Each user can have only one permission level, so the option you select here replaces any previous permissions.
+   ![Assign permissions to users](images/ptl-mycalls-btn-roles.png)
 
-    ![Assign permissions to users](images/ptl-mycalls-btn-roles.png)
-
-7. When you're done, click **Save**.
+6. When you're done, click **Save**.
 
 ## Disabling a new My Calls user
 
 If you need to disable a user on your account from accessing My Calls:
 
-1. In the UKCloud Portal navigation panel, expand the **Contacts** option and select **All Contacts**.
+1. In the navigation panel, expand the **Contacts** option and select **All Contacts**.
 
-    ![All Contacts menu option in UKCloud Portal](images/ptl-mnu-all-contacts.png)
+   ![All Contacts menu option in UKCloud Portal](images/ptl-mnu-all-contacts.png)
 
 2. Locate the user for whom you want to disable My Calls access and click the **Edit** button.
 
-    ![Edit contact button](images/ptl-contact-btn-edit.png)
+   ![Edit contact button](images/ptl-contact-btn-edit.png)
 
 3. Select the **My Calls Permissions** tab.
 
-    ![My Calls Permissions tab](images/ptl-contact-tab-mycalls-permissions.png)
+   ![My Calls Permissions tab](images/ptl-contact-tab-mycalls-permissions.png)
 
-    > [!NOTE]
-    > If you receive an error message, contact UKCloud Support at <support@ukcloud.com>.
+   > [!NOTE]
+   > If you receive an error message, contact UKCloud Support at <support@ukcloud.com>.
 
-4. Deselect **My Calls access for this User** and click **Save**.
+4. Deselect **My Calls access for this User**, then click **Save**.
 
-    ![My Calls access for this User option deselected](images/ptl-contact-mycalls-access-deselected.png)
+   ![My Calls access for this User option deselected](images/ptl-contact-mycalls-access-deselected.png)
 
 The user will no longer be able to access My Calls.
 

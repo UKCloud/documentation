@@ -57,13 +57,13 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
 5. The My Calls home page shows a simple view of tickets raised.
 
-    ![My Calls home page](images/ptl-mycalls-home.png)
+   ![My Calls home page](images/ptl-mycalls-home.png)
 
-    - **My Tickets** lists the support tickets (incidents and service requests) that you can view, depending on your permissions. These are listed with the newest first. You can use the search tool to find a specific ticket and use filter options to find tickets with a particular status or date.
+   - **My Tickets** lists the support tickets (incidents and service requests) that you can view, depending on your permissions. These are listed with the newest first. You can use the search tool to find a specific ticket and use filter options to find tickets with a particular status or date.
 
-    - You can raise new tickets using the **New Incident** and **New Service Request** buttons.
+   - You can raise new tickets using the **New Incident** and **New Service Request** buttons.
 
-    - Select the **Service Catalog** tab to find incident and service request templates to raise tickets.
+   - Select the **Service Catalog** tab to find incident and service request templates to raise tickets.
 
 ## Raising a support ticket
 
@@ -71,8 +71,8 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
 - If you want to report a fault or outage, [*raise an incident*](#raising-an-incident-ticket)
   
-    > [!NOTE]
-    > Before reporting an incident, check the [UKCloud Service Status page](https://status.ukcloud.com/) to see if it's a known issue that we're already working on.
+  > [!NOTE]
+  > Before reporting an incident, check the [UKCloud Service Status page](https://status.ukcloud.com/) to see if it's a known issue that we're already working on.
 
 ### Raising a service request ticket
 
@@ -122,7 +122,7 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
 4. When you're done, click **Save Incident**.
 
-    ![Save Incident button](images/ptl-mycalls-btn-save-incident.png)
+   ![Save Incident button](images/ptl-mycalls-btn-save-incident.png)
 
 > [!NOTE]
 > You're automatically subscribed to any tickets that you create.
@@ -148,29 +148,29 @@ In My Calls, on the **My Tickets** tab, find the ticket you want to view by:
 
 1. When you find your service request ticket, double click to open it.
 
-    The top of the request details who logged the ticket, ticket status, the service that is being requested, a summary of the request, when it was raised and when it was last modified.
+   The top of the request details who logged the ticket, ticket status, the service that is being requested, a summary of the request, when it was raised and when it was last modified.
 
-    ![Service Request details](images/ptl-mycalls-edit-request.png)
+   ![Service Request details](images/ptl-mycalls-edit-request.png)
 
 2. The **Progress Notes** tab contains the following information:
 
-    - **Add New Note** enables you to provide additional information relating to your request and respond to any questions from our support team.
+   - **Add New Note** enables you to provide additional information relating to your request and respond to any questions from our support team.
 
-        ![Add New Note button](images/ptl-mycalls-btn-add-note-request.png)
+     ![Add New Note button](images/ptl-mycalls-btn-add-note-request.png)
 
-      In the *Notes History*, you can also read updates on your requests from the support team. Double-click to open an update. You can see who provided the update and the date it was provided.
+     In the *Notes History*, you can also read updates on your requests from the support team. Double-click to open an update. You can see who provided the update and the date it was provided.
 
-    - Click **Attach** to attach documents to your service request. Any documents you attach will be listed in the ticket. For security purposes some file attachments formats are not accepted.
+   - Click **Attach** to attach documents to your service request. Any documents you attach will be listed in the ticket. For security purposes some file attachments formats are not accepted.
 
-        ![Attach button](images/ptl-mycalls-btn-attach-request.png)
+     ![Attach button](images/ptl-mycalls-btn-attach-request.png)
 
 3. The **Request Details** tab contains details of the request that was submitted. For example:
 
-    ![Request Details tab](images/ptl-mycalls-tab-request-details.png)
+   ![Request Details tab](images/ptl-mycalls-tab-request-details.png)
 
 4. When you're done, click **Save**.
 
-    ![Save request button](images/ptl-mycalls-btn-save-request.png)
+   ![Save request button](images/ptl-mycalls-btn-save-request.png)
 
 ### Monitoring an existing incident ticket
 
@@ -200,7 +200,7 @@ In My Calls, on the **My Tickets** tab, find the ticket you want to view by:
 
 3. When you're done, click **Save**.
 
-    ![Save incident button](images/ptl-mycalls-btn-save-incident-details.png)
+   ![Save incident button](images/ptl-mycalls-btn-save-incident-details.png)
 
 ## Providing feedback
 
