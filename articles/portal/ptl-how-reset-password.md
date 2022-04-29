@@ -108,6 +108,12 @@ If a user forgets their memorable word and is unable to reset it themselves, a P
 
 5. Update the memorable word as required then click **Save**.
 
+## Related articles
+
+- [*How to set your password reset email address*](ptl-how-change-email-address.md)
+
+- [*How to unlock a user account*](ptl-how-unlock-account.md)
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
