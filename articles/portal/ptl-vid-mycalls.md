@@ -32,7 +32,7 @@ The following video shows you how to create and monitor support tickets (service
 
 - [*How to use My Calls to raise and monitor support tickets*](ptl-how-use-my-calls.md)
 
-- [*How to raise and escalate support tickets (incidents and service requests) with customer support*](ptl-ref-raise-escalate-service-request.md)
+- [*Raising and escalating support tickets with customer support*](ptl-ref-raise-escalate-service-request.md)
 
 - [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
 

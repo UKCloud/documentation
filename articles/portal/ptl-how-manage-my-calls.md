@@ -133,7 +133,7 @@ The user will no longer be able to access My Calls.
 
 - For information about raising support tickets for incidents and service requests, see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md)
 
-- For more information about the UKCloud support process, see [*How to raise and escalate incidents and service requests*](ptl-ref-raise-escalate-service-request.md)
+- For more information about the UKCloud support process, see [*Raising and escalating support tickets with customer support*](ptl-ref-raise-escalate-service-request.md)
 
 - For information about what else you can do in the UKCloud Portal, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
 

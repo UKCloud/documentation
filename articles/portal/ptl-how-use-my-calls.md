@@ -1,10 +1,10 @@
 ---
-title: How to use My Calls to raise and monitor support tickets | UKCloud Ltd
+title: How to use My Calls to raise and monitor support tickets
 description: Provides an overview of the functionality provided by My Calls
 services: portal
-author: Sue Highmoor
-reviewer: Darren Broderick
-lastreviewed: 01/04/2021
+author: shighmoor
+reviewer: shighmoor
+lastreviewed: 28/04/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -38,17 +38,24 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
 ## Accessing My Calls
 
-1. Log in to the UKCloud Portal.
+1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal).
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
+2. If necessary, [*switch to the account*](ptl-how-switch-account.md) in which you want to work.
 
-2. In the Portal navigation panel, expand the **Support** option and select **My Calls**.
+3. In the navigation panel, expand **Support**, then select **My Calls**.
 
-    ![My Calls menu option in UKCloud Portal](images/ptl-mnu-mycalls.png)
+   ![My Calls menu option in UKCloud Portal](images/ptl-mnu-mycalls.png)
 
-3. Click **Go to My Calls Portal**.
+   > [!TIP]
+   > You can also access My Calls by clicking the **My Calls** tile on the Portal home page.
+   >
+   > ![My Calls tile on the Portal home page](images/ptl-mycalls-tile.png)
 
-4. The My Calls home page shows a simple view of all tickets that have been raised.
+4. On the *UKCloud Support* page, click **Go to My Calls Portal**.
+
+   ![Link to My Calls](images/ptl-mycalls-link.png)
+
+5. The My Calls home page shows a simple view of tickets raised.
 
     ![My Calls home page](images/ptl-mycalls-home.png)
 
@@ -60,34 +67,37 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 
 ## Raising a support ticket
 
-- If you want to request a new service or make changes to an existing service, [raise a service request ticket](#raising-a-service-request-ticket)
+- If you want to request a new service or make changes to an existing service, [*raise a service request ticket*](#raising-a-service-request-ticket)
 
-- If you want to report a fault or outage, [raise an incident](#raising-an-incident-ticket)
+- If you want to report a fault or outage, [*raise an incident*](#raising-an-incident-ticket)
   
     > [!NOTE]
     > Before reporting an incident, check the [UKCloud Service Status page](https://status.ukcloud.com/) to see if it's a known issue that we're already working on.
 
 ### Raising a service request ticket
 
-1. In My Calls, select the **Service Catalog** tab.
+1. [*In My Calls*](#accessing-my-calls), click **New Service Request**.
 
-    ![The Service Catalog tab in My Calls](images/ptl-mycalls-tab-catalog.png)
+   ![New Service Request button in My Calls](images/ptl-mycalls-btn-request.png)
+
+   This opens the *Service Catalog*, which lists the different templates that you can use to raise service requests.
 
 2. Search the *Service Catalog* for the type of request you want to raise. You can browse by product type or most popular, or enter keywords to search for.
 
-    ![Service Catalog tab](images/ptl-mycalls-service-catalog.png)
+   ![Service Catalog tab](images/ptl-mycalls-service-catalog.png)
 
 3. Select the service request template that you want to use.
 
-    ![Service Request template](images/ptl-mycalls-template-request.png)
+   > [!TIP]
+   > If you can't find an appropriate template or are not sure which one to use, select the **Other Service Request** template.
 
-4. Complete the fields in the form with as much information as possible, including any mandatory fields, which are marked with a red asterisk. This is so that our Support Team can address your ticket promptly.
+4. The fields on the **Service Request** tab will vary depending on the the template you selected. Provide as much information as possible, including completing any mandatory fields, which are marked with a red asterisk. This is so that our Support Team can start working on your ticket as soon as possible.
 
-    ![Raising a Service Request](images/ptl-mycalls-new-request.png)
+   ![Other Service Request template](images/ptl-mycalls-new-request.png)
 
 5. When you're done, click **Review & Submit**. You can then edit the information in your request or submit it.
 
-    ![Review & Submit button](images/ptl-mycalls-btn-request-submit.png)
+   ![Review & Submit button](images/ptl-mycalls-btn-submit.png)
 
 > [!NOTE]
 > You're automatically subscribed to any tickets that you create.
@@ -97,23 +107,20 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 > [!NOTE]
 > Before reporting an incident, check the [UKCloud Service Status page](https://status.ukcloud.com/) to see if it's a known issue that we're already working on.
 
-1. In My Calls, select the **Service Catalog** tab.
+1. [*In My Calls*](#accessing-my-calls), select **New Incident**.
 
-    ![The Service Catalog tab in My Calls](images/ptl-mycalls-tab-catalog.png)
+   ![New Incident button in My Calls](images/ptl-mycalls-btn-incident.png)
 
-2. Search the *Service Catalog* for the type of incident you need to raise. You can browse by product type or most popular or enter keywords to search for.
+2. On the **Incident** tab, from the **Service** list, select the service against which you need to raise the incident.
 
-    ![Service Catalog](images/ptl-mycalls-service-catalog.png)
+3. The remaining information required will depend on the service you selected. Provide as much information as possible, including completing any mandatory fields, which are marked with a red asterisk. This is so that our Support Team can start working on your ticket as soon as possible.
 
-3. Select the incident template that you want to use (for example, **VMware Incident**).
+   ![Incident New Record tab](images/ptl-mycalls-new-incident.png)
 
-    ![Incident template](images/ptl-mycalls-template-incident.png)
+   > [!TIP]
+   > You can use the *Service Catalog* to locate a specific template for your incident if you prefer. For example, if the incident relates to our UKCloud for VMware service, you can select the **Submit New VMware Incident** template.
 
-4. Complete the fields in the form with as much information as possible, including any mandatory fields, which are marked with a red asterisk. This is so that our Support Team can address your ticket promptly.
-
-    ![Reporting an incident](images/ptl-mycalls-new-incident.png)
-
-5. When you're done, click **Save Incident**
+4. When you're done, click **Save Incident**.
 
     ![Save Incident button](images/ptl-mycalls-btn-save-incident.png)
 
@@ -125,15 +132,15 @@ This article is intended for any UKCloud Portal user who wants to use My Calls t
 After raising a support ticket, you can view the ticket to monitor progress, add more information, add attachments, close or cancel the ticket.
 
 > [!NOTE]
-> The actions you can perform on a ticket depend on your support permissions. You'll always be able to update support tickets that you have raised. If you have the *Account Tickets* or *My Calls Admin* permissions, you can also view and edit tickets raised by other users on the account.
+> The actions you can perform on a ticket depend on your support permissions. You'll always be able to update support tickets that you raised yourself. If you have the *Account Tickets* or *My Calls Admin* permissions, you can also view and edit tickets raised by other users on the account.
 
 In My Calls, on the **My Tickets** tab, find the ticket you want to view by:
 
 - Browsing through the list of tickets. By default, tickets are listed with the newest first.
 
-- Use the search field to find your ticket.
+- Using the search field to find your ticket.
 
-- Use filter options to find tickets with a particular status or date. You can also filter by incident and request ticket types.
+- Using filter options to find tickets with a particular status or date. You can also filter by incident and request ticket types.
 
 ![My Tickets tab on the My Calls home page](images/ptl-mycalls-home.png)
 
@@ -147,17 +154,17 @@ In My Calls, on the **My Tickets** tab, find the ticket you want to view by:
 
 2. The **Progress Notes** tab contains the following information:
 
-    - **Add New Note** enables you to provide additional information relating to your request and respond to any questions from our engineers.
+    - **Add New Note** enables you to provide additional information relating to your request and respond to any questions from our support team.
 
         ![Add New Note button](images/ptl-mycalls-btn-add-note-request.png)
 
-      In the *Notes History*, you can also read updates on your requests from our engineers. Double-click to open an update. You can see who provided the update and the date it was provided.
+      In the *Notes History*, you can also read updates on your requests from the support team. Double-click to open an update. You can see who provided the update and the date it was provided.
 
     - Click **Attach** to attach documents to your service request. Any documents you attach will be listed in the ticket. For security purposes some file attachments formats are not accepted.
 
         ![Attach button](images/ptl-mycalls-btn-attach-request.png)
 
-3. The **Request Details** tab contains details of the request that was submitted.
+3. The **Request Details** tab contains details of the request that was submitted. For example:
 
     ![Request Details tab](images/ptl-mycalls-tab-request-details.png)
 
@@ -169,29 +176,27 @@ In My Calls, on the **My Tickets** tab, find the ticket you want to view by:
 
 1. When you find your incident ticket, double click to open it.
 
-    The top of the incident details who logged the ticket, the ticket status, the service that the incident was logged against, a description of the incident, when it was raised and last modified and any resolution.
+   The top of the incident details who logged the ticket, the ticket status, the service that the incident was logged against, a description of the incident, when it was raised and last modified and any resolution.
 
-    ![Incident details](images/ptl-mycalls-edit-incident.png)
+   ![Incident details](images/ptl-mycalls-edit-incident.png)
 
 2. The **Progress Notes** tab contains the following information:
 
-   - **Add New Note** enables you to provide additional information relating to the incident and respond to any questions from our engineers.
+   - **Add New Note** enables you to provide additional information relating to the incident and respond to any questions from our support team.
 
-        ![Add New Note button](images/ptl-mycalls-btn-add-note-incident.png)
+     ![Add New Note button](images/ptl-mycalls-btn-add-note-incident.png)
   
-      In the *Notes History*, you can also read updates on the incident from our engineers. Double-click to open an update. You can see who provided the update and the date it was provided.
+     In the *Notes History*, you can also read updates on the incident from the support team. Double-click to open an update. You can see who provided the update and the date it was provided.
 
    - Click **Attach** to attach documents to the incident. Any documents you attach will be listed in the ticket. For security purposes, some file attachment formats are not accepted.
 
-        ![Attach button](images/ptl-mycalls-btn-attach-incident.png)
+     ![Attach button](images/ptl-mycalls-btn-attach-incident.png)
 
-   - Click **Close Incident** to close an incident. You'll be promoted to add a reason for closure. When you're done click **OK**.
+   - Click **Close Incident** to close an incident. You'll be prompted to add a reason for closure. When you're done click **OK**.
 
-        ![Closing an incident](images/ptl-mycalls-incident-close.png)
+     ![Closing an incident](images/ptl-mycalls-incident-close.png)
 
-   - If you need to re-open an incident that has been closed, click **Re-open Incident**. You'll be prompted for a reason for re-opening the incident. When you're done click **OK**.
-
-        ![Re-opening an incident](images/ptl-mycalls-incident-reopen.png)
+     If you need to re-open an incident that has been closed, click **Re-open Incident**. You'll be prompted for a reason for re-opening the incident. When you're done click **OK**.
 
 3. When you're done, click **Save**.
 
@@ -217,7 +222,7 @@ Answer the questions in the survey and when you're done, click **Save**.
 
 ## Next steps
 
-- For more information about the UKCloud support process, see [*How to raise and escalate incidents and service requests*](ptl-ref-raise-escalate-service-request.md)
+- For more information about the UKCloud support process, see [*Raising and escalating support tickets with customer support*](ptl-ref-raise-escalate-service-request.md)
 
 - For information about how administrators can give Portal users access to My Calls, see [*How to manage My Calls users*](ptl-how-manage-my-calls.md)
 
