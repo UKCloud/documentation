@@ -4,8 +4,8 @@
     href: ptl-gs.md
 - name: How To
   items:
-  - name: Change your email address in the Portal
-    href: ptl-how-change-email-address.md
+  - name: Change or reset your password or memorable word
+    href: ptl-how-reset-password.md
   - name: Create a new user
     href: ptl-how-create-users.md
   - name: Enable 2FA in the Portal
@@ -16,8 +16,6 @@
     href: ptl-how-raise-escalate-service-request.md
   - name: Reset 2FA for a user account
     href: ptl-how-reset-2fa.md
-  - name: Reset your UKCloud Portal password or memorable word
-    href: ptl-how-reset-password.md
   - name: Restrict access to the Portal
     href: ptl-how-restrict-access-portal.md
   - name: Restrict access to VMware Cloud Director
@@ -26,6 +24,8 @@
     href: ptl-how-setup-2fa.md
   - name: Set up password expiration
     href: ptl-how-setup-password-expiration.md
+  - name: Set your password reset email address
+    href: ptl-how-change-email-address.md
   - name: Sign up for Portal notifications
     href: ptl-how-signup-notifications.md
   - name: Switch to a different account

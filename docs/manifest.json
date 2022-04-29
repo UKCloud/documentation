@@ -10884,12 +10884,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-best-practice-guide.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "mnAwtJbOtIlpexQuUNeLX+zUuFAM9u2A1fWaaKJqeLc="
+          "hash": "f2Fhc2q2DKQF2CA5Q2vzaOcfRXgF97tW2X1dOIUkyUQ="
         }
       },
       "is_incremental": false,
@@ -11405,6 +11408,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-contact-details-password-reset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-contact-details-password-reset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-contact-edit.png",
       "output": {
         "resource": {
@@ -11453,6 +11467,61 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-contact-tab-mycalls-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password-email.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password-email.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password-link.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password-link.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password-reset-memword.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password-reset-memword.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password-reset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password-reset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password.png"
         }
       },
       "is_incremental": false,
@@ -11537,17 +11606,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-menu-all-contacts.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-menu-all-contacts.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mnu-add-new-contact.png",
       "output": {
         "resource": {
@@ -11563,6 +11621,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-mnu-all-contacts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-change-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-change-details.png"
         }
       },
       "is_incremental": false,
@@ -12274,17 +12343,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-update-user-password.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-update-user-password.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl_mnu-my-calls.png",
       "output": {
         "resource": {
@@ -12312,7 +12370,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-change-email-address.html",
-          "hash": "5W/zjawHHvyHkXzB+gEX8W/h1SHrIftAngkpBxdySwg="
+          "hash": "1HtdFwdSSmlsyD7PgRuz/2OJsPZYRkF3TnUMfpqBZgI="
         }
       },
       "is_incremental": false,
@@ -12384,7 +12442,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-reset-password.html",
-          "hash": "00KYkzhPmJA1kVeHLyuvKzBbKFf0f047vYUVcGXKIY0="
+          "hash": "Hu12LhF8ru7VA4NQRj2z93eYBFH6gKEMiH7No6MLFuw="
         }
       },
       "is_incremental": false,
@@ -12576,7 +12634,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-user-access.html",
-          "hash": "I1rtwWWxxLUKkZLAzlJ7VVpFA/MA/9+hocEu66ztk4o="
+          "hash": "BVT4nIYMcY2VSyJsH1uZ2rMNXT8kraNcFX2SBqZUnhg="
         }
       },
       "is_incremental": false,
@@ -12612,7 +12670,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "wtr5wHHGB1FFnauyGJiSLM0NFgNeIXIDEpHtDSmS9y8="
+          "hash": "DweL7nvCudE5zyP8TgsktwnrHbqWbkTgzEoZwyyPpxA="
         }
       },
       "is_incremental": false,
