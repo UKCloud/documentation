@@ -1,5 +1,5 @@
 ---
-title: How to manage My Calls users | UKCloud Ltd
+title: How to manage My Calls users
 description: Provides information for Portal administrators for how to manage My Calls users
 services: portal
 author: shighmoor
