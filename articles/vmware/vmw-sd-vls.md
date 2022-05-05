@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the VMware Licence Serv
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 26/03/2021
+lastreviewed: 03/05/2022
 toc_rootlink: Service Information
 toc_sub1: VMware Licence Service
 toc_sub2:
@@ -19,15 +19,17 @@ toc_mdlink: vmw-sd-vls.md
 
 ## What is the VMware Licence Service?
 
-VMware Licence Service (VLS) complements our Managed IT Operations service, by offering a managed VMware licence service ideally suited to customers who:
+VMware Licence Service (VLS) complements our Managed IT Operations service, by offering a managed VMware service ideally suited to customers who:
 
 - Are planning, or have already started, a multi-cloud strategy, where the operational costs associated with workloads can seamlessly move to the cloud provider as workloads migrate.
 
 - Want to upgrade their on-premises VMware estate, with NSX, vSAN, SRM, vROps, Network Insight and Horizon, to enhance performance, security and resource allocation to enable the seamless migration to the cloud. VLS enables these enhancements for short deployment periods in the most cost-effective way.
 
+- Want to purchase VMware Workspace ONE - details are explained in the [*UKCloud VMware Workspace ONE VMware License Service (VLS) Service Scope*](vmw-sco-vls-ws1.md).
+
 - Want to migrate to a full rental/consumption-based OPEX model rather than a fixed-cost (CAPEX-centric) model on either an annual or monthly basis.
 
-- Want the flexibility to accommodate rapid changes in the virtualised and end-user demand within their organisation, especially given the current variable demands on secure end-user capabilities.
+- Want the flexibility to accommodate rapid changes in virtualised and end-user demand within their organisation, especially given the current variable demands on secure end-user capabilities.
 
 - Are now ready, as part of their strategic cloud direction, to allow third-party expertise to provide enhanced confidence in the health of the IT estate, with none of the traditionally associated internal resource effort.
 
@@ -51,7 +53,7 @@ VMware Licence Service (VLS) complements our Managed IT Operations service, by o
 
 - **VMware certified specialist.** UKCloud is the largest cloud provider in the UK, specialising in the delivery of VMware-based cloud services solely to UK government, health, education and the third sector.
 
-- **Unique service proposition.** VLS was exclusively developed in the UK by VMware and UKCloud to create a key building block for enabling migration to multi-cloud (a mix of true public cloud and secure private cloud, spanning one-premises, Crown Campus and hyperscaler).
+- **Unique service proposition.** VLS was exclusively developed in the UK by VMware and UKCloud to create a key building block for enabling migration to multi-cloud (a mix of true public cloud and secure private cloud, spanning on-premises, Crown Campus and hyperscaler).
 
 - **Cloud migration.** Delivered faster and safer with UKCloud's wide portfolio of Cloud Services, Professional Services and Managed Services.
 
@@ -63,17 +65,17 @@ VMware Licence Service (VLS) complements our Managed IT Operations service, by o
 
 - **Includes:**
 
-  - vSphere, vROps, vSAN, NSX, SRM and Horizon
+  - vSphere, vROps, vSAN, NSX, SRM, Workspace ONE and Horizon
 
   - All other licences that are captured in the Usage Meter
 
 - **Excludes:**
 
-  - WSP1, Avi Networks, Velocloud, Carbon Black, Pivotal (until these appear on the VCPP product guide)
+  - Avi Networks, Velocloud, Carbon Black, Pivotal (until these appear on the VCPP product guide)
 
 ## VLS managed service elements
 
-There are several options for how to deploy VLS, depdending on the breadth of the managed service options the customer has selected and the extent to which UKCloud Professional Services are deployed to support the setup and transition into operation.
+There are several options for how to deploy VLS, depending on the breadth of the managed service options the customer has selected and the extent to which UKCloud Professional Services are deployed to support the setup and transition into operation.
 
 The following are the key steps of a typical deployment completed by UKCloud:
 
@@ -107,7 +109,7 @@ The security of our platform is our number one priority. We've always been commi
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN and RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud provides one of the best-connected cloud platforms for the UK public sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN and RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## An SLA you can trust
 
@@ -123,7 +125,7 @@ For more information about this service, see the [*Service Scope*](vmw-sco-vls.m
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
