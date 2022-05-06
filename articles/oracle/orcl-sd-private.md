@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Private Cloud for O
 services: oracle
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/04/2021
+lastreviewed: 06/05/2022
 toc_rootlink: Private Cloud for Oracle Software
 toc_sub1: 
 toc_sub2:
@@ -19,11 +19,11 @@ toc_mdlink: orcl-sd-private.md
 
 ## What is Private Cloud for Oracle Software?
 
-Private Cloud for Oracle Software enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premises. It enables you to have a tailored Oracle environment specifically for the high performance or big data analytical platforms that are proprietary to Oracle, while connecting to workloads that you have within the rest of our multi-cloud ecosystem, including UKCloud for Oracle Software – a multi-tenant cloud option for Oracle VMs.
+Private Cloud for Oracle Software enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premises. It enables you to have a tailored Oracle environment specifically for the high performance or big data analytical platforms that are proprietary to Oracle, while connecting to workloads that you have within the rest of our multi-cloud ecosystem.
 
 ## What the service can help you achieve
 
-- Retain your investment in Oracle licencing
+- Retain your investment in Oracle licensing
 
 - Use specialised Oracle hardware such as Oracle Exadata to boost performance of mission-critical applications
 
@@ -37,7 +37,7 @@ Private Cloud for Oracle Software enables you to have private implementations of
 
 The service is designed to be flexible and enables you to mix and match from a range of pre-defined options for each virtual machine and change them when required.
 
-![Private Cloud for Oracle product options](images/orcl-product-options-private-g12.png)
+![Private Cloud for Oracle product options](images/orcl-product-options-private-g13.png)
 
 ## Pricing and packaging
 
@@ -49,7 +49,7 @@ The security of our platform is our number one priority. We've always been commi
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud provides one of the best-connected cloud platforms for the UK public sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, MCN and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## An SLA you can trust
 
@@ -67,7 +67,7 @@ For more information about this service, see the [*Service Scope*](orcl-sco-priv
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
