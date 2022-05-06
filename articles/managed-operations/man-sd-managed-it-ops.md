@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Managed IT Operatio
 services: managed-operations
 author: shighmoor
 reviewer: Steve Dixon
-lastreviewed: 04/02/2022
+lastreviewed: 06/05/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -28,8 +28,6 @@ This service provides you with the building blocks to utilise essential operatio
 - Hook into virtual resource metrics (CPU, disk, memory) and highlight performance trends, helping you to rightsize your resources to meet the requirements of your applications
 
 - Provision of core OS patches, providing confidence in the health of your IT estate with none of the traditionally associated resource effort
-
-- Allow UKCloud to execute defined runbooks, enabling automation of remediation processes to known issues, helping to increase your time to resolution for common events
 
 ## What the service can help you achieve
 

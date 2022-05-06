@@ -3,8 +3,8 @@ title: UKCloud products and services
 description: Provides overview information of the various products and services offered by UKCloud
 services: other
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 30/11/2021
+reviewer: sdixon
+lastreviewed: 06/05/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -103,7 +103,7 @@ This service provides single-tenant storage, where your data is hosted either in
 
 ### Managed IT Operations
 
-Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, Managed VM recovery points, patching as a service, antivirus as a service and runbook automation. This service provides you with the building blocks to utilise essential operational delivery services.
+Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, Managed VM recovery points, patching as a service and antivirus as a service. This service provides you with the building blocks to utilise essential operational delivery services.
 
 ### Managed Active Directory Support
 

@@ -4,7 +4,7 @@ description: Describes how to add or remove devices from your Managed IT Operati
 services: managed-operations
 author: shighmoor
 reviewer: Steve Dixon
-lastreviewed: 27/07/2021
+lastreviewed: 06/05/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -26,8 +26,6 @@ Managed IT Operations provides several options focused on enhancing the general 
 - Anti-Virus as a Service
 
 - Patching as a Service
-
-- Runbook Automation (coming soon)
 
 This article provides information about how to add devices to and remove devices from these Managed IT Operations service options.
 
