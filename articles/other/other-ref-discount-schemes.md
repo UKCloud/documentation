@@ -109,7 +109,7 @@ Managed IT Operations                 | &check;             | &nbsp;            
 Migration to the Cloud                | &nbsp;              | &nbsp;                       | &check;
 Private Cloud                         | &nbsp;              | &nbsp;                       | &check;
 Private Cloud for Oracle Software     | &nbsp;              | &nbsp;                       | &check;
-Private Cloud for Storage             | &nbsp;              | &nbsp;                       | &check;
+Private Cloud Storage                 | &nbsp;              | &nbsp;                       | &check;
 Secure Remote Access                  | &check;             | &nbsp;                       | &check;
 UKCloud Desktop as a Service          | &check;             | &nbsp;                       | &check;
 

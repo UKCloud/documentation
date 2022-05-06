@@ -39,7 +39,7 @@ This article is designed to provide you with a top level comparison for our main
 **Neustar UltraDNS from UKCloud**        | No         | 12 months                      | Determined by Neustar | 30 days and early termination fee
 **Private Cloud**                        | From £10,000 or 10% of asset cost | 3-24 months | N/A | 30 days and early termination fee
 **Private Cloud for Oracle Software**    | From £10,000 | 24 months                      | N/A             | 30 days and early termination fee
-**Private Cloud for Storage**            | From £10,000 or 10% of asset cost | 24 months | N/A | 30 days and early termination fee
+**Private Cloud Storage**            | From £10,000 or 10% of asset cost | 24 months | N/A | 30 days and early termination fee
 **Secure Remote Access**                 | No         | 1 month                        | 5 days (following validation of assurance documents) | 30 days
 **UKCloud Desktop as a Service**         | No         | 1 month                        | N/A             | 30 days
 **Cloud Enablement**                     | £2,000     | 1 month                        | Depends on solution | 30 days
@@ -64,7 +64,7 @@ This article is designed to provide you with a top level comparison for our main
 **Neustar UltraDNS from UKCloud**        | N/A             | N/A               | Monthly                                     | No
 **Private Cloud**                        | N/A             | N/A               | Monthly                                     | No
 **Private Cloud for Oracle Software**    | N/A             | N/A               | Monthly                                     | No
-**Private Cloud for Storage**            | N/A             | N/A               | Monthly                                     | No
+**Private Cloud Storage**            | N/A             | N/A               | Monthly                                     | No
 **Secure Remote Access**                 | 1 vCPU, 2 GiB   | 8vCPU, 96 GiB     | Monthly for licenses, hourly for VM         | No
 **UKCloud Desktop as a Service**         | Desktop options: 1 vCPU, 2 GiB RAM, 30 GiB Storage<br>Session hosting: 8 vCPU, 16 GiB RAM, 250 GiB Storage | Desktop options: 8 vCPU, 16 GiB RAM, 100 GiB Storage<br>Session hosting: 8 vCPU, 48 GiB RAM, 500 GiB Storage | Monthly | &nbsp;
 **Cloud Enablement**                     | N/A             | N/A               | Monthly                                     | No
@@ -89,7 +89,7 @@ This article is designed to provide you with a top level comparison for our main
 **Neustar UltraDNS from UKCloud**        | 100%                                         | None                                                                 | Included
 **Private Cloud**                        | 99.99%                                       | 10% of monthly spend                                                 | Excluded
 **Private Cloud for Oracle Software**    | 99.99%                                       | 10% of monthly spend                                                 | Excluded
-**Private Cloud for Storage**            | 99.99%                                       | 10% of monthly spend                                                 | Excluded
+**Private Cloud Storage**            | 99.99%                                       | 10% of monthly spend                                                 | Excluded
 **Secure Remote Access**                 | 99.90%                                       | 10% of monthly spend                                                 | Excluded
 **UKCloud Desktop as a Service**         | N/A                                          | N/A                                                                  | N/A
 **Cloud Enablement**                     | N/A                                          | N/A                                                                  | N/A

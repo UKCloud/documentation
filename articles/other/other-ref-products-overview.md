@@ -95,7 +95,7 @@ This service provides single-tenant compute and storage, hosted either in one of
 
 This service provides single-tenant compute, where your compute needs are hosted either in one of our data centres (to gain the benefits of our Assured and Elevated security domains), or in your Crown Hosting Data Centre (CHDC). This is specifically set up for the use of Oracle, and there are a variety of hardware and infrastructure options for you to choose from.
 
-### Private Cloud for Storage
+### Private Cloud Storage
 
 This service provides single-tenant storage, where your data is hosted either in one of our data centres (to gain the benefits of our Assured OFFICIAL and Elevated OFFICIAL security domains), or in your Crown Hosting Data Centre (CHDC).
 

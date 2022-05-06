@@ -129,7 +129,7 @@ If you're interested in any of the following services, contact one of our Cloud 
 
 - Private Cloud for Oracle Software
 
-- Private Cloud for Storage
+- Private Cloud Storage
 
 - RLI connectivity
 

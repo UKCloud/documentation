@@ -43,7 +43,7 @@ Exclusions are:
 
 - Private Cloud for Compute
 
-- Private Cloud for Storage
+- Private Cloud Storage
 
 - Private Cloud for Oracle Software
 

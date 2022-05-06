@@ -270,9 +270,9 @@ Due to the service being dependent on connectivity between the customer data cen
 **Key exclusions**           | The following are examples of what is not covered:<br>**All-Inclusive and UKCloud Managed:**<ul><li>Deletion or modification of files by customer resulting in data loss<li>Any access provided by you to your user base that takes the Oracle system beyond its recommended performance and connectivity thresholds<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Any connectivity between data centres that is out of the control of UKCloud</ul>**Customer Managed and UKCloud Managed**<ul><li>As above, plus any loss of connectivity or data, including data corruption, as a result of you or your suppliers installing new or additional components into the system</ul>**UKCloud Hosted:**<ul><li>As above, plus any platform outages of the Private Cloud for Oracle Software infrastructure caused by the party managing the Oracle infrastructure hosted within UKCloud, or by failures at the physical or logical infrastructure layer outside of UKCloud's responsibility</ul>**Applies to CHDC hosted or On-Premises:**<ul><li>As above, plus any platform outages of the Private Cloud for Oracle Software infrastructure caused by data centre failures outside of UKCloud control</ul>
 **Service credits**          | 10% of monthly spend for Private Cloud for Oracle Software
 
-### Private Cloud for Storage SLA
+### Private Cloud Storage SLA
 
-&nbsp;                       | Private Cloud for Storage
+&nbsp;                       | Private Cloud Storage
 -----------------------------|--------------------------
 **Availability commitment**  | 99.99%
 **Availability calculation** | Availability indication is based on an average 730 hours per month
@@ -280,7 +280,7 @@ Due to the service being dependent on connectivity between the customer data cen
 **Planned Maintenance**      | Excluded
 **Measurement of SLA**       | Availability of all or part of the storage infrastructure
 **Key exclusions**           | The following are examples of what is not covered:<br>**All-Inclusive, UKCloud Hosted and Crown Campus Hosted:**<ul><li>Deletion or modification of files by customer resulting in data loss<li>Any access provided by you to your user base that takes the storage system beyond its recommended performance and connectivity thresholds<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Any connectivity between data centres that is out of the control of UKCloud</ul>**Customer-supplied hardware:**<ul><li>As above, plus any loss of connectivity or data, including data corruption, as a result of you or your suppliers installing new or additional capacity to the storage system</ul>**Applies to Crown Campus Hosted:**<ul><li>As above, plus any platform outages causing disruption to power and cooling (as they're out of UKCloud's control)</ul>
-**Service Credit** | 10% of monthly spend for Private Cloud for Storage
+**Service Credit** | 10% of monthly spend for Private Cloud Storage
 
 ### Secure Remote Access SLA
 

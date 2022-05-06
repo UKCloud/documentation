@@ -70,7 +70,7 @@ DDoS mitigation service                  | [here](../connectivity/conn-faq-ddos.
 Service                   | FAQ
 --------------------------|----
 Private Cloud             | [here](../private-cloud/prc-faq.md)
-Private Cloud for Storage | [here](../private-cloud/prc-faq-storage.md)
+Private Cloud Storage     | [here](../private-cloud/prc-faq-storage.md)
 
 ## Managed operations
 

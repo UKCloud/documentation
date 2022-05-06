@@ -467,11 +467,11 @@ A UKCloud IaaS service that enables you to have private implementations of Oracl
 
 For more information, see the [Private Cloud for Oracle Software service definition](../oracle/orcl-sd-private.md).
 
-### Private Cloud for Storage
+### Private Cloud Storage
 
 A UKCloud IaaS service that provides single-tenant storage infrastructure on your own hardware, either in one of our sites or in a Crown Hosting Data Centre (CHDC).
 
-For more information, see the [Private Cloud for Storage service definition](../private-cloud/prc-sd-storage.md).
+For more information, see the [Private Cloud Storage service definition](../private-cloud/prc-sd-storage.md).
 
 ### Professional Services
 

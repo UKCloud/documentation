@@ -78,7 +78,7 @@ Service | Service Definition | Service Scope
 --------|--------------------|--------------
 Private Cloud | [here](../private-cloud/prc-sd.md) | [here](../private-cloud/prc-sco.md)
 Private Cloud for Oracle Software | [here](../oracle/orcl-sd-private.md) | [here](../oracle/orcl-sco-private.md)
-Private Cloud for Storage | [here](../private-cloud/prc-sd-storage.md) | [here](../private-cloud/prc-sco-storage.md)
+Private Cloud Storage | [here](../private-cloud/prc-sd-storage.md) | [here](../private-cloud/prc-sco-storage.md)
 
 ## Managed operations
 
