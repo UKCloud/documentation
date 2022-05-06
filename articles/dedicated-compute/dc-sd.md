@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the UKCloud Dedicated C
 services: dedicated-compute
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/04/2021
+lastreviewed: 06/05/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -29,7 +29,7 @@ Hosts are assigned for your sole use and are enabled for granular configuration 
 
 - **Predictable performance and flexible configuration.** Guaranteed performance - manage custom workloads, with full-control of VM sizing, CPU and RAM allocations.
 
-- **Use your existing software licenses.** Utilise existing licenses on the UKCloud platform, including Microsoft licences, and other licences that are bound to the host (some restrictions apply such as Microsoft Server licences).
+- **Use your existing software licenses.** Utilise existing licences on the UKCloud platform, including Microsoft licences, and other licences that are bound to the host (some restrictions apply such as Microsoft Server licences).
 
 - **Prove the concept.** Your own dedicated cloud infrastructure without the long-term commitment.
 
@@ -41,7 +41,7 @@ Hosts are assigned for your sole use and are enabled for granular configuration 
 
 The service is designed to be flexible and allows you to choose from the list below to match your requirements.
 
-![Dedicated Compute v2 product options](images/dc-product-options-g12.png)
+![Dedicated Compute v2 product options](images/dc-product-options-g13.png)
 
 ## Pricing and packaging
 
@@ -53,11 +53,11 @@ The security of our platform is our number one priority. We've always been commi
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud provides one of the best-connected cloud platforms for the UK public sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, MCN and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## An SLA you can trust
 
-We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see the [*SLA definition article*](../other/other-ref-sla-definition.md).
+We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA, including measurements and service credits, see [*SLA definition*](../other/other-ref-sla-definition.md).
 
 ## The small print
 
@@ -69,7 +69,7 @@ For more information about this service, see the [*Service Scope*](dc-sco.md).
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
