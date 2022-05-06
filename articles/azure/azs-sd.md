@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the UKCloud for Microso
 services: azure-stack
 author: shighmoor
 reviewer: shall
-lastreviewed: 10/09/2021
+lastreviewed: 06/05/2022
 toc_rootlink: Users
 toc_sub1: Service Information
 toc_sub2:
@@ -27,7 +27,7 @@ UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure Stack 
 
 - Use UKCloud as your partner for your Azure public deployments, allowing for a seamless hybrid cloud experience
 
-- Meet your compliance requirements – your data never leaves the UK when at rest on our platform, which is capable of supporting data classified up to above OFFICIAL
+- Meet your compliance requirements – your data never leaves the UK when at rest on our platform, which is capable of supporting data classified up to Above OFFICIAL
 
 - Ensure that your application is always available – build sovereign, disaster-tolerant solutions on Azure utilising our multiple UK sites, or combine a UKCloud region with the UK region of Azure
 
@@ -39,33 +39,31 @@ UKCloud for Microsoft Azure harnesses the innovation of Microsoft's Azure Stack 
 
 The service is designed to be flexible and enables you to mix and match from a range of pre-defined options for each virtual machine.
 
-![UKCloud for Microsoft Azure product options](images/azs-product-options-g12.png)
+![UKCloud for Microsoft Azure product options](images/azs-product-options-g13.png)
 
-### Private Cloud deployment
+### Private cloud deployment
 
 IaaS and PaaS on a dedicated infrastructure. Service options include:
 
-- Azure Infrastructure services. Dedicated virtual machines.
+- **Azure Infrastructure services.** Dedicated virtual machines.
 
 - Platform services:
 
-  - Azure App Service. Create applications for any platform or device. Automate business processes and host cloud APIs.
+  - **Azure App Service.** Create applications for any platform or device. Automate business processes and host cloud APIs.
 
-  - Azure Functions. Serverless computing technology that enables you to build applications faster.
+  - **Azure Functions.** Serverless computing technology that enables you to build applications faster.
 
-  - Database services for SQL and MYSQL. Enables simple consumption of databases for cloud-native applications, websites and workloads.
+  - **Database services for SQL and MYSQL.** Enables simple consumption of databases for cloud-native applications, websites and workloads.
 
 - Deployment options:
 
-  - Location. Deploy and manage from a variety of locations: UKCloud hosted, Crown Hosting or your own data centres.
+  - **Location.** Deploy and manage from a variety of locations: UKCloud hosted, Crown Hosting or your own data centres.
 
-  - Flexible purchase options. Based on CapEx, OpEx or bring your own infrastructure.
+  - **Flexible purchase options.** Based on Capex, Opex or bring your own infrastructure.
 
-### Additional deployment options
+Additional deployment options:
 
-#### Microsoft Azure's public cloud services
-
-UKCloud can support with your licensing, management and utilisation of tenancies on the Microsoft public cloud. Get in touch to find out more.
+- **Microsoft Azure's public cloud services.** UKCloud can support with your licensing, management and utilisation of tenancies on the Microsoft public cloud. Get in touch to find out more.
 
 ## Pricing and packaging
 
@@ -77,7 +75,7 @@ The security of our platform is our number one priority. We've always been commi
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud provides one of the best-connected cloud platforms for the UK public sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, MCN and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## An SLA you can trust
 
@@ -93,7 +91,7 @@ For more information about this service, see the [*Service Scope*](azs-sco.md) a
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
