@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the UKCloud Desktop as 
 services: daas
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 14/09/2021
+lastreviewed: 10/05/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -21,17 +21,17 @@ toc_mdlink: daas-sd.md
 
 UKCloud Desktop as a Service provides a platform to deliver, protect and manage desktops and apps whilst containing costs and ensuring that end users can work anytime, anywhere, across any device.
 
-UKCloud Desktop as a Service provides significant security and compliance benefits to your organisation, whilst increasing workforce enablement through smarter more flexible working. This aligns with government policy around smart working within new Government Hubs. UKCloud Desktop as a Service also enables the Bring Your Own Device (BYOD) policy and supports remote working, without compromising application availability, security, and compliance.
+UKCloud Desktop as a Service provides significant security and compliance benefits to your organisation, whilst increasing workforce enablement through smarter more flexible working. This aligns with government policy around smart working within new Government Hubs. UKCloud Desktop as a Service also enables the Bring Your Own Device (BYOD) policy and supports remote working, without compromising application availability, security and compliance.
 
 ## What the service can help you achieve
 
-- **Deliver both dedicated and shared Windows 10 desktops.** Supports both standard and complex requirements within your organisation.
+- **Deliver both persistent and non-persistent Windows 10 desktops.** Supports both standard and complex requirements within your organisation.
 
 - **Virtualize individual applications.** Stream individual applications for those users that don't require a full desktop experience.
 
 - **Deliver apps to any device, anywhere.** Provide access to published apps running on any device through a single unified workspace.
 
-- **Enable flexible, remote working.** Leverage your BYOD policy; supporting employees accessing their work-related desktops and apps across both corporate and personal devices.
+- **Enable flexible, remote working.** Leverage your BYOD policy, supporting employees accessing their work-related desktops and apps across both corporate and personal devices.
 
 - **Improve security and compliance.** Achieved through central control and management of Windows images, ensuring all end users run a consistent and fully patched OS.
 
@@ -41,13 +41,11 @@ UKCloud Desktop as a Service provides significant security and compliance benefi
 
 - **Choice of OFFICIAL-SENSITIVE security domains.** Deploy on established, trusted Assured OFFICIAL or Elevated OFFICIAL security domains to segregate sensitive data.
 
-- **Native network connections.** Connect via the DDoS-protected internet, PSN, HSCN, Janet or RLI networks.
+- **Native network connections.** Connect via the DDoS-protected internet, PSN, HSCN, Janet or MCN networks.
 
 ## Product options
 
 UKCloud Desktop as a Service provides a flexible solution for delivering virtual desktops and applications, including dedicated or shared desktops and hosted applications. The following options are available.
-
-UKCloud will engage with you to assess your current desktop landscape, this includes understanding the end user roles, applications requirements, performance expectations, end user devices, security requirements, and connectivity needs. Following this initial assessment UKCloud will be able to recommend the most suitable deployment model and recommend desktop and application sizing to meet your requirement.
 
 ### Desktop options
 
@@ -70,20 +68,24 @@ RDS Large Windows Server  | 8    | 48        | 500           | £320.00
 
 Additional storage is £0.10 per GiB per month.
 
-Session user licence (required for each user accessing via RDSH) is £15.00.
+Session user licence (required for each user accessing via RDSH) is £15.00 per month.
 
 ### Support options
 
 - **Platform Support - Inclusive.** Suitable where the customer has VDI experience and in-house resource and technical skills to build, deploy and manage the end user desktop environment. UKCloud is responsible for maintaining the underlying platform and connectivity only, everything else is the customer responsibility.
 
-    Additional chargeable support options are detailed below.
+  Additional chargeable support options are detailed below.
 
-- **Option 1: Support Services (£2,500 per month).** Suitable where the customer has VDI experience and in-house resource and technical skills to build, deploy and manage the end user desktop environment. This 3rd line support service provides contact to VMware Horizon specialist engineers to help troubleshoot and resolve deployment and performance issues. **Includes 16 Hours 3rd line support per month.**
+- **Option 1: Support Services (£2,500 per month).** Suitable where the customer has VDI experience and in-house resource and technical skills to build, deploy and manage the end user desktop environment. This 3rd line support service provides contact to VMware Horizon specialist engineers to help troubleshoot and resolve deployment and performance issues.
+
+  **Includes 16 Hours 3rd line support per month.**
 
 - **Option 2: Fully Managed.** Recommended for customers with zero or limited knowledge of managing a virtual desktop environment. This option will be configured based on your environment needs and covers application/image/desktop management, application packaging, user environment and customisation and support and administration.
 
 > [!NOTE]
 > Microsoft Windows OS licence, Windows Server Access Licenses, endpoints, printers, backend applications and service desk are the responsibility of the customer. Full details of the above support options available can be found in the UKCloud Desktop as a Service Scope.
+
+UKCloud will engage with you to assess your current desktop landscape, this includes understanding the end user roles, applications requirements, performance expectations, end user devices, security requirements and connectivity needs. Following this initial assessment UKCloud will be able to recommend the most suitable deployment model and recommend desktop and application sizing to meet your requirement.
 
 ## Pricing and packaging
 
@@ -105,7 +107,7 @@ The security of our platform is our number one priority. We've always been commi
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or Crown Connect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud provides one of the best-connected cloud platforms for the UK public sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, MCN and your own leased lines via our HybridConnect or Crown Connect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## The small print
 
@@ -115,7 +117,7 @@ For full terms and conditions, including onboarding and responsibilities, refer 
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 

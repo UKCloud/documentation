@@ -3,8 +3,8 @@ title: Managed SQL Server Service Definition
 description: Provides an overview of what is provided by the Managed SQL Server service
 services: managed-operations
 author: shighmoor
-reviewer: sdixon
-lastreviewed: 27/07/2021
+reviewer: shighmoor
+lastreviewed: 10/05/2022
 toc_rootlink: Advanced Support Services
 toc_sub1: Managed SQL Server
 toc_sub2:
@@ -23,25 +23,25 @@ Our Managed SQL Server service aims to remove the day-to-day burden of having to
 
 SQL servers provide the backbone for customer facing solutions but deliver no direct value on their own. Organisations that operate a limited, or sometimes non-existent, DBA team are often faced with the difficult decision to either focus on the delivery of business value projects or spend time responding to production issues, or simply 'keeping the lights on'.
 
-With UKCloud's Managed SQL Server service, we provide you with full 24x7x365 monitoring and support for your SQL servers across your multi-cloud estate, be it on-premises, on our cloud or on a cloud deployment elsewhere. This level of monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your SQL services are operating effectively, enabling you to focus on your business outcomes.
+With UKCloud's Managed SQL Server service, we provide you with full 24/7 monitoring and support for your SQL servers across your multi-cloud estate, be it on-premises, on our cloud or on a cloud deployment elsewhere. This level of monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your SQL services are operating effectively, enabling you to focus on your business outcomes.
 
 We see our Managed SQL Server service as being the perfect blend of having the flexibility of a bespoke SQL server, with all the operation and support efficiencies of Database as a Service (DBaaS).
 
 ## What the service can help you achieve
 
-- **Do more** – Free your technical resources to focus on business value projects
+- **Do more.** Free your technical resources to focus on business value projects.
 
-- **Reduce complexity** – A single contract to support your SQL footprint across any cloud
+- **Reduce complexity.** A single contract to support your SQL footprint across any cloud.
 
-- **Save money** – Reduce your operating costs by outsourcing the bulk of your DBA function
+- **Save money.** Reduce your operating costs by outsourcing the bulk of your DBA function.
 
-- **Peace of mind** – Protect your important data with our built-in backup service
+- **Peace of mind.** Protect your important data with our built-in backup service.
 
-- **Virtually grow your team** – Leverage the skills and experience of an entire team of SQL experts
+- **Virtually grow your team.** Leverage the skills and experience of an entire team of SQL experts.
 
-- **Understand your costs** – Our costs are fixed so you don't have to worry about deciphering and understanding SFIA day rates
+- **Understand your costs.** Our costs are fixed so you don't have to worry about deciphering and understanding SFIA day rates.
 
-- **Remove your pain** – Move towards consuming databases as a commodity service
+- **Remove your pain.** Move towards consuming databases as a commodity service.
 
 ## Pricing and packaging
 
@@ -53,7 +53,7 @@ The security of our platform is our number one priority. We've always been commi
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud provides one of the best-connected cloud platforms for the UK public sector. We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, MCN and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## An SLA you can trust
 
@@ -69,7 +69,7 @@ For full terms and conditions including onboarding and responsibilities, refer t
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 

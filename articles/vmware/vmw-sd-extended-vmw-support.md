@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the On-Premises VMware 
 services: vmware
 author: shall
 reviewer: shighmoor
-lastreviewed: 23/03/2021
+lastreviewed: 10/05/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -31,13 +31,13 @@ Support is provided on the basis of all reasonable endeavours. It's important to
 
 ## What the service can help you achieve
 
-- **Support** – UKCloud provides Level 1 and Level 2 support for the vSphere licences on v5.5 and above that are no longer supported by VMware.
+- **Support.** UKCloud provides Level 1 and Level 2 support for the vSphere licences on v5.5 and above that are no longer supported by VMware.
 
-- **Reduce risk** – UKCloud's significant experience and capabilities in VMware reduce the risk in continuing to operate out of support platforms.
+- **Reduce risk.** UKCloud's significant experience and capabilities in VMware reduce the risk in continuing to operate out of support platforms.
 
-- **Confidence** – Have greater confidence that the existing platform will maintain stability whilst longer term plans for workload migration are achieved.
+- **Confidence.** Have greater confidence that the existing platform will maintain stability whilst longer term plans for workload migration are achieved.
 
-- **Pay per VM** – Our costs are associated with your VM count so as services move off your older platform your extended support cost naturally declines.
+- **Pay per VM.** Our costs are associated with your VM count so as services move off your older platform your extended support cost naturally declines.
 
 In addition, UKCloud can assist in numerous ways to either support migration away from older platforms or provide experienced professionals to support your upgrade plans.
 
@@ -61,7 +61,7 @@ We understand that enterprise workloads need a dependable service that underpins
 
 ## The small print
 
-Consumption is estimated at the outset and calculated for a 6 or 12-month initial period. Subsequent periods can be for 6 or 12 months.
+Consumption is estimated at the outset and calculated for a 6- or 12-month initial period. Subsequent periods can be for 6 or 12 months.
 
 You must deploy the VMware Usage Meter against the vCenter in the environment and set up monthly reporting via automated email. This provides accurate consumption data on a month-to-month basis. Support is provided specifically to the VMware environment and does not extend to integrations to other services.
 
@@ -73,7 +73,7 @@ For more information about this service, see the [*Service Scope*](vmw-sco-exten
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
