@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Neustar UltraDNS fr
 services: connectivity
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/04/2021
+lastreviewed: 09/05/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -39,7 +39,7 @@ Built-in DNS DDoS protection with UltraDDoS Protect mitigation that quickly defe
 
 The service is designed to be flexible and enables you to choose from the list below to match your requirements.
 
-![Neustar UltraDNS from UKCloud product options](images/conn-ultradns-product-options-g12.png)
+![Neustar UltraDNS from UKCloud product options](images/conn-ultradns-product-options-g13.png)
 
 ## Pricing and packaging
 
@@ -67,7 +67,7 @@ For more information about this service, see the [*Service Scope*](conn-sco-glb.
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 

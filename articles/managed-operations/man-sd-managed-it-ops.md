@@ -3,8 +3,8 @@ title: Managed IT Operations Service Definition
 description: Provides an overview of what is provided by the Managed IT Operations service
 services: managed-operations
 author: shighmoor
-reviewer: Steve Dixon
-lastreviewed: 04/02/2022
+reviewer: shighmoor
+lastreviewed: 10/05/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
@@ -29,8 +29,6 @@ This service provides you with the building blocks to utilise essential operatio
 
 - Provision of core OS patches, providing confidence in the health of your IT estate with none of the traditionally associated resource effort
 
-- Allow UKCloud to execute defined runbooks, enabling automation of remediation processes to known issues, helping to increase your time to resolution for common events
-
 ## What the service can help you achieve
 
 - Incorporate, consolidate, and extend your current monitoring platforms, and any new requirements, into a single, as a service, solution
@@ -41,7 +39,7 @@ This service provides you with the building blocks to utilise essential operatio
 
 - Concentrate on creating and managing applications that increase business value rather than managing virtual infrastructure
 
-- Reduce the number of 'false-positive' alerts and associated out of hours call-outs, utilising UKCloud's 24x7x365 Network Operations Centre (NOC) as the initial responder to events, only escalating those which genuinely need further investigation and attention
+- Reduce the number of 'false-positive' alerts and associated out of hours call-outs, utilising UKCloud's 24/7 Network Operations Centre (NOC) as the initial responder to events, only escalating those which genuinely need further investigation and attention
 
 - Increase the uptime of your IT estate through faster identification, triage and alert escalations
 
@@ -49,9 +47,9 @@ This service provides you with the building blocks to utilise essential operatio
 
 This service is designed to be flexible and allows you to mix and match from a range of pre-defined options and change them when required. The elements that make up this service consist of the following:
 
-<div style="text-align:center"><img alt="Managed IT Operations product options" src="images/man-sd-managed-it-ops.png" /></div>
+![Managed IT Operations product options](images/man-sd-managed-it-ops.png)
 
-- **Managed Monitoring as a Service** *(mandatory)* The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate, and helping to reduce the amount of noise you traditionally had to filter through, enabling you to focus on the critical events that really matter.
+- **Managed Monitoring as a Service** *(mandatory)* The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate, leveraging the power of AIOps to reduce the amount of noise you traditionally had to filter through, enabling you to focus on the critical events that really matter.
 
 - **Patching as a Service** *(optional add-on)* Provides routine OS patch management for compute instances deployed across UKCloud's multi-cloud. It helps you accelerate business value by removing the burden of basic OS hygiene, letting you focus your attention above the operating system.
 
@@ -59,7 +57,7 @@ This service is designed to be flexible and allows you to mix and match from a r
 
 ## Pricing and packaging
 
-Managed IT Operations pricing can be as low as £12.50 per month for a customer endpoint device. Full pricing with all options, including volume discounts, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+Managed IT Operations pricing can be as low as £12.50 per month for a customer endpoint device. Full pricing with all options is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## Accreditation and information assurance
 
@@ -67,7 +65,7 @@ The security of our platform is our number one priority. We've always been commi
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector.  We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, RLI and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+UKCloud provides one of the best-connected cloud platforms for the UK public sector.  We enable access to our secure platform by DDoS-protected internet, PSN, Janet, HSCN, MCN and your own leased lines via our HybridConnect or CrownConnect services. The full range of flexible connectivity options is detailed in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ## An SLA you can trust
 
@@ -81,7 +79,7 @@ For full terms and conditions including onboarding and responsibilities, refer t
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning onpremises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads, migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 

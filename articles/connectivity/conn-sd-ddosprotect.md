@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the Neustar DDoS Protec
 services: connectivity
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 15/04/2021
+lastreviewed: 10/05/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -19,29 +19,29 @@ toc_mdlink: conn-sd-ddosprotect.md
 
 ## What is Neustar DDoS Protection from UKCloud?
 
-UKCloud's internet-connected Assured OFFICIAL platform already has Neustar DDoS mitigation baked in, however this mitigation is aimed at protecting the entire platform and is based on UKCloud's aggregate traffic profile. Neustar's UltraDDos Protect and UltraWAF are tailored to your own organisation's traffic patterns, providing you with powerful analytics, top-tier personalised DDoS mitigation and layer 7 protection that enables you to suppress threats before they become attacks.
+UKCloud's internet-connected Assured OFFICIAL platform already has Neustar DDoS mitigation baked in, however this mitigation is aimed at protecting the entire platform and is based on UKCloud's aggregate traffic profile. Neustar's UltraDDos Protect and UltraWAF are tailored to your own organisation's traffic patterns, providing you with powerful analytics, top-tier personalised DDoS mitigation and layer 7 protection that enables you to suppress threats before they become attacks. This service can be used to protect applications wherever they are hosted; on UKCloud, hyperscalers or on-premises.
 
-- **UltraDDoS Protect** offers 12+Tbps of on-demand DDoS mitigation, one of the largest dedicated data scrubbing networks in the world, so you can maintain your online presence, reduce the threat of theft and protect your organisation and reputation. UltraDDoS Protect provides protection from any DDoS attack of any size using DNS redirection.
+- **UltraDDoS Protect** offers 12+Tbps of On-Demand or Always-On DDoS mitigation using one of the largest dedicated data scrubbing networks in the world, so you can maintain your online presence, reduce the threat of theft and protect your organisation and reputation. UltraDDoS Protect provides protection from any volumetric DDoS attack of any size using DNS redirection.
 
-- **UltraWAF** overlays UltraDDoS Protect to give an always-on approach to quickly stop both the largest DDoS attacks and the most common web application threats without reducing network performance or adding additional levels of complexity to your existing security deployment. The easy-to-use online portal gives you visibility into the traffic across your applications, regardless of where they are hosted.
+- **UltraWAF** overlays UltraDDoS Protect Always-On to block the most common web application threats without reducing network performance or adding additional levels of complexity to your existing security deployment. The easy-to-use online portal gives you visibility into the traffic across your applications, regardless of where they are hosted.
 
 **Under attack? Contact Support for emergency DDoS mitigation.**
 
 ## What the service can help you achieve
 
-- **12+Tbps DDoS Mitigation.** Ensure your services are protected from even the largest DDoS attacks.
+- **12+Tbps DDoS mitigation.** Ensure your services are protected from even the largest DDoS attacks.
 
-- **Layers 3-7 Protection.** Protect yourself against stealthy application-layer attacks as well as DDoS mitigation.
+- **Layers 3-7 protection.** Protect yourself against stealthy application-layer attacks such as SQL injections or cross-site scripting.
 
-- **Automation and Flexibility.** Speed up your response to attacks and rightsize your protection investment.
+- **Automation and flexibility.** Speed up your response to attacks and rightsize your protection investment.
 
-- **Holistic Protection.** Defend standard TCP-based applications, including websites, email servers, APIs, databases and more.
+- **Holistic protection.** Defend standard TCP-based applications, including websites, email servers, APIs, databases and more.
 
 ## Product options
 
 The service is designed to be flexible and enables you to choose from the list below to match your requirements.
 
-![Neustar DDoS Protection from UKCloud product options](images/conn-ddosprotect-product-options-g12.png)
+![Neustar DDoS Protection from UKCloud product options](images/conn-ddosprotect-product-options-g13.png)
 
 ## Pricing and packaging
 
@@ -69,7 +69,7 @@ For more information about this service, see the [*Service Scope*](conn-sco-app-
 
 UKCloud is dedicated to the digital transformation of our nation's public services through our flexible, secure and cost-effective multi-cloud platform and the expertise of our people and partners. We believe that diversity of technology drives value and innovation and so we bring together different cloud technologies, with different deployment models spanning on-premises (private cloud), on-campus (Government's Crown Campus) and off-campus global public cloud services. This enables you to choose the right cloud for creating new workloads or migrating or replacing existing applications to the cloud with specialist SaaS solutions.
 
-![UKCloud services](images/ukc-services-g12.png)
+![UKCloud services](images/ukc-services-g13.png)
 
 We recognise the importance of public services to UK citizens and businesses, which is why we include the highest level of support to all our customers at no extra cost. This includes dedicated 24/7 UK support, a Network Operations Centre (NOC), utilising protective and proactive monitoring tools, and access to UKCloud's experts. UKCloud can also provide outcome-based professional services or managed services to help you with digital transformation.
 
