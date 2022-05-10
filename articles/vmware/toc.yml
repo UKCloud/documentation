@@ -222,6 +222,8 @@
       href: vmw-sd-vls.md
     - name: Service Scope
       href: vmw-sco-vls.md
+    - name: Service Scope
+      href: vmw-sco-vls-ws1.md
 - name: Videos
   items:
   - name: Benefits of VMware L2 VPN

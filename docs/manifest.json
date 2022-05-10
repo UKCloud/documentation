@@ -5787,7 +5787,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-how-add-remove-device.html",
-          "hash": "UHBrPl+dd/t/P2O7S2kMN85Q3iVIvnFfoc9NcqeMo1E="
+          "hash": "1gB1TrO2ZamxiVKcOPkDSCkHm0KIBaavbMiQqBoj3PY="
         }
       },
       "is_incremental": false,
@@ -5991,7 +5991,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-sd-managed-it-ops.html",
-          "hash": "kqCC1H4NQVPI2hYYnRLtdl98pTiNb19h8NQ5rpVNLLY="
+          "hash": "il/OoMsVpjw9alZFGJ60QIr7/o3liuTQEXNhPXBsPbk="
         }
       },
       "is_incremental": false,
@@ -10789,18 +10789,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-faq-g12.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-faq-g12.html",
-          "hash": "UP+PAezQhaq0ablJr9DYOaxEmaHE9rCsgAzXmwJOIGw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-miso-rebate.md",
       "output": {
         ".html": {
@@ -10824,12 +10812,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-ukcloud.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "RJnk0eoYlBQZdTXgpF8RHHMdKaDQuZzmlPH+UwOvBcM="
+          "hash": "nIb7bJn6gnKffR0yGakvJh7Gdvv0rqFpKEAx8MWgAf8="
         }
       },
       "is_incremental": false,
@@ -11117,7 +11108,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "7aZDMcbCmDH+GkCH+OrbbP6W4sP7zikpekfUqVUSVmE="
+          "hash": "grdiuK+R0wJHWSJEuD89COBg1QKuLjd6GACe5Qi9Q/Y="
         }
       },
       "is_incremental": false,
@@ -11153,7 +11144,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-services-by-region.html",
-          "hash": "Z4YkdEKmW6uSRxAbrifZXr44lBO88fF9Dc2ao3pRfik="
+          "hash": "KiDfNVYEKXTHs/JDmSTk3r30fy5b79d7mBz/c7E//qg="
         }
       },
       "is_incremental": false,
@@ -11309,7 +11300,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "HJuofYr8obipmoe9EGOMbSe6wCiz2slehKB0xxPSdo8="
+          "hash": "Az0KdSwvhDhatu98HadTuRUqCBd+VXgchvCdMrDEEeE="
         }
       },
       "is_incremental": false,
@@ -17410,7 +17401,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "TsXMy2+2yCXrzhKPwSHeyo9k7KiKwPGx7WgeyqAl5ko="
+          "hash": "UG15i/9iWeqXuna+UIXXVj9FlIeYepJcUg7G/eiBl4o="
         }
       },
       "is_incremental": false,
@@ -18551,6 +18542,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-synchronous-protection.html",
           "hash": "cySbVb+1I7ra8204x+Sic9qTORtJ7s/N9zcfpwAYG9A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-sco-vls-ws1.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-sco-vls-ws1.html",
+          "hash": "RuA3yFGIPCpje3PUTvNMXAUN9HpIqePoDDiQ2CtWjKo="
         }
       },
       "is_incremental": false,
