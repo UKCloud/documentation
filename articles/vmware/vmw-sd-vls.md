@@ -4,7 +4,7 @@ description: Provides an overview of what is provided by the VMware Licence Serv
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 03/05/2022
+lastreviewed: 10/05/2022
 toc_rootlink: Service Information
 toc_sub1: VMware Licence Service
 toc_sub2:
@@ -19,13 +19,13 @@ toc_mdlink: vmw-sd-vls.md
 
 ## What is the VMware Licence Service?
 
-VMware Licence Service (VLS) complements our Managed IT Operations service, by offering a managed VMware service ideally suited to customers who:
+The VMware Licence Service (VLS) complements our Managed IT Operations service, by offering a managed VMware service ideally suited to customers who:
 
 - Are planning, or have already started, a multi-cloud strategy, where the operational costs associated with workloads can seamlessly move to the cloud provider as workloads migrate.
 
 - Want to upgrade their on-premises VMware estate, with NSX, vSAN, SRM, vROps, Network Insight and Horizon, to enhance performance, security and resource allocation to enable the seamless migration to the cloud. VLS enables these enhancements for short deployment periods in the most cost-effective way.
 
-- Want to purchase VMware Workspace ONE - details are explained in the [*UKCloud VMware Workspace ONE VMware License Service (VLS) Service Scope*](vmw-sco-vls-ws1.md).
+- Want to purchase VMware Workspace ONE; details are explained in the [*UKCloud VMware Workspace ONE VMware License Service (VLS) Service Scope*](vmw-sco-vls-ws1.md).
 
 - Want to migrate to a full rental/consumption-based OPEX model rather than a fixed-cost (CAPEX-centric) model on either an annual or monthly basis.
 
@@ -39,7 +39,7 @@ VMware Licence Service (VLS) complements our Managed IT Operations service, by o
 
 - **Only pay for what you use.** Your consumption is based on the output reporting of the VMware Usage Meter, which directly relates to your actual operational elements. No longer pay for licences sitting on shelves or deployed into powered-off servers.
 
-- **Operational excellence.** UKCloud's highly experienced Service Delivery team is available to provide advise and guidance. Under VLS, the environment is enhanced through the provision of NSX and vRLI, in addition to the recommended deployment of VMware Skyline.
+- **Operational excellence.** UKCloud's highly experienced service delivery team is available to provide advice and guidance. Under VLS, the environment is enhanced through the provision of NSX and vRLI, in addition to the recommended deployment of VMware Skyline.
 
 - **Scalability.** VMware metered licensing is entirely flexible, so can scale up and down as your needs change.
 
@@ -53,13 +53,13 @@ VMware Licence Service (VLS) complements our Managed IT Operations service, by o
 
 - **VMware certified specialist.** UKCloud is the largest cloud provider in the UK, specialising in the delivery of VMware-based cloud services solely to UK government, health, education and the third sector.
 
-- **Unique service proposition.** VLS was exclusively developed in the UK by VMware and UKCloud to create a key building block for enabling migration to multi-cloud (a mix of true public cloud and secure private cloud, spanning on-premises, Crown Campus and hyperscaler).
+- **Unique service proposition.** VLS was exclusively developed in the UK by VMware and UKCloud, creating a key building block for enabling migration to multi-cloud (a mix of true public cloud and secure private cloud, spanning on-premises, Crown Campus and hyperscaler).
 
 - **Cloud migration.** Delivered faster and safer with UKCloud's wide portfolio of Cloud Services, Professional Services and Managed Services.
 
 - **UK-based support.** Dedicated 24/7 UK telephone and ticket support with access to UKCloud's technical experts. First- and second-line support is provided from the award-winning UKCloud service desk, with additional support provided by VMware.
 
-- **Service Delivery Manager.** Every VLS customer is designated a Service Delivery Manager (SDM) for ongoing support, quarterly performance reporting and active service monitoring.
+- **Service Delivery Managers.** Every VLS customer is designated a Service Delivery Manager (SDM) for ongoing support, quarterly performance reporting and active service monitoring.
 
 ## Licence eligibility
 
@@ -81,7 +81,7 @@ The following are the key steps of a typical deployment completed by UKCloud:
 
 - **Workload analysis.** Current usage for licence types, deployment quantities, VM and vRAM allocations are identified and assessed. Recommendations are made to tune as necessary and the outcome is then used to baseline future estimated consumption.
 
-- **Usage Meter.** Deployment and setup, and, if sufficiently in advance, data is used to validate estimated consumption. Automated emails are configured for reporting consumption to UKCloud. Horizon currently requires manual reporting.
+- **Usage Meter.** Deployment and setup, and, if sufficiently in advance, data is used to validate estimated consumption. Automated emails are configured for reporting consumption to UKCloud.
 
 - **VCPP licence keys.** New licence keys are applied to all VMware products covered under VLS. UKCloud will provide the licence keys at the correct operating software level for the existing environment.
 
@@ -93,15 +93,15 @@ The following are the key steps of a typical deployment completed by UKCloud:
 
   - Service incidents
 
-  - Billing/consumption reporting
+  - Billing and consumption reporting
 
   - Capacity and future planning
 
-  - Support/patch levels
+  - Support and patch levels
 
-  - Environment/performance enhancements
+  - Environment and performance enhancements
 
-  - Migration strategy/next steps
+  - Migration strategy and next steps
 
 ## Accreditation and information assurance
 
@@ -119,7 +119,7 @@ We understand that enterprise workloads need a dependable service that underpins
 
 For full terms and conditions, including onboarding and responsibilities, refer to the [Terms and Conditions documents](../other/other-ref-terms-and-conditions.md).
 
-For more information about this service, see the [*Service Scope*](vmw-sco-vls.md).
+For more information about this service, see the [*Service Scope*](vmw-sco-vls.md) and [*FAQ*](vmw-faq-vls.md).
 
 ## Why UKCloud?
 
