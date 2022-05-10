@@ -3,8 +3,8 @@ title: Known bugs with the UKCloud Pricing Estimation Tool
 description: Known bugs with the UKCloud Pricing Estimation Tool
 services: other
 author: dbaker
-reviewer: shighmoor
-lastreviewed: 11/03/2021
+reviewer: shall
+lastreviewed: 29/04/2022
 
 toc_rootlink: Reference
 toc_sub1: 

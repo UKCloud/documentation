@@ -3,8 +3,8 @@ title: How to use the UKCloud Pricing Estimation Tool
 description: Describes how to use the UKCloud Pricing Estimation Tool
 services: other
 author: dbaker
-reviewer: shighmoor
-lastreviewed: 11/03/2021
+reviewer: shall
+lastreviewed: 29/04/2022
 
 toc_rootlink: How To
 toc_sub1: 

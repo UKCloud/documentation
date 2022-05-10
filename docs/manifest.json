@@ -4786,7 +4786,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-gs.html",
-          "hash": "oYKL8vzeWdDOscGJx3nfEDMRIYrSfnOb/TQRZ2wcq3U="
+          "hash": "w6Rns6jnmskiSjPMvpqJE3nU/Zr6IdUPcNu9hBk+pls="
         }
       },
       "is_incremental": false,
@@ -4798,7 +4798,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-setup-android.html",
-          "hash": "LjCpChbS/A+eeY4/lgxVf74kjCLcydX2f8Jk3elrkPk="
+          "hash": "LqGs6DFL9ivZhWRNj/cqVkEUmcG2s4I79x0C6K3anLc="
         }
       },
       "is_incremental": false,
@@ -4810,7 +4810,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-setup-iphone.html",
-          "hash": "BJCZq/61nJ6x1tvEE7hws/a3lXvpmjUzGSyqReqXfZg="
+          "hash": "GvR+febxeBf0Kx0ua6UMzbfRrK8Wh+Mik4QONf0mE14="
         }
       },
       "is_incremental": false,
@@ -4841,331 +4841,11 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/email/email-ref-upgrade-to-86.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/email/email-ref-upgrade-to-86.html",
-          "hash": "44dORN9fRg5DneYTV2kVt+PjuHyjJN6R6e+N/gZapKM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-android-account-setup-email.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-android-account-setup-email.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-android-account-setup-incoming-server.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-android-account-setup-incoming-server.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-android-account-setup-options.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-android-account-setup-options.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-android-account-setup-type-exchange.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-android-account-setup-type-exchange.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-android-ico-settings.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-android-ico-settings.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-android-mnu-add-account.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-android-mnu-add-account.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-android-mnu-corporate.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-android-mnu-corporate.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Resource",
       "source_relative_path": "articles/email/images/email-console-new-account.png",
       "output": {
         "resource": {
           "relative_path": "articles/email/images/email-console-new-account.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-elevated.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-elevated.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-internet.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-internet.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-account-info.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-account-info.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-add-account.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-add-account.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-exchange.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-exchange.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-home.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-home.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-keep-contacts.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-keep-contacts.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-settings.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-settings.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-sync-filter.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-sync-filter.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-synchronise.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-synchronise.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-zimbra-client-inbox.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-zimbra-client-inbox.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-zimbra-client-mail.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-zimbra-client-mail.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-zimbra-client.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-zimbra-client.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-zimbra-settings.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-zimbra-settings.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-iphone-zimbra-touch.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-iphone-zimbra-touch.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-legacy.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-legacy.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-outlook-connector-download.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-outlook-connector-download.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-outlook-new-account.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-outlook-new-account.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-outlook-zimbra-config.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-outlook-zimbra-config.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-outlook-zimbra.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-outlook-zimbra.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-psn-protected.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-psn-protected.png"
         }
       },
       "is_incremental": false,
@@ -5183,188 +4863,12 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-tbird-account-setup.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-tbird-account-setup.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zcs-install-complete.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zcs-install-complete.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zcs-install-progress.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zcs-install-progress.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zcs-install-welcome.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zcs-install-welcome.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-admin-mnu-new-account.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-admin-mnu-new-account.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-aliases.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-admin-new-account-aliases.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-contact-info.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-admin-new-account-contact-info.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-forwarding.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-admin-new-account-forwarding.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-member-of.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-admin-new-account-member-of.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-password.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-admin-new-account-password.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-admin-new-account.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-desktop-client.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-desktop-client.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-desktop-new-account-created.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-desktop-new-account-created.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-desktop-new-account.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-desktop-new-account.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-web-client.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-web-client.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-zimbra-web-sign-in.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-zimbra-web-sign-in.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/email/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/email/toc.html",
-          "hash": "h6PyuMnN4h0NZYyhBxOuuDSofBXcpCebBxXcCqKUEuQ="
+          "hash": "yGWev+ZrTJXSc9Kro9WfwFgOI5PUZVutZQHLmEbHKqY="
         }
       },
       "is_incremental": false,
@@ -11385,7 +10889,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "mnAwtJbOtIlpexQuUNeLX+zUuFAM9u2A1fWaaKJqeLc="
+          "hash": "CyB9hbCco/ivVd16utCWdo5smSktrzEZLzCX70ncpsM="
         }
       },
       "is_incremental": false,
@@ -11901,6 +11405,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-contact-details-password-reset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-contact-details-password-reset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-contact-edit.png",
       "output": {
         "resource": {
@@ -11949,6 +11464,61 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-contact-tab-mycalls-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password-email.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password-email.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password-link.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password-link.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password-reset-memword.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password-reset-memword.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password-reset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password-reset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-forgotten-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-forgotten-password.png"
         }
       },
       "is_incremental": false,
@@ -12033,17 +11603,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-menu-all-contacts.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-menu-all-contacts.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mnu-add-new-contact.png",
       "output": {
         "resource": {
@@ -12059,6 +11618,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-mnu-all-contacts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-change-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-change-details.png"
         }
       },
       "is_incremental": false,
@@ -12770,17 +12340,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-update-user-password.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-update-user-password.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl_mnu-my-calls.png",
       "output": {
         "resource": {
@@ -12808,7 +12367,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-change-email-address.html",
-          "hash": "5W/zjawHHvyHkXzB+gEX8W/h1SHrIftAngkpBxdySwg="
+          "hash": "1HtdFwdSSmlsyD7PgRuz/2OJsPZYRkF3TnUMfpqBZgI="
         }
       },
       "is_incremental": false,
@@ -12880,7 +12439,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-reset-password.html",
-          "hash": "00KYkzhPmJA1kVeHLyuvKzBbKFf0f047vYUVcGXKIY0="
+          "hash": "Hu12LhF8ru7VA4NQRj2z93eYBFH6gKEMiH7No6MLFuw="
         }
       },
       "is_incremental": false,
@@ -13072,7 +12631,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-user-access.html",
-          "hash": "I1rtwWWxxLUKkZLAzlJ7VVpFA/MA/9+hocEu66ztk4o="
+          "hash": "BVT4nIYMcY2VSyJsH1uZ2rMNXT8kraNcFX2SBqZUnhg="
         }
       },
       "is_incremental": false,
@@ -13108,7 +12667,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "wtr5wHHGB1FFnauyGJiSLM0NFgNeIXIDEpHtDSmS9y8="
+          "hash": "DweL7nvCudE5zyP8TgsktwnrHbqWbkTgzEoZwyyPpxA="
         }
       },
       "is_incremental": false,
@@ -19154,7 +18713,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 456,
+          "total_file_count": 455,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
