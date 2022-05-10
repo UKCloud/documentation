@@ -3,8 +3,8 @@ title: G-Cloud 12 - Our enhancements and additions
 description: Frequently asked questions (FAQs) for our G-Cloud 12 services
 services: other
 author:  shall
-reviewer: shighmoor
-lastreviewed: 16/04/2021
+reviewer: sdixon
+lastreviewed: 06/05/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -57,7 +57,7 @@ UKCloud Desktop as a Service provides a platform to deliver, protect and manage 
 
 ### What is Managed IT Operations?
 
-Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, Managed VM recovery points, patching as a service, antivirus as a service and runbook automation. This service provides you with the building blocks to utilise essential operational delivery services.
+Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, Managed VM recovery points, patching as a service and antivirus as a service. This service provides you with the building blocks to utilise essential operational delivery services.
 
 ### What is Managed SQL Server?
 
