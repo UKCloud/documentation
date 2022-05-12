@@ -3,8 +3,8 @@ title: HSCN connectivity FAQs
 description: Frequently asked questions for HSCN Connectivity
 services: connectivity
 author: mwarner
-reviewer: bchallis
-lastreviewed: 27/04/2021
+reviewer:TLofthouse
+lastreviewed: 12/05/2022
 
 toc_rootlink: FAQs
 toc_sub1: 

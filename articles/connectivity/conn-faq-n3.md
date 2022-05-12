@@ -3,8 +3,8 @@ title: N3 connectivity FAQs
 description: Frequently asked questions for N3 Connectivity
 services: connectivity
 author: mwarner
-reviewer: shighmoor
-lastreviewed: 09/04/2021
+reviewer: TLofthouse
+lastreviewed: 12/05/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
