@@ -186,7 +186,7 @@ Customers are responsible for:
 
 - The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required.
 
-- If access is required over government community networks (PSN, HSCN, Janet or RLI), customers are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where customers have not provided the required evidence.
+- If access is required over government community networks (PSN, HSCN, Janet or MCN), customers are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where customers have not provided the required evidence.
 
 - Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).
 

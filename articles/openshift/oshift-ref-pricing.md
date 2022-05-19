@@ -180,7 +180,7 @@ For more information about the discount and purchase schemes offered by UKCloud,
 
 ### Additional networks
 
-- By default, your OpenShift cluster will only be connected to the internet. Your OpenShift environment can be provisioned on other networks, such as HSCN, Janet, RLI or PSN, at a flat fee of £50 per month per network, plus the addtional network charges as defined within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+- By default, your OpenShift cluster will only be connected to the internet. Your OpenShift environment can be provisioned on other networks, such as HSCN, Janet, MCN or PSN, at a flat fee of £50 per month per network, plus the addtional network charges as defined within the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 ### Registry storage
 

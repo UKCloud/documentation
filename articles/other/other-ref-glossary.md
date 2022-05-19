@@ -503,10 +503,6 @@ A physically segregated part of the UKCloud platform within a site that provides
 
 *See also:* [Site](#site), [Zone](#zone)
 
-### Restricted LAN Interconnect (RLI)
-
-A high-security network for defence and industry partners. One of UKCloud's connectivity options. Connection to RLI is subject to extensive vetting and approval from the MOD. Contact one of our Cloud Architects for more information about how to connect to RLI.
-
 ## S
 
 ### Secure Remote Access (SRA)

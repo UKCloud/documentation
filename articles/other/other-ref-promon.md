@@ -37,7 +37,7 @@ The following demonstrates the scope of UKCloud's Protective Monitoring:
 
 - Customer VDC, vApps, VMs, Virtual Network Appliance and customer networks - This is the customer's responsibility to monitor.
 
-- External connectivity, for example, internet, PSN, HSCN, Janet, RLI, leased lines - This is the responsibility of the telecommunications provider.
+- External connectivity, for example, internet, PSN, HSCN, Janet, MCN, leased lines - This is the responsibility of the telecommunications provider.
 
 <sup>*</sup> For more information about UKCloud's volumetric DDoS protection, see the [*DDoS mitigation service FAQs*](../connectivity/conn-faq-ddos.md).
 

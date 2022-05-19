@@ -132,7 +132,7 @@ The UKCloud Azure Stack Hub portal requires port 80 (HTTP) and port 443 (HTTPS) 
 
 ### How do I access my solutions via government networks?
 
-UKCloud for Microsoft Azure is currently available via the internet. Community network support such as HSCN, Janet, RLI and PSN is planned for the future.
+UKCloud for Microsoft Azure is currently available via the internet. Community network support such as HSCN, Janet, MCN and PSN is planned for the future.
 
 ### What reports can I get about my UKCloud for Microsoft Azure solution?
 

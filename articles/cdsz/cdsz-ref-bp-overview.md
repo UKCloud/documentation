@@ -26,7 +26,7 @@ To meet these varying needs, we've implemented two security domains on our platf
 
 - Assured OFFICIAL security domain ― directly connected to our DDoS-protected internet, PSN, JANET and HSCN networks
 
-- Elevated OFFICIAL security domain — natively connected only to the PSN and RLI, it benefits from increased security as all users and devices that can access this security domain are known and trusted
+- Elevated OFFICIAL security domain — natively connected only to the PSN and MCN, it benefits from increased security as all users and devices that can access this security domain are known and trusted
 
 The Government Digital Service (GDS) strategy of "internet is okay" is dividing opinion across government. On one hand, many applications that were initially PSN connected and only accessible by a closed community are now being connected to the internet, pushing security from the physical network layer to the services themselves, reducing cost and time to delivery. On the other hand, a lot of data is considered too sensitive to be stored in a directly internet-connected environment, where the attack vector of an internet connection creates too much risk.
 
@@ -94,7 +94,7 @@ The UKCloud Cross Domain Security Zone enables customers to securely transfer da
 
 There are two service options available:
 
-- Secure Remote Access. We provide a self-service remote access solution so that customers who do not have a PSN or RLI connection to their business premises may have a method of managing their environments within Elevated OFFICIAL. Note that this is for management purposes only, and not for end-user access to the Elevated security domain. This service is not covered within this Blueprint.
+- Secure Remote Access. We provide a self-service remote access solution so that customers who do not have a PSN or MCN connection to their business premises may have a method of managing their environments within Elevated OFFICIAL. Note that this is for management purposes only, and not for end-user access to the Elevated security domain. This service is not covered within this Blueprint.
 
 - Walled Garden. Self-service management of a Cross Domain Security Zone Walled Garden, enabling customers to implement security applications of their choice. We provide an assurance wrap by ensuring customers use appropriate risk management to understand and mitigate identified risks.
 

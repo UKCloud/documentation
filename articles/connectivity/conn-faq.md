@@ -125,9 +125,9 @@ This depends on the use case.
 
   - Contact your account manager, as this will be a non-standard solution, which may require support from our technical specialists (costs will be as per the [SFIA Rate Card](https://ukcloud.com/sfia)).
 
-## Does UKCloud support RLI connections?
+## Does UKCloud support MCN connections?
 
-Yes, UKCloud does support an RLI connection for customers who have been already authorised by the MOD. We'll then use the HybridConnect service to connect the RLI network to your cloud environment.
+Yes, UKCloud does support an MCN connection for customers who have been already authorised by the MOD. We'll then use the HybridConnect service to connect the MCN network to your cloud environment.
 
 ## If I have an MPLS circuit direct into UKCloud, do I still have to go through a PSN connection to access the Elevated Portal?
 

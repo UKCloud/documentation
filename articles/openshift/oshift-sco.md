@@ -33,7 +33,7 @@ For more information about what the service offers, see the [*UKCloud for Red Ha
 
 UKCloud for Red Hat OpenShift provides:
 
-- A secure and scalable UK-based platform connected to the internet and government networks including PSN, HSCN, Janet and RLI
+- A secure and scalable UK-based platform connected to the internet and government networks including PSN, HSCN, Janet and MCN
 
 - Secure customer separation - UKCloud for Red Hat OpenShift management components and container hosts are dedicated to you, deployed on independently verified, assured multi-tenant infrastructure
 
@@ -114,7 +114,7 @@ To complement your UKCloud for Red Hat OpenShift service, UKCloud offers the fol
 
 #### Additional networks
 
-By default, your OpenShift cluster will only be connected to the internet. Your OpenShift environment can be provisioned on other networks such as PSN, HSCN, Janet and RLI at a flat fee per month per network plus the additional network charges. For more information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+By default, your OpenShift cluster will only be connected to the internet. Your OpenShift environment can be provisioned on other networks such as PSN, HSCN, Janet and MCN at a flat fee per month per network plus the additional network charges. For more information, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
 #### Registry storage
 
@@ -164,7 +164,7 @@ In line with current restrictions on the OpenStack service that underpins OpenSh
 
 The following features published in the [UKCloud for Red Hat OpenShift Service Definition](oshift-sd.md) are not currently available:
 
-- Janet, PSN and RLI connectivity
+- Janet, PSN and MCN connectivity
 
 Although these features are not currently available, they will be considered on request.
 
@@ -192,7 +192,7 @@ UKCloud maintains responsibility for routine patching and upgrades of the OpenSh
 
 You are responsible for:
 
-- The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks, such as HSCN, Janet, RLI or PSN (including legacy networks), you are responsible for adhering to the Code of Connection (CoCo).
+- The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks, such as HSCN, Janet, MCN or PSN (including legacy networks), you are responsible for adhering to the Code of Connection (CoCo).
 
 - Self-managing the environment including workload deployment, in-cluster workload segregation, network policy management, storage requests and management, and so on.
 

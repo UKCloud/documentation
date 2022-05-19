@@ -224,7 +224,7 @@ You are responsible for:
 
 - Installation of the certificates on your devices in order to connect to the SRA service.
 
-- If you require onward connectivity to government secure networks within Elevated (RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of your CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
+- If you require onward connectivity to government secure networks within Elevated (MCN or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of your CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
 
 - Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).
 
