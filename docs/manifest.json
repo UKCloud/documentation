@@ -11316,17 +11316,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/portal_permissions.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/portal_permissions.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-2fa-enable.png",
       "output": {
         "resource": {
@@ -11452,6 +11441,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-contact-tab-mycalls-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-contact-user.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-contact-user.png"
         }
       },
       "is_incremental": false,
@@ -12207,6 +12207,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-portal_permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-portal_permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-security-password-expiration.png",
       "output": {
         "resource": {
@@ -12328,6 +12339,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-user-active.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-user-active.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl_mnu-my-calls.png",
       "output": {
         "resource": {
@@ -12367,7 +12389,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-create-users.html",
-          "hash": "IjXI692V0BPYG5AQn+/SjGtDlWXiy5Fj5sR7BZG6Yfs="
+          "hash": "PSwTypC8uS5PtrVG8D4U/g0Y04NXaAGcA+Xh6xyTiOc="
         }
       },
       "is_incremental": false,
@@ -12379,7 +12401,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-enable-2fa.html",
-          "hash": "I4Yokq9qKRoyWPC5bhaKWnHpjg3FMrm7oHRvXXd4ow0="
+          "hash": "CRm8TQMA+krWFCGrxEQ6Mp4SrcgMRj4JS1Ugu37JMWs="
         }
       },
       "is_incremental": false,
@@ -12415,7 +12437,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-reset-2fa.html",
-          "hash": "HOR/6hijWQUYDayQ0gRm7KeiBtqps6nz8wigsW7yM0I="
+          "hash": "qC1ucZHYHw5INQUuxVFP+WEqhMdoR2BIxsrt3iqepus="
         }
       },
       "is_incremental": false,
@@ -12463,7 +12485,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-2fa.html",
-          "hash": "pBs58jtcbbIZ7DvUDLFBDVfifg+fkoa0ybU16T89yWY="
+          "hash": "Fgn4fUOV1SwBlSBpDz6WF+yUZfQqcJuxWhxAEjNbgJU="
         }
       },
       "is_incremental": false,
@@ -12475,7 +12497,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-password-expiration.html",
-          "hash": "02wy+w3wzn/E9eeR8xz8LHceCxkqHljYVh3e8ISDSzs="
+          "hash": "QnXL/CuPWZIeTbz0FCcwdY0Rltyfi9iNQPPumBBMn2w="
         }
       },
       "is_incremental": false,
@@ -12499,7 +12521,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-switch-account.html",
-          "hash": "K4tiynkAigSuwcOUxdDNKGmKna/CXOlXv3rwetusUbo="
+          "hash": "4HVOgUdyzgvsl9q5yhYdCzPU1tM5KwkoJSaWtnzYzkA="
         }
       },
       "is_incremental": false,
@@ -12547,7 +12569,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-view-login-info.html",
-          "hash": "pw3UgP1+nh/MHRJ80reXaCL3ZgqlQchdYYkMkOVcKqg="
+          "hash": "jjf2lKBJWfACzTStdCnCZ8e2T1W+gp41PoWjxzJScIA="
         }
       },
       "is_incremental": false,
@@ -12559,7 +12581,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-multiple-accounts.html",
-          "hash": "IZoSM2hNEIcVvl4wx6B4E+1PtakA26uW1bfS9BcR0t8="
+          "hash": "xxGwv8ELzg7mwLKGNZT2VssveVdXBgtCVFJ2nJAIQL8="
         }
       },
       "is_incremental": false,
@@ -12571,7 +12593,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-overview-permissions.html",
-          "hash": "Byc72tBNF84mNpfcLVzFoAa7CEdl9gDKxegd36clCqs="
+          "hash": "uDYWpNZi/twQLxwVI/jH2YSWZVEKlf2a+ZJ0iJ9Pq6g="
         }
       },
       "is_incremental": false,
@@ -12607,7 +12629,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-security-settings.html",
-          "hash": "lv/C4CUuHt8h9iSgh/4cGJdio47/sTfLoSwkSo2xtRk="
+          "hash": "OXKq1K++8B1qbpnkFRiQBWIuzDDbI2htEHKmiXXA3Fo="
         }
       },
       "is_incremental": false,
