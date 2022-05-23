@@ -12,8 +12,6 @@
     href: ptl-how-enable-2fa.md
   - name: Manage My Calls users
     href: ptl-how-manage-my-calls.md
-  - name: Raise and escalate support tickets
-    href: ptl-how-raise-escalate-service-request.md
   - name: Reset 2FA for a user account
     href: ptl-how-reset-2fa.md
   - name: Restrict access to the Portal
@@ -50,6 +48,8 @@
     href: ptl-ref-release-notes.md
   - name: Portal user access
     href: ptl-ref-user-access.md
+  - name: Raising and escalating support tickets
+    href: ptl-ref-raise-escalate-service-request.md
   - name: UKCloud Portal security settings
     href: ptl-ref-security-settings.md
 - name: Videos

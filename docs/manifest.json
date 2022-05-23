@@ -5763,7 +5763,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-faq-patching.html",
-          "hash": "03wX1k+O7oxfYtnS0POLVgt18PqF/YcEfkurpUTHLPg="
+          "hash": "Y/THmY9CVryDfQ6re6VSS0VPYfgmgHoF2PCVMPNwoSE="
         }
       },
       "is_incremental": false,
@@ -6883,7 +6883,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "5qRtlbLjgKk1SJioXuvPirOKu6IHqPfXwmOrM9uPuWI="
+          "hash": "ZZiO+SRZV1zhIqxA0N5lCkjJ+QIky1BjHZc77oDWae0="
         }
       },
       "is_incremental": false,
@@ -10901,7 +10901,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-complaints.html",
-          "hash": "2GUTmB+UodJuHjlr0amSi2q6kjO++ndIbwjoq+ICwwE="
+          "hash": "lsgxNZt3P+iNHQbgQNoTdqK6dYqpC+ugYQgBQSrssr0="
         }
       },
       "is_incremental": false,
@@ -11165,7 +11165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "4fWP45VZC9MPS0lgl/zcpH/5rGpE4eeZ2w/P1J/cuXQ="
+          "hash": "o6tEGVNIatx5fxC+1uw61VRt4USvimvv03qf5j7A84s="
         }
       },
       "is_incremental": false,
@@ -11833,10 +11833,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mycalls-btn-request-submit.png",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-btn-incident.png",
       "output": {
         "resource": {
-          "relative_path": "articles/portal/images/ptl-mycalls-btn-request-submit.png"
+          "relative_path": "articles/portal/images/ptl-mycalls-btn-incident.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-btn-request.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-btn-request.png"
         }
       },
       "is_incremental": false,
@@ -11888,6 +11899,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-btn-submit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-btn-submit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mycalls-edit-incident.png",
       "output": {
         "resource": {
@@ -11932,10 +11954,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mycalls-incident-reopen.png",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-link.png",
       "output": {
         "resource": {
-          "relative_path": "articles/portal/images/ptl-mycalls-incident-reopen.png"
+          "relative_path": "articles/portal/images/ptl-mycalls-link.png"
         }
       },
       "is_incremental": false,
@@ -12130,28 +12152,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mycalls-template-incident.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-mycalls-template-incident.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mycalls-template-request.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-mycalls-template-request.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mycalls-ticket-details.png",
       "output": {
         "resource": {
@@ -12167,6 +12167,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-mycalls-ticket-summary.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-tile.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-tile.png"
         }
       },
       "is_incremental": false,
@@ -12413,19 +12424,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-manage-my-calls.html",
-          "hash": "GBRimK39bRJuqxkx6IHP9fL7ZaxoR9N4c2BusmDvu6w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/portal/ptl-how-raise-escalate-service-request.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/portal/ptl-how-raise-escalate-service-request.html",
-          "hash": "Sj4qBJdSiSaFqZuQP39Tvdm+5j90WVwJ60WmUigM55g="
+          "hash": "TqQjLvEmdfKn8SraQQ/L0Ptg8K1bz0FxsXIaztXcHco="
         }
       },
       "is_incremental": false,
@@ -12557,7 +12556,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "P1dI8nZzbvH2DOVSChhNDudG13CXZBVpgChp0nPdczg="
+          "hash": "ymVhyyYAJH/OcPY5fYbYtSnniq4DIkeCCpLRUs3qBLE="
         }
       },
       "is_incremental": false,
@@ -12581,7 +12580,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-multiple-accounts.html",
-          "hash": "xxGwv8ELzg7mwLKGNZT2VssveVdXBgtCVFJ2nJAIQL8="
+          "hash": "FygLilxVhmK5p6Q92VkPy/OpOJSkxCQid4dYtA6gayo="
         }
       },
       "is_incremental": false,
@@ -12606,6 +12605,18 @@
         ".html": {
           "relative_path": "articles/portal/ptl-ref-portal-api.html",
           "hash": "tH+iaUODFJkWUjVIi/LbvFgmBCmZJF/BhyaYJfb3MC0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-ref-raise-escalate-service-request.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-ref-raise-escalate-service-request.html",
+          "hash": "wNgVzNCpBt0Yxq6yaMlivLrgq2XTlOYbCxx8gqQrKzg="
         }
       },
       "is_incremental": false,
@@ -12653,7 +12664,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-vid-mycalls.html",
-          "hash": "0EsOO2nwMyUVnlFM8hlp9jWQQQQ94l0HjN5w1FK9PHs="
+          "hash": "SqGAz2F4B/c5q5r/HaJqs8U0fi4t+VmV5+PZsqIyaXU="
         }
       },
       "is_incremental": false,
@@ -12677,7 +12688,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "DweL7nvCudE5zyP8TgsktwnrHbqWbkTgzEoZwyyPpxA="
+          "hash": "pSofBC6O0sO0zCkLMgK5/AA2gL5/ZOTLH+FDT/RS/y8="
         }
       },
       "is_incremental": false,
@@ -18548,7 +18559,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-snapshot-protection.html",
-          "hash": "iuoY8J2JKR4+86In2KKwF5edkNy81+VRFrLskjGS4EU="
+          "hash": "C2dg9xKci0pRidp+unKO/2jak859Cxf3PKhcJtzOz58="
         }
       },
       "is_incremental": false,
