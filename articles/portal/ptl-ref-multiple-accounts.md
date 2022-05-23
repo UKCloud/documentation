@@ -87,7 +87,7 @@ When you bring a new workload to UKCloud, your Service Delivery Manager (SDM) wi
 
 ## Related articles
 
-- [*How to raise and escalate incidents and service requests*](ptl-how-raise-escalate-service-request.md)
+- [*Raising and escalating support tickets with customer support*](ptl-ref-raise-escalate-service-request.md)
 
 - [*How to create a new user in the UKCloud Portal*](ptl-how-create-users.md)
 

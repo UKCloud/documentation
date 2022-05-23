@@ -1,22 +1,22 @@
 ---
-title: How to raise and escalate support tickets with customer support
+title: Raising and escalating support tickets with customer support
 description: Provides an overview of the process for raising incidents and service requests with UKCloud customer support (helpdesk), as well as how to escalate them if necessary
 services: other
 author: shighmoor
 reviewer: ngatehouse
 lastreviewed: 26/07/2021
 
-toc_rootlink: How To
+toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Raise and escalate support tickets
-toc_fullpath: How To/ptl-how-raise-escalate-service-request.md
-toc_mdlink: ptl-how-raise-escalate-service-request.md
+toc_title: Raising and escalating support tickets
+toc_fullpath: Reference/ptl-ref-raise-escalate-service-request.md
+toc_mdlink: ptl-ref-raise-escalate-service-request.md
 ---
 
-# How to raise and escalate support tickets (incidents and service requests) with customer support
+# Raising and escalating support tickets (incidents and service requests) with customer support
 
 ## Overview
 
