@@ -4,7 +4,7 @@ description: Shows how to ensure that users regularly change their passwords by 
 services: portal
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/04/2021
+lastreviewed: 21/04/2022
 
 toc_rootlink: How To
 toc_sub1: 
@@ -32,19 +32,19 @@ To set up password expiration:
 
 3. In the navigation panel, select **Settings**.
 
-    ![Settings menu option in the UKCloud Portal](images/ptl-mnu-settings.png)
+   ![Settings menu option in the UKCloud Portal](images/ptl-mnu-settings.png)
 
 4. On the *Settings* page, select the **Security Settings** tab.
 
-    ![Security Settings tab of the Settings page](images/ptl-settings-tab-security.png)
+   ![Security Settings tab of the Settings page](images/ptl-settings-tab-security.png)
 
 5. Click **Password expiration** to expand the section.
 
 6. Select **Enable password expiration**.
 
-7. In the **Password expires after** field, select the number of days after which passwords should expire: 30, 60 or 90 days.
+7. From the **Password expires after** list, select the number of days after which passwords should expire: 30, 60 or 90 days.
 
-    ![Password expiration security settings](images/ptl-security-password-expiration.png)
+   ![Password expiration security settings](images/ptl-security-password-expiration.png)
 
 8. When you're done, click **Save**.
 

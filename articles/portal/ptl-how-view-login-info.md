@@ -4,7 +4,7 @@ description: Explains how to access a report of who has logged into your environ
 services: portal
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/04/2021
+lastreviewed: 19/04/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -33,7 +33,7 @@ The UKCloud Portal provides a report of who has logged into your account over th
 
 ### Intended audience
 
-To view Portal login information, you must be a Portal administrator
+To view Portal login information, you must be a Portal administrator.
 
 ## Viewing login history
 
@@ -47,11 +47,11 @@ To view Portal login information, you must be a Portal administrator
 
 4. The resulting table provides a list of all the users who have logged in to your environment over the last 30 days.
 
-   The table indicates the name of the user, the date and time of each login and the IP address from which the login occurred. You can sort the results by user name, date or IP address.
+   The table indicates the name of the user, the date and time of each login and the IP address from which the login occurred. You can sort the results by username, date or IP address.
 
    ![Login history](images/ptl-login-history.png)
 
-5. Use the **Next** link at the bottom of the table to page through the results, or click a page number to go directly to that page.
+5. Use the **Next** button at the bottom of the table to page through the results, or click a page number to go directly to that page.
 
    By default, the table lists 10 records at a time. You can use the drop down list at the top left of the table to increase the number of records shown per page to **25**, **50** or **100**.
 

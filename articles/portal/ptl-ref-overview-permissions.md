@@ -21,7 +21,7 @@ toc_mdlink: ptl-ref-overview-permissions.md
 
 System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.
 
-![Portal permissions page](images/portal_permissions.png)
+![Portal permissions page](images/ptl-portal_permissions.png)
 
 Some user permissions are controlled on other pages. See the following articles:
 
@@ -31,9 +31,9 @@ Some user permissions are controlled on other pages. See the following articles:
 
 - [*How to manage UKCloud for OpenStack accounts in the UKCloud Portal*](../openstack/ostack-how-manage-accounts-portal.md)
 
-## User is admin?
+## Portal administrator permissions
 
-User gets full administrative privileges across the entire account. This includes all of the permissions listed below.
+Select the **User is admin?** check box to grant the user full administrative privileges across the entire account. This includes all of the permissions listed below.
 
 ## Permissions for Settings
 
@@ -72,10 +72,12 @@ The roles exposed are:
 
 You can find further details of these roles in the [VMware Cloud Director Service Provider Admin Portal Guide](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html).
 
-In addition, UKCloud have created an API Only role that restricts users with VMware Cloud Director permissions to accessing VMware Cloud Director solely via the API, with no GUI access.
+### API Only role
+
+In addition to the VMware Cloud Director permissions, UKCloud has created an API Only role that restricts users with VMware Cloud Director permissions to accessing VMware Cloud Director solely via the API, with no GUI access.
 
 > [!NOTE]
-> The API Only role must be selected in addition to one of the VMware Cloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
+> The API Only role must be selected in addition to one of the VMware Cloud Director permissions (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.
 
 ## Permissions for Cloud Storage
 

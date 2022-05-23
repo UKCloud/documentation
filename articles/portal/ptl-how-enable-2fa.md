@@ -4,7 +4,7 @@ description: Describes how to enable two-factor authentication (2FA) for a UKClo
 services: portal
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/04/2021
+lastreviewed: 21/04/2022
 
 toc_rootlink: How To
 toc_sub1: 
@@ -24,7 +24,7 @@ To provide additional security, you may want to enable two-factor authentication
 
 ![Two-Factor Authentication dialog box in the UKCloud Portal](images/ptl-2fa.png)
 
-To set up 2FA, a Portal administrator must first enable 2FA for the Portal account. After enabling 2FA for the account, the next time a user attempts to log in, they will be prompted to set up 2FA for their user account by registering their Portal account with an authenticator app, such as Google Authenticator.
+To set up 2FA, a Portal administrator must first enable 2FA for the Portal customer account. After enabling 2FA for the account, the next time a user attempts to log in, they will be prompted to set up 2FA for their user account by registering their account with an authenticator app, such as Google Authenticator.
 
 ### Intended audience
 
@@ -32,37 +32,35 @@ To enable 2FA, you must be a Portal administrator.
 
 ## Enabling 2FA in the UKCloud Portal
 
-If you are a Portal administrator, you can enable 2FA for an account so that users must provide a 2FA code when they log in as well as their user name and password.
-
 To enable 2FA:
 
 1. [*Log in to the UKCloud Portal*](ptl-gs.md#logging-in-to-the-ukcloud-portal) as an administrator.
 
-2. If necessary, [*switch to the account*](ptl-how-switch-account.md) for which you want to change the security settings.
+2. If necessary, [*switch to the account*](ptl-how-switch-account.md) for which you want to enable 2FA.
 
 3. In the navigation panel, select **Settings**.
 
-    ![Settings menu option in the UKCloud Portal](images/ptl-mnu-settings.png)
+   ![Settings menu option in the UKCloud Portal](images/ptl-mnu-settings.png)
 
 4. On the *Settings* page, select the **Security Settings** tab.
 
-    ![Security Settings tab of the Settings page](images/ptl-settings-tab-security.png)
+   ![Security Settings tab of the Settings page](images/ptl-settings-tab-security.png)
 
 5. Click **Google Two-Factor Authentication (2FA)** to expand the section.
 
 6. Select the **Enable Google Two-Factor Authentication (2FA)** check box.
 
-    ![Enable 2FA security setting](images/ptl-2fa-enable.png)
+   ![Enable 2FA security setting](images/ptl-2fa-enable.png)
 
 7. When you're done, click **Save**.
 
-## Next steps
+   The next time a user logs in to the Portal to access the account, they will be prompted to set up 2FA for their user account. For more information, see [*How to set up two-factor authentication for a user account*](ptl-how-setup-2fa.md).
+
+## Related articles
 
 - [*How to set up two-factor authentication for a user account*](ptl-how-setup-2fa.md)
 
-## Related videos
-
-- [*UKCloud Portal overview video*](ptl-vid-portal.md)
+- [*How to reset two-factor authentication for a user account*](ptl-how-reset-2fa.md)
 
 ## Feedback
 

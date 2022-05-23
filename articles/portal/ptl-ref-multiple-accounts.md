@@ -91,6 +91,8 @@ When you bring a new workload to UKCloud, your Service Delivery Manager (SDM) wi
 
 - [*How to create a new user in the UKCloud Portal*](ptl-how-create-users.md)
 
+- [*How to switch to a different account in the UKCloud Portal*](ptl-how-switch-account.md)
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
