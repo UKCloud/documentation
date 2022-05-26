@@ -3,8 +3,8 @@ title: Considerations when scaling an OpenShift cluster
 description: Provides information on things to consider when scaling a cluster
 services: openshift
 author: koneill
-reviewer: agarner
-lastreviewed: 12/05/2021
+reviewer: alillistone
+lastreviewed: 25/05/2022
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
 toc_sub2:
