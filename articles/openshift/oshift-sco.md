@@ -230,6 +230,10 @@ To assist you in using our services and all associated functionality, the UKClou
 
 Protective Monitoring is available for UKCloud for Red Hat OpenShift. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
+If you require additional protective monitoring services, we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
+
+In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notifications of customer-impacting security incidents. It's the customer's responsibility to report similar incidents to us.
+
 ## Service availability
 
 You are entitled to claim Service Credits for outages to services that take you out of SLA. For more information about how we calculate SLAs, see the [*SLA definition*](../other/other-ref-sla-definition.md).
