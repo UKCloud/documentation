@@ -176,7 +176,7 @@
 <p>With Tier 1 and Tier 2 storage, customers can utilise both types to deliver their solutions - including running VMs utilising disks on different storage types.</p>
 <h3 id="can-i-change-between-storage-types-associated-with-the-vms-ive-deployed">Can I change between storage types associated with the VMs I've deployed?</h3>
 <p>If a customer has both Tier 1 and Tier 2 storage profiles available, they can self-migrate between these storage types.</p>
-<h3 id="what-happens-when-i-switch-off-my-vms-using-the-guest-operating-system">What happens when I switch off my VMs using the guest Operating System?</h3>
+<h3 id="what-happens-when-i-switch-off-my-vms-using-the-guest-operating-system">What happens when I switch off my VMs using the guest operating system?</h3>
 <p>If you shut down your VM using the guest OS, we will recognise this as a 'Power Off' event and you will not be billed while the VM remains in this state. Billing will resume once the VM is powered on again.</p>
 <h3 id="how-do-i-change-the-workload-type-of-a-vdc">How do I change the workload type of a VDC?</h3>
 <p>To change the workload type (for example, ESSENTIAL, POWER or PRIORITY) of a VDC, you must raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal, and the support team will make the necessary changes.</p>
@@ -200,7 +200,7 @@
 <h3 id="can-i-bring-my-own-firewall">Can I bring my own firewall?</h3>
 <p>Customers can choose to deploy the firewall technology of their choice.</p>
 <p>This service, how to order it, and the constraints it may place on operation, is fully documented within our Knowledge Centre.</p>
-<h3 id="what-is-the-advanced-management-bundle-">What is the Advanced Management bundle ?</h3>
+<h3 id="what-is-the-advanced-management-bundle">What is the Advanced Management bundle?</h3>
 <p>The Advanced Management bundle includes Distributed Firewall (DFW), Distributed Logical Router (DLR), Layer 2 VPN and vROPs Tenant Monitoring and Metrics.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -271,8 +271,6 @@
 <p>Independent disks will be charged at the rate of the storage they are stored on, along with any additional protection applied (Journaling or Snapshot Protection) and charged at a rate per GiB per month.</p>
 <h3 id="can-i-use-the-60gib-included-with-my-vm-on-an-independent-disk">Can I use the 60GiB included with my VM on an independent disk?</h3>
 <p>No, as an independent disk can be mounted to any VM inside a customer's VDC, so is not associated with a single VM.</p>
-<h3 id="how-much-included-storage-do-i-get-with-dedicated-compute">How much included storage do I get with Dedicated Compute?</h3>
-<p>You will receive the same allowance as for UKCloud for VMware VMs. For example, 60GiB of Tier 2 storage when the VM is powered on for free. Please note, when the VM is in a powered off state any storage associated with the VM will be charged at the prevailing rate.</p>
 <h2 id="management">Management</h2>
 <h3 id="how-do-i-access-my-systems">How do I access my systems?</h3>
 <p>You can access your VMs using:</p>
@@ -285,6 +283,7 @@
 <h3 id="what-reports-can-i-get-about-vm-performance">What reports can I get about VM performance?</h3>
 <p>You can monitor VM performance using standard tools within the operating system.</p>
 <p>Additionally, UKCloud provides retrospective performance information via its Portal API.</p>
+<p>The Advanced Management bundle for UKCloud for VMware includes advanced monitoring options, powered by the vRealize Operations (vROps) Tenant Appliance, that provide access to more detailed metrics and reports. For more information, see <a href="vmw-how-vrops-use.html"><em>How to access advanced monitoring using the vRealize Operations Tenant Appliance</em></a>.</p>
 <h3 id="does-ukcloud-patch-the-vms">Does UKCloud patch the VMs?</h3>
 <p>No, customers are responsible for the patching of their services. We make a patch repository available to customers for VMs on the Elevated OFFICIAL security domain (which cannot connect to the internet) for common operating systems that we provide.</p>
 <h3 id="how-do-i-access-support-and-patches-for-operating-systems-that-ukcloud-licenses">How do I access support and patches for operating systems that UKCloud licenses?</h3>
@@ -322,7 +321,7 @@
 <h3 id="how-up-to-date-are-the-operating-system-images-and-mirrors">How up to date are the operating system images and mirrors?</h3>
 <p>All CentOS, Ubuntu, Red Hat and Debian distributions include update mechanisms to install the latest patches and releases. For a list of supported operating systems, and instructions on how to access these update repositories, see the Knowledge Centre.</p>
 <h3 id="what-anti-virus-do-you-offer-on-this-service">What anti-virus do you offer on this service?</h3>
-<p>UKCloud doesn't provide any anti-virus (AV) by default, so customers are advised to install their own AV software to protect their workloads.</p>
+<p>For information about UKCloud's Anti-Virus as a Service product, see the <a href="../managed-operations/man-sco-antivirus.html"><em>Anti-Virus as a Service Service Scope</em></a>.</p>
 <h3 id="what-applications-are-available-as-part-of-the-default-service">What applications are available as part of the default service?</h3>
 <p>UKCloud does not offer any additional software other than what's included in the UKCloud Portal catalog. Any additional software, including its licensing, is the customer's responsibility.</p>
 <h3 id="are-open-virtualisation-format-ovf-vm-images-supported">Are Open Virtualisation Format (OVF) VM images supported?</h3>
@@ -375,9 +374,9 @@
 <h3 id="if-i-have-snapshot-protection-on-dedicated-compute-what-will-i-be-charged-for">If I have Snapshot Protection on Dedicated Compute, what will I be charged for?</h3>
 <p>You will only be charged for the protection of the storage consumed, not the VM.</p>
 <h2 id="disaster-recovery">Disaster Recovery</h2>
-<h3 id="does-ukcloud-provide-a-dr-service">Does UKCloud provide a DR service?</h3>
-<p><a href="../draas/draas-sd.html">Disaster Recovery as a Service</a> (powered by Zerto) can help you improve organisational resilience. It enables rapid migration of applications between your local VMware or Hyper-V based VMs and UKCloud for VMware disaster recovery-enabled regions.</p>
-<p>An alternative UKCloud solution to achieve DR with a low RPO and RTO is <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
+<h3 id="does-ukcloud-provide-a-disaster-recovery-dr-service">Does UKCloud provide a disaster recovery (DR) service?</h3>
+<p>With UKCloud for VMware's <a href="vmw-sco-journaling-protection.html"><em>Journaling Protection</em></a> option, you can protect your UKCloud for VMware applications by replicating them to another UKCloud for VMware-enabled zone. This ensures that you can meet your DR requirements, including any aggressive recovery point (RPO) or recovery time objectives (RTO).</p>
+<p><a href="../draas/draas-sd.html"><em>Disaster Recovery as a Service</em></a> enables rapid migration of applications between your local VMware or Hyper-V based VMs and UKCloud for VMware disaster recovery-enabled regions.</p>
 <h3 id="how-does-ukcloud-enable-customers-to-create-their-own-dr-solutions">How does UKCloud enable customers to create their own DR solutions?</h3>
 <p>Although we've engineered our cloud platform to tolerate failures and ensure customers' services remain available, we encourage all our customers to design for failure and build DR capabilities into the system design, or into the application.</p>
 <p>To help this process, the UKCloud platform has been designed to give you the options you need to design a disaster-tolerant solution. UKCloud's platform is about providing customers with choice. Clearly, customers need to balance the low probability of these failure scenarios occurring with the cost and complexity involved in mitigating their impact.</p>
