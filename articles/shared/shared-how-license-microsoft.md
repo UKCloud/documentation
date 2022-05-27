@@ -3,8 +3,8 @@ title: How to license Microsoft software on the UKCloud platform
 description: Explains how Microsoft software, such as Windows Server and SQL, is licensed on the UKCloud platform
 services: shared-services
 author: shall
-reviewer: shall
-lastreviewed: 27/05/2021
+reviewer: aokanlawon
+lastreviewed: 03/05/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
