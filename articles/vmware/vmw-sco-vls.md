@@ -225,7 +225,7 @@ If a customer requires the assistance of our Professional Services, they can eit
 
 If a customer ceases to use VLS, the following will apply:
 
-- The customer must destroy the UKCloud-issued VMware licences and confirm via email to <info@ukcloud.com> that this has been completed
+- The customer must destroy the UKCloud-issued VMware licences and confirm via email to <support@ukcloud.com> that this has been completed
 
 - UKCloud are no longer able to support the customer for any enquiries relating to their own on-premises VMware infrastructure
 
