@@ -4,7 +4,7 @@ description: Describes how to set up two-factor authentication (2FA) for a user 
 services: portal
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/04/2021
+lastreviewed: 21/04/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,14 +20,14 @@ toc_mdlink: ptl-how-setup-2fa.md
 
 ## Overview
 
-If your Portal administrator has enabled two-factor authentication (2FA) in the UKCloud Portal, you must enter a randomly generated code, as well as your user name and password, when logging in to the Portal.
+If your Portal administrator has enabled two-factor authentication (2FA) for a UKCloud Portal customer account, you must enter a randomly generated code, as well as your user name and password, when logging in to the Portal to access the account.
 
 ![Two-Factor Authentication dialog box in the UKCloud Portal](images/ptl-2fa.png)
 
-The first time you log into the Portal after 2FA is enabled, you'll need to to set up 2FA for your user account by registering your account with an authenticator app, such as Google Authenticator.
+The first time you log into the Portal after 2FA is enabled for the account, you'll need to set up 2FA for your user account by registering your account with an authenticator app, such as Google Authenticator.
 
 > [!NOTE]
-> If at any point you need to reset 2FA on your user account, for example if you lose or replace your phone, contact your Portal administrator. After your administrator resets your 2FA, the next time you log in to the Portal, you'll need to set up 2FA again.
+> If you need to reset 2FA on your user account, for example if you lose or replace your phone, contact your Portal administrator. After your administrator resets your 2FA, the next time you log in to the Portal, you'll need to set up 2FA again. For more information, see [*How to reset two-factor authentication for a user account*](ptl-how-reset-2fa.md).
 
 ### Intended audience
 
@@ -45,17 +45,19 @@ When you first log in to a Portal account that has 2FA enabled, you'll be prompt
 
 3. Using your authenticator app, scan the QR code or enter the security key shown in *Step 2* of the *Configure your two-factor authentication* dialog box.
 
-    This is a one-off set up and does not need to be repeated as part of the normal Portal login process.
+   This is a one-off set up task that you will not need to repeat as part of the normal Portal login process.
 
-    ![Configure your two-factor authentication dialog box](images/ptl-2fa-setup.png)
+   ![Configure your two-factor authentication dialog box](images/ptl-2fa-setup.png)
 
 4. Enter the 6 digit code provided by your authenticator app in *Step 3* of the *Configure your two-factor authentication* dialog box and click **Confirm code** to log in to the Portal.
 
 5. For future logins to the Portal, use your authenticator app to generate a 2FA code to confirm your identity and complete the log in process.
 
-## Related videos
+## Related articles
 
-- [*UKCloud Portal overview video*](ptl-vid-portal.md)
+- [*How to reset two-factor authentication for a user account*](ptl-how-reset-2fa.md)
+
+- [*How to enable two-factor authentication in the UKCloud Portal*](ptl-how-enable-2fa.md)
 
 ## Feedback
 

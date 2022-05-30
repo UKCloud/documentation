@@ -95,7 +95,7 @@
 
 <h2 id="overview">Overview</h2>
 <p>System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.</p>
-<p><img src="images/portal_permissions.png" alt="Portal permissions page"></p>
+<p><img src="images/ptl-portal_permissions.png" alt="Portal permissions page"></p>
 <p>Some user permissions are controlled on other pages. See the following articles:</p>
 <ul>
 <li><p><a href="ptl-how-manage-my-calls.html"><em>How to manage My Calls users</em></a></p>
@@ -105,8 +105,8 @@
 <li><p><a href="../openstack/ostack-how-manage-accounts-portal.html"><em>How to manage UKCloud for OpenStack accounts in the UKCloud Portal</em></a></p>
 </li>
 </ul>
-<h2 id="user-is-admin">User is admin?</h2>
-<p>User gets full administrative privileges across the entire account. This includes all of the permissions listed below.</p>
+<h2 id="portal-administrator-permissions">Portal administrator permissions</h2>
+<p>Select the <strong>User is admin?</strong> check box to grant the user full administrative privileges across the entire account. This includes all of the permissions listed below.</p>
 <h2 id="permissions-for-settings">Permissions for Settings</h2>
 <p><strong>Update:</strong> A user can update all of the account settings. This includes changing the security methods applied to the account, such as updating security restrictions to require password timeout and 2FA. These users can also change the details of the account's primary and secondary contacts.</p>
 <p><strong>All:</strong> Presently this offers the same capability the update permission.</p>
@@ -160,10 +160,11 @@
 </li>
 </ul>
 <p>You can find further details of these roles in the <a href="https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html">VMware Cloud Director Service Provider Admin Portal Guide</a>.</p>
-<p>In addition, UKCloud have created an API Only role that restricts users with VMware Cloud Director permissions to accessing VMware Cloud Director solely via the API, with no GUI access.</p>
+<h3 id="api-only-role">API Only role</h3>
+<p>In addition to the VMware Cloud Director permissions, UKCloud has created an API Only role that restricts users with VMware Cloud Director permissions to accessing VMware Cloud Director solely via the API, with no GUI access.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The API Only role must be selected in addition to one of the VMware Cloud Director roles (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.</p>
+<p>The API Only role must be selected in addition to one of the VMware Cloud Director permissions (Admin, Catalogue Author, vApp Author, vApp User or Console Only); you should not select the API Only role on its own.</p>
 </div>
 <h2 id="permissions-for-cloud-storage">Permissions for Cloud Storage</h2>
 <p>Users need to be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. The user will also be able to see consumption data for namespaces and buckets.</p>

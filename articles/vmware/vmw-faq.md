@@ -4,7 +4,7 @@ description: Frequently asked questions for UKCloud for VMware
 services: vmware
 author: mwarner
 reviewer: gmartin
-lastreviewed: 20/08/2019
+lastreviewed: 26/05/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -157,7 +157,7 @@ With Tier 1 and Tier 2 storage, customers can utilise both types to deliver thei
 
 If a customer has both Tier 1 and Tier 2 storage profiles available, they can self-migrate between these storage types.
 
-### What happens when I switch off my VMs using the guest Operating System?
+### What happens when I switch off my VMs using the guest operating system?
 
 If you shut down your VM using the guest OS, we will recognise this as a 'Power Off' event and you will not be billed while the VM remains in this state. Billing will resume once the VM is powered on again.
 
@@ -205,7 +205,7 @@ Customers can choose to deploy the firewall technology of their choice.
 
 This service, how to order it, and the constraints it may place on operation, is fully documented within our Knowledge Centre.
 
-### What is the Advanced Management bundle ?
+### What is the Advanced Management bundle?
 
 The Advanced Management bundle includes Distributed Firewall (DFW), Distributed Logical Router (DLR), Layer 2 VPN and vROPs Tenant Monitoring and Metrics.
 
@@ -319,10 +319,6 @@ Independent disks will be charged at the rate of the storage they are stored on,
 
 No, as an independent disk can be mounted to any VM inside a customer's VDC, so is not associated with a single VM.
 
-### How much included storage do I get with Dedicated Compute?
-
-You will receive the same allowance as for UKCloud for VMware VMs. For example, 60GiB of Tier 2 storage when the VM is powered on for free. Please note, when the VM is in a powered off state any storage associated with the VM will be charged at the prevailing rate.
-
 ## Management
 
 ### How do I access my systems?
@@ -338,6 +334,8 @@ You can access your VMs using:
 You can monitor VM performance using standard tools within the operating system.
 
 Additionally, UKCloud provides retrospective performance information via its Portal API.
+
+The Advanced Management bundle for UKCloud for VMware includes advanced monitoring options, powered by the vRealize Operations (vROps) Tenant Appliance, that provide access to more detailed metrics and reports. For more information, see [*How to access advanced monitoring using the vRealize Operations Tenant Appliance*](vmw-how-vrops-use.md).
 
 ### Does UKCloud patch the VMs?
 
@@ -408,7 +406,7 @@ All CentOS, Ubuntu, Red Hat and Debian distributions include update mechanisms t
 
 ### What anti-virus do you offer on this service?
 
-UKCloud doesn't provide any anti-virus (AV) by default, so customers are advised to install their own AV software to protect their workloads.
+For information about UKCloud's Anti-Virus as a Service product, see the [*Anti-Virus as a Service Service Scope*](../managed-operations/man-sco-antivirus.md).
 
 ### What applications are available as part of the default service?
 
@@ -514,11 +512,11 @@ You will only be charged for the protection of the storage consumed, not the VM.
 
 ## Disaster Recovery
 
-### Does UKCloud provide a DR service?
+### Does UKCloud provide a disaster recovery (DR) service?
 
-[Disaster Recovery as a Service](../draas/draas-sd.md) (powered by Zerto) can help you improve organisational resilience. It enables rapid migration of applications between your local VMware or Hyper-V based VMs and UKCloud for VMware disaster recovery-enabled regions.
+With UKCloud for VMware's [*Journaling Protection*](vmw-sco-journaling-protection.md) option, you can protect your UKCloud for VMware applications by replicating them to another UKCloud for VMware-enabled zone. This ensures that you can meet your DR requirements, including any aggressive recovery point (RPO) or recovery time objectives (RTO).
 
-An alternative UKCloud solution to achieve DR with a low RPO and RTO is [Journaling Protection](vmw-sco-journaling-protection.md).
+[*Disaster Recovery as a Service*](../draas/draas-sd.md) enables rapid migration of applications between your local VMware or Hyper-V based VMs and UKCloud for VMware disaster recovery-enabled regions.
 
 ### How does UKCloud enable customers to create their own DR solutions?
 
@@ -601,10 +599,6 @@ The service is hosted in the UK and operated by UK government security-cleared s
 UKCloud's Cross Domain Security Zone enables customers to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
 For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md).
-
-### Is there a protective monitoring service?
-
-Protective Monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 

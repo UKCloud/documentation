@@ -210,7 +210,7 @@ We monitor, maintain and support our controlled UKCloud for Red Hat OpenShift in
 
 - UKCloud-maintained OpenShift services (for example, router service, DEAs, health manager, cloud controller, control plane nodes, worker nodes, routing layer)
 
-UKCloud for Red Hat OpenShift includes full UKCloud support as standard at no additional charge. For more information about how the support process works, see [*How to raise and escalate support tickets with customer support*](../portal/ptl-how-raise-escalate-service-request.md).
+UKCloud for Red Hat OpenShift includes full UKCloud support as standard at no additional charge. For more information about how the support process works, see [*Raising and escalating support tickets with customer support*](../portal/ptl-ref-raise-escalate-service-request.md).
 
 In addition, you'll be assigned a Service Delivery Manager (SDM) to provide any assistance you may require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
@@ -229,6 +229,10 @@ To assist you in using our services and all associated functionality, the UKClou
 ### Protective Monitoring
 
 Protective Monitoring is available for UKCloud for Red Hat OpenShift. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
+
+If you require additional protective monitoring services, we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
+
+In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notifications of customer-impacting security incidents. It's the customer's responsibility to report similar incidents to us.
 
 ## Service availability
 

@@ -99,6 +99,22 @@ To avoid configuration issues, make sure the metered vCenter Server instances, m
 
 4. The right window will show the current timezone setting. Click edit to change the timezone setting and then save the new setting.
 
+### Password expiry
+
+By default the `usagemeter` and `umauditor` accounts are set to expire their passwords every 90 days. To prevent the password from expiring for these accounts, you need to disable the timeout. Alternatively, you can increase the timeout value to match your security standards.
+
+To disable password timeout:
+
+1. Using the VM's console, log in as `root`.
+
+2. Run the commands `chage -M 0 user-usagemeter` and `chage -M 0 user-umauditor`.
+
+To increase the timeout value: 
+
+1. Using the VM's console, log in as `root`.
+
+2. Run the commands `chage -M <expiration-in-days> user-usagemeter` and `chage -M <expiration-in-days> user-umauditor`.
+
 ### Performing usage meter registration
 
 You access the Usage Meter via a web application. Before you can access the application, you need to set a password.

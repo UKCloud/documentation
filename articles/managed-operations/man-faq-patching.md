@@ -189,7 +189,7 @@ It is the customer's responsibility to ensure their devices are successfully pat
 
 ### What if I require additional patches outside of my standard patching cycle?
 
-The customer is responsible for notifying UKCloud of any patches (including critical patches) they require to be applied outside of their standard patching cycle via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. UKCloud will not proactively scan for or apply any patches outside of a customer's standard patching cycle. Should a customer raise a Service Request for patches to be applied outside of their standard patching cycle, our standard [Service Request resolution target](../portal/ptl-how-raise-escalate-service-request.md) will apply, with the clock starting from the point we receive the Service Request **and** a vendor released patch being made publicly available.
+The customer is responsible for notifying UKCloud of any patches (including critical patches) they require to be applied outside of their standard patching cycle via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. UKCloud will not proactively scan for or apply any patches outside of a customer's standard patching cycle. Should a customer raise a Service Request for patches to be applied outside of their standard patching cycle, our standard [Service Request resolution target](../portal/ptl-ref-raise-escalate-service-request.md) will apply, with the clock starting from the point we receive the Service Request **and** a vendor released patch being made publicly available.
 
 ## Prerequisites
 
@@ -277,7 +277,9 @@ Any customer data that UKCloud collects as part of this service will never leave
 
 ### Is there a protective monitoring service?
 
-Protective monitoring is included with all our IaaS platforms and follows GPG 13.
+Protective monitoring is included with all our IaaS platforms at the hypervisor level and below and follows GPG 13. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
+
+If you require protective monitoring services above the hypervisor we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
 
 ## Feedback
 

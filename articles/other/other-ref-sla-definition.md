@@ -300,7 +300,7 @@ SLA varies based on the chosen cloud technology. See the appropriate section of 
 
 ### VMware Licence Support SLA
 
-There is no SLA for this service. For information about customer service targets for support response, see [*How to raise and escalate support tickets with customer support*](../portal/ptl-how-raise-escalate-service-request.md)).
+There is no SLA for this service. For information about customer service targets for support response, see [*Raising and escalating support tickets with customer support*](../portal/ptl-ref-raise-escalate-service-request.md)).
 
 ## UKCloud service level agreement monitoring
 

@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "woEtw4jiwPrQvhjz8pr9YYjses9Ur9hwnnFyxOKPuLk="
+          "hash": "JUYDuAHhNDMBGv0DlWqXiKIYY1DKIaiOe23EZMrixyo="
         }
       },
       "is_incremental": false,
@@ -621,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sco.html",
-          "hash": "A+p5m37ECGIfsdz/Kq2ccNPk99SrcQqKe/91SmdzE20="
+          "hash": "8uMZxXiUbuBDVD+7i0SlJ3IqnpcaY0P82UzWXJzZqaY="
         }
       },
       "is_incremental": false,
@@ -3265,7 +3265,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-faq.html",
-          "hash": "aJ5C99r9btNTyNd4DbwQaK7+w055XWqXnh7yNJEQtfI="
+          "hash": "hjYqXdpE8QEB0J3Bz+vj/oqQ2KYpjQRjq0gtGMF92f8="
         }
       },
       "is_incremental": false,
@@ -3337,7 +3337,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sco.html",
-          "hash": "4cE7h03BOY0SMgqVI3jzOiDYFd+Gy5gx380PNmg+bAM="
+          "hash": "7OWLOUTZVqyCxvGYXyeXbreM7+jt7jVbD/nngwI9A18="
         }
       },
       "is_incremental": false,
@@ -3450,7 +3450,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-faq.html",
-          "hash": "wzN2E1NDIZ4PzXC4PxI/LgPEcHGZdA7HFnWEmkGpyKo="
+          "hash": "KIyS2S4bVs6IpCFtP9+EWeCciHR2/6XNdQGjVgSiC+Y="
         }
       },
       "is_incremental": false,
@@ -3570,7 +3570,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
-          "hash": "3FAK9J0jFciJQJVS9k2xN2C+9M5QbkK3mMIJK2nnrD8="
+          "hash": "aep2FYSxj2L4WKziPk+37al8ul3dCH4b23PP0Mnu3UY="
         }
       },
       "is_incremental": false,
@@ -5727,7 +5727,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-faq-adv-support-svcs.html",
-          "hash": "fujVcqFqC+2C8cCNRDr81GAZCXH8tNqB/KXsOp03tL4="
+          "hash": "bRq0uTbehyNmYkMLKnDcwmCpQXvWXhctpSGXUlkMjyU="
         }
       },
       "is_incremental": false,
@@ -5739,7 +5739,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-faq-antivirus.html",
-          "hash": "Bkxum3DnRc945oKlDmnJPWfYjETKq2mK3Vle8ZD/2S8="
+          "hash": "HY0Gx48GRu/ohHCYxEC8kiDTrrmJWKnYFEC2FJTDDCE="
         }
       },
       "is_incremental": false,
@@ -5751,7 +5751,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-faq-monitoring.html",
-          "hash": "13Rc1C6HLZCfzSRKkeMHTtp7z0cqqFjF3sUN78wuCSQ="
+          "hash": "ntNUGjmMUPWyqjmcVSflUUD2nKTBrbjVjejl5ROtoPw="
         }
       },
       "is_incremental": false,
@@ -5763,7 +5763,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-faq-patching.html",
-          "hash": "03wX1k+O7oxfYtnS0POLVgt18PqF/YcEfkurpUTHLPg="
+          "hash": "vT8ErNFSJWPLXtRvzWroKXmhWQMVZBbLyRvI0XVbyws="
         }
       },
       "is_incremental": false,
@@ -6883,7 +6883,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "5qRtlbLjgKk1SJioXuvPirOKu6IHqPfXwmOrM9uPuWI="
+          "hash": "UnGN5VCB+hZo4HLJwxt5NPXqFF1xYFa6grMsGlhzkg0="
         }
       },
       "is_incremental": false,
@@ -9009,7 +9009,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "jjtYXttSapGF4cITSfCcebuCVaI0flNiuphRyxw2qUo="
+          "hash": "Zxp0M3buDJ/lWg2Y0pE3KckrWNBGVXnVSrGpOxk8cNs="
         }
       },
       "is_incremental": false,
@@ -10016,7 +10016,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "kvD6uqPXIo7aFaT+RfShXz0wOuYqR7n+2DtepSXXyUE="
+          "hash": "UGiYKpQZ2QCa2eUgJV0tESvFOfVIRheSrok1hn2p9w0="
         }
       },
       "is_incremental": false,
@@ -10901,7 +10901,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-complaints.html",
-          "hash": "2GUTmB+UodJuHjlr0amSi2q6kjO++ndIbwjoq+ICwwE="
+          "hash": "lsgxNZt3P+iNHQbgQNoTdqK6dYqpC+ugYQgBQSrssr0="
         }
       },
       "is_incremental": false,
@@ -10973,7 +10973,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "mYmzGztM6qDbREeXTZ98xIGZ+OC4gOSzkf7AQO6w2sk="
+          "hash": "nih9J7yzHZ5qHKD6/AQ2XQKpstGwXaieCYwYQ7TWEtc="
         }
       },
       "is_incremental": false,
@@ -11045,7 +11045,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-offboarding.html",
-          "hash": "Kignkrer/lZBu3OLbkr0wn60uT78JMBSgkafKYqtsI8="
+          "hash": "oX46nSBUdw4ZVE3xE521Bmw4AURnlwX/ZescPlYv52s="
         }
       },
       "is_incremental": false,
@@ -11117,7 +11117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-promon.html",
-          "hash": "EzGHAoDI+yChuCCpo95Sgl8ksNpb4GSiExbcegBSea8="
+          "hash": "sI6iyrnmXgVIa0CriKePC8Bf/gH2yGmz+ThB7pU1vVw="
         }
       },
       "is_incremental": false,
@@ -11165,7 +11165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "4fWP45VZC9MPS0lgl/zcpH/5rGpE4eeZ2w/P1J/cuXQ="
+          "hash": "o6tEGVNIatx5fxC+1uw61VRt4USvimvv03qf5j7A84s="
         }
       },
       "is_incremental": false,
@@ -11316,17 +11316,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/portal_permissions.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/portal_permissions.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-2fa-enable.png",
       "output": {
         "resource": {
@@ -11452,6 +11441,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-contact-tab-mycalls-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-contact-user.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-contact-user.png"
         }
       },
       "is_incremental": false,
@@ -11833,10 +11833,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mycalls-btn-request-submit.png",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-btn-incident.png",
       "output": {
         "resource": {
-          "relative_path": "articles/portal/images/ptl-mycalls-btn-request-submit.png"
+          "relative_path": "articles/portal/images/ptl-mycalls-btn-incident.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-btn-request.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-btn-request.png"
         }
       },
       "is_incremental": false,
@@ -11888,6 +11899,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-btn-submit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-btn-submit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mycalls-edit-incident.png",
       "output": {
         "resource": {
@@ -11932,10 +11954,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mycalls-incident-reopen.png",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-link.png",
       "output": {
         "resource": {
-          "relative_path": "articles/portal/images/ptl-mycalls-incident-reopen.png"
+          "relative_path": "articles/portal/images/ptl-mycalls-link.png"
         }
       },
       "is_incremental": false,
@@ -12130,28 +12152,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mycalls-template-incident.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-mycalls-template-incident.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-mycalls-template-request.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-mycalls-template-request.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mycalls-ticket-details.png",
       "output": {
         "resource": {
@@ -12167,6 +12167,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-mycalls-ticket-summary.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-tile.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-tile.png"
         }
       },
       "is_incremental": false,
@@ -12200,6 +12211,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-new-contact.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-portal_permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-portal_permissions.png"
         }
       },
       "is_incremental": false,
@@ -12328,6 +12350,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-user-active.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-user-active.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl_mnu-my-calls.png",
       "output": {
         "resource": {
@@ -12343,7 +12376,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "vLoLvBJ9zUir0UZD9stMzr5nHKjgMPvWL3D4Evh9fu8="
+          "hash": "nJIsqAzsadJYOLKbzGqWoHR838I+TvNUnl/QFzha2BE="
         }
       },
       "is_incremental": false,
@@ -12367,7 +12400,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-create-users.html",
-          "hash": "IjXI692V0BPYG5AQn+/SjGtDlWXiy5Fj5sR7BZG6Yfs="
+          "hash": "PSwTypC8uS5PtrVG8D4U/g0Y04NXaAGcA+Xh6xyTiOc="
         }
       },
       "is_incremental": false,
@@ -12379,7 +12412,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-enable-2fa.html",
-          "hash": "I4Yokq9qKRoyWPC5bhaKWnHpjg3FMrm7oHRvXXd4ow0="
+          "hash": "CRm8TQMA+krWFCGrxEQ6Mp4SrcgMRj4JS1Ugu37JMWs="
         }
       },
       "is_incremental": false,
@@ -12391,19 +12424,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-manage-my-calls.html",
-          "hash": "GBRimK39bRJuqxkx6IHP9fL7ZaxoR9N4c2BusmDvu6w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/portal/ptl-how-raise-escalate-service-request.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/portal/ptl-how-raise-escalate-service-request.html",
-          "hash": "Sj4qBJdSiSaFqZuQP39Tvdm+5j90WVwJ60WmUigM55g="
+          "hash": "TqQjLvEmdfKn8SraQQ/L0Ptg8K1bz0FxsXIaztXcHco="
         }
       },
       "is_incremental": false,
@@ -12415,7 +12436,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-reset-2fa.html",
-          "hash": "HOR/6hijWQUYDayQ0gRm7KeiBtqps6nz8wigsW7yM0I="
+          "hash": "qC1ucZHYHw5INQUuxVFP+WEqhMdoR2BIxsrt3iqepus="
         }
       },
       "is_incremental": false,
@@ -12463,7 +12484,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-2fa.html",
-          "hash": "pBs58jtcbbIZ7DvUDLFBDVfifg+fkoa0ybU16T89yWY="
+          "hash": "Fgn4fUOV1SwBlSBpDz6WF+yUZfQqcJuxWhxAEjNbgJU="
         }
       },
       "is_incremental": false,
@@ -12475,7 +12496,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-password-expiration.html",
-          "hash": "02wy+w3wzn/E9eeR8xz8LHceCxkqHljYVh3e8ISDSzs="
+          "hash": "QnXL/CuPWZIeTbz0FCcwdY0Rltyfi9iNQPPumBBMn2w="
         }
       },
       "is_incremental": false,
@@ -12499,7 +12520,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-switch-account.html",
-          "hash": "K4tiynkAigSuwcOUxdDNKGmKna/CXOlXv3rwetusUbo="
+          "hash": "4HVOgUdyzgvsl9q5yhYdCzPU1tM5KwkoJSaWtnzYzkA="
         }
       },
       "is_incremental": false,
@@ -12535,7 +12556,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "P1dI8nZzbvH2DOVSChhNDudG13CXZBVpgChp0nPdczg="
+          "hash": "ymVhyyYAJH/OcPY5fYbYtSnniq4DIkeCCpLRUs3qBLE="
         }
       },
       "is_incremental": false,
@@ -12547,7 +12568,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-view-login-info.html",
-          "hash": "pw3UgP1+nh/MHRJ80reXaCL3ZgqlQchdYYkMkOVcKqg="
+          "hash": "jjf2lKBJWfACzTStdCnCZ8e2T1W+gp41PoWjxzJScIA="
         }
       },
       "is_incremental": false,
@@ -12559,7 +12580,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-multiple-accounts.html",
-          "hash": "IZoSM2hNEIcVvl4wx6B4E+1PtakA26uW1bfS9BcR0t8="
+          "hash": "FygLilxVhmK5p6Q92VkPy/OpOJSkxCQid4dYtA6gayo="
         }
       },
       "is_incremental": false,
@@ -12571,7 +12592,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-overview-permissions.html",
-          "hash": "Byc72tBNF84mNpfcLVzFoAa7CEdl9gDKxegd36clCqs="
+          "hash": "uDYWpNZi/twQLxwVI/jH2YSWZVEKlf2a+ZJ0iJ9Pq6g="
         }
       },
       "is_incremental": false,
@@ -12584,6 +12605,18 @@
         ".html": {
           "relative_path": "articles/portal/ptl-ref-portal-api.html",
           "hash": "tH+iaUODFJkWUjVIi/LbvFgmBCmZJF/BhyaYJfb3MC0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-ref-raise-escalate-service-request.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-ref-raise-escalate-service-request.html",
+          "hash": "wNgVzNCpBt0Yxq6yaMlivLrgq2XTlOYbCxx8gqQrKzg="
         }
       },
       "is_incremental": false,
@@ -12607,7 +12640,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-security-settings.html",
-          "hash": "lv/C4CUuHt8h9iSgh/4cGJdio47/sTfLoSwkSo2xtRk="
+          "hash": "OXKq1K++8B1qbpnkFRiQBWIuzDDbI2htEHKmiXXA3Fo="
         }
       },
       "is_incremental": false,
@@ -12631,7 +12664,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-vid-mycalls.html",
-          "hash": "0EsOO2nwMyUVnlFM8hlp9jWQQQQ94l0HjN5w1FK9PHs="
+          "hash": "SqGAz2F4B/c5q5r/HaJqs8U0fi4t+VmV5+PZsqIyaXU="
         }
       },
       "is_incremental": false,
@@ -12643,7 +12676,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-vid-portal.html",
-          "hash": "XiwVgA3uSu9IxnzJdR37aroQs5e7auFinfD8b6WRfPw="
+          "hash": "2oSTDAnkDBMseeJjwN1oNWDVtR9YOrxHKD/ybcfYAfM="
         }
       },
       "is_incremental": false,
@@ -12655,7 +12688,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "DweL7nvCudE5zyP8TgsktwnrHbqWbkTgzEoZwyyPpxA="
+          "hash": "pSofBC6O0sO0zCkLMgK5/AA2gL5/ZOTLH+FDT/RS/y8="
         }
       },
       "is_incremental": false,
@@ -13026,7 +13059,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-ref-access-to-vms.html",
-          "hash": "Uf6KjRLislbWB9ND7DZ+Fk+pAimYpAHviJThcmUgbX0="
+          "hash": "rOBLPh4MRpjpUz4fShowaz8HGOZ64M2QtRNEFPUaQvk="
         }
       },
       "is_incremental": false,
@@ -13270,7 +13303,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sco.html",
-          "hash": "bfNr/Fi32WFGOe3f+46HbmfqMMV2K7Bm0tSRbzEk4bQ="
+          "hash": "H/O865eVx27ZqhFaUUrR9vLa+n9539ngwwILi2cwkkw="
         }
       },
       "is_incremental": false,
@@ -17470,7 +17503,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "JOBAsCJ+khxJoELUwjwpJQN5OWzEgoj9qMYyBvrhNX8="
+          "hash": "4Z+l/YG+z94j1AT42UtfOcsZbf8sCMYyGtYZzxZMxMk="
         }
       },
       "is_incremental": false,
@@ -18070,7 +18103,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-vls-install-usage-meter-4.html",
-          "hash": "7UBDekfiZL4lQ/xHspd2XxoHB6iXI1BF61ErKHGk6zY="
+          "hash": "3k0vimZkf6gAALDHnH998sEO7EEHdkzYmhPX6JH869U="
         }
       },
       "is_incremental": false,
@@ -18526,7 +18559,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-snapshot-protection.html",
-          "hash": "iuoY8J2JKR4+86In2KKwF5edkNy81+VRFrLskjGS4EU="
+          "hash": "C2dg9xKci0pRidp+unKO/2jak859Cxf3PKhcJtzOz58="
         }
       },
       "is_incremental": false,
@@ -18562,7 +18595,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-vls.html",
-          "hash": "ZfSI1eYmArEeDteUKVFCjEMi3b/Y98gGNVklbWeaKIw="
+          "hash": "vKi3MC8QhRSJycLb+0WXXfo9srg2f86wA88t5v8KppY="
         }
       },
       "is_incremental": false,
@@ -18574,7 +18607,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "eFoEcTf/NUIzcx2vcqCRzDhnqinzbhvHVKtj+p5kALY="
+          "hash": "xjSSw7MuFStT+Jj4e2ePIK0c6Af0n6R0cOeMKqydFS0="
         }
       },
       "is_incremental": false,

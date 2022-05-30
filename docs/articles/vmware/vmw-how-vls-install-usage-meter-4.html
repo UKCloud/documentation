@@ -173,6 +173,22 @@
 <li><p>The right window will show the current timezone setting. Click edit to change the timezone setting and then save the new setting.</p>
 </li>
 </ol>
+<h3 id="password-expiry">Password expiry</h3>
+<p>By default the <code>usagemeter</code> and <code>umauditor</code> accounts are set to expire their passwords every 90 days. To prevent the password from expiring for these accounts, you need to disable the timeout. Alternatively, you can increase the timeout value to match your security standards.</p>
+<p>To disable password timeout:</p>
+<ol>
+<li><p>Using the VM's console, log in as <code>root</code>.</p>
+</li>
+<li><p>Run the commands <code>chage -M 0 user-usagemeter</code> and <code>chage -M 0 user-umauditor</code>.</p>
+</li>
+</ol>
+<p>To increase the timeout value:</p>
+<ol>
+<li><p>Using the VM's console, log in as <code>root</code>.</p>
+</li>
+<li><p>Run the commands <code>chage -M &lt;expiration-in-days&gt; user-usagemeter</code> and <code>chage -M &lt;expiration-in-days&gt; user-umauditor</code>.</p>
+</li>
+</ol>
 <h3 id="performing-usage-meter-registration">Performing usage meter registration</h3>
 <p>You access the Usage Meter via a web application. Before you can access the application, you need to set a password.</p>
 <ol>

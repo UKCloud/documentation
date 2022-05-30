@@ -4,7 +4,7 @@ description: Provides information about the various security settings available 
 services: portal
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 09/04/2021
+lastreviewed: 19/04/2022
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -29,7 +29,7 @@ The UKCloud Portal provides various settings to enable you to provide additional
 
 - **Password expiration** - Set passwords to expire after a specified number of days. This ensures that users change their passwords frequently.
 
-- **Google two-factor authentication (2FA)** - Add an extra level of authentication whereby users provide a security code from an authenticator app (such as Google Authenticator or Authy) as well as their password to confirm their identity.
+- **Google Two-Factor Authentication (2FA)** - Add an extra level of authentication whereby users provide a security code from an authenticator app (such as Google Authenticator or Authy) as well as their password to confirm their identity.
 
 - **Portal access restriction by IP address** - Restrict access so that users can only log in to the Portal from specific IP addresses.
 

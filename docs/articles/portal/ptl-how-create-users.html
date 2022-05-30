@@ -102,7 +102,7 @@
 <ol>
 <li><p><a href="ptl-gs.html#logging-in-to-the-ukcloud-portal"><em>Log in to the UKCloud Portal</em></a> as an administrator.</p>
 </li>
-<li><p>If necessary, <a href="ptl-how-switch-account.html"><em>switch to the account</em></a> that creates the services you want the user to be able to access.</p>
+<li><p>If necessary, <a href="ptl-how-switch-account.html"><em>switch to the account</em></a> that contains the services you want the user to be able to access.</p>
 </li>
 <li><p>In the navigation panel, expand <strong>Contacts</strong>, then select <strong>All Contacts</strong>.</p>
 <p><img src="images/ptl-mnu-all-contacts.png" alt="All contacts menu option in the UKCloud Portal"></p>
@@ -112,23 +112,56 @@
 </li>
 <li><p>On the <strong>New Contact</strong> tab, provide the user's name and contact information, then click <strong>Save</strong>.</p>
 <p><img src="images/ptl-new-contact.png" alt="New Contact page"></p>
-<p>The email address that you provide is used to identify the new user when they log in to the Portal, and also to contact them in various situations. It's also used to send a password reset code if the user requests to reset a forgotten password, but the user can change this to something different if they want to.</p>
+<p>The <strong>Email</strong> address is used to identify the new user when they log in to the Portal and to contact them in various situations. By default, this address is also used to send a password reset code if the user requests to reset a forgotten password. If necessary, the user can change their <strong>Password Reset Email Address</strong> to a different email address (for more information, see <a href="ptl-how-change-email-address.html"><em>How to change your email address in the UKCloud Portal</em></a>).</p>
 </li>
-<li><p>After you've created the user account, you can grant the user access to the different services available in the account. This process varies depending on the service:</p>
+<li><p>Select the <strong>User</strong> tab.</p>
+<p><img src="images/ptl-contact-user.png" alt="User tab"></p>
+</li>
+<li><p>A newly created user account is initially locked, preventing the user from logging in. Select the <strong>Is active?</strong> check box to activate the account.</p>
+<p><img src="images/ptl-user-active.png" alt="Activate new user account"></p>
+</li>
+<li><p>Enter and confirm an initial password for the user, then click <strong>Save</strong>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The password must contain a minimum of 12 characters and must include at least one upper case letter, one lower case letter, a number and a special character.</p>
+</div>
+</li>
+<li><p>After you've created the user account, you can grant the user access to the different services available in the account. This process varies depending on the service.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If you're setting permissions across multiple services, be sure to click the <strong>Save</strong> button before moving between tabs.</p>
+</div>
 <ul>
-<li><p><a href="ptl-how-manage-my-calls.html"><em>How to manage My Calls users</em></a></p>
+<li><p><a href="ptl-ref-overview-permissions.html"><em>Portal permissions</em></a></p>
 </li>
 <li><p><a href="../vmware/vmw-how-manage-vcd-permissions.html"><em>How to manage permissions for VMware Cloud Director</em></a></p>
 </li>
-<li><p><a href="../openstack/ostack-how-manage-accounts-portal.html"><em>How to manage UKCloud for OpenStack accounts in the UKCloud Portal</em></a></p>
+<li><p><a href="ptl-how-manage-my-calls.html"><em>How to manage My Calls users</em></a></p>
 </li>
 <li><p><a href="../openshift/oshift-how-manage-user-access.html"><em>How to manage OpenShift access in the UKCloud Portal</em></a></p>
 </li>
-<li><p><a href="ptl-ref-overview-permissions.html"><em>Portal permissions</em></a></p>
+<li><p><a href="../openstack/ostack-how-manage-accounts-portal.html"><em>How to manage UKCloud for OpenStack accounts in the UKCloud Portal</em></a></p>
 </li>
 </ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It may take up to 15 minutes for permissions to replicate. If the user attempts to access VMware Cloud Director before the permissions have replicated, they may see an error message and should try again a little later.</p>
+</div>
+</li>
+<li><p>If you want to grant the user access to another customer account, first switch to the account that you want to grant access to, then raise a Service Request via <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a>.</p>
 </li>
 </ol>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><p><a href="ptl-ref-user-access.html"><em>Portal user access</em></a></p>
+</li>
+<li><p><a href="ptl-how-change-email-address.html"><em>How to change your email address in the UKCloud Portal</em></a></p>
+</li>
+<li><p><a href="ptl-how-reset-password.html"><em>How to reset your UKCloud Portal password or memorable word</em></a></p>
+</li>
+<li><p><a href="ptl-how-use-my-calls.html"><em>How to use My Calls to raise and monitor support tickets</em></a></p>
+</li>
+</ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
