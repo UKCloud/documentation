@@ -196,10 +196,6 @@ UKCloud's Cross Domain Security Zone allows you to use a customer-designed and m
 
 For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md).
 
-### Is there a protective monitoring service?
-
-Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

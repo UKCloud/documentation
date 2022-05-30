@@ -485,6 +485,8 @@ A complimentary service from UKCloud that ensures our platform, up to the hyperv
 
 For more information, see [Protective Monitoring from UKCloud](../other/other-ref-promon.md).
 
+For information about our Security Operations Service, which offers protective monitoring above the hypervisor, see [Security Operations Service](#security-operations-service).
+
 ### Public Services Network (PSN)
 
 A government network, used by central, local and devolved government organisations. One of UKCloud's connectivity options, available on the Assured OFFICIAL and Elevated OFFICIAL security domains.

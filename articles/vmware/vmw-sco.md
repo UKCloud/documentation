@@ -199,11 +199,11 @@ Full customer and UKCloud responsibilities can be found in the [*Bring Your Own 
 
 ## Protective monitoring
 
-We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
+We've implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
-We don't provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to act at this level.
+If you require protective monitoring services above the hypervisor (for example, for your VM), we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
 
-In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.
+In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notifications of customer-impacting security incidents. It's the customer's responsibility to report similar incidents to us.
 
 ## Platform management
 
