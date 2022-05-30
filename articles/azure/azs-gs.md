@@ -20,7 +20,7 @@ toc_mdlink: azs-gs.md
 
 ## Overview
 
-UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN Protected to HSCN and RLI.
+UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN Protected to HSCN and MCN.
 
 This Getting Started Guide provides you with the information you need to get up and running with UKCloud for Microsoft Azure.
 
@@ -40,7 +40,7 @@ With UKCloud for Microsoft Azure you can:
 
 - Use Azure Stack Hub alongside other technologies, for example, VMware, OpenStack or Oracle
 
-- Connect to government community networks, including PSN, HSCN, Janet and RLI
+- Connect to government community networks, including PSN, HSCN, Janet and MCN
 
 - Meet specific compliance directives, such as data sovereignty or security
 

@@ -137,7 +137,7 @@ If you're interested in any of the following services, contact one of our Cloud 
 
 - Security Operations Service
 
-- RLI connectivity
+- MCN connectivity
 
 ## Feedback
 

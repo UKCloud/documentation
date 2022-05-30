@@ -30,7 +30,7 @@ The LECN is being rolled-out for existing services using the PSNfP. If you're al
 
 We're currently working with the LECN team within Home Office to understand how the network will be presented to consumers so that we can enable connectivity that works in a way for the LECN service provider and our customers.
 
-At the current time, we're not yet sure exactly how we'll present the LECN to our customers, but as per the presentation of our existing networks, we'll aim to use either either multi-tenant (like our PSN connections) or individual connections (like our RLI connections).
+At the current time, we're not yet sure exactly how we'll present the LECN to our customers, but as per the presentation of our existing networks, we'll aim to use either either multi-tenant (like our PSN connections) or individual connections (like our MCN connections).
 
 ## What compliance requirements will there be for access to LECN?
 

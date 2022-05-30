@@ -29,7 +29,7 @@ The UKCloud provides two security domains:
 
 - Assured OFFICIAL provides access to public networks, such as the internet, PSN, HCSN and Janet
 
-- Elevated OFFICIAL provides access to restricted networks, such as RLI, with no direct internet connectivity
+- Elevated OFFICIAL provides access to restricted networks, such as MCN, with no direct internet connectivity
 
 Choose the security domain your workload needs to use.
 

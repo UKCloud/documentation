@@ -96,7 +96,7 @@ Within 5 business days of accepting an order, UKCloud will create the customer's
 
 ## Customer responsibilities
 
-The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.
+The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, MCN or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.
 
 Allowing UKCloud access into customer environments to capture any necessary metrics, alerts or triggers required to provide accurate and reliable monitoring.
 

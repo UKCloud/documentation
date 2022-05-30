@@ -136,7 +136,7 @@ Yes, this service is available on the Assured OFFICIAL environment with connecti
 
 ### Can I connect to the UKCloud Elevated OFFICIAL environment?
 
-Yes, this service is available on the Elevated OFFICIAL environment with connections to the PSN and RLI networks.
+Yes, this service is available on the Elevated OFFICIAL environment with connections to the PSN and MCN networks.
 
 ### Is there connectivity from other regions to Oracle?
 

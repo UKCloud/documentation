@@ -53,7 +53,7 @@ The price of Disaster Recovery as a Service is based on the storage tier that th
 
 ### What connectivity options do I have?
 
-All UKCloud connectivity options are available including internet, PSN, HSCN, Janet and RLI.
+All UKCloud connectivity options are available including internet, PSN, HSCN, Janet and MCN.
 
 ### Can I replicate into the UKCloud Elevated environment?
 
@@ -73,7 +73,7 @@ The pricing for Disaster Recovery as a Service is simple. You only pay for the d
 
 ### How do I modify replication in the UKCloud Elevated environment?
 
-Zerto replication to the UKCloud Assured environment can be controlled from the internet-facing Zerto Portal, however replication into the UKCloud Elevated environment can only be controlled via the Elevated Zerto Portal. To access the Elevated Zerto Portal, you need to be connected to it via the PSN, RLI, private encrypted connection or our Secure Remote Access (SRA) service.
+Zerto replication to the UKCloud Assured environment can be controlled from the internet-facing Zerto Portal, however replication into the UKCloud Elevated environment can only be controlled via the Elevated Zerto Portal. To access the Elevated Zerto Portal, you need to be connected to it via the PSN, MCN, private encrypted connection or our Secure Remote Access (SRA) service.
 
 ### Does UKCloud install the Zerto software in my data centre?
 

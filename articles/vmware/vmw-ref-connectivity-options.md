@@ -96,9 +96,9 @@ In the diagram above, Customer 1's PSN connection is routed to their NFT sitting
 > [!NOTE]
 > UKCloud translates the PSN IP address to one of the external IP ranges that are available on the edge. Your users will target the PSN IP address, however you'll see only your UKCloud allocated external range on your edge, so it's important to know what your PSN IP has been translated to.
 
-#### RLI
+#### MCN
 
-The RLI is also available in the Elevated security domain, however it is not natively connected to the UKCloud platform. This means that, to facilitate a connection to the RLI, you must go through the assurance process provided by the MOD to gain access to the RLI; only then can we complete the connection between the RLI and your VDC. The NFT for RLI sits in a single tenant NFW in line with MOD connection compliance.
+MCN is also available in the Elevated security domain, however it is not natively connected to the UKCloud platform. This means that, to facilitate a connection to MCN, you must go through the assurance process provided by the MOD to gain access to MCN; only then can we complete the connection between MCN and your VDC. The NFT for MCN sits in a single tenant NFW in line with MOD connection compliance.
 
 ### Networking between VDCs
 
@@ -244,7 +244,7 @@ In the Elevated security domain:
 
 - For PSN you'll need to gain approval from the PSN Authority
 
-- For RLI you'll need to get approval from the MOD
+- For MCN you'll need to get approval from the MOD
 
 - For Cross Domain Security Zone services (Walled Garden or SRA) you'll need to get the authorisation from your end-customer IA as well as the UKCloud SIRO
 

@@ -65,7 +65,7 @@ Your compute solution can be:
 
 - In either our Assured OFFICIAL or Elevated OFFICIAL security domain
 
-- Connected via the internet, HybridConnect, Janet, HSCN, PSN, RLI or Secure Remote Access
+- Connected via the internet, HybridConnect, Janet, HSCN, PSN, MCN or Secure Remote Access
 
 ## Upfront deployment charges
 
