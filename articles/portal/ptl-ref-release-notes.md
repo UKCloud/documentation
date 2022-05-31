@@ -3,8 +3,8 @@ title: Portal release notes
 description: Information on latest features included in a Portal update
 services: portal
 author: shighmoor
-reviewer: aboyton 
-lastreviewed: 16/06/2021
+reviewer: shighmoor 
+lastreviewed: 31/05/2022
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
