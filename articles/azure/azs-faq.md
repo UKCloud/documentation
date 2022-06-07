@@ -187,7 +187,7 @@ Yes, we offer a 30-day trial for this service.
 
 ### How do I request a trial?
 
-This can be requested via the [UKCloud website trial page](https://ukcloud.com/free-trial-sign-up) or via your Service Delivery Manager if you an existing customer.
+This can be requested via the UKCloud [Free Trial page](https://ukcloud.com/free-trials/) or via your Service Delivery Manager if you an existing customer.
 
 ### What do I do when my trial comes to an end?
 
