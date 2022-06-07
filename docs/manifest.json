@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "Cg35SU8/j4rmhiWn0UooGMiI5k58KvW0WqxiMf0HN5Q="
+          "hash": "cV0GTUHxRSZIRGynk6AsM/fO0gNNhHCGVnwF8t2vrQM="
         }
       },
       "is_incremental": false,
@@ -3546,7 +3546,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-ref-pricing.html",
-          "hash": "eRTXD2xcPMigMyG/CASvDItMN4L8c25SV8N041rD/xw="
+          "hash": "iCMWxO6MScnhZAnnqjj1zLqDxBTmAWsE6mRRZSfkA/Y="
         }
       },
       "is_incremental": false,
@@ -6835,7 +6835,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-pricing.html",
-          "hash": "zU2jwZRStBFBgEa1hgqN19mKA2jIVIaQGxeCu8xjiaE="
+          "hash": "wM6d8c0IAob2iCKUGhc8e29DDikLzaofAUnAm5iwmpg="
         }
       },
       "is_incremental": false,
@@ -9345,7 +9345,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-pricing.html",
-          "hash": "EVxtYBqCQ02zgXkrsyJCof1sFrojMvyfLWlbnJ3xzio="
+          "hash": "WZQrmWjIPQOzASDAPNrteSOzGCegu7NAySe6gmQkCbU="
         }
       },
       "is_incremental": false,
@@ -9944,7 +9944,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-pricing.html",
-          "hash": "+bpfQ02DnNs4PPmzB8CqDOc+uJcnJ5ussOjBDNVDQsM="
+          "hash": "LPSKDi5PVYmSV6bOcu3d0y+s+H2DieCv9SngTM6/Xgw="
         }
       },
       "is_incremental": false,
@@ -10781,7 +10781,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-eps.html",
-          "hash": "2RbHYftCu93aZEQAJUh3MqhvUcplMI/xRquT/baPirs="
+          "hash": "Iher8CYVKV04por2NnWGCl/EiPxnj/qn/7InBsmCYt8="
         }
       },
       "is_incremental": false,
@@ -11261,7 +11261,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-sco-free-trials.html",
-          "hash": "Lev/NLNkwHeWelLCdyvi6ZgMGdwX4nUwgFgs4d6TAhE="
+          "hash": "nacjhJAeHbIUOs66BgYUvdRuGhcUW59dxs8D8vJIV+U="
         }
       },
       "is_incremental": false,
@@ -17503,7 +17503,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "4Z+l/YG+z94j1AT42UtfOcsZbf8sCMYyGtYZzxZMxMk="
+          "hash": "scQcOkmKMXf/wxIzCTZH/jQ0GR//2jtaT15Y02uVao4="
         }
       },
       "is_incremental": false,
@@ -18307,7 +18307,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-pricing.html",
-          "hash": "V1vIc1EwoZWzVG/naZcMTHXAqnzYNeN/7INHFu68eoo="
+          "hash": "GjpoyG5A95ngJnQwJtgfbcqTVJ3QioRuJ7K/u3tH6aA="
         }
       },
       "is_incremental": false,
