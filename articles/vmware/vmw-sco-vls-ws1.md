@@ -130,9 +130,7 @@ Customers requiring additional licences should contact their Client Director or 
 
 **Service Delivery Manager (SDM).** An assigned point of contact who will provide customers with any assistance required during their use of the service, including onboarding, service reviews and incident reporting and escalation.
 
-**Support Desk.** After the initial onboarding and design phase, customers can utilise the standard UKCloud support entitlement.
-
-For more information, see https://ukcloud.com/ukcloud-support/customer-experience/.
+**Support Desk.** After the initial onboarding and design phase, customers can utilise the standard UKCloud support entitlement. For more information, see [*Raising and escalating support tickets with customer support*](../portal/ptl-ref-raise-escalate-service-request.md).
 
 ## Technical support levels and ownership
 
