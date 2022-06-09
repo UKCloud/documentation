@@ -20,7 +20,7 @@ toc_mdlink: ptl-gs.md
 
 ## Overview
 
-The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you can:
+The UKCloud Portal (https://portal.ukcloud.com/) is the gateway to your UKCloud services. In the Portal, you can:
 
 - Raise and monitor support tickets
 
@@ -61,7 +61,7 @@ The first thing you need to do is log in.
 
 1. Go to the appropriate URL, depending on the security domain in which your service is located:
 
-    - **Assured OFFICIAL:** <https://portal.ukcloud.com>
+    - **Assured OFFICIAL:** <https://portal.ukcloud.com/>
 
     - **Elevated OFFICIAL:** Contact your Portal administrator, your Service Delivery Manager (or <servicedelivery@ukcloud.com>), or UKCloud Support (call 01252 303 300 and select option 2)
 
