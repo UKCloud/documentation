@@ -2,7 +2,7 @@
 title: Neustar UltraDNS from UKCloud FAQs
 description: Frequently asked questions for Neustar UltraDNS from UKCloud (previously Global Load Balancing)
 services: connectivity
-author: Matt Warner
+author: mwarner
 reviewer: hbrunt
 lastreviewed: 16/12/2019
 toc_rootlink: FAQs
@@ -38,6 +38,8 @@ Once the service has been provisioned, we will send you access details for the w
 ## How do I get support?
 
 Support is made available by Neustar directly.
+
+For information about how to manage your service and raise support tickets, go to <https://neustarsecurityservices.com/support>. You can also contact Neustar on +44 808 175 1189.
 
 ## Is there a charge for this service?
 

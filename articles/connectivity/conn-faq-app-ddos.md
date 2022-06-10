@@ -55,6 +55,8 @@ Once the service has been provisioned, you'll receive access details for the cus
 
 Support is made available by Neustar directly.
 
+For information about how to manage your service and raise support tickets, go to <https://neustarsecurityservices.com/support>. You can also contact Neustar on +44 808 175 1189.
+
 ## Is there a charge for this service?
 
 Yes, there's a one-off setup fee of £3,000, and a £5,000 per-month recurring charge, with a 12-month minimum-term contract.
