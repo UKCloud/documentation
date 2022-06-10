@@ -279,7 +279,7 @@ UKCloud can offer additional professional and managed services in relation to Mi
 
 **Service Delivery Manager (SDM).** An assigned point of contact who will provide any assistance required during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
-**Support Desk.** After the initial onboarding and design phase, customers can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
+**Support Desk.** After the initial onboarding and design phase, customers can utilise the standard UKCloud support entitlement. For more information, see [*Raising and escalating support tickets with customer support*](../portal/ptl-ref-raise-escalate-service-request.md).
 
 ## Pricing and billing
 
