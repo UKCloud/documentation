@@ -29,6 +29,8 @@ The pricing model for SRA has two parts:
 
     A Small bastion host is provided free of charge each month per customer. If you decide to increase the size of this VM or provision additional VMs, you'll still receive the value of the first Small VM free of charge per month and this will be deducted from the invoice if larger or additional VMs are used as bastion hosts.
 
+If you'd like a quote for Secure Remote Access, contact your Service Delivery Manger or email <servicedelivery@ukcloud.com>. Or you can [contact us](https://ukcloud.com/contact/) via our website or call 01252 303 300.
+
 ## What's included?
 
 The price of SRA includes:

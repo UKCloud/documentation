@@ -25,6 +25,8 @@ This article provides a list of articles that provide service information about 
 
 - **Pricing information** articles provide pricing examples and supporting information
 
+The full [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide) is available on our website. If you'd like a quote for any of our services, contact your Service Delivery Manger or email <servicedelivery@ukcloud.com>. Or you can [contact us](https://ukcloud.com/contact/) via our website or call 01252 303 300.
+
 ## Multi-cloud technology stacks
 
 Service | Service Definition | Service Scope | Pricing information

@@ -248,8 +248,6 @@ For information about Planned and Emergency Maintenance, see [*Understanding UKC
 
 For UKCloud for Red Hat OpenShift pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide). For additional pricing information related to this service, including pricing examples, billing information, additional fees and free trial information, see [*Pricing information for UKCloud for Red Hat OpenShift*](oshift-ref-pricing.md).
 
-To help understand the potential cost of our UKCloud for Red Hat OpenShift service for your specific requirements, you can download our [Pricing Estimation Tool](https://ukcloud.com/price-estimator-tool/).
-
 ## Termination of service
 
 You can terminate your UKCloud for Red Hat OpenShift service by providing us with no less than 30 days' notice. There are no termination fees for the service.

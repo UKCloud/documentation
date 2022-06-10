@@ -23,6 +23,8 @@ UKCloud Desktop as a Service (DaaS) can achieve an effective price from £24.30 
 
 UKCloud will engage with you to assess your current desktop landscape. This includes understanding the end user roles, applications requirements, performance expectations, end user devices, security requirements, and connectivity needs. Following this initial assessment, UKCloud will recommend and support you through a proof of concept, followed by larger pilot of DaaS to ensure that you achieve the best possible user experience and cost.
 
+If you'd like a quote for UKCloud Desktop as a Service, contact your Service Delivery Manger or email <servicedelivery@ukcloud.com>. Or you can [contact us](https://ukcloud.com/contact/) via our website or call 01252 303 300.
+
 ## Discount options
 
 The following discount and purchase schemes are available with UKCloud for VMware:

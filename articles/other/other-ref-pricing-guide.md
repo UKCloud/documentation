@@ -74,6 +74,8 @@ We also have additional pricing information, including pricing examples, for the
 [Secure Remote Access](../sra/sra-ref-pricing.md)<br>
 [UKCloud Desktop as a Service](../daas/daas-ref-pricing.md)
 
+If you'd like a quote for any of our services, contact your Service Delivery Manger or email <servicedelivery@ukcloud.com>. Or you can [contact us](https://ukcloud.com/contact/) via our website or call 01252 303 300.
+
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

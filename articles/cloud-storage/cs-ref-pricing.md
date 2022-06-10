@@ -23,6 +23,8 @@ UKCloud's Cloud Storage pricing can be as low as 1.46p per GiB per month. Full p
 
 Cloud Storage uses a tiering pricing model. Used storage is calculated on a daily basis and the data for a month is collected, with the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. Cloud Storage is then charged per GiB per month based on the storage tier applicable to the average monthly consumption. When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.
 
+If you'd like a quote for Cloud Storage, contact your Service Delivery Manger or email <servicedelivery@ukcloud.com>. Or you can [contact us](https://ukcloud.com/contact/) via our website or call 01252 303 300.
+
 ## Calculating the cost
 
 To establish your Cloud Storage pricing, follow these steps:

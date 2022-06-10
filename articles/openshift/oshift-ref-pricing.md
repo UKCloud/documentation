@@ -26,6 +26,8 @@ OpenShift is packaged to provide you with a high level of flexibility to scale y
 > [!NOTE]
 > The information in this article is applicable to OpenShift Container Platform (OCP) v4 or higher. For information about OCP 3.x, request the G-Cloud 11 UKCloud Pricing Guide.
 
+If you'd like a quote for UKCloud for Red Hat OpenShift, contact your Service Delivery Manger or email <servicedelivery@ukcloud.com>. Or you can [contact us](https://ukcloud.com/contact/) via our website or call 01252 303 300.
+
 ## UKCloud deployed Red Hat OpenShift Container Platform
 
 This deployment option provides a full Red Hat OCP that has been deployed by UKCloud and is ready to consume without delay.

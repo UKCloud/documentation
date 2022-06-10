@@ -23,6 +23,8 @@ UKCloud for Microsoft Azure VM pricing can be as low as 3p per hour. Full pricin
 
 UKCloud for Microsoft Azure pricing is simple; you only pay for the vCPU and memory you use and any additional storage consumed.
 
+If you'd like a quote for UKCloud for Microsoft Azure, contact your Service Delivery Manger or email <servicedelivery@ukcloud.com>. Or you can [contact us](https://ukcloud.com/contact/) via our website or call 01252 303 300.
+
 ## Public Azure
 
 As a Microsoft Certified Service Provider (CSP), UKCloud can facilitate the sale of Microsoft Azure products and services to customers who are purchasing Azure as part of a broader solution supported by UKCloud's Professional Services, our Managed Services capabilities or as part of a multi-cloud solution in combination with one of our other cloud technologies.
