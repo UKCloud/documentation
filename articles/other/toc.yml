@@ -16,8 +16,6 @@
     href: other-how-contribute-knowledge.md
   - name: Subscribe to service status notifications
     href: other-how-subscribe-service-status.md
-  - name: Use the UKCloud Pricing Estimation Tool
-    href: other-how-use-pricing-tool.md
   - name: Use webhooks to receive service status notifications
     href: other-how-use-webhooks.md
 - name: Reference
@@ -42,8 +40,6 @@
     href: other-ref-idam.md
   - name: Knowledge Centre guidelines
     href: other-ref-knowledge-guidelines.md
-  - name: Known bugs with the UKCloud Pricing Estimation Tool
-    href: other-ref-pricing-tool-bugs.md
   - name: Methods for exporting data
     href: other-ref-export-data.md
   - name: Monitoring the UKCloud platform
@@ -92,7 +88,5 @@
     href: other-sco-free-trials.md
 - name: Videos
   items:
-  - name: Pricing Estimation Tool overview video
-    href: other-vid-pricing-tool-overview.md
   - name: Submitting Knowledge Centre article updates
     href: other-vid-kc-contribution.md

@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-home.html",
-          "hash": "qGTmK+YvvBjlz4bqhlskI4yqf7jJMaU52oHSoot0Lu4="
+          "hash": "hNYxB6BxtX/6bSKzRYniUpmgOacbqeNs4D8kSUYJg6g="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-pricing.html",
-          "hash": "ZaySNe9FztxoSLvFBZ5xcwbICkX4+pzu7+v0LXsFsHc="
+          "hash": "5u/xDzQx6un+13c8VZOmxR1nGAFXd5HoyIpwZ7RDLBM="
         }
       },
       "is_incremental": false,
@@ -621,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sco.html",
-          "hash": "KoIikcrSMEcd2Nb7kAPuf0J8dtLLKIMwHmYkuWU4VWg="
+          "hash": "JEXiq5+DcTxBsegwhtQ14nG/bEQ06u4BxeX47pf+7yg="
         }
       },
       "is_incremental": false,
@@ -3325,7 +3325,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-ref-pricing.html",
-          "hash": "ZgIf4cN/O04bcP1bfMWl1JOj/HOBSo197uQ8tHYTK3o="
+          "hash": "dvgKURalB4EC9DVOudEKoO++W6aOCqGFBUWxWIL/7dE="
         }
       },
       "is_incremental": false,
@@ -3337,7 +3337,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-sco.html",
-          "hash": "7OWLOUTZVqyCxvGYXyeXbreM7+jt7jVbD/nngwI9A18="
+          "hash": "RktrdYkXK0O9y/pLFMwcAlUCMAgF7QNG0QwMOSaPkhQ="
         }
       },
       "is_incremental": false,
@@ -3546,7 +3546,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-ref-pricing.html",
-          "hash": "iCMWxO6MScnhZAnnqjj1zLqDxBTmAWsE6mRRZSfkA/Y="
+          "hash": "Cv08cY4tAALNgxP7bIY7H26EdEt2cGJZSESEZT8qnWE="
         }
       },
       "is_incremental": false,
@@ -3570,7 +3570,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
-          "hash": "W9/my8/0UhoNnYliPwHzS4kSSNGHJkSzV/NdVdC//bQ="
+          "hash": "BlmU2ch9kNF7CfezQ9GQgTJjv2nMuALQveMkA6oUatQ="
         }
       },
       "is_incremental": false,
@@ -4507,7 +4507,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/daas/daas-ref-pricing.html",
-          "hash": "8OkYEPjJHex1EeRtfvEwCdujBynRTiq1RmyclWFPiwY="
+          "hash": "+LEsFWh/8I6htGkHQ2QiPGyZ7qmxlvXfKDtZLBalm1Y="
         }
       },
       "is_incremental": false,
@@ -6499,7 +6499,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-home.html",
-          "hash": "MfSlW28sRhVfuDumiLhlzE1ZNOl8iR/iHUbNh6C+HP8="
+          "hash": "TnTv+KDjlS3K2nkaJmUtbQ1+4pc4tgn2liRDHozx4hE="
         }
       },
       "is_incremental": false,
@@ -6835,7 +6835,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-pricing.html",
-          "hash": "wM6d8c0IAob2iCKUGhc8e29DDikLzaofAUnAm5iwmpg="
+          "hash": "cg/9iC1RjsMJSlpo58mxX41IjB7jbjvoID44UyB8/E4="
         }
       },
       "is_incremental": false,
@@ -6883,7 +6883,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "oYV/x3V3CMiy5s4EdIxzpsUcTXN3QHydaWTlIDxxWXU="
+          "hash": "Flwa5oRILaqfjhAosRiOzgNumn1veGc08sPB/iv3gfA="
         }
       },
       "is_incremental": false,
@@ -9033,7 +9033,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "Z0KZncEICSSYicj9264nDUdv34SwviewmdGd8B+e0dM="
+          "hash": "TPOEg1oTIpTJAi5pUi41UVfMw6e7bxmyYvT2al9M97A="
         }
       },
       "is_incremental": false,
@@ -9345,7 +9345,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-pricing.html",
-          "hash": "WZQrmWjIPQOzASDAPNrteSOzGCegu7NAySe6gmQkCbU="
+          "hash": "tinTZy9zFeLIpPJvWwpCXrE8hqjJW0qRvWcqQ2zuxfU="
         }
       },
       "is_incremental": false,
@@ -10016,7 +10016,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "UGiYKpQZ2QCa2eUgJV0tESvFOfVIRheSrok1hn2p9w0="
+          "hash": "grf/vxZ3g4d67HSxxu1Fg9g10a4Vr3+PVfEJ06I6a58="
         }
       },
       "is_incremental": false,
@@ -10545,208 +10545,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-bug-mac-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-bug-mac-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-bug-mac-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-bug-mac-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-bug-mac-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-bug-mac-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-bug-win-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-bug-win-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-10.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-10.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/other/images/pricing-estimator-4.png",
       "output": {
         "resource": {
           "relative_path": "articles/other/images/pricing-estimator-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-5.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-6.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-7.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-7.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-8.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-8.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-9.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-9.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-download-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-download-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-mac-install-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-mac-install-1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-mac-install-2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-mac-install-2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-mac-install-3.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-mac-install-3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/pricing-estimator-mac-install-4.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/pricing-estimator-mac-install-4.png"
         }
       },
       "is_incremental": false,
@@ -10842,18 +10644,6 @@
         ".html": {
           "relative_path": "articles/other/other-how-subscribe-service-status.html",
           "hash": "m8bg5V//W6neKQlvJldBfr1CzH+pAFEI8aDoSOQdmKE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-how-use-pricing-tool.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-how-use-pricing-tool.html",
-          "hash": "AlIjvXqLwFBkcLotzP6Uux+P6WyDUNpcERWhdP6L25w="
         }
       },
       "is_incremental": false,
@@ -11057,19 +10847,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "0Xeu4xJjOJ+fVWDzDVDbXVdkV2sGP3wS3FU0oGmf9sk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-pricing-tool-bugs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-pricing-tool-bugs.html",
-          "hash": "gzNdT6NhWFPcYOGRgHb/Gc80LujeaXhUVtk5N7+nylo="
+          "hash": "29Bg0Kt+oB+1sk/O0UXZ15s5SfKjBbmkzUGGcxKlm7s="
         }
       },
       "is_incremental": false,
@@ -11129,7 +10907,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "3NygneEOUSkrRGprZ1pi6MfxOr0c/QmstLbio9Hk7Yk="
+          "hash": "VlLK68OLMlIVc5Xo9+EsO8ehw+pIRPlu1tgNlbWsSHE="
         }
       },
       "is_incremental": false,
@@ -11280,24 +11058,12 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/other/other-vid-pricing-tool-overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-vid-pricing-tool-overview.html",
-          "hash": "+753ZJb4AbnpLN3yOnoA9Hds/Fuv44TMQxe/qy6IH9k="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/other/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "Az0KdSwvhDhatu98HadTuRUqCBd+VXgchvCdMrDEEeE="
+          "hash": "VuWcrQrnB0t7rJXiPCTnO7ttT0YrBiab/NulfNCipKQ="
         }
       },
       "is_incremental": false,
@@ -12376,7 +12142,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "nJIsqAzsadJYOLKbzGqWoHR838I+TvNUnl/QFzha2BE="
+          "hash": "9XgJZqJnvSU7Om2Ji6xQuWPOGl0wkWyHCpmIU/Yg604="
         }
       },
       "is_incremental": false,
@@ -13291,7 +13057,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-ref-pricing.html",
-          "hash": "4U9pe65k8JOSLCbABe7oxgToXhwAFtMCypKjPRLD+FI="
+          "hash": "Zf1ZLccKY5uJ9yMxKpHoEe4/SX+IdIlnsHqYzBRBxBY="
         }
       },
       "is_incremental": false,
@@ -13303,7 +13069,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-sco.html",
-          "hash": "zi3LBccUCGm/PwyCHT1oNeLZlzbQOrd1ki53JtHvrjY="
+          "hash": "smBiFIwuZ10VzHx5diRyZaybh+eZwTrXvaNShq+nRrU="
         }
       },
       "is_incremental": false,
@@ -17551,7 +17317,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-home.html",
-          "hash": "ocjgTKHMpvCmFS7yu4JzrJOqRvrw+puM0YCGgdgiUO0="
+          "hash": "wleHY7tQRvnYXFSx8q93fDgMoHAiM+BAT0TKmk8qQfI="
         }
       },
       "is_incremental": false,
@@ -18307,7 +18073,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-pricing.html",
-          "hash": "GjpoyG5A95ngJnQwJtgfbcqTVJ3QioRuJ7K/u3tH6aA="
+          "hash": "Obmwd3k91isADvGwkQxyk7X3XiGvJaRq2KOCdZnOBAA="
         }
       },
       "is_incremental": false,
@@ -18583,7 +18349,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-vls-ws1.html",
-          "hash": "RuA3yFGIPCpje3PUTvNMXAUN9HpIqePoDDiQ2CtWjKo="
+          "hash": "el6IpS14w8VJqjszUzm0/rooiCkSfnBMW8t8JDw7oog="
         }
       },
       "is_incremental": false,
@@ -18607,7 +18373,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "Mc5VN9jWS60LVS6P/dK6F7u3+SgqtEO0dx3QzXxvMWU="
+          "hash": "j9iI6Rqw4nVBTEGO360bHROqw+3Dd92hMLjrdJqaGq4="
         }
       },
       "is_incremental": false,
@@ -18746,7 +18512,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 455,
+          "total_file_count": 452,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
