@@ -21,6 +21,8 @@ toc_mdlink: ostack-ref-pricing.md
 
 UKCloud for OpenStack instance pricing can be as low as 1p per hour. Full pricing with all options, including licensing and connectivity, is available in the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
 
+If you'd like a quote for UKCloud for OpenStack, contact your Service Delivery Manger or email <servicedelivery@ukcloud.com>. Or you can [contact us](https://ukcloud.com/contact/) via our website or call 01252 303 300.
+
 ## Instances
 
 Instance pricing is based on a minimum billing period of one hour and depends on the choice of:

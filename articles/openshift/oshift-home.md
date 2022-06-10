@@ -207,6 +207,7 @@ toc_mdlink: oshift-home.md
 <div class="row">
   <div class="col-md-12">
     <p>The <a href="https://ukcloud.com/pricing-guide"><strong>UKCloud Pricing Guide</strong></a> lists all our product pricing. For examples of how pricing works for UKCloud for Red Hat OpenShift, take a look at our <a href="oshift-ref-pricing.md"><strong>Pricing information</strong></a> article.</p>
+    <p>If you'd like a quote for UKCloud for Red Hat OpenShift, contact your Service Delivery Manger or email <a href="mailto:servicedelivery@ukcloud.com"><strong>servicedelivery@ukcloud.com</strong></a>. Or you can <a href="https://ukcloud.com/contact/"><strong>Contact us</strong></a> via our website or call 01252 303 300.</p>
     <p><strong>To buy UKCloud for Red Hat OpenShift:</strong></p>
   </div>
 </div>
@@ -217,7 +218,7 @@ toc_mdlink: oshift-home.md
     <p style="margin-left:15px">Raise a Service Request, contact your Service Delivery Manager or email <a href="mailto:servicedelivery@ukcloud.com"><strong>servicedelivery@ukcloud.com</strong></a></p>
   </div>
   <div class="col-md-6">
-    <p><em>If you're a new UKCloud customer</em></p>
+    <p><em>If you're new to UKCloud</em></p>
     <p style="margin-left:15px"><a href="https://ukcloud.com/contact/"><strong>Contact us</strong></a> via our website or call us on 01252 303 300</p>
   </div>
 </div>

@@ -25,6 +25,8 @@ UKCloud for VMware VMs are priced per hour. Your bills are based on actual consu
 
 Our flexible VM sizes enable you to map resources to your existing specifications.
 
+If you'd like a quote for UKCloud for VMware, contact your Service Delivery Manger or email <servicedelivery@ukcloud.com>. Or you can [contact us](https://ukcloud.com/contact/) via our website or call 01252 303 300.
+
 ## Calculating the cost
 
 Follow these easy steps to define your solution and calculate the costs:
