@@ -17197,7 +17197,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "UG15i/9iWeqXuna+UIXXVj9FlIeYepJcUg7G/eiBl4o="
+          "hash": "2yFA2dNcTOsRVZCRh0UXef92J5sb8YZ8pYhNVZZJwVw="
         }
       },
       "is_incremental": false,
@@ -18045,6 +18045,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-onboarding.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-onboarding.html",
+          "hash": "5NCsvmrlWMOvHiUjLfRKVHHgas66mwlptLj3V9fYzyg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-oversized-vms.md",
       "output": {
         ".html": {
@@ -18512,7 +18524,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 452,
+          "total_file_count": 453,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

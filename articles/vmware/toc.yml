@@ -166,6 +166,8 @@
     href: vmw-ref-naming-vms.md
   - name: Nested hypervisors
     href: vmw-ref-nested-hypervisors.md
+  - name: Onboarding responsibilities
+    href: vmw-ref-onboarding.md
   - name: Oversized VMs on UKCloud for VMware
     href: vmw-ref-oversized-vms.md
   - name: PowerCLI command for interacting with the vCloud API
