@@ -4,7 +4,7 @@ description: Lists terms that apply to specific UKCloud products and services
 services: other
 author: shighmoor
 reviewer: dbooton
-lastreviewed: 08/12/2021
+lastreviewed: 13/06/2022
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -18,7 +18,7 @@ toc_mdlink: other-ref-terms-and-conditions-products.md
 
 # UKCloud Ltd Product-Specific Terms and Conditions
 
-Last updated: 7th July 2020
+Last updated: 13th June 2022
 
 ## Multi-Tenanted Services
 
@@ -269,29 +269,69 @@ At the point of termination, You are responsible for removing all Content by 23:
 
 ## VMware Licence Service (VLS)
 
-1.    You can choose to either pay for the VLS upfront or be billed monthly in arrears. 
+1.    The VLS Agreed Term, is the period of time the initial VLS Consumption Estimate is based upon.
 
-2.    Both options require a Purchase Order for the full amount at the point that the order is placed with Us.
+2.    The VLS Contract Term, is the VLS Agreed Term plus an additional 12 months, to allow outstanding VLS funds to be consumed, should actual consumption be reduced during the contract below the initial consumption estimate.
 
-3.    If You choose to pay upfront You will be invoiced for the full amount upon Our receipt of the Purchase Order.
+3.    The Buyer will pay for the VLS service at the outset of the contract. The VLS funds are then consumed for use of the VMware capability over the agreed term. 
 
-4.    Upfront payments are not refundable.  
+4.    A Purchase Order will be required for the full amount at the point that the order is placed with the Provider and prior to any licences keys being provided.
 
-5.    You can choose to combine fixed price and consumption based profiles to suit Your requirements.  
+5.    The Buyer will be invoiced for the full amount upon the Provider's receipt of the Purchase Order.
 
-6.    VLS is provided on a fixed 24 month term. If the initial VLS purchase is consumed within the term, You are not obliged to make any further purchases. 
+6.    VLS payments are not refundable.  
 
-7.    Any balance that is outstanding at the end of the 24 month term is not refundable.
+7.    VLS payments are a common VLS fund and may be used across the full range VMware licences available under the VLS programme. Changes to the licences being consumed by the customer may be made to suit the customers' requirements on a regular basis.
 
-8.    You will need to install a usage meter in order to consume the VLS. We will provide instructions and assistance as is reasonably required by You.
+8.    VLS is typically provided on an initial 12 month minimum term. If the initial VLS purchase is consumed within the term, the Buyer is not obliged to make any further purchases.
 
-9.    You must tell Us about quantity and type of licenses You require under VLS and use the licence keys that We will provide.
+9.    VLS may be purchased on terms longer than 12 months
 
-10.    Usage to be reported to <vls@ukcloud.com>  during the first calendar week of each calendar month during the term of the Call-Off Contract.  
+10.    The Customer may make Additional or 'Top Up' payments to the VLS fund at any time.
 
-11.    You must remove all licences provided under the Call-Off Contract from use at the point of Service termination.
+11.    The Customer must provide the Provider with the quantity and type of licenses the Customer requires under VLS and use the licence keys that the Provider supplies.
 
-12.    Upon Service termination You must pay any outstanding charges to Us in accordance with the terms of the Call-Off Contract.
+12.    Any balance in the VLS fund that is outstanding at the end of the agreed term + 12months is no longer available for consumption.
+
+13.    The Customer is required to install the VMware Usage Meter in order to consume the VLS service. The Provider will provide instructions and assistance as is reasonably required by the Customer.
+
+14.    All licence keys provided and deployed under the VLS programme must be registered and use recorded by the VMware Usage Meter.
+
+15.    VLS reporting via the Usage Meter is designed to be automated, uploaded data directly to the VMware Commerce Portal. Should any manual VLS reporting be required, then this Usage is to be reported to vls@ukcloud.com during the first calendar week of each calendar month during the term.  
+
+16.    VLS is provided with Production Support through UKCloud and VMware.
+
+17.    Customer must maintain VMware licencing on software levels published under VMware General Support. 
+
+18.    At the end of the contract term, or once all VLS funds are depleted whichever occurs first. the Customer must remove from use all licence keys provided under the VLS programme. The Customer retains no rights to on-going benefit or use of VLS licence keys.
+
+19.    UKCloud VLS licence keys are not transferable to another provider delivering an equivalent service.
+
+20.    Upon Service termination the Buyer must pay any outstanding charges to the Provider in accordance with the terms of this Statement of Work.
+
+## VMware Workspace One Managed Service Terms
+
+1.    The WSP1 service is fixed to 1, 2 or 3 years.  Subsequent additional licences will be co-termed to the original term.
+
+2.    Once contracted the numbers of WSP1 licences provided cannot be reduced until the end of the contracted term.
+
+3.    The Buyer will pay for the WSP1 service at the outset of the contract. 
+
+4.    A Purchase Order will be required for the full amount at the point that the order is placed with the Provider and prior to any licences keys being provided.
+
+5.    The Buyer will be invoiced for the full amount upon the Provider's receipt of the Purchase Order.
+
+6.    WSP1 payments are not refundable.  
+
+7.    At the end of the contracted term the Buyer is not obliged to make any further purchases.
+
+8.    The Customer must provide the Provider with the quantity and type of licenses the Customer requires and these will be provisioned under the customer WSP1 tenancy in the VMWare UEM Portal.
+
+9.    At the end of the contract term, the service may be renewed, extended or otherwise modified. All services that are not continued will be terminated in the Tenancy and will no longer be available to the customer. 
+
+10.    UKCloud provides support on the underlying operational WSP1 platform.  Unless separately agreed and contracted, the customer is responsible for all end user / device issues.
+
+11.    Upon Service termination the Buyer must pay any outstanding charges to the Provider in accordance with the terms of this Statement of Work.
 
 ## Multi-Cloud for Microsoft Azure Services
 
