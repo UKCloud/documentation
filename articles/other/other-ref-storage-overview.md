@@ -3,8 +3,8 @@ title: Storage options on the UKCloud platform
 description: Provides an overview of the different storage options available on the UKCloud platform
 services: other
 author: shighmoor
-reviewer:
-lastreviewed: 11/06/2021
+reviewer: shall
+lastreviewed: 31/05/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
