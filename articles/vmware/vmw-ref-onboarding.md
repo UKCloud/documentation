@@ -39,8 +39,8 @@ The following table outlines the boundaries of responsibilities for onboarding U
 
 Onboarding activity                                                                         | UKCloud  | Customer | Notes
 --------------------------------------------------------------------------------------------|----------|----------|------
-Project management                                                                          | C        | R/A      | UKCloud project management available as a Professional Service
-Solution design, incuding HLD/LLDs                                                          | C        | R/A      | UKCloud solution design and documentation available as a Professional Service
+Project management                                                                          | C        | R/A      | UKCloud project management available as a [*Professional Service*](../pro-services/ps-sd.md)
+Solution design, incuding HLD/LLDs                                                          | C        | R/A      | UKCloud solution design and documentation available as a [*Professional Service*](../pro-services/ps-sd.md)
 Systems configuration documentation                                                         | R/A      |          |
 Provision of customer account                                                               | R/A      | C        |
 Provide named UKCloud customer success contact                                              | R/A      | I        |
@@ -55,33 +55,33 @@ Provision of customer external connectivity to internet/native government networ
 Ordering external private networks (for example, leased lines into UKCloud DC Campus (Ark)) | C        | R/A      | Customer should order from a Telco who has presence in Ark; UKCloud will supply information to assist in ordering
 Installing external private networks into UKCloud DC campus (Ark)                           | R/C      | R/A      | Telco will work directly with Ark to install private network
 Installing cross-connects from private networks into customer environments                  | R/A      | I        | Ark provide physical cabling from Telco termination point to UKCloud Cloud location within Ark
-Configuration of private network presentation to customer environment                       | R/A      | R/C      | Customer environment build available as a Professional Service
+Configuration of private network presentation to customer environment                       | R/A      | R/C      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
 Provision of complementary firewall services (NSX)                                          | R/A      | C/I      |
-Provision of Bring Your Own Firewall (BYOF)                                                 | R/C      | R/A      | Customer environment build available as a Professional Service
-Creation of firewall rules                                                                  | I        | R/A      | Customer environment build available as a Professional Service
-Creation of virtual networks within customer environment                                    | I        | R/A      | Customer environment build available as a Professional Service
-Creation of virtual machines within customer environment                                    | I        | R/A      | Customer environment build available as a Professional Service
+Provision of Bring Your Own Firewall (BYOF)                                                 | R/C      | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+Creation of firewall rules                                                                  | I        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+Creation of virtual networks within customer environment                                    | I        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+Creation of virtual machines within customer environment                                    | I        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
 Make available general VM OS templates (for example, Windows Server)                        | R/A      | I        |
-Upload of VM image templates                                                                | C/I      | R/A      | Customer environment build available as a Professional Service
-Import of existing data                                                                     | C/I      | R/A      | Bulk data transfer services available on demand using Mass Data Transfer
+Upload of VM image templates                                                                | C/I      | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+Import of existing data                                                                     | C/I      | R/A      | Bulk data transfer services available on demand using [*Mass Data Transfer*](../enablement/enbl-sco-mtf-nas.md)
 Provision of storage volumes for customer environment                                       | R/A      | C        |
-Creation of VM-attached storage                                                             | I        | RA       | Customer environment build available as a Professional Service
+Creation of VM-attached storage                                                             | I        | RA       | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
 Provision of VM OS update repositories and licencing services                               | R/A      | I        |
-VM base configuration (NTP/licence activation/connect to repositories)                      | C        | R/A      | Customer environment build available as a Professional Service
-VM security configuration (for example, hardening, AV installation)                         | I        | R/A      | Customer environment build available as a Professional Service
-VM advanced configuration (for example, application/DB installation)                        | I        | R/A      | Customer environment build available as a Professional Service
-VM optimisation and troubleshooting                                                         | C        | R/A      | Customer environment build available as a Professional Service
-Configuration of VM power schedules                                                         | I        | R/A      | Customer environment build available as a Professional Service
-Install and configure VM Protective Monitoring solution                                     | I        | R/A      | UKCloud Security Operations Service available on demand
-IT Health Check / accreditation activities                                                  | C        | A        | Customer environment build available as a Professional Service
+VM base configuration (NTP/licence activation/connect to repositories)                      | C        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+VM security configuration (for example, hardening, AV installation)                         | I        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+VM advanced configuration (for example, application/DB installation)                        | I        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+VM optimisation and troubleshooting                                                         | C        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+Configuration of VM power schedules                                                         | I        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+Install and configure VM Protective Monitoring solution                                     | I        | R/A      | UKCloud [*Security Operations Service*](../soc/soc-sd.md) available on demand
+IT Health Check / accreditation activities                                                  | C        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
 Provision of backup target storage                                                          | R/A      | I        |
-Enabling backups for specific VMs                                                           | I        | R/A      | Customer environment build available as a Professional Service
+Enabling backups for specific VMs                                                           | I        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
 Provision of Zerto Journaling Protection for disaster recovery                              | R/A      | C        |
-Configuration of Zerto service to replicate virtual machines                                | I        | R/A      | Customer environment build available as a Professional Service
-Provision of physical hosting for co-location                                               | R/A      | C        | Co-location is available as a Cloud Enablement service
+Configuration of Zerto service to replicate virtual machines                                | I        | R/A      | Customer environment build available as a [*Professional Service*](../pro-services/ps-sd.md)
+Provision of physical hosting for co-location                                               | R/A      | C        | Co-location is available as a [*Cloud Enablement*](../enablement/enbl-sco-hosting.md) service
 Purchase of physical infrastructure required within co-location                             | C        | R/A      | UKCloud can resell hardware (for example, firewalls) to a customer if required
-Installation of physical infrastructure in hosting service                                  | R/A      | R/A      | Co-location is available as a Cloud Enablement service
-Escorting for physical infrastructure installation in hosting service                       | R/A      | R/C      | Co-location is available as a Cloud Enablement service
+Installation of physical infrastructure in hosting service                                  | R/A      | R/A      | Co-location is available as a [*Cloud Enablement*](../enablement/enbl-sco-hosting.md) service
+Escorting for physical infrastructure installation in hosting service                       | R/A      | R/C      | Co-location is available as a [*Cloud Enablement*](../enablement/enbl-sco-hosting.md) service
 
 ## Feedback
 
