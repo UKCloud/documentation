@@ -220,12 +220,12 @@
       href: vmw-sco.md
   - name: VMware Licence Service
     items:
-    - name: Service Definition
-      href: vmw-sd-vls.md
-    - name: Service Scope
-      href: vmw-sco-vls.md
-    - name: Service Scope
+    - name: UKCloud VMware Workspace ONE VLS Service Scope
       href: vmw-sco-vls-ws1.md
+    - name: VMware Licence Service (VLS) Service Definition
+      href: vmw-sd-vls.md
+    - name: VMware Licence Service (VLS) Service Scope
+      href: vmw-sco-vls.md
 - name: Videos
   items:
   - name: Benefits of VMware L2 VPN
