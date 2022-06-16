@@ -11,7 +11,7 @@ toc_sub1: VMware Licence Service
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Service Scope
+toc_title: UKCloud VMware Workspace ONE VLS Service Scope
 toc_fullpath: Service Information/VMware Licence Service/vmw-sco-vls-ws1.md
 toc_mdlink: vmw-sco-vls-ws1.md
 ---
