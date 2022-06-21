@@ -13,7 +13,7 @@ toc_sub3:
 toc_sub4:
 toc_title: UKCloud complaints procedure
 toc_fullpath: Reference/other-ref-complaints.md
-toc_mdlink: other-ref-complaintss.md
+toc_mdlink: other-ref-complaints.md
 ---
 
 # UKCloud complaints procedure
