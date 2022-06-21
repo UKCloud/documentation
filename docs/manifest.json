@@ -11058,15 +11058,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/other/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "wazQBUqYYUc4FN8fCjMwH90VCEWzPHjOSJ6WanqGnA0="
+          "hash": "VuWcrQrnB0t7rJXiPCTnO7ttT0YrBiab/NulfNCipKQ="
         }
       },
       "is_incremental": false,
