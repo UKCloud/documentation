@@ -109,25 +109,42 @@
 <li><p>In the <em>New</em> blade, select <strong>Security + Identity</strong>.</p>
 <p><img src="images/azs-browser-new-security.png" alt="Security option in New blade"></p>
 </li>
-<li><p>In the <em>New</em> blade, select <strong>Key Vault</strong>.</p>
+<li><p>In the <em>Security + Identity</em> blade, select <strong>Key Vault</strong>.</p>
 <p><img src="images/azs-browser-new-key-vault.png" alt="New Key Vault"></p>
 </li>
-<li><p>In the <strong>Create key vault</strong> blade, enter the following information:</p>
+<li><p>In the <em>Create key vault</em> blade, enter the following information:</p>
 <ul>
-<li><p><strong>Name</strong> - The name of the key vault.</p>
-</li>
+<li><p><strong>Basics</strong> tab</p>
+<ul>
 <li><p><strong>Subscription</strong> - This is your UKCloud for Microsoft Azure subscription.</p>
 </li>
-<li><p><strong>Resource Group</strong> - Select an existing resource group, or create a new one by typing a name for your new resource group.</p>
+<li><p><strong>Resource group</strong> - Select an existing resource group, or create a new one by clicking the <strong>Create new</strong> link and then typing a name for your new resource group in the pop-out window.</p>
 </li>
-<li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the location of the Azure Stack Hub.</p>
+<li><p><strong>Key vault name</strong> - The name of the key vault.</p>
 </li>
-<li><p><strong>Access policies</strong> - Configure who can access the key vault and what permissions they have.</p>
-<p><img src="images/azs-browser-create-key-vault.png" alt="Create new key vault"></p>
+<li><p><strong>Region</strong> - This will be <code>frn00006</code>, which is the Azure Stack Hub region.</p>
+</li>
+<li><p><strong>Pricing tier</strong> - Azure Stack Hub only offers the Standard pricing tier.</p>
+<p><img src="images/azs-browser-create-key-vault-basics.png" alt="Create new key vault &gt; Basics"></p>
 </li>
 </ul>
 </li>
-<li><p>Click <strong>Create</strong>.</p>
+<li><p><strong>Access policy</strong> tab</p>
+<ul>
+<li><p><strong>Enable Access to:</strong> - Select the check boxes to specify whether certain Azure services are allowed access to the key vault.</p>
+</li>
+<li><p><strong>Current Access Policies</strong> - Select <strong>+Add access policy</strong> to configure the permissions that a user, group or service principal has to the key vault.</p>
+<p><img src="images/azs-browser-create-key-vault-accesspolicy.png" alt="Create new key vault &gt; Access policy"></p>
+<p><img src="images/azs-browser-create-key-vault-accesspolicy-add.png" alt="Create new key vault &gt; Access policy &gt; Add"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Review + create</strong>.</p>
+</li>
+<li><p>On the <strong>Review + create</strong> tab, review the selections you've made and then click <strong>Create</strong> to start the deployment.</p>
+<p><img src="images/azs-browser-create-key-vault-review.png" alt="!Create new key vault &gt; Review"></p>
 </li>
 <li><p>You can monitor the progress of your key vault's deployment by clicking the <strong>Notifications</strong> icon.</p>
 <p><img src="images/azsp_createvm_progress.png" alt="!Notification showing vault deployment in progress"></p>
@@ -135,7 +152,7 @@
 </ol>
 <h2 id="adding-a-secret-to-the-key-vault">Adding a secret to the key vault</h2>
 <ol>
-<li><p>Once the key vault has been deployed, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security + Identity</em> section.</p>
+<li><p>Once the key vault has been deployed, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security</em> section.</p>
 </li>
 <li><p>Select your key vault from the list.</p>
 </li>
@@ -147,7 +164,7 @@
 <ul>
 <li><p><strong>Upload Options</strong> - Manually enter a secret or upload an x.509 certificate.</p>
 </li>
-<li><p><strong>Name</strong> - The name of the secret.</p>
+<li><p><strong>Name</strong> - The name of the secret. Secret names can only contain alphanumeric characters and dashes.</p>
 </li>
 <li><p><strong>Value</strong> - The value you are storing as a secret.</p>
 </li>
@@ -170,8 +187,10 @@
 <li><p>Once you've created the secret, select it on the <em>Secrets</em> page.</p>
 </li>
 <li><p>On the secret's blade, select the current version.</p>
+<p><img src="images/azs-browser-select-secret-version.png" alt="Select secret version"></p>
 </li>
 <li><p>On the current version's blade, click the <strong>Show secret value</strong> button.</p>
+<p><img src="images/azs-browser-view-secret-value.png" alt="View secret value"></p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>

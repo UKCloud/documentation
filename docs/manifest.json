@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-custom-script-extension.html",
-          "hash": "R+L50kqyk8PcQ4BXvs2NRMiCc+3Pxmkgsya8Fbbw4SM="
+          "hash": "C4VrJypVLAOVVdG2PSBAHZpmKAY/JQG0tOk25OqmZkw="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-key-vault-portal.html",
-          "hash": "fwKHp6ydrR58iv4XVPnuw8sdtx7RfmCQx/mKxCNW/kc="
+          "hash": "sQ1P3PupONtuZhlH9t/tuuy8JlGnf5AqZphmx0RdDLk="
         }
       },
       "is_incremental": false,
@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-move-vm-new-vnet-ps.html",
-          "hash": "Pa33dRHKC7rbKB1Zp8rnsvGYoLfDeA93/4gLdOBI+f0="
+          "hash": "K1p/tmPkunxcxIaqWH2Q5jEBRvNkQzLecw4yvqNO1nY="
         }
       },
       "is_incremental": false,
@@ -1929,6 +1929,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-select-secret-version.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-select-secret-version.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-site-to-site-vpn-connection-public-ip.png",
       "output": {
         "resource": {
@@ -1999,6 +2010,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-update-disk-progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-view-secret-value.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-view-secret-value.png"
         }
       },
       "is_incremental": false,
