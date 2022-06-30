@@ -3,8 +3,8 @@ title: How to move a virtual machine to a new virtual network using PowerShell
 description: Provides help for moving a virtual machine to a new virtual network on UKCloud for Microsoft Azure
 services: azure-stack
 author: blawson
-reviewer: rjarvis
-lastreviewed: 25/11/2020
+reviewer: wturner
+lastreviewed: 14/03/2022
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -44,9 +44,9 @@ Enter details below to provide values for the variables in the following script 
 | \$VMName         | Name of the virtual machine to move to a new virtual network       | <form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
 | \$NewNetworkName | Name of the virtual network to move the virtual machine to         | <form oninput="result.value=vnetname.value" id="vnetname" style="display: inline;"><input type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="NewVNet"/></form> |
 | \$NewSubnetName  | Name of the subnet to move the virtual machine to                  | <form oninput="result.value=subnetname.value" id="subnetname" style="display: inline;"><input type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="default"/></form> |
-| \$NewPrivateIp   | New private IP for the virtual machine                             | <form oninput="result.value=newip.value" id="newip" style="display: inline;"><input type="text" id="newip" name="newip" style="display: inline;" placeholder="10.0.0.1"/></form> |
+| \$NewPrivateIp   | New private IP for the virtual machine                             | <form oninput="result.value=newprivateip.value" id="newprivateip" style="display: inline;"><input type="text" id="newprivateip" name="newprivateip" style="display: inline;" placeholder="10.0.0.1"/></form> |
 | \$NewNicName  | Name of the new network interface card to create                   | <form oninput="result.value=newnic.value" id="newnic" style="display: inline;"><input type="text" id="newnic" name="newnic" style="display: inline;" placeholder="NewNic"/></form> |
-| \$NewPublicIpName  | Name of the new public IP address to create                   | <form oninput="result.value=newnic.value" id="newip" style="display: inline;"><input type="text" id="newip" name="newip" style="display: inline;" placeholder="NewPublicIp"/></form> |
+| \$NewPublicIpName  | Name of the new public IP address to create                   | <form oninput="result.value=newpublicip.value" id="newpublicip" style="display: inline;"><input type="text" id="newpublicip" name="newpublicip" style="display: inline;" placeholder="NewPublicIp"/></form> |
 
 ### Move the virtual machine
 
@@ -71,9 +71,9 @@ $RGName = "<output form="resourcegroup" name="result" style="display: inline;">M
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
 $NewNetworkName = "<output form="vnetname" name="result" style="display: inline;">NewVNet</output>"
 $NewSubnetName = "<output form="subnetname" name="result" style="display: inline;">default</output>"
-$NewPrivateIp = "<output form="newip" name="result" style="display: inline;">10.0.0.1</output>"
+$NewPrivateIp = "<output form="newprivateip" name="result" style="display: inline;">10.0.0.1</output>"
 $NewNicName = "<output form="newnic" name="result" style="display: inline;">NewNic</output>"
-$NewPublicIpName = "<output form="newip" name="result" style="display: inline;">NewPublicIp</output>"
+$NewPublicIpName = "<output form="newpublicip" name="result" style="display: inline;">NewPublicIp</output>"
 
 # Retrieve VM details
 $VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName
@@ -118,7 +118,7 @@ $NewVmConfig = New-AzVMConfig -VMName $VMName -VMSize $VM.HardwareProfile.VmSize
 
 if ($ManagedDisks) {
     # Add OS disk to new VM configuration
-    if ($VM.OsProfile.WindowsConfiguration) {
+    if ($VM.StorageProfile.OsDisk.OsType -eq "Windows") {
         $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -ManagedDiskId $VM.StorageProfile.OsDisk.ManagedDisk.Id -CreateOption "Attach" -Windows
     }
     else {
@@ -132,7 +132,7 @@ if ($ManagedDisks) {
 }
 else {
     # Add OS disk to new VM configuration
-    if ($VM.OsProfile.WindowsConfiguration) {
+    if ($VM.StorageProfile.OsDisk.OsType -eq "Windows") {
         $NewVmConfig = Set-AzVMOSDisk -VM $NewVmConfig -VhdUri $VM.StorageProfile.OsDisk.Vhd.Uri -CreateOption Attach -Name $VM.StorageProfile.OsDisk.Name -Windows
     }
     else {
