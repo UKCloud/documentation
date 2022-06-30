@@ -3,8 +3,8 @@ title: How to create a key vault using the UKCloud Azure Stack Hub portal
 description: Provides help for creating a key vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: blawson
-reviewer: asamad
-lastreviewed: 15/04/2021
+reviewer: wturner
+lastreviewed: 01/04/2022
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -42,33 +42,49 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    ![Security option in New blade](images/azs-browser-new-security.png)
 
-4. In the *New* blade, select **Key Vault**.
+4. In the *Security + Identity* blade, select **Key Vault**.
 
    ![New Key Vault](images/azs-browser-new-key-vault.png)
 
-5. In the **Create key vault** blade, enter the following information:
+5. In the *Create key vault* blade, enter the following information:
 
-   - **Name** - The name of the key vault.
+    - **Basics** tab
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
+      - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
-   - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+      - **Resource group** - Select an existing resource group, or create a new one by clicking the **Create new** link and then typing a name for your new resource group in the pop-out window.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
+      - **Key vault name** - The name of the key vault.
 
-   - **Access policies** - Configure who can access the key vault and what permissions they have.
+      - **Region** - This will be `frn00006`, which is the Azure Stack Hub region.
 
-     ![Create new key vault](images/azs-browser-create-key-vault.png)
+      - **Pricing tier** - Azure Stack Hub only offers the Standard pricing tier.
 
-6. Click **Create**.
+          ![Create new key vault > Basics](images/azs-browser-create-key-vault-basics.png)
 
-7. You can monitor the progress of your key vault's deployment by clicking the **Notifications** icon.
+    - **Access policy** tab
 
-   ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
+      - **Enable Access to:** - Select the check boxes to specify whether certain Azure services are allowed access to the key vault.
+
+      - **Current Access Policies** - Select **+Add access policy** to configure the permissions that a user, group or service principal has to the key vault.
+
+          ![Create new key vault > Access policy](images/azs-browser-create-key-vault-accesspolicy.png)
+
+          ![Create new key vault > Access policy > Add](images/azs-browser-create-key-vault-accesspolicy-add.png)
+
+6. Click **Review + create**.
+
+7. On the **Review + create** tab, review the selections you've made and then click **Create** to start the deployment.
+
+    ![!Create new key vault > Review](images/azs-browser-create-key-vault-review.png)
+
+8. You can monitor the progress of your key vault's deployment by clicking the **Notifications** icon.
+
+    ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
 
 ## Adding a secret to the key vault
 
-1. Once the key vault has been deployed, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security + Identity* section.
+1. Once the key vault has been deployed, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security* section.
 
 2. Select your key vault from the list.
 
@@ -80,7 +96,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    - **Upload Options** - Manually enter a secret or upload an x.509 certificate.
 
-   - **Name** - The name of the secret.
+   - **Name** - The name of the secret. Secret names can only contain alphanumeric characters and dashes.
 
    - **Value** - The value you are storing as a secret.
 
@@ -102,7 +118,11 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 2. On the secret's blade, select the current version.
 
+    ![Select secret version](images/azs-browser-select-secret-version.png)
+
 3. On the current version's blade, click the **Show secret value** button.
+
+    ![View secret value](images/azs-browser-view-secret-value.png)
 
 ## Feedback
 
