@@ -42,6 +42,8 @@ This article will be updated as and when new Terms and Conditions documents are 
 
 - VMware Licence Service (VLS)
 
+- VMware Workspace One Managed Service Terms
+
 - Multi-Cloud for Azure services
 
 ## Feedback
