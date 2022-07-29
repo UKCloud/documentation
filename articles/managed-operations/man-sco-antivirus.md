@@ -4,7 +4,7 @@ description: Outlines important details regarding Anti-Virus as a Service
 services: managed-operations
 author: sdixon
 reviewer: sdixon
-lastreviewed: 27/07/2021
+lastreviewed: 29/07/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: Anti-Virus as a Service
 toc_sub2:
@@ -51,7 +51,7 @@ Anti-Virus element             | Customer | UKCloud  | UKCloud - Professional Se
 -------------------------------|----------|----------|---------------------------------|------
 Making latest agents available |          | A/R      |                                 |
 Deploying initial agents       | A/R      | C/R      | £                               | UKCloud may deploy the initial agents as part of any new build activities contracting into by the customer.
-Deploying agent updates        | I/R      | A/R      | £                               | Agents are updated automatically, centrally by the platform. Customers will become responsible to jointly assist UKCloud in any troubleshooting activities should we detect any issues with updates, see [General support and troubleshooting](#general-support-and-troubleshooting).
+Deploying agent updates        | I/R      | A/R      | £                               | Agents are updated automatically, centrally by the platform. Customers will become responsible to jointly assist UKCloud in any troubleshooting activities should we detect any issues with updates, see [*General support and troubleshooting*](#general-support-and-troubleshooting).
 Configuring agents             | A/C      | R        |                                 | UKCloud will apply a default configuration, however the customer remains accountable for ensuring any specific exclusions (file or directories) have been applied to their end-points. Customer specific exclusions can be requested via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. UKCloud will implement any requested exclusions).
 
 
@@ -71,9 +71,9 @@ Action upon detection - Suspicious objects                    | A/R      | R/C  
 
 UKCloud harnesses the market-leading cyber security services of [SentinelOne](https://https://www.sentinelone.com/) as the engine that powers our Anti-Virus as a Service product.
 
-To ensure the utmost accuracy, reliability and protection of our [Anti-Virus as a Service](man-sd-managed-it-ops.md) product, SentinelOne Agents must be installed on any customer end-point (VM) opted in to this service. The SentinelOne Agent exchanges key endpoint metadata securely between any customer endpoint that has the SentinelOne agent installed and SentinelOne's central cloud platform, which sits outside of UKCloud's data centres.
+To ensure the utmost accuracy, reliability and protection of our [*Anti-Virus as a Service*](man-sd-managed-it-ops.md) product, SentinelOne Agents must be installed on any customer end-point (VM) opted in to this service. The SentinelOne Agent exchanges key endpoint metadata securely between any customer endpoint that has the SentinelOne agent installed and SentinelOne's central cloud platform, which sits outside of UKCloud's data centres.
 
-For a full list of the data that may be exchanged between the SentinelOne Agent and SentinelOne's central cloud platform, see [Data collected by UKCloud's Anti-Virus as a Service](man-ref-sentinelone-datacollection.md).
+For a full list of the data that may be exchanged between the SentinelOne Agent and SentinelOne's central cloud platform, see [*Data collected by UKCloud's Anti-Virus as a Service*](man-ref-sentinelone-datacollection.md).
 
 In using UKCloud's Antivirus as a Service, customers must also be aware of and agree to the [SentinelOne Terms of Service](https://www.sentinelone.com/legal/terms-of-service/).
 
@@ -89,7 +89,7 @@ Within 5 business days of accepting an order, UKCloud will enable the customer's
 
 ## Customer responsibilities
 
-Any elements within the [Scope of Anti-Virus as a Service](#scope-of-anti-virus-as-a-service) section of this article where the customer is listed as Accountable or Responsible.
+Any elements within the [*Scope of Anti-Virus as a Service*](#scope-of-anti-virus-as-a-service) section of this article where the customer is listed as Accountable or Responsible.
 
 The control and management of access and responsibilities for end users, including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, MCN or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.
 

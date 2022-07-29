@@ -2,9 +2,9 @@
 title: Data collected by UKCloud's Anti-Virus as a Service
 description: Provides information about any customer data that may be collected when subscribed to UKCloud's Anti-Virus as a Service
 services: managed-operations
-author: Steve Dixon
-reviewer: Steve Dixon
-lastreviewed: 27/07/2021
+author: sdixon
+reviewer: sdixon
+lastreviewed: 29/07/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: Anti-Virus as a Service
 toc_sub2:
@@ -21,7 +21,7 @@ toc_mdlink: man-ref-sentinelone-datacollection.md
 
 UKCloud harnesses the market-leading cyber security services of [SentinelOne](https://https://www.sentinelone.com/) as the engine that powers our Anti-Virus as a Service product.
 
-To ensure the utmost accuracy, reliability and protection of our [Anti-Virus as a Service](https://docs.ukcloud.com/articles/managed-services/man-sd-managed-it-ops.html) product, key endpoint metadata must be securely exchanged between SentinelOne's central cloud platform, which sits outside of UKCloud's data centres, and any customer endpoint that has the SentinelOne Agent installed.
+To ensure the utmost accuracy, reliability and protection of our [*Anti-Virus as a Service*](https://docs.ukcloud.com/articles/managed-services/man-sd-managed-it-ops.html) product, key endpoint metadata must be securely exchanged between SentinelOne's central cloud platform, which sits outside of UKCloud's data centres, and any customer endpoint that has the SentinelOne Agent installed.
 
 This article defines any such metadata that may be exchanged between a customer's endpoint that has the SentinelOne Agent installed and the SentinelOne central cloud platform.
 

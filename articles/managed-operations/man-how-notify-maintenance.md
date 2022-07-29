@@ -4,7 +4,7 @@ description: Describes how to provide notification of maintenance windows for Ma
 services: managed-operations
 author: shighmoor
 reviewer: Steve Dixon
-lastreviewed: 27/07/2021
+lastreviewed: 29/07/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:

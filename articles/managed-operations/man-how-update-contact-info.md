@@ -3,8 +3,8 @@ title: How to update contact information for Managed IT Operations
 description: Describes how to add new contact information and update contact information for Managed IT Operations using playbooks
 services: managed-operations
 author: shighmoor
-reviewer: Steve Dixon
-lastreviewed: 27/07/2021
+reviewer: sdixon
+lastreviewed: 29/07/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: 
 toc_sub2:
