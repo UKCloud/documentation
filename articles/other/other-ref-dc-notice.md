@@ -4,7 +4,7 @@ description: Referencing the Data Centre's advanced notice requirements
 services: other
 author: mwarner
 reviewer: jstevens
-lastreviewed: 30/07/2021
+lastreviewed: 12/07/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,11 +17,15 @@ toc_mdlink: other-ref-dc-notice.md
 
 # Data centre advance notice requirements
 
-This article outlines the notice period and process for requests to visit one of our data centres.
+You can arrange to visit a data centre in either Farnborough or Corsham to carry out maintenance or service existing hardware. Access to our data centres is available from Monday to Friday.
+
+This article outlines the notice period and process for requests to visit one of our data centres. 
 
 ## Advance notice period
 
-For all requests to visit a data centre in either Farnborough or Corsham to carry out maintenance or service existing hardware, the minimum advance notice period is two (2) working days. Visitors to the data centre must have valid ID and have the combination code for all racks that need to be accessed.
+For all requests to visit a data centre the minimum advance notice period is 24 hours. Requests for access on a Monday must be submitted by 16:30 on the previous Friday.
+
+Visitors to the data centre must have valid government issued, photographic ID (for example, a passport or driving licence) and have the combination code for all racks that need to be accessed.
 
 > [!NOTE]
 > All visitors will be escorted during their visit.
