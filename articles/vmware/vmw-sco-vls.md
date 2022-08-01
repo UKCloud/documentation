@@ -179,15 +179,15 @@ In addition to the responsibilities already mentioned in this Service Scope, cus
 
 ### Pricing package
 
-Package       | Description | Use case | Payment method
+Package       | Description | Use case | Payment option
 --------------|-------------|----------|---------------
 Fully Metered | Consume-as-you-go - only pay for what you use.<br>Consumption is calculated and the customer fund deducted on actual usage at the end of each month. | Customers who want complete flexiblity. | Committed
 
-### Payment options
+### Payment option
 
-Description | Benefits
-------------|---------
-An estimated annual consumption is calculated using the current usage metrics provided by the customer. This amount is then invoiced and paid up front. Each month, using the reported consumption figures, the Service Delivery Manager will report on the amount consumed to date and the remaining value left in the pre-payment. Monthly arrears can be requested as the pre-payment approaches zero to ensure that the top up amount is applied in good time. At any point the customer can top up the amount in pre-payment with a new order | Most cost effective. Additional discounting available.
+Payment option | Description | Benefits
+---------------|-------------|---------
+Committed | An estimated annual consumption is calculated using the current usage metrics provided by the customer. This amount is then invoiced and paid up front. Each month, using the reported consumption figures, the Service Delivery Manager will report on the amount consumed to date and the remaining value left in the pre-payment. Monthly arrears can be requested as the pre-payment approaches zero to ensure that the top up amount is applied in good time. At any point the customer can top up the amount in pre-payment with a new order | Most cost effective. Additional discounting available.
 
 As this is a committed payment option, whilst the estimated one-year consumption calculation is accurate, this is dependent on there being no changes to the environment or usage. Therefore, an increase in usage would result in the committed value expiring prior to 12 months. Likewise a reduction in consumption would result in the committed value covering greater than 12 months. For this reason, each committed order is valid for consumption over the agreed term plus 12 months. Each contract period is designed to be the initial agreed term of VLS consumption 12, 24, 36 months + an additional 12 months for any under-consumption.
 
