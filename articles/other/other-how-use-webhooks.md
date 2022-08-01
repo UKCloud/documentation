@@ -3,8 +3,8 @@ title: How to use webhooks to receive service status notifications
 description: Describes how to processes HTTP POST updates provided by webhooks from the UKCloud Service Status page
 services: other
 author: shighmoor
-reviewer: dselwood
-lastreviewed: 30/07/2021
+reviewer: gsmith
+lastreviewed: 01/08/2022
 
 toc_rootlink: How To
 toc_sub1: 
@@ -30,6 +30,35 @@ This article provides sample PHP code that processes webhook HTTP POST updates f
 After you upload the file containing your code to your public web server, you can use the endpoint to subscribe to webhook notifications on the UKCloud Service Status page. For more information, see [*Understanding the UKCloud Service Status page*](other-ref-status-page.md).
 
 ![Webhook notifications](images/other-status-webhook.png)
+
+## Adding a webhook via Microsoft Teams 
+
+Incidents and scheduled maintenance events each have their own payload data. The payload is sent via HTTP POST to the webhook URL.  
+
+Enable the following Status.io plugin from Microsoft Teams, see [*StatusPageio
+by Microsoft Teams Ecosystem*](https://appsource.microsoft.com/en-us/product/office/WA104381592?tab=Overview)
+
+When the plugin has been enabled create a new channel in teams with a title of your choice for the status page notification updates.
+
+(images/status-page-connector.png)
+
+Select the three dot menu and then click on connectors.
+
+(images/status-page-add-connector.png)
+A new window will open and here you can add the Status.io connector to your teams channel.
+
+(images/status-page-name-connector.png)
+Add a name for the connector "Test" has been used in this example.
+
+(images/status-page-done-connector.png)
+Follow steps 1 to 4 and click done. Please note that step 4 is the generated URL you need to add along with an email to the status page webhook form as pictured below.
+
+(images/status-page-url-connector.png)
+
+(images/status-page-example-connector.png)
+
+Example status page update in teams via the webhook we just created.
+
 
 ## Sample code
 
