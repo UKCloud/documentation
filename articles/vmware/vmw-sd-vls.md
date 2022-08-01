@@ -6,12 +6,12 @@ author: shighmoor
 reviewer: shighmoor
 lastreviewed: 26/03/2021
 toc_rootlink: Service Information
-toc_sub1: VMware Licence Service
+toc_sub1: Licence Services
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: VMware Licence Service (VLS) Service Definition
-toc_fullpath: Service Information/VMware Licence Service/vmw-sd-vls.md
+toc_fullpath: Service Information/Licence Services/vmw-sd-vls.md
 toc_mdlink: vmw-sd-vls.md
 ---
 

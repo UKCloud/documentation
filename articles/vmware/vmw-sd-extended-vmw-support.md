@@ -6,12 +6,12 @@ author: shall
 reviewer: shighmoor
 lastreviewed: 23/03/2021
 toc_rootlink: Service Information
-toc_sub1: 
+toc_sub1: Licence Services
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: On-Premises VMware Extended Support Service Definition
-toc_fullpath: Service Information/vmw-sd-extended-vmw-support.md
+toc_fullpath: Service Information/Licence Services/vmw-sd-extended-vmw-support.md
 toc_mdlink: vmw-sd-extended-vmw-support.md
 ---
 

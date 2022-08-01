@@ -1,38 +1,38 @@
 ---
-title: UKCloud VMware Workspace ONE VMware License Service (VLS) Service Scope
-description: Outlines important details regarding the UKCloud VMware Workspace ONE VMware License Service (VLS)
+title: UKCloud VMware Workspace ONE Managed Service Service Scope
+description: Outlines important details regarding the UKCloud VMware Workspace ONE Managed Service
 services: vmware
 author: gmartin
-reviewer: 
-lastreviewed: 25/04/2022
+reviewer: atait
+lastreviewed: 26/07/2022
 
 toc_rootlink: Service Information
-toc_sub1: VMware Licence Service
+toc_sub1: Licence Services
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud VMware Workspace ONE VLS Service Scope
-toc_fullpath: Service Information/VMware Licence Service/vmw-sco-vls-ws1.md
-toc_mdlink: vmw-sco-vls-ws1.md
+toc_title: UKCloud VMware Workspace ONE Managed Service Service Scope
+toc_fullpath: Service Information/Licence Services/vmw-sco-ws1.md
+toc_mdlink: vmw-sco-ws1.md
 ---
 
-# UKCloud VMware Workspace ONE VMware License Service (VLS) Service Scope
+# UKCloud VMware Workspace ONE Managed Service Service Scope
 
 ## About this document
 
-This article describes the boundaries of the UKCloud VMware Workspace ONE VMware License Service (VLS), along with the division of responsibilities between VMware, UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.
+This article describes the boundaries of the UKCloud VMware Workspace ONE Managed Service, along with the division of responsibilities between VMware, UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.
 
-## About UKCloud VMware Workspace ONE VLS
+## About UKCloud VMware Workspace ONE Managed Service
 
-### About VLS
+### About Workspace ONE MSP
 
-VLS is an innovative licensing model, designed with VMware, to reduce cost and deliver licence flexibility for a customer's existing VMware estate. This flexibility makes it easier to modernise existing VMware environments as the customer's organisation transforms IT services or adopts a multi-cloud approach.
+The VMWare Workspace ONE&reg; cloud service is operated by VMware and delivered to customers by UKCloud as a managed service. There are a variety of products available including Workspace ONE (three operating levels) and additional products such as Workspace ONE Intelligence and Workspace ONE Assist and UAT environments.
 
-Whether purchasing new licences or providing support and maintenance on an existing VMware estate, VLS enables customers to exchange fixed upfront costs and long-term commitments with a VMware consumption-based licence provided via UKCloud. With this new operation model, the functionality of the VMware licences is identical, only the commercial, cost and commitment term is changed.
+UKCloud operates a master tenancy on the VMware Cloud. End customer tenancies sit within the UKCloud master tenancy.
 
 ### About VMware Workspace ONE
 
-VMware Workspace ONE&reg; is an intelligence-driven digital workspace platform that simply and securely delivers and manages any application on any device by integrating access control, application management and multi-platform endpoint management. Workspace ONE is built on the VMware Workspace ONE Unified Endpoint Management (UEM) technology and integrates with virtual application delivery on a common identity framework. With Workspace ONE organisations can now evolve silo-ed cloud and mobile investments, enabling all employees, devices and things across the organisation to accelerate their digital transformation journey with a platform-based approach.
+VMware Workspace ONE is an intelligence-driven digital workspace platform that simply and securely delivers and manages any application on any device by integrating access control, application management and multi-platform endpoint management. Workspace ONE is built on the VMware Workspace ONE Unified Endpoint Management (UEM) technology and integrates with virtual application delivery on a common identity framework. With Workspace ONE, organisations can now evolve silo-ed cloud and mobile investments, enabling all employees, devices and things across the organisation to accelerate their digital transformation journey with a platform-based approach.
 
 Workspace ONE enables customers to drastically improve experiences and tasks that were previously costly, time consuming and resource intensive. With Workspace ONE, IT organisations can:
 
@@ -52,7 +52,7 @@ The UKCloud service architecture is as follows:
 
 - **Company.** A contract with UKCloud is associated with a company, which provides a single owner for the contract, regardless of how many accounts are created.
 
-- **Account.** We use accounts to separate financial ownership. An account could represent an organisation, a customer contract or a specific project. An account can also have several UKCloud or VMware services associated with it, such as VMware Workspace ONE, UKCloud for VMware, Cloud Storage and VLS. Customers can also use accounts to separate users based on access requirements or permissions.
+- **Account.** We use accounts to separate financial ownership. An account could represent an organisation, a customer contract or a specific project. An account can also have several UKCloud or VMware services associated with it, such as VMware Workspace ONE, UKCloud for VMware or Cloud Storage. Customers can also use accounts to separate users based on access requirements or permissions.
 
 ## VMware Workspace ONE edition provided by UKCloud
 
@@ -62,17 +62,17 @@ The VMware Workspace ONE Editions comparison table is available [here](https://w
 
 ## Application process
 
-Customers wanting to discuss the suitability of the service and gain a comparative cost estimate for their VMware Workspace ONE environment under the VLS programme should contact us at <info@ukcloud.com> or contact their Client Director. To provide an indicative quote, we will need:
+Customers wanting to discuss the suitability of the service and gain a comparative cost estimate for their VMware Workspace ONE environment under the managed service programme should contact us at <info@ukcloud.com> or contact their Client Director. To provide an indicative quote, we will need:
 
 - The customer's written authorisation to request data from VMware on the existing licence estate and renewal details
 
 - The customer's VMware Entitlement Account (EA) number
 
-- Details of the customer's planned future use of VMware to ensure the correct bundles/features are provisioned in any VLS proposal
+- Details of the customer's planned future use of VMware to ensure the correct bundles/features are provisioned in any proposal
 
-We will then work with the customer to find the ideal solution to suit their requirements. This will include discussing monthly or annual upfront payments, which include additional discounts.
+We will then work with the customer to find the ideal solution to suit their requirements.
 
-Once the quote is supplied and the customer wants to place an order, they must provide a purchase order, with a call-off contract if transacted within the G-Cloud framework, where we have a specific VLS service listed. Once received, the order will be confirmed by our sales operations team.
+Once the quote is supplied and the customer wants to place an order, they must provide a purchase order, with a call-off contract. Once received, the order will be confirmed by our sales operations team.
 
 ## Service provisioning
 
@@ -120,7 +120,7 @@ The UKCloud Portal and support is delivered out of the UK.
 
 Workspace ONE licences must be purchased upfront for the service term (either 1, 2 or 3 years).
 
-Each month UKCloud will check actual licence usage and where actual usage exceeds the agreed license volume, an invoice will be raised to cover the additional licenses used during the month.
+Each month UKCloud will check actual licence usage and where actual usage exceeds the agreed licence volume, an invoice will be raised to cover the additional licences used during the month.
 
 ## Requesting additional VMware Workspace ONE licences
 
@@ -142,9 +142,7 @@ The customer is responsible for:
 
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
 
-- Gathering and identifying errors in logs; answering installation, configuration, and usage questions; problem isolation and identification; determining if a problem is documented in VMware publications; reviewing the symptoms-solutions database for known problem resolutions.
-
-- Performing an in-depth analysis of the suspected problem, including attempting to re-create the problem and providing acceptable problem resolution or workaround.
+- Determining if a problem is related to the device, rather than the platform, and confirming that a solution is not already documented in VMware publications; reviewing the symptoms-solutions database for known problem resolutions.
 
 The Workspace ONE Knowledge Base is available at <https://support.workspaceone.com/>.
 
@@ -164,7 +162,7 @@ During Level 3 support interactions, UKCloud is responsible for managing the sup
 
 ### Professional Services
 
-This Service Scope sets out the responsibilities of UKCloud and the customer. Although the actions that the customer is responsible for are supported by UKCloud via Knowledge Centre articles and the support team, if a customer requires additional support with their Workspace ONE environment we can arrange for our Professional Services team to assist.
+This Service Scope sets out the responsibilities of UKCloud and the customer. Although the actions that the customer is responsible for are supported by UKCloud via Knowledge Centre articles and the support team, if a customer requires additional support with their Workspace ONE environment, we can arrange for our Professional Services team to assist.
 
 These additional services are charged as per our [SFIA Rate Card](https://ukcloud.com/sfia).
 
