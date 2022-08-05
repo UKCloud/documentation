@@ -3,8 +3,8 @@ title: Methods for exporting data
 description: Provides some general information in relation to the methods available to customers to export data away from UKCloud when needed
 services: other
 author: shighmoor
-reviewer: dbroderick
-lastreviewed: 13/04/2021
+reviewer: jwright
+lastreviewed: 02/08/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
