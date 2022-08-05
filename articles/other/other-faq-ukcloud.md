@@ -4,7 +4,7 @@ description: List of FAQs for UKCloud services, technology, connections and proc
 services: Other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 29/07/2021
+lastreviewed: 05/08/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -38,6 +38,7 @@ Service option           | FAQ
 Journaling Protection    | [here](../vmware/vmw-faq-journaling-protection.md)
 Snapshot Protection      | [here](../vmware/vmw-faq-snapshot-protection.md)
 Sharing catalogs         | [here](../vmware/vmw-faq-sharing-catalogs.md)
+VMware Licence Service   | [here](../vmware/vmw-faq-vls.md)
 
 ## Multi-cloud enabling services
 
@@ -46,7 +47,6 @@ Service                                | FAQ
 Cloud Storage                          | [here](../cloud-storage/cs-faq.md)
 Cross Domain Security Zone (CDSZ)      | [here](../cdsz/cdsz-faq.md)
 Disaster Recovery as a Service (DRaaS) | [here](../draas/draas-faq.md)
-Email and Collaboration as a Service   | [here](../email/email-faq.md)
 Secure Remote Access (SRA)             | [here](../sra/sra-faq.md)
 
 ## Connectivity services
