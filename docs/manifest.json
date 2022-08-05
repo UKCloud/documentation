@@ -10490,6 +10490,61 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-page-add-connector.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-page-add-connector.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-page-connector.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-page-connector.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-page-example-connector.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-page-example-connector.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-page-name-connector.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-page-name-connector.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-page-url-connector.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-page-url-connector.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/other-status-page.png",
       "output": {
         "resource": {
@@ -10571,6 +10626,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/other/images/pricing-estimator-4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/status-page-done-connector.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/status-page-done-connector.png"
         }
       },
       "is_incremental": false,
@@ -10677,7 +10743,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-use-webhooks.html",
-          "hash": "NRFACfwWB5vF3l5Bi20aR+GVGBi22ztV2ucrr3rtv+I="
+          "hash": "HeinfdCHLxkOC9lPYk25lLX7isSJyWVOu2pDf2gZSjQ="
         }
       },
       "is_incremental": false,

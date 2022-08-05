@@ -95,14 +95,15 @@
 
 <h2 id="overview">Overview</h2>
 <p>The <a href="https://status.ukcloud.com">UKCloud Service Status page</a> enables you to subscribe to updates using webhook notifications. To use these notifications, you need to set up an endpoint to receive and process these notifications. For more information about webhooks, see the Atlassian Statuspage documentation: <a href="https://help.statuspage.io/help/webhook-notifications">Webhook Notifications</a>.</p>
-<p>This article provides sample PHP code that processes webhook HTTP POST updates from the UKCloud Service Status page in a JSON object.</p>
+<p>This article provides sample PHP code that processes webhook HTTP POST updates from the UKCloud Service Status page in a JSON object (see <a href="#sample-code-for-a-webhook-endpoint"><em>Sample code for a webhook endpoint</em></a>).</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Input directly from the internet should never be trusted! Before implementing this code please ensure you have safely sanitized all user input and taken the relevant security precautions to prevent yourself from being hacked. UKCloud takes no responsibility for any damage caused to any system by use of this code.</p>
 </div>
 <p>After you upload the file containing your code to your public web server, you can use the endpoint to subscribe to webhook notifications on the UKCloud Service Status page. For more information, see <a href="other-ref-status-page.html"><em>Understanding the UKCloud Service Status page</em></a>.</p>
 <p><img src="images/other-status-webhook.png" alt="Webhook notifications"></p>
-<h2 id="sample-code">Sample code</h2>
+<p>This article also shows how you can use webhooks to send status notifications to a Microsoft Teams channel (see <a href="#adding-a-webhook-via-microsoft-teams"><em>Adding a webhook via Microsoft Teams</em></a>).</p>
+<h2 id="sample-code-for-a-webhook-endpoint">Sample code for a webhook endpoint</h2>
 <pre><code class="lang-php">&lt;?php
 
 //Input directly from the internet should never be trusted!
@@ -178,6 +179,43 @@ if(isset($statusObject-&gt;incident)){
 
 ?&gt;
 </code></pre>
+<h2 id="adding-a-webhook-via-microsoft-teams">Adding a webhook via Microsoft Teams</h2>
+<p>You can also add a webhook via Microsoft Teams to send status notifications to a Teams channel.</p>
+<p>Incidents and scheduled maintenance events each have their own payload data. The payload is sent via HTTP POST to the webhook URL.</p>
+<p>To add a webhook via Microsoft Teams:</p>
+<ol>
+<li><p>Enable the Microsoft Teams Status.io plugin from <a href="https://appsource.microsoft.com/en-us/product/office/WA104381592?tab=Overview">StatusPage.io</a>.</p>
+</li>
+<li><p>When you've enabled the plugin, create a new channel in Teams with a title of your choice for the status page notification updates.</p>
+</li>
+<li><p>From the channel options menu (three dots), select <strong>Connectors</strong>.</p>
+<p><img src="images/other-status-page-connector.png" alt="Connectors menu option"></p>
+</li>
+<li><p>Add the Status.io connector to your Teams channel</p>
+<p><img src="images/other-status-page-add-connector.png" alt="Connectors dialog box"></p>
+</li>
+<li><p>Add a name for the connector and click <strong>Create</strong>.</p>
+<p><img src="images/other-status-page-name-connector.png" alt="Connector name"></p>
+</li>
+<li><p>Make a note of the endpoint URL provided in the <strong>Webhook URL</strong> field then click <strong>Done</strong>.</p>
+</li>
+<li><p>Go to the <a href="https://status.ukcloud.com/">UKCloud Service Status page</a>.</p>
+</li>
+<li><p>Click <strong>Subscribe To Updates</strong>.</p>
+</li>
+<li><p>Select the <strong>&lt;&gt;</strong> option.</p>
+<p><img src="images/other-status-page-url-connector.png" alt="Subscribe for webhook notifications"></p>
+</li>
+<li><p>In the <strong>Webhook URL</strong> field, enter the URL you noted earlier.</p>
+</li>
+<li><p>In the <strong>Email address</strong> field, enter an email address to use for any error messages.</p>
+</li>
+<li><p>Click <strong>Subscribe</strong>.</p>
+</li>
+<li><p>You will now receive notifications, similar to those shown below, in the Teams channel that you created.</p>
+<p><img src="images/other-status-page-example-connector.png" alt="Status page notifications in Teams"></p>
+</li>
+</ol>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
