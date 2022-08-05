@@ -23,7 +23,7 @@ This article outlines the notice period and process for requests to visit one of
 
 ## Advance notice period
 
-For all requests to visit a data centre the minimum advance notice period is 24 hours. Requests for access on a Monday must be submitted by 16:30 on the previous Friday.
+For all requests to visit a data centre the minimum advance notice period is 24 hours (subject to all required information being provided in the request). Requests for access on a Monday must be submitted by 12:00 (noon) at the latest on the previous Friday.
 
 Visitors to the data centre must have valid government issued, photographic ID (for example, a passport or driving licence) and have the combination code for all racks that need to be accessed.
 
