@@ -3,8 +3,8 @@ title: OpenShift integrated cluster monitoring
 description: Provides information on the Prometheus monitoring stack deployed with OpenShift v3.11+
 services: openshift
 author: Kieran O'Neill
-reviewer: Andrew Garner
-lastreviewed: 13/07/2021
+reviewer: Alex Lillistone
+lastreviewed: 05/08/2022
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v3.x
