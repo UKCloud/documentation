@@ -81,7 +81,7 @@ Source: <https://www.netapp.com/blog/containers-vs-vms/>
 
 - Containers are more lightweight and require less start up time than VMs
 
-- Containers require less IT resources to deploy, run and manager
+- Containers require less IT resources to deploy, run and manage
 
 - Containers spin up in milliseconds, facilitating true elastic cloud applications
 
