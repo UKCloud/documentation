@@ -5536,6 +5536,41 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/kubernetes/images/k8s-differences-vms-containers.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/kubernetes/images/k8s-differences-vms-containers.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/kubernetes/k8s-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/kubernetes/k8s-home.html",
+          "hash": "e0HEtj2NVy0p/9ydVSVSqbhMWpZnpOdvfgwQ2LubCxk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/kubernetes/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/kubernetes/toc.html",
+          "hash": "lrzNliqBGHByayLWZkXdMbtcB8hWtyd45LSMS+lB4qo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/managed-operations/images/man-add-playbook.png",
       "output": {
         "resource": {
@@ -18556,7 +18591,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "/41gwNosyvGBNRLP/+UY60rAFTg5CqsrmixGxYnmGgs="
+          "hash": "hiklfrvqbUz8M89TC5i8SSeOuL4TEN2hh5vCIQxdTiI="
         }
       },
       "is_incremental": false,
@@ -18579,7 +18614,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "LLsV5+Sbl2W/gXfHwvwF3Vuz5QLApZkvs7RwAZ+vjCY="
+          "hash": "ubwlCSaMaiPnBwy3xIqVCIoC8S6HV/UK/qcWkedxb90="
         }
       },
       "is_incremental": false,
@@ -18600,7 +18635,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 452,
+          "total_file_count": 453,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

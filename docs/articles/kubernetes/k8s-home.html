@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UKCloud for Kubernetes powered by VMware Tanzu </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UKCloud for Kubernetes powered by VMware Tanzu ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/kubernetes/k8s-home.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="ukcloud-for-kubernetes-powered-by-vmware-tanzu">UKCloud for Kubernetes powered by VMware Tanzu</h1>
+
+<h2 id="introduction">Introduction</h2>
+<div class="row">
+  <div class="col-md-8"> 
+    <!-- brief introduction -->
+    <p>The way that customers consume applications has dramatically changed over the last decade. The pervasiveness of "born in the cloud" online services, such as Netflix, iPlayer and even Gov.UK, means that customers now expect new features and enhancements to be constantly delivered with no interruption to availability or performance.</p>
+    <p>This shift to modern, cloud-native applications means that traditional virtualisation technologies are starting to show their age and crack under the strain. As such, organisations now look to more modern hosting solutions that offer instantaneous scaling, deployment flexibility and the assurance of the highest level of availability, all without operator intervention.</p>
+    <p><strong>The solution they look for is containers.</strong></p>
+  </div>
+  <div class="col-md-4">
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://www.youtube.com/embed/rYO4WrPKWI8" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </div>
+  </div>
+</div>
+<h2 id="what-are-containers">What are containers?</h2>
+<p>Containers are a solution to the problem of how to get software to run reliably when moved from one computing environment to another, with the least amount of interaction or refactoring.</p>
+<p>A container is an entire runtime environment: an application, plus all its dependencies, libraries and other binaries, and configuration files needed to run it, bundled into one package. Containers are run in isolated user environments, from a developer's local laptop through to traditional servers or in the cloud, all with minimal user intervention.</p>
+<h2 id="what-is-containerisation">What is containerisation?</h2>
+<p>Containerisation is the packaging together of software code, including its dependencies so that it is isolated in its own &quot;container&quot;, allowing the uniform and consistent running of the package on any infrastructure and any environment.</p>
+<h3 id="what-are-container-orchestration-tools">What are container orchestration tools?</h3>
+<p>A single container is often used for local development, however most modern cloud-native applications will often consist of 100s of inter-related containers. To effectively manage containers at this scale, you need container orchestration: the automation of the operational effort required to run containerised workloads and services. This includes a wide range of elements that teams need to manage a container's lifecycle, including provisioning, deployment, scaling (up and down), health, networking, load balancing and more.</p>
+<h2 id="what-are-the-benefits-of-containerisation">What are the benefits of containerisation?</h2>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Higher speed and efficiency for developing apps and scripts</td>
+<td>Containers are smaller than virtual machines (VMs) and require less start up time and no additional resources or expertise for the creation of VMs.</td>
+</tr>
+<tr>
+<td>Uses less resources than VMs</td>
+<td>Containerisation is more efficient in terms of compute and data resources, but also in terms of the time taken to create the environments and move completed packages of work.</td>
+</tr>
+<tr>
+<td>Continuous integration/continuous delivery friendly</td>
+<td>As containers are lightweight and have limitless scalability, this works perfectly with CI/CD.</td>
+</tr>
+<tr>
+<td>Multi-cloud compatibility/portability</td>
+<td>Containers operate smoothly on the cloud and on multiple cloud platforms or desktop.</td>
+</tr>
+<tr>
+<td>Cost efficiency</td>
+<td>Although there is initial investment for memory and storage, it's possible to run many containers on the same infrastructure and integrate with third-party solutions – saving time and money. This is enhanced further by utilising a containerisation solution with a cloud service provider, such as UKCloud, that owns, manages and operates the underlying infrastructure and software layer.</td>
+</tr>
+<tr>
+<td>Easier management</td>
+<td>Install, upgrade and rollback processes are built into the container platform (Kubernetes).</td>
+</tr>
+<tr>
+<td>Isolation of faults</td>
+<td>Failures and faults on one container don't affect the others or the host, which means that issues can be recognised and dealt with – quickly, efficiently and automatically.</td>
+</tr>
+<tr>
+<td>Increased security</td>
+<td>The isolation of containers also prevents invasion from affecting other containers. However, there are requirements to protect containers from attacks at the host operating system level.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-containers-and-not-virtual-machines">Why containers and not virtual machines?</h2>
+<p>Differences between VMs and containers – the two different methods to achieving virtualisation.</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>VMs</th>
+<th>Containers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Efficiency</td>
+<td>Larger and require more start up time, including the creation of the VM, installation of the OS, patching and any development tools required. This may be done by a separate team and may cause unnecessary delays.</td>
+<td>Considered &quot;lightweight&quot;, with smaller capacity than VMs, therefore:<ul><li><p>Require less start up, which means more containers can run on the same compute capacity as individual VMs</p></li><li><p>Higher efficiencies and reduced costs</p></li><li><p>Almost instant availability and no dependency on external teams or interaction</p></li></ul></td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>The base is hardware, followed by the hypervisor, which is responsible for creating the virtualised instances of each of the components that make up the VM (for example, processors, RAM, storage, network cards are virtualised by the hypervisor).</td>
+<td>The base is hardware, but following this is the kernel, which helps the software and hardware communicate. On top of that is the operating system, which hosts all of the containers. On top of that is every container that is running.</td>
+</tr>
+<tr>
+<td>Type of isolation achieved</td>
+<td>Achieving isolation of machines:<br>A VM is an isolated environment with access to a subset of physical resources of the computer system. Each VM appears to be running on the bare hardware, giving the appearance of multiple instances of the same computer, though all are supported by a single physical system.</td>
+<td>Achieving isolation of the process:<br>A container isn't a strong security boundary. Containers provide some restrictions on access to shared resources on a host, but they don't necessarily prevent a malicious attacker from circumventing these restrictions.</td>
+</tr>
+<tr>
+<td>How these resources are accessed</td>
+<td>The hypervisor is creating different machines out of the server and that's mainly where the interaction is happening with what we think is hardware, but that's being managed by the hypervisor to what the actual hardware is.</td>
+<td>Namespaces allow for the illusion of customisation, which a container perceives as its own operating system. Portability – taking the one file that the container is stored in and are able to run anywhere. There aren't any hardware limitations.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="whats-the-difference-between-virtual-machines-and-containers">What's the difference between virtual machines and containers?</h3>
+<p><img src="images/k8s-differences-vms-containers.png" alt="What's the difference between virtual machines and containers?"></p>
+<p>Source: <a href="https://www.netapp.com/blog/containers-vs-vms/">https://www.netapp.com/blog/containers-vs-vms/</a></p>
+<h3 id="why-choose-containers-over-virtual-machines">Why choose containers over virtual machines?</h3>
+<ul>
+<li><p>Containers are more lightweight and require less start up time than VMs</p>
+</li>
+<li><p>Containers require less IT resources to deploy, run and manage</p>
+</li>
+<li><p>Containers spin up in milliseconds, facilitating true elastic cloud applications</p>
+</li>
+<li><p>A single system can host many more containers compared to VMs</p>
+</li>
+</ul>
+<h2 id="what-containerisation-technology-options-are-available">What containerisation technology options are available?</h2>
+<p>Containerisation technology is commonly split into two parts:</p>
+<ul>
+<li><p><strong>Container runtime.</strong> This is what runs the applications and associated dependencies within the container.</p>
+</li>
+<li><p><strong>Container orchestration.</strong> This is the automation of the operation effort required to run containerised workloads and services.</p>
+</li>
+</ul>
+<h3 id="container-runtime">Container runtime</h3>
+<p>Generally, container runtime technologies fall into two main categories:</p>
+<ul>
+<li><p>Open Container Initiative (OCI) runtimes</p>
+</li>
+<li><p>Container Runtime Interface (CRI)</p>
+</li>
+</ul>
+<h4 id="open-container-initiative-oci-runtimes">Open Container Initiative (OCI) runtimes</h4>
+<ul>
+<li><p>Native runtimes</p>
+<ul>
+<li><p>runC</p>
+</li>
+<li><p>Railcar</p>
+</li>
+<li><p>Crun</p>
+</li>
+<li><p>rkt</p>
+</li>
+</ul>
+</li>
+<li><p>Sandboxed and virtualised runtimes</p>
+<ul>
+<li><p>gviso</p>
+</li>
+<li><p>nabla-containers</p>
+</li>
+<li><p>runV</p>
+</li>
+<li><p>clearcontainers</p>
+</li>
+<li><p>kata-containers</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="container-runtime-interface-cri">Container Runtime Interface (CRI)</h4>
+<ul>
+<li><p>containerd</p>
+</li>
+<li><p>cri-o</p>
+</li>
+</ul>
+<h3 id="container-orchestration">Container orchestration</h3>
+<p>The most common container orchestration tools include:</p>
+<ul>
+<li><p><strong>Kubernetes (K8s)</strong></p>
+<p>Kubernetes is an open-source, out-of-the-box container orchestration tool. It comes with an excellent scheduler and resource manager for deploying highly available containers more efficiently.</p>
+<p>The Kubernetes project is maintained by the cloud-native foundation with contributors worldwide. Contributors include big organisations to individual open-source developers, and has become the de facto container orchestration tool for many organisations.</p>
+</li>
+<li><p><strong>Tanzu</strong></p>
+<p>Tanzu is VMware's commercial version of Kubernetes. Tanzu provides a full stack of capabilities for modernising your applications and infrastructure to continuously deliver better software to production. The VMware Tanzu portfolio simplifies multi-cloud operations and enables developers to easily access the resources they need to build modern applications.</p>
+<p>VMware Tanzu enables you to containerise your workloads to run in the cloud, while increasing security and manageability. You can refactor existing software to be delivered continuously and resiliently. You run and manage your applications consistently everywhere, on a secure and scalable infrastructure with a conformant Kubernetes runtime.</p>
+</li>
+<li><p><strong>OpenShift</strong></p>
+<p>OpenShift is Red Hat's container orchestration platform, built on top of Kubernetes. There is a community as well as an enterprise version of OpenShift.</p>
+<p>Red Hat maintains the OpenShift project, with both an open-source (OKD) and enterprise version (OpenShift Container Platform).</p>
+<p>Along with core Kubernetes features, OpenShift offers container management and orchestration, as well as a wealth of developer features to help drive efficient cloud native application development and deployment.</p>
+</li>
+<li><p><strong>Docker swarm</strong></p>
+<p>The Docker ecosystem consists of tools from development to production deployment frameworks. A mix of tooling, including docker-compose, swarm, overlay network, and a service discovery tool, such as etcd or consul, can be used for managing a cluster of Docker containers.</p>
+<p>Docker swarm is still maturing in terms of functionality compared to other open-source container cluster management tools. Considering the vast docker contributors, it won't be long before Docker swarm has all the best functionality other tools possess. Docker has documented a good production plan for using Docker swarm in production.</p>
+</li>
+<li><p><strong>Mesos</strong></p>
+<p>Mesos is another cluster management tool that can manage container orchestration very efficiently. It was created by Twitter for its own infrastructure and then became open source. It's used by companies like eBay and Airbnb.</p>
+<p>Mesos is not a dedicated tool for containers. Instead, you can use it for VM or physical machine clustering for running workloads (for example, for big data) other than containers. It has an efficient Marathon framework for deploying and managing containers on a Mesos cluster. You can also run a Kubernetes cluster on a Mesos cluster.</p>
+</li>
+</ul>
+<h2 id="more-information">More information</h2>
+<p>For information about our plans for the future of our VMware public cloud, including UKCloud for Kubernetes powered by VMware Tanzu, see the <strong><a href="https://ukcloud.com/vmware-innovation/">VMware Innovation</a></strong> page on the UKCloud website.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>
