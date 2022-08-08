@@ -135,7 +135,7 @@ Generally, container runtime technologies fall into two main categories:
 
 ### Container orchestration
 
-The following lists five of the most common container orchestration tools:
+The most common container orchestration tools include:
 
 - **Kubernetes (K8s)**
 
