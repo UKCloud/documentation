@@ -3,8 +3,8 @@ title: Deploying an application into OpenShift Service Mesh
 description:
 services: openshift
 author: Andrew Garner
-reviewer: Andrew Garner
-lastreviewed: 13/07/2021
+reviewer: Alex Lillistone
+lastreviewed: 05/08/2022
 
 toc_rootlink: Reference
 toc_sub1: OpenShift v4.x
