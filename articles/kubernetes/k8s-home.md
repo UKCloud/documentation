@@ -153,15 +153,15 @@ The most common container orchestration tools include:
 
   OpenShift is Red Hat's container orchestration platform, built on top of Kubernetes. There is a community as well as an enterprise version of OpenShift.
 
-  Red Hat maintains the OpenShift project, with both and open-source (OKD) and enterprise version (OpenShift Container Platform).
+  Red Hat maintains the OpenShift project, with both an open-source (OKD) and enterprise version (OpenShift Container Platform).
 
-  Along with core Kubernetes features, OpenShift offers container management and orchestration as well as a wealth of developer features to help drive efficient cloud native application development and deployment.
+  Along with core Kubernetes features, OpenShift offers container management and orchestration, as well as a wealth of developer features to help drive efficient cloud native application development and deployment.
 
 - **Docker swarm**
 
   The Docker ecosystem consists of tools from development to production deployment frameworks. A mix of tooling, including docker-compose, swarm, overlay network, and a service discovery tool, such as etcd or consul, can be used for managing a cluster of Docker containers.
 
-  Docker swarm is still maturing in terms of functionality compared to other open-source container cluster management tools. Considering the vast docker contributors, it won't be long for Docker swarm to have all the best functionality other tools possess. Docker has documented a good production plan for using Docker swarm in production.
+  Docker swarm is still maturing in terms of functionality compared to other open-source container cluster management tools. Considering the vast docker contributors, it won't be long before Docker swarm has all the best functionality other tools possess. Docker has documented a good production plan for using Docker swarm in production.
 
 - **Mesos**
 
