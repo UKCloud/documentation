@@ -41,7 +41,7 @@ A container is an entire runtime environment: an application, plus all its depen
 
 ## What is containerisation?
 
-Containerisation is the packaging together of software code, including its dependencies so that it is isolated in its own "container", allowing uniformly and consistently running the package on any infrastructure and any environment.
+Containerisation is the packaging together of software code, including its dependencies so that it is isolated in its own "container", allowing the uniform and consistent running of the package on any infrastructure and any environment.
 
 ### What are container orchestration tools?
 
