@@ -44,6 +44,8 @@
     topicHref: articles/sra/sra-gs.md
   - name: Security Operations Service
     topicHref: articles/soc/soc-sd.md   
+  - name: UKCloud for Kubernetes
+    topicHref: articles/kubernetes/k8s-home.md
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
   - name: Shared Services
