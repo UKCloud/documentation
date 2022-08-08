@@ -93,7 +93,7 @@ Containerisation technology is commonly split into two parts:
 
 - **Container runtime.** This is what runs the applications and associated dependencies within the container.
 
-- **Container orchestration.** This is the automation of the operation effort required to run containerised workloads and services
+- **Container orchestration.** This is the automation of the operation effort required to run containerised workloads and services.
 
 ### Container runtime
 
