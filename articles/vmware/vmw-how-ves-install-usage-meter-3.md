@@ -4,7 +4,8 @@ description: Provides instructions for how to install the vCloud Usage Meter for
 services: vmware
 author: shighmoor
 reviewer: mperry
-lastreviewed: 06/08/2021
+lastreviewed: 09/08/2022
+
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
