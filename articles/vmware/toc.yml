@@ -200,14 +200,22 @@
     href: vmw-sco-dedicated-compute.md
   - name: Journaling Protection Service Scope
     href: vmw-sco-journaling-protection.md
-  - name: On-Premises VMware Extended Support Service Definition
-    href: vmw-sd-extended-vmw-support.md
-  - name: On-Premises VMware Extended Support Service Scope
-    href: vmw-sco-extended-vmw-support.md
   - name: Snapshot Protection Service Scope
     href: vmw-sco-snapshot-protection.md
   - name: Synchronous Protection Service Scope
     href: vmw-sco-synchronous-protection.md
+  - name: Licence Services
+    items:
+    - name: On-Premises VMware Extended Support Service Definition
+      href: vmw-sd-extended-vmw-support.md
+    - name: On-Premises VMware Extended Support Service Scope
+      href: vmw-sco-extended-vmw-support.md
+    - name: UKCloud VMware Workspace ONE Managed Service Service Scope
+      href: vmw-sco-ws1.md
+    - name: VMware Licence Service (VLS) Service Definition
+      href: vmw-sd-vls.md
+    - name: VMware Licence Service (VLS) Service Scope
+      href: vmw-sco-vls.md
   - name: UKCloud for VMware
     items:
     - name: Pricing information
@@ -216,14 +224,6 @@
       href: vmw-sd.md
     - name: Service Scope
       href: vmw-sco.md
-  - name: VMware Licence Service
-    items:
-    - name: UKCloud VMware Workspace ONE VLS Service Scope
-      href: vmw-sco-vls-ws1.md
-    - name: VMware Licence Service (VLS) Service Definition
-      href: vmw-sd-vls.md
-    - name: VMware Licence Service (VLS) Service Scope
-      href: vmw-sco-vls.md
 - name: Videos
   items:
   - name: Benefits of VMware L2 VPN

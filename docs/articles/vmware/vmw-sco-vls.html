@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>VMware Licence Service (VLS) Service Scope </title>
+    <title>VMware Licence Service Service Scope </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="VMware Licence Service (VLS) Service Scope ">
+    <meta name="title" content="VMware Licence Service Service Scope ">
     <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,11 +91,11 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="vmware-licence-service-vls-service-scope">VMware Licence Service (VLS) Service Scope</h1>
+<h1 id="vmware-licence-service-service-scope">VMware Licence Service Service Scope</h1>
 
 <h2 id="about-this-document">About this document</h2>
 <p>This article describes the boundaries of the UKCloud VMware Licence Service (VLS), along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
-<h2 id="about-the-vmware-licence-service">About the VMware Licence Service</h2>
+<h2 id="about-vmware-licence-service">About VMware Licence Service</h2>
 <p>VLS is an innovative licensing model, designed with VMware, to reduce cost and deliver licence flexibility for a customer's existing VMware estate. This flexibility makes it easier to modernise existing VMware environments as the customer's organisation transforms IT services or adopts a multi-cloud approach.</p>
 <p>Whether purchasing new licences or providing support and maintenance on an existing VMware estate, VLS enables customers to exchange fixed upfront costs and long-term commitments with a VMware consumption-based licence provided via UKCloud. With this new operations model, the functionality of the VMware licences is identical, only the commercial, cost and commitment term is changed.</p>
 <h2 id="application-process">Application process</h2>
@@ -113,7 +113,7 @@
 <p>We will then work with the customer to find the ideal solution to suit their requirements. This will include discussing monthly or annual upfront payments, which include additional discounts.</p>
 <p>Once the quote is supplied and the customer wants to place an order, they must provide a purchase order, with a call off contract if transacted within the G-Cloud framework, where we have a specific VLS service listed. Once received, the order will be confirmed by our sales operations team.</p>
 <h2 id="service-provisioning">Service provisioning</h2>
-<p>To implement the VLS service, there are some simple steps that need to be completed both by UKCloud and the customer. The details that follow assume that the customer has a good understanding of VMware and can carry out the required actions. Note that, if required, UKCloud can provide assistance in these actions at an additional charge, based on our <a href="https://ukcloud.com/sfia">SFIA Rate Card</a> for Professional Services.</p>
+<p>To implement VLS, there are some simple steps that need to be completed both by UKCloud and the customer. The details that follow assume that the customer has a good understanding of VMware and can carry out the required actions. Note that, if required, UKCloud can provide assistance in these actions at an additional charge, based on our <a href="https://ukcloud.com/sfia">SFIA Rate Card</a> for Professional Services.</p>
 <h3 id="welcome-pack">Welcome pack</h3>
 <p>When we receive an order from the customer, we will provide an emailed welcome pack to the named administrator/contact identified in the order form. The welcome pack includes:</p>
 <ul>
@@ -142,7 +142,7 @@
 </li>
 <li><p>The customer may be required to update or add licence keys for additional module usage.</p>
 </li>
-<li><p>If the customer wants to use an additional VMware module, then they can request a new licence key as per <a href="vmw-how-vls-request-licence.html"><em>How to request a new VLS licence</em></a>.</p>
+<li><p>If the customer wants to use an additional VMware module, they can request a new licence key as per <a href="vmw-how-vls-request-licence.html"><em>How to request a new VLS licence</em></a>.</p>
 </li>
 <li><p>The licence keys supplied are for use with UKCloud VLS only and not for any VMware usage outside of the VLS contract. If the service is cancelled by the customer, the UKCloud issued keys are to be removed by the customer.</p>
 </li>
@@ -159,16 +159,11 @@
 <ul>
 <li>Velocloud, Carbon Black, Pivotal (until these appear on the product guide)</li>
 </ul>
-<p>Workspace 1 (WSP1) is delivered via a parallel but separate service offering.</p>
+<p>Workspace ONE is delivered via a parallel but separate service offering. For more information, see the <a href="vmw-sco-ws1.html"><em>UKCloud VMware Workspace ONE Managed Service Service Scope</em></a>.</p>
 <h3 id="usage-meter">Usage Meter</h3>
 <p>VLS requires the mandatory installation of the vCloud Usage Meter on the customer's environment.</p>
 <ul>
-<li><p>For customers on a Fixed Price package, the Usage Meter is required for audit purposes and to determine when an uncommitted provision would be a lower cost.</p>
-</li>
-<li><p>For customers on a Fully Metered package, the Usage Meter captures all the VMware usage covered by the VLS agreement during the month and creates a report with the number of units consumed for each VMware bundle. This report of total units is used by UKCloud to calculate the customer's invoice for each month and enables the customer to be flexible on what they use in any given month, rather than be committed up front.</p>
-</li>
-<li><p>If both Fixed Price and Fully Metered elements exist in the same environment, then it will be necessary to deploy two Usage Meters.</p>
-</li>
+<li>For customers on a Fully Metered package, the Usage Meter captures all the VMware usage covered by the VLS agreement during the month and creates a report with the number of units consumed for each VMware bundle. This report of total units is used by UKCloud to calculate the customer's invoice for each month and enables the customer to be flexible on what they use in any given month, rather than be committed up front.</li>
 </ul>
 <p>UKCloud will make the URL of the recommended Usage Meter available to the customer.</p>
 <ul>
@@ -190,10 +185,10 @@
 </ul>
 <h2 id="usage-reporting">Usage reporting</h2>
 <p>The basis of VLS is that the customer is not committed to any specific VMware modules or usage, which converts their VMware usage from an upfront capital expenditure to a flexible monthly operational expenditure. This enables the customer to increase, decrease, test and remove environments and functionality as they require.</p>
-<p>As a result, VLS depends on the vCloud Usage Meter to collect the actual monthly usage on an hourly basis. At the end of each month, the report will identify the exact number of units consumed against the set VMware bundle codes, which is then used to create a total points usage. This total number of points is used to calculate the customer's invoice for the month and it is therefore essential to ensure that the Usage Meter is correctly configured and that data is uploaded to VMware.</p>
+<p>As a result, VLS depends on the vCloud Usage Meter to collect the actual monthly usage on an hourly basis. At the end of each month, the report will identify the exact consumption. This consumption is then deducted from the existing VLS fund held by UKCloud. Each month, the customer is notified of their consumption.</p>
 <p>As part of the configuration of the Usage Meter, usage data is uploaded to VMware on an hourly basis. If, for any reason, this fails, it will be the customer's responsibility to manually send a downloaded usage report no later than 10:59 AM UTC on the second day of the next reporting month  (that is, 10:59 AM on 2 May 2022 for April 2022 usage). It is essential that this is completed so that the usage can be calculated by VMware and reported to UKCloud.</p>
 <ul>
-<li><p>If the reports are not received in time, or the Usage Meter stops uploading data, the customer's assigned Service Delivery Manager, or UKCloud Support staff, will contact them to request the report or to request that the issue be investigated.</p>
+<li><p>If the reports are not received in time, or the Usage Meter stops uploading data, the customer's assigned Service Delivery Manager or UKCloud Support staff will contact them to request the report or to request that the issue be investigated.</p>
 </li>
 <li><p>If the reports are not received in time, the customer's invoice will be estimated based on the previous two months' usage. Once the customer's usage is received or estimated, it will be sent to their Service Delivery Manager who will include this in the monthly updates and reports so that the customer can track their usage and costs. It is important to note that the customer must allow uploading of Usage Meter data to VMware as this is the basis of the contract and ensures accurate reporting and invoicing.</p>
 </li>
@@ -224,6 +219,8 @@
 </li>
 <li><p>The customer is responsible for maintaining their VMware environment, including any software and hardware upgrades, including third-party software that may affect the VMware environment.</p>
 </li>
+<li><p>The customer is responsible for maintaining their VMware environment on VMware approved supported version levels.</p>
+</li>
 <li><p>Customers may be asked on occasion to run authorised scripts on their VMware environment for the purpose of maintaining the environment or assisting in fixing reported issues.</p>
 </li>
 <li><p>Customers will be advised on how to resolve an issue and will be responsible for implementing that fix.</p>
@@ -234,34 +231,26 @@
 </li>
 </ul>
 <h2 id="pricing-and-billing">Pricing and billing</h2>
-<h3 id="pricing-packages">Pricing packages</h3>
-<p>There are two packages available for pricing.</p>
+<h3 id="pricing-package">Pricing package</h3>
 <table>
 <thead>
 <tr>
 <th>Package</th>
 <th>Description</th>
 <th>Use case</th>
-<th>Payment options</th>
+<th>Payment option</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Fixed Price</td>
-<td>A fixed cost for a specific set of licences, irrespective of the actual usage made of the licences during the month. The price is set at the beginning of the year.</td>
-<td>Customers who have a good idea of their usage for the next year and need certainty in their budgets.</td>
-<td>Committed</td>
-</tr>
-<tr>
 <td>Fully Metered</td>
-<td>Pay-as-you-go - only pay for what you use. Consumption is calculated and the customer invoiced based on actual usage at the end of each month.</td>
-<td>Customers who need the ability to scale up and down as required.</td>
-<td>Committed<br>Uncommitted</td>
+<td>Consume-as-you-go - only pay for what you use.<br>Consumption is calculated and the customer fund deducted on actual usage at the end of each month.</td>
+<td>Customers who want complete flexiblity.</td>
+<td>Committed</td>
 </tr>
 </tbody>
 </table>
-<h3 id="payment-options">Payment options</h3>
-<p>There are two payment options available for VLS.</p>
+<h3 id="payment-option">Payment option</h3>
 <table>
 <thead>
 <tr>
@@ -273,24 +262,13 @@
 <tbody>
 <tr>
 <td>Committed</td>
-<td>An estimated annual consumption is calculated using the current usage metrics provided by the customer. This amount is then invoiced and paid up front. Each quarter, using the reported consumption figures, the Service Delivery Manager will report on the amount consumed to date and the remaining value left in the pre-payment. Monthly reports can be requested as the pre-payment approaches zero to ensure that the top amount is applied in good time. At any point, the customer can top up the amount in pre-payment with a new order or, if on the fully metered package, switch to uncommitted billing (pay-as-you-go), as detailed below (note this is not available for the Fixed Price package).</td>
-<td>Most cost-effective option.<br>Additional discounting available.</td>
-</tr>
-<tr>
-<td>Uncommitted</td>
-<td>Billing is based on actual consumption is billed calculated monthly from customer-supplied Usage Meter reports. Customers are charged on the next month's invoice (first working day of the month).</td>
-<td>Flexible, pay-as-you-go.<br>No upfront costs.<br>Cease service at any time, only paying for usage up to that point.<br>Especially suited to customers who are reducing their on-premises VMware estate and migrating to cloud.</td>
+<td>An estimated annual consumption is calculated using the current usage metrics provided by the customer. This amount is then invoiced and paid up front. Each month, using the reported consumption figures, the Service Delivery Manager will report on the amount consumed to date and the remaining value left in the pre-payment. Monthly arrears can be requested as the pre-payment approaches zero to ensure that the top up amount is applied in good time. At any point the customer can top up the amount in pre-payment with a new order</td>
+<td>Most cost effective. Additional discounting available.</td>
 </tr>
 </tbody>
 </table>
-<p>For the Committed payment option, whilst the estimated one year consumption calculation is accurate, this is dependent on there being no changes to the environment or usage. Therefore, an increase in usage would result in the committed value expiring prior to 12 months, or likewise a reduction in consumption would result in the committed value covering greater than 12 months. For this reason each committed order is valid for consumption over the next 24 months.</p>
-<p>For both of the above options, where, for whatever reason, a usage report is unavailable within the prescribed time after the end of each month, UKCloud will report and invoice based on either the prior month's confirmed usage, or the initial estimated consumption as appropriate.</p>
+<p>As this is a committed payment option, whilst the estimated one-year consumption calculation is accurate, this is dependent on there being no changes to the environment or usage. Therefore, an increase in usage would result in the committed value expiring prior to 12 months. Likewise a reduction in consumption would result in the committed value covering greater than 12 months. For this reason, each committed order is valid for consumption over the agreed term plus 12 months. Each contract period is designed to be the initial agreed term of VLS consumption 12, 24, 36 months + an additional 12 months for any under-consumption.</p>
 <p>For full pricing information, see the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
-<p>Note that there is a discount level over £40,000 spent per month.</p>
-<h3 id="invoicing">Invoicing</h3>
-<p>For monthly invoicing, VLS requires the output of the Usage Meter, and as this is not available until the end of each month, the customer will be invoiced one month in arrears.</p>
-<p>As an example, the customer must report April 2022 usage to VMware by 10:59 AM on 2 May 2022. The customer will then be invoiced for this usage on 31 May 2022.</p>
-<p>The customer will receive a monthly report from their Service Delivery Manager based on their submitted Usage Meter usages and total costs.</p>
 <h2 id="professional-services">Professional Services</h2>
 <p>This Service Scope sets out the responsibilities of UKCloud and the customer. Although the actions that the customer is responsible for are supported by UKCloud via Knowledge Centre articles and the support team, if a customer requires additional support with their on-premises estate or the installation and configuration of any element of VMware or the Usage Meter, we can arrange for our Professional Services team to assist.</p>
 <p>These additional services are charged as per our <a href="https://ukcloud.com/sfia">SFIA Rate Card</a>.</p>
