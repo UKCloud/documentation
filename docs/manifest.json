@@ -10790,7 +10790,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "MLQojYi0Xf9byNdRZwa/xrNywnMr0FY5o8daYsljC30="
+          "hash": "5nROfxooPrdjGinRE4T9hxlbFgkajF4b4QVKef0tcxk="
         }
       },
       "is_incremental": false,
@@ -11249,6 +11249,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-contact-btn-edit-locked.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-contact-btn-edit-locked.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-contact-btn-edit.png",
       "output": {
         "resource": {
@@ -11407,28 +11418,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-home-page.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-locked-user-edit.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-locked-user-edit.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-locked-user.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-locked-user.png"
         }
       },
       "is_incremental": false,
@@ -12250,6 +12239,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-user-lock.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-user-lock.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-user-locked.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-user-locked.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-user-unlock.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-user-unlock.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl_mnu-my-calls.png",
       "output": {
         "resource": {
@@ -12421,7 +12443,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-unlock-account.html",
-          "hash": "nosj6+Y8SJ7+zEbqihOa+y/EWVMCExLwO+kKgg/OM+U="
+          "hash": "xfBdwTv/Re6BBys0us1c+6nsSNaBzXrlt1AiAXqrss0="
         }
       },
       "is_incremental": false,
@@ -12577,7 +12599,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "pSofBC6O0sO0zCkLMgK5/AA2gL5/ZOTLH+FDT/RS/y8="
+          "hash": "MdqMpNHztCLrikNxvAt27DXmdNNaaLES1IXe9hs6Pz4="
         }
       },
       "is_incremental": false,
@@ -12948,7 +12970,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-ref-access-to-vms.html",
-          "hash": "AULCtYPusBBO62xmYgYWNBBID0jnYauHh600arjqj+Y="
+          "hash": "hxcluyExAlYNrq6aCd+CjExmqn6Sq1i/L9G00m5/Wf8="
         }
       },
       "is_incremental": false,
@@ -17944,7 +17966,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-ves-install-usage-meter-3.html",
-          "hash": "dnKfee7ph26txjmDks1plqQdTfuv0uT4CPumzPS3fwE="
+          "hash": "oaov9QjLZNTlXtTm9BaFCme/gRZ6jPBi/6cFMcaI8zU="
         }
       },
       "is_incremental": false,
