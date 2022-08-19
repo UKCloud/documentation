@@ -5868,7 +5868,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-how-monitoring-change-config.html",
-          "hash": "a+nQhRYQ2A5fBZYXWbgpXvG+RpyD9R0+oYNdKZk27MU="
+          "hash": "ntJDTSfV/OipF1WKDdCOtsiYf7codVK8DcJg5fnwynw="
         }
       },
       "is_incremental": false,
@@ -5904,7 +5904,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-how-patching-define-window.html",
-          "hash": "IyzpyA6b6pt5Wy6wTSPCya7+/yrIvek1qB6vRCcFOqc="
+          "hash": "yMwduPsVvqnscV34OuSVoaPTeT/o8otN+XurmGUTN3A="
         }
       },
       "is_incremental": false,
@@ -5952,7 +5952,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-ref-sentinelone-datacollection.html",
-          "hash": "TWq7ISM2LQoOnzaWOftXyDu2kKiRLCO9PIUpBtdca7s="
+          "hash": "+xFmJvv164NOo+hAf4TGq9yi+3Ste0nQeIGqGx+oUK8="
         }
       },
       "is_incremental": false,
@@ -5964,7 +5964,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-sco-ad.html",
-          "hash": "WeVbOxh5MEEoiP+By2R++XUaU3Vl5YdT9XQeH+Tnbp0="
+          "hash": "nzxMmrbujX8rCP+9izRT6twBXJP+WEAr5011Xfon2gA="
         }
       },
       "is_incremental": false,
@@ -5976,7 +5976,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-sco-antivirus.html",
-          "hash": "YpAbOVstzbMXV4AFmNLq18JClQFOEwfF1gmz32wt8E0="
+          "hash": "oj84JXkXM7NKlCIJVQklSOhtawY+XkTRfPzhlEAXDBk="
         }
       },
       "is_incremental": false,
@@ -6024,7 +6024,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-sco-webserver.html",
-          "hash": "0zDnzd4vXM5GUEod2P211uv6G3J3xj0Jt8oUjggh2/E="
+          "hash": "yPaa8ajGY5jx2z0xUJCVHFEw0q6Sfmj6NyJuSWUUHbo="
         }
       },
       "is_incremental": false,
