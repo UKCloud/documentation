@@ -31,7 +31,7 @@ To complete the steps in this guide you must be a Portal administrator.
 
 ## Locking a user account
 
-A Portal administrator may need to lock a user account to prevent access to the Portal
+A Portal administrator may need to lock a user account to prevent access to the Portal, for example if the security of an account is suspected to be compromised.
 
 To lock a user account:
 
