@@ -4,7 +4,7 @@ description: Provides information to get up and running with Journaling Protecti
 services: vmware
 author: shighmoor
 reviewer: acirel
-lastreviewed: 10/06/2021
+lastreviewed: 19/08/2022
 
 toc_rootlink: Getting Started
 toc_sub1: 
