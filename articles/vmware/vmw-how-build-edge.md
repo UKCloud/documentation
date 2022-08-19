@@ -1,22 +1,22 @@
 ---
-title: How to build an edge gateway using the UKCloud Portal
+title: How to build an edge gateway in the UKCloud Portal
 description: Describes how to use the UKCloud Portal to build an edge gateway
 services: vmware
 author: shighmoor
-reviewer: thallsmith 
-lastreviewed: 02/07/2021
+reviewer: shighmoor 
+lastreviewed: 19/08/2022
 
 toc_rootlink: How To
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Build an edge gateway using the UKCloud Portal
+toc_title: Build an edge gateway in the UKCloud Portal
 toc_fullpath: How To/vmw-how-build-edge.md
 toc_mdlink: vmw-how-build-edge.md
 ---
 
-# How to build an edge gateway using the UKCloud Portal
+# How to build an edge gateway in the UKCloud Portal
 
 ## Overview
 
@@ -33,11 +33,9 @@ To complete the steps in this guide, you must be a VMware Cloud Director adminis
 If your VDC is located on the Assured OFFICIAL security domain, its edge gateway provides access to the internet. If your VDC is located on the Elevated OFFICIAL security domain, its edge gateway provides access to your other VDCs in the Elevated OFFICIAL domain.
 
 > [!NOTE]
-> You can build edge gateways in any of your compute services in regions 5 or 6, not just those you created using the Portal. For information about building compute services and VDCs, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
+> You can build edge gateways in any of your compute services in regions 5, 6, 13 or 14, not just those you created using the Portal. For information about building compute services and VDCs, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
 
-1. Log in to the UKCloud Portal.
-
-    For more detailed steps, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
+1. [*Log in to the UKCloud Portal*](../portal/ptl-gs.md#logging-in-to-the-ukcloud-portal).
 
 2. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service in which you want to create the edge gateway.
 
@@ -46,7 +44,7 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
 3. From the **Actions** menu, select **Build Edge Gateway**.
 
     > [!NOTE]
-    > If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5 or 6.
+    > If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5, 6, 13 or 14.
 
     ![Build Edge Gateway menu option](images/vmw-portal-mnu-build-edge.png)
 
