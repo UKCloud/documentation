@@ -4,7 +4,7 @@ description: Frequently asked questions for Advanced Support Services
 services: managed-operations
 author: sdixon
 reviewer: sdixon
-lastreviewed: 27/07/2021
+lastreviewed: 29/07/2022
 toc_rootlink: Advanced Support Services
 toc_sub1: 
 toc_sub2:

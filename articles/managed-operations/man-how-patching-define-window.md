@@ -4,7 +4,7 @@ description: Describes how to define patching windows for Patching as a Service
 services: managed-operations
 author: shighmoor
 reviewer: sdixon
-lastreviewed: 27/07/2021
+lastreviewed: 29/07/2022
 toc_rootlink: Managed IT Operations
 toc_sub1: Patching as a Service
 toc_sub2:
@@ -28,7 +28,7 @@ This article provides information about how to specify patching windows for your
 
 To make changes, you'll need to fill in the appropriate details in the Managed IT Operations - Add or Remove Device spreadsheet (UKC-FRM-303) spreadsheet, which enables us to automate your requested changes. This is the same spreadsheet as the one you used to originally set up your service. The Service Request template includes a link to download the spreadsheet. When filling out the spreadsheet, ensure that you follow the instructions provided.
 
-If you want to download the spreadsheet ahead of raising the request, click [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1642866877&Signature=imOIy0kAEXOxkvf8NZ5lJLUc4a0%3D).
+If you want to download the spreadsheet ahead of raising the request, click [here](https://cas.frn00006.ukcloud.com/Docs/UKCloud_Man_IT_Ops/UKC-FRM-303%20-%20Managed%20IT%20Operations%20-%20Add%20or%20Remove%20Devices.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1690632276&Signature=WPn9yI6cxrq8EPPOQovxPlEAViE%3D).
 
 > [!NOTE]
 > If you're not sure how to complete the spreadsheet or need help with any of the details, contact UKCloud Support.
