@@ -3,8 +3,9 @@ title: Access to virtual machines on the UKCloud platform
 description: Outlines what access and controls UKCloud has in place with regards to customer virtual machines.
 services: shared-services
 author: shighmoor
-reviewer: thallsmith
-lastreviewed: 19/08/2021
+reviewer: nkent
+lastreviewed: 09/08/2022
+
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
