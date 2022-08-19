@@ -4,7 +4,7 @@ description: This article describes how to migrate your existing UKCloud for VMw
 services: enablement
 author: shall
 reviewer: acirel
-lastreviewed: 10/06/2021
+lastreviewed: 19/08/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

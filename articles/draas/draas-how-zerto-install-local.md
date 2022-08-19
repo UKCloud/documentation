@@ -4,7 +4,7 @@ description: This guide describes the steps you need to perform in your local en
 services: draas
 author: shall
 reviewer: acirel
-lastreviewed: 10/06/2021
+lastreviewed: 19/08/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -56,7 +56,7 @@ If Microsoft .NET Framework is not installed, you'll be prompted to install the 
 1. Download and run the executable file from the link provided by UKCloud.
 
     > [!NOTE]
-    > Install ZVM on a Windows Server 2012 R2, 2016 or 2019 server, ideally with nothing else running on it.
+    > Install ZVM on a Windows Server 2016 or 2019 server, ideally with nothing else running on it.
 
 2. On the *Welcome* page of the *Zerto Virtual Replication Installation for VMware vSphere* wizard, read the information provided then click **NEXT**.
 
