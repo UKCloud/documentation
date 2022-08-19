@@ -3,8 +3,8 @@ title: Best practice customer guide
 description: Provides useful best practice information and other helpful advice to ensure good performance from our products
 services: other
 author: dbaker
-reviewer: cantrobusholder
-lastreviewed: 06/08/2021
+reviewer: dbroderick
+lastreviewed: 12/08/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -25,7 +25,7 @@ At UKCloud, we strive to ensure that our products deliver the most value to your
 
 This section provides some best practices to ensure you get the most out of UKCloud for VMware.
 
-###  Using a supported browser
+### Using a supported browser
 
 VMware Cloud Director currently supports recent versions (usually within the last 3 releases) of the following browsers:
 
@@ -129,13 +129,13 @@ For more information, see [*How to locate your virtual data centre on the UKClou
 
 In the event of an incident, it's important that we have the correct contact details for you. Ensure that:
 
-- Your account has two nominated administrators. The administrator has access rights to create and set up new users and reset passwords. In the event of an incident, our support team will always contact the administrator first to resolve the issue.
+- Your account has two nominated administrators. The administrator has access rights to create and set up new users. If you're already a nominated administrator and would like to set up an additional administrator, or make any changes to any contacts, you can do so via the **Contacts** option in the UKCloud Portal. For more information, see [*How to create a new user in the UKCloud Portal*](../portal/ptl-how-create-users.md).
 
-- Your contact details are up to date. Please review account permissions regularly when people leave your business or change roles to ensure they are correct
+- Your contact details are up to date. Please review account permissions regularly when people leave your business or change roles to ensure they are correct.
 
-There are contact details listed for both primary and secondary technical contacts. We proactively create support tickets for these contacts when an action is required in your environment so it's important these are up to date.
+- You know your memorable word as UKCloud will require it to validate you in phone calls for security reasons. See [*How to change or reset your UKCloud Portal password or memorable word*](../portal/ptl-how-reset-password.md).
 
-If you're already a nominated administrator and would like to set up an additional administrator or make changes to any contacts, you can do so via the **Contacts** option in the UKCloud Portal.
+- There are contact details listed for both primary and secondary technical contacts. We proactively create support tickets for these contacts when an action is required in your environment so it's important these are up to date.
 
 ### Setting your password reset email address
 
