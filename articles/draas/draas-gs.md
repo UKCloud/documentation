@@ -4,7 +4,7 @@ description: Provides information to get up and running with Disaster Recovery a
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 27/05/2021
+lastreviewed: 22/08/2022
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -80,25 +80,25 @@ You should consider the following:
 
 To use DRaaS, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.
 
-The following table lists the requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (8.5U2) on the UKCloud platform:
+The following table lists the requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (9.0U3) on the UKCloud platform:
 
 Product | Supported Version
 --------|------------------
 **Management Plane** | &nbsp;
-VMware vCenter | vCenter Server 6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1
-Microsoft SCVMM | 2016 and Server Core: RTM Rollup 3-5, 6, 7, 8, 2019 and Server Core: RTM Rollup 1
+VMware vCenter | vCenter Server 6.0, 6.5 Ux, 6.7 Ux, 7.0, 7.0 U1, 7.0 U2, 7.0 U3, 7.0 U3a, 7.0 U3b
+Microsoft SCVMM | 2016 and Server Core: RTM Rollup 3-6, 7, 8, 9, 10, 2019 and Server Core: RTM Rollup 1, 2, 3
 **Hosts** | &nbsp;
-VMware ESXi | 6.0, 6.5, 6.5 U1, 6.5 U2, 6.5 U3, 6.7, 6.7 U1, 6.7 U2, 6.7 U3, 7.0, 7.0 U1
+VMware ESXi | 6.0, 6.5 Ux, 6.7, 6.7 U1, ESXi 6.7 U2, ESXi 6.7 U3, ESXi 7.0, ESXi 7.0 U1, ESXi 7.0 U2, 
 Microsoft Hyper-V | Windows 2016 Server, Microsoft Hyper-V Server 2019
 **Virtual Machines Hardware Version** | &nbsp;
-VMware | 7-9, 10-11, 13, 14, 15, 17, 18
+VMware | 10, 11, 13, 14, 15, 17, 18, 19
 Hyper-V | Generation 1 & 2
 **Disaster Recovery as a Service** | &nbsp;
 **Connectivity** | &nbsp;
 Full duplex internet connection | 5Mb/s minimum
 IPsec VPN | NA
 
-For a complete list of hypervisor features supported when using DRaaS, see the [Interoperability Matrix for All Zerto Software Versions](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
+For a complete list of hypervisor features supported when using Workload Migration, see the [Interoperability Matrix for All Zerto Versions](https://help.zerto.com/bundle/Operability.Matrix.HTML/page/Content/Operability_Matrix/Interoperability_Matrix_for_All_Zerto_Versions.htm).
 
 ## Getting Disaster Recovery as a Service up and running
 
