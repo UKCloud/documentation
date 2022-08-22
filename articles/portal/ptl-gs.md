@@ -148,7 +148,7 @@ The Portal navigation panel provides access to all the functionality available i
 
 - **Contacts** - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (**All Contacts**) or just those with administration permissions (**Admin Contacts**). Portal administrators can create new users, reset other users' memorable words and change other users' Portal permissions (see [*Portal permissions*](ptl-ref-overview-permissions.md)).
 
-- **VMware Cloud** - Provides access to UKCloud for VMware compute services. Expand this option and then select the compute service that want to work with (see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md)).
+- **VMware Cloud** - Provides access to UKCloud for VMware compute services. Expand this option and then select the compute service that you want to work with (see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md)).
 
 - **Oracle Cloud** - Provides access to the Oracle Enterprise Manager (OEM) Cloud Control console for UKCloud for Oracle Software (see the [*Getting Started Guide for UKCloud for Oracle Software*](../oracle/orcl-gs.md)).
 
