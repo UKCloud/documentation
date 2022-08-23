@@ -4,7 +4,7 @@ description: This guide helps you get your Disaster Recovery to the Cloud servic
 services: draas
 author: dbaker
 reviewer: acirel
-lastreviewed: 04/06/2021
+lastreviewed: 19/08/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

@@ -4,7 +4,7 @@ description: Describes how to access the Zerto Self-Service Portal (ZSSP) to man
 services: vmware
 author: shighmoor
 reviewer: acirel
-lastreviewed: 04/06/2021
+lastreviewed: 19/08/2022
 
 toc_rootlink: How To
 toc_sub1: Journaling Protection

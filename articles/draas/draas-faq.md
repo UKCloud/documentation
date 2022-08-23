@@ -4,7 +4,7 @@ description: Frequently asked questions for Disaster Recovery as a Service (Powe
 services: draas
 author: mwarner
 reviewer: acirel
-lastreviewed: 04/06/2021
+lastreviewed: 19/08/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -37,7 +37,7 @@ When you perform a test recovery, any VMs recovered are charged at the prices as
 
 ### What VMware and Hyper-V versions are supported for recovery on UKCloud?
 
-For information about the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (8.5U2) on the UKCloud platform, see the [Interoperability Matrix for All Zerto Software Versions](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
+For information about the minimum requirements for Disaster Recovery as a Service, based on the currently deployed version of Zerto Virtual Replication (9.0U3) on the UKCloud platform, see the [Interoperability Matrix for All Zerto Versions](https://help.zerto.com/bundle/Operability.Matrix.HTML/page/Content/Operability_Matrix/Interoperability_Matrix_for_All_Zerto_Versions.htm).
 
 The hypervisor management plane (such as VMware vCenter server) must be installed for Zerto to be compatible with your environment. This means that free hypervisor versions may not be supported.
 

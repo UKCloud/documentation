@@ -4,7 +4,7 @@ description: This article shows you how to use the Zerto Self-Service Portal to 
 services: vmware
 author: shall
 reviewer: acirel
-lastreviewed: 10/06/2021
+lastreviewed: 19/08/2022
 toc_rootlink: How To
 toc_sub1: Journaling Protection
 toc_sub2:

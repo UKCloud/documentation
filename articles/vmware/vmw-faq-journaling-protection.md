@@ -4,7 +4,7 @@ description: Frequently asked questions for Journaling Protection (powered by Ze
 services: vmware
 author: mwarner
 reviewer: acirel
-lastreviewed: 07/06/2021
+lastreviewed: 19/08/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -49,7 +49,7 @@ In the scenario that you are using the service to protect virtual machines on th
 
 For example:
 
-1 Medium Power VM on the Assured platform available for 720 hours with 160GiB Tier 2 storage.
+1 Medium Power VM on the Assured platform available for 720 hours with 160GiB Tier 2 storage and 7-day Journaling Protection.
 
 As always, UKCloud include the first 60GiB of Tier 2 storage (10GiB on Micro) in the hourly price of a VM. However, any protection will apply to the base storage and any additional storage. In this example, the 60GiB + 100GiB = 160GiB. It is worth mentioning that if the base storage is upgraded to Tier 1 storage, this will be charged at the Tier 1 storage price.
 
@@ -57,37 +57,37 @@ This would be calculated as:
 
 - VM: (£0.22 + £0.10) * 720 = £230.40
 
-- Base Storage: £0.30 * 60GiB = £18.00
+- Base Storage: £0.33 * 60GiB = £19.80
 
-- Additional Storage: (£0.10 + £0.30) * 100GiB = £40.00
+- Additional Storage: (£0.10 + £0.33) * 100GiB = £43.00
 
-- Total: £288.40
+- Total: £293.20
 
 Note, when a VM is turned off the 60GiB becomes chargeable and the customer will be billed for the total storage consumed. If the VM was turned off for the whole month, then the following calculation would apply:
 
-- Storage: (£0.10 + £0.30) * 160GiB = £64
+- Storage: (£0.10 + £0.33) * 160GiB = £68.8
 
-- Total: £64.00
+- Total: £299.20
 
 In an example where no additional storage is selected:
 
-1 Medium Power VM on the Assured platform available for 720 hours with only the base 60GiB Tier 2 storage.
+1 Medium Power VM on the Assured platform available for 720 hours with only the base 60GiB Tier 2 storage and 7-day Journaling Protection.
 
 This would be calculated as:
 
 - VM: (£0.22 + £0.10) * 720 = £230.40
 
-- Base Storage: £0.30 * 60GiB = £18.00
+- Base Storage: £0.33 * 60GiB = £19.80
 
-- Additional Storage: (£0.10 + £0.30) * 0GiB = £0.00
+- Additional Storage: (£0.10 + £0.33) * 0GiB = £0.00
 
-- Total: £248.40
+- Total: £250.20
 
 The charge if the VM was turned off for the whole month:
 
-- Storage: (£0.10 + £0.30) * 60GiB = £24.00
+- Storage: (£0.10 + £0.33) * 60GiB = £25.80
 
-- Total: £24.00
+- Total: £276.00
 
 ### What functionality is available?
 
