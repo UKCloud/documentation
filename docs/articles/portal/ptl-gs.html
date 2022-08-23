@@ -110,9 +110,7 @@
 </li>
 <li><p>View consumption information for your Cloud Storage service, reset secret keys and create new users</p>
 </li>
-<li><p>View major incident (MI) notifications relating to the UKCloud platform</p>
-</li>
-<li><p>View cyber security news</p>
+<li><p>View notifications about recent changes on the platform as well as incidents, including causes and remedial actions</p>
 </li>
 </ul>
 <p>This Getting Started Guide provides an overview of the functionality available within the Portal.</p>
@@ -140,7 +138,7 @@
 <p><img src="images/ptl-login.png" alt="UKCloud Portal log in page"></p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>If you've forgotten your password, click the <strong>Forgotten password?</strong> link to request a password reset.</p>
+<p>If you've forgotten your password, click the <strong>Forgotten password?</strong> link to request a password reset. This link will be sent to the email address you use to log in to the Portal unless you've set a different password reset email address as described in <a href="ptl-how-change-email-address.html"><em>How to set your password reset email address</em></a>.</p>
 </div>
 <p>If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or the Service Delivery team. You'll be prompted to change this temporary password.</p>
 <div class="NOTE">
@@ -181,15 +179,13 @@
 </li>
 <li><p><strong>Update contact details</strong> - Change your name and telephone numbers, opt to have Portal notifications sent to your email address, or set a different email address to be used if you forget your password.</p>
 </li>
-<li><p><strong>Change Password</strong> - Change your password or memorable word. We recommend that you change your password at least every 90 days (see <a href="ptl-how-reset-password.html"><em>How to reset your UKCloud Portal password or memorable word</em></a>).</p>
+<li><p><strong>Change Password</strong> - Change your password or memorable word. We recommend that you change your password at least every 90 days (see <a href="ptl-how-reset-password.html"><em>How to change or reset your UKCloud Portal password or memorable word</em></a>).</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Your Portal administrator may have implemented a password expiration period; in which case, you'll be prompted to change your password after the specified number of days.</p>
 </div>
 </li>
-<li><p><strong>Two-Factor Auth</strong> - Set up two-factor authentication (2FA) for your user account (see <a href="ptl-how-setup-2fa.html"><em>How to set up two-factor authentication for a user account</em></a>).</p>
-</li>
-<li><p><strong>API</strong> - View the information you need to use the Cloud Director API (see <a href="../vmware/vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the Coud Director API</em></a>).</p>
+<li><p><strong>API</strong> - View the information you need to use the VMware Cloud Director API (see <a href="../vmware/vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the Cloud Director API</em></a>).</p>
 </li>
 <li><p><strong>Feedback</strong> - Send an email to UKCloud (<a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>) with feedback on the Portal or any other aspect of your UKCloud experience.</p>
 </li>
@@ -212,7 +208,7 @@
 </li>
 <li><p><strong>Reports</strong> - Provides access to the following reports:</p>
 <ul>
-<li><p><strong>Login History</strong> - Lists everyone who has logged in to the Portal over the last 30 days (see <a href="ptl-how-view-login-info.html"><em>Viewing login information</em></a>).</p>
+<li><p><strong>Login History</strong> - Lists everyone who has logged in to the Portal over the last 30 days (see <a href="ptl-how-view-login-info.html"><em>How to view login information</em></a>).</p>
 </li>
 <li><p><strong>VMware Cloud Build History</strong> - Lists recent compute service, VDC and edge gateway builds initiated from the Portal and the Portal API (see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a> and <a href="../vmware/vmw-how-build-edge.html"><em>How to build an edge gateway</em></a>).</p>
 </li>
@@ -222,9 +218,9 @@
 </li>
 <li><p><strong>Settings</strong> - (Portal administrators only) Change various Portal settings, including key contacts, password expiration period, two factor authentication and IP address restrictions (see <a href="ptl-ref-security-settings.html"><em>UKCloud Portal security settings</em></a>).</p>
 </li>
-<li><p><strong>Contacts</strong> - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (<strong>All Contacts</strong>) or just those with administration permissions (<strong>Admin Contacts</strong>). Portal administrators can create new users, reset other users' passwords and change other users' Portal permissions (see <a href="ptl-ref-overview-permissions.html"><em>Portal permissions</em></a>).</p>
+<li><p><strong>Contacts</strong> - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (<strong>All Contacts</strong>) or just those with administration permissions (<strong>Admin Contacts</strong>). Portal administrators can create new users, reset other users' memorable words and change other users' Portal permissions (see <a href="ptl-ref-overview-permissions.html"><em>Portal permissions</em></a>).</p>
 </li>
-<li><p><strong>VMware Cloud</strong> - Provides access to UKCloud for VMware compute services. Expand this option and then select the compute service with which you want to work (see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>).</p>
+<li><p><strong>VMware Cloud</strong> - Provides access to UKCloud for VMware compute services. Expand this option and then select the compute service that you want to work with (see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>).</p>
 </li>
 <li><p><strong>Oracle Cloud</strong> - Provides access to the Oracle Enterprise Manager (OEM) Cloud Control console for UKCloud for Oracle Software (see the <a href="../oracle/orcl-gs.html"><em>Getting Started Guide for UKCloud for Oracle Software</em></a>).</p>
 </li>
@@ -287,7 +283,19 @@
 <p>For reference information about the various endpoints offered by the Portal API, see the <a href="ptl-ref-portal-api.html"><em>UKCloud Portal API Reference Guide</em></a>.</p>
 <p>For more information about how to use the API, including examples showing how to use the API to create a VDC and edge gateway, see <a href="ptl-how-use-api.html"><em>How to use the UKCloud Portal API</em></a>.</p>
 <h2 id="next-steps">Next steps</h2>
-<p>In this Getting Started Guide, you've learned the basics about the Portal and the functionality it provides to help you interact with your UKCloud environment. For more details about a specific service, see the appropriate Getting Started Guide.</p>
+<p>In this Getting Started Guide, you've learned the basics about the Portal and the functionality it provides to help you interact with your UKCloud environment. For more details about a specific service, see the appropriate Getting Started Guide:</p>
+<ul>
+<li><p><a href="../azure/azs-gs.html"><em>UKCloud for Microsoft Azure</em></a></p>
+</li>
+<li><p><a href="../openstack/ostack-gs.html"><em>UKCloud for OpenStack</em></a></p>
+</li>
+<li><p><a href="../openshift/oshift-gs.html"><em>UKCloud for Red Hat OpenShift</em></a></p>
+</li>
+<li><p><a href="../vmware/vmw-gs.html"><em>UKCloud for VMware</em></a></p>
+</li>
+<li><p><a href="../cloud-storage/cs-gs.html"><em>Cloud Storage</em></a></p>
+</li>
+</ul>
 <h2 id="related-videos">Related videos</h2>
 <ul>
 <li><p><a href="ptl-vid-portal.html"><em>UKCloud Portal overview video</em></a></p>

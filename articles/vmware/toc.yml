@@ -34,7 +34,7 @@
     href: vmw-how-ves-add-products-3.md
   - name: Apply vApp fencing
     href: vmw-how-apply-vapp-fencing.md
-  - name: Build an edge gateway using the UKCloud Portal
+  - name: Build an edge gateway in the UKCloud Portal
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the Cloud Director API
     href: vmw-how-change-ipsec-vpn-api.md
