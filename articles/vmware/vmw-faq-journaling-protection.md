@@ -4,7 +4,7 @@ description: Frequently asked questions for Journaling Protection (powered by Ze
 services: vmware
 author: mwarner
 reviewer: acirel
-lastreviewed: 07/06/2021
+lastreviewed: 19/08/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
