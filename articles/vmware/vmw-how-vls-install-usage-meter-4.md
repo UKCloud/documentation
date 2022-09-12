@@ -113,7 +113,7 @@ To increase the timeout value:
 
 1. Using the VM's console, log in as `root`.
 
-2. Run the commands `chage M <expiration-in-days> root` , `chage -M <expiration-in-days> usagemeter` and `chage -M <expiration-in-days> umauditor`.
+2. Run the commands `chage -M <expiration-in-days> root` , `chage -M <expiration-in-days> usagemeter` and `chage -M <expiration-in-days> umauditor`.
 
 ### Performing usage meter registration
 
