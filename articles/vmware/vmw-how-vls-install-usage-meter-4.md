@@ -107,13 +107,13 @@ To disable password timeout:
 
 1. Using the VM's console, log in as `root`.
 
-2. Run the commands `chage -M 0 user-usagemeter` and `chage -M 0 user-umauditor`.
+2. Run the commands `chage -M 0 root`, `chage -M 0 usagemeter` and `chage -M 0 umauditor`.
 
 To increase the timeout value: 
 
 1. Using the VM's console, log in as `root`.
 
-2. Run the commands `chage -M <expiration-in-days> user-usagemeter` and `chage -M <expiration-in-days> user-umauditor`.
+2. Run the commands `chage -M <expiration-in-days> root`, `chage -M <expiration-in-days> usagemeter` and `chage -M <expiration-in-days> umauditor`.
 
 ### Performing usage meter registration
 
